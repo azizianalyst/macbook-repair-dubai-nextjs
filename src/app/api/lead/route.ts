@@ -3,8 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import nodemailer from "nodemailer";
 import { LeadSchema, type Lead } from "@/lib/lead-schema";
-import { insertLead } from "@/lib/db";
-import { insertLeadSqlite } from "@/lib/sqlite";
+import { insertLead } from "@/lib/store";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 // Needs the Node runtime (filesystem + nodemailer SMTP). Not edge-compatible.
@@ -114,15 +113,13 @@ export async function POST(req: Request) {
   const emailed = await emailLead(parsed.data, submittedAt);
   const record = { ...parsed.data, submittedAt, emailed };
 
-  // Storage: SQLite is the primary embedded store (no credentials). MySQL is used
-  // only if DB_* is configured. The JSONL file is a cheap local backup. A lead
-  // survives if ANY store (or email) succeeded.
-  const sqliteOk = insertLeadSqlite(record);
-  const dbOk = await insertLead(record);
+  // Storage: JSON file store (primary, powers the CRM) + a JSONL append as a cheap
+  // backup. A lead survives if either store or the email succeeded.
+  const storeOk = await insertLead(record);
   const fileOk = await saveLead(record);
 
-  if (!sqliteOk && !dbOk && !fileOk && !emailed) {
+  if (!storeOk && !fileOk && !emailed) {
     return NextResponse.json({ ok: false, error: "Could not record your request" }, { status: 500 });
   }
-  return NextResponse.json({ ok: true, saved: sqliteOk || dbOk || fileOk, emailed });
+  return NextResponse.json({ ok: true, saved: storeOk || fileOk, emailed });
 }

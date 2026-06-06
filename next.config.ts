@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
     // Ported components use plain <img>; skip the Image Optimization pipeline.
     unoptimized: true,
   },
-  // better-sqlite3 is a native module — keep it external so Next doesn't try to
-  // bundle the .node binary into the server build.
-  serverExternalPackages: ["better-sqlite3"],
   // Legacy WordPress URLs -> new pages (301). Ported from the live site's .htaccess
   // so old indexed/linked URLs keep resolving. Regenerate via scripts (see redirects.generated.ts).
   async redirects() {
