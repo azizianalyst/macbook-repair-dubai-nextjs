@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MacBook Repair Dubai">
+  <rect width="64" height="64" rx="14" fill="#151D2E"/>
+  <!-- MacBook screen -->
+  <rect x="16" y="16" width="32" height="22" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="2.6"/>
+  <!-- screen content / repair spark -->
+  <path d="M33.5 20.5 L27 28.5 H31.5 L30 34.5 L37 26 H32.4 Z" fill="#0A84FF"/>
+  <!-- MacBook base / keyboard deck -->
+  <path d="M11 42 H53 L50 47.5 Q49.4 48.8 48 48.8 H16 Q14.6 48.8 14 47.5 Z" fill="#FFFFFF"/>
+  <!-- trackpad notch -->
+  <rect x="28" y="42" width="8" height="2.2" rx="1.1" fill="#151D2E"/>
+</svg>

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Lead form: local secrets + saved submissions
+.env.local
+.env
+/data/
+leads.jsonl

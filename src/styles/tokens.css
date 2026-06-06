@@ -1,0 +1,140 @@
+/* design tokens - single source of truth */
+/* keep in sync with tailwind.config.ts */
+/* theme: luxury Apple-clean - deep ink primary + UAE-green accent (#0A7A40) */
+
+:root {
+  /* base surfaces - clean, faintly cool white (Apple store light) */
+  --bg:         210 24% 99%;    /* #FAFBFD */
+  --bg-alt:     214 20% 96%;    /* #F1F4F8 */
+  --bg-card:    0   0%  100%;   /* #FFFFFF */
+
+  /* text - high-contrast, AAA where it counts */
+  --text:        220 32% 11%;   /* #131822  ~16:1 AAA */
+  --text-muted:  218 14% 38%;   /* #535B6B   ~6.9:1 AAA */
+  --text-faint:  218 13% 44%;   /* #5E6675  ~5.6:1 on bg, AA */
+
+  /* brand - near-black primary (premium dark band: hero/header/footer). neutral
+     black, not navy, to suit the green/white/black palette. */
+  --primary:     210 12% 12%;   /* #1B1F22  near-black */
+  --primary-2:   210 10% 19%;   /* #2C3137 */
+
+  /* the ONE confident brand color - UAE flag green, used sparingly for CTAs/links/active */
+  --accent:      150 84% 24%;   /* #0A7A40  deep green, ~5:1 on white, AA */
+  --accent-2:    150 84% 18%;   /* #075C30  hover/pressed, deeper */
+  --accent-bright: 150 62% 52%; /* #34C172  lighter green for TEXT on the dark band (AA on near-black) */
+
+  /* functional - danger is red (brand is green now, so no clash) */
+  --success:    150 48% 33%;
+  --warning:    35  82% 42%;
+  --danger:     0   72% 46%;    /* #CA2A2A clear red for errors */
+  --info:       210 30% 42%;    /* calm slate */
+
+  /* lines */
+  --border:        214 22% 90%; /* #DEE3EA */
+  --border-strong: 214 16% 80%; /* #C4CBD5 */
+
+  /* shadow stack - soft, premium (slightly deeper for luxury depth) */
+  --shadow-sm: 0 1px 2px rgba(16,22,38,.06);
+  --shadow-md: 0 4px 16px rgba(16,22,38,.08);
+  --shadow-lg: 0 16px 48px rgba(16,22,38,.12);
+
+  /* rating star - real warm gold */
+  --star: 41 92% 47%;           /* #E5A40C */
+
+  /* whatsapp brand (only place green appears) - darkened so WHITE text on it
+     clears WCAG AA (~4.5:1); still unmistakably WhatsApp green. */
+  --whatsapp: 142 72% 29%;      /* #14803F  4.6:1 with white */
+
+  /* spacing scale - use these tokens, no arbitrary px */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* radius */
+  --radius-sm:   6px;
+  --radius-md:   10px;   /* default for cards + buttons */
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 999px;  /* pills + badges only */
+
+  /* shadcn compatibility - map their names to ours so existing ui/* works */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--bg-card);
+  --card-foreground: var(--text);
+  --popover: var(--bg-card);
+  --popover-foreground: var(--text);
+  --primary-foreground: 0 0% 100%;
+  --secondary: var(--bg-alt);
+  --secondary-foreground: var(--primary);
+  --muted: var(--bg-alt);
+  --muted-foreground: var(--text-muted);
+  --accent-foreground: 0 0% 100%;
+  --destructive: var(--danger);
+  --destructive-foreground: 0 0% 100%;
+  --input: var(--border);
+  --ring: var(--accent);
+  --radius: var(--radius-md);
+
+  /* on-primary helpers - text colors for content sitting on the dark brand band.
+     These stay light in BOTH themes because the band is always dark. */
+  --on-primary:        0 0% 100%;
+  --on-primary-muted:  214 20% 82%;   /* #C6CDD8 on dark band */
+  --on-primary-faint:  214 14% 66%;   /* #98A1AE on dark band */
+
+  /* type - Apple SF Pro stack */
+  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body:    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono:    'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
+
+  /* container - 1180, not 1280. subtle anti-template */
+  --container: 1180px;
+  --container-narrow: 720px;
+}
+
+/* dark theme - activated by `.dark` on a wrapping element (tailwind darkMode:'class').
+   NOT enabled globally; defined here so the configured dark mode is functional.
+   Overrides surfaces/text/border to a true dark palette; KEEPS the UAE-green accent. */
+.dark {
+  /* base surfaces - deep neutral ink (not navy) to match the green/white/black palette */
+  --bg:         210 12% 9%;     /* #15181B  near-black page */
+  --bg-alt:     210 11% 13%;    /* #1D2125  raised band */
+  --bg-card:    210 10% 16%;    /* #252A2F  card surface */
+
+  /* text - light on dark, high contrast */
+  --text:        210 16% 96%;   /* #F0F2F5  ~15:1 on bg */
+  --text-muted:  214 12% 72%;   /* #B0B7C0  ~7:1 */
+  --text-faint:  214 11% 60%;   /* #8E96A0  ~4.7:1 AA */
+
+  /* brand - keep a dark band that still reads as "brand", slightly lifted from bg */
+  --primary:     210 10% 18%;   /* #292E33 */
+  --primary-2:   210 9%  24%;   /* #383E44 */
+
+  /* accent stays UAE green; use the brighter green as the default so it reads on dark */
+  --accent:      150 62% 52%;   /* #34C172  bright green for CTAs/links on dark */
+  --accent-2:    150 70% 42%;   /* #20A95C  hover/pressed */
+  --accent-bright: 150 70% 64%; /* #5FD68F  even lighter for text */
+
+  /* functional - tuned for dark */
+  --success:    150 55% 52%;
+  --warning:    35  85% 58%;
+  --danger:     0   72% 62%;
+  --info:       210 40% 64%;
+
+  /* lines - subtle on dark */
+  --border:        214 12% 24%; /* #353B42 */
+  --border-strong: 214 12% 34%; /* #4C545C */
+
+  /* shadow stack - deeper on dark for separation */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.5);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,.6);
+
+  /* shadcn compatibility - re-point so existing ui/* picks up the dark surfaces */
+  --secondary-foreground: var(--text);
+}

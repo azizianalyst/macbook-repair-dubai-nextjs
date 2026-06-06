@@ -1,0 +1,172 @@
+/* Apple SF Pro stack - system fonts, no @import needed */
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-border; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: hsl(var(--bg));
+    color: hsl(var(--text));
+    font-family: var(--font-body);
+    font-size: 17px;          /* apple.com body */
+    line-height: 1.47059;     /* apple.com body */
+    font-weight: 400;
+    letter-spacing: -0.022em; /* apple.com tracking */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    /* inherit the container's text colour so headings follow text-on-primary on
+       the dark band (and text-text on any light surface). Fixes dark headings
+       on dark pages. */
+    color: inherit;
+  }
+
+  /* Casual copy / right-click deterrent. NOTE: cosmetic only - bypassable via
+     view-source, devtools or disabling JS. Form fields stay fully selectable. */
+  body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+  input, textarea, select, [contenteditable="true"], .allow-select {
+    -webkit-user-select: text; -moz-user-select: text; user-select: text;
+  }
+  img { -webkit-user-drag: none; user-drag: none; }
+
+  /* Apple typography scale
+     h1 ≈ Headline (48/56) → Hero (80) on large screens
+     h2 ≈ Headline (40/44)
+     h3 ≈ Headline (28/32)
+     h4 ≈ Headline (24/28)
+     h5 ≈ Headline (21/25)
+     h6 ≈ Headline (19/23)                                       */
+  h1 {
+    font-size: clamp(32px, 5.5vw, 56px);
+    line-height: 1.07143;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+  }
+  h2 {
+    font-size: clamp(28px, 3.6vw, 40px);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+  }
+  h3 {
+    font-size: clamp(24px, 2.4vw, 28px);
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+  }
+  h4 {
+    font-size: clamp(21px, 1.8vw, 24px);
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+  }
+  h5 {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+  }
+  h6 {
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+  }
+
+  small { font-size: 14px; line-height: 1.42859; letter-spacing: -0.016em; }
+
+  /* prices, model numbers, dates */
+  .mono, code, kbd, samp { font-family: var(--font-mono); }
+
+  /* readable line length */
+  p { max-width: 70ch; }
+
+  /* subtle 1px grid - opt-in background for hero sections (NOT applied to body).
+     Uses currentColor-independent faint lines; pairs with a positioned wrapper. */
+  .bg-grid-faint {
+    background-image:
+      linear-gradient(to right, hsl(var(--text) / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--text) / 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  /* on dark brand bands, base the grid on the light on-primary color instead */
+  .bg-grid-faint.on-dark,
+  .dark .bg-grid-faint {
+    background-image:
+      linear-gradient(to right, hsl(var(--on-primary) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--on-primary) / 0.04) 1px, transparent 1px);
+  }
+
+  /* skip-to-content (a11y) */
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: hsl(var(--primary)); color: #fff;
+    padding: 12px 16px; z-index: 100;
+    border-radius: 0 0 var(--radius-md) 0;
+  }
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    left: 12px; top: 12px;
+    outline: 2px solid hsl(var(--accent)); outline-offset: 2px;
+  }
+
+  /* global focus-visible - every interactive element gets a clear ring (WCAG 2.4.7).
+     Uses the brand accent; on dark brand bands the accent is still visible. */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible,
+  summary:focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  /* legal pages - predictable list, link, and paragraph styling */
+  .prose-legal p { max-width: 70ch; }
+  .prose-legal ul { list-style: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prose-legal ol { list-style: decimal; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .prose-legal li { max-width: 68ch; }
+  .prose-legal a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 2px; }
+  .prose-legal a:hover { text-decoration: none; }
+  .prose-legal strong { color: hsl(var(--text)); font-weight: 600; }
+  .prose-legal h3 { font-size: 18px; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+  .prose-legal table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0.5rem 0; }
+  .prose-legal th, .prose-legal td { border: 1px solid hsl(var(--border)); padding: 0.5rem 0.75rem; text-align: left; }
+  .prose-legal th { background: hsl(var(--bg-alt)); font-weight: 600; }
+}
+
+/* ── Horizontal-scroll affordance for data tables ──────────────────────────
+   Price/spec tables sit in an .overflow-x-auto wrapper with a min-width, so on
+   narrow screens they scroll horizontally rather than clip. Without a visible
+   scrollbar that read as "cut off". Scope to wrappers that actually contain a
+   <table> (:has) so non-table scroll regions are untouched, and keep a slim,
+   always-visible accent scrollbar so the swipe affordance is obvious. */
+.overflow-x-auto:has(table) {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border-strong)) transparent;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+.overflow-x-auto:has(table)::-webkit-scrollbar { height: 8px; }
+.overflow-x-auto:has(table)::-webkit-scrollbar-track { background: transparent; }
+.overflow-x-auto:has(table)::-webkit-scrollbar-thumb {
+  background: hsl(var(--border-strong));
+  border-radius: 999px;
+}
+.overflow-x-auto:has(table):hover::-webkit-scrollbar-thumb { background: hsl(var(--accent)); }
+
+@media print {
+  nav, footer, .sticky-cta, .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
+  a::after { content: " (" attr(href) ")"; font-size: 11px; }
+}

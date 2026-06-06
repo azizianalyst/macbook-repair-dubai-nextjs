@@ -1,0 +1,14 @@
+{
+  "name": "MacBook Repair Dubai",
+  "short_name": "MacBook Repair",
+  "description": "Apple repair specialist in Dubai Media City since 2004. Free diagnosis, same-day service, 90-day warranty.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151D2E",
+  "theme_color": "#151D2E",
+  "icons": [
+    { "src": "/favicon-32.png", "type": "image/png", "sizes": "32x32" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/logo-mrd.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

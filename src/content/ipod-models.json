@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "ipod-touch-7-repair-dubai",
+    "name": "iPod Touch (7th Generation, 2019)",
+    "shortName": "iPod Touch 7",
+    "releaseYear": 2019,
+    "category": "ipod",
+    "family": "ipod",
+    "chip": "Apple A10 Fusion",
+    "headlineFeatures": [
+      "The last iPod ever made",
+      "4-inch Retina display",
+      "Up to 256GB storage",
+      "Lightning port",
+      "iOS 15 (last supported)"
+    ],
+    "currentInLineup": false,
+    "discontinued": "May 2022 (entire iPod line ended)",
+    "sealed": true,
+    "commonIssues": [
+      "Battery degradation (7 years old in 2026 - universal)",
+      "Cracked screen from drops (kids' device)",
+      "Home button failure (the last device with a physical home button alongside Touch ID-less design)",
+      "Lightning port wear",
+      "Stuck on iOS 15 - no new app updates"
+    ],
+    "pricing": {
+      "battery": 320,
+      "screen": 390,
+      "homeButton": 260,
+      "port": 260,
+      "diagnostic": 0
+    },
+    "honestyTier": "ipod"
+  }
+]
