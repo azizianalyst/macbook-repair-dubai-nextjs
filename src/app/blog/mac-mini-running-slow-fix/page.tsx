@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import { metaForPath } from "@/lib/page-meta";
+import { PageSchema } from "@/components/PageSchema";
+import View from "@/views/BlogMacMiniRunningSlow";
 
 export const metadata: Metadata = metaForPath("/blog/mac-mini-running-slow-fix");
-export { default } from "@/views/BlogMacMiniRunningSlow";
+
+export default function Page() {
+  return (
+    <>
+      <PageSchema path="/blog/mac-mini-running-slow-fix" />
+      <View />
+    </>
+  );
+}

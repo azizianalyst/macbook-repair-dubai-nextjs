@@ -56,23 +56,28 @@ export default function Reviews() {
     [],
   );
 
+  // JSON-LD is rendered SERVER-SIDE below (JSX <script>) so the AggregateRating star
+  // rating + Review nodes reach the static HTML Google indexes. Previously these went
+  // through useSeo's client-only useEffect and never appeared in the prerendered page.
   useSeo(
     {
       title: `${REVIEW_COUNT}+ Google Reviews · ${REVIEW_AVERAGE} Stars - MacBook Repair Dubai`,
       description: `${REVIEW_COUNT}+ verified Google reviews, ${REVIEW_AVERAGE}★ average. Real customers, real Apple repairs - MacBook, iMac, iPhone, iPad. Concord Tower, Dubai Media City.`,
       path: "/reviews",
     },
-    [
-      localBusiness(),
-      organization(),
-      aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT }),
-      ...reviewSchemas,
-    ],
+    [],
   );
 
   return (
     <PageShell>
       <div className="bg-primary text-on-primary -mb-[4rem]">
+      {/* Server-rendered JSON-LD: business + organization + AggregateRating (star rating) + Review nodes */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT })) }} />
+      {reviewSchemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <Hero
         variant="service"
         tone="dark"

@@ -12,9 +12,14 @@ const isBlog = (p: string) => p.startsWith("/blog");
 const isArea = (p: string) =>
   /^\/macbook-repair-[a-z0-9-]+$/.test(p) && !SERVICE_KW.test(p) && !/(calculator|near-me|cost|where)/.test(p);
 
+// Routes that must NEVER appear in the sitemap: the noindexed admin area and the noindex
+// landing-template demo. Submitting noindexed URLs triggers GSC "Submitted URL marked
+// 'noindex'" errors and wastes crawl budget.
+const SITEMAP_EXCLUDE = /^\/(admin|landing-template-demo)(\/|$)/;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  return ROUTES.map((p) => {
+  return ROUTES.filter((p) => !SITEMAP_EXCLUDE.test(p)).map((p) => {
     const isHome = p === "/";
     const depth = isHome ? 0 : p.split("/").filter(Boolean).length;
     return {

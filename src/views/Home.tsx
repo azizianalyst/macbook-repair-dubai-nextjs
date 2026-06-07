@@ -22,7 +22,7 @@ import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { REVIEWS } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
 import { SITE } from "@/lib/seo";
-import { itemList, service as serviceSchema, person, faqPage, localBusiness, breadcrumbs } from "@/lib/schema";
+import { itemList, service as serviceSchema, person, faqPage, localBusiness, breadcrumbs, aggregateRating } from "@/lib/schema";
 import { linkifyString as linkify } from "@/lib/linkify";
 
 // Title/description kept identical to the live ranking page (and prerender.ts deriveMeta("/")).
@@ -333,13 +333,10 @@ const GBP_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
 export default function Home() {
-  useSeo(
-    { title: TITLE, description: DESC, path: "/" },
-    [
-      itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) }),
-      serviceSchema({ name: "MacBook Repair", price: 49, url: SITE.url, warranty: "P90D", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Pricing starts from 49 AED." }),
-    ],
-  );
+  // All JSON-LD is rendered SERVER-SIDE below (as JSX <script> in the FAQ block) so it
+  // reaches the static HTML Google indexes. useSeo here no longer injects schema (that was
+  // client-only via useEffect and never reached the prerendered HTML).
+  useSeo({ title: TITLE, description: DESC, path: "/" }, []);
 
   return (
     <PageShell>
@@ -410,6 +407,7 @@ export default function Home() {
                   width={1600}
                   height={1200}
                   sizes="(max-width: 768px) 100vw, 40vw"
+                  priority
                   className="block"
                   imgClassName="w-full h-[280px] md:h-[420px] object-cover"
                 />
@@ -949,6 +947,9 @@ export default function Home() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Lead Repair Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs([{ name: "Home", path: "/" }])) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", price: 49, url: SITE.url, warranty: "P90D", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Pricing starts from 49 AED." })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT })) }} />
         </section>
 
         {/* ── Distance / areas ───────────────────────────────────── */}

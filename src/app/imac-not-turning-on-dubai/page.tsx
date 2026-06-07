@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import { metaForPath } from "@/lib/page-meta";
+import { PageSchema } from "@/components/PageSchema";
+import View from "@/views/IMacNotTurningOn";
 
 export const metadata: Metadata = metaForPath("/imac-not-turning-on-dubai");
-export { default } from "@/views/IMacNotTurningOn";
+
+export default function Page() {
+  return (
+    <>
+      <PageSchema path="/imac-not-turning-on-dubai" />
+      <View />
+    </>
+  );
+}

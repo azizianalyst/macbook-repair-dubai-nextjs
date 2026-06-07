@@ -7,7 +7,7 @@ const SITE = "https://macbook-repair-dubai.ae";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: "/api/" },
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/admin/"] },
       { userAgent: ["GPTBot", "ChatGPT-User", "OAI-SearchBot", "ClaudeBot", "Claude-Web", "PerplexityBot"], allow: "/" },
     ],
     sitemap: `${SITE}/sitemap.xml`,
