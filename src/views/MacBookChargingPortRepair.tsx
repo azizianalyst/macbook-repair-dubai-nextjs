@@ -1,6 +1,7 @@
 "use client";
 import { Plug, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -143,7 +144,7 @@ export default function MacBookChargingPortRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -155,6 +156,9 @@ export default function MacBookChargingPortRepair() {
       >
         <PageMeta author="Shafiq Ahmed, Lead MacBook Technician" />
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook charging port repair", startingPrice: 350, timeline: "same-day on most models" })} />
 
       <WarrantyBar tone="dark" />
 
@@ -170,15 +174,15 @@ export default function MacBookChargingPortRepair() {
         <div className="max-w-[820px] flex flex-col gap-3xl">
           {/* Intro */}
           <section>
-            <LinkifyProse selfHref="/macbook-charging-port-repair-dubai"><p className="text-[17px] text-on-primary leading-relaxed">
+            <LinkifyProse selfHref="/macbook-charging-port-repair-dubai"><p className="text-[17px] text-text leading-relaxed">
               MacBook charging port repair in Dubai starts at AED 350 for a USB-C port swap and AED 400 for a MagSafe 3 port - most jobs finish the same day. The workshop has fitted 1,400+ USB-C ports and 280+ MagSafe 3 ports since 2018. Loose connectors, bent pins, intermittent charging, dead ports, slow charging from PD negotiation failure - all covered. When the port itself is fine but the charging IC on the logic board has failed, board-level chip replacement under microscope is AED 450. Free diagnosis confirms which is needed before any paid work begins.
             </p></LinkifyProse>
           </section>
 
           {/* Models + pricing */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook charging ports we repair</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook charging ports we repair</h2>
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Every MacBook from MagSafe 1 (2008) through MagSafe 3 and USB-C on the M5 Pro. Prices include the part, microscope labour, full charging cycle test, and the 90-day warranty.
             </p>
             <PricingTable service="Charging port repair" rows={PRICING} tone="dark" />
@@ -186,17 +190,17 @@ export default function MacBookChargingPortRepair() {
 
           {/* Common problems */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <AlertTriangle size={28} className="text-accent-bright" aria-hidden /> Common charging-port problems we fix
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common charging-port problems we fix
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               The 10 highest-volume charging-port tickets at the workshop in 2024-2025.
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {PROBLEMS.map((p) => (
-                <article key={p.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[16px] font-bold mb-sm text-on-primary">{p.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{p.body}</p>
+                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
               ))}
             </div>
@@ -204,76 +208,76 @@ export default function MacBookChargingPortRepair() {
 
           {/* Process */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <Wrench size={28} className="text-accent-bright" aria-hidden /> Our charging port repair process
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <Wrench size={28} className="text-accent" aria-hidden /> Our charging port repair process
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Six steps. The voltage probe diagnosis distinguishes a port issue (cheap fix) from a charging IC issue (slightly more) within 10 minutes.
             </p>
             <StepList steps={STEPS} tone="dark" />
           </section>
 
           {/* Port swap vs IC repair explainer */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md text-on-primary">Port swap vs charging IC repair - which one do you need?</h2>
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md text-text">Port swap vs charging IC repair - which one do you need?</h2>
             <div className="grid gap-md md:grid-cols-2">
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-on-primary">Port swap (AED 350-400)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">The physical connector is loose, bent, burned, or has worn-out spring tabs. The board itself is healthy - voltage reaches the port pins correctly. 70% of tickets.</p>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Port swap (AED 350-400)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">The physical connector is loose, bent, burned, or has worn-out spring tabs. The board itself is healthy - voltage reaches the port pins correctly. 70% of tickets.</p>
               </div>
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-on-primary">Charging IC repair (AED 450)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">The port looks perfect but the controller chip on the logic board has failed. Symptoms: charges slowly, charges only with one specific charger, or doesn't charge at all despite a clean port. 30% of tickets.</p>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Charging IC repair (AED 450)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">The port looks perfect but the controller chip on the logic board has failed. Symptoms: charges slowly, charges only with one specific charger, or doesn't charge at all despite a clean port. 30% of tickets.</p>
               </div>
             </div>
-            <p className="text-[14px] text-on-primary-muted mt-md">
+            <p className="text-[14px] text-text-muted mt-md">
               The free 15-minute bench diagnosis identifies which category before any paid work. About 5% of tickets need both - combo price AED 600 instead of AED 800 if booked together.
             </p>
           </section>
 
           {/* Timeline */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">How long does charging port repair take?</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does charging port repair take?</h2>
             <div className="grid gap-md md:grid-cols-3">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Same day (2-4 hours)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">USB-C port swap on M1/M2/M3 Air, MagSafe 3 on Pro 14″/16″, MagSafe 1/2 on Retina, DC-in board on Retina Pro. About 80% of tickets.</p>
+                <h3 className="text-[18px] font-bold mb-sm text-text">Same day (2-4 hours)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">USB-C port swap on M1/M2/M3 Air, MagSafe 3 on Pro 14″/16″, MagSafe 1/2 on Retina, DC-in board on Retina Pro. About 80% of tickets.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">1 day</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Charging IC board-level repair (longer BGA reflow + cooldown), or combo port + IC job. Pin-straightening labour-only on stubborn cases.</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">1 day</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Charging IC board-level repair (longer BGA reflow + cooldown), or combo port + IC job. Pin-straightening labour-only on stubborn cases.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">2 days (rare)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Only when MagSafe 3 stock is exhausted (during release months) or when burn damage requires both port and PMIC replacement.</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">2 days (rare)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Only when MagSafe 3 stock is exhausted (during release months) or when burn damage requires both port and PMIC replacement.</p>
               </article>
             </div>
           </section>
 
           {/* Parts */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">What parts and tools we use</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">What parts and tools we use</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Genuine Foxconn / Apple-spec ports</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed mb-sm">USB-C and MagSafe ports sourced from the original Foxconn assembly line that builds the Apple part. Same neodymium magnets in MagSafe 3, same gold-plated spring tabs in USB-C.</p>
-                <p className="mono text-[13px] text-accent-bright">AED 350-400 - included</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Genuine Foxconn / Apple-spec ports</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed mb-sm">USB-C and MagSafe ports sourced from the original Foxconn assembly line that builds the Apple part. Same neodymium magnets in MagSafe 3, same gold-plated spring tabs in USB-C.</p>
+                <p className="mono text-[13px] text-accent">AED 350-400 - included</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Quick 861DW hot-air station + microscope</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed mb-sm">Temperature-controlled hot air at 380 °C, 40x stereo microscope, leaded and lead-free solder paste. The bench is set up specifically for fine-pitch USB-C work - 0.5 mm pin spacing requires this gear.</p>
-                <p className="mono text-[13px] text-accent-bright">Bench tooling - no surcharge</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Quick 861DW hot-air station + microscope</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed mb-sm">Temperature-controlled hot air at 380 °C, 40x stereo microscope, leaded and lead-free solder paste. The bench is set up specifically for fine-pitch USB-C work - 0.5 mm pin spacing requires this gear.</p>
+                <p className="mono text-[13px] text-accent">Bench tooling - no surcharge</p>
               </article>
             </div>
           </section>
 
           {/* Warranty */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Warranty
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
             </h2>
-            <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <ul className="space-y-2 text-[15px] text-on-primary">
+            <div className="border border-border bg-bg-card rounded-md p-lg">
+              <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>90 days</strong> - written warranty on parts and labour.</li>
                 <li><strong>Covered:</strong> port re-failure, intermittent charging returning, charging IC failure, cold-solder cracks.</li>
                 <li><strong>Not covered:</strong> damage from a bad/cheap charger after repair, moisture entering the port, physical damage from cable yanking.</li>
@@ -284,8 +288,8 @@ export default function MacBookChargingPortRepair() {
 
           {/* Pricing recap */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Charging port repair cost in Dubai - transparent pricing</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">No hidden fees. Quote on WhatsApp = price on collection. No diagnostic fee, no microscope surcharge, no VAT add-on.</p>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Charging port repair cost in Dubai - transparent pricing</h2>
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">No hidden fees. Quote on WhatsApp = price on collection. No diagnostic fee, no microscope surcharge, no VAT add-on.</p>
             <PricingTable service="Charging port repair" rows={PRICING} tone="dark" />
           </section>
 
@@ -298,30 +302,30 @@ export default function MacBookChargingPortRepair() {
           />
 
           {/* Technician */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md text-on-primary">Lead technician on charging port jobs</h2>
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md text-text">Lead technician on charging port jobs</h2>
             <TechnicianBadge name="Shafiq Ahmed" years={21} specialisation="Board & port micro-soldering" tone="dark" />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch]">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Shafiq personally handles every charging IC repair - fine-pitch BGA work needs steady hands and 21 years of microscope experience.
             </p>
           </section>
 
           {/* DIY */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">When DIY makes sense - and when it doesn't</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">When DIY makes sense - and when it doesn't</h2>
             <div className="grid gap-md md:grid-cols-2">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Try it yourself first</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Try it yourself first</h3>
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>SMC reset - clears charging firmware glitches free of charge in about 10% of cases.</li>
                   <li>Try a different cable + charger - rules out the accessory before blaming the port.</li>
                   <li>Inspect the port with a torch - visible debris (lint, sand) can be removed with compressed air at 90°.</li>
                   <li>Check System Information &gt; Power for charger wattage - confirms whether PD negotiation is happening.</li>
                 </ul>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Stop and bring it in</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Stop and bring it in</h3>
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Visible bent or broken pins - straightening without microscope risks snapping the pin off.</li>
                   <li>Burn marks inside the port - the charging IC is likely also damaged; powering on risks more damage.</li>
                   <li>Intermittent charging - DIY soldering on a multi-layer board destroys via barrels.</li>
@@ -333,46 +337,46 @@ export default function MacBookChargingPortRepair() {
 
           {/* Comparison */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Charging Port Repair vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Charging Port Repair vs Apple Store Dubai</h2>
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[640px]">
-                <thead className="bg-white/[0.02]">
+                <thead className="bg-bg-alt">
                   <tr className="text-left">
-                    <th className="px-md py-sm font-semibold text-on-primary">Factor</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">MacBook Repair Dubai</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">Apple Store / AASP</th>
+                    <th className="px-md py-sm font-semibold text-text">Factor</th>
+                    <th className="px-md py-sm font-semibold text-text">MacBook Repair Dubai</th>
+                    <th className="px-md py-sm font-semibold text-text">Apple Store / AASP</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON.map((row, i) => (
-                    <tr key={row[0]} className={i % 2 ? "bg-white/[0.02]" : ""}>
-                      <td className="px-md py-sm font-semibold text-on-primary">{row[0]}</td>
-                      <td className="px-md py-sm text-on-primary">{row[1]}</td>
-                      <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                    <tr key={row[0]} className={i % 2 ? "bg-bg-alt" : ""}>
+                      <td className="px-md py-sm font-semibold text-text">{row[0]}</td>
+                      <td className="px-md py-sm text-text">{row[1]}</td>
+                      <td className="px-md py-sm text-text-muted">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-on-primary-faint mt-sm mono">
+            <p className="text-[13px] text-text-faint mt-sm mono">
               Apple's UAE policy on USB-C and MagSafe ports is full logic board replacement, not component-level repair. The workshop is the right call for everyone outside AppleCare+.
             </p>
           </section>
 
           {/* Reviews */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <Star size={28} className="text-star fill-star" aria-hidden /> Real charging-port reviews
             </h2>
-            <p className="text-[14px] text-on-primary-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent-bright font-semibold hover:underline">Read all 215+ →</a>
+            <p className="text-[14px] text-text-muted mb-lg">
+              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
 
           {/* FAQ */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook charging port FAQ</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook charging port FAQ</h2>
             <FAQAccordion items={FAQS} injectSchema tone="dark" />
           </section>
 
@@ -387,16 +391,16 @@ export default function MacBookChargingPortRepair() {
 
           {/* Internal sub-link block */}
           <section>
-            <h2 className="text-[22px] mb-md text-on-primary">More on charging</h2>
+            <h2 className="text-[22px] mb-md text-text">More on charging</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/macbook-not-turning-on-fix-guide">Blog: MacBook not charging - full troubleshooting guide</a></li>
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/lightning-vs-usb-c-explained-2026">Blog: USB-C vs MagSafe 3 - which charger should you use?</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-not-turning-on-fix-guide">Blog: MacBook not charging - full troubleshooting guide</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/lightning-vs-usb-c-explained-2026">Blog: USB-C vs MagSafe 3 - which charger should you use?</a></li>
             </ul>
           </section>
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Where to bring your MacBook</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to bring your MacBook</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>
@@ -404,10 +408,10 @@ export default function MacBookChargingPortRepair() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">Loose USB-C? Bent pin? WhatsApp the model - quote in 4 minutes</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Loose USB-C? Bent pin? WhatsApp the model - quote in 4 minutes</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Year, processor, which port. Free pickup across Dubai mainland. 90-day written warranty on every port and IC fitted.
           </p>
           <div className="relative flex flex-wrap gap-sm">
@@ -416,7 +420,7 @@ export default function MacBookChargingPortRepair() {
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+            <Button asChild variant="secondary" size="lg" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>
@@ -426,8 +430,8 @@ export default function MacBookChargingPortRepair() {
       </section>
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
-      <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Get your free repair quote</h2>
-      <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-charging-port-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-charging-port-repair-dubai" />

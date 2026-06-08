@@ -327,6 +327,21 @@ export function organization() {
   };
 }
 
+// WebSite entity node. Provides WEBSITE_ID so WebPage.isPartOf / speakable refs resolve into a
+// connected graph. No SearchAction — the site has no on-site search, so a sitelinks searchbox
+// would be invalid markup.
+export function webSite() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    name: SITE.name,
+    url: SITE.url,
+    publisher: { "@id": ORG_ID },
+    inLanguage: "en-AE",
+  };
+}
+
 export function itemList(opts: { name: string; items: Array<{ name: string; url: string; description?: string }> }) {
   return {
     "@context": "https://schema.org",

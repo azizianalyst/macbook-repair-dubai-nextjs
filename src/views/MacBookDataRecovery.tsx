@@ -1,6 +1,7 @@
 "use client";
 import { HardDrive, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star, Lock } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -143,7 +144,7 @@ export default function MacBookDataRecovery() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         tone="dark"
         variant="service"
@@ -155,6 +156,9 @@ export default function MacBookDataRecovery() {
       >
         <PageMeta author="Shafiq Ahmed, Lead MacBook Technician" />
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook data recovery", startingPrice: 700, timeline: "1 to 3 days" })} />
 
       <WarrantyBar tone="dark" />
 
@@ -170,25 +174,25 @@ export default function MacBookDataRecovery() {
         <div className="max-w-[820px] flex flex-col gap-3xl">
           {/* Intro */}
           <section>
-            <LinkifyProse selfHref="/macbook-data-recovery-dubai"><p className="text-[17px] text-on-primary leading-relaxed">
+            <LinkifyProse selfHref="/macbook-data-recovery-dubai"><p className="text-[17px] text-text leading-relaxed">
               MacBook data recovery in Dubai starts at AED 400 for logical recovery (deleted files, formatted drives, corrupted folders) and goes up to AED 2,000 for complex board-level multi-chip work on Apple Silicon. The workshop has recovered 1,200+ MacBooks since 2004 - Intel SSDs, T2-encrypted drives, M1/M2/M3 NAND chips, water-damaged blade SSDs. Free 30-minute diagnosis, honest success rates, and a file preview before any payment is taken. No recovery, no charge for the labour - only the genuine parts cost (typically AED 0-200 for forensic media). T2 and Apple Silicon recovery has real limits because of secure-enclave encryption - the section below explains exactly what those limits are.
             </p></LinkifyProse>
           </section>
 
           {/* Encryption note - important */}
-          <section className="bg-white/[0.04] rounded-md p-lg border border-white/10">
+          <section className="bg-bg-card rounded-md p-lg border border-border">
             <h2 className="text-[22px] mb-md flex items-center gap-sm">
-              <Lock size={24} className="text-accent-bright" aria-hidden /> FileVault and secure-enclave encryption - the honest version
+              <Lock size={24} className="text-accent" aria-hidden /> FileVault and secure-enclave encryption - the honest version
             </h2>
-            <p className="text-[15px] text-on-primary-muted leading-relaxed mb-md">
+            <p className="text-[15px] text-text-muted leading-relaxed mb-md">
               Every Mac since 2018 (T2) and every Apple Silicon Mac (M1+) hardware-encrypts the SSD by default. The encryption key lives in the secure enclave chip on the logic board. This affects recovery in three ways:
             </p>
-            <ul className="space-y-2 text-[14px] text-on-primary-muted">
-              <li><strong className="text-on-primary">If the secure enclave is alive</strong> - board-level repair restores boot and data. AED 1,500-2,000, 60-70% success.</li>
-              <li><strong className="text-on-primary">If the secure enclave is dead</strong> - the AES key is gone. Data is unrecoverable. This applies equally at Apple, at the workshop, and at every recovery lab globally.</li>
-              <li><strong className="text-on-primary">If FileVault is also enabled</strong> - recovery additionally requires the FileVault password, iCloud recovery key, or institutional recovery key. Without one of these, even the chip-level data is encrypted twice.</li>
+            <ul className="space-y-2 text-[14px] text-text-muted">
+              <li><strong className="text-text">If the secure enclave is alive</strong> - board-level repair restores boot and data. AED 1,500-2,000, 60-70% success.</li>
+              <li><strong className="text-text">If the secure enclave is dead</strong> - the AES key is gone. Data is unrecoverable. This applies equally at Apple, at the workshop, and at every recovery lab globally.</li>
+              <li><strong className="text-text">If FileVault is also enabled</strong> - recovery additionally requires the FileVault password, iCloud recovery key, or institutional recovery key. Without one of these, even the chip-level data is encrypted twice.</li>
             </ul>
-            <p className="text-[14px] text-on-primary-muted mt-md">
+            <p className="text-[14px] text-text-muted mt-md">
               Free 30-minute diagnosis confirms which scenario applies for your specific MacBook before any paid recovery work begins.
             </p>
           </section>
@@ -196,7 +200,7 @@ export default function MacBookDataRecovery() {
           {/* Models + pricing */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">Recovery scenarios + pricing</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Every MacBook from the 2010 Air to the 2025 M5 Pro 16″. Pricing covers diagnosis, imaging, recovery work, and transfer to a destination drive of your choice.
             </p>
             <PricingTable tone="dark" service="Data recovery" rows={PRICING} />
@@ -205,16 +209,16 @@ export default function MacBookDataRecovery() {
           {/* Common scenarios */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <AlertTriangle size={28} className="text-accent-bright" aria-hidden /> Common data-loss scenarios
+              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common data-loss scenarios
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               The 10 highest-volume data-recovery tickets at the workshop.
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {COMMON_SCENARIOS.map((p) => (
-                <article key={p.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm">{p.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{p.body}</p>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
               ))}
             </div>
@@ -223,9 +227,9 @@ export default function MacBookDataRecovery() {
           {/* Process */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <Wrench size={28} className="text-accent-bright" aria-hidden /> Our data recovery process
+              <Wrench size={28} className="text-accent" aria-hidden /> Our data recovery process
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Six steps. The file-preview stage means you see what's recoverable before paying - no surprises.
             </p>
             <StepList tone="dark" steps={STEPS} />
@@ -234,9 +238,9 @@ export default function MacBookDataRecovery() {
           {/* Honest success rates */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">Honest success rates by scenario</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[520px]">
-                <thead className="bg-white/[0.04]">
+                <thead className="bg-bg-card">
                   <tr className="text-left">
                     <th className="px-md py-sm font-semibold">Scenario</th>
                     <th className="px-md py-sm font-semibold">Success rate</th>
@@ -244,13 +248,13 @@ export default function MacBookDataRecovery() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="px-md py-sm font-semibold">Deleted files, no overwrite</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-on-primary-muted">Stop using MacBook immediately for best result.</td></tr>
-                  <tr className="bg-white/[0.02]"><td className="px-md py-sm font-semibold">Quick-formatted drive</td><td className="px-md py-sm mono text-success">80%</td><td className="px-md py-sm text-on-primary-muted">Secure-erase format drops to near 0%.</td></tr>
-                  <tr><td className="px-md py-sm font-semibold">Intel SSD chip-off (2010-2017)</td><td className="px-md py-sm mono text-success">80%</td><td className="px-md py-sm text-on-primary-muted">Pre-T2 - no encryption barrier.</td></tr>
-                  <tr className="bg-white/[0.02]"><td className="px-md py-sm font-semibold">T2 (2018-2020 Intel)</td><td className="px-md py-sm mono text-on-primary">70%</td><td className="px-md py-sm text-on-primary-muted">Needs working secure enclave + FileVault key.</td></tr>
-                  <tr><td className="px-md py-sm font-semibold">Apple Silicon (M1/M2/M3)</td><td className="px-md py-sm mono text-on-primary">60%</td><td className="px-md py-sm text-on-primary-muted">SSD bonded to board - board-level repair required.</td></tr>
-                  <tr className="bg-white/[0.02]"><td className="px-md py-sm font-semibold">Water-damaged SSD</td><td className="px-md py-sm mono text-on-primary">50%</td><td className="px-md py-sm text-on-primary-muted">Bring within 24 hours; salt water worse than fresh.</td></tr>
-                  <tr><td className="px-md py-sm font-semibold">Dead secure enclave chip</td><td className="px-md py-sm mono text-error">0%</td><td className="px-md py-sm text-on-primary-muted">AES key gone - same at Apple and every lab.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold">Deleted files, no overwrite</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-text-muted">Stop using MacBook immediately for best result.</td></tr>
+                  <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold">Quick-formatted drive</td><td className="px-md py-sm mono text-success">80%</td><td className="px-md py-sm text-text-muted">Secure-erase format drops to near 0%.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold">Intel SSD chip-off (2010-2017)</td><td className="px-md py-sm mono text-success">80%</td><td className="px-md py-sm text-text-muted">Pre-T2 - no encryption barrier.</td></tr>
+                  <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold">T2 (2018-2020 Intel)</td><td className="px-md py-sm mono text-text">70%</td><td className="px-md py-sm text-text-muted">Needs working secure enclave + FileVault key.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold">Apple Silicon (M1/M2/M3)</td><td className="px-md py-sm mono text-text">60%</td><td className="px-md py-sm text-text-muted">SSD bonded to board - board-level repair required.</td></tr>
+                  <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold">Water-damaged SSD</td><td className="px-md py-sm mono text-text">50%</td><td className="px-md py-sm text-text-muted">Bring within 24 hours; salt water worse than fresh.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold">Dead secure enclave chip</td><td className="px-md py-sm mono text-error">0%</td><td className="px-md py-sm text-text-muted">AES key gone - same at Apple and every lab.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -259,10 +263,10 @@ export default function MacBookDataRecovery() {
           {/* Warranty */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Recovery guarantee
+              <ShieldCheck size={28} className="text-accent" aria-hidden /> Recovery guarantee
             </h2>
-            <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <ul className="space-y-2 text-[15px] text-on-primary">
+            <div className="border border-border bg-bg-card rounded-md p-lg">
+              <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>No recovery, no labour charge.</strong> If the file preview is empty or doesn't include what you need, you pay AED 0 for the labour - only forensic media costs (typically AED 0-200) if used.</li>
                 <li><strong>7-day verification window</strong> after handover. If a needed file is missing or corrupted, the workshop re-attempts free of charge.</li>
                 <li><strong>Original MacBook returned intact</strong> - never wiped, never re-formatted without your written permission.</li>
@@ -275,7 +279,7 @@ export default function MacBookDataRecovery() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">Data recovery cost in Dubai - transparent pricing</h2>
             <PricingTable tone="dark" service="Data recovery" rows={PRICING} />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch] mono">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch] mono">
               Final price confirmed after the free 30-minute diagnosis. No-recovery-no-labour-charge applies on every job.
             </p>
           </section>
@@ -288,10 +292,10 @@ export default function MacBookDataRecovery() {
           />
 
           {/* Technician */}
-          <section className="bg-white/[0.04] rounded-md p-lg border border-white/10">
+          <section className="bg-bg-card rounded-md p-lg border border-border">
             <h2 className="text-[22px] mb-md">Lead technician on data recovery jobs</h2>
             <TechnicianBadge tone="dark" name="Shafiq Ahmed" years={21} specialisation="Logic board & data recovery" />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch]">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Shafiq personally runs every chip-off NAND recovery on the dedicated forensic rig and signs every NDA. T2 and Apple Silicon recovery work happens on his bench only.
             </p>
           </section>
@@ -302,16 +306,16 @@ export default function MacBookDataRecovery() {
             <div className="grid gap-md md:grid-cols-2">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">Try it yourself first</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Time Machine restore - free, official, works for 95% of accidental-delete cases.</li>
                   <li>iCloud Drive web interface - files synced to iCloud are still recoverable from iCloud.com for 30 days after delete.</li>
                   <li>Disk Utility First Aid - fixes catalog corruption in 50% of "drive not mounting" cases at zero cost.</li>
                   <li>Free trial of Disk Drill or PhotoRec for logical recovery on external drives - only safe to run when the drive is healthy and target is different.</li>
                 </ul>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">Stop and bring it in</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Hardware failure (won't power on, board damage, water) - DIY tools can't reach a dead board.</li>
                   <li>T2 or Apple Silicon - without the right tooling, attempting recovery can destroy the encrypted data permanently.</li>
                   <li>Critical files (contracts, photos, irreplaceable data) - every save and every reboot reduces recovery odds.</li>
@@ -324,9 +328,9 @@ export default function MacBookDataRecovery() {
           {/* Comparison */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">Data Recovery vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[640px]">
-                <thead className="bg-white/[0.04]">
+                <thead className="bg-bg-card">
                   <tr className="text-left">
                     <th className="px-md py-sm font-semibold">Factor</th>
                     <th className="px-md py-sm font-semibold">MacBook Repair Dubai</th>
@@ -335,16 +339,16 @@ export default function MacBookDataRecovery() {
                 </thead>
                 <tbody>
                   {COMPARISON.map((row, i) => (
-                    <tr key={row[0]} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                    <tr key={row[0]} className={i % 2 ? "bg-bg-alt" : ""}>
                       <td className="px-md py-sm font-semibold">{row[0]}</td>
                       <td className="px-md py-sm">{row[1]}</td>
-                      <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                      <td className="px-md py-sm text-text-muted">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-on-primary-muted mt-sm mono">
+            <p className="text-[13px] text-text-muted mt-sm mono">
               Apple's UAE policy on data recovery is to refer customers to third-party labs - Apple does not perform recovery. The workshop is the direct path for everyone outside AppleCare+ data services.
             </p>
           </section>
@@ -354,8 +358,8 @@ export default function MacBookDataRecovery() {
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
               <Star size={28} className="text-star fill-star" aria-hidden /> Real data-recovery reviews
             </h2>
-            <p className="text-[14px] text-on-primary-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent-bright font-semibold hover:underline">Read all 215+ →</a>
+            <p className="text-[14px] text-text-muted mb-lg">
+              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid tone="dark" reviews={reviews} />
           </section>
@@ -379,8 +383,8 @@ export default function MacBookDataRecovery() {
           <section>
             <h2 className="text-[22px] mb-md">More on Mac data</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: The Time Machine backup guide every MacBook owner needs</a></li>
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: Why M1/M2/M3 data recovery is harder - and what to do about it</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: The Time Machine backup guide every MacBook owner needs</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: Why M1/M2/M3 data recovery is harder - and what to do about it</a></li>
             </ul>
           </section>
 
@@ -394,10 +398,10 @@ export default function MacBookDataRecovery() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">Files trapped on a dead MacBook? Free diagnosis - quote in 30 minutes</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Files trapped on a dead MacBook? Free diagnosis - quote in 30 minutes</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Stop using the MacBook. WhatsApp the model and what happened. Free 30-minute diagnosis with honest success rate before any payment.
           </p>
           <div className="relative flex flex-wrap gap-sm">
@@ -406,7 +410,7 @@ export default function MacBookDataRecovery() {
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+            <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>
@@ -416,8 +420,8 @@ export default function MacBookDataRecovery() {
       </section>
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
-      <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Get your free repair quote</h2>
-      <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-data-recovery-dubai" />
     </section>
     <RelatedArticles path="/macbook-data-recovery-dubai" />

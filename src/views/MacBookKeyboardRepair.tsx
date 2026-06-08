@@ -2,8 +2,8 @@
 // MacBook Keyboard Repair - re-skinned in the dark theme to match the battery /
 // screen repair pages (the canonical dark design). All content, pricing, problems,
 // process, parts, warranty, comparison, reviews and FAQs are preserved verbatim;
-// only the presentation moved to the dark design system (bg-primary band, glass
-// cards, accent-bright). SEO/schema kept identical so rankings transfer.
+// only the presentation moved to the dark design system (bg-bg-alt band, glass
+// cards, accent). SEO/schema kept identical so rankings transfer.
 import { type ReactNode } from "react";
 import {
   Keyboard, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star,
@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -157,32 +158,32 @@ export default function MacBookKeyboardRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
 
         {/* ── Hero ───────────────────────────────────────────────── */}
-        <section data-hero-tone="dark" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
+        <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
           <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute top-1/3 -right-16 h-[26rem] w-[26rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6">
-            <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-on-primary-faint">
+            <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-text-faint">
               <ol className="flex flex-wrap items-center gap-2 list-none p-0 m-0">
-                <li><Link to="/" className="hover:text-accent-bright">Home</Link></li>
+                <li><Link to="/" className="hover:text-accent">Home</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link to="/" className="hover:text-accent-bright">MacBook Repair</Link></li>
+                <li><Link to="/" className="hover:text-accent">MacBook Repair</Link></li>
                 <li aria-hidden>/</li>
-                <li className="text-on-primary-muted">Keyboard Repair</li>
+                <li className="text-text-muted">Keyboard Repair</li>
               </ol>
             </nav>
 
             <div className="grid gap-2xl md:grid-cols-12 items-start">
               <div className="md:col-span-7">
-                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-3.5 py-1.5 text-[13px] font-medium text-on-primary-muted">
-                  <Keyboard size={14} className="text-accent-bright" aria-hidden /> MacBook keyboard repair · Media City
+                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
+                  <Keyboard size={14} className="text-accent" aria-hidden /> MacBook keyboard repair · Media City
                 </p>
-                <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-on-primary">
+                <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
                   MacBook Keyboard Repair Dubai
                 </h1>
-                <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-on-primary-muted">
+                <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Sticky keys, dead keys, butterfly failures, layout swaps. Magic Keyboard from AED 150 same day. Butterfly top case from AED 700, 1-2 days.
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
@@ -191,41 +192,41 @@ export default function MacBookKeyboardRepair() {
                       <MessageCircle aria-hidden /> Get a quote on WhatsApp
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+                  <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
                     <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
                   </Button>
                 </div>
-                <p className="mt-lg text-[12.5px] text-on-primary-faint">
+                <p className="mt-lg text-[12.5px] text-text-faint">
                   Reviewed by Usman, Lead MacBook Technician
                 </p>
               </div>
 
               {/* glass info card */}
               <div className="md:col-span-5">
-                <Reveal delay={120} className="rounded-2xl border border-white/10 bg-white/[0.05] p-lg shadow-lg backdrop-blur-md">
+                <Reveal delay={120} className="rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-bright"><Keyboard size={22} aria-hidden /></span>
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Keyboard size={22} aria-hidden /></span>
                       <div>
-                        <p className="m-0 font-semibold leading-tight text-on-primary">Keyboard Repair</p>
-                        <p className="m-0 text-[12px] text-on-primary-faint">Magic &amp; butterfly · Touch ID re-pair</p>
+                        <p className="m-0 font-semibold leading-tight text-text">Keyboard Repair</p>
+                        <p className="m-0 text-[12px] text-text-faint">Magic &amp; butterfly · Touch ID re-pair</p>
                       </div>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-bright/30 bg-accent-bright/10 px-2.5 py-1 text-[12px] font-medium text-accent-bright">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent-bright" aria-hidden /> Online
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
                     </span>
                   </div>
-                  <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-white/10 pt-md">
+                  <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
                     {[["Starting price", "AED 150"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "90 days"], ["Diagnosis", "FREE"]].map(([k, v]) => (
                       <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
-                        <span className="text-on-primary-faint">{k}</span>
-                        <span className="font-semibold text-on-primary">{v}</span>
+                        <span className="text-text-faint">{k}</span>
+                        <span className="font-semibold text-text">{v}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-md flex items-center justify-between gap-2 border-t border-white/10 pt-md text-[12.5px]">
-                    <span className="inline-flex items-center gap-1.5 text-on-primary-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent-bright hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+                  <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+                    <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
                   </div>
                 </Reveal>
               </div>
@@ -233,13 +234,16 @@ export default function MacBookKeyboardRepair() {
           </div>
         </section>
 
+        {/* Answer-first capsule (AEO/BLUF) */}
+        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook keyboard repair", startingPrice: 150, timeline: "same-day for most; 1-2 days for a full top-case" })} />
+
         {/* ── Trust strip ────────────────────────────────────────── */}
-        <section className="border-y border-white/10 bg-white/[0.03]">
+        <section className="border-y border-border bg-bg-alt">
           <div className="mx-auto max-w-content px-5 md:px-6 py-2xl grid gap-xl grid-cols-2 lg:grid-cols-4 text-center">
             {TRUST.map((s) => (
               <Reveal key={s.label}>
-                <p className="mono text-[22px] md:text-[26px] font-bold text-on-primary leading-none mb-1">{s.value}</p>
-                <p className="text-[13px] text-on-primary-muted m-0">{s.label}</p>
+                <p className="mono text-[22px] md:text-[26px] font-bold text-text leading-none mb-1">{s.value}</p>
+                <p className="text-[13px] text-text-muted m-0">{s.label}</p>
               </Reveal>
             ))}
           </div>
@@ -247,13 +251,13 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <LinkifyProse selfHref="/macbook-keyboard-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-on-primary-muted m-0">
+          <LinkifyProse selfHref="/macbook-keyboard-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
             MacBook keyboard repair in Dubai starts at AED 150 for a single key cap on Magic Keyboard, AED 350 for a full Magic Keyboard swap on Apple Silicon, and AED 700 for a butterfly top case on the 2016-2019 MacBook Pro. The workshop has fitted 2,100+ MacBook keyboards since 2004 - every Magic Keyboard since 2019, every butterfly top case since 2016, every scissor keyboard back to 2008. The butterfly mechanism is unique: Apple designed the keys, battery, and speakers to be replaced as one bonded unit, which is why Apple's own service program (ended December 2022) and the workshop both swap the entire top case rather than individual keys. Magic Keyboard (2019+) is far easier to service - single keys and scissor switches replaceable for AED 150 to AED 250.
           </p></LinkifyProse>
         </section>
 
         {/* ── Models + pricing ───────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="MacBook keyboards we repair" intro="Every MacBook keyboard from the 2008 unibody through the 2025 M5 Pro 16″. Layout swaps to Russian, Arabic, French AZERTY available on every model." />
             <PriceTable rows={PRICING} />
@@ -265,14 +269,14 @@ export default function MacBookKeyboardRepair() {
           <SectionHead
             title="Common keyboard problems we fix"
             intro="The 10 highest-volume keyboard tickets at the workshop. Liquid spills are urgent - bring it in within 24 hours for the best recovery rate."
-            icon={<AlertTriangle size={26} className="text-accent-bright" aria-hidden />}
+            icon={<AlertTriangle size={26} className="text-accent" aria-hidden />}
           />
           <div className="grid gap-lg md:grid-cols-2">
             {PROBLEMS.map((p, i) => (
               <Reveal key={p.title} delay={(i % 2) * 60}>
                 <Card className="h-full">
-                  <h3 className="m-0 mb-2 text-on-primary text-[16px] font-bold">{p.title}</h3>
-                  <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{p.body}</p>
+                  <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{p.title}</h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </Card>
               </Reveal>
             ))}
@@ -280,19 +284,19 @@ export default function MacBookKeyboardRepair() {
         </section>
 
         {/* ── Process ────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead
               title="Our keyboard repair process"
               intro="Six steps. The diagnosis stage filters out the 15% of keyboard tickets that are software issues - fixed free of charge."
-              icon={<Wrench size={26} className="text-accent-bright" aria-hidden />}
+              icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
               {STEPS.map((s, i) => (
-                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
-                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent-bright/15 font-heading text-[18px] font-bold text-accent-bright">{i + 1}</span>
-                  <p className="font-semibold text-[16px] m-0 mb-1 text-on-primary">{s.title}</p>
-                  <p className="text-[13.5px] text-on-primary-muted leading-relaxed m-0">{s.body}</p>
+                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                  <p className="font-semibold text-[16px] m-0 mb-1 text-text">{s.title}</p>
+                  <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{s.body}</p>
                 </Reveal>
               ))}
             </ol>
@@ -303,38 +307,38 @@ export default function MacBookKeyboardRepair() {
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead title="How long does MacBook keyboard repair take?" />
           <div className="grid gap-lg md:grid-cols-3">
-            <Card className="border-accent-bright/30 bg-accent-bright/[0.06]">
-              <h3 className="m-0 mb-2 text-on-primary text-[18px] font-bold">Same day (30 min - 4 hours)</h3>
-              <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">Single key cap on Magic Keyboard (30 min). Backlight chip swap (1 hour). Full Magic Keyboard swap on Apple Silicon (4 hours including Touch ID re-pair).</p>
+            <Card className="border-accent/30 bg-accent/[0.06]">
+              <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Same day (30 min - 4 hours)</h3>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">Single key cap on Magic Keyboard (30 min). Backlight chip swap (1 hour). Full Magic Keyboard swap on Apple Silicon (4 hours including Touch ID re-pair).</p>
             </Card>
             <Card>
-              <h3 className="m-0 mb-2 text-on-primary text-[18px] font-bold">1 day</h3>
-              <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">Magic Keyboard full swap on Pro 14″ and 16″. 2012-2015 Retina keyboard swap. Layout change to Russian or Arabic when stock is local.</p>
+              <h3 className="m-0 mb-2 text-text text-[18px] font-bold">1 day</h3>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">Magic Keyboard full swap on Pro 14″ and 16″. 2012-2015 Retina keyboard swap. Layout change to Russian or Arabic when stock is local.</p>
             </Card>
             <Card>
-              <h3 className="m-0 mb-2 text-on-primary text-[18px] font-bold">2 days</h3>
-              <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">Butterfly top case swap on the 2016-2019 MacBook Pro - the top case must be ordered in, trackpad re-pairing adds 90 minutes. Liquid-damaged keyboard with corrosion needing 24-hour ultrasonic cycle.</p>
+              <h3 className="m-0 mb-2 text-text text-[18px] font-bold">2 days</h3>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">Butterfly top case swap on the 2016-2019 MacBook Pro - the top case must be ordered in, trackpad re-pairing adds 90 minutes. Liquid-damaged keyboard with corrosion needing 24-hour ultrasonic cycle.</p>
             </Card>
           </div>
         </section>
 
         {/* ── Parts ──────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="What parts we use" />
             <div className="grid gap-lg md:grid-cols-2">
               <Card>
-                <h3 className="m-0 mb-2 text-on-primary text-[18px] font-bold">Genuine Apple Magic Keyboards</h3>
-                <p className="m-0 mb-sm text-[14px] text-on-primary-muted leading-relaxed">Stocked for M3, M4, M5 Pro 14″ and 16″. Sourced from the local Apple-authorised distributor with traceable part numbers. Touch ID and backlight pre-calibrated.</p>
-                <p className="m-0 mono text-[13px] text-accent-bright">Standard pricing - included</p>
+                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Genuine Apple Magic Keyboards</h3>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Stocked for M3, M4, M5 Pro 14″ and 16″. Sourced from the local Apple-authorised distributor with traceable part numbers. Touch ID and backlight pre-calibrated.</p>
+                <p className="m-0 mono text-[13px] text-accent">Standard pricing - included</p>
               </Card>
               <Card>
-                <h3 className="m-0 mb-2 text-on-primary text-[18px] font-bold">OEM-spec butterfly top cases</h3>
-                <p className="m-0 mb-sm text-[14px] text-on-primary-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. AED 700 vs Apple's AED 1,800 to AED 2,400.</p>
-                <p className="m-0 mono text-[13px] text-accent-bright">AED 700 - same 90-day warranty</p>
+                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">OEM-spec butterfly top cases</h3>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. AED 700 vs Apple's AED 1,800 to AED 2,400.</p>
+                <p className="m-0 mono text-[13px] text-accent">AED 700 - same 90-day warranty</p>
               </Card>
             </div>
-            <p className="mt-md text-[14px] text-on-primary-muted leading-relaxed max-w-[78ch]">
+            <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
               The workshop refuses unbranded sub-AED-200 Magic Keyboard "OEM" parts - these are typically pulls from water-damaged donor units with shortened scissor mechanism life.
             </p>
           </div>
@@ -342,31 +346,31 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Warranty ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent-bright" aria-hidden />} />
+          <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
-            <ul className="space-y-2.5 text-[15px] text-on-primary-muted list-none p-0 m-0">
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent-bright mt-1 shrink-0" aria-hidden /> <span><strong className="text-on-primary">90 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent-bright mt-1 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Covered:</strong> manufacturing defects, premature key failure, backlight failure, Touch ID issues, scissor mechanism failure.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent-bright mt-1 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Not covered:</strong> new liquid damage, new physical damage, software remap conflicts (free to fix anyway).</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent-bright mt-1 shrink-0" aria-hidden /> <span><strong className="text-on-primary">How to claim:</strong> WhatsApp the warranty card photo. Same-day collection. Replacement fitted within 48 hours.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent-bright mt-1 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Transferable:</strong> once, free of charge, to a new owner if the MacBook is sold within 90 days.</span></li>
+            <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature key failure, backlight failure, Touch ID issues, scissor mechanism failure.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new liquid damage, new physical damage, software remap conflicts (free to fix anyway).</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Same-day collection. Replacement fitted within 48 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, to a new owner if the MacBook is sold within 90 days.</span></li>
             </ul>
           </Card>
         </section>
 
         {/* ── Pricing recap + CTA ────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="MacBook keyboard repair cost in Dubai - transparent pricing" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection. No diagnostic fee, no Touch ID re-pair surcharge, no VAT add-on." />
             <PriceTable rows={PRICING} />
 
-            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-xl md:p-2xl">
+            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
               <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
               <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent-bright mb-2">MacBook Keyboard Repair · Same day · 1-2 days</p>
-                  <h3 className="m-0 text-on-primary text-[24px] md:text-[26px]">Get your keyboard quote in 4 minutes</h3>
-                  <p className="m-0 mt-2 text-on-primary-muted text-[15px]">Starting from <strong className="text-on-primary">AED 150</strong>. WhatsApp the model + a short video of which keys fail.</p>
+                  <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Keyboard Repair · Same day · 1-2 days</p>
+                  <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your keyboard quote in 4 minutes</h3>
+                  <p className="m-0 mt-2 text-text-muted text-[15px]">Starting from <strong className="text-text">AED 150</strong>. WhatsApp the model + a short video of which keys fail.</p>
                 </div>
                 <CtaRow whatsappMessage="Hi Usman, MacBook keyboard repair quote please. Model + which keys: " />
               </div>
@@ -379,39 +383,39 @@ export default function MacBookKeyboardRepair() {
           <SectionHead title="Lead technician on keyboard jobs" />
           <Card>
             <div className="flex flex-wrap items-center gap-lg">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-bright/15 font-heading text-[20px] font-bold text-accent-bright">U</span>
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/15 font-heading text-[20px] font-bold text-accent">U</span>
               <div>
-                <p className="m-0 font-semibold text-on-primary text-[18px]">Usman</p>
-                <p className="m-0 text-[13.5px] text-on-primary-faint">9 years experience · Battery, keyboard &amp; trackpad</p>
+                <p className="m-0 font-semibold text-text text-[18px]">Usman</p>
+                <p className="m-0 text-[13.5px] text-text-faint">9 years experience · Battery, keyboard &amp; trackpad</p>
               </div>
             </div>
-            <p className="mt-md text-[14px] text-on-primary-muted leading-relaxed max-w-[78ch]">
+            <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
               Usman has fitted 2,000+ MacBook keyboards and top cases since 2017. Personally handles every butterfly top case swap because the trackpad re-pair is fiddly.
             </p>
           </Card>
         </section>
 
         {/* ── DIY ────────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="When DIY makes sense - and when it doesn't" />
             <div className="grid gap-lg md:grid-cols-2">
-              <Card className="border-accent-bright/30 bg-accent-bright/[0.06]">
-                <h3 className="m-0 mb-md text-on-primary text-[18px] font-bold">Try it yourself first</h3>
-                <ul className="space-y-2.5 text-[14px] text-on-primary-muted list-none p-0 m-0">
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> SMC + NVRAM reset - clears 25% of "modifier key stuck" tickets.</li>
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Disconnect Bluetooth keyboards and trackpads - 10% of phantom key presses are pairing conflicts.</li>
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Karabiner Elements - free, remaps a dead key to caps lock as a stop-gap.</li>
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Compressed air at 90° angle on a sticky butterfly key - fixes ~5% temporarily, doesn't last but useful before a flight.</li>
+              <Card className="border-accent/30 bg-accent/[0.06]">
+                <h3 className="m-0 mb-md text-text text-[18px] font-bold">Try it yourself first</h3>
+                <ul className="space-y-2.5 text-[14px] text-text-muted list-none p-0 m-0">
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> SMC + NVRAM reset - clears 25% of "modifier key stuck" tickets.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Disconnect Bluetooth keyboards and trackpads - 10% of phantom key presses are pairing conflicts.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Karabiner Elements - free, remaps a dead key to caps lock as a stop-gap.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Compressed air at 90° angle on a sticky butterfly key - fixes ~5% temporarily, doesn't last but useful before a flight.</li>
                 </ul>
               </Card>
               <Card>
-                <h3 className="m-0 mb-md text-on-primary text-[18px] font-bold">Stop and bring it in</h3>
-                <ul className="space-y-2.5 text-[14px] text-on-primary-muted list-none p-0 m-0">
-                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Liquid spill - every minute of corrosion compounds. Power off, flip upside down, WhatsApp.</li>
-                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Multiple keys failing on butterfly (2016-2019) - replacing one fixes nothing; the membrane is gone.</li>
-                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Trying to pry off a butterfly key cap - the clips snap and you lose a working key on top of the broken one.</li>
-                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Touch ID failure after a key swap - secure enclave re-pair needs the specific bench tooling.</li>
+                <h3 className="m-0 mb-md text-text text-[18px] font-bold">Stop and bring it in</h3>
+                <ul className="space-y-2.5 text-[14px] text-text-muted list-none p-0 m-0">
+                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Liquid spill - every minute of corrosion compounds. Power off, flip upside down, WhatsApp.</li>
+                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Multiple keys failing on butterfly (2016-2019) - replacing one fixes nothing; the membrane is gone.</li>
+                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Trying to pry off a butterfly key cap - the clips snap and you lose a working key on top of the broken one.</li>
+                  <li className="flex items-start gap-2"><AlertTriangle size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Touch ID failure after a key swap - secure enclave re-pair needs the specific bench tooling.</li>
                 </ul>
               </Card>
             </div>
@@ -421,10 +425,10 @@ export default function MacBookKeyboardRepair() {
         {/* ── Comparison ─────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead title="MacBook Keyboard Repair vs Apple Store Dubai" />
-          <Reveal className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+          <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[640px]">
               <thead>
-                <tr className="border-b border-white/10 text-accent-bright">
+                <tr className="border-b border-border text-accent">
                   <th className="px-md py-md font-semibold">Factor</th>
                   <th className="px-md py-md font-semibold">MacBook Repair Dubai</th>
                   <th className="px-md py-md font-semibold">Apple Store / AASP</th>
@@ -432,39 +436,39 @@ export default function MacBookKeyboardRepair() {
               </thead>
               <tbody>
                 {COMPARISON.map((row) => (
-                  <tr key={row[0]} className="border-b border-white/10 last:border-0 align-top">
-                    <td className="px-md py-sm font-semibold text-on-primary">{row[0]}</td>
-                    <td className="px-md py-sm text-on-primary">{row[1]}</td>
-                    <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                  <tr key={row[0]} className="border-b border-border last:border-0 align-top">
+                    <td className="px-md py-sm font-semibold text-text">{row[0]}</td>
+                    <td className="px-md py-sm text-text">{row[1]}</td>
+                    <td className="px-md py-sm text-text-muted">{row[2]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </Reveal>
-          <p className="mt-md text-[13px] text-on-primary-faint mono max-w-[80ch]">
+          <p className="mt-md text-[13px] text-text-faint mono max-w-[80ch]">
             Apple list pricing from apple.com/ae/shop/mac/repair, retrieved April 2026. Apple's butterfly service program (free top-case swap) closed December 2022 - devices outside warranty pay full list.
           </p>
         </section>
 
         {/* ── Reviews ────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <div className="mb-2xl flex items-end justify-between gap-md flex-wrap">
               <div>
-                <p className="mono text-[12px] uppercase tracking-wider text-accent-bright mb-3">All six reviews are verbatim from Google</p>
-                <h2 className="m-0 text-on-primary">Real keyboard-repair reviews</h2>
+                <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">All six reviews are verbatim from Google</p>
+                <h2 className="m-0 text-text">Real keyboard-repair reviews</h2>
               </div>
-              <Link to="/reviews" className="text-[15px] font-semibold text-accent-bright hover:underline inline-flex items-center gap-1">Read all 215+ <ArrowRight size={15} aria-hidden /></Link>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 215+ <ArrowRight size={15} aria-hidden /></Link>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
-                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
+                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-semibold text-on-primary">{r.name}</span>
+                    <span className="font-semibold text-text">{r.name}</span>
                     <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
                   </div>
-                  <p className="mt-2 text-[14px] leading-relaxed text-on-primary-muted m-0 flex-1">“{r.text}”</p>
-                  <p className="mt-md mb-0 text-[12px] text-on-primary-faint">{r.date} · Google review</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-text-muted m-0 flex-1">“{r.text}”</p>
+                  <p className="mt-md mb-0 text-[12px] text-text-faint">{r.date} · Google review</p>
                 </Reveal>
               ))}
             </div>
@@ -478,7 +482,7 @@ export default function MacBookKeyboardRepair() {
         </section>
 
         {/* ── Related ────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="Related MacBook repairs" />
             <div className="grid gap-lg md:grid-cols-3">
@@ -487,9 +491,9 @@ export default function MacBookKeyboardRepair() {
                 { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap from AED 350. Touch ID re-pair included on supported models." },
                 { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid spilled on the keyboard? AED 700 ultrasonic clean - bring it in within 24 hours." },
               ].map((r) => (
-                <Link key={r.href} to={r.href} className="group rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07]">
-                  <h3 className="m-0 mb-1 text-on-primary text-[17px] group-hover:text-accent-bright">{r.label}</h3>
-                  <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{r.description}</p>
+                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                  <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{r.description}</p>
                 </Link>
               ))}
             </div>
@@ -500,24 +504,24 @@ export default function MacBookKeyboardRepair() {
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead title="Where to bring your MacBook" />
           <div className="grid gap-lg md:grid-cols-2 items-stretch">
-            <div className="overflow-hidden rounded-2xl border border-white/10">
+            <div className="overflow-hidden rounded-2xl border border-border">
               <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
             </div>
             <div className="flex flex-col gap-md">
-              <h3 className="m-0 text-on-primary">Find us in Media City</h3>
-              <p className="flex items-start gap-sm text-[15px] text-on-primary-muted m-0"><MapPin size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
-              <p className="flex items-start gap-sm text-[14px] text-on-primary-faint m-0"><ParkingCircle size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent-bright hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <h3 className="m-0 text-text">Find us in Media City</h3>
+              <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
+              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
+              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
             </div>
           </div>
         </section>
 
         {/* ── Final CTA ──────────────────────────────────────────── */}
-        <section className="relative overflow-hidden border-t border-white/10">
+        <section className="relative overflow-hidden border-t border-border">
           <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-accent/18 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
-            <h2 className="text-on-primary m-0 mb-md max-w-[28ch] mx-auto">Sticky key? Butterfly failure? WhatsApp a video - quote in 4 minutes</h2>
-            <p className="text-on-primary-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
+            <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Sticky key? Butterfly failure? WhatsApp a video - quote in 4 minutes</h2>
+            <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
               Send the model, year, and a short video of the keys that fail. Free pickup across Dubai mainland. 90-day written warranty on every keyboard fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
@@ -528,8 +532,8 @@ export default function MacBookKeyboardRepair() {
         </section>
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
-      <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Get your free repair quote</h2>
-      <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-keyboard-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-keyboard-repair-dubai" />
@@ -539,14 +543,14 @@ export default function MacBookKeyboardRepair() {
 
 /* ── local helpers (dark) ──────────────────────────────────── */
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-white/10 bg-white/[0.04] p-lg ${className}`}>{children}</div>;
+  return <div className={`rounded-2xl border border-border bg-bg-card p-lg ${className}`}>{children}</div>;
 }
 
 function SectionHead({ title, intro, icon }: { title: string; intro?: string; icon?: ReactNode }) {
   return (
     <div className="mb-2xl max-w-[64ch]">
-      <Reveal as="h2" className="m-0 text-on-primary flex items-center gap-sm">{icon}{title}</Reveal>
-      {intro && <Reveal as="p" className="mt-md text-[17px] text-on-primary-muted leading-relaxed">{intro}</Reveal>}
+      <Reveal as="h2" className="m-0 text-text flex items-center gap-sm">{icon}{title}</Reveal>
+      {intro && <Reveal as="p" className="mt-md text-[17px] text-text-muted leading-relaxed">{intro}</Reveal>}
     </div>
   );
 }
@@ -556,17 +560,17 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
   return (
     <div className="flex flex-wrap gap-sm shrink-0">
       <Button asChild variant="whatsapp" size="lg"><a href={href} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
-      <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
+      <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );
 }
 
 function PriceTable({ rows }: { rows: PricingRow[] }) {
   return (
-    <Reveal className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+    <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
       <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
         <thead>
-          <tr className="border-b border-white/10 text-accent-bright">
+          <tr className="border-b border-border text-accent">
             <th className="px-lg py-md font-semibold">MacBook model</th>
             <th className="px-lg py-md font-semibold whitespace-nowrap">Keyboard repair</th>
             <th className="px-lg py-md font-semibold">Turnaround</th>
@@ -574,10 +578,10 @@ function PriceTable({ rows }: { rows: PricingRow[] }) {
         </thead>
         <tbody>
           {rows.map((r) => (
-            <tr key={r.model} className="border-b border-white/10 last:border-0">
-              <td className="px-lg py-sm font-medium text-on-primary">{r.model}</td>
-              <td className="px-lg py-sm mono whitespace-nowrap text-accent-bright font-semibold">{aed(r.price)}</td>
-              <td className="px-lg py-sm text-on-primary-muted">{r.timeline}</td>
+            <tr key={r.model} className="border-b border-border last:border-0">
+              <td className="px-lg py-sm font-medium text-text">{r.model}</td>
+              <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{aed(r.price)}</td>
+              <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
             </tr>
           ))}
         </tbody>

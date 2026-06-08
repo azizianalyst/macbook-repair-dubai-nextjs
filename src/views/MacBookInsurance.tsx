@@ -2,6 +2,7 @@
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Building2, Droplets, Search } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -111,7 +112,7 @@ export default function MacBookInsurance() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -119,7 +120,7 @@ export default function MacBookInsurance() {
         title="Apple Laptop & MacBook Insurance in Dubai"
         subtitle="Protect your MacBook against accidental damage, liquid spills, screen breaks, theft or loss. Independent cover from a Dubai workshop, priced per device and quoted on WhatsApp - not a fixed public premium."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Repaired in-house since 2004</span>
@@ -127,6 +128,13 @@ export default function MacBookInsurance() {
           <span>Free pickup across Dubai</span>
         </p>
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer
+        tone="dark"
+        question="Does MacBook Repair Dubai offer MacBook insurance in Dubai?"
+        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a 90-day written warranty. WhatsApp 055 741 3706 for a plan."
+      />
 
       <USPStrip tone="dark" />
 
@@ -142,30 +150,30 @@ export default function MacBookInsurance() {
         <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md">
           <strong>MacBook Repair Dubai</strong> does more than repair Apple laptops - we offer insurance plans that protect your MacBook from accidental damage, liquid spills, broken screens, hardware failure, and theft or loss. Cover is independent of Apple, handled by the same Dubai workshop that has serviced Apple hardware since 2004. Plans are available for individuals and freelancers, with custom packages for companies running several devices.
         </p>
-        <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[75ch] m-0">
+        <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
           There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our 90-day workmanship warranty.
         </p>
       </section>
 
       {/* Coverage types */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> What MacBook insurance covers
+            <ShieldCheck size={28} className="text-accent" aria-hidden /> What MacBook insurance covers
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {COVERAGE.map((c) => (
-              <article key={c.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /> {c.title}</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{c.body}</p>
+              <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {c.title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{c.body}</p>
               </article>
             ))}
           </div>
-          <p className="text-[14px] text-on-primary-muted leading-relaxed max-w-[75ch] mt-lg m-0">
+          <p className="text-[14px] text-text-muted leading-relaxed max-w-[75ch] mt-lg m-0">
             The exact cover, conditions and any excess for your device are set out in your plan document and confirmed in writing before you pay. Related repairs we handle every day include{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright underline">water damage repair</Link>,{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright underline">screen repair</Link>, and{" "}
-            <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent-bright underline">out-of-warranty Apple repair</Link>.
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent underline">water damage repair</Link>,{" "}
+            <Link to="/macbook-screen-repair-dubai" className="text-accent underline">screen repair</Link>, and{" "}
+            <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent underline">out-of-warranty Apple repair</Link>.
           </p>
         </div>
       </section>
@@ -173,39 +181,39 @@ export default function MacBookInsurance() {
       {/* How it works */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Droplets size={28} className="text-accent-bright" aria-hidden /> How a MacBook insurance plan works
+          <Droplets size={28} className="text-accent" aria-hidden /> How a MacBook insurance plan works
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           Four steps from assessment to cover. Pricing is decided per device and quoted on WhatsApp - nothing is charged until you approve.
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s) => (
-            <article key={s.n} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col">
-              <span className="text-[28px] font-bold text-accent-bright mb-sm">{s.n}</span>
+            <article key={s.n} className="border border-border bg-bg-card rounded-md p-lg flex flex-col">
+              <span className="text-[28px] font-bold text-accent mb-sm">{s.n}</span>
               <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{s.body}</p>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{s.body}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Why us */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Building2 size={28} className="text-accent-bright" aria-hidden /> Why insure with MacBook Repair Dubai
+            <Building2 size={28} className="text-accent" aria-hidden /> Why insure with MacBook Repair Dubai
           </h2>
           <div className="grid gap-md md:grid-cols-3">
             {WHY.map((w) => (
-              <article key={w.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2"><Search size={18} className="text-accent-bright" aria-hidden /> {w.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{w.body}</p>
+              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2"><Search size={18} className="text-accent" aria-hidden /> {w.title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed m-0">{w.body}</p>
               </article>
             ))}
           </div>
-          <p className="text-[14px] text-on-primary-muted leading-relaxed max-w-[75ch] mt-lg m-0">
+          <p className="text-[14px] text-text-muted leading-relaxed max-w-[75ch] mt-lg m-0">
             Running several devices for a team? An{" "}
-            <Link to="/annual-maintenance-contract-dubai" className="text-accent-bright underline">Annual Maintenance Contract</Link>{" "}
+            <Link to="/annual-maintenance-contract-dubai" className="text-accent underline">Annual Maintenance Contract</Link>{" "}
             can pair scheduled servicing with cover for your whole fleet.
           </p>
         </div>
@@ -225,10 +233,10 @@ export default function MacBookInsurance() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Get your MacBook insurance quote on WhatsApp</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get your MacBook insurance quote on WhatsApp</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Free device assessment, custom plans for individuals and companies. WhatsApp your MacBook model and we'll quote the annual fee per device - no fixed public price, no obligation until you approve.
           </p>
           <div className="relative flex flex-wrap gap-sm">

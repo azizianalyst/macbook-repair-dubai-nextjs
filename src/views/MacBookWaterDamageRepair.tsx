@@ -1,6 +1,7 @@
 "use client";
 import { Droplets, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star, Siren } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -141,7 +142,7 @@ export default function MacBookWaterDamageRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -162,8 +163,8 @@ export default function MacBookWaterDamageRepair() {
           <div className="flex items-start gap-md">
             <Siren size={32} className="text-error shrink-0 mt-1" aria-hidden />
             <div>
-              <p className="font-bold text-[18px] text-on-primary">Just spilled? WhatsApp now - same-hour free pickup</p>
-              <p className="text-[14px] text-on-primary-muted mt-1">Power off, flip upside down on a towel, message a photo. Every minute counts - corrosion is exponential.</p>
+              <p className="font-bold text-[18px] text-text">Just spilled? WhatsApp now - same-hour free pickup</p>
+              <p className="text-[14px] text-text-muted mt-1">Power off, flip upside down on a towel, message a photo. Every minute counts - corrosion is exponential.</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
@@ -181,6 +182,9 @@ export default function MacBookWaterDamageRepair() {
         </div>
       </section>
 
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook water damage repair", startingPrice: 700, timeline: "1 to 5 days" })} />
+
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
           { name: "Home",                  path: "/" },
@@ -193,17 +197,17 @@ export default function MacBookWaterDamageRepair() {
         <div className="flex flex-col gap-3xl">
           {/* Intro */}
           <section>
-            <LinkifyProse selfHref="/macbook-water-damage-repair-dubai"><p className="text-[17px] text-on-primary leading-relaxed">
+            <LinkifyProse selfHref="/macbook-water-damage-repair-dubai"><p className="text-[17px] text-text leading-relaxed">
               MacBook water damage repair in Dubai starts at AED 700 for a full ultrasonic clean and corrosion removal - most spills are recoverable if they arrive at the workshop within 24 hours and the MacBook was not powered on after the incident. The workshop's 2024-2025 logbook shows a 90% success rate at under 24 hours, dropping to 60% at 72 hours and 30% after a week. Coffee, juice, beach water, swimming pool water, leaking water bottles in laptop bags, melted ice from a drink - the workshop has rescued 1,800+ MacBooks since 2004. Same-hour emergency pickup across Dubai mainland. No fix, no charge - if the logic board is beyond component-level repair, you pay AED 0.
             </p></LinkifyProse>
           </section>
 
           {/* The first 24 hours */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <AlertTriangle size={28} className="text-error" aria-hidden /> The first 24 hours - what to do, what to avoid
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Liquid damage is exponential. The actions in the first hour determine whether the MacBook costs AED 700 to recover or AED 0 because it's a write-off.
             </p>
             <div className="grid gap-md md:grid-cols-2">
@@ -212,34 +216,34 @@ export default function MacBookWaterDamageRepair() {
                   <h3 className={`text-[16px] font-bold mb-sm ${"do" in item ? "text-success" : "text-error"}`}>
                     {"do" in item ? item.do : item.dont}
                   </h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{item.why}</p>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{item.why}</p>
                 </article>
               ))}
             </div>
           </section>
 
           {/* Salt water Dubai note */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md flex items-center gap-sm text-on-primary">
-              <Droplets size={24} className="text-accent-bright" aria-hidden /> Dubai-specific: salt water is the worst case
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md flex items-center gap-sm text-text">
+              <Droplets size={24} className="text-accent" aria-hidden /> Dubai-specific: salt water is the worst case
             </h2>
-            <p className="text-[15px] text-on-primary-muted leading-relaxed mb-md">
+            <p className="text-[15px] text-text-muted leading-relaxed mb-md">
               Persian Gulf salt water is roughly 4% salinity vs the open ocean's 3.5%. Beach water that gets into a MacBook causes corrosion roughly 10x faster than fresh water - chloride ions strip the protective oxide layer off every copper trace within hours. Swimming pool water (chlorinated) is somewhere in between.
             </p>
-            <ul className="space-y-2 text-[14px] text-on-primary-muted">
-              <li><strong className="text-on-primary">Beach water:</strong> AED 1,100, 3 days, 75% recovery at under 24 hours.</li>
-              <li><strong className="text-on-primary">Swimming pool water:</strong> AED 850, 2 days, 80% recovery at under 24 hours.</li>
-              <li><strong className="text-on-primary">Tap water (clean spill):</strong> AED 700, 1-2 days, 90% recovery at under 24 hours.</li>
-              <li><strong className="text-on-primary">Coffee, tea, juice (sugary):</strong> AED 850, 2-3 days. The sugar film must be ultrasonically dissolved or it bridges chips for months.</li>
+            <ul className="space-y-2 text-[14px] text-text-muted">
+              <li><strong className="text-text">Beach water:</strong> AED 1,100, 3 days, 75% recovery at under 24 hours.</li>
+              <li><strong className="text-text">Swimming pool water:</strong> AED 850, 2 days, 80% recovery at under 24 hours.</li>
+              <li><strong className="text-text">Tap water (clean spill):</strong> AED 700, 1-2 days, 90% recovery at under 24 hours.</li>
+              <li><strong className="text-text">Coffee, tea, juice (sugary):</strong> AED 850, 2-3 days. The sugar film must be ultrasonically dissolved or it bridges chips for months.</li>
             </ul>
           </section>
 
           {/* Process */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <Wrench size={28} className="text-accent-bright" aria-hidden /> Our water damage repair process
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <Wrench size={28} className="text-accent" aria-hidden /> Our water damage repair process
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Six steps - from emergency pickup to a 7-day soak test before the MacBook leaves the workshop. The 7-day test catches the delayed-failure cases that show up days later.
             </p>
             <StepList steps={PROCESS} tone="dark" />
@@ -247,31 +251,31 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Pricing */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook water damage repair cost in Dubai</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook water damage repair cost in Dubai</h2>
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Final price depends on what corroded. After the free strip-down, the WhatsApp quote shows exactly which parts need replacement and the expected total. No hidden fees, no diagnostic surcharge.
             </p>
             <PricingTable service="Water damage repair" rows={PRICING} tone="dark" />
-            <p className="text-[14px] text-on-primary-faint mt-md max-w-[70ch] mono">
+            <p className="text-[14px] text-text-faint mt-md max-w-[70ch] mono">
               All prices in AED, VAT inclusive. No fix, no charge - unrecoverable boards cost AED 0.
             </p>
           </section>
 
           {/* Timeline */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">How long does water damage repair take?</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does water damage repair take?</h2>
             <div className="grid gap-md md:grid-cols-3">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">1-2 days</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Clean spill (water), under 24 hours from incident, no powered-on attempts. Ultrasonic clean + 48-hour dry + 7-day soak test.</p>
+                <h3 className="text-[18px] font-bold mb-sm text-text">1-2 days</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Clean spill (water), under 24 hours from incident, no powered-on attempts. Ultrasonic clean + 48-hour dry + 7-day soak test.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">2-3 days</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Coffee, juice, sugary drinks (sugar film needs deeper clean). Beach or pool water with mild corrosion. Keyboard membrane swap if it didn't survive.</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">2-3 days</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Coffee, juice, sugary drinks (sugar film needs deeper clean). Beach or pool water with mild corrosion. Keyboard membrane swap if it didn't survive.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">3-5 days</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Logic board component-level work - corroded chips replaced under microscope with hot air rework. Salt water with deep corrosion. Late arrivals (over a week from spill).</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">3-5 days</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Logic board component-level work - corroded chips replaced under microscope with hot air rework. Salt water with deep corrosion. Late arrivals (over a week from spill).</p>
               </article>
             </div>
           </section>
@@ -285,22 +289,22 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Honest success rate */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Honest success rates - from the workshop logbook</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Honest success rates - from the workshop logbook</h2>
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[520px]">
-                <thead className="bg-white/[0.02]">
+                <thead className="bg-bg-alt">
                   <tr className="text-left">
-                    <th className="px-md py-sm font-semibold text-on-primary">Time from spill</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">Recovery rate</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">Notes</th>
+                    <th className="px-md py-sm font-semibold text-text">Time from spill</th>
+                    <th className="px-md py-sm font-semibold text-text">Recovery rate</th>
+                    <th className="px-md py-sm font-semibold text-text">Notes</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="px-md py-sm font-semibold text-on-primary">Under 24 hours, not powered on</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-on-primary-muted">Best case - usually AED 700 standard clean.</td></tr>
-                  <tr className="bg-white/[0.02]"><td className="px-md py-sm font-semibold text-on-primary">24 to 72 hours</td><td className="px-md py-sm mono text-on-primary">60%</td><td className="px-md py-sm text-on-primary-muted">Often needs component-level repair, AED 950 to AED 1,200.</td></tr>
-                  <tr><td className="px-md py-sm font-semibold text-on-primary">3 to 7 days</td><td className="px-md py-sm mono text-on-primary">45%</td><td className="px-md py-sm text-on-primary-muted">Corrosion has spread - multi-chip replacement common.</td></tr>
-                  <tr className="bg-white/[0.02]"><td className="px-md py-sm font-semibold text-on-primary">Over 1 week</td><td className="px-md py-sm mono text-on-primary">30%</td><td className="px-md py-sm text-on-primary-muted">Many traces unrecoverable - data recovery becomes the priority.</td></tr>
-                  <tr><td className="px-md py-sm font-semibold text-on-primary">Powered on multiple times after spill</td><td className="px-md py-sm mono text-error">10%</td><td className="px-md py-sm text-on-primary-muted">Worst case - each power-on attempt burns more traces.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold text-text">Under 24 hours, not powered on</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-text-muted">Best case - usually AED 700 standard clean.</td></tr>
+                  <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold text-text">24 to 72 hours</td><td className="px-md py-sm mono text-text">60%</td><td className="px-md py-sm text-text-muted">Often needs component-level repair, AED 950 to AED 1,200.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold text-text">3 to 7 days</td><td className="px-md py-sm mono text-text">45%</td><td className="px-md py-sm text-text-muted">Corrosion has spread - multi-chip replacement common.</td></tr>
+                  <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold text-text">Over 1 week</td><td className="px-md py-sm mono text-text">30%</td><td className="px-md py-sm text-text-muted">Many traces unrecoverable - data recovery becomes the priority.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold text-text">Powered on multiple times after spill</td><td className="px-md py-sm mono text-error">10%</td><td className="px-md py-sm text-text-muted">Worst case - each power-on attempt burns more traces.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -308,11 +312,11 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Warranty */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Warranty
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
             </h2>
-            <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <ul className="space-y-2 text-[15px] text-on-primary">
+            <div className="border border-border bg-bg-card rounded-md p-lg">
+              <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>90 days</strong> - written warranty on the repair work and any parts fitted.</li>
                 <li><strong>Covered:</strong> the specific corrosion repair completed, replacement parts (keyboard, battery, chips), the soak-test result.</li>
                 <li><strong>Not covered:</strong> new corrosion in a different area, a second spill (new ticket), pre-existing damage unrelated to the spill.</li>
@@ -323,56 +327,56 @@ export default function MacBookWaterDamageRepair() {
           </section>
 
           {/* Technician */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md text-on-primary">Lead technician on water damage jobs</h2>
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md text-text">Lead technician on water damage jobs</h2>
             <TechnicianBadge name="Shafiq Ahmed" years={21} specialisation="Water damage & logic board" tone="dark" />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch]">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Shafiq founded the workshop in 2004 and personally handles 80% of water-damage strip-downs. The 7-day soak test protocol is his - designed after 21 years of seeing delayed-failure boards come back in week 2.
             </p>
           </section>
 
           {/* Comparison */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Water Damage Repair vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Water Damage Repair vs Apple Store Dubai</h2>
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[640px]">
-                <thead className="bg-white/[0.02]">
+                <thead className="bg-bg-alt">
                   <tr className="text-left">
-                    <th className="px-md py-sm font-semibold text-on-primary">Factor</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">MacBook Repair Dubai</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">Apple Store / AASP</th>
+                    <th className="px-md py-sm font-semibold text-text">Factor</th>
+                    <th className="px-md py-sm font-semibold text-text">MacBook Repair Dubai</th>
+                    <th className="px-md py-sm font-semibold text-text">Apple Store / AASP</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON.map((row, i) => (
-                    <tr key={row[0]} className={i % 2 ? "bg-white/[0.02]" : ""}>
-                      <td className="px-md py-sm font-semibold text-on-primary">{row[0]}</td>
-                      <td className="px-md py-sm text-on-primary">{row[1]}</td>
-                      <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                    <tr key={row[0]} className={i % 2 ? "bg-bg-alt" : ""}>
+                      <td className="px-md py-sm font-semibold text-text">{row[0]}</td>
+                      <td className="px-md py-sm text-text">{row[1]}</td>
+                      <td className="px-md py-sm text-text-muted">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-on-primary-faint mt-sm mono">
+            <p className="text-[13px] text-text-faint mt-sm mono">
               AppleCare+ pricing from apple.com/ae/shop/applecare, retrieved April 2026. AppleCare+ is the right call when active and within the 2-incident-per-year limit; the workshop is the right call when AppleCare+ is exhausted, the device is out of warranty, or component-level board repair is preferred over full board swap.
             </p>
           </section>
 
           {/* Reviews */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <Star size={28} className="text-star fill-star" aria-hidden /> Real water-damage reviews
             </h2>
-            <p className="text-[14px] text-on-primary-muted mb-lg">
-              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews" className="text-accent-bright font-semibold hover:underline">Read all 215+ →</a>
+            <p className="text-[14px] text-text-muted mb-lg">
+              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
 
           {/* FAQ */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook water damage FAQ</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook water damage FAQ</h2>
             <FAQAccordion items={FAQS} injectSchema tone="dark" />
           </section>
 
@@ -387,7 +391,7 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Where to bring your MacBook (or call for pickup)</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to bring your MacBook (or call for pickup)</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>
@@ -395,9 +399,9 @@ export default function MacBookWaterDamageRepair() {
 
       {/* Final CTA - emergency framing */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="bg-error text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">Spilled in the last hour? Send a photo - pickup driver dispatched in 15 minutes</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+        <div className="bg-error text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">Spilled in the last hour? Send a photo - pickup driver dispatched in 15 minutes</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Power off the MacBook, flip it upside down on a towel, WhatsApp a photo. Free emergency pickup across Dubai mainland. No fix, no charge.
           </p>
           <div className="flex flex-wrap gap-sm">
@@ -416,8 +420,8 @@ export default function MacBookWaterDamageRepair() {
       </section>
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
-      <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Get your free repair quote</h2>
-      <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-water-damage-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-water-damage-repair-dubai" />

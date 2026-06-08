@@ -17,13 +17,24 @@ const nextConfig: NextConfig = {
   // scripts and the site is statically prerendered (a nonce CSP would force dynamic
   // rendering and break static caching/SEO).
   async headers() {
+    // Dev (next dev / Turbopack) needs 'unsafe-eval' for HMR + React's dev-mode
+    // debugging (callstack reconstruction). Production never uses eval(), so we
+    // omit it there to keep the policy tight.
+    const isDev = process.env.NODE_ENV !== "production";
+    const scriptSrc = [
+      "script-src 'self' 'unsafe-inline'",
+      isDev ? "'unsafe-eval'" : "",
+      "https://www.googletagmanager.com https://www.google-analytics.com",
+    ]
+      .filter(Boolean)
+      .join(" ");
     const csp = [
       "default-src 'self'",
       "base-uri 'self'",
       "object-src 'none'",
       "frame-ancestors 'self'",
       "form-action 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      scriptSrc,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: https:",
       "font-src 'self' https://fonts.gstatic.com data:",

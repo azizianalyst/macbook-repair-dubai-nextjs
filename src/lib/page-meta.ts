@@ -22,7 +22,7 @@ function deriveMeta(path: string): { title: string; description: string } {
     return {
       title: `${SITE_NAME} | Certified Apple Technicians in UAE`,
       description:
-        "Get expert MacBook repair Dubai. Screen, battery, keyboard & water damage services for M1, M2, M3 & M4 models. Fast & trusted Apple repair.",
+        "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 90-day warranty.",
     };
   }
   const segments = path.replace(/^\/+|\/+$/g, "").split("/");
@@ -49,11 +49,20 @@ export function metaForPath(path: string): Metadata {
   const title = entry?.title ?? fallback.title;
   const description = entry?.description ?? fallback.description;
   const url = SITE_URL + (path === "/" ? "" : path);
+  const ogImage = `${SITE_URL}/og-default.jpg`; // 1200x630, lives in /public
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website", siteName: SITE_NAME, locale: "en_AE" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      siteName: SITE_NAME,
+      locale: "en_AE",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }

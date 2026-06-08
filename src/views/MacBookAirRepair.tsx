@@ -2,6 +2,7 @@
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -138,15 +139,15 @@ export default function MacBookAirRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="device"
         tone="dark"
         eyebrow="MacBook Air specialist"
-        title="MacBook Air Repair"
+        title="MacBook Air Repair Dubai"
         subtitle="Get your MacBook Air repaired quickly and affordably in Dubai. Our expert technicians handle screen repairs, battery replacements, and keyboard issues using genuine Apple parts. Rated 5.0 stars by hundreds of satisfied customers. Contact us today."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 stars · hundreds of customers</span>
           <span>·</span>
           <span>Genuine Apple parts</span>
@@ -154,6 +155,13 @@ export default function MacBookAirRepair() {
           <span>Free pickup across Dubai</span>
         </p>
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer
+        tone="dark"
+        question="Where can I get my MacBook Air repaired in Dubai?"
+        answer="MacBook Repair Dubai repairs every MacBook Air — 11-inch, 13-inch and 15-inch, Intel through M5 — at its Concord Tower workshop in Dubai Media City. Same-day screen, battery and keyboard service plus logic-board and water-damage repair, with free diagnosis, free citywide pickup, genuine or OEM-grade parts and a 90-day written warranty."
+      />
 
       <USPStrip tone="dark" />
 
@@ -168,40 +176,40 @@ export default function MacBookAirRepair() {
 
       {/* Other devices */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
+        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
+          <span className="font-semibold text-text">We also repair:</span>
           {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/10 transition-colors">{s.label}</Link>
+            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
           ))}
         </p>
       </section>
 
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook Air models we repair</h2>
-        <p className="text-[15px] text-on-primary-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
+        <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook Air models we repair</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
         <div className="flex flex-wrap gap-2 mb-lg">
           {AIR_MODELS.map((m) => (
-            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-accent-bright hover:bg-white/10 transition-colors">{m.name} →</Link>
+            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
           ))}
         </div>
-        <p className="text-[13px] text-on-primary-muted mb-sm">Full hardware coverage, including older Intel and discontinued models:</p>
+        <p className="text-[13px] text-text-muted mb-sm">Full hardware coverage, including older Intel and discontinued models:</p>
         <ul className="flex flex-wrap gap-2">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-on-primary mono">{m}</li>
+            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
       </section>
 
       {/* Common problems */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Common MacBook Air Problems We Deal With</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md text-text">Common MacBook Air Problems We Deal With</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
+              <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">{s.title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
               </article>
             ))}
           </div>
@@ -211,22 +219,22 @@ export default function MacBookAirRepair() {
 
       {/* Book your slot */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm text-on-primary">Book Your Slot Now</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-lg">
+        <h2 className="text-[28px] md:text-[32px] mb-sm text-text">Book Your Slot Now</h2>
+        <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">
           Your time is very valuable to us. That's why we have an easy and quick appointment system that lets you reserve a time for repair ahead of time. We'll hold your spot in our service line as soon as you pick a date and time that work best for you. By making an appointment, you can cut down on wait times and make sure our skilled experts can fix your MacBook Air right away.
         </p>
         <CallButtons />
       </section>
 
       {/* Repair process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Our Repair Process</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Our Repair Process</h2>
           <ol className="space-y-md max-w-[80ch]">
             {PROCESS.map((step, i) => (
               <li key={i} className="flex gap-md">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-bright/15 text-accent-bright font-bold flex items-center justify-center">{i + 1}</span>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed pt-1">{step}</p>
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/15 text-accent font-bold flex items-center justify-center">{i + 1}</span>
+                <p className="text-[15px] text-text-muted leading-relaxed pt-1">{step}</p>
               </li>
             ))}
           </ol>
@@ -235,22 +243,22 @@ export default function MacBookAirRepair() {
 
       {/* Signs */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm text-on-primary">Signs Your MacBook Air Needs Repair</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-md">If you see any of these things, it's time to bring your MacBook Air to us for repair:</p>
+        <h2 className="text-[28px] md:text-[32px] mb-sm text-text">Signs Your MacBook Air Needs Repair</h2>
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-md">If you see any of these things, it's time to bring your MacBook Air to us for repair:</p>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[80ch]">
           {SIGNS.map((s) => (
-            <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>
+            <li key={s} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {s}</li>
           ))}
         </ul>
       </section>
 
       {/* Care */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">How to Take Care of Your MacBook Air</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md text-text">How to Take Care of Your MacBook Air</h2>
           <ul className="space-y-sm max-w-[80ch]">
             {CARE.map((c) => (
-              <li key={c} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {c}</li>
+              <li key={c} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {c}</li>
             ))}
           </ul>
         </div>
@@ -258,26 +266,26 @@ export default function MacBookAirRepair() {
 
       {/* Why choose us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm text-on-primary">Why Customers Choose Us</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-md">
+        <h2 className="text-[28px] md:text-[32px] mb-sm text-text">Why Customers Choose Us</h2>
+        <p className="text-[16px] text-text-muted max-w-[75ch] mb-md">
           We are a specialised centre for Apple MacBook and gadget repair in Dubai, with an experienced staff of engineers who are experts in their field. We have several advantages over other services in the city:
         </p>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[80ch]">
           {WHY.map((w) => (
-            <li key={w} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {w}</li>
+            <li key={w} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {w}</li>
           ))}
         </ul>
       </section>
 
       {/* Quality and speed */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Get Quality and Speed at Our MacBook Air Repair Shop</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get Quality and Speed at Our MacBook Air Repair Shop</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {QUALITY.map((q) => (
-              <article key={q.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">{q.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{q.body}</p>
+              <article key={q.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">{q.title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed">{q.body}</p>
               </article>
             ))}
           </div>
@@ -286,22 +294,22 @@ export default function MacBookAirRepair() {
 
       {/* Testimonials */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Testimonials</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-md text-text">Testimonials</h2>
         <div className="grid gap-md md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
               <div className="flex gap-1 mb-sm" aria-label="5 star rating">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
               </div>
-              <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-              <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
+              <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
+              <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
             </figure>
           ))}
         </div>
-        <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
-          <h3 className="text-[18px] font-bold mb-sm text-on-primary">Business Hours</h3>
-          <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+        <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
+          <h3 className="text-[18px] font-bold mb-sm text-text">Business Hours</h3>
+          <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
+          <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
         </div>
       </section>
 
@@ -309,22 +317,22 @@ export default function MacBookAirRepair() {
       <VsAppleStore tone="dark" />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Frequently Asked Questions</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-md text-text">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
       </section>
 
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Where to Find Us</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to Find Us</h2>
         <LocationBlock tone="dark" />
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Ready to get your MacBook Air repaired?</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Ready to get your MacBook Air repaired?</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Our experienced technicians are here to help. Book your repair appointment today, and we'll have your device running like new in no time.
           </p>
           <div className="relative"><CallButtons /></div>

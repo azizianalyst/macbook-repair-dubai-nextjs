@@ -14,6 +14,7 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { CountUp } from "@/components/blocks/CountUp";
 import { Reveal } from "@/components/blocks/Reveal";
@@ -22,14 +23,19 @@ import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { REVIEWS } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
 import { SITE } from "@/lib/seo";
-import { itemList, service as serviceSchema, person, faqPage, localBusiness, breadcrumbs, aggregateRating } from "@/lib/schema";
+import { itemList, service as serviceSchema, person, faqPage, localBusiness, breadcrumbs, aggregateRating, organization, webSite, pageWithSpeakable } from "@/lib/schema";
 import { linkifyString as linkify } from "@/lib/linkify";
 
-// Title/description kept identical to the live ranking page (and prerender.ts deriveMeta("/")).
-// Kept 100% identical to the old ranking WordPress home (title + meta) so Google sees no change.
+// TITLE kept identical to the old ranking WordPress home (title is a ranking factor — preserve it).
+// DESC refreshed 2026: widened Intel→M5 (shop now repairs M5) + CTR rewrite. Meta descriptions are
+// not a ranking factor, so this is upside-only. Keep in sync with deriveMeta("/") in page-meta.ts.
 const TITLE = "MacBook Repair Dubai | Certified Apple Technicians in UAE";
 const DESC =
-  "Get expert MacBook repair Dubai. Screen, battery, keyboard & water damage services for M1, M2, M3 & M4 models. Fast & trusted Apple repair.";
+  "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 90-day warranty.";
+
+// Visible freshness signal (AEO lever). BUMP THIS on each pricing/content review so the
+// homepage never looks stale — a date that goes stale is a negative signal (3-month cliff).
+const LAST_UPDATED = "June 2026";
 
 const HERO_FEATURES = ["Professional Services", "Customer Satisfaction", "Same Day Service", "Friendly Team"];
 
@@ -340,30 +346,30 @@ export default function Home() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
 
         {/* ── Hero ───────────────────────────────────────────────── */}
-        <section data-hero-tone="dark" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
+        <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
           <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute top-1/3 -right-16 h-[26rem] w-[26rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 grid gap-2xl md:grid-cols-12 items-start">
             <div className="md:col-span-7">
-              <p className="m-0 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-3.5 py-1.5 text-[13px] font-medium text-on-primary-muted">
+              <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
                 <span className="relative flex h-2 w-2" aria-hidden>
-                  <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent-bright opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-bright" />
+                  <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                 </span>
                 Independent Apple Repair · Dubai Media City · Since 2004
               </p>
-              <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-on-primary">
-                MacBook Repair Dubai - <span className="text-accent-bright">Same-Day Service</span> by Independent Apple Specialists
+              <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
+                MacBook Repair Dubai - <span className="text-accent">Same-Day Service</span> by Independent Apple Specialists
               </h1>
-              <p className="mt-lg max-w-[60ch] text-[17px] leading-relaxed text-on-primary-muted">
+              <p className="mt-lg max-w-[60ch] text-[17px] leading-relaxed text-text-muted">
                 Cracked screen, swollen battery, a liquid spill or a Mac that won't boot? We fix it, usually the same
                 day. Independent Apple repair in Dubai Media City since 2004, on every model from the 2010 Intel Air
                 through the latest M5 - both Air and Pro.
               </p>
-              <p className="mt-md max-w-[60ch] text-[15px] leading-relaxed text-on-primary-faint">
+              <p className="mt-md max-w-[60ch] text-[15px] leading-relaxed text-text-faint">
                 {linkify(
                   "Free diagnosis and a written quote on WhatsApp before any work starts, backed by a 90-day warranty on every MacBook repair. We handle screen replacement, battery replacement, keyboard repair, water-damage recovery and board-level logic board work."
                 )}{" "}
@@ -373,25 +379,25 @@ export default function Home() {
               <div className="mt-lg flex items-center gap-2.5">
                 <span className="flex items-center gap-0.5" aria-hidden>
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} size={17} className="fill-accent-bright text-accent-bright" />
+                    <Star key={i} size={17} className="fill-accent text-accent" />
                   ))}
                 </span>
-                <span className="text-[14px] text-on-primary-muted">
-                  <strong className="text-on-primary">{REVIEW_AVERAGE.toFixed(1)}</strong> from {REVIEW_COUNT}+ Google reviews
+                <span className="text-[14px] text-text-muted">
+                  <strong className="text-text">{REVIEW_AVERAGE.toFixed(1)}</strong> from {REVIEW_COUNT}+ Google reviews
                 </span>
               </div>
               <div className="mt-xl flex flex-wrap gap-sm">
                 <Button asChild variant="whatsapp" size="lg">
                   <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp a Technician</a>
                 </Button>
-                <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+                <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
                   <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
                 </Button>
               </div>
               <div className="mt-xl flex flex-wrap gap-2.5">
                 {HERO_FEATURES.map((f) => (
-                  <span key={f} className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.12] bg-white/[0.04] px-3 py-1.5 text-[13px] font-medium text-on-primary-muted">
-                    <Check size={14} className="text-accent-bright" aria-hidden /> {f}
+                  <span key={f} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] font-medium text-text-muted">
+                    <Check size={14} className="text-accent" aria-hidden /> {f}
                   </span>
                 ))}
               </div>
@@ -399,7 +405,7 @@ export default function Home() {
 
             {/* hero image + floating spec card */}
             <div className="md:col-span-5 relative">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-2xl">
                 <ResponsiveImage
                   src="/images/real/lab/macbook-pro-internals-clean-dubai.jpg"
                   alt="MacBook Repair Dubai technician servicing a MacBook Pro cooling fan and logic board at the Media City workshop"
@@ -411,58 +417,68 @@ export default function Home() {
                   className="block"
                   imgClassName="w-full h-[280px] md:h-[420px] object-cover"
                 />
-                <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/15 to-transparent" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[12px] font-medium text-on-primary backdrop-blur-md">
+                <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg-alt/80 via-bg-alt/10 to-transparent" />
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[12px] font-medium text-white backdrop-blur-md">
                   <span className="relative flex h-2 w-2" aria-hidden>
-                    <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent-bright opacity-60" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-bright" />
+                    <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                   </span>
                   Real repair in progress
                 </span>
               </div>
-              <Reveal delay={120} className="relative z-10 -mt-10 mx-3 rounded-2xl border border-white/10 bg-bg-card/90 p-md shadow-lg backdrop-blur-xl md:mx-5">
+              <Reveal delay={120} className="relative z-10 -mt-10 mx-3 rounded-2xl border border-border bg-bg-card/90 p-md shadow-lg backdrop-blur-xl md:mx-5">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent-bright"><Wrench size={20} aria-hidden /></span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent"><Wrench size={20} aria-hidden /></span>
                   <div className="min-w-0">
-                    <p className="m-0 font-semibold leading-tight text-on-primary">Get a price in minutes</p>
-                    <p className="m-0 text-[12px] text-on-primary-faint">Free diagnosis · no fix, no charge</p>
+                    <p className="m-0 font-semibold leading-tight text-text">Get a price in minutes</p>
+                    <p className="m-0 text-[12px] text-text-faint">Free diagnosis · no fix, no charge</p>
                   </div>
                 </div>
-                <ul className="mt-md grid grid-cols-2 gap-x-4 gap-y-2.5 list-none p-0 border-t border-white/10 pt-md">
+                <ul className="mt-md grid grid-cols-2 gap-x-4 gap-y-2.5 list-none p-0 border-t border-border pt-md">
                   {[["Price", "From AED 49"], ["Diagnosis", "20 minutes"], ["Repair time", "3 - 4 hours"], ["Pickup", "FREE in Dubai"]].map(([k, v]) => (
                     <li key={k} className="flex flex-col text-[13.5px]">
-                      <span className="text-on-primary-faint">{k}</span>
-                      <span className="font-semibold text-on-primary">{v}</span>
+                      <span className="text-text-faint">{k}</span>
+                      <span className="font-semibold text-text">{v}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-md flex items-center justify-between gap-2 border-t border-white/10 pt-md text-[12.5px]">
-                  <span className="inline-flex items-center gap-1.5 text-on-primary-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent-bright hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+                <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+                  <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
                 </div>
               </Reveal>
             </div>
           </div>
         </section>
 
+        {/* ── Answer-first capsule (AEO/BLUF) ────────────────────────
+            40-60 word, entity-dense, pronoun-free quotable answer in the first
+            screen so AI Overviews / ChatGPT / Perplexity can lift it cleanly.
+            The .quick-answer wrapper is the SpeakableSpecification xpath target. */}
+        <QuickAnswer
+          tone="dark"
+          question="Where can I get my MacBook repaired in Dubai?"
+          answer="MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, iPhone and iPad — Intel through M5 — with same-day screen, battery, keyboard and water-damage service, free diagnosis, free citywide pickup, and a 90-day written warranty. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
+        />
+
         {/* ── Trust strip ────────────────────────────────────────── */}
-        <section className="border-y border-white/10 bg-white/[0.02]">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap items-center justify-center gap-x-xl gap-y-2 text-[13.5px] text-on-primary-muted">
-            <Link to="/warranty" className="inline-flex items-center gap-2 transition-colors hover:text-accent-bright"><BadgeCheck size={16} className="text-accent-bright" aria-hidden /> 90-day written warranty</Link>
-            <span className="inline-flex items-center gap-2"><Check size={16} className="text-accent-bright" aria-hidden /> Free diagnosis · no fix, no charge</span>
-            <span className="inline-flex items-center gap-2"><Clock size={16} className="text-accent-bright" aria-hidden /> Independent Apple specialist since 2004</span>
-            <Link to="/about" className="inline-flex items-center gap-2 transition-colors hover:text-accent-bright"><Users size={16} className="text-accent-bright" aria-hidden /> Led by Abdul Aziz · 21 years at the bench</Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 transition-colors hover:text-accent-bright"><Truck size={16} className="text-accent-bright" aria-hidden /> Free pickup &amp; delivery in Dubai</Link>
+        <section className="border-y border-border bg-bg-alt">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap items-center justify-center gap-x-xl gap-y-2 text-[13.5px] text-text-muted">
+            <Link to="/warranty" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><BadgeCheck size={16} className="text-accent" aria-hidden /> 90-day written warranty</Link>
+            <span className="inline-flex items-center gap-2"><Check size={16} className="text-accent" aria-hidden /> Free diagnosis · no fix, no charge</span>
+            <span className="inline-flex items-center gap-2"><Clock size={16} className="text-accent" aria-hidden /> Independent Apple specialist since 2004</span>
+            <Link to="/about" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><Users size={16} className="text-accent" aria-hidden /> Led by Abdul Aziz · 21 years at the bench</Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><Truck size={16} className="text-accent" aria-hidden /> Free pickup &amp; delivery in Dubai</Link>
           </div>
         </section>
 
         {/* ── Stats ──────────────────────────────────────────────── */}
-        <section className="border-y border-white/10 bg-white/[0.03]">
+        <section className="border-y border-border bg-bg-alt">
           <div className="mx-auto max-w-content px-5 md:px-6 py-2xl grid gap-xl grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 text-center">
             {STATS.map((s) => (
               <Reveal key={s.label}>
-                <p className="mono text-[28px] md:text-[32px] font-bold text-on-primary leading-none mb-1"><CountUp value={s.value} /></p>
-                <p className="text-[13px] text-on-primary-muted m-0">{s.label}</p>
+                <p className="mono text-[28px] md:text-[32px] font-bold text-text leading-none mb-1"><CountUp value={s.value} /></p>
+                <p className="text-[13px] text-text-muted m-0">{s.label}</p>
               </Reveal>
             ))}
           </div>
@@ -471,36 +487,37 @@ export default function Home() {
         {/* ── Hours + price/service details ──────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl grid gap-lg md:grid-cols-2">
           <Card>
-            <h2 className="m-0 mb-md text-on-primary text-[24px]">Business Hours</h2>
-            <p className="m-0 text-on-primary-muted"><strong className="text-on-primary">Monday - Saturday:</strong> 09:00 AM - 10:00 PM</p>
-            <p className="m-0 mt-2 text-on-primary-muted"><strong className="text-on-primary">Sunday:</strong> Closed - WhatsApp support stays open and we'll book you in for Monday.</p>
+            <h2 className="m-0 mb-md text-text text-[24px]">Business Hours</h2>
+            <p className="m-0 text-text-muted"><strong className="text-text">Monday - Saturday:</strong> 09:00 AM - 10:00 PM</p>
+            <p className="m-0 mt-2 text-text-muted"><strong className="text-text">Sunday:</strong> Closed - WhatsApp support stays open and we'll book you in for Monday.</p>
           </Card>
           <Card>
-            <h2 className="m-0 mb-md text-on-primary text-[24px]">Price &amp; Service Details</h2>
-            <ul className="grid gap-2 list-none p-0 m-0 text-[15px] text-on-primary-muted">
-              <li className="flex items-start gap-2"><Wallet size={18} className="text-accent-bright mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Price:</strong> Starts from AED 49</span></li>
-              <li className="flex items-start gap-2"><Search size={18} className="text-accent-bright mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Diagnosis time:</strong> 20 minutes</span></li>
-              <li className="flex items-start gap-2"><Clock size={18} className="text-accent-bright mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Repair time:</strong> 3 - 4 hours (depending on the problem)</span></li>
-              <li className="flex items-start gap-2"><Truck size={18} className="text-accent-bright mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-on-primary">Site visit charge:</strong> FREE</span></li>
+            <h2 className="m-0 mb-md text-text text-[24px]">Price &amp; Service Details</h2>
+            <ul className="grid gap-2 list-none p-0 m-0 text-[15px] text-text-muted">
+              <li className="flex items-start gap-2"><Wallet size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Price:</strong> Starts from AED 49</span></li>
+              <li className="flex items-start gap-2"><Search size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Diagnosis time:</strong> 20 minutes</span></li>
+              <li className="flex items-start gap-2"><Clock size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Repair time:</strong> 3 - 4 hours (depending on the problem)</span></li>
+              <li className="flex items-start gap-2"><Truck size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Site visit charge:</strong> FREE</span></li>
             </ul>
+            <p className="m-0 mt-md text-[12.5px] text-text-faint">Pricing reviewed {LAST_UPDATED} · VAT-inclusive · diagnosis always free.</p>
           </Card>
         </section>
 
         {/* ── Models we repair ───────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Mac models" title="Models We Repair" />
             <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
               {MODELS.map((m) => (
-                <Link key={m.label} to={m.href} className="group flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] p-lg text-center transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07]">
-                  <Laptop size={22} className="mb-2 text-accent-bright" aria-hidden />
-                  <span className="font-semibold text-[15px] text-on-primary group-hover:text-accent-bright">{m.label}</span>
+                <Link key={m.label} to={m.href} className="group flex flex-col items-center justify-center rounded-2xl border border-border bg-bg-card p-lg text-center transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                  <Laptop size={22} className="mb-2 text-accent" aria-hidden />
+                  <span className="font-semibold text-[15px] text-text group-hover:text-accent">{m.label}</span>
                 </Link>
               ))}
             </div>
             <div className="mt-xl grid gap-lg sm:grid-cols-2">
-              <Card><p className="m-0 font-semibold text-on-primary text-[17px]">MacBook Air 13", 15" Repair</p><p className="m-0 mt-1 text-on-primary-faint text-[14px]">Intel, M1, M2, M3, M4 chip</p></Card>
-              <Card><p className="m-0 font-semibold text-on-primary text-[17px]">MacBook Pro 14", 16" Repair</p><p className="m-0 mt-1 text-on-primary-faint text-[14px]">Intel, M5, M5 Pro, M5 Max chip</p></Card>
+              <Card><p className="m-0 font-semibold text-text text-[17px]">MacBook Air 13", 15" Repair</p><p className="m-0 mt-1 text-text-faint text-[14px]">Intel, M1, M2, M3, M4 chip</p></Card>
+              <Card><p className="m-0 font-semibold text-text text-[17px]">MacBook Pro 14", 16" Repair</p><p className="m-0 mt-1 text-text-faint text-[14px]">Intel, M5, M5 Pro, M5 Max chip</p></Card>
             </div>
           </div>
         </section>
@@ -511,10 +528,10 @@ export default function Home() {
           <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
             {MODEL_DIRECTORY.map((col) => (
               <Card key={col.group}>
-                <h3 className="m-0 mb-3 text-on-primary text-[16px]"><Link to={col.hub} className="hover:text-accent-bright">{col.group} repair</Link></h3>
+                <h3 className="m-0 mb-3 text-text text-[16px]"><Link to={col.hub} className="hover:text-accent">{col.group} repair</Link></h3>
                 <ul className="grid gap-1.5 list-none p-0 m-0">
                   {col.items.map((it) => (
-                    <li key={it.href}><Link to={it.href} className="text-[14px] text-on-primary-muted hover:text-accent-bright">{it.label} repair in Dubai</Link></li>
+                    <li key={it.href}><Link to={it.href} className="text-[14px] text-text-muted hover:text-accent">{it.label} repair in Dubai</Link></li>
                   ))}
                 </ul>
               </Card>
@@ -527,19 +544,19 @@ export default function Home() {
           <SectionHead eyebrow="Beyond Apple" title="Other Devices We Repair" intro="Laptops · Desktops · Displays · Custom Built PCs" />
           <div className="grid gap-lg md:grid-cols-3">
             {OTHER_DEVICES.map((o) => (
-              <Card key={o.t}><h3 className="m-0 mb-2 text-on-primary text-[18px]">{o.t}</h3><p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{o.d}</p></Card>
+              <Card key={o.t}><h3 className="m-0 mb-2 text-text text-[18px]">{o.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{o.d}</p></Card>
             ))}
           </div>
         </section>
 
         {/* ── Repair any Apple device (device hubs) ───────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Beyond the MacBook" title="We Repair Every Apple Device in Dubai" intro="MacBook is our speciality, but our bench covers the whole Apple line-up - Mac, iPhone, iPad, iMac and Apple displays, in and out of warranty." />
             <div className="flex flex-wrap gap-2.5">
               {DEVICE_HUB.map((l) => (
-                <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[14px] text-on-primary-muted transition-colors hover:border-accent-bright/40 hover:text-on-primary">
-                  <ArrowRight size={14} className="text-accent-bright shrink-0" aria-hidden /> {l.label}
+                <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+                  <ArrowRight size={14} className="text-accent shrink-0" aria-hidden /> {l.label}
                 </Link>
               ))}
             </div>
@@ -547,10 +564,10 @@ export default function Home() {
         </section>
 
         {/* ── Services offered ───────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="What we fix" title="Services Offered at Our Apple MacBook Repair in Dubai" />
-            <p className="mx-auto mb-2xl max-w-[80ch] text-[15px] leading-relaxed text-on-primary-muted">
+            <p className="mx-auto mb-2xl max-w-[80ch] text-[15px] leading-relaxed text-text-muted">
               {linkify(
                 "From MacBook screen repair and battery replacement to logic board repair, water damage recovery, keyboard replacement, charging port and trackpad faults, our Dubai Media City workshop fixes every issue with a 90-day warranty - and recovers your files with professional data recovery when a drive or board fails."
               )}
@@ -561,19 +578,19 @@ export default function Home() {
                   {s.href ? (
                     <Link
                       to={s.href}
-                      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                      className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     >
-                      <h3 className="m-0 mb-2 text-on-primary text-[18px] transition-colors group-hover:text-accent-bright">{s.t}</h3>
-                      <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{s.d}</p>
-                      <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent-bright">
+                      <h3 className="m-0 mb-2 text-text text-[18px] transition-colors group-hover:text-accent">{s.t}</h3>
+                      <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
+                      <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent">
                         Learn more
                         <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </Link>
                   ) : (
                     <Card className="h-full">
-                      <h3 className="m-0 mb-2 text-on-primary text-[18px]">{s.t}</h3>
-                      <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{s.d}</p>
+                      <h3 className="m-0 mb-2 text-text text-[18px]">{s.t}</h3>
+                      <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
                     </Card>
                   )}
                 </Reveal>
@@ -588,26 +605,26 @@ export default function Home() {
           <SectionHead eyebrow="Make an old Mac fast again" title="MacBook Upgraded Services in Dubai" intro="When your MacBook starts acting up, it may need a system upgrade. We offer many upgrade options to boost your MacBook's speed, storage and overall performance - optimised with the latest technology." />
           <div className="grid gap-lg grid-cols-2 lg:grid-cols-4">
             {UPGRADES.map((u) => (
-              <Link key={u.label} to={u.href || "#"} className="group rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-colors hover:border-accent-bright/40 hover:bg-white/[0.07]">
-                <Cpu size={20} className="mb-2 text-accent-bright" aria-hidden />
-                <span className="font-semibold text-[15px] text-on-primary group-hover:text-accent-bright">{u.label}</span>
+              <Link key={u.label} to={u.href || "#"} className="group rounded-2xl border border-border bg-bg-card p-lg transition-colors hover:border-accent/40 hover:bg-bg-alt">
+                <Cpu size={20} className="mb-2 text-accent" aria-hidden />
+                <span className="font-semibold text-[15px] text-text group-hover:text-accent">{u.label}</span>
               </Link>
             ))}
           </div>
         </section>
 
         {/* ── Discounts ──────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Save more" title="Discounted MacBook Repairs Dubai" intro="We provide reasonable repairs and discounts for students, teachers and military personnel. We do not compromise on quality and offer high-quality MacBook repair services in Dubai." />
             <div className="mb-xl flex flex-wrap gap-2.5">
               {OFFERS.map((o) => (
-                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.12] bg-white/[0.04] px-3 py-1.5 text-[13px] text-on-primary-muted"><Check size={14} className="text-accent-bright" aria-hidden /> {o}</span>
+                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] text-text-muted"><Check size={14} className="text-accent" aria-hidden /> {o}</span>
               ))}
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {DISCOUNTS.map((d) => (
-                <Card key={d.t}><h3 className="m-0 mb-2 text-on-primary text-[17px]">{d.t}</h3><p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{d.d}</p></Card>
+                <Card key={d.t}><h3 className="m-0 mb-2 text-text text-[17px]">{d.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{d.d}</p></Card>
               ))}
             </div>
           </div>
@@ -619,21 +636,21 @@ export default function Home() {
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
             {INSURANCE.map((i) => (
               i.href ? (
-                <Link key={i.t} to={i.href} className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright">
-                  <h3 className="m-0 mb-2 text-on-primary text-[17px] transition-colors group-hover:text-accent-bright">{i.t}</h3>
-                  <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{i.d}</p>
-                  <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent-bright">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
+                <Link key={i.t} to={i.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                  <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{i.t}</h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p>
+                  <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
                 </Link>
               ) : (
-                <Card key={i.t}><h3 className="m-0 mb-2 text-on-primary text-[17px]">{i.t}</h3><p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{i.d}</p></Card>
+                <Card key={i.t}><h3 className="m-0 mb-2 text-text text-[17px]">{i.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p></Card>
               )
             ))}
           </div>
-          <p className="mt-xl text-[15px] text-on-primary-muted m-0">See cover types and how plans are quoted on our <Link to="/macbook-insurance-dubai" className="text-accent-bright hover:underline">MacBook insurance in Dubai</Link> page.</p>
+          <p className="mt-xl text-[15px] text-text-muted m-0">See cover types and how plans are quoted on our <Link to="/macbook-insurance-dubai" className="text-accent hover:underline">MacBook insurance in Dubai</Link> page.</p>
         </section>
 
         {/* ── Common issues ──────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Sound familiar?" title="Common MacBook Issues We Fix" />
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
@@ -642,19 +659,19 @@ export default function Home() {
                   <Link
                     key={c.t}
                     to={c.href}
-                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   >
-                    <h3 className="m-0 mb-2 text-on-primary text-[17px] transition-colors group-hover:text-accent-bright">{c.t}</h3>
-                    <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{c.d}</p>
-                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent-bright">
+                    <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{c.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{c.d}</p>
+                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">
                       Learn more
                       <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </Link>
                 ) : (
                   <Card key={c.t}>
-                    <h3 className="m-0 mb-2 text-on-primary text-[17px]">{c.t}</h3>
-                    <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{c.d}</p>
+                    <h3 className="m-0 mb-2 text-text text-[17px]">{c.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{c.d}</p>
                   </Card>
                 )
               ))}
@@ -665,7 +682,7 @@ export default function Home() {
         {/* ── Near me ────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead eyebrow="Right around the corner" title="Looking for a MacBook Repair Near Me? Get Quick Fixes by Certified Technicians!" />
-          <div className="max-w-[78ch] space-y-md text-[16px] text-on-primary-muted leading-relaxed">
+          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">If you are searching for a MacBook repair shop in Dubai nearby - within 8.1 km - or wondering where to get your MacBook fixed, we are located at your convenience and provide a variety of repair services for your impaired or defective MacBook devices. Whether you have a broken screen, battery issues, motherboard or software glitches, our experienced technicians are just around the corner to diagnose and fix your device with genuine parts.</p>
             <p className="m-0">We offer onsite services that fit your schedule. Don't let a faulty MacBook hold you back - contact us now for fast, professional repairs near you!</p>
           </div>
@@ -676,17 +693,17 @@ export default function Home() {
           <SectionHead eyebrow="Local to you" title="MacBook Repair Near You in Dubai" intro="We collect, repair and return across Dubai free of charge. Tap your area for local turnaround times and pickup details." />
           <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {AREA_PAGES.map((a) => (
-              <Link key={a.href} to={a.href} className="group flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07]">
-                <MapPin size={18} className="text-accent-bright shrink-0" aria-hidden />
-                <span className="font-semibold text-[15px] text-on-primary group-hover:text-accent-bright">MacBook repair in {a.label}</span>
+              <Link key={a.href} to={a.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                <MapPin size={18} className="text-accent shrink-0" aria-hidden />
+                <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {a.label}</span>
               </Link>
             ))}
           </div>
-          <p className="mt-lg text-[14px] text-on-primary-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me" className="text-accent-bright hover:underline">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
+          <p className="mt-lg text-[14px] text-text-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me" className="text-accent hover:underline">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
         </section>
 
         {/* ── MacBook repair across the UAE (other emirates) ────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Beyond Dubai" title="MacBook Repair Across the UAE" intro="Outside Dubai? We don't have branches elsewhere — we collect your MacBook by free courier from any emirate, repair it at our Media City workshop, and return it. Same-day from Sharjah & Ajman; 1–2 days by courier further out." />
             <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
@@ -701,9 +718,9 @@ export default function Home() {
                 { label: "Khor Fakkan",    href: "/macbook-repair-khor-fakkan" },
                 { label: "Kalba",          href: "/macbook-repair-kalba" },
               ].map((c) => (
-                <Link key={c.href} to={c.href} className="group flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07]">
-                  <Truck size={18} className="text-accent-bright shrink-0" aria-hidden />
-                  <span className="font-semibold text-[15px] text-on-primary group-hover:text-accent-bright">MacBook repair in {c.label}</span>
+                <Link key={c.href} to={c.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                  <Truck size={18} className="text-accent shrink-0" aria-hidden />
+                  <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {c.label}</span>
                 </Link>
               ))}
             </div>
@@ -711,13 +728,13 @@ export default function Home() {
         </section>
 
         {/* ── Onsite ─────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="We come to you" title="Onsite MacBook Repair and Support" />
-            <div className="max-w-[78ch] space-y-md text-[16px] text-on-primary-muted leading-relaxed">
+            <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
               <p className="m-0">If you need support for your malfunctioning MacBook but don't have the time to leave your location, we have the perfect solution! We offer fast and reliable MacBook repairs right at your doorstep, whether it's your office or home. Our experienced technician will come to your location, pick up your device, repair it, and return it safely to you.</p>
               <p className="m-0">Whether you are experiencing software crashes, hardware failures or need upgrades, our expert technicians provide efficient troubleshooting, repairs and maintenance. Schedule your onsite MacBook support today and enjoy quick, professional service at your convenience.</p>
-              <p className="m-0">See how collection works and which areas we cover on our <Link to="/onsite-macbook-repair-dubai" className="text-accent-bright hover:underline">onsite MacBook repair in Dubai</Link> page.</p>
+              <p className="m-0">See how collection works and which areas we cover on our <Link to="/onsite-macbook-repair-dubai" className="text-accent hover:underline">onsite MacBook repair in Dubai</Link> page.</p>
             </div>
             <CtaRow />
           </div>
@@ -728,23 +745,23 @@ export default function Home() {
           <SectionHead eyebrow="In or out of warranty" title="AppleCare and Out-of-Warranty Repairs" />
           <div className="grid gap-lg md:grid-cols-2 mb-xl">
             <Card>
-              <h3 className="m-0 mb-2 text-on-primary text-[18px]">AppleCare &amp; In-Warranty Macs</h3>
-              <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">We're an <strong className="text-on-primary">independent Apple repair specialist - not an Apple Authorised Service Provider</strong>. If your Mac is still covered by Apple's warranty or AppleCare, we'll tell you honestly when an Apple Store claim is the better route so you don't risk your cover. For everything else we repair AppleCare-expired and out-of-warranty Macs using genuine parts where available and high-grade compatible parts otherwise - all backed by our own 90-day written warranty.</p>
-              <p className="m-0 mt-md text-[13.5px] text-on-primary-muted">More on <Link to="/applecare-macbook-repair-dubai" className="text-accent-bright hover:underline">AppleCare and in-warranty MacBook repair</Link>.</p>
+              <h3 className="m-0 mb-2 text-text text-[18px]">AppleCare &amp; In-Warranty Macs</h3>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">We're an <strong className="text-text">independent Apple repair specialist - not an Apple Authorised Service Provider</strong>. If your Mac is still covered by Apple's warranty or AppleCare, we'll tell you honestly when an Apple Store claim is the better route so you don't risk your cover. For everything else we repair AppleCare-expired and out-of-warranty Macs using genuine parts where available and high-grade compatible parts otherwise - all backed by our own 90-day written warranty.</p>
+              <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/applecare-macbook-repair-dubai" className="text-accent hover:underline">AppleCare and in-warranty MacBook repair</Link>.</p>
             </Card>
             <Card>
-              <h3 className="m-0 mb-2 text-on-primary text-[18px]">Out-of-Warranty Repairs</h3>
-              <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">If your AppleCare has expired, we provide reliable out-of-warranty MacBook repairs. Our expert technicians diagnose your MacBook issues, provide solutions for software problems, and offer high-quality replacement services at reasonable prices. We address common issues such as:</p>
-              <ul className="mt-sm grid gap-1.5 sm:grid-cols-2 list-none p-0 text-[13.5px] text-on-primary-muted">
-                {OOW_ISSUES.map((i) => <li key={i} className="flex items-start gap-2"><Check size={15} className="text-accent-bright mt-0.5 shrink-0" aria-hidden /> {i}</li>)}
+              <h3 className="m-0 mb-2 text-text text-[18px]">Out-of-Warranty Repairs</h3>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">If your AppleCare has expired, we provide reliable out-of-warranty MacBook repairs. Our expert technicians diagnose your MacBook issues, provide solutions for software problems, and offer high-quality replacement services at reasonable prices. We address common issues such as:</p>
+              <ul className="mt-sm grid gap-1.5 sm:grid-cols-2 list-none p-0 text-[13.5px] text-text-muted">
+                {OOW_ISSUES.map((i) => <li key={i} className="flex items-start gap-2"><Check size={15} className="text-accent mt-0.5 shrink-0" aria-hidden /> {i}</li>)}
               </ul>
-              <p className="m-0 mt-md text-[13.5px] text-on-primary-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent-bright hover:underline">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent-bright hover:underline">Apple repair programmes &amp; recalls</Link>, or <Link to="/where-to-repair-macbook-dubai" className="text-accent-bright hover:underline">where to repair your MacBook in Dubai</Link>.</p>
+              <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent hover:underline">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent hover:underline">Apple repair programmes &amp; recalls</Link>, or <Link to="/where-to-repair-macbook-dubai" className="text-accent hover:underline">where to repair your MacBook in Dubai</Link>.</p>
             </Card>
           </div>
-          <Reveal className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+          <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[13.5px] min-w-[720px]">
               <thead>
-                <tr className="border-b border-white/10 text-accent-bright">
+                <tr className="border-b border-border text-accent">
                   <th className="px-md py-md font-semibold">Service</th>
                   <th className="px-md py-md font-semibold">Description</th>
                   <th className="px-md py-md font-semibold">Benefits</th>
@@ -753,11 +770,11 @@ export default function Home() {
               </thead>
               <tbody>
                 {APPLECARE_TABLE.map((r) => (
-                  <tr key={r.s} className="border-b border-white/10 last:border-0 align-top">
-                    <td className="px-md py-sm font-semibold text-on-primary">{r.s}</td>
-                    <td className="px-md py-sm text-on-primary-muted">{r.d}</td>
-                    <td className="px-md py-sm text-on-primary-muted">{r.b}</td>
-                    <td className="px-md py-sm text-on-primary-muted">{r.e}</td>
+                  <tr key={r.s} className="border-b border-border last:border-0 align-top">
+                    <td className="px-md py-sm font-semibold text-text">{r.s}</td>
+                    <td className="px-md py-sm text-text-muted">{r.d}</td>
+                    <td className="px-md py-sm text-text-muted">{r.b}</td>
+                    <td className="px-md py-sm text-text-muted">{r.e}</td>
                   </tr>
                 ))}
               </tbody>
@@ -766,23 +783,23 @@ export default function Home() {
         </section>
 
         {/* ── AMC ────────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Year-round care" title="Annual Maintenance Contract (AMC) for MacBook" intro="Do you need an Annual Maintenance Contract for your MacBook? We offer expert support throughout the year with customized plans to keep your device safe from malfunctioning and prevent issues before they arise. Our AMC services include:" />
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {AMC.map((a) => (
                 a.href ? (
-                  <Link key={a.t} to={a.href} className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright">
-                    <h3 className="m-0 mb-2 text-on-primary text-[17px] transition-colors group-hover:text-accent-bright">{a.t}</h3>
-                    <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{a.d}</p>
-                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent-bright">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
+                  <Link key={a.t} to={a.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                    <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{a.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{a.d}</p>
+                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
                   </Link>
                 ) : (
-                  <Card key={a.t}><h3 className="m-0 mb-2 text-on-primary text-[17px]">{a.t}</h3><p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{a.d}</p></Card>
+                  <Card key={a.t}><h3 className="m-0 mb-2 text-text text-[17px]">{a.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{a.d}</p></Card>
                 )
               ))}
             </div>
-            <p className="mt-xl text-[15px] text-on-primary-muted m-0">See full plans and pricing on our <Link to="/annual-maintenance-contract-dubai" className="text-accent-bright hover:underline">MacBook Annual Maintenance Contract</Link> page.</p>
+            <p className="mt-xl text-[15px] text-text-muted m-0">See full plans and pricing on our <Link to="/annual-maintenance-contract-dubai" className="text-accent hover:underline">MacBook Annual Maintenance Contract</Link> page.</p>
           </div>
         </section>
 
@@ -791,20 +808,20 @@ export default function Home() {
           <SectionHead eyebrow="The difference" title="Why Choose Us for Apple Laptop Repair in Dubai?" />
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
             {WHY_CHOOSE.map((w) => (
-              <Card key={w.t}><BadgeCheck size={20} className="mb-2 text-accent-bright" aria-hidden /><h3 className="m-0 mb-1 text-on-primary text-[16px]">{w.t}</h3><p className="m-0 text-[13.5px] text-on-primary-muted leading-relaxed">{w.d}</p></Card>
+              <Card key={w.t}><BadgeCheck size={20} className="mb-2 text-accent" aria-hidden /><h3 className="m-0 mb-1 text-text text-[16px]">{w.t}</h3><p className="m-0 text-[13.5px] text-text-muted leading-relaxed">{w.d}</p></Card>
             ))}
           </div>
         </section>
 
         {/* ── Request a quote ────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl grid gap-2xl md:grid-cols-2 items-start">
             <div>
               <SectionHead eyebrow="No obligation" title="Request a Free Quote" intro="Tell us your device and the issue. We'll reply with an honest estimate - free diagnosis, no fix, no charge." />
-              <ul className="grid gap-sm list-none p-0 m-0 text-[15px] text-on-primary-muted">
-                <li className="flex items-center gap-2"><Headset size={18} className="text-accent-bright shrink-0" aria-hidden /> 24/7 live chat &amp; WhatsApp support</li>
-                <li className="flex items-center gap-2"><Truck size={18} className="text-accent-bright shrink-0" aria-hidden /> Free pickup &amp; delivery across Dubai</li>
-                <li className="flex items-center gap-2"><Users size={18} className="text-accent-bright shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
+              <ul className="grid gap-sm list-none p-0 m-0 text-[15px] text-text-muted">
+                <li className="flex items-center gap-2"><Headset size={18} className="text-accent shrink-0" aria-hidden /> 24/7 live chat &amp; WhatsApp support</li>
+                <li className="flex items-center gap-2"><Truck size={18} className="text-accent shrink-0" aria-hidden /> Free pickup &amp; delivery across Dubai</li>
+                <li className="flex items-center gap-2"><Users size={18} className="text-accent shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
               </ul>
             </div>
             <QuoteForm />
@@ -814,10 +831,10 @@ export default function Home() {
         {/* ── Pricing ────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead eyebrow="Transparent pricing" title="How Much Does a MacBook Repair Cost?" intro="Our repair price usually starts from AED 49, but the cost varies depending on the type of repair, the MacBook model, any additional repairs, and current discounts. Here's a general price list of common repairs." />
-          <Reveal className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+          <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[560px]">
               <thead>
-                <tr className="border-b border-white/10 text-accent-bright">
+                <tr className="border-b border-border text-accent">
                   <th className="px-lg py-md font-semibold">Repair Type</th>
                   <th className="px-lg py-md font-semibold whitespace-nowrap">Estimated Cost (AED)</th>
                   <th className="px-lg py-md font-semibold">Notes</th>
@@ -825,28 +842,28 @@ export default function Home() {
               </thead>
               <tbody>
                 {PRICE_TABLE.map((p) => (
-                  <tr key={p.r} className="border-b border-white/10 last:border-0">
-                    <td className="px-lg py-sm font-medium text-on-primary">{p.r}</td>
-                    <td className="px-lg py-sm mono whitespace-nowrap text-accent-bright font-semibold">{p.c}</td>
-                    <td className="px-lg py-sm text-on-primary-muted">{p.n}</td>
+                  <tr key={p.r} className="border-b border-border last:border-0">
+                    <td className="px-lg py-sm font-medium text-text">{p.r}</td>
+                    <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{p.c}</td>
+                    <td className="px-lg py-sm text-text-muted">{p.n}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </Reveal>
-          <p className="mt-lg text-[15px] text-on-primary-muted m-0">See our full <Link to="/pricing" className="text-accent-bright hover:underline">transparent MacBook repair price list</Link> - fixed quotes, no hidden fees - or get an instant figure with our <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent-bright hover:underline">MacBook repair cost calculator</Link>.</p>
+          <p className="mt-lg text-[15px] text-text-muted m-0">See our full <Link to="/pricing" className="text-accent hover:underline">transparent MacBook repair price list</Link> - fixed quotes, no hidden fees - or get an instant figure with our <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent hover:underline">MacBook repair cost calculator</Link>.</p>
         </section>
 
         {/* ── Sell, trade-in or recycle ──────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Upgrading instead?" title="Sell, Trade-In or Recycle Your Apple Device" intro="Not worth repairing, or ready for the latest model? We buy working and faulty Macs and offer trade-in credit toward your next repair or upgrade." />
             <div className="grid gap-lg md:grid-cols-3">
               {SELL_OPTIONS.map((s) => (
                 <Card key={s.href}>
-                  <Wallet size={20} className="mb-2 text-accent-bright" aria-hidden />
-                  <h3 className="m-0 mb-1 text-on-primary text-[17px]"><Link to={s.href} className="hover:text-accent-bright">{s.label}</Link></h3>
-                  <p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{s.d}</p>
+                  <Wallet size={20} className="mb-2 text-accent" aria-hidden />
+                  <h3 className="m-0 mb-1 text-text text-[17px]"><Link to={s.href} className="hover:text-accent">{s.label}</Link></h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
                 </Card>
               ))}
             </div>
@@ -854,16 +871,16 @@ export default function Home() {
         </section>
 
         {/* ── Expert / setup ─────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Back to work fast" title="Expert MacBook Repairs in Dubai" />
             <div className="grid gap-lg md:grid-cols-3 mb-2xl">
               {EXPERT.map((e) => (
-                <Card key={e.t}><h3 className="m-0 mb-2 text-on-primary text-[17px]">{e.t}</h3><p className="m-0 text-[14px] text-on-primary-muted leading-relaxed">{e.d}</p></Card>
+                <Card key={e.t}><h3 className="m-0 mb-2 text-text text-[17px]">{e.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{e.d}</p></Card>
               ))}
             </div>
-            <div className="max-w-[78ch] space-y-md text-[16px] text-on-primary-muted leading-relaxed">
-              <h3 className="m-0 text-on-primary text-[20px]">MacBook Setup and Configuration Services</h3>
+            <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+              <h3 className="m-0 text-text text-[20px]">MacBook Setup and Configuration Services</h3>
               <p className="m-0">We are proud to provide reliable, quick repairs customized to your needs. Our skilled team uses high-quality parts and the latest tools to repair your MacBook to the highest standards. With transparent pricing and quick turnaround times, you won't have to wait long to return to what you love.</p>
             </div>
             <CtaRow />
@@ -875,37 +892,37 @@ export default function Home() {
           <SectionHead eyebrow="Simple & transparent" title="How Our MacBook Repair Process Works" />
           <ol className="grid gap-lg md:grid-cols-3 lg:grid-cols-5 list-none p-0 m-0">
             {PROCESS.map((p, i) => (
-              <Reveal as="li" key={p.t} delay={i * 70} className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
-                <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent-bright/15 font-heading text-[18px] font-bold text-accent-bright">{i + 1}</span>
-                <p className="font-semibold text-[16px] m-0 mb-1 text-on-primary">{p.t}</p>
-                <p className="text-[13.5px] text-on-primary-muted leading-relaxed m-0">{p.d}</p>
+              <Reveal as="li" key={p.t} delay={i * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
+                <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                <p className="font-semibold text-[16px] m-0 mb-1 text-text">{p.t}</p>
+                <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{p.d}</p>
               </Reveal>
             ))}
           </ol>
         </section>
 
         {/* ── Reviews ────────────────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <div className="mb-2xl flex items-end justify-between gap-md flex-wrap">
               <div>
-                <p className="mono text-[12px] uppercase tracking-wider text-accent-bright mb-3">{REVIEW_AVERAGE.toFixed(1)} average · Google verified</p>
-                <h2 className="m-0 text-on-primary">What customers say</h2>
+                <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">{REVIEW_AVERAGE.toFixed(1)} average · Google verified</p>
+                <h2 className="m-0 text-text">What customers say</h2>
               </div>
               <div className="flex items-center gap-lg flex-wrap">
-                <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-accent-bright hover:underline inline-flex items-center gap-1">Read our {REVIEW_COUNT}+ reviews on Google <ExternalLink size={14} aria-hidden /></a>
-                <Link to="/reviews" className="text-[15px] font-semibold text-accent-bright hover:underline inline-flex items-center gap-1">All reviews <ArrowRight size={15} aria-hidden /></Link>
+                <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read our {REVIEW_COUNT}+ reviews on Google <ExternalLink size={14} aria-hidden /></a>
+                <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">All reviews <ArrowRight size={15} aria-hidden /></Link>
               </div>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {REVIEWS.slice(0, 6).map((r) => (
-                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
+                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-semibold text-on-primary">{r.name}</span>
+                    <span className="font-semibold text-text">{r.name}</span>
                     <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
                   </div>
-                  <p className="mt-2 text-[14px] leading-relaxed text-on-primary-muted m-0 flex-1">“{r.text}”</p>
-                  <p className="mt-md mb-0 text-[12px] text-on-primary-faint">{r.date} · Google review</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-text-muted m-0 flex-1">“{r.text}”</p>
+                  <p className="mt-md mb-0 text-[12px] text-text-faint">{r.date} · Google review</p>
                 </Reveal>
               ))}
             </div>
@@ -913,37 +930,42 @@ export default function Home() {
         </section>
 
         {/* ── Popular repair guides & costs ──────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Know before you book" title="Popular Repair Guides & Cost Breakdowns" intro="Real Dubai prices, fix-it walkthroughs and honest advice from our workshop - written by the technicians who do the repairs." />
             <div className="grid gap-x-2xl gap-y-1 md:grid-cols-2 lg:grid-cols-3">
               {GUIDES.map((g) => (
-                <Link key={g.href} to={g.href} className="group flex items-start gap-2 py-2 text-[14px] text-on-primary-muted hover:text-accent-bright">
-                  <ArrowRight size={15} className="mt-1 shrink-0 text-accent-bright" aria-hidden /> {g.label}
+                <Link key={g.href} to={g.href} className="group flex items-start gap-2 py-2 text-[14px] text-text-muted hover:text-accent">
+                  <ArrowRight size={15} className="mt-1 shrink-0 text-accent" aria-hidden /> {g.label}
                 </Link>
               ))}
             </div>
-            <p className="mt-lg text-[14px] text-on-primary-muted m-0"><Link to="/blog" className="text-accent-bright hover:underline">Browse all MacBook &amp; Apple repair guides →</Link></p>
+            <p className="mt-lg text-[14px] text-text-muted m-0"><Link to="/blog" className="text-accent hover:underline">Browse all MacBook &amp; Apple repair guides →</Link></p>
           </div>
         </section>
 
         {/* ── FAQ ────────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead eyebrow="Before you ask" title="Frequently Asked Questions" />
-          <ul className="grid md:grid-cols-2 md:gap-x-2xl border-t border-white/10 list-none p-0 m-0">
+          <ul className="grid md:grid-cols-2 md:gap-x-2xl border-t border-border list-none p-0 m-0">
             {FAQS.map((f, i) => (
-              <li key={i} className="border-b border-white/10">
+              <li key={i} className="border-b border-border">
                 <details className="group">
                   <summary className="flex cursor-pointer items-start justify-between gap-md py-md list-none [&::-webkit-details-marker]:hidden">
-                    <span className="text-[16px] md:text-[17px] font-semibold text-on-primary">{f.q}</span>
-                    <ChevronDown size={18} className="mt-1 shrink-0 text-accent-bright transition-transform group-open:rotate-180" aria-hidden />
+                    <span className="text-[16px] md:text-[17px] font-semibold text-text">{f.q}</span>
+                    <ChevronDown size={18} className="mt-1 shrink-0 text-accent transition-transform group-open:rotate-180" aria-hidden />
                   </summary>
-                  <p className="pb-md text-[15px] leading-relaxed text-on-primary-muted max-w-[70ch] m-0">{f.a}</p>
+                  <p className="pb-md text-[15px] leading-relaxed text-text-muted max-w-[70ch] m-0">{f.a}</p>
                 </details>
               </li>
             ))}
           </ul>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage(FAQS)) }} />
+          {/* Entity graph: Organization (#organization) + WebSite (#website) resolve the @id refs in
+              localBusiness/person/webPage. WebPage carries SpeakableSpecification → .quick-answer (AEO). */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageWithSpeakable({ url: SITE.url, name: TITLE })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Lead Repair Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs([{ name: "Home", path: "/" }])) }} />
@@ -953,29 +975,31 @@ export default function Home() {
         </section>
 
         {/* ── Distance / areas ───────────────────────────────────── */}
-        <section className="bg-white/[0.02] border-y border-white/10">
+        <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Free pickup across the city" title="What's the Distance Between Us?" intro="We cover 60+ Dubai communities with free pickup and delivery. Approximate distance from our Media City workshop:" />
             <div className="grid gap-x-lg gap-y-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-[14px]">
               {AREAS_DISTANCE.map(([name, dist]) => (
-                <span key={name} className="flex items-center gap-2 text-on-primary-muted">
-                  <MapPin size={14} className="text-accent-bright shrink-0" aria-hidden />
+                <span key={name} className="flex items-center gap-2 text-text-muted">
+                  <MapPin size={14} className="text-accent shrink-0" aria-hidden />
                   <span className="flex-1">{name}</span>
-                  <span className="mono text-on-primary-faint">{dist}</span>
+                  <span className="mono text-text-faint">{dist}</span>
                 </span>
               ))}
             </div>
             <div className="mt-2xl grid gap-lg md:grid-cols-2 items-stretch">
-              <div className="overflow-hidden rounded-2xl border border-white/10">
+              <div className="overflow-hidden rounded-2xl border border-border">
                 <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
               </div>
               <div className="flex flex-col gap-md">
-                <h3 className="m-0 text-on-primary">Find us in Media City</h3>
-                <p className="flex items-start gap-sm text-[15px] text-on-primary-muted m-0"><MapPin size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
-                <p className="flex items-start gap-sm text-[14px] text-on-primary-faint m-0"><ParkingCircle size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
+                <h3 className="m-0 text-text">Find us in Media City</h3>
+                {/* Consolidated NAP unit (Name + Address + Phone) — matches LocalBusiness schema + GBP for local-entity consistency. */}
+                <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span><strong className="text-text">{NAP.name}</strong><br />{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
+                <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><Phone size={18} className="text-accent mt-1 shrink-0" aria-hidden /><a href={`tel:${NAP.phoneE164}`} className="hover:text-accent transition-colors">{NAP.phoneDisplay}</a></p>
+                <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
                 <div className="flex flex-wrap gap-lg">
-                  <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent-bright hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
-                  <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent-bright hover:underline">View on Google <ExternalLink size={14} aria-hidden /></a>
+                  <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+                  <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">View on Google <ExternalLink size={14} aria-hidden /></a>
                 </div>
               </div>
             </div>
@@ -992,7 +1016,7 @@ export default function Home() {
           <div className="grid gap-3 grid-cols-2 lg:grid-cols-3">
             {WORKSHOP_GALLERY.map((g, i) => (
               <Reveal key={g.src} delay={i * 60}>
-                <figure className="group relative m-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+                <figure className="group relative m-0 overflow-hidden rounded-xl border border-border bg-bg-card">
                   <ResponsiveImage
                     src={g.src}
                     alt={g.alt}
@@ -1014,11 +1038,11 @@ export default function Home() {
         </section>
 
         {/* ── Final CTA ──────────────────────────────────────────── */}
-        <section className="relative overflow-hidden border-t border-white/10">
+        <section className="relative overflow-hidden border-t border-border">
           <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-accent/18 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
-            <h2 className="text-on-primary m-0 mb-md">Contact Us!</h2>
-            <p className="text-on-primary-muted max-w-[60ch] mx-auto mb-xl text-[18px]">Contact us today to schedule your repair or get a free consultation. Our friendly team is available 24/7. Let us help you get your MacBook back in working condition.</p>
+            <h2 className="text-text m-0 mb-md">Contact Us!</h2>
+            <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[18px]">Contact us today to schedule your repair or get a free consultation. Our friendly team is available 24/7. Let us help you get your MacBook back in working condition.</p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
@@ -1033,15 +1057,15 @@ export default function Home() {
 
 /* ── local helpers (dark) ──────────────────────────────────── */
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-white/10 bg-white/[0.04] p-lg ${className}`}>{children}</div>;
+  return <div className={`rounded-2xl border border-border bg-bg-card p-lg ${className}`}>{children}</div>;
 }
 
 function SectionHead({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
   return (
     <div className="mb-2xl max-w-[60ch]">
-      <Reveal as="p" className="mono text-[12px] uppercase tracking-wider text-accent-bright mb-3">{eyebrow}</Reveal>
-      <Reveal as="h2" className="m-0 text-on-primary">{title}</Reveal>
-      {intro && <Reveal as="p" className="mt-md text-[17px] text-on-primary-muted leading-relaxed">{intro}</Reveal>}
+      <Reveal as="p" className="mono text-[12px] uppercase tracking-wider text-accent mb-3">{eyebrow}</Reveal>
+      <Reveal as="h2" className="m-0 text-text">{title}</Reveal>
+      {intro && <Reveal as="p" className="mt-md text-[17px] text-text-muted leading-relaxed">{intro}</Reveal>}
     </div>
   );
 }
@@ -1050,7 +1074,7 @@ function CtaRow() {
   return (
     <div className="mt-2xl flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
-      <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
+      <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );
 }
@@ -1063,9 +1087,9 @@ function QuoteForm() {
     const msg = `Hi, I'd like a free quote.\nName: ${v.first} ${v.last}\nEmail: ${v.email}\nPhone: ${v.phone}\nDevice: ${v.device}\nIssue: ${v.message}`;
     window.open(`${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
   };
-  const field = "w-full rounded-md border border-white/15 bg-white/[0.06] px-3.5 h-11 text-[15px] text-on-primary placeholder:text-on-primary-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright";
+  const field = "w-full rounded-md border border-border bg-bg-card px-3.5 h-11 text-[15px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
   return (
-    <form onSubmit={submit} className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg grid gap-md">
+    <form onSubmit={submit} className="rounded-2xl border border-border bg-bg-card p-lg grid gap-md">
       <div className="grid gap-md sm:grid-cols-2">
         <input className={field} placeholder="First name" value={v.first} onChange={set("first")} aria-label="First name" />
         <input className={field} placeholder="Last name" value={v.last} onChange={set("last")} aria-label="Last name" />

@@ -1,6 +1,7 @@
 "use client";
 import { ShieldAlert, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star, Bug } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -154,7 +155,7 @@ export default function MacBookVirusRemoval() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -166,6 +167,9 @@ export default function MacBookVirusRemoval() {
       >
         <PageMeta author="Usman, MacBook Software Specialist" />
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook virus and malware removal", startingPrice: 250, timeline: "same-day" })} />
 
       <WarrantyBar tone="dark" />
 
@@ -181,33 +185,33 @@ export default function MacBookVirusRemoval() {
         <div className="max-w-[820px] flex flex-col gap-3xl">
           {/* Intro */}
           <section>
-            <p className="text-[17px] text-on-primary leading-relaxed">
+            <p className="text-[17px] text-text leading-relaxed">
               MacBook virus and malware removal in Dubai starts at AED 250 for a standard clean and finishes the same day on most tickets. The workshop has cleaned 980+ infected MacBooks since the rise of Mac adware around 2018 - adware pop-ups, browser hijackers swapping Google for fake search engines, cryptominers running fans at 100% in idle, suspicious MDM profiles installed by free VPN apps, and the occasional ransomware case. The "Macs don't get viruses" line is a 2005 myth; in 2024-2025 macOS infections account for roughly 8% of total workshop volume. Free 15-minute diagnosis filters out the 30% of "my Mac is slow" tickets that turn out to be hygiene rather than infection - those get fixed during diagnosis at no charge.
             </p>
           </section>
 
           {/* Mac malware myth */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md flex items-center gap-sm text-on-primary">
-              <Bug size={24} className="text-accent-bright" aria-hidden /> Yes, Macs really do get malware
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md flex items-center gap-sm text-text">
+              <Bug size={24} className="text-accent" aria-hidden /> Yes, Macs really do get malware
             </h2>
-            <p className="text-[15px] text-on-primary-muted leading-relaxed mb-md">
+            <p className="text-[15px] text-text-muted leading-relaxed mb-md">
               Apple's own security report flags adware, trojans, and ransomware as active macOS threats. XProtect (built into macOS) blocks the well-known strains, but lags 2-6 weeks behind new threats. The workshop's 2024-2025 logbook by category:
             </p>
-            <ul className="space-y-2 text-[14px] text-on-primary-muted">
-              <li><strong className="text-on-primary">Adware (pop-ups, fake updaters):</strong> 60% of infection tickets.</li>
-              <li><strong className="text-on-primary">Browser hijackers (search engine changed):</strong> 18%.</li>
-              <li><strong className="text-on-primary">Suspicious MDM / config profiles:</strong> 9%.</li>
-              <li><strong className="text-on-primary">Cryptominers (CPU/GPU stolen for mining):</strong> 7%.</li>
-              <li><strong className="text-on-primary">Ransomware:</strong> 2% - rare but real.</li>
-              <li><strong className="text-on-primary">Spyware / stalkerware audits:</strong> 4%.</li>
+            <ul className="space-y-2 text-[14px] text-text-muted">
+              <li><strong className="text-text">Adware (pop-ups, fake updaters):</strong> 60% of infection tickets.</li>
+              <li><strong className="text-text">Browser hijackers (search engine changed):</strong> 18%.</li>
+              <li><strong className="text-text">Suspicious MDM / config profiles:</strong> 9%.</li>
+              <li><strong className="text-text">Cryptominers (CPU/GPU stolen for mining):</strong> 7%.</li>
+              <li><strong className="text-text">Ransomware:</strong> 2% - rare but real.</li>
+              <li><strong className="text-text">Spyware / stalkerware audits:</strong> 4%.</li>
             </ul>
           </section>
 
           {/* Models + pricing */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Service tiers + pricing</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Service tiers + pricing</h2>
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Every macOS version from El Capitan (10.11) through Sequoia (15) and Tahoe (16). Apple Silicon and Intel both supported.
             </p>
             <PricingTable service="Virus & malware removal" rows={PRICING} tone="dark" />
@@ -215,17 +219,17 @@ export default function MacBookVirusRemoval() {
 
           {/* Common threats */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <AlertTriangle size={28} className="text-accent-bright" aria-hidden /> Common threats we remove
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common threats we remove
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               The 10 highest-volume malware categories at the workshop in 2024-2025.
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {COMMON_THREATS.map((p) => (
-                <article key={p.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[16px] font-bold mb-sm text-on-primary">{p.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{p.body}</p>
+                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
               ))}
             </div>
@@ -233,10 +237,10 @@ export default function MacBookVirusRemoval() {
 
           {/* Process */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <Wrench size={28} className="text-accent-bright" aria-hidden /> Our virus removal process
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <Wrench size={28} className="text-accent" aria-hidden /> Our virus removal process
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Six steps. Surgical clean, not nuclear - files, apps, and settings stay intact.
             </p>
             <StepList steps={STEPS} tone="dark" />
@@ -250,49 +254,49 @@ export default function MacBookVirusRemoval() {
           />
 
           {/* Clean vs reinstall decision */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md flex items-center gap-sm text-on-primary">
-              <ShieldAlert size={24} className="text-accent-bright" aria-hidden /> Clean vs reinstall macOS - when each is right
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md flex items-center gap-sm text-text">
+              <ShieldAlert size={24} className="text-accent" aria-hidden /> Clean vs reinstall macOS - when each is right
             </h2>
             <div className="grid gap-md md:grid-cols-2">
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-on-primary">Standard / deep clean (AED 250-350)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Right for: adware, hijackers, profiles, fake utilities, cryptominers without rootkit techniques. About 90% of infection tickets. Files, apps, settings all stay intact.</p>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Standard / deep clean (AED 250-350)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Right for: adware, hijackers, profiles, fake utilities, cryptominers without rootkit techniques. About 90% of infection tickets. Files, apps, settings all stay intact.</p>
               </div>
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-on-primary">Reinstall macOS (AED 400)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Right for: rootkit suspicion, customer wants clean baseline, or 2nd infection within 60 days. Apple-supported reinstall over existing install preserves your files. Adds 4 hours of work to the clean.</p>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Reinstall macOS (AED 400)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Right for: rootkit suspicion, customer wants clean baseline, or 2nd infection within 60 days. Apple-supported reinstall over existing install preserves your files. Adds 4 hours of work to the clean.</p>
               </div>
             </div>
           </section>
 
           {/* Timeline */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">How long does virus removal take?</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does virus removal take?</h2>
             <div className="grid gap-md md:grid-cols-3">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Same day (1-2 hours)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Standard clean for adware, hijackers, profiles, fake utilities. Browser-only clean. About 70% of tickets.</p>
+                <h3 className="text-[18px] font-bold mb-sm text-text">Same day (1-2 hours)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Standard clean for adware, hijackers, profiles, fake utilities. Browser-only clean. About 70% of tickets.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Same day (4-6 hours)</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Deep clean for cryptominer or persistent malware. Full clean + macOS reinstall preserving files. Morning drop-off ready by 7 pm.</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Same day (4-6 hours)</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Deep clean for cryptominer or persistent malware. Full clean + macOS reinstall preserving files. Morning drop-off ready by 7 pm.</p>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">1-2 days</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">Ransomware analysis with strain identification. Spyware / stalkerware audit with full NDA report. Family pack (3 Macs same household).</p>
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">1-2 days</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">Ransomware analysis with strain identification. Spyware / stalkerware audit with full NDA report. Family pack (3 Macs same household).</p>
               </article>
             </div>
           </section>
 
           {/* Prevention */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Prevention - staying clean after the clean</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Prevention - staying clean after the clean</h2>
             <div className="grid gap-md md:grid-cols-2">
               {PREVENTION.map((p) => (
-                <article key={p.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[16px] font-bold mb-sm text-on-primary">{p.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{p.body}</p>
+                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
               ))}
             </div>
@@ -300,11 +304,11 @@ export default function MacBookVirusRemoval() {
 
           {/* Warranty */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
-              <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> 30-day re-clean guarantee
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
+              <ShieldCheck size={28} className="text-accent" aria-hidden /> 30-day re-clean guarantee
             </h2>
-            <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <ul className="space-y-2 text-[15px] text-on-primary">
+            <div className="border border-border bg-bg-card rounded-md p-lg">
+              <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>30 days</strong> - re-clean free of charge if the same infection returns.</li>
                 <li><strong>Covered:</strong> the specific strain identified and removed in the clean report.</li>
                 <li><strong>Not covered:</strong> a different infection within 30 days (treated as a new ticket - this points to the customer's habits, not a missed clean).</li>
@@ -316,35 +320,35 @@ export default function MacBookVirusRemoval() {
 
           {/* Pricing recap */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Virus removal cost in Dubai - transparent pricing</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Virus removal cost in Dubai - transparent pricing</h2>
             <PricingTable service="Virus & malware removal" rows={PRICING} tone="dark" />
           </section>
 
           {/* Technician */}
-          <section className="bg-white/[0.02] rounded-md p-lg border border-white/10">
-            <h2 className="text-[22px] mb-md text-on-primary">Lead technician on virus removal jobs</h2>
+          <section className="bg-bg-alt rounded-md p-lg border border-border">
+            <h2 className="text-[22px] mb-md text-text">Lead technician on virus removal jobs</h2>
             <TechnicianBadge name="Usman" years={9} specialisation="macOS software & malware" tone="dark" />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch]">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Usman has cleaned 900+ MacBooks since 2017 and runs every spyware audit personally with NDA on file. Background in macOS internals - launchctl, dtrace, and the Apple security framework.
             </p>
           </section>
 
           {/* DIY */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">When DIY makes sense - and when it doesn't</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">When DIY makes sense - and when it doesn't</h2>
             <div className="grid gap-md md:grid-cols-2">
               <article className="bg-success/5 border border-success/30 rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Try it yourself first</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Try it yourself first</h3>
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Run Malwarebytes for Mac (free version) - catches 80% of common adware.</li>
                   <li>Remove unknown Login Items in System Settings &gt; General &gt; Login Items.</li>
                   <li>Reset browser settings: Safari &gt; Develop &gt; Empty Caches; Chrome chrome://settings/reset.</li>
                   <li>Check System Settings &gt; Privacy &gt; Profiles - uninstall any profile you didn't intentionally add.</li>
                 </ul>
               </article>
-              <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">Stop and bring it in</h3>
-                <ul className="space-y-2 text-[14px] text-on-primary-muted">
+              <article className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm text-text">Stop and bring it in</h3>
+                <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Cryptominer suspected (fans loud in idle) - needs launchctl audit beyond free tools.</li>
                   <li>Ransomware - files renamed with weird extensions. Don't pay; bring it in for analysis.</li>
                   <li>Stalkerware suspicion - needs experienced audit, not a generic scan.</li>
@@ -356,46 +360,46 @@ export default function MacBookVirusRemoval() {
 
           {/* Comparison */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Virus Removal vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Virus Removal vs Apple Store Dubai</h2>
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
               <table className="w-full text-[14px] min-w-[640px]">
-                <thead className="bg-white/[0.02]">
+                <thead className="bg-bg-alt">
                   <tr className="text-left">
-                    <th className="px-md py-sm font-semibold text-on-primary">Factor</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">MacBook Repair Dubai</th>
-                    <th className="px-md py-sm font-semibold text-on-primary">Apple Store / AASP</th>
+                    <th className="px-md py-sm font-semibold text-text">Factor</th>
+                    <th className="px-md py-sm font-semibold text-text">MacBook Repair Dubai</th>
+                    <th className="px-md py-sm font-semibold text-text">Apple Store / AASP</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON.map((row, i) => (
-                    <tr key={row[0]} className={i % 2 ? "bg-white/[0.02]" : ""}>
-                      <td className="px-md py-sm font-semibold text-on-primary">{row[0]}</td>
-                      <td className="px-md py-sm text-on-primary">{row[1]}</td>
-                      <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                    <tr key={row[0]} className={i % 2 ? "bg-bg-alt" : ""}>
+                      <td className="px-md py-sm font-semibold text-text">{row[0]}</td>
+                      <td className="px-md py-sm text-text">{row[1]}</td>
+                      <td className="px-md py-sm text-text-muted">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-on-primary-faint mt-sm mono">
+            <p className="text-[13px] text-text-faint mt-sm mono">
               Apple's UAE policy on malware removal is to recommend reinstalling macOS - they don't perform surgical cleans. The workshop is the right call for a clean that preserves your files and settings.
             </p>
           </section>
 
           {/* Reviews */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-on-primary">
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <Star size={28} className="text-star fill-star" aria-hidden /> Real customer reviews
             </h2>
-            <p className="text-[14px] text-on-primary-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent-bright font-semibold hover:underline">Read all 215+ →</a>
+            <p className="text-[14px] text-text-muted mb-lg">
+              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
 
           {/* FAQ */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook virus removal FAQ</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook virus removal FAQ</h2>
             <FAQAccordion items={FAQS} injectSchema tone="dark" />
           </section>
 
@@ -410,16 +414,16 @@ export default function MacBookVirusRemoval() {
 
           {/* Sub-link block */}
           <section>
-            <h2 className="text-[22px] mb-md text-on-primary">More on Mac security</h2>
+            <h2 className="text-[22px] mb-md text-text">More on Mac security</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/macbook-running-slow-10-fixes">Blog: MacBook running slow? 10 fixes that actually work</a></li>
-              <li><a className="text-accent-bright font-semibold hover:underline" href="/blog/macbook-battery-health-check-guide">Blog: MacBook battery &amp; health-check guide</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-running-slow-10-fixes">Blog: MacBook running slow? 10 fixes that actually work</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-battery-health-check-guide">Blog: MacBook battery &amp; health-check guide</a></li>
             </ul>
           </section>
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Where to bring your MacBook</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to bring your MacBook</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>
@@ -427,10 +431,10 @@ export default function MacBookVirusRemoval() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">Pop-ups? Fans loud? WhatsApp the symptoms - quote in 4 minutes</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Pop-ups? Fans loud? WhatsApp the symptoms - quote in 4 minutes</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send a screenshot of the pop-up or a description of what changed. Free 15-minute diagnosis, AED 250 standard clean, 30-day re-clean guarantee.
           </p>
           <div className="relative flex flex-wrap gap-sm">
@@ -439,7 +443,7 @@ export default function MacBookVirusRemoval() {
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+            <Button asChild variant="secondary" size="lg" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>
