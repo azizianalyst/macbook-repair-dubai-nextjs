@@ -222,6 +222,9 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
                 MacBook repair {c.city}
               </Link>
             ))}
+            <Link to="/macbook-repair-near-me" className="rounded-full border border-accent/40 bg-bg-card px-4 py-2 text-[14px] text-text transition-colors hover:border-accent">
+              MacBook repair near me →
+            </Link>
           </div>
         </section>
 

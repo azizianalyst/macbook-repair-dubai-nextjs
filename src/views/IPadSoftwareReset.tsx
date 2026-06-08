@@ -15,7 +15,7 @@ export default function IPadSoftwareReset() {
       whatsappPrefill="Hi, my iPad needs a software reset - model and symptom:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPad Repair",     path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",     path: "/ipad-repair-dubai" },
         { name: "Software Reset",  path: "/ipad-software-reset-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPadOS recovery and DFU restore" }}

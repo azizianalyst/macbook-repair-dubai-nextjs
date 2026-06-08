@@ -15,7 +15,7 @@ export default function IMacPowerSupplyRepair() {
       whatsappPrefill="Hi, my iMac won't turn on at all - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Power Supply Repair", path: "/imac-power-supply-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board and power restoration" }}

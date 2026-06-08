@@ -15,7 +15,7 @@ export default function IPadHomeButtonRepair() {
       whatsappPrefill="Hi, my iPad home button isn't working - model:"
       breadcrumb={[
         { name: "Home",         path: "/" },
-        { name: "iPad Repair",  path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",  path: "/ipad-repair-dubai" },
         { name: "Home Button",  path: "/ipad-home-button-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad mechanical and Touch ID repair" }}

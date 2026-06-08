@@ -15,7 +15,7 @@ export default function IPhoneLightningPortRepair() {
       whatsappPrefill="Hi, my iPhone Lightning port isn't charging properly - model:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iPhone Repair",       path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",       path: "/iphone-repair-dubai" },
         { name: "Lightning Port",      path: "/iphone-lightning-port-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone charging and audio repair" }}

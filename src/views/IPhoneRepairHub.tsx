@@ -32,6 +32,7 @@ const MODEL_PAGES = [
   ["iPhone 14 Pro Max", "/iphone-14-pro-max-repair-dubai"], ["iPhone 14 Pro", "/iphone-14-pro-repair-dubai"], ["iPhone 14 Plus", "/iphone-14-plus-repair-dubai"], ["iPhone 14", "/iphone-14-repair-dubai"],
   ["iPhone 13 Pro Max", "/iphone-13-pro-max-repair-dubai"], ["iPhone 13 Pro", "/iphone-13-pro-repair-dubai"], ["iPhone 13", "/iphone-13-repair-dubai"], ["iPhone 13 mini", "/iphone-13-mini-repair-dubai"],
   ["iPhone SE (3rd gen)", "/iphone-se-3rd-gen-repair-dubai"],
+  ["iPod touch (7th gen)", "/ipod-touch-7-repair-dubai"],
 ];
 
 // All repair-type + service child pages (preserved)

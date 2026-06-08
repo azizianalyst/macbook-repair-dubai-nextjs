@@ -15,7 +15,7 @@ export default function IMacRamUpgrade() {
       whatsappPrefill="Hi, I'd like to upgrade RAM on my iMac - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "RAM Upgrade",         path: "/imac-ram-upgrade-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac upgrades and board-level repair" }}

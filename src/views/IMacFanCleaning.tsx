@@ -15,7 +15,7 @@ export default function IMacFanCleaning() {
       whatsappPrefill="Hi, my iMac fan is loud - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Fan Cleaning",        path: "/imac-fan-cleaning-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac thermal restoration" }}

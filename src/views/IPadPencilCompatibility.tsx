@@ -15,7 +15,7 @@ export default function IPadPencilCompatibility() {
       whatsappPrefill="Hi, I want a Pencil-safe iPad screen replacement - model and Pencil generation:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iPad Repair",         path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",         path: "/ipad-repair-dubai" },
         { name: "Pencil Compatibility",path: "/ipad-pencil-compatibility-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad screen and Pencil digitiser systems" }}

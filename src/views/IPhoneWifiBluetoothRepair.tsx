@@ -15,7 +15,7 @@ export default function IPhoneWifiBluetoothRepair() {
       whatsappPrefill="Hi, my iPhone WiFi or Bluetooth is broken - model and symptom:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iPhone Repair",       path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",       path: "/iphone-repair-dubai" },
         { name: "WiFi & Bluetooth",    path: "/iphone-wifi-bluetooth-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level RF and wireless" }}

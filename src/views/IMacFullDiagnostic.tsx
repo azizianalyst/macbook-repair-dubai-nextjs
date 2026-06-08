@@ -15,7 +15,7 @@ export default function IMacFullDiagnostic() {
       whatsappPrefill="Hi, I'd like a free iMac diagnostic - workshop or home visit, model and main concern:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iMac Repair",     path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",     path: "/imac-repair-dubai" },
         { name: "Free Diagnostic", path: "/imac-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac diagnostics across all years" }}

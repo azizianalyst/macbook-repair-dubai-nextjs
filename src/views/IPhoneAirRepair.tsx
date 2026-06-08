@@ -16,7 +16,7 @@ export default function IPhoneAirRepair() {
       whatsappPrefill="Hi, I have an iPhone Air (Sept 2025) and need help with:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPhone Repair", path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone Air",    path: "/iphone-air-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}

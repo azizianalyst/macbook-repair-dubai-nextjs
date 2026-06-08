@@ -41,7 +41,7 @@ const CATEGORY_LABEL: Record<Model["category"], string> = {
 };
 
 const CATEGORY_HUB: Record<Model["category"], string> = {
-  ipod: "/", // no dedicated iPod hub - link home
+  ipod: "/iphone-repair-dubai", // iPod touch 7 = A10/Lightning/iOS - siblings live on the iPhone hub
 };
 
 const REVIEWERS = [

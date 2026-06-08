@@ -15,7 +15,7 @@ export default function IMacGpuRepair() {
       whatsappPrefill="Hi, my iMac has display artifacts / lines / no display - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "GPU Repair",          path: "/imac-gpu-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board-level and GPU repair" }}

@@ -15,7 +15,7 @@ export default function IPadBackGlassRepair() {
       whatsappPrefill="Hi, my iPad back is dented / damaged - model and area:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPad Repair",   path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",   path: "/ipad-repair-dubai" },
         { name: "Back Repair",   path: "/ipad-back-glass-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad chassis and Smart Connector repair" }}

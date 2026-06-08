@@ -16,7 +16,7 @@ export default function IPhone17ProMaxRepair() {
       whatsappPrefill="Hi, I have an iPhone 17 Pro Max (Sept 2025) and need help with:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "iPhone 17 Pro Max", path: "/iphone-17-pro-max-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}

@@ -15,7 +15,7 @@ export default function IPhoneUsbCPortRepair() {
       whatsappPrefill="Hi, my iPhone USB-C port needs repair - model (15, 16 or 17):"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "USB-C Port Repair", path: "/iphone-usb-c-port-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone USB-C and Thunderbolt repair" }}

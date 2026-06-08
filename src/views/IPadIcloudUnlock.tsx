@@ -15,7 +15,7 @@ export default function IPadIcloudUnlock() {
       whatsappPrefill="Hi, I have a locked iPad - model and how I obtained it:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPad Repair",   path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",   path: "/ipad-repair-dubai" },
         { name: "iCloud Unlock", path: "/ipad-icloud-unlock-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Apple ID and Activation Lock consultation" }}

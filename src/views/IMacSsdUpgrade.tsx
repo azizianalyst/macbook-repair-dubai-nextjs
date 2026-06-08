@@ -15,7 +15,7 @@ export default function IMacSsdUpgrade() {
       whatsappPrefill="Hi, I'd like to upgrade SSD on my iMac - model and current storage:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iMac Repair",     path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",     path: "/imac-repair-dubai" },
         { name: "SSD Upgrade",     path: "/imac-ssd-upgrade-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "iMac display removal and storage upgrades" }}

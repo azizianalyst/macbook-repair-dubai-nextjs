@@ -15,7 +15,7 @@ export default function IPadFullDiagnostic() {
       whatsappPrefill="Hi, I'd like a free iPad diagnostic - model and main concern:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPad Repair",     path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",     path: "/ipad-repair-dubai" },
         { name: "Free Diagnostic", path: "/ipad-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad diagnostics across all models" }}

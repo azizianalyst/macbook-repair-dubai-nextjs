@@ -286,7 +286,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
       breadcrumb={[
         { name: "Home",        path: "/" },
-        { name: "iMac Repair", path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair", path: "/imac-repair-dubai" },
         { name: model.name,    path: `/${model.slug}` },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iMac board-level repair, Retina display & PSU replacement" }}
@@ -452,6 +452,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickIMacReviewers(slug)}
       related={[
+        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, 90-day warranty." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
         { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. AED 500." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },

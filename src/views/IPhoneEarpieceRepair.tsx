@@ -15,7 +15,7 @@ export default function IPhoneEarpieceRepair() {
       whatsappPrefill="Hi, no sound from my iPhone earpiece - model:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Earpiece Repair", path: "/iphone-earpiece-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone Face ID & audio modules" }}

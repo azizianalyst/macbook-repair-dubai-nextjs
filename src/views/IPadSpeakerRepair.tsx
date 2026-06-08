@@ -15,7 +15,7 @@ export default function IPadSpeakerRepair() {
       whatsappPrefill="Hi, my iPad speakers are faulty - model and which side:"
       breadcrumb={[
         { name: "Home",         path: "/" },
-        { name: "iPad Repair",  path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",  path: "/ipad-repair-dubai" },
         { name: "Speaker Repair",path: "/ipad-speaker-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad audio and chassis repair" }}

@@ -15,7 +15,7 @@ export default function IMacOsReinstall() {
       whatsappPrefill="Hi, I'd like a macOS reinstall on my iMac - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "macOS Reinstall",     path: "/imac-os-reinstall-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS installs and migrations" }}

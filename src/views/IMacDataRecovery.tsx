@@ -15,7 +15,7 @@ export default function IMacDataRecovery() {
       whatsappPrefill="Hi, I need iMac data recovery - model, year and what happened:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iMac Repair",     path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",     path: "/imac-repair-dubai" },
         { name: "Data Recovery",   path: "/imac-data-recovery-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Fusion Drive and T2 data recovery" }}

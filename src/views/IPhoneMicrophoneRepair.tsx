@@ -15,7 +15,7 @@ export default function IPhoneMicrophoneRepair() {
       whatsappPrefill="Hi, my iPhone microphone isn't working - model and when it happens:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "Microphone Repair", path: "/iphone-microphone-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone audio and water-damage repair" }}

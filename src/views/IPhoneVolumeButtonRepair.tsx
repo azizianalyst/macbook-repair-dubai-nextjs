@@ -15,7 +15,7 @@ export default function IPhoneVolumeButtonRepair() {
       whatsappPrefill="Hi, my iPhone volume buttons aren't working - model:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Volume Buttons",  path: "/iphone-volume-button-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone mechanical and flex repair" }}

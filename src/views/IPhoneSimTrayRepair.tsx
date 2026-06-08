@@ -15,7 +15,7 @@ export default function IPhoneSimTrayRepair() {
       whatsappPrefill="Hi, my iPhone SIM tray / reader needs repair - model:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "SIM Tray Repair",   path: "/iphone-sim-tray-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone connectivity and antennas" }}

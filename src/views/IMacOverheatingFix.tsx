@@ -15,7 +15,7 @@ export default function IMacOverheatingFix() {
       whatsappPrefill="Hi, my iMac is overheating / loud fans - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Overheating Fix",     path: "/imac-overheating-fix-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac thermal restoration" }}

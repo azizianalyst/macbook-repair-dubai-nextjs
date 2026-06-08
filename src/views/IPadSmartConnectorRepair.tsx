@@ -15,7 +15,7 @@ export default function IPadSmartConnectorRepair() {
       whatsappPrefill="Hi, my iPad Smart Connector is broken - model and keyboard:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPad Repair",       path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",       path: "/ipad-repair-dubai" },
         { name: "Smart Connector",   path: "/ipad-smart-connector-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad chassis and connector repair" }}

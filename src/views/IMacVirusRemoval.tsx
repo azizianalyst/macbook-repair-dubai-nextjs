@@ -15,7 +15,7 @@ export default function IMacVirusRemoval() {
       whatsappPrefill="Hi, my iMac may have malware - what's happening:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Virus Removal",       path: "/imac-virus-removal-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS deep cleaning and security" }}

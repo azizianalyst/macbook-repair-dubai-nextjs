@@ -15,7 +15,7 @@ export default function IPadPowerButtonRepair() {
       whatsappPrefill="Hi, my iPad power button isn't working - model:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPad Repair",   path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",   path: "/ipad-repair-dubai" },
         { name: "Power Button",  path: "/ipad-power-button-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad mechanical and Touch ID repair" }}

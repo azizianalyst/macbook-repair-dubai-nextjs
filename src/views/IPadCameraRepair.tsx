@@ -15,7 +15,7 @@ export default function IPadCameraRepair() {
       whatsappPrefill="Hi, my iPad camera needs repair - model and which camera:"
       breadcrumb={[
         { name: "Home",         path: "/" },
-        { name: "iPad Repair",  path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",  path: "/ipad-repair-dubai" },
         { name: "Camera Repair",path: "/ipad-camera-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad camera and TrueDepth modules" }}

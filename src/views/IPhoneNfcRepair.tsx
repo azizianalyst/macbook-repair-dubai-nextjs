@@ -15,7 +15,7 @@ export default function IPhoneNfcRepair() {
       whatsappPrefill="Hi, my iPhone NFC / Apple Pay isn't working - model:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "NFC Repair",      path: "/iphone-nfc-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone RF and antenna repair" }}

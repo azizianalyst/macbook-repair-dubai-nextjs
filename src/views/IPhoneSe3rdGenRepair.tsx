@@ -16,7 +16,7 @@ export default function IPhoneSe3rdGenRepair() {
       whatsappPrefill="Hi, I have an iPhone SE 3rd gen (2022) and need help with:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPhone Repair", path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone SE (3rd gen)", path: "/iphone-se-3rd-gen-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}

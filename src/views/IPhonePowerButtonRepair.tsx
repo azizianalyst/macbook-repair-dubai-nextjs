@@ -15,7 +15,7 @@ export default function IPhonePowerButtonRepair() {
       whatsappPrefill="Hi, my iPhone power/side button isn't clicking - model:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "Power Button",      path: "/iphone-power-button-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone mechanical and flex repair" }}

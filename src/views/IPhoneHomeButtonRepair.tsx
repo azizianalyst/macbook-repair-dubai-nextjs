@@ -15,7 +15,7 @@ export default function IPhoneHomeButtonRepair() {
       whatsappPrefill="Hi, my iPhone home button isn't working - model:"
       breadcrumb={[
         { name: "Home",         path: "/" },
-        { name: "iPhone Repair",path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",path: "/iphone-repair-dubai" },
         { name: "Home Button",  path: "/iphone-home-button-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}

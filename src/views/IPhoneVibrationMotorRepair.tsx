@@ -15,7 +15,7 @@ export default function IPhoneVibrationMotorRepair() {
       whatsappPrefill="Hi, my iPhone vibration / Taptic Engine is broken - model:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "Taptic Engine",     path: "/iphone-vibration-motor-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone Taptic and haptic systems" }}

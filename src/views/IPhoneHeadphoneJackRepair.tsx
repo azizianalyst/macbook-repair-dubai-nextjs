@@ -15,7 +15,7 @@ export default function IPhoneHeadphoneJackRepair() {
       whatsappPrefill="Hi, my iPhone headphone jack isn't working - model:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Headphone Jack",  path: "/iphone-headphone-jack-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone audio and connector repair" }}

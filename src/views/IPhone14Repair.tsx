@@ -16,7 +16,7 @@ export default function IPhone14Repair() {
       whatsappPrefill="Hi, I have an iPhone 14 (2022) and need help with:"
       breadcrumb={[
         { name: "Home",          path: "/" },
-        { name: "iPhone Repair", path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 14",     path: "/iphone-14-repair-dubai" },
       ]}
       technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
