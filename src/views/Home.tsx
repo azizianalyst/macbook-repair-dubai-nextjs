@@ -19,7 +19,7 @@ import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { CountUp } from "@/components/blocks/CountUp";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, CONTENT_REVIEWED } from "@/content/site";
 import { REVIEWS } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
 import { SITE } from "@/lib/seo";
@@ -33,9 +33,8 @@ const TITLE = "MacBook Repair Dubai | Certified Apple Technicians in UAE";
 const DESC =
   "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 90-day warranty.";
 
-// Visible freshness signal (AEO lever). BUMP THIS on each pricing/content review so the
-// homepage never looks stale — a date that goes stale is a negative signal (3-month cliff).
-const LAST_UPDATED = "June 2026";
+// Visible freshness signal (AEO lever) — single source in site.ts (bump there each review).
+const LAST_UPDATED = CONTENT_REVIEWED;
 
 const HERO_FEATURES = ["Professional Services", "Customer Satisfaction", "Same Day Service", "Friendly Team"];
 

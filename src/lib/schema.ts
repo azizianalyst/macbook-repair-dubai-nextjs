@@ -26,7 +26,7 @@ export function localBusiness() {
     url: SITE.url,
     telephone: SITE.phoneE164,
     email: "info@macbook-repair-dubai.ae",
-    priceRange: "AED 60 - AED 4,550",
+    priceRange: "AED 49 - AED 3,500",
     currenciesAccepted: "AED",
     paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express"],
     address: {
@@ -52,10 +52,17 @@ export function localBusiness() {
     parentOrganization: { "@id": `${SITE.url}/#organization` },
     founder: { "@type": "Organization", name: "Azizi Technologies" },
     foundingDate: "2004-10-10",
+    // Matches the emirates/cities the site has dedicated landing pages for (free pickup &
+    // delivery). Trim any the business does not physically serve.
     areaServed: [
       { "@type": "City", name: "Dubai" },
       { "@type": "City", name: "Sharjah" },
       { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Ajman" },
+      { "@type": "City", name: "Al Ain" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Umm Al Quwain" },
     ],
     knowsLanguage: ["en", "ar", "ur", "hi", "ru", "fr", "de"],
     contactPoint: {

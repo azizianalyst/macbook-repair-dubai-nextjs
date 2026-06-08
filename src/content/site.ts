@@ -18,6 +18,11 @@ export const NAP = {
 export const REVIEW_COUNT = 215;
 export const REVIEW_AVERAGE = 5.0;
 
+// Single source of truth for the visible "content reviewed" freshness signal (AEO lever —
+// fights the 3-month citation cliff). BUMP every quarterly content/pricing review.
+// See docs/freshness-cadence.md for the refresh system.
+export const CONTENT_REVIEWED = "June 2026";
+
 export const HOURS = [
   { day: "Monday",    open: "9 am - 10 pm" },
   { day: "Tuesday",   open: "9 am - 10 pm" },
