@@ -41,6 +41,10 @@ const COMPANY_LINKS = [
   { label: "Repair cost calculator",   href: "/macbook-repair-cost-calculator-dubai" },
   { label: "90-day warranty",          href: "/warranty" },
   { label: "Apple repair programmes",  href: "/apple-repair-programs-dubai" },
+  { label: "AppleCare repair",         href: "/applecare-macbook-repair-dubai" },
+  { label: "Out-of-warranty repair",   href: "/out-of-warranty-apple-repair-dubai" },
+  { label: "Annual maintenance (AMC)", href: "/annual-maintenance-contract-dubai" },
+  { label: "MacBook insurance",        href: "/macbook-insurance-dubai" },
   { label: "Apple Store vs independent", href: "/where-to-repair-macbook-dubai" },
   { label: "Contact & free pickup",    href: "/contact" },
 ];
