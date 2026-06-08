@@ -33,13 +33,20 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   // tone of the hero behind the transparent header: "dark" heroes take white text,
-  // "light" heroes (service/blog pages) take dark text so nav links stay legible.
-  const [heroTone, setHeroTone] = useState<"dark" | "light">("dark");
+  // "light" heroes take dark text so nav links stay legible. Site is light-only, so
+  // default to "light" — avoids a flash of white (invisible) nav before JS runs.
+  const [heroTone, setHeroTone] = useState<"dark" | "light">("light");
   const location = useLocation();
   const closeTimer = useRef<number | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+      // Hide any open mega panel the moment the user scrolls (no-op re-render when
+      // already closed, since React bails on an unchanged state value).
+      setActiveKey(null);
+      if (closeTimer.current) { window.clearTimeout(closeTimer.current); closeTimer.current = null; }
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -80,7 +87,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-out",
         scrolled || activeKey
-          ? "bg-primary/95 supports-[backdrop-filter]:bg-primary/80 backdrop-blur-md text-on-primary shadow-md"
+          ? "bg-bg/95 supports-[backdrop-filter]:bg-bg/80 backdrop-blur-md text-text border-b border-border shadow-sm"
           : heroTone === "dark"
             ? "bg-transparent text-on-primary"
             : "bg-transparent text-text",
