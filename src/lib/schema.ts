@@ -264,6 +264,8 @@ export function person(opts: {
   yearsExperience?: number;
   slug?: string;
   knowsAbout?: string[];
+  /** Professional certifications, e.g. "Apple Certified Mac Technician (ACMT)". */
+  credentials?: string[];
 }) {
   const slug = opts.slug ?? slugify(opts.name);
   return {
@@ -275,6 +277,12 @@ export function person(opts: {
     image: opts.image,
     worksFor: { "@id": ORG_ID },
     knowsAbout: opts.knowsAbout,
+    hasCredential: opts.credentials?.map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: c,
+      recognizedBy: { "@type": "Organization", name: "Apple" },
+    })),
     description: opts.yearsExperience
       ? `${opts.yearsExperience} years repairing Apple devices.`
       : undefined,
