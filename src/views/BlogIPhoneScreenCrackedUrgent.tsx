@@ -146,11 +146,11 @@ export default function BlogIPhoneScreenCrackedUrgent() {
           </p>
           <p>
             Compare with our full pricing on the{" "}
-            <Link to="/iphone-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone screen repair Dubai
             </Link>{" "}
             page, or read{" "}
-            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent font-semibold hover:underline">
               full screen repair cost guide
             </Link>.
           </p>

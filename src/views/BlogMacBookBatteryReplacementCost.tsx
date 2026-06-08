@@ -50,7 +50,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             </li>
             <li>
               <strong>Terminal command.</strong> Open Terminal and run{" "}
-              <code className="bg-white/[0.04] px-1 rounded">system_profiler SPPowerDataType | grep -E "Cycle|Condition|Maximum"</code>{" "}
+              <code className="bg-bg-card px-1 rounded">system_profiler SPPowerDataType | grep -E "Cycle|Condition|Maximum"</code>{" "}
               for the same numbers without installing anything.
             </li>
           </ol>
@@ -125,7 +125,7 @@ export default function BlogMacBookBatteryReplacementCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement service page
             </Link>{" "}
             - or WhatsApp us your model and serial. We'll quote you in 4 minutes.

@@ -53,7 +53,7 @@ export default function About() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <div className="pt-[96px] mx-auto max-w-content px-5 md:px-6">
         <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
       </div>
@@ -97,18 +97,18 @@ export default function About() {
       </section>
 
       {/* team */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">The bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">The bench</p>
           <h2 className="m-0 mb-xl">Who you'll actually meet</h2>
           <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((t) => (
-              <div key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <div key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
                 <TechnicianBadge {...t} tone="dark" />
               </div>
             ))}
           </div>
-          <p className="text-[14px] text-on-primary-muted mt-lg max-w-[60ch]">
+          <p className="text-[14px] text-text-muted mt-lg max-w-[60ch]">
             Ali joined in 2011 - he's been here longer than most of our customers' MacBooks.
           </p>
         </div>
@@ -116,11 +116,11 @@ export default function About() {
 
       {/* compare */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-        <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">Honest comparison</p>
+        <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">Honest comparison</p>
         <h2 className="m-0 mb-xl">What makes us different from the Apple Store</h2>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+        <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
           <table className="w-full text-[15px] min-w-[600px]">
-            <thead className="bg-white/[0.04]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th scope="col" className="px-md py-md font-semibold">Feature</th>
                 <th scope="col" className="px-md py-md font-semibold">MacBook Repair Dubai</th>
@@ -129,19 +129,19 @@ export default function About() {
             </thead>
             <tbody>
               {COMPARE.map((c) => (
-                <tr key={c.row} className="border-t border-white/10">
+                <tr key={c.row} className="border-t border-border">
                   <td className="px-md py-md">
                     {c.row}
-                    {c.note && <span className="block text-[12px] text-on-primary-faint mt-1">{c.note}</span>}
+                    {c.note && <span className="block text-[12px] text-text-faint mt-1">{c.note}</span>}
                   </td>
                   <td className="px-md py-md">
                     {typeof c.us === "boolean"
-                      ? (c.us ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-on-primary-faint" aria-label="No" />)
+                      ? (c.us ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.us}</span>}
                   </td>
                   <td className="px-md py-md">
                     {typeof c.apple === "boolean"
-                      ? (c.apple ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-on-primary-faint" aria-label="No" />)
+                      ? (c.apple ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.apple}</span>}
                   </td>
                 </tr>
@@ -152,15 +152,15 @@ export default function About() {
       </section>
 
       {/* milestones */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">21 years on the bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">21 years on the bench</p>
           <h2 className="m-0 mb-xl">Milestones</h2>
           <ol className="grid gap-md md:grid-cols-2">
             {MILESTONES.map((m) => (
-              <li key={m.year} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex gap-md">
-                <span className="mono text-[20px] font-bold text-accent-bright shrink-0 w-16">{m.year}</span>
-                <p className="text-[15px] text-on-primary leading-relaxed m-0">{m.text}</p>
+              <li key={m.year} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+                <span className="mono text-[20px] font-bold text-accent shrink-0 w-16">{m.year}</span>
+                <p className="text-[15px] text-text leading-relaxed m-0">{m.text}</p>
               </li>
             ))}
           </ol>
@@ -168,7 +168,7 @@ export default function About() {
       </section>
 
       {/* reviews */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <h2 className="m-0 mb-xl">What customers say</h2>
           <ReviewGrid reviews={REVIEWS.slice(0, 6)} tone="dark" />

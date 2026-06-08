@@ -31,10 +31,10 @@ export default function IMacNotTurningOn() {
           <p className="text-[18px] leading-relaxed mb-md">
             "iMac won't turn on" describes at least eight different faults. Pressing the power button and getting <strong>nothing at all</strong> is different from getting a chime and a black screen, which is different from getting a fan and no chime. The fix - and the price - depend on which one you have.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mb-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             The single most common cause on 2017-2020 27" iMacs is a failed power supply. Apple's PSU module in those years uses a high-voltage capacitor that dries out after 5-7 years of Dubai heat. Symptom: dead silent, no LED on the back. Replacement is AED 520 and takes a day. We see it weekly.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The second most common is a startup-disk problem: iMac powers on, chimes, then loops on the Apple logo or shows a folder with a question mark. That's not hardware in most cases - APFS corruption, T2 SSD pairing, or a failed firmware update. AED 460 to recover, often same day.
           </p>
         </>

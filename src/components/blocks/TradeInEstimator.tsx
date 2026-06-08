@@ -58,11 +58,11 @@ const selectClassesLight = cn(
 );
 
 const selectClassesDark = cn(
-  "w-full appearance-none rounded-md border border-white/10 bg-white/[0.04] px-md py-3 pr-10",
-  "text-[15px] text-on-primary placeholder:text-on-primary-faint",
+  "w-full appearance-none rounded-md border border-border bg-bg-card px-md py-3 pr-10",
+  "text-[15px] text-text placeholder:text-text-faint",
   "transition-colors",
-  "hover:border-white/30 focus:border-accent-bright focus:outline-none",
-  "focus-visible:ring-2 focus-visible:ring-accent-bright/40 focus-visible:ring-offset-1 focus-visible:ring-offset-bg-card",
+  "hover:border-border-strong focus:border-accent focus:outline-none",
+  "focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-1 focus-visible:ring-offset-bg-card",
   "[&>option]:bg-bg-card [&>option]:text-text",
   arrowBg,
 );
@@ -104,21 +104,21 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
     <div
       className={cn(
         "rounded-lg p-lg md:p-xl",
-        dark ? "border border-white/10 bg-white/[0.04]" : "bg-bg-card border border-border shadow-md",
+        dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-md",
         className,
       )}
     >
-      <h3 className={cn("m-0 mb-xs text-[clamp(1.25rem,3vw,1.6rem)] font-bold tracking-tight", dark ? "text-on-primary" : "text-text")}>
+      <h3 className={cn("m-0 mb-xs text-[clamp(1.25rem,3vw,1.6rem)] font-bold tracking-tight", dark ? "text-text" : "text-text")}>
         {heading ?? "Trade in your Apple device"}
       </h3>
-      <p className={cn("m-0 mb-lg text-[15px] leading-relaxed max-w-[58ch]", dark ? "text-on-primary-muted" : "text-text-muted")}>
+      <p className={cn("m-0 mb-lg text-[15px] leading-relaxed max-w-[58ch]", dark ? "text-text-muted" : "text-text-muted")}>
         Tell us what you have and Shafiq will send your exact offer on WhatsApp - working or not,
         we buy faulty devices too. Every quote is confirmed by a real technician, no lowball bots.
       </p>
 
       <div className="grid gap-md sm:grid-cols-3">
         <label className="block">
-          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-on-primary" : "text-text")}>Device type</span>
+          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-text" : "text-text")}>Device type</span>
           <select
             value={device}
             onChange={(e) => setDevice(e.target.value)}
@@ -134,7 +134,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
         </label>
 
         <label className="block">
-          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-on-primary" : "text-text")}>Model / era</span>
+          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-text" : "text-text")}>Model / era</span>
           <select
             value={era}
             onChange={(e) => setEra(e.target.value)}
@@ -150,7 +150,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
         </label>
 
         <label className="block">
-          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-on-primary" : "text-text")}>Condition</span>
+          <span className={cn("mb-1.5 block text-[13px] font-semibold", dark ? "text-text" : "text-text")}>Condition</span>
           <select
             value={condition}
             onChange={(e) => setCondition(e.target.value)}
@@ -170,7 +170,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
         <p
           className={cn(
             "mt-lg mb-0 rounded-md p-md text-[15px] font-medium leading-relaxed",
-            dark ? "text-on-primary border border-white/10 bg-white/[0.04]" : "text-text bg-bg-alt border border-border",
+            dark ? "text-text border border-border bg-bg-card" : "text-text bg-bg-alt border border-border",
           )}
           role="status"
         >
@@ -186,7 +186,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
           data-track="whatsapp-tradein"
           className={cn(
             "inline-flex w-full items-center justify-center gap-2 rounded-md px-lg py-3.5",
-            "bg-primary text-on-primary text-[15px] font-semibold",
+            "bg-bg-alt text-text text-[15px] font-semibold",
             "min-h-[44px]",
             dark ? undefined : "shadow-sm",
             "motion-safe:transition-transform motion-safe:hover:-translate-y-0.5 active:scale-[0.98]",
@@ -196,7 +196,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
           <MessageCircle className="h-5 w-5" aria-hidden />
           Get my valuation on WhatsApp
         </a>
-        <span className={cn("text-center text-[13px]", dark ? "text-on-primary-faint" : "text-text-faint")}>
+        <span className={cn("text-center text-[13px]", dark ? "text-text-faint" : "text-text-faint")}>
           {isComplete
             ? "We usually reply with your offer in under 10 minutes during shop hours."
             : "Pick what you can - Shafiq will fill in the rest on chat."}

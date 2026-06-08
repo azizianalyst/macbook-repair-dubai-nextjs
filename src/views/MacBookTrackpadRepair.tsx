@@ -25,7 +25,7 @@ export default function MacBookTrackpadRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook trackpad repair in Dubai</strong> usually splits into two camps: the trackpad itself has failed (worn click mechanism, dead Force Touch haptic engine, cracked glass), or the trackpad is fine but a <strong>swollen battery</strong> underneath is pushing it up from below. We always check the battery first - replacing a trackpad on top of a swollen cell is a fire risk and a waste of money.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On Force Touch trackpads (2015 onwards) we replace the haptic engine and force sensors as a unit. Calibration done on the bench so click force matches Apple spec.
           </p>
         </>

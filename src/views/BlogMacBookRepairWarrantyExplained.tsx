@@ -77,7 +77,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
             for. Come to us when AppleCare+ has expired, the issue isn't covered, or the deductible is
             higher than our price. Our customers most often arrive after AppleCare+ ends or after
             Apple has quoted a logic-board replacement at AED 6,000+ - see our{" "}
-            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent font-semibold hover:underline">
               repair vs AppleCare+ math
             </Link>
             .
@@ -107,7 +107,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
             customer. If you sell the MacBook on Dubizzle or to a friend within the warranty period,
             the buyer gets the remainder. Just hand them the receipt. This is a real selling point
             when listing a refurbished MacBook - see our{" "}
-            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent font-semibold hover:underline">
               refurbished MacBook buying guide
             </Link>{" "}
             for how buyers view this.

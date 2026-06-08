@@ -25,7 +25,7 @@ export default function IPhoneMicrophoneRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Modern iPhones (X onwards) have four microphones</strong>: bottom (calls), back (video and noise capture), front above the camera (FaceTime), and a noise-cancelling mic near the SIM tray. The other party "not hearing you" can be any one of them depending on context - Voice Memos uses the bottom mic, FaceTime uses the front, video recording uses the back, and active noise cancellation routes through the noise mic.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We run a four-mic test in iOS to isolate the dead one before quoting. The bottom mic dies most often (water and lint). Back-camera mic comes second (drops). AED 300 covers any single microphone replacement, same workshop visit.
           </p>
         </>

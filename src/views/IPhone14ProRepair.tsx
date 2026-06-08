@@ -47,22 +47,22 @@ export default function IPhone14ProRepair() {
             <li>• <strong>Lightning port wear</strong></li>
           </ul>
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 14 Pro</h2>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04] mb-lg">
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-white/[0.04]"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">ProMotion OLED screen replacement</td><td className="px-md py-sm">750</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">Dynamic Island display area repair</td><td className="px-md py-sm">900</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">300</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">48MP main + telephoto + ultra-wide + LiDAR</td><td className="px-md py-sm">700</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 600</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">650</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Lightning port repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">ProMotion OLED screen replacement</td><td className="px-md py-sm">750</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Dynamic Island display area repair</td><td className="px-md py-sm">900</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">300</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">48MP main + telephoto + ultra-wide + LiDAR</td><td className="px-md py-sm">700</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 600</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">650</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Lightning port repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
           <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
-          <p className="text-[15px] text-on-primary-muted leading-relaxed mb-lg">
+          <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             ProMotion OLED with Dynamic Island cutout in stock. Genuine Apple-pull AED 1,150. The 48MP main camera is sourced as a stand-alone module if only the main fails (AED 450) or as a full triple+LiDAR assembly (AED 700). MagSafe-equipped back glass in stock.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 14 Pro still worth repairing in 2026?</h2>

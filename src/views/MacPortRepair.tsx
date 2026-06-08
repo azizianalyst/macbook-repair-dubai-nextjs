@@ -25,7 +25,7 @@ export default function MacPortRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Before we charge you for a port replacement we check the obvious.</strong> Roughly half the "broken Thunderbolt port" calls we get turn out to be debris in the port itself or a worn-out cable - five-minute fixes we don't bill for. The other half are real port failures that need the assembly replaced and the work is straightforward.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Studio M4 Max ships with Thunderbolt 5 (TB5) front ports - newer, faster, and a different physical assembly to TB4. Mac Mini M4 Pro has TB5 too, on the rear. Mac Pro 2019 Intel has eight TB3 ports across MPX modules. We work on all of them. The board-level work is meticulous because Thunderbolt controllers don't tolerate sloppy soldering - we use a hot-air rework station and microscope, not a soldering iron and hope.
           </p>
         </>

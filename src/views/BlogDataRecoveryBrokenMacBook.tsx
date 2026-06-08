@@ -92,7 +92,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
           </ul>
           <p>
             See our{" "}
-            <Link to="/blog/water-damage-macbook-immediate-action" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/water-damage-macbook-immediate-action" className="text-accent font-semibold hover:underline">
               MacBook water damage immediate action guide
             </Link>{" "}
             if you've just had a spill - what you do in the first hour matters more than anything we do later.
@@ -161,15 +161,15 @@ export default function BlogDataRecoveryBrokenMacBook() {
 
           <p>
             Bring your dead MacBook to{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               our data recovery workshop
             </Link>{" "}
             for free diagnosis. We also run a separate{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water-damage repair service
             </Link>{" "}
             if the Mac itself is salvageable. Apple's official data-recovery policy is at{" "}
-            <a href="https://support.apple.com/en-us/HT201583" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://support.apple.com/en-us/HT201583" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               support.apple.com
             </a>{" "}
             (Apple does not offer data recovery - this is the answer they give).

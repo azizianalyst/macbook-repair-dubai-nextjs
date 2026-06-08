@@ -163,7 +163,7 @@ export default function BlogIPhone15ProOverheating() {
           <p>
             For repair, this means iPhone 17 Pro screens are harder to replace (the vapour chamber
             adds 25-35 minutes labour) and cost more. See our{" "}
-            <Link to="/blog/iphone-15-vs-iphone-17-repair-cost-comparison" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-15-vs-iphone-17-repair-cost-comparison" className="text-accent font-semibold hover:underline">
               iPhone 15 vs 17 cost comparison
             </Link>.
           </p>
@@ -173,7 +173,7 @@ export default function BlogIPhone15ProOverheating() {
             If software fixes don't resolve the heat, walk in for a free diagnostic at our Dubai
             Media City workshop. We measure the iPhone's thermal pattern with an infrared camera
             on the bench in 5 minutes.{" "}
-            <Link to="/iphone-15-pro-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-15-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone 15 Pro repair page
             </Link>{" "}
             for full service options.

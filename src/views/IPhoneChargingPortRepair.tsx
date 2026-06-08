@@ -27,10 +27,10 @@ export default function IPhoneChargingPortRepair() {
       pricingCaption="Pro Max sizes add AED 50. Charging IC repair (logic board) AED 450 separately if port swap doesn't restore charging."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone charging port repair in Dubai starts at AED 250 and finishes the same day on most Lightning models. The split between Lightning and USB-C matters: every iPhone before the iPhone 15 (so iPhone 6 through iPhone 14 Pro Max) uses the Apple Lightning connector - a small, simple flex cable that's straightforward to swap. From the iPhone 15 forward, Apple moved to USB-C - a different mechanical assembly with a separate FPC, four extra solder points, and tighter bond tolerance. The workshop has been fitting Lightning ports since 2014 and USB-C ports since the iPhone 15 launched in September 2023.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             Two confusions to clear up. First, "the port" on every iPhone since the iPhone 7 is on a flex cable - not soldered to the logic board - so a port swap is a flex swap, no micro-soldering required. Second, on the iPhone X and later, the same flex carries the Face ID home-button line, the microphone, and the antenna feed-line. A botched port repair can break Face ID. The workshop tests Face ID before and after every port job and shows the proximity-sensor calibration on the bench.
           </p>
         </>

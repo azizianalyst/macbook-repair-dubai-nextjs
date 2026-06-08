@@ -46,7 +46,7 @@ export default function Contact() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <div className="pt-[96px] mx-auto max-w-content px-5 md:px-6">
         <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       </div>
@@ -76,24 +76,24 @@ export default function Contact() {
             </Button>
           </div>
 
-          <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-            <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-on-primary-muted mb-md">Hours</p>
+          <div className="border border-border bg-bg-card rounded-md p-lg">
+            <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md">Hours</p>
             <ul className="text-[14px] space-y-1">
               {HOURS.map((h) => (
                 <li key={h.day} className="flex justify-between">
                   <span>{h.day}</span>
-                  <span className={"mono " + (h.open === "Closed" ? "text-danger" : "text-on-primary")}>{h.open}</span>
+                  <span className={"mono " + (h.open === "Closed" ? "text-danger" : "text-text")}>{h.open}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-[12px] text-on-primary-faint mt-md">WhatsApp is answered 24/7 - including Sundays.</p>
+            <p className="text-[12px] text-text-faint mt-md">WhatsApp is answered 24/7 - including Sundays.</p>
           </div>
 
-          <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-            <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-on-primary-muted mb-md">Payment &amp; parking</p>
-            <p className="text-[14px] text-on-primary mb-2">Cash · VISA · Mastercard · American Express</p>
-            <p className="text-[13px] text-on-primary-muted flex items-start gap-2">
-              <ParkingCircle size={14} className="text-accent-bright mt-1 shrink-0" aria-hidden />
+          <div className="border border-border bg-bg-card rounded-md p-lg">
+            <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md">Payment &amp; parking</p>
+            <p className="text-[14px] text-text mb-2">Cash · VISA · Mastercard · American Express</p>
+            <p className="text-[13px] text-text-muted flex items-start gap-2">
+              <ParkingCircle size={14} className="text-accent mt-1 shrink-0" aria-hidden />
               Paid parking on-site at Concord Tower and on Al Sufouh Road.
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function Contact() {
         {/* right: form */}
         <div className="md:col-span-7">
           <h2 className="m-0 mb-2">Tell us about your device</h2>
-          <p className="text-[14px] text-on-primary-muted mb-lg">
+          <p className="text-[14px] text-text-muted mb-lg">
             Two quick steps — your device, then how to reach you. We reply with a quote on your preferred channel, fast.
           </p>
           <LeadForm variant="full" sourcePath="/contact" />
@@ -110,7 +110,7 @@ export default function Contact() {
       </section>
 
       {/* maps full width */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-2xl">
           <iframe
             src="https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed"
@@ -124,28 +124,28 @@ export default function Contact() {
 
       {/* directions */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-        <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">Drive times from Dubai landmarks</p>
+        <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">Drive times from Dubai landmarks</p>
         <h2 className="m-0 mb-xl">How to reach us</h2>
         <div className="grid gap-md md:grid-cols-2">
           {DIRECTIONS.map((d) => (
-            <article key={d.from} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={d.from} className="border border-border bg-bg-card rounded-md p-lg">
               <div className="flex items-baseline justify-between gap-md mb-2">
                 <h3 className="m-0 text-[18px]">{d.from}</h3>
-                <span className="mono text-[14px] text-accent-bright">~{d.minutes} min</span>
+                <span className="mono text-[14px] text-accent">~{d.minutes} min</span>
               </div>
-              <p className="text-[14px] text-on-primary-muted m-0">{d.text}</p>
+              <p className="text-[14px] text-text-muted m-0">{d.text}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* faq */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <h2 className="m-0 mb-xl">Visiting us - common questions</h2>
           <FAQAccordion items={FAQS} tone="dark" />
-          <p className="text-[14px] text-on-primary-muted mt-lg flex items-center gap-2">
-            <Languages size={16} className="text-accent-bright" aria-hidden />
+          <p className="text-[14px] text-text-muted mt-lg flex items-center gap-2">
+            <Languages size={16} className="text-accent" aria-hidden />
             Multilingual reception · English · Arabic · Hindi · Urdu · basic Russian.
           </p>
         </div>
@@ -165,11 +165,11 @@ function AddressBlock() {
     } catch { /* clipboard not available - silent */ }
   };
   return (
-    <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-      <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-on-primary-muted mb-md flex items-center gap-2">
-        <MapPin size={14} className="text-accent-bright" aria-hidden /> Address
+    <div className="border border-border bg-bg-card rounded-md p-lg">
+      <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md flex items-center gap-2">
+        <MapPin size={14} className="text-accent" aria-hidden /> Address
       </p>
-      <address className="not-italic text-[15px] leading-relaxed text-on-primary">
+      <address className="not-italic text-[15px] leading-relaxed text-text">
         {NAP.street}<br />
         {NAP.area}<br />
         {NAP.city}, UAE
@@ -177,7 +177,7 @@ function AddressBlock() {
       <button
         type="button"
         onClick={copy}
-        className="mt-md inline-flex items-center gap-2 text-[13px] font-semibold text-accent-bright hover:underline"
+        className="mt-md inline-flex items-center gap-2 text-[13px] font-semibold text-accent hover:underline"
         aria-label="Copy full address"
       >
         {copied ? <><Check size={14} aria-hidden /> Copied</> : <><Copy size={14} aria-hidden /> Copy address</>}

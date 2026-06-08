@@ -25,7 +25,7 @@ export default function IMacOsReinstall() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Sometimes the right fix isn't a part - it's a clean operating system.</strong> An iMac that boots slowly, throws random kernel panics, can't complete a software update or has been through three or four major macOS upgrades over the years often just needs a fresh install. We back up first, install clean, and restore your data and apps after.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Different iMac models support different ceiling versions of macOS, and Apple drops models silently each year. A 2015 iMac is stuck at macOS Monterey. 2017 iMac runs Ventura. 2019 iMac handles macOS Sequoia and Tahoe. We check your serial first and tell you exactly which version you can install - there's no point promising the latest macOS to a machine that won't take it. We'll also give you a straight answer if your iMac is at end-of-life and won't see another security update.
           </p>
         </>

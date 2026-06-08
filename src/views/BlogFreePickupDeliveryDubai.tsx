@@ -81,7 +81,7 @@ export default function BlogFreePickupDeliveryDubai() {
           <p>
             Within 30-60 minutes of arrival at Concord Tower the device is on a senior technician's
             bench. Diagnosis is{" "}
-            <Link to="/blog/transparent-repair-pricing-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/transparent-repair-pricing-explained" className="text-accent font-semibold hover:underline">
               free
             </Link>{" "}
             and includes hardware test, battery health, SMART status (where applicable), and a

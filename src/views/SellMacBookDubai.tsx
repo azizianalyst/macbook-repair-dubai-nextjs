@@ -214,7 +214,7 @@ export default function SellMacBookDubai() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -222,7 +222,7 @@ export default function SellMacBookDubai() {
         title="Sell Your Apple Device in Dubai"
         subtitle="Sell your Mac, iPhone or iPad in Dubai - even if it's damaged. Free instant valuation, free pickup anywhere in Dubai, and paid same day. We buy working and faulty devices alike."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1">
             <Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews
           </span>
@@ -253,7 +253,7 @@ export default function SellMacBookDubai() {
               </p>
             </Reveal>
             <Reveal delay={60}>
-              <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[70ch] mb-md">
+              <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] mb-md">
                 We're not a faceless buy-back website. We're a Dubai Apple repair workshop that has serviced
                 Apple hardware for <strong>21+ years</strong> and repaired <strong>40,000+ devices</strong>,
                 led by senior technician <strong>Shafiq Ahmed</strong>. That means we understand exactly what
@@ -262,9 +262,9 @@ export default function SellMacBookDubai() {
               </p>
             </Reveal>
             <Reveal delay={120}>
-              <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[70ch] m-0">
+              <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] m-0">
                 Upgrading after a repair quote? You can also{" "}
-                <Link to="/" className="text-accent-bright underline underline-offset-2">
+                <Link to="/" className="text-accent underline underline-offset-2">
                   trade your old Mac toward a repair or another device
                 </Link>{" "}
                 - we'll apply the value as credit on the spot.
@@ -280,12 +280,12 @@ export default function SellMacBookDubai() {
       </section>
 
       {/* What we buy */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-            <Laptop size={28} className="text-accent-bright" aria-hidden /> What we buy
+            <Laptop size={28} className="text-accent" aria-hidden /> What we buy
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             If Apple made it, we'll buy it - working or faulty. Here's what we take, with free collection
             anywhere in Dubai.
           </p>
@@ -295,33 +295,33 @@ export default function SellMacBookDubai() {
               return (
                 <article
                   key={item.title}
-                  className="border border-white/10 bg-white/[0.04] rounded-md p-lg"
+                  className="border border-border bg-bg-card rounded-md p-lg"
                 >
                   <h3 className="text-[18px] font-bold mb-sm flex items-start gap-2">
-                    <Icon size={20} className="text-accent-bright mt-0.5 shrink-0" aria-hidden />
+                    <Icon size={20} className="text-accent mt-0.5 shrink-0" aria-hidden />
                     {item.title}
                   </h3>
-                  <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{item.body}</p>
+                  <p className="text-[15px] text-text-muted leading-relaxed m-0">{item.body}</p>
                 </article>
               );
             })}
           </div>
-          <p className="text-[15px] text-on-primary-muted max-w-[72ch] mt-lg m-0">
+          <p className="text-[15px] text-text-muted max-w-[72ch] mt-lg m-0">
             Looking for a specific device hub? Browse{" "}
-            <Link to="/" className="text-accent-bright underline underline-offset-2">
+            <Link to="/" className="text-accent underline underline-offset-2">
               MacBook
             </Link>
             ,{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright underline underline-offset-2">
+            <Link to="/iphone-repair-dubai" className="text-accent underline underline-offset-2">
               iPhone
             </Link>
             ,{" "}
-            <Link to="/ipad-repair-dubai" className="text-accent-bright underline underline-offset-2">
+            <Link to="/ipad-repair-dubai" className="text-accent underline underline-offset-2">
               iPad
             </Link>
             ,{" "}
             and{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright underline underline-offset-2">
+            <Link to="/imac-repair-dubai" className="text-accent underline underline-offset-2">
               iMac
             </Link>{" "}
             - and ask about selling on any of them.
@@ -332,9 +332,9 @@ export default function SellMacBookDubai() {
       {/* How valuation works */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-          <Gauge size={28} className="text-accent-bright" aria-hidden /> How valuation works
+          <Gauge size={28} className="text-accent" aria-hidden /> How valuation works
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
           We don't quote one flat price for "a MacBook". A real technician values your specific device
           against four honest factors so the offer reflects what you actually own.
         </p>
@@ -344,13 +344,13 @@ export default function SellMacBookDubai() {
             return (
               <article
                 key={f.title}
-                className="border border-white/10 bg-white/[0.04] rounded-md p-lg"
+                className="border border-border bg-bg-card rounded-md p-lg"
               >
                 <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2">
-                  <Icon size={18} className="text-accent-bright shrink-0" aria-hidden />
+                  <Icon size={18} className="text-accent shrink-0" aria-hidden />
                   {f.title}
                 </h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{f.body}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.body}</p>
               </article>
             );
           })}
@@ -358,33 +358,33 @@ export default function SellMacBookDubai() {
       </section>
 
       {/* Working or faulty */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-            <Wrench size={28} className="text-accent-bright" aria-hidden /> Working or faulty - we buy both
+            <Wrench size={28} className="text-accent" aria-hidden /> Working or faulty - we buy both
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             Most buy-back sites only want pristine devices. As a full repair workshop, we see value where
             others see junk - so a damaged device still puts money in your pocket.
           </p>
           <div className="grid gap-md md:grid-cols-2">
-            <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2">
-                <CheckCircle2 size={18} className="text-accent-bright shrink-0" aria-hidden />
+                <CheckCircle2 size={18} className="text-accent shrink-0" aria-hidden />
                 Working & good condition
               </h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">
+              <p className="text-[15px] text-text-muted leading-relaxed m-0">
                 Clean, fully working devices earn the top valuation. We test the screen, battery health,
                 ports and key functions, confirm the figure, and pay you the same day. Bring the charger
                 and any accessories to push the offer higher.
               </p>
             </article>
-            <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2">
-                <Wrench size={18} className="text-accent-bright shrink-0" aria-hidden />
+                <Wrench size={18} className="text-accent shrink-0" aria-hidden />
                 Faulty, cracked or dead
               </h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">
+              <p className="text-[15px] text-text-muted leading-relaxed m-0">
                 Cracked screen, swollen or dead battery, liquid damage, no power, no display or a logic-board
                 fault - we still make a real offer. Our team refurbishes or harvests parts in-house, so faulty
                 Macs, iPhones, iPads and Watches keep genuine value. Just make sure Find My / Activation Lock
@@ -398,9 +398,9 @@ export default function SellMacBookDubai() {
       {/* How it works - 3 steps */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-          <ClipboardCheck size={28} className="text-accent-bright" aria-hidden /> How it works
+          <ClipboardCheck size={28} className="text-accent" aria-hidden /> How it works
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
           Selling your device takes three simple steps - and the valuation and collection are always free.
         </p>
         <div className="grid gap-md md:grid-cols-3">
@@ -409,27 +409,27 @@ export default function SellMacBookDubai() {
             return (
               <article
                 key={s.title}
-                className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col"
+                className="border border-border bg-bg-card rounded-md p-lg flex flex-col"
               >
-                <Icon size={26} className="text-accent-bright mb-sm" aria-hidden />
+                <Icon size={26} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{s.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed m-0">{s.body}</p>
               </article>
             );
           })}
         </div>
-        <p className="text-[15px] text-on-primary-muted max-w-[72ch] mt-lg m-0">
+        <p className="text-[15px] text-text-muted max-w-[72ch] mt-lg m-0">
           Planning to sell? Read our guides on{" "}
           <Link
             to="/how-to-erase-all-data-on-my-mac-before-giving-it-away"
-            className="text-accent-bright underline underline-offset-2"
+            className="text-accent underline underline-offset-2"
           >
             erasing your Mac before giving it away
           </Link>{" "}
           and{" "}
           <Link
             to="/blog/how-to-factory-reset-iphone-before-selling"
-            className="text-accent-bright underline underline-offset-2"
+            className="text-accent underline underline-offset-2"
           >
             factory-resetting your iPhone before selling
           </Link>
@@ -451,13 +451,13 @@ export default function SellMacBookDubai() {
 
       {/* Closing CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[34ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">
             Get your free valuation now - paid the same day
           </h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[62ch]">
+          <p className="text-text-muted text-[16px] max-w-[62ch]">
             Send your model and condition on WhatsApp (a photo helps) and we'll reply with your offer fast.
             Free collection across Dubai, no obligation, working or faulty. Cash or instant transfer the same day.
           </p>

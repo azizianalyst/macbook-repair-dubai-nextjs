@@ -25,7 +25,7 @@ export default function MacPerformanceTune() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>'My Mac is slow' is a symptom, not a diagnosis.</strong> The actual cause is almost always one of: a runaway background process eating CPU 24/7, dozens of unwanted login items and launch agents, a swapped-out hard drive that's nearly full, a thermal throttle from dusty fans, or an old macOS that's lost compatibility with current apps. We find the specific cause for your Mac through Console log analysis and Activity Monitor profiling - then fix it.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We don't run 'cleaner' apps. macOS doesn't need them and they often make things worse. Instead we audit launch agents and daemons, identify the few that are actually problematic, remove them, clean caches by hand, free up storage, check for thermal throttling, and audit installed apps for known troublemakers (old kernel extensions, abandoned 32-bit apps still trying to launch). Then we measure before-and-after with the same benchmarks so you can see the difference, not just feel it.
           </p>
         </>

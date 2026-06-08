@@ -76,7 +76,7 @@ export default function AnnualMaintenanceContract() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -84,7 +84,7 @@ export default function AnnualMaintenanceContract() {
         title="Apple Annual Maintenance Contract (AMC) in Dubai"
         subtitle="Keep every Mac, iPhone and iPad in your business serviced, healthy and repaired-on-priority for one predictable yearly fee. Scheduled visits, on-site support and discounted parts."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>On-site across Dubai</span>
@@ -110,16 +110,16 @@ export default function AnnualMaintenanceContract() {
       </section>
 
       {/* What's included */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> What every AMC includes
+            <ShieldCheck size={28} className="text-accent" aria-hidden /> What every AMC includes
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
             {INCLUDED.map((i) => (
-              <article key={i.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /> {i.title}</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{i.body}</p>
+              <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {i.title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
               </article>
             ))}
           </div>
@@ -129,27 +129,27 @@ export default function AnnualMaintenanceContract() {
       {/* Plans */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Building2 size={28} className="text-accent-bright" aria-hidden /> Plans that scale with your fleet
+          <Building2 size={28} className="text-accent" aria-hidden /> Plans that scale with your fleet
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           Three starting points - every contract is tailored after a free device audit. Pay per device, scale up or down as your team changes.
         </p>
         <div className="grid gap-md md:grid-cols-3">
           {PLANS.map((p) => (
-            <article key={p.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col">
+            <article key={p.name} className="border border-border bg-bg-card rounded-md p-lg flex flex-col">
               <h3 className="text-[18px] font-bold mb-sm">{p.name}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed mb-md flex-1">{p.body}</p>
-              <p className="text-[13px] mono text-accent-bright">Best for: {p.best}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed mb-md flex-1">{p.body}</p>
+              <p className="text-[13px] mono text-accent">Best for: {p.best}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Why */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Calendar size={28} className="text-accent-bright" aria-hidden /> Why businesses sign an AMC
+            <Calendar size={28} className="text-accent" aria-hidden /> Why businesses sign an AMC
           </h2>
           <div className="grid gap-md md:grid-cols-3">
             {[
@@ -157,9 +157,9 @@ export default function AnnualMaintenanceContract() {
               { title: "Predictable budget", body: "One annual figure for servicing and support, plus discounted rates on any parts you do need." },
               { title: "One trusted partner", body: "The same workshop that's serviced Apple hardware in Dubai since 2004 - a named technician, no call centre." },
             ].map((c) => (
-              <article key={c.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2"><Headphones size={18} className="text-accent-bright" aria-hidden /> {c.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{c.body}</p>
+              <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2"><Headphones size={18} className="text-accent" aria-hidden /> {c.title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
               </article>
             ))}
           </div>
@@ -180,10 +180,10 @@ export default function AnnualMaintenanceContract() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Send your device count - get an AMC quote the same day</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Send your device count - get an AMC quote the same day</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Free device audit, written plan, no obligation. WhatsApp the number and types of devices and we'll recommend the right level of cover.
           </p>
           <div className="relative flex flex-wrap gap-sm">

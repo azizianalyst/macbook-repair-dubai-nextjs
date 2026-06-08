@@ -10,7 +10,7 @@ type Props = {
   timeline: string;           // "Same day · 1-2 days"
   whatsappMessage?: string;   // prefilled
   sticky?: boolean;           // sticky right-rail (default) vs static (e.g. inside hero)
-  tone?: "light" | "dark";    // "dark" for use on the bg-primary band; default light
+  tone?: "light" | "dark";    // "dark" for use on the bg-bg-alt band; default light
 };
 
 // sticky right-rail booking widget on desktop, inline on mobile.
@@ -27,21 +27,21 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
       className={cn(
         sticky && "md:sticky md:top-[110px]",
         "rounded-md p-lg flex flex-col gap-md",
-        dark ? "border border-white/10 bg-white/[0.04]" : "bg-bg-card border border-border shadow-md",
+        dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-md",
       )}
     >
       <div>
-        <p className={cn("text-[12px] uppercase tracking-wider mono", dark ? "text-on-primary-faint" : "text-text-faint")}>{service}</p>
+        <p className={cn("text-[12px] uppercase tracking-wider mono", dark ? "text-text-faint" : "text-text-faint")}>{service}</p>
         <p className="mt-1">
-          <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-on-primary-faint" : "text-text-faint")}>From </span>
-          <span className={cn("mono text-[28px] font-bold", dark ? "text-accent-bright" : "text-primary")}>AED {startingPrice}</span>
+          <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-text-faint" : "text-text-faint")}>From </span>
+          <span className={cn("mono text-[28px] font-bold", dark ? "text-accent" : "text-primary")}>AED {startingPrice}</span>
         </p>
-        <p className={cn("mono text-[13px] mt-1 flex items-center gap-1", dark ? "text-on-primary-muted" : "text-text-muted")}>
+        <p className={cn("mono text-[13px] mt-1 flex items-center gap-1", dark ? "text-text-muted" : "text-text-muted")}>
           <Clock size={13} aria-hidden /> {timeline}
         </p>
       </div>
 
-      <ul className={cn("text-[13px] space-y-1", dark ? "text-on-primary-muted" : "text-text-muted")}>
+      <ul className={cn("text-[13px] space-y-1", dark ? "text-text-muted" : "text-text-muted")}>
         <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> 90-day written warranty</li>
         <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> No fix, no charge</li>
         <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> Free pickup &amp; delivery</li>
@@ -60,7 +60,7 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
         </Button>
       </div>
 
-      <p className={cn("text-[12px] mono", dark ? "text-on-primary-faint" : "text-text-faint")}>
+      <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>
         Mon-Sat 9 am - 10 pm · Concord Tower, Media City
       </p>
     </aside>

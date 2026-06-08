@@ -30,7 +30,7 @@ export default function IPadChargingPortRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             iPads use one of three connectors. <strong>Lightning</strong> on every iPad up to iPad 9. <strong>USB-C</strong> on every iPad Air from gen 4, Mini from gen 6, every iPad Pro since 2018, and the iPad 10 onwards. Newer iPad Pros add Thunderbolt over USB-C - same physical port, more pins doing more work, and pricier when damaged.
             </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The Smart Connector on Pro and Air models is a separate three-pin contact for keyboard cases. It can fail on its own without the main port being touched. We test all three on every charging-port job.
           </p>
         </>

@@ -25,7 +25,7 @@ export default function IPadIcloudUnlock() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Read this before paying anyone in Dubai for iCloud unlock.</strong> Apple's Activation Lock is hardware-tied at the chip level. It cannot be removed by software, jailbreak, IMEI service, or any "unlock specialist" - full stop. Anyone who tells you otherwise is selling you either a brick (your money plus a still-locked iPad) or a stolen-recovery service that puts you legally exposed in the UAE.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We do this consultation free because honest information matters. There <em>are</em> three legitimate paths to unlock an iPad - read on. If your situation matches one of them, we help you walk Apple through it. If not, we tell you the iPad is unusable and you should not have paid for it.
           </p>
         </>

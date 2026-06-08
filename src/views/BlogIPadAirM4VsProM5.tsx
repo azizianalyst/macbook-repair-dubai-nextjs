@@ -114,11 +114,11 @@ export default function BlogIPadAirM4VsProM5() {
 
           <p>
             Compare more device guides:{" "}
-            <Link to="/blog/best-mac-for-creative-pros-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/best-mac-for-creative-pros-dubai" className="text-accent font-semibold hover:underline">
               Best Mac for creative pros
             </Link>{" "}
             or browse our{" "}
-            <Link to="/ipad-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/ipad-repair-dubai" className="text-accent font-semibold hover:underline">
               iPad repair services
             </Link>.
           </p>

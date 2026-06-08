@@ -116,7 +116,7 @@ export default function BlogIPhoneWaterDamageRepairCost() {
           <h2>What to do next</h2>
           <p>
             Phone in water? <strong>Power off, do not charge, message us now.</strong>{" "}
-            <Link to="/iphone-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone water damage repair page
             </Link>{" "}
             for the full process and pricing. WhatsApp 055 741 3706 with a photo - quote in 4

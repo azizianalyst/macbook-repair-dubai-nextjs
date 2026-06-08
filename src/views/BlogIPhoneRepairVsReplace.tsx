@@ -46,7 +46,7 @@ export default function BlogIPhoneRepairVsReplace() {
               { model: "iPhone Air",             ours: "3,800-5,200", apple: "1,100",      note: "Definitely repair" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Used pricing range = Dubai market (Dubizzle, OpenSooq, Carrefour electronics trade-in)
             April 2026. Lower bound = damaged/issued; upper bound = clean unit, original box, full
             history.
@@ -137,12 +137,12 @@ export default function BlogIPhoneRepairVsReplace() {
           <h2>What to do next</h2>
           <p>
             Not sure which side of the line your iPhone falls on?{" "}
-            <Link to="/iphone-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               Free 30-minute iPhone diagnostic
             </Link>{" "}
             - we tell you exactly what's wrong, what it costs to fix, and our honest read on
             repair vs replace. Or browse{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               every iPhone model
             </Link>{" "}
             for model-specific pricing.

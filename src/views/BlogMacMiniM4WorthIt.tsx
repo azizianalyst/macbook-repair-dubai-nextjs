@@ -80,7 +80,7 @@ export default function BlogMacMiniM4WorthIt() {
           <p>
             Choose Mac Mini if you have a fixed desk and want the larger screen. Choose MacBook Air
             if you ever work from coffee shops or move between rooms. See the full{" "}
-            <Link to="/blog/macbook-air-vs-macbook-pro-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-air-vs-macbook-pro-2026" className="text-accent font-semibold hover:underline">
               MacBook lineup comparison
             </Link>.
           </p>
@@ -131,7 +131,7 @@ export default function BlogMacMiniM4WorthIt() {
           />
           <p>
             See our full{" "}
-            <Link to="/mac-mini-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Mini repair Dubai
             </Link>{" "}
             page for current parts and turnaround.

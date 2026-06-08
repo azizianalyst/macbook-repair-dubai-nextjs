@@ -53,7 +53,7 @@ export default function BlogMacBookTouchBarFix() {
           <p>
             The fastest fix. Open Applications → Utilities → Terminal and run:
           </p>
-          <pre className="bg-white/[0.04] p-md rounded-md overflow-x-auto text-[13px] mono">
+          <pre className="bg-bg-card p-md rounded-md overflow-x-auto text-[13px] mono">
             sudo pkill "Touch Bar agent"
           </pre>
           <p>
@@ -164,7 +164,7 @@ export default function BlogMacBookTouchBarFix() {
           </ol>
           <p>
             See{" "}
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               our MacBook keyboard repair page
             </Link>{" "}
             for full Touch Bar service details.

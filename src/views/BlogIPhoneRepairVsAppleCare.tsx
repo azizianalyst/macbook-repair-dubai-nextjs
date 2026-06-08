@@ -157,14 +157,14 @@ export default function BlogIPhoneRepairVsAppleCare() {
 
           <p>
             Compare our actual pricing on the{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone repair page
             </Link>{" "}
             or read our{" "}
-            <Link to="/blog/iphone-repair-vs-replace-decision-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-repair-vs-replace-decision-guide" className="text-accent font-semibold hover:underline">
               repair-vs-replace decision guide
             </Link>. Apple's AppleCare+ details are at{" "}
-            <a href="https://www.apple.com/ae/support/products/iphone/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://www.apple.com/ae/support/products/iphone/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               apple.com/ae/support
             </a>.
           </p>

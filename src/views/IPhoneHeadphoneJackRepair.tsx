@@ -25,7 +25,7 @@ export default function IPhoneHeadphoneJackRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Quick honesty:</strong> if you have an iPhone 7 or newer, your phone never had a headphone jack - Apple removed it. Use the Lightning-to-3.5mm or USB-C-to-3.5mm adapter (we sell genuine ones for AED 50, or buy from Apple). This page is for iPhone 6S, 6, SE 1st gen, and earlier - the last iPhones with a true 3.5mm jack.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Most "broken jack" cases on these older iPhones are pocket lint packed deep into the socket - we extract for free. About 30% need a new jack assembly because the spring contacts have worn or a snapped headphone tip is wedged inside. AED 200 for the full replacement, same day.
           </p>
         </>

@@ -63,7 +63,7 @@ export default function BlogMacPro2019StillWorthIt() {
 
           <h2>What to inspect when buying used</h2>
           <ol className="list-decimal list-inside space-y-xs">
-            <li><strong>Serial number check</strong> at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">checkcoverage.apple.com</a> - confirms model, original purchase date, AppleCare status.</li>
+            <li><strong>Serial number check</strong> at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">checkcoverage.apple.com</a> - confirms model, original purchase date, AppleCare status.</li>
             <li><strong>Hours / wear via System Information</strong>: System Settings → About → System Report → Power → check cycle counts. &lt; 2 years of full-time use ideal.</li>
             <li><strong>Boot to Apple Diagnostics</strong> (hold D at boot) - runs full hardware test, must show "no issues found".</li>
             <li><strong>Test all PCIe slots</strong> by moving a known-good card through each slot.</li>
@@ -122,7 +122,7 @@ export default function BlogMacPro2019StillWorthIt() {
           />
           <p>
             See our{" "}
-            <Link to="/mac-pro-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Pro repair Dubai
             </Link>{" "}
             page for current parts inventory.
@@ -156,7 +156,7 @@ export default function BlogMacPro2019StillWorthIt() {
           </p>
           <p>
             Compare with our broader{" "}
-            <Link to="/blog/apple-mac-pro-discontinued-what-now" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/apple-mac-pro-discontinued-what-now" className="text-accent font-semibold hover:underline">
               Mac Pro discontinuation analysis
             </Link>{" "}
             for the alternatives picture.

@@ -144,7 +144,7 @@ export default function BlogMacBookNeoWorthBuying() {
             <strong>Caveat:</strong> Apple has not yet released the Neo through the Independent Repair
             Provider programme. We expect parts supply to mature by Q3 2026; prices may shift. Until then,
             Apple Store is the only authorised repair channel - expect AED 1,500+ for any major repair.{" "}
-            <Link to="/macbook-neo-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-neo-repair-dubai" className="text-accent font-semibold hover:underline">
               Track our latest pricing here
             </Link>
             .
@@ -165,7 +165,7 @@ export default function BlogMacBookNeoWorthBuying() {
 
           <p>
             Already bought one and want it inspected, or considering one and want a hands-on demo?{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               Drop by our Media City workshop
             </Link>
             {" "}- we'll give you a no-pressure honest assessment.

@@ -25,7 +25,7 @@ export default function IPadPowerButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>From iPad Air 4 (2020) onwards</strong>, Apple moved Touch ID into the top-edge power button - a clever space saver but it means the power button assembly is now a Touch ID sensor too. When the button fails, the same Apple Secure Enclave pairing rule applies: a replacement button restores click but cannot restore Touch ID. We tell you this before opening the iPad.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. AED 300 covers either case, 1-day turnaround, 90-day warranty.
           </p>
         </>

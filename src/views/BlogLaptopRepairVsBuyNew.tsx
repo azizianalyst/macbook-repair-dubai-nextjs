@@ -24,14 +24,14 @@ export default function BlogLaptopRepairVsBuyNew() {
           <p>
             The standard formula across consumer electronics:
           </p>
-          <p className="bg-white/[0.04] border-l-4 border-primary rounded-md p-md">
+          <p className="bg-bg-card border-l-4 border-primary rounded-md p-md">
             <strong>If repair cost &lt; 50% of current resale value → repair.</strong><br />
             <strong>If repair cost is 50-80% of resale → judgment call (consider age, sentimental value, your cash position).</strong><br />
             <strong>If repair cost &gt; 80% of resale → replace.</strong>
           </p>
           <p>
             But the formula misses two Dubai-specific realities: (a) Apple Silicon Macs hold value much longer than the formula suggests, and (b) buying new in Dubai is unusually expensive (no aggressive Apple Store discounts - see our{" "}
-            <Link to="/blog/dubai-shopping-festival-apple-deals" className="text-accent-bright font-semibold hover:underline">DSF deals guide</Link>). Both push the "repair" answer harder than in other markets.
+            <Link to="/blog/dubai-shopping-festival-apple-deals" className="text-accent font-semibold hover:underline">DSF deals guide</Link>). Both push the "repair" answer harder than in other markets.
           </p>
 
           <h2>MacBook by year - repair-or-replace decision matrix</h2>
@@ -61,10 +61,10 @@ export default function BlogLaptopRepairVsBuyNew() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Butterfly keyboard (free under Apple's expired program - we charge AED 350 outside it).</li>
             <li>Flexgate screen - see our{" "}
-              <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">flexgate guide</Link>.</li>
+              <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">flexgate guide</Link>.</li>
             <li>Battery (AED 450).</li>
             <li>Touch Bar - see{" "}
-              <Link to="/blog/macbook-touch-bar-not-working" className="text-accent-bright font-semibold hover:underline">Touch Bar fix guide</Link>.</li>
+              <Link to="/blog/macbook-touch-bar-not-working" className="text-accent font-semibold hover:underline">Touch Bar fix guide</Link>.</li>
             <li>Stage light effect, GPU artefacts on 16" 2019 - addressable.</li>
           </ul>
 
@@ -111,10 +111,10 @@ export default function BlogLaptopRepairVsBuyNew() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Trade-In:</strong> instant credit toward new Apple purchase. Lowest cash equivalent but zero hassle.</li>
             <li><strong>Sharaf DG / Jumbo trade-in events:</strong> seasonal, typically AED 200-500 above Apple. See our{" "}
-              <Link to="/blog/dubai-shopping-festival-apple-deals" className="text-accent-bright font-semibold hover:underline">DSF deals guide</Link>.</li>
+              <Link to="/blog/dubai-shopping-festival-apple-deals" className="text-accent font-semibold hover:underline">DSF deals guide</Link>.</li>
             <li><strong>Our buy-back:</strong> WhatsApp us photos + serial; we quote within an hour, collect free, pay on collection.</li>
             <li><strong>Dubizzle / Facebook Marketplace:</strong> highest cash, requires effort and 2-4 weeks. See our{" "}
-              <Link to="/blog/best-way-to-sell-old-iphone-dubai" className="text-accent-bright font-semibold hover:underline">selling guide</Link> (same logic applies to MacBook).</li>
+              <Link to="/blog/best-way-to-sell-old-iphone-dubai" className="text-accent font-semibold hover:underline">selling guide</Link> (same logic applies to MacBook).</li>
             <li><strong>Don't forget:</strong> a working broken-screen MacBook still has parts value - we buy non-working units too.</li>
           </ul>
         </>

@@ -80,7 +80,7 @@ export default function BlogMacBookLoudFan() {
           </p>
           <p>
             If your machine is running properly hot as well as loud, our{" "}
-            <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">
               MacBook overheating fix page
             </Link>{" "}
             walks through the heat side in more detail.
@@ -155,7 +155,7 @@ export default function BlogMacBookLoudFan() {
           </p>
           <p>
             For the full breakdown of the cleaning service, see our{" "}
-            <Link to="/mac-fan-cleaning-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-fan-cleaning-dubai" className="text-accent font-semibold hover:underline">
               Mac fan cleaning page
             </Link>.
           </p>

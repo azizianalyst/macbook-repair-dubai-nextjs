@@ -25,7 +25,7 @@ export default function MacBookLogicBoardRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook logic board repair in Dubai</strong> means component-level rework - replacing the actual failed chip on the board, not swapping the whole board. The difference matters: a typical Apple board swap is AED 4,000-6,000. A component-level fix on the failed PMIC, MOSFET, charging IC, or USB-C controller is AED 800-1,500. Same outcome, fraction of the cost, original board kept (which preserves T2 SSD pairing on Intel MacBooks).
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We work under stereo microscope with a JBC hot-air station, controlled thermal profiles, and reballed Apple-spec replacement chips. The 90-day warranty is paperwork - done correctly, the repair lasts as long as the original.
           </p>
         </>

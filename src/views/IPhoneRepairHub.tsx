@@ -124,7 +124,7 @@ export default function IPhoneRepairHub() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="device"
         tone="dark"
@@ -132,7 +132,7 @@ export default function IPhoneRepairHub() {
         title="Top Rated iPhone Repair Dubai"
         subtitle="Finding a competent, trustworthy store for iPhone repair in Dubai can be difficult - we have your back. With years of experience and thousands of repairs, our service center is a top choice. No more searching for 'iPhone repair near me'. Book your service now!"
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified technicians</span>
           <span>·</span>
           <span>Genuine / OEM parts</span>
@@ -152,10 +152,10 @@ export default function IPhoneRepairHub() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
+        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
+          <span className="font-semibold text-text">We also repair:</span>
           {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/[0.08] transition-colors">{s.label}</Link>
+            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
           ))}
         </p>
       </section>
@@ -165,30 +165,30 @@ export default function IPhoneRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">iPhone models we repair</h2>
         <ul className="flex flex-wrap gap-2">
           {MODEL_PAGES.map(([label, href]) => (
-            <li key={href}><Link to={href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-accent-bright hover:bg-white/[0.08] transition-colors">{label}</Link></li>
+            <li key={href}><Link to={href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{label}</Link></li>
           ))}
         </ul>
       </section>
 
       {/* Pricing table */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Services &amp; estimated prices</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-md">Discover available services and estimated prices at the best iPhone repair shop in Dubai:</p>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03] max-w-[640px]">
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-md">Discover available services and estimated prices at the best iPhone repair shop in Dubai:</p>
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-alt max-w-[640px]">
             <table className="w-full text-[14px]">
-              <thead className="bg-white/[0.04]"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Estimated price (AED)</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Estimated price (AED)</th></tr></thead>
               <tbody>
                 {PRICING.map(([s, p], i) => (
-                  <tr key={s} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                  <tr key={s} className={i % 2 ? "bg-bg-alt" : ""}>
                     <td className="px-md py-sm font-semibold">{s}</td>
-                    <td className="px-md py-sm mono text-accent-bright whitespace-nowrap">{p}</td>
+                    <td className="px-md py-sm mono text-accent whitespace-nowrap">{p}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-on-primary-muted mt-sm">Estimated ranges only - final price confirmed after a free diagnosis.</p>
+          <p className="text-[13px] text-text-muted mt-sm">Estimated ranges only - final price confirmed after a free diagnosis.</p>
           <div className="mt-lg"><CallButtons /></div>
         </div>
       </section>
@@ -198,20 +198,20 @@ export default function IPhoneRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">iPhone repairs we specialise in</h2>
         <ul className="flex flex-wrap gap-2">
           {SERVICE_PAGES.map(([label, href]) => (
-            <li key={href}><Link to={href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[14px] text-accent-bright hover:bg-white/[0.08] transition-colors">{label}</Link></li>
+            <li key={href}><Link to={href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{label}</Link></li>
           ))}
         </ul>
       </section>
 
       {/* Process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-lg">Our iPhone Repair Process</h2>
           <ol className="space-y-md max-w-[80ch]">
             {PROCESS.map((step, i) => (
               <li key={i} className="flex gap-md">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-bright/15 text-accent-bright font-bold flex items-center justify-center">{i + 1}</span>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed pt-1">{step}</p>
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/15 text-accent font-bold flex items-center justify-center">{i + 1}</span>
+                <p className="text-[15px] text-text-muted leading-relaxed pt-1">{step}</p>
               </li>
             ))}
           </ol>
@@ -222,16 +222,16 @@ export default function IPhoneRepairHub() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Signs Your iPhone Needs Repair</h2>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
-          {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
+          {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
         </ul>
       </section>
 
       {/* Tips */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Maintenance Tips for iPhone Users</h2>
           <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
-            {TIPS.map((t) => <li key={t} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {t}</li>)}
+            {TIPS.map((t) => <li key={t} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {t}</li>)}
           </ul>
         </div>
       </section>
@@ -241,26 +241,26 @@ export default function IPhoneRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Why Choose Us?</h2>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
           {WHY.map((w) => (
-            <article key={w.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm">{w.title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed">{w.body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed">{w.body}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
-                <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
+                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
+                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
               </figure>
             ))}
           </div>
@@ -273,10 +273,10 @@ export default function IPhoneRepairHub() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
-        <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
+        <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+          <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
+          <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
         </div>
       </section>
 
@@ -288,10 +288,10 @@ export default function IPhoneRepairHub() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Book an appointment for iPhone repair in Dubai</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[70ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book an appointment for iPhone repair in Dubai</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             We do more than just fix iPhones - we bring them back to original condition. Our qualified technicians diagnose even the most complicated problems and fix them ASAP. Get quality repair service for your iPhone today.
           </p>
           <div className="relative"><CallButtons /></div>

@@ -25,7 +25,7 @@ export default function BootCampWindowsMacBook() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Boot Camp Windows on MacBook in Dubai</strong> means two very different services depending on your hardware. <strong>Intel Macs</strong> (any MacBook from 2013 to early 2020) use Apple's Boot Camp Assistant for native dual-boot - full Windows 10 or 11 with native performance, AED 400 including driver setup. <strong>Apple Silicon Macs</strong> (M1 onwards) cannot run Boot Camp at all - Apple removed it. Your only path is virtualisation: Parallels Desktop or VMware Fusion running Windows 11 ARM. AED 600, includes Parallels licence guidance.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Honest framing: on Apple Silicon you get Windows for ARM (not Intel Windows). Most x86 apps run via emulation but with a performance hit. Office, browsers, AutoCAD LT, Visual Studio - all fine. Heavy Adobe + games less so. We discuss your actual workload before recommending.
           </p>
         </>

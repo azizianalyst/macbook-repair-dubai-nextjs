@@ -118,7 +118,7 @@ export default function SellFaultyMacBookDubai() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -126,7 +126,7 @@ export default function SellFaultyMacBookDubai() {
         title="We Buy Faulty & Damaged Apple Devices in Dubai"
         subtitle="Water-damaged, cracked, dead logic board, won't turn on? We still buy it. Recover real value from a MacBook, iMac, iPhone or iPad that other buyers reject - free valuation, free collection across Dubai, same-day payment."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Working or faulty</span>
@@ -164,9 +164,9 @@ export default function SellFaultyMacBookDubai() {
           and <strong>same-day payment in cash or repair credit</strong>. No obligation, no lowball bots - every
           offer is set by a real engineer, not an algorithm.
         </p>
-        <p className="text-[15px] text-on-primary-muted leading-relaxed max-w-[75ch] m-0">
+        <p className="text-[15px] text-text-muted leading-relaxed max-w-[75ch] m-0">
           Not sure whether to sell or fix it? We'll give you both numbers honestly. Start at our{" "}
-          <Link to="/" className="text-accent-bright underline-offset-4 hover:underline font-medium">MacBook Repair Dubai</Link>{" "}
+          <Link to="/" className="text-accent underline-offset-4 hover:underline font-medium">MacBook Repair Dubai</Link>{" "}
           page, or read on to see what we buy and how the valuation works.
         </p>
       </section>
@@ -177,26 +177,26 @@ export default function SellFaultyMacBookDubai() {
       </section>
 
       {/* What we buy */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <BadgeDollarSign size={28} className="text-accent-bright" aria-hidden /> What we buy
+            <BadgeDollarSign size={28} className="text-accent" aria-hidden /> What we buy
           </h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[70ch] mb-lg">
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] mb-lg">
             We buy the full Apple range, in any condition - pristine, scratched, smashed or completely dead.
           </p>
           <ul className="grid gap-sm md:grid-cols-2 max-w-[80ch]">
             {WE_BUY.map((t) => (
-              <li key={t} className="flex gap-2 text-[15px] text-on-primary">
-                <CheckCircle2 size={20} className="text-accent-bright mt-[2px] shrink-0" aria-hidden /> {t}
+              <li key={t} className="flex gap-2 text-[15px] text-text">
+                <CheckCircle2 size={20} className="text-accent mt-[2px] shrink-0" aria-hidden /> {t}
               </li>
             ))}
           </ul>
-          <p className="text-[14px] text-on-primary-muted mt-lg max-w-[70ch]">
+          <p className="text-[14px] text-text-muted mt-lg max-w-[70ch]">
             Browse the matching repair hubs if you'd rather fix and keep your device:{" "}
-            <Link to="/" className="text-accent-bright underline-offset-4 hover:underline">MacBook</Link>,{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright underline-offset-4 hover:underline">iPhone</Link> and{" "}
-            <Link to="/ipad-repair-dubai" className="text-accent-bright underline-offset-4 hover:underline">iPad</Link>.
+            <Link to="/" className="text-accent underline-offset-4 hover:underline">MacBook</Link>,{" "}
+            <Link to="/iphone-repair-dubai" className="text-accent underline-offset-4 hover:underline">iPhone</Link> and{" "}
+            <Link to="/ipad-repair-dubai" className="text-accent underline-offset-4 hover:underline">iPad</Link>.
           </p>
         </div>
       </section>
@@ -204,9 +204,9 @@ export default function SellFaultyMacBookDubai() {
       {/* How valuation works */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <ClipboardCheck size={28} className="text-accent-bright" aria-hidden /> How the valuation works
+          <ClipboardCheck size={28} className="text-accent" aria-hidden /> How the valuation works
         </h2>
-        <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] mb-lg">
           Every offer is built from four honest factors - and confirmed by a real technician, never a
           fixed online figure:
         </p>
@@ -217,21 +217,21 @@ export default function SellFaultyMacBookDubai() {
             { t: "Condition", b: "Working, minor damage, or faulty. Damage lowers the number - it never makes it zero. We buy dead and water-damaged units too." },
             { t: "Storage", b: "Higher SSD or storage capacity raises the offer. Tell us the configuration for an accurate quote." },
           ].map((f) => (
-            <article key={f.t} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={f.t} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm">{f.t}</h3>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{f.b}</p>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.b}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Working or faulty - we buy both */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Recycle size={28} className="text-accent-bright" aria-hidden /> Working or faulty - we buy both
+            <Recycle size={28} className="text-accent" aria-hidden /> Working or faulty - we buy both
           </h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[70ch] mb-lg">
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] mb-lg">
             A clean, working Mac fetches the best price - but a faulty one is rarely worthless. These are the
             faults we still pay real money for:
           </p>
@@ -239,18 +239,18 @@ export default function SellFaultyMacBookDubai() {
             {FAULTS.map((f) => {
               const Icon = f.icon;
               return (
-                <article key={f.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+                <article key={f.title} className="border border-border bg-bg-card rounded-md p-lg">
                   <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2">
-                    <Icon size={18} className="text-accent-bright" aria-hidden /> {f.title}
+                    <Icon size={18} className="text-accent" aria-hidden /> {f.title}
                   </h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{f.body}</p>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.body}</p>
                 </article>
               );
             })}
           </div>
-          <p className="text-[14px] text-on-primary-muted mt-lg max-w-[70ch]">
+          <p className="text-[14px] text-text-muted mt-lg max-w-[70ch]">
             Think it's worth fixing instead? A{" "}
-            <Link to="/" className="text-accent-bright underline-offset-4 hover:underline">MacBook repair</Link>{" "}
+            <Link to="/" className="text-accent underline-offset-4 hover:underline">MacBook repair</Link>{" "}
             often costs far less than its recovered value - we'll tell you the honest comparison either way.
           </p>
         </div>
@@ -259,19 +259,19 @@ export default function SellFaultyMacBookDubai() {
       {/* How it works - 3 steps */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg flex items-center gap-sm">
-          <Truck size={28} className="text-accent-bright" aria-hidden /> How it works - 3 simple steps
+          <Truck size={28} className="text-accent" aria-hidden /> How it works - 3 simple steps
         </h2>
         <ol className="grid gap-md md:grid-cols-3 list-none p-0 m-0">
           {STEPS.map((s, i) => {
             const Icon = s.icon;
             return (
-              <li key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <li key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <div className="flex items-center gap-2 mb-sm">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-bright/15 text-accent-bright text-[15px] font-bold shrink-0">{i + 1}</span>
-                  <Icon size={20} className="text-accent-bright" aria-hidden />
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/15 text-accent text-[15px] font-bold shrink-0">{i + 1}</span>
+                  <Icon size={20} className="text-accent" aria-hidden />
                 </div>
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{s.body}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{s.body}</p>
               </li>
             );
           })}
@@ -292,11 +292,11 @@ export default function SellFaultyMacBookDubai() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[32ch]">Turn a broken Apple device into cash today</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[62ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Turn a broken Apple device into cash today</h2>
+          <p className="text-text-muted text-[16px] max-w-[62ch]">
             Send the model and a photo on WhatsApp. Free technician-confirmed valuation, free collection
             anywhere in Dubai, and same-day payment in cash or repair credit - working or faulty.
           </p>

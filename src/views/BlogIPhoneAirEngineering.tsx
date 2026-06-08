@@ -130,10 +130,10 @@ export default function BlogIPhoneAirEngineering() {
           />
 
           <p>
-            Got an iPhone Air that needs a fix? See our <Link to="/iphone-air-repair-dubai" className="text-accent-bright font-semibold hover:underline">iPhone Air service page</Link>{" "}
-            or compare the design tradeoffs in our <Link to="/blog/iphone-17-vs-iphone-air-which-buy" className="text-accent-bright font-semibold hover:underline">iPhone 17 vs Air buying guide</Link>.
+            Got an iPhone Air that needs a fix? See our <Link to="/iphone-air-repair-dubai" className="text-accent font-semibold hover:underline">iPhone Air service page</Link>{" "}
+            or compare the design tradeoffs in our <Link to="/blog/iphone-17-vs-iphone-air-which-buy" className="text-accent font-semibold hover:underline">iPhone 17 vs Air buying guide</Link>.
             Apple's official iPhone Air page is at{" "}
-            <a href="https://www.apple.com/iphone-air/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">apple.com/iphone-air</a>.
+            <a href="https://www.apple.com/iphone-air/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">apple.com/iphone-air</a>.
           </p>
         </>
       }

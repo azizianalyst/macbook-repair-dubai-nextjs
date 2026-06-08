@@ -141,7 +141,7 @@ export default function BlogMacBookWaterDamageCost() {
             Time matters. WhatsApp <strong>055 741 3706</strong> with a photo of your MacBook -
             we'll dispatch the free pickup driver same day for any mainland Dubai address. Or visit
             our{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage service page
             </Link>{" "}
             for the full process.

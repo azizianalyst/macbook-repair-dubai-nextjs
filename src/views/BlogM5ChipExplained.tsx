@@ -140,11 +140,11 @@ export default function BlogM5ChipExplained() {
           </p>
           <p>
             Need help deciding?{" "}
-            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent font-semibold hover:underline">
               Read our full M4 vs M5 buyer's analysis
             </Link>{" "}
             with Dubai pricing. Apple's M5 announcement is on{" "}
-            <a href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               apple.com/newsroom
             </a>.
           </p>

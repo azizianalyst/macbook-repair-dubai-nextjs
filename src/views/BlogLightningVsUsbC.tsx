@@ -85,7 +85,7 @@ export default function BlogLightningVsUsbC() {
           <h2>Lightning ports we still repair</h2>
           <p>
             We still service Lightning ports daily - iPhone 14 series, SE 2/3, and iPad 9th gen. The port itself wears out around 4-5 years of daily use. Symptoms: charges only at one specific cable angle, intermittent connection, requires wiggle. AED 250 to replace at our workshop. See our{" "}
-            <Link to="/iphone-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">iPhone charging port repair page</Link>.
+            <Link to="/iphone-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">iPhone charging port repair page</Link>.
           </p>
 
           <h2>USB-C ports also fail</h2>

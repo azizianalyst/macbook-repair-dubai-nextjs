@@ -25,7 +25,7 @@ export default function IPadPencilCompatibility() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>This is the page Dubai iPad shops don't want you to read.</strong> When an iPad screen is replaced, there's a hidden component most customers never hear about: the active digitiser layer that talks to Apple Pencil. Cheap copy screens (which most Dubai shops fit because they cost AED 80 each) often skip the Pencil digitiser layer entirely - the iPad still shows pictures, touch still works for fingers, but Apple Pencil stops working forever.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We use only Pencil-compatible digitisers on every iPad screen we replace. The cost difference to us is significant; we absorb it because customers who paid for an iPad Pro with Apple Pencil deserve to keep using both. This page exists so you know what to ask when comparing quotes around Dubai - and why ours are higher than the cheapest option you'll see.
           </p>
         </>

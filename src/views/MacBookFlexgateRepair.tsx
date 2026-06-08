@@ -25,7 +25,7 @@ export default function MacBookFlexgateRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Flexgate</strong> is a known display fault on the 2016 and 2017 MacBook Pro 13″ and 15″. Apple ran the display flex cables over the bottom bezel so they bend every time you open and close the lid. After a couple of years the cable cracks, and you get the classic signs: a row of bright vertical bars along the bottom of the screen (the "stage light" effect), or the backlight cutting out entirely once the lid passes roughly 40 degrees. The image is still there - shine a torch on a dark screen and you'll see your desktop. The fix is the display flex cable, and we do it from <strong>AED 450</strong> with a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Worth knowing: on the 2016-2017 models the flex is short by design, so a quality replacement cable solves it for good. On some later bonded panels the cable isn't separately serviceable and the full display assembly is the proper fix - we tell you which camp your MacBook is in before quoting. We've sorted these at Concord Tower, Dubai Media City since the fault first appeared, and it's one of the most satisfying repairs on the bench because the laptop looks written off and isn't.
           </p>
         </>

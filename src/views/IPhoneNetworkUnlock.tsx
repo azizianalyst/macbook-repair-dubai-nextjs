@@ -28,16 +28,16 @@ export default function IPhoneNetworkUnlock() {
       pricingCaption="Price varies by carrier policy. Free IMEI status check before any payment. Refund if unlock fails (rare - workshop confirms feasibility before quoting)."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone network unlock in Dubai starts at AED 350 for a clean Etisalat or du IMEI. The unlock is legitimate, IMEI-based, and registered in Apple's GSX database - meaning the iPhone shows as "Unlocked" in Apple's records permanently. It survives iOS updates, factory erases, and SIM swaps. There's no jailbreak involved, no fake unlock app, no R-SIM hardware bypass. The workshop has been processing IMEI unlocks since 2014, working through Apple-authorised partners and carrier portals in the UAE, US, UK, EU, Japan, and Korea.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             The first step is always a free IMEI status check. Etisalat and du let customers unlock their own iPhones for free if the device is fully paid off - the workshop will tell you this before charging anything. AT&T's policy requires the contract to be fully paid (or 60+ days of service for prepaid). Verizon ships most newer iPhones already unlocked. T-Mobile is straightforward but requires the SIM in the device for activation. Sprint (now T-Mobile) is the hardest - and Sprint-branded iPhones with prepaid Boost lines often need premium pricing. Blacklisted IMEIs (reported lost or stolen) cannot be unlocked at any price - the workshop refuses these jobs.
           </p>
         </>
       }
       honestyCallout={
-        <div className="text-[15px] text-on-primary leading-relaxed space-y-md">
+        <div className="text-[15px] text-text leading-relaxed space-y-md">
           <p>
             <strong>What we don't do:</strong> jailbreak unlocks, R-SIM hardware unlocks, fake software unlocks. These are temporary, illegal in many jurisdictions, void Apple's warranty, can brick the phone after an iOS update, and often resurface as locked again. If a Dubai shop offers an "unlock" for AED 50 with no IMEI involved, walk away - it's a software or SIM-tray trick that will fail.
           </p>

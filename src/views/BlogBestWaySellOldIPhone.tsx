@@ -108,7 +108,7 @@ export default function BlogBestWaySellOldIPhone() {
             <li>If selling remotely (rare), sign out via icloud.com → Find My → All Devices → Remove.</li>
           </ol>
           <p>
-            Read the full <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent-bright font-semibold hover:underline">iCloud lock recovery guide</Link> if you're unsure.
+            Read the full <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent font-semibold hover:underline">iCloud lock recovery guide</Link> if you're unsure.
           </p>
 
           <h2>Wipe before selling - proper steps</h2>
@@ -124,7 +124,7 @@ export default function BlogBestWaySellOldIPhone() {
           </ol>
           <p>
             Full step-by-step in our{" "}
-            <Link to="/blog/how-to-factory-reset-iphone-before-selling" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/how-to-factory-reset-iphone-before-selling" className="text-accent font-semibold hover:underline">
               factory reset before selling guide
             </Link>.
           </p>

@@ -3,7 +3,6 @@ import tailwindcssAnimate from "tailwindcss-animate";
 
 // design tokens live in src/styles/tokens.css — this file only maps them
 export default {
-  darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     container: {

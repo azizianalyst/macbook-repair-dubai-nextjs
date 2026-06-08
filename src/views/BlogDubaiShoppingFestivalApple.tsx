@@ -81,9 +81,9 @@ export default function BlogDubaiShoppingFestivalApple() {
             <li>Sharaf DG iPhone trade-in events: usually January and August. Often AED 200-500 above Apple's standard offer.</li>
             <li>Jumbo MacBook trade-in: irregular, watch their website.</li>
             <li>Compare against private sale on Dubizzle - see our{" "}
-              <Link to="/blog/how-much-is-my-iphone-worth-dubai" className="text-accent-bright font-semibold hover:underline">iPhone resale guide</Link>{" "}
+              <Link to="/blog/how-much-is-my-iphone-worth-dubai" className="text-accent font-semibold hover:underline">iPhone resale guide</Link>{" "}
               and{" "}
-              <Link to="/blog/best-way-to-sell-old-iphone-dubai" className="text-accent-bright font-semibold hover:underline">how to sell guide</Link>.
+              <Link to="/blog/best-way-to-sell-old-iphone-dubai" className="text-accent font-semibold hover:underline">how to sell guide</Link>.
             </li>
           </ul>
 

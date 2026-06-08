@@ -124,7 +124,7 @@ export default function BlogMacBookFlexgateExplained() {
             (AED 600) or full display (AED 800-950). Same-day service for both.
           </p>
           <p>
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair page
             </Link>{" "}
             - full service description.

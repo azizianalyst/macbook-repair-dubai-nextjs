@@ -25,7 +25,7 @@ export default function MacBookSsdUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook SSD upgrade in Dubai</strong> is possible on Intel MacBook Pros from 2013 to early 2015 - those use a custom Apple NVMe slot that we can adapt to standard M.2 NVMe drives up to 2 TB. AED 600 labour plus the cost of the drive (typically AED 400 for 1 TB, AED 800 for 2 TB). Includes Time Machine clone of your current data so you boot up the next day with everything in place.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The honest part: every M-series MacBook (M1, M2, M3, M4, M5) has its SSD soldered to the logic board. The same goes for the 2016-2017 MacBook Pro Touch Bar models. No upgrade is possible - only data recovery if the soldered SSD dies. Plan capacity at purchase or use Thunderbolt 4 external SSDs (nearly as fast in real-world use).
           </p>
         </>

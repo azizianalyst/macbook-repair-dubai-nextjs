@@ -114,7 +114,7 @@ export default function BlogMacBookKeyboardRepairCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair service page
             </Link>{" "}
             - or WhatsApp 055 741 3706 with your model year and a photo of the affected key. Quote

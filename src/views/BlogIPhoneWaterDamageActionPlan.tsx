@@ -171,7 +171,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
           </p>
           <p>
             See our{" "}
-            <Link to="/iphone-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone water damage page
             </Link>{" "}
             for the full process and pricing.

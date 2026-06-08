@@ -25,7 +25,7 @@ export default function MacBookThermalPasteReplacement() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook Repair Dubai</strong> sees this every week. Thermal paste sits between the CPU/GPU and the heatsink, and after two or three years it dries out and cracks. Heat stops moving, so the fans scream, the chassis runs hot, the Mac throttles to a crawl, and on bad days it shuts down to protect itself. In Dubai's heat the dried compound gives up faster than it would in a cooler climate.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We strip the old paste off the chips, clean the heatsink, and reapply a high-grade compound, then clean the fans while the machine is open. That brings temperatures back down and lets the Mac run at full speed again. Diagnosis is free, and you only pay if there's a fix worth doing - from AED 280, same day.
           </p>
         </>

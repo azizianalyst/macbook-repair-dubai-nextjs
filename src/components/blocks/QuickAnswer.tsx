@@ -11,7 +11,7 @@ export interface QuickAnswerProps {
   answer: ReactNode;
   /** Optional eyebrow label, default "Quick answer" */
   label?: string;
-  /** "dark" for use on the bg-primary band; default light */
+  /** "dark" for use on the bg-bg-alt band; default light */
   tone?: "light" | "dark";
 }
 
@@ -26,13 +26,13 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
       <div
         className={cn(
           "border-l-4 rounded-md p-lg max-w-[72ch]",
-          dark ? "border border-white/10 border-l-4 border-l-accent-bright bg-white/[0.04]" : "bg-bg-alt border-primary",
+          dark ? "border border-border border-l-4 border-l-accent bg-bg-card" : "bg-bg-alt border-primary",
         )}
         itemScope
         itemType="https://schema.org/Question"
       >
         <h2
-          className={cn("text-[12px] uppercase tracking-wider font-bold mb-xs mono", dark ? "text-accent-bright" : "text-primary")}
+          className={cn("text-[12px] uppercase tracking-wider font-bold mb-xs mono", dark ? "text-accent" : "text-primary")}
           itemProp="name"
         >
           {question}
@@ -42,12 +42,12 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
           itemScope
           itemType="https://schema.org/Answer"
         >
-          <p className={cn("text-[10px] uppercase tracking-wider mono mb-xs", dark ? "text-on-primary-faint" : "text-text-faint")}>
+          <p className={cn("text-[10px] uppercase tracking-wider mono mb-xs", dark ? "text-text-faint" : "text-text-faint")}>
             {label}
           </p>
           <div
             itemProp="text"
-            className={cn("text-[16px] leading-relaxed", dark ? "text-on-primary" : "text-text")}
+            className={cn("text-[16px] leading-relaxed", dark ? "text-text" : "text-text")}
           >
             {answer}
           </div>

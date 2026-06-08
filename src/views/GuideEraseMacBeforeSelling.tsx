@@ -64,7 +64,7 @@ export default function GuideEraseMacBeforeSelling() {
             Time Machine → Back Up Now, or sync what matters to iCloud. If the Mac is already
             misbehaving and you can't reach your files, stop here - don't erase a drive you can't
             read. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery in Dubai
             </Link>{" "}
             can pull data off a failing drive before it's wiped for good.
@@ -128,7 +128,7 @@ export default function GuideEraseMacBeforeSelling() {
           </ul>
           <p>
             Need help getting a clean install on an older machine? Our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service in Dubai
             </Link>{" "}
             handles it for you, including stubborn drives that won't reinstall.
@@ -173,11 +173,11 @@ export default function GuideEraseMacBeforeSelling() {
             If you're handing over a Mac with sensitive work or client data and want certainty, we
             can wipe it to a verified clean state for you. Book a free diagnosis and we'll confirm
             the erase, the Find My status, and the install - see our{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             or just{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>
             . We offer free pickup across Dubai.

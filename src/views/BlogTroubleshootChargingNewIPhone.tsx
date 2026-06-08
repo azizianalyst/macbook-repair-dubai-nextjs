@@ -90,7 +90,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
           </ul>
           <p>
             If your iPhone is over 18 months old and battery health below 85%, replacement is the fix - see our{" "}
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">iPhone battery replacement service</Link>.
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">iPhone battery replacement service</Link>.
           </p>
 
           <h2>Step 7 - wireless charging works but USB-C doesn't?</h2>
@@ -110,7 +110,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
           </ul>
           <p>
             Apple's quote for the same fix (typically billed as logic-board service) starts at AED 1,400 because Apple replaces the entire board rather than the port. Component-level repair is the affordable route - see our{" "}
-            <Link to="/iphone-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">iPhone charging port repair service</Link>.
+            <Link to="/iphone-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">iPhone charging port repair service</Link>.
           </p>
 
           <h2>iPhone 17e / 16e specific notes</h2>

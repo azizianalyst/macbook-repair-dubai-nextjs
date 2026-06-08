@@ -145,15 +145,15 @@ export default function BlogIPhone17VsAir() {
 
           <p>
             Damaged your 17 or Air?{" "}
-            <Link to="/iphone-17-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-17-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone 17 repair page
             </Link>
             ,{" "}
-            <Link to="/iphone-air-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-air-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone Air repair page
             </Link>
             , or{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               browse every iPhone we service
             </Link>
             .

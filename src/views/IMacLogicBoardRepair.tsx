@@ -30,10 +30,10 @@ export default function IMacLogicBoardRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             iMac logic boards fail in three patterns: <strong>power delivery</strong> (no boot, fans only), <strong>GPU failure</strong> (boots to a black or distorted screen), and <strong>T2 or SoC lockup</strong> (chime, backlight, but no display handoff). Each has a different fix and a different price.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mb-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             On 2017-2020 27" Intel iMacs we work at component level - replacing the failed PMIC, MOSFET, capacitor or buck converter on the board itself. That's a 3-5 day job and saves you AED 1,950+ versus a full board swap. GPU rework on the discrete AMD Radeon Pro chip is also viable in many cases.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On 24" M-series iMacs the situation is harder. The SoC integrates CPU, GPU, RAM and Neural Engine on a single die. <strong>If the SoC dies, the board is dead.</strong> No micro-soldering can recover it. The realistic fixes are around the SoC: power delivery, ports, T2 secure subsystem on early Intel models. We'll always tell you which side of that line your fault sits on, and refund the diagnostic if a board swap is the only path and you'd rather replace the iMac.
           </p>
         </>

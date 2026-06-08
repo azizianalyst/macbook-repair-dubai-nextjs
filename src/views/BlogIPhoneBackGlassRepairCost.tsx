@@ -61,10 +61,10 @@ export default function BlogIPhoneBackGlassRepairCost() {
               { model: "iPhone 17 Pro / Pro Max",   ours: "AED 950", apple: "AED 2,499", note: "Vapor-chamber-adjacent glass" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Apple Store pricing reflects the full housing-swap quote - Apple does not offer a
             glass-only repair. See{" "}
-            <a href="https://support.apple.com/iphone/repair/back-glass" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            <a href="https://support.apple.com/iphone/repair/back-glass" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               support.apple.com
             </a>{" "}
             for current Apple pricing.
@@ -115,7 +115,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/iphone-back-glass-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">
               See the iPhone back-glass repair service page
             </Link>{" "}
             for the full service description, or message us on WhatsApp with a photo of the

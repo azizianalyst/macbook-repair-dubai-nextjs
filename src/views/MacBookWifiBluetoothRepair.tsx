@@ -25,7 +25,7 @@ export default function MacBookWifiBluetoothRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook Wi-Fi and Bluetooth repair in Dubai</strong> covers the "Wi-Fi: No hardware installed" message, connections that keep dropping, weak signal next to the router, and Bluetooth that won't turn on or stay paired. Wi-Fi and Bluetooth share the same wireless module and antennas, routed through the display hinge - so the cause can be macOS, a damaged antenna cable, a failed module, or a board-level power fault. We pinpoint the real issue so you're not paying to replace parts that work. AED 250 covers parts, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged wireless circuits and post-repair antenna faults.
           </p>
         </>

@@ -76,7 +76,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
 
           <h2>How to buy</h2>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">+971 55 741 3706</a> with the iPhone model.</li>
+            <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">+971 55 741 3706</a> with the iPhone model.</li>
             <li>We send you a quote and payment link (card, Apple Pay, bank transfer accepted).</li>
             <li>Voucher PDF emailed within 1 hour with unique 8-character redemption code.</li>
             <li>To redeem: bring iPhone + voucher code to workshop, or mention the code when booking pickup.</li>
@@ -98,7 +98,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
           </p>
           <p>
             See our deeper comparison:{" "}
-            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent-bright font-semibold hover:underline">iPhone repair vs AppleCare</Link>.
+            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent font-semibold hover:underline">iPhone repair vs AppleCare</Link>.
           </p>
         </>
       }

@@ -36,7 +36,7 @@ export function HeroSlider({ slides, intervalMs = 4000 }: { slides: HeroSlide[];
 
   return (
     <div
-      className="relative overflow-hidden rounded-xl border border-white/10 shadow-lg bg-white/[0.04]"
+      className="relative overflow-hidden rounded-xl border border-border shadow-lg bg-bg-card"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"
@@ -69,7 +69,7 @@ export function HeroSlider({ slides, intervalMs = 4000 }: { slides: HeroSlide[];
             type="button"
             aria-label="Previous photo"
             onClick={() => embla?.scrollPrev()}
-            className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.04]/80 text-on-primary backdrop-blur border border-white/10 shadow-sm transition hover:bg-white/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-bg-card/80 text-text backdrop-blur border border-border shadow-sm transition hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             <ChevronLeft size={20} aria-hidden />
           </button>
@@ -77,7 +77,7 @@ export function HeroSlider({ slides, intervalMs = 4000 }: { slides: HeroSlide[];
             type="button"
             aria-label="Next photo"
             onClick={() => embla?.scrollNext()}
-            className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.04]/80 text-on-primary backdrop-blur border border-white/10 shadow-sm transition hover:bg-white/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-bg-card/80 text-text backdrop-blur border border-border shadow-sm transition hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             <ChevronRight size={20} aria-hidden />
           </button>
@@ -92,7 +92,7 @@ export function HeroSlider({ slides, intervalMs = 4000 }: { slides: HeroSlide[];
                 onClick={() => scrollTo(i)}
                 className={cn(
                   "h-2 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-                  selected === i ? "w-6 bg-accent" : "w-2 bg-white/[0.04]/70 hover:bg-white/[0.04]",
+                  selected === i ? "w-6 bg-accent" : "w-2 bg-bg-card/70 hover:bg-bg-alt",
                 )}
               />
             ))}

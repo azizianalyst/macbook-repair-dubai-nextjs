@@ -25,7 +25,7 @@ export default function IPhoneVolumeButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit. AED 250, 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Common causes: a drop on the left edge bends the metal rail; long-term wear collapses the click dome; on iPhone 13 and later the ringer switch tab snaps off if forced past its detent. All fixed with one flex swap.
           </p>
         </>

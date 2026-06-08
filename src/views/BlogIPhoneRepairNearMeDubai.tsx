@@ -68,7 +68,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             tradeoff. A shop that claims "all our parts are genuine Apple" without being an Apple
             Authorised Service Provider is lying - Apple does not sell parts to non-AASP shops.
             Read our{" "}
-            <Link to="/blog/iphone-screen-replaced-but-issues-after" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-screen-replaced-but-issues-after" className="text-accent font-semibold hover:underline">
               screen quality tier guide
             </Link>{" "}
             for the truth.
@@ -105,7 +105,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             Public price list on website / WhatsApp / printed in shop. Same price for everyone, not
             "let me check" then a number that depends on how rich you look. We publish all prices
             on{" "}
-            <Link to="/pricing" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/pricing" className="text-accent font-semibold hover:underline">
               our pricing page
             </Link>{" "}
             and quote from the same list every time.

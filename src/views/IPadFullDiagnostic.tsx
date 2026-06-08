@@ -25,7 +25,7 @@ export default function IPadFullDiagnostic() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Bring the iPad in, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 25-point check on every iPad: screen quality and Pencil response, battery cycle count, Smart Connector pads, all cameras, both or four speakers, every port, Touch ID or Face ID, water-damage indicators, and a software-side check for Activation Lock and rogue profiles.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 1 in 5 iPads we see don't actually need a repair - they need a software reset, a free port clean, or an iPadOS update they could install at home. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything.
           </p>
         </>

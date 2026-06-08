@@ -25,7 +25,7 @@ export default function IPadHomeButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The same Touch ID truth from our iPhone page applies here</strong>: if we replace the home button on an iPad with Touch ID, the Touch ID function will not work on the new button. Apple pairs each fingerprint sensor to the logic board at manufacture; only Apple can re-pair, and they only do it via whole-device replacement. Anyone in Dubai claiming "Touch ID restored" is selling you false hope.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             What we deliver: AED 250 to restore the click and home function so you can press, double-press for app switcher, and triple-press for Accessibility. We set up AssistiveTouch on-screen for free during the same visit. Applies to iPad 9th gen, iPad Air 1/2/3, iPad mini 4/5, and iPad Pro 1st/2nd gen 9.7\"/10.5\"/12.9\".
           </p>
         </>

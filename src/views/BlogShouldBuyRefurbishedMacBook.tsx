@@ -101,7 +101,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
 
           <h2>What to check before buying (any source)</h2>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>Serial number → check at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">checkcoverage.apple.com</a> - confirms purchase date and warranty status.</li>
+            <li>Serial number → check at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">checkcoverage.apple.com</a> - confirms purchase date and warranty status.</li>
             <li>Battery: System Settings → Battery → Battery Health → cycle count under 500 ideal, &lt; 800 acceptable, capacity ≥ 85%.</li>
             <li>About This Mac: confirm CPU, RAM, storage match listing.</li>
             <li>Display: bright white screen at 100% brightness, look for dim corners, dead pixels, ghost-touch.</li>
@@ -115,7 +115,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
           <p>
             Our shop runs all of these on every refurb - and we'll run them on a unit you bring from
             elsewhere for AED 100 ({" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>) before you commit.
           </p>
@@ -165,7 +165,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             <strong>Best for students - MacBook Air M3 (AED 3,500)</strong>: current Apple Intelligence
             ready, 18-hour battery, lightest body, perfect for university. Saves AED 1,700 vs new.
             See our{" "}
-            <Link to="/blog/best-macbook-for-students-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/best-macbook-for-students-dubai-2026" className="text-accent font-semibold hover:underline">
               best MacBook for students guide
             </Link>.
           </p>

@@ -25,7 +25,7 @@ export default function MacFanCleaning() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Dubai is hard on Mac cooling.</strong> Fine outdoor dust pulled in through air conditioning, plus 24/7 indoor circulation, builds a felt-like dust mat across the heatsink fins of any Mac that's been on a desk for two-plus years. The fan ramps up to push air through a choked stack and you hear it.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Studio is the worst affected - its big fan pulls a lot of air, and a lot of dust comes with it. Mac Pro 2019 has dual top fans plus the chassis impellers, all of which collect dust. Even the supposedly-passive Mac Mini Pro models have a fan that gets dirty. The fix is the same on all three: open, vacuum, brush, compressed air through cleared fins, refit. Cheaper and faster than a full thermal-paste service, and on most desktop Macs that's all that's needed.
           </p>
         </>

@@ -81,7 +81,7 @@ export default function BlogFactoryResetBeforeSelling() {
           <p>
             <strong>Why this matters:</strong> if you skip this, your friends' iMessages to the buyer's
             new SIM may continue routing to your Apple ID for weeks. Apple's deregister tool
-            (<a href="https://selfsolve.apple.com/deregister-imessage" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">selfsolve.apple.com/deregister-imessage</a>)
+            (<a href="https://selfsolve.apple.com/deregister-imessage" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">selfsolve.apple.com/deregister-imessage</a>)
             fixes this if you forgot, but it's an extra week of half-delivered messages.
           </p>
 
@@ -119,7 +119,7 @@ export default function BlogFactoryResetBeforeSelling() {
             <li><strong>Don't</strong> erase via "Erase iPhone" in Settings without signing out of iCloud first - Activation Lock will trap the buyer.</li>
             <li><strong>Don't</strong> rely on DFU mode to bypass Activation Lock. It doesn't. Apple checks the activation server on every restore.</li>
             <li><strong>Don't</strong> trust "iCloud unlock" sellers on Dubizzle or Telegram. Scams. See our{" "}
-              <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent-bright font-semibold hover:underline">iCloud lock honest guide</Link>.</li>
+              <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent font-semibold hover:underline">iCloud lock honest guide</Link>.</li>
           </ul>
 
           <h2>Verifying the reset worked</h2>
@@ -138,7 +138,7 @@ export default function BlogFactoryResetBeforeSelling() {
             99% of the time it's because Step 2 was skipped. Fix:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>You: log in at <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">icloud.com/find</a> on any browser.</li>
+            <li>You: log in at <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">icloud.com/find</a> on any browser.</li>
             <li>All Devices → select the sold iPhone → Erase iPhone (yes again, even though it's already erased) → wait for completion.</li>
             <li>Once erased, click "Remove from Account" on the same screen.</li>
             <li>Buyer can now activate normally on their Wi-Fi.</li>

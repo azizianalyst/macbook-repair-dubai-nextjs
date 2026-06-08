@@ -26,10 +26,10 @@ export default function IPhoneBatteryReplacement() {
       pricingCaption="Pro Max sizes add AED 50. Genuine Apple cell add AED 150-200 (preserves health % reading)."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone battery replacement in Dubai starts at AED 250 and finishes the same day on every model from the iPhone 6 through the iPhone 16 Pro Max. The workshop fits more than 90 iPhone batteries every month - Usman runs the battery bench and has paired more than 4,000 BMS chips since 2018, when Apple introduced cell pairing on the iPhone XS. Every replacement battery is bench-tested for capacity (must read within 2% of label), peak power output, and short-circuit safety before installation. The phone leaves with a fresh "Maximum Capacity" reading at 100% and the cycle count reset to zero.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             Apple's 80% rule is the key trigger. macOS and iOS suggest a battery service when Maximum Capacity drops below 80%, because peak power can no longer sustain the processor under load - the result is random shutdowns, throttling, and reduced screen-on time. From the iPhone XS onward, Apple paired the battery to the logic board with a 1-wire authentication chip; non-paired cells will show "Unknown Part" and disable the health reading. The workshop reprograms the original BMS chip onto the new cell so the health reading remains accurate and unbothered.
           </p>
         </>

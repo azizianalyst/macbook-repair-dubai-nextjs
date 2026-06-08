@@ -25,7 +25,7 @@ export default function MacDataRecovery() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Stop using the Mac.</strong> Every power-on writes more data to weak sectors and reduces what we can recover. Bring it in untouched - we image first, work on the image second. The original is never written to again until you've confirmed the recovery succeeded.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Recovery splits hard by Mac generation. Intel Mac Mini, Mac Pro 2013 cylinder, Mac Pro 2019 - these have standard SSDs we can recover from with normal techniques. M1, M2, M4 Mac Mini and Mac Studio with a dead logic board are the hardest jobs in the field: the SSD silicon is on the SoC and the encryption key dies with the chip. Sometimes we can chip-off and read raw, sometimes the encryption blocks us. We will tell you the realistic odds for your exact case before charging anything beyond the free assessment.
           </p>
         </>

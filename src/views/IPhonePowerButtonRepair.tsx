@@ -25,7 +25,7 @@ export default function IPhonePowerButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex, AED 280, with a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Most failures are mechanical - the dome inside the button collapses after years of use, or impact damage from a drop has bent the metal frame around the button. We straighten the frame where possible (no extra charge) and replace the flex with the click mechanism in one visit.
           </p>
         </>

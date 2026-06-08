@@ -125,7 +125,7 @@ export default function AppleServiceCenter() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="device"
         tone="dark"
@@ -133,7 +133,7 @@ export default function AppleServiceCenter() {
         title="Apple Service Center Dubai - Trusted Repairs for MacBook, iMac & iMac Pro"
         subtitle="We offer fast, certified repairs for your MacBook Pro, MacBook Air and other Apple devices. From maintenance and cleaning to screen replacements and battery fixes, our expert technicians use only genuine Apple parts. Join hundreds of satisfied customers and experience our 5.0-star service today."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Customer rating 5.0</span>
           <span>·</span>
           <span>Genuine Apple parts</span>
@@ -155,29 +155,29 @@ export default function AppleServiceCenter() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <ul className="flex flex-wrap gap-2 mb-lg">
           {BADGES.map((b) => (
-            <li key={b} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[14px] text-on-primary">{b}</li>
+            <li key={b} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[14px] text-text">{b}</li>
           ))}
         </ul>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
           {VALUES.map((v) => (
-            <article key={v.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={v.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-1">{v.title}</h3>
-              <p className="text-[14px] text-on-primary-muted">{v.body}</p>
+              <p className="text-[14px] text-text-muted">{v.body}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Services */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Repair Services for Your Apple Device</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">MacBook Pro / Air services - we also service iPhone, iPad and iMac. The most-requested MacBook repairs:</p>
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">MacBook Pro / Air services - we also service iPhone, iPad and iMac. The most-requested MacBook repairs:</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
               </article>
             ))}
           </div>
@@ -188,14 +188,14 @@ export default function AppleServiceCenter() {
       {/* Prep steps */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Important Steps Before Taking Your Device for Service</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-lg">Before bringing in your Apple device, follow a few important steps to keep your data safe and protected:</p>
+        <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Before bringing in your Apple device, follow a few important steps to keep your data safe and protected:</p>
         <div className="grid gap-md sm:grid-cols-2">
           {PREP_STEPS.map((g) => (
-            <article key={g.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={g.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{g.title}</h3>
               <ul className="space-y-2">
                 {g.items.map((it) => (
-                  <li key={it} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {it}</li>
+                  <li key={it} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {it}</li>
                 ))}
               </ul>
             </article>
@@ -204,15 +204,15 @@ export default function AppleServiceCenter() {
       </section>
 
       {/* When to seek service */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">How Soon Should You Seek Our Apple Repair Services?</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-lg">Regular maintenance and timely repairs prolong the life of your Apple device. Visit our service center in these situations:</p>
+          <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Regular maintenance and timely repairs prolong the life of your Apple device. Visit our service center in these situations:</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
             {WHEN.map((w) => (
-              <article key={w.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[16px] font-bold mb-sm">{w.title}</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">{w.body}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed">{w.body}</p>
               </article>
             ))}
           </div>
@@ -222,33 +222,33 @@ export default function AppleServiceCenter() {
       {/* Benefits */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Benefits of Engaging with Our Apple Service Center</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[80ch] mb-lg">We are committed to providing incredible service. Our team collaborates closely with you to develop a comprehensive plan for any upgrade or servicing needs. Choose us for the following reasons:</p>
+        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">We are committed to providing incredible service. Our team collaborates closely with you to develop a comprehensive plan for any upgrade or servicing needs. Choose us for the following reasons:</p>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
           {BENEFITS.map((b) => (
-            <article key={b.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={b.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[16px] font-bold mb-sm">{b.title}</h3>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed">{b.body}</p>
+              <p className="text-[14px] text-text-muted leading-relaxed">{b.body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[15px] text-on-primary-muted leading-relaxed max-w-[80ch] mt-lg">
+        <p className="text-[15px] text-text-muted leading-relaxed max-w-[80ch] mt-lg">
           Our recruitment process is so organised that all technicians undergo assessment tasks before being hired - that's why our team consists of the best Apple technicians in the UAE. We also have an audit team that gathers customer reviews to ensure no customer is dissatisfied. Once your device is optimised, we conduct comprehensive testing to confirm repairs or upgrades are successful, and our experts provide guidance on setting up regular data backups to prevent future data loss.
         </p>
       </section>
 
       {/* Reviews */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Customer Reviews</h2>
-          <p className="text-[16px] text-on-primary-muted mb-lg">Don't take just our word for it - our satisfied customers say it best.</p>
+          <p className="text-[16px] text-text-muted mb-lg">Don't take just our word for it - our satisfied customers say it best.</p>
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
-                <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
+                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
+                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
               </figure>
             ))}
           </div>
@@ -258,10 +258,10 @@ export default function AppleServiceCenter() {
       {/* Tools */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Tools We Use for Apple Repairs</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too. These tools help ensure Apple devices are repaired safely, efficiently, and in accordance with Apple's standards.</p>
+        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too. These tools help ensure Apple devices are repaired safely, efficiently, and in accordance with Apple's standards.</p>
         <ul className="flex flex-wrap gap-2">
           {TOOLS.map((t) => (
-            <li key={t} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-on-primary-muted">{t}</li>
+            <li key={t} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text-muted">{t}</li>
           ))}
         </ul>
       </section>
@@ -280,11 +280,11 @@ export default function AppleServiceCenter() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Certified technicians, genuine Apple parts, same-day service. WhatsApp or call us for a free assessment of your Apple device.
           </p>
           <CallButtons />

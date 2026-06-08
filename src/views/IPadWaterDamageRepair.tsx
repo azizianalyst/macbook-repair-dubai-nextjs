@@ -30,7 +30,7 @@ export default function IPadWaterDamageRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             iPads are <strong>not water resistant</strong>. There is no IP rating on iPad, iPad Mini, iPad Air or any iPad Pro - only the very latest accessories. The good news: there's more interior space than an iPhone, the ports are easier to flush, and the success rate when treated within 24 hours is around <strong>80%</strong>. After 72 hours and corrosion sets in, it drops to about 50%.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Stop charging it now. Don't put it in rice - that does nothing for the corrosion already starting on the board. WhatsApp us, free same-day pickup, and we have it in the ultrasonic bath the same evening.
           </p>
         </>
@@ -83,7 +83,7 @@ export default function IPadWaterDamageRepair() {
         "/ipad-charging-port-repair-dubai",
       ]}
       honestyCallout={
-        <ul className="space-y-sm text-[15px] text-on-primary">
+        <ul className="space-y-sm text-[15px] text-text">
           <li>• <strong>No iPad is waterproof.</strong> Not iPad, not iPad Pro, not iPad Air. Apple makes no IP claim on any iPad model.</li>
           <li>• <strong>Time matters more than money.</strong> 80% success within 24 hours. 50% after 72 hours. By day five, mostly data-recovery cases.</li>
           <li>• <strong>Don't charge it.</strong> Powering a wet board accelerates corrosion and can short components that would otherwise have survived.</li>

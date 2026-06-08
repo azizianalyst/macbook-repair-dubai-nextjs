@@ -73,7 +73,7 @@ export default function AppleCareMacBookRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -81,7 +81,7 @@ export default function AppleCareMacBookRepair() {
         title="AppleCare and In-Warranty MacBook Repair in Dubai"
         subtitle="We're an independent Apple specialist, not an Apple Authorised Service Provider. If your Mac is still covered we'll tell you honestly when Apple is the better route. For AppleCare-expired and out-of-warranty Macs, we repair at component level with a 90-day warranty."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Independent specialist</span>
@@ -105,18 +105,18 @@ export default function AppleCareMacBookRepair() {
         <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md">
           <strong>MacBook Repair Dubai</strong> is an independent Apple repair workshop in Concord Tower, Dubai Media City, on the bench since 2004. We're not an Apple Authorised Service Provider, so we can't lodge an AppleCare or warranty claim for you. What we can do is be straight with you: if your Mac is still in cover, we'll point you to Apple so you don't risk it. If your AppleCare has expired, we'll fix the actual fault for a fraction of Apple's flat fee.
         </p>
-        <p className="text-[16px] leading-relaxed max-w-[75ch] text-on-primary-muted m-0">
+        <p className="text-[16px] leading-relaxed max-w-[75ch] text-text-muted m-0">
           That honesty is the whole point of this page. People bring us in-warranty Macs all the time, and sometimes the right answer is "go to Apple". When the cover's gone, that's when we save you the most money - genuine parts where Apple still supplies them, high-grade compatible parts where it doesn't, and a 90-day written warranty on everything we touch.
         </p>
       </section>
 
       {/* Warranty explainer */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Search size={28} className="text-accent-bright" aria-hidden /> Is my MacBook still under warranty?
+            <Search size={28} className="text-accent" aria-hidden /> Is my MacBook still under warranty?
           </h2>
-          <div className="max-w-[78ch] space-y-md text-[16px] text-on-primary-muted leading-relaxed">
+          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">Every new Mac ships with a one-year limited warranty from Apple, free, covering manufacturing faults only. If you added AppleCare+ at purchase, that stretches the cover to three years and adds accidental-damage repairs for a set fee per incident. Neither plan covers normal wear, and both run out.</p>
             <p className="m-0">Checking is quick. Go to System Settings, then General, then About, and note your serial number. Type it into Apple's coverage page at checkcoverage.apple.com and it tells you the exact status and end date. Not sure how to read it? WhatsApp us the serial and we'll walk through it with you in a couple of minutes.</p>
           </div>
@@ -126,47 +126,47 @@ export default function AppleCareMacBookRepair() {
       {/* Apple vs us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> When to use Apple, and when to use us
+          <ShieldCheck size={28} className="text-accent" aria-hidden /> When to use Apple, and when to use us
         </h2>
         <div className="grid gap-md md:grid-cols-2">
-          <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+          <article className="border border-border bg-bg-card rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Go to Apple when…</h3>
-            <ul className="space-y-2 text-[15px] text-on-primary-muted">
+            <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare or warranty is active and the fault is covered", "The repair falls under a known recall or service programme", "You need an Apple service record kept on the machine"].map((t) => (
-                <li key={t} className="flex gap-2"><Check size={18} className="text-accent-bright mt-[2px] shrink-0" aria-hidden /> {t}</li>
+                <li key={t} className="flex gap-2"><Check size={18} className="text-accent mt-[2px] shrink-0" aria-hidden /> {t}</li>
               ))}
             </ul>
           </article>
-          <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+          <article className="border border-border bg-bg-card rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Come to us when…</h3>
-            <ul className="space-y-2 text-[15px] text-on-primary-muted">
+            <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare or warranty has expired", "Liquid, accidental or wear damage Apple won't cover for free", "Apple quoted a flat board or whole-unit fee you'd rather avoid"].map((t) => (
-                <li key={t} className="flex gap-2"><Check size={18} className="text-accent-bright mt-[2px] shrink-0" aria-hidden /> {t}</li>
+                <li key={t} className="flex gap-2"><Check size={18} className="text-accent mt-[2px] shrink-0" aria-hidden /> {t}</li>
               ))}
             </ul>
           </article>
         </div>
-        <p className="text-[14px] text-on-primary-muted mt-md">We'll tell you which route is cheaper for your fault before you commit - even when that means sending you back to Apple. More on this on our <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent-bright hover:underline">out-of-warranty Apple repair</Link> and <Link to="/apple-repair-programs-dubai" className="text-accent-bright hover:underline">Apple repair programmes and recalls</Link> pages.</p>
+        <p className="text-[14px] text-text-muted mt-md">We'll tell you which route is cheaper for your fault before you commit - even when that means sending you back to Apple. More on this on our <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent hover:underline">out-of-warranty Apple repair</Link> and <Link to="/apple-repair-programs-dubai" className="text-accent hover:underline">Apple repair programmes and recalls</Link> pages.</p>
       </section>
 
       {/* What we repair */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wrench size={28} className="text-accent-bright" aria-hidden /> What we repair on AppleCare-expired Macs
+            <Wrench size={28} className="text-accent" aria-hidden /> What we repair on AppleCare-expired Macs
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
             {COVERED.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent-bright" aria-hidden /> {i.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{i.body}</p>
+                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
               );
             })}
           </div>
-          <p className="text-[14px] text-on-primary-muted mt-md">Need a specific job? See <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright hover:underline">MacBook battery replacement</Link> and <Link to="/macbook-screen-repair-dubai" className="text-accent-bright hover:underline">MacBook screen repair</Link> in Dubai.</p>
+          <p className="text-[14px] text-text-muted mt-md">Need a specific job? See <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">MacBook battery replacement</Link> and <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">MacBook screen repair</Link> in Dubai.</p>
         </div>
       </section>
 
@@ -184,10 +184,10 @@ export default function AppleCareMacBookRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Not sure if you're still covered? Ask us first</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Not sure if you're still covered? Ask us first</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send your serial number and the fault on WhatsApp. We'll check your warranty status with you, tell you honestly whether Apple or our workshop is the better route, and quote in minutes. Free diagnosis, 90-day warranty.
           </p>
           <div className="relative flex flex-wrap gap-sm">

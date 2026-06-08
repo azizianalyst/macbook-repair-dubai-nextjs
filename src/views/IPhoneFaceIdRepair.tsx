@@ -26,16 +26,16 @@ export default function IPhoneFaceIdRepair() {
       pricingCaption="No-fix-no-charge applies. Customer pays only on confirmed working Face ID. Honest success rates published below - no false promises."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone Face ID repair in Dubai is the most over-promised and under-delivered repair in the industry. The honest reality: Apple designed Face ID to be paired between three components - the dot projector, the IR camera, and the device's Secure Enclave. The pairing happens once at the factory and cannot officially be re-done by anyone outside Apple. Apple Store's policy on Face ID failure is whole-device replacement - they don't repair Face ID at all. The workshop sometimes can, but success depends entirely on which component failed and which model the iPhone is. The workshop publishes real success rates rather than vague promises.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             What works reliably: transferring the original sensor stack from a broken screen onto a new screen during a screen swap (this is "Face ID preservation" - 95% success rate). What works sometimes: replacing the flood illuminator alone (~70% success - easier because it's less tightly paired). What works rarely: replacing the IR camera (~50% - pairing tools have improved but not always succeed). What barely works: dot projector replacement (~30% - Apple binds this most tightly to the Secure Enclave). The workshop charges only when Face ID is confirmed working - no-fix-no-charge applies on every Face ID job.
           </p>
         </>
       }
       honestyCallout={
-        <div className="text-[15px] text-on-primary leading-relaxed space-y-md">
+        <div className="text-[15px] text-text leading-relaxed space-y-md">
           <p>
             <strong>Why Face ID is hard to repair:</strong> Apple's TrueDepth system has three optical components (flood illuminator, IR camera, dot projector) that are factory-calibrated and cryptographically paired with the Secure Enclave. Replacing any of them requires re-pairing - Apple has not shared the pairing tools publicly. The community has reverse-engineered partial solutions, but success varies by model and by which component is being replaced.
           </p>

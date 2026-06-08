@@ -25,7 +25,7 @@ export default function MacActivationLockUnlock() {
           <p className="text-[18px] leading-relaxed mb-md">
             If it's genuinely your Mac, we can help you get back into it. <strong>We only help real owners</strong>, and we'll ask you to prove it - that's the line we don't cross, and it's the line that protects you when you buy second-hand too. There are two different locks people in Dubai bring us. The first is <strong>Activation Lock</strong> (iCloud lock) on Apple Silicon and T2 Macs, tied to your Apple ID and enforced by Apple's servers. The second is an <strong>EFI firmware password</strong> on older Intel Macs, set in Recovery and asked for at a padlock screen on boot. Neither can be legitimately bypassed on modern hardware. What we do instead is prepare your ownership documents and work with Apple's official channels to recover access. Help starts at <strong>AED 250</strong>, and if Apple refuses despite valid proof, you get the service fee back.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Be wary of anyone advertising an instant iCloud or firmware "bypass" for a modern Mac - it's either a scam or a temporary trick that re-locks on the next reboot or macOS update. Apple closes those holes as fast as they appear. We've run honest Apple liaison work at Concord Tower, Dubai Media City since 2004, and we'd rather lose the job than take your money for something that won't last. If you found a Mac or it's reported lost or stolen, we won't touch it - take it to Dubai Police or an Apple Store so the rightful owner can be found.
           </p>
         </>

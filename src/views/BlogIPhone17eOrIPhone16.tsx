@@ -144,7 +144,7 @@ export default function BlogIPhone17eOrIPhone16() {
 
           <p>
             Whichever you buy, drop us a line if anything goes wrong -{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               full iPhone service from AED 250
             </Link>
             , 90-day warranty, free pickup across Dubai.

@@ -168,7 +168,7 @@ export default function BlogMacBookLogicBoardCost() {
             obligation, no diagnostic fee.
           </p>
           <p>
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook logic board repair service page
             </Link>{" "}
             - or WhatsApp 055 741 3706 with your model and symptoms. We'll tell you up front

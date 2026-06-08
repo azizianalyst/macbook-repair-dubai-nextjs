@@ -25,7 +25,7 @@ export default function IPhoneSimTrayRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Two different problems</strong>, one page: a lost or bent SIM tray (cheap, AED 150) versus a dead SIM reader inside the phone (proper repair, AED 400). We'll tell you which you have within 5 minutes of looking at the phone, free. The reader fault is more common after a careless tray insertion that bent a pin.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             <strong>UAE eSIM note</strong>: US iPhone 14 and later are eSIM-only - no physical tray at all. Globally-sold iPhones (including UAE retail) keep the tray through iPhone 16. iPhone 17 begins the global eSIM transition. If you're moving from a US-bought iPhone to a UAE eSIM (Etisalat or du), we can also help you provision and transfer - included free with any tray or reader repair.
           </p>
         </>

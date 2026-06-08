@@ -25,7 +25,7 @@ export default function MacOsReinstallDesktop() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Sometimes the right fix isn't a part - it's a fresh OS.</strong> A Mac that boots slowly, throws random kernel panics, can't complete a software update or has been through three or four major macOS upgrades over the years often just needs a clean install. We back up first, install clean, restore your data and apps after.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             For most Macs, Internet Recovery is the route - boot with Cmd-R or Option-Cmd-R, install macOS, done. For M-series Mac Studio and Mac Pro that are properly stuck (no boot at all, recoveryOS won't load), we use Apple Configurator 2 from a second Mac connected over USB-C - it does a DFU-mode revival or restore that brings the firmware back to ship-state. We have the second Mac, the right cables and the experience to make this work the first time.
           </p>
         </>

@@ -25,7 +25,7 @@ export default function IMacRamUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If you have a 27" Intel iMac from 2017, 2019 or 2020, RAM is one of the best upgrades you can buy.</strong> Apple ships these machines with as little as 8GB but they accept up to 64GB or 128GB depending on model. Doubling or quadrupling RAM transforms multitasking, Lightroom, Logic, virtualisation and Safari with twenty tabs.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On the 24" M1, M2, M3 and M4 iMac the story is different. RAM is on the same package as the M-series chip - soldered, not upgradeable, ever. No shop in the world can change it. If you bought 8GB and need 16GB, the only honest path is selling it and buying a higher-RAM model. We will tell you that face to face rather than charge you for impossible work.
           </p>
         </>

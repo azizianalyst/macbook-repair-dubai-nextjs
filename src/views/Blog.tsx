@@ -122,15 +122,15 @@ function PostCard({ p }: { p: Post }) {
   return (
     <Link
       to={p.slug}
-      className="group border border-white/10 bg-white/[0.04] rounded-md p-lg hover:border-accent-bright/40 hover:bg-white/[0.07] transition-colors flex flex-col gap-sm"
+      className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
     >
-      <p className="text-[11px] uppercase tracking-wider text-accent-bright mono">{p.category}</p>
-      <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent-bright">{p.title}</h2>
-      <p className="text-[14px] text-on-primary-muted leading-relaxed flex-1">{p.excerpt}</p>
-      <div className="flex flex-wrap items-center gap-md text-[12px] text-on-primary-muted mono mt-sm pt-sm border-t border-white/10">
+      <p className="text-[11px] uppercase tracking-wider text-accent mono">{p.category}</p>
+      <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
+      <p className="text-[14px] text-text-muted leading-relaxed flex-1">{p.excerpt}</p>
+      <div className="flex flex-wrap items-center gap-md text-[12px] text-text-muted mono mt-sm pt-sm border-t border-border">
         <span className="flex items-center gap-1"><CalendarDays size={12} aria-hidden /> {p.date}</span>
         <span className="flex items-center gap-1"><Clock size={12} aria-hidden /> {p.minutes} min</span>
-        <span className="ml-auto flex items-center gap-1 text-accent-bright font-semibold">By {p.author} <ArrowRight size={12} aria-hidden /></span>
+        <span className="ml-auto flex items-center gap-1 text-accent font-semibold">By {p.author} <ArrowRight size={12} aria-hidden /></span>
       </div>
     </Link>
   );
@@ -173,7 +173,7 @@ export default function Blog() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -191,9 +191,9 @@ export default function Blog() {
 
       {/* "What kind of Mac user are you?" finder */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <div className="rounded-lg border border-white/10 bg-white/[0.04] p-lg md:p-xl">
+        <div className="rounded-lg border border-border bg-bg-card p-lg md:p-xl">
           <h2 className="text-[20px] md:text-[24px] font-bold">What brings you here today?</h2>
-          <p className="text-[14px] text-on-primary-muted mt-1 mb-lg">Pick one and we'll point you to the right guides.</p>
+          <p className="text-[14px] text-text-muted mt-1 mb-lg">Pick one and we'll point you to the right guides.</p>
           <div className="flex flex-wrap gap-2">
             {FINDERS.map((f) => (
               <button
@@ -203,8 +203,8 @@ export default function Blog() {
                 aria-pressed={active === f.key}
                 className={`text-[14px] font-medium rounded-full px-md py-2 border transition-colors ${
                   active === f.key
-                    ? "border-accent-bright/60 bg-accent-bright/15 text-accent-bright"
-                    : "border-white/15 bg-white/[0.03] hover:border-accent-bright/50 hover:text-accent-bright"
+                    ? "border-accent/60 bg-accent/15 text-accent"
+                    : "border-border bg-bg-alt hover:border-accent/50 hover:text-accent"
                 }`}
               >
                 <span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}
@@ -213,28 +213,28 @@ export default function Blog() {
           </div>
 
           {selected && (
-            <div className="mt-lg pt-lg border-t border-white/10">
+            <div className="mt-lg pt-lg border-t border-border">
               <div className="grid gap-2 sm:grid-cols-3">
                 {recommended.map((p) => (
                   <Link
                     key={p.slug}
                     to={p.slug}
-                    className="group border border-white/10 bg-white/[0.03] rounded-md p-md hover:border-accent-bright/40 hover:bg-white/[0.06] transition-colors flex flex-col gap-1"
+                    className="group border border-border bg-bg-alt rounded-md p-md hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-1"
                   >
-                    <span className="text-[14px] font-semibold leading-snug group-hover:text-accent-bright">{p.title}</span>
-                    <span className="text-[12px] text-on-primary-muted mono mt-auto pt-1">{p.minutes} min · By {p.author}</span>
+                    <span className="text-[14px] font-semibold leading-snug group-hover:text-accent">{p.title}</span>
+                    <span className="text-[12px] text-text-muted mono mt-auto pt-1">{p.minutes} min · By {p.author}</span>
                   </Link>
                 ))}
               </div>
               <div className="flex flex-wrap items-center gap-md mt-md">
                 <Link
                   to={selected.cta.href}
-                  className="inline-flex items-center gap-1.5 text-[14px] font-semibold rounded-full px-lg py-2 bg-accent-bright text-primary hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-1.5 text-[14px] font-semibold rounded-full px-lg py-2 bg-accent text-primary hover:opacity-90 transition-opacity"
                 >
                   {selected.cta.label}
                 </Link>
                 {selected.cta.href !== selected.hub && (
-                  <Link to={selected.hub} className="text-[13px] text-accent-bright hover:underline">
+                  <Link to={selected.hub} className="text-[13px] text-accent hover:underline">
                     See all guides in this topic →
                   </Link>
                 )}
@@ -251,7 +251,7 @@ export default function Blog() {
             <Link
               key={c.slug}
               to={`/blog/${c.slug}`}
-              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-white/15 bg-white/[0.04] hover:border-accent-bright/50 hover:text-accent-bright transition-colors"
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
             >
               {c.name} ({counts[c.slug]})
             </Link>
@@ -271,7 +271,7 @@ export default function Blog() {
             <button
               type="button"
               onClick={() => setVisible((v) => Math.min(v + PAGE_SIZE, POSTS.length))}
-              className="inline-flex items-center gap-2 text-[14px] font-semibold rounded-full px-xl py-2.5 border border-white/20 bg-white/[0.04] hover:border-accent-bright/50 hover:text-accent-bright transition-colors"
+              className="inline-flex items-center gap-2 text-[14px] font-semibold rounded-full px-xl py-2.5 border border-border-strong bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
             >
               Load more guides ({POSTS.length - visible} left)
             </button>
@@ -282,19 +282,19 @@ export default function Blog() {
       {/* Practical how-to guides */}
       <section className="mx-auto max-w-content px-5 md:px-6 pb-3xl">
         <h2 className="text-[24px] md:text-[28px] mb-sm">Practical MacBook how-to guides</h2>
-        <p className="text-[15px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-lg">
           Evergreen step-by-step guides for everyday MacBook tasks - screenshots, resets, cleaning, passwords and more. See them all on the{" "}
-          <Link to="/macbook-guides" className="text-accent-bright font-semibold hover:underline">MacBook guides hub</Link>.
+          <Link to="/macbook-guides" className="text-accent font-semibold hover:underline">MacBook guides hub</Link>.
         </p>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {GUIDES.map((g) => (
             <Link
               key={g.href}
               to={g.href}
-              className="group flex items-center justify-between gap-md border border-white/10 bg-white/[0.04] rounded-md px-lg py-md hover:border-accent-bright/40 hover:bg-white/[0.07] transition-colors"
+              className="group flex items-center justify-between gap-md border border-border bg-bg-card rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
             >
-              <span className="text-[15px] font-medium group-hover:text-accent-bright">{g.label}</span>
-              <ArrowRight size={14} className="text-accent-bright shrink-0" aria-hidden />
+              <span className="text-[15px] font-medium group-hover:text-accent">{g.label}</span>
+              <ArrowRight size={14} className="text-accent shrink-0" aria-hidden />
             </Link>
           ))}
         </div>

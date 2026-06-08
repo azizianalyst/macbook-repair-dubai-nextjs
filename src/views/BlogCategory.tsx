@@ -64,7 +64,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
           variant="service"
           tone="dark"
@@ -89,7 +89,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
           <div className="flex flex-wrap gap-2">
             <Link
               to="/blog"
-              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-white/15 bg-white/[0.04] hover:border-accent-bright/50 hover:text-accent-bright transition-colors"
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
             >
               All posts
             </Link>
@@ -100,8 +100,8 @@ export default function BlogCategory({ slug }: { slug: string }) {
                 aria-current={c.slug === slug ? "page" : undefined}
                 className={`text-[13px] font-medium rounded-full px-md py-1.5 border transition-colors ${
                   c.slug === slug
-                    ? "border-accent-bright/60 bg-accent-bright/15 text-accent-bright"
-                    : "border-white/15 bg-white/[0.04] hover:border-accent-bright/50 hover:text-accent-bright"
+                    ? "border-accent/60 bg-accent/15 text-accent"
+                    : "border-border bg-bg-card hover:border-accent/50 hover:text-accent"
                 }`}
               >
                 {c.name} ({counts[c.slug]})
@@ -113,7 +113,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
         {/* Intro */}
         {category?.intro && (
           <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-            <p className="text-[15px] md:text-[16px] text-on-primary-muted leading-relaxed max-w-[75ch]">
+            <p className="text-[15px] md:text-[16px] text-text-muted leading-relaxed max-w-[75ch]">
               {category.intro}
             </p>
           </section>
@@ -126,15 +126,15 @@ export default function BlogCategory({ slug }: { slug: string }) {
               <Link
                 key={p.slug}
                 to={p.slug}
-                className="group border border-white/10 bg-white/[0.04] rounded-md p-lg hover:border-accent-bright/40 hover:bg-white/[0.07] transition-colors flex flex-col gap-sm"
+                className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
               >
-                <p className="text-[11px] uppercase tracking-wider text-accent-bright mono">{p.category}</p>
-                <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent-bright">{p.title}</h2>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed flex-1">{p.excerpt}</p>
-                <div className="flex flex-wrap items-center gap-md text-[12px] text-on-primary-muted mono mt-sm pt-sm border-t border-white/10">
+                <p className="text-[11px] uppercase tracking-wider text-accent mono">{p.category}</p>
+                <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
+                <p className="text-[14px] text-text-muted leading-relaxed flex-1">{p.excerpt}</p>
+                <div className="flex flex-wrap items-center gap-md text-[12px] text-text-muted mono mt-sm pt-sm border-t border-border">
                   <span className="flex items-center gap-1"><CalendarDays size={12} aria-hidden /> {p.date}</span>
                   <span className="flex items-center gap-1"><Clock size={12} aria-hidden /> {p.minutes} min</span>
-                  <span className="ml-auto flex items-center gap-1 text-accent-bright font-semibold">By {p.author} <ArrowRight size={12} aria-hidden /></span>
+                  <span className="ml-auto flex items-center gap-1 text-accent font-semibold">By {p.author} <ArrowRight size={12} aria-hidden /></span>
                 </div>
               </Link>
             ))}
@@ -149,12 +149,12 @@ export default function BlogCategory({ slug }: { slug: string }) {
               <Link
                 key={c.slug}
                 to={`/blog/${c.slug}`}
-                className="group flex items-center justify-between gap-md border border-white/10 bg-white/[0.04] rounded-md px-lg py-md hover:border-accent-bright/40 hover:bg-white/[0.07] transition-colors"
+                className="group flex items-center justify-between gap-md border border-border bg-bg-card rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
               >
-                <span className="text-[15px] font-medium group-hover:text-accent-bright">
-                  {c.name} <span className="text-on-primary-muted">({counts[c.slug]})</span>
+                <span className="text-[15px] font-medium group-hover:text-accent">
+                  {c.name} <span className="text-text-muted">({counts[c.slug]})</span>
                 </span>
-                <ArrowRight size={14} className="text-accent-bright shrink-0" aria-hidden />
+                <ArrowRight size={14} className="text-accent shrink-0" aria-hidden />
               </Link>
             ))}
           </div>

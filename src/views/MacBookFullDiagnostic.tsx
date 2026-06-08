@@ -25,7 +25,7 @@ export default function MacBookFullDiagnostic() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Free MacBook diagnostic in Dubai</strong> - every owner should book this once a year, especially if you're nearing the 3-4 year mark where batteries, fans, and SSDs start to age. We run a 30-point check on your MacBook and hand you a written report. <strong>No charge, no obligation, no upsell pressure.</strong> If everything is healthy, we'll tell you - that's a useful answer too.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Takes 30 minutes at the bench. Drop in to Internet City or WhatsApp for free pickup if you'd rather not wait in person. The report covers battery health, fan condition, thermal performance, screen pixel test, keyboard scan, port function, speaker test, camera, microphone, trackpad calibration, GPU under load, SSD SMART data, RAM test, Wi-Fi signal, Bluetooth - full checklist below.
           </p>
         </>

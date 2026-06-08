@@ -25,7 +25,7 @@ export default function MacMiniRamUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If you have a Mac Mini 2018 Intel, you are in luck.</strong> Apple shipped these with as little as 8GB but the SO-DIMM slots accept up to 64GB of DDR4 SO-DIMM memory. We open the bottom shield, lift the antenna plate, swap both sticks in matched pairs and you walk out the same afternoon with quadrupled RAM.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             For every other Mac Mini - M1, M2, M2 Pro, M4 and M4 Pro - the answer is short and honest: not possible. The RAM sits on the same package as the M-series chip, soldered down, and no shop in the world can change it. If you bought 8GB and need 16GB, the only paths are selling and buying the right model, or adding a fast Thunderbolt SSD as a swap-file workaround. We will tell you that face to face rather than charge you for impossible work.
           </p>
         </>

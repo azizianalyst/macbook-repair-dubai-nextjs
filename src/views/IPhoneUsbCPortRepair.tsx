@@ -25,7 +25,7 @@ export default function IPhoneUsbCPortRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>iPhone 15 was the first iPhone with USB-C</strong> and from iPhone 15 Pro onwards the port supports Thunderbolt 3 (40 Gbps) for fast video and data transfer. The connector itself is mechanically more delicate than Lightning - pins bend more easily, especially when a cable is yanked sideways. AED 400 covers a full port replacement with Thunderbolt support intact on Pro models.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Free first step: we clean the port. About 35% of "broken USB-C" iPhones in Dubai are just packed with pocket lint, and a careful microscope clean restores fast charging at no charge. If the port itself is damaged, AED 400, 1 day, 90-day warranty.
           </p>
         </>

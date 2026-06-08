@@ -30,7 +30,7 @@ export default function IPadScreenRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             iPad screens are not iPhone screens. They are <strong>fully laminated</strong> - glass, touch digitiser and LCD or OLED bonded as one unit. That changes the repair: there is no "glass-only" swap on a modern iPad. The whole assembly is replaced and the Apple Pencil layer is calibrated back into place.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We quote the part you actually need, not a worst-case price. iPad 9 with cracked glass and clean LCD is AED 350. iPad Pro 13 with the tandem-OLED panel is AED 900 because the part is AED 700+ at trade. You see both numbers before we open the device.
           </p>
         </>

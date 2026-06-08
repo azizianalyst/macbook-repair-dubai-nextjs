@@ -120,14 +120,14 @@ export default function BlogAppleIntelligenceCompatibility() {
           </ul>
           <p>
             Need help deciding which iPhone fits your needs? Compare with our{" "}
-            <Link to="/blog/iphone-17-vs-iphone-air-which-buy" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-17-vs-iphone-air-which-buy" className="text-accent font-semibold hover:underline">
               iPhone 17 vs Air guide
             </Link>{" "}
             or browse{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               every iPhone we service
             </Link>. Apple's full Apple Intelligence overview is at{" "}
-            <a href="https://www.apple.com/apple-intelligence/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://www.apple.com/apple-intelligence/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               apple.com/apple-intelligence
             </a>.
           </p>

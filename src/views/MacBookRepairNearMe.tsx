@@ -162,7 +162,7 @@ export default function MacBookRepairNearMe() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -170,11 +170,11 @@ export default function MacBookRepairNearMe() {
         title="MacBook Repair Near You in Dubai - Free Pickup Across the City"
         subtitle="Concord Tower in Media City is the workshop. The free door-to-door courier turns 'near me' into anywhere in Dubai Mainland - same-hour pickup from 6 areas, same-day from the rest."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary">
-          <span className="flex items-center gap-1"><Truck size={16} className="text-accent-bright" aria-hidden /> Free pickup & delivery</span>
-          <span className="text-on-primary-muted">·</span>
-          <span className="flex items-center gap-1"><Train size={16} className="text-accent-bright" aria-hidden /> 120 m from Media City Metro</span>
-          <span className="text-on-primary-muted">·</span>
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text">
+          <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free pickup & delivery</span>
+          <span className="text-text-muted">·</span>
+          <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 120 m from Media City Metro</span>
+          <span className="text-text-muted">·</span>
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
         </p>
       </Hero>
@@ -188,7 +188,7 @@ export default function MacBookRepairNearMe() {
       {/* Find us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <MapPin size={28} className="text-accent-bright" aria-hidden /> Find the workshop
+          <MapPin size={28} className="text-accent" aria-hidden /> Find the workshop
         </h2>
         <LocationBlock tone="dark" />
       </section>
@@ -196,7 +196,7 @@ export default function MacBookRepairNearMe() {
       {/* Areas we cover - free pickup & delivery */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Areas we cover across Dubai</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           Free door-to-door pickup and same-day delivery from every Dubai neighbourhood. Tap your area for local pickup windows and drive times.
         </p>
         <div className="flex flex-wrap gap-2">
@@ -211,7 +211,7 @@ export default function MacBookRepairNearMe() {
             ["Dubai Silicon Oasis", "/macbook-repair-silicon-oasis"],
             ["Dubai Internet City", "/macbook-repair-internet-city"],
           ].map(([label, href]) => (
-            <Link key={href} to={href} className="px-3.5 py-1.5 border border-white/10 bg-white/[0.04] rounded-md text-[14px] text-accent-bright hover:bg-accent-bright/15 hover:border-accent-bright/40 transition-colors">MacBook Repair {label} →</Link>
+            <Link key={href} to={href} className="px-3.5 py-1.5 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-accent/15 hover:border-accent/40 transition-colors">MacBook Repair {label} →</Link>
           ))}
         </div>
       </section>
@@ -219,16 +219,16 @@ export default function MacBookRepairNearMe() {
       {/* Landmarks */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Landmarks near the workshop</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           Six landmarks within 5 km. Use any of them as a waypoint when navigating from your area.
         </p>
         <div className="grid gap-md md:grid-cols-2">
           {LANDMARKS.map((l) => (
-            <article key={l.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex gap-md">
-              <Navigation size={24} className="text-accent-bright shrink-0 mt-1" aria-hidden />
+            <article key={l.name} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+              <Navigation size={24} className="text-accent shrink-0 mt-1" aria-hidden />
               <div>
-                <p className="font-bold text-[16px]">{l.name} <span className="mono text-[13px] text-on-primary-faint font-normal">· {l.distance}</span></p>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed mt-1">{l.note}</p>
+                <p className="font-bold text-[16px]">{l.name} <span className="mono text-[13px] text-text-faint font-normal">· {l.distance}</span></p>
+                <p className="text-[14px] text-text-muted leading-relaxed mt-1">{l.note}</p>
               </div>
             </article>
           ))}
@@ -238,15 +238,15 @@ export default function MacBookRepairNearMe() {
       {/* Travel times table */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-          <Car size={28} className="text-accent-bright" aria-hidden /> Travel times from major Dubai areas
+          <Car size={28} className="text-accent" aria-hidden /> Travel times from major Dubai areas
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-md">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-md">
           Off-peak driving times to Concord Tower Media City. Add 10-20 minutes during 8-10 am and 5-7 pm rush windows. Free pickup column shows the courier turnaround.
         </p>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+        <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
           <table className="w-full text-[14px] min-w-[520px]">
             <caption className="sr-only">Travel times from Dubai areas to MacBook Repair Dubai workshop, plus free pickup turnaround.</caption>
-            <thead className="bg-white/[0.06]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th className="px-md py-sm font-semibold">Area</th>
                 <th className="px-md py-sm font-semibold">Drive time</th>
@@ -255,10 +255,10 @@ export default function MacBookRepairNearMe() {
             </thead>
             <tbody>
               {TRAVEL_TIMES.map((t, i) => (
-                <tr key={t.area} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                <tr key={t.area} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{t.area}</td>
-                  <td className="px-md py-sm mono text-accent-bright">{t.car}</td>
-                  <td className="px-md py-sm mono text-on-primary-muted">{t.pickup}</td>
+                  <td className="px-md py-sm mono text-accent">{t.car}</td>
+                  <td className="px-md py-sm mono text-text-muted">{t.pickup}</td>
                 </tr>
               ))}
             </tbody>
@@ -267,17 +267,17 @@ export default function MacBookRepairNearMe() {
       </section>
 
       {/* Pickup process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">How free pickup works - 5 steps</h2>
           <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
             {PICKUP_STEPS.map((s, i) => (
-              <li key={i} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent-bright/15 text-accent-bright font-heading font-bold text-[18px] items-center justify-center mb-md">
+              <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
+                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
                   {i + 1}
                 </span>
                 <p className="font-bold text-[16px] mb-1">{s.title}</p>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed">{s.body}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed">{s.body}</p>
               </li>
             ))}
           </ol>
@@ -286,31 +286,31 @@ export default function MacBookRepairNearMe() {
 
       {/* Parking + transit notes */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl grid gap-lg md:grid-cols-3">
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-          <ParkingCircle size={28} className="text-accent-bright mb-sm" aria-hidden />
+        <article className="border border-border bg-bg-card rounded-md p-lg">
+          <ParkingCircle size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Parking</h3>
-          <p className="text-[15px] text-on-primary-muted leading-relaxed">
+          <p className="text-[15px] text-text-muted leading-relaxed">
             Paid tower parking AED 5/hour, AED 25/day cap. Free street parking on Al Sufouh Road (8-minute walk). Valet at the tower lobby AED 30 flat. EV charging (3 stations) on level B2.
           </p>
         </article>
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-          <Train size={28} className="text-accent-bright mb-sm" aria-hidden />
+        <article className="border border-border bg-bg-card rounded-md p-lg">
+          <Train size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Metro & bus</h3>
-          <p className="text-[15px] text-on-primary-muted leading-relaxed">
+          <p className="text-[15px] text-text-muted leading-relaxed">
             Media City Metro (Red Line) is 120 metres away. Bus routes 8, 88, and X28 stop at Media City Metro. RTA taxis queue 24/7 at the tower entrance.
           </p>
         </article>
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-          <Clock size={28} className="text-accent-bright mb-sm" aria-hidden />
+        <article className="border border-border bg-bg-card rounded-md p-lg">
+          <Clock size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Best time to visit</h3>
-          <p className="text-[15px] text-on-primary-muted leading-relaxed">
+          <p className="text-[15px] text-text-muted leading-relaxed">
             Quietest: weekday afternoons 2-5 pm - walk in, sit down, repair starts immediately. Busiest: Saturday 11 am-1 pm and Monday 9-10 am. WhatsApp ahead during peaks for a guaranteed slot.
           </p>
         </article>
       </section>
 
       {/* Reviews */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">What customers from across Dubai say</h2>
           <ReviewGrid reviews={reviews} tone="dark" />
@@ -325,11 +325,11 @@ export default function MacBookRepairNearMe() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">Book a free pickup in 30 seconds</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">Book a free pickup in 30 seconds</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Send your area and the MacBook model on WhatsApp. Pickup window confirmed within 4 minutes.
           </p>
           <div className="flex flex-wrap gap-sm">

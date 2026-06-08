@@ -14,7 +14,7 @@ export function LocationBlock({ tone = "light" }: { tone?: "light" | "dark" }) {
   const dark = tone === "dark";
   return (
     <section className="grid gap-lg md:grid-cols-2 items-stretch">
-      <div className={cn("rounded-md overflow-hidden border", dark ? "border-white/10" : "border-border bg-bg-card")}>
+      <div className={cn("rounded-md overflow-hidden border", dark ? "border-border" : "border-border bg-bg-card")}>
         <iframe
           src={MAPS_EMBED}
           title={`Map to ${NAP.name}`}
@@ -27,17 +27,17 @@ export function LocationBlock({ tone = "light" }: { tone?: "light" | "dark" }) {
       </div>
 
       <div className="flex flex-col gap-md">
-        <h3 className={cn("m-0", dark && "text-on-primary")}>Find us in Media City</h3>
-        <p className={cn("flex items-start gap-sm text-[15px]", dark ? "text-on-primary-muted" : "text-text")}>
-          <MapPin size={18} className={cn("mt-1 shrink-0", dark ? "text-accent-bright" : "text-accent")} aria-hidden />
+        <h3 className={cn("m-0", dark && "text-text")}>Find us in Media City</h3>
+        <p className={cn("flex items-start gap-sm text-[15px]", dark ? "text-text-muted" : "text-text")}>
+          <MapPin size={18} className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-accent")} aria-hidden />
           <span>
             {NAP.street}<br />
             {NAP.area}<br />
             {NAP.city}, UAE
           </span>
         </p>
-        <p className={cn("flex items-start gap-sm text-[14px]", dark ? "text-on-primary-faint" : "text-text-muted")}>
-          <ParkingCircle size={18} className={cn("mt-1 shrink-0", dark ? "text-accent-bright" : "text-accent")} aria-hidden />
+        <p className={cn("flex items-start gap-sm text-[14px]", dark ? "text-text-faint" : "text-text-muted")}>
+          <ParkingCircle size={18} className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-accent")} aria-hidden />
           Paid parking on-site and nearby. Across from Media City Metro.
         </p>
         <div className="flex flex-wrap gap-lg">
@@ -45,7 +45,7 @@ export function LocationBlock({ tone = "light" }: { tone?: "light" | "dark" }) {
             href={DIRECTIONS}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent-bright" : "text-primary")}
+            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}
           >
             Get directions <ExternalLink size={14} aria-hidden />
           </a>
@@ -53,7 +53,7 @@ export function LocationBlock({ tone = "light" }: { tone?: "light" | "dark" }) {
             href={GBP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent-bright" : "text-primary")}
+            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}
           >
             View on Google <ExternalLink size={14} aria-hidden />
           </a>

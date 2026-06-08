@@ -109,11 +109,11 @@ export default function GuideChangeMacBookName() {
             network glitch. Toggle Wi-Fi off and on, or restart the Mac, and the new name
             appears everywhere. If your MacBook is also feeling sluggish while you're in there,
             our{" "}
-            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">
               10 fixes for a slow MacBook
             </Link>{" "}
             are a quick read. And if the screen, keyboard, or anything else is misbehaving, our{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair team in Dubai
             </Link>{" "}
             offers free pickup, free diagnosis, and a 90-day warranty.

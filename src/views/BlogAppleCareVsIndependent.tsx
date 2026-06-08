@@ -30,7 +30,7 @@ export default function BlogAppleCareVsIndependent() {
           <p>
             If you want the full breakdown of how a third-party repair sits alongside any remaining
             Apple cover, read our{" "}
-            <Link to="/applecare-macbook-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/applecare-macbook-repair-dubai" className="text-accent font-semibold hover:underline">
               AppleCare and MacBook repair page
             </Link>
             . This post is the decision guide.
@@ -77,17 +77,17 @@ export default function BlogAppleCareVsIndependent() {
           </p>
           <p>
             Our real, grounded figures: MacBook screen repair{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               from AED 600
             </Link>{" "}
             (Air 13-inch and Pro 13-inch panel, up to AED 1,200 on the 16-inch Pro), and{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement from AED 450
             </Link>
             . Diagnosis is free, the warranty is 90 days written on parts and labour (6 months on
             batteries), and most jobs are same-day with free pickup across Dubai mainland. You can see
             every service on our{" "}
-            <Link to="/pricing" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/pricing" className="text-accent font-semibold hover:underline">
               pricing page
             </Link>
             .
@@ -106,7 +106,7 @@ export default function BlogAppleCareVsIndependent() {
             equivalents elsewhere, from the same tier-1 cell makers (Samsung SDI, LG Chem) that supply
             the original. For a battery or a speaker, the equivalent performs the same and costs less.
             For a True Tone display, genuine matters and we say so. Our{" "}
-            <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent font-semibold hover:underline">
               out-of-warranty Apple repair page
             </Link>{" "}
             lays out the tiers in full.

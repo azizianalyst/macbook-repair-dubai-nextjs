@@ -25,7 +25,7 @@ export default function MacBookSpeakerRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook speaker repair in Dubai</strong> covers blown drivers (cone damage from sustained high-volume use), distortion at the top of the volume range (voice coil rubbing), no sound from one side (failed driver or cable), and water-damaged speaker assemblies (corrosion on the contacts). On 2016+ MacBook Pros the speakers are bonded to the top case but the drivers themselves are replaceable. AED 400 covers parts, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We carry stock for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 MacBook Pros that still see daily use across Dubai.
           </p>
         </>

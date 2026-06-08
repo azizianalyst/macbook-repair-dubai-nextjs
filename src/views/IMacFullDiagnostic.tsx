@@ -25,7 +25,7 @@ export default function IMacFullDiagnostic() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Free, no obligation, on your desk if you prefer.</strong> iMacs aren't laptops - moving a 27" 5K iMac across town for a diagnostic that might say "you don't need a repair" is a waste of everyone's afternoon. So we offer the same 30-point check at your home or office for free, anywhere in Dubai mainland. If we find something, we quote in writing and you decide what happens next.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The check covers everything that goes wrong on an iMac: PSU health, fan and thermal behaviour under load, display brightness uniformity and colour, GPU stress test, every port, both speakers, the camera, drive SMART data and Fusion Drive split health, RAM hardware test, macOS support ceiling for your model, malware quick-scan, and a check for original vs replaced display. You walk away (or sit down at your own desk) with a written one-page report.
           </p>
         </>

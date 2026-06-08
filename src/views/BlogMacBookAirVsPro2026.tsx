@@ -122,7 +122,7 @@ export default function BlogMacBookAirVsPro2026() {
           />
           <p>
             Add{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               AED 450 for a fresh battery
             </Link>
             {" "}if buying anything 3+ years old. We test every used MacBook brought in for AED 100
@@ -142,7 +142,7 @@ export default function BlogMacBookAirVsPro2026() {
 
           <p>
             Buying used and want it inspected first?{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               Drop it at our Media City workshop
             </Link>
             {" "}- AED 100 full diagnostic, refunded if you proceed with any service.

@@ -30,7 +30,7 @@ export default function BlogTransparentRepairPricing() {
           <h2>Parts cost</h2>
           <p>
             We buy at wholesale from audited Tier 2 OEM-equivalent suppliers (see our{" "}
-            <Link to="/blog/genuine-parts-vs-quality-alternative-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/genuine-parts-vs-quality-alternative-explained" className="text-accent font-semibold hover:underline">
               parts policy
             </Link>
             ). The quote line shows the part name, tier, and our cost +
@@ -105,7 +105,7 @@ export default function BlogTransparentRepairPricing() {
           <p>
             If we cannot solve your problem, you pay <strong>nothing</strong> - not even diagnosis,
             not even pickup. Read the full policy in our{" "}
-            <Link to="/blog/no-fix-no-charge-policy-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/no-fix-no-charge-policy-explained" className="text-accent font-semibold hover:underline">
               no-fix-no-charge breakdown
             </Link>
             .

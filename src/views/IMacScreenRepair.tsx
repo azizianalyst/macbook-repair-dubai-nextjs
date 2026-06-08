@@ -30,10 +30,10 @@ export default function IMacScreenRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             iMac screen repair is one of the hardest jobs in the Apple ecosystem. The display is <strong>laminated and adhered to the chassis</strong> with a continuous foam-tape gasket - there are no screws, no clips, no service hatch. Most local shops in Dubai refuse the work entirely.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mb-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             We do them because we built a dust-free reseal bench for exactly this purpose. The 27" 5K Retina panel costs more than some MacBooks, so a single dust speck behind the glass means the job is wrong. Our protocol: cut the adhesive with a thin pizza-wheel tool, lift the panel onto a vacuum stand, transfer the LCD or replace the assembly, then re-bond with fresh 3M adhesive in a particle-controlled area.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             M-series 24" iMacs use a different bonding pattern than 27" Intel models - and the 5K Retina panel itself is a sealed Apple-Samsung unit that cannot be split. Knowing which approach belongs to which year is half the job.
           </p>
         </>

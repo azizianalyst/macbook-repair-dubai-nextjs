@@ -25,7 +25,7 @@ export default function IPhoneSpeakerRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The honest first step</strong>: about 40% of "broken" iPhone speakers in Dubai are actually just packed with pocket lint, sand and dust. We clean the speaker mesh under a microscope free of charge before quoting any replacement. If sound returns, you walk out with no bill - only a clean phone and a recommendation to keep it out of dusty pockets.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             If the speaker driver itself has failed (water damage, blown coil, dropped impact), AED 250 covers a fresh OEM-grade loudspeaker module, gasket reseat and a 90-day warranty. Same day on every iPhone from 7 through 17 Pro Max.
           </p>
         </>

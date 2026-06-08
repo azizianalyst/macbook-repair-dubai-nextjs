@@ -27,10 +27,10 @@ export default function IPhoneBackGlassRepair() {
       pricingCaption="Pro Max sizes add AED 100. Includes MagSafe magnet ring and wireless charging coil preservation."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone back glass repair in Dubai starts at AED 350 - and the workshop's approach is fundamentally different from Apple. Apple's official policy on a cracked back glass is to swap the entire device for a service unit, costing the customer AED 1,400 to AED 2,800 depending on model. The workshop instead removes the broken glass with a 532nm green laser at 30W, leaving the chassis, MagSafe magnet ring, and wireless charging coil intact, then bonds a fresh glass panel with industrial 3M structural adhesive. The phone keeps its original logic board, original Face ID, original battery, and original IMEI.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             The laser process matters because the back glass on iPhone 8 onward is glued to the chassis with a heat-resistant epoxy that won't peel, sand, or chemical-strip without damaging the wireless coil underneath. The 532nm wavelength heats the epoxy without burning the chassis, the glass shatters into removable shards under controlled pressure, and the residue is wiped off with isopropyl. The new glass arrives pre-cut to model spec with the camera cutout, flash cutout, and antenna lines already laser-etched. Bonding takes 90 minutes of cure time at room temperature.
           </p>
         </>

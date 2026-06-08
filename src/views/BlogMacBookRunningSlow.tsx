@@ -105,7 +105,7 @@ export default function BlogMacBookRunningSlow() {
             replacement.
           </p>
           <p>
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement
             </Link>{" "}
             from AED 450 - restores full performance.
@@ -132,7 +132,7 @@ export default function BlogMacBookRunningSlow() {
             (search redirects, fake update prompts, fake "Mac is infected" pop-ups). Run free
             Malwarebytes for Mac - completes in 5 minutes, removes 95% of common adware.
             We offer{" "}
-            <Link to="/macbook-virus-removal-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-virus-removal-dubai" className="text-accent font-semibold hover:underline">
               MacBook virus removal
             </Link>{" "}
             for AED 200 if you'd rather we do it.
@@ -156,7 +156,7 @@ export default function BlogMacBookRunningSlow() {
           <p>
             Intel MacBooks (2010-2017) often had socketed RAM and removable SSDs - those can
             still be upgraded. See{" "}
-            <Link to="/macbook-ram-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-ram-upgrade-dubai" className="text-accent font-semibold hover:underline">
               our RAM upgrade page
             </Link>.
           </p>

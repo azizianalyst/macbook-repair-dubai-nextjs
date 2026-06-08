@@ -25,7 +25,7 @@ export default function IMacVirusRemoval() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If Safari keeps opening to a different search engine, pop-ups appear over websites, or you can't change the homepage - that's malware, not a broken Mac.</strong> macOS adware and browser hijackers are common, especially after downloading a 'free' converter or codec from a Google Ad result.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We clean it all out: malicious launch agents, configuration profiles installed without you realising, browser extensions you didn't add, modified DNS settings, and rogue applications hiding in /Library and ~/Library. After cleaning we run three different scanners - Malwarebytes, KnockKnock and our own checklist - to confirm a clean machine. We also walk you through how it got in so it doesn't happen again.
           </p>
         </>

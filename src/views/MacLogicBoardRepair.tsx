@@ -25,7 +25,7 @@ export default function MacLogicBoardRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Most of what fails on a Mac Mini or Mac Studio logic board is not the M-series chip itself.</strong> It's the power-delivery network around it: MOSFETs that have shorted, capacitors that have leaked, the SMC controller, the Thunderbolt or USB controller, or a damaged trace from a port short. All of that is fixable at component level by someone with the right rework station, microscope and patience.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Where we are honest: the M-series SoC itself is a black box. If the chip has died (rare but possible after a power surge or liquid event), no shop in the world is reballing or replacing it economically - Apple's policy is whole-board replacement and the price puts you at half a new Mac. We diagnose under microscope and tell you which side of the line your fault is on, free of charge, before any work begins.
           </p>
         </>

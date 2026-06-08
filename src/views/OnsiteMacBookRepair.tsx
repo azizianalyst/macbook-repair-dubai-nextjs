@@ -85,7 +85,7 @@ export default function OnsiteMacBookRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -93,7 +93,7 @@ export default function OnsiteMacBookRepair() {
         title="Onsite MacBook Repair and Support in Dubai"
         subtitle="Stay at your desk - we come to you. Free pickup and delivery across Dubai mainland, free diagnosis, and most repairs returned the same day. No callout charge."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Free pickup across Dubai</span>
@@ -116,23 +116,23 @@ export default function OnsiteMacBookRepair() {
         <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md">
           <strong>MacBook Repair Dubai</strong> brings the workshop to you. If you do not have time to leave your office or home, a technician comes to your location, collects your MacBook, repairs it and returns it safely - all with <strong>free pickup and delivery across Dubai mainland</strong> and <strong>free diagnosis</strong>. Whether it is a software crash, a hardware failure or an upgrade, you get the same expert service that has run on Apple hardware since 2004, without the trip across town.
         </p>
-        <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[75ch] m-0">
+        <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
           There is no callout charge. Repairs are priced per service, diagnosed free, and quoted on WhatsApp before any work starts.
         </p>
       </section>
 
       {/* How onsite works */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Truck size={28} className="text-accent-bright" aria-hidden /> How onsite MacBook repair works
+            <Truck size={28} className="text-accent" aria-hidden /> How onsite MacBook repair works
           </h2>
           <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
             {STEPS.map((s, i) => (
-              <li key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <span className="mono text-[13px] text-accent-bright">Step {i + 1}</span>
+              <li key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <span className="mono text-[13px] text-accent">Step {i + 1}</span>
                 <h3 className="text-[17px] font-bold mb-sm mt-1">{s.title}</h3>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{s.body}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{s.body}</p>
               </li>
             ))}
           </ol>
@@ -142,34 +142,34 @@ export default function OnsiteMacBookRepair() {
       {/* What we handle */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Wrench size={28} className="text-accent-bright" aria-hidden /> What we handle onsite and at your doorstep
+          <Wrench size={28} className="text-accent" aria-hidden /> What we handle onsite and at your doorstep
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
-          The same repairs we do at the workshop, collected and returned free. Start with <Link to="/macbook-screen-repair-dubai" className="text-accent-bright hover:underline">MacBook screen repair</Link> or <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright hover:underline">MacBook battery replacement</Link>, the two most common doorstep jobs.
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
+          The same repairs we do at the workshop, collected and returned free. Start with <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">MacBook screen repair</Link> or <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">MacBook battery replacement</Link>, the two most common doorstep jobs.
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
           {HANDLED.map((i) => (
-            <article key={i.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent-bright mt-1 shrink-0" aria-hidden /> {i.title}</h3>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{i.body}</p>
+            <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {i.title}</h3>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Coverage areas */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <MapPin size={28} className="text-accent-bright" aria-hidden /> Areas we collect from
+            <MapPin size={28} className="text-accent" aria-hidden /> Areas we collect from
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
-            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me" className="text-accent-bright hover:underline">See MacBook repair near me</Link> for every community we serve.
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
+            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me" className="text-accent hover:underline">See MacBook repair near me</Link> for every community we serve.
           </p>
           <ul className="grid gap-sm grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 list-none p-0 m-0">
             {AREAS.map((a) => (
-              <li key={a} className="border border-white/10 bg-white/[0.04] rounded-md px-md py-sm text-[15px] font-semibold flex items-center gap-2">
-                <MapPin size={16} className="text-accent-bright shrink-0" aria-hidden /> {a}
+              <li key={a} className="border border-border bg-bg-card rounded-md px-md py-sm text-[15px] font-semibold flex items-center gap-2">
+                <MapPin size={16} className="text-accent shrink-0" aria-hidden /> {a}
               </li>
             ))}
           </ul>
@@ -179,7 +179,7 @@ export default function OnsiteMacBookRepair() {
       {/* Why us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Headphones size={28} className="text-accent-bright" aria-hidden /> Why book onsite with us
+          <Headphones size={28} className="text-accent" aria-hidden /> Why book onsite with us
         </h2>
         <div className="grid gap-md md:grid-cols-3">
           {[
@@ -187,14 +187,14 @@ export default function OnsiteMacBookRepair() {
             { title: "Same-day on most repairs", body: "Common screen and battery jobs are collected, repaired and returned the same day across Dubai mainland." },
             { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a 90-day written warranty." },
           ].map((c) => (
-            <article key={c.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{c.body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[15px] text-on-primary-muted leading-relaxed max-w-[70ch] mt-lg m-0">
-          Prefer to talk it through first? <Link to="/contact" className="text-accent-bright hover:underline">Contact us</Link> with your model and area and we will arrange a pickup that fits your schedule.
+        <p className="text-[15px] text-text-muted leading-relaxed max-w-[70ch] mt-lg m-0">
+          Prefer to talk it through first? <Link to="/contact" className="text-accent hover:underline">Contact us</Link> with your model and area and we will arrange a pickup that fits your schedule.
         </p>
       </section>
 
@@ -212,10 +212,10 @@ export default function OnsiteMacBookRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Book a free MacBook pickup across Dubai</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book a free MacBook pickup across Dubai</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Message your MacBook model and your area and we will arrange same-hour or same-day collection. Free pickup, free delivery, free diagnosis - you only pay for the repair, quoted before we start.
           </p>
           <div className="relative flex flex-wrap gap-sm">

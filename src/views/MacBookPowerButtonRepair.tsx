@@ -25,7 +25,7 @@ export default function MacBookPowerButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged power circuits and board-level Touch ID faults.
           </p>
         </>

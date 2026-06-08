@@ -27,10 +27,10 @@ export default function IPhoneSoftwareFix() {
       pricingCaption="If software doesn't fix it, hardware diagnosis is free and credit goes toward any hardware repair (port, battery, screen)."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone software repair in Dubai starts at AED 200 and is almost always finished the same day. About 1 in 4 iPhones brought to the workshop "for a hardware repair" actually has a software issue - a failed iOS update, a stuck recovery mode, a jailbreak gone wrong, or storage so full the device can't boot properly. Free diagnosis identifies which one in 10 minutes; if it's purely software, the workshop can fix it without any hardware work and at lower cost. The bench has a dedicated iOS rescue station with the latest macOS, iTunes/Finder, Apple Configurator 2, and ipsw.me archive of every signed iOS firmware.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             Some software fixes are also user-doable. Force restart (different button combo per model - Volume Up, Volume Down, hold Side button on iPhone 8+) reboots a frozen iPhone in 15 seconds and costs nothing. Recovery mode + iTunes restore handles 80% of stuck-boot tickets. The workshop tells customers honestly when they can fix the issue at home with WhatsApp guidance - no point charging for a 30-second force restart. The 200 dirhams pricing applies when the issue needs DFU mode, signed-firmware downgrade, or backup-and-restore work that requires the bench tools.
           </p>
         </>

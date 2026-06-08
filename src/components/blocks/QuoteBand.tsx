@@ -27,25 +27,25 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
       as="section"
       className="mx-auto max-w-content px-5 md:px-6 my-2xl"
     >
-      <div className="bg-primary text-on-primary rounded-lg p-xl md:p-2xl shadow-lg overflow-hidden relative">
+      <div className="bg-bg-alt text-text rounded-lg p-xl md:p-2xl shadow-lg overflow-hidden relative">
         {/* subtle accent glow, decorative */}
         <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/20 blur-3xl" />
         <div className="relative flex flex-col gap-lg md:flex-row md:items-center md:justify-between">
           <div className="max-w-[46ch]">
-            <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-1">
+            <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-1">
               {service}
             </p>
-            <h2 className="text-on-primary text-[26px] md:text-[32px] leading-tight">
+            <h2 className="text-text text-[26px] md:text-[32px] leading-tight">
               Get your free quote in 4 minutes on WhatsApp
             </h2>
-            <p className="text-on-primary-muted text-[15px] mt-sm">
+            <p className="text-text-muted text-[15px] mt-sm">
               {blurb ?? "Send the model and a photo of the issue. Free pickup across Dubai mainland, no-fix-no-charge."}
             </p>
-            <div className="mt-md flex flex-wrap gap-x-lg gap-y-sm text-[14px] text-on-primary-muted">
+            <div className="mt-md flex flex-wrap gap-x-lg gap-y-sm text-[14px] text-text-muted">
               {startingPrice != null && (
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="text-on-primary-faint">From</span>
-                  <span className="mono text-on-primary font-bold text-[18px]">AED {startingPrice}</span>
+                  <span className="text-text-faint">From</span>
+                  <span className="mono text-text font-bold text-[18px]">AED {startingPrice}</span>
                 </span>
               )}
               {timeline && (

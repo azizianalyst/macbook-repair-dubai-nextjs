@@ -51,7 +51,7 @@ export default function GuideResetMacBook() {
           <p>
             Important: this guide is about resetting the <em>Mac</em>. If you've forgotten your login
             password and just need back in, you don't need any of this - see{" "}
-            <Link to="/how-to-recover-macbook-password" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
               how to recover a MacBook password
             </Link>{" "}instead.
           </p>
@@ -68,7 +68,7 @@ export default function GuideResetMacBook() {
           </ul>
           <p>
             If the Mac won't power on at all, restarting isn't the issue - work through our{" "}
-            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent font-semibold hover:underline">
               MacBook not turning on fix guide
             </Link>{" "}first.
           </p>
@@ -139,7 +139,7 @@ export default function GuideResetMacBook() {
           <p>
             If Recovery won't load, the disk won't erase, or the reinstall fails partway, that points
             to a software or drive fault rather than user error. Our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service in Dubai
             </Link>{" "}gets it back to a clean, working state with the correct macOS version for your model.
           </p>
@@ -157,7 +157,7 @@ export default function GuideResetMacBook() {
           <p>
             If you've already erased the Mac without a backup, stop using it immediately - continued
             writes overwrite the old data. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}can often retrieve files from a freshly erased drive, but only if nothing new has been written over them.
           </p>
@@ -177,14 +177,14 @@ export default function GuideResetMacBook() {
           <p>
             If a reset doesn't fix the underlying problem - the Mac still freezes, won't boot, or
             misbehaves after a clean reinstall - the cause is usually hardware, not software. Book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic in Dubai
             </Link>{" "}or just{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>. We've repaired Apple devices since 2004, offer free pickup and free diagnosis, and
             back every job with a 90-day warranty. For broader repairs, see our main{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair Dubai
             </Link>{" "}page.
           </p>

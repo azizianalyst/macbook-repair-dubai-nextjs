@@ -80,7 +80,7 @@ export default function GuideCopyPasteMacBook() {
           <p>
             If two-finger tap isn't bringing up the right-click menu, your trackpad gesture may be
             off or the trackpad itself may be faulty - our{" "}
-            <Link to="/macbook-trackpad-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-trackpad-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook trackpad repair in Dubai
             </Link>{" "}
             sorts that quickly.
@@ -150,9 +150,9 @@ export default function GuideCopyPasteMacBook() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Restart the pasteboard server:</strong> open Activity Monitor, search "pboard", select it and click the X to quit. macOS relaunches it automatically and copy-paste usually springs back to life.</li>
             <li><strong>Try the Edit menu:</strong> if the shortcut fails but Edit → Copy works, a key may be the problem rather than the clipboard.</li>
-            <li><strong>Check the keyboard:</strong> if the Command, C, or V keys don't register, the shortcut can't fire. Test them in any text field. A dead key needs our <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">MacBook keyboard repair in Dubai</Link>.</li>
+            <li><strong>Check the keyboard:</strong> if the Command, C, or V keys don't register, the shortcut can't fire. Test them in any text field. A dead key needs our <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">MacBook keyboard repair in Dubai</Link>.</li>
             <li><strong>Restart the Mac:</strong> a full restart clears any stuck clipboard process - the simplest fix when nothing else works.</li>
-            <li><strong>System still glitchy?</strong> If copy-paste failing is part of wider freezing or sluggishness, run through our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">slow MacBook fixes</Link>, or book a <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">full MacBook diagnostic in Dubai</Link>.</li>
+            <li><strong>System still glitchy?</strong> If copy-paste failing is part of wider freezing or sluggishness, run through our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">slow MacBook fixes</Link>, or book a <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">full MacBook diagnostic in Dubai</Link>.</li>
           </ul>
 
           <h2>Need hands-on help in Dubai?</h2>
@@ -160,12 +160,12 @@ export default function GuideCopyPasteMacBook() {
             If a faulty keyboard or trackpad is getting in the way of everyday tasks like copy and
             paste, we can help. Bring your MacBook to our Dubai Media City workshop, or use our
             free pickup across Dubai.{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook Repair Dubai
             </Link>{" "}
             has been fixing Apple devices since 2004 - free diagnosis, free pickup, and a 90-day
             warranty. Call or WhatsApp 055 741 3706, or get in touch via our{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">contact page</Link>.
+            <Link to="/contact" className="text-accent font-semibold hover:underline">contact page</Link>.
           </p>
         </>
       }

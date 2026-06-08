@@ -25,7 +25,7 @@ export default function MacSsdUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The story splits sharply by model.</strong> Mac Mini 2014 and earlier shipped with a standard SATA or PCIe SSD that we can swap for a 1TB or 2TB drive in the same afternoon. Mac Mini 2018 Intel has a soldered SSD - not upgradeable. M1, M2 and M4 Mac Minis: SSD is fused to the SoC chip - not upgradeable.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Studio is the interesting case. Apple uses physical removable storage modules - they look like an SSD upgrade waiting to happen. They are not. The modules are paired by Apple to the M-series chip's encryption controller and a third-party module won't boot. Apple-genuine matched modules are available through limited channels and we can quote them by serial. For most owners the better answer is a fast Thunderbolt 4 external SSD - we'll explain why and which models hit the right speeds.
           </p>
         </>

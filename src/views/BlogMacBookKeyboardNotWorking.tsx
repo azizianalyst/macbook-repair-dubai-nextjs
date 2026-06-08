@@ -41,7 +41,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             Media City workshop turn out to be a setting toggled on by accident or a stray remapping
             app, both free to fix. The rest are genuine hardware: debris under a key, an old spill, or
             a battery swelling up underneath. If it does need the keyboard replaced, our{" "}
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair
             </Link>{" "}
             starts at AED 150 for a single key.
@@ -121,7 +121,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             Coffee, water or juice across the keyboard seeps under the keys and corrodes the membrane
             or the ribbon. The keyboard might half-work for a day, then fade. Speed matters here. Power
             it off, don't charge it, and bring it in fast. We cover the first steps in our{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage repair
             </Link>{" "}
             page, and the sooner it reaches the bench the better the outcome.
@@ -146,7 +146,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             Spill cleaning and ribbon work starts from AED 400 depending on the damage. Battery
             replacement to stop the swelling is from AED 450. The full model-by-model breakdown is in
             our{" "}
-            <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent font-semibold hover:underline">
               keyboard repair cost guide
             </Link>.
           </p>

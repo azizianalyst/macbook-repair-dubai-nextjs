@@ -34,7 +34,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
           </ul>
           <p>
             All of this is intentional - Apple documents it on{" "}
-            <a href="https://support.apple.com/en-us/HT201678" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">support.apple.com</a>. None of it is a fault by itself.
+            <a href="https://support.apple.com/en-us/HT201678" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">support.apple.com</a>. None of it is a fault by itself.
           </p>
 
           <h2>Common heat triggers in Dubai</h2>
@@ -59,7 +59,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
           <ol className="list-decimal list-inside space-y-xs">
             <li>Move into AC. Lay the phone flat (not on fabric) so heat can radiate from both glass surfaces.</li>
             <li>Power off if possible - recovery time drops from 20 min to 8-10 min.</li>
-            <li>Disable 5G temporarily: <code className="px-1 rounded bg-white/[0.04] mono text-[13px]">Settings → Cellular → Voice & Data → LTE</code>.</li>
+            <li>Disable 5G temporarily: <code className="px-1 rounded bg-bg-card mono text-[13px]">Settings → Cellular → Voice & Data → LTE</code>.</li>
             <li>Lower screen brightness - auto-brightness in Dubai daylight runs the OLED near maximum, which is itself a heat source.</li>
             <li>Close camera, navigation, and any AR app.</li>
           </ol>
@@ -72,7 +72,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <li>Hot when idle in AC, doing nothing - possibly a stuck baseband or rogue background process. Force-restart and check battery usage in Settings.</li>
             <li>One spot specifically hot (top edge near camera, or back centre near MagSafe) when the rest of the chassis is cool - possible failed component.</li>
             <li>Sudden battery-health drop after a hot incident - see our{" "}
-              <Link to="/blog/iphone-15-pro-overheating-fix" className="text-accent-bright font-semibold hover:underline">iPhone 15 Pro overheating diagnostics guide</Link>.
+              <Link to="/blog/iphone-15-pro-overheating-fix" className="text-accent font-semibold hover:underline">iPhone 15 Pro overheating diagnostics guide</Link>.
             </li>
             <li>Phone reboots itself during normal use in AC - possible thermal sensor fault or swollen battery contacting board.</li>
           </ul>
@@ -83,7 +83,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
           </p>
           <p>
             If your iPhone is 18-24 months old and battery health is already below 85%, replacement is the fix - see our{" "}
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">iPhone battery replacement service</Link>.
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">iPhone battery replacement service</Link>.
           </p>
 
           <h2>iPhone 17 Pro vapor chamber (handles heat better)</h2>

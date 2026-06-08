@@ -20,7 +20,7 @@ export default function BlogIPhoneFold2026() {
       featuredImageAlt="iPhone Fold 2026 expected design Dubai launch"
       body={
         <>
-          <p className="text-[14px] text-on-primary-muted italic">
+          <p className="text-[14px] text-text-muted italic">
             <strong>A note on sourcing:</strong> Everything below is either (a) confirmed by Apple, (b) leaked
             from multiple supply-chain sources (Kuo, Gurman, DSCC, Nikkei), or (c) clearly labelled as our
             educated guess. Foldable launches historically slip - even September 2026 is not guaranteed.
@@ -130,9 +130,9 @@ export default function BlogIPhoneFold2026() {
           />
 
           <p>
-            Pre-ordering the iPhone Fold? Bookmark our <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">iPhone repair page</Link>{" "}
+            Pre-ordering the iPhone Fold? Bookmark our <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">iPhone repair page</Link>{" "}
             - we'll add a dedicated Fold service page within 48 hours of launch. In the meantime, Apple's official iPhone announcement page is at{" "}
-            <a href="https://www.apple.com/iphone/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">apple.com/iphone</a>.
+            <a href="https://www.apple.com/iphone/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">apple.com/iphone</a>.
           </p>
         </>
       }

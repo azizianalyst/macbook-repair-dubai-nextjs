@@ -25,7 +25,7 @@ export default function IPhoneHomeButtonRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Honest disclosure first.</strong> If your home button is broken on an iPhone 7 or later, we can replace the button so it clicks again - but <strong>Touch ID will not work on the new button</strong>. Apple pairs each fingerprint sensor to the logic board at the factory. Only Apple themselves can re-pair a new sensor (and they only do it under warranty by replacing the whole phone). Anyone in Dubai promising "Touch ID restored" is lying. We won't.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             What we <em>can</em> do: restore the click and the home function so you can press, double-press for app switcher and triple-press for Accessibility. For Touch ID, we set up AssistiveTouch on-screen during the same visit at no extra charge. AED 200, same day.
           </p>
         </>

@@ -43,14 +43,14 @@ export default function MacbookNeoRepair() {
             <li>• <strong>Starting price:</strong> $599 USD (~AED 2,200)</li>
           </ul>
 
-          <div className="bg-white/[0.04] border-l-4 border-accent rounded-md p-lg mb-lg">
+          <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
             <h3 className="text-[18px] font-bold mb-sm">MacBook Neo - Apple&apos;s first A-chip MacBook</h3>
             <p className="text-[15px] mb-sm">
               Released March 2026 at $599, MacBook Neo is Apple&apos;s budget MacBook. It uses the <strong>A18 Pro chip (iPhone-class)</strong> instead of M-series silicon. This makes it cheaper to manufacture but limits pro workflows.
             </p>
             <p className="text-[15px] mb-sm">
               For students and light users, it&apos;s a great machine. For power users, get a{" "}
-              <Link to="/macbook-air-13-m5-2026-repair-dubai" className="text-accent-bright font-semibold hover:underline">MacBook Air M5</Link> instead.
+              <Link to="/macbook-air-13-m5-2026-repair-dubai" className="text-accent font-semibold hover:underline">MacBook Air M5</Link> instead.
             </p>
             <p className="text-[15px]">
               <strong>Can we repair it?</strong> Yes. Same hands that fix iPhone 17 A19 chips handle A18 Pro. But parts are still ramping - most repairs are ready in 3-5 days, not same-day yet.
@@ -58,7 +58,7 @@ export default function MacbookNeoRepair() {
           </div>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we&apos;re seeing on the Neo</h2>
-          <p className="text-[15px] mb-md text-on-primary-muted">
+          <p className="text-[15px] mb-md text-text-muted">
             <em>The Neo is brand new (March 2026). The list below is what we&apos;re seeing in the first weeks of service - it will evolve as more units age.</em>
           </p>
           <ul className="space-y-2 text-[15px] mb-lg">
@@ -71,9 +71,9 @@ export default function MacbookNeoRepair() {
           </ul>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the Neo</h2>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04] mb-lg">
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-white/[0.04]">
+              <thead className="bg-bg-card">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
                   <th className="px-md py-sm font-semibold">Price (AED)</th>
@@ -82,24 +82,24 @@ export default function MacbookNeoRepair() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="px-md py-sm">12.9" Liquid Retina screen replacement</td><td className="px-md py-sm">650</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">450</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Magic Keyboard repair (top-case)</td><td className="px-md py-sm">550</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">Trackpad repair</td><td className="px-md py-sm">400</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-trackpad-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C / Thunderbolt 4 port repair</td><td className="px-md py-sm">400</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">MagSafe 3 board replacement</td><td className="px-md py-sm">350</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">A18 Pro logic board (component-level)</td><td className="px-md py-sm">1500</td><td className="px-md py-sm">5-7 days</td><td className="px-md py-sm"><Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-white/[0.02]"><td className="px-md py-sm">Liquid damage diagnostic + clean</td><td className="px-md py-sm">600</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Free diagnostic</td><td className="px-md py-sm">Free</td><td className="px-md py-sm">30 minutes</td><td className="px-md py-sm"><Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">12.9" Liquid Retina screen replacement</td><td className="px-md py-sm">650</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">450</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Magic Keyboard repair (top-case)</td><td className="px-md py-sm">550</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Trackpad repair</td><td className="px-md py-sm">400</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-trackpad-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C / Thunderbolt 4 port repair</td><td className="px-md py-sm">400</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">MagSafe 3 board replacement</td><td className="px-md py-sm">350</td><td className="px-md py-sm">3 days</td><td className="px-md py-sm"><Link to="/macbook-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">A18 Pro logic board (component-level)</td><td className="px-md py-sm">1500</td><td className="px-md py-sm">5-7 days</td><td className="px-md py-sm"><Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Liquid damage diagnostic + clean</td><td className="px-md py-sm">600</td><td className="px-md py-sm">3-5 days</td><td className="px-md py-sm"><Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Free diagnostic</td><td className="px-md py-sm">Free</td><td className="px-md py-sm">30 minutes</td><td className="px-md py-sm"><Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
 
-          <div className="bg-white/[0.04] border-l-4 border-accent rounded-md p-lg mb-lg">
+          <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
             <h3 className="text-[18px] font-bold mb-sm">Can we upgrade the RAM or SSD?</h3>
             <p className="text-[15px]">
               <strong>No.</strong> Like every Apple Silicon Mac, the A18 Pro&apos;s 8GB RAM is unified into the SoC and the SSD is soldered. Buy enough storage when you order - there&apos;s no upgrade path. For data on a failed SSD we offer chip-off recovery (AED 2,000+).{" "}
-              <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">More on data recovery →</Link>
+              <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">More on data recovery →</Link>
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export default function MacbookNeoRepair() {
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the MacBook Neo still worth repairing?</h2>
-          <div className="bg-white/[0.04] border-l-4 border-primary rounded-md p-lg mb-lg">
+          <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">Yes - and check Apple&apos;s warranty first</p>
             <p className="text-[15px]">
               The Neo is in Apple&apos;s current lineup. Most units are still under the standard 1-year warranty or AppleCare+. Always start with the Apple Store. We&apos;re here for accidental damage Apple won&apos;t cover and out-of-warranty work. At $599 new, the math on a paid screen replacement (AED 650) is borderline - we&apos;ll always show you the numbers honestly before you commit.
@@ -119,26 +119,26 @@ export default function MacbookNeoRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Our honest take on the MacBook Neo</h2>
           <p className="text-[15px] mb-lg">
             The Neo is a brilliant idea: a real Mac at a real student price. The A18 Pro is fast for everyday use - web, Pages, Numbers, Safari, FaceTime - and battery life is excellent. But it&apos;s not an M-series. Heavy Final Cut, Logic, Xcode or AI workloads will feel constrained. If you&apos;re a student, writer, or light user, the Neo is fantastic. If you&apos;re a creator or developer, spend the extra and get a{" "}
-            <Link to="/macbook-air-13-m5-2026-repair-dubai" className="text-accent-bright font-semibold hover:underline">MacBook Air M5</Link>.
+            <Link to="/macbook-air-13-m5-2026-repair-dubai" className="text-accent font-semibold hover:underline">MacBook Air M5</Link>.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Other MacBook models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
-            <Link to="/macbook-air-13-m5-2026-repair-dubai" className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors">
+            <Link to="/macbook-air-13-m5-2026-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
               <div className="font-semibold">Air 13" M5</div>
-              <div className="text-on-primary-muted text-[12px] mt-[2px]">2026 · M5</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">2026 · M5</div>
             </Link>
-            <Link to="/macbook-air-13-m4-2025-repair-dubai" className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors">
+            <Link to="/macbook-air-13-m4-2025-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
               <div className="font-semibold">Air 13" M4</div>
-              <div className="text-on-primary-muted text-[12px] mt-[2px]">2025 · M4</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">2025 · M4</div>
             </Link>
-            <Link to="/macbook-air-13-m1-2020-repair-dubai" className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors">
+            <Link to="/macbook-air-13-m1-2020-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
               <div className="font-semibold">Air 13" M1</div>
-              <div className="text-on-primary-muted text-[12px] mt-[2px]">2020 · M1</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">2020 · M1</div>
             </Link>
-            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors">
+            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
               <div className="font-semibold">Pro 14" M5</div>
-              <div className="text-on-primary-muted text-[12px] mt-[2px]">2025 · M5</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">2025 · M5</div>
             </Link>
           </div>
         </>

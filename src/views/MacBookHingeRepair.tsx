@@ -25,7 +25,7 @@ export default function MacBookHingeRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We carry hinge hardware for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 Retina Pros where seized hinges are common.
           </p>
         </>

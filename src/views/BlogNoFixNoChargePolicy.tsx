@@ -102,7 +102,7 @@ export default function BlogNoFixNoChargePolicy() {
           </ul>
           <p>
             See our{" "}
-            <Link to="/blog/iphone-repair-vs-replace-decision-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-repair-vs-replace-decision-guide" className="text-accent font-semibold hover:underline">
               repair-or-replace decision guide
             </Link>{" "}
             for the full framework.

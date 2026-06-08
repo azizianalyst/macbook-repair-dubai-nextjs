@@ -25,7 +25,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt, ca
   }, []);
 
   return (
-    <figure className={cn("rounded-md overflow-hidden", dark ? "border border-white/10 bg-white/[0.04]" : "border border-border bg-bg-card shadow-sm")}>
+    <figure className={cn("rounded-md overflow-hidden", dark ? "border border-border bg-bg-card" : "border border-border bg-bg-card shadow-sm")}>
       <div
         ref={wrap}
         className="relative aspect-[16/9] select-none touch-none"
@@ -55,11 +55,11 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt, ca
           className="absolute inset-0 opacity-0 cursor-ew-resize"
         />
 
-        <span className="absolute top-2 left-2 mono text-[11px] uppercase bg-black/60 text-on-primary px-2 py-1 rounded-sm">Before</span>
-        <span className="absolute top-2 right-2 mono text-[11px] uppercase bg-primary text-on-primary px-2 py-1 rounded-sm">After</span>
+        <span className="absolute top-2 left-2 mono text-[11px] uppercase bg-black/60 text-white px-2 py-1 rounded-sm">Before</span>
+        <span className="absolute top-2 right-2 mono text-[11px] uppercase bg-bg-alt text-text px-2 py-1 rounded-sm">After</span>
       </div>
       {caption && (
-        <figcaption className={cn("px-md py-sm text-[13px] border-t", dark ? "text-on-primary-muted border-white/10" : "text-text-muted border-border")}>{caption}</figcaption>
+        <figcaption className={cn("px-md py-sm text-[13px] border-t", dark ? "text-text-muted border-border" : "text-text-muted border-border")}>{caption}</figcaption>
       )}
     </figure>
   );

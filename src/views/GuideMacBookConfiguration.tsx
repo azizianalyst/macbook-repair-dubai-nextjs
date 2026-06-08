@@ -38,11 +38,11 @@ export default function GuideMacBookConfiguration() {
           <p>
             This is the opposite of the old Intel MacBooks (2010-2017), many of which had
             socketed RAM and removable 2.5" drives. We still do{" "}
-            <Link to="/macbook-ram-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-ram-upgrade-dubai" className="text-accent font-semibold hover:underline">
               RAM upgrades
             </Link>{" "}
             and{" "}
-            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent font-semibold hover:underline">
               SSD upgrades on Intel MacBooks
             </Link>{" "}
             every week - but to be completely clear: <strong>M-series machines cannot be
@@ -133,7 +133,7 @@ export default function GuideMacBookConfiguration() {
           <p>
             One more thing buyers ask us constantly: is it worth jumping to the newest chip? See our
             honest take in{" "}
-            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent font-semibold hover:underline">
               MacBook Pro M4 vs M5: worth upgrading?
             </Link>
           </p>
@@ -150,7 +150,7 @@ export default function GuideMacBookConfiguration() {
             Rule of thumb: if your work comes in short bursts, buy the Air. If you push the chip hard
             for long stretches (video exports, big compiles), the Pro's fan keeps it fast. We break
             down every difference in{" "}
-            <Link to="/blog/macbook-air-vs-macbook-pro-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-air-vs-macbook-pro-2026" className="text-accent font-semibold hover:underline">
               MacBook Air vs MacBook Pro 2026
             </Link>.
           </p>
@@ -184,21 +184,21 @@ export default function GuideMacBookConfiguration() {
               <strong>Student</strong> - MacBook Air, M-base, <strong>16GB RAM</strong>,
               256-512GB SSD. Light, silent, lasts all day, and the 16GB keeps it usable
               through a full degree. Full picks in{" "}
-              <Link to="/blog/best-macbook-for-students-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+              <Link to="/blog/best-macbook-for-students-dubai-2026" className="text-accent font-semibold hover:underline">
                 best MacBook for students Dubai 2026
               </Link>.
             </li>
             <li>
               <strong>Developer</strong> - MacBook Pro, M Pro, <strong>24-32GB RAM</strong>,
               512GB-1TB SSD. Containers, simulators and large builds eat memory. See{" "}
-              <Link to="/blog/best-mac-for-developers-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+              <Link to="/blog/best-mac-for-developers-dubai-2026" className="text-accent font-semibold hover:underline">
                 best Mac for developers Dubai 2026
               </Link>.
             </li>
             <li>
               <strong>Creative pro</strong> - MacBook Pro, M Pro/Max, <strong>32GB+ RAM</strong>,
               1TB+ SSD, 16" display. Video, 3D and heavy Photoshop reward every spec. Details in{" "}
-              <Link to="/blog/best-mac-for-creative-pros-dubai" className="text-accent-bright font-semibold hover:underline">
+              <Link to="/blog/best-mac-for-creative-pros-dubai" className="text-accent font-semibold hover:underline">
                 best Mac for creative pros Dubai
               </Link>.
             </li>
@@ -213,11 +213,11 @@ export default function GuideMacBookConfiguration() {
           <p>
             You do not always need to buy new. A certified refurbished MacBook can be 15-25%
             cheaper for the same warranty-grade hardware - we walk through what to check in{" "}
-            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent font-semibold hover:underline">
               should I buy a refurbished MacBook in Dubai?
             </Link>{" "}
             And if you are replacing an older machine, we accept{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               trade-ins
             </Link>{" "}
             - bring your old MacBook in and we will value it toward your next one.
@@ -227,12 +227,12 @@ export default function GuideMacBookConfiguration() {
           <p>
             We are not a retailer, so our advice has no sales agenda - we just want you to buy
             the right machine so you never regret the config. Call us on{" "}
-            <a href="tel:+971557413706" className="text-accent-bright font-semibold hover:underline">
+            <a href="tel:+971557413706" className="text-accent font-semibold hover:underline">
               055 741 3706
             </a>{" "}
             or visit Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. And if your
             current MacBook just needs fixing rather than replacing, see{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair Dubai
             </Link>.
           </p>

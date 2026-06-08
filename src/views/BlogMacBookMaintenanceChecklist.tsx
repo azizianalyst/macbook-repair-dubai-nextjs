@@ -26,7 +26,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             the pattern barely changes - people wait until the fan screams or the thing shuts down on
             its own, when a simple routine would have caught it months earlier. If you want the short
             version: do the monthly checks below, and book a{" "}
-            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent font-semibold hover:underline">
               full internal clean and maintenance service
             </Link>{" "}
             once a year. That's 90% of it.
@@ -101,7 +101,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             fans and heatsink, clean the ports, check for early corrosion, and run a thermal check
             before it goes back. Once a year is right for most people in Dubai. If you work near a
             building site or notice fans roaring at idle, every six to nine months. See the{" "}
-            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent font-semibold hover:underline">
               MacBook cleaning and maintenance page
             </Link>{" "}
             for what's included.
@@ -119,7 +119,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             For anything you can't lose - business files, photos, a thesis - run a second copy off-site
             too, either iCloud or a cloud sync. If you'd rather have it set up and verified properly,
             our{" "}
-            <Link to="/macbook-backup-service-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-backup-service-dubai" className="text-accent font-semibold hover:underline">
               MacBook backup service
             </Link>{" "}
             handles the drive, the schedule and a restore test so you know it actually works.
@@ -136,7 +136,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             On Apple Silicon, shut down, hold the power button until "Loading startup options" appears,
             pick your disk, then hold Shift and click "Continue in Safe Mode". On Intel, restart and
             hold Shift. If you're stuck or Safe Mode won't load, our{" "}
-            <Link to="/macbook-safe-mode-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-safe-mode-repair-dubai" className="text-accent font-semibold hover:underline">
               Safe Mode diagnostic and repair service
             </Link>{" "}
             sorts out which faults are software and which need the bench. Diagnosis is free.
@@ -151,7 +151,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             mistake. Internal cleaning, battery swaps and thermal-paste work belong on a bench. A
             MacBook battery, for the record, is AED 450 for an Air and up to AED 600 for a 14-inch or
             16-inch Pro - see the{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement page
             </Link>{" "}
             for the full list.
@@ -160,7 +160,7 @@ export default function BlogMacBookMaintenanceChecklist() {
           <h2>For businesses: hand the whole routine over</h2>
           <p>
             If you run a team of Macs, doing this per-machine doesn't scale. Our{" "}
-            <Link to="/annual-maintenance-contract-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/annual-maintenance-contract-dubai" className="text-accent font-semibold hover:underline">
               annual maintenance contract
             </Link>{" "}
             covers scheduled cleans, battery-health reviews and priority pickup across Dubai mainland,

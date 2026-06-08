@@ -25,7 +25,7 @@ export default function MacBookGpuRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook GPU repair in Dubai</strong> mostly means one thing: 2016-2019 MacBook Pros with discrete AMD Radeon Pro 555 / 560 / 5300M / 5500M chips that develop solder-bond cracks under thermal cycling. Symptoms: kernel panics during 4K video playback, garbled lines on the display, random black screens, machine boots fine then dies under GPU load.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We replace the GPU die with reballed Apple-spec stock - not a reflow (which buys weeks at most). Done with controlled hot-air profile and fresh BGA balls. Lasts as long as the original. Apple Silicon MacBooks (M1+) have integrated GPUs on the SoC and are not separately repairable.
           </p>
         </>

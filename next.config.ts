@@ -9,7 +9,20 @@ const nextConfig: NextConfig = {
   // Legacy WordPress URLs -> new pages (301). Ported from the live site's .htaccess
   // so old indexed/linked URLs keep resolving. Regenerate via scripts (see redirects.generated.ts).
   async redirects() {
-    return REDIRECTS;
+    return [
+      // Canonical host: www -> non-www (301). The site's canonical is the bare apex
+      // (https://macbook-repair-dubai.ae); without this, www is a crawlable duplicate
+      // that only canonical-tags away. A hard 301 collapses both into one indexable host.
+      // Behind Hostinger's reverse proxy the Node app sees Host: localhost, and the real
+      // requested hostname arrives in x-forwarded-host — so we match that, not `type: host`.
+      {
+        source: "/:path*",
+        has: [{ type: "header", key: "x-forwarded-host", value: "www.macbook-repair-dubai.ae" }],
+        destination: "https://macbook-repair-dubai.ae/:path*",
+        permanent: true,
+      },
+      ...REDIRECTS,
+    ];
   },
   // Security headers for the Node deploy (the .htaccess does NOT apply to a Node app).
   // CSP allows the app's real externals: GA (script/connect) + Google Maps (frame).

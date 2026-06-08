@@ -26,10 +26,10 @@ export default function IPhoneWaterDamageRepair() {
       pricingCaption="No-fix-no-charge applies. If the phone can't be saved, only the diagnostic AED 100 is charged for unrecoverable phones."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone water damage repair in Dubai starts at AED 350 with the no-fix-no-charge guarantee - if the phone can't be saved, only the AED 100 diagnostic is charged. The single biggest factor in success is time. Within 4 hours of contact, success rate is around 90%. Within 24 hours, around 70%. Beyond 72 hours, corrosion has spread across the logic board and success drops below 30%. The workshop opens at 9 am Mon-Sat; outside hours WhatsApp the photo and the phone will be collected first thing.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             IP68 (rated for 6m water for 30 minutes on iPhone 12+) is not a guarantee. Apple's small print specifies fresh water at room temperature, no soap, no pressure, no salt, and a fully sealed device. Beach water has salt and abrasive sand. Pool water has chlorine. Coffee has sugar. Wine has acid. Hot water vapourises and pushes past the silicone seals. Any drop or repair history breaks the IP68 rating entirely. The workshop sees IP68-rated phones with water damage every week. Do not rely on the rating once water has actually entered.
           </p>
         </>

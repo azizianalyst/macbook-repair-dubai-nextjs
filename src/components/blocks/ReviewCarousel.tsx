@@ -42,7 +42,7 @@ export function ReviewCarousel({ reviews, intervalMs = 6000 }: Props) {
         <button
           onClick={() => setI((x) => (x - 1 + reviews.length) % reviews.length)}
           aria-label="Previous review"
-          className="w-10 h-10 rounded-md border border-white/20 flex items-center justify-center hover:bg-white/[0.04]"
+          className="w-10 h-10 rounded-md border border-border-strong flex items-center justify-center hover:bg-bg-alt"
         >
           <ChevronLeft size={18} aria-hidden />
         </button>
@@ -55,7 +55,7 @@ export function ReviewCarousel({ reviews, intervalMs = 6000 }: Props) {
               aria-selected={idx === i}
               className={
                 "w-2 h-2 rounded-full transition-colors " +
-                (idx === i ? "bg-primary" : "bg-border-strong")
+                (idx === i ? "bg-bg-alt" : "bg-border-strong")
               }
             />
           ))}
@@ -63,7 +63,7 @@ export function ReviewCarousel({ reviews, intervalMs = 6000 }: Props) {
         <button
           onClick={() => setI((x) => (x + 1) % reviews.length)}
           aria-label="Next review"
-          className="w-10 h-10 rounded-md border border-white/20 flex items-center justify-center hover:bg-white/[0.04]"
+          className="w-10 h-10 rounded-md border border-border-strong flex items-center justify-center hover:bg-bg-alt"
         >
           <ChevronRight size={18} aria-hidden />
         </button>

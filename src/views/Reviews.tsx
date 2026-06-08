@@ -70,7 +70,7 @@ export default function Reviews() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       {/* Server-rendered JSON-LD: business + organization + AggregateRating (star rating) + Review nodes */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
@@ -85,7 +85,7 @@ export default function Reviews() {
         title="Real Reviews from Real Customers"
         subtitle="Every review below is a verified Google review. Nothing edited, nothing rewritten."
       >
-        <p className="mt-sm text-[13px] text-on-primary-muted mono">
+        <p className="mt-sm text-[13px] text-text-muted mono">
           21+ years in Dubai · {WRITTEN_REVIEW_COUNT} written reviews on this page
         </p>
       </Hero>
@@ -99,10 +99,10 @@ export default function Reviews() {
         <h2 className="text-[28px] md:text-[36px] font-heading font-extrabold mb-md">
           MacBook Repair Dubai - {REVIEW_COUNT}+ Google Reviews
         </h2>
-        <div className="flex flex-col gap-sm text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch]">
+        <div className="flex flex-col gap-sm text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
           <p>
             Every review below is a real, unedited Google review posted directly to our{" "}
-            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               Google Business Profile
             </a>
             . Nothing has been rewritten, curated, or removed. {REVIEW_COUNT}+ verified reviews,{" "}
@@ -120,7 +120,7 @@ export default function Reviews() {
 
       <section aria-labelledby="filters" className="mx-auto max-w-content px-5 md:px-6 mt-md">
         <h2 id="filters" className="sr-only">Filter reviews</h2>
-        <div className="border border-white/10 bg-white/[0.04] rounded-md p-md flex flex-col gap-md">
+        <div className="border border-border bg-bg-card rounded-md p-md flex flex-col gap-md">
           <FilterRow label="Service">
             {SERVICE_FILTERS.map((s) => (
               <Chip
@@ -149,14 +149,14 @@ export default function Reviews() {
             ))}
           </FilterRow>
         </div>
-        <p className="mt-sm text-[13px] text-on-primary-muted mono">
+        <p className="mt-sm text-[13px] text-text-muted mono">
           Showing {visibleReviews.length} of {filtered.length} matching reviews · sorted newest first
         </p>
       </section>
 
       <section aria-label="Customer reviews" className="mx-auto max-w-content px-5 md:px-6 mt-lg">
         {filtered.length === 0 ? (
-          <p className="text-on-primary-muted py-xl text-center">
+          <p className="text-text-muted py-xl text-center">
             No reviews match these filters. Try resetting one.
           </p>
         ) : (
@@ -185,9 +185,9 @@ export default function Reviews() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="border border-white/10 bg-white/[0.04] rounded-md p-xl text-center flex flex-col items-center gap-md">
+        <div className="border border-border bg-bg-card rounded-md p-xl text-center flex flex-col items-center gap-md">
           <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[60ch]">
+          <p className="text-[16px] text-text-muted max-w-[60ch]">
             Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
           </p>
           <Button asChild variant="primary">
@@ -200,10 +200,10 @@ export default function Reviews() {
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl pb-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <MessageSquareQuote size={28} className="text-accent-bright" aria-hidden />
+          <MessageSquareQuote size={28} className="text-accent" aria-hidden />
           Why every review gets a reply
         </h2>
-        <div className="prose-tight max-w-[70ch] text-on-primary-muted text-[16px] leading-relaxed flex flex-col gap-md">
+        <div className="prose-tight max-w-[70ch] text-text-muted text-[16px] leading-relaxed flex flex-col gap-md">
           <p>
             Shafiq reads every Google review the day it lands. The reply comes from a real person at the Concord Tower office - not a marketing agency, not an automated bot.
           </p>
@@ -237,7 +237,7 @@ export default function Reviews() {
 function FilterRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-wrap items-center gap-sm">
-      <span className="text-[12px] uppercase tracking-wider text-on-primary-faint mono w-[72px] shrink-0">
+      <span className="text-[12px] uppercase tracking-wider text-text-faint mono w-[72px] shrink-0">
         {label}
       </span>
       <div className="flex flex-wrap gap-1">{children}</div>
@@ -256,8 +256,8 @@ function Chip({
       className={[
         "px-3 py-1.5 text-[13px] rounded-md border transition-colors",
         active
-          ? "bg-accent-bright text-accent-bright border-accent-bright font-semibold"
-          : "bg-white/[0.04] text-on-primary-muted border-white/10 hover:border-accent-bright hover:text-accent-bright",
+          ? "bg-accent text-accent border-accent font-semibold"
+          : "bg-bg-card text-text-muted border-border hover:border-accent hover:text-accent",
       ].join(" ")}
     >
       {children}

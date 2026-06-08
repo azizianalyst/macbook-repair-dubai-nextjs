@@ -18,7 +18,7 @@ import LandingTemplate from "@/components/blocks/LandingTemplate";
 import { GradientText } from "@/components/blocks/GradientText";
 
 // inline contextual link style for the dark band (descriptive-anchor internal links)
-const ilink = "text-accent-bright underline underline-offset-2 hover:text-white rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright";
+const ilink = "text-accent underline underline-offset-2 hover:text-white rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 import { localBusiness, organization, service as serviceSchema, faqPage, person, aggregateRating, reviewSchema } from "@/lib/schema";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 

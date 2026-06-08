@@ -25,7 +25,7 @@ export default function IMacOverheatingFix() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Dubai's combination of fine dust and 12 months of air-conditioning is brutal on iMac cooling.</strong> A 2017 or 2019 iMac that's been sitting on a desk for five years almost always has a thick mat of dust across the heatsink fins behind the display - exactly where the fan is trying to push air through. The result: the fan spins flat-out, the casing gets hot to touch and the CPU throttles down to half its rated speed.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The fix isn't expensive but it does require display removal, which is the same delicate process we do for SSD upgrades. Once open, we vacuum the dust, replace the dried-out thermal paste between CPU/GPU and heatsink, swap any compressed thermal pads, and inspect the fan bearing. The iMac comes back quiet, cool and running at full speed - usually 20-30% faster in benchmarks because throttling is gone.
           </p>
         </>

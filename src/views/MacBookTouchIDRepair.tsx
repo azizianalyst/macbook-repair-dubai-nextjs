@@ -25,7 +25,7 @@ export default function MacBookTouchIDRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             On every Touch ID MacBook the fingerprint sensor doubles as the power button, sitting at the top-right of the keyboard. When it fails you get one of a few things: fingerprints won't enrol, the sensor ignores your touch, "Touch ID has been disabled" keeps appearing, or the button won't power the machine on at all. We diagnose whether it's the sensor, the flex, or the power circuit on the board, and repair it from <strong>AED 350</strong> with a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Here's the honest part, and you won't get it from every shop in Dubai. On T2 and Apple Silicon MacBooks the Touch ID sensor is cryptographically paired to your logic board at the factory. We can always restore the <strong>power-button function</strong> so the machine turns on normally. Restoring fingerprint enrolment with a brand-new sensor needs Apple's pairing tool, which is Apple-only - so if your original sensor can't be reused, we'll tell you upfront that fingerprint may not come back, rather than take your money and hand you a half-working button. We've run board-level work at Concord Tower, Dubai Media City since 2004 and we'd rather be straight with you.
           </p>
         </>

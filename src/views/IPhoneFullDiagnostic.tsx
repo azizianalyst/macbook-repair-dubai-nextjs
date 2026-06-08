@@ -25,7 +25,7 @@ export default function IPhoneFullDiagnostic() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Walk in with a problem, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 20-point check on every iPhone - battery health, screen quality, all four mics, both speakers, all ports, all antennas, Face ID or Touch ID, water-damage indicators, and a software-side check for jailbreaks or rogue profiles.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 20% of iPhones we see don't actually need a repair - they need a software reset, a free port clean, or a battery replacement they could schedule for next month. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything.
           </p>
         </>

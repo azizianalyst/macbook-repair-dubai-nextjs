@@ -68,7 +68,7 @@ const servicesFor = (m: Model) => {
 const aed = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const SELECT =
-  "w-full rounded-md border border-white/15 bg-white/[0.06] px-3.5 h-11 text-[15px] text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright";
+  "w-full rounded-md border border-border bg-bg-card px-3.5 h-11 text-[15px] text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 
 export function QuoteCalculator() {
   const [typeIdx, setTypeIdx] = useState(0);
@@ -98,48 +98,48 @@ export function QuoteCalculator() {
   const waHref = `${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg md:p-xl">
+    <div className="rounded-2xl border border-border bg-bg-card p-lg md:p-xl">
       <div className="grid gap-md sm:grid-cols-3">
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Device</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Device</span>
           <select className={SELECT} value={typeIdx} onChange={(e) => onType(Number(e.target.value))} aria-label="Device type">
             {GROUPS.map((g, i) => <option key={g.type} value={i}>{g.type}</option>)}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Model</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Model</span>
           <select className={SELECT} value={model?.slug} onChange={(e) => onModel(e.target.value)} aria-label="Model">
             {models.map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Repair</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Repair</span>
           <select className={SELECT} value={activeService} onChange={(e) => setService(e.target.value)} aria-label="Repair type">
             {services.map((k) => <option key={k} value={k}>{SERVICE_LABELS[k] ?? k}</option>)}
           </select>
         </label>
       </div>
 
-      <div className="mt-lg flex flex-col gap-md rounded-xl border border-accent-bright/30 bg-accent-bright/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-lg flex flex-col gap-md rounded-xl border border-accent/30 bg-accent/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
-          <Wallet size={22} className="mt-0.5 shrink-0 text-accent-bright" aria-hidden />
+          <Wallet size={22} className="mt-0.5 shrink-0 text-accent" aria-hidden />
           <div>
-            <p className="m-0 text-[13px] text-on-primary-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
-            <p className="m-0 text-[28px] font-bold leading-tight text-on-primary">{priceLabel}</p>
-            <p className="m-0 text-[12.5px] text-on-primary-faint">Indicative starting price · same-day on most repairs</p>
+            <p className="m-0 text-[13px] text-text-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
+            <p className="m-0 text-[28px] font-bold leading-tight text-text">{priceLabel}</p>
+            <p className="m-0 text-[12.5px] text-text-faint">Indicative starting price · same-day on most repairs</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">
           <Button asChild variant="whatsapp" size="lg">
             <a href={waHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Confirm on WhatsApp</a>
           </Button>
-          <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+          <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
             <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call</a>
           </Button>
         </div>
       </div>
 
-      <p className="mt-md mb-0 text-[13px] leading-relaxed text-on-primary-muted">
+      <p className="mt-md mb-0 text-[13px] leading-relaxed text-text-muted">
         Prices are our published starting rates from real per-model data. The exact price is fixed in
         writing after a free 20-minute diagnosis — and we&apos;ll tell you honestly if an Apple Store or
         AppleCare+ claim is the better route. iPhone repairs: WhatsApp us your model for a quote.

@@ -57,10 +57,10 @@ export default function MacBookGuides() {
                 <Link
                   key={g.slug}
                   to={g.slug}
-                  className="group flex items-center justify-between gap-md bg-white/[0.04] border border-white/10 rounded-md px-lg py-md hover:border-primary transition-colors"
+                  className="group flex items-center justify-between gap-md bg-bg-card border border-border rounded-md px-lg py-md hover:border-primary transition-colors"
                 >
-                  <span className="text-[15px] font-medium leading-snug group-hover:text-accent-bright">{g.title}</span>
-                  <ArrowRight size={16} className="text-accent-bright shrink-0" aria-hidden />
+                  <span className="text-[15px] font-medium leading-snug group-hover:text-accent">{g.title}</span>
+                  <ArrowRight size={16} className="text-accent shrink-0" aria-hidden />
                 </Link>
               ))}
             </div>
@@ -71,16 +71,16 @@ export default function MacBookGuides() {
       <RelatedArticles path={PATH} family="macbook" />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="bg-primary text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
-          <h2 className="text-on-primary text-[24px] md:text-[28px] max-w-[30ch]">Guide didn't solve it? We repair MacBooks across Dubai</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+        <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
+          <h2 className="text-text text-[24px] md:text-[28px] max-w-[30ch]">Guide didn't solve it? We repair MacBooks across Dubai</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Free diagnosis, free pickup across Dubai mainland, and a written 90-day warranty on every repair. Message the workshop on WhatsApp.
           </p>
           <a
             href={SITE.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md bg-white text-accent-bright font-semibold px-5 py-2.5"
+            className="inline-flex items-center gap-2 rounded-md bg-white text-accent font-semibold px-5 py-2.5"
           >
             WhatsApp 055 741 3706 <ArrowRight size={16} aria-hidden />
           </a>

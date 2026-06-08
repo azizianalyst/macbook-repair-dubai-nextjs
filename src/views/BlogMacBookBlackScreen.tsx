@@ -47,7 +47,7 @@ export default function BlogMacBookBlackScreen() {
             fan, no chime, no Caps Lock light, no faint glow from the screen. The Mac is dead to the
             world. That's a power-delivery problem - charger, charging port, battery, or a board
             fault - and it's a separate diagnostic. We've written that one up in full in our{" "}
-            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent font-semibold hover:underline">
               MacBook not turning on guide
             </Link>, so start there if your Mac is truly silent.
           </p>
@@ -128,7 +128,7 @@ export default function BlogMacBookBlackScreen() {
             a "stage light" effect along the bottom of the screen first, then a fully black or
             backlight-dead panel once it snaps. We fix dozens of these. The full story, including how
             to spot it early, is in our{" "}
-            <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">
               Flexgate explainer
             </Link>.
           </p>
@@ -145,7 +145,7 @@ export default function BlogMacBookBlackScreen() {
             If even an external monitor is black, the graphics processor may have failed - common on
             some older 15″ and 16″ Pro models that ran their discrete GPU hot. This is board-level
             work, sometimes a reball or a GPU replacement. Our{" "}
-            <Link to="/macbook-gpu-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-gpu-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook GPU repair service
             </Link>{" "}
             covers exactly this.
@@ -167,11 +167,11 @@ export default function BlogMacBookBlackScreen() {
             AED 350 to 800 since we work at component level rather than replacing the whole panel.
             Logic-board work, including GPU and video-output faults, starts from AED 800. If you'd
             rather we just look first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote, or see the{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair page
             </Link>{" "}
             for panel pricing by model.

@@ -71,9 +71,9 @@ export default function GuideMacBookLifespan() {
             comes down to a few habits and a couple of well-timed repairs:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Replace the battery when it's tired.</strong> A fresh battery is the single best-value way to make an old MacBook feel new. <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">MacBook battery replacement</Link> is AED 450 here, and it restores runtime and stops performance throttling.</li>
-            <li><strong>Upgrade the SSD (Intel models).</strong> If you have an Intel MacBook with a small or slow drive, an <Link to="/macbook-ssd-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">SSD upgrade</Link> (AED 700) makes it faster and gives you years more headroom. Soldered Apple Silicon drives can't be changed - one more reason to size up at purchase.</li>
-            <li><strong>Keep it cool and clean.</strong> Don't let dust choke the fans - see our <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">overheating fix</Link>. Fan and heatsink cleaning is AED 200 and protects the chip from years of heat stress.</li>
+            <li><strong>Replace the battery when it's tired.</strong> A fresh battery is the single best-value way to make an old MacBook feel new. <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">MacBook battery replacement</Link> is AED 450 here, and it restores runtime and stops performance throttling.</li>
+            <li><strong>Upgrade the SSD (Intel models).</strong> If you have an Intel MacBook with a small or slow drive, an <Link to="/macbook-ssd-upgrade-dubai" className="text-accent font-semibold hover:underline">SSD upgrade</Link> (AED 700) makes it faster and gives you years more headroom. Soldered Apple Silicon drives can't be changed - one more reason to size up at purchase.</li>
+            <li><strong>Keep it cool and clean.</strong> Don't let dust choke the fans - see our <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">overheating fix</Link>. Fan and heatsink cleaning is AED 200 and protects the chip from years of heat stress.</li>
             <li><strong>Install macOS updates</strong> while your model is still supported, and keep 15% of the SSD free so the system isn't constantly thrashing storage.</li>
             <li><strong>Manage charging.</strong> Use Optimized Battery Charging and avoid sitting at 100% in the heat for days on end - that ages the cell faster.</li>
           </ul>
@@ -115,9 +115,9 @@ export default function GuideMacBookLifespan() {
           </p>
           <p>
             Want the longer breakdown? We wrote a full piece on{" "}
-            <Link to="/blog/laptop-repair-vs-buy-new-2026" className="text-accent-bright font-semibold hover:underline">repair vs buying new in 2026</Link>,
+            <Link to="/blog/laptop-repair-vs-buy-new-2026" className="text-accent font-semibold hover:underline">repair vs buying new in 2026</Link>,
             and if you're considering a used Mac, read{" "}
-            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent-bright font-semibold hover:underline">should I buy a refurbished MacBook in Dubai</Link>.
+            <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent font-semibold hover:underline">should I buy a refurbished MacBook in Dubai</Link>.
           </p>
 
           <h2>How to tell where your MacBook stands</h2>
@@ -126,7 +126,7 @@ export default function GuideMacBookLifespan() {
             remaining life:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Battery health and cycle count:</strong> System Settings → Battery → Battery Health. Under 80% health or "Service Recommended" means a battery is due - see our <Link to="/blog/macbook-battery-health-check-guide" className="text-accent-bright font-semibold hover:underline">battery health check guide</Link>.</li>
+            <li><strong>Battery health and cycle count:</strong> System Settings → Battery → Battery Health. Under 80% health or "Service Recommended" means a battery is due - see our <Link to="/blog/macbook-battery-health-check-guide" className="text-accent font-semibold hover:underline">battery health check guide</Link>.</li>
             <li><strong>macOS support:</strong> if Software Update still offers the latest macOS, you have years of life left.</li>
             <li><strong>Free storage:</strong> below 10-15% free and the Mac feels old when it isn't. Clearing space (or upgrading an Intel SSD) often "fixes" a Mac people thought was dying.</li>
           </ul>

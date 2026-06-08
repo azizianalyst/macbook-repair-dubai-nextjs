@@ -85,7 +85,7 @@ export default function BlogBestMacBookForStudents() {
           <p>
             If your budget is AED 2,200, buy a refurbished M1 Air from us instead. Same money, dramatically
             more capable, proven longevity. Read our full{" "}
-            <Link to="/blog/macbook-neo-worth-buying-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-neo-worth-buying-2026" className="text-accent font-semibold hover:underline">
               MacBook Neo review
             </Link>
             .
@@ -148,7 +148,7 @@ export default function BlogBestMacBookForStudents() {
             <strong>Skip AppleCare+ if:</strong> You're careful, the laptop lives on a desk, you
             already use a sleeve. Save the AED 549 - if something does happen, our out-of-pocket repairs
             run AED 600-1,000 for most issues. See{" "}
-            <Link to="/blog/macbook-pro-m5-vs-apple-store-repair-cost" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-pro-m5-vs-apple-store-repair-cost" className="text-accent font-semibold hover:underline">
               MacBook Pro repair cost vs Apple Store
             </Link>
             .
@@ -156,7 +156,7 @@ export default function BlogBestMacBookForStudents() {
 
           <p>
             Buying refurbished and want it inspected first?{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               Drop it at our Media City workshop
             </Link>
             {" "}- AED 100 full diagnostic, refunded if you proceed with any service.

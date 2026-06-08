@@ -25,7 +25,7 @@ export default function MacFullDiagnostic() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Bring it in, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 25-point check on every Mac desktop: power delivery, SoC or CPU thermal behaviour under load, every port, audio I/O, all storage health, RAM hardware test, fan and chassis cooling, macOS support ceiling, malware quick-scan, and a Thunderbolt routing check on Mac Studio and Mac Pro.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 1 in 5 Macs we see don't actually need a paid repair - they need a free port clean, an SMC reset, a software fix or an honest 'this is at end-of-economic-life, replace it' verdict. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything. Mac Pro is heavy - we offer free pickup and drop-off across Dubai mainland so you don't have to wrestle a 18kg chassis into a car.
           </p>
         </>

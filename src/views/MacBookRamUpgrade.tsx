@@ -25,7 +25,7 @@ export default function MacBookRamUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             This page exists to <strong>set expectations honestly</strong> rather than to sell. The truth on <strong>MacBook RAM upgrade in Dubai</strong>: every Apple Silicon MacBook (M1, M2, M3, M4, M5) has its unified memory soldered onto the SoC package itself. There is no slot, no socket, no upgrade path. The same is true for every MacBook Air from 2013 onwards and every MacBook Pro from 2016 onwards.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             What we <em>can</em> upgrade: the 13" and 15" MacBook Pro non-Retina from 2012, and the 13" MacBook Pro Retina 2012 (limited). On those we go up to 16 GB. AED 400 labour plus the cost of the modules. If you have anything newer, we'll tell you to plan around what you bought, and we won't take your money for an impossible job.
           </p>
         </>

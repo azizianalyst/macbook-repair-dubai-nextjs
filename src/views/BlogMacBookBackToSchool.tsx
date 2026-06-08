@@ -83,7 +83,7 @@ export default function BlogMacBookBackToSchool() {
           </ul>
           <p>
             <strong>Math:</strong> one cracked screen on a MacBook Air costs AED 1,800-2,400 out of pocket at Apple. AppleCare+ pays for itself with one accident. Compare to our independent service at{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">AED 600-1,400</Link> - for accident-prone students AppleCare+ still wins, for careful students our pay-as-you-go is cheaper.
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">AED 600-1,400</Link> - for accident-prone students AppleCare+ still wins, for careful students our pay-as-you-go is cheaper.
           </p>
 
           <h2>Where to buy in Dubai</h2>
@@ -92,7 +92,7 @@ export default function BlogMacBookBackToSchool() {
             <li><strong>Apple Education Store online:</strong> 6-10% off plus a gift-card promo July-September. Verified via UNiDAYS.</li>
             <li><strong>Sharaf DG, Jumbo, Virgin Megastore:</strong> often AED 100-300 cheaper than Apple, plus 0% instalments via banks. Check warranty is UAE Apple, not grey import.</li>
             <li><strong>Used / refurbished:</strong> see our{" "}
-              <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent-bright font-semibold hover:underline">refurbished MacBook checklist</Link>.</li>
+              <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent font-semibold hover:underline">refurbished MacBook checklist</Link>.</li>
           </ul>
 
           <h2>Education pricing - Apple's discount in UAE</h2>

@@ -166,11 +166,11 @@ export default function BlogMacStudioM3UltraVsM4Max() {
 
           <p>
             See the broader{" "}
-            <Link to="/blog/mac-mini-vs-mac-studio-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/mac-mini-vs-mac-studio-2026" className="text-accent font-semibold hover:underline">
               Mini Pro vs Studio comparison
             </Link>{" "}
             if you're not sure Studio is necessary at all. Both Studios serviced at our{" "}
-            <Link to="/mac-studio-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-studio-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Studio repair Dubai
             </Link>{" "}
             workshop.

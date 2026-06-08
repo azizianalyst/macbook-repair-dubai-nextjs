@@ -25,7 +25,7 @@ export default function IMacSsdUpgrade() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The Fusion Drive in older iMacs is the single biggest performance bottleneck on the machine.</strong> Apple paired a tiny SSD with a slow 5400rpm or 7200rpm spinning hard drive. When the SSD cache fills up, everything crashes back to spinning-disk speeds - Lightroom freezes, macOS updates take hours, the beachball appears for the simplest tasks.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Swapping the whole storage stack for a single 1TB or 2TB NVMe SSD turns a tired iMac into a fast machine again. It is a real procedure though: the entire 5K display has to come off, the adhesive stripped, the new drive installed and the display re-laminated dust-free. We do this every week and we have the proper tools and clean bench. M-series 24" iMac SSDs are soldered - we'll tell you up front if your model can be upgraded.
           </p>
         </>

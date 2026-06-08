@@ -54,7 +54,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
           variant="service"
           tone="dark"
@@ -62,12 +62,12 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           title={`MacBook Repair in ${cfg.city} - Free Collection & Delivery`}
           subtitle={`We're an independent Mac specialist in Dubai, ${cfg.distance} away - and we come to you. We collect from ${cfg.city} by ${collectVerb}, repair at our Media City workshop, and return it. ${cfg.landmarkLine} ${cfg.turnaround}, 90-day written warranty.`}
         >
-          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
-            <span className="flex items-center gap-1"><Truck size={16} className="text-accent-bright" aria-hidden /> Free collection &amp; return</span>
-            <span className="text-on-primary-faint">·</span>
-            <span className="flex items-center gap-1"><Clock size={16} className="text-accent-bright" aria-hidden /> {cfg.collectionWindow}</span>
-            <span className="text-on-primary-faint">·</span>
-            <span className="flex items-center gap-1"><MapPin size={16} className="text-accent-bright" aria-hidden /> {cfg.distance} from Dubai</span>
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free collection &amp; return</span>
+            <span className="text-text-faint">·</span>
+            <span className="flex items-center gap-1"><Clock size={16} className="text-accent" aria-hidden /> {cfg.collectionWindow}</span>
+            <span className="text-text-faint">·</span>
+            <span className="flex items-center gap-1"><MapPin size={16} className="text-accent" aria-hidden /> {cfg.distance} from Dubai</span>
           </p>
           <div className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
@@ -98,33 +98,33 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         {/* Intro / context */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">MacBook repair for {cfg.city}, without the drive to Dubai</h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch]">{cfg.intro}</p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch] mt-md">{cfg.whyChoose}</p>
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">{cfg.intro}</p>
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mt-md">{cfg.whyChoose}</p>
         </section>
 
         {/* Districts we collect from */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Navigation size={28} className="text-accent-bright" aria-hidden /> Where we collect from in {cfg.city}
+            <Navigation size={28} className="text-accent" aria-hidden /> Where we collect from in {cfg.city}
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             Free collection and return covers all of {cfg.city}. A few of the areas we collect from regularly:
           </p>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {cfg.districts.map((d) => (
-              <div key={d.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <p className="font-bold text-[16px] mb-1 flex items-center gap-2"><MapPin size={16} className="text-accent-bright shrink-0" aria-hidden /> {d.name}</p>
-                <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{d.note}</p>
+              <div key={d.name} className="border border-border bg-bg-card rounded-md p-lg">
+                <p className="font-bold text-[16px] mb-1 flex items-center gap-2"><MapPin size={16} className="text-accent shrink-0" aria-hidden /> {d.name}</p>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{d.note}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* How collection works */}
-        <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="text-[28px] md:text-[32px] mb-md">How free collection from {cfg.city} works</h2>
-            <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch] mb-lg">{cfg.collectionNote}</p>
+            <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mb-lg">{cfg.collectionNote}</p>
 
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
               {[
@@ -134,10 +134,10 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
                 { t: "Approve and we repair", b: `Reply 'approved' and we get to work. ${cfg.turnaround.charAt(0).toUpperCase()}${cfg.turnaround.slice(1)} for most common repairs.` },
                 { t: "Free return to your door", b: `Courier returns the MacBook to your ${cfg.city} address. Pay on completion - cash, card or transfer. 90-day warranty card included.` },
               ].map((s, i) => (
-                <li key={i} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent-bright/15 text-accent-bright font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
+                <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
+                  <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
                   <p className="font-bold text-[16px] mb-1">{s.t}</p>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{s.b}</p>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{s.b}</p>
                 </li>
               ))}
             </ol>
@@ -147,14 +147,14 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         {/* Top services */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">Common MacBook repairs for {cfg.city} customers</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             Indicative starting prices in AED, the same as for our Dubai customers. The final price is fixed in writing on WhatsApp before any work begins, after a free diagnosis.
           </p>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <Link key={s.href} to={s.href} className="block border border-white/10 bg-white/[0.04] rounded-md p-lg hover:border-accent-bright/40 transition">
+              <Link key={s.href} to={s.href} className="block border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 transition">
                 <p className="font-bold text-[16px] mb-1">{s.label}</p>
-                <p className="text-[13px] text-on-primary-muted">From <span className="mono text-accent-bright font-bold">AED {s.price}</span> · 90-day warranty</p>
+                <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · 90-day warranty</p>
               </Link>
             ))}
           </div>
@@ -163,12 +163,12 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         {/* Landmarks */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <MapPin size={28} className="text-accent-bright" aria-hidden /> Around {cfg.city}
+            <MapPin size={28} className="text-accent" aria-hidden /> Around {cfg.city}
           </h2>
-          <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-on-primary">
+          <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-text">
             {cfg.landmarks.map((l) => (
-              <li key={l} className="flex items-start gap-sm border border-white/10 bg-white/[0.04] rounded-md p-md">
-                <MapPin size={18} className="text-accent-bright shrink-0 mt-1" aria-hidden />
+              <li key={l} className="flex items-start gap-sm border border-border bg-bg-card rounded-md p-md">
+                <MapPin size={18} className="text-accent shrink-0 mt-1" aria-hidden />
                 <span>{l}</span>
               </li>
             ))}
@@ -176,15 +176,15 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         </section>
 
         {/* Reviews */}
-        <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="text-[28px] md:text-[32px] mb-md">Customer reviews</h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
               215+ five-star Google reviews from customers across the UAE who used our free collection-and-repair service.
             </p>
             <ReviewGrid tone="dark" reviews={reviews} />
-            <p className="text-[14px] text-on-primary-muted mt-md">
-              <Link to="/reviews" className="text-accent-bright hover:underline">Read all reviews →</Link>
+            <p className="text-[14px] text-text-muted mt-md">
+              <Link to="/reviews" className="text-accent hover:underline">Read all reviews →</Link>
             </p>
           </div>
         </section>
@@ -198,9 +198,9 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         {/* Honest "we're Dubai-based" block */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Building2 size={28} className="text-accent-bright" aria-hidden /> One workshop, not a chain of front desks
+            <Building2 size={28} className="text-accent" aria-hidden /> One workshop, not a chain of front desks
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             We&apos;re upfront about it: we don&apos;t have a shop in {cfg.city}. Our only location is the workshop in Concord Tower,
             Dubai Media City - one expert bench with the tools and parts to do board-level work properly, rather than a row of
             counters that send your Mac somewhere else. Free collection and return is how we bring that workshop to {cfg.city}.
@@ -211,14 +211,14 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         {/* Other emirates we serve - sibling cross-links */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <MapPin size={28} className="text-accent-bright" aria-hidden /> MacBook repair across the UAE
+            <MapPin size={28} className="text-accent" aria-hidden /> MacBook repair across the UAE
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             Free courier collection and return reaches every emirate from our Dubai Media City workshop. We also serve:
           </p>
           <div className="flex flex-wrap gap-sm">
             {CITIES.filter((c) => c.slug !== cfg.slug).map((c) => (
-              <Link key={c.slug} to={`/macbook-repair-${c.slug}`} className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[14px] text-on-primary-muted transition-colors hover:border-accent-bright/40 hover:text-on-primary">
+              <Link key={c.slug} to={`/macbook-repair-${c.slug}`} className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                 MacBook repair {c.city}
               </Link>
             ))}
@@ -227,10 +227,10 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] text-on-primary rounded-2xl p-xl md:p-2xl flex flex-col items-start gap-md">
+          <div className="relative overflow-hidden border border-border bg-bg-card text-text rounded-2xl p-xl md:p-2xl flex flex-col items-start gap-md">
             <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-            <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Book a free collection from {cfg.city}</h2>
-            <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+            <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book a free collection from {cfg.city}</h2>
+            <p className="relative text-text-muted text-[16px] max-w-[60ch]">
               WhatsApp your address and MacBook model - we confirm the collection and an indicative price in minutes.
             </p>
             <div className="relative flex flex-wrap gap-sm">

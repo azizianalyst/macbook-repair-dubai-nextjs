@@ -25,7 +25,7 @@ export default function IPhoneEarpieceRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The earpiece on iPhone X and later is sandwiched into the Face ID flex assembly</strong> at the top of the screen. Removing it carelessly - which is what most Dubai shops do - kills Face ID permanently. We use a Face ID-preserving extraction technique that keeps the original dot projector and flood illuminator in place. If we can't preserve Face ID, we tell you before opening the phone.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On iPhone 8 and earlier the earpiece is a separate part - easier and cheaper. On all models we charge AED 280 because the labour and care needed on iPhone X+ is significant; we don't bait-and-switch with a "from AED 150" headline.
           </p>
         </>

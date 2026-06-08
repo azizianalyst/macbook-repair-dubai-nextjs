@@ -6,7 +6,7 @@ type Props = {
   years: number;
   specialisation: string;
   photo?: string;          // path under /images/real/
-  tone?: "light" | "dark"; // "dark" for use on the bg-primary band; default light
+  tone?: "light" | "dark"; // "dark" for use on the bg-bg-alt band; default light
 };
 
 export function TechnicianBadge({ name, years, specialisation, photo, tone = "light" }: Props) {
@@ -20,19 +20,19 @@ export function TechnicianBadge({ name, years, specialisation, photo, tone = "li
           alt={`${name}, ${specialisation}`}
           width={56} height={56}
           loading="lazy" decoding="async"
-          className={cn("w-14 h-14 rounded-full object-cover border", dark ? "border-white/10" : "border-border")}
+          className={cn("w-14 h-14 rounded-full object-cover border", dark ? "border-border" : "border-border")}
         />
       ) : (
         <div
           aria-hidden
-          className="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-heading font-bold text-[18px]"
+          className="w-14 h-14 rounded-full bg-bg-alt text-text flex items-center justify-center font-heading font-bold text-[18px]"
         >
           {initials}
         </div>
       )}
       <div>
-        <p className={cn("font-semibold text-[15px]", dark ? "text-on-primary" : "text-text")}>{name}</p>
-        <p className={cn("text-[13px]", dark ? "text-on-primary-muted" : "text-text-muted")}>{specialisation} · {years} yrs</p>
+        <p className={cn("font-semibold text-[15px]", dark ? "text-text" : "text-text")}>{name}</p>
+        <p className={cn("text-[13px]", dark ? "text-text-muted" : "text-text-muted")}>{specialisation} · {years} yrs</p>
       </div>
     </div>
   );

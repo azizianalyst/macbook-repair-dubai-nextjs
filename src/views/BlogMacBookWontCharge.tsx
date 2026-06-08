@@ -42,7 +42,7 @@ export default function BlogMacBookWontCharge() {
             out to have a frayed cable or a port packed with pocket lint. Before you spend a dirham,
             walk these eight checks in order — they're the same ones we run on the bench before we
             ever pick up a screwdriver. If you reach step eight and it's still flat, our{" "}
-            <Link to="/macbook-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">
               charging port repair
             </Link>{" "}
             page covers what happens next.
@@ -124,7 +124,7 @@ export default function BlogMacBookWontCharge() {
             Open System Settings → Battery → Battery Health, or hold Option and click the battery icon
             in the menu bar. If it reads <strong>Service Recommended</strong> or <strong>Service Battery</strong>,
             the cell has worn down and may refuse a full charge or cut out under load. Our{" "}
-            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent font-semibold hover:underline">
               battery health check guide
             </Link>{" "}
             walks through what each reading actually means.
@@ -136,7 +136,7 @@ export default function BlogMacBookWontCharge() {
             won't sit flat or a bottom case that bulges means the battery has swollen. Stop using and
             charging the Mac straight away — a swollen lithium cell is a genuine fire and pressure
             hazard. Book a{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement
             </Link>{" "}
             and bring it in flat; don't try to keep topping it up.

@@ -25,7 +25,7 @@ export default function MacBookTouchBarRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             The <strong>Touch Bar</strong> is the slim OLED strip above the keyboard on the 2016-2019 MacBook Pro 13″ and 15″, plus the 13″ M1 and M2. Apple dropped it on the 14″ and 16″, so if you've got one of those, the issue is something else and we'll tell you straight. When a Touch Bar fails it usually goes dark in patches, flickers, freezes on one app's controls, or starts registering taps nobody made. The strip is a bonded OLED with its own flex cable, and on most of these models it can be replaced on the bench. Touch Bar repair starts at <strong>AED 600</strong>, including the part, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             One thing to flag — on a lot of these units the Touch Bar shares its flex with the keyboard and the Touch ID sensor at the right end. We open it, find out whether it's the strip, the cable or the board controller, and quote before anything is swapped. We've worked Apple hardware at Concord Tower, Dubai Media City since 2004, and the Touch Bar Pros are some of the most common boards on the bench.
           </p>
         </>

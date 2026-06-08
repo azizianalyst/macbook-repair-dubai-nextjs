@@ -66,7 +66,7 @@ export default function OutOfWarrantyRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -74,7 +74,7 @@ export default function OutOfWarrantyRepair() {
         title="Out-of-Warranty Apple Repair in Dubai"
         subtitle="Warranty expired or AppleCare run out? We repair MacBook, iMac, iPhone and iPad at component level - often half the Apple Store price, with genuine parts and a 90-day warranty."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Genuine & OEM parts</span>
@@ -100,18 +100,18 @@ export default function OutOfWarrantyRepair() {
       </section>
 
       {/* What we cover */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wrench size={28} className="text-accent-bright" aria-hidden /> What we repair out of warranty
+            <Wrench size={28} className="text-accent" aria-hidden /> What we repair out of warranty
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
             {COVERED.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent-bright" aria-hidden /> {i.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{i.body}</p>
+                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
               );
             })}
@@ -122,27 +122,27 @@ export default function OutOfWarrantyRepair() {
       {/* AppleCare vs us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Still under AppleCare? Here's the honest advice
+          <ShieldCheck size={28} className="text-accent" aria-hidden /> Still under AppleCare? Here's the honest advice
         </h2>
         <div className="grid gap-md md:grid-cols-2">
-          <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+          <article className="border border-border bg-bg-card rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Use Apple when…</h3>
-            <ul className="space-y-2 text-[15px] text-on-primary-muted">
+            <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare is active and the fault is covered", "The repair is a known recall / service programme", "You need to keep a manufacturer service record"].map((t) => (
-                <li key={t} className="flex gap-2"><Check size={18} className="text-accent-bright mt-[2px] shrink-0" aria-hidden /> {t}</li>
+                <li key={t} className="flex gap-2"><Check size={18} className="text-accent mt-[2px] shrink-0" aria-hidden /> {t}</li>
               ))}
             </ul>
           </article>
-          <article className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+          <article className="border border-border bg-bg-card rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Use us when…</h3>
-            <ul className="space-y-2 text-[15px] text-on-primary-muted">
+            <ul className="space-y-2 text-[15px] text-text-muted">
               {["Warranty / AppleCare has expired", "Liquid, accidental or wear damage Apple won't cover", "You want a component-level fix at roughly half the price"].map((t) => (
-                <li key={t} className="flex gap-2"><Check size={18} className="text-accent-bright mt-[2px] shrink-0" aria-hidden /> {t}</li>
+                <li key={t} className="flex gap-2"><Check size={18} className="text-accent mt-[2px] shrink-0" aria-hidden /> {t}</li>
               ))}
             </ul>
           </article>
         </div>
-        <p className="text-[14px] text-on-primary-muted mt-md">We'll always tell you which route is cheaper for your specific fault before you commit - even when that means sending you to Apple.</p>
+        <p className="text-[14px] text-text-muted mt-md">We'll always tell you which route is cheaper for your specific fault before you commit - even when that means sending you to Apple.</p>
       </section>
 
       {/* FAQ */}
@@ -159,10 +159,10 @@ export default function OutOfWarrantyRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Get an out-of-warranty quote in 4 minutes</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get an out-of-warranty quote in 4 minutes</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send the model and a photo of the issue on WhatsApp. Free diagnosis, written quote, genuine parts and a 90-day warranty.
           </p>
           <div className="relative flex flex-wrap gap-sm">

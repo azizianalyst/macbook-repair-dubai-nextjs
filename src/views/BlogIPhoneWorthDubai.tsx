@@ -85,7 +85,7 @@ export default function BlogIPhoneWorthDubai() {
             (battery health, Face ID, cameras, all buttons, network), confirm no iCloud lock, and pay
             cash within 30 minutes. We also accept cracked, water-damaged, and even bricked iPhones at
             a parts-value price - our{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone repair team
             </Link>{" "}
             harvests usable parts.
@@ -133,7 +133,7 @@ export default function BlogIPhoneWorthDubai() {
             Buyers see "Battery Service" warning and assume the worst. Replacing the battery before sale
             usually pays for itself: iPhone 15 Pro Max battery service AED 280 from us, recovers AED 360
             of resale value. Net gain: AED 80 plus a faster sale. See{" "}
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               iPhone battery replacement Dubai
             </Link>.
           </p>
@@ -152,7 +152,7 @@ export default function BlogIPhoneWorthDubai() {
             An iCloud-locked iPhone has zero resale value beyond parts. Sign out of iCloud (Settings →
             [Your Name] → Sign Out) before handing over. Buyers will check via Settings → General →
             About → Activation Lock = "Off". See our full{" "}
-            <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent font-semibold hover:underline">
               iCloud lock guide
             </Link>.
           </p>

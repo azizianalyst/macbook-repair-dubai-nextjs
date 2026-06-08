@@ -27,7 +27,7 @@ export default function BlogBestIMacForBusiness() {
             <li><strong>Reception / hot-desk:</strong> iMac M4 24″ 16GB/256GB - AED 5,999.</li>
             <li><strong>4K video editing in-house:</strong> Skip iMac - buy Mac Studio M4 Max + Studio Display.</li>
             <li><strong>Fleet of 10+:</strong> Negotiate Apple Business volume pricing through{" "}
-              <a href="https://www.apple.com/ae/business/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">Apple at Work UAE</a>
+              <a href="https://www.apple.com/ae/business/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">Apple at Work UAE</a>
               .</li>
           </ul>
 
@@ -70,7 +70,7 @@ export default function BlogBestIMacForBusiness() {
             Better setup: <strong>Mac Studio M4 Max 32GB + Apple Studio Display</strong> at AED 11,000 +
             AED 6,300 = AED 17,300. Yes, it's AED 10,000 more than an iMac. It's also 3× faster on
             sustained loads and lets you upgrade the Studio in 4 years without replacing the display.{" "}
-            <Link to="/blog/imac-vs-mac-mini-vs-mac-studio" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/imac-vs-mac-mini-vs-mac-studio" className="text-accent font-semibold hover:underline">
               Full Mac desktop comparison
             </Link>
             .
@@ -127,7 +127,7 @@ export default function BlogBestIMacForBusiness() {
           <p>
             <strong>Skip AppleCare+ if:</strong> the iMac sits in a quiet office, used by one person.
             Out-of-warranty repair from us costs AED 800-1,800 for most issues -{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/imac-repair-dubai" className="text-accent font-semibold hover:underline">
               see full pricing
             </Link>
             .
@@ -164,7 +164,7 @@ export default function BlogBestIMacForBusiness() {
 
           <p>
             Existing fleet need service?{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/imac-repair-dubai" className="text-accent font-semibold hover:underline">
               We service every iMac
             </Link>
             {" "}from 2007 onwards - though we'll be honest if it's time to retire.

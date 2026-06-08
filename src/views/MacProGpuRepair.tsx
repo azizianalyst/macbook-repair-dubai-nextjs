@@ -25,7 +25,7 @@ export default function MacProGpuRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Mac Pro 2019 Intel is the only modern Mac with truly modular GPUs.</strong> Apple's MPX modules slot into the chassis and combine an AMD Radeon Pro GPU with the internal Thunderbolt 3 routing that feeds the front and rear ports. The cards themselves can be repaired at component level: VRM failures, fan bearings, capacitor leaks, occasionally the GPU silicon itself for reflow.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Honest about the M2 Ultra Mac Pro: there are no MPX slots, no discrete GPU, nothing to swap. The GPU is integrated into the M2 Ultra SoC and shares the same fate as the chip. If GPU performance is the issue, we diagnose for free and tell you whether it's a software cause (driver issue, runaway process) or a hardware issue requiring whole-board replacement. We don't sell repairs that aren't possible.
           </p>
         </>

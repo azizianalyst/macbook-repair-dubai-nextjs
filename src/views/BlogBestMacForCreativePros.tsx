@@ -147,11 +147,11 @@ export default function BlogBestMacForCreativePros() {
 
           <p>
             Working Mac broken at the worst moment (always)?{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               Same-day MacBook repair
             </Link>
             {" "}or{" "}
-            <Link to="/mac-studio-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-studio-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Studio service
             </Link>
             . We hold loaner Macs for active client agencies.

@@ -42,7 +42,7 @@ export default function BlogMacBookKernelPanic() {
             that reach our Dubai Media City bench are a bad driver, a failing external drive, or a disk
             that's run out of room. The hardware ones are real but fewer, and each has a test. If it
             does turn out to be the board or the storage, our{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             pins it down before any quote.
@@ -113,7 +113,7 @@ export default function BlogMacBookKernelPanic() {
             A Mac that panics under load or when it's hot is often throttling against a heatsink packed
             with dust, and Dubai flats collect a lot of it. The fix is a strip, clean and fresh thermal
             paste, not a new part. We walk through the symptoms in our{" "}
-            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent font-semibold hover:underline">
               loud-fan guide
             </Link>, and a clean and repaste is AED 280.
           </p>
@@ -122,7 +122,7 @@ export default function BlogMacBookKernelPanic() {
             A drive on its way out throws panics as macOS fails to read or write. First Aid usually
             flags it. This is the one to act on quickly, because a failing SSD risks your files. Back
             up now and see our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery page
             </Link>{" "}
             if the drive is already struggling.
@@ -150,7 +150,7 @@ export default function BlogMacBookKernelPanic() {
             A strip, clean and repaste to cure thermal panics is AED 280. An SSD replacement runs AED
             400 to 1,200 by capacity, and battery replacement is from AED 450. Memory and logic-board
             work starts from AED 800. If the drive is failing, deal with a{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
             backup first, before anything else.

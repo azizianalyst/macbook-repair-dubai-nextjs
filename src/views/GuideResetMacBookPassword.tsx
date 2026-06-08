@@ -50,7 +50,7 @@ export default function GuideResetMacBookPassword() {
             This guide covers <strong>changing or resetting passwords you still know</strong>, plus
             Keychain, Apple ID, firmware and Screen Time. If you are completely locked out and have
             forgotten your login password, that's a different flow - see our{" "}
-            <Link to="/how-to-recover-macbook-password" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
               forgotten MacBook password recovery guide
             </Link>{" "}
             which walks through Recovery mode and the Reset Password assistant.
@@ -160,7 +160,7 @@ export default function GuideResetMacBookPassword() {
             someone else's Apple ID or firmware password, only the original owner (or Apple, with proof
             of purchase) can release it - so always confirm a used Mac is fully signed out before you
             pay. We can verify activation-lock and ownership status as part of a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>.
           </p>
@@ -172,15 +172,15 @@ export default function GuideResetMacBookPassword() {
             failed reset has left macOS unbootable. We're at Office #45, 10th Floor, Concord Tower, Al
             Sufouh, Dubai Media City, open Mon-Sat 9am-10pm, with free pickup and free diagnosis. If a
             reset corrupted the system we can also do a clean{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall
             </Link>{" "}
             or a full{" "}
-            <Link to="/how-to-reset-a-macbook" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/how-to-reset-a-macbook" className="text-accent font-semibold hover:underline">
               factory reset of your MacBook
             </Link>
             . Call or WhatsApp{" "}
-            <a href="https://wa.me/971557413706" className="text-accent-bright font-semibold hover:underline">055 741 3706</a>{" "}
+            <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">055 741 3706</a>{" "}
             and bring proof of ownership for any locked device.
           </p>
         </>

@@ -28,10 +28,10 @@ export default function IPhoneScreenRepair() {
       pricingCaption="Pro Max sizes add AED 150. Original Apple OLED add AED 200-400 (preserves True Tone)."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone screen repair in Dubai starts at AED 350 for the iPhone 6 through iPhone 8, and finishes the same day on every model up to the iPhone 16 Pro Max when stock is on the shelf. The workshop has fitted more than 6,800 iPhone screens since 2014 - when the iPhone 6 first brought the larger 4.7" panel to the bench. Every replacement is bench-tested for touch responsiveness, 3D Touch / Haptic Touch where applicable, P3 colour gamut, and pixel uniformity before the phone leaves the workshop. True Tone is preserved on genuine Apple OLED panels by transferring the calibration chip from the original screen with a dedicated programmer.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             The split between OLED and LCD matters for both price and method. Every iPhone from the iPhone X onward (except XR, 11, SE 2, SE 3) uses an OLED panel - Samsung E2/E3 or LG-built - bonded to a digitiser and an under-screen sensor stack. LCD models (iPhone 6 through 8, XR, 11, SE 2/3) use a backlit IPS panel with a separate digitiser layer. OLED replacements are more expensive because the panel itself costs more and the bonding tolerance is tighter. The workshop quotes both genuine and high-grade aftermarket on every WhatsApp ticket so the choice stays with the customer.
           </p>
         </>

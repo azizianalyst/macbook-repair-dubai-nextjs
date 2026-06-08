@@ -135,7 +135,7 @@ export default function BlogMacBookStuckAppleLogo() {
             the scary option people assume. The one rule: pick your existing disk and never touch
             Disk Utility's Erase button. A clean reinstall starts from AED 200 if you'd rather we do
             it. See our{" "}
-            <Link to="/macos-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service
             </Link>{" "}
             for the full process.
@@ -158,7 +158,7 @@ export default function BlogMacBookStuckAppleLogo() {
             it straight in. We pull data off failing MacBook drives most weeks, and recovery runs
             between AED 600 and AED 3,000 depending on whether the controller still responds or we
             need a chip-off. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}
             handles the soldered Apple Silicon drives most shops turn away.
@@ -169,7 +169,7 @@ export default function BlogMacBookStuckAppleLogo() {
             If you've worked down the list and you're still staring at the logo, walk it in. The
             diagnostic is free, we measure the drive's health on the bench in a few minutes, and you
             get a clear answer before any work starts. Book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             at Concord Tower, Dubai Media City. No-fix-no-charge, and we've been doing this since

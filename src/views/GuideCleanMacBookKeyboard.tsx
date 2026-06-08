@@ -46,7 +46,7 @@ export default function GuideCleanMacBookKeyboard() {
           <p>
             Done carefully, cleaning your keyboard is a five-minute job you can do at home. Done
             carelessly, it's how a lot of the{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               water-damage repairs
             </Link>{" "}
             on our bench start.
@@ -133,7 +133,7 @@ export default function GuideCleanMacBookKeyboard() {
             Sugary or sticky drinks are the most dangerous because they leave a conductive,
             corrosive residue even after the liquid dries. The safest move is to bring it straight to
             us for{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage repair in Dubai
             </Link>{" "}
             (from AED 700) so the internals can be opened, cleaned, and dried properly before any
@@ -152,16 +152,16 @@ export default function GuideCleanMacBookKeyboard() {
           </ul>
           <p>
             On most MacBooks individual keycaps and the keyboard assembly are replaceable. Our{" "}
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair in Dubai
             </Link>{" "}
             starts from AED 350, and if the fault is borderline we'll run a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               free full diagnostic
             </Link>{" "}
             first so you only pay for what actually needs doing. Sticky issues that turn out to be the
             trackpad rather than the keyboard fall under our{" "}
-            <Link to="/macbook-trackpad-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-trackpad-repair-dubai" className="text-accent font-semibold hover:underline">
               trackpad repair
             </Link>{" "}
             instead.
@@ -176,7 +176,7 @@ export default function GuideCleanMacBookKeyboard() {
           </ul>
           <p>
             If your MacBook also feels sluggish while you're in there cleaning it up, our guide on{" "}
-            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">
               fixing a slow MacBook
             </Link>{" "}
             walks through the 10-minute checklist we use at the bench.

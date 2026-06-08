@@ -25,7 +25,7 @@ export default function IPadBackGlassRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>An honest naming note</strong>: iPads don't have a glass back like iPhones do (no MagSafe charging coil to protect). The back is aluminium on every model from iPad mini to iPad Pro. So when customers ask for "iPad back glass repair", what they usually need is one of three things: dent rework on the aluminium, anodised-finish scratch polishing, or - most importantly - Smart Connector preservation when the dent is near the rear three-pin contact.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             From AED 500. Major dents that distort the chassis enough to push on the battery or LCD usually need a full chassis transfer (more expensive - we quote case-by-case). We tell you up front what's possible and what isn't.
           </p>
         </>

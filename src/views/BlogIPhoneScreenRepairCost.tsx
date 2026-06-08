@@ -53,9 +53,9 @@ export default function BlogIPhoneScreenRepairCost() {
               { model: "iPhone 17 Pro Max",     ours: "AED 1,400", apple: "AED 1,899", note: "Largest current OLED panel" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Apple Store pricing from{" "}
-            <a href="https://support.apple.com/iphone/repair/screen-replacement" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            <a href="https://support.apple.com/iphone/repair/screen-replacement" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               support.apple.com/iphone/repair
             </a>{" "}
             converted from USD list to AED on 22 April 2026. Apple Store UAE pricing varies slightly.
@@ -169,11 +169,11 @@ export default function BlogIPhoneScreenRepairCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/iphone-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our iPhone screen repair page
             </Link>{" "}
             for the full service description, or{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               browse every iPhone model
             </Link>{" "}
             we service for model-specific pricing and common issues. WhatsApp 055 741 3706 - quote

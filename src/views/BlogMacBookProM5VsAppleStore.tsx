@@ -31,7 +31,7 @@ export default function BlogMacBookProM5VsAppleStore() {
               { model: "Logic board (component-level)", ours: "AED 1,500", apple: "AED 4,500+ (full board swap)", note: "AED 3,000+" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Apple Store pricing for non-AppleCare+ out-of-warranty service in Dubai (Mall of
             Emirates and Dubai Mall locations) on 22 April 2026.
           </p>
@@ -126,11 +126,11 @@ export default function BlogMacBookProM5VsAppleStore() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="text-accent font-semibold hover:underline">
               See our MacBook Pro 14″ M5 page
             </Link>{" "}
             for the full repair menu, or{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               browse every MacBook
             </Link>{" "}
             we service. WhatsApp 055 741 3706 - quote in 4 minutes.

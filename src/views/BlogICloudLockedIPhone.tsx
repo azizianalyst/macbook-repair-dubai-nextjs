@@ -40,7 +40,7 @@ export default function BlogICloudLockedIPhone() {
             Apple's official account recovery process is free and works for almost everyone:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>Go to <a href="https://iforgot.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">iforgot.apple.com</a> on any device.</li>
+            <li>Go to <a href="https://iforgot.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">iforgot.apple.com</a> on any device.</li>
             <li>Enter the Apple ID email associated with your iPhone.</li>
             <li>Choose recovery method: trusted phone number, trusted device (Mac, iPad, another iPhone), or recovery key.</li>
             <li>If none available: select <em>"Account Recovery"</em>. Apple will verify ownership over 24 hours to 14 days based on the info you provide.</li>
@@ -66,7 +66,7 @@ export default function BlogICloudLockedIPhone() {
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Is it Activation Lock or just a passcode?</strong> Passcode-locked phones can sometimes be reset (data lost) - call us first. Activation Lock cannot.</li>
             <li><strong>Is it reported lost or stolen?</strong> We check the IMEI against the GSMA blacklist and Apple's lost-mode database. If it's stolen, we will not work on it and we are required to inform UAE authorities.</li>
-            <li><strong>Is the seller still reachable?</strong> 60% of "iCloud locked" cases we see are sellers who simply forgot to sign out before selling. A polite WhatsApp asking them to remove it from <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">iCloud.com/find</a> usually works.</li>
+            <li><strong>Is the seller still reachable?</strong> 60% of "iCloud locked" cases we see are sellers who simply forgot to sign out before selling. A polite WhatsApp asking them to remove it from <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">iCloud.com/find</a> usually works.</li>
           </ol>
           <p>
             <strong>What we cannot do:</strong> bypass, hack, "unlock", or "clean" the Activation Lock. The
@@ -122,7 +122,7 @@ export default function BlogICloudLockedIPhone() {
             <li><strong>Make the seller wipe it in front of you:</strong> Settings → General → Transfer or Reset iPhone → Erase All Content and Settings. They must enter their Apple ID password to complete this. No password = walk away.</li>
             <li><strong>Watch the device complete the wipe and reach the "Hello" setup screen</strong>: this confirms iCloud is removed.</li>
             <li><strong>Set up the device with your Apple ID</strong> (or skip set-up to "Get Started" - if you can do this, Activation Lock is off).</li>
-            <li><strong>Check IMEI on Apple's coverage page</strong>: <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">checkcoverage.apple.com</a> - confirms genuine Apple device with valid serial.</li>
+            <li><strong>Check IMEI on Apple's coverage page</strong>: <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">checkcoverage.apple.com</a> - confirms genuine Apple device with valid serial.</li>
             <li><strong>Confirm IMEI matches the SIM tray engraving and the box</strong>: All three must match. Mismatch = swapped logic board or laundered device.</li>
           </ol>
           <p>
@@ -132,11 +132,11 @@ export default function BlogICloudLockedIPhone() {
 
           <p>
             Need help with a locked iPhone today? Visit our{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone repair workshop
             </Link>{" "}
             for a free check, or read Apple's official guidance on{" "}
-            <a href="https://support.apple.com/en-us/HT201441" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://support.apple.com/en-us/HT201441" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               Activation Lock at support.apple.com
             </a>.
           </p>

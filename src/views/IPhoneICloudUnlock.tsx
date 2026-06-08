@@ -25,16 +25,16 @@ export default function IPhoneICloudUnlock() {
       pricingCaption="The workshop charges only for service time and Apple liaison work. Apple ultimately decides the unlock - no guarantee. Refund if Apple refuses despite valid documentation."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone iCloud unlock in Dubai is the most over-promised service in the repair industry. The honest reality: iCloud Activation Lock is enforced by Apple's servers. There is no current, sustainable, legitimate bypass for iPhones running iOS 13 or later. Anyone in Dubai or online claiming a permanent iCloud bypass for iPhone XS or newer is selling a temporary trick (often a passcode bypass that re-locks on reboot or update) or an outright scam. The workshop refuses bypass jobs. What the workshop does instead: help legitimate owners recover access through Apple's official channels.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             Three legitimate paths exist. First - Apple ID recovery: forgotten password but the phone is yours, with proof. Apple's account recovery process takes 3 to 14 days but works. Second - Digital Legacy: inherited iPhone where the deceased designated you as a Legacy Contact. Apple unlocks the iCloud account with a death certificate and Legacy Access Key. Third - proof of purchase: original Apple receipt or Carrefour / Sharaf DG receipt with matching serial number can convince Apple to unlock for legitimate buyers of second-hand devices the seller forgot to remove. The workshop prepares the documentation, submits to Apple, and follows up - the customer pays for service time, not for a guaranteed unlock.
           </p>
         </>
       }
       honestyCallout={
-        <div className="text-[15px] text-on-primary leading-relaxed space-y-md">
+        <div className="text-[15px] text-text leading-relaxed space-y-md">
           <p>
             <strong>What is iCloud Activation Lock?</strong> When Find My iPhone is enabled, the iPhone is tied to the owner's Apple ID at the Apple-server level. After a factory erase, the iPhone refuses to activate without the original Apple ID and password. This is intentional - it makes stolen iPhones useless to thieves. It cannot be legitimately bypassed.
           </p>

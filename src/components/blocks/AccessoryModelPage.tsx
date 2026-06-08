@@ -114,7 +114,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
         <h1 className="text-[28px]">Model not found</h1>
         <p className="mt-md">
           We don&apos;t have a page for <code>{slug}</code> yet.{" "}
-          <Link to="/" className="text-accent-bright font-semibold hover:underline">Back to home →</Link>
+          <Link to="/" className="text-accent font-semibold hover:underline">Back to home →</Link>
         </p>
       </div>
     );
@@ -199,9 +199,9 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
           </ul>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04] mb-lg">
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-white/[0.04]">
+              <thead className="bg-bg-card">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
                   <th className="px-md py-sm font-semibold">Price (AED)</th>
@@ -211,12 +211,12 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               </thead>
               <tbody>
                 {serviceRows.map((row, i) => (
-                  <tr key={i} className={i % 2 === 1 ? "bg-white/[0.02]" : ""}>
+                  <tr key={i} className={i % 2 === 1 ? "bg-bg-alt" : ""}>
                     <td className="px-md py-sm">{row.service}</td>
                     <td className="px-md py-sm">{row.price}</td>
                     <td className="px-md py-sm">{row.timeline}</td>
                     <td className="px-md py-sm">
-                      <Link to={row.href} className="text-accent-bright font-semibold hover:underline">Book →</Link>
+                      <Link to={row.href} className="text-accent font-semibold hover:underline">Book →</Link>
                     </td>
                   </tr>
                 ))}
@@ -225,7 +225,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
           </div>
 
           {model.appleServiceProgram && (
-            <div className="bg-white/[0.04] border-l-4 border-primary rounded-md p-lg mb-lg">
+            <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
               <h3 className="text-[18px] font-bold mb-sm">Apple Service Program - check eligibility first</h3>
               <p className="text-[15px]">
                 {model.appleServiceProgram} <strong>If yours qualifies, Apple does the repair for free.</strong> We&apos;ll check eligibility for you free of charge - if you qualify, we send you straight to Apple. If you don&apos;t, we do the repair.
@@ -234,7 +234,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
           )}
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
-          <div className="bg-white/[0.04] border-l-4 border-primary rounded-md p-lg mb-lg">
+          <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
@@ -247,10 +247,10 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
                   <Link
                     key={r.slug}
                     to={`/${r.slug}`}
-                    className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors"
+                    className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors"
                   >
                     <div className="font-semibold">{r.name}</div>
-                    <div className="text-on-primary-muted text-[12px] mt-[2px]">{r.releaseYear} · {r.chip}</div>
+                    <div className="text-text-muted text-[12px] mt-[2px]">{r.releaseYear} · {r.chip}</div>
                   </Link>
                 ))}
               </div>

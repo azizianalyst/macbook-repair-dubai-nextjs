@@ -152,7 +152,7 @@ export default function BlogMacMiniRunningSlow() {
           </ul>
           <p>
             Free diagnosis at our{" "}
-            <Link to="/mac-mini-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Mini repair Dubai
             </Link>{" "}
             workshop - we'll tell you honestly if repair vs replacement is the better call.

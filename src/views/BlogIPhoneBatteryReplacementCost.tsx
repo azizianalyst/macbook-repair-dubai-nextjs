@@ -45,9 +45,9 @@ export default function BlogIPhoneBatteryReplacementCost() {
               { model: "iPhone 17 Pro Max",              ours: "AED 450", apple: "AED 699", note: "Largest cell, longest job" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Apple Store pricing from{" "}
-            <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               support.apple.com/iphone/repair/battery-power
             </a>{" "}
             (April 2026).
@@ -119,11 +119,11 @@ export default function BlogIPhoneBatteryReplacementCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               Visit our iPhone battery replacement page
             </Link>{" "}
             for the full service breakdown, or browse{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               every iPhone model
             </Link>{" "}
             for model-specific pricing.

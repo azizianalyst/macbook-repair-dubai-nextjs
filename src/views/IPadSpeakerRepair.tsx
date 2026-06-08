@@ -25,7 +25,7 @@ export default function IPadSpeakerRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>iPad audio comes in two configurations</strong>: standard iPad and iPad mini have two speakers (one each end), while iPad Air and iPad Pro have four-speaker landscape stereo (two each end, with iPadOS routing bass and treble dynamically depending on orientation). When one channel goes muddy or silent, the imbalance is immediately obvious. AED 350 covers any single speaker module replacement.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             First step is always free: microscope mesh inspection. Sand and dust from beach trips and dusty rooms work into the speaker grilles and dampen output. About 35% of "broken" iPad speakers in Dubai are restored by a careful clean alone - no charge.
           </p>
         </>

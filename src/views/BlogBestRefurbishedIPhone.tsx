@@ -125,7 +125,7 @@ export default function BlogBestRefurbishedIPhone() {
           </ul>
           <p>
             Need a battery replaced after purchase?{" "}
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               From AED 250 with 12-month warranty
             </Link>
             .
@@ -153,7 +153,7 @@ export default function BlogBestRefurbishedIPhone() {
 
           <p>
             Inspecting a used iPhone before you commit?{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               We do AED 100 full diagnostics
             </Link>
             {" "}- refunded against any service. Worth it on a AED 2,500 purchase.

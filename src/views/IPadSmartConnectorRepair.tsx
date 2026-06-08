@@ -25,7 +25,7 @@ export default function IPadSmartConnectorRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The Smart Connector is the three-pin magnetic contact</strong> on the side or back of every iPad Pro and iPad Air since 2015 - it's how the Magic Keyboard, Smart Keyboard and Smart Keyboard Folio talk to your iPad without Bluetooth or charging cables. When it fails, your keyboard goes dead even though it's mechanically attached.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Two common causes in Dubai: humidity corrosion on the contact pads (especially in coastal areas like JBR and Palm), and impact damage that bent the chassis enough to break the internal flex. AED 450 covers Smart Connector flex replacement and contact pad cleaning. Free first step: we check whether the keyboard itself is the fault by testing on another iPad.
           </p>
         </>

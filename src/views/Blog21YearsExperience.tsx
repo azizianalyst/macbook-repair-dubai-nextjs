@@ -83,7 +83,7 @@ export default function Blog21YearsExperience() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>MacBook Pro 2016-2017 flexgate</strong>: stage light effect along bottom of screen at ~12-18 months - caused by a too-short display flex cable. We fix at the cable not the whole screen - see our{" "}
-              <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">flexgate guide</Link>.
+              <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">flexgate guide</Link>.
             </li>
             <li><strong>iPhone 12 Pro front camera failure</strong>: solder joint fatigue around the dot projector at ~24 months - micro-rework restores Face ID without full assembly swap.</li>
             <li><strong>iMac 27" 2017 GPU failure</strong>: dedicated AMD GPU dies after 5-6 years in Dubai climate - reflow extends life 1-2 years pre-replacement.</li>

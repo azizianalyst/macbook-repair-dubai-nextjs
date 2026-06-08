@@ -99,8 +99,7 @@
     background-size: 56px 56px;
   }
   /* on dark brand bands, base the grid on the light on-primary color instead */
-  .bg-grid-faint.on-dark,
-  .dark .bg-grid-faint {
+  .bg-grid-faint.on-dark {
     background-image:
       linear-gradient(to right, hsl(var(--on-primary) / 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(var(--on-primary) / 0.04) 1px, transparent 1px);

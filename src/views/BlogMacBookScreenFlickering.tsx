@@ -42,7 +42,7 @@ export default function BlogMacBookScreenFlickering() {
             software, cleared with an update or a setting. The other half are a worn cable or a panel,
             and those we sort the same day on the common models. Either way you can find out which in
             five minutes, and if it does need a panel our{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair
             </Link>{" "}
             starts at AED 600.
@@ -119,7 +119,7 @@ export default function BlogMacBookScreenFlickering() {
             2016 and 2017 MacBook Pro this is the well-known Flexgate fault, and it starts as flicker
             or a "stage light" band before the screen goes dark for good. We swap these constantly.
             The full background, including how to catch it early, is in our{" "}
-            <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">
               Flexgate explainer
             </Link>.
           </p>
@@ -135,7 +135,7 @@ export default function BlogMacBookScreenFlickering() {
             If an external monitor flickers too, the fault is past the lid, in the graphics processor
             or the board that drives it. This is more common on older 15″ and 16″ Pros that ran their
             discrete GPU hot. It's bench work, and our{" "}
-            <Link to="/macbook-gpu-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-gpu-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook GPU repair
             </Link>{" "}
             covers it.
@@ -152,7 +152,7 @@ export default function BlogMacBookScreenFlickering() {
             board repair is AED 350 to 800, since we work at component level where we can rather than
             replacing the whole screen. GPU and logic-board work starts from AED 800. If you'd rather
             we just check it first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote.

@@ -121,7 +121,7 @@ export default function GuideScreenRecordAudioMac() {
             <li><strong>Volume at zero:</strong> a Multi-Output Device can't be volume-controlled with the keyboard keys - set app and system volume before you start.</li>
             <li><strong>Device renamed or removed:</strong> if you deleted BlackHole from Audio MIDI Setup, recreate the Multi-Output Device from scratch.</li>
             <li><strong>You can't hear yourself:</strong> that's normal - the Multi-Output Device sends to BlackHole silently; check the recording afterwards to confirm sound was captured.</li>
-            <li><strong>Hardware fault:</strong> if no app records any audio - even a normal mic - the issue may be the audio controller or speakers, not your setup. Our <Link to="/macbook-speaker-repair-dubai" className="text-accent-bright font-semibold hover:underline">MacBook speaker and audio repair in Dubai</Link> can diagnose it.</li>
+            <li><strong>Hardware fault:</strong> if no app records any audio - even a normal mic - the issue may be the audio controller or speakers, not your setup. Our <Link to="/macbook-speaker-repair-dubai" className="text-accent font-semibold hover:underline">MacBook speaker and audio repair in Dubai</Link> can diagnose it.</li>
           </ul>
 
           <h2>If audio still won't work after a clean setup</h2>
@@ -129,10 +129,10 @@ export default function GuideScreenRecordAudioMac() {
             A botched audio driver install, a corrupt Core Audio configuration, or a left-over
             virtual device from an old app can break sound system-wide - sometimes to the point where
             even Zoom or Music play nothing. A clean macOS reinstall clears these conflicts without
-            touching your files. We handle <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">macOS reinstall in Dubai</Link> if you'd
-            rather not risk it, or run a <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">full MacBook diagnostic</Link> to
+            touching your files. We handle <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">macOS reinstall in Dubai</Link> if you'd
+            rather not risk it, or run a <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">full MacBook diagnostic</Link> to
             rule out a hardware fault. If recordings only stutter when the Mac is under load, it may
-            be a performance issue - see our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">10 fixes for a slow MacBook</Link>.
+            be a performance issue - see our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">10 fixes for a slow MacBook</Link>.
           </p>
 
           <h2>Quick recap</h2>

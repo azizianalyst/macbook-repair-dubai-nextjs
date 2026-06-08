@@ -37,9 +37,9 @@ export default function BlogIPhone15Vs17RepairCost() {
               { model: "Vapor chamber service",  ours: "n/a",       apple: "n/a",         note: "AED 350 (Pro / Pro Max only)" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             "AED 850" / "AED 1,400" rows above for iPhone 17 Pro Max - full pricing on the
-            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent-bright hover:underline"> screen cost guide</Link>.
+            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent hover:underline"> screen cost guide</Link>.
           </p>
 
           <h2>Why iPhone 17 parts cost more (so far)</h2>
@@ -109,11 +109,11 @@ export default function BlogIPhone15Vs17RepairCost() {
           <h2>What to do next</h2>
           <p>
             See the full{" "}
-            <Link to="/iphone-15-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-15-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone 15 repair page
             </Link>{" "}
             or{" "}
-            <Link to="/iphone-17-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-17-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone 17 repair page
             </Link>{" "}
             for model-specific pricing.

@@ -25,7 +25,7 @@ export default function MacBookCameraRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook camera repair in Dubai</strong> covers a black or green screen on FaceTime, Zoom and Teams, the "there is no connected camera" error, blurry video, and cameras that fail after a spill or a knock to the screen. The FaceTime HD camera sits in the display and connects through the hinge to the logic board - so the cause can be software, a damaged flex cable, a faulty module, or a board-level fault. We isolate the real cause first, so you don't pay to replace the whole screen when you don't need to. AED 200 covers parts, labour and a 90-day warranty.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and older Retina models still in daily use across Dubai.
           </p>
         </>

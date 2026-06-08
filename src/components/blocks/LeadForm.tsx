@@ -25,7 +25,7 @@ const ISSUES = [
 type Errors = Partial<Record<keyof Lead, string>>;
 
 const FIELD =
-  "mt-1 bg-white/[0.04] border border-white/10 text-on-primary placeholder:text-on-primary-faint focus:border-accent-bright";
+  "mt-1 bg-bg-card border border-border text-text placeholder:text-text-faint focus:border-accent";
 
 const STEP_FIELDS: (keyof Lead)[][] = [
   ["deviceType", "model", "issue", "details"],
@@ -39,10 +39,10 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "rounded-full border px-4 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright",
+        "rounded-full border px-4 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
-          ? "border-accent-bright bg-accent/15 text-on-primary font-semibold"
-          : "border-white/12 bg-white/[0.04] text-on-primary-muted hover:border-accent-bright/40 hover:text-on-primary",
+          ? "border-accent bg-accent/15 text-text font-semibold"
+          : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
       )}
     >
       {children}
@@ -159,12 +159,12 @@ export function LeadForm({
 
   if (status === "success") {
     return (
-      <div className={cn("rounded-2xl border border-white/10 bg-white/[0.04] p-xl text-center", className)}>
-        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent-bright">
+      <div className={cn("rounded-2xl border border-border bg-bg-card p-xl text-center", className)}>
+        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
           <Check size={24} aria-hidden />
         </div>
-        <h3 className="text-[22px] font-bold text-on-primary">Request received</h3>
-        <p className="mt-sm text-[15px] text-on-primary-muted max-w-[42ch] mx-auto">
+        <h3 className="text-[22px] font-bold text-text">Request received</h3>
+        <p className="mt-sm text-[15px] text-text-muted max-w-[42ch] mx-auto">
           Thanks {form.name.split(" ")[0]} — we&apos;ll reply on {form.preferredContact.toLowerCase()} shortly with a
           quote and next steps. For an instant response you can also message us now.
         </p>
@@ -189,7 +189,7 @@ export function LeadForm({
   ];
 
   return (
-    <div className={cn("rounded-2xl border border-white/10 bg-white/[0.04] p-lg md:p-xl", className)}>
+    <div className={cn("rounded-2xl border border-border bg-bg-card p-lg md:p-xl", className)}>
       {/* progress / step indicator */}
       <div className="mb-lg">
         <div className="flex items-center justify-between gap-2">
@@ -198,16 +198,16 @@ export function LeadForm({
               <span
                 className={cn(
                   "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold",
-                  i <= step ? "bg-accent-bright text-on-primary" : "bg-white/10 text-on-primary-faint",
+                  i <= step ? "bg-accent text-text" : "bg-bg-card text-text-faint",
                 )}
               >
                 {i < step ? <Check size={14} aria-hidden /> : m.n}
               </span>
-              <span className={cn("text-[13px] hidden sm:inline", i <= step ? "text-on-primary" : "text-on-primary-faint")}>
+              <span className={cn("text-[13px] hidden sm:inline", i <= step ? "text-text" : "text-text-faint")}>
                 {m.label}
               </span>
               {i < stepMeta.length - 1 && (
-                <span className={cn("mx-1 h-px flex-1", i < step ? "bg-accent-bright" : "bg-white/10")} aria-hidden />
+                <span className={cn("mx-1 h-px flex-1", i < step ? "bg-accent" : "bg-bg-card")} aria-hidden />
               )}
             </div>
           ))}
@@ -230,7 +230,7 @@ export function LeadForm({
       {step === 0 && (
         <div className="grid gap-md">
           <div>
-            <Label className="text-on-primary-muted">What device needs repair?</Label>
+            <Label className="text-text-muted">What device needs repair?</Label>
             <div className="mt-2 flex flex-wrap gap-2">
               {DEVICE_TYPES.map((d) => (
                 <Chip key={d} active={form.deviceType === d} onClick={() => set("deviceType", d)}>{d}</Chip>
@@ -238,12 +238,12 @@ export function LeadForm({
             </div>
           </div>
           <div>
-            <Label htmlFor="model" className="text-on-primary-muted">Model <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="model" className="text-text-muted">Model <span className="text-text-faint">(optional)</span></Label>
             <Input id="model" value={form.model} maxLength={80} onChange={(e) => set("model", e.target.value)}
               className={FIELD} placeholder='e.g. MacBook Pro 14" M2, iPhone 15 Pro' />
           </div>
           <div>
-            <Label className="text-on-primary-muted">What&apos;s wrong?</Label>
+            <Label className="text-text-muted">What&apos;s wrong?</Label>
             <div className="mt-2 flex flex-wrap gap-2">
               {ISSUES.map((it) => (
                 <Chip key={it} active={form.issue === it} onClick={() => set("issue", it)}>{it}</Chip>
@@ -252,7 +252,7 @@ export function LeadForm({
             {errors.issue && <p className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
           </div>
           <div>
-            <Label htmlFor="details" className="text-on-primary-muted">Describe the problem <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="details" className="text-text-muted">Describe the problem <span className="text-text-faint">(optional)</span></Label>
             <Textarea id="details" value={form.details} maxLength={1000} onChange={(e) => set("details", e.target.value)}
               className={cn(FIELD, "min-h-[90px]")} placeholder="When it started, any drops/spills, error messages…" />
           </div>
@@ -263,25 +263,25 @@ export function LeadForm({
       {step === 1 && (
         <div className="grid gap-md">
           <div>
-            <Label htmlFor="name" className="text-on-primary-muted">Your name</Label>
+            <Label htmlFor="name" className="text-text-muted">Your name</Label>
             <Input id="name" value={form.name} maxLength={80} autoComplete="name" onChange={(e) => set("name", e.target.value)}
               className={FIELD} aria-invalid={!!errors.name} />
             {errors.name && <p className="mt-1 text-[13px] text-danger">{errors.name}</p>}
           </div>
           <div>
-            <Label htmlFor="phone" className="text-on-primary-muted">Phone / WhatsApp number</Label>
+            <Label htmlFor="phone" className="text-text-muted">Phone / WhatsApp number</Label>
             <Input id="phone" value={form.phone} maxLength={20} type="tel" inputMode="tel" autoComplete="tel"
               onChange={(e) => set("phone", e.target.value)} className={FIELD} placeholder="+971 5x xxx xxxx" aria-invalid={!!errors.phone} />
             {errors.phone && <p className="mt-1 text-[13px] text-danger">{errors.phone}</p>}
           </div>
           <div>
-            <Label htmlFor="email" className="text-on-primary-muted">Email <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="email" className="text-text-muted">Email <span className="text-text-faint">(optional)</span></Label>
             <Input id="email" value={form.email} maxLength={120} type="email" autoComplete="email"
               onChange={(e) => set("email", e.target.value)} className={FIELD} aria-invalid={!!errors.email} />
             {errors.email && <p className="mt-1 text-[13px] text-danger">{errors.email}</p>}
           </div>
           <div>
-            <Label className="text-on-primary-muted">Best way to reach you</Label>
+            <Label className="text-text-muted">Best way to reach you</Label>
             <div className="mt-2 flex flex-wrap gap-2">
               {CONTACT_METHODS.map((m) => (
                 <Chip key={m} active={form.preferredContact === m} onClick={() => set("preferredContact", m)}>{m}</Chip>
@@ -289,7 +289,7 @@ export function LeadForm({
             </div>
           </div>
           <div>
-            <Label htmlFor="area" className="text-on-primary-muted">Your area in Dubai <span className="text-on-primary-faint">(optional — for free pickup)</span></Label>
+            <Label htmlFor="area" className="text-text-muted">Your area in Dubai <span className="text-text-faint">(optional — for free pickup)</span></Label>
             <Input id="area" value={form.area} maxLength={80} onChange={(e) => set("area", e.target.value)}
               className={FIELD} placeholder="e.g. Dubai Marina, Business Bay" />
           </div>
@@ -299,8 +299,8 @@ export function LeadForm({
       {/* STEP 3 — REVIEW */}
       {step === 2 && (
         <div className="grid gap-md">
-          <h3 className="text-[18px] font-bold text-on-primary">Review &amp; send</h3>
-          <dl className="rounded-md border border-white/10 bg-white/[0.03] p-md text-[14px]">
+          <h3 className="text-[18px] font-bold text-text">Review &amp; send</h3>
+          <dl className="rounded-md border border-border bg-bg-alt p-md text-[14px]">
             {[
               ["Device", `${form.deviceType}${form.model ? " · " + form.model : ""}`],
               ["Issue", form.issue],
@@ -311,13 +311,13 @@ export function LeadForm({
               ["Prefers", form.preferredContact],
               ["Area", form.area || "—"],
             ].map(([k, v]) => (
-              <div key={k} className="flex gap-3 border-b border-white/5 py-1.5 last:border-0">
-                <dt className="w-24 shrink-0 text-on-primary-faint">{k}</dt>
-                <dd className="text-on-primary">{v}</dd>
+              <div key={k} className="flex gap-3 border-b border-border py-1.5 last:border-0">
+                <dt className="w-24 shrink-0 text-text-faint">{k}</dt>
+                <dd className="text-text">{v}</dd>
               </div>
             ))}
           </dl>
-          <p className="text-[12px] text-on-primary-faint">
+          <p className="text-[12px] text-text-faint">
             By sending you agree we may contact you about your repair. We never share your details.
           </p>
         </div>
@@ -342,9 +342,9 @@ export function LeadForm({
       </div>
 
       {variant === "full" && (
-        <p className="mt-md text-center text-[13px] text-on-primary-muted">
+        <p className="mt-md text-center text-[13px] text-text-muted">
           Prefer to chat now?{" "}
-          <button type="button" onClick={whatsappFallback} className="font-semibold text-accent-bright hover:underline">
+          <button type="button" onClick={whatsappFallback} className="font-semibold text-accent hover:underline">
             Message us on WhatsApp
           </button>
         </p>

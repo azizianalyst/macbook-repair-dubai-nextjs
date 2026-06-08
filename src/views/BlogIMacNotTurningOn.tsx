@@ -141,7 +141,7 @@ export default function BlogIMacNotTurningOn() {
           <p>
             Our shop is one of about 4 in Dubai that does iMac PSU swap as a standalone service.
             See our{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/imac-repair-dubai" className="text-accent font-semibold hover:underline">
               iMac repair page
             </Link>{" "}
             for all iMac models we service.

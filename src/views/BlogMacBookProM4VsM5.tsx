@@ -128,11 +128,11 @@ export default function BlogMacBookProM4VsM5() {
 
           <p>
             Already cracked the screen on your M4 or M5?{" "}
-            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="text-accent font-semibold hover:underline">
               See our M5 Pro 14″ page
             </Link>{" "}
             or{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               browse every MacBook
             </Link>{" "}
             we service.

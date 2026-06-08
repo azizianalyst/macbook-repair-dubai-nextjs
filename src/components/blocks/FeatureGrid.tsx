@@ -33,12 +33,12 @@ export default function FeatureGrid({
         {(heading || subheading) && (
           <div className="mb-2xl max-w-[680px]">
             {heading && (
-              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-text">
                 {heading}
               </h2>
             )}
             {subheading && (
-              <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-on-primary-muted">
+              <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-text-muted">
                 {subheading}
               </p>
             )}
@@ -51,23 +51,23 @@ export default function FeatureGrid({
             return (
               <div
                 key={i}
-                className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg"
+                className="flex flex-col rounded-2xl border border-border bg-bg-card p-lg"
               >
                 {Icon && (
-                  <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-accent-bright">
+                  <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-bg-card text-accent">
                     <Icon size={22} aria-hidden />
                   </span>
                 )}
-                <h3 className="text-[18px] font-bold text-on-primary">{f.name}</h3>
-                <p className="mt-sm text-[14px] leading-relaxed text-on-primary-muted">
+                <h3 className="text-[18px] font-bold text-text">{f.name}</h3>
+                <p className="mt-sm text-[14px] leading-relaxed text-text-muted">
                   {f.description}
                 </p>
                 {f.metric && (
                   <div className="mt-auto pt-md">
-                    <div className="text-[28px] font-bold leading-none text-accent-bright">
+                    <div className="text-[28px] font-bold leading-none text-accent">
                       {f.metric.value}
                     </div>
-                    <div className="mt-1 text-[13px] text-on-primary-muted">
+                    <div className="mt-1 text-[13px] text-text-muted">
                       {f.metric.label}
                     </div>
                   </div>

@@ -70,7 +70,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             We send a courier to your home, office, or hotel anywhere in Dubai - Marina to Al Khawaneej, Mirdif to Jebel Ali. Process:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">+971 55 741 3706</a> with your iPhone/MacBook model and what's wrong.</li>
+            <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">+971 55 741 3706</a> with your iPhone/MacBook model and what's wrong.</li>
             <li>We confirm pickup window - usually within 2 hours.</li>
             <li>Courier arrives, you hand over device, get a written receipt with serial number and damage notes.</li>
             <li>Workshop diagnosis (free), we WhatsApp you the quote.</li>
@@ -78,7 +78,7 @@ export default function BlogMacBookRepairNearMeDubai() {
           </ol>
           <p>
             Full details:{" "}
-            <Link to="/blog/free-pickup-delivery-dubai-how-it-works" className="text-accent-bright font-semibold hover:underline">free pickup & delivery - how it works</Link>.
+            <Link to="/blog/free-pickup-delivery-dubai-how-it-works" className="text-accent font-semibold hover:underline">free pickup & delivery - how it works</Link>.
           </p>
 
           <h2>Sharjah and Abu Dhabi</h2>

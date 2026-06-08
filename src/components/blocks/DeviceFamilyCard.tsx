@@ -20,15 +20,15 @@ export function DeviceFamilyCard({ name, href, startingPrice, models, icon: Icon
       className={cn(
         "group block rounded-md p-lg transition-shadow",
         dark
-          ? "border border-white/10 bg-white/[0.04]"
+          ? "border border-border bg-bg-card"
           : "bg-bg-card border border-border shadow-sm hover:shadow-md",
       )}
     >
-      <Icon size={32} className={cn("mb-md", dark ? "text-accent-bright" : "text-accent")} aria-hidden />
-      <p className={cn("font-bold text-[18px] mb-1", dark ? "text-on-primary" : undefined)}>{name}</p>
-      <p className={cn("text-[13px] mb-sm", dark ? "text-on-primary-muted" : "text-text-muted")}>{models}</p>
-      <p className={cn("mono text-[13px] mb-md", dark ? "text-on-primary-faint" : "text-text-faint")}>From AED {startingPrice}</p>
-      <span className={cn("inline-flex items-center gap-1 text-[14px] font-semibold group-hover:gap-2 transition-all", dark ? "text-accent-bright" : "text-primary")}>
+      <Icon size={32} className={cn("mb-md", dark ? "text-accent" : "text-accent")} aria-hidden />
+      <p className={cn("font-bold text-[18px] mb-1", dark ? "text-text" : undefined)}>{name}</p>
+      <p className={cn("text-[13px] mb-sm", dark ? "text-text-muted" : "text-text-muted")}>{models}</p>
+      <p className={cn("mono text-[13px] mb-md", dark ? "text-text-faint" : "text-text-faint")}>From AED {startingPrice}</p>
+      <span className={cn("inline-flex items-center gap-1 text-[14px] font-semibold group-hover:gap-2 transition-all", dark ? "text-accent" : "text-primary")}>
         See repairs <ArrowRight size={14} aria-hidden />
       </span>
     </Link>

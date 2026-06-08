@@ -25,7 +25,7 @@ export default function IPhoneWifiBluetoothRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Greyed-out WiFi toggle</strong> in Settings is the classic symptom - the toggle won't turn on at all, or it turns on then immediately greys back out. On most iPhones the same chip handles WiFi and Bluetooth, so when one fails, the other usually goes too. From iPhone 17 onwards Apple uses its own N1 wireless chip; earlier models use Broadcom or Apple-Broadcom hybrids. Both are repairable at component level - AED 400.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Common causes: heat damage from prolonged charging in a hot car (Dubai summers are brutal), motherboard flex from a drop, or post-water corrosion on the wireless module. We use hot-air rework at 280°C with the rest of the board protected, then reflow or reball the chip.
           </p>
         </>

@@ -72,24 +72,24 @@ export default function WhereToRepairMacBookDubai() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>When your MacBook breaks in Dubai you have three routes:</strong> an Apple Store or genuine reseller, an Apple Authorised Service Provider (AASP), or an independent specialist like us. Each one wins in different situations. We&apos;ve repaired Macs in Media City since 2004, and we&apos;d rather you choose with the full picture - so here it is, with our real prices.
           </p>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04] mb-lg">
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[680px]">
               <caption className="sr-only">Comparison of repairing a MacBook in Dubai at an Apple Store, an Apple Authorised Service Provider, or an independent specialist.</caption>
-              <thead className="bg-white/[0.02]">
+              <thead className="bg-bg-alt">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Factor</th>
                   <th className="px-md py-sm font-semibold">Apple Store / reseller</th>
                   <th className="px-md py-sm font-semibold">Authorised (AASP)</th>
-                  <th className="px-md py-sm font-semibold text-accent-bright">Independent — us</th>
+                  <th className="px-md py-sm font-semibold text-accent">Independent — us</th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARISON.map((r, i) => (
-                  <tr key={r.factor} className={i % 2 ? "bg-white/[0.02]" : ""}>
-                    <td className="px-md py-sm font-semibold text-on-primary align-top">{r.factor}</td>
-                    <td className="px-md py-sm text-on-primary-muted align-top">{r.apple}</td>
-                    <td className="px-md py-sm text-on-primary-muted align-top">{r.aasp}</td>
-                    <td className="px-md py-sm text-on-primary align-top">{r.us}</td>
+                  <tr key={r.factor} className={i % 2 ? "bg-bg-alt" : ""}>
+                    <td className="px-md py-sm font-semibold text-text align-top">{r.factor}</td>
+                    <td className="px-md py-sm text-text-muted align-top">{r.apple}</td>
+                    <td className="px-md py-sm text-text-muted align-top">{r.aasp}</td>
+                    <td className="px-md py-sm text-text align-top">{r.us}</td>
                   </tr>
                 ))}
               </tbody>
@@ -97,12 +97,12 @@ export default function WhereToRepairMacBookDubai() {
           </div>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">When Apple or an authorised centre is the better choice</h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mb-lg max-w-[72ch]">
+          <p className="text-[16px] text-text-muted leading-relaxed mb-lg max-w-[72ch]">
             If your MacBook is still inside Apple&apos;s one-year warranty or covered by AppleCare+, start with an Apple Store or an Apple Authorised Service Provider - they can process the claim in-house and a covered repair may cost little or nothing. The same is true if you specifically need only Apple-supplied parts and cost is not a concern. We&apos;ll tell you this to your face rather than take work that&apos;s better handled under your cover.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">When an independent specialist wins</h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch]">
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
             Once a Mac is out of warranty - or Apple has classed it &quot;vintage&quot; and won&apos;t touch it - an independent specialist is usually the faster, cheaper and more flexible route. We repair at component and board level (the exact failed chip, port or cable) where Apple and authorised centres replace the whole logic board, so a fault Apple quotes thousands for is often a fraction of that with us. Add free door-to-door pickup across Dubai, same-day turnaround on most repairs, a written 90-day warranty, and published prices you can see before you commit.
           </p>
         </>

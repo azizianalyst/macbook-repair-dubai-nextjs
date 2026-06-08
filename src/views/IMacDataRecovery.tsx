@@ -25,7 +25,7 @@ export default function IMacDataRecovery() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Stop using the iMac.</strong> If a drive is failing, every power-on writes more data to weak sectors and reduces what we can recover. The right move is to bring it to us untouched - we image the drive on a write-blocker bench before we attempt anything.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             iMac data recovery splits into three very different jobs. Older Fusion Drives need both halves understood - the SSD cache holds the file map, the spinning HDD holds the actual data. SATA SSDs from 2017 fail silently. 2018-and-later iMacs use the T2 chip to encrypt the SSD against the logic board's unique key - recovery from a dead T2 board is much harder and we will tell you up front whether it is possible. Honest assessment first, then a written quote.
           </p>
         </>

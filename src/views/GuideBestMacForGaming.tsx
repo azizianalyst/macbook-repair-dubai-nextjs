@@ -73,10 +73,10 @@ export default function GuideBestMacForGaming() {
             Because it's soldered, the AED few-hundred you save by under-speccing RAM today
             becomes a "sell it and buy a new MacBook" problem in two years. Buy up front. The
             same logic applies to any Mac you buy for heavy work - see our breakdown of{" "}
-            <Link to="/blog/best-mac-for-developers-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/best-mac-for-developers-dubai-2026" className="text-accent font-semibold hover:underline">
               the best Mac for developers in 2026
             </Link>. If you're on an older Intel MacBook with socketed memory, a{" "}
-            <Link to="/macbook-ram-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-ram-upgrade-dubai" className="text-accent font-semibold hover:underline">
               MacBook RAM upgrade in Dubai
             </Link>{" "}is still possible - but that option died with Apple Silicon.
           </p>
@@ -96,7 +96,7 @@ export default function GuideBestMacForGaming() {
             gaming or short casual sessions, but don't expect it to hold frame rates for hours.
             If your current Mac runs hot and slow under load, that may also be dust-clogged fans -
             our{" "}
-            <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">
               MacBook overheating fix in Dubai
             </Link>{" "}restores throttled performance.
           </p>
@@ -126,7 +126,7 @@ export default function GuideBestMacForGaming() {
             Windows on an M-series MacBook to play Windows games the old way. Boot Camp only
             ever worked on Intel Macs. If you have an Intel MacBook and want native Windows for
             gaming, our{" "}
-            <Link to="/boot-camp-windows-macbook-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/boot-camp-windows-macbook-dubai" className="text-accent font-semibold hover:underline">
               Boot Camp Windows installation in Dubai
             </Link>{" "}covers exactly that. On Apple Silicon your Windows-gaming routes are GPTK
             translation or cloud streaming - not Boot Camp.
@@ -162,7 +162,7 @@ export default function GuideBestMacForGaming() {
             and the Max chip if gaming is a priority, load up on RAM because you can't add it
             later, and lean on cloud gaming to fill the gaps. Do that and you'll be happy for
             years. If you've got questions about a specific model before you buy,{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               get in touch with us
             </Link>{" "}- we see every Mac configuration come through the workshop.
           </p>

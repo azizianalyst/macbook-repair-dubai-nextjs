@@ -26,16 +26,16 @@ export default function IPhoneDataRecovery() {
       pricingCaption="Free pre-quote diagnosis. Real-world success: 80%+ on water damage if brought in within 24 hours, 60% on dropped phones, 30% on phones dead for 6+ months."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone data recovery in Dubai starts at AED 400 with iCloud-assisted recovery, scaling to AED 2,500 for forensic chip-off work. The honest truth about iPhone data recovery sets it apart from MacBook or external drive recovery: every iPhone since the iPhone 5s (2013) uses Apple's Secure Enclave processor, which encrypts the entire NAND flash with a hardware-bound key. Without the user's passcode, even physical NAND extraction yields encrypted data that no current commercial tool can decrypt. The workshop is candid about this on every WhatsApp ticket - false promises help no one.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             The good news: most iPhone "data loss" tickets aren't actually NAND failures. They're broken charging ports (battery is dead), broken screens (data is fine), water damage that killed the display (logic board still works), or accidentally deleted photos (iCloud backup or Recently Deleted album holds them). The workshop's free diagnosis identifies the right path in 30 minutes. Genuine NAND failures (where the storage chip itself is dying) are rare on iPhone - the controller chip more often fails before the NAND, and that's repairable with a controller-IC swap.
           </p>
         </>
       }
       honestyCallout={
-        <div className="text-[15px] text-on-primary leading-relaxed space-y-md">
+        <div className="text-[15px] text-text leading-relaxed space-y-md">
           <p>
             <strong>Secure Enclave reality:</strong> iPhone 5s and later encrypt all storage with a key tied to the Secure Enclave Processor (SEP). The passcode is required to unwrap the encryption key. Without the passcode, NAND chip-off recovery returns ciphertext that cannot be decrypted by any commercial or law-enforcement tool currently available.
           </p>

@@ -27,39 +27,39 @@ export function LegalLayout({ title, intro, lastUpdated, pagePath, pageLabel, ch
 
   return (
     <PageShell>
-      <div data-hero-tone="dark" className="bg-primary text-on-primary -mb-[4rem]">
-      <section className="bg-white/[0.02] pt-[96px] pb-xl border-b border-white/10">
+      <div data-hero-tone="light" className="bg-bg-alt text-text -mb-[4rem]">
+      <section className="bg-bg-alt pt-[96px] pb-xl border-b border-border">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: pageLabel, path: pagePath }]} />
-          <p className="mono text-[12px] uppercase tracking-wider text-on-primary-muted mb-sm">Legal</p>
-          <h1 className="max-w-[26ch] text-on-primary">{title}</h1>
-          <p className="mt-md max-w-[60ch] text-[18px] text-on-primary-muted leading-relaxed">{intro}</p>
-          <p className="mt-md flex items-center gap-1 text-[13px] mono text-on-primary-faint">
+          <p className="mono text-[12px] uppercase tracking-wider text-text-muted mb-sm">Legal</p>
+          <h1 className="max-w-[26ch] text-text">{title}</h1>
+          <p className="mt-md max-w-[60ch] text-[18px] text-text-muted leading-relaxed">{intro}</p>
+          <p className="mt-md flex items-center gap-1 text-[13px] mono text-text-faint">
             <CalendarDays size={14} aria-hidden /> Last updated: {lastUpdated}
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-2xl grid gap-2xl md:grid-cols-12">
-        <article className="md:col-span-8 prose-legal text-[16px] leading-relaxed text-on-primary-muted [&_h2]:text-on-primary [&_h3]:text-on-primary [&_strong]:text-on-primary [&_a]:text-accent-bright">
+        <article className="md:col-span-8 prose-legal text-[16px] leading-relaxed text-text-muted [&_h2]:text-text [&_h3]:text-text [&_strong]:text-text [&_a]:text-accent">
           {children}
         </article>
 
         <aside className="md:col-span-4">
-          <div className="sticky top-[100px] bg-white/[0.04] border border-white/10 rounded-md p-lg">
-            <h2 className="text-[16px] font-bold mb-sm text-on-primary">Other policies</h2>
+          <div className="sticky top-[100px] bg-bg-card border border-border rounded-md p-lg">
+            <h2 className="text-[16px] font-bold mb-sm text-text">Other policies</h2>
             <ul className="flex flex-col gap-1 text-[14px]">
               {others.map((r) => (
                 <li key={r.href}>
-                  <Link to={r.href} className="text-on-primary-muted hover:text-accent-bright">{r.label}</Link>
+                  <Link to={r.href} className="text-text-muted hover:text-accent">{r.label}</Link>
                 </li>
               ))}
             </ul>
-            <hr className="my-md border-white/10" />
-            <h2 className="text-[16px] font-bold mb-sm text-on-primary">Questions?</h2>
-            <p className="text-[14px] text-on-primary-muted leading-relaxed">
-              Email <a href="mailto:info@macbook-repair-dubai.ae" className="text-accent-bright hover:underline">info@macbook-repair-dubai.ae</a> or
-              WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">055 741 3706</a>.
+            <hr className="my-md border-border" />
+            <h2 className="text-[16px] font-bold mb-sm text-text">Questions?</h2>
+            <p className="text-[14px] text-text-muted leading-relaxed">
+              Email <a href="mailto:info@macbook-repair-dubai.ae" className="text-accent hover:underline">info@macbook-repair-dubai.ae</a> or
+              WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">055 741 3706</a>.
             </p>
           </div>
         </aside>
@@ -76,7 +76,7 @@ export function LegalSection({
   return (
     <section id={id} className="mb-2xl scroll-mt-24">
       <h2 className="text-[24px] md:text-[26px] mb-md">{title}</h2>
-      <div className="flex flex-col gap-md text-on-primary-muted">{children}</div>
+      <div className="flex flex-col gap-md text-text-muted">{children}</div>
     </section>
   );
 }

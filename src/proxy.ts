@@ -6,7 +6,9 @@ import type { NextRequest } from "next/server";
 // 404 CSS/JS → unstyled pages. Forcing HTML to revalidate makes the CDN re-check origin on
 // each request, so a redeploy is picked up immediately. Hashed assets stay immutably cached
 // (the matcher below excludes them).
-export function middleware(_req: NextRequest) {
+//
+// Next.js 16 renamed the `middleware` file convention to `proxy` (runs on the Node.js runtime).
+export function proxy(_req: NextRequest) {
   const res = NextResponse.next();
   res.headers.set("Cache-Control", "public, max-age=0, must-revalidate");
   return res;

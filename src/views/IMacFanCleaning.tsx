@@ -25,7 +25,7 @@ export default function IMacFanCleaning() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If your iMac fan is suddenly loud but the machine still runs at normal speed, you usually don't need new thermal paste - you just need the dust out.</strong> This is the cheaper, faster service: open, vacuum, brush clean every cooling surface, refit, done. Most iMacs that come in for this leave the same afternoon.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Dubai is unusually hard on iMac cooling. The combination of fine outdoor dust pulled in through air conditioning, and 24/7 indoor cooling that keeps air circulating, deposits a fine carpet of dust across the heatsink fins. After two to three years it starts choking airflow; after five years the fan has to spin at maximum just to move any air at all. The fix is mechanical, not electronic - we just need to open the iMac in a clean area and clean every cooling surface properly.
           </p>
         </>

@@ -25,7 +25,7 @@ export default function MacBookOverheatingFix() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook overheating in Dubai</strong> is rarely a hardware fault - it's almost always dust accumulation in the fan blades and dried-out thermal paste between the CPU and the heatsink. The Dubai climate (fine sand carried indoors, high ambient temperature, AC running constantly) is brutal on MacBook cooling. The good news: a full thermal service brings sustained-load temperatures down 15-25°C and restores normal fan behaviour. Same day, AED 300.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Most common on 2016-2019 Intel MacBook Pros (the i7/i9 quad-core models that ran hot from new). Apple Silicon MacBooks throttle less aggressively but still benefit from a clean and re-paste after 3-4 years.
           </p>
         </>

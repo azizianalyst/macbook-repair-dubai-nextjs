@@ -64,7 +64,7 @@ export function StickyContactBar() {
         aria-label="Chat with us on WhatsApp"
         title="Chat with us on WhatsApp"
         className={cn(
-          "group inline-flex items-center gap-2.5 rounded-full bg-whatsapp text-on-primary",
+          "group inline-flex items-center gap-2.5 rounded-full bg-whatsapp text-text",
           "shadow-lg px-5 h-14 min-h-[44px] font-semibold text-[15px]",
           "hover:shadow-xl motion-safe:transition-all motion-safe:duration-200 hover:-translate-y-0.5",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2 focus-visible:ring-offset-bg",

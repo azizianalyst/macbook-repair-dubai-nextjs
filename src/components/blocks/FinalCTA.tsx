@@ -40,7 +40,7 @@ function CTALink({
 }
 
 /**
- * Gradient closing CTA panel. Dark brand band (bg-primary) with an accent
+ * Gradient closing CTA panel. Dark brand band (bg-bg-alt) with an accent
  * gradient overlay, rounded-3xl, centered, two buttons. SSR-safe.
  */
 export default function FinalCTA({

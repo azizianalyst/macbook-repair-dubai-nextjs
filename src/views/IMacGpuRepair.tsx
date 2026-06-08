@@ -25,7 +25,7 @@ export default function IMacGpuRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If your 27" iMac is showing coloured lines, banding, square artifacts, or refuses to display anything at all (but the fan and chime work) - the cause is usually the discrete AMD Radeon Pro GPU on the logic board.</strong> Apple soldered these GPUs directly to the board and they have a known failure rate, especially on heavily-used 2015 and 2017 iMacs.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We approach GPU repair honestly. Some failures are recoverable with a professional reflow on our infrared rework station - usually buying 6-18 months of life. Others need full GPU chip replacement, which is significantly more involved and expensive. Some are simply uneconomic to fix and the right answer is to redirect you to a Mac Studio or used 24" iMac instead. We assess for free, quote in writing, and never start work you don't approve.
           </p>
         </>

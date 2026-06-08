@@ -120,10 +120,10 @@ export default function BlogMacProDiscontinued() {
           </ul>
 
           <p>
-            Got an aging Mac Pro that needs love? <Link to="/mac-pro-repair-dubai" className="text-accent-bright font-semibold hover:underline">See our Mac Pro service page</Link>{" "}
-            or check the <Link to="/blog/imac-vs-mac-mini-vs-mac-studio" className="text-accent-bright font-semibold hover:underline">Mac desktop buyer's matrix</Link>{" "}
+            Got an aging Mac Pro that needs love? <Link to="/mac-pro-repair-dubai" className="text-accent font-semibold hover:underline">See our Mac Pro service page</Link>{" "}
+            or check the <Link to="/blog/imac-vs-mac-mini-vs-mac-studio" className="text-accent font-semibold hover:underline">Mac desktop buyer's matrix</Link>{" "}
             if you're considering a downgrade-replacement. Apple's official support timeline is on{" "}
-            <a href="https://support.apple.com/mac" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">support.apple.com/mac</a>.
+            <a href="https://support.apple.com/mac" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">support.apple.com/mac</a>.
           </p>
         </>
       }

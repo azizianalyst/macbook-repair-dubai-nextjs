@@ -56,20 +56,18 @@ export function Hero({
     console.warn(`[Hero] imageAlt is required when image is set. Image: ${image}`);
   }
   const paths = image ? variantPaths(image) : null;
-  // `tone` overrides the variant-derived band tone when provided; otherwise
-  // behavior is unchanged (home/device dark, service/blog light).
-  const onDark = tone ? tone === "dark" : variant === "home" || variant === "device";
-  // When `tone` forces a band that differs from the variant's native band,
-  // apply the band background here (and suppress the variant's own band below).
-  const toneBand = tone === "dark" ? "bg-primary text-on-primary" : tone === "light" ? "bg-bg-alt" : "";
+  // Site is light-only: every hero renders on a light band with dark text,
+  // regardless of variant or any `tone` prop a caller still passes.
+  const onDark = false;
+  const toneBand = tone ? "bg-bg-alt" : "";
   return (
     <section
       data-hero-tone={onDark ? "dark" : "light"}
       className={cn(
         "relative pt-[96px] pb-2xl md:pb-3xl overflow-hidden",
-        !tone && variant === "home" && "bg-primary text-on-primary",
+        !tone && variant === "home" && "bg-bg-alt",
         !tone && variant === "service" && "bg-bg-alt",
-        !tone && variant === "device" && "bg-primary text-on-primary",
+        !tone && variant === "device" && "bg-bg-alt",
         !tone && variant === "blog" && "bg-bg",
         toneBand,
       )}
@@ -86,12 +84,7 @@ export function Hero({
       )}>
         <div className={cn(hasSide ? "md:col-span-7" : "max-w-[820px]")}>
           {eyebrow && (
-            <Reveal as="p" delay={0} className={cn(
-              tone === "dark"
-                ? "inline-flex items-center mono text-[12px] uppercase tracking-wider mb-md rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-accent-bright"
-                : "mono text-[12px] uppercase tracking-wider mb-md",
-              tone !== "dark" && (onDark ? "text-accent" : "text-text-muted"),
-            )}>
+            <Reveal as="p" delay={0} className="mono text-[12px] uppercase tracking-wider mb-md text-text-muted">
               {eyebrow}
             </Reveal>
           )}

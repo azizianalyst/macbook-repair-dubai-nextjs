@@ -140,7 +140,7 @@ export default function BlogMacBookNotTurningOn() {
             <li>Free diagnostic, no obligation</li>
           </ol>
           <p>
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook logic board repair page
             </Link>{" "}
             for full board-level diagnostic process.

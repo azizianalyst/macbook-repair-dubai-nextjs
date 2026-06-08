@@ -25,7 +25,7 @@ export default function MacNotTurningOn() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Most "won't turn on" Macs split into three causes.</strong> Failed power supply (cheapest fix). Failed SMC controller or stuck SMC state (often a free reset, sometimes a chip swap). Logic board fault - usually power-delivery components around the SoC (more involved). The diagnostic process tells us which cause yours is, and that diagnostic is free.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Pro 2019 is unusually transparent because Apple put diagnostic LEDs on the logic board itself - they tell us in seconds whether power is reaching the board, whether the chassis is detecting the SMC, and whether the boot ROM has loaded. Mac Mini and Mac Studio are less verbose but still diagnosable: we have power-rail probing routines that find the fault on most boards within 30 minutes. Honest result either way - sometimes it's a wall socket or cable, sometimes it's a real repair.
           </p>
         </>

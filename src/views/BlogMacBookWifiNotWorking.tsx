@@ -42,7 +42,7 @@ export default function BlogMacBookWifiNotWorking() {
             rarely fails on its own. When a Wi-Fi job does reach our Dubai Media City bench, it's
             almost always after a spill or a clumsy screen repair that disturbed the antenna. If it
             does turn out to be hardware, our{" "}
-            <Link to="/macbook-wifi-bluetooth-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-wifi-bluetooth-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Wi-Fi and Bluetooth repair
             </Link>{" "}
             covers it after a free diagnostic.
@@ -120,7 +120,7 @@ export default function BlogMacBookWifiNotWorking() {
             A spill that reaches the board can corrode the wireless module or its connector. Wi-Fi and
             Bluetooth often go together because they share a chip. We cover the first steps after a
             spill in our{" "}
-            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent font-semibold hover:underline">
               MacBook cleaning and thermal guide
             </Link>{" "}
             and on the water-damage service page.
@@ -142,7 +142,7 @@ export default function BlogMacBookWifiNotWorking() {
             Re-seating or replacing an antenna cable runs AED 300 to 600. Spill cleaning around the
             wireless module starts from AED 400 depending on the corrosion. Board-level module repair
             starts from AED 800. If you'd rather we check it first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote.

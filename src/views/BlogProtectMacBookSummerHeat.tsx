@@ -23,7 +23,7 @@ export default function BlogProtectMacBookSummerHeat() {
           <h2>Apple's official MacBook temperature limits</h2>
           <p>
             Apple publishes these spec ranges in every MacBook user guide and on{" "}
-            <a href="https://support.apple.com/en-us/HT201640" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">support.apple.com</a>:
+            <a href="https://support.apple.com/en-us/HT201640" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">support.apple.com</a>:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Operating temperature:</strong> 10° to 35°C (50° to 95°F).</li>
@@ -89,9 +89,9 @@ export default function BlogProtectMacBookSummerHeat() {
           <ol className="list-decimal list-inside space-y-xs">
             <li>Move to AC immediately. <em>Do not</em> put it in the fridge or use ice packs - condensation will short the board.</li>
             <li>Power off and let it cool to room temperature for 1-2 hours before powering on.</li>
-            <li>Check battery health: <code className="px-1 rounded bg-white/[0.04] mono text-[13px]">Settings → Battery → Battery Health</code>. If "Service Recommended" appears or capacity dropped suddenly, the cell took damage.</li>
+            <li>Check battery health: <code className="px-1 rounded bg-bg-card mono text-[13px]">Settings → Battery → Battery Health</code>. If "Service Recommended" appears or capacity dropped suddenly, the cell took damage.</li>
             <li>Look for swelling: trackpad sitting proud of chassis or top case bowing upward = battery pouch expanded. Stop using it and bring it in - swollen cells can rupture.</li>
-            <li>Run an Apple Diagnostics scan (<code className="px-1 rounded bg-white/[0.04] mono text-[13px]">Power on while holding D</code>).</li>
+            <li>Run an Apple Diagnostics scan (<code className="px-1 rounded bg-bg-card mono text-[13px]">Power on while holding D</code>).</li>
           </ol>
 
           <h2>Common Dubai heat damage we see</h2>
@@ -103,8 +103,8 @@ export default function BlogProtectMacBookSummerHeat() {
           </ul>
           <p>
             If your MacBook took heat damage, we offer free diagnosis - see our{" "}
-            <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">MacBook overheating service page</Link> or our{" "}
-            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent-bright font-semibold hover:underline">battery-health diagnostic guide</Link>.
+            <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">MacBook overheating service page</Link> or our{" "}
+            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent font-semibold hover:underline">battery-health diagnostic guide</Link>.
           </p>
         </>
       }

@@ -25,7 +25,7 @@ export default function IMacPowerSupplyRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If a 27" iMac from 2015-2020 has gone completely dead - no fan spin, no chime, no light, nothing when you press power - the cause is almost always the PSU.</strong> Apple used a particular generation of internal power supply across these models that has a documented failure rate, and we see at least three or four every month.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The fix is straightforward but does require display removal. The PSU sits behind the logic board on the right side of the iMac. We test the PSU with a known-good replacement first to confirm the diagnosis (logic board faults can present the same way), then swap in a properly-tested original-spec replacement. The iMac chimes back to life and the rest of the machine - display, board, drive - is untouched and unaffected.
           </p>
         </>

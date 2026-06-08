@@ -141,8 +141,8 @@ export default function GuideMacBookScreenshot() {
             <li><strong>Check the shortcut isn't disabled:</strong> System Settings → Keyboard → Keyboard Shortcuts → Screenshots, and make sure the boxes are ticked.</li>
             <li><strong>A reassigned key:</strong> another app (or a custom shortcut) may have hijacked Shift-Command-3/4/5. Reset to defaults in the same panel.</li>
             <li><strong>Desktop "stacks" hiding files:</strong> screenshots may be saving fine but grouped into a stack. Right-click the Desktop → "Use Stacks" to toggle.</li>
-            <li><strong>Disk full:</strong> macOS can't write the file if storage is critically low - free up space (see our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">slow MacBook fixes</Link>).</li>
-            <li><strong>A faulty keyboard:</strong> if the Shift, Command, or number keys don't register at all, the shortcut can't fire. Test the keys in any text field. If a key is dead, our <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">MacBook keyboard repair in Dubai</Link> can sort it.</li>
+            <li><strong>Disk full:</strong> macOS can't write the file if storage is critically low - free up space (see our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">slow MacBook fixes</Link>).</li>
+            <li><strong>A faulty keyboard:</strong> if the Shift, Command, or number keys don't register at all, the shortcut can't fire. Test the keys in any text field. If a key is dead, our <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">MacBook keyboard repair in Dubai</Link> can sort it.</li>
           </ul>
 
           <h2>One last tip - mark up without an app</h2>

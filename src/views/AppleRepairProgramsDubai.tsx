@@ -103,7 +103,7 @@ export default function AppleRepairProgramsDubai() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -129,7 +129,7 @@ export default function AppleRepairProgramsDubai() {
       {/* 1. What */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">What are Apple Repair Programmes?</h2>
-        <div className="max-w-[72ch] space-y-md text-[16px] text-on-primary leading-relaxed">
+        <div className="max-w-[72ch] space-y-md text-[16px] text-text leading-relaxed">
           <p>
             An Apple Repair Programme (sometimes called a Service Programme, Quality Programme or Exchange Programme) is Apple's quiet acknowledgement that a known manufacturing defect affected a specific model and serial range. When a programme is open, Apple - or an Apple Authorised Service Provider - repairs the affected fault at no charge to the customer, usually for 4 to 5 years from the date the model first went on sale, regardless of the standard 1-year warranty or AppleCare+ coverage.
           </p>
@@ -145,15 +145,15 @@ export default function AppleRepairProgramsDubai() {
       {/* 2. Active */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-          <CheckCircle2 size={28} className="text-accent-bright" aria-hidden /> Currently active programmes ({LAST_UPDATED})
+          <CheckCircle2 size={28} className="text-accent" aria-hidden /> Currently active programmes ({LAST_UPDATED})
         </h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-md">
+        <p className="text-[16px] text-text-muted max-w-[72ch] mb-md">
           These programmes are accepting eligible devices at Apple service points worldwide as of {LAST_UPDATED}. Eligibility is decided by serial number, not model name alone - always verify on Apple's site before travelling.
         </p>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+        <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
           <table className="w-full text-[14px] min-w-[620px]">
             <caption className="sr-only">Active Apple repair programmes as of {LAST_UPDATED}.</caption>
-            <thead className="bg-white/[0.06]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th className="px-md py-sm font-semibold">Programme</th>
                 <th className="px-md py-sm font-semibold">Models</th>
@@ -163,34 +163,34 @@ export default function AppleRepairProgramsDubai() {
             </thead>
             <tbody>
               {ACTIVE_PROGRAMS.map((p, i) => (
-                <tr key={p.program} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                <tr key={p.program} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{p.program}</td>
                   <td className="px-md py-sm">{p.models}</td>
-                  <td className="px-md py-sm text-on-primary-muted">{p.issue}</td>
-                  <td className="px-md py-sm mono text-accent-bright">{p.until}</td>
+                  <td className="px-md py-sm text-text-muted">{p.issue}</td>
+                  <td className="px-md py-sm mono text-accent">{p.until}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="text-[13px] text-on-primary-muted mt-sm">
-          Source: <a href="https://support.apple.com/repair" className="text-accent-bright hover:underline" target="_blank" rel="noopener noreferrer">support.apple.com/repair</a>. Re-checked {LAST_UPDATED}.
+        <p className="text-[13px] text-text-muted mt-sm">
+          Source: <a href="https://support.apple.com/repair" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">support.apple.com/repair</a>. Re-checked {LAST_UPDATED}.
         </p>
       </section>
 
       {/* 3. Ended */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm flex items-center gap-sm">
-            <AlertCircle size={28} className="text-accent-bright" aria-hidden /> Recently ended programmes (still useful to know)
+            <AlertCircle size={28} className="text-accent" aria-hidden /> Recently ended programmes (still useful to know)
           </h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[72ch] mb-md">
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-md">
             These programmes have closed but the underlying defects still affect thousands of devices in Dubai. Knowing the model + symptom helps us quote you accurately for an out-of-pocket repair.
           </p>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04]">
+          <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
             <table className="w-full text-[14px] min-w-[640px]">
               <caption className="sr-only">Recently closed Apple repair programmes - for reference.</caption>
-              <thead className="bg-white/[0.06]">
+              <thead className="bg-bg-card">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Programme</th>
                   <th className="px-md py-sm font-semibold">Models</th>
@@ -200,11 +200,11 @@ export default function AppleRepairProgramsDubai() {
               </thead>
               <tbody>
                 {ENDED_PROGRAMS.map((p, i) => (
-                  <tr key={p.program} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                  <tr key={p.program} className={i % 2 ? "bg-bg-alt" : ""}>
                     <td className="px-md py-sm font-semibold">{p.program}</td>
                     <td className="px-md py-sm">{p.models}</td>
-                    <td className="px-md py-sm text-on-primary-muted">{p.issue}</td>
-                    <td className="px-md py-sm mono text-on-primary">{p.ended}</td>
+                    <td className="px-md py-sm text-text-muted">{p.issue}</td>
+                    <td className="px-md py-sm mono text-text">{p.ended}</td>
                   </tr>
                 ))}
               </tbody>
@@ -223,24 +223,24 @@ export default function AppleRepairProgramsDubai() {
             { t: "3. Apple Store visit", b: "Walk into Apple Mall of the Emirates or Apple Dubai Mall with the device and a Genius Bar booking. They run the diagnostic on Apple's bench tools." },
             { t: "4. Bring it to us", b: "WhatsApp 055 741 3706 or walk into Concord Tower Media City. We check eligibility free of charge - and tell you honestly if Apple should fix it free." },
           ].map((s) => (
-            <li key={s.t} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <li key={s.t} className="border border-border bg-bg-card rounded-md p-lg">
               <p className="font-bold text-[16px] mb-1">{s.t}</p>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed">{s.b}</p>
+              <p className="text-[14px] text-text-muted leading-relaxed">{s.b}</p>
             </li>
           ))}
         </ol>
-        <p className="text-[14px] text-on-primary-muted mt-md max-w-[72ch]">
-          Useful Apple link: <a href="https://support.apple.com/repair" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline inline-flex items-center gap-1">support.apple.com/repair <ExternalLink size={12} aria-hidden /></a>
+        <p className="text-[14px] text-text-muted mt-md max-w-[72ch]">
+          Useful Apple link: <a href="https://support.apple.com/repair" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline inline-flex items-center gap-1">support.apple.com/repair <ExternalLink size={12} aria-hidden /></a>
         </p>
       </section>
 
       {/* 5. Why Apple first */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6 max-w-[72ch]">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Why we recommend Apple first (when applicable)
+            <ShieldCheck size={28} className="text-accent" aria-hidden /> Why we recommend Apple first (when applicable)
           </h2>
-          <ul className="space-y-md text-[16px] text-on-primary leading-relaxed list-disc pl-lg">
+          <ul className="space-y-md text-[16px] text-text leading-relaxed list-disc pl-lg">
             <li><strong>We are independent, not Apple Authorised.</strong> If Apple covers your device under a programme, that route gives you a free repair plus Apple's own 90-day warranty on the work - better value than paying us.</li>
             <li><strong>Honest referral builds trust.</strong> The customers we send to Apple come back to us when their next device - or their child's, partner's, parent's - falls outside coverage. That is how we have stayed in business for 21 years.</li>
             <li><strong>We are here for the rest.</strong> Out-of-warranty repairs, post-programme defects, devices Apple declined for liquid damage or third-party history, board-level work Apple does not perform - that is our specialism.</li>
@@ -252,25 +252,25 @@ export default function AppleRepairProgramsDubai() {
       {/* 6. After programme */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl max-w-[72ch]">
         <h2 className="text-[28px] md:text-[32px] mb-md">What if the programme has ended?</h2>
-        <p className="text-[16px] text-on-primary leading-relaxed">
+        <p className="text-[16px] text-text leading-relaxed">
           The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme - typically AED 600 to AED 1,500 depending on the part, with a 90-day written warranty and same-day turnaround for most common jobs. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
         </p>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
-          <Link to="/macbook-keyboard-repair-dubai" className="border border-white/10 bg-white/[0.04] rounded-md p-md hover:border-accent-bright">
+          <Link to="/macbook-keyboard-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook keyboard repair</p>
-            <p className="text-[13px] text-on-primary-muted mt-1">Butterfly era top-case replacement - from AED 700</p>
+            <p className="text-[13px] text-text-muted mt-1">Butterfly era top-case replacement - from AED 700</p>
           </Link>
-          <Link to="/iphone-screen-repair-dubai" className="border border-white/10 bg-white/[0.04] rounded-md p-md hover:border-accent-bright">
+          <Link to="/iphone-screen-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">iPhone display module</p>
-            <p className="text-[13px] text-on-primary-muted mt-1">iPhone X / 11 touch issues - from AED 500</p>
+            <p className="text-[13px] text-text-muted mt-1">iPhone X / 11 touch issues - from AED 500</p>
           </Link>
-          <Link to="/macbook-screen-repair-dubai" className="border border-white/10 bg-white/[0.04] rounded-md p-md hover:border-accent-bright">
+          <Link to="/macbook-screen-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook display / Flexgate</p>
-            <p className="text-[13px] text-on-primary-muted mt-1">Flex cable AED 600 · Full display AED 800</p>
+            <p className="text-[13px] text-text-muted mt-1">Flex cable AED 600 · Full display AED 800</p>
           </Link>
         </div>
-        <p className="text-[14px] text-on-primary-muted mt-md">
-          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright hover:underline">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent-bright hover:underline">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent-bright hover:underline">How our 90-day warranty works</Link>.
+        <p className="text-[14px] text-text-muted mt-md">
+          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent hover:underline">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent hover:underline">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent hover:underline">How our 90-day warranty works</Link>.
         </p>
       </section>
 
@@ -279,9 +279,9 @@ export default function AppleRepairProgramsDubai() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Common scenarios</h2>
         <div className="grid gap-md md:grid-cols-2">
           {SCENARIOS.map((s) => (
-            <article key={s.q} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={s.q} className="border border-border bg-bg-card rounded-md p-lg">
               <p className="font-bold text-[16px] mb-1">{s.q}</p>
-              <p className="text-[14px] text-on-primary-muted leading-relaxed">{s.a}</p>
+              <p className="text-[14px] text-text-muted leading-relaxed">{s.a}</p>
             </article>
           ))}
         </div>
@@ -289,11 +289,11 @@ export default function AppleRepairProgramsDubai() {
 
       {/* 8. CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[32ch]">Don't pay for repairs without checking first</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[64ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Don't pay for repairs without checking first</h2>
+          <p className="text-text-muted text-[16px] max-w-[64ch]">
             Bring or send your device first. Free 30-minute diagnostic. We'll tell you honestly if Apple should fix it for free - even if that means we don't get the job.
           </p>
           <div className="flex flex-wrap gap-sm">
@@ -320,12 +320,12 @@ export default function AppleRepairProgramsDubai() {
 
       {/* 10. Last updated */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="bg-white/[0.04] border-l-4 border-accent-bright rounded-md p-lg max-w-[72ch] flex items-start gap-sm">
-          <Clock size={20} className="text-accent-bright mt-1 shrink-0" aria-hidden />
+        <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg max-w-[72ch] flex items-start gap-sm">
+          <Clock size={20} className="text-accent mt-1 shrink-0" aria-hidden />
           <div>
             <p className="font-bold text-[15px] mb-1">Last updated: {LAST_UPDATED}</p>
-            <p className="text-[14px] text-on-primary-muted leading-relaxed">
-              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
+            <p className="text-[14px] text-text-muted leading-relaxed">
+              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
             </p>
           </div>
         </div>

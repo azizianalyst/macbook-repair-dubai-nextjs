@@ -19,7 +19,7 @@ export function RelatedArticles({
   topics?: string[];            // extra topics to boost
   heading?: string;
   limit?: number;
-  tone?: "light" | "dark";      // "dark" for use on the bg-primary band; default light
+  tone?: "light" | "dark";      // "dark" for use on the bg-bg-alt band; default light
 }) {
   const dark = tone === "dark";
   const fam = family ?? familyFromPath(path);
@@ -29,7 +29,7 @@ export function RelatedArticles({
 
   return (
     <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-      <h2 className={cn("text-[24px] md:text-[28px] mb-md", dark && "text-on-primary")}>{heading}</h2>
+      <h2 className={cn("text-[24px] md:text-[28px] mb-md", dark && "text-text")}>{heading}</h2>
       <div className="grid gap-2 sm:grid-cols-2">
         {posts.map((p) => (
           <Link
@@ -38,12 +38,12 @@ export function RelatedArticles({
             className={cn(
               "group flex items-center justify-between gap-md rounded-md px-lg py-md transition-colors",
               dark
-                ? "border border-white/10 bg-white/[0.04] hover:border-accent-bright/40"
+                ? "border border-border bg-bg-card hover:border-accent/40"
                 : "bg-bg-card border border-border hover:border-primary",
             )}
           >
-            <span className={cn("text-[15px] font-medium leading-snug", dark ? "text-on-primary group-hover:text-accent-bright" : "group-hover:text-primary")}>{p.title}</span>
-            <ArrowRight size={16} className={cn("shrink-0", dark ? "text-accent-bright" : "text-primary")} aria-hidden />
+            <span className={cn("text-[15px] font-medium leading-snug", dark ? "text-text group-hover:text-accent" : "group-hover:text-primary")}>{p.title}</span>
+            <ArrowRight size={16} className={cn("shrink-0", dark ? "text-accent" : "text-primary")} aria-hidden />
           </Link>
         ))}
       </div>

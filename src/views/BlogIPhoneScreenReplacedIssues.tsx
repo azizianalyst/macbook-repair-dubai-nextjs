@@ -182,11 +182,11 @@ export default function BlogIPhoneScreenReplacedIssues() {
           <p>
             Bring the iPhone in for a free 5-minute diagnostic. We'll tell you exactly what the
             previous shop did wrong and what we can fix. See our{" "}
-            <Link to="/iphone-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone screen repair page
             </Link>{" "}
             for full pricing or our{" "}
-            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent font-semibold hover:underline">
               cost guide
             </Link>{" "}
             for every model.

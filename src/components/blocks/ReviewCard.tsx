@@ -9,7 +9,7 @@ export type Review = {
   text: string;             // verbatim from REVIEWS_LIBRARY.md
   ownerResponse?: string;
   googleUrl?: string;
-  tone?: "light" | "dark";  // "dark" for use on the bg-primary band; default light
+  tone?: "light" | "dark";  // "dark" for use on the bg-bg-alt band; default light
 };
 
 export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl, tone = "light" }: Review) {
@@ -19,14 +19,14 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
       className={cn(
         "rounded-md p-lg flex flex-col gap-sm",
         dark
-          ? "border border-white/10 bg-white/[0.04]"
+          ? "border border-border bg-bg-card"
           : "bg-bg-card border border-border shadow-sm",
       )}
     >
       <header className="flex items-center justify-between gap-sm">
         <div>
-          <p className={cn("font-semibold text-[15px]", dark && "text-on-primary")}>{name}</p>
-          <p className={cn("text-[12px] mono", dark ? "text-on-primary-faint" : "text-text-faint")}>{date}</p>
+          <p className={cn("font-semibold text-[15px]", dark && "text-text")}>{name}</p>
+          <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>{date}</p>
         </div>
         <div className="flex" aria-label={`${rating} out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, i) => (
@@ -40,16 +40,16 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
         </div>
       </header>
 
-      <p className={cn("text-[15px] leading-relaxed", dark ? "text-on-primary-muted" : "text-text")}>{text}</p>
+      <p className={cn("text-[15px] leading-relaxed", dark ? "text-text-muted" : "text-text")}>{text}</p>
 
       {ownerResponse && (
         <div
           className={cn(
             "mt-sm pl-md border-l-2 text-[13px]",
-            dark ? "border-white/10 text-on-primary-muted" : "border-accent text-text-muted",
+            dark ? "border-border text-text-muted" : "border-accent text-text-muted",
           )}
         >
-          <p className={cn("font-semibold mb-1", dark ? "text-on-primary" : "text-text")}>Owner response</p>
+          <p className={cn("font-semibold mb-1", dark ? "text-text" : "text-text")}>Owner response</p>
           <p>{ownerResponse}</p>
         </div>
       )}
@@ -61,7 +61,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
           rel="noopener noreferrer"
           className={cn(
             "mt-sm inline-flex items-center gap-1 text-[13px]",
-            dark ? "text-on-primary-muted hover:text-accent-bright" : "text-text-muted hover:text-primary",
+            dark ? "text-text-muted hover:text-accent" : "text-text-muted hover:text-primary",
           )}
         >
           Read on Google <ExternalLink size={12} aria-hidden />

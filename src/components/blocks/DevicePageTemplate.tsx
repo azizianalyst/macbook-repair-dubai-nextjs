@@ -98,7 +98,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -151,28 +151,28 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
               {p.modelsHeading ?? `${fam.pluralNoun} we repair - model-by-model pricing`}
             </h2>
             {p.modelsBlurb ?? (
-              <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+              <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
                 Every line below includes parts, labour, and a {p.warrantyDays}-day written warranty. No diagnostic fee, no surprise add-ons.
               </p>
             )}
             <PricingTable tone="dark" service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} />
             {p.pricingCaption && (
-              <p className="text-[13px] text-on-primary-muted mt-sm mono">{p.pricingCaption}</p>
+              <p className="text-[13px] text-text-muted mt-sm mono">{p.pricingCaption}</p>
             )}
           </section>
 
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <AlertTriangle size={28} className="text-accent-bright" aria-hidden /> Common {fam.noun} issues we see
+              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common {fam.noun} issues we see
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price.
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {p.problems.map((it) => (
-                <article key={it.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+                <article key={it.title} className="border border-border bg-bg-card rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm">{it.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed">{it.body}</p>
+                  <p className="text-[14px] text-text-muted leading-relaxed">{it.body}</p>
                 </article>
               ))}
             </div>
@@ -180,9 +180,9 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <Wrench size={28} className="text-accent-bright" aria-hidden /> How the repair works
+              <Wrench size={28} className="text-accent" aria-hidden /> How the repair works
             </h2>
-            <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               From WhatsApp to delivery. Each step has a fixed time estimate.
             </p>
             <StepList steps={p.steps} tone="dark" />
@@ -190,10 +190,10 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <ShieldCheck size={28} className="text-accent-bright" aria-hidden /> Warranty
+              <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
             </h2>
-            <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <ul className="space-y-2 text-[15px] text-on-primary">
+            <div className="border border-border bg-bg-card rounded-md p-lg">
+              <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{p.warrantyDays} days</strong> - written warranty on parts and labour, dated and signed.</li>
                 {p.warrantyBullets.map((b, i) => <li key={i}>{b}</li>)}
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
@@ -201,19 +201,19 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
             </div>
           </section>
 
-          <section className="bg-white/[0.02] border-y border-white/10 rounded-md p-lg">
+          <section className="bg-bg-alt border-y border-border rounded-md p-lg">
             <h2 className="text-[22px] mb-md">Lead technician on this job</h2>
             <TechnicianBadge tone="dark" name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} />
-            <p className="text-[14px] text-on-primary-muted mt-md max-w-[70ch]">
+            <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Personally signs the QC checklist on every {fam.noun} job leaving the bench.
             </p>
           </section>
 
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">{p.serviceName} vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+            <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
               <table className="w-full text-[14px] min-w-[640px]">
-                <thead className="bg-white/[0.04]">
+                <thead className="bg-bg-card">
                   <tr className="text-left">
                     <th className="px-md py-sm font-semibold">Factor</th>
                     <th className="px-md py-sm font-semibold">{NAP.name}</th>
@@ -222,16 +222,16 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
                 </thead>
                 <tbody>
                   {p.comparisonRows.map((row, i) => (
-                    <tr key={row[0]} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                    <tr key={row[0]} className={i % 2 ? "bg-bg-alt" : ""}>
                       <td className="px-md py-sm font-semibold">{row[0]}</td>
                       <td className="px-md py-sm">{row[1]}</td>
-                      <td className="px-md py-sm text-on-primary-muted">{row[2]}</td>
+                      <td className="px-md py-sm text-text-muted">{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-on-primary-muted mt-sm mono">
+            <p className="text-[13px] text-text-muted mt-sm mono">
               Apple list pricing from apple.com/ae, retrieved April 2026. Comparison shown for transparency.
             </p>
           </section>
@@ -241,8 +241,8 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
               <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
                 <Star size={28} className="text-star fill-star" aria-hidden /> Real {fam.noun}-repair reviews
               </h2>
-              <p className="text-[14px] text-on-primary-muted mb-lg">
-                Verbatim from Google. Nothing edited. <a href="/reviews" className="text-accent-bright font-semibold hover:underline">Read all 215+ →</a>
+              <p className="text-[14px] text-text-muted mb-lg">
+                Verbatim from Google. Nothing edited. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
               </p>
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>
@@ -265,9 +265,9 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
       </div>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="border border-white/10 bg-white/[0.04] text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+        <div className="border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Send the model and a photo of the issue. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
           </p>
           <div className="flex flex-wrap gap-sm">

@@ -33,11 +33,11 @@ export default function WhatIsSection({
     <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         <div className="max-w-[760px]">
-          <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+          <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-text">
             {heading}
           </h2>
-          <p className="mt-md text-[17px] md:text-[19px] leading-relaxed text-on-primary-muted">
-            <span className="font-semibold text-on-primary">{entityName}</span>{" "}
+          <p className="mt-md text-[17px] md:text-[19px] leading-relaxed text-text-muted">
+            <span className="font-semibold text-text">{entityName}</span>{" "}
             {definition}
           </p>
         </div>
@@ -49,15 +49,15 @@ export default function WhatIsSection({
               return (
                 <div
                   key={i}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg"
+                  className="rounded-2xl border border-border bg-bg-card p-lg"
                 >
                   {Icon && (
-                    <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-accent-bright">
+                    <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-bg-card text-accent">
                       <Icon size={22} aria-hidden />
                     </span>
                   )}
-                  <h3 className="text-[17px] font-bold text-on-primary">{b.title}</h3>
-                  <p className="mt-sm text-[14px] leading-relaxed text-on-primary-muted">
+                  <h3 className="text-[17px] font-bold text-text">{b.title}</h3>
+                  <p className="mt-sm text-[14px] leading-relaxed text-text-muted">
                     {b.body}
                   </p>
                 </div>

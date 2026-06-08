@@ -25,7 +25,7 @@ export default function IPhoneVibrationMotorRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The Taptic Engine</strong> in every iPhone since the 7 is a precision linear actuator - far more sophisticated than the spinning eccentric motors of older phones. It produces every vibration, every keyboard tap haptic, every Apple Pay confirmation buzz. When it fails you don't just lose vibration on calls; you lose the entire feel of iOS.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Common failure modes: dropped phone shakes the magnet loose (you'll hear a rattle), water damage corrodes the coil contacts, or the unit simply ages out after 5+ years of constant use. Replacement is a 45-minute job with the phone open from the bottom. AED 350, including a 90-day warranty.
           </p>
         </>

@@ -156,7 +156,7 @@ export default function Pricing() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -174,16 +174,16 @@ export default function Pricing() {
         <h2 id="how-pricing" className="text-[28px] md:text-[32px] mb-md">How our pricing works</h2>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {HOW_PRICING_WORKS.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col gap-sm">
-              <Icon size={28} className="text-accent-bright" aria-hidden />
+            <article key={title} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm">
+              <Icon size={28} className="text-accent" aria-hidden />
               <h3 className="text-[18px] font-bold">{title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed">{body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed">{body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[15px] text-on-primary-muted mt-lg max-w-[72ch]">
+        <p className="text-[15px] text-text-muted mt-lg max-w-[72ch]">
           Prefer an instant estimate for your exact model? Try our{" "}
-          <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent-bright font-semibold hover:underline">MacBook repair cost calculator</Link>{" "}
+          <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent font-semibold hover:underline">MacBook repair cost calculator</Link>{" "}
           - pick your device and repair to see a starting price in seconds.
         </p>
       </section>
@@ -191,9 +191,9 @@ export default function Pricing() {
       {/* Quick-jump nav */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-2xl">
         <nav aria-label="Jump to pricing section" className="flex flex-wrap gap-2 text-[13px] mono">
-          <span className="text-on-primary-faint">Jump to:</span>
+          <span className="text-text-faint">Jump to:</span>
           {ALL_TABLES.map((t) => (
-            <a key={t.id} href={`#${t.id}`} className="text-accent-bright hover:underline">{t.title.replace(" pricing", "")}</a>
+            <a key={t.id} href={`#${t.id}`} className="text-accent hover:underline">{t.title.replace(" pricing", "")}</a>
           ))}
         </nav>
       </section>
@@ -205,11 +205,11 @@ export default function Pricing() {
 
       {/* What's included */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl grid gap-xl md:grid-cols-2">
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-xl">
+        <article className="border border-border bg-bg-card rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <Check size={24} className="text-whatsapp" aria-hidden /> What's included in every repair
           </h2>
-          <ul className="space-y-sm text-[15px] text-on-primary leading-relaxed">
+          <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Genuine Apple parts when available, premium-grade aftermarket otherwise",
               "90-day written warranty on parts and workmanship",
@@ -227,11 +227,11 @@ export default function Pricing() {
           </ul>
         </article>
 
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-xl">
+        <article className="border border-border bg-bg-card rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <X size={24} className="text-error" aria-hidden /> What's NOT included (honest list)
           </h2>
-          <ul className="space-y-sm text-[15px] text-on-primary leading-relaxed">
+          <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Replacement parts for discontinued models (some pre-2012 Macs no longer have OEM stock)",
               "T2 and M-series Secure Enclave bypass - encrypted data on dead boards may be unrecoverable",
@@ -246,8 +246,8 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <p className="mt-md text-[13px] text-on-primary-muted italic flex items-start gap-2">
-            <AlertTriangle size={14} className="shrink-0 mt-0.5 text-accent-bright" aria-hidden />
+          <p className="mt-md text-[13px] text-text-muted italic flex items-start gap-2">
+            <AlertTriangle size={14} className="shrink-0 mt-0.5 text-accent" aria-hidden />
             Honesty matters more than a pitch. Better to know the limits up front than discover them on day 5.
           </p>
         </article>
@@ -258,25 +258,25 @@ export default function Pricing() {
         <h2 id="vs-apple" className="text-[28px] md:text-[32px] mb-sm">
           MacBook Repair Dubai vs Apple Store
         </h2>
-        <p className="text-[16px] text-on-primary-muted mb-md max-w-[70ch]">
+        <p className="text-[16px] text-text-muted mb-md max-w-[70ch]">
           Apple Store prices below are sourced from a same-day quote run on a 2021 MacBook Pro 14" M1 Pro at the Mall of the Emirates Apple Store, December 2025.
         </p>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+        <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
           <table className="w-full text-[14px] min-w-[640px]">
             <caption className="sr-only">Pricing and service comparison: MacBook Repair Dubai vs Apple Store Dubai</caption>
-            <thead className="bg-white/[0.04]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th scope="col" className="px-md py-sm font-semibold">Item</th>
-                <th scope="col" className="px-md py-sm font-semibold text-accent-bright">MacBook Repair Dubai</th>
-                <th scope="col" className="px-md py-sm font-semibold text-on-primary-muted">Apple Store Dubai</th>
+                <th scope="col" className="px-md py-sm font-semibold text-accent">MacBook Repair Dubai</th>
+                <th scope="col" className="px-md py-sm font-semibold text-text-muted">Apple Store Dubai</th>
               </tr>
             </thead>
             <tbody>
               {COMPARISON.map((c, i) => (
-                <tr key={c.row} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                <tr key={c.row} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{c.row}</td>
-                  <td className="px-md py-sm mono text-accent-bright">{c.us}</td>
-                  <td className="px-md py-sm mono text-on-primary-muted">{c.apple}</td>
+                  <td className="px-md py-sm mono text-accent">{c.us}</td>
+                  <td className="px-md py-sm mono text-text-muted">{c.apple}</td>
                 </tr>
               ))}
             </tbody>
@@ -292,13 +292,13 @@ export default function Pricing() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl pb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">
             Send the model number - get a price in minutes
           </h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Shafiq replies on WhatsApp typically within 4 minutes during business hours
             (9 am - 10 pm, Monday to Saturday). Or call {NAP.phoneDisplay}.
           </p>
@@ -322,11 +322,11 @@ function PriceSection({
   return (
     <section id={id} aria-labelledby={`${id}-h`} className="mx-auto max-w-content px-5 md:px-6 mt-2xl scroll-mt-24">
       <h2 id={`${id}-h`} className="text-[24px] md:text-[28px]">{title}</h2>
-      <p className="text-[15px] text-on-primary-muted mb-md">{subtitle}</p>
-      <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+      <p className="text-[15px] text-text-muted mb-md">{subtitle}</p>
+      <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
         <table className="w-full text-[14px] min-w-[720px]">
           <caption className="sr-only">{title} - starting prices, timelines, and warranty terms.</caption>
-          <thead className="bg-white/[0.04]">
+          <thead className="bg-bg-card">
             <tr className="text-left">
               <th scope="col" className="px-md py-sm font-semibold">Service</th>
               <th scope="col" className="px-md py-sm font-semibold">Starting price</th>
@@ -337,11 +337,11 @@ function PriceSection({
           </thead>
           <tbody>
             {rows.map((r, i) => (
-              <tr key={r.service} className={i % 2 ? "bg-white/[0.02]" : ""}>
+              <tr key={r.service} className={i % 2 ? "bg-bg-alt" : ""}>
                 <td className="px-md py-sm">{r.service}</td>
-                <td className="px-md py-sm mono font-semibold text-accent-bright whitespace-nowrap">AED {r.price}</td>
-                <td className="px-md py-sm mono text-on-primary-muted whitespace-nowrap">{r.timeline}</td>
-                <td className="px-md py-sm text-on-primary-muted">{r.warranty}</td>
+                <td className="px-md py-sm mono font-semibold text-accent whitespace-nowrap">AED {r.price}</td>
+                <td className="px-md py-sm mono text-text-muted whitespace-nowrap">{r.timeline}</td>
+                <td className="px-md py-sm text-text-muted">{r.warranty}</td>
                 <td className="px-md py-sm text-right">
                   <a
                     href={`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`}
@@ -357,9 +357,9 @@ function PriceSection({
           </tbody>
         </table>
       </div>
-      <p className="mt-sm text-[12px] text-on-primary-faint mono flex items-center gap-2">
+      <p className="mt-sm text-[12px] text-text-faint mono flex items-center gap-2">
         <Sparkles size={12} aria-hidden /> Free pickup & delivery across Dubai
-        <span className="text-on-primary-faint">·</span>
+        <span className="text-text-faint">·</span>
         <Truck size={12} aria-hidden /> Same-day return on most repairs
       </p>
     </section>

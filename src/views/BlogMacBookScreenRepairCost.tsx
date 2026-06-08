@@ -45,9 +45,9 @@ export default function BlogMacBookScreenRepairCost() {
               { model: "MacBook Pro 16″ M5 Pro/Max (2026)", ours: "AED 1,200", apple: "AED 2,099", note: "Largest XDR panel" },
             ]}
           />
-          <p className="text-[13px] text-on-primary-muted mono">
+          <p className="text-[13px] text-text-muted mono">
             Apple Store pricing converted from{" "}
-            <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               support.apple.com/mac/repair
             </a>{" "}
             USD list to AED on 22 April 2026.
@@ -152,11 +152,11 @@ export default function BlogMacBookScreenRepairCost() {
 
           <h2>What to do next</h2>
           <p>
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our MacBook screen repair page
             </Link>{" "}
             for the full service description, or{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               browse every MacBook model
             </Link>{" "}
             we service for model-specific pricing. WhatsApp 055 741 3706 - quote in 4 minutes.

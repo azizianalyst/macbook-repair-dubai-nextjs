@@ -81,7 +81,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
           </ul>
           <p>
             Bring the phone with you. Every trip. See our{" "}
-            <Link to="/blog/iphone-overheating-dubai-summer-fix" className="text-accent-bright font-semibold hover:underline">iPhone overheating in Dubai summer guide</Link> for full thermal management.
+            <Link to="/blog/iphone-overheating-dubai-summer-fix" className="text-accent font-semibold hover:underline">iPhone overheating in Dubai summer guide</Link> for full thermal management.
           </p>
 
           <h2>4. DO NOT stack heavy MagSafe wallets / accessories</h2>
@@ -133,7 +133,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
           </ul>
           <p>
             Compare to AppleCare+: AED 549/year + AED 350 deductible per accident. For Air specifically (higher accident probability due to fragility), AppleCare+ math is more favourable than for Pro models. See our{" "}
-            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent-bright font-semibold hover:underline">iPhone repair vs AppleCare comparison</Link>.
+            <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent font-semibold hover:underline">iPhone repair vs AppleCare comparison</Link>.
           </p>
         </>
       }

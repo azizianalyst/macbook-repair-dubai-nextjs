@@ -25,7 +25,7 @@ export default function IPhoneNfcRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The NFC antenna in every iPhone since the 6 sits at the very top of the back</strong>, just under the rear glass. When it fails, Apple Pay won't read at terminals, Nol cards in transit won't tap, and any NFC-triggered Shortcuts go silent. On iPhone X and later the antenna shares space with the rear camera assembly, so we work carefully around the camera flex.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Common cause in Dubai: a drop on the top edge cracks the antenna trace; the back glass replacement at a cheap shop reused damaged adhesive; or water damage corroded the NFC controller. AED 350 covers antenna replacement and, if needed, NFC controller reflow on the logic board.
           </p>
         </>

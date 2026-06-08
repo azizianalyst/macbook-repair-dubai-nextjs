@@ -29,10 +29,10 @@ export default function IPhoneCameraRepair() {
       pricingCaption="LiDAR sensor swap on Pro models AED 350 standalone. Pro Max sizes add AED 100."
       intro={
         <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
+          <p className="text-[17px] text-text leading-relaxed">
             iPhone camera repair in Dubai starts at AED 350 for a single rear camera and AED 150 for a lens cover replacement only. The iPhone camera is one of the most complex assemblies on the device - a single iPhone 16 Pro module contains 12 lens elements across three cameras, three OIS (optical image stabilisation) actuators, a LiDAR scanner, and a custom flash array. The workshop has fitted more than 1,200 iPhone camera modules since 2018, when triple-camera systems first arrived on the iPhone 11 Pro. Every replacement is calibrated to the original ISP (image signal processor) on the logic board so colour science and HDR rendering match the phone's original output.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
+          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             On Pro models from the iPhone 12 onward, the LiDAR scanner is integrated into the rear camera bump. LiDAR powers Night mode portraits, AR apps, and (on iPhone 14 Pro and later) cinematic-mode focus tracking. A camera-module swap that ignores LiDAR will leave these features broken even if the photos look fine. The workshop's bench includes a dedicated LiDAR alignment jig - the sensor is positioned within 0.1mm of the original mounting and tested with the official Measure app before the phone leaves.
           </p>
         </>

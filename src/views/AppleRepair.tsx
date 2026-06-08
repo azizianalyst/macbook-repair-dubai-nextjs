@@ -99,7 +99,7 @@ export default function AppleRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="device"
         tone="dark"
@@ -107,7 +107,7 @@ export default function AppleRepair() {
         title="Apple Repair Dubai - All Devices, One Place"
         subtitle="MacBook, iMac, Mac, iPhone, iPad. One workshop since 2004."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>9 Apple device families</span>
@@ -125,7 +125,7 @@ export default function AppleRepair() {
       {/* 9 device family cards */}
       <section aria-labelledby="families" className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 id="families" className="text-[28px] md:text-[32px] mb-md">Every Apple device repaired here</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           Pick a device family to see the full repair list, starting prices, and turnaround times. Or message {`055 741 3706`} on WhatsApp with the model - Shafiq replies within 4 minutes during business hours.
         </p>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
@@ -134,10 +134,10 @@ export default function AppleRepair() {
       </section>
 
       {/* Why one specialist */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wrench size={28} className="text-accent-bright" aria-hidden /> Why one Apple specialist beats nine generalists
+            <Wrench size={28} className="text-accent" aria-hidden /> Why one Apple specialist beats nine generalists
           </h2>
           <div className="grid gap-lg md:grid-cols-3">
             {[
@@ -145,9 +145,9 @@ export default function AppleRepair() {
               { title: "Cross-device diagnosis",  body: "An iPhone that won't sync to a Mac is rarely an iPhone problem alone. iCloud Keychain, Bluetooth advertising, AWDL service, and Apple ID two-factor flows interact in ways that need both devices on the bench at the same time. One specialist with both devices fixes the root cause in 1 visit." },
               { title: "One warranty, one invoice", body: "Drop off MacBook, iPhone, and iPad in the same visit. One 90-day warranty card lists all 3 devices and 3 serial numbers. One WhatsApp thread tracks all 3 repairs. One invoice for accounting. Multi-device discount of 15% on labour applies automatically." },
             ].map((c) => (
-              <article key={c.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{c.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{c.body}</p>
               </article>
             ))}
           </div>
@@ -157,16 +157,16 @@ export default function AppleRepair() {
       {/* Cross-device issues */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Common cross-device problems we untangle</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[70ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
           The 4 most-common multi-device tickets that arrive each week, and how the fix runs.
         </p>
         <div className="grid gap-md md:grid-cols-2">
           {CROSS_DEVICE.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex gap-md">
-              <Icon size={32} className="text-accent-bright shrink-0 mt-1" aria-hidden />
+            <article key={title} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+              <Icon size={32} className="text-accent shrink-0 mt-1" aria-hidden />
               <div>
                 <h3 className="text-[18px] font-bold mb-sm">{title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{body}</p>
               </div>
             </article>
           ))}
@@ -178,12 +178,12 @@ export default function AppleRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Apple repair by device family</h2>
         <div className="grid gap-lg md:grid-cols-2">
           {FAMILY_DETAILS.map((f) => (
-            <article key={f.href} className="border-l-2 border-accent-bright pl-lg">
+            <article key={f.href} className="border-l-2 border-accent pl-lg">
               <h3 className="text-[20px] font-bold mb-sm">
-                <a href={f.href} className="text-on-primary hover:text-accent-bright">{f.name}</a>
+                <a href={f.href} className="text-text hover:text-accent">{f.name}</a>
               </h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed mb-sm">{f.body}</p>
-              <a href={f.href} className="text-[14px] font-semibold text-accent-bright hover:underline">
+              <p className="text-[15px] text-text-muted leading-relaxed mb-sm">{f.body}</p>
+              <a href={f.href} className="text-[14px] font-semibold text-accent hover:underline">
                 See {f.name} pricing →
               </a>
             </article>
@@ -192,7 +192,7 @@ export default function AppleRepair() {
       </section>
 
       {/* Reviews */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">What customers say across all 9 device families</h2>
           <ReviewGrid reviews={reviews} tone="dark" />

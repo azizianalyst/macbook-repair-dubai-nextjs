@@ -54,7 +54,7 @@ export default function MacBookRepairCostCalculator() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
           variant="service"
           tone="dark"
@@ -79,9 +79,9 @@ export default function MacBookRepairCostCalculator() {
         {/* Calculator */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wallet size={28} className="text-accent-bright" aria-hidden /> Estimate your repair in seconds
+            <Wallet size={28} className="text-accent" aria-hidden /> Estimate your repair in seconds
           </h2>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch] mb-lg">
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mb-lg">
             Every price below comes from our real per-model rates - not a vague headline. Choose your device,
             model and repair to see the genuine starting price, then tap through to WhatsApp with it pre-filled.
           </p>
@@ -91,9 +91,9 @@ export default function MacBookRepairCostCalculator() {
         {/* What affects price */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">What changes the final price</h2>
-          <div className="max-w-[78ch] space-y-md text-[16px] text-on-primary-muted leading-relaxed">
-            <p className="m-0">The calculator shows a <strong className="text-on-primary">starting</strong> price. The exact figure depends on your specific model, how severe the fault is (a cracked outer glass costs less than a fully dead panel), and whether a genuine or high-grade OEM-spec part is used - we always tell you which before we start.</p>
-            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent-bright hover:underline">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/where-to-repair-macbook-dubai" className="text-accent-bright hover:underline">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
+          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+            <p className="m-0">The calculator shows a <strong className="text-text">starting</strong> price. The exact figure depends on your specific model, how severe the fault is (a cracked outer glass costs less than a fully dead panel), and whether a genuine or high-grade OEM-spec part is used - we always tell you which before we start.</p>
+            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent hover:underline">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/where-to-repair-macbook-dubai" className="text-accent hover:underline">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
           </div>
         </section>
 
@@ -105,16 +105,16 @@ export default function MacBookRepairCostCalculator() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-xl md:p-2xl flex flex-col items-start gap-md">
-            <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch] m-0">Got your estimate? Lock in the exact price.</h2>
-            <p className="text-on-primary-muted text-[16px] max-w-[60ch] m-0">
+          <div className="bg-bg-card border border-border rounded-2xl p-xl md:p-2xl flex flex-col items-start gap-md">
+            <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch] m-0">Got your estimate? Lock in the exact price.</h2>
+            <p className="text-text-muted text-[16px] max-w-[60ch] m-0">
               WhatsApp your model and the repair - we confirm the exact price in writing after a free diagnosis, with free pickup across Dubai.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">
                 <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a>
               </Button>
-              <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+              <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
                 <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
               </Button>
             </div>

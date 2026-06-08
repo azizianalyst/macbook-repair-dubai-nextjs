@@ -25,7 +25,7 @@ export default function IPadCameraRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>iPad cameras come in three flavours</strong>: standard rear (every iPad), TrueDepth front (iPad Pro for Face ID), and the new landscape-orientation front camera (iPad Air M3 and later, all iPad Pro M4+). Each needs a different repair approach. We diagnose which camera is faulty and quote AED 400 for any single-module replacement, including Center Stage recalibration so video calls track you properly afterwards.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 30% of "broken" iPad rear cameras in Dubai are just a cracked outer lens (cheap fix) rather than a damaged sensor. We separate the lens from the sensor module and replace only what's broken - that saves you money and we tell you which one it is before charging.
           </p>
         </>

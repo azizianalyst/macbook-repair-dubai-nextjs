@@ -49,7 +49,7 @@ export default function GuideRecoverMacBookPassword() {
             This guide is specifically about a forgotten <strong>login</strong> password. If you just
             want to change passwords you already know - including the keychain or a firmware password -
             read{" "}
-            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
               how do I reset passwords on my MacBook
             </Link>{" "}
             instead, which covers that broader ground.
@@ -109,7 +109,7 @@ export default function GuideRecoverMacBookPassword() {
             If you never saved that key and cannot reset another way, the encrypted data is, by design,
             unrecoverable - that is the entire point of FileVault. In that situation, get in touch before
             doing anything drastic; our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}
             can assess what, if anything, is salvageable.
@@ -134,7 +134,7 @@ export default function GuideRecoverMacBookPassword() {
           <p>
             Avoid "Reinstall macOS" or erasing the disk to get past a password - it deletes your data and
             is almost never necessary. If you do want a clean start after recovering access, our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service
             </Link>{" "}
             does it safely.
@@ -158,7 +158,7 @@ export default function GuideRecoverMacBookPassword() {
             Bottom line: a reset login password gets you back in, but the old keychain stays locked until
             you can supply the old password. Save both for a while. For more on managing the keychain
             itself, see{" "}
-            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
               our broader password-reset guide
             </Link>.
           </p>
@@ -171,7 +171,7 @@ export default function GuideRecoverMacBookPassword() {
             own the Mac, gather your original purchase receipt or invoice. With genuine proof of ownership we
             can help you start an Apple removal request, but no legitimate technician can simply "unlock"
             someone else's Mac. If you are unsure which lock you are facing,{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>{" "}
             and describe the exact screen you see.
@@ -181,20 +181,20 @@ export default function GuideRecoverMacBookPassword() {
           <p>
             If the resetpassword utility errors out, FileVault refuses your key, or you are not comfortable
             in Recovery mode, bring it in. We have been recovering MacBook access in Dubai since 2004, and a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full diagnostic
             </Link>{" "}
             tells us whether it is a simple reset or something deeper. If anything looks data-sensitive we
             image the drive first via{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
             so nothing is lost. Free pickup, free diagnosis, and a 90-day warranty -{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               see all MacBook services
             </Link>{" "}
             or message us on{" "}
-            <a href="https://wa.me/971557413706" className="text-accent-bright font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>.
           </p>

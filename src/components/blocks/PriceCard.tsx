@@ -10,7 +10,7 @@ type Props = {
   timeline: string;            // "Same day" / "1-2 days"
   href?: string;               // detail page
   whatsappMessage?: string;    // prefilled
-  tone?: "light" | "dark";     // "dark" for use on the bg-primary band; default light
+  tone?: "light" | "dark";     // "dark" for use on the bg-bg-alt band; default light
 };
 
 export function PriceCard({ service, startingPrice, timeline, href, whatsappMessage, tone = "light" }: Props) {
@@ -22,16 +22,16 @@ export function PriceCard({ service, startingPrice, timeline, href, whatsappMess
   return (
     <article className={cn(
       "rounded-md p-lg hover:shadow-md transition-shadow flex flex-col gap-md",
-      dark ? "border border-white/10 bg-white/[0.04]" : "bg-bg-card border border-border shadow-sm",
+      dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-sm",
     )}>
-      <h3 className={cn("text-[18px] font-bold leading-snug", dark && "text-on-primary")}>{service}</h3>
+      <h3 className={cn("text-[18px] font-bold leading-snug", dark && "text-text")}>{service}</h3>
 
       <div className="flex items-baseline gap-2">
-        <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-on-primary-faint" : "text-text-faint")}>From</span>
-        <span className={cn("mono text-[24px] font-semibold", dark ? "text-accent-bright" : "text-primary")}>AED {startingPrice}</span>
+        <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-text-faint" : "text-text-faint")}>From</span>
+        <span className={cn("mono text-[24px] font-semibold", dark ? "text-accent" : "text-primary")}>AED {startingPrice}</span>
       </div>
 
-      <p className={cn("mono text-[13px]", dark ? "text-on-primary-muted" : "text-text-muted")}>{timeline}</p>
+      <p className={cn("mono text-[13px]", dark ? "text-text-muted" : "text-text-muted")}>{timeline}</p>
 
       <div className="mt-auto flex items-center justify-between gap-sm pt-sm">
         <a
@@ -45,7 +45,7 @@ export function PriceCard({ service, startingPrice, timeline, href, whatsappMess
         {href && (
           <Link to={href} className={cn(
             "inline-flex items-center gap-1 text-[14px]",
-            dark ? "text-on-primary-muted hover:text-accent-bright" : "text-text-muted hover:text-primary",
+            dark ? "text-text-muted hover:text-accent" : "text-text-muted hover:text-primary",
           )}>
             Details <ArrowRight size={14} aria-hidden />
           </Link>

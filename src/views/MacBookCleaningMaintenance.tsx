@@ -25,7 +25,7 @@ export default function MacBookCleaningMaintenance() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook cleaning and maintenance at MacBook Repair Dubai</strong> is a full internal and external service: we open the chassis, clear dust and debris from the heatsink and fan blades, clean the vents and ports, wipe down the keyboard and screen, and check for early corrosion before it spreads. Dubai's heat, fine sand and humidity push dust into a MacBook faster than most cities, and that dust is the main reason fans run loud and chips run hot. The clean is AED 280, and diagnosis is free.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             It's preventive work, not a repair. Done once a year it keeps temperatures down, protects the logic board, and adds years to the machine. We service every model from the 2012 MacBook Pro through to the M3 and M4 Air and Pro.
           </p>
         </>

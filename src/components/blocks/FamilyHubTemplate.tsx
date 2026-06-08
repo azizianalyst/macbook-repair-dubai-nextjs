@@ -178,9 +178,9 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
 
         {/* Final CTA */}
         <section>
-          <div className="bg-primary text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
-            <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
-            <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
+            <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
+            <p className="text-text-muted text-[16px] max-w-[60ch]">
               Send the model and a photo of the issue. Free pickup across Dubai mainland. 90-day written warranty on every job.
             </p>
             <div className="flex flex-wrap gap-sm">

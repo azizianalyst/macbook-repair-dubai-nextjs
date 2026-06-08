@@ -25,7 +25,7 @@ export default function IPhoneLightningPortRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The honest first move on any "broken" iPhone Lightning port: clean it, free.</strong> About 70% of iPhones we see for charging issues in Dubai have pocket lint, sand or pet hair packed into the port - the cable physically can't seat fully against the contacts. We extract debris under a microscope, plug in our test cable, and 7 times out of 10 you walk out with a working iPhone and no bill.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             If the port itself is corroded, bent or has snapped contacts, replacement is AED 300 - same-day on iPhone 5 through 14. We use OEM-grade Lightning port flex (which on most models also includes the bottom microphone). 90-day warranty.
           </p>
         </>

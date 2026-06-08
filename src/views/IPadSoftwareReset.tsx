@@ -25,7 +25,7 @@ export default function IPadSoftwareReset() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Most "dead" iPads aren't dead - they're stuck in software</strong>: a failed iPadOS 18 update, a corrupted system partition after a forced shutdown, or a recovery-mode loop after low battery during an update. AED 250 covers the full DFU recovery process, including data preservation attempt before any erase. Same day on every iPad from iPad 5 through M4 Pro.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We start with the gentlest method (force restart, then standard recovery) and only escalate to DFU + erase if needed. About 60% of iPads we see this way come back with the original data intact. The rest need a clean iPadOS reinstall - your iCloud backup gets restored automatically afterwards.
           </p>
         </>

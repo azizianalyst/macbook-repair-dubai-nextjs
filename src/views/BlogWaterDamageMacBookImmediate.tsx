@@ -151,7 +151,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             1-2 damaged ICs): <strong>AED 1,000-1,500</strong>. Tier 3 (heavy board damage):
             <strong> AED 1,800-2,500</strong>. Apple Store charges AED 4,000-6,000 for the same
             damage because they swap the entire logic board. See our{" "}
-            <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent font-semibold hover:underline">
               full cost guide
             </Link>{" "}
             for tier-by-tier detail.

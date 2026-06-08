@@ -25,8 +25,8 @@ export default function MacBookBackupService() {
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook backup service in Dubai</strong> from <strong>MacBook Repair Dubai</strong> covers three things people put off until it's too late. We set up Time Machine the right way, migrate your data to a new Mac or an external drive, and take a full backup before any repair touches the board. Your files stay confidential, handled at our Concord Tower bench in Media City. From AED 150.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
-            This is backup and migration, not recovery. If files are already deleted, the drive won't mount, or the Mac won't boot, that's a different job - see our <a href="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">MacBook data recovery</a> page instead.
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            This is backup and migration, not recovery. If files are already deleted, the drive won't mount, or the Mac won't boot, that's a different job - see our <a href="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">MacBook data recovery</a> page instead.
           </p>
         </>
       }

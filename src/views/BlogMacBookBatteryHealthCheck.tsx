@@ -63,13 +63,13 @@ export default function BlogMacBookBatteryHealthCheck() {
           <p>
             Open Applications → Utilities → Terminal and paste:
           </p>
-          <pre className="bg-white/[0.04] p-md rounded-md overflow-x-auto text-[13px] mono">
+          <pre className="bg-bg-card p-md rounded-md overflow-x-auto text-[13px] mono">
             system_profiler SPPowerDataType | grep -E "Cycle|Condition|Maximum|Health"
           </pre>
           <p>
             Output looks like:
           </p>
-          <pre className="bg-white/[0.04] p-md rounded-md overflow-x-auto text-[13px] mono">
+          <pre className="bg-bg-card p-md rounded-md overflow-x-auto text-[13px] mono">
             Cycle Count: 412{"\n"}
             Condition: Normal{"\n"}
             Maximum Capacity: 91%
@@ -159,7 +159,7 @@ export default function BlogMacBookBatteryHealthCheck() {
           <h2>Cost to replace at our shop</h2>
           <p>
             See our full{" "}
-            <Link to="/blog/macbook-battery-replacement-cost-2026" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-battery-replacement-cost-2026" className="text-accent font-semibold hover:underline">
               MacBook battery cost guide
             </Link>{" "}
             for every model. Quick summary: AED 450-500 for Air, AED 600-650 for 14″ Pro, AED

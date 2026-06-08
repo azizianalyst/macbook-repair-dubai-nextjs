@@ -102,7 +102,7 @@ export default function BlogGenuinePartsVsAlternatives() {
             Sample: iPhone 15 Pro screen replacement at Apple AASP - AED 1,799. Our Tier 2 with True
             Tone preserved - AED 1,099. Tier 3 aftermarket - AED 750 (we offer it, but recommend
             Tier 2 for the extra AED 350). For full pricing transparency, see our{" "}
-            <Link to="/pricing" className="text-accent-bright font-semibold hover:underline">pricing page</Link>.
+            <Link to="/pricing" className="text-accent font-semibold hover:underline">pricing page</Link>.
           </p>
 
           <h2>Performance difference</h2>
@@ -119,7 +119,7 @@ export default function BlogGenuinePartsVsAlternatives() {
           <h2>Warranty difference</h2>
           <p>
             We warranty Tier 2 parts the same as we would warranty genuine - full{" "}
-            <Link to="/blog/macbook-repair-warranty-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-repair-warranty-explained" className="text-accent font-semibold hover:underline">
               90 days workmanship
             </Link>
             , 6 months on batteries. Tier 3 parts get a 30-day warranty (because failure rates are

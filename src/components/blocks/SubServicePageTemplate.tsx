@@ -96,7 +96,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
           variant="service"
           tone="dark"
@@ -121,7 +121,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
 
         <div className="mx-auto max-w-content px-5 md:px-6 mt-xl">
           <div className="flex flex-col gap-2xl">
-            <section className="text-on-primary-muted">
+            <section className="text-text-muted">
               {/* Contextual auto-linking only on MacBook-context pages — the keyword targets are
                   MacBook service pages, so we must not mis-link iPad/iPhone/iMac copy to them. */}
               {/macbook|^\/mac-|^\/macos/.test(p.path)
@@ -130,19 +130,19 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             </section>
 
             <section id="quote" className="scroll-mt-24">
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">Get a free repair quote</h2>
-              <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">
+              <h2 className="text-[24px] md:text-[28px] mb-md text-text">Get a free repair quote</h2>
+              <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
                 Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.
               </p>
               <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
             </section>
 
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">What we fix</h2>
+              <h2 className="text-[24px] md:text-[28px] mb-md text-text">What we fix</h2>
               <ul className="grid gap-sm md:grid-cols-2">
                 {p.whatWeFix.map((it, i) => (
-                  <li key={i} className="flex gap-sm text-[15px] leading-relaxed text-on-primary-muted">
-                    <span aria-hidden className="text-accent-bright font-bold mt-[2px]">•</span>
+                  <li key={i} className="flex gap-sm text-[15px] leading-relaxed text-text-muted">
+                    <span aria-hidden className="text-accent font-bold mt-[2px]">•</span>
                     <span>{it}</span>
                   </li>
                 ))}
@@ -150,8 +150,8 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             </section>
 
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-on-primary">
-                <Wrench size={24} className="text-accent-bright" aria-hidden /> How it works
+              <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-text">
+                <Wrench size={24} className="text-accent" aria-hidden /> How it works
               </h2>
               <StepList steps={p.steps} tone="dark" />
             </section>
@@ -164,11 +164,11 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
                 whatsappMessage={p.whatsappPrefill}
                 tone="dark"
               />
-              <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col justify-center">
-                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-on-primary">
-                  <ShieldCheck size={20} className="text-accent-bright" aria-hidden /> {p.warrantyDays}-day written warranty
+              <div className="border border-border bg-bg-card rounded-md p-lg flex flex-col justify-center">
+                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-text">
+                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {p.warrantyDays}-day written warranty
                 </h3>
-                <ul className="space-y-1 text-[14px] text-on-primary-muted">
+                <ul className="space-y-1 text-[14px] text-text-muted">
                   {p.warrantyBullets.map((b, i) => <li key={i}>• {b}</li>)}
                 </ul>
               </div>
@@ -182,14 +182,14 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${p.warrantyDays}-day written warranty.`}
             />
 
-            <section className="bg-white/[0.04] rounded-md p-lg border border-white/10">
-              <h2 className="text-[20px] mb-md text-on-primary">Lead technician</h2>
+            <section className="bg-bg-card rounded-md p-lg border border-border">
+              <h2 className="text-[20px] mb-md text-text">Lead technician</h2>
               <TechnicianBadge name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} tone="dark" />
             </section>
 
             {reviews.length > 0 && (
               <section>
-                <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-on-primary">
+                <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-text">
                   <Star size={24} className="text-star fill-star" aria-hidden /> Reviews for this service
                 </h2>
                 <ReviewGrid reviews={reviews} tone="dark" />
@@ -197,25 +197,25 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             )}
 
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">FAQ</h2>
+              <h2 className="text-[24px] md:text-[28px] mb-md text-text">FAQ</h2>
               <FAQAccordion items={p.faqs} injectSchema tone="dark" />
             </section>
 
             <section>
               <RelatedServices items={p.related.slice(0, 3)} tone="dark" />
               {p.blogLink && (
-                <p className="mt-md text-[14px] text-on-primary-muted">
-                  Related reading: <Link to={p.blogLink.href} className="text-accent-bright font-semibold hover:underline">{p.blogLink.label}</Link>
+                <p className="mt-md text-[14px] text-text-muted">
+                  Related reading: <Link to={p.blogLink.href} className="text-accent font-semibold hover:underline">{p.blogLink.label}</Link>
                 </p>
               )}
             </section>
 
             {otherIphoneModels.length > 0 && (
               <section>
-                <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">Other iPhone models we repair</h2>
+                <h2 className="text-[24px] md:text-[28px] mb-md text-text">Other iPhone models we repair</h2>
                 <div className="flex flex-wrap gap-sm">
                   {otherIphoneModels.map((m) => (
-                    <Link key={m.slug} to={m.slug} className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[14px] text-on-primary-muted transition-colors hover:border-accent-bright/40 hover:text-on-primary">
+                    <Link key={m.slug} to={m.slug} className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                       {m.label} repair
                     </Link>
                   ))}
@@ -228,10 +228,10 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <RelatedArticles path={p.path} tone="dark" />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-          <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+          <div className="relative overflow-hidden border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
             <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-            <h2 className="relative text-on-primary text-[24px] md:text-[28px] max-w-[28ch]">{p.h1} - book in 4 minutes on WhatsApp</h2>
-            <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+            <h2 className="relative text-text text-[24px] md:text-[28px] max-w-[28ch]">{p.h1} - book in 4 minutes on WhatsApp</h2>
+            <p className="relative text-text-muted text-[16px] max-w-[60ch]">
               From AED {p.startingPrice}. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
             </p>
             <div className="relative flex flex-wrap gap-sm">
@@ -240,7 +240,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
                   <MessageCircle aria-hidden /> Message on WhatsApp
                 </a>
               </Button>
-              <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+              <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
                 <a href={`tel:${NAP.phoneE164}`}>
                   <Phone aria-hidden /> {NAP.phoneDisplay}
                 </a>

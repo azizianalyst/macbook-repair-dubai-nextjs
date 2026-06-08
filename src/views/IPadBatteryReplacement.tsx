@@ -29,7 +29,7 @@ export default function IPadBatteryReplacement() {
           <p className="text-[18px] leading-relaxed mb-md">
             iPad batteries are <strong>glued, not screwed</strong>. Unlike iPhone - which has a pull-tab - every iPad cell is bonded to the aluminium chassis with industrial adhesive. Lift it the wrong way and you puncture the cell. We use isopropyl, controlled heat and plastic spudgers to release the adhesive safely. No bending, no shortcuts.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             If your iPad is two years old and lasts two hours, the cell is finished. If it shuts down at 30% and reboots, the protection circuit is calling time. Both are the same fix. Quote, pickup, swap, calibrate - usually back to you the same day.
           </p>
         </>

@@ -25,7 +25,7 @@ export default function MacBookSafeModeRepair() {
           <p className="text-[18px] leading-relaxed mb-md">
             Safe mode boots macOS with only the parts Apple ships and nothing else - no third-party kernel extensions, no startup items, no extra fonts or caches. At <strong>MacBook Repair Dubai</strong> we use it as the first cut on any crashing, looping or unstable Mac, because it tells us in minutes whether the fault sits in software or in the hardware underneath. Diagnosis is free.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             If your Mac runs fine in safe mode, the problem is almost always software, and we clean it up the same day. If it still misbehaves - or won't enter safe mode at all - that points to deeper issues like a failing drive, RAM or a logic-board fault, which we can repair on the bench.
           </p>
         </>

@@ -121,7 +121,7 @@ export default function BlogBestMacForDevelopers() {
           />
           <p>
             Compare with the dedicated{" "}
-            <Link to="/blog/mac-studio-m3-ultra-vs-m4-max-which" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/mac-studio-m3-ultra-vs-m4-max-which" className="text-accent font-semibold hover:underline">
               M3 Ultra vs M4 Max guide
             </Link>{" "}
             for chip-level detail.

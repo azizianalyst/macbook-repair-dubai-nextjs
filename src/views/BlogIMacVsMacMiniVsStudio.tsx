@@ -119,7 +119,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             <strong>Repair insight:</strong> Mac Mini is the cheapest to repair (smallest, simplest, most
             modular). iMac is the most expensive when the display fails - the panel is bonded to the
             chassis, so display damage often means replacing more than just the glass.{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/imac-repair-dubai" className="text-accent font-semibold hover:underline">
               See our iMac repair page
             </Link>
             {" "}for full pricing.
@@ -143,15 +143,15 @@ export default function BlogIMacVsMacMiniVsStudio() {
 
           <p>
             Issues with your current desktop?{" "}
-            <Link to="/imac-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/imac-repair-dubai" className="text-accent font-semibold hover:underline">
               iMac repair
             </Link>
             ,{" "}
-            <Link to="/mac-mini-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Mini repair
             </Link>
             , or{" "}
-            <Link to="/mac-studio-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-studio-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Studio repair
             </Link>
             .

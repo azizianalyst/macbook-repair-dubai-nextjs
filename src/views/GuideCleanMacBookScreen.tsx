@@ -60,7 +60,7 @@ export default function GuideCleanMacBookScreen() {
             The other golden rule: <strong>never spray liquid directly onto the display</strong>.
             It runs down into the bezel and can reach the panel electronics, turning a cleaning job
             into a{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               water damage repair
             </Link>{" "}
             (from AED 700). Always apply moisture to the cloth, never the glass.
@@ -145,16 +145,16 @@ export default function GuideCleanMacBookScreen() {
           </p>
           <p>
             If the cloudiness bothers you or is spreading, our{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair in Dubai
             </Link>{" "}
             replaces the panel from AED 600, with a free diagnosis first so you know exactly what
             you are dealing with. Not sure whether it is coating wear or something else? A{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full diagnostic
             </Link>{" "}
             is free, and you can{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               book a free pickup
             </Link>{" "}
             anywhere on the Dubai mainland.
