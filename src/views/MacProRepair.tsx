@@ -4,6 +4,7 @@
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -124,7 +125,7 @@ export default function MacProRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         tone="dark"
         variant="device"
@@ -132,7 +133,7 @@ export default function MacProRepair() {
         title="Professional Mac Pro Repair Dubai"
         subtitle="Your Mac Pro may be malfunctioning. Don't worry - MacBook Repair Dubai is the best place for Mac Pro repair in Dubai. Our expert staff can fix all problems, whether the screen is broken or the motherboard is damaged. Get in touch with us today."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified Apple desktop technicians</span>
           <span>·</span>
           <span>Genuine parts</span>
@@ -140,6 +141,13 @@ export default function MacProRepair() {
           <span>Free pickup across Dubai</span>
         </p>
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer
+        tone="dark"
+        question="Where can I get my Mac Pro repaired in Dubai?"
+        answer="MacBook Repair Dubai repairs the Mac Pro — 2019 Intel and 2023 M2 Ultra — at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 90-day written warranty, in business since 2004."
+      />
 
       <USPStrip tone="dark" />
 
@@ -154,10 +162,10 @@ export default function MacProRepair() {
 
       {/* Other devices */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
+        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
+          <span className="font-semibold text-text">We also repair:</span>
           {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/[0.08] transition-colors">{s.label}</Link>
+            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
           ))}
         </p>
       </section>
@@ -165,28 +173,28 @@ export default function MacProRepair() {
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Mac Pro models we repair</h2>
-        <p className="text-[15px] text-on-primary-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
         <div className="flex flex-wrap gap-2 mb-lg">
           {MAC_DESKTOP_MODELS.filter((m) => m.family === "pro").map((m) => (
-            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-accent-bright hover:bg-white/[0.08] transition-colors">{m.name} →</Link>
+            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
           ))}
         </div>
         <ul className="flex flex-wrap gap-2">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-on-primary mono">{m}</li>
+            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
       </section>
 
       {/* Services */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Our Mac Pro Repair Services Dubai</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
               </article>
             ))}
           </div>
@@ -197,19 +205,19 @@ export default function MacProRepair() {
       {/* Book appointment */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Book an Appointment Today!</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-lg">
+        <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">
           Looking for an affordable repair solution to address your Mac Pro issues? Don't worry - our service team is here to help you around the clock. Book your appointment now for a free diagnosis, a fixed written quote, and a 90-day warranty on every repair.
         </p>
         <CallButtons />
       </section>
 
       {/* Repair process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Our Repair Process</h2>
           <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
             {PROCESS.map((p) => (
-              <li key={p} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {p}</li>
+              <li key={p} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {p}</li>
             ))}
           </ul>
         </div>
@@ -220,19 +228,19 @@ export default function MacProRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-sm">What are the signs your Mac Pro needs repair?</h2>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
           {SIGNS.map((s) => (
-            <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>
+            <li key={s} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {s}</li>
           ))}
         </ul>
       </section>
 
       {/* Not responding */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Why is your Mac Pro not responding?</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-md">Is your Mac Pro not turning on? We offer trustworthy repair services in Dubai. Our engineers are licensed professionals. There are a few possible reasons why your device won't turn on:</p>
+          <p className="text-[16px] text-text-muted max-w-[75ch] mb-md">Is your Mac Pro not turning on? We offer trustworthy repair services in Dubai. Our engineers are licensed professionals. There are a few possible reasons why your device won't turn on:</p>
           <ul className="space-y-sm max-w-[80ch]">
             {NOT_RESPONDING.map((r) => (
-              <li key={r} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {r}</li>
+              <li key={r} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {r}</li>
             ))}
           </ul>
         </div>
@@ -241,30 +249,30 @@ export default function MacProRepair() {
       {/* Why choose us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Why Choose Us?</h2>
-        <div className="space-y-md text-[16px] text-on-primary-muted leading-relaxed max-w-[80ch]">
+        <div className="space-y-md text-[16px] text-text-muted leading-relaxed max-w-[80ch]">
           {WHY.map((w) => <p key={w}>{w}</p>)}
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
-                <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
+                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
+                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
               </figure>
             ))}
           </div>
-          <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
+          <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-            <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-            <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+            <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
+            <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
           </div>
         </div>
       </section>
@@ -283,10 +291,10 @@ export default function MacProRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Board-level Mac Pro repair in Dubai since 2004</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Board-level Mac Pro repair in Dubai since 2004</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Our service team is here around the clock. Book your appointment now - WhatsApp or call for a free diagnosis and a transparent quote.
           </p>
           <div className="relative"><CallButtons /></div>

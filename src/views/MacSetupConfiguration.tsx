@@ -1,6 +1,7 @@
 "use client";
 import { Star, MessageCircle, Phone, Settings, Check, Mail, RefreshCw, UserPlus } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -68,7 +69,7 @@ export default function MacSetupConfiguration() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
@@ -76,7 +77,7 @@ export default function MacSetupConfiguration() {
         title="Mac Setup, Configuration & Data Migration in Dubai"
         subtitle="New Mac to set up, or moving from an old Mac or PC? We configure macOS, email, Wi-Fi, VPN, Office, iCloud and migrate all your data - in-shop, on-site, or with free pickup and delivery."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
           <span>Same-day service</span>
@@ -84,6 +85,13 @@ export default function MacSetupConfiguration() {
           <span>On-site across Dubai</span>
         </p>
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer
+        tone="dark"
+        question="Do you offer Mac setup and data migration in Dubai?"
+        answer="Yes. MacBook Repair Dubai provides Mac setup, configuration and data migration in Dubai — new-Mac setup, account and email configuration, Time Machine backups, and transferring data from an old Mac or PC. Service is available at the Concord Tower workshop in Dubai Media City or on-site, with free pickup across Dubai mainland."
+      />
 
       <USPStrip tone="dark" />
 
@@ -96,24 +104,24 @@ export default function MacSetupConfiguration() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md text-on-primary">
+        <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md text-text">
           A new Mac is only useful once it's set up the way you work. We handle the whole thing - <strong>macOS configuration, Apple ID and iCloud, email, Wi-Fi and VPN, your apps, and a complete data migration</strong> from your old Mac or PC. Hand over the old and new machines and collect one that's ready to go, with nothing left behind.
         </p>
       </section>
 
       {/* Services */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Settings size={28} className="text-accent-bright" aria-hidden /> What we set up
+            <Settings size={28} className="text-accent" aria-hidden /> What we set up
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent-bright" aria-hidden /> {i.title}</h3>
-                  <p className="text-[14px] text-on-primary-muted leading-relaxed m-0">{i.body}</p>
+                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                  <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
               );
             })}
@@ -124,7 +132,7 @@ export default function MacSetupConfiguration() {
       {/* How it works */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <RefreshCw size={28} className="text-accent-bright" aria-hidden /> How migration works
+          <RefreshCw size={28} className="text-accent" aria-hidden /> How migration works
         </h2>
         <div className="grid gap-md md:grid-cols-3">
           {[
@@ -132,9 +140,9 @@ export default function MacSetupConfiguration() {
             { title: "2 · We configure & migrate", body: "macOS, accounts, security, apps and a full data transfer - verified on the new machine before handover." },
             { title: "3 · Collect ready-to-work", body: "In-shop, on-site at your office, or via free pickup and delivery. We walk you through anything new." },
           ].map((c) => (
-            <article key={c.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed m-0">{c.body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
             </article>
           ))}
         </div>
@@ -154,11 +162,11 @@ export default function MacSetupConfiguration() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">New Mac to set up? Get a quote in 4 minutes</h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">New Mac to set up? Get a quote in 4 minutes</h2>
+          <p className="text-text-muted text-[16px] max-w-[60ch]">
             Tell us your new device, your old one, and what you need configured. Same-day service, on-site or free pickup across Dubai.
           </p>
           <div className="flex flex-wrap gap-sm">
