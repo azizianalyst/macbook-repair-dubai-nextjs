@@ -18,8 +18,11 @@ Hostinger MCP server for this site: **`hostinger-macbookrepair`**.
    Hostinger's settings resolver):
    ```bash
    rm -f /tmp/mbr-deploy.zip && zip -rq /tmp/mbr-deploy.zip . \
-     -x "node_modules/*" ".next/*" ".git/*" ".env.local" "*.zip"
+     -x "node_modules/*" ".next/*" ".git/*" ".env.local" "*.zip" \
+        "scripts/topic-images/raw/*" "scripts/home-images/raw/*"
    ```
+   (The `raw/` dirs hold ~600 MB of image-generation masters that the server
+   never needs — excluding them keeps the upload ~290 MB.)
 
 3. **Deploy** via Hostinger MCP (build runs server-side):
    - Tool: `mcp__hostinger-macbookrepair__hosting_deployJsApplication`
@@ -45,6 +48,13 @@ Hostinger MCP server for this site: **`hostinger-macbookrepair`**.
    curl -sI https://www.macbook-repair-dubai.ae/ | grep -iE "^(HTTP|location)"
    ```
 
+6. **Post-deploy SEO pings & audit**:
+   ```bash
+   node scripts/indexnow-ping.mjs      # tell Bing/ChatGPT-search about all URLs
+   npm run check:urls:live             # 301s + sitemap + live 200s
+   node scripts/crawl-site.mjs         # full crawl: 404s, broken assets, orphans
+   ```
+
 ## Gotchas (already solved — keep them this way)
 - **Use `proxy.ts`, never `middleware.ts`** — Next 16 deprecated `middleware`; the old
   convention caused intermittent 307/504 on page routes. `src/proxy.ts` sets the
@@ -54,6 +64,16 @@ Hostinger MCP server for this site: **`hostinger-macbookrepair`**.
 - DNS: apex `@` ALIAS + `www` CNAME both → `*.cdn.hstgr.net` (CDN is in front of origin
   46.17.175.101). There is **no CDN purge API** — the must-revalidate header is what keeps
   pages fresh; just wait out the post-deploy revalidation window.
+- **Legacy 1-year-cached pages do NOT self-heal by waiting.** If a page was cached by the
+  CDN *before* the must-revalidate fix shipped, the edge holds it with `s-maxage=31536000`
+  (verify: `curl -sI https://macbook-repair-dubai.ae/ | grep -iE 'cache-control|age|etag'`
+  shows `s-maxage=31536000` + a multi-hour `age` + an etag ≠ origin's). must-revalidate only
+  applies to entries cached *after* it deployed, so these stuck entries never expire on their
+  own. Confirm origin is actually fresh:
+  `curl -sI --resolve macbook-repair-dubai.ae:443:46.17.175.101 https://macbook-repair-dubai.ae/ -k`
+  (should show `max-age=0, must-revalidate` + `x-nextjs-cache: HIT`), and that a cache-busted
+  URL `…/?v=fresh` returns the origin etag. Fix = clear the CDN cache **once** in hPanel
+  (Hosting → CDN / Cache Manager → Purge), then hard-refresh. After that it stays fresh.
 - If the website vhost is ever missing ("No website found for domain"), recreate via
   `hosting_createWebsiteV1` (order_id 1008796045, plan hostinger_business_v3), then redeploy.
 

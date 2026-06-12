@@ -1,9 +1,9 @@
 "use client";
 import { Link } from "@/lib/router-compat";
-import { Facebook, Phone, MessageCircle, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Youtube, Phone, MessageCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT } from "@/content/site";
 import { CATEGORIES } from "@/content/blog-posts";
 
 // Footer follows the header/hero look: dark band, green `accent` accents,
@@ -23,54 +23,67 @@ const MACBOOK_SERVICES = [
 ];
 
 const MAC_DESKTOP_SERVICES = [
+  { label: "iMac Repair",              href: "/imac-repair-dubai" },
+  { label: "iMac Screen Repair",       href: "/imac-screen-repair-dubai" },
   { label: "iMac Logic Board Repair",  href: "/imac-logic-board-repair-dubai" },
   { label: "iMac GPU Repair",          href: "/imac-gpu-repair-dubai" },
-  { label: "iMac Screen Repair",       href: "/imac-screen-repair-dubai" },
   { label: "Mac mini Repair",          href: "/mac-mini-repair-dubai" },
   { label: "Mac Studio Repair",        href: "/mac-studio-repair-dubai" },
   { label: "Mac Pro Repair",           href: "/mac-pro-repair-dubai" },
+  { label: "Apple Display Repair",     href: "/apple-display-repair-dubai" },
   { label: "Mac Data Recovery",        href: "/mac-data-recovery-dubai" },
 ];
 
-const COMPANY_LINKS = [
-  { label: "About us",                 href: "/about" },
-  { label: "Apple Service Center",     href: "/apple-service-center-dubai" },
-  { label: "215+ Google reviews",      href: "/reviews" },
-  { label: "MacBook guides & how-tos",  href: "/macbook-guides" },
-  { label: "Transparent pricing",      href: "/pricing" },
-  { label: "Repair cost calculator",   href: "/macbook-repair-cost-calculator-dubai" },
-  { label: "90-day warranty",          href: "/warranty" },
-  { label: "Apple repair programmes",  href: "/apple-repair-programs-dubai" },
-  { label: "AppleCare repair",         href: "/applecare-macbook-repair-dubai" },
-  { label: "Out-of-warranty repair",   href: "/out-of-warranty-apple-repair-dubai" },
-  { label: "Annual maintenance (AMC)", href: "/annual-maintenance-contract-dubai" },
-  { label: "MacBook insurance",        href: "/macbook-insurance-dubai" },
+const IPHONE_IPAD_SERVICES = [
+  { label: "iPhone Repair",             href: "/iphone-repair-dubai" },
+  { label: "iPhone Screen Repair",      href: "/iphone-screen-repair-dubai" },
+  { label: "iPhone Battery Replacement", href: "/iphone-battery-replacement-dubai" },
+  { label: "iPhone Water Damage Repair", href: "/iphone-water-damage-repair-dubai" },
+  { label: "iPad Repair",               href: "/ipad-repair-dubai" },
+  { label: "iPad Screen Repair",        href: "/ipad-screen-repair-dubai" },
+  { label: "iPad Battery Replacement",  href: "/ipad-battery-replacement-dubai" },
+  { label: "iPod touch Repair",         href: "/ipod-touch-7-repair-dubai" },
+];
+
+// Money/coverage pages get their own column — previously buried in a 14-link
+// "Company" dump (commit 2cd8f37 surfaced them; this gives them a labelled home).
+const PRICING_WARRANTY_LINKS = [
+  { label: "Transparent pricing",        href: "/pricing" },
+  { label: "Repair cost calculator",     href: "/macbook-repair-cost-calculator-dubai" },
+  { label: "Warranty - up to 12 months", href: "/warranty" },
+  { label: "AppleCare repair",           href: "/applecare-macbook-repair-dubai" },
+  { label: "Out-of-warranty repair",     href: "/out-of-warranty-apple-repair-dubai" },
+  { label: "Annual maintenance (AMC)",   href: "/annual-maintenance-contract-dubai" },
+  { label: "MacBook insurance",          href: "/macbook-insurance-dubai" },
+  { label: "Apple repair programmes",    href: "/apple-repair-programs-dubai" },
   { label: "Apple Store vs independent", href: "/where-to-repair-macbook-dubai" },
-  { label: "Contact & free pickup",    href: "/contact" },
 ];
 
-const OTHER_DEVICES = [
-  { label: "iPhone Repair",     href: "/iphone-repair-dubai" },
-  { label: "iPad Repair",       href: "/ipad-repair-dubai" },
-  { label: "iPod touch Repair", href: "/ipod-touch-7-repair-dubai" },
-];
-
-const SELL_LINKS = [
-  { label: "Sell your Mac",       href: "/sell-macbook-dubai" },
-  { label: "Trade-in & upgrade",  href: "/trade-in-macbook-dubai" },
-  { label: "We buy faulty Macs",  href: "/sell-faulty-macbook-dubai" },
+const COMPANY_LINKS = [
+  { label: "About us - since 2004",           href: "/about" },
+  { label: "Apple Service Center Dubai",      href: "/apple-service-center-dubai" },
+  { label: `${REVIEW_COUNT}+ Google reviews`, href: "/reviews" },
+  { label: "MacBook guides & how-tos",        href: "/macbook-guides" },
+  { label: "On-site MacBook repair",          href: "/onsite-macbook-repair-dubai" },
+  { label: "Contact & free pickup",           href: "/contact" },
 ];
 
 const AREAS = [
-  { label: "Dubai Marina",   href: "/macbook-repair-dubai-marina" },
-  { label: "Downtown Dubai", href: "/macbook-repair-downtown-dubai" },
-  { label: "JBR",            href: "/macbook-repair-jbr" },
-  { label: "Business Bay",   href: "/macbook-repair-business-bay" },
-  { label: "Jumeirah",       href: "/macbook-repair-jumeirah" },
-  { label: "JLT",            href: "/macbook-repair-jlt" },
-  { label: "DIFC",           href: "/macbook-repair-difc" },
-  { label: "Silicon Oasis",  href: "/macbook-repair-silicon-oasis" },
-  { label: "Internet City",  href: "/macbook-repair-internet-city" },
+  { label: "Dubai Marina",    href: "/macbook-repair-dubai-marina" },
+  { label: "Downtown Dubai",  href: "/macbook-repair-downtown-dubai" },
+  { label: "JBR",             href: "/macbook-repair-jbr" },
+  { label: "Business Bay",    href: "/macbook-repair-business-bay" },
+  { label: "Jumeirah",        href: "/macbook-repair-jumeirah" },
+  { label: "JLT",             href: "/macbook-repair-jlt" },
+  { label: "DIFC",            href: "/macbook-repair-difc" },
+  { label: "Silicon Oasis",   href: "/macbook-repair-silicon-oasis" },
+  { label: "Internet City",   href: "/macbook-repair-internet-city" },
+  { label: "Al Barsha",       href: "/macbook-repair-barsha" },
+  { label: "Palm Jumeirah",   href: "/macbook-repair-palm-jumeirah" },
+  { label: "Deira",           href: "/macbook-repair-deira" },
+  { label: "Bur Dubai",       href: "/macbook-repair-bur-dubai" },
+  { label: "Karama",          href: "/macbook-repair-karama" },
+  { label: "Mirdif",          href: "/macbook-repair-mirdif" },
   { label: "Repair near me",  href: "/macbook-repair-near-me" },
 ];
 
@@ -90,7 +103,7 @@ const CITY_LINKS = [
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative overflow-hidden bg-bg-alt text-text">
+    <footer className="relative overflow-hidden bg-bg-alt text-text pb-14 md:pb-0">
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -bottom-32 left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-accent/12 blur-3xl" />
 
@@ -98,8 +111,9 @@ export function Footer() {
         {/* ── Top CTA strip (glass, mirrors the hero) ───────────── */}
         <div className="flex flex-col gap-lg rounded-2xl border border-border bg-bg-card p-lg md:flex-row md:items-center md:justify-between md:p-xl backdrop-blur-md">
           <div>
-            <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent">Free diagnosis · No fix, no charge</p>
+            <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent">Fixed in 30 minutes by appointment · or it's free</p>
             <h2 className="m-0 mt-1 text-[24px] md:text-[28px] text-text">Broken Mac? Get a quote in minutes.</h2>
+            <p className="m-0 mt-1.5 text-[13.5px] text-text-muted">Free diagnosis · no fix, no charge · free pickup Dubai-wide · free loaner on repairs over 2 hours · warranty up to 12 months</p>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
@@ -122,7 +136,7 @@ export function Footer() {
             <Logo withWordmark className="text-text" />
             <p className="mt-md text-[14px] leading-relaxed text-text-muted">
               Independent Apple repair specialist in Dubai Media City since {NAP.founded}. Board-level
-              work, free pickup, 90-day written warranty.
+              work, free pickup, warranty up to 12 months.
             </p>
             <address className="mt-md not-italic text-[14px] leading-relaxed text-text-muted">
               <span className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-accent" aria-hidden /> {NAP.street}, {NAP.area}, {NAP.city}</span>
@@ -136,25 +150,37 @@ export function Footer() {
               </a>
               <p className="m-0 flex items-center gap-2 text-text-faint"><Clock size={14} className="text-accent" aria-hidden /> Mon-Sat · 9 am - 10 pm · Sun closed</p>
             </div>
-            <a
-              href={NAP.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="mt-md inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border transition-all duration-200 ease-out hover:border-accent/50 hover:bg-bg-alt motion-safe:hover:-translate-y-0.5"
-            >
-              <Facebook size={16} aria-hidden />
-            </a>
+            {/* Social profiles — keep in lockstep with Organization/LocalBusiness sameAs (schema.ts reads the same NAP fields). */}
+            <div className="mt-md flex gap-2">
+              {[
+                { href: NAP.facebook, label: "Facebook", Icon: Facebook },
+                { href: NAP.instagram, label: "Instagram", Icon: Instagram },
+                { href: NAP.youtube, label: "YouTube", Icon: Youtube },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border transition-all duration-200 ease-out hover:border-accent/50 hover:bg-bg-alt motion-safe:hover:-translate-y-0.5"
+                >
+                  <Icon size={16} aria-hidden />
+                </a>
+              ))}
+            </div>
           </div>
 
           <FooterCol className="lg:col-span-3" heading="MacBook repair" links={MACBOOK_SERVICES} />
-          <FooterCol className="lg:col-span-3" heading="Mac desktops & data" links={MAC_DESKTOP_SERVICES} />
-          <FooterCol className="lg:col-span-3" heading="Company" links={COMPANY_LINKS} />
+          <FooterCol className="lg:col-span-3" heading="Mac desktops & displays" links={MAC_DESKTOP_SERVICES} />
+          <FooterCol className="lg:col-span-3" heading="iPhone & iPad" links={IPHONE_IPAD_SERVICES} />
         </div>
 
-        {/* ── Secondary: areas + other devices + sell ───────────── */}
+        {/* ── Row 2: pricing & warranty + company + areas ───────── */}
         <div className="mt-2xl grid gap-xl border-t border-border pt-lg lg:grid-cols-12">
-          <div className="lg:col-span-7">
+          <FooterCol className="lg:col-span-4" heading="Pricing & warranty" links={PRICING_WARRANTY_LINKS} />
+          <FooterCol className="lg:col-span-3" heading="Company" links={COMPANY_LINKS} />
+          <div className="lg:col-span-5">
             <p className="mono text-[12px] uppercase tracking-wider text-accent mb-md">MacBook repair near you</p>
             <div className="flex flex-wrap gap-2">
               {AREAS.map((a) => (
@@ -162,24 +188,6 @@ export function Footer() {
                   {a.label}
                 </Link>
               ))}
-            </div>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-2 gap-xl">
-            <div>
-              <p className="mono text-[12px] uppercase tracking-wider text-accent mb-md">Other Apple devices</p>
-              <ul className="space-y-1.5 text-[13px] list-none p-0 m-0">
-                {OTHER_DEVICES.map((l) => (
-                  <li key={l.href}><Link to={l.href} className="text-text-muted transition-colors hover:text-accent">{l.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="mono text-[12px] uppercase tracking-wider text-accent mb-md">Sell &amp; trade-in</p>
-              <ul className="space-y-1.5 text-[13px] list-none p-0 m-0">
-                {SELL_LINKS.map((l) => (
-                  <li key={l.href}><Link to={l.href} className="text-text-muted transition-colors hover:text-accent">{l.label}</Link></li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -221,6 +229,7 @@ export function Footer() {
           <Link to="/warranty" className="transition-colors hover:text-text">Warranty</Link>
           <Link to="/refund"   className="transition-colors hover:text-text">Refund</Link>
           <Link to="/cookies"  className="transition-colors hover:text-text">Cookies</Link>
+          <Link to="/image-usage-license" className="transition-colors hover:text-text">Image license</Link>
           <Link to="/sitemap.xml" className="transition-colors hover:text-text">Sitemap</Link>
         </nav>
         <div className="flex flex-wrap items-center gap-2 mono text-[12px]">

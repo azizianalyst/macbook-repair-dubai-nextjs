@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "gen:routes": "node scripts/gen-routes.cjs",
+    "check:urls": "node scripts/check-urls.mjs",
+    "check:urls:live": "node scripts/check-urls.mjs --live",
+    "indexnow": "node scripts/indexnow-ping.mjs",
     "predev": "node scripts/gen-routes.cjs",
     "prebuild": "node scripts/gen-routes.cjs",
     "dev": "next dev",

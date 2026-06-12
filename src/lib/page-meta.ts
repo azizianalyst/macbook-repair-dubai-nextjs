@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ROUTE_META } from "./route-meta.generated";
 import { dynamicMeta, metaOverride } from "./dynamic-meta";
+import { imageForRoute } from "./page-images";
 
 const SITE_NAME = "MacBook Repair Dubai";
 const SITE_URL = "https://macbook-repair-dubai.ae";
@@ -50,7 +51,7 @@ function deriveMeta(path: string): { title: string; description: string } {
     return {
       title: `${SITE_NAME} | Certified Apple Technicians in UAE`,
       description:
-        "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 90-day warranty.",
+        "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 12-month warranty.",
     };
   }
   const segments = path.replace(/^\/+|\/+$/g, "").split("/");
@@ -65,7 +66,7 @@ function deriveMeta(path: string): { title: string; description: string } {
   }
   const isRepair = /repair|replacement|fix|recovery|upgrade|diagnostic/i.test(pretty);
   const desc = isRepair
-    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, 90-day warranty. Call 055 741 3706.`
+    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, 12-month warranty. Call 055 741 3706.`
     : `${pretty} - MacBook Repair Dubai. Apple service specialist since 2004. Free diagnosis. Same-day service.`;
   // Avoid "…Repair Dubai | MacBook Repair Dubai" — both pretty and SITE_NAME end in "Repair Dubai".
   const title = /repair dubai$/i.test(pretty) ? `${pretty} | Apple Specialists` : `${pretty} | ${SITE_NAME}`;
@@ -80,17 +81,27 @@ export function metaForPath(path: string): Metadata {
   const title = cleanTitle(entry?.title ?? fallback.title);
   const description = cleanDescription(entry?.description ?? fallback.description);
   const url = SITE_URL + (path === "/" ? "" : path);
-  const ogImage = `${SITE_URL}/og-default.jpg`; // 1200x630, lives in /public
-  const ogImages = [{ url: ogImage, width: 1200, height: 630, alt: title }];
   // Blog posts are articles, not "website" — gives social/AI the right entity type.
   const isBlogPost = path.startsWith("/blog/") && path !== "/blog";
+  // Per-page OG image: the route's topic infographic when one exists (services,
+  // money pages, locations, blog/guides), else the site-wide default card.
+  const topic = imageForRoute(path);
+  const ogImage = topic ? SITE_URL + topic.src : `${SITE_URL}/og-default.jpg`;
+  const ogImages = topic
+    ? [{ url: ogImage, width: 1600, height: 1200, alt: topic.alt }]
+    : [{ url: ogImage, width: 1200, height: 630, alt: title }];
   const openGraph: Metadata["openGraph"] = isBlogPost
     ? { title, description, url, type: "article", authors: [SITE_NAME], siteName: SITE_NAME, locale: "en_AE", images: ogImages }
     : { title, description, url, type: "website", siteName: SITE_NAME, locale: "en_AE", images: ogImages };
   return {
     title,
     description,
-    alternates: { canonical: url },
+    // types: page-level alternates shallow-override the root layout's, so the RSS
+    // autodiscovery link must ride along here or it never renders.
+    alternates: {
+      canonical: url,
+      types: { "application/rss+xml": [{ url: "/rss.xml", title: `${SITE_NAME} — Blog` }] },
+    },
     // Allow full snippets + large image thumbnails (richer SERP + AI Overview eligibility).
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph,

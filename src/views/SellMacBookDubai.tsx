@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -216,6 +217,8 @@ export default function SellMacBookDubai() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/sell-macbook-dubai")?.src}
+        imageAlt={topicForPath("/sell-macbook-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Sell or Trade In · Dubai"
@@ -249,7 +252,10 @@ export default function SellMacBookDubai() {
                 Send us the model and condition and we'll give you a free, honest valuation in minutes -
                 then collect the device free of charge anywhere in Dubai and pay you the same day, by cash
                 or instant bank transfer. There's no obligation, and you don't even need a working device:
-                cracked, water-damaged or dead, <strong>we buy faulty Apple devices too</strong>.
+                cracked, water-damaged or dead,{" "}
+                <Link to="/sell-faulty-macbook-dubai" className="text-accent underline underline-offset-2">
+                  <strong>we buy faulty Apple devices too</strong>
+                </Link>.
               </p>
             </Reveal>
             <Reveal delay={60}>
@@ -264,7 +270,7 @@ export default function SellMacBookDubai() {
             <Reveal delay={120}>
               <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] m-0">
                 Upgrading after a repair quote? You can also{" "}
-                <Link to="/" className="text-accent underline underline-offset-2">
+                <Link to="/trade-in-macbook-dubai" className="text-accent underline underline-offset-2">
                   trade your old Mac toward a repair or another device
                 </Link>{" "}
                 - we'll apply the value as credit on the spot.
