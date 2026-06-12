@@ -347,7 +347,7 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/macbook-repair-hub",
-    "destination": "/",
+    "destination": "/mac-repair-dubai",
     "statusCode": 301
   },
   {
@@ -397,7 +397,7 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/macbook-hardware-accessories",
-    "destination": "/",
+    "destination": "/apple-repair-dubai",
     "statusCode": 301
   },
   {
@@ -442,7 +442,7 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/how-macbook-repair-dubai-can-save-businesses-hundreds-of-dollars",
-    "destination": "/",
+    "destination": "/blog",
     "statusCode": 301
   },
   {
@@ -482,12 +482,12 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/macbook-repair-troubleshooting",
-    "destination": "/",
+    "destination": "/blog",
     "statusCode": 301
   },
   {
     "source": "/macbook-hardware-issues",
-    "destination": "/",
+    "destination": "/apple-repair-dubai",
     "statusCode": 301
   },
   {
@@ -667,12 +667,12 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/how-to-fix-wireless-issues-on-my-macbook",
-    "destination": "/",
+    "destination": "/blog/macbook-wifi-not-working-fix",
     "statusCode": 301
   },
   {
     "source": "/fix-macbook-pro-m1-wifi-issues-quickly",
-    "destination": "/",
+    "destination": "/blog/macbook-wifi-not-working-fix",
     "statusCode": 301
   },
   {
@@ -747,12 +747,12 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/turn-off-startup-when-lid-opens-m2-macbook-air",
-    "destination": "/",
+    "destination": "/macbook-air-repair-dubai",
     "statusCode": 301
   },
   {
     "source": "/2-monitors-attached-to-the-macbook-air-m2",
-    "destination": "/",
+    "destination": "/macbook-air-repair-dubai",
     "statusCode": 301
   },
   {

@@ -45,3 +45,9 @@ next-env.d.ts
 .env
 /data/
 leads.jsonl
+
+# topic image generation staging (540MB of raw PNGs)
+scripts/topic-images/raw/
+
+# agent workspace
+.claude/seo-agency/

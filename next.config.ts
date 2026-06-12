@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 import { REDIRECTS } from "./redirects.generated";
 
 const nextConfig: NextConfig = {
+  // Don't advertise the framework in response headers (drops X-Powered-By: Next.js).
+  poweredByHeader: false,
+  // Hide the floating "N" dev-tools indicator during `next dev` (dev-only widget;
+  // production builds never include it either way).
+  devIndicators: false,
   images: {
     // Ported components use plain <img>; skip the Image Optimization pipeline.
     unoptimized: true,
@@ -21,6 +26,11 @@ const nextConfig: NextConfig = {
         destination: "https://macbook-repair-dubai.ae/:path*",
         permanent: true,
       },
+      // Manual redirects (hand-added, kept separate from the auto-generated legacy set in
+      // redirects.generated.ts). Common WordPress service-business paths that have no live
+      // route — map them to the services hub instead of letting them 404.
+      { source: "/services", destination: "/apple-repair-dubai", statusCode: 301 },
+      { source: "/our-services", destination: "/apple-repair-dubai", statusCode: 301 },
       ...REDIRECTS,
     ];
   },
@@ -48,9 +58,10 @@ const nextConfig: NextConfig = {
       "frame-ancestors 'self'",
       "form-action 'self'",
       scriptSrc,
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      // Site uses a system font stack — no Google Fonts hosts needed.
+      "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
-      "font-src 'self' https://fonts.gstatic.com data:",
+      "font-src 'self' data:",
       "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com",
       "frame-src https://www.google.com",
       "upgrade-insecure-requests",
