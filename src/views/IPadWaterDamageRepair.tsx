@@ -51,7 +51,7 @@ export default function IPadWaterDamageRepair() {
         { title: "Component test & quote", body: "Board powered up under microscope. Failed components identified. Final quote sent for approval." },
         { title: "Repair + 30-day warranty", body: "Replace what's broken, reassemble with fresh adhesive, full function test. Delivered with warranty card." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers parts and labour on the components we replaced or repaired.",
         "Does not cover delayed-onset corrosion in untouched areas - water damage can re-emerge.",

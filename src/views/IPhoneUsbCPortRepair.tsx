@@ -18,7 +18,7 @@ export default function IPhoneUsbCPortRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "USB-C Port Repair", path: "/iphone-usb-c-port-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone USB-C and Thunderbolt repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone USB-C and Thunderbolt repair" }}
       serviceName="iPhone USB-C Port Repair"
       intro={
         <>
@@ -26,7 +26,7 @@ export default function IPhoneUsbCPortRepair() {
             <strong>iPhone 15 was the first iPhone with USB-C</strong> and from iPhone 15 Pro onwards the port supports Thunderbolt 3 (40 Gbps) for fast video and data transfer. The connector itself is mechanically more delicate than Lightning - pins bend more easily, especially when a cable is yanked sideways. AED 400 covers a full port replacement with Thunderbolt support intact on Pro models.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Free first step: we clean the port. About 35% of "broken USB-C" iPhones in Dubai are just packed with pocket lint, and a careful microscope clean restores fast charging at no charge. If the port itself is damaged, AED 400, 1 day, 90-day warranty.
+            Free first step: we clean the port. About 35% of "broken USB-C" iPhones in Dubai are just packed with pocket lint, and a careful microscope clean restores fast charging at no charge. If the port itself is damaged, AED 400, 1 day, 12-month warranty.
           </p>
         </>
       }
@@ -44,9 +44,9 @@ export default function IPhoneUsbCPortRepair() {
         { title: "Free microscope clean",   body: "We inspect at 40× magnification, extract any lint with a fine pick. About a third of cases solved here, no charge." },
         { title: "Bent pin diagnosis",       body: "If the cable still won't seat properly, we identify which pin is bent and whether it can be straightened (rare) or needs port replacement." },
         { title: "USB-C port replacement",   body: "OEM-grade Thunderbolt-capable port flex on Pro models, standard USB 2.0 port on base iPhone 15 / 16 / 17." },
-        { title: "Charge + data verify",     body: "20W+ charge confirmed, Thunderbolt transfer tested at 40Gbps on Pro, DisplayPort to monitor verified. 90-day warranty." },
+        { title: "Charge + data verify",     body: "20W+ charge confirmed, Thunderbolt transfer tested at 40Gbps on Pro, DisplayPort to monitor verified. 12-month warranty." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new USB-C port flex and seal.",
         "Thunderbolt speeds preserved on Pro models.",

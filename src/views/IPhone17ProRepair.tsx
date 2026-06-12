@@ -19,7 +19,7 @@ export default function IPhone17ProRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 17 Pro", path: "/iphone-17-pro-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 17 Pro Repair"
       intro={
         <>
@@ -90,9 +90,9 @@ export default function IPhone17ProRepair() {
         { title: "Diagnose + repair",    body: "OLED + battery same day; 8x telephoto and aluminum cosmetic 2-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, USB-C 3, 8x zoom, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Vapor chamber: 30-min sustained workload thermal verified.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",

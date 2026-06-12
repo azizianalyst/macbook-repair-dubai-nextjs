@@ -3,6 +3,7 @@ import { Star, MessageCircle, Phone, Truck, Check, MapPin, Wrench, Headphones } 
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -47,7 +48,7 @@ const FAQS = [
   { q: "Do you cover Sharjah or Abu Dhabi?",
     a: "Free pickup and delivery applies to Dubai mainland. For an address in Sharjah, Abu Dhabi or another emirate, message us your location on WhatsApp at 055 741 3706 and we will tell you what we can arrange for your area." },
   { q: "What warranty comes with an onsite MacBook repair?",
-    a: "Every repair is backed by our own 90-day written warranty covering the parts replaced and the workmanship. The warranty is the same whether you visit the workshop or use free pickup and delivery." },
+    a: "Every repair is backed by our own 12-month written warranty covering the parts replaced and the workmanship. The warranty is the same whether you visit the workshop or use free pickup and delivery." },
   { q: "How much does an onsite MacBook repair cost?",
     a: "Pickup, delivery and diagnosis are free. Repairs are priced per service - screen, battery, keyboard and so on - and quoted on WhatsApp before any work starts. You only pay for the repair itself, never for the visit." },
 ];
@@ -57,7 +58,7 @@ export default function OnsiteMacBookRepair() {
     {
       title: "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
       description:
-        "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, 90-day warranty. Call 055 741 3706.",
+        "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, 12-month warranty. Call 055 741 3706.",
       path: "/onsite-macbook-repair-dubai",
     },
     [
@@ -67,9 +68,9 @@ export default function OnsiteMacBookRepair() {
         name: "Onsite MacBook Repair Dubai",
         price: 0,
         timeline: "Same-day on most repairs",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: "/onsite-macbook-repair-dubai",
-        description: "Onsite and doorstep MacBook repair across Dubai - free pickup and delivery on Dubai mainland, free diagnosis, repairs priced per service and a 90-day warranty.",
+        description: "Onsite and doorstep MacBook repair across Dubai - free pickup and delivery on Dubai mainland, free diagnosis, repairs priced per service and a 12-month warranty.",
       }),
       itemList({
         name: "What we handle onsite",
@@ -87,6 +88,8 @@ export default function OnsiteMacBookRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/onsite-macbook-repair-dubai")?.src}
+        imageAlt={topicForPath("/onsite-macbook-repair-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Onsite MacBook Repair · Dubai"
@@ -185,7 +188,7 @@ export default function OnsiteMacBookRepair() {
           {[
             { title: "Free pickup, free diagnosis", body: "No callout charge and no diagnosis fee. We collect, diagnose and quote before you commit to anything." },
             { title: "Same-day on most repairs", body: "Common screen and battery jobs are collected, repaired and returned the same day across Dubai mainland." },
-            { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a 90-day written warranty." },
+            { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a 12-month written warranty." },
           ].map((c) => (
             <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>

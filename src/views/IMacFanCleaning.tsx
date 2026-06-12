@@ -44,9 +44,9 @@ export default function IMacFanCleaning() {
         { title: "Deep clean",                 body: "Vacuum, soft brush, then targeted compressed air through cleared fins. Fan blades cleaned individually. Intake and exhaust paths cleared." },
         { title: "Reseal + verify",            body: "Fresh adhesive, display refit, fan-noise verify under load. You hear the difference immediately." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day warranty on the seal and the workmanship.",
+        "12-month warranty on the seal and the workmanship.",
         "If fan noise returns inside 6 months we re-clean for free.",
         "Free home pickup and drop-off across Dubai mainland.",
       ]}

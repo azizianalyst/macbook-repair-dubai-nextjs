@@ -142,7 +142,7 @@ export default function BlogMacBookFlexgateExplained() {
         },
         {
           q: "Will the new flex cable solve Flexgate permanently?",
-          a: "Yes. We install a redesigned aftermarket flex cable that's 4-5mm longer than Apple's original (matches the 2018+ design). With normal use it should last the remaining life of the MacBook. We give a 12-month warranty on the cable repair specifically.",
+          a: "Yes. We install a redesigned aftermarket flex cable that's 4-5mm longer than Apple's original (matches the 2018+ design). With normal use it should last the remaining life of the MacBook. We give a 3-month warranty on the cable repair specifically.",
         },
         {
           q: "Why does Apple still not acknowledge 15″ MacBook Pro Flexgate?",

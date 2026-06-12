@@ -55,7 +55,7 @@ export default function IPhoneSoftwareFix() {
         { title: "Restore from backup + verification", body: "Backup restored. Apps re-download from App Store. iCloud Keychain, photos, contacts re-sync. Workshop verifies before handover." },
         { title: "Free delivery + 30-day software warranty", body: "Same day. Warranty covers re-occurrence of the same software issue within 30 days - usually a sign of latent hardware fault, treated free." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covered: re-occurrence of the same software issue within 30 days, restore failures caused by the workshop's process.",
         "Not covered: new software issues from user-installed apps or jailbreaks, data lost when the iPhone could not be backed up before restore.",
@@ -70,7 +70,7 @@ export default function IPhoneSoftwareFix() {
         ["Backup before restore",         "Yes - bench iTunes/Finder",                  "Yes - Time Machine/iCloud"],
         ["Free hardware diagnosis if SW doesn't fix", "Yes - fee credited toward hardware repair", "No, separate diagnostic fee"],
         ["Same-day turnaround",           "Yes",                                        "Often same-day at Genius Bar"],
-        ["Warranty",                      "30 days written",                            "90 days on hardware"],
+        ["Warranty",                      "30 days written",                            "12 months on hardware"],
       ]}
       faqs={[
         { q: "How much does iPhone software repair cost in Dubai?", a: "Free for guided fixes you can do at home (force restart, settings reset). AED 200 for DFU restore preserving data. AED 250 for clean install with iCloud restore. AED 300 for jailbreak removal. AED 350 for iOS downgrade. AED 200 for storage cleanup. If the issue turns out to be hardware, the fee is credited toward the hardware repair." },

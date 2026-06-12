@@ -145,6 +145,21 @@ export default function BlogMacBookNotTurningOn() {
             </Link>{" "}
             for full board-level diagnostic process.
           </p>
+
+          <figure className="my-md flex flex-col items-center">
+            <img
+              src="/images/infographics/4-signs-macbook-needs-repair.png"
+              alt="Four signs your MacBook needs repair: cracked or flickering screen, swollen or fast-draining battery, overheating and loud fan noise, and won't power on or boot"
+              loading="lazy"
+              decoding="async"
+              width={512}
+              height={640}
+              className="rounded-md border border-border w-full max-w-[420px] h-auto"
+            />
+            <figcaption className="mt-xs text-[13px] text-text-muted text-center">
+              The four warning signs that mean it&apos;s time for a professional MacBook diagnostic.
+            </figcaption>
+          </figure>
         </>
       }
       faqs={[

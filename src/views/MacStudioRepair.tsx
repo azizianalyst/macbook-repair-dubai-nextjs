@@ -26,6 +26,7 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
+  "Mac Studio (M4 Max, 2025)", "Mac Studio (M3 Ultra, 2025)",
   "Mac Studio (M2 Max, 2023)", "Mac Studio (M2 Ultra, 2023)",
   "Mac Studio (M1 Max, 2022)", "Mac Studio (M1 Ultra, 2022)",
 ];
@@ -120,9 +121,9 @@ function CallButtons() {
 export default function MacStudioRepair() {
   useSeo(
     {
-      title: "Mac Studio Repair Dubai - Apple-Certified Logic Board & SSD Fix",
+      title: "Mac Studio Repair Dubai - Expert Logic Board & SSD Fix",
       description:
-        "Professional Mac Studio repair in Dubai. Certified Apple technicians repair logic boards, SSDs & power issues. M1 Ultra & M2 Ultra models supported.",
+        "Professional Mac Studio repair in Dubai by independent Apple specialists. Logic board, SSD & power-issue repair. M1 Ultra & M2 Ultra models supported.",
       path: "/mac-studio-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -132,6 +133,8 @@ export default function MacStudioRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-studio-repair-dubai.jpg"
+        imageAlt="Mac Studio repair Dubai - M4 Max compact workstation teardown engineering infographic"
         tone="dark"
         variant="device"
         eyebrow="Mac Studio specialist"
@@ -151,7 +154,7 @@ export default function MacStudioRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Studio repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac Studio — M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max — at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 90-day written warranty."
+        answer="MacBook Repair Dubai repairs every Mac Studio — M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max — at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty."
       />
 
       <USPStrip tone="dark" />

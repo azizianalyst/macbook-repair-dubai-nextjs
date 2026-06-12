@@ -194,7 +194,7 @@ export const CITIES: CityConfig[] = [
       }
     ],
     "intro": "We don't have a shop in Ajman. MacBook Repair Dubai is one workshop, in Concord Tower, Dubai Media City, and we've been on Apple hardware there since 2004. What we run for Ajman is free courier collection: a driver picks the MacBook up from your home or office, brings it the 46-odd kilometres to our bench, and the same courier returns it once it's fixed. Ajman sits close enough to Dubai — about 50 minutes by road — that most jobs go back the same day. Lead technician Shafiq Ahmed, 21 years in, signs off every repair before it leaves. No fix, no charge.",
-    "whyChoose": "A general laptop shop will send your MacBook on to someone like us anyway, then add their margin. Going direct to a Dubai Apple specialist cuts that out. We carry A-grade panels, genuine-capacity batteries and the board-level kit for the common faults, so a job that a Sharjah counter quotes as a week often goes back to Ajman the same evening. Everything's done in front of one technician — Shafiq, 21 years on Apple boards — not shuffled between hands. You get the 90-day warranty (6 months on batteries), no-fix-no-charge, and a workshop with 215+ Google reviews at 5.0★ standing behind it. The courier both ways is free.",
+    "whyChoose": "A general laptop shop will send your MacBook on to someone like us anyway, then add their margin. Going direct to a Dubai Apple specialist cuts that out. We carry A-grade panels, genuine-capacity batteries and the board-level kit for the common faults, so a job that a Sharjah counter quotes as a week often goes back to Ajman the same evening. Everything's done in front of one technician — Shafiq, 21 years on Apple boards — not shuffled between hands. You get the 12-month warranty (3 months on batteries), no-fix-no-charge, and a workshop with 215+ Google reviews at 5.0★ standing behind it. The courier both ways is free.",
     "collectionNote": "Message us on WhatsApp at 055 741 3706 with the model and what's wrong, and we'll give you a price range before anything moves. Once you're happy, we book a courier to your Ajman address — home, villa or office, anywhere from Al Nuaimiya to Al Yasmeen. The driver collects the MacBook, brings it to Concord Tower in Dubai Media City, and Shafiq diagnoses it on the bench. We confirm the final price before any work starts. Most repairs are done the same day and the same courier returns it to you. Collection and return are both free across Ajman. No fix, no charge.",
     "faqs": [
       {
@@ -223,7 +223,7 @@ export const CITIES: CityConfig[] = [
       },
       {
         "q": "Do you use genuine Apple parts?",
-        "a": "We fit A-grade panels from the same factory lines that supply Apple, and genuine-capacity battery cells with the cycle count reset to zero. For some boards we use original pulls. Genuine-service-part pricing is higher and slower; we'll quote both where there's a real choice and let you decide. Whatever goes in carries our 90-day warranty, 6 months on batteries."
+        "a": "We fit A-grade panels from the same factory lines that supply Apple, and genuine-capacity battery cells with the cycle count reset to zero. For some boards we use original pulls. Genuine-service-part pricing is higher and slower; we'll quote both where there's a real choice and let you decide. Whatever goes in carries our 12-month warranty, 3 months on batteries."
       },
       {
         "q": "Why send it to Dubai instead of a shop in Ajman or Sharjah?",
@@ -300,7 +300,7 @@ export const CITIES: CityConfig[] = [
       }
     ],
     "intro": "We are MacBook Repair Dubai, a single specialist workshop in Concord Tower, Dubai Media City. We do not have a shop in Umm Al Quwain, and we will not pretend otherwise. Instead we run a free courier collection service: a courier picks up your MacBook from your Umm Al Quwain address, brings it to our Dubai bench where the actual repair happens, and a courier returns it to you once it is done. Umm Al Quwain sits about an hour up the coast from Media City, so collection is usually next-day and the full round trip typically takes one to two days. You get a written quote before any work starts, and you never leave home.",
-    "whyChoose": "Umm Al Quwain does not have a dedicated Apple-level logic-board and screen specialist, so most people end up driving to Dubai or Sharjah anyway. Our free courier model removes that drive entirely: the device comes to a Dubai workshop that does board-level work, genuine-grade screen and battery replacements, and water-damage recovery in-house, rather than being shipped off to an unnamed warehouse. You deal with one team from collection to return, get a fixed written quote on WhatsApp before we open anything, and the repair is covered by a 90-day warranty. The honest trade-off versus a same-city shop is time: because of the distance, plan on one to two days rather than the same afternoon.",
+    "whyChoose": "Umm Al Quwain does not have a dedicated Apple-level logic-board and screen specialist, so most people end up driving to Dubai or Sharjah anyway. Our free courier model removes that drive entirely: the device comes to a Dubai workshop that does board-level work, genuine-grade screen and battery replacements, and water-damage recovery in-house, rather than being shipped off to an unnamed warehouse. You deal with one team from collection to return, get a fixed written quote on WhatsApp before we open anything, and the repair is covered by a 12-month warranty. The honest trade-off versus a same-city shop is time: because of the distance, plan on one to two days rather than the same afternoon.",
     "collectionNote": "Collection is genuinely free and arranged over WhatsApp on 055 741 3706. Tell us your Umm Al Quwain address and MacBook model, and we book a courier, normally for the next day, since Umm Al Quwain is about an hour from our Dubai workshop and not on a daily local loop. The courier meets you at your home, office or building reception at an agreed time, takes the MacBook to Dubai, and brings it back to the same address once the repair is finished. There is no collection or return fee, and the diagnosis is free; you only pay for the repair you approve in writing beforehand.",
     "faqs": [
       {
@@ -333,7 +333,7 @@ export const CITIES: CityConfig[] = [
       },
       {
         "q": "Do you offer a warranty?",
-        "a": "Yes, a 90-day warranty on the parts and labour for the repair we carry out. If the same issue recurs within that period, we arrange a free courier collection and put it right at no extra charge."
+        "a": "Yes, a 12-month warranty on the parts and labour for the repair we carry out. If the same issue recurs within that period, we arrange a free courier collection and put it right at no extra charge."
       },
       {
         "q": "Can you collect from areas like Falaj Al Mualla or Umm Al Thuoob, not just the city centre?",
@@ -805,7 +805,7 @@ export const CITIES: CityConfig[] = [
         "note": "Family residential streets; same free door collection across the neighbourhood."
       }
     ],
-    "intro": "We don't have a shop in Khor Fakkan. We're a MacBook workshop in Concord Tower, Dubai Media City, and we've been fixing Apple hardware there since 2004. For the east coast we run free courier collection instead. A courier picks the MacBook up from your Khor Fakkan address, brings it to the bench in Dubai, and once it's repaired and QC-checked it goes straight back to you. Khor Fakkan is about two hours from Media City, so the realistic round trip is one to two days. You get the same technician, Shafiq Ahmed, 21 years on Apple hardware, and the same 90-day warranty as anyone who walks into the workshop.",
+    "intro": "We don't have a shop in Khor Fakkan. We're a MacBook workshop in Concord Tower, Dubai Media City, and we've been fixing Apple hardware there since 2004. For the east coast we run free courier collection instead. A courier picks the MacBook up from your Khor Fakkan address, brings it to the bench in Dubai, and once it's repaired and QC-checked it goes straight back to you. Khor Fakkan is about two hours from Media City, so the realistic round trip is one to two days. You get the same technician, Shafiq Ahmed, 21 years on Apple hardware, and the same 12-month warranty as anyone who walks into the workshop.",
     "whyChoose": "Most laptop shops on the east coast handle phones and generic PCs. We only do Apple, and only at one bench in Dubai, so the MacBook that leaves Khor Fakkan is worked on by someone who's seen the same fault hundreds of times. Board-level work, screen bonding, battery cells with the cycle count reset — none of that is sent on to a third party. It stays in our Media City workshop. The courier is free both ways, the diagnostic is free, and it's no-fix-no-charge, so the two-hour distance costs you nothing. You also get a price in writing before we touch anything. 215+ Google reviews, 5.0 stars, and the same QC sheet on every job.",
     "collectionNote": "Collection is free and there's no catch on the distance. You WhatsApp us the MacBook model and what's wrong on 055 741 3706, we book a courier, and they collect from your Khor Fakkan address — home or office — usually the next day. The MacBook travels to our Dubai Media City workshop, gets a free diagnostic, and we send you a fixed price before any work starts. Once you approve and it's repaired, the same courier returns it to your door. You pay nothing for collection or return, and nothing at all if we can't fix it. Both legs of the roughly 130 km trip are on us.",
     "faqs": [
@@ -839,7 +839,7 @@ export const CITIES: CityConfig[] = [
       },
       {
         "q": "Do you use genuine Apple parts?",
-        "a": "We use A-grade panels and cells from the same factory lines that supply Apple, plus genuine parts where it makes sense for the model. We'll tell you which is going in and why before you approve the quote — no guessing. Everything carries a 90-day warranty, six months on batteries, and that warranty holds even though you're in Khor Fakkan and we're in Dubai."
+        "a": "We use A-grade panels and cells from the same factory lines that supply Apple, plus genuine parts where it makes sense for the model. We'll tell you which is going in and why before you approve the quote — no guessing. Everything carries a 12-month warranty, three months on batteries, and that warranty holds even though you're in Khor Fakkan and we're in Dubai."
       },
       {
         "q": "How do I book a collection from Khor Fakkan?",

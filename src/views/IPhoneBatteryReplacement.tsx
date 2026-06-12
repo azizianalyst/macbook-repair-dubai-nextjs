@@ -5,11 +5,11 @@ export default function IPhoneBatteryReplacement() {
   return (
     <IPhonePageTemplate
       seoTitle="iPhone Battery Replacement Dubai - From AED 250 | Same-Day | Genuine Cells"
-      seoDescription="iPhone battery replacement Dubai from AED 250. Health % reset, BMS pairing, swelling check. iPhone 6 to 17. Same-day. 90-day warranty. WhatsApp 055 741 3706."
+      seoDescription="iPhone battery replacement Dubai from AED 250. Health % reset, BMS pairing, swelling check. iPhone 6 to 17. Same-day. 3-month warranty. WhatsApp 055 741 3706."
       path="/iphone-battery-replacement-dubai"
       eyebrow="iPhone Battery Replacement"
       h1="iPhone Battery Replacement Dubai - From AED 250"
-      subtitle="Battery health below 80%? Random shutdowns? Swelling? iPhone 6 through iPhone 17 - genuine cells, BMS pairing, health % reset. Same-day, 90-day warranty."
+      subtitle="Battery health below 80%? Random shutdowns? Swelling? iPhone 6 through iPhone 17 - genuine cells, BMS pairing, health % reset. Same-day, 3-month warranty."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, iPhone battery replacement quote please. Model: "
@@ -44,7 +44,7 @@ export default function IPhoneBatteryReplacement() {
         { title: "Battery drains overnight from 100% to 60%", body: "Failed cell + parasitic drain on a damaged port. Replacement plus port inspection. Often a 2-in-1 ticket on water-damaged phones." },
         { title: "iPhone 15+ won't reach 100% charge", body: "iPhone 15 onward uses lithium chemistry with optimised charging - capping at 80% or 100% by the user's setting. Check Settings > Battery > Charging before booking a replacement." },
         { title: "Cycle count above 1,000", body: "Apple's design target is 80% capacity at 500 cycles for older models, 1,000 cycles for iPhone 15+. Beyond that capacity drops faster. Replacement restores the cycle counter to zero." },
-        { title: "Aftermarket battery installed elsewhere is failing fast", body: "Low-grade cells use recycled cores and inflated capacity labels. The workshop fits only A-grade or genuine Apple cells. Replacement, AED 250 to AED 600, with a 90-day warranty card listing the cell batch." },
+        { title: "Aftermarket battery installed elsewhere is failing fast", body: "Low-grade cells use recycled cores and inflated capacity labels. The workshop fits only A-grade or genuine Apple cells. Replacement, AED 250 to AED 600, with a 3-month warranty card listing the cell batch." },
       ]}
       steps={[
         { title: "WhatsApp model + screenshot of Battery Health", body: "Settings > Battery > Battery Health & Charging - screenshot showing Maximum Capacity. Quote back in 4 minutes." },
@@ -52,13 +52,13 @@ export default function IPhoneBatteryReplacement() {
         { title: "Cell swap on the bench", body: "Pentalobe screws out, screen lifted at 70 °C, battery adhesive pulls activated, old cell removed. Bench-tested replacement seated, BMS chip transferred and re-paired." },
         { title: "Battery health reset", body: "Health reading reset to 100%, cycle count to 0. iOS shows the new cell as paired with no warnings. Verified in Settings before reassembly." },
         { title: "Charge cycle test", body: "Phone charged from 0% to 100% on the bench while monitored. Heat profile checked. No throttling under stress test." },
-        { title: "Free delivery + 90-day warranty", body: "Same day, anywhere on Dubai mainland. Warranty card lists the battery batch and original install date." },
+        { title: "Free delivery + 3-month warranty", body: "Same day, anywhere on Dubai mainland. Warranty card lists the battery batch and original install date." },
       ]}
       warrantyDays={90}
       warrantyBullets={[
-        "Covered: cell defects, capacity falling below 90% within 90 days, swelling, BMS pairing failure caused by the workshop.",
-        "Not covered: liquid damage post-repair, capacity drop after 500+ cycles in 90 days (heavy use), physical damage.",
-        "Genuine Apple cell option carries the workshop 90-day warranty plus Apple's distributor warranty (paperwork supplied on request).",
+        "Covered: cell defects, capacity falling below 90% within 3 months, swelling, BMS pairing failure caused by the workshop.",
+        "Not covered: liquid damage post-repair, capacity drop after 500+ cycles in 3 months (heavy use), physical damage.",
+        "Genuine Apple cell option carries the workshop 3-month warranty plus Apple's distributor warranty (paperwork supplied on request).",
       ]}
       comparisonRows={[
         ["Repair window",            "Same day, all models",                       "5 to 10 business days, mail-in"],
@@ -69,13 +69,13 @@ export default function IPhoneBatteryReplacement() {
         ["Free pickup in Dubai",     "Yes",                                        "No"],
         ["Walk-in same day",         "Yes - Concord Tower, Media City",            "Apple Store appointment required"],
         ["Vintage models (6/6s)",    "Yes - AED 250",                              "Refused, model obsolete"],
-        ["Warranty",                 "90 days written",                            "90 days"],
+        ["Warranty",                 "3 months written",                            "12 months"],
       ]}
       faqs={[
         { q: "How much does iPhone battery replacement cost in Dubai?", a: "From AED 250 for iPhone 6, 6s, 7, 8, and SE. AED 350 for X, XR, XS. AED 400 for 11 and 12. AED 450 for 13 and 14. AED 500 for 15 and 16. AED 600 for the iPhone 17 line. Pro Max sizes add AED 50. Genuine Apple cell adds AED 150 to AED 200." },
         { q: "When should I replace my iPhone battery?", a: "When Maximum Capacity (Settings > Battery > Battery Health) drops below 80%. iOS shows a yellow 'Service' warning. Other triggers: random shutdowns above 20%, phone hot during normal use, battery dies overnight, screen lifting from chassis (swelling)." },
         { q: "Will battery health reset to 100% after replacement?", a: "Yes - the workshop transfers the original BMS chip and re-pairs it with the new cell. iOS reads the new cell as paired and shows 100% Maximum Capacity with cycle count zero. No 'Unknown Part' warning." },
-        { q: "What's the difference between A-grade and genuine Apple cells?", a: "Genuine cells are sourced from a local Apple-authorised distributor with traceable serials - same chemistry, same capacity, identical to a brand-new iPhone. A-grade cells come from ATL or Sunwoda (Apple's cell suppliers) without the Apple sticker - same chemistry, ~5% capacity variance, 30% cheaper. Both carry the 90-day workshop warranty." },
+        { q: "What's the difference between A-grade and genuine Apple cells?", a: "Genuine cells are sourced from a local Apple-authorised distributor with traceable serials - same chemistry, same capacity, identical to a brand-new iPhone. A-grade cells come from ATL or Sunwoda (Apple's cell suppliers) without the Apple sticker - same chemistry, ~5% capacity variance, 30% cheaper. Both carry the 3-month workshop warranty." },
         { q: "Is it safe to use a swollen iPhone battery?", a: "No. Swelling means the cell has gas-vented internally and pressure is building up. The OLED can crack from below, the screen can detach, and in rare cases the cell can ignite. Stop using the phone, do not charge it, WhatsApp a photo and the workshop will collect same day." },
         { q: "How long does iPhone battery replacement take?", a: "60 to 90 minutes on the bench for iPhone 6 through iPhone 16. Plus a 30-minute charge-cycle test. Same day, no overnight stay needed. Bring the phone in or use free pickup - typical end-to-end time is 3 to 5 hours." },
         { q: "Will my Face ID still work after battery replacement?", a: "Yes. The battery sits below the logic board - Face ID hardware (dot projector, IR camera, flood) is in the screen and chassis, untouched during a battery swap." },

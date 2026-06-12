@@ -44,7 +44,7 @@ export default function IMacVirusRemoval() {
         { title: "Browser deep clean",         body: "Safari, Chrome and Firefox: extensions, search engines, homepage, notifications, opened-tab persistence, all reset. Bookmarks and passwords preserved." },
         { title: "Triple scan and verify",     body: "Malwarebytes, KnockKnock and a manual file system check confirm zero remaining threats. You leave with a written all-clear." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day re-clean if the same malware comes back from the same source.",
         "We show you what we removed and how to avoid it.",

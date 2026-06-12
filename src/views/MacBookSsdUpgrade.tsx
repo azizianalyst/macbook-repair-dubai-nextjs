@@ -46,7 +46,7 @@ export default function MacBookSsdUpgrade() {
         { title: "Install + clone", body: "Bottom case off, NVMe adapter installed, new drive seated, clone via Carbon Copy Cloner. 1 TB clones in about 90 minutes." },
         { title: "First-boot verification", body: "Boot from new drive, verify all apps + data + iCloud + login chain. Sign-off only after you confirm." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers SSD installation and adapter (where applicable).",
         "SSD itself carries the manufacturer's separate 5-year warranty.",

@@ -44,11 +44,11 @@ export default function IPadPencilCompatibility() {
         { title: "Identify your Pencil",          body: "We confirm which Apple Pencil generation your iPad supports - Apple has shipped four different Pencils with overlapping iPad compatibility." },
         { title: "Source Pencil-compatible screen",body: "We never use copy screens that skip the digitiser. Our screens come from suppliers that include the full Pencil-compatible digitiser layer." },
         { title: "Calibration after install",     body: "Once the screen is installed, we test pressure, tilt, palm rejection and hover (where supported) with the actual Pencil before handover." },
-        { title: "Written compatibility guarantee",body: "Your repair invoice explicitly states 'Apple Pencil compatibility preserved - 90-day guarantee'. If Pencil stops working, we re-do the screen at no charge." },
+        { title: "Written compatibility guarantee",body: "Your repair invoice explicitly states 'Apple Pencil compatibility preserved - 3-month guarantee'. If Pencil stops working, we re-do the screen at no charge." },
       ]}
       warrantyDays={90}
       warrantyBullets={[
-        "Apple Pencil function explicitly guaranteed for 90 days.",
+        "Apple Pencil function explicitly guaranteed for 3 months.",
         "Pressure, tilt and palm rejection all covered.",
         "Free re-screen if Pencil function fails (cheap shops won't do this).",
       ]}

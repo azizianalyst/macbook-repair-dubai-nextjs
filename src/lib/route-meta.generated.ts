@@ -2,223 +2,47 @@
 export const ROUTE_META: Record<string, { title: string; description?: string }> = {
   "/about": {
     "title": "About MacBook Repair Dubai - 21 Years, Same Address",
-    "description": "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 90-day warranty."
+    "description": "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 12-month warranty."
   },
-  "/contact": {
-    "title": "Contact MacBook Repair Dubai - Concord Tower, Media City",
-    "description": "Visit MacBook Repair Dubai at Office #45, Concord Tower, Dubai Media City. Call 055 741 3706 or WhatsApp 24/7. Free diagnosis, walk-ins welcome, paid parking on-site."
-  },
-  "/pricing": {
-    "title": "MacBook Repair Prices Dubai - Full Price List from AED 330",
-    "description": "Transparent pricing for all Apple repairs in Dubai. MacBook screen from AED 780, battery from AED 590, water damage from AED 910. Free diagnosis. Call 055 741 3706."
-  },
-  "/privacy": {
-    "title": "Privacy Policy - MacBook Repair Dubai",
-    "description": "How MacBook Repair Dubai collects, uses, and protects customer data. UAE PDPL and GDPR compliant. Updated April 2026."
-  },
-  "/terms": {
-    "title": "Terms of Service - MacBook Repair Dubai",
-    "description": "Service terms for repairs at MacBook Repair Dubai: free diagnosis, no-fix-no-charge, parts policy, pricing, and Dubai jurisdiction. Updated April 2026."
-  },
-  "/warranty": {
-    "title": "Warranty Policy - MacBook Repair Dubai",
-    "description": "90-day written warranty on every Apple repair. What is covered, what is not, and how to make a warranty claim. Updated April 2026."
-  },
-  "/refund": {
-    "title": "Refund Policy - MacBook Repair Dubai",
-    "description": "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated April 2026."
-  },
-  "/cookies": {
-    "title": "Cookie Policy - MacBook Repair Dubai",
-    "description": "The 4 cookies set by macbook-repair-dubai.ae, what each one does, and how to disable them. No advertising trackers. Updated April 2026."
-  },
-  "/apple-repair-dubai": {
-    "title": "Apple Repair Dubai - All Devices Since 2004",
-    "description": "Every Apple device repair in Dubai. MacBook, iMac, iPhone, iPad. Free diagnosis at Concord Tower. 055 741 3706."
-  },
-  "/apple-service-center-dubai": {
-    "title": "Apple Service Center Dubai - Mac, iPhone & iPad Repairs",
-    "description": "Trusted Apple service center in Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts. Fast, reliable support."
+  "/annual-maintenance-contract-dubai": {
+    "title": "Apple AMC Dubai - Annual Maintenance Contract for Mac & iPhone",
+    "description": "Annual Maintenance Contract (AMC) for Apple devices in Dubai. Scheduled servicing, battery checks, priority repairs, discounted parts & on-site support for businesses. Call 055 741 3706."
   },
   "/apple-display-repair-dubai": {
     "title": "Apple Display Repair Dubai - Studio Display & iMac Screen Fix",
     "description": "Expert Apple display repair in Dubai. We fix Studio Display, iMac, and MacBook screens using genuine parts. Fast, professional service by expert Apple technicians."
   },
-  "/macbook-air-repair-dubai": {
-    "title": "MacBook Air Repair Dubai - Screen, Battery & Logic Board Fix",
-    "description": "Get your MacBook Air repaired quickly and affordably in Dubai. Certified technicians fix screen, battery, keyboard & more on M1, M2, M3 & Intel models using genuine Apple parts. Rated 5.0 stars."
+  "/apple-repair-dubai": {
+    "title": "Apple Repair Dubai - All Devices Since 2004",
+    "description": "Every Apple device repair in Dubai. MacBook, iMac, iPhone, iPad. Free diagnosis at Concord Tower. 055 741 3706."
   },
-  "/macbook-pro-repair-dubai": {
-    "title": "MacBook Pro Repair Dubai - M1-M4 Screen, Battery & Logic Fix",
-    "description": "Expert MacBook Pro repair in Dubai for M1, M2, M3 & M4 models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service."
+  "/apple-repair-programs-dubai": {
+    "title": "Apple Free Repair Programs Dubai - Check If You Qualify",
+    "description": "Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPhone 11 display issues. We help check your eligibility."
   },
-  "/iphone-repair-dubai": {
-    "title": "iPhone Repair Dubai - Certified Apple Technicians & Genuine Parts",
-    "description": "Trusted iPhone repair in Dubai for screen, battery, water damage & logic board issues. Certified technicians. Fast service with original Apple parts."
+  "/apple-service-center-dubai": {
+    "title": "Apple Service Center Dubai - Mac, iPhone & iPad Repairs",
+    "description": "Trusted Apple service center in Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts. Fast, reliable support."
   },
-  "/ipad-repair-dubai": {
-    "title": "iPad Repair Dubai - Screen, Battery & Logic Board Experts",
-    "description": "Professional iPad repair in Dubai for all models. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple parts."
+  "/applecare-macbook-repair-dubai": {
+    "title": "AppleCare & In-Warranty MacBook Repair Dubai",
+    "description": "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, 12-month warranty. Call 055 741 3706."
   },
-  "/imac-repair-dubai": {
-    "title": "iMac Repair Dubai - Certified Logic Board & SSD Specialists",
-    "description": "Expert iMac repair in Dubai. Certified Apple technicians fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMac models."
+  "/blog/apple-intelligence-on-old-iphones": {
+    "title": "Apple Intelligence: Which iPhones Support It in 2026",
+    "description": "Full Apple Intelligence iPhone list for iOS 26: every supported model, why iPhone 15 (non-Pro) is left out, plus battery impact and a real upgrade verdict."
   },
-  "/mac-repair-dubai": {
-    "title": "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
-    "description": "Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio. Expert Apple technicians provide screen, battery, SSD & logic board repairs."
+  "/blog/apple-mac-pro-discontinued-what-now": {
+    "title": "Apple Discontinued the Mac Pro - What to Buy in 2026",
+    "description": "March 2026: Apple killed the Mac Pro. The real alternatives - Mac Studio M3 Ultra, used 2019 Mac Pro, eGPU options - plus our service plan for owners."
   },
-  "/blog": {
-    "title": "Apple Repair Blog Dubai - Honest Cost Guides",
-    "description": "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, 90-day warranty."
+  "/blog/apple-silicon-vs-intel-repair-difference": {
+    "title": "Apple Silicon vs Intel Mac Repair - What's Different in 2026",
+    "description": "M1, M2, M3, M4, M5 vs Intel Macs. SoC integration, soldered RAM, paired components, board-level repair complexity, and what it means for cost in Dubai 2026."
   },
-  "/blog/iphone-screen-repair-cost-dubai-2026": {
-    "title": "iPhone Screen Repair Cost Dubai 2026 - Every Model",
-    "description": "Full iPhone screen repair price list for Dubai 2026. From AED 350 (iPhone 6) to AED 1,400 (17 Pro Max). OLED vs LCD, Apple Store comparison, what's included."
-  },
-  "/blog/iphone-battery-replacement-cost-dubai-all-models": {
-    "title": "iPhone Battery Replacement Cost Dubai: All Models",
-    "description": "iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 90-day warranty explained."
-  },
-  "/blog/iphone-back-glass-repair-cost-dubai": {
-    "title": "iPhone Back Glass Repair Cost Dubai: Laser Method",
-    "description": "iPhone back glass repair in Dubai costs AED 400-950 by laser separation. Apple Store charges a full chassis swap from AED 1,800. MagSafe and charging kept."
-  },
-  "/blog/iphone-water-damage-repair-cost-dubai": {
-    "title": "iPhone Water Damage Repair Cost Dubai 2026 - Pricing",
-    "description": "iPhone water damage repair Dubai: AED 400-1,200 by board-damage tier. 80% recovery rate. First-24-hour rules, salt vs fresh water, when it's not recoverable."
-  },
-  "/blog/iphone-15-vs-iphone-17-repair-cost-comparison": {
-    "title": "iPhone 15 vs iPhone 17 Repair Costs Compared 2026",
-    "description": "iPhone 15 vs 17 repair costs in Dubai: screen, battery, USB-C, camera and vapor chamber. The iPhone 17 Pro runs about 25% costlier to repair than the 15 Pro."
-  },
-  "/blog/iphone-repair-vs-replace-decision-guide": {
-    "title": "iPhone Repair or Replace? Decision Guide 2026 (Dubai)",
-    "description": "iPhone repair vs replace, Dubai 2026. Rule of thumb: repair if cost is under 50% of resale value. Model-by-model matrix from iPhone 6 to 17 Pro Max."
-  },
-  "/blog/macbook-screen-repair-cost-dubai-2026": {
-    "title": "MacBook Screen Repair Cost Dubai 2026: All Models",
-    "description": "Full MacBook screen repair prices for Dubai 2026: AED 600 (13″ Air) to AED 1,200 (16″ Pro M5 Max). Liquid Retina XDR, Flexgate, Apple Store compared."
-  },
-  "/blog/macbook-battery-replacement-cost-2026": {
-    "title": "MacBook Battery Replacement Cost Dubai 2026: Air & Pro",
-    "description": "MacBook battery replacement in Dubai, April 2026: AED 450 (Air) to AED 700 (16″ Pro), same-day. Check battery health, spot swelling, beat Apple Store."
-  },
-  "/blog/macbook-pro-m5-vs-apple-store-repair-cost": {
-    "title": "MacBook Pro M5 Repair: Us vs Apple Store Dubai 2026",
-    "description": "Same M5 MacBook Pro screen repair: Apple Store AED 2,400, our shop AED 1,000. Side-by-side comparison of 4 services with turnaround, parts, warranty."
-  },
-  "/blog/macbook-water-damage-repair-cost-success-rates": {
-    "title": "MacBook Water Damage Repair Cost & Success Rates Dubai",
-    "description": "MacBook water damage repair Dubai from AED 700. 80-90% recovery if seen within 24 hours. Ultrasonic cleaning, salt vs fresh water and LDI explained."
-  },
-  "/blog/macbook-keyboard-repair-cost-by-model": {
-    "title": "MacBook Keyboard Repair Cost by Model: Dubai 2026",
-    "description": "Butterfly top-case AED 700, Magic Keyboard single key AED 150. Full MacBook keyboard repair pricing by year and model, plus liquid spills and DIY risks."
-  },
-  "/blog/macbook-logic-board-repair-cost-dubai": {
-    "title": "MacBook Logic Board Repair Cost Dubai: Chip vs Swap",
-    "description": "Apple swaps the whole MacBook logic board for AED 4,000+; we fix the failing chip for AED 800-1,500. Component-level repair explained, and what we can't fix."
-  },
-  "/blog/macbook-not-turning-on-fix-guide": {
-    "title": "MacBook Not Turning On: 7 Fixes to Try First (2026)",
-    "description": "MacBook won't turn on? 7 step-by-step fixes: SMC reset, NVRAM, charger checks, Safe Boot, Recovery mode. Apple Silicon and Intel covered, then bring it in."
-  },
-  "/blog/macbook-black-screen-fix": {
-    "title": "MacBook Black Screen? Fixes Before You Pay (2026)",
-    "description": "MacBook black screen but the fan runs? Work through 8 fixes in order - power-cycle, SMC, NVRAM, external monitor test - then know which faults need a real repair."
-  },
-  "/blog/macbook-screen-flickering-fix": {
-    "title": "MacBook Screen Flickering? Causes & Fixes (2026)",
-    "description": "MacBook screen flickering or flashing lines? Work through six fixes in order - macOS update, Safe Mode, NVRAM, external monitor test - then know when it's the cable or panel."
-  },
-  "/blog/macbook-keyboard-not-working-fix": {
-    "title": "MacBook Keyboard Not Working? Fixes (2026)",
-    "description": "MacBook keys not typing or a dead row? Six fixes in order - restart, Slow Keys check, Safe Mode, external-keyboard test - then know when it's debris, a spill, or a swollen battery."
-  },
-  "/blog/macbook-wifi-not-working-fix": {
-    "title": "MacBook Won't Connect to Wi-Fi? Fixes (2026)",
-    "description": "MacBook Wi-Fi not connecting or dropping out? Six fixes in order - forget the network, restart the router, renew DHCP, Safe Mode - then know when it's the antenna or the board."
-  },
-  "/blog/macbook-kernel-panic-restarts-fix": {
-    "title": "MacBook Keeps Restarting? Kernel Panic Fixes (2026)",
-    "description": "MacBook kernel panic or random restarts? Six fixes in order - read the panic log, unplug peripherals, Safe Mode, Apple Diagnostics - then know when it's RAM, the SSD or heat."
-  },
-  "/blog/macbook-stuck-on-apple-logo": {
-    "title": "MacBook Stuck on Apple Logo? Fixes for 2026",
-    "description": "MacBook stuck on the Apple logo at startup? Work through 8 fixes in order, from waiting out an update to Recovery and First Aid, plus when it's a failing SSD."
-  },
-  "/blog/macbook-fan-loud-always-on": {
-    "title": "MacBook Fan Always Loud? Causes & Fixes (2026)",
-    "description": "MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Clean and repaste from AED 250."
-  },
-  "/blog/macbook-wont-charge-fixes": {
-    "title": "MacBook Won't Charge? 8 Fixes Before You Pay",
-    "description": "MacBook won't charge in Dubai? Work through 8 fixes in order: charger, port, cooling, SMC reset, battery health. Plus when it's the charge IC or a swollen cell."
-  },
-  "/blog/macbook-running-slow-10-fixes": {
-    "title": "MacBook Running Slow? 10 Fixes That Actually Work (2026)",
-    "description": "MacBook slow in 2026? 10 step-by-step fixes: storage, Activity Monitor, battery throttling, malware. Diagnose in 10 minutes before paying for service."
-  },
-  "/blog/water-damage-macbook-immediate-action": {
-    "title": "Spilled Water on MacBook? Do This Right Now (2026)",
-    "description": "MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
-  },
-  "/blog/macbook-flexgate-explained": {
-    "title": "MacBook Flexgate Explained: 2016-2017 Pro Display Flaw",
-    "description": "Black backlight strip on a 2016-2017 MacBook Pro? It's Flexgate, a flex-cable design flaw. AED 600 cable vs AED 800 display swap. Apple's program is closed."
-  },
-  "/blog/iphone-not-charging-7-fixes": {
-    "title": "iPhone Not Charging? 7 Fixes to Try Before Repair",
-    "description": "iPhone won't charge? 7 step-by-step fixes: lint cleaning (50% of cases), cable swap, force restart and MagSafe test. Free port cleaning at our Dubai workshop."
-  },
-  "/blog/imac-not-turning-on-power-supply-issues": {
-    "title": "iMac Not Turning On? Power Supply Fix Guide 2026",
-    "description": "iMac 27″ 2017-2020 power supply failures are common. Symptoms, the LED-count diagnostic trick, and repair from AED 400 plus the PSU part in Dubai."
-  },
-  "/blog/iphone-water-damage-action-plan": {
-    "title": "iPhone Water Damage - First 30 Minutes Action Plan",
-    "description": "Spilled liquid on iPhone? 6-step emergency plan: power off, remove SIM, pat dry, no rice, no charging. 80%+ recovery within 4 hours. Salt vs fresh water tips."
-  },
-  "/blog/macbook-battery-health-check-guide": {
-    "title": "MacBook Battery Health Check: Every Method (2026)",
-    "description": "Check MacBook battery health 3 ways: System Settings, Option-click, Terminal. Cycle-count limits per model, M1-M5 chemistry, when to replace at AED 450+."
-  },
-  "/blog/iphone-15-pro-overheating-fix": {
-    "title": "iPhone 15 Pro Overheating? Fixes and When to Worry",
-    "description": "iPhone 15 Pro running hot? 6 fixes: close apps, kill runaway processes, Always-On Display, 5G, iOS update. Why titanium holds heat and when to book service."
-  },
-  "/blog/macbook-touch-bar-not-working": {
-    "title": "MacBook Touch Bar Not Working? Fix Guide (2026)",
-    "description": "Touch Bar frozen, dim, or dead? 5 software fixes including the Terminal restart trick, plus AED 600 hardware repair in Dubai and why Apple dropped it."
-  },
-  "/blog/iphone-screen-replaced-but-issues-after": {
-    "title": "iPhone Screen Replaced But Glitchy? Causes & Fixes",
-    "description": "Cheap iPhone screen broke Face ID or True Tone? Why aftermarket panels fail. OEM vs OEM-equivalent vs aftermarket explained, and which faults we can fix."
-  },
-  "/blog/macbook-pro-m4-vs-m5-worth-upgrade": {
-    "title": "MacBook Pro M4 vs M5: Worth Upgrading in 2026?",
-    "description": "Spec-by-spec MacBook Pro M4 vs M5 comparison for Dubai buyers - benchmarks, battery, prices in AED, resale value, and a clear verdict by user type."
-  },
-  "/blog/iphone-17-vs-iphone-air-which-buy": {
-    "title": "iPhone 17 vs iPhone Air: Which to Buy in Dubai?",
-    "description": "iPhone 17 vs iPhone Air Dubai guide: same A19 chip, different bodies, cameras and battery. Side-by-side specs, prices, repair cost and a verdict by user."
-  },
-  "/blog/macbook-air-vs-macbook-pro-2026": {
-    "title": "MacBook Air vs MacBook Pro M5 - Which Suits You? 2026",
-    "description": "MacBook Air vs Pro M5 buyer's guide for Dubai 2026 - display, speakers, repair cost, used M1/M2 advice, and a clear verdict by user type."
-  },
-  "/blog/imac-vs-mac-mini-vs-mac-studio": {
-    "title": "iMac vs Mac Mini vs Mac Studio: Best Pick 2026",
-    "description": "iMac, Mac Mini or Mac Studio? Pick the right Apple desktop in Dubai for 2026 with pricing, repair cost, resale, and clear verdicts by user type and budget."
-  },
-  "/blog/best-macbook-for-students-dubai-2026": {
-    "title": "Best MacBook for Students in Dubai 2026: Budget to Pro",
-    "description": "Three honest MacBook picks for Dubai students: refurbished M1 (AED 2,500), Air M3 (AED 4,500), Pro 14 M4 (AED 7,500). Storage, RAM and AppleCare advice."
-  },
-  "/blog/best-refurbished-iphone-dubai": {
-    "title": "Best Refurbished iPhone in Dubai 2026: Honest Picks",
-    "description": "Best refurbished iPhone for Dubai 2026: iPhone 11 budget, 13/14 sweet spot, 15 Pro premium. Where to buy, what to check and the iCloud-lock warnings to know."
+  "/blog/applecare-vs-independent-repair-dubai": {
+    "title": "AppleCare vs Independent MacBook Repair Dubai",
+    "description": "Honest Dubai comparison: AppleCare+ vs an independent MacBook specialist. When Apple wins, when independent wins, and what each actually covers."
   },
   "/blog/best-imac-for-business-dubai": {
     "title": "Best iMac for Business Use in Dubai 2026",
@@ -228,141 +52,149 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Best Mac for Creative Pros in Dubai 2026: Designer Picks",
     "description": "Best Mac for designers, editors and 3D artists in Dubai 2026. Photoshop = Air, Premiere = Pro 14, DaVinci 4K = Mac Studio, with RAM sizing per craft."
   },
-  "/blog/should-i-buy-iphone-17e-or-iphone-16": {
-    "title": "iPhone 17e or iPhone 16? Honest Comparison 2026",
-    "description": "iPhone 17e (AED 2,499) or iPhone 16 (AED 2,899)? Side-by-side specs, Apple Intelligence, repair cost and resale value, with an honest verdict by user type."
+  "/blog/best-mac-for-developers-dubai-2026": {
+    "title": "Best Mac for Developers in Dubai 2026: Web, iOS, AI",
+    "description": "Web dev: Mac Mini M4 (AED 2,599). iOS: MacBook Pro 14 M4 (AED 7,499). ML/AI: Mac Studio M3 Ultra. RAM sizing, monitors and dock setups per discipline."
   },
-  "/blog/macbook-neo-worth-buying-2026": {
-    "title": "MacBook Neo (2026): Worth Buying or Skip It?",
-    "description": "Honest MacBook Neo review for Dubai 2026: A18 Pro vs M5 speed, who it suits, who should skip it, repair costs, plus how it compares to a refurb M1 Air."
+  "/blog/best-macbook-for-students-dubai-2026": {
+    "title": "Best MacBook for Students in Dubai 2026: Budget to Pro",
+    "description": "Three honest MacBook picks for Dubai students: refurbished M1 (AED 2,500), Air M3 (AED 4,500), Pro 14 M4 (AED 7,500). Storage, RAM and AppleCare advice."
   },
-  "/blog/apple-mac-pro-discontinued-what-now": {
-    "title": "Apple Discontinued the Mac Pro - What to Buy in 2026",
-    "description": "March 2026: Apple killed the Mac Pro. The real alternatives - Mac Studio M3 Ultra, used 2019 Mac Pro, eGPU options - plus our service plan for owners."
-  },
-  "/blog/iphone-fold-2026-what-to-expect": {
-    "title": "iPhone Fold 2026: What We Know About Apple's Fold",
-    "description": "Apple's first foldable iPhone is expected in September 2026 near AED 7,500. Confirmed leaks, expected specs, repair concerns, and whether to wait or buy now."
-  },
-  "/blog/m5-chip-explained-vs-m4": {
-    "title": "Apple M5 Chip Explained - How It Compares to M4 (2026)",
-    "description": "Apple M5 vs M4 - real benchmarks, GPU and Neural Engine gains, memory bandwidth, three M5 tiers, full Mac compatibility list, and whether you should upgrade."
-  },
-  "/blog/iphone-air-design-engineering-marvel": {
-    "title": "iPhone Air: Engineering Apple's Thinnest iPhone",
-    "description": "iPhone Air is 5.5mm thick, Apple's thinnest. Inside: titanium chassis, single-camera tradeoff, smaller battery, repair complexity and Dubai service pricing."
-  },
-  "/blog/apple-intelligence-on-old-iphones": {
-    "title": "Apple Intelligence: Which iPhones Support It in 2026",
-    "description": "Full Apple Intelligence iPhone list for iOS 26: every supported model, why iPhone 15 (non-Pro) is left out, plus battery impact and a real upgrade verdict."
-  },
-  "/blog/ipad-air-m4-vs-pro-m5-2026": {
-    "title": "iPad Air M4 vs iPad Pro M5 (2026) - Which to Buy in Dubai?",
-    "description": "iPad Air M4 (AED 2,199) vs iPad Pro M5 (AED 3,899): Tandem OLED, ProMotion, the M5 chip, repair costs, and a clear per-use-case verdict for Dubai buyers."
-  },
-  "/blog/icloud-locked-iphone-what-to-do": {
-    "title": "iCloud Locked iPhone in Dubai: Your Real Options 2026",
-    "description": "Honest guide to iCloud Activation Lock in Dubai: what can be unlocked legitimately, what cannot, and why we never offer iCloud unlock. Buy-back included."
-  },
-  "/blog/data-recovery-broken-macbook-2026": {
-    "title": "Data Recovery from a Broken MacBook in Dubai 2026",
-    "description": "Recover data from a dead, water-damaged or board-failed MacBook in Dubai. AED 400-2,000 by damage type, with Apple Silicon, FileVault and T2 limits explained."
-  },
-  "/blog/iphone-repair-vs-applecare-which-better": {
-    "title": "iPhone Repair vs AppleCare+ in UAE 2026 - Honest Cost Math",
-    "description": "Is AppleCare+ worth it on iPhone 17 Pro Max (AED 1,099)? Full per-iPhone cost comparison vs pay-as-you-go repair in Dubai, with the honest math."
-  },
-  "/blog/how-much-is-my-iphone-worth-dubai": {
-    "title": "How Much Is My iPhone Worth in Dubai 2026? Resale Guide",
-    "description": "Current Dubai resale prices for every iPhone model - mint, good, cracked. Compare Dubizzle, Apple Trade-In, and our cash buy-back. Updated April 2026."
+  "/blog/best-refurbished-iphone-dubai": {
+    "title": "Best Refurbished iPhone in Dubai 2026: Honest Picks",
+    "description": "Best refurbished iPhone for Dubai 2026: iPhone 11 budget, 13/14 sweet spot, 15 Pro premium. Where to buy, what to check and the iCloud-lock warnings to know."
   },
   "/blog/best-way-to-sell-old-iphone-dubai": {
     "title": "Best Way to Sell an Old iPhone in Dubai 2026",
     "description": "Three honest ways to sell your iPhone in Dubai: Dubizzle (highest, slow), us (instant cash), Apple Trade-In (lowest, easy). Real prices and scam warnings."
   },
-  "/blog/how-to-factory-reset-iphone-before-selling": {
-    "title": "How to Factory Reset iPhone Before Selling - 2026 Step Guide",
-    "description": "Five steps to wipe an iPhone before selling: sign out of iCloud, iMessage and FaceTime, unpair Watch, Erase All Content. Avoid Activation Lock issues."
-  },
-  "/blog/should-i-buy-refurbished-macbook-dubai": {
-    "title": "Should I Buy a Refurbished MacBook in Dubai 2026?",
-    "description": "Save 30-40% on a MacBook by buying refurbished, but only from the right sources. Apple Certified vs our refurbs vs Dubizzle: risks, warranty and checks."
-  },
-  "/blog/iphone-screen-cracked-is-it-urgent": {
-    "title": "iPhone Screen Cracked - Is It Urgent? Dubai 2026 Guide",
-    "description": "Hairline crack: probably wait. Spider web: fix this week. Black bleeding: urgent. Dubai humidity spreads cracks faster. When to repair vs delay, honestly."
-  },
-  "/blog/iphone-repair-near-me-dubai": {
-    "title": "iPhone Repair Near Me Dubai 2026 - Trust Checklist",
-    "description": "10 questions to ask before handing your iPhone to any Dubai repair shop, plus red flags to refuse. We tick every box, open since 2004 in Media City."
-  },
-  "/blog/mac-mini-m4-worth-it": {
-    "title": "Mac Mini M4 Worth It in 2026? Honest Dubai Buyer's Guide",
-    "description": "Mac Mini M4 starts AED 2,599 in UAE. Smaller chassis, 16GB base RAM, M4 chip. Compare M2, M4 Pro, MacBook Air, iMac. Total cost with display + accessories."
-  },
-  "/blog/mac-mini-vs-mac-studio-2026": {
-    "title": "Mac Mini vs Mac Studio 2026 - Which to Buy? Dubai Guide",
-    "description": "Mac Mini M4 Pro AED 4,499 vs Mac Studio M4 Max AED 8,499. Where the line is - overlap, performance, thermals, ports, resale. Workflow-by-workflow verdict."
-  },
-  "/blog/mac-studio-m3-ultra-vs-m4-max-which": {
-    "title": "Mac Studio M3 Ultra vs M4 Max 2026 - Which Wins for Pros?",
-    "description": "Apple sells both at once. M3 Ultra: 32 cores, 512 GB RAM max. M4 Max: faster single-thread, newer chip. Workflow-by-workflow honest verdict for Dubai pros."
-  },
-  "/blog/mac-pro-2019-still-worth-it": {
-    "title": "Mac Pro 2019 in 2026 - Still Worth Buying Used in Dubai?",
-    "description": "Apple killed Mac Pro. Used 2019 prices stayed surprisingly high. PCIe expansion, MPX modules, software support to 2027+. Honest used-buyer's guide for Dubai."
-  },
-  "/blog/mac-mini-running-slow-fix": {
-    "title": "Mac Mini Running Slow? 8 Fixes That Work - 2026 Guide",
-    "description": "Mac Mini slow? Most causes are software. Fix in order: Activity Monitor, free SSD space, reset NVRAM, clear cache, First Aid, update macOS, then the fan."
-  },
-  "/blog/best-mac-for-developers-dubai-2026": {
-    "title": "Best Mac for Developers in Dubai 2026: Web, iOS, AI",
-    "description": "Web dev: Mac Mini M4 (AED 2,599). iOS: MacBook Pro 14 M4 (AED 7,499). ML/AI: Mac Studio M3 Ultra. RAM sizing, monitors and dock setups per discipline."
-  },
-  "/blog/macbook-repair-warranty-explained": {
-    "title": "MacBook Repair Warranty Explained: Dubai 2026 (90-Day Cover)",
-    "description": "Exactly what our 90-day MacBook repair warranty covers, what isn't covered, how to claim, and how it compares to Apple's warranty and AppleCare+."
-  },
-  "/blog/genuine-parts-vs-quality-alternative-explained": {
-    "title": "Genuine Apple Parts vs Alternatives: Honest Guide 2026",
-    "description": "What 'genuine Apple part' really means, the OEM/equivalent/aftermarket tier system, when each tier is fine, and what we use at MacBook Repair Dubai."
-  },
-  "/blog/transparent-repair-pricing-explained": {
-    "title": "Transparent Repair Pricing - How We Quote (Dubai 2026)",
-    "description": "The exact formula behind our repair quotes: parts + labour + 10% margin. Free diagnosis, no-fix-no-charge, no surprises. Read the full breakdown."
-  },
-  "/blog/free-pickup-delivery-dubai-how-it-works": {
-    "title": "Free MacBook Pickup & Delivery Dubai - How It Works (2026)",
-    "description": "Free MacBook pickup across Dubai. WhatsApp, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
-  },
-  "/blog/no-fix-no-charge-policy-explained": {
-    "title": "No Fix No Charge Policy Explained - Our Promise (Dubai 2026)",
-    "description": "If we can't fix your Apple device, you owe nothing - not even diagnosis or pickup. Here's how the no-fix-no-charge promise works and where the edges are."
-  },
-  "/blog/why-21-years-experience-matters": {
-    "title": "Why 21 Years of Apple Repair Experience Matters in 2026",
-    "description": "40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
-  },
-  "/blog/protect-macbook-dubai-summer-heat": {
-    "title": "Protect Your MacBook in Dubai 50°C Summer Heat - 2026",
-    "description": "Apple's MacBook safe range is 10-35°C, and Dubai breaks that three months a year. Heat brings battery damage and throttling - how to protect your Mac."
-  },
-  "/blog/iphone-overheating-dubai-summer-fix": {
-    "title": "iPhone Overheating in Dubai Summer: Causes & Fixes",
-    "description": "Why iPhones overheat in Dubai's 45°C+ summer, what triggers the 'iPhone needs to cool down' message, prevention tips, and when it signals hardware failure."
-  },
-  "/blog/macbook-back-to-school-dubai": {
-    "title": "MacBook Back to School Dubai 2026 - Buying Guide by Grade",
-    "description": "The right MacBook for primary, secondary, university and engineering students in Dubai. Budgets AED 2,500-7,000. Education pricing, AppleCare+, trade-in."
+  "/blog/data-recovery-broken-macbook-2026": {
+    "title": "Data Recovery from a Broken MacBook in Dubai 2026",
+    "description": "Recover data from a dead, water-damaged or board-failed MacBook in Dubai. AED 400-2,000 by damage type, with Apple Silicon, FileVault and T2 limits explained."
   },
   "/blog/dubai-shopping-festival-apple-deals": {
     "title": "Dubai Shopping Festival Apple Deals 2026: When to Buy",
     "description": "DSF, White Friday, Apple Education: when does Apple actually discount in Dubai? Reseller deals, tax-free shopping, trade-in and the months you should not buy."
   },
-  "/blog/ramadan-hours-apple-repair-dubai": {
-    "title": "Ramadan Hours - Apple Repair Dubai 2026 (Feb 17 - Mar 19)",
-    "description": "Ramadan 2026 hours for our Dubai workshop: opening times, the iftar pause, pickup and delivery timing, plus how Apple Store Dubai Mall hours change."
+  "/blog/free-pickup-delivery-dubai-how-it-works": {
+    "title": "Free MacBook Pickup & Delivery Dubai - How It Works (2026)",
+    "description": "Free MacBook pickup across Dubai. WhatsApp, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
+  },
+  "/blog/genuine-parts-vs-quality-alternative-explained": {
+    "title": "Genuine Apple Parts vs Alternatives: Honest Guide 2026",
+    "description": "What 'genuine Apple part' really means, the OEM/equivalent/aftermarket tier system, when each tier is fine, and what we use at MacBook Repair Dubai."
+  },
+  "/blog/how-much-is-my-iphone-worth-dubai": {
+    "title": "How Much Is My iPhone Worth in Dubai 2026? Resale Guide",
+    "description": "Current Dubai resale prices for every iPhone model - mint, good, cracked. Compare Dubizzle, Apple Trade-In, and our cash buy-back. Updated April 2026."
+  },
+  "/blog/how-to-factory-reset-iphone-before-selling": {
+    "title": "How to Factory Reset iPhone Before Selling - 2026 Step Guide",
+    "description": "Five steps to wipe an iPhone before selling: sign out of iCloud, iMessage and FaceTime, unpair Watch, Erase All Content. Avoid Activation Lock issues."
+  },
+  "/blog/icloud-locked-iphone-what-to-do": {
+    "title": "iCloud Locked iPhone in Dubai: Your Real Options 2026",
+    "description": "Honest guide to iCloud Activation Lock in Dubai: what can be unlocked legitimately, what cannot, and why we never offer iCloud unlock. Buy-back included."
+  },
+  "/blog/imac-not-turning-on-power-supply-issues": {
+    "title": "iMac Not Turning On? Power Supply Fix Guide 2026",
+    "description": "iMac 27″ 2017-2020 power supply failures are common. Symptoms, the LED-count diagnostic trick, and repair from AED 400 plus the PSU part in Dubai."
+  },
+  "/blog/imac-vs-mac-mini-vs-mac-studio": {
+    "title": "iMac vs Mac Mini vs Mac Studio: Best Pick 2026",
+    "description": "iMac, Mac Mini or Mac Studio? Pick the right Apple desktop in Dubai for 2026 with pricing, repair cost, resale, and clear verdicts by user type and budget."
+  },
+  "/blog/ipad-air-m4-vs-pro-m5-2026": {
+    "title": "iPad Air M4 vs iPad Pro M5 (2026) - Which to Buy in Dubai?",
+    "description": "iPad Air M4 (AED 2,199) vs iPad Pro M5 (AED 3,899): Tandem OLED, ProMotion, the M5 chip, repair costs, and a clear per-use-case verdict for Dubai buyers."
+  },
+  "/blog/ipad-battery-replacement-cost-dubai": {
+    "title": "iPad Battery Replacement Cost Dubai 2026 - All Models",
+    "description": "iPad battery replacement Dubai 2026: AED 300 (older models) to AED 550 (iPad Pro M5). When to replace, 80% rule, same-day service, 3-month warranty."
+  },
+  "/blog/ipad-screen-repair-cost-dubai-2026": {
+    "title": "iPad Screen Repair Cost Dubai 2026 - Every Model",
+    "description": "iPad screen repair prices Dubai 2026: AED 450 (iPad 9) to AED 1,200 (iPad Pro M5). Mini-LED vs Liquid Retina, Apple Store comparison, same-day service."
+  },
+  "/blog/ipad-water-damage-repair-dubai-guide": {
+    "title": "iPad Water Damage Repair Dubai 2026 - Costs & What To Do",
+    "description": "iPad water damage repair Dubai: AED 450–1,400 depending on board damage. First 30 minutes matter most. 80% recovery rate. Free pickup, 12-month warranty."
+  },
+  "/blog/iphone-15-pro-overheating-fix": {
+    "title": "iPhone 15 Pro Overheating? Fixes and When to Worry",
+    "description": "iPhone 15 Pro running hot? 6 fixes: close apps, kill runaway processes, Always-On Display, 5G, iOS update. Why titanium holds heat and when to book service."
+  },
+  "/blog/iphone-15-vs-iphone-17-repair-cost-comparison": {
+    "title": "iPhone 15 vs iPhone 17 Repair Costs Compared 2026",
+    "description": "iPhone 15 vs 17 repair costs in Dubai: screen, battery, USB-C, camera and vapor chamber. The iPhone 17 Pro runs about 25% costlier to repair than the 15 Pro."
+  },
+  "/blog/iphone-17-vs-iphone-air-which-buy": {
+    "title": "iPhone 17 vs iPhone Air: Which to Buy in Dubai?",
+    "description": "iPhone 17 vs iPhone Air Dubai guide: same A19 chip, different bodies, cameras and battery. Side-by-side specs, prices, repair cost and a verdict by user."
+  },
+  "/blog/iphone-air-design-engineering-marvel": {
+    "title": "iPhone Air: Engineering Apple's Thinnest iPhone",
+    "description": "iPhone Air is 5.5mm thick, Apple's thinnest. Inside: titanium chassis, single-camera tradeoff, smaller battery, repair complexity and Dubai service pricing."
+  },
+  "/blog/iphone-air-what-not-to-do": {
+    "title": "iPhone Air Care: What NOT to Do With It",
+    "description": "iPhone Air is 5.6 mm thin, Apple's most fragile iPhone. 5 habits that wreck it: pocket bending, no case, hot cars, MagSafe wallets and side-button pressure."
+  },
+  "/blog/iphone-back-glass-repair-cost-dubai": {
+    "title": "iPhone Back Glass Repair Cost Dubai: Laser Method",
+    "description": "iPhone back glass repair in Dubai costs AED 400-950 by laser separation. Apple Store charges a full chassis swap from AED 1,800. MagSafe and charging kept."
+  },
+  "/blog/iphone-battery-replacement-cost-dubai-all-models": {
+    "title": "iPhone Battery Replacement Cost Dubai: All Models",
+    "description": "iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 3-month warranty explained."
+  },
+  "/blog/iphone-fold-2026-what-to-expect": {
+    "title": "iPhone Fold 2026: What We Know About Apple's Fold",
+    "description": "Apple's first foldable iPhone is expected in September 2026 near AED 7,500. Confirmed leaks, expected specs, repair concerns, and whether to wait or buy now."
+  },
+  "/blog/iphone-not-charging-7-fixes": {
+    "title": "iPhone Not Charging? 7 Fixes to Try Before Repair",
+    "description": "iPhone won't charge? 7 step-by-step fixes: lint cleaning (50% of cases), cable swap, force restart and MagSafe test. Free port cleaning at our Dubai workshop."
+  },
+  "/blog/iphone-overheating-dubai-summer-fix": {
+    "title": "iPhone Overheating in Dubai Summer: Causes & Fixes",
+    "description": "Why iPhones overheat in Dubai's 45°C+ summer, what triggers the 'iPhone needs to cool down' message, prevention tips, and when it signals hardware failure."
+  },
+  "/blog/iphone-repair-near-me-dubai": {
+    "title": "iPhone Repair Near Me Dubai 2026 - Trust Checklist",
+    "description": "10 questions to ask before handing your iPhone to any Dubai repair shop, plus red flags to refuse. We tick every box, open since 2004 in Media City."
+  },
+  "/blog/iphone-repair-vs-applecare-which-better": {
+    "title": "iPhone Repair vs AppleCare+ in UAE 2026 - Honest Cost Math",
+    "description": "Is AppleCare+ worth it on iPhone 17 Pro Max (AED 1,099)? Full per-iPhone cost comparison vs pay-as-you-go repair in Dubai, with the honest math."
+  },
+  "/blog/iphone-repair-vs-replace-decision-guide": {
+    "title": "iPhone Repair or Replace? Decision Guide 2026 (Dubai)",
+    "description": "iPhone repair vs replace, Dubai 2026. Rule of thumb: repair if cost is under 50% of resale value. Model-by-model matrix from iPhone 6 to 17 Pro Max."
+  },
+  "/blog/iphone-screen-cracked-is-it-urgent": {
+    "title": "iPhone Screen Cracked - Is It Urgent? Dubai 2026 Guide",
+    "description": "Hairline crack: probably wait. Spider web: fix this week. Black bleeding: urgent. Dubai humidity spreads cracks faster. When to repair vs delay, honestly."
+  },
+  "/blog/iphone-screen-repair-cost-dubai-2026": {
+    "title": "iPhone Screen Repair Cost Dubai 2026 - Every Model",
+    "description": "Full iPhone screen repair price list for Dubai 2026. From AED 350 (iPhone 6) to AED 1,400 (17 Pro Max). OLED vs LCD, Apple Store comparison, what's included."
+  },
+  "/blog/iphone-screen-repair-voucher-dubai": {
+    "title": "iPhone Screen Repair Voucher Dubai - Save 15% (How It Works)",
+    "description": "Buy a screen repair voucher upfront, use within 12 months - save 15% off our standard price. How vouchers work, terms, who they're for, and how to buy."
+  },
+  "/blog/iphone-screen-replaced-but-issues-after": {
+    "title": "iPhone Screen Replaced But Glitchy? Causes & Fixes",
+    "description": "Cheap iPhone screen broke Face ID or True Tone? Why aftermarket panels fail. OEM vs OEM-equivalent vs aftermarket explained, and which faults we can fix."
+  },
+  "/blog/iphone-water-damage-action-plan": {
+    "title": "iPhone Water Damage - First 30 Minutes Action Plan",
+    "description": "Spilled liquid on iPhone? 6-step emergency plan: power off, remove SIM, pat dry, no rice, no charging. 80%+ recovery within 4 hours. Salt vs fresh water tips."
+  },
+  "/blog/iphone-water-damage-repair-cost-dubai": {
+    "title": "iPhone Water Damage Repair Cost Dubai 2026 - Pricing",
+    "description": "iPhone water damage repair Dubai: AED 400-1,200 by board-damage tier. 80% recovery rate. First-24-hour rules, salt vs fresh water, when it's not recoverable."
   },
   "/blog/laptop-repair-vs-buy-new-2026": {
     "title": "MacBook Repair or Buy New 2026? Decision Math (Dubai Guide)",
@@ -372,217 +204,253 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Lightning vs USB-C on iPhone - 2026 Status (Dubai Guide)",
     "description": "iPhone 15 was the switch. iPhone 16e and 17e fully USB-C. Where we are with cables, accessories, MagSafe, and what Lightning users should know in 2026."
   },
-  "/blog/iphone-screen-repair-voucher-dubai": {
-    "title": "iPhone Screen Repair Voucher Dubai - Save 15% (How It Works)",
-    "description": "Buy a screen repair voucher upfront, use within 12 months - save 15% off our standard price. How vouchers work, terms, who they're for, and how to buy."
+  "/blog/m5-chip-explained-vs-m4": {
+    "title": "Apple M5 Chip Explained - How It Compares to M4 (2026)",
+    "description": "Apple M5 vs M4 - real benchmarks, GPU and Neural Engine gains, memory bandwidth, three M5 tiers, full Mac compatibility list, and whether you should upgrade."
   },
-  "/blog/troubleshoot-charging-on-new-iphone": {
-    "title": "iPhone Not Charging? iPhone 17, 17 Pro, 17e, 16e (2026)",
-    "description": "iPhone 17, 17 Pro, 17e or 16e charging slowly, only sometimes, or not at all? Work through this 8-step USB-C diagnostic before paying for any port repair."
+  "/blog/mac-mini-m4-worth-it": {
+    "title": "Mac Mini M4 Worth It in 2026? Honest Dubai Buyer's Guide",
+    "description": "Mac Mini M4 starts AED 2,599 in UAE. Smaller chassis, 16GB base RAM, M4 chip. Compare M2, M4 Pro, MacBook Air, iMac. Total cost with display + accessories."
   },
-  "/blog/macbook-repair-near-me-dubai": {
-    "title": "MacBook Repair Near Me Dubai: Location & 5-Mile Service Map",
-    "description": "Workshop in Concord Tower, Dubai Media City. 5-mile coverage: Marina, JLT, Al Sufouh, Tecom, Barsha. Free pickup/delivery across Dubai. Same-day service."
+  "/blog/mac-mini-running-slow-fix": {
+    "title": "Mac Mini Running Slow? 8 Fixes That Work - 2026 Guide",
+    "description": "Mac Mini slow? Most causes are software. Fix in order: Activity Monitor, free SSD space, reset NVRAM, clear cache, First Aid, update macOS, then the fan."
   },
-  "/blog/iphone-air-what-not-to-do": {
-    "title": "iPhone Air Care: What NOT to Do With It",
-    "description": "iPhone Air is 5.6 mm thin, Apple's most fragile iPhone. 5 habits that wreck it: pocket bending, no case, hot cars, MagSafe wallets and side-button pressure."
+  "/blog/mac-mini-vs-mac-studio-2026": {
+    "title": "Mac Mini vs Mac Studio 2026 - Which to Buy? Dubai Guide",
+    "description": "Mac Mini M4 Pro AED 4,499 vs Mac Studio M4 Max AED 8,499. Where the line is - overlap, performance, thermals, ports, resale. Workflow-by-workflow verdict."
   },
-  "/blog/apple-silicon-vs-intel-repair-difference": {
-    "title": "Apple Silicon vs Intel Mac Repair - What's Different in 2026",
-    "description": "M1, M2, M3, M4, M5 vs Intel Macs. SoC integration, soldered RAM, paired components, board-level repair complexity, and what it means for cost in Dubai 2026."
+  "/blog/mac-pro-2019-still-worth-it": {
+    "title": "Mac Pro 2019 in 2026 - Still Worth Buying Used in Dubai?",
+    "description": "Apple killed Mac Pro. Used 2019 prices stayed surprisingly high. PCIe expansion, MPX modules, software support to 2027+. Honest used-buyer's guide for Dubai."
   },
-  "/macbook-repair-near-me": {
-    "title": "MacBook Repair Near Me Dubai - Free Pickup Across the City",
-    "description": "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706."
+  "/blog/mac-studio-m3-ultra-vs-m4-max-which": {
+    "title": "Mac Studio M3 Ultra vs M4 Max 2026 - Which Wins for Pros?",
+    "description": "Apple sells both at once. M3 Ultra: 32 cores, 512 GB RAM max. M4 Max: faster single-thread, newer chip. Workflow-by-workflow honest verdict for Dubai pros."
   },
-  "/apple-repair-programs-dubai": {
-    "title": "Apple Free Repair Programs Dubai - Check If You Qualify",
-    "description": "Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPhone 11 display issues. We help check your eligibility."
+  "/blog/macbook-air-vs-macbook-pro-2026": {
+    "title": "MacBook Air vs MacBook Pro M5 - Which Suits You? 2026",
+    "description": "MacBook Air vs Pro M5 buyer's guide for Dubai 2026 - display, speakers, repair cost, used M1/M2 advice, and a clear verdict by user type."
   },
-  "/where-to-repair-macbook-dubai": {
-    "title": "Where to Repair a MacBook in Dubai: Apple vs Independent",
-    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest, priced guide to MacBook repair in Dubai. When each route wins, with real AED prices and a 90-day warranty."
+  "/blog/macbook-back-to-school-dubai": {
+    "title": "MacBook Back to School Dubai 2026 - Buying Guide by Grade",
+    "description": "The right MacBook for primary, secondary, university and engineering students in Dubai. Budgets AED 2,500-7,000. Education pricing, AppleCare+, trade-in."
   },
-  "/macbook-repair-cost-calculator-dubai": {
-    "title": "MacBook Repair Cost Calculator Dubai - Instant Estimate",
-    "description": "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair to see a real starting price in AED, then confirm on WhatsApp. 90-day warranty."
+  "/blog/macbook-battery-health-check-guide": {
+    "title": "MacBook Battery Health Check: Every Method (2026)",
+    "description": "Check MacBook battery health 3 ways: System Settings, Option-click, Terminal. Cycle-count limits per model, M1-M5 chemistry, when to replace at AED 450+."
   },
-  "/macbook-screen-repair-dubai": {
-    "title": "MacBook Screen Repair Dubai - From AED 780",
-    "description": "MacBook screen repair Dubai from AED 780. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 90-day warranty. Concord Tower. 055 741 3706."
+  "/blog/macbook-battery-replacement-cost-2026": {
+    "title": "MacBook Battery Replacement Cost Dubai 2026: Air & Pro",
+    "description": "MacBook battery replacement in Dubai, April 2026: AED 450 (Air) to AED 700 (16″ Pro), same-day. Check battery health, spot swelling, beat Apple Store."
   },
-  "/macbook-battery-replacement-dubai": {
-    "title": "MacBook Battery Replacement Dubai - From AED 450",
-    "description": "MacBook battery replacement Dubai from AED 450. Same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 6-month warranty + 80% capacity guarantee. 055 741 3706."
+  "/blog/macbook-black-screen-fix": {
+    "title": "MacBook Black Screen? Fixes Before You Pay (2026)",
+    "description": "MacBook black screen but the fan runs? Work through 8 fixes in order - power-cycle, SMC, NVRAM, external monitor test - then know which faults need a real repair."
   },
-  "/macbook-keyboard-repair-dubai": {
-    "title": "MacBook Keyboard Repair Dubai - From AED 150",
-    "description": "MacBook keyboard repair Dubai from AED 150. Magic Keyboard, butterfly top case, key caps, layout swaps. Same-day. 90-day warranty. 055 741 3706."
+  "/blog/macbook-fan-loud-always-on": {
+    "title": "MacBook Fan Always Loud? Causes & Fixes (2026)",
+    "description": "MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Clean and repaste from AED 250."
   },
-  "/macbook-water-damage-repair-dubai": {
-    "title": "MacBook Water Damage Repair Dubai - From AED 700",
-    "description": "MacBook water damage repair Dubai from AED 700. 90% recovery rate under 24 hours. Salt water, coffee, juice. Same-hour emergency pickup. 055 741 3706."
+  "/blog/macbook-flexgate-explained": {
+    "title": "MacBook Flexgate Explained: 2016-2017 Pro Display Flaw",
+    "description": "Black backlight strip on a 2016-2017 MacBook Pro? It's Flexgate, a flex-cable design flaw. AED 600 cable vs AED 800 display swap. Apple's program is closed."
   },
-  "/macbook-charging-port-repair-dubai": {
-    "title": "MacBook Charging Port Repair Dubai - From AED 350",
-    "description": "MacBook USB-C and MagSafe 3 port repair Dubai from AED 350. Same-day port swap, charging IC board-level repair. M1-M5. 90-day warranty. 055 741 3706."
+  "/blog/macbook-kernel-panic-restarts-fix": {
+    "title": "MacBook Keeps Restarting? Kernel Panic Fixes (2026)",
+    "description": "MacBook kernel panic or random restarts? Six fixes in order - read the panic log, unplug peripherals, Safe Mode, Apple Diagnostics - then know when it's RAM, the SSD or heat."
   },
-  "/macbook-data-recovery-dubai": {
-    "title": "MacBook Data Recovery Dubai - From AED 400",
-    "description": "MacBook data recovery Dubai from AED 400. Dead board, water damage, T2 & Apple Silicon, deleted files. Free diagnosis. 60-90% recovery rates. 055 741 3706."
+  "/blog/macbook-keyboard-not-working-fix": {
+    "title": "MacBook Keyboard Not Working? Fixes (2026)",
+    "description": "MacBook keys not typing or a dead row? Six fixes in order - restart, Slow Keys check, Safe Mode, external-keyboard test - then know when it's debris, a spill, or a swollen battery."
   },
-  "/macbook-virus-removal-dubai": {
-    "title": "MacBook Virus & Malware Removal Dubai - From AED 250",
-    "description": "MacBook virus, adware, cryptominer, hijacker removal in Dubai from AED 250. Same-day. Free diagnosis, 30-day re-clean guarantee. M1-M5 + Intel. 055 741 3706."
+  "/blog/macbook-keyboard-repair-cost-by-model": {
+    "title": "MacBook Keyboard Repair Cost by Model: Dubai 2026",
+    "description": "Butterfly top-case AED 700, Magic Keyboard single key AED 150. Full MacBook keyboard repair pricing by year and model, plus liquid spills and DIY risks."
   },
-  "/macbook-overheating-fix-dubai": {
-    "title": "MacBook Overheating Fix Dubai - AED 300 | Same-Day | Call 055 741 3706",
-    "description": "MacBook overheating fix Dubai - thermal paste replacement, fan clean, throttling cure. Dubai-dust specialists. AED 300, same day. Call 055 741 3706."
-  },
-  "/macbook-trackpad-repair-dubai": {
-    "title": "MacBook Trackpad Repair Dubai - AED 350 | 1 Day | Force Touch Specialists",
-    "description": "MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. AED 350. Call 055 741 3706."
-  },
-  "/macbook-speaker-repair-dubai": {
-    "title": "MacBook Speaker Repair Dubai - AED 400 | 1 Day | All Models",
-    "description": "MacBook speaker repair Dubai. Blown drivers, distortion, water-damaged speakers, no sound from one side. AED 400, 1 day. Call 055 741 3706."
-  },
-  "/macbook-touch-bar-repair-dubai": {
-    "title": "MacBook Touch Bar Repair Dubai - AED 600 | Dead Strip Fixed",
-    "description": "MacBook Pro Touch Bar repair Dubai. Dead strip, flickering, half-lit, ghost touches, Touch ID at the end not working. AED 600, 1-2 days. WhatsApp 055 741 3706."
-  },
-  "/macbook-microphone-repair-dubai": {
-    "title": "MacBook Microphone Repair Dubai - AED 350 | Mic Not Working",
-    "description": "MacBook microphone repair Dubai. Others can't hear you on calls, muffled mic, no sound input, water-damaged mic array. AED 350, 1-2 days. WhatsApp 055 741 3706."
-  },
-  "/macbook-flexgate-repair-dubai": {
-    "title": "MacBook Flexgate Repair Dubai - AED 450 | Backlight & Stage Light Fix",
-    "description": "MacBook flexgate repair Dubai. Stage-light effect, backlight dies past 40 degrees, uneven brightness on 2016-2017 Pro. Display flex cable fixed from AED 450, 1-2 days."
-  },
-  "/macbook-touch-id-repair-dubai": {
-    "title": "MacBook Touch ID Repair Dubai - AED 350 | Fingerprint & Power Button",
-    "description": "MacBook Touch ID repair Dubai. Fingerprint won't enrol, sensor not responding, power button dead. Honest diagnosis on T2 / Apple Silicon pairing. From AED 350, 1-2 days."
-  },
-  "/mac-activation-lock-unlock-dubai": {
-    "title": "Mac Activation Lock & Firmware Unlock Dubai - Honest Owner Help",
-    "description": "Mac & MacBook Activation Lock, iCloud lock and EFI firmware password help in Dubai. Legitimate owners only - we assist through Apple's channels, never a bypass. From AED 250."
-  },
-  "/macbook-logic-board-repair-dubai": {
-    "title": "MacBook Logic Board Repair Dubai - Component-Level | From AED 800",
-    "description": "MacBook logic board repair Dubai. Component-level rework - IC swap, PMIC, CPU reflow, charging circuit. Not board-swap. From AED 800. Call 055 741 3706."
-  },
-  "/macbook-gpu-repair-dubai": {
-    "title": "MacBook GPU Repair Dubai - AED 800 | Reballed AMD Radeon | 3-5 Days",
-    "description": "MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2016-2019 MacBook Pro. Reballed chip replacement, not reflow. AED 800. Call 055 741 3706."
-  },
-  "/macbook-ram-upgrade-dubai": {
-    "title": "MacBook RAM Upgrade Dubai - Honest Limits | Intel Only AED 400",
-    "description": "MacBook RAM upgrade Dubai. Honest answer: M1/M2/M3/M4/M5 RAM is soldered, not upgradeable. Intel MacBook Pro 2012-2015 upgradeable to 16GB. AED 400."
-  },
-  "/macbook-ssd-upgrade-dubai": {
-    "title": "MacBook SSD Upgrade Dubai - From AED 600 + Drive | Same Day",
-    "description": "MacBook SSD upgrade Dubai. Intel MacBook Pro 2013-2015 NVMe swap up to 2TB. M-series SSDs soldered (no upgrade). Cloning included. AED 600 + drive."
-  },
-  "/macos-reinstall-dubai": {
-    "title": "macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day",
-    "description": "macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. AED 300, 2-4 hours."
-  },
-  "/boot-camp-windows-macbook-dubai": {
-    "title": "Boot Camp Windows on MacBook Dubai - Intel Macs AED 400 · Parallels M-Series AED 600",
-    "description": "Boot Camp Windows install Dubai. Intel Macs only - Apple Silicon needs Parallels or VMware Fusion. AED 400 Intel · AED 600 Parallels M-series. Same day."
-  },
-  "/macbook-full-diagnostic-dubai": {
-    "title": "MacBook Full Diagnostic Dubai - FREE 30-Point Check | Report You Keep",
-    "description": "Free MacBook diagnostic Dubai. 30-point comprehensive check: battery, screen, keyboard, ports, GPU, SSD, RAM, thermals, Wi-Fi. Report you keep. No obligation."
-  },
-  "/macbook-hinge-repair-dubai": {
-    "title": "MacBook Hinge Repair Dubai - AED 300 | Clutch & Lid Fix",
-    "description": "MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, 90-day warranty. Call 055 741 3706."
-  },
-  "/macbook-power-button-repair-dubai": {
-    "title": "MacBook Power Button & Touch ID Repair Dubai - AED 250",
-    "description": "MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, 90-day warranty. Call 055 741 3706."
-  },
-  "/macbook-camera-repair-dubai": {
-    "title": "MacBook Camera Repair Dubai - FaceTime / Webcam Fix AED 200",
-    "description": "MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. From AED 200, 1-2 days, 90-day warranty. Call 055 741 3706."
-  },
-  "/macbook-wifi-bluetooth-repair-dubai": {
-    "title": "MacBook Wi-Fi & Bluetooth Repair Dubai - AED 250 | Fast Fix",
-    "description": "MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. From AED 250, 1-2 days, 90-day warranty. Call 055 741 3706."
-  },
-  "/macbook-cleaning-maintenance-dubai": {
-    "title": "MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai",
-    "description": "MacBook cleaning and maintenance in Dubai from AED 280. Dust and corrosion removal, fan and vent clean, free pickup, 90-day warranty. Call 055 741 3706."
-  },
-  "/macbook-thermal-paste-replacement-dubai": {
-    "title": "MacBook Thermal Paste Replacement Dubai",
-    "description": "MacBook overheating, fans roaring, throttling and shutdowns? We strip old paste, reapply premium compound and clean fans in Dubai. Free diagnosis, 90-day warranty."
-  },
-  "/macbook-backup-service-dubai": {
-    "title": "MacBook Backup Service Dubai | MacBook Repair Dubai",
-    "description": "MacBook backup service in Dubai. Time Machine setup, data migration to a new Mac or external drive, full backup before any repair. From AED 150. Free diagnosis."
-  },
-  "/macbook-safe-mode-repair-dubai": {
-    "title": "MacBook Safe Mode Repair Dubai | MacBook Repair Dubai",
-    "description": "MacBook won't start in safe mode? We run safe mode boot diagnostics in Dubai to isolate software from hardware faults. From AED 150, same day. Free diagnosis."
-  },
-  "/macbook-insurance-dubai": {
-    "title": "MacBook Insurance Dubai | MacBook Repair Dubai",
-    "description": "Accidental damage, liquid, theft or loss and extended warranty cover for MacBooks in Dubai. Custom corporate plans, free assessment, quote on WhatsApp."
-  },
-  "/onsite-macbook-repair-dubai": {
-    "title": "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
-    "description": "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, 90-day warranty. Call 055 741 3706."
-  },
-  "/applecare-macbook-repair-dubai": {
-    "title": "AppleCare & In-Warranty MacBook Repair Dubai",
-    "description": "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, 90-day warranty. Call 055 741 3706."
+  "/blog/macbook-logic-board-repair-cost-dubai": {
+    "title": "MacBook Logic Board Repair Cost Dubai: Chip vs Swap",
+    "description": "Apple swaps the whole MacBook logic board for AED 4,000+; we fix the failing chip for AED 800-1,500. Component-level repair explained, and what we can't fix."
   },
   "/blog/macbook-maintenance-checklist-dubai": {
     "title": "MacBook Maintenance Checklist Dubai - Keep Your Mac Fast",
     "description": "A practical MacBook maintenance checklist for Dubai: monthly, quarterly and yearly tasks for storage, battery, dust, backups and software updates."
   },
-  "/blog/applecare-vs-independent-repair-dubai": {
-    "title": "AppleCare vs Independent MacBook Repair Dubai",
-    "description": "Honest Dubai comparison: AppleCare+ vs an independent MacBook specialist. When Apple wins, when independent wins, and what each actually covers."
+  "/blog/macbook-neo-worth-buying-2026": {
+    "title": "MacBook Neo (2026): Worth Buying or Skip It?",
+    "description": "Honest MacBook Neo review for Dubai 2026: A18 Pro vs M5 speed, who it suits, who should skip it, repair costs, plus how it compares to a refurb M1 Air."
   },
-  "/annual-maintenance-contract-dubai": {
-    "title": "Apple AMC Dubai - Annual Maintenance Contract for Mac & iPhone",
-    "description": "Annual Maintenance Contract (AMC) for Apple devices in Dubai. Scheduled servicing, battery checks, priority repairs, discounted parts & on-site support for businesses. Call 055 741 3706."
+  "/blog/macbook-not-turning-on-fix-guide": {
+    "title": "MacBook Not Turning On: 7 Fixes to Try First (2026)",
+    "description": "MacBook won't turn on? 7 step-by-step fixes: SMC reset, NVRAM, charger checks, Safe Boot, Recovery mode. Apple Silicon and Intel covered, then bring it in."
   },
-  "/sell-macbook-dubai": {
-    "title": "Sell Your MacBook / Apple Device Dubai - Instant Valuation, Same-Day Cash",
-    "description": "Sell your Mac, iPhone or iPad in Dubai - even if damaged. Free instant valuation, free pickup across Dubai and paid same day. We buy working & faulty devices."
+  "/blog/macbook-pro-m4-vs-m5-worth-upgrade": {
+    "title": "MacBook Pro M4 vs M5: Worth Upgrading in 2026?",
+    "description": "Spec-by-spec MacBook Pro M4 vs M5 comparison for Dubai buyers - benchmarks, battery, prices in AED, resale value, and a clear verdict by user type."
   },
-  "/out-of-warranty-apple-repair-dubai": {
-    "title": "Out-of-Warranty Apple Repair Dubai - Half the Apple Store Price",
-    "description": "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, 90-day warranty. Call 055 741 3706."
+  "/blog/macbook-pro-m5-vs-apple-store-repair-cost": {
+    "title": "MacBook Pro M5 Repair: Us vs Apple Store Dubai 2026",
+    "description": "Same M5 MacBook Pro screen repair: Apple Store AED 2,400, our shop AED 1,000. Side-by-side comparison of 4 services with turnaround, parts, warranty."
   },
-  "/mac-setup-data-migration-dubai": {
-    "title": "Mac Setup, Configuration & Data Migration Dubai - Same Day",
-    "description": "Apple device setup & data migration in Dubai. New Mac setup, email/Wi-Fi/VPN, Office & Outlook, iCloud, and full migration from old Mac or PC. On-site or free pickup. Call 055 741 3706."
+  "/blog/macbook-repair-near-me-dubai": {
+    "title": "MacBook Repair Near Me Dubai: Location & 5-Mile Service Map",
+    "description": "Workshop in Concord Tower, Dubai Media City. 5-mile coverage: Marina, JLT, Al Sufouh, Tecom, Barsha. Free pickup/delivery across Dubai. Same-day service."
   },
-  "/trade-in-macbook-dubai": {
-    "title": "MacBook Trade-In Dubai - Upgrade for Less, Instant Credit",
-    "description": "Trade in your old Mac, iPhone or iPad in Dubai - working or faulty. Free valuation, free collection, same-day cash or instant credit toward a newer model. WhatsApp 055 741 3706."
+  "/blog/macbook-repair-warranty-explained": {
+    "title": "MacBook Repair Warranty Explained: Dubai 2026 (12-Month Flat Cover)",
+    "description": "Exactly what our 12-month MacBook repair warranty covers, what isn't covered, how to claim, and how it compares to Apple's warranty and AppleCare+."
   },
-  "/ipad-screen-repair-dubai": {
-    "title": "iPad Screen Repair Dubai - From AED 350 | Pencil-Compatible | Same-Day",
-    "description": "iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. From AED 350. Call 055 741 3706."
+  "/blog/macbook-running-slow-10-fixes": {
+    "title": "MacBook Running Slow? 10 Fixes That Actually Work (2026)",
+    "description": "MacBook slow in 2026? 10 step-by-step fixes: storage, Activity Monitor, battery throttling, malware. Diagnose in 10 minutes before paying for service."
   },
-  "/ipad-battery-replacement-dubai": {
-    "title": "iPad Battery Replacement Dubai - From AED 350 | Same-Day | 30-Day Warranty",
-    "description": "iPad battery replacement Dubai. Glued cells removed safely on every iPad model. From AED 350. Free pickup across Dubai. Call 055 741 3706."
+  "/blog/macbook-screen-flickering-fix": {
+    "title": "MacBook Screen Flickering? Causes & Fixes (2026)",
+    "description": "MacBook screen flickering or flashing lines? Work through six fixes in order - macOS update, Safe Mode, NVRAM, external monitor test - then know when it's the cable or panel."
   },
-  "/ipad-charging-port-repair-dubai": {
-    "title": "iPad Charging Port Repair Dubai - USB-C & Lightning | From AED 300",
-    "description": "iPad charging port repair Dubai. USB-C and Lightning ports replaced. Smart Connector and wireless charging cases also covered. From AED 300. Call 055 741 3706."
+  "/blog/macbook-screen-repair-cost-dubai-2026": {
+    "title": "MacBook Screen Repair Cost Dubai 2026: All Models",
+    "description": "Full MacBook screen repair prices for Dubai 2026: AED 600 (13″ Air) to AED 1,200 (16″ Pro M5 Max). Liquid Retina XDR, Flexgate, Apple Store compared."
   },
-  "/ipad-water-damage-repair-dubai": {
-    "title": "iPad Water Damage Repair Dubai - Same-Day Diagnosis | From AED 450",
-    "description": "iPad water damage repair Dubai. Ultrasonic cleaning, board rework, battery and screen replacement when needed. Honest success-rate estimate. Call 055 741 3706."
+  "/blog/macbook-stuck-on-apple-logo": {
+    "title": "MacBook Stuck on Apple Logo? Fixes for 2026",
+    "description": "MacBook stuck on the Apple logo at startup? Work through 8 fixes in order, from waiting out an update to Recovery and First Aid, plus when it's a failing SSD."
+  },
+  "/blog/macbook-touch-bar-not-working": {
+    "title": "MacBook Touch Bar Not Working? Fix Guide (2026)",
+    "description": "Touch Bar frozen, dim, or dead? 5 software fixes including the Terminal restart trick, plus AED 600 hardware repair in Dubai and why Apple dropped it."
+  },
+  "/blog/macbook-water-damage-repair-cost-success-rates": {
+    "title": "MacBook Water Damage Repair Cost & Success Rates Dubai",
+    "description": "MacBook water damage repair Dubai from AED 700. 80-90% recovery if seen within 24 hours. Ultrasonic cleaning, salt vs fresh water and LDI explained."
+  },
+  "/blog/macbook-wifi-not-working-fix": {
+    "title": "MacBook Won't Connect to Wi-Fi? Fixes (2026)",
+    "description": "MacBook Wi-Fi not connecting or dropping out? Six fixes in order - forget the network, restart the router, renew DHCP, Safe Mode - then know when it's the antenna or the board."
+  },
+  "/blog/macbook-wont-charge-fixes": {
+    "title": "MacBook Won't Charge? 8 Fixes Before You Pay",
+    "description": "MacBook won't charge in Dubai? Work through 8 fixes in order: charger, port, cooling, SMC reset, battery health. Plus when it's the charge IC or a swollen cell."
+  },
+  "/blog/no-fix-no-charge-policy-explained": {
+    "title": "No Fix No Charge Policy Explained - Our Promise (Dubai 2026)",
+    "description": "If we can't fix your Apple device, you owe nothing - not even diagnosis or pickup. Here's how the no-fix-no-charge promise works and where the edges are."
+  },
+  "/blog": {
+    "title": "Apple Repair Blog Dubai - Honest Cost Guides",
+    "description": "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, 12-month warranty."
+  },
+  "/blog/protect-macbook-dubai-summer-heat": {
+    "title": "Protect Your MacBook in Dubai 50°C Summer Heat - 2026",
+    "description": "Apple's MacBook safe range is 10-35°C, and Dubai breaks that three months a year. Heat brings battery damage and throttling - how to protect your Mac."
+  },
+  "/blog/ramadan-hours-apple-repair-dubai": {
+    "title": "Ramadan Hours - Apple Repair Dubai 2026 (Feb 17 - Mar 19)",
+    "description": "Ramadan 2026 hours for our Dubai workshop: opening times, the iftar pause, pickup and delivery timing, plus how Apple Store Dubai Mall hours change."
+  },
+  "/blog/should-i-buy-iphone-17e-or-iphone-16": {
+    "title": "iPhone 17e or iPhone 16? Honest Comparison 2026",
+    "description": "iPhone 17e (AED 2,499) or iPhone 16 (AED 2,899)? Side-by-side specs, Apple Intelligence, repair cost and resale value, with an honest verdict by user type."
+  },
+  "/blog/should-i-buy-refurbished-macbook-dubai": {
+    "title": "Should I Buy a Refurbished MacBook in Dubai 2026?",
+    "description": "Save 30-40% on a MacBook by buying refurbished, but only from the right sources. Apple Certified vs our refurbs vs Dubizzle: risks, warranty and checks."
+  },
+  "/blog/transparent-repair-pricing-explained": {
+    "title": "Transparent Repair Pricing - How We Quote (Dubai 2026)",
+    "description": "The exact formula behind our repair quotes: parts + labour + 10% margin. Free diagnosis, no-fix-no-charge, no surprises. Read the full breakdown."
+  },
+  "/blog/troubleshoot-charging-on-new-iphone": {
+    "title": "iPhone Not Charging? iPhone 17, 17 Pro, 17e, 16e (2026)",
+    "description": "iPhone 17, 17 Pro, 17e or 16e charging slowly, only sometimes, or not at all? Work through this 8-step USB-C diagnostic before paying for any port repair."
+  },
+  "/blog/water-damage-macbook-immediate-action": {
+    "title": "Spilled Water on MacBook? Do This Right Now (2026)",
+    "description": "MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
+  },
+  "/blog/why-21-years-experience-matters": {
+    "title": "Why 21 Years of Apple Repair Experience Matters in 2026",
+    "description": "40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
+  },
+  "/boot-camp-windows-macbook-dubai": {
+    "title": "Boot Camp Windows on MacBook Dubai - Intel Macs AED 400 · Parallels M-Series AED 600",
+    "description": "Boot Camp Windows install Dubai. Intel Macs only - Apple Silicon needs Parallels or VMware Fusion. AED 400 Intel · AED 600 Parallels M-series. Same day."
+  },
+  "/contact": {
+    "title": "Contact MacBook Repair Dubai - Concord Tower, Media City",
+    "description": "Visit MacBook Repair Dubai at Office #45, Concord Tower, Dubai Media City. Call 055 741 3706 or WhatsApp 24/7. Free diagnosis, walk-ins welcome, paid parking on-site."
+  },
+  "/cookies": {
+    "title": "Cookie Policy - MacBook Repair Dubai",
+    "description": "The 4 cookies set by macbook-repair-dubai.ae, what each one does, and how to disable them. No advertising trackers. Updated April 2026."
+  },
+  "/do-macbooks-last-over-a-decade": {
+    "title": "Do MacBooks Last Over a Decade? Honest Answer",
+    "description": "Do MacBooks last over a decade? Yes, 7 to 10+ years is normal. What limits lifespan, what extends it, and when to repair instead of replacing your Mac."
+  },
+  "/how-can-i-record-audio-while-screen-recording-on-mac": {
+    "title": "How to Record Audio While Screen Recording on Mac",
+    "description": "No system sound when screen recording on Mac? Why Cmd-Shift-5 and QuickTime catch only the mic, and how BlackHole plus a Multi-Output Device grab it."
+  },
+  "/how-do-i-reset-passwords-on-my-macbook": {
+    "title": "How to Reset Passwords on a MacBook (2026 Guide)",
+    "description": "Change or reset every password on your MacBook: your login password, another user's, the login Keychain, Apple ID, firmware and Screen Time, step by step."
+  },
+  "/how-to-change-macbook-name": {
+    "title": "How to Change Your MacBook's Name (2026 Guide)",
+    "description": "Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
+  },
+  "/how-to-choose-the-best-apple-laptop-for-gaming": {
+    "title": "Best MacBook for Gaming (2026): Honest Guide",
+    "description": "Picking a MacBook for gaming in 2026? M-base vs Pro vs Max GPU tiers, how much RAM you really need, Air vs Pro thermals, and Game Porting Toolkit."
+  },
+  "/how-to-choose-the-right-configuration-for-a-macbook": {
+    "title": "How to Choose the Right MacBook Configuration",
+    "description": "Picking a MacBook in Dubai? The honest spec guide: how much RAM and SSD to buy, M-base vs Pro vs Max, Air vs Pro, and the right config for your use case."
+  },
+  "/how-to-clean-a-macbook-screen": {
+    "title": "How to Clean a MacBook Screen Safely",
+    "description": "Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
+  },
+  "/how-to-clean-macbook-pro-keyboard": {
+    "title": "How to Clean a MacBook Pro Keyboard Safely",
+    "description": "Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
+  },
+  "/how-to-copy-and-paste-on-a-macbook": {
+    "title": "How to Copy and Paste on a MacBook",
+    "description": "Copy and paste on a MacBook the easy way: Cmd-C, Cmd-V, Cmd-X to cut, paste and match style, the right-click menu, copying files, and fixes when it fails."
+  },
+  "/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
+    "title": "How to Erase All Data on a Mac Before Selling",
+    "description": "The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
+  },
+  "/how-to-recover-macbook-password": {
+    "title": "How to Recover a Forgotten MacBook Password",
+    "description": "Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
+  },
+  "/how-to-reset-a-macbook": {
+    "title": "How to Reset a MacBook: Restart, SMC, NVRAM & Factory",
+    "description": "Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
+  },
+  "/how-to-take-a-screenshot-on-a-macbook": {
+    "title": "How to Take a Screenshot on a MacBook",
+    "description": "Take a screenshot on any MacBook in seconds: Shift-Cmd-3, 4 and 5 explained, where files save, how to copy to clipboard, and fixes when screenshots fail."
+  },
+  "/imac-data-recovery-dubai": {
+    "title": "iMac Data Recovery Dubai - Fusion Drive, SSD, T2 | 055 741 3706",
+    "description": "iMac data recovery Dubai. Failed Fusion Drive, dead SSD, T2-encrypted recovery. From AED 500. 1-5 days. No-recovery, no-fee on most cases."
+  },
+  "/imac-fan-cleaning-dubai": {
+    "title": "iMac Fan Cleaning Dubai - Quiet Down a Loud iMac | 055 741 3706",
+    "description": "iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again. AED 250. Same day. Home visit very popular."
+  },
+  "/imac-full-diagnostic-dubai": {
+    "title": "iMac Full Diagnostic Dubai - Free 30-Point Check + Home Visit | 055 741 3706",
+    "description": "Free iMac diagnostic Dubai with optional free home visit. 30-point hardware and macOS check. No obligation. Heavy iMac? We come to you."
+  },
+  "/imac-gpu-repair-dubai": {
+    "title": "iMac GPU Repair Dubai - Discrete AMD Radeon Pro Fix | 055 741 3706",
+    "description": "iMac 27-inch GPU repair Dubai. AMD Radeon Pro failure - artifacts, lines, no display. Reflow vs replacement assessed honestly. From AED 800. 3-5 days."
   },
   "/imac-logic-board-repair-dubai": {
     "title": "iMac Logic Board Repair Dubai - From AED 1,000 | Component-Level | Call 055 741 3706"
@@ -591,33 +459,193 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "iMac Not Turning On - Dubai Repair | Free Diagnosis | From AED 400",
     "description": "iMac won't turn on? Free diagnosis in Dubai. PSU failures, SMC reset, T2 lockup, fan-only boots, GPU faults. Pickup across the city. From AED 400. Call 055 741 3706."
   },
-  "/mac-mini-repair-dubai": {
-    "title": "Mac Mini Repair Dubai - M1, M2, Intel Logic Board & SSD Experts",
-    "description": "Trusted Mac Mini repair in Dubai. Certified technicians fix M1, M2 & Intel models - logic board, SSD, RAM, and power supply repairs."
+  "/imac-os-reinstall-dubai": {
+    "title": "iMac macOS Reinstall Dubai - Internet Recovery & Clean Install | 055 741 3706",
+    "description": "iMac macOS reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. AED 300. Same day. Home visit available."
   },
-  "/mac-studio-repair-dubai": {
-    "title": "Mac Studio Repair Dubai - Apple-Certified Logic Board & SSD Fix",
-    "description": "Professional Mac Studio repair in Dubai. Certified Apple technicians repair logic boards, SSDs & power issues. M1 Ultra & M2 Ultra models supported."
+  "/imac-overheating-fix-dubai": {
+    "title": "iMac Overheating Fix Dubai - Fan Clean, Thermal Paste | 055 741 3706",
+    "description": "iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. AED 350. 1 day. Free home visit."
   },
-  "/mac-pro-repair-dubai": {
-    "title": "Mac Pro Repair Dubai - Certified Apple Desktop Technicians",
-    "description": "Expert Mac Pro repair in Dubai. Certified Apple technicians fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & genuine parts."
+  "/imac-power-supply-repair-dubai": {
+    "title": "iMac Power Supply Repair Dubai - No Power Fix | 055 741 3706",
+    "description": "iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. AED 400 labor + part. 1-2 days. Free home visit."
   },
-  "/iphone-screen-repair-dubai": {
-    "title": "iPhone Screen Repair Dubai - From AED 350 | All Models | Same-Day",
-    "description": "iPhone screen repair Dubai from AED 350. OLED & LCD, True Tone calibration, all models 6 to 17. Same-day, 90-day warranty. WhatsApp 055 741 3706."
+  "/imac-ram-upgrade-dubai": {
+    "title": "iMac RAM Upgrade Dubai - 27-inch Intel up to 128GB | 055 741 3706",
+    "description": "iMac RAM upgrade Dubai. 27-inch Intel iMac up to 128GB via back panel. 24-inch M-series RAM is soldered - we'll tell you honestly. AED 400 labor. Same day."
   },
-  "/iphone-battery-replacement-dubai": {
-    "title": "iPhone Battery Replacement Dubai - From AED 250 | Same-Day | Genuine Cells",
-    "description": "iPhone battery replacement Dubai from AED 250. Health % reset, BMS pairing, swelling check. iPhone 6 to 17. Same-day. 90-day warranty. WhatsApp 055 741 3706."
+  "/imac-repair-dubai": {
+    "title": "iMac Repair Dubai - Certified Logic Board & SSD Specialists",
+    "description": "Expert iMac repair in Dubai. Certified Apple technicians fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMac models."
+  },
+  "/imac-ssd-upgrade-dubai": {
+    "title": "iMac SSD Upgrade Dubai - Fusion Drive to NVMe | 055 741 3706",
+    "description": "iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. AED 700 labor. 1-2 days."
+  },
+  "/imac-virus-removal-dubai": {
+    "title": "iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706",
+    "description": "iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. AED 300. Same day. Free home visit available."
+  },
+  "/ipad-back-glass-repair-dubai": {
+    "title": "iPad Back Repair Dubai - Aluminium Dent Rework | From AED 500",
+    "description": "iPad back panel dent repair Dubai. Aluminium chassis straightening, Smart Connector preserved, cosmetic restoration. From AED 500, 2-3 days."
+  },
+  "/ipad-battery-replacement-dubai": {
+    "title": "iPad Battery Replacement Dubai - From AED 350 | Same-Day | 30-Day Warranty",
+    "description": "iPad battery replacement Dubai. Glued cells removed safely on every iPad model. From AED 350. Free pickup across Dubai. Call 055 741 3706."
+  },
+  "/ipad-camera-repair-dubai": {
+    "title": "iPad Camera Repair Dubai - AED 400 | Center Stage Calibration",
+    "description": "iPad rear and front camera repair Dubai. TrueDepth on Pro, landscape camera on Air M3+. Center Stage recalibrated. AED 400, 1-2 days. Call 055 741 3706."
+  },
+  "/ipad-charging-port-repair-dubai": {
+    "title": "iPad Charging Port Repair Dubai - USB-C & Lightning | From AED 300",
+    "description": "iPad charging port repair Dubai. USB-C and Lightning ports replaced. Smart Connector and wireless charging cases also covered. From AED 300. Call 055 741 3706."
+  },
+  "/ipad-full-diagnostic-dubai": {
+    "title": "iPad Full Diagnostic Dubai - Free 25-Point Check | 055 741 3706",
+    "description": "Free iPad diagnostic Dubai. 25-point check: screen, battery, Pencil, Smart Connector, cameras, speakers, water indicators. No obligation."
+  },
+  "/ipad-home-button-repair-dubai": {
+    "title": "iPad Home Button Repair Dubai - AED 250 | iPad 9th Gen and Earlier",
+    "description": "iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. AED 250, 1 day, 12-month warranty."
+  },
+  "/ipad-icloud-unlock-dubai": {
+    "title": "iPad iCloud Unlock Dubai - Honest Consultation | 055 741 3706",
+    "description": "iPad iCloud / Activation Lock - honest advice. We don't bypass Apple's security. Legitimate unlock paths only with original Apple ID and proof of ownership."
+  },
+  "/ipad-pencil-compatibility-dubai": {
+    "title": "iPad Apple Pencil Compatibility Dubai - Pencil-Safe Screens",
+    "description": "iPad screen replacements that preserve Apple Pencil compatibility. Pencil 1, 2, USB-C and Pro all tested. Dubai's most honest iPad screen specialist."
+  },
+  "/ipad-power-button-repair-dubai": {
+    "title": "iPad Power Button Repair Dubai - Touch ID | AED 300",
+    "description": "iPad power button repair Dubai. Top-edge button with Touch ID on iPad Air 4+, mini 6+, iPad 10/11. Honest Touch ID limits. AED 300, 1 day."
+  },
+  "/ipad-repair-dubai": {
+    "title": "iPad Repair Dubai - Screen, Battery & Logic Board Experts",
+    "description": "Professional iPad repair in Dubai for all models. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple parts."
+  },
+  "/ipad-screen-repair-dubai": {
+    "title": "iPad Screen Repair Dubai - From AED 350 | Pencil-Compatible | Same-Day",
+    "description": "iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. From AED 350. Call 055 741 3706."
+  },
+  "/ipad-smart-connector-repair-dubai": {
+    "title": "iPad Smart Connector Repair Dubai - AED 450 | 2-Day Fix",
+    "description": "iPad Smart Connector repair Dubai. Magic Keyboard / Smart Keyboard not connecting. 3-pin magnetic contact replacement. AED 450, 2 days."
+  },
+  "/ipad-software-reset-dubai": {
+    "title": "iPad Software Reset Dubai - iPadOS Fix | AED 250 Same-Day",
+    "description": "iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. AED 250, same day."
+  },
+  "/ipad-speaker-repair-dubai": {
+    "title": "iPad Speaker Repair Dubai - Stereo and Quad | AED 350",
+    "description": "iPad speaker repair Dubai. 2-speaker iPad / mini, 4-speaker Air / Pro. Mesh clean often free. AED 350 if replacement needed. Same day."
+  },
+  "/ipad-water-damage-repair-dubai": {
+    "title": "iPad Water Damage Repair Dubai - Same-Day Diagnosis | From AED 450",
+    "description": "iPad water damage repair Dubai. Ultrasonic cleaning, board rework, battery and screen replacement when needed. Honest success-rate estimate. Call 055 741 3706."
+  },
+  "/iphone-13-mini-repair-dubai": {
+    "title": "iPhone 13 Mini Repair Dubai - 5.4-inch OLED from AED 300 | 055 741 3706",
+    "description": "iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
+  },
+  "/iphone-13-pro-max-repair-dubai": {
+    "title": "iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion from AED 350 | 055 741 3706",
+    "description": "iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, 12-month warranty."
+  },
+  "/iphone-13-pro-repair-dubai": {
+    "title": "iPhone 13 Pro Repair Dubai - 120Hz ProMotion from AED 300 | 055 741 3706",
+    "description": "iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, 12-month warranty."
+  },
+  "/iphone-13-repair-dubai": {
+    "title": "iPhone 13 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706",
+    "description": "iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
+  },
+  "/iphone-14-plus-repair-dubai": {
+    "title": "iPhone 14 Plus Repair Dubai - 6.7-inch OLED from AED 350 | 055 741 3706",
+    "description": "iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen AED 750, battery AED 350. Same-day, 12-month warranty."
+  },
+  "/iphone-14-pro-max-repair-dubai": {
+    "title": "iPhone 14 Pro Max Repair Dubai - 6.7-inch Dynamic Island from AED 350 | 055 741 3706",
+    "description": "iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen AED 850, Dynamic Island AED 900. Same-day, 12-month warranty."
+  },
+  "/iphone-14-pro-repair-dubai": {
+    "title": "iPhone 14 Pro Repair Dubai - Dynamic Island, 48MP from AED 300 | 055 741 3706",
+    "description": "iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen AED 750, Dynamic Island AED 900. Same-day, 12-month warranty."
+  },
+  "/iphone-14-repair-dubai": {
+    "title": "iPhone 14 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706",
+    "description": "iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
+  },
+  "/iphone-15-plus-repair-dubai": {
+    "title": "iPhone 15 Plus Repair Dubai - 6.7-inch USB-C from AED 400 | 055 741 3706",
+    "description": "iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, 12-month warranty."
+  },
+  "/iphone-15-pro-max-repair-dubai": {
+    "title": "iPhone 15 Pro Max Repair Dubai - Titanium, 5x Tetraprism from AED 400 | 055 741 3706",
+    "description": "iPhone 15 Pro Max (2023) repair Dubai. A17 Pro, titanium, 5x tetraprism telephoto (first), USB-C 3. Screen AED 950, telephoto AED 900. Same-day."
+  },
+  "/iphone-15-pro-repair-dubai": {
+    "title": "iPhone 15 Pro Repair Dubai - Titanium, USB-C 3 from AED 350 | 055 741 3706",
+    "description": "iPhone 15 Pro (2023) repair Dubai. A17 Pro, titanium frame, USB-C Thunderbolt, Action Button. Screen AED 850, USB-C 3 port AED 500. Same-day."
+  },
+  "/iphone-15-repair-dubai": {
+    "title": "iPhone 15 Repair Dubai - USB-C, Dynamic Island from AED 350 | 055 741 3706",
+    "description": "iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen AED 750, USB-C port AED 400. Same-day, 12-month warranty."
+  },
+  "/iphone-16-plus-repair-dubai": {
+    "title": "iPhone 16 Plus Repair Dubai - 6.7-inch A18 from AED 400 | 055 741 3706",
+    "description": "iPhone 16 Plus (2024) repair Dubai. A18, 6.7-inch OLED, Camera Control, Apple Intelligence. Screen AED 850, Camera Control AED 350. Same-day."
+  },
+  "/iphone-16-pro-max-repair-dubai": {
+    "title": "iPhone 16 Pro Max Repair Dubai - 6.9-inch Titanium from AED 400 | 055 741 3706",
+    "description": "iPhone 16 Pro Max (2024) repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Screen AED 950. Same-day."
+  },
+  "/iphone-16-pro-repair-dubai": {
+    "title": "iPhone 16 Pro Repair Dubai - 6.3-inch A18 Pro from AED 350 | 055 741 3706",
+    "description": "iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, 12-month warranty."
+  },
+  "/iphone-16-repair-dubai": {
+    "title": "iPhone 16 Repair Dubai - A18, Camera Control from AED 350 | 055 741 3706",
+    "description": "iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, 12-month warranty."
+  },
+  "/iphone-16e-repair-dubai": {
+    "title": "iPhone 16e Repair Dubai - A18 Budget iPhone from AED 350 | 055 741 3706",
+    "description": "iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen AED 700, battery AED 400. Same-day, 12-month warranty."
+  },
+  "/iphone-17-pro-max-repair-dubai": {
+    "title": "iPhone 17 Pro Max Repair Dubai - 6.9-inch A19 Pro from AED 450 | 055 741 3706",
+    "description": "iPhone 17 Pro Max (Sept 2025) repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Screen AED 1100. Same-day."
+  },
+  "/iphone-17-pro-repair-dubai": {
+    "title": "iPhone 17 Pro Repair Dubai - A19 Pro, Aluminum Unibody from AED 450 | 055 741 3706",
+    "description": "iPhone 17 Pro (Sept 2025) repair Dubai. A19 Pro, aluminum unibody, vapor chamber cooling, 8x optical zoom, Center Stage front. Screen AED 1000."
+  },
+  "/iphone-17-repair-dubai": {
+    "title": "iPhone 17 Repair Dubai - A19, 120Hz ProMotion from AED 400 | 055 741 3706",
+    "description": "iPhone 17 (Sept 2025) repair Dubai. A19, 6.3-inch ProMotion (first non-Pro), Always-On, Ceramic Shield 2, Wi-Fi 7. Screen AED 900. Same-day."
+  },
+  "/iphone-17e-repair-dubai": {
+    "title": "iPhone 17e Repair Dubai - A19 Budget iPhone, Dynamic Island from AED 350 | 055 741 3706",
+    "description": "iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island (added), MagSafe (first for e-series), USB-C, $599. Screen AED 700, battery AED 400. Same-day."
+  },
+  "/iphone-air-repair-dubai": {
+    "title": "iPhone Air Repair Dubai - Thinnest iPhone Ever from AED 400 | 055 741 3706",
+    "description": "iPhone Air (Sept 2025) repair Dubai. A19, 6.5-inch OLED, single camera, thinnest iPhone ever. Screen AED 900, battery AED 400. Same-day."
   },
   "/iphone-back-glass-repair-dubai": {
     "title": "iPhone Back Glass Repair Dubai - Laser Removal | From AED 350 | All Models",
     "description": "iPhone back glass repair Dubai from AED 350. Laser removal saves the phone - Apple swaps whole device. MagSafe + wireless coil preserved. WhatsApp 055 741 3706."
   },
+  "/iphone-battery-replacement-dubai": {
+    "title": "iPhone Battery Replacement Dubai - From AED 250 | Same-Day | Genuine Cells",
+    "description": "iPhone battery replacement Dubai from AED 250. Health % reset, BMS pairing, swelling check. iPhone 6 to 17. Same-day. 3-month warranty. WhatsApp 055 741 3706."
+  },
   "/iphone-camera-repair-dubai": {
     "title": "iPhone Camera Repair Dubai - Rear, Ultra-Wide, LiDAR | From AED 350",
-    "description": "iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. 90-day warranty. WhatsApp 055 741 3706."
+    "description": "iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. 12-month warranty. WhatsApp 055 741 3706."
   },
   "/iphone-charging-port-repair-dubai": {
     "title": "iPhone Charging Port Repair Dubai - Lightning & USB-C | From AED 250",
@@ -627,189 +655,121 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "iPhone Data Recovery Dubai - Photos, Messages, WhatsApp | From AED 400",
     "description": "iPhone data recovery Dubai from AED 400. iCloud first, chip-off for dead phones. Honest about Secure Enclave limits. iPhone 6 to 17. WhatsApp 055 741 3706."
   },
-  "/iphone-face-id-repair-dubai": {
-    "title": "iPhone Face ID Repair Dubai - Honest Success Rates | From AED 450",
-    "description": "iPhone Face ID repair Dubai from AED 450. Sensor work where calibration allows. Apple Store can't repair Face ID - we sometimes can. Honest about limits."
-  },
-  "/iphone-icloud-unlock-dubai": {
-    "title": "iPhone iCloud Unlock Dubai - Honest Help | Apple Liaison Service",
-    "description": "iPhone iCloud unlock Dubai - honest help, not a bypass scam. We assist legitimate owners with Apple support, ownership documentation. WhatsApp 055 741 3706."
-  },
-  "/iphone-network-unlock-dubai": {
-    "title": "iPhone Network Unlock Dubai - Carrier Unlock | From AED 350",
-    "description": "iPhone network unlock Dubai from AED 350. Legitimate carrier unlock via IMEI. UAE, US, UK carriers supported. No jailbreak. Permanent. WhatsApp 055 741 3706."
-  },
-  "/iphone-software-fix-dubai": {
-    "title": "iPhone Software Repair Dubai - iOS Fixes | From AED 200 | Same-Day",
-    "description": "iPhone software repair Dubai from AED 200. Stuck boot, recovery, DFU, downgrade, jailbreak removal, storage full. iPhone 6 to 17. WhatsApp 055 741 3706."
-  },
-  "/iphone-water-damage-repair-dubai": {
-    "title": "iPhone Water Damage Repair Dubai - Ultrasonic Clean | From AED 350",
-    "description": "iPhone water damage repair Dubai from AED 350. Ultrasonic clean, corrosion removal, 24-hour window matters. iPhone 6 to 17. WhatsApp 055 741 3706 now."
-  },
-  "/iphone-home-button-repair-dubai": {
-    "title": "iPhone Home Button Repair Dubai - AED 200 | Same-Day | 055 741 3706",
-    "description": "iPhone home button repair Dubai for iPhone 6, 7, 8 and SE. Honest about Touch ID - only Apple can restore it. AED 200, same day. Call 055 741 3706."
-  },
-  "/iphone-speaker-repair-dubai": {
-    "title": "iPhone Speaker Repair Dubai - AED 250 | Same-Day | 055 741 3706",
-    "description": "iPhone loudspeaker repair Dubai. Crackling, muffled or no sound. Free mesh clean first - most cases don't need a new speaker. AED 250 if replacement needed."
-  },
   "/iphone-earpiece-repair-dubai": {
     "title": "iPhone Earpiece Repair Dubai - No Sound on Calls | AED 280",
     "description": "iPhone earpiece repair Dubai. Top-speaker fix for no sound on calls. Face ID-safe extraction on iPhone X and later. AED 280, 1 day. Call 055 741 3706."
   },
-  "/iphone-microphone-repair-dubai": {
-    "title": "iPhone Microphone Repair Dubai - AED 300 | 1-Day Turnaround",
-    "description": "iPhone microphone repair Dubai. Modern iPhones have 4 mics - we isolate which is broken. Often water-damage related. AED 300, 1 day. Call 055 741 3706."
-  },
-  "/iphone-power-button-repair-dubai": {
-    "title": "iPhone Power Button Repair Dubai - AED 280 | 1 Day",
-    "description": "iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. AED 280, 1 day. Call 055 741 3706."
-  },
-  "/iphone-volume-button-repair-dubai": {
-    "title": "iPhone Volume Button Repair Dubai - AED 250 | 1 Day",
-    "description": "iPhone volume up/down + ringer switch repair Dubai. Single flex covers all three - replaced together. AED 250, 1 day. Call 055 741 3706."
-  },
-  "/iphone-vibration-motor-repair-dubai": {
-    "title": "iPhone Vibration Motor Repair Dubai - Taptic Engine | AED 350",
-    "description": "iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. AED 350, 1 day, 90-day warranty. Call 055 741 3706."
-  },
-  "/iphone-sim-tray-repair-dubai": {
-    "title": "iPhone SIM Tray Repair Dubai - Physical & eSIM | From AED 150",
-    "description": "iPhone SIM tray repair Dubai. Lost tray AED 150, broken reader AED 400. Dual-SIM and eSIM advice for UAE. Same day. Call 055 741 3706."
-  },
-  "/iphone-wifi-bluetooth-repair-dubai": {
-    "title": "iPhone WiFi & Bluetooth Repair Dubai - AED 400 | 2-Day Fix",
-    "description": "iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. AED 400, 2 days, 90-day warranty. Call 055 741 3706."
-  },
-  "/iphone-nfc-repair-dubai": {
-    "title": "iPhone NFC Repair Dubai - Apple Pay Fixes | AED 350",
-    "description": "iPhone NFC and Apple Pay repair Dubai. Top-of-phone antenna replacement, contactless restored. AED 350, 1-2 days. Call 055 741 3706."
-  },
-  "/iphone-headphone-jack-repair-dubai": {
-    "title": "iPhone Headphone Jack Repair Dubai - AED 200 | iPhone 6S and Earlier",
-    "description": "iPhone 3.5mm headphone jack repair Dubai. Lint clean often free. iPhone 6S and earlier only - newer models have no jack. AED 200, same day."
+  "/iphone-face-id-repair-dubai": {
+    "title": "iPhone Face ID Repair Dubai - Honest Success Rates | From AED 450",
+    "description": "iPhone Face ID repair Dubai from AED 450. Sensor work where calibration allows. Apple Store can't repair Face ID - we sometimes can. Honest about limits."
   },
   "/iphone-full-diagnostic-dubai": {
     "title": "iPhone Full Diagnostic Dubai - Free 20-Point Check | 055 741 3706",
     "description": "Free iPhone diagnostic in Dubai. 20-point check: battery, screen, ports, Face ID, antennas, water indicators. No obligation. Call 055 741 3706."
   },
-  "/iphone-usb-c-port-repair-dubai": {
-    "title": "iPhone USB-C Port Repair Dubai - iPhone 15+ | AED 400",
-    "description": "iPhone USB-C port repair Dubai for iPhone 15, 16 and 17. Bent connectors, slow charging, Thunderbolt restored on Pro. AED 400, 1 day."
+  "/iphone-headphone-jack-repair-dubai": {
+    "title": "iPhone Headphone Jack Repair Dubai - AED 200 | iPhone 6S and Earlier",
+    "description": "iPhone 3.5mm headphone jack repair Dubai. Lint clean often free. iPhone 6S and earlier only - newer models have no jack. AED 200, same day."
+  },
+  "/iphone-home-button-repair-dubai": {
+    "title": "iPhone Home Button Repair Dubai - AED 200 | Same-Day | 055 741 3706",
+    "description": "iPhone home button repair Dubai for iPhone 6, 7, 8 and SE. Honest about Touch ID - only Apple can restore it. AED 200, same day. Call 055 741 3706."
+  },
+  "/iphone-icloud-unlock-dubai": {
+    "title": "iPhone iCloud Unlock Dubai - Honest Help | Apple Liaison Service",
+    "description": "iPhone iCloud unlock Dubai - honest help, not a bypass scam. We assist legitimate owners with Apple support, ownership documentation. WhatsApp 055 741 3706."
   },
   "/iphone-lightning-port-repair-dubai": {
     "title": "iPhone Lightning Port Repair Dubai - AED 300 or FREE Clean",
     "description": "iPhone Lightning port repair Dubai. Free port clean first - most cases don't need a new port. Replacement AED 300 if needed. iPhone 14 and earlier."
   },
-  "/ipad-camera-repair-dubai": {
-    "title": "iPad Camera Repair Dubai - AED 400 | Center Stage Calibration",
-    "description": "iPad rear and front camera repair Dubai. TrueDepth on Pro, landscape camera on Air M3+. Center Stage recalibrated. AED 400, 1-2 days. Call 055 741 3706."
+  "/iphone-microphone-repair-dubai": {
+    "title": "iPhone Microphone Repair Dubai - AED 300 | 1-Day Turnaround",
+    "description": "iPhone microphone repair Dubai. Modern iPhones have 4 mics - we isolate which is broken. Often water-damage related. AED 300, 1 day. Call 055 741 3706."
   },
-  "/ipad-back-glass-repair-dubai": {
-    "title": "iPad Back Repair Dubai - Aluminium Dent Rework | From AED 500",
-    "description": "iPad back panel dent repair Dubai. Aluminium chassis straightening, Smart Connector preserved, cosmetic restoration. From AED 500, 2-3 days."
+  "/iphone-network-unlock-dubai": {
+    "title": "iPhone Network Unlock Dubai - Carrier Unlock | From AED 350",
+    "description": "iPhone network unlock Dubai from AED 350. Legitimate carrier unlock via IMEI. UAE, US, UK carriers supported. No jailbreak. Permanent. WhatsApp 055 741 3706."
   },
-  "/ipad-software-reset-dubai": {
-    "title": "iPad Software Reset Dubai - iPadOS Fix | AED 250 Same-Day",
-    "description": "iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. AED 250, same day."
+  "/iphone-nfc-repair-dubai": {
+    "title": "iPhone NFC Repair Dubai - Apple Pay Fixes | AED 350",
+    "description": "iPhone NFC and Apple Pay repair Dubai. Top-of-phone antenna replacement, contactless restored. AED 350, 1-2 days. Call 055 741 3706."
   },
-  "/ipad-icloud-unlock-dubai": {
-    "title": "iPad iCloud Unlock Dubai - Honest Consultation | 055 741 3706",
-    "description": "iPad iCloud / Activation Lock - honest advice. We don't bypass Apple's security. Legitimate unlock paths only with original Apple ID and proof of ownership."
+  "/iphone-power-button-repair-dubai": {
+    "title": "iPhone Power Button Repair Dubai - AED 280 | 1 Day",
+    "description": "iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. AED 280, 1 day. Call 055 741 3706."
   },
-  "/ipad-smart-connector-repair-dubai": {
-    "title": "iPad Smart Connector Repair Dubai - AED 450 | 2-Day Fix",
-    "description": "iPad Smart Connector repair Dubai. Magic Keyboard / Smart Keyboard not connecting. 3-pin magnetic contact replacement. AED 450, 2 days."
+  "/iphone-repair-dubai": {
+    "title": "iPhone Repair Dubai - Certified Apple Technicians & Genuine Parts",
+    "description": "Trusted iPhone repair in Dubai for screen, battery, water damage & logic board issues. Certified technicians. Fast service with original Apple parts."
   },
-  "/ipad-speaker-repair-dubai": {
-    "title": "iPad Speaker Repair Dubai - Stereo and Quad | AED 350",
-    "description": "iPad speaker repair Dubai. 2-speaker iPad / mini, 4-speaker Air / Pro. Mesh clean often free. AED 350 if replacement needed. Same day."
+  "/iphone-screen-repair-dubai": {
+    "title": "iPhone Screen Repair Dubai - From AED 350 | All Models | Same-Day",
+    "description": "iPhone screen repair Dubai from AED 350. OLED & LCD, True Tone calibration, all models 6 to 17. Same-day, 3-month warranty. WhatsApp 055 741 3706."
   },
-  "/ipad-home-button-repair-dubai": {
-    "title": "iPad Home Button Repair Dubai - AED 250 | iPad 9th Gen and Earlier",
-    "description": "iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. AED 250, 1 day, 90-day warranty."
+  "/iphone-se-3rd-gen-repair-dubai": {
+    "title": "iPhone SE 3rd Gen Repair Dubai - Screen, Battery from AED 250 | 055 741 3706",
+    "description": "iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, 12-month warranty. Call 055 741 3706."
   },
-  "/ipad-power-button-repair-dubai": {
-    "title": "iPad Power Button Repair Dubai - Touch ID | AED 300",
-    "description": "iPad power button repair Dubai. Top-edge button with Touch ID on iPad Air 4+, mini 6+, iPad 10/11. Honest Touch ID limits. AED 300, 1 day."
+  "/iphone-sim-tray-repair-dubai": {
+    "title": "iPhone SIM Tray Repair Dubai - Physical & eSIM | From AED 150",
+    "description": "iPhone SIM tray repair Dubai. Lost tray AED 150, broken reader AED 400. Dual-SIM and eSIM advice for UAE. Same day. Call 055 741 3706."
   },
-  "/ipad-full-diagnostic-dubai": {
-    "title": "iPad Full Diagnostic Dubai - Free 25-Point Check | 055 741 3706",
-    "description": "Free iPad diagnostic Dubai. 25-point check: screen, battery, Pencil, Smart Connector, cameras, speakers, water indicators. No obligation."
+  "/iphone-software-fix-dubai": {
+    "title": "iPhone Software Repair Dubai - iOS Fixes | From AED 200 | Same-Day",
+    "description": "iPhone software repair Dubai from AED 200. Stuck boot, recovery, DFU, downgrade, jailbreak removal, storage full. iPhone 6 to 17. WhatsApp 055 741 3706."
   },
-  "/ipad-pencil-compatibility-dubai": {
-    "title": "iPad Apple Pencil Compatibility Dubai - Pencil-Safe Screens",
-    "description": "iPad screen replacements that preserve Apple Pencil compatibility. Pencil 1, 2, USB-C and Pro all tested. Dubai's most honest iPad screen specialist."
+  "/iphone-speaker-repair-dubai": {
+    "title": "iPhone Speaker Repair Dubai - AED 250 | Same-Day | 055 741 3706",
+    "description": "iPhone loudspeaker repair Dubai. Crackling, muffled or no sound. Free mesh clean first - most cases don't need a new speaker. AED 250 if replacement needed."
   },
-  "/imac-ram-upgrade-dubai": {
-    "title": "iMac RAM Upgrade Dubai - 27-inch Intel up to 128GB | 055 741 3706",
-    "description": "iMac RAM upgrade Dubai. 27-inch Intel iMac up to 128GB via back panel. 24-inch M-series RAM is soldered - we'll tell you honestly. AED 400 labor. Same day."
+  "/iphone-usb-c-port-repair-dubai": {
+    "title": "iPhone USB-C Port Repair Dubai - iPhone 15+ | AED 400",
+    "description": "iPhone USB-C port repair Dubai for iPhone 15, 16 and 17. Bent connectors, slow charging, Thunderbolt restored on Pro. AED 400, 1 day."
   },
-  "/imac-ssd-upgrade-dubai": {
-    "title": "iMac SSD Upgrade Dubai - Fusion Drive to NVMe | 055 741 3706",
-    "description": "iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. AED 700 labor. 1-2 days."
+  "/iphone-vibration-motor-repair-dubai": {
+    "title": "iPhone Vibration Motor Repair Dubai - Taptic Engine | AED 350",
+    "description": "iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. AED 350, 1 day, 12-month warranty. Call 055 741 3706."
   },
-  "/imac-data-recovery-dubai": {
-    "title": "iMac Data Recovery Dubai - Fusion Drive, SSD, T2 | 055 741 3706",
-    "description": "iMac data recovery Dubai. Failed Fusion Drive, dead SSD, T2-encrypted recovery. From AED 500. 1-5 days. No-recovery, no-fee on most cases."
+  "/iphone-volume-button-repair-dubai": {
+    "title": "iPhone Volume Button Repair Dubai - AED 250 | 1 Day",
+    "description": "iPhone volume up/down + ringer switch repair Dubai. Single flex covers all three - replaced together. AED 250, 1 day. Call 055 741 3706."
   },
-  "/imac-virus-removal-dubai": {
-    "title": "iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706",
-    "description": "iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. AED 300. Same day. Free home visit available."
+  "/iphone-water-damage-repair-dubai": {
+    "title": "iPhone Water Damage Repair Dubai - Ultrasonic Clean | From AED 350",
+    "description": "iPhone water damage repair Dubai from AED 350. Ultrasonic clean, corrosion removal, 24-hour window matters. iPhone 6 to 17. WhatsApp 055 741 3706 now."
   },
-  "/imac-overheating-fix-dubai": {
-    "title": "iMac Overheating Fix Dubai - Fan Clean, Thermal Paste | 055 741 3706",
-    "description": "iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. AED 350. 1 day. Free home visit."
+  "/iphone-wifi-bluetooth-repair-dubai": {
+    "title": "iPhone WiFi & Bluetooth Repair Dubai - AED 400 | 2-Day Fix",
+    "description": "iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. AED 400, 2 days, 12-month warranty. Call 055 741 3706."
   },
-  "/imac-os-reinstall-dubai": {
-    "title": "iMac macOS Reinstall Dubai - Internet Recovery & Clean Install | 055 741 3706",
-    "description": "iMac macOS reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. AED 300. Same day. Home visit available."
-  },
-  "/imac-fan-cleaning-dubai": {
-    "title": "iMac Fan Cleaning Dubai - Quiet Down a Loud iMac | 055 741 3706",
-    "description": "iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again. AED 250. Same day. Home visit very popular."
-  },
-  "/imac-power-supply-repair-dubai": {
-    "title": "iMac Power Supply Repair Dubai - No Power Fix | 055 741 3706",
-    "description": "iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. AED 400 labor + part. 1-2 days. Free home visit."
-  },
-  "/imac-gpu-repair-dubai": {
-    "title": "iMac GPU Repair Dubai - Discrete AMD Radeon Pro Fix | 055 741 3706",
-    "description": "iMac 27-inch GPU repair Dubai. AMD Radeon Pro failure - artifacts, lines, no display. Reflow vs replacement assessed honestly. From AED 800. 3-5 days."
-  },
-  "/imac-full-diagnostic-dubai": {
-    "title": "iMac Full Diagnostic Dubai - Free 30-Point Check + Home Visit | 055 741 3706",
-    "description": "Free iMac diagnostic Dubai with optional free home visit. 30-point hardware and macOS check. No obligation. Heavy iMac? We come to you."
-  },
-  "/mac-mini-ram-upgrade-dubai": {
-    "title": "Mac Mini RAM Upgrade Dubai - 2018 Intel Only | 055 741 3706",
-    "description": "Mac Mini RAM upgrade Dubai. The 2018 Intel Mac Mini is the last upgradeable model - up to 64GB. M1/M2/M4 RAM is soldered. Honest answer first. AED 400."
-  },
-  "/mac-ssd-upgrade-dubai": {
-    "title": "Mac Mini & Mac Studio SSD Upgrade Dubai | 055 741 3706",
-    "description": "Mac Mini and Mac Studio SSD upgrade Dubai. Mac Mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable. Honest first. AED 600."
-  },
-  "/mac-port-repair-dubai": {
-    "title": "Mac Mini, Studio & Pro Port Repair Dubai - TB4/TB5, HDMI | 055 741 3706",
-    "description": "Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. AED 400. 2 days. Free clean if that's all it needs."
+  "/mac-activation-lock-unlock-dubai": {
+    "title": "Mac Activation Lock & Firmware Unlock Dubai - Honest Owner Help",
+    "description": "Mac & MacBook Activation Lock, iCloud lock and EFI firmware password help in Dubai. Legitimate owners only - we assist through Apple's channels, never a bypass. From AED 250."
   },
   "/mac-data-recovery-dubai": {
     "title": "Mac Mini, Studio & Pro Data Recovery Dubai | 055 741 3706",
     "description": "Mac desktop data recovery Dubai. Intel Mac easier, M-series chip-off only. Mac Pro RAID recovery. From AED 600. 2-7 days. Honest success rates first."
   },
-  "/mac-logic-board-repair-dubai": {
-    "title": "Mac Mini & Studio Logic Board Repair Dubai | 055 741 3706",
-    "description": "Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest). From AED 800."
-  },
   "/mac-fan-cleaning-dubai": {
     "title": "Mac Mini, Studio & Pro Fan Cleaning Dubai | 055 741 3706",
     "description": "Mac desktop fan cleaning Dubai. Mac Studio big fan, Mac Pro dual fans, Mac Mini blower. Dubai dust deep clean. AED 250. Same day."
   },
-  "/mac-pro-gpu-repair-dubai": {
-    "title": "Mac Pro GPU Repair Dubai - MPX Modules & W6800X | 055 741 3706",
-    "description": "Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. From AED 1,200. 3-7 days."
+  "/mac-full-diagnostic-dubai": {
+    "title": "Mac Mini, Studio & Pro Full Diagnostic Dubai - Free | 055 741 3706",
+    "description": "Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Free home pickup for Mac Pro. No obligation, written report."
+  },
+  "/mac-logic-board-repair-dubai": {
+    "title": "Mac Mini & Studio Logic Board Repair Dubai | 055 741 3706",
+    "description": "Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest). From AED 800."
+  },
+  "/mac-mini-ram-upgrade-dubai": {
+    "title": "Mac Mini RAM Upgrade Dubai - 2018 Intel Only | 055 741 3706",
+    "description": "Mac Mini RAM upgrade Dubai. The 2018 Intel Mac Mini is the last upgradeable model - up to 64GB. M1/M2/M4 RAM is soldered. Honest answer first. AED 400."
+  },
+  "/mac-mini-repair-dubai": {
+    "title": "Mac Mini Repair Dubai - M1, M2, Intel Logic Board & SSD Experts",
+    "description": "Trusted Mac Mini repair in Dubai. Certified technicians fix M1, M2 & Intel models - logic board, SSD, RAM, and power supply repairs."
   },
   "/mac-not-turning-on-dubai": {
     "title": "Mac Mini, Studio & Pro Not Turning On Dubai | 055 741 3706",
@@ -823,168 +783,220 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Mac Mini, Studio & Pro Performance Tune Dubai | 055 741 3706",
     "description": "Mac performance tune Dubai. macOS cleanup, startup audit, storage cleanup, log analysis. Find what's actually slowing it down. AED 350. 1 day."
   },
-  "/mac-full-diagnostic-dubai": {
-    "title": "Mac Mini, Studio & Pro Full Diagnostic Dubai - Free | 055 741 3706",
-    "description": "Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Free home pickup for Mac Pro. No obligation, written report."
+  "/mac-port-repair-dubai": {
+    "title": "Mac Mini, Studio & Pro Port Repair Dubai - TB4/TB5, HDMI | 055 741 3706",
+    "description": "Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. AED 400. 2 days. Free clean if that's all it needs."
   },
-  "/iphone-se-3rd-gen-repair-dubai": {
-    "title": "iPhone SE 3rd Gen Repair Dubai - Screen, Battery from AED 250 | 055 741 3706",
-    "description": "iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, 90-day warranty. Call 055 741 3706."
+  "/mac-pro-gpu-repair-dubai": {
+    "title": "Mac Pro GPU Repair Dubai - MPX Modules & W6800X | 055 741 3706",
+    "description": "Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. From AED 1,200. 3-7 days."
   },
-  "/iphone-13-mini-repair-dubai": {
-    "title": "iPhone 13 Mini Repair Dubai - 5.4-inch OLED from AED 300 | 055 741 3706",
-    "description": "iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen AED 650, battery AED 300. Same-day, 90-day warranty."
+  "/mac-pro-repair-dubai": {
+    "title": "Mac Pro Repair Dubai - Certified Apple Desktop Technicians",
+    "description": "Expert Mac Pro repair in Dubai. Certified Apple technicians fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & genuine parts."
   },
-  "/iphone-13-repair-dubai": {
-    "title": "iPhone 13 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706",
-    "description": "iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen AED 650, battery AED 300. Same-day, 90-day warranty."
+  "/mac-repair-dubai": {
+    "title": "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
+    "description": "Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio. Expert Apple technicians provide screen, battery, SSD & logic board repairs."
   },
-  "/iphone-13-pro-repair-dubai": {
-    "title": "iPhone 13 Pro Repair Dubai - 120Hz ProMotion from AED 300 | 055 741 3706",
-    "description": "iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, 90-day warranty."
+  "/mac-setup-data-migration-dubai": {
+    "title": "Mac Setup, Configuration & Data Migration Dubai - Same Day",
+    "description": "Apple device setup & data migration in Dubai. New Mac setup, email/Wi-Fi/VPN, Office & Outlook, iCloud, and full migration from old Mac or PC. On-site or free pickup. Call 055 741 3706."
   },
-  "/iphone-13-pro-max-repair-dubai": {
-    "title": "iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion from AED 350 | 055 741 3706",
-    "description": "iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, 90-day warranty."
+  "/mac-ssd-upgrade-dubai": {
+    "title": "Mac Mini & Mac Studio SSD Upgrade Dubai | 055 741 3706",
+    "description": "Mac Mini and Mac Studio SSD upgrade Dubai. Mac Mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable. Honest first. AED 600."
   },
-  "/iphone-14-repair-dubai": {
-    "title": "iPhone 14 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706",
-    "description": "iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen AED 650, battery AED 300. Same-day, 90-day warranty."
+  "/mac-studio-repair-dubai": {
+    "title": "Mac Studio Repair Dubai - Expert Logic Board & SSD Fix",
+    "description": "Professional Mac Studio repair in Dubai by independent Apple specialists. Logic board, SSD & power-issue repair. M1 Ultra & M2 Ultra models supported."
   },
-  "/iphone-14-plus-repair-dubai": {
-    "title": "iPhone 14 Plus Repair Dubai - 6.7-inch OLED from AED 350 | 055 741 3706",
-    "description": "iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen AED 750, battery AED 350. Same-day, 90-day warranty."
+  "/macbook-air-repair-dubai": {
+    "title": "MacBook Air Repair Dubai - Screen, Battery & Logic Board Fix",
+    "description": "Get your MacBook Air repaired quickly and affordably in Dubai. Certified technicians fix screen, battery, keyboard & more on all models, Intel through M5, using genuine Apple parts. Rated 5.0 stars."
   },
-  "/iphone-14-pro-repair-dubai": {
-    "title": "iPhone 14 Pro Repair Dubai - Dynamic Island, 48MP from AED 300 | 055 741 3706",
-    "description": "iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen AED 750, Dynamic Island AED 900. Same-day, 90-day warranty."
+  "/macbook-backup-service-dubai": {
+    "title": "MacBook Backup Service Dubai | MacBook Repair Dubai",
+    "description": "MacBook backup service in Dubai. Time Machine setup, data migration to a new Mac or external drive, full backup before any repair. From AED 150. Free diagnosis."
   },
-  "/iphone-14-pro-max-repair-dubai": {
-    "title": "iPhone 14 Pro Max Repair Dubai - 6.7-inch Dynamic Island from AED 350 | 055 741 3706",
-    "description": "iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen AED 850, Dynamic Island AED 900. Same-day, 90-day warranty."
+  "/macbook-battery-replacement-dubai": {
+    "title": "MacBook Battery Replacement Dubai - From AED 450",
+    "description": "MacBook battery replacement Dubai from AED 450. Same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 3-month warranty + 80% capacity guarantee. 055 741 3706."
   },
-  "/iphone-15-repair-dubai": {
-    "title": "iPhone 15 Repair Dubai - USB-C, Dynamic Island from AED 350 | 055 741 3706",
-    "description": "iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen AED 750, USB-C port AED 400. Same-day, 90-day warranty."
+  "/macbook-camera-repair-dubai": {
+    "title": "MacBook Camera Repair Dubai - FaceTime / Webcam Fix AED 200",
+    "description": "MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. From AED 200, 1-2 days, 12-month warranty. Call 055 741 3706."
   },
-  "/iphone-15-plus-repair-dubai": {
-    "title": "iPhone 15 Plus Repair Dubai - 6.7-inch USB-C from AED 400 | 055 741 3706",
-    "description": "iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, 90-day warranty."
+  "/macbook-charging-port-repair-dubai": {
+    "title": "MacBook Charging Port Repair Dubai - From AED 350",
+    "description": "MacBook USB-C and MagSafe 3 port repair Dubai from AED 350. Same-day port swap, charging IC board-level repair. M1-M5. 12-month warranty. 055 741 3706."
   },
-  "/iphone-15-pro-repair-dubai": {
-    "title": "iPhone 15 Pro Repair Dubai - Titanium, USB-C 3 from AED 350 | 055 741 3706",
-    "description": "iPhone 15 Pro (2023) repair Dubai. A17 Pro, titanium frame, USB-C Thunderbolt, Action Button. Screen AED 850, USB-C 3 port AED 500. Same-day."
+  "/macbook-cleaning-maintenance-dubai": {
+    "title": "MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai",
+    "description": "MacBook cleaning and maintenance in Dubai from AED 280. Dust and corrosion removal, fan and vent clean, free pickup, 12-month warranty. Call 055 741 3706."
   },
-  "/iphone-15-pro-max-repair-dubai": {
-    "title": "iPhone 15 Pro Max Repair Dubai - Titanium, 5x Tetraprism from AED 400 | 055 741 3706",
-    "description": "iPhone 15 Pro Max (2023) repair Dubai. A17 Pro, titanium, 5x tetraprism telephoto (first), USB-C 3. Screen AED 950, telephoto AED 900. Same-day."
+  "/macbook-data-recovery-dubai": {
+    "title": "MacBook Data Recovery Dubai - From AED 400",
+    "description": "MacBook data recovery Dubai from AED 400. Dead board, water damage, T2 & Apple Silicon, deleted files. Free diagnosis. 60-90% recovery rates. 055 741 3706."
   },
-  "/iphone-16-repair-dubai": {
-    "title": "iPhone 16 Repair Dubai - A18, Camera Control from AED 350 | 055 741 3706",
-    "description": "iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, 90-day warranty."
+  "/macbook-flexgate-repair-dubai": {
+    "title": "MacBook Flexgate Repair Dubai - AED 450 | Backlight & Stage Light Fix",
+    "description": "MacBook flexgate repair Dubai. Stage-light effect, backlight dies past 40 degrees, uneven brightness on 2016-2017 Pro. Display flex cable fixed from AED 450, 1-2 days."
   },
-  "/iphone-16-plus-repair-dubai": {
-    "title": "iPhone 16 Plus Repair Dubai - 6.7-inch A18 from AED 400 | 055 741 3706",
-    "description": "iPhone 16 Plus (2024) repair Dubai. A18, 6.7-inch OLED, Camera Control, Apple Intelligence. Screen AED 850, Camera Control AED 350. Same-day."
+  "/macbook-full-diagnostic-dubai": {
+    "title": "MacBook Full Diagnostic Dubai - FREE 30-Point Check | Report You Keep",
+    "description": "Free MacBook diagnostic Dubai. 30-point comprehensive check: battery, screen, keyboard, ports, GPU, SSD, RAM, thermals, Wi-Fi. Report you keep. No obligation."
   },
-  "/iphone-16-pro-repair-dubai": {
-    "title": "iPhone 16 Pro Repair Dubai - 6.3-inch A18 Pro from AED 350 | 055 741 3706",
-    "description": "iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, 90-day warranty."
-  },
-  "/iphone-16-pro-max-repair-dubai": {
-    "title": "iPhone 16 Pro Max Repair Dubai - 6.9-inch Titanium from AED 400 | 055 741 3706",
-    "description": "iPhone 16 Pro Max (2024) repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Screen AED 950. Same-day."
-  },
-  "/iphone-16e-repair-dubai": {
-    "title": "iPhone 16e Repair Dubai - A18 Budget iPhone from AED 350 | 055 741 3706",
-    "description": "iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen AED 700, battery AED 400. Same-day, 90-day warranty."
-  },
-  "/iphone-17-repair-dubai": {
-    "title": "iPhone 17 Repair Dubai - A19, 120Hz ProMotion from AED 400 | 055 741 3706",
-    "description": "iPhone 17 (Sept 2025) repair Dubai. A19, 6.3-inch ProMotion (first non-Pro), Always-On, Ceramic Shield 2, Wi-Fi 7. Screen AED 900. Same-day."
-  },
-  "/iphone-air-repair-dubai": {
-    "title": "iPhone Air Repair Dubai - Thinnest iPhone Ever from AED 400 | 055 741 3706",
-    "description": "iPhone Air (Sept 2025) repair Dubai. A19, 6.5-inch OLED, single camera, thinnest iPhone ever. Screen AED 900, battery AED 400. Same-day."
-  },
-  "/iphone-17-pro-repair-dubai": {
-    "title": "iPhone 17 Pro Repair Dubai - A19 Pro, Aluminum Unibody from AED 450 | 055 741 3706",
-    "description": "iPhone 17 Pro (Sept 2025) repair Dubai. A19 Pro, aluminum unibody, vapor chamber cooling, 8x optical zoom, Center Stage front. Screen AED 1000."
-  },
-  "/iphone-17-pro-max-repair-dubai": {
-    "title": "iPhone 17 Pro Max Repair Dubai - 6.9-inch A19 Pro from AED 450 | 055 741 3706",
-    "description": "iPhone 17 Pro Max (Sept 2025) repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Screen AED 1100. Same-day."
-  },
-  "/iphone-17e-repair-dubai": {
-    "title": "iPhone 17e Repair Dubai - A19 Budget iPhone, Dynamic Island from AED 350 | 055 741 3706",
-    "description": "iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island (added), MagSafe (first for e-series), USB-C, $599. Screen AED 700, battery AED 400. Same-day."
-  },
-  "/macbook-neo-repair-dubai": {
-    "title": "MacBook Neo Repair Dubai - A18 Pro Budget MacBook from AED 250 | 055 741 3706",
-    "description": "MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. 90-day warranty. Free pickup."
+  "/macbook-gpu-repair-dubai": {
+    "title": "MacBook GPU Repair Dubai - AED 800 | Reballed AMD Radeon | 3-5 Days",
+    "description": "MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2016-2019 MacBook Pro. Reballed chip replacement, not reflow. AED 800. Call 055 741 3706."
   },
   "/macbook-guides": {
     "title": "MacBook Guides & How-Tos — Dubai Apple Workshop",
     "description": "Step-by-step MacBook how-to guides from a working Dubai Apple workshop: screenshots, resets, passwords, cleaning, configuration and care. Plain-English, no jargon."
   },
-  "/how-to-take-a-screenshot-on-a-macbook": {
-    "title": "How to Take a Screenshot on a MacBook",
-    "description": "Take a screenshot on any MacBook in seconds: Shift-Cmd-3, 4 and 5 explained, where files save, how to copy to clipboard, and fixes when screenshots fail."
+  "/macbook-hinge-repair-dubai": {
+    "title": "MacBook Hinge Repair Dubai - AED 300 | Clutch & Lid Fix",
+    "description": "MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, 12-month warranty. Call 055 741 3706."
   },
-  "/how-can-i-record-audio-while-screen-recording-on-mac": {
-    "title": "How to Record Audio While Screen Recording on Mac",
-    "description": "No system sound when screen recording on Mac? Why Cmd-Shift-5 and QuickTime catch only the mic, and how BlackHole plus a Multi-Output Device grab it."
+  "/macbook-insurance-dubai": {
+    "title": "MacBook Insurance Dubai | MacBook Repair Dubai",
+    "description": "Accidental damage, liquid, theft or loss and extended warranty cover for MacBooks in Dubai. Custom corporate plans, free assessment, quote on WhatsApp."
   },
-  "/do-macbooks-last-over-a-decade": {
-    "title": "Do MacBooks Last Over a Decade? Honest Answer",
-    "description": "Do MacBooks last over a decade? Yes, 7 to 10+ years is normal. What limits lifespan, what extends it, and when to repair instead of replacing your Mac."
+  "/macbook-keyboard-repair-dubai": {
+    "title": "MacBook Keyboard Repair Dubai - From AED 150",
+    "description": "MacBook keyboard repair Dubai from AED 150. Magic Keyboard, butterfly top case, key caps, layout swaps. Same-day. 15-day warranty. 055 741 3706."
   },
-  "/how-to-copy-and-paste-on-a-macbook": {
-    "title": "How to Copy and Paste on a MacBook",
-    "description": "Copy and paste on a MacBook the easy way: Cmd-C, Cmd-V, Cmd-X to cut, paste and match style, the right-click menu, copying files, and fixes when it fails."
+  "/macbook-logic-board-repair-dubai": {
+    "title": "MacBook Logic Board Repair Dubai - Component-Level | From AED 800",
+    "description": "MacBook logic board repair Dubai. Component-level rework - IC swap, PMIC, CPU reflow, charging circuit. Not board-swap. From AED 800. Call 055 741 3706."
+  },
+  "/macbook-microphone-repair-dubai": {
+    "title": "MacBook Microphone Repair Dubai - AED 350 | Mic Not Working",
+    "description": "MacBook microphone repair Dubai. Others can't hear you on calls, muffled mic, no sound input, water-damaged mic array. AED 350, 1-2 days. WhatsApp 055 741 3706."
+  },
+  "/macbook-neo-repair-dubai": {
+    "title": "MacBook Neo Repair Dubai - A18 Pro Budget MacBook from AED 250 | 055 741 3706",
+    "description": "MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. 12-month warranty. Free pickup."
+  },
+  "/macbook-overheating-fix-dubai": {
+    "title": "MacBook Overheating Fix Dubai - AED 300 | Same-Day | Call 055 741 3706",
+    "description": "MacBook overheating fix Dubai - thermal paste replacement, fan clean, throttling cure. Dubai-dust specialists. AED 300, same day. Call 055 741 3706."
+  },
+  "/macbook-power-button-repair-dubai": {
+    "title": "MacBook Power Button & Touch ID Repair Dubai - AED 250",
+    "description": "MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, 12-month warranty. Call 055 741 3706."
+  },
+  "/macbook-pro-repair-dubai": {
+    "title": "MacBook Pro Repair Dubai - M1-M5 Screen, Battery & Logic Fix",
+    "description": "Expert MacBook Pro repair in Dubai for M1-M5 and Intel models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service."
+  },
+  "/macbook-ram-upgrade-dubai": {
+    "title": "MacBook RAM Upgrade Dubai - Honest Limits | Intel Only AED 400",
+    "description": "MacBook RAM upgrade Dubai. Honest answer: M1/M2/M3/M4/M5 RAM is soldered, not upgradeable. Intel MacBook Pro 2012-2015 upgradeable to 16GB. AED 400."
+  },
+  "/macbook-repair-cost-calculator-dubai": {
+    "title": "MacBook Repair Cost Calculator Dubai - Instant Estimate",
+    "description": "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair to see a real starting price in AED, then confirm on WhatsApp. 12-month warranty."
+  },
+  "/macbook-repair-near-me": {
+    "title": "MacBook Repair Near Me Dubai - Free Pickup Across the City",
+    "description": "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706."
+  },
+  "/macbook-safe-mode-repair-dubai": {
+    "title": "MacBook Safe Mode Repair Dubai | MacBook Repair Dubai",
+    "description": "MacBook won't start in safe mode? We run safe mode boot diagnostics in Dubai to isolate software from hardware faults. From AED 150, same day. Free diagnosis."
+  },
+  "/macbook-screen-repair-dubai": {
+    "title": "MacBook Screen Repair Dubai - From AED 780",
+    "description": "MacBook screen repair Dubai from AED 780. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Concord Tower. 055 741 3706."
+  },
+  "/macbook-speaker-repair-dubai": {
+    "title": "MacBook Speaker Repair Dubai - AED 400 | 1 Day | All Models",
+    "description": "MacBook speaker repair Dubai. Blown drivers, distortion, water-damaged speakers, no sound from one side. AED 400, 1 day. Call 055 741 3706."
+  },
+  "/macbook-ssd-upgrade-dubai": {
+    "title": "MacBook SSD Upgrade Dubai - From AED 600 + Drive | Same Day",
+    "description": "MacBook SSD upgrade Dubai. Intel MacBook Pro 2013-2015 NVMe swap up to 2TB. M-series SSDs soldered (no upgrade). Cloning included. AED 600 + drive."
+  },
+  "/macbook-thermal-paste-replacement-dubai": {
+    "title": "MacBook Thermal Paste Replacement Dubai",
+    "description": "MacBook overheating, fans roaring, throttling and shutdowns? We strip old paste, reapply premium compound and clean fans in Dubai. Free diagnosis, 12-month warranty."
+  },
+  "/macbook-touch-bar-repair-dubai": {
+    "title": "MacBook Touch Bar Repair Dubai - AED 600 | Dead Strip Fixed",
+    "description": "MacBook Pro Touch Bar repair Dubai. Dead strip, flickering, half-lit, ghost touches, Touch ID at the end not working. AED 600, 1-2 days. WhatsApp 055 741 3706."
+  },
+  "/macbook-touch-id-repair-dubai": {
+    "title": "MacBook Touch ID Repair Dubai - AED 350 | Fingerprint & Power Button",
+    "description": "MacBook Touch ID repair Dubai. Fingerprint won't enrol, sensor not responding, power button dead. Honest diagnosis on T2 / Apple Silicon pairing. From AED 350, 1-2 days."
+  },
+  "/macbook-trackpad-repair-dubai": {
+    "title": "MacBook Trackpad Repair Dubai - AED 350 | 1 Day | Force Touch Specialists",
+    "description": "MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. AED 350. Call 055 741 3706."
+  },
+  "/macbook-virus-removal-dubai": {
+    "title": "MacBook Virus & Malware Removal Dubai - From AED 250",
+    "description": "MacBook virus, adware, cryptominer, hijacker removal in Dubai from AED 250. Same-day. Free diagnosis, 30-day re-clean guarantee. M1-M5 + Intel. 055 741 3706."
+  },
+  "/macbook-water-damage-repair-dubai": {
+    "title": "MacBook Water Damage Repair Dubai - From AED 700",
+    "description": "MacBook water damage repair Dubai from AED 700. 90% recovery rate under 24 hours. Salt water, coffee, juice. Same-hour emergency pickup. 055 741 3706."
+  },
+  "/macbook-wifi-bluetooth-repair-dubai": {
+    "title": "MacBook Wi-Fi & Bluetooth Repair Dubai - AED 250 | Fast Fix",
+    "description": "MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. From AED 250, 1-2 days, 12-month warranty. Call 055 741 3706."
+  },
+  "/macos-reinstall-dubai": {
+    "title": "macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day",
+    "description": "macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. AED 300, 2-4 hours."
+  },
+  "/onsite-macbook-repair-dubai": {
+    "title": "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
+    "description": "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, 12-month warranty. Call 055 741 3706."
+  },
+  "/out-of-warranty-apple-repair-dubai": {
+    "title": "Out-of-Warranty Apple Repair Dubai - Half the Apple Store Price",
+    "description": "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, 12-month warranty. Call 055 741 3706."
+  },
+  "/pricing": {
+    "title": "MacBook Repair Prices Dubai - Full Price List from AED 330",
+    "description": "Transparent pricing for all Apple repairs in Dubai. MacBook screen from AED 780, battery from AED 590, water damage from AED 910. Free diagnosis. Call 055 741 3706."
+  },
+  "/privacy": {
+    "title": "Privacy Policy - MacBook Repair Dubai",
+    "description": "How MacBook Repair Dubai collects, uses, and protects customer data. UAE PDPL and GDPR compliant. Updated April 2026."
+  },
+  "/refund": {
+    "title": "Refund Policy - MacBook Repair Dubai",
+    "description": "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated April 2026."
+  },
+  "/sell-faulty-macbook-dubai": {
+    "title": "Sell Faulty or Dead MacBook Dubai - We Buy Broken Apple",
+    "description": "Water-damaged, cracked, dead logic board or won't turn on? We buy faulty MacBook, iMac, iPhone & iPad across Dubai. Free valuation, free collection, same-day cash. WhatsApp 055 741 3706."
+  },
+  "/sell-macbook-dubai": {
+    "title": "Sell Your MacBook / Apple Device Dubai - Instant Valuation, Same-Day Cash",
+    "description": "Sell your Mac, iPhone or iPad in Dubai - even if damaged. Free instant valuation, free pickup across Dubai and paid same day. We buy working & faulty devices."
+  },
+  "/terms": {
+    "title": "Terms of Service - MacBook Repair Dubai",
+    "description": "Service terms for repairs at MacBook Repair Dubai: free diagnosis, no-fix-no-charge, parts policy, pricing, and Dubai jurisdiction. Updated April 2026."
   },
   "/top-10-common-macbook-problems-and-how-to-fix-them": {
     "title": "Top 10 Common MacBook Problems and Fixes",
     "description": "The 10 most common MacBook problems in Dubai: won't turn on, battery, screen flicker, overheating, water damage and more, with DIY checks and real prices."
   },
-  "/how-to-choose-the-right-configuration-for-a-macbook": {
-    "title": "How to Choose the Right MacBook Configuration",
-    "description": "Picking a MacBook in Dubai? The honest spec guide: how much RAM and SSD to buy, M-base vs Pro vs Max, Air vs Pro, and the right config for your use case."
+  "/trade-in-macbook-dubai": {
+    "title": "MacBook Trade-In Dubai - Upgrade for Less, Instant Credit",
+    "description": "Trade in your old Mac, iPhone or iPad in Dubai - working or faulty. Free valuation, free collection, same-day cash or instant credit toward a newer model. WhatsApp 055 741 3706."
   },
-  "/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
-    "title": "How to Erase All Data on a Mac Before Selling",
-    "description": "The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
+  "/warranty": {
+    "title": "Warranty Policy - MacBook Repair Dubai",
+    "description": "Warranty of up to 12 months on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026."
   },
-  "/how-to-recover-macbook-password": {
-    "title": "How to Recover a Forgotten MacBook Password",
-    "description": "Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
-  },
-  "/how-to-change-macbook-name": {
-    "title": "How to Change Your MacBook's Name (2026 Guide)",
-    "description": "Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
-  },
-  "/how-to-reset-a-macbook": {
-    "title": "How to Reset a MacBook: Restart, SMC, NVRAM & Factory",
-    "description": "Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
-  },
-  "/how-to-clean-a-macbook-screen": {
-    "title": "How to Clean a MacBook Screen Safely",
-    "description": "Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
-  },
-  "/how-to-clean-macbook-pro-keyboard": {
-    "title": "How to Clean a MacBook Pro Keyboard Safely",
-    "description": "Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
-  },
-  "/how-do-i-reset-passwords-on-my-macbook": {
-    "title": "How to Reset Passwords on a MacBook (2026 Guide)",
-    "description": "Change or reset every password on your MacBook: your login password, another user's, the login Keychain, Apple ID, firmware and Screen Time, step by step."
-  },
-  "/how-to-choose-the-best-apple-laptop-for-gaming": {
-    "title": "Best MacBook for Gaming (2026): Honest Guide",
-    "description": "Picking a MacBook for gaming in 2026? M-base vs Pro vs Max GPU tiers, how much RAM you really need, Air vs Pro thermals, and Game Porting Toolkit."
-  },
-  "/sell-faulty-macbook-dubai": {
-    "title": "Sell Faulty or Dead MacBook Dubai - We Buy Broken Apple",
-    "description": "Water-damaged, cracked, dead logic board or won't turn on? We buy faulty MacBook, iMac, iPhone & iPad across Dubai. Free valuation, free collection, same-day cash. WhatsApp 055 741 3706."
+  "/where-to-repair-macbook-dubai": {
+    "title": "Where to Repair a MacBook in Dubai: Apple vs Independent",
+    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest, priced guide to MacBook repair in Dubai. When each route wins, with real AED prices and a 12-month warranty."
   }
 };

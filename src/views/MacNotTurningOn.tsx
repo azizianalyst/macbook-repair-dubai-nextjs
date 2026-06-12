@@ -44,7 +44,7 @@ export default function MacNotTurningOn() {
         { title: "Quote the fix in writing",     body: "PSU swap, SMC chip replacement, or component-level board work - each has a different price. You see it in writing before any work begins." },
         { title: "Repair + verify",              body: "Component sourced, fitted, board powered on bench, then in chassis, then 24-hour burn-in stress test before you collect." },
       ]}
-      warrantyDays={180}
+      warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on power-supply replacements.",
         "6-month warranty on SMC and component-level board work.",

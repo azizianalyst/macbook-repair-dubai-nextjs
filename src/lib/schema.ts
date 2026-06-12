@@ -2,10 +2,19 @@
 // inject via <script type="application/ld+json">{JSON.stringify(...)}</script>
 
 import { SITE } from "./seo";
+import { NAP, PRICING } from "@/content/site";
 
 export const ORG_ID = `${SITE.url}/#organization`;
 export const BUSINESS_ID = `${SITE.url}/#localbusiness`;
 export const WEBSITE_ID = `${SITE.url}/#website`;
+
+// Entity-consolidation links. The Google Business Profile is named "Azizi Technologies" on
+// Maps and the sister site azizitechnologies.ae ranks for overlapping queries — without an
+// explicit sameAs bridge Google reads them as separate, competing entities and suppresses the
+// head term. Declaring them sameAs (alongside alternateName "Azizi Technologies") tells Google
+// it is ONE business. See SEO recovery plan, Cause 3.
+const GBP_MAPS_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
+const SISTER_SITE = "https://azizitechnologies.ae";
 
 const slugify = (s: string) =>
   s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -17,6 +26,8 @@ export function localBusiness() {
     "@id": BUSINESS_ID,
     name: SITE.name,
     alternateName: "Azizi Technologies",
+    description:
+      "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 215+ Google reviews.",
     image: [
       `${SITE.url}/images/brand/brand-storefront.jpg`,
       `${SITE.url}/images/brand/workshop-wide.jpg`,
@@ -26,18 +37,18 @@ export function localBusiness() {
     url: SITE.url,
     telephone: SITE.phoneE164,
     email: "info@macbook-repair-dubai.ae",
-    priceRange: "AED 49 - AED 3,500",
+    priceRange: `AED ${PRICING.floor} - AED ${PRICING.ceiling.toLocaleString("en-US")}`,
     currenciesAccepted: "AED",
     paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express"],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh",
-      addressLocality: "Dubai Media City",
+      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City",
+      addressLocality: "Dubai",
       addressRegion: "Dubai",
-      addressCountry: { "@type": "Country", name: "AE" },
+      addressCountry: "AE",
     },
     geo: { "@type": "GeoCoordinates", latitude: 25.0978143, longitude: 55.1561949 },
-    hasMap: "https://maps.app.goo.gl/X5easM2GnxoZnqhU7",
+    hasMap: GBP_MAPS_URL,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -46,9 +57,9 @@ export function localBusiness() {
         closes: "22:00",
       },
     ],
-    // NOTE: AggregateRating intentionally NOT here - it would render on every page that uses
-    // localBusiness(). It is scoped to home + /reviews via the prerender (and the aggregateRating()
-    // helper) to avoid sitewide review-snippet spam.
+    // NOTE: AggregateRating NOT here by design — localBusiness() is used on every service/model
+    // page and a sitewide rating would trigger review-snippet spam. Use localBusinessWithRating()
+    // only on home and /reviews where the rating is visible on the page.
     parentOrganization: { "@id": `${SITE.url}/#organization` },
     founder: { "@type": "Organization", name: "Azizi Technologies" },
     foundingDate: "2004-10-10",
@@ -63,6 +74,8 @@ export function localBusiness() {
       { "@type": "City", name: "Fujairah" },
       { "@type": "City", name: "Ras Al Khaimah" },
       { "@type": "City", name: "Umm Al Quwain" },
+      { "@type": "City", name: "Khor Fakkan" },
+      { "@type": "City", name: "Kalba" },
     ],
     knowsLanguage: ["en", "ar", "ur", "hi", "ru", "fr", "de"],
     contactPoint: {
@@ -73,22 +86,49 @@ export function localBusiness() {
       availableLanguage: ["en", "ar", "ru"],
       areaServed: { "@type": "City", name: "Dubai" },
     },
+    // Starting prices — kept in lockstep with PRICING (the same figures the visible
+    // price table + FAQ answers quote). Offers without a visible on-page price carry none.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Apple Repair Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" }, price: "780", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" }, price: "590", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iPhone Screen Repair" }, price: "460", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" }, price: "910", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iMac Screen Repair" }, price: "1040", priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" }, price: String(PRICING.screen.from), priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" }, price: String(PRICING.battery.from), priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" }, price: String(PRICING.waterDamage.from), priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iPhone Screen Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iMac Screen Repair" } },
       ],
     },
-    sameAs: [
-      "https://www.facebook.com/macbookrepairdubai.ae/",
-      "https://www.instagram.com/azizitechnologies/",
-      "https://www.youtube.com/@AziziTechnologies",
-    ],
+    sameAs: [NAP.facebook, NAP.instagram, NAP.youtube, GBP_MAPS_URL, SISTER_SITE],
+  };
+}
+
+// Use ONLY on pages where the aggregate rating is visible (home, /reviews).
+// Nesting the rating inside LocalBusiness is required for Google to associate them
+// as a rich-result eligible entity. localBusiness() omits it intentionally so that
+// pages which embed localBusiness() without a visible rating don't emit misleading markup.
+export function localBusinessWithRating(ratingValue: number, reviewCount: number) {
+  return {
+    ...localBusiness(),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(ratingValue),
+      reviewCount: String(reviewCount),
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+// Parse an ISO-8601 duration ("P1Y", "P6M", "P15D") into a WarrantyPromise.
+// Falls back to 12 months if the string doesn't parse.
+function warrantyPromise(iso: string) {
+  const m = iso.match(/^P(\d+)([DWMY])$/i);
+  if (!m) return { "@type": "WarrantyPromise", durationOfWarranty: { "@type": "QuantitativeValue", value: 12, unitCode: "MON" } };
+  const unitCode = { D: "DAY", W: "WEE", M: "MON", Y: "ANN" }[m[2].toUpperCase()] ?? "DAY";
+  return {
+    "@type": "WarrantyPromise",
+    durationOfWarranty: { "@type": "QuantitativeValue", value: Number(m[1]), unitCode },
   };
 }
 
@@ -98,7 +138,7 @@ export function service(opts: {
   priceMax?: number;
   description?: string;
   url?: string;
-  warranty?: string;     // "P90D"
+  warranty?: string;     // ISO-8601, e.g. "P1Y" · "P6M" · "P15D"
   timeline?: string;     // human readable
   serviceType?: string;
   category?: string;
@@ -126,9 +166,7 @@ export function service(opts: {
           valueAddedTaxIncluded: true,
           description: opts.timeline ? `Starting price. Turnaround: ${opts.timeline}.` : "Starting price.",
         },
-        warranty: opts.warranty
-          ? { "@type": "WarrantyPromise", durationOfWarranty: { "@type": "QuantitativeValue", value: 90, unitCode: "DAY" } }
-          : undefined,
+        warranty: opts.warranty ? warrantyPromise(opts.warranty) : undefined,
       };
 
   return {
@@ -165,7 +203,6 @@ export function reviewSchema(r: {
     datePublished: r.datePublished,
     reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },
     reviewBody: r.body,
-    publisher: { "@type": "Organization", name: "Google" },
   };
 }
 
@@ -203,6 +240,74 @@ export function breadcrumbs(trail: Array<{ name: string; path: string }>) {
       name: t.name,
       item: SITE.url + t.path,
     })),
+  };
+}
+
+// Licensable ImageObject - drives the "Licensable" badge in Google Images and
+// states our reuse terms (free embed WITH a dofollow link credit - see
+// /image-usage-license). Permanently attributes every topic image to us.
+export function licensedImage(opts: { src: string; alt: string; pagePath: string; geo?: boolean; width?: number; height?: number }) {
+  const imageUrl = SITE.url + opts.src;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": `${imageUrl}#image`,
+    contentUrl: imageUrl,
+    url: imageUrl,
+    name: opts.alt,
+    description: opts.alt,
+    // Local-SEO geo anchor: ties the image to the Dubai Media City workshop.
+    ...(opts.geo ? {
+      contentLocation: {
+        "@type": "Place",
+        name: "MacBook Repair Dubai - Concord Tower, Dubai Media City",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Concord Tower, Dubai Media City",
+          addressLocality: "Dubai",
+          addressCountry: "AE",
+        },
+      },
+    } : {}),
+    width: { "@type": "QuantitativeValue", value: opts.width ?? 1600, unitText: "px" },
+    height: { "@type": "QuantitativeValue", value: opts.height ?? 1200, unitText: "px" },
+    license: `${SITE.url}/image-usage-license`,
+    acquireLicensePage: `${SITE.url}/image-usage-license`,
+    creditText: "MacBook Repair Dubai (macbook-repair-dubai.ae)",
+    creator: { "@id": ORG_ID },
+    copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
+    copyrightHolder: { "@id": ORG_ID },
+    representativeOfPage: true,
+    mainEntityOfPage: { "@type": "WebPage", "@id": SITE.url + opts.pagePath },
+    inLanguage: "en-AE",
+  };
+}
+
+export function videoObject(opts: {
+  name: string;
+  description: string;
+  contentUrl: string;   // site-relative, e.g. /videos/foo.mp4
+  thumbnailUrl: string; // site-relative poster jpg
+  uploadDate: string;   // ISO date
+  duration: string;     // ISO 8601, e.g. "PT8S"
+  pagePath?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${SITE.url}${opts.contentUrl}#video`,
+    name: opts.name,
+    description: opts.description,
+    contentUrl: SITE.url + opts.contentUrl,
+    thumbnailUrl: SITE.url + opts.thumbnailUrl,
+    uploadDate: opts.uploadDate,
+    duration: opts.duration,
+    creator: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
+    copyrightHolder: { "@id": ORG_ID },
+    mainEntityOfPage: { "@type": "WebPage", "@id": SITE.url + (opts.pagePath ?? "/") },
+    inLanguage: "en-AE",
   };
 }
 
@@ -306,10 +411,10 @@ export function place(opts: {
     description: opts.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh",
-      addressLocality: "Dubai Media City",
+      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City",
+      addressLocality: "Dubai",
       addressRegion: "Dubai",
-      addressCountry: { "@type": "Country", name: "AE" },
+      addressCountry: "AE",
     },
     geo: { "@type": "GeoCoordinates", latitude: lat, longitude: lng },
     containedInPlace: {
@@ -334,11 +439,7 @@ export function organization() {
       width: 600,
       height: 60,
     },
-    sameAs: [
-      "https://www.facebook.com/macbookrepairdubai.ae/",
-      "https://www.instagram.com/azizitechnologies/",
-      "https://www.youtube.com/@AziziTechnologies",
-    ],
+    sameAs: [NAP.facebook, NAP.instagram, NAP.youtube, GBP_MAPS_URL, SISTER_SITE],
   };
 }
 
@@ -407,13 +508,14 @@ export function speakable(xpaths?: string[]) {
 }
 
 // Convenience: WebPage node that points to the quick-answer block as speakable.
-export function pageWithSpeakable(opts: { url: string; name?: string }) {
+export function pageWithSpeakable(opts: { url: string; name?: string; dateModified?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${opts.url}#webpage`,
     name: opts.name,
     url: opts.url,
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
     publisher: { "@id": ORG_ID },

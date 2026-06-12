@@ -34,6 +34,8 @@ const SERVICE_PAGES = [
 ];
 
 const MODELS = [
+  "iPad Air M4 11\"/13\" (2026)", "iPad Pro 11\"/13\" M5 (2025)", "iPad Air M3 11\"/13\" (2025)", "iPad 11 (2025)",
+  "iPad Pro 11\"/13\" M4 (2024)", "iPad Air M2 11\"/13\" (2024)", "iPad mini 7 (2024)",
   "iPad 10 (2022)", "iPad Pro 12.9\" 6 (2022)", "iPad Pro 11\" 4 (2022)", "iPad Air 5 (2022)", "iPad 9 (2021)",
   "iPad Pro 12.9\" 5 (2021)", "iPad Pro 11\" 3 (2021)", "iPad Air 4 (2020)", "iPad Pro 12.9\" 4 (2020)", "iPad Pro 11\" 2 (2020)",
   "iPad 7 (2019)", "iPad mini 5 (2019)", "iPad Pro 12.9\" 3 (2018)", "iPad Pro 11\" (2018)", "iPad 6 (2018)", "iPad Pro 12.9\" 2 (2017)",
@@ -114,6 +116,8 @@ export default function IPadRepairHub() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/ipad-repair-hub-dubai.jpg"
+        imageAlt="iPad repair Dubai - iPad Pro M5 full teardown exploded-view engineering infographic"
         variant="device"
         tone="dark"
         eyebrow="iPad specialist"

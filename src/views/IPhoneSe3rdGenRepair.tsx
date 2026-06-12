@@ -6,11 +6,11 @@ export default function IPhoneSe3rdGenRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone SE 3rd Gen Repair Dubai - Screen, Battery from AED 250 | 055 741 3706"
-      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, 90-day warranty. Call 055 741 3706."
+      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, 12-month warranty. Call 055 741 3706."
       path="/iphone-se-3rd-gen-repair-dubai"
       eyebrow="iPhone SE (2022)"
       h1="iPhone SE (3rd Gen) Repair Dubai - Screen, Battery, All Repairs"
-      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. From AED 250, same day, 90-day written warranty."
+      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. From AED 250, same day, 12-month written warranty."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone SE 3rd gen (2022) and need help with:"
@@ -19,12 +19,12 @@ export default function IPhoneSe3rdGenRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone SE (3rd gen)", path: "/iphone-se-3rd-gen-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone SE 3rd Gen Repair"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. From AED 250, same day, 90-day warranty.
+            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. From AED 250, same day, 12-month warranty.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone SE 3 (2022)</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -84,9 +84,9 @@ export default function IPhoneSe3rdGenRepair() {
         { title: "Diagnose + replace",           body: "Most jobs done in 30-60 minutes on the bench." },
         { title: "QC + return",                  body: "Functional QC, signed warranty card, free delivery back." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour, in writing.",
+        "12 months on parts and labour, in writing.",
         "Battery: any sudden capacity drop covered.",
         "Screen: ghost-touch, dead pixels, backlight bleed covered.",
         "Touch ID preserved on every screen replacement (we keep your original home button).",
@@ -94,7 +94,7 @@ export default function IPhoneSe3rdGenRepair() {
       faqs={[
         { q: "Will the SE 3 get iOS 19?", a: "Yes, almost certainly. The A15 chip is still in active production (used in the iPhone 14 base model). iOS 19 support is expected." },
         { q: "Does it support Apple Intelligence?", a: "No. Apple Intelligence requires A17 Pro or M-series silicon with 8 GB RAM. The SE 3 has the A15 with 4 GB." },
-        { q: "Genuine Apple screen or OEM?", a: "Both available. Genuine Apple-pull display: AED 420. OEM-grade equivalent LCD: AED 320. Both carry our 90-day warranty." },
+        { q: "Genuine Apple screen or OEM?", a: "Both available. Genuine Apple-pull display: AED 420. OEM-grade equivalent LCD: AED 320. Both carry our 3-month warranty." },
         { q: "Will Touch ID survive a screen swap?", a: "Yes. The Touch ID sensor lives in the home button which is paired to the logic board. We keep your original button and transplant it. No Touch ID loss." },
         { q: "Same day repair?", a: "Yes. WhatsApp by 12 PM for same-day return on screens, batteries, ports, speakers." },
       ]}

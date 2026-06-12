@@ -84,7 +84,7 @@ export default function BlogAppleCareVsIndependent() {
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement from AED 450
             </Link>
-            . Diagnosis is free, the warranty is 90 days written on parts and labour (6 months on
+            . Diagnosis is free, the warranty is 12 months written on parts and labour (6 months on
             batteries), and most jobs are same-day with free pickup across Dubai mainland. You can see
             every service on our{" "}
             <Link to="/pricing" className="text-accent font-semibold hover:underline">
@@ -153,7 +153,7 @@ export default function BlogAppleCareVsIndependent() {
         },
         {
           q: "When is an independent repair cheaper than Apple?",
-          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen repair starts at AED 600 and battery replacement at AED 450, with free diagnosis and a 90-day written warranty. See our pricing page for every service.",
+          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen repair starts at AED 600 and battery replacement at AED 450, with free diagnosis and a 12-month written warranty. See our pricing page for every service.",
         },
         {
           q: "Can you repair an older MacBook Apple says is obsolete?",
@@ -163,7 +163,7 @@ export default function BlogAppleCareVsIndependent() {
       relatedLinks={[
         { label: "AppleCare and MacBook repair", href: "/applecare-macbook-repair-dubai", description: "How third-party repair sits alongside any remaining Apple cover." },
         { label: "Out-of-warranty Apple repair", href: "/out-of-warranty-apple-repair-dubai", description: "Parts tiers and pricing once Apple's warranty ends." },
-        { label: "MacBook screen repair", href: "/macbook-screen-repair-dubai", description: "From AED 600, same-day, 90-day written warranty." },
+        { label: "MacBook screen repair", href: "/macbook-screen-repair-dubai", description: "From AED 600, same-day, 3-month written warranty." },
       ]}
     />
   );

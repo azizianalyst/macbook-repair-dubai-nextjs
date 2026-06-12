@@ -42,7 +42,7 @@ function macbookMeta(m: ModelEntry): Meta {
   const startingPrice = Math.min(p.battery!, p.port!, p.fanCleaning || 9999);
   return {
     title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, keyboard AED ${p.keyboard}. 90-day warranty.`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, keyboard AED ${p.keyboard}. 12-month warranty.`,
   };
 }
 
@@ -51,7 +51,7 @@ function ipadMeta(m: ModelEntry): Meta {
   const startingPrice = Math.min(p.battery!, p.port!);
   return {
     title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, port AED ${p.port}. 90-day warranty. Free pickup.`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, port AED ${p.port}. 12-month warranty. Free pickup.`,
   };
 }
 
@@ -63,7 +63,7 @@ function macDesktopMeta(m: ModelEntry): Meta {
   const startingPrice = candidates.length ? Math.min(...candidates) : p.logicBoard!;
   return {
     title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} repair Dubai. Logic board AED ${p.logicBoard}${p.psu ? `, PSU AED ${p.psu}` : ""}${p.port ? `, port AED ${p.port}` : ""}. 90-day warranty.`,
+    description: `${m.name} repair Dubai. Logic board AED ${p.logicBoard}${p.psu ? `, PSU AED ${p.psu}` : ""}${p.port ? `, port AED ${p.port}` : ""}. 12-month warranty.`,
   };
 }
 
@@ -75,7 +75,7 @@ function imacMeta(m: ModelEntry): Meta {
   const startingPrice = candidates.length ? Math.min(...candidates) : p.screen!;
   return {
     title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} repair Dubai. Screen AED ${p.screen}, logic board AED ${p.logicBoard}${p.powerSupply ? `, PSU AED ${p.powerSupply}` : ""}. 90-day warranty.`,
+    description: `${m.name} repair Dubai. Screen AED ${p.screen}, logic board AED ${p.logicBoard}${p.powerSupply ? `, PSU AED ${p.powerSupply}` : ""}. 12-month warranty.`,
   };
 }
 
@@ -90,14 +90,14 @@ for (const c of CITIES) {
   const collectVerb = c.collectionModel === "pickup" ? "free door-to-door pickup" : "free courier collection";
   MAP[`/macbook-repair-${c.slug}`] = {
     title: `MacBook Repair ${c.city} - Free Collection & Delivery`,
-    description: `MacBook repair in ${c.city} via ${collectVerb} to our Dubai Media City workshop - ${c.turnaround}, 90-day written warranty. No branch needed. Call 055 741 3706.`,
+    description: `MacBook repair in ${c.city} via ${collectVerb} to our Dubai Media City workshop - ${c.turnaround}, 12-month written warranty. No branch needed. Call 055 741 3706.`,
   };
 }
 
 for (const a of AREAS) {
   MAP[`/macbook-repair-${a.slug}`] = {
     title: `MacBook Repair ${a.area} - Free Pickup & Delivery`,
-    description: `MacBook repair in ${a.area} with free pickup & same-day delivery from our Concord Tower workshop. 90-day warranty. Call 055 741 3706.`,
+    description: `MacBook repair in ${a.area} with free pickup & same-day delivery from our Concord Tower workshop. 12-month warranty. Call 055 741 3706.`,
   };
 }
 
@@ -115,15 +115,15 @@ for (const c of CATEGORIES) {
 // or was never written into route-meta.generated.ts. Clean, length-safe values.
 MAP["/reviews"] = {
   title: "MacBook Repair Dubai Reviews - 215+ 5-Star Ratings",
-  description: "Read 215+ verified five-star reviews of MacBook Repair Dubai. 21 years, 40,000+ Apple repairs, free diagnosis and a 90-day warranty on every job.",
+  description: "Read 215+ verified five-star reviews of MacBook Repair Dubai. 21 years, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.",
 };
 MAP["/imac-screen-repair-dubai"] = {
   title: `iMac Screen Repair Dubai - 24" M-Series & 27" 5K`,
-  description: `iMac screen repair Dubai. 24" M1/M2/M3/M4 and 27" Intel 5K Retina. Adhesive removal, dust-free reseal, full calibration. From AED 800.`,
+  description: `iMac screen repair Dubai. 24" M1/M3/M4 and 27" Intel 5K Retina. Adhesive removal, dust-free reseal, full calibration. From AED 800.`,
 };
 MAP["/ipod-touch-7-repair-dubai"] = {
   title: "iPod touch (7th gen) Repair Dubai - Battery & Screen",
-  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Free pickup, free diagnostic, 90-day warranty.",
+  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Free pickup, free diagnostic, 12-month warranty.",
 };
 
 // Intentional OVERRIDES that must beat an existing route-meta.generated.ts entry

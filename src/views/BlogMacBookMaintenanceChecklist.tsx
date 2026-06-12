@@ -192,12 +192,12 @@ export default function BlogMacBookMaintenanceChecklist() {
         },
         {
           q: "Can I open and clean the MacBook myself?",
-          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a 90-day warranty.",
+          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a 12-month warranty.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook cleaning & maintenance", href: "/macbook-cleaning-maintenance-dubai", description: "Full internal clean, thermal check, AED 280 same day." },
-        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450, tier-1 cells, 6-month warranty." },
+        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450, tier-1 cells, 3-month warranty." },
         { label: "MacBook backup service", href: "/macbook-backup-service-dubai", description: "Time Machine set up and verified with a restore test." },
       ]}
     />

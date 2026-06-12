@@ -146,7 +146,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
               { model: "Apple Certified Refurbished", ours: "1 year", apple: "Everything (manufacturer)", note: "Yes - buy at purchase" },
               { model: "Us (workshop refurb)", ours: "12 months", apple: "Battery, screen, logic board, ports, keyboard", note: "Not Apple - our warranty" },
               { model: "Dubizzle individual seller", ours: "Usually none", apple: "-", note: "No" },
-              { model: "Other Dubai resellers (variable)", ours: "30-90 days typical", apple: "Read the fine print", note: "No" },
+              { model: "Other Dubai resellers (variable)", ours: "30-12 months typical", apple: "Read the fine print", note: "No" },
             ]}
           />
 

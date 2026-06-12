@@ -19,7 +19,7 @@ export default function IPhoneAirRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone Air",    path: "/iphone-air-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone Air Repair"
       intro={
         <>
@@ -88,9 +88,9 @@ export default function IPhoneAirRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; back glass + frame work 2-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, MagSafe alignment, USB-C, single camera, frame straightness and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "MagSafe alignment verified to ±0.3 mm tolerance.",
         "Frame work: straightness measured on jig before return.",

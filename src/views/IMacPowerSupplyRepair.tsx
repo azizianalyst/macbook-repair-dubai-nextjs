@@ -45,7 +45,7 @@ export default function IMacPowerSupplyRepair() {
         { title: "Boot and burn-in",           body: "iMac boots, runs through a 2-hour burn-in test (CPU + GPU load) to confirm the new PSU holds voltage under demand." },
         { title: "Reseal and verify",          body: "Fresh adhesive, display refit, overnight cure, final test before pickup." },
       ]}
-      warrantyDays={180}
+      warrantyDays={365}
       warrantyBullets={[
         "6-month warranty on the PSU and the install.",
         "Free swap if the replacement PSU fails inside warranty.",

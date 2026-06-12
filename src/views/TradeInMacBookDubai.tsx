@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -133,6 +134,8 @@ export default function TradeInMacBookDubai() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/trade-in-macbook-dubai")?.src}
+        imageAlt={topicForPath("/trade-in-macbook-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Trade-In & Buyback · Dubai"

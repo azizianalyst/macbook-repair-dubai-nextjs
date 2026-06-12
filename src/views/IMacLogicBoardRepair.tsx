@@ -52,13 +52,13 @@ export default function IMacLogicBoardRepair() {
         { title: "Diagnosis (24 hours)", body: "Power-rail check, scope on the relevant lines, identify the failed component. Open quote, no work without sign-off." },
         { title: "Component-level rework", body: "Failed chip removed under a microscope, pads cleaned, replacement reballed and placed. IR rework station, controlled thermal profile." },
         { title: "Bench burn-in 48 hr", body: "Stress test under load - CPU, GPU, ports, sensors. Catches intermittents before delivery." },
-        { title: "Free delivery + warranty card", body: "Back to you with a written 90-day warranty and a photo log of the work done." },
+        { title: "Free delivery + warranty card", body: "Back to you with a written 12-month warranty and a photo log of the work done." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the specific repair performed and adjacent rails on the same circuit.",
         "Excludes new failures elsewhere on the board (separate fault).",
-        "Free re-work if the same fault returns within 90 days.",
+        "Free re-work if the same fault returns within 12 months.",
       ]}
       comparisonRows={[
         ["Starting price",          "AED 1,300",                          "AED 4,500+ (whole-board swap)"],
@@ -67,7 +67,7 @@ export default function IMacLogicBoardRepair() {
         ["Diagnostic fee",          "Free - refunded if you don't proceed", "AED 250-400 typical"],
         ["Lead time",               "3-5 days standard",                  "1-2 weeks"],
         ["Data on the SSD",         "Untouched on Intel; T2 paired carefully", "Often unit replacement"],
-        ["Warranty",                "90 days written, dated",             "90 days"],
+        ["Warranty",                "12 months written, dated",             "12 months"],
       ]}
       faqs={[
         { q: `Why is component-level repair cheaper than a board swap?`, a: `Because we replace the actual failed part - a USD 5 chip, USD 30 GPU, USD 8 PMIC - instead of the entire USD 800+ logic board. The labour is high (microscope, hot-air station, JTAG) but it still works out at half to a third of board-swap pricing.` },
@@ -76,7 +76,7 @@ export default function IMacLogicBoardRepair() {
         { q: "Will my data be safe during board work?", a: "On 27\" Intel iMacs the SSD is a separate blade - your data is untouched. On T2-equipped models (2018+ Intel and iMac Pro) the SSD is encrypted with the board's secure key, so we have to keep the original board paired to the original SSD. We document this in the work log." },
         { q: "Why does T2 chip work cost more?", a: "T2 repair needs JTAG hardware, a paired backup of the secure enclave, and a much slower diagnostic process. Done wrong, the SSD becomes unreadable forever. The AED 1,800 reflects the time and the equipment, not arbitrary mark-up." },
         { q: "Can you fix an iMac that was already worked on by someone else?", a: "Yes - we see plenty of botched repairs. Diagnostic still free, but we'll document any pre-existing damage (lifted pads, missing components, wrong solder) before quoting. Sometimes the previous attempt limits what's recoverable." },
-        { q: "How long do component-level repairs last?", a: "When done with proper hot-air, controlled profiles and quality replacement parts: as long as the original board would have. We use reballed Apple-spec chips, not aftermarket. The 90-day warranty is paperwork - the actual lifespan is years." },
+        { q: "How long do component-level repairs last?", a: "When done with proper hot-air, controlled profiles and quality replacement parts: as long as the original board would have. We use reballed Apple-spec chips, not aftermarket. The 12-month warranty is paperwork - the actual lifespan is years." },
         { q: "Should I just buy a new iMac instead?", a: "Sometimes yes. If your 2017 iMac needs AED 2,500 of board work and a new screen, we'll tell you straight - a refurbished M3 24\" iMac is a better buy. Honest advice is the foundation of the workshop." },
       ]}
       reviewNames={["joseph manalili", "Shah nawaz", "Ali Hassan"]}

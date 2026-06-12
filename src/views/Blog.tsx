@@ -150,7 +150,7 @@ export default function Blog() {
   useSeo(
     {
       title: "Apple Repair Blog Dubai - Honest Cost Guides",
-      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, 90-day warranty.",
+      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, 12-month warranty.",
       path: "/blog",
     },
     // BreadcrumbList is emitted by the rendered <BreadcrumbTrail> below - don't duplicate it here.

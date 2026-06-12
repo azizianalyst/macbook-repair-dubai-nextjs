@@ -46,10 +46,10 @@ export default function IPadFullDiagnostic() {
         { title: "Pencil + screen forensics", body: "Apple Pencil compatibility test (1, 2, Pro depending on model), screen brightness uniformity, True Tone calibration, original vs aftermarket detection." },
         { title: "Written report", body: "We hand you a one-page summary: what's working, what's borderline, what needs work, the cost in writing. No obligation to repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book afterwards carries our standard 90-day warranty.",
+        "Any repair you book afterwards carries our standard 12-month warranty.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

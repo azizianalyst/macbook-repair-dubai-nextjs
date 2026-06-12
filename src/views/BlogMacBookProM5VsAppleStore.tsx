@@ -11,8 +11,8 @@ export default function BlogMacBookProM5VsAppleStore() {
       path="/blog/macbook-pro-m5-vs-apple-store-repair-cost"
       category="Cost comparison · MacBook"
       h1="MacBook Pro M5 Repair Cost - Us vs Apple Store Dubai"
-      hook="Same MacBook Pro M5 screen repair: Apple Store AED 2,400. Our workshop AED 1,000. Same-quality parts, longer warranty - here's the side-by-side."
-      quickAnswer="A MacBook Pro M5 14″ screen repair in Dubai costs AED 1,000 at MacBook Repair Dubai versus AED 2,400 at Apple Store / AASP. Battery is AED 650 vs AED 1,099. Logic board is AED 1,500 vs AED 4,500+. Same OEM-grade parts, same 90-day warranty (we offer 12 months on batteries)."
+      hook="Same MacBook Pro M5 screen repair: Apple Store AED 2,400. Our workshop AED 1,000. Same-quality parts, transparent pricing - here's the side-by-side."
+      quickAnswer="A MacBook Pro M5 14″ screen repair in Dubai costs AED 1,000 at MacBook Repair Dubai versus AED 2,400 at Apple Store / AASP. Battery is AED 650 vs AED 1,099. Logic board is AED 1,500 vs AED 4,500+. Same OEM-grade parts, same 12-month warranty (we offer 3 months on batteries)."
       author={{ name: "Ali", role: "MacBook Pro repair lead" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -67,8 +67,8 @@ export default function BlogMacBookProM5VsAppleStore() {
               before quoting any major repair. No guesswork.
             </li>
             <li>
-              <strong>Warranty length.</strong> 90 days on parts and labour, written on the
-              invoice. (We offer 12 months on batteries, which Apple doesn't.)
+              <strong>Warranty length.</strong> 12 months on parts and labour, written on the
+              invoice. (We offer 3 months on batteries, which Apple doesn't.)
             </li>
           </ul>
 
@@ -156,7 +156,7 @@ export default function BlogMacBookProM5VsAppleStore() {
         },
         {
           q: "What if your repair fails - what's the warranty process?",
-          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned within 90 days (12 months for batteries), we re-do the repair free. We don't dodge or argue - about 1.2% of our jobs come back, and we honour the warranty on every one.",
+          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned within 12 months (3 months for batteries), we re-do the repair free. We don't dodge or argue - about 1.2% of our jobs come back, and we honour the warranty on every one.",
         },
       ]}
       relatedLinks={[

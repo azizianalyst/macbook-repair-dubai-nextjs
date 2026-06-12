@@ -239,7 +239,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does an ${model.name} screen replacement cost in Dubai?`,
-      a: `${model.size}" Retina display / glass replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 90-day written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue).`,
+      a: `${model.size}" Retina display / glass replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue).`,
     },
     {
       q: isAppleSilicon
@@ -260,7 +260,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       a: isPro
         ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take 5-7 days and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
-          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it for AED ${model.pricing.powerSupply ?? 500}, typically same-day to 2 days, with a 90-day warranty. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
+          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it for AED ${model.pricing.powerSupply ?? 500}, typically same-day to 2 days, with a 12-month warranty. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
           : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Brick replacement same-day; in-chassis PSU is a 1-2 day job.`,
     },
     {
@@ -269,18 +269,18 @@ export default function IMacModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland (we have proper iMac transport cases - never bring a bare iMac to a courier). WhatsApp us a photo and we'll quote within 4 minutes. 90-day written warranty on every job.`,
+      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland (we have proper iMac transport cases - never bring a bare iMac to a courier). WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Screen AED ${model.pricing.screen}, logic board AED ${model.pricing.logicBoard}${model.pricing.powerSupply ? `, PSU AED ${model.pricing.powerSupply}` : ""}. 90-day warranty.`}
+      seoDescription={`${model.name} repair Dubai. Screen AED ${model.pricing.screen}, logic board AED ${model.pricing.logicBoard}${model.pricing.powerSupply ? `, PSU AED ${model.pricing.powerSupply}` : ""}. 12-month warranty.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Logic Board, Power Supply & Upgrades`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 90-day written warranty. Free pickup with proper iMac transport across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup with proper iMac transport across Dubai.`}
       startingPrice={startingPrice}
       timeline={isPro ? "Standard repairs 2-3 days · GPU/CPU 5-7 days (parts)" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
@@ -289,7 +289,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         { name: "iMac Repair", path: "/imac-repair-dubai" },
         { name: model.name,    path: `/${model.slug}` },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iMac board-level repair, Retina display & PSU replacement" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iMac board-level repair, Retina display & PSU replacement" }}
       serviceName={`${model.name} Repair`}
       intro={
         <>
@@ -300,7 +300,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup with proper transport, 90-day written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup with proper transport, 12-month written warranty.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
@@ -440,9 +440,9 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
         { title: "Free pickup or visit our Media City workshop", body: "Free pickup across Dubai mainland with a proper iMac transport case. Or drop in 9am-10pm." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + 90-day warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written 90-day warranty.` },
+        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
@@ -452,7 +452,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickIMacReviewers(slug)}
       related={[
-        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, 90-day warranty." },
+        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, 12-month warranty." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
         { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. AED 500." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },

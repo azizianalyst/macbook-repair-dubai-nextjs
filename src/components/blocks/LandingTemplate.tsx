@@ -661,7 +661,7 @@ export default function LandingTemplate({
         <FinalCTA
           eyebrow="Free diagnosis"
           headline="Book your Apple repair in Dubai today"
-          description="Send your model and a photo of the issue on WhatsApp for a free quote. Free pickup across Dubai mainland, 90-day written warranty."
+          description="Send your model and a photo of the issue on WhatsApp for a free quote. Free pickup across Dubai mainland, 12-month written warranty."
           primary={DEFAULT_PRIMARY}
           secondary={DEFAULT_SECONDARY}
         />

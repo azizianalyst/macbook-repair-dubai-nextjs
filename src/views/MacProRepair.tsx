@@ -127,6 +127,8 @@ export default function MacProRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-pro-repair-dubai.jpg"
+        imageAlt="Mac Pro repair Dubai - tower workstation engineering infographic"
         tone="dark"
         variant="device"
         eyebrow="Mac Pro specialist"
@@ -146,7 +148,7 @@ export default function MacProRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Pro repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs the Mac Pro — 2019 Intel and 2023 M2 Ultra — at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 90-day written warranty, in business since 2004."
+        answer="MacBook Repair Dubai repairs the Mac Pro — 2019 Intel and 2023 M2 Ultra — at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty, in business since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -206,7 +208,7 @@ export default function MacProRepair() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Book an Appointment Today!</h2>
         <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">
-          Looking for an affordable repair solution to address your Mac Pro issues? Don't worry - our service team is here to help you around the clock. Book your appointment now for a free diagnosis, a fixed written quote, and a 90-day warranty on every repair.
+          Looking for an affordable repair solution to address your Mac Pro issues? Don't worry - our service team is here to help you around the clock. Book your appointment now for a free diagnosis, a fixed written quote, and a written warranty of up to 12 months, depending on the repair.
         </p>
         <CallButtons />
       </section>

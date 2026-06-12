@@ -44,13 +44,13 @@ export default function IPadSoftwareReset() {
         { title: "Triage and gentle recovery", body: "Force restart first (button combo), then standard recovery mode. About a third of iPads recover here without data loss." },
         { title: "DFU mode + firmware extract",body: "If standard recovery fails, we enter DFU and attempt to extract user data partition before any erase." },
         { title: "Reinstall iPadOS",           body: "Latest stable iPadOS installed via Apple's signed firmware. We never use modified IPSWs - security and update path stay intact." },
-        { title: "Data restore",               body: "If your iCloud backup is recent, we restore from it. If not, we hand back a clean iPad with iPadOS ready to set up. 90-day warranty on the software work." },
+        { title: "Data restore",               body: "If your iCloud backup is recent, we restore from it. If not, we hand back a clean iPad with iPadOS ready to set up. 12-month warranty on the software work." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the software install and configuration.",
         "Excludes hardware faults uncovered during diagnostic (separate quote).",
-        "Free re-restore within 90 days if iPadOS becomes unstable.",
+        "Free re-restore within 12 months if iPadOS becomes unstable.",
       ]}
       faqs={[
         { q: "Will I lose my data?", a: "We try to preserve it. About 60% of cases we recover the data partition before reinstalling. The remaining 40% need an erase, but if you have an iCloud backup we restore it automatically - you'd lose only changes since the last backup." },

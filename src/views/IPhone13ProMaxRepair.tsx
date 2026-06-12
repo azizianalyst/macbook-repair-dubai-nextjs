@@ -6,7 +6,7 @@ export default function IPhone13ProMaxRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion from AED 350 | 055 741 3706"
-      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, 90-day warranty."
+      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, 12-month warranty."
       path="/iphone-13-pro-max-repair-dubai"
       eyebrow="iPhone 13 Pro Max (2021)"
       h1="iPhone 13 Pro Max Repair Dubai - ProMotion, Battery, LiDAR"
@@ -19,7 +19,7 @@ export default function IPhone13ProMaxRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "iPhone 13 Pro Max", path: "/iphone-13-pro-max-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 13 Pro Max Repair"
       intro={
         <>
@@ -86,9 +86,9 @@ export default function IPhone13ProMaxRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + return",          body: "ProMotion, MagSafe, telephoto, LiDAR and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh covered.",
         "Battery: capacity-drop coverage.",
         "Face ID: full functionality verified before return.",

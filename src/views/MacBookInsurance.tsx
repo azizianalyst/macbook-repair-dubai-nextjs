@@ -4,6 +4,7 @@ import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -31,7 +32,7 @@ const STEPS = [
 
 const WHY = [
   { title: "Repaired in-house since 2004", body: "The same Dubai workshop that has serviced Apple hardware since 2004 handles every covered repair - not a third party you never meet." },
-  { title: "90-day repair warranty", body: "Every repair carried out under your plan is backed by our standard 90-day workmanship warranty on the work performed." },
+  { title: "12-month repair warranty", body: "Every repair carried out under your plan is backed by our standard 12-month workmanship warranty on the work performed." },
   { title: "Free pickup across Dubai", body: "Covered devices are collected and delivered free across Dubai, so a claim does not mean a trip across the city." },
 ];
 
@@ -93,7 +94,7 @@ export default function MacBookInsurance() {
         name: "MacBook Insurance Dubai",
         price: 0,
         timeline: "Annual plan",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: "/macbook-insurance-dubai",
         description:
           "Independent MacBook and Apple laptop insurance in Dubai - accidental damage, liquid damage, screen damage, extended warranty, theft or loss, and custom corporate plans. Priced per device.",
@@ -114,6 +115,8 @@ export default function MacBookInsurance() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/macbook-insurance-dubai")?.src}
+        imageAlt={topicForPath("/macbook-insurance-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="MacBook Insurance · Dubai"
@@ -133,7 +136,7 @@ export default function MacBookInsurance() {
       <QuickAnswer
         tone="dark"
         question="Does MacBook Repair Dubai offer MacBook insurance in Dubai?"
-        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a 90-day written warranty. WhatsApp 055 741 3706 for a plan."
+        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a 12-month written warranty. WhatsApp 055 741 3706 for a plan."
       />
 
       <USPStrip tone="dark" />
@@ -151,7 +154,7 @@ export default function MacBookInsurance() {
           <strong>MacBook Repair Dubai</strong> does more than repair Apple laptops - we offer insurance plans that protect your MacBook from accidental damage, liquid spills, broken screens, hardware failure, and theft or loss. Cover is independent of Apple, handled by the same Dubai workshop that has serviced Apple hardware since 2004. Plans are available for individuals and freelancers, with custom packages for companies running several devices.
         </p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
-          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our 90-day workmanship warranty.
+          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our 12-month workmanship warranty.
         </p>
       </section>
 

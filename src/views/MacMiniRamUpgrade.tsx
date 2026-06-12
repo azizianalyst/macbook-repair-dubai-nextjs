@@ -47,7 +47,7 @@ export default function MacMiniRamUpgrade() {
       warrantyDays={365}
       warrantyBullets={[
         "1-year warranty on the RAM modules themselves.",
-        "90-day warranty on the install workmanship.",
+        "12-month warranty on the install workmanship.",
         "Free swap if a stick fails diagnostics inside warranty.",
       ]}
       faqs={[

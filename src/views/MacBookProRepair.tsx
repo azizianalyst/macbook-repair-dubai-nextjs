@@ -11,9 +11,58 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
-import { useSeo } from "@/hooks/use-seo";
+import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
+import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
 import { NAP } from "@/content/site";
+
+// Per-section blueprint infographics (scripts/topic-images, cluster "device-hubs").
+// This page is the template: every device hub gets the same five slots —
+// hero, models timeline, common repairs, process, failure signs.
+const IMG = {
+  hero: {
+    src: "/images/topics/macbook-pro-repair-hub-dubai.jpg",
+    alt: "MacBook Pro repair Dubai - M5 full teardown exploded-view engineering infographic",
+  },
+  models: {
+    src: "/images/topics/macbook-pro-models-timeline-dubai.jpg",
+    alt: "MacBook Pro models we repair in Dubai - Intel to M5 generation evolution infographic",
+    caption: "Every MacBook Pro generation we service - Intel Touch Bar models through the M5 lineup.",
+  },
+  services: {
+    src: "/images/topics/macbook-pro-common-repairs-dubai.jpg",
+    alt: "MacBook Pro repair services Dubai - screen, battery, keyboard and logic board infographic",
+    caption: "The four MacBook Pro repairs we do most - screen, battery, keyboard and logic board.",
+  },
+  process: {
+    src: "/images/topics/macbook-pro-repair-process-dubai.jpg",
+    alt: "MacBook Pro repair process Dubai - diagnosis to quality check four-step infographic",
+    caption: "From free diagnosis to final quality check - how your MacBook Pro repair runs.",
+  },
+  signs: {
+    src: "/images/topics/macbook-pro-failure-signs-dubai.jpg",
+    alt: "Signs your MacBook Pro needs repair - overheating, battery and screen failure infographic",
+    caption: "Overheating, swollen battery, screen faults and no-power - the failure signs we diagnose daily.",
+  },
+};
+
+function TopicFigure({ img }: { img: { src: string; alt: string; caption: string } }) {
+  return (
+    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border bg-bg-card">
+      <ResponsiveImage
+        src={img.src}
+        alt={img.alt}
+        width={1600}
+        height={1200}
+        sizes="(max-width: 414px) 360px, (max-width: 1068px) 800px, 860px"
+        imgClassName="w-full h-auto"
+      />
+      <figcaption className="border-t border-border px-lg py-3 text-center text-[13px] text-text-muted">
+        {img.caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 const SIBLINGS = [
   { label: "MacBook Air", href: "/macbook-air-repair-dubai" },
@@ -80,7 +129,7 @@ const SERVICES = [
 
 const PROCESS = [
   { title: "Transparent Quote", body: "As soon as we find out the problem, we'll give you a clear breakdown of the issue and a price quote for fixing it. Parts and labour costs will be part of this price. The repair is completely transparent, and you decide whether to proceed." },
-  { title: "Repair Process", body: "If you agree to the price, our expert technicians will start the repair. They will only use original Apple parts or the best parts available. We value fast turnaround times, and your MacBook Pro might be fixed the same day depending on the repair." },
+  { title: "30-Minute Appointment Repair", body: "Pre-book a slot and confirm the part for your exact MacBook Pro model. Screen, battery, or keyboard done in 30 minutes guaranteed — or the repair is free. Walk-ins are same-day, booked appointments are 30 minutes." },
   { title: "Quality Check and Safeguarding of Data", body: "After fixing your MacBook Pro, our techs will test it carefully to make sure everything is working right. We care about keeping your personal information safe and private throughout the process." },
 ];
 
@@ -144,10 +193,11 @@ function CallButtons() {
 export default function MacBookProRepair() {
   useSeo(
     {
-      title: "MacBook Pro Repair Dubai - M1-M4 Screen, Battery & Logic Fix",
+      title: "MacBook Pro Repair Dubai - M1-M5 Screen, Battery & Logic Fix",
       description:
-        "Expert MacBook Pro repair in Dubai for M1, M2, M3 & M4 models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service.",
+        "Expert MacBook Pro repair in Dubai for M1-M5 and Intel models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service.",
       path: "/macbook-pro-repair-dubai",
+      preloadImage: preloadFromHero(IMG.hero.src),
     },
     [localBusiness(), organization()],
   );
@@ -160,10 +210,12 @@ export default function MacBookProRepair() {
         tone="dark"
         eyebrow="MacBook Pro specialist"
         title="Best Quality MacBook Pro Repair Dubai"
-        subtitle="Apple has dominated the market with the MacBook series. Like other Apple devices, the MacBook Pro is known for its high quality, elegant design, and portability. Even the best technology can malfunction from time to time - that's when our Apple-authorized service centre steps in. Contact us today."
+        subtitle="Apple has dominated the market with the MacBook series. Like other Apple devices, the MacBook Pro is known for its high quality, elegant design, and portability. Even the best technology can malfunction from time to time - that's when our independent Apple specialists step in. We're not an Apple Authorised Service Centre - we're the faster, fairer-priced alternative, in Dubai since 2004. Contact us today."
+        image={IMG.hero.src}
+        imageAlt={IMG.hero.alt}
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Apple-authorized service centre</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Independent Apple specialists</span>
           <span>·</span>
           <span>Genuine Apple parts</span>
           <span>·</span>
@@ -175,7 +227,7 @@ export default function MacBookProRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my MacBook Pro repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every MacBook Pro — 13-inch, 14-inch and 16-inch, Intel through M5 — at its Concord Tower workshop in Dubai Media City. Same-day screen, battery, keyboard, logic-board and water-damage service, with free diagnosis, free citywide pickup, genuine or OEM-grade parts and a 90-day written warranty, in business since 2004."
+        answer="MacBook Repair Dubai repairs every MacBook Pro — 13-inch, 14-inch and 16-inch, Intel through M5 — at its Concord Tower workshop in Dubai Media City. Same-day screen, battery, keyboard, logic-board and water-damage service, with free diagnosis, free citywide pickup, genuine or OEM-grade parts and a 12-month written warranty, in business since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -228,6 +280,7 @@ export default function MacBookProRepair() {
               </article>
             ))}
           </div>
+          <TopicFigure img={IMG.services} />
           <div className="mt-lg"><CallButtons /></div>
         </div>
       </section>

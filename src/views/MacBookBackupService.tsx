@@ -46,11 +46,11 @@ export default function MacBookBackupService() {
         { title: "Verify integrity", body: "We open the backup and check files actually opened - photos, documents, mail. A backup that won't restore is no backup." },
         { title: "Same-day return", body: "Most jobs go back the same day with a short note on how the backup runs and how to restore if you ever need to." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day warranty on the backup setup and any scheduling we configure.",
+        "12-month warranty on the backup setup and any scheduling we configure.",
         "Your data stays confidential - we don't browse, copy or keep anything beyond the job.",
-        "Free re-check inside 90 days if a scheduled backup stops running.",
+        "Free re-check inside 12 months if a scheduled backup stops running.",
       ]}
       faqs={[
         { q: "How much is a MacBook backup service in Dubai?", a: "It starts at AED 150 for Time Machine setup with a verified first backup. Data migration to a new Mac is usually the same band; a full pre-repair backup is included free when we're already repairing the machine. We quote on WhatsApp once you tell us how much data and where it's going." },

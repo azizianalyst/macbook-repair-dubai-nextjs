@@ -19,7 +19,7 @@ export default function IPhone17Repair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 17",     path: "/iphone-17-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 17 Repair"
       intro={
         <>
@@ -87,9 +87,9 @@ export default function IPhone17Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Camera Control 2-3 days for parts." },
         { title: "QC + return",          body: "ProMotion, AOD, Wi-Fi 7, Camera Control gestures, USB-C and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Wi-Fi 7: confirmed connectivity at 6 GHz tested before return.",
         "Battery: capacity-drop coverage.",

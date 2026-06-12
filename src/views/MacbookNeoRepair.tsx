@@ -10,7 +10,7 @@ export default function MacbookNeoRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Neo Repair Dubai - A18 Pro Budget MacBook from AED 250 | 055 741 3706"
-      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. 90-day warranty. Free pickup."
+      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. 12-month warranty. Free pickup."
       path="/macbook-neo-repair-dubai"
       eyebrow="MacBook Neo · March 2026 · current Apple lineup · $599 entry-level"
       h1="MacBook Neo Repair Dubai - Apple's First A-Chip MacBook"
@@ -23,7 +23,7 @@ export default function MacbookNeoRepair() {
         { name: "MacBook Repair", path: "/" },
         { name: "MacBook Neo",    path: "/macbook-neo-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "MacBook & A-chip board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook & A-chip board-level repair" }}
       serviceName="MacBook Neo Repair"
       intro={
         <>
@@ -157,9 +157,9 @@ export default function MacbookNeoRepair() {
         { title: "WhatsApp the model and issue",  body: "Send \"MacBook Neo\" plus a photo. Quote in 4 minutes." },
         { title: "Free pickup or visit our Media City workshop",  body: "Free pickup across Dubai mainland or drop in 9am-10pm." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts. We'll always show you whether the repair makes financial sense at the $599 price point." },
-        { title: "Repair + 90-day warranty",      body: "Most repairs ready in 3-5 days while parts supply ramps. You walk out with a written 90-day warranty." },
+        { title: "Repair + written warranty",      body: "Most repairs ready in 3-5 days while parts supply ramps. You walk out with a written warranty of up to 12 months, depending on the repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
@@ -173,7 +173,7 @@ export default function MacbookNeoRepair() {
         },
         {
           q: "How much does a MacBook Neo screen replacement cost?",
-          a: "12.9-inch Liquid Retina screen replacement on the MacBook Neo is AED 650. Timeline 3-5 days while parts supply ramps. Includes a 90-day written warranty.",
+          a: "12.9-inch Liquid Retina screen replacement on the MacBook Neo is AED 650. Timeline 3-5 days while parts supply ramps. Includes a 3-month written warranty.",
         },
         {
           q: "Can I upgrade the RAM or SSD on the MacBook Neo?",
@@ -185,7 +185,7 @@ export default function MacbookNeoRepair() {
         },
         {
           q: "Where can I get my MacBook Neo repaired in Dubai?",
-          a: "Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. 90-day written warranty on every job.",
+          a: "Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.",
         },
       ]}
       reviewNames={["Saeed Alam", "Polycarp"]}

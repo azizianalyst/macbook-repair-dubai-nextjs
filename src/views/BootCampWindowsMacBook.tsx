@@ -46,7 +46,7 @@ export default function BootCampWindowsMacBook() {
         { title: "Install", body: "Boot Camp Assistant on Intel; Parallels / VMware on Apple Silicon. Windows ISO downloaded direct from Microsoft." },
         { title: "Drivers + workload check", body: "Apple driver pack on Intel. Performance tune on virtualisation path. Verify your specific apps run." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the install and initial driver / virtualisation setup.",
         "Excludes future Windows updates breaking things.",

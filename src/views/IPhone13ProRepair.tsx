@@ -6,7 +6,7 @@ export default function IPhone13ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Repair Dubai - 120Hz ProMotion from AED 300 | 055 741 3706"
-      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, 90-day warranty."
+      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, 12-month warranty."
       path="/iphone-13-pro-repair-dubai"
       eyebrow="iPhone 13 Pro (2021)"
       h1="iPhone 13 Pro Repair Dubai - ProMotion OLED, Battery, LiDAR"
@@ -19,7 +19,7 @@ export default function IPhone13ProRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 13 Pro", path: "/iphone-13-pro-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 13 Pro Repair"
       intro={
         <>
@@ -86,9 +86,9 @@ export default function IPhone13ProRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + return",          body: "ProMotion, MagSafe, telephoto, LiDAR and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh covered.",
         "Battery: capacity-drop coverage.",
         "Face ID: full functionality verified before return.",

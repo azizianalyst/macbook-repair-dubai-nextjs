@@ -46,11 +46,11 @@ export default function MacBookRamUpgrade() {
         { title: "Install + verify", body: "Bottom case off, modules swapped, About This Mac confirms new total. Memtest86 verification 30 minutes." },
         { title: "Macs Fan Control sanity check", body: "Confirm thermals are normal with the new modules under load. Sign-off." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the RAM module installation and compatibility.",
         "Module manufacturer's lifetime warranty applies separately.",
-        "Free swap if the modules fail memtest within 90 days.",
+        "Free swap if the modules fail memtest within 12 months.",
       ]}
       faqs={[
         { q: "Why can't M1 / M2 / M3 / M4 / M5 RAM be upgraded?", a: "Apple integrates the RAM directly into the SoC package - it's not separate chips on a socket, it's silicon dies bonded to the same substrate as the CPU. There is physically no way to upgrade without replacing the entire SoC, which is impossible. Plan capacity at purchase." },

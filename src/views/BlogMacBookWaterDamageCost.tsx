@@ -132,7 +132,7 @@ export default function BlogMacBookWaterDamageCost() {
           </p>
           <p>
             <strong>Credit card purchase protection</strong> - if you bought the MacBook in the
-            past 90 days on Visa Signature / Infinite or Mastercard World Elite, you may be
+            past 12 months on Visa Signature / Infinite or Mastercard World Elite, you may be
             covered. Check the card terms.
           </p>
 

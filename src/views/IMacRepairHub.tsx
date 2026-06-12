@@ -27,7 +27,7 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
-  `iMac 27" M4 (2024)`, `A3335 27" M3 (2024)`, `A2438 24" M2 (2023)`, `A2438 24" M2 (2022)`,
+  `24" M4 (2024)`, `24" M3 (2023)`,
   `A2438 24" M1 (2021)`, `A2116 21.5" Intel (2020)`, `A2115 27" Intel (2020)`, `A2116 21.5" Intel (2019)`,
   `A2115 27" Intel (2019)`, `iMac Pro A1862 (2019)`, `A1418 21.5" Intel (2018)`, `A1419 27" Intel (2018)`,
   `A1419 27" Intel (2017)`, `A1418 21.5" Intel (2017)`, `iMac Pro A1862 (2017)`, `A1419 27" Intel (2016)`,
@@ -102,9 +102,9 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "How long will the iMac repair take?", a: "iMac battery replacement, display replacement, and camera replacement take 3-4 hours. When parts are not available, it typically takes 1-2 business days to receive them from Apple. You can pre-book your repair to receive premium services." },
+  { q: "How long will the iMac repair take?", a: "iMac display, power supply, and camera replacements take 3-4 hours. When parts are not in stock, it typically takes 1-2 business days to receive them from our suppliers. You can pre-book your repair to receive premium services." },
   { q: "Will the iMac repair process remove my data?", a: "Our professionals do not remove data unless the repair necessitates it. We always advise customers to keep a backup at all times." },
-  { q: "Will repairing my iMac impact my warranty?", a: "No, repairing your iMac through Apple or an Authorized Repair Service Center would not void your existing warranty. However, attempting to fix the device yourself or taking it to an unlicensed repair facility may void your warranty." },
+  { q: "Will repairing my iMac impact my warranty?", a: "We are independent Apple specialists, not an Apple Authorised Service Centre - so if your iMac is still under Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple first, since a covered repair there keeps your Apple warranty intact. For out-of-warranty iMacs there's nothing left to void, and every repair we do is backed by our own 12-month written warranty." },
   { q: "Can you fix any model of iMac?", a: "Yes, we repair all iMac models, from older Intel-based systems to the latest M4-powered iMacs. Our technicians handle both hardware and software issues for 21.5-inch, 24-inch, and 27-inch versions, including iMac Pro." },
   { q: "Do you offer on-site iMac repair in Dubai?", a: "Absolutely! For your convenience, we provide on-site iMac repair and troubleshooting. Our technicians can come to your home or office to perform diagnostics or minor repairs, ensuring minimal downtime for your work." },
   { q: "Do you offer free diagnostics for iMac repairs?", a: "Yes, we offer free diagnostics and inspection before starting any repair. Once the issue is identified, we'll share a transparent quote outlining the cost and time required - no hidden fees, no surprises." },
@@ -138,6 +138,8 @@ export default function IMacRepairHub() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/imac-repair-hub-dubai.jpg"
+        imageAlt="iMac repair Dubai - 24-inch M4 all-in-one teardown exploded-view engineering infographic"
         variant="device"
         tone="dark"
         eyebrow="iMac specialist"

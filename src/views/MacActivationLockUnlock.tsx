@@ -47,7 +47,7 @@ export default function MacActivationLockUnlock() {
         { title: "Apple liaison submission", body: "Documents go through Apple's proper channel - Apple ID recovery, the Activation Lock support request, or Apple's firmware-password removal process for eligible Intel Macs." },
         { title: "Apple-side processing & activation", body: "Apple controls the timeline. When they approve, we activate the Mac on the bench, sign you into a fresh Apple ID, and confirm Find My is off." },
       ]}
-      warrantyDays={30}
+      warrantyDays={0}
       warrantyBullets={[
         "Service fee refunded if Apple refuses the unlock despite legitimate, complete documentation.",
         "No-fix-no-charge on eligibility checks where a path turns out not to exist.",

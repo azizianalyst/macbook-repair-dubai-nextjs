@@ -8,8 +8,8 @@ import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
-import { reviewSchema, aggregateRating, localBusiness, organization } from "@/lib/schema";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { reviewSchema, localBusinessWithRating, organization } from "@/lib/schema";
+import { REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 
 const SERVICE_FILTERS: ReadonlyArray<"All" | ReviewService> = [
   "All", "MacBook", "iMac", "iPhone", "iPad", "Water Damage", "Battery", "Screen",
@@ -71,10 +71,9 @@ export default function Reviews() {
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
-      {/* Server-rendered JSON-LD: business + organization + AggregateRating (star rating) + Review nodes */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
+      {/* Server-rendered JSON-LD: business (with rating nested) + organization + Review nodes */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT })) }} />
       {reviewSchemas.map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}

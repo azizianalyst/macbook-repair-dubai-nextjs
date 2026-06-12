@@ -210,7 +210,7 @@ export default function GuideCleanMacBookKeyboard() {
         },
         {
           q: "How much does MacBook keyboard repair cost in Dubai?",
-          a: "MacBook keyboard repair starts from AED 350, covering individual keycaps or a full keyboard assembly. We run a free diagnostic first, offer free pickup across Dubai, and back the work with a 90-day warranty. Water damage repair, if a spill got inside, starts from AED 700.",
+          a: "MacBook keyboard repair starts from AED 350, covering individual keycaps or a full keyboard assembly. We run a free diagnostic first, offer free pickup across Dubai, and back the work with a 15-day warranty. Water damage repair, if a spill got inside, starts from AED 700.",
         },
         {
           q: "How often should I clean my MacBook keyboard?",
@@ -218,7 +218,7 @@ export default function GuideCleanMacBookKeyboard() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky, or repeating keys fixed from AED 350 with a 90-day warranty." },
+        { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky, or repeating keys fixed from AED 350 with a 15-day warranty." },
         { label: "MacBook water damage repair Dubai", href: "/macbook-water-damage-repair-dubai", description: "Spilled something? Free pickup and proper internal cleaning before corrosion sets in." },
         { label: "MacBook trackpad repair Dubai", href: "/macbook-trackpad-repair-dubai", description: "Sticky clicks that turn out to be the trackpad rather than the keyboard." },
       ]}

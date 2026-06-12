@@ -65,7 +65,7 @@ const PROCESS = [
   { title: "48-hour drying + bench test",
     body: "Drying cabinet at 35 °C for 48 hours. Then powered up on bench supply with current monitor - looking for the corrosion-induced shorts that don't show in cold inspection." },
   { title: "Re-assembly + 7-day soak test + handover",
-    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with the 90-day warranty." },
+    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with the 12-month warranty." },
 ];
 
 const FAQS: FAQ[] = [
@@ -88,8 +88,8 @@ const FAQS: FAQ[] = [
   { q: "Will my AppleCare warranty cover water damage?",
     a: "AppleCare+ covers two accidental damage incidents per year with a service fee of AED 379 (MacBook Air) or AED 999 (MacBook Pro), per Apple's UAE published rates. Standard AppleCare and the 1-year limited warranty do not cover liquid damage. If you have AppleCare+ and are within the incident limit, Apple is usually the better route for full board replacement. The workshop is the right call when AppleCare+ has been used up or the device is out of warranty." },
   { q: "What's the warranty on water damage repair?",
-    a: "90 days written warranty on the repair work and any parts fitted. Covers the specific repair completed (e.g. if a corroded keyboard was replaced, that keyboard is warrantied). Does not cover new corrosion appearing in a different area months later - corrosion is unpredictable, and a second spill is a new ticket." },
-  { q: "Can you fix water damage on M1, M2, M3, M4 MacBooks?",
+    a: "12 months written warranty on the repair work and any parts fitted. Covers the specific repair completed (e.g. if a corroded keyboard was replaced, that keyboard is warrantied). Does not cover new corrosion appearing in a different area months later - corrosion is unpredictable, and a second spill is a new ticket." },
+  { q: "Can you fix water damage on M1, M2, M3, M4, M5 MacBooks?",
     a: "Yes - Apple Silicon water damage is roughly 50% of the workshop's water tickets in 2024-2025. The component-level repair process is the same: ultrasonic clean, microscope inspection, replacement of corroded chips. Recovery rate is comparable to Intel. Data recovery on Apple Silicon is harder due to the bonded SSD, so a Time Machine backup taken before the spill is hugely valuable." },
   { q: "Do you offer free emergency pickup for water damage?",
     a: "Yes. WhatsApp 055 741 3706 - same-hour free pickup across Dubai mainland for liquid damage cases (this is faster than the standard same-day pickup). Driver arrives in a sealed plastic case with absorbent material to keep the MacBook stable in transit." },
@@ -132,7 +132,7 @@ export default function MacBookWaterDamageRepair() {
         name: "MacBook Water Damage Repair Dubai",
         price: 700,
         timeline: "1 to 5 days",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/macbook-water-damage-repair-dubai",
         description:
           "MacBook liquid and water damage repair in Dubai. Ultrasonic cleaning, corrosion removal, component-level board work. Salt water, coffee, juice. 90% recovery rate under 24 hours.",
@@ -144,6 +144,8 @@ export default function MacBookWaterDamageRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/real/lab/macbook-full-internals-dubai.jpg"
+        imageAlt="MacBook water damage repair Dubai - bottom case removed showing the full internals during a water-damage repair"
         variant="service"
         tone="dark"
         eyebrow="MacBook water damage repair"
@@ -317,7 +319,7 @@ export default function MacBookWaterDamageRepair() {
             </h2>
             <div className="border border-border bg-bg-card rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
-                <li><strong>90 days</strong> - written warranty on the repair work and any parts fitted.</li>
+                <li><strong>12 months</strong> - written warranty on the repair work and any parts fitted.</li>
                 <li><strong>Covered:</strong> the specific corrosion repair completed, replacement parts (keyboard, battery, chips), the soak-test result.</li>
                 <li><strong>Not covered:</strong> new corrosion in a different area, a second spill (new ticket), pre-existing damage unrelated to the spill.</li>
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo. Same-day collection, free of charge.</li>
@@ -421,7 +423,7 @@ export default function MacBookWaterDamageRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-water-damage-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-water-damage-repair-dubai" />

@@ -44,7 +44,7 @@ export default function MacOsReinstallDesktop() {
         { title: "Clean install",              body: "Erase the volume in Disk Utility (APFS), install macOS, set up baseline preferences." },
         { title: "Restore data + apps",        body: "Migration Assistant brings back documents, photos, mail, settings and most apps from your backup. We help with the things Migration Assistant misses." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day support window - if the install has issues, we re-do it free.",
         "We confirm the OS boots cleanly and apps run before you collect.",

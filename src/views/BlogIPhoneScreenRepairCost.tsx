@@ -12,7 +12,7 @@ export default function BlogIPhoneScreenRepairCost() {
       category="Cost guide · iPhone"
       h1="iPhone Screen Repair Cost in Dubai 2026 - Every Model"
       hook="iPhone screens crack. The price to fix one ranges from AED 350 to AED 1,400 in Dubai depending on your model - here is the full breakdown for every iPhone Apple has shipped since 2014."
-      quickAnswer="iPhone screen repair in Dubai costs AED 350-1,400 in April 2026. Older LCD models (6 to 8 Plus) are AED 350-500. OLED models from iPhone X onward are AED 600-1,400. Most repairs are same-day with a 90-day written warranty."
+      quickAnswer="iPhone screen repair in Dubai costs AED 350-1,400 in April 2026. Older LCD models (6 to 8 Plus) are AED 350-500. OLED models from iPhone X onward are AED 600-1,400. Most repairs are same-day with a 3-month written warranty."
       author={{ name: "Usman", role: "Senior iPhone screen technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -23,7 +23,7 @@ export default function BlogIPhoneScreenRepairCost() {
           <h2>The full iPhone screen repair price list - April 2026 Dubai</h2>
           <p>
             Below is every iPhone we currently service. Prices include the screen part, labour,
-            calibration, and a 90-day written warranty. No diagnostic fee.
+            calibration, and a 3-month written warranty. No diagnostic fee.
           </p>
           <BlogPriceTable
             caption="iPhone screen repair pricing - MacBook Repair Dubai, April 2026"
@@ -138,7 +138,7 @@ export default function BlogIPhoneScreenRepairCost() {
             <li>Face ID / Touch ID continuity test</li>
             <li>Original front camera, earpiece speaker, and ambient sensor transferred to the new panel</li>
             <li>Fresh waterproof adhesive seal around the perimeter</li>
-            <li>90-day written warranty on parts and labour</li>
+            <li>3-month written warranty on parts and labour</li>
           </ul>
 
           <h2>iPhone screen repair Dubai - us vs Apple Store comparison</h2>
@@ -149,7 +149,7 @@ export default function BlogIPhoneScreenRepairCost() {
               { model: "Price",            ours: "AED 1,400", apple: "AED 1,899" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days (parts via DXB)" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You travel to Dubai Mall / Mall of Emirates" },
-              { model: "Warranty",         ours: "90 days written", apple: "90 days (Apple)" },
+              { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
               { model: "Diagnostic fee",   ours: "Free",      apple: "Free if covered by AppleCare+, otherwise included in repair quote" },
               { model: "Genuine Apple part", ours: "On request (+AED 350)", apple: "Always" },
             ]}
@@ -200,7 +200,7 @@ export default function BlogIPhoneScreenRepairCost() {
         },
         {
           q: "Do you give a warranty on screen repairs?",
-          a: "90 days written, dated and signed on the invoice, on parts and labour. If the same fault returns inside the window, we re-do the repair free. We do not cover new physical damage (a fresh drop after our repair).",
+          a: "3 months written, dated and signed on the invoice, on parts and labour. If the same fault returns inside the window, we re-do the repair free. We do not cover new physical damage (a fresh drop after our repair).",
         },
       ]}
       relatedLinks={[

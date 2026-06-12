@@ -170,7 +170,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             supplier as Apple, with our own quality-control inspection of every panel under
             microscope before installation. We calibrate via Apple System Configuration so True
             Tone works correctly. We use a microscope and proper flex tools to transfer the
-            original Face ID, earpiece, and ambient light components. 90-day written warranty.
+            original Face ID, earpiece, and ambient light components. 3-month written warranty.
           </p>
           <p>
             For customers who want the absolute best - we offer genuine Apple panels through our

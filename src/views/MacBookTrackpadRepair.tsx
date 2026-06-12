@@ -46,11 +46,11 @@ export default function MacBookTrackpadRepair() {
         { title: "Swap the trackpad", body: "Disconnect, replace with the correct part for your model, transfer brackets, recalibrate force." },
         { title: "Bench QC", body: "Verify click consistency across all four corners, all gestures, Force Touch, and palm rejection." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers trackpad, click mechanism and Force Touch electronics.",
         "Excludes new physical damage (drops, fresh impact).",
-        "Free re-fit if click feel changes inside 90 days.",
+        "Free re-fit if click feel changes inside 12 months.",
       ]}
       faqs={[
         { q: "How can I tell if it's the trackpad or the battery underneath?", a: "Look for the trackpad sitting flush with the palm rest (vs. raised even slightly). Run coconutBattery - if your battery is showing swelling indicators or 100%+ original capacity, that's a swollen cell. We check both at intake - no charge." },
@@ -63,7 +63,7 @@ export default function MacBookTrackpadRepair() {
       reviewNames={["Saeed Alam", "Polycarp", "Mariia Chymyrysova"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",              description: "Parent hub - all MacBook services." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first. From AED 350." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first. From AED 450." },
         { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",       description: "Sister input fault. Same-day on most models." },
       ]}
       blogLink={{ label: "How a swollen MacBook battery breaks your trackpad", href: "/blog/macbook-battery-replacement-cost-2026" }}

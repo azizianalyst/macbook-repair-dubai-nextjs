@@ -32,18 +32,18 @@ const PICKUP_AREAS = [
 ];
 
 // AEO answer capsule + FAQs (FAQPage schema via FAQAccordion injectSchema). Figures kept
-// consistent with the homepage FAQ (since 2004, 90-day warranty, free pickup, OEM/genuine parts).
+// consistent with the homepage FAQ (since 2004, 12-month warranty, free pickup, OEM/genuine parts).
 const HUB_QA = {
   question: "Where can I get my Mac repaired in Dubai?",
   answer:
-    "MacBook Repair Dubai repairs every Mac — MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5 — at its Concord Tower workshop in Dubai Media City. Services cover screen, battery, SSD, logic-board and water-damage repair, with free diagnosis, free citywide pickup, OEM parts and a 90-day written warranty, in business since 2004.",
+    "MacBook Repair Dubai repairs every Mac — MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5 — at its Concord Tower workshop in Dubai Media City. Services cover screen, battery, SSD, logic-board and water-damage repair, with free diagnosis, free citywide pickup, OEM parts and a 12-month written warranty, in business since 2004.",
 };
 
 const HUB_FAQS: FAQ[] = [
   { q: "How much does Mac repair cost in Dubai?", a: "Mac repair at MacBook Repair Dubai is priced by the fault and model, after a free diagnosis. As a guide, screen repair starts from AED 600, battery replacement from AED 450, and component-level logic board repair from AED 800. The exact price is confirmed in writing on WhatsApp before any work begins, and all prices are VAT-inclusive." },
   { q: "Which Mac models do you repair?", a: "MacBook Repair Dubai services every Mac: MacBook Air and MacBook Pro (11\", 13\", 14\", 15\", 16\"), iMac, Mac mini, Mac Studio and Mac Pro. This covers Intel, M1, M2, M3, M4 and M5 chips, plus models Apple lists as vintage or obsolete, since 2004." },
   { q: "How long does a Mac repair take?", a: "Most Mac repairs are same-day. Screen and battery jobs finish in about 2 to 4 hours, while logic board and water-damage work takes 3 to 5 days because it includes a burn-in test. WhatsApp the model to 055 741 3706 for a confirmed timeline." },
-  { q: "Do you use genuine Apple parts for Mac repair?", a: "MacBook Repair Dubai uses genuine Apple parts where available and A-grade OEM-spec parts where they are not, and labels which your repair uses on the WhatsApp quote before work starts. Every Mac repair carries a 90-day written warranty on parts and labour." },
+  { q: "Do you use genuine Apple parts for Mac repair?", a: "MacBook Repair Dubai uses genuine Apple parts where available and A-grade OEM-spec parts where they are not, and labels which your repair uses on the WhatsApp quote before work starts. Every Mac repair carries a 12-month written warranty on parts and labour." },
   { q: "Do you offer free pickup and delivery for Mac repair in Dubai?", a: "Yes. MacBook Repair Dubai offers free pickup and delivery anywhere on Dubai mainland, with same-hour collection for liquid-damage emergencies. WhatsApp 055 741 3706 and a courier is usually with you within a couple of hours, or visit the Concord Tower workshop in Dubai Media City." },
   { q: "Can you repair a Mac that is out of warranty or bought abroad?", a: "Yes. MacBook Repair Dubai is an independent Apple specialist and repairs out-of-warranty Macs and units bought anywhere in the world at the same prices, since the repair does not depend on local Apple warranty status. Component-level board repair Apple does not offer is available from AED 800." },
 ];
@@ -84,6 +84,8 @@ export default function MacRepairHub() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-repair-hub-dubai.jpg"
+        imageAlt="Mac repair Dubai - complete Apple Mac family lineup engineering infographic"
         variant="device"
         tone="dark"
         eyebrow="Apple Mac specialist"

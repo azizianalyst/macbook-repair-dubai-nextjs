@@ -53,9 +53,9 @@ export default function IPhoneBackGlassRepair() {
         { title: "Laser back-glass removal", body: "Phone clamped, 532nm laser run across the glass at controlled speed. Glass shatters into removable shards. Residue wiped with isopropyl. Wireless coil and MagSafe array inspected for damage." },
         { title: "New back glass bonded with 3M adhesive", body: "Replacement glass aligned to camera cutout. 3M VHB structural adhesive applied. Phone clamped at 5kg pressure for 90 minutes at room temp." },
         { title: "Wireless charging + MagSafe test", body: "Charged on a Qi pad - must reach 7.5W (15W on MagSafe-enabled iPhones). MagSafe accessory snap test. Camera autofocus checked through new glass." },
-        { title: "Free delivery + 90-day warranty", body: "Same day on iPhone 8 to iPhone 11. 1 day on iPhone 12 to 17. Warranty covers the bond and the wireless coil function." },
+        { title: "Free delivery + 12-month warranty", body: "Same day on iPhone 8 to iPhone 11. 1 day on iPhone 12 to 17. Warranty covers the bond and the wireless coil function." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covered: bond failure, glass defects, wireless charging or MagSafe failure caused by the repair.",
         "Not covered: new physical damage, water damage post-repair, back glass shattered by a fresh drop.",
@@ -70,7 +70,7 @@ export default function IPhoneBackGlassRepair() {
         ["Wireless coil preserved",     "Yes - original coil retained",            "Yes - new device"],
         ["Original IMEI / battery / FaceID retained", "Yes",                        "No - service unit"],
         ["Repair window",               "Same/next day in Dubai",                  "5 to 10 business days, mail-in"],
-        ["Warranty",                    "90 days written",                         "90 days on service unit"],
+        ["Warranty",                    "12 months written",                         "12 months on service unit"],
       ]}
       faqs={[
         { q: "How much does iPhone back glass repair cost in Dubai?", a: "From AED 350 for iPhone 8. AED 400 for X, XR, XS. AED 450 for 11. AED 550 for 12 and 13. AED 650 for 14 and 15. AED 750 for 16. AED 850 for the iPhone 17 line. Pro Max sizes add AED 100. Apple's whole-device swap is AED 1,400 to AED 2,800 depending on model - the workshop saves AED 1,000+ on most models." },

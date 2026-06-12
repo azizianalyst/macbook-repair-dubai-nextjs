@@ -6,7 +6,7 @@ export default function IPhone14Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706"
-      seoDescription="iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen AED 650, battery AED 300. Same-day, 90-day warranty."
+      seoDescription="iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
       path="/iphone-14-repair-dubai"
       eyebrow="iPhone 14 (2022)"
       h1="iPhone 14 Repair Dubai - Screen, Battery, Camera, Face ID"
@@ -19,7 +19,7 @@ export default function IPhone14Repair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 14",     path: "/iphone-14-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 14 Repair"
       intro={
         <>
@@ -86,9 +86,9 @@ export default function IPhone14Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days (faster on 14)." },
         { title: "QC + return",          body: "OLED, MagSafe, cameras, Crash Detection and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, burn-in covered.",
         "Battery: capacity-drop coverage.",
         "Crash Detection and Emergency SOS verified before return.",

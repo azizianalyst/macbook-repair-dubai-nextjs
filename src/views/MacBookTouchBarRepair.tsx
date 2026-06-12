@@ -23,7 +23,7 @@ export default function MacBookTouchBarRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            The <strong>Touch Bar</strong> is the slim OLED strip above the keyboard on the 2016-2019 MacBook Pro 13″ and 15″, plus the 13″ M1 and M2. Apple dropped it on the 14″ and 16″, so if you've got one of those, the issue is something else and we'll tell you straight. When a Touch Bar fails it usually goes dark in patches, flickers, freezes on one app's controls, or starts registering taps nobody made. The strip is a bonded OLED with its own flex cable, and on most of these models it can be replaced on the bench. Touch Bar repair starts at <strong>AED 600</strong>, including the part, labour and a 90-day warranty.
+            The <strong>Touch Bar</strong> is the slim OLED strip above the keyboard on the 2016-2019 MacBook Pro 13″ and 15″, plus the 13″ M1 and M2. Apple dropped it on the 14″ and 16″, so if you've got one of those, the issue is something else and we'll tell you straight. When a Touch Bar fails it usually goes dark in patches, flickers, freezes on one app's controls, or starts registering taps nobody made. The strip is a bonded OLED with its own flex cable, and on most of these models it can be replaced on the bench. Touch Bar repair starts at <strong>AED 600</strong>, including the part, labour and a 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             One thing to flag — on a lot of these units the Touch Bar shares its flex with the keyboard and the Touch ID sensor at the right end. We open it, find out whether it's the strip, the cable or the board controller, and quote before anything is swapped. We've worked Apple hardware at Concord Tower, Dubai Media City since 2004, and the Touch Bar Pros are some of the most common boards on the bench.
@@ -46,11 +46,11 @@ export default function MacBookTouchBarRepair() {
         { title: "Replace and reseal", body: "New Touch Bar assembly fitted, flex reseated, Touch ID checked, top case closed up properly with fresh adhesive where needed." },
         { title: "Full function test", body: "Every zone of the strip tested - brightness, volume, Esc, app controls and Touch ID enrolment - before it leaves the bench." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the Touch Bar strip, its flex cable and the fit.",
         "Excludes new liquid contact after delivery.",
-        "Free re-fit if the same fault returns inside 90 days.",
+        "Free re-fit if the same fault returns inside 12 months.",
       ]}
       faqs={[
         { q: "Can you fix just the Touch Bar without replacing the whole keyboard?", a: "On most 2016-2019 Pros, yes - the Touch Bar comes off as its own assembly and we replace just that. On a few units it's bonded to the top case with the keyboard, and then it's a top-case job. We open it first and tell you which one you've got before quoting. No-fix-no-charge on the diagnosis." },

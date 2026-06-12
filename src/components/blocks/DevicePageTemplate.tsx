@@ -23,8 +23,10 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
 import { DEVICE_FAMILY, type DeviceFamily } from "@/content/device-hubs";
+import { topicForPath } from "@/lib/page-images";
+import ResponsiveImage from "@/components/blocks/ResponsiveImage";
 
 export type DeviceTemplateProps = {
   family: DeviceFamily["key"];   // "ipad" | "watch"
@@ -88,7 +90,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
         name: p.serviceName,
         price: p.startingPrice,
         timeline: p.timeline,
-        warranty: `P${p.warrantyDays}D`,
+        warranty: warrantyIso(p.warrantyDays),
         url: p.path,
         description: p.seoDescription,
       }),
@@ -137,6 +139,23 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
         <div className="flex flex-col gap-3xl">
           <section>{p.intro}</section>
 
+          {/* Topic infographic - hero keeps its booking-card sidecar, so the
+              service image lives in the body instead. */}
+          {(() => {
+            const topic = topicForPath(p.path);
+            return topic ? (
+              <figure className="rounded-md overflow-hidden border border-border">
+                <ResponsiveImage
+                  src={topic.src}
+                  alt={topic.alt}
+                  width={1200}
+                  height={900}
+                  imgClassName="w-full h-auto"
+                />
+              </figure>
+            ) : null;
+          })()}
+
           {p.honestyCallout && (
             <section className="bg-warning/5 border border-warning/30 rounded-md p-lg">
               <h2 className="text-[22px] mb-md flex items-center gap-sm">
@@ -152,7 +171,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
             </h2>
             {p.modelsBlurb ?? (
               <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-                Every line below includes parts, labour, and a {p.warrantyDays}-day written warranty. No diagnostic fee, no surprise add-ons.
+                Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.
               </p>
             )}
             <PricingTable tone="dark" service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} />
@@ -194,7 +213,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
             </h2>
             <div className="border border-border bg-bg-card rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
-                <li><strong>{p.warrantyDays} days</strong> - written warranty on parts and labour, dated and signed.</li>
+                <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
                 {p.warrantyBullets.map((b, i) => <li key={i}>{b}</li>)}
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
               </ul>
@@ -268,7 +287,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
         <div className="border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Send the model and a photo of the issue. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
+            Send the model and a photo of the issue. Free pickup across Dubai mainland. {warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

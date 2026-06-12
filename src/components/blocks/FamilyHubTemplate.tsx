@@ -54,7 +54,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         name: `${p.family} Repair Dubai`,
         price: p.startingPrice,
         timeline: "Same-day to 5 days",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: p.path,
         description: p.seoDescription,
       }),
@@ -163,10 +163,10 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Warranty */}
         <section className="bg-bg-card border border-border rounded-md p-lg">
           <h2 className="text-[22px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={22} className="text-accent" aria-hidden /> 90-day written warranty
+            <ShieldCheck size={22} className="text-accent" aria-hidden /> 12-month written warranty
           </h2>
           <p className="text-[15px]">
-            Every {p.family} repair includes a 90-day warranty on parts and labour, dated and signed on your invoice.
+            Every {p.family} repair includes a 12-month warranty on parts and labour, dated and signed on your invoice.
             Same fault returns inside the window? We re-do it free.
           </p>
         </section>
@@ -181,7 +181,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
           <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
             <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
             <p className="text-text-muted text-[16px] max-w-[60ch]">
-              Send the model and a photo of the issue. Free pickup across Dubai mainland. 90-day written warranty on every job.
+              Send the model and a photo of the issue. Free pickup across Dubai mainland. Written warranty of up to 12 months, depending on the repair.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">

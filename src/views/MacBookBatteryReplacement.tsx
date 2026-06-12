@@ -16,6 +16,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Reveal } from "@/components/blocks/Reveal";
+import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -56,7 +57,7 @@ const PROBLEMS = [
   { title: "Hot battery - case warm to touch in idle",
     body: "Internal short in the cells. Replace before it swells further. The hot battery is also throttling the CPU - runtime and performance both improve after the swap." },
   { title: "Battery is original (8+ years old) on 2015-2017 Air or Pro",
-    body: "Apple lists these as obsolete. The workshop carries new cells for every Air and Pro back to 2010. AED 450 to AED 600 swap, same day, with the 6-month warranty applied." },
+    body: "Apple lists these as obsolete. The workshop carries new cells for every Air and Pro back to 2010. AED 450 to AED 600 swap, same day, with the 3-month warranty applied." },
 ];
 
 const STEPS = [
@@ -70,15 +71,15 @@ const STEPS = [
     body: "Bottom case off, battery adhesive softened with isopropyl 99%, old cells lifted, replacement seated, BMS firmware re-paired to the logic board on Apple Silicon." },
   { title: "4-hour calibration cycle",
     body: "Charge to 100%, run battery flat under controlled load, charge to 100% again. macOS Battery Health re-reads design capacity. Final report shown to you on collection." },
-  { title: "Free delivery + 6-month warranty card",
-    body: "Delivered back same day. Warranty card lists the cell batch number and expected cycle life. Battery warranty: 6 months on cells, 80% capacity guarantee for the same period." },
+  { title: "Free delivery + 3-month warranty card",
+    body: "Delivered back same day. Warranty card lists the cell batch number and expected cycle life. Battery warranty: 3 months on cells, 80% capacity guarantee for the same period." },
 ];
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook battery replacement cost in Dubai?",
     a: "From AED 450 for MacBook Air 11\", 13\", and 15\" (Intel and Apple Silicon). AED 500 for MacBook Pro 13\". AED 600 for MacBook Pro 14\", 15\", and 16\". The price includes the new battery, labour, BMS firmware re-pair, and the 4-hour calibration cycle. No diagnostic fee." },
   { q: "How long does a MacBook battery replacement take?",
-    a: "About 2 hours total - 60 minutes on the bench plus a 60-minute calibration. If you wait at the workshop, the MacBook is ready in 2 hours. With pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection." },
+    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is done in 30 minutes — guaranteed, or the repair is free. Walk-in (no appointment): about 2 hours total — 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
   { q: "How do I check my MacBook battery health?",
     a: "On macOS Ventura and later: System Settings > Battery > Battery Health > Information (i). Look at \"Maximum Capacity\" (should be above 80%) and \"Cycle Count\" (Apple rates Apple Silicon for 1,000 cycles, Intel for 1,000 on most models, 500 on older Airs). On Intel Macs you can also hold Option and click the battery icon in the menu bar." },
   { q: "How many charge cycles does a MacBook battery last?",
@@ -88,13 +89,13 @@ const FAQS: FAQ[] = [
   { q: "Why don't you recommend cheap batteries under AED 200?",
     a: "Sub-AED-200 batteries on AliExpress and the Dragon Mart grey market typically use B-grade cells with 30% lower energy density and 2x faster wear. The workshop has seen 40% of these fail within 6 months and 15% swell within 12 months. The AED 450 cells used here are tier-1 (Samsung SDI, LG Chem, ATL) with traceable batch numbers." },
   { q: "What's the warranty on a new MacBook battery?",
-    a: "6 months written warranty on cells, plus an 80% capacity guarantee. If maximum capacity drops below 80% within 6 months of the swap (and cycle count is under 200), the battery is replaced free of charge. The warranty stays with the MacBook serial number - transferable once free of charge." },
+    a: "3 months written warranty on cells, plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months of the swap (and cycle count is under 200), the battery is replaced free of charge. The warranty stays with the MacBook serial number - transferable once free of charge." },
   { q: "My battery is swollen - what do I do?",
     a: "Stop using the MacBook immediately. Don't charge it, don't try to power it on. Lithium swelling is a fire risk and can crack the trackpad assembly (additional AED 350 if it breaks). WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland." },
   { q: "Will I lose my data during a battery swap?",
     a: "No. The SSD is on the logic board, untouched during a battery replacement. Files, apps, settings, FileVault encryption - all stay intact. The workshop still recommends a Time Machine backup before any service, just as a habit." },
   { q: "Do you replace MacBook Air 2017 and earlier batteries that Apple calls obsolete?",
-    a: "Yes - every MacBook back to the 2010 Air is serviceable here. Apple stopped stocking parts for these models, but the workshop carries new cells from the original ATL and LG factories that built the Apple parts. AED 450 same-day with the same 6-month warranty as a current model." },
+    a: "Yes - every MacBook back to the 2010 Air is serviceable here. Apple stopped stocking parts for these models, but the workshop carries new cells from the original ATL and LG factories that built the Apple parts. AED 450 same-day with the same 3-month warranty as a current model." },
   { q: "Can I replace the battery myself?",
     a: "Technically yes on 2008-2012 unibody MacBooks with screw-in batteries - iFixit sells kits at AED 200-400. From 2013 onward Apple glued the cells to the case, requiring isopropyl 99%, a heat gun, and 60+ minutes of careful work. DIY swaps that go wrong cost more to recover than the original AED 450 service. The workshop's labour-only swap if you bring your own (verified) battery is AED 200." },
   { q: "Do you offer free pickup for battery service?",
@@ -102,13 +103,13 @@ const FAQS: FAQ[] = [
 ];
 
 const COMPARISON = [
-  ["Repair window",          "Same day, 2 hours bench time",                "5 to 10 business days, mail-in"],
+  ["Repair window",          "30 min (booked appointment) · 2 hrs walk-in", "5 to 10 business days, mail-in"],
   ["Starting price (Air)",   "AED 450",                                      "AED 549 (Apple list)"],
   ["Starting price (Pro 14)","AED 600",                                      "AED 829 (Apple list)"],
   ["Starting price (Pro 16)","AED 600",                                      "AED 949 (Apple list)"],
   ["Free pickup in Dubai",   "Yes, same hour from many areas",               "No, customer must courier"],
   ["Calibration cycle",      "Yes, 4 hours included",                        "Not specified"],
-  ["Warranty",               "6 months + 80% capacity guarantee",            "1 year (Apple)"],
+  ["Warranty",               "3 months + 80% capacity guarantee",            "1 year (Apple)"],
   ["Vintage/obsolete models","Yes - 2010 onwards",                            "Refused on obsolete (pre-2017)"],
   ["BYO battery labour",     "AED 200 if part is verified",                  "Refused"],
 ];
@@ -116,8 +117,8 @@ const COMPARISON = [
 const TRUST = [
   { value: "5,200+", label: "Batteries fitted since 2004" },
   { value: "From AED 450", label: "Air 11-15\" cells" },
-  { value: "2 hours", label: "Same-day bench time" },
-  { value: "6 months", label: "Warranty + 80% capacity" },
+  { value: "30 min", label: "Guaranteed by appointment" },
+  { value: "3 months", label: "Warranty + 80% capacity" },
 ];
 
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
@@ -139,7 +140,7 @@ export default function MacBookBatteryReplacement() {
     {
       title: "MacBook Battery Replacement Dubai - From AED 450",
       description:
-        "MacBook battery replacement Dubai from AED 450. Same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 6-month warranty + 80% capacity guarantee. 055 741 3706.",
+        "MacBook battery replacement Dubai from AED 450. Same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 3-month warranty + 80% capacity guarantee. 055 741 3706.",
       path: "/macbook-battery-replacement-dubai",
     },
     [
@@ -149,10 +150,10 @@ export default function MacBookBatteryReplacement() {
         name: "MacBook Battery Replacement Dubai",
         price: 450,
         timeline: "Same day · 2 hours",
-        warranty: "P180D",
+        warranty: "P90D",
         url: "/macbook-battery-replacement-dubai",
         description:
-          "MacBook battery replacement in Dubai. Air, Pro 13/14/16, Intel and Apple Silicon. Genuine ATL/LG/Samsung cells. 6-month warranty + 80% capacity guarantee.",
+          "MacBook battery replacement in Dubai. Air, Pro 13/14/16, Intel and Apple Silicon. Genuine ATL/LG/Samsung cells. 3-month warranty + 80% capacity guarantee.",
       }),
     ],
   );
@@ -185,7 +186,7 @@ export default function MacBookBatteryReplacement() {
                   MacBook Battery Replacement Dubai
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
-                  Service Recommended? Swollen pack? Sudden shutdowns? New tier-1 cells in 2 hours, 6-month warranty plus 80% capacity guarantee.
+                  Service Recommended? Swollen pack? Sudden shutdowns? New tier-1 cells in 2 hours, 3-month warranty plus 80% capacity guarantee.
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
@@ -204,31 +205,16 @@ export default function MacBookBatteryReplacement() {
 
               {/* glass info card */}
               <div className="md:col-span-5">
-                <Reveal delay={120} className="rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Battery size={22} aria-hidden /></span>
-                      <div>
-                        <p className="m-0 font-semibold leading-tight text-text">Battery Replacement</p>
-                        <p className="m-0 text-[12px] text-text-faint">tier-1 cells · BMS re-pair</p>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
-                    </span>
-                  </div>
-                  <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-                    {[["Starting price", "AED 450"], ["Turnaround", "Same day · 2 hours"], ["Warranty", "6 months + 80%"], ["Diagnosis", "FREE"]].map(([k, v]) => (
-                      <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
-                        <span className="text-text-faint">{k}</span>
-                        <span className="font-semibold text-text">{v}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-                    <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
-                  </div>
+                
+                <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
+                  <ResponsiveImage
+                    src="/images/topics/macbook-battery-replacement-dubai.jpg"
+                    alt="MacBook battery replacement Dubai - lithium battery pack removal and health diagnostics engineering infographic"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 92vw, 420px"
+                    imgClassName="w-full h-auto"
+                  />
                 </Reveal>
               </div>
             </div>
@@ -236,7 +222,35 @@ export default function MacBookBatteryReplacement() {
         </section>
 
         {/* Answer-first capsule (AEO/BLUF) */}
-        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
+        <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
+          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Battery size={22} aria-hidden /></span>
+                <div>
+                  <p className="m-0 font-semibold leading-tight text-text">Battery Replacement</p>
+                  <p className="m-0 text-[12px] text-text-faint">tier-1 cells · BMS re-pair</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
+              </span>
+            </div>
+            <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
+              {[["Starting price", "AED 450"], ["Turnaround", "Same day · 2 hours"], ["Warranty", "3 months + 80%"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+                <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
+                  <span className="text-text-faint">{k}</span>
+                  <span className="font-semibold text-text">{v}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+            </div>
+          </Reveal>
+        </div>
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -253,14 +267,14 @@ export default function MacBookBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook battery replacement in Dubai costs from AED 450 and finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 6-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland.
+            MacBook battery replacement in Dubai costs from AED 450 and finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland.
           </p></LinkifyProse>
         </section>
 
         {/* ── Models + pricing ───────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook models we replace batteries for" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Prices include cell, labour, calibration, and the 6-month warranty." />
+            <SectionHead title="MacBook models we replace batteries for" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Prices include cell, labour, calibration, and the 3-month warranty." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
               Bring-your-own-battery labour: AED 200 (only if the part is verified tier-1). Battery + trackpad swap if the swelling cracked the trackpad: AED 800 combined.
@@ -353,8 +367,8 @@ export default function MacBookBatteryReplacement() {
           <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">6 months</strong> - written warranty on cells and labour.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">80% capacity guarantee</strong> - if maximum capacity drops below 80% within 6 months at under 200 cycles, battery replaced free.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">3 months</strong> - written warranty on cells and labour.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">80% capacity guarantee</strong> - if maximum capacity drops below 80% within 3 months at under 200 cycles, battery replaced free.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature capacity loss, swelling, BMS firmware faults, sudden shutdown returns.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> physical damage, liquid damage, charging from non-Apple-spec chargers above 100 W.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Free same-day collection. Replacement fitted within 24 hours.</span></li>
@@ -529,7 +543,7 @@ export default function MacBookBatteryReplacement() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Battery health under 80%? Send the screenshot - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, free pickup, 6-month warranty plus 80% capacity guarantee.
+              Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, free pickup, 3-month warranty plus 80% capacity guarantee.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
@@ -540,7 +554,7 @@ export default function MacBookBatteryReplacement() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-battery-replacement-dubai" />
     </section>
     <RelatedArticles path="/macbook-battery-replacement-dubai" />

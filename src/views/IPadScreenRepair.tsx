@@ -49,9 +49,9 @@ export default function IPadScreenRepair() {
         { title: "Bench diagnosis", body: "Confirm whether it is glass-only, full assembly or a deeper LCD-to-board issue. You approve before any work." },
         { title: "Replacement", body: "Heat-strip the bezel, lift the old assembly, transfer brackets, install new screen, reseal with fresh adhesive." },
         { title: "Calibration & QC", body: "Pair display, recalibrate Pencil, run touch grid test, brightness, True Tone, ambient sensors. Sign QC sheet." },
-        { title: "Free delivery", body: "Back to you the same day with a 30-day written warranty card." },
+        { title: "Free delivery", body: "Back to you the same day with a 3-month written warranty card." },
       ]}
-      warrantyDays={30}
+      warrantyDays={90}
       warrantyBullets={[
         "Covers display assembly, touch, Pencil response and adhesive seal.",
         "Excludes new physical damage (a fresh drop after the repair).",
@@ -64,7 +64,7 @@ export default function IPadScreenRepair() {
         ["Pencil calibration",    "Included on every job",           "Included"],
         ["True Tone preserved",   "Yes - display pairing done",      "Yes"],
         ["Data on the device",    "Stays put, never wiped",          "Often replaced unit, data restore needed"],
-        ["Warranty",              "30 days written, dated",          "90 days on the new unit"],
+        ["Warranty",              "3 months written, dated",          "3 months on the new unit"],
       ]}
       faqs={[
         { q: "Can you replace just the broken glass on my iPad?", a: "On iPad 2, 3 and 4 yes - those have a separate glass layer. On any laminated iPad (Air 2 onwards, all Pro models, iPad 5+), the glass and LCD are fused. Trying to split them cracks the LCD. We replace the full assembly. Honest answer, every time." },

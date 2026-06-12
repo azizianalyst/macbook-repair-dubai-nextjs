@@ -5,7 +5,7 @@ export default function IPhoneCameraRepair() {
   return (
     <IPhonePageTemplate
       seoTitle="iPhone Camera Repair Dubai - Rear, Ultra-Wide, LiDAR | From AED 350"
-      seoDescription="iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. 90-day warranty. WhatsApp 055 741 3706."
+      seoDescription="iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. 12-month warranty. WhatsApp 055 741 3706."
       path="/iphone-camera-repair-dubai"
       eyebrow="iPhone Camera Repair"
       h1="iPhone Camera Repair Dubai"
@@ -55,9 +55,9 @@ export default function IPhoneCameraRepair() {
         { title: "Module replacement on the bench", body: "Screen lifted, battery disconnected, camera module screws removed, flex disconnected, replacement seated. Anti-static workspace throughout." },
         { title: "ISP calibration via Apple Configurator", body: "On iPhone 12+, the new module needs ISP-side calibration to match colour, exposure, and HDR rendering. Done with iMazing/Configurator and an Apple-supplied calibration profile." },
         { title: "LiDAR alignment + Portrait test", body: "On Pro models, LiDAR aligned in the bench jig. Portrait mode and Night mode tested in the light box. Cinematic mode focus pull verified on iPhone 14 Pro and later." },
-        { title: "Free delivery + 90-day warranty", body: "Same day on iPhone 6 to 13. Same/next day on 14, 15, 16. Next day on 17 line. Warranty card includes ISP calibration log." },
+        { title: "Free delivery + 12-month warranty", body: "Same day on iPhone 6 to 13. Same/next day on 14, 15, 16. Next day on 17 line. Warranty card includes ISP calibration log." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covered: module defects, OIS failure, LiDAR misalignment, autofocus failure caused by the part.",
         "Not covered: new physical damage, water damage post-repair, software bugs unrelated to the module.",
@@ -72,7 +72,7 @@ export default function IPhoneCameraRepair() {
         ["Front TrueDepth camera",       "AED 450 (Face ID preserved)",             "AED 1,099 (Apple list)"],
         ["Same-day repair",              "Most models",                             "5 to 10 business days, mail-in"],
         ["Free pickup in Dubai",         "Yes",                                     "No"],
-        ["Warranty",                     "90 days written",                         "90 days"],
+        ["Warranty",                     "12 months written",                         "12 months"],
       ]}
       faqs={[
         { q: "How much does iPhone camera repair cost in Dubai?", a: "From AED 350 for older models. AED 500 for iPhone 11. AED 600 for 12, 13. AED 700 for 14, 14 Pro. AED 850 for 15 Pro (5x tetraprism). AED 950 for 16 Pro and 17 Pro. Front TrueDepth camera AED 450 any model. Lens cover only AED 150. Pro Max sizes add AED 100." },

@@ -40,11 +40,11 @@ const FAQS = [
   },
   {
     q: "Do you fix Flexgate on the 2016 and 2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable for AED 600, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 90-day warranty.",
+    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable for AED 600, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 3-month warranty.",
   },
   {
     q: "Will True Tone still work after the screen is replaced?",
-    a: "True Tone works on genuine Apple panels - MacBook Repair Dubai calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS, but P3 colour, brightness, and contrast are identical. Both options carry the 90-day warranty.",
+    a: "True Tone works on genuine Apple panels - MacBook Repair Dubai calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS, but P3 colour, brightness, and contrast are identical. Both options carry the 3-month warranty.",
   },
   {
     q: "Can you replace just the cracked glass without changing the LCD?",
@@ -52,11 +52,11 @@ const FAQS = [
   },
   {
     q: "Do you use genuine Apple screens?",
-    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models we fit A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry a 90-day warranty.",
+    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models we fit A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry a 3-month warranty.",
   },
   {
     q: "Is there a warranty on the new screen?",
-    a: "A 90-day written warranty on parts and labour. It covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. It does not cover new physical damage. The warranty is transferable once, free of charge, if the MacBook is sold.",
+    a: "A 3-month written warranty on parts and labour. It covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. It does not cover new physical damage. The warranty is transferable once, free of charge, if the MacBook is sold.",
   },
   {
     q: "Do you offer pickup for screen repair?",
@@ -70,7 +70,7 @@ export default function LandingTemplateDemo() {
       seo={{
         title: "MacBook Screen Repair Dubai - From AED 600",
         description:
-          "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 90-day warranty. Call 055 741 3706.",
+          "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Call 055 741 3706.",
         path: DEMO_PATH,
         canonical: DEMO_PATH,
         noindex: true,
@@ -84,7 +84,7 @@ export default function LandingTemplateDemo() {
             price: 600,
             priceMax: 1200,
             timeline: "Same day to 2 days",
-            warranty: "P90D",
+            warranty: "P3M",
             url: DEMO_PATH,
             description:
               "MacBook screen and LCD replacement in Dubai. Flexgate, cracked glass, dead pixels, backlight failure. Air, Pro 13/14/16, Intel and Apple Silicon.",
@@ -188,7 +188,7 @@ export default function LandingTemplateDemo() {
           { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 10 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
           { icon: Truck, title: "Free pickup & delivery", lines: ["Across Dubai mainland", "Courier within about 2 hours", "Free - you pay only on approval"] },
           { icon: MapPin, title: "Visit the workshop", lines: ["Office #45, 10th Floor", "Concord Tower, Dubai Media City", "Al Sufouh, Dubai"] },
-          { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "90-day written warranty"] },
+          { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "3-month written warranty"] },
         ],
       }}
 
@@ -269,14 +269,14 @@ export default function LandingTemplateDemo() {
           </>
         ),
         description:
-          "MacBook Repair Dubai replaces cracked glass, Flexgate cables, dead pixels, and dead backlights on every MacBook Air and Pro from Intel through M5. Same-day on most models, bench-tested for colour and dead pixels, and backed by a 90-day written warranty.",
+          "MacBook Repair Dubai replaces cracked glass, Flexgate cables, dead pixels, and dead backlights on every MacBook Air and Pro from Intel through M5. Same-day on most models, bench-tested for colour and dead pixels, and backed by a 3-month written warranty.",
         primary: { label: "Get a quote on WhatsApp", href: WHATSAPP_QUOTE },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: CALL },
         trustPills: [
           { icon: Star, label: `${REVIEW_AVERAGE.toFixed(1)} Google rating` },
           { icon: MessageSquare, label: `${REVIEW_COUNT}+ reviews` },
           { icon: CalendarClock, label: "Repairing Apple since 2004" },
-          { icon: ShieldCheck, label: "90-day warranty" },
+          { icon: ShieldCheck, label: "3-month warranty" },
         ],
         results: {
           icon: Monitor,
@@ -293,7 +293,7 @@ export default function LandingTemplateDemo() {
             { name: "Price from", value: "AED 600" },
             { name: "Diagnosis", value: "Free" },
             { name: "Turnaround", value: "Same day" },
-            { name: "Warranty", value: "90 days" },
+            { name: "Warranty", value: "3 months" },
           ],
         },
       }}
@@ -320,8 +320,8 @@ export default function LandingTemplateDemo() {
           },
           {
             icon: ShieldCheck,
-            title: "90-day written warranty",
-            body: "Parts and labour covered for 90 days against defects, dead pixels, backlight bleed, and cable failure. Transferable once, free of charge.",
+            title: "3-month written warranty",
+            body: "Parts and labour covered for 3 months against defects, dead pixels, backlight bleed, and cable failure. Transferable once, free of charge.",
           },
           {
             icon: CalendarClock,
@@ -434,7 +434,7 @@ export default function LandingTemplateDemo() {
             body: "On genuine panels, True Tone re-calibrates against the original board serial. The lid press cures for 90 minutes at 45 C before the MacBook leaves the bench.",
           },
           {
-            title: "47-point QC + 90-day warranty",
+            title: "47-point QC + 3-month warranty",
             body: "Backlight uniformity, dead-pixel scan, hinge torque, lid sensor, P3 gamut, and cable strain test - signed at handover with the warranty card.",
           },
         ],
@@ -444,7 +444,7 @@ export default function LandingTemplateDemo() {
       pricing={{
         heading: "MacBook screen repair pricing",
         subheading:
-          "All-in: panel, labour, and 90-day warranty. No diagnostic fee, no adhesive surcharge, VAT inclusive.",
+          "All-in: panel, labour, and 3-month warranty. No diagnostic fee, no adhesive surcharge, VAT inclusive.",
         tiers: [
           {
             name: "MacBook Air 13\" / Pro 13\"",
@@ -455,7 +455,7 @@ export default function LandingTemplateDemo() {
               "Same-day when in stock",
               "A-grade Samsung/LG panel",
               "Free diagnosis & pickup",
-              "90-day written warranty",
+              "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
           },
@@ -468,7 +468,7 @@ export default function LandingTemplateDemo() {
               "Genuine Apple panel option",
               "True Tone retained on genuine",
               "Same-day on 14\", 1-2 days on 16\"",
-              "90-day written warranty",
+              "3-month written warranty",
             ],
             highlighted: true,
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
@@ -482,7 +482,7 @@ export default function LandingTemplateDemo() {
               "Glass-only on 2012-2015 Retina",
               "Original Samsung panel sourcing",
               "LCD-only saves AED 200-400",
-              "90-day written warranty",
+              "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
           },
@@ -497,7 +497,7 @@ export default function LandingTemplateDemo() {
         eyebrow: "Free diagnosis",
         headline: "Cracked screen? WhatsApp the model - quote in 4 minutes",
         description:
-          "Send the year, screen size, processor, and a photo of the damage. Free pickup across Dubai mainland and a 90-day written warranty on every panel fitted.",
+          "Send the year, screen size, processor, and a photo of the damage. Free pickup across Dubai mainland and a 3-month written warranty on every panel fitted.",
         primary: { label: "Message on WhatsApp", href: WHATSAPP_QUOTE },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: CALL },
       }}

@@ -84,7 +84,7 @@ export default function BlogTransparentRepairPricing() {
             <li>Adhesives, screws, gaskets, calibration tools.</li>
             <li>Post-repair quality check + battery / display diagnostic.</li>
             <li>Pickup &amp; delivery if you opted in.</li>
-            <li>The 90-day warranty.</li>
+            <li>The 12-month warranty.</li>
           </ul>
 
           <h2>What's NOT included</h2>

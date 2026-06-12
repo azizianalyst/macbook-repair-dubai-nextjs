@@ -48,7 +48,7 @@ export default function IMacSsdUpgrade() {
       warrantyDays={365}
       warrantyBullets={[
         "1-year warranty on the SSD itself (manufacturer + us).",
-        "90-day warranty on the display reassembly and adhesive seal.",
+        "3-month warranty on the display reassembly and adhesive seal.",
         "Free re-seal if the display lifts at the edge in warranty.",
       ]}
       faqs={[

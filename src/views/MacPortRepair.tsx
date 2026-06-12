@@ -44,9 +44,9 @@ export default function MacPortRepair() {
         { title: "Port assembly replacement",    body: "If the port itself has failed, we de-solder the old assembly and fit a tested replacement. Hot-air rework, no iron damage to surrounding components." },
         { title: "Cross-test all ports",         body: "After the swap we test every port on the same controller (TB ports come in pairs sharing a controller). Confirms no collateral damage." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90-day warranty on the port replacement work.",
+        "12-month warranty on the port replacement work.",
         "Free clean is covered for 30 days - same debris won't bother you twice.",
         "Honest 'come back if the new port acts up' policy.",
       ]}

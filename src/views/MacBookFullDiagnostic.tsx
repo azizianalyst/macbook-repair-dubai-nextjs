@@ -50,7 +50,7 @@ export default function MacBookFullDiagnostic() {
         { title: "Written report", body: "Printed checklist with pass / warning / fail on every item, plus notes from the technician on anything to watch." },
         { title: "No-pressure conversation", body: "If repairs are needed, we quote them. If not, you take the report and go. No fee either way." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic accuracy guarantee - if a fault we cleared shows within 30 days, free re-check.",
         "Report is yours to keep - show it to AppleCare or insurance if needed.",
@@ -69,7 +69,7 @@ export default function MacBookFullDiagnostic() {
       reviewNames={["Polycarp", "Mariia Chymyrysova", "Saeed Alam"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",              description: "Parent hub - all MacBook services." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Most-common follow-up to a diagnostic. From AED 350." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Most-common follow-up to a diagnostic. From AED 450." },
         { label: "MacBook Overheating Fix",     href: "/macbook-overheating-fix-dubai",      description: "Second-most-common follow-up. AED 300." },
       ]}
       blogLink={{ label: "How to read a MacBook diagnostic report", href: "/blog/macbook-battery-health-check-guide" }}

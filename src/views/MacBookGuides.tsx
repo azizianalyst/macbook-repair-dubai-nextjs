@@ -34,6 +34,8 @@ export default function MacBookGuides() {
   return (
     <PageShell>
       <Hero
+        image="/images/topics/guide-macbook-basics-dubai.jpg"
+        imageAlt="MacBook basics and settings guide - everyday shortcuts infographic"
         variant="service"
         eyebrow="Guides · written by working technicians"
         title="MacBook Guides & How-Tos"
@@ -74,7 +76,7 @@ export default function MacBookGuides() {
         <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
           <h2 className="text-text text-[24px] md:text-[28px] max-w-[30ch]">Guide didn't solve it? We repair MacBooks across Dubai</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Free diagnosis, free pickup across Dubai mainland, and a written 90-day warranty on every repair. Message the workshop on WhatsApp.
+            Free diagnosis, free pickup across Dubai mainland, and a written warranty of up to 12 months, depending on the repair. Message the workshop on WhatsApp.
           </p>
           <a
             href={SITE.whatsapp}

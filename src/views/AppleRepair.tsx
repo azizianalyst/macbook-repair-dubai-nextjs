@@ -6,6 +6,7 @@ import {
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { DeviceFamilyCard, type DeviceFamily } from "@/components/blocks/DeviceFamilyCard";
@@ -39,7 +40,7 @@ const FAMILY_DETAILS = [
   { name: "iMac repair", href: "/imac-repair-dubai", body: "iMac 21.5\", 24\", and 27\" Retina 5K screen replacement, Fusion-to-SSD upgrades, power supply repair, and fan-cleaning service. The 27\" 5K panel is rebonded with the original adhesive frame to preserve the slim bezel - 2 to 4 days for screen, same day for SSD upgrade." },
   { name: "Mac mini, Studio & Pro repair", href: "/mac-mini-repair-dubai", body: "Mac mini logic board repair, SSD upgrades on 2014 and 2018 models, and full diagnostics on Mac Studio. Mac Pro power supply replacement and GPU module work for 2013 cylinder Pros and 2019 tower Pros. Cylinder GPU thermal failures are the single most common issue - fix runs AED 1,500." },
   { name: "iPhone repair", href: "/iphone-repair-dubai", body: "Screen replacement on iPhone 8 through iPhone 16 Pro Max in 40 minutes. Battery replacement in 30 minutes. Back glass, charging port, water damage, and Face ID dot-projector repair available. iPhone 15 and 16 panels carry True Tone calibration when fitted with genuine Apple displays." },
-  { name: "iPad repair", href: "/ipad-repair-dubai", body: "iPad mini, Air, standard, and Pro screen replacement. The 12.9\" Pro panel runs AED 1,200 because the OLED stack is bonded directly to the chassis - no separate digitiser repair option. Battery service for older iPads runs AED 400 with a 90-day warranty." },
+  { name: "iPad repair", href: "/ipad-repair-dubai", body: "iPad mini, Air, standard, and Pro screen replacement. The 12.9\" Pro panel runs AED 1,200 because the OLED stack is bonded directly to the chassis - no separate digitiser repair option. Battery service for older iPads runs AED 400 with a 12-month warranty." },
 ];
 
 const FAQS = [
@@ -50,7 +51,7 @@ const FAQS = [
   { q: "Can you repair multiple devices in one visit?",
     a: "Yes - drop off MacBook, iPhone, and iPad together and pay one combined invoice. Multi-device drop-offs of 3+ items get a 15% labour discount. Common with corporate clients in Media City, JLT, and Internet City." },
   { q: "What's the warranty on Apple-wide repairs?",
-    a: "Standard 90-day written warranty on every paid repair, regardless of device family. Battery work (MacBook, iPhone, iPad) carries a 6-month warranty plus an 80% capacity guarantee. Full terms on the warranty page." },
+    a: "Standard 12-month written warranty on every paid repair, regardless of device family. Battery work (MacBook, iPhone, iPad) carries a 3-month warranty plus an 80% capacity guarantee. Full terms on the warranty page." },
   { q: "Where exactly are you based?",
     a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Across from Media City Metro. Paid parking on-site. Open Monday to Saturday, 9 am to 10 pm. Sunday: WhatsApp answered, storefront closed." },
   { q: "Do you offer free pickup for non-MacBook devices?",
@@ -86,7 +87,7 @@ export default function AppleRepair() {
         name: "Apple Device Repair Dubai",
         price: 250,
         timeline: "Same day to 5 days",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: "/apple-repair-dubai",
         description: "Component-level repair for MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone, and iPad in Dubai.",
       }),
@@ -101,6 +102,8 @@ export default function AppleRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/apple-repair-dubai")?.src}
+        imageAlt={topicForPath("/apple-repair-dubai")?.alt}
         variant="device"
         tone="dark"
         eyebrow="Apple specialist · Since 2004"
@@ -143,7 +146,7 @@ export default function AppleRepair() {
             {[
               { title: "Deep, narrow knowledge", body: "Apple is 100% of the workshop volume. Shafiq has seen every common board fault on every Apple Silicon Mac shipped since 2020. A general repair shop splits attention across Samsung, Huawei, Lenovo, and HP - every diagnosis takes longer and the failure rate runs 3× higher on logic-board work." },
               { title: "Cross-device diagnosis",  body: "An iPhone that won't sync to a Mac is rarely an iPhone problem alone. iCloud Keychain, Bluetooth advertising, AWDL service, and Apple ID two-factor flows interact in ways that need both devices on the bench at the same time. One specialist with both devices fixes the root cause in 1 visit." },
-              { title: "One warranty, one invoice", body: "Drop off MacBook, iPhone, and iPad in the same visit. One 90-day warranty card lists all 3 devices and 3 serial numbers. One WhatsApp thread tracks all 3 repairs. One invoice for accounting. Multi-device discount of 15% on labour applies automatically." },
+              { title: "One warranty, one invoice", body: "Drop off MacBook, iPhone, and iPad in the same visit. One 12-month warranty card lists all 3 devices and 3 serial numbers. One WhatsApp thread tracks all 3 repairs. One invoice for accounting. Multi-device discount of 15% on labour applies automatically." },
             ].map((c) => (
               <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>

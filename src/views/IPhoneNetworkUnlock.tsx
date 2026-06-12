@@ -69,7 +69,7 @@ export default function IPhoneNetworkUnlock() {
         { title: "Activation on the iPhone", body: "Once the carrier confirms unlock, the iPhone is updated automatically when connected to Wi-Fi or via SIM swap. Some require an iTunes/Finder restore - the workshop runs this on the bench at no extra charge." },
         { title: "Verification + receipt", body: "Apple's checkcoverage.apple.com page is checked to confirm the iPhone shows as 'Unlocked'. Customer receives written confirmation. Permanent - survives all future iOS updates and erases." },
       ]}
-      warrantyDays={30}
+      warrantyDays={0}
       warrantyBullets={[
         "Money-back guarantee if the unlock fails after eligibility was confirmed (rare - eligibility check filters most failures upfront).",
         "Covered: re-lock issues caused by carrier-side processing errors within 30 days.",

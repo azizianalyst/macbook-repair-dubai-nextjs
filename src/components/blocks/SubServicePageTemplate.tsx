@@ -23,8 +23,8 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
-import { imageForSlug, imageForService } from "@/lib/page-images";
+import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
+import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
 import { LinkifyProse } from "@/lib/linkify";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { deviceTypeFromPath } from "@/lib/lead-schema";
@@ -68,6 +68,9 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
   // Prefer a service-specific lab photo (logic board, battery, fan, keyboard…)
   // and fall back to the device hero when the service has no dedicated shot.
   const heroImage = imageForService(p.path) ?? imageForSlug(p.path);
+  // Topic infographics carry their own SEO alt text; lab photos use the H1.
+  const topic = heroImage ? topicForPath(p.path) : undefined;
+  const heroAlt = topic && topic.src === heroImage ? topic.alt : p.h1;
   // Auto cross-link sibling iPhone models (only fires on iPhone model pages).
   const otherIphoneModels = relatedIphoneModels(p.path);
   const qa = p.quickAnswer ?? deriveServiceQuickAnswer({
@@ -86,7 +89,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         name: p.serviceName,
         price: p.startingPrice,
         timeline: p.timeline,
-        warranty: `P${p.warrantyDays}D`,
+        warranty: warrantyIso(p.warrantyDays),
         url: p.path,
         description: p.seoDescription,
       }),
@@ -106,7 +109,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
           startingPrice={p.startingPrice}
           timeline={p.timeline}
           image={heroImage}
-          imageAlt={p.h1}
+          imageAlt={heroAlt}
         >
           <PageMeta author={`${p.technician.name}, ${p.technician.specialisation}`} />
         </Hero>
@@ -132,7 +135,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             <section id="quote" className="scroll-mt-24">
               <h2 className="text-[24px] md:text-[28px] mb-md text-text">Get a free repair quote</h2>
               <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
-                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.
+                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote, warranty included.
               </p>
               <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
             </section>
@@ -166,7 +169,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               />
               <div className="border border-border bg-bg-card rounded-md p-lg flex flex-col justify-center">
                 <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-text">
-                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {p.warrantyDays}-day written warranty
+                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises"}
                 </h3>
                 <ul className="space-y-1 text-[14px] text-text-muted">
                   {p.warrantyBullets.map((b, i) => <li key={i}>• {b}</li>)}
@@ -179,7 +182,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               startingPrice={p.startingPrice}
               timeline={p.timeline}
               whatsappMessage={p.whatsappPrefill}
-              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${p.warrantyDays}-day written warranty.`}
+              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${warrantyClause(p.warrantyDays)}.`}
             />
 
             <section className="bg-bg-card rounded-md p-lg border border-border">
@@ -232,7 +235,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
             <h2 className="relative text-text text-[24px] md:text-[28px] max-w-[28ch]">{p.h1} - book in 4 minutes on WhatsApp</h2>
             <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-              From AED {p.startingPrice}. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
+              From AED {p.startingPrice}. Free pickup across Dubai mainland. {warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.
             </p>
             <div className="relative flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">

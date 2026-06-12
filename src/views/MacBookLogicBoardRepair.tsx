@@ -26,7 +26,7 @@ export default function MacBookLogicBoardRepair() {
             <strong>MacBook logic board repair in Dubai</strong> means component-level rework - replacing the actual failed chip on the board, not swapping the whole board. The difference matters: a typical Apple board swap is AED 4,000-6,000. A component-level fix on the failed PMIC, MOSFET, charging IC, or USB-C controller is AED 800-1,500. Same outcome, fraction of the cost, original board kept (which preserves T2 SSD pairing on Intel MacBooks).
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            We work under stereo microscope with a JBC hot-air station, controlled thermal profiles, and reballed Apple-spec replacement chips. The 90-day warranty is paperwork - done correctly, the repair lasts as long as the original.
+            We work under stereo microscope with a JBC hot-air station, controlled thermal profiles, and reballed Apple-spec replacement chips. The 12-month warranty is paperwork - done correctly, the repair lasts as long as the original.
           </p>
         </>
       }
@@ -46,11 +46,11 @@ export default function MacBookLogicBoardRepair() {
         { title: "Microscope rework", body: "Failed chip removed under stereo microscope, pads cleaned with no-clean flux, replacement chip reballed and placed with controlled hot-air profile." },
         { title: "48 hr burn-in", body: "Stress test under sustained load - CPU, GPU, ports, charging cycles. Catches intermittents before delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the specific component repaired and adjacent rails.",
         "Excludes new failures elsewhere on the board (separate fault).",
-        "Free re-work if the same fault returns within 90 days.",
+        "Free re-work if the same fault returns within 12 months.",
       ]}
       faqs={[
         { q: "What's the difference between component-level repair and board swap?", a: "Component-level: we identify the failed chip (a USD 5-30 part), desolder it under microscope, install a new one. Board swap: throw out the entire AED 4,000+ board and fit a new one. Same outcome on the symptom, very different cost - and only component-level keeps your original board (and your T2-paired SSD on Intel models)." },

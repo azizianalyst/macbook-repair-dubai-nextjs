@@ -145,7 +145,7 @@ export default function MacBookVirusRemoval() {
         name: "MacBook Virus & Malware Removal Dubai",
         price: 250,
         timeline: "Same day to 2 days",
-        warranty: "P30D",
+        warranty: "P15D",
         url: "/macbook-virus-removal-dubai",
         description:
           "MacBook virus, adware, cryptominer, browser hijacker, suspicious profile, and spyware removal in Dubai. Same-day clean. 30-day re-clean guarantee.",
@@ -157,6 +157,8 @@ export default function MacBookVirusRemoval() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/macbook-virus-removal-dubai.jpg"
+        imageAlt="Mac virus and malware removal Dubai - security cleanup infographic"
         variant="service"
         tone="dark"
         eyebrow="MacBook virus & malware removal"

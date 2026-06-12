@@ -70,7 +70,7 @@ export default function IMacScreenRepair() {
       warrantyBullets={[
         "Covers panel, backlight, calibration and adhesive seal.",
         "Excludes new physical impact after delivery.",
-        "Free re-seal if any dust speck appears in the first 90 days - extremely rare with our protocol but covered.",
+        "Free re-seal if any dust speck appears in the first 3 months - extremely rare with our protocol but covered.",
       ]}
       comparisonRows={[
         ["Starting price",        "AED 800",                            "AED 3,500+ (whole-unit replacement)"],
@@ -79,7 +79,7 @@ export default function IMacScreenRepair() {
         ["Pickup & delivery",     "Free, Dubai mainland",               "Drop in to Mall of Emirates yourself"],
         ["Adhesive reseal",       "Dust-free bench, 3M factory adhesive", "Apple OEM seal"],
         ["Lead time",             "2-3 days standard",                  "1-2 weeks (sent to regional centre)"],
-        ["Warranty",              "90 days written, dated",             "90 days on the new unit"],
+        ["Warranty",              "3 months written, dated",             "12 months on the new unit"],
       ]}
       faqs={[
         { q: "Can you replace just the glass on my iMac?", a: `Only on 21.5" and 27" iMacs from Mid-2011 and earlier - those have a magnetic glass panel separate from the LCD. From Late 2012 onwards (Slim iMac body), the glass and LCD are fully laminated and replaced as one assembly.` },

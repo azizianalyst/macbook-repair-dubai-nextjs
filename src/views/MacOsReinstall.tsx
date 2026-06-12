@@ -46,7 +46,7 @@ export default function MacOsReinstall() {
         { title: "Wipe + clean install", body: "Disk Utility erase, fresh macOS install, set up your user account, restore preferences and data (if you chose with-data option)." },
         { title: "Verify + handover", body: "Sign in to iCloud, Apple Music, App Store. Confirm hardware checks pass. Sign-off." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the macOS install itself and our data restore.",
         "Excludes future macOS updates and third-party app issues.",

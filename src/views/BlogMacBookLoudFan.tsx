@@ -38,7 +38,7 @@ export default function BlogMacBookLoudFan() {
           <h2>First, is it actually the fan?</h2>
           <p>
             Quick thing to settle before anything else. If you have a MacBook Air on Apple
-            Silicon — the M1, M2, M3 or M4 Air — it has no fan at all. Apple cools those
+            Silicon — any Air from M1 through M5 — it has no fan at all. Apple cools those
             entirely through an aluminium heat spreader, so a "loud fan" on an Air means either
             a buzzing speaker, a failing SSD, or coil whine, not a fan. Everything below applies
             to the MacBook Pro and to the older Intel Airs and Pros, which all have one or two
@@ -191,7 +191,7 @@ export default function BlogMacBookLoudFan() {
         },
         {
           q: "Why can't I find a fan setting on my MacBook Air?",
-          a: "Apple Silicon MacBook Airs have no fan. The M1, M2, M3 and M4 Airs cool through a metal heat spreader instead. If yours sounds like a fan, it's more likely a buzzing speaker, coil whine, or the SSD. Bring it in and we'll pin down which it is in a few minutes.",
+          a: "Apple Silicon MacBook Airs have no fan. The M1 through M5 Airs cool through a metal heat spreader instead. If yours sounds like a fan, it's more likely a buzzing speaker, coil whine, or the SSD. Bring it in and we'll pin down which it is in a few minutes.",
         },
         {
           q: "How much does it cost to clean and repaste a MacBook in Dubai?",

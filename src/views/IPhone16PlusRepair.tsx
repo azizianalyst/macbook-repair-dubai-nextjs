@@ -19,7 +19,7 @@ export default function IPhone16PlusRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "iPhone 16 Plus",  path: "/iphone-16-plus-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 16 Plus Repair"
       intro={
         <>
@@ -87,9 +87,9 @@ export default function IPhone16PlusRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

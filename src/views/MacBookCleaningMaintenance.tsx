@@ -5,7 +5,7 @@ export default function MacBookCleaningMaintenance() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai"
-      seoDescription="MacBook cleaning and maintenance in Dubai from AED 280. Dust and corrosion removal, fan and vent clean, free pickup, 90-day warranty. Call 055 741 3706."
+      seoDescription="MacBook cleaning and maintenance in Dubai from AED 280. Dust and corrosion removal, fan and vent clean, free pickup, 12-month warranty. Call 055 741 3706."
       path="/macbook-cleaning-maintenance-dubai"
       eyebrow="MacBook cleaning & maintenance"
       h1="MacBook Cleaning and Maintenance in Dubai"
@@ -45,10 +45,10 @@ export default function MacBookCleaningMaintenance() {
         { title: "Deep clean and thermal check", body: "Heatsink, fans, vents and ports cleared, fresh thermal paste if temperatures warrant it, then a load test to verify the machine runs cooler." },
         { title: "Report and same-day return", body: "You get a short report on what we found and the before-and-after temperatures, then the MacBook goes back the same day in most cases." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "Covers the cleaning work and any fan re-fit for 90 days.",
-        "If fan noise returns inside 90 days, we re-clean at no charge.",
+        "Covers the cleaning work and any fan re-fit for 12 months.",
+        "If fan noise returns inside 12 months, we re-clean at no charge.",
         "Excludes new dust build-up from heavy outdoor or workshop use.",
       ]}
       faqs={[
@@ -56,7 +56,7 @@ export default function MacBookCleaningMaintenance() {
         { q: "How often should I clean my MacBook in Dubai?", a: "Once a year is the right cycle for most people in Dubai, where fine sand and humidity load the fans faster than cooler climates. If you work outdoors, near a building site, or notice the fans running loud at idle, every 6 to 9 months is better. The clean is AED 280 and takes a day, so it's cheap insurance against a thermal-related logic-board fault." },
         { q: "Does dust really cause my MacBook to overheat?", a: "Yes - dust is the single most common cause of overheating we see. It clogs the heatsink fins and coats the fan blades, so the fan spins faster, gets louder, and still can't move enough air. The chip then throttles to protect itself and the machine slows down. A clean usually drops idle temperatures by 10 to 20 degrees, and we show you the before-and-after numbers." },
         { q: "Do you actually open the MacBook to clean it?", a: "Yes. Blowing canned air through the vents only pushes dust deeper. We remove the bottom case, lift the fan assembly, and clean the heatsink and blades directly, then clear the ports. On machines from 2016 onward we're careful with the bonded internals. The full strip-and-clean is what makes the AED 280 service actually drop temperatures rather than just move the dust around." },
-        { q: "Is opening my MacBook safe, and will it void anything?", a: "It's safe in trained hands - Abdul Aziz has 21 years on Apple hardware and we've serviced thousands of machines since 2004. Most MacBooks in Dubai are well out of Apple's warranty, so there's nothing to void. If yours is still under AppleCare we'll tell you before we open it. We back our own work with a 90-day warranty." },
+        { q: "Is opening my MacBook safe, and will it void anything?", a: "It's safe in trained hands - Abdul Aziz has 21 years on Apple hardware and we've serviced thousands of machines since 2004. Most MacBooks in Dubai are well out of Apple's warranty, so there's nothing to void. If yours is still under AppleCare we'll tell you before we open it. We back our own work with a 12-month warranty." },
         { q: "Do you collect the MacBook, or do I bring it in?", a: "Both. We offer free pickup and delivery across Dubai mainland - Marina, JLT, Business Bay, Downtown, Al Barsha and the rest. Sharjah and Abu Dhabi pickup is AED 100 each way. Or drop it at Concord Tower, Dubai Media City, where there's free parking. WhatsApp 055 741 3706 to arrange a slot." },
         { q: "How long does the cleaning take?", a: "Same day for most models. A standard MacBook Air or Pro clean is done within a few hours once it's on the bench, and we return it the same day across Dubai. If we apply fresh thermal paste it needs a short settling period, but that doesn't add to your wait. Drop it in the morning and you'll usually have it back by evening." },
         { q: "Can you service older or vintage MacBooks?", a: "Yes. We service every MacBook from the 2012 Pro onward, including the 2015 to 2019 models that Apple now treats as vintage and won't touch. Older machines benefit the most from a clean and fresh thermal paste, since years of Dubai dust and dried paste are usually why they run hot and loud. The service is still AED 280 regardless of age." },
@@ -70,7 +70,7 @@ export default function MacBookCleaningMaintenance() {
       ]}
       quickAnswer={{
         question: "How much is a MacBook clean and service in Dubai?",
-        answer: "A full internal and external MacBook clean is AED 280 at MacBook Repair Dubai in Concord Tower, Dubai Media City. It covers dust removal from the fans and heatsink, port cleaning, a thermal check and a macOS health review, with free diagnosis and a 90-day warranty. Most jobs are done the same day, with free pickup across Dubai mainland.",
+        answer: "A full internal and external MacBook clean is AED 280 at MacBook Repair Dubai in Concord Tower, Dubai Media City. It covers dust removal from the fans and heatsink, port cleaning, a thermal check and a macOS health review, with free diagnosis and a 12-month warranty. Most jobs are done the same day, with free pickup across Dubai mainland.",
       }}
     />
   );

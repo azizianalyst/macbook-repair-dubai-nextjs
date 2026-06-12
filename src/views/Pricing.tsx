@@ -15,55 +15,55 @@ import { NAP } from "@/content/site";
 type Row = { service: string; price: number; timeline: string; warranty: string };
 
 const MACBOOK: Row[] = [
-  { service: "Screen replacement (Air & Pro 13/14/15/16)", price: 780,  timeline: "Same day · 1-2 days", warranty: "90 days" },
-  { service: "Battery replacement",                         price: 590,  timeline: "Same day · 2 hours", warranty: "90 days" },
-  { service: "Keyboard replacement (full deck)",            price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Trackpad replacement",                        price: 460,  timeline: "Same day",           warranty: "90 days" },
-  { service: "USB-C / Thunderbolt port repair",             price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Touch Bar replacement (2016-2019)",           price: 780,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Logic board repair (component-level)",        price: 1040, timeline: "2-5 days",           warranty: "90 days" },
-  { service: "Water / liquid damage recovery",              price: 910,  timeline: "3-5 days",           warranty: "90 days on repaired components" },
+  { service: "Screen replacement (Air & Pro 13/14/15/16)", price: 780,  timeline: "Same day · 1-2 days", warranty: "3 months" },
+  { service: "Battery replacement",                         price: 590,  timeline: "Same day · 2 hours", warranty: "3 months" },
+  { service: "Keyboard replacement (full deck)",            price: 460,  timeline: "1-2 days",           warranty: "15 days" },
+  { service: "Trackpad replacement",                        price: 460,  timeline: "Same day",           warranty: "12 months" },
+  { service: "USB-C / Thunderbolt port repair",             price: 460,  timeline: "1-2 days",           warranty: "12 months" },
+  { service: "Touch Bar replacement (2016-2019)",           price: 780,  timeline: "1-2 days",           warranty: "12 months" },
+  { service: "Logic board repair (component-level)",        price: 1040, timeline: "2-5 days",           warranty: "15 days" },
+  { service: "Water / liquid damage recovery",              price: 910,  timeline: "3-5 days",           warranty: "15 days" },
   { service: "Data recovery from dead MacBook",             price: 520,  timeline: "1-7 days",           warranty: "Data integrity guaranteed" },
-  { service: "SSD upgrade (256 GB → 1 TB / 2 TB)",          price: 910,  timeline: "Same day",           warranty: "90 days + part warranty" },
-  { service: "RAM upgrade (Intel models only)",             price: 520,  timeline: "Same day",           warranty: "90 days + part warranty" },
-  { service: "Overheating / thermal repaste & clean",       price: 460,  timeline: "Same day · 2 hours", warranty: "90 days" },
-  { service: "Hinge repair",                                price: 390,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Speaker replacement",                         price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "FaceTime camera replacement",                 price: 460,  timeline: "1-2 days",           warranty: "90 days" },
+  { service: "SSD upgrade (256 GB → 1 TB / 2 TB)",          price: 910,  timeline: "Same day",           warranty: "12 months + part warranty" },
+  { service: "RAM upgrade (Intel models only)",             price: 520,  timeline: "Same day",           warranty: "12 months + part warranty" },
+  { service: "Overheating / thermal repaste & clean",       price: 460,  timeline: "Same day · 2 hours", warranty: "12 months" },
+  { service: "Hinge repair",                                price: 390,  timeline: "1-2 days",           warranty: "12 months" },
+  { service: "Speaker replacement",                         price: 460,  timeline: "1-2 days",           warranty: "12 months" },
+  { service: "FaceTime camera replacement",                 price: 460,  timeline: "1-2 days",           warranty: "12 months" },
 ];
 
 const IMAC: Row[] = [
-  { service: "iMac 21.5\" / 24\" / 27\" screen replacement", price: 1040, timeline: "2-4 days", warranty: "90 days" },
-  { service: "Logic board repair",                            price: 1300, timeline: "3-5 days", warranty: "90 days" },
-  { service: "SSD upgrade (Fusion → SSD)",                    price: 910,  timeline: "1-2 days", warranty: "90 days + part warranty" },
-  { service: "Power supply replacement",                      price: 780,  timeline: "1-2 days", warranty: "90 days" },
-  { service: "Fan / overheating repair",                      price: 520,  timeline: "Same day", warranty: "90 days" },
+  { service: "iMac 21.5\" / 24\" / 27\" screen replacement", price: 1040, timeline: "2-4 days", warranty: "3 months" },
+  { service: "Logic board repair",                            price: 1300, timeline: "3-5 days", warranty: "15 days" },
+  { service: "SSD upgrade (Fusion → SSD)",                    price: 910,  timeline: "1-2 days", warranty: "12 months + part warranty" },
+  { service: "Power supply replacement",                      price: 780,  timeline: "1-2 days", warranty: "12 months" },
+  { service: "Fan / overheating repair",                      price: 520,  timeline: "Same day", warranty: "12 months" },
   { service: "macOS install / clean reinstall",               price: 390,  timeline: "Same day · 3 hours", warranty: "30 days" },
 ];
 
 const MAC_DESKTOP: Row[] = [
-  { service: "Mac mini logic board repair",       price: 1040, timeline: "2-4 days", warranty: "90 days" },
-  { service: "Mac mini SSD upgrade",              price: 910,  timeline: "Same day", warranty: "90 days + part warranty" },
-  { service: "Mac Studio diagnostics & repair",   price: 1040, timeline: "2-5 days", warranty: "90 days" },
-  { service: "Mac Pro power supply replacement",  price: 1560, timeline: "3-5 days", warranty: "90 days" },
-  { service: "Mac Pro GPU module repair",         price: 1950, timeline: "3-5 days", warranty: "90 days" },
+  { service: "Mac mini logic board repair",       price: 1040, timeline: "2-4 days", warranty: "15 days" },
+  { service: "Mac mini SSD upgrade",              price: 910,  timeline: "Same day", warranty: "12 months + part warranty" },
+  { service: "Mac Studio diagnostics & repair",   price: 1040, timeline: "2-5 days", warranty: "12 months" },
+  { service: "Mac Pro power supply replacement",  price: 1560, timeline: "3-5 days", warranty: "12 months" },
+  { service: "Mac Pro GPU module repair",         price: 1950, timeline: "3-5 days", warranty: "12 months" },
 ];
 
 const IPHONE: Row[] = [
-  { service: "iPhone screen replacement (8 → 14)",        price: 460,  timeline: "40 minutes", warranty: "90 days" },
-  { service: "iPhone screen replacement (15 / 15 Pro)",   price: 1040, timeline: "Same day",   warranty: "90 days" },
-  { service: "iPhone battery replacement",                price: 330,  timeline: "30 minutes", warranty: "90 days" },
-  { service: "iPhone back glass replacement",             price: 520,  timeline: "1 day",      warranty: "90 days" },
-  { service: "iPhone charging port repair",               price: 390,  timeline: "Same day",   warranty: "90 days" },
-  { service: "iPhone water damage recovery",              price: 650,  timeline: "2-3 days",   warranty: "90 days on repaired components" },
+  { service: "iPhone screen replacement (8 → 14)",        price: 460,  timeline: "40 minutes", warranty: "3 months" },
+  { service: "iPhone screen replacement (15 / 15 Pro)",   price: 1040, timeline: "Same day",   warranty: "3 months" },
+  { service: "iPhone battery replacement",                price: 330,  timeline: "30 minutes", warranty: "3 months" },
+  { service: "iPhone back glass replacement",             price: 520,  timeline: "1 day",      warranty: "12 months" },
+  { service: "iPhone charging port repair",               price: 390,  timeline: "Same day",   warranty: "12 months" },
+  { service: "iPhone water damage recovery",              price: 650,  timeline: "2-3 days",   warranty: "15 days" },
 ];
 
 const IPAD: Row[] = [
-  { service: "iPad screen / digitiser (mini / Air / 9-10)", price: 460,  timeline: "1 day",  warranty: "90 days" },
-  { service: "iPad Pro 11\" screen + LCD",                   price: 1170, timeline: "1-2 days", warranty: "90 days" },
-  { service: "iPad Pro 12.9\" screen + LCD",                 price: 1560, timeline: "1-2 days", warranty: "90 days" },
-  { service: "iPad battery replacement",                     price: 520,  timeline: "1 day",  warranty: "90 days" },
-  { service: "iPad charging port repair",                    price: 460,  timeline: "Same day", warranty: "90 days" },
+  { service: "iPad screen / digitiser (mini / Air / 9-10)", price: 460,  timeline: "1 day",  warranty: "3 months" },
+  { service: "iPad Pro 11\" screen + LCD",                   price: 1170, timeline: "1-2 days", warranty: "3 months" },
+  { service: "iPad Pro 12.9\" screen + LCD",                 price: 1560, timeline: "1-2 days", warranty: "3 months" },
+  { service: "iPad battery replacement",                     price: 520,  timeline: "1 day",  warranty: "3 months" },
+  { service: "iPad charging port repair",                    price: 460,  timeline: "Same day", warranty: "12 months" },
 ];
 
 const ALL_TABLES: { id: string; title: string; subtitle: string; rows: Row[] }[] = [
@@ -78,14 +78,14 @@ const HOW_PRICING_WORKS = [
   { icon: Search,      title: "Free diagnosis",     body: "Walk in or send a WhatsApp. The technician opens the device and finds the actual fault - no charge, even if you walk away." },
   { icon: Banknote,    title: "Quote before repair", body: "Final price in writing on WhatsApp before any screwdriver moves. Approve, decline, or take the device back - your call." },
   { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe AED 0. The diagnosis report is yours to keep." },
-  { icon: Clock,       title: "90-day warranty",    body: "Every repair carries a written 90-day warranty on parts and workmanship. Same fault back inside 90 days, redone free." },
+  { icon: Clock,       title: "12-month warranty",    body: "Every repair carries a written 12-month warranty on parts and workmanship. Same fault back inside 12 months, redone free." },
 ];
 
 const COMPARISON = [
   { row: "Diagnosis fee",          us: "AED 0 (free)",            apple: "AED 200-350" },
   { row: "Turnaround time",        us: "Same day to 5 days",      apple: "5-14 days (sent to Ireland for some repairs)" },
   { row: "Free pickup & delivery", us: "Yes - across Dubai",      apple: "No - drop-off only" },
-  { row: "Warranty",               us: "90 days written",         apple: "90 days" },
+  { row: "Warranty",               us: "12 months written",         apple: "12 months" },
   { row: "MacBook screen repair",  us: "From AED 780",            apple: "AED 1,400-2,200" },
   { row: "MacBook battery",        us: "From AED 590",            apple: "AED 750-950" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
@@ -123,25 +123,25 @@ export default function Pricing() {
   // Build one Service schema entry per priced row (capped at 30 to stay under
   // the JSON-LD payload limits Googlebot accepts cleanly).
   const services = [
-    serviceSchema({ name: "MacBook Screen Repair Dubai",        price: 780, timeline: "Same day", warranty: "P90D", url: "/macbook-screen-repair-dubai" }),
-    serviceSchema({ name: "MacBook Battery Replacement Dubai",  price: 590, timeline: "2 hours",  warranty: "P90D", url: "/macbook-battery-replacement-dubai" }),
-    serviceSchema({ name: "MacBook Keyboard Replacement Dubai", price: 460, timeline: "1-2 days", warranty: "P90D", url: "/macbook-keyboard-repair-dubai" }),
-    serviceSchema({ name: "MacBook Trackpad Repair Dubai",      price: 460, timeline: "Same day", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook USB-C Port Repair Dubai",    price: 460, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Touch Bar Replacement",      price: 780, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Logic Board Repair Dubai",   price: 1040, timeline: "2-5 days", warranty: "P90D", url: "/macbook-logic-board-repair-dubai" }),
-    serviceSchema({ name: "MacBook Water Damage Repair Dubai",  price: 910, timeline: "3-5 days", warranty: "P90D", url: "/macbook-water-damage-repair-dubai" }),
-    serviceSchema({ name: "MacBook Data Recovery Dubai",        price: 520, timeline: "1-7 days", warranty: "P90D", url: "/mac-data-recovery-dubai" }),
-    serviceSchema({ name: "MacBook SSD Upgrade Dubai",          price: 910, timeline: "Same day", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Hinge Repair Dubai",         price: 390, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "iMac Screen Repair Dubai",           price: 1040, timeline: "2-4 days", warranty: "P90D", url: "/imac-screen-repair-dubai" }),
-    serviceSchema({ name: "iMac Logic Board Repair Dubai",      price: 1300, timeline: "3-5 days", warranty: "P90D" }),
-    serviceSchema({ name: "iMac SSD Upgrade Dubai",             price: 910, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "Mac mini Repair Dubai",              price: 1040, timeline: "2-4 days", warranty: "P90D" }),
-    serviceSchema({ name: "macOS Install / Reinstall Dubai",    price: 390, timeline: "3 hours",  warranty: "P30D" }),
-    serviceSchema({ name: "iPhone Screen Repair Dubai",         price: 460, timeline: "40 minutes", warranty: "P90D", url: "/iphone-screen-repair-dubai" }),
-    serviceSchema({ name: "iPhone Battery Replacement Dubai",   price: 330, timeline: "30 minutes", warranty: "P90D" }),
-    serviceSchema({ name: "iPad Screen Repair Dubai",           price: 460, timeline: "1 day",     warranty: "P90D", url: "/ipad-screen-repair-dubai" }),
+    serviceSchema({ name: "MacBook Screen Repair Dubai",        price: 780, timeline: "Same day", warranty: "P3M", url: "/macbook-screen-repair-dubai" }),
+    serviceSchema({ name: "MacBook Battery Replacement Dubai",  price: 590, timeline: "2 hours",  warranty: "P3M", url: "/macbook-battery-replacement-dubai" }),
+    serviceSchema({ name: "MacBook Keyboard Replacement Dubai", price: 460, timeline: "1-2 days", warranty: "P15D", url: "/macbook-keyboard-repair-dubai" }),
+    serviceSchema({ name: "MacBook Trackpad Repair Dubai",      price: 460, timeline: "Same day", warranty: "P1Y" }),
+    serviceSchema({ name: "MacBook USB-C Port Repair Dubai",    price: 460, timeline: "1-2 days", warranty: "P1Y" }),
+    serviceSchema({ name: "MacBook Touch Bar Replacement",      price: 780, timeline: "1-2 days", warranty: "P1Y" }),
+    serviceSchema({ name: "MacBook Logic Board Repair Dubai",   price: 1040, timeline: "2-5 days", warranty: "P15D", url: "/macbook-logic-board-repair-dubai" }),
+    serviceSchema({ name: "MacBook Water Damage Repair Dubai",  price: 910, timeline: "3-5 days", warranty: "P15D", url: "/macbook-water-damage-repair-dubai" }),
+    serviceSchema({ name: "MacBook Data Recovery Dubai",        price: 520, timeline: "1-7 days", warranty: "P15D", url: "/mac-data-recovery-dubai" }),
+    serviceSchema({ name: "MacBook SSD Upgrade Dubai",          price: 910, timeline: "Same day", warranty: "P1Y" }),
+    serviceSchema({ name: "MacBook Hinge Repair Dubai",         price: 390, timeline: "1-2 days", warranty: "P1Y" }),
+    serviceSchema({ name: "iMac Screen Repair Dubai",           price: 1040, timeline: "2-4 days", warranty: "P3M", url: "/imac-screen-repair-dubai" }),
+    serviceSchema({ name: "iMac Logic Board Repair Dubai",      price: 1300, timeline: "3-5 days", warranty: "P15D" }),
+    serviceSchema({ name: "iMac SSD Upgrade Dubai",             price: 910, timeline: "1-2 days", warranty: "P1Y" }),
+    serviceSchema({ name: "Mac mini Repair Dubai",              price: 1040, timeline: "2-4 days", warranty: "P1Y" }),
+    serviceSchema({ name: "macOS Install / Reinstall Dubai",    price: 390, timeline: "3 hours",  warranty: "P15D" }),
+    serviceSchema({ name: "iPhone Screen Repair Dubai",         price: 460, timeline: "40 minutes", warranty: "P3M", url: "/iphone-screen-repair-dubai" }),
+    serviceSchema({ name: "iPhone Battery Replacement Dubai",   price: 330, timeline: "30 minutes", warranty: "P3M" }),
+    serviceSchema({ name: "iPad Screen Repair Dubai",           price: 460, timeline: "1 day",     warranty: "P3M", url: "/ipad-screen-repair-dubai" }),
   ];
 
   useSeo(
@@ -212,7 +212,7 @@ export default function Pricing() {
           <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Genuine Apple parts when available, premium-grade aftermarket otherwise",
-              "90-day written warranty on parts and workmanship",
+              "12-month written warranty on parts and workmanship",
               "Free pickup and delivery across Dubai Mainland",
               "Full diagnostic test and post-repair quality check",
               "Free internal cleaning, dust removal, and thermal repaste on MacBook repairs",

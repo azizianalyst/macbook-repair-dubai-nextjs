@@ -44,9 +44,9 @@ export default function IPadBackGlassRepair() {
         { title: "Chassis assessment",        body: "We measure the dent depth and check whether internal components (battery, LCD, Smart Connector) are stressed." },
         { title: "Quote: rework vs transfer", body: "Surface dents - rework on the bench. Severe dents touching internals - full chassis swap (much more expensive, we quote separately)." },
         { title: "Aluminium rework",          body: "Heat + precision tooling to push the dent out from the inside without cracking anodisation. Smart Connector pads protected." },
-        { title: "Polish + reassemble",       body: "Anodised-finish polish where possible, full reassembly, function test of every port, button and Smart Connector pin. 90-day cosmetic warranty." },
+        { title: "Polish + reassemble",       body: "Anodised-finish polish where possible, full reassembly, function test of every port, button and Smart Connector pin. 12-month cosmetic warranty." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the rework area against re-deformation under normal use.",
         "Smart Connector function guaranteed if it worked before the repair.",

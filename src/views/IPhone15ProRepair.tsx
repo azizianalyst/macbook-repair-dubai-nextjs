@@ -19,7 +19,7 @@ export default function IPhone15ProRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 15 Pro", path: "/iphone-15-pro-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 15 Pro Repair"
       intro={
         <>
@@ -88,9 +88,9 @@ export default function IPhone15ProRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + Action Button 1-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, USB-C 3 data, Action Button and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",
         "Action Button: full Settings → Action Button function chain verified.",

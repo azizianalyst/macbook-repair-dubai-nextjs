@@ -37,25 +37,27 @@ export function StickyContactBar() {
       )}
       aria-hidden={!shown}
     >
-      {/* Secondary: Call */}
+      {/* Secondary: Call — same pill geometry as WhatsApp so the stack reads
+          as one designed cluster, differentiated by surface only */}
       <a
         href={`tel:${NAP.phoneE164}`}
         data-track="call-sticky"
         aria-label={`Call ${NAP.phoneDisplay}`}
         title={`Call ${NAP.phoneDisplay}`}
         className={cn(
-          "group inline-flex items-center gap-2 rounded-full bg-bg-card text-text",
-          "border border-border-strong shadow-md px-4 h-11 min-h-[44px] font-semibold text-[15px]",
-          "hover:shadow-lg hover:border-primary hover:text-primary",
+          "group inline-flex w-full items-center justify-center gap-2 rounded-full bg-bg-card/95 text-text backdrop-blur-sm",
+          "border border-border shadow-[0_8px_24px_-12px_rgba(0,0,0,0.25)] px-5 h-12 min-h-[44px] font-semibold text-[15px]",
+          "hover:border-accent/50 hover:text-accent",
           "motion-safe:transition-all motion-safe:duration-200 hover:-translate-y-0.5",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
         )}
       >
-        <Phone size={18} aria-hidden />
+        <Phone size={17} aria-hidden />
         <span>Call</span>
       </a>
 
-      {/* Primary: WhatsApp FAB */}
+      {/* Primary: WhatsApp — white text on the brand green (token is darkened
+          specifically for white text contrast) */}
       <a
         href={NAP.whatsappUrl}
         target="_blank"
@@ -64,13 +66,13 @@ export function StickyContactBar() {
         aria-label="Chat with us on WhatsApp"
         title="Chat with us on WhatsApp"
         className={cn(
-          "group inline-flex items-center gap-2.5 rounded-full bg-whatsapp text-text",
-          "shadow-lg px-5 h-14 min-h-[44px] font-semibold text-[15px]",
-          "hover:shadow-xl motion-safe:transition-all motion-safe:duration-200 hover:-translate-y-0.5",
+          "group inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white",
+          "shadow-[0_12px_32px_-12px_rgba(7,92,48,0.55)] px-5 h-12 min-h-[44px] font-semibold text-[15px]",
+          "hover:shadow-[0_16px_40px_-12px_rgba(7,92,48,0.65)] motion-safe:transition-all motion-safe:duration-200 hover:-translate-y-0.5",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
         )}
       >
-        <MessageCircle size={22} aria-hidden />
+        <MessageCircle size={17} aria-hidden />
         <span>WhatsApp</span>
       </a>
     </div>

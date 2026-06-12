@@ -19,7 +19,7 @@ export default function IPhone17eRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 17e",    path: "/iphone-17e-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 17e Repair"
       intro={
         <>
@@ -86,9 +86,9 @@ export default function IPhone17eRepair() {
         { title: "Diagnose + repair",    body: "OLED + battery same day; MagSafe back glass + Action Button 2-3 days for parts." },
         { title: "QC + return",          body: "OLED, Dynamic Island, USB-C, MagSafe alignment, Action Button and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "MagSafe: charge alignment verified to ±0.3 mm tolerance.",
         "Battery: capacity-drop coverage.",

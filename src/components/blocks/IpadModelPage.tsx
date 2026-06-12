@@ -205,7 +205,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does it cost to repair the ${model.name} screen in Dubai?`,
-      a: `Screen replacement on the ${model.name} is AED ${model.pricing.screen}. Timeline: ${model.timelineNotes.split(".")[0]}. Includes a 90-day written warranty on the new panel and the labour.`,
+      a: `Screen replacement on the ${model.name} is AED ${model.pricing.screen}. Timeline: ${model.timelineNotes.split(".")[0]}. Includes a 3-month written warranty on the new panel and the labour.`,
     },
     {
       q: `Can you replace the ${model.name} battery the same day?`,
@@ -217,7 +217,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Do you offer a warranty on ${model.name} repairs?`,
-      a: `Every ${model.name} repair comes with a 90-day written warranty covering the part we replaced and the labour. If the same fault returns we re-repair free, no questions asked.`,
+      a: `Every ${model.name} repair comes with a written warranty of up to 12 months, depending on the repair, covering the part we replaced and the labour. If the same fault returns we re-repair free, no questions asked.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
@@ -228,11 +228,11 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, port AED ${model.pricing.port}. 90-day warranty. Free pickup.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, port AED ${model.pricing.port}. 12-month warranty. Free pickup.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 90-day written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={model.category === "pro" && model.releaseYear >= 2024 ? "3-5 days (screen) · same-day (battery)" : "Same-day to 2 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -241,7 +241,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
         { name: "iPad Repair", path: "/ipad-repair-dubai" },
         { name: model.name,    path: `/${model.slug}` },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPad board-level repair & screen replacement" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPad board-level repair & screen replacement" }}
       serviceName={`${model.name} Repair`}
       intro={
         <>
@@ -339,9 +339,9 @@ export default function IpadModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
         { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-10pm." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + 90-day warranty",       body: `${model.timelineNotes} You walk out with a written 90-day warranty.` },
+        { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",

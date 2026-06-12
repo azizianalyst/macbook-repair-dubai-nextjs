@@ -6,7 +6,7 @@ export default function IPhone13Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Repair Dubai - 6.1-inch OLED from AED 300 | 055 741 3706"
-      seoDescription="iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen AED 650, battery AED 300. Same-day, 90-day warranty."
+      seoDescription="iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
       path="/iphone-13-repair-dubai"
       eyebrow="iPhone 13 (2021)"
       h1="iPhone 13 Repair Dubai - Screen, Battery, Face ID, Camera"
@@ -19,7 +19,7 @@ export default function IPhone13Repair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 13",     path: "/iphone-13-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 13 Repair"
       intro={
         <>
@@ -86,9 +86,9 @@ export default function IPhone13Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + return",          body: "OLED, MagSafe, cameras and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, green-tint covered.",
         "Battery: capacity-drop coverage.",
         "MagSafe coil: charge alignment tested before return.",

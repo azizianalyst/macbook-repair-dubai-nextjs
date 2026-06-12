@@ -109,7 +109,7 @@ export default function BlogMacBookBatteryReplacementCost() {
               { model: "Turnaround", ours: "Same day", apple: "5-7 days" },
               { model: "Battery brand", ours: "Apple-equivalent OEM cells", apple: "Apple genuine" },
               { model: "Top-case replacement", ours: "Battery only", apple: "Often whole top-case (extra cost passed on)" },
-              { model: "Warranty", ours: "12 months written", apple: "90 days" },
+              { model: "Warranty", ours: "3 months written", apple: "12 months" },
               { model: "Pickup", ours: "Free, mainland Dubai", apple: "You travel to mall" },
             ]}
           />
@@ -155,7 +155,7 @@ export default function BlogMacBookBatteryReplacementCost() {
         },
         {
           q: "Do you offer a warranty on the new battery?",
-          a: "Yes - 12 months written warranty on the cell and the labour. If capacity drops below 90% in the first year, we replace it free. (Apple gives 90 days.)",
+          a: "Yes - 3 months written warranty on the cell and the labour. If capacity drops below 80% within 3 months, we replace it free.",
         },
       ]}
       relatedLinks={[

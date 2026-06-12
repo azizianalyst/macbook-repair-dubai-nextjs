@@ -47,7 +47,7 @@ export const LINK_RULES: { re: RegExp; href: string }[] = [
   { re: /\bwebcam\b/i,                 href: "/macbook-camera-repair-dubai" },
 ];
 
-const LINK_CLASS = "text-accent-bright underline-offset-2 hover:underline";
+const LINK_CLASS = "text-accent underline-offset-2 hover:underline";
 
 // Link the first occurrence of each (non-self, not-yet-used) keyword in a string.
 export function linkifyString(text: string, selfHref?: string, max = 4): ReactNode {

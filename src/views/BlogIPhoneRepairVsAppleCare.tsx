@@ -113,7 +113,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             One real AppleCare+ benefit: free battery service when health drops below 80%. Apple uses
             genuine OEM batteries with full Battery Health metrics intact. Our pay-as-you-go battery
             service is AED 220-380 depending on model - also genuine-spec cells, also full Battery Health
-            (no "service" warning), 90-day warranty.
+            (no "service" warning), 12-month warranty.
           </p>
           <p>
             If you keep the iPhone past year 2, Apple's free battery service through AppleCare+ effectively

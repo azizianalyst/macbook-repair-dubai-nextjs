@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 export function WarrantyBar({ tone = "light" }: { tone?: "light" | "dark" } = {}) {
   const dark = tone === "dark";
   const items = [
-    { icon: ShieldCheck, label: "90-day written warranty" },
+    { icon: ShieldCheck, label: "12-month written warranty" },
     { icon: Wallet,      label: "No fix, no charge" },
-    { icon: Clock,       label: "Same-day on common repairs" },
+    { icon: Clock,       label: "30-min appointment repairs" },
   ];
   return (
     <Reveal className={cn("border-y", dark ? "border border-border bg-bg-card" : "bg-success/10 border-success/30")}>

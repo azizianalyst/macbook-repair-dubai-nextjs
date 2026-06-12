@@ -103,7 +103,7 @@ export default function BlogIMacNotTurningOn() {
             Same-day if you drop off before 11am and we have the PSU in stock. Bench time is
             120-150 minutes (the iMac display is bonded to the chassis with strong adhesive that
             takes time to release without cracking). We re-seal with new adhesive and do a 4-hour
-            stress test before handing back. Returned with a 90-day warranty on the PSU and the
+            stress test before handing back. Returned with a 12-month warranty on the PSU and the
             workmanship.
           </p>
 

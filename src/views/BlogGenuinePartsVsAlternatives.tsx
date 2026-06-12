@@ -120,9 +120,9 @@ export default function BlogGenuinePartsVsAlternatives() {
           <p>
             We warranty Tier 2 parts the same as we would warranty genuine - full{" "}
             <Link to="/blog/macbook-repair-warranty-explained" className="text-accent font-semibold hover:underline">
-              90 days workmanship
+              12 months workmanship
             </Link>
-            , 6 months on batteries. Tier 3 parts get a 30-day warranty (because failure rates are
+            , 3 months on batteries. Tier 3 parts get a 30-day warranty (because failure rates are
             higher and we're transparent about that). You always know which tier you're getting before
             you authorise.
           </p>

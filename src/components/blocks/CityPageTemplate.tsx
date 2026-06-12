@@ -24,6 +24,7 @@ import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 import { COMMON_SERVICES, CITIES, type CityConfig } from "@/content/cities";
+import { areaTopicForSlug } from "@/lib/page-images";
 
 export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
   const path = `/macbook-repair-${cfg.slug}`;
@@ -33,7 +34,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
   const isPickup = cfg.collectionModel === "pickup";
   const collectVerb = isPickup ? "free door-to-door pickup" : "free courier collection";
   const title = `MacBook Repair ${cfg.city} - Free Collection & Delivery`;
-  const description = `MacBook repair in ${cfg.city} via ${collectVerb} to our Dubai Media City workshop - ${cfg.turnaround}, 90-day written warranty. No branch needed. Call 055 741 3706.`;
+  const description = `MacBook repair in ${cfg.city} via ${collectVerb} to our Dubai Media City workshop - ${cfg.turnaround}, 12-month written warranty. No branch needed. Call 055 741 3706.`;
 
   useSeo(
     { title, description, path },
@@ -45,7 +46,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         name: `MacBook Repair ${cfg.city}`,
         price: 350,
         timeline: cfg.turnaround,
-        warranty: "P90D",
+        warranty: "P1Y",
         url: path,
         description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for ${cfg.city}, ${cfg.emirate}, with free courier collection and return from our Dubai Media City workshop.`,
       }),
@@ -60,8 +61,12 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           tone="dark"
           eyebrow={`${isPickup ? "Free pickup" : "Free courier"} in ${cfg.city}`}
           title={`MacBook Repair in ${cfg.city} - Free Collection & Delivery`}
-          subtitle={`We're an independent Mac specialist in Dubai, ${cfg.distance} away - and we come to you. We collect from ${cfg.city} by ${collectVerb}, repair at our Media City workshop, and return it. ${cfg.landmarkLine} ${cfg.turnaround}, 90-day written warranty.`}
+          subtitle={`We're an independent Mac specialist in Dubai, ${cfg.distance} away - and we come to you. We collect from ${cfg.city} by ${collectVerb}, repair at our Media City workshop, and return it. ${cfg.landmarkLine} ${cfg.turnaround}, 12-month written warranty.`}
+          ctaLabel="Book free collection"
+          image={areaTopicForSlug(cfg.slug)?.src}
+          imageAlt={areaTopicForSlug(cfg.slug)?.alt ?? `MacBook repair courier collection in ${cfg.city}, ${cfg.emirate}`}
         >
+          {/* Hero renders the CTA pair itself (ctaLabel above). Only the trust line goes here. */}
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free collection &amp; return</span>
             <span className="text-text-faint">·</span>
@@ -69,24 +74,12 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             <span className="text-text-faint">·</span>
             <span className="flex items-center gap-1"><MapPin size={16} className="text-accent" aria-hidden /> {cfg.distance} from Dubai</span>
           </p>
-          <div className="mt-lg flex flex-wrap gap-sm">
-            <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden /> Book free collection
-              </a>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <a href={`tel:${NAP.phoneE164}`}>
-                <Phone aria-hidden /> {NAP.phoneDisplay}
-              </a>
-            </Button>
-          </div>
         </Hero>
 
         <QuickAnswer
           tone="dark"
           question={`MacBook repair in ${cfg.city} - how does it work?`}
-          answer={`We don't have a branch in ${cfg.city} - we're a specialist workshop in Dubai Media City and we come to you. A courier collects your MacBook from your ${cfg.city} address free of charge, we diagnose and repair it at the workshop, and a courier returns it - ${cfg.turnaround}. Diagnosis is free, the quote is confirmed in writing first, and every repair carries a 90-day written warranty.`}
+          answer={`We don't have a branch in ${cfg.city} - we're a specialist workshop in Dubai Media City and we come to you. A courier collects your MacBook from your ${cfg.city} address free of charge, we diagnose and repair it at the workshop, and a courier returns it - ${cfg.turnaround}. Diagnosis is free, the quote is confirmed in writing first, and every repair carries a 12-month written warranty.`}
         />
 
         <USPStrip tone="dark" />
@@ -132,7 +125,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
                 { t: `Courier collects in ${cfg.city}`, b: `${cfg.collectionWindow}. The device is logged, insured in transit and trackable on WhatsApp.` },
                 { t: "Free workshop diagnosis", b: "We inspect it at our Dubai Media City workshop and send an itemised written quote on WhatsApp." },
                 { t: "Approve and we repair", b: `Reply 'approved' and we get to work. ${cfg.turnaround.charAt(0).toUpperCase()}${cfg.turnaround.slice(1)} for most common repairs.` },
-                { t: "Free return to your door", b: `Courier returns the MacBook to your ${cfg.city} address. Pay on completion - cash, card or transfer. 90-day warranty card included.` },
+                { t: "Free return to your door", b: `Courier returns the MacBook to your ${cfg.city} address. Pay on completion - cash, card or transfer. 12-month warranty card included.` },
               ].map((s, i) => (
                 <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
                   <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
@@ -154,7 +147,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             {services.map((s) => (
               <Link key={s.href} to={s.href} className="block border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 transition">
                 <p className="font-bold text-[16px] mb-1">{s.label}</p>
-                <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · 90-day warranty</p>
+                <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · 12-month warranty</p>
               </Link>
             ))}
           </div>

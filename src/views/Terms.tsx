@@ -56,7 +56,7 @@ export default function Terms() {
         <ul>
           <li><strong>Genuine Apple parts</strong> are fitted whenever the part is currently sold by Apple wholesale or available through verified channels.</li>
           <li><strong>Quality-grade aftermarket parts</strong> (OEM or premium third-party) are clearly labelled on the WhatsApp quote and on the printed invoice.</li>
-          <li>Aftermarket parts carry the same 90-day warranty as genuine parts.</li>
+          <li>Aftermarket parts carry the same 12-month warranty as genuine parts.</li>
           <li>Some Touch ID, Face ID, and True Tone features are tied to the original Apple part by Apple's calibration servers and may not work after replacement. The technician will state this in writing before the repair.</li>
           <li>Old parts removed during the repair are returned to you on request, except where Apple recycling regulations require recovery (lithium-ion batteries).</li>
         </ul>
@@ -64,7 +64,7 @@ export default function Terms() {
 
       <LegalSection id="warranty" title="4. Warranty">
         <p>
-          A 90-day written warranty applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty">Warranty Policy</a> page.
+          A 12-month written warranty applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty">Warranty Policy</a> page.
         </p>
       </LegalSection>
 

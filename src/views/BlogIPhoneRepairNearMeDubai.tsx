@@ -56,8 +56,8 @@ export default function BlogIPhoneRepairNearMeDubai() {
 
           <h3>4. Warranty offered</h3>
           <p>
-            <strong>Written</strong> warranty, on the receipt, with terms. "We give 90 days warranty"
-            verbally doesn't count. Industry minimum: 30 days on screens, 90 days on batteries, 6
+            <strong>Written</strong> warranty, on the receipt, with terms. "We give 12 months warranty"
+            verbally doesn't count. Industry minimum: 30 days on screens, 3 months on batteries, 6
             months on logic boards. If a shop offers no warranty or "as-is sold", walk out.
           </p>
 
@@ -139,7 +139,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
               { model: "1. Physical address", ours: "Office #45, 10th Floor, Concord Tower, Dubai Media City - open Mon-Sat 9am-10pm" },
               { model: "2. Years in business", ours: "Since 10 October 2004 - 21 years, same name, same family ownership" },
               { model: "3. Google reviews", ours: "1,400+ reviews, 4.8 average, fresh weekly" },
-              { model: "4. Warranty", ours: "Written: 30 days screens, 90 days batteries, 6 months logic boards" },
+              { model: "4. Warranty", ours: "Written: 30 days screens, 3 months batteries, 6 months logic boards" },
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },
               { model: "6. Same-day repair", ours: "Screen, battery, back glass: 30-90 min. Logic board: 1-3 days" },
               { model: "7. Free diagnosis", ours: "Free, with written quote, no obligation" },

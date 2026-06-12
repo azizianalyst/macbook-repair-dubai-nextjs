@@ -47,10 +47,10 @@ export default function IMacFullDiagnostic() {
         { title: "Software audit",                body: "macOS version vs your model's ceiling, malware quick-scan, login items audit, profiles audit, storage health." },
         { title: "Written report + price",        body: "One-page summary you can keep. If repair is needed, prices listed in writing. If not, we say so and leave you in peace." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard 90-day warranty.",
+        "Any repair you book carries our standard 12-month warranty.",
         "Home visit slot is genuinely free - no minimum spend, no obligation.",
       ]}
       faqs={[

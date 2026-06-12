@@ -123,7 +123,7 @@ export default function BlogIPhoneWorthDubai() {
           <h2>Cracked screen reduces value by 30-50%</h2>
           <p>
             A cracked screen on iPhone 16 Pro Max drops resale from AED 3,000 to AED 1,800 - a AED 1,200
-            hit. Our screen replacement on the same model is AED 950 with 90-day warranty. So if you
+            hit. Our screen replacement on the same model is AED 950 with 3-month warranty. So if you
             replace before selling, you net AED 250 more. We do this calculation at our shop and
             sometimes recommend the repair, sometimes don't (depends on model and your timeline).
           </p>

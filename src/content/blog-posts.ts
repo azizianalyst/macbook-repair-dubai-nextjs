@@ -134,7 +134,7 @@ export const POSTS: Post[] = [
   {
     slug: "/blog/macbook-repair-warranty-explained",
     title: "MacBook Repair Warranty Explained - Dubai 2026",
-    excerpt: "90-day workmanship + parts warranty (6 months on batteries). Coverage scope, exclusions, claim process, comparison with Apple's warranty, and AppleCare+ interaction. Warranty transfers if you sell.",
+    excerpt: "12-month workmanship + parts warranty (3 months on batteries). Coverage scope, exclusions, claim process, comparison with Apple's warranty, and AppleCare+ interaction. Warranty transfers if you sell.",
     category: "Trust · Warranty",
     author: "Shafiq",
     date: "April 2026",
@@ -276,6 +276,33 @@ export const POSTS: Post[] = [
     category: "Honest guide · iPhone",
     author: "Shafiq",
     date: "April 2026",
+    minutes: 10,
+  },
+  {
+    slug: "/blog/ipad-screen-repair-cost-dubai-2026",
+    title: "iPad Screen Repair Cost Dubai 2026 - Every Model",
+    excerpt: "iPad screen repair prices Dubai 2026: AED 450 (iPad 9) to AED 1,200 (iPad Pro M5). LCD vs mini-LED vs OLED, Apple Store comparison, same-day service.",
+    category: "Cost guide · iPad",
+    author: "Ali",
+    date: "June 2026",
+    minutes: 11,
+  },
+  {
+    slug: "/blog/ipad-battery-replacement-cost-dubai",
+    title: "iPad Battery Replacement Cost Dubai 2026 - All Models",
+    excerpt: "iPad battery replacement Dubai 2026: AED 300 (older models) to AED 550 (iPad Pro M5). When to replace, 80% rule, same-day service, 12-month warranty.",
+    category: "Cost guide · iPad",
+    author: "Shafiq",
+    date: "June 2026",
+    minutes: 9,
+  },
+  {
+    slug: "/blog/ipad-water-damage-repair-dubai-guide",
+    title: "iPad Water Damage Repair Dubai - Costs & What To Do First",
+    excerpt: "iPad water damage repair Dubai: AED 450–1,400 depending on board damage. First 30 minutes matter most. 80% recovery rate. Free pickup, 12-month warranty.",
+    category: "Problem solving · iPad",
+    author: "Ali",
+    date: "June 2026",
     minutes: 10,
   },
   {
@@ -659,7 +686,7 @@ export const CATEGORIES: BlogCategory[] = [
     eyebrow: "AED pricing · 2026",
     blurb: "What every Apple repair actually costs in Dubai - real AED prices.",
     intro:
-      "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - each with current April 2026 AED pricing, model-by-model tables, and a side-by-side against Apple Store quotes. No call-for-price games: we publish the numbers so you can budget before you book. Every figure here is what our Dubai Media City workshop charges, backed by a 90-day warranty and our no-fix-no-charge promise.",
+      "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - each with current April 2026 AED pricing, model-by-model tables, and a side-by-side against Apple Store quotes. No call-for-price games: we publish the numbers so you can budget before you book. Every figure here is what our Dubai Media City workshop charges, backed by a 12-month warranty and our no-fix-no-charge promise.",
     types: ["Cost guide", "Cost comparison"],
   },
   {
@@ -713,7 +740,7 @@ export const CATEGORIES: BlogCategory[] = [
     eyebrow: "Trust & transparency",
     blurb: "Our pricing, warranty, parts policy and what makes us different.",
     intro:
-      "Twenty-one years repairing Apple devices in Dubai, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our 90-day warranty, the difference between genuine and quality-alternative parts, and how free pickup and delivery works across Dubai. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
+      "Twenty-one years repairing Apple devices in Dubai, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our 12-month warranty, the difference between genuine and quality-alternative parts, and how free pickup and delivery works across Dubai. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
     types: ["Trust", "Honest guide", "Service", "Local"],
   },
 ];
@@ -739,6 +766,47 @@ export function postsInCategory(slug: string): Post[] {
   const c = categoryBySlug(slug);
   if (!c) return [];
   return POSTS.filter((p) => c.types.includes(postType(p)));
+}
+
+/** Device tags derived from the subtopic half of "Type · Subtopic". */
+export const TAGS = [
+  { slug: "macbook", name: "MacBook" },
+  { slug: "iphone", name: "iPhone" },
+  { slug: "ipad", name: "iPad" },
+  { slug: "imac", name: "iMac" },
+  { slug: "mac", name: "Mac (Mini · Studio · Pro)" },
+] as const;
+
+export type TagSlug = (typeof TAGS)[number]["slug"];
+
+/** Subtopic half of the category string, lowercased for matching. */
+function postSubtopic(p: Post): string {
+  const parts = p.category.split("·");
+  return parts.length > 1 ? parts[1].trim().toLowerCase() : "";
+}
+
+/** All posts that match a device tag slug. */
+export function postsByTag(slug: TagSlug): Post[] {
+  return POSTS.filter((p) => {
+    const sub = postSubtopic(p);
+    if (slug === "macbook") return sub.startsWith("macbook");
+    if (slug === "iphone") return sub.startsWith("iphone");
+    if (slug === "ipad") return sub.startsWith("ipad");
+    if (slug === "imac") return sub === "imac";
+    if (slug === "mac") return (
+      sub === "mac desktop" ||
+      sub === "mac mini" ||
+      sub === "mac studio" ||
+      sub === "mac pro" ||
+      sub === "mac platform"
+    );
+    return false;
+  });
+}
+
+/** Look up a tag by slug. */
+export function tagBySlug(slug: string): (typeof TAGS)[number] | undefined {
+  return TAGS.find((t) => t.slug === slug);
 }
 
 /** Post count per hub slug, for badges. */

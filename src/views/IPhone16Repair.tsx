@@ -6,7 +6,7 @@ export default function IPhone16Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16 Repair Dubai - A18, Camera Control from AED 350 | 055 741 3706"
-      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, 90-day warranty."
+      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, 12-month warranty."
       path="/iphone-16-repair-dubai"
       eyebrow="iPhone 16 (2024, current Apple lineup)"
       h1="iPhone 16 Repair Dubai - Screen, Camera Control, USB-C, Battery"
@@ -19,7 +19,7 @@ export default function IPhone16Repair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 16",     path: "/iphone-16-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 16 Repair"
       intro={
         <>
@@ -87,9 +87,9 @@ export default function IPhone16Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

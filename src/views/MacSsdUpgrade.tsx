@@ -47,7 +47,7 @@ export default function MacSsdUpgrade() {
       warrantyDays={365}
       warrantyBullets={[
         "1-year warranty on the SSD itself.",
-        "90-day warranty on the install workmanship.",
+        "12-month warranty on the install workmanship.",
         "Free re-clone if the new SSD has a logical issue inside warranty.",
       ]}
       faqs={[

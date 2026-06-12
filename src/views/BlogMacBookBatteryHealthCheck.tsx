@@ -163,7 +163,7 @@ export default function BlogMacBookBatteryHealthCheck() {
               MacBook battery cost guide
             </Link>{" "}
             for every model. Quick summary: AED 450-500 for Air, AED 600-650 for 14″ Pro, AED
-            700 for 16″ Pro. Same-day. 12-month warranty.
+            700 for 16″ Pro. Same-day. 3-month warranty.
           </p>
         </>
       }
@@ -194,7 +194,7 @@ export default function BlogMacBookBatteryHealthCheck() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook battery replacement service", href: "/macbook-battery-replacement-dubai", description: "Same-day, 12-month warranty." },
+        { label: "MacBook battery replacement service", href: "/macbook-battery-replacement-dubai", description: "Same-day, 3-month warranty." },
         { label: "MacBook battery cost guide 2026", href: "/blog/macbook-battery-replacement-cost-2026", description: "Pricing for every model." },
         { label: "MacBook running slow - 10 fixes", href: "/blog/macbook-running-slow-10-fixes", description: "Battery throttling and other slowdowns." },
       ]}

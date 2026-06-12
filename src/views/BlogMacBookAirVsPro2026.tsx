@@ -178,7 +178,7 @@ export default function BlogMacBookAirVsPro2026() {
       relatedLinks={[
         { label: "MacBook Air repair page", href: "/", description: "Air-specific pricing and common issues." },
         { label: "MacBook Pro M5 vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "Side-by-side repair cost." },
-        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "AED 450-700 with 12-month warranty." },
+        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "AED 450-700 with 3-month warranty." },
       ]}
     />
   );

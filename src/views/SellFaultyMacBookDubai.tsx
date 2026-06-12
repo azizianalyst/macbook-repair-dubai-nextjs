@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -120,12 +121,16 @@ export default function SellFaultyMacBookDubai() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/sell-faulty-macbook-dubai")?.src}
+        imageAlt={topicForPath("/sell-faulty-macbook-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Buy & trade-in · faulty devices welcome · Dubai"
         title="We Buy Faulty & Damaged Apple Devices in Dubai"
         subtitle="Water-damaged, cracked, dead logic board, won't turn on? We still buy it. Recover real value from a MacBook, iMac, iPhone or iPad that other buyers reject - free valuation, free collection across Dubai, same-day payment."
+        ctaLabel="Get my free valuation"
       >
+        {/* Hero renders the CTA pair itself (ctaLabel above). Only the trust line goes here. */}
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
           <span>·</span>
@@ -133,18 +138,6 @@ export default function SellFaultyMacBookDubai() {
           <span>·</span>
           <span>Free collection · same-day cash</span>
         </p>
-        <div className="mt-lg flex flex-wrap gap-sm">
-          <Button asChild variant="whatsapp" size="lg">
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden /> Get my free valuation
-            </a>
-          </Button>
-          <Button asChild variant="secondary" size="lg">
-            <a href={`tel:${NAP.phoneE164}`}>
-              <Phone aria-hidden /> {NAP.phoneDisplay}
-            </a>
-          </Button>
-        </div>
       </Hero>
 
       <USPStrip tone="dark" />

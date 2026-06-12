@@ -23,7 +23,7 @@ export default function MacBookSpeakerRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook speaker repair in Dubai</strong> covers blown drivers (cone damage from sustained high-volume use), distortion at the top of the volume range (voice coil rubbing), no sound from one side (failed driver or cable), and water-damaged speaker assemblies (corrosion on the contacts). On 2016+ MacBook Pros the speakers are bonded to the top case but the drivers themselves are replaceable. AED 400 covers parts, labour and a 90-day warranty.
+            <strong>MacBook speaker repair in Dubai</strong> covers blown drivers (cone damage from sustained high-volume use), distortion at the top of the volume range (voice coil rubbing), no sound from one side (failed driver or cable), and water-damaged speaker assemblies (corrosion on the contacts). On 2016+ MacBook Pros the speakers are bonded to the top case but the drivers themselves are replaceable. AED 400 covers parts, labour and a 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We carry stock for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 MacBook Pros that still see daily use across Dubai.
@@ -46,11 +46,11 @@ export default function MacBookSpeakerRepair() {
         { title: "Replace the driver", body: "New speaker module installed, contacts cleaned, cable reseated, gasket replaced for proper acoustic seal." },
         { title: "Verify with reference track", body: "Test with a known reference track on the bench. Both channels balanced, no distortion at full volume." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers speaker driver, cable and acoustic seal.",
         "Excludes new liquid contact after delivery.",
-        "Free re-fit if distortion returns inside 90 days.",
+        "Free re-fit if distortion returns inside 12 months.",
       ]}
       faqs={[
         { q: "Can you fix just one side of the speakers, or does it have to be both?", a: "Either. If only one driver has failed, we replace that side only and save you money. If both are showing wear we recommend doing both at once - labour is mostly the same and you avoid coming back in 6 months." },

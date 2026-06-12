@@ -183,7 +183,7 @@ export default function GuideResetMacBook() {
             <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>. We've repaired Apple devices since 2004, offer free pickup and free diagnosis, and
-            back every job with a 90-day warranty. For broader repairs, see our main{" "}
+            back every job with a 12-month warranty. For broader repairs, see our main{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair Dubai
             </Link>{" "}page.

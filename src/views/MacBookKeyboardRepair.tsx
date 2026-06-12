@@ -16,6 +16,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Reveal } from "@/components/blocks/Reveal";
+import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -70,8 +71,8 @@ const STEPS = [
     body: "Magic Keyboard single key: 30-60 minutes. Magic Keyboard full swap: 4 hours. Butterfly top case: 1 day (battery, speakers, keyboard come as one bonded unit - Apple's design)." },
   { title: "Touch ID re-pair + 38-point QC",
     body: "On Touch ID models the new top case is paired with the secure enclave at the bench. Every key tested at three force levels, backlight evenness checked, function keys verified." },
-  { title: "Free delivery + 90-day warranty card",
-    body: "Same-day on Magic Keyboard single-key jobs. Next-day on top case swaps. Warranty card lists the part batch number - 90 days written, transferable once free of charge." },
+  { title: "Free delivery + 15-day warranty card",
+    body: "Same-day on Magic Keyboard single-key jobs. Next-day on top case swaps. Warranty card lists the part batch number - 15 days written, transferable once free of charge." },
 ];
 
 const FAQS: FAQ[] = [
@@ -90,9 +91,9 @@ const FAQS: FAQ[] = [
   { q: "Will Touch ID still work after the keyboard is replaced?",
     a: "Yes - the workshop pairs the new Touch ID sensor with the T2/M-series secure enclave on the bench. Takes about 15 minutes after the top case is fitted. If the secure enclave is locked (very rare), Touch ID is reset and you re-enrol your fingerprint at first login." },
   { q: "Do you use genuine Apple keyboards?",
-    a: "Genuine Apple Magic Keyboards on M3, M4, and M5 models - sourced from the local Apple-authorised distributor with traceable part numbers. For 2016-2019 butterfly top cases the workshop fits OEM-spec parts from the original Foxconn factory that built Apple's part. Both labelled clearly on the WhatsApp quote, both 90-day warranty." },
+    a: "Genuine Apple Magic Keyboards on M3, M4, and M5 models - sourced from the local Apple-authorised distributor with traceable part numbers. For 2016-2019 butterfly top cases the workshop fits OEM-spec parts from the original Foxconn factory that built Apple's part. Both labelled clearly on the WhatsApp quote, both 15-day warranty." },
   { q: "What's the warranty on the new keyboard?",
-    a: "90 days written warranty on parts and labour. Covers manufacturing defects, premature key failure, backlight failure, Touch ID failure. Does not cover new physical damage or liquid damage after the repair. Transferable once free of charge if the MacBook is sold." },
+    a: "15 days written warranty on parts and labour. Covers manufacturing defects, premature key failure, backlight failure, Touch ID failure. Does not cover new physical damage or liquid damage after the repair. Transferable once free of charge if the MacBook is sold." },
   { q: "Can I use my MacBook with one dead key while I wait for repair?",
     a: "Short term yes - Karabiner Elements (free) lets you remap the dead key to an unused one (e.g. caps lock to letter \"A\"). Long term no - dead keys typically multiply on butterfly keyboards and the eventual top-case swap is the same price whether 1 key or 10 are dead." },
   { q: "Why are butterfly keyboards on the 2016-2019 MacBook Pro so unreliable?",
@@ -108,7 +109,7 @@ const COMPARISON = [
   ["Butterfly top case (out of program)", "AED 700",                              "AED 1,829 to AED 2,449"],
   ["Layout change (Arabic / Russian)", "AED 450",                                 "Refused"],
   ["Free pickup in Dubai",         "Yes",                                          "No, customer must courier"],
-  ["Warranty",                     "90 days written",                              "90 days"],
+  ["Warranty",                     "15 days written",                              "12 months"],
   ["Vintage/obsolete (pre-2017)",  "Yes",                                          "Refused"],
 ];
 
@@ -116,7 +117,7 @@ const TRUST = [
   { value: "2,100+", label: "Keyboards fitted since 2004" },
   { value: "From AED 150", label: "Single key cap" },
   { value: "Same day", label: "Magic Keyboard swaps" },
-  { value: "90 days", label: "Written warranty" },
+  { value: "15 days", label: "Written warranty" },
 ];
 
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
@@ -138,7 +139,7 @@ export default function MacBookKeyboardRepair() {
     {
       title: "MacBook Keyboard Repair Dubai - From AED 150",
       description:
-        "MacBook keyboard repair Dubai from AED 150. Magic Keyboard, butterfly top case, key caps, layout swaps. Same-day. 90-day warranty. 055 741 3706.",
+        "MacBook keyboard repair Dubai from AED 150. Magic Keyboard, butterfly top case, key caps, layout swaps. Same-day. 15-day warranty. 055 741 3706.",
       path: "/macbook-keyboard-repair-dubai",
     },
     [
@@ -148,7 +149,7 @@ export default function MacBookKeyboardRepair() {
         name: "MacBook Keyboard Repair Dubai",
         price: 150,
         timeline: "Same day to 2 days",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/macbook-keyboard-repair-dubai",
         description:
           "MacBook keyboard repair in Dubai. Single key cap, full Magic Keyboard, butterfly top case, layout swaps. Air, Pro 13/14/16, Intel and Apple Silicon.",
@@ -203,31 +204,16 @@ export default function MacBookKeyboardRepair() {
 
               {/* glass info card */}
               <div className="md:col-span-5">
-                <Reveal delay={120} className="rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Keyboard size={22} aria-hidden /></span>
-                      <div>
-                        <p className="m-0 font-semibold leading-tight text-text">Keyboard Repair</p>
-                        <p className="m-0 text-[12px] text-text-faint">Magic &amp; butterfly · Touch ID re-pair</p>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
-                    </span>
-                  </div>
-                  <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-                    {[["Starting price", "AED 150"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "90 days"], ["Diagnosis", "FREE"]].map(([k, v]) => (
-                      <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
-                        <span className="text-text-faint">{k}</span>
-                        <span className="font-semibold text-text">{v}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-                    <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
-                  </div>
+                
+                <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
+                  <ResponsiveImage
+                    src="/images/real/lab/macbook-keyboard-repair-dubai.jpg"
+                    alt="MacBook keyboard repair in Dubai - top case and keyboard assembly during replacement at our workshop"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 92vw, 420px"
+                    imgClassName="w-full h-auto"
+                  />
                 </Reveal>
               </div>
             </div>
@@ -235,7 +221,35 @@ export default function MacBookKeyboardRepair() {
         </section>
 
         {/* Answer-first capsule (AEO/BLUF) */}
-        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook keyboard repair", startingPrice: 150, timeline: "same-day for most; 1-2 days for a full top-case" })} />
+        <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook keyboard repair", startingPrice: 150, timeline: "same-day for most; 1-2 days for a full top-case" })} />
+          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Keyboard size={22} aria-hidden /></span>
+                <div>
+                  <p className="m-0 font-semibold leading-tight text-text">Keyboard Repair</p>
+                  <p className="m-0 text-[12px] text-text-faint">Magic &amp; butterfly · Touch ID re-pair</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
+              </span>
+            </div>
+            <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
+              {[["Starting price", "AED 150"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+                <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
+                  <span className="text-text-faint">{k}</span>
+                  <span className="font-semibold text-text">{v}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+            </div>
+          </Reveal>
+        </div>
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -335,7 +349,7 @@ export default function MacBookKeyboardRepair() {
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">OEM-spec butterfly top cases</h3>
                 <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. AED 700 vs Apple's AED 1,800 to AED 2,400.</p>
-                <p className="m-0 mono text-[13px] text-accent">AED 700 - same 90-day warranty</p>
+                <p className="m-0 mono text-[13px] text-accent">AED 700 - same 15-day warranty</p>
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
@@ -349,11 +363,11 @@ export default function MacBookKeyboardRepair() {
           <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">15 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature key failure, backlight failure, Touch ID issues, scissor mechanism failure.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new liquid damage, new physical damage, software remap conflicts (free to fix anyway).</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Same-day collection. Replacement fitted within 48 hours.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, to a new owner if the MacBook is sold within 90 days.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, to a new owner if the MacBook is sold within the warranty period.</span></li>
             </ul>
           </Card>
         </section>
@@ -522,7 +536,7 @@ export default function MacBookKeyboardRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Sticky key? Butterfly failure? WhatsApp a video - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Send the model, year, and a short video of the keys that fail. Free pickup across Dubai mainland. 90-day written warranty on every keyboard fitted.
+              Send the model, year, and a short video of the keys that fail. Free pickup across Dubai mainland. 15-day written warranty on every keyboard fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
@@ -533,7 +547,7 @@ export default function MacBookKeyboardRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 15-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-keyboard-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-keyboard-repair-dubai" />

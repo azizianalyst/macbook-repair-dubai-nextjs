@@ -80,7 +80,7 @@ export default function GuideTop10MacBookProblems() {
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement starts at AED 450
             </Link>{" "}
-            with a 90-day warranty. If it charges erratically but the battery is healthy, the fault
+            with a 3-month warranty. If it charges erratically but the battery is healthy, the fault
             is often the charging port.
           </p>
 
@@ -272,7 +272,7 @@ export default function GuideTop10MacBookProblems() {
             If your MacBook problem isn't on this list, or the DIY checks didn't help, bring it to
             our workshop at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or
             call us on 055 741 3706. We're open Monday to Saturday, 9am-10pm, offer free pickup
-            across Dubai mainland, free diagnosis on every repair, and back our work with a 90-day
+            across Dubai mainland, free diagnosis on every repair, and back our work with a 12-month
             warranty. You can also{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               see our full MacBook repair services
@@ -300,7 +300,7 @@ export default function GuideTop10MacBookProblems() {
         },
         {
           q: "Is it worth replacing a MacBook battery or buying a new Mac?",
-          a: "Almost always worth replacing. A battery replacement from AED 450 with a 90-day warranty restores full runtime and removes the performance throttling that worn cells cause - far cheaper than a new MacBook for a machine that's otherwise fine.",
+          a: "Almost always worth replacing. A battery replacement from AED 450 with a 3-month warranty restores full runtime and removes the performance throttling that worn cells cause - far cheaper than a new MacBook for a machine that's otherwise fine.",
         },
         {
           q: "Why does my MacBook screen flicker or show lines?",
@@ -312,7 +312,7 @@ export default function GuideTop10MacBookProblems() {
         },
         {
           q: "Do you offer pickup and warranty?",
-          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a 90-day warranty on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
+          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a 12-month warranty on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

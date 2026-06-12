@@ -53,13 +53,13 @@ export default function IMacNotTurningOn() {
         { title: "Free bench diagnosis", body: "Power-rail probe, PSU output check, T2 status read, startup-disk scan. Done in under an hour. Open quote, no obligation." },
         { title: "Approval", body: "We send a short voice note explaining what's wrong, what the fix costs, and how long it takes. You decide." },
         { title: "Repair", body: "PSU swap, board work, SSD recovery - whichever applies. Same-day for PSU and SMC, 1-3 days for board work." },
-        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a 90-day written warranty card and a description of what was fixed." },
+        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a 12-month written warranty card and a description of what was fixed." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the specific fault we repaired.",
         "Excludes new unrelated failures elsewhere in the iMac.",
-        "Free re-diagnosis if the same symptom comes back inside 90 days.",
+        "Free re-diagnosis if the same symptom comes back inside 12 months.",
       ]}
       comparisonRows={[
         ["Diagnosis fee",         "Free, refundable if no work",      "AED 250-400 deposit"],
@@ -67,7 +67,7 @@ export default function IMacNotTurningOn() {
         ["Same-day fixes",        "Yes - PSU and SMC jobs",            "No - minimum 1 week typical"],
         ["Pickup & delivery",     "Free, Dubai mainland",              "Drop-in only"],
         ["T2 SSD preservation",   "Yes - original board paired",       "Often unit-replaced, full restore"],
-        ["Warranty",              "90 days written, dated",            "90 days"],
+        ["Warranty",              "12 months written, dated",            "12 months"],
       ]}
       faqs={[
         { q: `What does the LED on the back of my iMac mean?`, a: `Older Intel iMacs (2009-2015) have a small diagnostic LED behind the rear vent. One steady light = power supply alive but no boot signal. No light = PSU or input fuse fault. We use this within 30 seconds of the iMac arriving at the bench.` },

@@ -1,5 +1,5 @@
 // GA4 analytics + conversion tracking.
-// ACTIVATION: set VITE_GA_ID="G-XXXXXXXXXX" in a .env file (or the Hostinger build env)
+// ACTIVATION: set NEXT_PUBLIC_GA_ID="G-XXXXXXXXXX" in a .env file (or the Hostinger build env)
 // before `npm run build`. With no ID set, every function is a safe no-op (nothing loads).
 //
 // What it tracks once activated:
@@ -10,6 +10,14 @@
 // To use GTM instead of GA4, swap the inject below for the GTM container snippet.
 
 const GA_ID = (process.env.NEXT_PUBLIC_GA_ID as string | undefined)?.trim() || "";
+
+// True only when a GA4 Measurement ID was set at build time. The consent banner
+// uses this to stay dormant (no banner, no tracking) until an ID is configured.
+export function analyticsConfigured(): boolean {
+  return !!GA_ID;
+}
+
+let initialized = false;
 
 declare global {
   interface Window {
@@ -31,7 +39,9 @@ function contactMethod(href: string): string | null {
 }
 
 export function initAnalytics(): void {
-  if (!GA_ID || typeof window === "undefined") return;
+  // Idempotent: safe to call on consent-accept AND on mount for returning visitors.
+  if (!GA_ID || typeof window === "undefined" || initialized) return;
+  initialized = true;
 
   // --- load gtag ---
   const s = document.createElement("script");
@@ -68,7 +78,9 @@ export function initAnalytics(): void {
       const link = (e.target as HTMLElement | null)?.closest?.("a");
       if (!link) return;
       const method = contactMethod(link.getAttribute("href") || "");
-      if (method) send("event", "contact", { method, transport_type: "beacon" });
+      // placement comes from data-track on the anchor (e.g. "hero-whatsapp",
+      // "sticky-bar-call") so GA can tell which CTA converts.
+      if (method) send("event", "contact", { method, placement: link.dataset.track ?? "untagged", transport_type: "beacon" });
     },
     { capture: true },
   );

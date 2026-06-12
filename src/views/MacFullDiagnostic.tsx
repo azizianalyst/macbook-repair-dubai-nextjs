@@ -46,10 +46,10 @@ export default function MacFullDiagnostic() {
         { title: "Software audit",              body: "macOS version vs your Mac's ceiling, malware quick-scan, login items audit, profiles audit, storage health, kernel extension audit." },
         { title: "Written report + price",      body: "One-page summary you can keep. If repair is needed, prices listed in writing. If not, we say so and you walk out with the report." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard 90-day warranty.",
+        "Any repair you book carries our standard 12-month warranty.",
         "Free pickup for Mac Pro and heavy Mac Studio setups.",
       ]}
       faqs={[

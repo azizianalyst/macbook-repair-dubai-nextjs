@@ -7,12 +7,12 @@ export default function BlogIPhoneBatteryReplacementCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Battery Replacement Cost Dubai: All Models"
-      seoDescription="iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 90-day warranty explained."
+      seoDescription="iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 3-month warranty explained."
       path="/blog/iphone-battery-replacement-cost-dubai-all-models"
       category="Cost guide · iPhone"
       h1="iPhone Battery Replacement Cost Dubai - Every Model 2026"
       hook="iPhone battery costs in Dubai range from AED 250 (older Lightning models) to AED 450 (iPhone 17 Pro Max with the new lithium chemistry). Same-day on most jobs."
-      quickAnswer="iPhone battery replacement in Dubai costs AED 250 to AED 450 in April 2026. Older models (6 to 12) are AED 250-350. iPhone 13-14 are AED 350. iPhone 15 onward are AED 400-450 because of the new high-density chemistry. Same-day, 90-day warranty."
+      quickAnswer="iPhone battery replacement in Dubai costs AED 250 to AED 450 in April 2026. Older models (6 to 12) are AED 250-350. iPhone 13-14 are AED 350. iPhone 15 onward are AED 400-450 because of the new high-density chemistry. Same-day, 3-month warranty."
       author={{ name: "Shafiq", role: "Senior iPhone battery technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -22,7 +22,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
         <>
           <h2>The full iPhone battery replacement price list - April 2026</h2>
           <p>
-            Pricing includes the battery, labour, fresh perimeter adhesive, and a 90-day warranty.
+            Pricing includes the battery, labour, fresh perimeter adhesive, and a 3-month warranty.
             Battery health calibration runs after install - you walk out at 100%.
           </p>
           <BlogPriceTable
@@ -133,7 +133,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
       faqs={[
         { q: "How long does iPhone battery replacement take?", a: "30-45 minutes at the bench for iPhone 8 through 14. 50-60 minutes for iPhone 15 onward (more adhesive). Same-day if you message us before 1pm. Free pickup across Dubai mainland." },
         { q: "Will my iPhone show a 'genuine battery' warning if I get a third-party one?", a: "Yes - Settings → Battery → Battery Health will show 'Unknown Part' or 'Important Battery Message' depending on iOS version. The battery itself works at full capacity with normal cycle behaviour. Want it gone? Choose our genuine Apple option (+AED 200)." },
-        { q: "What's the warranty on a battery replacement?", a: "90 days written. Same fault returns inside that window - we replace the battery again, no charge. Cells are also Apple-rated for 1,000 cycles to 80% capacity (iPhone 15+) or 500 cycles (older)." },
+        { q: "What's the warranty on a battery replacement?", a: "3 months written. Same fault returns inside that window - we replace the battery again, no charge. Cells are also Apple-rated for 1,000 cycles to 80% capacity (iPhone 15+) or 500 cycles (older)." },
         { q: "Should I wait for Apple's Battery Service Program?", a: "Always check first - open Settings or visit support.apple.com to verify your iPhone isn't covered by an active Apple service program. Free is free. We'll check eligibility for you at intake." },
         { q: "Can you replace a swollen iPhone battery safely?", a: "Yes - and you should not delay. Swollen batteries push the screen up from inside and risk thermal runaway. We discharge the cell, remove it under controlled conditions, and dispose of it through a Dubai-licensed e-waste channel. AED 50 surcharge on a swollen cell." },
         { q: "Will battery replacement reset my iPhone?", a: "No. Your data is untouched. The phone restarts during install, but no settings, photos, or apps are lost. We don't need your passcode. Always back up first as standard precaution." },

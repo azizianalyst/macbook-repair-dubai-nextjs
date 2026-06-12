@@ -51,7 +51,7 @@ export default function MacSetupConfiguration() {
         name: "Mac Setup, Configuration & Data Migration Dubai",
         price: 150,
         timeline: "Same day",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/mac-setup-data-migration-dubai",
         description: "Apple device setup, configuration and data migration in Dubai - new Mac setup, email/Wi-Fi/VPN, Office & Outlook, iCloud and full migration from an old Mac or PC.",
       }),
@@ -71,6 +71,8 @@ export default function MacSetupConfiguration() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-data-migration-dubai.jpg"
+        imageAlt="Mac setup and data migration service Dubai - transfer workflow infographic"
         variant="service"
         tone="dark"
         eyebrow="Setup, configuration & migration · Dubai"

@@ -18,7 +18,7 @@ export default function IPhoneEarpieceRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Earpiece Repair", path: "/iphone-earpiece-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone Face ID & audio modules" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone Face ID & audio modules" }}
       serviceName="iPhone Earpiece Repair"
       intro={
         <>
@@ -43,13 +43,13 @@ export default function IPhoneEarpieceRepair() {
         { title: "Confirm it's the earpiece",   body: "Plug in headphones - if voice is clear there, it's the earpiece, not the modem. We do this test free, in front of you." },
         { title: "Free mesh clean first",        body: "We extract dust from the earpiece grille at 40× magnification. About 25% of cases are solved here - no charge." },
         { title: "Face ID-safe extraction",      body: "On iPhone X+ we use heated thin tools to lift the earpiece without disturbing the dot projector cable. Patient, slow work." },
-        { title: "Test calls + warranty",        body: "Test inbound and outbound calls, Face ID re-verified, 90-day warranty card handed to you." },
+        { title: "Test calls + warranty",        body: "Test inbound and outbound calls, Face ID re-verified, 12-month warranty card handed to you." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new earpiece and proximity sensor area.",
         "Face ID protected - if we damage it, we pay for repair.",
-        "Free re-test within 90 days if call audio degrades.",
+        "Free re-test within 12 months if call audio degrades.",
       ]}
       faqs={[
         { q: "Why is the earpiece more expensive than the bottom speaker?", a: "Two reasons: it sits inside the Face ID assembly on iPhone X+ which requires careful handling, and the proximity-sensor flex runs alongside it. Mistakes here are expensive - we charge for the labour, not the part." },

@@ -9,7 +9,7 @@ export default function IPhoneMicrophoneRepair() {
       path="/iphone-microphone-repair-dubai"
       eyebrow="iPhone microphone repair"
       h1="iPhone Microphone Repair Dubai"
-      subtitle={`"They can't hear me on calls" - but every modern iPhone has four microphones. We isolate which one has died before charging you. AED 300, 1 day, 90-day warranty.`}
+      subtitle={`"They can't hear me on calls" - but every modern iPhone has four microphones. We isolate which one has died before charging you. AED 300, 1 day, 12-month warranty.`}
       startingPrice={300}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone microphone isn't working - model and when it happens:"
@@ -18,7 +18,7 @@ export default function IPhoneMicrophoneRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "Microphone Repair", path: "/iphone-microphone-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone audio and water-damage repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone audio and water-damage repair" }}
       serviceName="iPhone Microphone Repair"
       intro={
         <>
@@ -44,12 +44,12 @@ export default function IPhoneMicrophoneRepair() {
         { title: "Four-mic isolation test", body: "Voice Memos, FaceTime, video and Siri tests in front of you. We pinpoint which microphone(s) failed - free." },
         { title: "Open and clean",          body: "Open the phone, inspect mic ports for lint/sand. Free clean if debris is the cause." },
         { title: "Targeted replacement",    body: "Replace only the failed mic flex (often combined with charging port flex on iPhone X+ - same labour, no extra cost)." },
-        { title: "Re-test all four",        body: "Confirm every mic working, log the results, hand over with 90-day warranty." },
+        { title: "Re-test all four",        body: "Confirm every mic working, log the results, hand over with 12-month warranty." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced microphone module(s).",
-        "Re-test free within 90 days if it cuts again.",
+        "Re-test free within 12 months if it cuts again.",
         "Excludes new water damage after the repair.",
       ]}
       faqs={[

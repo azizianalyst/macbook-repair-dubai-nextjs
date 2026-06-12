@@ -225,7 +225,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} screen replacement cost in Dubai?`,
-      a: `Screen / display assembly replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 90-day written warranty on the panel and the labour.`,
+      a: `Screen / display assembly replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour.`,
     },
     {
       q: `Can I upgrade the RAM or SSD on the ${model.name}?`,
@@ -247,18 +247,18 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. 90-day written warranty on every job.`,
+      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, keyboard AED ${model.pricing.keyboard}. 90-day warranty.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, keyboard AED ${model.pricing.keyboard}. 12-month warranty.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Keyboard & Logic Board`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 90-day written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={isAppleSilicon && model.currentInLineup ? "Same-day battery · 2-5 days specialty parts" : "Same-day to 3 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -267,7 +267,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
         { name: "MacBook Repair", path: "/" },
         { name: model.name,       path: `/${model.slug}` },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "MacBook board-level repair & screen replacement" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook board-level repair & screen replacement" }}
       serviceName={`${model.name} Repair`}
       intro={
         <>
@@ -278,7 +278,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 90-day written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup, 12-month written warranty.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
@@ -396,9 +396,9 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
         { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-10pm." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + 90-day warranty",       body: `${model.timelineNotes} You walk out with a written 90-day warranty.` },
+        { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",

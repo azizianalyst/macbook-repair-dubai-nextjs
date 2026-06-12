@@ -19,7 +19,7 @@ export default function IPhone15ProMaxRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "iPhone 15 Pro Max", path: "/iphone-15-pro-max-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 15 Pro Max Repair"
       intro={
         <>
@@ -89,9 +89,9 @@ export default function IPhone15ProMaxRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; tetraprism + Face ID 1-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, USB-C 3 data, 5x zoom, Action Button and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "5x tetraprism: focus, OIS, zoom transition tested.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",

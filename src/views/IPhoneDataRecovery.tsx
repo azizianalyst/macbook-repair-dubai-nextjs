@@ -67,7 +67,7 @@ export default function IPhoneDataRecovery() {
         { title: "Chip-off NAND recovery (last resort)", body: "If the logic board is destroyed beyond repair, NAND chip removed and read on a programmer. Requires passcode for decryption. AED 1,500 with passcode." },
         { title: "Data delivered on customer's external drive", body: "Recovered data delivered on customer's USB-C drive or copied to a fresh iPhone. Original phone returned. Privacy: workshop does not retain customer data after delivery." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "No-fix-no-charge applies to logic-board repair attempts beyond the AED 100 diagnostic.",
         "Covered: data recovered during the work session, the logic-board repair itself for 30 days.",
@@ -82,7 +82,7 @@ export default function IPhoneDataRecovery() {
         ["Data privacy",                "Not retained after delivery",                   "Apple does not access user data"],
         ["Free pickup in Dubai",        "Yes",                                           "No"],
         ["Free diagnosis",              "Yes - AED 100 only if work proceeds",           "No, diagnostic fee charged"],
-        ["Warranty",                    "30 days on the repair",                         "90 days on service unit (no data)"],
+        ["Warranty",                    "30 days on the repair",                         "12 months on service unit (no data)"],
       ]}
       faqs={[
         { q: "Can you recover data from a dead iPhone?", a: "Often yes - most 'data recovery' cases are actually logic-board repairs that bring the phone back to bootable state, after which the customer enters their passcode and data is fully accessible. AED 600 to AED 1,200 depending on model. Genuine NAND-level failures requiring chip-off are rare." },

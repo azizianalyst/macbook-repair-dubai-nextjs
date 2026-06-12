@@ -33,7 +33,7 @@ const COMPARE = [
   { row: "Component-level board work", us: true,  apple: false, note: "Apple swaps the whole board - much pricier" },
   { row: "Free pickup across Dubai",  us: true,  apple: false },
   { row: "Genuine OEM parts",         us: true,  apple: true },
-  { row: "Written warranty",          us: "90 days",  apple: "90 days" },
+  { row: "Written warranty",          us: "12 months",  apple: "12 months" },
 ];
 
 export default function About() {
@@ -41,7 +41,7 @@ export default function About() {
     {
       title: "About MacBook Repair Dubai - 21 Years, Same Address",
       description:
-        "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 90-day warranty.",
+        "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 12-month warranty.",
       path: "/about",
     },
     [

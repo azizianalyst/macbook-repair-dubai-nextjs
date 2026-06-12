@@ -59,10 +59,10 @@ export default function Refund() {
           <li>If the same part fails again with the same symptom: free redo using a new replacement part.</li>
           <li>If the same symptom but caused by a separate component, a quote is sent for the additional fault - the original repair price is not refunded because the original repair was successful.</li>
         </ul>
-        <h3>Within 90 days of pickup (warranty period)</h3>
+        <h3>Within 12 months of pickup (warranty period)</h3>
         <ul>
           <li>Free part replacement and free labour for any in-scope warranty claim.</li>
-          <li>For battery work, the window is 6 months and the 80% capacity guarantee applies.</li>
+          <li>For battery work, the window is 3 months and the 80% capacity guarantee applies.</li>
           <li>Full warranty rules: see <a href="/warranty">Warranty Policy</a>.</li>
         </ul>
       </LegalSection>

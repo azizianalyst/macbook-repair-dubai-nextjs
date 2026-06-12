@@ -146,6 +146,8 @@ export default function MacBookDataRecovery() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/macbook-data-recovery-dubai.jpg"
+        imageAlt="MacBook data recovery Dubai - SSD chip-off recovery engineering infographic"
         tone="dark"
         variant="service"
         eyebrow="MacBook data recovery"
@@ -421,7 +423,7 @@ export default function MacBookDataRecovery() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-data-recovery-dubai" />
     </section>
     <RelatedArticles path="/macbook-data-recovery-dubai" />

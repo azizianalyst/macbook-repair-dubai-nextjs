@@ -26,7 +26,7 @@ export default function IPadPowerButtonRepair() {
             <strong>From iPad Air 4 (2020) onwards</strong>, Apple moved Touch ID into the top-edge power button - a clever space saver but it means the power button assembly is now a Touch ID sensor too. When the button fails, the same Apple Secure Enclave pairing rule applies: a replacement button restores click but cannot restore Touch ID. We tell you this before opening the iPad.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. AED 300 covers either case, 1-day turnaround, 90-day warranty.
+            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. AED 300 covers either case, 1-day turnaround, 12-month warranty.
           </p>
         </>
       }
@@ -44,13 +44,13 @@ export default function IPadPowerButtonRepair() {
         { title: "Click + Touch ID test",       body: "We feel the click and verify Touch ID enrol still works on the original button. Confirms which fault you're dealing with." },
         { title: "Open + frame check",           body: "Battery disconnect, screen lift carefully on iPad Pro / Air. Frame around the button checked for impact deformation." },
         { title: "Replace power button assembly",body: "OEM-grade button + flex installed. On Touch ID models we install but cannot re-pair the sensor - passcode-only thereafter." },
-        { title: "Function tests",               body: "Wake, sleep, screenshot combo, hold for power off all verified. 90-day warranty card with the iPad." },
+        { title: "Function tests",               body: "Wake, sleep, screenshot combo, hold for power off all verified. 12-month warranty card with the iPad." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new power button assembly and click mechanism.",
         "Does not cover Touch ID on integrated models (impossible without Apple).",
-        "Free re-fit if click softens within 90 days.",
+        "Free re-fit if click softens within 12 months.",
       ]}
       faqs={[
         { q: "Which iPads have Touch ID in the power button?", a: "iPad Air 4 (2020) onwards, iPad mini 6 (2021) onwards, and iPad 10th/11th gen. Every other modern iPad either uses Face ID (iPad Pro M-series) or has no biometrics (iPad Pro 9.7\"/10.5\"/12.9\" 1st gen)." },

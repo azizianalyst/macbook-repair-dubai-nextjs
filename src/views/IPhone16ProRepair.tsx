@@ -6,7 +6,7 @@ export default function IPhone16ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16 Pro Repair Dubai - 6.3-inch A18 Pro from AED 350 | 055 741 3706"
-      seoDescription="iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, 90-day warranty."
+      seoDescription="iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, 12-month warranty."
       path="/iphone-16-pro-repair-dubai"
       eyebrow="iPhone 16 Pro (2024, discontinued Sept 2025)"
       h1="iPhone 16 Pro Repair Dubai - Titanium, ProMotion, Camera Control"
@@ -19,7 +19,7 @@ export default function IPhone16ProRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "iPhone 16 Pro", path: "/iphone-16-pro-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 16 Pro Repair"
       intro={
         <>
@@ -90,9 +90,9 @@ export default function IPhone16ProRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; tetraprism + Face ID 1-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, USB-C 3, 5x zoom, Camera Control, Action Button and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Camera Control: gestures + haptic verified.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",

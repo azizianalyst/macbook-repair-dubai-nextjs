@@ -21,9 +21,9 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
 import { IPHONE_HUBS } from "@/content/iphone-models";
-import { imageForSlug, imageForService } from "@/lib/page-images";
+import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
 
 export type IPhoneTemplateProps = {
   // SEO
@@ -63,7 +63,10 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
     .filter(Boolean)
     .slice(0, 3)
     .map((h) => ({ label: h!.label, href: h!.slug, description: h!.desc }));
-  const heroImage = imageForSlug(p.path) ?? imageForService(p.path);
+  // Service topics first (screen/battery/port infographics) - imageForSlug()
+  // returns a generation fallback for ANY iphone path, so it must come second.
+  const topic = topicForPath(p.path);
+  const heroImage = topic?.src ?? imageForSlug(p.path) ?? imageForService(p.path);
   const qa = deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
@@ -85,7 +88,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
         name: p.serviceName,
         price: p.startingPrice,
         timeline: p.timeline,
-        warranty: `P${p.warrantyDays}D`,
+        warranty: warrantyIso(p.warrantyDays),
         url: p.path,
         description: p.seoDescription,
       }),
@@ -105,7 +108,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
         startingPrice={p.startingPrice}
         timeline={p.timeline}
         image={heroImage}
-        imageAlt={p.h1}
+        imageAlt={topic?.alt ?? p.h1}
       >
         <PageMeta author={`${p.technician.name}, ${p.technician.specialisation}`} />
       </Hero>
@@ -150,7 +153,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">iPhone models we repair - every model since 2014</h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and the {p.warrantyDays}-day written warranty. No diagnostic fee, no surprise add-ons.
+              From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.
             </p>
             <PricingTable service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} tone="dark" />
             {p.pricingCaption && (
@@ -194,7 +197,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
             </h2>
             <div className="border border-border bg-bg-card rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
-                <li><strong>{p.warrantyDays} days</strong> - written warranty on parts and labour, dated and signed.</li>
+                <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
                 {p.warrantyBullets.map((b, i) => <li key={i}>{b}</li>)}
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
               </ul>
@@ -275,7 +278,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
         <div className="border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Send the model and a photo of the issue. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
+            Send the model and a photo of the issue. Free pickup across Dubai mainland. {warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

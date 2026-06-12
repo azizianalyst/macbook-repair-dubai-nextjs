@@ -50,7 +50,7 @@ export default function IPadBatteryReplacement() {
         { title: "New cell + calibration", body: "OEM-grade cell installed, fresh adhesive frame, full discharge-to-charge cycle to register the new BMS readings." },
         { title: "Free delivery", body: "Same day on most models with the 30-day warranty card." },
       ]}
-      warrantyDays={30}
+      warrantyDays={180}
       warrantyBullets={[
         "Covers battery cell, BMS reading and adhesive seal.",
         "Excludes new water exposure or impact damage.",
@@ -63,7 +63,7 @@ export default function IPadBatteryReplacement() {
         ["Battery grade",         "OEM-grade cells, full BMS pairing",  "Apple Genuine"],
         ["Older iPads supported", "iPad 5 onwards, every Air, every Mini", "Often refused as 'vintage'"],
         ["Data preserved",        "Always - never wiped",               "Whole-unit swap means restore from backup"],
-        ["Warranty",              "30 days written",                    "90 days"],
+        ["Warranty",              "30 days written",                    "12 months"],
       ]}
       faqs={[
         { q: "How do I know if my iPad needs a new battery?", a: "Three signs: it lasts under half what it used to, it shuts down above 20%, or it gets warm while charging. Settings → Battery doesn't show a percentage on iPad like it does on iPhone, so we test it on the bench for free." },

@@ -18,12 +18,12 @@ export default function IPhoneVolumeButtonRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Volume Buttons",  path: "/iphone-volume-button-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone mechanical and flex repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone mechanical and flex repair" }}
       serviceName="iPhone Volume Button Repair"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit. AED 250, 90-day warranty.
+            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit. AED 250, 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Common causes: a drop on the left edge bends the metal rail; long-term wear collapses the click dome; on iPhone 13 and later the ringer switch tab snaps off if forced past its detent. All fixed with one flex swap.
@@ -44,13 +44,13 @@ export default function IPhoneVolumeButtonRepair() {
         { title: "Test all three controls",  body: "Volume up, volume down, ringer toggle (or Action button). We confirm which are dead - usually all on the same flex." },
         { title: "Open and replace flex",    body: "Volume flex sits along the left side; we lift the screen, disconnect, swap the assembly." },
         { title: "Frame and rail check",     body: "If the chassis is bent from impact we restore it before installing the new flex - included." },
-        { title: "Function tests + warranty",body: "Confirm volume slider responds, ringer toggle works, Action button mapping preserved. 90-day warranty card." },
+        { title: "Function tests + warranty",body: "Confirm volume slider responds, ringer toggle works, Action button mapping preserved. 12-month warranty card." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new volume flex and click mechanisms.",
         "Excludes new impact damage.",
-        "Free re-test if buttons soften within 90 days.",
+        "Free re-test if buttons soften within 12 months.",
       ]}
       faqs={[
         { q: "Why replace the whole flex if only one button is dead?", a: "All three share one connector and one ribbon. Replacing only the dead button would mean splicing a flex - unreliable and not warranted by anyone reputable. The whole-flex swap costs the same as the part and gives you a like-new control set." },

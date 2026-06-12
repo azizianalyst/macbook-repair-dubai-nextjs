@@ -18,7 +18,7 @@ export default function IPhoneSimTrayRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "SIM Tray Repair",   path: "/iphone-sim-tray-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone connectivity and antennas" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone connectivity and antennas" }}
       serviceName="iPhone SIM Tray Repair"
       intro={
         <>
@@ -46,11 +46,11 @@ export default function IPhoneSimTrayRepair() {
         { title: "Reader replacement",          body: "AED 400. Open the phone from the bottom, swap the SIM reader flex, reseat dual-SIM rails on UAE-spec models." },
         { title: "eSIM provisioning if needed", body: "Free help converting from physical SIM to eSIM, including QR setup with Etisalat or du if you bring activation details." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new tray or reader and seal.",
         "eSIM provisioning has no warranty (we don't control carrier networks).",
-        "Free re-fit if reader fails within 90 days.",
+        "Free re-fit if reader fails within 12 months.",
       ]}
       faqs={[
         { q: "I bought my iPhone in the US - can I add a UAE SIM?", a: "Only via eSIM. US iPhone 14+ have no physical tray. Both Etisalat and du support iPhone eSIM. We'll set it up free if you're already in for a different repair, or AED 50 for eSIM-only assistance walk-in." },

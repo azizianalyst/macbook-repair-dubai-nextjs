@@ -5,7 +5,7 @@ export default function MacBookCameraRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Camera Repair Dubai - FaceTime / Webcam Fix AED 200"
-      seoDescription="MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. From AED 200, 1-2 days, 90-day warranty. Call 055 741 3706."
+      seoDescription="MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. From AED 200, 1-2 days, 12-month warranty. Call 055 741 3706."
       path="/macbook-camera-repair-dubai"
       eyebrow="MacBook camera repair"
       h1="MacBook FaceTime / Webcam Repair Dubai"
@@ -23,10 +23,10 @@ export default function MacBookCameraRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook camera repair in Dubai</strong> covers a black or green screen on FaceTime, Zoom and Teams, the "there is no connected camera" error, blurry video, and cameras that fail after a spill or a knock to the screen. The FaceTime HD camera sits in the display and connects through the hinge to the logic board - so the cause can be software, a damaged flex cable, a faulty module, or a board-level fault. We isolate the real cause first, so you don't pay to replace the whole screen when you don't need to. AED 200 covers parts, labour and a 90-day warranty.
+            <strong>MacBook camera repair in Dubai</strong> covers a black or green screen on FaceTime, Zoom and Teams, the "there is no connected camera" error, blurry video, and cameras that fail after a spill or a knock to the screen. The FaceTime HD camera sits in the display and connects through the hinge to the logic board - so the cause can be software, a damaged flex cable, a faulty module, or a board-level fault. We isolate the real cause first, so you don't pay to replace the whole screen when you don't need to. AED 200 covers parts, labour and a 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and older Retina models still in daily use across Dubai.
+            We service MacBook Air M1-M5, MacBook Pro 13/14/16 (Intel and M-series), and older Retina models still in daily use across Dubai.
           </p>
         </>
       }
@@ -44,11 +44,11 @@ export default function MacBookCameraRepair() {
         { title: "Repair", body: "Camera module or flex cable replaced, or board-level repair, with the display resealed properly." },
         { title: "Quality test", body: "We verify a clear image across FaceTime and third-party apps before pickup." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the camera module / flex cable and fitment.",
         "Excludes new liquid or impact damage after delivery.",
-        "Free re-check if the fault returns inside 90 days.",
+        "Free re-check if the fault returns inside 12 months.",
       ]}
       faqs={[
         { q: "How much does MacBook camera repair cost in Dubai?", a: "If it's a software or permissions issue we often fix it during the free diagnosis at no charge. Camera module or flex-cable replacement starts at AED 200; board-level camera repairs start at AED 450. You get an exact quote first." },

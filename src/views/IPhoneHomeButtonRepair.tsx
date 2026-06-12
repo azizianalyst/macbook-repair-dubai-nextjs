@@ -18,7 +18,7 @@ export default function IPhoneHomeButtonRepair() {
         { name: "iPhone Repair",path: "/iphone-repair-dubai" },
         { name: "Home Button",  path: "/iphone-home-button-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone Home Button Repair"
       intro={
         <>
@@ -45,11 +45,11 @@ export default function IPhoneHomeButtonRepair() {
         { title: "Calibrate & seal",        body: "New button installed, click action calibrated, waterproof gasket reseated on iPhone 7+." },
         { title: "AssistiveTouch setup",    body: "Free configuration of on-screen home button so you don't lose the function. We hand the phone back working." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new home button mechanism and flex.",
         "Does not cover Touch ID (impossible without Apple).",
-        "Free re-fit if the click softens within 90 days.",
+        "Free re-fit if the click softens within 12 months.",
       ]}
       faqs={[
         { q: "Why can't anyone restore Touch ID after the original button breaks?", a: "Apple uses a Secure Enclave that's hardware-paired to the original Touch ID sensor at manufacture. The pairing key never leaves the chip. Any swapped sensor is rejected by iOS. This is a security feature, not a repair limitation." },
@@ -57,7 +57,7 @@ export default function IPhoneHomeButtonRepair() {
         { q: "Is AssistiveTouch a good substitute?", a: "Honestly, yes - most customers tell us they forget Touch ID is gone within a week. The on-screen button does double-press, triple-press, Siri, Apple Pay (via Face ID on newer iPhones, or passcode on iPhone 6/7/8)." },
         { q: "Which iPhones still have a home button?", a: "iPhone 6, 6S, 7, 8, SE (1st, 2nd and 3rd gen). iPhone X and later have no physical home button." },
         { q: "Can you fix it the same day?", a: "Yes. Drop in by 1 PM and collect by 6 PM, or WhatsApp for free pickup across Dubai." },
-        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our 90-day warranty covers any mechanical failure." },
+        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our 12-month warranty covers any mechanical failure." },
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[

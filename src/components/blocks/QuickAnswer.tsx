@@ -3,6 +3,7 @@
 // Renders Question + AcceptedAnswer microdata so crawlers (and AI Overviews) can lift it cleanly.
 // The wrapping `.quick-answer` class is referenced by SpeakableSpecification xpath in schema.ts.
 import { ReactNode } from "react";
+import { warrantyClause, warrantyDaysForService } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";
 import { cn } from "@/lib/utils";
 
@@ -13,19 +14,21 @@ export interface QuickAnswerProps {
   label?: string;
   /** "dark" for use on the bg-bg-alt band; default light */
   tone?: "light" | "dark";
+  /** Extra classes on the outer section — lets a page embed the block inside its own grid */
+  className?: string;
 }
 
-export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light" }: QuickAnswerProps) {
+export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light", className }: QuickAnswerProps) {
   const dark = tone === "dark";
   return (
     <section
-      className="quick-answer mx-auto max-w-content px-5 md:px-6 mt-xl"
+      className={cn("quick-answer mx-auto max-w-content px-5 md:px-6 mt-xl", className)}
       aria-label={label}
     >
-      <Reveal>
+      <Reveal className="h-full">
       <div
         className={cn(
-          "border-l-4 rounded-md p-lg max-w-[72ch]",
+          "border-l-4 rounded-md p-lg max-w-[72ch] h-full",
           dark ? "border border-border border-l-4 border-l-accent bg-bg-card" : "bg-bg-alt border-primary",
         )}
         itemScope
@@ -69,13 +72,13 @@ export function deriveServiceQuickAnswer(opts: {
   timeline: string;
   warrantyDays?: number;
 }): { question: string; answer: string } {
-  const warranty = opts.warrantyDays ?? 90;
+  const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
   return {
     question: `How much does ${opts.serviceName} in Dubai cost?`,
     answer:
       `${opts.serviceName} in Dubai starts from AED ${opts.startingPrice}. ` +
       `Typical turnaround: ${opts.timeline}. ` +
-      `All repairs include a ${warranty}-day written warranty on parts and labour, ` +
+      `All repairs include ${warrantyClause(warrantyDays)} on parts and labour, ` +
       `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
   };
 }
@@ -87,7 +90,7 @@ export function deriveFamilyQuickAnswer(opts: {
   return {
     question: `How much does ${opts.family} repair in Dubai cost?`,
     answer:
-      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} with a 90-day written warranty. ` +
+      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} with a written warranty of up to 12 months. ` +
       `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };

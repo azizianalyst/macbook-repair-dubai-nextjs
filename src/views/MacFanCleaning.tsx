@@ -44,9 +44,9 @@ export default function MacFanCleaning() {
         { title: "Deep clean",                  body: "Vacuum, soft brush, compressed air through cleared fins. Fan blades cleaned individually. Intake and exhaust paths cleared." },
         { title: "Reassemble + verify",         body: "Chassis closed, Mac powered on, fan profile measured. The difference in idle noise is immediately audible." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day workmanship warranty.",
+        "12-month workmanship warranty.",
         "If fan noise returns inside 6 months we re-clean for free.",
         "Free pickup for Mac Pro across Dubai mainland - they're heavy.",
       ]}

@@ -26,8 +26,8 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
-  "Apple Mac mini M4 Pro / M4 Max (2023)",
-  "Apple Mac mini M2 Pro / M2 Max (2023)",
+  "Apple Mac mini M4 / M4 Pro (2024)",
+  "Apple Mac mini M2 / M2 Pro (2023)",
   "Apple Mac mini (M1, 2020)",
   "Apple Mac mini Intel i3/i5/i7 (2018)",
 ];
@@ -110,6 +110,8 @@ export default function MacMiniRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-mini-repair-dubai.jpg"
+        imageAlt="Mac mini M4 repair Dubai - compact desktop teardown infographic"
         tone="dark"
         variant="device"
         eyebrow="Mac Mini specialist"
@@ -129,7 +131,7 @@ export default function MacMiniRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac mini repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac mini — Intel, M1, M2, M2 Pro, M4 and M4 Pro — at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 90-day written warranty, since 2004."
+        answer="MacBook Repair Dubai repairs every Mac mini — Intel, M1, M2, M2 Pro, M4 and M4 Pro — at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty, since 2004."
       />
 
       <USPStrip tone="dark" />

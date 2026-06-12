@@ -13,6 +13,8 @@ import { GuideServiceBridge } from "@/components/blocks/GuideServiceBridge";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { article as articleSchema, localBusiness, organization, pageWithSpeakable } from "@/lib/schema";
+import { blogTopicForPath } from "@/lib/page-images";
+import ResponsiveImage from "@/components/blocks/ResponsiveImage";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // Format an ISO date (YYYY-MM-DD) as "Month YYYY" without timezone drift.
@@ -52,6 +54,10 @@ export type BlogPostProps = {
 };
 
 export default function BlogPostTemplate(p: BlogPostProps) {
+  // Featured image: explicit per-post override > keyword-routed topic
+  // infographic > real workshop photo (never an empty placeholder).
+  const featuredSrc =
+    p.featuredImage ?? blogTopicForPath(p.path)?.src ?? "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg";
   useSeo(
     { title: p.seoTitle, description: p.seoDescription, path: p.path },
     [
@@ -64,6 +70,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
         author: `${p.author.name}, ${p.author.role}`,
         datePublished: p.datePublished,
         dateModified: p.dateModified,
+        image: SITE.url + featuredSrc,
       }),
       // BreadcrumbList is emitted by the rendered <BreadcrumbTrail> below - don't duplicate it here.
       pageWithSpeakable({ url: SITE.url + p.path, name: p.seoTitle }),
@@ -96,14 +103,16 @@ export default function BlogPostTemplate(p: BlogPostProps) {
         </header>
 
         {/* Featured hero photo. Per-post images can be passed via `featuredImage`;
-            otherwise a real on-brand workshop photo is used so the hero never
-            renders as an empty placeholder. */}
-        <img
-          src={p.featuredImage ?? "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg"}
+            otherwise the post's topic infographic (keyword-routed in
+            page-images.ts), with a real workshop photo as the final fallback so
+            the hero never renders as an empty placeholder. */}
+        <ResponsiveImage
+          src={featuredSrc}
           alt={p.featuredImageAlt}
-          loading="lazy"
-          decoding="async"
-          className="rounded-md w-full h-[200px] md:h-[300px] object-cover border border-border"
+          width={1600}
+          height={1200}
+          sizes="(max-width: 414px) 360px, 768px"
+          imgClassName="rounded-md w-full h-auto aspect-[4/3] object-cover border border-border"
         />
 
         {/* Quick answer box - AI Overview citation magnet (microdata) */}

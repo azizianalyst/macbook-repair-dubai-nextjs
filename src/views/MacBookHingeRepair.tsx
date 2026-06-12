@@ -5,7 +5,7 @@ export default function MacBookHingeRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Hinge Repair Dubai - AED 300 | Clutch & Lid Fix"
-      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, 90-day warranty. Call 055 741 3706."
+      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, 12-month warranty. Call 055 741 3706."
       path="/macbook-hinge-repair-dubai"
       eyebrow="MacBook hinge repair"
       h1="MacBook Hinge & Clutch Repair Dubai"
@@ -23,7 +23,7 @@ export default function MacBookHingeRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a 90-day warranty.
+            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We carry hinge hardware for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 Retina Pros where seized hinges are common.
@@ -44,11 +44,11 @@ export default function MacBookHingeRepair() {
         { title: "Repair", body: "New clutch assembly or hinge hardware fitted, cracked mounts reinforced, and the flex cable re-routed and protected." },
         { title: "Quality test", body: "We cycle the lid through its full range and confirm a steady, flush close with no cable interference." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the hinge/clutch assembly and fitment.",
         "Excludes fresh drop or impact damage after delivery.",
-        "Free re-adjust if the lid loosens inside 90 days.",
+        "Free re-adjust if the lid loosens inside 12 months.",
       ]}
       faqs={[
         { q: "How much does MacBook hinge repair cost in Dubai?", a: "Hinge tightening and minor clutch work starts at AED 300. A full clutch/hinge assembly replacement runs AED 450-900 depending on model. If the bottom case is cracked around the mounts, housing repair is quoted separately after a free diagnosis." },

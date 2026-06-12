@@ -9,7 +9,7 @@ export default function IPadSmartConnectorRepair() {
       path="/ipad-smart-connector-repair-dubai"
       eyebrow="iPad Smart Connector"
       h1="iPad Smart Connector Repair Dubai"
-      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. AED 450, 2 days, 90-day warranty."
+      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. AED 450, 2 days, 12-month warranty."
       startingPrice={450}
       timeline="2 days"
       whatsappPrefill="Hi, my iPad Smart Connector is broken - model and keyboard:"
@@ -44,13 +44,13 @@ export default function IPadSmartConnectorRepair() {
         { title: "Cross-test the keyboard",     body: "Free - we test your Magic Keyboard on a known-good iPad. Rules out the keyboard as the fault before we open the iPad." },
         { title: "Pad inspection + clean",       body: "Microscope inspection of the three Smart Connector pads. About 25% of cases are solved by careful contact pad cleaning - no bill if so." },
         { title: "Smart Connector flex replace", body: "If the internal flex is broken or pads are pitted beyond cleaning, we replace the assembly. Battery disconnect, careful chassis-side work to preserve the antenna." },
-        { title: "Verify keyboard + trackpad",   body: "Test your Magic Keyboard or Smart Keyboard, including trackpad gestures and backlight. 90-day warranty card with the iPad." },
+        { title: "Verify keyboard + trackpad",   body: "Test your Magic Keyboard or Smart Keyboard, including trackpad gestures and backlight. 12-month warranty card with the iPad." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new Smart Connector flex and contact pads.",
         "Excludes new humidity exposure or impact damage.",
-        "Free re-test if connection drops within 90 days.",
+        "Free re-test if connection drops within 12 months.",
       ]}
       faqs={[
         { q: "How can I tell if it\u2019s the keyboard or the iPad?", a: "Bring both. We test the keyboard on our bench iPad; if it works, your iPad's Smart Connector is the fault. If it doesn't work, the keyboard itself needs Apple service (Magic Keyboard repairs go through Apple - we don't service those)." },

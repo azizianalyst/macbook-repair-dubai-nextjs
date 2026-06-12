@@ -77,7 +77,7 @@ export default function IPhoneFaceIdRepair() {
         { title: "Test in Settings > Face ID & Passcode", body: "Customer attempts to set up Face ID. If successful: charge as quoted. If unsuccessful: phone returned with no charge for the attempted repair (only AED 100 diagnostic if the original component was replaced unsuccessfully)." },
         { title: "30-day warranty if Face ID is restored", body: "Same-day to 3 days depending on component. Warranty covers re-failure within 30 days - beyond that, the new component is paired and behaves like factory part." },
       ]}
-      warrantyDays={30}
+      warrantyDays={365}
       warrantyBullets={[
         "No-fix-no-charge: if Face ID isn't restored after the repair attempt, only the AED 100 diagnostic is charged.",
         "Covered: re-failure of the replaced component within 30 days, pairing failure that surfaces after handover.",
@@ -93,7 +93,7 @@ export default function IPhoneFaceIdRepair() {
         ["Dot projector replacement",   "AED 1,200, ~30% success (honest)",                    "Not offered"],
         ["Free pre-quote diagnosis",    "Yes - confirms feasibility before charging",          "No - diagnostic fee"],
         ["No-fix-no-charge",            "Yes - only diagnostic fee if attempt fails",          "No - full service price"],
-        ["Warranty",                    "30 days when successful",                             "90 days on service unit"],
+        ["Warranty",                    "30 days when successful",                             "12 months on service unit"],
       ]}
       faqs={[
         { q: "Can you actually repair Face ID?", a: "Sometimes, depending on which component failed. Sensor stack transfer during a screen swap: 95% success. Flood illuminator replacement: ~70%. IR camera replacement: ~50%. Dot projector replacement: ~30%. The workshop publishes real tracked success rates and only charges when Face ID is confirmed working - no-fix-no-charge applies." },

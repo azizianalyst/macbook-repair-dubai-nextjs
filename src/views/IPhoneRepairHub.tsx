@@ -127,6 +127,8 @@ export default function IPhoneRepairHub() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/iphone-repair-hub-dubai.jpg"
+        imageAlt="iPhone repair Dubai - iPhone 17 Pro full teardown exploded-view engineering infographic"
         variant="device"
         tone="dark"
         eyebrow="iPhone specialist"

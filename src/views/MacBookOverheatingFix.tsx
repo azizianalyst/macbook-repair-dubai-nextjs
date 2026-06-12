@@ -46,11 +46,11 @@ export default function MacBookOverheatingFix() {
         { title: "Clean & re-paste", body: "Compressed air on fans, ultrasonic on heatsink fins, fresh Honeywell PTM7950 phase-change pad on CPU/GPU." },
         { title: "Reassemble + 30-min stress test", body: "Verify temperatures stay below 85°C under sustained Cinebench load. Sign QC sheet." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers thermal pad, paste application and fan reseat.",
         "Excludes new dust ingress from external sources.",
-        "Free re-clean if temps creep back inside 90 days.",
+        "Free re-clean if temps creep back inside 12 months.",
       ]}
       faqs={[
         { q: "How much will my MacBook cool down after a re-paste?", a: "On 2016-2019 Intel MacBook Pros we routinely see a 15-25°C drop in sustained-load temperatures and 30-40% lower fan speed for the same workload. On Apple Silicon, a 5-10°C drop and noticeably quieter operation." },
@@ -63,7 +63,7 @@ export default function MacBookOverheatingFix() {
       reviewNames={["Saeed Alam", "Anatoliy Tarasenko", "Daniel Vyskoc"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",            description: "All MacBook services in one place." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen batteries cause heat. From AED 350." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen batteries cause heat. From AED 450." },
         { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai", description: "Component-level work when thermal isn't enough." },
       ]}
       blogLink={{ label: "Why your MacBook overheats in Dubai (and what actually fixes it)", href: "/blog/protect-macbook-dubai-summer-heat" }}

@@ -19,7 +19,7 @@ export default function IPhone17ProMaxRepair() {
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "iPhone 17 Pro Max", path: "/iphone-17-pro-max-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 17 Pro Max Repair"
       intro={
         <>
@@ -93,9 +93,9 @@ export default function IPhone17ProMaxRepair() {
         { title: "Diagnose + repair",    body: "OLED + battery same day; 8x telephoto, vapor chamber and aluminum cosmetic 2-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, USB-C 3, 8x zoom, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Vapor chamber: 30-min sustained workload thermal verified.",
         "Aluminum cosmetic: colour-matched and laser-polished to OEM standard.",

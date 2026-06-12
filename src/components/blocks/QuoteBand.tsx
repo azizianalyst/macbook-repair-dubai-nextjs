@@ -54,7 +54,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
                 </span>
               )}
               <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck size={15} aria-hidden /> 90-day warranty
+                <ShieldCheck size={15} aria-hidden /> 12-month warranty
               </span>
             </div>
           </div>

@@ -2,6 +2,7 @@
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Building2, Calendar, Headphones } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -58,7 +59,7 @@ export default function AnnualMaintenanceContract() {
         name: "Apple Annual Maintenance Contract Dubai",
         price: 0,
         timeline: "Annual contract",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: "/annual-maintenance-contract-dubai",
         description: "Annual maintenance contracts for Apple and Windows device fleets in Dubai - scheduled servicing, priority repairs, discounted parts and on-site support.",
       }),
@@ -78,6 +79,8 @@ export default function AnnualMaintenanceContract() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/annual-maintenance-contract-dubai")?.src}
+        imageAlt={topicForPath("/annual-maintenance-contract-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Annual Maintenance Contract · Dubai"

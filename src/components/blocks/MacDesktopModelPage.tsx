@@ -239,7 +239,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} logic board repair cost in Dubai?`,
-      a: `Component-level logic board repair on the ${model.name} starts at AED ${model.pricing.logicBoard}. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a 90-day written warranty on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
+      a: `Component-level logic board repair on the ${model.name} starts at AED ${model.pricing.logicBoard}. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a 12-month written warranty on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
     },
     {
       q: isAppleSilicon
@@ -265,7 +265,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
           ? `Yes - for now. Apple's current Mac Pro M2 Ultra removed PCIe GPU support entirely (Apple Silicon limitation). If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
-            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it for AED ${model.pricing.psu ?? 450}, typically 1-2 days, with a 90-day warranty.`,
+            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it for AED ${model.pricing.psu ?? 450}, typically 1-2 days, with a 12-month warranty.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -273,18 +273,18 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. ${isPro ? "We have proper transport for the Mac Pro tower - never trust a regular courier with a Mac Pro." : ""} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. 90-day written warranty on every job.`,
+      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. ${isPro ? "We have proper transport for the Mac Pro tower - never trust a regular courier with a Mac Pro." : ""} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Logic board AED ${model.pricing.logicBoard}${model.pricing.psu ? `, PSU AED ${model.pricing.psu}` : ""}${model.pricing.port ? `, port AED ${model.pricing.port}` : ""}. 90-day warranty.`}
+      seoDescription={`${model.name} repair Dubai. Logic board AED ${model.pricing.logicBoard}${model.pricing.psu ? `, PSU AED ${model.pricing.psu}` : ""}${model.pricing.port ? `, port AED ${model.pricing.port}` : ""}. 12-month warranty.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 90-day written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={isStudio || isPro ? "Standard service same-day to 3 days · Logic board 4-6 days" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -293,7 +293,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         { name: `${FAMILY_LABEL[model.family]} Repair`, path: hubFor(model) },
         { name: model.name,                      path: `/${model.slug}` },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: `${FAMILY_LABEL[model.family]} board-level repair, thermal service & port replacement` }}
+      technician={{ name: "Shafiq", years: 15, specialisation: `${FAMILY_LABEL[model.family]} board-level repair, thermal service & port replacement` }}
       serviceName={`${model.name} Repair`}
       intro={
         <>
@@ -304,7 +304,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 90-day written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup, 12-month written warranty.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
@@ -445,9 +445,9 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
         { title: "Free pickup or visit our Media City workshop", body: `Free pickup across Dubai mainland${isPro ? " - proper Mac Pro tower transport, never a regular courier" : ""}. Or drop in 9am-10pm.` },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + 90-day warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written 90-day warranty.` },
+        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",

@@ -166,7 +166,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
           </p>
           <p>
             <strong>Credit card purchase protection:</strong> if you bought the iPhone in the past
-            90 days on Visa Signature/Infinite or Mastercard World Elite, you may be covered.
+            12 months on Visa Signature/Infinite or Mastercard World Elite, you may be covered.
             Check your card terms.
           </p>
           <p>

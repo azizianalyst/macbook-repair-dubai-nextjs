@@ -6,7 +6,7 @@ export default function IPhone15PlusRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 15 Plus Repair Dubai - 6.7-inch USB-C from AED 400 | 055 741 3706"
-      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, 90-day warranty."
+      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, 12-month warranty."
       path="/iphone-15-plus-repair-dubai"
       eyebrow="iPhone 15 Plus (2023, discontinued Sept 2025)"
       h1="iPhone 15 Plus Repair Dubai - 6.7-inch OLED, USB-C, Battery"
@@ -19,7 +19,7 @@ export default function IPhone15PlusRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "iPhone 15 Plus",  path: "/iphone-15-plus-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
       serviceName="iPhone 15 Plus Repair"
       intro={
         <>
@@ -84,9 +84,9 @@ export default function IPhone15PlusRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + return",          body: "OLED, Dynamic Island, USB-C, MagSafe and Face ID tested, signed warranty, free delivery." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
-        "90 days on parts and labour.",
+        "12 months on parts and labour.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "USB-C: charge + data tested before return.",
         "Battery: capacity-drop coverage.",

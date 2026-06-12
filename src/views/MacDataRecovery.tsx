@@ -44,7 +44,7 @@ export default function MacDataRecovery() {
         { title: "Logical or physical recovery",   body: "Logical: file system rebuild, partition recovery, deleted-file recovery. Physical: clean-room work or chip-off (rare, quoted separately)." },
         { title: "Hand-back on your drive",        body: "Recovered data delivered on a new external SSD you can keep, or on a drive you provide. Our working clone is wiped in front of you." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day window to verify your data - we re-read for free if anything is missing.",
         "No-recovery-no-fee on standard logical jobs.",

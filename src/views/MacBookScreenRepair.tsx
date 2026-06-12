@@ -16,6 +16,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Reveal } from "@/components/blocks/Reveal";
+import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { faqPage, localBusiness, organization, service as serviceSchema } from "@/lib/schema";
@@ -45,7 +46,7 @@ const COMMON_PROBLEMS = [
   { title: "Dead pixels or stuck pixels",
     body: "Apple replaces the panel only if more than 5 dead pixels appear in a 50 mm² area. The workshop replaces from a single visible dead pixel - AED 780 starting." },
   { title: "Backlight bleed in corners",
-    body: "Manufacturing defect on Retina 2012-2015 and Air 2018+. LCD panel swap, AED 780 to AED 1,040. The replacement uses a tested A-grade panel with a 90-day no-bleed guarantee." },
+    body: "Manufacturing defect on Retina 2012-2015 and Air 2018+. LCD panel swap, AED 780 to AED 1,040. The replacement uses a tested A-grade panel with a 3-month no-bleed guarantee." },
   { title: "Ghosting or burn-in (image retention)",
     body: "More common on the 2012 Retina LG-built panels. New panels from the original Samsung supplier eliminate the ghosting. AED 910." },
   { title: "Display works but lid sensor reports closed",
@@ -69,7 +70,7 @@ const STEPS = [
     body: "On genuine panels, True Tone re-calibrates against the original board serial. Lid press cures for 90 minutes at 45 °C before the MacBook leaves the bench." },
   { title: "Display QC - 47-point checklist",
     body: "Backlight uniformity, dead-pixel scan at 8 colours, hinge torque, lid sensor, brightness curve, P3 colour gamut, eDP cable strain test. The checklist is signed and shown to you at handover." },
-  { title: "Free delivery + 90-day warranty card",
+  { title: "Free delivery + 3-month warranty card",
     body: "Delivered back same day on common models, next day on the 16\" Pro. Warranty card lists the panel batch number - the warranty stays with the serial number, transferable once free of charge." },
 ];
 
@@ -80,21 +81,21 @@ const FAQS: FAQ[] = [
   { q: "How long does MacBook screen replacement take?",
     a: "Same day for MacBook Air, MacBook Pro 13\", and 14\" Pro when the panel is in stock - typically 3 to 5 hours including the 90-minute adhesive cure. The 16\" Pro panel is sometimes a 1 to 2 day order. WhatsApp the serial first to confirm stock." },
   { q: "Do you fix Flexgate on the 2016 and 2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, AED 780, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. 90-day warranty." },
+    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, AED 780, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. 3-month warranty." },
   { q: "Will True Tone still work after the screen is replaced?",
-    a: "True Tone works on genuine Apple panels - the workshop calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS; everything else (P3 colour, brightness, contrast) is identical. Both options carry the 90-day warranty." },
+    a: "True Tone works on genuine Apple panels - the workshop calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS; everything else (P3 colour, brightness, contrast) is identical. Both options carry the 3-month warranty." },
   { q: "Can you replace just the cracked glass without changing the LCD?",
     a: "On 2012-2015 Retina MacBooks, yes - AED 780 glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. The workshop will not charge for glass-only on bonded models because the result is unreliable." },
   { q: "What's the difference between LCD-only and full display assembly replacement?",
     a: "LCD-only is the panel inside the lid - the camera, hinges, and antenna stay original. Full display assembly is the entire lid pre-built. LCD-only is AED 260 to AED 520 cheaper but takes 90 extra minutes of labour. The workshop quotes both prices on every WhatsApp ticket." },
   { q: "Do you use genuine Apple screens?",
-    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models the workshop fits A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry 90-day warranty." },
+    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models the workshop fits A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry 3-month warranty." },
   { q: "What if my screen is fine but I see horizontal lines at the bottom?",
     a: "Classic Flexgate. The flex cable inside the hinge is failing. Open and close the lid slowly - if the lines come and go, it's confirmed. AED 780 cable replacement, same day, and the new cable is the 2-mm-longer revised version." },
   { q: "Will my MacBook screen replacement work with my external monitor?",
     a: "Yes - the external display output is a separate circuit on the logic board. If your built-in display died but external still works, that confirms a panel-side fault, not a logic-board GPU fault. AED 780 to AED 1,560 panel swap solves it." },
   { q: "Is there a warranty on the new screen?",
-    a: "90-day written warranty on parts and labour. Covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. Does not cover new physical damage. Transferable once free of charge to a new owner if the MacBook is sold." },
+    a: "3-month written warranty on parts and labour. Covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. Does not cover new physical damage. Transferable once free of charge to a new owner if the MacBook is sold." },
   { q: "Can you fix a MacBook screen with no image but the laptop still chimes?",
     a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps at AED 780 to AED 1,560." },
   { q: "Do you offer pickup for screen repair?",
@@ -108,14 +109,16 @@ const COMPARISON = [
   ["Starting price (Pro 16\")", "AED 1,560",                                 "AED 2,749 (Apple list)"],
   ["Free pickup in Dubai",  "Yes, same day",                                "No, customer must courier"],
   ["LCD-only option",       "Yes - AED 260 to AED 520 cheaper",             "No, full assembly only"],
-  ["Warranty",              "90 days written",                              "90 days"],
+  ["Warranty",              "3 months written",                              "12 months"],
   ["No-fix-no-charge",      "Yes",                                           "No, diagnostic fee charged"],
   ["Vintage/obsolete models","Yes - 2012 onwards",                           "Refused on obsolete (pre-2017)"],
 ];
 
 const TIMELINE = [
-  { tone: "good" as const, head: "Same day (3 to 5 hours)",
-    body: "MacBook Air 13″ and 15″, Pro 13″ Touch Bar, Pro 14″ M1/M2/M3/M4 - when the panel is in stock. 90 of last 100 same-day tickets delivered before 8 pm." },
+  { tone: "good" as const, head: "30 minutes (booked appointment)",
+    body: "Pre-book a slot, confirm your model and serial, and the panel is staged for your MacBook before you arrive. Walk in, wait 30 minutes, walk out. Guaranteed — free if we run over. Compatible with MacBook Air 13″/15″ and Pro 13″/14″ M1–M4 in-stock panels." },
+  { tone: "good" as const, head: "Same day (3 to 5 hours, walk-in)",
+    body: "MacBook Air 13″ and 15″, Pro 13″ Touch Bar, Pro 14″ M1/M2/M3/M4 - when the panel is in stock. 90 of last 100 same-day walk-in tickets delivered before 8 pm." },
   { tone: "mid" as const, head: "1 to 2 days",
     body: "MacBook Pro 16″ M1 to M4 (panel ordered from local Apple-authorised distributor). 12″ Retina 2015-2017. 2012 Retina 15″ when the original Samsung panel must be sourced." },
   { tone: "mid" as const, head: "3 days (rare)",
@@ -123,7 +126,7 @@ const TIMELINE = [
 ];
 
 const RELATED = [
-  { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 590, 2 hours, 6-month battery warranty." },
+  { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 590, 2 hours, 3-month battery warranty." },
   { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai",  description: "Component-level board work from AED 1,040. Microscope + hot air rework." },
   { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Ultrasonic cleaning + corrosion removal from AED 910. Bring it in within 24 hours." },
 ];
@@ -131,8 +134,8 @@ const RELATED = [
 const TRUST = [
   { value: "3,400+", label: "Displays fitted since 2004" },
   { value: "From AED 780", label: "Air 13″ & Pro 13″ panel" },
-  { value: "Same day", label: "On most Air & Pro 14″" },
-  { value: "90 days", label: "Written warranty" },
+  { value: "30 min", label: "Guaranteed by appointment" },
+  { value: "3 months", label: "Written warranty" },
 ];
 
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
@@ -154,7 +157,7 @@ export default function MacBookScreenRepair() {
     {
       title: "MacBook Screen Repair Dubai - From AED 780",
       description:
-        "MacBook screen repair Dubai from AED 780. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 90-day warranty. Concord Tower. 055 741 3706.",
+        "MacBook screen repair Dubai from AED 780. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Concord Tower. 055 741 3706.",
       path: "/macbook-screen-repair-dubai",
     },
     [
@@ -164,7 +167,7 @@ export default function MacBookScreenRepair() {
         name: "MacBook Screen Repair Dubai",
         price: 780,
         timeline: "Same day to 2 days",
-        warranty: "P90D",
+        warranty: "P3M",
         url: "/macbook-screen-repair-dubai",
         description:
           "MacBook screen and LCD replacement in Dubai. Flexgate, cracked glass, dead pixels, backlight failure. Air, Pro 13/14/16, Intel and Apple Silicon.",
@@ -201,7 +204,7 @@ export default function MacBookScreenRepair() {
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Cracked glass, Flexgate, dead pixels, no backlight. Air, Pro 13″, 14″, 16″ - Intel through M5.
-                  Same-day on most models, 90-day written warranty.
+                  Same-day on most models, 3-month written warranty.
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
@@ -220,31 +223,16 @@ export default function MacBookScreenRepair() {
 
               {/* glass info card */}
               <div className="md:col-span-5">
-                <Reveal delay={120} className="rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Monitor size={22} aria-hidden /></span>
-                      <div>
-                        <p className="m-0 font-semibold leading-tight text-text">Screen Repair</p>
-                        <p className="m-0 text-[12px] text-text-faint">LCD · glass · Flexgate</p>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
-                    </span>
-                  </div>
-                  <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-                    {[["Starting price", "AED 780"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "90 days written"], ["Diagnosis", "FREE"]].map(([k, v]) => (
-                      <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
-                        <span className="text-text-faint">{k}</span>
-                        <span className="font-semibold text-text">{v}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-                    <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
-                  </div>
+                
+                <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
+                  <ResponsiveImage
+                    src="/images/services/svc-screen.jpg"
+                    alt="MacBook screen replacement in Dubai - technician fitting a new Retina display at our Media City workshop"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 92vw, 420px"
+                    imgClassName="w-full h-auto"
+                  />
                 </Reveal>
               </div>
             </div>
@@ -252,7 +240,35 @@ export default function MacBookScreenRepair() {
         </section>
 
         {/* Answer-first capsule (AEO/BLUF) */}
-        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook screen repair", startingPrice: 780, timeline: "same-day on most models" })} />
+        <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook screen repair", startingPrice: 780, timeline: "same-day on most models" })} />
+          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Monitor size={22} aria-hidden /></span>
+                <div>
+                  <p className="m-0 font-semibold leading-tight text-text">Screen Repair</p>
+                  <p className="m-0 text-[12px] text-text-faint">LCD · glass · Flexgate</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
+              </span>
+            </div>
+            <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
+              {[["Starting price", "AED 780"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "3 months written"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+                <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
+                  <span className="text-text-faint">{k}</span>
+                  <span className="font-semibold text-text">{v}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+            </div>
+          </Reveal>
+        </div>
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -276,7 +292,7 @@ export default function MacBookScreenRepair() {
         {/* ── Models + pricing ───────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Every screen, one place" title="MacBook models we repair" intro="Every MacBook from the 2008 unibody through the 2025 M5 Pro 16″. Prices below are the panel + labour + 90-day warranty all-in. No diagnostic fee, no hidden adhesive charge." />
+            <SectionHead eyebrow="Every screen, one place" title="MacBook models we repair" intro="Every MacBook from the 2008 unibody through the 2025 M5 Pro 16″. Prices below are the panel + labour + 3-month warranty all-in. No diagnostic fee, no hidden adhesive charge." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
               Glass-only repair on 2012-2015 Retina starts at AED 780. From 2016 the glass is bonded to the LCD - full assembly only.
@@ -360,7 +376,7 @@ export default function MacBookScreenRepair() {
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              All three carry the same 90-day warranty. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit unbranded panels under AED 520 because failure rates above 20% are normal in that grade.
+              All three carry the same 3-month warranty. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit unbranded panels under AED 520 because failure rates above 20% are normal in that grade.
             </p>
           </div>
         </section>
@@ -370,7 +386,7 @@ export default function MacBookScreenRepair() {
           <SectionHead eyebrow="Backed in writing" title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">3 months</strong> - written warranty on parts and labour, dated and signed.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, dead pixels appearing post-repair, backlight bleed, eDP cable failure, hinge alignment.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, software issues unrelated to the display.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge. Replacement panel fitted within 48 hours.</span></li>
@@ -554,7 +570,7 @@ export default function MacBookScreenRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Cracked screen? WhatsApp the model - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. 90-day written warranty on every panel fitted.
+              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. 3-month written warranty on every panel fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
@@ -565,7 +581,7 @@ export default function MacBookScreenRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 3-month warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-screen-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-screen-repair-dubai" />

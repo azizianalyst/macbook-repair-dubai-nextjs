@@ -44,7 +44,7 @@ export default function MacPerformanceTune() {
         { title: "Targeted cleanup",             body: "Launch agents and daemons audited and pruned. Caches cleared. Old kernel extensions removed. Storage cleaned. App-specific fixes (Safari profiles, Mail rebuild)." },
         { title: "Re-measure + compare",         body: "Same benchmarks re-run. We hand you a one-page before/after summary. Usually 2-5× speed improvement on the operations that were slow." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day support - if a specific slowdown returns, we re-investigate free.",
         "Honest 'this needs a hardware upgrade, not a tune' verdict if applicable.",

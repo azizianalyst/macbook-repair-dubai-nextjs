@@ -22,13 +22,14 @@ import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 import { AREAS, type AreaConfig } from "@/content/areas";
+import { areaTopicForSlug } from "@/lib/page-images";
 
 export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
   const path = `/macbook-repair-${cfg.slug}`;
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const title = `MacBook Repair ${cfg.area} - Free Pickup & Delivery`;
-  const description = `MacBook repair in ${cfg.area} with free pickup & same-day delivery from our Concord Tower workshop. 90-day warranty. Call 055 741 3706.`;
+  const description = `MacBook repair in ${cfg.area} with free pickup & same-day delivery from our Concord Tower workshop. 12-month warranty. Call 055 741 3706.`;
 
   useSeo(
     { title, description, path },
@@ -46,7 +47,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         name: `MacBook Repair ${cfg.area}`,
         price: 350,
         timeline: "Same day",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: path,
         description: `MacBook screen, battery, keyboard, water-damage and logic-board repair with free pickup and delivery from ${cfg.area}.`,
       }),
@@ -61,7 +62,9 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         tone="dark"
         eyebrow={`Free pickup in ${cfg.area}`}
         title={`MacBook Repair in ${cfg.area} - Free Pickup & Delivery`}
-        subtitle={`${cfg.driveTime} from our Concord Tower workshop in Media City. ${cfg.landmarkLine} Same-day repair, 90-day written warranty.`}
+        subtitle={`${cfg.driveTime} from our Concord Tower workshop in Media City. ${cfg.landmarkLine} Same-day repair, 12-month written warranty.`}
+        image={areaTopicForSlug(cfg.slug)?.src}
+        imageAlt={areaTopicForSlug(cfg.slug)?.alt ?? `MacBook repair pickup and delivery in ${cfg.area}, Dubai`}
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free pickup &amp; delivery</span>
@@ -70,24 +73,12 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           <span className="text-text-faint">·</span>
           <span className="flex items-center gap-1"><Car size={16} className="text-accent" aria-hidden /> {cfg.driveTime} drive</span>
         </p>
-        <div className="mt-lg flex flex-wrap gap-sm">
-          <Button asChild variant="whatsapp" size="lg">
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden /> Book free pickup
-            </a>
-          </Button>
-          <Button asChild variant="secondary" size="lg">
-            <a href={`tel:${NAP.phoneE164}`}>
-              <Phone aria-hidden /> {NAP.phoneDisplay}
-            </a>
-          </Button>
-        </div>
       </Hero>
 
       <QuickAnswer
         tone="dark"
         question={`MacBook repair in ${cfg.area} - how does it work?`}
-        answer={`MacBook repair from ${cfg.area} starts with a free door-to-door pickup - typically ${cfg.pickupWindow.toLowerCase()} of your WhatsApp. We diagnose at our Concord Tower workshop in Media City (${cfg.driveTime}), quote in writing within 4 hours, and return the repaired MacBook with a 90-day warranty. Most common repairs finish the same day.`}
+        answer={`MacBook repair from ${cfg.area} starts with a free door-to-door pickup - typically ${cfg.pickupWindow.toLowerCase()} of your WhatsApp. We diagnose at our Concord Tower workshop in Media City (${cfg.driveTime}), quote in writing within 4 hours, and return the repaired MacBook with a 12-month warranty. Most common repairs finish the same day.`}
       />
 
       <USPStrip tone="dark" />
@@ -149,7 +140,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               { t: "Courier collects in person", b: `${cfg.pickupWindow} of confirmation. Marked Toyota Innova, ID-checked, insured, trackable on WhatsApp.` },
               { t: "Free workshop diagnosis", b: "Shafiq inspects the device the same day. Itemised written quote on WhatsApp within 4 hours of pickup." },
               { t: "Approve and we repair", b: "Reply 'approved'. Most common repairs finish the same day. We message you the moment the device is ready." },
-              { t: "Free return delivery", b: `Courier returns the device to your ${cfg.area} address. Pay on arrival - cash, card or bank transfer. 90-day warranty card included.` },
+              { t: "Free return delivery", b: `Courier returns the device to your ${cfg.area} address. Pay on arrival - cash, card or bank transfer. 12-month warranty card included.` },
             ].map((s, i) => (
               <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
                 <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
@@ -177,7 +168,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               className="block border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 transition"
             >
               <p className="font-bold text-[16px] mb-1">{s.label}</p>
-              <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · 90-day warranty</p>
+              <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · 12-month warranty</p>
             </Link>
           ))}
         </div>

@@ -25,7 +25,8 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
-  `A3090 13" M3 (2024)`, `A2941 15" M2 (2023)`, `A2681 13" M2 (2022)`, `A2337 13" M1 (2020)`,
+  `13" M5 (2026)`, `15" M5 (2026)`, `A3240 13" M4 (2025)`, `A3241 15" M4 (2025)`,
+  `A3113 13" M3 (2024)`, `A3114 15" M3 (2024)`, `A2941 15" M2 (2023)`, `A2681 13" M2 (2022)`, `A2337 13" M1 (2020)`,
   `A1932 13" Retina (2018)`, `A1466 13" (2017)`, `A1466 13" (Early 2015)`, `A1465 11" (Early 2015)`,
   `A1466 13" (Early 2014)`, `A1465 11" (Early 2014)`, `A1369 13" (Mid 2013)`, `A1465 11" (Mid 2013)`,
   `A1369 13" (Mid 2012)`, `A1465 11" (Mid 2012)`, `A1369 13" (Mid 2011)`,
@@ -93,7 +94,7 @@ const WHY = [
 ];
 
 const QUALITY = [
-  { title: "Rapid Repair Service", body: "We can fix all problems with your MacBook Air on the same day, so you won't have to wait long to get it back in working order." },
+  { title: "30-Minute Appointment Repair", body: "Book a slot, confirm your part, and a screen or battery replacement is completed in 30 minutes — guaranteed, or the repair is free. No other MacBook Air repair service in Dubai offers this commitment." },
   { title: "Minimal Downtime", body: "We know how important your MacBook Air is to you, so we work hard to fix it quickly so you don't have to be without it for too long." },
   { title: "Budget Friendly", body: "Get expert, quality help without breaking the bank with our affordable MacBook Air repair services." },
   { title: "Lasting Solutions", body: "We focus on fixing MacBook Airs in a way that works well and lasts, so your device will continue to work well after you leave our shop." },
@@ -107,7 +108,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
-  { q: "Can you fix a MacBook Air?", a: "Yes, absolutely! As an Apple Authorized Service Provider, our expert technicians can repair all MacBook Air models - from older Intel versions to the latest M3 models. Whether it's a screen issue, battery problem, or software malfunction, we use Apple-approved tools and genuine parts to restore your device to perfect working condition." },
+  { q: "Can you fix a MacBook Air?", a: "Yes, absolutely! As independent Apple specialists - not an Apple Authorised Service Centre - our expert technicians can repair all MacBook Air models, from older Intel versions to the latest M5 models. Whether it's a screen issue, battery problem, or software malfunction, we use professional tools and genuine parts to restore your device to perfect working condition." },
   { q: "Is it worthwhile to fix my MacBook Air screen?", a: "In most cases, yes. Replacing your MacBook Air screen is far more affordable than buying a new laptop. If the device is still performing well and other components are in good condition, a screen replacement is a smart and cost-effective solution. Repair costs also typically drop over time, so older MacBook Airs are less expensive to fix." },
   { q: "My MacBook Air has gotten wet but is still functional - should I keep using it or consult a professional?", a: "The device may continue to function for a while, but eventually some difficulties may arise. To avoid further harm, we recommend that you stop using it and talk with a technical professional." },
   { q: "Which replacement components do you use?", a: "We only use genuine Apple parts in all repairs." },
@@ -131,7 +132,7 @@ export default function MacBookAirRepair() {
     {
       title: "MacBook Air Repair Dubai - Screen, Battery & Logic Board Fix",
       description:
-        "Get your MacBook Air repaired quickly and affordably in Dubai. Certified technicians fix screen, battery, keyboard & more on M1, M2, M3 & Intel models using genuine Apple parts. Rated 5.0 stars.",
+        "Get your MacBook Air repaired quickly and affordably in Dubai. Certified technicians fix screen, battery, keyboard & more on all models, Intel through M5, using genuine Apple parts. Rated 5.0 stars.",
       path: "/macbook-air-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -141,6 +142,8 @@ export default function MacBookAirRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/macbook-air-repair-hub-dubai.jpg"
+        imageAlt="MacBook Air repair Dubai - M5 ultralight teardown exploded-view engineering infographic"
         variant="device"
         tone="dark"
         eyebrow="MacBook Air specialist"
@@ -160,7 +163,7 @@ export default function MacBookAirRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my MacBook Air repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every MacBook Air — 11-inch, 13-inch and 15-inch, Intel through M5 — at its Concord Tower workshop in Dubai Media City. Same-day screen, battery and keyboard service plus logic-board and water-damage repair, with free diagnosis, free citywide pickup, genuine or OEM-grade parts and a 90-day written warranty."
+        answer="MacBook Repair Dubai repairs every MacBook Air — 11-inch, 13-inch and 15-inch, Intel through M5 — at its Concord Tower workshop in Dubai Media City. Same-day screen, battery and keyboard service plus logic-board and water-damage repair, with free diagnosis, free citywide pickup, genuine or OEM-grade parts and a 12-month written warranty."
       />
 
       <USPStrip tone="dark" />

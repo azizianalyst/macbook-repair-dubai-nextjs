@@ -46,9 +46,9 @@ export default function MacBookSafeModeRepair() {
         { title: "Repair, reinstall or clean up", body: "We remove the conflicting software, rebuild caches, reset login items, reinstall macOS where needed, or quote any hardware repair before we touch it." },
         { title: "Same-day return", body: "Most software jobs go back the same day, fully tested through a normal boot and a few sleep-wake cycles, with your data intact." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90 days on the software work we carried out - the same fault won't come back on us.",
+        "12 months on the software work we carried out - the same fault won't come back on us.",
         "Your files stay put. Software diagnosis and clean-up don't wipe data.",
         "If safe mode points to hardware, we quote the part in writing before any repair starts.",
       ]}

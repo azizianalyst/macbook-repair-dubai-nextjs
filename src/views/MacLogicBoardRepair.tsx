@@ -45,7 +45,7 @@ export default function MacLogicBoardRepair() {
         { title: "Bench test before reassembly",  body: "Board powered on bench (outside the chassis) before final reassembly. Confirms the fix worked and nothing else is borderline." },
         { title: "Burn-in test in chassis",       body: "Reassembled Mac runs a 24-hour stress test before you collect - proves the repair holds under real load." },
       ]}
-      warrantyDays={180}
+      warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on component-level repairs.",
         "Free re-attempt if the same failure recurs inside warranty.",

@@ -109,7 +109,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
               { model: "Turnaround",     ours: "1 day",                         apple: "5-10 days" },
               { model: "MagSafe preserved", ours: "Yes, retested",              apple: "New coil in new housing" },
               { model: "Original chassis kept", ours: "Yes",                    apple: "No - your serial moves to new housing (Apple records it)" },
-              { model: "Warranty",       ours: "90 days written",               apple: "90 days" },
+              { model: "Warranty",       ours: "12 months written",               apple: "12 months" },
             ]}
           />
 

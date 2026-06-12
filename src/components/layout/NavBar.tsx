@@ -116,17 +116,21 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
           </div>
         </div>
       )}
-      <div className="mx-auto flex h-16 max-w-content items-center justify-between px-5 md:px-6">
-        <Link to="/" aria-label={`${NAP.name} - home`} className="text-current">
+      {/* gap-4 guarantees breathing room between logo / nav / CTAs even when the
+          1180px container is full — without it justify-between lets them collide */}
+      <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-5 md:px-6">
+        <Link to="/" aria-label={`${NAP.name} - home`} className="shrink-0 text-current">
           <Logo withWordmark />
         </Link>
 
-        {/* desktop nav */}
-        <nav className="hidden lg:flex items-center gap-6" aria-label="Primary">
+        {/* desktop nav — 7 items since the 2026-06 menu rebuild: 14px type,
+            tight gaps, and nowrap so labels never break onto two lines inside
+            the 1180px container */}
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-5" aria-label="Primary">
           <NavLink
             to="/"
             end
-            className={({ isActive }) => cn("relative text-[15px] py-2 text-current hover:text-accent transition-colors duration-200 ease-out after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-accent motion-safe:after:transition-transform motion-safe:after:duration-200 motion-safe:after:ease-out hover:after:scale-x-100", isActive && "!text-accent after:scale-x-100")}
+            className={({ isActive }) => cn("relative whitespace-nowrap text-[14px] py-2 text-current hover:text-accent transition-colors duration-200 ease-out after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-accent motion-safe:after:transition-transform motion-safe:after:duration-200 motion-safe:after:ease-out hover:after:scale-x-100", isActive && "!text-accent after:scale-x-100")}
           >
             Home
           </NavLink>
@@ -142,7 +146,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
                   to={panel.href}
                   className={({ isActive }) =>
                     cn(
-                      "relative inline-flex items-center gap-1 text-[15px] py-2 text-current hover:text-accent transition-colors duration-200 ease-out",
+                      "relative inline-flex items-center gap-1 whitespace-nowrap text-[14px] py-2 text-current hover:text-accent transition-colors duration-200 ease-out",
                       "after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-accent motion-safe:after:transition-transform motion-safe:after:duration-200 motion-safe:after:ease-out hover:after:scale-x-100",
                       (isActive || isOpen) && "!text-accent after:scale-x-100",
                     )
@@ -160,14 +164,17 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
           })}
         </nav>
 
-        {/* desktop CTAs */}
-        <div className="hidden lg:flex items-center gap-3">
+        {/* desktop CTAs — icon-only call button: the full number text + 7 nav
+            items + wordmark physically exceed the 1180px container, and the
+            number already lives in the utility bar, Contact panel and footer */}
+        <div className="hidden lg:flex shrink-0 items-center gap-2.5">
           <a
             href={`tel:${NAP.phoneE164}`}
-            className="flex items-center gap-2 text-[15px] font-semibold"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-current/25 transition-colors hover:text-accent hover:border-accent/50"
             aria-label={`Call ${NAP.phoneDisplay}`}
+            title={`Call ${NAP.phoneDisplay}`}
           >
-            <Phone size={16} aria-hidden /> {NAP.phoneDisplay}
+            <Phone size={16} aria-hidden />
           </a>
           <Button asChild variant="whatsapp" size="sm">
             <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp</a>

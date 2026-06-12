@@ -4,6 +4,7 @@
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -127,6 +128,8 @@ export default function AppleServiceCenter() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/apple-service-center-dubai")?.src}
+        imageAlt={topicForPath("/apple-service-center-dubai")?.alt}
         variant="device"
         tone="dark"
         eyebrow="Apple Service Center"

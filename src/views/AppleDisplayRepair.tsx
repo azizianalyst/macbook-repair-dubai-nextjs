@@ -6,6 +6,7 @@ import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -104,6 +105,8 @@ export default function AppleDisplayRepair() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/apple-display-repair-dubai")?.src}
+        imageAlt={topicForPath("/apple-display-repair-dubai")?.alt}
         tone="dark"
         variant="device"
         eyebrow="Apple Display specialist"

@@ -18,7 +18,7 @@ export default function IPhoneNfcRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "NFC Repair",      path: "/iphone-nfc-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone RF and antenna repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone RF and antenna repair" }}
       serviceName="iPhone NFC Repair"
       intro={
         <>
@@ -44,13 +44,13 @@ export default function IPhoneNfcRepair() {
         { title: "Apple Pay terminal test", body: "Free - we test against our bench POS. Confirms whether it's the antenna, controller, or your card." },
         { title: "Open from the screen side", body: "We don't crack the back glass - instead we lift the screen and access the antenna from inside (less risk to the camera bump)." },
         { title: "Replace antenna or reflow controller", body: "If the antenna is broken, we install OEM-grade replacement. If the NFC controller IC has failed, we reflow at controlled temperature." },
-        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. 90-day warranty card with the phone." },
+        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. 12-month warranty card with the phone." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new antenna and controller rework.",
         "Excludes carrier or bank-side Apple Pay issues.",
-        "Free re-test within 90 days if NFC stops responding.",
+        "Free re-test within 12 months if NFC stops responding.",
       ]}
       faqs={[
         { q: "How do I know it's NFC and not the bank?", a: "If Apple Pay works inside apps (e.g. paying for Apple Music) but not at physical terminals, NFC hardware is the issue. If both fail, your card may be locked or your Apple Pay setup needs refresh." },

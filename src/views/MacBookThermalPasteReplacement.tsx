@@ -5,7 +5,7 @@ export default function MacBookThermalPasteReplacement() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Thermal Paste Replacement Dubai"
-      seoDescription="MacBook overheating, fans roaring, throttling and shutdowns? We strip old paste, reapply premium compound and clean fans in Dubai. Free diagnosis, 90-day warranty."
+      seoDescription="MacBook overheating, fans roaring, throttling and shutdowns? We strip old paste, reapply premium compound and clean fans in Dubai. Free diagnosis, 12-month warranty."
       path="/macbook-thermal-paste-replacement-dubai"
       eyebrow="Overheating & thermal paste"
       h1="MacBook Thermal Paste Replacement in Dubai"
@@ -46,9 +46,9 @@ export default function MacBookThermalPasteReplacement() {
         { title: "Stress test temperatures", body: "We run the Mac under sustained load and watch the temps drop and hold. No throttling, fans calm, before it leaves the bench." },
         { title: "Same-day return", body: "Most jobs are back to you the same day, delivered across Dubai mainland or ready for collection from the workshop." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "Covers the paste application and fan cleaning for 90 days.",
+        "Covers the paste application and fan cleaning for 12 months.",
         "Free re-do if temperatures climb back inside the warranty window.",
         "Excludes faults from new liquid damage or physical impact after delivery.",
       ]}
@@ -58,20 +58,20 @@ export default function MacBookThermalPasteReplacement() {
         { q: "How often should thermal paste be replaced?", a: "Roughly every two to three years on Intel MacBooks, sometimes sooner in Dubai's heat. If the machine is older than that and the fans have got noticeably louder, it's due. We've redone plenty that hadn't been touched since new. Free diagnosis confirms it, fix from AED 280, same day." },
         { q: "Will new thermal paste fix throttling and slow performance?", a: "If the throttling comes from heat, yes. Once temperatures sit in a safe range the Mac stops protecting itself and runs at full clock again. We prove it on the bench with a stress test before return. If the slowdown is software or storage instead, the free diagnosis catches that. From AED 280 in Dubai." },
         { q: "Do you clean the fans at the same time?", a: "Yes, it's included. The Mac is already open, so we clear dust off both fans and the heatsink fins while we reapply the paste. Dust and dried compound usually go together, and tackling both at once is why temperatures drop properly. AED 280, same day at our Media City workshop." },
-        { q: "Which MacBook models do you do this on, Intel or Apple Silicon?", a: "Both, though Intel MacBooks need it far more often because they run hotter. M1, M2, M3 and M4 Macs run cooler and rarely need a repaste - if yours is Apple Silicon and overheating, it's more likely dust or a fan fault, which the free diagnosis sorts out. We service every model in Dubai from AED 280." },
+        { q: "Which MacBook models do you do this on, Intel or Apple Silicon?", a: "Both, though Intel MacBooks need it far more often because they run hotter. M1 through M5 Macs run cooler and rarely need a repaste - if yours is Apple Silicon and overheating, it's more likely dust or a fan fault, which the free diagnosis sorts out. We service every model in Dubai from AED 280." },
         { q: "How long does it take?", a: "Most thermal paste jobs are same day, often within a few hours once it's on the bench. Older MacBook Pros with more disassembly take a little longer. We'll confirm the turnaround after the free diagnosis. Free pickup across Dubai mainland, fix from AED 280." },
-        { q: "Is replacing the thermal paste safe for my MacBook?", a: "It is when done properly. The risk is using too much paste or damaging the heatsink mounting, which is why a careful job matters. Abdul Aziz has 21 years on Apple boards and we torque the heatsink back to spec. Your data stays untouched. 90-day warranty, from AED 280 in Dubai." },
+        { q: "Is replacing the thermal paste safe for my MacBook?", a: "It is when done properly. The risk is using too much paste or damaging the heatsink mounting, which is why a careful job matters. Abdul Aziz has 21 years on Apple boards and we torque the heatsink back to spec. Your data stays untouched. 12-month warranty, from AED 280 in Dubai." },
         { q: "Why does my MacBook overheat more in Dubai?", a: "Ambient heat is the difference. A Mac that idles fine in a cold climate has far less thermal headroom in a Dubai summer, so dried paste shows up as fans roaring and throttling much faster here. Reapplying fresh compound buys back that margin. Free check, fix from AED 280 at Concord Tower, Media City." },
       ]}
       reviewNames={["Latifa", "Neil Morecraft", "Anatolii Monich"]}
       related={[
         { label: "MacBook Fan Cleaning",          href: "/mac-fan-cleaning-dubai",                description: "Dust-choked fans cause the same overheating. Often done together." },
         { label: "MacBook Logic Board Repair",    href: "/macbook-logic-board-repair-dubai",      description: "When the heat fault is board-level, not paste." },
-        { label: "MacBook Battery Replacement",   href: "/macbook-battery-replacement-dubai",     description: "Heat shortens battery life. Genuine-capacity cells from AED 280." },
+        { label: "MacBook Battery Replacement",   href: "/macbook-battery-replacement-dubai",     description: "Heat shortens battery life. Genuine-capacity cells from AED 450." },
       ]}
       quickAnswer={{
         question: "How much does MacBook thermal paste replacement cost in Dubai?",
-        answer: "MacBook thermal paste replacement starts at AED 280 at MacBook Repair Dubai in Concord Tower, Media City. It includes stripping the dried compound, reapplying premium paste, and cleaning both fans, with a free diagnosis and 90-day warranty. Most jobs are done the same day.",
+        answer: "MacBook thermal paste replacement starts at AED 280 at MacBook Repair Dubai in Concord Tower, Media City. It includes stripping the dried compound, reapplying premium paste, and cleaning both fans, with a free diagnosis and 12-month warranty. Most jobs are done the same day.",
       }}
     />
   );

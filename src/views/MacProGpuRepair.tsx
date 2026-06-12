@@ -45,10 +45,10 @@ export default function MacProGpuRepair() {
         { title: "Source genuine MPX or refurb",  body: "Apple MPX modules are scarce. We have refurbished W5700X and W5500X in stock most of the time. W6800X and Vega II Duo are special-order, 5-10 working days." },
         { title: "Install + 24-hour burn-in",     body: "Module fitted, Mac Pro stress-tested under sustained GPU load (Final Cut render or DaVinci Resolve render) for 24 hours before pickup." },
       ]}
-      warrantyDays={180}
+      warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on MPX module replacements.",
-        "90-day warranty on component-level repairs (fan, VRM, caps).",
+        "12-month warranty on component-level repairs (fan, VRM, caps).",
         "Honest 'no, we can't' verdict for M2 Ultra GPU faults - free diagnosis only.",
       ]}
       faqs={[

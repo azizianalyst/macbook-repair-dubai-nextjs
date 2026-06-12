@@ -18,7 +18,7 @@ export default function IPhoneLightningPortRepair() {
         { name: "iPhone Repair",       path: "/iphone-repair-dubai" },
         { name: "Lightning Port",      path: "/iphone-lightning-port-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone charging and audio repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone charging and audio repair" }}
       serviceName="iPhone Lightning Port Repair"
       intro={
         <>
@@ -26,7 +26,7 @@ export default function IPhoneLightningPortRepair() {
             <strong>The honest first move on any "broken" iPhone Lightning port: clean it, free.</strong> About 70% of iPhones we see for charging issues in Dubai have pocket lint, sand or pet hair packed into the port - the cable physically can't seat fully against the contacts. We extract debris under a microscope, plug in our test cable, and 7 times out of 10 you walk out with a working iPhone and no bill.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            If the port itself is corroded, bent or has snapped contacts, replacement is AED 300 - same-day on iPhone 5 through 14. We use OEM-grade Lightning port flex (which on most models also includes the bottom microphone). 90-day warranty.
+            If the port itself is corroded, bent or has snapped contacts, replacement is AED 300 - same-day on iPhone 5 through 14. We use OEM-grade Lightning port flex (which on most models also includes the bottom microphone). 12-month warranty.
           </p>
         </>
       }
@@ -44,9 +44,9 @@ export default function IPhoneLightningPortRepair() {
         { title: "Free microscope inspection", body: "We look inside the port at 40× magnification. If it's lint or sand, we extract carefully and test charging - usually no charge." },
         { title: "Test with verified cable",    body: "If the clean doesn't fix it, we plug in our bench-tested Apple cable to confirm the issue is the port and not your cable." },
         { title: "Port flex replacement",       body: "OEM-grade Lightning port flex (includes bottom mic on most models). Battery disconnect, install, reseat speaker grille." },
-        { title: "Charge + audio + mic verify", body: "Confirm fast-charge speed, lightning audio (with adapter), bottom mic for calls and Voice Memos. 90-day warranty card." },
+        { title: "Charge + audio + mic verify", body: "Confirm fast-charge speed, lightning audio (with adapter), bottom mic for calls and Voice Memos. 12-month warranty card." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new Lightning port flex and seal.",
         "Bottom microphone replaced as part of the same flex on most models.",

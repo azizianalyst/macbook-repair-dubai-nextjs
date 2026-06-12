@@ -23,7 +23,7 @@ export default function BlogMacBookScreenRepairCost() {
           <h2>The full MacBook screen repair price list - April 2026 Dubai</h2>
           <p>
             Below is every MacBook line we currently service. Prices include the display assembly,
-            labour, calibration, and a 90-day written warranty. No diagnostic fee.
+            labour, calibration, and a 3-month written warranty. No diagnostic fee.
           </p>
           <BlogPriceTable
             caption="MacBook screen repair pricing - MacBook Repair Dubai, April 2026"
@@ -133,7 +133,7 @@ export default function BlogMacBookScreenRepairCost() {
               { model: "Price",            ours: "AED 1,200", apple: "AED 2,099" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "Drop-off at Mall of Emirates / Dubai Mall" },
-              { model: "Warranty",         ours: "90 days written", apple: "90 days (Apple)" },
+              { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
               { model: "Whole-lid replacement", ours: "Only if needed", apple: "Always (entire lid swapped)" },
               { model: "Diagnostic fee",   ours: "Free", apple: "Free under AppleCare+, otherwise quoted" },
             ]}
@@ -147,7 +147,7 @@ export default function BlogMacBookScreenRepairCost() {
             <li>ProMotion 120Hz profiling for 14″/16″ Pro models</li>
             <li>FaceTime camera, ambient sensor, and antenna transferred from the original lid</li>
             <li>Full hinge and clutch inspection (we re-grease at no extra charge)</li>
-            <li>90-day written warranty on parts and labour</li>
+            <li>3-month written warranty on parts and labour</li>
           </ul>
 
           <h2>What to do next</h2>

@@ -5,7 +5,7 @@ export default function MacBookPowerButtonRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Power Button & Touch ID Repair Dubai - AED 250"
-      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, 90-day warranty. Call 055 741 3706."
+      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, 12-month warranty. Call 055 741 3706."
       path="/macbook-power-button-repair-dubai"
       eyebrow="MacBook power button repair"
       h1="MacBook Power Button & Touch ID Repair Dubai"
@@ -23,7 +23,7 @@ export default function MacBookPowerButtonRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a 90-day warranty.
+            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a 12-month warranty.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged power circuits and board-level Touch ID faults.
@@ -44,11 +44,11 @@ export default function MacBookPowerButtonRepair() {
         { title: "Repair", body: "New power/Touch ID assembly fitted, or board-level micro-soldering of the power circuit where needed." },
         { title: "Quality test", body: "We confirm clean power-on, sleep/wake and Touch ID enrolment before pickup." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the power/Touch ID assembly and fitment.",
         "Excludes new liquid contact after delivery.",
-        "Free re-fit if the fault returns inside 90 days.",
+        "Free re-fit if the fault returns inside 12 months.",
       ]}
       faqs={[
         { q: "How much does MacBook power button repair cost in Dubai?", a: "Power button / Touch ID assembly replacement starts at AED 250. If the fault is board-level (secure enclave or power circuitry), micro-soldering repair starts at AED 450. You get an exact quote after a free diagnosis." },

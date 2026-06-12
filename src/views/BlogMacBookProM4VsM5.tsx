@@ -162,7 +162,7 @@ export default function BlogMacBookProM4VsM5() {
         },
         {
           q: "If I crack my M4 screen, is the repair the same price as M5?",
-          a: "Yes - same Liquid Retina XDR panel, same AED 1,000 repair at our workshop, same 90-day warranty. Apple Store charges AED 2,400 for either.",
+          a: "Yes - same Liquid Retina XDR panel, same AED 1,000 repair at our workshop, same 3-month warranty. Apple Store charges AED 2,400 for either.",
         },
       ]}
       relatedLinks={[

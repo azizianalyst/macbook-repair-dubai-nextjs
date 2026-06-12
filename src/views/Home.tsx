@@ -1,11 +1,15 @@
-"use client";
 // Home page - full content parity with the live (ranking) WordPress home page
 // macbook-repair-dubai.ae, rebuilt in the dark theme. All headings, service copy,
 // price tables, AppleCare table, common issues, AMC, why-choose, process, FAQs and
 // the service-area list are transcribed from the live page so rankings transfer.
 // Shared light blocks aren't reused here (they're light + used on other pages);
 // dark equivalents are inlined. Internal links point to real routes in App.tsx.
-import { useState, type ReactNode } from "react";
+//
+// SECTION ORDER (2026-06 layout pass): conversion spine first (hero → trust →
+// services → pricing → reviews → process → quote), directory/location/coverage
+// clusters after. Sections were reordered and visually clustered ONLY — every H2,
+// every internal link and all transcribed copy is unchanged and stays in SSR HTML.
+import type { ReactNode } from "react";
 import {
   Star, MapPin, ArrowRight, Check, Wrench, MessageCircle, Phone, Search,
   Cpu, Clock, Truck, BadgeCheck, ParkingCircle, ExternalLink, ChevronDown,
@@ -15,32 +19,41 @@ import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { QuoteForm } from "@/components/blocks/QuoteForm";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
+import { WorkshopSlider } from "@/components/blocks/WorkshopSlider";
 import { CountUp } from "@/components/blocks/CountUp";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, CONTENT_REVIEWED } from "@/content/site";
+import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, CONTENT_REVIEWED, PRICING, SITEMAP_LAST_UPDATED } from "@/content/site";
 import { REVIEWS } from "@/content/reviews";
-import { useSeo } from "@/hooks/use-seo";
 import { SITE } from "@/lib/seo";
-import { itemList, service as serviceSchema, person, faqPage, localBusiness, breadcrumbs, aggregateRating, organization, webSite, pageWithSpeakable } from "@/lib/schema";
+import { itemList, service as serviceSchema, person, faqPage, localBusinessWithRating, organization, webSite, pageWithSpeakable, licensedImage } from "@/lib/schema";
 import { linkifyString as linkify } from "@/lib/linkify";
 
 // TITLE kept identical to the old ranking WordPress home (title is a ranking factor — preserve it).
-// DESC refreshed 2026: widened Intel→M5 (shop now repairs M5) + CTR rewrite. Meta descriptions are
-// not a ranking factor, so this is upside-only. Keep in sync with deriveMeta("/") in page-meta.ts.
+// Used only by the WebPage JSON-LD below; the <title>/<meta description> themselves come from
+// deriveMeta("/") in src/lib/page-meta.ts via metaForPath("/") in app/page.tsx.
 const TITLE = "MacBook Repair Dubai | Certified Apple Technicians in UAE";
-const DESC =
-  "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 90-day warranty.";
 
 // Visible freshness signal (AEO lever) — single source in site.ts (bump there each review).
 const LAST_UPDATED = CONTENT_REVIEWED;
 
-const HERO_FEATURES = ["Professional Services", "Customer Satisfaction", "Same Day Service", "Friendly Team"];
+// Hero USP chips — concrete, falsifiable claims only (generic fluff like "Friendly
+// Team" reads as template filler; "Same Day" undercuts the 30-minute headline).
+const HERO_FEATURES = [
+  { icon: Clock,      label: "30-min fix by appointment" },
+  { icon: BadgeCheck, label: "Up to 12-month warranty" },
+  { icon: Truck,      label: "Free pickup & delivery" },
+  { icon: Wallet,     label: "No fix, no charge" },
+  { icon: Laptop,     label: "Free loaner MacBook" },
+] as const;
 
 // Real documentary photos from our Concord Tower lab (Media City). Files live in
 // /public/images/real/lab; AVIF/WebP variants via scripts/optimize-images.cjs.
 const WORKSHOP_GALLERY: { src: string; alt: string; title: string }[] = [
+  { src: "/images/real/team/macbook-bench-repairs-dubai.jpg", title: "MacBook repairs in progress", alt: "Multiple MacBook Pro repairs in progress on the bench at MacBook Repair Dubai in Dubai Media City" },
+  { src: "/images/real/team/technician-support-call-dubai.jpg", title: "Customer support on WhatsApp & phone", alt: "Technician on a customer support call while diagnosing a MacBook Air at MacBook Repair Dubai, Dubai Media City" },
   { src: "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg", title: "MacBook Pro logic board & fans", alt: "MacBook Pro opened on the bench showing logic board, twin fans and battery during repair in Dubai" },
   { src: "/images/real/lab/macbook-full-internals-dubai.jpg", title: "Water-damage internal repair", alt: "MacBook bottom case removed showing the full internals during a water-damage repair in Dubai" },
   { src: "/images/real/lab/macbook-cooling-fan-macro-dubai.jpg", title: "MacBook fan cleaning", alt: "Close-up of a MacBook cooling fan during a fan-cleaning and overheating service" },
@@ -49,22 +62,36 @@ const WORKSHOP_GALLERY: { src: string; alt: string; title: string }[] = [
   { src: "/images/real/lab/repair-workbench-dubai.jpg", title: "Our Media City workspace", alt: "Our Apple repair workspace at Concord Tower, Media City, Dubai" },
 ];
 
+// Each stat states a UNIQUE fact — warranty/diagnosis/Abdul Aziz live in the link
+// row beneath, so nothing in this band says the same thing twice.
 const STATS = [
-  { value: "21+",   label: "Years of Experience" },
-  { value: "90-Day", label: "Written Warranty" },
-  { value: "Free",  label: "Pickup & Delivery" },
-  { value: "1 Hour", label: "Fast Repair Time" },
-  { value: "24/7",  label: "Support Services" },
-  { value: "99%",   label: "Customer Satisfaction" },
+  { value: "21+",    label: "Years of Experience" },
+  { value: "30-Min", label: "Repairs by Appointment" },
+  { value: "Free",   label: "Pickup & Delivery" },
+  { value: "24/7",   label: "WhatsApp Support" },
+  { value: `${REVIEW_COUNT}+`, label: "Five-Star Google Reviews" },
+  { value: "99%",    label: "Customer Satisfaction" },
 ];
 
-const MODELS: { label: string; href: string }[] = [
-  { label: "MacBook Air",  href: "/macbook-air-repair-dubai" },
-  { label: "MacBook Pro",  href: "/macbook-pro-repair-dubai" },
-  { label: "iMac",         href: "/imac-repair-dubai" },
-  { label: "Mac Pro",      href: "/mac-pro-repair-dubai" },
-  { label: "Mac Mini",     href: "/mac-mini-repair-dubai" },
-  { label: "Mac Studio",   href: "/mac-studio-repair-dubai" },
+// In-page anchor chips (trust band) — ids live on the matching sections below.
+const PAGE_ANCHORS: { label: string; href: string }[] = [
+  { label: "Repair prices", href: "#pricing" },
+  { label: "Customer reviews", href: "#reviews" },
+  { label: "Free quote", href: "#quote" },
+  { label: "Service areas", href: "#areas" },
+  { label: "FAQ", href: "#faq" },
+];
+
+// Apple-lineup-style tile images (white background, /public/images/devices, AVIF/WebP variants).
+// *-product.jpg renders: studio-style product shots generated in-house (June 2026)
+// with accurate device proportions — NOT Apple's copyrighted marketing photos.
+const MODELS: { label: string; href: string; img: string; alt: string }[] = [
+  { label: "MacBook Air",  href: "/macbook-air-repair-dubai",  img: "/images/devices/macbook-air-product.jpg",  alt: "MacBook Air repair in Dubai - slim silver MacBook Air, 13 and 15 inch, M1 to M5" },
+  { label: "MacBook Pro",  href: "/macbook-pro-repair-dubai",  img: "/images/devices/macbook-pro-product.jpg",  alt: "MacBook Pro repair in Dubai - space grey MacBook Pro, 14 and 16 inch, M1 to M5 Pro and Max" },
+  { label: "iMac",         href: "/imac-repair-dubai",         img: "/images/devices/imac-product.jpg",         alt: "iMac repair in Dubai - 24-inch Apple iMac all-in-one desktop" },
+  { label: "Mac Pro",      href: "/mac-pro-repair-dubai",      img: "/images/devices/mac-pro-product.jpg",      alt: "Mac Pro repair in Dubai - Apple Mac Pro tower workstation with lattice front" },
+  { label: "Mac Mini",     href: "/mac-mini-repair-dubai",     img: "/images/devices/mac-mini-product.jpg",     alt: "Mac mini repair in Dubai - compact Apple Mac mini desktop" },
+  { label: "Mac Studio",   href: "/mac-studio-repair-dubai",   img: "/images/devices/mac-studio-product.jpg",   alt: "Mac Studio repair in Dubai - Apple Mac Studio desktop with front ports" },
 ];
 
 // ── Internal-link hub data - every href verified against public/sitemap.xml ──
@@ -124,6 +151,12 @@ const DEVICE_HUB: { label: string; href: string }[] = [
 const AREA_PAGES: { label: string; href: string }[] = [
   { label: "Dubai Marina", href: "/macbook-repair-dubai-marina" },
   { label: "Downtown Dubai", href: "/macbook-repair-downtown-dubai" },
+  { label: "Al Barsha", href: "/macbook-repair-barsha" },
+  { label: "Palm Jumeirah", href: "/macbook-repair-palm-jumeirah" },
+  { label: "Deira", href: "/macbook-repair-deira" },
+  { label: "Bur Dubai", href: "/macbook-repair-bur-dubai" },
+  { label: "Karama", href: "/macbook-repair-karama" },
+  { label: "Mirdif", href: "/macbook-repair-mirdif" },
   { label: "Business Bay", href: "/macbook-repair-business-bay" },
   { label: "JBR", href: "/macbook-repair-jbr" },
   { label: "JLT", href: "/macbook-repair-jlt" },
@@ -155,14 +188,8 @@ const GUIDES: { label: string; href: string }[] = [
   { label: "iCloud-locked iPhone - what to do", href: "/blog/icloud-locked-iphone-what-to-do" },
 ];
 
-const SELL_OPTIONS: { label: string; href: string; d: string }[] = [
-  { label: "Sell your MacBook in Dubai", href: "/sell-macbook-dubai", d: "Get a fair, same-day cash quote for your working Mac." },
-  { label: "Trade in your Mac for credit", href: "/trade-in-macbook-dubai", d: "Put the value of your old Mac toward a repair or upgrade." },
-  { label: "We buy faulty or water-damaged Macs", href: "/sell-faulty-macbook-dubai", d: "Dead logic board or liquid damage? We'll still pay for it." },
-];
-
 const OTHER_DEVICES = [
-  { t: "Laptop repairs", d: "Our technicians have experience with all laptops and accessories. Rather than MacBooks we also repair laptops, desktops, iPads, and iPhones. We repair laptops from all major brands, such as Lenovo, Dell, Microsoft, HP etc." },
+  { t: "Laptop repairs", d: "Our technicians have experience with all laptops and accessories. As well as MacBooks, we repair laptops and desktops from all the major brands - Lenovo, Dell, Microsoft, HP and more - alongside iPads and iPhones." },
   { t: "Desktop repairs", d: "Whatever malfunctions you encounter with your desktops, we handle everything and repair them with high-quality parts. We provide hardware upgrades, virus removal, security setup and more." },
   { t: "Custom Built PCs", d: "If you need custom-built PCs based on your needs, our team can build high-performance PCs for gaming, graphic design, and more. We also provide a complete setup and configuration according to your requirements." },
 ];
@@ -170,7 +197,7 @@ const OTHER_DEVICES = [
 // Services Offered (verbatim from live page). href only where a real route exists.
 const SERVICES: { t: string; d: string; href?: string }[] = [
   { t: "Screen Repair and Replacement", href: "/macbook-screen-repair-dubai", d: "We repair malfunctioning MacBook screens, including screen flickering, broken or shattered screens, blue screens of death, dead pixels, and lines on screens. We have expertise in Mac display repair, Apple Mac screen repair, Apple MacBook screen repair and MacBook screen replacement in Dubai, dealing with all complex screen issues. We repair and replace the completely dead screen with the original one and restore a smooth display." },
-  { t: "Battery Replacement", href: "/macbook-battery-replacement-dubai", d: "We specialize in diagnosing battery-related issues such as battery not charging, failure to connect with charger, and quickly draining or swelling a battery. We replace them with original batteries and offer a 90-day warranty on battery replacement service. Your MacBook increases its lifespan with our high-quality, genuine battery." },
+  { t: "Battery Replacement", href: "/macbook-battery-replacement-dubai", d: "We specialize in diagnosing battery-related issues such as battery not charging, failure to connect with charger, and quickly draining or swelling a battery. We replace them with original batteries and offer a 3-month warranty with an 80% capacity guarantee on battery replacement. Your MacBook increases its lifespan with our high-quality, genuine battery." },
   { t: "Keyboard Repair", href: "/macbook-keyboard-repair-dubai", d: "If your MacBook keyboard is not working and shows some issues with sticky or damaged keys, unresponsive functional keys, double typing on a single press, and a completely disconnected keyboard. We repair its keys and restore its functionality by thorough cleaning. We also replace it with the original keyboard at affordable prices." },
   { t: "Logic Board Repair", href: "/macbook-logic-board-repair-dubai", d: "Screen freezing, overheating, unexpected shutdowns, failure to connect peripherals, and boot loop problems can be associated with your MacBook's motherboard. Our experts efficiently assess all the motherboard issues and fix them quickly. Our expert technicians repair the motherboard and replace its impaired components to make it perfect for working smoothly." },
   { t: "Charging Port Repair", href: "/macbook-charging-port-repair-dubai", d: "If your MacBook fails to connect with the charger or has an intermittent connection, we will diagnose its root cause as it may be due to a defective charging cable, charging adapter, or charging port. We replace the charging port or cable with the original one and repair the charging adapter to restore the proper charging connection." },
@@ -187,13 +214,13 @@ const SERVICES: { t: string; d: string; href?: string }[] = [
   { t: "GPU Repair", href: "/macbook-gpu-repair-dubai", d: "Distorted graphics, artefacts, no boot to the desktop or a failing discrete GPU - we perform board-level GPU rework and replacement so your Mac delivers a smooth, high-resolution display for editing, design and everyday use." },
   { t: "Bluetooth Repair", href: "/macbook-wifi-bluetooth-repair-dubai", d: "If you are facing Bluetooth issues like 'Bluetooth is not working' or 'Bluetooth is not available,' our experts diagnose the problem with your Bluetooth system, whether it is due to software issues or any hardware failure. We replace the damaged components and restore your Bluetooth connectivity." },
   { t: "Hinge Replacement", href: "/macbook-hinge-repair-dubai", d: "Are you facing difficulty with your MacBook's broken hinges? It can limit your device's usability. We provide hinge repair and replacement with high-quality Apple parts for smooth opening and closing of the lid without damaging your Mac screen." },
-  { t: "Power Button Repair", href: "/macbook-power-button-repair-dubai", d: "If your MacBook won't power on, it can be due to a power button stuck, unresponsive, or faulty power button. We diagnose and fix these issues efficiently, whether they require delicate soldering work or a complete power button replacement. Our technicians use original power button components for durability and responsiveness in the long term." },
+  { t: "Power Button Repair", href: "/macbook-power-button-repair-dubai", d: "If your MacBook won't power on, the cause can be a stuck, unresponsive or faulty power button. We diagnose and fix these issues efficiently, whether they require delicate soldering work or a complete power button replacement. Our technicians use original power button components for durability and responsiveness in the long term." },
   { t: "Backup Services", href: "/macbook-backup-service-dubai", d: "Do you need to restore your deleted data? Our professionals can recover your important data, either temporarily deleted files or permanently deleted data. We also offer customized backup software systems with proper setup and configuration to save your data on a large scale so you can easily retrieve it when required." },
   { t: "Software Troubleshooting", href: "/macos-reinstall-dubai", d: "If your MacBook becomes unresponsive, certain files or folders appear corrupted, or you encounter connectivity issues, it may indicate a software crash. Our team can restore your MacBook by upgrading its software and troubleshooting any diagnosed performance issues to make your device work perfectly." },
   { t: "Safe Mode Diagnostics & Repair", href: "/macbook-safe-mode-repair-dubai", d: "When you encounter performance issues with your Mac and want to run Apple Diagnostics to identify the exact problem, your MacBook cannot run in safe mode. Reach out to us. We have the expertise to troubleshoot these issues and reset the settings to run your Mac in safe mode so that it can help resolve problems related to system stability." },
 ];
 
-const UPGRADES: { label: string; href?: string }[] = [
+const UPGRADES: { label: string; href: string }[] = [
   { label: "SSD Upgrade",          href: "/macbook-ssd-upgrade-dubai" },
   { label: "RAM Upgrade",          href: "/macbook-ram-upgrade-dubai" },
   { label: "macOS Upgrade",        href: "/macos-reinstall-dubai" },
@@ -203,17 +230,17 @@ const UPGRADES: { label: string; href?: string }[] = [
 const OFFERS = ["Instant Online Quote", "Quick and Easy Process", "Free Diagnosis", "Free Pickup in Dubai", "Live Chat Support", "Low Repair Prices"];
 
 const DISCOUNTS = [
-  { t: "Student Discounts", d: "We offer 10% student discounts on all MacBook repairs, including hardware, software, and other accidental damage. Students can avail of our offer by displaying their valid student IDs." },
+  { t: "Student Discounts", d: "We offer 10% student discounts on all MacBook repairs, including hardware, software and accidental damage. Show a valid student ID to claim the discount." },
   { t: "Teacher Discounts", d: "As with the student discounts, teachers can also receive special pricing or packages for repairs and maintenance services for their devices." },
   { t: "Military Discounts", d: "We offer a flat-rate discount for military personnel, and our services include diagnostics and repairs." },
   { t: "Bundled Services", d: "We offer bundled repair packages. We save your time and money and combine our services in one repair package, which includes setup, software installation, and ongoing support." },
-  { t: "Referral Discounts", d: "You can refer a friend, family member, or colleague, and receive a discount on your next service. Our referral program is designed to give back for each client you refer, with valuable discounts as a token of our appreciation." },
+  { t: "Referral Discounts", d: "Refer a friend, family member or colleague and receive a discount on your next service. Our referral program gives back for each client you refer, with valuable discounts as a token of our appreciation." },
 ];
 
 const INSURANCE: { t: string; d: string; href?: string }[] = [
   { t: "Accidental Damage", href: "/macbook-insurance-dubai", d: "If your MacBook falls or any heavy object damages your Mac's screen, we swiftly diagnose the severity of the damage and provide reliable repair solutions for broken or shattered screens." },
   { t: "Extended Warranty", href: "/macbook-insurance-dubai", d: "We offer repairs for your MacBook when issues arise after an expired warranty period. Our technicians deal with all the hardware, software, cleaning, and data loss issues under our extended warranty policy." },
-  { t: "Theft or Loss Coverage", href: "/macbook-insurance-dubai", d: "When you have a stolen or lost MacBook device, we track and locate it if it goes missing, or we offer customer support to guide you through the claim and replacement process. We offer backup services for your lost devices and retrieve your data if it was deleted." },
+  { t: "Theft or Loss Coverage", href: "/macbook-insurance-dubai", d: "If your MacBook is lost or stolen, we guide you through the insurance claim and replacement process, help you secure the missing device remotely with Find My, and restore your files to the replacement machine from your backup." },
   { t: "Corporate Partnership Plans", href: "/macbook-insurance-dubai", d: "We offer insurance packages customized for large businesses and companies looking for discounted rates on bulk repairs, workplace device maintenance, and support for multiple devices simultaneously." },
 ];
 
@@ -259,7 +286,7 @@ const AMC: { t: string; d: string; href?: string }[] = [
 
 const WHY_CHOOSE = [
   { t: "Experienced Apple Technicians", d: "Our lead technician Abdul Aziz has over 21 years of Mac repair experience, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
-  { t: "Genuine & High-Grade Parts", d: "We use genuine Apple parts wherever they're available and high-grade compatible parts when they aren't - and we tell you which your repair uses before we start. Every repair carries our 90-day written warranty." },
+  { t: "Genuine & High-Grade Parts", d: "We use genuine Apple parts wherever they're available and high-grade compatible parts when they aren't - and we tell you which your repair uses before we start. Every repair carries a written warranty of up to 12 months, depending on the repair." },
   { t: "Comprehensive Services", d: "We offer a wide range of MacBook repairs based on your specific needs. From hardware and software issues to upgrades and maintenance, no matter the problem, we have the solution!" },
   { t: "Low Pricing", d: "We offer affordable and transparent costs for every MacBook repair or replacement. We discuss our repairs with you before we provide the best solution without any hidden fee." },
   { t: "Same Day Services", d: "We have a dedicated team that provides quick repairs without you waiting. We also prioritize emergencies and offer urgent repairs to our customers." },
@@ -268,14 +295,18 @@ const WHY_CHOOSE = [
   { t: "Trusted by Many", d: "Our satisfied customers across Dubai trust us for their MacBook repair needs, and we are proud to have built a reputation for quality and reliability in the community." },
 ];
 
+// Driven by the canonical PRICING export in site.ts — the same figures the FAQ answers
+// and the JSON-LD OfferCatalog quote. Never hand-edit numbers here; change PRICING.
+const aed = (n: number) => n.toLocaleString("en-US");
+const range = (p: { from: number; to: number }) => `${aed(p.from)} - ${aed(p.to)}`;
 const PRICE_TABLE = [
-  { r: "Screen Replacement", c: "1,199 - 2,499", n: "Prices vary by size and model." },
-  { r: "Battery Replacement", c: "399 - 799", n: "Varies based on model and battery type." },
-  { r: "Keyboard Replacement", c: "499 - 999", n: "Cost may vary based on assembly requirements." },
-  { r: "Logic Board Repair", c: "999 - 2,999", n: "Highly dependent on specific issues and models." },
-  { r: "Hard Drive Replacement (HDD to SSD)", c: "599 - 1,499", n: "Includes SSD cost and installation." },
-  { r: "Water Damage Repair", c: "799 - 2,499", n: "Cost varies with the extent of damage and repairs." },
-  { r: "Software Issues (OS Install, Virus Removal)", c: "199 - 499", n: "Simple fixes are usually less expensive." },
+  { r: "Screen Replacement", c: range(PRICING.screen), n: "Air 13\" / Pro 13\" from 600 · Pro 14\" 800 · Pro 16\" 1,200." },
+  { r: "Battery Replacement", c: range(PRICING.battery), n: "Air from 450 · Pro 13\" 500 · Pro 14\"/16\" 600. 3-month warranty." },
+  { r: "Keyboard Replacement", c: range(PRICING.keyboard), n: "Single key 150 · Magic Keyboard swap 350 · butterfly top case 700." },
+  { r: "Logic Board Repair", c: range(PRICING.logicBoard), n: "Component-level repair; depends on the fault and model." },
+  { r: "Hard Drive Replacement (HDD to SSD)", c: range(PRICING.ssdUpgrade), n: "Includes SSD cost and installation." },
+  { r: "Water Damage Repair", c: range(PRICING.waterDamage), n: "Depends on the extent of damage. No fix, no charge." },
+  { r: "Software Issues (OS Install, Virus Removal)", c: range(PRICING.software), n: "Simple fixes are usually less expensive." },
 ];
 
 const EXPERT = [
@@ -295,26 +326,28 @@ const PROCESS = [
 const FAQS = [
   { q: "How much does MacBook repair cost in Dubai?", a: "MacBook repair at MacBook Repair Dubai starts from AED 150 for a single key, with the exact price set by the fault and the model. Screen repair is from AED 600, battery replacement from AED 450, keyboard from AED 150, logic board from AED 800, and water damage from AED 700. Diagnosis is always free and the price is confirmed in writing on WhatsApp before any work begins. All prices are VAT-inclusive." },
   { q: "How much is a MacBook screen replacement in Dubai?", a: "MacBook screen replacement at MacBook Repair Dubai starts at AED 600 for the Air 13\" and the Pro 13\". The 14\" Pro is AED 800 and the 16\" Pro is AED 1,200. Flexgate backlight failure on the 2016 to 2017 Pro is a AED 600 cable swap rather than a full panel. Most screens are done the same day, and True Tone stays intact when you choose the genuine Apple panel at quote time." },
-  { q: "How much does it cost to replace a MacBook battery in Dubai?", a: "A MacBook battery replacement starts at AED 450 for the Air 11\", 13\", and 15\" on both Intel and Apple Silicon. The Pro 13\" is AED 500 and the Pro 14\" and 16\" are AED 600. The price covers a tier-1 cell, the labour, the firmware re-pair on Apple Silicon, and the calibration cycle, with a 6-month warranty and an 80% capacity guarantee. The job takes about 2 hours on the bench at the Concord Tower workshop in Dubai Media City." },
+  { q: "How much does it cost to replace a MacBook battery in Dubai?", a: "A MacBook battery replacement starts at AED 450 for the Air 11\", 13\", and 15\" on both Intel and Apple Silicon. The Pro 13\" is AED 500 and the Pro 14\" and 16\" are AED 600. The price covers a tier-1 cell, the labour, the firmware re-pair on Apple Silicon, and the calibration cycle, with a 3-month warranty and an 80% capacity guarantee. The job takes about 2 hours on the bench at the Concord Tower workshop in Dubai Media City." },
   { q: "Is it worth repairing an old MacBook or should I replace it?", a: "It is usually worth repairing if the fix costs less than half the price of a comparable replacement. A AED 450 battery or a AED 600 screen on a MacBook still worth AED 3,000 to AED 5,000 is an easy decision. Component-level logic board repair from AED 800 beats a full Apple board swap that runs AED 4,000 or more. MacBook Repair Dubai gives an honest opinion after the free diagnosis, and if the board is unrecoverable you pay AED 0 under the no-fix-no-charge policy." },
-  { q: "How long does a MacBook repair take?", a: "Most MacBook repairs at MacBook Repair Dubai are done the same day. Screen and battery jobs finish in about 2 to 4 hours, keyboard swaps run from 30 minutes to 2 days, and logic board work takes 3 to 5 days because it includes a burn-in test. Water damage runs 1 to 5 days depending on the spill. WhatsApp the model and serial number to 055 741 3706 for a confirmed timeline in a few minutes." },
+  { q: "How long does a MacBook repair take?", a: "Most MacBook repairs at MacBook Repair Dubai are done the same day. Screen, battery, and keyboard jobs can be completed in 30 minutes on an appointment — WhatsApp the model and serial number, confirm the part is in stock, book a slot, and the repair is done in 30 minutes guaranteed or it is free. Walk-in screen and battery jobs take 2 to 4 hours. Logic board work takes 3 to 5 days because it includes a burn-in test, and water damage runs 1 to 5 days depending on the spill." },
+  { q: "Do you offer a guaranteed 30-minute MacBook repair in Dubai?", a: "Yes. MacBook Repair Dubai offers a guaranteed 30-minute appointment repair for screen replacement, battery replacement, and keyboard replacement on compatible models. WhatsApp 055 741 3706 with your model and serial number, confirm the part is in stock and the price, then book a time slot at the Dubai Media City workshop or request a doorstep visit. The part is pre-ordered for your exact model and the repair is completed in 30 minutes from the time you arrive. If we run over 30 minutes, the repair is free. No other MacBook repair service in Dubai offers this guarantee." },
   { q: "Do you offer same-day MacBook screen repair in Dubai?", a: "Same-day MacBook screen repair is standard for the most common models, including the Air 13\", the Pro 13\" Touch Bar, and the Pro 14\". MacBook Repair Dubai stocks panels for these, so the screen is fitted and returned the same day from the Dubai Media City workshop. The 16\" Pro can take 1 to 2 days. Send your model to 055 741 3706 to confirm the panel is in stock before you travel in." },
   { q: "Can I wait at the workshop while my MacBook is repaired?", a: "You can wait at the Concord Tower workshop in Dubai Media City for same-day jobs like battery, screen, and single-key replacements, which finish in roughly 2 to 4 hours. There is parking on site and the workshop is across from Media City Metro. The workshop is open Monday to Saturday, 9am to 10pm, closed Sundays. For longer jobs like logic board or water damage, free pickup and delivery across Dubai mainland is the easier option." },
   { q: "Do you use genuine Apple parts?", a: "MacBook Repair Dubai uses genuine Apple parts where they are available and A-grade OEM-spec parts from the same factory lines as Apple where they are not. Which one your repair uses is labelled clearly on the WhatsApp quote before work starts. On screens, the genuine Apple panel keeps True Tone, while aftermarket panels carry a calibration chip programmed to your logic board serial. Both options carry the written warranty." },
-  { q: "Do you offer a warranty on MacBook repairs?", a: "Every MacBook repair at MacBook Repair Dubai carries a 90-day written warranty on parts and labour, with batteries covered for 6 months plus an 80% capacity guarantee. The warranty is dated, signed, and lists the part batch number, and it is transferable once free of charge if you sell the MacBook. It covers manufacturing defects and premature failure, but not fresh physical or liquid damage after the repair." },
-  { q: "Will I lose my data when you repair my MacBook?", a: "Your data stays on the SSD for standard repairs like screen, battery, and keyboard, since the storage is never touched. For logic board and water damage work the data is preserved wherever the board survives. If the board is dead, separate data recovery is available from AED 1,000, with strong odds on Intel logic boards and lower odds on T2 and Apple Silicon models, where the SSD is encrypted to the secure enclave and recovery depends on the chip surviving. Your files are kept confidential at all times." },
+  { q: "Do you offer a warranty on MacBook repairs?", a: "Yes, and the length depends on the repair. Hardware repairs such as screen, keyboard, trackpad and charging-port replacement carry a written warranty of up to 12 months. Battery replacements are covered for 3 months with an 80% capacity guarantee. Software work, diagnostics, data recovery, and logic-board and liquid-damage repairs carry a 15-day warranty, because their long-term outcome is harder to guarantee. Every warranty is dated, signed, lists the part batch number, and is transferable once free of charge if you sell the MacBook. It covers manufacturing defects and premature failure, but not fresh physical or liquid damage after the repair." },
+  { q: "Do you offer a loaner MacBook while mine is being repaired?", a: "Yes. MacBook Repair Dubai provides a free loaner MacBook for any repair that takes longer than 2 hours, so you are never without a working machine. The loaner is available at the Dubai Media City workshop — just mention it when you book or drop in. Availability is on a first-come basis, so WhatsApp 055 741 3706 in advance to reserve one." },
+  { q: "Will I lose my data when you repair my MacBook?", a: "Your data stays on the SSD for standard repairs like screen, battery, and keyboard, since the storage is never touched. For logic board and water damage work the data is preserved wherever the board survives. If the board is dead, separate data recovery is available from AED 1,000, with strong odds on Intel logic boards and lower odds on T2 and Apple Silicon models, where the SSD is encrypted to the secure enclave and recovery depends on the chip surviving. MacBook Repair Dubai gives every customer a signed data-privacy guarantee on intake: your data is never accessed, copied, or shared for any reason." },
   { q: "Can you fix a water-damaged MacBook in Dubai?", a: "MacBook Repair Dubai recovers liquid-damaged MacBooks from AED 700 with full ultrasonic cleaning and corrosion removal. The workshop logbook shows a 90% recovery rate when the MacBook arrives within 24 hours and was not powered on after the spill, dropping to about 60% at 72 hours. Power it off, do not charge it, skip the rice, and WhatsApp 055 741 3706 for same-hour free emergency pickup across Dubai mainland. No fix, no charge if the board is beyond saving." },
   { q: "My MacBook won't turn on, can you fix it?", a: "A MacBook that won't power on is most often a dead battery, a failed DC-in charging board, or a logic board fault, and MacBook Repair Dubai diagnoses all three for free. A battery or charging board swap runs AED 350 to AED 600, while component-level board repair starts at AED 800. The fault is confirmed before any charge, so you know the price up front. Bring it in or book free pickup across Dubai mainland." },
-  { q: "What should I do about a swollen MacBook battery?", a: "Stop using the MacBook immediately and do not charge it or try to power it on, because a swollen lithium pack is a fire risk and can crack the trackpad. MacBook Repair Dubai replaces swollen batteries from AED 450, same day in about 2 hours, with a 6-month warranty. WhatsApp 055 741 3706 for same-hour free emergency pickup across Dubai mainland. If the swelling has already cracked the trackpad, the combined battery and trackpad job is AED 800." },
+  { q: "What should I do about a swollen MacBook battery?", a: "Stop using the MacBook immediately and do not charge it or try to power it on, because a swollen lithium pack is a fire risk and can crack the trackpad. MacBook Repair Dubai replaces swollen batteries from AED 450, same day in about 2 hours, with a 3-month warranty. WhatsApp 055 741 3706 for same-hour free emergency pickup across Dubai mainland. If the swelling has already cracked the trackpad, the combined battery and trackpad job is AED 800." },
   { q: "How much does it cost to fix a MacBook keyboard in Dubai?", a: "MacBook keyboard repair starts at AED 150 for a single key cap on the Magic Keyboard and AED 350 for a full Magic Keyboard swap on Apple Silicon. The 2016 to 2019 butterfly top case is AED 700, because Apple bonded the keyboard, battery, and speakers into one unit, against Apple's own list price of AED 1,829 to AED 2,449. Arabic, Russian, or French layout swaps are AED 450. Most are same day at MacBook Repair Dubai." },
   { q: "Which MacBook models and years do you repair?", a: "MacBook Repair Dubai services every MacBook from the 2010 Intel Air through the latest M5, including the Air 11\", 13\", and 15\", and the Pro 13\", 14\", 15\", and 16\". This covers Intel, M1, M2, M3, M4, and M5 on Air and Pro, plus iMac, Mac mini, Mac Studio, and Mac Pro. The workshop also carries parts for models Apple lists as vintage or obsolete, since 2004. Send your model from About This Mac for a confirmed quote." },
   { q: "Can you repair a MacBook bought outside the UAE?", a: "MacBook Repair Dubai repairs MacBooks bought anywhere in the world, since the repair does not depend on local Apple warranty status. A unit purchased in the US, UK, India, or anywhere else is serviced the same as one bought in Dubai, at the same prices. Layout swaps to Arabic, English, or Russian are AED 450 if you want to change the keyboard. WhatsApp the model and serial to 055 741 3706 for a quote." },
   { q: "Do you offer free pickup and delivery in Dubai?", a: "MacBook Repair Dubai offers free pickup and delivery anywhere on Dubai mainland, with same-hour collection from Internet City, Knowledge Park, JLT, and Al Barsha, and same-day from Marina, Downtown, JBR, and Palm Jumeirah. WhatsApp 055 741 3706 and a courier is usually with you within a couple of hours. Liquid damage gets priority same-hour pickup." },
-  { q: "Where is your MacBook repair workshop located?", a: "MacBook Repair Dubai is at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, across from Media City Metro and near The Palm Jumeirah, with parking on site. The workshop is open Monday to Saturday, 9am to 10pm, and closed on Sundays. It has been at the heart of Dubai's Apple repair scene since 2004, with 215+ five-star Google reviews. Call or WhatsApp 055 741 3706." },
+  { q: "Where is your MacBook repair workshop located?", a: `MacBook Repair Dubai is at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, across from Media City Metro and near The Palm Jumeirah, with parking on site. The workshop is open Monday to Saturday, 9am to 10pm, and closed on Sundays. It has been at the heart of Dubai's Apple repair scene since 2004, with ${REVIEW_COUNT}+ five-star Google reviews. Call or WhatsApp 055 741 3706.` },
   { q: "What payment methods do you accept?", a: "MacBook Repair Dubai accepts cash and all major cards, including Visa, Mastercard, and American Express. Buy-now-pay-later is available through Tabby and Tamara, so you can split a repair into interest-free instalments. You only pay once you approve the written quote, and there is no diagnostic fee. All prices are VAT-inclusive in AED." },
   { q: "How do I book a MacBook repair?", a: "Booking takes one message. WhatsApp the model, the year, and a short description or video of the fault to 055 741 3706, and you get a confirmed price and timeline within minutes during business hours. From there, drop the MacBook at the Concord Tower workshop in Dubai Media City or book free pickup across Dubai mainland. Diagnosis is free and you approve the quote before any work starts." },
-  { q: "Are you an Apple Authorised Service Provider?", a: "MacBook Repair Dubai is an independent Apple repair specialist, not an Apple Authorised Service Provider, working in Dubai since 2004. Its technicians are Apple Certified Mac Technicians (ACMT) — an Apple credential held by the people on the bench — while the workshop itself is independent rather than Apple-authorised. The workshop services in-warranty, AppleCare-eligible, and out-of-warranty MacBooks, and offers component-level board repair that Apple does not. When an Apple Store or AppleCare+ claim is genuinely the better route, you get told honestly. The trade-off is faster turnaround and lower prices, backed by the 90-day warranty." },
-  { q: "How does your pricing compare to the Apple Store?", a: "MacBook Repair Dubai is consistently below Apple's UAE list prices, with no upfront service fee. A Magic Keyboard swap is AED 350 against Apple's AED 1,449, a butterfly top case is AED 700 against AED 1,829 to AED 2,449, and a component-level board repair from AED 800 replaces an AED 4,000-plus Apple board swap. Diagnosis is free and the price range across all services runs from AED 49 to AED 3,500. Same outcome, a fraction of the cost." },
+  { q: "Are you an Apple Authorised Service Provider?", a: "MacBook Repair Dubai is an independent Apple repair specialist, not an Apple Authorised Service Provider, working in Dubai since 2004. Its technicians are Apple Certified Mac Technicians (ACMT) — an Apple credential held by the people on the bench — while the workshop itself is independent rather than Apple-authorised. The workshop services in-warranty, AppleCare-eligible, and out-of-warranty MacBooks, and offers component-level board repair that Apple does not. When an Apple Store or AppleCare+ claim is genuinely the better route, you get told honestly. The trade-off is faster turnaround and lower prices, backed by a written warranty of up to 12 months." },
+  { q: "How does your pricing compare to the Apple Store?", a: "MacBook Repair Dubai is consistently below Apple's UAE list prices, with no upfront service fee. A Magic Keyboard swap is AED 350 against Apple's AED 1,449, a butterfly top case is AED 700 against AED 1,829 to AED 2,449, and a component-level board repair from AED 800 replaces an AED 4,000-plus Apple board swap. Diagnosis is free and the price range across all services runs from AED 150 to AED 3,500. Same outcome, a fraction of the cost." },
   { q: "Do you offer business or bulk MacBook repair for companies in Dubai?", a: "MacBook Repair Dubai handles business and fleet repairs for offices across Dubai Media City, Internet City, and the wider Dubai mainland, with free pickup and delivery for multiple machines. Companies get one point of contact on WhatsApp, written quotes per device, and VAT invoices for accounting. Turnaround is the same as single units, often same day for screens and batteries. Message 055 741 3706 with the number of MacBooks and the faults." },
 ];
 
@@ -330,6 +363,8 @@ const AREAS_DISTANCE = [
   ["Dubai Hills View", "22m"], ["Sheikh Zayed Road", "9m"], ["Discovery Gardens", "16m"], ["Jumeirah Village Circle", "20m"], ["Dubai Knowledge Park", "7m"], ["Dubai Design District (d3)", "26m"],
   ["Dubai Investment Park (DIP)", "24m"], ["Dubai Production City (IMPZ)", "24m"], ["Jumeirah Lakes Towers (JLT)", "12m"], ["Jumeirah Beach Residence (JBR)", "16m"],
 ];
+// First N areas visible; the rest stay in the SSR DOM inside a <details> (mobile scroll relief).
+const AREAS_VISIBLE = 16;
 
 // Verified Google Business Profile embed (pins the actual "MacBook Repair Dubai" listing,
 // not a generic building search) + the public profile short-link for reviews/directions.
@@ -338,65 +373,67 @@ const GBP_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
 export default function Home() {
-  // All JSON-LD is rendered SERVER-SIDE below (as JSX <script> in the FAQ block) so it
-  // reaches the static HTML Google indexes. useSeo here no longer injects schema (that was
-  // client-only via useEffect and never reached the prerendered HTML).
-  useSeo({ title: TITLE, description: DESC, path: "/" }, []);
-
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
 
-        {/* ── Hero ───────────────────────────────────────────────── */}
+        {/* ════ CONVERSION ZONE: hero → trust → fix → price → proof → process → ask ════ */}
+
+        {/* ── 1 · Hero ───────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
           <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute top-1/3 -right-16 h-[26rem] w-[26rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 grid gap-2xl md:grid-cols-12 items-start">
             <div className="md:col-span-7">
               <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
-                <span className="relative flex h-2 w-2" aria-hidden>
-                  <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
+                {/* static dot — the photo's "Real repair in progress" badge owns the single live pulse */}
+                <span className="inline-flex h-2 w-2 rounded-full bg-accent" aria-hidden />
                 Independent Apple Repair · Dubai Media City · Since 2004
               </p>
-              <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
-                MacBook Repair Dubai - <span className="text-accent">Same-Day Service</span> by Independent Apple Specialists
+              {/* H1 lockup: brand line + proof/promise subline. Wording unchanged —
+                  the dash stays in the accessible/SEO text via sr-only. */}
+              <h1 className="mt-lg font-bold tracking-[-0.02em] text-text">
+                <span className="block text-[clamp(2.1rem,4.6vw,3.4rem)] leading-[1.05]">MacBook Repair Dubai</span>
+                <span className="sr-only"> - </span>
+                <span className="mt-2 block text-[clamp(1.35rem,2.9vw,2rem)] font-semibold leading-[1.25]">
+                  <span className="text-text-muted">{REVIEW_COUNT}+ Five-Star Reviews</span>{" "}
+                  <span className="text-accent">Get Fixed in 30 Minutes</span>
+                </span>
               </h1>
-              <p className="mt-lg max-w-[60ch] text-[17px] leading-relaxed text-text-muted">
-                Cracked screen, swollen battery, a liquid spill or a Mac that won't boot? We fix it, usually the same
-                day. Independent Apple repair in Dubai Media City since 2004, on every model from the 2010 Intel Air
-                through the latest M5 - both Air and Pro.
-              </p>
-              <p className="mt-md max-w-[60ch] text-[15px] leading-relaxed text-text-faint">
-                {linkify(
-                  "Free diagnosis and a written quote on WhatsApp before any work starts, backed by a 90-day warranty on every MacBook repair. We handle screen replacement, battery replacement, keyboard repair, water-damage recovery and board-level logic board work."
-                )}{" "}
-                Free pickup and delivery anywhere on Dubai mainland, or visit the workshop in Concord Tower, Al Sufouh -
-                near The Palm and Media City Metro.
-              </p>
-              <div className="mt-lg flex items-center gap-2.5">
+              {/* proof adjacent to the claim — tappable, jumps to the review cards */}
+              <a href="#reviews" className="group mt-md inline-flex items-center gap-2.5">
                 <span className="flex items-center gap-0.5" aria-hidden>
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} size={17} className="fill-accent text-accent" />
+                    <Star key={i} size={16} className="fill-accent text-accent" />
                   ))}
                 </span>
-                <span className="text-[14px] text-text-muted">
+                <span className="text-[14px] text-text-muted transition-colors group-hover:text-accent">
                   <strong className="text-text">{REVIEW_AVERAGE.toFixed(1)}</strong> from {REVIEW_COUNT}+ Google reviews
                 </span>
-              </div>
-              <div className="mt-xl flex flex-wrap gap-sm">
+              </a>
+              <p className="mt-lg max-w-[58ch] text-[17px] leading-relaxed text-text-muted">
+                {linkify(
+                  "Cracked screen replacement, battery replacement, keyboard repair or water-damage recovery — message us, we confirm your part and price on WhatsApp, and it's fixed in 30 minutes by appointment, or the repair is free. Free diagnosis, free pickup across Dubai mainland, and a written warranty of up to 12 months."
+                )}
+              </p>
+              {/* single whitespace crescendo before the action group */}
+              <div className="mt-2xl flex flex-wrap gap-sm">
                 <Button asChild variant="whatsapp" size="lg">
-                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp a Technician</a>
+                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" data-track="hero-whatsapp"><MessageCircle aria-hidden /> WhatsApp a Technician</a>
                 </Button>
                 <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
-                  <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
+                  <a href={`tel:${NAP.phoneE164}`} data-track="hero-call"><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
                 </Button>
               </div>
-              <div className="mt-xl flex flex-wrap gap-2.5">
-                {HERO_FEATURES.map((f) => (
-                  <span key={f} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] font-medium text-text-muted">
-                    <Check size={14} className="text-accent" aria-hidden /> {f}
+              <p className="mt-sm m-0 text-[13px]">
+                <a href="#quote" className="text-text-faint underline-offset-4 transition-colors hover:text-accent hover:underline">Prefer a form? Request a written quote ↓</a>
+              </p>
+              {/* pill strip escapes the 7-col track (w-max) so all five fit on one line;
+                  by this point the left column outruns the hero image, so nothing collides */}
+              <div className="mt-xl flex flex-wrap md:flex-nowrap md:w-max md:relative md:z-10 gap-2.5 md:gap-2">
+                {HERO_FEATURES.map(({ icon: Icon, label }) => (
+                  <span key={label} className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] font-medium text-text-muted">
+                    <Icon size={14} className="text-accent" aria-hidden /> {label}
                   </span>
                 ))}
               </div>
@@ -404,207 +441,132 @@ export default function Home() {
 
             {/* hero image + floating spec card */}
             <div className="md:col-span-5 relative">
-              <div className="relative overflow-hidden rounded-2xl border border-border shadow-2xl">
+              {/* Real workshop photo - our technicians at the Concord Tower bench */}
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-[0_20px_50px_-24px_rgba(0,0,0,0.25)]">
                 <ResponsiveImage
-                  src="/images/real/lab/macbook-pro-internals-clean-dubai.jpg"
-                  alt="MacBook Repair Dubai technician servicing a MacBook Pro cooling fan and logic board at the Media City workshop"
-                  title="MacBook logic board and fan repair in Dubai"
-                  width={1600}
-                  height={1200}
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  src="/images/real/team/team-workshop-dubai.jpg"
+                  alt="MacBook Repair Dubai technicians at the Concord Tower workshop in Dubai Media City - MacBook Air diagnostics and customer support"
+                  title="MacBook Repair Dubai - our technicians at the Dubai Media City workshop"
+                  width={1360}
+                  height={1020}
                   priority
-                  className="block"
-                  imgClassName="w-full h-[280px] md:h-[420px] object-cover"
+                  sizes="(max-width: 414px) 360px, (max-width: 768px) 90vw, 480px"
+                  imgClassName="block w-full h-auto"
                 />
-                <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg-alt/80 via-bg-alt/10 to-transparent" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[12px] font-medium text-white backdrop-blur-md">
-                  <span className="relative flex h-2 w-2" aria-hidden>
-                    <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-accent opacity-60" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                  </span>
-                  Real repair in progress
-                </span>
               </div>
-              <Reveal delay={120} className="relative z-10 -mt-10 mx-3 rounded-2xl border border-border bg-bg-card/90 p-md shadow-lg backdrop-blur-xl md:mx-5">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent"><Wrench size={20} aria-hidden /></span>
-                  <div className="min-w-0">
-                    <p className="m-0 font-semibold leading-tight text-text">Get a price in minutes</p>
-                    <p className="m-0 text-[12px] text-text-faint">Free diagnosis · no fix, no charge</p>
-                  </div>
-                </div>
-                <ul className="mt-md grid grid-cols-2 gap-x-4 gap-y-2.5 list-none p-0 border-t border-border pt-md">
-                  {[["Price", "From AED 49"], ["Diagnosis", "20 minutes"], ["Repair time", "3 - 4 hours"], ["Pickup", "FREE in Dubai"]].map(([k, v]) => (
-                    <li key={k} className="flex flex-col text-[13.5px]">
-                      <span className="text-text-faint">{k}</span>
-                      <span className="font-semibold text-text">{v}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-                  <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
-                </div>
-              </Reveal>
             </div>
           </div>
         </section>
 
-        {/* ── Answer-first capsule (AEO/BLUF) ────────────────────────
+        {/* ── 2 · Answer-first capsule (AEO/BLUF) + price card, side by side ──
             40-60 word, entity-dense, pronoun-free quotable answer in the first
             screen so AI Overviews / ChatGPT / Perplexity can lift it cleanly.
             The .quick-answer wrapper is the SpeakableSpecification xpath target. */}
-        <QuickAnswer
-          tone="dark"
-          question="Where can I get my MacBook repaired in Dubai?"
-          answer="MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, iPhone and iPad — Intel through M5 — with same-day screen, battery, keyboard and water-damage service, free diagnosis, free citywide pickup, and a 90-day written warranty. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
-        />
-
-        {/* ── Trust strip ────────────────────────────────────────── */}
-        <section className="border-y border-border bg-bg-alt">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap items-center justify-center gap-x-xl gap-y-2 text-[13.5px] text-text-muted">
-            <Link to="/warranty" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><BadgeCheck size={16} className="text-accent" aria-hidden /> 90-day written warranty</Link>
-            <span className="inline-flex items-center gap-2"><Check size={16} className="text-accent" aria-hidden /> Free diagnosis · no fix, no charge</span>
-            <span className="inline-flex items-center gap-2"><Clock size={16} className="text-accent" aria-hidden /> Independent Apple specialist since 2004</span>
-            <Link to="/about" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><Users size={16} className="text-accent" aria-hidden /> Led by Abdul Aziz · 21 years at the bench</Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><Truck size={16} className="text-accent" aria-hidden /> Free pickup &amp; delivery in Dubai</Link>
-          </div>
-        </section>
-
-        {/* ── Stats ──────────────────────────────────────────────── */}
-        <section className="border-y border-border bg-bg-alt">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-2xl grid gap-xl grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 text-center">
-            {STATS.map((s) => (
-              <Reveal key={s.label}>
-                <p className="mono text-[28px] md:text-[32px] font-bold text-text leading-none mb-1"><CountUp value={s.value} /></p>
-                <p className="text-[13px] text-text-muted m-0">{s.label}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Hours + price/service details ──────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl grid gap-lg md:grid-cols-2">
-          <Card>
-            <h2 className="m-0 mb-md text-text text-[24px]">Business Hours</h2>
-            <p className="m-0 text-text-muted"><strong className="text-text">Monday - Saturday:</strong> 09:00 AM - 10:00 PM</p>
-            <p className="m-0 mt-2 text-text-muted"><strong className="text-text">Sunday:</strong> Closed - WhatsApp support stays open and we'll book you in for Monday.</p>
-          </Card>
-          <Card>
-            <h2 className="m-0 mb-md text-text text-[24px]">Price &amp; Service Details</h2>
-            <ul className="grid gap-2 list-none p-0 m-0 text-[15px] text-text-muted">
-              <li className="flex items-start gap-2"><Wallet size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Price:</strong> Starts from AED 49</span></li>
-              <li className="flex items-start gap-2"><Search size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Diagnosis time:</strong> 20 minutes</span></li>
-              <li className="flex items-start gap-2"><Clock size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Repair time:</strong> 3 - 4 hours (depending on the problem)</span></li>
-              <li className="flex items-start gap-2"><Truck size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Site visit charge:</strong> FREE</span></li>
+        <div className="mx-auto max-w-content px-5 md:px-6 mt-xl grid gap-xl md:grid-cols-12 items-stretch">
+          <QuickAnswer
+            tone="dark"
+            className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full"
+            question="Where can I get my MacBook repaired in Dubai?"
+            answer="MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, iPhone and iPad — Intel through M5 — with guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free), expert water-damage recovery, free diagnosis, free citywide pickup, and a written warranty of up to 12 months. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
+          />
+          <Reveal delay={120} className="md:col-span-5 flex flex-col rounded-2xl border border-border bg-bg-card/95 p-md shadow-[0_24px_70px_-24px_rgba(0,0,0,0.3)] ring-1 ring-black/5 backdrop-blur-xl">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent"><Wrench size={20} aria-hidden /></span>
+              <div className="min-w-0">
+                <p className="m-0 font-semibold leading-tight text-text">Get a price in minutes</p>
+                <p className="m-0 text-[12px] text-text-faint">Free diagnosis · no fix, no charge</p>
+              </div>
+            </div>
+            {/* "Express repair" row must agree with the 30-min H1 — walk-in timing
+                lives, correctly qualified, in the #pricing section. */}
+            <ul className="mt-md mb-md grid grid-cols-2 gap-x-4 gap-y-2.5 list-none p-0 border-t border-border pt-md">
+              {[["Express repair", "30 min by appointment"], ["Price", `From AED ${PRICING.floor}`], ["Warranty", "Up to 12 months"], ["Pickup & delivery", "FREE in Dubai"]].map(([k, v]) => (
+                <li key={k} className="flex flex-col text-[13.5px]">
+                  <span className="text-text-faint">{k}</span>
+                  <span className={`font-semibold tabular-nums ${k === "Express repair" ? "text-accent" : "text-text"}`}>{v}</span>
+                </li>
+              ))}
             </ul>
-            <p className="m-0 mt-md text-[12.5px] text-text-faint">Pricing reviewed {LAST_UPDATED} · VAT-inclusive · diagnosis always free.</p>
-          </Card>
-        </section>
-
-        {/* ── Models we repair ───────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Mac models" title="Models We Repair" />
-            <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
-              {MODELS.map((m) => (
-                <Link key={m.label} to={m.href} className="group flex flex-col items-center justify-center rounded-2xl border border-border bg-bg-card p-lg text-center transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
-                  <Laptop size={22} className="mb-2 text-accent" aria-hidden />
-                  <span className="font-semibold text-[15px] text-text group-hover:text-accent">{m.label}</span>
-                </Link>
-              ))}
+            <div className="mt-auto pt-md border-t border-border">
+              <Button asChild variant="whatsapp" className="w-full">
+                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" data-track="hero-card-whatsapp"><MessageCircle aria-hidden /> WhatsApp for an exact price</a>
+              </Button>
+              <p className="m-0 mt-2 flex items-center justify-center gap-1.5 text-[12px] text-text-faint"><Clock size={12} aria-hidden /> <span className="tabular-nums">Mon–Sat · 9am–10pm</span> · replies in minutes</p>
             </div>
-            <div className="mt-xl grid gap-lg sm:grid-cols-2">
-              <Card><p className="m-0 font-semibold text-text text-[17px]">MacBook Air 13", 15" Repair</p><p className="m-0 mt-1 text-text-faint text-[14px]">Intel, M1, M2, M3, M4 chip</p></Card>
-              <Card><p className="m-0 font-semibold text-text text-[17px]">MacBook Pro 14", 16" Repair</p><p className="m-0 mt-1 text-text-faint text-[14px]">Intel, M5, M5 Pro, M5 Max chip</p></Card>
-            </div>
-          </div>
-        </section>
+          </Reveal>
+        </div>
 
-        {/* ── Browse Apple repair by model ───────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Find your exact model" title="Browse Apple Repair by Model" intro="Pick your exact MacBook, iMac, iPhone or iPad for model-specific pricing, parts and turnaround - every Apple device we service in Dubai, Intel through M5." />
-          <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
-            {MODEL_DIRECTORY.map((col) => (
-              <Card key={col.group}>
-                <h3 className="m-0 mb-3 text-text text-[16px]"><Link to={col.hub} className="hover:text-accent">{col.group} repair</Link></h3>
-                <ul className="grid gap-1.5 list-none p-0 m-0">
-                  {col.items.map((it) => (
-                    <li key={it.href}><Link to={it.href} className="text-[14px] text-text-muted hover:text-accent">{it.label} repair in Dubai</Link></li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Other devices ──────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Beyond Apple" title="Other Devices We Repair" intro="Laptops · Desktops · Displays · Custom Built PCs" />
-          <div className="grid gap-lg md:grid-cols-3">
-            {OTHER_DEVICES.map((o) => (
-              <Card key={o.t}><h3 className="m-0 mb-2 text-text text-[18px]">{o.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{o.d}</p></Card>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Repair any Apple device (device hubs) ───────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Beyond the MacBook" title="We Repair Every Apple Device in Dubai" intro="MacBook is our speciality, but our bench covers the whole Apple line-up - Mac, iPhone, iPad, iMac and Apple displays, in and out of warranty." />
-            <div className="flex flex-wrap gap-2.5">
-              {DEVICE_HUB.map((l) => (
-                <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
-                  <ArrowRight size={14} className="text-accent shrink-0" aria-hidden /> {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Services offered ───────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="What we fix" title="Services Offered at Our Apple MacBook Repair in Dubai" />
-            <p className="mx-auto mb-2xl max-w-[80ch] text-[15px] leading-relaxed text-text-muted">
-              {linkify(
-                "From MacBook screen repair and battery replacement to logic board repair, water damage recovery, keyboard replacement, charging port and trackpad faults, our Dubai Media City workshop fixes every issue with a 90-day warranty - and recovers your files with professional data recovery when a drive or board fails."
-              )}
-            </p>
-            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
-              {SERVICES.map((s, i) => (
-                <Reveal key={s.t} delay={(i % 3) * 60}>
-                  {s.href ? (
-                    <Link
-                      to={s.href}
-                      className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                    >
-                      <h3 className="m-0 mb-2 text-text text-[18px] transition-colors group-hover:text-accent">{s.t}</h3>
-                      <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
-                      <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent">
-                        Learn more
-                        <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
-                      </span>
-                    </Link>
-                  ) : (
-                    <Card className="h-full">
-                      <h3 className="m-0 mb-2 text-text text-[18px]">{s.t}</h3>
-                      <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
-                    </Card>
-                  )}
+        {/* ── 3 · Trust band (stats + trust links + in-page nav) ──── */}
+        <section className="border-y border-border bg-bg">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-2xl">
+            <div className="grid gap-xl grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 text-center">
+              {STATS.map((s) => (
+                <Reveal key={s.label}>
+                  <p className="mono text-[28px] md:text-[32px] font-bold text-text leading-none mb-1"><CountUp value={s.value} /></p>
+                  <p className="text-[13px] text-text-muted m-0">{s.label}</p>
                 </Reveal>
               ))}
             </div>
-            <CtaRow />
+            {/* Link row: only facts NOT already stated by the stats above — warranty,
+                risk reversal, and the named technician's credential (E-E-A-T). */}
+            <div className="mt-xl flex flex-wrap items-center justify-center gap-x-xl gap-y-2 border-t border-border pt-lg text-[13.5px] text-text-muted">
+              <Link to="/warranty" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><BadgeCheck size={16} className="text-accent" aria-hidden /> Up to 12-month written warranty</Link>
+              <span className="inline-flex items-center gap-2"><Check size={16} className="text-accent" aria-hidden /> Free diagnosis · no fix, no charge</span>
+              <Link to="/about" className="inline-flex items-center gap-2 transition-colors hover:text-accent"><Users size={16} className="text-accent" aria-hidden /> Led by Abdul Aziz · Apple Certified Mac Technician</Link>
+            </div>
+            <nav aria-label="On this page" className="mt-lg flex flex-wrap justify-center gap-2.5">
+              {PAGE_ANCHORS.map((a) => (
+                <a key={a.href} href={a.href} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted transition-colors hover:border-accent/40 hover:text-accent">
+                  {a.label} <ChevronDown size={13} aria-hidden />
+                </a>
+              ))}
+            </nav>
           </div>
         </section>
 
-        {/* ── Upgrades ───────────────────────────────────────────── */}
+        {/* ── 4 · Services offered ───────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="What we fix" title="Apple MacBook Repair Services in Dubai" />
+          {/* -mt closes the gap to SectionHead (its mb-2xl); left-aligned with the H2 */}
+          <p className="-mt-lg mb-2xl max-w-[72ch] text-[16px] leading-relaxed text-text-muted">
+            {linkify(
+              "From MacBook screen repair and battery replacement to logic board repair, water damage recovery, keyboard replacement, charging port and trackpad faults, our Dubai Media City workshop fixes every issue with a warranty of up to 12 months - and recovers your files with professional data recovery when a drive or board fails."
+            )}
+          </p>
+          <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((s, i) => (
+              <Reveal key={s.t} delay={(i % 3) * 60}>
+                {s.href ? (
+                  <Link
+                    to={s.href}
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
+                    <h3 className="m-0 mb-2 text-text text-[18px] transition-colors group-hover:text-accent">{s.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{s.d}</p>
+                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent">
+                      Learn more
+                      <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </Link>
+                ) : (
+                  <Card className="h-full">
+                    <h3 className="m-0 mb-2 text-text text-[18px]">{s.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{s.d}</p>
+                  </Card>
+                )}
+              </Reveal>
+            ))}
+          </div>
+
+          <CtaRow />
+        </section>
+
+        {/* ── 5 · Upgrades ───────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <SectionHead eyebrow="Make an old Mac fast again" title="MacBook Upgraded Services in Dubai" intro="When your MacBook starts acting up, it may need a system upgrade. We offer many upgrade options to boost your MacBook's speed, storage and overall performance - optimised with the latest technology." />
           <div className="grid gap-lg grid-cols-2 lg:grid-cols-4">
             {UPGRADES.map((u) => (
-              <Link key={u.label} to={u.href || "#"} className="group rounded-2xl border border-border bg-bg-card p-lg transition-colors hover:border-accent/40 hover:bg-bg-alt">
+              <Link key={u.label} to={u.href} className="group rounded-2xl border border-border bg-bg-card p-lg transition-colors hover:border-accent/40 hover:bg-bg-alt">
                 <Cpu size={20} className="mb-2 text-accent" aria-hidden />
                 <span className="font-semibold text-[15px] text-text group-hover:text-accent">{u.label}</span>
               </Link>
@@ -612,44 +574,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Discounts ──────────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Save more" title="Discounted MacBook Repairs Dubai" intro="We provide reasonable repairs and discounts for students, teachers and military personnel. We do not compromise on quality and offer high-quality MacBook repair services in Dubai." />
-            <div className="mb-xl flex flex-wrap gap-2.5">
-              {OFFERS.map((o) => (
-                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] text-text-muted"><Check size={14} className="text-accent" aria-hidden /> {o}</span>
-              ))}
-            </div>
-            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
-              {DISCOUNTS.map((d) => (
-                <Card key={d.t}><h3 className="m-0 mb-2 text-text text-[17px]">{d.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{d.d}</p></Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Insurance ──────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Protect your device" title="Complete Apple Laptop Insurance in Dubai" intro="We do not just repair your devices but also offer MacBook insurance to protect them from accidental damage or emergency repairs - liquid damage, broken screens, software crashes or hardware failure. We provide full-coverage plans for individuals and custom insurance packages for larger companies." />
-          <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
-            {INSURANCE.map((i) => (
-              i.href ? (
-                <Link key={i.t} to={i.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
-                  <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{i.t}</h3>
-                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p>
-                  <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
-                </Link>
-              ) : (
-                <Card key={i.t}><h3 className="m-0 mb-2 text-text text-[17px]">{i.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p></Card>
-              )
-            ))}
-          </div>
-          <p className="mt-xl text-[15px] text-text-muted m-0">See cover types and how plans are quoted on our <Link to="/macbook-insurance-dubai" className="text-accent hover:underline">MacBook insurance in Dubai</Link> page.</p>
-        </section>
-
-        {/* ── Common issues ──────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
+        {/* ── 6 · Common issues ──────────────────────────────────── */}
+        <section className="bg-bg border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Sound familiar?" title="Common MacBook Issues We Fix" />
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
@@ -661,7 +587,7 @@ export default function Home() {
                     className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   >
                     <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{c.t}</h3>
-                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{c.d}</p>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{c.d}</p>
                     <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">
                       Learn more
                       <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
@@ -670,7 +596,7 @@ export default function Home() {
                 ) : (
                   <Card key={c.t}>
                     <h3 className="m-0 mb-2 text-text text-[17px]">{c.t}</h3>
-                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{c.d}</p>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{c.d}</p>
                   </Card>
                 )
               ))}
@@ -678,158 +604,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Near me ────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Right around the corner" title="Looking for a MacBook Repair Near Me? Get Quick Fixes by Certified Technicians!" />
-          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
-            <p className="m-0">If you are searching for a MacBook repair shop in Dubai nearby - within 8.1 km - or wondering where to get your MacBook fixed, we are located at your convenience and provide a variety of repair services for your impaired or defective MacBook devices. Whether you have a broken screen, battery issues, motherboard or software glitches, our experienced technicians are just around the corner to diagnose and fix your device with genuine parts.</p>
-            <p className="m-0">We offer onsite services that fit your schedule. Don't let a faulty MacBook hold you back - contact us now for fast, professional repairs near you!</p>
-          </div>
-        </section>
-
-        {/* ── MacBook repair near you in Dubai (area pages) ───────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Local to you" title="MacBook Repair Near You in Dubai" intro="We collect, repair and return across Dubai free of charge. Tap your area for local turnaround times and pickup details." />
-          <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-            {AREA_PAGES.map((a) => (
-              <Link key={a.href} to={a.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
-                <MapPin size={18} className="text-accent shrink-0" aria-hidden />
-                <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {a.label}</span>
-              </Link>
-            ))}
-          </div>
-          <p className="mt-lg text-[14px] text-text-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me" className="text-accent hover:underline">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
-        </section>
-
-        {/* ── MacBook repair across the UAE (other emirates) ────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Beyond Dubai" title="MacBook Repair Across the UAE" intro="Outside Dubai? We don't have branches elsewhere — we collect your MacBook by free courier from any emirate, repair it at our Media City workshop, and return it. Same-day from Sharjah & Ajman; 1–2 days by courier further out." />
-            <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-              {[
-                { label: "Sharjah",        href: "/macbook-repair-sharjah" },
-                { label: "Ajman",          href: "/macbook-repair-ajman" },
-                { label: "Abu Dhabi",      href: "/macbook-repair-abu-dhabi" },
-                { label: "Al Ain",         href: "/macbook-repair-al-ain" },
-                { label: "Ras Al Khaimah", href: "/macbook-repair-ras-al-khaimah" },
-                { label: "Fujairah",       href: "/macbook-repair-fujairah" },
-                { label: "Umm Al Quwain",  href: "/macbook-repair-umm-al-quwain" },
-                { label: "Khor Fakkan",    href: "/macbook-repair-khor-fakkan" },
-                { label: "Kalba",          href: "/macbook-repair-kalba" },
-              ].map((c) => (
-                <Link key={c.href} to={c.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
-                  <Truck size={18} className="text-accent shrink-0" aria-hidden />
-                  <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {c.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Onsite ─────────────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="We come to you" title="Onsite MacBook Repair and Support" />
-            <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
-              <p className="m-0">If you need support for your malfunctioning MacBook but don't have the time to leave your location, we have the perfect solution! We offer fast and reliable MacBook repairs right at your doorstep, whether it's your office or home. Our experienced technician will come to your location, pick up your device, repair it, and return it safely to you.</p>
-              <p className="m-0">Whether you are experiencing software crashes, hardware failures or need upgrades, our expert technicians provide efficient troubleshooting, repairs and maintenance. Schedule your onsite MacBook support today and enjoy quick, professional service at your convenience.</p>
-              <p className="m-0">See how collection works and which areas we cover on our <Link to="/onsite-macbook-repair-dubai" className="text-accent hover:underline">onsite MacBook repair in Dubai</Link> page.</p>
-            </div>
-            <CtaRow />
-          </div>
-        </section>
-
-        {/* ── AppleCare & out-of-warranty ────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="In or out of warranty" title="AppleCare and Out-of-Warranty Repairs" />
-          <div className="grid gap-lg md:grid-cols-2 mb-xl">
-            <Card>
-              <h3 className="m-0 mb-2 text-text text-[18px]">AppleCare &amp; In-Warranty Macs</h3>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed">We're an <strong className="text-text">independent Apple repair specialist - not an Apple Authorised Service Provider</strong>. If your Mac is still covered by Apple's warranty or AppleCare, we'll tell you honestly when an Apple Store claim is the better route so you don't risk your cover. For everything else we repair AppleCare-expired and out-of-warranty Macs using genuine parts where available and high-grade compatible parts otherwise - all backed by our own 90-day written warranty.</p>
-              <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/applecare-macbook-repair-dubai" className="text-accent hover:underline">AppleCare and in-warranty MacBook repair</Link>.</p>
-            </Card>
-            <Card>
-              <h3 className="m-0 mb-2 text-text text-[18px]">Out-of-Warranty Repairs</h3>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed">If your AppleCare has expired, we provide reliable out-of-warranty MacBook repairs. Our expert technicians diagnose your MacBook issues, provide solutions for software problems, and offer high-quality replacement services at reasonable prices. We address common issues such as:</p>
-              <ul className="mt-sm grid gap-1.5 sm:grid-cols-2 list-none p-0 text-[13.5px] text-text-muted">
-                {OOW_ISSUES.map((i) => <li key={i} className="flex items-start gap-2"><Check size={15} className="text-accent mt-0.5 shrink-0" aria-hidden /> {i}</li>)}
-              </ul>
-              <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent hover:underline">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent hover:underline">Apple repair programmes &amp; recalls</Link>, or <Link to="/where-to-repair-macbook-dubai" className="text-accent hover:underline">where to repair your MacBook in Dubai</Link>.</p>
-            </Card>
-          </div>
-          <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-            <table className="w-full border-collapse text-left text-[13.5px] min-w-[720px]">
-              <thead>
-                <tr className="border-b border-border text-accent">
-                  <th className="px-md py-md font-semibold">Service</th>
-                  <th className="px-md py-md font-semibold">Description</th>
-                  <th className="px-md py-md font-semibold">Benefits</th>
-                  <th className="px-md py-md font-semibold">Eligibility</th>
-                </tr>
-              </thead>
-              <tbody>
-                {APPLECARE_TABLE.map((r) => (
-                  <tr key={r.s} className="border-b border-border last:border-0 align-top">
-                    <td className="px-md py-sm font-semibold text-text">{r.s}</td>
-                    <td className="px-md py-sm text-text-muted">{r.d}</td>
-                    <td className="px-md py-sm text-text-muted">{r.b}</td>
-                    <td className="px-md py-sm text-text-muted">{r.e}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Reveal>
-        </section>
-
-        {/* ── AMC ────────────────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Year-round care" title="Annual Maintenance Contract (AMC) for MacBook" intro="Do you need an Annual Maintenance Contract for your MacBook? We offer expert support throughout the year with customized plans to keep your device safe from malfunctioning and prevent issues before they arise. Our AMC services include:" />
-            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
-              {AMC.map((a) => (
-                a.href ? (
-                  <Link key={a.t} to={a.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
-                    <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{a.t}</h3>
-                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{a.d}</p>
-                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
-                  </Link>
-                ) : (
-                  <Card key={a.t}><h3 className="m-0 mb-2 text-text text-[17px]">{a.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{a.d}</p></Card>
-                )
-              ))}
-            </div>
-            <p className="mt-xl text-[15px] text-text-muted m-0">See full plans and pricing on our <Link to="/annual-maintenance-contract-dubai" className="text-accent hover:underline">MacBook Annual Maintenance Contract</Link> page.</p>
-          </div>
-        </section>
-
-        {/* ── Why choose us ──────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="The difference" title="Why Choose Us for Apple Laptop Repair in Dubai?" />
-          <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
-            {WHY_CHOOSE.map((w) => (
-              <Card key={w.t}><BadgeCheck size={20} className="mb-2 text-accent" aria-hidden /><h3 className="m-0 mb-1 text-text text-[16px]">{w.t}</h3><p className="m-0 text-[13.5px] text-text-muted leading-relaxed">{w.d}</p></Card>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Request a quote ────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl grid gap-2xl md:grid-cols-2 items-start">
-            <div>
-              <SectionHead eyebrow="No obligation" title="Request a Free Quote" intro="Tell us your device and the issue. We'll reply with an honest estimate - free diagnosis, no fix, no charge." />
-              <ul className="grid gap-sm list-none p-0 m-0 text-[15px] text-text-muted">
-                <li className="flex items-center gap-2"><Headset size={18} className="text-accent shrink-0" aria-hidden /> 24/7 live chat &amp; WhatsApp support</li>
-                <li className="flex items-center gap-2"><Truck size={18} className="text-accent shrink-0" aria-hidden /> Free pickup &amp; delivery across Dubai</li>
-                <li className="flex items-center gap-2"><Users size={18} className="text-accent shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
-              </ul>
-            </div>
-            <QuoteForm />
-          </div>
-        </section>
-
-        {/* ── Pricing ────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Transparent pricing" title="How Much Does a MacBook Repair Cost?" intro="Our repair price usually starts from AED 49, but the cost varies depending on the type of repair, the MacBook model, any additional repairs, and current discounts. Here's a general price list of common repairs." />
+        {/* ── 7 · Pricing (+ price/service details) ──────────────── */}
+        <section id="pricing" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="Transparent pricing" title="How Much Does a MacBook Repair Cost?" intro={`Our repair price starts from AED ${PRICING.floor} for a single key, and the cost varies with the type of repair, the MacBook model, any additional repairs, and current discounts. Here's a general price list of common repairs.`} />
+          <ul className="mb-xl grid gap-2 sm:grid-cols-2 lg:grid-cols-4 list-none p-0 m-0 text-[15px] text-text-muted">
+            <li className="flex items-start gap-2"><Wallet size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Price:</strong> Starts from AED {PRICING.floor}</span></li>
+            <li className="flex items-start gap-2"><Search size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Diagnosis time:</strong> 20 minutes</span></li>
+            <li className="flex items-start gap-2"><Clock size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Repair time:</strong> 2 - 4 hours (depending on the problem)</span></li>
+            <li className="flex items-start gap-2"><Truck size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Site visit charge:</strong> FREE</span></li>
+          </ul>
           <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[560px]">
               <thead>
@@ -851,57 +634,11 @@ export default function Home() {
             </table>
           </Reveal>
           <p className="mt-lg text-[15px] text-text-muted m-0">See our full <Link to="/pricing" className="text-accent hover:underline">transparent MacBook repair price list</Link> - fixed quotes, no hidden fees - or get an instant figure with our <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent hover:underline">MacBook repair cost calculator</Link>.</p>
+          <p className="m-0 mt-sm text-[12.5px] text-text-faint">Pricing reviewed {LAST_UPDATED} · VAT-inclusive · diagnosis always free.</p>
         </section>
 
-        {/* ── Sell, trade-in or recycle ──────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Upgrading instead?" title="Sell, Trade-In or Recycle Your Apple Device" intro="Not worth repairing, or ready for the latest model? We buy working and faulty Macs and offer trade-in credit toward your next repair or upgrade." />
-            <div className="grid gap-lg md:grid-cols-3">
-              {SELL_OPTIONS.map((s) => (
-                <Card key={s.href}>
-                  <Wallet size={20} className="mb-2 text-accent" aria-hidden />
-                  <h3 className="m-0 mb-1 text-text text-[17px]"><Link to={s.href} className="hover:text-accent">{s.label}</Link></h3>
-                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.d}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Expert / setup ─────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Back to work fast" title="Expert MacBook Repairs in Dubai" />
-            <div className="grid gap-lg md:grid-cols-3 mb-2xl">
-              {EXPERT.map((e) => (
-                <Card key={e.t}><h3 className="m-0 mb-2 text-text text-[17px]">{e.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{e.d}</p></Card>
-              ))}
-            </div>
-            <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
-              <h3 className="m-0 text-text text-[20px]">MacBook Setup and Configuration Services</h3>
-              <p className="m-0">We are proud to provide reliable, quick repairs customized to your needs. Our skilled team uses high-quality parts and the latest tools to repair your MacBook to the highest standards. With transparent pricing and quick turnaround times, you won't have to wait long to return to what you love.</p>
-            </div>
-            <CtaRow />
-          </div>
-        </section>
-
-        {/* ── Process ────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Simple & transparent" title="How Our MacBook Repair Process Works" />
-          <ol className="grid gap-lg md:grid-cols-3 lg:grid-cols-5 list-none p-0 m-0">
-            {PROCESS.map((p, i) => (
-              <Reveal as="li" key={p.t} delay={i * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
-                <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
-                <p className="font-semibold text-[16px] m-0 mb-1 text-text">{p.t}</p>
-                <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{p.d}</p>
-              </Reveal>
-            ))}
-          </ol>
-        </section>
-
-        {/* ── Reviews ────────────────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
+        {/* ── 8 · Reviews ────────────────────────────────────────── */}
+        <section id="reviews" className="scroll-mt-24 bg-bg border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <div className="mb-2xl flex items-end justify-between gap-md flex-wrap">
               <div>
@@ -928,9 +665,406 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Popular repair guides & costs ──────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
+        {/* ── 9 · Inside our workshop (real photos) ──────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead
+            eyebrow="Inside our lab"
+            title="Real repairs at our Dubai workshop"
+            intro="No stock photos - these are genuine MacBook, iMac and logic-board repairs on our bench in Concord Tower, Media City."
+          />
+          <Reveal>
+            <WorkshopSlider slides={WORKSHOP_GALLERY} />
+          </Reveal>
+          {/* Image SEO: every workshop photo is a geo-anchored, licensed ImageObject
+              (real photos taken at the Dubai Media City workshop). */}
+          {WORKSHOP_GALLERY.map((g) => (
+            <script
+              key={g.src}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(licensedImage({ src: g.src, alt: g.alt, pagePath: "/", geo: true })) }}
+            />
+          ))}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(licensedImage({ src: "/images/real/team/team-workshop-dubai.jpg", alt: "MacBook Repair Dubai technicians at the Concord Tower workshop in Dubai Media City - MacBook Air diagnostics and customer support", pagePath: "/", geo: true, width: 1360, height: 1020 })) }}
+          />
+        </section>
+
+        {/* ── 10 · Process ───────────────────────────────────────── */}
+        <section className="bg-bg border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead eyebrow="Simple & transparent" title="How Our MacBook Repair Process Works" />
+            <ol className="grid gap-lg md:grid-cols-3 lg:grid-cols-5 list-none p-0 m-0">
+              {PROCESS.map((p, i) => (
+                <Reveal as="li" key={p.t} delay={i * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                  <p className="font-semibold text-[16px] m-0 mb-1 text-text">{p.t}</p>
+                  <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{p.d}</p>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ── 11 · Request a quote ───────────────────────────────── */}
+        <section id="quote" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-4xl grid gap-2xl md:grid-cols-2 items-start">
+          <div>
+            <SectionHead eyebrow="No obligation" title="Request a Free Quote" intro="Tell us your device and the issue. We'll reply with an honest estimate - free diagnosis, no fix, no charge." />
+            <ul className="grid gap-sm list-none p-0 m-0 text-[15px] text-text-muted">
+              <li className="flex items-center gap-2"><Headset size={18} className="text-accent shrink-0" aria-hidden /> WhatsApp answered 24/7 · workshop Mon-Sat, 9 am-10 pm</li>
+              <li className="flex items-center gap-2"><Truck size={18} className="text-accent shrink-0" aria-hidden /> Free pickup &amp; delivery across Dubai</li>
+              <li className="flex items-center gap-2"><Users size={18} className="text-accent shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
+            </ul>
+          </div>
+          <QuoteForm />
+        </section>
+
+        {/* ════ REASSURANCE ZONE: why us + expert setup ════ */}
+
+        {/* ── 12 · Why choose us ─────────────────────────────────── */}
+        <section className="bg-bg border-t border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="The difference" title="Why Choose Us for Apple Laptop Repair in Dubai?" />
+            <div className="grid gap-lg grid-cols-2 lg:grid-cols-4">
+              {WHY_CHOOSE.map((w) => (
+                <Card key={w.t}><BadgeCheck size={20} className="mb-2 text-accent" aria-hidden /><h3 className="m-0 mb-1 text-text text-[16px]">{w.t}</h3><p className="m-0 text-[13.5px] text-text-muted leading-relaxed">{w.d}</p></Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 13 · Expert / setup ────────────────────────────────── */}
+        <section className="bg-bg border-b border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="Back to work fast" title="Expert MacBook Repairs in Dubai" />
+            <div className="grid gap-lg md:grid-cols-3 mb-2xl">
+              {EXPERT.map((e) => (
+                <Card key={e.t}><h3 className="m-0 mb-2 text-text text-[17px]">{e.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{e.d}</p></Card>
+              ))}
+            </div>
+            <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+              <h3 className="m-0 text-text text-[20px]">MacBook Setup and Configuration Services</h3>
+              <p className="m-0">We are proud to provide reliable, quick repairs customized to your needs. Our skilled team uses high-quality parts and the latest tools to repair your MacBook to the highest standards. With transparent pricing and quick turnaround times, you won't have to wait long to return to what you love.</p>
+            </div>
+            <CtaRow />
+          </div>
+        </section>
+
+        {/* ════ DIRECTORY ZONE: find your exact model / device ════ */}
+
+        {/* ── 14 · Models we repair ──────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Mac models" title="Models We Repair" />
+          <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+            {MODELS.map((m) => (
+              <Link key={m.label} to={m.href} className="group flex flex-col items-center rounded-2xl border border-border bg-white p-md text-center transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
+                <ResponsiveImage
+                  src={m.img}
+                  alt={m.alt}
+                  title={`${m.label} repair in Dubai`}
+                  width={360}
+                  height={360}
+                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 170px"
+                  className="block w-full"
+                  imgClassName="w-full h-[96px] md:h-[110px] object-contain transition-transform duration-300 group-hover:scale-[1.06]"
+                />
+                <span className="mt-2 font-semibold text-[15px] text-text transition-colors group-hover:text-accent">{m.label}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-xl grid gap-lg sm:grid-cols-2">
+            {[
+              {
+                href: "/macbook-air-repair-dubai",
+                img: "/images/devices/macbook-air-13-15-repair-dubai.jpg",
+                alt: "MacBook Air 13-inch and 15-inch repair in Dubai - latest-generation sky blue MacBook Air, Intel through M5 models serviced",
+                title: 'MacBook Air 13", 15" Repair',
+                sub: "Intel, M1, M2, M3, M4, M5 chip",
+              },
+              {
+                href: "/macbook-pro-repair-dubai",
+                img: "/images/devices/macbook-pro-14-16-repair-dubai.jpg",
+                alt: "MacBook Pro 14-inch and 16-inch repair in Dubai - latest-generation space black MacBook Pro, Intel through M5 Pro and Max models serviced",
+                title: 'MacBook Pro 14", 16" Repair',
+                sub: "Intel, M1-M5 Pro & Max chip",
+              },
+            ].map((c) => (
+              <Link key={c.href} to={c.href} className="group overflow-hidden rounded-2xl border border-border bg-bg-card transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
+                <ResponsiveImage
+                  src={c.img}
+                  alt={c.alt}
+                  title={c.title}
+                  width={800}
+                  height={500}
+                  sizes="(max-width: 640px) 92vw, 560px"
+                  className="block bg-bg-alt"
+                  imgClassName="w-full h-[190px] md:h-[230px] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="p-lg">
+                  <p className="m-0 font-semibold text-text text-[17px] transition-colors group-hover:text-accent">{c.title}</p>
+                  <p className="m-0 mt-1 text-text-faint text-[14px]">{c.sub}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 15 · Browse Apple repair by model ──────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Find your exact model" title="Browse Apple Repair by Model" intro="Pick your exact MacBook, iMac, iPhone or iPad for model-specific pricing, parts and turnaround - every Apple device we service in Dubai, Intel through M5." />
+          <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
+            {MODEL_DIRECTORY.map((col) => (
+              <Card key={col.group}>
+                <h3 className="m-0 mb-3 text-text text-[16px]"><Link to={col.hub} className="hover:text-accent">{col.group} repair</Link></h3>
+                <ul className="grid gap-1.5 list-none p-0 m-0">
+                  {col.items.map((it) => (
+                    <li key={it.href}><Link to={it.href} className="text-[14px] text-text-muted hover:text-accent">{it.label} repair in Dubai</Link></li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 16 · Repair any Apple device (device hubs) ─────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Beyond the MacBook" title="We Repair Every Apple Device in Dubai" intro="MacBook is our speciality, but our bench covers the whole Apple line-up - Mac, iPhone, iPad, iMac and Apple displays, in and out of warranty." />
+          <div className="flex flex-wrap gap-2.5">
+            {DEVICE_HUB.map((l) => (
+              <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+                <ArrowRight size={14} className="text-accent shrink-0" aria-hidden /> {l.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 17 · Other devices ─────────────────────────────────── */}
+        <section className="bg-bg border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="Beyond Apple" title="Other Devices We Repair" intro="Laptops · Desktops · Displays · Custom Built PCs" />
+            <div className="grid gap-lg md:grid-cols-3">
+              {OTHER_DEVICES.map((o) => (
+                <Card key={o.t}><h3 className="m-0 mb-2 text-text text-[18px]">{o.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{o.d}</p></Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════ LOCATION ZONE: areas → near me → UAE → onsite → map ════ */}
+
+        {/* ── 18 · MacBook repair near you in Dubai (area pages) ─── */}
+        <section id="areas" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Local to you" title="MacBook Repair Near You in Dubai" intro="We collect, repair and return across Dubai free of charge. Tap your area for local turnaround times and pickup details." />
+          <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+            {AREA_PAGES.map((a) => (
+              <Link key={a.href} to={a.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                <MapPin size={18} className="text-accent shrink-0" aria-hidden />
+                <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {a.label}</span>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-lg text-[14px] text-text-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me" className="text-accent hover:underline">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
+        </section>
+
+        {/* ── 19 · Near me ───────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Right around the corner" title="Looking for a MacBook Repair Near Me? Get Quick Fixes by Certified Technicians!" />
+          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+            <p className="m-0">If you are searching for a MacBook repair shop nearby in Dubai, or wondering where to get your MacBook fixed, we are easy to reach: the workshop sits across from Media City Metro, and free pickup covers the whole of Dubai mainland. Whether you have a broken screen, battery issues, motherboard or software glitches, our experienced technicians are just around the corner to diagnose and fix your device with genuine parts.</p>
+            <p className="m-0">We offer onsite services that fit your schedule. Don't let a faulty MacBook hold you back - contact us now for fast, professional repairs near you!</p>
+          </div>
+        </section>
+
+        {/* ── 20 · MacBook repair across the UAE (other emirates) ── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Beyond Dubai" title="MacBook Repair Across the UAE" intro="Outside Dubai? We don't have branches elsewhere — we collect your MacBook by free courier from any emirate, repair it at our Media City workshop, and return it. Same-day from Sharjah & Ajman; 1–2 days by courier further out." />
+          <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+            {[
+              { label: "Sharjah",        href: "/macbook-repair-sharjah" },
+              { label: "Ajman",          href: "/macbook-repair-ajman" },
+              { label: "Abu Dhabi",      href: "/macbook-repair-abu-dhabi" },
+              { label: "Al Ain",         href: "/macbook-repair-al-ain" },
+              { label: "Ras Al Khaimah", href: "/macbook-repair-ras-al-khaimah" },
+              { label: "Fujairah",       href: "/macbook-repair-fujairah" },
+              { label: "Umm Al Quwain",  href: "/macbook-repair-umm-al-quwain" },
+              { label: "Khor Fakkan",    href: "/macbook-repair-khor-fakkan" },
+              { label: "Kalba",          href: "/macbook-repair-kalba" },
+            ].map((c) => (
+              <Link key={c.href} to={c.href} className="group flex items-center gap-2 rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                <Truck size={18} className="text-accent shrink-0" aria-hidden />
+                <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {c.label}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 21 · Onsite ────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="We come to you" title="Onsite MacBook Repair and Support" />
+          <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+            <p className="m-0">If you need support for your malfunctioning MacBook but don't have the time to leave your location, we have the perfect solution! We offer fast and reliable MacBook repairs right at your doorstep, whether it's your office or home. Our experienced technician will come to your location, pick up your device, repair it, and return it safely to you.</p>
+            <p className="m-0">Whether you are experiencing software crashes, hardware failures or need upgrades, our expert technicians provide efficient troubleshooting, repairs and maintenance. Schedule your onsite MacBook support today and enjoy quick, professional service at your convenience.</p>
+            <p className="m-0">See how collection works and which areas we cover on our <Link to="/onsite-macbook-repair-dubai" className="text-accent hover:underline">onsite MacBook repair in Dubai</Link> page.</p>
+          </div>
+          <CtaRow />
+        </section>
+
+        {/* ── 22 · Distance / areas + map + NAP ──────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <SectionHead eyebrow="Free pickup across the city" title="What's the Distance Between Us?" intro="We cover 60+ Dubai communities with free pickup and delivery. Approximate drive time from our Media City workshop:" />
+          <div className="grid gap-x-lg gap-y-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-[14px]">
+            {AREAS_DISTANCE.slice(0, AREAS_VISIBLE).map(([name, dist]) => (
+              <span key={name} className="flex items-center gap-2 text-text-muted">
+                <MapPin size={14} className="text-accent shrink-0" aria-hidden />
+                <span className="flex-1">{name}</span>
+                <span className="mono text-text-faint">{dist.replace(/m$/, " min")}</span>
+              </span>
+            ))}
+          </div>
+          {/* remaining areas stay in the SSR DOM — <details> only trims the visual scroll */}
+          <details className="group mt-md">
+            <summary className="flex w-fit cursor-pointer items-center gap-1.5 list-none text-[14px] font-semibold text-accent hover:underline [&::-webkit-details-marker]:hidden">
+              Show all 60+ areas <ChevronDown size={15} className="transition-transform group-open:rotate-180" aria-hidden />
+            </summary>
+            <div className="mt-md grid gap-x-lg gap-y-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-[14px]">
+              {AREAS_DISTANCE.slice(AREAS_VISIBLE).map(([name, dist]) => (
+                <span key={name} className="flex items-center gap-2 text-text-muted">
+                  <MapPin size={14} className="text-accent shrink-0" aria-hidden />
+                  <span className="flex-1">{name}</span>
+                  <span className="mono text-text-faint">{dist.replace(/m$/, " min")}</span>
+                </span>
+              ))}
+            </div>
+          </details>
+          <div className="mt-2xl grid gap-lg md:grid-cols-2 items-stretch">
+            <div className="overflow-hidden rounded-2xl border border-border">
+              <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
+            </div>
+            <div className="flex flex-col gap-md">
+              <h3 className="m-0 text-text">Find us in Media City</h3>
+              {/* Consolidated NAP unit (Name + Address + Phone) — matches LocalBusiness schema + GBP for local-entity consistency. */}
+              <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span><strong className="text-text">{NAP.name}</strong><br />{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
+              <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><Phone size={18} className="text-accent mt-1 shrink-0" aria-hidden /><a href={`tel:${NAP.phoneE164}`} className="hover:text-accent transition-colors">{NAP.phoneDisplay}</a></p>
+              <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><Clock size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span><strong className="text-text">Business Hours:</strong> Monday - Saturday, 09:00 AM - 10:00 PM · Sunday closed - WhatsApp support stays open and we'll book you in for Monday.</span></p>
+              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
+              <div className="flex flex-wrap gap-lg">
+                <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+                <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">View on Google <ExternalLink size={14} aria-hidden /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ════ COVERAGE ZONE: AppleCare → AMC → insurance → discounts ════ */}
+
+        {/* ── 23 · AppleCare & out-of-warranty ───────────────────── */}
+        <section className="bg-bg border-t border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="In or out of warranty" title="AppleCare and Out-of-Warranty Repairs" />
+            <div className="grid gap-lg md:grid-cols-2 mb-xl">
+              <Card>
+                <h3 className="m-0 mb-2 text-text text-[18px]">AppleCare &amp; In-Warranty Macs</h3>
+                <p className="m-0 text-[14px] text-text-muted leading-relaxed">We're an <strong className="text-text">independent Apple repair specialist - not an Apple Authorised Service Provider</strong>. If your Mac is still covered by Apple's warranty or AppleCare, we'll tell you honestly when an Apple Store claim is the better route so you don't risk your cover. For everything else we repair AppleCare-expired and out-of-warranty Macs using genuine parts where available and high-grade compatible parts otherwise - all backed by our own written warranty of up to 12 months.</p>
+                <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/applecare-macbook-repair-dubai" className="text-accent hover:underline">AppleCare and in-warranty MacBook repair</Link>.</p>
+              </Card>
+              <Card>
+                <h3 className="m-0 mb-2 text-text text-[18px]">Out-of-Warranty Repairs</h3>
+                <p className="m-0 text-[14px] text-text-muted leading-relaxed">If your AppleCare has expired, we provide reliable out-of-warranty MacBook repairs. Our expert technicians diagnose your MacBook issues, provide solutions for software problems, and offer high-quality replacement services at reasonable prices. We address common issues such as:</p>
+                <ul className="mt-sm grid gap-1.5 sm:grid-cols-2 list-none p-0 text-[13.5px] text-text-muted">
+                  {OOW_ISSUES.map((i) => <li key={i} className="flex items-start gap-2"><Check size={15} className="text-accent mt-0.5 shrink-0" aria-hidden /> {i}</li>)}
+                </ul>
+                <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent hover:underline">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent hover:underline">Apple repair programmes &amp; recalls</Link>, or <Link to="/where-to-repair-macbook-dubai" className="text-accent hover:underline">where to repair your MacBook in Dubai</Link>.</p>
+              </Card>
+            </div>
+            <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
+              <table className="w-full border-collapse text-left text-[13.5px] min-w-[720px]">
+                <thead>
+                  <tr className="border-b border-border text-accent">
+                    <th className="px-md py-md font-semibold">Service</th>
+                    <th className="px-md py-md font-semibold">Description</th>
+                    <th className="px-md py-md font-semibold">Benefits</th>
+                    <th className="px-md py-md font-semibold">Eligibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {APPLECARE_TABLE.map((r) => (
+                    <tr key={r.s} className="border-b border-border last:border-0 align-top">
+                      <td className="px-md py-sm font-semibold text-text">{r.s}</td>
+                      <td className="px-md py-sm text-text-muted">{r.d}</td>
+                      <td className="px-md py-sm text-text-muted">{r.b}</td>
+                      <td className="px-md py-sm text-text-muted">{r.e}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── 24 · AMC ───────────────────────────────────────────── */}
+        <section className="bg-bg">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="Year-round care" title="Annual Maintenance Contract (AMC) for MacBook" intro="Do you need an Annual Maintenance Contract for your MacBook? We offer expert support throughout the year with customized plans to keep your device safe from malfunctioning and prevent issues before they arise. Our AMC services include:" />
+            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
+              {AMC.map((a) => (
+                a.href ? (
+                  <Link key={a.t} to={a.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                    <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{a.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{a.d}</p>
+                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
+                  </Link>
+                ) : (
+                  <Card key={a.t}><h3 className="m-0 mb-2 text-text text-[17px]">{a.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed line-clamp-3 md:line-clamp-none">{a.d}</p></Card>
+                )
+              ))}
+            </div>
+            <p className="mt-xl text-[15px] text-text-muted m-0">See full plans and pricing on our <Link to="/annual-maintenance-contract-dubai" className="text-accent hover:underline">MacBook Annual Maintenance Contract</Link> page.</p>
+          </div>
+        </section>
+
+        {/* ── 25 · Insurance ─────────────────────────────────────── */}
+        <section className="bg-bg">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="Protect your device" title="Complete Apple Laptop Insurance in Dubai" intro="We do not just repair your devices but also offer MacBook insurance to protect them from accidental damage or emergency repairs - liquid damage, broken screens, software crashes or hardware failure. We provide full-coverage plans for individuals and custom insurance packages for larger companies." />
+            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
+              {INSURANCE.map((i) => (
+                i.href ? (
+                  <Link key={i.t} to={i.href} className="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                    <h3 className="m-0 mb-2 text-text text-[17px] transition-colors group-hover:text-accent">{i.t}</h3>
+                    <p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p>
+                    <span className="mt-auto pt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">Learn more <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" /></span>
+                  </Link>
+                ) : (
+                  <Card key={i.t}><h3 className="m-0 mb-2 text-text text-[17px]">{i.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{i.d}</p></Card>
+                )
+              ))}
+            </div>
+            <p className="mt-xl text-[15px] text-text-muted m-0">See cover types and how plans are quoted on our <Link to="/macbook-insurance-dubai" className="text-accent hover:underline">MacBook insurance in Dubai</Link> page.</p>
+          </div>
+        </section>
+
+        {/* ── 26 · Discounts ─────────────────────────────────────── */}
+        <section className="bg-bg border-b border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+            <SectionHead eyebrow="Save more" title="Discounted MacBook Repairs Dubai" intro="We provide reasonable repairs and discounts for students, teachers and military personnel. We do not compromise on quality and offer high-quality MacBook repair services in Dubai." />
+            <div className="mb-xl flex flex-wrap gap-2.5">
+              {OFFERS.map((o) => (
+                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] text-text-muted"><Check size={14} className="text-accent" aria-hidden /> {o}</span>
+              ))}
+            </div>
+            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
+              {DISCOUNTS.map((d) => (
+                <Card key={d.t}><h3 className="m-0 mb-2 text-text text-[17px]">{d.t}</h3><p className="m-0 text-[14px] text-text-muted leading-relaxed">{d.d}</p></Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════ TAIL ZONE: guides → FAQ → final CTA ════ */}
+
+        {/* ── 27 · Popular repair guides & costs ─────────────────── */}
+        <section className="bg-bg border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
             <SectionHead eyebrow="Know before you book" title="Popular Repair Guides & Cost Breakdowns" intro="Real Dubai prices, fix-it walkthroughs and honest advice from our workshop - written by the technicians who do the repairs." />
             <div className="grid gap-x-2xl gap-y-1 md:grid-cols-2 lg:grid-cols-3">
               {GUIDES.map((g) => (
@@ -943,8 +1077,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FAQ ────────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+        {/* ── 29 · FAQ ───────────────────────────────────────────── */}
+        <section id="faq" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead eyebrow="Before you ask" title="Frequently Asked Questions" />
           <ul className="grid md:grid-cols-2 md:gap-x-2xl border-t border-border list-none p-0 m-0">
             {FAQS.map((f, i) => (
@@ -954,7 +1088,7 @@ export default function Home() {
                     <span className="text-[16px] md:text-[17px] font-semibold text-text">{f.q}</span>
                     <ChevronDown size={18} className="mt-1 shrink-0 text-accent transition-transform group-open:rotate-180" aria-hidden />
                   </summary>
-                  <p className="pb-md text-[15px] leading-relaxed text-text-muted max-w-[70ch] m-0">{f.a}</p>
+                  <p className="pb-md text-[15px] leading-relaxed text-text-muted max-w-[70ch] m-0">{linkPhone(f.a)}</p>
                 </details>
               </li>
             ))}
@@ -964,84 +1098,19 @@ export default function Home() {
               localBusiness/person/webPage. WebPage carries SpeakableSpecification → .quick-answer (AEO). */}
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageWithSpeakable({ url: SITE.url, name: TITLE })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageWithSpeakable({ url: SITE.url, name: TITLE, dateModified: SITEMAP_LAST_UPDATED })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Lead Repair Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs([{ name: "Home", path: "/" }])) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", price: 49, url: SITE.url, warranty: "P90D", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Pricing starts from 49 AED." })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", price: PRICING.floor, url: SITE.url, warranty: "P1Y", description: `MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Pricing starts from AED ${PRICING.floor}.` })) }} />
         </section>
 
-        {/* ── Distance / areas ───────────────────────────────────── */}
-        <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Free pickup across the city" title="What's the Distance Between Us?" intro="We cover 60+ Dubai communities with free pickup and delivery. Approximate distance from our Media City workshop:" />
-            <div className="grid gap-x-lg gap-y-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-[14px]">
-              {AREAS_DISTANCE.map(([name, dist]) => (
-                <span key={name} className="flex items-center gap-2 text-text-muted">
-                  <MapPin size={14} className="text-accent shrink-0" aria-hidden />
-                  <span className="flex-1">{name}</span>
-                  <span className="mono text-text-faint">{dist}</span>
-                </span>
-              ))}
-            </div>
-            <div className="mt-2xl grid gap-lg md:grid-cols-2 items-stretch">
-              <div className="overflow-hidden rounded-2xl border border-border">
-                <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
-              </div>
-              <div className="flex flex-col gap-md">
-                <h3 className="m-0 text-text">Find us in Media City</h3>
-                {/* Consolidated NAP unit (Name + Address + Phone) — matches LocalBusiness schema + GBP for local-entity consistency. */}
-                <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span><strong className="text-text">{NAP.name}</strong><br />{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
-                <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><Phone size={18} className="text-accent mt-1 shrink-0" aria-hidden /><a href={`tel:${NAP.phoneE164}`} className="hover:text-accent transition-colors">{NAP.phoneDisplay}</a></p>
-                <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-                <div className="flex flex-wrap gap-lg">
-                  <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
-                  <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">View on Google <ExternalLink size={14} aria-hidden /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Inside our workshop (real photos) ──────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead
-            eyebrow="Inside our lab"
-            title="Real repairs at our Dubai workshop"
-            intro="No stock photos - these are genuine MacBook, iMac and logic-board repairs on our bench in Concord Tower, Media City."
-          />
-          <div className="grid gap-3 grid-cols-2 lg:grid-cols-3">
-            {WORKSHOP_GALLERY.map((g, i) => (
-              <Reveal key={g.src} delay={i * 60}>
-                <figure className="group relative m-0 overflow-hidden rounded-xl border border-border bg-bg-card">
-                  <ResponsiveImage
-                    src={g.src}
-                    alt={g.alt}
-                    title={g.title}
-                    width={520}
-                    height={390}
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
-                    className="block"
-                    imgClassName="w-full h-[160px] md:h-[230px] object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                  <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-                  <figcaption className="absolute inset-x-0 bottom-0 p-3 text-[13px] md:text-[14px] font-medium text-white">
-                    {g.title}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Final CTA ──────────────────────────────────────────── */}
+        {/* ── 30 · Final CTA ─────────────────────────────────────── */}
         <section className="relative overflow-hidden border-t border-border">
           <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-accent/18 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
-            <h2 className="text-text m-0 mb-md">Contact Us!</h2>
-            <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[18px]">Contact us today to schedule your repair or get a free consultation. Our friendly team is available 24/7. Let us help you get your MacBook back in working condition.</p>
+            <h2 className="text-text m-0 mb-md">Book Your 30-Minute Repair Slot</h2>
+            <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[18px]">Fixed in 30 minutes by appointment — or it's free. Free diagnosis, free pickup across Dubai, and a written warranty of up to 12 months. WhatsApp is answered 24/7 and the workshop is open Mon-Sat, 9 am-10 pm.</p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
@@ -1055,6 +1124,23 @@ export default function Home() {
 }
 
 /* ── local helpers (dark) ──────────────────────────────────── */
+// Display-time autolinker: makes the workshop phone number tappable inside FAQ answers.
+// The FAQPage JSON-LD keeps the raw strings — only the rendered text gets the anchor.
+function linkPhone(text: string): ReactNode {
+  const parts = text.split(NAP.phoneDisplay);
+  if (parts.length === 1) return text;
+  return parts.flatMap((part, i) =>
+    i === 0
+      ? [part]
+      : [
+          <a key={i} href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline whitespace-nowrap">
+            {NAP.phoneDisplay}
+          </a>,
+          part,
+        ]
+  );
+}
+
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`rounded-2xl border border-border bg-bg-card p-lg ${className}`}>{children}</div>;
 }
@@ -1075,29 +1161,5 @@ function CtaRow() {
       <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
-  );
-}
-
-function QuoteForm() {
-  const [v, setV] = useState({ first: "", last: "", email: "", phone: "", device: "", message: "" });
-  const set = (k: keyof typeof v) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setV({ ...v, [k]: e.target.value });
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const msg = `Hi, I'd like a free quote.\nName: ${v.first} ${v.last}\nEmail: ${v.email}\nPhone: ${v.phone}\nDevice: ${v.device}\nIssue: ${v.message}`;
-    window.open(`${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
-  };
-  const field = "w-full rounded-md border border-border bg-bg-card px-3.5 h-11 text-[15px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
-  return (
-    <form onSubmit={submit} className="rounded-2xl border border-border bg-bg-card p-lg grid gap-md">
-      <div className="grid gap-md sm:grid-cols-2">
-        <input className={field} placeholder="First name" value={v.first} onChange={set("first")} aria-label="First name" />
-        <input className={field} placeholder="Last name" value={v.last} onChange={set("last")} aria-label="Last name" />
-      </div>
-      <input className={field} type="email" placeholder="Email (optional)" value={v.email} onChange={set("email")} aria-label="Email (optional)" />
-      <input className={field} required placeholder="Phone number" value={v.phone} onChange={set("phone")} aria-label="Phone number" />
-      <input className={field} required placeholder="Device model" value={v.device} onChange={set("device")} aria-label="Device model" />
-      <textarea className={`${field} h-auto py-2.5`} rows={3} placeholder="Your message" value={v.message} onChange={set("message")} aria-label="Your message" />
-      <Button type="submit" variant="whatsapp" size="lg" className="w-full"><MessageCircle aria-hidden /> Submit &amp; chat on WhatsApp</Button>
-    </form>
   );
 }

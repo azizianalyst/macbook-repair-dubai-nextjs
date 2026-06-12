@@ -18,7 +18,7 @@ export default function IPhoneFullDiagnostic() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Free Diagnostic", path: "/iphone-full-diagnostic-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone diagnostics across all models" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone diagnostics across all models" }}
       serviceName="iPhone Free Full Diagnostic"
       intro={
         <>
@@ -46,10 +46,10 @@ export default function IPhoneFullDiagnostic() {
         { title: "Battery + screen forensics", body: "True battery health (not just iOS Settings), screen brightness uniformity, True Tone calibration, original vs aftermarket detection." },
         { title: "Written report", body: "We hand you a one-page summary: what's working, what's borderline, what needs work, and the cost in writing. No obligation to repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free of charge - no warranty needed.",
-        "Any repair you book afterwards carries our standard 90-day warranty.",
+        "Any repair you book afterwards carries our standard 12-month warranty.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

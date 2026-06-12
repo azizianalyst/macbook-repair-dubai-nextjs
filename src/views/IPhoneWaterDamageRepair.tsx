@@ -54,11 +54,11 @@ export default function IPhoneWaterDamageRepair() {
         { title: "Component-level inspection + repair", body: "Each chip checked under 40x microscope. Corroded resistors, capacitors, or ICs reflowed or replaced. Quote given before component replacement begins." },
         { title: "Reassemble + 24-hour soak test", body: "Phone reassembled, charged on bench, soak-tested for 24 hours. All sensors verified (Face ID, cameras, ambient light, proximity, gyro, GPS)." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covered: cleaning quality, soldered components installed during the repair, recurrence of the same fault within 30 days.",
         "Not covered: new water exposure, latent corrosion that surfaces beyond 30 days (water damage can keep evolving), unrelated faults.",
-        "Water damage repair carries a 30-day warranty (not 90 days like other repairs) because the long-term outcome depends on how much corrosion was inside before the repair.",
+        "Water damage repair carries a 30-day warranty (not 12 months like other repairs) because the long-term outcome depends on how much corrosion was inside before the repair.",
       ]}
       comparisonRows={[
         ["Apple's official position", "Whole-device swap - water damage not covered under warranty", "AED 1,400 to AED 2,800 service unit"],
@@ -68,7 +68,7 @@ export default function IPhoneWaterDamageRepair() {
         ["Save your Face ID?",         "Yes - original sensors retained",                            "Yes - new device"],
         ["No-fix-no-charge",           "Yes - only AED 100 diagnostic",                              "No - full service price"],
         ["Time-sensitive (4-24h matters)", "Yes - emergency same-day handling",                      "Genius Bar appointment 1-3 days"],
-        ["Warranty on repair",          "30 days written",                                           "90 days on service unit"],
+        ["Warranty on repair",          "30 days written",                                           "12 months on service unit"],
       ]}
       faqs={[
         { q: "How much does iPhone water damage repair cost in Dubai?", a: "From AED 350 for a clean-only on older iPhones. AED 450 to AED 700 if light corrosion needs reflowing. AED 850 for iPhone 16/17 because the Apple Silicon BGA work is more complex. Sea water treatment is AED 950 across all models. No-fix-no-charge applies - only AED 100 diagnostic if the phone can't be saved." },

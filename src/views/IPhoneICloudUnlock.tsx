@@ -69,7 +69,7 @@ export default function IPhoneICloudUnlock() {
         { title: "Apple-side processing window", body: "Apple controls the timeline: 3 to 14 days for account recovery, 1 to 4 weeks for ownership disputes, 2 to 4 weeks for Apple Estate. Workshop tracks and chases on the customer's behalf." },
         { title: "Activation + verification", body: "When Apple approves the unlock, the device is activated on the bench with the new Apple ID. Find My disabled. Customer takes the iPhone home with a fresh Apple ID set up." },
       ]}
-      warrantyDays={30}
+      warrantyDays={0}
       warrantyBullets={[
         "Refund of the workshop's service fee if Apple refuses the unlock despite the documentation being legitimate.",
         "No-fix-no-charge applies to Apple ID recovery attempts where eligibility was misjudged.",

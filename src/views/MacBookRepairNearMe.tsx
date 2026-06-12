@@ -4,6 +4,7 @@ import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
@@ -101,7 +102,7 @@ const PICKUP_STEPS = [
   { title: "Courier collects within the booked window", body: "The MacBook Repair Dubai courier arrives in a Toyota Innova marked with the workshop logo. ID-checked, insured, and trackable on WhatsApp." },
   { title: "Free diagnosis at the workshop", body: "Shafiq inspects the device the same day. A written quote lands in your WhatsApp within 4 hours of pickup." },
   { title: "Approve the quote, get the repair", body: "Reply 'approved' on WhatsApp. Most repairs finish the same day. You receive a 'ready' message when the device is back on the courier van." },
-  { title: "Free delivery, payment on arrival", body: "Courier returns the device to your door. Pay the courier in cash, by card on a portable terminal, or by bank transfer. 90-day warranty card included." },
+  { title: "Free delivery, payment on arrival", body: "Courier returns the device to your door. Pay the courier in cash, by card on a portable terminal, or by bank transfer. 12-month warranty card included." },
 ];
 
 const FAQS = [
@@ -153,7 +154,7 @@ export default function MacBookRepairNearMe() {
         name: "MacBook Repair Near Me Dubai",
         price: 350,
         timeline: "Same day",
-        warranty: "P90D",
+        warranty: "P1Y",
         url: "/macbook-repair-near-me",
         description: "MacBook screen, battery, keyboard, and water damage repair with free door-to-door pickup across Dubai Mainland.",
       }),
@@ -164,6 +165,8 @@ export default function MacBookRepairNearMe() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/macbook-repair-near-me")?.src}
+        imageAlt={topicForPath("/macbook-repair-near-me")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Free pickup across Dubai"

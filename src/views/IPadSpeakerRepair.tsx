@@ -44,13 +44,13 @@ export default function IPadSpeakerRepair() {
         { title: "Free mesh inspection + clean", body: "Microscope at 40\u00d7. Sand, lint and pet hair extracted with a fine pick. Re-test audio. Often resolves the issue with no bill." },
         { title: "Channel test",                  body: "If clean and still faulty, we play a stereo sweep tone to isolate which speaker is dead - front-left, front-right, rear-left, rear-right." },
         { title: "Speaker module replacement",   body: "OEM-grade speaker module installed. On Air / Pro four-speaker iPads we test all four after the swap so the dynamic-routing algorithm calibrates." },
-        { title: "Audio verification",            body: "Stereo music, speaker test from Settings, FaceTime call. 90-day warranty card with the iPad." },
+        { title: "Audio verification",            body: "Stereo music, speaker test from Settings, FaceTime call. 12-month warranty card with the iPad." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new speaker module and seal.",
         "Excludes new water or sand ingress.",
-        "Free re-clean within 90 days if mesh re-clogs.",
+        "Free re-clean within 12 months if mesh re-clogs.",
       ]}
       faqs={[
         { q: "Why does iPad Pro\u2019s four-speaker setup sound different from iPad?", a: "Apple uses dynamic audio routing - when you flip the iPad Pro into landscape, the iPad detects orientation and assigns left and right channels accordingly. Bass and treble are also dynamically split between top and bottom speakers. Replacing one speaker requires the algorithm to re-balance, which happens automatically after reboot." },

@@ -48,7 +48,7 @@ export default function IPadIcloudUnlock() {
       warrantyDays={0}
       warrantyBullets={[
         "Consultation only - no warranty applies (we make no claims to unlock).",
-        "If we install software after Apple unlocks, that work carries our standard 90-day warranty.",
+        "If we install software after Apple unlocks, that work carries our standard 12-month warranty.",
         "We do not guarantee Apple will accept any specific case - we give you our honest read.",
       ]}
       faqs={[

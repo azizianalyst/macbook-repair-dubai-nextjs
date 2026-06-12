@@ -13,6 +13,8 @@
 //     zero risk of a price mismatch vs the visible page price; adding accurate per-page
 //     Offers is a safe follow-up once a verified price-per-route map exists).
 import { SITE } from "./seo";
+import { licensedImage } from "./schema";
+import { imageForRoute } from "./page-images";
 import { BUSINESS_ID } from "./schema";
 
 const ACRONYMS: Record<string, string> = {
@@ -39,9 +41,14 @@ const SERVICE_RE = /(repair|replacement|replace|recovery|diagnostic|removal|clea
 
 export function schemaForPath(path: string): unknown[] {
   if (!path || path === "/") return [];
-  if (SELF_OR_NON_SERVICE.test(path)) return [];
-  if (INFORMATIONAL.test(path)) return [];
-  if (!SERVICE_RE.test(path)) return [];
+  // Licensable ImageObject for every route with a topic infographic - drives
+  // Google Images attribution + the "Licensable" badge (license terms at
+  // /image-usage-license). Additive: emitted alongside any other node.
+  const img = imageForRoute(path);
+  const imageNodes = img ? [licensedImage({ src: img.src, alt: img.alt, pagePath: path })] : [];
+  if (SELF_OR_NON_SERVICE.test(path)) return imageNodes;
+  if (INFORMATIONAL.test(path)) return imageNodes;
+  if (!SERVICE_RE.test(path)) return imageNodes;
 
   const seg = path.replace(/^\/+|\/+$/g, "").split("/");
   const name = titleCase(seg[seg.length - 1]);
@@ -64,5 +71,5 @@ export function schemaForPath(path: string): unknown[] {
     termsOfService: `${SITE.url}/warranty`,
   };
 
-  return [serviceNode];
+  return [serviceNode, ...imageNodes];
 }

@@ -18,7 +18,7 @@ export default function IPhoneHeadphoneJackRepair() {
         { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Headphone Jack",  path: "/iphone-headphone-jack-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone audio and connector repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone audio and connector repair" }}
       serviceName="iPhone Headphone Jack Repair"
       intro={
         <>
@@ -43,13 +43,13 @@ export default function IPhoneHeadphoneJackRepair() {
         { title: "Free socket inspection",   body: "Microscope look inside the jack - most cases are debris. We extract with a fine pick, no charge." },
         { title: "Test with known-good cable", body: "If clean and still faulty, we plug in a working 3.5mm cable to confirm the socket itself, not your headphones." },
         { title: "Replace jack assembly",     body: "On iPhone 6/6S the jack is part of the charging-port flex. We swap the whole flex (includes free new charging port too). On older models the jack is its own module." },
-        { title: "Audio test + warranty",     body: "Stereo, microphone (headphones with mic), volume controls. 90-day warranty card with the phone." },
+        { title: "Audio test + warranty",     body: "Stereo, microphone (headphones with mic), volume controls. 12-month warranty card with the phone." },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "Covers the new jack module / flex.",
         "Excludes new debris ingress.",
-        "Free re-clean if symptoms return within 90 days.",
+        "Free re-clean if symptoms return within 12 months.",
       ]}
       faqs={[
         { q: "Why did Apple remove the headphone jack?", a: "Apple's stated reason was internal space for Taptic Engine and improved water resistance. Whether you agree or not, every iPhone from 7 onwards uses Lightning or (from iPhone 15) USB-C for wired audio. We sell adapters." },
