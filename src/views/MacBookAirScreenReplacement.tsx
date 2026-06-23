@@ -248,7 +248,7 @@ export default function MacBookAirScreenReplacement() {
             title="MacBook Air screen replacement cost Dubai"
             sub="Panel + labour + warranty all-in from AED 450. No diagnostic fee, no adhesive surcharge. Prices by model below."
           />
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -353,7 +353,7 @@ export default function MacBookAirScreenReplacement() {
             />
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
               {PICKUP_STEPS.map((s) => (
-                <div key={s.n} className="rounded-2xl border border-border bg-bg-card p-lg flex flex-col gap-sm">
+                <div key={s.n} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm">
                   <p className="text-[48px] font-bold leading-none text-accent/20 select-none">{s.n}</p>
                   <h3 className="text-[17px] font-semibold text-text">{s.title}</h3>
                   <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
@@ -378,7 +378,7 @@ export default function MacBookAirScreenReplacement() {
           />
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="w-full lg:w-[42%] shrink-0">
-              <figure className="overflow-hidden rounded-2xl border border-border bg-bg-card">
+              <figure className="overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
                 <ResponsiveImage
                   src={IMG.signs.src}
                   alt={IMG.signs.alt}
@@ -391,7 +391,7 @@ export default function MacBookAirScreenReplacement() {
             </div>
             <ul className="flex-1 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               {SIGNS.map(({ Icon, label, body }) => (
-                <li key={label} className="flex items-start gap-4 rounded-xl border border-border bg-bg-card p-4">
+                <li key={label} className="flex items-start gap-4 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
                     <Icon size={19} className="text-accent" strokeWidth={1.75} aria-hidden />
                   </div>
@@ -459,7 +459,7 @@ export default function MacBookAirScreenReplacement() {
         {/* ── FAQ ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">
                 Frequently asked questions — MacBook Air screen replacement Dubai
@@ -520,7 +520,7 @@ export default function MacBookAirScreenReplacement() {
               ["How long do MacBooks last?",                       "/do-macbooks-last-over-a-decade"],
             ] as [string, string][]).map(([label, href]) => (
               <Link key={href} to={href}
-                className="flex items-start rounded-xl border border-border bg-bg-card p-4 hover:border-accent/50 transition-colors group">
+                className="flex items-start rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors group">
                 <span className="text-[14px] font-medium text-text leading-snug group-hover:text-accent">{label}</span>
               </Link>
             ))}

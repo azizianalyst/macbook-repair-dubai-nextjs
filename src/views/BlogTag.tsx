@@ -80,7 +80,7 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
                 aria-current={t.slug === slug ? "page" : undefined}
                 className={`text-[13px] font-medium rounded-full px-md py-1.5 border transition-colors ${
                   t.slug === slug
-                    ? "border-accent/60 bg-accent/15 text-accent"
+                    ? "border-accent/60 bg-accent/10 text-accent"
                     : "border-border bg-bg-card hover:border-accent/50 hover:text-accent"
                 }`}
               >
@@ -100,7 +100,7 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
                 <Link
                   key={p.slug}
                   to={p.slug}
-                  className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
+                  className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
                 >
                   <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
                   <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>

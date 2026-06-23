@@ -116,7 +116,7 @@ export default function BestIPhoneRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">4 things to check before choosing an iPhone repair shop in Dubai</h2>
           <div className="grid gap-md md:grid-cols-2">
             {CRITERIA.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <Icon size={24} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[17px] font-bold mb-sm">{title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
@@ -201,7 +201,7 @@ export default function BestIPhoneRepair() {
         <VsAppleStore tone="dark" />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get the best iPhone repair in Dubai today</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · 40-min screen · Face ID preserved · Warranty up to 12 months.</p>

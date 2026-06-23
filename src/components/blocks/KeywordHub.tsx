@@ -63,7 +63,7 @@ export default function KeywordHub() {
       </div>
 
       {/* Combined summary report */}
-      <div className="mb-lg rounded-md border border-border bg-bg-card p-md">
+      <div className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <p className="m-0 mb-3 text-[12px] font-semibold uppercase tracking-wide text-text-faint">Overview</p>
         {loading ? (
           <div className="flex items-center gap-2 text-[13px] text-text-faint"><Loader2 size={14} className="animate-spin" /> Loading summary…</div>

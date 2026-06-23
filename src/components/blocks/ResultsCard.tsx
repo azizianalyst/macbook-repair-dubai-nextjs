@@ -29,7 +29,7 @@ const TONE_DOT: Record<ResultsCardStatusTone, string> = {
 function StatusPill({ label, tone = "live" }: { label: string; tone?: ResultsCardStatusTone }) {
   const dot = TONE_DOT[tone];
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-2.5 py-1 text-xs font-medium text-white/80">
+    <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-1 text-xs font-medium text-white/80">
       <span className="relative inline-flex h-2 w-2">
         <span
           className={cn(
@@ -63,7 +63,7 @@ export function ResultsCard({
 
   return (
     <Reveal className={cn("relative", className)}>
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-md shadow-lg backdrop-blur-xl sm:p-lg">
+      <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md shadow-lg backdrop-blur-xl sm:p-lg">
         {/* Header row */}
         <div className="flex items-start gap-3">
           {Icon ? (
@@ -95,7 +95,7 @@ export function ResultsCard({
             {tiles.map((s, i) => (
               <div
                 key={`${s.label}-${i}`}
-                className="rounded-md border border-border bg-bg-card p-4"
+                className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4"
               >
                 <div className="text-3xl font-extrabold leading-none text-text sm:text-4xl">
                   <CountUp value={s.value} />
@@ -108,7 +108,7 @@ export function ResultsCard({
 
         {/* Optional breakdown list */}
         {breakdown && breakdown.length > 0 ? (
-          <div className="mt-md divide-y divide-white/10 rounded-md border border-border bg-bg-card">
+          <div className="mt-md divide-y divide-white/10 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             {breakdown.map((row, i) => (
               <div
                 key={`${row.name}-${i}`}

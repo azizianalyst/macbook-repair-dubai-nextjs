@@ -168,10 +168,10 @@ export default function BacklinksAdmin() {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <button onClick={openNew} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><Plus size={14} /> Add</button>
-          <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
-          <button onClick={exportDisavow} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><ShieldAlert size={14} /> disavow.txt</button>
-          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> CSV</button>
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
+          <button onClick={exportDisavow} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><ShieldAlert size={14} /> disavow.txt</button>
+          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> CSV</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       </div>
 
@@ -179,7 +179,7 @@ export default function BacklinksAdmin() {
 
       <div className="mb-md grid grid-cols-2 gap-3 sm:grid-cols-5">
         {cards.map((s) => (
-          <div key={s.label} className="rounded-md border border-border bg-bg-card p-md">
+          <div key={s.label} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{s.label}</p>
             <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: s.c }}>{s.value}</p>
           </div>
@@ -190,12 +190,12 @@ export default function BacklinksAdmin() {
         <div className="relative min-w-[220px] flex-1 max-w-md">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search site, anchor, target, notes…"
-            className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={kindFilter} onChange={(e) => setKindFilter(e.target.value as typeof kindFilter)} className="rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={kindFilter} onChange={(e) => setKindFilter(e.target.value as typeof kindFilter)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="All">All kinds</option><option value="prospect">Prospects</option><option value="inbound">Inbound</option>
         </select>
-        <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as typeof statusFilter)} className="rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as typeof statusFilter)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="All">All statuses</option>
           {STATUSES.map((s) => <option key={s} value={s}>{s} ({stats?.byStatus?.[s] ?? 0})</option>)}
         </select>
@@ -329,7 +329,7 @@ function ImportDialog({ onClose, onDone }: { onClose: () => void; onDone: () => 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-5" role="dialog" aria-modal="true">
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
-      <div className="relative w-full max-w-lg rounded-md border border-border bg-bg-card p-lg shadow-2xl">
+      <div className="relative w-full max-w-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-2xl">
         <div className="mb-md flex items-center justify-between"><h2 className="m-0 text-[18px] text-text">Import CSV</h2><button onClick={onClose} className="rounded-md p-1.5 text-text-muted hover:bg-bg-alt"><X size={18} /></button></div>
         <p className="mb-sm text-[13px] text-text-muted">Paste CSV with a header row. Recognised columns: site, source url, target page, anchor text, dr, country, contact email, notes. (Works with the GSC Links export and the workbook tabs.)</p>
         <div className="mb-sm flex items-center gap-2 text-[13px]">
@@ -347,7 +347,7 @@ function ImportDialog({ onClose, onDone }: { onClose: () => void; onDone: () => 
   );
 }
 
-const inp = "w-full rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
+const inp = "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return <label className="block"><span className="mb-1 block text-[12px] text-text-faint">{label}</span>{children}</label>;
 }

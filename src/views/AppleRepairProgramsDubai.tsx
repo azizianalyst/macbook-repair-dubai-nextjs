@@ -227,7 +227,7 @@ export default function AppleRepairProgramsDubai() {
             { t: "3. Apple Store visit", b: "Walk into Apple Mall of the Emirates or Apple Dubai Mall with the device and a Genius Bar booking. They run the diagnostic on Apple's bench tools." },
             { t: "4. Bring it to us", b: "WhatsApp 055 741 3706 or walk into Concord Tower Media City. We check eligibility free of charge - and tell you honestly if Apple should fix it free." },
           ].map((s) => (
-            <li key={s.t} className="border border-border bg-bg-card rounded-md p-lg">
+            <li key={s.t} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <p className="font-bold text-[16px] mb-1">{s.t}</p>
               <p className="text-[14px] text-text-muted leading-relaxed">{s.b}</p>
             </li>
@@ -260,15 +260,15 @@ export default function AppleRepairProgramsDubai() {
           The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme - typically AED 600 to AED 1,500 depending on the part, with a written warranty up to 12 months and same-day turnaround for most common jobs. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
         </p>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
-          <Link to="/macbook-keyboard-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
+          <Link to="/macbook-keyboard-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook keyboard repair</p>
             <p className="text-[13px] text-text-muted mt-1">Butterfly era top-case replacement - from AED 700</p>
           </Link>
-          <Link to="/iphone-screen-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
+          <Link to="/iphone-screen-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">iPhone display module</p>
             <p className="text-[13px] text-text-muted mt-1">iPhone X / 11 touch issues - from AED 500</p>
           </Link>
-          <Link to="/macbook-screen-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
+          <Link to="/macbook-screen-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook display / Flexgate</p>
             <p className="text-[13px] text-text-muted mt-1">Flex cable AED 600 · Full display AED 800</p>
           </Link>
@@ -283,7 +283,7 @@ export default function AppleRepairProgramsDubai() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Common scenarios</h2>
         <div className="grid gap-md md:grid-cols-2">
           {SCENARIOS.map((s) => (
-            <article key={s.q} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={s.q} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <p className="font-bold text-[16px] mb-1">{s.q}</p>
               <p className="text-[14px] text-text-muted leading-relaxed">{s.a}</p>
             </article>
@@ -293,7 +293,7 @@ export default function AppleRepairProgramsDubai() {
 
       {/* 8. CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Don't pay for repairs without checking first</h2>
           <p className="text-text-muted text-[16px] max-w-[64ch]">

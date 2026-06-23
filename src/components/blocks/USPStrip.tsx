@@ -9,7 +9,7 @@ const ICONS: Record<string, LucideIcon> = { Award, BadgeCheck, Clock, Laptop, Se
 export function USPStrip({ items = USPS, tone = "light" }: { items?: typeof USPS; tone?: "light" | "dark" }) {
   const dark = tone === "dark";
   return (
-    <div className={cn("border-y", dark ? "border border-border bg-bg-card" : "bg-bg-alt border-border")}>
+    <div className={cn("border-y", dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "bg-bg-alt border-border")}>
       <ul className="mx-auto max-w-content px-5 md:px-6 py-md grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-md">
         {items.map((u) => {
           const Icon = ICONS[u.icon] ?? ShieldCheck;

@@ -41,7 +41,7 @@ export default function PublishAdmin() {
         <span>Your site is <strong className="text-text">static</strong> (fast + secure). Edits you save in the admin go live when the site is <strong className="text-text">rebuilt &amp; deployed</strong>. Click Publish to push everything live at once.</span>
       </div>
 
-      <div className="max-w-xl rounded-md border border-border bg-bg-card p-lg">
+      <div className="max-w-xl rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
         <h2 className="m-0 text-[18px] text-text">Publish changes live</h2>
         <p className="m-0 mt-1 text-[13px] text-text-muted">This rebuilds the site with all your saved edits — posts, prices, pages, menus, locations, reviews, settings — and deploys it. Takes a few minutes.</p>
 

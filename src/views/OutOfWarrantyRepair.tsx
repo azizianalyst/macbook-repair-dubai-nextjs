@@ -112,7 +112,7 @@ export default function OutOfWarrantyRepair() {
             {COVERED.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
@@ -128,7 +128,7 @@ export default function OutOfWarrantyRepair() {
           <ShieldCheck size={28} className="text-accent" aria-hidden /> Still under AppleCare? Here's the honest advice
         </h2>
         <div className="grid gap-md md:grid-cols-2">
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Use Apple when…</h3>
             <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare is active and the fault is covered", "The repair is a known recall / service programme", "You need to keep a manufacturer service record"].map((t) => (
@@ -136,7 +136,7 @@ export default function OutOfWarrantyRepair() {
               ))}
             </ul>
           </article>
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Use us when…</h3>
             <ul className="space-y-2 text-[15px] text-text-muted">
               {["Warranty / AppleCare has expired", "Liquid, accidental or wear damage Apple won't cover", "You want a component-level fix at roughly half the price"].map((t) => (
@@ -162,7 +162,7 @@ export default function OutOfWarrantyRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get an out-of-warranty quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send the model and a photo of the issue on WhatsApp. Free diagnosis, written quote, genuine parts and a warranty of up to 12 months.

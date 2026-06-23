@@ -218,7 +218,7 @@ export default function MacBookDataRecovery() {
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {COMMON_SCENARIOS.map((p) => (
-                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={p.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm">{p.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
@@ -267,7 +267,7 @@ export default function MacBookDataRecovery() {
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
               <ShieldCheck size={28} className="text-accent" aria-hidden /> Recovery guarantee
             </h2>
-            <div className="border border-border bg-bg-card rounded-md p-lg">
+            <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>No recovery, no labour charge.</strong> If the file preview is empty or doesn't include what you need, you pay AED 0 for the labour - only forensic media costs (typically AED 0-200) if used.</li>
                 <li><strong>7-day verification window</strong> after handover. If a needed file is missing or corrupted, the workshop re-attempts free of charge.</li>
@@ -315,7 +315,7 @@ export default function MacBookDataRecovery() {
                   <li>Free trial of Disk Drill or PhotoRec for logical recovery on external drives - only safe to run when the drive is healthy and target is different.</li>
                 </ul>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">Stop and bring it in</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Hardware failure (won't power on, board damage, water) - DIY tools can't reach a dead board.</li>
@@ -400,7 +400,7 @@ export default function MacBookDataRecovery() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Files trapped on a dead MacBook? Free diagnosis - quote in 30 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Stop using the MacBook. WhatsApp the model and what happened. Free 30-minute diagnosis with honest success rate before any payment.

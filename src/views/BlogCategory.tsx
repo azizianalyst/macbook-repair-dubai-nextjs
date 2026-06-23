@@ -89,7 +89,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
           <div className="flex flex-wrap gap-2">
             <Link
               to="/blog"
-              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] hover:border-accent/50 hover:text-accent transition-colors"
             >
               All posts
             </Link>
@@ -100,7 +100,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
                 aria-current={c.slug === slug ? "page" : undefined}
                 className={`text-[13px] font-medium rounded-full px-md py-1.5 border transition-colors ${
                   c.slug === slug
-                    ? "border-accent/60 bg-accent/15 text-accent"
+                    ? "border-accent/60 bg-accent/10 text-accent"
                     : "border-border bg-bg-card hover:border-accent/50 hover:text-accent"
                 }`}
               >
@@ -126,7 +126,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
               <Link
                 key={p.slug}
                 to={p.slug}
-                className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
+                className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
               >
                 <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
                 <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">Why Us. Sell Trade In. Repair Costs. Fixes. Care Maintenance. Buying Guides. Apple News, {p.title}</h2>
@@ -149,7 +149,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
               <Link
                 key={c.slug}
                 to={`/blog/${c.slug}`}
-                className="group flex items-center justify-between gap-md border border-border bg-bg-card rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
+                className="group flex items-center justify-between gap-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
               >
                 <span className="text-[15px] font-medium group-hover:text-accent">
                   {c.name} <span className="text-text-muted">({counts[c.slug]})</span>

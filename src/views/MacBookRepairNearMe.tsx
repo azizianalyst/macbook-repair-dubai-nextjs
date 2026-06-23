@@ -214,7 +214,7 @@ export default function MacBookRepairNearMe() {
             ["Dubai Silicon Oasis", "/macbook-repair-silicon-oasis"],
             ["Dubai Internet City", "/macbook-repair-internet-city"],
           ].map(([label, href]) => (
-            <Link key={href} to={href} className="px-3.5 py-1.5 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-accent/15 hover:border-accent/40 transition-colors">MacBook Repair {label} →</Link>
+            <Link key={href} to={href} className="px-3.5 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:bg-accent/10 hover:border-accent/40 transition-colors">MacBook Repair {label} →</Link>
           ))}
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function MacBookRepairNearMe() {
         </p>
         <div className="grid gap-md md:grid-cols-2">
           {LANDMARKS.map((l) => (
-            <article key={l.name} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+            <article key={l.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex gap-md">
               <Navigation size={24} className="text-accent shrink-0 mt-1" aria-hidden />
               <div>
                 <p className="font-bold text-[16px]">{l.name} <span className="mono text-[13px] text-text-faint font-normal">· {l.distance}</span></p>
@@ -275,8 +275,8 @@ export default function MacBookRepairNearMe() {
           <h2 className="text-[28px] md:text-[32px] mb-md">How free pickup works - 5 steps</h2>
           <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
             {PICKUP_STEPS.map((s, i) => (
-              <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
-                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
+              <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
                   {i + 1}
                 </span>
                 <p className="font-bold text-[16px] mb-1">{s.title}</p>
@@ -289,21 +289,21 @@ export default function MacBookRepairNearMe() {
 
       {/* Parking + transit notes */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl grid gap-lg md:grid-cols-3">
-        <article className="border border-border bg-bg-card rounded-md p-lg">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
           <ParkingCircle size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Parking</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
             Paid tower parking AED 5/hour, AED 25/day cap. Free street parking on Al Sufouh Road (8-minute walk). Valet at the tower lobby AED 30 flat. EV charging (3 stations) on level B2.
           </p>
         </article>
-        <article className="border border-border bg-bg-card rounded-md p-lg">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
           <Train size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Metro & bus</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
             Media City Metro (Red Line) is 120 metres away. Bus routes 8, 88, and X28 stop at Media City Metro. RTA taxis queue 24/7 at the tower entrance.
           </p>
         </article>
-        <article className="border border-border bg-bg-card rounded-md p-lg">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
           <Clock size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Best time to visit</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">

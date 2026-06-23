@@ -271,11 +271,11 @@ export default function MacBookWaterDamageRepair() {
                 <h3 className="text-[18px] font-bold mb-sm text-text">1-2 days</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Clean spill (water), under 24 hours from incident, no powered-on attempts. Ultrasonic clean + 48-hour dry + 7-day soak test.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">2-3 days</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Coffee, juice, sugary drinks (sugar film needs deeper clean). Beach or pool water with mild corrosion. Keyboard membrane swap if it didn't survive.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">3-5 days</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Logic board component-level work - corroded chips replaced under microscope with hot air rework. Salt water with deep corrosion. Late arrivals (over a week from spill).</p>
               </article>
@@ -317,7 +317,7 @@ export default function MacBookWaterDamageRepair() {
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
             </h2>
-            <div className="border border-border bg-bg-card rounded-md p-lg">
+            <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>12 months</strong> - written warranty on the repair work and any parts fitted.</li>
                 <li><strong>Covered:</strong> the specific corrosion repair completed, replacement parts (keyboard, battery, chips), the soak-test result.</li>

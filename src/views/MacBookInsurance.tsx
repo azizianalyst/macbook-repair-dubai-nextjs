@@ -167,7 +167,7 @@ export default function MacBookInsurance() {
           </h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {COVERAGE.map((c) => (
-              <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {c.title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed m-0">{c.body}</p>
               </article>
@@ -192,7 +192,7 @@ export default function MacBookInsurance() {
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s) => (
-            <article key={s.n} className="border border-border bg-bg-card rounded-md p-lg flex flex-col">
+            <article key={s.n} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col">
               <span className="text-[28px] font-bold text-accent mb-sm">{s.n}</span>
               <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
               <p className="text-[14px] text-text-muted leading-relaxed m-0">{s.body}</p>
@@ -209,7 +209,7 @@ export default function MacBookInsurance() {
           </h2>
           <div className="grid gap-md md:grid-cols-3">
             {WHY.map((w) => (
-              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2"><Search size={18} className="text-accent" aria-hidden /> {w.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed m-0">{w.body}</p>
               </article>
@@ -237,7 +237,7 @@ export default function MacBookInsurance() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get your MacBook insurance quote on WhatsApp</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Free device assessment, custom plans for individuals and companies. WhatsApp your MacBook model and we'll quote the annual fee per device - no fixed public price, no obligation until you approve.

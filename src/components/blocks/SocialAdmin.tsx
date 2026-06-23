@@ -104,7 +104,7 @@ export default function SocialAdmin() {
       {configured && <p className="mb-md inline-flex items-center gap-1.5 rounded-md border border-whatsapp/40 bg-whatsapp/10 px-2.5 py-1 text-[12px] text-whatsapp"><CheckCircle2 size={13} /> Facebook connected</p>}
 
       {/* Composer */}
-      <div className="mb-lg rounded-md border border-border bg-bg-card p-md">
+      <div className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <p className="m-0 mb-2 text-[13px] font-semibold text-text">New post</p>
         <textarea value={text} onChange={(e) => setText(e.target.value)} rows={4} placeholder="What do you want to post?" className={inp} />
         <div className="mt-2 grid gap-2 sm:grid-cols-2">

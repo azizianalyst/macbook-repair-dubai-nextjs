@@ -206,7 +206,7 @@ export default function MacBookKernelPanic() {
 
         {/* How to find crash logs */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <div className="rounded-2xl border border-border bg-bg-card p-lg md:p-xl">
+          <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl">
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Before you come in</p>
             <h2 className="text-[26px] md:text-[32px] font-bold tracking-tight text-text leading-[1.15] mb-md">
               How to find your kernel panic crash logs
@@ -220,7 +220,7 @@ export default function MacBookKernelPanic() {
                 "Screenshot the list and send it on WhatsApp -- it speeds up diagnosis significantly.",
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-md">
-                  <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-accent/15 text-accent text-[13px] font-bold mt-0.5">{i + 1}</span>
+                  <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-accent/10 text-accent text-[13px] font-bold mt-0.5">{i + 1}</span>
                   <span className="text-[15px] text-text-muted leading-relaxed">{step}</span>
                 </li>
               ))}
@@ -240,9 +240,9 @@ export default function MacBookKernelPanic() {
             </h2>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {CAUSES.map((c) => (
-                <div key={c.title} className="rounded-2xl border border-border bg-bg-card p-lg flex flex-col gap-sm">
+                <div key={c.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm">
                   <div className="flex items-center gap-sm">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 shrink-0">{c.icon}</span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0">{c.icon}</span>
                     <span className="inline-flex items-center rounded-full bg-accent/10 border border-accent/20 px-2.5 py-0.5 text-[12px] font-medium text-accent">{c.price}</span>
                   </div>
                   <h3 className="m-0 text-text text-[16px] font-bold">{c.title}</h3>
@@ -259,7 +259,7 @@ export default function MacBookKernelPanic() {
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
             MacBook kernel panic repair pricing
           </h2>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[480px]">
               <thead>
                 <tr className="border-b border-border">

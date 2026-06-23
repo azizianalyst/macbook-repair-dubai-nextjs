@@ -180,7 +180,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
                 whatsappMessage={p.whatsappPrefill}
                 tone="dark"
               />
-              <div className="border border-border bg-bg-card rounded-md p-lg flex flex-col justify-center">
+              <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col justify-center">
                 <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-text">
                   <ShieldCheck size={20} className="text-accent" aria-hidden /> {warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises"}
                 </h3>
@@ -245,7 +245,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
                 <h2 className="text-[28px] md:text-[32px] mb-md text-text">Other iPhone models we repair</h2>
                 <div className="flex flex-wrap gap-sm">
                   {otherIphoneModels.map((m) => (
-                    <Link key={m.slug} to={m.slug} className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+                    <Link key={m.slug} to={m.slug} className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                       {m.label} repair
                     </Link>
                   ))}

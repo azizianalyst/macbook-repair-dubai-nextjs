@@ -159,12 +159,12 @@ export default function AppleServiceCenter() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <ul className="flex flex-wrap gap-2 mb-lg">
           {BADGES.map((b) => (
-            <li key={b} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[14px] text-text">{b}</li>
+            <li key={b} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-text">{b}</li>
           ))}
         </ul>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
           {VALUES.map((v) => (
-            <article key={v.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={v.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-1">{v.title}</h3>
               <p className="text-[14px] text-text-muted">{v.body}</p>
             </article>
@@ -179,7 +179,7 @@ export default function AppleServiceCenter() {
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">MacBook Pro / Air services - we also service iPhone, iPad and iMac. The most-requested MacBook repairs:</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
               </article>
@@ -195,7 +195,7 @@ export default function AppleServiceCenter() {
         <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Before bringing in your Apple device, follow a few important steps to keep your data safe and protected:</p>
         <div className="grid gap-md sm:grid-cols-2">
           {PREP_STEPS.map((g) => (
-            <article key={g.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={g.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{g.title}</h3>
               <ul className="space-y-2">
                 {g.items.map((it) => (
@@ -214,7 +214,7 @@ export default function AppleServiceCenter() {
           <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Regular maintenance and timely repairs prolong the life of your Apple device. Visit our service center in these situations:</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
             {WHEN.map((w) => (
-              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[16px] font-bold mb-sm">{w.title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">{w.body}</p>
               </article>
@@ -229,7 +229,7 @@ export default function AppleServiceCenter() {
         <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">We are committed to providing incredible service. Our team collaborates closely with you to develop a comprehensive plan for any upgrade or servicing needs. Choose us for the following reasons:</p>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
           {BENEFITS.map((b) => (
-            <article key={b.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={b.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[16px] font-bold mb-sm">{b.title}</h3>
               <p className="text-[14px] text-text-muted leading-relaxed">{b.body}</p>
             </article>
@@ -247,7 +247,7 @@ export default function AppleServiceCenter() {
           <p className="text-[16px] text-text-muted mb-lg">Don't take just our word for it - our satisfied customers say it best.</p>
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
+              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
@@ -265,7 +265,7 @@ export default function AppleServiceCenter() {
         <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too. These tools help ensure Apple devices are repaired safely, efficiently, and in accordance with Apple's standards.</p>
         <ul className="flex flex-wrap gap-2">
           {TOOLS.map((t) => (
-            <li key={t} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text-muted">{t}</li>
+            <li key={t} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text-muted">{t}</li>
           ))}
         </ul>
       </section>
@@ -284,7 +284,7 @@ export default function AppleServiceCenter() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">

@@ -133,7 +133,7 @@ export default function OnsiteMacBookRepair() {
           </h2>
           <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
             {STEPS.map((s, i) => (
-              <li key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <li key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <span className="mono text-[13px] text-accent">Step {i + 1}</span>
                 <h3 className="text-[17px] font-bold mb-sm mt-1">{s.title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed m-0">{s.body}</p>
@@ -153,7 +153,7 @@ export default function OnsiteMacBookRepair() {
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
           {HANDLED.map((i) => (
-            <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {i.title}</h3>
               <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
             </article>
@@ -172,7 +172,7 @@ export default function OnsiteMacBookRepair() {
           </p>
           <ul className="grid gap-sm grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 list-none p-0 m-0">
             {AREAS.map((a) => (
-              <li key={a} className="border border-border bg-bg-card rounded-md px-md py-sm text-[15px] font-semibold flex items-center gap-2">
+              <li key={a} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md px-md py-sm text-[15px] font-semibold flex items-center gap-2">
                 <MapPin size={16} className="text-accent shrink-0" aria-hidden /> {a}
               </li>
             ))}
@@ -191,7 +191,7 @@ export default function OnsiteMacBookRepair() {
             { title: "Same-day on most repairs", body: "Common screen and battery jobs are collected, repaired and returned the same day across Dubai mainland." },
             { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a written warranty up to 12 months." },
           ].map((c) => (
-            <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
               <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
             </article>
@@ -216,7 +216,7 @@ export default function OnsiteMacBookRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book a free MacBook pickup across Dubai</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Message your MacBook model and your area and we will arrange same-hour or same-day collection. Free pickup, free delivery, free diagnosis - you only pay for the repair, quoted before we start.

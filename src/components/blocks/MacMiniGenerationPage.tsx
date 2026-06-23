@@ -248,7 +248,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
             title={`Mac mini ${p.chip} models we repair`}
             sub={`All ${p.chip} Mac mini variants from ${p.years}. Tap a model for its dedicated repair page.`}
           />
-          <div className="rounded-2xl border border-border bg-bg-card p-lg">
+          <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
             <div className="flex items-center gap-xs mb-md">
               <span
                 className="inline-flex items-center px-[7px] py-[2px] rounded text-[10px] font-bold tracking-widest uppercase"
@@ -337,7 +337,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
           />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNS.map(({ Icon, label, body }) => (
-              <li key={label} className="flex items-start gap-4 rounded-xl border border-border bg-bg-card p-4">
+              <li key={label} className="flex items-start gap-4 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
                   <Icon size={19} className="text-accent" strokeWidth={1.75} aria-hidden />
                 </div>
@@ -391,7 +391,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">
                 Frequently asked questions

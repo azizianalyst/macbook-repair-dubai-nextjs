@@ -40,7 +40,7 @@ export default function AdminLogin({ googleEnabled = false }: { googleEnabled?: 
   }
 
   return (
-    <div className="w-full max-w-sm rounded-md border border-border bg-bg-card p-xl">
+    <div className="w-full max-w-sm rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl">
       <div className="mb-md flex items-center gap-2 text-text">
         <Lock size={18} className="text-accent" />
         <h1 className="m-0 text-[20px]">Admin sign in</h1>
@@ -53,7 +53,7 @@ export default function AdminLogin({ googleEnabled = false }: { googleEnabled?: 
         <>
           <a
             href="/api/admin/auth/login/"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border bg-bg-card px-4 py-2.5 font-semibold text-text hover:bg-bg-alt"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2.5 font-semibold text-text hover:bg-bg-alt"
           >
             <GoogleMark /> Sign in with Google
           </a>
@@ -66,7 +66,7 @@ export default function AdminLogin({ googleEnabled = false }: { googleEnabled?: 
       <form onSubmit={submitKey} className="grid gap-sm">
         <input
           type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder="Admin key"
-          className="rounded-md border border-border bg-bg-card px-3 py-2.5 text-text placeholder:text-text-faint focus:border-accent focus:outline-none"
+          className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2.5 text-text placeholder:text-text-faint focus:border-accent focus:outline-none"
         />
         <button
           type="submit" disabled={busy || !key}

@@ -68,7 +68,7 @@ const servicesFor = (m: Model) => {
 const aed = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const SELECT =
-  "w-full rounded-md border border-border bg-bg-card px-3.5 h-11 text-[15px] text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
+  "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 h-11 text-[15px] text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 
 export function QuoteCalculator() {
   const [typeIdx, setTypeIdx] = useState(0);
@@ -98,7 +98,7 @@ export function QuoteCalculator() {
   const waHref = `${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   return (
-    <div className="rounded-md border border-border bg-bg-card p-lg md:p-xl">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl">
       <div className="grid gap-md sm:grid-cols-3">
         <label className="block">
           <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Device</span>

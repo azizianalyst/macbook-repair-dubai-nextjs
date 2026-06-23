@@ -67,7 +67,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Needs attention */}
-      <div className="mb-lg rounded-md border border-border bg-bg-card p-md">
+      <div className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <p className="m-0 mb-2 flex items-center gap-2 text-[13px] font-semibold text-text"><AlertTriangle size={15} className="text-[#f59e0b]" /> Needs attention</p>
         {alerts.length === 0 ? (
           <p className="m-0 flex items-center gap-2 text-[13px] text-whatsapp"><CheckCircle2 size={15} /> All clear — nothing needs attention right now.</p>
@@ -119,7 +119,7 @@ export default function AdminDashboard() {
       <p className="m-0 mb-2 text-[12px] font-semibold uppercase tracking-wide text-text-faint">Manage</p>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
         {LAUNCH.map(({ href, label, Icon }) => (
-          <Link key={href + label} href={href} className="group flex items-center gap-2 rounded-md border border-border bg-bg-card px-3 py-2.5 text-[13px] text-text transition-colors hover:border-accent">
+          <Link key={href + label} href={href} className="group flex items-center gap-2 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2.5 text-[13px] text-text transition-colors hover:border-accent">
             <Icon size={16} className="text-accent" /> <span className="group-hover:text-accent">{label}</span>
           </Link>
         ))}
@@ -147,7 +147,7 @@ const LAUNCH: { href: string; label: string; Icon: typeof Newspaper }[] = [
 
 function Metric({ label, value, sub, Icon, color }: { label: string; value: React.ReactNode; sub?: string; Icon: typeof Gauge; color?: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 flex items-center gap-1.5 text-[12px] uppercase tracking-wide text-text-faint"><Icon size={13} /> {label}</p>
       <p className="m-0 mt-1 text-[28px] font-bold" style={{ color: color || "var(--text)" }}>{value}</p>
       {sub && <p className="m-0 text-[11px] text-text-faint">{sub}</p>}
@@ -157,7 +157,7 @@ function Metric({ label, value, sub, Icon, color }: { label: string; value: Reac
 
 function Panel({ title, href, Icon, children }: { title: string; href: string; Icon: typeof Gauge; children: React.ReactNode }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <div className="mb-2 flex items-center justify-between">
         <p className="m-0 flex items-center gap-1.5 text-[13px] font-semibold text-text"><Icon size={15} className="text-accent" /> {title}</p>
         <Link href={href} className="text-[12px] text-accent hover:underline">Open</Link>

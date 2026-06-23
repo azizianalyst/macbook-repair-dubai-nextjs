@@ -37,7 +37,7 @@ export function VsAppleStore({
       {/* Mobile: stack each factor as a card so the "Apple Store" column is never hidden off-screen. */}
       <ul className="md:hidden flex flex-col gap-sm">
         {rows.map((r) => (
-          <li key={r.label} className="rounded-md border border-border bg-bg-card p-md">
+          <li key={r.label} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="font-semibold text-text mb-sm">{r.label}</p>
             <p className="flex gap-2 text-[14px] text-text mb-xs">
               <Check size={16} className="shrink-0 mt-0.5 text-accent" aria-hidden />
@@ -50,7 +50,7 @@ export function VsAppleStore({
           </li>
         ))}
       </ul>
-      <div className={cn("hidden md:block overflow-x-auto rounded-md", dark ? "border border-border bg-bg-card" : "border border-border bg-bg-card shadow-sm")}>
+      <div className={cn("hidden md:block overflow-x-auto rounded-md", dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "border border-border/70 bg-bg-card ring-1 ring-black/[0.03] shadow-sm")}>
         <table className="w-full text-[14px] min-w-[560px]">
           <caption className="sr-only">{heading}</caption>
           <thead>

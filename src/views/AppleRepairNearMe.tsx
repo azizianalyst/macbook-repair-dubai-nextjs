@@ -108,7 +108,7 @@ export default function AppleRepairNearMe() {
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One workshop since 2004, the full Apple ecosystem, not a pick-and-choose list.</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {DEVICES.map(({ icon: Icon, label, price, link, note }) => (
-              <a key={label} href={link} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
+              <a key={label} href={link} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
                 <div className="flex items-center gap-sm">
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
@@ -125,7 +125,7 @@ export default function AppleRepairNearMe() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="text-[28px] md:text-[32px] mb-md">Two ways to get your Apple device fixed near you</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="border border-border bg-bg-card rounded-md p-xl">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
@@ -133,7 +133,7 @@ export default function AppleRepairNearMe() {
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-xl">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <Truck size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Free pickup from anywhere in Dubai</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
@@ -150,7 +150,7 @@ export default function AppleRepairNearMe() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">Apple repair pickup, near you across Dubai</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {AREAS.map(({ area, time }) => (
-              <div key={area} className="border border-border bg-bg-card rounded-md p-md flex items-start gap-sm">
+              <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
                 <MapPin size={16} className="text-accent shrink-0 mt-[2px]" aria-hidden />
                 <div>
                   <p className="text-[14px] font-semibold">{area}</p>
@@ -163,7 +163,7 @@ export default function AppleRepairNearMe() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get your Apple device repaired near you today</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed price · Free pickup · Same-day return for most repairs.</p>

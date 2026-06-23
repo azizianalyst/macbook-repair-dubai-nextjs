@@ -200,7 +200,7 @@ export default function MacBookChargingPortRepair() {
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {PROBLEMS.map((p) => (
-                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={p.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
@@ -245,11 +245,11 @@ export default function MacBookChargingPortRepair() {
                 <h3 className="text-[18px] font-bold mb-sm text-text">Same day (2-4 hours)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">USB-C port swap on M1-M5 Air, MagSafe 3 on Pro 14″/16″ and Air M2+, MagSafe 1/2 on Retina, DC-in board on Retina Pro. About 80% of tickets.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">1 day</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Charging IC board-level repair (longer BGA reflow + cooldown), or combo port + IC job. Pin-straightening labour-only on stubborn cases.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">2 days (rare)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Only when MagSafe 3 stock is exhausted (during release months) or when burn damage requires both port and PMIC replacement.</p>
               </article>
@@ -260,12 +260,12 @@ export default function MacBookChargingPortRepair() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">What parts and tools we use</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Genuine Foxconn / Apple-spec ports</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed mb-sm">USB-C and MagSafe ports sourced from the original Foxconn assembly line that builds the Apple part. Same neodymium magnets in MagSafe 3, same gold-plated spring tabs in USB-C.</p>
                 <p className="mono text-[13px] text-accent">AED 350-400 - included</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Quick 861DW hot-air station + microscope</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed mb-sm">Temperature-controlled hot air at 380 °C, 40x stereo microscope, leaded and lead-free solder paste. The bench is set up specifically for fine-pitch USB-C work - 0.5 mm pin spacing requires this gear.</p>
                 <p className="mono text-[13px] text-accent">Bench tooling - no surcharge</p>
@@ -278,7 +278,7 @@ export default function MacBookChargingPortRepair() {
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
             </h2>
-            <div className="border border-border bg-bg-card rounded-md p-lg">
+            <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>12 months</strong> - written warranty on parts and labour.</li>
                 <li><strong>Covered:</strong> port re-failure, intermittent charging returning, charging IC failure, cold-solder cracks.</li>
@@ -325,7 +325,7 @@ export default function MacBookChargingPortRepair() {
                   <li>Check System Information &gt; Power for charger wattage - confirms whether PD negotiation is happening.</li>
                 </ul>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Stop and bring it in</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Visible bent or broken pins - straightening without microscope risks snapping the pin off.</li>
@@ -410,7 +410,7 @@ export default function MacBookChargingPortRepair() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Loose USB-C? Bent pin? WhatsApp the model - quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Year, processor, which port. Free pickup across Dubai mainland. written warranty up to 12 months on every port and IC fitted.

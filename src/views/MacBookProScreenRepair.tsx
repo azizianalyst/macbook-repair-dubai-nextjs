@@ -191,7 +191,7 @@ export default function MacBookProScreenRepair() {
 
             <div className="grid gap-2xl md:grid-cols-12 items-start">
               <div className="md:col-span-7">
-                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
+                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
                   <Monitor size={14} className="text-accent" aria-hidden /> MacBook Pro screen repair · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
@@ -235,10 +235,10 @@ export default function MacBookProScreenRepair() {
         {/* Answer-first capsule (AEO/BLUF) */}
         <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
           <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro screen repair", startingPrice: 600, timeline: "same-day on most models" })} />
-          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
+          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-lg backdrop-blur-md">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Monitor size={22} aria-hidden /></span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"><Monitor size={22} aria-hidden /></span>
                 <div>
                   <p className="m-0 font-semibold leading-tight text-text">Pro Screen Repair</p>
                   <p className="m-0 text-[12px] text-text-faint">XDR · ProMotion · OLED · Flexgate</p>
@@ -329,8 +329,8 @@ export default function MacBookProScreenRepair() {
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
               {STEPS.map((s, i) => (
-                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
-                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
                   <p className="font-semibold text-[16px] m-0 mb-1 text-text">{s.title}</p>
                   <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{s.body}</p>
                 </Reveal>
@@ -401,7 +401,7 @@ export default function MacBookProScreenRepair() {
               All prices in AED, VAT inclusive. Payment on collection — cash, Visa, Mastercard, Apple Pay, Samsung Pay, or bank transfer to Emirates NBD.
             </p>
 
-            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
+            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl">
               <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Pro Screen Repair · Same day · 1-3 days</p>
@@ -454,7 +454,7 @@ export default function MacBookProScreenRepair() {
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
-                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg">
+                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <div className="flex items-center justify-between gap-2">
                     <span className="font-semibold text-text">{r.name}</span>
                     <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
@@ -492,7 +492,7 @@ export default function MacBookProScreenRepair() {
             <SectionHead eyebrow="Often booked together" title="Related MacBook Pro repairs" />
             <div className="grid gap-lg md:grid-cols-3">
               {RELATED.map((r) => (
-                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
                   <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
                   <p className="m-0 text-[14px] text-text-muted leading-relaxed">{r.description}</p>
                 </Link>
@@ -544,7 +544,7 @@ export default function MacBookProScreenRepair() {
 
 /* ── local helpers (dark) ──────────────────────────────────── */
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-border bg-bg-card p-lg ${className}`}>{children}</div>;
+  return <div className={`rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg ${className}`}>{children}</div>;
 }
 
 function SectionHead({ eyebrow, title, intro, icon }: { eyebrow: string; title: string; intro?: string; icon?: ReactNode }) {

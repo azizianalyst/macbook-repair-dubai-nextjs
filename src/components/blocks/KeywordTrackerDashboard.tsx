@@ -114,12 +114,12 @@ export default function KeywordTrackerDashboard({ embedded }: { embedded?: boole
             <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
             <h1 className="m-0 text-[24px] text-text">Keyword Tracker</h1>
           </div>
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       )}
       {embedded && (
         <div className="mb-md flex justify-end">
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       )}
 
@@ -143,17 +143,17 @@ export default function KeywordTrackerDashboard({ embedded }: { embedded?: boole
       <div className="mb-md flex flex-wrap items-center gap-2">
         <div className="flex flex-1 min-w-[260px] items-center gap-2">
           <input value={add} onChange={(e) => setAdd(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") addKeywords(); }}
-            placeholder="Add keyword(s) — comma or newline separated…" className="flex-1 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            placeholder="Add keyword(s) — comma or newline separated…" className="flex-1 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
           <button onClick={addKeywords} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white disabled:opacity-50">{busy ? <Loader2 size={14} className="animate-spin" /> : <Plus size={14} />} Add</button>
         </div>
         <div className="relative min-w-[200px] max-w-xs flex-1">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search keywords…" className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search keywords…" className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
       </div>
 
       {/* Discover panel */}
-      <div className="mb-md rounded-md border border-border bg-bg-card">
+      <div className="mb-md rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
         <div className="flex items-center justify-between gap-3 px-3 py-2">
           <div>
             <p className="m-0 text-[13px] font-semibold text-text">Discover New Keywords</p>
@@ -265,7 +265,7 @@ function TrackRow({ r, onRemove }: { r: Row; onRemove: () => void }) {
 
 function Card({ icon, label, value, sub, big, good }: { icon: React.ReactNode; label: string; value: React.ReactNode; sub?: string; big?: boolean; good?: boolean }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md text-center">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md text-center">
       <p className="m-0 flex items-center justify-center gap-1.5 text-[12px] uppercase tracking-wide text-text-faint">{icon} {label}</p>
       <p className={`m-0 mt-1 font-bold ${big ? "text-[30px]" : "text-[26px]"} ${good ? "text-whatsapp" : "text-text"}`}>{value}</p>
       {sub && <p className="m-0 text-[11px] text-text-faint">{sub}</p>}

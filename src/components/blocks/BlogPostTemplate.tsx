@@ -244,7 +244,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
                 </ul>
               </nav>
               {/* Mini CTA in sidebar */}
-              <div className="mt-4 rounded-xl border border-border bg-bg-card p-4">
+              <div className="mt-4 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
                 <p className="text-[13px] font-semibold text-text mb-2">Need a repair?</p>
                 <p className="text-[12px] text-text-muted mb-3">Free diagnosis · Same day · Warranty</p>
                 <a
@@ -271,14 +271,14 @@ export default function BlogPostTemplate(p: BlogPostProps) {
                 <h2 className="text-[24px] mb-md text-text">Related on MacBook Repair Dubai</h2>
                 <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3">
                   {relatedLinks.map((r) => (
-                    <Link key={r.href} to={r.href} className="group border border-border bg-bg-card rounded-md p-md hover:border-accent/40 transition-colors">
+                    <Link key={r.href} to={r.href} className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent/40 transition-colors">
                       <div className="font-semibold text-[15px] text-text group-hover:text-accent">{r.label}</div>
                       {r.description && <div className="text-[13px] text-text-muted mt-xs">{r.description}</div>}
                     </Link>
                   ))}
                 </div>
               </section>
-              <section className="mt-xl border border-border bg-bg-card rounded-xl p-lg">
+              <section className="mt-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-lg">
                 <h2 className="text-[20px] mb-sm text-text">About the author</h2>
                 <p className="text-[15px] mb-md text-text-muted">
                   <strong className="text-text">{p.author.name}</strong> is a {p.author.role.toLowerCase()} at {NAP.name},
@@ -312,14 +312,14 @@ export default function BlogPostTemplate(p: BlogPostProps) {
               <h2 className="text-[24px] mb-md text-text">Related on MacBook Repair Dubai</h2>
               <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3">
                 {relatedLinks.map((r) => (
-                  <Link key={r.href} to={r.href} className="group border border-border bg-bg-card rounded-md p-md hover:border-accent/40 transition-colors">
+                  <Link key={r.href} to={r.href} className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent/40 transition-colors">
                     <div className="font-semibold text-[15px] text-text group-hover:text-accent">{r.label}</div>
                     {r.description && <div className="text-[13px] text-text-muted mt-xs">{r.description}</div>}
                   </Link>
                 ))}
               </div>
             </section>
-            <section className="max-w-[72ch] mt-xl border border-border bg-bg-card rounded-md p-lg">
+            <section className="max-w-[72ch] mt-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h2 className="text-[20px] mb-sm text-text">About the author</h2>
               <p className="text-[15px] mb-md text-text-muted">
                 <strong className="text-text">{p.author.name}</strong> is a {p.author.role.toLowerCase()} at {NAP.name},

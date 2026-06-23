@@ -102,7 +102,7 @@ export default function AiOptimizeModal({
           </div>
 
           {suggestions.length > 0 && (
-            <div className="mt-3 rounded-md border border-border bg-bg-card p-3">
+            <div className="mt-3 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-3">
               <p className="m-0 mb-1 text-[12px] font-semibold text-text">Suggestions for the page body (edit the page yourself):</p>
               <ul className="m-0 list-disc pl-5 text-[12px] text-text-muted">{suggestions.map((s, i) => <li key={i}>{s}</li>)}</ul>
             </div>

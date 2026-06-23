@@ -19,7 +19,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
       className={cn(
         "rounded-md p-lg flex flex-col gap-sm",
         dark
-          ? "border border-border bg-bg-card"
+          ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]"
           : "bg-bg-card border border-border shadow-sm",
       )}
     >

@@ -27,7 +27,7 @@ export function WarrantyBar({
     { icon: Clock,  label: "30-min appointment repairs" },
   ].filter(Boolean) as { icon: typeof ShieldCheck; label: string }[];
   return (
-    <Reveal className={cn("border-y", dark ? "border border-border bg-bg-card" : "bg-accent/10 border-accent/30")}>
+    <Reveal className={cn("border-y", dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "bg-accent/10 border-accent/30")}>
       <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap items-center justify-center gap-x-xl gap-y-sm">
         {items.map(({ icon: Icon, label }) => (
           <li key={label} className={cn("flex items-center gap-sm text-[14px] font-medium", dark ? "text-text" : "text-text")}>

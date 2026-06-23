@@ -247,10 +247,10 @@ export default function MacBookNotTurningOn() {
             </div>
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
               {DIAG_STEPS.map((s) => (
-                <li key={s.step} className="rounded-2xl border border-border bg-bg-card p-lg">
+                <li key={s.step} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <span
                     aria-hidden
-                    className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-bold text-[18px] text-accent"
+                    className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-bold text-[18px] text-accent"
                   >
                     {s.step}
                   </span>
@@ -275,7 +275,7 @@ export default function MacBookNotTurningOn() {
           </div>
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
             {CAUSES.map((c) => (
-              <div key={c.title} className="rounded-2xl border border-border bg-bg-card p-lg">
+              <div key={c.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                 <div className="flex items-start gap-sm mb-sm">
                   <AlertTriangle size={18} className="text-accent shrink-0 mt-[2px]" aria-hidden />
                   <h3 className="m-0 text-text text-[16px] font-bold">{c.title}</h3>
@@ -332,7 +332,7 @@ export default function MacBookNotTurningOn() {
           </div>
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
             {WHY_US.map(({ Icon, title, body }) => (
-              <div key={title} className="rounded-2xl border border-border bg-bg-card p-lg">
+              <div key={title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
                   <Icon size={22} className="text-accent" aria-hidden />
                 </div>

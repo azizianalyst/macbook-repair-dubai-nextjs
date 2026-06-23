@@ -27,7 +27,7 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
       className={cn(
         sticky && "md:sticky md:top-[110px]",
         "rounded-md p-lg flex flex-col gap-md",
-        dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-md",
+        dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "bg-bg-card border border-border shadow-md",
       )}
     >
       <div>

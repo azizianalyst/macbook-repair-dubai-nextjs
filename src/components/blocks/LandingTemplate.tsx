@@ -296,7 +296,7 @@ export default function LandingTemplate({
               <Reveal
                 as="p"
                 delay={0}
-                className="mb-md inline-flex items-center rounded-full border border-border bg-bg-card px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-accent"
+                className="mb-md inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-accent"
               >
                 {hero.badge}
               </Reveal>
@@ -328,7 +328,7 @@ export default function LandingTemplate({
                   return (
                     <span
                       key={i}
-                      className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] text-text-muted"
+                      className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1.5 text-[13px] text-text-muted"
                     >
                       {Icon && (
                         <Icon size={15} className="text-white" aria-hidden />
@@ -396,7 +396,7 @@ export default function LandingTemplate({
             </div>
             <div className="grid gap-md md:grid-cols-3">
               {reviews.items.map((r, i) => (
-                <figure key={i} className="flex flex-col rounded-md border border-border bg-bg-card p-lg">
+                <figure key={i} className="flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <div className="flex" role="img" aria-label={`${r.rating} out of 5 stars`}>
                     {Array.from({ length: 5 }).map((_, s) => (
                       <Star key={s} size={15} aria-hidden className={s < r.rating ? "fill-star text-star" : "text-white/20"} />
@@ -445,7 +445,7 @@ export default function LandingTemplate({
                   as="li"
                   key={i}
                   delay={(i % 4) * 70}
-                  className="rounded-md border border-border bg-bg-card p-lg"
+                  className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg"
                 >
                   <span
                     aria-hidden
@@ -473,7 +473,7 @@ export default function LandingTemplate({
               {keyInfo.columns.map((col, i) => {
                 const Icon = col.icon;
                 return (
-                  <div key={i} className="rounded-md border border-border bg-bg-card p-lg">
+                  <div key={i} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                     {Icon && (
                       <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
                         <Icon size={22} aria-hidden />
@@ -522,7 +522,7 @@ export default function LandingTemplate({
                         <Link
                           to={m.href}
                           title={m.note}
-                          className="inline-flex items-center rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13.5px] text-text-muted transition-colors hover:border-accent/50 hover:bg-bg-alt hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                          className="inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1.5 text-[13.5px] text-text-muted transition-colors hover:border-accent/50 hover:bg-bg-alt hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         >
                           {m.label}
                         </Link>
@@ -560,7 +560,7 @@ export default function LandingTemplate({
                 <Link
                   key={p.href}
                   to={p.href}
-                  className="group flex flex-col rounded-md border border-border bg-bg-card p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="group flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   {p.meta && (
                     <span className="mono text-[12px] uppercase tracking-wider text-accent">{p.meta}</span>
@@ -593,7 +593,7 @@ export default function LandingTemplate({
                 <Link
                   key={r.href}
                   to={r.href}
-                  className="group flex items-center justify-between gap-md rounded-md border border-border bg-bg-card p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="group flex items-center justify-between gap-md rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <span className="min-w-0">
                     <span className="block text-[16px] font-semibold text-text group-hover:text-accent">

@@ -509,10 +509,10 @@ export default function Home() {
 
         {/* ── 1 · Hero ───────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
-          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 grid gap-2xl md:grid-cols-12 items-start">
             <div className="md:col-span-6">
-              <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
+              <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
                 {/* static dot, the photo's "Real repair in progress" badge owns the single live pulse */}
                 <span className="inline-flex h-2 w-2 rounded-full bg-accent" aria-hidden />
                 Independent Apple Repair · Dubai Media City · Since 2004
@@ -542,9 +542,9 @@ export default function Home() {
               </a>
               {/* Price anchor in the hero: price-shoppers must see a number without scrolling. */}
               <div className="mt-md flex flex-wrap gap-2 text-[13px] font-medium">
-                <span className="inline-flex items-center rounded-full border border-border bg-bg-card px-3 py-1 text-text">Screen repair from&nbsp;<span className="font-semibold text-accent">AED 600</span></span>
-                <span className="inline-flex items-center rounded-full border border-border bg-bg-card px-3 py-1 text-text-muted">Free diagnosis</span>
-                <span className="inline-flex items-center rounded-full border border-border bg-bg-card px-3 py-1 text-text-muted">Same-day on most models</span>
+                <span className="inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1 text-text">Screen repair from&nbsp;<span className="font-semibold text-accent">AED 600</span></span>
+                <span className="inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1 text-text-muted">Free diagnosis</span>
+                <span className="inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1 text-text-muted">Same-day on most models</span>
               </div>
               {/* AEO answer as plain hero copy under the H1 (no boxed capsule). Keeps the
                   .quick-answer speakable target + Question/AcceptedAnswer microdata; the
@@ -646,7 +646,7 @@ export default function Home() {
             </div>
             <nav aria-label="On this page" className="mt-lg flex flex-wrap justify-center gap-2.5">
               {PAGE_ANCHORS.map((a) => (
-                <a key={a.href} href={a.href} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted transition-colors hover:border-accent/40 hover:text-accent">
+                <a key={a.href} href={a.href} className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted transition-colors hover:border-accent/40 hover:text-accent">
                   {a.label} <ChevronDown size={13} aria-hidden />
                 </a>
               ))}
@@ -984,7 +984,7 @@ export default function Home() {
           <SectionHead eyebrow="Beyond the MacBook" title="We Repair Every Apple Device in Dubai" intro="MacBook is our speciality, but our bench covers the whole Apple line-up - Mac, iPhone, iPad, iMac and Apple displays, in and out of warranty." />
           <div className="flex flex-wrap gap-2.5">
             {DEVICE_HUB.map((l) => (
-              <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+              <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                 <ArrowRight size={14} className="text-accent shrink-0" aria-hidden /> {l.label}
               </Link>
             ))}
@@ -1223,7 +1223,7 @@ export default function Home() {
             <SectionHead eyebrow="Save more" title="Discounted MacBook Repairs Dubai" intro="We provide reasonable repairs and discounts for students, teachers and military personnel. We do not compromise on quality and offer high-quality MacBook repair services in Dubai." />
             <div className="mb-xl flex flex-wrap gap-2.5">
               {OFFERS.map((o) => (
-                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card px-3 py-1.5 text-[13px] text-text-muted"><Check size={14} className="text-accent" aria-hidden /> {o}</span>
+                <span key={o} className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1.5 text-[13px] text-text-muted"><Check size={14} className="text-accent" aria-hidden /> {o}</span>
               ))}
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
@@ -1252,7 +1252,7 @@ export default function Home() {
                 <Link
                   key={g.href}
                   to={g.href}
-                  className="group flex items-start justify-between gap-2 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/50"
+                  className="group flex items-start justify-between gap-2 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 transition-colors hover:border-accent/50"
                 >
                   <span className="text-[14px] font-medium text-text leading-snug group-hover:text-accent">{g.label}</span>
                   <ArrowRight size={15} className="mt-0.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" aria-hidden />
@@ -1267,7 +1267,7 @@ export default function Home() {
         <section id="faq" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-4xl">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
             {/* sticky sidebar */}
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">
                 Frequently asked questions

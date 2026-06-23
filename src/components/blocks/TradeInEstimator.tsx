@@ -58,7 +58,7 @@ const selectClassesLight = cn(
 );
 
 const selectClassesDark = cn(
-  "w-full appearance-none rounded-md border border-border bg-bg-card px-md py-3 pr-10",
+  "w-full appearance-none rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-md py-3 pr-10",
   "text-[15px] text-text placeholder:text-text-faint",
   "transition-colors",
   "hover:border-border-strong focus:border-accent focus:outline-none",
@@ -104,7 +104,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
     <div
       className={cn(
         "rounded-lg p-lg md:p-xl",
-        dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-md",
+        dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "bg-bg-card border border-border shadow-md",
         className,
       )}
     >
@@ -170,7 +170,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
         <p
           className={cn(
             "mt-lg mb-0 rounded-md p-md text-[15px] font-medium leading-relaxed",
-            dark ? "text-text border border-border bg-bg-card" : "text-text bg-bg-alt border border-border",
+            dark ? "text-text border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "text-text bg-bg-alt border border-border",
           )}
           role="status"
         >

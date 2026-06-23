@@ -47,7 +47,7 @@ export function RelatedArticles({
             <Link
               key={p.slug}
               to={p.slug}
-              className="group flex flex-col justify-between gap-3 rounded-xl border border-border bg-bg-card p-4 hover:border-accent/50 transition-colors shrink-0 w-[260px] sm:w-auto"
+              className="group flex flex-col justify-between gap-3 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors shrink-0 w-[260px] sm:w-auto"
             >
               <p className="text-[14px] font-medium text-text leading-snug group-hover:text-accent line-clamp-3">
                 {p.title}

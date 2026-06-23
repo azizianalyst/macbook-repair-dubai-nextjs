@@ -157,7 +157,7 @@ export default function AppleRepair() {
               { title: "Cross-device diagnosis",  body: "An iPhone that won't sync to a Mac is rarely an iPhone problem alone. iCloud Keychain, Bluetooth advertising, AWDL service, and Apple ID two-factor flows interact in ways that need both devices on the bench at the same time. One specialist with both devices fixes the root cause in 1 visit." },
               { title: "One warranty, one invoice", body: "Drop off MacBook, iPhone, and iPad in the same visit. One warranty of up to 12 months card lists all 3 devices and 3 serial numbers. One WhatsApp thread tracks all 3 repairs. One invoice for accounting. Multi-device discount of 15% on labour applies automatically." },
             ].map((c) => (
-              <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{c.body}</p>
               </article>
@@ -174,7 +174,7 @@ export default function AppleRepair() {
         </p>
         <div className="grid gap-md md:grid-cols-2">
           {CROSS_DEVICE.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+            <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex gap-md">
               <Icon size={32} className="text-accent shrink-0 mt-1" aria-hidden />
               <div>
                 <h3 className="text-[18px] font-bold mb-sm">{title}</h3>

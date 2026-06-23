@@ -18,7 +18,7 @@ export default function ImagePicker({
       <div className="flex gap-2">
         <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder || "/images/…"}
           className="w-full rounded-md border border-border bg-bg px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
-        <button type="button" onClick={() => setOpen(true)} className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text-muted hover:text-text">
+        <button type="button" onClick={() => setOpen(true)} className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text-muted hover:text-text">
           <ImageIcon size={14} /> Choose
         </button>
       </div>

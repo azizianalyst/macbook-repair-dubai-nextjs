@@ -7,18 +7,22 @@ import { REDIRECTS } from "@/content/redirects.generated";
 // ── IP Rate limiter ────────────────────────────────────────────────────────────
 // Blocks automated site audits and AI-assisted scraping: after RATE_LIMIT requests
 // in RATE_WINDOW ms from one IP, all further requests return 429 for RATE_BLOCK ms.
-// A human browsing hits ~3–5 pages/min. An automated audit hits 30–100+.
-// Threshold: 10 page-nav/min, then a fixed RATE_BLOCK cooldown (NOT extended on every
-// excess request — a blocked visitor is always released after the cooldown).
+// A human browsing hits ~3-5 pages/min; even a fast skimmer rarely tops ~30. An audit hits 60+.
+// Threshold is HIGH (60/min) on purpose: this is a HARD per-IP block, and many UAE customers
+// share one IP (carrier-grade NAT, office networks), so a low limit risks walling a whole
+// building of real clients. Robust abuse protection belongs at the Cloudflare edge (a managed
+// challenge, not a hard block); this in-app limiter is only a coarse backstop for scraper
+// bursts. The cooldown is a fixed 2 min, NOT extended on every excess request, so a blocked
+// visitor is always released quickly.
 // In-memory only — resets on server restart. Fine for single-instance Hostinger Node.
 const _rateMap = new Map<string, { count: number; resetAt: number; blocked?: boolean }>();
-const RATE_LIMIT  = 10;          // page navigations per window before lockout
+const RATE_LIMIT  = 60;          // page navigations per window before lockout
 const RATE_WINDOW = 60_000;      // 1 minute window (ms)
-const RATE_BLOCK  = 15 * 60_000; // 15 minute cooldown after exceeding limit (ms)
+const RATE_BLOCK  = 2 * 60_000;  // 2 minute cooldown after exceeding limit (ms)
 
 // Crawl UAs exempt from rate limiting: search engines + AI answer engines that cite us.
 // UA-based like the honeypot below (trivially spoofable, but a scraper could already spoof
-// googlebot; the upside is letting engines that cite us crawl without tripping the 10/min
+// googlebot; the upside is letting engines that cite us crawl without tripping the 60/min
 // lockout — directly serves the AI-citation goal). Generic scrapers are still caught by the
 // honeypot UA list further down. Google-Extended/Applebot-Extended are robots.txt tokens, not
 // request UAs, so they're governed in robots.txt, not here (Gemini fetches as googlebot).
@@ -246,7 +250,7 @@ export function proxy(req: NextRequest) {
   if (rateLimited(req)) {
     return new NextResponse(
       "Too many requests. Please slow down.",
-      { status: 429, headers: { "Retry-After": "600", "cache-control": "no-store" } },
+      { status: 429, headers: { "Retry-After": "120", "cache-control": "no-store" } },
     );
   }
 

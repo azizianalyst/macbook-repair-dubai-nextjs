@@ -133,7 +133,7 @@ export default function AppleCareMacBookRepair() {
           <ShieldCheck size={28} className="text-accent" aria-hidden /> When to use Apple, and when to use us
         </h2>
         <div className="grid gap-md md:grid-cols-2">
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Go to Apple when…</h3>
             <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare or warranty is active and the fault is covered", "The repair falls under a known recall or service programme", "You need an Apple service record kept on the machine"].map((t) => (
@@ -141,7 +141,7 @@ export default function AppleCareMacBookRepair() {
               ))}
             </ul>
           </article>
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Come to us when…</h3>
             <ul className="space-y-2 text-[15px] text-text-muted">
               {["Your AppleCare or warranty has expired", "Liquid, accidental or wear damage Apple won't cover for free", "Apple quoted a flat board or whole-unit fee you'd rather avoid"].map((t) => (
@@ -163,7 +163,7 @@ export default function AppleCareMacBookRepair() {
             {COVERED.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
@@ -188,7 +188,7 @@ export default function AppleCareMacBookRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Not sure if you're still covered? Ask us first</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send your serial number and the fault on WhatsApp. We'll check your warranty status with you, tell you honestly whether Apple or our workshop is the better route, and quote in minutes. Free diagnosis, warranty of up to 12 months.

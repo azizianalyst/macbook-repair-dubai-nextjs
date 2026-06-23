@@ -109,7 +109,7 @@ export default function IPhoneRepairNearMe() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="text-[28px] md:text-[32px] mb-md">Two ways to get your iPhone repaired near you</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="border border-border bg-bg-card rounded-md p-xl">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
@@ -117,7 +117,7 @@ export default function IPhoneRepairNearMe() {
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-xl">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <Truck size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Free pickup from your door</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
@@ -163,7 +163,7 @@ export default function IPhoneRepairNearMe() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repair pickup near you, all Dubai areas</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {AREAS.map(({ area, time }) => (
-              <div key={area} className="border border-border bg-bg-card rounded-md p-md flex items-start gap-sm">
+              <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
                 <MapPin size={16} className="text-accent shrink-0 mt-[2px]" aria-hidden />
                 <div>
                   <p className="text-[14px] font-semibold">{area}</p>
@@ -176,7 +176,7 @@ export default function IPhoneRepairNearMe() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get your iPhone fixed today</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis. Fixed quote. Free pickup or drop-in. Same-day return.</p>

@@ -174,8 +174,8 @@ export default function MacBookWontCharge() {
         </p>
         <ol className="space-y-md list-none p-0 m-0">
           {SELF_DIAG.map((step, i) => (
-            <li key={i} className="flex items-start gap-md rounded-2xl border border-border bg-bg-card p-lg">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/15 font-bold text-accent text-[15px]" aria-hidden>
+            <li key={i} className="flex items-start gap-md rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/10 font-bold text-accent text-[15px]" aria-hidden>
                 {i + 1}
               </span>
               <p className="m-0 text-[15px] text-text-muted leading-relaxed">{step}</p>
@@ -191,7 +191,7 @@ export default function MacBookWontCharge() {
           <p className="text-[16px] text-text-muted mb-xl max-w-[68ch]">
             Know which charging method your model supports before testing.
           </p>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[480px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -223,7 +223,7 @@ export default function MacBookWontCharge() {
         </p>
         <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
           {FAULTS.map((f) => (
-            <div key={f.title} className="rounded-2xl border border-border bg-bg-card p-lg">
+            <div key={f.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
               <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{f.title}</h3>
               <p className="m-0 text-[14px] text-text-muted leading-relaxed">{f.body}</p>
             </div>
@@ -238,7 +238,7 @@ export default function MacBookWontCharge() {
           <p className="text-[16px] text-text-muted mb-xl max-w-[68ch]">
             Free diagnosis before any paid repair. Prices include parts and labour.
           </p>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[400px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -267,8 +267,8 @@ export default function MacBookWontCharge() {
         <h2 className="text-[28px] md:text-[32px] mb-xl text-text">Why choose MacBook Repair Dubai for charging faults</h2>
         <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
           {WHY_US.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-border bg-bg-card p-lg">
-              <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15">
+            <div key={item.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+              <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10">
                 {item.icon}
               </div>
               <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{item.title}</h3>

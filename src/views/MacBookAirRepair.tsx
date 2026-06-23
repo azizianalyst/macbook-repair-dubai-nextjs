@@ -36,7 +36,7 @@ const IMG = {
 
 function TopicFigure({ img }: { img: { src: string; alt: string; caption: string } }) {
   return (
-    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border bg-bg-card">
+    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
       <ResponsiveImage
         src={img.src}
         alt={img.alt}
@@ -256,7 +256,7 @@ export default function MacBookAirRepair() {
           <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air models we repair</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {MODEL_GROUPS.map((g) => (
-              <div key={g.chip} className="border border-border bg-bg-card rounded-xl p-5">
+              <div key={g.chip} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5">
                 <div className="flex items-baseline justify-between mb-3">
                   <Link to={g.chipHref} className="text-[18px] font-bold text-accent hover:underline">
                     MacBook Air {g.chip}
@@ -289,7 +289,7 @@ export default function MacBookAirRepair() {
           <TopicFigure img={IMG.services} />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-border bg-bg-card rounded-xl p-5 hover:border-accent/40 transition-colors">
+              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5 hover:border-accent/40 transition-colors">
                 <div className="flex items-center gap-2 mb-2">
                   <s.Icon size={18} className="text-accent shrink-0" aria-hidden />
                   {s.href ? (
@@ -309,7 +309,7 @@ export default function MacBookAirRepair() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {USP_ITEMS.map((u) => (
-              <div key={u.label} className="border border-border bg-bg-card rounded-xl p-4 flex items-center gap-3">
+              <div key={u.label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-4 flex items-center gap-3">
                 <u.Icon size={20} className="text-accent shrink-0" aria-hidden />
                 <span className="text-[13px] font-medium text-text">{u.label}</span>
               </div>
@@ -354,8 +354,8 @@ export default function MacBookAirRepair() {
           <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air repair process</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((step, i) => (
-              <div key={step.title} className="border border-border bg-bg-card rounded-xl p-5">
-                <div className="w-8 h-8 rounded-full bg-accent/15 text-accent font-bold flex items-center justify-center text-[14px] mb-3">{i + 1}</div>
+              <div key={step.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5">
+                <div className="w-8 h-8 rounded-full bg-accent/10 text-accent font-bold flex items-center justify-center text-[14px] mb-3">{i + 1}</div>
                 <h3 className="text-[15px] font-semibold text-text mb-1">{step.title}</h3>
                 <p className="text-[13px] text-text-muted leading-relaxed">{step.body}</p>
               </div>
@@ -411,7 +411,7 @@ export default function MacBookAirRepair() {
               <Link
                 key={href}
                 to={href}
-                className="flex items-start rounded-xl border border-border bg-bg-card p-4 hover:border-accent/50 transition-colors group"
+                className="flex items-start rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors group"
               >
                 <span className="text-[14px] font-medium text-text leading-snug group-hover:text-accent">{label}</span>
               </Link>

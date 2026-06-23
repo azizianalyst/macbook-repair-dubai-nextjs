@@ -123,7 +123,7 @@ export default function MacSetupConfiguration() {
             {SERVICES.map((i) => {
               const Icon = i.icon;
               return (
-                <article key={i.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2"><Icon size={18} className="text-accent" aria-hidden /> {i.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
                 </article>
@@ -144,7 +144,7 @@ export default function MacSetupConfiguration() {
             { title: "2 · We configure & migrate", body: "macOS, accounts, security, apps and a full data transfer - verified on the new machine before handover." },
             { title: "3 · Collect ready-to-work", body: "In-shop, on-site at your office, or via free pickup and delivery. We walk you through anything new." },
           ].map((c) => (
-            <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
               <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
             </article>
@@ -174,7 +174,7 @@ export default function MacSetupConfiguration() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">New Mac to set up? Get a quote in 4 minutes</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">

@@ -93,7 +93,7 @@ export default function ReviewsAdmin() {
         </div>
         <div className="flex items-center gap-2">
           <button onClick={openNew} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><Plus size={14} /> Add</button>
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       </div>
 
@@ -108,12 +108,12 @@ export default function ReviewsAdmin() {
         <div className="relative min-w-[220px] flex-1 max-w-md">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search name or text…"
-            className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={serviceFilter} onChange={(e) => setServiceFilter(e.target.value as typeof serviceFilter)} className="rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={serviceFilter} onChange={(e) => setServiceFilter(e.target.value as typeof serviceFilter)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="All">All services</option>{SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
-        <select value={langFilter} onChange={(e) => setLangFilter(e.target.value as typeof langFilter)} className="rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={langFilter} onChange={(e) => setLangFilter(e.target.value as typeof langFilter)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="All">All languages</option>{LANGUAGES.map((l) => <option key={l} value={l}>{l}</option>)}
         </select>
         <span className="text-[13px] text-text-faint">{filtered.length} shown</span>
@@ -185,7 +185,7 @@ export default function ReviewsAdmin() {
   );
 }
 
-const inp = "w-full rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
+const inp = "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return <label className="block"><span className="mb-1 block text-[12px] text-text-faint">{label}</span>{children}</label>;
 }

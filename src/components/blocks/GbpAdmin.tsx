@@ -244,7 +244,7 @@ export default function GbpAdmin() {
 // ── Not connected ─────────────────────────────────────────────────────────────
 function NotConnected() {
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-xl text-center">
+    <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl text-center">
       <div className="mx-auto mb-md flex h-16 w-16 items-center justify-center rounded-full bg-bg-alt">
         <MapPin size={28} className="text-text-faint" />
       </div>
@@ -327,14 +327,14 @@ function OverviewTab({ locationName }: { locationName?: string }) {
         <>
           {reviews && (
             <div className="mb-md grid grid-cols-2 gap-3">
-              <div className="rounded-xl border border-border bg-bg-card p-md">
+              <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
                 <p className="m-0 mb-1 text-[12px] text-text-faint">Average rating</p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-[28px] font-bold text-text">{reviews.averageRating.toFixed(1)}</span>
                   <StarRow n={Math.round(reviews.averageRating)} />
                 </div>
               </div>
-              <div className="rounded-xl border border-border bg-bg-card p-md">
+              <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
                 <p className="m-0 mb-1 text-[12px] text-text-faint">Total reviews</p>
                 <span className="text-[28px] font-bold text-text">{reviews.totalReviewCount.toLocaleString()}</span>
               </div>
@@ -344,7 +344,7 @@ function OverviewTab({ locationName }: { locationName?: string }) {
           {/* [7] Metric cards with trend arrows */}
           <div className="mb-md grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {metrics.map((m) => (
-              <div key={m.label} className="rounded-xl border border-border bg-bg-card p-md">
+              <div key={m.label} className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
                 <p className="m-0 mb-1 text-[11px] text-text-faint">{m.label}</p>
                 <span className="text-[22px] font-bold" style={{ color: m.color }}>{m.cur.toLocaleString()}</span>
                 <div className="mt-1"><TrendArrow current={m.cur} previous={m.prev} /></div>
@@ -366,7 +366,7 @@ function TrendChart({ series, days }: { series: InsightSeries[]; days: number })
   const vals = s.timeSeries.datedValues.slice(-days);
   const max = Math.max(...vals.map((v) => Number(v.value) || 0), 1);
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-md">
+    <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 mb-3 text-[12px] font-semibold text-text">Search impressions — last {days} days</p>
       <div className="flex h-24 items-end gap-px">
         {vals.map((v, i) => (
@@ -756,7 +756,7 @@ function PostsTab({ locationName }: { locationName?: string }) {
       {/* Posts list */}
       <div className="flex flex-col gap-3">
         {posts.map((p) => (
-          <div key={p.name} className="rounded-xl border border-border bg-bg-card p-md">
+          <div key={p.name} className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold mb-2 ${typeBadge(p.topicType)}`}>{typeLabel(p.topicType)}</span>
@@ -870,7 +870,7 @@ function InfoTab() {
 
 function InfoSection({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-md">
+    <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <h3 className="m-0 mb-3 flex items-center gap-2 text-[14px] font-semibold text-text">{icon}{title}</h3>
       <div className="flex flex-col gap-2">{children}</div>
     </div>
@@ -941,7 +941,7 @@ function PhotosTab() {
       {success && <p className="mb-md rounded-md border border-whatsapp/30 bg-whatsapp/5 px-3 py-2 text-[13px] text-whatsapp flex items-center gap-2"><Check size={14} /> Photo uploaded to Google</p>}
 
       {/* Upload by URL */}
-      <div className="mb-lg rounded-xl border border-border bg-bg-card p-md">
+      <div className="mb-lg rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <h3 className="m-0 mb-3 flex items-center gap-2 text-[14px] font-semibold text-text"><Upload size={15} />Upload photo by URL</h3>
         <div className="grid gap-3">
           <div>

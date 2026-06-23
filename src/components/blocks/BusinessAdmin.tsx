@@ -130,13 +130,13 @@ function blank(): Business {
   return { name: "", phoneDisplay: "", phoneE164: "", street: "", area: "", city: "Dubai", country: "United Arab Emirates", yearsInBusiness: 0, reviewCount: 0, reviewAverage: 5, hours: [] };
 }
 
-const inp = "w-full rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
+const inp = "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return <label className="block"><span className="mb-1 block text-[12px] text-text-faint">{label}</span>{children}</label>;
 }
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-lg rounded-md border border-border bg-bg-card p-lg">
+    <section className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
       <h2 className="m-0 mb-3 text-[15px] font-semibold text-text">{title}</h2>
       <div className="grid gap-3">{children}</div>
     </section>

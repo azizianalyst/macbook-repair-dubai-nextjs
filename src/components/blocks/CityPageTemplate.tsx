@@ -107,7 +107,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {cfg.districts.map((d) => (
-              <div key={d.name} className="border border-border bg-bg-card rounded-md p-lg">
+              <div key={d.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <p className="font-bold text-[16px] mb-1 flex items-center gap-2"><MapPin size={16} className="text-accent shrink-0" aria-hidden /> {d.name}</p>
                 <p className="text-[14px] text-text-muted leading-relaxed m-0">{d.note}</p>
               </div>
@@ -132,8 +132,8 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
                 { t: "Approve and we repair", b: `Reply 'approved' and we get to work. ${cfg.turnaround.charAt(0).toUpperCase()}${cfg.turnaround.slice(1)} for most common repairs.` },
                 { t: "Free return to your door", b: `Courier returns the MacBook to your ${cfg.city} address. Pay on completion - cash, card or transfer. Warranty up to 12 months card included.` },
               ].map((s, i) => (
-                <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
-                  <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
+                <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                  <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
                   <p className="font-bold text-[16px] mb-1">{s.t}</p>
                   <p className="text-[14px] text-text-muted leading-relaxed">{s.b}</p>
                 </li>
@@ -151,7 +151,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <Link key={s.href} to={s.href} className="block border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 transition">
+              <Link key={s.href} to={s.href} className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition">
                 <p className="font-bold text-[16px] mb-1">{s.label}</p>
                 <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · warranty of up to 12 months</p>
               </Link>
@@ -164,7 +164,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           <SectionHeading eyebrow="Around town" title={`Around ${cfg.city}`} />
           <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-text">
             {cfg.landmarks.map((l) => (
-              <li key={l} className="flex items-start gap-sm border border-border bg-bg-card rounded-md p-md">
+              <li key={l} className="flex items-start gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
                 <MapPin size={18} className="text-accent shrink-0 mt-1" aria-hidden />
                 <span>{l}</span>
               </li>
@@ -215,7 +215,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           />
           <div className="flex flex-wrap gap-sm">
             {CITIES.filter((c) => c.slug !== cfg.slug).map((c) => (
-              <Link key={c.slug} to={`/macbook-repair-${c.slug}`} className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+              <Link key={c.slug} to={`/macbook-repair-${c.slug}`} className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                 MacBook repair {c.city}
               </Link>
             ))}

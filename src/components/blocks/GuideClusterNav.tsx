@@ -36,7 +36,7 @@ export function GuideClusterNav({ slug, limit = 3 }: { slug: string; limit?: num
             to={g.slug}
             className={cn(
               "group flex items-center justify-between gap-md rounded-md px-lg py-md transition-colors",
-              "border border-border bg-bg-card hover:border-accent/40",
+              "border border-border/70 bg-bg-card ring-1 ring-black/[0.03] hover:border-accent/40",
             )}
           >
             <span className="text-[15px] font-medium leading-snug text-text group-hover:text-accent">{g.title}</span>

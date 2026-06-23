@@ -83,7 +83,7 @@ export default function KeywordMapAdmin() {
           <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
           <h1 className="m-0 text-[24px] text-text">Keyword Map</h1>
         </div>
-        <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+        <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
       </div>
 
       <div className="mb-md flex items-start gap-2 rounded-md border border-border bg-bg-alt px-3 py-2 text-[13px] text-text-muted">
@@ -101,9 +101,9 @@ export default function KeywordMapAdmin() {
       <div className="mb-md flex flex-wrap items-center gap-2">
         <div className="relative min-w-[200px] max-w-sm flex-1">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search URL or keyword…" className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search URL or keyword…" className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={typeF} onChange={(e) => setTypeF(e.target.value)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={typeF} onChange={(e) => setTypeF(e.target.value)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="all">All types</option>
           {TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
@@ -179,7 +179,7 @@ export default function KeywordMapAdmin() {
 
 function Card({ label, value, c }: { label: string; value: number; c: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{label}</p>
       <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: c }}>{value}</p>
     </div>

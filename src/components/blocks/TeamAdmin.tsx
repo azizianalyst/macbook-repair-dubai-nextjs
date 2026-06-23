@@ -66,7 +66,7 @@ export default function TeamAdmin() {
       {err && <p className="mb-md rounded-md border border-danger/40 bg-danger/10 px-3 py-2 text-[13px] text-danger">{err}</p>}
 
       {/* Add member */}
-      <div className="mb-lg rounded-md border border-border bg-bg-card p-md">
+      <div className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <p className="m-0 mb-2 text-[13px] font-semibold text-text">Add a team member</p>
         <div className="flex flex-wrap items-end gap-2">
           <label className="block min-w-[240px] flex-1">

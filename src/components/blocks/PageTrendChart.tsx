@@ -61,7 +61,7 @@ export default function PageTrendChart() {
     : null;
 
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       {/* Header */}
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <p className="m-0 flex items-center gap-1.5 text-[13px] font-semibold text-text">

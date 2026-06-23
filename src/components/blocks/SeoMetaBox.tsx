@@ -61,7 +61,7 @@ export default function SeoMetaBox({
   );
 
   return (
-    <div className="rounded-md border border-border bg-bg-card">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
       <div className="flex items-center gap-1 border-b border-border px-2">
         {TABS.map(({ id, label, Icon }) => (
           <button key={id} onClick={() => setTab(id)}

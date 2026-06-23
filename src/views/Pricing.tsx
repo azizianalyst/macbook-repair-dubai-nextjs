@@ -100,7 +100,7 @@ export default function Pricing() {
         <h2 id="how-pricing" className="text-[28px] md:text-[32px] mb-md">How our pricing works</h2>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {HOW_PRICING_WORKS.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm">
+            <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm">
               <Icon size={28} className="text-accent" aria-hidden />
               <h3 className="text-[18px] font-bold">{title}</h3>
               <p className="text-[15px] text-text-muted leading-relaxed">{body}</p>
@@ -131,7 +131,7 @@ export default function Pricing() {
 
       {/* What's included */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl grid gap-xl md:grid-cols-2">
-        <article className="border border-border bg-bg-card rounded-md p-xl">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <Check size={24} className="text-whatsapp" aria-hidden /> What's included in every repair
           </h2>
@@ -153,7 +153,7 @@ export default function Pricing() {
           </ul>
         </article>
 
-        <article className="border border-border bg-bg-card rounded-md p-xl">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <X size={24} className="text-error" aria-hidden /> What's NOT included (honest list)
           </h2>
@@ -195,7 +195,7 @@ export default function Pricing() {
         {/* Mobile: stack each row so the Apple Store column is never hidden off-screen. */}
         <ul className="md:hidden flex flex-col gap-sm">
           {COMPARISON.map((c) => (
-            <li key={c.row} className="rounded-md border border-border bg-bg-card p-md">
+            <li key={c.row} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
               <p className="font-semibold text-text mb-xs">{c.row}</p>
               <p className="text-[14px]"><span className="font-semibold text-accent">Us:</span> <span className="mono text-accent">{c.us}</span></p>
               <p className="text-[14px] text-text-muted"><span className="font-semibold">Apple Store:</span> <span className="mono">{c.apple}</span></p>
@@ -266,7 +266,7 @@ function PriceSection({
       {/* Mobile: stacked cards so the price is always visible (never clipped off-screen). */}
       <ul className="md:hidden flex flex-col gap-sm">
         {rows.map((r) => (
-          <li key={r.service} className="rounded-md border border-border bg-bg-card p-md">
+          <li key={r.service} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="font-semibold text-text">{r.service}</p>
             <div className="mt-xs flex items-baseline justify-between gap-md">
               <span className="mono font-semibold text-accent text-[16px]">AED {r.price}</span>

@@ -295,7 +295,7 @@ export default function MacRepairHub() {
               { label: "Activation lock unlock", href: "/mac-activation-lock-unlock-dubai" },
             ].map((s) => (
               <Link key={s.href} to={s.href}
-                className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+                className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                 {s.label}
               </Link>
             ))}
@@ -347,7 +347,7 @@ export default function MacRepairHub() {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">Frequently asked questions</h2>
               <p className="text-[14px] text-text-muted leading-relaxed">Everything you need to know before booking your Mac repair.</p>
@@ -386,7 +386,7 @@ export default function MacRepairHub() {
           <p className="text-[14px] font-semibold text-text mb-3 flex items-center gap-2"><MapPin size={16} className="text-accent" /> Free pickup across Dubai</p>
           <div className="flex flex-wrap gap-2">
             {["Palm Jumeirah","JVC","JLT","Umm Suqeim","Arabian Ranches","Dubailand","Greens","Internet City","Silicon Oasis","Business Bay","Downtown Dubai","DIFC","Dubai Marina","JBR"].map((a) => (
-              <span key={a} className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-text-muted">{a}</span>
+              <span key={a} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text-muted">{a}</span>
             ))}
           </div>
         </section>

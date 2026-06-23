@@ -68,7 +68,7 @@ export default function PageSeoAdmin() {
           <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
           <h1 className="m-0 text-[24px] text-text">Pages SEO</h1>
         </div>
-        <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+        <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
       </div>
 
       <div className="mb-md flex items-start gap-2 rounded-md border border-border bg-bg-alt px-3 py-2 text-[13px] text-text-muted">
@@ -94,7 +94,7 @@ export default function PageSeoAdmin() {
         <div className="relative min-w-[220px] max-w-md flex-1">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by URL or title…"
-            className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
         <label className="inline-flex items-center gap-2 text-[13px] text-text-muted"><input type="checkbox" checked={onlyOver} onChange={(e) => setOnlyOver(e.target.checked)} /> Customised only</label>
         <span className="text-[13px] text-text-faint">{filtered.length} shown</span>
@@ -109,7 +109,7 @@ export default function PageSeoAdmin() {
             {pageRows.length === 0 && <tr><td colSpan={4} className="px-3 py-8 text-center text-text-faint">No pages match.</td></tr>}
             {pageRows.map((r) => (
               <tr key={r.path} onClick={() => setEditing(r)} className="cursor-pointer border-t border-border align-top hover:bg-bg-alt">
-                <td className="px-3 py-2 text-text-muted whitespace-nowrap">{r.path}{r.overridden && <span className="ml-2 rounded bg-accent/15 px-1.5 py-0.5 text-[11px] text-accent">custom</span>}{r.pending && <span className="ml-1 rounded bg-[#fbbf24]/15 px-1.5 py-0.5 text-[11px] text-[#fbbf24]">pending</span>}</td>
+                <td className="px-3 py-2 text-text-muted whitespace-nowrap">{r.path}{r.overridden && <span className="ml-2 rounded bg-accent/10 px-1.5 py-0.5 text-[11px] text-accent">custom</span>}{r.pending && <span className="ml-1 rounded bg-[#fbbf24]/15 px-1.5 py-0.5 text-[11px] text-[#fbbf24]">pending</span>}</td>
                 <td className="px-3 py-2 text-text">{r.title}</td>
                 <td className="px-3 py-2 whitespace-nowrap" style={{ color: r.title.length > 60 ? "#f87171" : "var(--text-faint)" }}>{r.title.length}</td>
                 <td className="px-2 py-2 text-right text-text-faint">edit</td>
@@ -244,7 +244,7 @@ function PerfStat({ label, value, hint }: { label: string; value: React.ReactNod
 
 function Card({ label, value, c }: { label: string; value: number; c: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{label}</p>
       <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: c }}>{value}</p>
     </div>

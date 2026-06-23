@@ -185,19 +185,19 @@ export default function IMacRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">iMac models we repair</h2>
         <ul className="flex flex-wrap gap-2 mb-lg">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
         <p className="text-[14px] mb-sm font-semibold text-text">Dedicated model pages:</p>
         <ul className="flex flex-wrap gap-2">
           {MODEL_PAGES.map((m) => (
-            <li key={m.href}><Link to={m.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors mono">{m.label}</Link></li>
+            <li key={m.href}><Link to={m.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors mono">{m.label}</Link></li>
           ))}
         </ul>
         <p className="text-[14px] mt-lg mb-sm font-semibold text-text">Repair by chip generation:</p>
         <ul className="flex flex-wrap gap-2">
           {CHIP_PAGES.map((c) => (
-            <li key={c.href}><Link to={c.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{c.label}</Link></li>
+            <li key={c.href}><Link to={c.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{c.label}</Link></li>
           ))}
         </ul>
       </section>
@@ -251,7 +251,7 @@ export default function IMacRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">iMac services we specialise in</h2>
         <ul className="flex flex-wrap gap-2">
           {SERVICE_PAGES.map((s) => (
-            <li key={s.href}><Link to={s.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{s.label}</Link></li>
+            <li key={s.href}><Link to={s.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{s.label}</Link></li>
           ))}
         </ul>
       </section>
@@ -263,7 +263,7 @@ export default function IMacRepairHub() {
           <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Some of the top iMac repair techs in Dubai work at MacBook Repair Dubai. We have one of the highest customer retention rates in the UAE - most visitors become happy customers thanks to our low prices. We also offer free pickup and delivery to all our valued clients.</p>
           <div className="grid gap-md sm:grid-cols-2">
             {WHY.map((w) => (
-              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{w.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{w.body}</p>
               </article>
@@ -277,7 +277,7 @@ export default function IMacRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
         <div className="grid gap-md md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
+            <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
               </div>
@@ -290,7 +290,7 @@ export default function IMacRepairHub() {
 
       {/* Schedule CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Save Time and Schedule Your Repair Now</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Our goal is to provide the supreme-quality Apple device repair available in Dubai, UAE - quick and reasonably priced. We fix all types of Apple Macs, iMac, Mac Pro, MacBook, iPad and iPhone with a 100% data-loss-free guarantee. Free diagnosis, same-day fixing, pickup and delivery available. Simply call us or fill out our short form and we'll get back to you right away.
@@ -305,7 +305,7 @@ export default function IMacRepairHub() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
-        <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
+        <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
           <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
           <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>

@@ -41,7 +41,7 @@ const IMG = {
 
 function TopicFigure({ img }: { img: { src: string; alt: string; caption: string } }) {
   return (
-    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border bg-bg-card">
+    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
       <ResponsiveImage
         src={img.src}
         alt={img.alt}
@@ -479,7 +479,7 @@ export default function MacBookProRepair() {
           {/* Left/right split: image on left, cards on right */}
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="w-full lg:w-[42%] shrink-0">
-              <figure className="overflow-hidden rounded-2xl border border-border bg-bg-card">
+              <figure className="overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
                 <ResponsiveImage
                   src={IMG.services.src}
                   alt={IMG.services.alt}
@@ -494,7 +494,7 @@ export default function MacBookProRepair() {
               {SIGNS.map(({ Icon, label, body }) => (
                 <li
                   key={label}
-                  className="flex items-start gap-4 rounded-xl border border-border bg-bg-card p-4"
+                  className="flex items-start gap-4 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
                     <Icon size={19} className="text-accent" strokeWidth={1.75} aria-hidden />
@@ -563,7 +563,7 @@ export default function MacBookProRepair() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
             {/* sticky sidebar */}
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">
                 Frequently asked questions
@@ -640,7 +640,7 @@ export default function MacBookProRepair() {
               <Link
                 key={href}
                 to={href}
-                className="flex items-start rounded-xl border border-border bg-bg-card p-4 hover:border-accent/50 transition-colors group"
+                className="flex items-start rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors group"
               >
                 <span className="text-[14px] font-medium text-text leading-snug group-hover:text-accent">{label}</span>
               </Link>

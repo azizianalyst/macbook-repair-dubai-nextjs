@@ -121,8 +121,8 @@ export default function BlogAdmin() {
           <h1 className="m-0 text-[24px] text-text">Posts</h1>
         </div>
         <div className="flex items-center gap-2">
-          <a href="/admin/categories" className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><FolderTree size={14} /> Categories</a>
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <a href="/admin/categories" className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><FolderTree size={14} /> Categories</a>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
           <button onClick={() => setEditing(emptyDraft())} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><Plus size={15} /> New post</button>
         </div>
       </div>
@@ -140,14 +140,14 @@ export default function BlogAdmin() {
         <div className="relative min-w-[200px] max-w-sm flex-1">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search posts…"
-            className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={catFilter} onChange={(e) => setCatFilter(e.target.value)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={catFilter} onChange={(e) => setCatFilter(e.target.value)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="all">All categories</option>
           {categories.map((c) => <option key={c.slug} value={c.slug}>{c.name} ({c.count})</option>)}
           <option value="uncat">Uncategorised</option>
         </select>
-        <select value={kindFilter} onChange={(e) => setKindFilter(e.target.value as typeof kindFilter)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={kindFilter} onChange={(e) => setKindFilter(e.target.value as typeof kindFilter)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="all">All types</option>
           <option value="markdown">Markdown</option>
           <option value="builtin">Built-in</option>
@@ -158,8 +158,8 @@ export default function BlogAdmin() {
       {selected.size > 0 && (
         <div className="mb-2 flex flex-wrap items-center gap-2 rounded-md border border-accent/40 bg-accent/10 px-3 py-2 text-[13px]">
           <span className="font-semibold text-text">{selected.size} selected</span>
-          <button onClick={() => bulkStatus("published")} disabled={bulkBusy} className="rounded-md border border-border bg-bg-card px-2.5 py-1 text-text hover:border-accent disabled:opacity-50">Publish</button>
-          <button onClick={() => bulkStatus("draft")} disabled={bulkBusy} className="rounded-md border border-border bg-bg-card px-2.5 py-1 text-text hover:border-accent disabled:opacity-50">Set draft</button>
+          <button onClick={() => bulkStatus("published")} disabled={bulkBusy} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-1 text-text hover:border-accent disabled:opacity-50">Publish</button>
+          <button onClick={() => bulkStatus("draft")} disabled={bulkBusy} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-1 text-text hover:border-accent disabled:opacity-50">Set draft</button>
           <button onClick={bulkDelete} disabled={bulkBusy} className="inline-flex items-center gap-1 rounded-md border border-danger/40 px-2.5 py-1 text-danger hover:bg-danger/10 disabled:opacity-50"><Trash2 size={13} /> Delete</button>
           <button onClick={() => setSelected(new Set())} className="ml-auto text-text-muted hover:text-text">Clear</button>
           {bulkBusy && <Loader2 size={14} className="animate-spin text-text-faint" />}
@@ -298,8 +298,8 @@ function Editor({ draft, onClose, onSaved }: { draft: Draft; onClose: () => void
           {!isNew && <a href={`/blog/${d.slug}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-2 text-[13px] text-text-muted hover:text-text"><ExternalLink size={14} /> View</a>}
           {!isNew && revisions.length > 0 && <button onClick={() => setShowHistory(true)} className="inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-2 text-[13px] text-text-muted hover:text-text"><History size={14} /> History ({revisions.length})</button>}
           {!isNew && <button onClick={remove} disabled={busy} className="inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-2 text-[13px] text-danger hover:bg-bg-alt disabled:opacity-50"><Trash2 size={14} /> Delete</button>}
-          <button onClick={() => save("draft")} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text hover:border-accent disabled:opacity-50"><Save size={14} /> Save draft</button>
-          <button onClick={() => save("scheduled")} disabled={busy} title="Save as scheduled (needs a date)" className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text hover:border-accent disabled:opacity-50"><CalendarClock size={14} /> Schedule</button>
+          <button onClick={() => save("draft")} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text hover:border-accent disabled:opacity-50"><Save size={14} /> Save draft</button>
+          <button onClick={() => save("scheduled")} disabled={busy} title="Save as scheduled (needs a date)" className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text hover:border-accent disabled:opacity-50"><CalendarClock size={14} /> Schedule</button>
           <button onClick={() => save("published")} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-4 py-2 text-[13px] font-semibold text-white disabled:opacity-50">{busy ? <Loader2 size={14} className="animate-spin" /> : <Eye size={14} />} Publish</button>
         </div>
       </div>
@@ -336,7 +336,7 @@ function Editor({ draft, onClose, onSaved }: { draft: Draft; onClose: () => void
         <div className="flex flex-col gap-md">
           <div>
             <input value={d.title} onChange={(e) => set("title", e.target.value)} placeholder="Post title"
-              className="w-full rounded-md border border-border bg-bg-card px-3 py-3 text-[20px] font-semibold text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+              className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-3 text-[20px] font-semibold text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
             {errs.title && <p className="m-0 mt-1 text-[12px] text-danger">{errs.title}</p>}
           </div>
 
@@ -349,9 +349,9 @@ function Editor({ draft, onClose, onSaved }: { draft: Draft; onClose: () => void
           {tab === "write" ? (
             <textarea value={d.body} onChange={(e) => set("body", e.target.value)} rows={26} spellCheck
               placeholder={"## Section heading\n\nWrite your post in **markdown**.\n\n- bullet points\n- work fine\n\n| Service | Price |\n|---|---|\n| Screen | AED 1,050 |\n"}
-              className="w-full rounded-md border border-border bg-bg-card px-3 py-3 font-mono text-[13px] leading-relaxed text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+              className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-3 font-mono text-[13px] leading-relaxed text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
           ) : (
-            <div className="prose-blog min-h-[420px] rounded-md border border-border bg-bg-card px-4 py-3 text-[15px] leading-relaxed text-text-muted [&_a]:text-accent [&_a]:underline [&_h2]:mt-4 [&_h2]:text-[22px] [&_h2]:text-text [&_h3]:text-text [&_strong]:text-text [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-border [&_th]:px-2 [&_th]:py-1 [&_th]:text-left [&_td]:border [&_td]:border-border [&_td]:px-2 [&_td]:py-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
+            <div className="prose-blog min-h-[420px] rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-3 text-[15px] leading-relaxed text-text-muted [&_a]:text-accent [&_a]:underline [&_h2]:mt-4 [&_h2]:text-[22px] [&_h2]:text-text [&_h3]:text-text [&_strong]:text-text [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-border [&_th]:px-2 [&_th]:py-1 [&_th]:text-left [&_td]:border [&_td]:border-border [&_td]:px-2 [&_td]:py-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
               dangerouslySetInnerHTML={{ __html: previewHtml }} />
           )}
           {errs.body && <p className="m-0 text-[12px] text-danger">{errs.body}</p>}
@@ -369,7 +369,7 @@ function Editor({ draft, onClose, onSaved }: { draft: Draft; onClose: () => void
           />
 
           {/* FAQs */}
-          <div className="rounded-md border border-border bg-bg-card p-md">
+          <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <div className="mb-2 flex items-center justify-between">
               <h3 className="m-0 text-[14px] text-text">FAQs <span className="text-text-faint">(optional — shown + emit FAQ schema)</span></h3>
               <button onClick={addFaq} className="inline-flex items-center gap-1 text-[12px] text-accent hover:underline"><Plus size={13} /> Add</button>
@@ -390,7 +390,7 @@ function Editor({ draft, onClose, onSaved }: { draft: Draft; onClose: () => void
         </div>
 
         {/* Sidebar: metadata */}
-        <aside className="flex flex-col gap-3 rounded-md border border-border bg-bg-card p-md">
+        <aside className="flex flex-col gap-3 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
           <Field label="Slug" err={errs.slug} hint="The URL: /blog/your-slug">
             <div className="flex items-center rounded-md border border-border bg-bg px-2 focus-within:border-accent">
               <span className="text-[12px] text-text-faint">/blog/</span>
@@ -453,7 +453,7 @@ function StatusPill({ status }: { status: "draft" | "published" }) {
 
 function Card({ label, value, c }: { label: string; value: number; c: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{label}</p>
       <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: c }}>{value}</p>
     </div>

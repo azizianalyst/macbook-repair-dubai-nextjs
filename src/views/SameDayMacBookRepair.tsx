@@ -172,7 +172,7 @@ export default function SameDayMacBookRepair() {
             <h2 className="text-[28px] md:text-[32px] mb-md">How same-day MacBook repair works</h2>
             <div className="grid gap-md md:grid-cols-4">
               {STEPS.map(({ icon: Icon, title, body }) => (
-                <article key={title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <Icon size={28} className="text-accent mb-sm" aria-hidden />
                   <h3 className="text-[16px] font-bold mb-xs">{title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
@@ -215,7 +215,7 @@ export default function SameDayMacBookRepair() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Need your MacBook repaired today?</h2>
               <p className="text-[15px] text-text-muted">WhatsApp with your model and fault, fixed quote in under 4 minutes.</p>

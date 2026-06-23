@@ -107,14 +107,14 @@ export default function MediaLibrary({ onPick }: { onPick?: (path: string) => vo
       <div className="mb-md flex flex-wrap items-center gap-2">
         <div className="relative min-w-[200px] max-w-sm flex-1">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search name, path or alt…" className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search name, path or alt…" className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={folderF} onChange={(e) => setFolderF(e.target.value)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={folderF} onChange={(e) => setFolderF(e.target.value)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="all">All folders ({items.length})</option>
           {folders.map((f) => <option key={f} value={f}>{f} ({items.filter((i) => i.folder === f).length})</option>)}
         </select>
         <label className="inline-flex items-center gap-2 text-[13px] text-text-muted"><input type="checkbox" checked={missingAltOnly} onChange={(e) => setMissingAltOnly(e.target.checked)} /> Missing alt only</label>
-        <button onClick={seedAlt} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50"><Sparkles size={14} /> Fill missing alt</button>
+        <button onClick={seedAlt} disabled={busy} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50"><Sparkles size={14} /> Fill missing alt</button>
         <span className="text-[13px] text-text-faint">{shown.length} shown</span>
       </div>
 
@@ -127,7 +127,7 @@ export default function MediaLibrary({ onPick }: { onPick?: (path: string) => vo
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {shown.map((it) => (
-            <div key={it.path} className="group overflow-hidden rounded-md border border-border bg-bg-card">
+            <div key={it.path} className="group overflow-hidden rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
               <div
                 className={`relative aspect-[4/3] bg-bg-alt ${onPick ? "cursor-pointer" : ""}`}
                 onClick={onPick ? () => onPick(it.path) : undefined}

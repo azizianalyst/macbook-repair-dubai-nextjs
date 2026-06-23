@@ -88,12 +88,12 @@ export default function RankingsDashboard() {
         </div>
         <div className="flex items-center gap-2">
           {data?.configured && <button onClick={snapshot} disabled={snapping} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white disabled:opacity-50">{snapping ? <Loader2 size={14} className="animate-spin" /> : <Camera size={14} />} Snapshot now</button>}
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       </div>
 
       {data && !live && (
-        <div className="rounded-md border border-border bg-bg-card p-lg text-[14px] text-text-muted">
+        <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg text-[14px] text-text-muted">
           <p className="m-0 mb-2 font-semibold text-text">Google Search Console not connected yet.</p>
           <p className="m-0">Add a service account and set <code className="text-text">GSC_SA_EMAIL</code>, <code className="text-text">GSC_SA_PRIVATE_KEY</code> and <code className="text-text">GSC_SITE_URL=sc-domain:macbook-repair-dubai.ae</code>, then grant the service-account email access to the property in Search Console. See <code className="text-text">.env.local.example</code>.</p>
         </div>
@@ -120,7 +120,7 @@ export default function RankingsDashboard() {
             </div>
           )}
 
-          <div className="mb-lg rounded-md border border-border bg-bg-card p-md">
+          <div className="mb-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="m-0 mb-2 flex items-center gap-1.5 text-[12px] uppercase tracking-wide text-text-faint"><TrendingUp size={13} /> Avg position over time (lower = better)</p>
             {trend.length < 2 ? (
               <p className="m-0 py-8 text-center text-[13px] text-text-faint">Take a snapshot today, then again over the coming weeks — the trend line builds from snapshots.</p>
@@ -182,7 +182,7 @@ function MoversTable({ title, rows, dir }: { title: string; rows: Mover[]; dir: 
 
 function Card({ label, value, c }: { label: string; value: string; c: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{label}</p>
       <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: c }}>{value}</p>
     </div>

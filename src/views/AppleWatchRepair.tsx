@@ -122,7 +122,7 @@ export default function AppleWatchRepair() {
           </p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {REPAIRS.map(({ icon: Icon, label, price, time, note }) => (
-              <article key={label} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm">
+              <article key={label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm">
                 <div className="flex items-center gap-sm">
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
@@ -169,7 +169,7 @@ export default function AppleWatchRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">How the repair works</h2>
           <div className="grid gap-md md:grid-cols-5">
             {PROCESS.map(({ step, title, body }) => (
-              <article key={step} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={step} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <span className="text-[28px] font-black text-accent block mb-sm">{step}</span>
                 <h3 className="text-[16px] font-bold mb-xs">{title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
@@ -183,7 +183,7 @@ export default function AppleWatchRepair() {
 
         {/* CTA strip */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a quote for your Apple Watch</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis. Fixed price before we start. Same-day for screen and battery.</p>

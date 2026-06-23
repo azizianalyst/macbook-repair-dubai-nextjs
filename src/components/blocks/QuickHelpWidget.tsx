@@ -77,7 +77,7 @@ function Chip({
       className={cn(
         "rounded-full border px-3 py-1.5 text-[13px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
-          ? "border-accent bg-accent/15 text-text font-semibold"
+          ? "border-accent bg-accent/10 text-text font-semibold"
           : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
       )}
     >
@@ -165,7 +165,7 @@ export function QuickHelpWidget() {
           aria-modal="false"
           aria-label="Quick repair request"
           className={cn(
-            "fixed z-[60] flex flex-col overflow-hidden rounded-xl border border-border bg-bg-card shadow-2xl",
+            "fixed z-[60] flex flex-col overflow-hidden rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] shadow-2xl",
             "motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4",
             // mobile: bottom sheet; desktop: floating card near the WhatsApp button
             "inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+4.25rem)] max-h-[75vh]",
@@ -195,7 +195,7 @@ export function QuickHelpWidget() {
 
           {sent ? (
             <div className="px-4 py-6 text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <Check size={24} aria-hidden />
               </div>
               <p className="text-[16px] font-bold text-text">Opening WhatsApp…</p>
@@ -257,7 +257,7 @@ export function QuickHelpWidget() {
                         className={cn(
                           "flex items-center gap-2 rounded-md border px-2.5 py-2 text-[13px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                           active
-                            ? "border-accent bg-accent/15 text-text font-semibold"
+                            ? "border-accent bg-accent/10 text-text font-semibold"
                             : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
                         )}
                       >
@@ -277,7 +277,7 @@ export function QuickHelpWidget() {
                   maxLength={60}
                   autoComplete="name"
                   placeholder="Your name"
-                  className="h-11 rounded-md border border-border bg-bg-card px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="h-11 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 />
                 <input
                   value={phone}
@@ -287,7 +287,7 @@ export function QuickHelpWidget() {
                   inputMode="tel"
                   autoComplete="tel"
                   placeholder="Phone number"
-                  className="h-11 rounded-md border border-border bg-bg-card px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="h-11 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 />
               </div>
 

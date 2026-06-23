@@ -27,7 +27,7 @@ export function RelatedServices({
             className={cn(
               "group block rounded-md p-lg motion-safe:transition motion-safe:hover:-translate-y-0.5",
               dark
-                ? "border border-border bg-bg-card hover:border-accent/40"
+                ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03] hover:border-accent/40"
                 : "bg-bg-card border border-border shadow-sm hover:shadow-md",
             )}
           >

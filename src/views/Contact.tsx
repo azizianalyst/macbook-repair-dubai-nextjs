@@ -69,7 +69,7 @@ export default function Contact() {
             </Button>
           </div>
 
-          <div className="border border-border bg-bg-card rounded-md p-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md">Hours</p>
             <ul className="text-[14px] space-y-1">
               {HOURS.map((h) => (
@@ -82,7 +82,7 @@ export default function Contact() {
             <p className="text-[12px] text-text-faint mt-md">WhatsApp is answered 24/7, including Sundays.</p>
           </div>
 
-          <div className="border border-border bg-bg-card rounded-md p-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md">Payment &amp; parking</p>
             <p className="text-[14px] text-text mb-2">Cash · VISA · Mastercard · American Express</p>
             <p className="text-[13px] text-text-muted flex items-start gap-2">
@@ -110,7 +110,7 @@ export default function Contact() {
         <h2 className="m-0 mb-xl">How to reach us</h2>
         <div className="grid gap-md md:grid-cols-2">
           {DIRECTIONS.map((d) => (
-            <article key={d.from} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={d.from} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <div className="flex items-baseline justify-between gap-md mb-2">
                 <h3 className="m-0 text-[18px]">{d.from}</h3>
                 <span className="mono text-[14px] text-accent">~{d.minutes} min</span>
@@ -167,7 +167,7 @@ function AddressBlock() {
     } catch { /* clipboard not available - silent */ }
   };
   return (
-    <div className="border border-border bg-bg-card rounded-md p-lg">
+    <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
       <p className="font-heading font-semibold text-[14px] uppercase tracking-wider text-text-muted mb-md flex items-center gap-2">
         <MapPin size={14} className="text-accent" aria-hidden /> Address
       </p>

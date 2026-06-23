@@ -153,17 +153,17 @@ export default function MacMiniRepair() {
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
         <div className="flex flex-wrap gap-2 mb-lg">
           {MAC_DESKTOP_MODELS.filter((m) => m.family === "mini").map((m) => (
-            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
+            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
           ))}
         </div>
         <ul className="flex flex-wrap gap-2 mb-lg">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
         <div className="grid gap-md sm:grid-cols-2">
           {SPECS.map((s) => (
-            <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
               <ul className="space-y-1">
                 {s.items.map((it) => <li key={it} className="text-[14px] text-text-muted">{it}</li>)}
@@ -178,9 +178,9 @@ export default function MacMiniRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump to the chip-specific repair page for your Mac mini.</p>
         <div className="flex flex-wrap gap-2">
-          <Link to="/mac-mini-m1-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
-          <Link to="/mac-mini-m2-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M2 / M2 Pro (2023) →</Link>
-          <Link to="/mac-mini-m4-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M4 / M4 Pro (2024) →</Link>
+          <Link to="/mac-mini-m1-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
+          <Link to="/mac-mini-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M2 / M2 Pro (2023) →</Link>
+          <Link to="/mac-mini-m4-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M4 / M4 Pro (2024) →</Link>
         </div>
       </section>
 
@@ -189,11 +189,11 @@ export default function MacMiniRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac mini services</h2>
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Go straight to the fix you need.</p>
         <div className="flex flex-wrap gap-2">
-          <Link to="/mac-mini-not-turning-on-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Not Turning On →</Link>
-          <Link to="/mac-mini-no-display-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini No Display →</Link>
-          <Link to="/mac-mini-overheating-fix-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Overheating →</Link>
-          <Link to="/mac-mini-ssd-upgrade-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini SSD Upgrade →</Link>
-          <Link to="/mac-mini-data-recovery-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Data Recovery →</Link>
+          <Link to="/mac-mini-not-turning-on-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Not Turning On →</Link>
+          <Link to="/mac-mini-no-display-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini No Display →</Link>
+          <Link to="/mac-mini-overheating-fix-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Overheating →</Link>
+          <Link to="/mac-mini-ssd-upgrade-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini SSD Upgrade →</Link>
+          <Link to="/mac-mini-data-recovery-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Data Recovery →</Link>
         </div>
       </section>
 
@@ -203,7 +203,7 @@ export default function MacMiniRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac Mini Problems</h2>
           <div className="grid gap-md sm:grid-cols-2">
             {PROBLEMS.map((p) => (
-              <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={p.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{p.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{p.body}</p>
               </article>
@@ -216,13 +216,13 @@ export default function MacMiniRepair() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Our Mac Mini Repair Services</h2>
         <div className="grid gap-lg md:grid-cols-2">
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Hardware Repair</h3>
             <ul className="grid gap-sm sm:grid-cols-2">
               {HARDWARE.map((h) => <li key={h} className="flex gap-sm text-[14px] text-text-muted"><CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {h}</li>)}
             </ul>
           </article>
-          <article className="border border-border bg-bg-card rounded-md p-lg">
+          <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
             <h3 className="text-[18px] font-bold mb-sm">Software Repair</h3>
             <ul className="grid gap-sm sm:grid-cols-2">
               {SOFTWARE.map((h) => <li key={h} className="flex gap-sm text-[14px] text-text-muted"><CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {h}</li>)}
@@ -238,7 +238,7 @@ export default function MacMiniRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Why Choose Us?</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {WHY.map((w) => (
-              <article key={w.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{w.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{w.body}</p>
               </article>
@@ -261,7 +261,7 @@ export default function MacMiniRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
           <div className="grid gap-md md:grid-cols-3">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
+              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
@@ -270,7 +270,7 @@ export default function MacMiniRepair() {
               </figure>
             ))}
           </div>
-          <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
+          <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
             <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
             <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
@@ -292,7 +292,7 @@ export default function MacMiniRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book Your Discounted Mac Mini Repair Appointment</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             We fix all kinds of problems and offer same-day on-site help at a considerable discount, at a time and place that works for you. Our skilled, friendly technicians know Mac Minis inside out and explain everything. Contact us today for a free quote.

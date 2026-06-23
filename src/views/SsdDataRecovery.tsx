@@ -106,7 +106,7 @@ export default function SsdDataRecovery() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">SSD recovery scenarios we handle</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {SCENARIOS.map(({ icon: Icon, label, price, note }) => (
-              <article key={label} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm">
+              <article key={label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm">
                 <Icon size={22} className="text-accent shrink-0" aria-hidden />
                 <h3 className="text-[16px] font-bold">{label}</h3>
                 <p className="text-[20px] font-bold text-accent">{price}</p>
@@ -156,7 +156,7 @@ export default function SsdDataRecovery() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Start SSD data recovery, free assessment</h2>
               <p className="text-[15px] text-text-muted">No-fix no-charge. You only pay when data is confirmed recoverable. Free assessment, no commitment.</p>

@@ -138,7 +138,7 @@ export default function AppleDisplayRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Range of Apple Display Repair Services</h2>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
-            <article key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
               <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
             </article>
@@ -157,7 +157,7 @@ export default function AppleDisplayRepair() {
           <ol className="space-y-md max-w-[80ch]">
             {PROCESS.map((step, i) => (
               <li key={step.title} className="flex gap-md">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/15 text-accent font-bold flex items-center justify-center">{i + 1}</span>
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-bold flex items-center justify-center">{i + 1}</span>
                 <div>
                   <h3 className="text-[17px] font-bold mb-1">{step.title}</h3>
                   <p className="text-[15px] text-text-muted leading-relaxed">{step.body}</p>
@@ -182,7 +182,7 @@ export default function AppleDisplayRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Apple Display Models</h2>
           <div className="grid gap-md md:grid-cols-2">
             {MODELS.map((m) => (
-              <article key={m.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={m.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{m.title}</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed">{m.body}</p>
               </article>
@@ -206,7 +206,7 @@ export default function AppleDisplayRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
           <div className="grid gap-md md:grid-cols-3">
             {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
+              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
@@ -222,7 +222,7 @@ export default function AppleDisplayRepair() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
         <FAQAccordion tone="dark" items={FAQS} injectSchema />
-        <div className="mt-lg border border-border bg-bg-card rounded-md p-lg max-w-[60ch]">
+        <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
           <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
           <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
@@ -237,7 +237,7 @@ export default function AppleDisplayRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[34ch]">Trust MacBook Repair Dubai for your Apple display</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Genuine Apple parts, expert technicians, and fast turnaround. WhatsApp or call us to restore your Studio Display, Pro Display XDR, or Mac screen.

@@ -229,7 +229,7 @@ export default function MacBookVirusRemoval() {
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {COMMON_THREATS.map((p) => (
-                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={p.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
@@ -280,11 +280,11 @@ export default function MacBookVirusRemoval() {
                 <h3 className="text-[18px] font-bold mb-sm text-text">Same day (1-2 hours)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Standard clean for adware, hijackers, profiles, fake utilities. Browser-only clean. About 70% of tickets.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Same day (4-6 hours)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Deep clean for cryptominer or persistent malware. Full clean + macOS reinstall preserving files. Morning drop-off ready by 7 pm.</p>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">1-2 days</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Ransomware analysis with strain identification. Spyware / stalkerware audit with full NDA report. Family pack (3 Macs same household).</p>
               </article>
@@ -296,7 +296,7 @@ export default function MacBookVirusRemoval() {
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">Prevention - staying clean after the clean</h2>
             <div className="grid gap-md md:grid-cols-2">
               {PREVENTION.map((p) => (
-                <article key={p.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={p.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm text-text">{p.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{p.body}</p>
                 </article>
@@ -309,7 +309,7 @@ export default function MacBookVirusRemoval() {
             <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm text-text">
               <ShieldCheck size={28} className="text-accent" aria-hidden /> 30-day re-clean guarantee
             </h2>
-            <div className="border border-border bg-bg-card rounded-md p-lg">
+            <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>30 days</strong> - re-clean free of charge if the same infection returns.</li>
                 <li><strong>Covered:</strong> the specific strain identified and removed in the clean report.</li>
@@ -348,7 +348,7 @@ export default function MacBookVirusRemoval() {
                   <li>Check System Settings &gt; Privacy &gt; Profiles - uninstall any profile you didn't intentionally add.</li>
                 </ul>
               </article>
-              <article className="border border-border bg-bg-card rounded-md p-lg">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Stop and bring it in</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Cryptominer suspected (fans loud in idle) - needs launchctl audit beyond free tools.</li>
@@ -433,7 +433,7 @@ export default function MacBookVirusRemoval() {
 
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Pop-ups? Fans loud? WhatsApp the symptoms - quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send a screenshot of the pop-up or a description of what changed. Free 15-minute diagnosis, AED 250 standard clean, 30-day re-clean guarantee.

@@ -23,7 +23,7 @@ export function PriceCard({ service, startingPrice, timeline, href, whatsappMess
   return (
     <article className={cn(
       "rounded-md p-lg hover:shadow-md transition-shadow flex flex-col gap-md",
-      dark ? "border border-border bg-bg-card" : "bg-bg-card border border-border shadow-sm",
+      dark ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]" : "bg-bg-card border border-border shadow-sm",
     )}>
       <h3 className={cn("text-[18px] font-bold leading-snug", dark && "text-text")}>{service}</h3>
 

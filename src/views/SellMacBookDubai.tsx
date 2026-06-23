@@ -304,7 +304,7 @@ export default function SellMacBookDubai() {
               return (
                 <article
                   key={item.title}
-                  className="border border-border bg-bg-card rounded-md p-lg"
+                  className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg"
                 >
                   <h3 className="text-[18px] font-bold mb-sm flex items-start gap-2">
                     <Icon size={20} className="text-accent mt-0.5 shrink-0" aria-hidden />
@@ -353,7 +353,7 @@ export default function SellMacBookDubai() {
             return (
               <article
                 key={f.title}
-                className="border border-border bg-bg-card rounded-md p-lg"
+                className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg"
               >
                 <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2">
                   <Icon size={18} className="text-accent shrink-0" aria-hidden />
@@ -377,7 +377,7 @@ export default function SellMacBookDubai() {
             others see junk - so a damaged device still puts money in your pocket.
           </p>
           <div className="grid gap-md md:grid-cols-2">
-            <article className="border border-border bg-bg-card rounded-md p-lg">
+            <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2">
                 <CheckCircle2 size={18} className="text-accent shrink-0" aria-hidden />
                 Working & good condition
@@ -388,7 +388,7 @@ export default function SellMacBookDubai() {
                 and any accessories to push the offer higher.
               </p>
             </article>
-            <article className="border border-border bg-bg-card rounded-md p-lg">
+            <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm flex items-center gap-2">
                 <Wrench size={18} className="text-accent shrink-0" aria-hidden />
                 Faulty, cracked or dead
@@ -421,7 +421,7 @@ export default function SellMacBookDubai() {
             return (
               <article
                 key={s.title}
-                className="border border-border bg-bg-card rounded-md p-lg flex flex-col"
+                className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col"
               >
                 <Icon size={26} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
@@ -468,7 +468,7 @@ export default function SellMacBookDubai() {
 
       {/* Closing CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">
             Get your free valuation now - paid the same day

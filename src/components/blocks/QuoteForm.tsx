@@ -15,11 +15,11 @@ export function QuoteForm() {
     window.open(`${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
   };
 
-  const inputCls = "w-full rounded-md border border-border bg-bg-card px-3.5 h-11 text-[15px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
+  const inputCls = "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 h-11 text-[15px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
   const labelCls = "block text-[13px] font-medium text-text-muted mb-1";
 
   return (
-    <form onSubmit={submit} className="rounded-md border border-border bg-bg-card p-lg grid gap-md">
+    <form onSubmit={submit} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg grid gap-md">
       <div className="grid gap-md sm:grid-cols-2">
         <label>
           <span className={labelCls}>First name</span>

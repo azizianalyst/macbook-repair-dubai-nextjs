@@ -197,7 +197,7 @@ export default function TradeInMacBookDubai() {
               <Link
                 key={d.label}
                 to={d.href}
-                className="group border border-border bg-bg-card rounded-md p-lg flex items-start gap-md motion-safe:transition-transform motion-safe:hover:-translate-y-0.5 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+                className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex items-start gap-md motion-safe:transition-transform motion-safe:hover:-translate-y-0.5 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
               >
                 <d.icon size={24} className="text-accent mt-0.5 shrink-0" aria-hidden />
                 <span>
@@ -223,7 +223,7 @@ export default function TradeInMacBookDubai() {
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {VALUATION_FACTORS.map((f) => (
-            <article key={f.title} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={f.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2">
                 <f.icon size={18} className="text-accent shrink-0" aria-hidden /> {f.title}
               </h3>
@@ -256,7 +256,7 @@ export default function TradeInMacBookDubai() {
               "Keyboard, trackpad and port faults",
               "Cosmetic dents, scratches and wear",
             ].map((item) => (
-              <li key={item} className="border border-border bg-bg-card rounded-md p-md flex items-center gap-sm text-[15px] text-text">
+              <li key={item} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-center gap-sm text-[15px] text-text">
                 <CheckCircle2 size={18} className="text-accent shrink-0" aria-hidden /> {item}
               </li>
             ))}
@@ -271,9 +271,9 @@ export default function TradeInMacBookDubai() {
         </h2>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
           {STEPS.map((s) => (
-            <article key={s.n} className="border border-border bg-bg-card rounded-md p-lg flex flex-col">
+            <article key={s.n} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col">
               <div className="flex items-center gap-sm mb-sm">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent mono text-[16px] font-semibold">{s.n}</span>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent mono text-[16px] font-semibold">{s.n}</span>
                 <s.icon size={20} className="text-accent" aria-hidden />
               </div>
               <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
@@ -307,7 +307,7 @@ export default function TradeInMacBookDubai() {
 
       {/* Closing CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">Get your free trade-in valuation today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">

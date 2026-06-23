@@ -85,7 +85,7 @@ export default function About() {
           <h2 className="m-0 mb-xl">Who you'll actually meet</h2>
           <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((t) => (
-              <div key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
+              <div key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <TechnicianBadge {...t} tone="dark" />
               </div>
             ))}
@@ -140,7 +140,7 @@ export default function About() {
           <h2 className="m-0 mb-xl">Milestones</h2>
           <ol className="grid gap-md md:grid-cols-2">
             {MILESTONES.map((m) => (
-              <li key={m.year} className="border border-border bg-bg-card rounded-md p-lg flex gap-md">
+              <li key={m.year} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex gap-md">
                 <span className="mono text-[20px] font-bold text-accent shrink-0 w-16">{m.year}</span>
                 <p className="text-[15px] text-text leading-relaxed m-0">{m.text}</p>
               </li>

@@ -181,7 +181,7 @@ export default function MacBookBatteryReplacement() {
 
             <div className="grid gap-2xl md:grid-cols-12 items-start">
               <div className="md:col-span-7">
-                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
+                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
                   <Battery size={14} className="text-accent" aria-hidden /> MacBook battery replacement · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
@@ -286,8 +286,8 @@ export default function MacBookBatteryReplacement() {
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
               {STEPS.map((s, i) => (
-                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border bg-bg-card p-lg">
-                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
                   <p className="font-semibold text-[16px] m-0 mb-1 text-text">{s.title}</p>
                   <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{s.body}</p>
                 </Reveal>
@@ -354,7 +354,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Mid-page CTA ───────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-2xl">
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
+            <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl">
               <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Battery Replacement · Same day · 2 hours</p>
@@ -372,7 +372,7 @@ export default function MacBookBatteryReplacement() {
           <SectionHead title="Lead technician on battery jobs" />
           <Card>
             <div className="flex flex-wrap items-center gap-lg">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/15 font-heading text-[20px] font-bold text-accent">U</span>
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 font-heading text-[20px] font-bold text-accent">U</span>
               <div>
                 <p className="m-0 font-semibold text-text text-[18px]">Usman</p>
                 <p className="m-0 text-[13.5px] text-text-faint">9 years experience · Battery, keyboard &amp; trackpad</p>
@@ -451,7 +451,7 @@ export default function MacBookBatteryReplacement() {
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
-                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-bg-card p-lg">
+                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <div className="flex items-center justify-between gap-2">
                     <span className="font-semibold text-text">{r.name}</span>
                     <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
@@ -480,7 +480,7 @@ export default function MacBookBatteryReplacement() {
                 { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap from AED 350. Often paired with battery if swelling cracked it." },
                 { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",     description: "Key cap from AED 150, top case from AED 700. Butterfly and Magic keyboards." },
               ].map((r) => (
-                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border bg-bg-card p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
                   <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
                   <p className="m-0 text-[14px] text-text-muted leading-relaxed">{r.description}</p>
                 </Link>
@@ -535,7 +535,7 @@ export default function MacBookBatteryReplacement() {
 
 /* ── local helpers (dark) ──────────────────────────────────── */
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-border bg-bg-card p-lg ${className}`}>{children}</div>;
+  return <div className={`rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg ${className}`}>{children}</div>;
 }
 
 function SectionHead({ title, intro, icon }: { title: string; intro?: string; icon?: ReactNode }) {

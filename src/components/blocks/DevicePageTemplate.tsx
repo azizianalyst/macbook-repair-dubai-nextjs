@@ -199,7 +199,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
             />
             <div className="grid gap-md md:grid-cols-2">
               {p.problems.map((it) => (
-                <article key={it.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={it.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[16px] font-bold mb-sm">{it.title}</h3>
                   <p className="text-[14px] text-text-muted leading-relaxed">{it.body}</p>
                 </article>
@@ -218,7 +218,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
           <section>
             <SectionHeading eyebrow="Guarantee" title="Warranty" />
-            <div className="border border-border bg-bg-card rounded-md p-lg">
+            <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
                 {p.warrantyBullets.map((b, i) => <li key={i}>{b}</li>)}

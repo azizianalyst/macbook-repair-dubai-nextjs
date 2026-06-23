@@ -41,7 +41,7 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       className={cn(
         "rounded-full border px-4 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
-          ? "border-accent bg-accent/15 text-text font-semibold"
+          ? "border-accent bg-accent/10 text-text font-semibold"
           : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
       )}
     >
@@ -159,8 +159,8 @@ export function LeadForm({
 
   if (status === "success") {
     return (
-      <div className={cn("rounded-md border border-border bg-bg-card p-xl text-center", className)}>
-        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
+      <div className={cn("rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl text-center", className)}>
+        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
           <Check size={24} aria-hidden />
         </div>
         <h3 className="text-[22px] font-bold text-text">Request received</h3>
@@ -189,7 +189,7 @@ export function LeadForm({
   ];
 
   return (
-    <div className={cn("rounded-md border border-border bg-bg-card p-lg md:p-xl", className)}>
+    <div className={cn("rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl", className)}>
       {/* progress / step indicator */}
       <div className="mb-lg">
         <div className="flex items-center justify-between gap-2">

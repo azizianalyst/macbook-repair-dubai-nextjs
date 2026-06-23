@@ -49,7 +49,7 @@ export default function WhatIsSection({
               return (
                 <div
                   key={i}
-                  className="rounded-md border border-border bg-bg-card p-lg"
+                  className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg"
                 >
                   {Icon && (
                     <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">

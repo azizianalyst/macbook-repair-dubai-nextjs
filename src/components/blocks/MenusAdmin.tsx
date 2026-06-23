@@ -83,7 +83,7 @@ export default function MenusAdmin() {
       {tab === "header" && (
         <div className="flex flex-col gap-3">
           {m.header.map((p, i) => (
-            <div key={i} className="rounded-md border border-border bg-bg-card p-md">
+            <div key={i} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
               <div className="mb-2 flex items-center gap-2">
                 <input value={p.label} onChange={(e) => patchPanel(i, { label: e.target.value })} placeholder="Menu label" className={inp + " font-semibold"} />
                 <div className="flex shrink-0 items-center gap-1">
@@ -106,7 +106,7 @@ export default function MenusAdmin() {
       {tab === "footer" && (
         <div className="flex flex-col gap-3">
           {m.footer.map((c, i) => (
-            <div key={i} className="rounded-md border border-border bg-bg-card p-md">
+            <div key={i} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
               <div className="mb-2 flex items-center gap-2">
                 <input value={c.heading} onChange={(e) => patchCol(i, { heading: e.target.value })} placeholder="Column heading" className={inp + " font-semibold"} />
                 <div className="flex shrink-0 items-center gap-1">

@@ -20,7 +20,7 @@ export function DeviceFamilyCard({ name, href, startingPrice, models, icon: Icon
       className={cn(
         "group block rounded-md p-lg transition-shadow",
         dark
-          ? "border border-border bg-bg-card"
+          ? "border border-border/70 bg-bg-card ring-1 ring-black/[0.03]"
           : "bg-bg-card border border-border shadow-sm hover:shadow-md",
       )}
     >

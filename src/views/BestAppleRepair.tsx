@@ -102,7 +102,7 @@ export default function BestAppleRepair() {
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One specialist for the whole Apple ecosystem, not a shop that does iPhones and subcontracts everything else.</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {DEVICES.map(({ icon: Icon, label, from, href, detail }) => (
-              <a key={label} href={href} className="border border-border bg-bg-card rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
+              <a key={label} href={href} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
                 <div className="flex items-center gap-sm">
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
@@ -132,7 +132,7 @@ export default function BestAppleRepair() {
         <VsAppleStore tone="dark" />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get the best Apple repair in Dubai today</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · Same-day for common repairs · Warranty up to 12 months · Free pickup.</p>

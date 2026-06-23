@@ -85,7 +85,7 @@ export default function SettingsAdmin() {
       {err && <p className="mb-md rounded-md border border-danger/40 bg-danger/10 px-3 py-2 text-[13px] text-danger">{err}</p>}
       {msg && <p className="mb-md rounded-md border border-whatsapp/40 bg-whatsapp/10 px-3 py-2 text-[13px] text-whatsapp">{msg}</p>}
 
-      <div className="max-w-xl rounded-md border border-border bg-bg-card p-lg">
+      <div className="max-w-xl rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
         <div className="flex flex-col gap-4">
           <Field label="Tagline" hint="Short slogan — used in Organization schema">
             <input value={d.tagline} onChange={(e) => set("tagline", e.target.value)} className={inp} placeholder="Independent Apple Repair Specialists" />
@@ -118,7 +118,7 @@ export default function SettingsAdmin() {
       </div>
 
       {/* Connect Claude AI — paste the Anthropic API key here (powers "Optimize with AI"). */}
-      <div className="mt-lg max-w-xl rounded-md border border-border bg-bg-card p-lg">
+      <div className="mt-lg max-w-xl rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
         <h2 className="m-0 flex items-center gap-1.5 text-[18px] text-text"><Sparkles size={18} className="text-accent" /> Connect Claude AI</h2>
         <p className="m-0 mt-1 text-[13px] text-text-muted">Paste your Anthropic API key to power the <strong className="text-text">“Optimize with AI”</strong> button on posts &amp; pages. Get one at <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">console.anthropic.com</a> (add a little billing credit first). Stored securely on the server; never shown again.</p>
 

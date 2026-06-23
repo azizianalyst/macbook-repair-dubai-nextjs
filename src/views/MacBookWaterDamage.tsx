@@ -245,7 +245,7 @@ export default function MacBookWaterDamage() {
             </div>
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
               {IMMEDIATE_STEPS.map((s) => (
-                <li key={s.step} className="rounded-2xl border border-border bg-bg-card p-lg">
+                <li key={s.step} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <span
                     aria-hidden
                     className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-red-900/30 font-bold text-[18px] text-red-400"
@@ -273,7 +273,7 @@ export default function MacBookWaterDamage() {
           </div>
           <ol className="grid gap-lg md:grid-cols-3 list-none p-0 m-0">
             {WHAT_WE_DO.map((s) => (
-              <li key={s.step} className="rounded-2xl border border-border bg-bg-card p-lg">
+              <li key={s.step} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
                   <s.Icon size={22} className="text-accent" aria-hidden />
                 </div>
@@ -334,7 +334,7 @@ export default function MacBookWaterDamage() {
           </div>
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
             {DAMAGE_PATTERNS.map((d) => (
-              <div key={d.title} className="rounded-2xl border border-border bg-bg-card p-lg">
+              <div key={d.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                 <h3 className="m-0 mb-sm text-text text-[16px] font-bold">{d.title}</h3>
                 <p className="m-0 text-[13.5px] text-text-muted leading-relaxed">{d.body}</p>
               </div>

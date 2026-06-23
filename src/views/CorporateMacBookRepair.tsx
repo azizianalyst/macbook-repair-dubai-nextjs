@@ -109,7 +109,7 @@ export default function CorporateMacBookRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">Corporate MacBook repair services</h2>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3 mt-lg">
             {SERVICES.map(({ icon: Icon, label, body }) => (
-              <article key={label} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <Icon size={24} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[16px] font-bold mb-sm">{label}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
@@ -151,7 +151,7 @@ export default function CorporateMacBookRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">Companies we work with in Dubai</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3">
             {CLIENTS.map((c) => (
-              <div key={c} className="flex items-center gap-sm border border-border bg-bg-card rounded-md p-md">
+              <div key={c} className="flex items-center gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
                 <CheckCircle2 size={16} className="text-accent shrink-0" aria-hidden />
                 <p className="text-[14px]">{c}</p>
               </div>
@@ -161,7 +161,7 @@ export default function CorporateMacBookRepair() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Set up a corporate MacBook repair account</h2>
               <p className="text-[15px] text-text-muted">Office collection · Priority turnaround · VAT invoices · 15% multi-device discount · AMC available.</p>

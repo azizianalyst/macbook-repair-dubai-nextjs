@@ -243,7 +243,7 @@ export default function IPhoneRepairHub() {
           <ul className="flex flex-wrap gap-2">
             {MODEL_PAGES.map(([label, href]) => (
               <li key={href}>
-                <Link to={href} className="inline-flex items-center px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
+                <Link to={href} className="inline-flex items-center px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
                   {label}
                 </Link>
               </li>
@@ -316,7 +316,7 @@ export default function IPhoneRepairHub() {
           <ul className="flex flex-wrap gap-2">
             {SERVICE_PAGES.map(([label, href]) => (
               <li key={href}>
-                <Link to={href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
+                <Link to={href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
                   {label}
                 </Link>
               </li>
@@ -353,7 +353,7 @@ export default function IPhoneRepairHub() {
               "Charging issues: won't charge or intermittent",
               "Buttons not working: power, volume, Home",
             ].map((s) => (
-              <li key={s} className="flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4">
+              <li key={s} className="flex items-start gap-3 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
                 <CheckCircle2 size={18} className="text-accent shrink-0 mt-0.5" aria-hidden />
                 <span className="text-[14px] text-text-muted leading-relaxed">{s}</span>
               </li>
@@ -391,7 +391,7 @@ export default function IPhoneRepairHub() {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">Frequently asked questions</h2>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">

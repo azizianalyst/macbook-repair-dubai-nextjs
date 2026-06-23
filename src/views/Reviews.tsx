@@ -120,7 +120,7 @@ export default function Reviews() {
 
       <section aria-labelledby="filters" className="mx-auto max-w-content px-5 md:px-6 mt-md">
         <h2 id="filters" className="sr-only">Filter reviews</h2>
-        <div className="border border-border bg-bg-card rounded-md p-md flex flex-col gap-md">
+        <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex flex-col gap-md">
           <FilterRow label="Service">
             {SERVICE_FILTERS.map((s) => (
               <Chip
@@ -185,7 +185,7 @@ export default function Reviews() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="grid gap-lg md:grid-cols-2 items-center border border-border bg-bg-card rounded-xl p-xl">
+        <div className="grid gap-lg md:grid-cols-2 items-center border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-xl">
           <div>
             <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
             <p className="text-[16px] text-text-muted mt-md max-w-[52ch]">

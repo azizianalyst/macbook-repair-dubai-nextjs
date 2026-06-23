@@ -158,7 +158,7 @@ export default function LeadsAdmin() {
   }
   if (status === "error") {
     return (
-      <div className="mx-auto max-w-sm rounded-md border border-border bg-bg-card p-xl text-center">
+      <div className="mx-auto max-w-sm rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl text-center">
         <p className="mb-md text-[14px] text-danger">{errMsg || "Could not load leads."}</p>
         <button onClick={refresh} className="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-4 py-2.5 font-semibold text-white">
           <RefreshCw size={16} /> Retry
@@ -180,16 +180,16 @@ export default function LeadsAdmin() {
       <div className="mb-lg flex flex-wrap items-center justify-between gap-sm">
         <h1 className="m-0 text-[24px] text-text">Lead management</h1>
         <div className="flex flex-wrap items-center gap-2">
-          <button onClick={refresh} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
-          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
-          <button onClick={logout} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><LogOut size={14} /> Lock</button>
+          <button onClick={refresh} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
+          <button onClick={logout} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><LogOut size={14} /> Lock</button>
         </div>
       </div>
 
       {/* stats */}
       <div className="mb-md grid grid-cols-2 gap-3 sm:grid-cols-4">
         {statCards.map((s) => (
-          <div key={s.label} className="rounded-md border border-border bg-bg-card p-md">
+          <div key={s.label} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{s.label}</p>
             <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: s.c }}>{s.value}</p>
           </div>
@@ -224,7 +224,7 @@ export default function LeadsAdmin() {
           className="rounded-md bg-bg-card border border-border px-3 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           {deviceTypes.map((d) => <option key={d} value={d} className="bg-bg-card">{d === "All" ? "All devices" : d}</option>)}
         </select>
-        <button onClick={() => setSortDesc((s) => !s)} className="rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text whitespace-nowrap">{sortDesc ? "Newest first" : "Oldest first"}</button>
+        <button onClick={() => setSortDesc((s) => !s)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text whitespace-nowrap">{sortDesc ? "Newest first" : "Oldest first"}</button>
       </div>
 
       {/* table */}
@@ -289,8 +289,8 @@ export default function LeadsAdmin() {
                 {/* quick actions */}
                 <div className="mb-md flex flex-wrap gap-2">
                   <a href={waLink(detail.lead.phone)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><MessageCircle size={14} /> WhatsApp</a>
-                  <a href={`tel:${detail.lead.phone}`} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text"><Phone size={14} /> Call</a>
-                  {detail.lead.email && <a href={`mailto:${detail.lead.email}`} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text"><Mail size={14} /> Email</a>}
+                  <a href={`tel:${detail.lead.phone}`} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text"><Phone size={14} /> Call</a>
+                  {detail.lead.email && <a href={`mailto:${detail.lead.email}`} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text"><Mail size={14} /> Email</a>}
                 </div>
 
                 {/* status changer */}

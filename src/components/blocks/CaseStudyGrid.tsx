@@ -39,7 +39,7 @@ export default function CaseStudyGrid({
           {cases.map((c, i) => (
             <figure
               key={i}
-              className="flex flex-col rounded-md border border-border bg-bg-card p-lg"
+              className="flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg"
             >
               <span className="inline-flex w-fit rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent">
                 {c.tag}

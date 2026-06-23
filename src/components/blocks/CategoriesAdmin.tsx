@@ -82,7 +82,7 @@ export default function CategoriesAdmin() {
 
       <div className="flex flex-col gap-3">
         {categories.map((c, i) => (
-          <div key={c.slug} className="rounded-md border border-border bg-bg-card p-md">
+          <div key={c.slug} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <FolderTree size={16} className="text-accent" />
@@ -111,7 +111,7 @@ export default function CategoriesAdmin() {
       <p className="m-0 mb-2 text-[12px] text-text-faint">Device tag hubs (<Lock size={10} className="inline" /> slugs locked to <code>/blog/tag/&lt;slug&gt;</code>). Edit display names.</p>
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {tags.map((t, i) => (
-          <div key={t.slug} className="flex items-center gap-2 rounded-md border border-border bg-bg-card p-2">
+          <div key={t.slug} className="flex items-center gap-2 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-2">
             <span className="inline-flex items-center gap-1 rounded bg-bg-alt px-1.5 py-0.5 text-[11px] text-text-faint"><Lock size={10} /> {t.slug}</span>
             <input value={t.name} onChange={(e) => patchTag(i, e.target.value)} className={inp} />
           </div>

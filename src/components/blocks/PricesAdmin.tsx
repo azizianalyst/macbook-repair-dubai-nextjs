@@ -185,21 +185,21 @@ export default function PricesAdmin({ embedded, pricesFocus }: { embedded?: bool
             <h1 className="m-0 text-[24px] text-text">Prices &amp; Keywords</h1>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <button onClick={seedKeywords} disabled={seeding} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50">{seeding ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />} Fill missing keywords</button>
+            <button onClick={seedKeywords} disabled={seeding} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50">{seeding ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />} Fill missing keywords</button>
             <button onClick={openNew} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><Plus size={14} /> Add price</button>
-            <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
-            <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
-            <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+            <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
+            <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
+            <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
           </div>
         </div>
       )}
       {embedded && (
         <div className="mb-md flex flex-wrap items-center justify-end gap-2">
-          <button onClick={seedKeywords} disabled={seeding} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50">{seeding ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />} Fill missing keywords</button>
+          <button onClick={seedKeywords} disabled={seeding} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text disabled:opacity-50">{seeding ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />} Fill missing keywords</button>
           <button onClick={openNew} className="inline-flex items-center gap-1.5 rounded-md bg-whatsapp px-3 py-2 text-[13px] font-semibold text-white"><Plus size={14} /> Add price</button>
-          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
-          <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
-          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
+          <button onClick={exportCsv} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Download size={14} /> Export CSV</button>
+          <button onClick={() => setShowImport(true)} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><Upload size={14} /> Import CSV</button>
+          <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
         </div>
       )}
 
@@ -222,13 +222,13 @@ export default function PricesAdmin({ embedded, pricesFocus }: { embedded?: bool
         <div className="relative min-w-[220px] flex-1 max-w-md">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search URL or keyword…"
-            className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+            className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
         </div>
-        <select value={typeF} onChange={(e) => setTypeF(e.target.value)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={typeF} onChange={(e) => setTypeF(e.target.value)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="all">All types</option>
           {TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
-        <select value={sort} onChange={(e) => setSort(e.target.value as typeof sort)} className="rounded-md border border-border bg-bg-card px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
+        <select value={sort} onChange={(e) => setSort(e.target.value as typeof sort)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-2 text-[13px] text-text focus:border-accent focus:outline-none">
           <option value="url">Sort: URL (A–Z)</option>
           <option value="score-asc">Sort: SEO score (low → high)</option>
           <option value="score-desc">Sort: SEO score (high → low)</option>
@@ -358,7 +358,7 @@ function ScoreBadge({ score, color, path }: { score: number; color: "good" | "wa
 
 function Card({ label, value, c }: { label: string; value: number; c: string }) {
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{label}</p>
       <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: c }}>{value}</p>
     </div>
@@ -402,7 +402,7 @@ function ImportDialog({ onClose, onDone }: { onClose: () => void; onDone: () => 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-5" role="dialog" aria-modal="true">
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
-      <div className="relative w-full max-w-lg rounded-md border border-border bg-bg-card p-lg shadow-2xl">
+      <div className="relative w-full max-w-lg rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-2xl">
         <div className="mb-md flex items-center justify-between"><h2 className="m-0 text-[18px] text-text">Import prices (CSV)</h2><button onClick={onClose} className="rounded-md p-1.5 text-text-muted hover:bg-bg-alt"><X size={18} /></button></div>
         <p className="mb-sm text-[13px] text-text-muted">Best flow: click <strong className="text-text">Export CSV</strong> first, edit the <code>price</code> column in Excel, save as CSV, then upload it here. Rows are matched by <code>id</code> (existing rows update; new rows are added). Required columns: group, service, price, timeline, warranty.</p>
         <input type="file" accept=".csv,text/csv" onChange={onFile} className="mb-sm block w-full text-[13px] text-text-muted" />
@@ -417,7 +417,7 @@ function ImportDialog({ onClose, onDone }: { onClose: () => void; onDone: () => 
   );
 }
 
-const inp = "w-full rounded-md border border-border bg-bg-card px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
+const inp = "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none";
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return <label className="block"><span className="mb-1 block text-[12px] text-text-faint">{label}</span>{children}</label>;
 }

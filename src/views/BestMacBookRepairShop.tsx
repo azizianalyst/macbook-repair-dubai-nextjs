@@ -108,7 +108,7 @@ export default function BestMacBookRepairShop() {
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">Use this checklist before choosing any repair shop in Dubai, including us.</p>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {CRITERIA.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <Icon size={24} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[17px] font-bold mb-sm">{title}</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
@@ -167,7 +167,7 @@ export default function BestMacBookRepairShop() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a quote from Dubai's best-rated MacBook repair shop</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed written quote · Same-day for screen & battery · Warranty up to 12 months.</p>

@@ -145,8 +145,8 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               { t: "Approve and we repair", b: "Reply 'approved'. Most common repairs finish the same day. We message you the moment the device is ready." },
               { t: "Free return delivery", b: `Courier returns the device to your ${cfg.area} address. Pay on arrival - cash, card or bank transfer. Warranty up to 12 months card included.` },
             ].map((s, i) => (
-              <li key={i} className="border border-border bg-bg-card rounded-md p-lg">
-                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/15 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
+              <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
                   {i + 1}
                 </span>
                 <p className="font-bold text-[16px] mb-1">{s.t}</p>
@@ -169,7 +169,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
             <Link
               key={s.href}
               to={s.href}
-              className="block border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 transition"
+              className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition"
             >
               <p className="font-bold text-[16px] mb-1">{s.label}</p>
               <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · warranty of up to 12 months</p>
@@ -183,7 +183,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <SectionHeading eyebrow="Coverage" title={`Landmarks we collect from in ${cfg.area}`} />
         <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-text">
           {cfg.landmarks.map((l) => (
-            <li key={l} className="flex items-start gap-sm border border-border bg-bg-card rounded-md p-md">
+            <li key={l} className="flex items-start gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
               <MapPin size={18} className="text-accent shrink-0 mt-1" aria-hidden />
               <span>{l}</span>
             </li>
@@ -225,7 +225,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
 
       {/* Visiting the workshop (shared logistics, condensed from a 3-card block) */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <article className="border border-border bg-bg-card rounded-md p-lg flex items-start gap-md">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex items-start gap-md">
           <ParkingCircle size={24} className="text-accent shrink-0 mt-1" aria-hidden />
           <p className="text-[15px] text-text-muted leading-relaxed m-0">
             <strong className="text-text">Prefer to drop in?</strong> Paid tower parking (AED 5/hour, AED 25/day cap) or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times for a guaranteed slot.
@@ -242,14 +242,14 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         />
         <div className="flex flex-wrap gap-sm">
           {AREAS.filter((a) => a.slug !== cfg.slug).map((a) => (
-            <Link key={a.slug} to={`/macbook-repair-${a.slug}`} className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+            <Link key={a.slug} to={`/macbook-repair-${a.slug}`} className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
               MacBook repair {a.area}
             </Link>
           ))}
           <Link to="/macbook-repair-near-me" className="rounded-full border border-accent/40 bg-bg-card px-4 py-2 text-[14px] text-text transition-colors hover:border-accent">
             MacBook repair near me →
           </Link>
-          <Link to="/macbook-repair-sharjah" className="rounded-full border border-border bg-bg-card px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+          <Link to="/macbook-repair-sharjah" className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
             Other emirates (Sharjah, Abu Dhabi…) →
           </Link>
         </div>

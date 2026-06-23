@@ -96,7 +96,7 @@ export default function MacDataRecoveryWaterDamage() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">Do this right now, before anything else</h2>
           <div className="grid gap-md md:grid-cols-4 mt-lg">
             {STEPS.map(({ step, title, body }) => (
-              <article key={step} className="border border-border bg-bg-card rounded-md p-lg">
+              <article key={step} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <span className="text-[32px] font-black text-accent block mb-sm">{step}</span>
                 <h3 className="text-[15px] font-bold mb-xs">{title}</h3>
                 <p className="text-[13px] text-text-muted leading-relaxed">{body}</p>
@@ -111,7 +111,7 @@ export default function MacDataRecoveryWaterDamage() {
             <h2 className="text-[28px] md:text-[32px] mb-md">How we recover data from a water-damaged Mac</h2>
             <div className="grid gap-md md:grid-cols-4">
               {PROCESS.map(({ icon: Icon, title, body }) => (
-                <article key={title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <Icon size={24} className="text-accent mb-sm" aria-hidden />
                   <h3 className="text-[15px] font-bold mb-xs">{title}</h3>
                   <p className="text-[13px] text-text-muted leading-relaxed">{body}</p>

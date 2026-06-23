@@ -61,15 +61,15 @@ export default function LocationsAdmin() {
 
       <div className="relative mb-md max-w-md">
         <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search…" className="w-full rounded-md border border-border bg-bg-card pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search…" className="w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] pl-9 pr-3 py-2 text-[14px] text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
       </div>
 
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((it) => (
-          <button key={it.slug} onClick={() => setEditing(it)} className="rounded-md border border-border bg-bg-card p-3 text-left hover:border-accent">
+          <button key={it.slug} onClick={() => setEditing(it)} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-3 text-left hover:border-accent">
             <div className="flex items-center justify-between">
               <span className="text-[14px] text-text">{String(it[tab === "area" ? "area" : "city"])}</span>
-              {it.overridden && <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[11px] text-accent">edited</span>}
+              {it.overridden && <span className="rounded bg-accent/10 px-1.5 py-0.5 text-[11px] text-accent">edited</span>}
             </div>
             <span className="text-[11px] text-text-faint">{it.path}</span>
           </button>
@@ -129,7 +129,7 @@ function Editor({ kind, item, onClose, onSaved }: { kind: "area" | "city"; item:
         ))}
       </div>
 
-      <div className="mt-md rounded-md border border-border bg-bg-card p-md">
+      <div className="mt-md rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
         <div className="mb-2 flex items-center justify-between">
           <h3 className="m-0 text-[14px] text-text">FAQs ({faqs.length})</h3>
           <button onClick={() => set("faqs", [...faqs, { q: "", a: "" }])} className="inline-flex items-center gap-1 text-[12px] text-accent hover:underline"><Plus size={13} /> Add</button>

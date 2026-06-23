@@ -213,7 +213,7 @@ export default function SellFaultyMacBookDubai() {
             { t: "Condition", b: "Working, minor damage, or faulty. Damage lowers the number - it never makes it zero. We buy dead and water-damaged units too." },
             { t: "Storage", b: "Higher SSD or storage capacity raises the offer. Tell us the configuration for an accurate quote." },
           ].map((f) => (
-            <article key={f.t} className="border border-border bg-bg-card rounded-md p-lg">
+            <article key={f.t} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm">{f.t}</h3>
               <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.b}</p>
             </article>
@@ -235,7 +235,7 @@ export default function SellFaultyMacBookDubai() {
             {FAULTS.map((f) => {
               const Icon = f.icon;
               return (
-                <article key={f.title} className="border border-border bg-bg-card rounded-md p-lg">
+                <article key={f.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <h3 className="text-[17px] font-bold mb-sm flex items-center gap-2">
                     <Icon size={18} className="text-accent" aria-hidden /> {f.title}
                   </h3>
@@ -261,9 +261,9 @@ export default function SellFaultyMacBookDubai() {
           {STEPS.map((s, i) => {
             const Icon = s.icon;
             return (
-              <li key={s.title} className="border border-border bg-bg-card rounded-md p-lg">
+              <li key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <div className="flex items-center gap-2 mb-sm">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/15 text-accent text-[15px] font-bold shrink-0">{i + 1}</span>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent text-[15px] font-bold shrink-0">{i + 1}</span>
                   <Icon size={20} className="text-accent" aria-hidden />
                 </div>
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
@@ -293,7 +293,7 @@ export default function SellFaultyMacBookDubai() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Turn a broken Apple device into cash today</h2>
           <p className="text-text-muted text-[16px] max-w-[62ch]">

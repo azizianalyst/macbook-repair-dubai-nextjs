@@ -128,7 +128,7 @@ function PostCard({ p }: { p: Post }) {
   return (
     <Link
       to={p.slug}
-      className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
+      className="group border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
     >
       <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
       <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
@@ -197,7 +197,7 @@ export default function Blog() {
 
       {/* "What kind of Mac user are you?" finder */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <div className="rounded-lg border border-border bg-bg-card p-lg md:p-xl">
+        <div className="rounded-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl">
           <h2 className="text-[20px] md:text-[24px] font-bold">What brings you here today?</h2>
           <p className="text-[14px] text-text-muted mt-1 mb-lg">Pick one and we'll point you to the right guides.</p>
           <div className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:overflow-x-visible scrollbar-none">
@@ -209,7 +209,7 @@ export default function Blog() {
                 aria-pressed={active === f.key}
                 className={`inline-flex items-center gap-1.5 text-[14px] font-medium rounded-full px-md py-2 border transition-colors ${
                   active === f.key
-                    ? "border-accent/60 bg-accent/15 text-accent"
+                    ? "border-accent/60 bg-accent/10 text-accent"
                     : "border-border bg-bg-alt hover:border-accent/50 hover:text-accent"
                 }`}
               >
@@ -257,7 +257,7 @@ export default function Blog() {
             <Link
               key={c.slug}
               to={`/blog/${c.slug}`}
-              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] hover:border-accent/50 hover:text-accent transition-colors"
             >
               {c.name} ({counts[c.slug]})
             </Link>
@@ -279,7 +279,7 @@ export default function Blog() {
             <Link
               key={t.slug}
               to={`/blog/tag/${t.slug}`}
-              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] hover:border-accent/50 hover:text-accent transition-colors"
             >
               {t.label}
             </Link>
@@ -319,7 +319,7 @@ export default function Blog() {
             <Link
               key={g.href}
               to={g.href}
-              className="group flex items-center justify-between gap-md border border-border bg-bg-card rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
+              className="group flex items-center justify-between gap-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md px-lg py-md hover:border-accent/40 hover:bg-bg-alt transition-colors"
             >
               <span className="text-[15px] font-medium group-hover:text-accent">{g.label}</span>
               <ArrowRight size={14} className="text-accent shrink-0" aria-hidden />

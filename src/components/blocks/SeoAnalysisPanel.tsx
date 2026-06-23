@@ -52,7 +52,7 @@ export default function SeoAnalysisPanel({
   }
 
   return (
-    <div className="rounded-md border border-border bg-bg-card p-md">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
       <div className="flex items-center gap-4">
         <div className="relative h-16 w-16 shrink-0">
           <svg viewBox="0 0 36 36" className="h-16 w-16 -rotate-90">
@@ -72,7 +72,7 @@ export default function SeoAnalysisPanel({
           </p>
         </div>
         {aiEnabled && (
-          <button onClick={() => runOptimize()} disabled={aiBusy} title="Improve this page's SEO with Claude" className="inline-flex shrink-0 items-center gap-1.5 rounded-md bg-accent/15 px-2.5 py-2 text-[12px] font-semibold text-accent hover:bg-accent/25 disabled:opacity-50">
+          <button onClick={() => runOptimize()} disabled={aiBusy} title="Improve this page's SEO with Claude" className="inline-flex shrink-0 items-center gap-1.5 rounded-md bg-accent/10 px-2.5 py-2 text-[12px] font-semibold text-accent hover:bg-accent/25 disabled:opacity-50">
             {aiBusy && !scope ? <Loader2 size={14} className="animate-spin" /> : <Sparkles size={14} />} Optimize with AI
           </button>
         )}

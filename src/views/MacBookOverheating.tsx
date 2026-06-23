@@ -159,8 +159,8 @@ export default function MacBookOverheating() {
       <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
         <h2 className="text-[28px] md:text-[32px] mb-xl text-text">MacBook Air (fanless) vs MacBook Pro (fan-cooled)</h2>
         <div className="grid gap-lg md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-bg-card p-lg">
-            <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15">
+          <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+            <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10">
               <Zap size={22} className="text-accent" aria-hidden />
             </div>
             <h3 className="m-0 mb-2 text-text text-[18px] font-bold">MacBook Air M1-M4 (fanless)</h3>
@@ -168,8 +168,8 @@ export default function MacBookOverheating() {
               The MacBook Air has no cooling fan. It dissipates heat through the aluminium chassis. Under sustained load the system automatically throttles the CPU -- this is normal behaviour, not a hardware fault. If throttling is severe enough to make tasks take 3-4x longer than expected, bring in for software and thermal assessment. In most cases, closing background processes or using Low Power mode resolves it at zero cost.
             </p>
           </div>
-          <div className="rounded-2xl border border-border bg-bg-card p-lg">
-            <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15">
+          <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+            <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10">
               <Wrench size={22} className="text-accent" aria-hidden />
             </div>
             <h3 className="m-0 mb-2 text-text text-[18px] font-bold">MacBook Pro (fan-cooled)</h3>
@@ -192,7 +192,7 @@ export default function MacBookOverheating() {
           </p>
           <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
             {FAULTS.map((f) => (
-              <div key={f.title} className="rounded-2xl border border-border bg-bg-card p-lg">
+              <div key={f.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                 <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{f.title}</h3>
                 <p className="m-0 text-[14px] text-text-muted leading-relaxed">{f.body}</p>
               </div>
@@ -206,7 +206,7 @@ export default function MacBookOverheating() {
         <h2 className="text-[28px] md:text-[32px] mb-xl text-text">Symptoms of MacBook overheating</h2>
         <ul className="grid gap-md md:grid-cols-2 list-none p-0 m-0">
           {SYMPTOMS.map((s) => (
-            <li key={s} className="flex items-start gap-sm rounded-2xl border border-border bg-bg-card p-lg">
+            <li key={s} className="flex items-start gap-sm rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
               <AlertTriangle size={16} className="text-accent shrink-0 mt-1" aria-hidden />
               <span className="text-[15px] text-text-muted leading-relaxed">{s}</span>
             </li>
@@ -221,7 +221,7 @@ export default function MacBookOverheating() {
           <p className="text-[16px] text-text-muted mb-xl max-w-[68ch]">
             Free diagnosis before any paid repair. Prices include parts and labour.
           </p>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[400px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -250,8 +250,8 @@ export default function MacBookOverheating() {
         <h2 className="text-[28px] md:text-[32px] mb-xl text-text">Why choose MacBook Repair Dubai for thermal repairs</h2>
         <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
           {WHY_US.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-border bg-bg-card p-lg">
-              <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15">
+            <div key={item.title} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+              <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10">
                 {item.icon}
               </div>
               <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{item.title}</h3>

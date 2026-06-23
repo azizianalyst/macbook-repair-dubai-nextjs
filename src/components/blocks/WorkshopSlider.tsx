@@ -43,7 +43,7 @@ export function WorkshopSlider({ slides }: { slides: WorkshopSlide[] }) {
   };
 
   const arrowCls =
-    "flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-card text-text transition-all hover:border-accent/40 hover:text-accent disabled:opacity-35 disabled:pointer-events-none";
+    "flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] text-text transition-all hover:border-accent/40 hover:text-accent disabled:opacity-35 disabled:pointer-events-none";
 
   return (
     <div role="region" aria-roledescription="carousel" aria-label="Photos from our Dubai workshop">

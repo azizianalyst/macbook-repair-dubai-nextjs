@@ -99,7 +99,7 @@ export default function AppleT2ChipDataRecovery() {
           <h2 className="text-[28px] md:text-[32px] mb-sm">Which Mac models have the T2 chip?</h2>
           <div className="flex flex-wrap gap-sm mt-lg">
             {T2_MODELS.map((model) => (
-              <div key={model} className="flex items-center gap-sm border border-border bg-bg-card rounded-md px-md py-sm">
+              <div key={model} className="flex items-center gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md px-md py-sm">
                 <Lock size={14} className="text-accent shrink-0" aria-hidden />
                 <span className="text-[14px] font-medium">{model}</span>
               </div>
@@ -130,7 +130,7 @@ export default function AppleT2ChipDataRecovery() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">T2 Mac data recovery assessment, free</h2>
               <p className="text-[15px] text-text-muted">Tell us your model, Apple ID status, and what happened. Free assessment before any commitment.</p>

@@ -235,7 +235,7 @@ export default function MacBookAirKeyboardRepair() {
               Every Air generation uses a different keyboard type. Repair approach and cost differ accordingly.
             </p>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[580px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -274,7 +274,7 @@ export default function MacBookAirKeyboardRepair() {
               Fixed prices. Free diagnosis before any work starts. No hidden fees.
             </p>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
               <thead>
                 <tr className="border-b border-border text-accent">
@@ -379,7 +379,7 @@ export default function MacBookAirKeyboardRepair() {
         {/* FAQ */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border bg-bg-card p-6">
+            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
               <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">
                 MacBook Air keyboard questions

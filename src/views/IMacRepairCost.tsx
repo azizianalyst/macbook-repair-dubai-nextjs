@@ -118,7 +118,7 @@ export default function IMacRepairCost() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <div className="border border-border bg-bg-card rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a free iMac repair quote</h2>
               <p className="text-[15px] text-text-muted">Free diagnosis, walk in or book free pickup across Dubai. Written quote before any work starts.</p>
