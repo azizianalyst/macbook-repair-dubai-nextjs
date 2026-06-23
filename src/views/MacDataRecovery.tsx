@@ -239,7 +239,7 @@ export default function MacDataRecovery() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Apple Silicon vs Intel</p>
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
-            SSD recovery depends on the chip generation
+            Does Mac data recovery depend on the chip generation?
           </h2>
           <div className="grid gap-lg md:grid-cols-2">
             <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
@@ -280,7 +280,7 @@ export default function MacDataRecovery() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">How it works</p>
             <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
-              The recovery process
+              How does the Mac data recovery process work?
             </h2>
             <ol className="grid gap-lg md:grid-cols-3 list-none p-0 m-0">
               {[
@@ -314,7 +314,7 @@ export default function MacDataRecovery() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Realistic expectations</p>
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
-            Recovery success rates
+            What are the Mac data recovery success rates?
           </h2>
           <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] mb-md">
             <table className="w-full border-collapse text-left text-[14px] min-w-[420px]">
@@ -344,7 +344,7 @@ export default function MacDataRecovery() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Transparent pricing</p>
             <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-xl">
-              Mac data recovery pricing in Dubai
+              How much does Mac data recovery cost in Dubai?
             </h2>
             <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
               <table className="w-full border-collapse text-left text-[14px] min-w-[480px]">
