@@ -8,9 +8,10 @@ import { REDIRECTS } from "@/content/redirects.generated";
 // Blocks automated site audits and AI-assisted scraping: after RATE_LIMIT requests
 // in RATE_WINDOW ms from one IP, all further requests return 429 for RATE_BLOCK ms.
 // A human browsing hits ~3–5 pages/min. An automated audit hits 30–100+.
-// Threshold: 60 req/min — comfortable for heavy human use, catches all automation.
+// Threshold: 10 page-nav/min, then a fixed RATE_BLOCK cooldown (NOT extended on every
+// excess request — a blocked visitor is always released after the cooldown).
 // In-memory only — resets on server restart. Fine for single-instance Hostinger Node.
-const _rateMap = new Map<string, { count: number; resetAt: number }>();
+const _rateMap = new Map<string, { count: number; resetAt: number; blocked?: boolean }>();
 const RATE_LIMIT  = 10;          // page navigations per window before lockout
 const RATE_WINDOW = 60_000;      // 1 minute window (ms)
 const RATE_BLOCK  = 15 * 60_000; // 15 minute cooldown after exceeding limit (ms)
@@ -43,7 +44,10 @@ function rateLimited(req: NextRequest): boolean {
   }
   slot.count++;
   if (slot.count > RATE_LIMIT) {
-    slot.resetAt = now + RATE_BLOCK; // extend lockout on every excess request
+    // Start a FIXED cooldown once. Do NOT keep pushing resetAt forward on every excess
+    // request — otherwise a blocked visitor who keeps clicking is never released. The block
+    // clears RATE_BLOCK ms after it began; the `now > slot.resetAt` branch above then resets.
+    if (!slot.blocked) { slot.blocked = true; slot.resetAt = now + RATE_BLOCK; }
     return true;
   }
   return false;
