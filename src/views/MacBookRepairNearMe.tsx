@@ -178,7 +178,7 @@ export default function MacBookRepairNearMe() {
           <span className="text-text-muted">·</span>
           <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 120 m from Media City Metro</span>
           <span className="text-text-muted">·</span>
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
         </p>
       </Hero>
 

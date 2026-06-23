@@ -1456,8 +1456,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Refund. Expert Apple repair in Dubai. Free diagnosis, 3-month warranty. Call 055 741 3706."
   },
   "/reviews": {
-    "title": "MacBook Repair Reviews Dubai, 5.0 Stars, 215+ Verified",
-    "description": "MacBook Repair Reviews Dubai. 5.0 stars, 215+ verified reviews. Real customers, real repairs. Read at Concord Tower, Media City."
+    "title": "MacBook Repair Reviews Dubai, 5.0 Stars, 216+ Verified",
+    "description": "MacBook Repair Reviews Dubai. 5.0 stars, 216+ verified reviews. Real customers, real repairs. Read at Concord Tower, Media City."
   },
   "/same-day-macbook-repair-dubai": {
     "title": "Same Day MacBook Repair Dubai. Fast, From AED 499,",

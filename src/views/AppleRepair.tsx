@@ -112,7 +112,7 @@ export default function AppleRepair() {
         subtitle="MacBook, iMac, Mac, iPhone, iPad. One workshop since 2004."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
           <span>·</span>
           <span>9 Apple device families</span>
           <span>·</span>

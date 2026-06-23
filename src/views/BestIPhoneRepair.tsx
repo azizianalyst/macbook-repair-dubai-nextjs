@@ -46,12 +46,12 @@ const WHY_US = [
   "Free pickup and delivery across Dubai Mainland",
   "Written warranty up to 12 months",
   "Free diagnosis, no fix, no charge",
-  "5.0 stars · 215+ verified Google reviews · Since 2004",
+  "5.0 stars · 216+ verified Google reviews · Since 2004",
 ];
 
 const FAQS = [
   { q: "What is the best iPhone repair shop in Dubai?",
-    a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty of at least 6 months, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 215+ verified reviews." },
+    a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty of at least 6 months, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 216+ verified reviews." },
   { q: "How much does the best iPhone screen repair cost in Dubai?",
     a: "Quality iPhone screen repair in Dubai starts from AED 179 for older LCD models and runs to AED 1,400 for the iPhone 17 Pro Max OLED. Cheap shops quote AED 80–120 but use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a 6-month written warranty." },
   { q: "Can iPhone Face ID be damaged during a screen repair?",
@@ -72,7 +72,7 @@ export default function BestIPhoneRepair() {
   useSeo({
     title: "Best iPhone Repair Dubai 2026. Screen from AED 179, 5★ | Since 2004",
     description:
-      "Best iPhone repair in Dubai. Screen from AED 179, battery from AED 250. OLED True Tone, Face ID preserved. Written warranty up to 12 months. 215+ reviews. Call 055 741 3706.",
+      "Best iPhone repair in Dubai. Screen from AED 179, battery from AED 250. OLED True Tone, Face ID preserved. Written warranty up to 12 months. 216+ reviews. Call 055 741 3706.",
     path: "/best-iphone-repair-dubai",
   });
 
@@ -86,10 +86,10 @@ export default function BestIPhoneRepair() {
           tone="dark"
           eyebrow="Best iPhone repair · Dubai · Since 2004"
           title="Best iPhone Repair in Dubai, 2026"
-          subtitle="Screen from AED 179 · OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 215+ reviews."
+          subtitle="Screen from AED 179 · OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 216+ reviews."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
             <span>·</span>
             <span>iPhone 6 through 17 Pro Max</span>
             <span>·</span>
@@ -107,7 +107,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer="The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, screen from AED 179 with OLED True Tone, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. 5.0 stars from 215+ verified reviews since 2004. WhatsApp 055 741 3706."
+            answer="The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, screen from AED 179 with OLED True Tone, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. 5.0 stars from 216+ verified reviews since 2004. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -219,7 +219,7 @@ export default function BestIPhoneRepair() {
 
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">215+ reviews, what customers say</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">216+ reviews, what customers say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
           </div>
         </section>

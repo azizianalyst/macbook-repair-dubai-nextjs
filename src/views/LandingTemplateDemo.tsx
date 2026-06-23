@@ -286,7 +286,7 @@ export default function LandingTemplateDemo() {
           stats: [
             { value: "3,400+", label: "Screens fitted" },
             { value: "5.0", label: "Google rating" },
-            { value: "215+", label: "Reviews" },
+            { value: "216+", label: "Reviews" },
             { value: "Same-day", label: "Most models" },
           ],
           breakdown: [

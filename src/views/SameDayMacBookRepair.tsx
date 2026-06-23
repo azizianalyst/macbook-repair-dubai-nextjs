@@ -90,7 +90,7 @@ export default function SameDayMacBookRepair() {
           subtitle="Screen from AED 499, battery from AED 450. Free pickup across Dubai. Drop off before 2 pm, back the same day."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
             <span>·</span>
             <span>All Air & Pro models</span>
             <span>·</span>

@@ -178,7 +178,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             <SectionHeading
               eyebrow="What customers say"
               title="Customer reviews"
-              sub="215+ five-star Google reviews from customers across the UAE who used our free collection-and-repair service."
+              sub="216+ five-star Google reviews from customers across the UAE who used our free collection-and-repair service."
             />
             <ReviewGrid tone="dark" reviews={reviews} />
             <p className="text-[14px] text-text-muted mt-md">

@@ -86,7 +86,7 @@ export default function AppleCareMacBookRepair() {
         subtitle="We're an independent Apple specialist, not an Apple Authorised Service Provider. If your Mac is still covered we'll tell you honestly when Apple is the better route. For AppleCare-expired and out-of-warranty Macs, we repair at component level with a warranty of up to 12 months."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
           <span>·</span>
           <span>Independent specialist</span>
           <span>·</span>

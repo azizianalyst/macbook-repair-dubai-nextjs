@@ -15,7 +15,7 @@ const MILESTONES = [
   { year: "2015", text: "Added iMac and Mac mini coverage. Started doing logic-board level diagnostics in-house." },
   { year: "2020", text: "M1 MacBook Air launched - Shafiq spent 6 months mastering the new SoC architecture." },
   { year: "2024", text: "Component-level board work for T2-encrypted units. 40,000+ devices repaired to date." },
-  { year: "2026", text: "M5 MacBook Pro and iPhone 17 line fully supported. 215+ five-star Google reviews." },
+  { year: "2026", text: "M5 MacBook Pro and iPhone 17 line fully supported. 216+ five-star Google reviews." },
 ];
 
 const COMPARE = [

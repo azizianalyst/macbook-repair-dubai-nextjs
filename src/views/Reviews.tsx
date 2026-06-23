@@ -198,7 +198,7 @@ export default function Reviews() {
             </Button>
           </div>
           <div className="flex flex-col gap-2 text-[14px] text-text-muted">
-            <div className="flex items-start gap-2"><span className="text-accent font-bold">215+</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">216+</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
             <div className="flex items-start gap-2"><span className="text-accent font-bold">4.9★</span><span>average rating across all service types</span></div>
             <div className="flex items-start gap-2"><span className="text-accent font-bold">100%</span><span>of reviews get a personal reply from Shafiq within 24 hours</span></div>
           </div>

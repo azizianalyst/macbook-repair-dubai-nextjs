@@ -234,8 +234,8 @@ export default function MacBookKernelPanic() {
         {/* Causes */}
         <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Six root causes</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-2xl">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Six root causes</p>
+            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
               What causes MacBook kernel panics
             </h2>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
@@ -296,8 +296,8 @@ export default function MacBookKernelPanic() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <div className="grid lg:grid-cols-[280px_1fr] gap-2xl items-start">
               <div className="lg:sticky lg:top-24">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">FAQ</p>
-                <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-text leading-[1.1] mb-md">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">FAQ</p>
+                <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-white leading-[1.1] mb-md">
                   Kernel panic questions
                 </h2>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
@@ -322,7 +322,7 @@ export default function MacBookKernelPanic() {
         <section className="mt-[80px] py-[64px]" style={{ background: "#2C3137" }}>
           <div className="mx-auto max-w-content px-5 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-lg">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">MacBook kernel panic repair · Dubai Media City</p>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-3">MacBook kernel panic repair · Dubai Media City</p>
               <h2 className="m-0 text-[26px] md:text-[32px] font-bold text-white leading-tight">
                 MacBook restarting with kernel panic? Free diagnosis. From AED 200.
               </h2>

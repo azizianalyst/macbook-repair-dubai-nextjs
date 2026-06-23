@@ -10,15 +10,15 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/best-apple-repair-dubai": {
     "title": "Best Apple Repair Dubai 2026 — All Devices, From AED 179 | 5★ Since 2004",
-    "description": "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. 215+ 5-star reviews. Written warranty up to 12 months. Free pickup. Call 055 741 3706."
+    "description": "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. 216+ 5-star reviews. Written warranty up to 12 months. Free pickup. Call 055 741 3706."
   },
   "/best-iphone-repair-dubai": {
     "title": "Best iPhone Repair Dubai 2026 — Screen from AED 179, 5★ | Since 2004",
-    "description": "Best iPhone repair in Dubai. Screen from AED 179, battery from AED 250. OLED True Tone, Face ID preserved. Written warranty up to 12 months. 215+ reviews. Call 055 741 3706."
+    "description": "Best iPhone repair in Dubai. Screen from AED 179, battery from AED 250. OLED True Tone, Face ID preserved. Written warranty up to 12 months. 216+ reviews. Call 055 741 3706."
   },
   "/best-macbook-repair-shop-dubai": {
     "title": "Best MacBook Repair Shop Dubai 2026 — 5★, From AED 450 | Since 2004",
-    "description": "Best MacBook repair shop in Dubai. 215+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. From AED 450. Call 055 741 3706."
+    "description": "Best MacBook repair shop in Dubai. 216+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. From AED 450. Call 055 741 3706."
   },
   "/apple-repair-near-me-dubai": {
     "title": "Apple Repair Near Me Dubai — All Devices, From AED 179 | Free Pickup",
@@ -792,8 +792,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Mac & MacBook Activation Lock, iCloud lock and EFI firmware password help in Dubai. Legitimate owners only - we assist through Apple's channels, never a bypass. From AED 250."
   },
   "/mac-data-recovery-dubai": {
-    "title": "Mac Mini, Studio & Pro Data Recovery Dubai | 055 741 3706",
-    "description": "Mac desktop data recovery Dubai. Intel Mac easier, M-series chip-off only. Mac Pro RAID recovery. From AED 299. 2-7 days. Honest success rates first."
+    "title": "Mac Mini, Studio & Pro Data Recovery Dubai",
+    "description": "Mac desktop data recovery Dubai. Intel Mac easier, M-series chip-off only. Mac Pro RAID recovery. From AED 500. 2-7 days. Honest success rates first."
   },
   "/mac-fan-cleaning-dubai": {
     "title": "Mac Mini, Studio & Pro Fan Cleaning Dubai | 055 741 3706",

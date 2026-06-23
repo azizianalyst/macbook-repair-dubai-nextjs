@@ -219,7 +219,7 @@ export default function IPhoneRepairHub() {
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
                 { stat: "20+",   label: "Years in Dubai" },
-                { stat: "215+",  label: "Google reviews" },
+                { stat: "216+",  label: "Google reviews" },
                 { stat: "30 min",label: "Screen repair" },
                 { stat: "12 mo", label: "Written warranty" },
               ].map(({ stat, label }, i) => (

@@ -109,6 +109,8 @@ const GENERAL_RULES: LinkRule[] = [
   { re: /\brepair cost calculator\b/i, href: "/macbook-repair-cost-calculator-dubai" },
   { re: /\bAppleCare\b/i,              href: "/applecare-macbook-repair-dubai" },
   { re: /\bout[- ]of[- ]warranty\b/i,  href: "/out-of-warranty-apple-repair-dubai" },
+  // Apple service centre is device-agnostic; rescues a near-orphan hub (was 1 inbound link).
+  { re: /\bapple service cent(?:er|re)\b/i, href: "/apple-service-center-dubai" },
 ];
 
 export const RULES_BY_FAMILY: Record<string, LinkRule[]> = {

@@ -169,6 +169,10 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       {
         "label": "iPad repair",
         "href": "/ipad-repair-dubai"
+      },
+      {
+        "label": "Apple service centre",
+        "href": "/apple-service-center-dubai"
       }
     ]
   },

@@ -469,7 +469,7 @@ export default function MacBookKeyboardRepair() {
                 <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">All six reviews are verbatim from Google</p>
                 <h2 className="m-0 text-text">Real keyboard-repair reviews</h2>
               </div>
-              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 215+ <ArrowRight size={15} aria-hidden /></Link>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 216+ <ArrowRight size={15} aria-hidden /></Link>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (

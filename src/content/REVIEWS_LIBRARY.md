@@ -9,13 +9,13 @@
 4. **Link to Google** - each review card should link to the Google Business Profile review with a "View on Google" button.
 5. **Mix languages** - Russian, German, French reviews exist - use them on multilingual pages (if added later) or showcase diversity on the English site.
 6. **Owner responses** are a trust signal - include them where shown.
-7. **Total count reference** - when referencing review count, use "215+ five-star reviews" in marketing. Actual count grows; update quarterly.
+7. **Total count reference** - when referencing review count, use "216+ five-star reviews" in marketing. Actual count grows; update quarterly.
 
 ---
 
 ## Summary stats
 
-- **Total verified reviews:** 215+
+- **Total verified reviews:** 216+
 - **Average rating:** 5.0 stars
 - **Languages:** English (majority), Russian, German, French, Arabic, Turkish
 - **Most common repairs mentioned:** Screen replacement, battery replacement, water damage, keyboard repair
@@ -1356,7 +1356,7 @@ Load reviews from this file as MDX or JSON. Single source of truth.
 ## Review count maintenance
 
 - **Pull count quarterly** from Google Business Profile
-- **Update "215+ reviews" marketing claim** when count crosses a new 25-point threshold (200+, 225+, etc.)
+- **Update "216+ reviews" marketing claim** when count crosses a new 25-point threshold (200+, 225+, etc.)
 - **Add new reviews here** when they arrive (don't auto-pull - curate)
 - **Never remove negative reviews** - address them with a great response instead
 

@@ -371,7 +371,7 @@ export default function MacBookWaterDamageRepair() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real water-damage reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 216+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>

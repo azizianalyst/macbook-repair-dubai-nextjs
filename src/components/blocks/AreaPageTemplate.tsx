@@ -197,7 +197,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           <SectionHeading
             eyebrow="What customers say"
             title="Customer reviews from across Dubai"
-            sub={`215+ five-star Google reviews. A small sample below - many are from ${cfg.area} residents and office workers who used the free pickup service.`}
+            sub={`216+ five-star Google reviews. A small sample below - many are from ${cfg.area} residents and office workers who used the free pickup service.`}
           />
           <ReviewGrid tone="dark" reviews={reviews} />
           <p className="text-[14px] text-text-muted mt-md">

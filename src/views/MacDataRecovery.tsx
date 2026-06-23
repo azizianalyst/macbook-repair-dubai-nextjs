@@ -32,37 +32,37 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 
 const SCENARIOS = [
   {
-    icon: <HardDrive size={22} className="text-accent" aria-hidden />,
+    icon: <HardDrive size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "MacBook won't boot or stuck on spinning wheel",
     price: "AED 500-800",
     body: "Often a corrupted macOS volume or failing SSD directory, not necessarily a dead drive. We image the drive state without writing to it first, then attempt logical recovery. High success rate on drives that won't boot but are still detected.",
   },
   {
-    icon: <AlertTriangle size={22} className="text-accent" aria-hidden />,
+    icon: <AlertTriangle size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "Accidental file delete or format",
     price: "AED 500-700",
     body: "Time-sensitive. Stop using the Mac immediately -- every write reduces the recovery window. Do not empty the Trash. Bring in or send to us as soon as possible. Logical file recovery from a still-functioning SSD has a very high success rate when the drive has not been written to since deletion.",
   },
   {
-    icon: <Truck size={22} className="text-accent" aria-hidden />,
+    icon: <Truck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "Water damage",
     price: "AED 600-1500",
     body: "Logic board repair usually comes first (ultrasonic clean, corrosion removal, component work), then SSD health is assessed. If the SSD controller was damaged by liquid, chip-level recovery techniques are used. AED 800-1500 all-in for board repair plus recovery.",
   },
   {
-    icon: <Database size={22} className="text-accent" aria-hidden />,
+    icon: <Database size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "SSD failure -- not detected or clicking",
     price: "AED 600-1200",
     body: "A drive that is not detected may have a failed SSD controller or bad NAND blocks. We run non-destructive diagnostics first. Physical SSD failure recovery is successful in 60-75% of cases. Apple Silicon SSDs are soldered and require board-level work for physical failures.",
   },
   {
-    icon: <Cpu size={22} className="text-accent" aria-hidden />,
+    icon: <Cpu size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "macOS corruption after update",
     price: "AED 300-600",
     body: "A partial or interrupted macOS update can leave the system volume corrupted. In most cases your data is intact on the volume -- we reinstall macOS around it without erasing. Full data recovery is rarely needed for this scenario.",
   },
   {
-    icon: <ShieldCheck size={22} className="text-accent" aria-hidden />,
+    icon: <ShieldCheck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "T2 chip lock or FileVault encrypted drive",
     price: "AED 500-1000",
     body: "T2-secured Macs (2018-2020 Intel) encrypt the SSD at the hardware level. Recovery requires your Apple ID and FileVault password -- without them, data cannot be decrypted by anyone. We assist with account recovery and T2 bypass diagnostics where possible.",
@@ -216,15 +216,15 @@ export default function MacDataRecovery() {
         {/* Recovery scenarios */}
         <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Six recovery scenarios</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-2xl">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Six recovery scenarios</p>
+            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
               What situation is your Mac in?
             </h2>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {SCENARIOS.map((s) => (
-                <div key={s.title} className="rounded-2xl border border-border bg-bg-card p-lg flex flex-col gap-sm">
+                <div key={s.title} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
                   <div className="flex items-center gap-sm">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 shrink-0">{s.icon}</span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">{s.icon}</span>
                     <span className="inline-flex items-center rounded-full bg-accent/10 border border-accent/20 px-2.5 py-0.5 text-[12px] font-medium text-accent">{s.price}</span>
                   </div>
                   <h3 className="m-0 text-text text-[16px] font-bold">{s.title}</h3>
@@ -242,10 +242,10 @@ export default function MacDataRecovery() {
             SSD recovery depends on the chip generation
           </h2>
           <div className="grid gap-lg md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-bg-card p-lg">
+            <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
               <div className="flex items-center gap-sm mb-md">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 shrink-0">
-                  <HardDrive size={20} className="text-accent" aria-hidden />
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">
+                  <HardDrive size={20} className="text-accent transition-colors group-hover:text-white" aria-hidden />
                 </span>
                 <h3 className="m-0 text-text text-[18px] font-bold">Intel Mac (2017-2020)</h3>
               </div>
@@ -257,10 +257,10 @@ export default function MacDataRecovery() {
                 <span className="text-[13px] text-text-muted">Removable SSD -- direct workstation connection</span>
               </div>
             </div>
-            <div className="rounded-2xl border border-border bg-bg-card p-lg">
+            <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
               <div className="flex items-center gap-sm mb-md">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 shrink-0">
-                  <Cpu size={20} className="text-accent" aria-hidden />
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">
+                  <Cpu size={20} className="text-accent transition-colors group-hover:text-white" aria-hidden />
                 </span>
                 <h3 className="m-0 text-text text-[18px] font-bold">Apple Silicon (M1-M4)</h3>
               </div>
@@ -278,8 +278,8 @@ export default function MacDataRecovery() {
         {/* Recovery process */}
         <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">How it works</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-2xl">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">How it works</p>
+            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
               The recovery process
             </h2>
             <ol className="grid gap-lg md:grid-cols-3 list-none p-0 m-0">
@@ -300,8 +300,8 @@ export default function MacDataRecovery() {
                   body: "Recovered files are verified by browsing the directory with you present or via a screenshot gallery sent on WhatsApp. Data is delivered to your external drive. The original Mac is repaired or returned as agreed.",
                 },
               ].map((step) => (
-                <li key={step.n} className="rounded-2xl border border-border bg-bg-card p-lg">
-                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 font-bold text-[18px] text-accent">{step.n}</span>
+                <li key={step.n} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-bold text-[18px] text-accent transition-colors group-hover:bg-accent group-hover:text-white">{step.n}</span>
                   <p className="font-semibold text-[16px] m-0 mb-2 text-text">{step.title}</p>
                   <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{step.body}</p>
                 </li>
@@ -316,7 +316,7 @@ export default function MacDataRecovery() {
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
             Recovery success rates
           </h2>
-          <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card mb-md">
+          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] mb-md">
             <table className="w-full border-collapse text-left text-[14px] min-w-[420px]">
               <thead>
                 <tr className="border-b border-border">
@@ -342,11 +342,11 @@ export default function MacDataRecovery() {
         {/* Pricing */}
         <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Transparent pricing</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Transparent pricing</p>
+            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-xl">
               Mac data recovery pricing in Dubai
             </h2>
-            <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
+            <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
               <table className="w-full border-collapse text-left text-[14px] min-w-[480px]">
                 <thead>
                   <tr className="border-b border-border">
@@ -364,7 +364,7 @@ export default function MacDataRecovery() {
                 </tbody>
               </table>
             </div>
-            <p className="mt-md text-[13px] text-text-faint">
+            <p className="mt-md text-[13px] text-on-primary-muted">
               All prices in AED, VAT inclusive. Free assessment before any paid work. No recovery, no charge. Payment on data delivery.
             </p>
           </div>
@@ -385,11 +385,11 @@ export default function MacDataRecovery() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <div className="grid lg:grid-cols-[280px_1fr] gap-2xl items-start">
               <div className="lg:sticky lg:top-24">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">FAQ</p>
-                <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-text leading-[1.1] mb-md">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">FAQ</p>
+                <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-white leading-[1.1] mb-md">
                   Data recovery questions
                 </h2>
-                <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
+                <p className="text-[15px] text-on-primary-muted leading-relaxed mb-lg">
                   Common questions about Mac data recovery in Dubai, Apple Silicon SSDs, and what happens when a MacBook won't boot.
                 </p>
                 <CallButtons dark />
@@ -411,7 +411,7 @@ export default function MacDataRecovery() {
         <section className="mt-[80px] py-[64px]" style={{ background: "#2C3137" }}>
           <div className="mx-auto max-w-content px-5 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-lg">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">Mac data recovery · Dubai Media City</p>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-3">Mac data recovery · Dubai Media City</p>
               <h2 className="m-0 text-[26px] md:text-[32px] font-bold text-white leading-tight">
                 Lost your Mac data? Free assessment. No recovery, no charge.
               </h2>

@@ -125,7 +125,7 @@ export default function MacBookInsurance() {
         subtitle="Protect your MacBook against accidental damage, liquid spills, screen breaks, theft or loss. Independent cover from a Dubai workshop, priced per device and quoted on WhatsApp - not a fixed public premium."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
           <span>·</span>
           <span>Repaired in-house since 2004</span>
           <span>·</span>

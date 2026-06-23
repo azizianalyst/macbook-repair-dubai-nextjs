@@ -15,11 +15,12 @@ export const WEBSITE_ID = `${SITE.url}/#website`;
 export const pageUrl = (path: string): string =>
   SITE.url + (path === "/" ? "/" : "/" + path.replace(/^\/+|\/+$/g, "") + "/");
 
-// Entity-consolidation links. The Google Business Profile is named "Azizi Technologies" on
-// Maps and the sister site azizitechnologies.ae ranks for overlapping queries — without an
-// explicit sameAs bridge Google reads them as separate, competing entities and suppresses the
-// head term. Declaring them sameAs (alongside alternateName "Azizi Technologies") tells Google
-// it is ONE business. See SEO recovery plan, Cause 3.
+// Entity-consolidation links. The Google Business Profile, the website and this schema all use
+// the SAME public name ("MacBook Repair Dubai"), so the primary local entity is already
+// consolidated on Maps. Azizi Technologies is the legal operator — declared via legalName, NOT
+// as a competing consumer name (an alternateName Google can't corroborate on the GBP would
+// re-fragment the entity). The sister site azizitechnologies.ae is bridged via sameAs so any
+// legacy "Azizi" link equity consolidates onto this entity. See SEO recovery plan, Cause 3.
 const GBP_MAPS_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
 const SISTER_SITE = "https://azizitechnologies.ae";
 
@@ -32,9 +33,9 @@ export function localBusiness() {
     "@type": "ElectronicsStore",
     "@id": BUSINESS_ID,
     name: SITE.name,
-    alternateName: "Azizi Technologies",
+    legalName: "Azizi Technologies",
     description:
-      "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 215+ Google reviews.",
+      "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 216+ Google reviews.",
     image: [
       `${SITE.url}/images/brand/brand-storefront.jpg`,
       `${SITE.url}/images/brand/workshop-wide.jpg`,
@@ -439,7 +440,7 @@ export function organization() {
     "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
-    alternateName: "Azizi Technologies",
+    legalName: "Azizi Technologies",
     slogan: SITE_SETTINGS.tagline || undefined,
     url: SITE.url,
     logo: {

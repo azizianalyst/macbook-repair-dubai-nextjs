@@ -16,8 +16,20 @@ const RATE_LIMIT  = 10;          // page navigations per window before lockout
 const RATE_WINDOW = 60_000;      // 1 minute window (ms)
 const RATE_BLOCK  = 15 * 60_000; // 15 minute cooldown after exceeding limit (ms)
 
-// Known search-engine crawl IPs and UAs to exempt from rate limiting
-const RATE_EXEMPT_UA = ["googlebot", "bingbot", "applebot", "duckduckbot", "yandexbot"];
+// Crawl UAs exempt from rate limiting: search engines + AI answer engines that cite us.
+// UA-based like the honeypot below (trivially spoofable, but a scraper could already spoof
+// googlebot; the upside is letting engines that cite us crawl without tripping the 10/min
+// lockout — directly serves the AI-citation goal). Generic scrapers are still caught by the
+// honeypot UA list further down. Google-Extended/Applebot-Extended are robots.txt tokens, not
+// request UAs, so they're governed in robots.txt, not here (Gemini fetches as googlebot).
+const RATE_EXEMPT_UA = [
+  // search engines
+  "googlebot", "bingbot", "applebot", "duckduckbot", "yandexbot",
+  // AI answer engines — citation crawlers + on-demand user fetchers
+  "gptbot", "oai-searchbot", "chatgpt-user",
+  "claudebot", "claude-user", "claude-searchbot",
+  "perplexitybot", "perplexity-user",
+];
 
 function rateLimited(req: NextRequest): boolean {
   const ua = req.headers.get("user-agent")?.toLowerCase() ?? "";

@@ -361,7 +361,7 @@ export default function MacBookDataRecovery() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real data-recovery reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 216+ →</a>
             </p>
             <ReviewGrid tone="dark" reviews={reviews} />
           </section>

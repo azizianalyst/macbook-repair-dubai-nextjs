@@ -221,7 +221,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
                 { stat: "21+", label: "Years in Dubai" },
-                { stat: "215+", label: "Google reviews" },
+                { stat: "216+", label: "Google reviews" },
                 { stat: "30 min", label: "Appointment repair" },
                 { stat: "12 mo", label: "Written warranty" },
               ].map(({ stat, label }, i) => (
@@ -370,7 +370,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
             <div className="text-center mb-[56px]">
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">215+ verified Google reviews. Here are three.</p>
+              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">216+ verified Google reviews. Here are three.</p>
             </div>
             <div className="grid gap-lg md:grid-cols-3">
               {TESTIMONIALS.map((t) => (

@@ -36,7 +36,7 @@ const WHY_US = [
   "Free pickup and delivery across Dubai Mainland",
   "Written warranty up to 12 months on every repair",
   "Free diagnosis, no fix, no charge",
-  "5.0 stars · 215+ verified Google reviews",
+  "5.0 stars · 216+ verified Google reviews",
   "Office #45, Concord Tower, Dubai Media City, no hidden location",
 ];
 
@@ -44,7 +44,7 @@ const FAQS = [
   { q: "What makes the best MacBook repair shop in Dubai?",
     a: "The best MacBook repair shop in Dubai does component-level logic board repair (not just module swaps), provides a written fixed quote before starting, offers same-day service for screen and battery, backs every repair with a written warranty of at least 6 months, and diagnoses for free. Price alone is not the best indicator, a shop quoting AED 200 for a screen is likely using grey-market panels that fail within 3 months." },
   { q: "Is MacBook Repair Dubai the best shop in Dubai?",
-    a: "We have 5.0 stars from 215+ verified Google reviews, 21 years of MacBook repair experience in Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of up to 12 months. We let the track record speak, read the reviews and compare." },
+    a: "We have 5.0 stars from 216+ verified Google reviews, 21 years of MacBook repair experience in Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of up to 12 months. We let the track record speak, read the reviews and compare." },
   { q: "How do I choose between MacBook repair shops in Dubai?",
     a: "Ask four questions: (1) Do you diagnose free of charge? (2) Do you give a written fixed quote before starting? (3) Do you repair MacBook logic boards at component level or replace the whole board? (4) What is the written warranty? A good shop answers yes, yes, component level, and at least 6 months respectively." },
   { q: "Is it better to go to Apple Store or an independent MacBook repair shop in Dubai?",
@@ -63,7 +63,7 @@ export default function BestMacBookRepairShop() {
   useSeo({
     title: "Best MacBook Repair Shop Dubai 2026, 5★, From AED 450 | Since 2004",
     description:
-      "Best MacBook repair shop in Dubai. 215+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. From AED 450. Call 055 741 3706.",
+      "Best MacBook repair shop in Dubai. 216+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. From AED 450. Call 055 741 3706.",
     path: "/best-macbook-repair-shop-dubai",
   });
 
@@ -77,10 +77,10 @@ export default function BestMacBookRepairShop() {
           tone="dark"
           eyebrow="Best MacBook repair · Dubai · Since 2004"
           title="Best MacBook Repair Shop in Dubai, 2026"
-          subtitle="5.0 stars · 215+ reviews · Component-level board repair · Same-day screen & battery · Written warranty up to 12 months."
+          subtitle="5.0 stars · 216+ reviews · Component-level board repair · Same-day screen & battery · Written warranty up to 12 months."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
             <span>·</span>
             <span>21 years in Dubai</span>
             <span>·</span>
@@ -98,7 +98,7 @@ export default function BestMacBookRepairShop() {
           <QuickAnswer
             tone="dark"
             question="What is the best MacBook repair shop in Dubai?"
-            answer="The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, 5.0 stars from 215+ verified reviews, 21 years experience, component-level logic board repair, same-day screen and battery service, written warranty up to 12 months, free diagnosis. Screen from AED 499, battery from AED 450. WhatsApp 055 741 3706."
+            answer="The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, 5.0 stars from 216+ verified reviews, 21 years experience, component-level logic board repair, same-day screen and battery service, written warranty up to 12 months, free diagnosis. Screen from AED 499, battery from AED 450. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -186,7 +186,7 @@ export default function BestMacBookRepairShop() {
         {/* Reviews */}
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">215+ reviews, see what customers say</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">216+ reviews, see what customers say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
           </div>
         </section>

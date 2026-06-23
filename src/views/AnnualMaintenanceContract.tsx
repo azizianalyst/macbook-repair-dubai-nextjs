@@ -89,7 +89,7 @@ export default function AnnualMaintenanceContract() {
         subtitle="Keep every Mac, iPhone and iPad in your business serviced, healthy and repaired-on-priority for one predictable yearly fee. Scheduled visits, on-site support and discounted parts."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
           <span>·</span>
           <span>On-site across Dubai</span>
           <span>·</span>

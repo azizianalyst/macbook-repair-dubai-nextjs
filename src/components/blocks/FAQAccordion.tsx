@@ -45,7 +45,7 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
                   aria-controls={`${id}-panel`}
                   onClick={() => toggle(i)}
                 >
-                  <span className={cn("text-[16px] md:text-[17px] font-semibold", dark ? "text-text" : "text-text")}>{item.q}</span>
+                  <span className={cn("text-[16px] md:text-[17px] font-semibold", dark ? "text-white" : "text-text")}>{item.q}</span>
                   <span className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-text-muted")} aria-hidden>
                     {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
@@ -55,7 +55,7 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
                 id={`${id}-panel`}
                 role="region"
                 hidden={!isOpen}
-                className={cn("pb-md text-[15px] leading-relaxed max-w-[70ch]", dark ? "text-text-muted" : "text-text-muted")}
+                className={cn("pb-md text-[15px] leading-relaxed max-w-[70ch]", dark ? "text-on-primary-muted" : "text-text-muted")}
               >
                 {item.a}
               </div>

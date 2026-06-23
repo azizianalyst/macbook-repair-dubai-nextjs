@@ -31,12 +31,12 @@ const WHY_US = [
   "Free pickup and delivery across all Dubai Mainland",
   "Written warranty up to 12 months on every repair",
   "Free diagnosis, no fix, no charge policy",
-  "5.0 stars · 215+ verified Google reviews",
+  "5.0 stars · 216+ verified Google reviews",
 ];
 
 const FAQS = [
   { q: "What is the best Apple repair service in Dubai?",
-    a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, provides a written warranty of at least 6 months, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 215+ verified reviews." },
+    a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, provides a written warranty of at least 6 months, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 216+ verified reviews." },
   { q: "Can one shop repair all my Apple devices in Dubai?",
     a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 17 Pro Max), iPad (all generations including Pro M5), and Apple Watch (Series 3 through Ultra 2). One workshop, one warranty card, one WhatsApp thread." },
   { q: "How does the best Apple repair in Dubai compare to Apple Store?",
@@ -57,7 +57,7 @@ export default function BestAppleRepair() {
   useSeo({
     title: "Best Apple Repair Dubai 2026. All Devices, From AED 179 | 5★ Since 2004",
     description:
-      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. 215+ 5-star reviews. Written warranty up to 12 months. Free pickup. Call 055 741 3706.",
+      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. 216+ 5-star reviews. Written warranty up to 12 months. Free pickup. Call 055 741 3706.",
     path: "/best-apple-repair-dubai",
   });
 
@@ -71,10 +71,10 @@ export default function BestAppleRepair() {
           tone="dark"
           eyebrow="Best Apple repair · Dubai · Since 2004"
           title="Best Apple Repair in Dubai, 2026"
-          subtitle="Every Apple device. MacBook, iMac, iPhone, iPad, Apple Watch. From AED 179. 5.0 stars · 215+ reviews. Free pickup. Warranty up to 12 months."
+          subtitle="Every Apple device. MacBook, iMac, iPhone, iPad, Apple Watch. From AED 179. 5.0 stars · 216+ reviews. Free pickup. Warranty up to 12 months."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
             <span>·</span>
             <span>6 Apple device families</span>
             <span>·</span>
@@ -92,7 +92,7 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, every Apple device repaired (MacBook, iMac, iPhone, iPad, Apple Watch), from AED 179, 5.0 stars from 215+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706."
+            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, every Apple device repaired (MacBook, iMac, iPhone, iPad, Apple Watch), from AED 179, 5.0 stars from 216+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -150,7 +150,7 @@ export default function BestAppleRepair() {
 
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">215+ reviews, what customers say</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">216+ reviews, what customers say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
           </div>
         </section>

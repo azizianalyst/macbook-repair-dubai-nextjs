@@ -148,7 +148,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
               <Star size={28} className="text-star fill-star" aria-hidden /> Reviews from {p.family} customers
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all 215+ →</Link>
+              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all 216+ →</Link>
             </p>
             <ReviewGrid reviews={reviews} />
           </section>
