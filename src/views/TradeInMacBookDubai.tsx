@@ -13,6 +13,9 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { TradeInEstimator } from "@/components/blocks/TradeInEstimator";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { RelatedServices } from "@/components/blocks/RelatedServices";
+import { conversionSiblings } from "@/lib/related-services";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -168,7 +171,8 @@ export default function TradeInMacBookDubai() {
           We assess your current device, give you a fair valuation, and apply that value as instant credit toward an upgrade - or pay you the same day in cash or card if you'd rather just sell. We take MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad, <strong>working or faulty</strong>. Because we repair and refurbish everything in-house, a cracked screen, dead battery or water-damaged board doesn't write your device off - it just factors into an honest offer.
         </p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch]">
-          The same Dubai workshop that has serviced Apple hardware since 2004 handles every valuation. Need a repair instead of an upgrade? See <Link to="/" className="text-accent underline underline-offset-2">MacBook repair in Dubai</Link>, or explore <Link to="/apple-repair-dubai" className="text-accent underline underline-offset-2">all Apple repair services</Link>.
+          The same Dubai workshop that has serviced Apple hardware since 2004 handles every valuation. Considering a refurbished MacBook instead? See our guide to{" "}
+          <Link to="/sources-to-purchase-a-refurbished-macbook" className="text-accent underline underline-offset-2">where to buy a refurbished MacBook in Dubai</Link>. Need a repair instead of an upgrade? See <Link to="/" className="text-accent underline underline-offset-2">MacBook repair in Dubai</Link>, or explore <Link to="/apple-repair-dubai" className="text-accent underline underline-offset-2">all Apple repair services</Link>.
         </p>
       </section>
 
@@ -290,6 +294,11 @@ export default function TradeInMacBookDubai() {
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
       </section>
 
+      {/* More options, sell / trade-in / protect (cross-links the conversion cluster) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <RelatedServices items={conversionSiblings("/trade-in-macbook-dubai")} tone="dark" heading="More ways we can help" />
+      </section>
+
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Where we're based</h2>
@@ -299,7 +308,6 @@ export default function TradeInMacBookDubai() {
       {/* Closing CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">Get your free trade-in valuation today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
@@ -321,6 +329,7 @@ export default function TradeInMacBookDubai() {
         </div>
       </section>
       </div>
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

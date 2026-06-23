@@ -20,7 +20,7 @@ export default function IPhoneAirRepair() {
         { name: "iPhone Air",    path: "/iphone-air-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone Air Repair"
+      serviceName="iPhone Air Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

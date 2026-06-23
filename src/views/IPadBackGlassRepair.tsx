@@ -19,7 +19,7 @@ export default function IPadBackGlassRepair() {
         { name: "Back Repair",   path: "/ipad-back-glass-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad chassis and Smart Connector repair" }}
-      serviceName="iPad Back Repair"
+      serviceName="iPad Back Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -47,6 +47,7 @@ export default function IPadBackGlassRepair() {
         { title: "Polish + reassemble",       body: "Anodised-finish polish where possible, full reassembly, function test of every port, button and Smart Connector pin. 12-month cosmetic warranty." },
       ]}
       warrantyDays={365}
+      glassNotice
       warrantyBullets={[
         "Covers the rework area against re-deformation under normal use.",
         "Smart Connector function guaranteed if it worked before the repair.",

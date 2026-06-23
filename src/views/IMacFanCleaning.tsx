@@ -19,7 +19,7 @@ export default function IMacFanCleaning() {
         { name: "Fan Cleaning",        path: "/imac-fan-cleaning-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac thermal restoration" }}
-      serviceName="iMac Fan Cleaning"
+      serviceName="iMac Fan Cleaning Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -46,7 +46,7 @@ export default function IMacFanCleaning() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "12-month warranty on the seal and the workmanship.",
+        "warranty of up to 12 months on the seal and the workmanship.",
         "If fan noise returns inside 6 months we re-clean for free.",
         "Free home pickup and drop-off across Dubai mainland.",
       ]}

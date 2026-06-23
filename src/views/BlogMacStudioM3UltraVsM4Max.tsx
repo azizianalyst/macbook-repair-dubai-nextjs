@@ -9,6 +9,19 @@ export default function BlogMacStudioM3UltraVsM4Max() {
       seoTitle="Mac Studio M3 Ultra vs M4 Max 2026 - Which Wins for Pros?"
       seoDescription="Apple sells both at once. M3 Ultra: 32 cores, 512 GB RAM max. M4 Max: faster single-thread, newer chip. Workflow-by-workflow honest verdict for Dubai pros."
       path="/blog/mac-studio-m3-ultra-vs-m4-max-which"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "why-both", label: "Why Apple released both" },
+        { id: "ultra-strengths", label: "M3 Ultra strengths" },
+        { id: "max-strengths", label: "M4 Max strengths" },
+        { id: "multi-core", label: "Multi-core workloads" },
+        { id: "single-thread", label: "Single-thread workloads" },
+        { id: "ai-ml", label: "AI/ML workloads" },
+        { id: "power", label: "Power consumption" },
+        { id: "price", label: "Price difference" },
+        { id: "verdict", label: "Verdict by workflow" },
+      ]}
       category="Comparison · Mac Studio"
       h1="Mac Studio M3 Ultra vs M4 Max - 2026 Comparison"
       hook="Strange Apple move - selling both at once. Here's which actually wins for what."
@@ -20,7 +33,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
       featuredImageAlt="Mac Studio M3 Ultra vs M4 Max 2026 comparison Dubai"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Mac Studio M3 Ultra Vs M4 Max. Quick answer</h2>
           <p>
             Apple's March 2025 launch was unusual: Mac Studio came in two chip variants from different
             generations. M3 Ultra (chiplet-fused two M3 Max chips) for top-tier multi-core and memory.
@@ -28,7 +41,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             buy depends entirely on your workflow.
           </p>
 
-          <h2>Why Apple released both in March 2025</h2>
+          <h2 id="why-both">Why Apple released both in March 2025</h2>
           <p>
             The M4 Ultra didn't arrive on schedule - Apple's UltraFusion interconnect for M4 ran into
             yield issues. Rather than delay Studio entirely, Apple shipped the M3 Ultra (proven
@@ -40,7 +53,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             absolute peak Mac performance, that's the one to wait for.
           </p>
 
-          <h2>M3 Ultra strengths (32 cores, 512 GB RAM max)</h2>
+          <h2 id="ultra-strengths">M3 Ultra strengths (32 cores, 512 GB RAM max)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>32 CPU cores</strong> (24 performance + 8 efficiency) - most cores in any Mac.</li>
             <li><strong>80 GPU cores</strong> - 2.5× the M4 Max's 32 cores.</li>
@@ -50,7 +63,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             <li><strong>32-core Neural Engine</strong> - large LLM inference at 192 GB+ becomes practical.</li>
           </ul>
 
-          <h2>M4 Max strengths (newer arch, faster single-thread)</h2>
+          <h2 id="max-strengths">M4 Max strengths (newer arch, faster single-thread)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Newer M4 architecture</strong>: ~15% IPC improvement vs M3.</li>
             <li><strong>Faster single-core</strong>: Geekbench single ~3,950 vs M3 Ultra's ~3,200.</li>
@@ -60,7 +73,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             <li><strong>Thunderbolt 5</strong>: 6 ports (same as Ultra).</li>
           </ul>
 
-          <h2>Multi-core workloads - M3 Ultra wins</h2>
+          <h2 id="multi-core">Multi-core workloads - M3 Ultra wins</h2>
           <BlogPriceTable
             caption="Multi-core / parallelisable workloads (April 2026 testing)"
             headers={["Test", "M4 Max (16-core)", "M3 Ultra (32-core)", "Ultra advantage"]}
@@ -76,7 +89,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             ]}
           />
 
-          <h2>Single-thread workloads - M4 Max wins</h2>
+          <h2 id="single-thread">Single-thread workloads - M4 Max wins</h2>
           <p>
             The M4's per-core performance edge matters in apps that can't fully parallelise:
           </p>
@@ -93,7 +106,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             ]}
           />
 
-          <h2>AI/ML workloads - split</h2>
+          <h2 id="ai-ml">AI/ML workloads - split</h2>
           <p>
             Apple Silicon's killer feature for AI is unified memory: the GPU can address all system
             RAM. This makes Mac Studio competitive with server GPUs for large LLM inference, where
@@ -116,7 +129,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             currently the best value Mac for the job.
           </p>
 
-          <h2>Power consumption</h2>
+          <h2 id="power">Power consumption</h2>
           <BlogPriceTable
             caption="Power draw (wall measurement, our bench)"
             headers={["State", "M4 Max", "M3 Ultra"]}
@@ -129,7 +142,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             ]}
           />
 
-          <h2>Price difference</h2>
+          <h2 id="price">Price difference</h2>
           <BlogPriceTable
             caption="Mac Studio configurations - UAE April 2026"
             headers={["Configuration", "Price (AED)", "Suitable for"]}
@@ -144,7 +157,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             ]}
           />
 
-          <h2>Verdict by workflow</h2>
+          <h2 id="verdict">Verdict by workflow</h2>
           <BlogPriceTable
             caption="Which Mac Studio for your workflow"
             headers={["Workflow", "Best chip", "Recommended config"]}

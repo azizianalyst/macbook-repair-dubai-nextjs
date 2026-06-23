@@ -9,6 +9,16 @@ export default function BlogIPhone15Vs17RepairCost() {
       seoTitle="iPhone 15 vs iPhone 17 Repair Costs Compared 2026"
       seoDescription="iPhone 15 vs 17 repair costs in Dubai: screen, battery, USB-C, camera and vapor chamber. The iPhone 17 Pro runs about 25% costlier to repair than the 15 Pro."
       path="/blog/iphone-15-vs-iphone-17-repair-cost-comparison"
+      wide
+      toc={[
+        { id: "cost-comparison-table", label: "Full cost comparison" },
+        { id: "why-17-costs-more", label: "Why 17 parts cost more" },
+        { id: "usb-c-port-repair", label: "USB-C port repair" },
+        { id: "frame-repair", label: "Aluminium vs titanium frame" },
+        { id: "vapor-chamber-repair", label: "Vapor chamber repair" },
+        { id: "upgrade-or-repair", label: "Upgrade or repair?" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost comparison · iPhone"
       h1="iPhone 15 vs iPhone 17 Repair Costs Compared (2026)"
       hook="Wondering if upgrading from iPhone 15 to iPhone 17 means more expensive repairs? Here's the side-by-side, every component, in April 2026 Dubai prices."
@@ -17,10 +27,10 @@ export default function BlogIPhone15Vs17RepairCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="iPhone 15 Pro and iPhone 17 Pro side by side on workbench for repair cost comparison"
+      featuredImageAlt="iPhone 15 Vs iPhone 17 Repair Cost, iPhone 15 Pro and iPhone 17 Pro side by side on workbench for repair cost comparison"
       body={
         <>
-          <h2>The full repair cost comparison - every common job</h2>
+          <h2 id="cost-comparison-table">iPhone 15 Vs iPhone 17 Repair Cost. The full repair cost comparison - every common job</h2>
           <BlogPriceTable
             caption="iPhone 15 vs iPhone 17 - repair pricing comparison, Dubai April 2026"
             headers={["Repair", "iPhone 15", "iPhone 15 Pro Max", "iPhone 17", "iPhone 17 Pro Max"]}
@@ -39,10 +49,10 @@ export default function BlogIPhone15Vs17RepairCost() {
           />
           <p className="text-[13px] text-text-muted mono">
             "AED 850" / "AED 1,400" rows above for iPhone 17 Pro Max - full pricing on the
-            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent hover:underline"> screen cost guide</Link>.
+            <Link to="/blog/iphone-screen-repair-cost-dubai-2026" className="text-accent underline underline-offset-2"> screen cost guide</Link>.
           </p>
 
-          <h2>Why iPhone 17 parts cost more (so far)</h2>
+          <h2 id="why-17-costs-more">Why iPhone 17 parts cost more (so far)</h2>
           <p>
             The iPhone 17 line launched September 2025 - six months ago at the time of writing. New
             Apple parts always run a 15-25% premium over the equivalent year-old part because of
@@ -57,7 +67,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             iPhone 18 launches and the 17 line moves into "current - not flagship" status.
           </p>
 
-          <h2>iPhone 15 USB-C vs iPhone 17 USB-C - port repair cost</h2>
+          <h2 id="usb-c-port-repair">iPhone 15 USB-C vs iPhone 17 USB-C - port repair cost</h2>
           <p>
             Same job, same price (AED 400). The USB-C connector design is essentially identical
             across iPhone 15, 16, and 17. The connector itself is a board-soldered Apple-spec part
@@ -67,7 +77,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             jobs on iPhone 15 than on 16/17. Expect this to be a smaller issue on 17 going forward.
           </p>
 
-          <h2>Aluminium unibody (17 Pro) vs titanium (15 Pro) - frame repair</h2>
+          <h2 id="frame-repair">Aluminium unibody (17 Pro) vs titanium (15 Pro) - frame repair</h2>
           <p>
             Apple switched the Pro line back to aluminium for the iPhone 17 Pro after two years of
             titanium (15 Pro / 16 Pro). Aluminium is softer - it dents more easily but is also
@@ -78,7 +88,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             but cheaper fixes.
           </p>
 
-          <h2>Vapor chamber cooling repair (17 Pro / Pro Max only)</h2>
+          <h2 id="vapor-chamber-repair">Vapor chamber cooling repair (17 Pro / Pro Max only)</h2>
           <p>
             The iPhone 17 Pro and 17 Pro Max are the first iPhones with an internal vapor chamber
             for sustained gaming and 4K video performance. The chamber is a thin sealed copper
@@ -89,7 +99,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             replace the assembly for AED 350 plus the regular back-glass cost.
           </p>
 
-          <h2>Should I upgrade my iPhone 15 - or repair it?</h2>
+          <h2 id="upgrade-or-repair">Should I upgrade my iPhone 15 - or repair it?</h2>
           <p>
             Practical answer: in April 2026, the iPhone 15 (AED ~2,200 used in Dubai) is still a
             very capable phone. A AED 400 battery + AED 750 screen repair is AED 1,150 - half the
@@ -106,7 +116,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             Max. We'd still repair, but it's a real conversation.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             See the full{" "}
             <Link to="/iphone-15-repair-dubai" className="text-accent font-semibold hover:underline">

@@ -1,29 +1,23 @@
 "use client";
 import DevicePageTemplate from "@/components/blocks/DevicePageTemplate";
+import { IPAD_SCREEN_PRICES } from "@/content/screen-pricing";
 
 export default function IPadScreenRepair() {
   return (
     <DevicePageTemplate
       family="ipad"
-      seoTitle="iPad Screen Repair Dubai - From AED 350 | Pencil-Compatible | Same-Day"
-      seoDescription="iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. From AED 350. Call 055 741 3706."
+      seoTitle="iPad Screen Repair Dubai - From AED 139 | Pencil-Compatible | Same-Day"
+      seoDescription="iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. From AED 139. Call 055 741 3706."
       path="/ipad-screen-repair-dubai"
       eyebrow="iPad screen repair"
       h1="iPad Screen Repair Dubai"
-      subtitle="Cracked glass, dead touch, lines on the panel. Laminated displays replaced with the Pencil digitiser intact. From AED 350, most jobs same day."
-      startingPrice={350}
+      subtitle="Cracked glass, dead touch, lines on the panel. Laminated displays replaced with the Pencil digitiser intact. From AED 139, most jobs same day."
+      startingPrice={139}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, my iPad screen is broken - model:"
       technician={{ name: "Shafeeq", years: 12, specialisation: "iPad & MacBook display specialist" }}
-      serviceName="iPad Screen Repair"
-      pricingRows={[
-        { model: "iPad (9th / 10th / 11th gen)",  price: 350, timeline: "Same day" },
-        { model: "iPad mini (6 / 7)",             price: 450, timeline: "Same day" },
-        { model: "iPad Air (4 / 5 / 6 / 7)",      price: 500, timeline: "Same day" },
-        { model: "iPad Pro 11\" (M1 / M2 / M4)",  price: 700, timeline: "1 day" },
-        { model: "iPad Pro 13\" (M2 / M4 tandem-OLED)", price: 900, timeline: "1 day" },
-        { model: "iPad 5 / 6 / 7 / 8 (older)",    price: 350, timeline: "Same day" },
-      ]}
+      serviceName="iPad Screen Repair Dubai"
+      pricingRows={IPAD_SCREEN_PRICES.map((r) => ({ ...r, timeline: r.price >= 850 ? "1-2 days" : "Same day" }))}
       pricingCaption={`Pro 13" tandem-OLED is a controlled order - pricing confirmed before bench work.`}
       intro={
         <>
@@ -31,7 +25,7 @@ export default function IPadScreenRepair() {
             iPad screens are not iPhone screens. They are <strong>fully laminated</strong> - glass, touch digitiser and LCD or OLED bonded as one unit. That changes the repair: there is no "glass-only" swap on a modern iPad. The whole assembly is replaced and the Apple Pencil layer is calibrated back into place.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            We quote the part you actually need, not a worst-case price. iPad 9 with cracked glass and clean LCD is AED 350. iPad Pro 13 with the tandem-OLED panel is AED 900 because the part is AED 700+ at trade. You see both numbers before we open the device.
+            We quote the part you actually need, not a worst-case price. iPad 9 with cracked glass and clean LCD is AED 139. iPad Pro 13 with the tandem-OLED panel is AED 900 because the part is AED 700+ at trade. You see both numbers before we open the device.
           </p>
         </>
       }
@@ -52,13 +46,14 @@ export default function IPadScreenRepair() {
         { title: "Free delivery", body: "Back to you the same day with a 3-month written warranty card." },
       ]}
       warrantyDays={90}
+      glassNotice
       warrantyBullets={[
         "Covers display assembly, touch, Pencil response and adhesive seal.",
         "Excludes new physical damage (a fresh drop after the repair).",
         "Free re-fit if any cosmetic gap appears in the first 30 days.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 350",                         "AED 1,200+ (whole-unit swap on most models)"],
+        ["Starting price",        "AED 139",                         "AED 1,200+ (whole-unit swap on most models)"],
         ["Same-day option",       "Yes, on iPad, Mini, Air",         "No - usually 5-7 days"],
         ["Pickup & delivery",     "Free, Dubai mainland",            "Drop in to Mall of Emirates yourself"],
         ["Pencil calibration",    "Included on every job",           "Included"],

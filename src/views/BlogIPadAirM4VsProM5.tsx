@@ -9,6 +9,17 @@ export default function BlogIPadAirM4VsProM5() {
       seoTitle="iPad Air M4 vs iPad Pro M5 (2026) - Which to Buy in Dubai?"
       seoDescription="iPad Air M4 (AED 2,199) vs iPad Pro M5 (AED 3,899): Tandem OLED, ProMotion, the M5 chip, repair costs, and a clear per-use-case verdict for Dubai buyers."
       path="/blog/ipad-air-m4-vs-pro-m5-2026"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "spec-table", label: "Spec table side-by-side" },
+        { id: "air-strengths", label: "iPad Air M4 strengths" },
+        { id: "pro-strengths", label: "iPad Pro M5 strengths" },
+        { id: "for-note-taking", label: "iPad for note-taking" },
+        { id: "for-video-editing", label: "iPad for video editing" },
+        { id: "for-digital-art", label: "iPad for digital art" },
+        { id: "repair-cost", label: "Repair cost comparison" },
+      ]}
       category="Comparison · iPad"
       h1="iPad Air M4 vs iPad Pro M5 - 2026 Comparison"
       hook="Air M4 starts AED 2,199. Pro M5 starts AED 3,899. Here's exactly who needs which - and who's wasting AED 1,700."
@@ -17,10 +28,10 @@ export default function BlogIPadAirM4VsProM5() {
       datePublished="2026-04-26"
       dateModified="2026-04-26"
       readingMinutes={10}
-      featuredImageAlt="iPad Air M4 vs iPad Pro M5 side by side Dubai"
+      featuredImageAlt="iPad Air M4 Vs Pro M5, iPad Air M4 vs iPad Pro M5 side by side Dubai"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">iPad Air M4 Vs Pro M5. Quick answer</h2>
           <p>
             Both iPads are excellent. The Pro is genuinely better - but only matters for ~20% of users.
             If you're a student, casual creator, note-taker, or general user, the Air M4 is the smarter
@@ -28,7 +39,7 @@ export default function BlogIPadAirM4VsProM5() {
             still leaves change.
           </p>
 
-          <h2>Spec table side-by-side</h2>
+          <h2 id="spec-table">Spec table side-by-side</h2>
           <BlogPriceTable
             caption="iPad Air M4 (11/13″) vs iPad Pro M5 (11/13″) - April 2026"
             headers={["Spec", "iPad Air M4", "iPad Pro M5", "Difference"]}
@@ -52,7 +63,7 @@ export default function BlogIPadAirM4VsProM5() {
             ]}
           />
 
-          <h2>iPad Air M4 strengths</h2>
+          <h2 id="air-strengths">iPad Air M4 strengths</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Cheaper:</strong> AED 1,700 less at 11″ base. That's a Magic Keyboard, Pencil Pro, AppleCare+, and screen protector - all included.</li>
             <li><strong>M4 chip is plenty:</strong> Same chip as base iPad Pro from 2024. Handles Lightroom, LumaFusion 1080p/4K editing, Procreate at 16k canvas, all gaming. Apple Intelligence works fine on 8 GB RAM.</li>
@@ -61,7 +72,7 @@ export default function BlogIPadAirM4VsProM5() {
             <li><strong>Apple Pencil Pro support:</strong> Full Pencil Pro (squeeze, barrel roll, haptic) - same as Pro.</li>
           </ul>
 
-          <h2>iPad Pro M5 strengths</h2>
+          <h2 id="pro-strengths">iPad Pro M5 strengths</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Tandem OLED display:</strong> Two stacked OLED panels = true blacks, 1,600-nit HDR peak, 1,000-nit sustained. Genuinely the best display Apple has ever shipped on a portable. If you watch HDR video, edit photos, or stare at it 8 hrs/day, this matters.</li>
             <li><strong>120Hz ProMotion:</strong> Once you scroll iPadOS at 120Hz, going back to 60Hz feels broken. The single biggest "quality of life" difference.</li>
@@ -71,20 +82,20 @@ export default function BlogIPadAirM4VsProM5() {
             <li><strong>Better speakers:</strong> 4-speaker landscape audio. Noticeable for movies and music.</li>
           </ul>
 
-          <h2>iPad for note-taking - Air enough</h2>
+          <h2 id="for-note-taking">iPad for note-taking - Air enough</h2>
           <p>
             Pencil Pro support is identical. 60Hz vs 120Hz is barely perceptible at writing speed. Procreate
             and GoodNotes don't differentiate. <strong>Air wins on price.</strong> Save AED 1,700.
           </p>
 
-          <h2>iPad for video editing - Pro better but not required</h2>
+          <h2 id="for-video-editing">iPad for video editing - Pro better but not required</h2>
           <p>
             For LumaFusion or DaVinci Resolve at 1080p / 4K H.264, the Air M4 handles it without sweating.
             For ProRes RAW or 8K HEVC editing, you need Pro M5's extra GPU cores and RAM. Most "video
             editors" we ask are actually editing 1080p YouTube content - Air is fine.
           </p>
 
-          <h2>iPad for digital art - depends on Pencil Pro use</h2>
+          <h2 id="for-digital-art">iPad for digital art - depends on Pencil Pro use</h2>
           <p>
             Both support Pencil Pro fully. The differentiator is the display:
           </p>
@@ -94,7 +105,7 @@ export default function BlogIPadAirM4VsProM5() {
             <li><strong>3D sculpting / Nomad / Octane:</strong> Pro. M5 GPU is meaningfully faster.</li>
           </ul>
 
-          <h2>Repair cost comparison</h2>
+          <h2 id="repair-cost">Repair cost comparison</h2>
           <BlogPriceTable
             caption="iPad Air M4 vs iPad Pro M5 - typical repair costs at our workshop"
             headers={["Repair", "iPad Air M4 (11″/13″)", "iPad Pro M5 (11″/13″)", "Difference"]}

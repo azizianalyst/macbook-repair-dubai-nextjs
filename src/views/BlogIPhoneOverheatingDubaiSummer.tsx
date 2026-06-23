@@ -8,6 +8,17 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
       seoTitle="iPhone Overheating in Dubai Summer: Causes & Fixes"
       seoDescription="Why iPhones overheat in Dubai's 45°C+ summer, what triggers the 'iPhone needs to cool down' message, prevention tips, and when it signals hardware failure."
       path="/blog/iphone-overheating-dubai-summer-fix"
+      wide
+      toc={[
+        { id: "why-overheat", label: "Why iPhones overheat in Dubai" },
+        { id: "built-in-protection", label: "Apple's built-in protection" },
+        { id: "heat-triggers", label: "Common heat triggers" },
+        { id: "what-not-to-do", label: "What NOT to do" },
+        { id: "cooling-tips", label: "Optimal cooling tips" },
+        { id: "hardware-issue", label: "When it means hardware fault" },
+        { id: "battery-damage", label: "Battery damage from heat" },
+        { id: "vapor-chamber", label: "iPhone 17 Pro vapor chamber" },
+      ]}
       category="Seasonal · iPhone"
       h1="iPhone Overheating in Dubai Summer - Causes & Solutions"
       hook="iPhone in Dubai hits the 'Temperature: iPhone needs to cool down' warning often. Here's prevention and fix."
@@ -16,15 +27,15 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={8}
-      featuredImageAlt="iPhone overheating warning screen - Dubai summer heat protection guide"
+      featuredImageAlt="iPhone Overheating Dubai Summer Fix, iPhone overheating warning screen - Dubai summer heat protection guide"
       body={
         <>
-          <h2>Why iPhones overheat in Dubai (ambient + use case)</h2>
+          <h2 id="why-overheat">iPhone Overheating Dubai Summer Fix. Why iPhones overheat in Dubai (ambient + use case)</h2>
           <p>
             Apple's published iPhone operating range is <strong>0° to 35°C</strong> - same as MacBook. Anything above 35°C ambient eats into the SoC's thermal headroom before you've even opened an app. Add a high-load workload on top (5G upload, GPS navigation, camera 4K/60, wireless charging) and the device hits its 40°C internal protection threshold in minutes.
           </p>
 
-          <h2>Apple's built-in protection (what each warning means)</h2>
+          <h2 id="built-in-protection">Apple's built-in protection (what each warning means)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Performance management activates</strong> - CPU/GPU clocks throttle silently around 38-40°C internal.</li>
             <li><strong>Charging slows or pauses</strong> - both wired and MagSafe stop above ~40°C cell temp.</li>
@@ -37,7 +48,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <a href="https://support.apple.com/en-us/HT201678" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">support.apple.com</a>. None of it is a fault by itself.
           </p>
 
-          <h2>Common heat triggers in Dubai</h2>
+          <h2 id="heat-triggers">Common heat triggers in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>5G in weak-signal areas</strong> (parking garages, malls' interior corridors) - modem ramps power.</li>
             <li><strong>Apple Maps / Google Maps navigation</strong> with screen on, in a car cradle, in direct sun.</li>
@@ -47,7 +58,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <li><strong>Gaming</strong> (Genshin Impact, Resident Evil 4) for more than 15 minutes outdoors.</li>
           </ul>
 
-          <h2>What NOT to do (please)</h2>
+          <h2 id="what-not-to-do">What NOT to do (please)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Do not refrigerate or freeze.</strong> Condensation forms inside the chassis and shorts the board. We see this every June.</li>
             <li><strong>Do not run cold water over it.</strong> Even on IP68 models, sudden thermal shock cracks back glass and stresses the OLED.</li>
@@ -55,7 +66,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <li><strong>Do not remove the case</strong> if it's a rugged case - the metal/plastic shell can actually slow heating from direct sun. (For thermal load from internal use, removing it does help.)</li>
           </ul>
 
-          <h2>Optimal cooling tips</h2>
+          <h2 id="cooling-tips">Optimal cooling tips</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Move into AC. Lay the phone flat (not on fabric) so heat can radiate from both glass surfaces.</li>
             <li>Power off if possible - recovery time drops from 20 min to 8-10 min.</li>
@@ -64,7 +75,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <li>Close camera, navigation, and any AR app.</li>
           </ol>
 
-          <h2>When overheating means hardware issue</h2>
+          <h2 id="hardware-issue">When overheating means hardware issue</h2>
           <p>
             Most heat warnings in Dubai are environmental. Signs the phone itself is faulty:
           </p>
@@ -77,7 +88,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <li>Phone reboots itself during normal use in AC - possible thermal sensor fault or swollen battery contacting board.</li>
           </ul>
 
-          <h2>Battery damage from repeated heat exposure</h2>
+          <h2 id="battery-damage">Battery damage from repeated heat exposure</h2>
           <p>
             iPhone batteries are warranted to retain 80% capacity at 500 cycles under <em>normal</em> conditions. In Dubai we see heavy users hit 80% at 350-400 cycles - about 18-24 months instead of the 24-30 months Apple targets. The mechanism is calendar ageing accelerated by heat, plus more cycles per year because the heat-related throttling makes battery life feel worse.
           </p>
@@ -86,7 +97,7 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">iPhone battery replacement service</Link>.
           </p>
 
-          <h2>iPhone 17 Pro vapor chamber (handles heat better)</h2>
+          <h2 id="vapor-chamber">iPhone 17 Pro vapor chamber (handles heat better)</h2>
           <p>
             iPhone 17 Pro and Pro Max introduced a vapor-chamber cooling system - first time Apple has shipped one in iPhone. Real-world result in Dubai testing:
           </p>

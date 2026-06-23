@@ -53,7 +53,7 @@ export function WorkshopSlider({ slides }: { slides: WorkshopSlide[] }) {
       >
         {slides.map((g) => (
           <li key={g.src} className="w-[64%] shrink-0 snap-start sm:w-[42%] lg:w-[31%]">
-            <figure className="group relative m-0 overflow-hidden rounded-xl border border-border bg-bg-card">
+            <figure className="group relative m-0 overflow-hidden rounded-xl bg-bg-card">
               {/* 3:4 frame matches the portrait lab photos exactly (1600×2133), so the
                   full photo is visible; the lone landscape shot letterboxes inside it. */}
               <ResponsiveImage

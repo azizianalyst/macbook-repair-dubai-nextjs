@@ -20,6 +20,19 @@ export default function BlogIPhoneWaterDamageActionPlan() {
       seoTitle="iPhone Water Damage - First 30 Minutes Action Plan"
       seoDescription="Spilled liquid on iPhone? 6-step emergency plan: power off, remove SIM, pat dry, no rice, no charging. 80%+ recovery within 4 hours. Salt vs fresh water tips."
       path="/blog/iphone-water-damage-action-plan"
+      wide
+      toc={[
+        { id: "step-power-off", label: "Step 1: Power off" },
+        { id: "step-dont-charge", label: "Step 2: Don't charge" },
+        { id: "step-remove-sim", label: "Step 3: Remove SIM tray" },
+        { id: "step-pat-dry", label: "Step 4: Pat dry external" },
+        { id: "step-no-heat", label: "Step 5: No shaking or heat" },
+        { id: "step-bring-in", label: "Step 6: Bring in within 4 hours" },
+        { id: "ip-rating", label: "Why IP rating fails" },
+        { id: "salt-water", label: "Salt water vs fresh water" },
+        { id: "repair-cost", label: "Repair cost expectations" },
+        { id: "insurance-claim", label: "Insurance claim guidance" },
+      ]}
       category="Emergency · iPhone"
       h1="iPhone Water Damage - Your 30-Minute Action Plan"
       hook="Don't power on. Don't put it in rice. Don't try to charge it. Read this first - the next 30 minutes decide everything."
@@ -57,7 +70,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             </div>
           </aside>
 
-          <h2>Step 1 - Power off immediately</h2>
+          <h2 id="step-power-off">iPhone Water Damage. Step 1 - Power off immediately</h2>
           <p>
             Hold Side button + Volume Down together for 3 seconds, then drag the power slider. If
             the iPhone is frozen: press Volume Up, press Volume Down, then hold the Side button
@@ -69,7 +82,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             corrosion starts under a chip, it can take out 5-10 components in minutes.
           </p>
 
-          <h2>Step 2 - Don't try to charge it</h2>
+          <h2 id="step-dont-charge">Step 2 - Don't try to charge it</h2>
           <p>
             Plugging a wet iPhone into a charger is the most damaging thing you can do. The
             charging IC and PMIC come alive, current flows through wet circuits, and you'll watch
@@ -77,7 +90,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             replacement AED 1,500".
           </p>
 
-          <h2>Step 3 - Remove the SIM tray</h2>
+          <h2 id="step-remove-sim">Step 3 - Remove the SIM tray</h2>
           <p>
             Use the SIM ejector pin (lives in the original iPhone box) or a straightened paperclip.
             Push firmly into the small hole on the side. Removing the tray serves two purposes:
@@ -85,14 +98,14 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             liquid intrusion when you bring it in.
           </p>
 
-          <h2>Step 4 - Pat dry external (NOT internal)</h2>
+          <h2 id="step-pat-dry">Step 4 - Pat dry external (NOT internal)</h2>
           <p>
             Microfiber cloth on the screen, the ports, the speaker grilles, the seams. Wipe gently
             - do not push cotton swabs into the Lightning or USB-C port (you'll push trapped
             moisture deeper into the connector). Do not open the iPhone yourself.
           </p>
 
-          <h2>Step 5 - Don't shake or dry with heat</h2>
+          <h2 id="step-no-heat">Step 5 - Don't shake or dry with heat</h2>
           <p>
             Shaking the iPhone spreads liquid across the logic board (it was probably localised
             in one corner - now it's everywhere). Hairdryers and ovens drive moisture deeper and
@@ -103,7 +116,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             Room temperature only. iPhone screen-down on a clean towel until you bring it to us.
           </p>
 
-          <h2>Step 6 - Bring to us within 4 hours</h2>
+          <h2 id="step-bring-in">Step 6 - Bring to us within 4 hours</h2>
           <p>
             iPhones have roughly 1/10th the internal air volume of a MacBook. There is no airflow
             for moisture to escape, and the densely-packed logic board has dozens of chips with
@@ -118,7 +131,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             <li><strong>48 hours+:</strong> Below 25% - board often beyond repair</li>
           </ul>
 
-          <h2>Why iPhone IP rating doesn't always save you</h2>
+          <h2 id="ip-rating">Why iPhone IP rating doesn't always save you</h2>
           <p>
             iPhone 12 onward is rated IP68 - Apple says 6 metres for 30 minutes. In practice,
             this rating is tested with fresh water on a brand-new iPhone in a lab. Real-world
@@ -132,7 +145,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             <li>Apple's warranty explicitly excludes liquid damage even on IP68 iPhones</li>
           </ul>
 
-          <h2>Salt water = much worse than fresh water</h2>
+          <h2 id="salt-water">Salt water = much worse than fresh water</h2>
           <p>
             Salt water is roughly 10× more destructive than fresh water because dissolved salts
             keep conducting current after the water evaporates. JBR, Kite Beach, Jumeirah -
@@ -145,7 +158,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             component damage) doubles for sugary spills because of the extra cleaning labour.
           </p>
 
-          <h2>Repair cost expectations</h2>
+          <h2 id="repair-cost">Repair cost expectations</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Tier 1 - Clean only (boots, no faults):</strong> AED 400</li>
             <li><strong>Tier 2 - Clean + 1-2 component repairs:</strong> AED 700-1,000</li>
@@ -154,7 +167,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             <li><strong>Free diagnostic, no obligation</strong></li>
           </ul>
 
-          <h2>Insurance claim guidance</h2>
+          <h2 id="insurance-claim">Insurance claim guidance</h2>
           <p>
             <strong>AppleCare+:</strong> covers liquid damage at AED 367 deductible (USD 99) per
             incident, up to 2 per year. Cheaper than us if you have it. Use it.

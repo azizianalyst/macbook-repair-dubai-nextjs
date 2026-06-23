@@ -9,6 +9,19 @@ export default function BlogShouldBuyRefurbishedMacBook() {
       seoTitle="Should I Buy a Refurbished MacBook in Dubai 2026?"
       seoDescription="Save 30-40% on a MacBook by buying refurbished, but only from the right sources. Apple Certified vs our refurbs vs Dubizzle: risks, warranty and checks."
       path="/blog/should-i-buy-refurbished-macbook-dubai"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "what-refurbished-means", label: "What refurbished means" },
+        { id: "apple-refurb-store", label: "Apple Refurbished Store" },
+        { id: "our-refurbs", label: "Our refurbished MacBooks" },
+        { id: "unverified-seller-risks", label: "Risks of unverified sellers" },
+        { id: "what-to-check", label: "What to check before buying" },
+        { id: "battery-health", label: "Battery health expectations" },
+        { id: "cosmetic-grading", label: "Cosmetic grading" },
+        { id: "warranty-expectations", label: "Warranty expectations" },
+        { id: "best-models-2026", label: "Best refurb models 2026" },
+      ]}
       category="Buying guide · MacBook"
       h1="Should I Buy Refurbished MacBook in Dubai 2026?"
       hook="Yes, but only from certain sources. Here's the safe way to save 30-40%."
@@ -17,10 +30,10 @@ export default function BlogShouldBuyRefurbishedMacBook() {
       datePublished="2026-04-27"
       dateModified="2026-04-27"
       readingMinutes={11}
-      featuredImageAlt="Should I buy refurbished MacBook in Dubai 2026 honest guide"
+      featuredImageAlt="Should I Buy Refurbished MacBook Dubai. Should I buy refurbished MacBook in Dubai 2026 honest guide"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Should I Buy Refurbished MacBook Dubai. Quick answer</h2>
           <p>
             Refurbished MacBooks save 30-40% off new prices and, when bought from a reputable source,
             perform identically to new for 4-6 years. The trick is the source - Dubai's used-Mac market
@@ -28,17 +41,17 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             sellers with zero accountability.
           </p>
 
-          <h2>What "refurbished" means (Apple-Certified vs others)</h2>
+          <h2 id="what-refurbished-means">What "refurbished" means (Apple-Certified vs others)</h2>
           <p>
             "Refurbished" is not a regulated term in the UAE. It can mean three different things:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Certified Refurbished</strong>: returned to Apple within 14 days, fully tested at Apple, new battery + outer shell + box, 1-year Apple warranty. Identical to new in every way except the box says "Refurbished by Apple". Discount: 15%.</li>
-            <li><strong>Reputable third-party refurb (us)</strong>: traded-in or buy-back MacBook, professionally tested, replaced battery if under 85%, replaced trackpad / keytops if worn, cleaned, restored, 12-month warranty. Discount: 30-40%.</li>
+            <li><strong>Reputable third-party refurb (us)</strong>: traded-in or buy-back MacBook, professionally tested, replaced battery if under 85%, replaced trackpad / keytops if worn, cleaned, restored, warranty of up to 12 months. Discount: 30-40%.</li>
             <li><strong>"Refurbished" by individual Dubizzle seller</strong>: probably means "wiped clean and listed". No testing protocol, no warranty, often hides issues. Discount: 35-45% but with full risk on you.</li>
           </ul>
 
-          <h2>Apple Refurbished Store (UAE availability)</h2>
+          <h2 id="apple-refurb-store">Apple Refurbished Store (UAE availability)</h2>
           <p>
             Apple's Certified Refurbished Store is available at apple.com/ae/shop/refurbished. Stock
             comes and goes - it's worth checking weekly if you have a specific model in mind.
@@ -60,7 +73,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             to new.
           </p>
 
-          <h2>Our refurbished MacBooks (with 12-month warranty)</h2>
+          <h2 id="our-refurbs">Our refurbished MacBooks (with warranty of up to 12 months)</h2>
           <p>
             We sell refurbished MacBooks from our buy-back inventory. Every unit goes through:
           </p>
@@ -89,7 +102,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             cycle count screenshots before you commit.
           </p>
 
-          <h2>Risks of unverified sellers</h2>
+          <h2 id="unverified-seller-risks">Risks of unverified sellers</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>iCloud / Activation Lock</strong>: bricked the moment seller's account is signed back in.</li>
             <li><strong>Ghost batteries</strong>: cycle count reset via firmware tools, real wear hidden. Dies within months.</li>
@@ -99,7 +112,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             <li><strong>Fake serials</strong>: parts swapped between units to disguise grey-market origin.</li>
           </ul>
 
-          <h2>What to check before buying (any source)</h2>
+          <h2 id="what-to-check">What to check before buying (any source)</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Serial number → check at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">checkcoverage.apple.com</a> - confirms purchase date and warranty status.</li>
             <li>Battery: System Settings → Battery → Battery Health → cycle count under 500 ideal, &lt; 800 acceptable, capacity ≥ 85%.</li>
@@ -120,7 +133,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             </Link>) before you commit.
           </p>
 
-          <h2>Battery health expectations</h2>
+          <h2 id="battery-health">Battery health expectations</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Refurbished</strong>: new battery, 0 cycles, 100% capacity.</li>
             <li><strong>Our refurb</strong>: new battery if &lt; 85%, otherwise 90%+ capacity, &lt; 200 cycles typical.</li>
@@ -128,7 +141,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             <li><strong>Battery service cost if needed later</strong>: AED 350-550 from us. Build this into your budget if buying a 3+ year-old MacBook.</li>
           </ul>
 
-          <h2>Cosmetic grading</h2>
+          <h2 id="cosmetic-grading">Cosmetic grading</h2>
           <p>
             We use a 3-tier grading aligned with Apple's Refurbished standard:
           </p>
@@ -138,7 +151,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             <li><strong>Grade C</strong>: visible cosmetic wear, dents on corners. Sold rarely, AED 400-600 less, full functional warranty.</li>
           </ul>
 
-          <h2>Warranty expectations</h2>
+          <h2 id="warranty-expectations">Warranty expectations</h2>
           <BlogPriceTable
             caption="Refurbished MacBook warranty by source"
             headers={["Source", "Warranty", "Covers", "AppleCare+ option"]}
@@ -150,7 +163,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             ]}
           />
 
-          <h2>Best refurb models 2026 (M1 Air, M2 Pro, M3 Air)</h2>
+          <h2 id="best-models-2026">Best refurb models 2026 (M1 Air, M2 Pro, M3 Air)</h2>
           <p>
             <strong>Best value overall - MacBook Air M1 (AED 2,200)</strong>: still runs latest macOS,
             handles Office, Safari with 20+ tabs, light Photoshop / Figma, full school year for students.

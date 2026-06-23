@@ -5,7 +5,7 @@ export default function IPhoneCameraRepair() {
   return (
     <IPhonePageTemplate
       seoTitle="iPhone Camera Repair Dubai - Rear, Ultra-Wide, LiDAR | From AED 350"
-      seoDescription="iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. 12-month warranty. WhatsApp 055 741 3706."
+      seoDescription="iPhone camera repair Dubai from AED 350. Rear wide, ultra-wide, telephoto, LiDAR, TrueDepth. iPhone 6 to 17. Same-day. Warranty up to 12 months. WhatsApp 055 741 3706."
       path="/iphone-camera-repair-dubai"
       eyebrow="iPhone Camera Repair"
       h1="iPhone Camera Repair Dubai"
@@ -14,7 +14,7 @@ export default function IPhoneCameraRepair() {
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone camera repair quote please. Model + which camera: "
       technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Camera, Face ID & ISP calibration" }}
-      serviceName="iPhone Camera Repair"
+      serviceName="iPhone Camera Repair Dubai"
       pricingRows={[
         { model: "iPhone 6 / 7 / 8 - rear camera",            price: 350, timeline: "Same day" },
         { model: "iPhone X / XR / XS - rear camera",          price: 400, timeline: "Same day" },
@@ -55,7 +55,7 @@ export default function IPhoneCameraRepair() {
         { title: "Module replacement on the bench", body: "Screen lifted, battery disconnected, camera module screws removed, flex disconnected, replacement seated. Anti-static workspace throughout." },
         { title: "ISP calibration via Apple Configurator", body: "On iPhone 12+, the new module needs ISP-side calibration to match colour, exposure, and HDR rendering. Done with iMazing/Configurator and an Apple-supplied calibration profile." },
         { title: "LiDAR alignment + Portrait test", body: "On Pro models, LiDAR aligned in the bench jig. Portrait mode and Night mode tested in the light box. Cinematic mode focus pull verified on iPhone 14 Pro and later." },
-        { title: "Free delivery + 12-month warranty", body: "Same day on iPhone 6 to 13. Same/next day on 14, 15, 16. Next day on 17 line. Warranty card includes ISP calibration log." },
+        { title: "Free delivery + warranty of up to 12 months", body: "Same day on iPhone 6 to 13. Same/next day on 14, 15, 16. Next day on 17 line. Warranty card includes ISP calibration log." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

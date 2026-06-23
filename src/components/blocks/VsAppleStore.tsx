@@ -14,7 +14,7 @@ const DEFAULT_ROWS: Row[] = [
   { label: "Your data", us: "Stays on the device, never wiped without consent", them: "Device often wiped or swapped" },
   { label: "Parts", us: "Genuine or quality-tested - your choice", them: "Genuine module swap only" },
   { label: "Getting it in", us: "Walk in or free pickup - no appointment", them: "Genius Bar appointment required" },
-  { label: "Warranty", us: "12-month written warranty on the repair", them: "Varies by service" },
+  { label: "Warranty", us: "Up to written warranty up to 12 months on the repair", them: "Varies by service" },
 ];
 
 export function VsAppleStore({
@@ -34,7 +34,23 @@ export function VsAppleStore({
       <h2 className={cn("text-[28px] md:text-[32px] mb-sm", dark ? "text-text" : undefined)}>{heading}</h2>
       <p className={cn("text-[16px] max-w-[72ch] mb-lg", dark ? "text-text-muted" : "text-text-muted")}>{intro}</p>
 
-      <div className={cn("overflow-x-auto rounded-md", dark ? "border border-border bg-bg-card" : "border border-border bg-bg-card shadow-sm")}>
+      {/* Mobile: stack each factor as a card so the "Apple Store" column is never hidden off-screen. */}
+      <ul className="md:hidden flex flex-col gap-sm">
+        {rows.map((r) => (
+          <li key={r.label} className="rounded-md border border-border bg-bg-card p-md">
+            <p className="font-semibold text-text mb-sm">{r.label}</p>
+            <p className="flex gap-2 text-[14px] text-text mb-xs">
+              <Check size={16} className="shrink-0 mt-0.5 text-accent" aria-hidden />
+              <span><span className="font-semibold text-accent">MacBook Repair Dubai:</span> {r.us}</span>
+            </p>
+            <p className="flex gap-2 text-[14px] text-text-muted">
+              <X size={16} className="shrink-0 mt-0.5 text-text-faint" aria-hidden />
+              <span><span className="font-semibold">Apple Store:</span> {r.them}</span>
+            </p>
+          </li>
+        ))}
+      </ul>
+      <div className={cn("hidden md:block overflow-x-auto rounded-md", dark ? "border border-border bg-bg-card" : "border border-border bg-bg-card shadow-sm")}>
         <table className="w-full text-[14px] min-w-[560px]">
           <caption className="sr-only">{heading}</caption>
           <thead>

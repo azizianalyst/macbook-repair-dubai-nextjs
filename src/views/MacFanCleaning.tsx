@@ -19,7 +19,7 @@ export default function MacFanCleaning() {
         { name: "Fan Cleaning",    path: "/mac-fan-cleaning-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac thermal restoration" }}
-      serviceName="Mac Mini, Studio and Pro Fan Cleaning"
+      serviceName="Mac Mini, Studio and Pro Fan Cleaning Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

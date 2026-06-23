@@ -9,6 +9,17 @@ export default function BlogIPhoneBackGlassRepairCost() {
       seoTitle="iPhone Back Glass Repair Cost Dubai: Laser Method"
       seoDescription="iPhone back glass repair in Dubai costs AED 400-950 by laser separation. Apple Store charges a full chassis swap from AED 1,800. MagSafe and charging kept."
       path="/blog/iphone-back-glass-repair-cost-dubai"
+      wide
+      toc={[
+        { id: "why-hard", label: "Why back glass repair is hard" },
+        { id: "laser-method", label: "Laser separation method" },
+        { id: "pricing-by-model", label: "Pricing by iPhone model" },
+        { id: "magsafe-preservation", label: "MagSafe coil preservation" },
+        { id: "wireless-integrity", label: "Wireless charging integrity" },
+        { id: "colours-finishes", label: "Colours and finishes" },
+        { id: "apple-vs-us", label: "Apple Store vs us" },
+        { id: "what-next", label: "What to do next" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Back Glass Repair Dubai - Cost Guide 2026"
       hook="Apple Store charges a full chassis replacement for back glass damage. We laser-remove just the glass - saving you AED 1,000+ per phone."
@@ -17,10 +28,10 @@ export default function BlogIPhoneBackGlassRepairCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="iPhone back glass repair Dubai - laser separation machine removing cracked rear glass"
+      featuredImageAlt="iPhone Back Glass Repair Cost Dubai, iPhone back glass repair Dubai - laser separation machine removing cracked rear glass"
       body={
         <>
-          <h2>Why iPhone back glass repair is hard</h2>
+          <h2 id="why-hard">iPhone Back Glass Repair Cost Dubai. Why iPhone back glass repair is hard</h2>
           <p>
             From the iPhone 8 onward, every iPhone has a rear glass panel for wireless charging.
             Apple bonds that glass to the aluminium or titanium chassis with an industrial-strength
@@ -31,7 +42,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             That's why the Apple Store quote is so high.
           </p>
 
-          <h2>Laser separation method explained</h2>
+          <h2 id="laser-method">Laser separation method explained</h2>
           <p>
             We use a 1064nm fibre laser tuned to vaporise the adhesive layer between the glass and
             the chassis without heating the metal frame or the wireless charging coil sitting one
@@ -41,7 +52,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             spec. The whole job runs about 90 minutes at the bench plus 4 hours of cure time.
           </p>
 
-          <h2>Pricing by iPhone model</h2>
+          <h2 id="pricing-by-model">Pricing by iPhone model</h2>
           <BlogPriceTable
             caption="iPhone back glass replacement pricing - Dubai, April 2026"
             rows={[
@@ -64,13 +75,13 @@ export default function BlogIPhoneBackGlassRepairCost() {
           <p className="text-[13px] text-text-muted mono">
             Apple Store pricing reflects the full housing-swap quote - Apple does not offer a
             glass-only repair. See{" "}
-            <a href="https://support.apple.com/iphone/repair/back-glass" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href="https://support.apple.com/iphone/repair/back-glass" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com
             </a>{" "}
             for current Apple pricing.
           </p>
 
-          <h2>MagSafe coil preservation - why it matters</h2>
+          <h2 id="magsafe-preservation">MagSafe coil preservation - why it matters</h2>
           <p>
             The MagSafe charging system is a circular coil and a ring of magnets bonded to the
             inside of the back glass on every iPhone from 12 onward. Cheap repair shops sometimes
@@ -81,7 +92,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             15W before you collect the phone.
           </p>
 
-          <h2>Wireless charging integrity after repair</h2>
+          <h2 id="wireless-integrity">Wireless charging integrity after repair</h2>
           <p>
             We measure three things post-install: Qi charging at 7.5W (any wireless pad), MagSafe
             at 15W (Apple MagSafe puck), and inductive efficiency at the centre and edges of the
@@ -89,7 +100,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             anything below that, we redo the bond before handing the phone back.
           </p>
 
-          <h2>Back glass colours and finishes - exact match</h2>
+          <h2 id="colours-finishes">Back glass colours and finishes - exact match</h2>
           <p>
             We carry every Apple iPhone colour back to the iPhone 8: Space Grey, Silver, Gold, Red
             (PRODUCT)RED, Sierra Blue, Pacific Blue, Alpine Green, Pink, Yellow, Storm Blue,
@@ -99,7 +110,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             exact glass tint and finish; you cannot tell the difference at arm's length.
           </p>
 
-          <h2>Apple Store vs us - comparison</h2>
+          <h2 id="apple-vs-us">Apple Store vs us - comparison</h2>
           <BlogPriceTable
             caption="iPhone 15 Pro Max back glass - comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
@@ -113,7 +124,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             ]}
           />
 
-          <h2>What to do next</h2>
+          <h2 id="what-next">What to do next</h2>
           <p>
             <Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">
               See the iPhone back-glass repair service page

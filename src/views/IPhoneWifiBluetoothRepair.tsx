@@ -5,7 +5,7 @@ export default function IPhoneWifiBluetoothRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone WiFi & Bluetooth Repair Dubai - AED 400 | 2-Day Fix"
-      seoDescription="iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. AED 400, 2 days, 12-month warranty. Call 055 741 3706."
+      seoDescription="iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. AED 400, 2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/iphone-wifi-bluetooth-repair-dubai"
       eyebrow="iPhone wireless repair"
       h1="iPhone WiFi & Bluetooth Repair Dubai"
@@ -19,7 +19,7 @@ export default function IPhoneWifiBluetoothRepair() {
         { name: "WiFi & Bluetooth",    path: "/iphone-wifi-bluetooth-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level RF and wireless" }}
-      serviceName="iPhone WiFi and Bluetooth Repair"
+      serviceName="iPhone WiFi and Bluetooth Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -44,7 +44,7 @@ export default function IPhoneWifiBluetoothRepair() {
         { title: "Confirm wireless chip fault", body: "Free 30-min diagnostic - settings reset, network reset, then bench test on a known-good carrier SIM. Rules out software." },
         { title: "Microscope inspection",       body: "Open the phone, lift logic board, inspect the WiFi/BT chip and shielding for cracks, water marks or solder fatigue." },
         { title: "Reflow or reball",            body: "Hot-air rework at controlled 280°C. Either reflow the existing chip (cheaper, when shorts only) or reball with fresh BGA (when chip itself is damaged)." },
-        { title: "48-hour bench test",          body: "Wireless tested for 48 hours connected to multiple networks before handover. 12-month warranty card included." },
+        { title: "48-hour bench test",          body: "Wireless tested for 48 hours connected to multiple networks before handover. Warranty up to 12 months card included." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

@@ -68,7 +68,7 @@ const STEPS = [
     body: "Port swap: 60-90 minutes under microscope at 380 °C. Charging IC swap: 90 minutes including BGA reball. The board is preheated to 80 °C to prevent solder mask damage." },
   { title: "Full charging cycle test",
     body: "Charged from 10% to 100% on the original Apple charger, then on a third-party 30 W and 96 W charger to verify PD negotiation works across all wattages. System Information > Power confirms wattage handshake." },
-  { title: "Free delivery + 12-month warranty card",
+  { title: "Free delivery + warranty of up to 12 months card",
     body: "Same-day delivery on common models. Warranty card lists the port batch number - 12 months on parts and labour, transferable once free of charge." },
 ];
 
@@ -88,7 +88,7 @@ const FAQS: FAQ[] = [
   { q: "Does MagSafe 3 (the M2/M3/M4 connector) need different parts than USB-C?",
     a: "Yes. MagSafe 3 is a separate physical port on the right side of the Pro 14\"/16\" - it routes through its own controller chip. AED 400 part replacement, same day. The USB-C ports continue to work for charging if MagSafe 3 fails, so the MacBook is usable while waiting for a slot." },
   { q: "What's the warranty?",
-    a: "12-month written warranty on parts and labour. Covers port failure, charging IC failure, intermittent charging returning. Does not cover damage from a bad charger or moisture entering after the repair. Transferable once free of charge to a new owner." },
+    a: "written warranty up to 12 months on parts and labour. Covers port failure, charging IC failure, intermittent charging returning. Does not cover damage from a bad charger or moisture entering after the repair. Transferable once free of charge to a new owner." },
   { q: "Will my data be safe during charging port repair?",
     a: "Yes. The SSD is on a separate area of the logic board, untouched during port or IC work. Files, apps, FileVault encryption all stay intact. The workshop still recommends a Time Machine backup as standard practice." },
   { q: "Why does my MacBook charge slowly with a third-party charger but fast with the Apple one?",
@@ -124,7 +124,7 @@ export default function MacBookChargingPortRepair() {
     {
       title: "MacBook Charging Port Repair Dubai - From AED 350",
       description:
-        "MacBook USB-C and MagSafe 3 port repair Dubai from AED 350. Same-day port swap, charging IC board-level repair. M1-M5. 12-month warranty. 055 741 3706.",
+        "MacBook USB-C and MagSafe 3 port repair Dubai from AED 350. Same-day port swap, charging IC board-level repair. M1-M5. Warranty up to 12 months. 055 741 3706.",
       path: "/macbook-charging-port-repair-dubai",
     },
     [
@@ -152,7 +152,7 @@ export default function MacBookChargingPortRepair() {
         tone="dark"
         eyebrow="MacBook charging port repair"
         title="MacBook Charging Port Repair Dubai - USB-C and MagSafe"
-        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Port swap from AED 350 same day, charging IC repair AED 450, 12-month warranty."
+        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Port swap from AED 350 same day, charging IC repair AED 450, warranty of up to 12 months."
         startingPrice={350}
         timeline="Same day · 1 day"
       >
@@ -162,7 +162,7 @@ export default function MacBookChargingPortRepair() {
       {/* Answer-first capsule (AEO/BLUF) */}
       <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook charging port repair", startingPrice: 350, timeline: "same-day on most models" })} />
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={365} />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -185,7 +185,7 @@ export default function MacBookChargingPortRepair() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook charging ports we repair</h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              Every MacBook from MagSafe 1 (2008) through MagSafe 3 and USB-C on the M5 Pro. Prices include the part, microscope labour, full charging cycle test, and the 12-month warranty.
+              Every MacBook from MagSafe 1 (2008) through MagSafe 3 and USB-C on the M5 Pro. Prices include the part, microscope labour, full charging cycle test, and the warranty of up to 12 months.
             </p>
             <PricingTable service="Charging port repair" rows={PRICING} tone="dark" />
           </section>
@@ -241,7 +241,7 @@ export default function MacBookChargingPortRepair() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does charging port repair take?</h2>
             <div className="grid gap-md md:grid-cols-3">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Same day (2-4 hours)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">USB-C port swap on M1-M5 Air, MagSafe 3 on Pro 14″/16″ and Air M2+, MagSafe 1/2 on Retina, DC-in board on Retina Pro. About 80% of tickets.</p>
               </article>
@@ -290,7 +290,7 @@ export default function MacBookChargingPortRepair() {
 
           {/* Pricing recap */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Charging port repair cost in Dubai - transparent pricing</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook Charging Port Repair Dubai. Transparent Pricing</h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">No hidden fees. Quote on WhatsApp = price on collection. No diagnostic fee, no microscope surcharge, no VAT add-on.</p>
             <PricingTable service="Charging port repair" rows={PRICING} tone="dark" />
           </section>
@@ -316,7 +316,7 @@ export default function MacBookChargingPortRepair() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">When DIY makes sense - and when it doesn't</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Try it yourself first</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>SMC reset - clears charging firmware glitches free of charge in about 10% of cases.</li>
@@ -371,7 +371,7 @@ export default function MacBookChargingPortRepair() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real charging-port reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
@@ -395,8 +395,8 @@ export default function MacBookChargingPortRepair() {
           <section>
             <h2 className="text-[22px] mb-md text-text">More on charging</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-not-turning-on-fix-guide">Blog: MacBook not charging - full troubleshooting guide</a></li>
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/lightning-vs-usb-c-explained-2026">Blog: USB-C vs MagSafe 3 - which charger should you use?</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-not-turning-on-fix-guide/">Blog: MacBook not charging - full troubleshooting guide</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/lightning-vs-usb-c-explained-2026/">Blog: USB-C vs MagSafe 3 - which charger should you use?</a></li>
             </ul>
           </section>
 
@@ -411,10 +411,9 @@ export default function MacBookChargingPortRepair() {
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Loose USB-C? Bent pin? WhatsApp the model - quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-            Year, processor, which port. Free pickup across Dubai mainland. 12-month written warranty on every port and IC fitted.
+            Year, processor, which port. Free pickup across Dubai mainland. written warranty up to 12 months on every port and IC fitted.
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
@@ -433,7 +432,7 @@ export default function MacBookChargingPortRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-charging-port-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-charging-port-repair-dubai" />

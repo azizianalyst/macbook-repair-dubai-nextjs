@@ -19,7 +19,7 @@ export default function IMacGpuRepair() {
         { name: "GPU Repair",          path: "/imac-gpu-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board-level and GPU repair" }}
-      serviceName="iMac GPU Repair"
+      serviceName="iMac GPU Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -48,7 +48,7 @@ export default function IMacGpuRepair() {
       warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on GPU replacement work.",
-        "12-month warranty on reflow work (honest about its shorter life).",
+        "warranty of up to 12 months on reflow work (honest about its shorter life).",
         "Free re-attempt if reflow fails inside warranty - we'll move you to full replacement at the difference in price only.",
       ]}
       faqs={[

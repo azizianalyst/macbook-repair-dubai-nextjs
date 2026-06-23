@@ -15,7 +15,7 @@ const PATH = "/macbook-guides";
 export default function MacBookGuides() {
   useSeo(
     {
-      title: "MacBook Guides & How-Tos — Dubai Apple Workshop",
+      title: "MacBook Guides & How-Tos. Dubai Apple Workshop",
       description:
         "Step-by-step MacBook how-to guides from a working Dubai Apple workshop: screenshots, resets, passwords, cleaning, configuration and care. Plain-English, no jargon.",
       path: PATH,
@@ -39,7 +39,7 @@ export default function MacBookGuides() {
         variant="service"
         eyebrow="Guides · written by working technicians"
         title="MacBook Guides & How-Tos"
-        subtitle="Plain-English, step-by-step guides for everyday MacBook tasks — screenshots, resets, passwords, cleaning and care. Written at our Dubai Media City workshop, no jargon."
+        subtitle="Plain-English, step-by-step guides for everyday MacBook tasks, screenshots, resets, passwords, cleaning and care. Written at our Dubai Media City workshop, no jargon."
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">

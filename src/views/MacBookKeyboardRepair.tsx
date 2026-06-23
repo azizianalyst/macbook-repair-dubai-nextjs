@@ -163,8 +163,6 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
-          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
-          <div aria-hidden className="pointer-events-none absolute top-1/3 -right-16 h-[26rem] w-[26rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6">
             <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-text-faint">
               <ol className="flex flex-wrap items-center gap-2 list-none p-0 m-0">
@@ -246,7 +244,7 @@ export default function MacBookKeyboardRepair() {
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
               <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>
         </div>
@@ -375,11 +373,10 @@ export default function MacBookKeyboardRepair() {
         {/* ── Pricing recap + CTA ────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook keyboard repair cost in Dubai - transparent pricing" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection. No diagnostic fee, no Touch ID re-pair surcharge, no VAT add-on." />
+            <SectionHead title="MacBook Keyboard Repair Dubai. Transparent Pricing" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection. No diagnostic fee, no Touch ID re-pair surcharge, no VAT add-on." />
             <PriceTable rows={PRICING} />
 
             <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
-              <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
               <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Keyboard Repair · Same day · 1-2 days</p>
@@ -532,7 +529,6 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Final CTA ──────────────────────────────────────────── */}
         <section className="relative overflow-hidden border-t border-border">
-          <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-accent/18 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Sticky key? Butterfly failure? WhatsApp a video - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
@@ -547,7 +543,7 @@ export default function MacBookKeyboardRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 15-day warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, 15-day warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-keyboard-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-keyboard-repair-dubai" />

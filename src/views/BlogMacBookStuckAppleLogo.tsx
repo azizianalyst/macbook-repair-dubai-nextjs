@@ -19,6 +19,13 @@ export default function BlogMacBookStuckAppleLogo() {
       seoTitle="MacBook Stuck on Apple Logo? Fixes for 2026"
       seoDescription="MacBook stuck on the Apple logo at startup? Work through 8 fixes in order, from waiting out an update to Recovery and First Aid, plus when it's a failing SSD."
       path="/blog/macbook-stuck-on-apple-logo"
+      wide
+      toc={[
+        { id: "why-it-freezes", label: "Why it freezes on the logo" },
+        { id: "fix-in-order", label: "Fix it in order" },
+        { id: "data-at-risk", label: "When your data is at risk" },
+        { id: "bring-it-in", label: "Bring it in" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Stuck on the Apple Logo? How to Fix It"
       hook="A frozen Apple logo is one of the most common boot faults we see on the bench. Most are software and fixable at home. A few are a dying SSD. Here's how to tell them apart, in order."
@@ -36,7 +43,7 @@ export default function BlogMacBookStuckAppleLogo() {
       })]}
       body={
         <>
-          <h2>Why a MacBook freezes on the Apple logo</h2>
+          <h2 id="why-it-freezes">MacBook Stuck On Apple Logo. Why a MacBook freezes on the Apple logo</h2>
           <p>
             The Apple logo appears early in the boot sequence, just after the firmware hands off to
             macOS. If your MacBook stops there, it means the firmware is fine but macOS can't finish
@@ -76,7 +83,7 @@ export default function BlogMacBookStuckAppleLogo() {
             and the gentle ones come first so you don't risk data before you have to.
           </p>
 
-          <h2>Fix it in order</h2>
+          <h2 id="fix-in-order">Fix it in order</h2>
 
           <h3>1. Wait, if there's a progress bar</h3>
           <p>
@@ -150,7 +157,7 @@ export default function BlogMacBookStuckAppleLogo() {
             throwing read errors; every retry can cost you more of your data.
           </p>
 
-          <h2>When your data is at risk</h2>
+          <h2 id="data-at-risk">When your data is at risk</h2>
           <p>
             Steps 1 through 7 are safe for your files. The danger zone is step 8. A drive that won't
             mount or won't repair is failing, and a failing drive degrades every time it spins up. If
@@ -164,7 +171,7 @@ export default function BlogMacBookStuckAppleLogo() {
             handles the soldered Apple Silicon drives most shops turn away.
           </p>
 
-          <h2>Bring it in</h2>
+          <h2 id="bring-it-in">Bring it in</h2>
           <p>
             If you've worked down the list and you're still staring at the logo, walk it in. The
             diagnostic is free, we measure the drive's health on the bench in a few minutes, and you

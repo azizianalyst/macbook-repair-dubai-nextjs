@@ -8,6 +8,15 @@ export default function BlogAppleCareVsIndependent() {
       seoTitle="AppleCare vs Independent MacBook Repair Dubai"
       seoDescription="Honest Dubai comparison: AppleCare+ vs an independent MacBook specialist. When Apple wins, when independent wins, and what each actually covers."
       path="/blog/applecare-vs-independent-repair-dubai"
+      wide
+      toc={[
+        { id: "what-applecare-is", label: "What AppleCare+ actually is" },
+        { id: "when-apple-wins", label: "When the Apple Store wins" },
+        { id: "when-independent-wins", label: "When independent wins" },
+        { id: "parts-question", label: "The parts question" },
+        { id: "third-party-cover", label: "Third-party repair and your cover" },
+        { id: "which-worth-it", label: "So which is worth it?" },
+      ]}
       category="Honest guide · MacBook"
       h1="AppleCare vs Independent MacBook Repair in Dubai: Which Is Worth It?"
       hook="If your MacBook is in warranty or you bought AppleCare+ for accidental cover, Apple is usually the right call. Out of warranty, on an older model, or paying full Apple prices? That is where an independent shop like ours saves you real money. Here is the honest split."
@@ -16,7 +25,7 @@ export default function BlogAppleCareVsIndependent() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={8}
-      featuredImageAlt="AppleCare versus independent MacBook repair Dubai - MacBook on a workshop bench beside an Apple Store receipt"
+      featuredImageAlt="Applecare Vs Independent Repair Dubai. AppleCare versus independent MacBook repair Dubai - MacBook on a workshop bench beside an Apple Store receipt"
       body={
         <>
           <p>
@@ -36,7 +45,7 @@ export default function BlogAppleCareVsIndependent() {
             . This post is the decision guide.
           </p>
 
-          <h2>What AppleCare+ actually is</h2>
+          <h2 id="what-applecare-is">Applecare Vs Independent Repair Dubai. What AppleCare+ actually is</h2>
           <p>
             AppleCare+ is an Apple insurance product you buy with the MacBook or within 60 days of
             purchase. It extends the standard one-year warranty and adds accidental damage cover. The
@@ -51,7 +60,7 @@ export default function BlogAppleCareVsIndependent() {
             time you claim, with a limited number of accidental claims per year.
           </p>
 
-          <h2>When AppleCare or the Apple Store is the better call</h2>
+          <h2 id="when-apple-wins">When AppleCare or the Apple Store is the better call</h2>
           <p>
             Be honest with yourself here. In several situations Apple wins, and we will send you to
             them rather than take the job.
@@ -67,7 +76,7 @@ export default function BlogAppleCareVsIndependent() {
             charge you for something Apple will do for less or for free.
           </p>
 
-          <h2>When an independent specialist wins</h2>
+          <h2 id="when-independent-wins">When an independent specialist wins</h2>
           <p>
             The maths flips the moment the warranty ends and you do not have AppleCare+, which is most
             MacBooks after year one. Apple's out-of-warranty prices are typically far higher than an
@@ -99,7 +108,7 @@ export default function BlogAppleCareVsIndependent() {
             route short of binning a working machine.
           </p>
 
-          <h2>The parts question, answered straight</h2>
+          <h2 id="parts-question">The parts question, answered straight</h2>
           <p>
             Apple Authorised channels fit genuine Apple parts only. We fit genuine where it is the
             right choice (Face ID-style components, True Tone-critical displays) and high-grade
@@ -112,7 +121,7 @@ export default function BlogAppleCareVsIndependent() {
             lays out the tiers in full.
           </p>
 
-          <h2>The catch: third-party repair and your remaining Apple cover</h2>
+          <h2 id="third-party-cover">The catch: third-party repair and your remaining Apple cover</h2>
           <p>
             Here is the part most shops skip. A third-party repair can affect any Apple cover you have
             left. If your MacBook is still in warranty or under AppleCare+, opening it at a non-Apple
@@ -125,7 +134,7 @@ export default function BlogAppleCareVsIndependent() {
             out, when there is nothing left to void and Apple's prices are at their highest.
           </p>
 
-          <h2>So which is worth it?</h2>
+          <h2 id="which-worth-it">So which is worth it?</h2>
           <p>
             In warranty, or holding AppleCare+ with accidental damage, go to Apple. Out of warranty,
             on an older model, or just facing a steep Apple quote, bring it to us. We will give you a
@@ -153,7 +162,7 @@ export default function BlogAppleCareVsIndependent() {
         },
         {
           q: "When is an independent repair cheaper than Apple?",
-          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen repair starts at AED 600 and battery replacement at AED 450, with free diagnosis and a 12-month written warranty. See our pricing page for every service.",
+          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen repair starts at AED 600 and battery replacement at AED 450, with free diagnosis and a written warranty up to 12 months. See our pricing page for every service.",
         },
         {
           q: "Can you repair an older MacBook Apple says is obsolete?",

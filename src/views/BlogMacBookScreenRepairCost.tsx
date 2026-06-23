@@ -2,6 +2,7 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { MACBOOK_SCREEN_PRICES } from "@/content/screen-pricing";
 
 export default function BlogMacBookScreenRepairCost() {
   return (
@@ -9,6 +10,18 @@ export default function BlogMacBookScreenRepairCost() {
       seoTitle="MacBook Screen Repair Cost Dubai 2026: All Models"
       seoDescription="Full MacBook screen repair prices for Dubai 2026: AED 600 (13″ Air) to AED 1,200 (16″ Pro M5 Max). Liquid Retina XDR, Flexgate, Apple Store compared."
       path="/blog/macbook-screen-repair-cost-dubai-2026"
+      wide
+      toc={[
+        { id: "price-list", label: "Full price list" },
+        { id: "pro-vs-air", label: "Why Pro costs more than Air" },
+        { id: "xdr-vs-retina", label: "Liquid Retina XDR vs Retina" },
+        { id: "tandem-oled", label: "Tandem OLED vs MacBook" },
+        { id: "flexgate", label: "Flexgate explained" },
+        { id: "same-day-parts", label: "Same-day vs ordered parts" },
+        { id: "apple-store-comparison", label: "Apple Store comparison" },
+        { id: "whats-included", label: "What's included" },
+        { id: "what-next", label: "What to do next" },
+      ]}
       category="Cost guide · MacBook"
       h1="MacBook Screen Repair Cost Dubai 2026 - Air, Pro, Every Year"
       hook="MacBook screen repair in Dubai ranges from AED 600 for an older 13″ Air to AED 1,200 for the 16″ MacBook Pro M5 Max - here is the full breakdown by model and panel technology."
@@ -17,43 +30,32 @@ export default function BlogMacBookScreenRepairCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={11}
-      featuredImageAlt="MacBook screen repair Dubai - technician replacing Liquid Retina XDR display panel on workbench"
+      featuredImageAlt="MacBook Screen Repair Cost Dubai. MacBook screen repair Dubai - technician replacing Liquid Retina XDR display panel on workbench"
       body={
         <>
-          <h2>The full MacBook screen repair price list - April 2026 Dubai</h2>
+          <h2 id="price-list">MacBook Screen Repair Cost Dubai. The full MacBook screen repair price list - April 2026 Dubai</h2>
           <p>
             Below is every MacBook line we currently service. Prices include the display assembly,
             labour, calibration, and a 3-month written warranty. No diagnostic fee.
           </p>
           <BlogPriceTable
             caption="MacBook screen repair pricing - MacBook Repair Dubai, April 2026"
-            rows={[
-              { model: "MacBook Air 11″ (2014-2015)", ours: "AED 600", apple: "AED 1,099", note: "LCD, end-of-service from Apple" },
-              { model: "MacBook Air 13″ Intel (2017-2020)", ours: "AED 650", apple: "AED 1,199", note: "Retina LCD" },
-              { model: "MacBook Air 13″ M1 (2020)", ours: "AED 700", apple: "AED 1,249", note: "Retina LCD" },
-              { model: "MacBook Air 13″ M2/M3 (2022-2024)", ours: "AED 750", apple: "AED 1,299", note: "Liquid Retina LCD, notch" },
-              { model: "MacBook Air 13″ M4/M5 (2025-2026)", ours: "AED 800", apple: "AED 1,349", note: "Liquid Retina LCD" },
-              { model: "MacBook Air 15″ M2/M3/M4/M5 (2023-2026)", ours: "AED 850", apple: "AED 1,449", note: "Larger Liquid Retina" },
-              { model: "MacBook Pro 13″ Intel (2016-2020)", ours: "AED 800", apple: "AED 1,499", note: "Retina, Touch Bar models" },
-              { model: "MacBook Pro 13″ M1/M2 (2020-2022)", ours: "AED 850", apple: "AED 1,549", note: "Retina LCD" },
-              { model: "MacBook Pro 14″ M1/M2 Pro (2021-2023)", ours: "AED 1,000", apple: "AED 1,799", note: "Liquid Retina XDR (mini-LED)" },
-              { model: "MacBook Pro 14″ M3/M4/M5 (2023-2025)", ours: "AED 1,050", apple: "AED 1,849", note: "Liquid Retina XDR" },
-              { model: "MacBook Pro 14″ M5 Pro/Max (2026)", ours: "AED 1,100", apple: "AED 1,899", note: "Latest XDR generation" },
-              { model: "MacBook Pro 16″ Intel (2019)", ours: "AED 950", apple: "AED 1,699", note: "Retina LCD" },
-              { model: "MacBook Pro 16″ M1/M2 Pro (2021-2023)", ours: "AED 1,100", apple: "AED 1,949", note: "Liquid Retina XDR" },
-              { model: "MacBook Pro 16″ M3/M4 (2023-2024)", ours: "AED 1,150", apple: "AED 1,999", note: "Liquid Retina XDR" },
-              { model: "MacBook Pro 16″ M5 Pro/Max (2026)", ours: "AED 1,200", apple: "AED 2,099", note: "Largest XDR panel" },
-            ]}
+            rows={MACBOOK_SCREEN_PRICES.map((r) => ({
+              model: r.model,
+              ours: `AED ${r.price.toLocaleString()}`,
+              apple: `AED ${r.apple_price.toLocaleString()}`,
+              note: r.note,
+            }))}
           />
           <p className="text-[13px] text-text-muted mono">
             Apple Store pricing converted from{" "}
-            <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com/mac/repair
             </a>{" "}
             USD list to AED on 22 April 2026.
           </p>
 
-          <h2>Why MacBook Pro screens cost more than Air</h2>
+          <h2 id="pro-vs-air">Why MacBook Pro screens cost more than Air</h2>
           <p>
             Three reasons. First, the <strong>display assembly itself</strong>. MacBook Air screens
             are standard Liquid Retina LCDs. The 14″ and 16″ MacBook Pro use Liquid Retina XDR - a
@@ -74,7 +76,7 @@ export default function BlogMacBookScreenRepairCost() {
             post-install step that adds to labour cost.
           </p>
 
-          <h2>Liquid Retina XDR (mini-LED) vs standard Retina - repair cost</h2>
+          <h2 id="xdr-vs-retina">Liquid Retina XDR (mini-LED) vs standard Retina - repair cost</h2>
           <p>
             The 14-inch and 16-inch MacBook Pros from 2021 onward use Liquid Retina XDR - Apple's
             marketing name for a mini-LED backlit LCD. The panel itself is technically still LCD,
@@ -88,7 +90,7 @@ export default function BlogMacBookScreenRepairCost() {
             background) within a week. We always profile before handing back.
           </p>
 
-          <h2>Tandem OLED (iPad Pro) vs MacBook screens</h2>
+          <h2 id="tandem-oled">Tandem OLED (iPad Pro) vs MacBook screens</h2>
           <p>
             Apple has not yet shipped OLED on any MacBook as of April 2026 - every shipping MacBook
             is still LCD. The Tandem OLED panels in the iPad Pro M4 are widely expected to migrate
@@ -98,7 +100,7 @@ export default function BlogMacBookScreenRepairCost() {
             today's Liquid Retina XDR is the cheaper-to-maintain choice.
           </p>
 
-          <h2>Flexgate explained - 2016-2017 MacBook Pro screens</h2>
+          <h2 id="flexgate">Flexgate explained - 2016-2017 MacBook Pro screens</h2>
           <p>
             "Flexgate" was Apple's display backlight flex cable design flaw on the 2016 and early
             2017 13″ and 15″ MacBook Pro Retina models. The flex cable that ran from the logic
@@ -116,7 +118,7 @@ export default function BlogMacBookScreenRepairCost() {
             affected.
           </p>
 
-          <h2>Same-day vs ordered parts - when to expect each</h2>
+          <h2 id="same-day-parts">Same-day vs ordered parts - when to expect each</h2>
           <p>
             We stock 14″ and 16″ MacBook Pro panels (M1 Pro through M5) and 13″ Air panels
             (M1 through M4). WhatsApp before 11am and you'll have the MacBook back the same
@@ -125,12 +127,12 @@ export default function BlogMacBookScreenRepairCost() {
             (2017-2020) take 2-3 days as we order from Sharjah.
           </p>
 
-          <h2>Apple Store screen repair pricing comparison</h2>
+          <h2 id="apple-store-comparison">Apple Store screen repair pricing comparison</h2>
           <BlogPriceTable
             caption="MacBook Pro 16″ M5 Max - screen repair comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price",            ours: "AED 1,200", apple: "AED 2,099" },
+              { model: "Price", ours: `AED ${(MACBOOK_SCREEN_PRICES.find((r) => r.model.includes("M5 Pro/Max") && r.model.includes("16″"))?.price ?? 1200).toLocaleString()}`, apple: "AED 2,099" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "Drop-off at Mall of Emirates / Dubai Mall" },
               { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
@@ -139,7 +141,7 @@ export default function BlogMacBookScreenRepairCost() {
             ]}
           />
 
-          <h2>What's included in our MacBook screen repair</h2>
+          <h2 id="whats-included">What's included in our MacBook screen repair</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>The display panel (Liquid Retina or Liquid Retina XDR - your choice of grade)</li>
             <li>Labour (typically 60-90 minutes for Air, 90-120 for Pro)</li>
@@ -150,7 +152,7 @@ export default function BlogMacBookScreenRepairCost() {
             <li>3-month written warranty on parts and labour</li>
           </ul>
 
-          <h2>What to do next</h2>
+          <h2 id="what-next">What to do next</h2>
           <p>
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our MacBook screen repair page

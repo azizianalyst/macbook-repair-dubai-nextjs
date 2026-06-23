@@ -3,7 +3,10 @@ import { metaForPath } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/Cookies";
 
-export const metadata: Metadata = metaForPath("/cookies");
+export const metadata: Metadata = {
+  ...metaForPath("/cookies"),
+  robots: { index: false, follow: true },
+};
 
 export default function Page() {
   return (

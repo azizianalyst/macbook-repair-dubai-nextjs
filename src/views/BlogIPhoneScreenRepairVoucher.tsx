@@ -9,6 +9,16 @@ export default function BlogIPhoneScreenRepairVoucher() {
       seoTitle="iPhone Screen Repair Voucher Dubai - Save 15% (How It Works)"
       seoDescription="Buy a screen repair voucher upfront, use within 12 months - save 15% off our standard price. How vouchers work, terms, who they're for, and how to buy."
       path="/blog/iphone-screen-repair-voucher-dubai"
+      wide
+      toc={[
+        { id: "what-is-voucher", label: "What's the voucher?" },
+        { id: "voucher-vs-standard", label: "Voucher vs standard pricing" },
+        { id: "voucher-terms", label: "Voucher terms" },
+        { id: "who-should-buy", label: "Who should buy" },
+        { id: "who-shouldnt", label: "Who shouldn't bother" },
+        { id: "how-to-buy", label: "How to buy" },
+        { id: "vs-applecare", label: "Comparison with AppleCare+" },
+      ]}
       category="Service · Vouchers"
       h1="iPhone Screen Repair Voucher Dubai - Save With Vouchers"
       hook="We offer pre-purchase vouchers for screen repair. Buy now, use within 1 year. Save 15%."
@@ -20,7 +30,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
       featuredImageAlt="iPhone screen repair voucher Dubai - 15 percent saving program"
       body={
         <>
-          <h2>What's the voucher exactly?</h2>
+          <h2 id="what-is-voucher">iPhone Screen Repair Voucher Dubai. What's the voucher exactly?</h2>
           <p>
             A pre-paid credit you buy from us today. When you (or anyone you transfer it to) needs an iPhone screen repair within the next 12 months, you redeem it instead of paying full price. The voucher saves 15% versus standard pay-as-you-go pricing.
           </p>
@@ -28,7 +38,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             It's not insurance (no excess, no claim process), not AppleCare (no Apple involvement), and not a maintenance plan (no scheduled visits). It's a simple discount instrument for people who know they'll likely need a screen repair.
           </p>
 
-          <h2>Pricing - voucher vs standard</h2>
+          <h2 id="voucher-vs-standard">Pricing - voucher vs standard</h2>
           <BlogPriceTable
             caption="iPhone screen repair pricing - Dubai April 2026"
             headers={["iPhone model", "Standard price", "Voucher price (-15%)", "You save"]}
@@ -47,7 +57,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             ]}
           />
 
-          <h2>Voucher terms</h2>
+          <h2 id="voucher-terms">Voucher terms</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Validity:</strong> 12 months from purchase date. Single 6-month extension available on written request.</li>
             <li><strong>Coverage:</strong> any iPhone screen repair (any model from iPhone 6 through current generation iPhone 17 Pro Max).</li>
@@ -55,10 +65,10 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li><strong>Refundable:</strong> yes if unused - full refund less AED 50 admin fee, processed within 7 days.</li>
             <li><strong>Stackable:</strong> only one voucher per repair. Cannot combine with other promotions (Eid offer, DSF discount, returning-customer credit).</li>
             <li><strong>Non-applicable:</strong> water damage repair, screen + back glass combos, screens swapped to a non-genuine grade if you specifically request OLED-OEM.</li>
-            <li><strong>Warranty unchanged:</strong> 12-month written warranty applies to voucher repairs identically to paid repairs.</li>
+            <li><strong>Warranty unchanged:</strong> written warranty up to 12 months applies to voucher repairs identically to paid repairs.</li>
           </ul>
 
-          <h2>Who should buy a voucher?</h2>
+          <h2 id="who-should-buy">Who should buy a voucher?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Parents of teenagers</strong> - accident probability over 12 months is roughly 70% on a teen's first iPhone.</li>
             <li><strong>Cycling / running / outdoor sports users</strong> - phones drop on hard surfaces.</li>
@@ -67,14 +77,14 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li><strong>Buyers of new iPhones</strong> - vouchers locked in at current model's price even after Apple price hikes mid-year.</li>
           </ul>
 
-          <h2>Who shouldn't bother?</h2>
+          <h2 id="who-shouldnt">Who shouldn't bother?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>AppleCare+ subscribers</strong> - your AED 350 deductible already beats most voucher prices.</li>
             <li><strong>Light, careful phone users</strong> with no history of damage - accident probability over 12 months may not justify lock-in.</li>
             <li><strong>Buyers planning to sell within 6 months</strong> - voucher value is lost if the phone leaves the household.</li>
           </ul>
 
-          <h2>How to buy</h2>
+          <h2 id="how-to-buy">How to buy</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">+971 55 741 3706</a> with the iPhone model.</li>
             <li>We send you a quote and payment link (card, Apple Pay, bank transfer accepted).</li>
@@ -83,7 +93,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li>Pay AED 0 at repair (voucher fully covers) or just the difference if you upgrade to a more expensive screen tier.</li>
           </ol>
 
-          <h2>Comparison with AppleCare+ (for context)</h2>
+          <h2 id="vs-applecare">Comparison with AppleCare+ (for context)</h2>
           <BlogPriceTable
             caption="Voucher vs AppleCare+ vs pay-as-you-go (iPhone 17 Pro example)"
             headers={["Option", "Cost over 12 months", "Per-screen cost", "Notes"]}

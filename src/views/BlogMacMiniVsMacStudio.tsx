@@ -9,6 +9,17 @@ export default function BlogMacMiniVsMacStudio() {
       seoTitle="Mac Mini vs Mac Studio 2026 - Which to Buy? Dubai Guide"
       seoDescription="Mac Mini M4 Pro AED 4,499 vs Mac Studio M4 Max AED 8,499. Where the line is - overlap, performance, thermals, ports, resale. Workflow-by-workflow verdict."
       path="/blog/mac-mini-vs-mac-studio-2026"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer by use case" },
+        { id: "mini-sweet-spot", label: "Mac Mini M4 sweet spot" },
+        { id: "overlap", label: "M4 Pro vs M4 Max overlap" },
+        { id: "when-studio", label: "When Studio is required" },
+        { id: "benchmarks", label: "Performance benchmarks" },
+        { id: "thermals", label: "Thermal handling" },
+        { id: "connectivity", label: "Connectivity and ports" },
+        { id: "resale", label: "Resale comparison" },
+      ]}
       category="Comparison · Mac desktop"
       h1="Mac Mini vs Mac Studio 2026 - Buying Guide"
       hook="Mac Mini M4 Pro: AED 4,499. Mac Studio M4 Max: AED 8,499. Where's the line?"
@@ -17,10 +28,10 @@ export default function BlogMacMiniVsMacStudio() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="Mac Mini M4 Pro vs Mac Studio M4 Max 2026 comparison Dubai"
+      featuredImageAlt="Mac Mini Vs Mac Studio. Mac Mini M4 Pro vs Mac Studio M4 Max 2026 comparison Dubai"
       body={
         <>
-          <h2>Quick answer - by use case</h2>
+          <h2 id="quick-answer">Mac Mini Vs Mac Studio. Quick answer - by use case</h2>
           <BlogPriceTable
             caption="Mac Mini Pro vs Mac Studio - recommendation by workflow"
             headers={["Workflow", "Recommendation", "Reason"]}
@@ -35,7 +46,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>Mac Mini M4 sweet spot uses</h2>
+          <h2 id="mini-sweet-spot">Mac Mini M4 sweet spot uses</h2>
           <p>
             Mac Mini M4 Pro at AED 4,499 absolutely dominates the price/performance curve for these
             workloads:
@@ -52,7 +63,7 @@ export default function BlogMacMiniVsMacStudio() {
             For these uses, paying double for Mac Studio buys you headroom you'll rarely touch.
           </p>
 
-          <h2>Mac Mini M4 Pro vs Mac Studio M4 Max - overlap discussion</h2>
+          <h2 id="overlap">Mac Mini M4 Pro vs Mac Studio M4 Max - overlap discussion</h2>
           <p>
             Apple's 2024-2025 lineup created an awkward overlap. Mac Mini M4 Pro (12-core CPU / 16-core
             GPU) sits surprisingly close to Mac Studio M4 Max base (14-core CPU / 32-core GPU) on
@@ -77,7 +88,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>When Studio is required (creative pro workloads)</h2>
+          <h2 id="when-studio">When Studio is required (creative pro workloads)</h2>
           <p>
             Mac Studio M4 Max becomes the right answer when:
           </p>
@@ -89,7 +100,7 @@ export default function BlogMacMiniVsMacStudio() {
             <li><strong>10 Gigabit Ethernet</strong> - only Studio offers it.</li>
           </ul>
 
-          <h2>Performance benchmarks compared</h2>
+          <h2 id="benchmarks">Performance benchmarks compared</h2>
           <BlogPriceTable
             caption="Real-world benchmarks (April 2026 averages, our shop testing)"
             headers={["Test", "Mac Mini M4 Pro", "Mac Studio M4 Max", "Studio advantage"]}
@@ -104,7 +115,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>Thermal handling differences</h2>
+          <h2 id="thermals">Thermal handling differences</h2>
           <p>
             Mac Mini's compact chassis runs warmer at sustained load. Internal temps hit 95-100°C
             under 30-minute Cinebench, triggering ~12% throttle. Mac Studio's larger fan and copper
@@ -113,7 +124,7 @@ export default function BlogMacMiniVsMacStudio() {
             ahead.
           </p>
 
-          <h2>Connectivity (Studio has more ports)</h2>
+          <h2 id="connectivity">Connectivity (Studio has more ports)</h2>
           <BlogPriceTable
             caption="Port count and types"
             headers={["Port", "Mac Mini M4 Pro", "Mac Studio M4 Max"]}
@@ -127,7 +138,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>Resale comparison</h2>
+          <h2 id="resale">Resale comparison</h2>
           <p>
             Mac Studio holds value better than Mac Mini Pro. Two-year resale retention based on our
             buy-back data:

@@ -19,7 +19,7 @@ export default function MacNotTurningOn() {
         { name: "Not Turning On",  path: "/mac-not-turning-on-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac desktop power and board diagnosis" }}
-      serviceName="Mac Mini, Studio and Pro Not Turning On"
+      serviceName="Mac Mini, Studio and Pro Not Turning On Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

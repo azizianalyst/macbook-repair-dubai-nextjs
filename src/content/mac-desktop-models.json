@@ -123,7 +123,7 @@
     "wirelessChip": "Wi-Fi 6E, Bluetooth 5.3",
     "currentInLineup": true,
     "commonIssues": [
-      "Top power button placement (under the chassis - controversial)",
+      "Bottom power button placement (underneath the chassis - controversial)",
       "Front USB-C port wear from heavy plug/unplug cycles",
       "Internal PSU thermal stress in the smaller chassis",
       "HDMI port wear with 4K/8K display swaps",
@@ -139,7 +139,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Apple's current Mac Mini. Most parts via authorised channels. Logic-board 3-5 days, PSU same-day to 2 days.",
-    "honestyNote": "Complete redesign - much smaller (5×5 inches), 16GB base RAM (finally), front USB-C ports. The top power button placement (you reach UNDER the Mac Mini) is genuinely awkward but you rarely use it. Excellent value at 16GB base.",
+    "honestyNote": "Complete redesign - much smaller (5×5 inches), 16GB base RAM (finally), front USB-C ports. The bottom power button placement (you reach UNDER the Mac Mini) is genuinely awkward but you rarely use it. Excellent value at 16GB base.",
     "heroTagline": "Complete redesign. 5×5 inches, front USB-C, 16GB base RAM. Apple's current Mac Mini."
   },
   {
@@ -160,7 +160,7 @@
     "commonIssues": [
       "Thunderbolt 5 controller heat (new chip generation, runs hot under sustained load)",
       "Front USB-C port wear",
-      "Top power button placement issue (shared with M4)",
+      "Bottom power button placement issue (shared with M4)",
       "10GbE port failures on option models",
       "Internal PSU thermal stress in compact chassis"
     ],

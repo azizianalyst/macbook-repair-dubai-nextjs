@@ -8,6 +8,19 @@ export default function BlogTroubleshootChargingNewIPhone() {
       seoTitle="iPhone Not Charging? iPhone 17, 17 Pro, 17e, 16e (2026)"
       seoDescription="iPhone 17, 17 Pro, 17e or 16e charging slowly, only sometimes, or not at all? Work through this 8-step USB-C diagnostic before paying for any port repair."
       path="/blog/troubleshoot-charging-on-new-iphone"
+      wide
+      toc={[
+        { id: "clean-port", label: "Step 1. Clean the USB-C port" },
+        { id: "power-brick", label: "Step 2. Recommended power brick" },
+        { id: "try-cable", label: "Step 3. Try a different cable" },
+        { id: "liquid-alert", label: "Step 4. Check for liquid alert" },
+        { id: "force-restart", label: "Step 5. Force-restart" },
+        { id: "battery-health", label: "Step 6. Check Battery Health" },
+        { id: "wireless-vs-wired", label: "Step 7. Wireless works, USB-C doesn't" },
+        { id: "port-hardware-failure", label: "Step 8. Port hardware failure" },
+        { id: "17e-16e-notes", label: "iPhone 17e / 16e notes" },
+        { id: "17-pro-notes", label: "iPhone 17 Pro notes" },
+      ]}
       category="Problem solving · iPhone charging"
       h1="New iPhone Not Charging Right? Troubleshooting Guide"
       hook="iPhone 17, 17e, 16e - USB-C era. Charging issues feel different from Lightning. Here's how to diagnose."
@@ -16,10 +29,10 @@ export default function BlogTroubleshootChargingNewIPhone() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={8}
-      featuredImageAlt="iPhone 17 17e 16e USB-C charging troubleshooting guide"
+      featuredImageAlt="Troubleshoot Charging On New iPhone, iPhone 17 17e 16e USB-C charging troubleshooting guide"
       body={
         <>
-          <h2>Step 1 - clean the USB-C port (cause of 35% of charging issues)</h2>
+          <h2 id="clean-port">Troubleshoot Charging On New iPhone. Step 1 - clean the USB-C port (cause of 35% of charging issues)</h2>
           <p>
             USB-C ports collect more dust than Lightning because the port is deeper and the airflow paths different. In Dubai, fine sand and pocket lint compress at the bottom of the port and physically prevent the cable from seating fully.
           </p>
@@ -34,7 +47,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
             Visible improvement: the cable now clicks in fully and doesn't wobble. About a third of "broken" charging ports are just dirty.
           </p>
 
-          <h2>Step 2 - use Apple's recommended power brick</h2>
+          <h2 id="power-brick">Step 2 - use Apple's recommended power brick</h2>
           <p>
             All current iPhones support USB Power Delivery (PD). Charging speed depends on brick wattage:
           </p>
@@ -47,7 +60,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
             Recommended: Apple 30W or 35W Dual USB-C brick (AED 159-229), or any reputable PD brick from Anker / UGREEN / Belkin (AED 80-150).
           </p>
 
-          <h2>Step 3 - try a different USB-C cable</h2>
+          <h2 id="try-cable">Step 3 - try a different USB-C cable</h2>
           <p>
             USB-C cables are not all equal. Charging-only cables sold in bundles often max out at 60W rating (3A) - fine for iPhone but not the full Apple ecosystem. For iPhone 17 Pro fast data transfer (10 Gbps), you need a USB 3 / Thunderbolt 4 cable - most charging cables are USB 2.0 only.
           </p>
@@ -57,7 +70,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
             <li>Inspect cable ends for bent pins or scorch marks.</li>
           </ul>
 
-          <h2>Step 4 - check for liquid contact alert</h2>
+          <h2 id="liquid-alert">Step 4 - check for liquid contact alert</h2>
           <p>
             iPhone 15 onwards displays an alert when liquid is detected in the USB-C port: <em>"Charging Not Available - Liquid detected in USB-C connector."</em>
           </p>
@@ -69,7 +82,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
             <li>If the alert persists 24 hours after exposure, internal corrosion may have started - bring in for diagnosis.</li>
           </ul>
 
-          <h2>Step 5 - force-restart</h2>
+          <h2 id="force-restart">Step 5 - force-restart</h2>
           <p>
             Charging is partly software-controlled. A stuck process can refuse to draw power even though the port is fine. Force-restart sequence (iPhone 8 onwards including all USB-C models):
           </p>
@@ -79,7 +92,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
             <li>Press and HOLD Side button until Apple logo appears (10-15 seconds).</li>
           </ol>
 
-          <h2>Step 6 - check Battery Health</h2>
+          <h2 id="battery-health">Step 6 - check Battery Health</h2>
           <p>
             Settings → Battery → Battery Health & Charging.
           </p>
@@ -93,12 +106,12 @@ export default function BlogTroubleshootChargingNewIPhone() {
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">iPhone battery replacement service</Link>.
           </p>
 
-          <h2>Step 7 - wireless charging works but USB-C doesn't?</h2>
+          <h2 id="wireless-vs-wired">Step 7 - wireless charging works but USB-C doesn't?</h2>
           <p>
             Conclusive - the USB-C port itself has failed (or is severely dirty). MagSafe / Qi2 wireless bypasses the port entirely. If MagSafe charges but USB-C cables don't, the port needs cleaning or replacement. AED 250-350 at our workshop.
           </p>
 
-          <h2>Step 8 - USB-C port hardware failure</h2>
+          <h2 id="port-hardware-failure">Step 8 - USB-C port hardware failure</h2>
           <p>
             iPhone 17 / 17 Pro / 17e USB-C ports we've replaced so far (since launch):
           </p>
@@ -113,12 +126,12 @@ export default function BlogTroubleshootChargingNewIPhone() {
             <Link to="/iphone-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">iPhone charging port repair service</Link>.
           </p>
 
-          <h2>iPhone 17e / 16e specific notes</h2>
+          <h2 id="17e-16e-notes">iPhone 17e / 16e specific notes</h2>
           <p>
             iPhone 17e and 16e use USB 2.0 USB-C - slower data than the Pro models but identical charging behaviour. They do NOT have MagSafe (cost-cut feature), so wireless charging is Qi only at 7.5W. If your 16e or 17e USB-C port fails, wireless is much slower as a fallback - port repair is more urgent on these models.
           </p>
 
-          <h2>iPhone 17 Pro specific notes</h2>
+          <h2 id="17-pro-notes">iPhone 17 Pro specific notes</h2>
           <p>
             The vapor-chamber cooling means iPhone 17 Pro tolerates fast charging in Dubai heat better than iPhone 15/16 Pro. Sustained 40W charging in 35°C ambient stays under throttling thresholds. If your 17 Pro still throttles charging in normal conditions, a thermal sensor or battery health issue is likely - bring in for diagnosis.
           </p>

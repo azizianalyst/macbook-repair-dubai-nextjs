@@ -15,7 +15,7 @@ export default function IMacNotTurningOn() {
       timeline="1-3 days"
       whatsappPrefill="Hi, my iMac won't turn on - what happens when I press power:"
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board-level diagnosis" }}
-      serviceName="iMac Not Turning On - Diagnosis & Repair"
+      serviceName="iMac Not Turning On - Diagnosis & Repair Dubai"
       pricingRows={[
         { model: `Diagnosis (any iMac)`,                     price: 0,    timeline: "Same day" },
         { model: `Power supply replacement (27" Intel)`,     price: 520,  timeline: "1 day" },
@@ -53,7 +53,7 @@ export default function IMacNotTurningOn() {
         { title: "Free bench diagnosis", body: "Power-rail probe, PSU output check, T2 status read, startup-disk scan. Done in under an hour. Open quote, no obligation." },
         { title: "Approval", body: "We send a short voice note explaining what's wrong, what the fix costs, and how long it takes. You decide." },
         { title: "Repair", body: "PSU swap, board work, SSD recovery - whichever applies. Same-day for PSU and SMC, 1-3 days for board work." },
-        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a 12-month written warranty card and a description of what was fixed." },
+        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a written warranty up to 12 months card and a description of what was fixed." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

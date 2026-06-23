@@ -1,5 +1,6 @@
 "use client";
 import { LegalLayout, LegalSection } from "@/components/layout/LegalLayout";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -31,14 +32,17 @@ export default function Warranty() {
       lastUpdated={LAST_UPDATED}
       intro="Every paid repair is backed by a written warranty - the period depends on the repair, from 15 days up to 12 months. Read this page to know exactly what is covered, what is not, and how to claim - no small print, no surprises."
     >
+      <div className="mb-lg"><GlassWarrantyNotice device="screen or glass" /></div>
       <LegalSection id="standard" title="1. How long your warranty lasts">
         <ul>
-          <li><strong>Hardware repairs</strong> - screen, keyboard, trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
+          <li><strong>Hardware repairs</strong> - keyboard, trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
+          <li><strong>Screen replacements</strong> depend on the panel grade you choose: <strong>15 days</strong> on high-grade aftermarket panels and <strong>up to 3 months</strong> on genuine Apple panels. Both are bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
           <li><strong>Battery replacements</strong> (MacBook and iPhone) are covered for <strong>3 months</strong>, with an 80% capacity guarantee.</li>
           <li><strong>Software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
           <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date of pickup.</li>
           <li>The warranty travels with the device, not the customer - see the transfer rules below.</li>
           <li>Claim turnaround averages 24 hours from drop-off.</li>
+          <li><strong>Apple's warranty and AppleCare are separate from ours.</strong> The periods above are <em>our</em> repair warranty. If your device is still covered by Apple's standard one-year warranty or by AppleCare / AppleCare+ (up to about 3 years on a Mac), that is Apple's cover on the device itself and is claimed through Apple - not us. We are an independent specialist (not an Apple Authorized Service Provider), so if your device is still in Apple cover we will tell you, because for a covered fault you may be better off going to Apple.</li>
         </ul>
       </LegalSection>
 
@@ -92,13 +96,13 @@ export default function Warranty() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>MacBook screen replacement</td><td>3 months</td><td>Covers panel, backlight, adhesion</td></tr>
+            <tr><td>MacBook screen replacement</td><td>15 days (aftermarket) to 3 months (genuine)</td><td>Covers panel, backlight, adhesion</td></tr>
             <tr><td>MacBook battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>iPhone battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>MacBook keyboard replacement</td><td>15 days</td><td>Covers any single key failure</td></tr>
             <tr><td>MacBook logic board repair</td><td>15 days</td><td>Extendable to 6 months for AED 150</td></tr>
             <tr><td>Water / liquid damage recovery</td><td>15 days on repaired components only</td><td>No warranty on a future spill</td></tr>
-            <tr><td>iPad screen replacement</td><td>3 months</td><td>Covers panel and digitiser</td></tr>
+            <tr><td>iPad screen replacement</td><td>15 days (aftermarket) to 3 months (genuine)</td><td>Covers panel and digitiser</td></tr>
             <tr><td>Data recovery</td><td>15 days on the repair work</td><td>No guarantee on data integrity (industry standard)</td></tr>
             <tr><td>SSD or RAM upgrade</td><td>12 months workmanship + manufacturer part warranty (1-5 years)</td><td>Manufacturer warranty handled directly with brand</td></tr>
             <tr><td>macOS reinstall / data transfer</td><td>15 days</td><td>Covers the install and basic configuration</td></tr>

@@ -26,6 +26,9 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { Reveal } from "@/components/blocks/Reveal";
 import { TradeInEstimator } from "@/components/blocks/TradeInEstimator";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { RelatedServices } from "@/components/blocks/RelatedServices";
+import { conversionSiblings } from "@/lib/related-services";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, breadcrumbs } from "@/lib/schema";
@@ -391,10 +394,13 @@ export default function SellMacBookDubai() {
                 Faulty, cracked or dead
               </h3>
               <p className="text-[15px] text-text-muted leading-relaxed m-0">
-                Cracked screen, swollen or dead battery, liquid damage, no power, no display or a logic-board
-                fault - we still make a real offer. Our team refurbishes or harvests parts in-house, so faulty
-                Macs, iPhones, iPads and Watches keep genuine value. Just make sure Find My / Activation Lock
-                is off.
+                Cracked, dead or liquid-damaged - we still make a real offer, because we refurbish and
+                harvest parts in-house. Full details, typical faulty-unit valuations and what to check
+                before selling are on our dedicated{" "}
+                <Link to="/sell-faulty-macbook-dubai" className="text-accent underline underline-offset-2">
+                  sell a faulty MacBook
+                </Link>{" "}
+                page.
               </p>
             </article>
           </div>
@@ -449,6 +455,11 @@ export default function SellMacBookDubai() {
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
       </section>
 
+      {/* More options, sell / trade-in / protect (cross-links the conversion cluster) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <RelatedServices items={conversionSiblings("/sell-macbook-dubai")} tone="dark" heading="More ways we can help" />
+      </section>
+
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Where we're based</h2>
@@ -458,7 +469,6 @@ export default function SellMacBookDubai() {
       {/* Closing CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">
             Get your free valuation now - paid the same day
@@ -483,6 +493,7 @@ export default function SellMacBookDubai() {
         </div>
       </section>
       </div>
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

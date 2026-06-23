@@ -9,6 +9,17 @@ export default function BlogMacBookFlexgateExplained() {
       seoTitle="MacBook Flexgate Explained: 2016-2017 Pro Display Flaw"
       seoDescription="Black backlight strip on a 2016-2017 MacBook Pro? It's Flexgate, a flex-cable design flaw. AED 600 cable vs AED 800 display swap. Apple's program is closed."
       path="/blog/macbook-flexgate-explained"
+      wide
+      toc={[
+        { id: "what-is-flexgate", label: "What is Flexgate" },
+        { id: "affected-models", label: "Which models are affected" },
+        { id: "visual-symptoms", label: "Visual symptoms" },
+        { id: "apple-program", label: "Apple's service program" },
+        { id: "repair-options", label: "Two repair options" },
+        { id: "cost-comparison", label: "Cost vs Apple" },
+        { id: "m-series-flexgate", label: "Flexgate on M-series?" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Flexgate - What It Is and How to Fix It"
       hook="Black backlight strip on your 2016 or 2017 MacBook Pro? It's called Flexgate - Apple's design flaw - and yes, we still fix it."
@@ -17,10 +28,10 @@ export default function BlogMacBookFlexgateExplained() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="MacBook Pro 2016 Flexgate Dubai - stage lighting backlight failure on display"
+      featuredImageAlt="MacBook Flexgate Explained. MacBook Pro 2016 Flexgate Dubai - stage lighting backlight failure on display"
       body={
         <>
-          <h2>What is Flexgate (display cable wear)</h2>
+          <h2 id="what-is-flexgate">MacBook Flexgate Explained. What is Flexgate (display cable wear)</h2>
           <p>
             "Flexgate" is the community name for a design flaw on the 2016 and early 2017 MacBook
             Pro Retina line. Apple routed the display backlight signal through a thin, flexible
@@ -35,7 +46,7 @@ export default function BlogMacBookFlexgateExplained() {
             panel started to fail.
           </p>
 
-          <h2>Which models are affected</h2>
+          <h2 id="affected-models">Which models are affected</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>MacBook Pro 13″ Retina (2016, 2017)</strong> - both Touch Bar and non-Touch Bar versions</li>
             <li><strong>MacBook Pro 15″ Retina (2016, 2017)</strong> - all Touch Bar models</li>
@@ -43,7 +54,7 @@ export default function BlogMacBookFlexgateExplained() {
             <li><strong>2018 15″ and all 2019+ models</strong> - Apple lengthened the cable, not affected</li>
           </ul>
 
-          <h2>Visual symptoms - stage lighting effect</h2>
+          <h2 id="visual-symptoms">Visual symptoms - stage lighting effect</h2>
           <p>The classic Flexgate progression:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>
@@ -62,7 +73,7 @@ export default function BlogMacBookFlexgateExplained() {
             </li>
           </ol>
 
-          <h2>Apple's silent extension program (only ran 4 years)</h2>
+          <h2 id="apple-program">Apple's silent extension program (only ran 4 years)</h2>
           <p>
             Apple ran the "13-inch MacBook Pro Display Backlight Service Program" from May 2019
             to May 2022. It covered only the 13″ models for 4 years from purchase date. The 15″
@@ -76,7 +87,7 @@ export default function BlogMacBookFlexgateExplained() {
             customers we've sent: about 1 in 5.
           </p>
 
-          <h2>Two repair options - cable replacement vs full display</h2>
+          <h2 id="repair-options">Two repair options - cable replacement vs full display</h2>
           <BlogPriceTable
             caption="Flexgate repair options at MacBook Repair Dubai - April 2026"
             headers={["Option", "What's done", "Cost", "When to choose"]}
@@ -96,7 +107,7 @@ export default function BlogMacBookFlexgateExplained() {
             damaged and a full display replacement is needed - AED 800 for 13″, AED 950 for 15″.
           </p>
 
-          <h2>Cost in Dubai vs Apple's old program</h2>
+          <h2 id="cost-comparison">Cost in Dubai vs Apple's old program</h2>
           <p>
             When the Apple program was active, qualifying 13″ MacBook Pro repairs were free -
             program eligibility was based on serial number lookup. Today, Apple's out-of-warranty
@@ -104,7 +115,7 @@ export default function BlogMacBookFlexgateExplained() {
             saves AED 700-1,000 versus Apple's current rate.
           </p>
 
-          <h2>Will Flexgate happen on M-series MacBooks?</h2>
+          <h2 id="m-series-flexgate">Will Flexgate happen on M-series MacBooks?</h2>
           <p>
             No. Apple completely redesigned the display flex cable from the 2018 MacBook Pro 15″
             onward, and the M-series MacBook Pros (2021+) use a different display architecture
@@ -117,7 +128,7 @@ export default function BlogMacBookFlexgateExplained() {
             the 2016-2019 models partly because of this.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             WhatsApp us a photo of the screen with the lid open at full angle (so we can see the
             stage-lighting pattern) - we'll tell you within 5 minutes whether you need cable-only

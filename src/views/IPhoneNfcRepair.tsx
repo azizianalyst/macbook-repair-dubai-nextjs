@@ -19,7 +19,7 @@ export default function IPhoneNfcRepair() {
         { name: "NFC Repair",      path: "/iphone-nfc-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone RF and antenna repair" }}
-      serviceName="iPhone NFC Repair"
+      serviceName="iPhone NFC Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -44,7 +44,7 @@ export default function IPhoneNfcRepair() {
         { title: "Apple Pay terminal test", body: "Free - we test against our bench POS. Confirms whether it's the antenna, controller, or your card." },
         { title: "Open from the screen side", body: "We don't crack the back glass - instead we lift the screen and access the antenna from inside (less risk to the camera bump)." },
         { title: "Replace antenna or reflow controller", body: "If the antenna is broken, we install OEM-grade replacement. If the NFC controller IC has failed, we reflow at controlled temperature." },
-        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. 12-month warranty card with the phone." },
+        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. Warranty up to 12 months card with the phone." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

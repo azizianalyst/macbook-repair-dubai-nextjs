@@ -21,7 +21,7 @@ export function GET() {
 ${entries
   .map(
     (e) => `  <url>
-    <loc>${SITE}${e.path}</loc>
+    <loc>${SITE}${e.path}/</loc>
     <lastmod>${SITEMAP_LAST_UPDATED}</lastmod>
     <image:image>
       <image:loc>${SITE}${e.img.src}</image:loc>

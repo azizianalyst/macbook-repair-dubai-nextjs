@@ -21,8 +21,8 @@ export function GET() {
   // The /blog index hub is prepended explicitly: every other sitemap EXCLUDEs ^/blog, and this
   // file otherwise lists only posts, so without this the hub would be absent from all sitemaps.
   const entries = [
-    `  <url><loc>${SITE}/blog</loc><lastmod>${SITEMAP_LAST_UPDATED}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
-    ...POSTS.map((p) => `  <url><loc>${SITE}${p.slug}</loc><lastmod>${postLastmod(p.date)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`),
+    `  <url><loc>${SITE}/blog/</loc><lastmod>${SITEMAP_LAST_UPDATED}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+    ...POSTS.map((p) => `  <url><loc>${SITE}${p.slug}/</loc><lastmod>${postLastmod(p.date)}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`),
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

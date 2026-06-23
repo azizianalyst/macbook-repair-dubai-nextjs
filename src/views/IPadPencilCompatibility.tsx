@@ -19,7 +19,7 @@ export default function IPadPencilCompatibility() {
         { name: "Pencil Compatibility",path: "/ipad-pencil-compatibility-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad screen and Pencil digitiser systems" }}
-      serviceName="iPad Pencil-Safe Screen Replacement"
+      serviceName="iPad Pencil-Safe Screen Replacement Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -62,7 +62,7 @@ export default function IPadPencilCompatibility() {
       ]}
       reviewNames={["Anatoliy Tarasenko", "Anastasiia Goncia", "Ana Undricova"]}
       related={[
-        { label: "iPad Screen Repair Dubai",  href: "/ipad-screen-repair-dubai",  description: "Pencil-safe screens from AED 350." },
+        { label: "iPad Screen Repair Dubai",  href: "/ipad-screen-repair-dubai",  description: "Pencil-safe screens from AED 139." },
         { label: "iPad Full Diagnostic",      href: "/ipad-full-diagnostic-dubai",description: "Pencil compatibility verified free." },
         { label: "iPad Camera Repair",        href: "/ipad-camera-repair-dubai",  description: "Often combined with screen work." },
       ]}

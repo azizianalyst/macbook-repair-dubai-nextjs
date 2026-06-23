@@ -9,6 +9,18 @@ export default function BlogIPhoneScreenCrackedUrgent() {
       seoTitle="iPhone Screen Cracked - Is It Urgent? Dubai 2026 Guide"
       seoDescription="Hairline crack: probably wait. Spider web: fix this week. Black bleeding: urgent. Dubai humidity spreads cracks faster. When to repair vs delay, honestly."
       path="/blog/iphone-screen-cracked-is-it-urgent"
+      wide
+      toc={[
+        { id: "urgency-by-crack-type", label: "Urgency by crack type" },
+        { id: "hairline-crack", label: "Hairline crack: usually wait" },
+        { id: "spider-web-crack", label: "Spider-web crack: 7 days" },
+        { id: "multiple-cracks", label: "Multiple cracks: repair now" },
+        { id: "black-bleeding", label: "Black bleeding: urgent" },
+        { id: "touch-dead-zones", label: "Touch dead zones" },
+        { id: "why-cracks-worsen", label: "Why cracks worsen" },
+        { id: "dubai-climate", label: "Dubai climate factors" },
+        { id: "cost-difference", label: "Glass-only vs full display cost" },
+      ]}
       category="Repair guide · iPhone"
       h1="iPhone Screen Cracked - How Urgent Is It?"
       hook="Tiny crack? Probably wait. Spider web? Fix this week. Here's why."
@@ -17,10 +29,10 @@ export default function BlogIPhoneScreenCrackedUrgent() {
       datePublished="2026-04-27"
       dateModified="2026-04-27"
       readingMinutes={9}
-      featuredImageAlt="iPhone cracked screen urgency guide Dubai 2026"
+      featuredImageAlt="iPhone Screen Cracked Is It Urgent, iPhone cracked screen urgency guide Dubai 2026"
       body={
         <>
-          <h2>Quick answer - urgency by crack type</h2>
+          <h2 id="urgency-by-crack-type">iPhone Screen Cracked Is It Urgent. Quick answer - urgency by crack type</h2>
           <BlogPriceTable
             caption="iPhone cracked screen - urgency and recommended action"
             headers={["Crack type", "Urgency", "Why", "Recommended"]}
@@ -33,7 +45,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             ]}
           />
 
-          <h2>Hairline crack - usually safe to wait</h2>
+          <h2 id="hairline-crack">Hairline crack - usually safe to wait</h2>
           <p>
             A single thin crack - typically from a corner drop - that doesn't catch your fingernail and
             doesn't affect touch is the lowest urgency. The cover glass on iPhone 14 and newer is
@@ -50,7 +62,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             common Face ID failure trigger) or near the top notch / Dynamic Island.
           </p>
 
-          <h2>Spider-web crack - repair within 7 days</h2>
+          <h2 id="spider-web-crack">Spider-web crack - repair within 7 days</h2>
           <p>
             Multiple radiating cracks from a single impact point. The OLED underneath is intact today -
             but humidity, sweat from your face, and pocket condensation will seep into the glass-OLED
@@ -62,7 +74,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             shop). This won't repair the crack but will slow humidity ingress by ~50%.
           </p>
 
-          <h2>Multiple cracks - repair immediately</h2>
+          <h2 id="multiple-cracks">Multiple cracks - repair immediately</h2>
           <p>
             Two or more separate impact points or one large impact that has fragmented the glass. Glass
             shards may be loose; you'll cut your finger eventually. The OLED is under bending stress
@@ -74,7 +86,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             still possible at this stage - once the OLED dies, you're paying for the full display.
           </p>
 
-          <h2>Black bleeding spots - urgent (display is dying)</h2>
+          <h2 id="black-bleeding">Black bleeding spots - urgent (display is dying)</h2>
           <p>
             Black, dark blue, or rainbow ink-like spots radiating from the crack are <strong>not on
             the glass</strong> - they're inside the OLED. The OLED layer is leaking from broken
@@ -86,7 +98,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             you'll lose Face ID alignment too.
           </p>
 
-          <h2>Touch dead zones - already too late</h2>
+          <h2 id="touch-dead-zones">Touch dead zones - already too late</h2>
           <p>
             If parts of the screen don't respond to touch (typing the keyboard misses certain letters,
             swiping doesn't register in a region), the digitiser layer (the touch sensor laminated
@@ -99,7 +111,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             screen replacement that wasn't calibrated. We see both at the workshop weekly.
           </p>
 
-          <h2>Why cracks worsen - humidity, temperature, propagation</h2>
+          <h2 id="why-cracks-worsen">Why cracks worsen - humidity, temperature, propagation</h2>
           <p>
             Glass cracks propagate under three forces:
           </p>
@@ -109,7 +121,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             <li><strong>Stress propagation</strong>: every pocket flex, every push of a button near the crack, every face-press during a call extends the crack 0.01-0.1mm.</li>
           </ul>
 
-          <h2>Dubai climate factors</h2>
+          <h2 id="dubai-climate">Dubai climate factors</h2>
           <p>
             Two factors make Dubai harder on cracked iPhones than a temperate climate:
           </p>
@@ -122,7 +134,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             documented climate-controlled drop tests.
           </p>
 
-          <h2>Cost difference - small repair vs full display</h2>
+          <h2 id="cost-difference">Cost difference - small repair vs full display</h2>
           <BlogPriceTable
             caption="Repair cost: glass-only vs full display by iPhone (April 2026)"
             headers={["iPhone model", "Glass-only (early)", "Full display (late)", "Premium for waiting"]}

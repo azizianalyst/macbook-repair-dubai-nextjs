@@ -9,6 +9,14 @@ export default function BlogIPhoneRepairNearMeDubai() {
       seoTitle="iPhone Repair Near Me Dubai 2026 - Trust Checklist"
       seoDescription="10 questions to ask before handing your iPhone to any Dubai repair shop, plus red flags to refuse. We tick every box, open since 2004 in Media City."
       path="/blog/iphone-repair-near-me-dubai"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "checklist", label: "The 10-question checklist" },
+        { id: "red-flags", label: "Red flags to refuse" },
+        { id: "why-we-tick", label: "Why we tick all 10" },
+        { id: "map-directions", label: "Map and directions" },
+      ]}
       category="Honest guide · iPhone"
       h1="iPhone Repair Near Me Dubai - How to Choose Wisely"
       hook="10 questions to ask before handing your iPhone to anyone."
@@ -20,14 +28,14 @@ export default function BlogIPhoneRepairNearMeDubai() {
       featuredImageAlt="iPhone repair near me Dubai - 10-question trust checklist"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">iPhone Repair Near Me Dubai. Quick answer</h2>
           <p>
             Dubai has 200+ phone repair shops. Maybe 20 of them deserve your iPhone. Use the 10
             questions below to filter quickly, refuse anything that triggers a red flag, and look for
             shops that proactively answer these questions before you even ask.
           </p>
 
-          <h2>The 10-question checklist</h2>
+          <h2 id="checklist">The 10-question checklist</h2>
 
           <h3>1. Physical address (or pop-up?)</h3>
           <p>
@@ -118,7 +126,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             specialist for Apple devices. (We've been Apple-only since founding in 2004.)
           </p>
 
-          <h2>Red flags - refuse the shop if you see any of these</h2>
+          <h2 id="red-flags">Red flags - refuse the shop if you see any of these</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Cash only, no card</strong>: tax-evasion sign, no paper trail for warranty disputes.</li>
             <li><strong>No receipt</strong>: even worse - you can't prove the iPhone went in.</li>
@@ -131,7 +139,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <li><strong>Hard-sells you upgrades</strong> ("your battery is bad too - let me change it") without showing you the diagnostic.</li>
           </ul>
 
-          <h2>Why we tick all 10</h2>
+          <h2 id="why-we-tick">Why we tick all 10</h2>
           <BlogPriceTable
             caption="Our shop vs the 10-question checklist"
             headers={["Checklist item", "Our answer"]}
@@ -149,7 +157,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             ]}
           />
 
-          <h2>Map and directions to our workshop</h2>
+          <h2 id="map-directions">Map and directions to our workshop</h2>
           <p>
             <strong>MacBook Repair Dubai</strong><br />
             Office #45, 10th Floor, Concord Tower<br />

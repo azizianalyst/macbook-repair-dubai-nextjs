@@ -9,6 +9,18 @@ export default function BlogMacBookNeoWorthBuying() {
       seoTitle="MacBook Neo (2026): Worth Buying or Skip It?"
       seoDescription="Honest MacBook Neo review for Dubai 2026: A18 Pro vs M5 speed, who it suits, who should skip it, repair costs, plus how it compares to a refurb M1 Air."
       path="/blog/macbook-neo-worth-buying-2026"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "what-it-is", label: "What Neo is (and isn't)" },
+        { id: "a18-vs-m5", label: "A18 Pro vs M5 performance" },
+        { id: "who-its-for", label: "Who Neo is for" },
+        { id: "who-its-not-for", label: "Who Neo is NOT for" },
+        { id: "specs", label: "Specs and limitations" },
+        { id: "neo-vs-m1-air", label: "Neo vs refurb M1 Air" },
+        { id: "repair-costs", label: "Repair cost expectations" },
+        { id: "verdict", label: "Verdict" },
+      ]}
       category="Buying guide · MacBook"
       h1="MacBook Neo Review - Should You Buy Apple's $599 Mac?"
       hook="Apple's first A-chip MacBook is here. AED 2,200 in Dubai. Here's the honest take."
@@ -17,17 +29,17 @@ export default function BlogMacBookNeoWorthBuying() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={10}
-      featuredImageAlt="MacBook Neo 2026 review Dubai - A18 Pro chip"
+      featuredImageAlt="MacBook Neo Worth Buying. MacBook Neo 2026 review Dubai - A18 Pro chip"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">MacBook Neo Worth Buying. Quick answer</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Buy MacBook Neo if:</strong> You need a second Mac, you're buying for a child, your workload is browsing + Office + Zoom, you're allergic to refurbished tech.</li>
             <li><strong>Skip MacBook Neo if:</strong> You run any pro app (Photoshop, Final Cut, Logic, Xcode), you want a 5-year primary computer, you're upgrading from an M1 or newer Mac.</li>
             <li><strong>Better alternative for the same money:</strong> Refurbished MacBook Air M1 8GB/256GB at AED 2,500 (or 16GB/512GB at AED 3,400) from us.</li>
           </ul>
 
-          <h2>What MacBook Neo is (and isn't)</h2>
+          <h2 id="what-it-is">What MacBook Neo is (and isn't)</h2>
           <p>
             MacBook Neo is Apple's 2026 entry-level laptop, the first Mac to use an iPhone-class chip
             (A18 Pro) instead of an M-series chip. Apple positioned it as a "computer for everyone" at
@@ -43,7 +55,7 @@ export default function BlogMacBookNeoWorthBuying() {
             phone-shaped thermal envelopes - sustained workloads cause it to throttle hard.
           </p>
 
-          <h2>A18 Pro vs M5 - the performance difference</h2>
+          <h2 id="a18-vs-m5">A18 Pro vs M5 - the performance difference</h2>
           <BlogPriceTable
             caption="A18 Pro (Neo) vs M3 (Air) vs M5 (Air new) - benchmarks"
             headers={["Workload", "MacBook Neo (A18 Pro)", "MacBook Air M3", "MacBook Air M5"]}
@@ -64,7 +76,7 @@ export default function BlogMacBookNeoWorthBuying() {
             than 5 minutes. The 8 GB RAM is the bigger ceiling than the chip itself.
           </p>
 
-          <h2>Who Neo is for</h2>
+          <h2 id="who-its-for">Who Neo is for</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Kids / school students (under 14):</strong> Office, Google Classroom, browsing, occasional video calls. Neo handles all of it. AED 2,200 is less to worry about if dropped.</li>
             <li><strong>Second laptop for travel:</strong> Light, cheap, runs your essential apps. Don't take your M3 Pro to the beach.</li>
@@ -73,7 +85,7 @@ export default function BlogMacBookNeoWorthBuying() {
             <li><strong>People who only want new + warranty:</strong> Some buyers won't touch refurbished. Neo is the cheapest new path into macOS.</li>
           </ul>
 
-          <h2>Who Neo is NOT for</h2>
+          <h2 id="who-its-not-for">Who Neo is NOT for</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Anyone running Photoshop, Lightroom, Premiere, Final Cut, or DaVinci.</strong> The A18 Pro will throttle and the 8 GB RAM will swap to disk, killing the SSD's lifespan.</li>
             <li><strong>iOS / Mac developers using Xcode.</strong> Build times are 2× a MacBook Air M3.</li>
@@ -83,7 +95,7 @@ export default function BlogMacBookNeoWorthBuying() {
             <li><strong>Anyone replacing a MacBook from 2020 or later.</strong> Your old M1 Mac is faster on sustained workloads. Neo would be a downgrade.</li>
           </ul>
 
-          <h2>Specs and limitations</h2>
+          <h2 id="specs">Specs and limitations</h2>
           <BlogPriceTable
             caption="MacBook Neo (2026) - full specs"
             headers={["Spec", "MacBook Neo", "Compared to MacBook Air M5"]}
@@ -103,7 +115,7 @@ export default function BlogMacBookNeoWorthBuying() {
             ]}
           />
 
-          <h2>MacBook Air M1 (refurb) vs MacBook Neo - sometimes Air wins</h2>
+          <h2 id="neo-vs-m1-air">MacBook Air M1 (refurb) vs MacBook Neo - sometimes Air wins</h2>
           <p>
             For roughly the same money, here's what AED 2,200-2,500 buys you in Dubai April 2026:
           </p>
@@ -123,7 +135,7 @@ export default function BlogMacBookNeoWorthBuying() {
             upgrade. If you can stretch to AED 3,400, the 16GB / 512GB M1 Air will last 4-5 more years.
           </p>
 
-          <h2>Repair cost expectations (new platform, parts limited)</h2>
+          <h2 id="repair-costs">Repair cost expectations (new platform, parts limited)</h2>
           <p>
             MacBook Neo is a brand-new platform. As of April 2026, parts supply is still constrained.
             Expected repair pricing once the supply chain matures (Q3 2026):
@@ -150,7 +162,7 @@ export default function BlogMacBookNeoWorthBuying() {
             .
           </p>
 
-          <h2>Verdict</h2>
+          <h2 id="verdict">Verdict</h2>
           <p>
             MacBook Neo is a genuinely good product for the right buyer - kids, casual users, second
             machines, reception desks. Apple finally has a price-of-entry that meets a Chromebook on cost

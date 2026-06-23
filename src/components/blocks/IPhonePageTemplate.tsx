@@ -1,6 +1,7 @@
 "use client";
 import { ReactNode } from "react";
-import { MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star } from "lucide-react";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
+import { AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -15,15 +16,19 @@ import { RelatedServices } from "@/components/blocks/RelatedServices";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { WarrantyBar } from "@/components/blocks/WarrantyBar";
-import { Button } from "@/components/ui/button";
+import { StatBand } from "@/components/blocks/StatBand";
+import { CtaBand } from "@/components/blocks/CtaBand";
+import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
-import { pickReviews } from "@/lib/find-reviews";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
 import { IPHONE_HUBS } from "@/content/iphone-models";
+import { relatedServices, withCoverage } from "@/lib/related-services";
 import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 
 export type IPhoneTemplateProps = {
   // SEO
@@ -49,20 +54,23 @@ export type IPhoneTemplateProps = {
   steps: Step[];
   warrantyDays: number;       // typically 30, 60, or 90
   warrantyBullets: string[];  // covered/not covered breakdown
+  glassNotice?: boolean;      // screen/back-glass pages: highlight that broken glass isn't covered
   comparisonRows: [string, string, string][];
   faqs: FAQ[];
   reviewNames: string[];
-  relatedSlugs: string[];     // 3 slugs from IPHONE_HUBS (not self)
+  relatedSlugs?: string[];    // 3 slugs from IPHONE_HUBS (not self); auto-resolved when omitted
+  relatedExtra?: { label: string; href: string; description: string }[]; // additional free-form links appended after slug-resolved ones
   honestyCallout?: ReactNode; // for iCloud, Face ID, network unlock
 };
 
 export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
-  const reviews = pickReviews(p.reviewNames);
-  const related = p.relatedSlugs
+  const reviews = pickReviews(p.reviewNames, { devices: reviewDevicesForPath(p.path), min: 2, seed: p.path });
+  const curated = (p.relatedSlugs ?? [])
     .map((s) => IPHONE_HUBS.find((h) => h.slug === s))
     .filter(Boolean)
     .slice(0, 3)
     .map((h) => ({ label: h!.label, href: h!.slug, description: h!.desc }));
+  const related = withCoverage([...(curated.length ? curated : relatedServices({ path: p.path })), ...(p.relatedExtra ?? [])], p.path);
   // Service topics first (screen/battery/port infographics) - imageForSlug()
   // returns a generation fallback for ANY iphone path, so it must come second.
   const topic = topicForPath(p.path);
@@ -97,7 +105,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
   );
 
   return (
-    <PageShell>
+    <PageShell hideContactCta>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
@@ -115,7 +123,9 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
       <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={p.warrantyDays} />
+
+      <StatBand />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -132,7 +142,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Lead form */}
           <section id="quote" className="scroll-mt-24">
-            <h2 className="text-[24px] md:text-[28px] mb-md text-text">Get a free repair quote</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get a free repair quote</h2>
             <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
               Two quick steps — your device, then how to reach you. Free diagnosis, written quote, warranty included.
             </p>
@@ -151,10 +161,11 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Models + pricing */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md">iPhone models we repair - every model since 2014</h2>
-            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.
-            </p>
+            <SectionHeading
+              eyebrow="Models & pricing"
+              title="iPhone models we repair - every model since 2014"
+              sub={<>From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.</>}
+            />
             <PricingTable service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} tone="dark" />
             {p.pricingCaption && (
               <p className="text-[13px] text-text-muted mt-sm mono">{p.pricingCaption}</p>
@@ -163,12 +174,11 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Common problems */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common iPhone issues we see
-            </h2>
-            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price.
-            </p>
+            <SectionHeading
+              eyebrow="Common problems"
+              title="Common iPhone issues we see"
+              sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price."
+            />
             <div className="grid gap-md md:grid-cols-2">
               {p.problems.map((it) => (
                 <article key={it.title} className="border border-border bg-bg-card rounded-md p-lg">
@@ -181,20 +191,17 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Process */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <Wrench size={28} className="text-accent" aria-hidden /> How the repair works
-            </h2>
-            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              Six steps from WhatsApp to delivery. Each step has a fixed time estimate.
-            </p>
+            <SectionHeading
+              eyebrow="Our process"
+              title="How the repair works"
+              sub="Six steps from WhatsApp to delivery. Each step has a fixed time estimate."
+            />
             <StepList steps={p.steps} tone="dark" />
           </section>
 
           {/* Warranty */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
-            </h2>
+            <SectionHeading eyebrow="Guarantee" title="Warranty" />
             <div className="border border-border bg-bg-card rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
@@ -202,6 +209,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
               </ul>
             </div>
+            {p.glassNotice && <div className="mt-md"><GlassWarrantyNotice device="screen" /></div>}
           </section>
 
           {/* Technician */}
@@ -215,8 +223,8 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Comparison */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md">{p.serviceName} vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
+            <SectionHeading eyebrow="Honest comparison" title={`${p.serviceName} vs Apple Store Dubai`} />
+            <ScrollHintTable className="border border-border rounded-md bg-bg-alt" fadeClass="from-bg-alt">
               <table className="w-full text-[14px] min-w-[640px]">
                 <thead className="bg-bg-card">
                   <tr className="text-left text-accent">
@@ -235,7 +243,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollHintTable>
             <p className="text-[13px] text-text-muted mt-sm mono">
               Apple list pricing from apple.com/ae, retrieved May 2026. Comparison shown for transparency.
             </p>
@@ -244,12 +252,11 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           {/* Reviews */}
           {reviews.length > 0 && (
             <section>
-              <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-                <Star size={28} className="text-star fill-star" aria-hidden /> Real iPhone-repair reviews
-              </h2>
-              <p className="text-[14px] text-text-muted mb-lg">
-                Verbatim from Google. Nothing edited. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
-              </p>
+              <SectionHeading
+                eyebrow="What customers say"
+                title="Real iPhone-repair reviews"
+                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a></>}
+              />
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>
           )}
@@ -273,27 +280,12 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
         </div>
       </div>
 
-      {/* Final CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
-          <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Send the model and a photo of the issue. Free pickup across Dubai mainland. {warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.
-          </p>
-          <div className="flex flex-wrap gap-sm">
-            <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden /> Message on WhatsApp
-              </a>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <a href={`tel:${NAP.phoneE164}`}>
-                <Phone aria-hidden /> {NAP.phoneDisplay}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Final CTA (shared dark band, matches master) */}
+      <CtaBand
+        className="mt-3xl"
+        headline={`Book your ${p.serviceName} on WhatsApp`}
+        description={`Send the model and a photo of the issue. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
+      />
       </div>
       <RelatedArticles path={p.path} tone="dark" />
     </PageShell>

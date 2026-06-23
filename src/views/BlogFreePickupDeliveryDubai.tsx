@@ -9,6 +9,20 @@ export default function BlogFreePickupDeliveryDubai() {
       seoTitle="Free MacBook Pickup & Delivery Dubai - How It Works (2026)"
       seoDescription="Free MacBook pickup across Dubai. WhatsApp, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
       path="/blog/free-pickup-delivery-dubai-how-it-works"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "coverage-area", label: "Coverage area" },
+        { id: "how-to-book", label: "How to book" },
+        { id: "what-we-collect", label: "What we collect" },
+        { id: "receipt-tracking", label: "Receipt and tracking" },
+        { id: "diagnosis-workshop", label: "Diagnosis at the workshop" },
+        { id: "quote-whatsapp", label: "Quote sent via WhatsApp" },
+        { id: "approval-before-work", label: "Approval before any work" },
+        { id: "delivery-back", label: "Delivery back to your door" },
+        { id: "payment-options", label: "Payment options" },
+        { id: "outside-dubai", label: "Outside Dubai" },
+      ]}
       category="Trust · Logistics"
       h1="Free MacBook Pickup & Delivery Dubai - How It Works"
       hook="Free across all Dubai. WhatsApp us. Our courier comes within 2 hours. Repair done. Returns to you."
@@ -17,17 +31,17 @@ export default function BlogFreePickupDeliveryDubai() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={9}
-      featuredImageAlt="Free MacBook pickup and delivery service across Dubai - process flow"
+      featuredImageAlt="Free Pickup Delivery Dubai. Free MacBook pickup and delivery service across Dubai - process flow"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Free Pickup Delivery Dubai. Quick answer</h2>
           <p>
             For Marina, JBR, JLT, Downtown, Business Bay, Palm, Mirdif, Al Barsha, Silicon Oasis,
             International City, Sports City, and everywhere else in Dubai - we'll come to you. The
             full cycle is typically 24-48 hours from pickup to return.
           </p>
 
-          <h2>Coverage area</h2>
+          <h2 id="coverage-area">Coverage area</h2>
           <p>
             <strong>Free or AED 50 within Dubai</strong>: every district from Jebel Ali in the south
             to Al Mamzar in the north. Includes the islands (Palm, Bluewaters, Deira Islands).
@@ -38,7 +52,7 @@ export default function BlogFreePickupDeliveryDubai() {
             depending on emirate and urgency.
           </p>
 
-          <h2>How to book - one WhatsApp message</h2>
+          <h2 id="how-to-book">How to book - one WhatsApp message</h2>
           <p>
             Send WhatsApp to <strong>+971 55 741 3706</strong> with:
           </p>
@@ -53,7 +67,7 @@ export default function BlogFreePickupDeliveryDubai() {
             description.
           </p>
 
-          <h2>What we collect</h2>
+          <h2 id="what-we-collect">What we collect</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>The device itself.</li>
             <li>Charger / power adapter (helpful for diagnosing power issues).</li>
@@ -66,7 +80,7 @@ export default function BlogFreePickupDeliveryDubai() {
             receipt.
           </p>
 
-          <h2>Receipt and tracking</h2>
+          <h2 id="receipt-tracking">Receipt and tracking</h2>
           <p>
             At handover the courier issues a printed handover receipt with:
           </p>
@@ -77,7 +91,7 @@ export default function BlogFreePickupDeliveryDubai() {
             <li>Estimated diagnosis-complete timestamp.</li>
           </ul>
 
-          <h2>Diagnosis happens at the workshop</h2>
+          <h2 id="diagnosis-workshop">Diagnosis happens at the workshop</h2>
           <p>
             Within 30-60 minutes of arrival at Concord Tower the device is on a senior technician's
             bench. Diagnosis is{" "}
@@ -88,27 +102,27 @@ export default function BlogFreePickupDeliveryDubai() {
             quoted repair plan.
           </p>
 
-          <h2>Quote sent via WhatsApp</h2>
+          <h2 id="quote-whatsapp">Quote sent via WhatsApp</h2>
           <p>
             You'll receive: the diagnosis summary, the recommended repair, line-itemised quote (parts
             tier + labour + total), and ETA for completion. You can approve, decline, or request the
             device returned at no charge.
           </p>
 
-          <h2>Approval before any work</h2>
+          <h2 id="approval-before-work">Approval before any work</h2>
           <p>
             We do nothing beyond diagnosis without your written approval (WhatsApp "approved" is
             enough - we save the message thread). If you decline, the device is returned free of
             charge by the same courier, usually within 24 hours.
           </p>
 
-          <h2>Delivery back to your door</h2>
+          <h2 id="delivery-back">Delivery back to your door</h2>
           <p>
             Once repaired and quality-checked, we WhatsApp you and arrange a return slot. Same
             courier, same handover signature, same care.
           </p>
 
-          <h2>Payment options</h2>
+          <h2 id="payment-options">Payment options</h2>
           <BlogPriceTable
             caption="Payment methods at delivery"
             headers={["Method", "Available?", "Notes"]}
@@ -122,7 +136,7 @@ export default function BlogFreePickupDeliveryDubai() {
             ]}
           />
 
-          <h2>Outside Dubai</h2>
+          <h2 id="outside-dubai">Outside Dubai</h2>
           <p>
             <strong>Sharjah</strong>: AED 80 round-trip via our weekly van. Pickup days Mon &amp; Thu.
           </p>

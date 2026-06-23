@@ -19,11 +19,11 @@ export default function IPhonePowerButtonRepair() {
         { name: "Power Button",      path: "/iphone-power-button-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone mechanical and flex repair" }}
-      serviceName="iPhone Power Button Repair"
+      serviceName="iPhone Power Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex, AED 280, with a 12-month warranty.
+            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex, AED 280, with a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Most failures are mechanical - the dome inside the button collapses after years of use, or impact damage from a drop has bent the metal frame around the button. We straighten the frame where possible (no extra charge) and replace the flex with the click mechanism in one visit.
@@ -44,7 +44,7 @@ export default function IPhonePowerButtonRepair() {
         { title: "Click test + frame check", body: "We feel the click and inspect the frame around the button for impact damage. Free." },
         { title: "Open and replace flex",    body: "Pentalobe screws out, screen lifted with care, side-button flex assembly removed and replaced." },
         { title: "Frame straightening",      body: "If the chassis around the button is bent, we gently restore it before installing the new flex - no extra charge." },
-        { title: "Function tests",           body: "Lock, Apple Pay double-click, screenshot, SOS hold all verified. 12-month warranty card with the phone." },
+        { title: "Function tests",           body: "Lock, Apple Pay double-click, screenshot, SOS hold all verified. Warranty up to 12 months card with the phone." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

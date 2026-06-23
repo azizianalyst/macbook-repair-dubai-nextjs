@@ -17,6 +17,13 @@ export default function BlogMacBookKernelPanic() {
       seoTitle="MacBook Keeps Restarting? Kernel Panic Fixes (2026)"
       seoDescription="MacBook kernel panic or random restarts? Six fixes in order - read the panic log, unplug peripherals, Safe Mode, Apple Diagnostics - then know when it's RAM, the SSD or heat."
       path="/blog/macbook-kernel-panic-restarts-fix"
+      wide
+      toc={[
+        { id: "software-or-hardware", label: "Software or hardware panic" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost", label: "What it costs" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Keeps Restarting? Kernel Panic Fixes"
       hook="A MacBook that throws the 'restarted because of a problem' message is shouting software about nine times in ten - a bad driver, a dodgy dock, or a full disk. The panic log usually names the culprit, and the few hardware causes have a clean test each."
@@ -25,7 +32,7 @@ export default function BlogMacBookKernelPanic() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook kernel panic diagnostic in Dubai - technician reading the panic log and running Apple Diagnostics at the Media City workshop"
+      featuredImageAlt="MacBook Kernel Panic Restarts Fix. MacBook kernel panic diagnostic in Dubai - technician reading the panic log and running Apple Diagnostics at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a MacBook that keeps restarting or kernel panicking in six steps",
         description: "Six diagnostic steps for a MacBook throwing kernel panics or random restarts, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookKernelPanic() {
       })]}
       body={
         <>
-          <h2>Software panic or hardware panic?</h2>
+          <h2 id="software-or-hardware">MacBook Kernel Panic Restarts Fix. Software panic or hardware panic?</h2>
           <p>
             A kernel panic is just macOS hitting something it can't recover from and restarting to
             stay safe. The cause is software the overwhelming majority of the time, which is why the
@@ -58,7 +65,7 @@ export default function BlogMacBookKernelPanic() {
             don't care which app you're in.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Work down the list and watch for the pattern to break. Most random-restart jobs are solved
             before the diagnostic stage.
@@ -103,7 +110,7 @@ export default function BlogMacBookKernelPanic() {
             happens at random, that's when hardware moves up the list.
           </p>
 
-          <h2>When it's hardware: the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the common causes</h2>
           <p>
             If the panics survive a bare boot, Safe Mode and an update, it's usually one of four
             things. Here's what we actually find on the bench, roughly in order across Dubai.
@@ -140,7 +147,7 @@ export default function BlogMacBookKernelPanic() {
             using the Mac until it's replaced.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's heat, the SSD, the RAM or the board before you commit.

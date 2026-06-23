@@ -334,7 +334,8 @@
     "baseStorage": "256GB (dual-NAND)",
     "ports": "MagSafe 3, 2× Thunderbolt 4, 3.5mm jack",
     "wirelessChip": "Wi-Fi 6E, Bluetooth 5.3",
-    "currentInLineup": true,
+    "currentInLineup": false,
+    "discontinued": "March 2026",
     "commonIssues": [
       "Brand-new model - limited field-failure data",
       "Apple Intelligence thermal events on heavy on-device LLM workloads",
@@ -373,7 +374,8 @@
     "baseStorage": "256GB (dual-NAND)",
     "ports": "MagSafe 3, 2× Thunderbolt 4, 3.5mm jack",
     "wirelessChip": "Wi-Fi 6E, Bluetooth 5.3",
-    "currentInLineup": true,
+    "currentInLineup": false,
+    "discontinued": "March 2026",
     "commonIssues": [
       "Brand-new model - limited field-failure data",
       "Apple Intelligence thermal events",
@@ -453,7 +455,7 @@
     "wirelessChip": "Apple N1 (Wi-Fi 7, Bluetooth 6)",
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model (March 2026) - no field-failure data yet",
+      "Early drop damage on the 15\" lid corners - the first cracked M5 Air screens reached our bench within weeks of launch",
       "Hinge issues - we check carefully at intake on every 15\" Air",
       "Larger 15\" Liquid Retina panel - premium replacement",
       "Magic Keyboard key failures (very early units)",

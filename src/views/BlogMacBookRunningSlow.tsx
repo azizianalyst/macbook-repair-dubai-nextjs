@@ -22,6 +22,21 @@ export default function BlogMacBookRunningSlow() {
       seoTitle="MacBook Running Slow? 10 Fixes That Actually Work (2026)"
       seoDescription="MacBook slow in 2026? 10 step-by-step fixes: storage, Activity Monitor, battery throttling, malware. Diagnose in 10 minutes before paying for service."
       path="/blog/macbook-running-slow-10-fixes"
+      wide
+      toc={[
+        { id: "storage-full", label: "Check 1. Storage full?" },
+        { id: "activity-monitor", label: "Check 2. Activity Monitor" },
+        { id: "launch-agents", label: "Check 3. Launch agents and login items" },
+        { id: "macos-update", label: "Check 4. macOS up to date?" },
+        { id: "browser-tabs", label: "Check 5. Browser tabs and extensions" },
+        { id: "spotlight-indexing", label: "Check 6. Spotlight indexing" },
+        { id: "battery-health", label: "Check 7. Battery health" },
+        { id: "thermal-throttling", label: "Check 8. Thermal throttling" },
+        { id: "time-machine", label: "Check 9. Time Machine" },
+        { id: "malware-adware", label: "Check 10. Malware / adware" },
+        { id: "ssd-ram-upgrade", label: "When upgrade is the only answer" },
+        { id: "ram-soldered", label: "M-series RAM is soldered" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Running Slow? 10 Fixes That Actually Work"
       hook="Slow MacBook isn't always old age. Most often it's one fixable thing - here's the 10-minute diagnostic checklist we use at the bench."
@@ -39,7 +54,7 @@ export default function BlogMacBookRunningSlow() {
       })]}
       body={
         <>
-          <h2>Check 1 - Storage full? (causes #1 slowdown)</h2>
+          <h2 id="storage-full">MacBook Running Slow. Check 1 - Storage full? (causes #1 slowdown)</h2>
           <p>
             macOS uses your SSD as virtual RAM (swap). When free space drops below 15% of total
             capacity, swap performance collapses and the entire system feels sluggish. On a 256GB
@@ -51,7 +66,7 @@ export default function BlogMacBookRunningSlow() {
             "Recommendations → Reduce Clutter".
           </p>
 
-          <h2>Check 2 - Activity Monitor: what's hogging CPU</h2>
+          <h2 id="activity-monitor">Check 2 - Activity Monitor: what's hogging CPU</h2>
           <p>
             Open Applications → Utilities → Activity Monitor. Click the CPU column header to sort
             descending. The top 3 processes are your suspects. Common ones:
@@ -63,7 +78,7 @@ export default function BlogMacBookRunningSlow() {
             <li><strong>Google Chrome Helper</strong> high = a single tab gone wild (close it)</li>
           </ul>
 
-          <h2>Check 3 - Launch agents and login items</h2>
+          <h2 id="launch-agents">Check 3 - Launch agents and login items</h2>
           <p>
             Many apps install background "helpers" that keep running even after you quit. System
             Settings → General → Login Items shows the visible ones. The hidden ones live in:
@@ -75,21 +90,21 @@ export default function BlogMacBookRunningSlow() {
           </ul>
           <p>Free tool: KnockKnock by Objective-See lists every persistent component on your Mac.</p>
 
-          <h2>Check 4 - macOS up to date?</h2>
+          <h2 id="macos-update">Check 4 - macOS up to date?</h2>
           <p>
             Apple ships meaningful performance improvements in point releases. macOS Sequoia 15.4
             specifically fixed an M3 thermal throttling bug. System Settings → General → Software
             Update - install pending updates.
           </p>
 
-          <h2>Check 5 - Browser tabs and extensions</h2>
+          <h2 id="browser-tabs">Check 5 - Browser tabs and extensions</h2>
           <p>
             Chrome with 30 tabs and 8 extensions easily eats 8-12GB of RAM. On an 8GB M1 MacBook
             Air that's everything. Switch to Safari (genuinely 30-40% lighter on Apple Silicon) or
             ruthlessly close tabs.
           </p>
 
-          <h2>Check 6 - Spotlight indexing stuck?</h2>
+          <h2 id="spotlight-indexing">Check 6 - Spotlight indexing stuck?</h2>
           <p>
             After a Time Machine restore or large iCloud download, Spotlight can re-index for 4-8
             hours, hammering the SSD. Activity Monitor → search "mds_stores" - if CPU is high,
@@ -97,7 +112,7 @@ export default function BlogMacBookRunningSlow() {
             <code>/.Spotlight-V100</code> with Terminal (sudo).
           </p>
 
-          <h2>Check 7 - Battery health (low health throttles M-series)</h2>
+          <h2 id="battery-health">Check 7 - Battery health (low health throttles M-series)</h2>
           <p>
             Below 80% battery health, M-series MacBooks engage performance throttling to protect
             the cell from peak current draw. System Settings → Battery → Battery Health. If
@@ -111,7 +126,7 @@ export default function BlogMacBookRunningSlow() {
             from AED 450 - restores full performance.
           </p>
 
-          <h2>Check 8 - Thermal throttling: fan issues</h2>
+          <h2 id="thermal-throttling">Check 8 - Thermal throttling: fan issues</h2>
           <p>
             Dubai dust + 4+ years of use = clogged fan blades and heatsink fins. Fans spin loud,
             chassis runs hot, and the M-chip silently throttles to 30-50% of rated performance.
@@ -119,14 +134,14 @@ export default function BlogMacBookRunningSlow() {
             Professional fan and heatsink cleaning is AED 200 in our shop, takes 60 minutes.
           </p>
 
-          <h2>Check 9 - Time Machine running constantly</h2>
+          <h2 id="time-machine">Check 9 - Time Machine running constantly</h2>
           <p>
             Default Time Machine backs up every hour. On a slow external drive, that's
             constant disk activity. Check System Settings → General → Time Machine → Options →
             change "Back up frequency" to manual or every 6 hours.
           </p>
 
-          <h2>Check 10 - Malware / adware</h2>
+          <h2 id="malware-adware">Check 10 - Malware / adware</h2>
           <p>
             The biggest hidden cause of slow MacBooks in 2026 is browser-injected adware
             (search redirects, fake update prompts, fake "Mac is infected" pop-ups). Run free
@@ -138,14 +153,14 @@ export default function BlogMacBookRunningSlow() {
             for AED 200 if you'd rather we do it.
           </p>
 
-          <h2>When SSD/RAM upgrade is the only answer</h2>
+          <h2 id="ssd-ram-upgrade">When SSD/RAM upgrade is the only answer</h2>
           <p>
             If you've completed all 10 checks and the MacBook is still slow, you've hit the
             hardware ceiling. Common signs: 8GB RAM + Photoshop or video editing, 256GB SSD with
             5GB free, Intel MacBook trying to run macOS Sequoia.
           </p>
 
-          <h2>M-series RAM is soldered - bad news</h2>
+          <h2 id="ram-soldered">M-series RAM is soldered - bad news</h2>
           <p>
             On M1/M2/M3/M4/M5 MacBooks the RAM is integrated into the M-chip package itself.
             <strong> RAM cannot be upgraded after purchase</strong> - the only option is selling

@@ -22,6 +22,20 @@ export default function BlogWaterDamageMacBookImmediate() {
       seoTitle="Spilled Water on MacBook? Do This Right Now (2026)"
       seoDescription="MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
       path="/blog/water-damage-macbook-immediate-action"
+      wide
+      toc={[
+        { id: "power-off", label: "Step 1. Power off immediately" },
+        { id: "unplug", label: "Step 2. Unplug everything" },
+        { id: "flip-v-shape", label: "Step 3. Flip upside down" },
+        { id: "no-rice", label: "Step 4. Do not use rice" },
+        { id: "no-hairdryer", label: "Step 5. Do not use a hairdryer" },
+        { id: "no-plug-in", label: "Step 6. Do not plug in to test" },
+        { id: "bring-in-24h", label: "Step 7. Bring in within 24 hours" },
+        { id: "corrosion-timeline", label: "Why time matters" },
+        { id: "salt-vs-fresh", label: "Salt water vs fresh water" },
+        { id: "what-we-do", label: "What we do when you bring it in" },
+        { id: "cost-expectations", label: "Cost expectations" },
+      ]}
       category="Emergency · MacBook"
       h1="Spilled Water on MacBook? Do This Right Now"
       hook="Stop reading after Step 1. Power off. Now read Step 2."
@@ -30,7 +44,7 @@ export default function BlogWaterDamageMacBookImmediate() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="MacBook water damage emergency Dubai - flip upside down V shape on towel"
+      featuredImageAlt="Water Damage MacBook. MacBook water damage emergency Dubai - flip upside down V shape on towel"
       extraSchemas={[howTo({
         name: "Save a MacBook after water spill",
         description: "Emergency seven-step procedure for the first 30 minutes after spilling liquid on a MacBook.",
@@ -59,7 +73,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             </div>
           </aside>
 
-          <h2>Step 1 - Power off immediately</h2>
+          <h2 id="power-off">Water Damage MacBook. Step 1 - Power off immediately</h2>
           <p>
             Hold the power button for 10 full seconds. Force shutdown. Do not try to see if it
             still works. Every second of current flow through wet circuits causes electrolytic
@@ -67,14 +81,14 @@ export default function BlogWaterDamageMacBookImmediate() {
             is enormous.
           </p>
 
-          <h2>Step 2 - Unplug everything</h2>
+          <h2 id="unplug">Step 2 - Unplug everything</h2>
           <p>
             Disconnect the MagSafe or USB-C charger, unplug all peripherals (USB-C dongles,
             external displays, headphones). If the MacBook was charging, the wall current is
             still feeding the wet board until you pull the cable.
           </p>
 
-          <h2>Step 3 - Flip upside down (V tent shape)</h2>
+          <h2 id="flip-v-shape">Step 3 - Flip upside down (V tent shape)</h2>
           <p>
             Open the lid to about 90 degrees and rest the MacBook upside-down on a clean towel,
             forming a V or A-tent shape. Gravity pulls remaining liquid away from the keyboard,
@@ -82,7 +96,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             12+ hours minimum.
           </p>
 
-          <h2>Step 4 - Do NOT use rice</h2>
+          <h2 id="no-rice">Step 4 - Do NOT use rice</h2>
           <p>
             The rice trick is internet folklore from 2010 and it does almost nothing. Rice absorbs
             ambient moisture only marginally faster than open air, and rice dust gets sucked into
@@ -91,7 +105,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             difference between a AED 700 Tier 1 repair and a AED 2,500 Tier 3 repair.
           </p>
 
-          <h2>Step 5 - Do NOT use a hairdryer</h2>
+          <h2 id="no-hairdryer">Step 5 - Do NOT use a hairdryer</h2>
           <p>
             Heated air drives moisture deeper into the logic board (it pushes liquid past chip
             edges that surface tension was previously holding) and can warp PCB components. Same
@@ -99,7 +113,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             Room temperature only.
           </p>
 
-          <h2>Step 6 - Do NOT plug in to test</h2>
+          <h2 id="no-plug-in">Step 6 - Do NOT plug in to test</h2>
           <p>
             Plugging the wet MacBook back in to "see if it still works" is the single most
             damaging thing you can do. Powering on a wet board causes instant electrolytic damage
@@ -107,14 +121,14 @@ export default function BlogWaterDamageMacBookImmediate() {
             an hour - recoverable cases that became unrecoverable. Resist the urge.
           </p>
 
-          <h2>Step 7 - Bring to a repair shop within 24 hours</h2>
+          <h2 id="bring-in-24h">Step 7 - Bring to a repair shop within 24 hours</h2>
           <p>
             WhatsApp <strong>055 741 3706</strong> with a photo of the MacBook and we'll send the
             free pickup driver same day for any mainland Dubai address. Or visit our workshop at
             Concord Tower, Dubai Media City, 9am-10pm Saturday to Thursday.
           </p>
 
-          <h2>Why time matters - corrosion timeline</h2>
+          <h2 id="corrosion-timeline">Why time matters - corrosion timeline</h2>
           <p>Recovery success rate by hours since spill, based on our 2024-2025 case data:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>0-24 hours:</strong> 80-90% recovery, mostly Tier 1 (AED 700 cleanup)</li>
@@ -124,7 +138,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             <li><strong>1 week+:</strong> Below 20% - copper traces eaten away, board often beyond repair</li>
           </ul>
 
-          <h2>Salt water (beach/pool) vs fresh water (coffee/tea)</h2>
+          <h2 id="salt-vs-fresh">Salt water (beach/pool) vs fresh water (coffee/tea)</h2>
           <p>
             Salt water is roughly 10× more destructive than fresh water because dissolved salts
             keep conducting current even after the water itself evaporates. Beach spills (Jumeirah,
@@ -134,7 +148,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             longer ultrasonic cleaning.
           </p>
 
-          <h2>What we do when you bring it in</h2>
+          <h2 id="what-we-do">What we do when you bring it in</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Open the MacBook within 30 minutes of arrival to halt corrosion</li>
             <li>Remove battery, screen, keyboard, all flex connectors</li>
@@ -145,7 +159,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             <li>Reassemble with new gaskets, full 4-hour stress test before handover</li>
           </ol>
 
-          <h2>Cost expectations - honest</h2>
+          <h2 id="cost-expectations">Cost expectations - honest</h2>
           <p>
             Tier 1 (clean only, MacBook boots fine): <strong>AED 700</strong>. Tier 2 (clean +
             1-2 damaged ICs): <strong>AED 1,000-1,500</strong>. Tier 3 (heavy board damage):

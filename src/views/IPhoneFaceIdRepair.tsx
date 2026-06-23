@@ -14,7 +14,7 @@ export default function IPhoneFaceIdRepair() {
       timeline="1-3 days"
       whatsappPrefill="Face ID issue - model, what happened, error message: "
       technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Face ID, dot projector & sensor calibration" }}
-      serviceName="iPhone Face ID Repair"
+      serviceName="iPhone Face ID Repair Dubai"
       pricingRows={[
         { model: "Face ID diagnosis only (free if no fix possible)", price: 0,   timeline: "Same day" },
         { model: "Sensor stack transfer (after screen swap)",         price: 250, timeline: "Same day" },

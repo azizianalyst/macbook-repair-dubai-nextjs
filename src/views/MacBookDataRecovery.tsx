@@ -24,13 +24,13 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
 
 const PRICING: PricingRow[] = [
-  { model: "Logical recovery (deleted files, formatted drive)",      price: 400,  timeline: "24 hours"     },
+  { model: "Logical recovery (deleted files, formatted drive)",      price: 299,  timeline: "24 hours"     },
   { model: "Physical recovery - Intel SSD (2010-2017)",              price: 700,  timeline: "24-48 hours"  },
   { model: "Physical recovery - Retina blade SSD (2013-2017)",       price: 800,  timeline: "48 hours"     },
   { model: "T2 chip recovery (2018-2020 Intel, working logic board)", price: 1200, timeline: "48-72 hours" },
   { model: "Apple Silicon NAND-off recovery (M1/M2/M3 - best case)",  price: 1500, timeline: "72 hours"    },
   { model: "Water-damaged SSD recovery (any model)",                  price: 1000, timeline: "48-72 hours" },
-  { model: "Time Machine restore + migration",                        price: 400,  timeline: "Same day"    },
+  { model: "Time Machine restore + migration",                        price: 299,  timeline: "Same day"    },
   { model: "Complex board-level recovery (multi-chip)",               price: 2000, timeline: "5-7 days"    },
 ];
 
@@ -38,7 +38,7 @@ const COMMON_SCENARIOS = [
   { title: "MacBook won't power on - files trapped on a working SSD",
     body: "Most common ticket. The logic board is dead but the SSD chips themselves are healthy. On Intel pre-T2 (2010-2017) the workshop pulls the SSD and reads it on a chip-off rig - AED 700, 80% success rate. On T2 and Apple Silicon the SSD is encrypted and bonded to the secure enclave - board repair becomes the recovery path." },
   { title: "Accidentally deleted important files (emptied trash)",
-    body: "Logical recovery. macOS doesn't immediately overwrite the data - it just marks the blocks free. As long as nothing has been written since, recovery is 90%+ successful. AED 400, 24 hours. Stop using the MacBook the moment you realise files are missing - every save shrinks the recovery window." },
+    body: "Logical recovery. macOS doesn't immediately overwrite the data - it just marks the blocks free. As long as nothing has been written since, recovery is 90%+ successful. AED 299, 24 hours. Stop using the MacBook the moment you realise files are missing - every save shrinks the recovery window." },
   { title: "Formatted the drive by mistake",
     body: "Quick format leaves data intact - only the file table is rewritten. Recovery rate 80%+ if no new data has been written. Full secure erase (the AppleCare \"erase before return\" option) overwrites with zeros - recovery rate near 0%. Free diagnosis confirms which type of format happened." },
   { title: "FileVault-encrypted drive - lost the password",
@@ -50,11 +50,11 @@ const COMMON_SCENARIOS = [
   { title: "Apple Silicon (M1/M2/M3) - secure enclave intact, won't boot",
     body: "M-series Macs have the SSD soldered directly to the logic board with the encryption key in the secure enclave. As long as the secure enclave chip itself is healthy, board-level repair restores access to data. AED 1,500-2,000 depending on what failed. 60% success rate honestly stated." },
   { title: "External drive or Time Machine corrupted",
-    body: "External drive recovery uses the same chip-off rig. AED 600 for standard 2.5\"/3.5\" drives, AED 800 for portable USB-C SSDs. Time Machine corrupted backup recovery: AED 400 with 95% success rate - the workshop reads the underlying APFS or HFS+ structure directly." },
+    body: "External drive recovery uses the same chip-off rig. AED 600 for standard 2.5\"/3.5\" drives, AED 800 for portable USB-C SSDs. Time Machine corrupted backup recovery: AED 299 with 95% success rate - the workshop reads the underlying APFS or HFS+ structure directly." },
   { title: "macOS won't update - disk error blocks installation",
-    body: "Often a corrupted catalog file rather than a hardware failure. Free diagnosis runs Disk Utility First Aid then a deeper APFS check. If it's catalog corruption (50% of cases) the fix is free as part of diagnosis. If it's a failing SSD, recovery is AED 400-700." },
+    body: "Often a corrupted catalog file rather than a hardware failure. Free diagnosis runs Disk Utility First Aid then a deeper APFS check. If it's catalog corruption (50% of cases) the fix is free as part of diagnosis. If it's a failing SSD, recovery is AED 299-700." },
   { title: "Folder shows but files appear empty (0 bytes)",
-    body: "APFS metadata corruption. The file content is still on the drive but the inode pointers are broken. Custom recovery script reconstructs the pointers from the journal - AED 400, 24 hours, 85% success rate." },
+    body: "APFS metadata corruption. The file content is still on the drive but the inode pointers are broken. Custom recovery script reconstructs the pointers from the journal - AED 299, 24 hours, 85% success rate." },
 ];
 
 const STEPS = [
@@ -74,7 +74,7 @@ const STEPS = [
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook data recovery cost in Dubai?",
-    a: "Logical recovery (deleted files, formatted drive): AED 400, 24 hours. Physical recovery on Intel SSDs (2010-2017): AED 700-800. T2 chip recovery (2018-2020 Intel): AED 1,200. Apple Silicon NAND recovery (M1/M2/M3): AED 1,500. Complex multi-chip board work: up to AED 2,000. Final price is confirmed after the free diagnosis - never quoted blind." },
+    a: "Logical recovery (deleted files, formatted drive): AED 299, 24 hours. Physical recovery on Intel SSDs (2010-2017): AED 700-800. T2 chip recovery (2018-2020 Intel): AED 1,200. Apple Silicon NAND recovery (M1/M2/M3): AED 1,500. Complex multi-chip board work: up to AED 2,000. Final price is confirmed after the free diagnosis - never quoted blind." },
   { q: "Is data recovery guaranteed?",
     a: "No - and any shop claiming 100% guarantee is misleading. Honest success rates from the workshop's 2024-2025 logbook: logical recovery 90%, Intel SSD physical 80%, T2 70%, Apple Silicon 60%, water-damaged SSD 50%. Free diagnosis tells you the realistic chance for your specific failure before any paid work." },
   { q: "How long does data recovery take?",
@@ -90,9 +90,9 @@ const FAQS: FAQ[] = [
   { q: "Will recovered files be encrypted or decrypted?",
     a: "Decrypted, in their original form. The recovery process unlocks the data using the source MacBook's encryption keys (when available) and writes it to the destination drive in the clear. The destination drive itself can be re-encrypted by you with FileVault, BitLocker, or VeraCrypt before it leaves the workshop if you prefer." },
   { q: "Can I get my files back from an emptied Trash?",
-    a: "Usually yes within the first few days - macOS marks the blocks free but doesn't overwrite them immediately. The workshop's deleted-file scan finds files by their content signatures (magic numbers) rather than the file table. AED 400, 24 hours, 90% success if you stop using the MacBook the moment you realise files are missing." },
+    a: "Usually yes within the first few days - macOS marks the blocks free but doesn't overwrite them immediately. The workshop's deleted-file scan finds files by their content signatures (magic numbers) rather than the file table. AED 299, 24 hours, 90% success if you stop using the MacBook the moment you realise files are missing." },
   { q: "What about my photos in iCloud - do you handle that too?",
-    a: "Yes - Time Machine restore plus iCloud Photo Library re-download is included in the AED 400 migration service. The workshop signs into your iCloud on the new MacBook (with you present), waits for the photo download, and verifies the count matches your old library before handover." },
+    a: "Yes - Time Machine restore plus iCloud Photo Library re-download is included in the AED 299 migration service. The workshop signs into your iCloud on the new MacBook (with you present), waits for the photo download, and verifies the count matches your old library before handover." },
   { q: "Is my data confidential during recovery?",
     a: "Yes. The workshop signs an NDA on request. All recovery work happens on isolated, air-gapped imaging stations - no internet connection during the recovery process. Recovered files are stored on encrypted forensic drives, deleted with secure erase 7 days after handover." },
   { q: "Do you offer pickup for data recovery jobs?",
@@ -101,7 +101,7 @@ const FAQS: FAQ[] = [
 
 const COMPARISON = [
   ["Free diagnosis",                 "Yes - 30 min, written quote",            "AED 379 / AED 999 evaluation fee"],
-  ["Logical recovery starting price","AED 400",                                 "Refused - refers to third party"],
+  ["Logical recovery starting price","AED 299",                                 "Refused - refers to third party"],
   ["T2 recovery",                    "AED 1,200",                               "Refused - refers to third party"],
   ["Apple Silicon recovery",         "AED 1,500",                               "Refused - refers to third party"],
   ["Same-hour emergency pickup",     "Yes",                                      "No, customer must courier"],
@@ -122,9 +122,9 @@ export default function MacBookDataRecovery() {
 
   useSeo(
     {
-      title: "MacBook Data Recovery Dubai - From AED 400",
+      title: "MacBook Data Recovery Dubai - From AED 299",
       description:
-        "MacBook data recovery Dubai from AED 400. Dead board, water damage, T2 & Apple Silicon, deleted files. Free diagnosis. 60-90% recovery rates. 055 741 3706.",
+        "MacBook data recovery Dubai from AED 299. Dead board, water damage, T2 & Apple Silicon, deleted files. Free diagnosis. 60-90% recovery rates. 055 741 3706.",
       path: "/macbook-data-recovery-dubai",
     },
     [
@@ -132,7 +132,7 @@ export default function MacBookDataRecovery() {
       organization(),
       serviceSchema({
         name: "MacBook Data Recovery Dubai",
-        price: 400,
+        price: 299,
         timeline: "24 hours to 7 days",
         warranty: "P7D",
         url: "/macbook-data-recovery-dubai",
@@ -152,17 +152,17 @@ export default function MacBookDataRecovery() {
         variant="service"
         eyebrow="MacBook data recovery"
         title="MacBook Data Recovery Dubai - From Dead or Damaged Macs"
-        subtitle="Dead logic board, water-damaged SSD, deleted files, T2 and Apple Silicon NAND recovery. Free diagnosis. From AED 400. Honest success rates published below."
-        startingPrice={400}
+        subtitle="Dead logic board, water-damaged SSD, deleted files, T2 and Apple Silicon NAND recovery. Free diagnosis. From AED 299. Honest success rates published below."
+        startingPrice={299}
         timeline="24 hours - 7 days"
       >
         <PageMeta author="Shafiq Ahmed, Lead MacBook Technician" />
       </Hero>
 
       {/* Answer-first capsule (AEO/BLUF) */}
-      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook data recovery", startingPrice: 700, timeline: "1 to 3 days" })} />
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook data recovery", startingPrice: 299, timeline: "1 to 3 days" })} />
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={15} />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -177,7 +177,7 @@ export default function MacBookDataRecovery() {
           {/* Intro */}
           <section>
             <LinkifyProse selfHref="/macbook-data-recovery-dubai"><p className="text-[17px] text-text leading-relaxed">
-              MacBook data recovery in Dubai starts at AED 400 for logical recovery (deleted files, formatted drives, corrupted folders) and goes up to AED 2,000 for complex board-level multi-chip work on Apple Silicon. The workshop has recovered 1,200+ MacBooks since 2004 - Intel SSDs, T2-encrypted drives, M1/M2/M3 NAND chips, water-damaged blade SSDs. Free 30-minute diagnosis, honest success rates, and a file preview before any payment is taken. No recovery, no charge for the labour - only the genuine parts cost (typically AED 0-200 for forensic media). T2 and Apple Silicon recovery has real limits because of secure-enclave encryption - the section below explains exactly what those limits are.
+              MacBook data recovery in Dubai starts at AED 299 for logical recovery (deleted files, formatted drives, corrupted folders) and goes up to AED 2,000 for complex board-level multi-chip work on Apple Silicon. The workshop has recovered 1,200+ MacBooks since 2004 - Intel SSDs, T2-encrypted drives, M1/M2/M3 NAND chips, water-damaged blade SSDs. Free 30-minute diagnosis, honest success rates, and a file preview before any payment is taken. No recovery, no charge for the labour - only the genuine parts cost (typically AED 0-200 for forensic media). T2 and Apple Silicon recovery has real limits because of secure-enclave encryption - the section below explains exactly what those limits are.
             </p></LinkifyProse>
           </section>
 
@@ -279,7 +279,7 @@ export default function MacBookDataRecovery() {
 
           {/* Pricing recap */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md">Data recovery cost in Dubai - transparent pricing</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">MacBook Data Recovery Dubai. Transparent Pricing</h2>
             <PricingTable tone="dark" service="Data recovery" rows={PRICING} />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch] mono">
               Final price confirmed after the free 30-minute diagnosis. No-recovery-no-labour-charge applies on every job.
@@ -288,7 +288,7 @@ export default function MacBookDataRecovery() {
 
           <QuoteBand
             service="MacBook Data Recovery"
-            startingPrice={400}
+            startingPrice={299}
             timeline="24 hours - 7 days"
             whatsappMessage="Hi Shafiq, MacBook data recovery quote please. Model + what happened: "
           />
@@ -306,7 +306,7 @@ export default function MacBookDataRecovery() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">When DIY makes sense - and when it doesn't</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">Try it yourself first</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Time Machine restore - free, official, works for 95% of accidental-delete cases.</li>
@@ -361,7 +361,7 @@ export default function MacBookDataRecovery() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real data-recovery reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid tone="dark" reviews={reviews} />
           </section>
@@ -385,8 +385,8 @@ export default function MacBookDataRecovery() {
           <section>
             <h2 className="text-[22px] mb-md">More on Mac data</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: The Time Machine backup guide every MacBook owner needs</a></li>
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026">Blog: Why M1/M2/M3 data recovery is harder - and what to do about it</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026/">Blog: The Time Machine backup guide every MacBook owner needs</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/data-recovery-broken-macbook-2026/">Blog: Why M1/M2/M3 data recovery is harder - and what to do about it</a></li>
             </ul>
           </section>
 
@@ -401,7 +401,6 @@ export default function MacBookDataRecovery() {
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Files trapped on a dead MacBook? Free diagnosis - quote in 30 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Stop using the MacBook. WhatsApp the model and what happened. Free 30-minute diagnosis with honest success rate before any payment.
@@ -423,7 +422,7 @@ export default function MacBookDataRecovery() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-data-recovery-dubai" />
     </section>
     <RelatedArticles path="/macbook-data-recovery-dubai" />

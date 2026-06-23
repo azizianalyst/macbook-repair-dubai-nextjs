@@ -11,6 +11,9 @@ import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { RelatedServices } from "@/components/blocks/RelatedServices";
+import { conversionSiblings } from "@/lib/related-services";
 import { TradeInEstimator } from "@/components/blocks/TradeInEstimator";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -97,7 +100,7 @@ const buyServiceLd = {
 
 const CRUMBS = [
   { name: "Home", path: "/" },
-  { name: "Apple Repair", path: "/apple-repair-dubai" },
+  { name: "Sell MacBook", path: "/sell-macbook-dubai" },
   { name: "Sell a Faulty MacBook", path: PATH },
 ];
 
@@ -277,6 +280,11 @@ export default function SellFaultyMacBookDubai() {
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
       </section>
 
+      {/* More options, sell / trade-in / protect (cross-links the conversion cluster) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <RelatedServices items={conversionSiblings("/sell-faulty-macbook-dubai")} tone="dark" heading="More ways we can help" />
+      </section>
+
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Across Dubai - we come to you</h2>
@@ -286,7 +294,6 @@ export default function SellFaultyMacBookDubai() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Turn a broken Apple device into cash today</h2>
           <p className="text-text-muted text-[16px] max-w-[62ch]">
@@ -309,6 +316,7 @@ export default function SellFaultyMacBookDubai() {
         </div>
       </section>
       </div>
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

@@ -16,9 +16,11 @@ export interface QuickAnswerProps {
   tone?: "light" | "dark";
   /** Extra classes on the outer section — lets a page embed the block inside its own grid */
   className?: string;
+  /** Extra classes on the inner card — lets a page match surrounding card elevation/radius */
+  cardClassName?: string;
 }
 
-export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light", className }: QuickAnswerProps) {
+export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light", className, cardClassName }: QuickAnswerProps) {
   const dark = tone === "dark";
   return (
     <section
@@ -30,6 +32,7 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
         className={cn(
           "border-l-4 rounded-md p-lg max-w-[72ch] h-full",
           dark ? "border border-border border-l-4 border-l-accent bg-bg-card" : "bg-bg-alt border-primary",
+          cardClassName,
         )}
         itemScope
         itemType="https://schema.org/Question"
@@ -45,7 +48,7 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
           itemScope
           itemType="https://schema.org/Answer"
         >
-          <p className={cn("text-[10px] uppercase tracking-wider mono mb-xs", dark ? "text-text-faint" : "text-text-faint")}>
+          <p className={cn("text-[12px] uppercase tracking-wider mono mb-xs", dark ? "text-accent" : "text-accent")}>
             {label}
           </p>
           <div
@@ -76,7 +79,9 @@ export function deriveServiceQuickAnswer(opts: {
   return {
     question: `How much does ${opts.serviceName} in Dubai cost?`,
     answer:
-      `${opts.serviceName} in Dubai starts from AED ${opts.startingPrice}. ` +
+      (opts.startingPrice > 0
+        ? `${opts.serviceName} in Dubai starts from AED ${opts.startingPrice} - a starting price for the simplest model and fault. Your exact price is free to get and confirmed after we check your device's model and condition. `
+        : `${opts.serviceName} in Dubai starts with a free diagnosis - we confirm the exact price before any work. `) +
       `Typical turnaround: ${opts.timeline}. ` +
       `All repairs include ${warrantyClause(warrantyDays)} on parts and labour, ` +
       `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
@@ -90,7 +95,7 @@ export function deriveFamilyQuickAnswer(opts: {
   return {
     question: `How much does ${opts.family} repair in Dubai cost?`,
     answer:
-      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} with a written warranty of up to 12 months. ` +
+      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} - a starting price; your exact quote is free and confirmed after we check your model and its condition. Written warranty up to 12 months. ` +
       `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };

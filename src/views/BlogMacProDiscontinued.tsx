@@ -9,6 +9,17 @@ export default function BlogMacProDiscontinued() {
       seoTitle="Apple Discontinued the Mac Pro - What to Buy in 2026"
       seoDescription="March 2026: Apple killed the Mac Pro. The real alternatives - Mac Studio M3 Ultra, used 2019 Mac Pro, eGPU options - plus our service plan for owners."
       path="/blog/apple-mac-pro-discontinued-what-now"
+      wide
+      toc={[
+        { id: "why-discontinued", label: "Why Apple discontinued it" },
+        { id: "studio-ultra", label: "Mac Studio M3 Ultra" },
+        { id: "still-only-pcie", label: "Still the only PCIe Mac" },
+        { id: "used-prices", label: "Used 2019 prices in Dubai" },
+        { id: "workflows-needing", label: "Workflows that still need it" },
+        { id: "egpu-options", label: "External GPU options" },
+        { id: "service-availability", label: "Service availability" },
+        { id: "we-service-all", label: "We service all Mac Pros" },
+      ]}
       category="Industry · Mac Pro"
       h1="Apple Discontinued the Mac Pro - Your 2026 Alternatives"
       hook="March 2026 - Apple killed the Mac Pro. Here's what to buy instead."
@@ -20,7 +31,7 @@ export default function BlogMacProDiscontinued() {
       featuredImageAlt="Apple Mac Pro discontinued 2026 - alternatives Dubai"
       body={
         <>
-          <h2>Why Apple discontinued the Mac Pro</h2>
+          <h2 id="why-discontinued">Apple Mac Pro Discontinued. Why Apple discontinued the Mac Pro</h2>
           <p>
             Apple shipped the last Mac Pro on 11 March 2026 - a 7-year run that started with the 2019 Intel
             tower and ended with the 2023 M2 Ultra refresh. Three reasons drove the decision:
@@ -31,7 +42,7 @@ export default function BlogMacProDiscontinued() {
             <li><strong>PCIe is dead on Apple Silicon:</strong> Apple Silicon's unified memory architecture cannot expose PCIe lanes to third-party GPUs. The Mac Pro's tower form factor became symbolic, not functional.</li>
           </ul>
 
-          <h2>Mac Studio M3 Ultra - the new top Mac</h2>
+          <h2 id="studio-ultra">Mac Studio M3 Ultra - the new top Mac</h2>
           <p>
             Apple is positioning the Mac Studio M3 Ultra as the replacement. Spec-for-spec it does match:
           </p>
@@ -53,7 +64,7 @@ export default function BlogMacProDiscontinued() {
             the better buy. It draws 480W vs the Mac Pro's 1,280W, runs silent, and fits on a desk shelf.
           </p>
 
-          <h2>Mac Pro 2019 Intel - still the only Mac with PCIe (worth keeping)</h2>
+          <h2 id="still-only-pcie">Mac Pro 2019 Intel - still the only Mac with PCIe (worth keeping)</h2>
           <p>
             If your workflow needs PCIe cards - RED Rocket, Avid Pro Tools HDX, AJA Kona, Decklink 8K, Afterburner,
             Magma chassis - the 2019 Intel Mac Pro is the <strong>only</strong> Mac that supports them.
@@ -66,7 +77,7 @@ export default function BlogMacProDiscontinued() {
             machine.
           </p>
 
-          <h2>Used Mac Pro 2019 prices in Dubai (still high)</h2>
+          <h2 id="used-prices">Used Mac Pro 2019 prices in Dubai (still high)</h2>
           <BlogPriceTable
             caption="Used Mac Pro 2019 - Dubai market April 2026 (Dubizzle, Cartlow, Carousell)"
             headers={["Configuration", "Asking range", "Realistic sale price"]}
@@ -82,7 +93,7 @@ export default function BlogMacProDiscontinued() {
             from PCIe-locked workflows steady.
           </p>
 
-          <h2>Workflows that still need a Mac Pro alternative</h2>
+          <h2 id="workflows-needing">Workflows that still need a Mac Pro alternative</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Pro Tools HDX (Avid):</strong> 256+ track sessions on PCIe DSP cards. No Mac Studio support.</li>
             <li><strong>Broadcast video I/O (AJA, Blackmagic Decklink 8K):</strong> Some have TB3/TB5 boxes - many don't.</li>
@@ -91,14 +102,14 @@ export default function BlogMacProDiscontinued() {
             <li><strong>10GbE + multi-NVMe RAID studios:</strong> Sonnet Echo Express III chassis is one option, but native PCIe is more reliable.</li>
           </ul>
 
-          <h2>External GPU options (limited on Apple Silicon)</h2>
+          <h2 id="egpu-options">External GPU options (limited on Apple Silicon)</h2>
           <p>
             Bad news for hopefuls: macOS 14 dropped eGPU support entirely on Apple Silicon. The 2019 Intel
             Mac Pro can still drive a Sonnet Breakaway with an AMD W6800 over Thunderbolt 3 - but it's
             slower than the internal MPX module and not officially supported by Apple in 2026.
           </p>
 
-          <h2>Service availability for existing Mac Pro owners</h2>
+          <h2 id="service-availability">Service availability for existing Mac Pro owners</h2>
           <p>
             Apple has confirmed parts availability for the 2019 Mac Pro through <strong>2026-12-31</strong>.
             After that, Apple Stores will refuse repairs and Apple Self Service Repair will stop shipping
@@ -111,7 +122,7 @@ export default function BlogMacProDiscontinued() {
             AED 18,000+.
           </p>
 
-          <h2>We service all Mac Pros - here's what we do</h2>
+          <h2 id="we-service-all">We service all Mac Pros - here's what we do</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>2008-2012 cheese-grater:</strong> PSU rebuilds, RAM riser fixes, GPU flashing, SSD adapters. AED 350-800.</li>
             <li><strong>2013 cylinder ("trash can"):</strong> GPU thermal repaste (mandatory at 8 years), fan rebuilds, dual D300/D500/D700 swap. AED 600-1,400.</li>

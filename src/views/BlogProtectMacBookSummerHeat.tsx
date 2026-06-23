@@ -9,6 +9,18 @@ export default function BlogProtectMacBookSummerHeat() {
       seoTitle="Protect Your MacBook in Dubai 50°C Summer Heat - 2026"
       seoDescription="Apple's MacBook safe range is 10-35°C, and Dubai breaks that three months a year. Heat brings battery damage and throttling - how to protect your Mac."
       path="/blog/protect-macbook-dubai-summer-heat"
+      wide
+      toc={[
+        { id: "apple-temp-limits", label: "Apple's temperature limits" },
+        { id: "above-35c", label: "Above 35°C" },
+        { id: "above-45c", label: "Above 45°C" },
+        { id: "never-in-car", label: "Never leave in a car" },
+        { id: "indoor-peak-heat", label: "Indoor use in peak heat" },
+        { id: "avoid-sunlight", label: "Avoid direct sunlight" },
+        { id: "battery-storage", label: "Battery storage at high temps" },
+        { id: "if-overheated", label: "If your MacBook overheated" },
+        { id: "common-heat-damage", label: "Common Dubai heat damage" },
+      ]}
       category="Seasonal · MacBook care"
       h1="Protect Your MacBook in Dubai's 50°C Summer Heat"
       hook="Apple says safe operating range is 10-35°C. Dubai exceeds this 3 months a year. Here's how to protect your Mac."
@@ -17,10 +29,10 @@ export default function BlogProtectMacBookSummerHeat() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={9}
-      featuredImageAlt="MacBook overheating in Dubai summer heat - thermal damage protection guide"
+      featuredImageAlt="Protect MacBook Dubai Summer Heat. MacBook overheating in Dubai summer heat - thermal damage protection guide"
       body={
         <>
-          <h2>Apple's official MacBook temperature limits</h2>
+          <h2 id="apple-temp-limits">Protect MacBook Dubai Summer Heat. Apple's official MacBook temperature limits</h2>
           <p>
             Apple publishes these spec ranges in every MacBook user guide and on{" "}
             <a href="https://support.apple.com/en-us/HT201640" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">support.apple.com</a>:
@@ -33,7 +45,7 @@ export default function BlogProtectMacBookSummerHeat() {
           </ul>
           <p>Dubai daytime temperatures from June through September average <strong>40-45°C</strong> in the shade and <strong>50°C+</strong> in direct sun - already past Apple's published operating ceiling.</p>
 
-          <h2>What happens above 35°C (thermal throttling, battery damage)</h2>
+          <h2 id="above-35c">What happens above 35°C (thermal throttling, battery damage)</h2>
           <p>
             Apple Silicon SoCs (M1 → M5) start aggressive frequency reduction once the SoC die hits ~95-100°C. In a 35°C ambient, that ceiling is reached within 4-6 minutes of sustained workload. You'll notice:
           </p>
@@ -44,7 +56,7 @@ export default function BlogProtectMacBookSummerHeat() {
             <li>Lithium-ion calendar ageing roughly doubles for each 10°C above 25°C - a battery used at 40°C ages roughly 2× faster than at 25°C.</li>
           </ul>
 
-          <h2>What happens above 45°C (permanent damage risk)</h2>
+          <h2 id="above-45c">What happens above 45°C (permanent damage risk)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Battery cell venting</strong> - pouch swelling becomes possible at 50-60°C cell temp; we replace ~12 swollen MacBook batteries per month June-September.</li>
             <li><strong>Solder fatigue</strong> on BGA joints - repeated thermal cycling above 45°C accelerates micro-cracking around the SoC.</li>
@@ -52,22 +64,22 @@ export default function BlogProtectMacBookSummerHeat() {
             <li><strong>Glue softening</strong> on the Pro 14/16 display assembly - tabs detach, flex cables loosen.</li>
           </ul>
 
-          <h2>Tip 1 - never leave it in a parked car</h2>
+          <h2 id="never-in-car">Tip 1 - never leave it in a parked car</h2>
           <p>
             A car cabin in Dubai parked in direct sun reaches <strong>70-80°C</strong> within 30 minutes. We've recovered MacBooks from cars where the trackpad glass had crazed (heat-fractured) and the battery pouch had visibly swollen. <em>Even the boot/trunk hits 60°C+.</em> Never leave a MacBook in a vehicle June-September, even briefly.
           </p>
 
-          <h2>Tip 2 - indoor use during peak heat (12 pm - 4 pm)</h2>
+          <h2 id="indoor-peak-heat">Tip 2 - indoor use during peak heat (12 pm - 4 pm)</h2>
           <p>
             Move heavy workloads (Final Cut export, Xcode build, Lightroom batch) to evening hours when ambient drops below 35°C. Use a stand with airflow underneath (lifts the chassis off a desk by 2-3 cm) - surface temps drop 4-6°C versus flat-on-desk use.
           </p>
 
-          <h2>Tip 3 - avoid direct sunlight</h2>
+          <h2 id="avoid-sunlight">Tip 3 - avoid direct sunlight</h2>
           <p>
             A MacBook lid in direct UAE sun reaches surface temperatures of 65-70°C within 10 minutes. The aluminium chassis is an efficient solar heat sink. Café terraces and pool-side use are the most common burn-in scenario we see.
           </p>
 
-          <h2>Battery storage at high temps (degrades 30%/year)</h2>
+          <h2 id="battery-storage">Battery storage at high temps (degrades 30%/year)</h2>
           <p>
             Apple's battery university research (and the broader Battery University data) shows lithium-ion stored at:
           </p>
@@ -85,7 +97,7 @@ export default function BlogProtectMacBookSummerHeat() {
             For long-term storage (more than 1 month), Apple recommends ~50% charge, powered off, in a cool dry place - practically a 22-25°C air-conditioned room in Dubai.
           </p>
 
-          <h2>What to do if your MacBook overheated</h2>
+          <h2 id="if-overheated">What to do if your MacBook overheated</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Move to AC immediately. <em>Do not</em> put it in the fridge or use ice packs - condensation will short the board.</li>
             <li>Power off and let it cool to room temperature for 1-2 hours before powering on.</li>
@@ -94,7 +106,7 @@ export default function BlogProtectMacBookSummerHeat() {
             <li>Run an Apple Diagnostics scan (<code className="px-1 rounded bg-bg-card mono text-[13px]">Power on while holding D</code>).</li>
           </ol>
 
-          <h2>Common Dubai heat damage we see</h2>
+          <h2 id="common-heat-damage">Common Dubai heat damage we see</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Swollen MacBook Air M1/M2 batteries</strong> - most common July-September. AED 450 to replace.</li>
             <li><strong>Trackpad cracked from below</strong> by swollen battery pushing up - usually requires battery + top case.</li>

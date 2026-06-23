@@ -8,6 +8,17 @@ export default function BlogDubaiShoppingFestivalApple() {
       seoTitle="Dubai Shopping Festival Apple Deals 2026: When to Buy"
       seoDescription="DSF, White Friday, Apple Education: when does Apple actually discount in Dubai? Reseller deals, tax-free shopping, trade-in and the months you should not buy."
       path="/blog/dubai-shopping-festival-apple-deals"
+      wide
+      toc={[
+        { id: "dsf-discounts", label: "DSF historical discounts" },
+        { id: "white-friday", label: "White Friday deals" },
+        { id: "tax-free-shopping", label: "Tax-free shopping (VAT refund)" },
+        { id: "when-not-to-buy", label: "When not to buy" },
+        { id: "price-stability", label: "Apple's price stability" },
+        { id: "resellers", label: "Resellers cheaper" },
+        { id: "trade-in-events", label: "Trade-in events" },
+        { id: "education-pricing", label: "Education pricing" },
+      ]}
       category="Seasonal · Buying"
       h1="Dubai Shopping Festival Apple Deals - Best Time to Buy"
       hook="DSF (December-January) and Black Friday (November) - when Apple actually discounts."
@@ -19,7 +30,7 @@ export default function BlogDubaiShoppingFestivalApple() {
       featuredImageAlt="Dubai Shopping Festival Apple deals - when to buy MacBook iPhone iPad in Dubai"
       body={
         <>
-          <h2>DSF historical Apple discounts (2022-2026 trend)</h2>
+          <h2 id="dsf-discounts">Dubai Shopping Festival Apple Deals. DSF historical Apple discounts (2022-2026 trend)</h2>
           <p>
             Apple Store Dubai (Mall of the Emirates / Dubai Mall) almost never discounts. What you see during Dubai Shopping Festival is the authorised reseller channel cutting price to clear stock and chase share. Typical observed discounts:
           </p>
@@ -33,12 +44,12 @@ export default function BlogDubaiShoppingFestivalApple() {
             <li><strong>Bundles</strong> (iPhone + case/charger, MacBook + AppleCare): often the real saving, AED 400-800 effective.</li>
           </ul>
 
-          <h2>White Friday / Black Friday Apple Store Dubai</h2>
+          <h2 id="white-friday">White Friday / Black Friday Apple Store Dubai</h2>
           <p>
             "White Friday" is the UAE rebrand of Black Friday - last Friday of November and the surrounding 7-10 days. Resellers (Sharaf DG, Jumbo, Carrefour, Lulu, Amazon.ae, noon.com) push the same hardware as DSF but with shorter, sharper discounts. Often the best window of the year for accessories (Magic Keyboard, Magic Mouse, USB-C chargers).
           </p>
 
-          <h2>Tax-free shopping for tourists (5% VAT refund)</h2>
+          <h2 id="tax-free-shopping">Tax-free shopping for tourists (5% VAT refund)</h2>
           <p>
             UAE charges 5% VAT on Apple products. Tourists can claim this back via Planet Tax Free at Dubai/Abu Dhabi/Sharjah airport on departure, on minimum AED 250 spend per receipt. Process:
           </p>
@@ -51,19 +62,19 @@ export default function BlogDubaiShoppingFestivalApple() {
             On a MacBook Pro 16" purchase that's a real <strong>AED 600-700 back</strong> - worth the 10 minutes at the airport.
           </p>
 
-          <h2>When NOT to buy (Aug-early Sept iPhone launch window)</h2>
+          <h2 id="when-not-to-buy">When NOT to buy (Aug-early Sept iPhone launch window)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Aug 1 - Sept 20:</strong> Apple announces new iPhone in mid-September. If you buy current iPhone in August, it depreciates 15-20% the day Tim Cook walks on stage.</li>
             <li><strong>Late Oct - early Nov:</strong> M-series MacBook refresh window. Don't buy a "current" MacBook Pro in October - wait for the M5/M6 announcement.</li>
             <li><strong>March-early April:</strong> historically iPad Pro / iPad Air refresh window. Same logic.</li>
           </ul>
 
-          <h2>Apple's price stability (rare discounts vs Android)</h2>
+          <h2 id="price-stability">Apple's price stability (rare discounts vs Android)</h2>
           <p>
             Apple holds resale value precisely because Apple itself doesn't discount. A 1-year-old iPhone 16 Pro retains ~75% of its purchase price; a 1-year-old Samsung S25 Ultra retains ~50%. The flip side: you rarely find genuine Apple Store discounts. The "deals" are almost always reseller promotions.
           </p>
 
-          <h2>Resellers (Sharaf DG, Jumbo, Carrefour) - actually cheaper</h2>
+          <h2 id="resellers">Resellers (Sharaf DG, Jumbo, Carrefour) - actually cheaper</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Sharaf DG:</strong> consistently AED 100-500 cheaper than Apple Store. 0% instalments via FAB, Mashreq, ENBD. Genuine UAE Apple warranty.</li>
             <li><strong>Jumbo Electronics:</strong> similar pricing, sometimes deeper iPad discounts. Service network across UAE.</li>
@@ -73,7 +84,7 @@ export default function BlogDubaiShoppingFestivalApple() {
             <li><strong>Virgin Megastore:</strong> premium positioning, occasional aggressive bundles.</li>
           </ul>
 
-          <h2>Trade-in events</h2>
+          <h2 id="trade-in-events">Trade-in events</h2>
           <p>
             Apple Trade-In is open year-round in UAE but the values bump 10-20% during DSF and back-to-school. Resellers also run "trade your old iPhone" campaigns:
           </p>
@@ -87,7 +98,7 @@ export default function BlogDubaiShoppingFestivalApple() {
             </li>
           </ul>
 
-          <h2>Education pricing - discount you can use year-round</h2>
+          <h2 id="education-pricing">Education pricing - discount you can use year-round</h2>
           <p>
             If you're a student, parent of a student, or a teacher at any UAE school/university, Apple Education pricing is available 365 days. It's not a "deal" per se - it's a permanent 6-10% discount that beats most DSF reseller offers and stacks with the back-to-school gift-card promo (July-September). Verify via UNiDAYS or your edu email.
           </p>

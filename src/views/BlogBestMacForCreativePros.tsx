@@ -9,6 +9,18 @@ export default function BlogBestMacForCreativePros() {
       seoTitle="Best Mac for Creative Pros in Dubai 2026: Designer Picks"
       seoDescription="Best Mac for designers, editors and 3D artists in Dubai 2026. Photoshop = Air, Premiere = Pro 14, DaVinci 4K = Mac Studio, with RAM sizing per craft."
       path="/blog/best-mac-for-creative-pros-dubai"
+      wide
+      toc={[
+        { id: "quick-answer-discipline", label: "Quick answer per discipline" },
+        { id: "photoshop-air", label: "Photoshop on MacBook Air" },
+        { id: "premiere-final-cut", label: "Premiere / Final Cut" },
+        { id: "davinci-mac-studio", label: "DaVinci Resolve 4K" },
+        { id: "8k-video", label: "8K video" },
+        { id: "audio-logic-pro", label: "Audio production" },
+        { id: "3d-rendering", label: "3D rendering" },
+        { id: "external-displays", label: "External display picks" },
+        { id: "ram-sizing", label: "RAM sizing cheat sheet" },
+      ]}
       category="Buying guide · Creative"
       h1="Best Mac for Creative Pros in Dubai 2026"
       hook="Photoshop = Air enough. Premiere = Pro 14. DaVinci 4K = Mac Studio. Here's the breakdown."
@@ -17,10 +29,10 @@ export default function BlogBestMacForCreativePros() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={11}
-      featuredImageAlt="Best Mac for creative professionals Dubai 2026"
+      featuredImageAlt="Best Mac For Creative Pros. Best Mac for creative professionals Dubai 2026"
       body={
         <>
-          <h2>Quick answer per discipline</h2>
+          <h2 id="quick-answer-discipline">Best Mac For Creative Pros. Quick answer per discipline</h2>
           <BlogPriceTable
             caption="Best Mac per creative discipline - Dubai April 2026"
             headers={["Discipline", "Recommended Mac", "Min RAM", "UAE price"]}
@@ -35,7 +47,7 @@ export default function BlogBestMacForCreativePros() {
             ]}
           />
 
-          <h2>Photoshop / Illustrator / InDesign - MacBook Air M4 enough</h2>
+          <h2 id="photoshop-air">Photoshop / Illustrator / InDesign - MacBook Air M4 enough</h2>
           <p>
             The Adobe trio (PS, AI, ID) runs comfortably on a MacBook Air M4 16GB. We tested it with
             our standard creative load: 3 Photoshop documents (each 200MB), Illustrator open with a
@@ -49,7 +61,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>Verdict:</strong> Save AED 3,000-4,000 by buying Air, spend savings on Wacom + Studio Display.</li>
           </ul>
 
-          <h2>Premiere / Final Cut - MacBook Pro 14″ M4 minimum</h2>
+          <h2 id="premiere-final-cut">Premiere / Final Cut - MacBook Pro 14″ M4 minimum</h2>
           <p>
             For video editing beyond short social cuts, you need active cooling. Air M4 will throttle
             on a 10-minute 4K timeline export. The MacBook Pro 14″ M4 base (AED 8,999) holds full chip
@@ -64,7 +76,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>Display:</strong> XDR mini-LED is a real upgrade for HDR grading vs Air.</li>
           </ul>
 
-          <h2>DaVinci Resolve 4K - Mac Studio M4 Max territory</h2>
+          <h2 id="davinci-mac-studio">DaVinci Resolve 4K - Mac Studio M4 Max territory</h2>
           <p>
             DaVinci Resolve uses the GPU heavily for colour grading and Fusion compositing. The MacBook
             Pro 14 M4 Max (AED 13,500) handles it, but for sustained colour grading sessions Mac Studio
@@ -77,7 +89,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>Cheaper for the same chip</strong> - Mac Studio M4 Max base (AED 14,499) is AED 1,000 less than Pro 14 M4 Max (AED 15,499) for similar specs.</li>
           </ul>
 
-          <h2>8K video - Mac Studio M3 Ultra (or wait for M5 Ultra)</h2>
+          <h2 id="8k-video">8K video - Mac Studio M3 Ultra (or wait for M5 Ultra)</h2>
           <p>
             For 8K timelines (RED, ARRI, Sony VENICE, Blackmagic 12K), only M3 Ultra and (when released
             late 2026) M5 Ultra make sense. The chip needs 24-core CPU and 76-core GPU minimum to
@@ -89,7 +101,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>Storage:</strong> Internal 2-4TB + 12-bay Promise Pegasus for media. Internal 8TB upgrade is AED 9,000 extra - buy Pegasus instead.</li>
           </ul>
 
-          <h2>Audio production (Logic Pro) - MacBook Pro M4 Pro</h2>
+          <h2 id="audio-logic-pro">Audio production (Logic Pro) - MacBook Pro M4 Pro</h2>
           <p>
             Logic Pro and Pro Tools are surprisingly RAM-hungry once you load orchestral sample
             libraries (Spitfire BBC, Native Instruments Komplete). The M4 Pro 24GB is the sweet spot.
@@ -102,7 +114,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>Audio interface:</strong> All work via USB-C; no Thunderbolt-specific bottlenecks for audio.</li>
           </ul>
 
-          <h2>3D rendering (Cinema 4D, Blender, Octane) - Mac Studio Ultra</h2>
+          <h2 id="3d-rendering">3D rendering (Cinema 4D, Blender, Octane) - Mac Studio Ultra</h2>
           <p>
             3D rendering is GPU-bound, so more GPU cores = linearly faster renders. Mac Studio Ultra
             (76 GPU cores) renders Blender Cycles scenes ~2× faster than M4 Max 40 GPU cores.
@@ -115,7 +127,7 @@ export default function BlogBestMacForCreativePros() {
             <li><strong>RAM:</strong> 64GB minimum for working scenes, 128GB for film-grade complexity.</li>
           </ul>
 
-          <h2>External display recommendations</h2>
+          <h2 id="external-displays">External display recommendations</h2>
           <BlogPriceTable
             caption="External displays for Mac creatives"
             headers={["Display", "Resolution", "Price (AED)", "Best for"]}
@@ -129,7 +141,7 @@ export default function BlogBestMacForCreativePros() {
             ]}
           />
 
-          <h2>RAM sizing per workflow - the cheat sheet</h2>
+          <h2 id="ram-sizing">RAM sizing per workflow - the cheat sheet</h2>
           <BlogPriceTable
             caption="RAM by workflow - minimum / recommended / pro"
             headers={["Workflow", "Minimum", "Recommended", "Pro"]}

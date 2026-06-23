@@ -19,7 +19,7 @@ export default function IMacFullDiagnostic() {
         { name: "Free Diagnostic", path: "/imac-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac diagnostics across all years" }}
-      serviceName="iMac Free Full Diagnostic"
+      serviceName="iMac Free Full Diagnostic Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -50,7 +50,7 @@ export default function IMacFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard 12-month warranty.",
+        "Any repair you book carries our standard warranty of up to 12 months.",
         "Home visit slot is genuinely free - no minimum spend, no obligation.",
       ]}
       faqs={[

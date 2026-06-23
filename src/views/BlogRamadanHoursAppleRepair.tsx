@@ -9,6 +9,15 @@ export default function BlogRamadanHoursAppleRepair() {
       seoTitle="Ramadan Hours - Apple Repair Dubai 2026 (Feb 17 - Mar 19)"
       seoDescription="Ramadan 2026 hours for our Dubai workshop: opening times, the iftar pause, pickup and delivery timing, plus how Apple Store Dubai Mall hours change."
       path="/blog/ramadan-hours-apple-repair-dubai"
+      wide
+      toc={[
+        { id: "standard-vs-ramadan", label: "Standard vs Ramadan hours" },
+        { id: "iftar-timing", label: "Iftar timing" },
+        { id: "pickup-delivery", label: "Pickup and delivery" },
+        { id: "apple-store-hours", label: "Apple Store Dubai Mall hours" },
+        { id: "mall-traffic", label: "Mall traffic considerations" },
+        { id: "why-we-stay-open", label: "Why we stay open" },
+      ]}
       category="Seasonal · Hours"
       h1="Ramadan Hours - Apple Repair Dubai 2026"
       hook="Ramadan 2026 runs Feb 17 - March 19. Our hours adjust slightly. Here's what's different."
@@ -17,10 +26,10 @@ export default function BlogRamadanHoursAppleRepair() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={6}
-      featuredImageAlt="Ramadan 2026 working hours - MacBook Repair Dubai workshop schedule"
+      featuredImageAlt="Ramadan Hours Apple Repair Dubai. Ramadan 2026 working hours - MacBook Repair Dubai workshop schedule"
       body={
         <>
-          <h2>Standard hours vs Ramadan hours</h2>
+          <h2 id="standard-vs-ramadan">Ramadan Hours Apple Repair Dubai. Standard hours vs Ramadan hours</h2>
           <BlogPriceTable
             caption="Working hours - standard vs Ramadan 2026"
             headers={["Day", "Standard hours", "Ramadan 2026 hours", "Notes"]}
@@ -35,7 +44,7 @@ export default function BlogRamadanHoursAppleRepair() {
             ]}
           />
 
-          <h2>Iftar timing - workshop closed 5:30 - 7:30 pm</h2>
+          <h2 id="iftar-timing">Iftar timing - workshop closed 5:30 - 7:30 pm</h2>
           <p>
             During Ramadan 2026 (17 February - 19 March) the workshop closes for iftar from <strong>5:30 pm to 7:30 pm</strong> daily. Sunset (Maghrib) shifts from approximately 6:14 pm at the start of Ramadan to 6:33 pm by the end. The 2-hour window covers the call to prayer, breaking the fast, and Maghrib prayer.
           </p>
@@ -43,7 +52,7 @@ export default function BlogRamadanHoursAppleRepair() {
             If you arrive at the workshop during iftar hours, please use the WhatsApp number (<a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">+971 55 741 3706</a>) - a team member will message you back as soon as iftar ends and confirm a 7:30 pm or 8 pm window.
           </p>
 
-          <h2>Pickup / delivery during Ramadan</h2>
+          <h2 id="pickup-delivery">Pickup / delivery during Ramadan</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Morning slot:</strong> 10 am - 3 pm - pickup booked via WhatsApp, courier dispatched within 2 hours.</li>
             <li><strong>Iftar pause:</strong> no pickups 4 pm - 8 pm.</li>
@@ -53,7 +62,7 @@ export default function BlogRamadanHoursAppleRepair() {
             </li>
           </ul>
 
-          <h2>Apple Store Dubai Mall - Ramadan hours</h2>
+          <h2 id="apple-store-hours">Apple Store Dubai Mall - Ramadan hours</h2>
           <p>
             Apple Store at Dubai Mall typically operates extended evening hours during Ramadan to match mall traffic patterns:
           </p>
@@ -67,13 +76,13 @@ export default function BlogRamadanHoursAppleRepair() {
             <a href="https://www.apple.com/ae/retail/dubaimall/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">apple.com/ae</a> - Ramadan hours can shift mid-month.
           </p>
 
-          <h2>Mall traffic considerations</h2>
+          <h2 id="mall-traffic">Mall traffic considerations</h2>
           <p>
             Dubai Mall and Mall of the Emirates run their busiest week of the entire year during the last 10 days of Ramadan (around Eid shopping). Genius Bar wait times routinely exceed 2 hours. If you need a quick repair before Eid travel, our workshop in Dubai Media City has zero mall traffic and same-day turnaround on most repairs - see our{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">MacBook repair hub</Link>.
           </p>
 
-          <h2>Why we stay open during Ramadan</h2>
+          <h2 id="why-we-stay-open">Why we stay open during Ramadan</h2>
           <p>
             Our team has rotated Ramadan shifts since 2004. Customers depend on us for urgent repairs that can't wait a month - work laptops with deadlines, kids' school iPads, parents' iPhones for Eid travel. The split-shift schedule (morning + post-iftar) gives the team rest during the fast and serves customers when they're actually awake and out of the house.
           </p>

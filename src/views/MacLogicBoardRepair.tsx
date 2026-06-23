@@ -5,12 +5,12 @@ export default function MacLogicBoardRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini & Studio Logic Board Repair Dubai | 055 741 3706"
-      seoDescription="Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest). From AED 800."
+      seoDescription="Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest). From AED 299."
       path="/mac-logic-board-repair-dubai"
       eyebrow="Mac logic board repair"
       h1="Mac Mini & Studio Logic Board Repair Dubai"
       subtitle="We do real component-level repair on Mac Mini and Mac Studio boards: power-delivery MOSFETs, Thunderbolt controllers, USB controllers, capacitor failures. We will not pretend we can fix a failed M4 or M5 SoC chip - that's a board replacement, and we'll say so up front."
-      startingPrice={800}
+      startingPrice={299}
       timeline="3-5 days"
       whatsappPrefill="Hi, I need Mac logic board repair - model and symptoms:"
       breadcrumb={[
@@ -19,7 +19,7 @@ export default function MacLogicBoardRepair() {
         { name: "Logic Board Repair",  path: "/mac-logic-board-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac board-level micro-soldering" }}
-      serviceName="Mac Mini and Mac Studio Logic Board Repair"
+      serviceName="Mac Mini and Mac Studio Logic Board Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

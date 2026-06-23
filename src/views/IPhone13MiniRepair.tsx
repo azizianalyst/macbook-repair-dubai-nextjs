@@ -6,7 +6,7 @@ export default function IPhone13MiniRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Mini Repair Dubai - 5.4-inch OLED from AED 300 | 055 741 3706"
-      seoDescription="iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen AED 650, battery AED 300. Same-day, 12-month warranty."
+      seoDescription="iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen AED 650, battery AED 300. Same-day, warranty of up to 12 months."
       path="/iphone-13-mini-repair-dubai"
       eyebrow="iPhone 13 Mini (2021)"
       h1="iPhone 13 Mini Repair Dubai - Screen, Battery, Face ID"
@@ -20,7 +20,7 @@ export default function IPhone13MiniRepair() {
         { name: "iPhone 13 Mini",  path: "/iphone-13-mini-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 13 Mini Repair"
+      serviceName="iPhone 13 Mini Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

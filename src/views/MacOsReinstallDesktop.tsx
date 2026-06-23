@@ -19,7 +19,7 @@ export default function MacOsReinstallDesktop() {
         { name: "macOS Reinstall", path: "/mac-os-reinstall-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS installs and Apple Configurator revival" }}
-      serviceName="Mac Mini, Studio and Pro macOS Reinstall"
+      serviceName="Mac Mini, Studio and Pro macOS Reinstall Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -63,6 +63,8 @@ export default function MacOsReinstallDesktop() {
         { label: "Mac Performance Tune",  href: "/mac-performance-tune-dubai",  description: "If macOS is slow but you don't want a full reinstall." },
         { label: "Mac SSD Upgrade",       href: "/mac-ssd-upgrade-dubai",       description: "Pair with SSD upgrade where the model allows it." },
         { label: "Mac Full Diagnostic",   href: "/mac-full-diagnostic-dubai",   description: "Free check before deciding on a reinstall." },
+        { label: "MacBook macOS Reinstall", href: "/macos-reinstall-dubai",     description: "Same clean-install service for a MacBook." },
+        { label: "iMac macOS Reinstall",  href: "/imac-os-reinstall-dubai",     description: "Reinstalling on an iMac? We do those too." },
       ]}
       blogLink={{ label: "Apple Configurator revival - how we bring stuck M-series Macs back to life", href: "/blog/mac-mini-running-slow-fix" }}
     />

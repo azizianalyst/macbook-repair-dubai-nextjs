@@ -36,7 +36,7 @@ export function HeroSlider({ slides, intervalMs = 4000 }: { slides: HeroSlide[];
 
   return (
     <div
-      className="relative overflow-hidden rounded-xl border border-border shadow-lg bg-bg-card"
+      className="relative overflow-hidden rounded-xl shadow-lg bg-bg-card"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"

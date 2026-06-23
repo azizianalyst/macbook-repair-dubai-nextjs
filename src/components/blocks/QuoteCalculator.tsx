@@ -98,7 +98,7 @@ export function QuoteCalculator() {
   const waHref = `${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   return (
-    <div className="rounded-2xl border border-border bg-bg-card p-lg md:p-xl">
+    <div className="rounded-md border border-border bg-bg-card p-lg md:p-xl">
       <div className="grid gap-md sm:grid-cols-3">
         <label className="block">
           <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Device</span>
@@ -120,7 +120,7 @@ export function QuoteCalculator() {
         </label>
       </div>
 
-      <div className="mt-lg flex flex-col gap-md rounded-xl border border-accent/30 bg-accent/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-lg flex flex-col gap-md rounded-md border border-accent/30 bg-accent/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
           <Wallet size={22} className="mt-0.5 shrink-0 text-accent" aria-hidden />
           <div>

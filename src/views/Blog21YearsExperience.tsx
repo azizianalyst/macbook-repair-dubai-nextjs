@@ -9,6 +9,19 @@ export default function Blog21YearsExperience() {
       seoTitle="Why 21 Years of Apple Repair Experience Matters in 2026"
       seoDescription="40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
       path="/blog/why-21-years-experience-matters"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "founded-2004", label: "Founded 2004 lineup" },
+        { id: "models-serviced", label: "Models serviced over the years" },
+        { id: "component-level-era", label: "Post-2015 component-level era" },
+        { id: "failure-patterns", label: "Model-specific failure patterns" },
+        { id: "tools-built", label: "Tools we've built up" },
+        { id: "parts-network", label: "Parts network" },
+        { id: "team-continuity", label: "Team continuity" },
+        { id: "pop-up-shops", label: "Why pop-up shops can't compete" },
+        { id: "repair-quality", label: "What this means for quality" },
+      ]}
       category="Trust · About us"
       h1="Why 21 Years of Apple Repair Experience Matters"
       hook="Started October 2004. 40,000+ MacBooks fixed. Here's what longevity actually means for your repair."
@@ -17,10 +30,10 @@ export default function Blog21YearsExperience() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="MacBook Repair Dubai - 21 years of Apple repair experience since 2004"
+      featuredImageAlt="Why 21 Years Experience Matters. MacBook Repair Dubai - 21 years of Apple repair experience since 2004"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Why 21 Years Experience Matters. Quick answer</h2>
           <p>
             We opened on <strong>10 October 2004</strong>. Steve Jobs was still alive. The newest
             MacBook was the PowerBook G4. iPhone wouldn't exist for another three years. Twenty-one
@@ -28,7 +41,7 @@ export default function Blog21YearsExperience() {
             new shop can match.
           </p>
 
-          <h2>Founded 2004 - what was Apple's lineup then?</h2>
+          <h2 id="founded-2004">Founded 2004 - what was Apple's lineup then?</h2>
           <p>
             Our first repairs were on:
           </p>
@@ -45,7 +58,7 @@ export default function Blog21YearsExperience() {
             iPods.
           </p>
 
-          <h2>Models we've serviced across the years</h2>
+          <h2 id="models-serviced">Models we've serviced across the years</h2>
           <BlogPriceTable
             caption="Apple platforms we've serviced (with our years of experience on each)"
             headers={["Platform", "Apple introduced", "We started servicing", "Years of experience"]}
@@ -62,7 +75,7 @@ export default function Blog21YearsExperience() {
             ]}
           />
 
-          <h2>How Apple repair has changed (post-2015 component-level era)</h2>
+          <h2 id="component-level-era">How Apple repair has changed (post-2015 component-level era)</h2>
           <p>
             Pre-2015 Mac repair was largely modular - swap the screen, swap the keyboard, swap the
             HDD. Post-2015 Apple soldered RAM, glued batteries, paired Touch ID/Face ID modules to
@@ -77,7 +90,7 @@ export default function Blog21YearsExperience() {
             procedures for over years.
           </p>
 
-          <h2>Knowledge that takes years (model-specific failure patterns)</h2>
+          <h2 id="failure-patterns">Knowledge that takes years (model-specific failure patterns)</h2>
           <p>
             A few examples of pattern knowledge that only comes with high-volume + time:
           </p>
@@ -91,7 +104,7 @@ export default function Blog21YearsExperience() {
             <li><strong>iPad Pro M1/M2 backlight bleed</strong>: known seal failure at 18-24 months in heat - we re-seat the polariser at 60% the cost of a screen swap.</li>
           </ul>
 
-          <h2>Tools we've built up</h2>
+          <h2 id="tools-built">Tools we've built up</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>3 stereo inspection microscopes (Mantis Elite + Leica + AmScope).</li>
             <li>2 hot-air rework stations (Quick 861DW + JBC HAP-1B).</li>
@@ -107,7 +120,7 @@ export default function Blog21YearsExperience() {
             AED 5,000-15,000 of tools.
           </p>
 
-          <h2>Parts network</h2>
+          <h2 id="parts-network">Parts network</h2>
           <p>
             Real supplier relationships take years. Ours include:
           </p>
@@ -118,7 +131,7 @@ export default function Blog21YearsExperience() {
             <li><strong>Local UAE distributor</strong>: emergency stock of common parts, same-day delivery.</li>
           </ul>
 
-          <h2>Team continuity</h2>
+          <h2 id="team-continuity">Team continuity</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Shafiq</strong> - Senior MacBook technician, with us since 2008. 17 years of MacBook experience. Trained on butterfly keyboard, flexgate, Touch Bar, and Apple Silicon repairs as each launched.</li>
             <li><strong>Usman</strong> - Parts manager + senior iPhone/iPad technician, with us since 2012. 13 years on iPhone repair across iPhone 4S → 17 Pro Max.</li>
@@ -129,7 +142,7 @@ export default function Blog21YearsExperience() {
             done by someone learning on your device.
           </p>
 
-          <h2>Why pop-up repair shops can't compete on this</h2>
+          <h2 id="pop-up-shops">Why pop-up repair shops can't compete on this</h2>
           <p>
             Time is the one ingredient money can't buy. A new shop in 2026 can buy tools, hire
             technicians, and source parts - but they can't have seen the M1 Mac Mini PSU failure
@@ -138,7 +151,7 @@ export default function Blog21YearsExperience() {
             existed when those models launched.
           </p>
 
-          <h2>What this means for your repair quality</h2>
+          <h2 id="repair-quality">What this means for your repair quality</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Faster diagnosis</strong>: pattern recognition cuts a 60-min diagnosis to 15 min.</li>
             <li><strong>Higher first-time success rate</strong>: 96%+ vs 80-85% industry average.</li>

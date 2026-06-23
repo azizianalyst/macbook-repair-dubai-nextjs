@@ -2,7 +2,8 @@
 // generic device hub template - drives iPad, iMac and Mac desktop pages.
 // adapted from IPhonePageTemplate but parameterised by device family.
 import { ReactNode } from "react";
-import { MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star } from "lucide-react";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
+import { AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -17,16 +18,20 @@ import { RelatedServices } from "@/components/blocks/RelatedServices";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { WarrantyBar } from "@/components/blocks/WarrantyBar";
 import { FloatingBookingCard } from "@/components/blocks/FloatingBookingCard";
-import { Button } from "@/components/ui/button";
+import { StatBand } from "@/components/blocks/StatBand";
+import { CtaBand } from "@/components/blocks/CtaBand";
+import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
-import { pickReviews } from "@/lib/find-reviews";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
 import { DEVICE_FAMILY, type DeviceFamily } from "@/content/device-hubs";
+import { relatedServices, withCoverage } from "@/lib/related-services";
 import { topicForPath } from "@/lib/page-images";
 import ResponsiveImage from "@/components/blocks/ResponsiveImage";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 
 export type DeviceTemplateProps = {
   family: DeviceFamily["key"];   // "ipad" | "watch"
@@ -55,21 +60,24 @@ export type DeviceTemplateProps = {
   steps: Step[];
   warrantyDays: number;
   warrantyBullets: string[];
+  glassNotice?: boolean;      // screen/back-glass pages: highlight that broken glass isn't covered
   comparisonRows: [string, string, string][];
   faqs: FAQ[];
   reviewNames: string[];
-  relatedSlugs: string[];        // 3 slugs from the device family hub list
+  relatedSlugs?: string[];       // 3 slugs from the device family hub list; auto-resolved when omitted
+  relatedExtra?: { label: string; href: string; description: string }[]; // additional free-form links appended after slug-resolved ones
   honestyCallout?: ReactNode;
 };
 
 export default function DevicePageTemplate(p: DeviceTemplateProps) {
   const fam = DEVICE_FAMILY[p.family];
-  const reviews = pickReviews(p.reviewNames);
-  const related = p.relatedSlugs
+  const reviews = pickReviews(p.reviewNames, { devices: reviewDevicesForPath(p.path), min: 2, seed: p.path });
+  const curated = (p.relatedSlugs ?? [])
     .map((s) => fam.hubs.find((h) => h.slug === s))
     .filter(Boolean)
     .slice(0, 3)
     .map((h) => ({ label: h!.label, href: h!.slug, description: h!.desc }));
+  const related = withCoverage([...(curated.length ? curated : relatedServices({ path: p.path })), ...(p.relatedExtra ?? [])], p.path);
   const qa = deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
@@ -99,7 +107,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
   );
 
   return (
-    <PageShell>
+    <PageShell hideContactCta>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
@@ -125,7 +133,9 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
       <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={p.warrantyDays} />
+
+      <StatBand />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -144,7 +154,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           {(() => {
             const topic = topicForPath(p.path);
             return topic ? (
-              <figure className="rounded-md overflow-hidden border border-border">
+              <figure className="rounded-md overflow-hidden">
                 <ResponsiveImage
                   src={topic.src}
                   alt={topic.alt}
@@ -166,11 +176,12 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           )}
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md">
-              {p.modelsHeading ?? `${fam.pluralNoun} we repair - model-by-model pricing`}
-            </h2>
+            <SectionHeading
+              eyebrow="Models & pricing"
+              title={p.modelsHeading ?? `${fam.pluralNoun} we repair - model-by-model pricing`}
+            />
             {p.modelsBlurb ?? (
-              <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
+              <p className="text-[16px] text-text-muted max-w-[60ch] mx-auto text-center mb-lg">
                 Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.
               </p>
             )}
@@ -181,12 +192,11 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           </section>
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <AlertTriangle size={28} className="text-accent" aria-hidden /> Common {fam.noun} issues we see
-            </h2>
-            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price.
-            </p>
+            <SectionHeading
+              eyebrow="Common problems"
+              title={`Common ${fam.noun} issues we see`}
+              sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price."
+            />
             <div className="grid gap-md md:grid-cols-2">
               {p.problems.map((it) => (
                 <article key={it.title} className="border border-border bg-bg-card rounded-md p-lg">
@@ -198,19 +208,16 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           </section>
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <Wrench size={28} className="text-accent" aria-hidden /> How the repair works
-            </h2>
-            <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              From WhatsApp to delivery. Each step has a fixed time estimate.
-            </p>
+            <SectionHeading
+              eyebrow="Our process"
+              title="How the repair works"
+              sub="From WhatsApp to delivery. Each step has a fixed time estimate."
+            />
             <StepList steps={p.steps} tone="dark" />
           </section>
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-              <ShieldCheck size={28} className="text-accent" aria-hidden /> Warranty
-            </h2>
+            <SectionHeading eyebrow="Guarantee" title="Warranty" />
             <div className="border border-border bg-bg-card rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
@@ -218,6 +225,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
               </ul>
             </div>
+            {p.glassNotice && <div className="mt-md"><GlassWarrantyNotice device="screen" /></div>}
           </section>
 
           <section className="bg-bg-alt border-y border-border rounded-md p-lg">
@@ -229,8 +237,8 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           </section>
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md">{p.serviceName} vs Apple Store Dubai</h2>
-            <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
+            <SectionHeading eyebrow="Honest comparison" title={`${p.serviceName} vs Apple Store Dubai`} />
+            <ScrollHintTable className="border border-border rounded-md bg-bg-alt" fadeClass="from-bg-alt">
               <table className="w-full text-[14px] min-w-[640px]">
                 <thead className="bg-bg-card">
                   <tr className="text-left">
@@ -249,7 +257,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollHintTable>
             <p className="text-[13px] text-text-muted mt-sm mono">
               Apple list pricing from apple.com/ae, retrieved April 2026. Comparison shown for transparency.
             </p>
@@ -257,12 +265,11 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
           {reviews.length > 0 && (
             <section>
-              <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-                <Star size={28} className="text-star fill-star" aria-hidden /> Real {fam.noun}-repair reviews
-              </h2>
-              <p className="text-[14px] text-text-muted mb-lg">
-                Verbatim from Google. Nothing edited. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
-              </p>
+              <SectionHeading
+                eyebrow="What customers say"
+                title={`Real ${fam.noun}-repair reviews`}
+                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a></>}
+              />
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>
           )}
@@ -283,26 +290,12 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
         </div>
       </div>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-        <div className="border border-border bg-bg-card text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.h1} - quote in 4 minutes on WhatsApp</h2>
-          <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Send the model and a photo of the issue. Free pickup across Dubai mainland. {warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.
-          </p>
-          <div className="flex flex-wrap gap-sm">
-            <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden /> Message on WhatsApp
-              </a>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <a href={`tel:${NAP.phoneE164}`}>
-                <Phone aria-hidden /> {NAP.phoneDisplay}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Final CTA (shared dark band, matches master) */}
+      <CtaBand
+        className="mt-3xl"
+        headline={`Book your ${p.serviceName} on WhatsApp`}
+        description={`Send the model and a photo of the issue. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
+      />
       </div>
       <RelatedArticles path={p.path} />
     </PageShell>

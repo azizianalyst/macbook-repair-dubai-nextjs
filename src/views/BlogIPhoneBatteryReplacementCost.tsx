@@ -9,6 +9,17 @@ export default function BlogIPhoneBatteryReplacementCost() {
       seoTitle="iPhone Battery Replacement Cost Dubai: All Models"
       seoDescription="iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 3-month warranty explained."
       path="/blog/iphone-battery-replacement-cost-dubai-all-models"
+      wide
+      toc={[
+        { id: "price-list", label: "Full price list 2026" },
+        { id: "check-battery", label: "How to check if you need one" },
+        { id: "eighty-percent-rule", label: "The 80% rule explained" },
+        { id: "why-15-costs-more", label: "Why iPhone 15+ costs more" },
+        { id: "apple-vs-ours", label: "Apple Store cost vs ours" },
+        { id: "genuine-vs-oem", label: "Genuine vs quality alternative" },
+        { id: "same-day", label: "Same-day replacement" },
+        { id: "what-next", label: "What to do next" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Battery Replacement Cost Dubai - Every Model 2026"
       hook="iPhone battery costs in Dubai range from AED 250 (older Lightning models) to AED 450 (iPhone 17 Pro Max with the new lithium chemistry). Same-day on most jobs."
@@ -17,10 +28,10 @@ export default function BlogIPhoneBatteryReplacementCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={10}
-      featuredImageAlt="iPhone battery replacement Dubai - fresh OEM battery on technician workbench"
+      featuredImageAlt="iPhone Battery Replacement Cost Dubai, iPhone battery replacement Dubai - fresh OEM battery on technician workbench"
       body={
         <>
-          <h2>The full iPhone battery replacement price list - April 2026</h2>
+          <h2 id="price-list">iPhone Battery Replacement Cost Dubai. The full iPhone battery replacement price list - April 2026</h2>
           <p>
             Pricing includes the battery, labour, fresh perimeter adhesive, and a 3-month warranty.
             Battery health calibration runs after install - you walk out at 100%.
@@ -47,13 +58,13 @@ export default function BlogIPhoneBatteryReplacementCost() {
           />
           <p className="text-[13px] text-text-muted mono">
             Apple Store pricing from{" "}
-            <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com/iphone/repair/battery-power
             </a>{" "}
             (April 2026).
           </p>
 
-          <h2>How to check if your iPhone needs a new battery</h2>
+          <h2 id="check-battery">How to check if your iPhone needs a new battery</h2>
           <p>
             Open <strong>Settings → Battery → Battery Health &amp; Charging</strong>. You're looking
             at three things:
@@ -68,7 +79,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             battery's discharge curve is misbehaving. Replace it.
           </p>
 
-          <h2>The 80% rule, explained</h2>
+          <h2 id="eighty-percent-rule">The 80% rule, explained</h2>
           <p>
             Apple's official position is that an iPhone battery is designed to retain "up to 80% of
             its original capacity at 500 complete charge cycles" (older models) or 1,000 cycles
@@ -81,7 +92,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             check this for you at intake - no point paying us if Apple owes you a free fix.
           </p>
 
-          <h2>Why iPhone 15+ batteries cost more (lithium chemistry change)</h2>
+          <h2 id="why-15-costs-more">Why iPhone 15+ batteries cost more (lithium chemistry change)</h2>
           <p>
             Apple changed battery chemistry on the iPhone 15 line to a higher-density formulation
             that holds more milliamp-hours per gram. The trade-off was a more expensive cell and a
@@ -91,7 +102,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             volume. That stacking adds AED 50 to wholesale, which we pass through.
           </p>
 
-          <h2>Apple Store battery cost vs ours</h2>
+          <h2 id="apple-vs-ours">Apple Store battery cost vs ours</h2>
           <p>
             Apple charges AED 359 for older iPhone batteries (6 through 11) and AED 459 for the 12
             through 14 line. The 15 onward jumped to AED 549-699. Our pricing sits AED 100-250
@@ -99,7 +110,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             - just sourced through OEM-equivalent supply rather than Apple's branded supply.
           </p>
 
-          <h2>Genuine Apple battery vs quality alternative</h2>
+          <h2 id="genuine-vs-oem">Genuine Apple battery vs quality alternative</h2>
           <p>
             Three options:
           </p>
@@ -109,7 +120,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             <li><strong>Cheap aftermarket</strong> - we don't sell these. They lose 20% capacity in the first 100 cycles and have caused fires. Avoid the AED 100 batteries from Naif.</li>
           </ul>
 
-          <h2>Same-day battery replacement - what's possible</h2>
+          <h2 id="same-day">Same-day battery replacement - what's possible</h2>
           <p>
             We carry stock of every iPhone battery from the 8 through the 17 Pro Max. WhatsApp us
             before 1pm and you get the phone back the same evening. iPhone 6/6s - usually next
@@ -117,7 +128,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             mainland; bring ID for collection.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-next">What to do next</h2>
           <p>
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               Visit our iPhone battery replacement page

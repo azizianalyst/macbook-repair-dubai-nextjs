@@ -115,9 +115,9 @@ function CallButtons() {
 export default function MacProRepair() {
   useSeo(
     {
-      title: "Mac Pro Repair Dubai - Certified Apple Desktop Technicians",
+      title: "Mac Pro Repair Dubai - Independent Apple Desktop Specialists",
       description:
-        "Expert Mac Pro repair in Dubai. Certified Apple technicians fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & genuine parts.",
+        "Expert Mac Pro repair in Dubai. Our Apple desktop specialists fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & genuine parts.",
       path: "/mac-pro-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -136,7 +136,7 @@ export default function MacProRepair() {
         subtitle="Your Mac Pro may be malfunctioning. Don't worry - MacBook Repair Dubai is the best place for Mac Pro repair in Dubai. Our expert staff can fix all problems, whether the screen is broken or the motherboard is damaged. Get in touch with us today."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified Apple desktop technicians</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Independent Apple desktop specialists</span>
           <span>·</span>
           <span>Genuine parts</span>
           <span>·</span>
@@ -148,7 +148,7 @@ export default function MacProRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Pro repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs the Mac Pro — 2019 Intel and 2023 M2 Ultra — at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty, in business since 2004."
+        answer="MacBook Repair Dubai repairs the Mac Pro, 2019 Intel and 2023 M2 Ultra, at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months, in business since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -162,15 +162,7 @@ export default function MacProRepair() {
         ]} />
       </section>
 
-      {/* Other devices */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
-          <span className="font-semibold text-text">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+
 
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -183,9 +175,31 @@ export default function MacProRepair() {
         </div>
         <ul className="flex flex-wrap gap-2">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
+      </section>
+
+      {/* Repair by chip generation */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Pick the Mac Pro generation you own for a dedicated repair page with model-specific faults and pricing.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-pro-intel-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Intel (2019 Xeon W) →</Link>
+          <Link to="/mac-pro-m2-ultra-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro M2 Ultra (2023) →</Link>
+        </div>
+      </section>
+
+      {/* Common Mac Pro services */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac Pro services</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump straight to the fix you need.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-pro-not-turning-on-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Not Turning On →</Link>
+          <Link to="/mac-pro-no-display-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro No Display →</Link>
+          <Link to="/mac-pro-data-recovery-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Data Recovery →</Link>
+          <Link to="/mac-pro-full-diagnostic-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Full Diagnostic →</Link>
+        </div>
       </section>
 
       {/* Services */}
@@ -263,7 +277,7 @@ export default function MacProRepair() {
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
               <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
                 <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -294,7 +308,6 @@ export default function MacProRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Board-level Mac Pro repair in Dubai since 2004</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Our service team is here around the clock. Book your appointment now - WhatsApp or call for a free diagnosis and a transparent quote.

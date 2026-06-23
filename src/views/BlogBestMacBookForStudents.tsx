@@ -9,6 +9,18 @@ export default function BlogBestMacBookForStudents() {
       seoTitle="Best MacBook for Students in Dubai 2026: Budget to Pro"
       seoDescription="Three honest MacBook picks for Dubai students: refurbished M1 (AED 2,500), Air M3 (AED 4,500), Pro 14 M4 (AED 7,500). Storage, RAM and AppleCare advice."
       path="/blog/best-macbook-for-students-dubai-2026"
+      wide
+      toc={[
+        { id: "three-picks", label: "Three picks at three prices" },
+        { id: "budget-pick", label: "Budget pick: MacBook Air M1" },
+        { id: "mid-pick", label: "Mid pick: MacBook Air M3" },
+        { id: "premium-pick", label: "Premium pick: MacBook Pro 14″ M4" },
+        { id: "why-not-neo", label: "Why not MacBook Neo?" },
+        { id: "storage-needed", label: "How much storage students need" },
+        { id: "ram-matters", label: "RAM matters more on M-series" },
+        { id: "where-to-buy", label: "Where to buy in Dubai" },
+        { id: "applecare-students", label: "AppleCare+ for students" },
+      ]}
       category="Buying guide · MacBook"
       h1="Best MacBook for Students in Dubai 2026"
       hook="Three picks: AED 2,500, AED 4,500, AED 7,500. Each right for different students."
@@ -20,7 +32,7 @@ export default function BlogBestMacBookForStudents() {
       featuredImageAlt="Best MacBook for students Dubai 2026 buying guide"
       body={
         <>
-          <h2>Three picks at three price points</h2>
+          <h2 id="three-picks">Best MacBook For Students. Three picks at three price points</h2>
           <BlogPriceTable
             caption="Best MacBook for students Dubai - April 2026"
             headers={["Tier", "Model", "Price (AED)", "Best for"]}
@@ -31,7 +43,7 @@ export default function BlogBestMacBookForStudents() {
             ]}
           />
 
-          <h2>Budget pick - MacBook Air M1 (refurbished from us)</h2>
+          <h2 id="budget-pick">Budget pick - MacBook Air M1 (refurbished from us)</h2>
           <p>
             Released October 2020. Still feels fast in 2026. We sell tested, battery-replaced M1 Airs
             from AED 2,500 with a 6-month workshop warranty.
@@ -44,7 +56,7 @@ export default function BlogBestMacBookForStudents() {
             <li><strong>Trade-off:</strong> 8GB RAM is tight if you run 20 Chrome tabs + Spotify + Word + Zoom simultaneously. Close some tabs.</li>
           </ul>
 
-          <h2>Mid pick - MacBook Air M3 13″ (current entry-level new)</h2>
+          <h2 id="mid-pick">Mid pick - MacBook Air M3 13″ (current entry-level new)</h2>
           <p>
             The 2024 MacBook Air M3 is the sweet spot for 2026 students. The base 8GB/256GB at AED 3,999
             is a trap - bump to 16GB/512GB at AED 4,499 and you have a 6-year laptop.
@@ -57,7 +69,7 @@ export default function BlogBestMacBookForStudents() {
             <li><strong>Battery:</strong> 18 hours real-world. Charge once a day, use heavily, still finish at 25%.</li>
           </ul>
 
-          <h2>Premium pick - MacBook Pro 14″ M4</h2>
+          <h2 id="premium-pick">Premium pick - MacBook Pro 14″ M4</h2>
           <p>
             For computer science, film, architecture, and engineering students. The M4 Pro 14″ at AED
             7,499 has the headroom to last 6+ years even as software gets heavier.
@@ -70,7 +82,7 @@ export default function BlogBestMacBookForStudents() {
             <li><strong>1080p webcam + 6-speaker spatial audio</strong> - Zoom calls and recorded lectures sound and look professional.</li>
           </ul>
 
-          <h2>Why not MacBook Neo for students?</h2>
+          <h2 id="why-not-neo">Why not MacBook Neo for students?</h2>
           <p>
             The new MacBook Neo (2026, A18 Pro chip, AED 2,199) looks tempting on price. We don't
             recommend it for serious students because:
@@ -91,7 +103,7 @@ export default function BlogBestMacBookForStudents() {
             .
           </p>
 
-          <h2>How much storage do students need?</h2>
+          <h2 id="storage-needed">How much storage do students need?</h2>
           <BlogPriceTable
             caption="MacBook storage for students - what fits"
             headers={["Storage", "Fits", "Recommended for"]}
@@ -108,7 +120,7 @@ export default function BlogBestMacBookForStudents() {
             day one.
           </p>
 
-          <h2>RAM matters more on M-series</h2>
+          <h2 id="ram-matters">RAM matters more on M-series</h2>
           <p>
             Apple's unified memory model means RAM is shared between CPU, GPU, and Neural Engine. 8GB
             on an M-chip feels tighter than 8GB on an Intel Mac because the GPU is also pulling from
@@ -121,7 +133,7 @@ export default function BlogBestMacBookForStudents() {
             <li><strong>32 GB+:</strong> ML coursework, 8K video. Most students don't need this.</li>
           </ul>
 
-          <h2>Where to buy in Dubai</h2>
+          <h2 id="where-to-buy">Where to buy in Dubai</h2>
           <BlogPriceTable
             caption="MacBook for students - where to buy in Dubai"
             headers={["Source", "Pros", "Cons", "Best for"]}
@@ -134,7 +146,7 @@ export default function BlogBestMacBookForStudents() {
             ]}
           />
 
-          <h2>AppleCare+ for students - worth it?</h2>
+          <h2 id="applecare-students">AppleCare+ for students - worth it?</h2>
           <p>
             AppleCare+ for MacBook Air costs AED 549 (3 years) or AED 18/month. Pro 14″ is AED 1,099.
             Covers 2 accidental damage incidents per year at AED 367 deductible.

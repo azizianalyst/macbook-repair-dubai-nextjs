@@ -159,7 +159,7 @@ export function LeadForm({
 
   if (status === "success") {
     return (
-      <div className={cn("rounded-2xl border border-border bg-bg-card p-xl text-center", className)}>
+      <div className={cn("rounded-md border border-border bg-bg-card p-xl text-center", className)}>
         <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
           <Check size={24} aria-hidden />
         </div>
@@ -189,7 +189,7 @@ export function LeadForm({
   ];
 
   return (
-    <div className={cn("rounded-2xl border border-border bg-bg-card p-lg md:p-xl", className)}>
+    <div className={cn("rounded-md border border-border bg-bg-card p-lg md:p-xl", className)}>
       {/* progress / step indicator */}
       <div className="mb-lg">
         <div className="flex items-center justify-between gap-2">
@@ -198,7 +198,7 @@ export function LeadForm({
               <span
                 className={cn(
                   "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold",
-                  i <= step ? "bg-accent text-text" : "bg-bg-card text-text-faint",
+                  i <= step ? "bg-accent text-white" : "bg-bg-card text-text-faint",
                 )}
               >
                 {i < step ? <Check size={14} aria-hidden /> : m.n}

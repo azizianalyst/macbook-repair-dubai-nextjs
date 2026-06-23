@@ -9,6 +9,17 @@ export default function BlogIMacVsMacMiniVsStudio() {
       seoTitle="iMac vs Mac Mini vs Mac Studio: Best Pick 2026"
       seoDescription="iMac, Mac Mini or Mac Studio? Pick the right Apple desktop in Dubai for 2026 with pricing, repair cost, resale, and clear verdicts by user type and budget."
       path="/blog/imac-vs-mac-mini-vs-mac-studio"
+      wide
+      toc={[
+        { id: "quick-answer-matrix", label: "Quick answer matrix" },
+        { id: "imac-strengths", label: "iMac strengths" },
+        { id: "mac-mini-strengths", label: "Mac Mini strengths" },
+        { id: "mac-studio-strengths", label: "Mac Studio strengths" },
+        { id: "mac-pro-for-who", label: "Mac Pro - for who?" },
+        { id: "display-vs-all-in-one", label: "Own display vs all-in-one" },
+        { id: "repair-cost-compared", label: "Repair cost compared" },
+        { id: "resale-value-compared", label: "Resale value compared" },
+      ]}
       category="Comparison · Mac Desktop"
       h1="iMac vs Mac Mini vs Mac Studio - Pick Right in 2026"
       hook="Three Apple desktops. Different jobs. Here's which is yours."
@@ -20,7 +31,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
       featuredImageAlt="iMac vs Mac Mini vs Mac Studio comparison Dubai 2026"
       body={
         <>
-          <h2>Quick answer matrix</h2>
+          <h2 id="quick-answer-matrix">iMac Vs Mac Mini Vs Mac Studio. Quick answer matrix</h2>
           <BlogPriceTable
             caption="Mac desktop - pick by use case"
             headers={["You are…", "Recommended Mac", "Why", "UAE price"]}
@@ -34,7 +45,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             ]}
           />
 
-          <h2>iMac strengths - all-in-one beauty</h2>
+          <h2 id="imac-strengths">iMac strengths - all-in-one beauty</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>24″ 4.5K Retina display</strong> built-in (P3, 500 nits) - would cost AED 2,000+ as a standalone.</li>
             <li><strong>Cable-free aesthetic</strong> - one power cable, that's it.</li>
@@ -48,7 +59,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             screen and computer are bonded - if the screen breaks at year 5, you replace the whole unit.
           </p>
 
-          <h2>Mac Mini strengths - value and modularity</h2>
+          <h2 id="mac-mini-strengths">Mac Mini strengths - value and modularity</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Cheapest Mac you can buy</strong> - AED 2,799 base, less than a base iPhone 17 Pro.</li>
             <li><strong>Bring your own everything</strong> - keyboard, mouse, monitor - keep what you have.</li>
@@ -62,7 +73,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             unless you have one already. No webcam (use iPhone with Continuity Camera).
           </p>
 
-          <h2>Mac Studio strengths - workstation power</h2>
+          <h2 id="mac-studio-strengths">Mac Studio strengths - workstation power</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>M5 Max or Ultra chip</strong> - up to 24 CPU + 76 GPU cores.</li>
             <li><strong>Up to 192GB unified memory</strong> - train ML models, edit 12K, run 8 VMs.</li>
@@ -76,7 +87,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             If you only use it for the same things as a Mac Mini, you wasted AED 6,000.
           </p>
 
-          <h2>Mac Pro - for who? (almost nobody)</h2>
+          <h2 id="mac-pro-for-who">Mac Pro - for who? (almost nobody)</h2>
           <p>
             The Mac Pro M5 Ultra (AED 28,999+) exists for specialists who need PCIe expansion slots -
             broadcast professionals, audio engineers with proprietary DSP cards, scientific computing
@@ -84,7 +95,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             whether you need one, you don't.
           </p>
 
-          <h2>Buy your own display vs all-in-one - the real cost</h2>
+          <h2 id="display-vs-all-in-one">Buy your own display vs all-in-one - the real cost</h2>
           <BlogPriceTable
             caption="iMac M5 vs Mac Mini + standalone monitor - true cost comparison"
             headers={["Setup", "Computer", "Monitor", "Total"]}
@@ -103,7 +114,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             without replacing the computer).
           </p>
 
-          <h2>Repair cost compared</h2>
+          <h2 id="repair-cost-compared">Repair cost compared</h2>
           <BlogPriceTable
             caption="Mac desktop - repair cost at our Dubai workshop"
             headers={["Repair", "iMac 24″ M5", "Mac Mini M5", "Mac Studio M5 Max"]}
@@ -125,7 +136,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
             {" "}for full pricing.
           </p>
 
-          <h2>Resale value compared (3 years)</h2>
+          <h2 id="resale-value-compared">Resale value compared (3 years)</h2>
           <BlogPriceTable
             caption="Mac desktop resale - projected April 2029 (3 years from new)"
             headers={["Mac", "New price (AED)", "Projected resale", "Depreciation"]}

@@ -21,15 +21,15 @@ const COVERED = [
 
 const FAQS = [
   { q: "What does out-of-warranty Apple repair mean?",
-    a: "It means your device's standard warranty or AppleCare has expired, or the fault isn't covered (accidental, liquid or wear damage). We repair these at independent-shop prices - often far less than Apple's flat out-of-warranty service fee - with a 12-month written warranty on our work." },
+    a: "It means your device's standard warranty or AppleCare has expired, or the fault isn't covered (accidental, liquid or wear damage). We repair these at independent-shop prices - often far less than Apple's flat out-of-warranty service fee - with a written warranty up to 12 months on our work." },
   { q: "Do you honour AppleCare?",
     a: "We're an independent repair centre, not an Apple Authorised Service Provider, so we can't process an AppleCare claim for you. If your device still has active AppleCare for the specific fault, Apple is usually the cheaper route and we'll tell you so honestly. For everything outside AppleCare, we're typically about half the price." },
   { q: "Will using you void anything?",
-    a: "If your AppleCare or warranty is already expired, there's nothing left to void. If it's still active, we'll always flag that before you commit so you can choose the best route. Our repairs use genuine or premium OEM parts and carry their own 12-month warranty." },
+    a: "If your AppleCare or warranty is already expired, there's nothing left to void. If it's still active, we'll always flag that before you commit so you can choose the best route. Our repairs use genuine or premium OEM parts and carry their own warranty of up to 12 months." },
   { q: "How much cheaper is out-of-warranty repair with you vs Apple?",
     a: "Apple's out-of-warranty service is usually a flat board/whole-unit fee. Because we repair at component level, a logic-board fix from AED 800 can replace an Apple quote of several thousand dirhams. You get an exact written quote after a free diagnosis - no obligation." },
   { q: "Are the parts genuine?",
-    a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit premium OEM-factory parts and label them as such on your quote. Both carry the same 12-month warranty." },
+    a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit premium OEM-factory parts and label them as such on your quote. Both carry the same warranty of up to 12 months." },
   { q: "What about data during a board repair?",
     a: "Repairs that don't touch the SSD keep your data intact. For logic-board work on T2/Apple-Silicon Macs we request a Time Machine backup first and offer a free backup station at the workshop. Where a board is recoverable, we preserve data wherever possible." },
 ];
@@ -39,7 +39,7 @@ export default function OutOfWarrantyRepair() {
     {
       title: "Out-of-Warranty Apple Repair Dubai - Half the Apple Store Price",
       description:
-        "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, 12-month warranty. Call 055 741 3706.",
+        "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, warranty of up to 12 months. Call 055 741 3706.",
       path: "/out-of-warranty-apple-repair-dubai",
     },
     [
@@ -75,7 +75,7 @@ export default function OutOfWarrantyRepair() {
         tone="dark"
         eyebrow="AppleCare & out-of-warranty · Dubai"
         title="Out-of-Warranty Apple Repair in Dubai"
-        subtitle="Warranty expired or AppleCare run out? We repair MacBook, iMac, iPhone and iPad at component level - often half the Apple Store price, with genuine parts and a 12-month warranty."
+        subtitle="Warranty expired or AppleCare run out? We repair MacBook, iMac, iPhone and iPad at component level - often half the Apple Store price, with genuine parts and a warranty of up to 12 months."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 215+ reviews</span>
@@ -98,7 +98,7 @@ export default function OutOfWarrantyRepair() {
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md">
-          When your <strong>warranty or AppleCare has expired</strong> - or the fault simply isn't covered - Apple's out-of-warranty route is usually a flat fee to swap the whole logic board or unit. We do it differently: <strong>component-level repair</strong> fixes the single failed part, which is why our prices are typically about half. Every repair is genuine-or-OEM parts, written-quote-first, and backed by a 12-month warranty.
+          When your <strong>warranty or AppleCare has expired</strong> - or the fault simply isn't covered - Apple's out-of-warranty route is usually a flat fee to swap the whole logic board or unit. We do it differently: <strong>component-level repair</strong> fixes the single failed part, which is why our prices are typically about half. Every repair is genuine-or-OEM parts, written-quote-first, and backed by a warranty of up to 12 months.
         </p>
       </section>
 
@@ -163,10 +163,9 @@ export default function OutOfWarrantyRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get an out-of-warranty quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-            Send the model and a photo of the issue on WhatsApp. Free diagnosis, written quote, genuine parts and a 12-month warranty.
+            Send the model and a photo of the issue on WhatsApp. Free diagnosis, written quote, genuine parts and a warranty of up to 12 months.
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

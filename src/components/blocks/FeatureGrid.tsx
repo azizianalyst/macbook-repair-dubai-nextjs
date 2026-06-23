@@ -28,12 +28,12 @@ export default function FeatureGrid({
   className,
 }: FeatureGridProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         {(heading || subheading) && (
           <div className="mb-2xl max-w-[680px]">
             {heading && (
-              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-text">
+              <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                 {heading}
               </h2>
             )}
@@ -51,10 +51,10 @@ export default function FeatureGrid({
             return (
               <div
                 key={i}
-                className="flex flex-col rounded-2xl border border-border bg-bg-card p-lg"
+                className="flex flex-col rounded-md border border-border bg-bg-card p-lg"
               >
                 {Icon && (
-                  <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-bg-card text-accent">
+                  <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
                     <Icon size={22} aria-hidden />
                   </span>
                 )}

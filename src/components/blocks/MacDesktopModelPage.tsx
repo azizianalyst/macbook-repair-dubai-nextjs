@@ -5,7 +5,9 @@
 //
 // Usage: <MacDesktopModelPage slug="mac-mini-m4-2024-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import desktopModels from "@/content/mac-desktop-models.json";
 
 type Pricing = {
@@ -109,19 +111,7 @@ function worthRepairingVerdict(m: DesktopModel): { headline: string; body: strin
 }
 
 function pickRelatedModels(slug: string): DesktopModel[] {
-  const me = ALL_MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  // Circular window over the same family so inbound links distribute evenly and
-  // no model (incl. the newest at the tail) is orphaned.
-  const fam = ALL_MODELS.filter((m) => m.family === me.family);
-  const idx = fam.findIndex((m) => m.slug === slug);
-  const picks: DesktopModel[] = [];
-  for (let k = 1; k <= 4 && k < fam.length; k++) picks.push(fam[(idx + k) % fam.length]);
-  if (picks.length < 4) {
-    const others = ALL_MODELS.filter((m) => m.family !== me.family && m.slug !== slug);
-    picks.push(...others.slice(0, 4 - picks.length));
-  }
-  return picks;
+  return relatedModels(slug, ALL_MODELS, (m) => m.family);
 }
 
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
@@ -239,7 +229,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} logic board repair cost in Dubai?`,
-      a: `Component-level logic board repair on the ${model.name} starts at AED ${model.pricing.logicBoard}. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a 12-month written warranty on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
+      a: `Component-level logic board repair on the ${model.name} starts at AED ${model.pricing.logicBoard}. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a written warranty up to 12 months on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
     },
     {
       q: isAppleSilicon
@@ -265,7 +255,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
           ? `Yes - for now. Apple's current Mac Pro M2 Ultra removed PCIe GPU support entirely (Apple Silicon limitation). If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
-            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it for AED ${model.pricing.psu ?? 450}, typically 1-2 days, with a 12-month warranty.`,
+            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it for AED ${model.pricing.psu ?? 450}, typically 1-2 days, with a warranty of up to 12 months.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -280,11 +270,11 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Logic board AED ${model.pricing.logicBoard}${model.pricing.psu ? `, PSU AED ${model.pricing.psu}` : ""}${model.pricing.port ? `, port AED ${model.pricing.port}` : ""}. 12-month warranty.`}
+      seoDescription={`${model.name} repair Dubai. Logic board AED ${model.pricing.logicBoard}${model.pricing.psu ? `, PSU AED ${model.pricing.psu}` : ""}${model.pricing.port ? `, port AED ${model.pricing.port}` : ""}. Warranty up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={isStudio || isPro ? "Standard service same-day to 3 days · Logic board 4-6 days" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -304,10 +294,10 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 12-month written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
@@ -317,15 +307,15 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             <li>• <strong>Wireless:</strong> {model.wirelessChip}</li>
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-alt">
                 <tr className="text-left">
@@ -348,7 +338,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
           {isAppleSilicon && !isPro && (
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
@@ -398,7 +388,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
               ? `As Apple's current ${FAMILY_LABEL[model.family]}, parts come through authorised channels. ${model.timelineNotes}`
@@ -407,16 +397,16 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
                 : `Parts for the ${model.shortName} are widely available. ${model.timelineNotes}`}
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
           <div className="bg-bg-alt border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Our honest take on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Other Mac desktops we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other Mac desktops we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link

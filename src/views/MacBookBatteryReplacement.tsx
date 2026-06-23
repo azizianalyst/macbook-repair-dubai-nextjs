@@ -7,7 +7,7 @@
 import { type ReactNode } from "react";
 import {
   Battery, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star,
-  Check, Clock, MapPin, ExternalLink, ParkingCircle, ArrowRight,
+  Check, MapPin, ExternalLink, ParkingCircle, ArrowRight,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -79,7 +79,7 @@ const FAQS: FAQ[] = [
   { q: "How much does MacBook battery replacement cost in Dubai?",
     a: "From AED 450 for MacBook Air 11\", 13\", and 15\" (Intel and Apple Silicon). AED 500 for MacBook Pro 13\". AED 600 for MacBook Pro 14\", 15\", and 16\". The price includes the new battery, labour, BMS firmware re-pair, and the 4-hour calibration cycle. No diagnostic fee." },
   { q: "How long does a MacBook battery replacement take?",
-    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is done in 30 minutes — guaranteed, or the repair is free. Walk-in (no appointment): about 2 hours total — 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
+    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is done in 30 minutes, guaranteed, or the repair is free. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
   { q: "How do I check my MacBook battery health?",
     a: "On macOS Ventura and later: System Settings > Battery > Battery Health > Information (i). Look at \"Maximum Capacity\" (should be above 80%) and \"Cycle Count\" (Apple rates Apple Silicon for 1,000 cycles, Intel for 1,000 on most models, 500 on older Airs). On Intel Macs you can also hold Option and click the battery icon in the menu bar." },
   { q: "How many charge cycles does a MacBook battery last?",
@@ -100,6 +100,10 @@ const FAQS: FAQ[] = [
     a: "Technically yes on 2008-2012 unibody MacBooks with screw-in batteries - iFixit sells kits at AED 200-400. From 2013 onward Apple glued the cells to the case, requiring isopropyl 99%, a heat gun, and 60+ minutes of careful work. DIY swaps that go wrong cost more to recover than the original AED 450 service. The workshop's labour-only swap if you bring your own (verified) battery is AED 200." },
   { q: "Do you offer free pickup for battery service?",
     a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm, Business Bay. Sharjah and Abu Dhabi pickup AED 100 each way." },
+  { q: "Is battery replacement cheaper than the Apple Store?",
+    a: "Yes. We replace MacBook batteries from AED 450 (Air) up to AED 700 (16-inch Pro), labour and firmware re-pair included, which is well below Apple out-of-warranty pricing, and same-day in about 2 hours. Every battery includes an 80% capacity guarantee." },
+  { q: "Should I just go to Apple, and what about AppleCare+?",
+    a: "If your MacBook is still covered by AppleCare+ and the battery is below 80% health, Apple may replace it free, and we will point you there. Out of warranty, our replacement is cheaper, same-day, and uses a tier-1 cell with a 3-month warranty plus an 80% capacity guarantee." },
 ];
 
 const COMPARISON = [
@@ -164,8 +168,6 @@ export default function MacBookBatteryReplacement() {
 
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
-          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-3xl" />
-          <div aria-hidden className="pointer-events-none absolute top-1/3 -right-16 h-[26rem] w-[26rem] rounded-full bg-accent/10 blur-3xl" />
           <div className="relative mx-auto max-w-content px-5 md:px-6">
             <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-text-faint">
               <ol className="flex flex-wrap items-center gap-2 list-none p-0 m-0">
@@ -214,6 +216,7 @@ export default function MacBookBatteryReplacement() {
                     height={600}
                     sizes="(max-width: 768px) 92vw, 420px"
                     imgClassName="w-full h-auto"
+                    priority
                   />
                 </Reveal>
               </div>
@@ -221,36 +224,8 @@ export default function MacBookBatteryReplacement() {
           </div>
         </section>
 
-        {/* Answer-first capsule (AEO/BLUF) */}
-        <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
-          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
-          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border bg-bg-card p-lg shadow-lg backdrop-blur-md">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent"><Battery size={22} aria-hidden /></span>
-                <div>
-                  <p className="m-0 font-semibold leading-tight text-text">Battery Replacement</p>
-                  <p className="m-0 text-[12px] text-text-faint">tier-1 cells · BMS re-pair</p>
-                </div>
-              </div>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
-              </span>
-            </div>
-            <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-              {[["Starting price", "AED 450"], ["Turnaround", "Same day · 2 hours"], ["Warranty", "3 months + 80%"], ["Diagnosis", "FREE"]].map(([k, v]) => (
-                <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
-                  <span className="text-text-faint">{k}</span>
-                  <span className="font-semibold text-text">{v}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
-            </div>
-          </Reveal>
-        </div>
+        {/* Quick Answer, full-width directly under H1 */}
+        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -265,9 +240,9 @@ export default function MacBookBatteryReplacement() {
         </section>
 
         {/* ── Intro ──────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+        <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook battery replacement in Dubai costs from AED 450 and finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland.
+            MacBook battery replacement in Dubai costs from AED 450 and finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent hover:underline">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
           </p></LinkifyProse>
         </section>
 
@@ -376,17 +351,10 @@ export default function MacBookBatteryReplacement() {
           </Card>
         </section>
 
-        {/* ── Pricing recap + CTA ────────────────────────────────── */}
+        {/* ── Mid-page CTA ───────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook battery cost in Dubai - transparent pricing" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection. No diagnostic fee, no calibration surcharge, no VAT add-on." />
-            <PriceTable rows={PRICING} />
-            <p className="mt-md text-[14px] text-text-faint mono max-w-[78ch]">
-              All prices in AED, VAT inclusive. Payment on collection - cash, Visa, Mastercard, Apple Pay, Samsung Pay, or bank transfer.
-            </p>
-
-            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
-              <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
+          <div className="mx-auto max-w-content px-5 md:px-6 py-2xl">
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl">
               <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Battery Replacement · Same day · 2 hours</p>
@@ -537,10 +505,19 @@ export default function MacBookBatteryReplacement() {
           </div>
         </section>
 
+        {/* ── Lead Form ──────────────────────────────────────────── */}
+        <section id="quote" className="mx-auto max-w-content px-5 md:px-6 py-2xl scroll-mt-24">
+          <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+          <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
+          <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-battery-replacement-dubai" />
+        </section>
+
+        {/* ── Related Articles ───────────────────────────────────── */}
+        <RelatedArticles path="/macbook-battery-replacement-dubai" />
+
         {/* ── Final CTA ──────────────────────────────────────────── */}
         <section className="relative overflow-hidden border-t border-border">
-          <div aria-hidden className="pointer-events-none absolute -bottom-24 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-accent/18 blur-3xl" />
-          <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
+          <div className="relative mx-auto max-w-content px-5 md:px-6 py-2xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Battery health under 80%? Send the screenshot - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
               Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, free pickup, 3-month warranty plus 80% capacity guarantee.
@@ -552,12 +529,6 @@ export default function MacBookBatteryReplacement() {
           </div>
         </section>
       </div>
-        <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
-      <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
-      <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-battery-replacement-dubai" />
-    </section>
-    <RelatedArticles path="/macbook-battery-replacement-dubai" />
     </PageShell>
   );
 }

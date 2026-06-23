@@ -128,8 +128,8 @@ export default function BlogCategory({ slug }: { slug: string }) {
                 to={p.slug}
                 className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
               >
-                <p className="text-[11px] uppercase tracking-wider text-accent mono">{p.category}</p>
-                <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
+                <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
+                <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">Why Us. Sell Trade In. Repair Costs. Fixes. Care Maintenance. Buying Guides. Apple News, {p.title}</h2>
                 <p className="text-[14px] text-text-muted leading-relaxed flex-1">{p.excerpt}</p>
                 <div className="flex flex-wrap items-center gap-md text-[12px] text-text-muted mono mt-sm pt-sm border-t border-border">
                   <span className="flex items-center gap-1"><CalendarDays size={12} aria-hidden /> {p.date}</span>

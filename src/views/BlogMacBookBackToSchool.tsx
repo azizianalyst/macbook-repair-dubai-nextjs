@@ -9,6 +9,17 @@ export default function BlogMacBookBackToSchool() {
       seoTitle="MacBook Back to School Dubai 2026 - Buying Guide by Grade"
       seoDescription="The right MacBook for primary, secondary, university and engineering students in Dubai. Budgets AED 2,500-7,000. Education pricing, AppleCare+, trade-in."
       path="/blog/macbook-back-to-school-dubai"
+      wide
+      toc={[
+        { id: "primary-school", label: "Primary school" },
+        { id: "secondary-school", label: "Secondary school" },
+        { id: "university-general", label: "University general" },
+        { id: "university-engineering", label: "University engineering" },
+        { id: "applecare-students", label: "AppleCare+ for students" },
+        { id: "where-to-buy", label: "Where to buy" },
+        { id: "education-pricing", label: "Education pricing" },
+        { id: "trade-in-value", label: "Trade-in old MacBook" },
+      ]}
       category="Buying guide · Back to school"
       h1="MacBook Back to School Dubai 2026"
       hook="September school year. AED 2,500-7,000 budgets. Here's the right MacBook per grade."
@@ -20,7 +31,7 @@ export default function BlogMacBookBackToSchool() {
       featuredImageAlt="MacBook back to school Dubai 2026 - buying guide by grade and budget"
       body={
         <>
-          <h2>Primary school (KG-Grade 5)</h2>
+          <h2 id="primary-school">MacBook Back To School Dubai. Primary school (KG-Grade 5)</h2>
           <p>
             Don't buy a MacBook. Most Dubai primary schools (GEMS, Dubai British, Repton, Kings, Brighton College) issue iPads or use Chromebooks in class. A laptop at home for a 6-10-year-old is overkill and a damage liability.
           </p>
@@ -30,7 +41,7 @@ export default function BlogMacBookBackToSchool() {
             <li><strong>Skip:</strong> AppleCare+ on iPad for primary kids - get a Spigen Tough Armor case instead, far better against drops.</li>
           </ul>
 
-          <h2>Secondary school (Grade 6-12, ages 11-18)</h2>
+          <h2 id="secondary-school">Secondary school (Grade 6-12, ages 11-18)</h2>
           <p>
             From Year 7/Grade 6 onwards, most Dubai schools (especially British and IB curricula) require a personal laptop for ManageBac, Google Workspace, OneDrive, and increasingly Adobe Creative Cloud Express. <strong>MacBook Air M3 13" is the sweet spot.</strong>
           </p>
@@ -48,7 +59,7 @@ export default function BlogMacBookBackToSchool() {
             <strong>Why M3 not M4:</strong> for school workloads (Google Docs, Safari, Zoom, Photos, light video editing) the M3 is functionally identical to M4. Apple kept M3 in the lineup as the affordable option - buy it.
           </p>
 
-          <h2>University general (Business, Arts, Humanities, Computer Science)</h2>
+          <h2 id="university-general">University general (Business, Arts, Humanities, Computer Science)</h2>
           <p>
             <strong>MacBook Air M4 13" or 15"</strong> with at least 16GB RAM. Base 8GB is no longer sufficient if the laptop needs to last 4 years through to graduation - Sonoma/Sequoia/Tahoe macOS releases keep raising the floor.
           </p>
@@ -58,7 +69,7 @@ export default function BlogMacBookBackToSchool() {
             <li><strong>Computer Science specifically:</strong> 16GB minimum (Docker, VS Code with extensions, browser tabs eat 12GB+). Consider 24GB if doing ML/AI coursework.</li>
           </ul>
 
-          <h2>University engineering, design, video, architecture</h2>
+          <h2 id="university-engineering">University engineering, design, video, architecture</h2>
           <p>
             <strong>MacBook Pro 14" M4</strong> - the Air's lack of fan and active cooling is a real limitation for sustained Revit, AutoCAD, Rhino, Final Cut Pro, DaVinci Resolve, or Adobe Creative Cloud workloads.
           </p>
@@ -73,7 +84,7 @@ export default function BlogMacBookBackToSchool() {
             ]}
           />
 
-          <h2>AppleCare+ for students (recommended)</h2>
+          <h2 id="applecare-students">AppleCare+ for students (recommended)</h2>
           <p>
             University-age students drop laptops. The 4-year accidental damage cover is genuinely worth it for student use:
           </p>
@@ -86,7 +97,7 @@ export default function BlogMacBookBackToSchool() {
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">AED 600-1,400</Link> - for accident-prone students AppleCare+ still wins, for careful students our pay-as-you-go is cheaper.
           </p>
 
-          <h2>Where to buy in Dubai</h2>
+          <h2 id="where-to-buy">Where to buy in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Store Dubai Mall / Mall of the Emirates:</strong> standard pricing, education discount when verified, instant pickup.</li>
             <li><strong>Apple Education Store online:</strong> 6-10% off plus a gift-card promo July-September. Verified via UNiDAYS.</li>
@@ -95,7 +106,7 @@ export default function BlogMacBookBackToSchool() {
               <Link to="/blog/should-i-buy-refurbished-macbook-dubai" className="text-accent font-semibold hover:underline">refurbished MacBook checklist</Link>.</li>
           </ul>
 
-          <h2>Education pricing - Apple's discount in UAE</h2>
+          <h2 id="education-pricing">Education pricing - Apple's discount in UAE</h2>
           <p>
             Apple Education Store discounts in UAE (verified via UNiDAYS or school email):
           </p>
@@ -107,7 +118,7 @@ export default function BlogMacBookBackToSchool() {
             <li>20% off AppleCare+ for education customers.</li>
           </ul>
 
-          <h2>Trade-in old MacBook value (April 2026)</h2>
+          <h2 id="trade-in-value">Trade-in old MacBook value (April 2026)</h2>
           <BlogPriceTable
             caption="Apple Trade-In vs Dubizzle vs us - old MacBook resale (good condition)"
             headers={["MacBook", "Apple Trade-In", "Dubizzle private", "Our buy-back"]}

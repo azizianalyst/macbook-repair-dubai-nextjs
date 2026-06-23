@@ -19,7 +19,7 @@ export default function IPhoneSimTrayRepair() {
         { name: "SIM Tray Repair",   path: "/iphone-sim-tray-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone connectivity and antennas" }}
-      serviceName="iPhone SIM Tray Repair"
+      serviceName="iPhone SIM Tray Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

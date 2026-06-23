@@ -17,6 +17,13 @@ export default function BlogMacBookScreenFlickering() {
       seoTitle="MacBook Screen Flickering? Causes & Fixes (2026)"
       seoDescription="MacBook screen flickering or flashing lines? Work through six fixes in order - macOS update, Safe Mode, NVRAM, external monitor test - then know when it's the cable or panel."
       path="/blog/macbook-screen-flickering-fix"
+      wide
+      toc={[
+        { id: "software-or-hardware", label: "Software or hardware flicker" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost-dubai", label: "What it costs in Dubai" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Screen Flickering? Causes & Fixes"
       hook="A flickering MacBook screen is software about half the time and a tired display cable most of the rest. You can tell which in about five minutes, and several of the software causes you can clear yourself before paying anyone."
@@ -25,7 +32,7 @@ export default function BlogMacBookScreenFlickering() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook screen flickering diagnostic in Dubai - technician checking the display flex cable at the Media City workshop"
+      featuredImageAlt="MacBook Screen Flickering Fix. MacBook screen flickering diagnostic in Dubai - technician checking the display flex cable at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a flickering MacBook screen in six steps",
         description: "Six diagnostic steps for a MacBook screen that flickers, flashes or shows horizontal lines, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookScreenFlickering() {
       })]}
       body={
         <>
-          <h2>Software flicker or hardware flicker?</h2>
+          <h2 id="software-or-hardware">MacBook Screen Flickering Fix. Software flicker or hardware flicker?</h2>
           <p>
             Almost every flickering screen falls into one of two camps, and which one you have decides
             whether this is a free fix tonight or a trip to the bench. The good news: about half the
@@ -58,7 +65,7 @@ export default function BlogMacBookScreenFlickering() {
             display flex cable. This is the one that gets worse over weeks rather than better.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment the flicker goes. Don't skip ahead to the
             cable test before you've ruled out the software causes, because most people who think
@@ -107,7 +114,7 @@ export default function BlogMacBookScreenFlickering() {
             its backlight driver.
           </p>
 
-          <h2>When it's hardware: the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the common causes</h2>
           <p>
             If you've worked through the list and the screen still flickers, it's usually one of three
             things. Here's what we actually pull off the bench, roughly in the order we see it across
@@ -141,7 +148,7 @@ export default function BlogMacBookScreenFlickering() {
             covers it.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost-dubai">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know which of the three it is before you commit to anything. The prices

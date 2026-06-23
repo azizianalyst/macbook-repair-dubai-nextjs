@@ -8,6 +8,16 @@ export default function BlogMacBookMaintenanceChecklist() {
       seoTitle="MacBook Maintenance Checklist Dubai - Keep Your Mac Fast"
       seoDescription="A practical MacBook maintenance checklist for Dubai: monthly, quarterly and yearly tasks for storage, battery, dust, backups and software updates."
       path="/blog/macbook-maintenance-checklist-dubai"
+      wide
+      toc={[
+        { id: "monthly-checklist", label: "Monthly checklist" },
+        { id: "quarterly-checklist", label: "Quarterly checklist" },
+        { id: "yearly-dust-clean", label: "Yearly dust clean" },
+        { id: "back-up-first", label: "Back up before anything fails" },
+        { id: "safe-mode-first", label: "Safe Mode first" },
+        { id: "diy-vs-bring-in", label: "DIY vs bring in" },
+        { id: "for-businesses", label: "For businesses" },
+      ]}
       category="Care guide · MacBook"
       h1="MacBook Maintenance Checklist: Keep Your Mac Fast in Dubai"
       hook="Most MacBooks that come in for being slow or loud don't need a repair - they need a clean and ten minutes of housekeeping. Here is the routine we give every customer, split into monthly, quarterly and yearly jobs."
@@ -16,7 +26,7 @@ export default function BlogMacBookMaintenanceChecklist() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={7}
-      featuredImageAlt="MacBook maintenance in Dubai - technician checking battery health and clearing dust from fans on a workbench"
+      featuredImageAlt="MacBook Maintenance Checklist Dubai. MacBook maintenance in Dubai - technician checking battery health and clearing dust from fans on a workbench"
       body={
         <>
           <p>
@@ -32,7 +42,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             once a year. That's 90% of it.
           </p>
 
-          <h2>The monthly checklist (10 minutes)</h2>
+          <h2 id="monthly-checklist">MacBook Maintenance Checklist Dubai. The monthly checklist (10 minutes)</h2>
           <p>
             These four take less time than your coffee. Do them on the first of the month and you'll
             never get the "your disk is almost full" panic mid-deadline.
@@ -58,7 +68,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             </li>
           </ul>
 
-          <h2>The quarterly checklist (every 3 months)</h2>
+          <h2 id="quarterly-checklist">The quarterly checklist (every 3 months)</h2>
           <p>
             Worth knowing: this is where you catch the slow problems before they become repairs.
           </p>
@@ -85,7 +95,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             </li>
           </ul>
 
-          <h2>The yearly job: dust, thermals and a proper clean</h2>
+          <h2 id="yearly-dust-clean">The yearly job: dust, thermals and a proper clean</h2>
           <p>
             Here's the catch with Dubai - dust is not optional maintenance, it's the main one. Fine
             sand and humidity push debris into the heatsink and fan blades far faster than in cooler
@@ -97,7 +107,8 @@ export default function BlogMacBookMaintenanceChecklist() {
             You can blow out the vents with a can of compressed air from the outside, and that helps a
             little. But the dust that matters sits on the heatsink fins inside the chassis, and on a
             modern glued-shut MacBook you can't reach it without opening the machine properly. A full
-            internal clean at our bench is AED 280, VAT-inclusive, same day. We open it up, clear the
+            internal clean at our bench is AED 280, VAT-inclusive, same day.</p>
+        <p>We open it up, clear the
             fans and heatsink, clean the ports, check for early corrosion, and run a thermal check
             before it goes back. Once a year is right for most people in Dubai. If you work near a
             building site or notice fans roaring at idle, every six to nine months. See the{" "}
@@ -107,7 +118,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             for what's included.
           </p>
 
-          <h2>Back up before anything else fails</h2>
+          <h2 id="back-up-first">Back up before anything else fails</h2>
           <p>
             A maintenance routine that skips backups is half a routine. SSDs in Apple Silicon Macs are
             soldered to the board - if the board dies, the storage usually dies with it, and recovery
@@ -125,7 +136,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             handles the drive, the schedule and a restore test so you know it actually works.
           </p>
 
-          <h2>When something is already wrong: Safe Mode first</h2>
+          <h2 id="safe-mode-first">When something is already wrong: Safe Mode first</h2>
           <p>
             If your MacBook is misbehaving - random freezes, an app that won't quit, graphics glitches
             after an update - Safe Mode is the free first diagnostic before anyone touches hardware. It
@@ -142,7 +153,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             sorts out which faults are software and which need the bench. Diagnosis is free.
           </p>
 
-          <h2>What to do yourself, and what to bring in</h2>
+          <h2 id="diy-vs-bring-in">What to do yourself, and what to bring in</h2>
           <p>
             Do the storage, updates, restarts, battery checks and backups yourself - none of that
             needs a technician. Compressed air on the external vents is fine too. The line to draw is
@@ -157,7 +168,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             for the full list.
           </p>
 
-          <h2>For businesses: hand the whole routine over</h2>
+          <h2 id="for-businesses">For businesses: hand the whole routine over</h2>
           <p>
             If you run a team of Macs, doing this per-machine doesn't scale. Our{" "}
             <Link to="/annual-maintenance-contract-dubai" className="text-accent font-semibold hover:underline">
@@ -192,7 +203,7 @@ export default function BlogMacBookMaintenanceChecklist() {
         },
         {
           q: "Can I open and clean the MacBook myself?",
-          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a 12-month warranty.",
+          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a warranty of up to 12 months.",
         },
       ]}
       relatedLinks={[

@@ -20,7 +20,7 @@
 - **Languages:** English (majority), Russian, German, French, Arabic, Turkish
 - **Most common repairs mentioned:** Screen replacement, battery replacement, water damage, keyboard repair
 - **Most-mentioned technicians:** Shafiq, Usman, Ali
-- **Review span:** 2021 – April 2026
+- **Review span:** 2021 - April 2026
 
 ---
 

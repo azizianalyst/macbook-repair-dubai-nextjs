@@ -2,66 +2,60 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { IPHONE_SCREEN_PRICES } from "@/content/screen-pricing";
 
 export default function BlogIPhoneScreenRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Screen Repair Cost Dubai 2026 - Every Model"
-      seoDescription="Full iPhone screen repair price list for Dubai 2026. From AED 350 (iPhone 6) to AED 1,400 (17 Pro Max). OLED vs LCD, Apple Store comparison, what's included."
+      seoDescription="Full iPhone screen repair price list for Dubai 2026. From AED 179 (iPhone 6) to AED 1,400 (17 Pro Max). OLED vs LCD, Apple Store comparison, what's included."
       path="/blog/iphone-screen-repair-cost-dubai-2026"
+      wide
+      toc={[
+        { id: "price-list", label: "Full price list" },
+        { id: "why-costs-vary", label: "Why costs vary" },
+        { id: "oled-vs-lcd", label: "OLED vs LCD models" },
+        { id: "genuine-vs-alternative", label: "Genuine vs alternative parts" },
+        { id: "same-day-vs-ordered", label: "Same-day vs ordered parts" },
+        { id: "whats-included", label: "What's included" },
+        { id: "us-vs-apple", label: "Us vs Apple Store" },
+        { id: "diy-repair", label: "DIY screen repair" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Screen Repair Cost in Dubai 2026 - Every Model"
-      hook="iPhone screens crack. The price to fix one ranges from AED 350 to AED 1,400 in Dubai depending on your model - here is the full breakdown for every iPhone Apple has shipped since 2014."
-      quickAnswer="iPhone screen repair in Dubai costs AED 350-1,400 in April 2026. Older LCD models (6 to 8 Plus) are AED 350-500. OLED models from iPhone X onward are AED 600-1,400. Most repairs are same-day with a 3-month written warranty."
+      hook="iPhone screens crack. The price to fix one ranges from AED 179 to AED 1,400 in Dubai depending on your model - here is the full breakdown for every iPhone Apple has shipped since 2014."
+      quickAnswer="iPhone screen repair in Dubai costs AED 179-1,400 in April 2026. Older LCD models (6 to 8 Plus) are AED 179-500. OLED models from iPhone X onward are AED 600-1,400. Most repairs are same-day with a 3-month written warranty."
       author={{ name: "Usman", role: "Senior iPhone screen technician" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-06-16"
       readingMinutes={12}
-      featuredImageAlt="iPhone screen repair Dubai - technician replacing OLED display on workbench"
+      featuredImageAlt="iPhone Screen Repair Cost Dubai, iPhone screen repair Dubai - technician replacing OLED display on workbench"
       body={
         <>
-          <h2>The full iPhone screen repair price list - April 2026 Dubai</h2>
+          <h2 id="price-list">iPhone Screen Repair Cost Dubai. The full iPhone screen repair price list - April 2026 Dubai</h2>
           <p>
             Below is every iPhone we currently service. Prices include the screen part, labour,
             calibration, and a 3-month written warranty. No diagnostic fee.
           </p>
           <BlogPriceTable
             caption="iPhone screen repair pricing - MacBook Repair Dubai, April 2026"
-            rows={[
-              { model: "iPhone 6 / 6s",         ours: "AED 350", apple: "AED 599",  note: "LCD, plentiful parts" },
-              { model: "iPhone 6 Plus / 6s Plus", ours: "AED 400", apple: "AED 699", note: "LCD, larger panel" },
-              { model: "iPhone 7 / 8 / SE 2",   ours: "AED 400", apple: "AED 699",  note: "LCD" },
-              { model: "iPhone 7 Plus / 8 Plus", ours: "AED 450", apple: "AED 799", note: "LCD" },
-              { model: "iPhone X / XS",         ours: "AED 700", apple: "AED 1,099", note: "First OLED" },
-              { model: "iPhone XR",             ours: "AED 550", apple: "AED 949",  note: "LCD (called Liquid Retina)" },
-              { model: "iPhone XS Max",         ours: "AED 800", apple: "AED 1,199", note: "Larger OLED" },
-              { model: "iPhone 11",             ours: "AED 600", apple: "AED 949",  note: "LCD" },
-              { model: "iPhone 11 Pro / 12 / 12 Pro", ours: "AED 750", apple: "AED 1,099", note: "OLED" },
-              { model: "iPhone 11 Pro Max / 12 Pro Max", ours: "AED 850", apple: "AED 1,299", note: "Larger OLED" },
-              { model: "iPhone 12 mini / 13 mini", ours: "AED 700", apple: "AED 999", note: "Smaller OLED, fiddly" },
-              { model: "iPhone 13 / 13 Pro",    ours: "AED 750", apple: "AED 1,149", note: "OLED, ProMotion on Pro" },
-              { model: "iPhone 13 Pro Max",     ours: "AED 900", apple: "AED 1,299", note: "Larger ProMotion OLED" },
-              { model: "iPhone 14 / 14 Plus",   ours: "AED 750", apple: "AED 1,149", note: "OLED" },
-              { model: "iPhone 14 Pro / 14 Pro Max", ours: "AED 950", apple: "AED 1,399", note: "Dynamic Island, ProMotion" },
-              { model: "iPhone 15 / 15 Plus",   ours: "AED 750", apple: "AED 1,149", note: "Dynamic Island standard" },
-              { model: "iPhone 15 Pro / 15 Pro Max", ours: "AED 1,000", apple: "AED 1,499", note: "Titanium frame, ProMotion" },
-              { model: "iPhone 16 / 16 Plus / 16e", ours: "AED 800", apple: "AED 1,199", note: "OLED" },
-              { model: "iPhone 16 Pro / 16 Pro Max", ours: "AED 1,050", apple: "AED 1,549", note: "Larger ProMotion OLED" },
-              { model: "iPhone 17 / 17e",       ours: "AED 850", apple: "AED 1,249", note: "OLED, slimmer chassis" },
-              { model: "iPhone Air",            ours: "AED 1,100", apple: "AED 1,599", note: "Ultra-thin OLED, premium adhesive" },
-              { model: "iPhone 17 Pro",         ours: "AED 1,200", apple: "AED 1,699", note: "Vapor-chamber-bonded OLED" },
-              { model: "iPhone 17 Pro Max",     ours: "AED 1,400", apple: "AED 1,899", note: "Largest current OLED panel" },
-            ]}
+            rows={IPHONE_SCREEN_PRICES.map((r) => ({
+              model: r.model,
+              ours: `AED ${r.price.toLocaleString()}`,
+              apple: `AED ${r.apple_price.toLocaleString()}`,
+              note: r.note,
+            }))}
           />
           <p className="text-[13px] text-text-muted mono">
             Apple Store pricing from{" "}
-            <a href="https://support.apple.com/iphone/repair/screen-replacement" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href="https://support.apple.com/iphone/repair/screen-replacement" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com/iphone/repair
             </a>{" "}
             converted from USD list to AED on 22 April 2026. Apple Store UAE pricing varies slightly.
           </p>
 
-          <h2>Why iPhone screen repair costs vary so much</h2>
+          <h2 id="why-costs-vary">Why iPhone screen repair costs vary so much</h2>
           <p>
             Three factors drive the AED 1,050 spread between the cheapest (iPhone 6) and most
             expensive (17 Pro Max) screens. First is <strong>panel technology</strong> - LCD
@@ -81,7 +75,7 @@ export default function BlogIPhoneScreenRepairCost() {
             iPhone 16. That labour shows up in the price.
           </p>
 
-          <h2>OLED vs LCD - which iPhones have which (and why it matters)</h2>
+          <h2 id="oled-vs-lcd">OLED vs LCD - which iPhones have which (and why it matters)</h2>
           <p>
             Apple shipped LCDs on every iPhone from the 6 (2014) through the iPhone 11 (2019) - and
             the iPhone XR was the LCD outlier of the 2018 line. From the iPhone 12 (2020) onward,
@@ -94,13 +88,13 @@ export default function BlogIPhoneScreenRepairCost() {
           </ul>
           <p>
             For repair pricing this means: if you have an older LCD iPhone (6, 7, 8, XR, 11), you
-            are in the AED 350-600 zone. If you have any OLED model, AED 600+ is the floor. The
+            are in the AED 179-600 zone. If you have any OLED model, AED 600+ is the floor. The
             cheap "fits any iPhone" panels you see online for AED 150 are LCDs being sold as OLED
             replacements - they fit, they light up, but the colours are washed out, the touch is
             laggy, and Face ID often fails.
           </p>
 
-          <h2>Original Apple vs quality alternative parts - honest comparison</h2>
+          <h2 id="genuine-vs-alternative">Original Apple vs quality alternative parts - honest comparison</h2>
           <p>
             We use three grades of panel depending on the job and what you ask for:
           </p>
@@ -122,7 +116,7 @@ export default function BlogIPhoneScreenRepairCost() {
             </li>
           </ol>
 
-          <h2>Same-day vs ordered parts - when to expect each</h2>
+          <h2 id="same-day-vs-ordered">Same-day vs ordered parts - when to expect each</h2>
           <p>
             We stock screens for every iPhone from the 11 onward. WhatsApp us before noon and you
             get the phone back the same evening. Older models (6, 7, 8, X, XS) usually arrive next
@@ -130,7 +124,7 @@ export default function BlogIPhoneScreenRepairCost() {
             because the panels are still rationed by Apple to authorised repair channels.
           </p>
 
-          <h2>What's included in our iPhone screen repair</h2>
+          <h2 id="whats-included">What's included in our iPhone screen repair</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>The screen panel itself (OLED or LCD, your choice of grade)</li>
             <li>Labour (typically 30-60 minutes at the bench)</li>
@@ -141,21 +135,21 @@ export default function BlogIPhoneScreenRepairCost() {
             <li>3-month written warranty on parts and labour</li>
           </ul>
 
-          <h2>iPhone screen repair Dubai - us vs Apple Store comparison</h2>
+          <h2 id="us-vs-apple">iPhone screen repair Dubai - us vs Apple Store comparison</h2>
           <BlogPriceTable
             caption="iPhone 17 Pro Max screen repair - comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price",            ours: "AED 1,400", apple: "AED 1,899" },
+              { model: "Price", ours: `AED ${(IPHONE_SCREEN_PRICES.find((r) => r.model.includes("17 Pro Max"))?.price ?? 1400).toLocaleString()}`, apple: "AED 1,899" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days (parts via DXB)" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You travel to Dubai Mall / Mall of Emirates" },
               { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
               { model: "Diagnostic fee",   ours: "Free",      apple: "Free if covered by AppleCare+, otherwise included in repair quote" },
-              { model: "Genuine Apple part", ours: "On request (+AED 350)", apple: "Always" },
+              { model: "Genuine Apple part", ours: "On request (+AED 179)", apple: "Always" },
             ]}
           />
 
-          <h2>DIY iPhone screen repair - should you?</h2>
+          <h2 id="diy-repair">DIY iPhone screen repair - should you?</h2>
           <p>
             Honest answer: no, unless you genuinely enjoy small-electronics work and have AED 200
             of tools already. The risk is not the screen install - it's the four things around it:
@@ -167,7 +161,7 @@ export default function BlogIPhoneScreenRepairCost() {
             iFixit teardown for your specific model first.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             <Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our iPhone screen repair page

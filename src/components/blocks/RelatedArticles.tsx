@@ -4,48 +4,67 @@
 import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
 import { relatedArticles, familyFromPath, topicsFromPath } from "@/lib/related-articles";
-import { cn } from "@/lib/utils";
 
 export function RelatedArticles({
   path,
   family,
   topics,
   heading = "From our blog",
-  limit = 4,
-  tone = "light",
+  limit = 5,
 }: {
-  path: string;                 // current page path - used to derive family/topics + exclude self
-  family?: string;              // override the derived family if needed
-  topics?: string[];            // extra topics to boost
+  path: string;
+  family?: string;
+  topics?: string[];
   heading?: string;
   limit?: number;
-  tone?: "light" | "dark";      // "dark" for use on the bg-bg-alt band; default light
+  tone?: "light" | "dark"; // kept for API compat, not used
 }) {
-  const dark = tone === "dark";
   const fam = family ?? familyFromPath(path);
   const tps = [...new Set([...(topics ?? []), ...topicsFromPath(path)])];
   const posts = relatedArticles({ family: fam, topics: tps, excludeSlug: path, limit });
   if (posts.length < 2) return null;
 
   return (
-    <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-      <h2 className={cn("text-[24px] md:text-[28px] mb-md", dark && "text-text")}>{heading}</h2>
-      <div className="grid gap-2 sm:grid-cols-2">
-        {posts.map((p) => (
-          <Link
-            key={p.slug}
-            to={p.slug}
-            className={cn(
-              "group flex items-center justify-between gap-md rounded-md px-lg py-md transition-colors",
-              dark
-                ? "border border-border bg-bg-card hover:border-accent/40"
-                : "bg-bg-card border border-border hover:border-primary",
-            )}
-          >
-            <span className={cn("text-[15px] font-medium leading-snug", dark ? "text-text group-hover:text-accent" : "group-hover:text-primary")}>{p.title}</span>
-            <ArrowRight size={16} className={cn("shrink-0", dark ? "text-accent" : "text-primary")} aria-hidden />
-          </Link>
-        ))}
+    <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px] mb-[80px]">
+      <div className="flex items-center justify-between mb-5">
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Blog</p>
+          <h2 className="text-[22px] md:text-[26px] font-bold tracking-tight text-text">{heading}</h2>
+        </div>
+        <Link
+          to="/blog"
+          className="hidden sm:inline-flex items-center gap-1 text-[13px] font-semibold text-accent hover:underline shrink-0"
+        >
+          All articles <ArrowRight size={14} aria-hidden />
+        </Link>
+      </div>
+
+      {/* horizontal scroll on mobile, grid on sm+ */}
+      <div className="flex gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 sm:overflow-visible sm:pb-0 -mx-5 px-5 sm:mx-0 sm:px-0">
+        {posts.map((p) => {
+          const year = p.date?.slice(0, 4) ?? "";
+          return (
+            <Link
+              key={p.slug}
+              to={p.slug}
+              className="group flex flex-col justify-between gap-3 rounded-xl border border-border bg-bg-card p-4 hover:border-accent/50 transition-colors shrink-0 w-[260px] sm:w-auto"
+            >
+              <p className="text-[14px] font-medium text-text leading-snug group-hover:text-accent line-clamp-3">
+                {p.title}
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-[12px] text-text-faint">{year}</span>
+                <ArrowRight size={14} className="text-accent opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-transform" aria-hidden />
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className="mt-4 sm:hidden text-center">
+        <Link to="/blog" className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent hover:underline">
+          All articles <ArrowRight size={14} aria-hidden />
+        </Link>
       </div>
     </section>
   );

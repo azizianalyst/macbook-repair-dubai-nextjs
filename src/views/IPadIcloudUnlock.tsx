@@ -19,7 +19,7 @@ export default function IPadIcloudUnlock() {
         { name: "iCloud Unlock", path: "/ipad-icloud-unlock-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Apple ID and Activation Lock consultation" }}
-      serviceName="iPad iCloud Unlock Consultation"
+      serviceName="iPad iCloud Unlock Consultation Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -48,7 +48,7 @@ export default function IPadIcloudUnlock() {
       warrantyDays={0}
       warrantyBullets={[
         "Consultation only - no warranty applies (we make no claims to unlock).",
-        "If we install software after Apple unlocks, that work carries our standard 12-month warranty.",
+        "If we install software after Apple unlocks, that work carries our standard warranty of up to 12 months.",
         "We do not guarantee Apple will accept any specific case - we give you our honest read.",
       ]}
       faqs={[

@@ -19,6 +19,18 @@ export default function BlogMacBookNotTurningOn() {
       seoTitle="MacBook Not Turning On: 7 Fixes to Try First (2026)"
       seoDescription="MacBook won't turn on? 7 step-by-step fixes: SMC reset, NVRAM, charger checks, Safe Boot, Recovery mode. Apple Silicon and Intel covered, then bring it in."
       path="/blog/macbook-not-turning-on-fix-guide"
+      wide
+      toc={[
+        { id: "check-power-adapter", label: "Step 1. Check the power adapter" },
+        { id: "smc-reset", label: "Step 2. SMC reset" },
+        { id: "nvram-reset", label: "Step 3. NVRAM / PRAM reset" },
+        { id: "drain-recharge", label: "Step 4. Drain and recharge" },
+        { id: "safe-boot", label: "Step 5. Safe Boot" },
+        { id: "recovery-boot", label: "Step 6. Internet Recovery boot" },
+        { id: "external-display", label: "Step 7. External display test" },
+        { id: "when-to-bring-in", label: "When to stop and bring it in" },
+        { id: "what-we-do", label: "What we'll do" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Not Turning On? 7 Fixes Before You Bring It In"
       hook="Before you call us, try these 7 steps. About 30% of 'dead MacBook' cases are fixable in 5 minutes - saving you a service ticket entirely."
@@ -36,7 +48,7 @@ export default function BlogMacBookNotTurningOn() {
       })]}
       body={
         <>
-          <h2>Step 1 - Check the power adapter (most common cause)</h2>
+          <h2 id="check-power-adapter">MacBook Not Turning On. Step 1 - Check the power adapter (most common cause)</h2>
           <p>
             About 35% of "dead MacBook" cases that come to our workshop are actually a failed
             charger, a failed cable, or a wall socket with no current. Before assuming the MacBook
@@ -50,7 +62,7 @@ export default function BlogMacBookNotTurningOn() {
             and brick.
           </p>
 
-          <h2>Step 2 - SMC reset (Intel vs Apple Silicon are different)</h2>
+          <h2 id="smc-reset">Step 2 - SMC reset (Intel vs Apple Silicon are different)</h2>
           <p>
             The SMC (System Management Controller) handles power, battery, fans, and the sleep/wake
             cycle. A stuck SMC is the most common reason a healthy MacBook refuses to power on.
@@ -72,7 +84,7 @@ export default function BlogMacBookNotTurningOn() {
             </li>
           </ul>
 
-          <h2>Step 3 - NVRAM / PRAM reset</h2>
+          <h2 id="nvram-reset">Step 3 - NVRAM / PRAM reset</h2>
           <p>
             NVRAM stores small settings like volume, display resolution, and startup disk choice.
             A corrupted NVRAM occasionally hangs the boot before the screen lights up.
@@ -84,7 +96,7 @@ export default function BlogMacBookNotTurningOn() {
             models).
           </p>
 
-          <h2>Step 4 - Drain and recharge cycle</h2>
+          <h2 id="drain-recharge">Step 4 - Drain and recharge cycle</h2>
           <p>
             If the MacBook battery is deeply discharged (sat unused for weeks, or the cell is at
             the end of its life), the protection circuit refuses to allow the SoC to start until
@@ -92,7 +104,7 @@ export default function BlogMacBookNotTurningOn() {
             untouched, then try power.
           </p>
 
-          <h2>Step 5 - Safe Boot</h2>
+          <h2 id="safe-boot">Step 5 - Safe Boot</h2>
           <p>
             Safe Boot loads only the minimum drivers and skips third-party kernel extensions.
             Useful if the MacBook starts but freezes at the Apple logo.
@@ -109,7 +121,7 @@ export default function BlogMacBookNotTurningOn() {
             </li>
           </ul>
 
-          <h2>Step 6 - Internet Recovery boot</h2>
+          <h2 id="recovery-boot">Step 6 - Internet Recovery boot</h2>
           <p>
             If your SSD is corrupted but the rest of the MacBook is fine, Internet Recovery lets
             you reinstall macOS over WiFi. On Apple Silicon: hold the power button until startup
@@ -117,7 +129,7 @@ export default function BlogMacBookNotTurningOn() {
             startup.
           </p>
 
-          <h2>Step 7 - External display test</h2>
+          <h2 id="external-display">Step 7 - External display test</h2>
           <p>
             Connect a known-good external display via USB-C or HDMI (with adapter). If the
             external lights up and shows the macOS desktop or login screen, the MacBook is alive
@@ -125,13 +137,13 @@ export default function BlogMacBookNotTurningOn() {
             an AED 600-1,200 repair, not a board-level problem.
           </p>
 
-          <h2>When to stop trying and bring it in</h2>
+          <h2 id="when-to-bring-in">When to stop trying and bring it in</h2>
           <p>If after all 7 steps the MacBook shows zero signs of life - no fan spin, no chime,
           no display, no current draw on a USB-C power meter - the issue is one of: failed
           charging IC, failed power management IC, deep liquid damage, or a dead M-chip. All
           require bench-level diagnosis.</p>
 
-          <h2>What we'll do when you bring it in</h2>
+          <h2 id="what-we-do">What we'll do when you bring it in</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Bench power supply test - measure current draw at boot</li>
             <li>Open MacBook, inspect logic board under microscope</li>

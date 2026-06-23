@@ -6,7 +6,7 @@ export default function IPhone13ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Repair Dubai - 120Hz ProMotion from AED 300 | 055 741 3706"
-      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, 12-month warranty."
+      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen AED 750, battery AED 300. Same-day, warranty of up to 12 months."
       path="/iphone-13-pro-repair-dubai"
       eyebrow="iPhone 13 Pro (2021)"
       h1="iPhone 13 Pro Repair Dubai - ProMotion OLED, Battery, LiDAR"
@@ -20,7 +20,7 @@ export default function IPhone13ProRepair() {
         { name: "iPhone 13 Pro", path: "/iphone-13-pro-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 13 Pro Repair"
+      serviceName="iPhone 13 Pro Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

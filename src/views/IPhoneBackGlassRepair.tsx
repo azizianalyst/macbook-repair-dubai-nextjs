@@ -14,7 +14,7 @@ export default function IPhoneBackGlassRepair() {
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone back glass repair quote please. Model: "
       technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Laser back-glass removal" }}
-      serviceName="iPhone Back Glass Repair"
+      serviceName="iPhone Back Glass Repair Dubai"
       pricingRows={[
         { model: "iPhone 8 / 8 Plus",                price: 350, timeline: "Same day" },
         { model: "iPhone X / XR / XS",               price: 400, timeline: "Same day" },
@@ -53,9 +53,10 @@ export default function IPhoneBackGlassRepair() {
         { title: "Laser back-glass removal", body: "Phone clamped, 532nm laser run across the glass at controlled speed. Glass shatters into removable shards. Residue wiped with isopropyl. Wireless coil and MagSafe array inspected for damage." },
         { title: "New back glass bonded with 3M adhesive", body: "Replacement glass aligned to camera cutout. 3M VHB structural adhesive applied. Phone clamped at 5kg pressure for 90 minutes at room temp." },
         { title: "Wireless charging + MagSafe test", body: "Charged on a Qi pad - must reach 7.5W (15W on MagSafe-enabled iPhones). MagSafe accessory snap test. Camera autofocus checked through new glass." },
-        { title: "Free delivery + 12-month warranty", body: "Same day on iPhone 8 to iPhone 11. 1 day on iPhone 12 to 17. Warranty covers the bond and the wireless coil function." },
+        { title: "Free delivery + warranty of up to 12 months", body: "Same day on iPhone 8 to iPhone 11. 1 day on iPhone 12 to 17. Warranty covers the bond and the wireless coil function." },
       ]}
       warrantyDays={365}
+      glassNotice
       warrantyBullets={[
         "Covered: bond failure, glass defects, wireless charging or MagSafe failure caused by the repair.",
         "Not covered: new physical damage, water damage post-repair, back glass shattered by a fresh drop.",

@@ -29,7 +29,9 @@ async function head(path, foundOn, kind) {
 }
 
 async function crawlPage(path) {
-  const res = await fetch(SITE + path, { redirect: "manual", headers: UA });
+  // Use redirect:"follow" so trailing-slash 308s are transparently followed
+  // and we crawl the real page. Only non-2xx responses after following count as errors.
+  const res = await fetch(SITE + path, { redirect: "follow", headers: UA });
   if (res.status !== 200) {
     problems.push({ url: path, status: res.status, foundOn: "(crawl)", kind: "page" });
     return;
@@ -57,19 +59,29 @@ async function crawlPage(path) {
   }
 }
 
+// Workers poll the queue until it has been empty for 3 consecutive ticks.
+// This avoids the race where workers exit before the first page finishes
+// enqueuing its discovered links.
+let activeWorkers = 0;
+let done = false;
 const workers = Array.from({ length: 12 }, async () => {
-  while (queue.length) {
+  activeWorkers++;
+  while (!done) {
     const p = queue.shift();
-    if (p !== undefined) await crawlPage(p).catch((e) => problems.push({ url: p, status: "FETCH FAIL " + e.message, foundOn: "(crawl)", kind: "page" }));
-    else await new Promise((r) => setTimeout(r, 200));
+    if (p !== undefined) {
+      await crawlPage(p).catch((e) => problems.push({ url: p, status: "FETCH FAIL " + e.message, foundOn: "(crawl)", kind: "page" }));
+    } else {
+      await new Promise((r) => setTimeout(r, 200));
+    }
   }
+  activeWorkers--;
 });
-// keep workers alive while others may still enqueue
 let idle = 0;
 while (idle < 3) {
   await new Promise((r) => setTimeout(r, 1000));
   if (queue.length === 0) idle++; else idle = 0;
 }
+done = true;
 await Promise.all(workers);
 
 console.log(`Crawled ${pages} pages, checked ${assets} assets, ${seen.size} URLs discovered.`);

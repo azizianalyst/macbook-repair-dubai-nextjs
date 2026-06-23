@@ -19,7 +19,7 @@ export default function IMacOverheatingFix() {
         { name: "Overheating Fix",     path: "/imac-overheating-fix-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac thermal restoration" }}
-      serviceName="iMac Overheating Fix"
+      serviceName="iMac Overheating Fix Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -47,7 +47,7 @@ export default function IMacOverheatingFix() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "12-month warranty on the thermal work and adhesive seal.",
+        "warranty of up to 12 months on the thermal work and adhesive seal.",
         "Free re-clean if the same dust issue returns inside 6 months (it shouldn't).",
         "Free home visit option for the pickup and drop-off - iMacs are heavy.",
       ]}

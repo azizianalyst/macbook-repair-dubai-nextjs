@@ -19,7 +19,7 @@ export default function IMacPowerSupplyRepair() {
         { name: "Power Supply Repair", path: "/imac-power-supply-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board and power restoration" }}
-      serviceName="iMac Power Supply Repair"
+      serviceName="iMac Power Supply Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

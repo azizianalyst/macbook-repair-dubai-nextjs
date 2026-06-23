@@ -15,6 +15,18 @@ export default function BlogMacBookBatteryHealthCheck() {
       seoTitle="MacBook Battery Health Check: Every Method (2026)"
       seoDescription="Check MacBook battery health 3 ways: System Settings, Option-click, Terminal. Cycle-count limits per model, M1-M5 chemistry, when to replace at AED 450+."
       path="/blog/macbook-battery-health-check-guide"
+      wide
+      toc={[
+        { id: "method-system-settings", label: "Method 1: System Settings" },
+        { id: "method-option-click", label: "Method 2: Option-click" },
+        { id: "method-terminal", label: "Method 3: Terminal" },
+        { id: "reading-the-data", label: "Reading the data" },
+        { id: "when-to-replace", label: "When to replace" },
+        { id: "cycle-limits-per-model", label: "Cycle limits per model" },
+        { id: "chemistry-differences", label: "M1-M5 chemistry differences" },
+        { id: "service-battery-message", label: "Service Battery message" },
+        { id: "cost-to-replace", label: "Cost to replace" },
+      ]}
       category="Problem solving · MacBook"
       h1="How to Check MacBook Battery Health - Complete Guide"
       hook="Three ways to check, one decision: replace now, or wait six more months? Here is the technician's framework."
@@ -32,7 +44,7 @@ export default function BlogMacBookBatteryHealthCheck() {
       })]}
       body={
         <>
-          <h2>Method 1 - System Settings (macOS Sequoia / Sonoma / Ventura)</h2>
+          <h2 id="method-system-settings">MacBook Battery Health Check. Method 1 - System Settings (macOS Sequoia / Sonoma / Ventura)</h2>
           <p>
             The easiest method on any modern macOS:
           </p>
@@ -47,7 +59,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             older macOS).
           </p>
 
-          <h2>Method 2 - Option-click battery icon (older macOS)</h2>
+          <h2 id="method-option-click">Method 2 - Option-click battery icon (older macOS)</h2>
           <p>
             On Big Sur and earlier, hold the Option key and click the battery icon in the menu
             bar. A dropdown appears showing Cycle Count, Condition, and current power draw -
@@ -59,7 +71,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             About → System Report → Power.
           </p>
 
-          <h2>Method 3 - Terminal command (most detailed)</h2>
+          <h2 id="method-terminal">Method 3 - Terminal command (most detailed)</h2>
           <p>
             Open Applications → Utilities → Terminal and paste:
           </p>
@@ -81,7 +93,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             over time - the most useful diagnostic tool we recommend.
           </p>
 
-          <h2>Reading the data - cycle count, capacity, condition</h2>
+          <h2 id="reading-the-data">Reading the data - cycle count, capacity, condition</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>Cycle Count:</strong> total number of full 0-100% discharge cycles. Two
@@ -97,7 +109,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             </li>
           </ul>
 
-          <h2>When to replace - general rules</h2>
+          <h2 id="when-to-replace">When to replace - general rules</h2>
           <p>Replace if any of:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>Cycle count above 800 AND Maximum Capacity below 85%</li>
@@ -109,7 +121,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             <li>Real runtime is below 60% of original spec (e.g. M2 Air rated 18 hours, you're getting under 11)</li>
           </ul>
 
-          <h2>Battery cycle limits per MacBook model</h2>
+          <h2 id="cycle-limits-per-model">Battery cycle limits per MacBook model</h2>
           <BlogPriceTable
             caption="Apple-rated MacBook battery cycle limits at 80% capacity"
             headers={["Model", "Cycle limit", "Battery capacity (Wh)", "Notes"]}
@@ -126,7 +138,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             ]}
           />
 
-          <h2>M1 vs M2 vs M3 vs M4 vs M5 - chemistry differences</h2>
+          <h2 id="chemistry-differences">M1 vs M2 vs M3 vs M4 vs M5 - chemistry differences</h2>
           <p>
             All M-series MacBooks use lithium polymer pouch cells from the same family of
             suppliers (mainly LG Chem and ATL). The cell chemistry is essentially identical
@@ -139,7 +151,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             been roughly constant - about 4-5 years of daily use before "Service Recommended".
           </p>
 
-          <h2>Apple's "Service Battery" message - what it means</h2>
+          <h2 id="service-battery-message">Apple's "Service Battery" message - what it means</h2>
           <p>
             "Service Recommended" or older "Service Battery" appears when macOS's diagnostic
             judges that the battery's full-charge capacity has degraded sufficiently to warrant
@@ -156,7 +168,7 @@ export default function BlogMacBookBatteryHealthCheck() {
             replacement.
           </p>
 
-          <h2>Cost to replace at our shop</h2>
+          <h2 id="cost-to-replace">Cost to replace at our shop</h2>
           <p>
             See our full{" "}
             <Link to="/blog/macbook-battery-replacement-cost-2026" className="text-accent font-semibold hover:underline">

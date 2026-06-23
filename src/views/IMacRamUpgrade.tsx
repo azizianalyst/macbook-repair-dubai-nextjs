@@ -19,7 +19,7 @@ export default function IMacRamUpgrade() {
         { name: "RAM Upgrade",         path: "/imac-ram-upgrade-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac upgrades and board-level repair" }}
-      serviceName="iMac RAM Upgrade"
+      serviceName="iMac RAM Upgrade Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -47,7 +47,7 @@ export default function IMacRamUpgrade() {
       warrantyDays={365}
       warrantyBullets={[
         "1-year warranty on the RAM modules themselves.",
-        "12-month warranty on the install workmanship.",
+        "warranty of up to 12 months on the install workmanship.",
         "Free swap if a stick fails diagnostics inside warranty.",
       ]}
       faqs={[

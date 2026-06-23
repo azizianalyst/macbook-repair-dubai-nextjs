@@ -1,47 +1,27 @@
-// canonical site data - change here, propagates everywhere
+// canonical site data. The business facts (NAP / reviews / hours / freshness) are now edited in the
+// admin Business tab and baked in by scripts/gen-business.cjs → business.generated.ts. We import and
+// re-export them here so every existing `@/content/site` import keeps working unchanged.
+import {
+  NAP as GEN_NAP, REVIEW_COUNT as GEN_REVIEW_COUNT, REVIEW_AVERAGE as GEN_REVIEW_AVERAGE,
+  CONTENT_REVIEWED as GEN_CONTENT_REVIEWED, HOURS as GEN_HOURS,
+} from "./business.generated";
+import { SITE_SETTINGS } from "./settings.generated";
 
-export const NAP = {
-  name: "MacBook Repair Dubai",
-  street: "Office #45, 10th Floor, Concord Tower",
-  area: "Al Sufouh, Dubai Media City",
-  city: "Dubai",
-  country: "United Arab Emirates",
-  phoneDisplay: "055 741 3706",
-  phoneE164: "+971557413706",
-  whatsappUrl: "https://wa.me/971557413706",
-  facebook: "https://www.facebook.com/macbookrepairdubai.ae/",
-  instagram: "https://www.instagram.com/azizitechnologies/",
-  youtube: "https://www.youtube.com/@AziziTechnologies",
-  founded: "10 October 2004",
-  yearsInBusiness: 21,
-} as const;
+export const NAP = GEN_NAP;
+export const REVIEW_COUNT = GEN_REVIEW_COUNT;
+export const REVIEW_AVERAGE = GEN_REVIEW_AVERAGE;
 
-// Review totals - bump when site crosses 200+, 225+, 250+, etc.
-export const REVIEW_COUNT = 215;
-export const REVIEW_AVERAGE = 5.0;
+// Visible "content reviewed" freshness signal (AEO lever), now edited in the admin Business tab.
+export const CONTENT_REVIEWED = GEN_CONTENT_REVIEWED;
 
-// Single source of truth for the visible "content reviewed" freshness signal (AEO lever —
-// fights the 3-month citation cliff). BUMP every quarterly content/pricing review.
-// See docs/freshness-cadence.md for the refresh system.
-export const CONTENT_REVIEWED = "June 2026";
+// ISO date used as lastmod in all sitemaps for non-blog routes, now edited in /admin/settings
+// (settings.generated.ts). Only changes when content changes, so it stays a real freshness signal.
+export const SITEMAP_LAST_UPDATED = SITE_SETTINGS.sitemapLastmod;
 
-// ISO date used as lastmod in all sitemaps for non-blog routes.
-// Use new Date() would stamp every URL with today's date on every deploy, wasting Google's
-// freshness signal. This constant only changes when the content actually changes.
-// BUMP alongside CONTENT_REVIEWED on each quarterly content review.
-export const SITEMAP_LAST_UPDATED = "2026-06-10";
+// Opening hours, now edited in the admin Business tab (see business.generated.ts).
+export const HOURS = GEN_HOURS;
 
-export const HOURS = [
-  { day: "Monday",    open: "9 am - 10 pm" },
-  { day: "Tuesday",   open: "9 am - 10 pm" },
-  { day: "Wednesday", open: "9 am - 10 pm" },
-  { day: "Thursday",  open: "9 am - 10 pm" },
-  { day: "Friday",    open: "9 am - 10 pm" },
-  { day: "Saturday",  open: "9 am - 10 pm" },
-  { day: "Sunday",    open: "Closed" },
-] as const;
-
-// Canonical repair pricing (AED, VAT-inclusive). Single source of truth — the home
+// Canonical repair pricing (AED, VAT-inclusive). Single source of truth, the home
 // FAQ answers, the visible price table, and the JSON-LD OfferCatalog must all agree
 // with these figures. Update here first, then sweep copy that quotes them.
 export const PRICING = {
@@ -50,13 +30,13 @@ export const PRICING = {
   screen: { from: 600, to: 1200 },      // Air 13"/Pro 13" 600 · Pro 14" 800 · Pro 16" 1,200
   battery: { from: 450, to: 600 },      // Air 450 · Pro 13" 500 · Pro 14"/16" 600
   keyboard: { from: 150, to: 700 },     // key cap 150 · Magic Keyboard 350 · butterfly top case 700
-  logicBoard: { from: 800, to: 2999 },  // component-level board repair
+  logicBoard: { from: 299, to: 2999 },  // component-level board repair (floor = simplest single-IC fix)
   ssdUpgrade: { from: 599, to: 1499 },  // HDD→SSD incl. drive + installation
-  waterDamage: { from: 700, to: 2499 },
+  waterDamage: { from: 299, to: 2499 },
   software: { from: 199, to: 499 },     // OS install, virus removal
 } as const;
 
-// Canonical warranty tiers. The warranty is NOT flat — it depends on the repair.
+// Canonical warranty tiers. The warranty is NOT flat, it depends on the repair.
 // Single source of truth: visible copy, the /warranty page table, and every
 // JSON-LD WarrantyPromise (warranty: WARRANTY.*.iso) must agree with these.
 //   • hardware  → up to 12 months  (screen, keyboard, trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM)
@@ -133,4 +113,15 @@ export const USPS = [
   { label: "Free loaner MacBook",         icon: "Laptop" },
   { label: "Since 2004",                  icon: "Award" },
   { label: `${REVIEW_COUNT}+ five-star reviews`, icon: "Star" },
+] as const;
+
+// Workshop technician roster, single source of truth for BOTH the About-page team
+// section AND the server-rendered Person JSON-LD (E-E-A-T: named, experienced techs).
+// Consumed by src/views/About.tsx (display) and src/lib/page-schema.ts (schema), so the
+// visible roster and the structured data can never drift. Keep names/years accurate.
+export const TEAM = [
+  { name: "Shafiq", years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
+  { name: "Usman",  years: 11, specialisation: "Board-level repair · M-series logic boards" },
+  { name: "Ali",    years: 14, specialisation: "Data recovery · iMac and Mac mini" },
+  { name: "Hamza",  years: 7,  specialisation: "iPhone, iPad" },
 ] as const;

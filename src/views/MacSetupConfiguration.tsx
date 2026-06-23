@@ -6,8 +6,10 @@ import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/lib/router-compat";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -92,7 +94,7 @@ export default function MacSetupConfiguration() {
       <QuickAnswer
         tone="dark"
         question="Do you offer Mac setup and data migration in Dubai?"
-        answer="Yes. MacBook Repair Dubai provides Mac setup, configuration and data migration in Dubai — new-Mac setup, account and email configuration, Time Machine backups, and transferring data from an old Mac or PC. Service is available at the Concord Tower workshop in Dubai Media City or on-site, with free pickup across Dubai mainland."
+        answer="Yes. MacBook Repair Dubai provides Mac setup, configuration and data migration in Dubai, new-Mac setup, account and email configuration, Time Machine backups, and transferring data from an old Mac or PC. Service is available at the Concord Tower workshop in Dubai Media City or on-site, with free pickup across Dubai mainland."
       />
 
       <USPStrip tone="dark" />
@@ -156,6 +158,14 @@ export default function MacSetupConfiguration() {
         <FAQAccordion items={FAQS} injectSchema tone="dark" />
       </section>
 
+      {/* Related guides */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[20px] font-semibold mb-md text-text">Related guides</h2>
+        <ul className="flex flex-col gap-sm">
+          <li><Link to="/migrating-data-from-old-macbook-to-new-macbook-without-icloud" className="text-accent underline underline-offset-2">Migrate MacBook without iCloud</Link><span className="text-text-muted text-[14px] ml-2">How to transfer data from an old MacBook to a new one without iCloud.</span></li>
+        </ul>
+      </section>
+
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Visit us or book a pickup</h2>
@@ -165,7 +175,6 @@ export default function MacSetupConfiguration() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">New Mac to set up? Get a quote in 4 minutes</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
@@ -187,6 +196,7 @@ export default function MacSetupConfiguration() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/mac-setup-data-migration-dubai" />
     </PageShell>
   );
 }

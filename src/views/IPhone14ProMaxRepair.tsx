@@ -6,7 +6,7 @@ export default function IPhone14ProMaxRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Pro Max Repair Dubai - 6.7-inch Dynamic Island from AED 350 | 055 741 3706"
-      seoDescription="iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen AED 850, Dynamic Island AED 900. Same-day, 12-month warranty."
+      seoDescription="iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen AED 850, Dynamic Island AED 900. Same-day, warranty of up to 12 months."
       path="/iphone-14-pro-max-repair-dubai"
       eyebrow="iPhone 14 Pro Max (2022)"
       h1="iPhone 14 Pro Max Repair Dubai - Dynamic Island, ProMotion, 48MP"
@@ -20,7 +20,7 @@ export default function IPhone14ProMaxRepair() {
         { name: "iPhone 14 Pro Max", path: "/iphone-14-pro-max-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 14 Pro Max Repair"
+      serviceName="iPhone 14 Pro Max Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

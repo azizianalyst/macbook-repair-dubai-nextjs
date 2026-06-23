@@ -28,7 +28,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
           <p className={cn("font-semibold text-[15px]", dark && "text-text")}>{name}</p>
           <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>{date}</p>
         </div>
-        <div className="flex" aria-label={`${rating} out of 5 stars`}>
+        <div className="flex" role="img" aria-label={`${rating} out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}

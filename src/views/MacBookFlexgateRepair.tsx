@@ -19,7 +19,7 @@ export default function MacBookFlexgateRepair() {
         { name: "Flexgate Repair", path: "/macbook-flexgate-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 21, specialisation: "MacBook display & board-level repair" }}
-      serviceName="MacBook Flexgate Repair"
+      serviceName="MacBook Flexgate Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

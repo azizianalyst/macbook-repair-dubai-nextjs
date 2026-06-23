@@ -6,7 +6,7 @@ export default function IPhone15PlusRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 15 Plus Repair Dubai - 6.7-inch USB-C from AED 400 | 055 741 3706"
-      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, 12-month warranty."
+      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, warranty of up to 12 months."
       path="/iphone-15-plus-repair-dubai"
       eyebrow="iPhone 15 Plus (2023, discontinued Sept 2025)"
       h1="iPhone 15 Plus Repair Dubai - 6.7-inch OLED, USB-C, Battery"
@@ -20,7 +20,7 @@ export default function IPhone15PlusRepair() {
         { name: "iPhone 15 Plus",  path: "/iphone-15-plus-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 15 Plus Repair"
+      serviceName="iPhone 15 Plus Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

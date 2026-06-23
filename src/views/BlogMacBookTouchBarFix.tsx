@@ -16,6 +16,18 @@ export default function BlogMacBookTouchBarFix() {
       seoTitle="MacBook Touch Bar Not Working? Fix Guide (2026)"
       seoDescription="Touch Bar frozen, dim, or dead? 5 software fixes including the Terminal restart trick, plus AED 600 hardware repair in Dubai and why Apple dropped it."
       path="/blog/macbook-touch-bar-not-working"
+      wide
+      toc={[
+        { id: "which-models", label: "Which MacBooks have Touch Bar" },
+        { id: "step-terminal-restart", label: "Step 1. Terminal restart" },
+        { id: "step-force-restart", label: "Step 2. Force restart" },
+        { id: "step-reset-smc", label: "Step 3. Reset SMC" },
+        { id: "step-update-macos", label: "Step 4. Update macOS" },
+        { id: "step-safe-boot", label: "Step 5. Safe Boot test" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost-dubai", label: "Repair cost in Dubai" },
+        { id: "why-apple-removed", label: "Why Apple removed it" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Touch Bar Not Working? Fix Guide"
       hook="Touch Bar issues affect every MacBook Pro from 2016 to 2022. Most are software (free fix in 60 seconds). The hardware fixes start at AED 600."
@@ -24,7 +36,7 @@ export default function BlogMacBookTouchBarFix() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="MacBook Touch Bar repair Dubai - diagnostic and replacement on 2019 16 inch Pro"
+      featuredImageAlt="MacBook Touch Bar Not Working. MacBook Touch Bar repair Dubai - diagnostic and replacement on 2019 16 inch Pro"
       extraSchemas={[howTo({
         name: "Fix a MacBook Touch Bar that has stopped working",
         description: "Five software fixes for a frozen, dim, or dead MacBook Pro Touch Bar before considering hardware service.",
@@ -33,7 +45,7 @@ export default function BlogMacBookTouchBarFix() {
       })]}
       body={
         <>
-          <h2>Which MacBooks have Touch Bar</h2>
+          <h2 id="which-models">MacBook Touch Bar Not Working. Which MacBooks have Touch Bar</h2>
           <p>
             Touch Bar shipped on the Apple Pro line from late 2016 to mid-2022:
           </p>
@@ -49,7 +61,7 @@ export default function BlogMacBookTouchBarFix() {
             Current M3/M4/M5 MacBooks use traditional physical function keys.
           </p>
 
-          <h2>Step 1 - Restart Touch Bar (Terminal command)</h2>
+          <h2 id="step-terminal-restart">Step 1 - Restart Touch Bar (Terminal command)</h2>
           <p>
             The fastest fix. Open Applications → Utilities → Terminal and run:
           </p>
@@ -62,14 +74,14 @@ export default function BlogMacBookTouchBarFix() {
             "Touch Bar frozen" cases without rebooting the Mac.
           </p>
 
-          <h2>Step 2 - Force restart the MacBook</h2>
+          <h2 id="step-force-restart">Step 2 - Force restart the MacBook</h2>
           <p>
             Hold the power button for a full 10 seconds, release, wait 5 seconds, then press
             power normally. Forces a clean boot of every macOS daemon including Touch Bar
             controllers. Fixes the cases where the Terminal restart didn't work.
           </p>
 
-          <h2>Step 3 - Reset SMC (Intel T2 only)</h2>
+          <h2 id="step-reset-smc">Step 3 - Reset SMC (Intel T2 only)</h2>
           <p>
             All Touch Bar MacBooks are Intel-based and most have the T2 security chip. The SMC
             governs Touch Bar power delivery. To reset on T2 MacBook Pro:
@@ -81,7 +93,7 @@ export default function BlogMacBookTouchBarFix() {
             <li>Press power normally</li>
           </ol>
 
-          <h2>Step 4 - Update macOS</h2>
+          <h2 id="step-update-macos">Step 4 - Update macOS</h2>
           <p>
             Apple shipped multiple Touch Bar bug fixes across point releases:
           </p>
@@ -96,7 +108,7 @@ export default function BlogMacBookTouchBarFix() {
             up to macOS Sonoma (14); Sequoia (15) is unofficially installable via OpenCore.
           </p>
 
-          <h2>Step 5 - Safe Boot test</h2>
+          <h2 id="step-safe-boot">Step 5 - Safe Boot test</h2>
           <p>
             Shut down, then hold Shift while pressing power until you reach the login screen.
             Safe Boot disables all third-party kernel extensions and login items. If your Touch
@@ -105,7 +117,7 @@ export default function BlogMacBookTouchBarFix() {
             screen-recording app with TouchBar overlay.
           </p>
 
-          <h2>When it's hardware (display issues, dead spots)</h2>
+          <h2 id="hardware-causes">When it's hardware (display issues, dead spots)</h2>
           <p>If after all 5 software steps the Touch Bar is still faulty, common hardware causes:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>
@@ -128,7 +140,7 @@ export default function BlogMacBookTouchBarFix() {
             </li>
           </ul>
 
-          <h2>Touch Bar repair cost in Dubai</h2>
+          <h2 id="repair-cost-dubai">Touch Bar repair cost in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Touch Bar OLED + digitiser assembly replacement:</strong> AED 600 same-day</li>
             <li><strong>Flex cable reseat (if disconnected):</strong> AED 250 same-day</li>
@@ -142,7 +154,7 @@ export default function BlogMacBookTouchBarFix() {
             AED 1,200+ versus Apple Store.
           </p>
 
-          <h2>Why Apple removed Touch Bar from new MacBooks</h2>
+          <h2 id="why-apple-removed">Why Apple removed Touch Bar from new MacBooks</h2>
           <p>
             Three reasons Apple eventually killed Touch Bar:
           </p>

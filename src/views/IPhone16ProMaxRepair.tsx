@@ -20,7 +20,7 @@ export default function IPhone16ProMaxRepair() {
         { name: "iPhone 16 Pro Max", path: "/iphone-16-pro-max-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 16 Pro Max Repair"
+      serviceName="iPhone 16 Pro Max Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -52,7 +52,7 @@ export default function IPhone16ProMaxRepair() {
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">6.9-inch ProMotion OLED replacement</td><td className="px-md py-sm">950</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm"><Link to="/iphone-16-pro-max-screen-flickering" className="text-accent underline underline-offset-2">6.9-inch ProMotion OLED replacement</Link></td><td className="px-md py-sm">950</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">500</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr className="bg-bg-alt"><td className="px-md py-sm">Camera Control button repair</td><td className="px-md py-sm">350</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
@@ -109,6 +109,7 @@ export default function IPhone16ProMaxRepair() {
         { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.9-inch ProMotion OLED AED 950." },
         { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "5x tetraprism + 48MP ultra-wide AED 900." },
         { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 3 / Thunderbolt - AED 500." },
+        { label: "iPhone 16 Pro Max screen flickering", href: "/iphone-16-pro-max-screen-flickering", description: "Causes and fixes for screen flickering on iPhone 16 Pro Max." },
       ]}
     />
   );

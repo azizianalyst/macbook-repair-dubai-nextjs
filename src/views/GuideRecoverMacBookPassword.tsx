@@ -189,7 +189,7 @@ export default function GuideRecoverMacBookPassword() {
             <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
-            so nothing is lost. Free pickup, free diagnosis, and a 12-month warranty -{" "}
+            so nothing is lost. Free pickup, free diagnosis, and a warranty of up to 12 months -{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               see all MacBook services
             </Link>{" "}
@@ -231,7 +231,7 @@ export default function GuideRecoverMacBookPassword() {
         },
         {
           q: "Is it safe to bring my MacBook to you for a password reset?",
-          a: "Yes. We've recovered MacBook access in Dubai since 2004 with free diagnosis and a 12-month warranty. For anything data-sensitive we image the drive before touching it, so your files are protected. We only work on Macs you can prove you own.",
+          a: "Yes. We've recovered MacBook access in Dubai since 2004 with free diagnosis and a warranty of up to 12 months. For anything data-sensitive we image the drive before touching it, so your files are protected. We only work on Macs you can prove you own.",
         },
       ]}
       relatedLinks={[

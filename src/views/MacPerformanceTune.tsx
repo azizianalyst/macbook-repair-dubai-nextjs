@@ -19,7 +19,7 @@ export default function MacPerformanceTune() {
         { name: "Performance Tune",    path: "/mac-performance-tune-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS performance and log analysis" }}
-      serviceName="Mac Mini, Studio and Pro Performance Tune"
+      serviceName="Mac Mini, Studio and Pro Performance Tune Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

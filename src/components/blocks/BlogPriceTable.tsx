@@ -1,5 +1,6 @@
 "use client";
 // Lightweight inline pricing table for use inside blog post body JSX.
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 type Row = { model: string; ours: string; apple?: string; note?: string };
 
 export function BlogPriceTable({
@@ -14,7 +15,7 @@ export function BlogPriceTable({
   return (
     <figure className="my-lg">
       <figcaption className="text-[13px] text-text-muted mb-sm mono">{caption}</figcaption>
-      <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
+      <ScrollHintTable className="border border-border rounded-md bg-bg-card" fadeClass="from-bg-card">
         <table className="w-full text-[14px] min-w-[560px]">
           <thead className="bg-bg-card">
             <tr className="text-left">
@@ -34,7 +35,7 @@ export function BlogPriceTable({
             ))}
           </tbody>
         </table>
-      </div>
+      </ScrollHintTable>
     </figure>
   );
 }

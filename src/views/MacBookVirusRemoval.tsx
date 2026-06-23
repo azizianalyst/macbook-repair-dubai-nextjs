@@ -173,7 +173,7 @@ export default function MacBookVirusRemoval() {
       {/* Answer-first capsule (AEO/BLUF) */}
       <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook virus and malware removal", startingPrice: 250, timeline: "same-day" })} />
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={15} />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -276,7 +276,7 @@ export default function MacBookVirusRemoval() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does virus removal take?</h2>
             <div className="grid gap-md md:grid-cols-3">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Same day (1-2 hours)</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Standard clean for adware, hijackers, profiles, fake utilities. Browser-only clean. About 70% of tickets.</p>
               </article>
@@ -322,7 +322,7 @@ export default function MacBookVirusRemoval() {
 
           {/* Pricing recap */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Virus removal cost in Dubai - transparent pricing</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook Virus Removal Dubai. Transparent Pricing</h2>
             <PricingTable service="Virus & malware removal" rows={PRICING} tone="dark" />
           </section>
 
@@ -339,7 +339,7 @@ export default function MacBookVirusRemoval() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">When DIY makes sense - and when it doesn't</h2>
             <div className="grid gap-md md:grid-cols-2">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Try it yourself first</h3>
                 <ul className="space-y-2 text-[14px] text-text-muted">
                   <li>Run Malwarebytes for Mac (free version) - catches 80% of common adware.</li>
@@ -394,7 +394,7 @@ export default function MacBookVirusRemoval() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real customer reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
@@ -418,8 +418,8 @@ export default function MacBookVirusRemoval() {
           <section>
             <h2 className="text-[22px] mb-md text-text">More on Mac security</h2>
             <ul className="grid gap-2 md:grid-cols-2 text-[14px]">
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-running-slow-10-fixes">Blog: MacBook running slow? 10 fixes that actually work</a></li>
-              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-battery-health-check-guide">Blog: MacBook battery &amp; health-check guide</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-running-slow-10-fixes/">Blog: MacBook running slow? 10 fixes that actually work</a></li>
+              <li><a className="text-accent font-semibold hover:underline" href="/blog/macbook-battery-health-check-guide/">Blog: MacBook battery &amp; health-check guide</a></li>
             </ul>
           </section>
 
@@ -434,7 +434,6 @@ export default function MacBookVirusRemoval() {
       {/* Final CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Pop-ups? Fans loud? WhatsApp the symptoms - quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Send a screenshot of the pop-up or a description of what changed. Free 15-minute diagnosis, AED 250 standard clean, 30-day re-clean guarantee.

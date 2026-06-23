@@ -9,6 +9,18 @@ export default function BlogMacMiniM4WorthIt() {
       seoTitle="Mac Mini M4 Worth It in 2026? Honest Dubai Buyer's Guide"
       seoDescription="Mac Mini M4 starts AED 2,599 in UAE. Smaller chassis, 16GB base RAM, M4 chip. Compare M2, M4 Pro, MacBook Air, iMac. Total cost with display + accessories."
       path="/blog/mac-mini-m4-worth-it"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "whats-new", label: "What's new in M4 Mini" },
+        { id: "vs-m2", label: "vs Mac Mini M2" },
+        { id: "vs-m4-pro", label: "vs Mac Mini M4 Pro" },
+        { id: "vs-macbook-air", label: "vs MacBook Air M4" },
+        { id: "vs-imac", label: "vs iMac M4" },
+        { id: "total-cost", label: "What to budget for" },
+        { id: "resale-value", label: "Resale value" },
+        { id: "repair-cost", label: "Repair cost expectations" },
+      ]}
       category="Buying guide · Mac desktop"
       h1="Mac Mini M4 (2024) - Worth Buying in 2026?"
       hook="AED 2,599 entry-level Mac Mini M4. Smaller, faster, more RAM. Best Apple deal of the year?"
@@ -17,17 +29,17 @@ export default function BlogMacMiniM4WorthIt() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="Mac Mini M4 worth buying in Dubai 2026 review"
+      featuredImageAlt="Mac Mini M4 Worth It. Mac Mini M4 worth buying in Dubai 2026 review"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Mac Mini M4 Worth It. Quick answer</h2>
           <p>
             Mac Mini M4 is the value pick of Apple's current lineup. Tiny new chassis (12.7 cm square),
             M4 chip, 16 GB RAM standard (Apple finally moved off 8 GB), starts at AED 2,599. For office
             work, web dev, light Final Cut, and home use it is overpowered for the money.
           </p>
 
-          <h2>What's new in M4 Mac Mini</h2>
+          <h2 id="whats-new">What's new in M4 Mac Mini</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Smaller chassis</strong>: 12.7 × 12.7 × 5 cm - half the footprint of the previous boxy Mini.</li>
             <li><strong>16 GB base RAM</strong>: doubled from 8 GB on M2. Huge for longevity.</li>
@@ -36,7 +48,7 @@ export default function BlogMacMiniM4WorthIt() {
             <li><strong>Power button on the bottom</strong>: divisive design choice. Lift the unit to power on. (Stays on 99% of the time anyway.)</li>
           </ul>
 
-          <h2>vs Mac Mini M2 - massive upgrade</h2>
+          <h2 id="vs-m2">vs Mac Mini M2 - massive upgrade</h2>
           <BlogPriceTable
             caption="Mac Mini M4 vs M2 - what changed"
             headers={["Spec", "Mac Mini M2 (2023)", "Mac Mini M4 (2024-26)"]}
@@ -52,7 +64,7 @@ export default function BlogMacMiniM4WorthIt() {
             ]}
           />
 
-          <h2>vs Mac Mini M4 Pro - worth +AED 1,500?</h2>
+          <h2 id="vs-m4-pro">vs Mac Mini M4 Pro - worth +AED 1,500?</h2>
           <p>
             Mac Mini M4 Pro starts at AED 4,499 with 24 GB RAM and 512 GB SSD. The M4 Pro chip has 12
             CPU cores (8 performance + 4 efficiency), 16 GPU cores, and three Thunderbolt 5 ports
@@ -69,7 +81,7 @@ export default function BlogMacMiniM4WorthIt() {
             this without breaking a sweat.
           </p>
 
-          <h2>vs MacBook Air M4 - saves money but no display/battery</h2>
+          <h2 id="vs-macbook-air">vs MacBook Air M4 - saves money but no display/battery</h2>
           <p>
             MacBook Air M4 13" with 16 GB / 256 GB: AED 5,199. Mac Mini M4 same specs: AED 2,599 + AED
             1,800 for a decent 27" 4K monitor + AED 600 for keyboard/mouse = AED 5,000. About the
@@ -85,7 +97,7 @@ export default function BlogMacMiniM4WorthIt() {
             </Link>.
           </p>
 
-          <h2>vs iMac M4 - no built-in display</h2>
+          <h2 id="vs-imac">vs iMac M4 - no built-in display</h2>
           <p>
             iMac M4 24" starts at AED 5,799 with the 4.5K Retina display included. Beautiful all-in-one
             but locked at 24" forever. Mac Mini + 27" external 4K is cheaper, gives you a bigger
@@ -94,7 +106,7 @@ export default function BlogMacMiniM4WorthIt() {
             for a larger workspace.
           </p>
 
-          <h2>What you need to budget for (display, keyboard, mouse)</h2>
+          <h2 id="total-cost">What you need to budget for (display, keyboard, mouse)</h2>
           <BlogPriceTable
             caption="Mac Mini M4 - total cost of ownership setup"
             headers={["Item", "Budget option", "Mid-tier", "Premium"]}
@@ -108,7 +120,7 @@ export default function BlogMacMiniM4WorthIt() {
             ]}
           />
 
-          <h2>Resale value 2 years out</h2>
+          <h2 id="resale-value">Resale value 2 years out</h2>
           <p>
             Apple Silicon Mac Minis hold value well. Expected April 2028 resale on a base M4: AED
             1,500-1,700 (58-65% retention) - better than MacBook resale due to lower cosmetic wear
@@ -116,7 +128,7 @@ export default function BlogMacMiniM4WorthIt() {
             visually than the 2010s rectangular design.
           </p>
 
-          <h2>Repair cost expectations</h2>
+          <h2 id="repair-cost">Repair cost expectations</h2>
           <BlogPriceTable
             caption="Mac Mini M4 typical repair pricing (April 2026)"
             headers={["Repair", "Our price", "Apple Service"]}

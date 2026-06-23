@@ -19,7 +19,7 @@ export default function MacBookRamUpgrade() {
         { name: "RAM Upgrade",    path: "/macbook-ram-upgrade-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "MacBook upgrade & component service" }}
-      serviceName="MacBook RAM Upgrade (Intel only)"
+      serviceName="MacBook RAM Upgrade (Intel only) Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

@@ -9,7 +9,7 @@ export default function IPadSmartConnectorRepair() {
       path="/ipad-smart-connector-repair-dubai"
       eyebrow="iPad Smart Connector"
       h1="iPad Smart Connector Repair Dubai"
-      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. AED 450, 2 days, 12-month warranty."
+      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. AED 450, 2 days, warranty of up to 12 months."
       startingPrice={450}
       timeline="2 days"
       whatsappPrefill="Hi, my iPad Smart Connector is broken - model and keyboard:"
@@ -19,7 +19,7 @@ export default function IPadSmartConnectorRepair() {
         { name: "Smart Connector",   path: "/ipad-smart-connector-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad chassis and connector repair" }}
-      serviceName="iPad Smart Connector Repair"
+      serviceName="iPad Smart Connector Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -44,7 +44,7 @@ export default function IPadSmartConnectorRepair() {
         { title: "Cross-test the keyboard",     body: "Free - we test your Magic Keyboard on a known-good iPad. Rules out the keyboard as the fault before we open the iPad." },
         { title: "Pad inspection + clean",       body: "Microscope inspection of the three Smart Connector pads. About 25% of cases are solved by careful contact pad cleaning - no bill if so." },
         { title: "Smart Connector flex replace", body: "If the internal flex is broken or pads are pitted beyond cleaning, we replace the assembly. Battery disconnect, careful chassis-side work to preserve the antenna." },
-        { title: "Verify keyboard + trackpad",   body: "Test your Magic Keyboard or Smart Keyboard, including trackpad gestures and backlight. 12-month warranty card with the iPad." },
+        { title: "Verify keyboard + trackpad",   body: "Test your Magic Keyboard or Smart Keyboard, including trackpad gestures and backlight. Warranty up to 12 months card with the iPad." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

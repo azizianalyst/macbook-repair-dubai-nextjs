@@ -9,6 +9,18 @@ export default function BlogIPhoneWorthDubai() {
       seoTitle="How Much Is My iPhone Worth in Dubai 2026? Resale Guide"
       seoDescription="Current Dubai resale prices for every iPhone model - mint, good, cracked. Compare Dubizzle, Apple Trade-In, and our cash buy-back. Updated April 2026."
       path="/blog/how-much-is-my-iphone-worth-dubai"
+      wide
+      toc={[
+        { id: "top-5-models", label: "Top 5 models" },
+        { id: "full-resale-table", label: "Full resale table" },
+        { id: "where-to-sell", label: "Where to sell" },
+        { id: "apple-trade-in-pricing", label: "Apple Trade-In pricing" },
+        { id: "condition-grading", label: "Condition grading" },
+        { id: "cracked-screen-value", label: "Cracked screen value" },
+        { id: "battery-health-value", label: "Battery health value" },
+        { id: "maximize-sale-price", label: "Maximize sale price" },
+        { id: "icloud-lock-check", label: "iCloud lock check" },
+      ]}
       category="Resale guide · iPhone"
       h1="How Much Is My iPhone Worth - Dubai 2026 Resale Guide"
       hook="Your iPhone has resale value - even cracked. Here's what each model gets in Dubai right now."
@@ -17,10 +29,10 @@ export default function BlogIPhoneWorthDubai() {
       datePublished="2026-04-27"
       dateModified="2026-04-27"
       readingMinutes={11}
-      featuredImageAlt="iPhone resale price guide Dubai 2026 - all models"
+      featuredImageAlt="How Much Is My iPhone Worth Dubai, iPhone resale price guide Dubai 2026 - all models"
       body={
         <>
-          <h2>Quick answer - top 5 models, current Dubai resale</h2>
+          <h2 id="top-5-models">How Much Is My iPhone Worth Dubai. Quick answer - top 5 models, current Dubai resale</h2>
           <p>
             Prices below assume mint condition (no cracks, ≥85% battery health, original box, no iCloud lock).
             Dubizzle "asking" prices are 15-20% higher than what actually sells; we list realistic sold prices.
@@ -37,7 +49,7 @@ export default function BlogIPhoneWorthDubai() {
             ]}
           />
 
-          <h2>Full table - every iPhone, every condition (April 2026)</h2>
+          <h2 id="full-resale-table">Full table - every iPhone, every condition (April 2026)</h2>
           <BlogPriceTable
             caption="Full Dubai resale table by model + condition (mid-tier storage)"
             headers={["Model", "Mint (AED)", "Good (AED)", "Cracked screen (AED)"]}
@@ -70,7 +82,7 @@ export default function BlogIPhoneWorthDubai() {
             ]}
           />
 
-          <h2>Where to sell in Dubai - three options</h2>
+          <h2 id="where-to-sell">Where to sell in Dubai - three options</h2>
           <h3>1. Dubizzle (highest price, slowest, scam risk)</h3>
           <p>
             Dubizzle is the UAE's largest classifieds site. Listing is free. You'll get the highest price
@@ -97,7 +109,7 @@ export default function BlogIPhoneWorthDubai() {
             buyer to deal with. Best if you're upgrading anyway and value an extra Saturday.
           </p>
 
-          <h2>Apple Trade-In Dubai - current pricing (April 2026)</h2>
+          <h2 id="apple-trade-in-pricing">Apple Trade-In Dubai - current pricing (April 2026)</h2>
           <BlogPriceTable
             caption="Apple Trade-In UAE values - mint condition (April 2026)"
             headers={["Model", "Apple Trade-In (AED)", "Our offer (AED)", "Difference"]}
@@ -111,7 +123,7 @@ export default function BlogIPhoneWorthDubai() {
             ]}
           />
 
-          <h2>Condition grading explained</h2>
+          <h2 id="condition-grading">Condition grading explained</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Mint</strong>: no scratches visible at arm's length, ≥90% battery, original box + cable, no repairs.</li>
             <li><strong>Excellent</strong>: 1-2 micro-scratches on frame, 85-89% battery, used a case its whole life.</li>
@@ -120,7 +132,7 @@ export default function BlogIPhoneWorthDubai() {
             <li><strong>Cracked</strong>: any glass damage front or back, regardless of internals.</li>
           </ul>
 
-          <h2>Cracked screen reduces value by 30-50%</h2>
+          <h2 id="cracked-screen-value">Cracked screen reduces value by 30-50%</h2>
           <p>
             A cracked screen on iPhone 16 Pro Max drops resale from AED 3,000 to AED 1,800 - a AED 1,200
             hit. Our screen replacement on the same model is AED 950 with 3-month warranty. So if you
@@ -128,7 +140,7 @@ export default function BlogIPhoneWorthDubai() {
             sometimes recommend the repair, sometimes don't (depends on model and your timeline).
           </p>
 
-          <h2>Battery health under 80% reduces value by 15%</h2>
+          <h2 id="battery-health-value">Battery health under 80% reduces value by 15%</h2>
           <p>
             Buyers see "Battery Service" warning and assume the worst. Replacing the battery before sale
             usually pays for itself: iPhone 15 Pro Max battery service AED 280 from us, recovers AED 360
@@ -138,7 +150,7 @@ export default function BlogIPhoneWorthDubai() {
             </Link>.
           </p>
 
-          <h2>How to maximize sale price (5 steps)</h2>
+          <h2 id="maximize-sale-price">How to maximize sale price (5 steps)</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Clean thoroughly - microfibre cloth + isopropyl 70% on frame and ports.</li>
             <li>Find original box, cable, SIM tray pin (raises price AED 100-200).</li>
@@ -147,7 +159,7 @@ export default function BlogIPhoneWorthDubai() {
             <li>Title: "iPhone 16 Pro Max 256GB Black Titanium UAE Apple Warranty Mint" - model + storage + colour + region first.</li>
           </ol>
 
-          <h2>iCloud lock - check before selling (and before buying)</h2>
+          <h2 id="icloud-lock-check">iCloud lock - check before selling (and before buying)</h2>
           <p>
             An iCloud-locked iPhone has zero resale value beyond parts. Sign out of iCloud (Settings →
             [Your Name] → Sign Out) before handing over. Buyers will check via Settings → General →

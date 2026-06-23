@@ -9,6 +9,17 @@ export default function BlogMacBookBatteryReplacementCost() {
       seoTitle="MacBook Battery Replacement Cost Dubai 2026: Air & Pro"
       seoDescription="MacBook battery replacement in Dubai, April 2026: AED 450 (Air) to AED 700 (16″ Pro), same-day. Check battery health, spot swelling, beat Apple Store."
       path="/blog/macbook-battery-replacement-cost-2026"
+      wide
+      toc={[
+        { id: "battery-price-list", label: "Battery price list" },
+        { id: "check-battery-health", label: "Check battery health" },
+        { id: "when-to-replace", label: "When to replace" },
+        { id: "swollen-battery", label: "Swollen battery emergency" },
+        { id: "top-case-vs-swappable", label: "Top-case vs swappable" },
+        { id: "apple-store-comparison", label: "Apple Store vs us" },
+        { id: "diy-battery", label: "Why not DIY" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · MacBook"
       h1="MacBook Battery Replacement Cost in Dubai 2026"
       hook="AED 450 starting for MacBook Air, up to AED 700 for the 16-inch MacBook Pro. Same-day in most cases - and we recycle the old battery responsibly."
@@ -17,10 +28,10 @@ export default function BlogMacBookBatteryReplacementCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={11}
-      featuredImageAlt="MacBook battery replacement Dubai - swollen battery cells removed from top case"
+      featuredImageAlt="MacBook Battery Replacement Cost. MacBook battery replacement Dubai - swollen battery cells removed from top case"
       body={
         <>
-          <h2>The full MacBook battery price list - April 2026 Dubai</h2>
+          <h2 id="battery-price-list">MacBook Battery Replacement Cost. The full MacBook battery price list - April 2026 Dubai</h2>
           <BlogPriceTable
             caption="MacBook battery replacement pricing - April 2026"
             rows={[
@@ -36,7 +47,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             ]}
           />
 
-          <h2>How to check MacBook battery health (3 methods)</h2>
+          <h2 id="check-battery-health">How to check MacBook battery health (3 methods)</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>
               <strong>System Settings.</strong> Click the Apple menu → System Settings → Battery →
@@ -55,7 +66,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             </li>
           </ol>
 
-          <h2>When to replace - cycle counts and warning signs</h2>
+          <h2 id="when-to-replace">When to replace - cycle counts and warning signs</h2>
           <p>
             Apple rates M-series MacBook batteries for <strong>1,000 charge cycles</strong> while
             retaining 80% of original capacity. Older Intel MacBooks were rated 1,000 as well; pre-2010
@@ -72,7 +83,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             <li>Battery drains faster than 1% per minute when idle (cell internal short)</li>
           </ul>
 
-          <h2>Swollen battery - emergency action</h2>
+          <h2 id="swollen-battery">Swollen battery - emergency action</h2>
           <p>
             If you can see or feel the bottom case bulging, or the trackpad has been pushed up:
             <strong> stop using and stop charging the MacBook immediately</strong>. Lithium pouch
@@ -86,7 +97,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             18 months. Do not leave a swollen MacBook in a parked car.
           </p>
 
-          <h2>Top-case battery (M-series) vs swappable (older Intel)</h2>
+          <h2 id="top-case-vs-swappable">Top-case battery (M-series) vs swappable (older Intel)</h2>
           <p>
             From late 2018 onward, Apple started <strong>gluing battery cells directly into the
             aluminum top case</strong>. By the M1 era (2020+), the cells are bonded with a strong
@@ -100,7 +111,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             what causes "battery rattles" two months later.
           </p>
 
-          <h2>Apple Store vs us - pricing comparison</h2>
+          <h2 id="apple-store-comparison">Apple Store vs us - pricing comparison</h2>
           <BlogPriceTable
             caption="MacBook Pro 16″ M5 Max battery replacement - comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
@@ -114,7 +125,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             ]}
           />
 
-          <h2>DIY MacBook battery - why we don't recommend it</h2>
+          <h2 id="diy-battery">DIY MacBook battery - why we don't recommend it</h2>
           <p>
             iFixit sells battery kits with adhesive remover for AED 350-500. Tempting. The risks:
             puncturing a cell with the prying tool (fire risk), tearing the trackpad or speaker
@@ -123,7 +134,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             half-finished MacBook for AED 800+ rescue work. The AED 250 you save isn't worth it.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement service page

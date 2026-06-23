@@ -9,6 +9,7 @@ import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 
 import { useSeo } from "@/hooks/use-seo";
@@ -53,7 +54,7 @@ const FAQS = [
   { q: "Why do you recommend Apple first when my device is eligible for a free programme?",
     a: "Honesty wins long-term customers. If Apple will fix your device for free, that's the best outcome for you. We'd rather lose one job today and earn your trust for the next 10 years of repairs across your household and office. Roughly 5% of devices we check qualify for a free Apple programme - we send those customers straight to Apple." },
   { q: "What happens if Apple refuses my programme repair?",
-    a: "Common reasons: serial number outside the eligible range, accidental damage flagged by Apple's diagnostic, or the programme has expired. In any of those cases bring the device back to us - we can repair the same fault out-of-pocket with transparent pricing and a 12-month warranty, often the same day." },
+    a: "Common reasons: serial number outside the eligible range, accidental damage flagged by Apple's diagnostic, or the programme has expired. In any of those cases bring the device back to us - we can repair the same fault out-of-pocket with transparent pricing and a warranty of up to 12 months, often the same day." },
   { q: "Are there any active programmes for iPad or Apple Watch in 2026?",
     a: "Apple Watch Ultra (2022) Action Button Programme is currently active (rolling). iPad-specific programmes have not been active since 2022. We track Apple's announcement page weekly and update this list quarterly - last refreshed " + LAST_UPDATED + "." },
   { q: "Can I bring a device that Apple refused to repair under a programme?",
@@ -68,7 +69,7 @@ const SCENARIOS = [
   { q: "13\" MacBook Pro 2016 backlight stripes (Flexgate).",
     a: "Programme ended 2021. Cable-only repair AED 600; full display AED 800. Both with 3-month warranty." },
   { q: "iPhone 12 receiver dead during calls.",
-    a: "Programme ended March 2023. Receiver replacement AED 350 with 12-month warranty, returned same day." },
+    a: "Programme ended March 2023. Receiver replacement AED 350 with warranty of up to 12 months, returned same day." },
 ];
 
 export default function AppleRepairProgramsDubai() {
@@ -137,7 +138,7 @@ export default function AppleRepairProgramsDubai() {
             An Apple Repair Programme (sometimes called a Service Programme, Quality Programme or Exchange Programme) is Apple's quiet acknowledgement that a known manufacturing defect affected a specific model and serial range. When a programme is open, Apple - or an Apple Authorised Service Provider - repairs the affected fault at no charge to the customer, usually for 4 to 5 years from the date the model first went on sale, regardless of the standard 1-year warranty or AppleCare+ coverage.
           </p>
           <p>
-            Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own 12-month written warranty.
+            Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own written warranty up to 12 months.
           </p>
           <p>
             We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. About 5 in every 100 devices we diagnose qualify for an active or recently extended programme; we send those customers straight to Apple Dubai or Apple Mall of the Emirates with a printed eligibility note.
@@ -177,7 +178,7 @@ export default function AppleRepairProgramsDubai() {
           </table>
         </div>
         <p className="text-[13px] text-text-muted mt-sm">
-          Source: <a href="https://support.apple.com/repair" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">support.apple.com/repair</a>. Re-checked {LAST_UPDATED}.
+          Source: <a href="https://support.apple.com/repair" className="text-accent underline underline-offset-2" target="_blank" rel="noopener noreferrer">support.apple.com/repair</a>. Re-checked {LAST_UPDATED}.
         </p>
       </section>
 
@@ -244,7 +245,7 @@ export default function AppleRepairProgramsDubai() {
             <ShieldCheck size={28} className="text-accent" aria-hidden /> Why we recommend Apple first (when applicable)
           </h2>
           <ul className="space-y-md text-[16px] text-text leading-relaxed list-disc pl-lg">
-            <li><strong>We are independent, not Apple Authorised.</strong> If Apple covers your device under a programme, that route gives you a free repair plus Apple's own 12-month warranty on the work - better value than paying us.</li>
+            <li><strong>We are independent, not Apple Authorised.</strong> If Apple covers your device under a programme, that route gives you a free repair plus Apple's own warranty of up to 12 months on the work - better value than paying us.</li>
             <li><strong>Honest referral builds trust.</strong> The customers we send to Apple come back to us when their next device - or their child's, partner's, parent's - falls outside coverage. That is how we have stayed in business for 21 years.</li>
             <li><strong>We are here for the rest.</strong> Out-of-warranty repairs, post-programme defects, devices Apple declined for liquid damage or third-party history, board-level work Apple does not perform - that is our specialism.</li>
             <li><strong>No bait-and-switch.</strong> We will not pretend a programme has expired to win the job. The eligibility check we run is the same Apple uses: serial number against the published serial range, on Apple's own published page.</li>
@@ -256,7 +257,7 @@ export default function AppleRepairProgramsDubai() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl max-w-[72ch]">
         <h2 className="text-[28px] md:text-[32px] mb-md">What if the programme has ended?</h2>
         <p className="text-[16px] text-text leading-relaxed">
-          The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme - typically AED 600 to AED 1,500 depending on the part, with a 12-month written warranty and same-day turnaround for most common jobs. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
+          The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme - typically AED 600 to AED 1,500 depending on the part, with a written warranty up to 12 months and same-day turnaround for most common jobs. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
         </p>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
           <Link to="/macbook-keyboard-repair-dubai" className="border border-border bg-bg-card rounded-md p-md hover:border-accent">
@@ -273,7 +274,7 @@ export default function AppleRepairProgramsDubai() {
           </Link>
         </div>
         <p className="text-[14px] text-text-muted mt-md">
-          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent hover:underline">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent hover:underline">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent hover:underline">How our 12-month warranty works</Link>.
+          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent underline underline-offset-2">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent underline underline-offset-2">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent underline underline-offset-2">How our warranty of up to 12 months works</Link>.
         </p>
       </section>
 
@@ -293,7 +294,6 @@ export default function AppleRepairProgramsDubai() {
       {/* 8. CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Don't pay for repairs without checking first</h2>
           <p className="text-text-muted text-[16px] max-w-[64ch]">
@@ -328,12 +328,13 @@ export default function AppleRepairProgramsDubai() {
           <div>
             <p className="font-bold text-[15px] mb-1">Last updated: {LAST_UPDATED}</p>
             <p className="text-[14px] text-text-muted leading-relaxed">
-              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
+              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
             </p>
           </div>
         </div>
       </section>
       </div>
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

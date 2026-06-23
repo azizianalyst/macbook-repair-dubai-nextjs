@@ -17,7 +17,7 @@ export function BreadcrumbTrail({ trail, tone = "light" }: { trail: Crumb[]; ton
           return (
             <li key={`${c.path}-${i}`} className="flex items-center gap-1">
               {!last ? (
-                <Link to={c.path} className={cn("rounded focus-visible:outline-none focus-visible:ring-2", dark ? "hover:text-text focus-visible:ring-accent" : "hover:text-primary focus-visible:ring-accent")}>{c.name}</Link>
+                <Link to={c.path} className={cn("inline-flex min-h-[36px] items-center rounded px-1 -mx-1 focus-visible:outline-none focus-visible:ring-2", dark ? "hover:text-text focus-visible:ring-accent" : "hover:text-primary focus-visible:ring-accent")}>{c.name}</Link>
               ) : (
                 <span aria-current="page" className={dark ? "text-text" : "text-text"}>{c.name}</span>
               )}

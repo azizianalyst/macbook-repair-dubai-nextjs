@@ -6,7 +6,7 @@ export default function IPhone16Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16 Repair Dubai - A18, Camera Control from AED 350 | 055 741 3706"
-      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, 12-month warranty."
+      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen AED 750, Camera Control AED 350. Same-day, warranty of up to 12 months."
       path="/iphone-16-repair-dubai"
       eyebrow="iPhone 16 (2024, current Apple lineup)"
       h1="iPhone 16 Repair Dubai - Screen, Camera Control, USB-C, Battery"
@@ -20,7 +20,7 @@ export default function IPhone16Repair() {
         { name: "iPhone 16",     path: "/iphone-16-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 16 Repair"
+      serviceName="iPhone 16 Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

@@ -19,7 +19,7 @@ export default function IPadCameraRepair() {
         { name: "Camera Repair",path: "/ipad-camera-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad camera and TrueDepth modules" }}
-      serviceName="iPad Camera Repair"
+      serviceName="iPad Camera Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -44,7 +44,7 @@ export default function IPadCameraRepair() {
         { title: "Camera diagnostic",          body: "We open the Camera app, run all camera modes, photograph a focus chart, check Center Stage tracking. Free." },
         { title: "Lens vs module decision",    body: "Microscope inspection: if only the outer glass is cracked we replace the lens (AED 250). If the sensor itself failed, full module (AED 400)." },
         { title: "Module replacement",         body: "OEM-grade camera module installed. On iPad Pro / Air with TrueDepth, we preserve the dot projector pairing where possible." },
-        { title: "Center Stage recalibration", body: "Run iPadOS camera calibration sequence so Center Stage tracks correctly. 12-month warranty card with the iPad." },
+        { title: "Center Stage recalibration", body: "Run iPadOS camera calibration sequence so Center Stage tracks correctly. Warranty up to 12 months card with the iPad." },
       ]}
       warrantyDays={365}
       warrantyBullets={[
@@ -61,7 +61,7 @@ export default function IPadCameraRepair() {
       ]}
       reviewNames={["Anatoliy Tarasenko", "Anastasiia Goncia", "Ana Undricova"]}
       related={[
-        { label: "iPad Screen Repair Dubai",     href: "/ipad-screen-repair-dubai",     description: "Pencil-safe screen swaps from AED 350." },
+        { label: "iPad Screen Repair Dubai",     href: "/ipad-screen-repair-dubai",     description: "Pencil-safe screen swaps from AED 139." },
         { label: "iPad Pencil Compatibility",    href: "/ipad-pencil-compatibility-dubai", description: "Why our screens preserve Pencil." },
         { label: "iPad Full Diagnostic",         href: "/ipad-full-diagnostic-dubai",   description: "Free 25-point check." },
       ]}

@@ -4,6 +4,7 @@ import { ExternalLink, MessageSquareQuote } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
@@ -101,7 +102,7 @@ export default function Reviews() {
         <div className="flex flex-col gap-sm text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
           <p>
             Every review below is a real, unedited Google review posted directly to our{" "}
-            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               Google Business Profile
             </a>
             . Nothing has been rewritten, curated, or removed. {REVIEW_COUNT}+ verified reviews,{" "}
@@ -184,25 +185,34 @@ export default function Reviews() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="border border-border bg-bg-card rounded-md p-xl text-center flex flex-col items-center gap-md">
-          <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
-          <p className="text-[16px] text-text-muted max-w-[60ch]">
-            Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
-          </p>
-          <Button asChild variant="primary">
-            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
-              Write a Google review <ExternalLink size={16} aria-hidden />
-            </a>
-          </Button>
+        <div className="grid gap-lg md:grid-cols-2 items-center border border-border bg-bg-card rounded-xl p-xl">
+          <div>
+            <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
+            <p className="text-[16px] text-text-muted mt-md max-w-[52ch]">
+              Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
+            </p>
+            <Button asChild variant="primary" className="mt-lg">
+              <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+                Write a Google review <ExternalLink size={16} aria-hidden />
+              </a>
+            </Button>
+          </div>
+          <div className="flex flex-col gap-2 text-[14px] text-text-muted">
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">215+</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">4.9★</span><span>average rating across all service types</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">100%</span><span>of reviews get a personal reply from Shafiq within 24 hours</span></div>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl pb-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <MessageSquareQuote size={28} className="text-accent" aria-hidden />
-          Why every review gets a reply
-        </h2>
-        <div className="prose-tight max-w-[70ch] text-text-muted text-[16px] leading-relaxed flex flex-col gap-md">
+        <div className="grid gap-2xl md:grid-cols-2 items-start">
+          <div>
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
+              <MessageSquareQuote size={28} className="text-accent" aria-hidden />
+              Why every review gets a reply
+            </h2>
+        <div className="prose-tight text-text-muted text-[16px] leading-relaxed flex flex-col gap-md">
           <p>
             Shafiq reads every Google review the day it lands. The reply comes from a real person at the Concord Tower office - not a marketing agency, not an automated bot.
           </p>
@@ -214,21 +224,24 @@ export default function Reviews() {
           </p>
         </div>
 
-        <div className="mt-lg grid gap-md md:grid-cols-3">
-          {RESPONSE_EXAMPLES.map((r, i) => (
-            <ReviewCard
-              key={`example-${i}`}
-              name={r.name}
-              date={r.date}
-              rating={r.rating}
-              text={r.text}
-              ownerResponse={r.ownerResponse}
-              tone="dark"
-            />
-          ))}
+          </div>
+          <div className="flex flex-col gap-md">
+            {RESPONSE_EXAMPLES.map((r, i) => (
+              <ReviewCard
+                key={`example-${i}`}
+                name={r.name}
+                date={r.date}
+                rating={r.rating}
+                text={r.text}
+                ownerResponse={r.ownerResponse}
+                tone="dark"
+              />
+            ))}
+          </div>
         </div>
       </section>
       </div>
+      <RelatedArticles path="/reviews" />
     </PageShell>
   );
 }
@@ -255,7 +268,7 @@ function Chip({
       className={[
         "px-3 py-1.5 text-[13px] rounded-md border transition-colors",
         active
-          ? "bg-accent text-accent border-accent font-semibold"
+          ? "bg-accent text-white border-accent font-semibold"
           : "bg-bg-card text-text-muted border-border hover:border-accent hover:text-accent",
       ].join(" ")}
     >

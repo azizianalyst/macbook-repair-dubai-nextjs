@@ -19,7 +19,7 @@ export default function MacBookTrackpadRepair() {
         { name: "Trackpad Repair", path: "/macbook-trackpad-repair-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "MacBook input & Force Touch repair" }}
-      serviceName="MacBook Trackpad Repair"
+      serviceName="MacBook Trackpad Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

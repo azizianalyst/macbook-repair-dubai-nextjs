@@ -4,19 +4,19 @@ import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
 export default function IPhoneDataRecovery() {
   return (
     <IPhonePageTemplate
-      seoTitle="iPhone Data Recovery Dubai - Photos, Messages, WhatsApp | From AED 400"
-      seoDescription="iPhone data recovery Dubai from AED 400. iCloud first, chip-off for dead phones. Honest about Secure Enclave limits. iPhone 6 to 17. WhatsApp 055 741 3706."
+      seoTitle="iPhone Data Recovery Dubai - Photos, Messages, WhatsApp | From AED 279"
+      seoDescription="iPhone data recovery Dubai from AED 279. iCloud first, chip-off for dead phones. Honest about Secure Enclave limits. iPhone 6 to 17. WhatsApp 055 741 3706."
       path="/iphone-data-recovery-dubai"
       eyebrow="iPhone Data Recovery"
       h1="iPhone Data Recovery Dubai"
       subtitle="Dead iPhone with photos and messages you need? iCloud recovery first, chip-off for genuinely dead phones. Honest about Secure Enclave - no false promises."
-      startingPrice={400}
+      startingPrice={279}
       timeline="1-5 days"
       whatsappPrefill="iPhone data recovery - model + what happened: "
       technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Chip-off recovery & micro-soldering" }}
-      serviceName="iPhone Data Recovery"
+      serviceName="iPhone Data Recovery Dubai"
       pricingRows={[
-        { model: "iCloud-assisted recovery (any model)",        price: 400, timeline: "Same day" },
+        { model: "iCloud-assisted recovery (any model)",        price: 279, timeline: "Same day" },
         { model: "Logic-board repair to boot (iPhone 6-11)",    price: 600, timeline: "1-2 days" },
         { model: "Logic-board repair to boot (iPhone 12-14)",   price: 900, timeline: "2-3 days" },
         { model: "Logic-board repair to boot (iPhone 15-17)",   price: 1200, timeline: "3-5 days" },
@@ -27,7 +27,7 @@ export default function IPhoneDataRecovery() {
       intro={
         <>
           <p className="text-[17px] text-text leading-relaxed">
-            iPhone data recovery in Dubai starts at AED 400 with iCloud-assisted recovery, scaling to AED 2,500 for forensic chip-off work. The honest truth about iPhone data recovery sets it apart from MacBook or external drive recovery: every iPhone since the iPhone 5s (2013) uses Apple's Secure Enclave processor, which encrypts the entire NAND flash with a hardware-bound key. Without the user's passcode, even physical NAND extraction yields encrypted data that no current commercial tool can decrypt. The workshop is candid about this on every WhatsApp ticket - false promises help no one.
+            iPhone data recovery in Dubai starts at AED 279 with iCloud-assisted recovery, scaling to AED 2,500 for forensic chip-off work. The honest truth about iPhone data recovery sets it apart from MacBook or external drive recovery: every iPhone since the iPhone 5s (2013) uses Apple's Secure Enclave processor, which encrypts the entire NAND flash with a hardware-bound key. Without the user's passcode, even physical NAND extraction yields encrypted data that no current commercial tool can decrypt. The workshop is candid about this on every WhatsApp ticket - false promises help no one.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             The good news: most iPhone "data loss" tickets aren't actually NAND failures. They're broken charging ports (battery is dead), broken screens (data is fine), water damage that killed the display (logic board still works), or accidentally deleted photos (iCloud backup or Recently Deleted album holds them). The workshop's free diagnosis identifies the right path in 30 minutes. Genuine NAND failures (where the storage chip itself is dying) are rare on iPhone - the controller chip more often fails before the NAND, and that's repairable with a controller-IC swap.
@@ -62,7 +62,7 @@ export default function IPhoneDataRecovery() {
       steps={[
         { title: "WhatsApp model + what happened", body: "Model, what happened (drop / spill / stopped working), and what data matters most. Quote and likely success rate within 30 minutes." },
         { title: "Free diagnosis at the workshop", body: "Phone opened under microscope, logic board photographed, fault identified. Quote and timeline confirmed before any work begins." },
-        { title: "Easy path first: iCloud + iTunes backup", body: "If iCloud backup exists, it's downloaded to a fresh device - no repair needed. AED 400 service charge, same day. Most data recovery tickets resolve here." },
+        { title: "Easy path first: iCloud + iTunes backup", body: "If iCloud backup exists, it's downloaded to a fresh device - no repair needed. AED 279 service charge, same day. Most data recovery tickets resolve here." },
         { title: "Logic-board repair to make the phone boot", body: "If the phone is dead but the NAND looks intact, micro-solder repair brings the phone back. Customer enters passcode → full data access. AED 600 to AED 1,200." },
         { title: "Chip-off NAND recovery (last resort)", body: "If the logic board is destroyed beyond repair, NAND chip removed and read on a programmer. Requires passcode for decryption. AED 1,500 with passcode." },
         { title: "Data delivered on customer's external drive", body: "Recovered data delivered on customer's USB-C drive or copied to a fresh iPhone. Original phone returned. Privacy: workshop does not retain customer data after delivery." },
@@ -75,7 +75,7 @@ export default function IPhoneDataRecovery() {
       ]}
       comparisonRows={[
         ["Approach",                    "Repair-then-recover (preserves device)",         "Whole-device swap (data lost)"],
-        ["iCloud-assisted",             "AED 400, same day",                             "Free if you do it yourself"],
+        ["iCloud-assisted",             "AED 279, same day",                             "Free if you do it yourself"],
         ["Logic-board repair",          "AED 600 to AED 1,200",                          "Not offered, board swap only"],
         ["Chip-off recovery",           "AED 1,500 with passcode",                       "Not offered"],
         ["Honest about Secure Enclave", "Yes - no false promises",                       "Yes"],
@@ -86,7 +86,7 @@ export default function IPhoneDataRecovery() {
       ]}
       faqs={[
         { q: "Can you recover data from a dead iPhone?", a: "Often yes - most 'data recovery' cases are actually logic-board repairs that bring the phone back to bootable state, after which the customer enters their passcode and data is fully accessible. AED 600 to AED 1,200 depending on model. Genuine NAND-level failures requiring chip-off are rare." },
-        { q: "How much does iPhone data recovery cost in Dubai?", a: "iCloud-assisted recovery AED 400. Logic-board repair to boot AED 600 (older models) to AED 1,200 (iPhone 15-17). Chip-off NAND recovery AED 1,500 with passcode. Forensic chip-off without passcode AED 2,500 - but success without passcode is near zero on modern iPhones due to Secure Enclave encryption." },
+        { q: "How much does iPhone data recovery cost in Dubai?", a: "iCloud-assisted recovery AED 279. Logic-board repair to boot AED 600 (older models) to AED 1,200 (iPhone 15-17). Chip-off NAND recovery AED 1,500 with passcode. Forensic chip-off without passcode AED 2,500 - but success without passcode is near zero on modern iPhones due to Secure Enclave encryption." },
         { q: "What is the Secure Enclave and why does it matter?", a: "The Secure Enclave is a separate processor inside every iPhone since the 5s (2013). It generates and stores the encryption keys for the NAND storage, tied to your passcode. Without the passcode, even removing the NAND chip yields encrypted data that no current commercial tool can decrypt. The workshop is upfront about this - no false promises." },
         { q: "Can you bypass my iCloud lock to recover photos?", a: "No. iCloud Activation Lock is enforced by Apple's servers. The workshop can help document ownership (original receipt, Apple ID details) and contact Apple to assist legitimate owners. Without proof of ownership, the data is permanently locked. This is by design, to protect lost or stolen devices." },
         { q: "I forgot my passcode - can you recover anything?", a: "Almost certainly not on iPhone 5s or later. The passcode is the key to the Secure Enclave's encryption. Without it, all NAND data is unreadable. The only option is to erase the phone (Find My > Erase iPhone) and restore from iCloud backup if you have one." },

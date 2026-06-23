@@ -375,7 +375,7 @@
     "wirelessChip": "Apple N1 (Wi-Fi 7, Bluetooth 6)",
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model (March 2026) - no field data yet",
+      "Earliest faults reaching us are accidental damage, not defects - cracked screens and dented lids from drops",
       "Thunderbolt 5 port damage from cheap third-party cables (parts limited April 2026)",
       "Apple Intelligence thermal events under heavy LLM load",
       "MagSafe 3 pin wear (first-month users)",
@@ -414,7 +414,7 @@
     "wirelessChip": "Apple N1 (Wi-Fi 7, Bluetooth 6)",
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model (March 2026) - no field data yet",
+      "First M5 Max units on our bench are impact and liquid cases - too new for wear-pattern faults",
       "Thunderbolt 5 port damage (parts limited April 2026)",
       "Heavy thermal load under sustained Pro workloads - fans run aggressively",
       "MagSafe 3 pin wear",
@@ -613,7 +613,7 @@
     "wirelessChip": "Apple N1 (Wi-Fi 7, Bluetooth 6)",
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model (March 2026) - no field-failure data yet",
+      "Early intake is impact damage on the big 16\" lid - first panel replacements already done in our workshop",
       "16\" Liquid Retina XDR screen replacement (nano-texture: pricier)",
       "Thunderbolt 5 port damage (specialty parts limited April 2026)",
       "Apple Intelligence thermal events",
@@ -652,7 +652,7 @@
     "wirelessChip": "Apple N1 (Wi-Fi 7, Bluetooth 6)",
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model (March 2026) - no field-failure data yet",
+      "Too new for recurring faults - early jobs are accidental damage, data migration and setup work",
       "16\" Liquid Retina XDR screen replacement (nano-texture: pricier)",
       "Thunderbolt 5 port damage",
       "Most expensive Mac logic board we service (M5 Max chip + 128GB unified RAM is one package)",

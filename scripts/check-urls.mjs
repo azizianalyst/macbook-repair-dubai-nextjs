@@ -25,7 +25,9 @@ const redirects = JSON.parse(
 let fail = 0;
 const bad = (msg) => { fail++; console.log("  ✗ " + msg); };
 
-// 0. one canonical URL form everywhere: lowercase, no trailing slash, https, non-www
+// 0. Source-link convention: lowercase, https, non-www, and slash-FREE <Link> hrefs.
+// Rendered URLs carry a trailing slash (next.config trailingSlash:true), but Next appends
+// that automatically, so source `to=`/`href=` links stay slash-free — that's still the rule.
 console.log("\n[0] URL form consistency in source code");
 let formBad = 0;
 (function scan(dir) {
@@ -35,23 +37,32 @@ let formBad = 0;
     if (!/\.(tsx?|txt|xml|json)$/.test(name)) continue;
     const src = readFileSync(full, "utf8");
     for (const [line, text] of src.split("\n").entries()) {
-      if (/(to|href)=["']\/[a-z0-9/.-]+\/["']/.test(text) && !text.includes(".xml"))
-        { formBad++; bad(`trailing-slash link in ${full}:${line + 1}`); }
+      // Only <Link to="…"> stays slash-free (Next's trailingSlash adds the slash at render).
+      // Raw <a href="/x/"> anchors are NOT normalised by Next, so they MUST carry the slash —
+      // don't flag those.
+      if (/\bto=["']\/[a-z0-9/.-]+\/["']/.test(text) && !text.includes(".xml"))
+        { formBad++; bad(`trailing-slash <Link to>: ${full}:${line + 1}`); }
       if (/http:\/\/macbook|www\.macbook-repair-dubai/.test(text))
         { formBad++; bad(`www or http:// URL in ${full}:${line + 1}`); }
-      if (/macbook-repair-dubai\.ae\/[a-z0-9/-]*\/["'`]/.test(text))
-        { formBad++; bad(`absolute URL with trailing slash in ${full}:${line + 1}`); }
+      // NOTE: absolute page URLs now CARRY a trailing slash (trailingSlash:true is canonical),
+      // so the old "no trailing slash on absolute URLs" rule was retired — it false-flagged
+      // correct canonical/schema URLs. Canonical/sitemap/redirect URL form is verified at
+      // runtime instead (npm run check:urls:live).
     }
   }
 })("src");
 for (const r of [...routes]) if (/[A-Z]/.test(r)) { formBad++; bad(`uppercase route: ${r}`); }
-if (!formBad) console.log("  ✓ all URLs lowercase, no-trailing-slash, https, non-www");
+if (!formBad) console.log("  ✓ source links lowercase, slash-free, https, non-www");
 
 // 3. every redirect destination must be a real route (or another redirect source)
 console.log(`\n[1] ${redirects.length} legacy redirects → destination exists in codebase`);
 const sources = new Set(redirects.map((r) => r.source));
+// Destinations carry a trailing slash (trailingSlash:true); routes/sources are stored
+// slash-free, so normalise before comparing.
+const noSlash = (p) => p.replace(/\/$/, "") || "/";
 for (const r of redirects) {
-  if (!routes.has(r.destination) && !sources.has(r.destination))
+  const dest = noSlash(r.destination);
+  if (!routes.has(dest) && !sources.has(dest))
     bad(`${r.source} → ${r.destination} (destination has no page.tsx)`);
 }
 for (const r of redirects) {
@@ -61,7 +72,14 @@ for (const r of redirects) {
 if (!fail) console.log("  ✓ all destinations resolve, no source/page collisions");
 
 // 4. live sitemap vs codebase routes
-const NOINDEX = new Set(["/admin/leads", "/landing-template-demo"]);
+// Routes that are intentionally noindex and should never appear in the sitemap.
+// Admin/management routes are excluded wholesale via the prefix check below.
+const NOINDEX = new Set([
+  "/landing-template-demo",
+  "/cookies",
+  "/blog/tag/imac", "/blog/tag/ipad", "/blog/tag/iphone", "/blog/tag/mac", "/blog/tag/macbook",
+]);
+const isNoindex = (p) => NOINDEX.has(p) || p.startsWith("/admin");
 console.log(`\n[2] live sitemap ↔ codebase routes (${routes.size} routes)`);
 const childSitemaps = [...(await (await fetch(`${SITE}/sitemap.xml`)).text())
   .matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
@@ -72,7 +90,7 @@ for (const sm of childSitemaps.filter((u) => !u.includes("images"))) {
 }
 const before = fail;
 for (const p of routes)
-  if (!sitemapUrls.has(p) && !NOINDEX.has(p)) bad(`route not in sitemap: ${p}`);
+  if (!sitemapUrls.has(p) && !isNoindex(p) && !/\[/.test(p)) bad(`route not in sitemap: ${p}`);
 for (const p of sitemapUrls)
   if (!routes.has(p)) bad(`sitemap URL has no page.tsx: ${p}`);
 if (fail === before)
@@ -80,27 +98,37 @@ if (fail === before)
 
 // 5. optional live HTTP checks
 if (LIVE) {
-  const check = async (path, expect, expectLoc) => {
-    const res = await fetch(SITE + path, { redirect: "manual", headers: { "user-agent": "url-check" } });
-    if (res.status !== expect) return bad(`${path} → ${res.status} (want ${expect})`);
-    if (expectLoc) {
-      const loc = new URL(res.headers.get("location"), SITE).pathname;
-      if (loc !== expectLoc) return bad(`${path} 301 → ${loc} (want ${expectLoc})`);
+  const check = async (path, expect, expectLoc, retries = 2) => {
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const res = await fetch(SITE + path, { redirect: "manual", headers: { "user-agent": "url-check" } });
+        if (res.status !== expect) return bad(`${path} → ${res.status} (want ${expect})`);
+        if (expectLoc) {
+          const loc = new URL(res.headers.get("location"), SITE).pathname;
+          if (loc !== expectLoc) return bad(`${path} 301 → ${loc} (want ${expectLoc})`);
+        }
+        return;
+      } catch (e) {
+        if (attempt === retries) return bad(`${path} → fetch error: ${e.message}`);
+        await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
+      }
     }
   };
-  const pool = async (items, fn, n = 10) => {
+  const pool = async (items, fn, n = 5) => {
     const q = [...items];
     await Promise.all(Array.from({ length: n }, async () => {
       while (q.length) await fn(q.shift());
     }));
   };
+  // trailingSlash:true — request the slash form Google has indexed; the legacy rule fires a
+  // single 301 straight to the slashed destination (no extra slash-normalisation hop).
   console.log(`\n[3] live: ${redirects.length} old URLs 301 to the right place`);
   let b = fail;
-  await pool(redirects, (r) => check(r.source, 301, r.destination));
+  await pool(redirects, (r) => check(r.source + "/", 301, r.destination));
   if (fail === b) console.log("  ✓ all legacy URLs 301 correctly");
   console.log(`\n[4] live: ${routes.size} current routes return 200`);
   b = fail;
-  await pool([...routes].filter((p) => !p.startsWith("/admin")), (p) => check(p, 200));
+  await pool([...routes].filter((p) => !p.startsWith("/admin") && !/\[/.test(p)), (p) => check(p === "/" ? "/" : p + "/", 200));
   if (fail === b) console.log("  ✓ all routes live with 200");
 }
 

@@ -76,7 +76,7 @@ export const TOPIC_IMAGES: Record<string, TopicImage> = {
   "blog-battery-health-dubai": { src: "/images/topics/blog-battery-health-dubai.jpg", alt: "MacBook and iPhone battery health guide Dubai - battery engineering infographic" },
   "blog-overheating-cooling-dubai": { src: "/images/topics/blog-overheating-cooling-dubai.jpg", alt: "MacBook overheating causes and fixes Dubai - thermal engineering infographic" },
   "blog-water-damage-dubai": { src: "/images/topics/blog-water-damage-dubai.jpg", alt: "Liquid damage first aid for Apple devices Dubai - emergency response infographic" },
-  "blog-storage-upgrade-dubai": { src: "/images/topics/blog-storage-upgrade-dubai.jpg", alt: "Mac storage and SSD upgrade guide Dubai - storage engineering infographic" },
+  "blog-storage-upgrade-dubai": { src: "/images/real/lab/macbook-full-internals-dubai.jpg", alt: "MacBook internals showing SSD slot at a Dubai Apple repair workshop" },
   "blog-apple-silicon-dubai": { src: "/images/topics/blog-apple-silicon-dubai.jpg", alt: "Apple Silicon M-series chip guide Dubai - processor engineering infographic" },
   "blog-screen-display-dubai": { src: "/images/topics/blog-screen-display-dubai.jpg", alt: "Mac and iPhone display technology guide Dubai - screen engineering infographic" },
   "blog-data-recovery-guide-dubai": { src: "/images/topics/blog-data-recovery-guide-dubai.jpg", alt: "Data recovery guide for Mac and iPhone Dubai - recovery engineering infographic" },

@@ -4,7 +4,9 @@
 //
 // Usage: <AccessoryModelPage slug="ipod-touch-7-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import accessoryModels from "@/content/ipod-models.json";
 
 type Pricing = {
@@ -64,9 +66,7 @@ function pickReviewers(slug: string): string[] {
 }
 
 function pickRelated(slug: string): Model[] {
-  const me = ALL_MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  return ALL_MODELS.filter((m) => m.slug !== slug).slice(0, 4);
+  return relatedModels(slug, ALL_MODELS, (m) => m.category);
 }
 
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
@@ -151,7 +151,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Battery, screen, home button, port. From AED ${startingPrice}. Free pickup, free diagnostic, 12-month warranty.`}
+      seoDescription={`${model.name} repair Dubai. Battery, screen, home button, port. From AED ${startingPrice}. Free pickup, free diagnostic, warranty of up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 12-Month Warranty`}
@@ -175,31 +175,31 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are still available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 12-month written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Headline features</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Headline features</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.headlineFeatures.map((f, i) => (
               <li key={i}>• {f}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-card">
                 <tr className="text-left">
@@ -222,7 +222,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
           {model.appleServiceProgram && (
             <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
@@ -233,7 +233,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
           <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
@@ -241,7 +241,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
 
           {related.length > 0 && (
             <>
-              <h2 className="text-[24px] md:text-[28px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
+              <h2 className="text-[28px] md:text-[32px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
                 {related.map((r) => (
                   <Link

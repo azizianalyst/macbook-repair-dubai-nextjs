@@ -9,6 +9,17 @@ export default function BlogLaptopRepairVsBuyNew() {
       seoTitle="MacBook Repair or Buy New 2026? Decision Math (Dubai Guide)"
       seoDescription="Repair AED 1,000 or buy new AED 4,000? Year-by-year MacBook repair-vs-replace decision matrix, resale values, and trade-in options for Dubai 2026."
       path="/blog/laptop-repair-vs-buy-new-2026"
+      wide
+      toc={[
+        { id: "rule-of-thumb", label: "Rule of thumb" },
+        { id: "decision-matrix-by-year", label: "Decision matrix by year" },
+        { id: "intel-2018-2020", label: "Intel 2018-2020" },
+        { id: "air-m1", label: "MacBook Air M1" },
+        { id: "pro-14-16-m1-plus", label: "Pro 14/16 M1+" },
+        { id: "pre-2017", label: "Pre-2017 MacBooks" },
+        { id: "resale-value-calculator", label: "Resale value calculator" },
+        { id: "trade-in-options", label: "Trade-in options" },
+      ]}
       category="Buying guide · Decision"
       h1="MacBook Repair or Buy New? Decision Math 2026"
       hook="Old MacBook broken. Repair AED 1,000 or buy new AED 4,000? Here's the formula."
@@ -17,10 +28,10 @@ export default function BlogLaptopRepairVsBuyNew() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={10}
-      featuredImageAlt="MacBook repair vs buy new - decision matrix for Dubai 2026"
+      featuredImageAlt="Laptop Repair Vs Buy New. MacBook repair vs buy new - decision matrix for Dubai 2026"
       body={
         <>
-          <h2>Rule of thumb: repair if cost &lt; 50% of resale value</h2>
+          <h2 id="rule-of-thumb">Laptop Repair Vs Buy New. Rule of thumb: repair if cost &lt; 50% of resale value</h2>
           <p>
             The standard formula across consumer electronics:
           </p>
@@ -34,7 +45,7 @@ export default function BlogLaptopRepairVsBuyNew() {
             <Link to="/blog/dubai-shopping-festival-apple-deals" className="text-accent font-semibold hover:underline">DSF deals guide</Link>). Both push the "repair" answer harder than in other markets.
           </p>
 
-          <h2>MacBook by year - repair-or-replace decision matrix</h2>
+          <h2 id="decision-matrix-by-year">MacBook by year - repair-or-replace decision matrix</h2>
           <BlogPriceTable
             caption="Repair vs replace decision - Dubai April 2026 used market"
             headers={["MacBook", "Resale value (good)", "Worth repairing if cost is under", "Verdict"]}
@@ -54,7 +65,7 @@ export default function BlogLaptopRepairVsBuyNew() {
             ]}
           />
 
-          <h2>MacBook Pro Intel 2018-2020 - usually still worth repairing</h2>
+          <h2 id="intel-2018-2020">MacBook Pro Intel 2018-2020 - usually still worth repairing</h2>
           <p>
             These are the last great Intel MacBook Pros. They run macOS Sequoia (2024) officially and Tahoe (2026) unofficially via OpenCore. Resale stays AED 1,400-2,500. A AED 800-1,200 keyboard or screen repair makes economic sense for at least 2 more years of life. Issues we commonly fix:
           </p>
@@ -68,7 +79,7 @@ export default function BlogLaptopRepairVsBuyNew() {
             <li>Stage light effect, GPU artefacts on 16" 2019 - addressable.</li>
           </ul>
 
-          <h2>MacBook Air M1 (2020) - definitely repair</h2>
+          <h2 id="air-m1">MacBook Air M1 (2020) - definitely repair</h2>
           <p>
             The M1 Air is the single best repair-ROI device in Apple's history. AED 1,800 resale, fanless, runs macOS Tahoe (2026) officially, will be supported until at least macOS 27 (2028). Almost any repair under AED 1,200 is justified:
           </p>
@@ -80,17 +91,17 @@ export default function BlogLaptopRepairVsBuyNew() {
             <li>Logic board: AED 1,400 - borderline; consider replacement at this price.</li>
           </ul>
 
-          <h2>MacBook Pro 14/16 M1+ - definitely repair</h2>
+          <h2 id="pro-14-16-m1-plus">MacBook Pro 14/16 M1+ - definitely repair</h2>
           <p>
             Top-tier build, fans for thermal headroom, ProMotion XDR display, will receive macOS updates into 2030+. Resale stays above AED 4,500 even for base M1 Pro models. Repair almost anything up to AED 3,500 and you're still ahead.
           </p>
 
-          <h2>Pre-2017 MacBooks - usually replace</h2>
+          <h2 id="pre-2017">Pre-2017 MacBooks - usually replace</h2>
           <p>
             Pre-2017 MacBooks (especially the 12" Retina MacBook 2015-2017 and pre-2015 MacBook Pros) are dropped from current macOS support. macOS Tahoe 2026 doesn't run; security patches stop. Resale below AED 600 for most. Repair only if it's a sentimental machine and the fix is under AED 400 - otherwise, replace with a refurbished M1 Air for AED 1,800.
           </p>
 
-          <h2>Resale value calculator (April 2026 snapshot)</h2>
+          <h2 id="resale-value-calculator">Resale value calculator (April 2026 snapshot)</h2>
           <BlogPriceTable
             caption="Quick resale lookup - assumes good cosmetic condition, working battery"
             headers={["MacBook", "Apple Trade-In", "Dubizzle private", "Our buy-back"]}
@@ -107,7 +118,7 @@ export default function BlogLaptopRepairVsBuyNew() {
             Notice Apple Trade-In is consistently the lowest. Dubizzle private sale gets the most cash but takes effort and 2-4 weeks. Our buy-back sits between - instant payment, fair market price, no haggling.
           </p>
 
-          <h2>Trade-in options - Apple, us, Dubizzle</h2>
+          <h2 id="trade-in-options">Trade-in options - Apple, us, Dubizzle</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Trade-In:</strong> instant credit toward new Apple purchase. Lowest cash equivalent but zero hassle.</li>
             <li><strong>Sharaf DG / Jumbo trade-in events:</strong> seasonal, typically AED 200-500 above Apple. See our{" "}

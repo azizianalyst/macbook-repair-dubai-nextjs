@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useMemo, useState, useCallback } from "react";
 import {
-  Loader2, Lock, Search, MessageCircle, Phone, Mail, Download, LogOut, RefreshCw,
-  X, Trash2, Clock, MapPin, FileText, ChevronLeft, ChevronRight,
+  Loader2, Search, MessageCircle, Phone, Mail, Download, LogOut, RefreshCw,
+  X, Trash2, Clock, FileText, ChevronLeft, ChevronRight,
 } from "lucide-react";
 
 const STATUSES = ["New", "Contacted", "Quoted", "Won", "Lost"] as const;
@@ -24,7 +24,6 @@ type Lead = {
 type Note = { id: number; created_at: string; kind: string; body: string };
 type Stats = { total: number; byStatus: Record<string, number>; today: number; week: number; conversion: number };
 
-const KEY_STORE = "mrd_admin_key";
 const PAGE_SIZE = 20;
 const waLink = (p: string) => `https://wa.me/${(p || "").replace(/[^0-9]/g, "")}`;
 const fmt = (iso?: string | null) => {
@@ -45,9 +44,7 @@ function toCsv(rows: Lead[]): string {
 }
 
 export default function LeadsAdmin() {
-  const [key, setKey] = useState("");
-  const [authed, setAuthed] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("loading");
   const [errMsg, setErrMsg] = useState("");
 
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -65,38 +62,36 @@ export default function LeadsAdmin() {
   const [noteText, setNoteText] = useState("");
   const [busy, setBusy] = useState(false);
 
+  // Auth is the shared admin session cookie (set at /admin/login). The cookie is sent
+  // automatically same-origin, so no key prompt here; a 401 means the session expired.
   const authedFetch = useCallback(
     (path: string, opts: RequestInit = {}) =>
-      fetch(path, { ...opts, cache: "no-store", headers: { ...(opts.headers || {}), Authorization: `Bearer ${key}`, "Content-Type": "application/json" } }),
-    [key],
+      fetch(path, { ...opts, cache: "no-store", headers: { ...(opts.headers || {}), "Content-Type": "application/json" } }),
+    [],
   );
 
-  const loadList = useCallback(async (k: string) => {
+  const loadList = useCallback(async () => {
     setStatus("loading"); setErrMsg("");
     try {
-      const res = await fetch("/api/leads", { headers: { Authorization: `Bearer ${k}` }, cache: "no-store" });
-      if (res.status === 401) { setErrMsg("Wrong key (or ADMIN_KEY not set on the server)."); setStatus("error"); return; }
+      const res = await fetch("/api/leads/", { cache: "no-store" });
+      if (res.status === 401) { window.location.href = "/admin/login"; return; }
       const data = await res.json();
       setLeads(data.leads || []); setStats(data.stats || null);
-      setAuthed(true); setStatus("idle");
-      sessionStorage.setItem(KEY_STORE, k);
+      setStatus("idle");
     } catch { setErrMsg("Could not reach the server."); setStatus("error"); }
   }, []);
 
-  useEffect(() => {
-    const saved = sessionStorage.getItem(KEY_STORE);
-    if (saved) { setKey(saved); loadList(saved); }
-  }, [loadList]);
+  useEffect(() => { loadList(); }, [loadList]);
 
-  function logout() { sessionStorage.removeItem(KEY_STORE); setAuthed(false); setKey(""); setLeads([]); setStats(null); setSelected(null); setDetail(null); }
+  function logout() { window.location.href = "/api/admin/auth/logout/"; }
 
-  const refresh = useCallback(async () => { if (key) await loadList(key); }, [key, loadList]);
+  const refresh = useCallback(async () => { await loadList(); }, [loadList]);
 
   // detail drawer
   useEffect(() => {
     if (selected == null) { setDetail(null); return; }
     setDetailLoading(true);
-    authedFetch(`/api/leads/${selected}`).then((r) => r.json()).then((d) => {
+    authedFetch(`/api/leads/${selected}/`).then((r) => r.json()).then((d) => {
       if (d.ok) setDetail({ lead: d.lead, notes: d.notes }); else setSelected(null);
     }).finally(() => setDetailLoading(false));
   }, [selected, authedFetch]);
@@ -106,10 +101,10 @@ export default function LeadsAdmin() {
     setLeads((ls) => ls.map((l) => (l.id === id ? { ...l, status: s } : l)));
     setDetail((d) => (d && d.lead.id === id ? { ...d, lead: { ...d.lead, status: s } } : d));
     try {
-      await authedFetch(`/api/leads/${id}`, { method: "PATCH", body: JSON.stringify({ status: s }) });
+      await authedFetch(`/api/leads/${id}/`, { method: "PATCH", body: JSON.stringify({ status: s }) });
       await refresh();
       if (selected === id) {
-        const d = await authedFetch(`/api/leads/${id}`).then((r) => r.json());
+        const d = await authedFetch(`/api/leads/${id}/`).then((r) => r.json());
         if (d.ok) setDetail({ lead: d.lead, notes: d.notes });
       }
     } finally { setBusy(false); }
@@ -119,7 +114,7 @@ export default function LeadsAdmin() {
     if (!selected || !noteText.trim()) return;
     setBusy(true);
     try {
-      const d = await authedFetch(`/api/leads/${selected}/notes`, { method: "POST", body: JSON.stringify({ body: noteText.trim() }) }).then((r) => r.json());
+      const d = await authedFetch(`/api/leads/${selected}/notes/`, { method: "POST", body: JSON.stringify({ body: noteText.trim() }) }).then((r) => r.json());
       if (d.ok) { setDetail((cur) => (cur ? { ...cur, notes: [...cur.notes, d.note] } : cur)); setNoteText(""); }
     } finally { setBusy(false); }
   }
@@ -128,7 +123,7 @@ export default function LeadsAdmin() {
     if (!confirm("Delete this lead permanently?")) return;
     setBusy(true);
     try {
-      await authedFetch(`/api/leads/${id}`, { method: "DELETE" });
+      await authedFetch(`/api/leads/${id}/`, { method: "DELETE" });
       setLeads((ls) => ls.filter((l) => l.id !== id));
       setSelected(null);
       await refresh();
@@ -157,21 +152,17 @@ export default function LeadsAdmin() {
     URL.revokeObjectURL(a.href);
   }
 
-  // ── Login ──
-  if (!authed) {
+  // ── Loading / error (auth handled by the shared session cookie + proxy gate) ──
+  if (status === "loading" && !stats) {
+    return <div className="mx-auto flex max-w-content items-center justify-center py-2xl text-text-faint"><Loader2 className="animate-spin" /></div>;
+  }
+  if (status === "error") {
     return (
-      <div className="mx-auto max-w-sm rounded-2xl border border-border bg-bg-card p-xl">
-        <div className="mb-md flex items-center gap-2 text-text"><Lock size={18} className="text-accent" /> <h1 className="m-0 text-[20px]">Leads admin</h1></div>
-        <p className="mb-lg text-[14px] text-text-muted">Enter your admin key to manage submissions.</p>
-        <form onSubmit={(e) => { e.preventDefault(); loadList(key); }} className="grid gap-sm">
-          <input type="password" value={key} onChange={(e) => setKey(e.target.value)} autoFocus placeholder="Admin key"
-            className="rounded-md bg-bg-card border border-border px-3 py-2.5 text-text placeholder:text-text-faint focus:border-accent focus:outline-none" />
-          <button type="submit" disabled={status === "loading" || !key}
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-4 py-2.5 font-semibold text-white disabled:opacity-50">
-            {status === "loading" ? <Loader2 size={16} className="animate-spin" /> : <Lock size={16} />} Unlock
-          </button>
-          {status === "error" && <p className="text-[13px] text-danger">{errMsg}</p>}
-        </form>
+      <div className="mx-auto max-w-sm rounded-md border border-border bg-bg-card p-xl text-center">
+        <p className="mb-md text-[14px] text-danger">{errMsg || "Could not load leads."}</p>
+        <button onClick={refresh} className="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-4 py-2.5 font-semibold text-white">
+          <RefreshCw size={16} /> Retry
+        </button>
       </div>
     );
   }
@@ -198,7 +189,7 @@ export default function LeadsAdmin() {
       {/* stats */}
       <div className="mb-md grid grid-cols-2 gap-3 sm:grid-cols-4">
         {statCards.map((s) => (
-          <div key={s.label} className="rounded-xl border border-border bg-bg-card p-md">
+          <div key={s.label} className="rounded-md border border-border bg-bg-card p-md">
             <p className="m-0 text-[12px] uppercase tracking-wide text-text-faint">{s.label}</p>
             <p className="m-0 mt-1 text-[26px] font-bold" style={{ color: s.c }}>{s.value}</p>
           </div>

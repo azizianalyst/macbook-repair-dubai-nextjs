@@ -312,7 +312,7 @@ export default function GuideTop10MacBookProblems() {
         },
         {
           q: "Do you offer pickup and warranty?",
-          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a 12-month warranty on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
+          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a warranty of up to 12 months on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

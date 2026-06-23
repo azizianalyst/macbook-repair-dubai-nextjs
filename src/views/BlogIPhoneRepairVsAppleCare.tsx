@@ -9,6 +9,18 @@ export default function BlogIPhoneRepairVsAppleCare() {
       seoTitle="iPhone Repair vs AppleCare+ in UAE 2026 - Honest Cost Math"
       seoDescription="Is AppleCare+ worth it on iPhone 17 Pro Max (AED 1,099)? Full per-iPhone cost comparison vs pay-as-you-go repair in Dubai, with the honest math."
       path="/blog/iphone-repair-vs-applecare-which-better"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "applecare-pricing", label: "AppleCare+ pricing by iPhone" },
+        { id: "deductibles", label: "Deductibles per incident" },
+        { id: "repair-vs-deductibles", label: "Our costs vs deductibles" },
+        { id: "accident-prone-math", label: "Math for accident-prone users" },
+        { id: "careful-user-math", label: "Math for careful users" },
+        { id: "battery-service", label: "Battery service comparison" },
+        { id: "theft-loss", label: "Theft & loss option" },
+        { id: "verdict-by-user", label: "Verdict by user type" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Repair vs AppleCare+ in UAE - Honest Math"
       hook="AppleCare+ on iPhone 17 Pro Max = AED 1,099. Or pay-as-you-go repairs at us. Which actually saves money?"
@@ -20,7 +32,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
       featuredImageAlt="iPhone repair vs AppleCare plus UAE cost comparison"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">iPhone Repair Vs Applecare. Quick answer</h2>
           <p>
             AppleCare+ is insurance. Like all insurance, the average user loses money on it, and the
             unlucky 15% comes out far ahead. For most careful iPhone owners in Dubai, our pay-as-you-go
@@ -28,7 +40,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             AppleCare+ wins.
           </p>
 
-          <h2>AppleCare+ pricing breakdown by iPhone (UAE, April 2026)</h2>
+          <h2 id="applecare-pricing">AppleCare+ pricing breakdown by iPhone (UAE, April 2026)</h2>
           <BlogPriceTable
             caption="AppleCare+ for iPhone - UAE pricing 2-year plan"
             headers={["iPhone model", "AppleCare+ (2 yr)", "AppleCare+ Theft & Loss", "Monthly equivalent"]}
@@ -47,7 +59,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             same monthly rate.
           </p>
 
-          <h2>Deductibles (AppleCare+ isn't free repair)</h2>
+          <h2 id="deductibles">Deductibles (AppleCare+ isn't free repair)</h2>
           <p>
             AppleCare+ caps damage costs but does not eliminate them. UAE deductibles per incident:
           </p>
@@ -67,7 +79,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             unlimited battery service if your battery health drops under 80%.
           </p>
 
-          <h2>Our typical repair costs vs AppleCare+ deductibles</h2>
+          <h2 id="repair-vs-deductibles">Our typical repair costs vs AppleCare+ deductibles</h2>
           <BlogPriceTable
             caption="Pay-as-you-go (us) vs AppleCare+ deductible - most common iPhone repairs"
             headers={["Repair", "Our price", "AppleCare+ deductible", "Pay-as-you-go saving"]}
@@ -82,7 +94,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             ]}
           />
 
-          <h2>Math for accident-prone users</h2>
+          <h2 id="accident-prone-math">Math for accident-prone users</h2>
           <p>
             "Accident-prone" = breaks 1 screen per year on average. Over 2 years on iPhone 17 Pro Max:
           </p>
@@ -95,7 +107,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             <strong>Verdict for accident-prone users: buy AppleCare+.</strong>
           </p>
 
-          <h2>Math for careful users</h2>
+          <h2 id="careful-user-math">Math for careful users</h2>
           <p>
             "Careful" = uses case + screen protector, never broken a phone. Over 2 years on iPhone 17 Pro Max:
           </p>
@@ -108,12 +120,12 @@ export default function BlogIPhoneRepairVsAppleCare() {
             <strong>Verdict for careful users: skip AppleCare+, save the AED 719.</strong>
           </p>
 
-          <h2>Battery service comparison</h2>
+          <h2 id="battery-service">Battery service comparison</h2>
           <p>
             One real AppleCare+ benefit: free battery service when health drops below 80%. Apple uses
             genuine OEM batteries with full Battery Health metrics intact. Our pay-as-you-go battery
             service is AED 220-380 depending on model - also genuine-spec cells, also full Battery Health
-            (no "service" warning), 12-month warranty.
+            (no "service" warning), warranty of up to 12 months.
           </p>
           <p>
             If you keep the iPhone past year 2, Apple's free battery service through AppleCare+ effectively
@@ -121,7 +133,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             so they don't use the accident credits.
           </p>
 
-          <h2>Theft &amp; loss option (UAE limited)</h2>
+          <h2 id="theft-loss">Theft &amp; loss option (UAE limited)</h2>
           <p>
             AppleCare+ with Theft &amp; Loss is the only way to get insurance against actual stolen / lost
             iPhones in the UAE. Standard UAE home insurance policies usually exclude phones unless you add
@@ -139,7 +151,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
             high-traffic areas (Marina, Downtown, JBR) or travel often.
           </p>
 
-          <h2>Verdict by user type</h2>
+          <h2 id="verdict-by-user">Verdict by user type</h2>
           <BlogPriceTable
             caption="AppleCare+ vs pay-as-you-go - verdict by user profile"
             headers={["User profile", "Recommendation", "Reason"]}
@@ -176,7 +188,7 @@ export default function BlogIPhoneRepairVsAppleCare() {
         { q: "Will using your repair shop void AppleCare+?", a: "Yes - once you have a non-Apple repair on a covered component, AppleCare+ stops covering that component (and may void the entire plan at Apple's discretion). If you have AppleCare+ active, use it. Come to us when AppleCare+ has expired or you don't have it." },
         { q: "Is AppleCare+ Theft & Loss really worth AED 400 extra?", a: "For most users, yes - UAE home insurance rarely covers phone theft, and standalone gadget insurance (du, Etisalat, AXA Gulf) costs AED 30-50/month with similar coverage. AppleCare+ T&L is competitively priced and integrated with Apple's replacement workflow." },
         { q: "What happens if I sell my iPhone - does AppleCare+ transfer?", a: "Yes - AppleCare+ transfers to the new owner free of charge. Standard AppleCare+ transfers fully. AppleCare+ Theft & Loss transfers but the new owner must register their address with Apple. This actually adds resale value." },
-        { q: "Can I get AppleCare+ on a refurbished iPhone bought from your shop?", a: "Yes - Apple sells AppleCare+ for any iPhone within 60 days of original purchase date (not your purchase from us). For refurbished iPhones from us, we offer our own 12-month warranty plus an optional 24-month extended warranty (AED 199-399 depending on model) that covers screen accidents and battery." },
+        { q: "Can I get AppleCare+ on a refurbished iPhone bought from your shop?", a: "Yes - Apple sells AppleCare+ for any iPhone within 60 days of original purchase date (not your purchase from us). For refurbished iPhones from us, we offer our own warranty of up to 12 months plus an optional 24-month extended warranty (AED 199-399 depending on model) that covers screen accidents and battery." },
       ]}
       relatedLinks={[
         { label: "iPhone repair Dubai", href: "/iphone-repair-dubai", description: "Pay-as-you-go pricing for every model and repair." },

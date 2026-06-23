@@ -154,7 +154,7 @@ export default function MacStudioRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Studio repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac Studio — M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max — at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty."
+        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months."
       />
 
       <USPStrip tone="dark" />
@@ -168,14 +168,7 @@ export default function MacStudioRepair() {
         ]} />
       </section>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
-          <span className="font-semibold text-text">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+
 
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -188,9 +181,33 @@ export default function MacStudioRepair() {
         </div>
         <ul className="flex flex-wrap gap-2">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
+      </section>
+
+      {/* Repair by chip generation */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump to the chip-specific repair page for your Mac Studio.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-studio-m1-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M1 Max/Ultra (2022) →</Link>
+          <Link to="/mac-studio-m2-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M2 Max/Ultra (2023) →</Link>
+          <Link to="/mac-studio-m3-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M3 Ultra (2025) →</Link>
+          <Link to="/mac-studio-m4-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M4 Max (2025) →</Link>
+        </div>
+      </section>
+
+      {/* Common Mac Studio services */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac Studio services</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Go straight to the fix you need.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-studio-not-turning-on-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Not Turning On →</Link>
+          <Link to="/mac-studio-no-display-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio No Display →</Link>
+          <Link to="/mac-studio-overheating-fix-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Overheating →</Link>
+          <Link to="/mac-studio-data-recovery-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Data Recovery →</Link>
+        </div>
       </section>
 
       {/* Issues / services */}
@@ -269,7 +286,7 @@ export default function MacStudioRepair() {
         <div className="grid gap-md md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
             <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-              <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+              <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
               </div>
               <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -299,7 +316,6 @@ export default function MacStudioRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Contact us for immediate assistance</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Bring your Mac Studio to our repair centre and we'll diagnose it thoroughly before recommending a repair option. Begin the repair process immediately and get a free quote.

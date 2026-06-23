@@ -15,7 +15,7 @@ export default function IMacScreenRepair() {
       timeline="2-3 days"
       whatsappPrefill="Hi, my iMac screen is damaged - model and year:"
       technician={{ name: "Shafeeq", years: 12, specialisation: "iMac & desktop display lead" }}
-      serviceName="iMac Screen Repair"
+      serviceName="iMac Screen Repair Dubai"
       pricingRows={[
         { model: `iMac 24" M1 (2021)`,                  price: 800,  timeline: "2-3 days" },
         { model: `iMac 24" M3 (2023)`,                  price: 800,  timeline: "2-3 days" },
@@ -67,6 +67,7 @@ export default function IMacScreenRepair() {
         { title: "Calibration + 24 hr burn-in", body: "Display profiled with a colorimeter, white balance reset, 24-hour burn-in test. Then back to you." },
       ]}
       warrantyDays={90}
+      glassNotice
       warrantyBullets={[
         "Covers panel, backlight, calibration and adhesive seal.",
         "Excludes new physical impact after delivery.",

@@ -9,6 +9,17 @@ export default function BlogBestWaySellOldIPhone() {
       seoTitle="Best Way to Sell an Old iPhone in Dubai 2026"
       seoDescription="Three honest ways to sell your iPhone in Dubai: Dubizzle (highest, slow), us (instant cash), Apple Trade-In (lowest, easy). Real prices and scam warnings."
       path="/blog/best-way-to-sell-old-iphone-dubai"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "selling-dubizzle", label: "Selling on Dubizzle" },
+        { id: "we-buy", label: "We buy used iPhones" },
+        { id: "apple-trade-in", label: "Apple Trade-In" },
+        { id: "sell-to-friend", label: "Selling to a friend" },
+        { id: "icloud-lock", label: "iCloud lock check" },
+        { id: "wipe-before-selling", label: "Wipe before selling" },
+        { id: "best-time-to-sell", label: "Best time of year to sell" },
+      ]}
       category="Resale guide · iPhone"
       h1="Best Way to Sell Old iPhone in Dubai 2026"
       hook="Dubizzle = highest price, slowest. We buy = instant cash. Apple Trade-In = lowest. Here's the math."
@@ -20,7 +31,7 @@ export default function BlogBestWaySellOldIPhone() {
       featuredImageAlt="Best way to sell old iPhone in Dubai 2026 comparison"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Best Way To Sell Old iPhone. Quick answer</h2>
           <p>
             Three legitimate options. Each trades money for time and risk:
           </p>
@@ -35,7 +46,7 @@ export default function BlogBestWaySellOldIPhone() {
             ]}
           />
 
-          <h2>Selling on Dubizzle - pros, cons, scam risks</h2>
+          <h2 id="selling-dubizzle">Selling on Dubizzle - pros, cons, scam risks</h2>
           <p>
             Dubizzle gives you the most cash but eats your time. Realistic timeline for an iPhone 16 Pro
             Max at AED 3,000:
@@ -61,7 +72,7 @@ export default function BlogBestWaySellOldIPhone() {
             parking lots, residential buildings, or Sharjah / Ajman.
           </p>
 
-          <h2>We buy used iPhones - process and pricing</h2>
+          <h2 id="we-buy">We buy used iPhones - process and pricing</h2>
           <p>
             Bring the iPhone to our Concord Tower workshop (10th floor, Office #45, Dubai Media City).
             Our process:
@@ -77,7 +88,7 @@ export default function BlogBestWaySellOldIPhone() {
             Walk-ins welcome 9 am-10 pm Mon-Sat. WhatsApp us photos first if you want a pre-quote.
           </p>
 
-          <h2>Apple Trade-In - convenient but lowest</h2>
+          <h2 id="apple-trade-in">Apple Trade-In - convenient but lowest</h2>
           <p>
             Apple's UAE Trade-In runs at Apple Dubai Mall and Mall of the Emirates. The algorithm scans
             condition descriptors and pays 30-40% below market. Example: iPhone 16 Pro Max mint, Apple
@@ -89,7 +100,7 @@ export default function BlogBestWaySellOldIPhone() {
             to Media City.
           </p>
 
-          <h2>Selling to a friend</h2>
+          <h2 id="sell-to-friend">Selling to a friend</h2>
           <p>
             The "friends and family" price usually lands between Apple Trade-In and our offer. Risks:
             if the iPhone develops a fault after sale, your friendship is on the line. Mitigations:
@@ -98,7 +109,7 @@ export default function BlogBestWaySellOldIPhone() {
             "I'll transfer you next week".
           </p>
 
-          <h2>iCloud Lock check (CRITICAL)</h2>
+          <h2 id="icloud-lock">iCloud Lock check (CRITICAL)</h2>
           <p>
             An iCloud-locked iPhone is worth zero. Before any sale:
           </p>
@@ -111,7 +122,7 @@ export default function BlogBestWaySellOldIPhone() {
             Read the full <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent font-semibold hover:underline">iCloud lock recovery guide</Link> if you're unsure.
           </p>
 
-          <h2>Wipe before selling - proper steps</h2>
+          <h2 id="wipe-before-selling">Wipe before selling - proper steps</h2>
           <p>
             Signing out of iCloud is not enough. You must Erase All Content and Settings:
           </p>
@@ -129,7 +140,7 @@ export default function BlogBestWaySellOldIPhone() {
             </Link>.
           </p>
 
-          <h2>Best time of year to sell (before iPhone 18 launch)</h2>
+          <h2 id="best-time-to-sell">Best time of year to sell (before iPhone 18 launch)</h2>
           <p>
             iPhone resale prices in Dubai follow Apple's launch calendar:
           </p>

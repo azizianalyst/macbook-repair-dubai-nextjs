@@ -5,7 +5,9 @@
 //
 // Usage:  <IpadModelPage slug="ipad-pro-13-m5-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import iPadModels from "@/content/ipad-models.json";
 
 type Pricing = {
@@ -103,18 +105,7 @@ function worthRepairingVerdict(m: IpadModel): { headline: string; body: string }
 
 // pick 4 related iPad models (same category preferred, then adjacent)
 function pickRelatedModels(slug: string): IpadModel[] {
-  const me = MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  // Circular window over the same category so inbound links distribute evenly.
-  const cat = MODELS.filter((m) => m.category === me.category);
-  const idx = cat.findIndex((m) => m.slug === slug);
-  const picks: IpadModel[] = [];
-  for (let k = 1; k <= 4 && k < cat.length; k++) picks.push(cat[(idx + k) % cat.length]);
-  if (picks.length < 4) {
-    const others = MODELS.filter((m) => m.category !== me.category && m.slug !== slug);
-    picks.push(...others.slice(0, 4 - picks.length));
-  }
-  return picks;
+  return relatedModels(slug, MODELS, (m) => m.category);
 }
 
 // build a service pricing table row
@@ -228,11 +219,11 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, port AED ${model.pricing.port}. 12-month warranty. Free pickup.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, port AED ${model.pricing.port}. Warranty up to 12 months. Free pickup.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={model.category === "pro" && model.releaseYear >= 2024 ? "3-5 days (screen) · same-day (battery)" : "Same-day to 2 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -252,7 +243,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
                 ? `Apple discontinued it in ${model.discontinued} but it remains fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
           </p>
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
@@ -261,15 +252,15 @@ export default function IpadModelPage({ slug }: { slug: string }) {
             <li>• <strong>Storage options:</strong> {model.storageOptions.join(" · ")}</li>
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-alt">
                 <tr className="text-left">
@@ -292,9 +283,9 @@ export default function IpadModelPage({ slug }: { slug: string }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
               ? `As Apple's current ${CATEGORY_LABEL[model.category]}, parts are sourced from authorised channels. Some specialist panels (Tandem OLED especially) take 3-5 days. Batteries and ports are usually in stock same-day.`
@@ -303,16 +294,16 @@ export default function IpadModelPage({ slug }: { slug: string }) {
                 : `Parts for the ${model.shortName} are widely available in Dubai - screens, batteries, ports and small components are usually in stock or arrive within 1-2 days. ${model.timelineNotes}`}
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
           <div className="bg-bg-alt border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Our honest take on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link

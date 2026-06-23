@@ -19,7 +19,7 @@ export default function IPhoneHomeButtonRepair() {
         { name: "Home Button",  path: "/iphone-home-button-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone Home Button Repair"
+      serviceName="iPhone Home Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -57,7 +57,7 @@ export default function IPhoneHomeButtonRepair() {
         { q: "Is AssistiveTouch a good substitute?", a: "Honestly, yes - most customers tell us they forget Touch ID is gone within a week. The on-screen button does double-press, triple-press, Siri, Apple Pay (via Face ID on newer iPhones, or passcode on iPhone 6/7/8)." },
         { q: "Which iPhones still have a home button?", a: "iPhone 6, 6S, 7, 8, SE (1st, 2nd and 3rd gen). iPhone X and later have no physical home button." },
         { q: "Can you fix it the same day?", a: "Yes. Drop in by 1 PM and collect by 6 PM, or WhatsApp for free pickup across Dubai." },
-        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our 12-month warranty covers any mechanical failure." },
+        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our warranty of up to 12 months covers any mechanical failure." },
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[

@@ -93,6 +93,6 @@
   --font-mono:    'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
 
   /* container - 1180, not 1280. subtle anti-template */
-  --container: 1180px;
+  --container: 1400px;
   --container-narrow: 720px;
 }

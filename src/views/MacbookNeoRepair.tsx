@@ -10,7 +10,7 @@ export default function MacbookNeoRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Neo Repair Dubai - A18 Pro Budget MacBook from AED 250 | 055 741 3706"
-      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. 12-month warranty. Free pickup."
+      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. Warranty up to 12 months. Free pickup."
       path="/macbook-neo-repair-dubai"
       eyebrow="MacBook Neo · March 2026 · current Apple lineup · $599 entry-level"
       h1="MacBook Neo Repair Dubai - Apple's First A-Chip MacBook"
@@ -24,7 +24,7 @@ export default function MacbookNeoRepair() {
         { name: "MacBook Neo",    path: "/macbook-neo-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "MacBook & A-chip board-level repair" }}
-      serviceName="MacBook Neo Repair"
+      serviceName="MacBook Neo Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -139,6 +139,26 @@ export default function MacbookNeoRepair() {
             <Link to="/macbook-pro-14-m5-2025-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
               <div className="font-semibold">Pro 14" M5</div>
               <div className="text-text-muted text-[12px] mt-[2px]">2025 · M5</div>
+            </Link>
+          </div>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">MacBook Neo repairs</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
+            <Link to="/macbook-neo-a18-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
+              <div className="font-semibold">A18 Pro Repair</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">Board-level A-chip</div>
+            </Link>
+            <Link to="/macbook-neo-screen-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
+              <div className="font-semibold">Screen Repair</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">12.9" Liquid Retina</div>
+            </Link>
+            <Link to="/macbook-neo-battery-replacement-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
+              <div className="font-semibold">Battery Replacement</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">Fresh cells</div>
+            </Link>
+            <Link to="/macbook-neo-keyboard-repair-dubai" className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors">
+              <div className="font-semibold">Keyboard Repair</div>
+              <div className="text-text-muted text-[12px] mt-[2px]">Magic Keyboard</div>
             </Link>
           </div>
         </>

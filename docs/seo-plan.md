@@ -4,6 +4,7 @@
 > Site: 350 routes, Next.js 16 App Router, static-first, Node deploy (Hostinger).
 > Business: local Apple-repair shop, Dubai. NAP in `src/content/site.ts`.
 > Branch context: `seo-recovery-schema-cwv` (post-WordPress migration, recovering rankings).
+> See also: [`seo-recovery-internal-linking-and-gaps.md`](seo-recovery-internal-linking-and-gaps.md) — crawler policy, the automated internal-linking upgrade, and the staged content-gap backlog.
 
 ---
 

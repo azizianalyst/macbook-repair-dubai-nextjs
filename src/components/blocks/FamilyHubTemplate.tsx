@@ -163,10 +163,10 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Warranty */}
         <section className="bg-bg-card border border-border rounded-md p-lg">
           <h2 className="text-[22px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={22} className="text-accent" aria-hidden /> 12-month written warranty
+            <ShieldCheck size={22} className="text-accent" aria-hidden /> written warranty up to 12 months
           </h2>
           <p className="text-[15px]">
-            Every {p.family} repair includes a 12-month warranty on parts and labour, dated and signed on your invoice.
+            Every {p.family} repair includes a warranty of up to 12 months on parts and labour, dated and signed on your invoice.
             Same fault returns inside the window? We re-do it free.
           </p>
         </section>

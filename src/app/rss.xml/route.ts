@@ -25,8 +25,8 @@ export function GET() {
     .sort((a, b) => postDate(b.date).getTime() - postDate(a.date).getTime())
     .map((p) => `    <item>
       <title>${esc(p.title)}</title>
-      <link>${SITE}${p.slug}</link>
-      <guid isPermaLink="true">${SITE}${p.slug}</guid>
+      <link>${SITE}${p.slug}/</link>
+      <guid isPermaLink="true">${SITE}${p.slug}/</guid>
       <description>${esc(p.excerpt)}</description>
       <category>${esc(p.category)}</category>
       <dc:creator>${esc(p.author)}</dc:creator>
@@ -37,7 +37,7 @@ export function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>MacBook Repair Dubai — Apple Repair Guides &amp; News</title>
-    <link>${SITE}/blog</link>
+    <link>${SITE}/blog/</link>
     <description>Technician-written guides on MacBook, iPhone, iPad and Mac repair in Dubai — costs, fixes, buying advice and Apple news from a workshop with 21+ years of experience.</description>
     <language>en-ae</language>
     <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml"/>

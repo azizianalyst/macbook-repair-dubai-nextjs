@@ -19,14 +19,14 @@ export default function MacBookBackupService() {
         { name: "Backup Service",  path: "/macbook-backup-service-dubai" },
       ]}
       technician={{ name: "Abdul Aziz", years: 21, specialisation: "Mac data and software" }}
-      serviceName="MacBook Backup Service"
+      serviceName="MacBook Backup Service Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook backup service in Dubai</strong> from <strong>MacBook Repair Dubai</strong> covers three things people put off until it's too late. We set up Time Machine the right way, migrate your data to a new Mac or an external drive, and take a full backup before any repair touches the board. Your files stay confidential, handled at our Concord Tower bench in Media City. From AED 150.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            This is backup and migration, not recovery. If files are already deleted, the drive won't mount, or the Mac won't boot, that's a different job - see our <a href="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">MacBook data recovery</a> page instead.
+            This is backup and migration, not recovery. If files are already deleted, the drive won't mount, or the Mac won't boot, that's a different job - see our <a href="/macbook-data-recovery-dubai/" className="text-accent font-semibold hover:underline">MacBook data recovery</a> page instead.
           </p>
         </>
       }
@@ -48,7 +48,7 @@ export default function MacBookBackupService() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "12-month warranty on the backup setup and any scheduling we configure.",
+        "warranty of up to 12 months on the backup setup and any scheduling we configure.",
         "Your data stays confidential - we don't browse, copy or keep anything beyond the job.",
         "Free re-check inside 12 months if a scheduled backup stops running.",
       ]}

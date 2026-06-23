@@ -4,11 +4,11 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacOsReinstall() {
   return (
     <SubServicePageTemplate
-      seoTitle="macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day"
+      seoTitle="MacBook macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day"
       seoDescription="macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. AED 300, 2-4 hours."
       path="/macos-reinstall-dubai"
       eyebrow="macOS reinstall"
-      h1="macOS Reinstall Dubai - Clean Install Service"
+      h1="MacBook macOS Reinstall Dubai - Clean Install Service"
       subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall fixes 90% of software problems. AED 300, same-day, with or without data preservation."
       startingPrice={300}
       timeline="Same day (2-4 hours)"
@@ -19,7 +19,7 @@ export default function MacOsReinstall() {
         { name: "macOS Reinstall", path: "/macos-reinstall-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "macOS recovery & system service" }}
-      serviceName="macOS Reinstall"
+      serviceName="macOS Reinstall Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -66,6 +66,8 @@ export default function MacOsReinstall() {
         { label: "MacBook Repair Hub",       href: "/",            description: "All MacBook services in one place." },
         { label: "MacBook Virus Removal",    href: "/macbook-virus-removal-dubai",     description: "Persistent malware? Reinstall is the cure. AED 350." },
         { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first. From AED 800." },
+        { label: "iMac macOS Reinstall",     href: "/imac-os-reinstall-dubai",         description: "Reinstalling on an iMac instead? Same clean-install service." },
+        { label: "Mac mini/Studio/Pro Reinstall", href: "/mac-os-reinstall-dubai",     description: "Desktop Mac needs a clean macOS? We do those too." },
       ]}
       blogLink={{ label: "When to reinstall macOS (and when it won't help)", href: "/blog/macbook-running-slow-10-fixes" }}
     />

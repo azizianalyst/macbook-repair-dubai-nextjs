@@ -19,7 +19,7 @@ export default function IMacVirusRemoval() {
         { name: "Virus Removal",       path: "/imac-virus-removal-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS deep cleaning and security" }}
-      serviceName="iMac Virus and Malware Removal"
+      serviceName="iMac Virus and Malware Removal Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

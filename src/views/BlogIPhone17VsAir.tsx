@@ -9,6 +9,18 @@ export default function BlogIPhone17VsAir() {
       seoTitle="iPhone 17 vs iPhone Air: Which to Buy in Dubai?"
       seoDescription="iPhone 17 vs iPhone Air Dubai guide: same A19 chip, different bodies, cameras and battery. Side-by-side specs, prices, repair cost and a verdict by user."
       path="/blog/iphone-17-vs-iphone-air-which-buy"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "spec-comparison", label: "Spec-by-spec comparison" },
+        { id: "air-appeal", label: "iPhone Air's appeal" },
+        { id: "iphone-17-appeal", label: "iPhone 17's appeal" },
+        { id: "battery", label: "Battery" },
+        { id: "camera", label: "Camera" },
+        { id: "price-uae", label: "Price difference in UAE" },
+        { id: "repair-cost", label: "Repair cost comparison" },
+        { id: "verdict-by-user", label: "Verdict by user" },
+      ]}
       category="Comparison · iPhone"
       h1="iPhone 17 vs iPhone Air - Dubai Buyer's Guide"
       hook="Same chip. Different bodies. Different cameras. Here's the right choice for you."
@@ -20,7 +32,7 @@ export default function BlogIPhone17VsAir() {
       featuredImageAlt="iPhone 17 vs iPhone Air comparison Dubai 2026"
       body={
         <>
-          <h2>Quick answer - by what matters most</h2>
+          <h2 id="quick-answer">iPhone 17 Vs iPhone Air. Quick answer - by what matters most</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>I want the thinnest, lightest phone:</strong> iPhone Air (5.6mm, 165g)</li>
             <li><strong>I take a lot of photos:</strong> iPhone 17 (dual camera, 2× telephoto)</li>
@@ -30,7 +42,7 @@ export default function BlogIPhone17VsAir() {
             <li><strong>I want more colours:</strong> iPhone 17 (5 colours vs Air's 3)</li>
           </ul>
 
-          <h2>Spec-by-spec comparison</h2>
+          <h2 id="spec-comparison">Spec-by-spec comparison</h2>
           <BlogPriceTable
             caption="iPhone 17 vs iPhone Air - full spec sheet, April 2026"
             headers={["Spec", "iPhone 17", "iPhone Air", "Notes"]}
@@ -52,7 +64,7 @@ export default function BlogIPhone17VsAir() {
             ]}
           />
 
-          <h2>iPhone Air's appeal - thinness, weight, status</h2>
+          <h2 id="air-appeal">iPhone Air's appeal - thinness, weight, status</h2>
           <p>
             The iPhone Air is Apple's "look at this" phone for 2025. At 5.6mm and 165g, it's noticeably
             thinner than even the iPhone 6 (6.9mm, the previous "thin king"). In hand it feels like a
@@ -64,7 +76,7 @@ export default function BlogIPhone17VsAir() {
             casual users. All of them matter to power users.
           </p>
 
-          <h2>iPhone 17's appeal - cameras, battery, value</h2>
+          <h2 id="iphone-17-appeal">iPhone 17's appeal - cameras, battery, value</h2>
           <p>
             The iPhone 17 is the Goldilocks model in the 2025 lineup. You get:
           </p>
@@ -77,7 +89,7 @@ export default function BlogIPhone17VsAir() {
             <li>AED 700 cheaper at base configuration.</li>
           </ul>
 
-          <h2>Battery - Air is shorter, be honest about it</h2>
+          <h2 id="battery">Battery - Air is shorter, be honest about it</h2>
           <p>
             Apple rates the Air at 21 hours video / 13 hours web. That's 6 hours less than the 17. In our
             workshop's daily-use tests (hotspot, heavy social, 4K video occasionally), Air owners hit 12%
@@ -88,7 +100,7 @@ export default function BlogIPhone17VsAir() {
             at lunch - MagSafe puck on the desk works, but it's a habit change.
           </p>
 
-          <h2>Camera - single vs dual is a real gap</h2>
+          <h2 id="camera">Camera - single vs dual is a real gap</h2>
           <p>
             Both phones share the same 48MP main sensor (Sony IMX803, fused-pixel tech). For 80% of
             shots - daylight, portraits, food - the photos are identical. The gap shows up in:
@@ -100,7 +112,7 @@ export default function BlogIPhone17VsAir() {
             <li><strong>4K Cinematic Mode:</strong> 17 supports rack-focus between two cameras; Air can't.</li>
           </ul>
 
-          <h2>Price difference in UAE</h2>
+          <h2 id="price-uae">Price difference in UAE</h2>
           <p>
             iPhone 17 base (128GB) is AED 3,799. iPhone Air base (256GB) is AED 4,499 - an AED 700
             premium for the thinner body and bigger storage tier. Match storage for fair comparison:
@@ -115,7 +127,7 @@ export default function BlogIPhone17VsAir() {
             ]}
           />
 
-          <h2>Repair cost comparison if you damage either</h2>
+          <h2 id="repair-cost">Repair cost comparison if you damage either</h2>
           <BlogPriceTable
             caption="iPhone 17 vs Air - repair cost at our Dubai workshop"
             headers={["Repair", "iPhone 17", "iPhone Air", "Notes"]}
@@ -133,7 +145,7 @@ export default function BlogIPhone17VsAir() {
             and Air-specific parts are still scarcer in 2026. Budget for AppleCare+ if buying Air.
           </p>
 
-          <h2>Verdict by user</h2>
+          <h2 id="verdict-by-user">Verdict by user</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Most people (80% of Dubai buyers):</strong> iPhone 17. Better cameras, better battery, AED 700 cheaper.</li>
             <li><strong>Fashion-forward / status-conscious:</strong> iPhone Air. It's the most beautiful iPhone Apple has made.</li>

@@ -9,6 +9,17 @@ export default function BlogIPhone17eOrIPhone16() {
       seoTitle="iPhone 17e or iPhone 16? Honest Comparison 2026"
       seoDescription="iPhone 17e (AED 2,499) or iPhone 16 (AED 2,899)? Side-by-side specs, Apple Intelligence, repair cost and resale value, with an honest verdict by user type."
       path="/blog/should-i-buy-iphone-17e-or-iphone-16"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "specs-side-by-side", label: "Specs side-by-side" },
+        { id: "iphone-17e-advantages", label: "iPhone 17e advantages" },
+        { id: "iphone-16-advantages", label: "iPhone 16 advantages" },
+        { id: "apple-intelligence", label: "Apple Intelligence" },
+        { id: "resale-value", label: "Resale value" },
+        { id: "repair-cost", label: "Repair cost comparison" },
+        { id: "verdict-by-user", label: "Verdict by user" },
+      ]}
       category="Buying guide · iPhone"
       h1="iPhone 17e or iPhone 16 - Which to Buy in 2026?"
       hook="iPhone 17e is newer and cheaper. iPhone 16 has more cameras. Here's the right pick."
@@ -17,10 +28,10 @@ export default function BlogIPhone17eOrIPhone16() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={10}
-      featuredImageAlt="iPhone 17e vs iPhone 16 comparison Dubai 2026"
+      featuredImageAlt="Should I Buy iPhone 17e Or iPhone 16, iPhone 17e vs iPhone 16 comparison Dubai 2026"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Should I Buy iPhone 17e Or iPhone 16. Quick answer</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>I want the cheapest current iPhone with Apple Intelligence:</strong> iPhone 17e</li>
             <li><strong>I want better cameras for the same money:</strong> iPhone 16</li>
@@ -29,7 +40,7 @@ export default function BlogIPhone17eOrIPhone16() {
             <li><strong>I'm replacing an old SE or iPhone 11:</strong> iPhone 17e - feels like the biggest jump</li>
           </ul>
 
-          <h2>Specs side-by-side</h2>
+          <h2 id="specs-side-by-side">Specs side-by-side</h2>
           <BlogPriceTable
             caption="iPhone 17e vs iPhone 16 - full spec sheet, April 2026"
             headers={["Spec", "iPhone 17e", "iPhone 16", "Notes"]}
@@ -53,7 +64,7 @@ export default function BlogIPhone17eOrIPhone16() {
             ]}
           />
 
-          <h2>iPhone 17e advantages</h2>
+          <h2 id="iphone-17e-advantages">iPhone 17e advantages</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>A19 chip</strong> - one generation newer, ~15% faster CPU, 20% faster GPU, more efficient.</li>
             <li><strong>AED 400 cheaper</strong> at base config.</li>
@@ -64,7 +75,7 @@ export default function BlogIPhone17eOrIPhone16() {
             <li><strong>Lightest of the two</strong> - 167g vs 16's 170g.</li>
           </ul>
 
-          <h2>iPhone 16 advantages</h2>
+          <h2 id="iphone-16-advantages">iPhone 16 advantages</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Dual camera system</strong> - 48MP main + 12MP ultrawide. 17e is single-camera only.</li>
             <li><strong>Camera Control</strong> - dedicated capacitive button for camera launch + zoom + focus (a real feature, not a gimmick once you use it).</li>
@@ -75,7 +86,7 @@ export default function BlogIPhone17eOrIPhone16() {
             <li><strong>Mature accessory ecosystem</strong> - every case, MagSafe wallet, and dock made for iPhone 15/16 fits perfectly.</li>
           </ul>
 
-          <h2>Apple Intelligence - both support it</h2>
+          <h2 id="apple-intelligence">Apple Intelligence - both support it</h2>
           <p>
             Important clarification: iPhone 17e and iPhone 16 both run the full Apple Intelligence
             feature set in 2026. Both have 8GB RAM (the requirement) and Neural Engines fast enough
@@ -94,7 +105,7 @@ export default function BlogIPhone17eOrIPhone16() {
             SE models, not the 17e.
           </p>
 
-          <h2>Resale value in 2 years</h2>
+          <h2 id="resale-value">Resale value in 2 years</h2>
           <BlogPriceTable
             caption="iPhone 17e vs 16 - projected April 2028 resale (Dubai used market)"
             headers={["Model", "New price", "Projected 24-mo resale", "Depreciation"]}
@@ -111,7 +122,7 @@ export default function BlogIPhone17eOrIPhone16() {
             1,200-1,250 for either).
           </p>
 
-          <h2>Repair cost comparison</h2>
+          <h2 id="repair-cost">Repair cost comparison</h2>
           <BlogPriceTable
             caption="iPhone 17e vs 16 - repair cost at our Dubai workshop"
             headers={["Repair", "iPhone 17e", "iPhone 16", "Notes"]}
@@ -130,7 +141,7 @@ export default function BlogIPhone17eOrIPhone16() {
             common, so parts supply is excellent.
           </p>
 
-          <h2>Verdict by user</h2>
+          <h2 id="verdict-by-user">Verdict by user</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Student / first-time iPhone:</strong> iPhone 17e. AED 400 saved, longer support life.</li>
             <li><strong>Photography enthusiast:</strong> iPhone 16. Ultrawide + macro + Camera Control are real differentiators.</li>
@@ -147,7 +158,7 @@ export default function BlogIPhone17eOrIPhone16() {
             <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               full iPhone service from AED 250
             </Link>
-            , 12-month warranty, free pickup across Dubai.
+            , warranty of up to 12 months, free pickup across Dubai.
           </p>
         </>
       }

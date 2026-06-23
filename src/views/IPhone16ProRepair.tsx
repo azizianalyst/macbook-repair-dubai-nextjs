@@ -6,7 +6,7 @@ export default function IPhone16ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16 Pro Repair Dubai - 6.3-inch A18 Pro from AED 350 | 055 741 3706"
-      seoDescription="iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, 12-month warranty."
+      seoDescription="iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen AED 850. Same-day, warranty of up to 12 months."
       path="/iphone-16-pro-repair-dubai"
       eyebrow="iPhone 16 Pro (2024, discontinued Sept 2025)"
       h1="iPhone 16 Pro Repair Dubai - Titanium, ProMotion, Camera Control"
@@ -20,7 +20,7 @@ export default function IPhone16ProRepair() {
         { name: "iPhone 16 Pro", path: "/iphone-16-pro-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 16 Pro Repair"
+      serviceName="iPhone 16 Pro Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -53,7 +53,7 @@ export default function IPhone16ProRepair() {
               <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
                 <tr><td className="px-md py-sm">6.3-inch ProMotion OLED replacement</td><td className="px-md py-sm">850</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">350</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm"><Link to="/iphone-16-pro-battery-capacity" className="text-accent underline underline-offset-2">Battery replacement</Link> (3,582 mAh)</td><td className="px-md py-sm">350</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">500</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr className="bg-bg-alt"><td className="px-md py-sm">Camera Control button repair</td><td className="px-md py-sm">350</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
                 <tr><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
@@ -109,6 +109,7 @@ export default function IPhone16ProRepair() {
         { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "5x tetraprism + 48MP ultra-wide AED 900." },
         { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.3-inch ProMotion OLED AED 850." },
         { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 3 / Thunderbolt - AED 500." },
+        { label: "iPhone 16 Pro battery capacity", href: "/iphone-16-pro-battery-capacity", description: "Specs and replacement cost for the iPhone 16 Pro battery." },
       ]}
     />
   );

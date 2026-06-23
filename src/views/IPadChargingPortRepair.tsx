@@ -1,5 +1,6 @@
 "use client";
 import DevicePageTemplate from "@/components/blocks/DevicePageTemplate";
+import { Link } from "@/lib/router-compat";
 
 export default function IPadChargingPortRepair() {
   return (
@@ -15,7 +16,7 @@ export default function IPadChargingPortRepair() {
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, my iPad charging port is broken - model:"
       technician={{ name: "Shafeeq", years: 12, specialisation: "iPad board & port specialist" }}
-      serviceName="iPad Charging Port Repair"
+      serviceName="iPad Charging Port Repair Dubai"
       pricingRows={[
         { model: "iPad Lightning port (older models)",        price: 300, timeline: "Same day" },
         { model: "iPad USB-C port (Air 4+, Mini 6+, all Pro)", price: 400, timeline: "Same day" },
@@ -31,7 +32,8 @@ export default function IPadChargingPortRepair() {
             iPads use one of three connectors. <strong>Lightning</strong> on every iPad up to iPad 9. <strong>USB-C</strong> on every iPad Air from gen 4, Mini from gen 6, every iPad Pro since 2018, and the iPad 10 onwards. Newer iPad Pros add Thunderbolt over USB-C - same physical port, more pins doing more work, and pricier when damaged.
             </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            The Smart Connector on Pro and Air models is a separate three-pin contact for keyboard cases. It can fail on its own without the main port being touched. We test all three on every charging-port job.
+            The Smart Connector on Pro and Air models is a separate three-pin contact for keyboard cases. It can fail on its own without the main port being touched. We test all three on every charging-port job. For software-side charging issues, see:{" "}
+            <Link to="/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why your iPad stopped charging and how to fix it</Link>.
           </p>
         </>
       }
@@ -81,6 +83,9 @@ export default function IPadChargingPortRepair() {
         "/ipad-screen-repair-dubai",
         "/ipad-battery-replacement-dubai",
         "/ipad-water-damage-repair-dubai",
+      ]}
+      relatedExtra={[
+        { label: "iPad not charging?", href: "/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
       ]}
     />
   );

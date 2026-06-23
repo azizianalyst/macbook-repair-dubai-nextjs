@@ -10,7 +10,7 @@ export function StickyMobileCTA() {
         href={`tel:${NAP.phoneE164}`}
         data-track="sticky-bar-call"
         className="flex items-center justify-center gap-2 bg-bg-card text-text border-r border-border font-semibold text-[15px]"
-        aria-label={`Call ${NAP.phoneDisplay}`}
+        aria-label={`Call now on ${NAP.phoneDisplay}`}
       >
         <Phone size={18} aria-hidden /> Call now
       </a>

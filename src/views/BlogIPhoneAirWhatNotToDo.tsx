@@ -8,6 +8,17 @@ export default function BlogIPhoneAirWhatNotToDo() {
       seoTitle="iPhone Air Care: What NOT to Do With It"
       seoDescription="iPhone Air is 5.6 mm thin, Apple's most fragile iPhone. 5 habits that wreck it: pocket bending, no case, hot cars, MagSafe wallets and side-button pressure."
       path="/blog/iphone-air-what-not-to-do"
+      wide
+      toc={[
+        { id: "why-more-care", label: "Why the Air needs more care" },
+        { id: "back-pocket", label: "Don't carry in a back pocket" },
+        { id: "case-less", label: "Don't go case-less" },
+        { id: "hot-car", label: "Don't leave in a hot car" },
+        { id: "magsafe-wallets", label: "Don't stack MagSafe wallets" },
+        { id: "side-buttons", label: "Don't over-press side buttons" },
+        { id: "fast-charging-heat", label: "Fast-charging in heat" },
+        { id: "repair-cost", label: "Repair cost reality check" },
+      ]}
       category="Care guide · iPhone Air"
       h1="iPhone Air Care Guide - What NOT to Do"
       hook="Thinnest = most fragile. 5 habits that wreck iPhone Air faster than other models."
@@ -16,10 +27,10 @@ export default function BlogIPhoneAirWhatNotToDo() {
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={8}
-      featuredImageAlt="iPhone Air care guide - what not to do with Apple's thinnest iPhone"
+      featuredImageAlt="iPhone Air What Not To Do, iPhone Air care guide - what not to do with Apple's thinnest iPhone"
       body={
         <>
-          <h2>Why the iPhone Air needs more care</h2>
+          <h2 id="why-more-care">iPhone Air What Not To Do. Why the iPhone Air needs more care</h2>
           <p>
             iPhone Air launched September 2025 as Apple's thinnest iPhone ever - <strong>5.6 mm thick</strong> (vs 8.25 mm on iPhone 17 Pro). Achieved by:
           </p>
@@ -34,7 +45,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             This is engineering brilliance, but the trade-off is structural rigidity. Without the deep camera bump and thicker mid-frame of the Pro models, the Air bends with less force, heats up faster, and offers less battery margin to absorb fast-charging stress.
           </p>
 
-          <h2>1. DO NOT carry in a back pocket while sitting</h2>
+          <h2 id="back-pocket">1. DO NOT carry in a back pocket while sitting</h2>
           <p>
             The "bendgate" of iPhone 6 era is back. iPhone Air has a structural weak point near the SIM tray and volume rocker - a pressure point that bends with about 30 kg of focused force, which a person sitting on it briefly can apply.
           </p>
@@ -51,7 +62,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             Once bent, repair is logic-board adjacent - AED 1,500+ for a chassis swap. Front pocket, jacket, or bag only.
           </p>
 
-          <h2>2. DO NOT use case-less for everyday carry</h2>
+          <h2 id="case-less">2. DO NOT use case-less for everyday carry</h2>
           <p>
             iPhone Air feels incredible bare - that's the whole point. But:
           </p>
@@ -70,7 +81,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             <li><strong>NOT:</strong> bare. Not in Dubai. Not at any age.</li>
           </ul>
 
-          <h2>3. DO NOT leave in a Dubai car cabin (June-September)</h2>
+          <h2 id="hot-car">3. DO NOT leave in a Dubai car cabin (June-September)</h2>
           <p>
             Every iPhone suffers in 60-80°C cabin heat - but Air specifically more, because:
           </p>
@@ -84,7 +95,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             <Link to="/blog/iphone-overheating-dubai-summer-fix" className="text-accent font-semibold hover:underline">iPhone overheating in Dubai summer guide</Link> for full thermal management.
           </p>
 
-          <h2>4. DO NOT stack heavy MagSafe wallets / accessories</h2>
+          <h2 id="magsafe-wallets">4. DO NOT stack heavy MagSafe wallets / accessories</h2>
           <p>
             MagSafe is supported on iPhone Air (15W max). The magnetic ring is unchanged from Pro models. But the chassis behind it is significantly thinner - sustained magnetic pressure from a thick wallet over months can cause:
           </p>
@@ -97,7 +108,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             Acceptable: thin Apple FineWoven wallet, single-card MagSafe sleeve. Avoid: 4+ card wallets, MagSafe battery packs left attached for hours daily, MagSafe car mounts that put pressure on one corner during cornering.
           </p>
 
-          <h2>5. DO NOT over-press the side buttons</h2>
+          <h2 id="side-buttons">5. DO NOT over-press the side buttons</h2>
           <p>
             The recessed Side button and Action button on iPhone Air sit in a thinner aluminium rail than on Pro models. The internal button actuator (a small dome contact) is more vulnerable to:
           </p>
@@ -110,7 +121,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             Symptom of failed actuator: button feels mushy, takes two presses to register, or the haptic feedback is weaker than other buttons. AED 350 to repair.
           </p>
 
-          <h2>Bonus - fast-charging in heat</h2>
+          <h2 id="fast-charging-heat">Bonus - fast-charging in heat</h2>
           <p>
             iPhone Air's smaller battery means faster percentage gains during charging - but also more thermal stress per minute. In Dubai summer (40°C+ ambient), avoid:
           </p>
@@ -120,7 +131,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             <li>Overnight wireless charging on a fluffy bed surface (no heat dissipation).</li>
           </ul>
 
-          <h2>Repair cost reality check</h2>
+          <h2 id="repair-cost">Repair cost reality check</h2>
           <p>
             iPhone Air repair pricing matches iPhone 17 Pro for most parts:
           </p>

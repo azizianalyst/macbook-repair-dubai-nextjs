@@ -20,7 +20,7 @@ export default function IPhone17ProRepair() {
         { name: "iPhone 17 Pro", path: "/iphone-17-pro-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 17 Pro Repair"
+      serviceName="iPhone 17 Pro Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

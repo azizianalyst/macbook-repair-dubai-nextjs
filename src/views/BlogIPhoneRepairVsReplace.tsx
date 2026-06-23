@@ -9,6 +9,17 @@ export default function BlogIPhoneRepairVsReplace() {
       seoTitle="iPhone Repair or Replace? Decision Guide 2026 (Dubai)"
       seoDescription="iPhone repair vs replace, Dubai 2026. Rule of thumb: repair if cost is under 50% of resale value. Model-by-model matrix from iPhone 6 to 17 Pro Max."
       path="/blog/iphone-repair-vs-replace-decision-guide"
+      wide
+      toc={[
+        { id: "decision-matrix", label: "The decision matrix" },
+        { id: "iphone-6-7-8", label: "iPhone 6 / 7 / 8: replace" },
+        { id: "iphone-11-12", label: "iPhone 11 / 12: it depends" },
+        { id: "iphone-13-14", label: "iPhone 13 / 14: repair" },
+        { id: "iphone-15-16-17", label: "iPhone 15 / 16 / 17: repair" },
+        { id: "resale-value", label: "Where to sell in Dubai" },
+        { id: "trade-in-vs-private", label: "Trade-in vs sell privately" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Repair or Replace? Decision Guide 2026"
       hook="Spend AED 600 on a screen repair, or AED 3,599 on a new iPhone 17? Here's the math, model by model, in April 2026 Dubai prices."
@@ -20,7 +31,7 @@ export default function BlogIPhoneRepairVsReplace() {
       featuredImageAlt="iPhone repair vs replace decision matrix - old and new iPhones on a workbench in Dubai"
       body={
         <>
-          <h2>The decision matrix - at a glance</h2>
+          <h2 id="decision-matrix">iPhone Repair Vs Replace. The decision matrix - at a glance</h2>
           <p>
             Use the table below to find your iPhone, see the typical resale value in Dubai right
             now (April 2026), the typical repair cost for a single major issue (screen or battery),
@@ -52,7 +63,7 @@ export default function BlogIPhoneRepairVsReplace() {
             history.
           </p>
 
-          <h2>iPhone 6 / 7 / 8 - almost always replace (parts scarce, value low)</h2>
+          <h2 id="iphone-6-7-8">iPhone 6 / 7 / 8 - almost always replace (parts scarce, value low)</h2>
           <p>
             The iPhone 6 turned 12 years old this year. The 7 turned 10. The 8 turned 9. Used
             resale on a working iPhone 6 in Dubai right now is AED 150-400. A screen repair is
@@ -67,7 +78,7 @@ export default function BlogIPhoneRepairVsReplace() {
             ecosystem, and runs every current app.
           </p>
 
-          <h2>iPhone 11 / 12 - repair if minor, replace if multiple issues</h2>
+          <h2 id="iphone-11-12">iPhone 11 / 12 - repair if minor, replace if multiple issues</h2>
           <p>
             iPhone 11 (2019) and 12 (2020) hit the sweet spot in 2026: still very usable, parts
             cheap, repair costs reasonable. A AED 600 screen + AED 300 battery is AED 900 on a
@@ -80,7 +91,7 @@ export default function BlogIPhoneRepairVsReplace() {
             is the better call.
           </p>
 
-          <h2>iPhone 13 / 14 - definitely repair (still 60-70% of original value)</h2>
+          <h2 id="iphone-13-14">iPhone 13 / 14 - definitely repair (still 60-70% of original value)</h2>
           <p>
             Both lines are still in the "comfortably modern" zone. iPhone 14 Pro launched at
             AED 4,599; today's used market is AED 2,800-3,200 - that's 65% of original value
@@ -92,7 +103,7 @@ export default function BlogIPhoneRepairVsReplace() {
             AED 950. Still worth it.
           </p>
 
-          <h2>iPhone 15 / 16 / 17 - always repair unless multiple major damages</h2>
+          <h2 id="iphone-15-16-17">iPhone 15 / 16 / 17 - always repair unless multiple major damages</h2>
           <p>
             For phones still in or near Apple's current line, repair is almost always the answer.
             New replacement cost (AED 3,599 for iPhone 17, AED 5,999 for 17 Pro Max) is so much
@@ -107,7 +118,7 @@ export default function BlogIPhoneRepairVsReplace() {
             than 2 years old.
           </p>
 
-          <h2>Resale value - where to actually sell in Dubai 2026</h2>
+          <h2 id="resale-value">Resale value - where to actually sell in Dubai 2026</h2>
           <p>
             For accurate current value, check three places:
           </p>
@@ -118,7 +129,7 @@ export default function BlogIPhoneRepairVsReplace() {
             <li><strong>Local phone-souk dealer</strong> (Naif, Mall of Emirates) - instant cash, 20-30% below market</li>
           </ul>
 
-          <h2>Apple Trade-In values vs sell privately in Dubai</h2>
+          <h2 id="trade-in-vs-private">Apple Trade-In values vs sell privately in Dubai</h2>
           <p>
             Real-world example, April 2026: clean iPhone 14 Pro Max 256GB.
           </p>
@@ -134,7 +145,7 @@ export default function BlogIPhoneRepairVsReplace() {
             consistently the lowest offer.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             Not sure which side of the line your iPhone falls on?{" "}
             <Link to="/iphone-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">

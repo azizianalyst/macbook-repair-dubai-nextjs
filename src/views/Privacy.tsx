@@ -76,7 +76,7 @@ export default function Privacy() {
           <li><strong>Run the repair</strong> - name and phone are linked to the device on the workshop ticket.</li>
           <li><strong>Send pickup confirmation</strong> - one WhatsApp message when the device is ready.</li>
           <li><strong>Post-repair check-in</strong> - exactly one follow-up message 7 days after pickup. No marketing list, no newsletter, no second message unless you reply.</li>
-          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the 12-month warranty applies.</li>
+          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the warranty of up to 12 months applies.</li>
           <li><strong>Improve the website</strong> - anonymised analytics are reviewed monthly to fix slow pages and broken links.</li>
         </ul>
       </LegalSection>
@@ -118,7 +118,7 @@ export default function Privacy() {
       <LegalSection id="cookies" title="7. Cookies">
         <p>
           A short cookie banner appears on first visit. The full list of cookies set by this website,
-          with the option to disable each, is documented in the <a href="/cookies">Cookie Policy</a>.
+          with the option to disable each, is documented in the <a href="/cookies/">Cookie Policy</a>.
         </p>
       </LegalSection>
 

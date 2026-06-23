@@ -27,10 +27,10 @@ export default function CaseStudyGrid({
   className,
 }: CaseStudyGridProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         {heading && (
-          <h2 className="mb-2xl max-w-[680px] text-[26px] md:text-[34px] font-bold tracking-tight text-text">
+          <h2 className="mb-2xl max-w-[680px] text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
             {heading}
           </h2>
         )}
@@ -39,9 +39,9 @@ export default function CaseStudyGrid({
           {cases.map((c, i) => (
             <figure
               key={i}
-              className="flex flex-col rounded-2xl border border-border bg-bg-card p-lg"
+              className="flex flex-col rounded-md border border-border bg-bg-card p-lg"
             >
-              <span className="inline-flex w-fit rounded-full bg-bg-card px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent">
+              <span className="inline-flex w-fit rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent">
                 {c.tag}
               </span>
 

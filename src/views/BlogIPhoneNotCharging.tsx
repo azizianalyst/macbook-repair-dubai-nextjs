@@ -19,6 +19,18 @@ export default function BlogIPhoneNotCharging() {
       seoTitle="iPhone Not Charging? 7 Fixes to Try Before Repair"
       seoDescription="iPhone won't charge? 7 step-by-step fixes: lint cleaning (50% of cases), cable swap, force restart and MagSafe test. Free port cleaning at our Dubai workshop."
       path="/blog/iphone-not-charging-7-fixes"
+      wide
+      toc={[
+        { id: "clean-port", label: "Step 1. Clean the port" },
+        { id: "different-cable", label: "Step 2. Try a different cable" },
+        { id: "different-adapter", label: "Step 3. Try a different adapter" },
+        { id: "force-restart", label: "Step 4. Force restart" },
+        { id: "software-check", label: "Step 5. Software check" },
+        { id: "dfu-mode", label: "Step 6. DFU mode" },
+        { id: "magsafe-test", label: "Step 7. Try MagSafe" },
+        { id: "bring-it-in", label: "When to bring it in" },
+        { id: "free-lint-cleaning", label: "Free lint cleaning" },
+      ]}
       category="Problem solving · iPhone"
       h1="iPhone Not Charging? 7 Things to Try First"
       hook="Before assuming the port is broken, try these 7 things. About half of 'dead' charging ports are actually just compressed pocket lint."
@@ -36,7 +48,7 @@ export default function BlogIPhoneNotCharging() {
       })]}
       body={
         <>
-          <h2>Step 1 - Clean the port (free fix, 50% of cases)</h2>
+          <h2 id="clean-port">iPhone Not Charging. Step 1 - Clean the port (free fix, 50% of cases)</h2>
           <p>
             Dubai's combination of pocket lint, AC dust, and beach sand fills iPhone charging
             ports faster than almost anywhere. Compressed lint at the bottom of the connector
@@ -50,7 +62,7 @@ export default function BlogIPhoneNotCharging() {
             again. We do this for free at the workshop too - walk in, no appointment.
           </p>
 
-          <h2>Step 2 - Try a different cable</h2>
+          <h2 id="different-cable">Step 2 - Try a different cable</h2>
           <p>
             Lightning and USB-C cables fail internally without visible damage - broken strands,
             corroded connectors inside the moulding. Before assuming the iPhone, borrow a known-good
@@ -58,7 +70,7 @@ export default function BlogIPhoneNotCharging() {
             poorly with newer iOS versions.
           </p>
 
-          <h2>Step 3 - Try a different power adapter</h2>
+          <h2 id="different-adapter">Step 3 - Try a different power adapter</h2>
           <p>
             5W bricks (the old "iPhone charger") work but charge very slowly on iPhone 12 and
             later. USB-C PD adapters at 20W or higher are the standard since 2020. If you've
@@ -66,7 +78,7 @@ export default function BlogIPhoneNotCharging() {
             test in a different wall socket.
           </p>
 
-          <h2>Step 4 - Force restart</h2>
+          <h2 id="force-restart">Step 4 - Force restart</h2>
           <p>The charging IC sometimes hangs. Force-restart re-initialises it without losing data:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>iPhone 8 and later:</strong> press Volume Up, press Volume Down, then hold the Side button until the Apple logo appears (about 10 seconds).</li>
@@ -74,7 +86,7 @@ export default function BlogIPhoneNotCharging() {
             <li><strong>iPhone 6s and earlier:</strong> hold Home + Side button for 10 seconds.</li>
           </ul>
 
-          <h2>Step 5 - Software check (Battery Health, Low Power Mode)</h2>
+          <h2 id="software-check">Step 5 - Software check (Battery Health, Low Power Mode)</h2>
           <p>
             Settings → Battery → Battery Health & Charging. If you see "Service Recommended" or
             "This iPhone has experienced an unexpected shutdown", the battery cell can no longer
@@ -86,7 +98,7 @@ export default function BlogIPhoneNotCharging() {
             charging at 80% if the iPhone thinks you don't need a full charge yet.
           </p>
 
-          <h2>Step 6 - DFU mode</h2>
+          <h2 id="dfu-mode">Step 6 - DFU mode</h2>
           <p>
             DFU (Device Firmware Update) mode bypasses iOS entirely. Useful if a bad iOS update
             corrupted charging logic. Connect iPhone to a Mac with USB-C, open Finder, force-restart
@@ -94,7 +106,7 @@ export default function BlogIPhoneNotCharging() {
             can update iOS without erasing data.
           </p>
 
-          <h2>Step 7 - Try MagSafe / wireless charging (iPhone 12+)</h2>
+          <h2 id="magsafe-test">Step 7 - Try MagSafe / wireless charging (iPhone 12+)</h2>
           <p>
             This is the diagnostic split. If MagSafe (or Qi wireless) successfully charges your
             iPhone but the cable does not, you have a hardware port problem - Lightning/USB-C
@@ -106,7 +118,7 @@ export default function BlogIPhoneNotCharging() {
             AED 400-1,200 depending on the failed component.
           </p>
 
-          <h2>When to bring it in</h2>
+          <h2 id="bring-it-in">When to bring it in</h2>
           <p>If after all 7 steps the iPhone still won't charge:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>Port replacement - AED 250-400 (most common, same-day)</li>
@@ -115,7 +127,7 @@ export default function BlogIPhoneNotCharging() {
             <li>Free walk-in diagnostic, no charge if we can't fix it</li>
           </ul>
 
-          <h2>Lint cleaning - we do this for free</h2>
+          <h2 id="free-lint-cleaning">Lint cleaning - we do this for free</h2>
           <p>
             Walk into our Concord Tower workshop in Dubai Media City, no appointment needed. We
             clean the port under a 10× magnifier with proper picks (not toothpicks) in 5 minutes.

@@ -56,6 +56,11 @@ export function Hero({
     console.warn(`[Hero] imageAlt is required when image is set. Image: ${image}`);
   }
   const paths = image ? variantPaths(image) : null;
+  // The hero image is the LCP candidate. Its <head> preload is emitted server-side by
+  // <PageSchema> (see src/lib/page-schema.ts heroPreload) — react-dom preload() and even a
+  // JSX <link> called from this "use client" component do NOT reach the prerendered HTML in
+  // Next 16, so the browser discovered the hero late (multi-second LCP load-delay). The
+  // <picture> below still owns format negotiation (AVIF → WebP → JPG).
   // Site is light-only: every hero renders on a light band with dark text,
   // regardless of variant or any `tone` prop a caller still passes.
   const onDark = false;
@@ -72,19 +77,13 @@ export function Hero({
         toneBand,
       )}
     >
-      {onDark && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-24 -left-16 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-3xl"
-        />
-      )}
       <div className={cn(
         "relative mx-auto max-w-content px-5 md:px-6 grid gap-xl items-center",
         hasSide ? "md:grid-cols-12" : "md:grid-cols-1",
       )}>
         <div className={cn(hasSide ? "md:col-span-7" : "max-w-[820px]")}>
           {eyebrow && (
-            <Reveal as="p" delay={0} className="mono text-[12px] uppercase tracking-wider mb-md text-text-muted">
+            <Reveal as="p" delay={0} className="mono text-[12px] uppercase tracking-wider mb-md text-accent">
               {eyebrow}
             </Reveal>
           )}

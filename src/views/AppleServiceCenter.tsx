@@ -9,6 +9,7 @@ import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
@@ -158,7 +159,7 @@ export default function AppleServiceCenter() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <ul className="flex flex-wrap gap-2 mb-lg">
           {BADGES.map((b) => (
-            <li key={b} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[14px] text-text">{b}</li>
+            <li key={b} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[14px] text-text">{b}</li>
           ))}
         </ul>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
@@ -247,7 +248,7 @@ export default function AppleServiceCenter() {
           <div className="grid gap-md md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
               <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
                 <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -264,7 +265,7 @@ export default function AppleServiceCenter() {
         <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too. These tools help ensure Apple devices are repaired safely, efficiently, and in accordance with Apple's standards.</p>
         <ul className="flex flex-wrap gap-2">
           {TOOLS.map((t) => (
-            <li key={t} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text-muted">{t}</li>
+            <li key={t} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text-muted">{t}</li>
           ))}
         </ul>
       </section>
@@ -284,7 +285,6 @@ export default function AppleServiceCenter() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
@@ -295,6 +295,7 @@ export default function AppleServiceCenter() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/apple-service-center-dubai" />
     </PageShell>
   );
 }

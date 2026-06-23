@@ -6,6 +6,7 @@ import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -184,7 +185,6 @@ export default function AnnualMaintenanceContract() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Send your device count - get an AMC quote the same day</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Free device audit, written plan, no obligation. WhatsApp the number and types of devices and we'll recommend the right level of cover.
@@ -204,6 +204,7 @@ export default function AnnualMaintenanceContract() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/annual-maintenance-contract-dubai" />
     </PageShell>
   );
 }

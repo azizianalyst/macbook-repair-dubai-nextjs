@@ -1,5 +1,6 @@
 "use client";
 import DevicePageTemplate from "@/components/blocks/DevicePageTemplate";
+import { Link } from "@/lib/router-compat";
 
 export default function IPadBatteryReplacement() {
   return (
@@ -15,7 +16,7 @@ export default function IPadBatteryReplacement() {
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, my iPad battery is dying - model:"
       technician={{ name: "Usman", years: 9, specialisation: "iPad & iPhone battery specialist" }}
-      serviceName="iPad Battery Replacement"
+      serviceName="iPad Battery Replacement Dubai"
       pricingRows={[
         { model: "iPad (9th / 10th / 11th gen)",  price: 350, timeline: "Same day" },
         { model: "iPad mini (6 / 7)",             price: 400, timeline: "Same day" },
@@ -30,7 +31,8 @@ export default function IPadBatteryReplacement() {
             iPad batteries are <strong>glued, not screwed</strong>. Unlike iPhone - which has a pull-tab - every iPad cell is bonded to the aluminium chassis with industrial adhesive. Lift it the wrong way and you puncture the cell. We use isopropyl, controlled heat and plastic spudgers to release the adhesive safely. No bending, no shortcuts.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            If your iPad is two years old and lasts two hours, the cell is finished. If it shuts down at 30% and reboots, the protection circuit is calling time. Both are the same fix. Quote, pickup, swap, calibrate - usually back to you the same day.
+            If your iPad is two years old and lasts two hours, the cell is finished. If it shuts down at 30% and reboots, the protection circuit is calling time. Both are the same fix. Quote, pickup, swap, calibrate - usually back to you the same day. If your iPad isn't charging at all, see our guide:{" "}
+            <Link to="/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why an iPad stops charging and how to fix it</Link>.
           </p>
         </>
       }
@@ -80,6 +82,9 @@ export default function IPadBatteryReplacement() {
         "/ipad-screen-repair-dubai",
         "/ipad-charging-port-repair-dubai",
         "/ipad-water-damage-repair-dubai",
+      ]}
+      relatedExtra={[
+        { label: "iPad not charging?", href: "/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
       ]}
     />
   );

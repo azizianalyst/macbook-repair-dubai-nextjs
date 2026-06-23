@@ -14,7 +14,7 @@ export default function IPhoneNetworkUnlock() {
       timeline="1-7 days"
       whatsappPrefill="iPhone network unlock - model, IMEI (Settings > General > About), and current carrier: "
       technician={{ name: "Usman", years: 12, specialisation: "Carrier unlock & IMEI services" }}
-      serviceName="iPhone Network Unlock"
+      serviceName="iPhone Network Unlock Dubai"
       pricingRows={[
         { model: "Etisalat / du UAE - clean ESN",         price: 350, timeline: "1-3 days" },
         { model: "AT&T USA - out of contract",            price: 450, timeline: "1-5 days" },

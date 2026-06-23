@@ -19,7 +19,7 @@ export default function MacFullDiagnostic() {
         { name: "Free Diagnostic", path: "/mac-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac desktop diagnostics across all years" }}
-      serviceName="Mac Mini, Studio and Pro Free Full Diagnostic"
+      serviceName="Mac Mini, Studio and Pro Free Full Diagnostic Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -49,7 +49,7 @@ export default function MacFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard 12-month warranty.",
+        "Any repair you book carries our standard warranty of up to 12 months.",
         "Free pickup for Mac Pro and heavy Mac Studio setups.",
       ]}
       faqs={[

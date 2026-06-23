@@ -3,7 +3,7 @@
 // (single source of truth, shared with the category hub pages).
 import { useMemo, useState } from "react";
 import { Link } from "@/lib/router-compat";
-import { CalendarDays, Clock, ArrowRight } from "lucide-react";
+import { CalendarDays, Clock, ArrowRight, ShoppingCart, Wrench, Banknote, Tag, Zap, Newspaper, type LucideIcon } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
@@ -30,6 +30,12 @@ const GUIDES: { label: string; href: string }[] = [
   { label: "How to choose the right MacBook configuration", href: "/how-to-choose-the-right-configuration-for-a-macbook" },
   { label: "Best Apple laptop for gaming", href: "/how-to-choose-the-best-apple-laptop-for-gaming" },
   { label: "Do MacBooks last over a decade?", href: "/do-macbooks-last-over-a-decade" },
+  { label: "Siri stopped working on MacBook Air", href: "/siri-stopped-working-on-macbook-air" },
+  { label: "Caps Lock key not responding after restart", href: "/the-caps-lock-key-is-not-responding-after-restarting-my-macbook" },
+  { label: "MacBook doesn't see internal SSD", href: "/the-macbook-does-not-see-the-internal-ssd" },
+  { label: "Server error 403 Forbidden on Mac download", href: "/the-server-gave-an-error-during-download-403-forbidden" },
+  { label: "Free MacBook diagnostic Dubai", href: "/macbook-full-diagnostic-dubai" },
+  { label: "Run Windows on MacBook with Boot Camp", href: "/boot-camp-windows-macbook-dubai" },
 ];
 
 // "What kind of Mac user are you?" finder. Each option recommends three real posts
@@ -37,7 +43,7 @@ const GUIDES: { label: string; href: string }[] = [
 type Finder = {
   key: string;
   label: string;
-  emoji: string;
+  icon: LucideIcon;
   hub: string;            // /blog/<slug>
   cta: { label: string; href: string };
   postSlugs: string[];
@@ -47,7 +53,7 @@ const FINDERS: Finder[] = [
   {
     key: "buy",
     label: "I'm buying a Mac or iPhone",
-    emoji: "🛒",
+    icon: ShoppingCart,
     hub: "/blog/buying-guides",
     cta: { label: "All buying guides →", href: "/blog/buying-guides" },
     postSlugs: [
@@ -59,7 +65,7 @@ const FINDERS: Finder[] = [
   {
     key: "broken",
     label: "Something's broken",
-    emoji: "🔧",
+    icon: Wrench,
     hub: "/blog/fixes",
     cta: { label: "MacBook Screen Repair from AED 600", href: "/macbook-screen-repair-dubai" },
     postSlugs: [
@@ -71,7 +77,7 @@ const FINDERS: Finder[] = [
   {
     key: "cost",
     label: "What will a repair cost?",
-    emoji: "💵",
+    icon: Banknote,
     hub: "/blog/repair-costs",
     cta: { label: "See all repair prices →", href: "/blog/repair-costs" },
     postSlugs: [
@@ -83,7 +89,7 @@ const FINDERS: Finder[] = [
   {
     key: "sell",
     label: "Selling or trading in",
-    emoji: "🏷️",
+    icon: Tag,
     hub: "/blog/sell-trade-in",
     cta: { label: "Sell & trade-in guides →", href: "/blog/sell-trade-in" },
     postSlugs: [
@@ -95,7 +101,7 @@ const FINDERS: Finder[] = [
   {
     key: "care",
     label: "Slow, hot, or just keeping it healthy",
-    emoji: "⚡",
+    icon: Zap,
     hub: "/blog/care-maintenance",
     cta: { label: "Care & maintenance guides →", href: "/blog/care-maintenance" },
     postSlugs: [
@@ -107,7 +113,7 @@ const FINDERS: Finder[] = [
   {
     key: "news",
     label: "Just keeping up with Apple",
-    emoji: "📰",
+    icon: Newspaper,
     hub: "/blog/apple-news",
     cta: { label: "Latest Apple news →", href: "/blog/apple-news" },
     postSlugs: [
@@ -124,7 +130,7 @@ function PostCard({ p }: { p: Post }) {
       to={p.slug}
       className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
     >
-      <p className="text-[11px] uppercase tracking-wider text-accent mono">{p.category}</p>
+      <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
       <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
       <p className="text-[14px] text-text-muted leading-relaxed flex-1">{p.excerpt}</p>
       <div className="flex flex-wrap items-center gap-md text-[12px] text-text-muted mono mt-sm pt-sm border-t border-border">
@@ -150,7 +156,7 @@ export default function Blog() {
   useSeo(
     {
       title: "Apple Repair Blog Dubai - Honest Cost Guides",
-      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, 12-month warranty.",
+      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of up to 12 months.",
       path: "/blog",
     },
     // BreadcrumbList is emitted by the rendered <BreadcrumbTrail> below - don't duplicate it here.
@@ -194,20 +200,20 @@ export default function Blog() {
         <div className="rounded-lg border border-border bg-bg-card p-lg md:p-xl">
           <h2 className="text-[20px] md:text-[24px] font-bold">What brings you here today?</h2>
           <p className="text-[14px] text-text-muted mt-1 mb-lg">Pick one and we'll point you to the right guides.</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:overflow-x-visible scrollbar-none">
             {FINDERS.map((f) => (
               <button
                 key={f.key}
                 type="button"
                 onClick={() => setActive(active === f.key ? null : f.key)}
                 aria-pressed={active === f.key}
-                className={`text-[14px] font-medium rounded-full px-md py-2 border transition-colors ${
+                className={`inline-flex items-center gap-1.5 text-[14px] font-medium rounded-full px-md py-2 border transition-colors ${
                   active === f.key
                     ? "border-accent/60 bg-accent/15 text-accent"
                     : "border-border bg-bg-alt hover:border-accent/50 hover:text-accent"
                 }`}
               >
-                <span aria-hidden className="mr-1.5">{f.emoji}</span>{f.label}
+                <f.icon size={16} aria-hidden className="shrink-0" />{f.label}
               </button>
             ))}
           </div>
@@ -246,7 +252,7 @@ export default function Blog() {
 
       {/* Category chips */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:overflow-x-visible scrollbar-none">
           {CATEGORIES.map((c) => (
             <Link
               key={c.slug}
@@ -254,6 +260,28 @@ export default function Blog() {
               className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
             >
               {c.name} ({counts[c.slug]})
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Browse by device (tag archives) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
+        <p className="text-[12px] uppercase tracking-wider text-accent mono mb-sm">Browse by device</p>
+        <div className="flex flex-wrap gap-2">
+          {[
+            { slug: "macbook", label: "MacBook" },
+            { slug: "imac", label: "iMac" },
+            { slug: "mac", label: "Mac mini / Studio / Pro" },
+            { slug: "iphone", label: "iPhone" },
+            { slug: "ipad", label: "iPad" },
+          ].map((t) => (
+            <Link
+              key={t.slug}
+              to={`/blog/tag/${t.slug}`}
+              className="text-[13px] font-medium rounded-full px-md py-1.5 border border-border bg-bg-card hover:border-accent/50 hover:text-accent transition-colors"
+            >
+              {t.label}
             </Link>
           ))}
         </div>

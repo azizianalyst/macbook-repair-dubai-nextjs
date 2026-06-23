@@ -14,7 +14,7 @@ export default function IPhoneBatteryReplacement() {
       timeline="Same day"
       whatsappPrefill="Hi, iPhone battery replacement quote please. Model: "
       technician={{ name: "Usman", years: 12, specialisation: "Battery & charging systems" }}
-      serviceName="iPhone Battery Replacement"
+      serviceName="iPhone Battery Replacement Dubai"
       pricingRows={[
         { model: "iPhone 6 / 6s / 7 / 8 / SE",        price: 250, timeline: "Same day" },
         { model: "iPhone X / XR / XS",                 price: 350, timeline: "Same day" },
@@ -85,6 +85,9 @@ export default function IPhoneBatteryReplacement() {
       ]}
       reviewNames={["Saeed Alam", "Wellington Academy", "Henry Choong", "marouane Ayadi"]}
       relatedSlugs={["/iphone-screen-repair-dubai", "/iphone-charging-port-repair-dubai", "/iphone-water-damage-repair-dubai"]}
+      relatedExtra={[
+        { label: "iPhone 16 Pro battery capacity", href: "/iphone-16-pro-battery-capacity", description: "Specs and replacement cost for the iPhone 16 Pro battery." },
+      ]}
     />
   );
 }

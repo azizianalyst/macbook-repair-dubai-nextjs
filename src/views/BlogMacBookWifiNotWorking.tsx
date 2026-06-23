@@ -17,6 +17,13 @@ export default function BlogMacBookWifiNotWorking() {
       seoTitle="MacBook Won't Connect to Wi-Fi? Fixes (2026)"
       seoDescription="MacBook Wi-Fi not connecting or dropping out? Six fixes in order - forget the network, restart the router, renew DHCP, Safe Mode - then know when it's the antenna or the board."
       path="/blog/macbook-wifi-not-working-fix"
+      wide
+      toc={[
+        { id: "mac-router-or-setting", label: "Mac, router, or setting?" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost-dubai", label: "What it costs in Dubai" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Won't Connect to Wi-Fi? Fixes & Causes"
       hook="Nine times in ten a MacBook that won't hold Wi-Fi is the router, a stale network setting, or a VPN getting in the way - all free to fix from your sofa. The hardware faults are rare, and a quick test tells you if you're in that unlucky tenth."
@@ -25,7 +32,7 @@ export default function BlogMacBookWifiNotWorking() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={8}
-      featuredImageAlt="MacBook Wi-Fi repair in Dubai - technician checking the antenna cable and wireless module at the Media City workshop"
+      featuredImageAlt="MacBook Wifi Not Working Fix. MacBook Wi-Fi repair in Dubai - technician checking the antenna cable and wireless module at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a MacBook that won't connect to Wi-Fi in six steps",
         description: "Six diagnostic steps for a MacBook that won't connect to Wi-Fi or keeps dropping out, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookWifiNotWorking() {
       })]}
       body={
         <>
-          <h2>Is it the Mac, the router, or a setting?</h2>
+          <h2 id="mac-router-or-setting">MacBook Wifi Not Working Fix. Is it the Mac, the router, or a setting?</h2>
           <p>
             Almost every Wi-Fi problem is software or the router, not a broken laptop, so the trick is
             to rule those out before you worry about hardware. The good news is that genuine wireless
@@ -58,7 +65,7 @@ export default function BlogMacBookWifiNotWorking() {
             That's when the antenna or the board comes into it.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment you're back online. Most Wi-Fi jobs never get
             past step three.
@@ -103,7 +110,7 @@ export default function BlogMacBookWifiNotWorking() {
             VPN. If pages come back, the radio was working the whole time.
           </p>
 
-          <h2>When it's hardware: the rare causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the rare causes</h2>
           <p>
             If you've run the list and the Mac still can't see a single network, it's one of three
             things, and none of them is common. Here's what we actually find on the bench.
@@ -132,7 +139,7 @@ export default function BlogMacBookWifiNotWorking() {
             before any quote.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost-dubai">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's the antenna, a spill or the board before you commit.

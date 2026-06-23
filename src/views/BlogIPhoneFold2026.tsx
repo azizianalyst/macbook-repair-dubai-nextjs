@@ -9,6 +9,17 @@ export default function BlogIPhoneFold2026() {
       seoTitle="iPhone Fold 2026: What We Know About Apple's Fold"
       seoDescription="Apple's first foldable iPhone is expected in September 2026 near AED 7,500. Confirmed leaks, expected specs, repair concerns, and whether to wait or buy now."
       path="/blog/iphone-fold-2026-what-to-expect"
+      wide
+      toc={[
+        { id: "confirmed-leaks", label: "Confirmed supply-chain leaks" },
+        { id: "expected-price", label: "Expected price" },
+        { id: "display-tech", label: "Display tech" },
+        { id: "camera-setup", label: "Camera setup" },
+        { id: "battery-life", label: "Battery life implications" },
+        { id: "repair-concerns", label: "Repair concerns" },
+        { id: "wait-or-buy", label: "Wait or buy now?" },
+        { id: "repair-pricing", label: "Repair pricing predictions" },
+      ]}
       category="Industry · iPhone Fold"
       h1="iPhone Fold (Sept 2026) - Everything Known So Far"
       hook="Apple's first foldable iPhone launches September 2026. Here's the credible info, no hype."
@@ -26,7 +37,7 @@ export default function BlogIPhoneFold2026() {
             educated guess. Foldable launches historically slip - even September 2026 is not guaranteed.
           </p>
 
-          <h2>Confirmed details from supply-chain leaks</h2>
+          <h2 id="confirmed-leaks">iPhone Fold 2026. Confirmed details from supply-chain leaks</h2>
           <p>
             As of April 2026, here's what multiple independent sources have reported:
           </p>
@@ -50,7 +61,7 @@ export default function BlogIPhoneFold2026() {
             ]}
           />
 
-          <h2>Expected price (~USD 2,000 / AED 7,500)</h2>
+          <h2 id="expected-price">Expected price (~USD 2,000 / AED 7,500)</h2>
           <p>
             Multiple sources have settled on USD 1,999 for the 256GB base. UAE pricing typically runs ~5%
             above USD launch price (VAT, distributor margin), so expect:
@@ -65,7 +76,7 @@ export default function BlogIPhoneFold2026() {
             (AED 6,899). It's still cheaper than the Samsung Galaxy Z Fold 7 1TB at AED 9,899.
           </p>
 
-          <h2>Display tech (zero-crease claimed)</h2>
+          <h2 id="display-tech">Display tech (zero-crease claimed)</h2>
           <p>
             Apple has reportedly worked with Samsung Display on a custom panel using a thicker UTG (Ultra-Thin
             Glass) layer with a re-engineered metal plate beneath, allowing a wider hinge radius (4.5mm vs
@@ -74,7 +85,7 @@ export default function BlogIPhoneFold2026() {
             launched 2019-2025 has had a visible crease.
           </p>
 
-          <h2>Camera setup expected</h2>
+          <h2 id="camera-setup">Camera setup expected</h2>
           <p>
             Dual rear cameras (48 MP main + 12 MP ultrawide), no telephoto. This is the biggest tradeoff vs
             iPhone 17 Pro Max - no 5× zoom, no LiDAR sensor, smaller image sensor. The hinge mechanism
@@ -82,14 +93,14 @@ export default function BlogIPhoneFold2026() {
             camera (rumored, not confirmed).
           </p>
 
-          <h2>Battery life implications</h2>
+          <h2 id="battery-life">Battery life implications</h2>
           <p>
             Split-cell ~4,800 mAh battery is similar to iPhone 17 Pro Max (4,685 mAh), but the larger
             7.8-inch internal display will draw 30-40% more power when open. Expect ~14 hours mixed use -
             comparable to iPhone 14, well below 17 Pro Max's 19 hours.
           </p>
 
-          <h2>Repair concerns (foldables are notoriously fragile)</h2>
+          <h2 id="repair-concerns">Repair concerns (foldables are notoriously fragile)</h2>
           <p>
             Five years of Galaxy Fold data tells us what to expect:
           </p>
@@ -100,7 +111,7 @@ export default function BlogIPhoneFold2026() {
             <li><strong>UTG scratches:</strong> A fingernail can mark the inner display. Soft-touch only.</li>
           </ul>
 
-          <h2>Should you wait or buy iPhone 17 Pro Max now?</h2>
+          <h2 id="wait-or-buy">Should you wait or buy iPhone 17 Pro Max now?</h2>
           <p>
             <strong>Buy 17 Pro Max now if:</strong> you need a phone today, you take photos seriously, you
             value battery life, you're hard on devices, you can't afford AED 7,500.
@@ -115,7 +126,7 @@ export default function BlogIPhoneFold2026() {
             in September 2027.
           </p>
 
-          <h2>Repair pricing predictions for our shop</h2>
+          <h2 id="repair-pricing">Repair pricing predictions for our shop</h2>
           <BlogPriceTable
             caption="iPhone Fold - predicted repair pricing (Dubai, post-launch)"
             headers={["Repair", "Apple Store estimate", "Our estimate"]}

@@ -8,6 +8,18 @@ export default function BlogMacBookRepairNearMeDubai() {
       seoTitle="MacBook Repair Near Me Dubai: Location & 5-Mile Service Map"
       seoDescription="Workshop in Concord Tower, Dubai Media City. 5-mile coverage: Marina, JLT, Al Sufouh, Tecom, Barsha. Free pickup/delivery across Dubai. Same-day service."
       path="/blog/macbook-repair-near-me-dubai"
+      wide
+      toc={[
+        { id: "workshop-location", label: "Workshop location" },
+        { id: "five-minute-coverage", label: "5-minute drive coverage" },
+        { id: "ten-minute-coverage", label: "10-minute drive coverage" },
+        { id: "twenty-minute-coverage", label: "20-minute drive coverage" },
+        { id: "free-pickup-delivery", label: "Free pickup and delivery" },
+        { id: "sharjah-abu-dhabi", label: "Sharjah and Abu Dhabi" },
+        { id: "why-media-city", label: "Why a Media City workshop" },
+        { id: "what-we-repair", label: "What we repair on-site" },
+        { id: "walk-in-vs-pickup", label: "Walk-in vs pickup" },
+      ]}
       category="Local · Service area"
       h1="MacBook Repair Near Me in Dubai - Workshop Location & Service Map"
       hook="Workshop in Concord Tower, Dubai Media City. Free pickup across all of Dubai. Here's the coverage map."
@@ -19,7 +31,7 @@ export default function BlogMacBookRepairNearMeDubai() {
       featuredImageAlt="MacBook repair near me Dubai - workshop location and service area map"
       body={
         <>
-          <h2>Workshop location</h2>
+          <h2 id="workshop-location">Workshop location</h2>
           <p>
             <strong>Office #45, 10th Floor, Concord Tower<br />
             Al Sufouh, Dubai Media City<br />
@@ -32,7 +44,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             Open <strong>Mon-Sat 9 am - 10 pm</strong>, closed Sunday. WhatsApp monitored 24/7 for emergencies.
           </p>
 
-          <h2>5-minute drive coverage (walk-in friendly)</h2>
+          <h2 id="five-minute-coverage">5-minute drive coverage (walk-in friendly)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Dubai Media City</strong> (Concord, Shatha, Dubai Media City Building 1-8) - 0-5 min.</li>
             <li><strong>Dubai Internet City</strong> (DIC Building 1-18) - 5 min.</li>
@@ -43,7 +55,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             <li><strong>Palm Jumeirah trunk</strong> - 8-10 min (depending on Atlantis traffic).</li>
           </ul>
 
-          <h2>10-minute drive coverage</h2>
+          <h2 id="ten-minute-coverage">10-minute drive coverage</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Dubai Marina</strong> (Marina Walk, JBR, Marina Mall) - 8-10 min via the underpass.</li>
             <li><strong>Jumeirah Lake Towers (JLT)</strong> - 10 min.</li>
@@ -54,7 +66,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             <li><strong>Discovery Gardens, Ibn Battuta</strong> - 12 min.</li>
           </ul>
 
-          <h2>20-minute drive (free pickup/delivery covers these)</h2>
+          <h2 id="twenty-minute-coverage">20-minute drive (free pickup/delivery covers these)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Downtown Dubai / DIFC / Burj Khalifa area</strong> - 20-25 min.</li>
             <li><strong>Business Bay</strong> - 20 min.</li>
@@ -65,7 +77,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             <li><strong>Al Wasl, Umm Suqeim</strong> - 12-15 min.</li>
           </ul>
 
-          <h2>Free pickup and delivery - full Dubai coverage</h2>
+          <h2 id="free-pickup-delivery">Free pickup and delivery - full Dubai coverage</h2>
           <p>
             We send a courier to your home, office, or hotel anywhere in Dubai - Marina to Al Khawaneej, Mirdif to Jebel Ali. Process:
           </p>
@@ -81,14 +93,14 @@ export default function BlogMacBookRepairNearMeDubai() {
             <Link to="/blog/free-pickup-delivery-dubai-how-it-works" className="text-accent font-semibold hover:underline">free pickup & delivery - how it works</Link>.
           </p>
 
-          <h2>Sharjah and Abu Dhabi</h2>
+          <h2 id="sharjah-abu-dhabi">Sharjah and Abu Dhabi</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Sharjah</strong> (all areas - Al Nahda, Al Majaz, Muwaileh, Al Khan, Khalid Lagoon): paid courier AED 50 round-trip via Careem/Talabat logistics.</li>
             <li><strong>Abu Dhabi</strong> (Corniche, Khalifa City, Al Reem, Yas Island, Saadiyat): paid courier AED 100 round-trip; usually 24-hour turnaround.</li>
             <li><strong>Ajman, RAK, Fujairah</strong>: arrange via Aramex (we coordinate; you cover their fee).</li>
           </ul>
 
-          <h2>Why a Media City workshop matters</h2>
+          <h2 id="why-media-city">Why a Media City workshop matters</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Central Dubai</strong> - minimises courier round-trip times for free pickup/delivery (we won't drop a job because pickup is 'too far').</li>
             <li><strong>Office building, not a shop</strong> - secure, climate-controlled, no shop-window humidity issues for sensitive board work.</li>
@@ -96,7 +108,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             <li><strong>Same building as multiple media companies</strong> - we service many of them on contract; high-volume parts stock for the latest MacBook Pro M4/M5 models.</li>
           </ul>
 
-          <h2>What we repair on-site</h2>
+          <h2 id="what-we-repair">What we repair on-site</h2>
           <p>
             Same-day or next-day for:
           </p>
@@ -109,7 +121,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             Logic-board work (water damage, board faults, micro-soldering) takes 3-7 days regardless of location - physical work can't be rushed without compromising quality.
           </p>
 
-          <h2>Walk-in vs pickup - which to choose</h2>
+          <h2 id="walk-in-vs-pickup">Walk-in vs pickup - which to choose</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Walk in if</strong> you live within 10 minutes, want to meet the technician, or have an iPhone screen needing same-hour turnaround.</li>
             <li><strong>Use pickup if</strong> you're 15+ minutes away, busy, in another emirate's worth of traffic, or need MacBook repair (no urgency to be physically present).</li>

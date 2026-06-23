@@ -9,6 +9,18 @@ export default function BlogBestIMacForBusiness() {
       seoTitle="Best iMac for Business Use in Dubai 2026"
       seoDescription="iMac M4 24″ suits 90% of Dubai SMEs. RAM and SSD sizing, multi-monitor, AppleCare+, lease-vs-buy and tax notes to pick the right business desktop."
       path="/blog/best-imac-for-business-dubai"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "office-work", label: "iMac for office work" },
+        { id: "design-agencies", label: "iMac for design agencies" },
+        { id: "video-editing", label: "iMac for video editing" },
+        { id: "multi-monitor", label: "Multi-monitor setup" },
+        { id: "ram-ssd-sizing", label: "RAM / SSD sizing" },
+        { id: "applecare-business", label: "AppleCare+ for business" },
+        { id: "lease-vs-buy", label: "Lease vs buy and tax" },
+        { id: "imac-vs-older-27", label: "iMac M4 vs older 27″" },
+      ]}
       category="Buying guide · iMac"
       h1="Best iMac for Business in Dubai 2026"
       hook="iMac M4 24″ is the answer for 90% of Dubai businesses. Here's why."
@@ -20,7 +32,7 @@ export default function BlogBestIMacForBusiness() {
       featuredImageAlt="Best iMac for business Dubai 2026 buying guide"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Best iMac For Business. Quick answer</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Office / admin / accounting:</strong> iMac M4 24″ 16GB/512GB - AED 6,499.</li>
             <li><strong>Design / creative agency:</strong> iMac M4 24″ 24GB/1TB - AED 7,999.</li>
@@ -31,7 +43,7 @@ export default function BlogBestIMacForBusiness() {
               .</li>
           </ul>
 
-          <h2>iMac for office work (admin / email / accounting)</h2>
+          <h2 id="office-work">iMac for office work (admin / email / accounting)</h2>
           <p>
             The base iMac M4 24″ 16GB/512GB at AED 6,499 is overpowered for office work - and that's
             exactly why we recommend it. The headroom means it'll feel fast through 2031. Office work
@@ -46,7 +58,7 @@ export default function BlogBestIMacForBusiness() {
             <li>Wi-Fi 6E + Gigabit Ethernet (configure-to-order +AED 220).</li>
           </ul>
 
-          <h2>iMac for design / creative agencies</h2>
+          <h2 id="design-agencies">iMac for design / creative agencies</h2>
           <p>
             Bump RAM to 24GB and storage to 1TB for design agencies. The 24″ 4.5K Retina display is
             colour-accurate (P3 gamut, calibrated at factory) - saves AED 2,000+ on a separate Studio
@@ -60,7 +72,7 @@ export default function BlogBestIMacForBusiness() {
             <li>P3 colour gamut on the built-in display = print-accurate previews.</li>
           </ul>
 
-          <h2>iMac for video editing (be honest - Mac Studio is better)</h2>
+          <h2 id="video-editing">iMac for video editing (be honest - Mac Studio is better)</h2>
           <p>
             We have to be straight: if your business edits 4K video for clients more than 5 hours a
             week, the iMac is the wrong tool. The chip will throttle on long exports, and the
@@ -76,7 +88,7 @@ export default function BlogBestIMacForBusiness() {
             .
           </p>
 
-          <h2>Multi-monitor setup with iMac (yes, you can)</h2>
+          <h2 id="multi-monitor">Multi-monitor setup with iMac (yes, you can)</h2>
           <p>
             iMac M4 supports <strong>up to 1 external display</strong> on the base chip - the built-in
             24″ 4.5K + 1× 6K external (or 2× 4K with ProMotion limits). For more than one external,
@@ -93,7 +105,7 @@ export default function BlogBestIMacForBusiness() {
             ]}
           />
 
-          <h2>RAM / SSD sizing for business</h2>
+          <h2 id="ram-ssd-sizing">RAM / SSD sizing for business</h2>
           <BlogPriceTable
             caption="iMac M4 24″ - recommended config by business type"
             headers={["Business type", "Recommended config", "UAE price", "Lifespan target"]}
@@ -109,7 +121,7 @@ export default function BlogBestIMacForBusiness() {
             upgrade path. Spec correctly on day one or budget to replace earlier.
           </p>
 
-          <h2>AppleCare+ for business</h2>
+          <h2 id="applecare-business">AppleCare+ for business</h2>
           <p>
             Apple offers AppleCare+ for iMac at AED 999 (3 years). For business, this covers:
           </p>
@@ -133,7 +145,7 @@ export default function BlogBestIMacForBusiness() {
             .
           </p>
 
-          <h2>Lease vs buy in UAE - tax implications</h2>
+          <h2 id="lease-vs-buy">Lease vs buy in UAE - tax implications</h2>
           <p>
             UAE introduced corporate tax in June 2023 (9% on profits above AED 375k). This changes the
             buy-vs-lease calculation:
@@ -149,7 +161,7 @@ export default function BlogBestIMacForBusiness() {
             specifics.
           </p>
 
-          <h2>Why we recommend iMac M4 over older 27″</h2>
+          <h2 id="imac-vs-older-27">Why we recommend iMac M4 over older 27″</h2>
           <p>
             You may see used 27″ iMacs (Intel, last sold 2020) on Dubizzle for AED 1,500-2,500. We
             advise against them for business in 2026:

@@ -8,6 +8,19 @@ export default function BlogIPhoneScreenReplacedIssues() {
       seoTitle="iPhone Screen Replaced But Glitchy? Causes & Fixes"
       seoDescription="Cheap iPhone screen broke Face ID or True Tone? Why aftermarket panels fail. OEM vs OEM-equivalent vs aftermarket explained, and which faults we can fix."
       path="/blog/iphone-screen-replaced-but-issues-after"
+      wide
+      toc={[
+        { id: "why-cheap-screens-fail", label: "Why cheap screens fail" },
+        { id: "true-tone-disabled", label: "True Tone disabled" },
+        { id: "face-id-failure", label: "Face ID failure" },
+        { id: "unable-to-verify", label: "Unable to verify display" },
+        { id: "touch-issues", label: "Touch responsiveness issues" },
+        { id: "quality-tiers", label: "OEM vs aftermarket tiers" },
+        { id: "spot-bad-replacement", label: "Spot a bad replacement" },
+        { id: "can-it-be-fixed", label: "Can it be fixed?" },
+        { id: "what-we-use", label: "What we use" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Problem solving · iPhone"
       h1="iPhone Screen Replaced But Now Glitchy? Common Causes"
       hook="Bought a cheap screen at the phone souk and now Face ID is dead, True Tone is gone, and touch lags? Here's why - and what we can salvage."
@@ -16,10 +29,10 @@ export default function BlogIPhoneScreenReplacedIssues() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={11}
-      featuredImageAlt="iPhone screen replaced glitchy Dubai - Face ID and True Tone diagnostic on bench"
+      featuredImageAlt="iPhone Screen Replaced But Glitchy, iPhone screen replaced glitchy Dubai - Face ID and True Tone diagnostic on bench"
       body={
         <>
-          <h2>Why cheap screens cause more problems</h2>
+          <h2 id="why-cheap-screens-fail">iPhone Screen Replaced But Glitchy. Why cheap screens cause more problems</h2>
           <p>
             The phone-souk price difference (AED 200 vs our AED 750) for an iPhone 13 screen
             isn't profiteering on our part - it reflects three real things the cheap shops skip:
@@ -44,7 +57,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             </li>
           </ol>
 
-          <h2>True Tone disabled after non-Apple screen</h2>
+          <h2 id="true-tone-disabled">True Tone disabled after non-Apple screen</h2>
           <p>
             <strong>The symptom:</strong> Settings → Display & Brightness no longer shows the
             True Tone toggle, or shows it but greyed out with "Unable to enable True Tone".
@@ -62,7 +75,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             and the True Tone restoration is included.
           </p>
 
-          <h2>Face ID failure after non-Apple screen</h2>
+          <h2 id="face-id-failure">Face ID failure after non-Apple screen</h2>
           <p>
             <strong>The symptom:</strong> Face ID stops working entirely (Settings → Face ID &
             Passcode shows "Face ID is not available, try setting up Face ID later"), or works
@@ -83,7 +96,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             transplant them to a working True Depth assembly - AED 1,200, success rate 60%.
           </p>
 
-          <h2>"Unable to verify display" warning</h2>
+          <h2 id="unable-to-verify">"Unable to verify display" warning</h2>
           <p>
             <strong>The symptom:</strong> Settings → General → About shows "Unable to verify this
             iPhone has a genuine Apple display". Persistent yellow warning at top of Lock Screen
@@ -101,7 +114,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             warning is cosmetic and ignorable.
           </p>
 
-          <h2>Touch responsiveness issues</h2>
+          <h2 id="touch-issues">Touch responsiveness issues</h2>
           <p>
             <strong>The symptom:</strong> Touch is laggy, requires multiple taps, ghost touches,
             or dead zones in specific areas.
@@ -118,7 +131,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             back to you for return to the original repairer.
           </p>
 
-          <h2>OEM vs OEM-equivalent vs aftermarket - quality tiers</h2>
+          <h2 id="quality-tiers">OEM vs OEM-equivalent vs aftermarket - quality tiers</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>Genuine Apple ("OEM"):</strong> Apple-supplied service stock, calibration
@@ -141,7 +154,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             </li>
           </ul>
 
-          <h2>How to spot a bad screen replacement</h2>
+          <h2 id="spot-bad-replacement">How to spot a bad screen replacement</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>True Tone toggle gone or greyed out</li>
             <li>Auto-brightness behaves strangely (jumps in steps instead of smooth)</li>
@@ -154,7 +167,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             <li>"Unable to verify display" warning (this one is normal even on good repairs)</li>
           </ul>
 
-          <h2>Can it be fixed? (Sometimes yes, sometimes no)</h2>
+          <h2 id="can-it-be-fixed">Can it be fixed? (Sometimes yes, sometimes no)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>True Tone disabled:</strong> Yes - re-calibration AED 200 if panel is healthy</li>
             <li><strong>Bad panel quality:</strong> Yes - replace with OEM-equivalent AED 750+</li>
@@ -164,7 +177,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             <li><strong>"Unable to verify display":</strong> Only by installing genuine Apple panel +AED 350-500</li>
           </ul>
 
-          <h2>What we use at our shop</h2>
+          <h2 id="what-we-use">What we use at our shop</h2>
           <p>
             Our default screen for every iPhone repair is OEM-equivalent grade - same panel
             supplier as Apple, with our own quality-control inspection of every panel under
@@ -178,7 +191,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             "non-genuine display" warning, full True Tone, full Apple parts traceability.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             Bring the iPhone in for a free 5-minute diagnostic. We'll tell you exactly what the
             previous shop did wrong and what we can fix. See our{" "}

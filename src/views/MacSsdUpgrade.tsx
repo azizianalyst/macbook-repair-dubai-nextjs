@@ -19,7 +19,7 @@ export default function MacSsdUpgrade() {
         { name: "SSD Upgrade",     path: "/mac-ssd-upgrade-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "Mac desktop storage upgrades" }}
-      serviceName="Mac Mini and Mac Studio SSD Upgrade"
+      serviceName="Mac Mini and Mac Studio SSD Upgrade Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -47,7 +47,7 @@ export default function MacSsdUpgrade() {
       warrantyDays={365}
       warrantyBullets={[
         "1-year warranty on the SSD itself.",
-        "12-month warranty on the install workmanship.",
+        "warranty of up to 12 months on the install workmanship.",
         "Free re-clone if the new SSD has a logical issue inside warranty.",
       ]}
       faqs={[

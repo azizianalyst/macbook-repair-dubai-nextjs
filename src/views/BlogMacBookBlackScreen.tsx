@@ -18,6 +18,13 @@ export default function BlogMacBookBlackScreen() {
       seoTitle="MacBook Black Screen? Fixes Before You Pay (2026)"
       seoDescription="MacBook black screen but the fan runs? Work through 8 fixes in order - power-cycle, SMC, NVRAM, external monitor test - then know which faults need a real repair."
       path="/blog/macbook-black-screen-fix"
+      wide
+      toc={[
+        { id: "which-black-screen", label: "Which black screen" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost", label: "What it costs" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Black Screen? Fixes for 2026"
       hook="A black screen with the fan still spinning is rarely a dead Mac. Nine times out of ten it's the backlight, the display flex cable, or a setting stuck at zero - and several of those you can fix yourself before paying anyone."
@@ -35,7 +42,7 @@ export default function BlogMacBookBlackScreen() {
       })]}
       body={
         <>
-          <h2>First, work out which black screen you have</h2>
+          <h2 id="which-black-screen">MacBook Black Screen. First, work out which black screen you have</h2>
           <p>
             There are two completely different faults that both look like "my MacBook won't show
             anything", and the fix path splits right at the start. Get this wrong and you'll waste
@@ -59,7 +66,7 @@ export default function BlogMacBookBlackScreen() {
             flex cable that carries video up through the hinge.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment the screen comes back. Most black-screen
             jobs that walk into our Media City workshop are solved somewhere in this list before we
@@ -116,7 +123,7 @@ export default function BlogMacBookBlackScreen() {
             and points at the GPU or the logic board, which is where the bench work starts.
           </p>
 
-          <h2>When it's hardware - the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware - the common causes</h2>
           <p>
             If you've worked through the list and the screen is still dark, it's one of four things.
             Here's what we actually find on the bench, roughly in order of how often we see it.
@@ -156,7 +163,7 @@ export default function BlogMacBookBlackScreen() {
             least common of the four and needs a proper diagnostic to pin down before any quote.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free - we'll tell you which of the four it is before you commit to anything. Prices

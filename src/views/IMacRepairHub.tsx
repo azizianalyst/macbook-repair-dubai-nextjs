@@ -5,6 +5,7 @@
 // ⚠️ HAND-EDITED - do NOT regenerate via build-family-hubs.mjs (it would overwrite this content).
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
+import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
@@ -29,8 +30,7 @@ const SIBLINGS = [
 const MODELS = [
   `24" M4 (2024)`, `24" M3 (2023)`,
   `A2438 24" M1 (2021)`, `A2116 21.5" Intel (2020)`, `A2115 27" Intel (2020)`, `A2116 21.5" Intel (2019)`,
-  `A2115 27" Intel (2019)`, `iMac Pro A1862 (2019)`, `A1418 21.5" Intel (2018)`, `A1419 27" Intel (2018)`,
-  `A1419 27" Intel (2017)`, `A1418 21.5" Intel (2017)`, `iMac Pro A1862 (2017)`, `A1419 27" Intel (2016)`,
+  `A2115 27" Intel (2019)`, `A1419 27" Intel (2017)`, `A1418 21.5" Intel (2017)`, `iMac Pro A1862 (2017)`,
   `A1419 27" Intel (2015)`, `A1419 27" Intel (2014)`, `A1419 27" Intel (Late 2013)`,
 ];
 
@@ -42,7 +42,15 @@ const MODEL_PAGES = [
   { label: "iMac 27\" Intel 2020", href: "/imac-27-intel-2020-repair-dubai" },
   { label: "iMac 27\" Intel 2019", href: "/imac-27-intel-2019-repair-dubai" },
   { label: "iMac 27\" Intel 2017", href: "/imac-27-intel-2017-repair-dubai" },
-  { label: "iMac 27\" Pro 2017", href: "/imac-27-pro-2017-repair-dubai" },
+  { label: "iMac Pro 2017", href: "/imac-27-pro-2017-repair-dubai" },
+];
+
+// Chip-generation hub pages (grouped landing pages by silicon generation)
+const CHIP_PAGES = [
+  { label: "iMac Intel Repair (27-inch 5K & 21.5-inch 4K)", href: "/imac-intel-repair-dubai" },
+  { label: "iMac M1 Repair (24-inch 2021)", href: "/imac-m1-repair-dubai" },
+  { label: "iMac M3 Repair (24-inch 2023)", href: "/imac-m3-repair-dubai" },
+  { label: "iMac M4 Repair (24-inch 2024)", href: "/imac-m4-repair-dubai" },
 ];
 
 const SERVICE_PAGES = [
@@ -104,7 +112,7 @@ const TESTIMONIALS = [
 const FAQS = [
   { q: "How long will the iMac repair take?", a: "iMac display, power supply, and camera replacements take 3-4 hours. When parts are not in stock, it typically takes 1-2 business days to receive them from our suppliers. You can pre-book your repair to receive premium services." },
   { q: "Will the iMac repair process remove my data?", a: "Our professionals do not remove data unless the repair necessitates it. We always advise customers to keep a backup at all times." },
-  { q: "Will repairing my iMac impact my warranty?", a: "We are independent Apple specialists, not an Apple Authorised Service Centre - so if your iMac is still under Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple first, since a covered repair there keeps your Apple warranty intact. For out-of-warranty iMacs there's nothing left to void, and every repair we do is backed by our own 12-month written warranty." },
+  { q: "Will repairing my iMac impact my warranty?", a: "We are independent Apple specialists, not an Apple Authorised Service Centre - so if your iMac is still under Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple first, since a covered repair there keeps your Apple warranty intact. For out-of-warranty iMacs there's nothing left to void, and every repair we do is backed by our own written warranty up to 12 months." },
   { q: "Can you fix any model of iMac?", a: "Yes, we repair all iMac models, from older Intel-based systems to the latest M4-powered iMacs. Our technicians handle both hardware and software issues for 21.5-inch, 24-inch, and 27-inch versions, including iMac Pro." },
   { q: "Do you offer on-site iMac repair in Dubai?", a: "Absolutely! For your convenience, we provide on-site iMac repair and troubleshooting. Our technicians can come to your home or office to perform diagnostics or minor repairs, ensuring minimal downtime for your work." },
   { q: "Do you offer free diagnostics for iMac repairs?", a: "Yes, we offer free diagnostics and inspection before starting any repair. Once the issue is identified, we'll share a transparent quote outlining the cost and time required - no hidden fees, no surprises." },
@@ -128,11 +136,13 @@ export default function IMacRepairHub() {
     {
       title: "iMac Repair Dubai - Certified Logic Board & SSD Specialists",
       description:
-        "Expert iMac repair in Dubai. Certified Apple technicians fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMac models.",
+        "Expert iMac repair in Dubai. Our Apple specialists fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMac models.",
       path: "/imac-repair-dubai",
     },
     [localBusiness(), organization()],
   );
+
+  const qa = deriveFamilyQuickAnswer({ family: "iMac", startingPrice: 1040 });
 
   return (
     <PageShell>
@@ -147,13 +157,15 @@ export default function IMacRepairHub() {
         subtitle="Do you have issues with your iMac? Our skilled technicians provide reliable and quick services for iMac repair in Dubai. If you want your iMac to run like new again, you can trust us to provide quality service."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified Apple technicians</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Independent Apple specialists</span>
           <span>·</span>
           <span>OEM parts</span>
           <span>·</span>
           <span>Free pickup & delivery</span>
         </p>
       </Hero>
+
+      <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
       <USPStrip tone="dark" />
 
@@ -166,35 +178,33 @@ export default function IMacRepairHub() {
         ]} />
       </section>
 
-      {/* Other devices */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
-          <span className="font-semibold text-text">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+
 
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">iMac models we repair</h2>
         <ul className="flex flex-wrap gap-2 mb-lg">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
         <p className="text-[14px] mb-sm font-semibold text-text">Dedicated model pages:</p>
         <ul className="flex flex-wrap gap-2">
           {MODEL_PAGES.map((m) => (
-            <li key={m.href}><Link to={m.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors mono">{m.label}</Link></li>
+            <li key={m.href}><Link to={m.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors mono">{m.label}</Link></li>
+          ))}
+        </ul>
+        <p className="text-[14px] mt-lg mb-sm font-semibold text-text">Repair by chip generation:</p>
+        <ul className="flex flex-wrap gap-2">
+          {CHIP_PAGES.map((c) => (
+            <li key={c.href}><Link to={c.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{c.label}</Link></li>
           ))}
         </ul>
       </section>
 
       {/* iMac Repair Solution */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">iMac Repair Solution</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-md">iMac Repair Dubai. Expert Solution</h2>
         <div className="space-y-md text-[16px] text-text-muted leading-relaxed max-w-[75ch]">
           <p>For good reason, iMacs are considered among the best computers in their class. Even high-quality machines can develop problems that require service. A common reason for repairs is accidental drops or shocks, water damage, software issues, and DIY repairs. These issues are relatively common, but more severe problems such as motherboard failure can also occur. iMac repairs require patience, care, and expertise.</p>
           <p>To repair Apple technology, you need specialists with extensive knowledge and experience. We at MacBook Repair Dubai are committed to providing high-quality iMac repair services in Dubai.</p>
@@ -241,7 +251,7 @@ export default function IMacRepairHub() {
         <h2 className="text-[28px] md:text-[32px] mb-md">iMac services we specialise in</h2>
         <ul className="flex flex-wrap gap-2">
           {SERVICE_PAGES.map((s) => (
-            <li key={s.href}><Link to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{s.label}</Link></li>
+            <li key={s.href}><Link to={s.href} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{s.label}</Link></li>
           ))}
         </ul>
       </section>
@@ -268,7 +278,7 @@ export default function IMacRepairHub() {
         <div className="grid gap-md md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
             <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-              <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+              <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
               </div>
               <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -281,7 +291,6 @@ export default function IMacRepairHub() {
       {/* Schedule CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Save Time and Schedule Your Repair Now</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Our goal is to provide the supreme-quality Apple device repair available in Dubai, UAE - quick and reasonably priced. We fix all types of Apple Macs, iMac, Mac Pro, MacBook, iPad and iPhone with a 100% data-loss-free guarantee. Free diagnosis, same-day fixing, pickup and delivery available. Simply call us or fill out our short form and we'll get back to you right away.
@@ -307,6 +316,23 @@ export default function IMacRepairHub() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Where to Find Us</h2>
         <LocationBlock tone="dark" />
+      </section>
+
+      {/* Related services */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[22px] font-semibold mb-sm">Related Services</h2>
+        <div className="flex flex-wrap gap-sm text-sm">
+          {[
+            { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
+            { label: "MacBook Repair Dubai", href: "/macbook-repair-dubai" },
+            { label: "MacBook Air Repair Dubai", href: "/macbook-air-repair-dubai" },
+            { label: "MacBook Pro Repair Dubai", href: "/macbook-pro-repair-dubai" },
+            { label: "Mac mini Repair Dubai", href: "/mac-mini-repair-dubai" },
+            { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
+          ].map((l) => (
+            <a key={l.href} href={l.href} className="text-accent underline underline-offset-2 hover:text-accent/80">{l.label}</a>
+          ))}
+        </div>
       </section>
       </div>
     <RelatedArticles path="/imac-repair-dubai" />

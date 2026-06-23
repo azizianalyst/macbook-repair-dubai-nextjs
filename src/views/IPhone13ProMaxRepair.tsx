@@ -6,7 +6,7 @@ export default function IPhone13ProMaxRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion from AED 350 | 055 741 3706"
-      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, 12-month warranty."
+      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen AED 850, battery AED 350. Same-day, warranty of up to 12 months."
       path="/iphone-13-pro-max-repair-dubai"
       eyebrow="iPhone 13 Pro Max (2021)"
       h1="iPhone 13 Pro Max Repair Dubai - ProMotion, Battery, LiDAR"
@@ -20,7 +20,7 @@ export default function IPhone13ProMaxRepair() {
         { name: "iPhone 13 Pro Max", path: "/iphone-13-pro-max-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 13 Pro Max Repair"
+      serviceName="iPhone 13 Pro Max Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

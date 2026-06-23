@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { ROUTE_META } from "./route-meta.generated";
-import { dynamicMeta, metaOverride } from "./dynamic-meta";
+import { dynamicMeta, metaOverride, adminMetaOverride } from "./dynamic-meta";
 import { imageForRoute } from "./page-images";
+import { SITE_SETTINGS } from "@/content/settings.generated";
 
 const SITE_NAME = "MacBook Repair Dubai";
 const SITE_URL = "https://macbook-repair-dubai.ae";
@@ -49,9 +50,9 @@ function titleCase(s: string): string {
 function deriveMeta(path: string): { title: string; description: string } {
   if (path === "/" || path === "") {
     return {
-      title: `${SITE_NAME} | Certified Apple Technicians in UAE`,
+      title: `${SITE_NAME} | Expert Apple Repair, 40,000+ Fixed`,
       description:
-        "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, 12-month warranty.",
+        "MacBook repair Dubai — 40,000+ Apple devices fixed since 2004. Screen, battery, keyboard & water damage. Same-day service, warranty up to 12 months. Free diagnosis.",
     };
   }
   const segments = path.replace(/^\/+|\/+$/g, "").split("/");
@@ -66,7 +67,7 @@ function deriveMeta(path: string): { title: string; description: string } {
   }
   const isRepair = /repair|replacement|fix|recovery|upgrade|diagnostic/i.test(pretty);
   const desc = isRepair
-    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, 12-month warranty. Call 055 741 3706.`
+    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, warranty up to 12 months. Call 055 741 3706.`
     : `${pretty} - MacBook Repair Dubai. Apple service specialist since 2004. Free diagnosis. Same-day service.`;
   // Avoid "…Repair Dubai | MacBook Repair Dubai" — both pretty and SITE_NAME end in "Repair Dubai".
   const title = /repair dubai$/i.test(pretty) ? `${pretty} | Apple Specialists` : `${pretty} | ${SITE_NAME}`;
@@ -76,11 +77,26 @@ function deriveMeta(path: string): { title: string; description: string } {
 // Per-route Next Metadata: exact extracted title/description where available, else derived.
 export function metaForPath(path: string): Metadata {
   const fallback = deriveMeta(path);
-  // Precedence: intentional override > authored (route-meta.generated) > data-driven model/location meta > slug-derived fallback.
+  // Precedence: admin (/admin/pageseo, per field) > intentional override > authored (route-meta.generated)
+  // > data-driven model/location meta > slug-derived fallback.
   const entry = metaOverride(path) ?? ROUTE_META[path] ?? dynamicMeta(path) ?? undefined;
-  const title = cleanTitle(entry?.title ?? fallback.title);
-  const description = cleanDescription(entry?.description ?? fallback.description);
-  const url = SITE_URL + (path === "/" ? "" : path);
+  return composeMeta(path, entry?.title || fallback.title, entry?.description || fallback.description);
+}
+
+// Build full Next Metadata from a page's own title/description while still routing them
+// through the SAME machinery as metaForPath: admin overrides, length caps, canonical,
+// OpenGraph, Twitter and robots. Use on pages that author their meta inline so they don't
+// silently miss og/twitter/robots tags (a common gap that hurts share-card CTR + AEO).
+export function metaFromFields(path: string, fields: { title: string; description: string }): Metadata {
+  return composeMeta(path, fields.title, fields.description);
+}
+
+function composeMeta(path: string, baseTitle: string, baseDescription: string): Metadata {
+  const admin = adminMetaOverride(path);
+  const title = cleanTitle(admin?.title || baseTitle);
+  const description = cleanDescription(admin?.description || baseDescription);
+  // Trailing-slash canonical form (matches next.config trailingSlash:true). Root -> "/".
+  const url = SITE_URL + (path === "/" ? "/" : path + "/");
   // Blog posts are articles, not "website" — gives social/AI the right entity type.
   const isBlogPost = path.startsWith("/blog/") && path !== "/blog";
   // Per-page OG image: the route's topic infographic when one exists (services,
@@ -90,21 +106,45 @@ export function metaForPath(path: string): Metadata {
   const ogImages = topic
     ? [{ url: ogImage, width: 1600, height: 1200, alt: topic.alt }]
     : [{ url: ogImage, width: 1200, height: 630, alt: title }];
+  // Admin Page SEO overrides (Social + Advanced tabs): blank fields fall back to the page defaults.
+  const ogT = admin?.ogTitle || title;
+  const ogD = admin?.ogDescription || description;
+  const adminOgImages = admin?.ogImage ? [{ url: absMeta(admin.ogImage) }] : ogImages;
+  const twCard = admin?.twitterCard || "summary_large_image";
+  const twImg = admin?.twitterImage || admin?.ogImage || "";
+  const canonical = admin?.canonical ? absMeta(admin.canonical) : url;
+  // Site Settings switches (admin): a global kill-switch and a homepage-only noindex, in addition to
+  // the per-page admin robots overrides.
+  const forcedNoindex = SITE_SETTINGS.siteNoindex || (path === "/" && SITE_SETTINGS.homepageNoindex);
+  const robots: Metadata["robots"] = {
+    index: forcedNoindex ? false : !admin?.noindex,
+    follow: !admin?.nofollow,
+    noarchive: admin?.noarchive || undefined,
+    noimageindex: admin?.noimageindex || undefined,
+    nosnippet: admin?.nosnippet || undefined,
+    "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1,
+  };
   const openGraph: Metadata["openGraph"] = isBlogPost
-    ? { title, description, url, type: "article", authors: [SITE_NAME], siteName: SITE_NAME, locale: "en_AE", images: ogImages }
-    : { title, description, url, type: "website", siteName: SITE_NAME, locale: "en_AE", images: ogImages };
+    ? { title: ogT, description: ogD, url, type: "article", authors: [SITE_NAME], siteName: SITE_NAME, locale: "en_AE", images: adminOgImages }
+    : { title: ogT, description: ogD, url, type: "website", siteName: SITE_NAME, locale: "en_AE", images: adminOgImages };
   return {
     title,
     description,
     // types: page-level alternates shallow-override the root layout's, so the RSS
     // autodiscovery link must ride along here or it never renders.
     alternates: {
-      canonical: url,
+      canonical,
       types: { "application/rss+xml": [{ url: "/rss.xml", title: `${SITE_NAME} — Blog` }] },
     },
-    // Allow full snippets + large image thumbnails (richer SERP + AI Overview eligibility).
-    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+    // Allow full snippets + large image thumbnails (richer SERP + AI Overview eligibility),
+    // unless the owner set per-page robots overrides in /admin/pageseo.
+    robots,
     openGraph,
-    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
+    twitter: { card: twCard, title: admin?.twitterTitle || ogT, description: admin?.twitterDescription || ogD, images: [twImg ? absMeta(twImg) : ogImage] },
   };
+}
+
+// Absolute URL for an admin-entered path or full URL (used for canonical / OG / Twitter overrides).
+function absMeta(u: string): string {
+  return /^https?:\/\//i.test(u) ? u : SITE_URL + (u.startsWith("/") ? u : "/" + u);
 }

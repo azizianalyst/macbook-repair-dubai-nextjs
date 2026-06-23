@@ -8,7 +8,10 @@
     "chip": "A13 Bionic",
     "display": "10.2-inch Retina, 60Hz, Touch ID Home button",
     "connector": "Lightning · Smart Connector · 3.5mm jack",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2023",
     "commonIssues": [
@@ -40,7 +43,10 @@
     "chip": "A14 Bionic",
     "display": "10.9-inch Liquid Retina, 60Hz, Touch ID in power button",
     "connector": "USB-C · Smart Connector · landscape camera",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "March 2025",
     "commonIssues": [
@@ -72,7 +78,11 @@
     "chip": "A16 Bionic",
     "display": "11-inch Liquid Retina, 60Hz, Touch ID in power button",
     "connector": "USB-C · Smart Connector · Apple Pencil USB-C / 1st gen via adapter",
-    "storageOptions": ["128GB", "256GB", "512GB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Cracked Liquid Retina screen (still 60Hz, glued digitiser)",
@@ -103,7 +113,10 @@
     "chip": "A12 Bionic",
     "display": "7.9-inch Retina, Touch ID Home button, P3 wide colour",
     "connector": "Lightning · 3.5mm jack · Apple Pencil 1st gen",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "September 2021",
     "commonIssues": [
@@ -135,7 +148,10 @@
     "chip": "A15 Bionic",
     "display": "8.3-inch Liquid Retina, 60Hz, Touch ID in power button",
     "connector": "USB-C · Apple Pencil 2nd gen (magnetic side)",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2024",
     "commonIssues": [
@@ -167,7 +183,11 @@
     "chip": "A17 Pro",
     "display": "8.3-inch Liquid Retina, 60Hz, Touch ID in power button",
     "connector": "USB-C · Apple Pencil Pro · Apple Pencil USB-C",
-    "storageOptions": ["128GB", "256GB", "512GB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Cracked Liquid Retina screen (still 60Hz, laminated)",
@@ -198,7 +218,10 @@
     "chip": "A14 Bionic",
     "display": "10.9-inch Liquid Retina, 60Hz, P3 wide colour",
     "connector": "USB-C · Smart Connector · Touch ID in power button · Apple Pencil 2",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "March 2022",
     "commonIssues": [
@@ -230,7 +253,10 @@
     "chip": "Apple M1",
     "display": "10.9-inch Liquid Retina, 60Hz, P3, fully laminated",
     "connector": "USB-C · Smart Connector · Touch ID power button · Pencil 2 · 5G option",
-    "storageOptions": ["64GB", "256GB"],
+    "storageOptions": [
+      "64GB",
+      "256GB"
+    ],
     "currentInLineup": false,
     "discontinued": "May 2024",
     "commonIssues": [
@@ -262,7 +288,12 @@
     "chip": "Apple M2",
     "display": "11-inch Liquid Retina, 60Hz, fully laminated",
     "connector": "USB-C · Pencil Pro · Pencil USB-C · Magic Keyboard (non-Pro)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": false,
     "discontinued": "March 2025",
     "commonIssues": [
@@ -294,7 +325,12 @@
     "chip": "Apple M2",
     "display": "13-inch Liquid Retina, 60Hz, fully laminated",
     "connector": "USB-C · Pencil Pro · Pencil USB-C · Magic Keyboard (non-Pro)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": false,
     "discontinued": "March 2025",
     "commonIssues": [
@@ -326,7 +362,12 @@
     "chip": "Apple M3",
     "display": "11-inch Liquid Retina, 60Hz, fully laminated",
     "connector": "USB-C · Pencil Pro · Pencil USB-C · Magic Keyboard (Air)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Cracked Liquid Retina screen",
@@ -357,7 +398,12 @@
     "chip": "Apple M3",
     "display": "13-inch Liquid Retina, 60Hz, fully laminated",
     "connector": "USB-C · Pencil Pro · Pencil USB-C · Magic Keyboard (Air)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Cracked 13-inch Liquid Retina screen",
@@ -388,14 +434,19 @@
     "chip": "Apple M4",
     "display": "11-inch Liquid Retina, 60Hz, fully laminated, brighter SDR",
     "connector": "USB-C · Pencil Pro · Magic Keyboard (Air)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model - no field-failure data yet",
-      "Cracked screen (drop damage - already seeing in workshop)",
-      "USB-C port wear from heavy charging",
-      "Apple Pencil Pro pairing on first-day units",
-      "Setup transfer failures from old iPads"
+      "Cracked screen from hand-held drops - the 11\" is the carry-everywhere size and corner impacts are what we see first",
+      "USB-C port wear from heavy daily charging",
+      "Apple Pencil Pro pairing dropouts after iPadOS updates",
+      "Magic Keyboard for iPad Air Smart Connector contact issues",
+      "Setup / data-transfer failures when migrating from an older iPad"
     ],
     "pricing": {
       "screen": 1100,
@@ -419,14 +470,19 @@
     "chip": "Apple M4",
     "display": "13-inch Liquid Retina, 60Hz, fully laminated, brighter SDR",
     "connector": "USB-C · Pencil Pro · Magic Keyboard (Air)",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
-      "Brand-new model - no field-failure data yet",
-      "Cracked 13-inch screen (drop damage)",
+      "Cracked 13\" screen from bag-pressure flex - the larger panel cracks in backpacks without a rigid case, not just from drops",
+      "Higher panel replacement cost than the 11\" - the 13\" Liquid Retina is a pricier part",
+      "Smart Connector / Magic Keyboard hinge stress from desk-stand use",
       "USB-C port wear",
-      "Apple Pencil Pro pairing issues",
-      "Setup / migration failures"
+      "Apple Pencil Pro pairing issues"
     ],
     "pricing": {
       "screen": 1240,
@@ -450,7 +506,13 @@
     "chip": "Apple M1",
     "display": "11-inch Liquid Retina, 120Hz ProMotion, P3, True Tone",
     "connector": "USB-C (Thunderbolt / USB 4) · Pencil 2 · Magic Keyboard",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2022",
     "commonIssues": [
@@ -482,7 +544,13 @@
     "chip": "Apple M2",
     "display": "11-inch Liquid Retina, 120Hz ProMotion, P3, True Tone",
     "connector": "USB-C (Thunderbolt / USB 4) · Pencil 2 (with hover) · Magic Keyboard",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "May 2024",
     "commonIssues": [
@@ -514,7 +582,12 @@
     "chip": "Apple M4",
     "display": "11-inch Tandem OLED, 120Hz ProMotion, P3 - Apple's first OLED iPad",
     "connector": "USB-C (Thunderbolt 4) · Pencil Pro · Magic Keyboard for iPad Pro",
-    "storageOptions": ["256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2025",
     "commonIssues": [
@@ -546,7 +619,12 @@
     "chip": "Apple M5",
     "display": "11-inch Tandem OLED, 120Hz ProMotion, P3, brighter than M4",
     "connector": "USB-C (Thunderbolt 4) · Pencil Pro · Magic Keyboard for iPad Pro",
-    "storageOptions": ["256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Tandem OLED replacement (we are one of few in Dubai)",
@@ -577,7 +655,13 @@
     "chip": "Apple M1",
     "display": "12.9-inch Liquid Retina XDR (mini-LED), 120Hz ProMotion, 1000 nits sustained",
     "connector": "USB-C (Thunderbolt / USB 4) · Pencil 2 · Magic Keyboard",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2022",
     "commonIssues": [
@@ -609,7 +693,13 @@
     "chip": "Apple M2",
     "display": "12.9-inch Liquid Retina XDR (mini-LED), 120Hz ProMotion, 1000 nits sustained",
     "connector": "USB-C (Thunderbolt / USB 4) · Pencil 2 (with hover) · Magic Keyboard",
-    "storageOptions": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "May 2024",
     "commonIssues": [
@@ -641,7 +731,12 @@
     "chip": "Apple M4",
     "display": "13-inch Tandem OLED, 120Hz ProMotion, P3 - Apple's first OLED iPad",
     "connector": "USB-C (Thunderbolt 4) · Pencil Pro · Magic Keyboard for iPad Pro",
-    "storageOptions": ["256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": false,
     "discontinued": "October 2025",
     "commonIssues": [
@@ -673,7 +768,12 @@
     "chip": "Apple M5",
     "display": "13-inch Tandem OLED, 120Hz ProMotion, P3, brighter than M4",
     "connector": "USB-C (Thunderbolt 4) · Pencil Pro · Magic Keyboard for iPad Pro",
-    "storageOptions": ["256GB", "512GB", "1TB", "2TB"],
+    "storageOptions": [
+      "256GB",
+      "512GB",
+      "1TB",
+      "2TB"
+    ],
     "currentInLineup": true,
     "commonIssues": [
       "Tandem OLED replacement (rare expertise in Dubai - we have it)",
@@ -704,7 +804,12 @@
     "chip": "A4 / A5 / A6 / A7 / A8 / A9 / A10 / A12",
     "display": "9.7-inch / 10.2-inch Retina (varies by model)",
     "connector": "30-pin (1st-3rd gen) · Lightning (4th gen onwards) · 3.5mm jack",
-    "storageOptions": ["16GB", "32GB", "64GB", "128GB"],
+    "storageOptions": [
+      "16GB",
+      "32GB",
+      "64GB",
+      "128GB"
+    ],
     "currentInLineup": false,
     "discontinued": "Various: 2012-2021",
     "commonIssues": [

@@ -7,15 +7,7 @@ import { TechnicianBadge } from "@/components/blocks/TechnicianBadge";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { PageMeta } from "@/components/blocks/PageMeta";
 import { REVIEWS } from "@/content/reviews";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization, person } from "@/lib/schema";
-
-const TEAM = [
-  { name: "Shafiq",  years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
-  { name: "Usman",   years: 11, specialisation: "Board-level repair · M-series logic boards" },
-  { name: "Ali",     years: 14, specialisation: "Data recovery · iMac and Mac mini" },
-  { name: "Hamza",   years: 7,  specialisation: "iPhone, iPad" },
-];
+import { TEAM } from "@/content/site";
 
 const MILESTONES = [
   { year: "2004", text: "Opened in Dubai under the Azizi Technologies name. First Apple-only repair shop in the area." },
@@ -37,20 +29,10 @@ const COMPARE = [
 ];
 
 export default function About() {
-  useSeo(
-    {
-      title: "About MacBook Repair Dubai - 21 Years, Same Address",
-      description:
-        "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 12-month warranty.",
-      path: "/about",
-    },
-    [
-      organization(),
-      localBusiness(),
-      ...TEAM.map((t) => person({ name: t.name, jobTitle: t.specialisation, yearsExperience: t.years })),
-    ],
-  );
-
+  // JSON-LD (Organization + LocalBusiness + technician Person nodes) is server-rendered
+  // via <PageSchema path="/about"> in src/app/about/page.tsx, so it ships in the static
+  // HTML that crawlers/AI engines read. (It used to be injected client-side via useSeo,
+  // which never reached the prerendered HTML.) Title/description: App Router Metadata API.
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
@@ -99,7 +81,7 @@ export default function About() {
       {/* team */}
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">The bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">The bench</p>
           <h2 className="m-0 mb-xl">Who you'll actually meet</h2>
           <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((t) => (
@@ -116,7 +98,7 @@ export default function About() {
 
       {/* compare */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-        <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">Honest comparison</p>
+        <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">Honest comparison</p>
         <h2 className="m-0 mb-xl">What makes us different from the Apple Store</h2>
         <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
           <table className="w-full text-[15px] min-w-[600px]">
@@ -136,12 +118,12 @@ export default function About() {
                   </td>
                   <td className="px-md py-md">
                     {typeof c.us === "boolean"
-                      ? (c.us ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
+                      ? (c.us ? <Check size={18} className="text-accent" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.us}</span>}
                   </td>
                   <td className="px-md py-md">
                     {typeof c.apple === "boolean"
-                      ? (c.apple ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
+                      ? (c.apple ? <Check size={18} className="text-accent" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.apple}</span>}
                   </td>
                 </tr>
@@ -154,7 +136,7 @@ export default function About() {
       {/* milestones */}
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">21 years on the bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">21 years on the bench</p>
           <h2 className="m-0 mb-xl">Milestones</h2>
           <ol className="grid gap-md md:grid-cols-2">
             {MILESTONES.map((m) => (

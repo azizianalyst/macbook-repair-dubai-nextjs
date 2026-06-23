@@ -6,7 +6,7 @@ export default function IPhone14PlusRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Plus Repair Dubai - 6.7-inch OLED from AED 350 | 055 741 3706"
-      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen AED 750, battery AED 350. Same-day, 12-month warranty."
+      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen AED 750, battery AED 350. Same-day, warranty of up to 12 months."
       path="/iphone-14-plus-repair-dubai"
       eyebrow="iPhone 14 Plus (2022)"
       h1="iPhone 14 Plus Repair Dubai - 6.7-inch Screen, Battery, Camera"
@@ -20,7 +20,7 @@ export default function IPhone14PlusRepair() {
         { name: "iPhone 14 Plus",  path: "/iphone-14-plus-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 14 Plus Repair"
+      serviceName="iPhone 14 Plus Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

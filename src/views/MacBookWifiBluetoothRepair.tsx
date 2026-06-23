@@ -5,7 +5,7 @@ export default function MacBookWifiBluetoothRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Wi-Fi & Bluetooth Repair Dubai - AED 250 | Fast Fix"
-      seoDescription="MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. From AED 250, 1-2 days, 12-month warranty. Call 055 741 3706."
+      seoDescription="MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. From AED 250, 1-2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-wifi-bluetooth-repair-dubai"
       eyebrow="MacBook Wi-Fi & Bluetooth repair"
       h1="MacBook Wi-Fi & Bluetooth Repair Dubai"
@@ -19,11 +19,11 @@ export default function MacBookWifiBluetoothRepair() {
         { name: "Wi-Fi & Bluetooth Repair", path: "/macbook-wifi-bluetooth-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 21, specialisation: "MacBook wireless & board-level repair" }}
-      serviceName="MacBook Wi-Fi & Bluetooth Repair"
+      serviceName="MacBook Wi-Fi & Bluetooth Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook Wi-Fi and Bluetooth repair in Dubai</strong> covers the "Wi-Fi: No hardware installed" message, connections that keep dropping, weak signal next to the router, and Bluetooth that won't turn on or stay paired. Wi-Fi and Bluetooth share the same wireless module and antennas, routed through the display hinge - so the cause can be macOS, a damaged antenna cable, a failed module, or a board-level power fault. We pinpoint the real issue so you're not paying to replace parts that work. AED 250 covers parts, labour and a 12-month warranty.
+            <strong>MacBook Wi-Fi and Bluetooth repair in Dubai</strong> covers the "Wi-Fi: No hardware installed" message, connections that keep dropping, weak signal next to the router, and Bluetooth that won't turn on or stay paired. Wi-Fi and Bluetooth share the same wireless module and antennas, routed through the display hinge - so the cause can be macOS, a damaged antenna cable, a failed module, or a board-level power fault. We pinpoint the real issue so you're not paying to replace parts that work. AED 250 covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged wireless circuits and post-repair antenna faults.

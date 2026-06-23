@@ -8,8 +8,7 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { Button } from "@/components/ui/button";
 import { NAP, HOURS } from "@/content/site";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
 
 const FULL_ADDRESS = `${NAP.street}, ${NAP.area}, ${NAP.city}, UAE`;
 
@@ -34,16 +33,10 @@ const FAQS = [
 ];
 
 export default function Contact() {
-  useSeo(
-    {
-      title: "Contact MacBook Repair Dubai - Concord Tower, Media City",
-      description:
-        "Visit MacBook Repair Dubai at Office #45, Concord Tower, Dubai Media City. Call 055 741 3706 or WhatsApp 24/7. Free diagnosis, walk-ins welcome, paid parking on-site.",
-      path: "/contact",
-    },
-    [organization(), localBusiness()],
-  );
-
+  // JSON-LD (Organization + LocalBusiness with full NAP) is server-rendered via
+  // <PageSchema path="/contact"> in src/app/contact/page.tsx so it ships in the static
+  // HTML crawlers read. (Was previously client-only via useSeo and never indexed.)
+  // Title/description are owned by the App Router Metadata API.
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
@@ -56,13 +49,13 @@ export default function Contact() {
         tone="dark"
         eyebrow="Visit · call · WhatsApp"
         title="Contact MacBook Repair Dubai"
-        subtitle="Office #45, 10th Floor, Concord Tower - Al Sufouh, Dubai Media City. Walk in any day except Sunday between 9 am and 10 pm."
+        subtitle="Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Walk in any day except Sunday between 9 am and 10 pm."
       />
 
       {/* 2-col contact + form */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl grid gap-2xl md:grid-cols-12">
         {/* left: info */}
-        <div className="md:col-span-5 flex flex-col gap-lg">
+        <div className="md:col-span-4 flex flex-col gap-lg">
           <AddressBlock />
 
           <div className="flex flex-col gap-sm">
@@ -86,7 +79,7 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
-            <p className="text-[12px] text-text-faint mt-md">WhatsApp is answered 24/7 - including Sundays.</p>
+            <p className="text-[12px] text-text-faint mt-md">WhatsApp is answered 24/7, including Sundays.</p>
           </div>
 
           <div className="border border-border bg-bg-card rounded-md p-lg">
@@ -100,31 +93,20 @@ export default function Contact() {
         </div>
 
         {/* right: form */}
-        <div className="md:col-span-7">
+        <div className="md:col-span-8">
           <h2 className="m-0 mb-2">Tell us about your device</h2>
           <p className="text-[14px] text-text-muted mb-lg">
-            Two quick steps — your device, then how to reach you. We reply with a quote on your preferred channel, fast.
+            Two quick steps, your device, then how to reach you. We reply with a quote on your preferred channel, fast.
           </p>
           <LeadForm variant="full" sourcePath="/contact" />
         </div>
       </section>
 
-      {/* maps full width */}
-      <section className="bg-bg-alt border-y border-border">
-        <div className="mx-auto max-w-content px-5 md:px-6 py-2xl">
-          <iframe
-            src="https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed"
-            title="Map to MacBook Repair Dubai"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-[420px] border-0 rounded-md"
-          />
-        </div>
-      </section>
+      <LocationBlock tone="dark" />
 
       {/* directions */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-        <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-2">Drive times from Dubai landmarks</p>
+        <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">Drive times from Dubai landmarks</p>
         <h2 className="m-0 mb-xl">How to reach us</h2>
         <div className="grid gap-md md:grid-cols-2">
           {DIRECTIONS.map((d) => (
@@ -142,12 +124,32 @@ export default function Contact() {
       {/* faq */}
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <h2 className="m-0 mb-xl">Visiting us - common questions</h2>
+          <h2 className="m-0 mb-xl">Visiting us: common questions</h2>
           <FAQAccordion items={FAQS} tone="dark" />
           <p className="text-[14px] text-text-muted mt-lg flex items-center gap-2">
             <Languages size={16} className="text-accent" aria-hidden />
             Multilingual reception · English · Arabic · Hindi · Urdu · basic Russian.
           </p>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section style={{ background: "#2C3137" }}>
+        <div className="mx-auto max-w-content px-5 md:px-6 py-[56px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-md">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-1">Free diagnosis, no fix no charge</p>
+            <h2 className="text-white text-[24px] md:text-[28px] font-bold leading-tight max-w-[34ch]">
+              Bring in your Apple device or book a free Dubai-wide pickup
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-sm shrink-0">
+            <Button asChild variant="whatsapp" size="lg">
+              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
+              <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
+            </Button>
+          </div>
         </div>
       </section>
       </div>
@@ -177,8 +179,7 @@ function AddressBlock() {
       <button
         type="button"
         onClick={copy}
-        className="mt-md inline-flex items-center gap-2 text-[13px] font-semibold text-accent hover:underline"
-        aria-label="Copy full address"
+        className="mt-md inline-flex min-h-[44px] items-center gap-2 text-[13px] font-semibold text-accent hover:underline"
       >
         {copied ? <><Check size={14} aria-hidden /> Copied</> : <><Copy size={14} aria-hidden /> Copy address</>}
       </button>

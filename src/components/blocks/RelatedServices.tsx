@@ -9,14 +9,16 @@ export type RelatedItem = { label: string; href: string; description: string };
 export function RelatedServices({
   items,
   tone = "light",
+  heading = "Related repairs",
 }: {
   items: RelatedItem[];
   tone?: "light" | "dark";
+  heading?: string;
 }) {
   const dark = tone === "dark";
   return (
-    <section aria-label="Related services">
-      <h2 className={cn("mb-lg", dark && "text-text")}>Related repairs</h2>
+    <section aria-label={heading}>
+      <h2 className={cn("mb-lg", dark && "text-text")}>{heading}</h2>
       <div className="grid gap-md md:grid-cols-3">
         {items.slice(0, 3).map((it, i) => (
           <Reveal key={it.href} delay={i * 80}>

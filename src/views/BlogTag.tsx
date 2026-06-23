@@ -18,7 +18,7 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
 
   useSeo(
     {
-      title: `${name} Repair & Guides Dubai — Blog`,
+      title: `${name} Repair & Guides Dubai. Blog`,
       description: `All repair guides, cost breakdowns, buying advice and troubleshooting for ${name} in Dubai. ${posts.length} articles from our technicians.`,
       path,
     },
@@ -55,7 +55,7 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
           variant="service"
           tone="dark"
           eyebrow="Device tag"
-          title={`${name} — Dubai Repair & Guides`}
+          title={`${name}. Dubai Repair & Guides`}
           subtitle={`${posts.length} technician-written articles covering repairs, costs and buying advice for ${name} in Dubai.`}
         />
 
@@ -102,7 +102,7 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
                   to={p.slug}
                   className="group border border-border bg-bg-card rounded-md p-lg hover:border-accent/40 hover:bg-bg-alt transition-colors flex flex-col gap-sm"
                 >
-                  <p className="text-[11px] uppercase tracking-wider text-accent mono">{p.category}</p>
+                  <p className="text-[12px] uppercase tracking-wider text-accent mono">{p.category}</p>
                   <h2 className="text-[18px] font-bold leading-snug group-hover:text-accent">{p.title}</h2>
                   <p className="text-[14px] text-text-muted leading-relaxed flex-1">{p.excerpt}</p>
                   <div className="flex flex-wrap items-center gap-md text-[12px] text-text-muted mono mt-sm pt-sm border-t border-border">

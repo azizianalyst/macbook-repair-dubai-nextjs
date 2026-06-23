@@ -63,12 +63,6 @@ export function ResultsCard({
 
   return (
     <Reveal className={cn("relative", className)}>
-      {/* soft radial accent glow behind the card */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_50%_30%,hsl(150_84%_40%/0.28),transparent_70%)] blur-2xl"
-      />
-
       <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-card p-md shadow-lg backdrop-blur-xl sm:p-lg">
         {/* Header row */}
         <div className="flex items-start gap-3">
@@ -82,7 +76,7 @@ export function ResultsCard({
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 {subtitle ? (
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-widest text-white/50">
+                  <p className="mono text-[12px] uppercase tracking-wider text-white/50">
                     {subtitle}
                   </p>
                 ) : null}
@@ -101,7 +95,7 @@ export function ResultsCard({
             {tiles.map((s, i) => (
               <div
                 key={`${s.label}-${i}`}
-                className="rounded-xl border border-border bg-bg-card p-4"
+                className="rounded-md border border-border bg-bg-card p-4"
               >
                 <div className="text-3xl font-extrabold leading-none text-text sm:text-4xl">
                   <CountUp value={s.value} />
@@ -114,7 +108,7 @@ export function ResultsCard({
 
         {/* Optional breakdown list */}
         {breakdown && breakdown.length > 0 ? (
-          <div className="mt-md divide-y divide-white/10 rounded-xl border border-border bg-bg-card">
+          <div className="mt-md divide-y divide-white/10 rounded-md border border-border bg-bg-card">
             {breakdown.map((row, i) => (
               <div
                 key={`${row.name}-${i}`}

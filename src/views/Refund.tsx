@@ -63,7 +63,7 @@ export default function Refund() {
         <ul>
           <li>Free part replacement and free labour for any in-scope warranty claim.</li>
           <li>For battery work, the window is 3 months and the 80% capacity guarantee applies.</li>
-          <li>Full warranty rules: see <a href="/warranty">Warranty Policy</a>.</li>
+          <li>Full warranty rules: see <a href="/warranty/">Warranty Policy</a>.</li>
         </ul>
       </LegalSection>
 
@@ -94,7 +94,7 @@ export default function Refund() {
           <li><strong>Step 1 - direct talk:</strong> message {NAP.phoneDisplay} or email <a href="mailto:info@macbook-repair-dubai.ae">info@macbook-repair-dubai.ae</a>. Most disputes resolve within 48 hours at this stage.</li>
           <li><strong>Step 2 - manager review:</strong> Shafiq personally reviews any case unresolved after 5 business days and replies in writing within 7 days.</li>
           <li><strong>Step 3 - Dubai Department of Economy & Tourism:</strong> file a complaint at consumerrights.ae or call 600 545 555. The workshop responds to all DET complaints within the 14-day statutory deadline.</li>
-          <li><strong>Step 4 - Dubai Courts:</strong> as a last resort. The Dubai Courts have exclusive jurisdiction under our <a href="/terms">Terms of Service</a>.</li>
+          <li><strong>Step 4 - Dubai Courts:</strong> as a last resort. The Dubai Courts have exclusive jurisdiction under our <a href="/terms/">Terms of Service</a>.</li>
         </ol>
       </LegalSection>
 

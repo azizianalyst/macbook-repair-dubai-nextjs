@@ -30,10 +30,10 @@ export default function WhatIsSection({
   className,
 }: WhatIsSectionProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         <div className="max-w-[760px]">
-          <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-text">
+          <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
             {heading}
           </h2>
           <p className="mt-md text-[17px] md:text-[19px] leading-relaxed text-text-muted">
@@ -49,10 +49,10 @@ export default function WhatIsSection({
               return (
                 <div
                   key={i}
-                  className="rounded-2xl border border-border bg-bg-card p-lg"
+                  className="rounded-md border border-border bg-bg-card p-lg"
                 >
                   {Icon && (
-                    <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-bg-card text-accent">
+                    <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
                       <Icon size={22} aria-hidden />
                     </span>
                   )}

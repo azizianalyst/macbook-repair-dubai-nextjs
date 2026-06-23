@@ -52,7 +52,7 @@ export default function FinalCTA({
   className,
 }: FinalCTAProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent to-accent-2 px-6 py-2xl text-center shadow-lg md:px-2xl md:py-3xl">
           <div
@@ -61,7 +61,7 @@ export default function FinalCTA({
           />
           <div className="relative mx-auto flex max-w-[640px] flex-col items-center">
             {eyebrow && (
-              <span className="mb-sm text-[13px] font-semibold uppercase tracking-wide text-white/80">
+              <span className="mono mb-sm text-[12px] uppercase tracking-wider text-white/80">
                 {eyebrow}
               </span>
             )}

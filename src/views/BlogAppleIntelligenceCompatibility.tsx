@@ -9,6 +9,16 @@ export default function BlogAppleIntelligenceCompatibility() {
       seoTitle="Apple Intelligence: Which iPhones Support It in 2026"
       seoDescription="Full Apple Intelligence iPhone list for iOS 26: every supported model, why iPhone 15 (non-Pro) is left out, plus battery impact and a real upgrade verdict."
       path="/blog/apple-intelligence-on-old-iphones"
+      wide
+      toc={[
+        { id: "compatible-list", label: "Compatible iPhone list" },
+        { id: "why-15-excluded", label: "Why iPhone 15 is excluded" },
+        { id: "ios26-features", label: "Apple Intelligence features in iOS 26" },
+        { id: "ios27-features", label: "What's coming in iOS 27" },
+        { id: "battery-impact", label: "Performance impact on battery" },
+        { id: "privacy-approach", label: "Privacy approach" },
+        { id: "should-you-upgrade", label: "Should you upgrade?" },
+      ]}
       category="Industry · Apple Intelligence"
       h1="Apple Intelligence Compatibility - Every iPhone Listed"
       hook="iPhone 15 Pro and newer get Apple Intelligence. Here's the full list and what it does."
@@ -20,7 +30,7 @@ export default function BlogAppleIntelligenceCompatibility() {
       featuredImageAlt="Apple Intelligence iPhone compatibility list 2026"
       body={
         <>
-          <h2>Compatible iPhone list (April 2026)</h2>
+          <h2 id="compatible-list">Compatible iPhone list (April 2026)</h2>
           <BlogPriceTable
             caption="iPhones that support Apple Intelligence in iOS 26"
             headers={["Model", "Chip", "RAM", "Released"]}
@@ -41,7 +51,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             ]}
           />
 
-          <h2>Why iPhone 15 (non-Pro) doesn't support it</h2>
+          <h2 id="why-15-excluded">Why iPhone 15 (non-Pro) doesn't support it</h2>
           <p>
             iPhone 15 and 15 Plus use the A16 Bionic - same chip as iPhone 14 Pro from 2022. The A16 has:
           </p>
@@ -56,7 +66,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             and model would all compete for memory.
           </p>
 
-          <h2>Apple Intelligence features in iOS 26</h2>
+          <h2 id="ios26-features">Apple Intelligence features in iOS 26</h2>
           <p>
             Available now (April 2026):
           </p>
@@ -72,7 +82,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             <li><strong>Live Translation:</strong> 14 languages, on-device, in Messages, FaceTime, and Phone calls.</li>
           </ul>
 
-          <h2>What's coming in iOS 27</h2>
+          <h2 id="ios27-features">What's coming in iOS 27</h2>
           <p>
             Announced for WWDC 2026 / iOS 27 (autumn 2026 release):
           </p>
@@ -83,7 +93,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             <li><strong>Larger on-device model:</strong> 7B parameters (vs current 3B), needs A19 Pro / 12 GB RAM - limits to iPhone 17 Pro and Air.</li>
           </ul>
 
-          <h2>Performance impact on battery</h2>
+          <h2 id="battery-impact">Performance impact on battery</h2>
           <p>
             Apple Intelligence is mostly idle. When triggered (Writing Tools rewrite, Siri query, Image
             Playground), it spikes the Neural Engine for 1-3 seconds. Cumulative daily impact, measured on
@@ -99,7 +109,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             Acceptable.
           </p>
 
-          <h2>Privacy approach (on-device + Private Cloud Compute)</h2>
+          <h2 id="privacy-approach">Privacy approach (on-device + Private Cloud Compute)</h2>
           <p>
             Three tiers:
           </p>
@@ -109,7 +119,7 @@ export default function BlogAppleIntelligenceCompatibility() {
             <li><strong>ChatGPT extension (opt-in):</strong> When you tap "Use ChatGPT" on a Siri response, it goes to OpenAI. You're prompted every time. OpenAI does not retain queries from Apple Intelligence routing.</li>
           </ol>
 
-          <h2>Should you upgrade just for Apple Intelligence? (no, not yet)</h2>
+          <h2 id="should-you-upgrade">Should you upgrade just for Apple Intelligence? (no, not yet)</h2>
           <p>
             Honest take from our workshop:
           </p>

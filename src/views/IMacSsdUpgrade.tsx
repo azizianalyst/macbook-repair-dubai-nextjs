@@ -19,7 +19,7 @@ export default function IMacSsdUpgrade() {
         { name: "SSD Upgrade",     path: "/imac-ssd-upgrade-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "iMac display removal and storage upgrades" }}
-      serviceName="iMac SSD Upgrade"
+      serviceName="iMac SSD Upgrade Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

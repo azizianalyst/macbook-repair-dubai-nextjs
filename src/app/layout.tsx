@@ -6,7 +6,7 @@ import { NoContextMenu } from "@/components/NoContextMenu";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://macbook-repair-dubai.ae"),
-  title: "MacBook Repair Dubai | Certified Apple Technicians in UAE",
+  title: "MacBook Repair Dubai | Independent Apple Repair Specialists",
   description:
     "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, warranty up to 12 months.",
   // app/favicon.ico is auto-served; these wire up the modern SVG favicon, the
@@ -23,6 +23,16 @@ export const metadata: Metadata = {
   // RSS auto-discovery for feed readers, Google/Bing and AI-search feed ingestion.
   alternates: {
     types: { "application/rss+xml": [{ url: "/rss.xml", title: "MacBook Repair Dubai — Blog" }] },
+  },
+  // Copyright fingerprint — read by AI tools and crawlers that visit any page.
+  // If a competitor uses an AI tool to clone this site, this signal is baked
+  // into every page they scrape. AI tools that read metadata will see this site
+  // as the original copyrighted source before generating any copy.
+  other: {
+    "copyright":           "© 2004–2026 MacBook Repair Dubai. All rights reserved. macbook-repair-dubai.ae",
+    "content-source":      "https://macbook-repair-dubai.ae",
+    "original-author":     "MacBook Repair Dubai — macbook-repair-dubai.ae",
+    "rights":              "Reproduction of any content from macbook-repair-dubai.ae without written permission is prohibited under UAE copyright law (Federal Law No. 7 of 2002).",
   },
 };
 

@@ -6,11 +6,11 @@ export default function IPhoneSe3rdGenRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone SE 3rd Gen Repair Dubai - Screen, Battery from AED 250 | 055 741 3706"
-      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, 12-month warranty. Call 055 741 3706."
+      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, warranty of up to 12 months. Call 055 741 3706."
       path="/iphone-se-3rd-gen-repair-dubai"
       eyebrow="iPhone SE (2022)"
       h1="iPhone SE (3rd Gen) Repair Dubai - Screen, Battery, All Repairs"
-      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. From AED 250, same day, 12-month written warranty."
+      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. From AED 250, same day, written warranty up to 12 months."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone SE 3rd gen (2022) and need help with:"
@@ -20,11 +20,11 @@ export default function IPhoneSe3rdGenRepair() {
         { name: "iPhone SE (3rd gen)", path: "/iphone-se-3rd-gen-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone SE 3rd Gen Repair"
+      serviceName="iPhone SE 3rd Gen Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. From AED 250, same day, 12-month warranty.
+            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. From AED 250, same day, warranty of up to 12 months.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone SE 3 (2022)</h2>
           <ul className="space-y-1 text-[15px] mb-lg">

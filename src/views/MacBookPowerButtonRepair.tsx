@@ -5,7 +5,7 @@ export default function MacBookPowerButtonRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Power Button & Touch ID Repair Dubai - AED 250"
-      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, 12-month warranty. Call 055 741 3706."
+      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-power-button-repair-dubai"
       eyebrow="MacBook power button repair"
       h1="MacBook Power Button & Touch ID Repair Dubai"
@@ -19,11 +19,11 @@ export default function MacBookPowerButtonRepair() {
         { name: "Power Button Repair", path: "/macbook-power-button-repair-dubai" },
       ]}
       technician={{ name: "Usman", years: 14, specialisation: "MacBook power & Touch ID repair" }}
-      serviceName="MacBook Power Button Repair"
+      serviceName="MacBook Power Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a 12-month warranty.
+            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged power circuits and board-level Touch ID faults.

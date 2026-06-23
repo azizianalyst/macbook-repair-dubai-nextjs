@@ -8,6 +8,17 @@ export default function BlogIMacNotTurningOn() {
       seoTitle="iMac Not Turning On? Power Supply Fix Guide 2026"
       seoDescription="iMac 27″ 2017-2020 power supply failures are common. Symptoms, the LED-count diagnostic trick, and repair from AED 400 plus the PSU part in Dubai."
       path="/blog/imac-not-turning-on-power-supply-issues"
+      wide
+      toc={[
+        { id: "symptoms", label: "Symptoms of a failing PSU" },
+        { id: "which-imacs", label: "Which iMacs have this issue" },
+        { id: "led-count-diagnostic", label: "The LED count trick" },
+        { id: "why-it-happens", label: "Why this happens" },
+        { id: "repair-cost", label: "Repair cost" },
+        { id: "repair-time", label: "How long the repair takes" },
+        { id: "diy-warning", label: "Can you DIY this?" },
+        { id: "apple-stance", label: "Apple's stance" },
+      ]}
       category="Problem solving · iMac"
       h1="iMac Not Turning On? Power Supply Issues Explained"
       hook="iMac 27-inch 2017-2020 power supply failures are widespread by 2026 - here's how to confirm the diagnosis, the LED count trick, and what the repair costs."
@@ -16,10 +27,10 @@ export default function BlogIMacNotTurningOn() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="iMac 27 inch power supply repair Dubai - diagnostic LED behind logo on logic board"
+      featuredImageAlt="iMac Not Turning On, iMac 27 inch power supply repair Dubai - diagnostic LED behind logo on logic board"
       body={
         <>
-          <h2>Symptoms of a failing iMac power supply</h2>
+          <h2 id="symptoms">iMac Not Turning On. Symptoms of a failing iMac power supply</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>Press the power button - no fan spin, no startup chime, no display</li>
             <li>No diagnostic LED visible through the back lower-right vent slot</li>
@@ -29,7 +40,7 @@ export default function BlogIMacNotTurningOn() {
             <li>Reboots randomly under load (the dying PSU can't deliver current)</li>
           </ul>
 
-          <h2>Which iMacs have this issue</h2>
+          <h2 id="which-imacs">Which iMacs have this issue</h2>
           <p>
             By far the most affected: <strong>iMac 27″ Retina 5K (2017, 2019, 2020)</strong> with
             the Delta-made internal PSU. The 2017 model is now 8-9 years old and hitting end-of-life
@@ -46,7 +57,7 @@ export default function BlogIMacNotTurningOn() {
             iMacs use a much smaller external 143W power brick. PSU failures are rare.
           </p>
 
-          <h2>How to diagnose - the LED count trick</h2>
+          <h2 id="led-count-diagnostic">How to diagnose - the LED count trick</h2>
           <p>
             Apple built four internal diagnostic LEDs onto every Intel iMac 27″ logic board. They
             are visible through the bottom right of the back vent slot if you peer in with a
@@ -64,7 +75,7 @@ export default function BlogIMacNotTurningOn() {
             LED 1 - it's always lit on a healthy iMac), the PSU is the fault.
           </p>
 
-          <h2>Why this happens - component aging</h2>
+          <h2 id="why-it-happens">Why this happens - component aging</h2>
           <p>
             Inside the iMac PSU are bulk electrolytic capacitors rated for roughly 5,000-8,000
             hours at 105°C. UAE summer indoor temperatures push the iMac's internal PSU
@@ -83,7 +94,7 @@ export default function BlogIMacNotTurningOn() {
             office storerooms see 5-6 years.
           </p>
 
-          <h2>Repair cost - AED 400 labour + PSU part</h2>
+          <h2 id="repair-cost">Repair cost - AED 400 labour + PSU part</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Labour:</strong> AED 400 (full disassembly: glass, LCD, logic board removal, PSU swap, reassembly with new adhesive seal)</li>
             <li><strong>PSU part - iMac 27″ 2017/2019:</strong> AED 250-350 (refurbished tested) or AED 450 (new old stock)</li>
@@ -98,16 +109,16 @@ export default function BlogIMacNotTurningOn() {
             AED 2,000+ for the same outcome.
           </p>
 
-          <h2>How long the repair takes</h2>
+          <h2 id="repair-time">How long the repair takes</h2>
           <p>
             Same-day if you drop off before 11am and we have the PSU in stock. Bench time is
             120-150 minutes (the iMac display is bonded to the chassis with strong adhesive that
             takes time to release without cracking). We re-seal with new adhesive and do a 4-hour
-            stress test before handing back. Returned with a 12-month warranty on the PSU and the
+            stress test before handing back. Returned with a warranty of up to 12 months on the PSU and the
             workmanship.
           </p>
 
-          <h2>Can you DIY this? (No - high voltage, sealed unit)</h2>
+          <h2 id="diy-warning">Can you DIY this? (No - high voltage, sealed unit)</h2>
           <p>
             Strongly no, for two reasons:
           </p>
@@ -131,7 +142,7 @@ export default function BlogIMacNotTurningOn() {
             AED 700 we charge is genuinely the right answer.
           </p>
 
-          <h2>Apple's stance - won't repair out-of-warranty</h2>
+          <h2 id="apple-stance">Apple's stance - won't repair out-of-warranty</h2>
           <p>
             Apple Stores and AASPs in UAE will quote the "iMac whole logic board + PSU + display"
             module replacement at AED 2,899-3,599 because that's the official Apple service tier.

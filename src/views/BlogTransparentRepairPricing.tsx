@@ -9,6 +9,18 @@ export default function BlogTransparentRepairPricing() {
       seoTitle="Transparent Repair Pricing - How We Quote (Dubai 2026)"
       seoDescription="The exact formula behind our repair quotes: parts + labour + 10% margin. Free diagnosis, no-fix-no-charge, no surprises. Read the full breakdown."
       path="/blog/transparent-repair-pricing-explained"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "parts-cost", label: "Parts cost" },
+        { id: "labour-time", label: "Labour time" },
+        { id: "free-diagnosis", label: "Why free diagnosis" },
+        { id: "whats-included", label: "What's included" },
+        { id: "whats-not-included", label: "What's not included" },
+        { id: "quote-variations", label: "Quote variations" },
+        { id: "no-fix-no-charge", label: "No-fix-no-charge policy" },
+        { id: "estimates-vs-quotes", label: "Estimates vs quotes" },
+      ]}
       category="Trust · Pricing"
       h1="How We Calculate Repair Quotes - Full Transparency"
       hook="Our quote = parts + labour + 10% margin + 0% surprises. Here's the breakdown."
@@ -20,14 +32,14 @@ export default function BlogTransparentRepairPricing() {
       featuredImageAlt="Transparent repair pricing breakdown - parts, labour, margin"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Transparent Repair Pricing. Quick answer</h2>
           <p>
             Most Dubai repair shops give an "estimate" that becomes a different number when you
             collect. We give a <strong>quote</strong> - fixed, written, agreed in advance. The number
             comes from a simple formula, not a market guess. Here's exactly what's inside it.
           </p>
 
-          <h2>Parts cost</h2>
+          <h2 id="parts-cost">Parts cost</h2>
           <p>
             We buy at wholesale from audited Tier 2 OEM-equivalent suppliers (see our{" "}
             <Link to="/blog/genuine-parts-vs-quality-alternative-explained" className="text-accent font-semibold hover:underline">
@@ -47,7 +59,7 @@ export default function BlogTransparentRepairPricing() {
             ]}
           />
 
-          <h2>Labour time (per service breakdown)</h2>
+          <h2 id="labour-time">Labour time (per service breakdown)</h2>
           <p>
             Labour is billed at <strong>AED 100-250 per hour</strong> depending on technician
             seniority and tooling complexity. Quick reference:
@@ -60,7 +72,7 @@ export default function BlogTransparentRepairPricing() {
             <li><strong>Liquid damage cleaning</strong>: 90 min - 4 hours depending on extent.</li>
           </ul>
 
-          <h2>Why we offer free diagnosis</h2>
+          <h2 id="free-diagnosis">Why we offer free diagnosis</h2>
           <p>
             Diagnosis is the part where most shops trap you - pay AED 200 to find out what's wrong,
             non-refundable, and then they hold the device hostage until you accept their (inflated)
@@ -77,31 +89,31 @@ export default function BlogTransparentRepairPricing() {
             the math work.
           </p>
 
-          <h2>What's included in the quote</h2>
+          <h2 id="whats-included">What's included in the quote</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>The part(s) at the tier you chose.</li>
             <li>All labour required for the planned repair.</li>
             <li>Adhesives, screws, gaskets, calibration tools.</li>
             <li>Post-repair quality check + battery / display diagnostic.</li>
             <li>Pickup &amp; delivery if you opted in.</li>
-            <li>The 12-month warranty.</li>
+            <li>The warranty of up to 12 months.</li>
           </ul>
 
-          <h2>What's NOT included</h2>
+          <h2 id="whats-not-included">What's NOT included</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Hidden additional damage discovered mid-repair</strong> - e.g. opening the MacBook reveals corrosion behind the screen we didn't see externally. We <em>stop</em>, photograph it, send you a revised quote, and only proceed with your written re-approval.</li>
             <li><strong>Out-of-scope upsells</strong> - we won't surprise-bill you for "while we're in there, we replaced the speakers too".</li>
             <li><strong>Data recovery</strong> - quoted separately if needed.</li>
           </ul>
 
-          <h2>How we explain quote variations</h2>
+          <h2 id="quote-variations">How we explain quote variations</h2>
           <p>
             Sometimes two customers with the same model get different quotes - usually because one
             chose Tier 2 and the other chose Tier 3, or the second device had additional damage. The
             quote always shows the line items so the difference is visible.
           </p>
 
-          <h2>No-fix-no-charge policy</h2>
+          <h2 id="no-fix-no-charge">No-fix-no-charge policy</h2>
           <p>
             If we cannot solve your problem, you pay <strong>nothing</strong> - not even diagnosis,
             not even pickup. Read the full policy in our{" "}
@@ -111,7 +123,7 @@ export default function BlogTransparentRepairPricing() {
             .
           </p>
 
-          <h2>'Estimates' vs 'quotes' - we give quotes</h2>
+          <h2 id="estimates-vs-quotes">'Estimates' vs 'quotes' - we give quotes</h2>
           <BlogPriceTable
             caption="Estimate vs Quote - the language matters"
             headers={["Aspect", "Estimate (most shops)", "Quote (us)"]}

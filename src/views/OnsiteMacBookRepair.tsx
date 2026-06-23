@@ -7,6 +7,7 @@ import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
@@ -48,7 +49,7 @@ const FAQS = [
   { q: "Do you cover Sharjah or Abu Dhabi?",
     a: "Free pickup and delivery applies to Dubai mainland. For an address in Sharjah, Abu Dhabi or another emirate, message us your location on WhatsApp at 055 741 3706 and we will tell you what we can arrange for your area." },
   { q: "What warranty comes with an onsite MacBook repair?",
-    a: "Every repair is backed by our own 12-month written warranty covering the parts replaced and the workmanship. The warranty is the same whether you visit the workshop or use free pickup and delivery." },
+    a: "Every repair is backed by our own written warranty up to 12 months covering the parts replaced and the workmanship. The warranty is the same whether you visit the workshop or use free pickup and delivery." },
   { q: "How much does an onsite MacBook repair cost?",
     a: "Pickup, delivery and diagnosis are free. Repairs are priced per service - screen, battery, keyboard and so on - and quoted on WhatsApp before any work starts. You only pay for the repair itself, never for the visit." },
 ];
@@ -58,7 +59,7 @@ export default function OnsiteMacBookRepair() {
     {
       title: "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
       description:
-        "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, 12-month warranty. Call 055 741 3706.",
+        "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, warranty of up to 12 months. Call 055 741 3706.",
       path: "/onsite-macbook-repair-dubai",
     },
     [
@@ -70,7 +71,7 @@ export default function OnsiteMacBookRepair() {
         timeline: "Same-day on most repairs",
         warranty: "P1Y",
         url: "/onsite-macbook-repair-dubai",
-        description: "Onsite and doorstep MacBook repair across Dubai - free pickup and delivery on Dubai mainland, free diagnosis, repairs priced per service and a 12-month warranty.",
+        description: "Onsite and doorstep MacBook repair across Dubai - free pickup and delivery on Dubai mainland, free diagnosis, repairs priced per service and a warranty of up to 12 months.",
       }),
       itemList({
         name: "What we handle onsite",
@@ -148,7 +149,7 @@ export default function OnsiteMacBookRepair() {
           <Wrench size={28} className="text-accent" aria-hidden /> What we handle onsite and at your doorstep
         </h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          The same repairs we do at the workshop, collected and returned free. Start with <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">MacBook screen repair</Link> or <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">MacBook battery replacement</Link>, the two most common doorstep jobs.
+          The same repairs we do at the workshop, collected and returned free. Start with <Link to="/macbook-screen-repair-dubai" className="text-accent underline underline-offset-2">MacBook screen repair</Link> or <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook battery replacement</Link>, the two most common doorstep jobs.
         </p>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
           {HANDLED.map((i) => (
@@ -167,7 +168,7 @@ export default function OnsiteMacBookRepair() {
             <MapPin size={28} className="text-accent" aria-hidden /> Areas we collect from
           </h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me" className="text-accent hover:underline">See MacBook repair near me</Link> for every community we serve.
+            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> for every community we serve.
           </p>
           <ul className="grid gap-sm grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 list-none p-0 m-0">
             {AREAS.map((a) => (
@@ -188,7 +189,7 @@ export default function OnsiteMacBookRepair() {
           {[
             { title: "Free pickup, free diagnosis", body: "No callout charge and no diagnosis fee. We collect, diagnose and quote before you commit to anything." },
             { title: "Same-day on most repairs", body: "Common screen and battery jobs are collected, repaired and returned the same day across Dubai mainland." },
-            { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a 12-month written warranty." },
+            { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a written warranty up to 12 months." },
           ].map((c) => (
             <article key={c.title} className="border border-border bg-bg-card rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
@@ -197,7 +198,7 @@ export default function OnsiteMacBookRepair() {
           ))}
         </div>
         <p className="text-[15px] text-text-muted leading-relaxed max-w-[70ch] mt-lg m-0">
-          Prefer to talk it through first? <Link to="/contact" className="text-accent hover:underline">Contact us</Link> with your model and area and we will arrange a pickup that fits your schedule.
+          Prefer to talk it through first? <Link to="/contact" className="text-accent underline underline-offset-2">Contact us</Link> with your model and area and we will arrange a pickup that fits your schedule.
         </p>
       </section>
 
@@ -216,7 +217,6 @@ export default function OnsiteMacBookRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book a free MacBook pickup across Dubai</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Message your MacBook model and your area and we will arrange same-hour or same-day collection. Free pickup, free delivery, free diagnosis - you only pay for the repair, quoted before we start.
@@ -236,6 +236,7 @@ export default function OnsiteMacBookRepair() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/onsite-macbook-repair-dubai" />
     </PageShell>
   );
 }

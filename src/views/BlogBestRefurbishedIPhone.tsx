@@ -9,6 +9,19 @@ export default function BlogBestRefurbishedIPhone() {
       seoTitle="Best Refurbished iPhone in Dubai 2026: Honest Picks"
       seoDescription="Best refurbished iPhone for Dubai 2026: iPhone 11 budget, 13/14 sweet spot, 15 Pro premium. Where to buy, what to check and the iCloud-lock warnings to know."
       path="/blog/best-refurbished-iphone-dubai"
+      wide
+      toc={[
+        { id: "three-picks", label: "Three picks at three prices" },
+        { id: "budget-11-12", label: "Budget: iPhone 11 / 12" },
+        { id: "sweet-spot-13-14", label: "Sweet spot: iPhone 13 / 14" },
+        { id: "premium-15-pro", label: "Premium: iPhone 15 Pro" },
+        { id: "what-refurbished-means", label: "What refurbished means" },
+        { id: "where-to-buy", label: "Where to buy in Dubai" },
+        { id: "what-to-check", label: "What to check before buying" },
+        { id: "battery-health", label: "Battery health expectations" },
+        { id: "warranty", label: "Warranty expectations" },
+        { id: "icloud-lock", label: "iCloud lock scam" },
+      ]}
       category="Buying guide · iPhone"
       h1="Best Refurbished iPhone Dubai 2026"
       hook="iPhone 13/14 are the sweet spot. iPhone 11 is the budget king. Here's why."
@@ -20,7 +33,7 @@ export default function BlogBestRefurbishedIPhone() {
       featuredImageAlt="Best refurbished iPhone Dubai 2026 buying guide"
       body={
         <>
-          <h2>Three refurbished picks at three prices</h2>
+          <h2 id="three-picks">Best Refurbished iPhone Dubai. Three refurbished picks at three prices</h2>
           <BlogPriceTable
             caption="Best refurbished iPhone Dubai - April 2026"
             headers={["Tier", "Model", "Price (AED)", "Best for"]}
@@ -31,7 +44,7 @@ export default function BlogBestRefurbishedIPhone() {
             ]}
           />
 
-          <h2>Budget - iPhone 11 / 12 (still capable in 2026)</h2>
+          <h2 id="budget-11-12">Budget - iPhone 11 / 12 (still capable in 2026)</h2>
           <p>
             iPhone 11 (Sept 2019) and iPhone 12 (Oct 2020) both still get iOS 26 updates in 2026. They
             handle WhatsApp, Instagram, banking apps, Zoom, Apple Pay, navigation - every daily task -
@@ -45,7 +58,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Battery:</strong> Insist on a unit with battery health above 85% or a fresh OEM-equivalent battery installed.</li>
           </ul>
 
-          <h2>Sweet spot - iPhone 13 / 14 (the value champions)</h2>
+          <h2 id="sweet-spot-13-14">Sweet spot - iPhone 13 / 14 (the value champions)</h2>
           <p>
             If you're spending AED 2,000 on a refurb, the iPhone 13 and iPhone 14 give you 95% of a new
             iPhone 16 experience for 50% of the price.
@@ -59,7 +72,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Apple Intelligence?</strong> No - Apple Intelligence requires A17 Pro or later. Not on 13 or 14.</li>
           </ul>
 
-          <h2>Premium refurb - iPhone 15 Pro</h2>
+          <h2 id="premium-15-pro">Premium refurb - iPhone 15 Pro</h2>
           <p>
             The iPhone 15 Pro at AED 3,200-3,600 (256GB) gets you the first iPhone with USB-C, titanium
             chassis, A17 Pro chip, and crucially Apple Intelligence support. Compared to a new iPhone 17
@@ -74,7 +87,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Common issue:</strong> Some 15 Pro units overheat under sustained heavy load - Apple fixed in iOS 17.0.3. Verify the unit isn't an early-batch problem unit.</li>
           </ul>
 
-          <h2>What "refurbished" actually means</h2>
+          <h2 id="what-refurbished-means">What "refurbished" actually means</h2>
           <p>
             The word "refurbished" is unregulated in UAE. It can mean three very different things:
           </p>
@@ -84,7 +97,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Box refurbished (eBay / Dubizzle):</strong> Cleaned, repackaged, possibly with an aftermarket screen and unknown battery. No warranty. Avoid.</li>
           </ul>
 
-          <h2>Where to buy in Dubai</h2>
+          <h2 id="where-to-buy">Where to buy in Dubai</h2>
           <BlogPriceTable
             caption="Refurbished iPhone - where to buy in Dubai"
             headers={["Source", "Pros", "Cons", "Risk"]}
@@ -97,7 +110,7 @@ export default function BlogBestRefurbishedIPhone() {
             ]}
           />
 
-          <h2>What to check before buying refurb</h2>
+          <h2 id="what-to-check">What to check before buying refurb</h2>
           <p>Run through this checklist before you hand over money. Takes 5 minutes:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>iCloud lock check:</strong> Settings → General → About → check "Activation Lock" line. Or boot the phone fresh - if it asks for an Apple ID, it's locked. Walk away.</li>
@@ -112,7 +125,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Frame inspection:</strong> Hold under bright light at angle - check for bend, chips, separation between frame and screen.</li>
           </ol>
 
-          <h2>Battery health expectations</h2>
+          <h2 id="battery-health">Battery health expectations</h2>
           <p>
             Apple considers a battery "service" candidate at 80% maximum capacity. Refurb buying rules:
           </p>
@@ -126,12 +139,12 @@ export default function BlogBestRefurbishedIPhone() {
           <p>
             Need a battery replaced after purchase?{" "}
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
-              From AED 250 with 12-month warranty
+              From AED 250 with warranty of up to 12 months
             </Link>
             .
           </p>
 
-          <h2>Warranty expectations</h2>
+          <h2 id="warranty">Warranty expectations</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple refurb:</strong> 1 year, full Apple warranty.</li>
             <li><strong>Us:</strong> 6 months covering battery, screen, charging port, speaker, camera.</li>
@@ -139,7 +152,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Dubizzle / WhatsApp:</strong> "DOA only" or none - if anything fails after delivery, you eat the cost.</li>
           </ul>
 
-          <h2>iCloud lock - biggest scam to watch for</h2>
+          <h2 id="icloud-lock">iCloud lock - biggest scam to watch for</h2>
           <p>
             Activation Lock (iCloud lock) ties an iPhone to an Apple ID. The phone will not factory-reset
             or activate without that Apple ID. <strong>Apple cannot remove it</strong>, neither can we.

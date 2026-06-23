@@ -19,7 +19,7 @@ export default function MacBookSsdUpgrade() {
         { name: "SSD Upgrade",    path: "/macbook-ssd-upgrade-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "MacBook upgrade & data migration" }}
-      serviceName="MacBook SSD Upgrade"
+      serviceName="MacBook SSD Upgrade Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

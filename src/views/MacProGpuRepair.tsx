@@ -19,7 +19,7 @@ export default function MacProGpuRepair() {
         { name: "GPU Repair",      path: "/mac-pro-gpu-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac Pro and high-end Mac repair" }}
-      serviceName="Mac Pro GPU Repair"
+      serviceName="Mac Pro GPU Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -48,7 +48,7 @@ export default function MacProGpuRepair() {
       warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on MPX module replacements.",
-        "12-month warranty on component-level repairs (fan, VRM, caps).",
+        "warranty of up to 12 months on component-level repairs (fan, VRM, caps).",
         "Honest 'no, we can't' verdict for M2 Ultra GPU faults - free diagnosis only.",
       ]}
       faqs={[

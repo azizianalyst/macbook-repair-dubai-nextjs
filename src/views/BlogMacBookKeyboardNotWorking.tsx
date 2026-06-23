@@ -17,6 +17,13 @@ export default function BlogMacBookKeyboardNotWorking() {
       seoTitle="MacBook Keyboard Not Working? Fixes (2026)"
       seoDescription="MacBook keys not typing or a dead row? Six fixes in order - restart, Slow Keys check, Safe Mode, external-keyboard test - then know when it's debris, a spill, or a swollen battery."
       path="/blog/macbook-keyboard-not-working-fix"
+      wide
+      toc={[
+        { id: "software-or-keys", label: "Software or the keys" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost", label: "What it costs" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Keyboard Not Working? Fixes & Causes"
       hook="A dead MacBook keyboard is a software setting about a third of the time, a speck of debris under one key a good slice of the rest, and a spill or a swollen battery for the stubborn cases. You can sort out which in a few minutes before paying anyone."
@@ -25,7 +32,7 @@ export default function BlogMacBookKeyboardNotWorking() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook keyboard repair in Dubai - technician testing the keyboard ribbon and top case at the Media City workshop"
+      featuredImageAlt="MacBook Keyboard Not Working Fix. MacBook keyboard repair in Dubai - technician testing the keyboard ribbon and top case at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a MacBook keyboard that isn't working in six steps",
         description: "Six diagnostic steps for a MacBook keyboard with dead keys or no typing at all, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookKeyboardNotWorking() {
       })]}
       body={
         <>
-          <h2>Is it the software or the keys?</h2>
+          <h2 id="software-or-keys">MacBook Keyboard Not Working Fix. Is it the software or the keys?</h2>
           <p>
             Before you write off the keyboard, find out which side the fault is on, because the fix
             splits right here. A surprising number of dead-keyboard jobs that come into our Dubai
@@ -58,7 +65,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             spill. These don't come back on a reboot.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Work down the list and stop when the keys come back. Most people who think the keyboard's
             finished are two steps from typing again.
@@ -104,7 +111,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             goes back to a clean macOS install rather than a keyboard swap.
           </p>
 
-          <h2>When it's hardware: the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the common causes</h2>
           <p>
             If you've run the list and a row is still dead, it's usually one of three things. Here's
             what we actually find when we open the case, roughly in the order we see it across Dubai.
@@ -134,7 +141,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             rather than waiting.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's a clean, a key, a spill or the battery before you

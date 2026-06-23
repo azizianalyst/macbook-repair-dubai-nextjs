@@ -25,7 +25,7 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt, ca
   }, []);
 
   return (
-    <figure className={cn("rounded-md overflow-hidden", dark ? "border border-border bg-bg-card" : "border border-border bg-bg-card shadow-sm")}>
+    <figure className={cn("rounded-md overflow-hidden", dark ? "bg-bg-card" : "bg-bg-card shadow-sm")}>
       <div
         ref={wrap}
         className="relative aspect-[16/9] select-none touch-none"

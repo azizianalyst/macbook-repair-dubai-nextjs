@@ -8,6 +8,18 @@ export default function BlogNoFixNoChargePolicy() {
       seoTitle="No Fix No Charge Policy Explained - Our Promise (Dubai 2026)"
       seoDescription="If we can't fix your Apple device, you owe nothing - not even diagnosis or pickup. Here's how the no-fix-no-charge promise works and where the edges are."
       path="/blog/no-fix-no-charge-policy-explained"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "what-it-means", label: "What it actually means" },
+        { id: "how-it-works", label: "How it works" },
+        { id: "why-we-offer", label: "Why we offer this" },
+        { id: "what-fix-means", label: "What 'fix' means" },
+        { id: "edge-cases", label: "Edge cases and partial fixes" },
+        { id: "why-others-dont", label: "Why other shops don't" },
+        { id: "replace-not-repair", label: "When to replace, not repair" },
+        { id: "free-pickup", label: "Free pickup even if no fix" },
+      ]}
       category="Trust · Policy"
       h1="No Fix No Charge - How Our Promise Works"
       hook="We diagnose. If we can't fix it, you owe nothing. Here's how we make this work."
@@ -16,17 +28,17 @@ export default function BlogNoFixNoChargePolicy() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={8}
-      featuredImageAlt="No fix no charge guarantee at MacBook Repair Dubai"
+      featuredImageAlt="No Fix No Charge Policy. No fix no charge guarantee at MacBook Repair Dubai"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">No Fix No Charge Policy. Quick answer</h2>
           <p>
             You pay only for repairs that work. If we can't solve the problem you brought us, you
             owe nothing - diagnosis is free, pickup is free, and the device is returned to you in the
             same condition. This isn't marketing - it's how the workshop has operated since 2004.
           </p>
 
-          <h2>What 'no fix no charge' actually means</h2>
+          <h2 id="what-it-means">What 'no fix no charge' actually means</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Free diagnosis</strong>: 30-60 minutes of senior-tech time, no obligation, no fee.</li>
             <li><strong>Free quote</strong>: written, line-itemised, valid for 14 days.</li>
@@ -34,7 +46,7 @@ export default function BlogNoFixNoChargePolicy() {
             <li><strong>No success → no payment</strong>: if we accept the job, attempt the repair, and fail to solve the problem, you pay zero - including parts we ordered.</li>
           </ul>
 
-          <h2>How it works (free diagnosis, optional repair)</h2>
+          <h2 id="how-it-works">How it works (free diagnosis, optional repair)</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>You bring or pickup the device - free.</li>
             <li>We diagnose - free, written report.</li>
@@ -44,7 +56,7 @@ export default function BlogNoFixNoChargePolicy() {
             <li>If you proceed and we fail → you pay <strong>nothing</strong>.</li>
           </ol>
 
-          <h2>Why we offer this</h2>
+          <h2 id="why-we-offer">Why we offer this</h2>
           <p>
             Confidence backed by data. Across 2024-2025 our acceptance-to-success rate was{" "}
             <strong>96.3%</strong> on quoted jobs. The remaining 3.7% - devices with deeper damage
@@ -57,7 +69,7 @@ export default function BlogNoFixNoChargePolicy() {
             <li>Our 21 years of pattern recognition catches edge cases before we commit.</li>
           </ul>
 
-          <h2>What 'fix' means</h2>
+          <h2 id="what-fix-means">What 'fix' means</h2>
           <p>
             "Fix" = your stated problem is resolved, demonstrably, in front of you (or via video for
             pickup customers).
@@ -71,7 +83,7 @@ export default function BlogNoFixNoChargePolicy() {
             "We tried" is <strong>not</strong> a fix. If we attempted and failed, the policy applies.
           </p>
 
-          <h2>Edge cases - partial fixes</h2>
+          <h2 id="edge-cases">Edge cases - partial fixes</h2>
           <p>
             What if we solve part of the problem but not all? Two examples we've handled this year:
           </p>
@@ -83,14 +95,14 @@ export default function BlogNoFixNoChargePolicy() {
             Rule: you only pay for the work that succeeded against your stated need.
           </p>
 
-          <h2>Why other shops don't offer this</h2>
+          <h2 id="why-others-dont">Why other shops don't offer this</h2>
           <p>
             They can't afford to. Pop-up shops with low volume and Tier 3 parts have failure rates
             high enough that no-fix-no-charge would bankrupt them. They charge a non-refundable
             "diagnosis fee" of AED 200-500 to cover their hit rate. It's a sign of low confidence.
           </p>
 
-          <h2>When we'll honestly tell you to replace, not repair</h2>
+          <h2 id="replace-not-repair">When we'll honestly tell you to replace, not repair</h2>
           <p>
             Sometimes the right answer is "don't repair this". We'll tell you when:
           </p>
@@ -108,7 +120,7 @@ export default function BlogNoFixNoChargePolicy() {
             for the full framework.
           </p>
 
-          <h2>Pickup/delivery is free even if no fix</h2>
+          <h2 id="free-pickup">Pickup/delivery is free even if no fix</h2>
           <p>
             If we can't repair, you don't pay for the courier either - the round-trip pickup and
             return are absorbed. This is why we strongly recommend free pickup for unknown-issue

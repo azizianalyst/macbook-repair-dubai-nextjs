@@ -6,7 +6,7 @@ export default function IPhone14ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Pro Repair Dubai - Dynamic Island, 48MP from AED 300 | 055 741 3706"
-      seoDescription="iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen AED 750, Dynamic Island AED 900. Same-day, 12-month warranty."
+      seoDescription="iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen AED 750, Dynamic Island AED 900. Same-day, warranty of up to 12 months."
       path="/iphone-14-pro-repair-dubai"
       eyebrow="iPhone 14 Pro (2022)"
       h1="iPhone 14 Pro Repair Dubai - Dynamic Island, ProMotion, 48MP"
@@ -20,7 +20,7 @@ export default function IPhone14ProRepair() {
         { name: "iPhone 14 Pro", path: "/iphone-14-pro-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone board-level repair" }}
-      serviceName="iPhone 14 Pro Repair"
+      serviceName="iPhone 14 Pro Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

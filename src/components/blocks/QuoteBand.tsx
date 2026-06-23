@@ -29,10 +29,9 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
     >
       <div className="bg-bg-alt text-text rounded-lg p-xl md:p-2xl shadow-lg overflow-hidden relative">
         {/* subtle accent glow, decorative */}
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/20 blur-3xl" />
         <div className="relative flex flex-col gap-lg md:flex-row md:items-center md:justify-between">
           <div className="max-w-[46ch]">
-            <p className="mono text-[12px] uppercase tracking-wider text-text-faint mb-1">
+            <p className="mono text-[12px] uppercase tracking-wider text-accent mb-1">
               {service}
             </p>
             <h2 className="text-text text-[26px] md:text-[32px] leading-tight">
@@ -42,7 +41,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
               {blurb ?? "Send the model and a photo of the issue. Free pickup across Dubai mainland, no-fix-no-charge."}
             </p>
             <div className="mt-md flex flex-wrap gap-x-lg gap-y-sm text-[14px] text-text-muted">
-              {startingPrice != null && (
+              {startingPrice != null && startingPrice > 0 && (
                 <span className="inline-flex items-center gap-1.5">
                   <span className="text-text-faint">From</span>
                   <span className="mono text-text font-bold text-[18px]">AED {startingPrice}</span>
@@ -54,7 +53,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
                 </span>
               )}
               <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck size={15} aria-hidden /> 12-month warranty
+                <ShieldCheck size={15} aria-hidden /> Up to 12-month warranty
               </span>
             </div>
           </div>

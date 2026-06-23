@@ -19,7 +19,7 @@ export function QuoteForm() {
   const labelCls = "block text-[13px] font-medium text-text-muted mb-1";
 
   return (
-    <form onSubmit={submit} className="rounded-2xl border border-border bg-bg-card p-lg grid gap-md">
+    <form onSubmit={submit} className="rounded-md border border-border bg-bg-card p-lg grid gap-md">
       <div className="grid gap-md sm:grid-cols-2">
         <label>
           <span className={labelCls}>First name</span>

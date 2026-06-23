@@ -22,15 +22,15 @@ import { NAP } from "@/content/site";
 const PATH = "/macbook-repair-cost-calculator-dubai";
 const TITLE = "MacBook Repair Cost Calculator Dubai - Instant Estimate";
 const DESC =
-  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair to see a real starting price in AED, then confirm on WhatsApp. 12-month warranty.";
+  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair to see a real starting price in AED, then confirm on WhatsApp. Warranty up to 12 months.";
 
 const FAQS = [
-  { q: "How accurate is the repair cost estimate?", a: "The figure is our genuine published starting price for that exact model and repair, pulled from our real price data. It's a 'from' price — the final cost is fixed in writing after a free 20-minute diagnosis, because the exact fault and parts can change it." },
+  { q: "How accurate is the repair cost estimate?", a: "The figure is our genuine published starting price for that exact model and repair, pulled from our real price data. It's a 'from' price, the final cost is fixed in writing after a free 20-minute diagnosis, because the exact fault and parts can change it." },
   { q: "Is the diagnosis really free?", a: "Yes. Diagnosis is free and takes about 20 minutes, and there's no charge if you decide not to proceed. You only pay once you approve a written quote." },
   { q: "Why don't you just show one fixed price?", a: "Because a fair price depends on your exact model and what's actually wrong. A screen on a MacBook Air M1 is not the same job as a 16-inch Pro. The calculator gives you the right starting point for your model instead of a vague 'from AED 99' headline." },
-  { q: "Is independent repair cheaper than the Apple Store?", a: "For out-of-warranty repairs, usually yes — we repair at component and board level where Apple replaces the whole logic board. See our honest Apple Store vs independent comparison for the full picture." },
-  { q: "Do you calculate iPhone repair costs too?", a: "iPhone pricing isn't in the calculator yet — WhatsApp us your iPhone model and we'll send a quote the same way." },
-  { q: "Does the estimate include genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't, and we tell you which your repair uses before we start. Both carry the 12-month written warranty." },
+  { q: "Is independent repair cheaper than the Apple Store?", a: "For out-of-warranty repairs, usually yes, we repair at component and board level where Apple replaces the whole logic board. See our honest Apple Store vs independent comparison for the full picture." },
+  { q: "Do you calculate iPhone repair costs too?", a: "iPhone pricing isn't in the calculator yet. WhatsApp us your iPhone model and we'll send a quote the same way." },
+  { q: "Does the estimate include genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't, and we tell you which your repair uses before we start. Both carry the written warranty up to 12 months." },
 ];
 
 export default function MacBookRepairCostCalculator() {
@@ -47,7 +47,7 @@ export default function MacBookRepairCostCalculator() {
         timeline: "Same day",
         warranty: "P1Y",
         url: PATH,
-        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, with free pickup and a 12-month written warranty.",
+        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, with free pickup and a written warranty up to 12 months.",
       }),
     ],
   );
@@ -95,7 +95,7 @@ export default function MacBookRepairCostCalculator() {
           <h2 className="text-[28px] md:text-[32px] mb-md">What changes the final price</h2>
           <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">The calculator shows a <strong className="text-text">starting</strong> price. The exact figure depends on your specific model, how severe the fault is (a cracked outer glass costs less than a fully dead panel), and whether a genuine or high-grade OEM-spec part is used - we always tell you which before we start.</p>
-            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent hover:underline">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/where-to-repair-macbook-dubai" className="text-accent hover:underline">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
+            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent underline underline-offset-2">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/where-to-repair-macbook-dubai" className="text-accent underline underline-offset-2">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
           </div>
         </section>
 

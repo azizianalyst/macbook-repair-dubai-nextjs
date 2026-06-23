@@ -19,7 +19,7 @@ export default function IMacDataRecovery() {
         { name: "Data Recovery",   path: "/imac-data-recovery-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Fusion Drive and T2 data recovery" }}
-      serviceName="iMac Data Recovery"
+      serviceName="iMac Data Recovery Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

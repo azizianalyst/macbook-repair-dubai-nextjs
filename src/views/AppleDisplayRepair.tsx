@@ -11,6 +11,7 @@ import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
@@ -132,15 +133,6 @@ export default function AppleDisplayRepair() {
         ]} />
       </section>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
-          <span className="font-semibold text-text">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
-
       {/* Services */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Range of Apple Display Repair Services</h2>
@@ -215,7 +207,7 @@ export default function AppleDisplayRepair() {
           <div className="grid gap-md md:grid-cols-3">
             {TESTIMONIALS.map((t) => (
               <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
                 <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -246,7 +238,6 @@ export default function AppleDisplayRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[34ch]">Trust MacBook Repair Dubai for your Apple display</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Genuine Apple parts, expert technicians, and fast turnaround. WhatsApp or call us to restore your Studio Display, Pro Display XDR, or Mac screen.
@@ -255,6 +246,7 @@ export default function AppleDisplayRepair() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/apple-display-repair-dubai" />
     </PageShell>
   );
 }

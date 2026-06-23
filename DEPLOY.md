@@ -19,10 +19,15 @@ Hostinger MCP server for this site: **`hostinger-macbookrepair`**.
    ```bash
    rm -f /tmp/mbr-deploy.zip && zip -rq /tmp/mbr-deploy.zip . \
      -x "node_modules/*" ".next/*" ".git/*" ".env.local" "*.zip" \
+        ".claude/*" ".audit/*" ".mobile-audit/*" \
         "scripts/topic-images/raw/*" "scripts/home-images/raw/*"
    ```
    (The `raw/` dirs hold ~600 MB of image-generation masters that the server
-   never needs — excluding them keeps the upload ~290 MB.)
+   never needs. `.claude/` (agent worktrees), `.audit/` and `.mobile-audit/`
+   are local-only artifact dirs — none are git-tracked and the server never
+   needs them, but they're large (~280M + 355M + 42M) so leaving them in
+   bloats the archive to ~690M. Excluding all of the above keeps the upload
+   ~205 MB.)
 
 3. **Deploy** via Hostinger MCP (build runs server-side):
    - Tool: `mcp__hostinger-macbookrepair__hosting_deployJsApplication`

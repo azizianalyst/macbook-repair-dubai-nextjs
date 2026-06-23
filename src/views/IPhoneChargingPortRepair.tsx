@@ -4,19 +4,19 @@ import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
 export default function IPhoneChargingPortRepair() {
   return (
     <IPhonePageTemplate
-      seoTitle="iPhone Charging Port Repair Dubai - Lightning & USB-C | From AED 250"
-      seoDescription="iPhone charging port repair Dubai from AED 250. Lightning & USB-C, bent pins, water damage, intermittent charge. iPhone 6 to 17. Same-day. WhatsApp 055 741 3706."
+      seoTitle="iPhone Charging Port Repair Dubai - Lightning & USB-C | From AED 149"
+      seoDescription="iPhone charging port repair Dubai from AED 149. Lightning & USB-C, bent pins, water damage, intermittent charge. iPhone 6 to 17. Same-day. WhatsApp 055 741 3706."
       path="/iphone-charging-port-repair-dubai"
       eyebrow="iPhone Charging Port Repair"
       h1="iPhone Charging Port Repair Dubai - USB-C & Lightning"
-      subtitle="Phone won't charge? Cable falls out? Bent pins? Lightning (pre-iPhone 15) and USB-C (15+). Same-day port flex swap, 12-month warranty."
-      startingPrice={250}
+      subtitle="Phone won't charge? Cable falls out? Bent pins? Lightning (pre-iPhone 15) and USB-C (15+). Same-day port flex swap, warranty of up to 12 months."
+      startingPrice={149}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone charging port repair quote please. Model: "
       technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Charging port & Face ID flex" }}
-      serviceName="iPhone Charging Port Repair"
+      serviceName="iPhone Charging Port Repair Dubai"
       pricingRows={[
-        { model: "iPhone 6 / 6s / 7 / 8 / SE (Lightning)",  price: 250, timeline: "Same day" },
+        { model: "iPhone 6 / 6s / 7 / 8 / SE (Lightning)",  price: 149, timeline: "Same day" },
         { model: "iPhone X / XR / XS / 11 (Lightning)",     price: 300, timeline: "Same day" },
         { model: "iPhone 12 / 13 (Lightning)",              price: 350, timeline: "Same day" },
         { model: "iPhone 14 / 14 Pro (Lightning)",          price: 400, timeline: "Same day" },
@@ -28,7 +28,7 @@ export default function IPhoneChargingPortRepair() {
       intro={
         <>
           <p className="text-[17px] text-text leading-relaxed">
-            iPhone charging port repair in Dubai starts at AED 250 and finishes the same day on most Lightning models. The split between Lightning and USB-C matters: every iPhone before the iPhone 15 (so iPhone 6 through iPhone 14 Pro Max) uses the Apple Lightning connector - a small, simple flex cable that's straightforward to swap. From the iPhone 15 forward, Apple moved to USB-C - a different mechanical assembly with a separate FPC, four extra solder points, and tighter bond tolerance. The workshop has been fitting Lightning ports since 2014 and USB-C ports since the iPhone 15 launched in September 2023.
+            iPhone charging port repair in Dubai starts at AED 149 and finishes the same day on most Lightning models. The split between Lightning and USB-C matters: every iPhone before the iPhone 15 (so iPhone 6 through iPhone 14 Pro Max) uses the Apple Lightning connector - a small, simple flex cable that's straightforward to swap. From the iPhone 15 forward, Apple moved to USB-C - a different mechanical assembly with a separate FPC, four extra solder points, and tighter bond tolerance. The workshop has been fitting Lightning ports since 2014 and USB-C ports since the iPhone 15 launched in September 2023.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mt-md">
             Two confusions to clear up. First, "the port" on every iPhone since the iPhone 7 is on a flex cable - not soldered to the logic board - so a port swap is a flex swap, no micro-soldering required. Second, on the iPhone X and later, the same flex carries the Face ID home-button line, the microphone, and the antenna feed-line. A botched port repair can break Face ID. The workshop tests Face ID before and after every port job and shows the proximity-sensor calibration on the bench.
@@ -36,10 +36,10 @@ export default function IPhoneChargingPortRepair() {
         </>
       }
       problems={[
-        { title: "Cable falls out unless held at an angle", body: "Worn pins inside the port - most common after 18+ months of daily charging. Port-flex swap restores secure fit. AED 250 to AED 550 depending on model." },
-        { title: "Phone says 'Liquid Detected in Lightning Connector'", body: "Sensor inside the port detects moisture and disables fast charging. Sometimes the sensor fails after a previous spill - replacement port flex restores normal charging without the warning. AED 250 to AED 400." },
-        { title: "Bent pins inside the port", body: "Visible damage from forcing a USB-C plug into a Lightning port (or vice versa). Port flex must be replaced - the pins are not individually serviceable. AED 250 to AED 550, same day." },
-        { title: "Charges only on certain cables", body: "Some pins still functional - phone negotiates 5W charging with the working pins. Full port swap restores 20W fast charge. AED 250 to AED 550." },
+        { title: "Cable falls out unless held at an angle", body: "Worn pins inside the port - most common after 18+ months of daily charging. Port-flex swap restores secure fit. AED 149 to AED 550 depending on model." },
+        { title: "Phone says 'Liquid Detected in Lightning Connector'", body: "Sensor inside the port detects moisture and disables fast charging. Sometimes the sensor fails after a previous spill - replacement port flex restores normal charging without the warning. AED 149 to AED 400." },
+        { title: "Bent pins inside the port", body: "Visible damage from forcing a USB-C plug into a Lightning port (or vice versa). Port flex must be replaced - the pins are not individually serviceable. AED 149 to AED 550, same day." },
+        { title: "Charges only on certain cables", body: "Some pins still functional - phone negotiates 5W charging with the working pins. Full port swap restores 20W fast charge. AED 149 to AED 550." },
         { title: "iPhone 15/16/17 USB-C wobbles in port", body: "USB-C connectors are physically larger and the FPC bond is tighter. A drop on a connected cable can shear the bond. Port flex replacement, AED 450 to AED 550." },
         { title: "Phone charges wirelessly but not via cable", body: "Cable port is dead but the wireless charging coil (separate component) is fine. Port flex swap restores wired charging. Wireless coil itself is rarely the issue when only wired charging is broken." },
         { title: "Microphone doesn't work during calls (callee can't hear you)", body: "On iPhone 7 and later, the bottom microphone shares the port flex. Port replacement restores microphone. Often a 2-in-1 ticket - customer comes in for charging, leaves with mic fixed too." },
@@ -53,7 +53,7 @@ export default function IPhoneChargingPortRepair() {
         { title: "Port-flex swap on the bench", body: "Screen lifted at 70 °C, battery disconnected, port flex screws removed (taptic engine and speaker first), port swapped, all connectors reseated." },
         { title: "Face ID and mic verification", body: "Face ID re-tested with proximity sensor. Bottom microphone tested on a recorded call. Antenna feed-line continuity checked with multimeter." },
         { title: "Charge test from 0% to 20%", body: "Phone charged on a 20W Apple charger. Negotiation verified. Heat profile checked. No throttling, no warnings." },
-        { title: "Free delivery + 12-month warranty", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
+        { title: "Free delivery + warranty of up to 12 months", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
       ]}
       warrantyDays={365}
       warrantyBullets={[
@@ -73,11 +73,11 @@ export default function IPhoneChargingPortRepair() {
         ["Warranty",                     "12 months written",                      "12 months"],
       ]}
       faqs={[
-        { q: "How much does iPhone charging port repair cost in Dubai?", a: "From AED 250 for iPhone 6 through 8 and SE. AED 300 to AED 400 for X through 14 Pro. AED 450 to AED 550 for iPhone 15, 16, 17 (USB-C). Pro Max sizes add AED 50. If the port flex tests fine but the phone still won't charge, the issue is the charging IC on the logic board - AED 450 component-level repair, 1 day." },
+        { q: "How much does iPhone charging port repair cost in Dubai?", a: "From AED 149 for iPhone 6 through 8 and SE. AED 300 to AED 400 for X through 14 Pro. AED 450 to AED 550 for iPhone 15, 16, 17 (USB-C). Pro Max sizes add AED 50. If the port flex tests fine but the phone still won't charge, the issue is the charging IC on the logic board - AED 450 component-level repair, 1 day." },
         { q: "Why won't my iPhone charge?", a: "Most common: port full of pocket lint (try a wooden toothpick first). Next: worn or bent pins inside the port - port flex swap. Next: charging IC on the logic board has failed - board-level repair. Free diagnosis confirms which one in 5 minutes." },
         { q: "How long does iPhone charging port repair take?", a: "Same day on Lightning models - 60 to 90 minutes on the bench. iPhone 15, 16 USB-C is same day if stock is on the shelf, otherwise 1 day. iPhone 17 line is 1 day because the USB-C flex is special-ordered." },
         { q: "Will my microphone still work after port repair?", a: "Yes - better than before in most cases. The bottom microphone shares the same flex as the charging port from iPhone 7 onward. A worn or damaged port flex often means a damaged microphone too. Port swap fixes both." },
-        { q: "What about the 'Liquid Detected' warning?", a: "iOS 14+ shows this warning when the port sensor detects moisture. Drying the port for 24 hours clears it 60% of the time. If the warning persists with a dry port, the sensor itself has failed - port flex replacement removes it. AED 250 to AED 550." },
+        { q: "What about the 'Liquid Detected' warning?", a: "iOS 14+ shows this warning when the port sensor detects moisture. Drying the port for 24 hours clears it 60% of the time. If the warning persists with a dry port, the sensor itself has failed - port flex replacement removes it. AED 149 to AED 550." },
         { q: "Can I just clean the port myself?", a: "Yes - try a wooden toothpick or dry compressed air first. Never use a metal pin (you'll bend the contacts). Never use water or alcohol inside the port. If gentle cleaning doesn't help within 10 minutes, bring it in." },
         { q: "Does the iPhone 15 USB-C port carry power and data the same way as Lightning?", a: "Yes for power (20W standard, 27W on Pro models with PD 3.0). Data is faster - USB 3.2 Gen 2 on iPhone 15 Pro and 16 Pro (10 Gbps), USB 2.0 on iPhone 15 / 15 Plus / 16 / 16 Plus (480 Mbps). The workshop replacement port matches the original spec." },
         { q: "Will replacing the port affect Face ID?", a: "Only if the repair is done badly. The Face ID home-button signal line runs across the port flex - disconnecting it cleanly is critical. The workshop tests Face ID before and after every port repair. If Face ID was working before, it's working after." },
@@ -85,7 +85,10 @@ export default function IPhoneChargingPortRepair() {
         { q: "Do you fix charging issues on iPad with USB-C?", a: "Yes - iPad Pro, Air, and mini USB-C port repair from AED 350. Same workshop, same Shafiq, same warranty. WhatsApp the iPad model for a quote." },
       ]}
       reviewNames={["Saeed Alam", "Tim Quick", "Wellington Academy"]}
-      relatedSlugs={["/iphone-water-damage-repair-dubai", "/iphone-battery-replacement-dubai", "/iphone-face-id-repair-dubai"]}
+      relatedSlugs={["/iphone-lightning-port-repair-dubai", "/iphone-usb-c-port-repair-dubai", "/iphone-water-damage-repair-dubai"]}
+      relatedExtra={[
+        { label: "iPhone shocking while charging", href: "/iphone-16-shocks-while-charging", description: "Why your iPhone gives electric shocks when charging and how to fix it." },
+      ]}
     />
   );
 }

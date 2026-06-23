@@ -3,10 +3,17 @@
 
 import { SITE } from "./seo";
 import { NAP, PRICING } from "@/content/site";
+import { SITE_SETTINGS } from "@/content/settings.generated";
 
 export const ORG_ID = `${SITE.url}/#organization`;
 export const BUSINESS_ID = `${SITE.url}/#localbusiness`;
 export const WEBSITE_ID = `${SITE.url}/#website`;
+
+// Canonical absolute URL for a route PATH in trailing-slash form (matches next.config
+// trailingSlash:true), so JSON-LD url/@id values agree with the <link rel="canonical">.
+// Only for page paths — never image/file URLs.
+export const pageUrl = (path: string): string =>
+  SITE.url + (path === "/" ? "/" : "/" + path.replace(/^\/+|\/+$/g, "") + "/");
 
 // Entity-consolidation links. The Google Business Profile is named "Azizi Technologies" on
 // Maps and the sister site azizitechnologies.ae ranks for overlapping queries — without an
@@ -36,7 +43,7 @@ export function localBusiness() {
     logo: `${SITE.url}/logo-mrd.png`,
     url: SITE.url,
     telephone: SITE.phoneE164,
-    email: "info@macbook-repair-dubai.ae",
+    email: NAP.email || "info@macbook-repair-dubai.ae",
     priceRange: `AED ${PRICING.floor} - AED ${PRICING.ceiling.toLocaleString("en-US")}`,
     currenciesAccepted: "AED",
     paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express"],
@@ -184,7 +191,7 @@ export function service(opts: {
     },
     url,
     category: opts.category ?? "Computer Repair Service",
-    termsOfService: `${SITE.url}/warranty`,
+    termsOfService: pageUrl("/warranty"),
     offers,
   };
 }
@@ -238,7 +245,7 @@ export function breadcrumbs(trail: Array<{ name: string; path: string }>) {
       "@type": "ListItem",
       position: i + 1,
       name: t.name,
-      item: SITE.url + t.path,
+      item: pageUrl(t.path),
     })),
   };
 }
@@ -271,14 +278,14 @@ export function licensedImage(opts: { src: string; alt: string; pagePath: string
     } : {}),
     width: { "@type": "QuantitativeValue", value: opts.width ?? 1600, unitText: "px" },
     height: { "@type": "QuantitativeValue", value: opts.height ?? 1200, unitText: "px" },
-    license: `${SITE.url}/image-usage-license`,
-    acquireLicensePage: `${SITE.url}/image-usage-license`,
+    license: pageUrl("/image-usage-license"),
+    acquireLicensePage: pageUrl("/image-usage-license"),
     creditText: "MacBook Repair Dubai (macbook-repair-dubai.ae)",
     creator: { "@id": ORG_ID },
     copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
     copyrightHolder: { "@id": ORG_ID },
     representativeOfPage: true,
-    mainEntityOfPage: { "@type": "WebPage", "@id": SITE.url + opts.pagePath },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl(opts.pagePath) },
     inLanguage: "en-AE",
   };
 }
@@ -306,7 +313,7 @@ export function videoObject(opts: {
     publisher: { "@id": ORG_ID },
     copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
     copyrightHolder: { "@id": ORG_ID },
-    mainEntityOfPage: { "@type": "WebPage", "@id": SITE.url + (opts.pagePath ?? "/") },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl(opts.pagePath ?? "/") },
     inLanguage: "en-AE",
   };
 }
@@ -319,11 +326,12 @@ export function article(opts: {
   datePublished: string;  // ISO
   dateModified: string;   // ISO
   image?: string;
+  type?: "Article" | "BlogPosting" | "NewsArticle";  // Rank Math–style schema type; default Article
 }) {
-  const url = SITE.url + opts.path;
+  const url = pageUrl(opts.path);
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": opts.type ?? "Article",
     "@id": `${url}#article`,
     headline: opts.title,
     description: opts.description,
@@ -432,6 +440,7 @@ export function organization() {
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     alternateName: "Azizi Technologies",
+    slogan: SITE_SETTINGS.tagline || undefined,
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
@@ -509,12 +518,15 @@ export function speakable(xpaths?: string[]) {
 
 // Convenience: WebPage node that points to the quick-answer block as speakable.
 export function pageWithSpeakable(opts: { url: string; name?: string; dateModified?: string }) {
+  // Normalise to trailing-slash canonical form (matches trailingSlash:true), so the WebPage
+  // @id/url agree with <link rel="canonical"> regardless of how the caller built the URL.
+  const url = opts.url.replace(/\/$/, "") + "/";
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${opts.url}#webpage`,
+    "@id": `${url}#webpage`,
     name: opts.name,
-    url: opts.url,
+    url,
     ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },

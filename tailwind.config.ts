@@ -8,11 +8,11 @@ export default {
     container: {
       center: true,
       padding: { DEFAULT: "20px", md: "24px" },
-      screens: { "2xl": "1180px" }, // 1180, not 1280
+      screens: { "2xl": "1400px" },
     },
     extend: {
       maxWidth: {
-        content: "1180px",
+        content: "1400px",
         narrow: "720px",
       },
       colors: {
@@ -48,6 +48,7 @@ export default {
         success:  "hsl(var(--success))",
         warning:  "hsl(var(--warning))",
         danger:   "hsl(var(--danger))",
+        error:    "hsl(var(--danger))", // alias: views use bg-error/text-error for red alert states
         info:     "hsl(var(--info))",
         star:     "hsl(var(--star))",
         whatsapp: "hsl(var(--whatsapp))",

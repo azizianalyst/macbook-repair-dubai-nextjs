@@ -9,6 +9,18 @@ export default function BlogMacPro2019StillWorthIt() {
       seoTitle="Mac Pro 2019 in 2026 - Still Worth Buying Used in Dubai?"
       seoDescription="Apple killed Mac Pro. Used 2019 prices stayed surprisingly high. PCIe expansion, MPX modules, software support to 2027+. Honest used-buyer's guide for Dubai."
       path="/blog/mac-pro-2019-still-worth-it"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "pcie-value", label: "Why it still has value" },
+        { id: "configurations", label: "Configurations to look for" },
+        { id: "inspect-used", label: "What to inspect used" },
+        { id: "software-support", label: "Software support" },
+        { id: "mpx-pricing", label: "MPX module pricing" },
+        { id: "repair-availability", label: "Repair availability" },
+        { id: "vs-studio-ultra", label: "vs Mac Studio M3 Ultra" },
+        { id: "resale-outlook", label: "Resale outlook" },
+      ]}
       category="Buying guide · Mac Pro"
       h1="Mac Pro 2019 in 2026 - Buying Used Guide"
       hook="Apple killed Mac Pro. Used 2019 prices stayed high. Why? PCIe expansion."
@@ -17,10 +29,10 @@ export default function BlogMacPro2019StillWorthIt() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={11}
-      featuredImageAlt="Mac Pro 2019 used buying guide Dubai 2026"
+      featuredImageAlt="Mac Pro 2019 Still Worth It. Mac Pro 2019 used buying guide Dubai 2026"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Mac Pro 2019 Still Worth It. Quick answer</h2>
           <p>
             The 2019 Mac Pro is the last Intel Mac Pro and the last Mac with PCIe expansion. Apple
             discontinued it in March 2026. For workflows that depend on specialised PCIe cards
@@ -29,7 +41,7 @@ export default function BlogMacPro2019StillWorthIt() {
             and price.
           </p>
 
-          <h2>Why Mac Pro 2019 still has value (PCIe = unique)</h2>
+          <h2 id="pcie-value">Why Mac Pro 2019 still has value (PCIe = unique)</h2>
           <p>
             Mac Studio (Mini, MacBook Pro, etc.) connects external PCIe cards only through Thunderbolt
             5 enclosures - limited to PCIe Gen 4 ×4 bandwidth. Mac Pro 2019 has 8 PCIe Gen 3 slots,
@@ -47,7 +59,7 @@ export default function BlogMacPro2019StillWorthIt() {
             <li><strong>Old MPX GPU modules</strong> - Vega II Duo, W6900X - for studios with existing investment.</li>
           </ul>
 
-          <h2>Configurations to look for</h2>
+          <h2 id="configurations">Configurations to look for</h2>
           <BlogPriceTable
             caption="Mac Pro 2019 used market - Dubai April 2026"
             headers={["Config", "Original price (USD)", "Used Dubai (AED)", "Verdict"]}
@@ -61,7 +73,7 @@ export default function BlogMacPro2019StillWorthIt() {
             ]}
           />
 
-          <h2>What to inspect when buying used</h2>
+          <h2 id="inspect-used">What to inspect when buying used</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Serial number check</strong> at <a href="https://checkcoverage.apple.com" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">checkcoverage.apple.com</a> - confirms model, original purchase date, AppleCare status.</li>
             <li><strong>Hours / wear via System Information</strong>: System Settings → About → System Report → Power → check cycle counts. &lt; 2 years of full-time use ideal.</li>
@@ -79,7 +91,7 @@ export default function BlogMacPro2019StillWorthIt() {
             buy from us). Brings buyer confidence; sellers also use it for resale credibility.
           </p>
 
-          <h2>Software support (until 2027 minimum)</h2>
+          <h2 id="software-support">Software support (until 2027 minimum)</h2>
           <p>
             macOS Sequoia (2024) supports Mac Pro 2019. Apple has historically supported Macs for 6-8
             years after sale; 2019 hardware should get macOS support through at least 2027-2028.
@@ -87,7 +99,7 @@ export default function BlogMacPro2019StillWorthIt() {
             usable life another 3-5 years. Realistic safe horizon: 2030.
           </p>
 
-          <h2>MPX module pricing</h2>
+          <h2 id="mpx-pricing">MPX module pricing</h2>
           <BlogPriceTable
             caption="Apple MPX module used pricing - Dubai April 2026"
             headers={["MPX Module", "Original price", "Used Dubai (AED)", "Notes"]}
@@ -102,7 +114,7 @@ export default function BlogMacPro2019StillWorthIt() {
             ]}
           />
 
-          <h2>Repair availability (us)</h2>
+          <h2 id="repair-availability">Repair availability (us)</h2>
           <p>
             Apple Authorised Service Providers in UAE will service Mac Pro 2019 until parts run out
             (estimated 2028-2029). Our workshop sources MPX modules and proprietary SSD modules from
@@ -128,7 +140,7 @@ export default function BlogMacPro2019StillWorthIt() {
             page for current parts inventory.
           </p>
 
-          <h2>Mac Pro 2019 vs Mac Studio M3 Ultra - when each wins</h2>
+          <h2 id="vs-studio-ultra">Mac Pro 2019 vs Mac Studio M3 Ultra - when each wins</h2>
           <BlogPriceTable
             caption="Mac Pro 2019 vs Mac Studio M3 Ultra - workflow verdict"
             headers={["Workflow", "Winner", "Why"]}
@@ -146,7 +158,7 @@ export default function BlogMacPro2019StillWorthIt() {
             ]}
           />
 
-          <h2>Resale outlook (will hold value)</h2>
+          <h2 id="resale-outlook">Resale outlook (will hold value)</h2>
           <p>
             Because Apple discontinued the Mac Pro line and there is no successor with PCIe slots, the
             2019 Mac Pro is becoming a niche collector's item. Studios with HDX or RED-Rocket

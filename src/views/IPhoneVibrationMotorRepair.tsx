@@ -5,11 +5,11 @@ export default function IPhoneVibrationMotorRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone Vibration Motor Repair Dubai - Taptic Engine | AED 350"
-      seoDescription="iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. AED 350, 1 day, 12-month warranty. Call 055 741 3706."
+      seoDescription="iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. AED 350, 1 day, warranty of up to 12 months. Call 055 741 3706."
       path="/iphone-vibration-motor-repair-dubai"
       eyebrow="iPhone Taptic Engine"
       h1="iPhone Vibration Motor Repair Dubai - Taptic Engine"
-      subtitle="No buzz on calls, no haptic on keyboard taps, or a worrying rattle when you shake the phone - that's the Taptic Engine. AED 350, 1 day, 12-month warranty."
+      subtitle="No buzz on calls, no haptic on keyboard taps, or a worrying rattle when you shake the phone - that's the Taptic Engine. AED 350, 1 day, warranty of up to 12 months."
       startingPrice={350}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone vibration / Taptic Engine is broken - model:"
@@ -19,14 +19,14 @@ export default function IPhoneVibrationMotorRepair() {
         { name: "Taptic Engine",     path: "/iphone-vibration-motor-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone Taptic and haptic systems" }}
-      serviceName="iPhone Taptic Engine Replacement"
+      serviceName="iPhone Taptic Engine Replacement Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The Taptic Engine</strong> in every iPhone since the 7 is a precision linear actuator - far more sophisticated than the spinning eccentric motors of older phones. It produces every vibration, every keyboard tap haptic, every Apple Pay confirmation buzz. When it fails you don't just lose vibration on calls; you lose the entire feel of iOS.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Common failure modes: dropped phone shakes the magnet loose (you'll hear a rattle), water damage corrodes the coil contacts, or the unit simply ages out after 5+ years of constant use. Replacement is a 45-minute job with the phone open from the bottom. AED 350, including a 12-month warranty.
+            Common failure modes: dropped phone shakes the magnet loose (you'll hear a rattle), water damage corrodes the coil contacts, or the unit simply ages out after 5+ years of constant use. Replacement is a 45-minute job with the phone open from the bottom. AED 350, including a warranty of up to 12 months.
           </p>
         </>
       }
@@ -44,7 +44,7 @@ export default function IPhoneVibrationMotorRepair() {
         { title: "Settings + diagnostic test", body: "First we confirm Settings → Sounds & Haptics is on (about 8% of cases are software). Then run iOS Taptic test." },
         { title: "Open from bottom",           body: "Battery disconnect first, Taptic Engine sits next to it on the lower edge - direct access without lifting the screen." },
         { title: "Replace and align",          body: "OEM-grade Taptic Engine installed, screws torqued to spec to avoid vibration transfer to the chassis." },
-        { title: "Test every haptic",          body: "Ringtone, keyboard, Apple Pay, system haptic. 12-month warranty card with the phone." },
+        { title: "Test every haptic",          body: "Ringtone, keyboard, Apple Pay, system haptic. Warranty up to 12 months card with the phone." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

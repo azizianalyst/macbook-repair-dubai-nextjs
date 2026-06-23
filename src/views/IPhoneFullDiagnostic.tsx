@@ -19,7 +19,7 @@ export default function IPhoneFullDiagnostic() {
         { name: "Free Diagnostic", path: "/iphone-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 15, specialisation: "iPhone diagnostics across all models" }}
-      serviceName="iPhone Free Full Diagnostic"
+      serviceName="iPhone Free Full Diagnostic Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -49,7 +49,7 @@ export default function IPhoneFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free of charge - no warranty needed.",
-        "Any repair you book afterwards carries our standard 12-month warranty.",
+        "Any repair you book afterwards carries our standard warranty of up to 12 months.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

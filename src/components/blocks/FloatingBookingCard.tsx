@@ -42,9 +42,9 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
       </div>
 
       <ul className={cn("text-[13px] space-y-1", dark ? "text-text-muted" : "text-text-muted")}>
-        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> 12-month written warranty</li>
-        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> No fix, no charge</li>
-        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-success" aria-hidden /> Free pickup &amp; delivery</li>
+        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-accent" aria-hidden /> written warranty up to 12 months</li>
+        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-accent" aria-hidden /> No fix, no charge</li>
+        <li className="flex items-center gap-2"><ShieldCheck size={14} className="text-accent" aria-hidden /> Free pickup &amp; delivery</li>
       </ul>
 
       <div className="flex flex-col gap-sm">

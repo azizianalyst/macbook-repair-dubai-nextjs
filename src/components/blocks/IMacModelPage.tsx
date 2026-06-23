@@ -5,7 +5,9 @@
 //
 // Usage: <IMacModelPage slug="imac-24-m1-2021-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import imacModels from "@/content/imac-models.json";
 
 type Pricing = {
@@ -108,19 +110,7 @@ function worthRepairingVerdict(m: IMacModel): { headline: string; body: string }
 }
 
 function pickRelatedModels(slug: string): IMacModel[] {
-  const me = ALL_MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  // Circular window over the same family so inbound links distribute evenly and
-  // no model (incl. the newest at the tail) is orphaned.
-  const fam = ALL_MODELS.filter((m) => m.family === me.family);
-  const idx = fam.findIndex((m) => m.slug === slug);
-  const picks: IMacModel[] = [];
-  for (let k = 1; k <= 4 && k < fam.length; k++) picks.push(fam[(idx + k) % fam.length]);
-  if (picks.length < 4) {
-    const others = ALL_MODELS.filter((m) => m.family !== me.family && m.slug !== slug);
-    picks.push(...others.slice(0, 4 - picks.length));
-  }
-  return picks;
+  return relatedModels(slug, ALL_MODELS, (m) => m.family);
 }
 
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
@@ -260,7 +250,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       a: isPro
         ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take 5-7 days and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
-          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it for AED ${model.pricing.powerSupply ?? 500}, typically same-day to 2 days, with a 12-month warranty. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
+          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it for AED ${model.pricing.powerSupply ?? 500}, typically same-day to 2 days, with a warranty of up to 12 months. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
           : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Brick replacement same-day; in-chassis PSU is a 1-2 day job.`,
     },
     {
@@ -276,11 +266,11 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Screen AED ${model.pricing.screen}, logic board AED ${model.pricing.logicBoard}${model.pricing.powerSupply ? `, PSU AED ${model.pricing.powerSupply}` : ""}. 12-month warranty.`}
+      seoDescription={`${model.name} repair Dubai. Screen AED ${model.pricing.screen}, logic board AED ${model.pricing.logicBoard}${model.pricing.powerSupply ? `, PSU AED ${model.pricing.powerSupply}` : ""}. Warranty up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Logic Board, Power Supply & Upgrades`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup with proper iMac transport across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup with proper iMac transport across Dubai.`}
       startingPrice={startingPrice}
       timeline={isPro ? "Standard repairs 2-3 days · GPU/CPU 5-7 days (parts)" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
@@ -300,10 +290,10 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup with proper transport, 12-month written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup with proper transport, written warranty up to 12 months.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
@@ -316,15 +306,15 @@ export default function IMacModelPage({ slug }: { slug: string }) {
             {model.lastMacOS && <li>• <strong>Latest macOS supported:</strong> {model.lastMacOS}</li>}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-alt">
                 <tr className="text-left">
@@ -347,7 +337,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
           {isAppleSilicon && (
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
@@ -391,7 +381,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
               ? `As Apple's current iMac, parts come through authorised channels. Power brick is same-day; logic board takes 3-5 days. ${model.timelineNotes}`
@@ -402,16 +392,16 @@ export default function IMacModelPage({ slug }: { slug: string }) {
                   : `Parts for the ${model.shortName} are widely available. ${model.timelineNotes}`}
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
           <div className="bg-bg-alt border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Our honest take on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Other iMac models we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other iMac models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link
@@ -452,7 +442,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickIMacReviewers(slug)}
       related={[
-        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, 12-month warranty." },
+        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, warranty of up to 12 months." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
         { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. AED 500." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },

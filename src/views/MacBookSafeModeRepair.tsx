@@ -19,7 +19,7 @@ export default function MacBookSafeModeRepair() {
         { name: "Safe Mode Diagnostics", path: "/macbook-safe-mode-repair-dubai" },
       ]}
       technician={{ name: "Abdul Aziz", years: 21, specialisation: "macOS diagnostics and repair" }}
-      serviceName="MacBook Safe Mode Diagnostics and Repair"
+      serviceName="MacBook Safe Mode Diagnostics and Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

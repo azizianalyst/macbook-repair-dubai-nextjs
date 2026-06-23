@@ -1,5 +1,6 @@
 "use client";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { Link } from "@/lib/router-compat";
 
 export default function MacBookOverheatingFix() {
   return (
@@ -19,14 +20,15 @@ export default function MacBookOverheatingFix() {
         { name: "Overheating Fix", path: "/macbook-overheating-fix-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "MacBook thermal & component repair" }}
-      serviceName="MacBook Overheating Fix"
+      serviceName="MacBook Overheating Fix Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook overheating in Dubai</strong> is rarely a hardware fault - it's almost always dust accumulation in the fan blades and dried-out thermal paste between the CPU and the heatsink. The Dubai climate (fine sand carried indoors, high ambient temperature, AC running constantly) is brutal on MacBook cooling. The good news: a full thermal service brings sustained-load temperatures down 15-25°C and restores normal fan behaviour. Same day, AED 300.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Most common on 2016-2019 Intel MacBook Pros (the i7/i9 quad-core models that ran hot from new). Apple Silicon MacBooks throttle less aggressively but still benefit from a clean and re-paste after 3-4 years.
+            Most common on 2016-2019 Intel MacBook Pros (the i7/i9 quad-core models that ran hot from new). Apple Silicon MacBooks throttle less aggressively but still benefit from a clean and re-paste after 3-4 years. See also:{" "}
+            <Link to="/why-does-my-macbook-air-m4-heat-up-so-quickly" className="text-accent underline underline-offset-2">why the MacBook Air M4 heats up</Link>.
           </p>
         </>
       }
@@ -59,13 +61,21 @@ export default function MacBookOverheatingFix() {
         { q: "Is overheating ever a sign of something worse?", a: "Yes - failing fan motor, swollen battery pressing on the heatsink, or in rare cases a logic board fault. We diagnose first; if it's deeper than dust + paste, we tell you and quote separately. No surprise bills." },
         { q: "Can you do this same day?", a: "Yes. Drop in by 1 PM, collect by 6 PM. Or WhatsApp for free pickup and we run it within the same day." },
         { q: "Do you clean the keyboard at the same time?", a: "Yes - included free with the thermal service. Compressed air through the keyboard, no extra charge." },
+        { q: "How often should thermal paste be replaced?", a: "Roughly every two to three years on Intel MacBooks, sometimes sooner in Dubai's heat. If the machine is older than that and the fans have got noticeably louder, it's due. We've redone plenty that hadn't been touched since new. Free diagnosis confirms it, full thermal service from AED 300, same day." },
+        { q: "Why does my MacBook overheat more in Dubai?", a: "Ambient heat is the difference. A Mac that idles fine in a cold climate has far less thermal headroom in a Dubai summer, so dust and dried paste show up as fans roaring and throttling much faster here. A clean and re-paste buys back that margin. Free check at Concord Tower, Media City." },
+        { q: "Is replacing the thermal paste safe for my MacBook?", a: "It is when done properly. The risk is using too much paste or damaging the heatsink mounting, which is why a careful job matters. We torque the heatsink back to spec and your data stays untouched throughout." },
       ]}
       reviewNames={["Saeed Alam", "Anatoliy Tarasenko", "Daniel Vyskoc"]}
       related={[
-        { label: "MacBook Repair Hub",          href: "/",            description: "All MacBook services in one place." },
+        { label: "MacBook Fan Cleaning",        href: "/mac-fan-cleaning-dubai", description: "Dust-choked fans cause the same overheating. Often done together." },
         { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen batteries cause heat. From AED 450." },
         { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai", description: "Component-level work when thermal isn't enough." },
+        { label: "MacBook Air M4 overheating", href: "/why-does-my-macbook-air-m4-heat-up-so-quickly", description: "Why the MacBook Air M4 heats up quickly and what to do." },
       ]}
+      quickAnswer={{
+        question: "How much does a MacBook overheating fix cost in Dubai?",
+        answer: "A full MacBook thermal service starts at AED 300 at MacBook Repair Dubai in Concord Tower, Media City. It includes stripping the dried thermal compound, reapplying premium paste, and cleaning both fans, with a free diagnosis. Most jobs are done the same day.",
+      }}
       blogLink={{ label: "Why your MacBook overheats in Dubai (and what actually fixes it)", href: "/blog/protect-macbook-dubai-summer-heat" }}
     />
   );

@@ -19,7 +19,7 @@ export default function IMacOsReinstall() {
         { name: "macOS Reinstall",     path: "/imac-os-reinstall-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS installs and migrations" }}
-      serviceName="iMac macOS Reinstall"
+      serviceName="iMac macOS Reinstall Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -63,6 +63,8 @@ export default function IMacOsReinstall() {
         { label: "iMac Virus Removal",     href: "/imac-virus-removal-dubai",     description: "If malware is the reason for the reinstall." },
         { label: "iMac SSD Upgrade",       href: "/imac-ssd-upgrade-dubai",       description: "Pair with SSD upgrade for biggest speed gain." },
         { label: "iMac Full Diagnostic",   href: "/imac-full-diagnostic-dubai",   description: "Free check before deciding on a reinstall." },
+        { label: "MacBook macOS Reinstall", href: "/macos-reinstall-dubai",       description: "Same clean-install service for a MacBook." },
+        { label: "Mac mini/Studio/Pro Reinstall", href: "/mac-os-reinstall-dubai", description: "Desktop Mac reinstall on the same bench." },
       ]}
       blogLink={{ label: "Last supported macOS for every iMac year - the honest list", href: "/blog/best-imac-for-business-dubai" }}
     />

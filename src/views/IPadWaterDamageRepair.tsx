@@ -15,7 +15,7 @@ export default function IPadWaterDamageRepair() {
       timeline="1-3 days"
       whatsappPrefill="Hi, my iPad got wet - model:"
       technician={{ name: "Shafeeq", years: 12, specialisation: "iPad board-level water damage" }}
-      serviceName="iPad Water Damage Repair"
+      serviceName="iPad Water Damage Repair Dubai"
       pricingRows={[
         { model: "Diagnosis + ultrasonic clean (no parts)",   price: 450,  timeline: "1 day" },
         { model: "Clean + battery replacement",               price: 800,  timeline: "1-2 days" },

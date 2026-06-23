@@ -19,7 +19,7 @@ export default function MacPortRepair() {
         { name: "Port Repair",     path: "/mac-port-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac desktop board-level port work" }}
-      serviceName="Mac Mini, Studio and Pro Port Repair"
+      serviceName="Mac Mini, Studio and Pro Port Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -46,7 +46,7 @@ export default function MacPortRepair() {
       ]}
       warrantyDays={365}
       warrantyBullets={[
-        "12-month warranty on the port replacement work.",
+        "warranty of up to 12 months on the port replacement work.",
         "Free clean is covered for 30 days - same debris won't bother you twice.",
         "Honest 'come back if the new port acts up' policy.",
       ]}

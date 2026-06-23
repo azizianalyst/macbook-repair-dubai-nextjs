@@ -14,7 +14,7 @@ export default function IPhoneSoftwareFix() {
       timeline="Same day"
       whatsappPrefill="iPhone software issue - model + what happened: "
       technician={{ name: "Usman", years: 12, specialisation: "iOS recovery & DFU" }}
-      serviceName="iPhone Software Repair"
+      serviceName="iPhone Software Repair Dubai"
       pricingRows={[
         { model: "Soft restart + diagnosis (no work needed)",   price: 0,   timeline: "Same day" },
         { model: "Recovery / DFU restore (data preserved)",     price: 200, timeline: "Same day" },

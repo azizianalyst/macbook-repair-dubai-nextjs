@@ -38,43 +38,47 @@ export function ConsentBanner() {
 
   if (!visible) return null;
 
+  // Tell the QuickHelp launcher (which hides itself while this banner is up) that the
+  // first-visit decision is made, so it can reappear immediately without a reload.
+  const announce = () => window.dispatchEvent(new Event("mrd-consent-change"));
   const accept = () => {
     writeConsent("accept");
     initAnalytics();
     setVisible(false);
+    announce();
   };
   const reject = () => {
     writeConsent("reject");
     setVisible(false);
+    announce();
   };
 
   return (
     <div
       role="region"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-14 md:bottom-0 z-50 border-t border-border bg-background/95 px-4 py-4 shadow-lg backdrop-blur"
+      // On mobile, lift the sheet clear of the sticky Call/WhatsApp bar (bottom-[60px] vs the bar's
+      // ~56px) and round + shadow the top so it reads as a distinct layer, not a second stacked bar.
+      // One-line copy + py-3 keeps the footprint small so it occludes far less of the viewport.
+      className="fixed inset-x-0 bottom-[60px] md:bottom-0 z-[70] rounded-t-2xl border-t border-border bg-background/95 px-4 py-3 shadow-2xl backdrop-blur md:rounded-none"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-muted-foreground">
-          We use anonymised Google Analytics (IP-anonymised, no advertising or cross-site
-          trackers) to see how this site is used. It loads only if you accept. Read our{" "}
-          <a href="/cookies" className="underline hover:text-foreground">
-            Cookie Policy
-          </a>
-          .
+      <div className="mx-auto flex max-w-5xl flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-[13px] leading-snug text-muted-foreground">
+          We use anonymised analytics (no ads, no cross-site tracking) — loaded only if you accept.{" "}
+          <a href="/cookies/" className="underline hover:text-foreground">Cookie Policy</a>.
         </p>
         <div className="flex shrink-0 gap-3">
           <button
             onClick={reject}
-            className="rounded-full border border-border bg-card px-5 py-2 text-sm font-medium hover:bg-muted"
+            className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full border border-border bg-card px-4 text-sm font-medium hover:bg-muted sm:flex-none"
           >
-            Reject analytics
+            Reject
           </button>
           <button
             onClick={accept}
-            className="rounded-full border border-border bg-card px-5 py-2 text-sm font-medium hover:bg-muted"
+            className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full border border-border bg-card px-4 text-sm font-medium hover:bg-muted sm:flex-none"
           >
-            Accept analytics
+            Accept
           </button>
         </div>
       </div>

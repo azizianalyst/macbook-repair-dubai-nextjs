@@ -11,7 +11,8 @@ const CHILD_SITEMAPS = [
   "guides.xml",
   "general.xml",
   "categories.xml",
-  "tags.xml",
+  // tags.xml removed: tag listing pages are noindex (thin content) — keeping them
+  // out of the sitemap index frees crawl budget for money pages.
   "images.xml",
 ];
 

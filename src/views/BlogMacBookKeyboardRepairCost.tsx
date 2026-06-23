@@ -9,6 +9,16 @@ export default function BlogMacBookKeyboardRepairCost() {
       seoTitle="MacBook Keyboard Repair Cost by Model: Dubai 2026"
       seoDescription="Butterfly top-case AED 700, Magic Keyboard single key AED 150. Full MacBook keyboard repair pricing by year and model, plus liquid spills and DIY risks."
       path="/blog/macbook-keyboard-repair-cost-by-model"
+      wide
+      toc={[
+        { id: "keyboard-price-list", label: "Keyboard price list" },
+        { id: "butterfly-problem", label: "Butterfly keyboard problem" },
+        { id: "service-program", label: "Apple Service Program" },
+        { id: "magic-vs-butterfly", label: "Magic vs Butterfly" },
+        { id: "single-key-replacement", label: "Single key replacement" },
+        { id: "spilled-liquid", label: "Spilled liquid action" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · MacBook"
       h1="MacBook Keyboard Repair Cost - Every Model 2026"
       hook="Butterfly keyboard (2015-2019)? Top-case swap, AED 700. Magic Keyboard (2019+)? Single key replacement, AED 150. The model year decides everything."
@@ -17,10 +27,10 @@ export default function BlogMacBookKeyboardRepairCost() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={10}
-      featuredImageAlt="MacBook keyboard repair Dubai - Magic Keyboard scissor mechanism replacement"
+      featuredImageAlt="MacBook Keyboard Repair Cost. MacBook keyboard repair Dubai - Magic Keyboard scissor mechanism replacement"
       body={
         <>
-          <h2>The full MacBook keyboard price list - April 2026</h2>
+          <h2 id="keyboard-price-list">MacBook Keyboard Repair Cost. The full MacBook keyboard price list - April 2026</h2>
           <BlogPriceTable
             caption="MacBook keyboard repair pricing - April 2026"
             rows={[
@@ -35,7 +45,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             ]}
           />
 
-          <h2>Butterfly keyboard problem explained</h2>
+          <h2 id="butterfly-problem">Butterfly keyboard problem explained</h2>
           <p>
             Apple's "butterfly" mechanism shipped from 2015 (12″ MacBook) through 2019 (last 13″
             MacBook Pro). It used a scissor-style hinge with a single butterfly-shaped piece for a
@@ -56,7 +66,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             includes the battery and trackpad). We do the same.
           </p>
 
-          <h2>Apple's Keyboard Service Program (still active for some models)</h2>
+          <h2 id="service-program">Apple's Keyboard Service Program (still active for some models)</h2>
           <p>
             Apple ran the "Keyboard Service Program for MacBook, MacBook Air, and MacBook Pro" from
             2018 to 2022. It covered free repair of butterfly-keyboard models for 4 years from the
@@ -70,7 +80,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             customers asking Apple is about 1 in 4 - not great, but the question is free.
           </p>
 
-          <h2>Magic Keyboard (2019+) vs Butterfly - repair difference</h2>
+          <h2 id="magic-vs-butterfly">Magic Keyboard (2019+) vs Butterfly - repair difference</h2>
           <p>
             The Magic Keyboard returned to a true scissor mechanism with 1mm of travel (vs 0.5mm
             on butterfly). The keycap, scissor mechanism, and membrane are <strong>three separate
@@ -84,7 +94,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             job.
           </p>
 
-          <h2>Single key replacement - when possible</h2>
+          <h2 id="single-key-replacement">Single key replacement - when possible</h2>
           <p>Single key replacement works when:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>The MacBook is a 2019 or newer Magic Keyboard model</li>
@@ -97,7 +107,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             membrane is torn or the LED is dead, it becomes a top-case job (AED 750-950).
           </p>
 
-          <h2>Spilled liquid on keyboard - emergency action</h2>
+          <h2 id="spilled-liquid">Spilled liquid on keyboard - emergency action</h2>
           <p>This sequence buys you the best chance of a single-key fix instead of a top-case swap:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Power off in 10 seconds. Hold the power button.</li>
@@ -112,7 +122,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             corrodes the underlying membrane within 48 hours.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What to do next</h2>
           <p>
             <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair service page

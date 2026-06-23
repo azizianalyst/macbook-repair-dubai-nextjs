@@ -5,7 +5,9 @@
 //
 // Usage: <MacBookModelPage slug="macbook-air-13-m1-2020-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import airModels from "@/content/macbook-air-models.json";
 import proModels from "@/content/macbook-pro-models.json";
 
@@ -111,19 +113,7 @@ function worthRepairingVerdict(m: MacBookModel): { headline: string; body: strin
 }
 
 function pickRelatedModels(slug: string): MacBookModel[] {
-  const me = ALL_MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  // Circular window over the same family so inbound links distribute evenly and
-  // no model (incl. the newest at the tail) is orphaned.
-  const fam = ALL_MODELS.filter((m) => m.family === me.family);
-  const idx = fam.findIndex((m) => m.slug === slug);
-  const picks: MacBookModel[] = [];
-  for (let k = 1; k <= 4 && k < fam.length; k++) picks.push(fam[(idx + k) % fam.length]);
-  if (picks.length < 4) {
-    const others = ALL_MODELS.filter((m) => m.family !== me.family && m.slug !== slug);
-    picks.push(...others.slice(0, 4 - picks.length));
-  }
-  return picks;
+  return relatedModels(slug, ALL_MODELS, (m) => m.family);
 }
 
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
@@ -238,7 +228,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
         ? `Is the butterfly keyboard on my ${model.name} covered by an Apple repair program?`
         : `How long does battery replacement on the ${model.name} take?`,
       a: isButterfly
-        ? `Yes - Apple's Keyboard Service Program covers 2018 and 2019 MacBook Air models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap for AED ${model.pricing.topCase}.`
+        ? `Yes - Apple's Keyboard Service Program covers 2015-2019 MacBook models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap for AED ${model.pricing.topCase}.`
         : `Battery replacement on the ${model.name} is AED ${model.pricing.battery} and we typically complete it the same day. We use cells with verified cycle counts and reseal the chassis properly.`,
     },
     {
@@ -254,11 +244,11 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, keyboard AED ${model.pricing.keyboard}. 12-month warranty.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, keyboard AED ${model.pricing.keyboard}. Up to 12-month warranty.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Keyboard & Logic Board`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. 12-month written warranty. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} From AED ${startingPrice}. Up to written warranty up to 12 months. Free pickup across Dubai.`}
       startingPrice={startingPrice}
       timeline={isAppleSilicon && model.currentInLineup ? "Same-day battery · 2-5 days specialty parts" : "Same-day to 3 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -278,10 +268,10 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 12-month written warranty.
+            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
@@ -292,15 +282,15 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
             <li>• <strong>Wireless:</strong> {model.wirelessChip}</li>
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-alt">
                 <tr className="text-left">
@@ -323,13 +313,13 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
           {isAppleSilicon && (
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
               <h3 className="text-[18px] font-bold mb-sm">Can we upgrade the RAM or SSD?</h3>
               <p className="text-[15px] mb-sm">
-                <strong>No.</strong> Apple Silicon MacBook Air models (M1 through M5) have SoC-integrated RAM and a soldered SSD. The chip, RAM, and storage are one package on the logic board. Buy enough when you order - upgrading later is impossible.
+                <strong>No.</strong> Apple Silicon MacBooks (M1 through M5) have SoC-integrated RAM and a soldered SSD. The chip, RAM, and storage are one package on the logic board. Buy enough when you order - upgrading later is impossible.
               </p>
               <p className="text-[15px]">
                 For data recovery on a failed SSD, we offer chip-off recovery. Complex, expensive (AED 2,000+), but possible. <Link to="/macbook-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link>
@@ -339,9 +329,9 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
 
           {isButterfly && (
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
-              <h3 className="text-[18px] font-bold mb-sm">Intel MacBook Air - Apple's Keyboard Service Program</h3>
+              <h3 className="text-[18px] font-bold mb-sm">Intel {FAMILY_LABEL[model.family]} - Apple's Keyboard Service Program</h3>
               <p className="text-[15px] mb-sm">
-                Apple ran a Keyboard Service Program covering 2018 and 2019 MacBook Air models with butterfly keyboards for <strong>4 years from the original purchase date</strong>. If your keyboard fails and you're inside that window, Apple may still fix it free.
+                Apple ran a Keyboard Service Program covering 2015-2019 MacBook models with butterfly keyboards for <strong>4 years from the original purchase date</strong>. If your keyboard fails and you're inside that window, Apple may still fix it free.
               </p>
               <p className="text-[15px]">
                 We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap (AED {model.pricing.topCase}, 1 day).
@@ -349,7 +339,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
               ? `As Apple's current ${FAMILY_LABEL[model.family]}, parts come through authorised channels. Battery, MagSafe boards and ports are usually in stock same-day. Specialty items (logic board, full screen assembly) take 2-5 days. ${model.timelineNotes}`
@@ -358,16 +348,16 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 : `Parts for the ${model.shortName} are widely available. Screens, batteries, top-cases and ports are usually same-day to 2 days. ${model.timelineNotes}`}
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
           <div className="bg-bg-alt border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Our honest take on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Other {FAMILY_LABEL[model.family]} models we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other {FAMILY_LABEL[model.family]} models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link

@@ -19,7 +19,7 @@ export default function MacActivationLockUnlock() {
         { name: "Activation Lock & Firmware Unlock", path: "/mac-activation-lock-unlock-dubai" },
       ]}
       technician={{ name: "Usman", years: 12, specialisation: "Apple liaison & ownership recovery" }}
-      serviceName="Mac Activation Lock & Firmware Unlock Help"
+      serviceName="Mac Activation Lock & Firmware Unlock Help Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

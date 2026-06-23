@@ -5,7 +5,7 @@ export default function MacBookHingeRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Hinge Repair Dubai - AED 300 | Clutch & Lid Fix"
-      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, 12-month warranty. Call 055 741 3706."
+      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-hinge-repair-dubai"
       eyebrow="MacBook hinge repair"
       h1="MacBook Hinge & Clutch Repair Dubai"
@@ -19,11 +19,11 @@ export default function MacBookHingeRepair() {
         { name: "Hinge Repair",   path: "/macbook-hinge-repair-dubai" },
       ]}
       technician={{ name: "Shafiq", years: 21, specialisation: "MacBook chassis & hinge repair" }}
-      serviceName="MacBook Hinge Repair"
+      serviceName="MacBook Hinge Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a 12-month warranty.
+            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We carry hinge hardware for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 Retina Pros where seized hinges are common.

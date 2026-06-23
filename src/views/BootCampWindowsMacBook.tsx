@@ -19,7 +19,7 @@ export default function BootCampWindowsMacBook() {
         { name: "Boot Camp Setup", path: "/boot-camp-windows-macbook-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "Mac OS / Windows dual-boot & virtualisation" }}
-      serviceName="Boot Camp / Windows on Mac Setup"
+      serviceName="Boot Camp / Windows on Mac Setup Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

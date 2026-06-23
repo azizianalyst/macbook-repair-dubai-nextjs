@@ -5,7 +5,7 @@ export default function IPadHomeButtonRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPad Home Button Repair Dubai - AED 250 | iPad 9th Gen and Earlier"
-      seoDescription="iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. AED 250, 1 day, 12-month warranty."
+      seoDescription="iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. AED 250, 1 day, warranty of up to 12 months."
       path="/ipad-home-button-repair-dubai"
       eyebrow="iPad home button"
       h1="iPad Home Button Repair Dubai"
@@ -19,7 +19,7 @@ export default function IPadHomeButtonRepair() {
         { name: "Home Button",  path: "/ipad-home-button-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad mechanical and Touch ID repair" }}
-      serviceName="iPad Home Button Repair"
+      serviceName="iPad Home Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
@@ -43,7 +43,7 @@ export default function IPadHomeButtonRepair() {
         { title: "Diagnose mechanical vs flex",  body: "We test the original button under iPadOS diagnostics. Sometimes a software glitch mimics a hardware fault - ruled out free." },
         { title: "Open and replace",              body: "Screen lifted carefully (we don't tear the home-button flex - that's the rookie mistake on iPad 7/8/9)." },
         { title: "Calibrate + reseal",            body: "New button installed, click action calibrated. AssistiveTouch configured at no extra charge." },
-        { title: "Function test",                 body: "Press, double-press, triple-press all verified. 12-month warranty card with the iPad." },
+        { title: "Function test",                 body: "Press, double-press, triple-press all verified. Warranty up to 12 months card with the iPad." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

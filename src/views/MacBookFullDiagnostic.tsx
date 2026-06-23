@@ -19,7 +19,7 @@ export default function MacBookFullDiagnostic() {
         { name: "Full Diagnostic", path: "/macbook-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "MacBook diagnosis & QC" }}
-      serviceName="MacBook Full Diagnostic (Free)"
+      serviceName="MacBook Full Diagnostic (Free) Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">

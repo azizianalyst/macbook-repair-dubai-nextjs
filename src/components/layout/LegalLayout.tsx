@@ -31,7 +31,7 @@ export function LegalLayout({ title, intro, lastUpdated, pagePath, pageLabel, ch
       <section className="bg-bg-alt pt-[96px] pb-xl border-b border-border">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: pageLabel, path: pagePath }]} />
-          <p className="mono text-[12px] uppercase tracking-wider text-text-muted mb-sm">Legal</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-sm">Legal</p>
           <h1 className="max-w-[26ch] text-text">{title}</h1>
           <p className="mt-md max-w-[60ch] text-[18px] text-text-muted leading-relaxed">{intro}</p>
           <p className="mt-md flex items-center gap-1 text-[13px] mono text-text-faint">
@@ -41,11 +41,11 @@ export function LegalLayout({ title, intro, lastUpdated, pagePath, pageLabel, ch
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-2xl grid gap-2xl md:grid-cols-12">
-        <article className="md:col-span-8 prose-legal text-[16px] leading-relaxed text-text-muted [&_h2]:text-text [&_h3]:text-text [&_strong]:text-text [&_a]:text-accent">
+        <article className="md:col-span-9 prose-legal text-[16px] leading-relaxed text-text-muted [&_h2]:text-text [&_h3]:text-text [&_strong]:text-text [&_a]:text-accent">
           {children}
         </article>
 
-        <aside className="md:col-span-4">
+        <aside className="md:col-span-3">
           <div className="sticky top-[100px] bg-bg-card border border-border rounded-md p-lg">
             <h2 className="text-[16px] font-bold mb-sm text-text">Other policies</h2>
             <ul className="flex flex-col gap-1 text-[14px]">
@@ -58,8 +58,8 @@ export function LegalLayout({ title, intro, lastUpdated, pagePath, pageLabel, ch
             <hr className="my-md border-border" />
             <h2 className="text-[16px] font-bold mb-sm text-text">Questions?</h2>
             <p className="text-[14px] text-text-muted leading-relaxed">
-              Email <a href="mailto:info@macbook-repair-dubai.ae" className="text-accent hover:underline">info@macbook-repair-dubai.ae</a> or
-              WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">055 741 3706</a>.
+              Email <a href="mailto:info@macbook-repair-dubai.ae" className="text-accent underline underline-offset-2">info@macbook-repair-dubai.ae</a> or
+              WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">055 741 3706</a>.
             </p>
           </div>
         </aside>

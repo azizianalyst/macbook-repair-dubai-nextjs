@@ -51,3 +51,11 @@ scripts/topic-images/raw/
 
 # agent workspace
 .claude/seo-agency/
+.audit/
+
+# Deploy archives + local audit/image artifacts (never commit — multi-GB)
+*.zip
+/site-node.zip
+/mbr-deploy.zip
+.mobile-audit/
+scripts/home-images/raw/

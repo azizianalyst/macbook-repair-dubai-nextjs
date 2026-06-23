@@ -14,7 +14,7 @@ export default function IPhoneICloudUnlock() {
       timeline="3 days - 4 weeks (Apple-side)"
       whatsappPrefill="iCloud unlock help - model, IMEI, and what happened (forgotten Apple ID / inherited / second-hand): "
       technician={{ name: "Usman", years: 12, specialisation: "Apple liaison & ownership recovery" }}
-      serviceName="iPhone iCloud Unlock Help"
+      serviceName="iPhone iCloud Unlock Help Dubai"
       pricingRows={[
         { model: "Forgotten Apple ID - recovery via Apple",      price: 250, timeline: "1-7 days" },
         { model: "Inherited device - Digital Legacy / Apple Estate", price: 350, timeline: "2-4 weeks" },

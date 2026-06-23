@@ -9,6 +9,18 @@ export default function BlogBestMacForDevelopers() {
       seoTitle="Best Mac for Developers in Dubai 2026: Web, iOS, AI"
       seoDescription="Web dev: Mac Mini M4 (AED 2,599). iOS: MacBook Pro 14 M4 (AED 7,499). ML/AI: Mac Studio M3 Ultra. RAM sizing, monitors and dock setups per discipline."
       path="/blog/best-mac-for-developers-dubai-2026"
+      wide
+      toc={[
+        { id: "quick-answer-discipline", label: "Quick answer by discipline" },
+        { id: "web-dev", label: "Web dev" },
+        { id: "ios-dev", label: "iOS dev" },
+        { id: "android-dev", label: "Android dev" },
+        { id: "backend-data", label: "Backend / data eng" },
+        { id: "ml-ai", label: "ML / AI" },
+        { id: "game-dev", label: "Game dev" },
+        { id: "ram-sizing", label: "RAM sizing per discipline" },
+        { id: "external-monitors", label: "External monitor picks" },
+      ]}
       category="Buying guide · Developers"
       h1="Best Mac for Developers in Dubai 2026"
       hook="Web dev: Mac Mini M4. Mobile dev: MacBook Pro 14 M4. ML/AI: Mac Studio M3 Ultra. Here's why."
@@ -20,7 +32,7 @@ export default function BlogBestMacForDevelopers() {
       featuredImageAlt="Best Mac for developers in Dubai 2026 by discipline"
       body={
         <>
-          <h2>Quick answer - by discipline</h2>
+          <h2 id="quick-answer-discipline">Best Mac For Developers. Quick answer - by discipline</h2>
           <BlogPriceTable
             caption="Best Mac per developer discipline (April 2026)"
             headers={["Discipline", "Mac", "RAM", "UAE price"]}
@@ -37,7 +49,7 @@ export default function BlogBestMacForDevelopers() {
             ]}
           />
 
-          <h2>Web dev - Mac Mini M4 sweet spot</h2>
+          <h2 id="web-dev">Web dev - Mac Mini M4 sweet spot</h2>
           <p>
             For React / Vue / Svelte / Next.js / Nuxt with one or two projects open at a time, Mac
             Mini M4 base (AED 2,599, 16 GB) is the price-performance king. Concrete capacity:
@@ -55,7 +67,7 @@ export default function BlogBestMacForDevelopers() {
             massive Next.js projects building concurrently.
           </p>
 
-          <h2>iOS dev - MacBook Pro 14 M4 (Xcode + simulator)</h2>
+          <h2 id="ios-dev">iOS dev - MacBook Pro 14 M4 (Xcode + simulator)</h2>
           <p>
             iOS development is RAM-hungry due to Xcode + iPhone simulator + asset compilation.
             Recommended: MacBook Pro 14" M4 with 24 GB RAM and 1 TB SSD (AED 7,999):
@@ -73,7 +85,7 @@ export default function BlogBestMacForDevelopers() {
             (Air throttles on 5+ minute Xcode builds).
           </p>
 
-          <h2>Android dev - same machine, but RAM matters more</h2>
+          <h2 id="android-dev">Android dev - same machine, but RAM matters more</h2>
           <p>
             Android Studio + emulator is even more RAM-hungry than iOS dev:
           </p>
@@ -89,7 +101,7 @@ export default function BlogBestMacForDevelopers() {
             for desk-bound Android devs.
           </p>
 
-          <h2>Backend / data eng - Mac Mini Pro / Mac Studio</h2>
+          <h2 id="backend-data">Backend / data eng - Mac Mini Pro / Mac Studio</h2>
           <p>
             Backend and data engineering workloads benefit from many CPU cores (parallel test suites,
             Docker stacks, local Kubernetes via OrbStack / k3d, large database imports):
@@ -100,7 +112,7 @@ export default function BlogBestMacForDevelopers() {
             <li><strong>Mac Studio M4 Max 64 GB (AED 11,499)</strong>: Snowflake / BigQuery emulation locally, large Spark jobs, multi-database dev.</li>
           </ul>
 
-          <h2>ML/AI - Mac Studio M3 Ultra (256 GB territory)</h2>
+          <h2 id="ml-ai">ML/AI - Mac Studio M3 Ultra (256 GB territory)</h2>
           <p>
             Apple Silicon has become a serious local LLM platform thanks to unified memory and the
             MLX framework. Choose by model size you need to run:
@@ -127,7 +139,7 @@ export default function BlogBestMacForDevelopers() {
             for chip-level detail.
           </p>
 
-          <h2>Game dev - Mac Studio M4 Max</h2>
+          <h2 id="game-dev">Game dev - Mac Studio M4 Max</h2>
           <p>
             Unity / Unreal on macOS targeting iOS, macOS, or cross-platform builds. Mac Studio M4 Max
             64 GB (AED 11,499) is the sweet spot:
@@ -140,7 +152,7 @@ export default function BlogBestMacForDevelopers() {
             <li>MacBook Pro 16" M4 Max (AED 13,999) if you need portability with the same chip.</li>
           </ul>
 
-          <h2>RAM sizing per discipline</h2>
+          <h2 id="ram-sizing">RAM sizing per discipline</h2>
           <BlogPriceTable
             caption="RAM minimums by developer role (2026)"
             headers={["Role", "Bare minimum", "Comfortable", "Future-proof 5+ yrs"]}
@@ -156,7 +168,7 @@ export default function BlogBestMacForDevelopers() {
             ]}
           />
 
-          <h2>External monitor recommendations</h2>
+          <h2 id="external-monitors">External monitor recommendations</h2>
           <BlogPriceTable
             caption="Monitor recommendations for developer Macs (Dubai April 2026)"
             headers={["Monitor", "Price (AED)", "Best for", "Notes"]}

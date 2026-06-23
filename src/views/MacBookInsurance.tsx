@@ -9,6 +9,7 @@ import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
@@ -136,7 +137,7 @@ export default function MacBookInsurance() {
       <QuickAnswer
         tone="dark"
         question="Does MacBook Repair Dubai offer MacBook insurance in Dubai?"
-        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a 12-month written warranty. WhatsApp 055 741 3706 for a plan."
+        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a written warranty up to 12 months. WhatsApp 055 741 3706 for a plan."
       />
 
       <USPStrip tone="dark" />
@@ -237,7 +238,6 @@ export default function MacBookInsurance() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Get your MacBook insurance quote on WhatsApp</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
             Free device assessment, custom plans for individuals and companies. WhatsApp your MacBook model and we'll quote the annual fee per device - no fixed public price, no obligation until you approve.
@@ -257,6 +257,7 @@ export default function MacBookInsurance() {
         </div>
       </section>
       </div>
+      <RelatedArticles path="/macbook-insurance-dubai" />
     </PageShell>
   );
 }

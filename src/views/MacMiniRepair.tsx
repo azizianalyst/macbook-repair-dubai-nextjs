@@ -119,7 +119,7 @@ export default function MacMiniRepair() {
         subtitle="Is your Mac Mini running slowly, making strange noises, or not turning on? If you're facing performance issues or need Mac Mini troubleshooting, contact our expert repair service. Our trained technicians get your Mac Mini running like new in just a few minutes."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified Apple technicians</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Independent Apple specialists</span>
           <span>·</span>
           <span>OEM parts</span>
           <span>·</span>
@@ -131,7 +131,7 @@ export default function MacMiniRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac mini repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac mini — Intel, M1, M2, M2 Pro, M4 and M4 Pro — at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a 12-month written warranty, since 2004."
+        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months, since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -145,14 +145,7 @@ export default function MacMiniRepair() {
         ]} />
       </section>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-text-muted">
-          <span className="font-semibold text-text">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-border bg-bg-card rounded-md text-accent hover:bg-bg-alt transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+
 
       {/* Models + specs */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -165,7 +158,7 @@ export default function MacMiniRepair() {
         </div>
         <ul className="flex flex-wrap gap-2 mb-lg">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border bg-bg-card rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
         <div className="grid gap-md sm:grid-cols-2">
@@ -177,6 +170,30 @@ export default function MacMiniRepair() {
               </ul>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Repair by chip generation */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump to the chip-specific repair page for your Mac mini.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-mini-m1-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
+          <Link to="/mac-mini-m2-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M2 / M2 Pro (2023) →</Link>
+          <Link to="/mac-mini-m4-repair-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M4 / M4 Pro (2024) →</Link>
+        </div>
+      </section>
+
+      {/* Common Mac mini services */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac mini services</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Go straight to the fix you need.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-mini-not-turning-on-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Not Turning On →</Link>
+          <Link to="/mac-mini-no-display-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini No Display →</Link>
+          <Link to="/mac-mini-overheating-fix-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Overheating →</Link>
+          <Link to="/mac-mini-ssd-upgrade-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini SSD Upgrade →</Link>
+          <Link to="/mac-mini-data-recovery-dubai" className="px-3 py-1.5 border border-border bg-bg-card rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini Data Recovery →</Link>
         </div>
       </section>
 
@@ -245,7 +262,7 @@ export default function MacMiniRepair() {
           <div className="grid gap-md md:grid-cols-3">
             {TESTIMONIALS.map((t) => (
               <figure key={t.name} className="border border-border bg-bg-card rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
+                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
                 </div>
                 <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
@@ -276,7 +293,6 @@ export default function MacMiniRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book Your Discounted Mac Mini Repair Appointment</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             We fix all kinds of problems and offer same-day on-site help at a considerable discount, at a time and place that works for you. Our skilled, friendly technicians know Mac Minis inside out and explain everything. Contact us today for a free quote.

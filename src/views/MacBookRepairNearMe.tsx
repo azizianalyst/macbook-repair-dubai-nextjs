@@ -102,7 +102,7 @@ const PICKUP_STEPS = [
   { title: "Courier collects within the booked window", body: "The MacBook Repair Dubai courier arrives in a Toyota Innova marked with the workshop logo. ID-checked, insured, and trackable on WhatsApp." },
   { title: "Free diagnosis at the workshop", body: "Shafiq inspects the device the same day. A written quote lands in your WhatsApp within 4 hours of pickup." },
   { title: "Approve the quote, get the repair", body: "Reply 'approved' on WhatsApp. Most repairs finish the same day. You receive a 'ready' message when the device is back on the courier van." },
-  { title: "Free delivery, payment on arrival", body: "Courier returns the device to your door. Pay the courier in cash, by card on a portable terminal, or by bank transfer. 12-month warranty card included." },
+  { title: "Free delivery, payment on arrival", body: "Courier returns the device to your door. Pay the courier in cash, by card on a portable terminal, or by bank transfer. Warranty up to 12 months card included." },
 ];
 
 const FAQS = [
@@ -307,7 +307,7 @@ export default function MacBookRepairNearMe() {
           <Clock size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Best time to visit</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
-            Quietest: weekday afternoons 2-5 pm - walk in, sit down, repair starts immediately. Busiest: Saturday 11 am-1 pm and Monday 9-10 am. WhatsApp ahead during peaks for a guaranteed slot.
+            Quietest: weekday afternoons 2-5 pm, walk in, sit down, repair starts immediately. Busiest: Saturday 11 am-1 pm and Monday 9-10 am. WhatsApp ahead during peaks for a guaranteed slot.
           </p>
         </article>
       </section>
@@ -327,26 +327,26 @@ export default function MacBookRepairNearMe() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border bg-bg-card rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">Book a free pickup in 30 seconds</h2>
-          <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Send your area and the MacBook model on WhatsApp. Pickup window confirmed within 4 minutes.
-          </p>
-          <div className="flex flex-wrap gap-sm">
+      <section className="mt-3xl" style={{ background: "#2C3137" }}>
+        <div className="mx-auto max-w-content px-5 md:px-6 py-[56px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-md">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-1">Free pickup across Dubai</p>
+            <h2 className="text-white text-[26px] md:text-[32px] font-bold leading-tight max-w-[24ch]">Book a free pickup in 30 seconds</h2>
+            <p className="text-on-primary-muted text-[16px] max-w-[60ch] leading-relaxed mt-2">
+              Send your area and the MacBook model on WhatsApp. Pickup window confirmed within 4 minutes.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
               <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Book free pickup
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild variant="secondary" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>
             </Button>
-          </div>
           </div>
         </div>
       </section>

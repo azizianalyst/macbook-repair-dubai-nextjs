@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Full-width layout: raise container from 1180px → 1400px */
+.max-w-content { max-width: 1400px !important; }
+
 @layer base {
   * { @apply border-border; }
 

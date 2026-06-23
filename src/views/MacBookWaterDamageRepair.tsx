@@ -24,13 +24,13 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
 
 const PRICING: PricingRow[] = [
-  { model: "Standard ultrasonic clean (no board damage)",   price: 700,  timeline: "1-2 days" },
+  { model: "Standard ultrasonic clean (no board damage)",   price: 299,  timeline: "1-2 days" },
   { model: "Clean + corroded keyboard membrane swap",       price: 950,  timeline: "2-3 days" },
   { model: "Clean + battery swap (swelling from liquid)",   price: 1050, timeline: "2 days"   },
   { model: "Clean + logic board component repair",          price: 1200, timeline: "3-5 days" },
   { model: "Salt-water (beach) damage - full strip + clean", price: 1100, timeline: "3 days"  },
   { model: "Sugar drink (juice / soda / coffee with sugar)", price: 850,  timeline: "2-3 days" },
-  { model: "Pure water (clean spill, fast response)",        price: 700,  timeline: "1-2 days" },
+  { model: "Pure water (clean spill, fast response)",        price: 299,  timeline: "1-2 days" },
   { model: "Logic board unrecoverable - data recovery only", price: 800,  timeline: "3-7 days" },
 ];
 
@@ -50,7 +50,7 @@ const FIRST_24_HOURS = [
   { dont: "DON'T use a hairdryer or oven",
     why: "Heat above 50 °C warps the logic board, melts adhesives, and damages the LCD. Heat does not reverse corrosion." },
   { dont: "DON'T wait \"a few days to see\"",
-    why: "Corrosion is exponential. A board recoverable on day 1 for AED 700 is often a write-off on day 7." },
+    why: "Corrosion is exponential. A board recoverable on day 1 for AED 299 is often a write-off on day 7." },
 ];
 
 const PROCESS = [
@@ -65,12 +65,12 @@ const PROCESS = [
   { title: "48-hour drying + bench test",
     body: "Drying cabinet at 35 °C for 48 hours. Then powered up on bench supply with current monitor - looking for the corrosion-induced shorts that don't show in cold inspection." },
   { title: "Re-assembly + 7-day soak test + handover",
-    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with the 12-month warranty." },
+    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with the warranty of up to 12 months." },
 ];
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook water damage repair cost in Dubai?",
-    a: "Standard ultrasonic clean and corrosion removal: AED 700, 1 to 2 days. If the keyboard membrane is corroded: AED 950. If the battery has swollen: AED 1,050. If logic-board component-level repair is needed: up to AED 1,200. The exact price is confirmed on WhatsApp after the free strip-down assessment - never quoted blind." },
+    a: "Standard ultrasonic clean and corrosion removal: AED 299, 1 to 2 days. If the keyboard membrane is corroded: AED 950. If the battery has swollen: AED 1,050. If logic-board component-level repair is needed: up to AED 1,200. The exact price is confirmed on WhatsApp after the free strip-down assessment - never quoted blind." },
   { q: "What's the success rate for MacBook water damage repair?",
     a: "Honest numbers from the workshop's 2024-2025 logbook: 90% recoverable if the MacBook arrives within 24 hours of the spill and was not powered on after. 60% recoverable at 24 to 72 hours. 30% recoverable after a week. 10% recoverable if the customer tried to test it multiple times. No-fix-no-charge applies to the unrecoverable cases." },
   { q: "How quickly do I need to bring my MacBook in?",
@@ -78,7 +78,7 @@ const FAQS: FAQ[] = [
   { q: "Salt water damage from the beach - can it be fixed?",
     a: "Yes, but it's the worst case. Salt water (Persian Gulf) is far more conductive than fresh water and the chloride ions accelerate corrosion 10x. The workshop strips and ultrasonically cleans the MacBook within 60 minutes of arrival. AED 1,100 standard, 3 days, 75% recovery rate at under 24 hours." },
   { q: "What about coffee, juice, or other sugary drinks?",
-    a: "Sugar makes recovery harder than pure water - once the liquid dries, sugar forms a sticky conductive film across every chip. AED 850 (sugar) vs AED 700 (clean water). Same 1-2 day timeline if it arrives within 24 hours. The ultrasonic clean dissolves the sugar film completely; without it, sugar bridges keep shorting the board for months after it appears \"dry\"." },
+    a: "Sugar makes recovery harder than pure water - once the liquid dries, sugar forms a sticky conductive film across every chip. AED 850 (sugar) vs AED 299 (clean water). Same 1-2 day timeline if it arrives within 24 hours. The ultrasonic clean dissolves the sugar film completely; without it, sugar bridges keep shorting the board for months after it appears \"dry\"." },
   { q: "I already put my MacBook in rice - is it ruined?",
     a: "Not necessarily, but rice is folklore - it absorbs ambient humidity, not the liquid trapped inside. Meanwhile corrosion continues silently. Bring it in immediately. The workshop has recovered MacBooks that spent a week in rice, but the success rate is half what it would have been if it had come straight in." },
   { q: "Can you recover my data even if the MacBook is unrecoverable?",
@@ -98,7 +98,7 @@ const FAQS: FAQ[] = [
 const COMPARISON = [
   ["Repair window",          "1 to 5 days",                                  "10 to 21 business days, mail-in"],
   ["Free strip-down",        "Yes - written quote before paid work",         "AED 379 / AED 999 service fee upfront"],
-  ["Standard clean",         "AED 700",                                       "Often replaces full logic board AED 4,000+"],
+  ["Standard clean",         "AED 299",                                       "Often replaces full logic board AED 4,000+"],
   ["No-fix-no-charge",       "Yes",                                           "Service fee retained even if unrecoverable"],
   ["Same-day emergency pickup", "Yes",                                        "No, customer must courier"],
   ["Component-level repair", "Yes - board-chip-level replacement",           "Logic board swap only, no component repair"],
@@ -120,9 +120,9 @@ export default function MacBookWaterDamageRepair() {
 
   useSeo(
     {
-      title: "MacBook Water Damage Repair Dubai - From AED 700",
+      title: "MacBook Water Damage Repair Dubai - From AED 299",
       description:
-        "MacBook water damage repair Dubai from AED 700. 90% recovery rate under 24 hours. Salt water, coffee, juice. Same-hour emergency pickup. 055 741 3706.",
+        "MacBook water damage repair Dubai from AED 299. 90% recovery rate under 24 hours. Salt water, coffee, juice. Same-hour emergency pickup. 055 741 3706.",
       path: "/macbook-water-damage-repair-dubai",
     },
     [
@@ -130,7 +130,7 @@ export default function MacBookWaterDamageRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Water Damage Repair Dubai",
-        price: 700,
+        price: 299,
         timeline: "1 to 5 days",
         warranty: "P15D",
         url: "/macbook-water-damage-repair-dubai",
@@ -150,14 +150,14 @@ export default function MacBookWaterDamageRepair() {
         tone="dark"
         eyebrow="MacBook water damage repair"
         title="MacBook Water Damage Repair Dubai"
-        subtitle="Coffee spill, beach water, pool incident, leaking water bottle in the bag. Free same-hour pickup, ultrasonic clean from AED 700, 90% recovery rate at under 24 hours."
-        startingPrice={700}
+        subtitle="Coffee spill, beach water, pool incident, leaking water bottle in the bag. Free same-hour pickup, ultrasonic clean from AED 299, 90% recovery rate at under 24 hours."
+        startingPrice={299}
         timeline="1-5 days"
       >
         <PageMeta author="Shafiq Ahmed, Lead MacBook Technician" />
       </Hero>
 
-      <WarrantyBar tone="dark" />
+      <WarrantyBar tone="dark" warrantyDays={15} />
 
       {/* Emergency strip - full width, prominent */}
       <section className="bg-error/10 border-y-2 border-error/40">
@@ -185,7 +185,7 @@ export default function MacBookWaterDamageRepair() {
       </section>
 
       {/* Answer-first capsule (AEO/BLUF) */}
-      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook water damage repair", startingPrice: 700, timeline: "1 to 5 days" })} />
+      <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook water damage repair", startingPrice: 299, timeline: "1 to 5 days" })} />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <BreadcrumbTrail tone="dark" trail={[
@@ -200,7 +200,7 @@ export default function MacBookWaterDamageRepair() {
           {/* Intro */}
           <section>
             <LinkifyProse selfHref="/macbook-water-damage-repair-dubai"><p className="text-[17px] text-text leading-relaxed">
-              MacBook water damage repair in Dubai starts at AED 700 for a full ultrasonic clean and corrosion removal - most spills are recoverable if they arrive at the workshop within 24 hours and the MacBook was not powered on after the incident. The workshop's 2024-2025 logbook shows a 90% success rate at under 24 hours, dropping to 60% at 72 hours and 30% after a week. Coffee, juice, beach water, swimming pool water, leaking water bottles in laptop bags, melted ice from a drink - the workshop has rescued 1,800+ MacBooks since 2004. Same-hour emergency pickup across Dubai mainland. No fix, no charge - if the logic board is beyond component-level repair, you pay AED 0.
+              MacBook water damage repair in Dubai starts at AED 299 for a full ultrasonic clean and corrosion removal - most spills are recoverable if they arrive at the workshop within 24 hours and the MacBook was not powered on after the incident. The workshop's 2024-2025 logbook shows a 90% success rate at under 24 hours, dropping to 60% at 72 hours and 30% after a week. Coffee, juice, beach water, swimming pool water, leaking water bottles in laptop bags, melted ice from a drink - the workshop has rescued 1,800+ MacBooks since 2004. Same-hour emergency pickup across Dubai mainland. No fix, no charge - if the logic board is beyond component-level repair, you pay AED 0.
             </p></LinkifyProse>
           </section>
 
@@ -210,7 +210,7 @@ export default function MacBookWaterDamageRepair() {
               <AlertTriangle size={28} className="text-error" aria-hidden /> The first 24 hours - what to do, what to avoid
             </h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              Liquid damage is exponential. The actions in the first hour determine whether the MacBook costs AED 700 to recover or AED 0 because it's a write-off.
+              Liquid damage is exponential. The actions in the first hour determine whether the MacBook costs AED 299 to recover or AED 0 because it's a write-off.
             </p>
             <div className="grid gap-md md:grid-cols-2">
               {FIRST_24_HOURS.map((item, i) => (
@@ -235,7 +235,7 @@ export default function MacBookWaterDamageRepair() {
             <ul className="space-y-2 text-[14px] text-text-muted">
               <li><strong className="text-text">Beach water:</strong> AED 1,100, 3 days, 75% recovery at under 24 hours.</li>
               <li><strong className="text-text">Swimming pool water:</strong> AED 850, 2 days, 80% recovery at under 24 hours.</li>
-              <li><strong className="text-text">Tap water (clean spill):</strong> AED 700, 1-2 days, 90% recovery at under 24 hours.</li>
+              <li><strong className="text-text">Tap water (clean spill):</strong> AED 299, 1-2 days, 90% recovery at under 24 hours.</li>
               <li><strong className="text-text">Coffee, tea, juice (sugary):</strong> AED 850, 2-3 days. The sugar film must be ultrasonically dissolved or it bridges chips for months.</li>
             </ul>
           </section>
@@ -253,7 +253,7 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Pricing */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook water damage repair cost in Dubai</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook Water Damage Repair Dubai. Pricing Guide</h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
               Final price depends on what corroded. After the free strip-down, the WhatsApp quote shows exactly which parts need replacement and the expected total. No hidden fees, no diagnostic surcharge.
             </p>
@@ -267,7 +267,7 @@ export default function MacBookWaterDamageRepair() {
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">How long does water damage repair take?</h2>
             <div className="grid gap-md md:grid-cols-3">
-              <article className="bg-success/5 border border-success/30 rounded-md p-lg">
+              <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">1-2 days</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">Clean spill (water), under 24 hours from incident, no powered-on attempts. Ultrasonic clean + 48-hour dry + 7-day soak test.</p>
               </article>
@@ -284,7 +284,7 @@ export default function MacBookWaterDamageRepair() {
 
           <QuoteBand
             service="MacBook Water Damage Repair"
-            startingPrice={700}
+            startingPrice={299}
             timeline="1-5 days"
             whatsappMessage="EMERGENCY water damage. Spill type: . Hours since spill: . Powered on after? "
           />
@@ -302,7 +302,7 @@ export default function MacBookWaterDamageRepair() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="px-md py-sm font-semibold text-text">Under 24 hours, not powered on</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-text-muted">Best case - usually AED 700 standard clean.</td></tr>
+                  <tr><td className="px-md py-sm font-semibold text-text">Under 24 hours, not powered on</td><td className="px-md py-sm mono text-success">90%</td><td className="px-md py-sm text-text-muted">Best case - usually AED 299 standard clean.</td></tr>
                   <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold text-text">24 to 72 hours</td><td className="px-md py-sm mono text-text">60%</td><td className="px-md py-sm text-text-muted">Often needs component-level repair, AED 950 to AED 1,200.</td></tr>
                   <tr><td className="px-md py-sm font-semibold text-text">3 to 7 days</td><td className="px-md py-sm mono text-text">45%</td><td className="px-md py-sm text-text-muted">Corrosion has spread - multi-chip replacement common.</td></tr>
                   <tr className="bg-bg-alt"><td className="px-md py-sm font-semibold text-text">Over 1 week</td><td className="px-md py-sm mono text-text">30%</td><td className="px-md py-sm text-text-muted">Many traces unrecoverable - data recovery becomes the priority.</td></tr>
@@ -371,7 +371,7 @@ export default function MacBookWaterDamageRepair() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real water-damage reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
+              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 215+ →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>
@@ -423,7 +423,7 @@ export default function MacBookWaterDamageRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps — your device, then how to reach you. Free diagnosis, written quote, 12-month warranty.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-water-damage-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-water-damage-repair-dubai" />

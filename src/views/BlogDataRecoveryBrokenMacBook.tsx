@@ -9,6 +9,19 @@ export default function BlogDataRecoveryBrokenMacBook() {
       seoTitle="Data Recovery from a Broken MacBook in Dubai 2026"
       seoDescription="Recover data from a dead, water-damaged or board-failed MacBook in Dubai. AED 400-2,000 by damage type, with Apple Silicon, FileVault and T2 limits explained."
       path="/blog/data-recovery-broken-macbook-2026"
+      wide
+      toc={[
+        { id: "quick-answer-cost", label: "Quick answer: cost ranges" },
+        { id: "apple-silicon-harder", label: "Why Apple Silicon is harder" },
+        { id: "filevault", label: "FileVault challenges" },
+        { id: "t2-chip", label: "T2 chip recovery limits" },
+        { id: "water-damage", label: "Water-damaged drive recovery" },
+        { id: "logic-board", label: "Logic board failure recovery" },
+        { id: "chip-off", label: "SSD chip-off process" },
+        { id: "cost-expectations", label: "Cost expectations" },
+        { id: "time-required", label: "Time required" },
+        { id: "success-rates", label: "Success rates" },
+      ]}
       category="Repair guide · MacBook"
       h1="Data Recovery from Broken MacBook - Dubai 2026 Guide"
       hook="Mac dead, no backup? AED 400-2,000 to recover, depending on damage. Honest process, honest success rates."
@@ -17,10 +30,10 @@ export default function BlogDataRecoveryBrokenMacBook() {
       datePublished="2026-04-26"
       dateModified="2026-04-26"
       readingMinutes={11}
-      featuredImageAlt="Data recovery from broken MacBook Dubai workshop"
+      featuredImageAlt="Data Recovery Broken MacBook. Data recovery from broken MacBook Dubai workshop"
       body={
         <>
-          <h2>Quick answer (cost ranges)</h2>
+          <h2 id="quick-answer-cost">Data Recovery Broken MacBook. Quick answer (cost ranges)</h2>
           <BlogPriceTable
             caption="MacBook data recovery - Dubai pricing April 2026"
             headers={["Failure type", "Our price", "Success rate", "Turnaround"]}
@@ -40,7 +53,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             zero. Diagnostic is always free.
           </p>
 
-          <h2>Why recovery is harder on Apple Silicon</h2>
+          <h2 id="apple-silicon-harder">Why recovery is harder on Apple Silicon</h2>
           <p>
             Apple Silicon Macs (M1, M2, M3, M4, M5) and T2-equipped Intel Macs (2018-2020) cryptographically
             tie the SSD to the specific Mac's logic board:
@@ -56,7 +69,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             transplant the Secure Enclave chip itself. Both are board-level micro-soldering jobs.
           </p>
 
-          <h2>FileVault encryption challenges</h2>
+          <h2 id="filevault">FileVault encryption challenges</h2>
           <p>
             FileVault is a great security feature and a real obstacle to data recovery. If you have:
           </p>
@@ -70,7 +83,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             check the recovery key, screenshot it, store in a password manager.
           </p>
 
-          <h2>T2 chip recovery limits</h2>
+          <h2 id="t2-chip">T2 chip recovery limits</h2>
           <p>
             For 2018-2020 Intel Macs with the T2:
           </p>
@@ -80,7 +93,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             <li>Diagnostic step: we measure T2 voltages and bus signals first. Free check. If T2 is gone, we don't take your money.</li>
           </ul>
 
-          <h2>Water-damaged drive recovery</h2>
+          <h2 id="water-damage">Water-damaged drive recovery</h2>
           <p>
             Time matters. Recovery success drops sharply with corrosion:
           </p>
@@ -98,7 +111,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             if you've just had a spill - what you do in the first hour matters more than anything we do later.
           </p>
 
-          <h2>Logic board failure recovery</h2>
+          <h2 id="logic-board">Logic board failure recovery</h2>
           <p>
             Most "dead MacBook" cases are logic-board faults - one component on the board has failed
             (commonly: SMC controller, U7000 charging IC, GPU on Intel models, ISL chip on M1/M2). The
@@ -110,7 +123,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             <li><strong>Direct NAND extraction</strong>: For non-encrypted Macs only. We pull data via JTAG/SPI. Last resort.</li>
           </ol>
 
-          <h2>SSD chip-off process (last resort)</h2>
+          <h2 id="chip-off">SSD chip-off process (last resort)</h2>
           <p>
             When the logic board is too damaged for board-level repair:
           </p>
@@ -126,14 +139,14 @@ export default function BlogDataRecoveryBrokenMacBook() {
             Mac is already unrepairable.
           </p>
 
-          <h2>Cost expectations</h2>
+          <h2 id="cost-expectations">Cost expectations</h2>
           <p>
             Most cases land at AED 600-900. Pure water-damage cases run AED 1,200-1,800. Worst-case chip-off
             recovery on a fully encrypted Apple Silicon MacBook with no recovery key tops out at ~AED 2,000
             and may still fail (we'll tell you the realistic odds upfront).
           </p>
 
-          <h2>Time required</h2>
+          <h2 id="time-required">Time required</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Logic-board repair recovery</strong>: 1-3 business days.</li>
             <li><strong>Donor-board transplant</strong>: 3-5 business days.</li>
@@ -142,7 +155,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
             <li><strong>Rush option</strong>: +50% fee for priority queue (clinical use, business-critical files).</li>
           </ul>
 
-          <h2>Success rates (honest)</h2>
+          <h2 id="success-rates">Success rates (honest)</h2>
           <p>
             Average success rates from our 2025 records (1,247 MacBook recovery cases):
           </p>

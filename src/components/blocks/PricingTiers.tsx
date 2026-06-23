@@ -34,12 +34,12 @@ export default function PricingTiers({
   className,
 }: PricingTiersProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         {(heading || subheading) && (
           <div className="mb-2xl max-w-[680px]">
             {heading && (
-              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-text">
+              <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                 {heading}
               </h2>
             )}
@@ -58,7 +58,7 @@ export default function PricingTiers({
               <div
                 key={i}
                 className={cn(
-                  "relative flex flex-col rounded-2xl border p-lg",
+                  "relative flex flex-col rounded-md border p-lg",
                   t.highlighted
                     ? "border-accent/60 bg-bg-card ring-2 ring-accent/50 md:-mt-2 md:mb-2"
                     : "border-border bg-bg-card",
