@@ -42,6 +42,7 @@ const NAV: Group[] = [
       { href: "/admin/prices", label: "Prices", Icon: DollarSign },
       { href: "/admin/social", label: "Social", Icon: Megaphone },
       { href: "/admin/gbp", label: "Google Business", Icon: MapPinned },
+      { href: "/admin/gbp-playbook", label: "GBP Playbook", Icon: FileText },
       { href: "/admin/business", label: "Business / NAP", Icon: Building2 },
     ],
   },
