@@ -149,6 +149,7 @@ const DEVICE_HUB: { label: string; href: string }[] = [
   { label: "MacBook overheating & shutdown fix", href: "/macbook-overheating-shutting-down-dubai" },
   { label: "MacBook kernel panic repair", href: "/macbook-kernel-panic-dubai" },
   { label: "Corporate & business MacBook repair", href: "/corporate-macbook-repair-dubai" },
+  { label: "Apple Watch repair", href: "/apple-watch-repair-dubai" },
 ];
 
 const AREA_PAGES: { label: string; href: string }[] = [
