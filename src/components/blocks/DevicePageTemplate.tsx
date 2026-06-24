@@ -178,7 +178,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Models & pricing"
-              title={p.modelsHeading ?? `${fam.pluralNoun} we repair - model-by-model pricing`}
+              title={p.modelsHeading ?? `Which ${fam.pluralNoun} do you repair, and what does each model cost?`}
             />
             {p.modelsBlurb ?? (
               <p className="text-[16px] text-text-muted max-w-[60ch] mx-auto text-center mb-lg">
@@ -194,7 +194,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Common problems"
-              title={`Common ${fam.noun} issues we see`}
+              title={`What are the most common ${fam.noun} problems?`}
               sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price."
             />
             <div className="grid gap-md md:grid-cols-2">
@@ -210,14 +210,14 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Our process"
-              title="How the repair works"
+              title="How does the repair process work?"
               sub="From WhatsApp to delivery. Each step has a fixed time estimate."
             />
             <StepList steps={p.steps} tone="dark" />
           </section>
 
           <section>
-            <SectionHeading eyebrow="Guarantee" title="Warranty" />
+            <SectionHeading eyebrow="Guarantee" title="What warranty do you get?" />
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
@@ -229,7 +229,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           </section>
 
           <section className="bg-bg-alt border-y border-border rounded-md p-lg">
-            <h2 className="text-[22px] mb-md">Lead technician on this job</h2>
+            <h2 className="text-[22px] mb-md">Who is the lead technician on this repair?</h2>
             <TechnicianBadge tone="dark" name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Personally signs the QC checklist on every {fam.noun} job leaving the bench.
@@ -284,7 +284,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
           </section>
 
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your {fam.noun}</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg">Where can I bring my {fam.noun} for repair?</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>

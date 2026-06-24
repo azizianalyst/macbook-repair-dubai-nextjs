@@ -98,7 +98,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Service grid */}
         <section>
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wrench size={28} className="text-accent" aria-hidden /> {p.family} repairs we do
+            <Wrench size={28} className="text-accent" aria-hidden /> What {p.family} repairs do you do?
           </h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
             Pick the symptom - each link goes to a dedicated service page with pricing, timeline, and warranty.
@@ -122,7 +122,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
 
         {/* Model grid - primary orphan-killer */}
         <section>
-          <h2 className="text-[28px] md:text-[32px] mb-md">Every {p.family} model we service</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Which {p.family} models do you service?</h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
             From the oldest model still in active use through Apple's current 2026 lineup. Click any model for
             specific pricing, common issues, and parts availability.
@@ -163,7 +163,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Warranty */}
         <section className="bg-bg-card border border-border rounded-md p-lg">
           <h2 className="text-[22px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={22} className="text-accent" aria-hidden /> written warranty up to 12 months
+            <ShieldCheck size={22} className="text-accent" aria-hidden /> What warranty do you offer on {p.family} repairs?
           </h2>
           <p className="text-[15px]">
             Every {p.family} repair includes a warranty of up to 12 months on parts and labour, dated and signed on your invoice.
@@ -172,7 +172,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         </section>
 
         <section>
-          <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your {p.family}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Where can I bring my {p.family} for repair?</h2>
           <LocationBlock />
         </section>
 

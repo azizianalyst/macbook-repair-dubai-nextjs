@@ -245,7 +245,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <SectionHeading
             label="Supported models"
-            title={`Mac mini ${p.chip} models we repair`}
+            title={`Which Mac mini ${p.chip} models do we repair?`}
             sub={`All ${p.chip} Mac mini variants from ${p.years}. Tap a model for its dedicated repair page.`}
           />
           <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
@@ -311,7 +311,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
               label="How it works"
-              title="Our repair process"
+              title="How does the Mac mini repair process work?"
               sub="Simple, transparent, and fast. Here is what happens when you bring in your Mac mini."
             />
             <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-4">
@@ -333,7 +333,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <SectionHeading
             label="Warning signs"
-            title={`Signs your Mac mini ${p.chip} needs repair`}
+            title={`What are the signs your Mac mini ${p.chip} needs repair?`}
           />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNS.map(({ Icon, label, body }) => (

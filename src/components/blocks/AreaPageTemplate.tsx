@@ -99,7 +99,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <SectionHeading
           eyebrow="Getting here"
-          title={`Travel times from ${cfg.area}`}
+          title={`How far is the workshop from ${cfg.area}?`}
           sub="Off-peak driving times to Concord Tower, Media City. Add 10-20 minutes during 8-10 am and 5-7 pm rush windows. The pickup column shows our courier turnaround once you confirm on WhatsApp."
         />
         <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
@@ -133,7 +133,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <div className="mx-auto max-w-content px-5 md:px-6">
           <SectionHeading
             eyebrow="How it works"
-            title={`Pickup & delivery from ${cfg.area}`}
+            title={`How does free pickup & delivery from ${cfg.area} work?`}
             sub={cfg.pickupNote}
           />
 
@@ -161,7 +161,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <SectionHeading
           eyebrow="Popular repairs"
-          title={`Common MacBook repairs for ${cfg.area} customers`}
+          title={`What are the most common MacBook repairs for ${cfg.area} customers?`}
           sub="Indicative starting prices in AED. Final price is fixed in writing on WhatsApp before any work begins, after a free diagnosis at the workshop."
         />
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">

@@ -306,14 +306,14 @@ export default function IMacModelPage({ slug }: { slug: string }) {
             {model.lastMacOS && <li>• <strong>Latest macOS supported:</strong> {model.lastMacOS}</li>}
           </ul>
 
-          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">What are the most common {model.shortName} problems?</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">What {model.shortName} repair services are available in Dubai?</h2>
           <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
               <thead className="bg-bg-alt">
@@ -381,7 +381,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Are parts available for the {model.shortName} in 2026?</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
               ? `As Apple's current iMac, parts come through authorised channels. Power brick is same-day; logic board takes 3-5 days. ${model.timelineNotes}`

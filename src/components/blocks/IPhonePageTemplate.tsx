@@ -163,7 +163,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Models & pricing"
-              title="iPhone models we repair - every model since 2014"
+              title="Which iPhone models do you repair?"
               sub={<>From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.</>}
             />
             <PricingTable service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} tone="dark" />
@@ -176,7 +176,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Common problems"
-              title="Common iPhone issues we see"
+              title="What are the most common iPhone problems?"
               sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price."
             />
             <div className="grid gap-md md:grid-cols-2">
@@ -193,7 +193,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           <section>
             <SectionHeading
               eyebrow="Our process"
-              title="How the repair works"
+              title="How does the iPhone repair process work?"
               sub="Six steps from WhatsApp to delivery. Each step has a fixed time estimate."
             />
             <StepList steps={p.steps} tone="dark" />
@@ -201,7 +201,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Warranty */}
           <section>
-            <SectionHeading eyebrow="Guarantee" title="Warranty" />
+            <SectionHeading eyebrow="Guarantee" title="What warranty do you get?" />
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
                 <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
@@ -214,7 +214,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Technician */}
           <section className="bg-bg-alt border-y border-border rounded-md p-lg">
-            <h2 className="text-[22px] mb-md">Lead technician on this job</h2>
+            <h2 className="text-[22px] mb-md">Who is the technician handling your iPhone repair?</h2>
             <TechnicianBadge name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} tone="dark" />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Personally signs the QC checklist on every iPhone job leaving the bench.
@@ -274,7 +274,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your iPhone</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg">Where can you bring your iPhone for repair?</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>

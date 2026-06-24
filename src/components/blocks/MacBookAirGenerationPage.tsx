@@ -247,7 +247,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <SectionHeading
             label="Supported models"
-            title={`MacBook Air ${p.chip} models we repair`}
+            title={`Which MacBook Air ${p.chip} models do we repair?`}
             sub={`All ${p.chip} MacBook Air variants from ${p.years}. Tap a model for its dedicated repair page.`}
           />
           <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
@@ -297,7 +297,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <SectionHeading
             label="What we fix"
-            title={`MacBook Air ${p.chip} repair services`}
+            title={`What does MacBook Air ${p.chip} repair cover?`}
             sub="From a cracked screen to a dead logic board, our technicians handle every repair in our Dubai Media City workshop."
           />
           <div className="grid gap-x-xl gap-y-[56px] sm:grid-cols-2 lg:grid-cols-3">
@@ -313,7 +313,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
               label="How it works"
-              title="Our repair process"
+              title="How does our MacBook Air repair process work?"
               sub="Simple, transparent, and fast. Here is what happens when you bring in your MacBook Air."
             />
             <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-4">
@@ -335,7 +335,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <SectionHeading
             label="Warning signs"
-            title={`Signs your MacBook Air ${p.chip} needs repair`}
+            title={`What are the signs your MacBook Air ${p.chip} needs repair?`}
           />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNS.map(({ Icon, label, body }) => (

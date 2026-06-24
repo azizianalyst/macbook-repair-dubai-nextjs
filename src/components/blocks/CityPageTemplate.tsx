@@ -102,7 +102,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <SectionHeading
             eyebrow="Coverage"
-            title={`Where we collect from in ${cfg.city}`}
+            title={`Which areas in ${cfg.city} do you collect from?`}
             sub={`Free collection and return covers all of ${cfg.city}. A few of the areas we collect from regularly:`}
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
@@ -120,7 +120,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
               eyebrow="How it works"
-              title={`How free collection from ${cfg.city} works`}
+              title={`How does free MacBook collection from ${cfg.city} work?`}
               sub={cfg.collectionNote}
             />
 
@@ -146,7 +146,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <SectionHeading
             eyebrow="Popular repairs"
-            title={`Common MacBook repairs for ${cfg.city} customers`}
+            title={`What are the most common MacBook repairs for ${cfg.city} customers?`}
             sub="Indicative starting prices in AED, the same as for our Dubai customers. The final price is fixed in writing on WhatsApp before any work begins, after a free diagnosis."
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
