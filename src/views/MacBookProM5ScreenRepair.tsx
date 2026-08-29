@@ -25,7 +25,7 @@ export default function MacBookProM5ScreenRepair() {
       ]}
       prices={[
         { model: "MacBook Pro 14-inch M5 Pro (2025)", price: 1300, applePrice: 1699, timeline: "2-3 days", l4href: "/macbook-pro-14-m5-2025-repair-dubai" },
-        { model: "MacBook Pro 16-inch M5 Max (2025)", price: 1500, applePrice: 1899, timeline: "2-3 days", l4href: "/macbook-pro-16-m5-2025-repair-dubai" },
+        { model: "MacBook Pro 16-inch M5 Max (2025)", price: 1500, applePrice: 1899, timeline: "2-3 days", l4href: "/macbook-pro-16-m5-max-2026-repair-dubai" },
       ]}
       faults={[
         {
@@ -75,7 +75,7 @@ export default function MacBookProM5ScreenRepair() {
           a: "OLED and mini-LED are different display technologies with different failure modes. Mini-LED can develop backlight zone flickering. OLED can develop pixel-level failures or delamination between the bonded OLED layers. In both cases, the repair involves replacing the full display assembly. OLED assemblies for the M5 MacBook Pro are priced slightly higher than mini-LED assemblies for M1-M4 models because OLED supply chains for laptops are newer.",
         },
       ]}
-      blogHref="/blog/macbook-pro-m5-screen-repair-dubai"
+      blogHref="/blog/macbook-pro-m5-screen-repair-cost-dubai"
       blogLabel="MacBook Pro M5 Screen Repair Dubai — OLED Display Guide"
       l3href="/macbook-pro-m5-repair-dubai"
       l3label="MacBook Pro M5 Repair Dubai"

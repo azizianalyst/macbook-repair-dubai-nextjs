@@ -85,7 +85,7 @@ export default function MacBookProM2BatteryReplacement() {
           a: "Go to Apple menu, then System Settings (macOS Ventura and later), then Battery, then Battery Health. You will see Maximum Capacity and Condition (Normal or Service Recommended). Alternatively, hold Option and click the battery icon in the menu bar for a quick status. Below 80 percent capacity means replacement is recommended.",
         },
       ]}
-      blogHref="/blog/macbook-pro-battery-drain-dubai"
+      blogHref="/blog/macbook-pro-battery-draining-fast"
       blogLabel="MacBook Pro Battery Draining Fast Dubai — Causes and Fix"
       l3href="/macbook-pro-m2-repair-dubai"
       l3label="MacBook Pro M2 Repair Dubai"

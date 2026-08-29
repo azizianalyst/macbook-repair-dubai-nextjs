@@ -8,7 +8,10 @@ import { imageForRoute } from "@/lib/page-images";
 import { NextResponse } from "next/server";
 
 const SITE = "https://macbook-repair-dubai.ae";
-const EXCLUDE = /^\/(admin|landing-template-demo)(\/|$)/;
+// /blog/tag/* is noindex (see src/app/blog/tag/*/page.tsx) — listing a noindex URL in a
+// sitemap contradicts the page's own robots directive and shows up in GSC as
+// "Submitted URL marked 'noindex'", so it is excluded here too.
+const EXCLUDE = /^\/(admin|landing-template-demo|blog\/tag)(\/|$)/;
 
 export function GET() {
   const entries = ROUTES.filter((p) => !EXCLUDE.test(p))

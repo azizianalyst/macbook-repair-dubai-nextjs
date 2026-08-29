@@ -81,7 +81,7 @@ export default function MacBookProM4BatteryReplacement() {
           a: "BMS (Battery Management System) re-pair programs the new cell's chemistry and calibration data into the MacBook Pro's System Management Controller so macOS accurately reports capacity, cycle count, and charge curves. Without it, health readings are undefined and fast charging over Thunderbolt 5 may not work correctly. It is included in our price.",
         },
       ]}
-      blogHref="/blog/macbook-pro-battery-drain-dubai"
+      blogHref="/blog/macbook-pro-battery-draining-fast"
       blogLabel="MacBook Pro Battery Draining Fast Dubai — Causes and Fix"
       l3href="/macbook-pro-m4-repair-dubai"
       l3label="MacBook Pro M4 Repair Dubai"

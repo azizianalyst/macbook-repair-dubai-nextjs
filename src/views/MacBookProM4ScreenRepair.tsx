@@ -75,7 +75,7 @@ export default function MacBookProM4ScreenRepair() {
           a: "Yes. The M4 Pro and M4 Max are among the most powerful laptop chips available in 2025-2026. At AED 1,100-1,300 for a screen repair versus AED 10,000 or more for a new M4 MacBook Pro, repair is strongly cost-effective, particularly for a machine that is only 1-2 years old.",
         },
       ]}
-      blogHref="/blog/macbook-pro-m4-screen-repair-dubai"
+      blogHref="/blog/macbook-pro-m4-screen-repair-cost-dubai"
       blogLabel="MacBook Pro M4 Screen Repair Dubai — Cost and Options"
       l3href="/macbook-pro-m4-repair-dubai"
       l3label="MacBook Pro M4 Repair Dubai"

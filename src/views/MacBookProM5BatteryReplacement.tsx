@@ -81,7 +81,7 @@ export default function MacBookProM5BatteryReplacement() {
           a: "MacBook Repair Dubai estimates 2 to 3 days for the M5 Pro battery replacement, pending parts availability. Contact us with your model and serial number before dropping off. For very new machines within the 1-year warranty period, Apple may be able to provide a faster turnaround at no cost.",
         },
       ]}
-      blogHref="/blog/macbook-pro-battery-drain-dubai"
+      blogHref="/blog/macbook-pro-battery-draining-fast"
       blogLabel="MacBook Pro Battery Draining Fast Dubai — Causes and Fix"
       l3href="/macbook-pro-m5-repair-dubai"
       l3label="MacBook Pro M5 Repair Dubai"

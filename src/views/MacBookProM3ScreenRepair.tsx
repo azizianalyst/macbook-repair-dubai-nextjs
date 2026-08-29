@@ -75,7 +75,7 @@ export default function MacBookProM3ScreenRepair() {
           a: "Yes. Free diagnosis is standard for every MacBook Pro we look at. Bring your M3 Pro or M3 Max to our Dubai Media City workshop. We inspect the display assembly, cable, and backlight circuit within the hour and give you a written quote before any work begins. No fix, no charge.",
         },
       ]}
-      blogHref="/blog/macbook-pro-m3-screen-repair-dubai"
+      blogHref="/blog/macbook-pro-m3-screen-repair-cost-dubai"
       blogLabel="MacBook Pro M3 Screen Repair Dubai — Cost and Options"
       l3href="/macbook-pro-m3-repair-dubai"
       l3label="MacBook Pro M3 Repair Dubai"

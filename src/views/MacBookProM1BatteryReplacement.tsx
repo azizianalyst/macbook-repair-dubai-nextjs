@@ -29,14 +29,14 @@ export default function MacBookProM1BatteryReplacement() {
           price: 500,
           applePrice: 549,
           timeline: "Same day · 2 hours",
-          l4href: "/macbook-pro-14-m1-2021-repair-dubai",
+          l4href: "/macbook-pro-14-m1-pro-2021-repair-dubai",
         },
         {
           model: 'MacBook Pro 16" M1 Max (2021)',
           price: 600,
           applePrice: 699,
           timeline: "Same day · 2 hours",
-          l4href: "/macbook-pro-16-m1-2021-repair-dubai",
+          l4href: "/macbook-pro-16-m1-pro-2021-repair-dubai",
         },
       ]}
       faults={[
@@ -87,7 +87,7 @@ export default function MacBookProM1BatteryReplacement() {
           a: "The 14-inch M1 Pro uses a 69.6 Wh cell rated for up to 17 hours of battery life. The 16-inch M1 Max uses a larger 99.6 Wh cell rated for up to 21 hours. Both use the same MagSafe 3 and Thunderbolt 4 charging ports. Replacement costs AED 500 for the 14-inch and AED 600 for the 16-inch.",
         },
       ]}
-      blogHref="/blog/macbook-pro-battery-drain-dubai"
+      blogHref="/blog/macbook-pro-battery-draining-fast"
       blogLabel="MacBook Pro Battery Draining Fast Dubai — Causes and Fix"
       l3href="/macbook-pro-m1-repair-dubai"
       l3label="MacBook Pro M1 Repair Dubai"

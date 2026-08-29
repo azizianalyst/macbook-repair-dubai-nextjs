@@ -85,7 +85,7 @@ export default function MacBookProM3BatteryReplacement() {
           a: "Go to Apple menu, then System Settings, then Battery, then Battery Health, then click the info icon for more detail. Or go to Apple menu, About This Mac, System Report, then Power to see Cycle Count and Maximum Capacity. Above 700 cycles or below 80 percent capacity means service is approaching. Below 80 percent is Service Recommended.",
         },
       ]}
-      blogHref="/blog/macbook-pro-battery-drain-dubai"
+      blogHref="/blog/macbook-pro-battery-draining-fast"
       blogLabel="MacBook Pro Battery Draining Fast Dubai — Causes and Fix"
       l3href="/macbook-pro-m3-repair-dubai"
       l3label="MacBook Pro M3 Repair Dubai"

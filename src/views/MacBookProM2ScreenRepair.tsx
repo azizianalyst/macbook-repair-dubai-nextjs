@@ -24,8 +24,8 @@ export default function MacBookProM2ScreenRepair() {
         "Dubai's construction and desert dust environment accelerates wear on display flex cables more than Apple's lab test conditions assume. Fine particulate that works into the hinge area can gradually abrade the flex cable over 2-3 years of daily lid opening. We inspect the cable condition during diagnosis and include cable assessment in the free diagnostic.",
       ]}
       prices={[
-        { model: "MacBook Pro 14-inch M2 Pro (2023)", price: 1000, applePrice: 1499, timeline: "Same day", l4href: "/macbook-pro-14-m2-2023-repair-dubai" },
-        { model: "MacBook Pro 16-inch M2 Max (2023)", price: 1200, applePrice: 1699, timeline: "1-2 days", l4href: "/macbook-pro-16-m2-2023-repair-dubai" },
+        { model: "MacBook Pro 14-inch M2 Pro (2023)", price: 1000, applePrice: 1499, timeline: "Same day", l4href: "/macbook-pro-14-m2-pro-2023-repair-dubai" },
+        { model: "MacBook Pro 16-inch M2 Max (2023)", price: 1200, applePrice: 1699, timeline: "1-2 days", l4href: "/macbook-pro-16-m2-pro-2023-repair-dubai" },
       ]}
       faults={[
         {
@@ -75,7 +75,7 @@ export default function MacBookProM2ScreenRepair() {
           a: "No. The M2 MacBook Pro (2023) uses a revised chassis with different display cable routing and connector positions compared to the M1 (2021). M1 assemblies do not fit correctly in M2 chassis and can cause display calibration, backlight, or connection issues. We use M2-specific assemblies.",
         },
       ]}
-      blogHref="/blog/macbook-pro-m2-screen-repair-dubai"
+      blogHref="/blog/macbook-pro-m2-screen-repair-cost-dubai"
       blogLabel="MacBook Pro M2 Screen Repair Dubai — Cost and Options"
       l3href="/macbook-pro-m2-repair-dubai"
       l3label="MacBook Pro M2 Repair Dubai"

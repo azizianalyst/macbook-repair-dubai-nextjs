@@ -24,8 +24,8 @@ export default function MacBookProM1ScreenRepair() {
         "UAE summer heat and the Liquid Retina XDR display: mini-LED backlights are more thermally stable than CCFL or OLED but the display cable can loosen in extreme temperature cycles. Dubai summer thermal expansion from cold AC environments to 45C outdoor heat is a known contributing factor in intermittent backlight or connection issues on 2021 MacBook Pros used in outdoor or vehicle settings.",
       ]}
       prices={[
-        { model: "MacBook Pro 14-inch M1 Pro (2021)", price: 1000, applePrice: 1499, timeline: "Same day", l4href: "/macbook-pro-14-m1-2021-repair-dubai" },
-        { model: "MacBook Pro 16-inch M1 Max (2021)", price: 1200, applePrice: 1699, timeline: "1-2 days", l4href: "/macbook-pro-16-m1-2021-repair-dubai" },
+        { model: "MacBook Pro 14-inch M1 Pro (2021)", price: 1000, applePrice: 1499, timeline: "Same day", l4href: "/macbook-pro-14-m1-pro-2021-repair-dubai" },
+        { model: "MacBook Pro 16-inch M1 Max (2021)", price: 1200, applePrice: 1699, timeline: "1-2 days", l4href: "/macbook-pro-16-m1-pro-2021-repair-dubai" },
       ]}
       faults={[
         {
@@ -75,7 +75,7 @@ export default function MacBookProM1ScreenRepair() {
           a: "No. The Liquid Retina XDR display on the M1 Pro and M1 Max is a bonded assembly. The mini-LED backlight array, polariser, and LCD panel are integrated and cannot be separated in the field. The entire display assembly is replaced as one unit.",
         },
       ]}
-      blogHref="/blog/macbook-pro-m1-screen-repair-dubai"
+      blogHref="/blog/macbook-pro-m1-screen-repair-cost-dubai"
       blogLabel="MacBook Pro M1 Screen Repair Dubai — Cost and Options"
       l3href="/macbook-pro-m1-repair-dubai"
       l3label="MacBook Pro M1 Repair Dubai"
