@@ -5,7 +5,7 @@ export default function IMacVirusRemoval() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706"
-      seoDescription="iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. AED 300. Same day. Free home visit available."
+      seoDescription="iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. Same day. Free home visit. Message us on WhatsApp for pricing."
       path="/imac-virus-removal-dubai"
       eyebrow="iMac malware removal"
       h1="iMac Virus & Malware Removal Dubai"

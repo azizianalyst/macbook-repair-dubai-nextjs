@@ -4,11 +4,11 @@ import View from "@/views/BlogMacBookProM5BatteryReplacement";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M5 Battery Replacement Cost Dubai 2026",
-  description: "MacBook Pro M5 battery replacement cost in Dubai 2026. M5 14-inch from AED 650, 16-inch from AED 700. When to replace, signs of battery failure, and what to…",
+  description: "MacBook Pro M5 battery replacement in Dubai 2026 for 14-inch and 16-inch. When to replace, signs of battery failure, same-day service — message us for your price.",
   openGraph: {
-    title: "MacBook Pro M5 Battery Replacement Cost Dubai 2026: AED Prices and Guide",
+    title: "MacBook Pro M5 Battery Replacement Cost Dubai 2026: Guide and Quote",
     description:
-      "M5 battery replacement in Dubai from AED 650. When to replace, signs of failure, same-day service.",
+      "M5 battery replacement in Dubai. When to replace, signs of failure, same-day service — message us on WhatsApp for your price.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-battery-replacement-cost-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MacBook Pro M5 Battery Replacement Cost Dubai 2026",
     description:
-      "M5 battery replacement from AED 650 in Dubai. When to replace and what to expect.",
+      "M5 battery replacement in Dubai. When to replace and what to expect — message us for your price.",
     images: [
       "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif",
     ],

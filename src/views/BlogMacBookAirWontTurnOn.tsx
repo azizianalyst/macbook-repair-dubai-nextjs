@@ -7,7 +7,7 @@ export default function BlogMacBookAirWontTurnOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Won't Turn On Fix Dubai 2026: Dead, Black Screen, No Power Guide"
-      seoDescription="MacBook Air not turning on in Dubai? Dead, black screen, or no power on all models M1-M5 and Intel. Step-by-step fix guide. Logic board repair from AED 350."
+      seoDescription="MacBook Air not turning on in Dubai? Dead, black screen, or no power on all models M1-M5 and Intel. Step-by-step fix guide. Free diagnosis, message us for a price."
       path="/blog/macbook-air-wont-turn-on-fix-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirWontTurnOn() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air Won't Turn On in Dubai? Dead, Black Screen, No Power Fix Guide 2026"
       hook="A MacBook Air that won't turn on is not always dead. In Dubai we diagnose dozens each month that just need a 10-minute reset or 30-minute charge. Here is the exact sequence to follow before spending anything on repair."
-      quickAnswer="MacBook Air not turning on: first connect charger and wait 30 minutes (deeply discharged battery can appear dead). Then hold Power 10 seconds (force restart). If no response, do SMC reset: M-series, hold Power 10 sec; Intel, hold Ctrl+Option+Shift+Power 7 sec. If you see a black screen with backlight, it is a display fault not a dead machine. Only after all these steps fail is it a board fault. Logic board repair from AED 350 in Dubai."
+      quickAnswer="MacBook Air not turning on: first connect charger and wait 30 minutes (deeply discharged battery can appear dead). Then hold Power 10 seconds (force restart). If no response, do SMC reset: M-series, hold Power 10 sec; Intel, hold Ctrl+Option+Shift+Power 7 sec. If you see a black screen with backlight, it is a display fault not a dead machine. Only after all these steps fail is it a board fault. Diagnosis is free in Dubai; message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -49,7 +49,7 @@ export default function BlogMacBookAirWontTurnOn() {
           </p>
           <p>
             The torch test below (Step 4) confirms which one you have in 10 seconds. A black screen
-            fault is a screen repair (AED 500-700). A truly dead machine needs power diagnostics.
+            fault is a screen repair. A truly dead machine needs power diagnostics.
             Do not skip this check before assuming the worst.
           </p>
 
@@ -118,7 +118,7 @@ export default function BlogMacBookAirWontTurnOn() {
           <p>
             If Recovery Mode does not load but you hear boot sounds, connect an external display via
             USB-C adapter. If the external display shows the desktop, the built-in screen is the
-            fault, not the board. Screen repair is AED 500-700.
+            fault, not the board. Message us on WhatsApp for a screen repair price on your model.
           </p>
 
           <h2 id="step-4-torch">Step 4: Torch test to detect backlight failure</h2>
@@ -137,8 +137,8 @@ export default function BlogMacBookAirWontTurnOn() {
           </p>
           <p>
             We see this in roughly 1 in 5 "dead MacBook Air" cases brought in for diagnosis. Owners
-            assume the machine is dead when it is actually running with no visible screen. The repair
-            cost is AED 500-700 for the display assembly, compared to AED 900+ for board-level work.
+            assume the machine is dead when it is actually running with no visible screen. A display
+            assembly repair costs far less than board-level work; message us for the exact price.
           </p>
           <p>
             If the torch test shows nothing at all, the machine is not booting. This points to a
@@ -157,8 +157,8 @@ export default function BlogMacBookAirWontTurnOn() {
             LED (Intel) or no charging indication (M-series) but will not power on.
           </p>
           <p>
-            Always use a surge-protected power strip rated for UAE voltage (220-240V). A basic AED
-            30 surge strip from Carrefour is enough. Do not plug directly into wall sockets.
+            Always use a surge-protected power strip rated for UAE voltage (220-240V). An
+            inexpensive surge strip from any supermarket is enough. Do not plug directly into wall sockets.
           </p>
           <p>
             <strong>Thermal shutdown from Dubai summer heat</strong>: the MacBook Air's internal
@@ -185,12 +185,12 @@ export default function BlogMacBookAirWontTurnOn() {
               <tr>
                 <td>Intel (2017-2020)</td>
                 <td>T2 chip failure (2020 model only), SMC chip failure, MagSafe board fault, charging IC</td>
-                <td>Component-level board repair; MagSafe board replacement AED 350</td>
+                <td>Component-level board repair; MagSafe board replacement (price on request)</td>
               </tr>
               <tr>
                 <td>M1 / M2 (2020-2023)</td>
                 <td>Power management IC on logic board, rare firmware brick from interrupted update</td>
-                <td>Board-level repair AED 450-900; firmware recovery via USB-C + Apple Configurator on another Mac (free if firmware only)</td>
+                <td>Board-level repair (price on request); firmware recovery via USB-C + Apple Configurator on another Mac (free if firmware only)</td>
               </tr>
               <tr>
                 <td>M3 / M4 / M5 (2024-2026)</td>
@@ -222,11 +222,11 @@ export default function BlogMacBookAirWontTurnOn() {
             caption="MacBook Air no-power repair pricing. June 2026"
             headers={["Repair", "Our price", "Apple Store"]}
             rows={[
-              { model: "Power diagnostic", ours: "Free", apple: "AED 150", note: "Same-day result" },
-              { model: "SMC / firmware repair", ours: "AED 350", apple: "AED 800", note: "M-series and Intel" },
-              { model: "Backlight repair (board-level)", ours: "AED 400", apple: "AED 999", note: "When torch test shows faint image" },
-              { model: "Charging IC repair", ours: "AED 450", apple: "AED 1,500+", note: "Powers on but won't charge" },
-              { model: "Logic board power rail repair", ours: "AED 900", apple: "AED 3,500+", note: "Complete no-power fault" },
+              { model: "Power diagnostic", ours: "Free", apple: "Price on request", note: "Same-day result" },
+              { model: "SMC / firmware repair", ours: "Price on request", apple: "Price on request", note: "M-series and Intel" },
+              { model: "Backlight repair (board-level)", ours: "Price on request", apple: "Price on request", note: "When torch test shows faint image" },
+              { model: "Charging IC repair", ours: "Price on request", apple: "Price on request", note: "Powers on but won't charge" },
+              { model: "Logic board power rail repair", ours: "Price on request", apple: "Price on request", note: "Complete no-power fault" },
             ]}
           />
           <p>
@@ -270,7 +270,7 @@ export default function BlogMacBookAirWontTurnOn() {
       faqs={[
         {
           q: "Why won't my MacBook Air turn on even when plugged in?",
-          a: "Three likely causes: deeply discharged battery (leave on charger 30 minutes without pressing Power), SMC fault (reset it using the steps above), or a dead charging IC on the logic board (board repair needed). Run through the charge and SMC steps first. If the MagSafe LED is on (Intel) or the charger is warm (M-series) but the machine still won't boot, the charging IC is the likely fault. Repair from AED 450.",
+          a: "Three likely causes: deeply discharged battery (leave on charger 30 minutes without pressing Power), SMC fault (reset it using the steps above), or a dead charging IC on the logic board (board repair needed). Run through the charge and SMC steps first. If the MagSafe LED is on (Intel) or the charger is warm (M-series) but the machine still won't boot, the charging IC is the likely fault. Diagnosis is free; message us on WhatsApp for the exact repair price.",
         },
         {
           q: "Does Dubai heat cause MacBook Air not to turn on?",
@@ -278,11 +278,11 @@ export default function BlogMacBookAirWontTurnOn() {
         },
         {
           q: "How do I know if my MacBook Air is completely dead or just the screen?",
-          a: "Torch test: press Power, then hold a bright torch directly against the screen from 2cm away. If you see a faint image, the machine is running but the backlight is dead. This is a screen repair (AED 400-700), not a board repair. If you see nothing at all and hear no fan or sounds, the machine is not booting and needs power diagnostics.",
+          a: "Torch test: press Power, then hold a bright torch directly against the screen from 2cm away. If you see a faint image, the machine is running but the backlight is dead. This is a screen repair, not a board repair, and diagnosis is free. If you see nothing at all and hear no fan or sounds, the machine is not booting and needs power diagnostics.",
         },
         {
           q: "Can a MacBook Air be repaired if the logic board is dead?",
-          a: "Yes, in most cases. Component-level board repair means we identify and replace the specific failed component: charging IC, power rail, SMC chip, or power management IC. This costs AED 350-900 depending on the fault. Apple's alternative is a full board replacement at AED 3,500+. Board repair preserves your data where possible and costs a fraction of Apple's approach.",
+          a: "Yes, in most cases. Component-level board repair means we identify and replace the specific failed component: charging IC, power rail, SMC chip, or power management IC. Message us on WhatsApp for the exact price on your model. Apple's alternative is a full board replacement, which costs far more. Board repair preserves your data where possible and costs a fraction of Apple's approach.",
         },
         {
           q: "How long does no-power repair take in Dubai?",

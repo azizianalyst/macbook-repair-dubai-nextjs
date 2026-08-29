@@ -48,7 +48,7 @@ export type IPhoneTemplateProps = {
   // Page body
   serviceName: string;        // "iPhone Screen Repair Dubai" - used in schema + pricing header
   pricingRows: PricingRow[];
-  pricingCaption?: string;    // e.g. "+AED 150 for Pro Max sizes"
+  pricingCaption?: string;    // e.g. "Pro Max sizes may vary - message us for the exact price"
   intro: ReactNode;           // 1-2 paragraphs, JSX so anchor links can be inline
   problems: { title: string; body: string }[];
   steps: Step[];
@@ -113,7 +113,6 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
         eyebrow={p.eyebrow}
         title={p.h1}
         subtitle={p.subtitle}
-        startingPrice={p.startingPrice}
         timeline={p.timeline}
         image={heroImage}
         imageAlt={topic?.alt ?? p.h1}
@@ -177,7 +176,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
             <SectionHeading
               eyebrow="Common problems"
               title="What are the most common iPhone problems?"
-              sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix and price."
+              sub="The highest-volume tickets at the workshop. Match the symptom to find the typical fix, then message us on WhatsApp for today's exact price on your model."
             />
             <div className="grid gap-md md:grid-cols-2">
               {p.problems.map((it) => (

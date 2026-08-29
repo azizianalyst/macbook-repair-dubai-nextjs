@@ -99,7 +99,7 @@ export default function BlogNoFixNoChargePolicy() {
           <p>
             They can't afford to. Pop-up shops with low volume and Tier 3 parts have failure rates
             high enough that no-fix-no-charge would bankrupt them. They charge a non-refundable
-            "diagnosis fee" of AED 200-500 to cover their hit rate. It's a sign of low confidence.
+            "diagnosis fee" to cover their hit rate. It's a sign of low confidence.
           </p>
 
           <h2 id="replace-not-repair">When we'll honestly tell you to replace, not repair</h2>
@@ -131,7 +131,7 @@ export default function BlogNoFixNoChargePolicy() {
       faqs={[
         { q: "What if you order parts and then can't fix it - do I pay for the parts?", a: "No. We absorb the part cost. Our suppliers accept returns on most non-bespoke items, and bespoke items get used on a future similar repair. You pay zero." },
         { q: "What if I asked for a screen replacement and you replaced it but I'm unhappy with the quality?", a: "Within 7 days, we'll re-replace at no cost (with a different screen tier if you prefer). Beyond 7 days, the 3-month workmanship warranty on the screen applies - see warranty post." },
-        { q: "Does no-fix-no-charge apply to data recovery?", a: "Partially - we charge a flat AED 200 attempt fee on data recovery jobs (regardless of success), then the agreed recovery price only if data is actually recovered. Data recovery has higher inherent failure rates so we cover lab-time only." },
+        { q: "Does no-fix-no-charge apply to data recovery?", a: "Partially - data recovery jobs carry a flat lab-time attempt fee (regardless of success), then the agreed recovery price only if data is actually recovered. Message us on WhatsApp for the exact attempt fee. Data recovery has higher inherent failure rates so we cover lab-time only." },
         { q: "What if you fix it but a new issue appears 2 weeks later?", a: "If the new issue is related to our work, it's a warranty claim - free re-service. If it's unrelated (e.g. you fixed the screen, now the battery dies), it's a separate repair quoted normally with a 10% returning-customer discount." },
         { q: "Is there anything that disqualifies a job from no-fix-no-charge?", a: "Only one thing: if the device was opened by another shop after our diagnosis but before our repair (we'd see the evidence). We need the device in the state we diagnosed." },
       ]}

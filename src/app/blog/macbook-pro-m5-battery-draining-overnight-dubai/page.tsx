@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MacBook Pro M5 Battery Draining Overnight? DarkWake Fix Dubai 2026",
     description:
-      "MacBook Pro M5 battery draining overnight? DarkWake and Power Nap drain 20-40% during sleep. Fix guide + battery replacement from AED 650 in Dubai.",
+      "MacBook Pro M5 battery draining overnight? DarkWake and Power Nap drain 20-40% during sleep. Fix guide + battery replacement in Dubai — WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-battery-draining-overnight-dubai",
     type: "article",
     publishedTime: "2026-06-22",

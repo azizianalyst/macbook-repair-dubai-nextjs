@@ -7,7 +7,7 @@ export default function BlogMacBookProM5WifiSlow() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Wi-Fi Slow Fix Dubai 2026: MCS NSS 0 Kernel Error"
-      seoDescription="MacBook Pro M5 Wi-Fi slow in Dubai? MCS/NSS 0 kernel error, slow speeds on 6GHz, drops after sleep. Step-by-step Wi-Fi fix guide for M5 in UAE. Repair from AED 200."
+      seoDescription="MacBook Pro M5 Wi-Fi slow in Dubai? MCS/NSS 0 kernel error, slow speeds on 6GHz, drops after sleep. Step-by-step Wi-Fi fix guide for M5 in UAE. Free diagnosis."
       path="/blog/macbook-pro-m5-wifi-slow-fix-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM5WifiSlow() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Wi-Fi Slow in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M5 users in Dubai are reporting Wi-Fi speeds 10-20 times slower than other devices on the same network, with the kernel log showing MCS/NSS 0 errors and connections that drop after sleep. All are fixable with the right approach. Wi-Fi antenna repair starts from AED 200 in Dubai if hardware is at fault."
+      hook="MacBook Pro M5 users in Dubai are reporting Wi-Fi speeds 10-20 times slower than other devices on the same network, with the kernel log showing MCS/NSS 0 errors and connections that drop after sleep. All are fixable with the right approach. If hardware is at fault, message us on WhatsApp for the exact Wi-Fi antenna repair price on your M5, with free diagnosis in Dubai."
       quickAnswer="MacBook Pro M5 Wi-Fi slow is caused by: MCS/NSS 0 kernel error (Wi-Fi downgraded to lowest data rate, fix by forgetting the network and reconnecting), 6GHz band driver issues on early Tahoe builds (update to 26.2 or switch to 5GHz temporarily), Wi-Fi not reconnecting after sleep (disable 'Disconnect from Wi-Fi when display is off' in Battery settings), or router 6GHz compatibility. Most are software fixes."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -152,12 +152,12 @@ export default function BlogMacBookProM5WifiSlow() {
 
           <h2 id="repair-cost">How much does MacBook Pro M5 Wi-Fi repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M5 Wi-Fi repair pricing. June 2026"
+            caption="MacBook Pro M5 Wi-Fi repair services in Dubai"
             rows={[
-              { model: "Wi-Fi antenna replacement (M5 14-inch)", ours: "AED 200", apple: "AED 700+", note: "Antenna cable only, 60 mins" },
-              { model: "Wi-Fi antenna replacement (M5 16-inch)", ours: "AED 250", apple: "AED 700+", note: "Antenna cable only, 60 mins" },
-              { model: "Wi-Fi chip / AirPort card rework", ours: "AED 450", apple: "Logic board replacement", note: "Component-level chip rework" },
-              { model: "Free diagnostic", ours: "Free", apple: "AED 250", note: "Hardware vs software confirmation" },
+              { model: "Wi-Fi antenna replacement (M5 14-inch)", ours: "Price on request", apple: "Apple: logic board swap", note: "Antenna cable only, 60 mins" },
+              { model: "Wi-Fi antenna replacement (M5 16-inch)", ours: "Price on request", apple: "Apple: logic board swap", note: "Antenna cable only, 60 mins" },
+              { model: "Wi-Fi chip / AirPort card rework", ours: "Price on request", apple: "Logic board replacement", note: "Component-level chip rework" },
+              { model: "Free diagnostic", ours: "Free", apple: "Apple: chargeable", note: "Hardware vs software confirmation" },
             ]}
           />
 

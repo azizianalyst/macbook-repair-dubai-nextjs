@@ -51,7 +51,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair
             </Link>{" "}
-            starts at AED 150 for a single key.
+            can be as small as a single key - message us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             <strong>A software fault</strong> usually hits everything at once or behaves oddly. The
@@ -145,13 +145,13 @@ export default function BlogMacBookKeyboardNotWorking() {
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's a clean, a key, a spill or the battery before you
-            commit. Prices below are VAT-inclusive and depend on the model.
+            commit. Pricing is VAT-inclusive and depends on the model.
           </p>
           <p>
-            A single Magic Keyboard key is from AED 150. A full keyboard or top-case replacement on a
-            butterfly-era Pro runs about AED 700, because Apple bonds the keyboard to the top case.
-            Spill cleaning and ribbon work starts from AED 400 depending on the damage. Battery
-            replacement to stop the swelling is from AED 450. The full model-by-model breakdown is in
+            The job might be a single Magic Keyboard key, a full keyboard or top-case replacement on a
+            butterfly-era Pro (Apple bonds the keyboard to the top case), spill cleaning and ribbon
+            work, or a battery replacement to stop the swelling. Once we know your model we'll confirm
+            the exact price - message us on WhatsApp. The full model-by-model breakdown is in
             our{" "}
             <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent font-semibold hover:underline">
               keyboard repair cost guide
@@ -171,7 +171,7 @@ export default function BlogMacBookKeyboardNotWorking() {
         },
         {
           q: "How much does a MacBook keyboard repair cost in Dubai?",
-          a: "A single Magic Keyboard key is from AED 150. A full keyboard or top-case replacement on a butterfly-era Pro is about AED 700, since Apple bonds the keyboard to the top case. Spill cleaning starts from AED 400, and the diagnostic to find out is free. All prices are VAT-inclusive. WhatsApp the serial first for a tighter figure.",
+          a: "It depends on whether it's a single Magic Keyboard key, a full keyboard or top-case replacement on a butterfly-era Pro (Apple bonds the keyboard to the top case), or spill cleaning. The diagnostic to find out is free, and all pricing is VAT-inclusive. WhatsApp us the serial number and we'll confirm the exact price for your model.",
         },
         {
           q: "Will cleaning fix a dead key on a butterfly keyboard?",
@@ -183,11 +183,11 @@ export default function BlogMacBookKeyboardNotWorking() {
         },
         {
           q: "Do my keys click on their own and feel stiff together?",
-          a: "That's the classic sign of a swollen battery pushing up on the top case from below. It presses the keyboard and trackpad, so keys stop pressing cleanly and the trackpad clicks by itself. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced, from AED 450, rather than waiting.",
+          a: "That's the classic sign of a swollen battery pushing up on the top case from below. It presses the keyboard and trackpad, so keys stop pressing cleanly and the trackpad clicks by itself. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced rather than waiting - message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Is it worth replacing the keyboard or should I buy a new MacBook?",
-          a: "On most Macs three to five years old, a AED 700 keyboard repair is well worth it against a new machine, especially if everything else works. On older butterfly Pros that have failed twice, we'll be honest about whether to repair or trade in. The free diagnostic includes that advice, with no pressure either way.",
+          a: "On most Macs three to five years old, a keyboard repair is well worth it against a new machine, especially if everything else works. On older butterfly Pros that have failed twice, we'll be honest about whether to repair or trade in. The free diagnostic includes that advice, with no pressure either way - message us on WhatsApp for the exact repair price on your model.",
         },
         {
           q: "What if only the external keyboard works?",

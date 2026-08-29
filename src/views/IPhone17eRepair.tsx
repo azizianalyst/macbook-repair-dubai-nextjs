@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone17eRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 17e Repair Dubai - A19 Budget iPhone, Dynamic Island from AED 350 | 055 741 3706"
-      seoDescription="iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island (added), MagSafe (first for e-series), USB-C, $599. Screen AED 700, battery AED 400. Same-day."
+      seoTitle="iPhone 17e Repair Dubai - A19 Budget iPhone, Dynamic Island | 055 741 3706"
+      seoDescription="iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island, MagSafe, USB-C. Same-day screen and battery. Message us on WhatsApp for today's exact price."
       path="/iphone-17e-repair-dubai"
       eyebrow="iPhone 17e (March 2026, just released)"
       h1="iPhone 17e Repair Dubai - A19, Dynamic Island, MagSafe, USB-C"
-      subtitle="The newest budget iPhone - A19, Dynamic Island (added), MagSafe (first for e-series), Apple Intelligence. Released 6 weeks ago. From AED 350."
+      subtitle="The newest budget iPhone - A19, Dynamic Island (added), MagSafe (first for e-series), Apple Intelligence. Released 6 weeks ago. Message us on WhatsApp for today's exact price on your model."
       startingPrice={350}
       timeline="Same day (OLED + battery)"
       whatsappPrefill="Hi, I have an iPhone 17e (March 2026) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone17eRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPhone 17e owners - we understand. Brand-new phone, just broke. Let's fix it.</strong> The iPhone 17e (March 2026) is the newest budget iPhone - A19 chip, 6.1-inch OLED with Dynamic Island (added vs the 16e), MagSafe (first ever on the e-series), USB-C 2.0, single 48MP rear camera, Action Button, Apple Intelligence-capable. Apple released this in March 2026 - only 6 weeks ago. As of April 2026 we've serviced 12 of these so far. Parts availability is good for screens and batteries; specialty parts (MagSafe coil back glass, Action Button assembly) may take 2-3 days to arrive. AED 700 screen, AED 400 battery.
+            <strong>iPhone 17e owners - we understand. Brand-new phone, just broke. Let's fix it.</strong> The iPhone 17e (March 2026) is the newest budget iPhone - A19 chip, 6.1-inch OLED with Dynamic Island (added vs the 16e), MagSafe (first ever on the e-series), USB-C 2.0, single 48MP rear camera, Action Button, Apple Intelligence-capable. Apple released this in March 2026 - only 6 weeks ago. As of April 2026 we've serviced 12 of these so far. Parts availability is good for screens and batteries; specialty parts (MagSafe coil back glass, Action Button assembly) may take 2-3 days to arrive. Message us on WhatsApp for today's exact price on a screen or battery.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 17e</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -48,16 +48,16 @@ export default function IPhone17eRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 17e</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">OLED screen replacement (Dynamic Island)</td><td className="px-md py-sm">700</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">700</td><td className="px-md py-sm">2-3 days (parts)</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Single 48 MP camera replacement</td><td className="px-md py-sm">600</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">2-3 days (parts)</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">700</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">From 450</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">OLED screen replacement (Dynamic Island)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days (parts)</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Single 48 MP camera replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days (parts)</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
@@ -67,7 +67,7 @@ export default function IPhone17eRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 17e still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Absolutely - it just launched.</strong> A19, Apple Intelligence, MagSafe, used resale ~AED 2,000-2,400. iOS 26 expected. Any repair under AED 1,200 is well worthwhile.
+            <strong>Absolutely - it just launched.</strong> A19, Apple Intelligence, MagSafe, and strong resale value. iOS 26 expected. On a phone this new, a repair is almost always well worthwhile - message us on WhatsApp for the exact price and decide with the figure in hand.
           </p>
         </>
       }
@@ -96,15 +96,15 @@ export default function IPhone17eRepair() {
       faqs={[
         { q: "How many 17e units have you serviced so far?", a: "12, as of April 2026 - the phone is only 6 weeks old. We'll publish 17e-specific failure-cluster data on this page once we have meaningful numbers (target: June 2026)." },
         { q: "Why is the back glass a 2-3 day repair?", a: "The 17e is the first e-series iPhone with MagSafe - its back-glass assembly with embedded MagSafe coil is a brand-new e-series-exclusive part. Apple's authorised supply chain to the UAE is still ramping. We expect 24-hour replenishment by mid-2026." },
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,070 (saves AED 30). Battery + USB-C port: AED 770 (saves AED 30)." },
+        { q: "Bundle pricing?", a: "Yes - we discount common pairings like screen + battery and battery + USB-C port. Message us on WhatsApp with what you need and we'll send today's exact bundle price for your 17e." },
         { q: "Will the 17e get iOS 20 and beyond?", a: "Yes - A19 with 8 GB RAM is fully Apple-Intelligence-capable. iOS 26 expected." },
         { q: "Same day?", a: "OLED, battery, USB-C, single camera - yes. MagSafe back glass + Action Button currently 2-3 days." },
       ]}
       reviewNames={["B Parker", "Seyed Moulana"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "OLED with Dynamic Island AED 700." },
+        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "OLED with Dynamic Island, same day." },
         { label: "iPhone Back Glass Repair Dubai",  href: "/iphone-back-glass-repair-dubai",  description: "MagSafe coil back glass - e-series first." },
-        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "AED 400, 45 minutes." },
+        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "45 minutes - price on request." },
       ]}
     />
   );

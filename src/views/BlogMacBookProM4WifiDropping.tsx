@@ -7,7 +7,7 @@ export default function BlogMacBookProM4WifiDropping() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Wi-Fi Dropping Dubai 2026: Fix for Disconnects After Sleep"
-      seoDescription="MacBook Pro M4 Wi-Fi dropping in Dubai? Disconnects after sleep, slow on 6GHz, or connection not restored after wake. Step-by-step fix guide for UAE networks. Repair from AED 200."
+      seoDescription="MacBook Pro M4 Wi-Fi dropping in Dubai? Disconnects after sleep, slow on 6GHz, or connection not restored after wake. Step-by-step fix guide for UAE networks. Free diagnosis."
       path="/blog/macbook-pro-m4-wifi-dropping-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM4WifiDropping() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Wi-Fi Dropping in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M4 Wi-Fi drops after sleep and 6GHz band disconnections are the two most reported M4 Wi-Fi issues on Apple Community since late 2024. Both have clear fixes. Wi-Fi antenna repair starts from AED 200 in Dubai if hardware is confirmed at fault."
+      hook="MacBook Pro M4 Wi-Fi drops after sleep and 6GHz band disconnections are the two most reported M4 Wi-Fi issues on Apple Community since late 2024. Both have clear fixes. If hardware is confirmed at fault, message us on WhatsApp for a Wi-Fi antenna repair price on your model in Dubai."
       quickAnswer="MacBook Pro M4 Wi-Fi dropping after sleep: disable 'Disconnect from Wi-Fi when display is off' via Power Nap settings (System Settings, Battery, Options, disable Power Nap on battery). For 6GHz drops: update to Sequoia 15.2 or later which fixes the M4 6GHz authentication bug. For Dubai routers: set separate SSIDs per band and enable WPA3. Forget and rejoin the network to reset MCS rate negotiation."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -123,12 +123,12 @@ export default function BlogMacBookProM4WifiDropping() {
 
           <h2 id="repair-cost">MacBook Pro M4 Wi-Fi repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M4 Wi-Fi repair pricing. June 2026"
+            caption="MacBook Pro M4 Wi-Fi repair options in Dubai"
             rows={[
-              { model: "Wi-Fi antenna replacement (M4 14-inch)", ours: "AED 200", apple: "AED 700+", note: "Antenna cable only, 60 mins" },
-              { model: "Wi-Fi antenna replacement (M4 16-inch)", ours: "AED 250", apple: "AED 700+", note: "Antenna cable only, 60 mins" },
-              { model: "Wi-Fi chip rework", ours: "AED 450", apple: "Logic board replacement", note: "Component-level repair" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Hardware vs software vs router confirmation" },
+              { model: "Wi-Fi antenna replacement (M4 14-inch)", ours: "Price on request", apple: "Message us on WhatsApp", note: "Antenna cable only, 60 mins" },
+              { model: "Wi-Fi antenna replacement (M4 16-inch)", ours: "Price on request", apple: "Message us on WhatsApp", note: "Antenna cable only, 60 mins" },
+              { model: "Wi-Fi chip rework", ours: "Price on request", apple: "Logic board replacement", note: "Component-level repair" },
+              { model: "Diagnostic", ours: "Free", apple: "Message us on WhatsApp", note: "Hardware vs software vs router confirmation" },
             ]}
           />
 
@@ -165,7 +165,7 @@ export default function BlogMacBookProM4WifiDropping() {
         },
         {
           q: "How much does MacBook Pro M4 Wi-Fi repair cost in Dubai?",
-          a: "Wi-Fi antenna replacement costs AED 200 (14-inch) or AED 250 (16-inch). Wi-Fi chip rework costs AED 450. Free diagnostic to confirm hardware versus software before any repair. We test on multiple networks to rule out software and router-specific issues before opening the machine.",
+          a: "Wi-Fi repair options include antenna replacement (14-inch or 16-inch) and component-level Wi-Fi chip rework. Message us on WhatsApp for today's exact price on your model. Free diagnostic to confirm hardware versus software before any repair. We test on multiple networks to rule out software and router-specific issues before opening the machine.",
         },
         {
           q: "Does Dubai heat affect MacBook Pro M4 Wi-Fi performance?",

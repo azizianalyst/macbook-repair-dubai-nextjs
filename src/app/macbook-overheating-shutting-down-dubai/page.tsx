@@ -5,7 +5,7 @@ import View from "@/views/MacBookOverheating";
 
 export const metadata: Metadata = metaFromFields("/macbook-overheating-shutting-down-dubai", {
   title: "MacBook Overheating & Shutting Down Dubai — Fix Same Day",
-  description: "MacBook overheating or shutting down in Dubai? Thermal paste dried out, fan failure, dust blocked vents, M-chip throttling. All models. Free diagnosis. From AED 150. Call 055 741 3706.",
+  description: "MacBook overheating or shutting down in Dubai? Thermal paste dried out, fan failure, dust blocked vents, M-chip throttling. All models. Free diagnosis. Call 055 741 3706 for a quote.",
 });
 
 export default function Page() {

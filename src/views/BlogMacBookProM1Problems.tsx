@@ -7,7 +7,7 @@ export default function BlogMacBookProM1Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M1 common problems in Dubai? Touch Bar failure, battery swelling on 4-5 year old units, charging IC faults, kernel panics. Expert fixes from AED 200."
+      seoDescription="MacBook Pro M1 common problems in Dubai? Touch Bar failure, battery swelling on 4-5 year old units, charging IC faults, kernel panics. Expert same-day fixes."
       path="/blog/macbook-pro-m1-common-problems-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM1Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro M1 units are now 4-5 years old. In Dubai's heat, that means Touch Bar failures, battery swelling, and charging IC faults are appearing in volume. Most M1 hardware repairs cost AED 200-650 at our Dubai workshop and are same-day."
-      quickAnswer="MacBook Pro M1 common problems at 4-5 years: Touch Bar unresponsive or stuck (13-inch M1 only, replacement AED 400), battery swelling causing spongy trackpad or bulging bottom case (replace urgently, AED 600), charging IC failure (only one port charges, AED 350 repair), and kernel panics on outdated macOS. First: update to macOS Sequoia, then run hardware diagnostics."
+      hook="MacBook Pro M1 units are now 4-5 years old. In Dubai's heat, that means Touch Bar failures, battery swelling, and charging IC faults are appearing in volume. Most M1 hardware repairs are same-day at our Dubai workshop — message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M1 common problems at 4-5 years: Touch Bar unresponsive or stuck (13-inch M1 only, needs replacement), battery swelling causing spongy trackpad or bulging bottom case (replace urgently), charging IC failure (only one port charges), and kernel panics on outdated macOS. First: update to macOS Sequoia, then run hardware diagnostics — message us on WhatsApp for a repair quote."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -64,8 +64,8 @@ export default function BlogMacBookProM1Problems() {
             headers={["Symptom", "Likely cause", "Repair"]}
             rows={[
               { model: "Blank on startup, back after restart", ours: "ControlStrip software crash", apple: "Free: pkill ControlStrip or reboot" },
-              { model: "Always blank, no restart fixes it", ours: "OLED panel or flex cable failure", apple: "AED 400 replacement" },
-              { model: "Flickering or partial display", ours: "Flex cable partially failed", apple: "AED 350 repair or AED 400 replacement" },
+              { model: "Always blank, no restart fixes it", ours: "OLED panel or flex cable failure", apple: "Price on request" },
+              { model: "Flickering or partial display", ours: "Flex cable partially failed", apple: "Price on request" },
               { model: "Touch ID fails, Bar works", ours: "Touch ID sensor or SMC fault", apple: "Free diagnostic first" },
             ]}
           />
@@ -91,7 +91,7 @@ export default function BlogMacBookProM1Problems() {
           <p>
             A swollen battery is a safety issue. Stop charging it, do not leave it unattended,
             and do not leave it in a hot car. Bring it in same-day. We remove swollen batteries
-            safely and dispose of them without the AED 250 premium Apple charges.
+            safely and dispose of them properly — message us on WhatsApp for a repair quote.
           </p>
 
           <h2 id="thermal-m1">Step 3: How do I fix MacBook Pro M1 thermal throttling?</h2>
@@ -103,7 +103,7 @@ export default function BlogMacBookProM1Problems() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Signs TIM has failed</strong>: fan runs louder than it did 2 years ago at the same task, sustained performance on video export or compilation is noticeably slower</li>
             <li><strong>Test</strong>: run Cinebench or a sustained video export and note the time. Compare to 2021-era benchmarks for M1. If your result is 20%+ slower, TIM failure is likely</li>
-            <li><strong>Fix</strong>: thermal paste reapplication at our workshop, AED 150. This typically restores M1 thermal performance to near-new levels</li>
+            <li><strong>Fix</strong>: thermal paste reapplication at our workshop. This typically restores M1 thermal performance to near-new levels — message us on WhatsApp for the exact price</li>
             <li><strong>Also clean the vents</strong>: 4-5 years of Dubai dust in the fan reduces airflow. Combined with fresh TIM, this is the most impactful maintenance service for older M1 MacBook Pros</li>
           </ul>
 
@@ -116,7 +116,7 @@ export default function BlogMacBookProM1Problems() {
             <li><strong>Only left-side USB-C port charges</strong>: partial charging IC failure. Right ports work for data but not power. Repair is usually possible without board replacement</li>
             <li><strong>Charges to 80% then won't go higher</strong>: Optimised Battery Charging is working correctly, not a fault. Disable in System Settings → Battery to confirm</li>
             <li><strong>MagSafe LED orange but battery percentage doesn't move for 30+ minutes</strong>: high internal battery resistance (worn cell) or charging IC throttling. Battery replacement usually fixes this</li>
-            <li><strong>No charging light at all with known-good cable and charger</strong>: blown fuse on the power rail or dead charging IC. Board-level repair, AED 350</li>
+            <li><strong>No charging light at all with known-good cable and charger</strong>: blown fuse on the power rail or dead charging IC. Board-level repair — message us on WhatsApp for the exact price</li>
           </ul>
 
           <h2 id="dubai-heat-m1">Step 5: Does Dubai heat affect MacBook Pro M1?</h2>
@@ -162,14 +162,14 @@ export default function BlogMacBookProM1Problems() {
 
           <h2 id="repair-cost-m1">How much does MacBook Pro M1 repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M1 repair pricing. June 2026"
+            caption="MacBook Pro M1 repair pricing"
             rows={[
-              { model: "MacBook Pro M1 13\" screen replacement", ours: "AED 450", apple: "AED 899", note: "Retina IPS, same-day" },
-              { model: "MacBook Pro M1 14\" screen replacement", ours: "AED 550", apple: "AED 999", note: "Mini-LED Liquid Retina XDR" },
-              { model: "MacBook Pro M1 16\" screen replacement", ours: "AED 650", apple: "AED 1,199", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M1 battery (13\")", ours: "AED 600", apple: "AED 999", note: "58 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M1 battery (14\"/16\")", ours: "AED 650", apple: "AED 1,099", note: "70 Wh / 100 Wh cell" },
-              { model: "Touch Bar replacement (13\" M1)", ours: "AED 400", apple: "AED 950+", note: "OLED Touch Bar + flex cable" },
+              { model: "MacBook Pro M1 13\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Retina IPS, same-day" },
+              { model: "MacBook Pro M1 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED Liquid Retina XDR" },
+              { model: "MacBook Pro M1 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED, same-day" },
+              { model: "MacBook Pro M1 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M1 battery (14\"/16\")", ours: "Price on request", apple: "Price on request", note: "70 Wh / 100 Wh cell" },
+              { model: "Touch Bar replacement (13\" M1)", ours: "Price on request", apple: "Price on request", note: "OLED Touch Bar + flex cable" },
             ]}
           />
           <p>
@@ -190,8 +190,8 @@ export default function BlogMacBookProM1Problems() {
             <li>Internal display works but Thunderbolt 4 external display output dead on all ports</li>
           </ul>
           <p>
-            Component-level M1 board repair from AED 1,000. We repair rather than replace
-            wherever the fault is component-level.{" "}
+            Component-level M1 board repair — message us on WhatsApp for the exact price. We repair
+            rather than replace wherever the fault is component-level.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>
@@ -201,11 +201,11 @@ export default function BlogMacBookProM1Problems() {
       faqs={[
         {
           q: "Why does my MacBook Pro M1 Touch Bar turn black and stay black?",
-          a: "A permanently black Touch Bar on the 13-inch M1 usually means the Touch Bar OLED panel or its flex cable has failed. First try: Terminal → pkill ControlStrip. If it doesn't come back, it's hardware. Replacement costs AED 400 at our Dubai workshop and takes 90 minutes. We stock M1 Touch Bar assemblies.",
+          a: "A permanently black Touch Bar on the 13-inch M1 usually means the Touch Bar OLED panel or its flex cable has failed. First try: Terminal → pkill ControlStrip. If it doesn't come back, it's hardware. Replacement takes 90 minutes at our Dubai workshop — message us on WhatsApp for the exact price. We stock M1 Touch Bar assemblies.",
         },
         {
           q: "Does Dubai heat permanently damage MacBook Pro M1 battery?",
-          a: "Yes, and we're seeing it now as M1 units age. Four to five years of Dubai summers accelerates lithium-ion degradation by 20-30% compared to cooler climates. If your M1 battery is below 80% capacity in System Settings → Battery → Battery Health, replacement is worthwhile. AED 600 for the 13-inch, AED 650 for the 14-inch or 16-inch.",
+          a: "Yes, and we're seeing it now as M1 units age. Four to five years of Dubai summers accelerates lithium-ion degradation by 20-30% compared to cooler climates. If your M1 battery is below 80% capacity in System Settings → Battery → Battery Health, replacement is worthwhile. Message us on WhatsApp for today's exact price on the 13-inch, 14-inch or 16-inch.",
         },
         {
           q: "How long should MacBook Pro M1 battery last?",
@@ -221,7 +221,7 @@ export default function BlogMacBookProM1Problems() {
         },
         {
           q: "Is it worth repairing a 4-5 year old MacBook Pro M1?",
-          a: "Usually yes. M1 performance is still excellent for most tasks, and a battery + thermal paste service at AED 750 total extends useful life by 2-3 years. Compare to a new MacBook Pro M5 at AED 6,000+. If the logic board is faulty and repair exceeds AED 1,500, that's the point where buying a refurbished M2 or M3 makes more financial sense.",
+          a: "Usually yes. M1 performance is still excellent for most tasks, and a combined battery + thermal paste service extends useful life by 2-3 years for a fraction of the cost of a new MacBook Pro M5. Message us on WhatsApp for a repair quote — if the logic board is faulty and the repair approaches the price of a refurbished M2 or M3, we'll tell you honestly.",
         },
       ]}
       relatedLinks={[

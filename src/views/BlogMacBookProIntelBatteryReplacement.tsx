@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProIntelBatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro Intel Battery Replacement Cost Dubai 2026: AED Price Guide"
-      seoDescription="MacBook Pro Intel battery replacement cost in Dubai 2026. 2016-2020 Intel MacBook Pro from AED 400. Same-day service. Swollen battery urgent care. 3-month warranty."
+      seoTitle="MacBook Pro Intel Battery Replacement Dubai 2026: Price on Request"
+      seoDescription="MacBook Pro Intel battery replacement in Dubai 2026. 2016-2020 Intel MacBook Pro. Same-day service, swollen battery urgent care, 3-month warranty. WhatsApp for your price."
       path="/blog/macbook-pro-intel-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProIntelBatteryReplacement() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Intel Battery Replacement Cost in Dubai 2026: All Models Covered"
-      hook="MacBook Pro Intel models purchased in UAE from 2016-2020 are now 6-10 years old, deep into the replacement zone for lithium batteries. Battery replacement costs AED 400-600 at our Dubai workshop, extending machine life by 3-4 years for the cost of one month's rental on a new MacBook Pro. Swollen Intel batteries are also a growing concern in Dubai's hot climate."
-      quickAnswer="MacBook Pro Intel battery replacement cost Dubai: 2016-2017 13/15-inch from AED 400. 2018-2019 13/15-inch from AED 450. 2019-2020 16-inch from AED 500. All with 3-month warranty. Same-day service. Swollen battery: stop using immediately, same-day urgent repair. Free battery health check to confirm need before replacement."
+      hook="MacBook Pro Intel models purchased in UAE from 2016-2020 are now 6-10 years old, deep into the replacement zone for lithium batteries. Battery replacement at our Dubai workshop extends machine life by 3-4 years for a fraction of the cost of a new MacBook Pro. Message us on WhatsApp for today's exact price on your model. Swollen Intel batteries are also a growing concern in Dubai's hot climate."
+      quickAnswer="MacBook Pro Intel battery replacement in Dubai covers 2016-2017, 2018-2019 and 2019-2020 13/15/16-inch models, all with a 3-month warranty and same-day service. Swollen battery: stop using immediately, same-day urgent repair. Free battery health check to confirm need before replacement, then message us on WhatsApp for your exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -99,8 +99,8 @@ export default function BlogMacBookProIntelBatteryReplacement() {
 
           <h2 id="step-4">Step 4: Battery replacement vs upgrading Intel MacBook Pro in Dubai 2026</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Replace battery</strong>: if the Intel MacBook Pro is otherwise working well: keyboard fine (or has scissor keyboard), GPU stable (or is a 13-inch with no dGPU), display cable intact. AED 400-500 gives 3-4 more years of reliable use</li>
-            <li><strong>Upgrade instead</strong>: if the machine also has butterfly keyboard issues, AMD GPU symptoms, or Flexgate. Combined repair on a 8-10 year old machine can exceed AED 1,000. At that point a used M1 MacBook Pro (available from AED 2,500-3,000 on Dubizzle UAE) is more economical</li>
+            <li><strong>Replace battery</strong>: if the Intel MacBook Pro is otherwise working well: keyboard fine (or has scissor keyboard), GPU stable (or is a 13-inch with no dGPU), display cable intact. A battery replacement gives 3-4 more years of reliable use for a fraction of a new machine — message us on WhatsApp for the exact price on your model</li>
+            <li><strong>Upgrade instead</strong>: if the machine also has butterfly keyboard issues, AMD GPU symptoms, or Flexgate. Combined repairs on an 8-10 year old machine can add up, so a used M1 MacBook Pro on Dubizzle UAE may be more economical. Message us on WhatsApp and we'll help you weigh repair against replacement</li>
             <li><strong>Intel-specific consideration</strong>: Intel machines cannot run current Tahoe (macOS 16) and will eventually reach end of macOS support. Battery replacement extends hardware life, but macOS support is a separate factor for security-conscious users</li>
           </ul>
 
@@ -113,15 +113,15 @@ export default function BlogMacBookProIntelBatteryReplacement() {
 
           <h2 id="models">MacBook Pro Intel battery prices by model in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro Intel battery replacement pricing by model. June 2026"
+            caption="MacBook Pro Intel battery replacement by model. June 2026. Message us on WhatsApp for your exact price"
             rows={[
-              { model: "MacBook Pro 13-inch 2016-2017 (54.5Wh)", ours: "AED 400", apple: "AED 600+", note: "3-month warranty, 2-hour job" },
-              { model: "MacBook Pro 15-inch 2016-2017 (76Wh)", ours: "AED 450", apple: "AED 700+", note: "3-month warranty, 2.5-hour job" },
-              { model: "MacBook Pro 13-inch 2018-2019 (58Wh)", ours: "AED 420", apple: "AED 650+", note: "T2 chip models: careful SMC handling" },
-              { model: "MacBook Pro 15-inch 2018-2019 (83.6Wh)", ours: "AED 480", apple: "AED 750+", note: "3-month warranty, 3-hour job" },
-              { model: "MacBook Pro 16-inch 2019 (99.8Wh)", ours: "AED 550", apple: "AED 900+", note: "3-month warranty, 3-hour job" },
-              { model: "MacBook Pro 13-inch 2020 Intel (58Wh)", ours: "AED 420", apple: "AED 650+", note: "Last Intel 13-inch: scissor keyboard" },
-              { model: "Swollen battery (any Intel model, +50)", ours: "AED 450–600", apple: "Same as above", note: "Additional handling for swollen cell" },
+              { model: "MacBook Pro 13-inch 2016-2017 (54.5Wh)", ours: "Price on request", apple: "Price on request", note: "3-month warranty, 2-hour job" },
+              { model: "MacBook Pro 15-inch 2016-2017 (76Wh)", ours: "Price on request", apple: "Price on request", note: "3-month warranty, 2.5-hour job" },
+              { model: "MacBook Pro 13-inch 2018-2019 (58Wh)", ours: "Price on request", apple: "Price on request", note: "T2 chip models: careful SMC handling" },
+              { model: "MacBook Pro 15-inch 2018-2019 (83.6Wh)", ours: "Price on request", apple: "Price on request", note: "3-month warranty, 3-hour job" },
+              { model: "MacBook Pro 16-inch 2019 (99.8Wh)", ours: "Price on request", apple: "Price on request", note: "3-month warranty, 3-hour job" },
+              { model: "MacBook Pro 13-inch 2020 Intel (58Wh)", ours: "Price on request", apple: "Price on request", note: "Last Intel 13-inch: scissor keyboard" },
+              { model: "Swollen battery (any Intel model)", ours: "Price on request", apple: "Price on request", note: "Additional handling for swollen cell" },
             ]}
           />
 
@@ -148,7 +148,7 @@ export default function BlogMacBookProIntelBatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro Intel battery replacement cost in Dubai?",
-          a: "MacBook Pro Intel 13-inch battery replacement costs AED 400-420. 15-inch 2016-2019 costs AED 450-480. 16-inch 2019 costs AED 550. Swollen battery replacement adds AED 50. All with 3-month warranty and same-day service. Apple charges AED 600-900+ depending on model. Free battery health diagnostic first.",
+          a: "We replace batteries on all Intel MacBook Pro models: 13-inch, 15-inch 2016-2019 and 16-inch 2019, with swollen battery handling available. All come with a 3-month warranty, same-day service and a free battery health diagnostic first. Prices vary by model, so message us on WhatsApp with your MacBook Pro and we'll send today's exact price.",
         },
         {
           q: "How do I check MacBook Pro Intel battery health in Dubai?",
@@ -160,7 +160,7 @@ export default function BlogMacBookProIntelBatteryReplacement() {
         },
         {
           q: "Is it worth replacing MacBook Pro Intel battery in Dubai in 2026?",
-          a: "Depends on the model and condition. A 2019-2020 Intel MacBook Pro with only battery degradation is a reasonable candidate for AED 400-550 battery replacement, extending life by 3-4 years. Older 2016-2017 models with additional butterfly keyboard and AMD GPU issues should be evaluated more carefully. Combined repair costs may favor upgrading to a used M1 or M2.",
+          a: "Depends on the model and condition. A 2019-2020 Intel MacBook Pro with only battery degradation is a reasonable candidate for battery replacement, extending life by 3-4 years for a fraction of a new machine. Older 2016-2017 models with additional butterfly keyboard and AMD GPU issues should be evaluated more carefully, as combined repair costs may favor upgrading to a used M1 or M2. Message us on WhatsApp for your exact price and advice.",
         },
         {
           q: "MacBook Pro Intel battery swelling in Dubai: what do I do?",

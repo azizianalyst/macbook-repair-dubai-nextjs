@@ -7,7 +7,7 @@ export default function BlogMacBookProM1NotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Not Turning On Dubai 2026: Dead or Black Screen Fix"
-      seoDescription="MacBook Pro M1 not turning on in Dubai? At 5 years old, M1 13-inch has no MagSafe, USB-C deep discharge is different to diagnose. DFU, force restart, battery and board fault guide. Repair from AED 350."
+      seoDescription="MacBook Pro M1 not turning on in Dubai? At 5 years old, M1 13-inch has no MagSafe, USB-C deep discharge is different to diagnose. DFU, force restart, battery and board fault guide. Free diagnosis, WhatsApp for price."
       path="/blog/macbook-pro-m1-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM1NotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Not Turning On in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M1 13-inch (2020) has no MagSafe, USB-C only charging on both left ports. At 5-6 years old in Dubai, M1 machines not turning on are most often deep battery discharge (USB-C charging neglected for months) or battery cell failure. Logic board charging IC faults are also appearing at this age. Repair starts from AED 350 in Dubai with free diagnosis."
+      hook="MacBook Pro M1 13-inch (2020) has no MagSafe, USB-C only charging on both left ports. At 5-6 years old in Dubai, M1 machines not turning on are most often deep battery discharge (USB-C charging neglected for months) or battery cell failure. Logic board charging IC faults are also appearing at this age. Free diagnosis in Dubai first, then message us on WhatsApp for your exact repair price."
       quickAnswer="MacBook Pro M1 not turning on: connect USB-C charger to each port separately and wait 30-45 minutes. The M1 13-inch charges on both left USB-C ports but not the right (USB 3.0). A charging indicator (fan spin, any startup sound) confirms the battery is accepting charge. If no response from either left port after 45 minutes, try DFU restore via Apple Configurator 2 on a second Mac. If DFU cannot detect the M1, hardware fault. Bring to Dubai workshop."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -114,11 +114,11 @@ export default function BlogMacBookProM1NotTurningOn() {
           <BlogPriceTable
             caption="MacBook Pro M1 dead machine repair pricing. June 2026"
             rows={[
-              { model: "Battery replacement (failed cells)", ours: "AED 550", apple: "AED 750+", note: "M1 13-inch: most common fix for dead M1" },
-              { model: "DFU Revive (firmware only)", ours: "AED 200", apple: "AED 0 (under warranty)", note: "Software restoration, no data loss" },
-              { model: "Charging IC repair", ours: "AED 700", apple: "Logic board AED 2,500+", note: "Component-level, USB-C charging restored" },
-              { model: "Deep discharge recovery (battery viable)", ours: "AED 150", apple: "AED 0 if under warranty", note: "Patient charge session, calibration" },
-              { model: "Dead machine diagnostic", ours: "Free", apple: "AED 250", note: "Battery vs firmware vs board determination" },
+              { model: "Battery replacement (failed cells)", ours: "Price on request", apple: "Price on request", note: "M1 13-inch: most common fix for dead M1" },
+              { model: "DFU Revive (firmware only)", ours: "Price on request", apple: "Free under warranty", note: "Software restoration, no data loss" },
+              { model: "Charging IC repair", ours: "Price on request", apple: "Logic board swap", note: "Component-level, USB-C charging restored" },
+              { model: "Deep discharge recovery (battery viable)", ours: "Price on request", apple: "Free if under warranty", note: "Patient charge session, calibration" },
+              { model: "Dead machine diagnostic", ours: "Free", apple: "Price on request", note: "Battery vs firmware vs board determination" },
             ]}
           />
 
@@ -143,7 +143,7 @@ export default function BlogMacBookProM1NotTurningOn() {
         },
         {
           q: "MacBook Pro M1 not turning on after 5 years: what is most likely wrong?",
-          a: "At 5-6 years old, the most common cause of MacBook Pro M1 not turning on is battery cell failure: the cells can no longer hold or accept charge. Battery replacement (AED 550) resolves this. Second most common: firmware corruption from an interrupted Big Sur/Monterey update, fixed by DFU Revive via Apple Configurator 2. Hardware board faults are third.",
+          a: "At 5-6 years old, the most common cause of MacBook Pro M1 not turning on is battery cell failure: the cells can no longer hold or accept charge. Battery replacement resolves this. Second most common: firmware corruption from an interrupted Big Sur/Monterey update, fixed by DFU Revive via Apple Configurator 2. Hardware board faults are third. Message us on WhatsApp for today's exact price on your M1.",
         },
         {
           q: "How do I know if MacBook Pro M1 screen is black or machine is dead?",
@@ -151,11 +151,11 @@ export default function BlogMacBookProM1NotTurningOn() {
         },
         {
           q: "How do I DFU restore MacBook Pro M1 that won't turn on?",
-          a: "Connect a second Mac with Apple Configurator 2 to the M1 via USB-C (rear-left port on M1 13-inch). Open Apple Configurator 2. If M1 appears as 'DFU' device, choose Revive Device. This restores the bridge OS firmware without erasing data in 10-20 minutes. Our Dubai workshop can do this for AED 200.",
+          a: "Connect a second Mac with Apple Configurator 2 to the M1 via USB-C (rear-left port on M1 13-inch). Open Apple Configurator 2. If M1 appears as 'DFU' device, choose Revive Device. This restores the bridge OS firmware without erasing data in 10-20 minutes. Message our Dubai workshop on WhatsApp for the exact price to do this for you.",
         },
         {
           q: "How much does MacBook Pro M1 not turning on repair cost in Dubai?",
-          a: "Battery replacement (most common cause at 5 years): AED 550. DFU firmware restore: AED 200. Charging IC board repair: AED 700. Deep discharge recovery (battery still viable): AED 150. Free diagnostic first to identify the exact cause before any repair.",
+          a: "It depends on the cause: battery replacement (most common at 5 years), DFU firmware restore, charging IC board repair, or deep discharge recovery if the battery is still viable. We run a free diagnostic first to identify the exact fault, then message us on WhatsApp for today's exact price on your M1.",
         },
         {
           q: "Does Dubai summer heat cause MacBook Pro M1 to not turn on?",

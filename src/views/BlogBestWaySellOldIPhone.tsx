@@ -7,7 +7,7 @@ export default function BlogBestWaySellOldIPhone() {
   return (
     <BlogPostTemplate
       seoTitle="Best Way to Sell an Old iPhone in Dubai 2026"
-      seoDescription="Three honest ways to sell your iPhone in Dubai: Dubizzle (highest, slow), us (instant cash), Apple Trade-In (lowest, easy). Real prices and scam warnings."
+      seoDescription="Three honest ways to sell your iPhone in Dubai: Dubizzle (highest, slow), us (instant cash), Apple Trade-In (lowest, easy). WhatsApp us for a same-day quote plus scam warnings."
       path="/blog/best-way-to-sell-old-iphone-dubai"
       wide
       toc={[
@@ -39,9 +39,9 @@ export default function BlogBestWaySellOldIPhone() {
             caption="iPhone resale options Dubai - pros and cons"
             headers={["Method", "Price you get", "Time cost", "Risk level"]}
             rows={[
-              { model: "Dubizzle (private buyer)", ours: "100% (highest)", apple: "1-4 weeks of messages", note: "Scam risk: fake transfers, no-shows" },
-              { model: "Us (instant cash)", ours: "85-90%", apple: "30 minutes", note: "Zero - bench-tested, cash on the spot" },
-              { model: "Apple Trade-In", ours: "60-70%", apple: "Same Apple Store visit", note: "Zero - Apple-handled" },
+              { model: "Dubizzle (private buyer)", ours: "Highest (private-sale)", apple: "1-4 weeks of messages", note: "Scam risk: fake transfers, no-shows" },
+              { model: "Us (instant cash)", ours: "Close to private-sale", apple: "30 minutes", note: "Zero - bench-tested, cash on the spot" },
+              { model: "Apple Trade-In", ours: "Lowest of the three", apple: "Same Apple Store visit", note: "Zero - Apple-handled" },
               { model: "Sell to a friend", ours: "Negotiable", apple: "Variable", note: "Friendship risk if anything fails" },
             ]}
           />
@@ -49,13 +49,13 @@ export default function BlogBestWaySellOldIPhone() {
           <h2 id="selling-dubizzle">Selling on Dubizzle - pros, cons, scam risks</h2>
           <p>
             Dubizzle gives you the most cash but eats your time. Realistic timeline for an iPhone 16 Pro
-            Max at AED 3,000:
+            Max listed at a typical private-sale asking price:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li>Day 1: post listing, 20+ lowball messages within 4 hours.</li>
             <li>Day 3: 2 serious buyers, both ask for "best price please brother".</li>
             <li>Day 7: one no-show in Mall of Emirates car park.</li>
-            <li>Day 10-14: actual sale at AED 2,800 (you accepted 7% below asking).</li>
+            <li>Day 10-14: actual sale roughly 7% below your asking price.</li>
           </ul>
           <p>
             <strong>Common Dubizzle scams to refuse:</strong>
@@ -81,7 +81,7 @@ export default function BlogBestWaySellOldIPhone() {
             <li>15-minute bench test - battery health, Face ID, cameras (front + back + ultrawide), all buttons, speaker, microphone, network registration, GPS.</li>
             <li>Verify no iCloud lock - we'll ask you to sign out on the spot.</li>
             <li>Quote you the cash price (10-15% below Dubizzle realistic, ~25% above Apple Trade-In).</li>
-            <li>If you accept: cash in AED 500/200/100 notes within 5 minutes.</li>
+            <li>If you accept: cash in hand within 5 minutes.</li>
             <li>Receipt with IMEI for your records - protects you against future Dubai Police queries.</li>
           </ol>
           <p>
@@ -91,12 +91,14 @@ export default function BlogBestWaySellOldIPhone() {
           <h2 id="apple-trade-in">Apple Trade-In - convenient but lowest</h2>
           <p>
             Apple's UAE Trade-In runs at Apple Dubai Mall and Mall of the Emirates. The algorithm scans
-            condition descriptors and pays 30-40% below market. Example: iPhone 16 Pro Max mint, Apple
-            offers AED 2,000 - we'd pay AED 2,650 - Dubizzle nets ~AED 3,000 after a fortnight.
+            condition descriptors and pays around 30-40% below market. For an iPhone 16 Pro Max in mint
+            condition, Apple's offer is the lowest of the three - we'd pay noticeably more, and Dubizzle
+            nets the most after a fortnight of effort. Message us on WhatsApp for today's exact buy-back
+            figure on your model.
           </p>
           <p>
             <strong>When Apple Trade-In wins:</strong> you're already at the Apple Store buying a new
-            iPhone, you don't want any hassle, the AED 600-1,000 difference vs us isn't worth the trip
+            iPhone, you don't want any hassle, and the difference vs our offer isn't worth the trip
             to Media City.
           </p>
 
@@ -156,10 +158,10 @@ export default function BlogBestWaySellOldIPhone() {
       faqs={[
         { q: "Will Dubai Police ask about a used iPhone I bought?", a: "Only if reported stolen. Always get a receipt with the seller's name, Emirates ID number, and the iPhone IMEI. We provide this receipt by default on every buy-back transaction." },
         { q: "Is it legal to sell my iPhone if it's on instalments with du or Etisalat?", a: "Only after the contract is fully paid. Carrier-locked iPhones get bricked remotely if instalments stop. Buyers can verify this through the IMEI checker - and they will." },
-        { q: "Should I unlock my iPhone before selling?", a: "UAE-spec iPhones from Apple Stores are factory unlocked. Carrier-purchased iPhones (du, Etisalat) need to be officially unlocked through the carrier - usually free after contract end, AED 100 if mid-contract." },
+        { q: "Should I unlock my iPhone before selling?", a: "UAE-spec iPhones from Apple Stores are factory unlocked. Carrier-purchased iPhones (du, Etisalat) need to be officially unlocked through the carrier - usually free after contract end, or a small carrier fee if mid-contract." },
         { q: "Can I sell a stolen iPhone? (asked surprisingly often)", a: "No, and you can't anyway. Apple's IMEI database is checked at every legitimate buy-back including ours, Apple Trade-In, and most Dubizzle buyers. Dubai Police prosecutes both seller and knowing buyer." },
         { q: "What if I find data of mine on the iPhone after I sold it?", a: "If you wiped it properly (Erase All Content and Settings + iCloud sign-out), this is impossible. If you didn't, contact the buyer immediately and offer to refund. Use our reset guide before any sale." },
-        { q: "Do you buy iPhones with FRP / activation lock?", a: "We buy locked iPhones at parts-only price (AED 100-400 depending on model) for component harvesting. We do not unlock them - that's an Apple-only process via legitimate ownership proof." },
+        { q: "Do you buy iPhones with FRP / activation lock?", a: "We buy locked iPhones at a parts-only price (WhatsApp us with your model for a quote) for component harvesting. We do not unlock them - that's an Apple-only process via legitimate ownership proof." },
       ]}
       relatedLinks={[
         { label: "How much is my iPhone worth", href: "/blog/how-much-is-my-iphone-worth-dubai", description: "Full Dubai resale price table by model and condition." },

@@ -35,7 +35,7 @@ const SERVICE_PAGES = [
 ];
 
 const PRICING = [
-  ["iPhone Screen Repair", "149–399"], ["iPhone Screen Replacement", "199–1,599"], ["iPhone Battery Replacement", "99–399"], ["iPhone Back Glass Replacement", "149–549"], ["iPhone Camera Repair", "299–649"], ["iPhone Charging Port Repair", "149–449"], ["iPhone Speaker Repair", "99–349"], ["iPhone Microphone Repair", "149–449"], ["iPhone Water Damage Repair", "249–699"], ["iPhone Logic Board Repair", "200–849"], ["iPhone Data Recovery", "350–1,499"], ["iPhone Software Troubleshooting", "99–299"], ["iPhone Button Repair", "99–249"], ["iPhone Face ID Repair", "299–599"],
+  ["iPhone Screen Repair", "Price on request"], ["iPhone Screen Replacement", "Price on request"], ["iPhone Battery Replacement", "Price on request"], ["iPhone Back Glass Replacement", "Price on request"], ["iPhone Camera Repair", "Price on request"], ["iPhone Charging Port Repair", "Price on request"], ["iPhone Speaker Repair", "Price on request"], ["iPhone Microphone Repair", "Price on request"], ["iPhone Water Damage Repair", "Price on request"], ["iPhone Logic Board Repair", "Price on request"], ["iPhone Data Recovery", "Price on request"], ["iPhone Software Troubleshooting", "Price on request"], ["iPhone Button Repair", "Price on request"], ["iPhone Face ID Repair", "Price on request"],
 ];
 
 const SERVICES: { title: string; body: string; Icon: LucideIcon; href?: string }[] = [
@@ -77,7 +77,7 @@ const FAQ_GROUPS = [
   {
     category: "Pricing & booking",
     items: [
-      { q: "How much does iPhone repair cost in Dubai?", a: "Screen repair starts from AED 149, battery replacement from AED 99, camera repair from AED 299, and water damage treatment from AED 249. Your exact price is confirmed in writing after a free diagnosis, no obligation to proceed." },
+      { q: "How much does iPhone repair cost in Dubai?", a: "Cost depends on your exact model and fault — screen, battery, camera, and water damage repairs are all priced individually. Message us on WhatsApp for today's exact price, or bring your iPhone in: we confirm the price in writing after a free diagnosis, with no obligation to proceed." },
       { q: "Do you offer same-day iPhone repair?", a: "Yes, most iPhone repairs (screen, battery, camera, charging port, buttons) finish the same day, often in 30–90 minutes for walk-in appointments. Logic board and water damage work may take 24–48 hours." },
       { q: "Do you offer free pickup in Dubai?", a: "Yes. Free door-to-door pickup and return delivery across Dubai. WhatsApp us your location and a courier comes to you within hours during business hours." },
     ],
@@ -269,13 +269,13 @@ export default function IPhoneRepairHub() {
         {/* ── PRICING TABLE ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading label="Estimated prices" title="Services & starting prices" sub="All prices confirmed in writing after free diagnosis. Final price may vary by model." />
+            <SectionHeading label="Pricing" title="Services & pricing" sub="Prices depend on your model — message us on WhatsApp for today's exact price. Every quote is confirmed in writing after a free diagnosis." />
             <div className="overflow-x-auto border border-border rounded-xl bg-bg max-w-[640px] mx-auto">
               <table className="w-full text-[14px]">
                 <thead className="bg-bg-card">
                   <tr className="text-left">
                     <th className="px-md py-sm font-semibold">Service</th>
-                    <th className="px-md py-sm font-semibold">Starting price (AED)</th>
+                    <th className="px-md py-sm font-semibold">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -288,7 +288,7 @@ export default function IPhoneRepairHub() {
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-text-muted mt-sm text-center">Estimated ranges only. Final price confirmed after a free diagnosis.</p>
+            <p className="text-[13px] text-text-muted mt-sm text-center">Message us on WhatsApp for your model's exact price. Final price confirmed in writing after a free diagnosis.</p>
             <div className="mt-lg flex justify-center"><CallButtons /></div>
           </div>
         </section>

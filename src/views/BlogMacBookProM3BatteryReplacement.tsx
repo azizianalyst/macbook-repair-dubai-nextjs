@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM3BatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M3 Battery Replacement Cost Dubai 2026: AED Prices and Guide"
-      seoDescription="MacBook Pro M3 battery replacement cost in Dubai 2026. When to replace, battery health check, swollen battery signs, and AED prices. M3 battery from AED 550. Same-day service."
+      seoTitle="MacBook Pro M3 Battery Replacement Dubai 2026: When to Replace and Guide"
+      seoDescription="MacBook Pro M3 battery replacement in Dubai 2026. When to replace, battery health check, swollen battery signs, same-day service. Message us on WhatsApp for your price."
       path="/blog/macbook-pro-m3-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -18,13 +18,13 @@ export default function BlogMacBookProM3BatteryReplacement() {
         { id: "step-4", label: "Step 4. After replacement: what to expect" },
         { id: "dubai-cycles", label: "M3 battery cycle life in Dubai" },
         { id: "m3-vs-m4", label: "M3 vs M4 battery replacement differences" },
-        { id: "repair-cost", label: "Battery replacement cost Dubai" },
+        { id: "repair-cost", label: "Battery replacement in Dubai" },
         { id: "warranty", label: "Warranty and AppleCare in UAE" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M3 Battery Replacement Cost in Dubai 2026: When to Replace and AED Prices"
-      hook="MacBook Pro M3 (late 2023) batteries in Dubai are approaching the first replacement wave: machines purchased at UAE launch are now 1.5-2 years old, and daily use in Dubai's heat shortens the path to 80% capacity. Battery replacement costs AED 550 (14-inch) or AED 600 (16-inch) at our Dubai workshop, significantly less than Apple's AED 899-999 pricing."
-      quickAnswer="MacBook Pro M3 battery replacement costs AED 550 (14-inch) or AED 600 (16-inch) in Dubai. Replace when: system shows Replace Soon or Replace Now, maximum capacity is below 80%, the M3 shuts down unexpectedly under load, or the battery is physically swollen (trackpad won't click). Free battery health check to confirm replacement is actually needed before any repair."
+      h1="MacBook Pro M3 Battery Replacement in Dubai 2026: When to Replace and What to Expect"
+      hook="MacBook Pro M3 (late 2023) batteries in Dubai are approaching the first replacement wave: machines purchased at UAE launch are now 1.5-2 years old, and daily use in Dubai's heat shortens the path to 80% capacity. We replace 14-inch and 16-inch M3 batteries at our Dubai workshop for less than Apple charges — message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M3 battery replacement is available same-day at our Dubai workshop for both 14-inch and 16-inch models. Replace when: system shows Replace Soon or Replace Now, maximum capacity is below 80%, the M3 shuts down unexpectedly under load, or the battery is physically swollen (trackpad won't click). Free battery health check to confirm replacement is actually needed before any repair — message us on WhatsApp for your price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -113,27 +113,27 @@ export default function BlogMacBookProM3BatteryReplacement() {
 
           <h2 id="m3-vs-m4">MacBook Pro M3 vs M4 battery replacement differences</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>M3 14-inch: 70 Wh battery. Same physical cell size as M4 14-inch. Replacement costs AED 550 vs AED 600 for M4, slight cost difference due to newer M4 cell supply</li>
-            <li>M3 16-inch: 99.6 Wh battery, same as M4 16-inch. AED 600 vs AED 650 for M4</li>
+            <li>M3 14-inch: 70 Wh battery. Same physical cell size as M4 14-inch. Replacement runs slightly cheaper than the M4 due to newer M4 cell supply — message us for the exact price on your model</li>
+            <li>M3 16-inch: 99.6 Wh battery, same as M4 16-inch. Again slightly cheaper than the M4 16-inch — WhatsApp us for today's price</li>
             <li>M3 battery replacement procedure is similar to M4 but with different adhesive peel points. Service time is the same (45-60 minutes)</li>
             <li>M3 machines are now outside Apple's 1-year warranty but may still be within AppleCare+ coverage depending on when purchased in UAE</li>
           </ul>
 
-          <h2 id="repair-cost">MacBook Pro M3 battery replacement cost in Dubai 2026</h2>
+          <h2 id="repair-cost">MacBook Pro M3 battery replacement in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M3 battery replacement pricing. June 2026"
+            caption="MacBook Pro M3 battery replacement. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch battery", ours: "AED 550", apple: "AED 899", note: "70 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch battery", ours: "AED 600", apple: "AED 999", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Battery + trackpad (swelling damage)", ours: "AED 700-850", apple: "AED 1,299+", note: "Both replaced if swelling caused trackpad damage" },
-              { model: "Battery health check", ours: "Free", apple: "AED 250", note: "Cycle count, capacity, cell voltage check" },
+              { model: "MacBook Pro M3 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Battery + trackpad (swelling damage)", ours: "Price on request", apple: "Price on request", note: "Both replaced if swelling caused trackpad damage" },
+              { model: "Battery health check", ours: "Free", apple: "Price on request", note: "Cycle count, capacity, cell voltage check" },
             ]}
           />
 
           <h2 id="warranty">AppleCare vs independent repair: battery warranty in UAE</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>AppleCare+</strong>: covers battery replacement at no cost when capacity drops below 80% within the AppleCare period. M3 machines purchased in late 2023 have 2-year AppleCare standard in UAE (3 years with AppleCare+). Check your AppleCare status in System Settings, General, About, AppleCare Coverage</li>
-            <li><strong>Out of warranty</strong>: Apple charges AED 899 (14-inch) and AED 999 (16-inch). Our workshop charges AED 550-600 with a 12-month warranty</li>
+            <li><strong>Out of warranty</strong>: our workshop replaces both the 14-inch and 16-inch M3 battery for less than Apple charges, with a 12-month warranty — message us on WhatsApp for your exact price</li>
             <li><strong>After independent repair</strong>: under UAE consumer protection law, repairing the battery at an independent shop does not void warranty on other components. Only future battery-related Apple warranty claims may be affected</li>
           </ul>
           <p>
@@ -146,7 +146,7 @@ export default function BlogMacBookProM3BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M3 battery replacement cost in Dubai?",
-          a: "MacBook Pro M3 14-inch battery replacement costs AED 550 at our Dubai workshop. The 16-inch costs AED 600. Apple charges AED 899 (14-inch) and AED 999 (16-inch). We use OEM-grade replacement cells with a 12-month warranty and offer same-day service.",
+          a: "We replace both the MacBook Pro M3 14-inch and 16-inch battery at our Dubai workshop for less than Apple charges. We use OEM-grade replacement cells with a 12-month warranty and offer same-day service. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "How long does MacBook Pro M3 battery last in Dubai?",

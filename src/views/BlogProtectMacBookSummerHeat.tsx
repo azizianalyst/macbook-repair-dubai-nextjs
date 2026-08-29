@@ -108,7 +108,7 @@ export default function BlogProtectMacBookSummerHeat() {
 
           <h2 id="common-heat-damage">Common Dubai heat damage we see</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Swollen MacBook Air M1/M2 batteries</strong> - most common July-September. AED 450 to replace.</li>
+            <li><strong>Swollen MacBook Air M1/M2 batteries</strong> - most common July-September. Message us on WhatsApp for today's exact replacement price.</li>
             <li><strong>Trackpad cracked from below</strong> by swollen battery pushing up - usually requires battery + top case.</li>
             <li><strong>Screen polariser cloudy patches</strong> - partially reversible with controlled re-baking; otherwise screen replacement.</li>
             <li><strong>Logic-board solder fatigue</strong> on older Intel Pros (2018-2020) - intermittent shutdowns after a hot car incident.</li>

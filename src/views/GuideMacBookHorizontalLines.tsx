@@ -6,7 +6,7 @@ export default function GuideMacBookHorizontalLines() {
   return (
     <BlogPostTemplate
       seoTitle="White or Grey Horizontal Lines on MacBook Screen (Fix)"
-      seoDescription="Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide and Dubai repair cost."
+      seoDescription="Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide plus free Dubai check."
       path="/white-or-grey-horizontal-lines-appearing-on-macbook-screen"
       category="Troubleshooting · MacBook Display"
       h1="White or Grey Horizontal Lines Appearing on MacBook Screen"
@@ -38,7 +38,8 @@ export default function GuideMacBookHorizontalLines() {
             <strong>How to test:</strong> open and close the lid slowly at different angles. If the
             lines appear or disappear at specific angles, or if gently flexing the hinge area changes
             the display, the cable is the suspect. This is a straightforward repair, reseating or
-            replacing the cable typically costs AED 300–500.
+            replacing the cable is one of our more affordable fixes, message us on WhatsApp for
+            today's exact price on your model.
           </p>
 
           <h3>2. Flexgate on 2016–2019 MacBook Pro</h3>
@@ -58,8 +59,8 @@ export default function GuideMacBookHorizontalLines() {
               free repair programme
             </Link>{" "}
             for affected 2016 and 2017 13" MacBook Pro models. Check if your serial number qualifies
-           , we can verify this in the workshop for free. For models not covered, the display
-            assembly replacement costs AED 800–1,400.
+           , we can verify this in the workshop for free. For models not covered, we replace the full
+            display assembly, message us on WhatsApp for the exact price on your model.
           </p>
 
           <h3>3. GPU fault on older Intel MacBooks</h3>
@@ -95,10 +96,10 @@ export default function GuideMacBookHorizontalLines() {
 
           <h2>Repair cost for horizontal lines in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Display cable reseat:</strong> AED 200–300</li>
-            <li><strong>Display flex cable replacement:</strong> AED 350–500</li>
-            <li><strong>Full display assembly (Flexgate or panel damage):</strong> AED 800–1,800 depending on model</li>
-            <li><strong>Logic board GPU repair:</strong> AED 600–1,200</li>
+            <li><strong>Display cable reseat:</strong> Price on request</li>
+            <li><strong>Display flex cable replacement:</strong> Price on request</li>
+            <li><strong>Full display assembly (Flexgate or panel damage):</strong> Price on request, depending on model</li>
+            <li><strong>Logic board GPU repair:</strong> Price on request</li>
           </ul>
           <p>
             We diagnose first at no charge and give you a fixed price before any work starts.

@@ -70,7 +70,7 @@ const FAQ_GROUPS = [
   {
     category: "Pricing & booking",
     items: [
-      { q: "How much does iPad repair cost in Dubai?", a: "Screen repair starts from AED 250, battery replacement from AED 200, charging port repair from AED 150, and water damage from AED 249. Your exact price is confirmed in writing after a free diagnosis, no obligation to proceed." },
+      { q: "How much does iPad repair cost in Dubai?", a: "It depends on your exact model and fault, screen, battery, charging port, and water damage are all priced individually. Message us on WhatsApp with your iPad model for today's exact price, confirmed in writing after a free diagnosis with no obligation to proceed." },
       { q: "How long does iPad repair take?", a: "Most common repairs (screen, battery, charging port) are completed the same day, often in 2–4 hours. Logic board and water damage repairs take 24–72 hours depending on severity. We confirm the timeline at diagnosis." },
       { q: "Do you offer free pickup in Dubai?", a: "Yes. Free door-to-door pickup and return delivery anywhere in Dubai. WhatsApp us your address and we arrange collection same day." },
     ],
@@ -79,7 +79,7 @@ const FAQ_GROUPS = [
     category: "Parts & warranty",
     items: [
       { q: "Do you use genuine Apple parts?", a: "We use original Apple parts where available and OEM-grade alternatives otherwise; and we tell you which before work starts. Every iPad repair carries a written warranty up to 12 months." },
-      { q: "Is it worth replacing an iPad screen?", a: "Almost always yes. A screen replacement extends iPad life by years at a fraction of the cost of a new device. For older iPads (iPad 9, iPad Air 4), repair often costs less than AED 350, vs AED 1,500+ for a new device." },
+      { q: "Is it worth replacing an iPad screen?", a: "Almost always yes. A screen replacement extends iPad life by years at a fraction of the cost of a new device. Even on older iPads (iPad 9, iPad Air 4), repair is far cheaper than buying new, message us on WhatsApp for the exact price on your model." },
     ],
   },
   {

@@ -155,10 +155,10 @@ export default function BlogMacBookProM4MemoryPressure() {
             caption="Options when MacBook Pro M4 16GB is not enough"
             headers={["Option", "Cost", "Notes"]}
             rows={[
-              { model: "Trade up to M4 Pro 24GB", ours: "AED 6,499-7,499 (new in UAE)", apple: "OLX/Dubizzle M4 Pro 24GB: AED 4,500-5,500 used, best value upgrade path" },
-              { model: "Trade up to M4 Max 36GB", ours: "AED 9,999-13,999 (new)", apple: "M4 Max handles professional video, ML, and heavy multitasking" },
+              { model: "Trade up to M4 Pro 24GB", ours: "Price on request", apple: "Buying new in UAE or used on OLX/Dubizzle is the best value upgrade path, message us for guidance" },
+              { model: "Trade up to M4 Max 36GB", ours: "Price on request", apple: "M4 Max handles professional video, ML, and heavy multitasking" },
               { model: "External RAM workaround (none)", ours: "Not possible", apple: "There is no way to add external RAM to an M4 MacBook Pro" },
-              { model: "Logic board replacement with higher-RAM board", ours: "AED 3,500-5,000 (if available)", apple: "Only viable if the original board has another fault, not a cost-effective RAM upgrade" },
+              { model: "Logic board replacement with higher-RAM board", ours: "Price on request", apple: "Only viable if the original board has another fault, not a cost-effective RAM upgrade" },
             ]}
           />
 

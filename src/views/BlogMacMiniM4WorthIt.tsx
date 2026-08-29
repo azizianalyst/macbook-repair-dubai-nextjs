@@ -7,7 +7,7 @@ export default function BlogMacMiniM4WorthIt() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Mini M4 Worth It in 2026? Honest Dubai Buyer's Guide"
-      seoDescription="Mac Mini M4 starts AED 2,599 in UAE. Smaller chassis, 16GB base RAM, M4 chip. Compare M2, M4 Pro, MacBook Air, iMac. Total cost with display + accessories."
+      seoDescription="Is the Mac Mini M4 worth it in UAE? Smaller chassis, 16GB base RAM, M4 chip. Compare M2, M4 Pro, MacBook Air, iMac, plus total setup cost with display + accessories."
       path="/blog/mac-mini-m4-worth-it"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacMiniM4WorthIt() {
       ]}
       category="Buying guide · Mac desktop"
       h1="Mac Mini M4 (2024) - Worth Buying in 2026?"
-      hook="AED 2,599 entry-level Mac Mini M4. Smaller, faster, more RAM. Best Apple deal of the year?"
-      quickAnswer="Yes - Mac Mini M4 at AED 2,599 with 16 GB RAM is the cheapest route into modern Apple Silicon and the best Mac value of 2025-2026. Add a 4K monitor and keyboard for about AED 4,400, still under a MacBook Air M4. Skip the M4 Pro unless you edit video."
+      hook="Entry-level Mac Mini M4. Smaller, faster, more RAM. Best Apple deal of the year?"
+      quickAnswer="Yes - the Mac Mini M4 with 16 GB RAM is the cheapest route into modern Apple Silicon and the best Mac value of 2025-2026. Add a 4K monitor and keyboard and the total setup still lands under a MacBook Air M4. Skip the M4 Pro unless you edit video."
       author={{ name: "Shafiq", role: "Senior Mac technician" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -35,7 +35,7 @@ export default function BlogMacMiniM4WorthIt() {
           <h2 id="quick-answer">Mac Mini M4 Worth It. Quick answer</h2>
           <p>
             Mac Mini M4 is the value pick of Apple's current lineup. Tiny new chassis (12.7 cm square),
-            M4 chip, 16 GB RAM standard (Apple finally moved off 8 GB), starts at AED 2,599. For office
+            M4 chip, 16 GB RAM standard (Apple finally moved off 8 GB). For office
             work, web dev, light Final Cut, and home use it is overpowered for the money.
           </p>
 
@@ -60,13 +60,13 @@ export default function BlogMacMiniM4WorthIt() {
               { model: "Footprint", ours: "19.7 × 19.7 cm", apple: "12.7 × 12.7 cm", note: "−59% area" },
               { model: "Front USB-C ports", ours: "0", apple: "2", note: "Game-changer" },
               { model: "Apple Intelligence", ours: "No (chip too old)", apple: "Yes", note: "Future-proof" },
-              { model: "Base UAE price (April 2026)", ours: "Discontinued - used AED 1,800", apple: "AED 2,599", note: "+AED 800 over used M2" },
+              { model: "Base UAE price (April 2026)", ours: "Discontinued - used only", apple: "Price on request", note: "Message us on WhatsApp" },
             ]}
           />
 
-          <h2 id="vs-m4-pro">vs Mac Mini M4 Pro - worth +AED 1,500?</h2>
+          <h2 id="vs-m4-pro">vs Mac Mini M4 Pro - worth the step up?</h2>
           <p>
-            Mac Mini M4 Pro starts at AED 4,499 with 24 GB RAM and 512 GB SSD. The M4 Pro chip has 12
+            Mac Mini M4 Pro steps up to 24 GB RAM and a 512 GB SSD. The M4 Pro chip has 12
             CPU cores (8 performance + 4 efficiency), 16 GPU cores, and three Thunderbolt 5 ports
             instead of three Thunderbolt 4.
           </p>
@@ -83,11 +83,11 @@ export default function BlogMacMiniM4WorthIt() {
 
           <h2 id="vs-macbook-air">vs MacBook Air M4 - saves money but no display/battery</h2>
           <p>
-            MacBook Air M4 13" with 16 GB / 256 GB: AED 5,199. Mac Mini M4 same specs: AED 2,599 + AED
-            1,800 for a decent 27" 4K monitor + AED 600 for keyboard/mouse = AED 5,000. About the
-            same total. The Air gives you portability + battery + Retina screen + speakers; the Mini
-            gives you a bigger desktop screen + better thermals + future upgrade flexibility (swap
-            the monitor in 5 years, keep the Mini).
+            Take a MacBook Air M4 13" with 16 GB / 256 GB, then compare it to a Mac Mini M4 at the same
+            specs plus a decent 27" 4K monitor and a keyboard/mouse. Once you add the accessories the
+            two setups land at roughly the same total. The Air gives you portability + battery + Retina
+            screen + speakers; the Mini gives you a bigger desktop screen + better thermals + future
+            upgrade flexibility (swap the monitor in 5 years, keep the Mini).
           </p>
           <p>
             Choose Mac Mini if you have a fixed desk and want the larger screen. Choose MacBook Air
@@ -99,7 +99,7 @@ export default function BlogMacMiniM4WorthIt() {
 
           <h2 id="vs-imac">vs iMac M4 - no built-in display</h2>
           <p>
-            iMac M4 24" starts at AED 5,799 with the 4.5K Retina display included. Beautiful all-in-one
+            iMac M4 24" comes with the 4.5K Retina display included. Beautiful all-in-one
             but locked at 24" forever. Mac Mini + 27" external 4K is cheaper, gives you a bigger
             screen, and lets you upgrade the screen and the computer independently. iMac wins on
             cleanliness (single cable to the wall) and design - Mini wins on flexibility and total cost
@@ -111,19 +111,19 @@ export default function BlogMacMiniM4WorthIt() {
             caption="Mac Mini M4 - total cost of ownership setup"
             headers={["Item", "Budget option", "Mid-tier", "Premium"]}
             rows={[
-              { model: "Mac Mini M4 base", ours: "AED 2,599", apple: "AED 2,599", note: "AED 2,599" },
-              { model: "Display", ours: "AED 800 (27\" 1440p)", apple: "AED 1,800 (27\" 4K)", note: "AED 6,500 (Studio Display)" },
-              { model: "Keyboard", ours: "AED 150 (Logitech)", apple: "AED 380 (Magic Keyboard)", note: "AED 580 (Magic w/ Touch ID)" },
-              { model: "Mouse / trackpad", ours: "AED 150 (Logitech MX)", apple: "AED 380 (Magic Mouse)", note: "AED 580 (Magic Trackpad)" },
-              { model: "Webcam", ours: "AED 0 (use phone Continuity)", apple: "AED 350 (Logitech Brio)", note: "AED 800 (Insta360 Link)" },
-              { model: "Total", ours: "AED 3,699", apple: "AED 5,507", note: "AED 11,059" },
+              { model: "Mac Mini M4 base", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "Display", ours: "27\" 1440p (budget)", apple: "27\" 4K (mid-tier)", note: "Studio Display (premium)" },
+              { model: "Keyboard", ours: "Logitech (budget)", apple: "Magic Keyboard (mid-tier)", note: "Magic w/ Touch ID (premium)" },
+              { model: "Mouse / trackpad", ours: "Logitech MX (budget)", apple: "Magic Mouse (mid-tier)", note: "Magic Trackpad (premium)" },
+              { model: "Webcam", ours: "Free - use phone Continuity", apple: "Logitech Brio (mid-tier)", note: "Insta360 Link (premium)" },
+              { model: "Total setup", ours: "Price on request", apple: "Price on request", note: "Price on request" },
             ]}
           />
 
           <h2 id="resale-value">Resale value 2 years out</h2>
           <p>
-            Apple Silicon Mac Minis hold value well. Expected April 2028 resale on a base M4: AED
-            1,500-1,700 (58-65% retention) - better than MacBook resale due to lower cosmetic wear
+            Apple Silicon Mac Minis hold value well. Expected retention on a base M4 by April 2028 is
+            around 58-65% - better than MacBook resale due to lower cosmetic wear
             (sits on a desk untouched). The new compact form factor is also expected to age better
             visually than the 2010s rectangular design.
           </p>
@@ -133,12 +133,12 @@ export default function BlogMacMiniM4WorthIt() {
             caption="Mac Mini M4 typical repair pricing (April 2026)"
             headers={["Repair", "Our price", "Apple Service"]}
             rows={[
-              { model: "Logic board diagnosis", ours: "AED 0 (free)", apple: "AED 250" },
-              { model: "Power supply replacement", ours: "AED 450", apple: "AED 800" },
-              { model: "SSD recovery (soldered, data only)", ours: "AED 800-2,000", apple: "Not offered" },
-              { model: "Liquid damage cleaning", ours: "AED 600", apple: "Logic board swap only" },
-              { model: "Thunderbolt port repair", ours: "AED 550", apple: "Logic board swap" },
-              { model: "macOS reinstall + config", ours: "AED 200", apple: "AED 250" },
+              { model: "Logic board diagnosis", ours: "Free", apple: "Price on request" },
+              { model: "Power supply replacement", ours: "Price on request", apple: "Price on request" },
+              { model: "SSD recovery (soldered, data only)", ours: "Price on request", apple: "Not offered" },
+              { model: "Liquid damage cleaning", ours: "Price on request", apple: "Logic board swap only" },
+              { model: "Thunderbolt port repair", ours: "Price on request", apple: "Logic board swap" },
+              { model: "macOS reinstall + config", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>
@@ -151,12 +151,12 @@ export default function BlogMacMiniM4WorthIt() {
         </>
       }
       faqs={[
-        { q: "Can I upgrade RAM on Mac Mini M4 later?", a: "No - RAM is unified memory soldered to the M4 chip. You must choose at purchase. Upgrade to 24 GB (+AED 750) is highly recommended if budget allows; future-proof for 6+ years." },
+        { q: "Can I upgrade RAM on Mac Mini M4 later?", a: "No - RAM is unified memory soldered to the M4 chip. You must choose at purchase. Upgrading to 24 GB is highly recommended if budget allows; future-proof for 6+ years." },
         { q: "Can I upgrade the SSD?", a: "Officially no (soldered). Unofficially, the M4 Mini SSD is on a removable daughtercard and we have replaced failed units in our workshop, but Apple does not sell upgrade kits. Buy with the storage you'll need." },
         { q: "Does Mac Mini M4 work with my old USB-A keyboard / mouse?", a: "Yes via the rear USB-A ports (still present on M4). New M4 has 2 USB-C front + 1 USB-A + 3 Thunderbolt 4 (rear) on base, or 3 Thunderbolt 5 on M4 Pro. Bluetooth keyboards / mice work natively." },
         { q: "Will Apple Intelligence run on the base 16 GB M4 Mac Mini?", a: "Yes - all M4 Macs support Apple Intelligence including the base 16 GB Mini. The 8 GB minimum was the constraint that's now met by default." },
         { q: "Is Mac Mini M4 good for gaming?", a: "Light gaming yes (Resident Evil 4, Death Stranding, Baldur's Gate 3 native ports run well at 1440p). For AAA gaming a Windows PC remains better value, but Apple Silicon Mac gaming has improved dramatically since 2024." },
-        { q: "Power consumption - does Mac Mini run 24/7 cheaply?", a: "Idle: 6-8 W. Light use: 12-15 W. Heavy load: 50-65 W. Running 24/7 at moderate use costs roughly AED 8-12 per month on DEWA tariff. Excellent for home server / Plex / Home Assistant." },
+        { q: "Power consumption - does Mac Mini run 24/7 cheaply?", a: "Idle: 6-8 W. Light use: 12-15 W. Heavy load: 50-65 W. Running 24/7 at moderate use adds only a few dirhams a month on DEWA tariff. Excellent for home server / Plex / Home Assistant." },
       ]}
       relatedLinks={[
         { label: "Mac Mini repair Dubai", href: "/mac-mini-repair-dubai", description: "Pricing and turnaround for our Mac Mini service." },

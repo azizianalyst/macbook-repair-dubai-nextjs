@@ -92,8 +92,8 @@ export default function GuideIPhone16ProMaxScreenFlickering() {
               free diagnostic at our Dubai workshop
             </Link>{" "}
             will confirm whether it's the connector or the panel before any work starts.
-            iPhone 16 Pro Max screen replacement in Dubai starts from{" "}
-            <strong>AED 950</strong>.
+            For today's exact iPhone 16 Pro Max screen replacement price in Dubai,
+            message us on WhatsApp with your model.
           </p>
         </>
       }
@@ -108,7 +108,7 @@ export default function GuideIPhone16ProMaxScreenFlickering() {
         },
         {
           q: "Will Apple replace my iPhone 16 Pro Max screen for free if it's flickering?",
-          a: "If the flickering is a manufacturing defect, it may be covered under Apple's 1-year limited warranty. However, if the phone was dropped or shows physical damage, warranty cover is voided. We offer an independent assessment and can repair the screen from AED 950 if it's out of warranty or showing accidental damage.",
+          a: "If the flickering is a manufacturing defect, it may be covered under Apple's 1-year limited warranty. However, if the phone was dropped or shows physical damage, warranty cover is voided. We offer an independent assessment and can repair the screen if it's out of warranty or showing accidental damage — message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "The flicker started after I dropped my iPhone. Is the screen broken?",
@@ -116,7 +116,7 @@ export default function GuideIPhone16ProMaxScreenFlickering() {
         },
       ]}
       relatedLinks={[
-        { label: "iPhone 16 Pro Max repair Dubai", href: "/iphone-16-pro-max-repair-dubai", description: "Screen, battery, camera and logic board repairs, same-day service from AED 400." },
+        { label: "iPhone 16 Pro Max repair Dubai", href: "/iphone-16-pro-max-repair-dubai", description: "Screen, battery, camera and logic board repairs, same-day service — message us for a quote." },
         { label: "iPhone screen repair Dubai", href: "/iphone-screen-repair-dubai", description: "All iPhone screen replacements, original Apple panels, warranty included." },
         { label: "iPhone full diagnostic Dubai", href: "/iphone-full-diagnostic-dubai", description: "Free diagnosis, we confirm the exact fault before any work starts." },
       ]}

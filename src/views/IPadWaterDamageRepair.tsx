@@ -5,8 +5,8 @@ export default function IPadWaterDamageRepair() {
   return (
     <DevicePageTemplate
       family="ipad"
-      seoTitle="iPad Water Damage Repair Dubai - Same-Day Diagnosis | From AED 450"
-      seoDescription="iPad water damage repair Dubai. Ultrasonic cleaning, board rework, battery and screen replacement when needed. Honest success-rate estimate. Call 055 741 3706."
+      seoTitle="iPad Water Damage Repair Dubai - Same-Day Diagnosis & Quote"
+      seoDescription="iPad water damage repair Dubai. Ultrasonic cleaning, board rework, battery and screen replacement when needed. Honest success-rate estimate. WhatsApp for a quote."
       path="/ipad-water-damage-repair-dubai"
       eyebrow="iPad water damage"
       h1="iPad Water Damage Repair Dubai"
@@ -39,8 +39,8 @@ export default function IPadWaterDamageRepair() {
         { title: "iPad won't turn on after a spill", body: "Most common case. Either the battery protection has triggered (recoverable) or short on the main board (board-level repair). Diagnosis after clean." },
         { title: "Screen has water marks behind the glass", body: "Liquid is between the LCD layers. Cleaning won't remove it - display assembly replacement is the only fix. Often paired with a board clean." },
         { title: "Touch ghost-typing or unresponsive", body: "Moisture trapped under the digitiser. Screen out, ultrasonic clean, often the original screen still works after." },
-        { title: "Charging port reads water present", body: "iPad detects moisture and refuses to charge. Port flush and dry. If port is corroded, replacement at AED 400 added." },
-        { title: "Speakers crackle or are muffled", body: "Water in the speaker chambers. Mesh cleaned in ultrasonic, often restored without speaker swap. Otherwise AED 250 for a new speaker module." },
+        { title: "Charging port reads water present", body: "iPad detects moisture and refuses to charge. Port flush and dry. If the port is corroded, a replacement is added - message us for the exact price." },
+        { title: "Speakers crackle or are muffled", body: "Water in the speaker chambers. Mesh cleaned in ultrasonic, often restored without a speaker swap. Otherwise a new speaker module is fitted - WhatsApp us for the price." },
         { title: "Pool / sea water exposure", body: "Salt and chlorine are far worse than fresh water - corrosion starts within hours. Bring it in same day. We have higher success on freshwater spills than salt." },
       ]}
       steps={[
@@ -58,7 +58,7 @@ export default function IPadWaterDamageRepair() {
         "Honest disclosure: liquid damage warranty is shorter than a clean repair because the device's long-term reliability cannot be guaranteed.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 450 (clean + diagnosis)",       "Often refused - quoted as whole-unit swap"],
+        ["Starting price",        "Price on request (clean + diagnosis)", "Often refused - quoted as whole-unit swap"],
         ["Same-day pickup",       "Yes - speed matters for water",     "Drop in yourself"],
         ["Board-level repair",    "Yes, microscope + ultrasonic",      "No - board swap or unit swap only"],
         ["Honest success rate",   "80% within 24h, 50% after 72h",     "Often declined as 'beyond economical repair'"],
@@ -69,11 +69,11 @@ export default function IPadWaterDamageRepair() {
       faqs={[
         { q: "How fast do I need to bring my wet iPad in?", a: "Within 24 hours for the best result. Corrosion is silent - your iPad might still work the day of the spill, then die three days later as traces eat through. Faster cleaning, higher recovery rate. We pick up same day." },
         { q: "Should I put the iPad in rice?", a: "No. Rice absorbs surface moisture but doesn't touch the corrosion already starting on the logic board. By the time you fish it out three days later, the damage is done. Ultrasonic cleaning is the only real treatment." },
-        { q: "Is iPad water damage cheaper than iPhone?", a: "Usually yes. There's more interior space, the components are spread out, and the ports are easier to access. Typical iPad water repair runs AED 450-1,200 versus AED 600-1,800 for iPhones." },
+        { q: "Is iPad water damage cheaper than iPhone?", a: "Usually yes. There's more interior space, the components are spread out, and the ports are easier to access, so an iPad water repair typically costs less than the same job on an iPhone. Message us on WhatsApp with your model for today's exact price." },
         { q: "What's the difference between fresh water and salt water?", a: "Salt water is much worse. Salt and chlorine accelerate corrosion - within hours, not days. Pool water is similar. We handle both, but the success rate on Gulf-water cases is lower than on a glass of water spilled at the desk." },
         { q: "Can you save my data?", a: "Often yes. If the storage chip survived, we can extract data even if the iPad doesn't fully recover. Data attempt comes first - before any parts are bought." },
         { q: "Are iPads water resistant at all?", a: "No iPad has an IP rating. Apple does not advertise water resistance on any iPad model. Splash protection is incidental - not designed-in." },
-        { q: "What if the iPad is beyond repair?", a: "We tell you, with photos showing why. Diagnosis fee (AED 450) is the only charge. We can extract data to a USB drive at no extra cost if storage survived. No fix, no further charge." },
+        { q: "What if the iPad is beyond repair?", a: "We tell you, with photos showing why. The diagnosis fee is the only charge - message us on WhatsApp for the exact amount. We can extract data to a USB drive at no extra cost if storage survived. No fix, no further charge." },
         { q: "Why is the warranty shorter on water repairs?", a: "Honest answer: liquid damage can have delayed effects in areas we didn't open. We warranty the work we did for 30 days, but cannot guarantee the device's long-term reliability. Most water repairs we've done are still running years later - but we won't promise what we can't control." },
       ]}
       reviewNames={["Janna Nurahmetova", "Yuki Koga", "Daniel Layzell", "Knight A. Shakir", "Daiana Dimitrova", "Anatoliy Tarasenko"]}

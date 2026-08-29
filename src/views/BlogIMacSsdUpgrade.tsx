@@ -6,13 +6,13 @@ export default function BlogIMacSsdUpgrade() {
   return (
     <BlogPostTemplate
       seoTitle="iMac SSD Upgrade Dubai 2026: Fusion Drive to SSD Cost"
-      seoDescription="iMac SSD upgrade in Dubai from AED 500. Replace slow Fusion Drive or HDD with fast SSD on Intel iMac. Same-day, data migrated."
+      seoDescription="iMac SSD upgrade in Dubai. Replace a slow Fusion Drive or HDD with a fast SSD on Intel iMac. Same-day, data migrated. Message us on WhatsApp for pricing."
       path="/blog/imac-ssd-upgrade-dubai"
       wide={true}
       category="Cost guide · iMac"
       h1="iMac SSD Upgrade Dubai: Turn a Slow Fusion Drive Into a Fast SSD"
-      hook="Replacing a slow Fusion Drive or hard disk with an SSD is the single biggest speed upgrade for an Intel iMac, and it starts from AED 500 with data migrated at our Media City workshop."
-      quickAnswer="An iMac SSD upgrade replaces the slow spinning hard disk or Fusion Drive with a fast solid-state drive, cutting boot and app-load times dramatically. It applies to Intel iMacs (2012 to 2020); Apple Silicon iMac storage is soldered. Upgrades start from AED 500 including data migration."
+      hook="Replacing a slow Fusion Drive or hard disk with an SSD is the single biggest speed upgrade for an Intel iMac, done with data migrated at our Media City workshop. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="An iMac SSD upgrade replaces the slow spinning hard disk or Fusion Drive with a fast solid-state drive, cutting boot and app-load times dramatically. It applies to Intel iMacs (2012 to 2020); Apple Silicon iMac storage is soldered. Data migration is included, and you can message us on WhatsApp for the exact price on your iMac."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -216,19 +216,20 @@ export default function BlogIMacSsdUpgrade() {
           <section id="cost">
             <h2 id="cost">iMac SSD upgrade Dubai repair cost in Dubai</h2>
             <p>
-              All prices below are for our Media City workshop, in AED, with data migration included rather
+              All the options below are for our Media City workshop, with data migration included rather
               than charged on top. There is no diagnostic fee. Turnaround is same-day for most upgrades when
-              the iMac is dropped off in the morning and the SSD configuration is in stock.
+              the iMac is dropped off in the morning and the SSD configuration is in stock. Message us on
+              WhatsApp for today's exact price on your model.
             </p>
             <BlogPriceTable
               caption="iMac SSD upgrade pricing at our Dubai workshop, June 2026"
               headers={["Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "256GB SSD upgrade", ours: "AED 500", apple: "AED 1,000+" },
-                { model: "512GB SSD upgrade", ours: "AED 700", apple: "AED 1,400+" },
-                { model: "1TB SSD upgrade", ours: "AED 950", apple: "AED 1,900+" },
-                { model: "Fusion Drive split fix", ours: "AED 400", apple: "AED 800+" },
-                { model: "Data migration", ours: "AED 0", apple: "AED 300+" },
+                { model: "256GB SSD upgrade", ours: "Price on request", apple: "Price on request" },
+                { model: "512GB SSD upgrade", ours: "Price on request", apple: "Price on request" },
+                { model: "1TB SSD upgrade", ours: "Price on request", apple: "Price on request" },
+                { model: "Fusion Drive split fix", ours: "Price on request", apple: "Price on request" },
+                { model: "Data migration", ours: "Free", apple: "Price on request" },
               ]}
             />
             <p>

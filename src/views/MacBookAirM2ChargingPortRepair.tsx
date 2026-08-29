@@ -6,11 +6,11 @@ export default function MacBookAirM2ChargingPortRepair() {
   return (
     <SubServicePageTemplate
       path="/macbook-air-m2-charging-port-repair-dubai"
-      seoTitle="MacBook Air M2 Charging Port Repair Dubai - MagSafe 3 from AED 220"
-      seoDescription="MacBook Air M2, M3, and M4 charging port repair Dubai. MagSafe 3 board replacement from AED 220. USB-C port also repairable. Same-day 1-2 hours. 3-month warranty. Call 055 741 3706."
+      seoTitle="MacBook Air M2 Charging Port Repair Dubai - MagSafe 3 Same-Day"
+      seoDescription="MacBook Air M2, M3, and M4 charging port repair Dubai. MagSafe 3 board replacement and USB-C port repair. Same-day 1-2 hours. 3-month warranty. Call 055 741 3706."
       eyebrow="M2 / M3 / M4 · MagSafe 3 + USB-C · same-day"
       h1="MacBook Air M2 Charging Port Repair Dubai"
-      subtitle="MacBook Air M2, M3, and M4 introduced MagSafe 3 alongside two USB-C ports. MagSafe 3 board faults (won't click, intermittent, not charging) fixed from AED 220 same-day. USB-C port on M2 and later is also repairable."
+      subtitle="MacBook Air M2, M3, and M4 introduced MagSafe 3 alongside two USB-C ports. MagSafe 3 board faults (won't click, intermittent, not charging) fixed same-day — message us on WhatsApp for today's exact price on your model. USB-C port on M2 and later is also repairable."
       startingPrice={220}
       timeline="Same day (1-2 hours) · M4 1-2 days"
       whatsappPrefill="Hi, my MacBook Air M2/M3/M4 has a charging port issue:"
@@ -26,7 +26,7 @@ export default function MacBookAirM2ChargingPortRepair() {
       intro={
         <>
           <p className="text-[16px] leading-relaxed mb-md">
-            The MacBook Air M2 (2022) brought a major redesign and the return of MagSafe, now in its third generation. MagSafe 3 uses a small magnetic board connected to the logic board by a ribbon cable, making it a separate replaceable component. When the MagSafe board fails, whether from a bent pin, IC failure, or corrosion, the entire board is replaced without touching the logic board. This keeps the repair affordable (from AED 220) and risk-free for your data. The M3 Air (2024) uses the same MagSafe 3 system and is priced identically. The M4 Air (2025) introduced a new chassis; parts are available but supply is still building, so M4 repairs take 1 to 2 business days rather than same-day.
+            The MacBook Air M2 (2022) brought a major redesign and the return of MagSafe, now in its third generation. MagSafe 3 uses a small magnetic board connected to the logic board by a ribbon cable, making it a separate replaceable component. When the MagSafe board fails, whether from a bent pin, IC failure, or corrosion, the entire board is replaced without touching the logic board. This keeps the repair affordable and risk-free for your data — message us on WhatsApp for today's exact price on your model. The M3 Air (2024) uses the same MagSafe 3 system and is priced identically. The M4 Air (2025) introduced a new chassis; parts are available but supply is still building, so M4 repairs take 1 to 2 business days rather than same-day.
           </p>
           <p className="text-[16px] leading-relaxed">
             Alongside MagSafe 3, all M2, M3, and M4 Air models retain two USB-C ports (Thunderbolt / USB 4). Dubai's fine dust can block the MagSafe 3 connector pins or pack into the USB-C ports. MagSafe pins blocked by debris often look like a board failure but can sometimes be cleared with a soft brush or compressed air at low pressure. Free diagnosis at MacBook Repair Dubai determines whether the issue is a blocked connector, a failed MagSafe board, or a USB-C board fault before any repair is quoted.
@@ -71,11 +71,11 @@ export default function MacBookAirM2ChargingPortRepair() {
         },
         {
           q: "Does the MagSafe 3 board on M3 Air differ from M2?",
-          a: "The M3 Air MagSafe 3 board is functionally and physically similar to the M2 Air board and the repair approach is identical. Pricing is the same: AED 220 for 13-inch, AED 220 for 15-inch. Same-day service on both M2 and M3 models.",
+          a: "The M3 Air MagSafe 3 board is functionally and physically similar to the M2 Air board and the repair approach is identical. Pricing is the same for the 13-inch and 15-inch — message us on WhatsApp for today's exact price. Same-day service on both M2 and M3 models.",
         },
         {
           q: "My MacBook Air M2 charges via USB-C but not MagSafe. Is the battery the issue?",
-          a: "No. If the laptop charges over USB-C, the battery and logic board are fine. The issue is almost certainly the MagSafe 3 board or connector. AED 220, same-day. Free diagnosis confirms before any repair starts.",
+          a: "No. If the laptop charges over USB-C, the battery and logic board are fine. The issue is almost certainly the MagSafe 3 board or connector. Same-day repair — message us on WhatsApp for the exact price. Free diagnosis confirms before any repair starts.",
         },
         {
           q: "How long does MacBook Air M2 MagSafe repair take in Dubai?",
@@ -92,7 +92,7 @@ export default function MacBookAirM2ChargingPortRepair() {
         {
           label: "MacBook Air M2 Battery Replacement Dubai",
           href: "/macbook-air-m2-battery-replacement-dubai",
-          description: "52.6 Wh (13-inch) or 66.5 Wh (15-inch) cell from AED 450.",
+          description: "52.6 Wh (13-inch) or 66.5 Wh (15-inch) cell — message us for today's price.",
         },
         {
           label: "MacBook Not Charging Dubai",

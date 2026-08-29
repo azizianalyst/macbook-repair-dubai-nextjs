@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProIntelGpuFailure";
 
 export const metadata: Metadata = {
   title: "MacBook Pro Intel GPU Failure Fix Dubai 2026",
-  description: "MacBook Pro Intel AMD GPU failure in Dubai? 2017-2019 15-inch crashes, black screen, artifacts. Reball/board repair from AED 500. Free diagnosis.",
+  description: "MacBook Pro Intel AMD GPU failure in Dubai? 2017-2019 15-inch crashes, black screen, artifacts. Reball/board repair with free diagnosis — message us on WhatsApp.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

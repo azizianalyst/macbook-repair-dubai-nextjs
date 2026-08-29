@@ -6,7 +6,7 @@ export default function BlogMacBookAirNotCharging() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Not Charging? 6 Fixes and Costs Dubai 2026"
-      seoDescription="MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Repair from AED 300."
+      seoDescription="MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Free diagnosis - WhatsApp us for a quote."
       path="/blog/macbook-air-not-charging-dubai"
       wide={true}
       toc={[
@@ -22,7 +22,7 @@ export default function BlogMacBookAirNotCharging() {
       ]}
       category="Fix guide · MacBook Air"
       h1="MacBook Air Not Charging in Dubai? 6 Fixes to Try"
-      hook="A MacBook Air that refuses to charge is usually a dirty USB-C port, a failed charging IC, or a dead adapter, and our Dubai workshop fixes most charging faults same day from AED 300."
+      hook="A MacBook Air that refuses to charge is usually a dirty USB-C port, a failed charging IC, or a dead adapter, and our Dubai workshop fixes most charging faults same day - message us on WhatsApp for a quote."
       quickAnswer="MacBook Air not charging is most often caused by a dirty or damaged USB-C port, a faulty power adapter, a failed charging IC chip on the logic board, or a fully depleted battery that needs a 30-minute recovery charge. Try a different cable and port first before bringing it in."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -69,8 +69,9 @@ export default function BlogMacBookAirNotCharging() {
               Next, borrow a different Apple USB-C power adapter and cable. Apple's 30W and 35W
               adapters use the same USB Power Delivery protocol, so any compatible USB-C charger
               rated at 18W or above will work for a test. If the MacBook charges on the borrowed
-              adapter, your original adapter or cable has failed and needs replacing. A genuine Apple
-              USB-C cable costs around AED 120 from Apple.ae; a genuine 30W adapter is AED 199.
+              adapter, your original adapter or cable has failed and needs replacing. Genuine Apple
+              USB-C cables and 30W adapters are available from Apple.ae, or message us for a
+              quote on a tested replacement.
             </p>
             <p>
               If neither port charges on any adapter, look inside each port with a torch. You are
@@ -213,18 +214,19 @@ export default function BlogMacBookAirNotCharging() {
             <p>
               Charging repair costs in Dubai depend on which component has failed. Port cleaning is
               the cheapest fix and takes 20 minutes. Charging IC repair is the most involved job and
-              requires microsoldering under a microscope. All prices below include labour and a
-              3-month warranty on parts and work.
+              requires microsoldering under a microscope. Every repair includes labour and a
+              3-month warranty on parts and work - message us on WhatsApp for today's exact price
+              on your model.
             </p>
             <BlogPriceTable
               caption="MacBook Air charging repair pricing - MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "USB-C port cleaning", ours: "AED 100", apple: "AED 200+" },
-                { model: "USB-C port replacement", ours: "AED 300", apple: "AED 550+" },
-                { model: "MagSafe port (Intel)", ours: "AED 350", apple: "AED 600+" },
-                { model: "Charging IC repair", ours: "AED 400", apple: "AED 900+" },
-                { model: "Battery (dead/swollen)", ours: "AED 350", apple: "AED 600+" },
+                { model: "USB-C port cleaning", ours: "Price on request", apple: "Price on request" },
+                { model: "USB-C port replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "MagSafe port (Intel)", ours: "Price on request", apple: "Price on request" },
+                { model: "Charging IC repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Battery (dead/swollen)", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>
@@ -255,9 +257,9 @@ export default function BlogMacBookAirNotCharging() {
               The chip is soldered directly to the logic board and requires a hot-air rework
               station and a stereo microscope to remove and replace. Most high-street repair
               shops in Dubai lack this equipment and will quote a full logic board replacement
-              (AED 1,800-2,500) when only the IC chip (AED 400 at our workshop) needs attention.
+              when only the IC chip needs attention - a far cheaper repair we handle in-house.
               Always ask specifically whether the shop offers microsoldering before accepting a
-              board replacement quote.
+              board replacement quote, and message us for our price on the IC-level fix.
             </p>
             <p>
               There are two scenarios where no charging repair is cost-effective. First, if the

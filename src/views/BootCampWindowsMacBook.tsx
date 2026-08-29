@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function BootCampWindowsMacBook() {
   return (
     <SubServicePageTemplate
-      seoTitle="Boot Camp Windows on MacBook Dubai - Intel Macs AED 400 · Parallels M-Series AED 600"
-      seoDescription="Boot Camp Windows install Dubai. Intel Macs only - Apple Silicon needs Parallels or VMware Fusion. AED 400 Intel · AED 600 Parallels M-series. Same day."
+      seoTitle="Boot Camp Windows on MacBook Dubai - Intel Boot Camp & Apple Silicon Parallels"
+      seoDescription="Boot Camp Windows install Dubai. Intel Macs use Boot Camp; Apple Silicon needs Parallels or VMware. Same-day setup. WhatsApp us for today's price."
       path="/boot-camp-windows-macbook-dubai"
       eyebrow="Boot Camp / Windows on Mac"
       h1="Boot Camp Windows Setup on MacBook Dubai"
-      subtitle="Native Windows on Intel Macs via Boot Camp, or Parallels / VMware on Apple Silicon. We pick the right path for your hardware and install it properly. From AED 400."
+      subtitle="Native Windows on Intel Macs via Boot Camp, or Parallels / VMware on Apple Silicon. We pick the right path for your hardware and install it properly. Message us on WhatsApp for today's exact price."
       startingPrice={400}
       timeline="Same day"
       whatsappPrefill="Hi, I want to run Windows on my Mac - model and year:"
@@ -23,7 +23,7 @@ export default function BootCampWindowsMacBook() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Boot Camp Windows on MacBook in Dubai</strong> means two very different services depending on your hardware. <strong>Intel Macs</strong> (any MacBook from 2013 to early 2020) use Apple's Boot Camp Assistant for native dual-boot - full Windows 10 or 11 with native performance, AED 400 including driver setup. <strong>Apple Silicon Macs</strong> (M1 onwards) cannot run Boot Camp at all - Apple removed it. Your only path is virtualisation: Parallels Desktop or VMware Fusion running Windows 11 ARM. AED 600, includes Parallels licence guidance.
+            <strong>Boot Camp Windows on MacBook in Dubai</strong> means two very different services depending on your hardware. <strong>Intel Macs</strong> (any MacBook from 2013 to early 2020) use Apple's Boot Camp Assistant for native dual-boot - full Windows 10 or 11 with native performance, including driver setup. <strong>Apple Silicon Macs</strong> (M1 onwards) cannot run Boot Camp at all - Apple removed it. Your only path is virtualisation: Parallels Desktop or VMware Fusion running Windows 11 ARM, including Parallels licence guidance. Message us on WhatsApp for today's exact price on either path.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Honest framing: on Apple Silicon you get Windows for ARM (not Intel Windows). Most x86 apps run via emulation but with a performance hit. Office, browsers, AutoCAD LT, Visual Studio - all fine. Heavy Adobe + games less so. We discuss your actual workload before recommending.
@@ -57,15 +57,15 @@ export default function BootCampWindowsMacBook() {
         { q: "What's the difference between Parallels and VMware Fusion?", a: "Parallels is more polished and integrates better with macOS (Coherence Mode that hides the Windows desktop). VMware Fusion is free for personal use and runs nearly as well. For business, Parallels is the safer bet. We help you pick based on your usage." },
         { q: "Will Office work?", a: "Yes - Microsoft Office for Windows runs natively on Windows 11 ARM. No emulation hit. Full feature parity with x86 Office." },
         { q: "Will games work?", a: "On Intel Boot Camp: yes, full Windows games. On Apple Silicon Parallels: most modern games don't work or run poorly because of the ARM emulation hit + lack of GPU passthrough. If gaming matters, Apple Silicon with Parallels is not the right choice - get a Windows machine or use Steam Link to a real PC." },
-        { q: "Do I need a Windows licence?", a: "Yes. We don't provide one - you need a legitimate Windows 10 or 11 licence (around AED 600 from Microsoft Store). Windows runs unactivated for evaluation but you need a key for full activation. We help you activate after install." },
-        { q: "Can I dual-boot macOS Sonoma and Windows 11 on my 2018 MacBook Pro?", a: "Yes - Boot Camp on a 2018 Intel MacBook Pro supports Windows 10 and Windows 11 (Windows 11 needs a registry tweak to bypass TPM checks). We do this regularly. AED 400 includes the bypass setup." },
+        { q: "Do I need a Windows licence?", a: "Yes. We don't provide one - you need a legitimate Windows 10 or 11 licence from the Microsoft Store. Windows runs unactivated for evaluation but you need a key for full activation. We help you activate after install." },
+        { q: "Can I dual-boot macOS Sonoma and Windows 11 on my 2018 MacBook Pro?", a: "Yes - Boot Camp on a 2018 Intel MacBook Pro supports Windows 10 and Windows 11 (Windows 11 needs a registry tweak to bypass TPM checks). We do this regularly, and the install includes the bypass setup. Message us on WhatsApp for today's exact price." },
         { q: "How much disk space does Windows need?", a: "60 GB minimum recommended for the partition (Windows itself + apps + room to update). 100 GB more comfortable. We discuss free space on your SSD before installing." },
       ]}
       reviewNames={["Anatoliy Tarasenko", "Wellington Academy", "Mariia Chymyrysova"]}
       related={[
         { label: "MacBook Repair Hub",   href: "/",      description: "All MacBook services in one place." },
-        { label: "macOS Reinstall",      href: "/macos-reinstall-dubai",      description: "Fresh macOS before adding Windows. AED 300." },
-        { label: "MacBook SSD Upgrade",  href: "/macbook-ssd-upgrade-dubai",  description: "More space for the dual-boot. From AED 600." },
+        { label: "macOS Reinstall",      href: "/macos-reinstall-dubai",      description: "Fresh macOS before adding Windows." },
+        { label: "MacBook SSD Upgrade",  href: "/macbook-ssd-upgrade-dubai",  description: "More space for the dual-boot." },
       ]}
       blogLink={{ label: "Windows on Apple Silicon: Parallels vs VMware in 2026", href: "/blog/apple-silicon-vs-intel-repair-difference" }}
     />

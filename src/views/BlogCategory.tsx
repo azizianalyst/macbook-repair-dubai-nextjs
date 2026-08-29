@@ -30,7 +30,7 @@ export default function BlogCategory({ slug }: { slug: string }) {
     {
       title: `${name} - Apple Repair Blog Dubai`,
       description: category
-        ? `${category.blurb} Technician-written, with 2026 AED pricing. ${posts.length} guides.`
+        ? `${category.blurb} Technician-written, updated for 2026. ${posts.length} guides.`
         : "Apple repair guides for Dubai.",
       path,
     },

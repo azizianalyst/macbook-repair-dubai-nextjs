@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirNotCharging";
 
 export const metadata: Metadata = {
   title: "MacBook Air Not Charging? 6 Fixes and Costs Dubai 2026",
-  description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Repair from AED 300.",
+  description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Free diagnosis, WhatsApp for a quote.",
   openGraph: {
     title: "MacBook Air Not Charging? 6 Fixes and Costs Dubai 2026",
-    description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Repair from AED 300.",
+    description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Free diagnosis, WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-not-charging-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Not Charging? 6 Fixes and Costs Dubai 2026",
-    description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Repair from AED 300.",
+    description: "MacBook Air not charging in Dubai? 6 fixes for USB-C port, MagSafe, charging IC and power adapter faults. Free diagnosis, WhatsApp for a quote.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

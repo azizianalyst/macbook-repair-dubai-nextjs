@@ -36,7 +36,7 @@ const FAQS = [
   { q: "Which Mac models have the T2 chip?",
     a: "MacBook Pro 2018–2019 (13\" and 15\"), MacBook Air 2018–2020, Mac mini 2018, Mac Pro 2019, and iMac Pro 2017. Apple Silicon Macs (M1 and later) do not have a T2 chip, they use the M-series chip's integrated Secure Enclave, which behaves similarly." },
   { q: "How much does T2 chip Mac data recovery cost in Dubai?",
-    a: "T2 Mac data recovery costs AED 1,000–2,500 depending on the board fault. The process requires repairing the original logic board (not replacing it) so the Secure Enclave key remains intact. No-fix no-charge: if data cannot be recovered, you pay nothing." },
+    a: "T2 Mac data recovery pricing depends on the specific board fault, so message us on WhatsApp for a quote on your Mac. The process requires repairing the original logic board (not replacing it) so the Secure Enclave key remains intact. No-fix no-charge: if data cannot be recovered, you pay nothing." },
   { q: "Can you recover data from a T2 Mac without the Apple ID?",
     a: "No. The T2 chip's encryption is mathematically unbreakable without the Apple ID. No data recovery lab in the world, including government-level forensics labs, can decrypt a T2-encrypted SSD without the Secure Enclave key. The Apple ID is the only path to the key." },
   { q: "What if my Apple ID password is forgotten?",
@@ -53,9 +53,9 @@ export default function AppleT2ChipDataRecovery() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Apple T2 Chip Data Recovery Dubai. MacBook 2018–2020 | From AED 1,000",
+    title: "Apple T2 Chip Data Recovery Dubai. MacBook 2018–2020 | No-Fix No-Charge",
     description:
-      "Apple T2 chip Mac data recovery Dubai. MacBook Pro/Air 2018–2020, Mac mini 2018. Requires original board + Apple ID. From AED 1,000. No-fix no-charge. 055 741 3706.",
+      "Apple T2 chip Mac data recovery Dubai. MacBook Pro/Air 2018–2020, Mac mini 2018. Requires original board + Apple ID. No-fix no-charge. WhatsApp us for a quote: 055 741 3706.",
     path: "/apple-t2-chip-data-recovery-dubai",
   });
 
@@ -69,7 +69,7 @@ export default function AppleT2ChipDataRecovery() {
           tone="dark"
           eyebrow="T2 chip data recovery · Dubai · MacBook 2018–2020"
           title="Apple T2 Chip Data Recovery Dubai"
-          subtitle="MacBook Pro/Air 2018–2020, Mac mini 2018. Requires original logic board + Apple ID. From AED 1,000. No-fix no-charge."
+          subtitle="MacBook Pro/Air 2018–2020, Mac mini 2018. Requires original logic board + Apple ID. No-fix no-charge — message us on WhatsApp for a quote."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Lock size={14} aria-hidden /> Apple ID required</span>
@@ -90,7 +90,7 @@ export default function AppleT2ChipDataRecovery() {
           <QuickAnswer
             tone="dark"
             question="Can data be recovered from an Apple T2 chip Mac in Dubai?"
-            answer="Yes, if the Apple ID is known and the original logic board is physically repairable (T2 chip intact). T2 Macs encrypt data with a key stored in the Secure Enclave. Without the Apple ID or with a destroyed T2 chip, recovery is mathematically impossible. From AED 1,000. No-fix no-charge. WhatsApp 055 741 3706."
+            answer="Yes, if the Apple ID is known and the original logic board is physically repairable (T2 chip intact). T2 Macs encrypt data with a key stored in the Secure Enclave. Without the Apple ID or with a destroyed T2 chip, recovery is mathematically impossible. No-fix no-charge — WhatsApp 055 741 3706 for a quote."
           />
         </section>
 

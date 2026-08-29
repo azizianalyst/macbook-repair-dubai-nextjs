@@ -7,7 +7,7 @@ export default function BlogMacBookProM4Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M4 common problems in Dubai? First OLED display issues, Thunderbolt 5 faults, memory pressure on 16GB M4. Expert fixes and repair from AED 200."
+      seoDescription="MacBook Pro M4 common problems in Dubai? First OLED display issues, Thunderbolt 5 faults, memory pressure on 16GB M4. Expert fixes. Message us on WhatsApp for a quote."
       path="/blog/macbook-pro-m4-common-problems-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM4Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="The MacBook Pro M4 brought the first OLED display to the MacBook lineup. First-generation OLED panels, new Thunderbolt 5 ports, and macOS Sequoia bugs created a set of issues specific to M4 owners in Dubai. Most are free to fix. Screen repair starts from AED 700."
-      quickAnswer="MacBook Pro M4 common problems include: first-gen OLED dead pixels or uniformity banding (check on grey screen at 50% brightness), Thunderbolt 5 docks not recognised (update hub firmware), 16GB memory pressure under heavy workloads (quit Chrome and Teams), and thermal throttling on sustained tasks. Most are software fixes. OLED screen replacement from AED 700 in Dubai."
+      hook="The MacBook Pro M4 brought the first OLED display to the MacBook lineup. First-generation OLED panels, new Thunderbolt 5 ports, and macOS Sequoia bugs created a set of issues specific to M4 owners in Dubai. Most are free to fix. For screen repair, message us on WhatsApp for today's price on your model."
+      quickAnswer="MacBook Pro M4 common problems include: first-gen OLED dead pixels or uniformity banding (check on grey screen at 50% brightness), Thunderbolt 5 docks not recognised (update hub firmware), 16GB memory pressure under heavy workloads (quit Chrome and Teams), and thermal throttling on sustained tasks. Most are software fixes. For OLED screen replacement in Dubai, message us on WhatsApp for today's exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -84,8 +84,8 @@ export default function BlogMacBookProM4Problems() {
             rows={[
               { model: "Throttles after 10 mins of video export", ours: "Normal M4 Pro 14-inch behaviour", apple: "Use 16-inch for sustained heavy workloads" },
               { model: "Fan louder than M3 on same task", ours: "M4 Pro higher TDP", apple: "Normal, not a fault" },
-              { model: "Throttles even at light tasks", ours: "Vent blockage or dust", apple: "Cleaning service AED 120" },
-              { model: "Throttles at room temperature, no dust", ours: "Thermal paste or sensor fault", apple: "Repaste AED 150, or diagnostic" },
+              { model: "Throttles even at light tasks", ours: "Vent blockage or dust", apple: "Cleaning service — price on request" },
+              { model: "Throttles at room temperature, no dust", ours: "Thermal paste or sensor fault", apple: "Repaste or diagnostic — price on request" },
             ]}
           />
           <p>
@@ -149,14 +149,14 @@ export default function BlogMacBookProM4Problems() {
 
           <h2 id="repair-cost-m4">How much does MacBook Pro M4 repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M4 repair pricing. June 2026"
+            caption="MacBook Pro M4 repair services"
             rows={[
-              { model: "MacBook Pro M4 14\" OLED screen replacement", ours: "AED 700", apple: "AED 1,299", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M4 16\" OLED screen replacement", ours: "AED 800", apple: "AED 1,499", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M4 battery 14\"", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M4 battery 16\"", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell, same-day" },
-              { model: "Thunderbolt 5 port repair", ours: "AED 350", apple: "AED 950+", note: "Single port or controller rework" },
-              { model: "Thermal cleaning + repaste (M4)", ours: "AED 150", apple: "Not offered", note: "Fixes sustained throttling" },
+              { model: "MacBook Pro M4 14\" OLED screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
+              { model: "MacBook Pro M4 16\" OLED screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
+              { model: "MacBook Pro M4 battery 14\"", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M4 battery 16\"", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, same-day" },
+              { model: "Thunderbolt 5 port repair", ours: "Price on request", apple: "Price on request", note: "Single port or controller rework" },
+              { model: "Thermal cleaning + repaste (M4)", ours: "Price on request", apple: "Not offered", note: "Fixes sustained throttling" },
             ]}
           />
           <p>
@@ -178,7 +178,7 @@ export default function BlogMacBookProM4Problems() {
             <li>Internal display works but all USB-C ports are dead for video output</li>
           </ul>
           <p>
-            Free diagnosis. Component-level M4 board repair from AED 1,200.{" "}
+            Free diagnosis. Component-level M4 board repair — message us on WhatsApp for the exact price.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>
@@ -188,7 +188,7 @@ export default function BlogMacBookProM4Problems() {
       faqs={[
         {
           q: "Why does my MacBook Pro M4 OLED screen have a faint band on one side?",
-          a: "Faint uniformity banding on the left or right edge of first-gen OLED MacBook Pro M4 panels is a known issue with early batches. If the banding is visible at normal viewing distances on a solid grey background, this qualifies as a display defect. Under warranty this is a free screen replacement. Out of warranty we replace OLED panels from AED 700.",
+          a: "Faint uniformity banding on the left or right edge of first-gen OLED MacBook Pro M4 panels is a known issue with early batches. If the banding is visible at normal viewing distances on a solid grey background, this qualifies as a display defect. Under warranty this is a free screen replacement. Out of warranty we replace OLED panels too. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Does Dubai heat permanently damage MacBook Pro M4 OLED?",

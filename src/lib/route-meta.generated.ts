@@ -29,8 +29,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Apple Watch repair Dubai. Screen from AED 350, battery from AED 250, water damage from AED 400. Series 3 through Ultra 2. Same-day, free diagnosis, free pickup. Call 055 741 3706."
   },
   "/same-day-macbook-repair-dubai": {
-    "title": "Same-Day MacBook Repair Dubai — Screen from AED 499, Battery from AED 450",
-    "description": "Same-day MacBook repair in Dubai. Screen from AED 499, battery from AED 450. Free pickup across Dubai. Drop off by 2 pm, back the same day. Warranty up to 12 months. Call 055 741 3706."
+    "title": "Same-Day MacBook Repair Dubai — Screen from AED 600, Battery from AED 450",
+    "description": "Same-day MacBook repair in Dubai. Screen from AED 600, battery from AED 450. Free pickup across Dubai. Drop off by 2 pm, back the same day. Warranty up to 12 months. Call 055 741 3706."
   },
   "/apple-repair-dubai": {
     "title": "Apple Repair Dubai — All Devices, From AED 179 | Since 2004",
@@ -865,7 +865,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai — MacBook, iMac & Mac mini | From AED 450",
-    "description": "Mac repair near you in Dubai. MacBook screen from AED 499, battery from AED 450. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706."
+    "description": "Mac repair near you in Dubai. MacBook screen from AED 600, battery from AED 450. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706."
   },
   "/mac-repair-dubai": {
     "title": "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
@@ -885,7 +885,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai — All Models, Same-Day | Since 2004",
-    "description": "MacBook repair Dubai — Air, Pro, Intel & M-series. Screen from AED 499, battery AED 450, logic board AED 800. Free diagnosis, free pickup, warranty up to 12 months."
+    "description": "MacBook repair Dubai — Air, Pro, Intel & M-series. Screen from AED 600, battery AED 450, logic board AED 800. Free diagnosis, free pickup, warranty up to 12 months."
   },
   "/macbook-air-repair-dubai": {
     "title": "MacBook Air Repair Dubai - Screen, Battery & Logic Board Fix",
@@ -1016,7 +1016,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook won't start in safe mode? We run safe mode boot diagnostics in Dubai to isolate software from hardware faults. From AED 150, same day. Free diagnosis."
   },
   "/macbook-screen-repair-dubai": {
-    "title": "MacBook Screen Repair Dubai — From AED 499, Same-Day",
+    "title": "MacBook Screen Repair Dubai — From AED 600, Same-Day",
     "description": "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Concord Tower. 055 741 3706."
   },
   "/macbook-speaker-repair-dubai": {
@@ -1133,7 +1133,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/mac-repair-cost-dubai": {
     "title": "Mac Repair Cost Dubai — MacBook, iMac, Mac mini | 2024 Prices",
-    "description": "Mac repair cost in Dubai. MacBook screen from AED 499, battery from AED 450, logic board from AED 800. iMac screen from AED 699. Free diagnosis. Call 055 741 3706."
+    "description": "Mac repair cost in Dubai. MacBook screen from AED 600, battery from AED 450, logic board from AED 800. iMac screen from AED 699. Free diagnosis. Call 055 741 3706."
   },
   "/macbook-battery-swollen-repair-dubai": {
     "title": "MacBook Swollen Battery Repair Dubai — From AED 450, Same Day | Urgent",

@@ -6,7 +6,7 @@ export default function BlogMacMiniNotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="Mac mini Not Turning On? 6 Fixes and Repair Costs Dubai 2026"
-      seoDescription="Mac mini not turning on in Dubai? 6 fixes for M4, M2, M1 and Intel models. Power fault diagnosis from AED 0. Board repair from AED 400."
+      seoDescription="Mac mini not turning on in Dubai? 6 fixes for M4, M2, M1 and Intel models. Free power-fault diagnosis. Message us on WhatsApp for a repair quote."
       path="/blog/mac-mini-not-turning-on-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogMacMiniNotTurningOn() {
       ]}
       category="Fix guide · Mac mini"
       h1="Mac mini Not Turning On in Dubai? 6 Things to Check First"
-      hook="A Mac mini that will not power on is usually a failed power supply, a tripped SMC, or a board-level fault, and our Dubai workshop diagnoses every model free with board repair from AED 400."
+      hook="A Mac mini that will not power on is usually a failed power supply, a tripped SMC, or a board-level fault, and our Dubai workshop diagnoses every model free — message us on WhatsApp for a board-repair quote."
       quickAnswer="Mac mini not turning on is most often caused by a failed internal power supply (Intel models), a T2 chip SMC issue on 2018+ Intel models, or a logic board fault. For M-series Mac mini: try an SMC reset via power button hold (8 seconds) and check the orange status LED on the rear. Free diagnosis on all models."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -37,7 +37,7 @@ export default function BlogMacMiniNotTurningOn() {
         },
         {
           q: "Does Dubai heat (35 degrees C and above) permanently damage the Mac mini power supply?",
-          a: "The Mac mini's internal power supply is rated for ambient temperatures up to 35 degrees C. Dubai summer ambient temperatures regularly exceed 40 to 45 degrees C, and an enclosed desk or cabinet space without airflow can reach 50 degrees C or more. Sustained operation above the rated temperature accelerates capacitor wear inside the power supply, shortening its lifespan from a typical 7 to 10 years to 3 to 5 years in poorly ventilated Dubai installations. Placing the Mac mini in open air, away from direct sunlight and enclosed cabinets, is the most effective preventive measure. A power supply that has failed from heat can be replaced at our workshop for AED 400 to AED 600, which is a fraction of the cost of a new unit.",
+          a: "The Mac mini's internal power supply is rated for ambient temperatures up to 35 degrees C. Dubai summer ambient temperatures regularly exceed 40 to 45 degrees C, and an enclosed desk or cabinet space without airflow can reach 50 degrees C or more. Sustained operation above the rated temperature accelerates capacitor wear inside the power supply, shortening its lifespan from a typical 7 to 10 years to 3 to 5 years in poorly ventilated Dubai installations. Placing the Mac mini in open air, away from direct sunlight and enclosed cabinets, is the most effective preventive measure. A power supply that has failed from heat can be replaced at our workshop for a fraction of the cost of a new unit — message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How long should a Mac mini power supply last, and what is Apple's own specification?",
@@ -53,7 +53,7 @@ export default function BlogMacMiniNotTurningOn() {
         },
         {
           q: "Is it safe to keep using a Mac mini that powers on but shuts off randomly?",
-          a: "No, not without taking precautions first. A Mac mini that shuts off randomly under load is at risk of corrupting the APFS file system if power cuts while a write operation is in progress. This is how a power supply fault leads to data loss or a macOS installation that will not boot. If your Mac mini is shutting down randomly, back up to Time Machine immediately while it is still accessible, stop using it for heavy workloads, and bring it in for diagnosis. The power supply is replaceable at AED 400 to AED 600, which is far less expensive than data recovery or a new Mac mini. The Mac mini will not catch fire from a worn power supply under normal load, but the data risk from unexpected shutdowns is real.",
+          a: "No, not without taking precautions first. A Mac mini that shuts off randomly under load is at risk of corrupting the APFS file system if power cuts while a write operation is in progress. This is how a power supply fault leads to data loss or a macOS installation that will not boot. If your Mac mini is shutting down randomly, back up to Time Machine immediately while it is still accessible, stop using it for heavy workloads, and bring it in for diagnosis. The power supply is replaceable and far less expensive than data recovery or a new Mac mini — message us on WhatsApp for the exact price. The Mac mini will not catch fire from a worn power supply under normal load, but the data risk from unexpected shutdowns is real.",
         },
       ]}
       relatedLinks={[
@@ -223,7 +223,7 @@ export default function BlogMacMiniNotTurningOn() {
               your Mac mini uses helps set realistic expectations before bringing it to a workshop.
             </p>
             <ul className="list-disc list-inside space-y-xs">
-              <li><strong>Intel Mac mini 2014:</strong> uses a discrete internal PSU board that is relatively straightforward to replace. Power faults are almost always in the PSU rather than the logic board. Replacement PSU: AED 400 to AED 600.</li>
+              <li><strong>Intel Mac mini 2014:</strong> uses a discrete internal PSU board that is relatively straightforward to replace. Power faults are almost always in the PSU rather than the logic board, which makes for a lower-cost repair — message us on WhatsApp for a replacement PSU quote.</li>
               <li><strong>Intel Mac mini 2018 and 2020:</strong> adds a T2 security chip that controls some power sequencing. Power faults can be in the PSU, the T2 chip, or the logic board PMIC. Diagnosis takes longer because the T2 must be interrogated separately. SMC state is also more complex to reset.</li>
               <li><strong>M1 Mac mini (2020):</strong> the power delivery is managed by a PMIC integrated into the M1 SoC package. There is no separate PSU board. Failures are rarer but involve micro-soldering at the board level when they occur. Power supply replacement cost is higher because the repair is more invasive.</li>
               <li><strong>M2 Mac mini (2023) and M4 Mac mini (2024):</strong> same integrated architecture as M1, with updated PMICs and additional power rails for the faster Neural Engine and media engine. Board-level faults are uncommon but exist; the most frequent cause of a Mac mini M2 or M4 not turning on is the SMC state after a power outage, which resolves with the cable-unplug procedure described in Step 2.</li>
@@ -240,24 +240,25 @@ export default function BlogMacMiniNotTurningOn() {
           <section>
             <h2 id="replacement-cost">Mac mini not turning on repair cost Dubai</h2>
             <p>
-              Prices below are for our Media City workshop in Dubai. Diagnosis is always free and covers
+              The services below are handled at our Media City workshop in Dubai. Diagnosis is always free and covers
               a complete power-rail voltage test, SMC state assessment, and visual inspection of the PSU
               and logic board. All repairs include a 3-month written warranty on parts and labour.
+              Message us on WhatsApp for today's exact price on your model and year.
             </p>
             <BlogPriceTable
-              caption="Mac mini not turning on: repair pricing - MacBook Repair Dubai, June 2026"
+              caption="Mac mini not turning on: repair services - MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Diagnosis (all models)", ours: "AED 0", apple: "AED 200+" },
-                { model: "Power supply replacement (Intel)", ours: "AED 400", apple: "AED 800+" },
-                { model: "Logic board repair", ours: "AED 500", apple: "AED 1,200+" },
-                { model: "SMC / T2 reset service", ours: "AED 150", apple: "AED 300+" },
-                { model: "SSD data recovery", ours: "AED 400", apple: "AED 1,200+" },
+                { model: "Diagnosis (all models)", ours: "Free", apple: "Price on request" },
+                { model: "Power supply replacement (Intel)", ours: "Price on request", apple: "Price on request" },
+                { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
+                { model: "SMC / T2 reset service", ours: "Price on request", apple: "Price on request" },
+                { model: "SSD data recovery", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p className="text-[13px] text-text-muted mono">
-              Apple Store pricing covers flat-fee device replacements, not component-level repair.
-              Our prices are for repair of the original Mac mini. WhatsApp 055 741 3706 for a free
+              Apple Store service covers flat-fee device replacements, not component-level repair.
+              Our service repairs the original Mac mini. WhatsApp 055 741 3706 for a free
               quote on your specific model and year.
             </p>
           </section>
@@ -274,10 +275,10 @@ export default function BlogMacMiniNotTurningOn() {
             <p>
               In practice, most Mac mini logic board faults are single-component failures: a PMIC that
               has failed due to heat cycling, a blown power rail capacitor, or a voltage regulator that
-              has lost regulation. These are repairable at the micro-soldering level for AED 500 to
-              AED 800, preserving the original board, the original serial number, and any paired
+              has lost regulation. These are repairable at the micro-soldering level,
+              preserving the original board, the original serial number, and any paired
               hardware (T2 security pairing on Intel, Secure Enclave pairing on M-series). A full board
-              replacement from a donor Mac mini costs AED 1,200 to AED 2,000 plus labour, and on
+              replacement from a donor Mac mini costs considerably more than a component-level repair, and on
               M-series models the replacement board cannot be paired to the original storage, which means
               data recovery must be performed separately before the swap.
             </p>

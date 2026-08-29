@@ -7,7 +7,7 @@ export default function BlogMacBookProM2ScreenLines() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Screen Lines or Black Screen Dubai 2026: Fix Guide"
-      seoDescription="MacBook Pro M2 screen showing lines or black screen in Dubai? Display cable fault on M2 13-inch, GPU rendering lines, or panel fault. Step-by-step diagnosis. Screen repair from AED 450."
+      seoDescription="MacBook Pro M2 screen showing lines or black screen in Dubai? Display cable fault on M2 13-inch, GPU rendering lines, or panel fault. Step-by-step diagnosis, same-day repair. Message us for a quote."
       path="/blog/macbook-pro-m2-screen-lines-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM2ScreenLines() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Screen Lines or Black Screen in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M2 screen lines are one of the most searchable display problems on Apple Community for the M2 generation. The M2 13-inch has a specific display cable vulnerability, while M2 Pro and Max display issues are more often GPU or panel-related. Screen repair starts from AED 450 in Dubai with same-day service available."
+      hook="MacBook Pro M2 screen lines are one of the most searchable display problems on Apple Community for the M2 generation. The M2 13-inch has a specific display cable vulnerability, while M2 Pro and Max display issues are more often GPU or panel-related. Message us on WhatsApp for today's screen repair price on your model, with same-day service available in Dubai."
       quickAnswer="MacBook Pro M2 screen lines: take a screenshot. If lines appear in the screenshot, it is a GPU or panel fault (hardware). If screenshot is clean but lines are on screen, it is a GPU rendering bug (often fixed by restarting in Safe Mode and updating macOS). If lines appear and disappear when you change the lid angle, the display cable is the fault: cable replacement is cheaper than panel replacement."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -88,17 +88,17 @@ export default function BlogMacBookProM2ScreenLines() {
               <tr>
                 <td>MacBook Pro M2 13-inch</td>
                 <td>Display cable fault (lid angle correlation, intermittent lines)</td>
-                <td>Cable: AED 180. Panel: AED 450</td>
+                <td>Price on request</td>
               </tr>
               <tr>
                 <td>MacBook Pro M2 Pro 14-inch</td>
                 <td>LCD panel column driver or GPU rendering bug</td>
-                <td>Panel: AED 500</td>
+                <td>Price on request</td>
               </tr>
               <tr>
                 <td>MacBook Pro M2 Max 16-inch</td>
                 <td>Panel or local dimming zone fault</td>
-                <td>Panel: AED 600</td>
+                <td>Price on request</td>
               </tr>
             </tbody>
           </table>
@@ -107,11 +107,11 @@ export default function BlogMacBookProM2ScreenLines() {
           <BlogPriceTable
             caption="MacBook Pro M2 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M2 13-inch screen", ours: "AED 450", apple: "AED 950+", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Pro 14-inch screen", ours: "AED 500", apple: "AED 1,050+", note: "mini-LED panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Max 16-inch screen", ours: "AED 600", apple: "AED 1,200+", note: "mini-LED panel, 12-month warranty, same-day" },
-              { model: "Display cable (M2 13-inch hinge cable)", ours: "AED 180", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Panel vs cable vs GPU" },
+              { model: "MacBook Pro M2 13-inch screen", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 Pro 14-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 Max 16-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 12-month warranty, same-day" },
+              { model: "Display cable (M2 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
+              { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Panel vs cable vs GPU" },
             ]}
           />
 
@@ -140,11 +140,11 @@ export default function BlogMacBookProM2ScreenLines() {
         },
         {
           q: "Does MacBook Pro M2 13-inch have a known display cable problem?",
-          a: "Yes. Apple Community documented extensive reports of M2 13-inch display cables developing micro-fractures after 1-2 years of use, causing intermittent horizontal lines that correlate with lid angle. The cable routes through the MacBook Pro hinge and fatigues with repeated open/close cycles. Cable replacement costs AED 180, much cheaper than full panel replacement.",
+          a: "Yes. Apple Community documented extensive reports of M2 13-inch display cables developing micro-fractures after 1-2 years of use, causing intermittent horizontal lines that correlate with lid angle. The cable routes through the MacBook Pro hinge and fatigues with repeated open/close cycles. Cable replacement is much cheaper than full panel replacement: message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "MacBook Pro M2 13-inch screen replacement costs AED 450. M2 Pro 14-inch costs AED 500. M2 Max 16-inch costs AED 600. Display cable replacement (M2 13-inch) costs AED 180. All with 12-month warranty. Apple charges AED 950-1,200+. Free diagnosis to confirm exact fault first.",
+          a: "MacBook Pro M2 screen repair covers the 13-inch, M2 Pro 14-inch and M2 Max 16-inch, plus the cheaper display cable replacement on the M2 13-inch. All come with a 12-month warranty, and diagnosis is free to confirm the exact fault first. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat make MacBook Pro M2 display lines worse?",

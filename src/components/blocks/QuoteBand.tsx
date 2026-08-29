@@ -43,8 +43,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
             <div className="mt-md flex flex-wrap gap-x-lg gap-y-sm text-[14px] text-text-muted">
               {startingPrice != null && startingPrice > 0 && (
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="text-text-faint">From</span>
-                  <span className="mono text-text font-bold text-[18px]">AED {startingPrice}</span>
+                  <span className="mono text-text font-bold text-[18px]">Price on request</span>
                 </span>
               )}
               {timeline && (

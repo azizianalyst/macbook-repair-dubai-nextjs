@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM4ScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M4 Screen Repair Cost Dubai 2026: OLED Replacement Prices"
-      seoDescription="MacBook Pro M4 screen repair cost in Dubai 2026. First OLED on MacBook Pro, cracked display, lines, or flickering. Screen replacement from AED 700. Same-day repair."
+      seoTitle="MacBook Pro M4 Screen Repair Dubai 2026: OLED Replacement Guide"
+      seoDescription="MacBook Pro M4 screen repair in Dubai 2026. First OLED on MacBook Pro, cracked display, lines, or flickering. Same-day repair, free diagnosis. WhatsApp for your price."
       path="/blog/macbook-pro-m4-screen-repair-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM4ScreenRepair() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Screen Repair Cost in Dubai 2026: OLED Replacement and Fault Guide"
-      hook="The MacBook Pro M4 was the first MacBook Pro with an OLED display (Liquid Retina XDR). OLED has different failure modes compared to the LCD screens on all MacBook Pros before it. Screen replacement starts from AED 700 in Dubai with same-day service. Understanding which OLED behaviour is normal and which is a fault saves an unnecessary repair visit."
-      quickAnswer="MacBook Pro M4 OLED screen replacement costs AED 700 (14-inch) or AED 850 (16-inch) in Dubai. A cracked OLED panel requires full replacement: the glass and OLED layer are integrated and cannot be separated. Low-brightness flickering is OLED PWM dimming, not a fault. Display lines or dead pixels in a screenshot confirm a panel fault. Free diagnosis at our Dubai workshop."
+      hook="The MacBook Pro M4 was the first MacBook Pro with an OLED display (Liquid Retina XDR). OLED has different failure modes compared to the LCD screens on all MacBook Pros before it. We offer same-day OLED screen replacement in Dubai — message us on WhatsApp for today's exact price on your model. Understanding which OLED behaviour is normal and which is a fault saves an unnecessary repair visit."
+      quickAnswer="MacBook Pro M4 OLED screen replacement is available for the 14-inch and 16-inch in Dubai — message us on WhatsApp for today's exact price on your model. A cracked OLED panel requires full replacement: the glass and OLED layer are integrated and cannot be separated. Low-brightness flickering is OLED PWM dimming, not a fault. Display lines or dead pixels in a screenshot confirm a panel fault. Free diagnosis at our Dubai workshop."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -106,12 +106,12 @@ export default function BlogMacBookProM4ScreenRepair() {
               </tr>
               <tr>
                 <td>Backlight repair</td>
-                <td>Backlight fault fixable without panel replacement (AED 400)</td>
+                <td>Backlight fault fixable without full panel replacement</td>
                 <td>No separate backlight: panel fault always = panel replacement</td>
               </tr>
               <tr>
                 <td>Cracked glass vs cracked panel</td>
-                <td>Sometimes only glass cracked, LCD undamaged (AED 250 glass only)</td>
+                <td>Sometimes only glass cracked, LCD undamaged (glass-only repair possible)</td>
                 <td>Glass and OLED integrated: crack = full panel replacement</td>
               </tr>
               <tr>
@@ -121,20 +121,21 @@ export default function BlogMacBookProM4ScreenRepair() {
               </tr>
               <tr>
                 <td>Repair cost (Dubai)</td>
-                <td>AED 500-650 (panel replacement)</td>
-                <td>AED 700-850 (panel replacement)</td>
+                <td>Price on request (panel replacement)</td>
+                <td>Price on request (panel replacement)</td>
               </tr>
             </tbody>
           </table>
 
           <h2 id="repair-cost">MacBook Pro M4 screen replacement cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M4 screen repair pricing. June 2026"
+            caption="MacBook Pro M4 screen repair services. June 2026"
+            headers={["Service", "MacBook Repair Dubai", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M4 14-inch OLED screen", ours: "AED 700", apple: "AED 1,399+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M4 16-inch OLED screen", ours: "AED 850", apple: "AED 1,699+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "Display cable replacement (M4)", ours: "AED 250", apple: "Full display assembly", note: "Hinge cable if panel undamaged" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Confirm panel vs cable vs GPU fault" },
+              { model: "MacBook Pro M4 14-inch OLED screen", ours: "Price on request", apple: "Price on request", note: "Full panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M4 16-inch OLED screen", ours: "Price on request", apple: "Price on request", note: "Full panel, 12-month warranty, same-day" },
+              { model: "Display cable replacement (M4)", ours: "Price on request", apple: "Full display assembly", note: "Hinge cable if panel undamaged" },
+              { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Confirm panel vs cable vs GPU fault" },
             ]}
           />
 
@@ -155,7 +156,7 @@ export default function BlogMacBookProM4ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M4 screen repair cost in Dubai?",
-          a: "MacBook Pro M4 14-inch OLED screen replacement costs AED 700 at our Dubai workshop. The 16-inch costs AED 850. Apple charges AED 1,399 (14-inch) and AED 1,699 (16-inch). We carry a 12-month warranty on replacement panels and offer same-day service in most cases.",
+          a: "We replace both the 14-inch and 16-inch MacBook Pro M4 OLED screens at our Dubai workshop, and our price is well below the Apple Store. Message us on WhatsApp for today's exact price on your model. We carry a 12-month warranty on replacement panels and offer same-day service in most cases.",
         },
         {
           q: "Is MacBook Pro M4 OLED screen flickering a manufacturing defect?",
@@ -171,7 +172,7 @@ export default function BlogMacBookProM4ScreenRepair() {
         },
         {
           q: "How do I tell if MacBook Pro M4 display lines are a panel fault or a cable fault?",
-          a: "Slowly open and close the lid. If lines appear, disappear, or change with lid angle, the hinge display cable is the fault. Cable replacement costs AED 250 and avoids full panel replacement. If the lines are constant regardless of lid angle, the OLED panel itself is damaged.",
+          a: "Slowly open and close the lid. If lines appear, disappear, or change with lid angle, the hinge display cable is the fault. A cable replacement costs far less than a full panel replacement and avoids it entirely — message us on WhatsApp for the exact price. If the lines are constant regardless of lid angle, the OLED panel itself is damaged.",
         },
         {
           q: "How long does MacBook Pro M4 screen replacement take in Dubai?",

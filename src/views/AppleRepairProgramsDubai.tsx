@@ -44,11 +44,11 @@ const FAQS = [
   { q: "How do I check if my Apple device qualifies for a free repair programme?",
     a: "Three quick options. (1) Visit apple.com/support/exchange_repair and enter your device's serial number. (2) Search Google for '[your model] repair program apple'. (3) Bring or WhatsApp your device to us - we'll check the serial against every active and recently ended Apple programme, free of charge, and tell you honestly if Apple should fix it for free." },
   { q: "My MacBook Pro 2018 keyboard is sticking. Is the Keyboard Service Programme still valid?",
-    a: "The Keyboard Service Programme covered MacBooks for 4 years from the original purchase date. For most affected models that window has now closed (2024-2025 rolling). Check your serial on Apple's site first. If ineligible, we replace the top case (which includes keyboard, battery and trackpad) for AED 700-950 depending on model, with a 15-day warranty." },
+    a: "The Keyboard Service Programme covered MacBooks for 4 years from the original purchase date. For most affected models that window has now closed (2024-2025 rolling). Check your serial on Apple's site first. If ineligible, we replace the top case (which includes keyboard, battery and trackpad), with a 15-day warranty - message us on WhatsApp for today's exact price on your model." },
   { q: "My iPhone 11 has touch issues. Can I still get free Apple repair?",
-    a: "The iPhone 11 Display Module Replacement Programme ended in September 2022. We replace genuine-quality display modules from AED 500 with a 3-month written warranty - typically 60-90 minutes in the workshop. We can confirm the issue is the digitizer (not a deeper logic-board fault) before charging anything." },
+    a: "The iPhone 11 Display Module Replacement Programme ended in September 2022. We replace genuine-quality display modules with a 3-month written warranty - typically 60-90 minutes in the workshop. Message us on WhatsApp for the exact price on your model. We can confirm the issue is the digitizer (not a deeper logic-board fault) before charging anything." },
   { q: "My MacBook Pro 2016 has Flexgate (Stage Light effect). Can Apple still help?",
-    a: "Apple's Display Backlight Service Programme for the 13\" MacBook Pro (2016) ended in 2021. We offer two routes: (a) replace just the flex cable for AED 600 if the display panel is intact, or (b) full display assembly for AED 800 if the panel is also damaged. Both come with a 3-month warranty." },
+    a: "Apple's Display Backlight Service Programme for the 13\" MacBook Pro (2016) ended in 2021. We offer two routes: (a) replace just the flex cable if the display panel is intact, or (b) a full display assembly if the panel is also damaged. Both come with a 3-month warranty - message us on WhatsApp for today's exact price on your model." },
   { q: "Are you an Apple Authorised Service Provider?",
     a: "No. We are an independent Apple repair specialist with 21 years of experience, not an AASP. That means we cannot honour Apple's warranty or in-warranty programmes ourselves - but we will tell you if Apple should fix your device for free, and we'll handle any work that falls outside Apple's coverage." },
   { q: "Why do you recommend Apple first when my device is eligible for a free programme?",
@@ -63,13 +63,13 @@ const FAQS = [
 
 const SCENARIOS = [
   { q: "MacBook Pro 2018 sticking keyboard.",
-    a: "Apple's Keyboard Service Programme has now ended for most 2018 models. We replace the full top case (keyboard + battery + trackpad) for AED 700, 15-day warranty, 1-2 day turnaround." },
+    a: "Apple's Keyboard Service Programme has now ended for most 2018 models. We replace the full top case (keyboard + battery + trackpad), 15-day warranty, 1-2 day turnaround - message us on WhatsApp for the exact price." },
   { q: "iPhone 11 touch unresponsive.",
-    a: "Programme ended September 2022. We replace the display module from AED 500, 60-90 minutes in the workshop, 3-month warranty." },
+    a: "Programme ended September 2022. We replace the display module in 60-90 minutes in the workshop, 3-month warranty - message us on WhatsApp for the exact price." },
   { q: "13\" MacBook Pro 2016 backlight stripes (Flexgate).",
-    a: "Programme ended 2021. Cable-only repair AED 600; full display AED 800. Both with 3-month warranty." },
+    a: "Programme ended 2021. We offer a cable-only repair or a full display, both with a 3-month warranty - message us on WhatsApp for today's exact price." },
   { q: "iPhone 12 receiver dead during calls.",
-    a: "Programme ended March 2023. Receiver replacement AED 350 with warranty of up to 12 months, returned same day." },
+    a: "Programme ended March 2023. Receiver replacement with warranty of up to 12 months, returned same day - message us on WhatsApp for the exact price." },
 ];
 
 export default function AppleRepairProgramsDubai() {
@@ -257,20 +257,20 @@ export default function AppleRepairProgramsDubai() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl max-w-[72ch]">
         <h2 className="text-[28px] md:text-[32px] mb-md">What if the programme has ended?</h2>
         <p className="text-[16px] text-text leading-relaxed">
-          The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme - typically AED 600 to AED 1,500 depending on the part, with a written warranty up to 12 months and same-day turnaround for most common jobs. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
+          The defect does not disappear when Apple's coverage window closes. We continue to repair every fault that was once covered by an Apple programme, with a written warranty up to 12 months and same-day turnaround for most common jobs - message us on WhatsApp for today's exact price on your model. In many cases our turnaround is faster than Apple's because we keep the affected parts in stock for the high-volume programmes (butterfly keyboards, iPhone 11 displays, MacBook Pro 2016 flex cables).
         </p>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
           <Link to="/macbook-keyboard-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook keyboard repair</p>
-            <p className="text-[13px] text-text-muted mt-1">Butterfly era top-case replacement - from AED 700</p>
+            <p className="text-[13px] text-text-muted mt-1">Butterfly era top-case replacement - price on request</p>
           </Link>
           <Link to="/iphone-screen-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">iPhone display module</p>
-            <p className="text-[13px] text-text-muted mt-1">iPhone X / 11 touch issues - from AED 500</p>
+            <p className="text-[13px] text-text-muted mt-1">iPhone X / 11 touch issues - price on request</p>
           </Link>
           <Link to="/macbook-screen-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
             <p className="font-bold text-[15px]">MacBook display / Flexgate</p>
-            <p className="text-[13px] text-text-muted mt-1">Flex cable AED 600 · Full display AED 800</p>
+            <p className="text-[13px] text-text-muted mt-1">Flex cable or full display - price on request</p>
           </Link>
         </div>
         <p className="text-[14px] text-text-muted mt-md">

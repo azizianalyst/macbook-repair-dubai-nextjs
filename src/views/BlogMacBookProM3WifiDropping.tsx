@@ -2,12 +2,13 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 
 export default function BlogMacBookProM3WifiDropping() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 Wi-Fi Dropping Dubai 2026: 6GHz Fix Guide"
-      seoDescription="MacBook Pro M3 Wi-Fi dropping in Dubai? 6GHz band disconnects, slow speeds, or not reconnecting after sleep. Sonoma Wi-Fi fix and UAE router settings. Repair from AED 200."
+      seoDescription="MacBook Pro M3 Wi-Fi dropping in Dubai? 6GHz band disconnects, slow speeds, or not reconnecting after sleep. Sonoma Wi-Fi fix, UAE router settings, WhatsApp for a repair quote."
       path="/blog/macbook-pro-m3-wifi-dropping-dubai"
       wide
       toc={[
@@ -23,7 +24,7 @@ export default function BlogMacBookProM3WifiDropping() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 Wi-Fi Dropping in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 introduced Wi-Fi 6E (6GHz support) for the first time in the MacBook Pro line. Apple Community logged extensive M3 Wi-Fi complaints in late 2023: 6GHz authentication failures, slow reconnect after sleep, and random drops on the 5GHz band. Sonoma 14.2 addressed most of these. UAE network conditions add a specific layer: high Wi-Fi density on 2.4 and 5GHz, making 6GHz the best band for M3 in Dubai offices. Wi-Fi antenna repair starts from AED 200 in Dubai."
+      hook="MacBook Pro M3 introduced Wi-Fi 6E (6GHz support) for the first time in the MacBook Pro line. Apple Community logged extensive M3 Wi-Fi complaints in late 2023: 6GHz authentication failures, slow reconnect after sleep, and random drops on the 5GHz band. Sonoma 14.2 addressed most of these. UAE network conditions add a specific layer: high Wi-Fi density on 2.4 and 5GHz, making 6GHz the best band for M3 in Dubai offices. If it turns out to be hardware, message us on WhatsApp for a Wi-Fi antenna repair quote on your exact model."
       quickAnswer="MacBook Pro M3 Wi-Fi dropping: update to Sonoma 14.2 which fixed the Wi-Fi 6E 6GHz authentication failure on M3. For sleep reconnect issues: disable Power Nap on battery (System Settings, Battery, Options). For Dubai routers: set WPA3 security and separate SSIDs per band. Forget and rejoin the network to reset MCS negotiation. If Wi-Fi icon is missing entirely, this is a hardware fault requiring antenna or chip repair."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -110,22 +111,25 @@ export default function BlogMacBookProM3WifiDropping() {
               </tr>
               <tr>
                 <td>Wi-Fi antenna repair (Dubai)</td>
-                <td>AED 180</td>
-                <td>AED 200: same repair, slightly newer part</td>
+                <td>Price on request</td>
+                <td>Price on request: same repair, slightly newer part</td>
               </tr>
             </tbody>
           </table>
 
           <h2 id="repair-cost">MacBook Pro M3 Wi-Fi repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M3 Wi-Fi repair pricing. June 2026"
+            caption="MacBook Pro M3 Wi-Fi repair services. June 2026"
             rows={[
-              { model: "Wi-Fi antenna replacement (M3 14-inch)", ours: "AED 200", apple: "AED 650+", note: "Antenna cable, 60 mins" },
-              { model: "Wi-Fi antenna replacement (M3 16-inch)", ours: "AED 230", apple: "AED 650+", note: "Antenna cable, 60 mins" },
-              { model: "Wi-Fi chip rework", ours: "AED 400", apple: "Logic board replacement", note: "Component-level repair" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Hardware vs software vs router confirmation" },
+              { model: "Wi-Fi antenna replacement (M3 14-inch)", ours: "Price on request", apple: "Price on request", note: "Antenna cable, 60 mins" },
+              { model: "Wi-Fi antenna replacement (M3 16-inch)", ours: "Price on request", apple: "Price on request", note: "Antenna cable, 60 mins" },
+              { model: "Wi-Fi chip rework", ours: "Price on request", apple: "Logic board replacement", note: "Component-level repair" },
+              { model: "Diagnostic", ours: "Free", apple: "Price on request", note: "Hardware vs software vs router confirmation" },
             ]}
           />
+          <p>
+            <PriceCTA compact message="Hi, price for MacBook Pro M3 Wi-Fi repair in Dubai?" />
+          </p>
 
           <h2 id="hardware-fault">When is MacBook Pro M3 Wi-Fi a hardware fault?</h2>
           <ul className="list-disc list-inside space-y-xs">
@@ -160,7 +164,7 @@ export default function BlogMacBookProM3WifiDropping() {
         },
         {
           q: "How much does MacBook Pro M3 Wi-Fi repair cost in Dubai?",
-          a: "Wi-Fi antenna replacement costs AED 200 (14-inch) or AED 230 (16-inch). Wi-Fi chip rework costs AED 400. Free diagnostic first to confirm if the issue is software, router configuration, or hardware.",
+          a: "It depends on whether the fix is an antenna cable replacement (14-inch or 16-inch) or component-level Wi-Fi chip rework. We run a free diagnostic first to confirm if the issue is software, router configuration, or hardware, then message you the exact price on WhatsApp for your model.",
         },
         {
           q: "Why does MacBook Pro M3 show connected to Wi-Fi but have no internet in Dubai?",

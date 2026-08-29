@@ -12,7 +12,7 @@ export default function BlogMacProNotTurningOn() {
       wide
       category="Fix guide · Mac Pro"
       h1="Mac Pro Not Turning On in Dubai? 6 Things to Check First"
-      hook="A Mac Pro that will not power on is usually a power supply fault, a tripped SMC, or a board-level issue, and our Dubai workshop diagnoses tower and rack models free with board repair from AED 700."
+      hook="A Mac Pro that will not power on is usually a power supply fault, a tripped SMC, or a board-level issue, and our Dubai workshop diagnoses tower and rack models free before quoting board repair on WhatsApp."
       quickAnswer="Mac Pro not turning on is most often a power supply fault, a wall outlet or cable issue, an SMC state needing reset, or a logic board fault. On the 2019 Mac Pro, check the status light behavior and reseat the power cable. Free diagnosis on 2019 tower, rack, and earlier Intel cylinder and tower models."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -190,19 +190,19 @@ export default function BlogMacProNotTurningOn() {
             caption="Mac Pro no-power repair pricing in Dubai. June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 300+" },
-              { model: "Power supply replacement", ours: "AED 700", apple: "AED 1,600+" },
-              { model: "SMC / reset service", ours: "AED 200", apple: "AED 400+" },
-              { model: "Logic board repair", ours: "AED 900", apple: "AED 2,200+" },
-              { model: "SSD data recovery", ours: "AED 600", apple: "AED 1,800+" },
+              { model: "Diagnosis", ours: "Free", apple: "Price on request" },
+              { model: "Power supply replacement", ours: "Price on request", apple: "Price on request" },
+              { model: "SMC / reset service", ours: "Price on request", apple: "Price on request" },
+              { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
+              { model: "SSD data recovery", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>
-            A power supply replacement on the 2019 tower is the most common chargeable fix and starts at
-            AED 700. A board-level repair, which covers a shorted rail or a failed power-management chip,
-            starts at AED 900 and is still well under a full Apple board swap. If your data is on the
-            internal SSD and the board is the problem, we can recover it from AED 600 before any board work
-            that might put it at risk.
+            A power supply replacement on the 2019 tower is the most common chargeable fix. A board-level
+            repair, which covers a shorted rail or a failed power-management chip, is still well under a
+            full Apple board swap. If your data is on the internal SSD and the board is the problem, we can
+            recover it before any board work that might put it at risk. Message us on WhatsApp with your
+            model and symptom for today's exact price.
           </p>
           <p>
             For the full service breakdown across every Mac model, see our{" "}

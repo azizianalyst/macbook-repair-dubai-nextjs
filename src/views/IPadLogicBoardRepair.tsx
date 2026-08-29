@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadLogicBoardRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Logic Board Repair Dubai - Micro-Soldering | From AED 449"
-      seoDescription="iPad logic board repair Dubai. Component-level micro-soldering - charging IC, PMIC, NAND, backlight. Not a board swap. Pro, Air & mini. From AED 449. Call 055 741 3706."
+      seoTitle="iPad Logic Board Repair Dubai - Micro-Soldering | Free Diagnosis"
+      seoDescription="iPad logic board repair Dubai. Component-level micro-soldering - charging IC, PMIC, NAND, backlight. Not a board swap. Pro, Air & mini. Free diagnosis. WhatsApp us."
       path="/ipad-logic-board-repair-dubai"
       eyebrow="iPad logic board repair"
       h1="iPad Logic Board Repair Dubai - Micro-Soldering"
-      subtitle="Won't charge, won't power on, no backlight, or stuck in a boot loop. We replace the failed IC under microscope - not the whole iPad. From AED 449, 3-5 days."
+      subtitle="Won't charge, won't power on, no backlight, or stuck in a boot loop. We replace the failed IC under microscope - not the whole iPad. Message us on WhatsApp for today's price, most faults back in 3-5 days."
       startingPrice={449}
       timeline="3-5 days"
       whatsappPrefill="Hi, my iPad has a logic board fault - model and symptom:"
@@ -23,7 +23,7 @@ export default function IPadLogicBoardRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPad logic board repair in Dubai</strong> is component-level micro-soldering - we identify the single failed chip and replace it instead of writing off the tablet. iPads are routinely declared &quot;not worth repairing&quot; when in fact one charging IC, PMIC, or backlight component has failed. From AED 449 (iPad boards are denser and the glass-and-LCD teardown is more involved than an iPhone), most faults back in 3-5 days.
+            <strong>iPad logic board repair in Dubai</strong> is component-level micro-soldering - we identify the single failed chip and replace it instead of writing off the tablet. iPads are routinely declared &quot;not worth repairing&quot; when in fact one charging IC, PMIC, or backlight component has failed. iPad boards are denser and the glass-and-LCD teardown is more involved than an iPhone, so message us on WhatsApp for today's exact price on your model - most faults back in 3-5 days.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Work is done under a stereo microscope with a JBC micro-soldering station and reballed Apple-spec ICs. Free diagnosis first: if it&apos;s a NAND/Secure-Enclave failure or a cracked SoC that can&apos;t be economically fixed, we say so up front and charge nothing.
@@ -53,7 +53,7 @@ export default function IPadLogicBoardRepair() {
         "Free re-work if the same fault returns - bring it straight back.",
       ]}
       faqs={[
-        { q: "Is board repair cheaper than replacing the iPad?", a: "Yes, by a wide margin. A charging IC or backlight fix is AED 449-1,200; a new iPad Pro is thousands. Component-level repair fixes the actual fault for the cost of the chip plus micro-soldering labour - and you keep your own device, your data, and your Apple Pencil pairing." },
+        { q: "Is board repair cheaper than replacing the iPad?", a: "Yes, by a wide margin. A charging IC or backlight fix costs a fraction of a new iPad Pro. Component-level repair fixes the actual fault for the cost of the chip plus micro-soldering labour - and you keep your own device, your data, and your Apple Pencil pairing. Message us on WhatsApp for today's exact price on your model." },
         { q: "Can every iPad board fault be fixed?", a: "No. NAND/Secure-Enclave failures that need Apple's pairing and a physically cracked SoC are not economically repairable - we tell you at the free diagnosis and charge nothing. Charging, power, backlight and most RF faults, we fix routinely on iPad mini, Air and Pro." },
         { q: "Will I lose my data?", a: "No - we never swap the board and never wipe the device. Your original NAND (your data) and Secure Enclave stay on your own board. If the board genuinely can't boot, ask about iPad data recovery instead." },
         { q: "Why is iPad board repair more than iPhone?", a: "The teardown. An iPad's screen is bonded glass-on-LCD over a large battery, so getting to the board safely - and resealing it without cracking the display - takes considerably more time than an iPhone. The micro-soldering itself is similar; the labour around it is not." },
@@ -64,7 +64,7 @@ export default function IPadLogicBoardRepair() {
       related={[
         { label: "iPad Repair Hub",          href: "/ipad-repair-dubai",                 description: "Every iPad service in one place." },
         { label: "iPad Water Damage Repair", href: "/ipad-water-damage-repair-dubai",     description: "Sister fault - liquid kills boards." },
-        { label: "iPad Data Recovery",       href: "/ipad-data-recovery-dubai",           description: "Recover data from a dead-board iPad. From AED 349." },
+        { label: "iPad Data Recovery",       href: "/ipad-data-recovery-dubai",           description: "Recover data from a dead-board iPad." },
       ]}
     />
   );

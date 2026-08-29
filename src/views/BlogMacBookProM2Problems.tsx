@@ -7,7 +7,7 @@ export default function BlogMacBookProM2Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M2 common problems in Dubai? 13-inch SSD write amplification, charging faults, HDMI output glitches, battery swelling in older units. Expert fixes from AED 200."
+      seoDescription="MacBook Pro M2 common problems in Dubai? 13-inch SSD write amplification, charging faults, HDMI output glitches, battery swelling in older units. Free diagnosis, expert fixes."
       path="/blog/macbook-pro-m2-common-problems-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM2Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro M2 owners face a specific set of issues: SSD write amplification on the 13-inch base config, charging IC faults on older units, and HDMI output glitches on the 16-inch. Most are diagnosed free in Dubai. Repair from AED 200."
-      quickAnswer="MacBook Pro M2 common problems: 13-inch M2 (256GB config) SSD shows elevated write counts due to fewer NAND chips (monitor with DriveDx), charging IC failure on units 2-3 years old, HDMI 2.1 output at wrong refresh rate on 16-inch, and thermal throttling on 13-inch M2 (fan-less under Pro workloads). Most screen and battery faults cost AED 600-700 in Dubai."
+      hook="MacBook Pro M2 owners face a specific set of issues: SSD write amplification on the 13-inch base config, charging IC faults on older units, and HDMI output glitches on the 16-inch. Most are diagnosed free in Dubai. Message us on WhatsApp for today's exact repair price on your model."
+      quickAnswer="MacBook Pro M2 common problems: 13-inch M2 (256GB config) SSD shows elevated write counts due to fewer NAND chips (monitor with DriveDx), charging IC failure on units 2-3 years old, HDMI 2.1 output at wrong refresh rate on 16-inch, and thermal throttling on 13-inch M2 (fan-less under Pro workloads). Most screen and battery faults are fixed same-day in Dubai — message us on WhatsApp for your exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -157,14 +157,14 @@ export default function BlogMacBookProM2Problems() {
 
           <h2 id="repair-cost-m2">How much does MacBook Pro M2 repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 repair pricing. June 2026"
+            caption="MacBook Pro M2 repair. June 2026"
             rows={[
-              { model: "MacBook Pro M2 13\" screen replacement", ours: "AED 500", apple: "AED 999", note: "Retina display, same-day" },
-              { model: "MacBook Pro M2 14\" screen replacement", ours: "AED 600", apple: "AED 1,099", note: "Mini-LED Liquid Retina XDR" },
-              { model: "MacBook Pro M2 16\" screen replacement", ours: "AED 700", apple: "AED 1,299", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M2 battery (13\")", ours: "AED 600", apple: "AED 999", note: "58 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M2 battery (14\"/16\")", ours: "AED 650", apple: "AED 1,099", note: "70 Wh / 100 Wh cell" },
-              { model: "Charging IC repair (M2)", ours: "AED 350", apple: "Logic board replacement", note: "Component-level repair" },
+              { model: "MacBook Pro M2 13\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Retina display, same-day" },
+              { model: "MacBook Pro M2 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED Liquid Retina XDR" },
+              { model: "MacBook Pro M2 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED, same-day" },
+              { model: "MacBook Pro M2 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M2 battery (14\"/16\")", ours: "Price on request", apple: "Price on request", note: "70 Wh / 100 Wh cell" },
+              { model: "Charging IC repair (M2)", ours: "Price on request", apple: "Logic board replacement", note: "Component-level repair" },
             ]}
           />
           <p>
@@ -185,7 +185,7 @@ export default function BlogMacBookProM2Problems() {
             <li>Fan runs at full speed from startup regardless of CPU load (fan controller fault)</li>
           </ul>
           <p>
-            Component-level M2 board repair from AED 1,000.{" "}
+            Component-level M2 board repair is available — message us on WhatsApp for a quote.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>
@@ -207,7 +207,7 @@ export default function BlogMacBookProM2Problems() {
         },
         {
           q: "Will MacBook Pro M2 charging repair fix slow charging?",
-          a: "If slow charging is due to a faulty charging IC (the chip that negotiates power delivery), yes. If it's due to a worn battery (high internal resistance slows charging as a safety measure), battery replacement is needed instead. Both are diagnosed free. Charging IC repair is AED 350 and avoids a full logic board replacement.",
+          a: "If slow charging is due to a faulty charging IC (the chip that negotiates power delivery), yes. If it's due to a worn battery (high internal resistance slows charging as a safety measure), battery replacement is needed instead. Both are diagnosed free. Charging IC repair is a component-level fix that avoids a full logic board replacement — message us on WhatsApp for the exact price.",
         },
         {
           q: "How long does MacBook Pro M2 screen replacement take in Dubai?",

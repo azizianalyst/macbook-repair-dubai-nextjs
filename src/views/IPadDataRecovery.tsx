@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadDataRecovery() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Data Recovery Dubai - Dead, Broken or Won't Turn On | From AED 349"
-      seoDescription="iPad data recovery Dubai. Photos, notes and files off a dead, water-damaged or boot-looping iPad. Board-level repair-to-boot and chip-off. From AED 349. Call 055 741 3706."
+      seoTitle="iPad Data Recovery Dubai - Dead, Broken or Won't Turn On"
+      seoDescription="iPad data recovery Dubai. Photos, notes and files off a dead, water-damaged or boot-looping iPad. Board-level repair-to-boot and chip-off. Call 055 741 3706 for a quote."
       path="/ipad-data-recovery-dubai"
       eyebrow="iPad data recovery"
       h1="iPad Data Recovery Dubai"
-      subtitle="Photos, notes and files trapped on a dead, water-damaged or boot-looping iPad. We repair the board just enough to boot and offload your data. From AED 349, 1-5 days."
+      subtitle="Photos, notes and files trapped on a dead, water-damaged or boot-looping iPad. We repair the board just enough to boot and offload your data. Message us on WhatsApp for a quote, typically 1-5 days."
       startingPrice={349}
       timeline="1-5 days"
       whatsappPrefill="Hi, I need data recovered from my iPad - model and what happened:"
@@ -23,7 +23,7 @@ export default function IPadDataRecovery() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPad data recovery in Dubai</strong> gets your photos, notes, documents and app data off an iPad that won&apos;t turn on, has water damage, or is stuck in a boot loop. Most of the time the storage itself is fine - it&apos;s the board around it that failed. We repair the power, charging or backlight fault just enough to boot the device once, then offload everything to a drive you keep. From AED 349, typically 1-5 days.
+            <strong>iPad data recovery in Dubai</strong> gets your photos, notes, documents and app data off an iPad that won&apos;t turn on, has water damage, or is stuck in a boot loop. Most of the time the storage itself is fine - it&apos;s the board around it that failed. We repair the power, charging or backlight fault just enough to boot the device once, then offload everything to a drive you keep. Message us on WhatsApp for today's exact price on your iPad, typically 1-5 days.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Free assessment first, and an honest one: modern iPads are hardware-encrypted, so recovery means getting <em>your</em> board running, not cloning a chip onto another device. If the data is genuinely unrecoverable - a failed NAND or a Secure-Enclave fault - we tell you before you spend a dirham.
@@ -53,7 +53,7 @@ export default function IPadDataRecovery() {
       ]}
       faqs={[
         { q: "My iPad won't turn on at all - can you still recover the data?", a: "Usually, yes. A dead iPad is most often a board fault - a failed power rail, charging IC or backlight - not a failed storage chip. We repair the board enough to boot the device once and offload everything. We confirm at the free assessment whether yours is recoverable." },
-        { q: "What does it cost?", a: "From AED 349, with the final price quoted after the free assessment. Simple cases (a charging or power fault) sit near the floor; complex liquid damage or board-level recovery runs higher. You approve the exact figure before any work - and the recovery itself is no-recovery, no-fee." },
+        { q: "What does it cost?", a: "The price depends on the fault, and we quote it after the free assessment. Simple cases (a charging or power fault) sit near the floor; complex liquid damage or board-level recovery runs higher. Message us on WhatsApp for a quote on your iPad - you approve the exact figure before any work, and the recovery itself is no-recovery, no-fee." },
         { q: "Is iPad data recovery guaranteed?", a: "No honest shop guarantees 100%. Modern iPads are hardware-encrypted, so recovery means getting your own board to boot - if the NAND or Secure Enclave itself has failed, the data may be unrecoverable. We're upfront about the odds before you commit." },
         { q: "Can you recover an iCloud-locked or disabled iPad?", a: "Only when you can prove ownership and have the Apple ID to re-enable it. We do not and cannot bypass Activation Lock or Secure-Enclave encryption - that protection is exactly what keeps a stolen iPad worthless, and we won't touch a device you can't show is yours." },
         { q: "My iPad got wet - what should I do right now?", a: "Power it off, don't charge it, and don't put it in rice (that does nothing). Bring it in as soon as you can - the sooner we clean the corrosion, the better the odds of both recovering the data and saving the iPad. See iPad water damage repair." },
@@ -63,7 +63,7 @@ export default function IPadDataRecovery() {
       related={[
         { label: "iPad Repair Hub",          href: "/ipad-repair-dubai",                 description: "Every iPad service in one place." },
         { label: "iPad Water Damage Repair", href: "/ipad-water-damage-repair-dubai",     description: "Liquid damage is the #1 cause of lost iPad data." },
-        { label: "iPad Logic Board Repair",  href: "/ipad-logic-board-repair-dubai",      description: "Fix the board fault behind a dead iPad. From AED 449." },
+        { label: "iPad Logic Board Repair",  href: "/ipad-logic-board-repair-dubai",      description: "Fix the board fault behind a dead iPad." },
       ]}
       blogLink={{ label: "Recovering data from a dead device: what's actually possible", href: "/blog/data-recovery-broken-macbook-2026" }}
     />

@@ -7,14 +7,14 @@ export default function MacBookAirM1BatteryReplacement() {
       path="/macbook-air-m1-battery-replacement-dubai"
       chip="M1"
       years="2020"
-      seoTitle="MacBook Air M1 Battery Replacement Dubai — AED 450"
-      seoDescription="MacBook Air M1 battery replacement Dubai AED 450. 49.9 Wh cell, BMS re-pair included, same-day 2-hour service. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air M1 Battery Replacement Dubai — Same Day"
+      seoDescription="MacBook Air M1 battery replacement in Dubai. 49.9 Wh cell, BMS re-pair included, same-day 2-hour service, free diagnosis. WhatsApp us for today's price. Call 055 741 3706."
       h1="MacBook Air M1 Battery Replacement Dubai"
       eyebrow="M1 Air battery specialist · Dubai Media City · BMS re-pair included"
       capacity="49.9 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="USB-C (2 ports, Thunderbolt / USB 4)"
-      heroAnswer="MacBook Air M1 battery replacement costs AED 450 at MacBook Repair Dubai. The M1 Air uses a 49.9 Wh lithium-ion cell — the same capacity as the Intel 2020 Air but optimised for Apple Silicon efficiency. At 4–5 years old and 600–900 cycles, many M1 Air batteries in Dubai are showing service warnings. BMS firmware re-pair is included in the price. Same-day 2-hour service."
+      heroAnswer="MacBook Air M1 battery replacement at MacBook Repair Dubai uses a 49.9 Wh lithium-ion cell — the same capacity as the Intel 2020 Air but optimised for Apple Silicon efficiency. At 4–5 years old and 600–900 cycles, many M1 Air batteries in Dubai are showing service warnings. BMS firmware re-pair is included. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your M1 Air."
       chipUniquePoints={[
         "The MacBook Air M1 (2020) uses a 49.9 Wh lithium-ion pouch cell rated for 1,000 cycles. Apple quotes up to 18 hours of battery life — but that assumes a new, full-capacity cell. At 700–900 cycles and 70–80% health, the M1 Air typically delivers 10–12 hours instead of 18. Replacement restores that full 18-hour window.",
         "Unlike Intel Macs, the M1 Air requires a BMS (Battery Management System) firmware re-pair after battery replacement. Without re-pair, macOS will show an inaccurate capacity reading and may not charge correctly. MacBook Repair Dubai uses Apple-compatible BMS programming tools to complete the pairing step — it is included in every M1 Air battery job.",
@@ -34,11 +34,11 @@ export default function MacBookAirM1BatteryReplacement() {
       faults={[
         {
           title: "macOS shows Service Recommended on M1 Air",
-          body: "System Preferences (or System Settings on Sonoma) shows Service Recommended when capacity drops below roughly 80% or cycle count exceeds 1,000. This is the normal threshold. Battery replacement at AED 450 including BMS re-pair restores full status to Normal.",
+          body: "System Preferences (or System Settings on Sonoma) shows Service Recommended when capacity drops below roughly 80% or cycle count exceeds 1,000. This is the normal threshold. Battery replacement including BMS re-pair restores full status to Normal. Message us on WhatsApp for today's exact price.",
         },
         {
           title: "M1 Air battery drains to zero overnight when idle",
-          body: "A common fault on worn M1 Air cells. The cell no longer holds trickle charge across 8+ hours of standby. BMS recalibration sometimes delays this, but below 75% capacity, replacement is the correct fix. AED 450, same-day.",
+          body: "A common fault on worn M1 Air cells. The cell no longer holds trickle charge across 8+ hours of standby. BMS recalibration sometimes delays this, but below 75% capacity, replacement is the correct fix. Same-day service — WhatsApp us for your price.",
         },
         {
           title: "Battery percentage jumps erratically on M1",
@@ -50,7 +50,7 @@ export default function MacBookAirM1BatteryReplacement() {
         },
         {
           title: "M1 Air shuts off at 15–25% battery",
-          body: "Premature shutdown is a BMS calibration failure on worn cells. The protection circuit cuts power before the display reading reaches zero. Confirmed with coconutBattery app. Fix: battery replacement + BMS re-pair, AED 450.",
+          body: "Premature shutdown is a BMS calibration failure on worn cells. The protection circuit cuts power before the display reading reaches zero. Confirmed with coconutBattery app. Fix: battery replacement + BMS re-pair — message us for the exact price.",
         },
         {
           title: "M1 Air won't charge past 80% even with Optimized Charging off",
@@ -60,11 +60,11 @@ export default function MacBookAirM1BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air M1 battery replacement cost in Dubai?",
-          a: "MacBook Air M1 battery replacement is AED 450 at MacBook Repair Dubai. This includes the 49.9 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Same-day 2-hour service.",
+          a: "MacBook Air M1 battery replacement at MacBook Repair Dubai includes the 49.9 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 3-month warranty. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your M1 Air.",
         },
         {
           q: "What is BMS re-pair and why does the M1 Air need it?",
-          a: "BMS (Battery Management System) re-pair programs the new cell's data into the M1 Mac's System Management Controller so macOS accurately reports capacity, cycle count, and charge status. Without it, the reading is invalid and Optimized Charging will not work correctly. All M1 and newer Apple Silicon Macs require this step. It is included in our AED 450 price.",
+          a: "BMS (Battery Management System) re-pair programs the new cell's data into the M1 Mac's System Management Controller so macOS accurately reports capacity, cycle count, and charge status. Without it, the reading is invalid and Optimized Charging will not work correctly. All M1 and newer Apple Silicon Macs require this step. It is included in every M1 Air battery job — no extra charge.",
         },
         {
           q: "How long does MacBook Air M1 battery replacement take in Dubai?",
@@ -72,7 +72,7 @@ export default function MacBookAirM1BatteryReplacement() {
         },
         {
           q: "Is it worth replacing the battery on a MacBook Air M1?",
-          a: "Yes. The M1 Air still runs macOS Sequoia and will receive updates through at least 2027. At AED 450 for battery replacement versus AED 4,499 for a new M3 Air, repair is very cost-effective for an otherwise healthy machine. The M1 chip is still fast enough for most daily workloads.",
+          a: "Yes. The M1 Air still runs macOS Sequoia and will receive updates through at least 2027. A battery replacement costs a fraction of a new M3 Air, so repair is very cost-effective for an otherwise healthy machine. The M1 chip is still fast enough for most daily workloads. Message us on WhatsApp for today's exact price.",
         },
         {
           q: "How do I check my MacBook Air M1 battery cycle count?",

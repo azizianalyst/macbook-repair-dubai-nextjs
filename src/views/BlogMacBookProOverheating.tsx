@@ -7,7 +7,7 @@ export default function BlogMacBookProOverheating() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Overheating Fix Dubai: M1 to M5 Guide 2026"
-      seoDescription="MacBook Pro overheating fix in Dubai? 6 causes, CPU throttling, fan clog, thermal paste, Dubai heat damage, with step-by-step solutions. Repair from AED 250."
+      seoDescription="MacBook Pro overheating fix in Dubai? 6 causes, CPU throttling, fan clog, thermal paste, Dubai heat damage, with step-by-step solutions. WhatsApp for a price."
       path="/blog/macbook-pro-overheating-fix-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProOverheating() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Overheating in Dubai? Every Cause and Fix for M1 to M5"
-      hook="A MacBook Pro that runs hot will throttle its own CPU, drop from 3.5 GHz to under 1 GHz, and feel painfully slow. In Dubai's summer the problem is three times worse. This guide covers every cause in order, from free software fixes you can do right now to thermal paste replacement from AED 250."
-      quickAnswer="MacBook Pro overheating is caused by: background processes spiking the CPU (check Activity Monitor → CPU tab), blocked vents or a clogged fan, dried-out thermal paste on the chip (common after 2–3 years), or ambient temperatures above 35°C. Start with Activity Monitor. If the fan is audible constantly and the base is hot to touch, book a thermal paste replacement. AED 250–350 in Dubai."
+      hook="A MacBook Pro that runs hot will throttle its own CPU, drop from 3.5 GHz to under 1 GHz, and feel painfully slow. In Dubai's summer the problem is three times worse. This guide covers every cause in order, from free software fixes you can do right now to a professional thermal paste replacement — message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro overheating is caused by: background processes spiking the CPU (check Activity Monitor → CPU tab), blocked vents or a clogged fan, dried-out thermal paste on the chip (common after 2–3 years), or ambient temperatures above 35°C. Start with Activity Monitor. If the fan is audible constantly and the base is hot to touch, book a thermal paste replacement — message us on WhatsApp for today's exact price in Dubai."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -50,7 +50,8 @@ export default function BlogMacBookProOverheating() {
           </ol>
           <p>
             Work through the steps below in order. Most Dubai MacBook Pro owners fix the issue
-            either for free (software) or for AED 250–350 (thermal paste service).
+            either for free (software) or with a thermal paste service — message us on WhatsApp
+            for the exact price on your model.
           </p>
 
           <h2 id="check-temps">Step 1: How do I check my MacBook Pro temperature?</h2>
@@ -184,7 +185,7 @@ export default function BlogMacBookProOverheating() {
               <tr>
                 <td>Intel (2016–2020)</td>
                 <td>Dried thermal paste on CPU + GPU (two chips, both need paste), fan clog from 3+ years of use</td>
-                <td>Thermal paste replacement on both chips + fan clean, AED 300–350</td>
+                <td>Thermal paste replacement on both chips + fan clean (price on request)</td>
               </tr>
               <tr>
                 <td>M1 / M2 (2021–2023)</td>
@@ -213,18 +214,18 @@ export default function BlogMacBookProOverheating() {
           <h2 id="repair-cost">How much does thermal paste and fan service cost in Dubai?</h2>
           <p>
             Apple does not offer thermal paste replacement as a standalone service. If you ask an
-            Apple Store about overheating, they will typically offer a full logic board replacement
-            at several thousand AED. We do the actual repair: remove the board, clean the old
+            Apple Store about overheating, they will typically offer a full logic board replacement,
+            which costs far more. We do the actual repair: remove the board, clean the old
             compound, apply fresh paste, and clean the fan.
           </p>
           <BlogPriceTable
             caption="MacBook Pro thermal paste and fan service pricing. June 2026"
             rows={[
-              { model: "MacBook Pro 13″ Intel (2016–2020)", ours: "AED 250", apple: "Board swap: AED 1,800+", note: "CPU + GPU paste, fan clean" },
-              { model: "MacBook Pro 13″ M1 / M2", ours: "AED 250", apple: "Board swap: AED 2,200+", note: "Single chip paste, fan clean" },
-              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 300", apple: "Board swap: AED 2,800+", note: "Pro/Max chip, fan clean, same-day" },
-              { model: "MacBook Pro 16″ Intel (2019)", ours: "AED 350", apple: "Board swap: AED 2,500+", note: "CPU + GPU + dedicated GPU paste" },
-              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 350", apple: "Board swap: AED 3,200+", note: "Two fan system, same-day" },
+              { model: "MacBook Pro 13″ Intel (2016–2020)", ours: "Price on request", apple: "Board swap only", note: "CPU + GPU paste, fan clean" },
+              { model: "MacBook Pro 13″ M1 / M2", ours: "Price on request", apple: "Board swap only", note: "Single chip paste, fan clean" },
+              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Board swap only", note: "Pro/Max chip, fan clean, same-day" },
+              { model: "MacBook Pro 16″ Intel (2019)", ours: "Price on request", apple: "Board swap only", note: "CPU + GPU + dedicated GPU paste" },
+              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Board swap only", note: "Two fan system, same-day" },
             ]}
           />
           <p>
@@ -269,7 +270,7 @@ export default function BlogMacBookProOverheating() {
         },
         {
           q: "Can I replace MacBook Pro thermal paste myself?",
-          a: "Technically yes, but it is not recommended. The MacBook Pro logic board is held with Pentalobe and Torx screws and the board must be carefully removed to access the heatsink. Incorrect screw torque or reconnecting the board incorrectly causes more damage than dried paste. The service is AED 250–350 in Dubai and takes same-day. The risk-to-saving ratio strongly favours professional service.",
+          a: "Technically yes, but it is not recommended. The MacBook Pro logic board is held with Pentalobe and Torx screws and the board must be carefully removed to access the heatsink. Incorrect screw torque or reconnecting the board incorrectly causes more damage than dried paste. The professional service in Dubai takes same-day, and you can message us on WhatsApp for the exact price. The risk-to-saving ratio strongly favours professional service.",
         },
         {
           q: "My MacBook Pro fan is very loud but not hot. What's wrong?",

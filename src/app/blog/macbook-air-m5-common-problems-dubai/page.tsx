@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirM5Problems";
 
 export const metadata: Metadata = {
   title: "MacBook Air M5 Common Problems Dubai 2026: Fix Guide",
-  description: "MacBook Air M5 problems in Dubai: battery drain, overheating, WiFi drops, screen issues. All M5 Air faults diagnosed and fixed from AED 350. Free diagnosis.",
+  description: "MacBook Air M5 problems in Dubai: battery drain, overheating, WiFi drops, screen issues. All M5 Air faults diagnosed and fixed. Free diagnosis, WhatsApp for a quote.",
   openGraph: {
     title: "MacBook Air M5 Common Problems Dubai 2026: Fix Guide",
-    description: "MacBook Air M5 problems? Battery, throttling, WiFi, charging issues. Fix guide with AED prices for Dubai. Free diagnosis.",
+    description: "MacBook Air M5 problems? Battery, throttling, WiFi, charging issues. Dubai fix guide. Free diagnosis, WhatsApp us for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-m5-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

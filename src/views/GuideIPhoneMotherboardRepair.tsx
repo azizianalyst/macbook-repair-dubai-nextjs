@@ -6,7 +6,7 @@ export default function GuideIPhoneMotherboardRepair() {
   return (
     <BlogPostTemplate
       seoTitle="Can an iPhone Motherboard Be Repaired? Yes. Here's How"
-      seoDescription="Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power issues, Face ID, audio, and GPU faults. Dubai pricing and what to expect."
+      seoDescription="Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power, charging, Face ID and audio faults in Dubai. Message us for a quote."
       path="/can-iphone-motherboard-be-repaired"
       category="Repairs · iPhone Logic Board"
       h1="Can an iPhone Motherboard Be Repaired?"
@@ -29,8 +29,8 @@ export default function GuideIPhoneMotherboardRepair() {
           <p>
             <strong>Logic board repair</strong> is different: it means identifying and replacing the
             specific faulty component on the existing board using micro-soldering equipment, a
-            microscope, hot-air station, and precision soldering tools. Rather than replacing a
-            £300–£800 board, you replace a £2 chip.
+            microscope, hot-air station, and precision soldering tools. Rather than replacing the
+            whole board, you replace the single tiny chip that has failed.
           </p>
 
           <h2>What faults can be repaired?</h2>
@@ -58,18 +58,19 @@ export default function GuideIPhoneMotherboardRepair() {
           <h2>How much does iPhone logic board repair cost in Dubai?</h2>
           <p>
             Component-level repair is significantly cheaper than a new logic board or a replacement
-            phone:
+            phone. The most common jobs are:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Charging IC repair:</strong> AED 350–500</li>
-            <li><strong>Power management repair:</strong> AED 500–800</li>
-            <li><strong>Audio IC repair:</strong> AED 400–600</li>
-            <li><strong>Water damage clean + repair:</strong> AED 300–700 depending on extent</li>
-            <li><strong>Full logic board replacement (where repair isn't viable):</strong> AED 800–2,000+</li>
+            <li><strong>Charging IC repair</strong> (Tristar/Hydra fault)</li>
+            <li><strong>Power management repair</strong> (PMIC / no power)</li>
+            <li><strong>Audio IC repair</strong> (no sound / dropped calls)</li>
+            <li><strong>Water damage clean + repair</strong> (varies with extent)</li>
+            <li><strong>Full logic board replacement</strong> (where component repair isn't viable)</li>
           </ul>
           <p>
-            The exact price depends on which component has failed and the iPhone model. We
-            diagnose first, no charge for the assessment and give you a fixed price before
+            The exact price depends on which component has failed and the iPhone model, so
+            message us on WhatsApp with your model and symptoms for today's exact quote. We
+            diagnose first, no charge for the assessment, and give you a fixed price before
             any work starts. See our full{" "}
             <Link to="/iphone-logic-board-repair-dubai" className="text-accent underline underline-offset-2">iPhone logic board repair service in Dubai</Link>{" "}
             for booking, turnaround and warranty details.

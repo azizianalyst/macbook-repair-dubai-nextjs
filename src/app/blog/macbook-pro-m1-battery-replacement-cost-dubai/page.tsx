@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProM1BatteryReplacement";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M1 Battery Replacement Cost Dubai 2026",
-  description: "MacBook Pro M1 battery replacement cost in Dubai 2026. M1 13-inch from AED 550. M1 Pro 14-inch from AED 600. M1 Max 16-inch from AED 650. Same-day service.",
+  description: "MacBook Pro M1 battery replacement in Dubai. M1 13-inch, M1 Pro 14-inch and M1 Max 16-inch, same-day service. Message us on WhatsApp for today's exact price.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

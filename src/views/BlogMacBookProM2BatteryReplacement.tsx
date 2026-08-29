@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM2BatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M2 Battery Replacement Cost Dubai 2026: AED Prices Guide"
-      seoDescription="MacBook Pro M2 battery replacement cost in Dubai 2026. M2 13-inch from AED 500. M2 Pro 14-inch from AED 600. M2 Max 16-inch from AED 650. Same-day service. 3-month warranty."
+      seoTitle="MacBook Pro M2 Battery Replacement Dubai 2026: Cost Guide"
+      seoDescription="MacBook Pro M2 battery replacement in Dubai 2026 — M2, M2 Pro and M2 Max. Same-day service, 3-month warranty, free health check. WhatsApp us for a quote."
       path="/blog/macbook-pro-m2-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM2BatteryReplacement() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Battery Replacement Cost in Dubai 2026: What to Expect"
-      hook="MacBook Pro M2 battery replacement in Dubai costs AED 500-650 depending on model, significantly less than Apple's AED 750-1,000+ service fee. M2 MacBook Pros purchased at UAE launch (mid-2022 or early 2023) are now at the age where some early buyers have already passed 800+ cycles, especially if the Ventura swap bug ran the SSD and CPU harder than expected during the first year."
-      quickAnswer="MacBook Pro M2 battery replacement cost Dubai: M2 13-inch = AED 500. M2 Pro 14-inch = AED 600. M2 Max 16-inch = AED 650. Same-day service available. Free battery health check first. Replace when battery capacity drops below 80% or cycle count exceeds 900. 3-month warranty on replacement cells."
+      hook="MacBook Pro M2 battery replacement in Dubai costs far less than Apple's service fee, and independent turnaround is usually same day. M2 MacBook Pros purchased at UAE launch (mid-2022 or early 2023) are now at the age where some early buyers have already passed 800+ cycles, especially if the Ventura swap bug ran the SSD and CPU harder than expected during the first year. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M2 battery replacement in Dubai covers the 13-inch M2, M2 Pro 14-inch and M2 Max 16-inch, with same-day service and a free battery health check first. Replace when capacity drops below 80% or cycle count exceeds 900. 3-month warranty on replacement cells. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -114,13 +114,14 @@ export default function BlogMacBookProM2BatteryReplacement() {
 
           <h2 id="m2-models">MacBook Pro M2 battery prices by model in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 battery replacement pricing by model. June 2026"
+            caption="MacBook Pro M2 battery replacement by model. June 2026"
+            headers={["Model", "Our service", "Notes"]}
             rows={[
-              { model: "MacBook Pro M2 13-inch (2022)", ours: "AED 500", apple: "AED 750+", note: "69.6Wh, 3-month warranty, 2-hour job" },
-              { model: "MacBook Pro M2 Pro 14-inch (2023)", ours: "AED 600", apple: "AED 900+", note: "99.8Wh, 3-month warranty, 3-hour job" },
-              { model: "MacBook Pro M2 Max 14-inch (2023)", ours: "AED 600", apple: "AED 900+", note: "99.8Wh, same as M2 Pro 14-inch battery" },
-              { model: "MacBook Pro M2 Max 16-inch (2023)", ours: "AED 650", apple: "AED 1,000+", note: "100Wh, 3-month warranty, 3-hour job" },
-              { model: "Battery health diagnostic", ours: "Free", apple: "AED 250", note: "Cycle count, capacity, condition check" },
+              { model: "MacBook Pro M2 13-inch (2022)", ours: "Price on request", note: "69.6Wh, 3-month warranty, 2-hour job" },
+              { model: "MacBook Pro M2 Pro 14-inch (2023)", ours: "Price on request", note: "99.8Wh, 3-month warranty, 3-hour job" },
+              { model: "MacBook Pro M2 Max 14-inch (2023)", ours: "Price on request", note: "99.8Wh, same as M2 Pro 14-inch battery" },
+              { model: "MacBook Pro M2 Max 16-inch (2023)", ours: "Price on request", note: "100Wh, 3-month warranty, 3-hour job" },
+              { model: "Battery health diagnostic", ours: "Free", note: "Cycle count, capacity, condition check" },
             ]}
           />
 
@@ -148,7 +149,7 @@ export default function BlogMacBookProM2BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M2 battery replacement cost in Dubai?",
-          a: "MacBook Pro M2 13-inch battery replacement costs AED 500. M2 Pro 14-inch costs AED 600. M2 Max 16-inch costs AED 650. All include 3-month warranty on replacement cells and same-day service. Apple charges AED 750-1,000+. Free battery health diagnostic first: check cycle count and capacity before committing to replacement.",
+          a: "Independent MacBook Pro M2 battery replacement in Dubai costs noticeably less than Apple's service fee, and covers the 13-inch M2, M2 Pro 14-inch and M2 Max 16-inch. All include 3-month warranty on replacement cells and same-day service, with a free battery health diagnostic first to check cycle count and capacity before committing. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I check MacBook Pro M2 battery health in Dubai?",

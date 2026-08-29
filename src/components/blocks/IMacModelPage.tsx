@@ -119,13 +119,13 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   const rows: ServiceRow[] = [
     {
       service: `${m.size}" Retina display / glass replacement`,
-      price: m.pricing.screen,
+      price: "Price on request",
       href: "/imac-screen-repair-dubai",
       timeline: "2-3 days",
     },
     {
       service: "Logic board repair (component-level)",
-      price: m.pricing.logicBoard,
+      price: "Price on request",
       href: "/imac-logic-board-repair-dubai",
       timeline: "3-5 days",
     },
@@ -133,7 +133,7 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.powerSupply) {
     rows.push({
       service: "Power supply replacement",
-      price: m.pricing.powerSupply,
+      price: "Price on request",
       href: "/imac-power-supply-repair-dubai",
       timeline: "1-2 days",
     });
@@ -141,7 +141,7 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.ramUpgrade) {
     rows.push({
       service: `RAM upgrade (up to ${m.maxRAM.split(" ")[0]})`,
-      price: m.pricing.ramUpgrade,
+      price: "Price on request",
       href: "/imac-ram-upgrade-dubai",
       timeline: "Same-day",
     });
@@ -149,14 +149,14 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.fusionToSsd) {
     rows.push({
       service: "Fusion Drive → SSD upgrade (huge speed boost)",
-      price: m.pricing.fusionToSsd,
+      price: "Price on request",
       href: "/imac-ssd-upgrade-dubai",
       timeline: "1-2 days",
     });
   } else if (m.pricing.ssdUpgrade) {
     rows.push({
       service: "SSD upgrade",
-      price: m.pricing.ssdUpgrade,
+      price: "Price on request",
       href: "/imac-ssd-upgrade-dubai",
       timeline: "1-2 days",
     });
@@ -164,7 +164,7 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.gpuModule) {
     rows.push({
       service: "GPU module replacement (Radeon Pro Vega)",
-      price: m.pricing.gpuModule,
+      price: "Price on request",
       href: "/imac-gpu-repair-dubai",
       timeline: "3-7 days (parts sourcing)",
     });
@@ -172,7 +172,7 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.ssdRecovery) {
     rows.push({
       service: "Soldered SSD chip-off data recovery",
-      price: `${m.pricing.ssdRecovery}+`,
+      price: "Price on request",
       href: "/imac-data-recovery-dubai",
       timeline: "5-10 days",
     });
@@ -180,7 +180,7 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   if (m.pricing.fanCleaning) {
     rows.push({
       service: "Fan cleaning + thermal paste",
-      price: m.pricing.fanCleaning,
+      price: "Price on request",
       href: "/imac-fan-cleaning-dubai",
       timeline: "Same-day",
     });
@@ -214,14 +214,6 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
 
-  const candidates = [
-    model.pricing.powerSupply,
-    model.pricing.ramUpgrade,
-    model.pricing.fanCleaning,
-    model.pricing.thermalPaste,
-  ].filter((v): v is number => typeof v === "number" && v > 0);
-  const startingPrice = candidates.length ? Math.min(...candidates) : model.pricing.screen;
-
   const isAppleSilicon = model.era === "apple-silicon";
   const isIntel27 = model.family === "imac-intel";
   const isPro = model.family === "imac-pro";
@@ -229,16 +221,16 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does an ${model.name} screen replacement cost in Dubai?`,
-      a: `${model.size}" Retina display / glass replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue).`,
+      a: `${model.size}" Retina display / glass replacement on the ${model.name} takes a typical 2-3 days and includes a 3-month written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue). WhatsApp us your model for today's exact price.`,
     },
     {
       q: isAppleSilicon
         ? `Can I upgrade the RAM or SSD on the ${model.shortName}?`
         : `Can I upgrade the RAM and SSD on my ${model.shortName}?`,
       a: isAppleSilicon
-        ? `No. Apple Silicon iMacs (M1, M3, M4) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. For data on a failed SSD, we offer chip-off recovery (AED ${model.pricing.ssdRecovery ?? 2000}+).`
+        ? `No. Apple Silicon iMacs (M1, M3, M4) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. For data on a failed SSD, we offer chip-off recovery - message us for the exact price.`
         : model.family === "imac-intel" && model.releaseYear >= 2020
-          ? `RAM yes - up to ${model.maxRAM.split(" ")[0]} (DDR4, user-upgradeable). SSD no - the T2 chip on the 2020 iMac soldered the SSD to the board, so SSD upgrades are impossible. For SSD failure we offer chip-off recovery (AED ${model.pricing.ssdRecovery ?? 2000}+).`
+          ? `RAM yes - up to ${model.maxRAM.split(" ")[0]} (DDR4, user-upgradeable). SSD no - the T2 chip on the 2020 iMac soldered the SSD to the board, so SSD upgrades are impossible. For SSD failure we offer chip-off recovery - message us for the exact price.`
           : `Yes - both. RAM is socketed and goes to ${model.maxRAM.split(" ")[0]} (DDR4). SSD upgrade or Fusion Drive → SSD swap is one of our most-requested jobs and the single biggest speed boost we can give an Intel iMac.`,
     },
     {
@@ -250,7 +242,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       a: isPro
         ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take 5-7 days and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
-          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it for AED ${model.pricing.powerSupply ?? 500}, typically same-day to 2 days, with a warranty of up to 12 months. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
+          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it typically same-day to 2 days, with a warranty of up to 12 months - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
           : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Brick replacement same-day; in-chassis PSU is a 1-2 day job.`,
     },
     {
@@ -265,13 +257,13 @@ export default function IMacModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Screen AED ${model.pricing.screen}, logic board AED ${model.pricing.logicBoard}${model.pricing.powerSupply ? `, PSU AED ${model.pricing.powerSupply}` : ""}. Warranty up to 12 months.`}
+      seoTitle={`${model.name} Repair Dubai - Screen, Board & Upgrades`}
+      seoDescription={`${model.name} repair Dubai - screen, logic board${model.pricing.powerSupply ? ", PSU" : ""} and upgrades. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Logic Board, Power Supply & Upgrades`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup with proper iMac transport across Dubai.`}
-      startingPrice={startingPrice}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup with proper iMac transport across Dubai.`}
+      startingPrice={0}
       timeline={isPro ? "Standard repairs 2-3 days · GPU/CPU 5-7 days (parts)" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
       breadcrumb={[
@@ -290,7 +282,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup with proper transport, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Free pickup with proper transport, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -319,7 +311,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               <thead className="bg-bg-alt">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>
@@ -346,7 +338,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon iMacs (M1, M3, M4) have soldered memory and SoC-integrated SSD. What you buy is what you have for the life of the device.
               </p>
               <p className="text-[15px]">
-                Buy at least <strong>16GB RAM</strong> (not 8GB base) and <strong>512GB SSD</strong> (not 256GB) when ordering. This is the #1 advice we give iMac buyers in Dubai. For data on a failed SSD, we offer chip-off recovery (AED {model.pricing.ssdRecovery ?? 2000}+).
+                Buy at least <strong>16GB RAM</strong> (not 8GB base) and <strong>512GB SSD</strong> (not 256GB) when ordering. This is the #1 advice we give iMac buyers in Dubai. For data on a failed SSD, we offer chip-off recovery - message us for the exact price.
               </p>
             </div>
           )}
@@ -364,7 +356,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
                 <li>• 5K Retina display still looks gorgeous</li>
               </ul>
               <p className="text-[15px]">
-                A fully upgraded {model.releaseYear} iMac (max RAM + 2TB SSD where possible) costs roughly AED 2,000-2,500 in upgrades and beats a base M4 Mac mini for display and total RAM. <strong>If you already own one, upgrade it before buying new.</strong>
+                A fully upgraded {model.releaseYear} iMac (max RAM + 2TB SSD where possible) beats a base M4 Mac mini for display and total RAM - message us for the exact upgrade price. <strong>If you already own one, upgrade it before buying new.</strong>
               </p>
             </div>
           )}
@@ -444,7 +436,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       related={[
         { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, warranty of up to 12 months." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
-        { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. AED 500." },
+        { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. WhatsApp us for a quote." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />

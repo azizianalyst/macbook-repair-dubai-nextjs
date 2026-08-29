@@ -15,12 +15,12 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const REPAIRS = [
-  { icon: Monitor,   label: "Screen Replacement",      price: "AED 350–750",  time: "Same day",   note: "Series 4 through Ultra 2, crack-free LTPO display, True Tone, Always-On." },
-  { icon: Battery,   label: "Battery Replacement",     price: "AED 250–400",  time: "Same day",   note: "80% capacity test post-swap. Certified cell, 3-month battery warranty." },
-  { icon: Droplets,  label: "Water Damage Repair",     price: "AED 400–900",  time: "1–3 days",   note: "Ultrasonic clean, corrosion removal, crown seal replacement." },
-  { icon: Settings,  label: "Digital Crown Repair",    price: "AED 200–450",  time: "Same day",   note: "Sticky, unresponsive, or worn crown, full assembly replacement." },
-  { icon: Zap,       label: "Charging Port / Band Connector", price: "AED 180–350", time: "Same day", note: "Magnetic charging pins or band-release mechanism." },
-  { icon: Shield,    label: "Back Glass Replacement",  price: "AED 220–450",  time: "Same day",   note: "Cracked sapphire back or composite rear, pressure-bonded to frame." },
+  { icon: Monitor,   label: "Screen Replacement",      price: "Price on request",  time: "Same day",   note: "Series 4 through Ultra 2, crack-free LTPO display, True Tone, Always-On." },
+  { icon: Battery,   label: "Battery Replacement",     price: "Price on request",  time: "Same day",   note: "80% capacity test post-swap. Certified cell, 3-month battery warranty." },
+  { icon: Droplets,  label: "Water Damage Repair",     price: "Price on request",  time: "1–3 days",   note: "Ultrasonic clean, corrosion removal, crown seal replacement." },
+  { icon: Settings,  label: "Digital Crown Repair",    price: "Price on request",  time: "Same day",   note: "Sticky, unresponsive, or worn crown, full assembly replacement." },
+  { icon: Zap,       label: "Charging Port / Band Connector", price: "Price on request", time: "Same day", note: "Magnetic charging pins or band-release mechanism." },
+  { icon: Shield,    label: "Back Glass Replacement",  price: "Price on request",  time: "Same day",   note: "Cracked sapphire back or composite rear, pressure-bonded to frame." },
 ];
 
 const SERIES_SUPPORTED = [
@@ -43,17 +43,17 @@ const PROCESS = [
 
 const FAQS = [
   { q: "How much does Apple Watch screen repair cost in Dubai?",
-    a: "Screen replacement runs AED 350 to AED 750 depending on the series. Series 4–6 screens cost AED 350–500; Series 7–9 cost AED 450–600; Series 10 and Ultra 2 cost AED 600–750. WhatsApp 055 741 3706 with your exact model for a fixed quote." },
+    a: "Screen replacement price depends on the series, Series 4–6, Series 7–9, and Series 10 or Ultra 2 each differ. WhatsApp 055 741 3706 with your exact model and we'll send today's fixed quote before any work starts." },
   { q: "Can you repair Apple Watch that has been water damaged?",
     a: "Yes. Apple Watch is rated water-resistant, not waterproof, repeated submersion, chlorine, or a cracked screen breaks the seal. We do an ultrasonic clean, corrosion inspection, and crown seal replacement. Most water-damage jobs finish in 1–2 days; severe corrosion takes up to 3 days." },
   { q: "How long does Apple Watch battery last before replacement is needed?",
-    a: "Most Apple Watch batteries start holding under 80% of original capacity after 400–500 charge cycles, roughly 2–3 years of daily use. Signs: watch not making it through the day, charging twice daily, or iOS Battery Health below 80%. Replacement costs AED 250–400 and takes under an hour." },
+    a: "Most Apple Watch batteries start holding under 80% of original capacity after 400–500 charge cycles, roughly 2–3 years of daily use. Signs: watch not making it through the day, charging twice daily, or iOS Battery Health below 80%. Replacement takes under an hour, message us for the exact price on your model." },
   { q: "Is it worth repairing an older Apple Watch (Series 4 or 5)?",
-    a: "Yes if the screen or battery alone is the issue. A Series 5 screen repair at AED 400 is far cheaper than replacing the watch. Logic board failure or severe water damage on a Series 4/5 may not be worth repairing, we assess free of charge and tell you honestly which situation you're in." },
+    a: "Yes if the screen or battery alone is the issue. A Series 5 screen repair is almost always far cheaper than replacing the watch, message us for the exact price. Logic board failure or severe water damage on a Series 4/5 may not be worth repairing, we assess free of charge and tell you honestly which situation you're in." },
   { q: "Do you replace Apple Watch batteries with genuine Apple cells?",
     a: "We use OEM-specification lithium-ion cells that match the original mAh rating. Genuine Apple batteries are only available through AASP channels; as an independent specialist we source factory-spec cells that pass the same 80% capacity test and carry a 3-month warranty." },
   { q: "Can Apple Watch be repaired while still under Apple warranty?",
-    a: "If your watch is under AppleCare+ you should claim through Apple first, screen repair is AED 99 (AED 549 service fee applies once). If you're out of warranty or the damage type isn't covered, independent repair costs 40–60% less than the Apple Store price." },
+    a: "If your watch is under AppleCare+ you should claim through Apple first. If you're out of warranty or the damage type isn't covered, independent repair costs far less than the Apple Store, message us on WhatsApp for today's exact price on your model." },
   { q: "Do you offer Apple Watch repair pickup in Dubai?",
     a: "Yes, free pickup and delivery across Dubai Mainland for Apple Watch repairs. WhatsApp 055 741 3706, share your location, and a courier collects within 2–4 hours. Repair usually completes the same day; watch is returned the following morning." },
   { q: "Where are you located for Apple Watch repair in Dubai?",
@@ -66,9 +66,9 @@ export default function AppleWatchRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Apple Watch Repair Dubai. Screen, Battery, Water Damage | From AED 250",
+    title: "Apple Watch Repair Dubai. Screen, Battery & Water Damage",
     description:
-      "Apple Watch repair in Dubai. Screen from AED 350, battery from AED 250, water damage from AED 400. Series 3–Ultra 2. Same-day, free diagnosis. Call 055 741 3706.",
+      "Apple Watch repair in Dubai. Screen, battery and water-damage fixes for Series 3 to Ultra 2. Same-day, free diagnosis. WhatsApp 055 741 3706 for a quote.",
     path: "/apple-watch-repair-dubai",
   });
 
@@ -82,7 +82,7 @@ export default function AppleWatchRepair() {
           tone="dark"
           eyebrow="Apple Watch specialist · Dubai · Since 2004"
           title="Apple Watch Repair Dubai. Screen, Battery & Water Damage"
-          subtitle="Series 3 through Ultra 2. Screen from AED 350, battery from AED 250. Same-day repair at Concord Tower, Dubai Media City."
+          subtitle="Series 3 through Ultra 2. Screen, battery and water-damage repair, message us on WhatsApp for today's exact price. Same-day repair at Concord Tower, Dubai Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
@@ -110,7 +110,7 @@ export default function AppleWatchRepair() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Apple Watch repaired in Dubai?"
-            answer="Apple Watch repair in Dubai at Concord Tower, Dubai Media City. Screen replacement from AED 350, battery replacement from AED 250, water damage from AED 400. Covers Series 3 through Ultra 2. Same-day service, free diagnosis, free pickup across Dubai, warranty up to 12 months. WhatsApp 055 741 3706."
+            answer="Apple Watch repair in Dubai at Concord Tower, Dubai Media City. Screen, battery and water-damage repair covering Series 3 through Ultra 2. Same-day service, free diagnosis, free pickup across Dubai, warranty up to 12 months. WhatsApp 055 741 3706 for today's exact price."
           />
         </section>
 

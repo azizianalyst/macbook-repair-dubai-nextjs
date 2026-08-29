@@ -91,7 +91,7 @@ function worthRepairingVerdict(m: MacBookModel): { headline: string; body: strin
   if (m.era === "intel" && age >= 6) {
     return {
       headline: "Be selective - battery yes, big jobs probably no",
-      body: `${age} years old, Intel chip, no Apple Silicon performance. A AED ${m.pricing.battery} battery is almost always worth it. A AED ${m.pricing.screen}+ screen + AED ${m.pricing.keyboard}+ keyboard combined is usually more than a clean used M1 Air. We'll show you the math at intake.`,
+      body: `${age} years old, Intel chip, no Apple Silicon performance. A battery replacement is almost always worth it. A screen plus keyboard combined can add up to more than a clean used M1 Air, so weigh it carefully - we'll show you the math at intake. Message us on WhatsApp for exact prices on your model.`,
     };
   }
   if (m.era === "apple-silicon" && age <= 3) {
@@ -108,7 +108,7 @@ function worthRepairingVerdict(m: MacBookModel): { headline: string; body: strin
   }
   return {
     headline: "Battery yes, big repairs case-by-case",
-    body: `${age} years old. AED ${m.pricing.battery} battery service is almost always worth it. Larger repairs need a frank conversation about value - we'll have it with you.`,
+    body: `${age} years old. A battery service is almost always worth it - message us for the exact price. Larger repairs need a frank conversation about value - we'll have it with you.`,
   };
 }
 
@@ -207,7 +207,6 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const verdict = worthRepairingVerdict(model);
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
-  const startingPrice = Math.min(model.pricing.battery, model.pricing.port, model.pricing.fanCleaning || 9999);
 
   const isButterfly = model.era === "intel" && model.releaseYear <= 2019;
   const isAppleSilicon = model.era === "apple-silicon";
@@ -215,21 +214,21 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} screen replacement cost in Dubai?`,
-      a: `Screen / display assembly replacement on the ${model.name} is AED ${model.pricing.screen}. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour.`,
+      a: `Screen / display assembly replacement on the ${model.name} is priced per model and panel condition - message us on WhatsApp for today's exact price. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour.`,
     },
     {
       q: `Can I upgrade the RAM or SSD on the ${model.name}?`,
       a: isAppleSilicon
-        ? `No. Apple Silicon MacBooks (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM and storage are one package. Buy enough storage and RAM at order time - upgrade later is impossible. For data on a failed SSD, we offer chip-off recovery (AED 2,000+, complex but possible).`
-        : `RAM is soldered on the ${model.name} (Intel Air / Pro retina-era). SSD is also soldered on these models. The original spec is what you keep - neither is upgradeable. We can recover data from a failed SSD via chip-off recovery (AED 2,000+).`,
+        ? `No. Apple Silicon MacBooks (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM and storage are one package. Buy enough storage and RAM at order time - upgrade later is impossible. For data on a failed SSD, we offer chip-off recovery (complex but possible) - message us on WhatsApp for a price.`
+        : `RAM is soldered on the ${model.name} (Intel Air / Pro retina-era). SSD is also soldered on these models. The original spec is what you keep - neither is upgradeable. We can recover data from a failed SSD via chip-off recovery - message us on WhatsApp for a price.`,
     },
     {
       q: isButterfly
         ? `Is the butterfly keyboard on my ${model.name} covered by an Apple repair program?`
         : `How long does battery replacement on the ${model.name} take?`,
       a: isButterfly
-        ? `Yes - Apple's Keyboard Service Program covers 2015-2019 MacBook models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap for AED ${model.pricing.topCase}.`
-        : `Battery replacement on the ${model.name} is AED ${model.pricing.battery} and we typically complete it the same day. We use cells with verified cycle counts and reseal the chassis properly.`,
+        ? `Yes - Apple's Keyboard Service Program covers 2015-2019 MacBook models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap - message us on WhatsApp for the exact price.`
+        : `Battery replacement on the ${model.name} is typically completed the same day - message us on WhatsApp for today's exact price. We use cells with verified cycle counts and reseal the chassis properly.`,
     },
     {
       q: `Is the ${model.name} still worth repairing in 2026?`,
@@ -243,13 +242,13 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, keyboard AED ${model.pricing.keyboard}. Up to 12-month warranty.`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnosis, Same-Day`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair in Dubai - screen, battery, keyboard & logic board. Free pickup, up to 12-month warranty. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Keyboard & Logic Board`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. Up to written warranty up to 12 months. Free pickup across Dubai.`}
-      startingPrice={startingPrice}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
+      startingPrice={0}
       timeline={isAppleSilicon && model.currentInLineup ? "Same-day battery · 2-5 days specialty parts" : "Same-day to 3 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
       breadcrumb={[
@@ -268,7 +267,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today's exact price on the most common service. Free pickup, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -295,7 +294,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
               <thead className="bg-bg-alt">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>
@@ -304,7 +303,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 {serviceRows.map((row, i) => (
                   <tr key={i} className={i % 2 === 1 ? "bg-bg-alt/40" : ""}>
                     <td className="px-md py-sm">{row.service}</td>
-                    <td className="px-md py-sm">{row.price}</td>
+                    <td className="px-md py-sm">{row.price === "Free" ? "Free" : "Price on request"}</td>
                     <td className="px-md py-sm">{row.timeline}</td>
                     <td className="px-md py-sm">
                       <Link to={row.href} className="text-primary font-semibold hover:underline">Book →</Link>
@@ -322,7 +321,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon MacBooks (M1 through M5) have SoC-integrated RAM and a soldered SSD. The chip, RAM, and storage are one package on the logic board. Buy enough when you order - upgrading later is impossible.
               </p>
               <p className="text-[15px]">
-                For data recovery on a failed SSD, we offer chip-off recovery. Complex, expensive (AED 2,000+), but possible. <Link to="/macbook-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link>
+                For data recovery on a failed SSD, we offer chip-off recovery. Complex and specialised, but possible - message us on WhatsApp for a price. <Link to="/macbook-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link>
               </p>
             </div>
           )}
@@ -334,7 +333,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 Apple ran a Keyboard Service Program covering 2015-2019 MacBook models with butterfly keyboards for <strong>4 years from the original purchase date</strong>. If your keyboard fails and you're inside that window, Apple may still fix it free.
               </p>
               <p className="text-[15px]">
-                We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap (AED {model.pricing.topCase}, 1 day).
+                We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap in about 1 day - message us on WhatsApp for the exact price.
               </p>
             </div>
           )}

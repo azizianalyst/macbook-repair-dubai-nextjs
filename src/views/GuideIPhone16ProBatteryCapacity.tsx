@@ -6,7 +6,7 @@ export default function GuideIPhone16ProBatteryCapacity() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone 16 Pro Battery Capacity, Life & Replacement Cost"
-      seoDescription="iPhone 16 Pro has a 3,582 mAh battery rated for 27 hrs video. What affects battery life, when to replace, and Dubai replacement cost (AED 350)."
+      seoDescription="iPhone 16 Pro has a 3,582 mAh battery rated for 27 hrs video. What affects battery life, when to replace, and same-day Dubai replacement. WhatsApp us for a price."
       path="/iphone-16-pro-battery-capacity"
       category="Specs & Repair · iPhone 16 Pro"
       h1="iPhone 16 Pro Battery Capacity & Battery Life"
@@ -63,8 +63,8 @@ export default function GuideIPhone16ProBatteryCapacity() {
             gets through a full day, a battery replacement restores it to like-new runtime.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Our price:</strong> AED 350, includes labour and 3-month warranty.</li>
-            <li><strong>Apple Store / authorised centre:</strong> Typically AED 499–599 out of warranty.</li>
+            <li><strong>Our price:</strong> message us on WhatsApp for today's exact price, includes labour and a 3-month warranty.</li>
+            <li><strong>Apple Store / authorised centre:</strong> typically noticeably more expensive out of warranty.</li>
             <li><strong>Turnaround:</strong> Same day, usually within 1–2 hours.</li>
           </ul>
           <p>
@@ -77,7 +77,7 @@ export default function GuideIPhone16ProBatteryCapacity() {
 
           <h2>Should you replace or upgrade?</h2>
           <p>
-            A battery replacement at AED 350 makes sense if:
+            A battery replacement makes sense if:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li>The phone is otherwise in good condition (no significant screen or chassis damage).</li>
@@ -106,11 +106,11 @@ export default function GuideIPhone16ProBatteryCapacity() {
         },
         {
           q: "How much does iPhone 16 Pro battery replacement cost in Dubai?",
-          a: "We charge AED 350 for iPhone 16 Pro battery replacement, including labour and a 3-month warranty. Same-day service at Concord Tower, Dubai Media City. Apple's out-of-warranty price is typically AED 499–599.",
+          a: "Message us on WhatsApp for today's exact price on your iPhone 16 Pro battery replacement, including labour and a 3-month warranty. Same-day service at Concord Tower, Dubai Media City, usually cheaper than the Apple out-of-warranty price.",
         },
       ]}
       relatedLinks={[
-        { label: "iPhone 16 Pro repair Dubai", href: "/iphone-16-pro-repair-dubai", description: "Screen, battery, camera and logic board repairs, same-day from AED 300." },
+        { label: "iPhone 16 Pro repair Dubai", href: "/iphone-16-pro-repair-dubai", description: "Screen, battery, camera and logic board repairs, same-day. WhatsApp us for a price." },
         { label: "iPhone battery replacement Dubai", href: "/iphone-battery-replacement-dubai", description: "All iPhone models, genuine batteries, same-day, 3-month warranty." },
         { label: "iPhone full diagnostic Dubai", href: "/iphone-full-diagnostic-dubai", description: "Free check to confirm whether battery or another component is the issue." },
       ]}

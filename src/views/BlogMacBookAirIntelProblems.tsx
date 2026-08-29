@@ -7,7 +7,7 @@ export default function BlogMacBookAirIntelProblems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Intel Common Problems Dubai: 2017 to 2020 Fix Guide 2026"
-      seoDescription="MacBook Air Intel problems Dubai: butterfly keyboard, battery at 5+ years, screen backlight, USB-C charging. 2017-2020 models fixed from AED 300. Free diagnosis."
+      seoDescription="MacBook Air Intel problems Dubai: butterfly keyboard, battery at 5+ years, screen backlight, USB-C charging. 2017-2020 models fixed fast. Free diagnosis, message us for a quote."
       path="/blog/macbook-air-intel-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirIntelProblems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air Intel Common Problems in Dubai? 2017 to 2020 Fix Guide 2026"
       hook="MacBook Air Intel models (2017 to 2020) are 5 to 9 years old in 2026. The most common problems at this age are entirely predictable: battery capacity, keyboard mechanism failure, and backlight issues. Most are still worth fixing. Here is the full picture."
-      quickAnswer="Most common MacBook Air Intel problems in Dubai: butterfly keyboard failure on 2018-2019 (dust jam or mechanism worn, AED 200 clean or AED 900 top-case), battery below 70% capacity at 5+ years (AED 450), screen backlight dimming or dead on older panels, USB-C charging port looseness on 2020 model, macOS Ventura performance issues on Core i3 models, and liquid damage from years of use. Most are repairable. Cost depends on model year."
+      quickAnswer="Most common MacBook Air Intel problems in Dubai: butterfly keyboard failure on 2018-2019 (dust jam or mechanism worn, keyboard clean or top-case replacement), battery below 70% capacity at 5+ years, screen backlight dimming or dead on older panels, USB-C charging port looseness on 2020 model, macOS Ventura performance issues on Core i3 models, and liquid damage from years of use. Most are repairable. Message us on WhatsApp for today's exact price on your model year."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -63,13 +63,13 @@ export default function BlogMacBookAirIntelProblems() {
           </ul>
           <p>
             Apple's free replacement programme for butterfly keyboards ended. We clean butterfly
-            keyboards for <strong>AED 200</strong> using compressed air at a 45-degree angle in three
+            keyboards using compressed air at a 45-degree angle in three
             passes. This fixes the majority of stuck-key cases caused by dust or debris under the
-            1mm travel plunger.
+            1mm travel plunger. Message us on WhatsApp for today's exact price.
           </p>
           <p>
             If cleaning fails, the only repair is a top-case replacement (the entire keyboard and
-            palm-rest assembly): <strong>AED 900</strong> at our Dubai workshop.
+            palm-rest assembly) at our Dubai workshop. Message us for the exact price on your model.
           </p>
           <p>
             The 2020 Intel Air (A2179) switched back to scissor switches and does not have this
@@ -89,8 +89,9 @@ export default function BlogMacBookAirIntelProblems() {
             <li>Sudden shutdowns at 15-20% remaining as the cell struggles to deliver current</li>
           </ul>
           <p>
-            Battery replacement costs <strong>AED 450</strong>, same-day service. We use
-            Apple-equivalent OEM cells with the same capacity rating as the original.
+            Battery replacement is same-day service. We use
+            Apple-equivalent OEM cells with the same capacity rating as the original. Message us on
+            WhatsApp for today's exact price on your model.
           </p>
           <p>
             We also see two patterns specific to Intel Airs in the UAE: batteries that have never
@@ -120,10 +121,10 @@ export default function BlogMacBookAirIntelProblems() {
             failures are less common on those, though not impossible.
           </p>
           <p>
-            Backlight ribbon repair on the 2017 A1466: <strong>AED 300-400</strong> depending on
+            Backlight ribbon repair on the 2017 A1466 depends on
             whether the cable alone or the backlight assembly needs replacing. Full screen
-            replacement on the 2017: <strong>AED 400</strong>. Retina screen replacement on
-            2018-2020: <strong>AED 500</strong>.
+            replacement on the 2017 and Retina screen replacement on 2018-2020 are also available.
+            Message us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             Bring it in for a free diagnosis before committing to a repair. We check the cable
@@ -144,8 +145,8 @@ export default function BlogMacBookAirIntelProblems() {
             <li>One port works but the other does not</li>
           </ul>
           <p>
-            Port replacement: <strong>AED 350 per port</strong>, 45-90 minute turnaround at our
-            Dubai workshop.
+            Port replacement has a 45-90 minute turnaround at our
+            Dubai workshop. Message us on WhatsApp for today's exact price per port.
           </p>
           <p>
             Before booking: check the USB-C adapter cable as well. Five-year-old Apple adapters
@@ -257,12 +258,12 @@ export default function BlogMacBookAirIntelProblems() {
           <BlogPriceTable
             caption="MacBook Air Intel repair pricing. June 2026"
             rows={[
-              { model: "Battery: Intel Air 2018-2020", ours: "AED 450", apple: "AED 899", note: "Same-day" },
-              { model: "Butterfly keyboard clean (2018-2019)", ours: "AED 200", apple: "AED 400", note: "Compressed air, 3-pass" },
-              { model: "Top-case: Intel Air 2018-2020", ours: "AED 900", apple: "AED 1,499", note: "Keyboard + palmrest assembly" },
-              { model: "Screen: Intel Air 2018-2020 (Retina)", ours: "AED 500", apple: "AED 899", note: "Same-day" },
-              { model: "Screen: Intel Air 2017 (non-Retina)", ours: "AED 400", apple: "AED 700", note: "Same-day" },
-              { model: "USB-C port repair (2020)", ours: "AED 350", apple: "AED 700", note: "Per port, 45-90 min" },
+              { model: "Battery: Intel Air 2018-2020", ours: "Price on request", apple: "Price on request", note: "Same-day" },
+              { model: "Butterfly keyboard clean (2018-2019)", ours: "Price on request", apple: "Price on request", note: "Compressed air, 3-pass" },
+              { model: "Top-case: Intel Air 2018-2020", ours: "Price on request", apple: "Price on request", note: "Keyboard + palmrest assembly" },
+              { model: "Screen: Intel Air 2018-2020 (Retina)", ours: "Price on request", apple: "Price on request", note: "Same-day" },
+              { model: "Screen: Intel Air 2017 (non-Retina)", ours: "Price on request", apple: "Price on request", note: "Same-day" },
+              { model: "USB-C port repair (2020)", ours: "Price on request", apple: "Price on request", note: "Per port, 45-90 min" },
             ]}
           />
           <p>
@@ -277,11 +278,11 @@ export default function BlogMacBookAirIntelProblems() {
       faqs={[
         {
           q: "Is MacBook Air Intel 2018 worth repairing in 2026?",
-          a: "It depends on the repair. Battery (AED 450) and screen (AED 500): yes, if the rest of the machine is working well. The butterfly top-case (AED 900) is borderline: compare against a used M1 Air at roughly AED 2,500 which has far better performance and software longevity. Logic board repair on any 2018 Intel Air: no, the machine is too old and has no software support path.",
+          a: "It depends on the repair. Battery and screen: yes, if the rest of the machine is working well. The butterfly top-case is borderline: compare it against a used M1 Air, which has far better performance and software longevity. Logic board repair on any 2018 Intel Air: no, the machine is too old and has no software support path. Message us on WhatsApp for today's exact price on each repair.",
         },
         {
           q: "What is the butterfly keyboard problem on MacBook Air 2018?",
-          a: "The 4th-generation butterfly mechanism fails when a single dust particle jams under the 1mm travel plunger. The mechanism also simply wears after 5+ years of daily typing. Apple ran a free repair programme that ended. We clean for AED 200 or replace the entire top-case for AED 900 if cleaning does not resolve the issue.",
+          a: "The 4th-generation butterfly mechanism fails when a single dust particle jams under the 1mm travel plunger. The mechanism also simply wears after 5+ years of daily typing. Apple ran a free repair programme that ended. We clean the keyboard first, or replace the entire top-case if cleaning does not resolve the issue. Message us on WhatsApp for today's exact price on both options.",
         },
         {
           q: "Does macOS Sequoia run on MacBook Air Intel?",
@@ -293,11 +294,11 @@ export default function BlogMacBookAirIntelProblems() {
         },
         {
           q: "Can MacBook Air 2020 Intel USB-C ports be repaired?",
-          a: "Yes. Port replacement from AED 350 at our Dubai workshop, with a 45-90 minute turnaround. We replace both ports if wear is present on both, or just the faulty one. Before booking, try a different USB-C cable: adapter cable fraying is common on 5-year-old Apple adapters and can mimic port failure.",
+          a: "Yes. Port replacement is done at our Dubai workshop, with a 45-90 minute turnaround. We replace both ports if wear is present on both, or just the faulty one. Before booking, try a different USB-C cable: adapter cable fraying is common on 5-year-old Apple adapters and can mimic port failure. Message us on WhatsApp for today's exact price.",
         },
         {
           q: "Is it worth fixing a MacBook Air 2017 in Dubai?",
-          a: "For battery replacement (AED 400) and screen on a machine in otherwise good condition: yes, it extends practical life 2-3 more years for basic tasks like browsing, documents, and video. The 2017 is limited to macOS Monterey and has no path to newer OS versions. For any logic board repair: no, the machine has no software support path and low resale value.",
+          a: "For battery replacement and screen on a machine in otherwise good condition: yes, it extends practical life 2-3 more years for basic tasks like browsing, documents, and video. The 2017 is limited to macOS Monterey and has no path to newer OS versions. For any logic board repair: no, the machine has no software support path and low resale value. Message us on WhatsApp for today's exact price on battery and screen.",
         },
       ]}
       relatedLinks={[

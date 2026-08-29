@@ -24,7 +24,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
       category="Problem solving · iPhone charging"
       h1="New iPhone Not Charging Right? Troubleshooting Guide"
       hook="iPhone 17, 17e, 16e - USB-C era. Charging issues feel different from Lightning. Here's how to diagnose."
-      quickAnswer="If your USB-C iPhone (17, 17 Pro, 17e, 16e) won't charge or charges slowly: (1) clean the port with a wooden toothpick, never metal. (2) Use Apple's 25-40W USB-C PD brick. (3) Try another cable rated 3A+. (4) Check for a liquid alert. (5) Force-restart. (6) Check Battery Health. If it persists, port repair is AED 250-350."
+      quickAnswer="If your USB-C iPhone (17, 17 Pro, 17e, 16e) won't charge or charges slowly: (1) clean the port with a wooden toothpick, never metal. (2) Use Apple's 25-40W USB-C PD brick. (3) Try another cable rated 3A+. (4) Check for a liquid alert. (5) Force-restart. (6) Check Battery Health. If it persists, message us on WhatsApp for today's exact port-repair price on your model."
       author={{ name: "Usman", role: "Senior iPhone technician" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
@@ -54,10 +54,10 @@ export default function BlogTroubleshootChargingNewIPhone() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>iPhone 17 Pro / Pro Max:</strong> max 35-40W with a 35W+ PD brick.</li>
             <li><strong>iPhone 17 / Air / 17e / 16e:</strong> max 25W with a 25W+ PD brick.</li>
-            <li>Cheap non-PD bricks (the AED 25 ones in petrol stations) deliver 5W only - your iPhone reports "Not Charging" or charges painfully slowly.</li>
+            <li>Cheap non-PD bricks (the bargain ones sold at petrol stations) deliver 5W only - your iPhone reports "Not Charging" or charges painfully slowly.</li>
           </ul>
           <p>
-            Recommended: Apple 30W or 35W Dual USB-C brick (AED 159-229), or any reputable PD brick from Anker / UGREEN / Belkin (AED 80-150).
+            Recommended: an Apple 30W or 35W Dual USB-C brick, or any reputable PD brick from Anker / UGREEN / Belkin.
           </p>
 
           <h2 id="try-cable">Step 3 - try a different USB-C cable</h2>
@@ -108,7 +108,7 @@ export default function BlogTroubleshootChargingNewIPhone() {
 
           <h2 id="wireless-vs-wired">Step 7 - wireless charging works but USB-C doesn't?</h2>
           <p>
-            Conclusive - the USB-C port itself has failed (or is severely dirty). MagSafe / Qi2 wireless bypasses the port entirely. If MagSafe charges but USB-C cables don't, the port needs cleaning or replacement. AED 250-350 at our workshop.
+            Conclusive - the USB-C port itself has failed (or is severely dirty). MagSafe / Qi2 wireless bypasses the port entirely. If MagSafe charges but USB-C cables don't, the port needs cleaning or replacement at our workshop - message us on WhatsApp for today's exact price on your model.
           </p>
 
           <h2 id="port-hardware-failure">Step 8 - USB-C port hardware failure</h2>
@@ -116,13 +116,13 @@ export default function BlogTroubleshootChargingNewIPhone() {
             iPhone 17 / 17 Pro / 17e USB-C ports we've replaced so far (since launch):
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Port physically loose / cable falls out - usually drop damage, AED 350 with port + flex.</li>
-            <li>Charges only with one specific cable angle - port pins worn, AED 250.</li>
-            <li>Won't charge at all but board is fine - port replacement, AED 250.</li>
-            <li>Charges intermittently after liquid exposure - port + ultrasonic clean, AED 450-600.</li>
+            <li>Port physically loose / cable falls out - usually drop damage, port + flex replacement.</li>
+            <li>Charges only with one specific cable angle - port pins worn, port replacement.</li>
+            <li>Won't charge at all but board is fine - port replacement.</li>
+            <li>Charges intermittently after liquid exposure - port + ultrasonic clean.</li>
           </ul>
           <p>
-            Apple's quote for the same fix (typically billed as logic-board service) starts at AED 1,400 because Apple replaces the entire board rather than the port. Component-level repair is the affordable route - see our{" "}
+            Apple typically bills this as a full logic-board service and replaces the entire board rather than just the port, which is far more expensive. Component-level repair is the affordable route - message us on WhatsApp for today's exact price on your model, or see our{" "}
             <Link to="/iphone-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">iPhone charging port repair service</Link>.
           </p>
 

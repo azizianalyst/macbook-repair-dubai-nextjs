@@ -7,7 +7,7 @@ export default function BlogMacPro2019StillWorthIt() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Pro 2019 in 2026 - Still Worth Buying Used in Dubai?"
-      seoDescription="Apple killed Mac Pro. Used 2019 prices stayed surprisingly high. PCIe expansion, MPX modules, software support to 2027+. Honest used-buyer's guide for Dubai."
+      seoDescription="Apple killed Mac Pro. Used 2019 values stayed surprisingly high. PCIe expansion, MPX modules, software support to 2027+. Honest used-buyer's guide for Dubai."
       path="/blog/mac-pro-2019-still-worth-it"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacPro2019StillWorthIt() {
       category="Buying guide · Mac Pro"
       h1="Mac Pro 2019 in 2026 - Buying Used Guide"
       hook="Apple killed Mac Pro. Used 2019 prices stayed high. Why? PCIe expansion."
-      quickAnswer="Mac Pro 2019 (Intel Xeon W) still has real value in 2026 only for PCIe-card workflows: Avid HDX audio, RED Rocket-X, multi-channel SDI capture and niche scientific cards. For everything else, Mac Studio M3 Ultra outperforms it at lower cost. Used 8-core configs sell for AED 8,000-12,000; 12 to 16-core for AED 14,000-22,000."
+      quickAnswer="Mac Pro 2019 (Intel Xeon W) still has real value in 2026 only for PCIe-card workflows: Avid HDX audio, RED Rocket-X, multi-channel SDI capture and niche scientific cards. For everything else, Mac Studio M3 Ultra outperforms it at lower cost. Used values vary widely by core count and GPU config — message us on WhatsApp for today's market rate on the exact spec you're looking at."
       author={{ name: "Shafiq", role: "Senior Mac technician" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -62,14 +62,14 @@ export default function BlogMacPro2019StillWorthIt() {
           <h2 id="configurations">Configurations to look for</h2>
           <BlogPriceTable
             caption="Mac Pro 2019 used market - Dubai April 2026"
-            headers={["Config", "Original price (USD)", "Used Dubai (AED)", "Verdict"]}
+            headers={["Config", "Used Dubai", "Verdict"]}
             rows={[
-              { model: "8-core Xeon W / 32 GB / 256 GB / Radeon 580X", ours: "$5,999", apple: "8,000-10,000", note: "Entry - upgrade RAM/SSD yourself" },
-              { model: "12-core / 48 GB / 1 TB / W5700X", ours: "$8,499", apple: "12,000-15,000", note: "Sweet spot" },
-              { model: "16-core / 96 GB / 1 TB / Vega II Duo", ours: "$11,999", apple: "16,000-19,000", note: "Pro audio / video target" },
-              { model: "24-core / 192 GB / 4 TB / W6900X", ours: "$18,999", apple: "22,000-28,000", note: "High-end pros only" },
-              { model: "28-core / 384 GB / 4 TB / W6900X Duo", ours: "$26,000+", apple: "30,000-38,000", note: "Rare - verify provenance" },
-              { model: "Rack version (any config)", ours: "+$500", apple: "+1,500", note: "Studio install" },
+              { model: "8-core Xeon W / 32 GB / 256 GB / Radeon 580X", ours: "Price on request", apple: "Entry - upgrade RAM/SSD yourself" },
+              { model: "12-core / 48 GB / 1 TB / W5700X", ours: "Price on request", apple: "Sweet spot" },
+              { model: "16-core / 96 GB / 1 TB / Vega II Duo", ours: "Price on request", apple: "Pro audio / video target" },
+              { model: "24-core / 192 GB / 4 TB / W6900X", ours: "Price on request", apple: "High-end pros only" },
+              { model: "28-core / 384 GB / 4 TB / W6900X Duo", ours: "Price on request", apple: "Rare - verify provenance" },
+              { model: "Rack version (any config)", ours: "Price on request", apple: "Studio install" },
             ]}
           />
 
@@ -80,15 +80,16 @@ export default function BlogMacPro2019StillWorthIt() {
             <li><strong>Boot to Apple Diagnostics</strong> (hold D at boot) - runs full hardware test, must show "no issues found".</li>
             <li><strong>Test all PCIe slots</strong> by moving a known-good card through each slot.</li>
             <li><strong>RAM</strong>: 12 DIMM slots, must use Apple-spec ECC R-DIMM. Verify Apple Hardware Test passes on all installed sticks.</li>
-            <li><strong>SSD</strong>: Apple's proprietary SSD modules - check System Report → Storage → SSD wear level &lt; 5%. Replacement SSDs available from us at AED 1,200-3,000 depending on capacity.</li>
+            <li><strong>SSD</strong>: Apple's proprietary SSD modules - check System Report → Storage → SSD wear level &lt; 5%. Replacement SSDs available from us in a range of capacities - message us on WhatsApp for the current price for your module.</li>
             <li><strong>GPU(s)</strong>: stress-test with Heaven Benchmark for 30 min - no artifacts, no crashes, fans don't max out.</li>
             <li><strong>Power supply</strong>: should hold steady at 1,400 W draw without tripping. Test under sustained load.</li>
             <li><strong>Wheels (rolling version)</strong>: still attached and not corroded.</li>
             <li><strong>Case top handle</strong>: lift the entire chassis out - verify no bent rails.</li>
           </ol>
           <p>
-            We run a full Mac Pro pre-purchase inspection at our workshop for AED 250 (refunded if you
-            buy from us). Brings buyer confidence; sellers also use it for resale credibility.
+            We run a full Mac Pro pre-purchase inspection at our workshop for a small fee (refunded if you
+            buy from us) - message us on WhatsApp for the current rate. Brings buyer confidence; sellers
+            also use it for resale credibility.
           </p>
 
           <h2 id="software-support">Software support (until 2027 minimum)</h2>
@@ -102,15 +103,15 @@ export default function BlogMacPro2019StillWorthIt() {
           <h2 id="mpx-pricing">MPX module pricing</h2>
           <BlogPriceTable
             caption="Apple MPX module used pricing - Dubai April 2026"
-            headers={["MPX Module", "Original price", "Used Dubai (AED)", "Notes"]}
+            headers={["MPX Module", "Used Dubai", "Notes"]}
             rows={[
-              { model: "Radeon Pro 580X", ours: "$700", apple: "1,200-1,800", note: "Entry, weak vs modern" },
-              { model: "Radeon Pro W5700X", ours: "$1,000", apple: "1,800-2,500", note: "Solid mid-range" },
-              { model: "Vega II", ours: "$2,400", apple: "3,500-4,500", note: "Strong for 4K editing" },
-              { model: "Vega II Duo", ours: "$5,200", apple: "5,500-7,000", note: "Two GPUs, one slot" },
-              { model: "W6800X Duo", ours: "$5,000", apple: "6,500-8,000", note: "Best balance" },
-              { model: "W6900X Duo", ours: "$6,000", apple: "7,500-9,500", note: "Top option" },
-              { model: "Afterburner", ours: "$2,000", apple: "2,800-3,500", note: "ProRes / RAW acceleration" },
+              { model: "Radeon Pro 580X", ours: "Price on request", apple: "Entry, weak vs modern" },
+              { model: "Radeon Pro W5700X", ours: "Price on request", apple: "Solid mid-range" },
+              { model: "Vega II", ours: "Price on request", apple: "Strong for 4K editing" },
+              { model: "Vega II Duo", ours: "Price on request", apple: "Two GPUs, one slot" },
+              { model: "W6800X Duo", ours: "Price on request", apple: "Best balance" },
+              { model: "W6900X Duo", ours: "Price on request", apple: "Top option" },
+              { model: "Afterburner", ours: "Price on request", apple: "ProRes / RAW acceleration" },
             ]}
           />
 
@@ -124,12 +125,12 @@ export default function BlogMacPro2019StillWorthIt() {
             caption="Common Mac Pro 2019 repairs at our shop (April 2026)"
             headers={["Repair", "Our price", "Apple Service"]}
             rows={[
-              { model: "Power supply replacement", ours: "AED 1,500", apple: "AED 3,200" },
-              { model: "Fan / radiator pump replacement", ours: "AED 850", apple: "AED 1,800" },
-              { model: "Apple SSD module replacement (1 TB)", ours: "AED 1,800", apple: "AED 3,500" },
-              { model: "Logic board diagnostic + repair", ours: "AED 2,000-4,000", apple: "Board swap only AED 8,000+" },
-              { model: "MPX module socket repair", ours: "AED 1,500", apple: "Logic board swap" },
-              { model: "macOS reinstall + migration", ours: "AED 300", apple: "AED 400" },
+              { model: "Power supply replacement", ours: "Price on request", apple: "Component repair" },
+              { model: "Fan / radiator pump replacement", ours: "Price on request", apple: "Component repair" },
+              { model: "Apple SSD module replacement (1 TB)", ours: "Price on request", apple: "Module swap" },
+              { model: "Logic board diagnostic + repair", ours: "Price on request", apple: "Board swap only" },
+              { model: "MPX module socket repair", ours: "Price on request", apple: "Logic board swap" },
+              { model: "macOS reinstall + migration", ours: "Price on request", apple: "Software service" },
             ]}
           />
           <p>

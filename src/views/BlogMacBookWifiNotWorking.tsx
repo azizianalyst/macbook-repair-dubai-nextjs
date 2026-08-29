@@ -143,12 +143,13 @@ export default function BlogMacBookWifiNotWorking() {
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's the antenna, a spill or the board before you commit.
-            The prices below are VAT-inclusive and depend on the model.
+            The price depends on the model and what the fault turns out to be.
           </p>
           <p>
-            Re-seating or replacing an antenna cable runs AED 300 to 600. Spill cleaning around the
-            wireless module starts from AED 400 depending on the corrosion. Board-level module repair
-            starts from AED 800. If you'd rather we check it first, book a{" "}
+            Re-seating or replacing an antenna cable, spill cleaning around the wireless module and
+            board-level module repair each price differently depending on the corrosion and the model,
+            so message us on WhatsApp for today's exact price on yours. If you'd rather we check it
+            first, book a{" "}
             <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
@@ -168,7 +169,7 @@ export default function BlogMacBookWifiNotWorking() {
         },
         {
           q: "How much does a MacBook Wi-Fi repair cost in Dubai?",
-          a: "It depends what it is, and the diagnostic to find out is free. Re-seating or replacing the antenna cable is AED 300 to 600. Spill cleaning around the module starts from AED 400. Board-level wireless repair starts from AED 800. All prices are VAT-inclusive. Most software causes cost nothing to fix once we point you at them.",
+          a: "It depends what it is, and the diagnostic to find out is free. Re-seating or replacing the antenna cable, spill cleaning around the module and board-level wireless repair each cost differently by model, so message us on WhatsApp for today's exact price on yours. Most software causes cost nothing to fix once we point you at them.",
         },
         {
           q: "Will a Mac say connected to Wi-Fi but have no internet?",

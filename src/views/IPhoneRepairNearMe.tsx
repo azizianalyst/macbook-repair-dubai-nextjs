@@ -14,14 +14,14 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const REPAIRS = [
-  { label: "Screen replacement",     price: "From AED 179",  time: "40 min",   models: "iPhone 6 through 17 Pro Max" },
-  { label: "Battery replacement",    price: "From AED 250",  time: "30 min",   models: "All models, 3-month warranty" },
-  { label: "Back glass repair",      price: "From AED 300",  time: "Same day", models: "iPhone 8 through 16 Pro Max" },
-  { label: "Charging port repair",   price: "From AED 200",  time: "1 hr",     models: "Lightning & USB-C" },
-  { label: "Camera repair",          price: "From AED 350",  time: "Same day", models: "Front & rear, all modules" },
-  { label: "Water damage repair",    price: "From AED 300",  time: "1–2 days", models: "Ultrasonic clean + board check" },
-  { label: "Face ID repair",         price: "From AED 350",  time: "Same day", models: "iPhone X through 17 Pro Max" },
-  { label: "Logic board repair",     price: "From AED 450",  time: "2–5 days", models: "Component-level micro-soldering" },
+  { label: "Screen replacement",     price: "Price on request",  time: "40 min",   models: "iPhone 6 through 17 Pro Max" },
+  { label: "Battery replacement",    price: "Price on request",  time: "30 min",   models: "All models, 3-month warranty" },
+  { label: "Back glass repair",      price: "Price on request",  time: "Same day", models: "iPhone 8 through 16 Pro Max" },
+  { label: "Charging port repair",   price: "Price on request",  time: "1 hr",     models: "Lightning & USB-C" },
+  { label: "Camera repair",          price: "Price on request",  time: "Same day", models: "Front & rear, all modules" },
+  { label: "Water damage repair",    price: "Price on request",  time: "1–2 days", models: "Ultrasonic clean + board check" },
+  { label: "Face ID repair",         price: "Price on request",  time: "Same day", models: "iPhone X through 17 Pro Max" },
+  { label: "Logic board repair",     price: "Price on request",  time: "2–5 days", models: "Component-level micro-soldering" },
 ];
 
 const AREAS = [
@@ -30,7 +30,7 @@ const AREAS = [
   { area: "Jumeirah / Al Quoz / Umm Suqeim",  time: "2–4 hrs pickup" },
   { area: "Deira / Bur Dubai / Karama",        time: "2–4 hrs pickup" },
   { area: "Dubai Hills / Mirdif / Al Barsha",  time: "2–4 hrs pickup" },
-  { area: "Sharjah / Abu Dhabi",               time: "AED 100 each way" },
+  { area: "Sharjah / Abu Dhabi",               time: "Courier available" },
 ];
 
 const FAQS = [
@@ -41,7 +41,7 @@ const FAQS = [
   { q: "Do you offer iPhone repair pickup near me in Dubai?",
     a: "Yes, free pickup and delivery across all Dubai Mainland areas. WhatsApp 055 741 3706, tell us your area and the iPhone fault, and we send a courier. No transport cost, no delivery fee. The iPhone is repaired and returned the same day for screen and battery jobs." },
   { q: "How much does iPhone screen repair cost near me in Dubai?",
-    a: "iPhone screen repair starts from AED 179 for older models and runs up to AED 1,400 for an iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
+    a: "iPhone screen repair pricing depends on your model, from older iPhones up to the iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
   { q: "Is there an iPhone repair shop open now near me in Dubai?",
     a: "We're open Monday to Saturday, 9 am to 10 pm at Concord Tower, Dubai Media City. WhatsApp is answered from 8 am. On Sundays the workshop is closed but WhatsApp replies are sent and Monday appointments can be booked. Call 055 741 3706 for immediate assistance." },
   { q: "Can you repair my iPhone near me on the same day?",
@@ -56,9 +56,9 @@ export default function IPhoneRepairNearMe() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "iPhone Repair Near Me Dubai. Screen from AED 179, Same-Day | Free Pickup",
+    title: "iPhone Repair Near Me Dubai. Same-Day Screen & Battery | Free Pickup",
     description:
-      "iPhone repair near you in Dubai. Screen from AED 179, battery from AED 250. Free pickup across Dubai. Same-day service. Concord Tower, Media City. Call 055 741 3706.",
+      "iPhone repair near you in Dubai. Same-day screen and battery. Free pickup across Dubai. WhatsApp for today's price. Concord Tower, Media City. Call 055 741 3706.",
     path: "/iphone-repair-near-me-dubai",
   });
 
@@ -72,7 +72,7 @@ export default function IPhoneRepairNearMe() {
           tone="dark"
           eyebrow="iPhone repair near you · Dubai Media City · Since 2004"
           title="iPhone Repair Near Me. Dubai"
-          subtitle="Screen from AED 179, battery from AED 250. Free pickup from your door. Same-day repair at Concord Tower, Media City."
+          subtitle="Same-day screen and battery repair. Free pickup from your door. Message us on WhatsApp for today's price at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
@@ -100,7 +100,7 @@ export default function IPhoneRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my iPhone repaired near me in Dubai?"
-            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Screen repair from AED 179, battery from AED 250, same-day service. Can't travel? Free pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
+            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Free pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
           />
         </section>
 

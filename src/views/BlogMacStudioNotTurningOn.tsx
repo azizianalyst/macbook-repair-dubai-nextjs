@@ -11,7 +11,7 @@ export default function BlogMacStudioNotTurningOn() {
       wide={true}
       category="Fix guide · Mac Studio"
       h1="Mac Studio Not Turning On in Dubai? 6 Things to Check First"
-      hook="A Mac Studio that will not power on is usually a power cable or outlet issue, a tripped SMC, or a board-level fault, and our Dubai workshop diagnoses every model free with board repair from AED 600."
+      hook="A Mac Studio that will not power on is usually a power cable or outlet issue, a tripped SMC, or a board-level fault, and our Dubai workshop diagnoses every model free before quoting board-level repair — message us on WhatsApp for today's exact price on your model."
       quickAnswer="Mac Studio not turning on is most often a faulty power cable or wall outlet, an SMC state needing a power-cycle reset, or a logic board fault. Check the rear power LED, try a known-good cable and a different socket, then hold the power button to reset. Free diagnosis on M1, M2 and M4 Max and Ultra models."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -139,7 +139,7 @@ export default function BlogMacStudioNotTurningOn() {
             </ul>
             <p>
               Our technicians work to component level rather than swapping the whole board on
-              sight, which is why our board repair starts at AED 600 instead of the full-unit
+              sight, which is why our board repair usually costs far less than the full-unit
               price an Apple or third-party counter quotes. We confirm the failing stage first,
               quote it, then repair only what is broken.
             </p>
@@ -196,19 +196,20 @@ export default function BlogMacStudioNotTurningOn() {
           <section>
             <h2 id="cost">Mac Studio not turning on repair cost in Dubai</h2>
             <p>
-              Here is what a no-power Mac Studio repair costs at our Dubai workshop against a
-              typical Apple or third-party quote. Diagnosis is always free, so you never pay to
+              Here is how a no-power Mac Studio repair breaks down at our Dubai workshop against a
+              typical Apple or third-party approach. Diagnosis is always free, so you never pay to
               find out what is wrong, and you only pay for the fix the machine actually needs.
+              Message us on WhatsApp for today's exact price on your model.
             </p>
             <BlogPriceTable
-              caption="Mac Studio no-power repair pricing at our Dubai workshop, June 2026"
+              caption="Mac Studio no-power repair services at our Dubai workshop"
               headers={["Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Diagnosis", ours: "AED 0", apple: "AED 250+" },
-                { model: "Power supply repair", ours: "AED 500", apple: "AED 1,000+" },
-                { model: "SMC / power-cycle service", ours: "AED 150", apple: "AED 300+" },
-                { model: "Logic board repair", ours: "AED 600", apple: "AED 1,500+" },
-                { model: "SSD data recovery", ours: "AED 500", apple: "AED 1,500+" },
+                { model: "Diagnosis", ours: "Free", apple: "Price on request" },
+                { model: "Power supply repair", ours: "Price on request", apple: "Price on request" },
+                { model: "SMC / power-cycle service", ours: "Price on request", apple: "Price on request" },
+                { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
+                { model: "SSD data recovery", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>

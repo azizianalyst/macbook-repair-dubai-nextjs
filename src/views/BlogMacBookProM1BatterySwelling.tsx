@@ -7,7 +7,7 @@ export default function BlogMacBookProM1BatterySwelling() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Battery Swelling Dubai 2026: Urgent Replacement Guide"
-      seoDescription="MacBook Pro M1 battery swelling in Dubai? Raised trackpad, bowed bottom case, or won't sit flat means swollen battery. Stop using immediately. Urgent replacement from AED 550. Same day."
+      seoDescription="MacBook Pro M1 battery swelling in Dubai? Raised trackpad, bowed bottom case, or won't sit flat means swollen battery. Stop using immediately. Urgent same-day replacement."
       path="/blog/macbook-pro-m1-battery-swelling-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM1BatterySwelling() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Battery Swelling in Dubai? Here is What to Do Urgently"
-      hook="MacBook Pro M1 13-inch units purchased at UAE launch (late 2020 - early 2021) are now 4-5 years old, the exact age range when lithium battery swelling becomes a real risk, especially in Dubai's warm climate. A swollen battery is not just a performance issue: it is a fire risk. Battery replacement costs AED 550 in Dubai and takes the same day."
-      quickAnswer="MacBook Pro M1 battery swelling signs: trackpad feels raised or clicks unevenly, bottom case is bowing upward, machine won't sit flat on a table, or you can see a gap between the case halves that was not there before. If you notice any of these: stop using the machine immediately, do not charge it, do not leave it unattended, and book urgent repair. Swollen battery replacement costs AED 550 in Dubai with same-day service."
+      hook="MacBook Pro M1 13-inch units purchased at UAE launch (late 2020 - early 2021) are now 4-5 years old, the exact age range when lithium battery swelling becomes a real risk, especially in Dubai's warm climate. A swollen battery is not just a performance issue: it is a fire risk. Battery replacement takes the same day in Dubai — message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M1 battery swelling signs: trackpad feels raised or clicks unevenly, bottom case is bowing upward, machine won't sit flat on a table, or you can see a gap between the case halves that was not there before. If you notice any of these: stop using the machine immediately, do not charge it, do not leave it unattended, and book urgent repair. We offer same-day swollen battery replacement in Dubai — message us on WhatsApp for today's exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -115,11 +115,11 @@ export default function BlogMacBookProM1BatterySwelling() {
           <BlogPriceTable
             caption="MacBook Pro M1 battery replacement pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M1 13-inch battery (normal)", ours: "AED 550", apple: "AED 750+", note: "OEM spec cells, 3-month warranty, 2-3 hour job" },
-              { model: "MacBook Pro M1 13-inch battery (swollen)", ours: "AED 600", apple: "AED 750+", note: "Swollen battery: extra adhesive removal work, ventilated bay" },
-              { model: "MacBook Pro M1 Pro 14-inch battery", ours: "AED 600", apple: "AED 900+", note: "99.8Wh cell, 3-month warranty" },
-              { model: "MacBook Pro M1 Max 16-inch battery", ours: "AED 650", apple: "AED 1,000+", note: "100Wh cell, 3-month warranty" },
-              { model: "Battery health + swelling diagnostic", ours: "Free", apple: "AED 250", note: "Confirm swelling and assess damage scope" },
+              { model: "MacBook Pro M1 13-inch battery (normal)", ours: "Price on request", apple: "Price on request", note: "OEM spec cells, 3-month warranty, 2-3 hour job" },
+              { model: "MacBook Pro M1 13-inch battery (swollen)", ours: "Price on request", apple: "Price on request", note: "Swollen battery: extra adhesive removal work, ventilated bay" },
+              { model: "MacBook Pro M1 Pro 14-inch battery", ours: "Price on request", apple: "Price on request", note: "99.8Wh cell, 3-month warranty" },
+              { model: "MacBook Pro M1 Max 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100Wh cell, 3-month warranty" },
+              { model: "Battery health + swelling diagnostic", ours: "Free", apple: "Price on request", note: "Confirm swelling and assess damage scope" },
             ]}
           />
 
@@ -152,11 +152,11 @@ export default function BlogMacBookProM1BatterySwelling() {
         },
         {
           q: "Can MacBook Pro M1 swollen battery cause permanent damage to the case?",
-          a: "Yes. If caught early (slight trackpad sponge), usually no permanent damage to other parts. If allowed to progress until the case visibly deforms, the trackpad may need replacement (AED 200-300 additional) and the bottom case may be permanently bent. Early repair prevents secondary damage.",
+          a: "Yes. If caught early (slight trackpad sponge), usually no permanent damage to other parts. If allowed to progress until the case visibly deforms, the trackpad may need replacement (additional cost) and the bottom case may be permanently bent. Early repair prevents secondary damage. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How much does MacBook Pro M1 swollen battery replacement cost in Dubai?",
-          a: "Swollen battery replacement costs AED 600 (slightly more than normal AED 550 replacement due to additional adhesive removal work in a ventilated area). Free diagnostic to confirm swelling. Same-day service. 3-month warranty on replacement cells. Apple charges AED 750+ and requires separate appointment.",
+          a: "Swollen battery replacement costs slightly more than a normal replacement due to additional adhesive removal work in a ventilated area. Free diagnostic to confirm swelling. Same-day service. 3-month warranty on replacement cells. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Pro M1 battery last in Dubai before swelling?",

@@ -1,6 +1,7 @@
 "use client";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 
 // Original first-party data study, drives AEO/GEO citations (original statistics are the
 // strongest on-page lever for AI-search visibility). Every number below is aggregated from
@@ -13,12 +14,12 @@ export default function BlogAppleRepairCostReport2026() {
   return (
     <BlogPostTemplate
       seoTitle="Apple Repair Cost Dubai 2026: Data From 991 Repairs"
-      seoDescription="Real Apple repair prices in Dubai from 500 actual jobs (2023–2026): MacBook screen AED 1,050–1,400, battery AED 400–675, plus the most common faults and models."
+      seoDescription="What 500 real Apple repairs in Dubai (2023–2026) reveal: the most common MacBook faults, the models that break most, and how to get today's exact price on WhatsApp."
       path="/blog/apple-repair-cost-dubai"
       category="Data study · Apple repair"
       h1="Apple Repair Cost in Dubai (2026): What 991 Real Repairs Reveal"
-      hook="Most repair 'cost guides' are guesses. This one isn't, it's built from our own workshop ledger of 991 completed repairs (500 of them Apple) between 2023 and early 2026. Here are the real prices customers paid, the faults that actually come in, and the Macs that break most."
-      quickAnswer="Across 500 real Apple repairs in Dubai (2023–2026), most MacBook screen repairs cost AED 1,050–1,400 (median ~1,140), batteries AED 400–675 (~490), and logic-board repairs AED 555–1,140 (~744). Screen, battery and logic-board faults make up 72% of all MacBook repairs. iPhone screens ran AED 500–1,600 and iPad screens AED 330–645, depending on model."
+      hook="Most repair 'cost guides' are guesses. This one isn't, it's built from our own workshop ledger of 991 completed repairs (500 of them Apple) between 2023 and early 2026. Here are the faults that actually come in, the Macs that break most, and how to get the exact price on your model."
+      quickAnswer="Across 500 real Apple repairs in Dubai (2023–2026), screen, battery and logic-board faults make up 72% of all MacBook repairs, with screens the single most common. Prices depend on your exact model, parts and whether there's more than one fault, so message us on WhatsApp for today's exact price after a free diagnostic."
       author={{ name: "Shafiq", role: "Lead technician" }}
       datePublished="2026-06-18"
       dateModified="2026-06-18"
@@ -42,39 +43,41 @@ export default function BlogAppleRepairCostReport2026() {
             This is a first-party data study, not an industry estimate. We analysed{" "}
             <strong>991 completed repairs</strong> from our Dubai workshop ledger between{" "}
             <strong>2023 and early 2026</strong>, and isolated the <strong>500 Apple-device
-            repairs</strong> (MacBook, iPhone, iPad, iMac) to report what customers actually paid.
-            Every figure below is the real selling price (with 5% VAT), aggregated and anonymised -
-            no customer details, and no internal cost or margin data. Prices are rounded AED ranges;
-            "most pay" is the middle half of jobs (25th–75th percentile), and "typical" is the
-            median.
+            repairs</strong> (MacBook, iPhone, iPad, iMac) to report what customers actually
+            experienced. The data below is aggregated and anonymised - no customer details, and no
+            internal cost or margin data. We report the mix of faults, the models that break most,
+            and how demand splits across repair types. For the price on your specific model,
+            message us on WhatsApp after a free diagnostic.
           </p>
           <blockquote>
-            <strong>Why trust these numbers:</strong> they come from real invoices, not a price
-            list written to win clicks. That also means they reflect the real mix of work, mostly
-            higher-spec MacBook Pro panels rather than the cheapest possible Air screen, which is why
-            the typical figures sit above a headline "from" price.
+            <strong>Why trust this study:</strong> it comes from real completed repairs, not a page
+            written to win clicks. That also means it reflects the real mix of work, mostly
+            higher-spec MacBook Pro panels rather than the cheapest possible Air screen. Because
+            pricing depends heavily on your exact model and parts, we give you the exact figure on
+            WhatsApp before any work starts.
           </blockquote>
 
           <h2 id="macbook-repair-cost">How much does it cost to repair a MacBook in Dubai?</h2>
           <p>
-            Based on <strong>409 MacBook repairs</strong>, here is what customers actually paid by
-            repair type. The "most pay" column is the realistic band for that repair; the high end
-            covers genuine Apple parts, multi-fault jobs, and the newest models.
+            Based on <strong>409 MacBook repairs</strong>, here are the repair types customers
+            brought in, ranked by how often we see them. Pricing depends on your exact model,
+            whether parts are genuine Apple, and whether there's more than one fault, so message us
+            on WhatsApp for today's exact price on your Mac.
           </p>
-          <div className="overflow-x-auto [&_th:not(:first-child)]:text-right [&_td:not(:first-child)]:text-right">
+          <div className="overflow-x-auto">
           <table>
             <thead>
-              <tr><th>MacBook repair</th><th>Most pay (AED)</th><th>Typical</th><th>Seen as high as</th></tr>
+              <tr><th>MacBook repair</th><th>Get a price</th></tr>
             </thead>
             <tbody>
-              <tr><td><Link to="/macbook-screen-repair-dubai">Screen / display</Link></td><td>1,050–1,400</td><td>1,140</td><td>3,670</td></tr>
-              <tr><td><Link to="/macbook-battery-replacement-dubai">Battery</Link></td><td>400–675</td><td>490</td><td>1,150</td></tr>
-              <tr><td><Link to="/macbook-keyboard-repair-dubai">Keyboard / top case</Link></td><td>490–630</td><td>550</td><td>1,238</td></tr>
-              <tr><td><Link to="/macbook-logic-board-repair-dubai">Logic board</Link></td><td>555–1,140</td><td>744</td><td>3,900</td></tr>
-              <tr><td><Link to="/macbook-water-damage-repair-dubai">Water damage</Link></td><td>360–760</td><td>497</td><td>2,381</td></tr>
-              <tr><td><Link to="/macbook-data-recovery-dubai">Data recovery</Link></td><td>480–690</td><td>544</td><td>1,240</td></tr>
-              <tr><td><Link to="/macbook-ssd-upgrade-dubai">SSD upgrade</Link> (2013–2017 models)</td><td>370–630</td><td>450</td><td>-</td></tr>
-              <tr><td><Link to="/macos-reinstall-dubai">macOS reinstall / software</Link></td><td>210–360</td><td>250</td><td>833</td></tr>
+              <tr><td><Link to="/macbook-screen-repair-dubai">Screen / display</Link></td><td><PriceCTA compact message="Hi, price for MacBook screen / display repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-battery-replacement-dubai">Battery</Link></td><td><PriceCTA compact message="Hi, price for MacBook battery replacement in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-keyboard-repair-dubai">Keyboard / top case</Link></td><td><PriceCTA compact message="Hi, price for MacBook keyboard / top case repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-logic-board-repair-dubai">Logic board</Link></td><td><PriceCTA compact message="Hi, price for MacBook logic board repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-water-damage-repair-dubai">Water damage</Link></td><td><PriceCTA compact message="Hi, price for MacBook water damage repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-data-recovery-dubai">Data recovery</Link></td><td><PriceCTA compact message="Hi, price for MacBook data recovery in Dubai?" /></td></tr>
+              <tr><td><Link to="/macbook-ssd-upgrade-dubai">SSD upgrade</Link> (2013–2017 models)</td><td><PriceCTA compact message="Hi, price for MacBook SSD upgrade in Dubai?" /></td></tr>
+              <tr><td><Link to="/macos-reinstall-dubai">macOS reinstall / software</Link></td><td><PriceCTA compact message="Hi, price for macOS reinstall / software repair in Dubai?" /></td></tr>
             </tbody>
           </table>
           </div>
@@ -125,34 +128,35 @@ export default function BlogAppleRepairCostReport2026() {
 
           <h2 id="iphone-ipad-imac-cost">iPhone, iPad and iMac repair costs in Dubai</h2>
           <p>From the Apple repairs outside the MacBook line:</p>
-          <div className="overflow-x-auto [&_th:not(:first-child)]:text-right [&_td:not(:first-child)]:text-right">
+          <div className="overflow-x-auto">
           <table>
-            <thead><tr><th>Repair</th><th>Most pay (AED)</th><th>Typical</th></tr></thead>
+            <thead><tr><th>Repair</th><th>Get a price</th></tr></thead>
             <tbody>
-              <tr><td><Link to="/iphone-screen-repair-dubai">iPhone screen</Link> (model-dependent)</td><td>500–1,600</td><td>1,333</td></tr>
-              <tr><td>iPhone battery</td><td>250–360</td><td>333</td></tr>
-              <tr><td><Link to="/ipad-screen-repair-dubai">iPad screen</Link></td><td>330–645</td><td>420</td></tr>
-              <tr><td><Link to="/imac-screen-repair-dubai">iMac screen</Link></td><td>515–2,400</td><td>1,290</td></tr>
-              <tr><td><Link to="/imac-ssd-upgrade-dubai">iMac SSD upgrade</Link></td><td>770–1,230</td><td>1,020</td></tr>
+              <tr><td><Link to="/iphone-screen-repair-dubai">iPhone screen</Link> (model-dependent)</td><td><PriceCTA compact message="Hi, price for iPhone screen repair in Dubai?" /></td></tr>
+              <tr><td>iPhone battery</td><td><PriceCTA compact message="Hi, price for iPhone battery replacement in Dubai?" /></td></tr>
+              <tr><td><Link to="/ipad-screen-repair-dubai">iPad screen</Link></td><td><PriceCTA compact message="Hi, price for iPad screen repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/imac-screen-repair-dubai">iMac screen</Link></td><td><PriceCTA compact message="Hi, price for iMac screen repair in Dubai?" /></td></tr>
+              <tr><td><Link to="/imac-ssd-upgrade-dubai">iMac SSD upgrade</Link></td><td><PriceCTA compact message="Hi, price for iMac SSD upgrade in Dubai?" /></td></tr>
             </tbody>
           </table>
           </div>
           <p>
             iPhone screen prices vary the most of anything here, an older model with an LCD screen
             sits near the bottom of the range, while a current Pro Max with an OLED panel and genuine
-            parts sits near the top. <em>(iPhone, iPad and iMac samples are smaller than the MacBook
-            set, so treat these as indicative.)</em>
+            parts sits near the top, so the price is very model-specific, message us for your exact
+            model. <em>(iPhone, iPad and iMac samples are smaller than the MacBook set, so treat
+            these as indicative.)</em>
           </p>
 
           <h2 id="worth-repairing-old">Is it worth repairing an old MacBook?</h2>
           <p>
             A useful rule from the data: if the repair is under roughly <strong>30–40% of what the
-            same model sells for used</strong>, it's almost always worth fixing. A battery (typically
-            ~AED 490) or a single screen (~AED 1,140) on a Mac that still sells for AED 2,500–4,000
-            used is an easy yes. Where it gets marginal is a <strong>logic-board repair after liquid
-            damage</strong> on an older model, those run AED 555–1,140+ and sometimes uncover a
-            second fault. We quote the board separately and only proceed with your sign-off, so you're
-            never committed before you know the number.
+            same model sells for used</strong>, it's almost always worth fixing. A battery or a
+            single screen on a Mac that still resells well is an easy yes, message us for the exact
+            price and we'll tell you honestly whether it's worth it. Where it gets marginal is a{" "}
+            <strong>logic-board repair after liquid damage</strong> on an older model, which can be
+            pricier and sometimes uncovers a second fault. We quote the board separately and only
+            proceed with your sign-off, so you're never committed before you know the number.
           </p>
 
           <h2 id="why-prices-vary">Why do repair prices vary so much?</h2>
@@ -180,15 +184,15 @@ export default function BlogAppleRepairCostReport2026() {
       faqs={[
         {
           q: "How much does it cost to repair a MacBook in Dubai?",
-          a: "Based on 409 real MacBook repairs (2023–2026), most fall in these bands: screen AED 1,050–1,400 (typical ~1,140), battery AED 400–675 (~490), keyboard/top-case AED 490–630, logic board AED 555–1,140 (~744), and macOS/software AED 210–360. The exact figure depends on model, parts and whether there's more than one fault, a free diagnostic confirms it before any work.",
+          a: "Based on 409 real MacBook repairs (2023–2026), the most common jobs are screen/display, battery, keyboard/top-case, logic board and macOS/software. The exact price depends on your model, parts and whether there's more than one fault, so a free diagnostic confirms it first. Message us on WhatsApp with your model and fault for today's exact price.",
         },
         {
           q: "How much is a MacBook screen replacement in Dubai?",
-          a: "Across 180 real MacBook screen repairs, most customers paid AED 1,050–1,400, with a median of about AED 1,140. Genuine Apple Retina Pro panels reached AED 3,670, while older MacBook Air screens sit near the low end. Screen type is the single biggest price driver.",
+          a: "Across 180 real MacBook screen repairs, price depends heavily on the panel: genuine Apple Retina Pro displays cost the most, while older MacBook Air screens sit near the low end. Screen type is the single biggest price driver, so message us on WhatsApp with your model for the exact figure after a free diagnostic.",
         },
         {
           q: "How much does a MacBook battery replacement cost in Dubai?",
-          a: "From 61 real battery jobs, most paid AED 400–675 with a typical price around AED 490. Higher figures usually mean a combined job, for example a battery plus a swollen-battery-damaged trackpad or keyboard replaced at the same time.",
+          a: "From 61 real battery jobs, the price depends on your model and whether it's a combined job, for example a battery plus a swollen-battery-damaged trackpad or keyboard replaced at the same time. Message us on WhatsApp with your model for today's exact battery price.",
         },
         {
           q: "What is the most common MacBook repair?",
@@ -196,11 +200,11 @@ export default function BlogAppleRepairCostReport2026() {
         },
         {
           q: "How much does iPhone screen repair cost in Dubai?",
-          a: "iPhone screen prices vary the most by model: from around AED 500 for an older LCD model up to AED 1,600+ for a current Pro Max with a genuine OLED panel, with a median near AED 1,333 across the repairs in this dataset. iPhone battery replacements were AED 250–360.",
+          a: "iPhone screen prices vary the most by model: an older LCD model sits near the bottom, while a current Pro Max with a genuine OLED panel sits near the top. Because it's so model-specific, message us on WhatsApp with your exact iPhone model and we'll send today's screen and battery price.",
         },
         {
           q: "Is it worth repairing an old MacBook?",
-          a: "Generally yes if the repair costs under about 30–40% of the used resale value of the same model. A battery (~AED 490) or single screen (~AED 1,140) on a Mac that still resells for AED 2,500–4,000 is worth doing. Liquid-damage logic-board repairs on older models are the main case where it can become marginal, we quote the board separately so you decide with the number in front of you.",
+          a: "Generally yes if the repair costs under about 30–40% of the used resale value of the same model. A battery or single screen on a Mac that still resells well is worth doing. Liquid-damage logic-board repairs on older models are the main case where it can become marginal, we quote the board separately so you decide with the number in front of you. Message us on WhatsApp for the exact price on your model.",
         },
       ]}
       relatedLinks={[

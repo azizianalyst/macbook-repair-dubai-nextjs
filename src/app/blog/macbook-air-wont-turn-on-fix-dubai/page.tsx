@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirWontTurnOn";
 
 export const metadata: Metadata = {
   title: "MacBook Air Won't Turn On Fix Dubai 2026 — No Power",
-  description: "MacBook Air not turning on in Dubai? Dead, black screen, or no power on all models M1-M5 and Intel. Step-by-step fix guide. Logic board repair from AED 350.",
+  description: "MacBook Air not turning on in Dubai? Dead, black screen or no power on all models M1-M5 and Intel. Step-by-step fix guide. Free diagnosis on WhatsApp.",
   openGraph: {
     title: "MacBook Air Won't Turn On Fix Dubai 2026: Dead, Black Screen, No Power Guide",
-    description: "MacBook Air won't turn on? Dead vs black screen diagnosis, deep discharge, SMC reset, board repair. Logic board repair from AED 350 in Dubai.",
+    description: "MacBook Air won't turn on? Dead vs black screen diagnosis, deep discharge, SMC reset, board repair. Free diagnosis in Dubai — message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-wont-turn-on-fix-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Won't Turn On Fix Dubai 2026",
-    description: "Dead vs black screen diagnosis. Logic board repair from AED 350 in Dubai.",
+    description: "Dead vs black screen diagnosis. Free logic board diagnosis in Dubai — message us on WhatsApp.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-macbook-not-turning-on-dubai-desktop.avif"],
   },
   alternates: {

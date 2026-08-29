@@ -7,12 +7,12 @@ export default function BlogMacStudioNoDisplay() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Studio No Display in Dubai? 6 Fixes for Black Screen 2026"
-      seoDescription="Mac Studio no display or black screen in Dubai? 6 fixes for cable, Thunderbolt, HDMI and GPU faults. Repair from AED 400."
+      seoDescription="Mac Studio no display or black screen in Dubai? 6 fixes for cable, Thunderbolt, HDMI and GPU faults. Free diagnosis, message us for a price."
       path="/blog/mac-studio-no-display-dubai"
       wide
       category="Fix guide · Mac Studio"
       h1="Mac Studio No Display in Dubai? 6 Things to Check"
-      hook="A Mac Studio that powers on with no picture is usually a Thunderbolt or HDMI cable issue, a monitor input problem, or a display IC fault, and our Dubai workshop diagnoses every model free with repair from AED 400."
+      hook="A Mac Studio that powers on with no picture is usually a Thunderbolt or HDMI cable issue, a monitor input problem, or a display IC fault, and our Dubai workshop diagnoses every model free, then messages you the exact repair price."
       quickAnswer="Mac Studio no display means the machine is powered (front LED on) but no picture reaches the monitor. Common causes: wrong monitor input, a faulty Thunderbolt or HDMI cable, a resolution handshake failure, or a display IC fault on the board. Try the HDMI port and a different cable and monitor first."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -178,11 +178,11 @@ export default function BlogMacStudioNoDisplay() {
             caption="Mac Studio no display repair cost in Dubai"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "HDMI port repair", ours: "AED 400", apple: "AED 800+" },
-              { model: "Thunderbolt port repair", ours: "AED 450", apple: "AED 900+" },
-              { model: "Display IC repair", ours: "AED 500", apple: "AED 1,000+" },
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 250+" },
-              { model: "Logic board repair", ours: "AED 700", apple: "AED 1,500+" },
+              { model: "HDMI port repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Thunderbolt port repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Display IC repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Diagnosis", ours: "Free", apple: "Charged elsewhere" },
+              { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>

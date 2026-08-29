@@ -7,14 +7,14 @@ export default function MacBookAirM1KeyboardRepair() {
       path="/macbook-air-m1-keyboard-repair-dubai"
       chip="M1"
       years="2020"
-      seoTitle="MacBook Air M1 Keyboard Repair Dubai — From AED 300"
-      seoDescription="MacBook Air M1 keyboard repair Dubai from AED 300. Magic Keyboard scissor switch, individual key caps, Touch ID, same-day service. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air M1 Keyboard Repair Dubai — Same-Day"
+      seoDescription="MacBook Air M1 keyboard repair Dubai. Magic Keyboard scissor switch, individual key caps, Touch ID, same-day service. Free diagnosis. WhatsApp for your price. Call 055 741 3706."
       h1="MacBook Air M1 Keyboard Repair Dubai"
       eyebrow="M1 Air Magic Keyboard specialist · Dubai Media City · Same-day"
       keyboardType="Magic Keyboard (scissor switch)"
       switchMechanism="Scissor mechanism — 1 mm travel"
       touchId={true}
-      heroAnswer="MacBook Air M1 keyboard repair costs from AED 300 at MacBook Repair Dubai. The M1 Air introduced Apple's Magic Keyboard to the Air lineup — a scissor-switch mechanism with 1 mm travel, much more robust than the butterfly keys on Intel Airs. Individual key caps can be replaced without swapping the full top-case in most cases. Same-day service. Touch ID transfer included if top-case is required."
+      heroAnswer="MacBook Air M1 keyboard repair is same-day at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your model. The M1 Air introduced Apple's Magic Keyboard to the Air lineup — a scissor-switch mechanism with 1 mm travel, much more robust than the butterfly keys on Intel Airs. Individual key caps can be replaced without swapping the full top-case in most cases. Touch ID transfer included if top-case is required."
       chipUniquePoints={[
         "The MacBook Air M1 (2020) was the first Air to use Apple's Magic Keyboard with scissor switches. The scissor mechanism has 1 mm of key travel — nearly double the butterfly — and is significantly more resistant to dust and debris. Failure rates are much lower than Intel butterfly keyboards. When failures do occur, they are usually a single key cap or scissor clip, not full keyboard failure.",
         "Individual key caps and scissor clips on the M1 Air can be replaced without removing the top-case assembly. A single damaged or non-registering key takes 20–30 minutes to fix. We carry replacement key caps and scissor mechanisms for all standard keys as well as the Touch ID / power button assembly.",
@@ -41,11 +41,11 @@ export default function MacBookAirM1KeyboardRepair() {
       faults={[
         {
           title: "Single key not registering on M1 Air",
-          body: "Scissor clips on M1 Air keys can wear or break after heavy use. If one key is inconsistently registering, the scissor mechanism or key cap needs replacement. From AED 300, same-day. Much cheaper than full top-case replacement.",
+          body: "Scissor clips on M1 Air keys can wear or break after heavy use. If one key is inconsistently registering, the scissor mechanism or key cap needs replacement. Same-day, and much cheaper than full top-case replacement — message us for your exact price.",
         },
         {
           title: "Key cap popped off on M1 Air",
-          body: "Scissor switch key caps can be re-seated if the clip is intact. If the clip broke, we replace both cap and clip. Key caps cannot be removed sideways — always remove straight up. If forced sideways, the clip snaps. From AED 300.",
+          body: "Scissor switch key caps can be re-seated if the clip is intact. If the clip broke, we replace both cap and clip. Key caps cannot be removed sideways — always remove straight up. If forced sideways, the clip snaps. Message us on WhatsApp for your price.",
         },
         {
           title: "Touch ID not working on M1 Air",
@@ -67,11 +67,11 @@ export default function MacBookAirM1KeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M1 keyboard repair cost in Dubai?",
-          a: "Individual key replacement on MacBook Air M1 starts from AED 300 at MacBook Repair Dubai. Full top-case replacement (if multiple keys or the keyboard flex is damaged) is AED 480. Apple charges AED 549 for the same job. Same-day service on both.",
+          a: "Both individual key replacement and full top-case replacement on the MacBook Air M1 are handled same-day at MacBook Repair Dubai, and our rate comes in below Apple's. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Can individual keys be replaced on the MacBook Air M1?",
-          a: "Yes. The M1 Air uses Apple's Magic Keyboard with scissor switches, which allows individual key cap and scissor clip replacement. This is not possible on Intel Air butterfly keyboards. Most single-key issues on M1 Air are fixed for AED 300 without replacing the full top-case.",
+          a: "Yes. The M1 Air uses Apple's Magic Keyboard with scissor switches, which allows individual key cap and scissor clip replacement. This is not possible on Intel Air butterfly keyboards. Most single-key issues on M1 Air are fixed without replacing the full top-case — message us on WhatsApp for your price.",
         },
         {
           q: "Will Touch ID still work after M1 Air keyboard repair?",
@@ -83,7 +83,7 @@ export default function MacBookAirM1KeyboardRepair() {
         },
         {
           q: "My M1 Air key cap popped off — can I fix it myself?",
-          a: "If the scissor clip is still intact, the cap can be pressed straight back on. Do not force it sideways — the clip will snap. If you cannot re-seat it or the clip broke, bring it in. We replace key caps and clips from AED 300. Attempting to force a broken clip back on usually makes the repair more expensive.",
+          a: "If the scissor clip is still intact, the cap can be pressed straight back on. Do not force it sideways — the clip will snap. If you cannot re-seat it or the clip broke, bring it in and we'll replace the key cap and clip — message us on WhatsApp for your price. Attempting to force a broken clip back on usually makes the repair more involved.",
         },
       ]}
       blogHref="/blog/macbook-keyboard-not-working-fix"

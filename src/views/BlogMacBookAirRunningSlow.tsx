@@ -7,7 +7,7 @@ export default function BlogMacBookAirRunningSlow() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Running Slow Fix Dubai 2026: M1 to M5 Speed Restore Guide"
-      seoDescription="MacBook Air running slow in Dubai? Thermal throttling, RAM pressure, startup items, and storage full explained. Free software fixes and repair from AED 300."
+      seoDescription="MacBook Air running slow in Dubai? Thermal throttling, RAM pressure, startup items and full storage explained. Free software fixes; WhatsApp us for repair pricing."
       path="/blog/macbook-air-running-slow-fix-dubai"
       wide
       toc={[
@@ -211,16 +211,16 @@ export default function BlogMacBookAirRunningSlow() {
           <h2 id="repair-cost">MacBook Air performance service cost in Dubai</h2>
           <p>
             If software fixes do not resolve the slowdown, a professional performance service may be
-            needed. Current pricing:
+            needed. Message us on WhatsApp for today's exact price on your model:
           </p>
           <BlogPriceTable
-            caption="MacBook Air performance service pricing Dubai, June 2026"
+            caption="MacBook Air performance service, Dubai"
             headers={["Service", "Our price", "Apple Store"]}
             rows={[
-              { model: "Performance diagnosis + tune", ours: "AED 300", apple: "AED 500" },
-              { model: "Thermal pad replacement", ours: "AED 350", apple: "AED 800" },
-              { model: "macOS clean install", ours: "AED 250", apple: "AED 400" },
-              { model: "SSD health test", ours: "Free", apple: "AED 150" },
+              { model: "Performance diagnosis + tune", ours: "Price on request", apple: "Price on request" },
+              { model: "Thermal pad replacement", ours: "Price on request", apple: "Price on request" },
+              { model: "macOS clean install", ours: "Price on request", apple: "Price on request" },
+              { model: "SSD health test", ours: "Free", apple: "Price on request" },
             ]}
           />
           <p>

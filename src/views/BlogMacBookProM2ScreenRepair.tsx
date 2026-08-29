@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM2ScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M2 Screen Repair Cost Dubai 2026: LCD and mini-LED Prices"
-      seoDescription="MacBook Pro M2 screen repair cost in Dubai 2026. M2 13-inch uses IPS LCD. M2 Pro/Max 14/16-inch uses mini-LED. Same-day repair from AED 450. All models covered."
+      seoTitle="MacBook Pro M2 Screen Repair Dubai 2026: LCD and mini-LED Panels"
+      seoDescription="MacBook Pro M2 screen repair in Dubai 2026. M2 13-inch uses IPS LCD. M2 Pro/Max 14/16-inch uses mini-LED. Same-day repair, free diagnosis. WhatsApp us for a quote."
       path="/blog/macbook-pro-m2-screen-repair-cost-dubai"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookProM2ScreenRepair() {
         { id: "diy-risk", label: "DIY screen replacement risks" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M2 Screen Repair Cost in Dubai 2026: LCD and mini-LED Prices"
-      hook="MacBook Pro M2 screen repair in Dubai costs AED 450-600 at independent workshops, versus Apple's AED 950-1,200+. The M2 13-inch uses a standard IPS LCD (cheaper and faster to replace), while the M2 Pro and M2 Max 14/16-inch use mini-LED panels (higher cost, longer availability). Same-day service is available for morning drop-offs."
-      quickAnswer="MacBook Pro M2 screen repair Dubai costs: M2 13-inch LCD = AED 450. M2 Pro 14-inch mini-LED = AED 500. M2 Max 16-inch mini-LED = AED 600. Apple Store equivalent: AED 950-1,200+. Diagnosis is free. Same-day service for most models. No data loss during screen replacement. 12-month warranty on replacement panels."
+      h1="MacBook Pro M2 Screen Repair in Dubai 2026: LCD and mini-LED Panels"
+      hook="MacBook Pro M2 screen repair in Dubai is far cheaper at independent workshops than at Apple. The M2 13-inch uses a standard IPS LCD (faster to replace), while the M2 Pro and M2 Max 14/16-inch use mini-LED panels (longer availability). Same-day service is available for morning drop-offs. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M2 screen repair in Dubai covers M2 13-inch IPS LCD and M2 Pro/Max 14/16-inch mini-LED panels, at prices well below the Apple Store. Diagnosis is free. Same-day service for most models. No data loss during screen replacement. 12-month warranty on replacement panels. WhatsApp us for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -69,7 +69,7 @@ export default function BlogMacBookProM2ScreenRepair() {
           <h2 id="step-3">Step 3: How do I get a MacBook Pro M2 screen repair quote in Dubai?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>Bring the machine to our Dubai workshop for free physical diagnostic</li>
-            <li>We identify: exact model (determines part), damage type (glass vs panel vs backlight), and whether the display cable also needs replacement (adds AED 80-120 if damaged)</li>
+            <li>We identify: exact model (determines part), damage type (glass vs panel vs backlight), and whether the display cable also needs replacement (a small add-on if damaged)</li>
             <li>Same-day quote and repair for all M2 models with parts in stock. Most common M2 panels are stocked in Dubai for same-day service</li>
             <li>No data loss during screen replacement: the logic board and SSD are untouched. No need to back up before bringing the machine in (though backing up regularly is always recommended)</li>
           </ul>
@@ -123,13 +123,14 @@ export default function BlogMacBookProM2ScreenRepair() {
 
           <h2 id="repair-cost">MacBook Pro M2 screen repair cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 screen repair pricing. June 2026"
+            caption="MacBook Pro M2 screen repair options. June 2026"
+            headers={["Model", "Our repair", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M2 13-inch screen (IPS LCD)", ours: "AED 450", apple: "AED 950+", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Pro 14-inch screen (mini-LED)", ours: "AED 500", apple: "AED 1,050+", note: "Liquid Retina XDR, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Max 16-inch screen (mini-LED)", ours: "AED 600", apple: "AED 1,200+", note: "Liquid Retina XDR, 12-month warranty, same-day" },
-              { model: "Display cable (if also damaged)", ours: "AED 100", apple: "Included in Apple's assembly price", note: "Added only if cable shows wear or damage" },
-              { model: "Screen diagnostic", ours: "Free", apple: "AED 250", note: "Damage type and repair scope assessment" },
+              { model: "MacBook Pro M2 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty, same-day" },
+              { model: "Display cable (if also damaged)", ours: "Price on request", apple: "Included in Apple's assembly", note: "Added only if cable shows wear or damage" },
+              { model: "Screen diagnostic", ours: "Free", apple: "Price on request", note: "Damage type and repair scope assessment" },
             ]}
           />
 
@@ -150,7 +151,7 @@ export default function BlogMacBookProM2ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "MacBook Pro M2 13-inch screen (IPS LCD) costs AED 450. M2 Pro 14-inch mini-LED costs AED 500. M2 Max 16-inch mini-LED costs AED 600. All include 12-month warranty and same-day service. Apple charges AED 950-1,200+. Free diagnosis to confirm damage scope before repair.",
+          a: "Price depends on your exact model: the M2 13-inch uses an IPS LCD, while the M2 Pro 14-inch and M2 Max 16-inch use mini-LED panels. All repairs include a 12-month warranty and same-day service, and cost well below the Apple Store. Diagnosis is free. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does MacBook Pro M2 13-inch use the same screen as the Pro/Max?",
@@ -170,7 +171,7 @@ export default function BlogMacBookProM2ScreenRepair() {
         },
         {
           q: "Is MacBook Pro M2 13-inch screen repair cheaper than M2 Pro 14-inch?",
-          a: "Yes. The M2 13-inch uses an IPS LCD panel which is more widely available and less expensive to source. Repair costs AED 450 versus AED 500 for the M2 Pro 14-inch mini-LED. The mini-LED panels are more complex to manufacture and have tighter supply, both contributing to the higher cost.",
+          a: "Yes. The M2 13-inch uses an IPS LCD panel which is more widely available and less expensive to source, so it costs less to repair than the M2 Pro 14-inch mini-LED. The mini-LED panels are more complex to manufacture and have tighter supply, both contributing to the higher cost. Message us on WhatsApp for the exact price on each model.",
         },
       ]}
       relatedLinks={[

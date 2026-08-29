@@ -5,7 +5,7 @@ import View from "@/views/MacBookWontCharge";
 
 export const metadata: Metadata = metaFromFields("/macbook-wont-charge-dubai", {
   title: "MacBook Not Charging Dubai? MagSafe & USB-C Fix Same Day",
-  description: "MacBook not charging in Dubai? MagSafe 3 dead, USB-C port fault, DC-in board, battery not detected. All Air and Pro models. Free diagnosis. From AED 200. Call 055 741 3706.",
+  description: "MacBook not charging in Dubai? MagSafe 3 dead, USB-C port fault, DC-in board, battery not detected. All Air and Pro models. Free diagnosis, same-day fix. Call 055 741 3706.",
 });
 
 export default function Page() {

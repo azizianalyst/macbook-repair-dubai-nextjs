@@ -7,12 +7,12 @@ export default function BlogIMacRunningSlow() {
   return (
     <BlogPostTemplate
       seoTitle="iMac Running Slow in Dubai? 8 Fixes for M and Intel Models 2026"
-      seoDescription="iMac running slow in Dubai? 8 fixes for M1, M3, M4 and Intel models. SSD upgrade from AED 500, RAM from AED 400 at our workshop."
+      seoDescription="iMac running slow in Dubai? 8 fixes for M1, M3, M4 and Intel models. SSD and RAM upgrades same day. Free diagnosis, message us on WhatsApp for a price."
       path="/blog/imac-running-slow-dubai"
       wide={true}
       category="Fix guide · iMac"
       h1="iMac Running Slow in Dubai? 8 Fixes to Try Before Upgrading"
-      hook="An iMac running slow in Dubai is usually a near-full startup SSD, a RAM shortage with heavy swap usage, or a macOS corruption, and SSD upgrades from AED 500 and RAM upgrades from AED 400 fix most Intel iMac performance issues same day."
+      hook="An iMac running slow in Dubai is usually a near-full startup SSD, a RAM shortage with heavy swap usage, or a macOS corruption, and an SSD or RAM upgrade fixes most Intel iMac performance issues same day. Message us on WhatsApp for today's exact price on your model."
       quickAnswer="iMac running slow is caused by an SSD at over 90% capacity (Finder > Storage shows this), insufficient RAM causing heavy swap, a corrupted macOS installation, malware, or on Intel models, dried thermal paste causing CPU throttling. Check Activity Monitor > Memory for yellow/red swap pressure before booking a service."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -211,19 +211,19 @@ export default function BlogIMacRunningSlow() {
           <section id="replacement-cost">
             <h2 id="replacement-cost">iMac performance upgrade cost Dubai</h2>
             <p>
-              All prices below are for our Media City workshop. Parts are genuine or premium-grade
+              All services below are handled at our Media City workshop. Parts are genuine or premium-grade
               compatible. No diagnostic fee for any booking. Turnaround is same-day for most services
-              when booked before noon.
+              when booked before noon. Message us on WhatsApp for today's exact price on your iMac model.
             </p>
             <BlogPriceTable
-              caption="iMac performance upgrade pricing at our Dubai workshop, June 2026"
+              caption="iMac performance upgrade services at our Dubai workshop, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "SSD upgrade (Intel iMac)", ours: "AED 500", apple: "AED 1,200+" },
-                { model: "RAM upgrade (Intel 21.5\")", ours: "AED 400", apple: "AED 900+" },
-                { model: "Thermal paste replacement", ours: "AED 300", apple: "AED 600+" },
-                { model: "macOS reinstall + migration", ours: "AED 200", apple: "AED 400+" },
-                { model: "Full performance service", ours: "AED 600", apple: "AED 1,400+" },
+                { model: "SSD upgrade (Intel iMac)", ours: "Price on request", apple: "Price on request" },
+                { model: "RAM upgrade (Intel 21.5\")", ours: "Price on request", apple: "Price on request" },
+                { model: "Thermal paste replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "macOS reinstall + migration", ours: "Price on request", apple: "Price on request" },
+                { model: "Full performance service", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>

@@ -7,7 +7,7 @@ export default function BlogTransparentRepairPricing() {
   return (
     <BlogPostTemplate
       seoTitle="Transparent Repair Pricing - How We Quote (Dubai 2026)"
-      seoDescription="The exact formula behind our repair quotes: parts + labour + 10% margin. Free diagnosis, no-fix-no-charge, no surprises. Read the full breakdown."
+      seoDescription="The exact formula behind our repair quotes: parts + labour + a small workshop margin. Free diagnosis, no-fix-no-charge, no surprises. Read the full breakdown."
       path="/blog/transparent-repair-pricing-explained"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogTransparentRepairPricing() {
       category="Trust · Pricing"
       h1="How We Calculate Repair Quotes - Full Transparency"
       hook="Our quote = parts + labour + 10% margin + 0% surprises. Here's the breakdown."
-      quickAnswer="A repair quote at MacBook Repair Dubai is built from: (1) part cost at the tier you choose, (2) labour at AED 100-250 per technician-hour depending on complexity, (3) a flat ~10% workshop margin. Diagnosis is free. Quote is fixed before work starts. No-fix-no-charge - you only pay if we solve your problem."
+      quickAnswer="A repair quote at MacBook Repair Dubai is built from: (1) part cost at the tier you choose, (2) labour based on technician time and complexity, (3) a flat ~10% workshop margin. Diagnosis is free. Quote is fixed before work starts. No-fix-no-charge - you only pay if we solve your problem. Message us on WhatsApp for today's exact quote on your model."
       author={{ name: "Ali", role: "Workshop manager" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -52,30 +52,33 @@ export default function BlogTransparentRepairPricing() {
             caption="Sample part costs (workshop cost vs your quote line)"
             headers={["Part", "Workshop cost", "Your quote line"]}
             rows={[
-              { model: "iPhone 15 Pro screen (Tier 2)", apple: "AED 720", ours: "AED 850" },
-              { model: "MacBook Air M2 battery (Tier 2)", apple: "AED 380", ours: "AED 450" },
-              { model: "iPhone 14 charging port (Tier 2)", apple: "AED 90", ours: "AED 110" },
-              { model: "MacBook Pro 14 M3 keyboard assembly", apple: "AED 1,400", ours: "AED 1,650" },
+              { model: "iPhone 15 Pro screen (Tier 2)", apple: "Price on request", ours: "Price on request" },
+              { model: "MacBook Air M2 battery (Tier 2)", apple: "Price on request", ours: "Price on request" },
+              { model: "iPhone 14 charging port (Tier 2)", apple: "Price on request", ours: "Price on request" },
+              { model: "MacBook Pro 14 M3 keyboard assembly", apple: "Price on request", ours: "Price on request" },
             ]}
           />
 
           <h2 id="labour-time">Labour time (per service breakdown)</h2>
           <p>
-            Labour is billed at <strong>AED 100-250 per hour</strong> depending on technician
-            seniority and tooling complexity. Quick reference:
+            Labour is billed by technician time, scaled by seniority and tooling complexity. As a
+            quick reference for how long each job typically takes:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPhone screen / battery</strong>: 30-45 min × AED 150/hr ≈ AED 75-110.</li>
-            <li><strong>MacBook battery (glued)</strong>: 75-90 min × AED 200/hr ≈ AED 250-300.</li>
-            <li><strong>MacBook screen assembly</strong>: 60-90 min × AED 200/hr ≈ AED 200-300.</li>
-            <li><strong>Logic-board micro-soldering</strong>: 2-6 hours × AED 250/hr ≈ AED 500-1,500.</li>
+            <li><strong>iPhone screen / battery</strong>: 30-45 min of bench time.</li>
+            <li><strong>MacBook battery (glued)</strong>: 75-90 min of bench time.</li>
+            <li><strong>MacBook screen assembly</strong>: 60-90 min of bench time.</li>
+            <li><strong>Logic-board micro-soldering</strong>: 2-6 hours of specialist bench time.</li>
             <li><strong>Liquid damage cleaning</strong>: 90 min - 4 hours depending on extent.</li>
           </ul>
+          <p>
+            Message us on WhatsApp for today's exact quote on your model and fault.
+          </p>
 
           <h2 id="free-diagnosis">Why we offer free diagnosis</h2>
           <p>
-            Diagnosis is the part where most shops trap you - pay AED 200 to find out what's wrong,
-            non-refundable, and then they hold the device hostage until you accept their (inflated)
+            Diagnosis is the part where most shops trap you - pay a non-refundable fee just to find
+            out what's wrong, and then they hold the device hostage until you accept their (inflated)
             repair price. We don't do that. Free diagnosis means:
           </p>
           <ul className="list-disc list-inside space-y-xs">
@@ -145,7 +148,7 @@ export default function BlogTransparentRepairPricing() {
         { q: "Can I see the old part you removed?", a: "Yes - always. We return removed parts (battery, screen, board, etc.) on request as proof. If you don't want them, we recycle through certified e-waste channels." },
       ]}
       relatedLinks={[
-        { label: "Pricing page", href: "/pricing", description: "Published prices for every common repair." },
+        { label: "Pricing page", href: "/pricing", description: "How pricing works and how to get a quote for every common repair." },
         { label: "Genuine parts vs alternatives", href: "/blog/genuine-parts-vs-quality-alternative-explained", description: "How tier choice affects your quote line." },
         { label: "No-fix-no-charge explained", href: "/blog/no-fix-no-charge-policy-explained", description: "Full policy detail." },
       ]}

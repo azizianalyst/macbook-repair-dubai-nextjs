@@ -7,7 +7,7 @@ export default function BlogMacBookAirM1Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M1 Common Problems Dubai: A2337 Fix Guide 2026"
-      seoDescription="MacBook Air M1 problems in Dubai: battery at 4+ years, GPU crash, USB-C issues, sleep wake. All M1 Air faults fixed from AED 350. Free diagnosis same day."
+      seoDescription="MacBook Air M1 problems in Dubai: battery at 4+ years, GPU crash, USB-C issues, sleep wake. All M1 Air faults fixed. Free diagnosis, same-day, quote on WhatsApp."
       path="/blog/macbook-air-m1-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirM1Problems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M1 Common Problems in Dubai? A2337 Fix Guide 2026"
       hook="MacBook Air M1 (A2337) is now 5+ years old and entering the phase where batteries, USB-C ports, and software compatibility start showing their age. Here are the most common M1 Air problems we fix in Dubai and what to do about them."
-      quickAnswer="Most common MacBook Air M1 problems in Dubai: battery below 80% capacity after 4-5 years and 500+ cycles (AED 450 replacement), USB-C port looseness from daily plug/unplug cycles, GPU crash causing horizontal lines on external monitor (macOS bug, fixable), sleep-wake issues after Sequoia update, Bluetooth instability with older Apple peripherals, and Spotlight stuck indexing after macOS upgrade. Most have free software fixes. Hardware from AED 350."
+      quickAnswer="Most common MacBook Air M1 problems in Dubai: battery below 80% capacity after 4-5 years and 500+ cycles (needs replacement), USB-C port looseness from daily plug/unplug cycles, GPU crash causing horizontal lines on external monitor (macOS bug, fixable), sleep-wake issues after Sequoia update, Bluetooth instability with older Apple peripherals, and Spotlight stuck indexing after macOS upgrade. Most have free software fixes. Message us on WhatsApp for today's hardware repair price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -47,7 +47,7 @@ export default function BlogMacBookAirM1Problems() {
           </ol>
           <p>
             Work through each section below in order. Most have a free software fix. Hardware
-            repairs start from AED 350 with same-day turnaround.
+            repairs come with same-day turnaround — message us on WhatsApp for the exact price on your model.
           </p>
 
           <h2 id="battery-age">Battery degradation at 4-5 years: what to expect on M1 Air</h2>
@@ -68,8 +68,8 @@ export default function BlogMacBookAirM1Problems() {
           </ol>
           <p>
             Below 80% capacity means the battery is operating outside Apple's normal range.
-            Replacement is recommended. AED 450 same-day. The M1 Air is still fully supported by
-            macOS and worth repairing at this price.
+            Replacement is recommended and usually same-day. The M1 Air is still fully supported by
+            macOS and well worth repairing — message us on WhatsApp for the current battery price.
           </p>
 
           <h2 id="usbc-loose">Loose USB-C port on MacBook Air M1: what causes it and how to fix it</h2>
@@ -86,8 +86,9 @@ export default function BlogMacBookAirM1Problems() {
           </p>
           <p>
             Do not force cables or use the port at an angle. This worsens the damage and can
-            bend the pins further or crack the port housing. Port replacement costs AED 350 per
-            port. Both ports are independent so replacing one does not affect the other.
+            bend the pins further or crack the port housing. We replace ports per port, and both
+            ports are independent so replacing one does not affect the other. Message us on WhatsApp
+            for the port repair price.
           </p>
           <p>
             In the meantime: use the other port for charging, or use a Thunderbolt hub to reduce
@@ -166,7 +167,7 @@ export default function BlogMacBookAirM1Problems() {
           </ol>
           <p>
             If Bluetooth disconnects persist after all three steps, the wireless chip on the M1
-            board has a hardware fault. Wireless chip repair from AED 400.
+            board has a hardware fault. Message us on WhatsApp for the wireless chip repair price.
           </p>
 
           <h2 id="dubai-specific">MacBook Air M1 in Dubai: 4-5 year wear from heat and humidity</h2>
@@ -254,11 +255,11 @@ export default function BlogMacBookAirM1Problems() {
           <BlogPriceTable
             caption="MacBook Air M1 A2337 repair pricing, June 2026"
             rows={[
-              { model: "Battery: M1 Air (A2337)", ours: "AED 450", apple: "AED 899", note: "49.9 Wh cell, same-day" },
-              { model: "Screen: M1 Air", ours: "AED 600", apple: "AED 1,099", note: "Liquid Retina, same-day" },
-              { model: "USB-C port repair", ours: "AED 350", apple: "AED 700", note: "Per port, same-day" },
-              { model: "Logic board diagnosis", ours: "Free", apple: "AED 150", note: "No fix, no fee" },
-              { model: "Keyboard / top-case", ours: "AED 800", apple: "AED 1,399", note: "Full top-case replacement" },
+              { model: "Battery: M1 Air (A2337)", ours: "Price on request", apple: "Price on request", note: "49.9 Wh cell, same-day" },
+              { model: "Screen: M1 Air", ours: "Price on request", apple: "Price on request", note: "Liquid Retina, same-day" },
+              { model: "USB-C port repair", ours: "Price on request", apple: "Price on request", note: "Per port, same-day" },
+              { model: "Logic board diagnosis", ours: "Free", apple: "Price on request", note: "No fix, no fee" },
+              { model: "Keyboard / top-case", ours: "Price on request", apple: "Price on request", note: "Full top-case replacement" },
             ]}
           />
           <p>
@@ -273,7 +274,7 @@ export default function BlogMacBookAirM1Problems() {
       faqs={[
         {
           q: "Is MacBook Air M1 battery worth replacing in 2026?",
-          a: "Yes. At AED 450, a battery replacement on an M1 Air is far cheaper than a new Air, which starts at AED 4,299. The M1 chip handles all everyday tasks (web, Office, video calls, light creative work) without struggling. macOS support runs to at least 2027. Battery replacement restores full rated battery life.",
+          a: "Yes. A battery replacement on an M1 Air is far cheaper than buying a new Air. The M1 chip handles all everyday tasks (web, Office, video calls, light creative work) without struggling. macOS support runs to at least 2027. Battery replacement restores full rated battery life. Message us on WhatsApp for today's battery price on your model.",
         },
         {
           q: "Why are there lines on my MacBook Air M1 external display?",
@@ -285,7 +286,7 @@ export default function BlogMacBookAirM1Problems() {
         },
         {
           q: "Can MacBook Air M1 USB-C port be repaired?",
-          a: "Yes. USB-C port replacement costs AED 350 per port. The two ports on the M1 Air are independent, so replacing one does not affect the other. If both ports are loose, we can do both at the same visit. Most port jobs are same-day.",
+          a: "Yes. USB-C port replacement is done per port. The two ports on the M1 Air are independent, so replacing one does not affect the other. If both ports are loose, we can do both at the same visit. Most port jobs are same-day. Message us on WhatsApp for the current port price.",
         },
         {
           q: "How many more years will MacBook Air M1 be supported?",
@@ -293,11 +294,11 @@ export default function BlogMacBookAirM1Problems() {
         },
         {
           q: "MacBook Air M1 Bluetooth keeps disconnecting: is this hardware?",
-          a: "Usually software. Try: forget the device and re-pair, then reset the Bluetooth module (hold Option + click Bluetooth menu icon → Debug → Reset Bluetooth Module), then delete /Library/Preferences/com.apple.Bluetooth.plist and restart. If disconnects continue after all three steps, the wireless chip has a hardware fault. Wireless chip repair from AED 400.",
+          a: "Usually software. Try: forget the device and re-pair, then reset the Bluetooth module (hold Option + click Bluetooth menu icon → Debug → Reset Bluetooth Module), then delete /Library/Preferences/com.apple.Bluetooth.plist and restart. If disconnects continue after all three steps, the wireless chip has a hardware fault. Message us on WhatsApp for the wireless chip repair price.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Air M1 Repair Dubai", href: "/macbook-air-m1-repair-dubai", description: "Full M1 Air service page, all faults, AED pricing." },
+        { label: "MacBook Air M1 Repair Dubai", href: "/macbook-air-m1-repair-dubai", description: "Full M1 Air service page, all faults, request-a-quote pricing." },
         { label: "MacBook Air Repair Dubai", href: "/macbook-air-repair-dubai", description: "All MacBook Air models, all repairs, same-day service." },
         { label: "MacBook Air Battery Draining Fast? Fixes & Costs Dubai 2026", href: "/blog/macbook-air-battery-drain-dubai", description: "Step-by-step battery drain fixes for all MacBook Air models." },
         { label: "MacBook Air Won't Turn On Fix Dubai 2026", href: "/blog/macbook-air-wont-turn-on-fix-dubai", description: "Diagnosis and fix guide when your Air won't start." },

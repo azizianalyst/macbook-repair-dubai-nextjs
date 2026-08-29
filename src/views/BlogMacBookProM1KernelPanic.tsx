@@ -7,7 +7,7 @@ export default function BlogMacBookProM1KernelPanic() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Kernel Panic Dubai 2026: Crash When Closing Lid Fix"
-      seoDescription="MacBook Pro M1 kernel panic or crash when closing lid in Dubai? Monterey sleep bug, Big Sur wake fault, and 5-year-old hardware panics. Diagnosis guide. Board repair from AED 700."
+      seoDescription="MacBook Pro M1 kernel panic or crash when closing lid in Dubai? Monterey sleep bug, wake fault, and 5-year-old hardware panics. Diagnosis guide. Message us for board repair pricing."
       path="/blog/macbook-pro-m1-kernel-panic-dubai"
       wide
       toc={[
@@ -118,10 +118,10 @@ export default function BlogMacBookProM1KernelPanic() {
           <BlogPriceTable
             caption="MacBook Pro M1 kernel panic repair pricing. June 2026"
             rows={[
-              { model: "Software fix (kext removal, OS reinstall)", ours: "AED 200", apple: "AED 250+", note: "If software/kext is the cause" },
-              { model: "Battery replacement (if panic on battery only)", ours: "AED 550", apple: "AED 750+", note: "Restore clean power supply to M1 SoC" },
-              { model: "BGA reflow/reball (M1 SoC joint fault)", ours: "AED 1,200", apple: "Logic board replacement AED 2,500+", note: "Hardware fault causing panic" },
-              { model: "Kernel panic diagnostic", ours: "Free", apple: "AED 250", note: "Read crash log, software vs hardware determination" },
+              { model: "Software fix (kext removal, OS reinstall)", ours: "Price on request", apple: "Price on request", note: "If software/kext is the cause" },
+              { model: "Battery replacement (if panic on battery only)", ours: "Price on request", apple: "Price on request", note: "Restore clean power supply to M1 SoC" },
+              { model: "BGA reflow/reball (M1 SoC joint fault)", ours: "Price on request", apple: "Logic board replacement (price on request)", note: "Hardware fault causing panic" },
+              { model: "Kernel panic diagnostic", ours: "Free", apple: "Price on request", note: "Read crash log, software vs hardware determination" },
             ]}
           />
 
@@ -159,7 +159,7 @@ export default function BlogMacBookProM1KernelPanic() {
         },
         {
           q: "How much does MacBook Pro M1 kernel panic repair cost in Dubai?",
-          a: "Software fix (kext removal, OS reinstall) costs AED 200. Battery replacement (if panics only on battery) costs AED 550. BGA joint rework for hardware memory fault costs AED 1,200, far less than Apple's logic board replacement at AED 2,500+. Free diagnostic to read crash logs and determine software vs hardware cause before any work.",
+          a: "It depends on whether the panic is software or hardware. A software fix (kext removal, OS reinstall) is the most affordable, a battery replacement applies if panics only happen on battery, and BGA joint rework for a hardware memory fault costs far less than Apple's full logic board replacement. We run a free diagnostic to read the crash logs and confirm the cause first, then message you the exact price on WhatsApp before any work.",
         },
         {
           q: "MacBook Pro M1 keeps restarting randomly, is that kernel panic?",

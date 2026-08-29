@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirScreenRepair";
 
 export const metadata: Metadata = {
   title: "MacBook Air Screen Repair Cost Dubai 2026: Prices by Model",
-  description: "MacBook Air screen repair cost Dubai by model. M1 from AED 500, M2 from AED 600, M3 from AED 700. Free diagnosis, same-day repair.",
+  description: "MacBook Air screen repair cost in Dubai, broken down by M1, M2 and M3 model. Free diagnosis, same-day repair. WhatsApp us for your exact price.",
   openGraph: {
     title: "MacBook Air Screen Repair Cost Dubai 2026: Prices by Model",
-    description: "MacBook Air screen repair cost Dubai by model. M1 from AED 500, M2 from AED 600, M3 from AED 700. Free diagnosis, same-day repair.",
+    description: "MacBook Air screen repair cost in Dubai, broken down by M1, M2 and M3 model. Free diagnosis, same-day repair. WhatsApp us for your exact price.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-screen-repair-cost-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Screen Repair Cost Dubai 2026: Prices by Model",
-    description: "MacBook Air screen repair cost Dubai by model. M1 from AED 500, M2 from AED 600, M3 from AED 700. Free diagnosis, same-day repair.",
+    description: "MacBook Air screen repair cost in Dubai, broken down by M1, M2 and M3 model. Free diagnosis, same-day repair. WhatsApp us for your exact price.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

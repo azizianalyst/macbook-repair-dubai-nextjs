@@ -5,11 +5,11 @@ import View from "@/views/BlogMacBookProM5NotTurningOn";
 export const metadata: Metadata = {
   title: "MacBook Pro M5 Not Turning On Dubai 2026",
   description:
-    "MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Repair from AED 350.",
+    "MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Message us on WhatsApp.",
   openGraph: {
     title: "MacBook Pro M5 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide",
     description:
-      "M5 not turning on in Dubai? Force restart, charging check, black screen vs dead: full fix guide. Repair from AED 350.",
+      "M5 not turning on in Dubai? Force restart, charging check, black screen vs dead: full fix guide. Message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-not-turning-on-dubai",
     type: "article",
     publishedTime: "2026-06-22",

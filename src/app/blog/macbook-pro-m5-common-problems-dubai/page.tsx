@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro M5 common problems in Dubai? OLED display issues, Thunderbolt 5 faults, thermal throttling, memory pressure on 16GB M5.",
   openGraph: {
     title: "MacBook Pro M5 Common Problems? Fix Guide Dubai 2026",
-    description: "OLED display issues, Thunderbolt 5 faults, thermal throttling on MacBook Pro M5. Expert fixes and repair from AED 200 in Dubai.",
+    description: "OLED display issues, Thunderbolt 5 faults, thermal throttling on MacBook Pro M5. Expert fixes and repair in Dubai — message us for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

@@ -40,11 +40,11 @@ export default function IMacIntelRepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Intel Repair Dubai - 21.5-inch & 27-inch 5K 2017-2020"
-      seoDescription="iMac Intel repair Dubai. 21.5-inch Retina 4K (2017-2019), 27-inch 5K Retina (2017-2020), iMac Pro 27-inch (2017). Screen, logic board, PSU, GPU, SSD upgrade. From AED 300. Call 055 741 3706."
+      seoDescription="iMac Intel repair Dubai - 21.5-inch 4K, 27-inch 5K and iMac Pro (2017-2020). Screen, logic board, PSU, GPU and SSD upgrades. Free diagnosis - call 055 741 3706."
       path="/imac-intel-repair-dubai"
       eyebrow="Intel Core i5/i7/i9 · 2017-2020 · Dubai Media City"
       h1="iMac Intel Repair Dubai - 21.5-inch & 27-inch 5K"
-      subtitle="The last Intel iMacs - 21.5-inch Retina 4K and 27-inch 5K Retina - are still powerful machines worth repairing. Screen from AED 850, logic board from AED 1,200, PSU from AED 600. GPU failure is the most common board-level fault."
+      subtitle="The last Intel iMacs - 21.5-inch Retina 4K and 27-inch 5K Retina - are still powerful machines worth repairing. Screen, logic board and PSU repairs - message us on WhatsApp for today's exact price on your model. GPU failure is the most common board-level fault."
       startingPrice={300}
       timeline="Same day (thermal) · 2-3 days (screen) · 5-10 days (logic board)"
       whatsappPrefill="Hi, I have an iMac Intel and need help with:"
@@ -57,13 +57,13 @@ export default function IMacIntelRepairHub() {
       serviceName="iMac Intel Repair Dubai"
       intro={intro}
       whatWeFix={[
-        "Screen repair and replacement - 5K 27-inch and 4K 21.5-inch panels from AED 850 to AED 1,200",
-        "Logic board repair - component-level from AED 1,200",
-        "PSU (power supply unit) replacement - from AED 600",
+        "Screen repair and replacement - 5K 27-inch and 4K 21.5-inch panels",
+        "Logic board repair - component-level",
+        "PSU (power supply unit) replacement",
         "GPU failure - AMD Radeon Pro 570/575/580 rework on 2017 27-inch models",
-        "HDD to NVMe SSD upgrade - from AED 500, dramatically improves boot speed",
+        "HDD to NVMe SSD upgrade - dramatically improves boot speed",
         "RAM upgrade - 16 GB to 128 GB on 27-inch models",
-        "Fan and thermal paste service - from AED 300",
+        "Fan and thermal paste service",
         "macOS reinstall and data migration",
       ]}
       steps={[
@@ -90,7 +90,7 @@ export default function IMacIntelRepairHub() {
       faqs={[
         {
           q: "Is my Intel iMac worth repairing?",
-          a: "Yes, in most cases. If the display and chassis are in good condition, a logic board repair or SSD upgrade extends the machine's useful life by several years at a fraction of replacement cost. The 27-inch 5K panel alone would cost over AED 2,000 as a standalone purchase. We will tell you honestly if the repair cost exceeds the machine's value.",
+          a: "Yes, in most cases. If the display and chassis are in good condition, a logic board repair or SSD upgrade extends the machine's useful life by several years at a fraction of replacement cost. The 27-inch 5K panel alone is expensive to source as a standalone purchase, so a repair is usually the smarter option. We will tell you honestly if the repair cost exceeds the machine's value.",
         },
         {
           q: "How long do iMac Intel repairs take?",
@@ -115,7 +115,7 @@ export default function IMacIntelRepairHub() {
         {
           label: "iMac Logic Board Repair Dubai",
           href: "/imac-logic-board-repair-dubai",
-          description: "Component-level board repair from AED 1,200.",
+          description: "Component-level board repair for all iMac models.",
         },
         {
           label: "iMac SSD Upgrade Dubai",

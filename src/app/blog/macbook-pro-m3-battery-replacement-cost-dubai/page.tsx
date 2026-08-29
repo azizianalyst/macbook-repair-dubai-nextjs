@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProM3BatteryReplacement";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M3 Battery Replacement Cost Dubai 2026",
-  description: "MacBook Pro M3 battery replacement cost in Dubai 2026. When to replace, battery health check, swollen battery signs, and AED prices. M3 battery from AED 550.",
+  description: "MacBook Pro M3 battery replacement in Dubai 2026: when to replace, battery health check, swollen battery signs. Message us on WhatsApp for today's price.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

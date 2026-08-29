@@ -7,7 +7,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Butterfly Keyboard Failing Dubai 2026: Stuck Keys Fix Guide"
-      seoDescription="MacBook Pro butterfly keyboard failing in Dubai? 2016-2019 Intel models had a design defect causing stuck, repeating, or dead keys. Dubai dust worsens it. Keyboard repair from AED 300."
+      seoDescription="MacBook Pro butterfly keyboard failing in Dubai? 2016-2019 Intel models had a design defect causing stuck, repeating, or dead keys. Dubai dust worsens it. WhatsApp us for a price."
       path="/blog/macbook-pro-butterfly-keyboard-failing-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Butterfly Keyboard Failing in Dubai? Here is Why and How to Fix It"
-      hook="Apple's butterfly keyboard (2016-2019 Intel MacBook Pro) was the company's most publicly criticised hardware design. A single grain of dust under a key switch could render keys non-functional. Apple ran a free Keyboard Service Program for eligible models. In Dubai, where fine desert dust is ever-present, butterfly keyboards failed faster than anywhere. Keyboard repair costs AED 300-500 in Dubai."
-      quickAnswer="MacBook Pro butterfly keyboard stuck key: shut down, hold the Mac at a 75-degree angle, use compressed air in short bursts across and under the affected key. Spray from multiple angles for 30 seconds. Turn on and test. If the key still sticks: Apple ran a free Keyboard Service Program for 2016-2019 MacBook Pro models, check eligibility at apple.com even on out-of-warranty machines. If expired: top case replacement at our Dubai workshop costs AED 300-500."
+      hook="Apple's butterfly keyboard (2016-2019 Intel MacBook Pro) was the company's most publicly criticised hardware design. A single grain of dust under a key switch could render keys non-functional. Apple ran a free Keyboard Service Program for eligible models. In Dubai, where fine desert dust is ever-present, butterfly keyboards failed faster than anywhere. Message us on WhatsApp for today's exact keyboard repair price on your model."
+      quickAnswer="MacBook Pro butterfly keyboard stuck key: shut down, hold the Mac at a 75-degree angle, use compressed air in short bursts across and under the affected key. Spray from multiple angles for 30 seconds. Turn on and test. If the key still sticks: Apple ran a free Keyboard Service Program for 2016-2019 MacBook Pro models, check eligibility at apple.com even on out-of-warranty machines. If expired: our Dubai workshop handles top case replacement — message us on WhatsApp for your exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -81,7 +81,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
             <li>Apple ran a free Keyboard Service Program covering 2016-2019 MacBook Pro models. The program ran from 2018 to approximately 2022</li>
             <li>Check current eligibility: visit apple.com/support and search "MacBook Pro Keyboard Service Program". Enter your serial number. Even in 2026, some claims may still be processable depending on your purchase country warranty terms</li>
             <li>UAE consumers may also have rights under UAE Consumer Protection Law for defective products. Contact Apple UAE (Apple Store Dubai Mall or DIFC) to discuss</li>
-            <li>If the program is expired for your machine: our Dubai workshop offers top case replacement at AED 300-500, which includes the keyboard, battery, and trackpad as one unit (same as Apple's approach but at lower cost)</li>
+            <li>If the program is expired for your machine: our Dubai workshop offers top case replacement, which includes the keyboard, battery, and trackpad as one unit (same as Apple's approach but at lower cost) — message us on WhatsApp for your exact price</li>
           </ul>
 
           <h2 id="dubai-dust">Does Dubai dust make MacBook Pro butterfly keyboard fail faster?</h2>
@@ -129,12 +129,13 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
           <h2 id="repair-cost">MacBook Pro butterfly keyboard repair cost in Dubai 2026</h2>
           <BlogPriceTable
             caption="MacBook Pro Intel butterfly keyboard repair pricing. June 2026"
+            headers={["Service", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "Single key replacement (butterfly cap)", ours: "AED 100", apple: "Top case replacement AED 800+", note: "If pivot arms intact, just cap replaced" },
-              { model: "Top case replacement (2016-2017, 13-inch)", ours: "AED 300", apple: "AED 800+", note: "New keyboard + trackpad + battery" },
-              { model: "Top case replacement (2018-2019, 13/15-inch)", ours: "AED 400", apple: "AED 900+", note: "New keyboard + trackpad + battery" },
-              { model: "Keyboard cleaning (compressed air + alcohol)", ours: "AED 100", apple: "AED 0 if under program", note: "Professional clean, all keys tested" },
-              { model: "Keyboard diagnostic", ours: "Free", apple: "AED 250", note: "Identify affected keys and failure mode" },
+              { model: "Single key replacement (butterfly cap)", ours: "Price on request", apple: "Top case replacement", note: "If pivot arms intact, just cap replaced" },
+              { model: "Top case replacement (2016-2017, 13-inch)", ours: "Price on request", apple: "Price on request", note: "New keyboard + trackpad + battery" },
+              { model: "Top case replacement (2018-2019, 13/15-inch)", ours: "Price on request", apple: "Price on request", note: "New keyboard + trackpad + battery" },
+              { model: "Keyboard cleaning (compressed air + alcohol)", ours: "Price on request", apple: "Free if under program", note: "Professional clean, all keys tested" },
+              { model: "Keyboard diagnostic", ours: "Free", apple: "Price on request", note: "Identify affected keys and failure mode" },
             ]}
           />
 
@@ -164,7 +165,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
         },
         {
           q: "Does Apple still offer free butterfly keyboard replacement in Dubai?",
-          a: "Apple's official Keyboard Service Program for 2016-2019 MacBook Pro ended approximately in 2022. However, UAE Consumer Protection law may still support warranty claims for design defects depending on original purchase terms. Check your serial number at apple.com/support (search Keyboard Service Program). Our Dubai workshop offers top case replacement as an independent alternative from AED 300.",
+          a: "Apple's official Keyboard Service Program for 2016-2019 MacBook Pro ended approximately in 2022. However, UAE Consumer Protection law may still support warranty claims for design defects depending on original purchase terms. Check your serial number at apple.com/support (search Keyboard Service Program). Our Dubai workshop offers top case replacement as an independent alternative — message us on WhatsApp for your exact price.",
         },
         {
           q: "Does Dubai dust make MacBook Pro butterfly keyboard fail faster?",
@@ -172,11 +173,11 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
         },
         {
           q: "How much does MacBook Pro butterfly keyboard repair cost in Dubai?",
-          a: "Single butterfly key replacement costs AED 100 (if only the keycap is damaged). Full top case replacement (keyboard, trackpad, and battery as one unit) costs AED 300-400 depending on model. Apple charged AED 800-900+ for the same top case replacement. Professional keyboard cleaning (compressed air plus isopropyl) costs AED 100.",
+          a: "It depends on whether you need a single keycap replaced, a professional keyboard clean (compressed air plus isopropyl), or a full top case replacement (keyboard, trackpad, and battery as one unit, which varies by model). Our independent rates are well below what Apple charges for the same top case replacement. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Is it worth repairing an Intel MacBook Pro butterfly keyboard in Dubai in 2026?",
-          a: "Depends on the machine's overall condition. A 2018 15-inch MacBook Pro with only a keyboard problem is a capable machine and top case replacement at AED 400 is reasonable. If the machine also has battery degradation, AMD GPU issues, or other aging faults, combined repair cost may approach a used M1 MacBook Pro, in which case upgrading is more economical.",
+          a: "Depends on the machine's overall condition. A 2018 15-inch MacBook Pro with only a keyboard problem is a capable machine and top case replacement is usually reasonable. If the machine also has battery degradation, AMD GPU issues, or other aging faults, combined repair cost may approach a used M1 MacBook Pro, in which case upgrading is more economical. Message us on WhatsApp for your exact repair price.",
         },
       ]}
       relatedLinks={[

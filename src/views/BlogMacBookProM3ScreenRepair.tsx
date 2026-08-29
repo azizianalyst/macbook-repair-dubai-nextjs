@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM3ScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M3 Screen Repair Cost Dubai 2026: mini-LED Replacement Prices"
-      seoDescription="MacBook Pro M3 screen repair cost in Dubai 2026. mini-LED LCD replacement from AED 500. Cracked display, backlight fault, local dimming zones, and display cable issues explained."
+      seoTitle="MacBook Pro M3 Screen Repair Dubai 2026: mini-LED Replacement Guide"
+      seoDescription="MacBook Pro M3 screen repair in Dubai 2026. mini-LED LCD replacement, cracked display, backlight fault, local dimming zones and cable issues. Message us for your model's price."
       path="/blog/macbook-pro-m3-screen-repair-cost-dubai"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookProM3ScreenRepair() {
         { id: "when-board", label: "When screen fault means board check" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M3 Screen Repair Cost in Dubai 2026: mini-LED Replacement Guide"
-      hook="MacBook Pro M3 uses a mini-LED Liquid Retina XDR display, the same technology as M2, and the last MacBook Pro generation before OLED. mini-LED has one key repair advantage over OLED: the backlight can sometimes be repaired separately from the LCD panel, saving AED 100-150. Screen repair starts from AED 500 in Dubai for the M3."
-      quickAnswer="MacBook Pro M3 screen repair costs AED 500 (14-inch) or AED 650 (16-inch) in Dubai for full panel replacement. M3 uses mini-LED LCD, not OLED: the glass and LCD panel are separate, so sometimes only the backlight or glass needs replacement without full panel replacement. Take a screenshot of any display fault: if lines appear in the screenshot, it is a panel fault; if the screenshot is clean, it is a software or GPU issue."
+      h1="MacBook Pro M3 Screen Repair in Dubai 2026: mini-LED Replacement Guide"
+      hook="MacBook Pro M3 uses a mini-LED Liquid Retina XDR display, the same technology as M2, and the last MacBook Pro generation before OLED. mini-LED has one key repair advantage over OLED: the backlight can sometimes be repaired separately from the LCD panel, which can save you money. Message us on WhatsApp for today's exact M3 screen repair price on your model."
+      quickAnswer="MacBook Pro M3 screen repair in Dubai covers full panel replacement for both the 14-inch and 16-inch. M3 uses mini-LED LCD, not OLED: the glass and LCD panel are separate, so sometimes only the backlight or glass needs replacement without full panel replacement. Take a screenshot of any display fault: if lines appear in the screenshot, it is a panel fault; if the screenshot is clean, it is a software or GPU issue. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -63,7 +63,7 @@ export default function BlogMacBookProM3ScreenRepair() {
 
           <h2 id="step-3">Step 3: How do I tell MacBook Pro M3 hinge cable fault from panel fault?</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Slowly open and close the lid while the M3 is on. If display issues (lines, flickering, blackout) appear or disappear at specific lid angles, the hinge display cable is the fault: cable replacement is AED 200 and avoids full panel replacement</li>
+            <li>Slowly open and close the lid while the M3 is on. If display issues (lines, flickering, blackout) appear or disappear at specific lid angles, the hinge display cable is the fault: cable replacement avoids full panel replacement and is far cheaper. Message us for the exact price</li>
             <li>If display fault is constant regardless of lid angle, the panel or backlight is at fault</li>
             <li>M3 Flexgate risk: the M3 lid design shares some hinge cable routing similarities with the Intel "Flexgate" models but with different routing. Stage-light effects (a glowing bar at the base of the screen when opened past 90°) indicate the display cable strain is the fault</li>
           </ul>
@@ -91,12 +91,12 @@ export default function BlogMacBookProM3ScreenRepair() {
             <tbody>
               <tr>
                 <td>Cracked display repair</td>
-                <td>AED 500-650 (full panel). Sometimes glass only: AED 250</td>
-                <td>AED 700-850 (always full panel, glass and OLED integrated)</td>
+                <td>Full panel; sometimes glass only. Price on request</td>
+                <td>Always full panel (glass and OLED integrated). Price on request</td>
               </tr>
               <tr>
                 <td>Backlight-only fault</td>
-                <td>AED 350-400 (backlight circuit repair, no panel replacement)</td>
+                <td>Backlight circuit repair, no panel replacement. Price on request</td>
                 <td>Not applicable: no separate backlight on OLED</td>
               </tr>
               <tr>
@@ -116,11 +116,11 @@ export default function BlogMacBookProM3ScreenRepair() {
           <BlogPriceTable
             caption="MacBook Pro M3 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "AED 500", apple: "AED 1,099+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "AED 650", apple: "AED 1,299+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "Backlight repair only (no panel replacement)", ours: "AED 350", apple: "Full panel replacement", note: "If LCD undamaged but backlight failed" },
-              { model: "Display cable (hinge cable, M3)", ours: "AED 200", apple: "Full display assembly", note: "If fault correlates with lid angle" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Panel vs backlight vs cable vs GPU" },
+              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "Price on request", apple: "Apple pricing higher", note: "Full panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "Price on request", apple: "Apple pricing higher", note: "Full panel, 12-month warranty, same-day" },
+              { model: "Backlight repair only (no panel replacement)", ours: "Price on request", apple: "Full panel replacement", note: "If LCD undamaged but backlight failed" },
+              { model: "Display cable (hinge cable, M3)", ours: "Price on request", apple: "Full display assembly", note: "If fault correlates with lid angle" },
+              { model: "Display diagnostic", ours: "Free", apple: "Apple charges for diagnosis", note: "Panel vs backlight vs cable vs GPU" },
             ]}
           />
 
@@ -140,11 +140,11 @@ export default function BlogMacBookProM3ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M3 screen repair cost in Dubai?",
-          a: "MacBook Pro M3 14-inch screen replacement costs AED 500 at our Dubai workshop. The 16-inch costs AED 650. These are significantly less than M4 OLED screen costs (AED 700-850) because M3 uses mini-LED LCD. Backlight-only repair costs AED 350 if the LCD panel is undamaged. Free diagnosis to confirm exact fault.",
+          a: "We replace both the 14-inch and 16-inch MacBook Pro M3 mini-LED screen at our Dubai workshop, and it costs less than M4 OLED because M3 uses mini-LED LCD. Backlight-only repair is even cheaper if the LCD panel is undamaged. Diagnosis is free. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Is MacBook Pro M3 screen repair cheaper than M4?",
-          a: "Yes. M3 uses mini-LED LCD which costs less than M4 OLED panels. M3 14-inch screen replacement is AED 500 versus AED 700 for M4. Additionally, M3 occasionally allows cheaper backlight-only repair (AED 350) when the LCD panel is intact. M4 OLED never allows this as it has no separate backlight.",
+          a: "Yes. M3 uses mini-LED LCD which costs less than M4 OLED panels, so M3 14-inch screen replacement is cheaper than the M4 equivalent. Additionally, M3 occasionally allows a cheaper backlight-only repair when the LCD panel is intact. M4 OLED never allows this as it has no separate backlight. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "What are the rectangular bright patches on MacBook Pro M3 screen?",
@@ -152,7 +152,7 @@ export default function BlogMacBookProM3ScreenRepair() {
         },
         {
           q: "Can I just replace the cracked glass on MacBook Pro M3 without replacing the screen?",
-          a: "Sometimes. M3 has a separate glass layer over the LCD. If the glass cracked but the LCD underneath is undamaged (no dead pixels, no dark patches, full brightness), glass-only replacement is possible at AED 250. If the LCD is also damaged beneath the cracked glass, full panel replacement is required. Bring it in for a diagnosis first.",
+          a: "Sometimes. M3 has a separate glass layer over the LCD. If the glass cracked but the LCD underneath is undamaged (no dead pixels, no dark patches, full brightness), glass-only replacement is possible and costs less than a full panel. If the LCD is also damaged beneath the cracked glass, full panel replacement is required. Bring it in for a free diagnosis first, or message us on WhatsApp for the price.",
         },
         {
           q: "Does MacBook Pro M3 have OLED or LCD screen?",

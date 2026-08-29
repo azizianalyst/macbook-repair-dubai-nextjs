@@ -134,7 +134,7 @@ export default function BlogMacBookNotTurningOn() {
             Connect a known-good external display via USB-C or HDMI (with adapter). If the
             external lights up and shows the macOS desktop or login screen, the MacBook is alive
             - your built-in display, backlight driver, or display flex cable has failed. That's
-            an AED 600-1,200 repair, not a board-level problem.
+            a display-level repair, not a board-level problem - message us on WhatsApp for the exact price on your model.
           </p>
 
           <h2 id="when-to-bring-in">When to stop trying and bring it in</h2>
@@ -193,7 +193,7 @@ export default function BlogMacBookNotTurningOn() {
         },
         {
           q: "What's the cost if it turns out to be a hardware fault?",
-          a: "Diagnostic is free. Common causes and prices: charging IC AED 800-1,000, power management IC AED 1,000-1,300, display assembly AED 700-1,200, water damage cleanup AED 700-2,500. We quote in writing before any work begins.",
+          a: "Diagnostic is free. Common causes are a failed charging IC, power management IC, display assembly, or water-damage cleanup. We quote in writing before any work begins - message us on WhatsApp with your model and symptom for today's exact price.",
         },
         {
           q: "Will I lose my data if the logic board needs replacement?",

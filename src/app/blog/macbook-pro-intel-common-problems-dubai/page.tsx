@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookProIntelProblems";
 
 export const metadata: Metadata = {
   title: "MacBook Pro Intel Common Problems? Fix Guide Dubai 2026",
-  description: "MacBook Pro Intel common problems in Dubai? Butterfly keyboard failure, AMD GPU solder crack, Flexgate display cable, T2 chip issues. Expert fixes from AED 150.",
+  description: "MacBook Pro Intel common problems in Dubai? Butterfly keyboard failure, AMD GPU solder crack, Flexgate display cable, T2 chip issues. Expert fixes — WhatsApp us.",
   openGraph: {
     title: "MacBook Pro Intel Common Problems? Fix Guide Dubai 2026",
-    description: "Butterfly keyboard, AMD GPU failure, Flexgate, T2 chip issues on MacBook Pro Intel. Expert fixes in Dubai from AED 150.",
+    description: "Butterfly keyboard, AMD GPU failure, Flexgate, T2 chip issues on MacBook Pro Intel. Expert fixes in Dubai — message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-intel-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

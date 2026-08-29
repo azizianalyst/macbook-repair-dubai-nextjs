@@ -23,7 +23,7 @@ export default function BlogMacBookProM3HdmiResolution() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 HDMI Wrong Resolution in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 Pro and M3 Max were the first MacBook Pros with HDMI 2.1, enabling 4K at 144Hz and 8K at 60Hz. Apple Community documented a negotiation bug in Sonoma 14.0 where the M3 HDMI port would connect at HDMI 2.0 rates instead of 2.1, capping resolution at 4K 60Hz even with a 2.1 cable and display. This is a software issue fixed in Sonoma 14.1. Port repair starts from AED 350 in Dubai if the hardware is at fault."
+      hook="MacBook Pro M3 Pro and M3 Max were the first MacBook Pros with HDMI 2.1, enabling 4K at 144Hz and 8K at 60Hz. Apple Community documented a negotiation bug in Sonoma 14.0 where the M3 HDMI port would connect at HDMI 2.0 rates instead of 2.1, capping resolution at 4K 60Hz even with a 2.1 cable and display. This is a software issue fixed in Sonoma 14.1. If the hardware is at fault, message us on WhatsApp for today's exact HDMI port repair price on your model. Free diagnosis in Dubai."
       quickAnswer="MacBook Pro M3 HDMI wrong resolution: check the cable first: HDMI 2.1 requires an 'Ultra High Speed' HDMI cable (48Gbps). Standard HDMI cables shipped with displays cap at HDMI 2.0. In System Settings, Displays, hold Option and click Scaled to see all resolution options. If 4K 120Hz or 144Hz is not listed with a genuine HDMI 2.1 cable, update to Sonoma 14.1 which fixed the HDMI negotiation bug on M3."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -121,11 +121,11 @@ export default function BlogMacBookProM3HdmiResolution() {
 
           <h2 id="repair-cost">MacBook Pro M3 HDMI port repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M3 HDMI port repair pricing. June 2026"
+            caption="MacBook Pro M3 HDMI port repair. June 2026"
             rows={[
-              { model: "HDMI port board replacement (M3 14/16-inch)", ours: "AED 350", apple: "AED 1,000+", note: "HDMI 2.1 controller board, 60-90 mins" },
-              { model: "HDMI port rework (bent pins, not board fault)", ours: "AED 200", apple: "Board replacement", note: "Physical pin repair if not internally damaged" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Cable vs settings vs hardware fault confirmation" },
+              { model: "HDMI port board replacement (M3 14/16-inch)", ours: "Price on request", apple: "Apple Store", note: "HDMI 2.1 controller board, 60-90 mins" },
+              { model: "HDMI port rework (bent pins, not board fault)", ours: "Price on request", apple: "Board replacement", note: "Physical pin repair if not internally damaged" },
+              { model: "Diagnostic", ours: "Free", apple: "Apple Store", note: "Cable vs settings vs hardware fault confirmation" },
             ]}
           />
 
@@ -166,7 +166,7 @@ export default function BlogMacBookProM3HdmiResolution() {
         },
         {
           q: "How much does MacBook Pro M3 HDMI port repair cost in Dubai?",
-          a: "HDMI port board replacement costs AED 350 at our Dubai workshop. Physical pin damage repair costs AED 200. Free diagnostic to confirm whether the issue is the cable, settings, or the port hardware before any repair work.",
+          a: "We handle both HDMI port board replacement and physical pin damage repair at our Dubai workshop. Message us on WhatsApp for today's exact price on your model. Free diagnostic first to confirm whether the issue is the cable, settings, or the port hardware before any repair work.",
         },
       ]}
       relatedLinks={[

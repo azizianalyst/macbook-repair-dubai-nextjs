@@ -7,7 +7,7 @@ export default function BlogMacBookFlexgateExplained() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Flexgate Explained: 2016-2017 Pro Display Flaw"
-      seoDescription="Black backlight strip on a 2016-2017 MacBook Pro? It's Flexgate, a flex-cable design flaw. AED 600 cable vs AED 800 display swap. Apple's program is closed."
+      seoDescription="Black backlight strip on a 2016-2017 MacBook Pro? It's Flexgate, a flex-cable design flaw. Cable swap or full display - message us on WhatsApp for today's price."
       path="/blog/macbook-flexgate-explained"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookFlexgateExplained() {
       category="Problem solving · MacBook"
       h1="MacBook Flexgate - What It Is and How to Fix It"
       hook="Black backlight strip on your 2016 or 2017 MacBook Pro? It's called Flexgate - Apple's design flaw - and yes, we still fix it."
-      quickAnswer="Flexgate is a backlight flex-cable design flaw on 2016 and early 2017 MacBook Pro Retina (13″ and 15″), where the cable was 2mm too short. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: AED 600 cable, AED 800 full display."
+      quickAnswer="Flexgate is a backlight flex-cable design flaw on 2016 and early 2017 MacBook Pro Retina (13″ and 15″), where the cable was 2mm too short. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Shafiq", role: "Senior MacBook Pro display technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -92,27 +92,29 @@ export default function BlogMacBookFlexgateExplained() {
             caption="Flexgate repair options at MacBook Repair Dubai - April 2026"
             headers={["Option", "What's done", "Cost", "When to choose"]}
             rows={[
-              { model: "Flex cable replacement", ours: "AED 600", apple: "Open lid, replace flex with longer aftermarket cable", note: "Backlight LEDs still working" },
-              { model: "Full display assembly", ours: "AED 800-950", apple: "Replace entire LCD + backlight + cable", note: "Backlight LEDs damaged by stress" },
+              { model: "Flex cable replacement", ours: "Price on request", apple: "Open lid, replace flex with longer aftermarket cable", note: "Backlight LEDs still working" },
+              { model: "Full display assembly", ours: "Price on request", apple: "Replace entire LCD + backlight + cable", note: "Backlight LEDs damaged by stress" },
             ]}
           />
           <p>
             Cable-only repair works if the backlight LEDs themselves are still healthy - meaning
             you saw the stage-lighting symptom but the bottom LEDs still fire. About 70% of cases
-            we see qualify for the AED 600 cable-only fix.
+            we see qualify for the cable-only fix, which is the more affordable of the two - message
+            us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             If the LEDs at the bottom of the panel have burned out (no light at all from the
             bottom edge even with the lid open at exactly 90 degrees), the panel itself is
-            damaged and a full display replacement is needed - AED 800 for 13″, AED 950 for 15″.
+            damaged and a full display replacement is needed - message us on WhatsApp for the
+            exact price on your 13″ or 15″ model.
           </p>
 
           <h2 id="cost-comparison">Cost in Dubai vs Apple's old program</h2>
           <p>
             When the Apple program was active, qualifying 13″ MacBook Pro repairs were free -
             program eligibility was based on serial number lookup. Today, Apple's out-of-warranty
-            display repair on these models is AED 1,499 (13″) or AED 1,899 (15″). Our pricing
-            saves AED 700-1,000 versus Apple's current rate.
+            display repair on these models is expensive. Our pricing comes in well under Apple's
+            current rate - message us on WhatsApp for today's exact price on your 13″ or 15″ model.
           </p>
 
           <h2 id="m-series-flexgate">Will Flexgate happen on M-series MacBooks?</h2>
@@ -131,8 +133,9 @@ export default function BlogMacBookFlexgateExplained() {
           <h2 id="what-to-do-next">What to do next</h2>
           <p>
             WhatsApp us a photo of the screen with the lid open at full angle (so we can see the
-            stage-lighting pattern) - we'll tell you within 5 minutes whether you need cable-only
-            (AED 600) or full display (AED 800-950). Same-day service for both.
+            stage-lighting pattern) - we'll tell you within 5 minutes whether you need a cable-only
+            repair or a full display, and give you the exact price for your model. Same-day service
+            for both.
           </p>
           <p>
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">

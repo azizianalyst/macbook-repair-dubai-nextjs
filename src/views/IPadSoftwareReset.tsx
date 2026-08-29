@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadSoftwareReset() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Software Reset Dubai - iPadOS Fix | AED 250 Same-Day"
-      seoDescription="iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. AED 250, same day."
+      seoTitle="iPad Software Reset Dubai - iPadOS Fix | Same-Day"
+      seoDescription="iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. Same day - message us on WhatsApp."
       path="/ipad-software-reset-dubai"
       eyebrow="iPad software repair"
       h1="iPad Software Reset Dubai - iPadOS Fix"
-      subtitle="Stuck on the Apple logo, frozen during an update, or trapped in recovery mode. DFU restore done properly - with data preserved where possible. AED 250, same day."
+      subtitle="Stuck on the Apple logo, frozen during an update, or trapped in recovery mode. DFU restore done properly - with data preserved where possible. Same day - message us on WhatsApp for today's price."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, my iPad needs a software reset - model and symptom:"
@@ -23,7 +23,7 @@ export default function IPadSoftwareReset() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Most "dead" iPads aren't dead - they're stuck in software</strong>: a failed iPadOS 18 update, a corrupted system partition after a forced shutdown, or a recovery-mode loop after low battery during an update. AED 250 covers the full DFU recovery process, including data preservation attempt before any erase. Same day on every iPad from iPad 5 through M4 Pro.
+            <strong>Most "dead" iPads aren't dead - they're stuck in software</strong>: a failed iPadOS 18 update, a corrupted system partition after a forced shutdown, or a recovery-mode loop after low battery during an update. Our flat service covers the full DFU recovery process, including a data preservation attempt before any erase - message us on WhatsApp for today's exact price on your model. Same day on every iPad from iPad 5 through M4 Pro.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We start with the gentlest method (force restart, then standard recovery) and only escalate to DFU + erase if needed. About 60% of iPads we see this way come back with the original data intact. The rest need a clean iPadOS reinstall - your iCloud backup gets restored automatically afterwards.

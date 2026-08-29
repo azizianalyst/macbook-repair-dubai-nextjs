@@ -7,7 +7,7 @@ export default function BlogMacBookProM3BatteryDraining() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 Battery Draining When Not in Use Dubai 2026: Fix Guide"
-      seoDescription="MacBook Pro M3 battery draining when not in use in Dubai? M3 losing charge overnight or during sleep. DarkWake, backgroundtaskmanagerd, and Sonoma power bugs. Battery from AED 550."
+      seoDescription="MacBook Pro M3 battery draining when not in use in Dubai? M3 losing charge overnight or during sleep. DarkWake, backgroundtaskmanagerd, and Sonoma power bugs. Message us for a battery quote."
       path="/blog/macbook-pro-m3-battery-draining-when-not-in-use-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM3BatteryDraining() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 Battery Draining When Not in Use in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 should lose under 1% per hour during sleep. Apple Community threads from late 2023 through 2024 document M3 losing 15-30% overnight, traced to a Sonoma process called backgroundtaskmanagerd that prevented the M3 from entering deep sleep. The fix is a combination of a macOS update and two settings changes. Battery replacement starts from AED 550 in Dubai if the cell itself is degraded."
+      hook="MacBook Pro M3 should lose under 1% per hour during sleep. Apple Community threads from late 2023 through 2024 document M3 losing 15-30% overnight, traced to a Sonoma process called backgroundtaskmanagerd that prevented the M3 from entering deep sleep. The fix is a combination of a macOS update and two settings changes. If the cell itself is degraded, message us on WhatsApp for a battery replacement quote in Dubai."
       quickAnswer="MacBook Pro M3 battery draining overnight: update to Sonoma 14.2 or later (backgroundtaskmanagerd bug was fixed in 14.2). Disable Power Nap on battery (System Settings, Battery, Options). Run 'pmset -g assertions' in Terminal to check what is preventing sleep. If drain continues after these fixes on a machine over 2 years old, check battery health. M3 batteries in Dubai reach replacement condition in 2-2.5 years."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -103,8 +103,8 @@ export default function BlogMacBookProM3BatteryDraining() {
               </tr>
               <tr>
                 <td>Battery replacement cost (Dubai)</td>
-                <td>AED 500</td>
-                <td>AED 550</td>
+                <td>Price on request</td>
+                <td>Price on request</td>
               </tr>
             </tbody>
           </table>
@@ -113,9 +113,9 @@ export default function BlogMacBookProM3BatteryDraining() {
           <BlogPriceTable
             caption="MacBook Pro M3 battery replacement pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch battery", ours: "AED 550", apple: "AED 899", note: "70 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch battery", ours: "AED 600", apple: "AED 999", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Battery diagnostic", ours: "Free", apple: "AED 250", note: "Cycle count, capacity, cell voltage" },
+              { model: "MacBook Pro M3 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Battery diagnostic", ours: "Free", apple: "Price on request", note: "Cycle count, capacity, cell voltage" },
             ]}
           />
 
@@ -152,7 +152,7 @@ export default function BlogMacBookProM3BatteryDraining() {
         },
         {
           q: "How much does MacBook Pro M3 battery replacement cost in Dubai?",
-          a: "MacBook Pro M3 14-inch battery replacement costs AED 550 at our Dubai workshop. The 16-inch costs AED 600. Apple charges AED 899 (14-inch) and AED 999 (16-inch). 12-month warranty on replacement cells, same-day service.",
+          a: "We replace MacBook Pro M3 14-inch and 16-inch batteries at our Dubai workshop with a 12-month warranty on the replacement cell and same-day service in most cases. Pricing depends on your exact model and battery condition, and we are typically well below Apple. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Is it safe to use MacBook Pro M3 with high battery drain during sleep?",

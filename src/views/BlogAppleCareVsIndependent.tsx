@@ -33,8 +33,8 @@ export default function BlogAppleCareVsIndependent() {
             Tower, Dubai Media City since 2004. We are not an Apple Authorised Service Provider. That
             single fact decides most of this comparison, so it goes at the top, not buried in the
             small print. There are real cases where Apple or AppleCare+ is the better choice, and we
-            will name them plainly. There are others where an independent shop saves you a few hundred
-            dirhams and a week of waiting.
+            will name them plainly. There are others where an independent shop saves you a good deal of
+            money and a week of waiting.
           </p>
           <p>
             If you want the full breakdown of how a third-party repair sits alongside any remaining
@@ -85,19 +85,20 @@ export default function BlogAppleCareVsIndependent() {
             means a panel swap with the original lid kept, which is where the saving comes from.
           </p>
           <p>
-            Our real, grounded figures: MacBook screen repair{" "}
+            Where we save you money: MacBook{" "}
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
-              from AED 600
+              screen repair
             </Link>{" "}
-            (Air 13-inch and Pro 13-inch panel, up to AED 1,200 on the 16-inch Pro), and{" "}
+            (Air 13-inch, Pro 13-inch and 16-inch Pro panels) and{" "}
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
-              battery replacement from AED 450
-            </Link>
-            . Diagnosis is free, the warranty is 12 months written on parts and labour (6 months on
-            batteries), and most jobs are same-day with free pickup across Dubai mainland. You can see
-            every service on our{" "}
+              battery replacement
+            </Link>{" "}
+            typically come in well under Apple's out-of-warranty quote. Diagnosis is free, the warranty
+            is 12 months written on parts and labour (6 months on batteries), and most jobs are same-day
+            with free pickup across Dubai mainland. Message us on WhatsApp for today's exact price on your
+            model, or see every service on our{" "}
             <Link to="/pricing" className="text-accent font-semibold hover:underline">
-              pricing page
+              services page
             </Link>
             .
           </p>
@@ -162,7 +163,7 @@ export default function BlogAppleCareVsIndependent() {
         },
         {
           q: "When is an independent repair cheaper than Apple?",
-          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen repair starts at AED 600 and battery replacement at AED 450, with free diagnosis and a written warranty up to 12 months. See our pricing page for every service.",
+          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen and battery repairs usually come in well under an Apple quote, with free diagnosis and a written warranty up to 12 months. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can you repair an older MacBook Apple says is obsolete?",
@@ -172,7 +173,7 @@ export default function BlogAppleCareVsIndependent() {
       relatedLinks={[
         { label: "AppleCare and MacBook repair", href: "/applecare-macbook-repair-dubai", description: "How third-party repair sits alongside any remaining Apple cover." },
         { label: "Out-of-warranty Apple repair", href: "/out-of-warranty-apple-repair-dubai", description: "Parts tiers and pricing once Apple's warranty ends." },
-        { label: "MacBook screen repair", href: "/macbook-screen-repair-dubai", description: "From AED 600, same-day, 3-month written warranty." },
+        { label: "MacBook screen repair", href: "/macbook-screen-repair-dubai", description: "Same-day, written warranty — WhatsApp us for your model's price." },
       ]}
     />
   );

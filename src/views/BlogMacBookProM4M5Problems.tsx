@@ -7,7 +7,7 @@ export default function BlogMacBookProM4M5Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 M5 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M4 M5 common problems in Dubai? Display flicker, Wi-Fi drops, memory pressure, thermal throttle, USB-C faults, with step-by-step fixes. Repair from AED 350."
+      seoDescription="MacBook Pro M4 M5 common problems in Dubai? Display flicker, Wi-Fi drops, memory pressure, thermal throttle, USB-C faults, with step-by-step fixes. Free diagnosis."
       path="/blog/macbook-pro-m4-m5-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookProM4M5Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 M5 Common Problems in Dubai? Here's What's Wrong and How to Fix It"
-      hook="The M4 and M5 MacBook Pros are the fastest laptops Apple has ever made, but they are not immune to faults. In Dubai's 45°C summer ambient, certain problems appear more often than Apple's specs suggest. Most have a fix you can try in 10 minutes. Some need a technician. Repairs start from AED 350."
+      hook="The M4 and M5 MacBook Pros are the fastest laptops Apple has ever made, but they are not immune to faults. In Dubai's 45°C summer ambient, certain problems appear more often than Apple's specs suggest. Most have a fix you can try in 10 minutes. Some need a technician. Diagnosis is always free, message us on WhatsApp for a repair quote on your model."
       quickAnswer="MacBook Pro M4 M5 common problems include: display flickering or black screens (cable or firmware), Wi-Fi dropping (Bluetooth coexistence), memory pressure on 8GB base models, thermal throttling in Dubai heat above 40°C, loose USB-C ports after heavy cable cycling, and kernel panics from bad macOS extensions. Start with an NVRAM reset and a macOS update. If symptoms persist, bring it in for free diagnosis."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -58,7 +58,7 @@ export default function BlogMacBookProM4M5Problems() {
             Check for updates first: Apple menu, System Settings, General, Software Update. If the
             flickering started with a specific macOS version, roll back using macOS Recovery or wait
             for the next patch. If the Stage Light effect is present, the flex cable needs physical
-            replacement, not software. Repair cost in Dubai: AED 350-500.
+            replacement, not software. Message us on WhatsApp for a repair quote on your model.
           </p>
           <p>
             One Dubai-specific pattern: leaving the MacBook on a desk in direct sunlight through a
@@ -154,8 +154,9 @@ export default function BlogMacBookProM4M5Problems() {
           <p>
             The first check is always to try a different cable and a different port. If a port-
             specific problem is confirmed, bring it in. USB-C port repair on M4 MacBook Pro is a
-            board-level job because the ports are soldered directly to the logic board. Repair cost
-            in Dubai: AED 400-600 depending on whether it is socket replacement or trace repair.
+            board-level job because the ports are soldered directly to the logic board. The exact
+            cost depends on whether it is socket replacement or trace repair, message us on WhatsApp
+            for a quote after your free diagnosis.
           </p>
 
           <h2 id="kernel-panics">Why Is My MacBook Pro M4 Crashing? Kernel Panics Explained</h2>
@@ -255,16 +256,18 @@ export default function BlogMacBookProM4M5Problems() {
 
           <h2 id="repair-costs">How Much Do M4 and M5 MacBook Pro Repairs Cost in Dubai?</h2>
           <p>
-            Here are current workshop prices for the most common M4 and M5 MacBook Pro repairs:
+            Here are the most common M4 and M5 MacBook Pro repairs we handle. Message us on WhatsApp
+            for today's exact price on your model and fault:
           </p>
           <BlogPriceTable
-            caption="MacBook Pro M4 M5 repair pricing. June 2026"
+            caption="MacBook Pro M4 M5 repairs. Message us on WhatsApp for a quote"
+            headers={["Repair", "Our price", "Turnaround", "Notes"]}
             rows={[
-              { model: "Diagnosis (all faults)", ours: "Free", apple: "AED 349+", note: "We tell you what's wrong before any work starts" },
-              { model: "USB-C port repair (M4/M5)", ours: "AED 400-600", apple: "AED 949+", note: "Board-level socket or trace repair, same-day" },
-              { model: "Display cable repair (Flexgate)", ours: "AED 350-500", apple: "AED 849+", note: "Stage Light fix, 14-inch and 16-inch" },
-              { model: "Logic board repair (M4)", ours: "AED 1,200-2,500", apple: "AED 3,500+", note: "Component-level, not full board swap" },
-              { model: "Logic board repair (M5)", ours: "AED 1,500-3,000", apple: "AED 3,999+", note: "Component-level, price varies by fault" },
+              { model: "Diagnosis (all faults)", ours: "Free", apple: "Same day", note: "We tell you what's wrong before any work starts" },
+              { model: "USB-C port repair (M4/M5)", ours: "Price on request", apple: "Same day", note: "Board-level socket or trace repair" },
+              { model: "Display cable repair (Flexgate)", ours: "Price on request", apple: "Same day", note: "Stage Light fix, 14-inch and 16-inch" },
+              { model: "Logic board repair (M4)", ours: "Price on request", apple: "2-4 days", note: "Component-level, not full board swap" },
+              { model: "Logic board repair (M5)", ours: "Price on request", apple: "2-4 days", note: "Component-level, price varies by fault" },
             ]}
           />
           <p>

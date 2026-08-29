@@ -14,6 +14,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
@@ -55,7 +56,7 @@ type SymptomCard = { title: string; body: string };
 const SYMPTOMS: SymptomCard[] = [
   {
     title: "Keys not registering or double-registering",
-    body: "The most common Air keyboard fault. Intel butterfly keys stop registering after dust ingress. M1–M4 Magic Keyboard keys double-register from worn scissor clips. Both are fixable — butterfly requires top-case replacement (AED 350); Magic Keyboard can often be fixed with an individual key cap (AED 300).",
+    body: "The most common Air keyboard fault. Intel butterfly keys stop registering after dust ingress. M1–M4 Magic Keyboard keys double-register from worn scissor clips. Both are fixable — butterfly requires a top-case replacement; Magic Keyboard can often be fixed with an individual key cap. Message us on WhatsApp for today's exact price on your model.",
   },
   {
     title: "Sticky or stuck keys after liquid spill",
@@ -88,7 +89,7 @@ const FAQ_GROUPS: { title: string; items: FaqItem[]; injectSchema?: boolean }[] 
     items: [
       {
         q: "How much does MacBook Air keyboard repair cost in Dubai?",
-        a: "MacBook Air keyboard repair at MacBook Repair Dubai starts from AED 300 for individual key replacement on M1–M4 models and AED 350 for Intel Air top-case replacement. Full top-case replacement on M1–M4 is AED 480–530. Apple charges AED 549–649. All prices include diagnosis, parts, and labour.",
+        a: "MacBook Air keyboard repair at MacBook Repair Dubai covers individual key replacement on M1–M4 models, Intel Air top-case replacement, and full top-case swaps — usually well below Apple's pricing. Every quote includes diagnosis, parts, and labour. Message us on WhatsApp with your model for today's exact price.",
       },
       {
         q: "How long does MacBook Air keyboard repair take in Dubai?",
@@ -100,7 +101,7 @@ const FAQ_GROUPS: { title: string; items: FaqItem[]; injectSchema?: boolean }[] 
       },
       {
         q: "Does Apple still repair Intel MacBook Air butterfly keyboards in Dubai?",
-        a: "Apple services the 2018–2020 Intel Air but the butterfly keyboard models are approaching end of preferred support. MacBook Repair Dubai carries top-case assemblies for all Intel Air models (2018–2020) and repairs them same-day for AED 350.",
+        a: "Apple services the 2018–2020 Intel Air but the butterfly keyboard models are approaching end of preferred support. MacBook Repair Dubai carries top-case assemblies for all Intel Air models (2018–2020) and repairs them same-day. Message us on WhatsApp for today's exact price.",
       },
     ],
   },
@@ -142,13 +143,11 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   );
 }
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
-
 export default function MacBookAirKeyboardRepair() {
   useSeo(
     {
-      title: "MacBook Air Keyboard Repair Dubai — From AED 300",
-      description: "MacBook Air keyboard repair Dubai from AED 300. Intel butterfly and M1–M4 Magic Keyboard. Individual key caps, sticky keys, backlight, Touch ID. Same-day 2-hour service. Call 055 741 3706.",
+      title: "MacBook Air Keyboard Repair Dubai — Same Day",
+      description: "MacBook Air keyboard repair Dubai. Intel butterfly and M1–M4 Magic Keyboard. Individual key caps, sticky keys, backlight, Touch ID. Same-day 2-hour service. WhatsApp for a quote.",
       path: "/macbook-air-keyboard-repair-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -161,7 +160,7 @@ export default function MacBookAirKeyboardRepair() {
         timeline: "Same day · 2 hours",
         warranty: "P15D",
         url: "/macbook-air-keyboard-repair-dubai",
-        description: "MacBook Air keyboard repair Dubai from AED 300. Intel butterfly top-case and M1–M4 Magic Keyboard individual key replacement. Same-day service.",
+        description: "MacBook Air keyboard repair Dubai. Intel butterfly top-case and M1–M4 Magic Keyboard individual key replacement. Same-day service.",
       }),
     ],
   );
@@ -192,10 +191,10 @@ export default function MacBookAirKeyboardRepair() {
           imageAlt={IMG.hero.alt}
         >
           <p className="mt-md text-[15px] text-text-muted leading-relaxed max-w-[56ch]">
-            MacBook Air keyboard repair in Dubai starts from AED 300 for individual key replacement on M1–M4 models and AED 350 for Intel Air top-case replacement. MacBook Repair Dubai carries parts for every Air keyboard generation — butterfly (Intel 2018–2020) and Magic Keyboard scissor (M1 through M4). Same-day 2-hour service on most models. Free diagnosis before any repair is quoted.
+            MacBook Air keyboard repair in Dubai covers individual key replacement on M1–M4 models and Intel Air top-case replacement. MacBook Repair Dubai carries parts for every Air keyboard generation — butterfly (Intel 2018–2020) and Magic Keyboard scissor (M1 through M4). Same-day 2-hour service on most models. Free diagnosis before any repair is quoted — message us on WhatsApp for today's exact price.
           </p>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> From AED 300</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Quote on WhatsApp</span>
             <span>·</span>
             <span>Free key-by-key diagnosis</span>
             <span>·</span>
@@ -288,7 +287,9 @@ export default function MacBookAirKeyboardRepair() {
                 {PRICING.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} keyboard repair in Dubai?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
                       {r.l6href && (
@@ -358,7 +359,7 @@ export default function MacBookAirKeyboardRepair() {
               {[
                 { Icon: Keyboard,    title: "Butterfly + Magic Keyboard",   body: "We carry top-case assemblies for Intel butterfly and key caps/scissor mechanisms for M1–M4 Magic Keyboard." },
                 { Icon: Clock,       title: "Same-day on most models",      body: "Intel, M1, M2, M3 Air keyboards completed same-day. M4 typically 1–2 business days as parts build." },
-                { Icon: Wrench,      title: "Individual key repair M1–M4",  body: "Most single-key issues on M1–M4 Air are fixed for AED 300 without replacing the full top-case assembly." },
+                { Icon: Wrench,      title: "Individual key repair M1–M4",  body: "Most single-key issues on M1–M4 Air are fixed without replacing the full top-case assembly — message us for the exact price." },
                 { Icon: ShieldCheck, title: "Touch ID transfer included",   body: "If we replace the top case on an M1–M4 Air, the original Touch ID button is transferred at no extra charge." },
               ].map(({ Icon, title, body }) => (
                 <div key={title} className="flex flex-col gap-sm">
@@ -388,7 +389,7 @@ export default function MacBookAirKeyboardRepair() {
                 Common questions about Air keyboard repair in Dubai.
               </p>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>From AED 300</span>
+                <span>Quote on WhatsApp</span>
                 <span>Free key-by-key diagnosis</span>
                 <span>15-day warranty</span>
                 <span>Free pickup Dubai-wide</span>
@@ -424,7 +425,7 @@ export default function MacBookAirKeyboardRepair() {
                 MacBook Air · All generations
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                MacBook Air keyboard repair from AED 300 · Free diagnosis · 15-day warranty
+                MacBook Air keyboard repair · Free diagnosis · 15-day warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

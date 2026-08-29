@@ -7,7 +7,7 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Keyboard Not Working Dubai 2026: Key Fix Guide"
-      seoDescription="MacBook Pro M4 keyboard key not working in Dubai? Single key stuck, double-typing, or entire keyboard unresponsive. Step-by-step fix guide. Keyboard repair from AED 250."
+      seoDescription="MacBook Pro M4 keyboard key not working in Dubai? Single key stuck, double-typing, or entire keyboard unresponsive. Step-by-step fix guide. Message us for repair pricing."
       path="/blog/macbook-pro-m4-keyboard-not-working-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Keyboard Not Working in Dubai? Key Fix Guide 2026"
-      hook="MacBook Pro M4 keyboard failures in Dubai range from a single stuck key to an entire keyboard going unresponsive. The M4 uses the Magic Keyboard mechanism, which is more reliable than the butterfly keyboard that caused widespread failures on 2016-2019 Intel models. Most M4 keyboard issues are dust, software, or a calibration problem rather than hardware. Keyboard repair from AED 250 in Dubai."
-      quickAnswer="MacBook Pro M4 keyboard key not working: if a single key double-types or types the wrong character, go to System Settings, Accessibility, Keyboard, and adjust Key Repeat and Delay settings. If a key is physically stuck, a small piece of dust or debris is likely under the keycap. If the entire keyboard is unresponsive, a macOS driver hang is the likely cause: force restart (hold power 10 seconds). Keyboard replacement from AED 250 if physical damage is confirmed."
+      hook="MacBook Pro M4 keyboard failures in Dubai range from a single stuck key to an entire keyboard going unresponsive. The M4 uses the Magic Keyboard mechanism, which is more reliable than the butterfly keyboard that caused widespread failures on 2016-2019 Intel models. Most M4 keyboard issues are dust, software, or a calibration problem rather than hardware. Message us on WhatsApp for today's keyboard repair price on your model."
+      quickAnswer="MacBook Pro M4 keyboard key not working: if a single key double-types or types the wrong character, go to System Settings, Accessibility, Keyboard, and adjust Key Repeat and Delay settings. If a key is physically stuck, a small piece of dust or debris is likely under the keycap. If the entire keyboard is unresponsive, a macOS driver hang is the likely cause: force restart (hold power 10 seconds). If physical damage is confirmed, message us on WhatsApp for keyboard replacement pricing on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -76,7 +76,7 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Compressed air</strong>: hold the MacBook Pro at a 75-degree angle and spray compressed air in short bursts at the stuck key from left, right, and below. This dislodges most loose debris from beneath scissor switch keycaps</li>
             <li><strong>Do not use a vacuum</strong>: static electricity risk to the logic board</li>
-            <li><strong>Do not pry the keycap off</strong>: M4 scissor switch keycaps can be removed but the retention clip breaks easily if pulled at the wrong angle. Professional keycap removal with the correct tools at our workshop costs AED 80 per key including cleaning</li>
+            <li><strong>Do not pry the keycap off</strong>: M4 scissor switch keycaps can be removed but the retention clip breaks easily if pulled at the wrong angle. Professional keycap removal with the correct tools at our workshop includes cleaning — message us for the per-key price</li>
             <li><strong>Residue from drinks or food</strong>: if something spilled on the keyboard and dried, isopropyl alcohol on a cloth pressed around the key border (not inside the key) dissolves residue. Do not pour liquid onto the keyboard</li>
           </ul>
 
@@ -143,10 +143,10 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
           <BlogPriceTable
             caption="MacBook Pro M4 keyboard repair pricing. June 2026"
             rows={[
-              { model: "Single keycap cleaning and refit", ours: "AED 80", apple: "Not offered (full top case only)", note: "Debris removal, keycap reseating" },
-              { model: "Keyboard top case replacement (M4 14-inch)", ours: "AED 250", apple: "AED 800+", note: "Includes keyboard + trackpad + battery" },
-              { model: "Keyboard top case replacement (M4 16-inch)", ours: "AED 300", apple: "AED 900+", note: "Full top case assembly" },
-              { model: "Keyboard diagnostic", ours: "Free", apple: "AED 250", note: "Confirm hardware vs software vs driver cause" },
+              { model: "Single keycap cleaning and refit", ours: "Price on request", apple: "Not offered (full top case only)", note: "Debris removal, keycap reseating" },
+              { model: "Keyboard top case replacement (M4 14-inch)", ours: "Price on request", apple: "Price on request", note: "Includes keyboard + trackpad + battery" },
+              { model: "Keyboard top case replacement (M4 16-inch)", ours: "Price on request", apple: "Price on request", note: "Full top case assembly" },
+              { model: "Keyboard diagnostic", ours: "Free", apple: "Price on request", note: "Confirm hardware vs software vs driver cause" },
             ]}
           />
 
@@ -158,7 +158,7 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
             <li>Single key still fails after professional cleaning and switch inspection</li>
           </ul>
           <p>
-            On M4, keyboard replacement means a top case assembly (keyboard, trackpad, and battery together as one unit). Our workshop price of AED 250-300 includes parts and labour.{" "}
+            On M4, keyboard replacement means a top case assembly (keyboard, trackpad, and battery together as one unit). Our workshop price includes parts and labour — message us on WhatsApp for the exact price on your 14-inch or 16-inch M4.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai
             </Link>
@@ -180,11 +180,11 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
         },
         {
           q: "How much does MacBook Pro M4 keyboard repair cost in Dubai?",
-          a: "Single keycap cleaning and refit costs AED 80 for debris-related failures. Full keyboard top case replacement (needed for multiple dead keys or liquid damage) costs AED 250 (14-inch) or AED 300 (16-inch). Apple charges AED 800-900 for the same top case replacement. Free diagnostic to confirm hardware vs software cause before starting any repair.",
+          a: "It depends on the failure: a single keycap cleaning and refit for debris-related issues, or a full keyboard top case replacement for multiple dead keys or liquid damage (14-inch or 16-inch). We are well below Apple for the same top case replacement. Free diagnostic to confirm hardware vs software cause first, then message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Can I replace just one key on MacBook Pro M4?",
-          a: "Individual keycaps can be replaced for AED 80 including cleaning. However, if the key switch mechanism beneath the keycap is damaged (not just the keycap), Apple's design requires the entire top case assembly to be replaced. We assess each case individually to determine if a keycap replacement is sufficient or a top case is needed.",
+          a: "Individual keycaps can be replaced including cleaning — message us for the per-key price. However, if the key switch mechanism beneath the keycap is damaged (not just the keycap), Apple's design requires the entire top case assembly to be replaced. We assess each case individually to determine if a keycap replacement is sufficient or a top case is needed.",
         },
         {
           q: "How long does MacBook Pro M4 keyboard repair take in Dubai?",

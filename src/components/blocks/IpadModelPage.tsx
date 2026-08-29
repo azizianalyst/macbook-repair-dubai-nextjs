@@ -94,12 +94,12 @@ function worthRepairingVerdict(m: IpadModel): { headline: string; body: string }
   if (age <= 5) {
     return {
       headline: "Usually yes - depends on what's broken",
-      body: `${age} years old in 2026. Battery and port repairs (under AED 500) are no-brainers. Screen repairs need a bit more thought - we'll show you the price first and you decide.`,
+      body: `${age} years old in 2026. Battery and port repairs are no-brainers - message us for today's price. Screen repairs need a bit more thought - we'll show you the price first and you decide.`,
     };
   }
   return {
     headline: "Be selective - we'll be honest at intake",
-    body: `${age} years old. Battery (AED ${m.pricing.battery}) is almost always worth it. Screen repair (AED ${m.pricing.screen}) you should weigh against a newer used unit. We'll tell you straight.`,
+    body: `${age} years old. A battery replacement is almost always worth it. A screen repair you should weigh against a newer used unit - WhatsApp us for the exact price and we'll tell you straight.`,
   };
 }
 
@@ -115,25 +115,25 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
   const rows: ServiceRow[] = [
     {
       service: "Screen replacement",
-      price: m.pricing.screen,
+      price: "Price on request",
       href: "/ipad-screen-repair-dubai",
       timeline: m.category === "pro" && m.releaseYear >= 2024 ? "3-5 days (Tandem OLED)" : "1-2 days",
     },
     {
       service: "Battery replacement",
-      price: m.pricing.battery,
+      price: "Price on request",
       href: "/ipad-battery-replacement-dubai",
       timeline: "Same-day",
     },
     {
       service: m.connector.toLowerCase().includes("usb-c") ? "USB-C port replacement" : "Lightning port replacement",
-      price: m.pricing.port,
+      price: "Price on request",
       href: "/ipad-charging-port-repair-dubai",
       timeline: "Same-day",
     },
     {
       service: "Water damage diagnostic + repair",
-      price: m.pricing.waterDamage,
+      price: "Price on request",
       href: "/ipad-water-damage-repair-dubai",
       timeline: "2-4 days",
     },
@@ -141,7 +141,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
   if (m.pricing.cameraRepair > 0) {
     rows.push({
       service: "Rear / FaceTime camera repair",
-      price: m.pricing.cameraRepair,
+      price: "Price on request",
       href: "/ipad-camera-repair-dubai",
       timeline: "1-2 days",
     });
@@ -149,7 +149,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
   if (m.pricing.homeButton && m.pricing.homeButton > 0) {
     rows.push({
       service: "Home / Touch ID button repair",
-      price: m.pricing.homeButton,
+      price: "Price on request",
       href: "/ipad-home-button-repair-dubai",
       timeline: "1-2 days",
     });
@@ -157,7 +157,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
   if (m.pricing.faceId && m.pricing.faceId > 0) {
     rows.push({
       service: "Face ID module repair",
-      price: m.pricing.faceId,
+      price: "Price on request",
       href: "/ipad-full-diagnostic-dubai",
       timeline: "2-3 days (sometimes not 100%)",
     });
@@ -190,17 +190,16 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   const verdict = worthRepairingVerdict(model);
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
-  const startingPrice = Math.min(model.pricing.battery, model.pricing.port);
 
   // 5 auto-generated FAQs from data
   const faqs = [
     {
       q: `How much does it cost to repair the ${model.name} screen in Dubai?`,
-      a: `Screen replacement on the ${model.name} is AED ${model.pricing.screen}. Timeline: ${model.timelineNotes.split(".")[0]}. Includes a 3-month written warranty on the new panel and the labour.`,
+      a: `Message us on WhatsApp for today's exact price on a ${model.name} screen replacement. Timeline: ${model.timelineNotes.split(".")[0]}. Includes a 3-month written warranty on the new panel and the labour.`,
     },
     {
       q: `Can you replace the ${model.name} battery the same day?`,
-      a: `Yes - battery service on the ${model.name} is AED ${model.pricing.battery} and we typically complete it the same day. We use cells with a verified cycle count and seal the back properly.`,
+      a: `Yes - we typically complete ${model.name} battery service the same day. We use cells with a verified cycle count and seal the back properly. WhatsApp us the model for the exact price.`,
     },
     {
       q: `Is the ${model.name} still worth repairing in 2026?`,
@@ -218,13 +217,13 @@ export default function IpadModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai. Screen AED ${model.pricing.screen}, battery AED ${model.pricing.battery}, port AED ${model.pricing.port}. Warranty up to 12 months. Free pickup.`}
+      seoTitle={`${model.name} Repair Dubai - Screen, Battery, Port`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty up to 12 months, free pickup. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup across Dubai.`}
-      startingPrice={startingPrice}
+      subtitle={`${model.heroTagline} Written warranty up to 12 months. Free pickup across Dubai - message us on WhatsApp for today's price.`}
+      startingPrice={0}
       timeline={model.category === "pro" && model.releaseYear >= 2024 ? "3-5 days (screen) · same-day (battery)" : "Same-day to 2 days"}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
       breadcrumb={[
@@ -265,7 +264,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
               <thead className="bg-bg-alt">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>

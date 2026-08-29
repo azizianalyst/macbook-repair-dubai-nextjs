@@ -7,12 +7,12 @@ export default function BlogIPhoneFold2026() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Fold 2026: What We Know About Apple's Fold"
-      seoDescription="Apple's first foldable iPhone is expected in September 2026 near AED 7,500. Confirmed leaks, expected specs, repair concerns, and whether to wait or buy now."
+      seoDescription="Apple's first foldable iPhone is expected in September 2026. Confirmed leaks, expected specs, repair concerns, and whether to wait or buy now."
       path="/blog/iphone-fold-2026-what-to-expect"
       wide
       toc={[
         { id: "confirmed-leaks", label: "Confirmed supply-chain leaks" },
-        { id: "expected-price", label: "Expected price" },
+        { id: "expected-price", label: "Expected price tier" },
         { id: "display-tech", label: "Display tech" },
         { id: "camera-setup", label: "Camera setup" },
         { id: "battery-life", label: "Battery life implications" },
@@ -23,7 +23,7 @@ export default function BlogIPhoneFold2026() {
       category="Industry · iPhone Fold"
       h1="iPhone Fold (Sept 2026) - Everything Known So Far"
       hook="Apple's first foldable iPhone launches September 2026. Here's the credible info, no hype."
-      quickAnswer="Apple is expected to launch the iPhone Fold in September 2026 at around AED 7,500. Supply-chain reports point to a 7.8-inch internal OLED with a near-zero-crease hinge, A20 Pro chip, dual cameras, titanium frame, and 4,800 mAh battery. Inner-display repairs may start at AED 3,500. We don't advise pre-ordering first-gen foldables."
+      quickAnswer="Apple is expected to launch the iPhone Fold in September 2026 at a flagship price tier. Supply-chain reports point to a 7.8-inch internal OLED with a near-zero-crease hinge, A20 Pro chip, dual cameras, titanium frame, and 4,800 mAh battery. Inner-display repairs will be the most expensive part to service - message us on WhatsApp for a Fold repair estimate once it launches. We don't advise pre-ordering first-gen foldables."
       author={{ name: "Usman", role: "Senior iPhone technician" }}
       datePublished="2026-04-26"
       dateModified="2026-04-26"
@@ -61,19 +61,22 @@ export default function BlogIPhoneFold2026() {
             ]}
           />
 
-          <h2 id="expected-price">Expected price (~USD 2,000 / AED 7,500)</h2>
+          <h2 id="expected-price">Expected price tier (flagship, ultra-premium)</h2>
           <p>
-            Multiple sources have settled on USD 1,999 for the 256GB base. UAE pricing typically runs ~5%
-            above USD launch price (VAT, distributor margin), so expect:
+            Multiple sources agree the iPhone Fold will sit at the very top of Apple's line-up. UAE retail
+            typically runs slightly above the US launch price once VAT and distributor margin are added, and the
+            three tiers are expected to be:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>iPhone Fold 256GB: AED 7,499</li>
-            <li>iPhone Fold 512GB: AED 8,299</li>
-            <li>iPhone Fold 1TB: AED 9,599</li>
+            <li>iPhone Fold 256GB (base)</li>
+            <li>iPhone Fold 512GB (mid)</li>
+            <li>iPhone Fold 1TB (top)</li>
           </ul>
           <p>
-            That makes it Apple's most expensive iPhone ever, eclipsing the iPhone 17 Pro Max 1TB
-            (AED 6,899). It's still cheaper than the Samsung Galaxy Z Fold 7 1TB at AED 9,899.
+            That would make it Apple's most expensive iPhone ever, above the iPhone 17 Pro Max 1TB, and still
+            positioned below the top-storage Samsung Galaxy Z Fold 7. For live UAE retail pricing check Apple's
+            store or your carrier at launch - our focus is repair, and you can always message us on WhatsApp for
+            a repair estimate.
           </p>
 
           <h2 id="display-tech">Display tech (zero-crease claimed)</h2>
@@ -114,7 +117,7 @@ export default function BlogIPhoneFold2026() {
           <h2 id="wait-or-buy">Should you wait or buy iPhone 17 Pro Max now?</h2>
           <p>
             <strong>Buy 17 Pro Max now if:</strong> you need a phone today, you take photos seriously, you
-            value battery life, you're hard on devices, you can't afford AED 7,500.
+            value battery life, you're hard on devices, or you'd rather not pay ultra-premium foldable money.
           </p>
           <p>
             <strong>Wait for the iPhone Fold if:</strong> you genuinely want a tablet-in-pocket form factor,
@@ -128,15 +131,15 @@ export default function BlogIPhoneFold2026() {
 
           <h2 id="repair-pricing">Repair pricing predictions for our shop</h2>
           <BlogPriceTable
-            caption="iPhone Fold - predicted repair pricing (Dubai, post-launch)"
-            headers={["Repair", "Apple Store estimate", "Our estimate"]}
+            caption="iPhone Fold - repair services we expect to offer (Dubai, post-launch)"
+            headers={["Repair", "Apple Store", "MacBook Repair Dubai"]}
             rows={[
-              { model: "Outer screen replacement", ours: "AED 1,800", apple: "AED 1,200", note: "Glass + OLED" },
-              { model: "Inner foldable display", ours: "AED 5,800", apple: "AED 3,500", note: "Highest cost part" },
-              { model: "Hinge mechanism", ours: "AED 2,400", apple: "AED 1,400", note: "Mechanical service" },
-              { model: "Battery (both cells)", ours: "AED 800", apple: "AED 500", note: "Split-cell design" },
-              { model: "Back glass (each side)", ours: "AED 1,200", apple: "AED 700", note: "Per side" },
-              { model: "Full-device water-damage diagnostic", ours: "Not offered", apple: "AED 600 + parts", note: "We attempt" },
+              { model: "Outer screen replacement", ours: "Price on request", apple: "Price on request", note: "Glass + OLED" },
+              { model: "Inner foldable display", ours: "Price on request", apple: "Price on request", note: "Highest cost part" },
+              { model: "Hinge mechanism", ours: "Price on request", apple: "Price on request", note: "Mechanical service" },
+              { model: "Battery (both cells)", ours: "Price on request", apple: "Price on request", note: "Split-cell design" },
+              { model: "Back glass (each side)", ours: "Price on request", apple: "Price on request", note: "Per side" },
+              { model: "Full-device water-damage diagnostic", ours: "Price on request", apple: "Apple: not offered", note: "We attempt" },
             ]}
           />
 
@@ -151,9 +154,9 @@ export default function BlogIPhoneFold2026() {
         { q: "Is the iPhone Fold confirmed by Apple?", a: "No. As of April 2026, Apple has not officially announced the iPhone Fold. All information is from supply-chain leaks (Kuo, Gurman, Nikkei, DSCC). A September 2026 launch is the consensus expectation but is not guaranteed." },
         { q: "Will the iPhone Fold come to the UAE on launch day?", a: "Almost certainly yes. The UAE has been a tier-1 Apple launch market since iPhone 12. Expect availability at Apple Mall of the Emirates, Sharaf DG, and Etisalat/du from launch day or within 1 week." },
         { q: "How does it compare to Samsung Galaxy Z Fold 7?", a: "On paper similar specs but iPhone Fold is rumored to have a thinner, lighter design, near-zero crease, and smooth iOS app handoff between the two screens. Samsung wins on multi-tasking software and S-Pen support. Real comparison needs hands-on review." },
-        { q: "Can I trade in my iPhone 17 Pro Max for the Fold?", a: "Yes - Apple Trade-In UAE will accept it. Expected trade-in value for 17 Pro Max in September 2026: ~AED 3,800-4,500 (depending on storage and condition). Net cost of Fold 256GB after trade-in: ~AED 3,000." },
-        { q: "Will AppleCare+ cover the inner foldable display?", a: "Yes, but expect AppleCare+ for iPhone Fold to cost more - likely AED 1,200/year vs AED 700 for 17 Pro Max. Accidental-damage screen replacements still typically AED 129 service fee under AppleCare+." },
-        { q: "Should first-gen foldable buyers buy AppleCare+?", a: "Strongly yes. First-gen foldables have 2-3× the failure rate of mature designs. AED 1,200/year is cheap insurance against an AED 5,800 inner-screen swap." },
+        { q: "Can I trade in my iPhone 17 Pro Max for the Fold?", a: "Yes - Apple Trade-In UAE will accept it, and the trade-in credit against a Fold 256GB can cover a meaningful chunk of the cost, depending on your storage and condition. Check Apple's Trade-In estimator at launch for the exact figure." },
+        { q: "Will AppleCare+ cover the inner foldable display?", a: "Yes, but expect AppleCare+ for iPhone Fold to cost more than for the 17 Pro Max. Accidental-damage screen replacements still carry a low fixed service fee under AppleCare+ - see Apple's AppleCare+ terms for the current amount." },
+        { q: "Should first-gen foldable buyers buy AppleCare+?", a: "Strongly yes. First-gen foldables have 2-3× the failure rate of mature designs, so the annual AppleCare+ premium is cheap insurance against a costly inner-screen swap - the single most expensive part to replace." },
       ]}
       relatedLinks={[
         { label: "iPhone 17 vs iPhone Air comparison", href: "/blog/iphone-17-vs-iphone-air-which-buy", description: "Decide between current-gen Pro Max and Air." },

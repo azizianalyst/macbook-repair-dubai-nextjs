@@ -7,11 +7,11 @@ export default function BlogBestMacBookForStudents() {
   return (
     <BlogPostTemplate
       seoTitle="Best MacBook for Students in Dubai 2026: Budget to Pro"
-      seoDescription="Three honest MacBook picks for Dubai students: refurbished M1 (AED 2,500), Air M3 (AED 4,500), Pro 14 M4 (AED 7,500). Storage, RAM and AppleCare advice."
+      seoDescription="Three honest MacBook picks for Dubai students: refurbished M1, Air M3 and Pro 14 M4. Storage, RAM and AppleCare advice — message us for today's prices."
       path="/blog/best-macbook-for-students-dubai-2026"
       wide
       toc={[
-        { id: "three-picks", label: "Three picks at three prices" },
+        { id: "three-picks", label: "Three picks for three budgets" },
         { id: "budget-pick", label: "Budget pick: MacBook Air M1" },
         { id: "mid-pick", label: "Mid pick: MacBook Air M3" },
         { id: "premium-pick", label: "Premium pick: MacBook Pro 14″ M4" },
@@ -23,8 +23,8 @@ export default function BlogBestMacBookForStudents() {
       ]}
       category="Buying guide · MacBook"
       h1="Best MacBook for Students in Dubai 2026"
-      hook="Three picks: AED 2,500, AED 4,500, AED 7,500. Each right for different students."
-      quickAnswer="Best budget MacBook for Dubai students: refurbished MacBook Air M1 8GB/256GB at AED 2,500 with 6-month warranty. Best mid-tier: MacBook Air M3 16GB/512GB at AED 4,499 new. Best premium: MacBook Pro 14″ M4 16GB/512GB at AED 7,499. Skip the new MacBook Neo for serious study; its A18 chip throttles under sustained load."
+      hook="Three picks for three budgets — one right for every student. Message us for today's prices."
+      quickAnswer="Best budget MacBook for Dubai students: refurbished MacBook Air M1 8GB/256GB with 6-month warranty. Best mid-tier: MacBook Air M3 16GB/512GB new. Best premium: MacBook Pro 14″ M4 16GB/512GB. Skip the new MacBook Neo for serious study; its A18 chip throttles under sustained load. Message us on WhatsApp for current prices on any of these."
       author={{ name: "Shafiq", role: "Senior MacBook technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -32,24 +32,24 @@ export default function BlogBestMacBookForStudents() {
       featuredImageAlt="Best MacBook for students Dubai 2026 buying guide"
       body={
         <>
-          <h2 id="three-picks">Best MacBook For Students. Three picks at three price points</h2>
+          <h2 id="three-picks">Best MacBook For Students. Three picks for three budgets</h2>
           <BlogPriceTable
             caption="Best MacBook for students Dubai - April 2026"
-            headers={["Tier", "Model", "Price (AED)", "Best for"]}
+            headers={["Tier", "Model", "Price", "Best for"]}
             rows={[
-              { model: "Budget", ours: "MacBook Air M1 8GB/256GB (refurb)", apple: "AED 2,500", note: "Liberal arts, business, schoolwork" },
-              { model: "Mid", ours: "MacBook Air M3 13″ 16GB/512GB (new)", apple: "AED 4,499", note: "STEM, design, journalism" },
-              { model: "Premium", ours: "MacBook Pro 14″ M4 16GB/512GB (new)", apple: "AED 7,499", note: "Computer science, film, architecture" },
+              { model: "Budget", ours: "MacBook Air M1 8GB/256GB (refurb)", apple: "Price on request", note: "Liberal arts, business, schoolwork" },
+              { model: "Mid", ours: "MacBook Air M3 13″ 16GB/512GB (new)", apple: "Price on request", note: "STEM, design, journalism" },
+              { model: "Premium", ours: "MacBook Pro 14″ M4 16GB/512GB (new)", apple: "Price on request", note: "Computer science, film, architecture" },
             ]}
           />
 
           <h2 id="budget-pick">Budget pick - MacBook Air M1 (refurbished from us)</h2>
           <p>
             Released October 2020. Still feels fast in 2026. We sell tested, battery-replaced M1 Airs
-            from AED 2,500 with a 6-month workshop warranty.
+            with a 6-month workshop warranty — message us on WhatsApp for today's price and stock.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Performance:</strong> Geekbench 6 single-core 2,350 - faster than most 2024 Windows laptops costing AED 4,000+.</li>
+            <li><strong>Performance:</strong> Geekbench 6 single-core 2,350 - faster than most 2024 Windows laptops costing far more.</li>
             <li><strong>Battery:</strong> Refurbished with new cell rated 8-10 hr real-world web browsing.</li>
             <li><strong>OS support:</strong> macOS 26 (2025) supported, expected through macOS 28 (2027) at minimum.</li>
             <li><strong>What we replace before sale:</strong> battery (always), keyboard if any sticky keys, screen if scratched, fresh thermal paste.</li>
@@ -58,8 +58,8 @@ export default function BlogBestMacBookForStudents() {
 
           <h2 id="mid-pick">Mid pick - MacBook Air M3 13″ (current entry-level new)</h2>
           <p>
-            The 2024 MacBook Air M3 is the sweet spot for 2026 students. The base 8GB/256GB at AED 3,999
-            is a trap - bump to 16GB/512GB at AED 4,499 and you have a 6-year laptop.
+            The 2024 MacBook Air M3 is the sweet spot for 2026 students. The base 8GB/256GB is a trap -
+            bump to 16GB/512GB and you have a 6-year laptop. Message us for current prices on both configs.
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>16GB unified memory</strong> - handles 30+ tabs, Photoshop, video calls, Logic Pro side-by-side without slowdown.</li>
@@ -71,8 +71,8 @@ export default function BlogBestMacBookForStudents() {
 
           <h2 id="premium-pick">Premium pick - MacBook Pro 14″ M4</h2>
           <p>
-            For computer science, film, architecture, and engineering students. The M4 Pro 14″ at AED
-            7,499 has the headroom to last 6+ years even as software gets heavier.
+            For computer science, film, architecture, and engineering students. The M4 Pro 14″ has the
+            headroom to last 6+ years even as software gets heavier — message us for today's price.
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Active cooling</strong> - Xcode builds, Blender renders, and 4K Premiere exports run at full speed without throttling.</li>
@@ -84,7 +84,7 @@ export default function BlogBestMacBookForStudents() {
 
           <h2 id="why-not-neo">Why not MacBook Neo for students?</h2>
           <p>
-            The new MacBook Neo (2026, A18 Pro chip, AED 2,199) looks tempting on price. We don't
+            The new MacBook Neo (2026, A18 Pro chip) looks tempting on its low price. We don't
             recommend it for serious students because:
           </p>
           <ul className="list-disc list-inside space-y-xs">
@@ -95,7 +95,7 @@ export default function BlogBestMacBookForStudents() {
             <li><strong>macOS support timeline unclear</strong> - Apple may treat it as a 4-year platform, not 6-7.</li>
           </ul>
           <p>
-            If your budget is AED 2,200, buy a refurbished M1 Air from us instead. Same money, dramatically
+            At that kind of budget, buy a refurbished M1 Air from us instead. Similar money, dramatically
             more capable, proven longevity. Read our full{" "}
             <Link to="/blog/macbook-neo-worth-buying-2026" className="text-accent font-semibold hover:underline">
               MacBook Neo review
@@ -115,7 +115,7 @@ export default function BlogBestMacBookForStudents() {
             ]}
           />
           <p>
-            <strong>Honest rule:</strong> the AED 600-800 jump from 256 to 512GB is the best money you'll
+            <strong>Honest rule:</strong> the jump from 256 to 512GB is the best money you'll
             spend on a student MacBook. Apple's SSDs are not user-upgradable on M-series - buy enough on
             day one.
           </p>
@@ -139,27 +139,29 @@ export default function BlogBestMacBookForStudents() {
             headers={["Source", "Pros", "Cons", "Best for"]}
             rows={[
               { model: "Apple Store UAE (Mall of Emirates / Dubai Mall)", ours: "AppleCare+ available, 14-day return", apple: "Highest price, no student discount in UAE", note: "Premium new MacBooks" },
-              { model: "Sharaf DG / Jumbo / Lulu", ours: "0% installments, occasional bundles", apple: "Same price as Apple, sometimes AED 100-200 less", note: "Mid-tier new" },
-              { model: "Amazon UAE / Noon", ours: "Cheapest new (-AED 200-400)", apple: "Returns harder, no in-person help", note: "Budget-conscious buyers" },
-              { model: "Us (refurbished + tested)", ours: "AED 1,500-2,500 less than new, 6-month warranty, fresh battery", apple: "Stock varies week to week", note: "Budget pick" },
+              { model: "Sharaf DG / Jumbo / Lulu", ours: "0% installments, occasional bundles", apple: "Roughly Apple pricing, sometimes a little less", note: "Mid-tier new" },
+              { model: "Amazon UAE / Noon", ours: "Often cheapest new", apple: "Returns harder, no in-person help", note: "Budget-conscious buyers" },
+              { model: "Us (refurbished + tested)", ours: "Meaningfully less than new, 6-month warranty, fresh battery", apple: "Stock varies week to week", note: "Budget pick" },
               { model: "Dubizzle / private", ours: "Cheapest absolute price", apple: "No warranty, iCloud-lock risk, battery unknown", note: "Risky - get inspected first" },
             ]}
           />
 
           <h2 id="applecare-students">AppleCare+ for students - worth it?</h2>
           <p>
-            AppleCare+ for MacBook Air costs AED 549 (3 years) or AED 18/month. Pro 14″ is AED 1,099.
-            Covers 2 accidental damage incidents per year at AED 367 deductible.
+            AppleCare+ for MacBook Air is sold as a 3-year plan or a monthly subscription, and the
+            Pro 14″ plan costs more. It covers 2 accidental damage incidents per year, each with a
+            fixed service fee (deductible).
           </p>
           <p>
             <strong>Buy AppleCare+ if:</strong> You drop things, you're a first-year living in dorms,
-            you take it everywhere. The math says one cracked screen + one liquid spill = AED 1,899
-            saved over 3 years. Worth it.
+            you take it everywhere. Cover one cracked screen plus one liquid spill over 3 years and it
+            usually pays for itself. Worth it.
           </p>
           <p>
             <strong>Skip AppleCare+ if:</strong> You're careful, the laptop lives on a desk, you
-            already use a sleeve. Save the AED 549 - if something does happen, our out-of-pocket repairs
-            run AED 600-1,000 for most issues. See{" "}
+            already use a sleeve. Keep the plan cost in your pocket - if something does happen, our
+            out-of-pocket repairs are typically far cheaper than a full Apple bill, and we'll quote your
+            exact model on WhatsApp before any work. See{" "}
             <Link to="/blog/macbook-pro-m5-vs-apple-store-repair-cost" className="text-accent font-semibold hover:underline">
               MacBook Pro repair cost vs Apple Store
             </Link>
@@ -171,7 +173,7 @@ export default function BlogBestMacBookForStudents() {
             <Link to="/" className="text-accent font-semibold hover:underline">
               Drop it at our Media City workshop
             </Link>
-            {" "}- AED 100 full diagnostic, refunded if you proceed with any service.
+            {" "}- full diagnostic, refunded if you proceed with any service. Message us for the diagnostic fee.
           </p>
         </>
       }
@@ -198,13 +200,13 @@ export default function BlogBestMacBookForStudents() {
         },
         {
           q: "Can I upgrade RAM or SSD on my MacBook later?",
-          a: "No. All M-series MacBooks have soldered RAM and SSD. Buy the spec you need on day one. This is the single biggest mistake we see students make - saving AED 600 on RAM today, regretting it in year 2.",
+          a: "No. All M-series MacBooks have soldered RAM and SSD. Buy the spec you need on day one. This is the single biggest mistake we see students make - saving a little on RAM today, regretting it in year 2.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook Air vs MacBook Pro 2026", href: "/blog/macbook-air-vs-macbook-pro-2026", description: "Detailed buyer's guide by use case." },
         { label: "MacBook Neo review", href: "/blog/macbook-neo-worth-buying-2026", description: "Why we don't recommend it for students." },
-        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "Refresh an older Mac for AED 450." },
+        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "Refresh an older Mac — message us for the price." },
       ]}
     />
   );

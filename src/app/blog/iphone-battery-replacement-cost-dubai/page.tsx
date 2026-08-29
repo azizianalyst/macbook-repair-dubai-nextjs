@@ -4,10 +4,10 @@ import View from "@/views/BlogIPhoneBatteryReplacement";
 
 export const metadata: Metadata = {
   title: "iPhone Battery Replacement Cost Dubai 2026",
-  description: "iPhone battery replacement cost Dubai from AED 99 to AED 399 by model. Independent Apple specialist, genuine cells, 3-month warranty.",
+  description: "iPhone battery replacement in Dubai by model. Independent Apple specialist, genuine cells, 3-month warranty. Message us on WhatsApp for your exact price.",
   openGraph: {
-    title: "iPhone Battery Replacement Cost Dubai 2026: AED Prices by Model",
-    description: "iPhone battery replacement cost Dubai from AED 99 to AED 399 by model. Independent Apple specialist, genuine cells, 3-month warranty.",
+    title: "iPhone Battery Replacement Cost Dubai 2026: Prices by Model",
+    description: "iPhone battery replacement in Dubai by model. Independent Apple specialist, genuine cells, 3-month warranty. Message us on WhatsApp for your exact price.",
     url: "https://macbook-repair-dubai.ae/blog/iphone-battery-replacement-cost-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "iPhone Battery Replacement Cost Dubai 2026: AED Prices by Model",
-    description: "iPhone battery replacement cost Dubai from AED 99 to AED 399 by model. Independent Apple specialist, genuine cells, 3-month warranty.",
+    title: "iPhone Battery Replacement Cost Dubai 2026: Prices by Model",
+    description: "iPhone battery replacement in Dubai by model. Independent Apple specialist, genuine cells, 3-month warranty. Message us on WhatsApp for your exact price.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

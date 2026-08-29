@@ -11,7 +11,7 @@ export default function BlogWaterDamageMacBookImmediate() {
     { name: "Power off immediately - hold the power button 10 seconds", text: "Do not try to see if it still works. Every second of current flow through wet circuits accelerates corrosion. Hold the power button for 10 full seconds." },
     { name: "Unplug everything", text: "Disconnect MagSafe or USB-C charger, unplug all peripherals. Yank the MagSafe end first if the wall socket is far away." },
     { name: "Flip upside down in V (tent) shape", text: "Open the lid to about 90 degrees and rest the MacBook upside-down on a clean towel. Lets liquid drain away from the keyboard and screen rather than pooling on the logic board." },
-    { name: "Do NOT use rice", text: "Rice absorbs almost no moisture from a sealed device and rice dust gets into ports. The 24 hours wasted in rice is the difference between a AED 700 repair and a AED 2,500 repair." },
+    { name: "Do NOT use rice", text: "Rice absorbs almost no moisture from a sealed device and rice dust gets into ports. The 24 hours wasted in rice is the difference between a light cleanup and a heavy board repair - message us for the exact price." },
     { name: "Do NOT use a hairdryer", text: "Heated air drives moisture deeper into the logic board and can warp components. Same for an oven, the sun, or any heat source." },
     { name: "Do NOT plug in to test", text: "Powering on a wet MacBook causes electrolytic corrosion to start instantly under every chip. The single most damaging thing you can do." },
     { name: "Bring to repair shop within 24 hours", text: "WhatsApp 055 741 3706 - we send the free pickup driver same day for any mainland Dubai address. Recovery rate drops from 80-90% at 24 hours to 40-50% at 72 hours." },
@@ -102,7 +102,8 @@ export default function BlogWaterDamageMacBookImmediate() {
             ambient moisture only marginally faster than open air, and rice dust gets sucked into
             ports and fans. Meanwhile, corrosion has already started inside the MacBook within
             minutes of the spill - rice cannot stop corrosion. Wasting 24 hours in rice is the
-            difference between a AED 700 Tier 1 repair and a AED 2,500 Tier 3 repair.
+            difference between a light Tier 1 cleanup and a heavy Tier 3 board repair - message us
+            on WhatsApp for today's exact price on your model.
           </p>
 
           <h2 id="no-hairdryer">Step 5 - Do NOT use a hairdryer</h2>
@@ -131,9 +132,9 @@ export default function BlogWaterDamageMacBookImmediate() {
           <h2 id="corrosion-timeline">Why time matters - corrosion timeline</h2>
           <p>Recovery success rate by hours since spill, based on our 2024-2025 case data:</p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>0-24 hours:</strong> 80-90% recovery, mostly Tier 1 (AED 700 cleanup)</li>
-            <li><strong>24-48 hours:</strong> 70-80% recovery, often Tier 2 (AED 1,000-1,500 with component repair)</li>
-            <li><strong>48-72 hours:</strong> 50-60% recovery, usually Tier 3 (AED 1,500-2,500)</li>
+            <li><strong>0-24 hours:</strong> 80-90% recovery, mostly Tier 1 (cleanup only)</li>
+            <li><strong>24-48 hours:</strong> 70-80% recovery, often Tier 2 (cleanup with component repair)</li>
+            <li><strong>48-72 hours:</strong> 50-60% recovery, usually Tier 3 (heavier board work)</li>
             <li><strong>72+ hours:</strong> 30-40% recovery, often unrecoverable (data recovery only)</li>
             <li><strong>1 week+:</strong> Below 20% - copper traces eaten away, board often beyond repair</li>
           </ul>
@@ -161,10 +162,11 @@ export default function BlogWaterDamageMacBookImmediate() {
 
           <h2 id="cost-expectations">Cost expectations - honest</h2>
           <p>
-            Tier 1 (clean only, MacBook boots fine): <strong>AED 700</strong>. Tier 2 (clean +
-            1-2 damaged ICs): <strong>AED 1,000-1,500</strong>. Tier 3 (heavy board damage):
-            <strong> AED 1,800-2,500</strong>. Apple Store charges AED 4,000-6,000 for the same
-            damage because they swap the entire logic board. See our{" "}
+            Water damage falls into three tiers: Tier 1 (clean only, MacBook boots fine), Tier 2
+            (clean plus 1-2 damaged ICs) and Tier 3 (heavy board damage). Our component-level
+            approach is far cheaper than the Apple Store, which swaps the entire logic board for
+            any liquid damage. Message us on WhatsApp with a photo for today's exact price on your
+            model, or see our{" "}
             <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent font-semibold hover:underline">
               full cost guide
             </Link>{" "}
@@ -187,7 +189,7 @@ export default function BlogWaterDamageMacBookImmediate() {
         },
         {
           q: "Will Apple repair my water-damaged MacBook?",
-          a: "Apple's official policy is to replace the entire logic board for any liquid damage - AED 4,000-6,000. AppleCare+ covers liquid damage at AED 367 deductible per incident. If you have AppleCare+, use it. If not, our component-level approach saves AED 2,500-4,000 versus the Apple quote.",
+          a: "Apple's official policy is to replace the entire logic board for any liquid damage, which is expensive. AppleCare+ covers liquid damage for a small deductible per incident. If you have AppleCare+, use it. If not, our component-level approach saves you a lot versus the Apple quote - message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Will my data be safe if the MacBook is water-damaged?",
@@ -195,7 +197,7 @@ export default function BlogWaterDamageMacBookImmediate() {
         },
         {
           q: "Do you offer pickup for water-damaged MacBooks?",
-          a: "Yes - free door-to-door pickup anywhere in mainland Dubai, same day if WhatsApp'd before 6pm. Sharjah and Abu Dhabi pickup AED 50 surcharge. The driver carries a sealed dry bag for transport.",
+          a: "Yes - free door-to-door pickup anywhere in mainland Dubai, same day if WhatsApp'd before 6pm. Sharjah and Abu Dhabi pickup carries a small surcharge - message us for the exact amount. The driver carries a sealed dry bag for transport.",
         },
       ]}
       relatedLinks={[

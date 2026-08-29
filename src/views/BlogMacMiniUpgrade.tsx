@@ -7,13 +7,13 @@ export default function BlogMacMiniUpgrade() {
   return (
     <BlogPostTemplate
       seoTitle="Mac mini SSD and RAM Upgrade Dubai 2026: Cost Guide"
-      seoDescription="Mac mini SSD and RAM upgrade in Dubai. Intel mini RAM from AED 400, SSD from AED 500. Speed up a slow Mac mini same day."
+      seoDescription="Mac mini SSD and RAM upgrade in Dubai. Speed up a slow Intel Mac mini same day. Free diagnosis, message us on WhatsApp for a quote on your model."
       path="/blog/mac-mini-ssd-ram-upgrade-dubai"
       wide
       category="Cost guide · Mac mini"
       h1="Mac mini SSD and RAM Upgrade Dubai: What Can Be Upgraded"
-      hook="On Intel Mac mini models, a RAM and SSD upgrade transforms a sluggish machine, with RAM from AED 400 and SSD from AED 500 at our Media City workshop."
-      quickAnswer="Intel Mac mini (2014 to 2018) RAM and storage can be upgraded: the 2018 model has user-accessible RAM slots and an upgradeable SSD path. Apple Silicon Mac mini (M1, M2, M4) has soldered RAM and storage that cannot be upgraded after purchase. Upgrades start from AED 400."
+      hook="On Intel Mac mini models, a RAM and SSD upgrade transforms a sluggish machine. Message us on WhatsApp for today's exact price on your model, fitted same day at our Media City workshop."
+      quickAnswer="Intel Mac mini (2014 to 2018) RAM and storage can be upgraded: the 2018 model has user-accessible RAM slots and an upgradeable SSD path. Apple Silicon Mac mini (M1, M2, M4) has soldered RAM and storage that cannot be upgraded after purchase. Message us on WhatsApp for a quote on your exact model."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -182,19 +182,20 @@ export default function BlogMacMiniUpgrade() {
 
           <h2 id="cost">Mac mini SSD and RAM upgrade repair cost in Dubai</h2>
           <p>
-            Here is current pricing for the Intel Mac mini at our Media City workshop. All prices are
-            in AED and include fitting, fresh thermal paste where the board is disturbed, a memory
-            test, and an SSD speed check before collection.
+            Here is what our Intel Mac mini upgrade service covers at our Media City workshop. Every
+            job includes fitting, fresh thermal paste where the board is disturbed, a memory test, and
+            an SSD speed check before collection. Message us on WhatsApp for today's exact price on
+            your model.
           </p>
           <BlogPriceTable
-            caption="Mac mini SSD and RAM upgrade pricing in Dubai. June 2026"
+            caption="Mac mini SSD and RAM upgrade service in Dubai. June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "RAM upgrade 16GB (Intel 2018)", ours: "AED 400", apple: "AED 900+" },
-              { model: "RAM upgrade 32GB (Intel 2018)", ours: "AED 650", apple: "AED 1,400+" },
-              { model: "256GB SSD upgrade", ours: "AED 500", apple: "AED 1,000+" },
-              { model: "512GB SSD upgrade", ours: "AED 700", apple: "AED 1,400+" },
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 200+" },
+              { model: "RAM upgrade 16GB (Intel 2018)", ours: "Price on request", apple: "Price on request" },
+              { model: "RAM upgrade 32GB (Intel 2018)", ours: "Price on request", apple: "Price on request" },
+              { model: "256GB SSD upgrade", ours: "Price on request", apple: "Price on request" },
+              { model: "512GB SSD upgrade", ours: "Price on request", apple: "Price on request" },
+              { model: "Diagnosis", ours: "Free", apple: "Price on request" },
             ]}
           />
           <p>

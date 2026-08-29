@@ -1,8 +1,8 @@
 "use client";
-// Instant-quote calculator (gap-audit strategic wedge — no UAE competitor has a working
-// AED estimator). Reads our REAL per-model pricing from the model JSON data files, so every
-// figure shown is a genuine published starting price — zero fabrication. WhatsApp is the
-// finish step (prefilled with the exact model + service + estimate).
+// Instant-quote picker (gap-audit strategic wedge — no UAE competitor has a working
+// device + repair selector). Reads our real per-model service list from the model JSON data
+// files, then hands off to WhatsApp for today's exact price (prefilled with the exact model
+// + service). We quote on request — no figure is shown to the visitor.
 import { useState } from "react";
 import { MessageCircle, Wallet, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -93,8 +93,8 @@ export function QuoteCalculator() {
     setService(servicesFor(m)[0]);
   };
 
-  const priceLabel = price === 0 ? "Free" : price != null ? `From AED ${aed(price)}` : "—";
-  const msg = `Hi, I'd like a quote for ${SERVICE_LABELS[activeService] ?? activeService} on my ${model?.name}. Your site estimates ${priceLabel.toLowerCase()}. Can you confirm?`;
+  const priceLabel = price === 0 ? "Free" : "Price on request";
+  const msg = `Hi, I'd like a quote for ${SERVICE_LABELS[activeService] ?? activeService} on my ${model?.name}. Can you send me today's exact price?`;
   const waHref = `${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   return (
@@ -126,7 +126,7 @@ export function QuoteCalculator() {
           <div>
             <p className="m-0 text-[13px] text-text-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
             <p className="m-0 text-[28px] font-bold leading-tight text-text">{priceLabel}</p>
-            <p className="m-0 text-[12.5px] text-text-faint">Indicative starting price · same-day on most repairs</p>
+            <p className="m-0 text-[12.5px] text-text-faint">Message us for today&apos;s exact price · same-day on most repairs</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">
@@ -140,8 +140,8 @@ export function QuoteCalculator() {
       </div>
 
       <p className="mt-md mb-0 text-[13px] leading-relaxed text-text-muted">
-        Prices are our published starting rates from real per-model data. The exact price is fixed in
-        writing after a free 20-minute diagnosis — and we&apos;ll tell you honestly if an Apple Store or
+        Pick your model and repair, then message us on WhatsApp for today&apos;s exact price. The price is
+        fixed in writing after a free 20-minute diagnosis — and we&apos;ll tell you honestly if an Apple Store or
         AppleCare+ claim is the better route. iPhone repairs: WhatsApp us your model for a quote.
       </p>
     </div>

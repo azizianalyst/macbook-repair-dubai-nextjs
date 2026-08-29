@@ -95,7 +95,7 @@ function worthRepairingVerdict(m: DesktopModel): { headline: string; body: strin
   if (m.family === "studio") {
     return {
       headline: "Yes - and book preventive fan/thermal service while it's open",
-      body: `Mac Studios are built for sustained creative workloads, which means dust and thermal paste degradation are the #1 things we see. ${age} years old or not, a fan clean + thermal refresh (AED ${m.pricing.thermalPaste ?? m.pricing.fanCleaning ?? 300}) every 12-18 months keeps these performing like new.`,
+      body: `Mac Studios are built for sustained creative workloads, which means dust and thermal paste degradation are the #1 things we see. ${age} years old or not, a fan clean + thermal refresh every 12-18 months keeps these performing like new - message us on WhatsApp for today's exact price.`,
     };
   }
   if (m.era === "apple-silicon" && age <= 4) {
@@ -121,7 +121,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   const rows: ServiceRow[] = [
     {
       service: "Logic board repair (component-level)",
-      price: m.pricing.logicBoard,
+      price: "Price on request",
       href: m.family === "mini" ? "/mac-logic-board-repair-dubai" : hub,
       timeline: m.family === "studio" || m.family === "pro" ? "4-6 days" : "3-5 days",
     },
@@ -129,7 +129,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.psu) {
     rows.push({
       service: "Power supply replacement",
-      price: m.pricing.psu,
+      price: "Price on request",
       href: hub,
       timeline: "1-2 days",
     });
@@ -137,7 +137,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.port) {
     rows.push({
       service: "Thunderbolt / USB-C port repair",
-      price: m.pricing.port,
+      price: "Price on request",
       href: "/mac-port-repair-dubai",
       timeline: "1-2 days",
     });
@@ -145,7 +145,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.ramUpgrade) {
     rows.push({
       service: `RAM upgrade (DDR4 ECC, up to ${m.maxRAM.split(" ")[0]})`,
-      price: m.pricing.ramUpgrade,
+      price: "Price on request",
       href: hub,
       timeline: "Same-day",
     });
@@ -153,7 +153,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.mpxModule) {
     rows.push({
       service: "MPX GPU module replacement (labour)",
-      price: `${m.pricing.mpxModule}+`,
+      price: "Price on request",
       href: "/mac-pro-gpu-repair-dubai",
       timeline: "2-4 days (parts vary)",
     });
@@ -161,7 +161,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.ssdRecovery) {
     rows.push({
       service: "Soldered SSD chip-off data recovery",
-      price: `${m.pricing.ssdRecovery}+`,
+      price: "Price on request",
       href: "/mac-data-recovery-dubai",
       timeline: "5-10 days",
     });
@@ -169,7 +169,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.fanCleaning) {
     rows.push({
       service: "Fan cleaning + dust removal",
-      price: m.pricing.fanCleaning,
+      price: "Price on request",
       href: "/mac-fan-cleaning-dubai",
       timeline: "Same-day",
     });
@@ -177,7 +177,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   if (m.pricing.thermalPaste) {
     rows.push({
       service: "Thermal paste refresh",
-      price: m.pricing.thermalPaste,
+      price: "Price on request",
       href: "/mac-fan-cleaning-dubai",
       timeline: "Same-day",
     });
@@ -211,14 +211,6 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
 
-  const candidates = [
-    model.pricing.fanCleaning,
-    model.pricing.thermalPaste,
-    model.pricing.port,
-    model.pricing.psu,
-  ].filter((v): v is number => typeof v === "number" && v > 0);
-  const startingPrice = candidates.length ? Math.min(...candidates) : model.pricing.logicBoard;
-
   const isAppleSilicon = model.era === "apple-silicon";
   const isStudio = model.family === "studio";
   const isPro = model.family === "pro";
@@ -229,16 +221,16 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} logic board repair cost in Dubai?`,
-      a: `Component-level logic board repair on the ${model.name} starts at AED ${model.pricing.logicBoard}. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a written warranty up to 12 months on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
+      a: `Component-level logic board repair on the ${model.name} is priced per fault - message us on WhatsApp for today's exact price on your model. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a written warranty up to 12 months on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
     },
     {
       q: isAppleSilicon
         ? `Can I upgrade RAM or SSD on the ${model.shortName}?`
         : `Can I upgrade the ${model.shortName}?`,
       a: isMacPro2019
-        ? `Yes - the Mac Pro 2019 is one of the last truly upgradeable Macs. RAM goes to 1.5TB across 12 DDR4 ECC R-DIMM slots (AED 600 labour, plus the modules). MPX GPU modules are swappable (Vega II, W6800X, W6900X - labour AED 1,500 + part). PCIe storage and accelerator cards are supported. SSD modules are Apple-keyed but swappable. This is the most repair-friendly Mac Apple ever made.`
+        ? `Yes - the Mac Pro 2019 is one of the last truly upgradeable Macs. RAM goes to 1.5TB across 12 DDR4 ECC R-DIMM slots (labour plus the modules). MPX GPU modules are swappable (Vega II, W6800X, W6900X - labour plus part). PCIe storage and accelerator cards are supported. SSD modules are Apple-keyed but swappable. This is the most repair-friendly Mac Apple ever made - message us on WhatsApp for today's exact upgrade price.`
         : isAppleSilicon
-          ? `No. Apple Silicon Macs (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. ${model.pricing.ssdRecovery ? `For data on a failed SSD, we offer chip-off recovery (AED ${model.pricing.ssdRecovery}+).` : ""}`
+          ? `No. Apple Silicon Macs (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. ${model.pricing.ssdRecovery ? `For data on a failed SSD, we offer chip-off recovery - message us for the exact price.` : ""}`
           : `Limited. Standard service (PSU, ports, fans) is straightforward. Major changes are not supported.`,
     },
     {
@@ -250,12 +242,12 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             ? `What's the deal with the top power button on the new Mac Mini?`
             : `What's the most common Mac Mini issue you see?`,
       a: isStudio
-        ? `Heavy creative users - every 12 months for fan cleaning + thermal paste refresh (AED ${(model.pricing.fanCleaning ?? 300) + (model.pricing.thermalPaste ?? 300)} together). Light users - every 18-24 months. Dubai dust gets drawn into the chassis fast and thermal paste degrades under sustained Ultra-class workloads. Prevention is much cheaper than logic-board repair.`
+        ? `Heavy creative users - every 12 months for fan cleaning + thermal paste refresh (message us on WhatsApp for today's exact price). Light users - every 18-24 months. Dubai dust gets drawn into the chassis fast and thermal paste degrades under sustained Ultra-class workloads. Prevention is much cheaper than logic-board repair.`
         : isPro
           ? `Yes - for now. Apple's current Mac Pro M2 Ultra removed PCIe GPU support entirely (Apple Silicon limitation). If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
-            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it for AED ${model.pricing.psu ?? 450}, typically 1-2 days, with a warranty of up to 12 months.`,
+            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it typically in 1-2 days, with a warranty of up to 12 months - message us on WhatsApp for today's exact price.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -269,13 +261,13 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Logic board AED ${model.pricing.logicBoard}${model.pricing.psu ? `, PSU AED ${model.pricing.psu}` : ""}${model.pricing.port ? `, port AED ${model.pricing.port}` : ""}. Warranty up to 12 months.`}
+      seoTitle={`${model.name} Repair Dubai - Board, PSU & Ports`}
+      seoDescription={`${model.name} repair Dubai - logic board, PSU${model.pricing.port ? ", ports" : ""} and preventive service. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
-      subtitle={`${model.heroTagline} From AED ${startingPrice}. written warranty up to 12 months. Free pickup across Dubai.`}
-      startingPrice={startingPrice}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
+      startingPrice={0}
       timeline={isStudio || isPro ? "Standard service same-day to 3 days · Logic board 4-6 days" : "Same-day to 5 days depending on the job"}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
       breadcrumb={[
@@ -294,7 +286,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Free pickup, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -347,7 +339,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon Macs have soldered memory and SoC-integrated SSD. What you buy is what you have for the life of the device.
               </p>
               <p className="text-[15px]">
-                Buy enough RAM and storage at order time. {model.pricing.ssdRecovery && <>For data recovery on a failed SSD, we offer chip-off recovery (AED {model.pricing.ssdRecovery}+, complex but possible). <Link to="/mac-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link></>}
+                Buy enough RAM and storage at order time. {model.pricing.ssdRecovery && <>For data recovery on a failed SSD, we offer chip-off recovery (complex but possible) - message us for the exact price. <Link to="/mac-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link></>}
               </p>
             </div>
           )}
@@ -359,7 +351,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
                 Mac Studios run sustained heavy workloads (DaVinci Resolve, Logic Pro, Xcode, Blender). The fans pull dust through the chassis fast - Dubai air doesn&apos;t help - and thermal paste degrades under Ultra-class loads.
               </p>
               <p className="text-[15px]">
-                <strong>Heavy users:</strong> fan cleaning + thermal paste every 12 months (AED {(model.pricing.fanCleaning ?? 300) + (model.pricing.thermalPaste ?? 300)} together). <strong>Light users:</strong> every 18-24 months. Prevention is much cheaper than logic-board repair.
+                <strong>Heavy users:</strong> fan cleaning + thermal paste every 12 months (message us on WhatsApp for today&apos;s exact price). <strong>Light users:</strong> every 18-24 months. Prevention is much cheaper than logic-board repair.
               </p>
             </div>
           )}
@@ -448,7 +440,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       reviewNames={pickReviewers(slug)}
       related={[
         { label: `${FAMILY_LABEL[model.family]} repair hub`, href: hubFor(model),                description: `All ${FAMILY_LABEL[model.family]} services and pricing in one place.` },
-        { label: "Mac data recovery",                        href: "/mac-data-recovery-dubai",   description: "Soldered-SSD chip-off recovery for Apple Silicon Macs. AED 2,000+." },
+        { label: "Mac data recovery",                        href: "/mac-data-recovery-dubai",   description: "Soldered-SSD chip-off recovery for Apple Silicon Macs. WhatsApp us for a quote." },
         { label: "Mac full diagnostic",                      href: "/mac-full-diagnostic-dubai", description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />

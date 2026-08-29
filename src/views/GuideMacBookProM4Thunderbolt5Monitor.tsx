@@ -11,7 +11,7 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
       category="Setup guide · MacBook Pro"
       h1="MacBook Pro M4 with Thunderbolt 5 and a Portable Monitor"
       hook="Thunderbolt 5 on the M4 MacBook Pro triples the bandwidth of its predecessor and when paired with the right portable monitor, it unlocks a genuinely powerful dual-screen setup that travels anywhere."
-      quickAnswer="The MacBook Pro M4 Pro and M4 Max support Thunderbolt 5 (120 Gb/s), which is fast enough for a 4K 144 Hz external monitor over a single cable. A quality USB-C portable display (like the LG 16MQ70 or ASUS ProArt PA169CDV) connects directly, no dock required. Budget AED 800–2,000 for a portable display that makes the most of TB5."
+      quickAnswer="The MacBook Pro M4 Pro and M4 Max support Thunderbolt 5 (120 Gb/s), which is fast enough for a 4K 144 Hz external monitor over a single cable. A quality USB-C portable display (like the LG 16MQ70 or ASUS ProArt PA169CDV) connects directly, no dock required. A good portable display that makes the most of TB5 is a worthwhile investment for anyone working on the move."
       author={{ name: "Shafiq", role: "Founder & senior Apple technician" }}
       datePublished="2026-05-10"
       dateModified="2026-06-16"
@@ -32,7 +32,7 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
         },
         {
           q: "What is the best portable monitor for MacBook Pro M4 in Dubai?",
-          a: "For most users, the LG 16MQ70 (AED 900–1,100) is the best value, 16:10 aspect ratio, 2560×1600, USB-C powered, and matches the MacBook Pro's display proportions exactly. For premium 4K, the ASUS ProArt PA169CDV OLED is the top pick.",
+          a: "For most users, the LG 16MQ70 is the best value, 16:10 aspect ratio, 2560×1600, USB-C powered, and matches the MacBook Pro's display proportions exactly. For premium 4K, the ASUS ProArt PA169CDV OLED is the top pick.",
         },
       ]}
       relatedLinks={[
@@ -82,19 +82,19 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
             price points (all available in Dubai):
           </p>
 
-          <h3>Budget. AED 650–900</h3>
+          <h3>Budget tier</h3>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>ASUS ZenScreen MB16ACE (16-inch FHD):</strong> USB-C powered, 60 Hz, covers sRGB well, light at 0.9 kg. Great for travel-heavy users who need a second screen for docs and email.</li>
             <li><strong>AOC 16T2 (15.6-inch FHD touch):</strong> touchscreen, USB-C, slim. Useful for creative workflows that benefit from a touch layer.</li>
           </ul>
 
-          <h3>Mid-range. AED 900–1,400</h3>
+          <h3>Mid-range tier</h3>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>LG 16MQ70 (16-inch IPS, 2560×1600):</strong> native 16:10 aspect ratio matches the MacBook Pro screen perfectly. USB-C powered, 60 Hz, 99% sRGB. Our top pick for most users.</li>
             <li><strong>Samsung M7 Portable (27-inch 4K):</strong> larger footprint but a full 4K panel at 60 Hz. Powered by USB-C from the Mac.</li>
           </ul>
 
-          <h3>Premium. AED 1,400–2,000</h3>
+          <h3>Premium tier</h3>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>ASUS ProArt PA169CDV (15.6-inch 4K touch):</strong> 3840×2160 OLED, factory-calibrated, 120 Hz over TB5. The best portable display you can buy right now and TB5 bandwidth makes it shine.</li>
             <li><strong>Dough Spectrum Portable 4K (16-inch):</strong> USB-C 4K at up to 120 Hz. Designed explicitly for Thunderbolt, a solid choice if you want the full TB5 bandwidth experience.</li>
@@ -108,8 +108,8 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
           </p>
           <p>
             Buy a dedicated Thunderbolt 5 cable (look for the TB5 lightning-bolt logo on the
-            connector). A 1m certified TB5 cable costs around AED 120–200 in Dubai. It's worth it -
-            the wrong cable turns a 4K 120 Hz display into a 4K 30 Hz one.
+            connector). A 1m certified TB5 cable is inexpensive and widely available in Dubai, and
+            it's worth it - the wrong cable turns a 4K 120 Hz display into a 4K 30 Hz one.
           </p>
 
           <h2>Setup: connecting your portable monitor in Dubai</h2>

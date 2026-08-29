@@ -6,11 +6,11 @@ export default function MacBookAirIntelChargingPortRepair() {
   return (
     <SubServicePageTemplate
       path="/macbook-air-intel-charging-port-repair-dubai"
-      seoTitle="MacBook Air Intel USB-C Charging Port Repair Dubai - From AED 280"
-      seoDescription="MacBook Air Intel (2018-2020) USB-C charging port repair Dubai from AED 280. Thunderbolt 3 port corrosion, bent tab, debris. Same-day 1-2 hours. 3-month warranty. Call 055 741 3706."
+      seoTitle="MacBook Air Intel USB-C Charging Port Repair Dubai - Same Day"
+      seoDescription="MacBook Air Intel (2018-2020) USB-C charging port repair Dubai. Port corrosion, bent tab, debris fixed same-day in 1-2 hours. 3-month warranty. WhatsApp for a quote."
       eyebrow="Intel 2018-2020 · USB-C only · no MagSafe · same-day"
       h1="MacBook Air Intel Charging Port Repair Dubai"
-      subtitle="MacBook Air Intel models (2018 to 2020) charge exclusively over USB-C, with no MagSafe. Both left-side Thunderbolt 3 ports share a single board. We replace the board same-day from AED 280."
+      subtitle="MacBook Air Intel models (2018 to 2020) charge exclusively over USB-C, with no MagSafe. Both left-side Thunderbolt 3 ports share a single board. We replace the board same-day — message us on WhatsApp for today's exact price."
       startingPrice={280}
       timeline="Same day (1-2 hours)"
       whatsappPrefill="Hi, my MacBook Air Intel won't charge from the USB-C port:"
@@ -63,7 +63,7 @@ export default function MacBookAirIntelChargingPortRepair() {
       faqs={[
         {
           q: "How much does MacBook Air Intel USB-C charging port repair cost in Dubai?",
-          a: "MacBook Air Intel (2018-2020) USB-C charging port repair is AED 280 at MacBook Repair Dubai. This includes the replacement board, labour, and a 3-month warranty. Free diagnosis confirms the fault before any cost is committed. Same-day 1 to 2 hours.",
+          a: "MacBook Air Intel (2018-2020) USB-C charging port repair at MacBook Repair Dubai includes the replacement board, labour, and a 3-month warranty. Free diagnosis confirms the fault before any cost is committed, and it's a same-day 1 to 2 hour job. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does the MacBook Air Intel have MagSafe?",
@@ -75,7 +75,7 @@ export default function MacBookAirIntelChargingPortRepair() {
         },
         {
           q: "My Intel Air charges from one USB-C port but not the other. Do I need a new logic board?",
-          a: "No. Both USB-C ports on the Intel Air share a single charging board. A fault on one port's trace kills that port while the other remains functional. Board replacement (AED 280) restores both ports without touching the logic board.",
+          a: "No. Both USB-C ports on the Intel Air share a single charging board. A fault on one port's trace kills that port while the other remains functional. Board replacement restores both ports without touching the logic board — message us on WhatsApp for the exact price.",
         },
         {
           q: "How long does MacBook Air Intel charging port repair take in Dubai?",
@@ -92,12 +92,12 @@ export default function MacBookAirIntelChargingPortRepair() {
         {
           label: "MacBook Air Intel Battery Replacement Dubai",
           href: "/macbook-air-intel-battery-replacement-dubai",
-          description: "49.9 Wh cell replacement for 2018-2020 Intel Air from AED 450.",
+          description: "49.9 Wh cell replacement for 2018-2020 Intel Air. WhatsApp for a quote.",
         },
         {
           label: "MacBook Air Screen Repair Dubai",
           href: "/macbook-air-screen-repair-dubai",
-          description: "All Air screen generations from AED 600.",
+          description: "All Air screen generations covered. WhatsApp for a quote.",
         },
       ]}
       blogLink={{

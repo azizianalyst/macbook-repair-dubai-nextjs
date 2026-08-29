@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneSpeakerRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Speaker Repair Dubai - AED 250 | Same-Day | 055 741 3706"
-      seoDescription="iPhone loudspeaker repair Dubai. Crackling, muffled or no sound. Free mesh clean first - most cases don't need a new speaker. AED 250 if replacement needed."
+      seoTitle="iPhone Speaker Repair Dubai | Same-Day | 055 741 3706"
+      seoDescription="iPhone loudspeaker repair Dubai. Crackling, muffled or no sound. Free mesh clean first - most cases don't need a new speaker. Message us for today's price."
       path="/iphone-speaker-repair-dubai"
       eyebrow="iPhone speaker repair"
       h1="iPhone Speaker Repair Dubai"
-      subtitle="Music sounds blown, ringtone is faint, speakerphone unusable. Often it's just lint and dust packed in the mesh - we clean for free first. If a new speaker is needed: AED 250, same day."
+      subtitle="Music sounds blown, ringtone is faint, speakerphone unusable. Often it's just lint and dust packed in the mesh - we clean for free first. If a new speaker is needed, message us for today's price - same day."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, my iPhone speaker is faulty - model and symptom:"
@@ -26,7 +26,7 @@ export default function IPhoneSpeakerRepair() {
             <strong>The honest first step</strong>: about 40% of "broken" iPhone speakers in Dubai are actually just packed with pocket lint, sand and dust. We clean the speaker mesh under a microscope free of charge before quoting any replacement. If sound returns, you walk out with no bill - only a clean phone and a recommendation to keep it out of dusty pockets.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            If the speaker driver itself has failed (water damage, blown coil, dropped impact), AED 250 covers a fresh OEM-grade loudspeaker module, gasket reseat and a warranty of up to 12 months. Same day on every iPhone from 7 through 17 Pro Max.
+            If the speaker driver itself has failed (water damage, blown coil, dropped impact), a replacement covers a fresh OEM-grade loudspeaker module, gasket reseat and a warranty of up to 12 months - message us for today's exact price on your model. Same day on every iPhone from 7 through 17 Pro Max.
           </p>
         </>
       }
@@ -53,7 +53,7 @@ export default function IPhoneSpeakerRepair() {
         "Free re-clean within 12 months if mesh re-clogs.",
       ]}
       faqs={[
-        { q: "How do I know if it's the speaker or the audio chip?", a: "If the earpiece (top) speaker also sounds wrong, or if the phone won't recognise headphones, it's likely the audio IC on the logic board - a different repair (around AED 600). The bottom speaker alone failing is almost always the speaker module itself." },
+        { q: "How do I know if it's the speaker or the audio chip?", a: "If the earpiece (top) speaker also sounds wrong, or if the phone won't recognise headphones, it's likely the audio IC on the logic board - a different repair, so message us for that price. The bottom speaker alone failing is almost always the speaker module itself." },
         { q: "Will a third-party speaker sound as good as original?", a: "Honestly, 95% as good. We use OEM-grade modules from the same Foxconn supplier chain. The 5% gap is the boost firmware Apple uses on factory speakers; tiny, only audible on side-by-side A/B with bass-heavy music." },
         { q: "Why did mine fail in Dubai specifically?", a: "Beach trips, pool exposure and the fine airborne dust here are the three killers. Even without water, sand grains work into the voice coil over a year or two and grind it." },
         { q: "Can you do the cleaning while I wait?", a: "Yes - 15 minutes. Walk-in to our Media City workshop, watch the inspection, walk out clean." },

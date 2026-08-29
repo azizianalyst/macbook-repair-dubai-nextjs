@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProIntelNotTurningOn";
 
 export const metadata: Metadata = {
   title: "MacBook Pro Intel Not Turning On Dubai 2026 — Fix Guide",
-  description: "MacBook Pro Intel won't turn on in Dubai? Dead vs black screen, SMC reset, deep discharge and random-shutdown fixes. Board repair from AED 350.",
+  description: "MacBook Pro Intel won't turn on in Dubai? Dead vs black screen, SMC reset, deep discharge and random-shutdown fixes. Free diagnosis — WhatsApp us.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

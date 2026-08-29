@@ -7,7 +7,7 @@ export default function BlogMacBookAirOverheating() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Overheating in Dubai? Causes and Fixes 2026"
-      seoDescription="MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Fix from AED 200 at our workshop."
+      seoDescription="MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Message us on WhatsApp for a fast fix and quote."
       path="/blog/macbook-air-overheating-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookAirOverheating() {
       ]}
       category="Fix guide · MacBook Air"
       h1="MacBook Air Overheating in Dubai? Causes and How to Fix It"
-      hook="MacBook Air runs passively cooled (no fan on M-series) which means Dubai summer heat above 35°C causes thermal throttling faster than on MacBook Pro, and thermal paste replacement on Intel models starts from AED 200."
+      hook="MacBook Air runs passively cooled (no fan on M-series) which means Dubai summer heat above 35°C causes thermal throttling faster than on MacBook Pro, and thermal paste replacement on Intel models is a quick fix — message us on WhatsApp for today's price."
       quickAnswer="MacBook Air overheating in Dubai is caused by sustained workloads on the passively cooled M-series chip (no internal fan), dried thermal paste on Intel models, blocked air vents, or background processes pushing the CPU to 100%. Check Activity Monitor for runaway processes first."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -94,7 +94,7 @@ export default function BlogMacBookAirOverheating() {
             <li><strong>In Dubai specifically</strong>: avoid placing the MacBook Air in direct sunlight through a window; glass concentrates UV and heat, raising the chassis temperature even before the chip generates any load</li>
           </ul>
           <p>
-            A raised laptop stand costs AED 50-120 at any electronics shop in Dubai. For a passively
+            A raised laptop stand is inexpensive at any electronics shop in Dubai. For a passively
             cooled MacBook Air running sustained workloads, a stand with good underside clearance can
             reduce chip temperature by 8-12°C, which is often enough to eliminate throttling entirely.
           </p>
@@ -187,7 +187,7 @@ export default function BlogMacBookAirOverheating() {
                 <td>Intel 2017-2020</td>
                 <td>Small single-blower fan + heatsink</td>
                 <td>Dried thermal paste, dust-blocked fan, failed fan bearing</td>
-                <td>Thermal paste replacement or fan replacement, AED 200-300</td>
+                <td>Thermal paste replacement or fan replacement — message us for a quote</td>
               </tr>
               <tr>
                 <td>M1 2020-2022</td>
@@ -225,17 +225,18 @@ export default function BlogMacBookAirOverheating() {
 
           <h2 id="replacement-cost">MacBook Air thermal repair cost Dubai</h2>
           <p>
-            Here are the current prices for thermal-related repairs on MacBook Air in Dubai. All prices
-            include parts, labour, and a 3-month written warranty. No diagnostic fee.
+            Here are the thermal-related repairs we handle on MacBook Air in Dubai. Every repair
+            includes parts, labour, and a 3-month written warranty, with no diagnostic fee. Message us
+            on WhatsApp for today's exact price on your model.
           </p>
           <BlogPriceTable
-            caption="MacBook Air thermal repair pricing. June 2026"
+            caption="MacBook Air thermal repairs. June 2026"
             rows={[
-              { model: "Thermal paste replacement (Intel)", ours: "AED 200", apple: "AED 450+" },
-              { model: "Fan replacement (Intel)", ours: "AED 250", apple: "AED 550+" },
-              { model: "Full thermal service (Intel)", ours: "AED 300", apple: "AED 600+" },
-              { model: "M-series performance diagnosis", ours: "AED 0", apple: "AED 200+" },
-              { model: "Logic board repair (severe)", ours: "AED 500", apple: "AED 1,200+" },
+              { model: "Thermal paste replacement (Intel)", ours: "Price on request", apple: "Price on request" },
+              { model: "Fan replacement (Intel)", ours: "Price on request", apple: "Price on request" },
+              { model: "Full thermal service (Intel)", ours: "Price on request", apple: "Price on request" },
+              { model: "M-series performance diagnosis", ours: "Free", apple: "Price on request" },
+              { model: "Logic board repair (severe)", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>
@@ -297,7 +298,7 @@ export default function BlogMacBookAirOverheating() {
         },
         {
           q: "Will thermal paste replacement fix my MacBook Air overheating?",
-          a: "For Intel MacBook Air models (2017-2020) where the Mac is 4+ years old and running hotter than it used to, thermal paste replacement fixes the problem in the majority of cases. We typically see CPU temperatures drop 15-25°C after a paste replacement. It will not help if the fan is also failing (replace both at the same time for AED 300), or if the issue is a board fault. For M-series MacBook Air there is no thermal paste to replace; the fix is software or environmental.",
+          a: "For Intel MacBook Air models (2017-2020) where the Mac is 4+ years old and running hotter than it used to, thermal paste replacement fixes the problem in the majority of cases. We typically see CPU temperatures drop 15-25°C after a paste replacement. It will not help if the fan is also failing (best to replace both at the same time — message us for a combined quote), or if the issue is a board fault. For M-series MacBook Air there is no thermal paste to replace; the fix is software or environmental.",
         },
         {
           q: "How long does MacBook Air thermal service take in Dubai?",

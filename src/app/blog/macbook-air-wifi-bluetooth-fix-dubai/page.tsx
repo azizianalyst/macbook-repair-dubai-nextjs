@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirWifiBluetooth";
 
 export const metadata: Metadata = {
   title: "MacBook Air WiFi & Bluetooth Fix Dubai 2026 — Dropping",
-  description: "MacBook Air WiFi dropping or Bluetooth not connecting in Dubai? 6 software fixes plus when it needs board repair. Free diagnosis, wireless repair from AED 400.",
+  description: "MacBook Air WiFi dropping or Bluetooth not connecting in Dubai? 6 software fixes plus when it needs board repair. Free diagnosis, message us for a wireless repair quote.",
   openGraph: {
     title: "MacBook Air WiFi Bluetooth Fix Dubai 2026: Dropping, Slow, Won't Connect",
-    description: "MacBook Air WiFi dropping or Bluetooth failing? Dubai building congestion explained. 6 fixes, wireless repair from AED 400.",
+    description: "MacBook Air WiFi dropping or Bluetooth failing? Dubai building congestion explained. 6 fixes, plus WhatsApp us for a wireless repair quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-wifi-bluetooth-fix-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air WiFi Bluetooth Fix Dubai 2026",
-    description: "WiFi dropping or Bluetooth failing? 6 fixes. Repair from AED 400 in Dubai.",
+    description: "WiFi dropping or Bluetooth failing? 6 fixes. WhatsApp us for a repair quote in Dubai.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-macbook-wifi-fix-dubai-desktop.avif"],
   },
   alternates: {

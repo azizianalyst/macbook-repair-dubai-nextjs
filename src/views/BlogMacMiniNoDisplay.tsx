@@ -7,12 +7,12 @@ export default function BlogMacMiniNoDisplay() {
   return (
     <BlogPostTemplate
       seoTitle="Mac mini No Display Over HDMI in Dubai? 6 Fixes 2026"
-      seoDescription="Mac mini no display over HDMI in Dubai? 6 fixes for cable, port, resolution and GPU faults. Repair from AED 200."
+      seoDescription="Mac mini no display over HDMI in Dubai? 6 fixes for cable, port, resolution and GPU faults. Free diagnosis, message us for your repair price."
       path="/blog/mac-mini-no-display-hdmi-dubai"
       wide
       category="Fix guide · Mac mini"
       h1="Mac mini No Display Over HDMI in Dubai? 6 Things to Check"
-      hook="A Mac mini that powers on with no picture is usually an HDMI cable or port issue, a wrong resolution handshake, or a display IC fault, and our Dubai workshop diagnoses every model free with repair from AED 200."
+      hook="A Mac mini that powers on with no picture is usually an HDMI cable or port issue, a wrong resolution handshake, or a display IC fault, and our Dubai workshop diagnoses every model free, then messages you the exact repair price on WhatsApp."
       quickAnswer="Mac mini no display over HDMI is most often a faulty cable or adapter, a monitor input set wrong, a resolution handshake failure (try a different display), or an HDMI port or display IC fault on the board. The white status LED on the front confirms the mini is powered on."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -58,7 +58,7 @@ export default function BlogMacMiniNoDisplay() {
           <p>
             Work through the checks below in order. Most owners restore the picture in a few minutes
             with no parts and no cost, and the small number left over are genuine port or board
-            faults that we repair from AED 200.
+            faults that we repair after a free diagnosis, with the exact price sent to you on WhatsApp.
           </p>
 
           <h2 id="step-1">Step 1: First checks you can do at home</h2>
@@ -186,24 +186,25 @@ export default function BlogMacMiniNoDisplay() {
           <p>
             Once the at-home checks rule out a cable, an input, or a resolution problem, the repair
             is one of a small set of board-level jobs. Diagnosis is always free, so you know the
-            exact cause and price before any work begins. Here is what the common Mac mini no-display
-            repairs cost in our Dubai workshop compared with Apple or generic third-party shops:
+            exact cause and price before any work begins. Here are the common Mac mini no-display
+            repairs we handle in our Dubai workshop; message us on WhatsApp for today's exact price
+            on your model:
           </p>
           <BlogPriceTable
-            caption="Mac mini no display repair pricing, Dubai. June 2026"
+            caption="Mac mini no display repairs, Dubai. June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "HDMI port repair", ours: "AED 350", apple: "AED 700+" },
-              { model: "Display IC repair", ours: "AED 450", apple: "AED 900+" },
-              { model: "Port diagnosis", ours: "AED 0", apple: "AED 200+" },
-              { model: "Thunderbolt/USB-C display repair", ours: "AED 400", apple: "AED 800+" },
-              { model: "Logic board repair", ours: "AED 500", apple: "AED 1,200+" },
+              { model: "HDMI port repair", ours: "Price on request", apple: "Higher, board swap" },
+              { model: "Display IC repair", ours: "Price on request", apple: "Higher, board swap" },
+              { model: "Port diagnosis", ours: "Free", apple: "Paid" },
+              { model: "Thunderbolt/USB-C display repair", ours: "Price on request", apple: "Higher, board swap" },
+              { model: "Logic board repair", ours: "Price on request", apple: "Higher, board swap" },
             ]}
           />
           <p>
             The gap is widest on the simplest faults, because Apple typically replaces the whole
-            logic board rather than repairing a single port or chip, which pushes the bill past
-            AED 1,000 even when the actual problem is a cracked HDMI joint. We repair at component
+            logic board rather than repairing a single port or chip, which pushes the bill far higher
+            even when the actual problem is a cracked HDMI joint. We repair at component
             level, so a port fix stays a port fix.{" "}
             <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               Full Mac mini repair service details →

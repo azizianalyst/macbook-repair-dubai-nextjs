@@ -14,21 +14,21 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const REPAIRS = [
-  { icon: Monitor,     label: "iMac screen replacement",        price: "AED 699–1,800", time: "1–2 days",  note: "21.5\" and 27\", panel + glass, all Intel and M-series" },
-  { icon: Cpu,         label: "iMac logic board repair",        price: "AED 900–2,500", time: "3–7 days",  note: "Component-level board repair. GPU fault, dead board, no-power" },
-  { icon: HardDrive,   label: "iMac hard drive → SSD upgrade",  price: "AED 450–900",  time: "Same day",  note: "Fusion Drive SSD upgrade or HDD → SSD; macOS migration included" },
-  { icon: MemoryStick, label: "iMac RAM upgrade",               price: "AED 300–700",  time: "Same day",  note: "Intel iMac only (M-series RAM is soldered); 8GB → 16GB or 32GB" },
-  { icon: HardDrive,   label: "iMac SSD repair / replacement",  price: "AED 600–1,200", time: "1–2 days", note: "Blade SSD or PCIe M.2, model-dependent slot type" },
-  { icon: Monitor,     label: "iMac backlight / display fault", price: "AED 500–1,200", time: "1–2 days",  note: "Stage light effect, dim screen, flickering, dead pixel cluster" },
-  { icon: Cpu,         label: "iMac GPU fault",                 price: "AED 900–2,000", time: "3–7 days",  note: "Black screen, artefacts, no display, common on 2011–2013 models" },
-  { icon: HardDrive,   label: "iMac data recovery",             price: "AED 800–2,500", time: "1–7 days",  note: "Deleted files, failed HDD/SSD, water damage" },
+  { icon: Monitor,     label: "iMac screen replacement",        price: "Price on request", time: "1–2 days",  note: "21.5\" and 27\", panel + glass, all Intel and M-series" },
+  { icon: Cpu,         label: "iMac logic board repair",        price: "Price on request", time: "3–7 days",  note: "Component-level board repair. GPU fault, dead board, no-power" },
+  { icon: HardDrive,   label: "iMac hard drive → SSD upgrade",  price: "Price on request",  time: "Same day",  note: "Fusion Drive SSD upgrade or HDD → SSD; macOS migration included" },
+  { icon: MemoryStick, label: "iMac RAM upgrade",               price: "Price on request",  time: "Same day",  note: "Intel iMac only (M-series RAM is soldered); 8GB → 16GB or 32GB" },
+  { icon: HardDrive,   label: "iMac SSD repair / replacement",  price: "Price on request", time: "1–2 days", note: "Blade SSD or PCIe M.2, model-dependent slot type" },
+  { icon: Monitor,     label: "iMac backlight / display fault", price: "Price on request", time: "1–2 days",  note: "Stage light effect, dim screen, flickering, dead pixel cluster" },
+  { icon: Cpu,         label: "iMac GPU fault",                 price: "Price on request", time: "3–7 days",  note: "Black screen, artefacts, no display, common on 2011–2013 models" },
+  { icon: HardDrive,   label: "iMac data recovery",             price: "Price on request", time: "1–7 days",  note: "Deleted files, failed HDD/SSD, water damage" },
 ];
 
 const FAQS = [
   { q: "How much does iMac repair cost in Dubai?",
-    a: "iMac repair cost in Dubai: screen replacement AED 699–1,800, logic board repair AED 900–2,500, HDD to SSD upgrade AED 450–900, RAM upgrade AED 300–700. Prices vary by model (21.5\" vs 27\", Intel vs M-series). Diagnosis is always free. We confirm the cost in writing before any work starts." },
+    a: "iMac repair cost in Dubai depends on the model (21.5\" vs 27\", Intel vs M-series) and the fault, whether it's a screen replacement, logic board repair, HDD to SSD upgrade or RAM upgrade. Diagnosis is always free, and we confirm the exact cost in writing before any work starts. Message us on WhatsApp with your model for today's price." },
   { q: "Is it worth repairing an iMac in Dubai?",
-    a: "Generally yes, if the repair cost is under 50–60% of a replacement iMac's price. A 27\" iMac logic board repair at AED 900–1,500 is worth it vs a AED 6,000+ replacement. Screen and drive repairs almost always make financial sense. Bring it in for a free diagnosis and we'll give you an honest recommendation." },
+    a: "Usually yes, if the repair costs well under half of a replacement iMac. Logic board, screen and drive repairs almost always make financial sense versus buying a brand-new machine. Bring it in for a free diagnosis and we'll give you an honest recommendation. Message us on WhatsApp for the exact cost on your model." },
   { q: "How long does iMac repair take in Dubai?",
     a: "Screen repair: 1–2 days (panel sourcing). SSD/RAM upgrade: same day. Logic board repair: 3–7 days (component-level). Water damage: 3–7 days. We give you a daily WhatsApp update and notify you the moment the repair is complete." },
   { q: "Can you repair a 2011, 2013, or 2015 iMac in Dubai?",
@@ -36,7 +36,7 @@ const FAQS = [
   { q: "Can you upgrade an iMac SSD or RAM in Dubai?",
     a: "RAM: only on Intel iMacs (2011–2019). M-series iMac RAM is soldered and cannot be upgraded. SSD: upgradeable on most Intel iMacs (blade SSD or PCIe M.2 slot, model-dependent). M-series iMac SSD is also soldered, upgrade is not possible. We'll confirm before booking." },
   { q: "How much does iMac screen replacement cost in Dubai?",
-    a: "iMac screen replacement costs AED 699–1,800 depending on model: 21.5\" iMac AED 699–1,200; 27\" iMac AED 900–1,800. The repair includes screen panel, glass, and adhesive seal. Takes 1–2 days due to panel sourcing." },
+    a: "iMac screen replacement cost depends on the model, with the 27\" iMac costing more than the 21.5\". The repair includes the screen panel, glass, and adhesive seal, and takes 1–2 days due to panel sourcing. Message us on WhatsApp with your model for the exact price." },
   { q: "Do you offer free iMac diagnosis in Dubai?",
     a: "Yes, free diagnosis on all iMac models. Bring it in to Concord Tower, Dubai Media City or schedule free pickup across Dubai Mainland. You receive a written quote with fault description, part cost, and labour cost before any work starts. No obligation to proceed." },
 ];
@@ -47,9 +47,9 @@ export default function IMacRepairCost() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "iMac Repair Cost Dubai. Screen, Logic Board, RAM | 2024 Prices",
+    title: "iMac Repair Cost Dubai. Screen, Logic Board, RAM | Free Quote",
     description:
-      "iMac repair cost in Dubai. Screen from AED 699, logic board repair from AED 900, RAM upgrade from AED 300. All models. Free diagnosis. Concord Tower, Media City. Call 055 741 3706.",
+      "iMac repair cost in Dubai. Screen, logic board, SSD and RAM repairs for all models. Free diagnosis, WhatsApp us for today's exact price. Concord Tower, Media City. Call 055 741 3706.",
     path: "/imac-repair-cost-dubai",
   });
 
@@ -63,7 +63,7 @@ export default function IMacRepairCost() {
           tone="dark"
           eyebrow="iMac repair cost · Dubai · All models"
           title="iMac Repair Cost Dubai"
-          subtitle="Screen from AED 699. Logic board repair from AED 900. SSD upgrade from AED 450. All Intel and M-series iMac models. Free diagnosis."
+          subtitle="Screen, logic board and SSD repairs for all Intel and M-series iMac models. Free diagnosis, message us on WhatsApp for today's exact price."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><CheckCircle2 size={14} aria-hidden /> Free diagnosis</span>
@@ -84,7 +84,7 @@ export default function IMacRepairCost() {
           <QuickAnswer
             tone="dark"
             question="How much does iMac repair cost in Dubai?"
-            answer="iMac repair in Dubai costs: screen replacement AED 699–1,800, logic board repair AED 900–2,500, HDD to SSD upgrade AED 450–900, RAM upgrade AED 300–700. Diagnosis is free. Prices confirmed in writing before work starts. Concord Tower, Dubai Media City. Call 055 741 3706."
+            answer="iMac repair in Dubai covers screen replacement, logic board repair, HDD to SSD upgrade and RAM upgrade. Diagnosis is free and the price is confirmed in writing before work starts. Message us on WhatsApp with your model for today's exact cost. Concord Tower, Dubai Media City. Call 055 741 3706."
           />
         </section>
 
@@ -113,7 +113,7 @@ export default function IMacRepairCost() {
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-text-muted mt-sm">All prices exclude VAT. Diagnosis is free. Written quote before any work starts. Warranty of up to 12 months.</p>
+          <p className="text-[13px] text-text-muted mt-sm">Message us on WhatsApp for today's exact price on your model. Diagnosis is free. Written quote before any work starts. Warranty of up to 12 months.</p>
         </section>
 
         {/* CTA */}

@@ -8,13 +8,13 @@ export default function MacBookAirM2Repair() {
       chip="M2"
       years="2022 – 2023"
       seoTitle="MacBook Air M2 Repair Dubai: 13-inch & 15-inch Screen, Battery & Board"
-      seoDescription="MacBook Air M2 repair Dubai. 13-inch and 15-inch. Screen from AED 600, battery from AED 450. Free diagnosis, same-day service, free pickup across Dubai."
+      seoDescription="MacBook Air M2 repair Dubai. 13-inch and 15-inch screen, battery and board repairs. Free diagnosis, same-day service, free pickup. Message us for a quote."
       eyebrow="MacBook Air M2 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M2 Repair Dubai"
       heroDescription="MacBook Air M2 introduced in 2022 brought a completely redesigned chassis, MagSafe 3 charging, and the first 15-inch MacBook Air. We repair both the 13-inch M2 (A2681) and 15-inch M2 (A2941) for screen damage, battery swelling, charging port issues, and logic board faults at our Media City workshop."
       heroMeta={[
-        "Screen from AED 600",
-        "Battery from AED 450",
+        "Screen & battery repairs",
+        "Price on request",
         "Free diagnosis",
         "Same-day most repairs",
       ]}
@@ -25,11 +25,11 @@ export default function MacBookAirM2Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M2 screen repair cost in Dubai?",
-          a: "MacBook Air M2 screen replacement costs AED 600 for the 13-inch (A2681) and AED 700 for the 15-inch (A2941) at our workshop. Apple charges AED 1,099-1,199. We use OEM-grade Liquid Retina panels. The M2 screen is glued to the chassis: removal requires a heat gun and suction tools that damage the machine if done incorrectly. Always professional repair.",
+          a: "We replace both the 13-inch (A2681) and 15-inch (A2941) M2 Air screens at our workshop, and we come in well below what Apple charges. We use OEM-grade Liquid Retina panels. The M2 screen is glued to the chassis: removal requires a heat gun and suction tools that damage the machine if done incorrectly, so always choose professional repair. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How much does MacBook Air M2 battery replacement cost in Dubai?",
-          a: "MacBook Air M2 battery replacement costs AED 450 for the 13-inch (52.6 Wh) and AED 500 for the 15-inch (66.5 Wh). We have seen M2 batteries swell earlier than expected in Dubai due to sustained 40°C+ temperatures. If the trackpad is lifting or the bottom case bulging, replace the battery immediately.",
+          a: "We replace both the 13-inch (52.6 Wh) and 15-inch (66.5 Wh) M2 Air batteries. We have seen M2 batteries swell earlier than expected in Dubai due to sustained 40°C+ temperatures. If the trackpad is lifting or the bottom case bulging, replace the battery immediately. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "MacBook Air M2 overheating under load in Dubai, is this normal?",
@@ -37,15 +37,15 @@ export default function MacBookAirM2Repair() {
         },
         {
           q: "MacBook Air M2 MagSafe 3 port not charging, what to do?",
-          a: "MacBook Air M2 has both MagSafe 3 and USB-C charging. First test USB-C charging with a 30W+ adapter. If USB-C charges but MagSafe does not, the MagSafe port or its board connector is at fault. If neither charges, it is the charging IC. MagSafe port replacement: AED 350. Charging IC repair: AED 450-600. Free diagnosis included.",
+          a: "MacBook Air M2 has both MagSafe 3 and USB-C charging. First test USB-C charging with a 30W+ adapter. If USB-C charges but MagSafe does not, the MagSafe port or its board connector is at fault. If neither charges, it is the charging IC. Free diagnosis is included, and we confirm whether it is a MagSafe port or charging IC repair — message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Does MacBook Air M2 have a hinge crack problem?",
-          a: "We have seen hinge cracking on the 13-inch M2 Air (A2681) where the lid-to-body connection weakens after 1-2 years, particularly if the machine is opened one-handed regularly. The M2 chassis is thinner than M1 and more prone to this. Hinge repair: AED 350-500 depending on severity. Always open the lid with both hands.",
+          a: "We have seen hinge cracking on the 13-inch M2 Air (A2681) where the lid-to-body connection weakens after 1-2 years, particularly if the machine is opened one-handed regularly. The M2 chassis is thinner than M1 and more prone to this. Hinge repair pricing depends on severity — message us on WhatsApp for the exact price on your model. Always open the lid with both hands.",
         },
         {
           q: "Is MacBook Air M2 still worth repairing in 2026?",
-          a: "Yes. The M2 Air will receive macOS updates until at least 2028 and still handles all daily tasks quickly. Screen repair at AED 600 or battery at AED 450 is far cheaper than replacing with a M4 Air at AED 4,499+. Board repair is case-by-case; we give a free estimate first.",
+          a: "Yes. The M2 Air will receive macOS updates until at least 2028 and still handles all daily tasks quickly. A screen or battery repair is far cheaper than replacing it with a brand-new M4 Air. Board repair is case-by-case; we give a free estimate first, so message us on WhatsApp for the exact price on your model.",
         },
       ]}
     />

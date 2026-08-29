@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MacBook Pro M5 OLED Display Problems Dubai 2026: Lines, Flicker, Burn-In Fix",
     description:
-      "M5 OLED flickering, lines, or burn-in in Dubai? What is normal OLED behaviour and what needs repair. From AED 700.",
+      "M5 OLED flickering, lines, or burn-in in Dubai? What is normal OLED behaviour and what needs repair. Message us on WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-oled-display-issues-dubai",
     type: "article",
     publishedTime: "2026-06-22",

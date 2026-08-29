@@ -7,7 +7,7 @@ export default function BlogMacBookProM5Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M5 common problems in Dubai? OLED display issues, Thunderbolt 5 faults, thermal throttling, memory pressure on 16GB M5. Expert fixes and repair from AED 200."
+      seoDescription="MacBook Pro M5 common problems in Dubai? OLED display issues, Thunderbolt 5 faults, thermal throttling, memory pressure on 16GB M5. Expert fixes, message us on WhatsApp."
       path="/blog/macbook-pro-m5-common-problems-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM5Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro M5 owners in Dubai report OLED uniformity concerns, Thunderbolt 5 accessory glitches, and unexpected thermal throttling. Most are firmware or configuration issues fixed in minutes. Hardware faults start from AED 200 at our Dubai workshop."
-      quickAnswer="MacBook Pro M5 common problems include: OLED display image retention (check after 30 minutes static image), Thunderbolt 5 hubs not recognised (update hub firmware), thermal throttling on sustained tasks (clean vents, check Activity Monitor), and memory pressure on 16GB base config. Most fixes are free. Screen replacement from AED 700, logic board from AED 1,200 in Dubai."
+      hook="MacBook Pro M5 owners in Dubai report OLED uniformity concerns, Thunderbolt 5 accessory glitches, and unexpected thermal throttling. Most are firmware or configuration issues fixed in minutes. For hardware faults, message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M5 common problems include: OLED display image retention (check after 30 minutes static image), Thunderbolt 5 hubs not recognised (update hub firmware), thermal throttling on sustained tasks (clean vents, check Activity Monitor), and memory pressure on 16GB base config. Most fixes are free. For screen replacement or logic board repair in Dubai, message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -99,8 +99,8 @@ export default function BlogMacBookProM5Problems() {
             headers={["Symptom", "Likely cause", "Fix"]}
             rows={[
               { model: "Throttles only plugged in", ours: "MagSafe charging adds heat", apple: "Use lower wattage charger for light tasks" },
-              { model: "Throttles after 10-15 mins", ours: "Dust in vents (common in Dubai)", apple: "Professional cleaning AED 120" },
-              { model: "Throttles even in cool room", ours: "Thermal paste dried out", apple: "Repaste service AED 150-200" },
+              { model: "Throttles after 10-15 mins", ours: "Dust in vents (common in Dubai)", apple: "Professional cleaning (price on request)" },
+              { model: "Throttles even in cool room", ours: "Thermal paste dried out", apple: "Repaste service (price on request)" },
               { model: "Always throttles, even at idle", ours: "Rogue process or sensor fault", apple: "Software fix or board-level diagnosis" },
             ]}
           />
@@ -177,12 +177,12 @@ export default function BlogMacBookProM5Problems() {
           <BlogPriceTable
             caption="MacBook Pro M5 repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M5 14\" screen replacement", ours: "AED 700", apple: "AED 1,299", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M5 16\" screen replacement", ours: "AED 800", apple: "AED 1,499", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M5 battery replacement (14\")", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M5 battery replacement (16\")", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell, 12-month warranty" },
-              { model: "Thunderbolt port repair (single)", ours: "AED 350", apple: "AED 950+", note: "Port replacement or controller rework" },
-              { model: "Thermal cleaning + repaste", ours: "AED 150", apple: "Not offered", note: "Vents + heatsink, fixes throttling" },
+              { model: "MacBook Pro M5 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
+              { model: "MacBook Pro M5 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
+              { model: "MacBook Pro M5 battery replacement (14\")", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M5 battery replacement (16\")", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty" },
+              { model: "Thunderbolt port repair (single)", ours: "Price on request", apple: "Price on request", note: "Port replacement or controller rework" },
+              { model: "Thermal cleaning + repaste", ours: "Price on request", apple: "Not offered", note: "Vents + heatsink, fixes throttling" },
             ]}
           />
           <p>
@@ -204,8 +204,9 @@ export default function BlogMacBookProM5Problems() {
             <li>Display works internally but both external monitor outputs are dead</li>
           </ul>
           <p>
-            We offer free diagnosis. Component-level board repair on M5 starts from AED 1,200
-            and covers short circuits, MOSFET failures, and controller chip replacement.{" "}
+            We offer free diagnosis. Component-level board repair on M5 covers short circuits,
+            MOSFET failures, and controller chip replacement. Message us on WhatsApp for today's
+            exact price on your model.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>

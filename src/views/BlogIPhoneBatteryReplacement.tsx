@@ -5,14 +5,14 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogIPhoneBatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="iPhone Battery Replacement Cost Dubai 2026: AED Prices by Model"
-      seoDescription="iPhone battery replacement cost Dubai from AED 99 to AED 399 by model. Independent Apple specialist, genuine cells, 3-month warranty."
+      seoTitle="iPhone Battery Replacement Cost Dubai 2026: Prices by Model"
+      seoDescription="iPhone battery replacement in Dubai by model. Independent Apple specialist, genuine cells, 3-month warranty. Message us on WhatsApp for today's price."
       path="/blog/iphone-battery-replacement-cost-dubai"
       wide={true}
       category="Cost guide · iPhone"
       h1="iPhone Battery Replacement Cost Dubai: Prices for Every Model"
-      hook="iPhone battery replacement in Dubai costs AED 99 to AED 399 depending on the model, and our workshop replaces cells from iPhone 8 through iPhone 16 Pro Max in 30 minutes with a 3-month capacity warranty."
-      quickAnswer="iPhone battery replacement cost in Dubai ranges from AED 99 for iPhone 8 and iPhone SE to AED 399 for iPhone 16 Pro Max. Dubai heat above 35°C degrades iPhone batteries faster than the 500-cycle Apple estimate. Check Settings > Battery > Battery Health for a percentage below 80% as the replacement signal."
+      hook="iPhone battery replacement in Dubai varies by model, and our workshop replaces cells from iPhone 8 through iPhone 16 Pro Max in 30 minutes with a 3-month capacity warranty. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPhone battery replacement cost in Dubai depends on your model, from iPhone 8 and iPhone SE up to iPhone 16 Pro Max. Message us on WhatsApp for today's exact price. Dubai heat above 35°C degrades iPhone batteries faster than the 500-cycle Apple estimate. Check Settings > Battery > Battery Health for a percentage below 80% as the replacement signal."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -194,8 +194,9 @@ export default function BlogIPhoneBatteryReplacement() {
             <p>
               For practical purposes: iPhones in Dubai typically need battery replacement every
               18 to 24 months rather than the 30 to 36 months a user in a temperate climate might
-              expect. The cost of one battery replacement at AED 149 to AED 349 is substantially
-              less than accelerated full-device replacement caused by ignoring a degraded cell.
+              expect. The cost of one battery replacement is substantially less than accelerated
+              full-device replacement caused by ignoring a degraded cell — message us on WhatsApp
+              for the exact price on your model.
             </p>
           </section>
 
@@ -225,32 +226,34 @@ export default function BlogIPhoneBatteryReplacement() {
           <section id="replacement-cost">
             <h2 id="replacement-cost">iPhone battery replacement cost Dubai by model</h2>
             <p>
-              All prices below include the replacement cell, labour, a post-installation battery
-              calibration cycle, and a 3-month written capacity warranty. No diagnostic fee,
-              free pickup across mainland Dubai for orders above AED 200.
+              Every battery replacement includes the replacement cell, labour, a post-installation
+              battery calibration cycle, and a 3-month written capacity warranty. No diagnostic fee,
+              and free pickup across mainland Dubai. Message us on WhatsApp for today's exact price
+              on your model.
             </p>
             <BlogPriceTable
-              caption="iPhone battery replacement cost, MacBook Repair Dubai, June 2026"
-              headers={["Repair / Service", "Our price", "Apple / third-party"]}
+              caption="iPhone battery replacement by model, MacBook Repair Dubai, June 2026"
+              headers={["Repair / Service", "Our price"]}
               rows={[
-                { model: "iPhone 16 Pro Max / 16 Pro", ours: "AED 349", apple: "AED 700+" },
-                { model: "iPhone 16 / 15 Pro Max", ours: "AED 299", apple: "AED 650+" },
-                { model: "iPhone 15 / 14 Pro Max", ours: "AED 249", apple: "AED 600+" },
-                { model: "iPhone 14 / 13 series", ours: "AED 199", apple: "AED 550+" },
-                { model: "iPhone 12 / 11 / XS / X", ours: "AED 149", apple: "AED 500+" },
-                { model: "iPhone SE / 8 / 7", ours: "AED 99", apple: "AED 450+" },
+                { model: "iPhone 16 Pro Max / 16 Pro", ours: "Price on request" },
+                { model: "iPhone 16 / 15 Pro Max", ours: "Price on request" },
+                { model: "iPhone 15 / 14 Pro Max", ours: "Price on request" },
+                { model: "iPhone 14 / 13 series", ours: "Price on request" },
+                { model: "iPhone 12 / 11 / XS / X", ours: "Price on request" },
+                { model: "iPhone SE / 8 / 7", ours: "Price on request" },
               ]}
             />
             <p>
               Apple's out-of-warranty iPhone battery service pricing in the UAE is set in USD and
               converted at the official AED rate, which is why local Apple Store and AASP prices
-              consistently run AED 450 to AED 700+ for common models. Our pricing reflects the
-              genuine cell cost plus a realistic labour margin without the Apple retail overhead.
+              consistently run well above independent workshops for common models. Our pricing
+              reflects the genuine cell cost plus a realistic labour margin without the Apple retail
+              overhead — message us on WhatsApp for the exact price on your model.
             </p>
             <p>
               If you have an active AppleCare+ plan, Apple's battery service fee (when health is
               below 80%) is covered at no additional cost under that plan. In that case, use
-              AppleCare+. If you do not have AppleCare+, our pricing is the most cost-effective
+              AppleCare+. If you do not have AppleCare+, our service is the most cost-effective
               option in Dubai with same-day turnaround and a written warranty.
             </p>
           </section>
@@ -278,8 +281,9 @@ export default function BlogIPhoneBatteryReplacement() {
               the correct next step. We offer free initial diagnostics: bring the phone in, we
               connect it to our DC power supply and measure current draw under controlled load.
               A PMIC fault typically shows an abnormal quiescent current above 200 mA at idle,
-              which is unmistakable on the meter. Board-level repair for PMIC faults costs
-              AED 350 to AED 550 depending on the iPhone model and the extent of the fault.
+              which is unmistakable on the meter. Board-level repair pricing for PMIC faults
+              depends on the iPhone model and the extent of the fault — message us on WhatsApp
+              for a quote once we have diagnosed it.
             </p>
           </section>
         </>

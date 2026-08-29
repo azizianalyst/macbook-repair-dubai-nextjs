@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneLightningPortRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Lightning Port Repair Dubai - AED 300 or FREE Clean"
-      seoDescription="iPhone Lightning port repair Dubai. Free port clean first - most cases don't need a new port. Replacement AED 300 if needed. iPhone 14 and earlier."
+      seoTitle="iPhone Lightning Port Repair Dubai - Free Port Clean First"
+      seoDescription="iPhone Lightning port repair Dubai. Free port clean first - most cases don't need a new port. Message us on WhatsApp for today's price. iPhone 14 and earlier."
       path="/iphone-lightning-port-repair-dubai"
       eyebrow="iPhone Lightning port"
       h1="iPhone Lightning Port Repair Dubai (iPhone 14 and earlier)"
@@ -26,7 +26,7 @@ export default function IPhoneLightningPortRepair() {
             <strong>The honest first move on any "broken" iPhone Lightning port: clean it, free.</strong> About 70% of iPhones we see for charging issues in Dubai have pocket lint, sand or pet hair packed into the port - the cable physically can't seat fully against the contacts. We extract debris under a microscope, plug in our test cable, and 7 times out of 10 you walk out with a working iPhone and no bill.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            If the port itself is corroded, bent or has snapped contacts, replacement is AED 300 - same-day on iPhone 5 through 14. We use OEM-grade Lightning port flex (which on most models also includes the bottom microphone). Warranty up to 12 months.
+            If the port itself is corroded, bent or has snapped contacts, we replace it same-day on iPhone 5 through 14 - message us on WhatsApp for the exact price on your model. We use OEM-grade Lightning port flex (which on most models also includes the bottom microphone). Warranty up to 12 months.
           </p>
         </>
       }
@@ -54,7 +54,7 @@ export default function IPhoneLightningPortRepair() {
       ]}
       faqs={[
         { q: "How can I tell if mine just needs a clean?", a: "Two signs: the cable feels like it doesn't fully click in (something blocking it), or charging works at one angle but not another. Both point to debris. Bring it in - clean is free." },
-        { q: "Why do shops charge AED 250+ for what's just lint?", a: "Honestly, because they can. We've decided cleaning is part of the diagnostic and shouldn't be billed. We make our money on the customers who genuinely need a port - and on the goodwill from the ones who don't." },
+        { q: "Why do some shops bill you for what's just lint?", a: "Honestly, because they can. We've decided cleaning is part of the diagnostic and shouldn't be billed. We make our money on the customers who genuinely need a port - and on the goodwill from the ones who don't." },
         { q: "Will the bottom microphone be replaced too?", a: "On iPhone 7 and later, the Lightning port and bottom microphone share a flex cable - replacing one replaces the other, no extra charge. If your bottom mic was also dying, this is a free fix." },
         { q: "What if it's actually water damage?", a: "We'll see corrosion under the microscope and tell you. Water-damaged ports may also have killed nearby logic-board traces - we run a free water-damage assessment in that case (separate page on this site) before quoting." },
         { q: "Same day for sure?", a: "Yes. Walk-in by 1 PM, collect by 6 PM. Or WhatsApp for free pickup across Dubai mainland." },

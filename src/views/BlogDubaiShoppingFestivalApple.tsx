@@ -35,13 +35,13 @@ export default function BlogDubaiShoppingFestivalApple() {
             Apple Store Dubai (Mall of the Emirates / Dubai Mall) almost never discounts. What you see during Dubai Shopping Festival is the authorised reseller channel cutting price to clear stock and chase share. Typical observed discounts:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPhone (current generation):</strong> 3-5% (AED 200-400 off).</li>
-            <li><strong>iPhone (previous generation):</strong> 8-15% (AED 400-900 off).</li>
-            <li><strong>MacBook Air:</strong> 8-12% (AED 400-700 off).</li>
-            <li><strong>MacBook Pro:</strong> 5-10% (AED 500-1,000 off).</li>
-            <li><strong>iPad:</strong> 10-15% (AED 250-500 off).</li>
-            <li><strong>Apple Watch:</strong> 8-12% (AED 200-400 off).</li>
-            <li><strong>Bundles</strong> (iPhone + case/charger, MacBook + AppleCare): often the real saving, AED 400-800 effective.</li>
+            <li><strong>iPhone (current generation):</strong> 3-5% off.</li>
+            <li><strong>iPhone (previous generation):</strong> 8-15% off.</li>
+            <li><strong>MacBook Air:</strong> 8-12% off.</li>
+            <li><strong>MacBook Pro:</strong> 5-10% off.</li>
+            <li><strong>iPad:</strong> 10-15% off.</li>
+            <li><strong>Apple Watch:</strong> 8-12% off.</li>
+            <li><strong>Bundles</strong> (iPhone + case/charger, MacBook + AppleCare): often the real saving in effective value.</li>
           </ul>
 
           <h2 id="white-friday">White Friday / Black Friday Apple Store Dubai</h2>
@@ -51,7 +51,7 @@ export default function BlogDubaiShoppingFestivalApple() {
 
           <h2 id="tax-free-shopping">Tax-free shopping for tourists (5% VAT refund)</h2>
           <p>
-            UAE charges 5% VAT on Apple products. Tourists can claim this back via Planet Tax Free at Dubai/Abu Dhabi/Sharjah airport on departure, on minimum AED 250 spend per receipt. Process:
+            UAE charges 5% VAT on Apple products. Tourists can claim this back via Planet Tax Free at Dubai/Abu Dhabi/Sharjah airport on departure, on a qualifying minimum spend per receipt. Process:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>At purchase: ask for a Tax Free tag (passport required, must show physical passport - not photo).</li>
@@ -59,7 +59,7 @@ export default function BlogDubaiShoppingFestivalApple() {
             <li>Refund to card within 9 days, or instant cash at the airport (with 4.8% fee).</li>
           </ol>
           <p>
-            On a MacBook Pro 16" purchase that's a real <strong>AED 600-700 back</strong> - worth the 10 minutes at the airport.
+            On a MacBook Pro 16" purchase that's a real <strong>5% back</strong> - worth the 10 minutes at the airport.
           </p>
 
           <h2 id="when-not-to-buy">When NOT to buy (Aug-early Sept iPhone launch window)</h2>
@@ -76,7 +76,7 @@ export default function BlogDubaiShoppingFestivalApple() {
 
           <h2 id="resellers">Resellers (Sharaf DG, Jumbo, Carrefour) - actually cheaper</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Sharaf DG:</strong> consistently AED 100-500 cheaper than Apple Store. 0% instalments via FAB, Mashreq, ENBD. Genuine UAE Apple warranty.</li>
+            <li><strong>Sharaf DG:</strong> consistently a little cheaper than Apple Store. 0% instalments via FAB, Mashreq, ENBD. Genuine UAE Apple warranty.</li>
             <li><strong>Jumbo Electronics:</strong> similar pricing, sometimes deeper iPad discounts. Service network across UAE.</li>
             <li><strong>Carrefour:</strong> mostly iPhone + iPad + accessories. Frequent "buy with weekly groceries" promos. Watch for 10% cashback weekends.</li>
             <li><strong>Lulu Hypermarket:</strong> seasonal - strong during DSF and Eid.</li>
@@ -89,7 +89,7 @@ export default function BlogDubaiShoppingFestivalApple() {
             Apple Trade-In is open year-round in UAE but the values bump 10-20% during DSF and back-to-school. Resellers also run "trade your old iPhone" campaigns:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Sharaf DG iPhone trade-in events: usually January and August. Often AED 200-500 above Apple's standard offer.</li>
+            <li>Sharaf DG iPhone trade-in events: usually January and August. Often above Apple's standard offer.</li>
             <li>Jumbo MacBook trade-in: irregular, watch their website.</li>
             <li>Compare against private sale on Dubizzle - see our{" "}
               <Link to="/blog/how-much-is-my-iphone-worth-dubai" className="text-accent font-semibold hover:underline">iPhone resale guide</Link>{" "}
@@ -109,7 +109,7 @@ export default function BlogDubaiShoppingFestivalApple() {
         { q: "Is buying from noon.com or Amazon.ae safe?", a: "Yes if seller is 'Sold by noon' / 'Sold by Amazon' / 'Apple Authorised' - those carry full UAE Apple warranty. Third-party 'fulfilled by' listings are sometimes grey-market with international warranty (which Apple UAE will not honour). Read the seller line carefully." },
         { q: "Can I claim VAT refund as a UAE resident?", a: "No - VAT refund is for tourists only. UAE residents and GCC residents pay the 5% VAT and don't reclaim it." },
         { q: "Is January (post-DSF) a good time to buy?", a: "Yes - leftover DSF stock often clears at deeper discounts in the first 2 weeks of February. Risk is colour/spec availability shrinks." },
-        { q: "Does Apple Trade-In bump up during DSF?", a: "Usually yes - by 10-20% for that 4-6 week window. Worth waiting if you can. Sharaf DG and Jumbo run their own trade-in promos that sometimes beat Apple by AED 300-500." },
+        { q: "Does Apple Trade-In bump up during DSF?", a: "Usually yes - by 10-20% for that 4-6 week window. Worth waiting if you can. Sharaf DG and Jumbo run their own trade-in promos that sometimes beat Apple's standard offer." },
         { q: "What about Eid Al Fitr and Eid Al Adha promotions?", a: "Both feature reseller Apple promos similar to DSF but shorter (5-10 days). Eid Al Fitr (March-April 2026) and Eid Al Adha (June 2026) are good secondary windows. Less competition with iPhone launch news than the autumn timing." },
       ]}
       relatedLinks={[

@@ -5,7 +5,7 @@ export default function IMacFanCleaning() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Fan Cleaning Dubai - Quiet Down a Loud iMac | 055 741 3706"
-      seoDescription="iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again. AED 250. Same day. Home visit very popular."
+      seoDescription="iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again - same day. Message us on WhatsApp for a price. Home visit popular."
       path="/imac-fan-cleaning-dubai"
       eyebrow="iMac fan cleaning"
       h1="iMac Fan Cleaning Dubai - Quiet Down a Loud iMac"
@@ -51,7 +51,7 @@ export default function IMacFanCleaning() {
         "Free home pickup and drop-off across Dubai mainland.",
       ]}
       faqs={[
-        { q: "What's the difference between fan cleaning and overheating fix?", a: "Fan cleaning is just dust removal - AED 250. The overheating service includes everything plus thermal paste and pad replacement (AED 350). If your iMac is throttling and slow, you need the full service. If it's just noisy, fan cleaning is enough." },
+        { q: "What's the difference between fan cleaning and overheating fix?", a: "Fan cleaning is just dust removal. The overheating service includes everything plus thermal paste and pad replacement. If your iMac is throttling and slow, you need the full service. If it's just noisy, fan cleaning is enough. Message us on WhatsApp with your model and year for the exact price of each." },
         { q: "How often should I have this done?", a: "In Dubai, every 3-4 years for an iMac in normal home use. Sooner if you're near the JLR / Marsa area or in a high-dust office. M-series 24-inch iMacs almost never need it - they barely use the fan." },
         { q: "Can I just clean it myself?", a: "External vents, sure - quarterly soft brushing won't hurt. The internal heatsink needs the display off, which means adhesive cutting and re-laminating. Not a DIY job unless you're experienced." },
         { q: "Why is my fan loud after macOS update?", a: "Different cause - usually a runaway background process (Spotlight reindex, Photos analysis, mds). Check Activity Monitor first. If CPU is idle but fan is loud, it's mechanical and needs cleaning." },

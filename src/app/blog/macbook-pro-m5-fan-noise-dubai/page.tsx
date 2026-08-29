@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MacBook Pro M5 Fan Noise Dubai 2026: Crackling, Clicking, Grinding Fix",
     description:
-      "M5 fan crackling or clicking in Dubai? Debris, bearing fault, or Tahoe firmware bug. Fix guide + fan replacement from AED 200.",
+      "M5 fan crackling or clicking in Dubai? Debris, bearing fault, or Tahoe firmware bug. Fix guide + WhatsApp us for fan replacement pricing.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-fan-noise-dubai",
     type: "article",
     publishedTime: "2026-06-22",

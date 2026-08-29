@@ -6,8 +6,8 @@ export default function IPadBatteryReplacement() {
   return (
     <DevicePageTemplate
       family="ipad"
-      seoTitle="iPad Battery Replacement Dubai - From AED 350 | Same-Day | 30-Day Warranty"
-      seoDescription="iPad battery replacement Dubai. Glued cells removed safely on every iPad model. From AED 350. Free pickup across Dubai. Call 055 741 3706."
+      seoTitle="iPad Battery Replacement Dubai | Same-Day | 30-Day Warranty"
+      seoDescription="iPad battery replacement Dubai. Glued cells removed safely on every iPad model. Free pickup across Dubai. WhatsApp us for today's price. Call 055 741 3706."
       path="/ipad-battery-replacement-dubai"
       eyebrow="iPad battery replacement"
       h1="iPad Battery Replacement Dubai"
@@ -59,7 +59,7 @@ export default function IPadBatteryReplacement() {
         "Free re-test if capacity drops below 95% in the first 30 days.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 350",                            "AED 600+ (Apple sometimes refuses older iPads)"],
+        ["Starting price",        "Price on request",                   "Higher, and Apple sometimes refuses older iPads"],
         ["Same-day option",       "Yes, most models",                   "No - typically 7-10 days"],
         ["Pickup & delivery",     "Free, Dubai mainland",               "Drop in yourself"],
         ["Battery grade",         "OEM-grade cells, full BMS pairing",  "Apple Genuine"],

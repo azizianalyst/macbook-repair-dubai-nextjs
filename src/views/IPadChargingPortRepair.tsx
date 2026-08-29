@@ -6,8 +6,8 @@ export default function IPadChargingPortRepair() {
   return (
     <DevicePageTemplate
       family="ipad"
-      seoTitle="iPad Charging Port Repair Dubai - USB-C & Lightning | From AED 300"
-      seoDescription="iPad charging port repair Dubai. USB-C and Lightning ports replaced. Smart Connector and wireless charging cases also covered. From AED 300. Call 055 741 3706."
+      seoTitle="iPad Charging Port Repair Dubai - USB-C & Lightning | Same Day"
+      seoDescription="iPad charging port repair Dubai. USB-C and Lightning ports replaced, Smart Connector covered. Free diagnosis, same day. WhatsApp for your exact price. Call 055 741 3706."
       path="/ipad-charging-port-repair-dubai"
       eyebrow="iPad charging port repair"
       h1="iPad Charging Port Repair Dubai - USB-C & Lightning"
@@ -60,7 +60,7 @@ export default function IPadChargingPortRepair() {
         "Free re-fit if any wobble develops in the first 30 days.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 300",                          "AED 1,200+ (whole-unit swap)"],
+        ["Starting price",        "Price on request",                 "Whole-unit swap only"],
         ["Same-day option",       "Yes, most models",                 "No - usually 7+ days"],
         ["Free diagnosis",        "Yes, before any work",             "Diagnostic fee may apply"],
         ["Board-level capability", "Yes - microscope IC repair",      "Whole-unit swap only"],
@@ -70,11 +70,11 @@ export default function IPadChargingPortRepair() {
       ]}
       faqs={[
         { q: "Why doesn't my iPad charge anymore?", a: "Five possible causes: the cable, the charger, the port pins, the charging IC, or the battery. Free diagnosis tells us which. About 60% of charging issues are a cheap cable - we'll never charge for a part you don't need." },
-        { q: "Should I try a different cable first?", a: "Yes. And a different brick. If the iPad charges with another cable, you saved AED 300. If it doesn't, the port or IC is the issue. Either way, we don't charge for the diagnosis." },
+        { q: "Should I try a different cable first?", a: "Yes. And a different brick. If the iPad charges with another cable, you've saved the cost of a repair. If it doesn't, the port or IC is the issue. Either way, we don't charge for the diagnosis." },
         { q: "What's the difference between USB-C and Thunderbolt on iPad Pro?", a: "Same physical port, different controller. Thunderbolt 4 on M1 and newer iPad Pros adds 40 Gb/s data and external display support. The replacement port has more pins - that's why it costs more." },
         { q: "Can dust really stop charging?", a: "Yes. Dubai's lint and fine sand pack into the port over months. We extract it with non-conductive picks. If that solves it, no charge." },
-        { q: "Is the Smart Connector the same as the charging port?", a: "No. Smart Connector is a separate three-pin contact strip on the side of iPad Pro and Air. It powers keyboards and folios. It can fail on its own - different repair, different price (AED 350)." },
-        { q: "My iPad charges but very slowly. Is the port damaged?", a: "Usually the charging IC has lost a fast-charge pin. iPad falls back to 5W trickle charging. Board-level IC repair fixes it. AED 550, 1-2 days." },
+        { q: "Is the Smart Connector the same as the charging port?", a: "No. Smart Connector is a separate three-pin contact strip on the side of iPad Pro and Air. It powers keyboards and folios. It can fail on its own - different repair, priced separately, so message us on WhatsApp for that exact price." },
+        { q: "My iPad charges but very slowly. Is the port damaged?", a: "Usually the charging IC has lost a fast-charge pin. iPad falls back to 5W trickle charging. Board-level IC repair fixes it in 1-2 days - message us on WhatsApp for the exact price on your model." },
         { q: "Will MagSafe or wireless charging work after?", a: "iPads don't have MagSafe and most don't support wireless charging. Apple Pencil charges wirelessly via the magnetic side contact - that's separate from the main port and isn't affected." },
         { q: "Can you save the data if the port is dead?", a: "Yes. We can power the iPad from the battery side directly to back up to a Mac, even with no working port. Data first, repair second." },
       ]}

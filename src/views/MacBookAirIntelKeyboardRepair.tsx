@@ -7,18 +7,18 @@ export default function MacBookAirIntelKeyboardRepair() {
       path="/macbook-air-intel-keyboard-repair-dubai"
       chip="Intel"
       years="2018–2020"
-      seoTitle="MacBook Air Intel Keyboard Repair Dubai — AED 350"
-      seoDescription="MacBook Air Intel butterfly keyboard repair Dubai AED 350. Top-case replacement, same-day 2-hour service. Dust and key failure fixed. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air Intel Keyboard Repair Dubai — Same Day"
+      seoDescription="MacBook Air Intel butterfly keyboard repair Dubai. Top-case replacement, same-day 2-hour service. Dust and key failure fixed. Free diagnosis. WhatsApp us for your price."
       h1="MacBook Air Intel Keyboard Repair Dubai"
       eyebrow="Intel Air butterfly keyboard specialist · Dubai Media City · Same-day"
       keyboardType="Butterfly (3rd generation)"
       switchMechanism="Butterfly mechanism — 0.55 mm travel"
       touchId={false}
-      heroAnswer="MacBook Air Intel (2018–2020) keyboard repair costs AED 350 at MacBook Repair Dubai. The Intel Air uses Apple's 3rd-generation butterfly keyboard — a thin, fragile mechanism notorious for failing after a single dust particle gets underneath a key. Repair requires full top-case replacement. Same-day 2-hour service. Apple no longer prioritises these models; we specialise in them."
+      heroAnswer="MacBook Air Intel (2018–2020) keyboard repair at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your model. The Intel Air uses Apple's 3rd-generation butterfly keyboard — a thin, fragile mechanism notorious for failing after a single dust particle gets underneath a key. Repair requires full top-case replacement. Same-day 2-hour service. Apple no longer prioritises these models; we specialise in them."
       chipUniquePoints={[
         "The MacBook Air Intel 2018–2020 uses Apple's 3rd-generation butterfly keyboard with only 0.55 mm of key travel. The mechanism is a two-part plastic 'butterfly' wing that flattens when pressed. It is extremely sensitive to debris: a single crumb or dust particle under a key can cause it to stick, fail to register, or double-register. Dubai's fine desert sand is particularly damaging.",
         "Unlike the Magic Keyboard on M1–M4 Air models, butterfly keys cannot be individually replaced. The key mechanism is integrated into the top-case keyboard backplate. If one key fails, the full top-case assembly — which includes the keyboard, trackpad, battery and aluminium deck — must be replaced. MacBook Repair Dubai carries stock of 13-inch Intel Air top-case assemblies.",
-        "Apple acknowledged the butterfly keyboard failure issue with a free replacement programme covering 2018–2019 models, but this programme has ended. The 2020 Intel Air also uses a 3rd-generation butterfly keyboard (though slightly revised) but was not covered by the programme. If your Air was repaired under the programme and the issue has returned, you are out of warranty coverage — we repair same-day for AED 350.",
+        "Apple acknowledged the butterfly keyboard failure issue with a free replacement programme covering 2018–2019 models, but this programme has ended. The 2020 Intel Air also uses a 3rd-generation butterfly keyboard (though slightly revised) but was not covered by the programme. If your Air was repaired under the programme and the issue has returned, you are out of warranty coverage — we repair same-day; message us on WhatsApp for your exact price.",
         "Intel Air keyboards do not have Touch ID. The Touch ID sensor was not introduced to MacBook Air until the M1 (2020) model. This simplifies top-case replacement on Intel models — no Touch ID transfer is required. We install the new top-case with the existing battery and trackpad reconnected.",
         "After top-case replacement, the keyboard backlight should be re-tested per key. We verify all 78 keys register correctly and the backlight is uniform before returning the machine. The repair includes a 15-day warranty on the replacement top-case assembly.",
       ]}
@@ -48,11 +48,11 @@ export default function MacBookAirIntelKeyboardRepair() {
       faults={[
         {
           title: "Single key not registering",
-          body: "A single piece of dust or debris under the butterfly mechanism causes the key to stop registering or register intermittently. The fix is top-case replacement — AED 350, same-day. Compressed air sometimes provides temporary relief but does not fix the underlying issue.",
+          body: "A single piece of dust or debris under the butterfly mechanism causes the key to stop registering or register intermittently. The fix is top-case replacement, same-day — message us on WhatsApp for your exact price. Compressed air sometimes provides temporary relief but does not fix the underlying issue.",
         },
         {
           title: "Key double-registering (types two letters)",
-          body: "Double-register happens when the butterfly clip deforms and both halves activate simultaneously. Very common after 4–6 years of use on Dubai Intel Airs. Top-case replacement resolves it permanently. AED 350.",
+          body: "Double-register happens when the butterfly clip deforms and both halves activate simultaneously. Very common after 4–6 years of use on Dubai Intel Airs. Top-case replacement resolves it permanently — message us on WhatsApp for your exact price.",
         },
         {
           title: "Sticky key after coffee or liquid spill",
@@ -60,7 +60,7 @@ export default function MacBookAirIntelKeyboardRepair() {
         },
         {
           title: "Key cap cracked or broken off",
-          body: "Butterfly key caps snap if forced sideways. Unlike scissor switch caps, butterfly caps cannot be sourced and re-clipped individually — the top-case must be replaced. AED 350 includes the full replacement.",
+          body: "Butterfly key caps snap if forced sideways. Unlike scissor switch caps, butterfly caps cannot be sourced and re-clipped individually — the top-case must be replaced. Message us on WhatsApp for the exact price of the full replacement.",
         },
         {
           title: "Backlight dead on Intel Air",
@@ -74,7 +74,7 @@ export default function MacBookAirIntelKeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air Intel butterfly keyboard repair cost in Dubai?",
-          a: "MacBook Air Intel (2018–2020) keyboard repair is AED 350 at MacBook Repair Dubai. This covers the full top-case replacement including the butterfly keyboard backplate, labour, and a 15-day warranty. Same-day 2-hour service.",
+          a: "MacBook Air Intel (2018–2020) keyboard repair at MacBook Repair Dubai covers the full top-case replacement including the butterfly keyboard backplate, labour, and a 15-day warranty, with same-day 2-hour service. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Why does the Intel Air butterfly keyboard need full top-case replacement?",
@@ -82,7 +82,7 @@ export default function MacBookAirIntelKeyboardRepair() {
         },
         {
           q: "Does Apple still repair Intel MacBook Air butterfly keyboards?",
-          a: "Apple's free butterfly keyboard replacement programme ended. The 2018–2020 Intel Air can still be serviced at Apple but it is not a priority and wait times are longer. MacBook Repair Dubai repairs Intel Air keyboards same-day for AED 350.",
+          a: "Apple's free butterfly keyboard replacement programme ended. The 2018–2020 Intel Air can still be serviced at Apple but it is not a priority and wait times are longer. MacBook Repair Dubai repairs Intel Air keyboards same-day — message us on WhatsApp for your exact price.",
         },
         {
           q: "Can the Intel Air butterfly keyboard be fixed with compressed air?",

@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneVolumeButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Volume Button Repair Dubai - AED 250 | 1 Day"
-      seoDescription="iPhone volume up/down + ringer switch repair Dubai. Single flex covers all three - replaced together. AED 250, 1 day. Call 055 741 3706."
+      seoTitle="iPhone Volume Button Repair Dubai | 1 Day"
+      seoDescription="iPhone volume up/down + ringer switch repair Dubai. Single flex covers all three - replaced together. 1 day. Message us on WhatsApp for today's price. Call 055 741 3706."
       path="/iphone-volume-button-repair-dubai"
       eyebrow="iPhone volume button repair"
       h1="iPhone Volume Button Repair Dubai"
-      subtitle="Volume up, volume down and the ringer/silent switch all share one flex cable. When one fails, we replace the whole strip - no need to come back twice. AED 250, 1 day."
+      subtitle="Volume up, volume down and the ringer/silent switch all share one flex cable. When one fails, we replace the whole strip - no need to come back twice. Done in 1 day - message us on WhatsApp for today's price."
       startingPrice={250}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone volume buttons aren't working - model:"
@@ -23,7 +23,7 @@ export default function IPhoneVolumeButtonRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit. AED 250, warranty of up to 12 months.
+            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit - message us on WhatsApp for today's price, with a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Common causes: a drop on the left edge bends the metal rail; long-term wear collapses the click dome; on iPhone 13 and later the ringer switch tab snaps off if forced past its detent. All fixed with one flex swap.
@@ -53,9 +53,9 @@ export default function IPhoneVolumeButtonRepair() {
         "Free re-test if buttons soften within 12 months.",
       ]}
       faqs={[
-        { q: "Why replace the whole flex if only one button is dead?", a: "All three share one connector and one ribbon. Replacing only the dead button would mean splicing a flex - unreliable and not warranted by anyone reputable. The whole-flex swap costs the same as the part and gives you a like-new control set." },
+        { q: "Why replace the whole flex if only one button is dead?", a: "All three share one connector and one ribbon. Replacing only the dead button would mean splicing a flex - unreliable and not warranted by anyone reputable. The whole-flex swap costs the same as splicing a single button and gives you a like-new control set - message us on WhatsApp for the exact price." },
         { q: "Will the Action button keep my custom mapping?", a: "Yes. The mapping lives in iOS settings, not in the flex. After the new hardware boots, your shortcut works exactly as before." },
-        { q: "What if it's the ringer switch that broke off?", a: "Same flex. We replace it including the slider tab. AED 250 unchanged." },
+        { q: "What if it's the ringer switch that broke off?", a: "Same flex. We replace it including the slider tab, at the same price - message us on WhatsApp for today's exact figure." },
         { q: "Can software cause this?", a: "Rarely. iOS volume HUD glitches can make the buttons appear unresponsive - we always restart and test before opening the phone. About 5% of cases are software-only and don't need a repair." },
         { q: "Same day possible?", a: "We schedule volume flex jobs for next-day to ensure we have your model's part in stock and a calm workbench. Faster than next-day risks rushing a delicate alignment." },
       ]}

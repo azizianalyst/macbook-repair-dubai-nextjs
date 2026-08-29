@@ -6,13 +6,13 @@ export default function BlogIPhoneCrackedScreen() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Cracked Screen Repair Dubai 2026: Costs by Model"
-      seoDescription="iPhone cracked screen repair Dubai from AED 149. OLED and LCD replacement for all iPhone models. Free diagnosis, same-day service."
+      seoDescription="iPhone cracked screen repair Dubai for all iPhone models. OLED and LCD replacement, free diagnosis, same-day service. WhatsApp us for today's price."
       path="/blog/iphone-cracked-screen-repair-dubai"
       wide={true}
       category="Cost guide · iPhone"
       h1="iPhone Cracked Screen Repair Dubai: Costs for Every Model"
-      hook="iPhone cracked screen repair in Dubai starts from AED 149 for older LCD models and rises to AED 599 for iPhone 15 Pro Max OLED, with most repairs completed in 30 minutes at our Concord Tower workshop."
-      quickAnswer="iPhone cracked screen repair in Dubai costs AED 149 to AED 599 depending on the model and panel type. OLED screens (iPhone X through iPhone 17) cost more than LCD panels (iPhone 8 and earlier). A free diagnosis confirms whether only the glass or the full OLED assembly needs replacement."
+      hook="iPhone cracked screen repair in Dubai covers everything from older LCD models to the iPhone 15 Pro Max OLED, with most repairs completed in 30 minutes at our Concord Tower workshop. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPhone cracked screen repair in Dubai varies by model and panel type. OLED screens (iPhone X through iPhone 17) cost more than LCD panels (iPhone 8 and earlier). A free diagnosis confirms whether only the glass or the full OLED assembly needs replacement, then we message you the exact price on WhatsApp."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -69,7 +69,7 @@ export default function BlogIPhoneCrackedScreen() {
               Spider-web cracks that cover a large portion of the screen or cracks that intersect the display area create a more serious risk: the exposed glass edges are sharp and can cut fingers, and fine glass particles can enter the USB-C or Lightning port when the phone flexes. If the OLED shows any dark patches, pink lines, or the touch stops responding in certain zones, continued use risks further internal damage as debris migrates under the display.
             </p>
             <p>
-              Our recommendation: apply a tempered glass protector on the day of the crack if repair is not immediate, and book the repair within a week. A protector costs AED 30 to 50 at any accessory shop and prevents the crack from propagating until you can bring the phone in.
+              Our recommendation: apply a tempered glass protector on the day of the crack if repair is not immediate, and book the repair within a week. An inexpensive protector from any accessory shop prevents the crack from propagating until you can bring the phone in.
             </p>
           </section>
 
@@ -117,7 +117,7 @@ export default function BlogIPhoneCrackedScreen() {
           <section id="lcd-vs-oled">
             <h2 id="lcd-vs-oled">LCD vs OLED repair: what is the difference?</h2>
             <p>
-              LCD (Liquid Crystal Display) panels use a backlight behind a liquid crystal layer to produce images. They are thicker, less vibrant, and use more battery, but they are significantly cheaper to manufacture and replace. iPhone 8, 7, 6s, 6, SE 1st generation, and SE 2nd generation all use LCD technology. A full LCD assembly for an iPhone 7 costs roughly AED 120 at the component level, making repairs affordable.
+              LCD (Liquid Crystal Display) panels use a backlight behind a liquid crystal layer to produce images. They are thicker, less vibrant, and use more battery, but they are significantly cheaper to manufacture and replace. iPhone 8, 7, 6s, 6, SE 1st generation, and SE 2nd generation all use LCD technology. A full LCD assembly for an iPhone 7 is inexpensive at the component level, making repairs affordable.
             </p>
             <p>
               OLED (Organic Light Emitting Diode) panels produce light per pixel, enabling true blacks and higher contrast ratios. They are thinner and more power-efficient at typical brightness levels. Every iPhone from iPhone X onwards uses OLED, including the standard iPhone 11 Pro and later even the non-Pro models from iPhone 12 onwards. OLED assemblies cost 3 to 5 times more than LCD assemblies at the component level, which is the primary driver of higher repair prices.
@@ -132,25 +132,25 @@ export default function BlogIPhoneCrackedScreen() {
           <section id="replacement-cost">
             <h2 id="replacement-cost">iPhone cracked screen repair cost Dubai</h2>
             <p>
-              Our prices below cover the full screen assembly including labour. Diagnosis is free. Most repairs are completed in 30 minutes while you wait at our Concord Tower workshop. Prices for Apple Store or Apple Authorised Service Provider (AASP) repairs are for comparison and represent typical out-of-warranty replacement costs.
+              Our screen repairs cover the full screen assembly including labour. Diagnosis is free. Most repairs are completed in 30 minutes while you wait at our Concord Tower workshop. Message us on WhatsApp with your model for today's exact price, and we can confirm typical Apple Store or Apple Authorised Service Provider (AASP) out-of-warranty costs for comparison too.
             </p>
             <BlogPriceTable
-              caption="iPhone cracked screen repair prices, Dubai, June 2026"
+              caption="iPhone cracked screen repair, Dubai, by model"
               headers={["Model", "Our price", "Apple / AASP (out of warranty)"]}
               rows={[
-                { model: "iPhone 15 Pro Max / 16 Pro Max", ours: "AED 499", apple: "AED 1,000+" },
-                { model: "iPhone 15 Pro / 16 Pro", ours: "AED 449", apple: "AED 900+" },
-                { model: "iPhone 15 / 16 / 14 Pro Max", ours: "AED 399", apple: "AED 800+" },
-                { model: "iPhone 14 / 13 series", ours: "AED 299", apple: "AED 700+" },
-                { model: "iPhone 12 / 11 series", ours: "AED 199", apple: "AED 600+" },
-                { model: "iPhone XS / X / SE", ours: "AED 149", apple: "AED 500+" },
+                { model: "iPhone 15 Pro Max / 16 Pro Max", ours: "Price on request", apple: "Price on request" },
+                { model: "iPhone 15 Pro / 16 Pro", ours: "Price on request", apple: "Price on request" },
+                { model: "iPhone 15 / 16 / 14 Pro Max", ours: "Price on request", apple: "Price on request" },
+                { model: "iPhone 14 / 13 series", ours: "Price on request", apple: "Price on request" },
+                { model: "iPhone 12 / 11 series", ours: "Price on request", apple: "Price on request" },
+                { model: "iPhone XS / X / SE", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>
               All repairs include a written warranty: 90 days on the screen assembly covering defects in the replacement panel (dead pixels, backlight failure, touch malfunction). Physical damage or a second drop is not covered under warranty, which is standard across the industry. If the screen develops a defect unrelated to physical impact within 90 days, we replace it at no charge.
             </p>
             <p>
-              Pickup and delivery within Dubai is available for AED 50 return or free for repairs above AED 300. WhatsApp us at the number in the header to arrange a collection time that suits your schedule.
+              Pickup and delivery within Dubai is available, and it is free on qualifying repairs. WhatsApp us at the number in the header to arrange a collection time that suits your schedule and to confirm the exact price for your model.
             </p>
           </section>
 

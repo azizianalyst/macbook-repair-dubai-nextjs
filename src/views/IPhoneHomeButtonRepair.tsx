@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneHomeButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Home Button Repair Dubai - AED 200 | Same-Day | 055 741 3706"
-      seoDescription="iPhone home button repair Dubai for iPhone 6, 7, 8 and SE. Honest about Touch ID - only Apple can restore it. AED 200, same day. Call 055 741 3706."
+      seoTitle="iPhone Home Button Repair Dubai | Same-Day | 055 741 3706"
+      seoDescription="iPhone home button repair Dubai for iPhone 6, 7, 8 and SE. Honest about Touch ID - only Apple can restore it. Same day. WhatsApp for today's price. Call 055 741 3706."
       path="/iphone-home-button-repair-dubai"
       eyebrow="iPhone home button repair"
       h1="iPhone Home Button Repair Dubai"
-      subtitle="Stuck, mushy or completely dead home button on your iPhone 6, 7, 8 or SE. We'll get the click back, same day, AED 200. Read on for the honest truth about Touch ID."
+      subtitle="Stuck, mushy or completely dead home button on your iPhone 6, 7, 8 or SE. We'll get the click back, same day - message us on WhatsApp for today's price. Read on for the honest truth about Touch ID."
       startingPrice={200}
       timeline="Same day"
       whatsappPrefill="Hi, my iPhone home button isn't working - model:"
@@ -26,7 +26,7 @@ export default function IPhoneHomeButtonRepair() {
             <strong>Honest disclosure first.</strong> If your home button is broken on an iPhone 7 or later, we can replace the button so it clicks again - but <strong>Touch ID will not work on the new button</strong>. Apple pairs each fingerprint sensor to the logic board at the factory. Only Apple themselves can re-pair a new sensor (and they only do it under warranty by replacing the whole phone). Anyone in Dubai promising "Touch ID restored" is lying. We won't.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            What we <em>can</em> do: restore the click and the home function so you can press, double-press for app switcher and triple-press for Accessibility. For Touch ID, we set up AssistiveTouch on-screen during the same visit at no extra charge. AED 200, same day.
+            What we <em>can</em> do: restore the click and the home function so you can press, double-press for app switcher and triple-press for Accessibility. For Touch ID, we set up AssistiveTouch on-screen during the same visit at no extra charge. Same day - message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }
@@ -61,8 +61,8 @@ export default function IPhoneHomeButtonRepair() {
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",     href: "/iphone-screen-repair-dubai",     description: "OLED and LCD swaps from AED 350." },
-        { label: "iPhone Battery Replacement",     href: "/iphone-battery-replacement-dubai", description: "OEM-cell batteries from AED 220." },
+        { label: "iPhone Screen Repair Dubai",     href: "/iphone-screen-repair-dubai",     description: "OLED and LCD swaps - WhatsApp for today's price." },
+        { label: "iPhone Battery Replacement",     href: "/iphone-battery-replacement-dubai", description: "OEM-cell batteries - WhatsApp for today's price." },
         { label: "iPhone Face ID Repair",          href: "/iphone-face-id-repair-dubai",     description: "Honest assessment for iPhone X+." },
       ]}
       blogLink={{ label: "Touch ID after repair: the honest truth nobody in Dubai will tell you", href: "/blog/iphone-screen-replaced-but-issues-after" }}

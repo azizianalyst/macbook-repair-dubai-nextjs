@@ -80,8 +80,8 @@ export function deriveServiceQuickAnswer(opts: {
     question: `How much does ${opts.serviceName} in Dubai cost?`,
     answer:
       (opts.startingPrice > 0
-        ? `${opts.serviceName} in Dubai starts from AED ${opts.startingPrice} - a starting price for the simplest model and fault. Your exact price is free to get and confirmed after we check your device's model and condition. `
-        : `${opts.serviceName} in Dubai starts with a free diagnosis - we confirm the exact price before any work. `) +
+        ? `${opts.serviceName} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
+        : `${opts.serviceName} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
       `Typical turnaround: ${opts.timeline}. ` +
       `All repairs include ${warrantyClause(warrantyDays)} on parts and labour, ` +
       `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
@@ -95,7 +95,7 @@ export function deriveFamilyQuickAnswer(opts: {
   return {
     question: `How much does ${opts.family} repair in Dubai cost?`,
     answer:
-      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} - a starting price; your exact quote is free and confirmed after we check your model and its condition. Written warranty up to 12 months. ` +
+      `${opts.family} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty up to 12 months. ` +
       `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };

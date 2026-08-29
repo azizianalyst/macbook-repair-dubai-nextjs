@@ -7,7 +7,7 @@ export default function BlogMacBookProM5ScreenRepair() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Screen Repair Cost Dubai 2026: OLED Replacement Prices"
-      seoDescription="MacBook Pro M5 screen repair cost in Dubai 2026. OLED screen cracked, backlight failed, or display lines. Replacement from AED 700. Same-day repair available."
+      seoDescription="MacBook Pro M5 screen repair in Dubai 2026. OLED cracked, backlight failed, or display lines. Same-day repair, 12-month warranty. Message us on WhatsApp for a quote."
       path="/blog/macbook-pro-m5-screen-repair-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM5ScreenRepair() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Screen Repair Cost in Dubai 2026: OLED Replacement and Fault Guide"
-      hook="MacBook Pro M5 uses the same OLED Liquid Retina XDR display as M4, with ProMotion up to 120Hz and a 1,000,000:1 contrast ratio. OLED panels are more fragile than the LCD panels in pre-M4 MacBook Pros and have specific failure modes that differ from LCD. Screen replacement starts from AED 700 in Dubai with same-day service in most cases."
-      quickAnswer="MacBook Pro M5 OLED screen replacement costs AED 700-900 in Dubai depending on model. A cracked OLED cannot be repaired, only replaced. Display lines, half-screen black, or dead pixels also require panel replacement. Backlight flickering at low brightness may be a macOS calibration issue rather than hardware. Free diagnostic to confirm the fault type before any repair."
+      hook="MacBook Pro M5 uses the same OLED Liquid Retina XDR display as M4, with ProMotion up to 120Hz and a 1,000,000:1 contrast ratio. OLED panels are more fragile than the LCD panels in pre-M4 MacBook Pros and have specific failure modes that differ from LCD. We offer same-day screen replacement in most cases in Dubai. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M5 OLED screen replacement price in Dubai depends on the model (14-inch or 16-inch) — message us on WhatsApp for today's exact price. A cracked OLED cannot be repaired, only replaced. Display lines, half-screen black, or dead pixels also require panel replacement. Backlight flickering at low brightness may be a macOS calibration issue rather than hardware. Free diagnostic to confirm the fault type before any repair."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -125,22 +125,26 @@ export default function BlogMacBookProM5ScreenRepair() {
               </tr>
               <tr>
                 <td>Replacement cost</td>
-                <td>AED 700-850</td>
-                <td>AED 700-900: slightly higher as M5 panels are newer supply</td>
+                <td>Price on request</td>
+                <td>Price on request: slightly higher as M5 panels are newer supply</td>
               </tr>
             </tbody>
           </table>
 
           <h2 id="repair-cost">MacBook Pro M5 screen replacement cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M5 screen repair pricing. June 2026"
+            caption="MacBook Pro M5 screen repair. June 2026"
+            headers={["Service", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M5 14-inch screen replacement", ours: "AED 700", apple: "AED 1,399+", note: "OLED panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch screen replacement", ours: "AED 900", apple: "AED 1,699+", note: "OLED panel, 12-month warranty, same-day" },
-              { model: "Display cable replacement (M5 14 or 16)", ours: "AED 250", apple: "Full screen replacement", note: "Flex cable only if panel undamaged" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Confirm crack vs cable vs GPU fault" },
+              { model: "MacBook Pro M5 14-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 16-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED panel, 12-month warranty, same-day" },
+              { model: "Display cable replacement (M5 14 or 16)", ours: "Price on request", apple: "Full screen replacement", note: "Flex cable only if panel undamaged" },
+              { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Confirm crack vs cable vs GPU fault" },
             ]}
           />
+          <p>
+            For today's exact price on your specific M5 model, message us on WhatsApp — free diagnosis confirms the fault before any repair.
+          </p>
 
           <h2 id="when-logic">When does MacBook Pro M5 screen damage mean a board check?</h2>
           <p>
@@ -162,7 +166,7 @@ export default function BlogMacBookProM5ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M5 screen repair cost in Dubai?",
-          a: "MacBook Pro M5 14-inch OLED screen replacement costs AED 700 at our Dubai workshop. The 16-inch costs AED 900. Apple Store replacement runs AED 1,399 for the 14-inch and AED 1,699 for the 16-inch. We provide a 12-month warranty on the replacement panel and same-day repair in most cases.",
+          a: "MacBook Pro M5 OLED screen replacement price depends on whether you have the 14-inch or 16-inch model, and it is well below an Apple Store replacement. We provide a 12-month warranty on the replacement panel and same-day repair in most cases. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can a cracked MacBook Pro M5 OLED screen be repaired without full replacement?",

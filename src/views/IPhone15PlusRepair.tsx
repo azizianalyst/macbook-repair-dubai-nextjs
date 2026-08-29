@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone15PlusRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 15 Plus Repair Dubai - 6.7-inch USB-C from AED 400 | 055 741 3706"
-      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen AED 850, USB-C port AED 400. Same-day, warranty of up to 12 months."
+      seoTitle="iPhone 15 Plus Repair Dubai - 6.7-inch OLED, USB-C, Battery | 055 741 3706"
+      seoDescription="iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen, USB-C port and battery. Same-day, warranty of up to 12 months. WhatsApp for price."
       path="/iphone-15-plus-repair-dubai"
       eyebrow="iPhone 15 Plus (2023, discontinued Sept 2025)"
       h1="iPhone 15 Plus Repair Dubai - 6.7-inch OLED, USB-C, Battery"
-      subtitle="The 6.7-inch budget big-screen 15 - A16, Dynamic Island, 48MP main, USB-C. Discontinued Sept 2025 but fully serviceable. From AED 400."
+      subtitle="The 6.7-inch budget big-screen 15 - A16, Dynamic Island, 48MP main, USB-C. Discontinued Sept 2025 but fully serviceable. Message us on WhatsApp for today's price."
       startingPrice={400}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 15 Plus (2023) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone15PlusRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone 15 Plus (Sept 2023) - A16 Bionic, 6.7-inch OLED with Dynamic Island, 48MP main + ultra-wide, USB-C 2.0, MagSafe, colour-infused back glass, IP68. Same first-gen USB-C port wear pattern as the 15. Discontinued in Sept 2025 with the 17 launch. AED 850 screen (slightly higher than brief due to large 6.7" panel), AED 400 USB-C, AED 350 battery.
+            <strong>Quick answer:</strong> The iPhone 15 Plus (Sept 2023) - A16 Bionic, 6.7-inch OLED with Dynamic Island, 48MP main + ultra-wide, USB-C 2.0, MagSafe, colour-infused back glass, IP68. Same first-gen USB-C port wear pattern as the 15. Discontinued in Sept 2025 with the 17 launch. We repair the 6.7-inch OLED screen, USB-C port and battery - message us on WhatsApp for today's exact price on your model.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 15 Plus</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -48,25 +48,25 @@ export default function IPhone15PlusRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 15 Plus</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">6.7-inch OLED replacement (Dynamic Island)</td><td className="px-md py-sm">850</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">350</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">48 MP main + ultra-wide camera</td><td className="px-md py-sm">650</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 600</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Colour-infused back glass + MagSafe</td><td className="px-md py-sm">700</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">From 450</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">6.7-inch OLED replacement (Dynamic Island)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">48 MP main + ultra-wide camera</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Colour-infused back glass + MagSafe</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
           <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
-            6.7-inch OLED with Dynamic Island in stock. Genuine Apple-pull AED 1,300. Colour-infused back glass available in all 15-series colours.
+            6.7-inch OLED with Dynamic Island in stock, in both genuine Apple-pull and OEM-grade. Colour-infused back glass available in all 15-series colours. Message us on WhatsApp for current part pricing.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 15 Plus still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Yes.</strong> Used resale ~AED 2,500-2,900. Big-screen A16 with iOS 21 expected - battery + screen at AED 1,200 is reasonable.
+            <strong>Yes.</strong> The 15 Plus still holds strong used resale value. It's a big-screen A16 with iOS 21 expected, so a battery and screen refresh is well worth it - message us on WhatsApp for today's price on both.
           </p>
         </>
       }
@@ -92,17 +92,17 @@ export default function IPhone15PlusRepair() {
         "Battery: capacity-drop coverage.",
       ]}
       faqs={[
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,170 (saves AED 30). Battery + USB-C port: AED 720 (saves AED 30)." },
-        { q: "Genuine Apple OLED?", a: "Yes - AED 1,300 vs AED 850 OEM-grade." },
+        { q: "Bundle pricing?", a: "Yes - we bundle screen + battery and battery + USB-C port at a discount. Message us on WhatsApp for the exact bundle price on your 15 Plus." },
+        { q: "Genuine Apple OLED?", a: "Yes - we fit both genuine Apple-pull and OEM-grade 6.7-inch OLED. WhatsApp us for the price on each option." },
         { q: "Is the 15 Plus still supported by Apple?", a: "Yes for software (iOS 18, iOS 19+ likely). Discontinued in Sept 2025 with the iPhone 17 launch but parts and service remain available." },
         { q: "Why is the 15 Plus screen more expensive than the standard 15?", a: "6.7-inch OLED is a larger and more expensive panel to manufacture than the 6.1-inch on the standard 15." },
         { q: "Same day?", a: "OLED, battery, USB-C, camera - yes." },
       ]}
       reviewNames={["Saeed Alam", "Seyed Moulana"]}
       related={[
-        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "First-gen Apple USB-C - AED 400." },
-        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.7-inch OLED with Dynamic Island AED 850." },
-        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "AED 350, 45 minutes." },
+        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "First-gen Apple USB-C port replacement." },
+        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.7-inch OLED with Dynamic Island." },
+        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "Battery swap in about 45 minutes." },
       ]}
     />
   );

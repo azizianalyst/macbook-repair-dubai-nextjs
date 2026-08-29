@@ -7,7 +7,7 @@ export default function BlogMacBookProNotCharging() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Not Charging? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro not charging fix in Dubai? 6 causes, faulty cable, MagSafe port, charging IC, liquid damage, Dubai heat, with step-by-step solutions. Repair from AED 350."
+      seoDescription="MacBook Pro not charging fix in Dubai? 6 causes, faulty cable, MagSafe port, charging IC, liquid damage, Dubai heat, with step-by-step solutions. Free diagnosis."
       path="/blog/macbook-pro-not-charging-fix-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogMacBookProNotCharging() {
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Not Charging in Dubai? Here's What's Wrong and How to Fix It"
       hook="MacBook Pro plugged in but showing 'Not Charging' or no charging indicator at all is one of the most common issues we see in our Dubai workshop. Most cases come down to six causes, and two of them you can fix yourself in under five minutes."
-      quickAnswer="MacBook Pro not charging is most often caused by: a faulty USB-C cable or adapter, a dirty or damaged port, an SMC glitch, charging IC chip failure, liquid damage to the port or board, or Dubai heat causing thermal throttling. Start with the cable and port. If those are fine, run an SMC reset. If it still won't charge, bring it in for a free diagnosis, charging IC repair starts from AED 550."
+      quickAnswer="MacBook Pro not charging is most often caused by: a faulty USB-C cable or adapter, a dirty or damaged port, an SMC glitch, charging IC chip failure, liquid damage to the port or board, or Dubai heat causing thermal throttling. Start with the cable and port. If those are fine, run an SMC reset. If it still won't charge, bring it in for a free diagnosis, and message us on WhatsApp for the exact charging IC repair price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -121,7 +121,8 @@ export default function BlogMacBookProNotCharging() {
           <p>
             Charging IC repair is a component-level soldering job. We remove the failed chip under
             microscope and fit a replacement. This is not a repair Apple Store offers. They quote a
-            full logic board replacement at AED 2,500+. We fix the chip for AED 550-750.
+            full logic board replacement, while we fix just the failing chip for a fraction of that.
+            Message us on WhatsApp for the exact price on your model.
           </p>
 
           <h2 id="liquid-damage">Can Liquid Damage Stop MacBook Charging?</h2>
@@ -165,19 +166,19 @@ export default function BlogMacBookProNotCharging() {
                 <td>MagSafe 3</td>
                 <td>Bent pins on the cable connector; port pins pushed in from impact</td>
                 <td>MagSafe port replacement (board-mounted, requires soldering)</td>
-                <td>AED 350</td>
+                <td>Price on request</td>
               </tr>
               <tr>
                 <td>USB-C (Thunderbolt)</td>
                 <td>Port connector broken from repeated plug/unplug; board trace corrosion</td>
                 <td>USB-C port replacement or board-level trace repair</td>
-                <td>AED 450-650</td>
+                <td>Price on request</td>
               </tr>
               <tr>
                 <td>Charging IC (both)</td>
                 <td>Chip failure from heat, liquid, or power surge</td>
                 <td>Component-level IC replacement under microscope</td>
-                <td>AED 550-750</td>
+                <td>Price on request</td>
               </tr>
             </tbody>
           </table>
@@ -195,16 +196,17 @@ export default function BlogMacBookProNotCharging() {
           <BlogPriceTable
             caption="MacBook Pro charging repair pricing. June 2026"
             rows={[
-              { model: "MagSafe Port Repair", ours: "AED 350", apple: "AED 1,200-2,500+", note: "Port replacement, all MagSafe 3 models" },
-              { model: "USB-C Board Repair", ours: "AED 450-650", apple: "AED 1,200-2,500+", note: "Port or trace repair, Thunderbolt 4 and USB 4" },
-              { model: "Charging IC Chip Repair", ours: "AED 550-750", apple: "AED 2,500+ (board replacement)", note: "Component-level, not board swap" },
-              { model: "Port Cleaning (lint/corrosion)", ours: "AED 100-180", apple: "Varies", note: "Ultrasonic or manual clean" },
+              { model: "MagSafe Port Repair", ours: "Price on request", apple: "Full board replacement quote", note: "Port replacement, all MagSafe 3 models" },
+              { model: "USB-C Board Repair", ours: "Price on request", apple: "Full board replacement quote", note: "Port or trace repair, Thunderbolt 4 and USB 4" },
+              { model: "Charging IC Chip Repair", ours: "Price on request", apple: "Board replacement only", note: "Component-level, not board swap" },
+              { model: "Port Cleaning (lint/corrosion)", ours: "Price on request", apple: "Varies", note: "Ultrasonic or manual clean" },
             ]}
           />
           <p>
             Apple Store does not perform component-level repairs on logic boards. They quote a full
-            board replacement at AED 1,200-2,500+ for almost any charging fault. We fix the failing
-            component instead, which costs a fraction of that and keeps the rest of your board intact.
+            board replacement for almost any charging fault. We fix the failing component instead,
+            which costs a fraction of that and keeps the rest of your board intact. Message us on
+            WhatsApp for the exact price on your model.
           </p>
           <p>
             Diagnosis is free. Bring your MacBook Pro in and we will tell you exactly what is wrong
@@ -238,7 +240,7 @@ export default function BlogMacBookProNotCharging() {
         },
         {
           q: "My MacBook Pro charges on one USB-C port but not the other. What does that mean?",
-          a: "This is almost always a physical fault on the non-charging port, either a damaged connector, a short on the board trace near that port, or early-stage corrosion. The charging IC is likely fine. Port-specific repair (AED 450-650) is usually enough to fix it without touching the board.",
+          a: "This is almost always a physical fault on the non-charging port, either a damaged connector, a short on the board trace near that port, or early-stage corrosion. The charging IC is likely fine. A port-specific repair is usually enough to fix it without touching the board. Message us on WhatsApp for the exact price on your model.",
         },
       ]}
       relatedLinks={[

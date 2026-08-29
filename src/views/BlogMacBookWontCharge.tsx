@@ -163,14 +163,15 @@ export default function BlogMacBookWontCharge() {
             <strong>The charging port.</strong> If no charger works, the port looks bent or scorched,
             or one side charges and the other doesn't, it's a port or charge-IC fault. The USB-C/MagSafe
             connector and its FPC flex cable wear out or crack; on logic-board models the charging IC
-            and surrounding components can fail. A port or FPC repair runs <strong>AED 300–600</strong>,
-            and a board-level charge IC job <strong>AED 350–800</strong> depending on the model and what
-            else got hit.
+            and surrounding components can fail. Whether it's a port or FPC repair or a board-level
+            charge IC job, the price depends on your exact model and what else got hit, so message us
+            on WhatsApp for today's quote.
           </p>
           <p>
             <strong>The battery.</strong> If Battery Health says Service Recommended, the Mac dies the
             moment you unplug it, or the trackpad is lifting, it's the cell. A MacBook battery
-            replacement runs <strong>AED 450–950</strong> by model, with the larger Pros at the top end.
+            replacement is priced by model, with the larger Pros at the top end, so message us on
+            WhatsApp for the exact price on yours.
           </p>
           <p>
             The honest answer is that you often can't tell the charge IC from the battery from the
@@ -215,7 +216,7 @@ export default function BlogMacBookWontCharge() {
         },
         {
           q: "How much does it cost to fix a MacBook charging port in Dubai?",
-          a: "A charging port or FPC flex repair runs AED 300 to 600. A board-level charge IC fault, where the chip that manages charging has failed, runs AED 350 to 800 depending on the model and any collateral damage. The free diagnostic tells you which one it is before you decide, and all prices are VAT-inclusive.",
+          a: "It depends on whether it's a charging port or FPC flex repair or a board-level charge IC fault, where the chip that manages charging has failed, plus your exact model and any collateral damage. The free diagnostic tells you which one it is before you decide, then message us on WhatsApp for the exact quote, all VAT-inclusive.",
         },
         {
           q: "Are third-party chargers safe for a MacBook?",

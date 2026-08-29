@@ -5,7 +5,7 @@ import View from "@/views/IMacM3RepairHub";
 
 export const metadata: Metadata = metaFromFields("/imac-m3-repair-dubai", {
   title: "iMac M3 Repair Dubai - 24-inch 2023 Retina 4.5K",
-  description: "iMac M3 repair Dubai. 24-inch 4.5K Retina iMac with M3 chip (late 2023). Screen from AED 850, USB hub board from AED 400. Check AppleCare+ before booking. Call 055 741 3706.",
+  description: "iMac M3 repair Dubai. 24-inch 4.5K Retina iMac with M3 chip (late 2023). Screen and USB hub board repairs. Message us on WhatsApp for today's exact price. Call 055 741 3706.",
 });
 
 export default function Page() {

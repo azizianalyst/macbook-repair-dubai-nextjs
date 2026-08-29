@@ -5,14 +5,14 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogIMacScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle='iMac Screen Repair Cost Dubai 2026: 21.5" and 27" Prices'
-      seoDescription="iMac screen repair cost Dubai from AED 800. 21.5-inch and 27-inch Retina panel replacement, iMac M1 and Intel. Same-day service."
+      seoTitle='iMac Screen Repair Cost Dubai 2026: 21.5" and 27" Guide'
+      seoDescription="iMac screen repair cost Dubai: 21.5-inch and 27-inch Retina panel replacement, iMac M1 and Intel. Same-day service, free diagnosis. WhatsApp for a quote."
       path="/blog/imac-screen-repair-cost-dubai"
       wide={true}
       category="Cost guide · iMac"
       h1='iMac Screen Repair Cost Dubai: Prices for 21.5" and 27" Models'
-      hook='iMac screen repair in Dubai costs from AED 800 for 21.5-inch models to AED 1,400 for the 27-inch 5K Retina, and most display replacements take one working day at our Concord Tower workshop.'
-      quickAnswer="iMac screen repair cost in Dubai starts from AED 800 for the 21.5-inch LCD and AED 1,400 for the 27-inch 5K Retina. The 24-inch M-series iMac has a bonded display assembly that is more complex to replace. A free diagnosis checks whether the fault is the panel, the backlight, or the GPU."
+      hook="iMac screen repair in Dubai covers the 21.5-inch and 27-inch 5K Retina models, and most display replacements take one working day at our Concord Tower workshop. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iMac screen repair in Dubai covers the 21.5-inch LCD and the 27-inch 5K Retina. The 24-inch M-series iMac has a bonded display assembly that is more complex to replace. A free diagnosis checks whether the fault is the panel, the backlight, or the GPU, then we send your exact price on WhatsApp."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -45,7 +45,7 @@ export default function BlogIMacScreenRepair() {
         },
         {
           q: "Will a screen replacement fix my specific iMac display problem?",
-          a: "A screen replacement fixes physical cracks, impact damage, delamination, and dead-pixel clusters. It does not fix a GPU fault showing as artifacts or distortion, a T-CON board failure causing horizontal lines, or a display cable fault. Our free diagnosis separates these before you approve any repair, so you never pay for a panel when the real fault is a AED 400 cable.",
+          a: "A screen replacement fixes physical cracks, impact damage, delamination, and dead-pixel clusters. It does not fix a GPU fault showing as artifacts or distortion, a T-CON board failure causing horizontal lines, or a display cable fault. Our free diagnosis separates these before you approve any repair, so you never pay for a panel when the real fault is a simple cable.",
         },
         {
           q: "How long does iMac screen repair take in Dubai?",
@@ -95,7 +95,7 @@ export default function BlogIMacScreenRepair() {
             <h2 id="step-1">Step 1: Is it the panel, the backlight, or the GPU?</h2>
             <p>
               The most important step before any iMac display repair is identifying the actual fault source.
-              Replacing a panel when the GPU is the real problem wastes AED 1,400 and leaves the machine
+              Replacing a panel when the GPU is the real problem wastes money and leaves the machine
               still broken. At our workshop, every iMac display complaint begins with a 20-minute free diagnosis
               before we quote anything.
             </p>
@@ -103,7 +103,7 @@ export default function BlogIMacScreenRepair() {
               The three-way test we run:
             </p>
             <ol className="list-decimal list-inside space-y-xs">
-              <li><strong>Flashlight test for backlight:</strong> shine a bright torch at the screen in a dark room. If you can see a faint desktop image, the LCD and GPU are working but the backlight is dead. Cost: AED 600 for backlight replacement, not a full panel swap.</li>
+              <li><strong>Flashlight test for backlight:</strong> shine a bright torch at the screen in a dark room. If you can see a faint desktop image, the LCD and GPU are working but the backlight is dead. That means a backlight replacement rather than a full panel swap, which is the more affordable fix.</li>
               <li><strong>External monitor test for GPU:</strong> connect a monitor via Thunderbolt or HDMI (with an adapter). If the external display is clean and correct, the iMac GPU is functioning and the fault is isolated to the internal display chain. If the external display also shows artifacts, the GPU is the fault.</li>
               <li><strong>Safe Mode boot test for driver vs hardware:</strong> boot the iMac holding Shift (Intel) or Power then Shift (Apple Silicon) to enter Safe Mode, which uses basic GPU drivers. If the display is clean in Safe Mode but corrupted in normal mode, the fault is often a driver or VRAM issue rather than physical panel damage.</li>
             </ol>
@@ -169,9 +169,10 @@ export default function BlogIMacScreenRepair() {
             </p>
             <p>
               For customers who ask whether it is worth repairing a 2017 or 2019 iMac rather than buying new:
-              if the machine is otherwise fast and the only fault is the screen, a repair at AED 1,400 or less
+              if the machine is otherwise fast and the only fault is the screen, a screen repair
               is significantly cheaper than the cheapest 27-inch replacement (which would now be the Mac Studio
               plus a monitor). Repair is the cost-effective choice if the logic board and GPU are healthy.
+              Message us on WhatsApp for today's exact price on your model.
             </p>
           </section>
 
@@ -193,8 +194,9 @@ export default function BlogIMacScreenRepair() {
             <p>
               The fix is to remove the glass, clean the old adhesive from both surfaces, and re-bond with fresh
               optical adhesive. This takes about 2 hours plus a 12-hour adhesive cure under controlled pressure.
-              Cost: AED 450 for adhesive re-bonding on the 21.5-inch, AED 550 on the 27-inch, if the LCD itself
-              is undamaged. If the LCD was also damaged during delamination, it is a full panel replacement.
+              Adhesive re-bonding on the 27-inch costs a little more than on the 21.5-inch, and both are far
+              cheaper than a full panel swap if the LCD itself is undamaged. If the LCD was also damaged during
+              delamination, it is a full panel replacement. Message us on WhatsApp for the exact price on your model.
               Air-condition the room where the iMac runs and avoid placing it near south or west-facing windows
               to prevent recurrence.
             </p>
@@ -229,32 +231,32 @@ export default function BlogIMacScreenRepair() {
           <section>
             <h2 id="replacement-cost">iMac screen repair cost Dubai by model</h2>
             <p>
-              All prices below include the display panel or assembly, labour, full diagnostic after repair,
-              and a 3-month written warranty. No diagnostic fee before the repair. Apple Store pricing is
-              the out-of-warranty estimate from Apple's UAE repair pricing as of June 2026.
+              Every repair below includes the display panel or assembly, labour, full diagnostic after repair,
+              and a 3-month written warranty. No diagnostic fee before the repair. Message us on WhatsApp with
+              your iMac model for today's exact price.
             </p>
             <BlogPriceTable
               caption="iMac screen repair cost Dubai, MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: 'iMac 27" 5K Retina (Intel)', ours: "AED 1,400", apple: "AED 2,800+" },
-                { model: 'iMac 21.5" Retina 4K (Intel)', ours: "AED 900", apple: "AED 1,800+" },
-                { model: 'iMac 21.5" non-Retina (Intel)', ours: "AED 800", apple: "AED 1,600+" },
-                { model: "iMac 24\" M1 / M3 / M4", ours: "AED 1,200", apple: "AED 2,400+" },
-                { model: "Backlight replacement only", ours: "AED 600", apple: "AED 1,200+" },
+                { model: 'iMac 27" 5K Retina (Intel)', ours: "Price on request", apple: "Price on request" },
+                { model: 'iMac 21.5" Retina 4K (Intel)', ours: "Price on request", apple: "Price on request" },
+                { model: 'iMac 21.5" non-Retina (Intel)', ours: "Price on request", apple: "Price on request" },
+                { model: "iMac 24\" M1 / M3 / M4", ours: "Price on request", apple: "Price on request" },
+                { model: "Backlight replacement only", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>
               The "backlight replacement only" row applies to cases where the diagnostic confirms the LCD panel
               is undamaged but the backlight LEDs or the backlight driver board has failed. This is a common
-              fault on 21.5-inch models from 2013-2015 and saves the customer AED 200-300 versus a full panel
-              swap. We confirm which repair applies before work begins.
+              fault on 21.5-inch models from 2013-2015 and saves the customer a meaningful amount versus a full
+              panel swap. We confirm which repair applies before work begins.
             </p>
             <p>
               Apple Store pricing shown is the out-of-warranty rate. If you have AppleCare+ active on your iMac,
-              a screen repair under accidental damage coverage carries a service fee of approximately AED 600-900
-              depending on your plan. If your AppleCare+ is active, contact Apple first. Our pricing is designed
-              to be competitive for customers outside the AppleCare+ window.
+              a screen repair under accidental damage coverage carries a service fee that varies by plan. If your
+              AppleCare+ is active, contact Apple first. Our pricing is designed to be competitive for customers
+              outside the AppleCare+ window.
             </p>
           </section>
 
@@ -274,10 +276,10 @@ export default function BlogIMacScreenRepair() {
               expansion.
             </p>
             <p>
-              GPU repair on the iMac is a board-level reball or a GPU replacement, which costs AED 700-1,200
-              depending on the model. If we diagnose a GPU fault rather than a panel fault, we will quote you
-              the GPU repair instead and explain exactly why. We will never recommend a panel replacement when
-              the diagnostic points to the GPU.
+              GPU repair on the iMac is a board-level reball or a GPU replacement, with the price depending on
+              the model. If we diagnose a GPU fault rather than a panel fault, we will quote you the GPU repair
+              instead and explain exactly why. We will never recommend a panel replacement when the diagnostic
+              points to the GPU. Message us on WhatsApp for the exact price on your model.
             </p>
           </section>
         </>

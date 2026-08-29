@@ -2,12 +2,13 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 
 export default function BlogMacBookProIntelFlexgate() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Flexgate Display Cable Dubai 2026: Backlight Stage Effect Fix"
-      seoDescription="MacBook Pro Flexgate display cable fault in Dubai? 2016-2017 13/15-inch develops a stage-light effect at the bottom of the screen. Display cable replacement from AED 250."
+      seoDescription="MacBook Pro Flexgate display cable fault in Dubai? 2016-2017 13/15-inch develops a stage-light effect at the bottom of the screen. Message us on WhatsApp for a price."
       path="/blog/macbook-pro-intel-flexgate-dubai"
       wide
       toc={[
@@ -23,8 +24,8 @@ export default function BlogMacBookProIntelFlexgate() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Flexgate Display Cable in Dubai? Stage-Light Effect Fix Guide"
-      hook="Flexgate is the community name for a display cable defect on 2016-2017 MacBook Pro 13-inch and 15-inch. The backlight flex cable is too short: over thousands of lid open/close cycles, the cable tears where it exits the display hinge. The symptom is unmistakable: a stage-light effect of bright columns at the bottom of the screen that appears when the lid is opened past a certain angle. Display cable replacement costs AED 250 in Dubai."
-      quickAnswer="MacBook Pro Flexgate identification: open the lid slowly from closed to fully open while watching the bottom of the screen. If bright columns or a bright horizontal band appears at the bottom when the lid passes approximately 40-45 degrees, and disappears when you open wider or close again, this is Flexgate. The flex cable in the hinge is tearing. This is a progressive fault. It will worsen with each open/close cycle. Replace the display cable at AED 250 before the cable tears completely and backlight stops working entirely."
+      hook="Flexgate is the community name for a display cable defect on 2016-2017 MacBook Pro 13-inch and 15-inch. The backlight flex cable is too short: over thousands of lid open/close cycles, the cable tears where it exits the display hinge. The symptom is unmistakable: a stage-light effect of bright columns at the bottom of the screen that appears when the lid is opened past a certain angle. Message us on WhatsApp for today's display cable replacement price in Dubai."
+      quickAnswer="MacBook Pro Flexgate identification: open the lid slowly from closed to fully open while watching the bottom of the screen. If bright columns or a bright horizontal band appears at the bottom when the lid passes approximately 40-45 degrees, and disappears when you open wider or close again, this is Flexgate. The flex cable in the hinge is tearing. This is a progressive fault. It will worsen with each open/close cycle. Message us on WhatsApp for the display cable replacement price and book before the cable tears completely and backlight stops working entirely."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -69,7 +70,7 @@ export default function BlogMacBookProIntelFlexgate() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Apple acknowledged the issue and ran a "MacBook Pro Display Backlight Service Program" covering 2016 13-inch MacBook Pro models (only: the 2017 and 15-inch were not included in the official program)</li>
             <li>The program covered machines for 4 years from their retail date, meaning 2016 13-inch machines are out of program coverage in 2026</li>
-            <li>For all 2016 and 2017 models in Dubai: independent cable replacement is the current repair path. AED 250 versus Apple's display assembly replacement at AED 800+</li>
+            <li>For all 2016 and 2017 models in Dubai: independent cable replacement is the current repair path, and far more affordable than Apple's full display assembly replacement. Message us on WhatsApp for the exact price on your model</li>
           </ul>
 
           <h2 id="step-4">Step 4: What does MacBook Pro Flexgate display cable replacement include?</h2>
@@ -111,8 +112,8 @@ export default function BlogMacBookProIntelFlexgate() {
               </tr>
               <tr>
                 <td>Repair approach</td>
-                <td>Cable replacement AED 250</td>
-                <td>Cable replacement AED 250: same procedure</td>
+                <td>Cable replacement (price on request)</td>
+                <td>Cable replacement, same procedure (price on request)</td>
               </tr>
             </tbody>
           </table>
@@ -121,12 +122,15 @@ export default function BlogMacBookProIntelFlexgate() {
           <BlogPriceTable
             caption="MacBook Pro Intel Flexgate repair pricing. June 2026"
             rows={[
-              { model: "Display cable replacement (2016 13-inch)", ours: "AED 250", apple: "Display assembly replacement AED 800+", note: "Longer-than-OEM cable, 12-month warranty" },
-              { model: "Display cable replacement (2017 13/15-inch)", ours: "AED 250", apple: "Display assembly replacement AED 800+", note: "Same procedure, 12-month warranty" },
-              { model: "Backlight diagnostic (stage-light test)", ours: "Free", apple: "AED 250", note: "Confirm Flexgate vs other backlight fault" },
-              { model: "Full display assembly (if panel also damaged)", ours: "AED 500", apple: "AED 900+", note: "Only if cable tear also damaged panel LEDs" },
+              { model: "Display cable replacement (2016 13-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Longer-than-OEM cable, 12-month warranty" },
+              { model: "Display cable replacement (2017 13/15-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Same procedure, 12-month warranty" },
+              { model: "Backlight diagnostic (stage-light test)", ours: "Free", apple: "Price on request", note: "Confirm Flexgate vs other backlight fault" },
+              { model: "Full display assembly (if panel also damaged)", ours: "Price on request", apple: "Price on request", note: "Only if cable tear also damaged panel LEDs" },
             ]}
           />
+          <p>
+            <PriceCTA compact message="Hi, price for MacBook Pro Flexgate display cable replacement in Dubai?" />
+          </p>
 
           <h2 id="when-panel">When does Flexgate require full panel replacement?</h2>
           <ul className="list-disc list-inside space-y-xs">
@@ -149,11 +153,11 @@ export default function BlogMacBookProIntelFlexgate() {
         },
         {
           q: "Can MacBook Pro Flexgate be repaired without replacing the full screen?",
-          a: "Yes, in most cases. The fault is the backlight flex cable, not the display panel. Cable replacement alone (AED 250) resolves the stage-light effect. Full panel replacement (AED 500) is only needed if the cable tear also damaged the LED strip at the panel edge, which happens in less than 15% of cases.",
+          a: "Yes, in most cases. The fault is the backlight flex cable, not the display panel. Cable replacement alone resolves the stage-light effect. Full panel replacement is only needed if the cable tear also damaged the LED strip at the panel edge, which happens in less than 15% of cases. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Apple cover MacBook Pro Flexgate repair for Dubai users?",
-          a: "Apple's official Backlight Service Program only covered 2016 13-inch MacBook Pro, and that program has expired in 2026. For 2017 models and all 15-inch models, no official Apple program exists. UAE users can contact Apple UAE (Dubai Mall or DIFC) to discuss, but independent cable replacement at AED 250 is the practical repair path for most machines.",
+          a: "Apple's official Backlight Service Program only covered 2016 13-inch MacBook Pro, and that program has expired in 2026. For 2017 models and all 15-inch models, no official Apple program exists. UAE users can contact Apple UAE (Dubai Mall or DIFC) to discuss, but independent cable replacement is the practical repair path for most machines. Message us on WhatsApp for the price.",
         },
         {
           q: "Does Dubai heat make MacBook Pro Flexgate worse?",
@@ -161,7 +165,7 @@ export default function BlogMacBookProIntelFlexgate() {
         },
         {
           q: "How much does MacBook Pro Flexgate repair cost in Dubai?",
-          a: "Display cable replacement costs AED 250 with 12-month warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel (rare, under 15% of cases), full display assembly costs AED 500.",
+          a: "Display cable replacement comes with a 12-month warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel (rare, under 15% of cases), a full display assembly is needed. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Pro Flexgate repair take in Dubai?",

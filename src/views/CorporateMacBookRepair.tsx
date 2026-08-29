@@ -9,6 +9,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
@@ -32,12 +33,12 @@ const CLIENTS = [
 ];
 
 const REPAIRS = [
-  { label: "MacBook screen replacement",   price: "From AED 499",  note: "All Air and Pro models, same-day for most" },
-  { label: "MacBook battery replacement",  price: "From AED 450",  note: "3-month warranty, 80% capacity guarantee" },
-  { label: "MacBook keyboard replacement", price: "From AED 550",  note: "Butterfly and scissor, US and UK layouts" },
-  { label: "MacBook logic board repair",   price: "From AED 800",  note: "Component-level, 2–5 business days" },
-  { label: "macOS reinstall / migration",  price: "From AED 200",  note: "Clean install + data migration to replacement device" },
-  { label: "Annual maintenance check",     price: "AED 150/device", note: "Fan clean, thermal paste, battery health report" },
+  { label: "MacBook screen replacement",   price: "Price on request",  note: "All Air and Pro models, same-day for most" },
+  { label: "MacBook battery replacement",  price: "Price on request",  note: "3-month warranty, 80% capacity guarantee" },
+  { label: "MacBook keyboard replacement", price: "Price on request",  note: "Butterfly and scissor, US and UK layouts" },
+  { label: "MacBook logic board repair",   price: "Price on request",  note: "Component-level, 2–5 business days" },
+  { label: "macOS reinstall / migration",  price: "Price on request",  note: "Clean install + data migration to replacement device" },
+  { label: "Annual maintenance check",     price: "Price on request",  note: "Fan clean, thermal paste, battery health report" },
 ];
 
 const FAQS = [
@@ -135,14 +136,14 @@ export default function CorporateMacBookRepair() {
                   {REPAIRS.map((row) => (
                     <tr key={row.label} className="border-b border-border">
                       <td className="py-sm pr-lg font-medium">{row.label}</td>
-                      <td className="py-sm pr-lg text-accent font-semibold">{row.price}</td>
+                      <td className="py-sm pr-lg"><PriceCTA compact message={`Hi, corporate price for ${row.label} in Dubai?`} /></td>
                       <td className="py-sm text-text-muted">{row.note}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[13px] text-text-muted mt-sm">All prices exclude VAT. VAT invoice issued per batch. Prices confirmed in writing before any work starts.</p>
+            <p className="text-[13px] text-text-muted mt-sm">Message us on WhatsApp for a written quote on your fleet. VAT invoice issued per batch. Every price is confirmed in writing before any work starts.</p>
           </div>
         </section>
 

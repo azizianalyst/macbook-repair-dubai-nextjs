@@ -12,7 +12,7 @@ export default function BlogMacBookRunningSlow() {
     { name: "Close browser tabs and audit extensions", text: "Chrome with 30 tabs and 10 extensions can use 8GB of RAM alone. Use Safari (more efficient) or close tabs." },
     { name: "Check Spotlight indexing", text: "If a Time Machine restore or large file copy just finished, Spotlight is probably re-indexing. Wait 1-2 hours. Or: System Settings → Siri & Spotlight → exclude large folders." },
     { name: "Check battery health", text: "M-series MacBooks throttle CPU performance when battery health drops below 80%. System Settings → Battery → Battery Health. Replace battery if 'Service Recommended'." },
-    { name: "Check for thermal throttling", text: "If fans run constantly or the chassis is hot to touch, dust-clogged fans are throttling the M-chip. Fan cleaning AED 200 in our shop." },
+    { name: "Check for thermal throttling", text: "If fans run constantly or the chassis is hot to touch, dust-clogged fans are throttling the M-chip. We offer professional fan cleaning in our shop - message us on WhatsApp for the price." },
     { name: "Audit Time Machine", text: "If TM is running constantly, it's hogging disk and CPU. Pause it temporarily, then check Settings → General → Time Machine for backup frequency." },
     { name: "Scan for malware/adware", text: "Free tool: Malwarebytes for Mac. Mac adware (search redirects, fake 'system warnings') is the #1 hidden cause of slowness in 2026." },
   ];
@@ -123,7 +123,7 @@ export default function BlogMacBookRunningSlow() {
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement
             </Link>{" "}
-            from AED 450 - restores full performance.
+            restores full performance - message us on WhatsApp for today's exact price on your model.
           </p>
 
           <h2 id="thermal-throttling">Check 8 - Thermal throttling: fan issues</h2>
@@ -131,7 +131,7 @@ export default function BlogMacBookRunningSlow() {
             Dubai dust + 4+ years of use = clogged fan blades and heatsink fins. Fans spin loud,
             chassis runs hot, and the M-chip silently throttles to 30-50% of rated performance.
             Symptoms: kernel_task at 100% in Activity Monitor, MacBook hot to touch on the bottom.
-            Professional fan and heatsink cleaning is AED 200 in our shop, takes 60 minutes.
+            Professional fan and heatsink cleaning takes 60 minutes in our shop - message us on WhatsApp for the price.
           </p>
 
           <h2 id="time-machine">Check 9 - Time Machine running constantly</h2>
@@ -150,7 +150,7 @@ export default function BlogMacBookRunningSlow() {
             <Link to="/macbook-virus-removal-dubai" className="text-accent font-semibold hover:underline">
               MacBook virus removal
             </Link>{" "}
-            for AED 200 if you'd rather we do it.
+            if you'd rather we do it - message us on WhatsApp for the price.
           </p>
 
           <h2 id="ssd-ram-upgrade">When SSD/RAM upgrade is the only answer</h2>
@@ -165,8 +165,8 @@ export default function BlogMacBookRunningSlow() {
             On M1/M2/M3/M4/M5 MacBooks the RAM is integrated into the M-chip package itself.
             <strong> RAM cannot be upgraded after purchase</strong> - the only option is selling
             and buying a higher-RAM model. This is why we always tell customers buying new:
-            order at least 16GB. The AED 750 RAM upgrade at order time saves you AED 4,000 of
-            "buy new MacBook" pain in year 4.
+            order at least 16GB. Paying a little more for RAM at order time saves you the far
+            bigger "buy a new MacBook" cost in year 4.
           </p>
           <p>
             Intel MacBooks (2010-2017) often had socketed RAM and removable SSDs - those can
@@ -188,7 +188,7 @@ export default function BlogMacBookRunningSlow() {
         },
         {
           q: "Should I upgrade my SSD to fix slowness?",
-          a: "On M-series MacBooks the SSD is soldered - not upgradeable. On Intel MacBooks (2017 and earlier) yes, an SSD upgrade transforms speed. We offer Intel MacBook SSD upgrades from AED 400 plus the part.",
+          a: "On M-series MacBooks the SSD is soldered - not upgradeable. On Intel MacBooks (2017 and earlier) yes, an SSD upgrade transforms speed. We offer Intel MacBook SSD upgrades - message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Can clearing my cache speed up MacBook?",
@@ -200,11 +200,11 @@ export default function BlogMacBookRunningSlow() {
         },
         {
           q: "How do I check what's making the fans spin loud?",
-          a: "Open Activity Monitor → CPU tab. Look for any process above 80% CPU sustained. If 'kernel_task' is the top item, you have thermal throttling - fans are clogged with dust and the M-chip is overheating. Fan cleaning AED 200.",
+          a: "Open Activity Monitor → CPU tab. Look for any process above 80% CPU sustained. If 'kernel_task' is the top item, you have thermal throttling - fans are clogged with dust and the M-chip is overheating. Message us on WhatsApp for fan cleaning pricing.",
         },
         {
           q: "Is it worth upgrading from Intel MacBook to M-series for speed?",
-          a: "Almost always yes if your Intel MacBook is 2018 or older. M-series is 2-4× faster on most workloads, runs cooler, and gets 2× the battery life. Trade-in your Intel MacBook (we accept trade-ins) - common credit AED 800-2,500 depending on model.",
+          a: "Almost always yes if your Intel MacBook is 2018 or older. M-series is 2-4× faster on most workloads, runs cooler, and gets 2× the battery life. Trade-in your Intel MacBook (we accept trade-ins) - message us on WhatsApp for a trade-in credit estimate on your model.",
         },
         {
           q: "Why does my MacBook get slow after macOS updates?",

@@ -7,7 +7,7 @@ export default function BlogMacBookProM4BatteryDraining() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Battery Draining Fast Dubai 2026: Fix Guide"
-      seoDescription="MacBook Pro M4 battery draining fast in Dubai? M4 losing charge too quickly, short runtime, or battery draining while charging. Step-by-step fix. Battery replacement from AED 600."
+      seoDescription="MacBook Pro M4 battery draining fast in Dubai? Fix short runtime and fast charge loss with our step-by-step guide. Same-day battery replacement, message us for a quote."
       path="/blog/macbook-pro-m4-battery-draining-fast-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM4BatteryDraining() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Battery Draining Fast in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M4 is rated for up to 24 hours of battery life. Getting under 8 hours on a new M4 almost always means a background process, display settings issue, or battery health problem, not a fundamental M4 fault. Most fixes take under 5 minutes. Battery replacement starts from AED 600 in Dubai if the cell itself is degraded."
+      hook="MacBook Pro M4 is rated for up to 24 hours of battery life. Getting under 8 hours on a new M4 almost always means a background process, display settings issue, or battery health problem, not a fundamental M4 fault. Most fixes take under 5 minutes. If the cell itself is degraded, we offer same-day battery replacement in Dubai. Message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Pro M4 battery draining fast: open Activity Monitor, Energy tab, and check which process is using the most energy. The OLED display at full brightness is the biggest single battery drain. Reduce brightness to 50% and enable auto-brightness. Disable Power Nap if on battery overnight. Check System Settings, Battery, Battery Health: if capacity is below 80%, the battery cell needs replacement."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -129,8 +129,8 @@ export default function BlogMacBookProM4BatteryDraining() {
               </tr>
               <tr>
                 <td>Battery replacement cost (Dubai)</td>
-                <td>AED 550</td>
-                <td>AED 600: slightly higher for newer cell supply</td>
+                <td>Price on request</td>
+                <td>Price on request: message us for your model</td>
               </tr>
             </tbody>
           </table>
@@ -139,9 +139,9 @@ export default function BlogMacBookProM4BatteryDraining() {
           <BlogPriceTable
             caption="MacBook Pro M4 battery replacement pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M4 14-inch battery", ours: "AED 600", apple: "AED 999", note: "70 Wh cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M4 16-inch battery", ours: "AED 650", apple: "AED 1,099", note: "100 Wh cell, 12-month warranty, same-day" },
-              { model: "Battery diagnostic (health check)", ours: "Free", apple: "AED 250", note: "Full cycle count and capacity check" },
+              { model: "MacBook Pro M4 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M4 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty, same-day" },
+              { model: "Battery diagnostic (health check)", ours: "Free", apple: "Price on request", note: "Full cycle count and capacity check" },
             ]}
           />
 
@@ -178,7 +178,7 @@ export default function BlogMacBookProM4BatteryDraining() {
         },
         {
           q: "How much does MacBook Pro M4 battery replacement cost in Dubai?",
-          a: "MacBook Pro M4 14-inch battery replacement costs AED 600 at our Dubai workshop. The 16-inch costs AED 650. Apple charges AED 999 (14-inch) and AED 1,099 (16-inch). We use OEM-grade replacement cells with a 12-month warranty and same-day service.",
+          a: "We replace both the 14-inch and 16-inch MacBook Pro M4 battery same-day at our Dubai workshop, using OEM-grade replacement cells with a 12-month warranty. Pricing depends on your exact model and battery health, so message us on WhatsApp for today's exact quote. Battery diagnostics are free.",
         },
         {
           q: "Will updating macOS fix MacBook Pro M4 battery drain?",

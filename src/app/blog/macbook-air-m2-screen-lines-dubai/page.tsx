@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirM2ScreenLines";
 
 export const metadata: Metadata = {
   title: "MacBook Air M2 Screen Lines Dubai? Horizontal & Vertical Fix 2026",
-  description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis. Repair from AED 600 (13-inch) same-day.",
+  description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. WhatsApp us for a quote.",
   openGraph: {
     title: "MacBook Air M2 Screen Lines Dubai? Horizontal & Vertical Fix 2026",
-    description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis. Repair from AED 600 (13-inch) same-day.",
+    description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. WhatsApp us for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-m2-screen-lines-dubai",
     type: "article",
     publishedTime: "2026-06-23",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air M2 Screen Lines Dubai? Horizontal & Vertical Fix 2026",
-    description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis. Repair from AED 600 (13-inch) same-day.",
+    description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. WhatsApp us for a quote.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

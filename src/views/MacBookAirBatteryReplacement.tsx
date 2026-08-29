@@ -20,6 +20,7 @@ import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import type { LucideIcon } from "lucide-react";
 
 const IMG = {
@@ -55,13 +56,13 @@ type BatterySpec = {
 
 const BATTERY_SPECS: BatterySpec[] = [
   { chip: "Intel (2018–2020)", capacity: "49.9 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 2 + USB-C", appleService: "Not serviced (vintage)", l3href: "/macbook-air-intel-repair-dubai" },
-  { chip: "M1 (2020–2023)",   capacity: "49.9 Wh", cycleLimit: "1,000 cycles", chargingPort: "USB-C",             appleService: "AED 549",               l3href: "/macbook-air-m1-repair-dubai"   },
-  { chip: 'M2 13" (2022)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 549",               l3href: "/macbook-air-m2-repair-dubai"  },
-  { chip: 'M2 15" (2023)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 649",               l3href: "/macbook-air-m2-repair-dubai"  },
-  { chip: 'M3 13" (2024)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 549",               l3href: "/macbook-air-m3-repair-dubai"  },
-  { chip: 'M3 15" (2024)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 649",               l3href: "/macbook-air-m3-repair-dubai"  },
-  { chip: 'M4 13" (2025)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 599",               l3href: "/macbook-air-m4-repair-dubai"  },
-  { chip: 'M4 15" (2025)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "AED 699",               l3href: "/macbook-air-m4-repair-dubai"  },
+  { chip: "M1 (2020–2023)",   capacity: "49.9 Wh", cycleLimit: "1,000 cycles", chargingPort: "USB-C",             appleService: "Charged by Apple",     l3href: "/macbook-air-m1-repair-dubai"   },
+  { chip: 'M2 13" (2022)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m2-repair-dubai"  },
+  { chip: 'M2 15" (2023)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m2-repair-dubai"  },
+  { chip: 'M3 13" (2024)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m3-repair-dubai"  },
+  { chip: 'M3 15" (2024)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m3-repair-dubai"  },
+  { chip: 'M4 13" (2025)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m4-repair-dubai"  },
+  { chip: 'M4 15" (2025)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m4-repair-dubai"  },
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
@@ -83,9 +84,9 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 
 const PROBLEMS = [
   { title: "Battery swelling on M1 and M2 MacBook Air",
-    body: "Lithium-ion pouch cells swell when they degrade in Dubai's heat. Most common on M1 Air used heavily in the first 2–3 years. Signs: trackpad won't click, bottom cover bows. Replace immediately, AED 450." },
+    body: "Lithium-ion pouch cells swell when they degrade in Dubai's heat. Most common on M1 Air used heavily in the first 2–3 years. Signs: trackpad won't click, bottom cover bows. Replace immediately — WhatsApp the model for today's price." },
   { title: "MacBook Air won't turn on without the charger",
-    body: "Cell has reached 0V and the BMS protection latch opened. Common on Intel 2018–2020 after 5+ years. Full battery replacement plus BMS re-pair, AED 450 same-day." },
+    body: "Cell has reached 0V and the BMS protection latch opened. Common on Intel 2018–2020 after 5+ years. Full battery replacement plus BMS re-pair, same-day — message us for the exact price." },
   { title: "Battery drains overnight even in sleep",
     body: "On Apple Silicon Air, standby draw is under 1% per hour. 10%+ overnight means an app is preventing proper sleep. Activity Monitor shows the culprit. If capacity is above 80%, it is software not battery." },
   { title: "macOS shows battery health at 100% but life is short",
@@ -93,11 +94,11 @@ const PROBLEMS = [
   { title: "M2 Air battery draining fast after SSD upgrade or heavy write use",
     body: "The M2 Air's 256GB SSD variant (A2681) uses a single NAND chip that causes the SSD controller to wake constantly, increasing background power draw by 25–30%. Worst on M2 256GB. Replace SSD with A-grade 512GB or accept the drain. The battery itself is not at fault." },
   { title: "Intel Air battery degraded from Dubai heat",
-    body: "Lithium-ion cells permanently lose capacity when stored above 35°C. Intel Airs left in cars, direct sunlight on desks, or in non-air-conditioned storage in UAE summers degrade 2–3x faster. AED 450 replacement restores capacity." },
+    body: "Lithium-ion cells permanently lose capacity when stored above 35°C. Intel Airs left in cars, direct sunlight on desks, or in non-air-conditioned storage in UAE summers degrade 2–3x faster. A replacement restores capacity — WhatsApp us for the price." },
   { title: "MacBook Air M3 or M4 draining fast on new setup",
     body: "Normal behaviour. Spotlight indexing, iCloud sync, Photos library rebuild, and Siri training run for 24–72 hours on a new or freshly reset machine. Activity Monitor will show these processes. Wait 3 days before assuming battery fault." },
   { title: "Battery shows correct percentage but shuts off suddenly",
-    body: "PMU/PMIC misread on worn cells. The cell voltage drops too fast at low capacity and triggers emergency shutdown. Not a logic board fault in most cases, battery replacement clears it. AED 450." },
+    body: "PMU/PMIC misread on worn cells. The cell voltage drops too fast at low capacity and triggers emergency shutdown. Not a logic board fault in most cases, battery replacement clears it — message us for the price." },
 ];
 
 const TIMELINE = [
@@ -120,7 +121,7 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Laila K.",  body: "M3 MacBook Air battery was down to 4 hours on a full charge. New cell from MacBook Repair Dubai and I'm back to 15 hours. Same-day, AED 450, done." },
+  { name: "Laila K.",  body: "M3 MacBook Air battery was down to 4 hours on a full charge. New cell from MacBook Repair Dubai and I'm back to 15 hours. Same-day, fair price, done." },
   { name: "Omar F.",   body: "Intel Air trackpad stopped clicking, turned out to be a swollen battery. Fixed same day with free pickup from Jumeirah. Excellent service." },
   { name: "Priya N.",  body: "M2 Air was losing 40% overnight. Technician found it was the SSD power issue, not the battery, saved me the repair cost. Honest and knowledgeable." },
 ];
@@ -129,10 +130,10 @@ const FAQ_GROUPS = [
   {
     category: "Pricing & booking",
     items: [
-      { q: "How much does MacBook Air battery replacement cost in Dubai?", a: "From AED 450 for Intel 2018–2020 and M1, AED 450 for M2/M3 13\", AED 500 for M2/M3 15\", AED 500–550 for M4. Includes cell, labour, BMS re-pair, and calibration. No diagnostic fee. WhatsApp the model for exact quote." },
+      { q: "How much does MacBook Air battery replacement cost in Dubai?", a: "Pricing depends on your exact model — Intel 2018–2020, M1, M2, M3, and M4 all differ. Every quote includes the cell, labour, BMS re-pair, and calibration, with no diagnostic fee. WhatsApp the model for today's exact price." },
       { q: "How long does MacBook Air battery replacement take in Dubai?", a: "Same-day 2 hours for Intel, M1, M2, M3 when the cell is in stock. M4 is 1–2 days. WhatsApp the model to confirm stock before you travel." },
       { q: "Do you offer free pickup for MacBook Air battery replacement?", a: "Yes. Free pickup Dubai-wide. Do NOT leave a swollen battery in a hot car while waiting for pickup - keep it in a cool indoor location." },
-      { q: "How does MacBook Air battery replacement cost compare to Apple Store?", a: "Apple charges AED 549–699 depending on model and requires 5–14 business days. MacBook Repair Dubai charges AED 450–550 and completes same-day." },
+      { q: "How does MacBook Air battery replacement cost compare to Apple Store?", a: "Apple requires 5–14 business days and typically charges more than an independent workshop. MacBook Repair Dubai completes most models same-day at a lower price — WhatsApp your model for a direct comparison." },
     ],
   },
   {
@@ -159,8 +160,6 @@ const FAQ_GROUPS = [
     ],
   },
 ];
-
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 /* ── Section heading ── */
 function SectionHeading({ label, title, sub }: { label?: string; title: string; sub?: string }) {
@@ -216,9 +215,9 @@ export default function MacBookAirBatteryReplacement() {
 
   useSeo(
     {
-      title: "MacBook Air Battery Replacement Dubai - From AED 450",
+      title: "MacBook Air Battery Replacement Dubai - Same Day",
       description:
-        "MacBook Air battery replacement Dubai from AED 450. M1 through M4, Intel, swelling, same-day 2-hour service, 3-month warranty. Free pickup Dubai-wide. Call 055 741 3706.",
+        "MacBook Air battery replacement Dubai. M1 through M4, Intel, swelling, same-day 2-hour service, 3-month warranty, free pickup Dubai-wide. WhatsApp for today's price.",
       path: "/macbook-air-battery-replacement-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -270,7 +269,7 @@ export default function MacBookAirBatteryReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air batteries from AED 450 at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, free pickup citywide, 3-month written warranty.
+                MacBook Repair Dubai replaces MacBook Air batteries at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, free pickup citywide, 3-month written warranty. WhatsApp the model for today's price.
               </p>
             </div>
           </div>
@@ -312,7 +311,7 @@ export default function MacBookAirBatteryReplacement() {
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
                 { stat: "3,200+", label: "Air batteries replaced" },
-                { stat: "AED 450", label: "Starting price" },
+                { stat: "Same day", label: "Most models" },
                 { stat: "2 hours", label: "Same-day turnaround" },
                 { stat: "3 mo", label: "Written warranty" },
               ].map(({ stat, label }, i) => (
@@ -353,7 +352,9 @@ export default function MacBookAirBatteryReplacement() {
                 {PRICING.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
                       {r.l6href && (
@@ -667,7 +668,7 @@ export default function MacBookAirBatteryReplacement() {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Swollen Air battery?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Replace it today · From AED 450 · Free pickup Dubai-wide
+                Replace it today · Same-day service · Free pickup Dubai-wide
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

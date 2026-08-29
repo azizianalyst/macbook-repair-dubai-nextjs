@@ -7,7 +7,7 @@ export default function BlogMacBookAirM2ScreenLines() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M2 Screen Lines Dubai? Horizontal & Vertical Fix 2026"
-      seoDescription="Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis. Repair from AED 600 (13-inch) same-day."
+      seoDescription="Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. Message us for a price."
       path="/blog/macbook-air-m2-screen-lines-dubai"
       wide
       toc={[
@@ -20,7 +20,7 @@ export default function BlogMacBookAirM2ScreenLines() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M2 Screen Lines in Dubai? Horizontal and Vertical Causes and Fixes"
       hook="Horizontal or vertical lines on a MacBook Air M2 screen are alarming but the cause is almost always a display cable or panel fault, not the logic board. This guide shows you how to tell which it is and what the repair costs in Dubai."
-      quickAnswer="Horizontal or vertical lines on a MacBook Air M2 screen are caused by: a loose or damaged display cable at the hinge (most common), a failing LCD panel, or a GPU fault on the logic board. Lines that change when you press near the hinge or move the lid = cable fault. Lines that are fixed and consistent = panel or GPU. Screen replacement costs AED 600 (M2 13-inch) or AED 650 (M2 15-inch) at MacBook Repair Dubai."
+      quickAnswer="Horizontal or vertical lines on a MacBook Air M2 screen are caused by: a loose or damaged display cable at the hinge (most common), a failing LCD panel, or a GPU fault on the logic board. Lines that change when you press near the hinge or move the lid = cable fault. Lines that are fixed and consistent = panel or GPU. MacBook Repair Dubai replaces both M2 Air 13-inch and 15-inch screens same-day — message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook display technician" }}
       datePublished="2026-06-23"
       dateModified="2026-06-23"
@@ -192,8 +192,8 @@ export default function BlogMacBookAirM2ScreenLines() {
           <BlogPriceTable
             caption="MacBook Air M2 screen repair pricing, Dubai. June 2026"
             rows={[
-              { model: "MacBook Air M2 13-inch (2022)", ours: "AED 600", apple: "AED 1,299", note: "Liquid Retina, same-day" },
-              { model: "MacBook Air M2 15-inch (2023)", ours: "AED 650", apple: "AED 1,449", note: "Liquid Retina, same-day" },
+              { model: "MacBook Air M2 13-inch (2022)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina, same-day" },
+              { model: "MacBook Air M2 15-inch (2023)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina, same-day" },
             ]}
           />
           <p>
@@ -239,7 +239,7 @@ export default function BlogMacBookAirM2ScreenLines() {
         },
         {
           q: "Is it worth repairing a MacBook Air M2 with screen lines or should I buy a new one?",
-          a: "At AED 600-650 for a screen repair versus AED 4,499+ for a new M2 Air (or AED 4,999 for an M3 Air), repair is almost always the better financial decision, especially if the rest of the machine is working well. The M2 Air is still a current-generation chip with years of useful life ahead.",
+          a: "A screen repair costs a fraction of a new MacBook Air, so repair is almost always the better financial decision, especially if the rest of the machine is working well. The M2 Air is still a current-generation chip with years of useful life ahead. Message us on WhatsApp for today's exact repair price on your model.",
         },
       ]}
       relatedLinks={[

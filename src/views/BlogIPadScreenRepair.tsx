@@ -6,13 +6,13 @@ export default function BlogIPadScreenRepair() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Screen Repair Cost Dubai 2026: Prices by Model"
-      seoDescription="iPad screen repair cost Dubai from AED 250. All models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service."
+      seoDescription="iPad screen repair Dubai for every model: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service. WhatsApp us for today's exact price."
       path="/blog/ipad-screen-repair-cost-dubai"
       wide={true}
       category="Cost guide · iPad"
       h1="iPad Screen Repair Cost Dubai: Prices for Every Model"
-      hook="iPad screen repair in Dubai costs from AED 250 for standard iPad models to AED 1,200 for iPad Pro M4 OLED, with most repairs completed same day at our Concord Tower workshop."
-      quickAnswer="iPad screen repair cost in Dubai ranges from AED 250 for standard iPad models to AED 1,200 for iPad Pro M4 with its OLED display. LCD repairs are significantly cheaper than OLED. A free diagnosis confirms whether only the digitiser, the LCD, or the full display assembly needs replacing."
+      hook="iPad screen repair in Dubai covers everything from standard iPad models to the iPad Pro M4 OLED, with most repairs completed same day at our Concord Tower workshop. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPad screen repair cost in Dubai depends on your model, from standard iPad panels to the iPad Pro M4 with its OLED display. LCD repairs are significantly cheaper than OLED. A free diagnosis confirms whether only the digitiser, the LCD, or the full display assembly needs replacing, then we message you the exact price on WhatsApp."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -223,38 +223,40 @@ export default function BlogIPadScreenRepair() {
               set the white point and colour profile, adding to labour time.
             </p>
             <p>
-              For the iPad Air M2 and M3, the LCD panel repair cost is AED 500 for the 11-inch
-              model. The equivalent iPad Pro 11-inch M4 with OLED is AED 900, nearly double.
-              On the 13-inch format, the iPad Air LCD repair sits at approximately AED 600 while
-              the iPad Pro 13-inch M4 OLED reaches AED 1,200. If you are deciding between iPad
+              For the iPad Air M2 and M3, the LCD panel repair on the 11-inch model is the more
+              affordable option. The equivalent iPad Pro 11-inch M4 with OLED costs nearly double.
+              On the 13-inch format, the iPad Air LCD repair stays well below the iPad Pro 13-inch
+              M4 OLED, which is the most expensive panel we replace. If you are deciding between iPad
               Air and iPad Pro for a child or a high-use work device, the screen repair cost
-              difference is a meaningful factor over a 5-year ownership period.
+              difference is a meaningful factor over a 5-year ownership period. Message us on
+              WhatsApp for the exact price on each model.
             </p>
           </section>
 
           <section id="replacement-cost">
             <h2 id="replacement-cost">iPad screen repair cost Dubai by model</h2>
             <p>
-              All prices below include the display assembly, labour, calibration, and a 3-month
-              written warranty. No diagnostic fee. Prices correct as of June 2026.
+              Every repair below includes the display assembly, labour, calibration, and a 3-month
+              written warranty. No diagnostic fee. Message us on WhatsApp for today's exact price on
+              your model.
             </p>
             <BlogPriceTable
-              caption="iPad screen repair pricing - MacBook Repair Dubai, June 2026"
+              caption="iPad screen repair - MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: 'iPad Pro 11" M4 (OLED)', ours: "AED 900",   apple: "AED 1,800+" },
-                { model: 'iPad Pro 13" M4 (OLED)', ours: "AED 1,200", apple: "AED 2,200+" },
-                { model: "iPad Air M2 / M3 11\"",  ours: "AED 500",   apple: "AED 1,000+" },
-                { model: "iPad 10th / 11th gen",   ours: "AED 350",   apple: "AED 700+"   },
-                { model: "iPad 9th gen and older", ours: "AED 250",   apple: "AED 550+"   },
-                { model: "iPad mini 6 / 7",        ours: "AED 400",   apple: "AED 800+"   },
+                { model: 'iPad Pro 11" M4 (OLED)', ours: "Price on request", apple: "Price on request" },
+                { model: 'iPad Pro 13" M4 (OLED)', ours: "Price on request", apple: "Price on request" },
+                { model: "iPad Air M2 / M3 11\"",  ours: "Price on request", apple: "Price on request" },
+                { model: "iPad 10th / 11th gen",   ours: "Price on request", apple: "Price on request" },
+                { model: "iPad 9th gen and older", ours: "Price on request", apple: "Price on request" },
+                { model: "iPad mini 6 / 7",        ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p className="text-[13px] text-text-muted mono">
-              Apple Store pricing is based on out-of-warranty service rates converted to AED.
-              Third-party pricing refers to street-level shops in Karama and Deira using
-              aftermarket panels without warranty. Our repairs use OEM-grade panels with a
-              written 3-month warranty on parts and labour.
+              The Apple / third-party column reflects Apple out-of-warranty service and
+              street-level shops in Karama and Deira using aftermarket panels without warranty.
+              Our repairs use OEM-grade panels with a written 3-month warranty on parts and
+              labour. Message us on WhatsApp for today's exact price on your model.
             </p>
             <p>
               Same-day service is available for all models above if the iPad arrives at Concord
@@ -275,7 +277,7 @@ export default function BlogIPadScreenRepair() {
               <li><strong>Flickering after a software update:</strong> If the flickering started immediately after an iPadOS update and there was no physical damage, the display driver or GPU firmware is likely the cause. A screen replacement will not fix this.</li>
               <li><strong>Green tint on OLED (iPad Pro M4):</strong> A persistent green tint across the full panel can indicate a failing OLED driver IC on the logic board rather than the panel itself. Our technicians test by connecting a known-good display before ordering parts.</li>
               <li><strong>Touch not working after a board repair:</strong> If touch stopped working following another repair (battery swap, charging port fix), a flex cable was likely disturbed or the touch controller on the board was damaged during the previous repair. A screen replacement will not fix this.</li>
-              <li><strong>Black screen with backlight visible:</strong> Hold the iPad under a bright light at an angle. If you can faintly see the interface, the LCD is likely intact but the backlight driver or backlight fuse on the board has failed. This is a board-level repair costing AED 300-500, not a screen replacement.</li>
+              <li><strong>Black screen with backlight visible:</strong> Hold the iPad under a bright light at an angle. If you can faintly see the interface, the LCD is likely intact but the backlight driver or backlight fuse on the board has failed. This is a board-level repair, not a screen replacement, and it usually costs less. Message us on WhatsApp for the exact price.</li>
             </ul>
             <p>
               Our diagnostic process specifically checks for these board-level causes before any

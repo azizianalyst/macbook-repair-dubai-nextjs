@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirOverheating";
 
 export const metadata: Metadata = {
   title: "MacBook Air Overheating in Dubai? Causes and Fixes 2026",
-  description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Fix from AED 200 at our workshop.",
+  description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Message us on WhatsApp for a fast fix.",
   openGraph: {
     title: "MacBook Air Overheating in Dubai? Causes and Fixes 2026",
-    description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Fix from AED 200 at our workshop.",
+    description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Message us on WhatsApp for a fast fix.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-overheating-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Overheating in Dubai? Causes and Fixes 2026",
-    description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Fix from AED 200 at our workshop.",
+    description: "MacBook Air overheating in Dubai? Fanless M-series and Intel fan models both throttle in 35°C+ heat. Message us on WhatsApp for a fast fix.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

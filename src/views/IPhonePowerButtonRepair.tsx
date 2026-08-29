@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhonePowerButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Power Button Repair Dubai - AED 280 | 1 Day"
-      seoDescription="iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. AED 280, 1 day. Call 055 741 3706."
+      seoTitle="iPhone Power Button Repair Dubai - Price on Request | 1 Day"
+      seoDescription="iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. 1 day. WhatsApp us for today's price on your model."
       path="/iphone-power-button-repair-dubai"
       eyebrow="iPhone power button repair"
       h1="iPhone Power Button Repair Dubai"
-      subtitle='Side button stuck, mushy or completely dead - also kills Apple Pay double-click confirmation. We replace the side-button flex and restore the click. AED 280, 1 day.'
+      subtitle='Side button stuck, mushy or completely dead - also kills Apple Pay double-click confirmation. We replace the side-button flex and restore the click in 1 day. Message us on WhatsApp for your exact price.'
       startingPrice={280}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone power/side button isn't clicking - model:"
@@ -23,7 +23,7 @@ export default function IPhonePowerButtonRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex, AED 280, with a warranty of up to 12 months.
+            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex with a warranty of up to 12 months - message us on WhatsApp for today's exact price on your model.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Most failures are mechanical - the dome inside the button collapses after years of use, or impact damage from a drop has bent the metal frame around the button. We straighten the frame where possible (no extra charge) and replace the flex with the click mechanism in one visit.
@@ -62,8 +62,8 @@ export default function IPhonePowerButtonRepair() {
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[
         { label: "iPhone Volume Button Repair", href: "/iphone-volume-button-repair-dubai", description: "Often shares the same flex strategy." },
-        { label: "iPhone Vibration Motor Repair", href: "/iphone-vibration-motor-repair-dubai", description: "Taptic Engine repairs from AED 350." },
-        { label: "iPhone Battery Replacement",   href: "/iphone-battery-replacement-dubai",   description: "OEM-cell batteries from AED 220." },
+        { label: "iPhone Vibration Motor Repair", href: "/iphone-vibration-motor-repair-dubai", description: "Taptic Engine repairs - message us for a price." },
+        { label: "iPhone Battery Replacement",   href: "/iphone-battery-replacement-dubai",   description: "OEM-cell batteries - message us for a price." },
       ]}
       blogLink={{ label: "Side, Action, Camera Control: every button on your modern iPhone", href: "/blog" }}
     />

@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadPowerButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Power Button Repair Dubai - Touch ID | AED 300"
-      seoDescription="iPad power button repair Dubai. Top-edge button with Touch ID on iPad Air 4+, mini 6+, iPad 10/11. Honest Touch ID limits. AED 300, 1 day."
+      seoTitle="iPad Power Button Repair Dubai - Touch ID | Free Diagnosis"
+      seoDescription="iPad power button repair Dubai. Top-edge button with Touch ID on iPad Air 4+, mini 6+, iPad 10/11. Honest Touch ID limits. 1-day turnaround - message us for a quote."
       path="/ipad-power-button-repair-dubai"
       eyebrow="iPad power button"
       h1="iPad Power Button Repair Dubai"
-      subtitle="Top-edge power button stuck, mushy or dead - and on iPad Air 4+, mini 6+, iPad 10/11 it also handles Touch ID. Same honest limits apply. AED 300, 1 day."
+      subtitle="Top-edge power button stuck, mushy or dead - and on iPad Air 4+, mini 6+, iPad 10/11 it also handles Touch ID. Same honest limits apply. 1-day turnaround - message us on WhatsApp for today's price on your model."
       startingPrice={300}
       timeline="1 day"
       whatsappPrefill="Hi, my iPad power button isn't working - model:"
@@ -26,7 +26,7 @@ export default function IPadPowerButtonRepair() {
             <strong>From iPad Air 4 (2020) onwards</strong>, Apple moved Touch ID into the top-edge power button - a clever space saver but it means the power button assembly is now a Touch ID sensor too. When the button fails, the same Apple Secure Enclave pairing rule applies: a replacement button restores click but cannot restore Touch ID. We tell you this before opening the iPad.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. AED 300 covers either case, 1-day turnaround, warranty of up to 12 months.
+            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. One flat price covers either case, 1-day turnaround, warranty of up to 12 months - message us on WhatsApp for the exact figure on your model.
           </p>
         </>
       }
@@ -56,7 +56,7 @@ export default function IPadPowerButtonRepair() {
         { q: "Which iPads have Touch ID in the power button?", a: "iPad Air 4 (2020) onwards, iPad mini 6 (2021) onwards, and iPad 10th/11th gen. Every other modern iPad either uses Face ID (iPad Pro M-series) or has no biometrics (iPad Pro 9.7\"/10.5\"/12.9\" 1st gen)." },
         { q: "Why can\u2019t Touch ID be re-paired?", a: "Same answer as iPhone: Apple's Secure Enclave is hardware-paired to the original Touch ID sensor at manufacture. The pairing key is stored inside the Secure Enclave and never exposed. No third party can re-pair, including specialised lab equipment." },
         { q: "Will Apple Pay still work?", a: "Yes for in-app purchases via passcode. For physical Apple Pay on iPad (web checkout etc.), passcode is the fallback once Touch ID is unavailable." },
-        { q: "What about the iPad Pro power button - just mechanical?", a: "Yes, iPad Pro M4 and earlier with Face ID have a purely mechanical power button. Cleaner repair, same AED 300 price. We tell you which you have based on model." },
+        { q: "What about the iPad Pro power button - just mechanical?", a: "Yes, iPad Pro M4 and earlier with Face ID have a purely mechanical power button. Cleaner repair, same flat price - message us on WhatsApp for the exact figure. We tell you which you have based on model." },
         { q: "Could software cause stuck wake?", a: "Rarely - about 5% of cases. We always force-restart and update iPadOS before opening the iPad. If it's software, no charge." },
       ]}
       reviewNames={["Anatoliy Tarasenko", "Anastasiia Goncia", "Ana Undricova"]}

@@ -2,12 +2,13 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 
 export default function BlogMacBookProM3SdCardNotShowing() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 SD Card Not Showing Dubai 2026: SD Reader Fix Guide"
-      seoDescription="MacBook Pro M3 SD card not showing up in Dubai? Card not detected, shows then disappears, or slow transfer speeds. Sonoma SD reader fix, card format issues, and reader repair from AED 250."
+      seoDescription="MacBook Pro M3 SD card not showing up in Dubai? Card not detected, shows then disappears, or slow transfer speeds. Sonoma SD reader fix, card format issues, and reader repair. Free diagnosis."
       path="/blog/macbook-pro-m3-sd-card-not-showing-dubai"
       wide
       toc={[
@@ -23,7 +24,7 @@ export default function BlogMacBookProM3SdCardNotShowing() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 SD Card Not Showing in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 SD card not detected is a known Sonoma 14.0-14.3 issue that affected certain UHS-II and CFexpress adapters on M3. Apple Community logged hundreds of reports from late 2023 through early 2024. Most are software fixes. Physical SD reader repair costs AED 250 in Dubai if the hardware is confirmed faulty."
+      hook="MacBook Pro M3 SD card not detected is a known Sonoma 14.0-14.3 issue that affected certain UHS-II and CFexpress adapters on M3. Apple Community logged hundreds of reports from late 2023 through early 2024. Most are software fixes. If the hardware is confirmed faulty, message us on WhatsApp for today's exact SD reader repair price in Dubai."
       quickAnswer="MacBook Pro M3 SD card not showing: update to Sonoma 14.4 which fixed the SD card detection regression on M3. Also check the card format: exFAT and FAT32 work in macOS without drivers; NTFS does not. For UHS-II cards not achieving UHS-II speeds, confirm the card is inserted fully (the M3 SD slot is shallower than it looks). Free diagnostic to confirm hardware vs software fault."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -116,22 +117,25 @@ export default function BlogMacBookProM3SdCardNotShowing() {
               </tr>
               <tr>
                 <td>Reader repair cost (Dubai)</td>
-                <td>AED 200</td>
-                <td>AED 250</td>
+                <td>Price on request</td>
+                <td>Price on request</td>
               </tr>
             </tbody>
           </table>
 
           <h2 id="repair-cost">MacBook Pro M3 SD card reader repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M3 SD reader repair pricing. June 2026"
+            caption="MacBook Pro M3 SD reader repair. June 2026"
             rows={[
-              { model: "SD card reader replacement (M3 14-inch)", ours: "AED 250", apple: "AED 700+", note: "Full reader board, 60-90 mins" },
-              { model: "SD card reader replacement (M3 16-inch)", ours: "AED 300", apple: "AED 700+", note: "Full reader board, 60-90 mins" },
-              { model: "SD slot cleaning (Dubai sand/debris)", ours: "AED 100", apple: "AED 250", note: "Compressed air + contact cleaning, 20 mins" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Card, format, driver, and hardware check" },
+              { model: "SD card reader replacement (M3 14-inch)", ours: "Price on request", apple: "Price on request", note: "Full reader board, 60-90 mins" },
+              { model: "SD card reader replacement (M3 16-inch)", ours: "Price on request", apple: "Price on request", note: "Full reader board, 60-90 mins" },
+              { model: "SD slot cleaning (Dubai sand/debris)", ours: "Price on request", apple: "Price on request", note: "Compressed air + contact cleaning, 20 mins" },
+              { model: "Diagnostic", ours: "Free", apple: "Price on request", note: "Card, format, driver, and hardware check" },
             ]}
           />
+          <p>
+            <PriceCTA compact message="Hi, price for MacBook Pro M3 SD card reader repair in Dubai?" />
+          </p>
 
           <h2 id="hardware-fault">When is MacBook Pro M3 SD card reader a hardware fault?</h2>
           <ul className="list-disc list-inside space-y-xs">
@@ -166,11 +170,11 @@ export default function BlogMacBookProM3SdCardNotShowing() {
         },
         {
           q: "How much does MacBook Pro M3 SD card reader repair cost in Dubai?",
-          a: "SD card reader replacement costs AED 250 (14-inch) or AED 300 (16-inch) at our Dubai workshop. Slot cleaning for UAE dust or sand blockage costs AED 100. Free diagnostic to confirm if the issue is the reader hardware, the card, or a software fault before any repair.",
+          a: "We replace the SD card reader on both the 14-inch and 16-inch M3 at our Dubai workshop, and we also clean SD slots blocked by UAE dust or sand. Message us on WhatsApp for today's exact price on your model. Free diagnostic first to confirm if the issue is the reader hardware, the card, or a software fault before any repair.",
         },
         {
           q: "Does fine Dubai sand damage MacBook Pro M3 SD card reader?",
-          a: "Yes. UAE construction dust is very fine and can enter the SD slot over time, coating the reader's contact pins. Symptoms: SD card feels loose or rattles slightly when inserted, intermittent detection, or card detected but speed is lower than expected. Slot cleaning with compressed air and contact cleaner resolves this and costs AED 100 at our workshop.",
+          a: "Yes. UAE construction dust is very fine and can enter the SD slot over time, coating the reader's contact pins. Symptoms: SD card feels loose or rattles slightly when inserted, intermittent detection, or card detected but speed is lower than expected. Slot cleaning with compressed air and contact cleaner resolves this. Message us on WhatsApp for today's exact slot-cleaning price at our workshop.",
         },
       ]}
       relatedLinks={[

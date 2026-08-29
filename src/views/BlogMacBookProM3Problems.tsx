@@ -7,7 +7,7 @@ export default function BlogMacBookProM3Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M3 common problems in Dubai? Wi-Fi 6E drops, display flickering, MagSafe charging issues, thermal throttling on M3 Pro. Expert fixes and repair from AED 200."
+      seoDescription="MacBook Pro M3 common problems in Dubai? Wi-Fi 6E drops, display flickering, MagSafe charging, thermal throttling on M3 Pro. Expert fixes. Message us for a quote."
       path="/blog/macbook-pro-m3-common-problems-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM3Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro M3 owners in Dubai report Wi-Fi 6E instability, display flickering at low brightness, and MagSafe charging port issues. Most are fixed by a macOS update or a settings change. Hardware repair starts from AED 200."
+      hook="MacBook Pro M3 owners in Dubai report Wi-Fi 6E instability, display flickering at low brightness, and MagSafe charging port issues. Most are fixed by a macOS update or a settings change. For hardware repair, message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Pro M3 common problems include: Wi-Fi 6E drops on macOS Sonoma 14.0-14.1 (fixed in 14.2, update now), mini-LED flickering at low brightness (disable True Tone temporarily to confirm), MagSafe port debris causing intermittent charging, and M3 Pro thermal throttling on 14-inch chassis under sustained load. Most are free to fix."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -146,14 +146,15 @@ export default function BlogMacBookProM3Problems() {
 
           <h2 id="repair-cost-m3">How much does MacBook Pro M3 repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M3 repair pricing. June 2026"
+            caption="MacBook Pro M3 repair service. June 2026"
+            headers={["Model", "Our service", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M3 14\" screen replacement", ours: "AED 600", apple: "AED 1,099", note: "Mini-LED Liquid Retina XDR, same-day" },
-              { model: "MacBook Pro M3 16\" screen replacement", ours: "AED 700", apple: "AED 1,299", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M3 battery 14\"", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M3 battery 16\"", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell" },
-              { model: "MagSafe port repair (M3)", ours: "AED 250", apple: "AED 800+", note: "MagSafe board or charging IC" },
-              { model: "Thermal cleaning + repaste", ours: "AED 150", apple: "Not offered", note: "Vents + heatsink, fixes throttling" },
+              { model: "MacBook Pro M3 14\" screen replacement", ours: "Price on request", apple: "-", note: "Mini-LED Liquid Retina XDR, same-day" },
+              { model: "MacBook Pro M3 16\" screen replacement", ours: "Price on request", apple: "-", note: "Mini-LED, same-day" },
+              { model: "MacBook Pro M3 battery 14\"", ours: "Price on request", apple: "-", note: "70 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M3 battery 16\"", ours: "Price on request", apple: "-", note: "100 Wh cell" },
+              { model: "MagSafe port repair (M3)", ours: "Price on request", apple: "-", note: "MagSafe board or charging IC" },
+              { model: "Thermal cleaning + repaste", ours: "Price on request", apple: "-", note: "Vents + heatsink, fixes throttling" },
             ]}
           />
           <p>
@@ -173,7 +174,7 @@ export default function BlogMacBookProM3Problems() {
             <li>External display output completely dead on all ports while internal display works</li>
           </ul>
           <p>
-            Free diagnostic. Component-level M3 board repair from AED 1,100.{" "}
+            Free diagnostic. For component-level M3 board repair, message us on WhatsApp for a quote on your model.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>

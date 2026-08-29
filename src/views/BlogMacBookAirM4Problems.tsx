@@ -7,7 +7,7 @@ export default function BlogMacBookAirM4Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M4 Common Problems Dubai 2025: Fix Guide"
-      seoDescription="MacBook Air M4 problems in Dubai: battery drain, thermal throttle, keyboard issues, WiFi drops. All M4 Air faults fixed from AED 350. Free diagnosis."
+      seoDescription="MacBook Air M4 problems in Dubai: battery drain, thermal throttle, keyboard issues, WiFi drops. All M4 Air faults fixed same-day. Free diagnosis, WhatsApp us."
       path="/blog/macbook-air-m4-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirM4Problems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M4 Common Problems in Dubai? Fix Guide 2025"
       hook="MacBook Air M4 is the most popular Air model we see in Dubai in 2025. We repair dozens each month. Here are the six problems that come through the door most often, and what to do about each one."
-      quickAnswer="Most common MacBook Air M4 problems in Dubai: battery draining to under 10h (brightness + Teams/Zoom background), thermal throttle on sustained tasks in Dubai heat (fanless, 35C ambient), Sky Blue chassis showing heat marks, USB-C not charging with 20W phone adapter, keyboard double-typing on new units (rare, covered by Apple), and WiFi dropping after sleep. Most are free software fixes. Hardware faults from AED 350 in Dubai."
+      quickAnswer="Most common MacBook Air M4 problems in Dubai: battery draining to under 10h (brightness + Teams/Zoom background), thermal throttle on sustained tasks in Dubai heat (fanless, 35C ambient), Sky Blue chassis showing heat marks, USB-C not charging with 20W phone adapter, keyboard double-typing on new units (rare, covered by Apple), and WiFi dropping after sleep. Most are free software fixes. For hardware faults, message us on WhatsApp for today's exact price on your M4 Air."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -70,9 +70,10 @@ export default function BlogMacBookAirM4Problems() {
           </p>
           <p>
             If capacity in System Settings → Battery shows below 80%, the cell itself is degraded.
-            Battery replacement for M4 Air is{" "}
+            For battery replacement on the 13-inch or 15-inch M4 Air, message us on WhatsApp for
+            today's exact price on your model.{" "}
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
-              AED 450 (13-inch) or AED 500 (15-inch) →
+              MacBook battery replacement Dubai →
             </Link>
           </p>
 
@@ -100,7 +101,8 @@ export default function BlogMacBookAirM4Problems() {
             surface like a pillow blocks the underside airflow path. Charge at night when the room is
             cooler. Enable Low Power Mode during long renders. If the machine throttles at idle with
             no load (room temperature, light browser use), bring it in: this can indicate a thermal
-            pad failure or paste degradation, which we inspect and fix from AED 350.
+            pad failure or paste degradation, which we inspect and fix same-day. Message us on
+            WhatsApp for the exact price after diagnosis.
           </p>
 
           <h2 id="keyboard">MacBook Air M4 keyboard double-typing issue</h2>
@@ -126,7 +128,8 @@ export default function BlogMacBookAirM4Problems() {
             Hardware double-typing, where the key physically registers twice due to a faulty
             butterfly-style mechanism or debris under a scissor switch, is rare on the M4 Air's
             Magic Keyboard. If the problem persists after all software steps, a top-case replacement
-            is AED 800. Apple may cover this under warranty on units purchased in 2025.
+            fixes it; message us on WhatsApp for today's exact price. Apple may cover this under
+            warranty on units purchased in 2025.
           </p>
 
           <h2 id="wifi">MacBook Air M4 WiFi dropping after sleep</h2>
@@ -155,7 +158,7 @@ export default function BlogMacBookAirM4Problems() {
           <h2 id="charging">MacBook Air M4 not charging or slow charging</h2>
           <p>
             The M4 Air ships with a 35W dual USB-C adapter. Under CPU load, the M4 draws up to 30W
-            from the charger. This means a 20W phone charger or a cheap AED 15 adapter from
+            from the charger. This means a 20W phone charger or a cheap no-name adapter from
             Carrefour will not charge the M4 while you are using it: the battery actually drains
             while "charging".
           </p>
@@ -166,8 +169,9 @@ export default function BlogMacBookAirM4Problems() {
             <li><strong>MagSafe 3 connector</strong>: check for metal particle accumulation from the magnet; wipe monthly with a dry cloth</li>
           </ul>
           <p>
-            USB-C port replacement (when physically damaged or controller failure confirmed) is AED
-            350 at our Dubai workshop. We test both ports before and after repair.
+            USB-C port replacement (when physically damaged or controller failure confirmed) is
+            done same-day at our Dubai workshop; message us on WhatsApp for the exact price. We test
+            both ports before and after repair.
           </p>
 
           <h2 id="dubai-specific">Dubai-specific MacBook Air M4 problems</h2>
@@ -186,7 +190,8 @@ export default function BlogMacBookAirM4Problems() {
               Leaving a MacBook Air M4 in a parked car, even for 45 minutes in July, exposes the
               battery to 60-80°C. Lithium-ion cells swell at sustained temperatures above 45°C. If
               your trackpad feels raised or doesn't click, stop using the machine immediately and
-              bring it in. Swollen cell removal is AED 450 and urgent.
+              bring it in. Swollen cell removal is urgent; message us on WhatsApp for the exact
+              price on your model.
             </li>
             <li>
               <strong>MagSafe 3 magnet dust accumulation</strong>: the MagSafe 3 port on the M4 Air
@@ -258,24 +263,24 @@ export default function BlogMacBookAirM4Problems() {
           </table>
           <p>
             The M4 is a genuine upgrade in AI and ML tasks. For everyday browser, email, and Zoom
-            use, M3 and M4 are indistinguishable. If you find M3 at AED 300-500 cheaper, it is a
-            rational choice. M3 has a longer macOS stability track record as of mid-2026.
+            use, M3 and M4 are indistinguishable. If you find the M3 at a meaningful discount, it is
+            a rational choice. M3 has a longer macOS stability track record as of mid-2026.
           </p>
 
           <h2 id="repair-cost">MacBook Air M4 repair cost in Dubai</h2>
           <p>
-            All prices below are current as of June 2026. Same-day service on all repairs if dropped
-            off before 11am. Free diagnosis on all logic board and port faults.
+            Same-day service on all repairs if dropped off before 11am. Free diagnosis on all logic
+            board and port faults. Message us on WhatsApp for today's exact price on your M4 Air.
           </p>
           <BlogPriceTable
-            caption="MacBook Air M4 repair pricing Dubai: June 2026"
+            caption="MacBook Air M4 repairs Dubai: message us for today's price"
             rows={[
-              { model: "Battery: M4 Air 13\"", ours: "AED 450", apple: "AED 899", note: "OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Battery: M4 Air 15\"", ours: "AED 500", apple: "AED 999", note: "OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Screen: M4 Air 13\"", ours: "AED 600", apple: "AED 1,099", note: "OEM-grade panel, same-day" },
-              { model: "Screen: M4 Air 15\"", ours: "AED 700", apple: "AED 1,199", note: "OEM-grade panel, same-day" },
-              { model: "Top-case (keyboard): M4 Air", ours: "AED 800", apple: "AED 1,499", note: "Full keyboard and trackpad assembly" },
-              { model: "Logic board diagnosis", ours: "Free", apple: "AED 150", note: "We diagnose before quoting any repair" },
+              { model: "Battery: M4 Air 13\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Battery: M4 Air 15\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Screen: M4 Air 13\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade panel, same-day" },
+              { model: "Screen: M4 Air 15\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade panel, same-day" },
+              { model: "Top-case (keyboard): M4 Air", ours: "Price on request", apple: "Price on request", note: "Full keyboard and trackpad assembly" },
+              { model: "Logic board diagnosis", ours: "Free", apple: "Price on request", note: "We diagnose before quoting any repair" },
             ]}
           />
           <p>
@@ -302,7 +307,7 @@ export default function BlogMacBookAirM4Problems() {
         },
         {
           q: "Can MacBook Air M4 screen be repaired in Dubai?",
-          a: "Yes. Screen replacement for the M4 Air 13-inch is AED 600, and the 15-inch is AED 700. We use OEM-grade panels with the same colour calibration and brightness as the original. Same-day service if you drop off before 11am. 12-month warranty on the replacement panel.",
+          a: "Yes. We replace both the M4 Air 13-inch and 15-inch screens using OEM-grade panels with the same colour calibration and brightness as the original. Same-day service if you drop off before 11am, and a 12-month warranty on the replacement panel. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Air M4 battery replacement take?",
@@ -310,13 +315,13 @@ export default function BlogMacBookAirM4Problems() {
         },
         {
           q: "Is MacBook Air M4 worth buying in Dubai vs M5?",
-          a: "Yes, if you find it at a discount. The M4 is marginally slower than the M5 but runs cooler in practice (lower TDP under light loads), has stable macOS drivers as of mid-2026, and is typically AED 300-500 cheaper. For most users, browser, email, Zoom, Office, the difference between M4 and M5 is not noticeable in daily use.",
+          a: "Yes, if you find it at a discount. The M4 is marginally slower than the M5 but runs cooler in practice (lower TDP under light loads), has stable macOS drivers as of mid-2026, and is typically noticeably cheaper. For most users, browser, email, Zoom, Office, the difference between M4 and M5 is not noticeable in daily use.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook Air M4 Repair Dubai", href: "/macbook-air-m4-repair-dubai", description: "Full MacBook Air M4 service page, all faults, all repairs." },
         { label: "MacBook Air Repair Dubai", href: "/macbook-air-repair-dubai", description: "All MacBook Air models, all repairs, Dubai." },
-        { label: "MacBook Air Battery Draining Fast? Fixes & Costs Dubai 2026", href: "/blog/macbook-air-battery-drain-dubai", description: "Step-by-step fixes for MacBook Air battery drain, with prices." },
+        { label: "MacBook Air Battery Draining Fast? Fixes & Costs Dubai 2026", href: "/blog/macbook-air-battery-drain-dubai", description: "Step-by-step fixes for MacBook Air battery drain." },
         { label: "MacBook Air Overheating Fix Dubai 2026", href: "/blog/macbook-air-overheating-dubai", description: "Why MacBook Air throttles in Dubai heat and how to fix it." },
       ]}
     />

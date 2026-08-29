@@ -7,12 +7,12 @@ export default function BlogMacMiniOverheating() {
   return (
     <BlogPostTemplate
       seoTitle="Mac mini Overheating or Loud Fan in Dubai? Fixes 2026"
-      seoDescription="Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Thermal service from AED 250."
+      seoDescription="Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Free diagnosis — message us on WhatsApp for a quote."
       path="/blog/mac-mini-overheating-dubai"
       wide
       category="Fix guide · Mac mini"
       h1="Mac mini Overheating or Loud Fan in Dubai? Causes and Fixes"
-      hook="A Mac mini running hot with a loud fan in Dubai is usually a dust-clogged vent or dried thermal paste, and a thermal service starts from AED 250 at our Media City workshop."
+      hook="A Mac mini running hot with a loud fan in Dubai is usually a dust-clogged vent or dried thermal paste, and a thermal service at our Media City workshop starts with a free diagnosis — message us on WhatsApp for a quote on your model."
       quickAnswer="Mac mini overheating is caused by dust blocking the rear vent, dried thermal paste on Intel models, a failing fan, or sustained heavy workloads in Dubai 35°C ambient heat. M-series minis run cooler but still throttle when vents are blocked. Check Activity Monitor for runaway processes first."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -196,25 +196,27 @@ export default function BlogMacMiniOverheating() {
 
           <h2 id="cost">Mac mini overheating repair cost in Dubai</h2>
           <p>
-            Here is current Dubai pricing for the work that fixes an overheating or loud Mac mini.
-            We diagnose for free and confirm the exact fault with before-and-after temperature
-            readings, so you only pay for what the mini actually needs.
+            The work that fixes an overheating or loud Mac mini ranges from a quick dust clean up to
+            a full thermal service or, rarely, board-level repair. We diagnose for free and confirm
+            the exact fault with before-and-after temperature readings, so you only pay for what the
+            mini actually needs. Message us on WhatsApp with your Mac mini model for today's exact
+            price.
           </p>
           <BlogPriceTable
-            caption="Mac mini overheating repair pricing in Dubai. June 2026"
+            caption="Mac mini overheating repair services in Dubai. June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "Dust clean + fan service", ours: "AED 250", apple: "AED 450+" },
-              { model: "Thermal paste replacement (Intel)", ours: "AED 300", apple: "AED 600+" },
-              { model: "Fan replacement", ours: "AED 350", apple: "AED 650+" },
-              { model: "Full thermal service", ours: "AED 400", apple: "AED 800+" },
-              { model: "Logic board repair (severe)", ours: "AED 500", apple: "AED 1,200+" },
+              { model: "Dust clean + fan service", ours: "Price on request", apple: "Price on request" },
+              { model: "Thermal paste replacement (Intel)", ours: "Price on request", apple: "Price on request" },
+              { model: "Fan replacement", ours: "Price on request", apple: "Price on request" },
+              { model: "Full thermal service", ours: "Price on request", apple: "Price on request" },
+              { model: "Logic board repair (severe)", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>
-            A simple dust clean and fan service starts from AED 250 and is usually same-day. A full
-            thermal service, which is the right call for any older Intel mini that has never been
-            opened, combines the clean, fresh paste and a fan check.{" "}
+            A simple dust clean and fan service is usually same-day. A full thermal service, which is
+            the right call for any older Intel mini that has never been opened, combines the clean,
+            fresh paste and a fan check.{" "}
             <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               See the full Mac mini repair service →
             </Link>

@@ -7,7 +7,7 @@ export default function BlogIPadAirM4VsProM5() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Air M4 vs iPad Pro M5 (2026) - Which to Buy in Dubai?"
-      seoDescription="iPad Air M4 (AED 2,199) vs iPad Pro M5 (AED 3,899): Tandem OLED, ProMotion, the M5 chip, repair costs, and a clear per-use-case verdict for Dubai buyers."
+      seoDescription="iPad Air M4 vs iPad Pro M5: Tandem OLED, ProMotion, the M5 chip, repair costs, and a clear per-use-case verdict for Dubai buyers. Message us on WhatsApp for prices."
       path="/blog/ipad-air-m4-vs-pro-m5-2026"
       wide
       toc={[
@@ -22,8 +22,8 @@ export default function BlogIPadAirM4VsProM5() {
       ]}
       category="Comparison · iPad"
       h1="iPad Air M4 vs iPad Pro M5 - 2026 Comparison"
-      hook="Air M4 starts AED 2,199. Pro M5 starts AED 3,899. Here's exactly who needs which - and who's wasting AED 1,700."
-      quickAnswer="For 80% of Dubai iPad buyers, the iPad Air M4 (AED 2,199) is the right choice: the M4 chip handles every productivity, study, and creative task except heavy 4K/8K editing. Buy the iPad Pro M5 (AED 3,899) only if you edit ProRes video, need the Tandem OLED, do 3D rendering, or want the 120Hz ProMotion screen."
+      hook="The Air M4 is the cheaper pick; the Pro M5 costs meaningfully more. Here's exactly who needs which - and who's overspending."
+      quickAnswer="For 80% of Dubai iPad buyers, the iPad Air M4 is the right choice: the M4 chip handles every productivity, study, and creative task except heavy 4K/8K editing. Buy the iPad Pro M5 only if you edit ProRes video, need the Tandem OLED, do 3D rendering, or want the 120Hz ProMotion screen."
       author={{ name: "Ali", role: "iPad service lead" }}
       datePublished="2026-04-26"
       dateModified="2026-04-26"
@@ -35,8 +35,8 @@ export default function BlogIPadAirM4VsProM5() {
           <p>
             Both iPads are excellent. The Pro is genuinely better - but only matters for ~20% of users.
             If you're a student, casual creator, note-taker, or general user, the Air M4 is the smarter
-            buy. The AED 1,700 saved buys you AppleCare+ (AED 449), a Magic Keyboard (AED 1,049), and
-            still leaves change.
+            buy. What you save on the Air easily covers AppleCare+, a Magic Keyboard, and still leaves
+            change.
           </p>
 
           <h2 id="spec-table">Spec table side-by-side</h2>
@@ -58,14 +58,14 @@ export default function BlogIPadAirM4VsProM5() {
               { model: "Magic Keyboard support", ours: "Magic Keyboard (M4 Air model)", apple: "Magic Keyboard (Pro model)", note: "Different keyboards" },
               { model: "Weight (11″)", ours: "462 g", apple: "444 g", note: "Pro lighter" },
               { model: "Thickness (11″)", ours: "6.1 mm", apple: "5.3 mm", note: "Pro thinner" },
-              { model: "UAE price 11″ (Wi-Fi 128/256 GB)", ours: "AED 2,199", apple: "AED 3,899", note: "+AED 1,700" },
-              { model: "UAE price 13″ (Wi-Fi base)", ours: "AED 2,899", apple: "AED 4,899", note: "+AED 2,000" },
+              { model: "UAE price 11″ (Wi-Fi 128/256 GB)", ours: "Price on request", apple: "Price on request", note: "Pro costs more" },
+              { model: "UAE price 13″ (Wi-Fi base)", ours: "Price on request", apple: "Price on request", note: "Pro costs more" },
             ]}
           />
 
           <h2 id="air-strengths">iPad Air M4 strengths</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Cheaper:</strong> AED 1,700 less at 11″ base. That's a Magic Keyboard, Pencil Pro, AppleCare+, and screen protector - all included.</li>
+            <li><strong>Cheaper:</strong> Noticeably less at 11″ base - enough saved for a Magic Keyboard, Pencil Pro, AppleCare+, and screen protector.</li>
             <li><strong>M4 chip is plenty:</strong> Same chip as base iPad Pro from 2024. Handles Lightroom, LumaFusion 1080p/4K editing, Procreate at 16k canvas, all gaming. Apple Intelligence works fine on 8 GB RAM.</li>
             <li><strong>Two sizes (11″ and 13″):</strong> 13″ Air is the cheapest big iPad you can buy.</li>
             <li><strong>Lighter:</strong> 462 g vs 444 g - same league. Both are comfortable for one-handed reading.</li>
@@ -85,7 +85,7 @@ export default function BlogIPadAirM4VsProM5() {
           <h2 id="for-note-taking">iPad for note-taking - Air enough</h2>
           <p>
             Pencil Pro support is identical. 60Hz vs 120Hz is barely perceptible at writing speed. Procreate
-            and GoodNotes don't differentiate. <strong>Air wins on price.</strong> Save AED 1,700.
+            and GoodNotes don't differentiate. <strong>Air wins on price.</strong>
           </p>
 
           <h2 id="for-video-editing">iPad for video editing - Pro better but not required</h2>
@@ -110,17 +110,18 @@ export default function BlogIPadAirM4VsProM5() {
             caption="iPad Air M4 vs iPad Pro M5 - typical repair costs at our workshop"
             headers={["Repair", "iPad Air M4 (11″/13″)", "iPad Pro M5 (11″/13″)", "Difference"]}
             rows={[
-              { model: "Screen replacement", ours: "AED 850 / AED 1,250", apple: "AED 1,950 / AED 2,650", note: "Pro 2.1× - OLED is $$$" },
-              { model: "Battery replacement", ours: "AED 480 / AED 580", apple: "AED 580 / AED 680", note: "Pro slightly more" },
-              { model: "Charging port (USB-C)", ours: "AED 380", apple: "AED 480 (TB controller)", note: "Pro more complex" },
-              { model: "Back-housing dent (cosmetic)", ours: "AED 280", apple: "AED 380", note: "Pro thinner aluminium" },
-              { model: "Logic-board repair", ours: "AED 800 (board level)", apple: "AED 1,200 (board level)", note: "Pro more layers" },
+              { model: "Screen replacement", ours: "Price on request", apple: "Price on request", note: "Pro OLED costs more" },
+              { model: "Battery replacement", ours: "Price on request", apple: "Price on request", note: "Pro slightly more" },
+              { model: "Charging port (USB-C)", ours: "Price on request", apple: "Price on request (TB controller)", note: "Pro more complex" },
+              { model: "Back-housing dent (cosmetic)", ours: "Price on request", apple: "Price on request", note: "Pro thinner aluminium" },
+              { model: "Logic-board repair", ours: "Price on request (board level)", apple: "Price on request (board level)", note: "Pro more layers" },
             ]}
           />
           <p>
-            <strong>Important:</strong> iPad Pro M5's Tandem OLED screen costs more than 50% of a new Air to
-            replace. If you're the type to drop tablets, the Air's cheaper repair cost is a real ownership
-            advantage. AppleCare+ helps - AED 449 covers two screen replacements at AED 199 each.
+            <strong>Important:</strong> iPad Pro M5's Tandem OLED screen is significantly more expensive to
+            replace than the Air's LCD. If you're the type to drop tablets, the Air's cheaper repair cost is
+            a real ownership advantage. AppleCare+ helps by covering two screen replacements at a low excess
+            fee - message us on WhatsApp for today's exact repair price on your model.
           </p>
 
           <p>

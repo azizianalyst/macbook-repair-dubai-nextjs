@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM5BatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M5 Battery Replacement Cost Dubai 2026: AED Prices and Guide"
-      seoDescription="MacBook Pro M5 battery replacement cost in Dubai 2026. M5 14-inch from AED 650, 16-inch from AED 700. When to replace, signs of battery failure, and what to expect."
+      seoTitle="MacBook Pro M5 Battery Replacement Dubai 2026: Cost and Full Guide"
+      seoDescription="MacBook Pro M5 battery replacement in Dubai 2026, 14-inch and 16-inch. When to replace, signs of failure, same-day service. Message us on WhatsApp for today's price."
       path="/blog/macbook-pro-m5-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookProM5BatteryReplacement() {
         { id: "after-replace", label: "What to expect after battery replacement" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M5 Battery Replacement Cost in Dubai 2026: Full Guide"
-      hook="MacBook Pro M5 battery replacement costs AED 650 (14-inch) to AED 700 (16-inch) at our Dubai workshop. Apple rates the M5 battery for 1,000 charge cycles before it drops below 80% capacity. In Dubai's warm climate, heat accelerates degradation, so M5 users who charge daily in warm rooms may need replacement sooner. Same-day service available."
-      quickAnswer="MacBook Pro M5 battery replacement costs AED 650 (14-inch) or AED 700 (16-inch) in Dubai, compared to AED 1,099-1,199 at Apple. Replace when: System Settings shows battery capacity below 80%, macOS shows 'Replace Now', the M5 shuts down unexpectedly at 20-40% charge, or the battery is visibly swollen. Check battery health first in System Settings, Battery, Battery Health before committing to replacement."
+      h1="MacBook Pro M5 Battery Replacement in Dubai 2026: Full Guide"
+      hook="MacBook Pro M5 battery replacement (14-inch and 16-inch) is available same-day at our Dubai workshop — message us on WhatsApp for today's exact price on your model. Apple rates the M5 battery for 1,000 charge cycles before it drops below 80% capacity. In Dubai's warm climate, heat accelerates degradation, so M5 users who charge daily in warm rooms may need replacement sooner."
+      quickAnswer="MacBook Pro M5 battery replacement (14-inch and 16-inch) is available same-day in Dubai with a 12-month warranty — message us on WhatsApp for today's exact price on your model. Replace when: System Settings shows battery capacity below 80%, macOS shows 'Replace Now', the M5 shuts down unexpectedly at 20-40% charge, or the battery is visibly swollen. Check battery health first in System Settings, Battery, Battery Health before committing to replacement."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -129,20 +129,20 @@ export default function BlogMacBookProM5BatteryReplacement() {
               </tr>
               <tr>
                 <td>Replacement cost (Dubai workshop)</td>
-                <td>AED 600</td>
-                <td>AED 650, slightly higher for newer supply</td>
+                <td>Price on request</td>
+                <td>Price on request (message us on WhatsApp)</td>
               </tr>
             </tbody>
           </table>
 
           <h2 id="repair-cost">MacBook Pro M5 battery replacement cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M5 battery replacement pricing. June 2026"
+            caption="MacBook Pro M5 battery replacement. June 2026. Message us on WhatsApp for today's exact price on your model"
             rows={[
-              { model: "MacBook Pro M5 14-inch battery", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, 12-month warranty, same-day service" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell, 12-month warranty, same-day service" },
-              { model: "Battery diagnostic (health check)", ours: "Free", apple: "AED 250", note: "Full cycle count, capacity, and BMS check" },
-              { model: "Swollen battery emergency replacement", ours: "AED 700 (16-inch)", apple: "AED 1,199+", note: "Priority same-day, includes safety inspection" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty, same-day service" },
+              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty, same-day service" },
+              { model: "Battery diagnostic (health check)", ours: "Free", apple: "Price on request", note: "Full cycle count, capacity, and BMS check" },
+              { model: "Swollen battery emergency replacement", ours: "Price on request", apple: "Price on request", note: "Priority same-day, includes safety inspection" },
             ]}
           />
 
@@ -167,7 +167,7 @@ export default function BlogMacBookProM5BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M5 battery replacement cost in Dubai?",
-          a: "MacBook Pro M5 14-inch battery replacement costs AED 650 at our Dubai workshop. The 16-inch costs AED 700. Apple's Service Estimated Repair cost is AED 1,099 (14-inch) and AED 1,199 (16-inch). We use a 70 Wh or 100 Wh replacement cell with a 12-month warranty and same-day service.",
+          a: "MacBook Pro M5 battery replacement (14-inch and 16-inch) is well below Apple's estimate and available same-day at our Dubai workshop. We use a 70 Wh or 100 Wh replacement cell with a 12-month warranty. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I know if my MacBook Pro M5 needs a new battery?",
@@ -183,7 +183,7 @@ export default function BlogMacBookProM5BatteryReplacement() {
         },
         {
           q: "Is MacBook Pro M5 battery replacement worth it compared to buying a new machine?",
-          a: "At AED 650-700, battery replacement is almost always worth it. The M5 logic board, SSD, and all other components remain at full performance after a battery swap. A new M5 starts from AED 5,999. Battery replacement extends the machine's useful life by another 3-4 years at under 15% of the cost of a replacement.",
+          a: "Battery replacement is almost always worth it. The M5 logic board, SSD, and all other components remain at full performance after a battery swap, so you extend the machine's useful life by another 3-4 years for a small fraction of the cost of a new M5. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can I replace MacBook Pro M5 battery myself in Dubai?",

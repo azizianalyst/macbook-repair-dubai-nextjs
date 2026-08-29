@@ -94,8 +94,8 @@ export default function BlogIPhoneRepairNearMeDubai() {
           <h3>7. Free diagnosis?</h3>
           <p>
             A reputable shop diagnoses for free, gives a written quote, and only charges if you
-            authorise the repair. "Diagnosis fee AED 200, applied to repair if you proceed" is also
-            acceptable. Refuse "we charge AED 500 to look at it, non-refundable" - that's a captive
+            authorise the repair. A small diagnosis fee that is credited back if you proceed is also
+            acceptable. Refuse a high, non-refundable "just to look at it" fee - that's a captive
             pricing tactic.
           </p>
 
@@ -103,9 +103,9 @@ export default function BlogIPhoneRepairNearMeDubai() {
           <p>
             Door-to-door pickup is a nice-to-have, especially for Marina / Downtown / JLT residents
             saving the Media City drive. The shop should send a uniformed courier with company ID, a
-            signed receipt at handover, and a delivery confirmation when the repair is done. Cost:
-            AED 30-80 typically. Free over a threshold (we offer free pickup over AED 800 repair
-            value).
+            signed receipt at handover, and a delivery confirmation when the repair is done. Expect a
+            modest courier fee, waived above a repair-value threshold (we offer free pickup on larger
+            repairs). Message us on WhatsApp for today's courier cost to your area.
           </p>
 
           <h3>9. Pricing transparent?</h3>
@@ -151,8 +151,8 @@ export default function BlogIPhoneRepairNearMeDubai() {
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },
               { model: "6. Same-day repair", ours: "Screen, battery, back glass: 30-90 min. Logic board: 1-3 days" },
               { model: "7. Free diagnosis", ours: "Free, with written quote, no obligation" },
-              { model: "8. Pickup/delivery", ours: "AED 50 within Dubai, free over AED 800 repair value" },
-              { model: "9. Transparent pricing", ours: "All prices published at /pricing - same price every customer" },
+              { model: "8. Pickup/delivery", ours: "Pickup within Dubai, free on larger repairs - message us for today's courier cost" },
+              { model: "9. Transparent pricing", ours: "Same price every customer - message us on WhatsApp for today's exact quote" },
               { model: "10. Apple specialisation", ours: "Apple-only since founding - MacBook, iPhone, iPad, Watch, iMac, Mac Pro, Mac Mini" },
             ]}
           />
@@ -168,7 +168,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <strong>How to find us:</strong>
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Metro</strong>: Nakheel Harbour & Tower → 10-minute taxi (~AED 15).</li>
+            <li><strong>Metro</strong>: Nakheel Harbour & Tower → short 10-minute taxi ride.</li>
             <li><strong>Tram</strong>: Dubai Media City Tram Stop → 5-minute walk.</li>
             <li><strong>Car</strong>: free visitor parking at Concord Tower (P3 level).</li>
             <li><strong>From Marina</strong>: 8 minutes via Sheikh Zayed Road → Al Sufouh exit.</li>
@@ -182,12 +182,12 @@ export default function BlogIPhoneRepairNearMeDubai() {
         </>
       }
       faqs={[
-        { q: "Why not use Apple Service Center directly?", a: "Apple-Authorised Service Providers (Maxus, ITQAN, etc.) charge Apple's standard pricing, which is 2-3x our rates. They use only OEM Apple parts and offer the official Apple warranty. We use OEM and OEM-equivalent (your choice) at workshop pricing with our own warranty. Best path depends on your budget and AppleCare+ status." },
+        { q: "Why not use Apple Service Center directly?", a: "Apple-Authorised Service Providers (Maxus, ITQAN, etc.) charge Apple's standard pricing, which is typically well above workshop rates. They use only OEM Apple parts and offer the official Apple warranty. We use OEM and OEM-equivalent (your choice) at workshop pricing with our own warranty. Best path depends on your budget and AppleCare+ status - message us on WhatsApp for your exact quote." },
         { q: "Should I be worried about handing over my iPhone if it has personal data?", a: "Reputable shops never need your passcode for screen, battery, or back-glass repair. We test using touch-only routines that don't require unlocking. For repairs that legitimately need passcode access (some logic-board work), insist on a sign-out + factory reset receipt before and after." },
         { q: "How do I check Google reviews quickly for fakeness?", a: "(1) Sort by 'Newest' - fakes cluster in one month. (2) Click reviewer profiles - fakes review 5+ businesses on the same day. (3) Look for specific details (technician names, repair specifics) in legitimate reviews. (4) Cross-check against Trustpilot or Khaleej Times if available." },
         { q: "What if a shop refuses to give me a receipt?", a: "Walk away. UAE consumer law (Federal Law No. 24 of 2006) requires receipts on all retail / service transactions. No receipt = no warranty enforcement = no Dubai Police support if anything goes wrong." },
         { q: "Are mall kiosk repair shops legitimate?", a: "Some are (the established Apple-Authorised ones at Dubai Mall and MoE). Most are pop-up resellers with no workshop on-site - they ship your iPhone to a back-room shop. Quality varies wildly. Visit the actual workshop, not the kiosk." },
-        { q: "What's the cheapest legit iPhone screen repair in Dubai?", a: "Aftermarket-tier screen on iPhone 12 / 13 around AED 250-350. Anything cheaper than that is either a scam or a sub-quality screen that'll fail in 2-3 months. Don't chase the bottom price - the false economy isn't worth it." },
+        { q: "What's the cheapest legit iPhone screen repair in Dubai?", a: "It varies by model and screen tier - message us on WhatsApp for today's exact price on your iPhone. Beware quotes far below the market: they usually mean a sub-quality screen that fails in 2-3 months. Don't chase the bottom price - the false economy isn't worth it." },
       ]}
       relatedLinks={[
         { label: "iPhone repair Dubai", href: "/iphone-repair-dubai", description: "Service hub with pricing for every model." },

@@ -113,8 +113,8 @@ export function Hero({
                   <span className={cn(
                     "block text-[12px] uppercase tracking-wider",
                     onDark ? "text-on-primary-faint" : "text-text-faint",
-                  )}>From</span>
-                  <span className="mono text-[28px] font-semibold">AED {startingPrice}</span>
+                  )}>Pricing</span>
+                  <span className="mono text-[18px] font-semibold">Price on request</span>
                 </div>
               )}
               {timeline && (

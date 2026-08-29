@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone17ProMaxRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 17 Pro Max Repair Dubai - 6.9-inch A19 Pro from AED 450 | 055 741 3706"
-      seoDescription="iPhone 17 Pro Max (Sept 2025) repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Screen AED 1100. Same-day."
+      seoTitle="iPhone 17 Pro Max Repair Dubai - 6.9-inch A19 Pro | 055 741 3706"
+      seoDescription="iPhone 17 Pro Max (Sept 2025) repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Same-day. WhatsApp for a price."
       path="/iphone-17-pro-max-repair-dubai"
       eyebrow="iPhone 17 Pro Max (Sept 2025, current Apple flagship)"
       h1="iPhone 17 Pro Max Repair Dubai - 6.9-inch Aluminum, Vapor Chamber, 8x Zoom"
-      subtitle="The current 6.9-inch flagship - A19 Pro, aluminum unibody, vapor chamber, 8x telephoto, up to 2TB. From AED 450."
+      subtitle="The current 6.9-inch flagship - A19 Pro, aluminum unibody, vapor chamber, 8x telephoto, up to 2TB. Message us on WhatsApp for today's price."
       startingPrice={450}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 17 Pro Max (Sept 2025) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone17ProMaxRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPhone 17 Pro Max owners - we understand. The flagship just broke. Let's fix it.</strong> The 17 Pro Max (Sept 2025) is the current Apple flagship - A19 Pro, 6.9-inch ProMotion OLED with AOD + Dynamic Island + Ceramic Shield 2, aluminum unibody, vapor chamber cooling, USB-C 3, Action Button + Camera Control, 48MP triple Fusion with 8× optical zoom, 18MP Center Stage front, up to 2TB storage ($1,999 max config). Apple released this 7 months ago. As of April 2026 we've serviced 55+ in our workshop - OLED + battery routine; specialty parts (8x zoom, vapor chamber, aluminum cosmetic) on 48-hour replenishment. AED 1,100 screen, AED 450 battery.
+            <strong>iPhone 17 Pro Max owners - we understand. The flagship just broke. Let's fix it.</strong> The 17 Pro Max (Sept 2025) is the current Apple flagship - A19 Pro, 6.9-inch ProMotion OLED with AOD + Dynamic Island + Ceramic Shield 2, aluminum unibody, vapor chamber cooling, USB-C 3, Action Button + Camera Control, 48MP triple Fusion with 8× optical zoom, 18MP Center Stage front, up to 2TB storage. Apple released this 7 months ago. As of April 2026 we've serviced 55+ in our workshop - OLED + battery routine; specialty parts (8x zoom, vapor chamber, aluminum cosmetic) on 48-hour replenishment. Message us on WhatsApp for today's exact screen and battery price on your model.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 17 Pro Max</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -51,19 +51,19 @@ export default function IPhone17ProMaxRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 17 Pro Max</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">6.9-inch ProMotion OLED + Ceramic Shield 2</td><td className="px-md py-sm">1100</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">450</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">500</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">8x telephoto module</td><td className="px-md py-sm">1200</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Triple Fusion camera + LiDAR module</td><td className="px-md py-sm">1200</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">18 MP Center Stage front camera</td><td className="px-md py-sm">800</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Camera Control button</td><td className="px-md py-sm">350</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Aluminum frame dent/scratch (cosmetic)</td><td className="px-md py-sm">From 500</td><td className="px-md py-sm">2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Vapor chamber service (thermal repaste)</td><td className="px-md py-sm">600</td><td className="px-md py-sm">2 days</td><td className="px-md py-sm"><Link to="/iphone-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">2 TB data recovery (high-density NAND)</td><td className="px-md py-sm">From 1500</td><td className="px-md py-sm">3-7 days</td><td className="px-md py-sm"><Link to="/iphone-data-recovery-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">700</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">6.9-inch ProMotion OLED + Ceramic Shield 2</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">8x telephoto module</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Triple Fusion camera + LiDAR module</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">18 MP Center Stage front camera</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Camera Control button</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Aluminum frame dent/scratch (cosmetic)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Vapor chamber service (thermal repaste)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2 days</td><td className="px-md py-sm"><Link to="/iphone-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">2 TB data recovery (high-density NAND)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">3-7 days</td><td className="px-md py-sm"><Link to="/iphone-data-recovery-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
@@ -73,7 +73,7 @@ export default function IPhone17ProMaxRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 17 Pro Max still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Absolutely - it is the Apple flagship.</strong> Used resale ~AED 4,500-6,000+ (depending on storage). iOS 26 expected. Any single repair under AED 3,500 is comfortably worthwhile.
+            <strong>Absolutely - it is the Apple flagship.</strong> Used resale value stays high (especially on larger-storage configs) and iOS 26 is expected, so a single repair is almost always worthwhile. Message us on WhatsApp for the exact repair price on your model.
           </p>
         </>
       }
@@ -102,15 +102,15 @@ export default function IPhone17ProMaxRepair() {
       ]}
       faqs={[
         { q: "My 17 Pro Max throttles when I shoot 4K ProRes - is that the vapor chamber?", a: "Often yes - sustained 4K ProRes capture is the most thermally demanding workload Apple has ever shipped. If your phone hits the thermal warning within 5 minutes of recording, the vapor chamber may need service. Diagnostic is free." },
-        { q: "Why is data recovery on 2TB more expensive?", a: "2TB NAND uses higher-density flash arrays - recovery work takes longer because more cells need to be processed. Standard data recovery on 256/512GB starts at AED 800; 1TB+ starts at AED 1,500." },
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,520 (saves AED 30). Camera Control + USB-C: AED 820 (saves AED 30)." },
-        { q: "Genuine Apple OLED?", a: "Yes - AED 1,650 vs AED 1,100 OEM-grade." },
+        { q: "Why is data recovery on 2TB more expensive?", a: "2TB NAND uses higher-density flash arrays - recovery work takes longer because more cells need to be processed, so it costs more than a standard 256/512GB recovery. Message us on WhatsApp with your storage size for an exact price." },
+        { q: "Bundle pricing?", a: "Yes - we discount common combinations like screen + battery and Camera Control + USB-C. Message us on WhatsApp with the repairs you need for a bundled price." },
+        { q: "Genuine Apple OLED?", a: "Yes - we offer both genuine Apple and OEM-grade OLED. Message us on WhatsApp and we'll quote both options for your model." },
         { q: "Same day?", a: "OLED, battery, USB-C 3, Action Button, triple Fusion main module - yes. 8x telephoto, Center Stage front, vapor chamber, aluminum cosmetic 2-3 days." },
       ]}
       reviewNames={["Seyed Moulana", "B Parker"]}
       related={[
-        { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "8x telephoto + triple Fusion AED 1,200." },
-        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.9-inch ProMotion OLED AED 1,100." },
+        { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "8x telephoto + triple Fusion module." },
+        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.9-inch ProMotion OLED replacement." },
         { label: "iPhone Data Recovery Dubai",      href: "/iphone-data-recovery-dubai",      description: "Up to 2 TB high-density NAND." },
       ]}
     />

@@ -7,7 +7,7 @@ export default function BlogMacBookProM2NotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Not Turning On Dubai 2026: Dead or Black Screen Fix"
-      seoDescription="MacBook Pro M2 not turning on in Dubai? Step-by-step fix: force restart, deep discharge recovery, DFU restore, and when to get logic board repair. Repair from AED 350."
+      seoDescription="MacBook Pro M2 not turning on in Dubai? Step-by-step fix: force restart, deep discharge recovery, DFU restore, and when to get logic board repair. Free diagnosis."
       path="/blog/macbook-pro-m2-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM2NotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Not Turning On in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M2 that won't turn on covers three very different scenarios: deep discharge (software fix), firmware corruption (DFU fix), and hardware failure (board repair). Most Dubai users assume the worst, but deep discharge from leaving the M2 unused for 3-4 months is the most common cause. Logic board repair costs AED 700-1,200 for the hardware cases."
+      hook="MacBook Pro M2 that won't turn on covers three very different scenarios: deep discharge (software fix), firmware corruption (DFU fix), and hardware failure (board repair). Most Dubai users assume the worst, but deep discharge from leaving the M2 unused for 3-4 months is the most common cause. For the hardware cases, message us on WhatsApp for today's exact logic board repair price on your model."
       quickAnswer="MacBook Pro M2 not turning on: connect MagSafe, wait 30 minutes, try power button. If no MagSafe LED at all after 30 minutes, try USB-C charger on a different port. If nothing, try DFU restore via Apple Configurator 2 on a second Mac. If MagSafe charges (LED lights up) but M2 still won't boot, DFU Revive is likely the fix. If no LED from any charger on any port, hardware fault: bring to Dubai workshop."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -73,13 +73,13 @@ export default function BlogMacBookProM2NotTurningOn() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Test with a different charger: a common failure scenario is a faulty MagSafe cable or USB-C PD adapter, not the M2 itself. Try a friend's charger or bring the M2 to our Dubai workshop where we can test with a known-good 96W charger</li>
             <li>Check the USB-C ports visually with a torch: lint or debris in the port can prevent contact. The M2 ports are recessed. A bent pin from debris is easy to miss</li>
-            <li>If machine turns on briefly with charger but shuts down when unplugged: the battery is completely dead or failed. Battery replacement (AED 500-650) will resolve this</li>
+            <li>If machine turns on briefly with charger but shuts down when unplugged: the battery is completely dead or failed. A battery replacement will resolve this, message us on WhatsApp for the exact price on your model</li>
           </ul>
 
           <h2 id="dubai-heat">Does Dubai heat cause MacBook Pro M2 not to turn on?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Heat-triggered over-temperature shutdown</strong>: if the M2 was used in an extremely hot environment (above 35°C for extended periods), it may have gone into thermal shutdown. Wait 30-60 minutes in a cool, air-conditioned room before attempting to boot</li>
-            <li><strong>Thermal paste degradation</strong>: on M2 units 3+ years old, the thermal interface material between M2 SoC and heat spreader can partially degrade. This raises idle temperatures and can cause thermal shutdowns even at moderate load. Re-application of thermal paste (AED 200) resolves this</li>
+            <li><strong>Thermal paste degradation</strong>: on M2 units 3+ years old, the thermal interface material between M2 SoC and heat spreader can partially degrade. This raises idle temperatures and can cause thermal shutdowns even at moderate load. Re-application of thermal paste resolves this, message us on WhatsApp for the price</li>
             <li><strong>Dubai power surge effect</strong>: electrical surges are more common during Dubai summer when the grid is under peak AC load. Sudden power loss during charging can corrupt the M2's firmware. DFU Revive is the fix</li>
           </ul>
 
@@ -114,13 +114,14 @@ export default function BlogMacBookProM2NotTurningOn() {
 
           <h2 id="repair-cost">MacBook Pro M2 repair cost for not turning on: Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 repair pricing for dead machine. June 2026"
+            caption="MacBook Pro M2 repair services for a dead machine. June 2026"
+            headers={["Service", "Price", "Notes"]}
             rows={[
-              { model: "Deep discharge recovery (battery)", ours: "AED 350", apple: "AED 500+", note: "If battery is completely drained and cells still viable" },
-              { model: "Battery replacement (failed cells)", ours: "AED 500–600", apple: "AED 750-900+", note: "M2 13-inch AED 500, M2 Pro 14-inch AED 600" },
-              { model: "DFU Revive (firmware only)", ours: "AED 200", apple: "AED 0 (Apple Store repair session)", note: "If software only, may be covered under warranty" },
-              { model: "Charging IC repair (board fault)", ours: "AED 700", apple: "Logic board replacement AED 2,500+", note: "Component-level repair preserving data" },
-              { model: "Diagnostic (no fix required)", ours: "Free", apple: "AED 250", note: "Identify exact cause before repairing" },
+              { model: "Deep discharge recovery (battery)", ours: "Price on request", apple: "If battery is completely drained and cells still viable" },
+              { model: "Battery replacement (failed cells)", ours: "Price on request", apple: "M2 13-inch and M2 Pro 14-inch serviced" },
+              { model: "DFU Revive (firmware only)", ours: "Price on request", apple: "If software only, may be covered under warranty" },
+              { model: "Charging IC repair (board fault)", ours: "Price on request", apple: "Component-level repair preserving data" },
+              { model: "Diagnostic (no fix required)", ours: "Free", apple: "Identify exact cause before repairing" },
             ]}
           />
 
@@ -153,11 +154,11 @@ export default function BlogMacBookProM2NotTurningOn() {
         },
         {
           q: "How do I do a DFU restore on MacBook Pro M2 in Dubai?",
-          a: "You need a second Mac with Apple Configurator 2 installed and a USB-C cable. With the M2 powered off, connect it to the second Mac via USB-C (rear-left port on M2 14/16-inch). Open Apple Configurator 2, and if the M2 appears as a DFU device, select Revive Device. This restores firmware without erasing data in 10-20 minutes. Our Dubai workshop can do this for AED 200.",
+          a: "You need a second Mac with Apple Configurator 2 installed and a USB-C cable. With the M2 powered off, connect it to the second Mac via USB-C (rear-left port on M2 14/16-inch). Open Apple Configurator 2, and if the M2 appears as a DFU device, select Revive Device. This restores firmware without erasing data in 10-20 minutes. Our Dubai workshop can do this too, message us on WhatsApp for the price.",
         },
         {
           q: "How much does MacBook Pro M2 repair cost for not turning on in Dubai?",
-          a: "Depends on cause: deep discharge recovery costs AED 350. Battery replacement if cells failed costs AED 500-600. Firmware-only DFU Revive costs AED 200. Charging IC board repair costs AED 700. Full diagnostic is free. We determine the exact cause before quoting. Apple's equivalent is AED 2,500+ for logic board replacement in most hardware cases.",
+          a: "It depends on the cause: deep discharge recovery, battery replacement, a firmware-only DFU Revive, or a charging IC board repair are all very different jobs. Full diagnostic is free, and we determine the exact cause before quoting. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "MacBook Pro M2 turns on but screen is black, is it dead?",

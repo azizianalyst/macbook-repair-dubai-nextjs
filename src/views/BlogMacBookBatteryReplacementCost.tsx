@@ -7,7 +7,7 @@ export default function BlogMacBookBatteryReplacementCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Battery Replacement Cost Dubai 2026: Air & Pro"
-      seoDescription="MacBook battery replacement in Dubai, April 2026: AED 450 (Air) to AED 700 (16″ Pro), same-day. Check battery health, spot swelling, beat Apple Store."
+      seoDescription="MacBook battery replacement in Dubai, April 2026: Air & Pro, same-day. Check battery health, spot swelling, beat Apple Store. WhatsApp for today's price."
       path="/blog/macbook-battery-replacement-cost-2026"
       wide
       toc={[
@@ -22,8 +22,8 @@ export default function BlogMacBookBatteryReplacementCost() {
       ]}
       category="Cost guide · MacBook"
       h1="MacBook Battery Replacement Cost in Dubai 2026"
-      hook="AED 450 starting for MacBook Air, up to AED 700 for the 16-inch MacBook Pro. Same-day in most cases - and we recycle the old battery responsibly."
-      quickAnswer="MacBook battery replacement in Dubai costs AED 450-700 in April 2026. Air 13/15 is AED 450-500, Pro 13/14 is AED 550-650, Pro 16 is AED 650-700. Same-day on M-series models. Apple Store charges AED 700-1,200 for the same job."
+      hook="MacBook Air and MacBook Pro battery replacement, same-day in most cases - and we recycle the old battery responsibly. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook battery replacement in Dubai covers every Air and Pro model, same-day on M-series, and typically undercuts the Apple Store. Message us on WhatsApp with your model and serial for today's exact price."
       author={{ name: "Usman", role: "Senior MacBook battery technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -33,17 +33,18 @@ export default function BlogMacBookBatteryReplacementCost() {
         <>
           <h2 id="battery-price-list">MacBook Battery Replacement Cost. The full MacBook battery price list - April 2026 Dubai</h2>
           <BlogPriceTable
-            caption="MacBook battery replacement pricing - April 2026"
+            caption="MacBook battery replacement - April 2026"
+            headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Air 11″ (2014-2015)", ours: "AED 450", apple: "AED 749", note: "Last 11″ Air" },
-              { model: "MacBook Air 13″ Intel (2017-2020)", ours: "AED 450", apple: "AED 799", note: "Glued to top case" },
-              { model: "MacBook Air 13″ M1/M2/M3/M4/M5", ours: "AED 500", apple: "AED 849", note: "Top-case battery, soldered" },
-              { model: "MacBook Air 15″ M2/M3/M4/M5", ours: "AED 550", apple: "AED 899", note: "Larger 66Wh cell" },
-              { model: "MacBook Pro 13″ Intel (2016-2020)", ours: "AED 550", apple: "AED 949", note: "Glued cells, time-consuming" },
-              { model: "MacBook Pro 13″ M1/M2", ours: "AED 600", apple: "AED 999", note: "58Wh cell" },
-              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 650", apple: "AED 1,099", note: "70Wh cell" },
-              { model: "MacBook Pro 16″ Intel (2019)", ours: "AED 650", apple: "AED 1,099", note: "100Wh cell" },
-              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 700", apple: "AED 1,199", note: "Largest cell, 100Wh" },
+              { model: "MacBook Air 11″ (2014-2015)", ours: "Price on request", apple: "Price on request", note: "Last 11″ Air" },
+              { model: "MacBook Air 13″ Intel (2017-2020)", ours: "Price on request", apple: "Price on request", note: "Glued to top case" },
+              { model: "MacBook Air 13″ M1/M2/M3/M4/M5", ours: "Price on request", apple: "Price on request", note: "Top-case battery, soldered" },
+              { model: "MacBook Air 15″ M2/M3/M4/M5", ours: "Price on request", apple: "Price on request", note: "Larger 66Wh cell" },
+              { model: "MacBook Pro 13″ Intel (2016-2020)", ours: "Price on request", apple: "Price on request", note: "Glued cells, time-consuming" },
+              { model: "MacBook Pro 13″ M1/M2", ours: "Price on request", apple: "Price on request", note: "58Wh cell" },
+              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Price on request", note: "70Wh cell" },
+              { model: "MacBook Pro 16″ Intel (2019)", ours: "Price on request", apple: "Price on request", note: "100Wh cell" },
+              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Price on request", note: "Largest cell, 100Wh" },
             ]}
           />
 
@@ -89,8 +90,9 @@ export default function BlogMacBookBatteryReplacementCost() {
             <strong> stop using and stop charging the MacBook immediately</strong>. Lithium pouch
             cells that have started to swell are venting flammable electrolyte; continued charging
             risks thermal runaway. Bring it to us same-day. We bench-discharge swollen cells in our
-            fireproof safe, then dispose of them through Bee'ah's licensed e-waste channel. AED 50
-            extra disposal fee for swollen batteries - that's our cost from Bee'ah.
+            fireproof safe, then dispose of them through Bee'ah's licensed e-waste channel. Swollen
+            batteries carry a small extra disposal fee - that's our cost from Bee'ah, and we'll
+            confirm it on WhatsApp before we start.
           </p>
           <p>
             We've seen 4 swollen-battery cases catch fire in cars in Dubai summer heat over the past
@@ -116,7 +118,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             caption="MacBook Pro 16″ M5 Max battery replacement - comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price", ours: "AED 700", apple: "AED 1,199" },
+              { model: "Price", ours: "Price on request", apple: "Price on request" },
               { model: "Turnaround", ours: "Same day", apple: "5-7 days" },
               { model: "Battery brand", ours: "Apple-equivalent OEM cells", apple: "Apple genuine" },
               { model: "Top-case replacement", ours: "Battery only", apple: "Often whole top-case (extra cost passed on)" },
@@ -127,11 +129,12 @@ export default function BlogMacBookBatteryReplacementCost() {
 
           <h2 id="diy-battery">DIY MacBook battery - why we don't recommend it</h2>
           <p>
-            iFixit sells battery kits with adhesive remover for AED 350-500. Tempting. The risks:
-            puncturing a cell with the prying tool (fire risk), tearing the trackpad or speaker
-            ribbon cables that sit under the battery, and not replacing the antenna foam shielding
-            (results in WiFi signal loss). About 1 in 4 customers who try DIY end up bringing us a
-            half-finished MacBook for AED 800+ rescue work. The AED 250 you save isn't worth it.
+            iFixit sells battery kits with adhesive remover, and the DIY route looks tempting. The
+            risks: puncturing a cell with the prying tool (fire risk), tearing the trackpad or
+            speaker ribbon cables that sit under the battery, and not replacing the antenna foam
+            shielding (results in WiFi signal loss). About 1 in 4 customers who try DIY end up
+            bringing us a half-finished MacBook for rescue work that costs far more than doing it
+            right the first time. The small saving isn't worth it.
           </p>
 
           <h2 id="what-to-do-next">What to do next</h2>
@@ -162,7 +165,7 @@ export default function BlogMacBookBatteryReplacementCost() {
         },
         {
           q: "Why does Apple Store quote me a 'top case replacement' for a battery job?",
-          a: "Because Apple's official service procedure for M-series MacBooks calls for replacing the entire top case (palmrest + keyboard + trackpad + battery as one unit) rather than separating the battery. It's faster for them but costs you AED 400-500 extra. We do the more skilled separation and replace the battery only.",
+          a: "Because Apple's official service procedure for M-series MacBooks calls for replacing the entire top case (palmrest + keyboard + trackpad + battery as one unit) rather than separating the battery. It's faster for them but costs you significantly more. We do the more skilled separation and replace the battery only - message us on WhatsApp for the exact price.",
         },
         {
           q: "Do you offer a warranty on the new battery?",

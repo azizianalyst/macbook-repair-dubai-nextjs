@@ -23,7 +23,7 @@ export default function BlogMacBookProM5Battery80Percent() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Won't Charge Past 80% in Dubai? Here is Why and What to Do"
-      hook="MacBook Pro M5 stopping at 80% is almost always Optimised Battery Charging working as intended, not a fault. Apple Community is full of M5 owners surprised to find their machine has sat at 80% all night. Knowing how to read the difference between intentional limiting and a real charging fault saves an unnecessary repair visit. Battery replacement starts from AED 650 in Dubai if genuine fault."
+      hook="MacBook Pro M5 stopping at 80% is almost always Optimised Battery Charging working as intended, not a fault. Apple Community is full of M5 owners surprised to find their machine has sat at 80% all night. Knowing how to read the difference between intentional limiting and a real charging fault saves an unnecessary repair visit. If it is a genuine fault, message us on WhatsApp for today's battery replacement price in Dubai."
       quickAnswer="MacBook Pro M5 not charging past 80% is Optimised Battery Charging in action. macOS learns your routine and delays charging above 80% until shortly before your usual wake time, reducing battery degradation. To charge to 100% now: System Settings, Battery, Battery Health, hold Option and click Charging Options, select Charge to Full. If the M5 never charges above 80% even with Optimised Charging off, the MagSafe adapter, USB-C cable, or battery cell has a fault."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -168,10 +168,10 @@ export default function BlogMacBookProM5Battery80Percent() {
           <BlogPriceTable
             caption="MacBook Pro M5 charging repair pricing. June 2026"
             rows={[
-              { model: "MagSafe port cleaning", ours: "AED 100", apple: "Not offered", note: "Lint and debris removal, 20 mins" },
-              { model: "MagSafe charging board repair (M5)", ours: "AED 300", apple: "AED 800+", note: "Board-level charging circuit repair" },
-              { model: "MacBook Pro M5 14-inch battery", ours: "AED 650", apple: "AED 1,099", note: "70 Wh, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "AED 700", apple: "AED 1,199", note: "100 Wh, 12-month warranty, same-day" },
+              { model: "MagSafe port cleaning", ours: "Price on request", apple: "Not offered", note: "Lint and debris removal, 20 mins" },
+              { model: "MagSafe charging board repair (M5)", ours: "Price on request", apple: "Price on request", note: "Board-level charging circuit repair" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh, 12-month warranty, same-day" },
             ]}
           />
 

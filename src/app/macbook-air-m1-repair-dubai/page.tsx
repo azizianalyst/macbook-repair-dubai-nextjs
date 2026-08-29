@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirM1Repair";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-m1-repair-dubai", {
   title: "MacBook Air M1 Repair Dubai — Screen, Battery & Logic Board Fix",
-  description: "MacBook Air M1 (A2337) repair Dubai. Screen from AED 600, battery from AED 450. Free diagnosis, same-day service, free pickup across Dubai.",
+  description: "MacBook Air M1 (A2337) repair Dubai — screen, battery & logic board. Free diagnosis, same-day service, free pickup. Message us on WhatsApp for your price.",
 });
 
 export default function Page() {

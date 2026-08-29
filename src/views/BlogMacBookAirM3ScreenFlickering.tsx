@@ -7,7 +7,7 @@ export default function BlogMacBookAirM3ScreenFlickering() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M3 Screen Flickering Dubai? Causes & Fix 2026"
-      seoDescription="MacBook Air M3 screen flickering in Dubai? True Tone conflicts, display cable, software bugs, backlight issues. Free diagnosis. Repair from AED 700 same-day."
+      seoDescription="MacBook Air M3 screen flickering in Dubai? True Tone conflicts, display cable, software bugs, backlight issues. Free diagnosis, same-day repair. WhatsApp us for a quote."
       path="/blog/macbook-air-m3-screen-flickering-dubai"
       wide
       toc={[
@@ -20,7 +20,7 @@ export default function BlogMacBookAirM3ScreenFlickering() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M3 Screen Flickering in Dubai? Here's What's Causing It"
       hook="MacBook Air M3 screen flickering is frustrating but fixable. In most cases the cause is a software setting, a True Tone conflict with Dubai's intense ambient light, or a display cable fault at the hinge. This guide walks through every cause in order, starting with the free fixes."
-      quickAnswer="MacBook Air M3 screen flickering is caused by: a True Tone sensor conflict with bright Dubai environments, a display cable fault at the hinge, a macOS bug, or a failing backlight. Software fixes are free. If hardware is the cause, screen replacement costs AED 700 (13-inch) or AED 750 (15-inch) at MacBook Repair Dubai with same-day turnaround."
+      quickAnswer="MacBook Air M3 screen flickering is caused by: a True Tone sensor conflict with bright Dubai environments, a display cable fault at the hinge, a macOS bug, or a failing backlight. Software fixes are free. If hardware is the cause, we replace the 13-inch or 15-inch screen assembly at MacBook Repair Dubai with same-day turnaround — message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook display technician" }}
       datePublished="2026-06-23"
       dateModified="2026-06-23"
@@ -170,14 +170,16 @@ export default function BlogMacBookAirM3ScreenFlickering() {
 
           <h2 id="dubai-repair-cost">MacBook Air M3 screen repair cost in Dubai</h2>
           <p>
-            If the display cable or panel is the confirmed cause, here is current repair pricing
-            at MacBook Repair Dubai versus Apple Store Dubai:
+            If the display cable or panel is the confirmed cause, here are the MacBook Air M3 screen
+            repair options at MacBook Repair Dubai. Message us on WhatsApp for today's exact price on
+            your model:
           </p>
           <BlogPriceTable
-            caption="MacBook Air M3 screen repair pricing, Dubai. June 2026"
+            caption="MacBook Air M3 screen repair options, Dubai"
+            headers={["Model", "MacBook Repair Dubai", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Air M3 13-inch (2024)", ours: "AED 700", apple: "AED 1,499", note: "Liquid Retina, same-day" },
-              { model: "MacBook Air M3 15-inch (2024)", ours: "AED 750", apple: "AED 1,649", note: "Liquid Retina, same-day" },
+              { model: "MacBook Air M3 13-inch (2024)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina, same-day" },
+              { model: "MacBook Air M3 15-inch (2024)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina, same-day" },
             ]}
           />
           <p>

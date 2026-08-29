@@ -7,7 +7,7 @@ export default function BlogMacBookProM2BatteryDraining() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Battery Draining Fast Dubai 2026: Ventura Fix Guide"
-      seoDescription="MacBook Pro M2 battery draining fast in Dubai? Ventura memory swap bug, backgroundtaskmanagerd, and Dubai heat all shorten M2 battery life. Step-by-step fix guide. Battery replacement from AED 500."
+      seoDescription="MacBook Pro M2 battery draining fast in Dubai? Ventura swap bug, backgroundtaskmanagerd, and Dubai heat shorten M2 battery life. Step-by-step fix guide plus same-day battery replacement."
       path="/blog/macbook-pro-m2-battery-draining-fast-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM2BatteryDraining() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Battery Draining Fast in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M2 battery life underperforms Apple's 22-hour claim for many Dubai users. Ventura's memory swap bug accelerated SSD usage and indirectly increased power draw, while Dubai summer temperatures above 40°C reduce battery charge capacity faster than in temperate climates. Battery replacement costs AED 500-600 in Dubai."
+      hook="MacBook Pro M2 battery life underperforms Apple's 22-hour claim for many Dubai users. Ventura's memory swap bug accelerated SSD usage and indirectly increased power draw, while Dubai summer temperatures above 40°C reduce battery charge capacity faster than in temperate climates. For a same-day battery replacement in Dubai, message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Pro M2 battery draining fast: open Activity Monitor, click Energy, sort by Energy Impact descending. If 'kernel_task' is using over 100% CPU, the M2 is throttling hard (possibly swap-related). If background processes show high drain, update to Ventura 13.3+ to fix the swap management bug. Check battery health in System Settings: if capacity is under 80%, battery replacement is the fix."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -111,12 +111,12 @@ export default function BlogMacBookProM2BatteryDraining() {
 
           <h2 id="repair-cost">MacBook Pro M2 battery replacement cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 battery replacement pricing. June 2026"
+            caption="MacBook Pro M2 battery replacement. June 2026"
             rows={[
-              { model: "MacBook Pro M2 13-inch battery", ours: "AED 500", apple: "AED 750+", note: "OEM spec, 3-month warranty on cells, same-day" },
-              { model: "MacBook Pro M2 Pro 14-inch battery", ours: "AED 600", apple: "AED 900+", note: "99.8Wh cell, 3-month warranty, same-day" },
-              { model: "MacBook Pro M2 Max 16-inch battery", ours: "AED 650", apple: "AED 1,000+", note: "100Wh cell, 3-month warranty, same-day" },
-              { model: "Battery health diagnostic", ours: "Free", apple: "AED 250", note: "Cycle count + capacity test" },
+              { model: "MacBook Pro M2 13-inch battery", ours: "Price on request", apple: "Price on request", note: "OEM spec, 3-month warranty on cells, same-day" },
+              { model: "MacBook Pro M2 Pro 14-inch battery", ours: "Price on request", apple: "Price on request", note: "99.8Wh cell, 3-month warranty, same-day" },
+              { model: "MacBook Pro M2 Max 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100Wh cell, 3-month warranty, same-day" },
+              { model: "Battery health diagnostic", ours: "Free", apple: "Price on request", note: "Cycle count + capacity test" },
             ]}
           />
 
@@ -150,7 +150,7 @@ export default function BlogMacBookProM2BatteryDraining() {
         },
         {
           q: "Will MacBook Pro M2 battery replacement restore original battery life?",
-          a: "Yes, a new battery in good condition restores full battery life. If your M2 battery is degraded to 70% capacity and running 8 hours where it used to run 14, a new battery will restore the 14-hour runtime. Battery replacement at our Dubai workshop costs AED 500-650 depending on model with 3-month warranty on cells.",
+          a: "Yes, a new battery in good condition restores full battery life. If your M2 battery is degraded to 70% capacity and running 8 hours where it used to run 14, a new battery will restore the 14-hour runtime. Battery replacement at our Dubai workshop comes with a 3-month warranty on cells; message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Pro M2 battery replacement take in Dubai?",

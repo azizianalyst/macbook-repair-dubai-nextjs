@@ -12,6 +12,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -80,8 +81,6 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     </div>
   );
 }
-
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookProChipScreenPage({
   path,
@@ -165,7 +164,7 @@ export default function MacBookProChipScreenPage({
             </div>
           </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> From {aed(lowestPrice)}</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Price on request</span>
             <span>·</span>
             <span>Liquid Retina XDR specialist</span>
             <span>·</span>
@@ -177,7 +176,7 @@ export default function MacBookProChipScreenPage({
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
           <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap justify-center gap-x-xl gap-y-sm">
             {[
-              { Icon: Search,      label: `From ${aed(lowestPrice)}` },
+              { Icon: Search,      label: "Price on request" },
               { Icon: Monitor,     label: "Liquid Retina XDR specialist" },
               { Icon: Search,      label: "Free diagnosis" },
               { Icon: Clock,       label: "Same-day most models" },
@@ -251,9 +250,11 @@ export default function MacBookProChipScreenPage({
                 {prices.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} ${chip} screen repair in Dubai?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted whitespace-nowrap">
-                      {r.applePrice ? aed(r.applePrice) : "Not serviced"}
+                      {r.applePrice ? "Price on request" : "Not serviced"}
                     </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
@@ -371,7 +372,7 @@ export default function MacBookProChipScreenPage({
                 {chip} chip-specific answers before you book.
               </p>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>From {aed(lowestPrice)}</span>
+                <span>Price on request</span>
                 <span>Free diagnosis</span>
                 <span>3-month warranty</span>
                 <span>Free pickup Dubai-wide</span>
@@ -414,7 +415,7 @@ export default function MacBookProChipScreenPage({
                 MacBook Pro {chip} · {years}
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                {displayType} screen from {aed(lowestPrice)} · Free diagnosis · 3-month warranty
+                {displayType} screen repair · Free diagnosis · 3-month warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

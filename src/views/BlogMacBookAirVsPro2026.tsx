@@ -23,7 +23,7 @@ export default function BlogMacBookAirVsPro2026() {
       category="Comparison · MacBook"
       h1="MacBook Air vs MacBook Pro M5 - 2026 Buyer's Guide"
       hook="Air for everyone. Pro for some. Here's how to know which."
-      quickAnswer="Buy the MacBook Air M5 (AED 4,499) for email, browsing, Netflix, light Photoshop, or coding without local builds, which covers 95% of users. Choose the MacBook Pro M5 (AED 8,999) only for 4K video, long Xcode builds, or colour-critical mini-LED work. A used M2 Air at AED 3,200 still beats every Windows laptop under AED 5,000."
+      quickAnswer="Buy the MacBook Air M5 for email, browsing, Netflix, light Photoshop, or coding without local builds, which covers 95% of users. Choose the MacBook Pro M5 only for 4K video, long Xcode builds, or colour-critical mini-LED work. A used M2 Air still beats almost every Windows laptop in its class."
       author={{ name: "Memona", role: "Senior MacBook technician" }}
       datePublished="2026-04-25"
       dateModified="2026-06-22"
@@ -88,7 +88,7 @@ export default function BlogMacBookAirVsPro2026() {
             <strong>Side-by-side test:</strong> in our workshop we put both displays next to each other
             playing the same Dolby Vision trailer. Pro's blacks are deeper, highlights brighter, motion
             smoother. Air's display is "good"; Pro's is "great". For Netflix and email, the difference
-            isn't worth AED 4,500.
+            isn't worth the Pro premium.
           </p>
 
           <h2 id="speakers">Speaker difference</h2>
@@ -103,17 +103,18 @@ export default function BlogMacBookAirVsPro2026() {
             caption="MacBook Air vs Pro M5 - repair cost at our Dubai workshop"
             headers={["Repair", "Air M5 (13/15)", "Pro M5 14 (base)", "Notes"]}
             rows={[
-              { model: "Screen replacement", ours: "AED 600 / AED 700", apple: "AED 1,000", note: "Pro = mini-LED, more expensive panel" },
-              { model: "Battery replacement", ours: "AED 450", apple: "AED 650", note: "Pro = larger 72.4 Wh cell" },
-              { model: "Top-case keyboard", ours: "AED 700", apple: "AED 950", note: "Pro = additional Touch ID + larger trackpad" },
-              { model: "Logic board (component)", ours: "AED 1,000", apple: "AED 1,500", note: "Pro = more complex board" },
-              { model: "Liquid damage clean", ours: "AED 600", apple: "AED 700", note: "Same process, more components on Pro" },
+              { model: "Screen replacement", ours: "Price on request", apple: "Price on request", note: "Pro = mini-LED, more expensive panel" },
+              { model: "Battery replacement", ours: "Price on request", apple: "Price on request", note: "Pro = larger 72.4 Wh cell" },
+              { model: "Top-case keyboard", ours: "Price on request", apple: "Price on request", note: "Pro = additional Touch ID + larger trackpad" },
+              { model: "Logic board (component)", ours: "Price on request", apple: "Price on request", note: "Pro = more complex board" },
+              { model: "Liquid damage clean", ours: "Price on request", apple: "Price on request", note: "Same process, more components on Pro" },
             ]}
           />
           <p>
             <strong>Verdict on repair:</strong> Air is roughly 30–35% cheaper to repair across the board.
-            Over 4 years of ownership with one major repair, that's an AED 400–500 difference, small
-            compared to the AED 4,500 purchase price gap.
+            Over 4 years of ownership with one major repair, that difference is small compared to the
+            purchase price gap between the two. Message us on WhatsApp for today's exact repair price on
+            your model.
           </p>
 
           <h2 id="buy-used">Buy used? M1 and M2 are still excellent</h2>
@@ -125,30 +126,31 @@ export default function BlogMacBookAirVsPro2026() {
             caption="Used MacBook Air pricing - Dubai (Dubizzle / Carousell, June 2026)"
             headers={["Model", "Year", "Typical price", "Notes"]}
             rows={[
-              { model: "MacBook Air M1 8GB/256GB", ours: "2020", apple: "AED 1,800–2,200", note: "Battery may need replacement (AED 450)" },
-              { model: "MacBook Air M2 8GB/256GB", ours: "2022", apple: "AED 2,400–2,800", note: "Sweet spot for value" },
-              { model: "MacBook Air M2 16GB/512GB", ours: "2022", apple: "AED 3,200–3,600", note: "Excellent: buy this if budget is under AED 4k" },
-              { model: "MacBook Air M3 16GB/512GB", ours: "2024", apple: "AED 4,000–4,400", note: "Vs new M5 at AED 4,999, close call" },
+              { model: "MacBook Air M1 8GB/256GB", ours: "2020", apple: "Price on request", note: "Battery may need replacement" },
+              { model: "MacBook Air M2 8GB/256GB", ours: "2022", apple: "Price on request", note: "Sweet spot for value" },
+              { model: "MacBook Air M2 16GB/512GB", ours: "2022", apple: "Price on request", note: "Excellent value pick on a tighter budget" },
+              { model: "MacBook Air M3 16GB/512GB", ours: "2024", apple: "Price on request", note: "Vs new M5, close call" },
             ]}
           />
           <p>
-            Add{" "}
+            Budget for{" "}
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
-              AED 450 for a fresh battery
+              a fresh battery
             </Link>
-            {" "}if buying anything 3+ years old. We test every used MacBook brought in for AED 100
-            (refunded if you go ahead with any service).
+            {" "}if buying anything 3+ years old - message us on WhatsApp for the exact price on your
+            model. We test every used MacBook brought in, and the diagnostic fee is refunded if you go
+            ahead with any service.
           </p>
 
           <h2 id="verdict">Verdict by user</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Student:</strong> Air M5 13″ 16GB (AED 4,899). Or used M2 Air 16GB at AED 3,200, even better value.</li>
-            <li><strong>Designer (Figma, Photoshop):</strong> Air M5 15″ 24GB (AED 5,899). Big screen, no fan noise.</li>
+            <li><strong>Student:</strong> Air M5 13″ 16GB. Or a used M2 Air 16GB, even better value.</li>
+            <li><strong>Designer (Figma, Photoshop):</strong> Air M5 15″ 24GB. Big screen, no fan noise.</li>
             <li><strong>Developer (web, mobile, occasional Xcode):</strong> Air M5 16GB or Pro M5 base. Toss-up: Pro wins on screen, Air on weight.</li>
             <li><strong>Developer (heavy Xcode, Docker, K8s):</strong> Pro M5 24GB. The active cooling matters.</li>
             <li><strong>Video editor (4K):</strong> Pro M5 Pro 24GB minimum.</li>
             <li><strong>Business / executive:</strong> Air M5 13″: light, silent, all-day battery.</li>
-            <li><strong>Casual home user:</strong> Used M1 or M2 Air. Saves AED 2,000+ for the same daily experience.</li>
+            <li><strong>Casual home user:</strong> Used M1 or M2 Air. Big savings for the same daily experience.</li>
           </ul>
 
           <p>
@@ -156,7 +158,7 @@ export default function BlogMacBookAirVsPro2026() {
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               See our MacBook Pro repair page
             </Link>
-            , or drop into our Media City workshop for an AED 100 full diagnostic, refunded if you proceed with any service.
+            , or drop into our Media City workshop for a full diagnostic, refunded if you proceed with any service.
           </p>
         </>
       }
@@ -170,26 +172,26 @@ export default function BlogMacBookAirVsPro2026() {
           a: "Yes: M3/M4/M5 Air supports two external displays (one with lid open, two with lid closed). Pro supports up to four external displays (M5 Pro chip) or six (M5 Max).",
         },
         {
-          q: "Is the 15-inch Air worth the AED 800 premium over 13-inch?",
+          q: "Is the 15-inch Air worth the premium over 13-inch?",
           a: "If you use it as a desktop replacement at home, yes, the screen real estate is meaningful. If it lives in a bag and gets used at coffee shops, no, the 13″ is much more portable for the same chip.",
         },
         {
           q: "Should I buy a refurbished M3 Air or new M5 Air?",
-          a: "M3 Air refurbished from Apple at AED 4,200 vs M5 Air new at AED 4,499: buy the M5. The warranty of up to 12 months + latest chip + Wi-Fi 7 are worth the extra AED 300. From third-party sellers below AED 3,800, the M3 wins on value.",
+          a: "If the price gap between an Apple-refurbished M3 Air and a new M5 Air is small, buy the M5: the warranty of up to 12 months, the latest chip, and Wi-Fi 7 are worth it. If a third-party M3 is meaningfully cheaper, the M3 wins on value.",
         },
         {
           q: "How long will a MacBook Air M5 last me?",
-          a: "Realistically 6–8 years of useful life. Apple supports macOS for ~7 years. Battery will need replacement around year 4 (AED 450). The M-series transition gave Air longevity that older Intel Airs didn't have.",
+          a: "Realistically 6–8 years of useful life. Apple supports macOS for ~7 years. The battery will typically need replacement around year 4. The M-series transition gave Air longevity that older Intel Airs didn't have.",
         },
         {
-          q: "Is the MacBook Pro screen really worth AED 4,500 more?",
+          q: "Is the MacBook Pro screen really worth the extra cost?",
           a: "Only if you do colour-critical work, HDR video grading, or animation. For everyone else, the Air's display is excellent and the price difference goes further on RAM, SSD, or AppleCare+.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models: screen, battery, logic board pricing." },
         { label: "MacBook Pro M5 vs Apple Store repair cost", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "Side-by-side repair cost comparison." },
-        { label: "MacBook battery replacement Dubai", href: "/macbook-battery-replacement-dubai", description: "AED 450–700 with 3-month warranty." },
+        { label: "MacBook battery replacement Dubai", href: "/macbook-battery-replacement-dubai", description: "Genuine-grade cells with a 3-month warranty." },
         { label: "MacBook Pro battery draining fast", href: "/blog/macbook-pro-battery-draining-fast", description: "Causes, fixes, and replacement costs." },
       ]}
     />

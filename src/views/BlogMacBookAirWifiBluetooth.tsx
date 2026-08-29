@@ -7,7 +7,7 @@ export default function BlogMacBookAirWifiBluetooth() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air WiFi Bluetooth Fix Dubai 2026: Dropping, Slow, Won't Connect"
-      seoDescription="MacBook Air WiFi dropping or Bluetooth not connecting in Dubai? 6 software fixes plus when it needs board repair. Free diagnosis, wireless repair from AED 400."
+      seoDescription="MacBook Air WiFi dropping or Bluetooth not connecting in Dubai? 6 software fixes plus when it needs board repair. Free diagnosis, message us on WhatsApp for a quote."
       path="/blog/macbook-air-wifi-bluetooth-fix-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirWifiBluetooth() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air WiFi Dropping or Bluetooth Not Working in Dubai? Fix Guide 2026"
       hook="MacBook Air WiFi and Bluetooth share one antenna module. When both fail at once, it is almost always a software or SMC issue that you can fix at home. When only one fails, or speeds are low, it is usually a hardware problem. Here is how to tell the difference and fix it."
-      quickAnswer="MacBook Air WiFi dropping or Bluetooth not working: start with a NVRAM reset (hold Option+Command+P+R at boot, 20 sec). Delete WiFi prefs file (com.apple.network.identification.plist). If that fails, check antenna connection by running Apple Diagnostics (hold D at boot). Dubai building WiFi congestion (70+ networks on 2.4GHz) causes drops unrelated to hardware: switch to 5GHz or 6GHz. Board-level wireless chip repair from AED 400 in Dubai."
+      quickAnswer="MacBook Air WiFi dropping or Bluetooth not working: start with a NVRAM reset (hold Option+Command+P+R at boot, 20 sec). Delete WiFi prefs file (com.apple.network.identification.plist). If that fails, check antenna connection by running Apple Diagnostics (hold D at boot). Dubai building WiFi congestion (70+ networks on 2.4GHz) causes drops unrelated to hardware: switch to 5GHz or 6GHz. For board-level wireless chip repair in Dubai, message us on WhatsApp for a quote on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -251,10 +251,10 @@ export default function BlogMacBookAirWifiBluetooth() {
             caption="MacBook Air WiFi and Bluetooth repair pricing. June 2026"
             headers={["Repair", "Our price", "Apple Store"]}
             rows={[
-              { model: "WiFi / Bluetooth antenna reconnection", ours: "AED 200", apple: "AED 500" },
-              { model: "Wireless chip repair (component-level)", ours: "AED 400", apple: "AED 1,500+" },
-              { model: "Logic board WiFi module replacement", ours: "AED 600", apple: "AED 2,000+" },
-              { model: "Software diagnosis + NVRAM clean", ours: "Free", apple: "AED 150" },
+              { model: "WiFi / Bluetooth antenna reconnection", ours: "Price on request", apple: "Price on request" },
+              { model: "Wireless chip repair (component-level)", ours: "Price on request", apple: "Price on request" },
+              { model: "Logic board WiFi module replacement", ours: "Price on request", apple: "Price on request" },
+              { model: "Software diagnosis + NVRAM clean", ours: "Free", apple: "Price on request" },
             ]}
           />
           <p>
@@ -292,13 +292,13 @@ export default function BlogMacBookAirWifiBluetooth() {
             The antenna cable on MacBook Air models runs through the display hinge. On older
             machines (2017 to 2020 Intel models), repeated opening and closing fatigues the cable
             at the hinge bend point. A small fold or nick in the coaxial braid is enough to drop
-            signal by 80%. The fix is a cable replacement, not a full logic board swap, and costs
-            AED 200 in most cases.
+            signal by 80%. The fix is a cable replacement, not a full logic board swap, which keeps
+            it affordable in most cases. Message us on WhatsApp for the exact price on your model.
           </p>
           <p>
             If Apple Diagnostics confirms a chip-level failure (NDD001), we do component-level
-            repair on the logic board rather than replacing the whole board. This keeps the cost
-            at AED 400 versus AED 2,000+ for a new board.{" "}
+            repair on the logic board rather than replacing the whole board. This is far cheaper
+            than a new board. Message us on WhatsApp for the exact price on your model.{" "}
             <Link to="/macbook-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook repair Dubai →
             </Link>

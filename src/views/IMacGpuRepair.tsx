@@ -5,7 +5,7 @@ export default function IMacGpuRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac GPU Repair Dubai - Discrete AMD Radeon Pro Fix | 055 741 3706"
-      seoDescription="iMac 27-inch GPU repair Dubai. AMD Radeon Pro failure - artifacts, lines, no display. Reflow vs replacement assessed honestly. From AED 800. 3-5 days."
+      seoDescription="iMac 27-inch GPU repair Dubai. AMD Radeon Pro failure - artifacts, lines, no display. Reflow vs replacement assessed honestly. Message us for a price. 3-5 days."
       path="/imac-gpu-repair-dubai"
       eyebrow="iMac GPU repair"
       h1="iMac GPU Repair Dubai - Discrete AMD Radeon Pro Fix"

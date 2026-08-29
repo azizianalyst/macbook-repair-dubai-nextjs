@@ -87,15 +87,15 @@ export default function BlogLightningVsUsbC() {
 
           <h2 id="cable-buying-advice">Cable buying advice for 2026</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>For everyday charging</strong>: any USB-C cable rated 3A or higher works. Anker, UGREEN, Belkin all reliable. AED 30-80.</li>
-            <li><strong>For iPhone 17 Pro fast data (ProRes, RAW photo offload)</strong>: USB 3 / Thunderbolt 4 cable required. Apple Thunderbolt 4 Pro Cable is AED 219 (1m). Cheaper third-party USB 3.2 cables AED 80-150.</li>
+            <li><strong>For everyday charging</strong>: any USB-C cable rated 3A or higher works. Anker, UGREEN, Belkin all reliable and inexpensive.</li>
+            <li><strong>For iPhone 17 Pro fast data (ProRes, RAW photo offload)</strong>: USB 3 / Thunderbolt 4 cable required. Apple's Thunderbolt 4 Pro Cable (1m) hits the full speed; third-party USB 3.2 cables are a cheaper alternative.</li>
             <li><strong>For CarPlay (wired)</strong>: USB-C to USB-A cable for older cars, USB-C to USB-C for newer. Most cars now have USB-C ports.</li>
             <li><strong>For old iPhones still in family use (iPhone 14, SE 2/3, iPad 9th gen)</strong>: keep a couple of Lightning cables on hand. Apple still sells them but stock is shrinking.</li>
           </ul>
 
           <h2 id="lightning-ports-repair">Lightning ports we still repair</h2>
           <p>
-            We still service Lightning ports daily - iPhone 14 series, SE 2/3, and iPad 9th gen. The port itself wears out around 4-5 years of daily use. Symptoms: charges only at one specific cable angle, intermittent connection, requires wiggle. AED 250 to replace at our workshop. See our{" "}
+            We still service Lightning ports daily - iPhone 14 series, SE 2/3, and iPad 9th gen. The port itself wears out around 4-5 years of daily use. Symptoms: charges only at one specific cable angle, intermittent connection, requires wiggle. Message us on WhatsApp for today's exact price to replace it at our workshop. See our{" "}
             <Link to="/iphone-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">iPhone charging port repair page</Link>.
           </p>
 
@@ -111,7 +111,7 @@ export default function BlogLightningVsUsbC() {
         { q: "Is the USB-C in iPhone 17 the same as in MacBook?", a: "Same physical port. Different speeds - iPhone 17 (non-Pro) is USB 2.0, MacBook is Thunderbolt 4. Cables are interchangeable for charging; for fast data you need a matching cable spec." },
         { q: "Does the iPad 9th gen still use Lightning?", a: "Yes. The iPad 9th gen (2021) is the last Lightning iPad and is still sold while stock lasts. Every other current iPad uses USB-C - the iPad Pro switched back in 2018." },
         { q: "Will Apple ever release a portless iPhone?", a: "Rumoured for iPhone 19 or 20 (2027-2028). MagSafe 2 and Qi2 wireless charging plus AirDrop / iCloud for data transfer make it technically possible. EU regulation has carved out portless designs as compliant - Apple has the option." },
-        { q: "Can you replace a USB-C port on iPhone in Dubai?", a: "Yes - iPhone 15, 16, 17 USB-C port replacement is AED 250-350 at our workshop, same-day service. Component-level repair, not a full board swap. Free diagnosis first." },
+        { q: "Can you replace a USB-C port on iPhone in Dubai?", a: "Yes - we replace the USB-C port on iPhone 15, 16 and 17 at our workshop with same-day service. Component-level repair, not a full board swap. Free diagnosis first, and you can message us on WhatsApp for today's exact price on your model." },
       ]}
       relatedLinks={[
         { label: "iPhone charging port repair Dubai", href: "/iphone-charging-port-repair-dubai", description: "Lightning and USB-C - both repairable component-level." },

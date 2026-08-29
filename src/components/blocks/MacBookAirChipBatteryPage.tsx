@@ -12,6 +12,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -79,8 +80,6 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     </div>
   );
 }
-
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookAirChipBatteryPage({
   path,
@@ -163,7 +162,7 @@ export default function MacBookAirChipBatteryPage({
             </div>
           </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> From {aed(lowestPrice)}</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Message us for your price</span>
             <span>·</span>
             <span>BMS re-pair included</span>
             <span>·</span>
@@ -231,7 +230,7 @@ export default function MacBookAirChipBatteryPage({
               MacBook Air {chip} battery replacement cost Dubai
             </h2>
             <p className="text-center mt-4 text-[16px] text-text-muted max-w-[52ch] mx-auto">
-              Cell + labour + BMS re-pair + calibration all-in. No diagnostic fee. No hidden charges.
+              Cell + labour + BMS re-pair + calibration all-in. No diagnostic fee. No hidden charges. Message us on WhatsApp for today's exact price on your model.
             </p>
           </div>
           <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
@@ -249,9 +248,11 @@ export default function MacBookAirChipBatteryPage({
                 {prices.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted whitespace-nowrap">
-                      {r.applePrice ? aed(r.applePrice) : "Not serviced"}
+                      {r.applePrice ? "Price on request" : "Not serviced"}
                     </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
@@ -369,7 +370,7 @@ export default function MacBookAirChipBatteryPage({
                 Chip-specific answers before you book.
               </p>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>From {aed(lowestPrice)}</span>
+                <span>Price on request</span>
                 <span>Free battery health check</span>
                 <span>3-month warranty</span>
                 <span>Free pickup Dubai-wide</span>
@@ -413,7 +414,7 @@ export default function MacBookAirChipBatteryPage({
                 MacBook Air {chip} · {years}
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                MacBook Air {chip} battery from {aed(lowestPrice)} · Free diagnosis · 3-month warranty
+                MacBook Air {chip} battery replacement · Free diagnosis · 3-month warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

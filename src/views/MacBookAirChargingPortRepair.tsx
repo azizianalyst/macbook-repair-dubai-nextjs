@@ -12,6 +12,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -80,7 +81,7 @@ type CauseCard = { title: string; body: string };
 const CAUSES: CauseCard[] = [
   {
     title: "MagSafe 3 board failure (M2 and later)",
-    body: "The MagSafe 3 connector on M2, M3, and M4 Air is a small daughter board connected by a ribbon cable. The IC on this board fails from overvoltage spikes or connector stress. Symptoms: MagSafe LED does not light, no charge, charger falls out easily. Board replacement from AED 220.",
+    body: "The MagSafe 3 connector on M2, M3, and M4 Air is a small daughter board connected by a ribbon cable. The IC on this board fails from overvoltage spikes or connector stress. Symptoms: MagSafe LED does not light, no charge, charger falls out easily. Message us on WhatsApp for the exact board replacement price on your model.",
   },
   {
     title: "Corrosion inside the USB-C port from Dubai humidity",
@@ -88,7 +89,7 @@ const CAUSES: CauseCard[] = [
   },
   {
     title: "Bent or broken USB-C connector tab (dropped cable)",
-    body: "The small alignment tab inside the USB-C port breaks if a cable is yanked out sideways or the laptop is dropped while plugged in. A broken tab means the cable sits loose and no longer makes contact reliably. USB-C board replacement is the fix. AED 280 same-day.",
+    body: "The small alignment tab inside the USB-C port breaks if a cable is yanked out sideways or the laptop is dropped while plugged in. A broken tab means the cable sits loose and no longer makes contact reliably. USB-C board replacement is the fix, most often same-day. Message us on WhatsApp for the exact price.",
   },
   {
     title: "Debris inside the USB-C port (lint, sand)",
@@ -101,7 +102,7 @@ type FaqItem = { q: string; a: string };
 const FAQS: FaqItem[] = [
   {
     q: "How much does MacBook Air charging port repair cost in Dubai?",
-    a: "MacBook Air charging port repair at MacBook Repair Dubai starts from AED 220. USB-C board replacement for Intel and M1 models costs AED 280. MagSafe 3 board replacement for M2, M3, and M4 models costs AED 220 to AED 280. Most repairs are completed same-day.",
+    a: "Charging port repair pricing at MacBook Repair Dubai depends on your exact model and whether it needs a USB-C board (Intel and M1) or a MagSafe 3 board (M2, M3, and M4). Message us on WhatsApp with your model for today's exact price. Most repairs are completed same-day.",
   },
   {
     q: "How long does MacBook Air charging port repair take?",
@@ -113,7 +114,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: "Can you repair just the MagSafe 3 port without replacing the whole board?",
-    a: "The MagSafe 3 connector on M2, M3, and M4 Air is a separate small board connected to the logic board by a ribbon cable. We replace the MagSafe board, which does not require touching the logic board. AED 220, same-day.",
+    a: "The MagSafe 3 connector on M2, M3, and M4 Air is a separate small board connected to the logic board by a ribbon cable. We replace the MagSafe board, which does not require touching the logic board. Same-day on most models — message us on WhatsApp for the exact price.",
   },
   {
     q: "My MacBook Air charges from one USB-C port but not the other. What is wrong?",
@@ -140,13 +141,11 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   );
 }
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
-
 export default function MacBookAirChargingPortRepair() {
   useSeo(
     {
       title: "MacBook Air Charging Port Repair Dubai - MagSafe 3 and USB-C",
-      description: "MacBook Air charging port repair Dubai. MagSafe 3 board (M2/M3/M4) from AED 220. USB-C port replacement (Intel/M1) from AED 280. Same-day 1-2 hours. 3-month warranty. Call 055 741 3706.",
+      description: "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 3-month warranty. WhatsApp for a price.",
       path: "/macbook-air-charging-port-repair-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -159,7 +158,7 @@ export default function MacBookAirChargingPortRepair() {
         timeline: "Same day · 1-2 hours",
         warranty: "P3M",
         url: "/macbook-air-charging-port-repair-dubai",
-        description: "MacBook Air charging port repair Dubai. MagSafe 3 board replacement (M2/M3/M4) from AED 220. USB-C port replacement (Intel/M1) from AED 280. Same-day service.",
+        description: "MacBook Air charging port repair Dubai. MagSafe 3 board replacement (M2/M3/M4) and USB-C port replacement (Intel/M1). Same-day service. Message us on WhatsApp for a price.",
       }),
     ],
   );
@@ -190,10 +189,10 @@ export default function MacBookAirChargingPortRepair() {
           imageAlt={IMG.hero.alt}
         >
           <p className="mt-md text-[15px] text-text-muted leading-relaxed max-w-[56ch]">
-            MacBook Air charging port repair in Dubai covers every generation: USB-C board replacement for Intel and M1 models from AED 280, and MagSafe 3 board replacement for M2, M3, and M4 models from AED 220. Free diagnosis confirms the fault before any work begins. Same-day 1 to 2 hours on most models.
+            MacBook Air charging port repair in Dubai covers every generation: USB-C board replacement for Intel and M1 models, and MagSafe 3 board replacement for M2, M3, and M4 models. Free diagnosis confirms the fault before any work begins. Same-day 1 to 2 hours on most models — message us on WhatsApp for today's exact price on your model.
           </p>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Zap size={16} className="text-accent" aria-hidden /> From AED 220</span>
+            <span className="flex items-center gap-1"><Zap size={16} className="text-accent" aria-hidden /> Price on request</span>
             <span>·</span>
             <span>MagSafe 3 + USB-C</span>
             <span>·</span>
@@ -209,7 +208,7 @@ export default function MacBookAirChargingPortRepair() {
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
           <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap justify-center gap-x-xl gap-y-sm">
             {[
-              { Icon: Zap,         label: "From AED 220" },
+              { Icon: Zap,         label: "Price on request" },
               { Icon: Check,       label: "MagSafe 3 + USB-C" },
               { Icon: Clock,       label: "Same-day 1-2 hours" },
               { Icon: ShieldCheck, label: "Free diagnosis" },
@@ -234,7 +233,7 @@ export default function MacBookAirChargingPortRepair() {
               MacBook Air charging port by chip generation
             </h2>
             <p className="text-center mt-4 text-[16px] text-text-muted max-w-[54ch] mx-auto">
-              Every Air generation uses a different charging system. Repair approach and cost differ accordingly.
+              Every Air generation uses a different charging system. The repair approach differs accordingly.
             </p>
           </div>
           <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
@@ -275,7 +274,7 @@ export default function MacBookAirChargingPortRepair() {
               MacBook Air charging port repair prices Dubai
             </h2>
             <p className="text-center mt-4 text-[16px] text-text-muted max-w-[52ch] mx-auto">
-              Fixed prices. Free diagnosis before any work starts. No hidden fees.
+              Message us for a fixed quote on your model. Free diagnosis before any work starts. No hidden fees.
             </p>
           </div>
           <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
@@ -293,7 +292,9 @@ export default function MacBookAirChargingPortRepair() {
                   <tr key={r.model + r.service} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                     <td className="px-lg py-sm text-text-muted">{r.service}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} ${r.service} in Dubai?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                   </tr>
                 ))}
@@ -349,7 +350,7 @@ export default function MacBookAirChargingPortRepair() {
                 Common questions about Air charging port repair in Dubai.
               </p>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>From AED 220</span>
+                <span>Price on request</span>
                 <span>Free diagnosis</span>
                 <span>3-month warranty</span>
                 <span>Same-day on most models</span>
@@ -382,7 +383,7 @@ export default function MacBookAirChargingPortRepair() {
                 MacBook Air · All generations
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                MacBook Air charging port repair from AED 220 · Free diagnosis · 3-month warranty
+                MacBook Air charging port repair · Free diagnosis · 3-month warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

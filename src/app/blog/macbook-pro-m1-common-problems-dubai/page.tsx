@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro M1 common problems in Dubai? Touch Bar failure, battery swelling on 4-5 year old units, charging IC faults, kernel panics.",
   openGraph: {
     title: "MacBook Pro M1 Common Problems? Fix Guide Dubai 2026",
-    description: "Touch Bar failure, battery swelling, charging IC faults on MacBook Pro M1. Expert fixes in Dubai from AED 200.",
+    description: "Touch Bar failure, battery swelling, charging IC faults on MacBook Pro M1. Expert fixes in Dubai — message us on WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m1-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

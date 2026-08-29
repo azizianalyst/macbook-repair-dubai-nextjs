@@ -7,7 +7,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Intel Not Turning On Dubai 2026: Dead or Random Shutdown Fix"
-      seoDescription="MacBook Pro Intel not turning on or shutting down randomly in Dubai? SMC reset, T2 chip fault, dead battery, or board failure. Step-by-step fix guide. Repair from AED 400."
+      seoDescription="MacBook Pro Intel not turning on or shutting down randomly in Dubai? SMC reset, T2 chip fault, dead battery, or board failure. Step-by-step fix guide + free diagnosis."
       path="/blog/macbook-pro-intel-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Intel Not Turning On in Dubai? Dead or Random Shutdown Fix Guide"
-      hook="MacBook Pro Intel models (2016-2020) not turning on in Dubai cover a wider diagnostic range than Apple Silicon: SMC faults, T2 chip errors (2018-2020 models), deeply discharged batteries, AMD GPU failures preventing boot, and logic board component faults all produce the same symptom. Working through Intel-specific reset procedures before assuming hardware failure resolves many cases. Repair starts from AED 400."
+      hook="MacBook Pro Intel models (2016-2020) not turning on in Dubai cover a wider diagnostic range than Apple Silicon: SMC faults, T2 chip errors (2018-2020 models), deeply discharged batteries, AMD GPU failures preventing boot, and logic board component faults all produce the same symptom. Working through Intel-specific reset procedures before assuming hardware failure resolves many cases. Message us on WhatsApp for today's exact repair price on your model."
       quickAnswer="MacBook Pro Intel not turning on: try SMC reset first (hold Shift+Control+Option+Power for 10 seconds, then press Power). If that fails, NVRAM reset (hold Cmd+Option+P+R at startup for 20 seconds). For 2018-2020 T2 chip models: DFU restore via Apple Configurator 2 on a second Mac. For completely dead with no MagSafe LED: charge for 45 minutes with original Apple charger before retrying. Hardware repair needed if none of these work."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -79,7 +79,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
           <h2 id="dubai-heat">Dubai heat and Intel MacBook Pro failure patterns</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>Intel CPUs generate significantly more heat than Apple Silicon. A 2018 Intel 15-inch running a typical workload in a 30°C Dubai summer office hits 90-100°C CPU temperature regularly, driving fan speed to maximum. Sustained high temperature accelerates aging of all board components</li>
-            <li>Thermal paste between the Intel CPU and heat spreader dries out at 6-10 years, dramatically reducing heat transfer. When thermal paste dries in Dubai's heat, the machine throttles aggressively or shuts down under load, appearing as random shutdowns that are actually thermal protection events. Thermal paste replacement (AED 200) resolves this</li>
+            <li>Thermal paste between the Intel CPU and heat spreader dries out at 6-10 years, dramatically reducing heat transfer. When thermal paste dries in Dubai's heat, the machine throttles aggressively or shuts down under load, appearing as random shutdowns that are actually thermal protection events. Thermal paste replacement resolves this</li>
             <li>Dubai power grid summer load can cause brief voltage fluctuations that corrupt SMC or T2 firmware during charging, producing the dead machine symptom that SMC reset or DFU Revive can fix</li>
           </ul>
 
@@ -92,7 +92,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
               <tr>
                 <td>Machine dead, DFU detected in Apple Configurator 2</td>
                 <td>T2 firmware corruption</td>
-                <td>DFU Revive: AED 200</td>
+                <td>DFU Revive: price on request</td>
               </tr>
               <tr>
                 <td>Touch ID not working, machine otherwise fine</td>
@@ -121,12 +121,12 @@ export default function BlogMacBookProIntelNotTurningOn() {
           <BlogPriceTable
             caption="MacBook Pro Intel dead machine repair pricing. June 2026"
             rows={[
-              { model: "SMC reset + diagnostic", ours: "AED 100", apple: "AED 0 (Apple Store walk-in)", note: "Most common fix: same day" },
-              { model: "T2 DFU Revive (firmware)", ours: "AED 200", apple: "AED 0 under warranty", note: "2018-2020 Intel T2 models" },
-              { model: "Battery replacement (dead battery)", ours: "AED 400-550", apple: "AED 600-900+", note: "Model-dependent, 3-month warranty" },
-              { model: "Thermal paste replacement", ours: "AED 200", apple: "AED 300+", note: "Random shutdown fix for 6+ year Intel Macs" },
-              { model: "Charging IC repair (board fault)", ours: "AED 700", apple: "Logic board AED 2,500+", note: "Component-level repair" },
-              { model: "Full diagnostic", ours: "Free", apple: "AED 250", note: "SMC vs T2 vs battery vs board determination" },
+              { model: "SMC reset + diagnostic", ours: "Price on request", apple: "Apple Store walk-in", note: "Most common fix: same day" },
+              { model: "T2 DFU Revive (firmware)", ours: "Price on request", apple: "Free under warranty", note: "2018-2020 Intel T2 models" },
+              { model: "Battery replacement (dead battery)", ours: "Price on request", apple: "Apple pricing higher", note: "Model-dependent, 3-month warranty" },
+              { model: "Thermal paste replacement", ours: "Price on request", apple: "Apple pricing higher", note: "Random shutdown fix for 6+ year Intel Macs" },
+              { model: "Charging IC repair (board fault)", ours: "Price on request", apple: "Logic board swap only", note: "Component-level repair" },
+              { model: "Full diagnostic", ours: "Free", apple: "Apple charges for diagnosis", note: "SMC vs T2 vs battery vs board determination" },
             ]}
           />
 
@@ -156,7 +156,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
         },
         {
           q: "MacBook Pro Intel shuts down randomly in Dubai: what causes this?",
-          a: "At 6-10 years old in Dubai, random shutdowns on Intel MacBook Pros are most commonly thermal paste degradation. The paste between CPU and heatsink dries out, causing the CPU to overheat rapidly and trigger thermal shutdown. Thermal paste replacement (AED 200) typically resolves this. Second cause: battery cell failure causing voltage collapse under peak CPU load. Battery replacement fixes this.",
+          a: "At 6-10 years old in Dubai, random shutdowns on Intel MacBook Pros are most commonly thermal paste degradation. The paste between CPU and heatsink dries out, causing the CPU to overheat rapidly and trigger thermal shutdown. Thermal paste replacement typically resolves this. Second cause: battery cell failure causing voltage collapse under peak CPU load. Battery replacement fixes this. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat cause Intel MacBook Pro to die or shut down?",
@@ -164,7 +164,7 @@ export default function BlogMacBookProIntelNotTurningOn() {
         },
         {
           q: "How much does MacBook Pro Intel repair cost when not turning on?",
-          a: "SMC reset and diagnostic: AED 100. T2 DFU firmware restore: AED 200. Battery replacement: AED 400-550. Thermal paste replacement: AED 200. Charging IC board repair: AED 700. Free full diagnostic to determine exact cause before repair. Apple charges AED 2,500+ for logic board replacement in hardware fault cases.",
+          a: "Common fixes include SMC reset and diagnostic, T2 DFU firmware restore, battery replacement, thermal paste replacement, and charging IC board repair. We run a free full diagnostic to determine the exact cause before any repair, then message you the exact price for your model on WhatsApp. Apple typically quotes a full logic board replacement in hardware fault cases, which is far more costly.",
         },
         {
           q: "Can I recover data from Intel MacBook Pro that won't turn on?",

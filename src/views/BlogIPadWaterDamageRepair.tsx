@@ -6,7 +6,7 @@ export default function BlogIPadWaterDamageRepair() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Water Damage Repair Dubai 2026 - Costs & What To Do"
-      seoDescription="iPad water damage repair Dubai: AED 450–1,400 depending on board damage. First 30 minutes matter most. 80% recovery rate. Free pickup, warranty of up to 12 months."
+      seoDescription="iPad water damage repair Dubai. First 30 minutes matter most, 80% recovery rate. Free pickup, warranty of up to 12 months. WhatsApp us for today's price."
       path="/blog/ipad-water-damage-repair-dubai-guide"
       wide
       toc={[
@@ -20,7 +20,7 @@ export default function BlogIPadWaterDamageRepair() {
       category="Problem solving · iPad"
       h1="iPad Water Damage Repair Dubai. Costs, Recovery Rate & What To Do First"
       hook="Water damage is the number-one cause of total iPad loss, but 80% of iPads brought in within 24 hours are fully recovered. What you do in the first 30 minutes matters more than the repair itself."
-      quickAnswer="iPad water damage repair in Dubai costs AED 450–1,400 in 2026 depending on board corrosion. Fresh water caught early is AED 450–600. Salt water or delayed repairs are AED 700–1,400. Do NOT charge or turn on a wet iPad, bring it in for ultrasonic cleaning first."
+      quickAnswer="iPad water damage repair cost in Dubai depends on board corrosion, whether it was fresh, salt or pool water, and how quickly you act. Do NOT charge or turn on a wet iPad, bring it in for ultrasonic cleaning first and WhatsApp us for today's exact price on your model."
       author={{ name: "Ali", role: "iPad water damage and board repair specialist" }}
       datePublished="2026-06-09"
       dateModified="2026-06-09"
@@ -29,9 +29,9 @@ export default function BlogIPadWaterDamageRepair() {
       faqs={[
         { q: "My iPad fell in the pool, what do I do right now?", a: "Power it off immediately if it's on. Do NOT press the home button or side button repeatedly. Shake out as much water as you can from the ports, stand it port-down on a dry surface, and WhatsApp us immediately. Pool water (chlorinated) is more corrosive than fresh tap water, every hour matters." },
         { q: "My iPad is still working after getting wet, do I need to bring it in?", a: "Yes. A working iPad after a water event means the liquid hasn't reached a circuit yet or the corrosion hasn't started yet. Within 12-24 hours it will. The minerals in the water are depositing on the board right now. Bring it in for ultrasonic cleaning while it still works; don't wait for it to fail." },
-        { q: "Can you recover data from a water-damaged iPad that won't turn on?", a: "Often yes. If the NAND storage chip is physically intact (which it usually is, storage chips are sealed), we can attempt chip-level data extraction. This is a specialist job and costs AED 800-1,500 depending on the iPad model and the extent of board damage. We give you a quote after initial inspection." },
+        { q: "Can you recover data from a water-damaged iPad that won't turn on?", a: "Often yes. If the NAND storage chip is physically intact (which it usually is, storage chips are sealed), we can attempt chip-level data extraction. This is a specialist job and the price depends on the iPad model and the extent of board damage. WhatsApp us and we give you a quote after initial inspection." },
         { q: "How long does iPad water damage repair take?", a: "Ultrasonic cleaning and initial diagnosis takes 4-6 hours. If the board is clean and no components need replacing, you can have it back the same day. Component-level repair (charging IC, touch controller, baseband) takes 1-3 additional days." },
-        { q: "Is iPad water damage covered by AppleCare?", a: "Standard AppleCare does not cover liquid damage. AppleCare+ covers two incidents of accidental damage per year with an excess fee (typically AED 250-400 for an iPad). If you have an active AppleCare+ plan, contact Apple first. If you don't, we are the cost-effective alternative and we give you back your actual device rather than a refurbished replacement." },
+        { q: "Is iPad water damage covered by AppleCare?", a: "Standard AppleCare does not cover liquid damage. AppleCare+ covers two incidents of accidental damage per year with an excess fee for an iPad. If you have an active AppleCare+ plan, contact Apple first. If you don't, we are the cost-effective alternative and we give you back your actual device rather than a refurbished replacement." },
       ]}
       relatedLinks={[
         { label: "iPad repair Dubai", href: "/ipad-repair-dubai", description: "All iPad models and services" },
@@ -64,14 +64,14 @@ export default function BlogIPadWaterDamageRepair() {
           <BlogPriceTable
             caption="iPad water damage repair pricing. MacBook Repair Dubai, June 2026"
             rows={[
-              { model: "Fresh water, within 2 hours (any entry iPad)",   ours: "AED 450", apple: "N/A, depot swap", note: "Ultrasonic clean + calibration" },
-              { model: "Fresh water, within 24 hours (entry/mini/Air)",  ours: "AED 550", apple: "N/A",              note: "Clean + minor trace repair" },
-              { model: "Salt / pool water, entry / mini / Air",          ours: "AED 650", apple: "N/A",              note: "Salt deposits corrode faster" },
-              { model: "Delayed (48–72 hrs), entry / mini / Air",        ours: "AED 650–800", apple: "N/A",          note: "More corrosion to remove" },
-              { model: "iPad Pro 11″ M1–M2, fresh water early",          ours: "AED 700", apple: "N/A",              note: "More components on board" },
-              { model: "iPad Pro 11″ M4–M5, fresh water early",          ours: "AED 850", apple: "N/A",              note: "Ultra-thin chassis, harder teardown" },
-              { model: "iPad Pro 13″, fresh water early",                ours: "AED 900", apple: "N/A",              note: "Largest board, most traces" },
-              { model: "Severe corrosion / component-level repair",      ours: "AED 950–1,400", apple: "N/A",        note: "BGA chip rework, if recoverable" },
+              { model: "Fresh water, within 2 hours (any entry iPad)",   ours: "Price on request", apple: "N/A, depot swap", note: "Ultrasonic clean + calibration" },
+              { model: "Fresh water, within 24 hours (entry/mini/Air)",  ours: "Price on request", apple: "N/A",              note: "Clean + minor trace repair" },
+              { model: "Salt / pool water, entry / mini / Air",          ours: "Price on request", apple: "N/A",              note: "Salt deposits corrode faster" },
+              { model: "Delayed (48–72 hrs), entry / mini / Air",        ours: "Price on request", apple: "N/A",          note: "More corrosion to remove" },
+              { model: "iPad Pro 11″ M1–M2, fresh water early",          ours: "Price on request", apple: "N/A",              note: "More components on board" },
+              { model: "iPad Pro 11″ M4–M5, fresh water early",          ours: "Price on request", apple: "N/A",              note: "Ultra-thin chassis, harder teardown" },
+              { model: "iPad Pro 13″, fresh water early",                ours: "Price on request", apple: "N/A",              note: "Largest board, most traces" },
+              { model: "Severe corrosion / component-level repair",      ours: "Price on request", apple: "N/A",        note: "BGA chip rework, if recoverable" },
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
@@ -127,11 +127,11 @@ export default function BlogIPadWaterDamageRepair() {
             current trade-in or resale value of your iPad, repair is worthwhile.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPad 9 (2021)</strong>: trade-in value ~AED 450–600. Repair at AED 450–550 is borderline. If the iPad is more than 3 years old and the battery is also weak, consider replacement.</li>
-            <li><strong>iPad mini 6 / 7</strong>: trade-in ~AED 800–1,100. Repair at AED 550–700 is clearly worth it.</li>
-            <li><strong>iPad Air M2/M3</strong>: trade-in ~AED 1,400–1,900. Repair at AED 600–800 is worth it.</li>
-            <li><strong>iPad Pro M1–M2</strong>: trade-in ~AED 2,000–2,800. Repair at AED 700–1,000 is always worth it.</li>
-            <li><strong>iPad Pro M4/M5</strong>: high value devices. Even AED 1,200–1,400 repairs are justified versus a replacement cost of AED 4,000–6,500.</li>
+            <li><strong>iPad 9 (2021)</strong>: a low resale value makes repair borderline. If the iPad is more than 3 years old and the battery is also weak, consider replacement. WhatsApp us for the exact quote.</li>
+            <li><strong>iPad mini 6 / 7</strong>: still holds solid resale value, so repair is clearly worth it.</li>
+            <li><strong>iPad Air M2/M3</strong>: high resale value means a repair is well worth it versus replacing.</li>
+            <li><strong>iPad Pro M1–M2</strong>: a premium device that keeps strong value, so repair is almost always worth it.</li>
+            <li><strong>iPad Pro M4/M5</strong>: high-value devices where even a board-level repair is easily justified versus the cost of a new one.</li>
           </ul>
 
           <h2 id="how-to-book">How to get same-day water damage repair in Dubai</h2>

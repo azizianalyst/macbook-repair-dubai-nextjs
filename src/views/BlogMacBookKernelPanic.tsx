@@ -122,7 +122,7 @@ export default function BlogMacBookKernelPanic() {
             paste, not a new part. We walk through the symptoms in our{" "}
             <Link to="/blog/macbook-fan-loud-always-on" className="text-accent font-semibold hover:underline">
               loud-fan guide
-            </Link>, and a clean and repaste is AED 280.
+            </Link>, and a clean and repaste is one of our most affordable fixes - WhatsApp us for the exact price.
           </p>
           <h3>A failing SSD</h3>
           <p>
@@ -151,12 +151,12 @@ export default function BlogMacBookKernelPanic() {
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's heat, the SSD, the RAM or the board before you commit.
-            The prices below are VAT-inclusive and depend on the model.
+            Every quote is VAT-inclusive and depends on the model.
           </p>
           <p>
-            A strip, clean and repaste to cure thermal panics is AED 280. An SSD replacement runs AED
-            400 to 1,200 by capacity, and battery replacement is from AED 450. Memory and logic-board
-            work starts from AED 800. If the drive is failing, deal with a{" "}
+            A strip, clean and repaste to cure thermal panics, an SSD replacement, a battery
+            replacement, or memory and logic-board work - message us on WhatsApp with your model for
+            today's exact price. If the drive is failing, deal with a{" "}
             <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
@@ -176,7 +176,7 @@ export default function BlogMacBookKernelPanic() {
         },
         {
           q: "How much does it cost to fix a MacBook that keeps panicking in Dubai?",
-          a: "It depends on the cause, and the diagnostic to find out is free. A clean and repaste for thermal panics is AED 280. An SSD replacement is AED 400 to 1,200 by capacity. Battery replacement is from AED 450, and board or RAM work starts from AED 800. All prices are VAT-inclusive. Most software causes cost nothing once we point you at them.",
+          a: "It depends on the cause, and the diagnostic to find out is free. A clean and repaste for thermal panics, an SSD replacement, a battery replacement, or board and RAM work all vary by model - message us on WhatsApp with your model for today's exact price. Every quote is VAT-inclusive, and most software causes cost nothing once we point you at them.",
         },
         {
           q: "Will reinstalling macOS stop the kernel panics?",
@@ -184,7 +184,7 @@ export default function BlogMacBookKernelPanic() {
         },
         {
           q: "Can a swollen battery cause restarts?",
-          a: "It can. A battery swelling under the top case puts pressure on the board and can trigger instability and random shutdowns, alongside the keyboard and trackpad symptoms it usually causes. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced, from AED 450, rather than waiting for it to get worse.",
+          a: "It can. A battery swelling under the top case puts pressure on the board and can trigger instability and random shutdowns, alongside the keyboard and trackpad symptoms it usually causes. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced - message us on WhatsApp for the exact price on your model - rather than waiting for it to get worse.",
         },
         {
           q: "Is a kernel panic a sign my MacBook is dying?",

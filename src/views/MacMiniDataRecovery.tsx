@@ -4,10 +4,10 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacMiniDataRecovery() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac mini Data Recovery Dubai - Soldered SSD Specialist - From AED 500"
-      seoDescription="Mac mini data recovery Dubai. M-chip Mac minis have soldered SSD - standard USB adapters don't work. Specialist recovery for won't boot, deleted files, corrupted SSD. From AED 500. Call 055 741 3706."
+      seoTitle="Mac mini Data Recovery Dubai - Soldered SSD Specialist"
+      seoDescription="Mac mini data recovery Dubai. M-chip Mac minis have soldered SSD - standard USB adapters don't work. Specialist recovery for won't boot, deleted files, corrupted SSD. Call 055 741 3706."
       path="/mac-mini-data-recovery-dubai"
-      eyebrow="Soldered SSD specialist · M1/M2/M4 · Intel · from AED 500"
+      eyebrow="Soldered SSD specialist · M1/M2/M4 · Intel · free assessment"
       h1="Mac mini Data Recovery Dubai"
       subtitle="Mac mini data recovery is more complex than MacBook recovery because the M-chip SSD is directly soldered. Standard recovery tools fail without specialist hardware. We handle all models - won't boot, deleted files, corrupted drive."
       startingPrice={500}

@@ -7,7 +7,7 @@ export default function BlogMacBookProM5OledIssues() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 OLED Display Problems Dubai 2026: Lines, Flicker, Burn-In Fix"
-      seoDescription="MacBook Pro M5 OLED display issues in Dubai? Lines, flickering at low brightness, colour shift, burn-in. What is normal for OLED and what needs repair. Screen repair from AED 700."
+      seoDescription="MacBook Pro M5 OLED display issues in Dubai? Lines, flickering at low brightness, colour shift, burn-in. What is normal for OLED and what needs repair. Free diagnosis, message us for pricing."
       path="/blog/macbook-pro-m5-oled-display-issues-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM5OledIssues() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 OLED Display Issues in Dubai? Lines, Flicker, and Burn-In Explained"
-      hook="MacBook Pro M5 users in Dubai are reporting OLED display complaints that split into two categories: characteristics of OLED technology that are normal and not faults, and genuine hardware failures. Knowing which is which prevents unnecessary repairs. Screen replacement costs AED 700-900 in Dubai for confirmed hardware faults."
+      hook="MacBook Pro M5 users in Dubai are reporting OLED display complaints that split into two categories: characteristics of OLED technology that are normal and not faults, and genuine hardware failures. Knowing which is which prevents unnecessary repairs. For confirmed hardware faults, message us on WhatsApp for today's exact screen replacement price on your model."
       quickAnswer="MacBook Pro M5 OLED display issues: low-brightness flickering is OLED PWM dimming, not a fault (set brightness above 30%). Vertical lines, dead pixels, or half-screen black are hardware failures requiring panel replacement. Colour shift at extreme angles is OLED viewing angle characteristic. Burn-in appears after 2+ years of heavy static content display. Free diagnosis to confirm hardware vs OLED characteristic."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -141,12 +141,13 @@ export default function BlogMacBookProM5OledIssues() {
 
           <h2 id="repair-cost">How much does MacBook Pro M5 OLED display repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M5 display repair pricing. June 2026"
+            caption="MacBook Pro M5 display repair. June 2026"
+            headers={["Service", "Our repair", "Apple Store", "Notes"]}
             rows={[
-              { model: "M5 14-inch OLED panel replacement", ours: "AED 700", apple: "AED 1,399+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "M5 16-inch OLED panel replacement", ours: "AED 900", apple: "AED 1,699+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "Display cable replacement", ours: "AED 250", apple: "Full display assembly", note: "If panel is undamaged but cable is at fault" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Confirm panel vs cable vs GPU vs OLED characteristic" },
+              { model: "M5 14-inch OLED panel replacement", ours: "Price on request", apple: "Full display assembly", note: "Full panel, 12-month warranty, same-day" },
+              { model: "M5 16-inch OLED panel replacement", ours: "Price on request", apple: "Full display assembly", note: "Full panel, 12-month warranty, same-day" },
+              { model: "Display cable replacement", ours: "Price on request", apple: "Full display assembly", note: "If panel is undamaged but cable is at fault" },
+              { model: "Display diagnostic", ours: "Free", apple: "Paid diagnostic", note: "Confirm panel vs cable vs GPU vs OLED characteristic" },
             ]}
           />
 
@@ -194,7 +195,7 @@ export default function BlogMacBookProM5OledIssues() {
         },
         {
           q: "How much does MacBook Pro M5 OLED screen repair cost in Dubai?",
-          a: "MacBook Pro M5 14-inch OLED replacement costs AED 700, 16-inch costs AED 900 at our Dubai workshop. Apple charges AED 1,399 and AED 1,699 respectively. Display cable-only repair (if panel is undamaged) costs AED 250. Free diagnosis to confirm panel vs cable vs GPU fault before starting any repair.",
+          a: "We replace the MacBook Pro M5 14-inch and 16-inch OLED panels at our Dubai workshop, well below Apple's full display-assembly charge, and we also offer display cable-only repair when the panel is undamaged. Message us on WhatsApp with your model for today's exact price. Free diagnosis to confirm panel vs cable vs GPU fault before starting any repair.",
         },
         {
           q: "How do I know if MacBook Pro M5 has permanent burn-in or temporary retention?",

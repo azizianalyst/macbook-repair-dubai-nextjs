@@ -7,7 +7,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
   return (
     <BlogPostTemplate
       seoTitle="Data Recovery from a Broken MacBook in Dubai 2026"
-      seoDescription="Recover data from a dead, water-damaged or board-failed MacBook in Dubai. AED 400-2,000 by damage type, with Apple Silicon, FileVault and T2 limits explained."
+      seoDescription="Recover data from a dead, water-damaged or board-failed MacBook in Dubai. Message us for a price by damage type, with Apple Silicon, FileVault and T2 limits explained."
       path="/blog/data-recovery-broken-macbook-2026"
       wide
       toc={[
@@ -24,8 +24,8 @@ export default function BlogDataRecoveryBrokenMacBook() {
       ]}
       category="Repair guide · MacBook"
       h1="Data Recovery from Broken MacBook - Dubai 2026 Guide"
-      hook="Mac dead, no backup? AED 400-2,000 to recover, depending on damage. Honest process, honest success rates."
-      quickAnswer="MacBook data recovery in Dubai costs AED 400 (logic-board fault, drive intact), AED 600-900 (T2 or Apple Silicon, storage intact), AED 1,200-1,800 (water damage with FileVault on), and AED 1,500-2,000 (chip-off SSD work). Success runs from ~95% for non-storage faults to ~40-60% for FileVault SSDs with no recovery key. We charge nothing if recovery fails."
+      hook="Mac dead, no backup? Recovery cost depends on the damage — message us for your price. Honest process, honest success rates."
+      quickAnswer="MacBook data recovery cost in Dubai depends on the failure type — logic-board fault with drive intact is cheapest, then T2 or Apple Silicon with storage intact, then water damage with FileVault on, with chip-off SSD work at the top. Message us on WhatsApp for your exact price. Success runs from ~95% for non-storage faults to ~40-60% for FileVault SSDs with no recovery key. We charge nothing if recovery fails."
       author={{ name: "Usman", role: "Senior data recovery technician" }}
       datePublished="2026-04-26"
       dateModified="2026-04-26"
@@ -35,17 +35,17 @@ export default function BlogDataRecoveryBrokenMacBook() {
         <>
           <h2 id="quick-answer-cost">Data Recovery Broken MacBook. Quick answer (cost ranges)</h2>
           <BlogPriceTable
-            caption="MacBook data recovery - Dubai pricing April 2026"
+            caption="MacBook data recovery - Dubai success rates and turnaround by failure type"
             headers={["Failure type", "Our price", "Success rate", "Turnaround"]}
             rows={[
-              { model: "Logic board failure, drive OK (Intel + dedicated SSD)", ours: "AED 400", apple: "~98%", note: "1-2 days" },
-              { model: "T2 Mac, board dead, T2 chip alive", ours: "AED 600", apple: "~85%", note: "2-3 days" },
-              { model: "Apple Silicon (M1/M2/M3/M4/M5), board dead, no FileVault", ours: "AED 800", apple: "~75%", note: "3-5 days" },
-              { model: "Apple Silicon, board dead, FileVault on, no recovery key", ours: "AED 900-1,200", apple: "40-60%", note: "5-10 days" },
-              { model: "Water damage, recent (≤48 hrs)", ours: "AED 1,200", apple: "~80%", note: "3-5 days" },
-              { model: "Water damage, delayed (>1 week, corrosion present)", ours: "AED 1,500-1,800", apple: "~50%", note: "1-2 weeks" },
-              { model: "Physical SSD chip damage - chip-off recovery", ours: "AED 1,800-2,000", apple: "~40%", note: "1-2 weeks" },
-              { model: "Diagnostic only (no recovery attempt)", ours: "AED 0", apple: "-", note: "Same day" },
+              { model: "Logic board failure, drive OK (Intel + dedicated SSD)", ours: "Price on request", apple: "~98%", note: "1-2 days" },
+              { model: "T2 Mac, board dead, T2 chip alive", ours: "Price on request", apple: "~85%", note: "2-3 days" },
+              { model: "Apple Silicon (M1/M2/M3/M4/M5), board dead, no FileVault", ours: "Price on request", apple: "~75%", note: "3-5 days" },
+              { model: "Apple Silicon, board dead, FileVault on, no recovery key", ours: "Price on request", apple: "40-60%", note: "5-10 days" },
+              { model: "Water damage, recent (≤48 hrs)", ours: "Price on request", apple: "~80%", note: "3-5 days" },
+              { model: "Water damage, delayed (>1 week, corrosion present)", ours: "Price on request", apple: "~50%", note: "1-2 weeks" },
+              { model: "Physical SSD chip damage - chip-off recovery", ours: "Price on request", apple: "~40%", note: "1-2 weeks" },
+              { model: "Diagnostic only (no recovery attempt)", ours: "Free", apple: "-", note: "Same day" },
             ]}
           />
           <p>
@@ -118,8 +118,8 @@ export default function BlogDataRecoveryBrokenMacBook() {
             storage is fine. Recovery options:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li><strong>Repair the board</strong>: AED 800-1,400 depending on the fault. Mac boots normally, you keep all data and the working machine. We try this first whenever feasible.</li>
-            <li><strong>Donor-board transplant</strong>: We move the working storage region (Apple Silicon: SoC + storage chips; T2 Macs: T2 + storage) to a donor board. AED 800-1,200. You keep the data; the Mac's serial changes (cosmetic only).</li>
+            <li><strong>Repair the board</strong>: price depends on the fault — message us for a quote. Mac boots normally, you keep all data and the working machine. We try this first whenever feasible.</li>
+            <li><strong>Donor-board transplant</strong>: We move the working storage region (Apple Silicon: SoC + storage chips; T2 Macs: T2 + storage) to a donor board. Message us for the price. You keep the data; the Mac's serial changes (cosmetic only).</li>
             <li><strong>Direct NAND extraction</strong>: For non-encrypted Macs only. We pull data via JTAG/SPI. Last resort.</li>
           </ol>
 
@@ -141,9 +141,10 @@ export default function BlogDataRecoveryBrokenMacBook() {
 
           <h2 id="cost-expectations">Cost expectations</h2>
           <p>
-            Most cases land at AED 600-900. Pure water-damage cases run AED 1,200-1,800. Worst-case chip-off
-            recovery on a fully encrypted Apple Silicon MacBook with no recovery key tops out at ~AED 2,000
-            and may still fail (we'll tell you the realistic odds upfront).
+            Cost depends on the failure type — standard T2 and Apple Silicon recoveries sit in the middle,
+            pure water-damage cases cost more, and worst-case chip-off recovery on a fully encrypted Apple
+            Silicon MacBook with no recovery key is the most involved and may still fail (we'll tell you the
+            realistic odds upfront). Message us on WhatsApp for your exact price after a free diagnostic.
           </p>
 
           <h2 id="time-required">Time required</h2>
@@ -191,7 +192,7 @@ export default function BlogDataRecoveryBrokenMacBook() {
       }
       faqs={[
         { q: "Does Apple do data recovery on broken MacBooks?", a: "No. Apple's policy is explicit: they do not offer data recovery. They will replace the logic board (which contains your storage on M1+ Macs) and you lose everything. This is exactly why third-party recovery exists." },
-        { q: "How much does MacBook data recovery cost in Dubai?", a: "AED 400 for simple logic-board faults with intact drives, AED 600-900 for T2 / Apple Silicon with cooperative encryption, AED 1,200-1,800 for water damage, up to AED 2,000 for chip-off reconstruction. Free diagnostic, no recovery = no fee." },
+        { q: "How much does MacBook data recovery cost in Dubai?", a: "It depends on the failure: simple logic-board faults with intact drives are cheapest, then T2 / Apple Silicon with cooperative encryption, then water damage, with chip-off reconstruction the most involved. Message us on WhatsApp for your exact price. Free diagnostic, no recovery = no fee." },
         { q: "Can you recover data from a MacBook with FileVault enabled?", a: "Only if you have either your account password or the FileVault recovery key. AES-XTS-256 encryption is not breakable by any legitimate service worldwide. With the password / key, recovery success matches non-encrypted cases (~75-95%)." },
         { q: "Is data recovery from an Apple Silicon MacBook even possible?", a: "Yes - but only via specialised micro-soldering. The SSD chips are soldered to the logic board and tied to the Secure Enclave inside the M-series SoC. We transplant either the entire storage region or the SoC itself. Success rate ~75% without FileVault, ~60% with FileVault if you have the password." },
         { q: "How long until I get my data back?", a: "1-3 days for simple cases (logic-board fault, drive intact), 5-10 days for water damage, up to 2 weeks for chip-off recovery on Apple Silicon. Rush service available at +50% fee." },

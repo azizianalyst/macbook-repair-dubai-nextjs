@@ -6,7 +6,7 @@ export default function BlogMacBookAirBatteryDrain() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Battery Draining Fast? 7 Causes and Fixes Dubai 2026"
-      seoDescription="MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Battery replacement from AED 350 in 30 minutes."
+      seoDescription="MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Same-day battery replacement in 30 minutes. WhatsApp us for a price."
       path="/blog/macbook-air-battery-drain-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogMacBookAirBatteryDrain() {
       ]}
       category="Fix guide · MacBook Air"
       h1="MacBook Air Battery Draining Fast in Dubai? Here is Why"
-      hook="Dubai heat accelerates MacBook Air battery degradation faster than Apple estimates, and battery replacement starts from AED 350 at our Dubai Media City workshop."
+      hook="Dubai heat accelerates MacBook Air battery degradation faster than Apple estimates, and same-day battery replacement is available at our Dubai Media City workshop — message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Air battery draining fast is usually caused by background apps, display brightness, High Power Mode being off, battery age over 3 years, or Dubai heat stress above 35°C pushing the battery past its thermal limit. Check System Settings > Battery > Battery Health first."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -233,11 +233,11 @@ export default function BlogMacBookAirBatteryDrain() {
             caption="MacBook Air battery replacement pricing. June 2026"
             headers={["Repair / Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "MacBook Air M1 13\"", ours: "AED 350", apple: "AED 500+" },
-              { model: "MacBook Air M2 13\"", ours: "AED 380", apple: "AED 550+" },
-              { model: "MacBook Air M3 13\"", ours: "AED 400", apple: "AED 600+" },
-              { model: "MacBook Air M4 13\"", ours: "AED 420", apple: "AED 650+" },
-              { model: "MacBook Air Intel 13\"", ours: "AED 300", apple: "AED 480+" },
+              { model: "MacBook Air M1 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "MacBook Air M2 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "MacBook Air M3 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "MacBook Air M4 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "MacBook Air Intel 13\"", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>

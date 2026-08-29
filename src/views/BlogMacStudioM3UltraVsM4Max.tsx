@@ -7,7 +7,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Studio M3 Ultra vs M4 Max 2026 - Which Wins for Pros?"
-      seoDescription="Apple sells both at once. M3 Ultra: 32 cores, 512 GB RAM max. M4 Max: faster single-thread, newer chip. Workflow-by-workflow honest verdict for Dubai pros."
+      seoDescription="Apple sells both at once. M3 Ultra: 32 cores, 512 GB RAM max. M4 Max: faster single-thread, newer chip. Honest workflow-by-workflow verdict for Dubai pros."
       path="/blog/mac-studio-m3-ultra-vs-m4-max-which"
       wide
       toc={[
@@ -25,7 +25,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
       category="Comparison · Mac Studio"
       h1="Mac Studio M3 Ultra vs M4 Max - 2026 Comparison"
       hook="Strange Apple move - selling both at once. Here's which actually wins for what."
-      quickAnswer="M3 Ultra wins for multi-core renders (3D, video exports), 100+ GB RAM workflows, large LLM inference and anything that scales with cores. M4 Max wins for single-threaded apps (Logic Pro live, Xcode builds, Photoshop), best value under 64 GB RAM and lower power. Price: M4 Max base AED 8,499 vs M3 Ultra base AED 14,999."
+      quickAnswer="M3 Ultra wins for multi-core renders (3D, video exports), 100+ GB RAM workflows, large LLM inference and anything that scales with cores. M4 Max wins for single-threaded apps (Logic Pro live, Xcode builds, Photoshop), best value under 64 GB RAM and lower power. The M4 Max base config costs noticeably less than the M3 Ultra base — message us on WhatsApp for current UAE pricing on either."
       author={{ name: "Ali", role: "Mac Studio specialist" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -68,7 +68,7 @@ export default function BlogMacStudioM3UltraVsM4Max() {
             <li><strong>Newer M4 architecture</strong>: ~15% IPC improvement vs M3.</li>
             <li><strong>Faster single-core</strong>: Geekbench single ~3,950 vs M3 Ultra's ~3,200.</li>
             <li><strong>Lower idle power</strong>: ~30 W vs M3 Ultra's ~85 W.</li>
-            <li><strong>Cheaper</strong>: AED 8,499 base vs AED 14,999 for M3 Ultra base.</li>
+            <li><strong>Cheaper</strong>: the M4 Max base config costs noticeably less than the M3 Ultra base - message us for current UAE pricing.</li>
             <li><strong>Apple Intelligence</strong>: full M4-generation Neural Engine.</li>
             <li><strong>Thunderbolt 5</strong>: 6 ports (same as Ultra).</li>
           </ul>
@@ -138,22 +138,22 @@ export default function BlogMacStudioM3UltraVsM4Max() {
               { model: "Idle (display on)", ours: "30 W", apple: "85 W" },
               { model: "Web browsing / Office", ours: "35 W", apple: "95 W" },
               { model: "Sustained Cinebench", ours: "120 W", apple: "260 W" },
-              { model: "Annual cost @ 8 hr/day work use (DEWA)", ours: "AED 95", apple: "AED 280" },
+              { model: "Annual DEWA running cost @ 8 hr/day", ours: "Much lower", apple: "Roughly 3x higher" },
             ]}
           />
 
           <h2 id="price">Price difference</h2>
           <BlogPriceTable
-            caption="Mac Studio configurations - UAE April 2026"
-            headers={["Configuration", "Price (AED)", "Suitable for"]}
+            caption="Mac Studio configurations - UAE"
+            headers={["Configuration", "Price", "Suitable for"]}
             rows={[
-              { model: "M4 Max 14c CPU / 32c GPU / 36 GB / 512 GB", ours: "8,499", apple: "Most pro workflows" },
-              { model: "M4 Max 16c / 40c / 64 GB / 1 TB", ours: "11,499", apple: "Heavy creative" },
-              { model: "M4 Max 16c / 40c / 128 GB / 2 TB", ours: "15,499", apple: "Most people max here" },
-              { model: "M3 Ultra 28c / 60c / 96 GB / 1 TB", ours: "14,999", apple: "Multi-core focused" },
-              { model: "M3 Ultra 32c / 80c / 192 GB / 1 TB", ours: "20,999", apple: "ML / 3D pros" },
-              { model: "M3 Ultra 32c / 80c / 256 GB / 4 TB", ours: "29,999", apple: "Serious LLM hosting" },
-              { model: "M3 Ultra 32c / 80c / 512 GB / 8 TB", ours: "47,999", apple: "Frontier ML" },
+              { model: "M4 Max 14c CPU / 32c GPU / 36 GB / 512 GB", ours: "Price on request", apple: "Most pro workflows" },
+              { model: "M4 Max 16c / 40c / 64 GB / 1 TB", ours: "Price on request", apple: "Heavy creative" },
+              { model: "M4 Max 16c / 40c / 128 GB / 2 TB", ours: "Price on request", apple: "Most people max here" },
+              { model: "M3 Ultra 28c / 60c / 96 GB / 1 TB", ours: "Price on request", apple: "Multi-core focused" },
+              { model: "M3 Ultra 32c / 80c / 192 GB / 1 TB", ours: "Price on request", apple: "ML / 3D pros" },
+              { model: "M3 Ultra 32c / 80c / 256 GB / 4 TB", ours: "Price on request", apple: "Serious LLM hosting" },
+              { model: "M3 Ultra 32c / 80c / 512 GB / 8 TB", ours: "Price on request", apple: "Frontier ML" },
             ]}
           />
 

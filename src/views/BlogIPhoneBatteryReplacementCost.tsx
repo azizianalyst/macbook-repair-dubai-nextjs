@@ -7,11 +7,11 @@ export default function BlogIPhoneBatteryReplacementCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Battery Replacement Cost Dubai: All Models"
-      seoDescription="iPhone battery cost in Dubai 2026: from AED 250 on older models to AED 450 on the 17 Pro Max. The 80% rule, same-day service and a 3-month warranty explained."
+      seoDescription="iPhone battery replacement in Dubai, every model. Same-day service, 3-month warranty, free pickup. Message us on WhatsApp for today's exact price."
       path="/blog/iphone-battery-replacement-cost-dubai-all-models"
       wide
       toc={[
-        { id: "price-list", label: "Full price list 2026" },
+        { id: "price-list", label: "Every model we cover" },
         { id: "check-battery", label: "How to check if you need one" },
         { id: "eighty-percent-rule", label: "The 80% rule explained" },
         { id: "why-15-costs-more", label: "Why iPhone 15+ costs more" },
@@ -22,8 +22,8 @@ export default function BlogIPhoneBatteryReplacementCost() {
       ]}
       category="Cost guide · iPhone"
       h1="iPhone Battery Replacement Cost Dubai - Every Model 2026"
-      hook="iPhone battery costs in Dubai range from AED 250 (older Lightning models) to AED 450 (iPhone 17 Pro Max with the new lithium chemistry). Same-day on most jobs."
-      quickAnswer="iPhone battery replacement in Dubai costs AED 250 to AED 450 in April 2026. Older models (6 to 12) are AED 250-350. iPhone 13-14 are AED 350. iPhone 15 onward are AED 400-450 because of the new high-density chemistry. Same-day, 3-month warranty."
+      hook="We replace iPhone batteries on every model, from the older Lightning phones to the iPhone 17 Pro Max with the new lithium chemistry. Same-day on most jobs - message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPhone battery replacement in Dubai is priced by model - older phones cost less than the iPhone 15 line onward, which use the new high-density chemistry. Same-day service with a 3-month warranty. Message us on WhatsApp for the exact price on your iPhone."
       author={{ name: "Shafiq", role: "Senior iPhone battery technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -31,37 +31,39 @@ export default function BlogIPhoneBatteryReplacementCost() {
       featuredImageAlt="iPhone Battery Replacement Cost Dubai, iPhone battery replacement Dubai - fresh OEM battery on technician workbench"
       body={
         <>
-          <h2 id="price-list">iPhone Battery Replacement Cost Dubai. The full iPhone battery replacement price list - April 2026</h2>
+          <h2 id="price-list">iPhone Battery Replacement Cost Dubai. Every iPhone model we cover - April 2026</h2>
           <p>
-            Pricing includes the battery, labour, fresh perimeter adhesive, and a 3-month warranty.
-            Battery health calibration runs after install - you walk out at 100%.
+            Every job includes the battery, labour, fresh perimeter adhesive, and a 3-month warranty.
+            Battery health calibration runs after install - you walk out at 100%. For today's exact
+            price on your model, message us on WhatsApp.
           </p>
           <BlogPriceTable
-            caption="iPhone battery replacement pricing - Dubai, April 2026"
+            caption="iPhone battery replacement - models we cover in Dubai, April 2026"
+            headers={["Model", "Our price", "Notes"]}
             rows={[
-              { model: "iPhone 6 / 6s / 6 Plus / 6s Plus", ours: "AED 250", apple: "AED 359", note: "Plentiful, 30 min" },
-              { model: "iPhone 7 / 7 Plus / 8 / 8 Plus / SE 1/2/3", ours: "AED 250", apple: "AED 359", note: "Same-day" },
-              { model: "iPhone X / XR / XS / XS Max",     ours: "AED 300", apple: "AED 459", note: "Slightly trickier teardown" },
-              { model: "iPhone 11 / 11 Pro / 11 Pro Max", ours: "AED 300", apple: "AED 459", note: "Same-day" },
-              { model: "iPhone 12 mini / 12 / 12 Pro / 12 Pro Max", ours: "AED 350", apple: "AED 459", note: "MagSafe magnets must be preserved" },
-              { model: "iPhone 13 mini / 13 / 13 Pro / 13 Pro Max", ours: "AED 350", apple: "AED 459", note: "Sealed under screen, fresh adhesive" },
-              { model: "iPhone 14 / 14 Plus / 14 Pro / 14 Pro Max", ours: "AED 350", apple: "AED 459", note: "Newer chemistry" },
-              { model: "iPhone 15 / 15 Plus",            ours: "AED 400", apple: "AED 549", note: "USB-C era; new high-density cells" },
-              { model: "iPhone 15 Pro / 15 Pro Max",     ours: "AED 400", apple: "AED 549", note: "Titanium frame, careful pry" },
-              { model: "iPhone 16 / 16 Plus / 16e",      ours: "AED 400", apple: "AED 549", note: "Adhesive-pull battery (easier)" },
-              { model: "iPhone 16 Pro / 16 Pro Max",     ours: "AED 400", apple: "AED 599", note: "Larger cell" },
-              { model: "iPhone 17 / 17e",                ours: "AED 400", apple: "AED 599", note: "New 2026 chemistry" },
-              { model: "iPhone Air",                     ours: "AED 450", apple: "AED 649", note: "Ultra-thin, fragile" },
-              { model: "iPhone 17 Pro",                  ours: "AED 450", apple: "AED 649", note: "Vapor-chamber routing" },
-              { model: "iPhone 17 Pro Max",              ours: "AED 450", apple: "AED 699", note: "Largest cell, longest job" },
+              { model: "iPhone 6 / 6s / 6 Plus / 6s Plus", ours: "Price on request", apple: "Plentiful, 30 min" },
+              { model: "iPhone 7 / 7 Plus / 8 / 8 Plus / SE 1/2/3", ours: "Price on request", apple: "Same-day" },
+              { model: "iPhone X / XR / XS / XS Max",     ours: "Price on request", apple: "Slightly trickier teardown" },
+              { model: "iPhone 11 / 11 Pro / 11 Pro Max", ours: "Price on request", apple: "Same-day" },
+              { model: "iPhone 12 mini / 12 / 12 Pro / 12 Pro Max", ours: "Price on request", apple: "MagSafe magnets must be preserved" },
+              { model: "iPhone 13 mini / 13 / 13 Pro / 13 Pro Max", ours: "Price on request", apple: "Sealed under screen, fresh adhesive" },
+              { model: "iPhone 14 / 14 Plus / 14 Pro / 14 Pro Max", ours: "Price on request", apple: "Newer chemistry" },
+              { model: "iPhone 15 / 15 Plus",            ours: "Price on request", apple: "USB-C era; new high-density cells" },
+              { model: "iPhone 15 Pro / 15 Pro Max",     ours: "Price on request", apple: "Titanium frame, careful pry" },
+              { model: "iPhone 16 / 16 Plus / 16e",      ours: "Price on request", apple: "Adhesive-pull battery (easier)" },
+              { model: "iPhone 16 Pro / 16 Pro Max",     ours: "Price on request", apple: "Larger cell" },
+              { model: "iPhone 17 / 17e",                ours: "Price on request", apple: "New 2026 chemistry" },
+              { model: "iPhone Air",                     ours: "Price on request", apple: "Ultra-thin, fragile" },
+              { model: "iPhone 17 Pro",                  ours: "Price on request", apple: "Vapor-chamber routing" },
+              { model: "iPhone 17 Pro Max",              ours: "Price on request", apple: "Largest cell, longest job" },
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing from{" "}
+            Message us on WhatsApp for today's exact price on your model. Apple's own battery pricing
+            is published at{" "}
             <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com/iphone/repair/battery-power
-            </a>{" "}
-            (April 2026).
+            </a>.
           </p>
 
           <h2 id="check-battery">How to check if your iPhone needs a new battery</h2>
@@ -99,15 +101,17 @@ export default function BlogIPhoneBatteryReplacementCost() {
             tighter manufacturing tolerance - wholesale cost is roughly 35% higher than the old
             iPhone 14 chemistry. The iPhone 16 and 17 lines continue the same chemistry, with the
             iPhone Air and 17 Pro adding stacked-cell construction for more capacity in less
-            volume. That stacking adds AED 50 to wholesale, which we pass through.
+            volume. That stacking adds a little to the wholesale cost, which is why the newest
+            models sit at the top of our range - message us for the exact price on yours.
           </p>
 
           <h2 id="apple-vs-ours">Apple Store battery cost vs ours</h2>
           <p>
-            Apple charges AED 359 for older iPhone batteries (6 through 11) and AED 459 for the 12
-            through 14 line. The 15 onward jumped to AED 549-699. Our pricing sits AED 100-250
-            below Apple at every tier. We use the same chemistry, same capacity, same cycle rating
-            - just sourced through OEM-equivalent supply rather than Apple's branded supply.
+            Apple charges more for the newer lines - the 12 through 14 cost more than the older 6
+            through 11 models, and the 15 onward jumped again. Our pricing sits comfortably below
+            Apple at every tier. We use the same chemistry, same capacity, same cycle rating - just
+            sourced through OEM-equivalent supply rather than Apple's branded supply. Message us on
+            WhatsApp for the exact price on your model.
           </p>
 
           <h2 id="genuine-vs-oem">Genuine Apple battery vs quality alternative</h2>
@@ -115,9 +119,9 @@ export default function BlogIPhoneBatteryReplacementCost() {
             Three options:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Genuine Apple service-stock battery</strong> (+AED 200 over our base price). True "Genuine Apple Battery" message in Settings. Required if you want absolutely no asterisk in the Battery Health screen.</li>
+            <li><strong>Genuine Apple service-stock battery</strong> (a premium over our standard option). True "Genuine Apple Battery" message in Settings. Required if you want absolutely no asterisk in the Battery Health screen. Message us for the exact price.</li>
             <li><strong>Quality OEM-equivalent</strong> - same cell chemistry, same capacity (within 1%), branded "third-party" in Settings. This is our default and what we recommend.</li>
-            <li><strong>Cheap aftermarket</strong> - we don't sell these. They lose 20% capacity in the first 100 cycles and have caused fires. Avoid the AED 100 batteries from Naif.</li>
+            <li><strong>Cheap aftermarket</strong> - we don't sell these. They lose 20% capacity in the first 100 cycles and have caused fires. Avoid the bargain batteries from Naif.</li>
           </ul>
 
           <h2 id="same-day">Same-day battery replacement - what's possible</h2>
@@ -143,10 +147,10 @@ export default function BlogIPhoneBatteryReplacementCost() {
       }
       faqs={[
         { q: "How long does iPhone battery replacement take?", a: "30-45 minutes at the bench for iPhone 8 through 14. 50-60 minutes for iPhone 15 onward (more adhesive). Same-day if you message us before 1pm. Free pickup across Dubai mainland." },
-        { q: "Will my iPhone show a 'genuine battery' warning if I get a third-party one?", a: "Yes - Settings → Battery → Battery Health will show 'Unknown Part' or 'Important Battery Message' depending on iOS version. The battery itself works at full capacity with normal cycle behaviour. Want it gone? Choose our genuine Apple option (+AED 200)." },
+        { q: "Will my iPhone show a 'genuine battery' warning if I get a third-party one?", a: "Yes - Settings → Battery → Battery Health will show 'Unknown Part' or 'Important Battery Message' depending on iOS version. The battery itself works at full capacity with normal cycle behaviour. Want it gone? Choose our genuine Apple option - message us on WhatsApp for the price." },
         { q: "What's the warranty on a battery replacement?", a: "3 months written. Same fault returns inside that window - we replace the battery again, no charge. Cells are also Apple-rated for 1,000 cycles to 80% capacity (iPhone 15+) or 500 cycles (older)." },
         { q: "Should I wait for Apple's Battery Service Program?", a: "Always check first - open Settings or visit support.apple.com to verify your iPhone isn't covered by an active Apple service program. Free is free. We'll check eligibility for you at intake." },
-        { q: "Can you replace a swollen iPhone battery safely?", a: "Yes - and you should not delay. Swollen batteries push the screen up from inside and risk thermal runaway. We discharge the cell, remove it under controlled conditions, and dispose of it through a Dubai-licensed e-waste channel. AED 50 surcharge on a swollen cell." },
+        { q: "Can you replace a swollen iPhone battery safely?", a: "Yes - and you should not delay. Swollen batteries push the screen up from inside and risk thermal runaway. We discharge the cell, remove it under controlled conditions, and dispose of it through a Dubai-licensed e-waste channel. A small surcharge applies on a swollen cell - message us on WhatsApp for the exact price." },
         { q: "Will battery replacement reset my iPhone?", a: "No. Your data is untouched. The phone restarts during install, but no settings, photos, or apps are lost. We don't need your passcode. Always back up first as standard precaution." },
       ]}
       relatedLinks={[

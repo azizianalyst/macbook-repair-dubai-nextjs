@@ -7,7 +7,7 @@ export default function BlogMacBookAirM5Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M5 Common Problems Dubai 2026: Fix Guide"
-      seoDescription="MacBook Air M5 problems in Dubai: battery drain, overheating, WiFi drops, screen issues. All M5 Air faults diagnosed and fixed from AED 350. Free diagnosis."
+      seoDescription="MacBook Air M5 problems in Dubai: battery drain, overheating, WiFi drops, screen issues. All M5 Air faults diagnosed and fixed same-day. Free diagnosis."
       path="/blog/macbook-air-m5-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirM5Problems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M5 Common Problems in Dubai? Fix Guide 2026"
       hook="MacBook Air M5 launched in 2026 with a 30-hour rated battery and Apple's most efficient chip yet. In Dubai's heat, some of that efficiency advantage disappears. Here are the most common M5 Air faults we see at our workshop and how to fix them."
-      quickAnswer="Most common MacBook Air M5 problems in Dubai: battery draining faster than rated 30 hours (screen brightness + background apps), thermal throttling under sustained load in 35-40C ambient (fanless, no headroom), WiFi dropping after sleep (macOS Tahoe/Sequoia driver issue), USB-C port not charging (wrong wattage adapter or dirty port), and screen brightness inconsistency. Most are free software fixes. Hardware faults from AED 350."
+      quickAnswer="Most common MacBook Air M5 problems in Dubai: battery draining faster than rated 30 hours (screen brightness + background apps), thermal throttling under sustained load in 35-40C ambient (fanless, no headroom), WiFi dropping after sleep (macOS Tahoe/Sequoia driver issue), USB-C port not charging (wrong wattage adapter or dirty port), and screen brightness inconsistency. Most are free software fixes. For hardware faults, message us on WhatsApp for today's exact price on your M5 Air."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -67,7 +67,7 @@ export default function BlogMacBookAirM5Problems() {
           </p>
           <p>
             If battery capacity has dropped below 80%, no software fix will restore the full 30 hours.
-            Battery replacement is AED 450 for the 13-inch M5 Air, same-day.{" "}
+            Battery replacement for the 13-inch M5 Air is same-day — message us on WhatsApp for today's exact price.{" "}
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement Dubai →
             </Link>
@@ -92,8 +92,8 @@ export default function BlogMacBookAirM5Problems() {
           </ul>
           <p>
             If the M5 Air throttles at idle (light browser use, no heavy app), that is not normal.
-            It can indicate a thermal pad issue on the chip spreader. Thermal pad inspection and
-            reseating costs AED 350 at our workshop.
+            It can indicate a thermal pad issue on the chip spreader. We inspect and reseat the
+            thermal pad at our workshop — message us on WhatsApp for the exact price.
           </p>
 
           <h2 id="wifi-drops">MacBook Air M5 WiFi dropping after sleep</h2>
@@ -133,7 +133,7 @@ export default function BlogMacBookAirM5Problems() {
           </ul>
           <p>
             If the port is bent, corroded, or physically damaged from a cable being pulled at an
-            angle, USB-C port repair starts at AED 350.{" "}
+            angle, we can repair the USB-C port — message us on WhatsApp for the exact price.{" "}
             <Link to="/macbook-air-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Air repair Dubai →
             </Link>
@@ -147,7 +147,8 @@ export default function BlogMacBookAirM5Problems() {
           </p>
           <p>
             This is not a logic board fault and it does not indicate impending failure. If the
-            glow bothers you in normal use, a screen replacement at AED 650 resolves it completely.
+            glow bothers you in normal use, a screen replacement resolves it completely — message
+            us on WhatsApp for the exact price.
           </p>
           <p>
             A different and more urgent problem is <strong>backlight failure</strong>: the screen
@@ -218,19 +219,20 @@ export default function BlogMacBookAirM5Problems() {
 
           <h2 id="repair-cost">MacBook Air M5 repair cost in Dubai</h2>
           <p>
-            All prices below are for our Dubai workshop. Logic board diagnosis is always free.
+            For today's exact price on any repair below, message us on WhatsApp with your model.
+            Logic board diagnosis is always free.
           </p>
           <BlogPriceTable
             caption="MacBook Air M5 repair pricing, Dubai. June 2026."
             headers={["Repair", "Our price", "Apple Store"]}
             rows={[
-              { model: "Battery replacement: M5 Air 13\"", ours: "AED 450", apple: "AED 899" },
-              { model: "Battery replacement: M5 Air 15\"", ours: "AED 500", apple: "AED 999" },
-              { model: "Screen replacement: M5 Air 13\"", ours: "AED 650", apple: "AED 1,099" },
-              { model: "Screen replacement: M5 Air 15\"", ours: "AED 750", apple: "AED 1,199" },
-              { model: "USB-C port repair", ours: "AED 350", apple: "AED 800" },
-              { model: "Thermal pad service", ours: "AED 350", apple: "AED 800" },
-              { model: "Logic board diagnosis", ours: "Free", apple: "AED 150" },
+              { model: "Battery replacement: M5 Air 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Battery replacement: M5 Air 15\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Screen replacement: M5 Air 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Screen replacement: M5 Air 15\"", ours: "Price on request", apple: "Price on request" },
+              { model: "USB-C port repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Thermal pad service", ours: "Price on request", apple: "Price on request" },
+              { model: "Logic board diagnosis", ours: "Free", apple: "Price on request" },
             ]}
           />
           <p>
@@ -258,7 +260,7 @@ export default function BlogMacBookAirM5Problems() {
         },
         {
           q: "Can MacBook Air M5 be repaired if the screen cracks?",
-          a: "Yes. Screen replacement for the M5 Air 13-inch is AED 650 at our Dubai workshop, same-day if dropped off before 11am. That compares to AED 1,099 at the Apple Store, without the same-day turnaround.",
+          a: "Yes. Screen replacement for the M5 Air 13-inch is same-day at our Dubai workshop if dropped off before 11am, and typically well below Apple Store pricing without the wait. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Air M5 repair take in Dubai?",

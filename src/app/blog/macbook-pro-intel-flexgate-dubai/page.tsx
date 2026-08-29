@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProIntelFlexgate";
 
 export const metadata: Metadata = {
   title: "MacBook Pro Flexgate Display Cable Fix Dubai 2026",
-  description: "MacBook Pro Flexgate in Dubai? Backlight stage-light effect at the screen bottom. Display cable fix from AED 250, no full screen needed. Free check.",
+  description: "MacBook Pro Flexgate in Dubai? Backlight stage-light effect at the screen bottom. Display cable fix, no full screen needed. Free check, WhatsApp for price.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

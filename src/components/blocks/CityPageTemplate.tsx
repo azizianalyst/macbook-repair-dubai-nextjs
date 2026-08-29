@@ -126,7 +126,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
               {[
-                { t: "WhatsApp 055 741 3706", b: `Send your ${cfg.city} address and the MacBook model. We confirm the collection and an indicative price band.` },
+                { t: "WhatsApp 055 741 3706", b: `Send your ${cfg.city} address and the MacBook model. We confirm the collection and give you the exact price on WhatsApp.` },
                 { t: `Courier collects in ${cfg.city}`, b: `${cfg.collectionWindow}. The device is logged, insured in transit and trackable on WhatsApp.` },
                 { t: "Free workshop diagnosis", b: "We inspect it at our Dubai Media City workshop and send an itemised written quote on WhatsApp." },
                 { t: "Approve and we repair", b: `Reply 'approved' and we get to work. ${cfg.turnaround.charAt(0).toUpperCase()}${cfg.turnaround.slice(1)} for most common repairs.` },
@@ -147,13 +147,13 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           <SectionHeading
             eyebrow="Popular repairs"
             title={`What are the most common MacBook repairs for ${cfg.city} customers?`}
-            sub="Indicative starting prices in AED, the same as for our Dubai customers. The final price is fixed in writing on WhatsApp before any work begins, after a free diagnosis."
+            sub="The same repairs and pricing as for our Dubai customers. Message us on WhatsApp for today's exact price on your model - it's fixed in writing before any work begins, after a free diagnosis."
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <Link key={s.href} to={s.href} className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition">
                 <p className="font-bold text-[16px] mb-1">{s.label}</p>
-                <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · warranty of up to 12 months</p>
+                <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of up to 12 months</p>
               </Link>
             ))}
           </div>
@@ -229,7 +229,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         <CtaBand
           eyebrow={`Free collection in ${cfg.city}`}
           headline={`Book a free collection from ${cfg.city}`}
-          description="WhatsApp your address and MacBook model - we confirm the collection and an indicative price in minutes."
+          description="WhatsApp your address and MacBook model - we confirm the collection and the exact price for your model in minutes."
           whatsappLabel="Book free collection"
           className="mt-3xl"
         />

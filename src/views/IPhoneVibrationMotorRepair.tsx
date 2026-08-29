@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneVibrationMotorRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Vibration Motor Repair Dubai - Taptic Engine | AED 350"
-      seoDescription="iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. AED 350, 1 day, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="iPhone Vibration Motor Repair Dubai - Taptic Engine"
+      seoDescription="iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. 1 day, warranty of up to 12 months. Message us on WhatsApp for a price."
       path="/iphone-vibration-motor-repair-dubai"
       eyebrow="iPhone Taptic Engine"
       h1="iPhone Vibration Motor Repair Dubai - Taptic Engine"
-      subtitle="No buzz on calls, no haptic on keyboard taps, or a worrying rattle when you shake the phone - that's the Taptic Engine. AED 350, 1 day, warranty of up to 12 months."
+      subtitle="No buzz on calls, no haptic on keyboard taps, or a worrying rattle when you shake the phone - that's the Taptic Engine. 1 day, warranty of up to 12 months. Message us on WhatsApp for a price."
       startingPrice={350}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone vibration / Taptic Engine is broken - model:"
@@ -26,7 +26,7 @@ export default function IPhoneVibrationMotorRepair() {
             <strong>The Taptic Engine</strong> in every iPhone since the 7 is a precision linear actuator - far more sophisticated than the spinning eccentric motors of older phones. It produces every vibration, every keyboard tap haptic, every Apple Pay confirmation buzz. When it fails you don't just lose vibration on calls; you lose the entire feel of iOS.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Common failure modes: dropped phone shakes the magnet loose (you'll hear a rattle), water damage corrodes the coil contacts, or the unit simply ages out after 5+ years of constant use. Replacement is a 45-minute job with the phone open from the bottom. AED 350, including a warranty of up to 12 months.
+            Common failure modes: dropped phone shakes the magnet loose (you'll hear a rattle), water damage corrodes the coil contacts, or the unit simply ages out after 5+ years of constant use. Replacement is a 45-minute job with the phone open from the bottom, and includes a warranty of up to 12 months - message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }

@@ -8,7 +8,7 @@ export default function BlogMacBookScreenRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Screen Repair Cost Dubai 2026: All Models"
-      seoDescription="Full MacBook screen repair prices for Dubai 2026: AED 600 (13″ Air) to AED 1,200 (16″ Pro M5 Max). Liquid Retina XDR, Flexgate, Apple Store compared."
+      seoDescription="MacBook screen repair in Dubai for every Air and Pro model — Liquid Retina XDR, Flexgate, Apple Store compared. Message us on WhatsApp for today's exact price."
       path="/blog/macbook-screen-repair-cost-dubai-2026"
       wide
       toc={[
@@ -24,8 +24,8 @@ export default function BlogMacBookScreenRepairCost() {
       ]}
       category="Cost guide · MacBook"
       h1="MacBook Screen Repair Cost Dubai 2026 - Air, Pro, Every Year"
-      hook="MacBook screen repair in Dubai ranges from AED 600 for an older 13″ Air to AED 1,200 for the 16″ MacBook Pro M5 Max - here is the full breakdown by model and panel technology."
-      quickAnswer="MacBook screen repair in Dubai costs AED 600-1,200 in April 2026. Air models start at AED 600, Pro 13/14 sit between AED 800 and 1,000, and 16-inch Pro models with Liquid Retina XDR (mini-LED) reach AED 1,200. Same-day on most Pro models, 1-2 days on Air."
+      hook="MacBook screen repair in Dubai varies by model and panel technology, from the older 13″ Air to the 16″ MacBook Pro M5 Max - here is the full breakdown, and you can WhatsApp us for today's exact price on your model."
+      quickAnswer="MacBook screen repair in Dubai depends on the model and panel type. Air models are the most affordable, the 14-inch Pro sits in the middle, and 16-inch Pro models with Liquid Retina XDR (mini-LED) are the most involved. Most Pro models are same-day and Air is 1-2 days - message us on WhatsApp for the exact price on your MacBook."
       author={{ name: "Shafiq", role: "Senior MacBook display technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -40,19 +40,20 @@ export default function BlogMacBookScreenRepairCost() {
           </p>
           <BlogPriceTable
             caption="MacBook screen repair pricing - MacBook Repair Dubai, April 2026"
+            headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={MACBOOK_SCREEN_PRICES.map((r) => ({
               model: r.model,
-              ours: `AED ${r.price.toLocaleString()}`,
-              apple: `AED ${r.apple_price.toLocaleString()}`,
+              ours: "Price on request",
+              apple: "Price on request",
               note: r.note,
             }))}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing converted from{" "}
+            Apple Store pricing referenced from{" "}
             <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com/mac/repair
-            </a>{" "}
-            USD list to AED on 22 April 2026.
+            </a>
+            , checked 22 April 2026. Message us on WhatsApp for our current price on your model.
           </p>
 
           <h2 id="pro-vs-air">Why MacBook Pro screens cost more than Air</h2>
@@ -67,7 +68,8 @@ export default function BlogMacBookScreenRepairCost() {
             display is bonded to the lid as a single unit - there is no economical way to separate
             the panel from the aluminum lid without specialist heat-table equipment. Apple replaces
             the entire lid assembly. We can salvage the lid and only replace the panel + flex cables
-            in about 70% of cases, which saves you AED 300-500 versus the Apple Store quote.
+            in about 70% of cases, which saves you a meaningful amount versus the Apple Store quote -
+            message us on WhatsApp for the exact price on your model.
           </p>
           <p>
             Third, <strong>ProMotion calibration</strong>. The 14″ and 16″ Pro use a 120Hz adaptive
@@ -112,10 +114,10 @@ export default function BlogMacBookScreenRepairCost() {
           <p>
             Apple ran a free repair program for affected 13″ models through 2022. That program is
             now closed. We still see Flexgate units in the workshop monthly. The fix at our bench
-            is AED 450 - we install a longer aftermarket flex cable that solves the design flaw
-            permanently. If the backlight LEDs themselves are damaged you also need a panel
-            replacement (AED 800 total). 2018 and later models redesigned the cable and are not
-            affected.
+            is to install a longer aftermarket flex cable that solves the design flaw permanently.
+            If the backlight LEDs themselves are damaged you also need a panel replacement. Message
+            us on WhatsApp for the exact price - 2018 and later models redesigned the cable and are
+            not affected.
           </p>
 
           <h2 id="same-day-parts">Same-day vs ordered parts - when to expect each</h2>
@@ -132,7 +134,7 @@ export default function BlogMacBookScreenRepairCost() {
             caption="MacBook Pro 16″ M5 Max - screen repair comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price", ours: `AED ${(MACBOOK_SCREEN_PRICES.find((r) => r.model.includes("M5 Pro/Max") && r.model.includes("16″"))?.price ?? 1200).toLocaleString()}`, apple: "AED 2,099" },
+              { model: "Price", ours: "Price on request", apple: "Price on request" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "Drop-off at Mall of Emirates / Dubai Mall" },
               { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
@@ -172,7 +174,7 @@ export default function BlogMacBookScreenRepairCost() {
         },
         {
           q: "Can you repair just the panel, or do you have to replace the whole lid like Apple?",
-          a: "About 70% of jobs we do panel-only - we keep the original aluminum lid, FaceTime camera, antenna, and hinges, and only swap the broken glass and LCD layer. That's the AED 300-500 saving versus the Apple Store quote. The other 30% (badly bent lids, hinge damage) need a full lid assembly.",
+          a: "About 70% of jobs we do panel-only - we keep the original aluminum lid, FaceTime camera, antenna, and hinges, and only swap the broken glass and LCD layer. That's a real saving versus the Apple Store quote - message us on WhatsApp for the exact price. The other 30% (badly bent lids, hinge damage) need a full lid assembly.",
         },
         {
           q: "Will True Tone still work after MacBook screen repair?",
@@ -184,7 +186,7 @@ export default function BlogMacBookScreenRepairCost() {
         },
         {
           q: "Should I claim on AppleCare+ instead of using a third-party shop?",
-          a: "If you have AppleCare+, the screen repair service fee is AED 367 (USD 99 deductible) - cheaper than us. Use AppleCare+. If you don't have it, our pricing beats Apple's out-of-warranty rate by 35-45%.",
+          a: "If you have AppleCare+, its screen repair service fee is usually the cheapest option - use AppleCare+. If you don't have it, our pricing comfortably beats Apple's out-of-warranty rate. Message us on WhatsApp for the exact price on your model.",
         },
       ]}
       relatedLinks={[

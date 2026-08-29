@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro M3 common problems in Dubai? Wi-Fi 6E drops, display flickering, MagSafe charging issues, thermal throttling on M3 Pro.",
   openGraph: {
     title: "MacBook Pro M3 Common Problems? Fix Guide Dubai 2026",
-    description: "Wi-Fi 6E drops, display flickering, MagSafe charging issues on MacBook Pro M3. Expert fixes in Dubai from AED 200.",
+    description: "Wi-Fi 6E drops, display flickering, MagSafe charging issues on MacBook Pro M3. Expert fixes in Dubai — message us on WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m3-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

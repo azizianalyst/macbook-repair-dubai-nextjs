@@ -7,7 +7,7 @@ export default function BlogIPhone17VsAir() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone 17 vs iPhone Air: Which to Buy in Dubai?"
-      seoDescription="iPhone 17 vs iPhone Air Dubai guide: same A19 chip, different bodies, cameras and battery. Side-by-side specs, prices, repair cost and a verdict by user."
+      seoDescription="iPhone 17 vs iPhone Air Dubai guide: same A19 chip, different bodies, cameras and battery. Side-by-side specs, repair options and a verdict by user."
       path="/blog/iphone-17-vs-iphone-air-which-buy"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogIPhone17VsAir() {
       category="Comparison · iPhone"
       h1="iPhone 17 vs iPhone Air - Dubai Buyer's Guide"
       hook="Same chip. Different bodies. Different cameras. Here's the right choice for you."
-      quickAnswer="Buy iPhone 17 (AED 3,799) if you want a dual-camera system, all-day battery, and 5 colour options. Buy iPhone Air (AED 4,499) if you want the thinnest, lightest titanium body Apple has ever made and accept a single 48MP camera and 6-hour shorter battery life. Both run the same A19 chip."
+      quickAnswer="Buy iPhone 17 if you want a dual-camera system, all-day battery, and 5 colour options at the lower price. Buy iPhone Air if you want the thinnest, lightest titanium body Apple has ever made and accept a single 48MP camera and 6-hour shorter battery life. Both run the same A19 chip."
       author={{ name: "Usman", role: "iPhone repair specialist" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -37,7 +37,7 @@ export default function BlogIPhone17VsAir() {
             <li><strong>I want the thinnest, lightest phone:</strong> iPhone Air (5.6mm, 165g)</li>
             <li><strong>I take a lot of photos:</strong> iPhone 17 (dual camera, 2× telephoto)</li>
             <li><strong>I'm a heavy user:</strong> iPhone 17 (battery lasts 6+ hours longer)</li>
-            <li><strong>I want the cheapest option:</strong> iPhone 17 (AED 700 less)</li>
+            <li><strong>I want the lower-priced option:</strong> iPhone 17 (cheaper at base config)</li>
             <li><strong>I want it to feel like jewellery:</strong> iPhone Air (titanium, glossy)</li>
             <li><strong>I want more colours:</strong> iPhone 17 (5 colours vs Air's 3)</li>
           </ul>
@@ -60,7 +60,7 @@ export default function BlogIPhone17VsAir() {
               { model: "Colours", ours: "5 (Black, White, Pink, Teal, Sage)", apple: "3 (Titanium, Sky Blue, Champagne)", note: "17 = more variety" },
               { model: "RAM", ours: "8 GB", apple: "8 GB", note: "Same" },
               { model: "Connector", ours: "USB-C", apple: "USB-C", note: "Both USB 3.0 speeds" },
-              { model: "Price (UAE)", ours: "AED 3,799 (128GB)", apple: "AED 4,499 (256GB)", note: "Air costs +AED 700" },
+              { model: "Price (UAE)", ours: "Price on request", apple: "Price on request", note: "Message us for current pricing" },
             ]}
           />
 
@@ -86,7 +86,7 @@ export default function BlogIPhone17VsAir() {
             <li>27-hour video battery (vs Air's 21h) - that's a real-world day-and-a-half vs day-and-a-quarter.</li>
             <li>30W fast charging (vs Air's 20W).</li>
             <li>5 colour options including the new Sage and Teal.</li>
-            <li>AED 700 cheaper at base configuration.</li>
+            <li>Cheaper at base configuration.</li>
           </ul>
 
           <h2 id="battery">Battery - Air is shorter, be honest about it</h2>
@@ -114,16 +114,17 @@ export default function BlogIPhone17VsAir() {
 
           <h2 id="price-uae">Price difference in UAE</h2>
           <p>
-            iPhone 17 base (128GB) is AED 3,799. iPhone Air base (256GB) is AED 4,499 - an AED 700
-            premium for the thinner body and bigger storage tier. Match storage for fair comparison:
+            The iPhone Air carries a premium over the iPhone 17 for its thinner body and higher base
+            storage tier. Match storage for a fair comparison, and message us on WhatsApp for today's
+            exact iPhone 17 and iPhone Air prices in Dubai:
           </p>
           <BlogPriceTable
             caption="iPhone 17 vs iPhone Air - like-for-like UAE pricing"
             headers={["Storage", "iPhone 17", "iPhone Air", "Air premium"]}
             rows={[
-              { model: "256 GB", ours: "AED 4,099", apple: "AED 4,499", note: "AED 400" },
-              { model: "512 GB", ours: "AED 4,899", apple: "AED 5,299", note: "AED 400" },
-              { model: "1 TB", ours: "n/a (max 512)", apple: "AED 6,299", note: "Air-only" },
+              { model: "256 GB", ours: "Price on request", apple: "Price on request", note: "Message us" },
+              { model: "512 GB", ours: "Price on request", apple: "Price on request", note: "Message us" },
+              { model: "1 TB", ours: "n/a (max 512)", apple: "Price on request", note: "Air-only" },
             ]}
           />
 
@@ -132,11 +133,11 @@ export default function BlogIPhone17VsAir() {
             caption="iPhone 17 vs Air - repair cost at our Dubai workshop"
             headers={["Repair", "iPhone 17", "iPhone Air", "Notes"]}
             rows={[
-              { model: "Front screen", ours: "AED 950", apple: "AED 1,150", note: "Air = thinner OLED, harder to source" },
-              { model: "Back glass", ours: "AED 550", apple: "AED 800", note: "Air uses titanium frame, more delicate process" },
-              { model: "Battery", ours: "AED 380", apple: "AED 420", note: "Air = thinner, custom shape" },
-              { model: "Charging port", ours: "AED 350", apple: "AED 380", note: "Same connector" },
-              { model: "Rear camera", ours: "AED 650 (main) / AED 450 (ultra)", apple: "AED 700 (main only)", note: "Air = no second cam" },
+              { model: "Front screen", ours: "Price on request", apple: "Price on request", note: "Air = thinner OLED, harder to source" },
+              { model: "Back glass", ours: "Price on request", apple: "Price on request", note: "Air uses titanium frame, more delicate process" },
+              { model: "Battery", ours: "Price on request", apple: "Price on request", note: "Air = thinner, custom shape" },
+              { model: "Charging port", ours: "Price on request", apple: "Price on request", note: "Same connector" },
+              { model: "Rear camera", ours: "Price on request", apple: "Price on request", note: "Air = no second cam" },
             ]}
           />
           <p>
@@ -147,11 +148,11 @@ export default function BlogIPhone17VsAir() {
 
           <h2 id="verdict-by-user">Verdict by user</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Most people (80% of Dubai buyers):</strong> iPhone 17. Better cameras, better battery, AED 700 cheaper.</li>
+            <li><strong>Most people (80% of Dubai buyers):</strong> iPhone 17. Better cameras, better battery, and lower priced.</li>
             <li><strong>Fashion-forward / status-conscious:</strong> iPhone Air. It's the most beautiful iPhone Apple has made.</li>
             <li><strong>Travel-heavy professional:</strong> iPhone 17 - battery anxiety on a long flight is real.</li>
             <li><strong>Photographer / content creator:</strong> iPhone 17 (dual camera) or jump to iPhone 17 Pro (triple).</li>
-            <li><strong>Coming from iPhone 12/13/14:</strong> iPhone 17 - a much bigger upgrade per dirham.</li>
+            <li><strong>Coming from iPhone 12/13/14:</strong> iPhone 17 - a much bigger upgrade for the money.</li>
             <li><strong>Coming from iPhone 16 Plus:</strong> Either is a sidegrade. Wait a year.</li>
           </ul>
 
@@ -201,7 +202,7 @@ export default function BlogIPhone17VsAir() {
       relatedLinks={[
         { label: "iPhone 17 repair page", href: "/iphone-17-repair-dubai", description: "Pricing, common issues, and turnaround." },
         { label: "iPhone Air repair page", href: "/iphone-air-repair-dubai", description: "Specialist titanium-frame repair experience." },
-        { label: "iPhone screen repair cost guide", href: "/blog/iphone-screen-repair-cost-dubai-2026", description: "Every iPhone screen, every price." },
+        { label: "iPhone screen repair cost guide", href: "/blog/iphone-screen-repair-cost-dubai-2026", description: "Every iPhone screen repair, explained." },
       ]}
     />
   );

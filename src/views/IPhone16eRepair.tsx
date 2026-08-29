@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone16eRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 16e Repair Dubai - A18 Budget iPhone from AED 350 | 055 741 3706"
-      seoDescription="iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen AED 700, battery AED 400. Same-day, warranty of up to 12 months."
+      seoTitle="iPhone 16e Repair Dubai - A18 Budget iPhone | 055 741 3706"
+      seoDescription="iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty up to 12 months. WhatsApp for a quote."
       path="/iphone-16e-repair-dubai"
       eyebrow="iPhone 16e (Feb 2025, current budget iPhone)"
       h1="iPhone 16e Repair Dubai - Screen, Battery, USB-C, Camera"
-      subtitle="The current budget iPhone - A18, 6.1-inch OLED, USB-C, Apple Intelligence-capable. Replaced the SE 3. From AED 350."
+      subtitle="The current budget iPhone - A18, 6.1-inch OLED, USB-C, Apple Intelligence-capable. Replaced the SE 3. Message us on WhatsApp for today's price on your model."
       startingPrice={350}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 16e (Feb 2025) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone16eRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPhone 16e owners - we understand. Let's fix it.</strong> The 16e (Feb 2025) was Apple's first true budget iPhone with a modern OLED, A18 chip and USB-C - the long-awaited replacement for the SE 3. 6.1-inch OLED, single 48MP rear camera, Face ID (no Touch ID), no MagSafe, Apple Intelligence-capable. Apple released this 14 months ago. As of April 2026 we've serviced 90+ of these in our workshop - parts are good for screens and batteries; back-glass colour matching may take 1-2 days. AED 700 screen, AED 400 battery.
+            <strong>iPhone 16e owners - we understand. Let's fix it.</strong> The 16e (Feb 2025) was Apple's first true budget iPhone with a modern OLED, A18 chip and USB-C - the long-awaited replacement for the SE 3. 6.1-inch OLED, single 48MP rear camera, Face ID (no Touch ID), no MagSafe, Apple Intelligence-capable. Apple released this 14 months ago. As of April 2026 we've serviced 90+ of these in our workshop - parts are good for screens and batteries; back-glass colour matching may take 1-2 days. Message us on WhatsApp for today's screen and battery prices on your 16e.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 16e</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -48,15 +48,15 @@ export default function IPhone16eRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 16e</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">OLED screen replacement</td><td className="px-md py-sm">700</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">48 MP single camera replacement</td><td className="px-md py-sm">550</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 700</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Back glass replacement</td><td className="px-md py-sm">600</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">OLED screen replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C port replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">48 MP single camera replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Back glass replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
@@ -66,7 +66,7 @@ export default function IPhone16eRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 16e still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Strong yes - Apple still sells it new.</strong> A18, Apple Intelligence, used resale ~AED 1,800-2,200. iOS 24 expected. Any single repair under AED 1,200 is comfortably worthwhile.
+            <strong>Strong yes - Apple still sells it new.</strong> A18, Apple Intelligence, and strong used resale value. iOS 24 expected. A single repair is comfortably worthwhile against the cost of replacing the phone - message us for the exact price on your fault.
           </p>
         </>
       }
@@ -95,16 +95,16 @@ export default function IPhone16eRepair() {
       ]}
       faqs={[
         { q: "What is the Apple C1 modem and why does it matter for repair?", a: "The 16e is the first iPhone with Apple's own cellular modem (C1) instead of Qualcomm. Some users report weaker signal in marginal areas. We test signal strength on all major UAE networks before return - if your repair was network-related we re-verify with carrier-specific testing." },
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,070 (saves AED 30). Battery + USB-C port: AED 770 (saves AED 30)." },
+        { q: "Bundle pricing?", a: "We discount combined jobs like screen + battery or battery + USB-C port. Message us on WhatsApp with what you need and we'll send the bundled price for your 16e." },
         { q: "Does the 16e really not have MagSafe?", a: "Correct - the 16e ships with standard Qi wireless charging only. No MagSafe magnets in the back glass, which actually makes back-glass replacement cheaper than the iPhone 16." },
         { q: "Will the 16e get iOS 19 and beyond?", a: "Yes - A18 with 8 GB RAM is fully Apple-Intelligence-capable. iOS 24 expected." },
         { q: "Same day?", a: "OLED, battery, USB-C, single camera, Action Button - yes." },
       ]}
       reviewNames={["Seyed Moulana", "B Parker"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.1-inch OLED AED 700." },
-        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "AED 400, 45 minutes." },
-        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 2.0 - AED 400." },
+        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.1-inch OLED, same day." },
+        { label: "iPhone Battery Replacement",      href: "/iphone-battery-replacement-dubai",description: "Battery service in 45 minutes." },
+        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 2.0 port repair." },
       ]}
     />
   );

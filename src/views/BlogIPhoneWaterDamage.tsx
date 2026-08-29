@@ -6,13 +6,13 @@ export default function BlogIPhoneWaterDamage() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Water Damage Repair Dubai 2026: What to Do First"
-      seoDescription="iPhone water damage repair Dubai from AED 249. Board-level ultrasonic clean for pool, sea and rain-soaked iPhones. Free diagnosis."
+      seoDescription="iPhone water damage repair Dubai: board-level ultrasonic clean for pool, sea and rain-soaked iPhones. Free diagnosis, same-day. Message us for a quote."
       path="/blog/iphone-water-damage-repair-dubai"
       wide={true}
       category="Fix guide · iPhone"
       h1="iPhone Water Damage Repair Dubai: What to Do the Moment It Happens"
-      hook="iPhone water damage repair in Dubai starts from AED 249 and the first 10 minutes after exposure are critical: power off, do not charge, and bring it in dry rather than using a rice trick that delays real treatment."
-      quickAnswer="iPhone water damage repair in Dubai starts from AED 249. The moment a phone is submerged: power off immediately, do not press any buttons, do not charge it, do not use a hair dryer, and do not put it in rice. Bring it in within 2 hours for ultrasonic board cleaning and component repair to maximise recovery."
+      hook="With iPhone water damage in Dubai, the first 10 minutes after exposure are critical: power off, do not charge, and bring it in dry rather than using a rice trick that delays real treatment. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="The moment an iPhone is submerged in Dubai: power off immediately, do not press any buttons, do not charge it, do not use a hair dryer, and do not put it in rice. Bring it in within 2 hours for ultrasonic board cleaning and component repair to maximise recovery. Message us on WhatsApp for a quote on your model."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -45,7 +45,7 @@ export default function BlogIPhoneWaterDamage() {
         },
         {
           q: "Will ultrasonic cleaning fix my specific problem, for example no sound or charging not working?",
-          a: "Ultrasonic cleaning removes the corrosion causing the fault in many cases, but it depends on what the corrosion has damaged. If a charging IC has been shorted and destroyed, cleaning alone will not restore charging: the IC needs to be replaced under the microscope. If the speaker grille is blocked by mineral deposits but the speaker driver itself is intact, cleaning restores audio. We diagnose after cleaning and give you a clear breakdown: what the clean fixed, what still needs component-level work, and what the component repair costs before we proceed.",
+          a: "Ultrasonic cleaning removes the corrosion causing the fault in many cases, but it depends on what the corrosion has damaged. If a charging IC has been shorted and destroyed, cleaning alone will not restore charging: the IC needs to be replaced under the microscope. If the speaker grille is blocked by mineral deposits but the speaker driver itself is intact, cleaning restores audio. We diagnose after cleaning and give you a clear breakdown: what the clean fixed, what still needs component-level work, and a quote for any component repair before we proceed.",
         },
         {
           q: "How long does iPhone water damage repair take in Dubai?",
@@ -169,7 +169,7 @@ export default function BlogIPhoneWaterDamage() {
             <p>
               We see this pattern regularly: a customer's phone survived a pool drop with minor corrosion,
               they charged it to test it, and the charging IC was destroyed in the process. What would
-              have been a AED 249 ultrasonic clean became a AED 450 component repair because of one
+              have been a straightforward ultrasonic clean became a full component repair because of one
               charging attempt.
             </p>
             <p>
@@ -236,18 +236,19 @@ export default function BlogIPhoneWaterDamage() {
               caption="iPhone water damage repair pricing. MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Water damage diagnosis", ours: "AED 0", apple: "AED 200+" },
-                { model: "Ultrasonic board clean", ours: "AED 249", apple: "AED 500+" },
-                { model: "Component replacement", ours: "AED 350", apple: "AED 800+" },
-                { model: "Logic board repair", ours: "AED 400", apple: "AED 900+" },
-                { model: "Data recovery (water)", ours: "AED 500", apple: "AED 1,500+" },
+                { model: "Water damage diagnosis", ours: "Free", apple: "Price on request" },
+                { model: "Ultrasonic board clean", ours: "Price on request", apple: "Price on request" },
+                { model: "Component replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Data recovery (water)", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>
-              The ultrasonic clean at AED 249 covers full disassembly, bath cleaning, rinse, and
+              The ultrasonic clean covers full disassembly, bath cleaning, rinse, and
               low-temperature drying, plus a post-clean functional test. If component replacement is
               also needed, the component cost is quoted separately and added to the clean fee. You
-              approve the full cost before work proceeds.
+              approve the full cost before work proceeds. Message us on WhatsApp for today's exact
+              price on your model.
             </p>
             <p>
               Data recovery for phones that will not power on at all is quoted individually after

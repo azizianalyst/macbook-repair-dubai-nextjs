@@ -4,10 +4,10 @@ import View from "@/views/BlogIPadScreenRepair";
 
 export const metadata: Metadata = {
   title: "iPad Screen Repair Cost Dubai 2026: Prices by Model",
-  description: "iPad screen repair cost Dubai from AED 250. All models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service.",
+  description: "iPad screen repair cost Dubai — all models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service. Message us on WhatsApp for your model's price.",
   openGraph: {
     title: "iPad Screen Repair Cost Dubai 2026: Prices by Model",
-    description: "iPad screen repair cost Dubai from AED 250. All models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service.",
+    description: "iPad screen repair cost Dubai — all models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service. Message us on WhatsApp for your model's price.",
     url: "https://macbook-repair-dubai.ae/blog/ipad-screen-repair-cost-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "iPad Screen Repair Cost Dubai 2026: Prices by Model",
-    description: "iPad screen repair cost Dubai from AED 250. All models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service.",
+    description: "iPad screen repair cost Dubai — all models: iPad Pro OLED, Air LCD, mini. Free diagnosis, same-day service. Message us on WhatsApp for your model's price.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

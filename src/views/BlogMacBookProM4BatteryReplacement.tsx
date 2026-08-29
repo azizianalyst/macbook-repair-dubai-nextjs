@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM4BatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M4 Battery Replacement Cost Dubai 2026: AED Prices and Guide"
-      seoDescription="MacBook Pro M4 battery replacement cost in Dubai 2026. When to replace, swollen battery warning signs, and what to expect after replacement. Prices from AED 600."
+      seoTitle="MacBook Pro M4 Battery Replacement Dubai 2026: Cost and Guide"
+      seoDescription="MacBook Pro M4 battery replacement in Dubai 2026. When to replace, swollen battery warning signs, what to expect after. Message us on WhatsApp for today's price."
       path="/blog/macbook-pro-m4-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookProM4BatteryReplacement() {
         { id: "warranty", label: "AppleCare vs independent repair warranty" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M4 Battery Replacement Cost in Dubai 2026: When to Replace and AED Prices"
-      hook="MacBook Pro M4 battery replacement costs AED 600 (14-inch) or AED 650 (16-inch) at our Dubai workshop, versus AED 999-1,099 at Apple. The right time to replace is when capacity drops below 80% or the system shows Replace Soon, not when the machine is new and showing normal optimised charging behaviour."
-      quickAnswer="MacBook Pro M4 battery replacement costs AED 600 for the 14-inch and AED 650 for the 16-inch in Dubai. Replace when: maximum capacity is below 80%, the M4 shuts down unexpectedly under load, or the battery shows physical swelling (trackpad rising, case gaps). Apple charges AED 999 (14-inch) and AED 1,099 (16-inch). Same-day service with 12-month warranty."
+      h1="MacBook Pro M4 Battery Replacement in Dubai 2026: When to Replace and What to Expect"
+      hook="MacBook Pro M4 battery replacement at our Dubai workshop covers both the 14-inch and 16-inch, and typically costs well below Apple's out-of-warranty rate. Message us on WhatsApp for today's exact price on your model. The right time to replace is when capacity drops below 80% or the system shows Replace Soon, not when the machine is new and showing normal optimised charging behaviour."
+      quickAnswer="Replace your MacBook Pro M4 battery when: maximum capacity is below 80%, the M4 shuts down unexpectedly under load, or the battery shows physical swelling (trackpad rising, case gaps). We cover both the 14-inch and 16-inch in Dubai with same-day service and a 12-month warranty, usually well under Apple's rate. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -120,19 +120,20 @@ export default function BlogMacBookProM4BatteryReplacement() {
 
           <h2 id="repair-cost">MacBook Pro M4 battery replacement cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M4 battery replacement pricing. June 2026"
+            caption="MacBook Pro M4 battery replacement. June 2026"
+            headers={["Model", "Our service", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M4 14-inch battery", ours: "AED 600", apple: "AED 999", note: "70.8 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M4 16-inch battery", ours: "AED 650", apple: "AED 1,099", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Battery + trackpad repair (if swelling caused damage)", ours: "AED 750-900", apple: "AED 1,399+", note: "Both replaced together: swelling trackpad pressure damage" },
-              { model: "Battery health check (no repair)", ours: "Free", apple: "AED 250", note: "Cycle count, capacity, cell voltage check" },
+              { model: "MacBook Pro M4 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70.8 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M4 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Battery + trackpad repair (if swelling caused damage)", ours: "Price on request", apple: "Price on request", note: "Both replaced together: swelling trackpad pressure damage" },
+              { model: "Battery health check (no repair)", ours: "Free", apple: "Price on request", note: "Cycle count, capacity, cell voltage check" },
             ]}
           />
 
           <h2 id="warranty">AppleCare vs independent repair: battery warranty in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Under AppleCare+</strong>: battery replacement is covered at no cost when capacity drops below 80% within the AppleCare period. In UAE, AppleCare+ is purchased at point of sale from Apple or authorised resellers (Sharaf DG, iStyle, etc.)</li>
-            <li><strong>Without AppleCare+</strong>: Apple's out-of-warranty battery replacement in UAE is AED 999 (14-inch) or AED 1,099 (16-inch). We charge AED 600-650 with a 12-month parts and labour warranty</li>
+            <li><strong>Without AppleCare+</strong>: Apple's out-of-warranty battery replacement in UAE is significantly more expensive than an independent repair. We come in well below Apple's rate with a 12-month parts and labour warranty. Message us on WhatsApp for today's exact price on your 14-inch or 16-inch</li>
             <li><strong>Warranty after independent repair</strong>: a genuine battery replacement at a non-Apple service provider does not void the remaining warranty on other M4 components under UAE consumer protection law (Federal Decree-Law No. 5 of 2023). Apple may decline future battery-related warranty claims on that unit</li>
           </ul>
           <p>
@@ -145,7 +146,7 @@ export default function BlogMacBookProM4BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M4 battery replacement cost in Dubai?",
-          a: "MacBook Pro M4 14-inch battery replacement costs AED 600 at our Dubai workshop. The 16-inch costs AED 650. Apple charges AED 999 (14-inch) and AED 1,099 (16-inch). We use OEM-grade replacement cells with a 12-month warranty. Same-day service when you drop off by noon.",
+          a: "We replace the MacBook Pro M4 battery on both the 14-inch and 16-inch in Dubai, usually well below Apple's out-of-warranty rate. We use OEM-grade replacement cells with a 12-month warranty and offer same-day service when you drop off by noon. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "How long does MacBook Pro M4 battery last in Dubai?",

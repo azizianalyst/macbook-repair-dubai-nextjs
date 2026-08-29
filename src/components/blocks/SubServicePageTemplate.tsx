@@ -263,7 +263,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <CtaBand
           className="mt-3xl"
           headline={`Book your ${p.serviceName} on WhatsApp`}
-          description={`${p.startingPrice > 0 ? `From AED ${p.startingPrice}. ` : ""}Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
+          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
         />
 
       </div>

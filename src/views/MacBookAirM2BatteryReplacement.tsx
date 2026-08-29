@@ -7,19 +7,19 @@ export default function MacBookAirM2BatteryReplacement() {
       path="/macbook-air-m2-battery-replacement-dubai"
       chip="M2"
       years="2022–2023"
-      seoTitle="MacBook Air M2 Battery Replacement Dubai — From AED 450"
-      seoDescription="MacBook Air M2 battery replacement Dubai from AED 450 (13-inch) or AED 500 (15-inch). BMS re-pair included. Same-day service. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air M2 Battery Replacement Dubai — Same-Day Service"
+      seoDescription="MacBook Air M2 battery replacement in Dubai (13-inch & 15-inch). BMS re-pair included. Same-day service. Free diagnosis. Message us on WhatsApp for today's price."
       h1="MacBook Air M2 Battery Replacement Dubai"
       eyebrow="M2 Air battery specialist · Dubai Media City · BMS re-pair included"
       capacity="52.6 Wh (13-inch) / 66.5 Wh (15-inch)"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + USB-C (Thunderbolt / USB 4)"
-      heroAnswer="MacBook Air M2 battery replacement costs AED 450 for the 13-inch and AED 500 for the 15-inch at MacBook Repair Dubai. The M2 Air introduced larger batteries than the M1 (52.6 Wh on 13-inch, 66.5 Wh on 15-inch) along with MagSafe 3. BMS firmware re-pair is included. Same-day 2-hour service."
+      heroAnswer="MacBook Air M2 battery replacement covers both the 13-inch and 15-inch at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your model. The M2 Air introduced larger batteries than the M1 (52.6 Wh on 13-inch, 66.5 Wh on 15-inch) along with MagSafe 3. BMS firmware re-pair is included. Same-day 2-hour service."
       chipUniquePoints={[
         "The MacBook Air M2 was the first complete redesign of the Air chassis since 2010 — thinner, no tapered edge, and a notch display. The battery is also larger than the M1: 52.6 Wh on the 13-inch and 66.5 Wh on the 15-inch. Apple quotes 18 hours (13-inch) and 15 hours (15-inch). A new cell restores that full rated life.",
         "A known issue on MacBook Air M2 models with 256 GB SSD (especially early 2022 production runs) is elevated background disk activity that drains the battery faster than expected. This is a firmware and SSD controller issue, not a battery fault. Replacing the battery will not fix this specific case — the fix is disabling spotlight indexing on that SSD tier or monitoring with Activity Monitor. We check for this before recommending battery replacement.",
         "MagSafe 3 returned on the M2 Air. If your M2 Air charges only via USB-C and not via MagSafe, the MagSafe board (a separate daughter board) may be the issue rather than the battery. We check both charging paths as part of free diagnosis.",
-        "M2 Air batteries require BMS firmware re-pair after replacement, same as M1. Without re-pair, macOS will report inaccurate capacity and cycle count, and Optimized Charging will not calibrate correctly. BMS re-pair is included in our AED 450 / AED 500 price.",
+        "M2 Air batteries require BMS firmware re-pair after replacement, same as M1. Without re-pair, macOS will report inaccurate capacity and cycle count, and Optimized Charging will not calibrate correctly. BMS re-pair is included in our price — message us on WhatsApp for the exact figure on your model.",
         "The M2 15-inch Air launched in 2023 and is 2–3 years old in Dubai. Many are still under 500 cycles and will not need battery replacement yet. But high Dubai ambient temperatures (40°C+) can degrade cells calendrically even at low cycle counts. Use coconutBattery to check maximum capacity — below 85% at under 400 cycles suggests heat damage.",
       ]}
       prices={[
@@ -45,7 +45,7 @@ export default function MacBookAirM2BatteryReplacement() {
         },
         {
           title: "macOS shows Service Recommended on M2 Air",
-          body: "Triggered when maximum capacity drops below roughly 80% or cycles exceed 1,000. AED 450 for 13-inch, AED 500 for 15-inch. Includes BMS re-pair. Capacity restored to 100% after replacement.",
+          body: "Triggered when maximum capacity drops below roughly 80% or cycles exceed 1,000. Replacement covers both the 13-inch and 15-inch and includes BMS re-pair — message us on WhatsApp for today's exact price. Capacity restored to 100% after replacement.",
         },
         {
           title: "M2 Air won't charge via MagSafe but charges via USB-C",
@@ -53,11 +53,11 @@ export default function MacBookAirM2BatteryReplacement() {
         },
         {
           title: "Battery percentage dropping fast — M2 Air 15-inch",
-          body: "The 15-inch M2 Air has a 66.5 Wh cell — larger than the 13-inch but still rated 1,000 cycles. Heavy use with sustained brightness and external displays reduces effective life. Below 80% capacity: AED 500 replacement with same-day service.",
+          body: "The 15-inch M2 Air has a 66.5 Wh cell — larger than the 13-inch but still rated 1,000 cycles. Heavy use with sustained brightness and external displays reduces effective life. Below 80% capacity we recommend replacement with same-day service — message us on WhatsApp for the exact price.",
         },
         {
           title: "M2 Air runs warm even on light tasks",
-          body: "The M2 Air is fanless — all heat dissipates through the chassis. Under sustained load (4K video export, Xcode builds) the bottom can reach 40°C+, which stresses the battery. If combined with low capacity readings, the cell needs replacement. AED 450 / 500.",
+          body: "The M2 Air is fanless — all heat dissipates through the chassis. Under sustained load (4K video export, Xcode builds) the bottom can reach 40°C+, which stresses the battery. If combined with low capacity readings, the cell needs replacement — message us on WhatsApp for today's exact price.",
         },
         {
           title: "Optimized Charging stuck, won't charge past 80%",
@@ -67,7 +67,7 @@ export default function MacBookAirM2BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air M2 battery replacement cost in Dubai?",
-          a: "MacBook Air M2 13-inch battery replacement is AED 450; 15-inch is AED 500. Both prices include the new cell, BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Same-day 2-hour service at our Dubai Media City workshop.",
+          a: "We cover both the 13-inch and 15-inch M2 Air — message us on WhatsApp for today's exact price on your model. Every replacement includes the new cell, BMS firmware re-pair, adhesive refitting, labour, and a written warranty. Same-day 2-hour service at our Dubai Media City workshop.",
         },
         {
           q: "Does the M2 Air 256 GB SSD drain issue affect battery replacement?",
@@ -75,7 +75,7 @@ export default function MacBookAirM2BatteryReplacement() {
         },
         {
           q: "Does the MacBook Air M2 need BMS re-pair after battery replacement?",
-          a: "Yes. All M2 and newer Apple Silicon Macs require BMS (Battery Management System) firmware re-pair after battery replacement so macOS accurately reports capacity, cycle count, and charging health. BMS re-pair is included in our AED 450 / 500 price.",
+          a: "Yes. All M2 and newer Apple Silicon Macs require BMS (Battery Management System) firmware re-pair after battery replacement so macOS accurately reports capacity, cycle count, and charging health. BMS re-pair is included in our price — message us on WhatsApp for the exact figure on your model.",
         },
         {
           q: "How long does MacBook Air M2 battery replacement take?",
@@ -83,7 +83,7 @@ export default function MacBookAirM2BatteryReplacement() {
         },
         {
           q: "Is it worth replacing the M2 Air battery in 2026?",
-          a: "Yes. The M2 Air supports macOS Sequoia and will receive updates through at least 2028. At AED 450–500 versus AED 4,999 for a new M4 Air, battery replacement is excellent value if the machine is otherwise healthy. The M2 chip handles all daily tasks without issue.",
+          a: "Yes. The M2 Air supports macOS Sequoia and will receive updates through at least 2028. Battery replacement is a fraction of the cost of a new M4 Air, so it is excellent value if the machine is otherwise healthy — message us on WhatsApp for the exact price. The M2 chip handles all daily tasks without issue.",
         },
       ]}
       blogHref="/blog/macbook-air-battery-drain-dubai"

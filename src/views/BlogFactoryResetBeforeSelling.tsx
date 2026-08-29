@@ -63,7 +63,7 @@ export default function BlogFactoryResetBeforeSelling() {
             of these:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iCloud (easiest)</strong>: Settings → [Your Name] → iCloud → iCloud Backup → Back Up Now. Wi-Fi required. 5 GB free, AED 3.99/mo for 50 GB.</li>
+            <li><strong>iCloud (easiest)</strong>: Settings → [Your Name] → iCloud → iCloud Backup → Back Up Now. Wi-Fi required. 5 GB free, with paid tiers available if you need more space for the backup.</li>
             <li><strong>Mac (best for privacy)</strong>: Connect via cable → open Finder → select iPhone in sidebar → "Back up all data on iPhone" → tick "Encrypt local backup" → set password. Encrypted backup also saves Health, Keychain, Wi-Fi passwords.</li>
             <li><strong>PC</strong>: Apple Devices app (Windows 11) or iTunes (Windows 10). Same options.</li>
           </ul>

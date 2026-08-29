@@ -7,7 +7,7 @@ export default function BlogMacBookProIntelGpuFailure() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Intel AMD GPU Failure Dubai 2026: 2017-2019 15-inch Fix"
-      seoDescription="MacBook Pro Intel AMD GPU failure in Dubai? 2017-2019 15-inch with Radeon Pro dGPU had solder joint failures. Black screen, lines, or no display. Repair from AED 800."
+      seoDescription="MacBook Pro Intel AMD GPU failure in Dubai? 2017-2019 15-inch with Radeon Pro dGPU had solder joint failures. Black screen, lines, or no display. Message us for a quote."
       path="/blog/macbook-pro-intel-gpu-failure-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProIntelGpuFailure() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Intel AMD GPU Failure in Dubai? 2017-2019 15-inch Fix Guide"
-      hook="MacBook Pro 15-inch 2017-2019 with discrete AMD Radeon Pro GPUs have a documented solder joint failure at the AMD GPU BGA package. In Dubai, where thermal cycling between air-conditioned offices and outdoor heat is more extreme than Apple's test conditions, GPU solder failures have appeared earlier and more frequently than in cooler climates. GPU BGA reball costs AED 800-1,200 in Dubai versus logic board replacement at AED 2,500+."
+      hook="MacBook Pro 15-inch 2017-2019 with discrete AMD Radeon Pro GPUs have a documented solder joint failure at the AMD GPU BGA package. In Dubai, where thermal cycling between air-conditioned offices and outdoor heat is more extreme than Apple's test conditions, GPU solder failures have appeared earlier and more frequently than in cooler climates. GPU BGA reball in Dubai is typically far cheaper than an Apple logic board replacement, message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Pro Intel AMD GPU failure symptoms: black screen on wake, lines across display, random video corruption during GPU-intensive tasks, or failure to detect external monitors while internal works. First try: force quit GPU-switching by holding Cmd+Shift+Option+Power for 10 seconds (SMC reset). Disable automatic GPU switching in System Preferences, Battery: forces Intel iGPU only, which may restore function. This is a workaround only; the AMD GPU BGA solder joint fault requires physical repair."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -66,7 +66,7 @@ export default function BlogMacBookProIntelGpuFailure() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Apple ran a "MacBook Pro Video Issues" service program for 2017 MacBook Pro 15-inch with AMD Radeon Pro 555/560. This program is now expired (ended 2022)</li>
             <li>For 2018-2019 models: no official repair program was run. Apple offered component board repair under AppleCare+, but out-of-warranty cost was full logic board replacement</li>
-            <li>Independent repair: BGA reball (reflowing or replacing the AMD GPU solder balls) is an established procedure at specialist board-level repair shops in Dubai. Cost is AED 800-1,200 vs Apple's AED 2,500+ board replacement</li>
+            <li>Independent repair: BGA reball (reflowing or replacing the AMD GPU solder balls) is an established procedure at specialist board-level repair shops in Dubai. It is typically far cheaper than Apple's full board replacement, message us on WhatsApp for the exact price on your model</li>
           </ul>
 
           <h2 id="step-4">Step 4: Data backup before MacBook Pro Intel GPU repair</h2>
@@ -122,17 +122,17 @@ export default function BlogMacBookProIntelGpuFailure() {
           <BlogPriceTable
             caption="MacBook Pro Intel AMD GPU repair pricing. June 2026"
             rows={[
-              { model: "AMD GPU BGA reball (2017 15-inch)", ours: "AED 800", apple: "Logic board replacement AED 2,500+", note: "3-5 day turnaround, 3-month warranty on joint" },
-              { model: "AMD GPU BGA reball (2018-2019 15-inch)", ours: "AED 1,000", apple: "Logic board replacement AED 2,500+", note: "Higher board complexity: 2018-2019 T2 chip" },
-              { model: "Intel MacBook Pro board-level diagnostic", ours: "Free", apple: "AED 250", note: "GPU switching test, iGPU vs dGPU isolation" },
-              { model: "Data recovery before GPU repair", ours: "AED 200", apple: "AED 500+", note: "Full backup to external drive before any board work" },
+              { model: "AMD GPU BGA reball (2017 15-inch)", ours: "Price on request", apple: "Logic board replacement", note: "3-5 day turnaround, 3-month warranty on joint" },
+              { model: "AMD GPU BGA reball (2018-2019 15-inch)", ours: "Price on request", apple: "Logic board replacement", note: "Higher board complexity: 2018-2019 T2 chip" },
+              { model: "Intel MacBook Pro board-level diagnostic", ours: "Free", apple: "Price on request", note: "GPU switching test, iGPU vs dGPU isolation" },
+              { model: "Data recovery before GPU repair", ours: "Price on request", apple: "Price on request", note: "Full backup to external drive before any board work" },
             ]}
           />
 
           <h2 id="when-reball">BGA reball vs logic board replacement for Intel MacBook Pro GPU fault</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>BGA reball</strong>: the failing AMD GPU chip is removed, old solder balls are cleaned, new solder balls are applied, and the chip is reflowed back onto the board. When successful, GPU function is fully restored. 3-month warranty on the reball joint. Success rate approximately 85-90% at our Dubai workshop</li>
-            <li><strong>Logic board replacement</strong>: Apple's default response. Costs AED 2,500+ and provides a refurbished board (which may itself be a rework of a previously-failed board). No data loss since SSD stays with original board, but the SSD is returned to you and you reinstall it in the replacement board</li>
+            <li><strong>Logic board replacement</strong>: Apple's default response. It is the most expensive path and provides a refurbished board (which may itself be a rework of a previously-failed board). No data loss since SSD stays with original board, but the SSD is returned to you and you reinstall it in the replacement board</li>
             <li><strong>When to choose replacement over reball</strong>: if the board has additional faults (T2 chip issue, charging IC fault), if the machine has significant liquid corrosion, or if reball has already been attempted once and failed again within 6 months</li>
           </ul>
           <p>
@@ -157,7 +157,7 @@ export default function BlogMacBookProIntelGpuFailure() {
         },
         {
           q: "How much does MacBook Pro Intel AMD GPU repair cost in Dubai?",
-          a: "AMD GPU BGA reball costs AED 800 (2017 15-inch) or AED 1,000 (2018-2019 15-inch). This restores full GPU function with a 3-month warranty. Apple's equivalent is logic board replacement at AED 2,500+. Free diagnosis to confirm GPU is the fault before repair. Data backup before board work costs AED 200.",
+          a: "AMD GPU BGA reball on the 2017 or 2018-2019 15-inch restores full GPU function with a 3-month warranty, and is far cheaper than Apple's equivalent logic board replacement. Diagnosis to confirm the GPU is the fault is free. Message us on WhatsApp for today's exact price on your model, including data backup before board work.",
         },
         {
           q: "Did Apple have a free repair program for MacBook Pro Intel GPU failure?",

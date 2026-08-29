@@ -7,7 +7,7 @@ export default function BlogMacBookProM3NotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide"
-      seoDescription="MacBook Pro M3 not turning on in Dubai? Dead, black screen, or won't boot after update. Force restart, deep discharge fix, DFU restore guide. Repair from AED 350."
+      seoDescription="MacBook Pro M3 not turning on in Dubai? Dead, black screen, or won't boot after update. Force restart, deep discharge fix, DFU restore guide. Free diagnosis."
       path="/blog/macbook-pro-m3-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM3NotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 Not Turning On in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 not turning on covers three distinct situations that require different fixes: completely dead (no response whatsoever), black screen with the system running, and stuck mid-boot after a Sonoma update. The Sonoma update failure case is specific to M3 and requires DFU restore via Apple Configurator 2. Logic board repair starts from AED 350 in Dubai."
+      hook="MacBook Pro M3 not turning on covers three distinct situations that require different fixes: completely dead (no response whatsoever), black screen with the system running, and stuck mid-boot after a Sonoma update. The Sonoma update failure case is specific to M3 and requires DFU restore via Apple Configurator 2. For logic board repair, message us on WhatsApp for today's exact price on your M3."
       quickAnswer="MacBook Pro M3 not turning on: hold power button 10 seconds (force restart). If no response, plug in and wait 30 minutes before pressing power (deep discharge). If you hear fans or Touch ID responds but screen is dark, connect external monitor: if external shows desktop, the M3 is running with a display fault. For M3 stuck after a failed Sonoma update, use Apple Configurator 2 on a second Mac to revive without data loss."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -114,11 +114,11 @@ export default function BlogMacBookProM3NotTurningOn() {
           <BlogPriceTable
             caption="MacBook Pro M3 startup fault repair pricing. June 2026"
             rows={[
-              { model: "Battery replacement (deep discharge or dead battery)", ours: "AED 550-600", apple: "AED 899-999", note: "Most common hardware cause for M3 not turning on" },
-              { model: "mini-LED display (black screen, M3 is running)", ours: "AED 500-650", apple: "AED 1,099-1,299", note: "If external monitor confirms M3 is on" },
-              { model: "MagSafe charging board repair", ours: "AED 350", apple: "AED 600+", note: "M3 not charging so not starting" },
-              { model: "Logic board fault (PMIC/charging IC)", ours: "AED 600-1,100", apple: "Logic board AED 2,500+", note: "Component-level repair" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Confirm exact fault before repair" },
+              { model: "Battery replacement (deep discharge or dead battery)", ours: "Price on request", apple: "Price on request", note: "Most common hardware cause for M3 not turning on" },
+              { model: "mini-LED display (black screen, M3 is running)", ours: "Price on request", apple: "Price on request", note: "If external monitor confirms M3 is on" },
+              { model: "MagSafe charging board repair", ours: "Price on request", apple: "Price on request", note: "M3 not charging so not starting" },
+              { model: "Logic board fault (PMIC/charging IC)", ours: "Price on request", apple: "Price on request", note: "Component-level repair" },
+              { model: "Diagnostic", ours: "Free", apple: "Price on request", note: "Confirm exact fault before repair" },
             ]}
           />
 
@@ -159,7 +159,7 @@ export default function BlogMacBookProM3NotTurningOn() {
         },
         {
           q: "How much does MacBook Pro M3 not turning on repair cost in Dubai?",
-          a: "Depends on the fault. Battery replacement (most common cause) costs AED 550-600. Display fault repair costs AED 500-650. MagSafe port repair costs AED 350. Logic board fault costs AED 600-1,100. Free diagnosis to identify the exact cause before any repair quote.",
+          a: "It depends on the fault: battery replacement is the most common cause, followed by display fault repair, MagSafe port repair, and logic board repair. We offer free diagnosis to identify the exact cause first, then message us on WhatsApp for today's exact price on your M3.",
         },
       ]}
       relatedLinks={[

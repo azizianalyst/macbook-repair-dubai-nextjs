@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro M2 common problems in Dubai? 13-inch SSD write amplification, charging faults, HDMI output glitches, battery swelling in older units.",
   openGraph: {
     title: "MacBook Pro M2 Common Problems? Fix Guide Dubai 2026",
-    description: "SSD write amplification, charging faults, HDMI glitches on MacBook Pro M2. Expert fixes in Dubai from AED 200.",
+    description: "SSD write amplification, charging faults, HDMI glitches on MacBook Pro M2. Expert fixes in Dubai — message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m2-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",

@@ -52,7 +52,7 @@ export default function BlogMacBookScreenFlickering() {
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair
             </Link>{" "}
-            starts at AED 600.
+            team can sort it, usually the same day — message us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             <strong>Software flicker</strong> tends to come and go. It shows up after a macOS update,
@@ -151,14 +151,14 @@ export default function BlogMacBookScreenFlickering() {
           <h2 id="repair-cost-dubai">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
-            is free, so you'll know which of the three it is before you commit to anything. The prices
-            below are VAT-inclusive and depend on the model.
+            is free, so you'll know which of the three it is before you commit to anything. The price
+            depends on the model and which fault it turns out to be, and it's always VAT-inclusive.
           </p>
           <p>
-            A display or flex-cable replacement runs AED 600 to 1,200. A backlight or panel-driver
-            board repair is AED 350 to 800, since we work at component level where we can rather than
-            replacing the whole screen. GPU and logic-board work starts from AED 800. If you'd rather
-            we just check it first, book a{" "}
+            A display or flex-cable replacement is the most common fix. A backlight or panel-driver
+            board repair is often cheaper, since we work at component level where we can rather than
+            replacing the whole screen. GPU and logic-board work is bench work. Message us on WhatsApp
+            with your model for today's exact price, or if you'd rather we just check it first, book a{" "}
             <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
@@ -179,7 +179,7 @@ export default function BlogMacBookScreenFlickering() {
         },
         {
           q: "How much does it cost to fix a flickering MacBook screen in Dubai?",
-          a: "It depends which fault it is, and the diagnostic to find out is free. A display or flex-cable replacement is AED 600 to 1,200. A backlight or panel-driver board repair is AED 350 to 800. GPU and board work starts from AED 800. All prices are VAT-inclusive. WhatsApp the serial first for a tighter estimate.",
+          a: "It depends which fault it is, and the diagnostic to find out is free. A display or flex-cable replacement is the most common fix; a backlight or panel-driver board repair is often cheaper; GPU and board work is bench work. All prices are VAT-inclusive. WhatsApp the serial with your model and we'll send the exact price for your MacBook.",
         },
         {
           q: "Is a flickering screen the Flexgate problem?",

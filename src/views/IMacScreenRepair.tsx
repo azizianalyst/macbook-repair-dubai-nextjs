@@ -5,12 +5,12 @@ export default function IMacScreenRepair() {
   return (
     <DevicePageTemplate
       family="imac"
-      seoTitle={`iMac Screen Repair Dubai - From AED 800 | 24" M-Series & 27" 5K | Call 055 741 3706`}
-      seoDescription={`iMac screen repair Dubai. 24" M1/M2/M3/M4 and 27" Intel 5K Retina. Adhesive removal, dust-free reseal, full calibration. From AED 800. Call 055 741 3706.`}
+      seoTitle={`iMac Screen Repair Dubai | 24" M-Series & 27" 5K | Call 055 741 3706`}
+      seoDescription={`iMac screen repair Dubai. 24" M1/M2/M3/M4 and 27" Intel 5K Retina. Adhesive removal, dust-free reseal, full calibration. Message us for your quote. Call 055 741 3706.`}
       path="/imac-screen-repair-dubai"
       eyebrow="iMac screen repair"
       h1={`iMac Screen Repair Dubai - 24" M1/M2/M3/M4 + 27" Intel`}
-      subtitle={`Cracked glass, dead pixels, backlight gone, lines on the panel. iMac displays are bonded to the chassis - we cut, swap, and reseal dust-free in our clean bench. From AED 800.`}
+      subtitle={`Cracked glass, dead pixels, backlight gone, lines on the panel. iMac displays are bonded to the chassis - we cut, swap, and reseal dust-free in our clean bench. Message us on WhatsApp for today's exact price on your model.`}
       startingPrice={800}
       timeline="2-3 days"
       whatsappPrefill="Hi, my iMac screen is damaged - model and year:"
@@ -53,7 +53,7 @@ export default function IMacScreenRepair() {
       problems={[
         { title: "Cracked front glass, panel still works", body: `On 27" Retina pre-2012 models the glass was a separate magnetic panel. On every modern iMac (Late 2012 onwards) glass and LCD are a single laminated assembly - you can't replace just the glass.` },
         { title: "Dead pixels or vertical lines", body: `Dropped or impacted iMacs often show line clusters or stuck pixels. LCD-side fault. Full panel swap on 24" M-series. On 27" Intel we sometimes recover with a flex-cable reseat - diagnosed first, no charge if not viable.` },
-        { title: "Backlight gone - image faintly visible with a torch", body: `Backlight LED string failure. Common on 2017-2020 27" 5K models. Backlight rework AED 800 if isolated, full panel AED 1,000 if the string is integral.` },
+        { title: "Backlight gone - image faintly visible with a torch", body: `Backlight LED string failure. Common on 2017-2020 27" 5K models. Backlight rework if the fault is isolated, full panel if the string is integral - message us for the exact price on your model.` },
         { title: "Pink or yellow tint across the screen", body: "Display flex degradation or panel ageing. Calibration reset first; if that doesn't restore neutral whites, panel replacement is the only fix." },
         { title: "Dust trapped behind the glass", body: "Usually after a previous repair somewhere else. We strip the adhesive, ultrasonically clean the inside of the glass and the LCD top surface, reseal in our dust-controlled area." },
         { title: `Image shifted or "shadow" of a previous frame`, body: "Image retention on 5K Retina panels - usually heat-related. We test for thermal fault first; sometimes it's a fan or thermal-paste issue, not the panel itself." },
@@ -74,8 +74,8 @@ export default function IMacScreenRepair() {
         "Free re-seal if any dust speck appears in the first 3 months - extremely rare with our protocol but covered.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 800",                            "AED 3,500+ (whole-unit replacement)"],
-        ["27\" 5K Retina swap",   "AED 1,000",                          "AED 4,500+ in many cases"],
+        ["Starting price",        "Price on request",                   "Whole-unit replacement"],
+        ["27\" 5K Retina swap",   "Price on request",                   "Costly whole-unit swap in many cases"],
         ["Data on the SSD",       "Stays put on your original SSD",     "Often replaced unit - full restore needed"],
         ["Pickup & delivery",     "Free, Dubai mainland",               "Drop in to Mall of Emirates yourself"],
         ["Adhesive reseal",       "Dust-free bench, 3M factory adhesive", "Apple OEM seal"],
@@ -90,7 +90,7 @@ export default function IMacScreenRepair() {
         { q: "How dust-free is your bench, really?", a: "We work inside a partitioned area with HEPA-filtered air, anti-static surface and tacky floor mats at the entrance. Reseal happens within 90 seconds of the panel coming out of its protective film. We've delivered hundreds of iMac screens with zero dust complaints." },
         { q: "Can you fix an iMac that was opened by someone else and now has dust behind the screen?", a: "Yes, and we get this regularly. We strip the existing adhesive, ultrasonically clean both glass surfaces, replace the panel if it's been damaged on removal, and reseal in our clean bench. Quoted after diagnosis." },
         { q: `My 27" iMac shows lines after a recent move from my old apartment in Dubai Marina. Is this a panel fault?`, a: "Usually yes - vibration during transport can crack the LCD's internal driver tracks. A flex reseat sometimes helps; if the lines persist, panel replacement is the fix. Free diagnosis." },
-        { q: `Do you support iMac Pro 27" (2017)?`, a: "Yes. The iMac Pro uses the same 5K Retina panel as the consumer 27\" of that era. Repair process and pricing are similar (AED 1,200) but the chassis is space-grey and we adapt the adhesive colour to match." },
+        { q: `Do you support iMac Pro 27" (2017)?`, a: "Yes. The iMac Pro uses the same 5K Retina panel as the consumer 27\" of that era. Repair process and pricing are similar - the chassis is space-grey and we adapt the adhesive colour to match. Message us for the exact price." },
         { q: "What about the older Intel 27\" iMacs from 2013-2015?", a: "Fully supported. Often a backlight or flex repair rather than a full panel - we diagnose before quoting. Many of these iMacs are still daily-driven by designers in Dubai and Sharjah; the cost-to-repair is well below replacement." },
       ]}
       reviewNames={["Shah nawaz", "Marianne Chehade El Dfouni", "Ali Hassan"]}

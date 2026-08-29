@@ -34,7 +34,7 @@ export default function BlogIPhoneNotCharging() {
       category="Problem solving · iPhone"
       h1="iPhone Not Charging? 7 Things to Try First"
       hook="Before assuming the port is broken, try these 7 things. About half of 'dead' charging ports are actually just compressed pocket lint."
-      quickAnswer="If your iPhone won't charge, in priority order: clean the Lightning/USB-C port with a wooden toothpick (50% of cases solved here), try a different cable, try a different adapter, force-restart the iPhone, check Battery Health, try DFU mode, then test MagSafe. If MagSafe works but the cable doesn't, the port needs a AED 250-400 repair."
+      quickAnswer="If your iPhone won't charge, in priority order: clean the Lightning/USB-C port with a wooden toothpick (50% of cases solved here), try a different cable, try a different adapter, force-restart the iPhone, check Battery Health, try DFU mode, then test MagSafe. If MagSafe works but the cable doesn't, the port needs a same-day repair - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Usman", role: "Senior iPhone repair technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -110,20 +110,20 @@ export default function BlogIPhoneNotCharging() {
           <p>
             This is the diagnostic split. If MagSafe (or Qi wireless) successfully charges your
             iPhone but the cable does not, you have a hardware port problem - Lightning/USB-C
-            connector or charging flex cable. AED 250-400 repair, same day.
+            connector or charging flex cable. Same-day repair - message us on WhatsApp for the exact price on your model.
           </p>
           <p>
             If MagSafe also fails, the problem is downstream of the port: charging IC on the
             logic board, battery cell, or main power management chip. Bench diagnosis required -
-            AED 400-1,200 depending on the failed component.
+            the price depends on the failed component, so message us on WhatsApp for a quote after the diagnostic.
           </p>
 
           <h2 id="bring-it-in">When to bring it in</h2>
           <p>If after all 7 steps the iPhone still won't charge:</p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Port replacement - AED 250-400 (most common, same-day)</li>
-            <li>Battery replacement - AED 250-450 depending on model (same-day)</li>
-            <li>Charging IC repair on logic board - AED 400-700 (1-2 days)</li>
+            <li>Port replacement - price on request (most common, same-day)</li>
+            <li>Battery replacement - price on request, depending on model (same-day)</li>
+            <li>Charging IC repair on logic board - price on request (1-2 days)</li>
             <li>Free walk-in diagnostic, no charge if we can't fix it</li>
           </ul>
 

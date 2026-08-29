@@ -116,8 +116,8 @@ export default function Blog21YearsExperience() {
             <li>ESD-safe benches throughout (anti-static mats, wrist straps, ionised air).</li>
           </ul>
           <p>
-            Total tooling investment exceeds AED 380,000 over 21 years. Pop-up shops typically have
-            AED 5,000-15,000 of tools.
+            Our tooling investment over 21 years runs into the hundreds of thousands of dirhams -
+            orders of magnitude beyond the handful of basic tools a typical pop-up shop carries.
           </p>
 
           <h2 id="parts-network">Parts network</h2>
@@ -163,7 +163,7 @@ export default function Blog21YearsExperience() {
       faqs={[
         { q: "Are you Apple-Authorised?", a: "No - and we won't pursue it because the AASP terms restrict pricing, restrict the model range we can service, and require us to refuse out-of-warranty older devices. Independent gives us range, AASP gives Apple control. We chose range." },
         { q: "Can you really still repair a 2004 PowerBook?", a: "Yes - we keep PowerPC tooling and source parts from the vintage market. Less common but possible. Most vintage repairs are battery replacement, screen, or HDD-to-SSD upgrade." },
-        { q: "What's the most common Apple Silicon (M1+) repair you do?", a: "Charging port (USB-C) failure on MacBook Air M1 / M2 - about 60 per month. The port is reflowable, and we replace at AED 450 vs Apple's AED 1,400 logic-board quote." },
+        { q: "What's the most common Apple Silicon (M1+) repair you do?", a: "Charging port (USB-C) failure on MacBook Air M1 / M2 - about 60 per month. The port is reflowable, so we repair it instead of swapping the whole logic board - far cheaper than Apple's quote. Message us on WhatsApp for today's exact price on your model." },
         { q: "Does the founder still work on devices?", a: "Yes - Ali handles logic-board work and any escalated case. Day-to-day MacBook repairs are Shafiq's lead, iPhone is Usman's, with 4 junior technicians supporting." },
         { q: "How many MacBook Pro M5 (2025/26) repairs have you done?", a: "Around 80 since November 2025 launch - mostly accidental damage screens (chassis is thinner so drops crack screens easier) and a few liquid spills. Apple Silicon platform itself has been highly reliable so far." },
       ]}

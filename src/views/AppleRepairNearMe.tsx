@@ -14,12 +14,12 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const DEVICES = [
-  { icon: Laptop,     label: "MacBook",          price: "From AED 450",  link: "/",                     note: "Air, Pro 13–16\", Intel & M1–M5" },
-  { icon: Monitor,    label: "iMac",              price: "From AED 600",  link: "/imac-repair-dubai",    note: "21.5\", 24\", 27\" Retina 5K" },
-  { icon: Monitor,    label: "Mac mini & Studio", price: "From AED 400",  link: "/mac-mini-repair-dubai",note: "M1–M4 Mac mini, Mac Studio" },
-  { icon: Smartphone, label: "iPhone",            price: "From AED 179",  link: "/iphone-repair-dubai",  note: "iPhone 6 through 17 Pro Max" },
-  { icon: Tablet,     label: "iPad",              price: "From AED 350",  link: "/ipad-repair-dubai",    note: "mini, Air, standard, Pro 11/13\"" },
-  { icon: Clock,      label: "Apple Watch",       price: "From AED 250",  link: "/apple-watch-repair-dubai", note: "Series 3 through Ultra 2" },
+  { icon: Laptop,     label: "MacBook",          link: "/",                     note: "Air, Pro 13–16\", Intel & M1–M5" },
+  { icon: Monitor,    label: "iMac",              link: "/imac-repair-dubai",    note: "21.5\", 24\", 27\" Retina 5K" },
+  { icon: Monitor,    label: "Mac mini & Studio", link: "/mac-mini-repair-dubai",note: "M1–M4 Mac mini, Mac Studio" },
+  { icon: Smartphone, label: "iPhone",            link: "/iphone-repair-dubai",  note: "iPhone 6 through 17 Pro Max" },
+  { icon: Tablet,     label: "iPad",              link: "/ipad-repair-dubai",    note: "mini, Air, standard, Pro 11/13\"" },
+  { icon: Clock,      label: "Apple Watch",       link: "/apple-watch-repair-dubai", note: "Series 3 through Ultra 2" },
 ];
 
 const AREAS = [
@@ -28,7 +28,7 @@ const AREAS = [
   { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Free pickup · 2–4 hrs" },
   { area: "Deira / Bur Dubai / Karama",       time: "Free pickup · 2–4 hrs" },
   { area: "Dubai Hills / Al Barsha / Mirdif", time: "Free pickup · 2–4 hrs" },
-  { area: "Sharjah / Abu Dhabi",              time: "AED 100 each way" },
+  { area: "Sharjah / Abu Dhabi",              time: "Pickup on request · WhatsApp us" },
 ];
 
 const FAQS = [
@@ -41,9 +41,9 @@ const FAQS = [
   { q: "Can I get free Apple device pickup near me in Dubai?",
     a: "Yes, free courier pickup and delivery across all Dubai Mainland areas for every Apple device. WhatsApp 055 741 3706 with your device, location, and fault. A courier arrives within 2–4 hours. Most repairs are completed and returned the same day." },
   { q: "How much does Apple repair cost near me in Dubai?",
-    a: "MacBook screen from AED 499, battery from AED 450. iPhone screen from AED 179, battery from AED 250. iPad screen from AED 350. Apple Watch battery from AED 250. Diagnosis is free. WhatsApp 055 741 3706 with your exact model for a fixed written quote in under 4 minutes." },
+    a: "It depends on your exact model and the fault, so we quote each device individually. MacBook screen, battery and logic-board work, iPhone screen and battery, iPad screen, and Apple Watch battery are all covered. Diagnosis is free. WhatsApp 055 741 3706 with your exact model for a fixed written quote in under 4 minutes." },
   { q: "Are you an Apple Authorised Service Provider near me in Dubai?",
-    a: "No, we are an independent Apple specialist, which means lower prices (typically 40–60% less than Apple Store rates) and more repair options: component-level logic board repair, out-of-warranty fixes, and repairs on devices Apple no longer services. Independent since 2004. Office #45, Concord Tower, Dubai Media City." },
+    a: "No, we are an independent Apple specialist, which means lower prices than Apple Store rates and more repair options: component-level logic board repair, out-of-warranty fixes, and repairs on devices Apple no longer services. Independent since 2004. Office #45, Concord Tower, Dubai Media City." },
   { q: "Is there a warranty on Apple repair near me in Dubai?",
     a: "Every repair carries a written warranty of up to 12 months, regardless of device. Battery warranty is 3 months with an 80% capacity guarantee. The warranty card is issued with every paid repair and covers the device serial number, repair type, and parts." },
 ];
@@ -54,9 +54,9 @@ export default function AppleRepairNearMe() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Apple Repair Near Me Dubai. All Devices, From AED 179 | Free Pickup",
+    title: "Apple Repair Near Me Dubai. All Devices | Free Pickup, Same-Day",
     description:
-      "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706.",
+      "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. Free pickup across Dubai. Same-day. Concord Tower, Media City. WhatsApp 055 741 3706 for a quote.",
     path: "/apple-repair-near-me-dubai",
   });
 
@@ -98,7 +98,7 @@ export default function AppleRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Apple device repaired near me in Dubai?"
-            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Every Apple device repaired: MacBook, iMac, iPhone, iPad, Apple Watch. From AED 179. Free pickup across Dubai Mainland. Same-day for most repairs. WhatsApp 055 741 3706."
+            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Every Apple device repaired: MacBook, iMac, iPhone, iPad, Apple Watch. Free pickup across Dubai Mainland and same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
           />
         </section>
 
@@ -107,13 +107,13 @@ export default function AppleRepairNearMe() {
           <h2 id="devices" className="text-[28px] md:text-[32px] mb-sm">Every Apple device repaired near you in Dubai</h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One workshop since 2004, the full Apple ecosystem, not a pick-and-choose list.</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
-            {DEVICES.map(({ icon: Icon, label, price, link, note }) => (
+            {DEVICES.map(({ icon: Icon, label, link, note }) => (
               <a key={label} href={link} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
                 <div className="flex items-center gap-sm">
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
                 </div>
-                <p className="text-[22px] font-bold text-accent">{price}</p>
+                <p className="text-[22px] font-bold text-accent">Price on request</p>
                 <p className="text-[13px] text-text-muted">{note}</p>
               </a>
             ))}

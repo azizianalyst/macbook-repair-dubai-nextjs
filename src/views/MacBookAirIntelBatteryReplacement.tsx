@@ -7,14 +7,14 @@ export default function MacBookAirIntelBatteryReplacement() {
       path="/macbook-air-intel-battery-replacement-dubai"
       chip="Intel"
       years="2018–2020"
-      seoTitle="MacBook Air Intel Battery Replacement Dubai — AED 450"
-      seoDescription="MacBook Air Intel battery replacement Dubai AED 450. 49.9 Wh cell, same-day 2-hour service. Backlight and BMS check included. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air Intel Battery Replacement Dubai — Same-Day"
+      seoDescription="MacBook Air Intel battery replacement Dubai. 49.9 Wh cell, same-day 2-hour service. Free diagnosis. Message us on WhatsApp for today's price. Call 055 741 3706."
       h1="MacBook Air Intel Battery Replacement Dubai"
       eyebrow="Intel Air battery specialist · Dubai Media City · Same-day"
       capacity="49.9 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="USB-C (2018) / MagSafe 2 + USB-C (2017 and earlier)"
-      heroAnswer="MacBook Air Intel (2018–2020) battery replacement costs AED 450 at MacBook Repair Dubai. The Intel 13-inch Air uses a 49.9 Wh glued-in lithium-ion pouch cell. At 5–8 years old, these batteries are typically well past the 1,000-cycle threshold and below 70% capacity. Same-day 2-hour service. Apple no longer services these models — we do."
+      heroAnswer="MacBook Air Intel (2018–2020) battery replacement at MacBook Repair Dubai. The Intel 13-inch Air uses a 49.9 Wh glued-in lithium-ion pouch cell. At 5–8 years old, these batteries are typically well past the 1,000-cycle threshold and below 70% capacity. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your model. Apple no longer services these models — we do."
       chipUniquePoints={[
         "The MacBook Air Intel 13-inch (2018–2020) uses a 49.9 Wh lithium-ion pouch cell rated for 1,000 cycles. At 5–8 years of typical daily use, most Intel Air batteries in Dubai are at 600–800+ cycles and showing 60–75% capacity — well into replacement territory.",
         "Intel MacBook Air batteries are glued to the top case assembly with adhesive strips. Replacement requires heat and careful prying. We use OEM adhesive strips during refitting to ensure the cell sits correctly against the trackpad flex cable. This is a bench-skill job, not a simple swap.",
@@ -48,15 +48,15 @@ export default function MacBookAirIntelBatteryReplacement() {
       faults={[
         {
           title: "Battery below 70% capacity after 5+ years",
-          body: "Normal degradation on Intel Air cells at Dubai temperatures. System Settings shows maximum capacity below 70%. A new 49.9 Wh cell restores 100% capacity and the full 12-hour rated life. AED 450, same-day.",
+          body: "Normal degradation on Intel Air cells at Dubai temperatures. System Settings shows maximum capacity below 70%. A new 49.9 Wh cell restores 100% capacity and the full 12-hour rated life. Same-day — message us on WhatsApp for today's price.",
         },
         {
           title: "Intel Air won't turn on without charger",
-          body: "The 49.9 Wh cell has reached 0V and the protection circuit latched off. This is common on 2018–2020 models after 5+ years. Battery replacement + fresh calibration cycle, AED 450. We check the DC-in board for free at the same time.",
+          body: "The 49.9 Wh cell has reached 0V and the protection circuit latched off. This is common on 2018–2020 models after 5+ years. Battery replacement + fresh calibration cycle — message us on WhatsApp for the price. We check the DC-in board for free at the same time.",
         },
         {
           title: "Swollen cell pushing up the trackpad",
-          body: "Lithium-ion swelling is more common on older Intel Air cells. A spongy or unresponsive trackpad is the first sign. Stop using immediately. Free same-day pickup — the cell is extracted and replaced safely at the workshop. AED 450.",
+          body: "Lithium-ion swelling is more common on older Intel Air cells. A spongy or unresponsive trackpad is the first sign. Stop using immediately. Free same-day pickup — the cell is extracted and replaced safely at the workshop. Message us on WhatsApp for the price.",
         },
         {
           title: "Battery drains very fast in Dubai summer",
@@ -68,13 +68,13 @@ export default function MacBookAirIntelBatteryReplacement() {
         },
         {
           title: "Sudden shutdown at 20–40% on Intel 2020",
-          body: "The 2020 Intel Air PMU misreads voltage on worn cells and triggers emergency shutdown before the display reading reaches 0%. Battery replacement clears this. AED 450 same-day.",
+          body: "The 2020 Intel Air PMU misreads voltage on worn cells and triggers emergency shutdown before the display reading reaches 0%. Battery replacement clears this. Same-day — message us on WhatsApp for the price.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Air Intel battery replacement cost in Dubai?",
-          a: "MacBook Air Intel 13-inch (2018–2020) battery replacement is AED 450 at MacBook Repair Dubai. This includes the 49.9 Wh OEM-equivalent cell, adhesive re-fitting, labour, and a 15-day warranty. Same-day 2-hour service.",
+          a: "MacBook Air Intel 13-inch (2018–2020) battery replacement at MacBook Repair Dubai includes the 49.9 Wh OEM-equivalent cell, adhesive re-fitting, labour, and a 15-day warranty. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Apple still replace MacBook Air Intel batteries in Dubai?",
@@ -90,7 +90,7 @@ export default function MacBookAirIntelBatteryReplacement() {
         },
         {
           q: "Is it worth replacing the battery on a MacBook Air Intel 2020?",
-          a: "The 2020 Intel Air still runs macOS Sonoma and will receive updates until at least 2026–2027. At AED 450 for a battery versus AED 3,999 for a new Air, replacement is very cost-effective if the rest of the machine works well. The 2018 and 2019 models are approaching end of support but are still usable for most daily tasks.",
+          a: "The 2020 Intel Air still runs macOS Sonoma and will receive updates until at least 2026–2027. A battery replacement costs a small fraction of a new Air, so it is very cost-effective if the rest of the machine works well. Message us on WhatsApp for the exact price. The 2018 and 2019 models are approaching end of support but are still usable for most daily tasks.",
         },
       ]}
       blogHref="/blog/macbook-air-battery-drain-dubai"

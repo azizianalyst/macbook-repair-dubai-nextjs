@@ -166,14 +166,15 @@ export default function BlogMacBookBlackScreen() {
           <h2 id="repair-cost">What it costs to fix in Dubai</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
-            is free - we'll tell you which of the four it is before you commit to anything. Prices
-            below are VAT-inclusive and depend on the model.
+            is free - we'll tell you which of the four it is before you commit to anything. What it
+            costs depends on the model, and every quote we give is VAT-inclusive.
           </p>
           <p>
-            A display or flex-cable replacement runs AED 600 to 1,200. A backlight-circuit repair is
-            AED 350 to 800 since we work at component level rather than replacing the whole panel.
-            Logic-board work, including GPU and video-output faults, starts from AED 800. If you'd
-            rather we just look first, book a{" "}
+            A display or flex-cable replacement is one of the most common black-screen fixes, and a
+            backlight-circuit repair is often cheaper still since we work at component level rather
+            than replacing the whole panel. Logic-board work, including GPU and video-output faults,
+            takes more bench time. Message us on WhatsApp with your model for today's exact price. If
+            you'd rather we just look first, book a{" "}
             <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
@@ -194,7 +195,7 @@ export default function BlogMacBookBlackScreen() {
       faqs={[
         {
           q: "How much does it cost to fix a MacBook black screen in Dubai?",
-          a: "It depends on which of four faults it is, and the diagnostic to find out is free. A display or flex-cable replacement is AED 600 to 1,200. A backlight-circuit repair is AED 350 to 800. Logic-board and GPU work starts from AED 800. All prices are VAT-inclusive. WhatsApp the serial first for a tighter estimate.",
+          a: "It depends on which of four faults it is, and the diagnostic to find out is free. A display or flex-cable replacement is a common fix, a backlight-circuit repair is often cheaper since we work at component level, and logic-board and GPU work takes more bench time. WhatsApp us the serial number for today's exact, VAT-inclusive price on your model.",
         },
         {
           q: "What does it mean if an external monitor works but my screen is black?",

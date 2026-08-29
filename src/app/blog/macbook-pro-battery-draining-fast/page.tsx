@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro battery draining fast in Dubai? 5 causes, rogue processes, screen brightness, degraded cell, macOS bugs, heat, with step-by-step fixes.",
   openGraph: {
     title: "MacBook Pro Battery Draining Fast? Fixes & Costs Dubai 2026",
-    description: "MacBook Pro battery draining fast in Dubai? 5 causes with step-by-step fixes. Battery replacement from AED 550, same-day service.",
+    description: "MacBook Pro battery draining fast in Dubai? 5 causes with step-by-step fixes. Same-day battery replacement — message us on WhatsApp for a quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-battery-draining-fast",
     type: "article",
     publishedTime: "2026-06-22",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Pro Battery Draining Fast? Fixes & Costs Dubai 2026",
-    description: "5 causes diagnosed step-by-step. Battery replacement from AED 550 in Dubai.",
+    description: "5 causes diagnosed step-by-step. Same-day battery replacement in Dubai — message us for a quote.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-battery-health-dubai-desktop.avif"],
   },
   alternates: {

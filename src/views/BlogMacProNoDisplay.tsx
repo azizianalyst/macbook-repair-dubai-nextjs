@@ -7,12 +7,12 @@ export default function BlogMacProNoDisplay() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Pro No Display in Dubai? 6 Fixes for Black Screen 2026"
-      seoDescription="Mac Pro no display or black screen in Dubai? 6 fixes for GPU module, cable and port faults on 2019 and Intel models. From AED 250."
+      seoDescription="Mac Pro no display or black screen in Dubai? 6 fixes for GPU module, cable and port faults on 2019 and Intel models. Free diagnosis, WhatsApp quote."
       path="/blog/mac-pro-no-display-dubai"
       wide
       category="Fix guide · Mac Pro"
       h1="Mac Pro No Display in Dubai? 6 Things to Check"
-      hook="A Mac Pro that powers on with no picture usually traces to the GPU module, a cable or port, or a display handshake issue, and our Dubai workshop diagnoses every model free with repair from AED 250."
+      hook="A Mac Pro that powers on with no picture usually traces to the GPU module, a cable or port, or a display handshake issue, and our Dubai workshop diagnoses every model free before quoting your exact repair price on WhatsApp."
       quickAnswer="Mac Pro no display means the machine is powered but no picture reaches the monitor. On the 2019 Mac Pro, connect the monitor to the GPU module ports (not the I/O panel that has no video on some configs), try a different cable and monitor, and reseat the MPX module. Free diagnosis confirms module versus board fault."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -196,17 +196,17 @@ export default function BlogMacProNoDisplay() {
           <p>
             What you pay depends entirely on what the free diagnosis finds. A reseat or a cable swap
             costs nothing beyond the diagnosis, while a failed module or board rail is a larger job.
-            Here is current Dubai pricing against typical Apple and third-party quotes:
+            Message us on WhatsApp with your Mac Pro model and symptom for today's exact price:
           </p>
           <BlogPriceTable
-            caption="Mac Pro no display repair pricing in Dubai. June 2026"
+            caption="Mac Pro no display repair services in Dubai. Free diagnosis, WhatsApp for pricing"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "GPU module reseat", ours: "AED 250", apple: "AED 600+" },
-              { model: "Port repair", ours: "AED 450", apple: "AED 900+" },
-              { model: "MPX module repair", ours: "AED 900", apple: "AED 2,200+" },
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 300+" },
-              { model: "Logic board repair", ours: "AED 900", apple: "AED 2,000+" },
+              { model: "GPU module reseat", ours: "Price on request", apple: "Price on request" },
+              { model: "Port repair", ours: "Price on request", apple: "Price on request" },
+              { model: "MPX module repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Diagnosis", ours: "Free", apple: "Price on request" },
+              { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>

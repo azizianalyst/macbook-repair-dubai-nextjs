@@ -162,7 +162,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <SectionHeading
           eyebrow="Popular repairs"
           title={`What are the most common MacBook repairs for ${cfg.area} customers?`}
-          sub="Indicative starting prices in AED. Final price is fixed in writing on WhatsApp before any work begins, after a free diagnosis at the workshop."
+          sub="The exact price is fixed in writing on WhatsApp before any work begins, after a free diagnosis at the workshop. Message us for today's price on your model."
         />
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
           {cfg.topServices.map((s) => (
@@ -172,7 +172,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition"
             >
               <p className="font-bold text-[16px] mb-1">{s.label}</p>
-              <p className="text-[13px] text-text-muted">From <span className="mono text-accent font-bold">AED {s.price}</span> · warranty of up to 12 months</p>
+              <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of up to 12 months</p>
             </Link>
           ))}
         </div>
@@ -218,7 +218,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           <MapPin size={28} className="text-accent" aria-hidden /> Visit our workshop or use free pickup
         </h2>
         <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
-          From {cfg.area}, the workshop is {cfg.driveTime} away by car. Paid parking inside Concord Tower (AED 5/hour) or free street parking on Al Sufouh Road behind the tower.
+          From {cfg.area}, the workshop is {cfg.driveTime} away by car. Paid parking inside Concord Tower or free street parking on Al Sufouh Road behind the tower.
         </p>
         <LocationBlock tone="dark" />
       </section>
@@ -228,7 +228,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex items-start gap-md">
           <ParkingCircle size={24} className="text-accent shrink-0 mt-1" aria-hidden />
           <p className="text-[15px] text-text-muted leading-relaxed m-0">
-            <strong className="text-text">Prefer to drop in?</strong> Paid tower parking (AED 5/hour, AED 25/day cap) or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times for a guaranteed slot.
+            <strong className="text-text">Prefer to drop in?</strong> Paid tower parking or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times for a guaranteed slot.
           </p>
         </article>
       </section>

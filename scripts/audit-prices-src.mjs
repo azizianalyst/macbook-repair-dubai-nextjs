@@ -1,0 +1,82 @@
+// Fast heuristic: scan the VISIBLE source layers for leaked price figures after the
+// hide-prices sweep. The site keeps prices in DATA (model JSON), the /pricing JSON-LD Offers
+// (prices.generated.ts + schema), and the PRICING constant (numbers with no "AED" prefix) —
+// those are intentionally retained and whitelisted. Anything that renders "AED <number>" to a
+// visitor (views, non-admin blocks, prose content, generated meta/titles) is a leak.
+//
+// Authoritative check is audit-prices-rendered.mjs (crawls the built site); this is the quick
+// pre-build gate.  Usage: node scripts/audit-prices-src.mjs
+import { readdirSync, readFileSync, statSync } from "node:fs";
+import { join, relative } from "node:path";
+
+const ROOT = join(import.meta.dirname, "..");
+const SRC = join(ROOT, "src");
+
+// Files/globs that legitimately still contain figures (data + schema + admin-only) or the
+// backstop phrase itself. Matched as substring against the repo-relative path.
+const WHITELIST = [
+  "src/content/prices.generated.ts",
+  "src/content/blog-taxonomy.generated.ts",
+  "src/lib/seo-schema.ts",
+  "src/lib/page-schema.ts",
+  "src/lib/schema.ts",
+  "src/lib/lead-schema.ts",
+  "src/lib/price.ts",
+  "src/proxy.ts",              // anti-scraper decoy: fake "AED 9,999" is served ONLY to blocked bots
+  // --- SEO meta layer: prices KEPT here on purpose (backend/SERP only, never visible on the page) ---
+  "src/lib/route-meta.generated.ts",
+  "src/lib/page-meta-overrides.generated.ts",
+  "src/lib/dynamic-meta.ts",
+  "src/lib/page-meta.ts",     // meta-layer logic (comment references "from AED" as an example)
+];
+const WHITELIST_RE = [
+  /\.json$/,                 // model data JSON — pricing kept for logic/schema, never rendered
+  /Admin\.tsx$/,             // /admin/* is noindex + auth-gated, never public
+  /src\/app\/.*page\.tsx$/,   // app routes are thin wrappers: only inline metadata (SEO), no visible body
+  /src\/app\/admin\//,
+  /src\/app\/api\//,
+  /src\/lib\/ai\//,           // AI SOP prompt text (internal; policy already flipped to no-price)
+];
+
+// A visible price figure: "AED 600", "AED 1,200", "AED 600–1,499", "from AED 350", plus
+// interpolated/JSX forms that RENDER a figure: `AED ${m.pricing.screen}`, `AED {r.price}`,
+// and "600 AED" / "Dhs 600" variants.
+const PRICE_RE = /\bAED\s*(?:\d|\$?\{)|\d[\d,]*\s*AED\b|\d[\d,]*\s*[Dd]irhams?\b|\bDhs?\.?\s*\d/;
+// Garble left behind by a bad strip (require the tell-tale space/artifact so natural prose like
+// "we collect from, and …" is NOT flagged).
+const GARBLE_RE = /(Price on request|Get price on WhatsApp)\s*\d|\bfrom\s+[.,]|\bfrom\s+AED\b(?!\s*\d)|\(\s*AED\s*\)\s*\d/;
+
+function walk(dir, out = []) {
+  for (const e of readdirSync(dir)) {
+    const p = join(dir, e);
+    if (statSync(p).isDirectory()) walk(p, out);
+    else if (/\.(tsx?|json|mdx?)$/.test(e)) out.push(p);
+  }
+  return out;
+}
+
+const leaks = [];
+for (const file of walk(SRC)) {
+  const rel = relative(ROOT, file);
+  if (WHITELIST.includes(rel) || WHITELIST_RE.some((re) => re.test(rel))) continue;
+  const lines = readFileSync(file, "utf8").split("\n");
+  lines.forEach((line, i) => {
+    if (PRICE_RE.test(line) || GARBLE_RE.test(line)) {
+      leaks.push({ rel, n: i + 1, text: line.trim().slice(0, 140) });
+    }
+  });
+}
+
+if (leaks.length === 0) {
+  console.log("✓ PASS — no visible price figures found in the source layer.");
+  process.exit(0);
+}
+const byFile = {};
+for (const l of leaks) (byFile[l.rel] ??= []).push(l);
+console.log(`✗ FAIL — ${leaks.length} price leak(s) across ${Object.keys(byFile).length} file(s):\n`);
+for (const [f, ls] of Object.entries(byFile)) {
+  console.log(`  ${f}  (${ls.length})`);
+  for (const l of ls.slice(0, 4)) console.log(`    ${l.n}: ${l.text}`);
+  if (ls.length > 4) console.log(`    … +${ls.length - 4} more`);
+}
+process.exit(1);

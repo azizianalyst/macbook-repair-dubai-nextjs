@@ -38,7 +38,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             Dubai, United Arab Emirates</strong>
           </p>
           <p>
-            Concord Tower sits between Sheikh Zayed Road and the Palm Jumeirah, in the Media City cluster. Easy parking inside the tower (paid, ~AED 5/hour). Closest metro: Dubai Internet City station (10-min walk via the bridge).
+            Concord Tower sits between Sheikh Zayed Road and the Palm Jumeirah, in the Media City cluster. Easy paid parking inside the tower. Closest metro: Dubai Internet City station (10-min walk via the bridge).
           </p>
           <p>
             Open <strong>Mon-Sat 9 am - 10 pm</strong>, closed Sunday. WhatsApp monitored 24/7 for emergencies.
@@ -95,8 +95,8 @@ export default function BlogMacBookRepairNearMeDubai() {
 
           <h2 id="sharjah-abu-dhabi">Sharjah and Abu Dhabi</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Sharjah</strong> (all areas - Al Nahda, Al Majaz, Muwaileh, Al Khan, Khalid Lagoon): paid courier AED 50 round-trip via Careem/Talabat logistics.</li>
-            <li><strong>Abu Dhabi</strong> (Corniche, Khalifa City, Al Reem, Yas Island, Saadiyat): paid courier AED 100 round-trip; usually 24-hour turnaround.</li>
+            <li><strong>Sharjah</strong> (all areas - Al Nahda, Al Majaz, Muwaileh, Al Khan, Khalid Lagoon): paid courier round-trip via Careem/Talabat logistics - message us for the current fee.</li>
+            <li><strong>Abu Dhabi</strong> (Corniche, Khalifa City, Al Reem, Yas Island, Saadiyat): paid courier round-trip, usually 24-hour turnaround - message us for the current fee.</li>
             <li><strong>Ajman, RAK, Fujairah</strong>: arrange via Aramex (we coordinate; you cover their fee).</li>
           </ul>
 
@@ -131,8 +131,8 @@ export default function BlogMacBookRepairNearMeDubai() {
       }
       faqs={[
         { q: "Are you the closest Apple repair to Dubai Marina?", a: "Among the closest. We're 8-10 min drive from Marina Walk via the Sheikh Zayed underpass - typically faster than driving to Mall of the Emirates Apple Store. And we offer free pickup so distance becomes irrelevant." },
-        { q: "Do you have a shop in Mall of the Emirates / Dubai Mall?", a: "No - we're an independent workshop, not a mall kiosk. The mall trade-off is convenience for the customer but high overhead that gets passed on. Our Media City office keeps prices 30-50% below mall repair shops." },
-        { q: "Can I park easily at Concord Tower?", a: "Yes - paid parking inside the tower (~AED 5/hour, validated for 1 hour with appointments). Free street parking in surrounding Media City roads if you don't mind a 5-min walk." },
+        { q: "Do you have a shop in Mall of the Emirates / Dubai Mall?", a: "No - we're an independent workshop, not a mall kiosk. The mall trade-off is convenience for the customer but high overhead that gets passed on. Our Media City office keeps prices well below mall repair shops - message us on WhatsApp for a quote on your device." },
+        { q: "Can I park easily at Concord Tower?", a: "Yes - paid parking inside the tower (validated for 1 hour with appointments). Free street parking in surrounding Media City roads if you don't mind a 5-min walk." },
         { q: "How early can I drop off in the morning?", a: "9 am - workshop opens. Earlier by appointment for urgent business cases. WhatsApp the night before to arrange." },
         { q: "Do you serve Palm Jumeirah / Atlantis?", a: "Yes - both walk-in (8-10 min from Atlantis) and free pickup. Palm trunk traffic during peak hours can extend pickup window to 3-4 hours from booking, vs the usual 1-2 hours." },
         { q: "What's the closest metro station?", a: "Dubai Internet City (Red Line) - 10-min walk via the elevated walkway between the two free zones. Convenient if you're coming from Downtown, Business Bay, or anywhere on the Red Line." },

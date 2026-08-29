@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirBatteryDrain";
 
 export const metadata: Metadata = {
   title: "MacBook Air Battery Draining Fast? 7 Causes and Fixes Dubai 2026",
-  description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Battery replacement from AED 350 in 30 minutes.",
+  description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Fast battery replacement in 30 minutes — message us for a price.",
   openGraph: {
     title: "MacBook Air Battery Draining Fast? 7 Causes and Fixes Dubai 2026",
-    description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Battery replacement from AED 350 in 30 minutes.",
+    description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Fast battery replacement in 30 minutes — message us for a price.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-battery-drain-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Battery Draining Fast? 7 Causes and Fixes Dubai 2026",
-    description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Battery replacement from AED 350 in 30 minutes.",
+    description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Fast battery replacement in 30 minutes — message us for a price.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

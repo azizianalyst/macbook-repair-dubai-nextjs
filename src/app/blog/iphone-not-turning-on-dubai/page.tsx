@@ -4,10 +4,10 @@ import View from "@/views/BlogIPhoneNotTurningOn";
 
 export const metadata: Metadata = {
   title: "iPhone Not Turning On? 7 Fixes to Try in Dubai 2026",
-  description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Repair from AED 99.",
+  description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Message us on WhatsApp.",
   openGraph: {
     title: "iPhone Not Turning On? 7 Fixes to Try in Dubai 2026",
-    description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Repair from AED 99.",
+    description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/iphone-not-turning-on-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "iPhone Not Turning On? 7 Fixes to Try in Dubai 2026",
-    description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Repair from AED 99.",
+    description: "iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Message us on WhatsApp.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

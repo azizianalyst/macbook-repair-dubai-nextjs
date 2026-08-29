@@ -24,7 +24,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
       category="Problem solving · iPhone"
       h1="iPhone Screen Replaced But Now Glitchy? Common Causes"
       hook="Bought a cheap screen at the phone souk and now Face ID is dead, True Tone is gone, and touch lags? Here's why - and what we can salvage."
-      quickAnswer="Cheap iPhone screen replacements cause four common issues: True Tone disabled, broken Face ID, an 'unable to verify display' notice, and laggy touch. About 60% are fixable by redoing the repair with a better panel and proper calibration. Face ID failures from torn flex cables are not recoverable, as the cable is single-use."
+      quickAnswer="Cheap iPhone screen replacements cause four common issues: True Tone disabled, broken Face ID, an 'unable to verify display' notice, and laggy touch. About 60% are fixable by redoing the repair with a better panel and proper calibration. Message us on WhatsApp for today's exact price on your model. Face ID failures from torn flex cables are not recoverable, as the cable is single-use."
       author={{ name: "Ali", role: "Senior iPhone screen technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -34,8 +34,9 @@ export default function BlogIPhoneScreenReplacedIssues() {
         <>
           <h2 id="why-cheap-screens-fail">iPhone Screen Replaced But Glitchy. Why cheap screens cause more problems</h2>
           <p>
-            The phone-souk price difference (AED 200 vs our AED 750) for an iPhone 13 screen
-            isn't profiteering on our part - it reflects three real things the cheap shops skip:
+            The big price gap between a phone-souk screen and a proper one for an iPhone 13
+            isn't profiteering on our part - it reflects three real things the cheap shops skip
+            (message us on WhatsApp for today's exact price on your model):
           </p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>
@@ -70,9 +71,9 @@ export default function BlogIPhoneScreenReplacedIssues() {
           <p>
             <strong>Can it be fixed?</strong> Yes - bring the iPhone to us. We use the System
             Configuration tool to re-calibrate the existing screen against your iPhone, restoring
-            True Tone. AED 200 if the screen itself is healthy. If the panel is poor quality,
-            we'll recommend swapping it for an OEM-equivalent (AED 750+ depending on model)
-            and the True Tone restoration is included.
+            True Tone. Message us on WhatsApp for the exact price if the screen itself is healthy.
+            If the panel is poor quality, we'll recommend swapping it for an OEM-equivalent
+            (price depends on model) and the True Tone restoration is included.
           </p>
 
           <h2 id="face-id-failure">Face ID failure after non-Apple screen</h2>
@@ -89,11 +90,12 @@ export default function BlogIPhoneScreenReplacedIssues() {
           </p>
           <p>
             <strong>Can it be fixed?</strong> Sometimes. About 30% of cases we see are reseat-able
-            (the cable is intact but disconnected) - AED 250 fix. The other 70% require a
-            replacement True Depth camera, which is paired to the iPhone's processor at the
-            factory and cannot be swapped between iPhones. Apple's only solution is full logic
-            board replacement (AED 1,500+). We can sometimes desolder the Face ID chips and
-            transplant them to a working True Depth assembly - AED 1,200, success rate 60%.
+            (the cable is intact but disconnected) - a quick fix; message us for the price. The
+            other 70% require a replacement True Depth camera, which is paired to the iPhone's
+            processor at the factory and cannot be swapped between iPhones. Apple's only solution
+            is full logic board replacement. We can sometimes desolder the Face ID chips and
+            transplant them to a working True Depth assembly - success rate 60%. Message us on
+            WhatsApp for today's exact price on your model.
           </p>
 
           <h2 id="unable-to-verify">"Unable to verify display" warning</h2>
@@ -110,8 +112,8 @@ export default function BlogIPhoneScreenReplacedIssues() {
           <p>
             <strong>Can it be removed?</strong> If you want it gone permanently, the only way is
             to install a genuine Apple-supplied screen via Apple's Independent Repair Provider
-            channel (we offer this - adds AED 350 to the screen price). For most customers, the
-            warning is cosmetic and ignorable.
+            channel (we offer this - message us on WhatsApp for the exact price). For most
+            customers, the warning is cosmetic and ignorable.
           </p>
 
           <h2 id="touch-issues">Touch responsiveness issues</h2>
@@ -126,9 +128,9 @@ export default function BlogIPhoneScreenReplacedIssues() {
           </p>
           <p>
             <strong>Can it be fixed?</strong> Yes - replace the screen with a quality OEM-equivalent
-            panel. We'll quote AED 750 for the panel only (not full replacement labour) since the
-            iPhone is already opened-up and the flex cables already swapped. The cheap panel goes
-            back to you for return to the original repairer.
+            panel. We'll quote for the panel only (not full replacement labour) since the iPhone is
+            already opened-up and the flex cables already swapped - message us on WhatsApp for the
+            exact price. The cheap panel goes back to you for return to the original repairer.
           </p>
 
           <h2 id="quality-tiers">OEM vs OEM-equivalent vs aftermarket - quality tiers</h2>
@@ -136,19 +138,19 @@ export default function BlogIPhoneScreenReplacedIssues() {
             <li>
               <strong>Genuine Apple ("OEM"):</strong> Apple-supplied service stock, calibration
               via Apple System Configuration. True Tone works automatically, no warnings,
-              indistinguishable from factory. Expensive - adds AED 350-500 to base price. Limited
-              availability on iPhone 12 onward only.
+              indistinguishable from factory. The most expensive tier - message us for the price.
+              Limited availability on iPhone 12 onward only.
             </li>
             <li>
               <strong>OEM-equivalent:</strong> Same Samsung Display / LG Display / BOE panel as
               Apple uses, paired with a third-party flex cable. We calibrate via System
               Configuration to enable True Tone. May show "non-genuine display" notice in
               Settings but works identically. Our default - gives 95% of the genuine Apple
-              experience at half the price.
+              experience for far less. Message us on WhatsApp for the exact price on your model.
             </li>
             <li>
               <strong>Aftermarket / "compatible":</strong> Lower-grade panels, often refurbished
-              pulled-from-iPhones, fitted with cheap digitisers. What the AED 200 phone-souk shops
+              pulled-from-iPhones, fitted with cheap digitisers. What the cut-price phone-souk shops
               install. We do not sell these and will not install one even on customer request -
               they fail within 6 months.
             </li>
@@ -169,12 +171,12 @@ export default function BlogIPhoneScreenReplacedIssues() {
 
           <h2 id="can-it-be-fixed">Can it be fixed? (Sometimes yes, sometimes no)</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>True Tone disabled:</strong> Yes - re-calibration AED 200 if panel is healthy</li>
-            <li><strong>Bad panel quality:</strong> Yes - replace with OEM-equivalent AED 750+</li>
-            <li><strong>Face ID disconnected:</strong> Yes if just unseated - AED 250 reseat</li>
-            <li><strong>Face ID flex cable torn:</strong> Sometimes - chip transplant 60% success rate AED 1,200</li>
-            <li><strong>Earpiece speaker damaged:</strong> Yes - replacement AED 200</li>
-            <li><strong>"Unable to verify display":</strong> Only by installing genuine Apple panel +AED 350-500</li>
+            <li><strong>True Tone disabled:</strong> Yes - re-calibration if panel is healthy (message us for the price)</li>
+            <li><strong>Bad panel quality:</strong> Yes - replace with OEM-equivalent (message us for the price)</li>
+            <li><strong>Face ID disconnected:</strong> Yes if just unseated - quick reseat (message us for the price)</li>
+            <li><strong>Face ID flex cable torn:</strong> Sometimes - chip transplant, 60% success rate (message us for the price)</li>
+            <li><strong>Earpiece speaker damaged:</strong> Yes - replacement (message us for the price)</li>
+            <li><strong>"Unable to verify display":</strong> Only by installing a genuine Apple panel (message us for the price)</li>
           </ul>
 
           <h2 id="what-we-use">What we use at our shop</h2>
@@ -187,7 +189,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
           </p>
           <p>
             For customers who want the absolute best - we offer genuine Apple panels through our
-            Independent Repair Provider channel. Adds AED 350-500 to the screen price. No
+            Independent Repair Provider channel. Message us on WhatsApp for the exact price. No
             "non-genuine display" warning, full True Tone, full Apple parts traceability.
           </p>
 
@@ -209,11 +211,11 @@ export default function BlogIPhoneScreenReplacedIssues() {
       faqs={[
         {
           q: "Can True Tone be re-enabled after a third-party screen replacement?",
-          a: "Yes, if we still have the original screen or the new screen is healthy. We use Apple's System Configuration tool (only available to Independent Repair Providers) to re-pair the screen sensor data with your iPhone's logic board. AED 200 if no other repair needed.",
+          a: "Yes, if we still have the original screen or the new screen is healthy. We use Apple's System Configuration tool (only available to Independent Repair Providers) to re-pair the screen sensor data with your iPhone's logic board. Message us on WhatsApp for the exact price if no other repair is needed.",
         },
         {
           q: "Why did my Face ID stop working after the screen repair?",
-          a: "The Face ID flex cable in the True Depth camera at the top of the screen is single-use and tears easily. About 30% of the time it has just been disconnected (reseat fix AED 250). The other 70% it has been damaged - recovery requires either a chip transplant (AED 1,200, 60% success) or a full logic board (AED 1,500+).",
+          a: "The Face ID flex cable in the True Depth camera at the top of the screen is single-use and tears easily. About 30% of the time it has just been disconnected (a quick reseat fix). The other 70% it has been damaged - recovery requires either a chip transplant (60% success) or a full logic board. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Is the 'non-genuine display' warning a real problem?",
@@ -225,11 +227,11 @@ export default function BlogIPhoneScreenReplacedIssues() {
         },
         {
           q: "Should I demand a refund from the shop that did the bad screen?",
-          a: "Worth asking. Most reputable shops will redo the work or refund within 30 days. Some won't - at which point Dubai Economic Department's consumer protection line (600 545555) accepts complaints. We can provide a written technical assessment for AED 100 to support a complaint.",
+          a: "Worth asking. Most reputable shops will redo the work or refund within 30 days. Some won't - at which point Dubai Economic Department's consumer protection line (600 545555) accepts complaints. We can provide a written technical assessment to support a complaint - message us on WhatsApp for the fee.",
         },
         {
           q: "If I get my screen redone with you, will Face ID come back?",
-          a: "If the original Face ID flex cable is still intact and only disconnected, yes - AED 250 reseat as part of the screen redo. If the cable has been torn, we'll let you know after diagnosis whether chip transplant is feasible. We give an honest yes/no before quoting.",
+          a: "If the original Face ID flex cable is still intact and only disconnected, yes - a reseat as part of the screen redo. If the cable has been torn, we'll let you know after diagnosis whether chip transplant is feasible. We give an honest yes/no before quoting. Message us on WhatsApp for the exact price.",
         },
       ]}
       relatedLinks={[

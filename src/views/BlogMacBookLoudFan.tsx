@@ -16,7 +16,7 @@ export default function BlogMacBookLoudFan() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Fan Always Loud? Causes & Fixes (2026)"
-      seoDescription="MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Clean and repaste from AED 250."
+      seoDescription="MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Same-day clean and repaste."
       path="/blog/macbook-fan-loud-always-on"
       wide
       toc={[
@@ -155,9 +155,9 @@ export default function BlogMacBookLoudFan() {
 
           <h2 id="cost-and-time">What it costs and how long it takes</h2>
           <p>
-            A full internal clean and repaste runs <strong>AED 250 to 450</strong> depending on
-            the model, VAT included. If the fan itself is grinding or rattling, a worn bearing -
-            a fan replacement is <strong>AED 350 to 600</strong>. Most are done the same day at our
+            A full internal clean and repaste depends on the model, VAT included, and if the fan
+            itself is grinding or rattling a worn bearing means a fan replacement instead. Message
+            us on WhatsApp with your model for today's exact price. Most are done the same day at our
             Concord Tower workshop in Dubai Media City, and it's no-fix-no-charge, so a free
             diagnostic costs you nothing if we can't help. We've been doing this since 2004, and a
             clogged MacBook Pro heatsink is one of the most common jobs that comes through the door.
@@ -177,7 +177,7 @@ export default function BlogMacBookLoudFan() {
             heat for hours every day. Years of that thermal stress is hard on the solder joints and
             the surrounding components, and a board repair costs far more than a clean ever would.
             In Dubai we tell people to have the inside cleaned every 18 to 24 months. Catch it early
-            and it's a same-day AED 250 job, not a board fault down the line.
+            and it's a same-day clean, not a board fault down the line.
           </p>
           <p>
             Hearing your fan right now? Bring the MacBook to Dubai Media City for a free diagnostic,
@@ -204,7 +204,7 @@ export default function BlogMacBookLoudFan() {
         },
         {
           q: "How much does it cost to clean and repaste a MacBook in Dubai?",
-          a: "A full internal clean and fresh thermal paste is AED 250 to 450 depending on the model, VAT included. If the fan is grinding and needs replacing, that's AED 350 to 600. Most are finished the same day, and it's no-fix-no-charge if we can't improve it.",
+          a: "It depends on your model and whether the fan itself needs replacing, and every job includes VAT. Message us on WhatsApp with your model for today's exact price. Most are finished the same day, and it's no-fix-no-charge if we can't improve it.",
         },
         {
           q: "How often should I get my MacBook cleaned in Dubai?",
@@ -216,7 +216,7 @@ export default function BlogMacBookLoudFan() {
         },
       ]}
       relatedLinks={[
-        { label: "Mac fan cleaning Dubai", href: "/mac-fan-cleaning-dubai", description: "Internal clean and repaste, from AED 250." },
+        { label: "Mac fan cleaning Dubai", href: "/mac-fan-cleaning-dubai", description: "Internal clean and repaste, same day." },
         { label: "MacBook overheating fix Dubai", href: "/macbook-overheating-fix-dubai", description: "When the machine runs hot as well as loud." },
         { label: "Protect your MacBook in Dubai summer heat", href: "/blog/protect-macbook-dubai-summer-heat", description: "Keeping a MacBook cool through a 45°C summer." },
       ]}

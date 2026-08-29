@@ -7,7 +7,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
   return (
     <BlogPostTemplate
       seoTitle="iMac vs Mac Mini vs Mac Studio: Best Pick 2026"
-      seoDescription="iMac, Mac Mini or Mac Studio? Pick the right Apple desktop in Dubai for 2026 with pricing, repair cost, resale, and clear verdicts by user type and budget."
+      seoDescription="iMac, Mac Mini or Mac Studio? Pick the right Apple desktop in Dubai for 2026 with clear verdicts by user type, repair notes, resale, and budget guidance."
       path="/blog/imac-vs-mac-mini-vs-mac-studio"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogIMacVsMacMiniVsStudio() {
       category="Comparison · Mac Desktop"
       h1="iMac vs Mac Mini vs Mac Studio - Pick Right in 2026"
       hook="Three Apple desktops. Different jobs. Here's which is yours."
-      quickAnswer="Buy the iMac M5 (AED 5,999) for the family or a tidy desk: all-in-one, lovely 24″ display, no clutter. Buy the Mac Mini M5 (AED 2,799) for developers and value-hunters who already own a monitor. Buy the Mac Studio M5 Max (AED 8,999) only if you edit video professionally, do 3D, or run ML workloads."
+      quickAnswer="Buy the iMac M5 for the family or a tidy desk: all-in-one, lovely 24″ display, no clutter. Buy the Mac Mini M5 for developers and value-hunters who already own a monitor. Buy the Mac Studio M5 Max only if you edit video professionally, do 3D, or run ML workloads."
       author={{ name: "Shafiq", role: "Senior Apple technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -36,18 +36,18 @@ export default function BlogIMacVsMacMiniVsStudio() {
             caption="Mac desktop - pick by use case"
             headers={["You are…", "Recommended Mac", "Why", "UAE price"]}
             rows={[
-              { model: "Family / shared home computer", ours: "iMac M5 24″", apple: "All-in-one, kid-friendly, gorgeous", note: "AED 5,999" },
-              { model: "Developer with own monitor", ours: "Mac Mini M5", apple: "Fastest AED-per-dollar value", note: "AED 2,799" },
-              { model: "Video editor (4K daily)", ours: "Mac Studio M5 Max", apple: "Sustained workstation power", note: "AED 8,999" },
-              { model: "Photographer / designer", ours: "iMac M5 (16GB)", apple: "Colour-accurate display included", note: "AED 6,499" },
-              { model: "Office / accounting", ours: "Mac Mini M5", apple: "Plug into existing monitor, save AED 3k", note: "AED 2,799" },
-              { model: "ML / AI researcher", ours: "Mac Studio M5 Ultra", apple: "192GB RAM, 76 GPU cores", note: "AED 18,999" },
+              { model: "Family / shared home computer", ours: "iMac M5 24″", apple: "All-in-one, kid-friendly, gorgeous", note: "Price on request" },
+              { model: "Developer with own monitor", ours: "Mac Mini M5", apple: "Fastest value per dirham", note: "Price on request" },
+              { model: "Video editor (4K daily)", ours: "Mac Studio M5 Max", apple: "Sustained workstation power", note: "Price on request" },
+              { model: "Photographer / designer", ours: "iMac M5 (16GB)", apple: "Colour-accurate display included", note: "Price on request" },
+              { model: "Office / accounting", ours: "Mac Mini M5", apple: "Plug into existing monitor, save on a display", note: "Price on request" },
+              { model: "ML / AI researcher", ours: "Mac Studio M5 Ultra", apple: "192GB RAM, 76 GPU cores", note: "Price on request" },
             ]}
           />
 
           <h2 id="imac-strengths">iMac strengths - all-in-one beauty</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>24″ 4.5K Retina display</strong> built-in (P3, 500 nits) - would cost AED 2,000+ as a standalone.</li>
+            <li><strong>24″ 4.5K Retina display</strong> built-in (P3, 500 nits) - a comparable standalone monitor would cost a lot on its own.</li>
             <li><strong>Cable-free aesthetic</strong> - one power cable, that's it.</li>
             <li><strong>Magic Keyboard + Mouse + Trackpad</strong> included (matched colour to chassis).</li>
             <li><strong>1080p webcam + 6-speaker spatial audio</strong> built in.</li>
@@ -61,15 +61,15 @@ export default function BlogIMacVsMacMiniVsStudio() {
 
           <h2 id="mac-mini-strengths">Mac Mini strengths - value and modularity</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Cheapest Mac you can buy</strong> - AED 2,799 base, less than a base iPhone 17 Pro.</li>
+            <li><strong>Cheapest Mac you can buy</strong> - the base model costs less than a base iPhone 17 Pro.</li>
             <li><strong>Bring your own everything</strong> - keyboard, mouse, monitor - keep what you have.</li>
             <li><strong>Tiny footprint</strong> - 12.7 × 12.7 × 5 cm, fits behind any monitor.</li>
             <li><strong>Front + rear ports</strong> in 2024 redesign - USB-C and headphone on the front for daily use.</li>
             <li><strong>Same M5 chip as MacBook Pro base</strong> - full performance, no thermal throttling (active cooling).</li>
-            <li><strong>Up to M5 Pro</strong> chip available (AED 4,499) - gives you 12 CPU + 16 GPU cores.</li>
+            <li><strong>Up to M5 Pro</strong> chip available - gives you 12 CPU + 16 GPU cores.</li>
           </ul>
           <p>
-            Trade-offs: no display, no keyboard, no mouse - budget AED 1,500-3,000 for a decent setup
+            Trade-offs: no display, no keyboard, no mouse - budget for a decent setup
             unless you have one already. No webcam (use iPhone with Continuity Camera).
           </p>
 
@@ -83,13 +83,13 @@ export default function BlogIMacVsMacMiniVsStudio() {
             <li><strong>Drives up to 8 displays</strong> simultaneously (Ultra chip).</li>
           </ul>
           <p>
-            Trade-offs: starts at AED 8,999. Massive overkill for normal work. Doesn't include a screen.
-            If you only use it for the same things as a Mac Mini, you wasted AED 6,000.
+            Trade-offs: it is the priciest of the three by a wide margin. Massive overkill for normal work.
+            Doesn't include a screen. If you only use it for the same things as a Mac Mini, you overspent.
           </p>
 
           <h2 id="mac-pro-for-who">Mac Pro - for who? (almost nobody)</h2>
           <p>
-            The Mac Pro M5 Ultra (AED 28,999+) exists for specialists who need PCIe expansion slots -
+            The Mac Pro M5 Ultra exists for specialists who need PCIe expansion slots -
             broadcast professionals, audio engineers with proprietary DSP cards, scientific computing
             with FPGA accelerators. In Dubai we sold exactly two Mac Pros in 2025. If you're asking
             whether you need one, you don't.
@@ -100,16 +100,16 @@ export default function BlogIMacVsMacMiniVsStudio() {
             caption="iMac M5 vs Mac Mini + standalone monitor - true cost comparison"
             headers={["Setup", "Computer", "Monitor", "Total"]}
             rows={[
-              { model: "iMac M5 24″ base (16GB)", ours: "AED 5,999 (incl. 4.5K)", apple: "Included", note: "AED 5,999" },
-              { model: "Mac Mini M5 + Apple Studio Display", ours: "AED 2,799", apple: "AED 6,299", note: "AED 9,098" },
-              { model: "Mac Mini M5 + LG 27\" 4K", ours: "AED 2,799", apple: "AED 1,500", note: "AED 4,299" },
-              { model: "Mac Mini M5 + Dell U2723QE", ours: "AED 2,799", apple: "AED 2,200", note: "AED 4,999" },
+              { model: "iMac M5 24″ base (16GB)", ours: "Price on request", apple: "Display included", note: "Price on request" },
+              { model: "Mac Mini M5 + Apple Studio Display", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "Mac Mini M5 + LG 27\" 4K", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "Mac Mini M5 + Dell U2723QE", ours: "Price on request", apple: "Price on request", note: "Price on request" },
             ]}
           />
           <p>
-            <strong>Insight:</strong> iMac is a phenomenal deal at AED 5,999 if you compare to Apple's own
-            Studio Display + Mac Mini at AED 9,098. But against a quality LG or Dell 4K monitor + Mac
-            Mini, the bundled cost is AED 1,000-1,700 less than the iMac. The iMac wins on aesthetic
+            <strong>Insight:</strong> the iMac is a phenomenal deal compared to Apple's own
+            Studio Display paired with a Mac Mini. But against a quality LG or Dell 4K monitor + Mac
+            Mini, the bundled cost comes out lower than the iMac. The iMac wins on aesthetic
             and integration; the Mini wins on flexibility (and you can upgrade the monitor in 5 years
             without replacing the computer).
           </p>
@@ -119,11 +119,11 @@ export default function BlogIMacVsMacMiniVsStudio() {
             caption="Mac desktop - repair cost at our Dubai workshop"
             headers={["Repair", "iMac 24″ M5", "Mac Mini M5", "Mac Studio M5 Max"]}
             rows={[
-              { model: "Logic board (component repair)", ours: "AED 1,800", apple: "AED 1,200", note: "AED 2,200" },
-              { model: "SSD module replacement", ours: "AED 950", apple: "AED 750", note: "AED 1,200" },
-              { model: "Power supply", ours: "AED 600 + part", apple: "AED 450 + part", note: "AED 700 + part" },
-              { model: "Display panel (iMac only)", ours: "AED 2,400", apple: "n/a", note: "n/a" },
-              { model: "Liquid spill clean", ours: "AED 800", apple: "AED 600", note: "AED 750" },
+              { model: "Logic board (component repair)", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "SSD module replacement", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "Power supply", ours: "Price on request", apple: "Price on request", note: "Price on request" },
+              { model: "Display panel (iMac only)", ours: "Price on request", apple: "n/a", note: "n/a" },
+              { model: "Liquid spill clean", ours: "Price on request", apple: "Price on request", note: "Price on request" },
             ]}
           />
           <p>
@@ -139,11 +139,11 @@ export default function BlogIMacVsMacMiniVsStudio() {
           <h2 id="resale-value-compared">Resale value compared (3 years)</h2>
           <BlogPriceTable
             caption="Mac desktop resale - projected April 2029 (3 years from new)"
-            headers={["Mac", "New price (AED)", "Projected resale", "Depreciation"]}
+            headers={["Mac", "New price", "Projected resale", "Depreciation"]}
             rows={[
-              { model: "iMac M5 24″ 16GB", ours: "5,999", apple: "3,400", note: "43%" },
-              { model: "Mac Mini M5 16GB", ours: "2,799", apple: "1,800", note: "36%" },
-              { model: "Mac Studio M5 Max 32GB", ours: "8,999", apple: "5,800", note: "36%" },
+              { model: "iMac M5 24″ 16GB", ours: "Price on request", apple: "Price on request", note: "~43%" },
+              { model: "Mac Mini M5 16GB", ours: "Price on request", apple: "Price on request", note: "~36%" },
+              { model: "Mac Studio M5 Max 32GB", ours: "Price on request", apple: "Price on request", note: "~36%" },
             ]}
           />
           <p>
@@ -175,8 +175,8 @@ export default function BlogIMacVsMacMiniVsStudio() {
           a: "Functionally yes - same chip, same macOS, same software. The trade-off is buying a separate monitor, keyboard, and webcam. If you have those already, Mac Mini is the smarter buy. If you're starting from scratch and care about aesthetics, iMac wins.",
         },
         {
-          q: "Is the Mac Studio M5 Max worth AED 6,000 more than a Mac Mini M5 Pro?",
-          a: "Only if you regularly hit the chip's limits - 4K+ video editing, 3D rendering in Blender, ML training. For typical office, dev, and design work, Mac Mini M5 Pro (AED 4,499) is faster than 95% of users will ever notice.",
+          q: "Is the Mac Studio M5 Max worth the extra over a Mac Mini M5 Pro?",
+          a: "Only if you regularly hit the chip's limits - 4K+ video editing, 3D rendering in Blender, ML training. For typical office, dev, and design work, the Mac Mini M5 Pro is faster than 95% of users will ever notice.",
         },
         {
           q: "Can I upgrade RAM or SSD on any of these later?",
@@ -192,12 +192,12 @@ export default function BlogIMacVsMacMiniVsStudio() {
         },
         {
           q: "What about used Mac Studios - good value?",
-          a: "Excellent value. Used Mac Studio M2 Max 32GB sells for AED 5,500-6,000 in Dubai (vs AED 11,499 new in 2023). Performance is still 90%+ of M5 Max. Buy from a seller with the original Apple receipt and warranty paperwork.",
+          a: "Excellent value. A used Mac Studio M2 Max 32GB sells for well under its 2023 launch price in Dubai, yet performance is still 90%+ of the M5 Max. Buy from a seller with the original Apple receipt and warranty paperwork.",
         },
       ]}
       relatedLinks={[
         { label: "iMac repair hub", href: "/imac-repair-dubai", description: "Every iMac model serviced - Intel and Apple Silicon." },
-        { label: "Mac Mini repair page", href: "/mac-mini-repair-dubai", description: "Component-level repair from AED 600." },
+        { label: "Mac Mini repair page", href: "/mac-mini-repair-dubai", description: "Component-level repair - message us for a quote." },
         { label: "Mac Studio repair page", href: "/mac-studio-repair-dubai", description: "Workstation repair specialists." },
       ]}
     />

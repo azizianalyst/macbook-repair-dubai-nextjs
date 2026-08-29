@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhoneSe3rdGenRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone SE 3rd Gen Repair Dubai - Screen, Battery from AED 250 | 055 741 3706"
-      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery AED 250, LCD AED 320, all repairs same day, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="iPhone SE 3rd Gen Repair Dubai - Screen, Battery, Same Day | 055 741 3706"
+      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery, LCD and all repairs same day, warranty up to 12 months. WhatsApp us for today's price."
       path="/iphone-se-3rd-gen-repair-dubai"
       eyebrow="iPhone SE (2022)"
       h1="iPhone SE (3rd Gen) Repair Dubai - Screen, Battery, All Repairs"
-      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. From AED 250, same day, written warranty up to 12 months."
+      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. Same day, written warranty up to 12 months - message us for today's price."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone SE 3rd gen (2022) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhoneSe3rdGenRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. From AED 250, same day, warranty of up to 12 months.
+            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. Same day, warranty of up to 12 months - message us on WhatsApp for today's exact price on your model.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone SE 3 (2022)</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -47,14 +47,14 @@ export default function IPhoneSe3rdGenRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for SE 3rd gen</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">250</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">LCD screen replacement</td><td className="px-md py-sm">320</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Lightning port</td><td className="px-md py-sm">250 (free clean first)</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Home button repair</td><td className="px-md py-sm">200</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-home-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Camera repair</td><td className="px-md py-sm">350</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">From 350</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">LCD screen replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Lightning port</td><td className="px-md py-sm">Price on request (free clean first)</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Home button repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-home-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Camera repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
@@ -94,15 +94,15 @@ export default function IPhoneSe3rdGenRepair() {
       faqs={[
         { q: "Will the SE 3 get iOS 19?", a: "Yes, almost certainly. The A15 chip is still in active production (used in the iPhone 14 base model). iOS 19 support is expected." },
         { q: "Does it support Apple Intelligence?", a: "No. Apple Intelligence requires A17 Pro or M-series silicon with 8 GB RAM. The SE 3 has the A15 with 4 GB." },
-        { q: "Genuine Apple screen or OEM?", a: "Both available. Genuine Apple-pull display: AED 420. OEM-grade equivalent LCD: AED 320. Both carry our 3-month warranty." },
+        { q: "Genuine Apple screen or OEM?", a: "Both available - a genuine Apple-pull display or an OEM-grade equivalent LCD. Both carry our 3-month warranty. Message us on WhatsApp for today's price on each option." },
         { q: "Will Touch ID survive a screen swap?", a: "Yes. The Touch ID sensor lives in the home button which is paired to the logic board. We keep your original button and transplant it. No Touch ID loss." },
         { q: "Same day repair?", a: "Yes. WhatsApp by 12 PM for same-day return on screens, batteries, ports, speakers." },
       ]}
       reviewNames={["Sergej Schlegel", "Wellington Academy"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",       href: "/iphone-screen-repair-dubai",       description: "LCD from AED 320 with Touch ID preserved." },
-        { label: "iPhone Battery Replacement",       href: "/iphone-battery-replacement-dubai", description: "OEM cell. 45 minutes. AED 250." },
-        { label: "iPhone Lightning Port Repair",     href: "/iphone-lightning-port-repair-dubai", description: "Free clean first; replacement AED 250 if needed." },
+        { label: "iPhone Screen Repair Dubai",       href: "/iphone-screen-repair-dubai",       description: "LCD replacement with Touch ID preserved." },
+        { label: "iPhone Battery Replacement",       href: "/iphone-battery-replacement-dubai", description: "OEM cell. 45 minutes. Price on request." },
+        { label: "iPhone Lightning Port Repair",     href: "/iphone-lightning-port-repair-dubai", description: "Free clean first; replacement if needed." },
       ]}
     />
   );

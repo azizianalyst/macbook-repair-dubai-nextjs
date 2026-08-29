@@ -5,7 +5,7 @@ export default function IMacPowerSupplyRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Power Supply Repair Dubai - No Power Fix | 055 741 3706"
-      seoDescription="iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. AED 400 labor + part. 1-2 days. Free home visit."
+      seoDescription="iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. 1-2 days. Free diagnosis and home visit - message us for a quote."
       path="/imac-power-supply-repair-dubai"
       eyebrow="iMac power supply"
       h1="iMac Power Supply Repair Dubai - The Common 'No Power' Fix"
@@ -54,7 +54,7 @@ export default function IMacPowerSupplyRepair() {
       faqs={[
         { q: "How do I know it's the PSU and not something else?", a: "You don't, and you shouldn't guess. Logic board faults and CMOS battery issues can look identical. Our free diagnostic uses a known-good PSU as a test - if it brings the iMac back, you need a PSU. If it doesn't, you don't, and we tell you so." },
         { q: "Is this an Apple-original part?", a: "We use either pulled-original Apple PSUs from donor boards (preferred) or aftermarket replacements that meet the exact electrical spec. We tell you which one is going in your machine before we start." },
-        { q: "Why is this AED 400 labor - isn't it just a swap?", a: "The labor includes display removal, adhesive cutting, careful reassembly with fresh adhesive and overnight cure, plus the diagnostic and burn-in. The actual PSU swap is fast - getting in and out of the iMac safely is the work." },
+        { q: "Isn't a PSU swap just a quick job?", a: "The labor includes display removal, adhesive cutting, careful reassembly with fresh adhesive and overnight cure, plus the diagnostic and burn-in. The actual PSU swap is fast - getting in and out of the iMac safely is the work. Message us on WhatsApp for today's exact price on your model." },
         { q: "Can the PSU be repaired instead of replaced?", a: "Sometimes - for the curious or for a 2009/2011 iMac where parts are scarce, we can replace failed capacitors on the PSU board (board-level service). On 2015+ machines a swap is faster, more reliable and similar cost." },
         { q: "Will my data be safe?", a: "Yes - the PSU sits separately from the storage. We don't touch the SSD or Fusion Drive. Your data is exactly where you left it when the iMac comes back to life." },
         { q: "Can you collect from my home or office?", a: "Yes, free across Dubai mainland. iMacs are awkward to box. We bring proper transport foam." },

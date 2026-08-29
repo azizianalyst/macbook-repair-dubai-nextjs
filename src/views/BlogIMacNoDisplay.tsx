@@ -6,12 +6,12 @@ export default function BlogIMacNoDisplay() {
   return (
     <BlogPostTemplate
       seoTitle="iMac No Display or Black Screen in Dubai? 6 Fixes 2026"
-      seoDescription="iMac turns on but no display or black screen in Dubai? 6 fixes for backlight, GPU, and panel faults. Repair from AED 600."
+      seoDescription="iMac turns on but no display or black screen in Dubai? 6 fixes for backlight, GPU, and panel faults. Free diagnosis, message us for your price."
       path="/blog/imac-no-display-black-screen-dubai"
       wide={true}
       category="Fix guide · iMac"
       h1="iMac No Display or Black Screen in Dubai? 6 Things to Check"
-      hook="An iMac that powers on with a black screen is usually a failed backlight, a GPU fault, or a loose display cable, and our Dubai workshop diagnoses every model free with repair from AED 600."
+      hook="An iMac that powers on with a black screen is usually a failed backlight, a GPU fault, or a loose display cable, and our Dubai workshop diagnoses every model free before quoting your exact repair price."
       quickAnswer="iMac no display with the chime or fan running means power is fine but the picture is not reaching the panel. Common causes: failed LED backlight, GPU failure, loose internal display cable, or a panel fault. Shine a torch at the screen at an angle to check if the backlight is the issue."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -125,9 +125,9 @@ export default function BlogIMacNoDisplay() {
             </ul>
             <p>
               If you are weighing a do-it-yourself attempt, remember that a botched panel removal can
-              turn a AED 600 backlight repair into a full panel replacement. The adhesive, the bonded
-              glass, and the static-sensitive driver boards are why this is workshop work for almost
-              everyone.
+              turn a straightforward backlight repair into a far more costly full panel replacement.
+              The adhesive, the bonded glass, and the static-sensitive driver boards are why this is
+              workshop work for almost everyone.
             </p>
           </section>
 
@@ -184,11 +184,11 @@ export default function BlogIMacNoDisplay() {
               caption="iMac no display repair prices in Dubai, 2026"
               headers={["Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Backlight repair", ours: "AED 600", apple: "AED 1,200+" },
-                { model: "Display cable repair", ours: "AED 400", apple: "AED 800+" },
-                { model: "GPU repair (board-level)", ours: "AED 800", apple: "AED 2,000+" },
-                { model: "Panel replacement 21.5\"", ours: "AED 900", apple: "AED 1,800+" },
-                { model: "Panel replacement 27\" 5K", ours: "AED 1,400", apple: "AED 2,800+" },
+                { model: "Backlight repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Display cable repair", ours: "Price on request", apple: "Price on request" },
+                { model: "GPU repair (board-level)", ours: "Price on request", apple: "Price on request" },
+                { model: "Panel replacement 21.5\"", ours: "Price on request", apple: "Price on request" },
+                { model: "Panel replacement 27\" 5K", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>

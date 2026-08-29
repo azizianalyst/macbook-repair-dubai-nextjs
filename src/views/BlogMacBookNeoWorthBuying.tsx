@@ -7,7 +7,7 @@ export default function BlogMacBookNeoWorthBuying() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Neo (2026): Worth Buying or Skip It?"
-      seoDescription="Honest MacBook Neo review for Dubai 2026: A18 Pro vs M5 speed, who it suits, who should skip it, repair costs, plus how it compares to a refurb M1 Air."
+      seoDescription="Honest MacBook Neo review for Dubai 2026: A18 Pro vs M5 speed, who it suits, who should skip it, repair notes, plus how it compares to a refurb M1 Air."
       path="/blog/macbook-neo-worth-buying-2026"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookNeoWorthBuying() {
         { id: "verdict", label: "Verdict" },
       ]}
       category="Buying guide · MacBook"
-      h1="MacBook Neo Review - Should You Buy Apple's $599 Mac?"
-      hook="Apple's first A-chip MacBook is here. AED 2,200 in Dubai. Here's the honest take."
-      quickAnswer="MacBook Neo (2026, A18 Pro, AED 2,199) is Apple's cheapest Mac ever. It suits casual users, second machines, and kids: browsing, email, schoolwork, light Office. It is NOT for anyone running Photoshop, Final Cut, or Xcode, or expecting MacBook Air speed. For AED 2,200 we'd buy a refurbished MacBook Air M1 16GB instead."
+      h1="MacBook Neo Review - Should You Buy Apple's Entry Mac?"
+      hook="Apple's first A-chip MacBook is here in Dubai. Here's the honest take."
+      quickAnswer="MacBook Neo (2026, A18 Pro) is Apple's cheapest Mac ever. It suits casual users, second machines, and kids: browsing, email, schoolwork, light Office. It is NOT for anyone running Photoshop, Final Cut, or Xcode, or expecting MacBook Air speed. For similar money we'd buy a refurbished MacBook Air M1 16GB instead."
       author={{ name: "Ali", role: "Senior MacBook technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -36,14 +36,14 @@ export default function BlogMacBookNeoWorthBuying() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Buy MacBook Neo if:</strong> You need a second Mac, you're buying for a child, your workload is browsing + Office + Zoom, you're allergic to refurbished tech.</li>
             <li><strong>Skip MacBook Neo if:</strong> You run any pro app (Photoshop, Final Cut, Logic, Xcode), you want a 5-year primary computer, you're upgrading from an M1 or newer Mac.</li>
-            <li><strong>Better alternative for the same money:</strong> Refurbished MacBook Air M1 8GB/256GB at AED 2,500 (or 16GB/512GB at AED 3,400) from us.</li>
+            <li><strong>Better alternative for similar money:</strong> Refurbished MacBook Air M1 8GB/256GB (or 16GB/512GB) from us - message us on WhatsApp for today's price.</li>
           </ul>
 
           <h2 id="what-it-is">What MacBook Neo is (and isn't)</h2>
           <p>
             MacBook Neo is Apple's 2026 entry-level laptop, the first Mac to use an iPhone-class chip
-            (A18 Pro) instead of an M-series chip. Apple positioned it as a "computer for everyone" at
-            USD 599 (AED 2,199 in UAE). It is essentially an iPad in a clamshell with macOS.
+            (A18 Pro) instead of an M-series chip. Apple positioned it as a "computer for everyone" and
+            it lands as Apple's cheapest Mac ever. It is essentially an iPad in a clamshell with macOS.
           </p>
           <p>
             <strong>What it is:</strong> A modern macOS laptop with current iOS-class performance,
@@ -78,7 +78,7 @@ export default function BlogMacBookNeoWorthBuying() {
 
           <h2 id="who-its-for">Who Neo is for</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Kids / school students (under 14):</strong> Office, Google Classroom, browsing, occasional video calls. Neo handles all of it. AED 2,200 is less to worry about if dropped.</li>
+            <li><strong>Kids / school students (under 14):</strong> Office, Google Classroom, browsing, occasional video calls. Neo handles all of it, and it's affordable enough to be less to worry about if dropped.</li>
             <li><strong>Second laptop for travel:</strong> Light, cheap, runs your essential apps. Don't take your M3 Pro to the beach.</li>
             <li><strong>Light browsers and email-only users:</strong> Parents, grandparents, casual home users. Neo is plenty.</li>
             <li><strong>Reception desks and shared workstations:</strong> Cheap to replace, runs a browser and Outlook indefinitely.</li>
@@ -89,7 +89,7 @@ export default function BlogMacBookNeoWorthBuying() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Anyone running Photoshop, Lightroom, Premiere, Final Cut, or DaVinci.</strong> The A18 Pro will throttle and the 8 GB RAM will swap to disk, killing the SSD's lifespan.</li>
             <li><strong>iOS / Mac developers using Xcode.</strong> Build times are 2× a MacBook Air M3.</li>
-            <li><strong>University students with 4-year horizon.</strong> Spend the AED 1,800 more for a MacBook Air M3 16GB and avoid replacing in year 3.</li>
+            <li><strong>University students with 4-year horizon.</strong> Stretch to a MacBook Air M3 16GB and avoid replacing in year 3.</li>
             <li><strong>Multi-tab power users.</strong> 8 GB RAM + non-upgradable means you'll feel the ceiling within months.</li>
             <li><strong>Music producers running Logic.</strong> The chip can handle it, the RAM cannot.</li>
             <li><strong>Anyone replacing a MacBook from 2020 or later.</strong> Your old M1 Mac is faster on sustained workloads. Neo would be a downgrade.</li>
@@ -111,51 +111,52 @@ export default function BlogMacBookNeoWorthBuying() {
               { model: "Battery", ours: "53 Wh, 12 hr web", apple: "53 Wh, 18 hr web" },
               { model: "Weight", ours: "1.32 kg", apple: "1.24 kg" },
               { model: "Wi-Fi / Bluetooth", ours: "Wi-Fi 6E / BT 5.3", apple: "Wi-Fi 7 / BT 5.3" },
-              { model: "Price (UAE)", ours: "AED 2,199", apple: "AED 4,499 (16GB/512GB)" },
+              { model: "Price (UAE)", ours: "Price on request", apple: "Price on request (16GB/512GB)" },
             ]}
           />
 
           <h2 id="neo-vs-m1-air">MacBook Air M1 (refurb) vs MacBook Neo - sometimes Air wins</h2>
           <p>
-            For roughly the same money, here's what AED 2,200-2,500 buys you in Dubai April 2026:
+            For roughly the same money, here's what your options look like in Dubai April 2026:
           </p>
           <BlogPriceTable
             caption="Same money, two paths - Neo new vs M1 Air refurbished"
-            headers={["Option", "Price (AED)", "Pros", "Cons"]}
+            headers={["Option", "Price", "Pros", "Cons"]}
             rows={[
-              { model: "MacBook Neo new (8GB/256GB)", ours: "2,199", apple: "1-year Apple warranty, latest macOS, brand new", note: "Throttles, 8GB ceiling, no MagSafe / Touch ID" },
-              { model: "MacBook Air M1 refurb (8GB/256GB) - us", ours: "2,500", apple: "Sustained M1 performance, MagSafe, Touch ID, 6-mo warranty", note: "5 years old, used chassis" },
-              { model: "MacBook Air M1 refurb (16GB/512GB) - us", ours: "3,400", apple: "16GB RAM is huge, future-proofs through 2029", note: "AED 1,200 more than Neo" },
+              { model: "MacBook Neo new (8GB/256GB)", ours: "Price on request", apple: "1-year Apple warranty, latest macOS, brand new", note: "Throttles, 8GB ceiling, no MagSafe / Touch ID" },
+              { model: "MacBook Air M1 refurb (8GB/256GB) - us", ours: "Price on request", apple: "Sustained M1 performance, MagSafe, Touch ID, 6-mo warranty", note: "5 years old, used chassis" },
+              { model: "MacBook Air M1 refurb (16GB/512GB) - us", ours: "Price on request", apple: "16GB RAM is huge, future-proofs through 2029", note: "Costs a bit more than Neo" },
             ]}
           />
           <p>
-            <strong>Our honest take:</strong> If you can stretch budget to AED 2,500, buy the refurbished
+            <strong>Our honest take:</strong> If you can stretch the budget a little, buy the refurbished
             M1 Air. The full-fat M1 chip outperforms A18 Pro on every sustained workload, the chassis is
             premium aluminium, MagSafe protects from cable trips, and Touch ID is a real daily-life
-            upgrade. If you can stretch to AED 3,400, the 16GB / 512GB M1 Air will last 4-5 more years.
+            upgrade. Stretch a bit further for the 16GB / 512GB M1 Air and it will last 4-5 more years.
           </p>
 
           <h2 id="repair-costs">Repair cost expectations (new platform, parts limited)</h2>
           <p>
             MacBook Neo is a brand-new platform. As of April 2026, parts supply is still constrained.
-            Expected repair pricing once the supply chain matures (Q3 2026):
+            Repair availability should improve once the supply chain matures (Q3 2026) - message us on
+            WhatsApp for today's exact price on your specific fault:
           </p>
           <BlogPriceTable
-            caption="MacBook Neo - projected repair cost at our workshop"
-            headers={["Repair", "Estimated price (AED)", "Notes"]}
+            caption="MacBook Neo - repair services at our workshop"
+            headers={["Repair", "Price", "Notes"]}
             rows={[
-              { model: "Screen replacement", ours: "650", apple: "LCD panel - cheaper than Air's Liquid Retina" },
-              { model: "Battery replacement", ours: "400", apple: "53 Wh single cell, similar to Air" },
-              { model: "Top case (keyboard + trackpad)", ours: "750", apple: "Single non-modular assembly" },
-              { model: "USB-C port", ours: "350", apple: "Both ports on a small board" },
-              { model: "Logic board (component-level)", ours: "1,200", apple: "Limited - many faults will require board swap" },
-              { model: "Liquid damage clean", ours: "650", apple: "Same process as MacBook Air" },
+              { model: "Screen replacement", ours: "Price on request", apple: "LCD panel - cheaper than Air's Liquid Retina" },
+              { model: "Battery replacement", ours: "Price on request", apple: "53 Wh single cell, similar to Air" },
+              { model: "Top case (keyboard + trackpad)", ours: "Price on request", apple: "Single non-modular assembly" },
+              { model: "USB-C port", ours: "Price on request", apple: "Both ports on a small board" },
+              { model: "Logic board (component-level)", ours: "Price on request", apple: "Limited - many faults will require board swap" },
+              { model: "Liquid damage clean", ours: "Price on request", apple: "Same process as MacBook Air" },
             ]}
           />
           <p>
             <strong>Caveat:</strong> Apple has not yet released the Neo through the Independent Repair
-            Provider programme. We expect parts supply to mature by Q3 2026; prices may shift. Until then,
-            Apple Store is the only authorised repair channel - expect AED 1,500+ for any major repair.{" "}
+            Provider programme. We expect parts supply to mature by Q3 2026. Until then, the Apple Store
+            is the only authorised repair channel, and a major repair there can be expensive.{" "}
             <Link to="/macbook-neo-repair-dubai" className="text-accent font-semibold hover:underline">
               Track our latest pricing here
             </Link>
@@ -171,8 +172,8 @@ export default function BlogMacBookNeoWorthBuying() {
           <p>
             For everyone else, it's a trap. The 8 GB RAM ceiling and A18 Pro thermal throttling will
             disappoint anyone trying to use Neo as a primary computer for real work. We'd rather see you
-            spend AED 300 more on a refurbished M1 Air, or AED 2,300 more on a new MacBook Air M5 (16GB/
-            512GB at AED 4,499) than buy a Neo you'll outgrow in 18 months.
+            spend a little more on a refurbished M1 Air, or stretch to a new MacBook Air M5 (16GB/
+            512GB) than buy a Neo you'll outgrow in 18 months.
           </p>
 
           <p>
@@ -207,7 +208,7 @@ export default function BlogMacBookNeoWorthBuying() {
         },
         {
           q: "Will MacBook Neo's price drop in 2026?",
-          a: "Unlikely meaningfully. Apple historically holds entry-tier pricing steady for 18+ months. Expect occasional Sharaf DG promotions of AED 100-200 off, and refurbished availability through Apple by Q4 2026 at maybe AED 1,899.",
+          a: "Unlikely meaningfully. Apple historically holds entry-tier pricing steady for 18+ months. Expect occasional Sharaf DG promotions of a little off, and refurbished availability through Apple by Q4 2026 at a modest discount.",
         },
       ]}
       relatedLinks={[

@@ -1,13 +1,14 @@
 "use client";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { IPAD_SCREEN_PRICES } from "@/content/screen-pricing";
 
 export default function BlogIPadScreenRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Screen Repair Cost Dubai 2026 - Every Model"
-      seoDescription="iPad screen repair prices Dubai 2026: AED 139 (iPad 9) to AED 1,200 (iPad Pro M5). Mini-LED vs Liquid Retina, Apple Store comparison, same-day service."
+      seoDescription="iPad screen repair Dubai 2026, every model: iPad 9 to iPad Pro M5, mini-LED vs Liquid Retina vs OLED. Same-day service, message us on WhatsApp for your price."
       path="/blog/ipad-screen-repair-cost-dubai-2026"
       wide
       toc={[
@@ -20,8 +21,8 @@ export default function BlogIPadScreenRepairCost() {
       ]}
       category="Cost guide · iPad"
       h1="iPad Screen Repair Cost in Dubai 2026 - Every Model"
-      hook="iPad screen repair in Dubai ranges from AED 139 on the entry-level iPad 9 to AED 1,200 on the iPad Pro M5, here is the full model-by-model price list."
-      quickAnswer="iPad screen repair in Dubai costs AED 139–1,200 in 2026. Entry iPads are AED 139–600. iPad Air models are AED 650–850. iPad Pro with Liquid Retina XDR (mini-LED or OLED) is AED 900–1,200. Most repairs are same-day with a 3-month written warranty."
+      hook="iPad screen repair in Dubai spans every model, from the entry-level iPad 9 up to the iPad Pro M5, here is the full model-by-model guide with prices confirmed on WhatsApp."
+      quickAnswer="iPad screen repair in Dubai in 2026 depends on your exact model and its display type: entry iPads use Liquid Retina LCD, iPad Air steps up, and iPad Pro uses mini-LED or tandem OLED. Most repairs are same-day with a 3-month written warranty, message us on WhatsApp for your model's exact price."
       author={{ name: "Ali", role: "Senior iPad screen technician" }}
       datePublished="2026-06-09"
       dateModified="2026-06-16"
@@ -36,7 +37,7 @@ export default function BlogIPadScreenRepairCost() {
       ]}
       relatedLinks={[
         { label: "iPad repair Dubai", href: "/ipad-repair-dubai", description: "All iPad models and services" },
-        { label: "iPad battery replacement Dubai", href: "/ipad-battery-replacement-dubai", description: "From AED 300, same-day" },
+        { label: "iPad battery replacement Dubai", href: "/ipad-battery-replacement-dubai", description: "Same-day, price on WhatsApp" },
         { label: "iPad water damage repair", href: "/ipad-water-damage-repair-dubai", description: "Liquid damage recovery service" },
       ]}
       body={
@@ -47,21 +48,22 @@ export default function BlogIPadScreenRepairCost() {
             warranty. No diagnostic fee. Free pickup from any Dubai address.
           </p>
           <BlogPriceTable
-            caption="iPad screen repair pricing. MacBook Repair Dubai, June 2026"
+            caption="iPad screen repair by model. MacBook Repair Dubai, June 2026"
+            headers={["Model", "Our price", "Display type"]}
             rows={IPAD_SCREEN_PRICES.map((r) => ({
               model: r.model,
-              ours: `AED ${r.price.toLocaleString()}`,
-              apple: `AED ${r.apple_price.toLocaleString()}`,
-              note: r.note,
+              ours: "Price on request",
+              apple: r.note,
             }))}
           />
-          <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing estimated from USD list converted to AED, June 2026. Apple Store UAE pricing may vary.
+          <p className="text-[13px] text-text-muted">
+            Every model uses a different display panel, so prices vary.{" "}
+            <PriceCTA message="Hi, price for iPad screen repair in Dubai?" /> with your exact iPad model for today&apos;s confirmed price.
           </p>
 
           <h2 id="lcd-vs-mini-led-vs-oled">Why iPad screen costs vary so much. LCD vs mini-LED vs OLED</h2>
           <p>
-            Three display technologies drive the AED 750 spread between the cheapest and most
+            Three display technologies drive the wide gap between the cheapest and most
             expensive iPad screen repair.
           </p>
           <p>
@@ -73,7 +75,7 @@ export default function BlogIPadScreenRepairCost() {
             <strong>Liquid Retina XDR (mini-LED)</strong> arrived on the iPad Pro 11″ M1 and the
             12.9″ M1 in 2021. The panel layers 10,000+ mini-LEDs behind the LCD for local
             dimming. The assembly is thicker and more fragile than a standard LCD sandwich, and
-            wholesale costs are significantly higher, hence the AED 850–1,000 range.
+            wholesale costs are significantly higher, so mini-LED repairs sit well above entry LCD models.
           </p>
           <p>
             <strong>Ultra Retina XDR OLED (tandem stack)</strong> debuted on the iPad Pro M4 in
@@ -89,21 +91,21 @@ export default function BlogIPadScreenRepairCost() {
            , they are sold and replaced as a single unit. If the display underneath still shows
             correctly but the glass is cracked, you technically only need the glass, but in
             practice separating bonded glass without damaging the panel takes specialist equipment
-            and is only cost-effective on iPad Pros where a standalone glass costs AED 250–400
-            versus a full panel at AED 850–1,200.
+            and is only cost-effective on iPad Pros, where a standalone glass swap can come in below
+            a full-panel replacement.
           </p>
           <p>
-            For entry iPads and iPad minis, the full-panel replacement at AED 139–580 is cheaper
+            For entry iPads and iPad minis, the full-panel replacement is usually cheaper
             than the labour to separate and re-bond glass alone. We tell you which applies to your
-            model before any work starts.
+            model, and the exact price, before any work starts.
           </p>
 
           <h2 id="apple-vs-independent">Apple Store vs independent repair, honest comparison</h2>
           <p>
             Apple charges significantly more for iPad screen repairs because they replace the
             entire front assembly via depot service, your iPad goes to a service hub, typically
-            with a 3–5 business day turnaround. The prices in the table above are Apple's
-            official out-of-warranty service fees converted to AED.
+            with a 3–5 business day turnaround. Their out-of-warranty screen service fees are among
+            the highest in the market.
           </p>
           <p>
             We replace screens in-workshop, same-day on stock parts (iPad 9 through Air M3, most

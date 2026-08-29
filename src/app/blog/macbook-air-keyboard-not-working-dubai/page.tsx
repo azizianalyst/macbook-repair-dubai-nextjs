@@ -4,10 +4,10 @@ import View from "@/views/BlogMacBookAirKeyboard";
 
 export const metadata: Metadata = {
   title: "MacBook Air Keyboard Not Working Dubai 2026 — Fix Guide",
-  description: "MacBook Air keyboard not working in Dubai? Butterfly (2018-2019) vs scissor fix. Desert-dust damage, top-case repair from AED 300. Free diagnosis.",
+  description: "MacBook Air keyboard not working in Dubai? Butterfly (2018-2019) vs scissor fix. Desert-dust damage, top-case repair. Free diagnosis, message us for a quote.",
   openGraph: {
     title: "MacBook Air Keyboard Not Working Dubai 2026: Butterfly vs Scissor Fix Guide",
-    description: "MacBook Air keyboard not working? Butterfly vs scissor mechanism explained. Desert dust damage, software fix, repair from AED 300 in Dubai.",
+    description: "MacBook Air keyboard not working? Butterfly vs scissor mechanism explained. Desert dust damage, software fix, top-case repair in Dubai.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-air-keyboard-not-working-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Air Keyboard Not Working Dubai 2026",
-    description: "Butterfly vs scissor fix guide. Repair from AED 300 in Dubai.",
+    description: "Butterfly vs scissor fix guide. Top-case keyboard repair in Dubai.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-macbook-keyboard-repair-dubai-desktop.avif"],
   },
   alternates: {

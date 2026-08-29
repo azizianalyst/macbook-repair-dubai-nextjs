@@ -7,7 +7,7 @@ export default function BlogMacBookProM2LogicBoardFailure() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Logic Board Failure Dubai 2026: Sudden Death Fix Guide"
-      seoDescription="MacBook Pro M2 suddenly dead in Dubai? M2 Pro and M2 Max logic board charging IC failures at 2-4 years old. Symptoms, diagnosis, and component-level repair from AED 700."
+      seoDescription="MacBook Pro M2 suddenly dead in Dubai? M2 Pro and M2 Max logic board charging IC failures at 2-4 years old. Symptoms, diagnosis, and component-level repair. Free diagnosis."
       path="/blog/macbook-pro-m2-logic-board-failure-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM2LogicBoardFailure() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Logic Board Failure in Dubai? Here is Why It Happens and What to Do"
-      hook="MacBook Pro M2 Pro and M2 Max (2023) machines are now reaching 2-4 years old in Dubai: the age when charging IC faults, power management IC failures, and first-generation Apple Silicon board faults start appearing. Unlike Intel MacBook Pros where liquid damage was the most common board failure cause, M2 board failures often present as sudden death with no liquid involvement. Component-level repair costs AED 700-1,200 in Dubai versus Apple's AED 2,500+ logic board replacement."
-      quickAnswer="MacBook Pro M2 sudden death: try force restart (hold power 10 seconds) and deep discharge recovery (plug in, wait 30 minutes). If no MagSafe LED lights up at all, the charging IC or power management IC has failed, not a software fix. DFU restore via Apple Configurator 2 is worth attempting before hardware repair. Component-level logic board repair costs AED 700-1,200 in Dubai and preserves your data (soldered SSD remains on board)."
+      hook="MacBook Pro M2 Pro and M2 Max (2023) machines are now reaching 2-4 years old in Dubai: the age when charging IC faults, power management IC failures, and first-generation Apple Silicon board faults start appearing. Unlike Intel MacBook Pros where liquid damage was the most common board failure cause, M2 board failures often present as sudden death with no liquid involvement. Component-level repair in Dubai is far cheaper than Apple's whole-board replacement: message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M2 sudden death: try force restart (hold power 10 seconds) and deep discharge recovery (plug in, wait 30 minutes). If no MagSafe LED lights up at all, the charging IC or power management IC has failed, not a software fix. DFU restore via Apple Configurator 2 is worth attempting before hardware repair. Component-level logic board repair in Dubai preserves your data (soldered SSD remains on board): message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -115,12 +115,13 @@ export default function BlogMacBookProM2LogicBoardFailure() {
           <h2 id="repair-cost">MacBook Pro M2 logic board repair cost in Dubai</h2>
           <BlogPriceTable
             caption="MacBook Pro M2 logic board repair pricing. June 2026"
+            headers={["Repair", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "Charging IC repair (M2 14/16-inch)", ours: "AED 700", apple: "Logic board replacement AED 2,500+", note: "USB-C charging restored, MagSafe unaffected" },
-              { model: "PMIC repair (M2 sudden death)", ours: "AED 900", apple: "Logic board replacement AED 2,500+", note: "Full power management restoration" },
-              { model: "BGA reball/reflow (M2 SoC joint fault)", ours: "AED 1,200", apple: "Logic board replacement AED 2,500+", note: "Component-level, 3-5 day turnaround" },
-              { model: "Data recovery before repair", ours: "AED 300", apple: "AED 500+", note: "Extract data before board work" },
-              { model: "Full board diagnostic", ours: "Free", apple: "AED 250", note: "Confirm exact fault before repair quote" },
+              { model: "Charging IC repair (M2 14/16-inch)", ours: "Price on request", apple: "Logic board replacement", note: "USB-C charging restored, MagSafe unaffected" },
+              { model: "PMIC repair (M2 sudden death)", ours: "Price on request", apple: "Logic board replacement", note: "Full power management restoration" },
+              { model: "BGA reball/reflow (M2 SoC joint fault)", ours: "Price on request", apple: "Logic board replacement", note: "Component-level, 3-5 day turnaround" },
+              { model: "Data recovery before repair", ours: "Price on request", apple: "Price on request", note: "Extract data before board work" },
+              { model: "Full board diagnostic", ours: "Free", apple: "Price on request", note: "Confirm exact fault before repair quote" },
             ]}
           />
 
@@ -144,7 +145,7 @@ export default function BlogMacBookProM2LogicBoardFailure() {
         },
         {
           q: "Can MacBook Pro M2 sudden death be repaired without replacing the whole board?",
-          a: "Yes, in most cases. Component-level board repair replaces only the failed IC (charging controller, PMIC) while keeping the rest of the board including the M2 chip and the soldered SSD intact. This costs AED 700-1,200 versus Apple's logic board replacement at AED 2,500+. The M2 SSD retains all data during the repair.",
+          a: "Yes, in most cases. Component-level board repair replaces only the failed IC (charging controller, PMIC) while keeping the rest of the board including the M2 chip and the soldered SSD intact. This is far cheaper than Apple's whole logic board replacement, and the M2 SSD retains all data during the repair. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I know if MacBook Pro M2 needs a board repair or just a software fix?",
@@ -156,7 +157,7 @@ export default function BlogMacBookProM2LogicBoardFailure() {
         },
         {
           q: "How much does MacBook Pro M2 logic board repair cost in Dubai?",
-          a: "Charging IC repair costs AED 700. PMIC (sudden death) repair costs AED 900. BGA joint rework costs AED 1,200. All retain the original SSD with data intact. Free diagnosis to confirm fault before quoting. Apple's equivalent is logic board replacement at AED 2,500+.",
+          a: "Component-level repairs (charging IC, PMIC sudden death, BGA joint rework) all retain the original SSD with data intact and cost far less than Apple's whole logic board replacement. We give free diagnosis to confirm the exact fault first, then message you the price. WhatsApp us for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat cause MacBook Pro M2 to suddenly die?",

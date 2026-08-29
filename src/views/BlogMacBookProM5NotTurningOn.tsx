@@ -7,7 +7,7 @@ export default function BlogMacBookProM5NotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide"
-      seoDescription="MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Repair from AED 350."
+      seoDescription="MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Free diagnosis."
       path="/blog/macbook-pro-m5-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM5NotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Not Turning On in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M5 not turning on in Dubai is frightening but usually not catastrophic. The most common causes are a deeply discharged battery, a frozen boot sequence requiring a force restart, or a macOS startup disk issue that puts the M5 in a boot loop with a black screen. Free diagnosis in Dubai. Repair starts from AED 350 for power circuit faults."
+      hook="MacBook Pro M5 not turning on in Dubai is frightening but usually not catastrophic. The most common causes are a deeply discharged battery, a frozen boot sequence requiring a force restart, or a macOS startup disk issue that puts the M5 in a boot loop with a black screen. Free diagnosis in Dubai. Message us on WhatsApp for the exact repair price on your model."
       quickAnswer="MacBook Pro M5 not turning on: hold the power button for 10 seconds until the machine shuts off completely. Wait 10 seconds. Press power once. If no response at all, plug in MagSafe for 30 minutes then try again (deeply discharged battery will not respond to power). If the MagSafe LED does not light or the machine powers up but shows a black screen with fans spinning, it needs hardware diagnosis."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -137,12 +137,13 @@ export default function BlogMacBookProM5NotTurningOn() {
 
           <h2 id="repair-cost">How much does MacBook Pro M5 no-power repair cost in Dubai?</h2>
           <BlogPriceTable
-            caption="MacBook Pro M5 no-power repair pricing. June 2026"
+            caption="MacBook Pro M5 no-power repair services. June 2026"
+            headers={["Service", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MagSafe port repair (M5)", ours: "AED 350", apple: "AED 950+", note: "Charging board component repair" },
-              { model: "Power circuit board repair", ours: "AED 800", apple: "Logic board replacement", note: "Power rail / PMIC fault" },
-              { model: "OLED screen replacement (black screen)", ours: "AED 700", apple: "AED 1,399+", note: "If screen is confirmed dead" },
-              { model: "Diagnostic (free)", ours: "Free", apple: "AED 250", note: "Confirm hardware vs software cause before repair" },
+              { model: "MagSafe port repair (M5)", ours: "Price on request", apple: "Price on request", note: "Charging board component repair" },
+              { model: "Power circuit board repair", ours: "Price on request", apple: "Logic board replacement", note: "Power rail / PMIC fault" },
+              { model: "OLED screen replacement (black screen)", ours: "Price on request", apple: "Price on request", note: "If screen is confirmed dead" },
+              { model: "Diagnostic (free)", ours: "Free", apple: "Price on request", note: "Confirm hardware vs software cause before repair" },
             ]}
           />
 
@@ -183,7 +184,7 @@ export default function BlogMacBookProM5NotTurningOn() {
         },
         {
           q: "How much does MacBook Pro M5 not turning on repair cost in Dubai?",
-          a: "Free diagnosis first to confirm the cause. MagSafe port repair costs AED 350. Power circuit repair costs AED 800. If the display is the cause (M5 is on but screen is dead), OLED screen replacement costs AED 700. We test and confirm the fault before starting any repair.",
+          a: "Free diagnosis first to confirm the cause, whether it is a MagSafe port repair, a power circuit repair, or an OLED screen replacement if the display is the cause. We test and confirm the fault before starting any repair. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How do I boot MacBook Pro M5 into Recovery Mode?",

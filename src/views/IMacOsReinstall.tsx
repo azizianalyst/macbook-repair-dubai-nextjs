@@ -5,7 +5,7 @@ export default function IMacOsReinstall() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac macOS Reinstall Dubai - Internet Recovery & Clean Install | 055 741 3706"
-      seoDescription="iMac macOS reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. AED 300. Same day. Home visit available."
+      seoDescription="iMac macOS reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. Same day. Home visit available. Message us for a quote."
       path="/imac-os-reinstall-dubai"
       eyebrow="iMac macOS reinstall"
       h1="iMac macOS Reinstall Dubai - Clean Install or Internet Recovery"

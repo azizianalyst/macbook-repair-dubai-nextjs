@@ -149,11 +149,11 @@ export default function BlogMacBookProM5ExternalMonitor() {
             port itself is faulty, repair costs are:
           </p>
           <BlogPriceTable
-            caption="MacBook Pro M5 Thunderbolt port repair pricing. June 2026"
+            caption="MacBook Pro M5 Thunderbolt port repair. June 2026"
             rows={[
-              { model: "Single Thunderbolt 5 port repair", ours: "AED 350", apple: "AED 950+", note: "Port replacement or TB5 controller rework" },
-              { model: "All-ports diagnostic", ours: "Free", apple: "AED 250", note: "We test all 3 ports before committing to repair" },
-              { model: "HDMI port repair (M5 16-inch)", ours: "AED 300", apple: "AED 800+", note: "HDMI connector replacement" },
+              { model: "Single Thunderbolt 5 port repair", ours: "Price on request", apple: "Apple Store", note: "Port replacement or TB5 controller rework" },
+              { model: "All-ports diagnostic", ours: "Free", apple: "Apple Store", note: "We test all 3 ports before committing to repair" },
+              { model: "HDMI port repair (M5 16-inch)", ours: "Price on request", apple: "Apple Store", note: "HDMI connector replacement" },
             ]}
           />
 
@@ -169,7 +169,8 @@ export default function BlogMacBookProM5ExternalMonitor() {
             <li>One specific port always fails regardless of cable or monitor: port-level damage, often from a cable being bent or a connector hit</li>
           </ul>
           <p>
-            Free diagnosis. Board repair from AED 1,200.{" "}
+            Free diagnosis, then board-level repair where the fault allows it. Message us on
+            WhatsApp for today's exact price on your M5.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai
             </Link>
@@ -206,7 +207,7 @@ export default function BlogMacBookProM5ExternalMonitor() {
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 problem guide covering OLED, Thunderbolt 5, and throttling." },
         { label: "MacBook Pro M5 battery draining overnight", href: "/blog/macbook-pro-m5-battery-draining-overnight-dubai", description: "DarkWake and Power Nap fix for overnight battery drain on M5." },
-        { label: "MacBook Pro M5 repair cost vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "Price comparison for every M5 repair at our workshop vs Apple Dubai." },
+        { label: "MacBook Pro M5 repair cost vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "How our workshop compares to Apple Dubai for every M5 repair." },
       ]}
     />
   );

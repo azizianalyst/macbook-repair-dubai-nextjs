@@ -7,8 +7,8 @@ export default function MacBookAirM1ScreenRepair() {
       path="/macbook-air-m1-screen-repair-dubai"
       chip="M1"
       years="2020–2023"
-      seoTitle="MacBook Air M1 Screen Repair Dubai — AED 500"
-      seoDescription="MacBook Air M1 screen repair Dubai AED 500. IPS Retina 2560x1600, bonded assembly, same-day. Free diagnosis. No True Tone on M1 — we explain why. Call 055 741 3706."
+      seoTitle="MacBook Air M1 Screen Repair Dubai — Same-Day"
+      seoDescription="MacBook Air M1 screen repair Dubai. IPS Retina 2560x1600, bonded assembly, same-day. Free diagnosis. Message us on WhatsApp for today's price. Call 055 741 3706."
       h1="MacBook Air M1 Screen Repair Dubai"
       eyebrow="M1 Air screen specialist · Dubai Media City · Same-day"
       displayType="IPS Retina"
@@ -16,13 +16,13 @@ export default function MacBookAirM1ScreenRepair() {
       trueTone={false}
       p3={false}
       brightness="400 nits"
-      heroAnswer="MacBook Air M1 screen repair costs AED 500 at MacBook Repair Dubai. The M1 Air uses an IPS Retina panel — not the Liquid Retina of the M2 and M3 — at 2560x1600 resolution and 400 nits brightness. Turnaround is same-day when the panel is in stock. Free diagnosis confirms whether the fault is the display cable, the panel, or the backlight before any repair is authorised."
+      heroAnswer="MacBook Air M1 screen repair at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your model. The M1 Air uses an IPS Retina panel — not the Liquid Retina of the M2 and M3 — at 2560x1600 resolution and 400 nits brightness. Turnaround is same-day when the panel is in stock. Free diagnosis confirms whether the fault is the display cable, the panel, or the backlight before any repair is authorised."
       chipUniquePoints={[
         "The MacBook Air M1 (2020–2023) uses an IPS Retina panel at 2560x1600, identical in resolution to the preceding Intel 13-inch but bonded as a single glass-and-panel assembly. There is no glass-only repair option — full panel replacement is required for cracked screens.",
         "The M1 Air does NOT have True Tone. True Tone was introduced on the MacBook Air with the M2 generation in 2022. If you have an M1 Air and are expecting True Tone in System Settings, it will not appear — this is normal, not a repair issue.",
         "The M1 chip's display output connects through a new Apple Silicon display controller, which is different from the Intel LVDS connector. This means Intel screen parts are not compatible with M1, and vice versa.",
         "The display flex cable on M1 Air models routes through the hinge and is bonded to the screen assembly as one unit. After 3–4 years of daily use, the hinge cable is the most common M1 Air display failure we see in Dubai — presenting as flickering or lines at certain lid angles.",
-        "At 4–5 years old, the MacBook Air M1 is still a fully supported, current-architecture Apple Silicon machine. Repairing the screen at AED 500 extends the useful life significantly versus upgrading to an M3 Air at AED 4,499.",
+        "At 4–5 years old, the MacBook Air M1 is still a fully supported, current-architecture Apple Silicon machine. Repairing the screen extends the useful life significantly versus buying a new M3 Air — message us on WhatsApp for the exact repair price on your model.",
       ]}
       prices={[
         {
@@ -36,23 +36,23 @@ export default function MacBookAirM1ScreenRepair() {
       faults={[
         {
           title: "Display cable fault at the hinge",
-          body: "The most common M1 Air screen issue at 3–4 years of use. The display cable routes through the hinge and cracks after thousands of open/close cycles. Symptom: lines or flickering that change when you move the lid. The cable is part of the screen assembly on M1 — full panel replacement at AED 500.",
+          body: "The most common M1 Air screen issue at 3–4 years of use. The display cable routes through the hinge and cracks after thousands of open/close cycles. Symptom: lines or flickering that change when you move the lid. The cable is part of the screen assembly on M1 — full panel replacement is required. Message us on WhatsApp for the price on your model.",
         },
         {
           title: "Cracked IPS Retina panel after a drop",
-          body: "The M1 Air screen is a bonded glass-and-panel assembly. No glass-only repair is possible — full panel replacement at AED 500. Drop the MacBook off in the morning and collect the same day.",
+          body: "The M1 Air screen is a bonded glass-and-panel assembly. No glass-only repair is possible — full panel replacement is required. Drop the MacBook off in the morning and collect the same day. Message us on WhatsApp for the exact price.",
         },
         {
           title: "Flickering display at specific lid angles",
-          body: "If the screen flickers at certain lid positions and is stable when the lid is fully open or closed, the display cable inside the hinge is the cause. This is a screen assembly fault — full panel replacement at AED 500. Free 15-minute bench diagnosis confirms.",
+          body: "If the screen flickers at certain lid positions and is stable when the lid is fully open or closed, the display cable inside the hinge is the cause. This is a screen assembly fault — full panel replacement is required. Free 15-minute bench diagnosis confirms; message us on WhatsApp for the price.",
         },
         {
           title: "Colour tint or discolouration",
-          body: "A pink, green or yellow tint across the M1 Air display is usually a loose eDP connector at the board end of the display cable. We reseat the connector first — clears in about 30 percent of cases at no charge. Remaining cases need a screen assembly swap at AED 500.",
+          body: "A pink, green or yellow tint across the M1 Air display is usually a loose eDP connector at the board end of the display cable. We reseat the connector first — clears in about 30 percent of cases at no charge. Remaining cases need a screen assembly swap — message us on WhatsApp for the price.",
         },
         {
           title: "Black screen — laptop is on but no display",
-          body: "If the keyboard lights up, the fan is running (inaudible on M1 — check the charging light), but the screen stays black, the fault is the display circuit. External monitor test confirms the GPU is fine. Full IPS Retina screen replacement at AED 500 resolves in 90 percent of black-screen M1 Air cases.",
+          body: "If the keyboard lights up, the fan is running (inaudible on M1 — check the charging light), but the screen stays black, the fault is the display circuit. External monitor test confirms the GPU is fine. A full IPS Retina screen replacement resolves 90 percent of black-screen M1 Air cases — message us on WhatsApp for the price.",
         },
         {
           title: "Screen cracked after liquid near hinge",
@@ -62,7 +62,7 @@ export default function MacBookAirM1ScreenRepair() {
       faqs={[
         {
           q: "How much is MacBook Air M1 screen repair in Dubai?",
-          a: "MacBook Air M1 screen repair is AED 500 at MacBook Repair Dubai. This covers the full IPS Retina 2560x1600 panel, labour, and a 15-day warranty on the A-grade replacement. Same-day turnaround when you drop off before 11am.",
+          a: "MacBook Air M1 screen repair at MacBook Repair Dubai covers the full IPS Retina 2560x1600 panel, labour, and a 15-day warranty on the A-grade replacement. Message us on WhatsApp for today's exact price. Same-day turnaround when you drop off before 11am.",
         },
         {
           q: "Does the MacBook Air M1 have True Tone?",
@@ -74,7 +74,7 @@ export default function MacBookAirM1ScreenRepair() {
         },
         {
           q: "My M1 MacBook Air screen flickers when I move the lid. What is wrong?",
-          a: "Flickering that changes with lid angle is almost certainly the display flex cable inside the hinge. After 3–4 years the cable insulation cracks from repeated flexing. On the M1 Air, the cable is part of the screen assembly, so the fix is a full screen replacement at AED 500. Free bench diagnosis confirms.",
+          a: "Flickering that changes with lid angle is almost certainly the display flex cable inside the hinge. After 3–4 years the cable insulation cracks from repeated flexing. On the M1 Air, the cable is part of the screen assembly, so the fix is a full screen replacement. Free bench diagnosis confirms; message us on WhatsApp for the price.",
         },
         {
           q: "How long does MacBook Air M1 screen repair take in Dubai?",
@@ -82,7 +82,7 @@ export default function MacBookAirM1ScreenRepair() {
         },
         {
           q: "Is it worth repairing the MacBook Air M1 screen in 2026?",
-          a: "Yes. The M1 chip receives Apple Silicon optimisations in every macOS release and will remain supported well into the late 2020s. At AED 500 for screen repair versus AED 4,499 for a new M3 Air, repair is clearly the better value if the rest of the machine is working.",
+          a: "Yes. The M1 chip receives Apple Silicon optimisations in every macOS release and will remain supported well into the late 2020s. A screen repair costs a fraction of a new M3 Air, so repair is clearly the better value if the rest of the machine is working — message us on WhatsApp for the exact price.",
         },
       ]}
       blogHref="/blog/macbook-air-screen-repair-cost-dubai"

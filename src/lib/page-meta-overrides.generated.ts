@@ -1005,7 +1005,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-repair-cost-dubai": {
     "title": "Mac Repair Cost Dubai. Expert Same-Day 2026",
-    "description": "Mac Repair Cost Dubai. MacBook screen from AED 499, battery from AED 450, logic board from AED 800. iMac screen from AED 69"
+    "description": "Mac Repair Cost Dubai. MacBook screen from AED 600, battery from AED 450, logic board from AED 800. iMac screen from AED 69"
   },
   "/mac-repair-dubai": {
     "title": "Mac Repair Dubai. Expert Same-Day 2026",
@@ -1013,7 +1013,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai. Fast, From AED 450",
-    "description": "Mac Repair Near Me Dubai. MacBook screen from AED 499, battery from AED 450. Free pickup across Dubai. Same-day. Concord Tower"
+    "description": "Mac Repair Near Me Dubai. MacBook screen from AED 600, battery from AED 450. Free pickup across Dubai. Same-day. Concord Tower"
   },
   "/mac-setup-data-migration-dubai": {
     "title": "Mac Setup Data Migration Dubai. Expert Same-Day 2026",
@@ -1460,8 +1460,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Repair Reviews Dubai. 5.0 stars, 216+ verified reviews. Real customers, real repairs. Read at Concord Tower, Media City."
   },
   "/same-day-macbook-repair-dubai": {
-    "title": "Same Day MacBook Repair Dubai. Fast, From AED 499,",
-    "description": "Same Day MacBook Repair Dubai. Screen from AED 499, battery from AED 450. Free pickup across Dubai. Drop off by 2 pm, back the same"
+    "title": "Same Day MacBook Repair Dubai. Fast, From AED 600,",
+    "description": "Same Day MacBook Repair Dubai. Screen from AED 600, battery from AED 450. Free pickup across Dubai. Drop off by 2 pm, back the same"
   },
   "/sell-faulty-macbook-dubai": {
     "title": "Sell Faulty MacBook Dubai. Expert Same-Day 2026",

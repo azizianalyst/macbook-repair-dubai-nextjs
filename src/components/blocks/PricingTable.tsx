@@ -36,14 +36,13 @@ export function PricingTable({ service, rows, caption, tone = "light" }: Props) 
               <p className="text-[13px] text-text-muted mono">{r.timeline}</p>
             </div>
             <div className="shrink-0 text-right">
-              <p className={cn("mono font-semibold", dark ? "text-accent" : "text-primary")}>AED {r.price.toLocaleString("en-US")}</p>
               <a
                 href={quoteHref(r.model)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-[13px] text-whatsapp font-semibold hover:underline"
               >
-                <MessageCircle size={13} aria-hidden /> Quote
+                <MessageCircle size={13} aria-hidden /> Get price
               </a>
             </div>
           </li>
@@ -65,7 +64,7 @@ export function PricingTable({ service, rows, caption, tone = "light" }: Props) 
             {rows.map((r, i) => (
               <tr key={r.model} className={cn(dark ? "border-b border-border last:border-0" : (i % 2 ? "bg-bg-alt/40" : ""))}>
                 <td className={cn("px-md py-sm", dark && "text-text")}>{r.model}</td>
-                <td className={cn("px-md py-sm mono font-semibold", dark ? "text-accent" : "text-primary")}>AED {r.price.toLocaleString("en-US")}</td>
+                <td className={cn("px-md py-sm mono", dark ? "text-text-muted" : "text-text-muted")}>Price on request</td>
                 <td className={cn("px-md py-sm mono", dark ? "text-text-muted" : "text-text-muted")}>{r.timeline}</td>
                 <td className="px-md py-sm text-right">
                   <a
@@ -74,7 +73,7 @@ export function PricingTable({ service, rows, caption, tone = "light" }: Props) 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-whatsapp font-semibold hover:underline"
                   >
-                    <MessageCircle size={14} aria-hidden /> Quote
+                    <MessageCircle size={14} aria-hidden /> Get price
                   </a>
                 </td>
               </tr>

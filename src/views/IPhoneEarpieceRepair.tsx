@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneEarpieceRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Earpiece Repair Dubai - No Sound on Calls | AED 280"
-      seoDescription="iPhone earpiece repair Dubai. Top-speaker fix for no sound on calls. Face ID-safe extraction on iPhone X and later. AED 280, 1 day. Call 055 741 3706."
+      seoTitle="iPhone Earpiece Repair Dubai - No Sound on Calls"
+      seoDescription="iPhone earpiece repair Dubai. Top-speaker fix for no sound on calls. Face ID-safe extraction on iPhone X and later. Same-day, message us for a price. Call 055 741 3706."
       path="/iphone-earpiece-repair-dubai"
       eyebrow="iPhone earpiece repair"
       h1="iPhone Earpiece Repair Dubai - No Sound on Calls"
-      subtitle="The other person sounds fine on speakerphone, but you can't hear them on a normal call. That's the earpiece - and on iPhone X+ it sits inside the Face ID assembly. We work around Face ID without breaking it. AED 280, 1 day."
+      subtitle="The other person sounds fine on speakerphone, but you can't hear them on a normal call. That's the earpiece - and on iPhone X+ it sits inside the Face ID assembly. We work around Face ID without breaking it. Fixed in 1 day - message us for today's price on your model."
       startingPrice={280}
       timeline="1 day"
       whatsappPrefill="Hi, no sound from my iPhone earpiece - model:"
@@ -26,7 +26,7 @@ export default function IPhoneEarpieceRepair() {
             <strong>The earpiece on iPhone X and later is sandwiched into the Face ID flex assembly</strong> at the top of the screen. Removing it carelessly - which is what most Dubai shops do - kills Face ID permanently. We use a Face ID-preserving extraction technique that keeps the original dot projector and flood illuminator in place. If we can't preserve Face ID, we tell you before opening the phone.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            On iPhone 8 and earlier the earpiece is a separate part - easier and cheaper. On all models we charge AED 280 because the labour and care needed on iPhone X+ is significant; we don't bait-and-switch with a "from AED 150" headline.
+            On iPhone 8 and earlier the earpiece is a separate part - easier and cheaper. On iPhone X+ the labour and care needed is significant, so we quote one honest, flat price for the whole job - no bait-and-switch "from" headline. Message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }

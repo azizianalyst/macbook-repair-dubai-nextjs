@@ -22,7 +22,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
       category="Care guide · iPhone Air"
       h1="iPhone Air Care Guide - What NOT to Do"
       hook="Thinnest = most fragile. 5 habits that wreck iPhone Air faster than other models."
-      quickAnswer="iPhone Air's 5.6 mm titanium chassis is Apple's thinnest, but also the most prone to bending and pressure damage. Avoid: carrying it in a back pocket while sitting, using it case-less, leaving it in a hot Dubai car, heavy MagSafe wallet stacks, and over-pressing the side buttons. Repair costs match Pro Max pricing, so care matters more here."
+      quickAnswer="iPhone Air's 5.6 mm titanium chassis is Apple's thinnest, but also the most prone to bending and pressure damage. Avoid: carrying it in a back pocket while sitting, using it case-less, leaving it in a hot Dubai car, heavy MagSafe wallet stacks, and over-pressing the side buttons. Repair costs match Pro Max tier, so care matters more here - message us on WhatsApp for your exact price."
       author={{ name: "Shafiq", role: "Senior MacBook technician" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
@@ -59,7 +59,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             <li>OLED purple/green discolouration along bend axis.</li>
           </ul>
           <p>
-            Once bent, repair is logic-board adjacent - AED 1,500+ for a chassis swap. Front pocket, jacket, or bag only.
+            Once bent, repair is logic-board adjacent - a chassis swap is one of the pricier fixes, so message us on WhatsApp for the exact cost. Front pocket, jacket, or bag only.
           </p>
 
           <h2 id="case-less">2. DO NOT use case-less for everyday carry</h2>
@@ -75,9 +75,9 @@ export default function BlogIPhoneAirWhatNotToDo() {
             Recommended cases for iPhone Air:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Apple Silicone Case (AED 199)</strong> - minimal bulk, MagSafe compatible.</li>
-            <li><strong>Spigen Liquid Air (AED 80)</strong> - adds about 1 mm; MagSafe via separate ring.</li>
-            <li><strong>Otterbox Symmetry (AED 250)</strong> - heavier protection if Air's profile is less of a priority for you.</li>
+            <li><strong>Apple Silicone Case</strong> - minimal bulk, MagSafe compatible.</li>
+            <li><strong>Spigen Liquid Air</strong> - adds about 1 mm; MagSafe via separate ring.</li>
+            <li><strong>Otterbox Symmetry</strong> - heavier protection if Air's profile is less of a priority for you.</li>
             <li><strong>NOT:</strong> bare. Not in Dubai. Not at any age.</li>
           </ul>
 
@@ -118,7 +118,7 @@ export default function BlogIPhoneAirWhatNotToDo() {
             <li>Pressure when the phone is in tight cases that compress the button.</li>
           </ul>
           <p>
-            Symptom of failed actuator: button feels mushy, takes two presses to register, or the haptic feedback is weaker than other buttons. AED 350 to repair.
+            Symptom of failed actuator: button feels mushy, takes two presses to register, or the haptic feedback is weaker than other buttons. Message us on WhatsApp for the repair price.
           </p>
 
           <h2 id="fast-charging-heat">Bonus - fast-charging in heat</h2>
@@ -133,17 +133,17 @@ export default function BlogIPhoneAirWhatNotToDo() {
 
           <h2 id="repair-cost">Repair cost reality check</h2>
           <p>
-            iPhone Air repair pricing matches iPhone 17 Pro for most parts:
+            iPhone Air repair pricing matches iPhone 17 Pro for most parts. Message us on WhatsApp for today's exact price on your model:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Screen: AED 1,100 (matches 17 / 17e tier).</li>
-            <li>Back glass: AED 800 (rear is glued; specialist removal).</li>
-            <li>Battery: AED 500 (smaller cell but same labour).</li>
-            <li>USB-C port: AED 350.</li>
-            <li>Bent chassis: AED 1,500+ (often easier to write off).</li>
+            <li>Screen: Price on request (matches 17 / 17e tier).</li>
+            <li>Back glass: Price on request (rear is glued; specialist removal).</li>
+            <li>Battery: Price on request (smaller cell but same labour).</li>
+            <li>USB-C port: Price on request.</li>
+            <li>Bent chassis: Price on request (often easier to write off).</li>
           </ul>
           <p>
-            Compare to AppleCare+: AED 549/year + AED 350 deductible per accident. For Air specifically (higher accident probability due to fragility), AppleCare+ math is more favourable than for Pro models. See our{" "}
+            AppleCare+ carries an annual fee plus a per-accident deductible. For Air specifically (higher accident probability due to fragility), the AppleCare+ math is more favourable than for Pro models - message us on WhatsApp and we'll compare it against a straight repair on your device. See our{" "}
             <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent font-semibold hover:underline">iPhone repair vs AppleCare comparison</Link>.
           </p>
         </>

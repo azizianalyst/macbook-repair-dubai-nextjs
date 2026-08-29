@@ -7,7 +7,7 @@ export default function BlogMacBookProM2SsdDegrading() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 SSD Degrading Fast Dubai 2026: Write Amplification Fix"
-      seoDescription="MacBook Pro M2 SSD degrading fast in Dubai? M2 13-inch had a write amplification bug in Ventura that wrote 10-100x more data than expected. Check SSD health and fix. Repair from AED 500."
+      seoDescription="MacBook Pro M2 SSD degrading fast in Dubai? M2 13-inch had a write amplification bug in Ventura that wrote 10-100x more data than expected. Check SSD health and message us on WhatsApp for a repair quote."
       path="/blog/macbook-pro-m2-ssd-degrading-fast-dubai"
       wide
       toc={[
@@ -88,7 +88,7 @@ export default function BlogMacBookProM2SsdDegrading() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Enable Time Machine to an external drive (or NAS). In Dubai: WD or Seagate drives available at all major electronics retailers. Plug in and complete first full backup before relying on Time Machine snapshots</li>
             <li>iCloud Drive: System Settings, Apple ID, iCloud, iCloud Drive: On. Desktop and Documents sync to iCloud. For a Dubai M2 with at-risk SSD, enable this immediately as a secondary backup</li>
-            <li>Check iCloud storage: UAE residents should have at least 200GB of iCloud (AED 4/month) or 2TB (AED 15/month) to back up a full M2 SSD</li>
+            <li>Check iCloud storage: UAE residents should have at least the 200GB iCloud+ tier, or the 2TB tier, to back up a full M2 SSD</li>
           </ul>
 
           <h2 id="dubai-heat">Does Dubai heat affect MacBook Pro M2 SSD lifespan?</h2>
@@ -129,12 +129,12 @@ export default function BlogMacBookProM2SsdDegrading() {
 
           <h2 id="repair-cost">MacBook Pro M2 SSD repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M2 SSD repair/replacement pricing. June 2026"
+            caption="MacBook Pro M2 SSD repair/replacement options. June 2026"
             rows={[
-              { model: "SSD replacement M2 13-inch (256GB)", ours: "AED 500", apple: "Logic board replacement AED 2,000+", note: "SSD is soldered but component-level replacement possible" },
-              { model: "SSD replacement M2 13-inch (512GB)", ours: "AED 650", apple: "Logic board replacement AED 2,000+", note: "Larger SSD during replacement" },
-              { model: "Data migration from failing SSD", ours: "AED 300", apple: "AED 500+", note: "Clone SSD contents before replacement" },
-              { model: "SSD health diagnostic", ours: "Free", apple: "AED 250", note: "Full SMART data read and health assessment" },
+              { model: "SSD replacement M2 13-inch (256GB)", ours: "Price on request", apple: "Logic board replacement", note: "SSD is soldered but component-level replacement possible" },
+              { model: "SSD replacement M2 13-inch (512GB)", ours: "Price on request", apple: "Logic board replacement", note: "Larger SSD during replacement" },
+              { model: "Data migration from failing SSD", ours: "Price on request", apple: "Higher cost via Apple", note: "Clone SSD contents before replacement" },
+              { model: "SSD health diagnostic", ours: "Free", apple: "Paid at Apple", note: "Full SMART data read and health assessment" },
             ]}
           />
 
@@ -172,7 +172,7 @@ export default function BlogMacBookProM2SsdDegrading() {
         },
         {
           q: "How much does MacBook Pro M2 SSD replacement cost in Dubai?",
-          a: "M2 SSD replacement costs AED 500 (256GB) or AED 650 (512GB) at our Dubai workshop. The M2 SSD is soldered to the logic board but can be replaced with component-level desoldering. Data migration from the old SSD costs AED 300. Apple requires logic board replacement for SSD faults at AED 2,000+.",
+          a: "We replace the M2 SSD (256GB or 512GB) at our Dubai workshop, and can migrate data from the old SSD too. The M2 SSD is soldered to the logic board but can be replaced with component-level desoldering, whereas Apple requires a full logic board replacement for SSD faults. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Which MacBook Pro M2 models had the SSD write amplification bug?",

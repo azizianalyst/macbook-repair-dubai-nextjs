@@ -31,11 +31,11 @@ export default function IMacM4RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac M4 Repair Dubai - 24-inch 2024 Retina 4.5K"
-      seoDescription="iMac M4 repair Dubai. 24-inch 4.5K Retina iMac with M4 chip (late 2024), nano-texture glass option. Free diagnosis. Almost certainly under Apple warranty - check first. Screen from AED 850. Call 055 741 3706."
+      seoDescription="iMac M4 repair Dubai. 24-inch 4.5K Retina iMac with M4 chip (late 2024), nano-texture glass option. Free diagnosis. Almost certainly under Apple warranty - check first. Message us on WhatsApp for a price. Call 055 741 3706."
       path="/imac-m4-repair-dubai"
       eyebrow="Apple M4 · 24-inch · Nano-texture glass option · 2024"
       h1="iMac M4 Repair Dubai - 24-inch 2024"
-      subtitle="The M4 iMac (late 2024) is 1 to 2 years old and almost certainly under Apple warranty or AppleCare+. Free diagnosis first. If out of warranty, screen repair from AED 850."
+      subtitle="The M4 iMac (late 2024) is 1 to 2 years old and almost certainly under Apple warranty or AppleCare+. Free diagnosis first. If out of warranty, message us on WhatsApp for today's exact screen repair price."
       startingPrice={400}
       timeline="Same day (diagnosis) · 2-3 days (screen)"
       whatsappPrefill="Hi, I have an iMac M4 (24-inch 2024) and need help with:"
@@ -49,12 +49,12 @@ export default function IMacM4RepairHub() {
       intro={intro}
       whatWeFix={[
         "Free diagnostic to check warranty status and identify the fault",
-        "Screen repair and replacement - standard panel from AED 850, nano-texture from AED 1,050",
-        "Logic board diagnosis and repair - from AED 1,100",
-        "USB hub board replacement - rear port failures from AED 400",
-        "Speaker replacement - from AED 500",
+        "Screen repair and replacement - standard and nano-texture panels",
+        "Logic board diagnosis and repair",
+        "USB hub board replacement - rear port failures",
+        "Speaker replacement",
         "Nano-texture glass panel sourcing and matching",
-        "Power supply board replacement - from AED 600",
+        "Power supply board replacement",
       ]}
       steps={[
         {
@@ -88,7 +88,7 @@ export default function IMacM4RepairHub() {
         },
         {
           q: "Does the nano-texture glass option cost more to repair?",
-          a: "Yes. The nano-texture glass panel is an etched finish applied to the display and is a different part from the standard glass. If the screen needs replacement, we must source a matching nano-texture panel, which carries a higher parts cost and longer lead time. The price premium is typically AED 200 to AED 300 over a standard panel replacement.",
+          a: "Yes. The nano-texture glass panel is an etched finish applied to the display and is a different part from the standard glass. If the screen needs replacement, we must source a matching nano-texture panel, which carries a higher parts cost and longer lead time, so it costs more than a standard panel replacement. Message us on WhatsApp with your model for today's exact price on both options.",
         },
         {
           q: "What does MacBook Repair Dubai charge for M4 iMac diagnosis?",

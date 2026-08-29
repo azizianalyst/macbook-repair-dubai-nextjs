@@ -6,12 +6,12 @@ export default function BlogIMacOverheating() {
   return (
     <BlogPostTemplate
       seoTitle="iMac Overheating and Loud Fan in Dubai? Causes and Fixes 2026"
-      seoDescription="iMac overheating or fan running loud in Dubai? Dust, dried thermal paste and 35°C ambient explained. Thermal service from AED 300."
+      seoDescription="iMac overheating or fan running loud in Dubai? Dust, dried thermal paste and 35°C ambient explained. Message us on WhatsApp for a thermal service quote."
       path="/blog/imac-overheating-fan-noise-dubai"
       wide={true}
       category="Fix guide · iMac"
       h1="iMac Overheating and Loud Fan in Dubai? Here Is How to Fix It"
-      hook="An iMac running hot with a loud fan in Dubai is usually dust-clogged vents or dried thermal paste, and a full thermal service starts from AED 300 at our Media City workshop."
+      hook="An iMac running hot with a loud fan in Dubai is usually dust-clogged vents or dried thermal paste, and a full thermal service at our Media City workshop fixes the vast majority. Message us on WhatsApp for today's price on your model."
       quickAnswer="iMac overheating is caused by dust-clogged vents, dried thermal paste on the CPU and GPU, a failing fan, or runaway background processes. Dubai ambient heat above 35°C makes it worse. Check Activity Monitor for high CPU first, then book a thermal clean."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -202,19 +202,20 @@ export default function BlogIMacOverheating() {
           <section id="cost">
             <h2 id="cost">iMac overheating repair cost in Dubai</h2>
             <p>
-              All prices below are for our Media City workshop. Parts are genuine or premium-grade compatible,
-              and there is no diagnostic fee for any booking. Turnaround is same-day for most thermal services
-              when the iMac is dropped off before noon.
+              All services below are handled at our Media City workshop. Parts are genuine or premium-grade
+              compatible, and there is no diagnostic fee for any booking. Turnaround is same-day for most
+              thermal services when the iMac is dropped off before noon. Message us on WhatsApp with your iMac
+              model for today's exact price.
             </p>
             <BlogPriceTable
-              caption="iMac overheating and cooling service pricing at our Dubai workshop, June 2026"
+              caption="iMac overheating and cooling services at our Dubai workshop, June 2026"
               headers={["Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Dust clean + fan service", ours: "AED 250", apple: "AED 500+" },
-                { model: "Thermal paste replacement", ours: "AED 300", apple: "AED 600+" },
-                { model: "Fan replacement", ours: "AED 350", apple: "AED 700+" },
-                { model: "Full thermal service", ours: "AED 450", apple: "AED 900+" },
-                { model: "Logic board repair (severe)", ours: "AED 600", apple: "AED 1,400+" },
+                { model: "Dust clean + fan service", ours: "Price on request", apple: "Price on request" },
+                { model: "Thermal paste replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "Fan replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "Full thermal service", ours: "Price on request", apple: "Price on request" },
+                { model: "Logic board repair (severe)", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p>

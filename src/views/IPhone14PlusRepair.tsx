@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone14PlusRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 14 Plus Repair Dubai - 6.7-inch OLED from AED 350 | 055 741 3706"
-      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen AED 750, battery AED 350. Same-day, warranty of up to 12 months."
+      seoTitle="iPhone 14 Plus Repair Dubai - 6.7-inch OLED, Battery, Camera | 055 741 3706"
+      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen, battery and camera - same-day, warranty of up to 12 months."
       path="/iphone-14-plus-repair-dubai"
       eyebrow="iPhone 14 Plus (2022)"
       h1="iPhone 14 Plus Repair Dubai - 6.7-inch Screen, Battery, Camera"
-      subtitle="The budget big-screen iPhone - A15, 6.7-inch OLED, dual camera, MagSafe, Crash Detection. iOS 18 supported. From AED 350."
+      subtitle="The budget big-screen iPhone - A15, 6.7-inch OLED, dual camera, MagSafe, Crash Detection. iOS 18 supported. Message us on WhatsApp for today's price."
       startingPrice={350}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 14 Plus (2022) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone14PlusRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone 14 Plus (Oct 2022) replaced the unloved Mini line with a 6.7-inch budget big-screen iPhone - A15 Bionic, dual camera, MagSafe, Crash Detection, dual physical SIM in UAE. Big OLED + smaller user base means parts cost slightly more than the 14. AED 750 screen, AED 350 battery.
+            <strong>Quick answer:</strong> The iPhone 14 Plus (Oct 2022) replaced the unloved Mini line with a 6.7-inch budget big-screen iPhone - A15 Bionic, dual camera, MagSafe, Crash Detection, dual physical SIM in UAE. Big OLED + smaller user base means parts cost slightly more than the 14. Message us on WhatsApp for today's exact price on screen or battery.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 14 Plus</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -48,25 +48,25 @@ export default function IPhone14PlusRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 14 Plus</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm">6.7-inch OLED screen replacement</td><td className="px-md py-sm">750</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">350</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Dual camera + sensor-shift OIS</td><td className="px-md py-sm">550</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 550</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">650</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Lightning port repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">From 450</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">6.7-inch OLED screen replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Dual camera + sensor-shift OIS</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">MagSafe coil + back glass</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Lightning port repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-lightning-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Water damage</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">2-3 days</td><td className="px-md py-sm"><Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
           <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
-            6.7-inch hard-OLED in stock. Genuine Apple-pull AED 1,100. Same easier back-glass design as iPhone 14 (rear-removable). MagSafe-equipped back glass in stock.
+            6.7-inch hard-OLED in stock. Genuine Apple-pull panels available too - message us for the price. Same easier back-glass design as iPhone 14 (rear-removable). MagSafe-equipped back glass in stock.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 14 Plus still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Yes.</strong> Used resale ~AED 2,200-2,600. Battery + screen at AED 1,070 is reasonable for a 6.7-inch device with iOS 18+ support.
+            <strong>Yes.</strong> It still holds a strong used resale value, and a battery + screen refresh is reasonable for a 6.7-inch device with iOS 18+ support. Message us on WhatsApp for the exact repair price.
           </p>
         </>
       }
@@ -92,17 +92,17 @@ export default function IPhone14PlusRepair() {
         "Crash Detection and Emergency SOS verified before return.",
       ]}
       faqs={[
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,070 (saves AED 30). Battery + back glass: AED 970 (saves AED 30)." },
-        { q: "Genuine Apple OLED?", a: "Yes - AED 1,100 vs AED 750 OEM-grade hard-OLED." },
+        { q: "Do you offer bundle pricing?", a: "Yes - bundling screen + battery or battery + back glass saves you money versus booking each separately. Message us on WhatsApp for today's bundle price on your 14 Plus." },
+        { q: "Genuine Apple OLED?", a: "Yes - we offer both genuine Apple-pull OLED and OEM-grade hard-OLED. Message us on WhatsApp and we'll confirm the price for each option." },
         { q: "How is the 14 Plus different from the 14 Pro Max?", a: "Same screen size (6.7\") but the Plus uses A15, no ProMotion, no Dynamic Island, dual camera (no telephoto). Repairs are cheaper across the board." },
         { q: "Will the 14 Plus get iOS 19?", a: "Yes - A15 chip remains in production. iOS 20 also expected." },
         { q: "Same day?", a: "OLED, battery, port, camera - yes." },
       ]}
       reviewNames={["Seyed Moulana", "Saeed Alam"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",       href: "/iphone-screen-repair-dubai",       description: "6.7-inch hard-OLED AED 750." },
-        { label: "iPhone Battery Replacement",       href: "/iphone-battery-replacement-dubai", description: "AED 350, 45 minutes." },
-        { label: "iPhone Back Glass Repair Dubai",   href: "/iphone-back-glass-repair-dubai",   description: "Rear-removable design - AED 650." },
+        { label: "iPhone Screen Repair Dubai",       href: "/iphone-screen-repair-dubai",       description: "6.7-inch hard-OLED - price on request." },
+        { label: "iPhone Battery Replacement",       href: "/iphone-battery-replacement-dubai", description: "45 minutes - price on request." },
+        { label: "iPhone Back Glass Repair Dubai",   href: "/iphone-back-glass-repair-dubai",   description: "Rear-removable design - price on request." },
       ]}
     />
   );

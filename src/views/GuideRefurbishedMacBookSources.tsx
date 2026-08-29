@@ -68,7 +68,7 @@ export default function GuideRefurbishedMacBookSources() {
             <li>Ask for the serial number and check it on Apple's coverage page, confirm the model, and whether it's iCloud-locked or activation-locked.</li>
             <li>Check if it's been reported lost or stolen (Apple's coverage checker shows this).</li>
             <li>Meet somewhere you can run a quick diagnostic or bring it to us for a free check before you pay.</li>
-            <li>Battery health: check Settings → Battery → Battery Health. Anything below 80% needs a replacement (AED 450–700 depending on model), factor that into the price.</li>
+            <li>Battery health: check Settings → Battery → Battery Health. Anything below 80% needs a replacement (message us on WhatsApp for the exact price on that model), factor that into the price.</li>
             <li>Never pay before you've powered it on, logged into a guest account, and run the display, keyboard, trackpad and speakers through basic tests.</li>
           </ul>
 
@@ -104,7 +104,7 @@ export default function GuideRefurbishedMacBookSources() {
         },
         {
           q: "How much cheaper is a refurbished MacBook vs new?",
-          a: "Apple Certified Refurbished is typically 15–20% cheaper. Independent shops offer 25–40%. Dubizzle can be 35–50% cheaper but with no warranty. Factor in battery replacement (AED 450–700) if battery health is below 80–85%.",
+          a: "Apple Certified Refurbished is typically 15–20% cheaper. Independent shops offer 25–40%. Dubizzle can be 35–50% cheaper but with no warranty. Factor in a battery replacement if battery health is below 80–85%, message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "What is iCloud Activation Lock and why does it matter?",

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { canAccess, type Role } from "@/lib/roles";
 import {
   LayoutDashboard, Newspaper, FileText, Star, DollarSign, LineChart, LinkIcon,
-  Inbox, Building2, LogOut, ExternalLink, Menu, Image as ImageIcon, FolderTree, Settings, ListTree, MapPin, Rocket, Target, Gauge, MapPinned, Users, Megaphone,
+  Inbox, Building2, LogOut, ExternalLink, Menu, Image as ImageIcon, FolderTree, Settings, ListTree, MapPin, Rocket, Target, Gauge, MapPinned, Users, Megaphone, Globe, MessageSquare,
 } from "lucide-react";
 
 // WordPress-style admin chrome: a persistent dark left sidebar + top bar wrapping every /admin page.
@@ -43,6 +43,8 @@ const NAV: Group[] = [
       { href: "/admin/social", label: "Social", Icon: Megaphone },
       { href: "/admin/gbp", label: "Google Business", Icon: MapPinned },
       { href: "/admin/gbp-playbook", label: "GBP Playbook", Icon: FileText },
+      { href: "/admin/gbp-posts", label: "GBP Posts", Icon: Globe },
+      { href: "/admin/gbp-reviews", label: "GBP Reviews", Icon: MessageSquare },
       { href: "/admin/business", label: "Business / NAP", Icon: Building2 },
     ],
   },

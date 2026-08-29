@@ -138,7 +138,7 @@ export default function BlogMacMiniRunningSlow() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Inside a cabinet</strong>: ambient air heats up, CPU throttles, performance drops 15-25%. Move to open desk or add active ventilation.</li>
             <li><strong>Stacked under a USB hub or external SSD</strong>: blocks the bottom intake. Lift on rubber feet or move hub off-Mini.</li>
-            <li><strong>Dust in fan</strong>: reduces airflow. After 18+ months, the fan accumulates desk dust. We clean for AED 250 (includes thermal paste reapplication on Intel Minis).</li>
+            <li><strong>Dust in fan</strong>: reduces airflow. After 18+ months, the fan accumulates desk dust. We clean it (includes thermal paste reapplication on Intel Minis) - message us on WhatsApp for today's price on your model.</li>
             <li><strong>Hot summer ambient</strong>: Dubai homes without good AC put the Mac Mini at 32°C+ ambient - reduces thermal headroom. Keep room under 28°C for sustained performance.</li>
           </ul>
 
@@ -159,8 +159,8 @@ export default function BlogMacMiniRunningSlow() {
             Software fixes are free. Hardware repairs make sense up to a point:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Intel Mac Mini 2018 or older + slow + needs SSD repair</strong>: repair AED 1,200+, value AED 1,200 → don't repair, upgrade to M4 Mini.</li>
-            <li><strong>Mac Mini M1 + needs fan / thermal service</strong>: repair AED 350, value AED 1,800 → repair worth it, M1 still runs current macOS.</li>
+            <li><strong>Intel Mac Mini 2018 or older + slow + needs SSD repair</strong>: repair cost usually approaches its resale value → often better to upgrade to an M4 Mini. Message us for the exact repair price first.</li>
+            <li><strong>Mac Mini M1 + needs fan / thermal service</strong>: repair is well worth it - the M1 still runs current macOS and service costs a fraction of its value. Message us for the exact price.</li>
             <li><strong>Mac Mini M2 / M4 + any hardware issue</strong>: still under 4 years old, repair via us or AppleCare+ if active.</li>
           </ul>
           <p>

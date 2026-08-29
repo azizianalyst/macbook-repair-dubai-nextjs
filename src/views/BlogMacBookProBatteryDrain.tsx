@@ -7,7 +7,7 @@ export default function BlogMacBookProBatteryDrain() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Battery Draining Fast? Fixes & Costs Dubai 2026"
-      seoDescription="MacBook Pro battery draining fast in Dubai? 5 causes, rogue processes, screen brightness, degraded cell, macOS bugs, heat, with step-by-step fixes. Battery replacement from AED 550."
+      seoDescription="MacBook Pro battery draining fast in Dubai? 5 causes, rogue processes, screen brightness, degraded cell, macOS bugs, heat, with step-by-step fixes. Same-day battery replacement, message us on WhatsApp."
       path="/blog/macbook-pro-battery-draining-fast"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProBatteryDrain() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Battery Draining Fast in Dubai? Here's Why and How to Fix It"
-      hook="If your MacBook Pro is losing charge in 2–3 hours instead of 10+, the cause is almost always one of five things. Most are free to fix in under 10 minutes. One requires a new battery, from AED 550 in Dubai with same-day turnaround."
-      quickAnswer="MacBook Pro battery draining fast is caused by: high screen brightness, background apps (check Activity Monitor → Energy), outdated macOS, a degraded battery cell (check cycle count in System Settings → Battery), or Dubai heat damaging the cell. Start with Activity Monitor. If capacity is below 80% or cycle count is above 800, replace the battery. AED 600–700 in Dubai."
+      hook="If your MacBook Pro is losing charge in 2–3 hours instead of 10+, the cause is almost always one of five things. Most are free to fix in under 10 minutes. One requires a new battery, with same-day turnaround in Dubai, message us on WhatsApp for your exact price."
+      quickAnswer="MacBook Pro battery draining fast is caused by: high screen brightness, background apps (check Activity Monitor → Energy), outdated macOS, a degraded battery cell (check cycle count in System Settings → Battery), or Dubai heat damaging the cell. Start with Activity Monitor. If capacity is below 80% or cycle count is above 800, replace the battery, message us on WhatsApp for today's exact price on your model in Dubai."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -192,16 +192,16 @@ export default function BlogMacBookProBatteryDrain() {
           <h2 id="replacement-cost">How much does MacBook Pro battery replacement cost in Dubai?</h2>
           <p>
             If steps 1–5 didn't fix the drain, the battery cell itself is degraded and needs
-            replacement. Here's current pricing:
+            replacement. Message us on WhatsApp with your model for today's exact price:
           </p>
           <BlogPriceTable
-            caption="MacBook Pro battery replacement pricing. June 2026"
+            caption="MacBook Pro battery replacement. June 2026"
             rows={[
-              { model: "MacBook Pro 13″ Intel (2016–2020)", ours: "AED 550", apple: "AED 949", note: "Glued cells, 60–90 min bench time" },
-              { model: "MacBook Pro 13″ M1 / M2", ours: "AED 600", apple: "AED 999", note: "58 Wh cell, same-day" },
-              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, same-day" },
-              { model: "MacBook Pro 16″ Intel (2019)", ours: "AED 650", apple: "AED 1,099", note: "100 Wh cell" },
-              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell, same-day" },
+              { model: "MacBook Pro 13″ Intel (2016–2020)", ours: "Price on request", apple: "Price on request", note: "Glued cells, 60–90 min bench time" },
+              { model: "MacBook Pro 13″ M1 / M2", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, same-day" },
+              { model: "MacBook Pro 14″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, same-day" },
+              { model: "MacBook Pro 16″ Intel (2019)", ours: "Price on request", apple: "Price on request", note: "100 Wh cell" },
+              { model: "MacBook Pro 16″ M1/M2/M3/M4/M5 Pro/Max", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, same-day" },
             ]}
           />
           <p>

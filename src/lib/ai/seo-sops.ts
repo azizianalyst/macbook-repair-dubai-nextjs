@@ -1,6 +1,6 @@
 // SOP prompt for the AI SEO optimizer. The checklist mirrors src/lib/seo-analysis.ts (the same tests
 // the score panel runs) so Claude optimizes exactly what we measure. The HARD RULES encode the
-// business's non-negotiables (independent — never "Apple Authorized", AED prices, Dubai geo, etc.).
+// business's non-negotiables (independent — never "Apple Authorized", never quote prices, Dubai geo, etc.).
 import type { SeoTest } from "@/lib/seo-analysis";
 
 export type OptimizeType = "post" | "page" | "category";
@@ -43,7 +43,7 @@ CONTENT READABILITY
 
 const HARD_RULES = `HARD BUSINESS RULES (NON-NEGOTIABLE — violating any of these is forbidden):
 - We are an INDEPENDENT Apple repair specialist. NEVER write "Apple Authorized", "Authorised Service Center", or imply any Apple partnership/affiliation.
-- All prices in UAE Dirhams with thousands separators, e.g. "AED 1,050". Never another currency.
+- REQUEST-A-QUOTE model: NEVER quote a price, figure, or currency amount (no "AED 1,050", no ranges, no "from AED …"). Pricing is per model/fault — always direct the reader to "message us on WhatsApp for a quote" / "Price on request" instead of a number.
 - Geography: Dubai, UAE (workshop in Concord Tower, Dubai Media City). Brand: "MacBook Repair Dubai" (Azizi Technologies).
 - NEVER invent facts: prices, chip/model years, device eras, warranty terms. Battery warranty is 3 months. Do not fabricate numbers or claims.
 - Tone: clear, factual, helpful — no hype, no false urgency, no fake scarcity.`;

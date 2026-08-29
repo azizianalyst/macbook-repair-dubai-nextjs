@@ -7,7 +7,7 @@ export default function BlogMacBookProM4HotLidClosed() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Gets Hot With Lid Closed Dubai 2026: Clamshell Mode Fix"
-      seoDescription="MacBook Pro M4 overheating with lid closed in Dubai? Clamshell mode blocks intake vents. Fix guide for heat, throttling, and fan not spinning in closed-lid mode. Repair from AED 200."
+      seoDescription="MacBook Pro M4 overheating with lid closed in Dubai? Clamshell mode blocks intake vents. Fix guide for heat, throttling and fan not spinning. WhatsApp us."
       path="/blog/macbook-pro-m4-gets-hot-lid-closed-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM4HotLidClosed() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Gets Hot With Lid Closed in Dubai? Clamshell Mode Fix Guide"
-      hook="MacBook Pro M4 gets significantly hotter in clamshell mode than with the lid open. The bottom intake vents are partially blocked when the lid is closed on a desk, and the M4 chip runs harder when driving external displays. In Dubai's summer heat, this combination causes the M4 to throttle within minutes of sustained load. Fan cleaning from AED 150, replacement from AED 200."
+      hook="MacBook Pro M4 gets significantly hotter in clamshell mode than with the lid open. The bottom intake vents are partially blocked when the lid is closed on a desk, and the M4 chip runs harder when driving external displays. In Dubai's summer heat, this combination causes the M4 to throttle within minutes of sustained load. Message us on WhatsApp for today's exact price on fan cleaning or replacement for your model."
       quickAnswer="MacBook Pro M4 overheating in clamshell mode: the closed lid blocks some airflow through the intake vents. Raise the M4 on a stand so air flows beneath it freely. Set Power Mode to High Performance when plugged in. Ensure the fan is not clogged with dust. In Dubai summer, use in a well air-conditioned room: ambient temperatures above 30°C combined with clamshell mode push the M4 into heavy throttling faster than in cooler climates."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -79,7 +79,7 @@ export default function BlogMacBookProM4HotLidClosed() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Look through the bottom vents with the M4 in clamshell position (open it briefly to look). Grey dust visible on fan blades confirms cleaning is needed</li>
             <li>Compressed air in 2-second bursts through the intake vents dislodges loose dust. Hold the fan still with a toothpick first to prevent over-spin</li>
-            <li>Professional vent cleaning at our Dubai workshop costs AED 150 and reduces clamshell operating temperature by 10-15°C in dusty M4 units</li>
+            <li>Professional vent cleaning at our Dubai workshop reduces clamshell operating temperature by 10-15°C in dusty M4 units. Message us on WhatsApp for the exact price</li>
           </ul>
 
           <h2 id="step-4">Step 4: What Power Mode should MacBook Pro M4 use in clamshell?</h2>
@@ -133,10 +133,10 @@ export default function BlogMacBookProM4HotLidClosed() {
           <BlogPriceTable
             caption="MacBook Pro M4 cooling repair pricing. June 2026"
             rows={[
-              { model: "Fan cleaning (vent and blade dust removal)", ours: "AED 150", apple: "Not offered", note: "30-45 mins, resolves most clamshell overheating" },
-              { model: "Fan replacement (M4 14-inch)", ours: "AED 200", apple: "AED 600+", note: "OEM fan, full RPM test, 60-90 mins" },
-              { model: "Fan replacement (M4 16-inch, each)", ours: "AED 250", apple: "AED 700+", note: "Dual fan system" },
-              { model: "Thermal paste replacement", ours: "AED 200", apple: "Not offered separately", note: "Board removal required, 2 hours" },
+              { model: "Fan cleaning (vent and blade dust removal)", ours: "Price on request", apple: "Not offered", note: "30-45 mins, resolves most clamshell overheating" },
+              { model: "Fan replacement (M4 14-inch)", ours: "Price on request", apple: "Apple Store", note: "OEM fan, full RPM test, 60-90 mins" },
+              { model: "Fan replacement (M4 16-inch, each)", ours: "Price on request", apple: "Apple Store", note: "Dual fan system" },
+              { model: "Thermal paste replacement", ours: "Price on request", apple: "Not offered separately", note: "Board removal required, 2 hours" },
             ]}
           />
 
@@ -183,7 +183,7 @@ export default function BlogMacBookProM4HotLidClosed() {
         },
         {
           q: "How much does MacBook Pro M4 cooling repair cost in Dubai?",
-          a: "Fan cleaning costs AED 150, fan replacement from AED 200 (14-inch) or AED 250 (16-inch). Thermal paste replacement is AED 200. Free diagnostic to confirm whether the overheating is a hardware fault or a setup and software issue before any repair.",
+          a: "We handle fan cleaning, fan replacement (14-inch and 16-inch) and thermal paste replacement. Message us on WhatsApp for today's exact price on your model. Free diagnostic to confirm whether the overheating is a hardware fault or a setup and software issue before any repair.",
         },
       ]}
       relatedLinks={[

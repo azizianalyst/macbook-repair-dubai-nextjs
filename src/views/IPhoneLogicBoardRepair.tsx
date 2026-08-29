@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneLogicBoardRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Logic Board Repair Dubai - Micro-Soldering | From AED 299"
-      seoDescription="iPhone logic board repair Dubai. Component-level micro-soldering - charging IC, PMIC, NAND, audio IC, backlight. Not a board swap. From AED 299. Call 055 741 3706."
+      seoTitle="iPhone Logic Board Repair Dubai - Micro-Soldering Specialist"
+      seoDescription="iPhone logic board repair Dubai. Component-level micro-soldering - charging IC, PMIC, NAND, audio IC, backlight. Not a board swap. Free diagnosis. Call 055 741 3706."
       path="/iphone-logic-board-repair-dubai"
       eyebrow="iPhone logic board repair"
       h1="iPhone Logic Board Repair Dubai - Micro-Soldering"
-      subtitle="Won't charge, won't power on, no backlight, boot loop, or 'unavailable in iTunes'. We replace the failed IC under microscope - not the whole phone. From AED 299, 2-4 days."
+      subtitle="Won't charge, won't power on, no backlight, boot loop, or 'unavailable in iTunes'. We replace the failed IC under microscope - not the whole phone. Message us on WhatsApp for today's price, most faults back in 2-4 days."
       startingPrice={299}
       timeline="2-4 days"
       whatsappPrefill="Hi, my iPhone has a logic board fault - model and symptom:"
@@ -23,7 +23,7 @@ export default function IPhoneLogicBoardRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPhone logic board repair in Dubai</strong> is component-level micro-soldering - we find the one failed chip on the board and replace it, instead of writing off the whole phone. When Apple or a generic shop says &quot;board fault, not worth fixing,&quot; it usually means a single charging IC, PMIC, or backlight component has died - a part that costs a few dirhams and an hour under the microscope. From AED 299, most faults back in 2-4 days.
+            <strong>iPhone logic board repair in Dubai</strong> is component-level micro-soldering - we find the one failed chip on the board and replace it, instead of writing off the whole phone. When Apple or a generic shop says &quot;board fault, not worth fixing,&quot; it usually means a single charging IC, PMIC, or backlight component has died - a part that costs a few dirhams and an hour under the microscope. Message us on WhatsApp for today's exact price on your model, most faults back in 2-4 days.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We work under a stereo microscope with a JBC micro-soldering station, controlled hot-air profiles, and reballed Apple-spec ICs. Free diagnosis first: if it&apos;s a fault we can&apos;t economically fix (a NAND/Secure-Enclave failure or a cracked SoC), we tell you straight and charge nothing.
@@ -53,7 +53,7 @@ export default function IPhoneLogicBoardRepair() {
         "Free re-work if the same fault returns - bring it straight back.",
       ]}
       faqs={[
-        { q: "Is board repair really cheaper than replacing the iPhone?", a: "Almost always. A charging IC, backlight, or audio IC fix is AED 299-750. Replacing the phone is thousands. Component-level repair fixes the actual fault for the price of the chip plus the micro-soldering labour - and you keep your own device, Face ID and storage intact." },
+        { q: "Is board repair really cheaper than replacing the iPhone?", a: "Almost always. A charging IC, backlight, or audio IC fix costs a fraction of a replacement phone - message us on WhatsApp for today's exact price on your model. Component-level repair fixes the actual fault for the price of the chip plus the micro-soldering labour - and you keep your own device, Face ID and storage intact." },
         { q: "Can you fix any logic board fault?", a: "No, and we're honest before you pay. NAND/Secure-Enclave failures that need Apple's pairing, and a physically cracked SoC, are not economically repairable - we'll tell you at the free diagnosis and charge nothing. Charging, power, backlight, audio and most RF faults, we fix routinely." },
         { q: "Will I lose my data or my Face ID?", a: "No. We don't wipe the phone and we never swap the board - your original NAND (your data) and your Secure Enclave (your Face ID/Touch ID pairing) stay on your own board. That's the whole advantage of component-level repair over a board swap." },
         { q: "My iPhone got wet and now it's dead - is that a board fault?", a: "Often, yes. Liquid usually shorts one rail and kills one chip while the rest of the board is fine. We ultrasonic-clean the corrosion, isolate the failed component and replace it. See iPhone water damage repair - it's the same bench, same technician." },
@@ -64,8 +64,8 @@ export default function IPhoneLogicBoardRepair() {
       reviewNames={["Saeed Alam", "Janna Nurahmetova", "Knight A. Shakir"]}
       related={[
         { label: "iPhone Repair Hub",          href: "/iphone-repair-dubai",                description: "Every iPhone service in one place." },
-        { label: "iPhone Water Damage Repair", href: "/iphone-water-damage-repair-dubai",    description: "Sister fault - liquid kills boards. From AED 179." },
-        { label: "iPhone Data Recovery",        href: "/iphone-data-recovery-dubai",          description: "Pull data off a dead-board iPhone. From AED 279." },
+        { label: "iPhone Water Damage Repair", href: "/iphone-water-damage-repair-dubai",    description: "Sister fault - liquid kills boards. Message us for a quote." },
+        { label: "iPhone Data Recovery",        href: "/iphone-data-recovery-dubai",          description: "Pull data off a dead-board iPhone. Message us for a quote." },
         { label: "Can iPhone motherboard be repaired?", href: "/can-iphone-motherboard-be-repaired", description: "A full guide to iPhone logic board repair options." },
       ]}
     />

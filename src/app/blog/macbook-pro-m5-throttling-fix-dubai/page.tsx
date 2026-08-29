@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MacBook Pro M5 Throttling Fix Dubai 2026: Why It Slows Down and How to Stop It",
     description:
-      "M5 slowing to 600 MHz under load? Blocked vents, fan firmware bug, wrong Power Mode. Fix guide + fan repair from AED 200 in Dubai.",
+      "M5 slowing to 600 MHz under load? Blocked vents, fan firmware bug, wrong Power Mode. Fix guide + fan repair in Dubai — message us for a price.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-throttling-fix-dubai",
     type: "article",
     publishedTime: "2026-06-22",

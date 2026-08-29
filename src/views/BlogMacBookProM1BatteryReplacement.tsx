@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM1BatteryReplacement() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M1 Battery Replacement Cost Dubai 2026: AED Prices Guide"
-      seoDescription="MacBook Pro M1 battery replacement cost in Dubai 2026. M1 13-inch from AED 550. M1 Pro 14-inch from AED 600. M1 Max 16-inch from AED 650. Same-day service. 3-month warranty."
+      seoTitle="MacBook Pro M1 Battery Replacement Cost Dubai 2026: Complete Guide"
+      seoDescription="MacBook Pro M1 battery replacement in Dubai 2026. M1, M1 Pro and M1 Max models. Same-day service, 3-month warranty, free health check. Message us for your exact price."
       path="/blog/macbook-pro-m1-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM1BatteryReplacement() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Battery Replacement Cost in Dubai 2026: What to Expect"
-      hook="MacBook Pro M1 13-inch (2020) is now 5-6 years old in Dubai, well within the replacement window for original batteries. Battery replacement costs AED 550-650 depending on model, significantly less than Apple's AED 750-1,000+. M1 Pro and M1 Max models (2021) are entering their peak replacement wave at 4-5 years in UAE's warm climate."
-      quickAnswer="MacBook Pro M1 battery replacement cost Dubai: M1 13-inch = AED 550. M1 Pro 14-inch = AED 600. M1 Max 14-inch = AED 600. M1 Max 16-inch = AED 650. Same-day service. Free battery health check first. Replace when capacity drops below 80% or machine shuts down unexpectedly. 3-month warranty on replacement cells."
+      hook="MacBook Pro M1 13-inch (2020) is now 5-6 years old in Dubai, well within the replacement window for original batteries. Independent replacement costs significantly less than Apple's service, and we quote your exact price on WhatsApp. M1 Pro and M1 Max models (2021) are entering their peak replacement wave at 4-5 years in UAE's warm climate."
+      quickAnswer="MacBook Pro M1 battery replacement in Dubai covers M1 13-inch, M1 Pro 14-inch, M1 Max 14-inch and M1 Max 16-inch. Same-day service, free battery health check first, 3-month warranty on replacement cells. Message us on WhatsApp for today's exact price on your model. Replace when capacity drops below 80% or the machine shuts down unexpectedly."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -103,7 +103,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
           <ul className="list-disc list-inside space-y-xs">
             <li>If the trackpad feels raised, bottom case is bowing, or there is a gap at the seam: this is battery swelling. Do not charge and come to our workshop the same day</li>
             <li>Swollen battery removal requires a ventilated bay and heat-assisted adhesive release, standard repair procedure at our Dubai workshop. We have handled hundreds of swollen M1 batteries</li>
-            <li>Swollen battery replacement costs AED 600 (AED 50 more than normal replacement due to additional work)</li>
+            <li>Swollen battery replacement costs slightly more than a normal replacement due to the extra adhesive and ventilated-bay work. Message us on WhatsApp for the exact price on your model</li>
             <li>After swollen battery removal, we inspect the trackpad and keyboard for secondary damage from battery pressure</li>
           </ul>
 
@@ -118,12 +118,12 @@ export default function BlogMacBookProM1BatteryReplacement() {
           <BlogPriceTable
             caption="MacBook Pro M1 battery replacement pricing by model. June 2026"
             rows={[
-              { model: "MacBook Pro M1 13-inch (2020)", ours: "AED 550", apple: "AED 750+", note: "69.6Wh, 3-month warranty, 2-hour job" },
-              { model: "MacBook Pro M1 Pro 14-inch (2021)", ours: "AED 600", apple: "AED 900+", note: "99.8Wh, 3-month warranty, 3-hour job" },
-              { model: "MacBook Pro M1 Max 14-inch (2021)", ours: "AED 600", apple: "AED 900+", note: "99.8Wh, same as M1 Pro 14-inch battery" },
-              { model: "MacBook Pro M1 Max 16-inch (2021)", ours: "AED 650", apple: "AED 1,000+", note: "100Wh, 3-month warranty, 3-hour job" },
-              { model: "Swollen battery (any M1 model, +50)", ours: "AED 600–700", apple: "AED 750-1,000+", note: "Additional work for adhesive and ventilated bay" },
-              { model: "Battery health diagnostic", ours: "Free", apple: "AED 250", note: "Cycle count, capacity, swelling check" },
+              { model: "MacBook Pro M1 13-inch (2020)", ours: "Price on request", apple: "Apple pricing higher", note: "69.6Wh, 3-month warranty, 2-hour job" },
+              { model: "MacBook Pro M1 Pro 14-inch (2021)", ours: "Price on request", apple: "Apple pricing higher", note: "99.8Wh, 3-month warranty, 3-hour job" },
+              { model: "MacBook Pro M1 Max 14-inch (2021)", ours: "Price on request", apple: "Apple pricing higher", note: "99.8Wh, same as M1 Pro 14-inch battery" },
+              { model: "MacBook Pro M1 Max 16-inch (2021)", ours: "Price on request", apple: "Apple pricing higher", note: "100Wh, 3-month warranty, 3-hour job" },
+              { model: "Swollen battery (any M1 model)", ours: "Price on request", apple: "Apple pricing higher", note: "Additional work for adhesive and ventilated bay" },
+              { model: "Battery health diagnostic", ours: "Free", apple: "Apple charges for diagnosis", note: "Cycle count, capacity, swelling check" },
             ]}
           />
 
@@ -136,7 +136,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
 
           <h2 id="when-upgrade">MacBook Pro M1 battery replacement vs upgrading at 5 years</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Replace battery</strong>: if the M1 is otherwise healthy, SSD health is good (check with smartmontools), and the machine performs all your tasks without thermal throttling. AED 550 buys 2-3 more years of use from an M1 that is otherwise fine</li>
+            <li><strong>Replace battery</strong>: if the M1 is otherwise healthy, SSD health is good (check with smartmontools), and the machine performs all your tasks without thermal throttling. A battery replacement buys 2-3 more years of use from an M1 that is otherwise fine</li>
             <li><strong>Consider upgrading</strong>: if the M1 has multiple simultaneous issues (Touch Bar failing + battery swelling + SSD wear), combined repair costs may approach the cost of a used M3 on Dubizzle. List and evaluate</li>
             <li><strong>M1 is still capable</strong>: the M1 chip's performance remains excellent for most professional workloads in 2026. A battery replacement is often the only thing a well-maintained M1 needs to serve for 3-4 more years</li>
           </ul>
@@ -150,7 +150,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M1 battery replacement cost in Dubai?",
-          a: "MacBook Pro M1 13-inch battery replacement costs AED 550. M1 Pro 14-inch and M1 Max 14-inch cost AED 600. M1 Max 16-inch costs AED 650. Swollen battery replacement adds AED 50 for additional work. All include 3-month warranty and same-day service. Apple charges AED 750-1,000+ depending on model.",
+          a: "We replace batteries on M1 13-inch, M1 Pro 14-inch, M1 Max 14-inch and M1 Max 16-inch, and swollen batteries cost slightly more for the extra work. All include a 3-month warranty and same-day service, and we come in well under Apple's independent pricing. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I check MacBook Pro M1 battery health in Dubai?",
@@ -162,7 +162,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
         },
         {
           q: "Is it worth replacing MacBook Pro M1 battery at 5 years old in Dubai?",
-          a: "Usually yes, if the rest of the machine is healthy. The M1 chip remains capable for most professional work in 2026. AED 550 battery replacement buys 2-3 more years of reliable use. Only consider upgrading instead if you also have Touch Bar failure, SSD degradation, or repeated kernel panics. Combined repair costs can approach a used M3.",
+          a: "Usually yes, if the rest of the machine is healthy. The M1 chip remains capable for most professional work in 2026, and a battery replacement buys 2-3 more years of reliable use. Only consider upgrading instead if you also have Touch Bar failure, SSD degradation, or repeated kernel panics, since combined repair costs can approach a used M3. Message us on WhatsApp for your exact price.",
         },
         {
           q: "Does MacBook Pro M1 battery replacement restore original battery life?",

@@ -75,10 +75,10 @@ function buildServiceRows(m: Model): ServiceRow[] {
   const p = m.pricing;
   const rows: ServiceRow[] = [];
 
-  if (p.battery)    rows.push({ service: "Battery replacement", price: p.battery, href: "/", timeline: "Same-day" });
-  if (p.screen)     rows.push({ service: "Screen / digitiser replacement", price: p.screen, href: "/", timeline: "1-2 days" });
-  if (p.homeButton) rows.push({ service: "Home button repair", price: p.homeButton, href: "/", timeline: "Same-day" });
-  if (p.port)       rows.push({ service: "Lightning port repair", price: p.port, href: "/", timeline: "Same-day" });
+  if (p.battery)    rows.push({ service: "Battery replacement", price: "Price on request", href: "/", timeline: "Same-day" });
+  if (p.screen)     rows.push({ service: "Screen / digitiser replacement", price: "Price on request", href: "/", timeline: "1-2 days" });
+  if (p.homeButton) rows.push({ service: "Home button repair", price: "Price on request", href: "/", timeline: "Same-day" });
+  if (p.port)       rows.push({ service: "Lightning port repair", price: "Price on request", href: "/", timeline: "Same-day" });
 
   rows.push({
     service: "Free diagnostic",
@@ -102,7 +102,7 @@ function startingPriceFor(m: Model): number {
 function verdictFor(m: Model): { headline: string; body: string } {
   return {
     headline: "Yes - for sentimental, kids, or music-only use",
-    body: `Discontinued in 2022, stuck on iOS 15, no app updates. But for kids' first device, a music-only player, or a beloved old gadget you want kept alive - battery (AED ${m.pricing.battery ?? 250}) and screen (AED ${m.pricing.screen ?? 300}) repairs absolutely make sense.`,
+    body: `Discontinued in 2022, stuck on iOS 15, no app updates. But for kids' first device, a music-only player, or a beloved old gadget you want kept alive - battery and screen repairs absolutely make sense. Message us on WhatsApp for today's exact price on your model.`,
   };
 }
 
@@ -128,7 +128,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
   const faqs: { q: string; a: string }[] = [
     {
       q: `How much does ${model.name} repair cost in Dubai?`,
-      a: `Most ${model.name} repairs start at AED ${startingPrice}. Battery AED ${model.pricing.battery}, screen AED ${model.pricing.screen}, home button AED ${model.pricing.homeButton}. Written warranty of up to 12 months, depending on the repair.`,
+      a: `We repair the battery, screen and home button on the ${model.name} - message us on WhatsApp with your model and we'll send today's exact price in about 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
     {
       q: `Will iOS 15 keep my iPod Touch 7 useful?`,
@@ -150,12 +150,12 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Battery, screen, home button, port. From AED ${startingPrice}. Free pickup, free diagnostic, warranty of up to 12 months.`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, 12-Month Warranty`}
+      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Free pickup, free diagnostic, warranty up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 12-Month Warranty`}
-      subtitle={`From AED ${startingPrice}. Free diagnostic. We'll tell you honestly when repair makes sense - and when it doesn't.`}
+      subtitle={`Free diagnostic. Message us on WhatsApp for today's price. We'll tell you honestly when repair makes sense - and when it doesn't.`}
       startingPrice={startingPrice}
       timeline="Same-day to 5 days depending on the job"
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -175,7 +175,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are still available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today's price on the most common service. Free pickup, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -204,7 +204,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               <thead className="bg-bg-card">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>

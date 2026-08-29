@@ -12,7 +12,7 @@ export type DeviceFamily = {
   tone?: "light" | "dark";
 };
 
-export function DeviceFamilyCard({ name, href, startingPrice, models, icon: Icon, tone = "light" }: DeviceFamily) {
+export function DeviceFamilyCard({ name, href, models, icon: Icon, tone = "light" }: DeviceFamily) {
   const dark = tone === "dark";
   return (
     <Link
@@ -27,7 +27,7 @@ export function DeviceFamilyCard({ name, href, startingPrice, models, icon: Icon
       <Icon size={32} className={cn("mb-md", dark ? "text-accent" : "text-accent")} aria-hidden />
       <p className={cn("font-bold text-[18px] mb-1", dark ? "text-text" : undefined)}>{name}</p>
       <p className={cn("text-[13px] mb-sm", dark ? "text-text-muted" : "text-text-muted")}>{models}</p>
-      <p className={cn("mono text-[13px] mb-md", dark ? "text-text-faint" : "text-text-faint")}>From AED {startingPrice}</p>
+      <p className={cn("mono text-[13px] mb-md", dark ? "text-text-faint" : "text-text-faint")}>Price on request</p>
       <span className={cn("inline-flex items-center gap-1 text-[14px] font-semibold group-hover:gap-2 transition-all", dark ? "text-accent" : "text-primary")}>
         See repairs <ArrowRight size={14} aria-hidden />
       </span>

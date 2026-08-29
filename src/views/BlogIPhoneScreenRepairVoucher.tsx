@@ -7,7 +7,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Screen Repair Voucher Dubai - Save 15% (How It Works)"
-      seoDescription="Buy a screen repair voucher upfront, use within 12 months - save 15% off our standard price. How vouchers work, terms, who they're for, and how to buy."
+      seoDescription="Buy a screen repair voucher upfront, use within 12 months, save 15% off our standard price. How vouchers work, terms, who they're for, and how to buy."
       path="/blog/iphone-screen-repair-voucher-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
       category="Service · Vouchers"
       h1="iPhone Screen Repair Voucher Dubai - Save With Vouchers"
       hook="We offer pre-purchase vouchers for screen repair. Buy now, use within 1 year. Save 15%."
-      quickAnswer="Our iPhone screen repair voucher saves 15% when bought in advance: a standard iPhone 15 Pro screen drops from AED 1,200 to AED 1,020. Vouchers last 12 months, cover any iPhone screen repair at our Media City workshop, and are transferable and refundable. Best for parents of teenagers, companies, or anyone locking in current pricing."
+      quickAnswer="Our iPhone screen repair voucher saves 15% off standard pricing when bought in advance - message us on WhatsApp for today's exact voucher price on your model. Vouchers last 12 months, cover any iPhone screen repair at our Media City workshop, and are transferable and refundable. Best for parents of teenagers, companies, or anyone locking in current pricing."
       author={{ name: "Ali", role: "Founder" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
@@ -43,17 +43,17 @@ export default function BlogIPhoneScreenRepairVoucher() {
             caption="iPhone screen repair pricing - Dubai April 2026"
             headers={["iPhone model", "Standard price", "Voucher price (-15%)", "You save"]}
             rows={[
-              { model: "iPhone 17 Pro Max", ours: "AED 1,400", apple: "AED 1,190", note: "AED 210" },
-              { model: "iPhone 17 Pro", ours: "AED 1,300", apple: "AED 1,105", note: "AED 195" },
-              { model: "iPhone 17 / Air", ours: "AED 1,100", apple: "AED 935", note: "AED 165" },
-              { model: "iPhone 16 Pro Max", ours: "AED 1,300", apple: "AED 1,105", note: "AED 195" },
-              { model: "iPhone 16 Pro", ours: "AED 1,200", apple: "AED 1,020", note: "AED 180" },
-              { model: "iPhone 15 Pro Max", ours: "AED 1,200", apple: "AED 1,020", note: "AED 180" },
-              { model: "iPhone 15 Pro", ours: "AED 1,100", apple: "AED 935", note: "AED 165" },
-              { model: "iPhone 14 Pro Max", ours: "AED 1,000", apple: "AED 850", note: "AED 150" },
-              { model: "iPhone 13 / 14", ours: "AED 700", apple: "AED 595", note: "AED 105" },
-              { model: "iPhone 12 / 11", ours: "AED 500", apple: "AED 425", note: "AED 75" },
-              { model: "iPhone SE 3 / 16e / 17e", ours: "AED 450", apple: "AED 385", note: "AED 65" },
+              { model: "iPhone 17 Pro Max", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 17 Pro", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 17 / Air", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 16 Pro Max", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 16 Pro", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 15 Pro Max", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 15 Pro", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 14 Pro Max", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 13 / 14", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone 12 / 11", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
+              { model: "iPhone SE 3 / 16e / 17e", ours: "Price on request", apple: "Price on request", note: "Save 15%" },
             ]}
           />
 
@@ -62,7 +62,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li><strong>Validity:</strong> 12 months from purchase date. Single 6-month extension available on written request.</li>
             <li><strong>Coverage:</strong> any iPhone screen repair (any model from iPhone 6 through current generation iPhone 17 Pro Max).</li>
             <li><strong>Transferable:</strong> yes - give it to a spouse, child, parent, or friend. Just give us their name when they redeem.</li>
-            <li><strong>Refundable:</strong> yes if unused - full refund less AED 50 admin fee, processed within 7 days.</li>
+            <li><strong>Refundable:</strong> yes if unused - full refund less a small admin fee, processed within 7 days.</li>
             <li><strong>Stackable:</strong> only one voucher per repair. Cannot combine with other promotions (Eid offer, DSF discount, returning-customer credit).</li>
             <li><strong>Non-applicable:</strong> water damage repair, screen + back glass combos, screens swapped to a non-genuine grade if you specifically request OLED-OEM.</li>
             <li><strong>Warranty unchanged:</strong> written warranty up to 12 months applies to voucher repairs identically to paid repairs.</li>
@@ -79,7 +79,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
 
           <h2 id="who-shouldnt">Who shouldn't bother?</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>AppleCare+ subscribers</strong> - your AED 350 deductible already beats most voucher prices.</li>
+            <li><strong>AppleCare+ subscribers</strong> - your existing screen-damage deductible may already beat most voucher prices.</li>
             <li><strong>Light, careful phone users</strong> with no history of damage - accident probability over 12 months may not justify lock-in.</li>
             <li><strong>Buyers planning to sell within 6 months</strong> - voucher value is lost if the phone leaves the household.</li>
           </ul>
@@ -90,7 +90,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li>We send you a quote and payment link (card, Apple Pay, bank transfer accepted).</li>
             <li>Voucher PDF emailed within 1 hour with unique 8-character redemption code.</li>
             <li>To redeem: bring iPhone + voucher code to workshop, or mention the code when booking pickup.</li>
-            <li>Pay AED 0 at repair (voucher fully covers) or just the difference if you upgrade to a more expensive screen tier.</li>
+            <li>Pay nothing at repair (voucher fully covers) or just the difference if you upgrade to a more expensive screen tier.</li>
           </ol>
 
           <h2 id="vs-applecare">Comparison with AppleCare+ (for context)</h2>
@@ -98,9 +98,9 @@ export default function BlogIPhoneScreenRepairVoucher() {
             caption="Voucher vs AppleCare+ vs pay-as-you-go (iPhone 17 Pro example)"
             headers={["Option", "Cost over 12 months", "Per-screen cost", "Notes"]}
             rows={[
-              { model: "AppleCare+", ours: "AED 549/yr + AED 350 deductible/screen", apple: "AED 350 (after subscription)", note: "Two screen claims/year max" },
-              { model: "Our voucher", ours: "AED 1,105 upfront (1 screen)", apple: "AED 1,105", note: "12 months, transferable, refundable" },
-              { model: "Pay-as-you-go", ours: "AED 0 upfront", apple: "AED 1,300", note: "Pay only when needed" },
+              { model: "AppleCare+", ours: "Annual fee + per-screen deductible", apple: "Price on request", note: "Two screen claims/year max" },
+              { model: "Our voucher", ours: "Price on request (1 screen upfront)", apple: "Price on request", note: "12 months, transferable, refundable" },
+              { model: "Pay-as-you-go", ours: "Nothing upfront", apple: "Price on request", note: "Pay only when needed" },
             ]}
           />
           <p>

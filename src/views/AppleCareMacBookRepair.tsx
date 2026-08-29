@@ -15,8 +15,8 @@ import { localBusiness, organization, service as serviceSchema, breadcrumbs, ite
 import { NAP } from "@/content/site";
 
 const COVERED = [
-  { title: "Battery replacement", body: "Once AppleCare runs out, a swollen or 'Service Recommended' battery is a quick fix here - original-spec cell, cycle count reset, load-tested before pickup. Battery work from AED 590.", icon: Battery },
-  { title: "Screen repair", body: "Cracked panel or backlight gone after your cover ended. We fit A-grade Retina panels that match the original brightness and P3 colour, from AED 780.", icon: Wrench },
+  { title: "Battery replacement", body: "Once AppleCare runs out, a swollen or 'Service Recommended' battery is a quick fix here - original-spec cell, cycle count reset, load-tested before pickup. Message us on WhatsApp for today's exact battery price on your model.", icon: Battery },
+  { title: "Screen repair", body: "Cracked panel or backlight gone after your cover ended. We fit A-grade Retina panels that match the original brightness and P3 colour - message us for the exact price on your model.", icon: Wrench },
   { title: "Logic board repair", body: "Board-level micro-soldering for no-power, boot-loop and port faults that Apple would only solve by swapping the whole board for a flat fee.", icon: Cpu },
   { title: "SSD & storage", body: "Failed or full storage replaced and upgraded on AppleCare-expired Macs, with data migration where the drive is still readable.", icon: HardDrive },
 ];
@@ -37,7 +37,7 @@ const FAQS = [
   { q: "What warranty do you give on the repair?",
     a: "Every repair carries a written warranty up to 12 months, with three months on batteries. That covers the part we fitted and the workmanship. It's our own warranty, not Apple's - we're independent - but if the same fault comes back inside the window, we sort it at no extra cost." },
   { q: "Can you help if Apple quoted a high out-of-warranty price?",
-    a: "That's exactly the case we see most. Apple's out-of-warranty service tends to be a flat fee to replace the whole board or unit, often several thousand dirhams. A component-level logic-board fix here starts from AED 1,040. Send us Apple's quote and the model on WhatsApp and we'll tell you in a few minutes whether we can beat it." },
+    a: "That's exactly the case we see most. Apple's out-of-warranty service tends to be a flat fee to replace the whole board or unit. We fix the single failed component instead, which is usually far cheaper than a whole-board swap. Send us Apple's quote and the model on WhatsApp and we'll tell you in a few minutes whether we can beat it." },
   { q: "Is the standard Apple warranty the same as AppleCare?",
     a: "No. Every new Mac comes with a one-year limited warranty against manufacturing faults, included free. AppleCare+ is a paid plan you add at or near purchase that extends cover to three years and adds accidental-damage repairs for a fee. Neither covers normal wear, and both can lapse - which is when most customers come to us." },
 ];

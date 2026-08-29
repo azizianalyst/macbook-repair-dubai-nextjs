@@ -21,7 +21,7 @@ export default function BlogMacBookMaintenanceChecklist() {
       category="Care guide · MacBook"
       h1="MacBook Maintenance Checklist: Keep Your Mac Fast in Dubai"
       hook="Most MacBooks that come in for being slow or loud don't need a repair - they need a clean and ten minutes of housekeeping. Here is the routine we give every customer, split into monthly, quarterly and yearly jobs."
-      quickAnswer="Run a monthly storage and update check, a quarterly battery-health and backup review, and a yearly internal dust clean (AED 280 in Dubai). The dust matters here - fine sand loads MacBook fans faster than cooler climates, so a yearly clean prevents most thermal faults."
+      quickAnswer="Run a monthly storage and update check, a quarterly battery-health and backup review, and a yearly internal dust clean in Dubai (message us on WhatsApp for the price). The dust matters here - fine sand loads MacBook fans faster than cooler climates, so a yearly clean prevents most thermal faults."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-06-03"
       dateModified="2026-06-03"
@@ -107,7 +107,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             You can blow out the vents with a can of compressed air from the outside, and that helps a
             little. But the dust that matters sits on the heatsink fins inside the chassis, and on a
             modern glued-shut MacBook you can't reach it without opening the machine properly. A full
-            internal clean at our bench is AED 280, VAT-inclusive, same day.</p>
+            internal clean at our bench is VAT-inclusive and same day - message us on WhatsApp for today's price.</p>
         <p>We open it up, clear the
             fans and heatsink, clean the ports, check for early corrosion, and run a thermal check
             before it goes back. Once a year is right for most people in Dubai. If you work near a
@@ -160,8 +160,8 @@ export default function BlogMacBookMaintenanceChecklist() {
             opening the chassis. From 2013 onward Apple glues most components in, the fans sit under
             shielding and ribbon cables, and a slipped screwdriver near the board is an expensive
             mistake. Internal cleaning, battery swaps and thermal-paste work belong on a bench. A
-            MacBook battery, for the record, is AED 450 for an Air and up to AED 600 for a 14-inch or
-            16-inch Pro - see the{" "}
+            MacBook battery, for the record, is a bench job whether it's an Air or a 14-inch or
+            16-inch Pro - message us on WhatsApp for the exact price on your model, or see the{" "}
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement page
             </Link>{" "}
@@ -183,7 +183,7 @@ export default function BlogMacBookMaintenanceChecklist() {
       faqs={[
         {
           q: "How often should I clean my MacBook in Dubai?",
-          a: "Once a year for most people. Dubai's fine sand and humidity load the fans faster than cooler climates, so if you work outdoors, near a building site, or hear the fans roaring at idle, every six to nine months is better. A full internal clean is AED 280 at our Media City workshop and takes a day.",
+          a: "Once a year for most people. Dubai's fine sand and humidity load the fans faster than cooler climates, so if you work outdoors, near a building site, or hear the fans roaring at idle, every six to nine months is better. A full internal clean at our Media City workshop takes a day - message us on WhatsApp for the price.",
         },
         {
           q: "How do I check my MacBook battery health?",
@@ -203,12 +203,12 @@ export default function BlogMacBookMaintenanceChecklist() {
         },
         {
           q: "Can I open and clean the MacBook myself?",
-          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a warranty of up to 12 months.",
+          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean comes with a warranty of up to 12 months - message us on WhatsApp for the price.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook cleaning & maintenance", href: "/macbook-cleaning-maintenance-dubai", description: "Full internal clean, thermal check, AED 280 same day." },
-        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450, tier-1 cells, 3-month warranty." },
+        { label: "MacBook cleaning & maintenance", href: "/macbook-cleaning-maintenance-dubai", description: "Full internal clean, thermal check, same day." },
+        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "Tier-1 cells, 3-month warranty. Price on request." },
         { label: "MacBook backup service", href: "/macbook-backup-service-dubai", description: "Time Machine set up and verified with a restore test." },
       ]}
     />

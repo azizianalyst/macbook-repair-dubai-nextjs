@@ -7,7 +7,7 @@ export default function BlogMacBookProM5FanNoise() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Fan Noise Dubai 2026: Crackling, Clicking, Grinding Fix"
-      seoDescription="MacBook Pro M5 fan making crackling, clicking, or grinding noise in Dubai? Debris in fan, bearing fault, firmware bug. Step-by-step fix guide. Fan replacement from AED 200."
+      seoDescription="MacBook Pro M5 fan making crackling, clicking, or grinding noise in Dubai? Debris in fan, bearing fault, firmware bug. Step-by-step fix guide. Free diagnosis."
       path="/blog/macbook-pro-m5-fan-noise-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookProM5FanNoise() {
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Fan Making Noise in Dubai? Crackling, Clicking, and Grinding Fix"
       hook="MacBook Pro M5 users in Dubai are reporting crackling and popping sounds from the fan, especially on the 14-inch model. Some hear a clicking noise only at certain RPM ranges. These are distinct from the normal airflow whoosh of a healthy fan spinning up. All three noise types have specific causes and most are fixed with a simple cleaning or fan replacement."
-      quickAnswer="MacBook Pro M5 fan crackling or clicking noise is caused by: debris (dust or a foreign object) caught in the fan blades, a fan bearing starting to fail, or a firmware bug in Tahoe 26.0 that causes the fan to hunt between RPM levels and produce an audible vibration. Clean the vents first. If crackling continues under load, the fan bearing is failing and replacement is needed. Fan replacement from AED 200 in Dubai."
+      quickAnswer="MacBook Pro M5 fan crackling or clicking noise is caused by: debris (dust or a foreign object) caught in the fan blades, a fan bearing starting to fail, or a firmware bug in Tahoe 26.0 that causes the fan to hunt between RPM levels and produce an audible vibration. Clean the vents first. If crackling continues under load, the fan bearing is failing and replacement is needed. Message us on WhatsApp for today's exact fan replacement price on your M5 in Dubai."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -68,7 +68,7 @@ export default function BlogMacBookProM5FanNoise() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Do not use a vacuum</strong>: a vacuum near MacBook vents generates static electricity that can damage the logic board</li>
             <li><strong>Compressed air from a can (correct way)</strong>: hold the nozzle 5cm from the vent, spray in short bursts, hold the fan blades still by placing a wooden toothpick between two blades through the vent before spraying. This prevents the fan from over-spinning beyond its rated RPM from the air blast</li>
-            <li><strong>Professional cleaning</strong>: if compressed air does not resolve the noise, the fan needs to come out for blade-by-blade cleaning. AED 150 at our Dubai workshop, 30-45 minutes</li>
+            <li><strong>Professional cleaning</strong>: if compressed air does not resolve the noise, the fan needs to come out for blade-by-blade cleaning. Around 30-45 minutes at our Dubai workshop; message us on WhatsApp for the exact price</li>
           </ul>
 
           <h2 id="step-3">Step 3: How do I know if MacBook Pro M5 fan bearing is failing?</h2>
@@ -142,10 +142,10 @@ export default function BlogMacBookProM5FanNoise() {
           <BlogPriceTable
             caption="MacBook Pro M5 fan repair pricing. June 2026"
             rows={[
-              { model: "Fan cleaning (debris removal)", ours: "AED 150", apple: "Not offered", note: "Compressed air + brush clean, 30-45 mins" },
-              { model: "Fan replacement (M5 14-inch)", ours: "AED 200", apple: "AED 600+", note: "OEM fan, tested at full RPM, 60-90 mins" },
-              { model: "Fan replacement (M5 16-inch, each fan)", ours: "AED 250", apple: "AED 700+", note: "Dual-fan system, one or both replaced" },
-              { model: "Fan diagnostic (confirm fault)", ours: "Free", apple: "AED 250", note: "RPM test, bearing check, firmware vs hardware confirm" },
+              { model: "Fan cleaning (debris removal)", ours: "Price on request", apple: "Not offered", note: "Compressed air + brush clean, 30-45 mins" },
+              { model: "Fan replacement (M5 14-inch)", ours: "Price on request", apple: "Price on request", note: "OEM fan, tested at full RPM, 60-90 mins" },
+              { model: "Fan replacement (M5 16-inch, each fan)", ours: "Price on request", apple: "Price on request", note: "Dual-fan system, one or both replaced" },
+              { model: "Fan diagnostic (confirm fault)", ours: "Free", apple: "Price on request", note: "RPM test, bearing check, firmware vs hardware confirm" },
             ]}
           />
 

@@ -7,7 +7,7 @@ export default function BlogMacBookWaterDamageCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Water Damage Repair Cost & Success Rates Dubai"
-      seoDescription="MacBook water damage repair Dubai from AED 299. 80-90% recovery if seen within 24 hours. Ultrasonic cleaning, salt vs fresh water and LDI explained."
+      seoDescription="MacBook water damage repair Dubai: 80-90% recovery if seen within 24 hours. Ultrasonic cleaning, salt vs fresh water and LDI explained. WhatsApp for a quote."
       path="/blog/macbook-water-damage-repair-cost-success-rates"
       wide
       toc={[
@@ -22,8 +22,8 @@ export default function BlogMacBookWaterDamageCost() {
       ]}
       category="Cost guide · MacBook"
       h1="MacBook Water Damage Repair Dubai - Cost & Success Rates"
-      hook="AED 299 starting for MacBook water damage repair. 80-90% recovery rate at our workshop - and the first 24 hours decide the outcome."
-      quickAnswer="MacBook water damage repair in Dubai costs AED 299-2,500 in April 2026 depending on board damage extent. Recovery rate is 80-90% if brought in within 24 hours, dropping to 40-50% after 72 hours. Ultrasonic cleaning AED 299, board-level component repair AED 1,200-2,500."
+      hook="80-90% recovery rate at our workshop for MacBook water damage - and the first 24 hours decide the outcome. Message us on WhatsApp for a quote on your model."
+      quickAnswer="MacBook water damage repair in Dubai ranges from a simple ultrasonic clean to board-level component repair, depending on the extent of board damage. Recovery rate is 80-90% if brought in within 24 hours, dropping to 40-50% after 72 hours. Diagnosis is free - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Shafiq", role: "Senior MacBook board-level technician" }}
       datePublished="2026-04-25"
       dateModified="2026-06-16"
@@ -35,10 +35,10 @@ export default function BlogMacBookWaterDamageCost() {
           <BlogPriceTable
             caption="MacBook water damage repair tiers - April 2026"
             rows={[
-              { model: "Tier 1 - Clean only (boots, no faults)", ours: "AED 299", apple: "AED 4,000+ (logic board swap)", note: "Ultrasonic + reseal" },
-              { model: "Tier 2 - Clean + 1-2 components", ours: "AED 1,000-1,500", apple: "AED 4,500+", note: "Charging IC, USB-C controller etc." },
-              { model: "Tier 3 - Heavy board damage", ours: "AED 1,800-2,500", apple: "AED 5,000+ (full swap)", note: "Multiple ICs, traces, copper layers" },
-              { model: "Data recovery (board unrecoverable)", ours: "AED 800-2,000", apple: "Not offered", note: "M-series soldered SSD" },
+              { model: "Tier 1 - Clean only (boots, no faults)", ours: "Price on request", apple: "Logic board swap", note: "Ultrasonic + reseal" },
+              { model: "Tier 2 - Clean + 1-2 components", ours: "Price on request", apple: "Logic board swap", note: "Charging IC, USB-C controller etc." },
+              { model: "Tier 3 - Heavy board damage", ours: "Price on request", apple: "Full swap", note: "Multiple ICs, traces, copper layers" },
+              { model: "Data recovery (board unrecoverable)", ours: "Price on request", apple: "Not offered", note: "M-series soldered SSD" },
             ]}
           />
 
@@ -79,7 +79,7 @@ export default function BlogMacBookWaterDamageCost() {
             salt is conductive even after the water evaporates - meaning the corrosion continues
             for weeks. We see Jumeirah and JBR beach MacBooks where the user thought it had "dried
             out" because the screen still worked, then 2 weeks later it dies suddenly. By that
-            point we're often into Tier 3 territory (AED 1,800+) instead of Tier 1.
+            point we're often into Tier 3 (heavy board damage) territory instead of Tier 1.
           </p>
           <p>
             Coffee, tea, and sugary drinks are also bad - sugar leaves a sticky conductive residue
@@ -98,8 +98,8 @@ export default function BlogMacBookWaterDamageCost() {
             already-damaged components.
           </p>
           <p>
-            The 24 hours people waste on the rice trick is the difference between a AED 299 Tier 1
-            repair and a AED 2,500 Tier 3 repair. Bring the MacBook to us within 24 hours.
+            The 24 hours people waste on the rice trick is often the difference between a quick Tier 1
+            clean and a heavy Tier 3 board repair. Bring the MacBook to us within 24 hours.
           </p>
 
           <h2 id="ultrasonic-cleaning">Ultrasonic cleaning process explained</h2>
@@ -133,8 +133,8 @@ export default function BlogMacBookWaterDamageCost() {
 
           <h2 id="insurance-warranty">Insurance + warranty implications</h2>
           <p>
-            <strong>AppleCare+</strong> covers liquid damage at AED 367 deductible (USD 99) up to
-            2 incidents per year. If you have it - use it. Cheaper than us.
+            <strong>AppleCare+</strong> covers liquid damage for a fixed service fee (deductible) up to
+            2 incidents per year. If you have it - use it; the deductible is usually the cheaper route.
           </p>
           <p>
             <strong>Home contents insurance</strong> in UAE often covers laptop accidental damage
@@ -166,7 +166,7 @@ export default function BlogMacBookWaterDamageCost() {
         },
         {
           q: "How much does MacBook water damage repair cost in Dubai?",
-          a: "Tier 1 (clean + reseal, no component damage) is AED 299. Tier 2 (1-2 damaged ICs) is AED 1,000-1,500. Tier 3 (heavy board damage) is AED 1,800-2,500. We give a final quote after the initial diagnostic, free.",
+          a: "It depends on the extent of board damage - from a simple Tier 1 clean and reseal, to Tier 2 (1-2 damaged ICs), to Tier 3 (heavy board damage). Diagnosis is free and we give a final quote after the initial diagnostic. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Will my data survive a water-damaged MacBook?",
@@ -174,7 +174,7 @@ export default function BlogMacBookWaterDamageCost() {
         },
         {
           q: "Why don't you recommend the rice trick?",
-          a: "Rice absorbs only marginally more moisture than open air, and corrosion inside the MacBook starts within minutes of liquid contact regardless. The 24 hours wasted in rice is the difference between a AED 299 Tier 1 repair and a AED 2,500 Tier 3 repair. Bring the MacBook in immediately.",
+          a: "Rice absorbs only marginally more moisture than open air, and corrosion inside the MacBook starts within minutes of liquid contact regardless. The 24 hours wasted in rice is often the difference between a quick Tier 1 clean and a heavy Tier 3 board repair. Bring the MacBook in immediately.",
         },
         {
           q: "Will Apple still service my MacBook after a third-party water damage repair?",

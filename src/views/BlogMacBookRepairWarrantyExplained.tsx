@@ -106,7 +106,8 @@ export default function BlogMacBookRepairWarrantyExplained() {
             (battery &lt; 80% health, manufacturing defect), use AppleCare+ first - it's already paid
             for. Come to us when AppleCare+ has expired, the issue isn't covered, or the deductible is
             higher than our price. Our customers most often arrive after AppleCare+ ends or after
-            Apple has quoted a logic-board replacement at AED 6,000+ - see our{" "}
+            Apple has quoted a costly logic-board replacement - message us on WhatsApp for today's
+            exact price on your model, and see our{" "}
             <Link to="/blog/iphone-repair-vs-applecare-which-better" className="text-accent font-semibold hover:underline">
               repair vs AppleCare+ math
             </Link>

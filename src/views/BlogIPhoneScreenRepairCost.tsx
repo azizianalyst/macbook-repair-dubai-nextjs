@@ -2,13 +2,14 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { IPHONE_SCREEN_PRICES } from "@/content/screen-pricing";
 
 export default function BlogIPhoneScreenRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Screen Repair Cost Dubai 2026 - Every Model"
-      seoDescription="Full iPhone screen repair price list for Dubai 2026. From AED 179 (iPhone 6) to AED 1,400 (17 Pro Max). OLED vs LCD, Apple Store comparison, what's included."
+      seoDescription="iPhone screen repair guide for Dubai 2026. Every model from iPhone 6 to 17 Pro Max. OLED vs LCD, Apple Store comparison, what's included. WhatsApp us for today's price."
       path="/blog/iphone-screen-repair-cost-dubai-2026"
       wide
       toc={[
@@ -24,8 +25,8 @@ export default function BlogIPhoneScreenRepairCost() {
       ]}
       category="Cost guide · iPhone"
       h1="iPhone Screen Repair Cost in Dubai 2026 - Every Model"
-      hook="iPhone screens crack. The price to fix one ranges from AED 179 to AED 1,400 in Dubai depending on your model - here is the full breakdown for every iPhone Apple has shipped since 2014."
-      quickAnswer="iPhone screen repair in Dubai costs AED 179-1,400 in April 2026. Older LCD models (6 to 8 Plus) are AED 179-500. OLED models from iPhone X onward are AED 600-1,400. Most repairs are same-day with a 3-month written warranty."
+      hook="iPhone screens crack. What it costs to fix one in Dubai depends on your model - here is the full breakdown for every iPhone Apple has shipped since 2014, and how to get an exact price on WhatsApp in minutes."
+      quickAnswer="iPhone screen repair in Dubai depends on your model. Older LCD models (6 to 8 Plus) are the cheapest; OLED models from iPhone X onward cost more. Most repairs are same-day with a 3-month written warranty. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Usman", role: "Senior iPhone screen technician" }}
       datePublished="2026-04-25"
       dateModified="2026-06-16"
@@ -35,29 +36,27 @@ export default function BlogIPhoneScreenRepairCost() {
         <>
           <h2 id="price-list">iPhone Screen Repair Cost Dubai. The full iPhone screen repair price list - April 2026 Dubai</h2>
           <p>
-            Below is every iPhone we currently service. Prices include the screen part, labour,
-            calibration, and a 3-month written warranty. No diagnostic fee.
+            Below is every iPhone we currently service. Every repair includes the screen part, labour,
+            calibration, and a 3-month written warranty. No diagnostic fee. Message us on WhatsApp for
+            today's exact price on your model.
           </p>
           <BlogPriceTable
-            caption="iPhone screen repair pricing - MacBook Repair Dubai, April 2026"
+            caption="iPhone screen repair - MacBook Repair Dubai, models we service"
+            headers={["Model", "Our price", "Notes"]}
             rows={IPHONE_SCREEN_PRICES.map((r) => ({
               model: r.model,
-              ours: `AED ${r.price.toLocaleString()}`,
-              apple: `AED ${r.apple_price.toLocaleString()}`,
+              ours: "Price on request",
               note: r.note,
             }))}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing from{" "}
-            <a href="https://support.apple.com/iphone/repair/screen-replacement" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
-              support.apple.com/iphone/repair
-            </a>{" "}
-            converted from USD list to AED on 22 April 2026. Apple Store UAE pricing varies slightly.
+            <PriceCTA message="Hi, I need a price for an iPhone screen repair in Dubai. My model is:" /> for
+            today's exact price on your specific iPhone.
           </p>
 
           <h2 id="why-costs-vary">Why iPhone screen repair costs vary so much</h2>
           <p>
-            Three factors drive the AED 1,050 spread between the cheapest (iPhone 6) and most
+            Three factors drive the wide gap between the cheapest (iPhone 6) and most
             expensive (17 Pro Max) screens. First is <strong>panel technology</strong> - LCD
             panels are mass-produced commodities; OLED panels (introduced on iPhone X in 2017) are
             single-source from Samsung Display or LG Display and cost three to five times more at
@@ -87,9 +86,9 @@ export default function BlogIPhoneScreenRepairCost() {
             <li><strong>OLED iPhones:</strong> X, XS, XS Max, 11 Pro/Pro Max, every iPhone from 12 onward.</li>
           </ul>
           <p>
-            For repair pricing this means: if you have an older LCD iPhone (6, 7, 8, XR, 11), you
-            are in the AED 179-600 zone. If you have any OLED model, AED 600+ is the floor. The
-            cheap "fits any iPhone" panels you see online for AED 150 are LCDs being sold as OLED
+            For repair pricing this means: older LCD iPhones (6, 7, 8, XR, 11) sit at the cheaper end,
+            while any OLED model costs more - message us for the exact figure on your model. Beware the
+            cheap "fits any iPhone" panels you see online: those are LCDs being sold as OLED
             replacements - they fit, they light up, but the colours are washed out, the touch is
             laggy, and Face ID often fails.
           </p>
@@ -102,8 +101,8 @@ export default function BlogIPhoneScreenRepairCost() {
             <li>
               <strong>Genuine Apple panel</strong> (Apple-supplied, "service stock"). Available
               for iPhone 12 onward through Apple's Independent Repair Provider channels.
-              Adds AED 200-500 to the prices above. Required if you want True Tone to keep working
-              automatically without re-pairing.
+              Costs more than our default panel - message us for the exact difference. Required if
+              you want True Tone to keep working automatically without re-pairing.
             </li>
             <li>
               <strong>Quality OEM-equivalent</strong> (same Samsung/LG/BOE panel, third-party
@@ -112,7 +111,7 @@ export default function BlogIPhoneScreenRepairCost() {
             </li>
             <li>
               <strong>Aftermarket</strong> - we don't sell these. They look fine in the shop and
-              fail within 6 months. Avoid the AED 150 phone-souk repairs.
+              fail within 6 months. Avoid the suspiciously cheap phone-souk repairs.
             </li>
           </ol>
 
@@ -140,24 +139,24 @@ export default function BlogIPhoneScreenRepairCost() {
             caption="iPhone 17 Pro Max screen repair - comparison"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price", ours: `AED ${(IPHONE_SCREEN_PRICES.find((r) => r.model.includes("17 Pro Max"))?.price ?? 1400).toLocaleString()}`, apple: "AED 1,899" },
+              { model: "Price", ours: "Price on request (WhatsApp)", apple: "Full retail" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days (parts via DXB)" },
               { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You travel to Dubai Mall / Mall of Emirates" },
               { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
               { model: "Diagnostic fee",   ours: "Free",      apple: "Free if covered by AppleCare+, otherwise included in repair quote" },
-              { model: "Genuine Apple part", ours: "On request (+AED 179)", apple: "Always" },
+              { model: "Genuine Apple part", ours: "On request", apple: "Always" },
             ]}
           />
 
           <h2 id="diy-repair">DIY iPhone screen repair - should you?</h2>
           <p>
-            Honest answer: no, unless you genuinely enjoy small-electronics work and have AED 200
-            of tools already. The risk is not the screen install - it's the four things around it:
+            Honest answer: no, unless you genuinely enjoy small-electronics work and already own the
+            proper tools. The risk is not the screen install - it's the four things around it:
             disconnecting the battery without shorting it, transferring the original Face ID flex
             without micro-tearing it (Face ID dies if you tear it), peeling old adhesive without
             cracking the frame, and re-sealing the perimeter so the next rainstorm doesn't kill the
-            board. We've fixed dozens of botched DIY jobs where the customer paid AED 200 for a
-            kit and ended up paying us AED 800 to undo it. If you're set on DIY, watch a full
+            board. We've fixed dozens of botched DIY jobs where the customer bought a cheap kit and
+            ended up paying us far more to undo the damage. If you're set on DIY, watch a full
             iFixit teardown for your specific model first.
           </p>
 
@@ -186,11 +185,11 @@ export default function BlogIPhoneScreenRepairCost() {
         },
         {
           q: "Will I get the 'unable to verify display' warning on my iPhone after repair?",
-          a: "If you choose a quality OEM-equivalent panel: yes, Settings will show a 'non-genuine display' notice. Functionality is identical, including True Tone. If you choose a genuine Apple panel (+AED 350) we calibrate it through Apple's System Configuration tool and you get no notice.",
+          a: "If you choose a quality OEM-equivalent panel: yes, Settings will show a 'non-genuine display' notice. Functionality is identical, including True Tone. If you choose a genuine Apple panel (costs a little more - message us for the exact price) we calibrate it through Apple's System Configuration tool and you get no notice.",
         },
         {
           q: "Is iPhone screen repair cheaper than buying a new phone?",
-          a: "Almost always for iPhone 11 and newer. A AED 750 screen repair on an iPhone 13 still leaves you with a phone worth AED 2,000+ on the Dubai used market. A new iPhone 17 starts at AED 3,599. The numbers only fail for very old phones (iPhone 6/7) where the phone is worth less than the repair.",
+          a: "Almost always for iPhone 11 and newer. A screen repair on an iPhone 13 costs a fraction of what the phone is still worth on the Dubai used market, and far less than a brand-new iPhone 17. The maths only fail for very old phones (iPhone 6/7) where the phone is worth less than the repair. Message us for the exact repair price on your model.",
         },
         {
           q: "Do you give a warranty on screen repairs?",

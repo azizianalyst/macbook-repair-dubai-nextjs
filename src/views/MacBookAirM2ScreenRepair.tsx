@@ -7,8 +7,8 @@ export default function MacBookAirM2ScreenRepair() {
       path="/macbook-air-m2-screen-repair-dubai"
       chip="M2"
       years="2022–2024"
-      seoTitle="MacBook Air M2 Screen Repair Dubai — From AED 600"
-      seoDescription="MacBook Air M2 screen repair Dubai from AED 600. Liquid Retina 13-inch and 15-inch, True Tone, P3. Same-day service. Genuine Apple panels available. Call 055 741 3706."
+      seoTitle="MacBook Air M2 Screen Repair Dubai — Same-Day Service"
+      seoDescription="MacBook Air M2 screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. Same-day service. Genuine Apple panels available. WhatsApp for today's price."
       h1="MacBook Air M2 Screen Repair Dubai"
       eyebrow="M2 Air Liquid Retina specialist · Dubai Media City · Same-day"
       displayType="Liquid Retina"
@@ -16,12 +16,12 @@ export default function MacBookAirM2ScreenRepair() {
       trueTone={true}
       p3={true}
       brightness="500 nits"
-      heroAnswer="MacBook Air M2 screen repair costs AED 600 for the 13-inch and AED 650 for the 15-inch at MacBook Repair Dubai. The M2 Air introduced Liquid Retina with True Tone and P3 wide colour — a step up from the M1's IPS Retina. Turnaround is same-day for both sizes. We use A-grade Liquid Retina panels that match the full resolution and brightness of the original. True Tone is preserved when genuine Apple panels are fitted."
+      heroAnswer="MacBook Air M2 screen repair covers both the 13-inch and 15-inch at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your size. The M2 Air introduced Liquid Retina with True Tone and P3 wide colour — a step up from the M1's IPS Retina. Turnaround is same-day for both sizes. We use A-grade Liquid Retina panels that match the full resolution and brightness of the original. True Tone is preserved when genuine Apple panels are fitted."
       chipUniquePoints={[
         "The MacBook Air M2 (2022–2024) was the first Air to feature a Liquid Retina display with True Tone and P3 wide colour gamut. The 13-inch grew from 13.3 inches (M1) to 13.6 inches with a new notch design housing the FaceTime HD camera.",
         "Liquid Retina on the M2 Air uses an IPS LCD backplane with local dimming — it is not OLED or mini-LED. This matters for repair: Liquid Retina panels require True Tone calibration data transfer to maintain True Tone function after replacement.",
         "The 15-inch MacBook Air arrived with the M2 generation in 2023 — the first 15-inch Air ever. It uses a 2880x1864 Liquid Retina at the same 500 nit brightness as the 13-inch. Both sizes are stocked at MacBook Repair Dubai for same-day repair.",
-        "True Tone on the M2 Air reads ambient light via a sensor near the webcam and adjusts colour temperature automatically. An aftermarket screen without the calibration chip disables True Tone. Genuine Apple panels (available on request at an additional AED 150–200) keep True Tone fully active.",
+        "True Tone on the M2 Air reads ambient light via a sensor near the webcam and adjusts colour temperature automatically. An aftermarket screen without the calibration chip disables True Tone. Genuine Apple panels (available on request) keep True Tone fully active — message us on WhatsApp for the exact price.",
         "The M2 Air introduced a new unified enclosure design — thinner at the screen assembly than M1, with the display cable routing tightly through a redesigned hinge. Hinge cable stress is the leading cause of M2 Air display issues at 2–3 years of use.",
       ]}
       prices={[
@@ -43,7 +43,7 @@ export default function MacBookAirM2ScreenRepair() {
       faults={[
         {
           title: "Cracked Liquid Retina panel",
-          body: "The M2 Air uses a fully bonded glass-and-LCD assembly. No glass-only repair is available. Full Liquid Retina panel replacement at AED 600 (13-inch) or AED 650 (15-inch). Both sizes same-day.",
+          body: "The M2 Air uses a fully bonded glass-and-LCD assembly. No glass-only repair is available. Full Liquid Retina panel replacement for the 13-inch or 15-inch — both sizes same-day. Message us on WhatsApp for today's exact price on your size.",
         },
         {
           title: "Horizontal or vertical lines on the display",

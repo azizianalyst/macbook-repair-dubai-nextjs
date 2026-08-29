@@ -46,7 +46,7 @@ const PARENT_HREF = "/macbook-air-repair-dubai";
 
 const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[] = [
   { Icon: Monitor,         title: "Screen Repair",        href: "/macbook-screen-repair-dubai",        body: "Cracked or flickering Liquid Retina display? We replace panels same day for all Air models, Intel through M5." },
-  { Icon: BatteryCharging, title: "Battery Replacement",  href: "/macbook-battery-replacement-dubai",  body: "Swollen battery, rapid drain, or heat issues? We restore full capacity with OEM-grade cells. AED 450 same day." },
+  { Icon: BatteryCharging, title: "Battery Replacement",  href: "/macbook-battery-replacement-dubai",  body: "Swollen battery, rapid drain, or heat issues? We restore full capacity with OEM-grade cells, same day. Message us on WhatsApp for today's price." },
   { Icon: Keyboard,        title: "Keyboard Repair",      href: "/macbook-keyboard-repair-dubai",      body: "Butterfly (Intel 2018-2019) or scissor (2020 onwards): stuck keys, double-typing, or full top-case replacement." },
   { Icon: Droplets,        title: "Water Damage Repair",  href: "/macbook-water-damage-repair-dubai",  body: "Liquid spill? Power off immediately. Our board-level technicians dry, clean, and restore water-damaged MacBook Airs." },
   { Icon: PlugZap,         title: "Not Charging Fix",     href: "/macbook-charging-port-repair-dubai", body: "USB-C or MagSafe 2 not charging? We diagnose the port, cable, or charging IC and get your Air powering up again." },
@@ -61,7 +61,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 
 const PROCESS = [
   { Icon: Search,      title: "Free diagnosis",   body: "Drop in, ship, or book a free pickup. We diagnose hardware and software at no charge and report back before any work starts." },
-  { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent AED quote before any work begins. No surprises, no hidden add-ons." },
+  { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent, fixed quote before any work begins. No surprises, no hidden add-ons." },
   { Icon: Wrench,      title: "Expert repair",     body: "Your MacBook Air is repaired by a specialist with 21 years on Apple hardware, using OEM-grade parts." },
   { Icon: ShieldCheck, title: "Quality check",     body: "Every repair passes a full function test: battery cycle, display calibration, keyboard scan, ports — all verified before handover." },
 ];

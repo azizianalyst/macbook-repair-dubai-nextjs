@@ -9,12 +9,12 @@ export default function BlogMacStudioOverheating() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Studio Overheating or Loud Fan in Dubai? Fixes 2026"
-      seoDescription="Mac Studio overheating or fan loud in Dubai? Dust, airflow and 35°C heat explained. Thermal service from AED 350."
+      seoDescription="Mac Studio overheating or fan loud in Dubai? Dust, airflow and 35°C heat explained. Free diagnosis, same-day thermal service. Message us for a quote."
       path="/blog/mac-studio-overheating-dubai"
       wide
       category="Fix guide · Mac Studio"
       h1="Mac Studio Overheating or Loud Fan in Dubai? Causes and Fixes"
-      hook="A Mac Studio running hot with loud fans in Dubai is usually a dust-clogged intake or sustained heavy workload, and a thermal service starts from AED 350 at our Media City workshop."
+      hook="A Mac Studio running hot with loud fans in Dubai is usually a dust-clogged intake or sustained heavy workload, and a thermal service at our Media City workshop starts with a free diagnosis — message us on WhatsApp for a quote on your model."
       quickAnswer="Mac Studio uses a dual-fan thermal system that ramps up under sustained pro workloads. Loud fans or heat are usually caused by dust blocking the bottom intake, a blocked exhaust, ambient Dubai heat above 35°C, or a fan fault. Check Activity Monitor and ensure the bottom vent has clearance first."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -198,11 +198,11 @@ export default function BlogMacStudioOverheating() {
             caption="Mac Studio overheating repair pricing in Dubai. June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "Dust clean + fan service", ours: "AED 350", apple: "AED 600+" },
-              { model: "Fan replacement", ours: "AED 450", apple: "AED 900+" },
-              { model: "Full thermal service", ours: "AED 550", apple: "AED 1,100+" },
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 250+" },
-              { model: "Logic board repair (severe)", ours: "AED 700", apple: "AED 1,600+" },
+              { model: "Dust clean + fan service", ours: "Price on request", apple: "Typically higher" },
+              { model: "Fan replacement", ours: "Price on request", apple: "Typically higher" },
+              { model: "Full thermal service", ours: "Price on request", apple: "Typically higher" },
+              { model: "Diagnosis", ours: "Free", apple: "Usually charged" },
+              { model: "Logic board repair (severe)", ours: "Price on request", apple: "Typically higher" },
             ]}
           />
           <p>

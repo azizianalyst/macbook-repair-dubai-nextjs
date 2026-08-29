@@ -5,7 +5,7 @@ export default function IMacDataRecovery() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Data Recovery Dubai - Fusion Drive, SSD, T2 | 055 741 3706"
-      seoDescription="iMac data recovery Dubai. Failed Fusion Drive, dead SSD, T2-encrypted recovery. From AED 500. 1-5 days. No-recovery, no-fee on most cases."
+      seoDescription="iMac data recovery Dubai. Failed Fusion Drive, dead SSD, T2-encrypted recovery. 1-5 days. No-recovery, no-fee on most cases. Message us on WhatsApp for a quote."
       path="/imac-data-recovery-dubai"
       eyebrow="iMac data recovery"
       h1="iMac Data Recovery Dubai - Fusion Drive, SSD, T2"
@@ -54,7 +54,7 @@ export default function IMacDataRecovery() {
         { q: "What does 'no recovery, no fee' mean?", a: "On standard logical jobs (Fusion Drive splits, deleted files, corrupted volumes), if we can't recover your data you don't pay. Physical clean-room work is quoted separately because the parts and lab time cost regardless." },
         { q: "How likely am I to get my data back?", a: "Logical Fusion Drive failures: usually 90%+ recovery. SSD electronic failure: 50-70%. T2-encrypted iMac with dead logic board: very low - we'll tell you before charging." },
         { q: "Do you keep a copy of my data?", a: "No. Recovery is delivered to your drive, our working clone is wiped in front of you. Privacy is non-negotiable for personal photos and business data." },
-        { q: "How much does it cost?", a: "From AED 500 for straightforward logical recovery on a healthy-but-corrupt drive. Physical clean-room work runs AED 2,500-6,000 depending on damage. We quote in writing before starting." },
+        { q: "How much does it cost?", a: "It depends on the type of failure - straightforward logical recovery on a healthy-but-corrupt drive costs a lot less than physical clean-room work, which varies with the damage. Message us on WhatsApp with your iMac model and what happened and we'll quote in writing before starting." },
         { q: "Can you recover from a 2018+ iMac with a dead logic board?", a: "Sometimes - depends on whether the T2 chip itself survived. We test for free. If the T2 is dead, recovery is generally impossible because the encryption key dies with it. We won't take your money for impossible work." },
         { q: "Should I keep trying to start the iMac at home?", a: "No. Every boot risks more damage. Power it down, bring it in untouched. The first attempt has the highest success rate." },
       ]}

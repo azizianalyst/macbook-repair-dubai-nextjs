@@ -7,7 +7,7 @@ export default function BlogMacBookProScreenCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Screen Replacement Cost Dubai: 2026 Price Guide"
-      seoDescription="MacBook Pro screen replacement cost dubai from AED 750 to AED 1,400. Full breakdown by model, M1 to M5 and Intel, vs Apple Store. Same-day service available."
+      seoDescription="MacBook Pro screen replacement cost in Dubai, broken down by model, M1 to M5 and Intel, vs Apple Store. Message us on WhatsApp for your exact price. Same-day service."
       path="/blog/macbook-pro-screen-replacement-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProScreenCost() {
       ]}
       category="Cost guide · MacBook Pro"
       h1="MacBook Pro Screen Replacement Cost Dubai: What You'll Pay by Model"
-      hook="MacBook Pro screen replacement in Dubai costs AED 750 to AED 1,400 depending on model, with same-day service available. Here is the exact breakdown by model from Intel to M5, what affects the bill, and how to know if the screen is actually at fault."
-      quickAnswer="MacBook Pro screen replacement cost in Dubai ranges from AED 750 (Intel 13-inch) to AED 1,400 (16-inch M4/M5). The price depends on panel size, display generation (XDR vs standard Retina), and whether the full lid assembly is needed. Apple Store quotes run AED 1,200 to AED 2,400 for the same job. Same-day service is available in Dubai for drop-off before 11am."
+      hook="MacBook Pro screen replacement in Dubai varies by model, with same-day service available. Here is the breakdown by model from Intel to M5, what affects the price, and how to know if the screen is actually at fault. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro screen replacement cost in Dubai depends on panel size, display generation (XDR vs standard Retina), and whether the full lid assembly is needed. We are typically well below the equivalent Apple Store quote for the same job. Message us on WhatsApp with your model for an exact price. Same-day service is available in Dubai for drop-off before 11am."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -89,8 +89,9 @@ export default function BlogMacBookProScreenCost() {
 
           <h2 id="diagnostic">Step 3: How do I tell if it is the screen or the GPU causing display issues?</h2>
           <p>
-            This distinction matters a lot for pricing. A screen replacement costs AED 750-1,400.
-            A GPU or logic board repair is a different job.
+            This distinction matters a lot for pricing. A screen replacement and a GPU or logic
+            board repair are very different jobs. Message us on WhatsApp with your symptom and model
+            for the exact price.
           </p>
           <BlogPriceTable
             caption="MacBook Pro display symptom diagnosis guide"
@@ -118,7 +119,7 @@ export default function BlogMacBookProScreenCost() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Panel only</strong>: the glass-panel bonded unit, without the lid housing or hinges. This is what most Dubai shops replace and covers 90% of screen failures</li>
             <li><strong>Full lid assembly</strong>: includes housing, hinges, and antenna cables. Needed when the lid casing is bent, or when the hinge has torn the display cable anchor</li>
-            <li><strong>Cable only (Flexgate)</strong>: some 2016-2019 Intel models need just the display cable replaced, not the panel itself, saving AED 200-300</li>
+            <li><strong>Cable only (Flexgate)</strong>: some 2016-2019 Intel models need just the display cable replaced, not the panel itself, which is significantly cheaper than a full panel</li>
             <li><strong>Backlight board</strong>: on Intel models, the backlight driver is sometimes separate and can be replaced at board level for less than a full panel</li>
           </ul>
           <p>
@@ -191,19 +192,21 @@ export default function BlogMacBookProScreenCost() {
           </p>
           <BlogPriceTable
             caption="MacBook Pro screen replacement pricing Dubai. June 2026"
+            headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro 13″ Intel (2016-2020)", ours: "AED 750", apple: "AED 1,200+", note: "IPS Retina panel, same-day" },
-              { model: "MacBook Pro 13″ M1 / M2", ours: "AED 850", apple: "AED 1,500+", note: "Retina panel, same-day" },
-              { model: "MacBook Pro 14″ M1/M2/M3", ours: "AED 1,100", apple: "AED 1,800+", note: "Liquid Retina XDR, mini-LED" },
-              { model: "MacBook Pro 14″ M4 / M5", ours: "AED 1,200", apple: "AED 2,000+", note: "Latest XDR panel, 1-2 day" },
-              { model: "MacBook Pro 16″ M1/M2/M3", ours: "AED 1,300", apple: "AED 2,200+", note: "Liquid Retina XDR, 16-inch" },
-              { model: "MacBook Pro 16″ M4 / M5", ours: "AED 1,400", apple: "AED 2,400+", note: "Largest XDR panel, 1-2 day" },
+              { model: "MacBook Pro 13″ Intel (2016-2020)", ours: "Price on request", apple: "Price on request", note: "IPS Retina panel, same-day" },
+              { model: "MacBook Pro 13″ M1 / M2", ours: "Price on request", apple: "Price on request", note: "Retina panel, same-day" },
+              { model: "MacBook Pro 14″ M1/M2/M3", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, mini-LED" },
+              { model: "MacBook Pro 14″ M4 / M5", ours: "Price on request", apple: "Price on request", note: "Latest XDR panel, 1-2 day" },
+              { model: "MacBook Pro 16″ M1/M2/M3", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 16-inch" },
+              { model: "MacBook Pro 16″ M4 / M5", ours: "Price on request", apple: "Price on request", note: "Largest XDR panel, 1-2 day" },
             ]}
           />
           <p>
-            Flexgate cable-only repairs on Intel 2016-2019 models cost AED 350-450 and take 45
-            minutes. If your 13-inch only shows the stage-light effect, it is likely the cable
-            rather than the panel and saves you AED 300-400.{" "}
+            Flexgate cable-only repairs on Intel 2016-2019 models take about 45 minutes and cost far
+            less than a full panel. If your 13-inch only shows the stage-light effect, it is likely
+            the cable rather than the panel, which saves you a lot. Message us on WhatsApp for the
+            exact price.{" "}
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               Full screen repair service details →
             </Link>
@@ -244,7 +247,7 @@ export default function BlogMacBookProScreenCost() {
         },
         {
           q: "Will a screen replacement fix my MacBook Pro display flickering?",
-          a: "It depends on the cause. If flickering worsens when you flex the lid slightly (touch the corners), it is almost always the display cable, not the panel. Cable-only repair on Intel models costs AED 350-450 instead of a full panel replacement. If flickering is constant regardless of lid position, the panel itself or the display driver is at fault and a replacement is needed.",
+          a: "It depends on the cause. If flickering worsens when you flex the lid slightly (touch the corners), it is almost always the display cable, not the panel. A cable-only repair on Intel models is much cheaper than a full panel replacement, so message us on WhatsApp for the exact price. If flickering is constant regardless of lid position, the panel itself or the display driver is at fault and a replacement is needed.",
         },
         {
           q: "How long does MacBook Pro screen replacement take in Dubai?",

@@ -2,12 +2,13 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 
 export default function BlogMacBookProM4NotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide"
-      seoDescription="MacBook Pro M4 not turning on in Dubai? Dead, black screen, or stuck on Apple logo? Force restart, deep discharge fix, and black screen vs dead diagnosis. Repair from AED 350."
+      seoDescription="MacBook Pro M4 not turning on in Dubai? Dead, black screen, or stuck on Apple logo? Force restart, deep discharge fix, and black screen vs dead diagnosis. Free diagnosis."
       path="/blog/macbook-pro-m4-not-turning-on-dubai"
       wide
       toc={[
@@ -23,7 +24,7 @@ export default function BlogMacBookProM4NotTurningOn() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Not Turning On in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M4 not turning on covers three very different situations: a completely dead machine, a black screen with the system actually running, and a system stuck mid-boot. Each has a different fix. Only one requires hardware repair. Most M4 turn-on failures in Dubai are software or deep discharge issues that resolve in under 10 minutes. Logic board repair starts from AED 350 if hardware is confirmed at fault."
+      hook="MacBook Pro M4 not turning on covers three very different situations: a completely dead machine, a black screen with the system actually running, and a system stuck mid-boot. Each has a different fix. Only one requires hardware repair. Most M4 turn-on failures in Dubai are software or deep discharge issues that resolve in under 10 minutes. If hardware is confirmed at fault, message us on WhatsApp for today's exact repair price on your model."
       quickAnswer="MacBook Pro M4 not turning on: hold the power button for 10 seconds to force restart. If no response, plug into a known-good charger and wait 30 minutes before pressing power: a fully discharged M4 needs charge before the boot sequence starts. If the M4 makes startup sounds, Touch ID works, or the fan runs, but the screen is black, connect an external monitor to confirm it is a display fault, not a dead system."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -137,15 +138,19 @@ export default function BlogMacBookProM4NotTurningOn() {
 
           <h2 id="repair-cost">MacBook Pro M4 not turning on: repair cost in Dubai</h2>
           <BlogPriceTable
-            caption="MacBook Pro M4 startup fault repair pricing. June 2026"
+            caption="MacBook Pro M4 startup fault repairs. June 2026"
+            headers={["Repair", "Price", "Notes"]}
             rows={[
-              { model: "Battery replacement (deep discharge / dead battery)", ours: "AED 600-650", apple: "AED 999-1,099", note: "Most common fix for M4 not turning on" },
-              { model: "OLED display panel (black screen, M4 is running)", ours: "AED 700-850", apple: "AED 1,399-1,699", note: "If external monitor confirms M4 is on" },
-              { model: "Charging port / MagSafe board repair", ours: "AED 350", apple: "AED 650+", note: "M4 not charging, so not starting" },
-              { model: "Logic board fault (power management)", ours: "AED 600-1,200", apple: "Logic board replacement AED 3,000+", note: "Component-level repair" },
-              { model: "Diagnostic", ours: "Free", apple: "AED 250", note: "Confirm exact fault before repair quote" },
+              { model: "Battery replacement (deep discharge / dead battery)", ours: "Price on request", note: "Most common fix for M4 not turning on" },
+              { model: "OLED display panel (black screen, M4 is running)", ours: "Price on request", note: "If external monitor confirms M4 is on" },
+              { model: "Charging port / MagSafe board repair", ours: "Price on request", note: "M4 not charging, so not starting" },
+              { model: "Logic board fault (power management)", ours: "Price on request", note: "Component-level repair" },
+              { model: "Diagnostic", ours: "Free", note: "Confirm exact fault before repair quote" },
             ]}
           />
+          <p>
+            <PriceCTA compact message="Hi, price for MacBook Pro M4 not turning on repair in Dubai?" />
+          </p>
 
           <h2 id="when-board">When does MacBook Pro M4 not turning on mean a logic board fault?</h2>
           <ul className="list-disc list-inside space-y-xs">
@@ -182,7 +187,7 @@ export default function BlogMacBookProM4NotTurningOn() {
         },
         {
           q: "How much does MacBook Pro M4 not turning on repair cost in Dubai?",
-          a: "It depends on the fault. Battery replacement (the most common cause) costs AED 600 (14-inch) or AED 650 (16-inch). OLED display fault costs AED 700-850. Charging port repair costs AED 350. Logic board fault (rarer) costs AED 600-1,200 for component-level repair. Free diagnosis to confirm exact cause before any repair quote.",
+          a: "It depends on the fault. The most common cause is a dead battery, followed by an OLED display fault, a charging port repair, or a rarer logic board fault handled at component level. We offer free diagnosis to confirm the exact cause first, then message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can I restore MacBook Pro M4 that completely won't respond?",

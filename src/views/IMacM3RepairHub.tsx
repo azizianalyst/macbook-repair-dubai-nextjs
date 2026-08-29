@@ -30,11 +30,11 @@ export default function IMacM3RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac M3 Repair Dubai - 24-inch 2023 Retina 4.5K"
-      seoDescription="iMac M3 repair Dubai. 24-inch 4.5K Retina iMac with M3 chip (late 2023). Screen from AED 850, USB hub board from AED 400. Check AppleCare+ before booking. Call 055 741 3706."
+      seoDescription="iMac M3 repair Dubai. 24-inch 4.5K Retina iMac with M3 chip (late 2023). Screen, USB hub board and logic board repairs. Free diagnosis. Check AppleCare+ before booking. Call 055 741 3706."
       path="/imac-m3-repair-dubai"
       eyebrow="Apple M3 · 24-inch · Retina 4.5K · 2023"
       h1="iMac M3 Repair Dubai - 24-inch 2023"
-      subtitle="The M3 iMac (late 2023) brought the 3nm chip to the 24-inch. At 2 to 3 years old, it may still be under AppleCare+. Check before booking. Screen repair from AED 850."
+      subtitle="The M3 iMac (late 2023) brought the 3nm chip to the 24-inch. At 2 to 3 years old, it may still be under AppleCare+. Check before booking. Message us on WhatsApp for today's screen repair price."
       startingPrice={400}
       timeline="Same day (diagnosis) · 2-3 days (screen)"
       whatsappPrefill="Hi, I have an iMac M3 (24-inch 2023) and need help with:"
@@ -47,11 +47,11 @@ export default function IMacM3RepairHub() {
       serviceName="iMac M3 Repair Dubai"
       intro={intro}
       whatWeFix={[
-        "Screen and display repair - 4.5K Retina 24-inch from AED 850",
-        "Logic board diagnosis and repair - from AED 1,000",
-        "USB hub board replacement - rear port failures from AED 400",
-        "Speaker replacement - humidity-related degradation from AED 500",
-        "Power supply board replacement - from AED 600",
+        "Screen and display repair - 4.5K Retina 24-inch",
+        "Logic board diagnosis and repair",
+        "USB hub board replacement - rear port failures",
+        "Speaker replacement - humidity-related degradation",
+        "Power supply board replacement",
         "Full diagnostic - hardware vs software fault isolation",
         "AppleCare+ expiry check - we advise on warranty status before any repair",
       ]}
@@ -91,7 +91,7 @@ export default function IMacM3RepairHub() {
         },
         {
           q: "How much does M3 iMac screen repair cost in Dubai?",
-          a: "Screen repair on the M3 iMac starts from AED 600 for display connection issues and from AED 850 for a panel replacement. The final price depends on the specific fault identified at diagnosis. We provide a written quote before any work begins.",
+          a: "The price depends on whether it is a display connection issue or a full panel replacement, and on the specific fault identified at diagnosis. Message us on WhatsApp with your model for today's exact price. We provide a written quote before any work begins.",
         },
       ]}
       reviewNames={["Ahmad Khalid", "Priya Nair"]}

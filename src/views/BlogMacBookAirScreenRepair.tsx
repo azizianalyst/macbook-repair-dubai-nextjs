@@ -7,7 +7,7 @@ export default function BlogMacBookAirScreenRepair() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Screen Repair Cost Dubai 2026: Prices by Model"
-      seoDescription="MacBook Air screen repair cost Dubai by model. M1 from AED 500, M2 from AED 600, M3 from AED 700. Free diagnosis, same-day repair."
+      seoDescription="MacBook Air screen repair in Dubai by model (M1, M2, M3, M4, Intel). Free diagnosis, same-day repair. Message us on WhatsApp for today's exact price."
       path="/blog/macbook-air-screen-repair-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookAirScreenRepair() {
       ]}
       category="Cost guide · MacBook Air"
       h1="MacBook Air Screen Repair Cost Dubai: Prices for Every Model"
-      hook="MacBook Air screen replacement in Dubai costs from AED 500 for M1 models to AED 750 for M3, and most repairs are completed same day at our Concord Tower workshop."
-      quickAnswer="MacBook Air screen repair cost in Dubai starts from AED 500 for M1/Intel models and rises to AED 750 for M3/M4 with Liquid Retina display panels. A free diagnosis confirms the exact fault: panel crack, Flexgate cable, or backlight IC. Most screen repairs finish same day."
+      hook="MacBook Air screen replacement in Dubai covers every model from M1 to M4 and Intel, and most repairs are completed same day at our Concord Tower workshop. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Air screen repair in Dubai covers M1, M2, M3, M4 and Intel models with genuine-grade Liquid Retina display panels. A free diagnosis confirms the exact fault: panel crack, Flexgate cable, or backlight IC. Most screen repairs finish same day. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -67,15 +67,15 @@ export default function BlogMacBookAirScreenRepair() {
           <ol className="list-decimal list-inside space-y-xs">
             <li>
               <strong>Torch test positive (faint image visible)</strong>: backlight IC fault, not a
-              panel crack. Repair cost is AED 350-450 for backlight IC work.
+              panel crack. This is a cheaper repair than a full panel; message us on WhatsApp for the exact price.
             </li>
             <li>
               <strong>Spreading ink blot or black zone</strong>: physical LCD crack. The panel needs
-              replacement. Cost: AED 500-720 depending on model.
+              replacement, with the exact price depending on model.
             </li>
             <li>
               <strong>Lines or flickering that change when you adjust the hinge angle</strong>: flex
-              cable or connector fault. Cost: AED 300-400 for cable replacement alone.
+              cable or connector fault. Cable replacement alone is more affordable than a full panel; message us for the exact price.
             </li>
             <li>
               <strong>No image at all, machine boots normally to an external display</strong>: could
@@ -244,27 +244,27 @@ export default function BlogMacBookAirScreenRepair() {
 
           <h2 id="replacement-cost">MacBook Air screen repair cost Dubai by model</h2>
           <p>
-            All prices below include the Liquid Retina display assembly, labour, camera module
+            Every screen repair below includes the Liquid Retina display assembly, labour, camera module
             transfer where applicable, True Tone calibration, and a 90-day written warranty on
-            parts and labour. No diagnostic fee. Prices are for our Concord Tower, Dubai Media
-            City workshop as of June 2026.
+            parts and labour. No diagnostic fee. All work is done at our Concord Tower, Dubai Media
+            City workshop. Message us on WhatsApp for today's exact price on your model.
           </p>
           <BlogPriceTable
-            caption="MacBook Air screen repair pricing, MacBook Repair Dubai, June 2026"
+            caption="MacBook Air screen repair, MacBook Repair Dubai, Concord Tower, Dubai Media City"
             headers={["Repair / Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: 'MacBook Air M1 13"', ours: "AED 500", apple: "AED 800+" },
-              { model: 'MacBook Air M2 13"', ours: "AED 600", apple: "AED 900+" },
-              { model: 'MacBook Air M3 13"', ours: "AED 700", apple: "AED 1,100+" },
-              { model: 'MacBook Air M4 13"', ours: "AED 720", apple: "AED 1,200+" },
-              { model: 'MacBook Air Intel 13"', ours: "AED 500", apple: "AED 750+" },
+              { model: 'MacBook Air M1 13"', ours: "Price on request", apple: "Price on request" },
+              { model: 'MacBook Air M2 13"', ours: "Price on request", apple: "Price on request" },
+              { model: 'MacBook Air M3 13"', ours: "Price on request", apple: "Price on request" },
+              { model: 'MacBook Air M4 13"', ours: "Price on request", apple: "Price on request" },
+              { model: 'MacBook Air Intel 13"', ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>
             Apple Store and authorised service provider pricing is based on out-of-warranty screen
-            service rates, converted from USD to AED. If you have AppleCare+, the screen repair
-            service fee is AED 367 (the USD 99 deductible): use it. Our pricing is competitive for
-            machines outside AppleCare+ coverage.
+            service rates. If you have AppleCare+, the screen repair service fee (Apple's fixed
+            accidental-damage deductible) applies: use it. Our pricing is competitive for
+            machines outside AppleCare+ coverage. Message us on WhatsApp for our exact price on your model.
           </p>
           <p>
             Same-day service is available on all 13-inch Air models (M1 through M4) if you arrive
@@ -335,7 +335,7 @@ export default function BlogMacBookAirScreenRepair() {
         },
         {
           q: "Will screen replacement fix lines and flickering on my MacBook Air?",
-          a: "It depends on the cause. Lines that change when you adjust the hinge angle are caused by the flex cable, not the panel: cable replacement at AED 300-400 will fix it. Lines that are static regardless of hinge position and also appear on an external monitor are a GPU fault: screen replacement will not help. Lines that are static and only on the built-in display point to a panel fault: replacement will fix it. A free 10-minute diagnostic at our workshop identifies which category your machine falls into before any repair is authorised.",
+          a: "It depends on the cause. Lines that change when you adjust the hinge angle are caused by the flex cable, not the panel: a cable replacement will fix it and costs less than a full panel. Lines that are static regardless of hinge position and also appear on an external monitor are a GPU fault: screen replacement will not help. Lines that are static and only on the built-in display point to a panel fault: replacement will fix it. A free 10-minute diagnostic at our workshop identifies which category your machine falls into before any repair is authorised. Message us on WhatsApp for the exact price once we confirm the fault.",
         },
         {
           q: "How long does MacBook Air screen repair take in Dubai?",

@@ -19,7 +19,7 @@ const MILESTONES = [
 ];
 
 const COMPARE = [
-  { row: "Free diagnosis",            us: true,  apple: false, note: "Apple charges AED 200 to look at it" },
+  { row: "Free diagnosis",            us: true,  apple: false, note: "Apple charges just to look at it" },
   { row: "No fix, no charge",         us: true,  apple: false },
   { row: "Same-day service",          us: true,  apple: false, note: "Apple Store: 5-10 working days" },
   { row: "Component-level board work", us: true,  apple: false, note: "Apple swaps the whole board - much pricier" },

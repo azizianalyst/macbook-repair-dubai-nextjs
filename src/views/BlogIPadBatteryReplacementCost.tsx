@@ -6,7 +6,7 @@ export default function BlogIPadBatteryReplacementCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Battery Replacement Cost Dubai 2026 - All Models"
-      seoDescription="iPad battery replacement Dubai 2026: AED 300 (older models) to AED 550 (iPad Pro M5). When to replace, 80% rule, same-day service, 3-month warranty."
+      seoDescription="iPad battery replacement Dubai 2026, all models. When to replace, 80% rule, same-day service, 3-month warranty. WhatsApp us for today's exact price."
       path="/blog/ipad-battery-replacement-cost-dubai"
       wide
       toc={[
@@ -19,8 +19,8 @@ export default function BlogIPadBatteryReplacementCost() {
       ]}
       category="Cost guide · iPad"
       h1="iPad Battery Replacement Cost Dubai. All Models 2026"
-      hook="iPad batteries in Dubai cost AED 300 to AED 550 to replace depending on the model. Here is the full breakdown so you can plan before you call."
-      quickAnswer="iPad battery replacement in Dubai costs AED 300–550 in 2026. Older iPads (9th gen, mini 5–6, Air 4–5) are AED 300–380. iPad Air M2/M3 and iPad mini 7 are AED 400–450. iPad Pro models are AED 450–550. Same-day on most models, 3-month written warranty."
+      hook="iPad battery replacement price in Dubai depends on the model, from entry iPads up to the latest iPad Pro. Here is the full breakdown so you can plan before you call, and message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPad battery replacement in Dubai is a same-day service on most models, with a 3-month written warranty. Price depends on the model: older iPads (9th gen, mini 5–6, Air 4–5) are the most affordable, iPad Air M2/M3 and iPad mini 7 sit in the middle, and iPad Pro models are the most premium. Message us on WhatsApp for the exact price on your iPad."
       author={{ name: "Shafiq", role: "Senior iPad battery technician" }}
       datePublished="2026-06-09"
       dateModified="2026-06-09"
@@ -49,27 +49,27 @@ export default function BlogIPadBatteryReplacementCost() {
           <BlogPriceTable
             caption="iPad battery replacement pricing. MacBook Repair Dubai, June 2026"
             rows={[
-              { model: "iPad 9th gen (2021)",               ours: "AED 300", apple: "AED 459", note: "Lightning, home button" },
-              { model: "iPad 10th gen (2022)",              ours: "AED 320", apple: "AED 459", note: "USB-C, no home button" },
-              { model: "iPad 11th gen (2025)",              ours: "AED 350", apple: "AED 499", note: "A16 chip, USB-C" },
-              { model: "iPad mini 5 (2019)",                ours: "AED 300", apple: "AED 459", note: "Lightning, home button" },
-              { model: "iPad mini 6 (2021)",                ours: "AED 320", apple: "AED 459", note: "USB-C, Touch ID in button" },
-              { model: "iPad mini 7 (2024)",                ours: "AED 380", apple: "AED 499", note: "A17 Pro, larger cell" },
-              { model: "iPad Air 4 (2020)",                 ours: "AED 350", apple: "AED 499", note: "USB-C, Touch ID in button" },
-              { model: "iPad Air 5 (2022)",                 ours: "AED 350", apple: "AED 499", note: "M1 chip" },
-              { model: "iPad Air M2 11″ (2024)",            ours: "AED 400", apple: "AED 549", note: "Larger cell, high-density chemistry" },
-              { model: "iPad Air M2 13″ (2024)",            ours: "AED 450", apple: "AED 599", note: "Largest Air battery to date" },
-              { model: "iPad Air M3 11″ / 13″ (2025)",     ours: "AED 420–470", apple: "AED 569–619", note: "Same cells as M2 generation" },
-              { model: "iPad Pro 11″ M1 / M2 (2021–2022)", ours: "AED 450", apple: "AED 599", note: "Adhesive-heavy teardown" },
-              { model: "iPad Pro 11″ M4 (2024)",           ours: "AED 500", apple: "AED 649", note: "Ultra-thin chassis, careful pry" },
-              { model: "iPad Pro 11″ M5 (2025)",           ours: "AED 520", apple: "AED 679", note: "Thinnest iPad, most delicate" },
-              { model: "iPad Pro 12.9″ M1 / M2 (2021–2022)", ours: "AED 500", apple: "AED 649", note: "Larger cell, mini-LED display" },
-              { model: "iPad Pro 13″ M4 (2024)",           ours: "AED 530", apple: "AED 679", note: "OLED display, thin chassis" },
-              { model: "iPad Pro 13″ M5 (2025)",           ours: "AED 550", apple: "AED 699", note: "Largest cell, premium chemistry" },
+              { model: "iPad 9th gen (2021)",               ours: "Price on request", apple: "Price on request", note: "Lightning, home button" },
+              { model: "iPad 10th gen (2022)",              ours: "Price on request", apple: "Price on request", note: "USB-C, no home button" },
+              { model: "iPad 11th gen (2025)",              ours: "Price on request", apple: "Price on request", note: "A16 chip, USB-C" },
+              { model: "iPad mini 5 (2019)",                ours: "Price on request", apple: "Price on request", note: "Lightning, home button" },
+              { model: "iPad mini 6 (2021)",                ours: "Price on request", apple: "Price on request", note: "USB-C, Touch ID in button" },
+              { model: "iPad mini 7 (2024)",                ours: "Price on request", apple: "Price on request", note: "A17 Pro, larger cell" },
+              { model: "iPad Air 4 (2020)",                 ours: "Price on request", apple: "Price on request", note: "USB-C, Touch ID in button" },
+              { model: "iPad Air 5 (2022)",                 ours: "Price on request", apple: "Price on request", note: "M1 chip" },
+              { model: "iPad Air M2 11″ (2024)",            ours: "Price on request", apple: "Price on request", note: "Larger cell, high-density chemistry" },
+              { model: "iPad Air M2 13″ (2024)",            ours: "Price on request", apple: "Price on request", note: "Largest Air battery to date" },
+              { model: "iPad Air M3 11″ / 13″ (2025)",     ours: "Price on request", apple: "Price on request", note: "Same cells as M2 generation" },
+              { model: "iPad Pro 11″ M1 / M2 (2021–2022)", ours: "Price on request", apple: "Price on request", note: "Adhesive-heavy teardown" },
+              { model: "iPad Pro 11″ M4 (2024)",           ours: "Price on request", apple: "Price on request", note: "Ultra-thin chassis, careful pry" },
+              { model: "iPad Pro 11″ M5 (2025)",           ours: "Price on request", apple: "Price on request", note: "Thinnest iPad, most delicate" },
+              { model: "iPad Pro 12.9″ M1 / M2 (2021–2022)", ours: "Price on request", apple: "Price on request", note: "Larger cell, mini-LED display" },
+              { model: "iPad Pro 13″ M4 (2024)",           ours: "Price on request", apple: "Price on request", note: "OLED display, thin chassis" },
+              { model: "iPad Pro 13″ M5 (2025)",           ours: "Price on request", apple: "Price on request", note: "Largest cell, premium chemistry" },
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple pricing estimated from USD list converted to AED, June 2026.
+            Message us on WhatsApp for today's exact price on your iPad model.
           </p>
 
           <h2 id="when-to-replace">When should you replace your iPad battery?</h2>

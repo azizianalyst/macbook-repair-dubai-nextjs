@@ -14,7 +14,7 @@ export default function BlogMacBookTouchBarFix() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Touch Bar Not Working? Fix Guide (2026)"
-      seoDescription="Touch Bar frozen, dim, or dead? 5 software fixes including the Terminal restart trick, plus AED 600 hardware repair in Dubai and why Apple dropped it."
+      seoDescription="Touch Bar frozen, dim, or dead? 5 software fixes including the Terminal restart trick, plus same-day hardware repair in Dubai and why Apple dropped it."
       path="/blog/macbook-touch-bar-not-working"
       wide
       toc={[
@@ -30,8 +30,8 @@ export default function BlogMacBookTouchBarFix() {
       ]}
       category="Problem solving · MacBook"
       h1="MacBook Touch Bar Not Working? Fix Guide"
-      hook="Touch Bar issues affect every MacBook Pro from 2016 to 2022. Most are software (free fix in 60 seconds). The hardware fixes start at AED 600."
-      quickAnswer="MacBook Touch Bar frozen or dead? Try in order: open Terminal and run 'sudo pkill Touch Bar agent' (fixes 60% of cases), force restart (hold power 10 seconds), reset SMC on Intel T2 models, update macOS, then test in Safe Mode. If it's hardware, replacement is AED 600 same-day. Affects 2016-2022 MacBook Pro."
+      hook="Touch Bar issues affect every MacBook Pro from 2016 to 2022. Most are software (free fix in 60 seconds). If it's hardware, message us on WhatsApp for a same-day quote."
+      quickAnswer="MacBook Touch Bar frozen or dead? Try in order: open Terminal and run 'sudo pkill Touch Bar agent' (fixes 60% of cases), force restart (hold power 10 seconds), reset SMC on Intel T2 models, update macOS, then test in Safe Mode. If it's hardware, replacement is same-day — message us on WhatsApp for a quote. Affects 2016-2022 MacBook Pro."
       author={{ name: "Usman", role: "Senior MacBook Pro repair technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -142,16 +142,17 @@ export default function BlogMacBookTouchBarFix() {
 
           <h2 id="repair-cost-dubai">Touch Bar repair cost in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Touch Bar OLED + digitiser assembly replacement:</strong> AED 600 same-day</li>
-            <li><strong>Flex cable reseat (if disconnected):</strong> AED 250 same-day</li>
-            <li><strong>Logic board Touch Bar power regulator repair:</strong> AED 800-1,000 (1-2 days)</li>
+            <li><strong>Touch Bar OLED + digitiser assembly replacement:</strong> same-day — message us for your quote</li>
+            <li><strong>Flex cable reseat (if disconnected):</strong> same-day — message us for your quote</li>
+            <li><strong>Logic board Touch Bar power regulator repair:</strong> 1-2 days — message us for your quote</li>
             <li><strong>Free diagnostic, no charge if we can't fix it</strong></li>
-            <li><strong>Apple Store comparison:</strong> AED 1,799 (replaces entire top-case)</li>
+            <li><strong>Whole top-case route (what Apple does):</strong> we replace just the Touch Bar strip instead — message us to compare</li>
           </ul>
           <p>
             Apple's official service for Touch Bar issues is whole top-case replacement (palmrest
-            + keyboard + Touch Bar + battery). We can replace just the Touch Bar strip - saving
-            AED 1,200+ versus Apple Store.
+            + keyboard + Touch Bar + battery). We can replace just the Touch Bar strip - a far
+            cheaper route than the Apple Store. Message us on WhatsApp for today's exact price on
+            your model.
           </p>
 
           <h2 id="why-apple-removed">Why Apple removed Touch Bar from new MacBooks</h2>
@@ -170,8 +171,8 @@ export default function BlogMacBookTouchBarFix() {
               launched, "no Touch Bar" was a feature in customers' eyes.
             </li>
             <li>
-              <strong>Cost.</strong> The Touch Bar OLED, controller, and software stack added
-              roughly USD 30 to the BOM. Removing it freed budget for the M-chip thermal solution.
+              <strong>Cost.</strong> The Touch Bar OLED, controller, and software stack added a
+              meaningful amount to the bill of materials. Removing it freed budget for the M-chip thermal solution.
             </li>
           </ol>
           <p>
@@ -202,7 +203,7 @@ export default function BlogMacBookTouchBarFix() {
         },
         {
           q: "Is it worth repairing a 2017 MacBook Pro just for the Touch Bar?",
-          a: "Honest answer: depends on the rest of the machine. If the battery, screen, and keyboard are still good, AED 600 to fix the Touch Bar makes sense. If the MacBook also has Flexgate, butterfly keyboard issues, or weak battery, total repair cost may exceed the resale value - at which point upgrading to a 14″ M-series Pro is better value.",
+          a: "Honest answer: depends on the rest of the machine. If the battery, screen, and keyboard are still good, fixing the Touch Bar makes sense - message us on WhatsApp for a quote on your model. If the MacBook also has Flexgate, butterfly keyboard issues, or weak battery, total repair cost may exceed the resale value - at which point upgrading to a 14″ M-series Pro is better value.",
         },
       ]}
       relatedLinks={[

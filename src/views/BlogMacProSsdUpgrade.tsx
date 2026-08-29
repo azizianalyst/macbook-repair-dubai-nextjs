@@ -219,20 +219,21 @@ export default function BlogMacProSsdUpgrade() {
           <section id="cost">
             <h2 id="cost">Mac Pro SSD upgrade Dubai repair cost in Dubai</h2>
             <p>
-              All prices below are for our Media City workshop, in AED, with data migration included rather
+              Every upgrade below is done at our Media City workshop, with data migration included rather
               than charged on top. There is no diagnostic fee. Turnaround is same-day for most upgrades when
               the Mac Pro is dropped off in the morning and the module or card is in stock, with the T2
-              restore added on the same visit where a module is involved.
+              restore added on the same visit where a module is involved. Message us on WhatsApp with your
+              model for today's exact price on your machine.
             </p>
             <BlogPriceTable
-              caption="Mac Pro SSD upgrade pricing at our Dubai workshop, June 2026"
+              caption="Mac Pro SSD upgrade services at our Dubai workshop, June 2026"
               headers={["Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "PCIe NVMe SSD fitting", ours: "AED 350", apple: "AED 800+" },
-                { model: "Apple SSD module pair fitting", ours: "AED 450", apple: "AED 1,000+" },
-                { model: "System restore after SSD swap", ours: "AED 200", apple: "AED 400+" },
-                { model: "Data migration", ours: "AED 0", apple: "AED 300+" },
-                { model: "Diagnosis", ours: "AED 0", apple: "AED 300+" },
+                { model: "PCIe NVMe SSD fitting", ours: "Price on request", apple: "Price on request" },
+                { model: "Apple SSD module pair fitting", ours: "Price on request", apple: "Price on request" },
+                { model: "System restore after SSD swap", ours: "Price on request", apple: "Price on request" },
+                { model: "Data migration", ours: "Free", apple: "Price on request" },
+                { model: "Diagnosis", ours: "Free", apple: "Price on request" },
               ]}
             />
             <p>

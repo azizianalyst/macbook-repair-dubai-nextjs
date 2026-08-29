@@ -67,7 +67,7 @@ const FINDERS: Finder[] = [
     label: "Something's broken",
     icon: Wrench,
     hub: "/blog/fixes",
-    cta: { label: "MacBook Screen Repair from AED 600", href: "/macbook-screen-repair-dubai" },
+    cta: { label: "MacBook Screen Repair - get a quote", href: "/macbook-screen-repair-dubai" },
     postSlugs: [
       "/blog/macbook-not-turning-on-fix-guide",
       "/blog/macbook-black-screen-fix",

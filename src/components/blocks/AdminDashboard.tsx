@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   LinkIcon, LineChart, Inbox, DollarSign, Building2, Star, FileText, Newspaper, Image as ImageIcon,
   FolderTree, Settings, ListTree, MapPin, Target, Gauge, Rocket, AlertTriangle, CheckCircle2,
-  TrendingUp, Tag, ChevronRight,
+  TrendingUp, Tag, ChevronRight, Globe, MessageSquare,
 } from "lucide-react";
 import PageTrendChart from "@/components/blocks/PageTrendChart";
 
@@ -139,6 +139,8 @@ const LAUNCH: { href: string; label: string; Icon: typeof Newspaper }[] = [
   { href: "/admin/locations", label: "Locations", Icon: MapPin },
   { href: "/admin/leads", label: "Leads", Icon: Inbox },
   { href: "/admin/reviews", label: "Reviews", Icon: Star },
+  { href: "/admin/gbp-posts", label: "GBP Posts", Icon: Globe },
+  { href: "/admin/gbp-reviews", label: "GBP Reviews", Icon: MessageSquare },
   { href: "/admin/business", label: "Business / NAP", Icon: Building2 },
   { href: "/admin/menus", label: "Menus", Icon: ListTree },
   { href: "/admin/settings", label: "Settings", Icon: Settings },

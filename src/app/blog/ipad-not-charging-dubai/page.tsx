@@ -3,11 +3,11 @@ import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogIPadNotCharging";
 
 export const metadata: Metadata = {
-  title: "iPad Not Charging? 5 Fixes and Repair Costs Dubai 2026",
-  description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Repair from AED 150 at our workshop.",
+  title: "iPad Not Charging? 5 Fixes and Repair Guide Dubai 2026",
+  description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Message us on WhatsApp for a free diagnosis and quote.",
   openGraph: {
-    title: "iPad Not Charging? 5 Fixes and Repair Costs Dubai 2026",
-    description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Repair from AED 150 at our workshop.",
+    title: "iPad Not Charging? 5 Fixes and Repair Guide Dubai 2026",
+    description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Message us on WhatsApp for a free diagnosis and quote.",
     url: "https://macbook-repair-dubai.ae/blog/ipad-not-charging-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "iPad Not Charging? 5 Fixes and Repair Costs Dubai 2026",
-    description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Repair from AED 150 at our workshop.",
+    title: "iPad Not Charging? 5 Fixes and Repair Guide Dubai 2026",
+    description: "iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Message us on WhatsApp for a free diagnosis and quote.",
     images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
   },
   alternates: {

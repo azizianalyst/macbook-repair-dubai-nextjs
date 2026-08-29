@@ -7,7 +7,7 @@ export default function BlogMacBookAirM2Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M2 Common Problems Dubai: 13-inch & 15-inch Fix Guide 2026"
-      seoDescription="MacBook Air M2 problems in Dubai: SSD degradation, overheating, hinge crack, MagSafe 3. All M2 Air faults fixed from AED 350. Free diagnosis, same-day service."
+      seoDescription="MacBook Air M2 problems in Dubai: SSD degradation, overheating, hinge crack, MagSafe 3. All M2 Air faults fixed. Free diagnosis, same-day service, WhatsApp for pricing."
       path="/blog/macbook-air-m2-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirM2Problems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M2 Common Problems in Dubai? 13-inch and 15-inch Fix Guide 2026"
       hook="MacBook Air M2 introduced a completely new chassis design in 2022 and brought the first 15-inch Air in 2023. Two years into widespread use in Dubai, a clear set of recurring problems has emerged. Here is what we see most often and how to fix it."
-      quickAnswer="Most common MacBook Air M2 problems in Dubai: SSD write amplification causing early degradation on 256GB base model (known Apple issue), battery swelling from Dubai car heat exposure, hinge stress cracking on thin new chassis (open one-handed repeatedly), MagSafe 3 metal dust buildup, overheating under sustained load (M2 runs hotter than M3/M4 in same chassis), and WiFi drops after lid close on early Ventura builds. Most are fixable. Repair from AED 350."
+      quickAnswer="Most common MacBook Air M2 problems in Dubai: SSD write amplification causing early degradation on 256GB base model (known Apple issue), battery swelling from Dubai car heat exposure, hinge stress cracking on thin new chassis (open one-handed repeatedly), MagSafe 3 metal dust buildup, overheating under sustained load (M2 runs hotter than M3/M4 in same chassis), and WiFi drops after lid close on early Ventura builds. Most are fixable. Message us on WhatsApp for today's exact repair price on your M2 Air."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -131,9 +131,10 @@ export default function BlogMacBookAirM2Problems() {
             it in a hot car. Bring it in the same day.
           </p>
           <p>
-            Battery swelling repair for the M2 Air is <strong>AED 450 for the 13-inch</strong> and{" "}
-            <strong>AED 500 for the 15-inch</strong>. Turnaround is same-day if dropped off before
-            11am. We use OEM-equivalent cells with the same chemistry and capacity as the original.{" "}
+            Battery swelling repair for the M2 Air covers both the 13-inch and 15-inch models.
+            Turnaround is same-day if dropped off before 11am. We use OEM-equivalent cells with the
+            same chemistry and capacity as the original. Message us on WhatsApp for today's exact
+            price on your model.{" "}
             <Link
               to="/macbook-air-repair-dubai"
               className="text-accent font-semibold hover:underline"
@@ -200,9 +201,9 @@ export default function BlogMacBookAirM2Problems() {
             heat to maintain adhesive integrity at the hinge.
           </p>
           <p>
-            Hinge repair costs <strong>AED 350-500</strong> depending on damage extent. Early cracks
-            (hairline only) are at the lower end. Cracks with loose hinge pivot need more involved
-            repair.
+            Hinge repair cost depends on damage extent. Early cracks (hairline only) are cheaper to
+            fix; cracks with a loose hinge pivot need more involved repair. Message us on WhatsApp
+            for an exact price once we have seen the damage.
           </p>
 
           <h2 id="magsafe">MacBook Air M2 MagSafe 3 charging issues</h2>
@@ -231,8 +232,8 @@ export default function BlogMacBookAirM2Problems() {
             the fault is deeper and needs board-level diagnosis.
           </p>
           <p>
-            MagSafe 3 port repair costs <strong>AED 350</strong>. Cable replacement is AED 120-150
-            if the cable itself is damaged rather than the port.
+            We repair the MagSafe 3 port, and can replace the cable itself if that is what is
+            damaged rather than the port. Message us on WhatsApp for the exact price on your M2 Air.
           </p>
 
           <h2 id="dubai-specific">Dubai heat effects on MacBook Air M2</h2>
@@ -322,18 +323,20 @@ export default function BlogMacBookAirM2Problems() {
 
           <h2 id="repair-cost">MacBook Air M2 repair cost in Dubai 2026</h2>
           <p>
-            Current pricing for the most common M2 Air repairs we carry out. All prices include
-            parts and labour. Same-day turnaround for battery and screen.
+            The most common M2 Air repairs we carry out. Every repair includes parts and labour, with
+            same-day turnaround for battery and screen. Message us on WhatsApp for today's exact price
+            on your model.
           </p>
           <BlogPriceTable
-            caption="MacBook Air M2 repair pricing Dubai. June 2026"
+            caption="MacBook Air M2 repairs Dubai. June 2026"
+            headers={["Repair", "Price", "Notes"]}
             rows={[
-              { model: "Battery: M2 Air 13\" (A2681)", ours: "AED 450", apple: "AED 899", note: "Same-day, OEM-equivalent cell" },
-              { model: "Battery: M2 Air 15\" (A2941)", ours: "AED 500", apple: "AED 999", note: "Same-day, OEM-equivalent cell" },
-              { model: "Screen: M2 Air 13\" (A2681)", ours: "AED 600", apple: "AED 1,099", note: "Same-day if in stock" },
-              { model: "Screen: M2 Air 15\" (A2941)", ours: "AED 700", apple: "AED 1,199", note: "1-2 days" },
-              { model: "Hinge repair", ours: "AED 350", apple: "AED 700", note: "Varies by damage extent" },
-              { model: "SSD health assessment", ours: "Free", apple: "AED 150", note: "Written report provided" },
+              { model: "Battery: M2 Air 13\" (A2681)", ours: "Price on request", apple: "Same-day, OEM-equivalent cell" },
+              { model: "Battery: M2 Air 15\" (A2941)", ours: "Price on request", apple: "Same-day, OEM-equivalent cell" },
+              { model: "Screen: M2 Air 13\" (A2681)", ours: "Price on request", apple: "Same-day if in stock" },
+              { model: "Screen: M2 Air 15\" (A2941)", ours: "Price on request", apple: "1-2 days" },
+              { model: "Hinge repair", ours: "Price on request", apple: "Varies by damage extent" },
+              { model: "SSD health assessment", ours: "Free", apple: "Written report provided" },
             ]}
           />
           <p>
@@ -355,7 +358,7 @@ export default function BlogMacBookAirM2Problems() {
         },
         {
           q: "Why is my MacBook Air M2 trackpad not clicking?",
-          a: "The battery underneath is most likely swollen and pressing against the trackpad mechanism from below, lifting it off its click pivot. Stop using the MacBook immediately. The trackpad itself is not damaged. Battery replacement (AED 450 for the 13-inch) restores normal trackpad function completely. Do not charge the MacBook or leave it in a hot environment until the battery has been replaced.",
+          a: "The battery underneath is most likely swollen and pressing against the trackpad mechanism from below, lifting it off its click pivot. Stop using the MacBook immediately. The trackpad itself is not damaged. A battery replacement restores normal trackpad function completely. Do not charge the MacBook or leave it in a hot environment until the battery has been replaced. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Does MacBook Air M2 overheat more than M1?",
@@ -363,15 +366,15 @@ export default function BlogMacBookAirM2Problems() {
         },
         {
           q: "How do I prevent MacBook Air M2 hinge cracking?",
-          a: "Always open the MacBook Air M2 with both hands, holding both sides of the base. Never pull the lid open from one corner. In Dubai specifically, avoid leaving the MacBook in parked cars or hot environments, as heat cycling weakens the chassis adhesive at the hinge join. Hairline cracks caught early are repaired for AED 350. Let it develop into a loose hinge and the repair cost rises.",
+          a: "Always open the MacBook Air M2 with both hands, holding both sides of the base. Never pull the lid open from one corner. In Dubai specifically, avoid leaving the MacBook in parked cars or hot environments, as heat cycling weakens the chassis adhesive at the hinge join. Hairline cracks caught early are cheaper to repair; let it develop into a loose hinge and the repair cost rises. Message us on WhatsApp for the exact price.",
         },
         {
           q: "Can MacBook Air M2 MagSafe port be repaired?",
-          a: "Yes. MagSafe 3 port repair costs AED 350. Before booking, test USB-C charging on both ports to confirm the fault is in the MagSafe port and not the charging IC on the logic board. If USB-C charges normally and only MagSafe fails, the port or cable is the issue. Also try wiping the MagSafe port and cable end with a dry cloth to clear metallic dust buildup, which is common in Dubai.",
+          a: "Yes, we repair the MagSafe 3 port. Before booking, test USB-C charging on both ports to confirm the fault is in the MagSafe port and not the charging IC on the logic board. If USB-C charges normally and only MagSafe fails, the port or cable is the issue. Also try wiping the MagSafe port and cable end with a dry cloth to clear metallic dust buildup, which is common in Dubai. Message us on WhatsApp for the exact repair price.",
         },
         {
           q: "Is MacBook Air M2 worth repairing in 2026?",
-          a: "Yes for screen and battery replacements. The M2 Air receives macOS updates until at least 2028 and runs all current apps at full speed. AED 450-600 for a battery or screen repair versus AED 4,499 or more for a new MacBook Air is clear value. SSD repair is also worth it if the rest of the machine is in good condition. Board-level repair is case-by-case and we provide a written quote before starting.",
+          a: "Yes for screen and battery replacements. The M2 Air receives macOS updates until at least 2028 and runs all current apps at full speed. A battery or screen repair costs a fraction of a new MacBook Air, so it is clear value. SSD repair is also worth it if the rest of the machine is in good condition. Board-level repair is case-by-case. We provide a written quote before starting, so message us on WhatsApp for the exact price on your model.",
         },
       ]}
       relatedLinks={[

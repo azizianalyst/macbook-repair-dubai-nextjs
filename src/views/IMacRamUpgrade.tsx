@@ -5,7 +5,7 @@ export default function IMacRamUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac RAM Upgrade Dubai - 27-inch Intel up to 128GB | 055 741 3706"
-      seoDescription="iMac RAM upgrade Dubai. 27-inch Intel iMac up to 128GB via back panel. 24-inch M-series RAM is soldered - we'll tell you honestly. AED 400 labor. Same day."
+      seoDescription="iMac RAM upgrade Dubai. 27-inch Intel iMac up to 128GB via back panel. 24-inch M-series RAM is soldered - we'll tell you honestly. Same day. Message us on WhatsApp for a price."
       path="/imac-ram-upgrade-dubai"
       eyebrow="iMac RAM upgrade"
       h1="iMac RAM Upgrade Dubai - 27-inch Intel up to 128GB"

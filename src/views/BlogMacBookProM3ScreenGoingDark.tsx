@@ -7,7 +7,7 @@ export default function BlogMacBookProM3ScreenGoingDark() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M3 Screen Goes Dark Randomly Dubai 2026: Fix Guide"
-      seoDescription="MacBook Pro M3 screen going dark randomly in Dubai? Display blacks out during use, auto-brightness dimming, or display power fault on mini-LED. Step-by-step fix. Repair from AED 500."
+      seoDescription="MacBook Pro M3 screen going dark randomly in Dubai? Display blacks out during use, auto-brightness dimming, or display power fault on mini-LED. Step-by-step fix. Message us for a quote."
       path="/blog/macbook-pro-m3-screen-going-dark-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM3ScreenGoingDark() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M3 Screen Goes Dark Randomly in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M3 screen going dark without warning is one of the most reported M3 complaints on Apple Community since Sonoma 14.0. In 80% of cases the cause is auto-brightness reacting to ambient light, thermal dimming, or a display driver bug fixed in Sonoma 14.3. Hardware faults account for the remaining cases. Screen repair starts from AED 500 in Dubai if the panel is the fault."
+      hook="MacBook Pro M3 screen going dark without warning is one of the most reported M3 complaints on Apple Community since Sonoma 14.0. In 80% of cases the cause is auto-brightness reacting to ambient light, thermal dimming, or a display driver bug fixed in Sonoma 14.3. Hardware faults account for the remaining cases. If the panel is the fault, message us on WhatsApp for today's exact screen repair price on your M3 in Dubai."
       quickAnswer="MacBook Pro M3 screen going dark randomly: first disable auto-brightness (System Settings, Displays, uncheck Automatically adjust brightness) and True Tone. Check that display sleep is set to 10+ minutes not 1-2. Update to Sonoma 14.3 or later which fixed a display driver bug causing random blackouts on M3 mini-LED. If the screen goes dark only when the lid angle changes, the hinge cable is the fault."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -105,8 +105,8 @@ export default function BlogMacBookProM3ScreenGoingDark() {
               </tr>
               <tr>
                 <td>Screen replacement</td>
-                <td>AED 450-600 (Dubai)</td>
-                <td>AED 500-650 (Dubai), slightly newer parts</td>
+                <td>Price on request (Dubai)</td>
+                <td>Price on request (Dubai), slightly newer parts</td>
               </tr>
             </tbody>
           </table>
@@ -115,11 +115,11 @@ export default function BlogMacBookProM3ScreenGoingDark() {
           <BlogPriceTable
             caption="MacBook Pro M3 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "AED 500", apple: "AED 1,099+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "AED 650", apple: "AED 1,299+", note: "Full panel, 12-month warranty, same-day" },
-              { model: "Backlight repair only (M3, if driver circuit fault)", ours: "AED 400", apple: "Full display assembly", note: "Component-level repair if panel is undamaged" },
-              { model: "Hinge display cable (M3)", ours: "AED 200", apple: "Full display assembly", note: "If darkening correlates with lid angle" },
-              { model: "Display diagnostic", ours: "Free", apple: "AED 250", note: "Confirm panel vs cable vs software fault" },
+              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 12-month warranty, same-day" },
+              { model: "Backlight repair only (M3, if driver circuit fault)", ours: "Price on request", apple: "Full display assembly", note: "Component-level repair if panel is undamaged" },
+              { model: "Hinge display cable (M3)", ours: "Price on request", apple: "Full display assembly", note: "If darkening correlates with lid angle" },
+              { model: "Display diagnostic", ours: "Free", apple: "Apple Store price", note: "Confirm panel vs cable vs software fault" },
             ]}
           />
 
@@ -156,7 +156,7 @@ export default function BlogMacBookProM3ScreenGoingDark() {
         },
         {
           q: "How much does MacBook Pro M3 screen repair cost in Dubai?",
-          a: "MacBook Pro M3 14-inch screen replacement costs AED 500 at our Dubai workshop. The 16-inch costs AED 650. These are the mini-LED LCD panels, which are less expensive than the M4 OLED screens. Backlight-only repair costs AED 400 if the LCD panel is undamaged. Free diagnosis before any repair.",
+          a: "We replace the MacBook Pro M3 14-inch and 16-inch mini-LED screens at our Dubai workshop, and can do a backlight-only repair if the LCD panel is undamaged. Pricing depends on your exact model, so message us on WhatsApp for today's exact quote. Free diagnosis before any repair.",
         },
         {
           q: "How long does MacBook Pro M3 screen replacement take in Dubai?",

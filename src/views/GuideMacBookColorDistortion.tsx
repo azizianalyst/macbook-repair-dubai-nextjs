@@ -125,11 +125,11 @@ export default function GuideMacBookColorDistortion() {
         },
         {
           q: "How much does MacBook screen replacement cost in Dubai?",
-          a: "MacBook screen replacement in Dubai starts from AED 500 for older models and goes up to AED 1,800 for newer Retina and Liquid Retina displays. We offer a free diagnostic to confirm the fault before quoting a price.",
+          a: "The price depends on your exact model, older displays cost less than newer Retina and Liquid Retina panels. We offer a free diagnostic to confirm the fault first, then message us on WhatsApp for today's exact price on your model.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "Retina and standard display replacement, same-day service from AED 500." },
+        { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "Retina and standard display replacement, same-day service, message us for your model's price." },
         { label: "MacBook full diagnostic Dubai", href: "/macbook-full-diagnostic-dubai", description: "Free assessment to confirm whether your display issue is hardware or software." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro repairs, Intel to M4 Pro/Max, with written warranty." },
       ]}

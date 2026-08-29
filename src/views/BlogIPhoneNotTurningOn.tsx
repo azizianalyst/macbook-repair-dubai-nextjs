@@ -6,7 +6,7 @@ export default function BlogIPhoneNotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Not Turning On? 7 Fixes to Try in Dubai 2026"
-      seoDescription="iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Repair from AED 99."
+      seoDescription="iPhone not turning on in Dubai? 7 fixes from force restart to DFU restore. Dead battery, board fault, or iOS crash. Free diagnosis, WhatsApp for a quote."
       path="/blog/iphone-not-turning-on-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogIPhoneNotTurningOn() {
       ]}
       category="Fix guide · iPhone"
       h1="iPhone Not Turning On in Dubai? 7 Fixes to Try Right Now"
-      hook="An iPhone that will not turn on is usually a dead battery, a frozen iOS crash, or a logic board fault, and our Dubai workshop diagnoses every model free with repair starting from AED 99."
+      hook="An iPhone that will not turn on is usually a dead battery, a frozen iOS crash, or a logic board fault, and our Dubai workshop diagnoses every model free — message us on WhatsApp for a repair quote on your model."
       quickAnswer="iPhone not turning on is most often caused by a fully depleted battery (needs 30-minute charge before the Apple logo appears), iOS software crash (force restart: Side + Vol Down held 10 seconds), or a hardware fault on the logic board. Do not panic before trying a force restart and a different charging cable."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -37,7 +37,7 @@ export default function BlogIPhoneNotTurningOn() {
         },
         {
           q: "Does Dubai heat (35 degrees C and above) permanently damage the iPhone battery?",
-          a: "Sustained exposure to ambient temperatures above 35 degrees C accelerates lithium-ion degradation by roughly 20 to 30 percent per year compared to a temperate climate. A battery that would last 2.5 years in Europe may show significant capacity loss after 18 months in Dubai summer. Heat does not cause immediate failure but shortens the total cycle life of the cell. Keeping the phone out of direct sunlight in a car (parked cars in Dubai reach 70 to 80 degrees C internally) is the single most important habit. A battery below 80 percent maximum capacity is eligible for our replacement service at AED 99.",
+          a: "Sustained exposure to ambient temperatures above 35 degrees C accelerates lithium-ion degradation by roughly 20 to 30 percent per year compared to a temperate climate. A battery that would last 2.5 years in Europe may show significant capacity loss after 18 months in Dubai summer. Heat does not cause immediate failure but shortens the total cycle life of the cell. Keeping the phone out of direct sunlight in a car (parked cars in Dubai reach 70 to 80 degrees C internally) is the single most important habit. A battery below 80 percent maximum capacity is eligible for our replacement service — message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How long should an iPhone battery last, and what is Apple's own specification?",
@@ -45,7 +45,7 @@ export default function BlogIPhoneNotTurningOn() {
         },
         {
           q: "Will a DFU restore fix my specific problem if the phone is completely black?",
-          a: "A DFU (Device Firmware Update) restore fixes iOS software corruption, a failed OTA update, or a bootloader loop where the phone is stuck before the Apple logo. It does not fix hardware faults: a dead battery, a cracked logic board trace, or a failed PMIC. If your iPhone shows no response at all even when plugged into power and a Mac running iTunes or Finder, the issue is likely hardware. If it shows a connect-to-iTunes icon or a progress bar, DFU will almost certainly fix it. We do DFU restores at our workshop for AED 99, including data-loss risk assessment before we begin.",
+          a: "A DFU (Device Firmware Update) restore fixes iOS software corruption, a failed OTA update, or a bootloader loop where the phone is stuck before the Apple logo. It does not fix hardware faults: a dead battery, a cracked logic board trace, or a failed PMIC. If your iPhone shows no response at all even when plugged into power and a Mac running iTunes or Finder, the issue is likely hardware. If it shows a connect-to-iTunes icon or a progress bar, DFU will almost certainly fix it. We do DFU restores at our workshop, including data-loss risk assessment before we begin — message us on WhatsApp for the price.",
         },
         {
           q: "How long does an iPhone repair take in Dubai when it will not turn on?",
@@ -205,8 +205,9 @@ export default function BlogIPhoneNotTurningOn() {
               permanent battery degradation over time. If your iPhone is shutting off in the heat on
               a regular basis, the battery health is almost certainly below 80 percent, meaning the
               cell has less capacity and is less able to handle peak power demands from the processor.
-              Replacing the battery at AED 99 typically resolves both the heat-related shutdowns and
-              improves overall battery life significantly. Never leave an iPhone in a parked car in Dubai.
+              Replacing the battery typically resolves both the heat-related shutdowns and
+              improves overall battery life significantly — message us on WhatsApp for the exact price on your
+              model. Never leave an iPhone in a parked car in Dubai.
             </p>
           </section>
 
@@ -241,25 +242,24 @@ export default function BlogIPhoneNotTurningOn() {
           <section>
             <h2 id="replacement-cost">iPhone not turning on: repair cost Dubai</h2>
             <p>
-              Prices below are for our Media City workshop in Dubai. Diagnosis is always free. All
-              repairs include a written warranty: 3 months on battery and software, 90 days on
-              component repairs.
+              The services below are handled at our Media City workshop in Dubai. Diagnosis is always
+              free, and all repairs include a written warranty: 3 months on battery and software, 90 days
+              on component repairs. Message us on WhatsApp for today's exact price on your model.
             </p>
             <BlogPriceTable
               caption="iPhone not turning on: repair pricing - MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Battery replacement (dead)", ours: "AED 99", apple: "AED 400+" },
-                { model: "Charging port repair", ours: "AED 149", apple: "AED 450+" },
-                { model: "Software restore / DFU", ours: "AED 99", apple: "AED 300+" },
-                { model: "Logic board repair", ours: "AED 400", apple: "AED 900+" },
-                { model: "Board-level component", ours: "AED 300", apple: "AED 800+" },
+                { model: "Battery replacement (dead)", ours: "Price on request", apple: "Price on request" },
+                { model: "Charging port repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Software restore / DFU", ours: "Price on request", apple: "Price on request" },
+                { model: "Logic board repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Board-level component", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p className="text-[13px] text-text-muted mono">
-              Apple Store prices are flat-fee device replacements, not component repairs. Our prices
-              are for repair of the original device. WhatsApp 055 741 3706 for a free quote on your
-              specific model.
+              Apple Store repairs are flat-fee device replacements, not component repairs. We repair the
+              original device. WhatsApp 055 741 3706 for a free quote on your specific model.
             </p>
           </section>
 
@@ -275,8 +275,8 @@ export default function BlogIPhoneNotTurningOn() {
             </p>
             <p>
               In practice, full logic board replacement on an iPhone is rarely the right economic
-              choice. A replacement board from a donor phone or the grey market costs AED 600 to
-              1,400 depending on the model, plus AED 200 to 400 labour, and the replacement board
+              choice. A replacement board from a donor phone or the grey market is expensive on top of
+              labour, and the replacement board
               cannot be paired to your original Touch ID or Face ID sensor (Apple ties biometrics to
               a specific board at the factory). This means you lose Face ID or Touch ID functionality
               permanently. For an iPhone 11 or older, replacement may not be worth the cost versus
@@ -290,7 +290,7 @@ export default function BlogIPhoneNotTurningOn() {
               board swap. We quote every board repair after a free bench diagnosis, and we only
               recommend replacement if the board is physically destroyed beyond component-level
               repair. Most board faults that present as an iPhone not turning on are successfully
-              repaired at the micro-soldering level for AED 300 to 500.
+              repaired at the micro-soldering level — message us on WhatsApp for a quote on your specific model.
             </p>
           </section>
         </>

@@ -7,7 +7,7 @@ export default function BlogMacBookProIntelProblems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Intel Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro Intel common problems in Dubai? Butterfly keyboard failure, AMD GPU solder crack, Flexgate display cable, T2 chip issues. Expert fixes from AED 150."
+      seoDescription="MacBook Pro Intel common problems in Dubai? Butterfly keyboard failure, AMD GPU solder crack, Flexgate display cable, T2 chip issues. Expert fixes, free diagnosis."
       path="/blog/macbook-pro-intel-common-problems-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProIntelProblems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Intel Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro Intel models from 2017-2020 have well-documented design faults: butterfly keyboard dropout, AMD GPU solder failure, Flexgate display cable, and T2 chip bricking. All are repairable in Dubai. Keyboard repair from AED 150, GPU from AED 800."
-      quickAnswer="MacBook Pro Intel common problems: butterfly keyboard key dropout or no response (2016-2019 models, repair AED 150-350), AMD GPU failure causing lines or black screen (2017-2019 15-inch, AED 800-1,200 reball), Flexgate display cable fraying causing stage lighting or blackout (2016-2019, AED 300), T2 chip bridge OS faults (2019-2020, AED 400 repair). All diagnosed free in Dubai."
+      hook="MacBook Pro Intel models from 2017-2020 have well-documented design faults: butterfly keyboard dropout, AMD GPU solder failure, Flexgate display cable, and T2 chip bricking. All are repairable in Dubai. Message us on WhatsApp for today's exact repair price on your model."
+      quickAnswer="MacBook Pro Intel common problems: butterfly keyboard key dropout or no response (2016-2019 models), AMD GPU failure causing lines or black screen (2017-2019 15-inch, reball), Flexgate display cable fraying causing stage lighting or blackout (2016-2019), T2 chip bridge OS faults (2019-2020). All diagnosed free in Dubai. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -55,7 +55,7 @@ export default function BlogMacBookProIntelProblems() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Key not registering</strong>: hold the MacBook at a 75-degree angle and use compressed air (two-second bursts, never sustained) across the key in three directions. This dislodges sub-0.1mm dust particles caught under the mechanism</li>
-            <li><strong>Key double-registering</strong>: same fix as above. If it persists after cleaning, the switch membrane is torn. Individual key replacement costs AED 50-100 per key</li>
+            <li><strong>Key double-registering</strong>: same fix as above. If it persists after cleaning, the switch membrane is torn. Individual key replacement is available. Message us on WhatsApp for the exact price</li>
             <li><strong>Multiple keys not working after liquid exposure</strong>: the butterfly membrane conducts moisture across multiple switches. Full top-case replacement is needed (includes keyboard, battery, trackpad as one unit)</li>
             <li><strong>Entire keyboard dead</strong>: the keyboard flex cable, not the keys, has failed. Less common but seen on 2016-2017 models at 7-9 years old</li>
           </ul>
@@ -63,10 +63,10 @@ export default function BlogMacBookProIntelProblems() {
             caption="MacBook Pro Intel butterfly keyboard repair options"
             headers={["Symptom", "Repair needed", "Cost Dubai"]}
             rows={[
-              { model: "1-2 keys not responding", ours: "Compressed air cleaning or individual key swap", apple: "AED 50-150" },
-              { model: "Multiple keys double-typing", ours: "Full keyboard replacement (keyboard only)", apple: "AED 350-500" },
-              { model: "Keyboard after liquid damage", ours: "Top case assembly (keyboard + battery + trackpad)", apple: "AED 900-1,400" },
-              { model: "Entire keyboard completely dead", ours: "Keyboard flex cable or top case", apple: "AED 350-500" },
+              { model: "1-2 keys not responding", ours: "Compressed air cleaning or individual key swap", apple: "Price on request" },
+              { model: "Multiple keys double-typing", ours: "Full keyboard replacement (keyboard only)", apple: "Price on request" },
+              { model: "Keyboard after liquid damage", ours: "Top case assembly (keyboard + battery + trackpad)", apple: "Price on request" },
+              { model: "Entire keyboard completely dead", ours: "Keyboard flex cable or top case", apple: "Price on request" },
             ]}
           />
           <p>
@@ -107,7 +107,7 @@ export default function BlogMacBookProIntelProblems() {
           </ul>
           <p>
             Apple extended the display backlight service program for some models but it has
-            largely expired. Repair involves replacing the display cable assembly, AED 300.
+            largely expired. Repair involves replacing the display cable assembly. Message us on WhatsApp for the exact price.
           </p>
 
           <h2 id="t2-chip">Step 4: How do I fix MacBook Pro T2 chip problems?</h2>
@@ -132,7 +132,7 @@ export default function BlogMacBookProIntelProblems() {
           <ul className="list-disc list-inside space-y-xs">
             <li>AMD GPU thermal cycling is the main heat-related failure: warm up, cool down, repeat 365 days per year. In Dubai this cycle is more extreme than anywhere else</li>
             <li>Battery swelling is very common on 6-9 year old Intel units in Dubai. At this age, even a healthy cell has gone through enough heat cycles that swelling risk is significant</li>
-            <li>Thermal paste on Intel MacBook Pros should have been replaced at 4-5 years. Any Intel Pro still running original TIM is thermally compromised. Repaste costs AED 150 and typically reduces fan speed and heat by 15-20°C</li>
+            <li>Thermal paste on Intel MacBook Pros should have been replaced at 4-5 years. Any Intel Pro still running original TIM is thermally compromised. A repaste typically reduces fan speed and heat by 15-20°C; message us on WhatsApp for the exact price</li>
             <li>Never use a 2016-2020 Intel MacBook Pro in direct sunlight or in a car in Dubai summer. The AMD GPU thermal stress combined with ambient heat accelerates solder failure</li>
           </ul>
 
@@ -169,12 +169,12 @@ export default function BlogMacBookProIntelProblems() {
           <BlogPriceTable
             caption="MacBook Pro Intel repair pricing. June 2026"
             rows={[
-              { model: "Butterfly keyboard repair (per key)", ours: "AED 50-150", apple: "Program expired", note: "Individual key or cleaning" },
-              { model: "Full keyboard replacement (Intel 13\")", ours: "AED 350", apple: "Program expired", note: "Keyboard only, not top case" },
-              { model: "AMD GPU reball (15\" 2017-2019)", ours: "AED 950", apple: "AED 2,500+ (logic board)", note: "Microsoldering, 48hr turnaround" },
-              { model: "Flexgate display cable repair", ours: "AED 300", apple: "AED 800+", note: "Display cable assembly" },
-              { model: "Intel screen replacement (13\")", ours: "AED 400", apple: "AED 799", note: "Retina IPS panel, same-day" },
-              { model: "Intel battery replacement", ours: "AED 550", apple: "AED 949", note: "All Intel models, same-day" },
+              { model: "Butterfly keyboard repair (per key)", ours: "Price on request", apple: "Program expired", note: "Individual key or cleaning" },
+              { model: "Full keyboard replacement (Intel 13\")", ours: "Price on request", apple: "Program expired", note: "Keyboard only, not top case" },
+              { model: "AMD GPU reball (15\" 2017-2019)", ours: "Price on request", apple: "Logic board only at Apple", note: "Microsoldering, 48hr turnaround" },
+              { model: "Flexgate display cable repair", ours: "Price on request", apple: "Price on request", note: "Display cable assembly" },
+              { model: "Intel screen replacement (13\")", ours: "Price on request", apple: "Price on request", note: "Retina IPS panel, same-day" },
+              { model: "Intel battery replacement", ours: "Price on request", apple: "Price on request", note: "All Intel models, same-day" },
             ]}
           />
           <p>
@@ -196,7 +196,7 @@ export default function BlogMacBookProIntelProblems() {
           </ul>
           <p>
             We assess whether component repair is viable before recommending full board
-            replacement. Intel board component repair from AED 800.{" "}
+            replacement. Message us on WhatsApp for the exact Intel board component repair price.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai →
             </Link>
@@ -206,19 +206,19 @@ export default function BlogMacBookProIntelProblems() {
       faqs={[
         {
           q: "Why does my MacBook Pro Intel keyboard have keys that randomly stop working?",
-          a: "Butterfly keyboard failure. One sub-0.1mm dust particle under a key is enough to prevent the switch from registering. In Dubai, fine desert dust makes this the most common Intel MacBook Pro fault we see. First try: hold the Mac at 75 degrees and use compressed air in short bursts across the key from three angles. If keys remain dead, bring it in for individual key repair starting at AED 50.",
+          a: "Butterfly keyboard failure. One sub-0.1mm dust particle under a key is enough to prevent the switch from registering. In Dubai, fine desert dust makes this the most common Intel MacBook Pro fault we see. First try: hold the Mac at 75 degrees and use compressed air in short bursts across the key from three angles. If keys remain dead, bring it in for individual key repair and message us on WhatsApp for the exact price.",
         },
         {
           q: "Does Dubai heat permanently damage MacBook Pro Intel AMD GPU?",
-          a: "Yes, and it accelerates the failure significantly. The BGA solder balls under the AMD GPU crack faster in Dubai due to the more extreme warm/cold cycles (hot car to cold AC office, repeated daily). Once cracked, the GPU produces screen lines or fails completely. The fix is GPU reball: AED 950. Most Dubai-based Intel 15-inch MacBook Pros from 2017-2019 will face this eventually.",
+          a: "Yes, and it accelerates the failure significantly. The BGA solder balls under the AMD GPU crack faster in Dubai due to the more extreme warm/cold cycles (hot car to cold AC office, repeated daily). Once cracked, the GPU produces screen lines or fails completely. The fix is GPU reball; message us on WhatsApp for the exact price. Most Dubai-based Intel 15-inch MacBook Pros from 2017-2019 will face this eventually.",
         },
         {
           q: "How long should MacBook Pro Intel battery last?",
-          a: "A new 2019 Intel 16-inch was rated for up to 11 hours. At 6-7 years old in Dubai, expect 3-6 hours if the battery hasn't been replaced. Under 3 hours on an Intel MacBook Pro means the cell is below 70% capacity and replacement is worthwhile. AED 550 for all Intel models restores original runtime.",
+          a: "A new 2019 Intel 16-inch was rated for up to 11 hours. At 6-7 years old in Dubai, expect 3-6 hours if the battery hasn't been replaced. Under 3 hours on an Intel MacBook Pro means the cell is below 70% capacity and replacement is worthwhile. A battery replacement for all Intel models restores original runtime; message us on WhatsApp for the exact price.",
         },
         {
           q: "Will MacBook Pro Intel butterfly keyboard replacement fix all key problems?",
-          a: "Yes, for mechanical failure and dust issues. Full keyboard replacement (not top-case) costs AED 350 and we use non-butterfly replacement keyswitches where compatible. If the keyboard failure is from liquid damage, the top case (keyboard + battery + trackpad together) needs replacement: AED 900-1,400 depending on model.",
+          a: "Yes, for mechanical failure and dust issues. Full keyboard replacement (not top-case) uses non-butterfly replacement keyswitches where compatible. If the keyboard failure is from liquid damage, the top case (keyboard + battery + trackpad together) needs replacement instead. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How long does MacBook Pro Intel AMD GPU reball take in Dubai?",
@@ -226,7 +226,7 @@ export default function BlogMacBookProIntelProblems() {
         },
         {
           q: "Is it worth repairing a 7-9 year old MacBook Pro Intel?",
-          a: "Depends on the fault. Battery (AED 550) and keyboard repair (AED 350) are almost always worth it. AMD GPU reball (AED 950) is worth it if the rest of the machine is healthy and you have data on it. Logic board replacement on a 2016-2017 model is rarely economical. We'll give you a free repair vs replace assessment when you bring it in.",
+          a: "Depends on the fault. Battery and keyboard repairs are almost always worth it. AMD GPU reball is worth it if the rest of the machine is healthy and you have data on it. Logic board replacement on a 2016-2017 model is rarely economical. We'll give you a free repair vs replace assessment when you bring it in; message us on WhatsApp for the exact price.",
         },
       ]}
       relatedLinks={[

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MacBook Pro M5 Wi-Fi Slow Fix Dubai 2026: MCS NSS 0 Kernel Error",
     description:
-      "M5 Wi-Fi slow in Dubai? MCS/NSS 0 rate negotiation failure, 6GHz driver bug, drops after sleep. Fix guide + repair from AED 200.",
+      "M5 Wi-Fi slow in Dubai? MCS/NSS 0 rate negotiation failure, 6GHz driver bug, drops after sleep. Fix guide + WhatsApp us for a repair quote.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m5-wifi-slow-fix-dubai",
     type: "article",
     publishedTime: "2026-06-22",

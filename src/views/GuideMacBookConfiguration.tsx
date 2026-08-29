@@ -74,9 +74,9 @@ export default function GuideMacBookConfiguration() {
             </li>
           </ul>
           <p>
-            Because it is soldered, the RAM upgrade Apple charges at purchase (roughly AED 700-900
-            to go from 8&rarr;16GB) is genuinely the cheapest it will ever be. Skipping it to save a
-            few hundred dirhams is the mistake that costs you a whole new MacBook later.
+            Because it is soldered, the RAM bump Apple charges at purchase (going from 8&rarr;16GB)
+            is genuinely the cheapest it will ever be. Skipping it to save a little up front is the
+            mistake that costs you a whole new MacBook later.
           </p>
 
           <h2>How much SSD storage? (256 vs 512 vs 1TB)</h2>

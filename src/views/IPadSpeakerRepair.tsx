@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadSpeakerRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Speaker Repair Dubai - Stereo and Quad | AED 350"
-      seoDescription="iPad speaker repair Dubai. 2-speaker iPad / mini, 4-speaker Air / Pro. Mesh clean often free. AED 350 if replacement needed. Same day."
+      seoTitle="iPad Speaker Repair Dubai - Stereo and Quad Speakers"
+      seoDescription="iPad speaker repair Dubai. 2-speaker iPad / mini, 4-speaker Air / Pro. Mesh clean often free. Message us on WhatsApp for today's price. Same day."
       path="/ipad-speaker-repair-dubai"
       eyebrow="iPad speaker repair"
       h1="iPad Speaker Repair Dubai"
-      subtitle="Crackling, muffled or one-side-dead audio. iPad and mini have 2 speakers; Air and Pro have 4. Mesh clean often free. AED 350 for replacement, 1 day."
+      subtitle="Crackling, muffled or one-side-dead audio. iPad and mini have 2 speakers; Air and Pro have 4. Mesh clean often free. Message us on WhatsApp for your price. 1 day."
       startingPrice={350}
       timeline="1 day"
       whatsappPrefill="Hi, my iPad speakers are faulty - model and which side:"
@@ -23,7 +23,7 @@ export default function IPadSpeakerRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>iPad audio comes in two configurations</strong>: standard iPad and iPad mini have two speakers (one each end), while iPad Air and iPad Pro have four-speaker landscape stereo (two each end, with iPadOS routing bass and treble dynamically depending on orientation). When one channel goes muddy or silent, the imbalance is immediately obvious. AED 350 covers any single speaker module replacement.
+            <strong>iPad audio comes in two configurations</strong>: standard iPad and iPad mini have two speakers (one each end), while iPad Air and iPad Pro have four-speaker landscape stereo (two each end, with iPadOS routing bass and treble dynamically depending on orientation). When one channel goes muddy or silent, the imbalance is immediately obvious. A single speaker module replacement is a flat, straightforward job — message us on WhatsApp for today's exact price on your model.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             First step is always free: microscope mesh inspection. Sand and dust from beach trips and dusty rooms work into the speaker grilles and dampen output. About 35% of "broken" iPad speakers in Dubai are restored by a careful clean alone - no charge.

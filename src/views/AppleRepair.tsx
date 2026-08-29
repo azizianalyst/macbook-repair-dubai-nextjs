@@ -39,9 +39,9 @@ const CROSS_DEVICE = [
 const FAMILY_DETAILS = [
   { name: "MacBook repair", href: "/", body: "MacBook is 70% of the workshop volume. Screen, battery, keyboard, trackpad, USB-C, logic board, water damage - all covered for Intel models from 2012 onward and every Apple Silicon model M1 through M5. Average turnaround on screens and batteries: same day. Logic board work: 2 to 5 days." },
   { name: "iMac repair", href: "/imac-repair-dubai", body: "iMac 21.5\", 24\", and 27\" Retina 5K screen replacement, Fusion-to-SSD upgrades, power supply repair, and fan-cleaning service. The 27\" 5K panel is rebonded with the original adhesive frame to preserve the slim bezel - 2 to 4 days for screen, same day for SSD upgrade." },
-  { name: "Mac mini, Studio & Pro repair", href: "/mac-mini-repair-dubai", body: "Mac mini logic board repair, SSD upgrades on 2014 and 2018 models, and full diagnostics on Mac Studio. Mac Pro power supply replacement and GPU module work for 2013 cylinder Pros and 2019 tower Pros. Cylinder GPU thermal failures are the single most common issue - fix runs AED 1,500." },
+  { name: "Mac mini, Studio & Pro repair", href: "/mac-mini-repair-dubai", body: "Mac mini logic board repair, SSD upgrades on 2014 and 2018 models, and full diagnostics on Mac Studio. Mac Pro power supply replacement and GPU module work for 2013 cylinder Pros and 2019 tower Pros. Cylinder GPU thermal failures are the single most common issue - message us on WhatsApp for the exact price on yours." },
   { name: "iPhone repair", href: "/iphone-repair-dubai", body: "Screen replacement on iPhone 8 through iPhone 16 Pro Max in 40 minutes. Battery replacement in 30 minutes. Back glass, charging port, water damage, and Face ID dot-projector repair available. iPhone 15 and 16 panels carry True Tone calibration when fitted with genuine Apple displays." },
-  { name: "iPad repair", href: "/ipad-repair-dubai", body: "iPad mini, Air, standard, and Pro screen replacement. The 12.9\" Pro panel runs AED 1,200 because the OLED stack is bonded directly to the chassis - no separate digitiser repair option. Battery service for older iPads runs AED 400 with a warranty of up to 12 months." },
+  { name: "iPad repair", href: "/ipad-repair-dubai", body: "iPad mini, Air, standard, and Pro screen replacement. The 12.9\" Pro panel is a bonded OLED stack fixed directly to the chassis - no separate digitiser repair option, so message us on WhatsApp for the exact price on your model. Battery service for older iPads carries a warranty of up to 12 months." },
 ];
 
 const FAQS = [
@@ -56,13 +56,13 @@ const FAQS = [
   { q: "Where exactly are you based?",
     a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Across from Media City Metro. Paid parking on-site. Open Monday to Saturday, 9 am to 10 pm. Sunday: WhatsApp answered, storefront closed." },
   { q: "Do you offer free pickup for non-MacBook devices?",
-    a: "Yes - same free pickup and delivery for iPhone and iPad across Dubai Mainland. Sharjah and Abu Dhabi pickup runs AED 100 each way." },
+    a: "Yes - same free pickup and delivery for iPhone and iPad across Dubai Mainland. Sharjah and Abu Dhabi pickup is available too - message us on WhatsApp for the each-way price." },
   { q: "Can you set up a new Apple device after repair?",
-    a: "Yes - full migration from old to new device, including macOS Migration Assistant and iPhone Quick Start. Included free with any same-day repair, AED 150 as a standalone service." },
+    a: "Yes - full migration from old to new device, including macOS Migration Assistant and iPhone Quick Start. Included free with any same-day repair, or available as a standalone service - message us on WhatsApp for the price." },
   { q: "What if my Apple ID is locked after a board repair?",
     a: "T2 and Apple Silicon devices tie the logic board to the original Apple ID. The team unlocks via Apple Support's account recovery flow when ID and proof of purchase are presented in person. Average resolution time: 5 to 14 days through Apple's workflow." },
   { q: "Do you handle data transfer between Apple devices?",
-    a: "Yes - Mac to Mac via Migration Assistant or Time Machine, iPhone to iPhone via Quick Start, iPad to iPad via iCloud or wired transfer. Standalone AED 150. Free with any concurrent repair." },
+    a: "Yes - Mac to Mac via Migration Assistant or Time Machine, iPhone to iPhone via Quick Start, iPad to iPad via iCloud or wired transfer. Free with any concurrent repair, or a standalone service - message us on WhatsApp for the price." },
   { q: "Why one specialist for all 9 device families?",
     a: "macOS, iOS, watchOS, and tvOS share the same kernel base, the same Bluetooth stack, the same iCloud sync layer, and the same Apple ID account system. A bug on the iPhone often manifests on the Mac. One technician who knows all 9 platforms diagnoses cross-device issues in one session - instead of three trips to three shops." },
 ];
@@ -130,7 +130,7 @@ export default function AppleRepair() {
         <QuickAnswer
           tone="dark"
           question="Where can I get Apple devices repaired in Dubai?"
-          answer="Apple Repair Dubai at Concord Tower, Dubai Media City repairs every Apple device. MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone, iPad, since 2004. Screen repair from AED 179, battery from AED 179, logic board from AED 800. Free diagnosis, free pickup across Dubai, warranty up to 12 months."
+          answer="Apple Repair Dubai at Concord Tower, Dubai Media City repairs every Apple device. MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone, iPad, since 2004. Screen, battery and logic-board repairs - message us on WhatsApp for today's exact price on your model. Free diagnosis, free pickup across Dubai, warranty up to 12 months."
         />
       </section>
 
@@ -138,7 +138,7 @@ export default function AppleRepair() {
       <section aria-labelledby="families" className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 id="families" className="text-[28px] md:text-[32px] mb-md">Every Apple device repaired here</h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          Pick a device family to see the full repair list, starting prices, and turnaround times. Or message {`055 741 3706`} on WhatsApp with the model - Shafiq replies within 4 minutes during business hours.
+          Pick a device family to see the full repair list and turnaround times. Or message {`055 741 3706`} on WhatsApp with the model for today's exact price - Shafiq replies within 4 minutes during business hours.
         </p>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
           {FAMILIES.map((f) => <DeviceFamilyCard key={f.name} {...f} tone="dark" />)}

@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadSmartConnectorRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Smart Connector Repair Dubai - AED 450 | 2-Day Fix"
-      seoDescription="iPad Smart Connector repair Dubai. Magic Keyboard / Smart Keyboard not connecting. 3-pin magnetic contact replacement. AED 450, 2 days."
+      seoTitle="iPad Smart Connector Repair Dubai | 2-Day Fix"
+      seoDescription="iPad Smart Connector repair Dubai. Magic Keyboard / Smart Keyboard not connecting. 3-pin magnetic contact replacement in 2 days. Message us on WhatsApp for a quote."
       path="/ipad-smart-connector-repair-dubai"
       eyebrow="iPad Smart Connector"
       h1="iPad Smart Connector Repair Dubai"
-      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. AED 450, 2 days, warranty of up to 12 months."
+      subtitle="Magic Keyboard or Smart Keyboard no longer recognised. The 3-pin magnetic Smart Connector has corroded or lost contact. 2-day fix, warranty of up to 12 months — message us on WhatsApp for a quote."
       startingPrice={450}
       timeline="2 days"
       whatsappPrefill="Hi, my iPad Smart Connector is broken - model and keyboard:"
@@ -26,7 +26,7 @@ export default function IPadSmartConnectorRepair() {
             <strong>The Smart Connector is the three-pin magnetic contact</strong> on the side or back of every iPad Pro and iPad Air since 2015 - it's how the Magic Keyboard, Smart Keyboard and Smart Keyboard Folio talk to your iPad without Bluetooth or charging cables. When it fails, your keyboard goes dead even though it's mechanically attached.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Two common causes in Dubai: humidity corrosion on the contact pads (especially in coastal areas like JBR and Palm), and impact damage that bent the chassis enough to break the internal flex. AED 450 covers Smart Connector flex replacement and contact pad cleaning. Free first step: we check whether the keyboard itself is the fault by testing on another iPad.
+            Two common causes in Dubai: humidity corrosion on the contact pads (especially in coastal areas like JBR and Palm), and impact damage that bent the chassis enough to break the internal flex. Our repair covers Smart Connector flex replacement and contact pad cleaning — message us on WhatsApp for today's exact price on your model. Free first step: we check whether the keyboard itself is the fault by testing on another iPad.
           </p>
         </>
       }
@@ -56,7 +56,7 @@ export default function IPadSmartConnectorRepair() {
         { q: "How can I tell if it\u2019s the keyboard or the iPad?", a: "Bring both. We test the keyboard on our bench iPad; if it works, your iPad's Smart Connector is the fault. If it doesn't work, the keyboard itself needs Apple service (Magic Keyboard repairs go through Apple - we don't service those)." },
         { q: "Why does humidity damage the Smart Connector?", a: "The exposed metal contact pads slowly corrode in salt-laden coastal air, especially when the iPad sits in its keyboard case for months. The corrosion forms a non-conductive layer; cleaning removes it but if pitting is deep, the pads need replacement." },
         { q: "Will Bluetooth keyboards still work if Smart Connector is broken?", a: "Yes - Bluetooth is independent. If you're stuck waiting for parts, any Bluetooth keyboard works fine in the meantime." },
-        { q: "Can you repair the Smart Connector on the keyboard side too?", a: "Honestly no - Apple's Magic Keyboard internal assembly isn't economically repairable at component level. If the keyboard's pogo pins are damaged, Apple replacement (around AED 800) is the only path." },
+        { q: "Can you repair the Smart Connector on the keyboard side too?", a: "Honestly no - Apple's Magic Keyboard internal assembly isn't economically repairable at component level. If the keyboard's pogo pins are damaged, an Apple replacement keyboard is the only path." },
         { q: "Does this work on Smart Keyboard Folio too?", a: "Yes - same Smart Connector standard, same repair process. We've done it on every iPad model from iPad Pro 9.7\" up to current M4." },
       ]}
       reviewNames={["Anatoliy Tarasenko", "Anastasiia Goncia", "Ana Undricova"]}

@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProM3ScreenRepair";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M3 Screen Repair Cost Dubai 2026",
-  description: "MacBook Pro M3 screen repair cost in Dubai 2026. mini-LED LCD replacement from AED 500. Cracked display, backlight fault, local dimming zones, and display…",
+  description: "MacBook Pro M3 screen repair in Dubai 2026 — mini-LED LCD replacement for cracked display, backlight fault and dimming zones. Message us on WhatsApp for a quote.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

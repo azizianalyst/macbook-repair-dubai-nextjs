@@ -6,7 +6,7 @@ export default function BlogIPadBatteryDrain() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Battery Draining Fast? 6 Fixes and Costs Dubai 2026"
-      seoDescription="iPad battery draining fast in Dubai? 6 fixes for all iPad Pro, Air, mini and standard models. Battery replacement from AED 200."
+      seoDescription="iPad battery draining fast in Dubai? 6 fixes for all iPad Pro, Air, mini and standard models. WhatsApp us for same-day battery replacement pricing."
       path="/blog/ipad-battery-drain-dubai"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogIPadBatteryDrain() {
       ]}
       category="Fix guide · iPad"
       h1="iPad Battery Draining Fast in Dubai? Here is Why and How to Fix It"
-      hook="iPad battery drain in Dubai is accelerated by 35°C+ summer heat pushing lithium cells past their 45°C limit, and battery replacement starts from AED 200 at our workshop with same-day service on most iPad models."
+      hook="iPad battery drain in Dubai is accelerated by 35°C+ summer heat pushing lithium cells past their 45°C limit, and we offer same-day battery replacement on most iPad models — message us on WhatsApp for today's exact price on your model."
       quickAnswer="iPad battery draining fast is usually caused by background app refresh, display brightness at maximum, Location Services running constantly, or a battery over 3 years old with health below 80%. Check Settings > Battery for app usage and Settings > Battery Health on iOS 17+."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -275,12 +275,12 @@ export default function BlogIPadBatteryDrain() {
             caption="iPad battery replacement pricing. MacBook Repair Dubai, June 2026"
             headers={["iPad model", "Our price", "Apple / third-party"]}
             rows={[
-              { model: 'iPad Pro 13" M4', ours: "AED 450", apple: "AED 900+" },
-              { model: 'iPad Pro 11" M4', ours: "AED 400", apple: "AED 800+" },
-              { model: "iPad Air M2 / M3", ours: "AED 350", apple: "AED 700+" },
-              { model: "iPad 10th / 11th gen", ours: "AED 250", apple: "AED 500+" },
-              { model: "iPad 9th gen and older", ours: "AED 200", apple: "AED 450+" },
-              { model: "iPad mini 6 / 7", ours: "AED 300", apple: "AED 600+" },
+              { model: 'iPad Pro 13" M4', ours: "Price on request", apple: "Price on request" },
+              { model: 'iPad Pro 11" M4', ours: "Price on request", apple: "Price on request" },
+              { model: "iPad Air M2 / M3", ours: "Price on request", apple: "Price on request" },
+              { model: "iPad 10th / 11th gen", ours: "Price on request", apple: "Price on request" },
+              { model: "iPad 9th gen and older", ours: "Price on request", apple: "Price on request" },
+              { model: "iPad mini 6 / 7", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>

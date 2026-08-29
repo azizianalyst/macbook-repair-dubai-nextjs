@@ -7,7 +7,7 @@ export default function BlogFreePickupDeliveryDubai() {
   return (
     <BlogPostTemplate
       seoTitle="Free MacBook Pickup & Delivery Dubai - How It Works (2026)"
-      seoDescription="Free MacBook pickup across Dubai. WhatsApp, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
+      seoDescription="Free MacBook pickup across Dubai. WhatsApp us, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
       path="/blog/free-pickup-delivery-dubai-how-it-works"
       wide
       toc={[
@@ -26,7 +26,7 @@ export default function BlogFreePickupDeliveryDubai() {
       category="Trust · Logistics"
       h1="Free MacBook Pickup & Delivery Dubai - How It Works"
       hook="Free across all Dubai. WhatsApp us. Our courier comes within 2 hours. Repair done. Returns to you."
-      quickAnswer="WhatsApp +971 55 741 3706 with your model and issue. Our courier arrives within 2 hours across Dubai (free for repairs over AED 800, AED 50 otherwise). You hand over the device and ID, we diagnose, send a written quote within 30 minutes, then repair and return on approval. Pay on delivery by card, cash or transfer."
+      quickAnswer="WhatsApp +971 55 741 3706 with your model and issue. Our courier arrives within 2 hours across Dubai, usually free with your repair - message us to confirm for your area. You hand over the device and ID, we diagnose free, send a written quote within 30 minutes, then repair and return on approval. Pay on delivery by card, cash or transfer."
       author={{ name: "Shafiq", role: "Operations lead" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -43,13 +43,14 @@ export default function BlogFreePickupDeliveryDubai() {
 
           <h2 id="coverage-area">Coverage area</h2>
           <p>
-            <strong>Free or AED 50 within Dubai</strong>: every district from Jebel Ali in the south
+            <strong>Free within Dubai</strong>: every district from Jebel Ali in the south
             to Al Mamzar in the north. Includes the islands (Palm, Bluewaters, Deira Islands).
+            Message us on WhatsApp and we'll confirm pickup for your area.
           </p>
           <p>
             <strong>Outside Dubai</strong>: Sharjah, Ajman, Abu Dhabi, RAK - paid logistics via
-            Aramex, Quiqup, or our own van for high-value devices. Cost AED 80-250 round-trip
-            depending on emirate and urgency.
+            Aramex, Quiqup, or our own van for high-value devices. Round-trip cost depends on emirate
+            and urgency - message us for the exact quote.
           </p>
 
           <h2 id="how-to-book">How to book - one WhatsApp message</h2>
@@ -63,8 +64,8 @@ export default function BlogFreePickupDeliveryDubai() {
             <li>Preferred time window (we can usually be there within 2 hours, 9am-10pm Mon-Sat).</li>
           </ul>
           <p>
-            We confirm within 5 minutes with courier name, ETA, and a price range from your
-            description.
+            We confirm within 5 minutes with courier name, ETA, and an initial estimate for your
+            device once we've diagnosed it.
           </p>
 
           <h2 id="what-we-collect">What we collect</h2>
@@ -131,27 +132,28 @@ export default function BlogFreePickupDeliveryDubai() {
               { model: "Bank transfer (Emirates NBD, ENBD, ADCB, etc.)", ours: "Yes - pay before courier arrives", apple: "Settlement confirmed before handover" },
               { model: "Cash AED", ours: "Yes - exact change appreciated", apple: "Receipt issued" },
               { model: "Apple Pay / Google Pay", ours: "Yes via NFC card terminal", apple: "Same as card" },
-              { model: "Tabby / Tamara (split into 4)", ours: "Yes for repairs > AED 1,000", apple: "Approved at WhatsApp stage" },
+              { model: "Tabby / Tamara (split into 4)", ours: "Yes on eligible repairs", apple: "Approved at WhatsApp stage" },
               { model: "Crypto (USDT / BTC)", ours: "Case-by-case for high-value repairs", apple: "Pre-arranged only" },
             ]}
           />
 
           <h2 id="outside-dubai">Outside Dubai</h2>
           <p>
-            <strong>Sharjah</strong>: AED 80 round-trip via our weekly van. Pickup days Mon &amp; Thu.
+            <strong>Sharjah</strong>: round-trip via our weekly van. Pickup days Mon &amp; Thu -
+            message us for the exact logistics quote.
           </p>
           <p>
-            <strong>Abu Dhabi &amp; Al Ain</strong>: AED 200-250 round-trip via Aramex insured. 2-3
-            day total turnaround.
+            <strong>Abu Dhabi &amp; Al Ain</strong>: round-trip via Aramex insured, 2-3 day total
+            turnaround. Message us for the exact logistics quote.
           </p>
           <p>
-            <strong>Northern Emirates (Ajman, RAK, UAQ, Fujairah)</strong>: AED 120-180 round-trip,
-            same Aramex insured route.
+            <strong>Northern Emirates (Ajman, RAK, UAQ, Fujairah)</strong>: round-trip on the same
+            Aramex insured route. Message us for the exact logistics quote.
           </p>
         </>
       }
       faqs={[
-        { q: "Is the courier insured for high-value MacBooks?", a: "Yes - every pickup is insured up to AED 30,000 device value via our courier insurance. For devices above that (e.g. fully-spec'd Mac Pro), we send our own van with two staff and additional declared-value cover." },
+        { q: "Is the courier insured for high-value MacBooks?", a: "Yes - every pickup is insured for the full device value via our courier insurance. For very high-value machines (e.g. a fully-spec'd Mac Pro), we send our own van with two staff and additional declared-value cover. Message us on WhatsApp if you want the cover details for your device." },
         { q: "What if I'm not home when the courier arrives?", a: "WhatsApp us - we re-schedule for free. We won't leave a device with a security guard or concierge unless you explicitly authorise it in writing." },
         { q: "How fast is 'free pickup within 2 hours'?", a: "9am-10pm Mon-Sat, ~95% of pickups happen within 2 hours of confirmation. Outside those hours we book the next morning. Friday afternoon is the slowest window - allow 3-4 hours." },
         { q: "Do you pickup from offices / co-working spaces?", a: "Yes - DIFC, ADGM, In5, AstroLabs, Letswork, Nest, etc. The courier signs in at reception and meets you at your desk or the lobby - your choice." },

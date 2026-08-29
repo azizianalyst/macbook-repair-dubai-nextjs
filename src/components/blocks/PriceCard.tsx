@@ -2,7 +2,6 @@
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { priceAed } from "@/lib/price";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -14,7 +13,7 @@ type Props = {
   tone?: "light" | "dark";     // "dark" for use on the bg-bg-alt band; default light
 };
 
-export function PriceCard({ service, startingPrice, timeline, href, whatsappMessage, tone = "light" }: Props) {
+export function PriceCard({ service, timeline, href, whatsappMessage, tone = "light" }: Props) {
   const dark = tone === "dark";
   const wa = whatsappMessage
     ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}`
@@ -28,8 +27,7 @@ export function PriceCard({ service, startingPrice, timeline, href, whatsappMess
       <h3 className={cn("text-[18px] font-bold leading-snug", dark && "text-text")}>{service}</h3>
 
       <div className="flex items-baseline gap-2">
-        <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-text-faint" : "text-text-faint")}>From</span>
-        <span className={cn("mono text-[24px] font-semibold", dark ? "text-accent" : "text-primary")}>{priceAed(startingPrice)}</span>
+        <span className={cn("mono text-[18px] font-semibold", dark ? "text-accent" : "text-primary")}>Price on request</span>
       </div>
 
       <p className={cn("mono text-[13px]", dark ? "text-text-muted" : "text-text-muted")}>{timeline}</p>
@@ -41,7 +39,7 @@ export function PriceCard({ service, startingPrice, timeline, href, whatsappMess
           rel="noopener noreferrer"
           className="inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold text-whatsapp hover:underline"
         >
-          <MessageCircle size={16} aria-hidden /> Quote on WhatsApp
+          <MessageCircle size={16} aria-hidden /> Get price on WhatsApp
         </a>
         {href && (
           <Link to={href} className={cn(

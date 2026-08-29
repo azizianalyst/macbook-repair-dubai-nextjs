@@ -5,12 +5,12 @@ import { Link } from "@/lib/router-compat";
 export default function IPhone16ProMaxRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone 16 Pro Max Repair Dubai - 6.9-inch Titanium from AED 400 | 055 741 3706"
-      seoDescription="iPhone 16 Pro Max (2024) repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Screen AED 950. Same-day."
+      seoTitle="iPhone 16 Pro Max Repair Dubai - 6.9-inch Titanium, Same Day | 055 741 3706"
+      seoDescription="iPhone 16 Pro Max (2024) repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Same-day. WhatsApp for today's price."
       path="/iphone-16-pro-max-repair-dubai"
       eyebrow="iPhone 16 Pro Max (2024, discontinued Sept 2025)"
       h1="iPhone 16 Pro Max Repair Dubai - 6.9-inch Titanium, Tetraprism, Camera Control"
-      subtitle="The 6.9-inch flagship (largest at launch) - A18 Pro, titanium, USB-C 3, 5x tetraprism, Camera Control. Discontinued Sept 2025 but fully serviceable. From AED 400."
+      subtitle="The 6.9-inch flagship (largest at launch) - A18 Pro, titanium, USB-C 3, 5x tetraprism, Camera Control. Discontinued Sept 2025 but fully serviceable. Message us on WhatsApp for today's price."
       startingPrice={400}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 16 Pro Max (2024) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhone16ProMaxRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone 16 Pro Max (Sept 2024) - A18 Pro, 6.9-inch ProMotion LTPO OLED (largest iPhone display at launch) with Dynamic Island and AOD, titanium frame, USB-C 3 (10 Gbps), Action Button + Camera Control, 48MP main + 5× tetraprism telephoto + 48MP ultra-wide + LiDAR, IP68. Discontinued in Sept 2025 with the 17 Pro Max launch but parts and service are abundant. AED 950 screen, AED 400 battery.
+            <strong>Quick answer:</strong> The iPhone 16 Pro Max (Sept 2024) - A18 Pro, 6.9-inch ProMotion LTPO OLED (largest iPhone display at launch) with Dynamic Island and AOD, titanium frame, USB-C 3 (10 Gbps), Action Button + Camera Control, 48MP main + 5× tetraprism telephoto + 48MP ultra-wide + LiDAR, IP68. Discontinued in Sept 2025 with the 17 Pro Max launch but parts and service are abundant. Message us on WhatsApp for today's exact screen and battery price.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 16 Pro Max</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -50,27 +50,27 @@ export default function IPhone16ProMaxRepair() {
           <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the 16 Pro Max</h2>
           <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price (AED)</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
+              <thead className="bg-bg-card"><tr className="text-left"><th className="px-md py-sm font-semibold">Service</th><th className="px-md py-sm font-semibold">Price</th><th className="px-md py-sm font-semibold">Timeline</th><th className="px-md py-sm font-semibold">Book</th></tr></thead>
               <tbody>
-                <tr><td className="px-md py-sm"><Link to="/iphone-16-pro-max-screen-flickering" className="text-accent underline underline-offset-2">6.9-inch ProMotion OLED replacement</Link></td><td className="px-md py-sm">950</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">400</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">500</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Camera Control button repair</td><td className="px-md py-sm">350</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">300</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">5x tetraprism telephoto module</td><td className="px-md py-sm">900</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Full triple camera + LiDAR</td><td className="px-md py-sm">900</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">From 800</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
-                <tr><td className="px-md py-sm">Titanium frame polish (cosmetic)</td><td className="px-md py-sm">250</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm"><Link to="/iphone-16-pro-max-screen-flickering" className="text-accent underline underline-offset-2">6.9-inch ProMotion OLED replacement</Link></td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Battery replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">45 min</td><td className="px-md py-sm"><Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">USB-C 3 port (Thunderbolt) replacement</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-usb-c-port-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Camera Control button repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Action Button repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-power-button-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">5x tetraprism telephoto module</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Full triple camera + LiDAR</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">Same day</td><td className="px-md py-sm"><Link to="/iphone-camera-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr className="bg-bg-alt"><td className="px-md py-sm">Face ID repair</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-3 days</td><td className="px-md py-sm"><Link to="/iphone-face-id-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
+                <tr><td className="px-md py-sm">Titanium frame polish (cosmetic)</td><td className="px-md py-sm">Price on request</td><td className="px-md py-sm">1-2 days</td><td className="px-md py-sm"><Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">Book →</Link></td></tr>
               </tbody>
             </table>
           </div>
           <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
-            6.9-inch ProMotion OLED with Dynamic Island - the largest hard-OLED in stock. Genuine Apple-pull AED 1,500. Tetraprism module, Camera Control flex, USB-C 3 all in stock.
+            6.9-inch ProMotion OLED with Dynamic Island - the largest hard-OLED in stock. Genuine Apple-pull and OEM-grade options both available - message us on WhatsApp for today's price. Tetraprism module, Camera Control flex, USB-C 3 all in stock.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 16 Pro Max still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Strong yes.</strong> Only ~1.5 years old, used resale ~AED 4,000-4,800. iOS 23 expected. Any single repair under AED 2,500 is comfortably worthwhile.
+            <strong>Strong yes.</strong> Only ~1.5 years old and holding strong resale value, with iOS 23 expected. A single repair is comfortably worthwhile against its replacement cost - message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }
@@ -98,17 +98,17 @@ export default function IPhone16ProMaxRepair() {
         "USB-C 3: full 10 Gbps data + 27W charge tested.",
       ]}
       faqs={[
-        { q: "Bundle pricing?", a: "Screen + battery: AED 1,320 (saves AED 30). Camera Control + USB-C: AED 820 (saves AED 30)." },
-        { q: "Genuine Apple OLED?", a: "Yes - AED 1,500 vs AED 950 OEM-grade." },
+        { q: "Bundle pricing?", a: "Yes - we bundle screen + battery and Camera Control + USB-C so you save versus separate repairs. Message us on WhatsApp for today's bundle price on your model." },
+        { q: "Genuine Apple OLED?", a: "Yes - we stock both genuine Apple-pull and OEM-grade 6.9-inch OLED. Message us on WhatsApp for today's price on each." },
         { q: "Is the 16 Pro Max still supported by Apple?", a: "Yes for software (iOS 18 native, iOS 19+ guaranteed). Discontinued in Sept 2025 with the 17 Pro Max launch but parts and service remain available through us." },
         { q: "Is the 6.9-inch screen really the largest iPhone ever?", a: "At launch in Sept 2024, yes. The iPhone 17 Pro Max has since matched/exceeded it. The repair part is unique to the 16 Pro Max - not cross-compatible." },
         { q: "Same day?", a: "OLED, battery, USB-C, Camera Control, Action Button, main + ultra-wide cameras - yes." },
       ]}
       reviewNames={["Seyed Moulana", "B Parker"]}
       related={[
-        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.9-inch ProMotion OLED AED 950." },
-        { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "5x tetraprism + 48MP ultra-wide AED 900." },
-        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 3 / Thunderbolt - AED 500." },
+        { label: "iPhone Screen Repair Dubai",      href: "/iphone-screen-repair-dubai",      description: "6.9-inch ProMotion OLED replacement, same day." },
+        { label: "iPhone Camera Repair Dubai",      href: "/iphone-camera-repair-dubai",      description: "5x tetraprism + 48MP ultra-wide repair." },
+        { label: "iPhone USB-C Port Repair Dubai",  href: "/iphone-usb-c-port-repair-dubai",  description: "USB-C 3 / Thunderbolt port replacement." },
         { label: "iPhone 16 Pro Max screen flickering", href: "/iphone-16-pro-max-screen-flickering", description: "Causes and fixes for screen flickering on iPhone 16 Pro Max." },
       ]}
     />

@@ -7,7 +7,7 @@ export default function BlogMacProGpuRepair() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Pro GPU Repair and Upgrade Dubai 2026: MPX Module Cost"
-      seoDescription="Mac Pro GPU repair and upgrade in Dubai. MPX module faults, crashes and upgrades on the 2019 Mac Pro. Diagnosis from AED 0."
+      seoDescription="Mac Pro GPU repair and upgrade in Dubai. MPX module faults, crashes and upgrades on the 2019 Mac Pro. Free diagnosis. Message us for a quote."
       path="/blog/mac-pro-gpu-repair-dubai"
       wide
       category="Fix guide · Mac Pro"
@@ -139,8 +139,8 @@ export default function BlogMacProGpuRepair() {
           <p>
             We are independent Apple specialists, not an Apple Authorised Service Centre, which means
             we repair MPX modules at component level where Apple would only swap the whole card or the
-            logic board. That is the difference between an AED 900 board-level repair and a four-figure
-            assembly swap. See our{" "}
+            logic board. That is the difference between a targeted board-level repair and a far pricier
+            whole-assembly swap. See our{" "}
             <Link to="/mac-pro-gpu-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Pro GPU repair service
             </Link>{" "}
@@ -197,18 +197,18 @@ export default function BlogMacProGpuRepair() {
           <p>
             Pricing depends on whether the module just needs reseating and cleaning, a board-level
             repair, or full replacement, and on whether you are repairing or stepping up to a faster
-            module. Diagnosis is free, so you get an exact figure before any paid work begins. The
-            table below shows our typical bench pricing against Apple or generic third-party quotes.
+            module. Diagnosis is free, so you get an exact quote before any paid work begins. Message
+            us on WhatsApp with your Mac Pro model and symptoms for today's price on your repair.
           </p>
           <BlogPriceTable
-            caption="Mac Pro GPU repair and upgrade pricing in Dubai, June 2026"
+            caption="Mac Pro GPU repair and upgrade services in Dubai, June 2026"
             headers={["Service", "Our price", "Apple / third-party"]}
             rows={[
-              { model: "GPU module reseat + diagnostic", ours: "AED 250", apple: "AED 600+" },
-              { model: "MPX module repair (board-level)", ours: "AED 900", apple: "AED 2,500+" },
-              { model: "GPU upgrade fitting", ours: "AED 350", apple: "AED 800+" },
-              { model: "Diagnosis", ours: "AED 0", apple: "AED 300+" },
-              { model: "Thermal service", ours: "AED 500", apple: "AED 1,000+" },
+              { model: "GPU module reseat + diagnostic", ours: "Price on request", apple: "Higher" },
+              { model: "MPX module repair (board-level)", ours: "Price on request", apple: "Higher" },
+              { model: "GPU upgrade fitting", ours: "Price on request", apple: "Higher" },
+              { model: "Diagnosis", ours: "Free", apple: "Charged" },
+              { model: "Thermal service", ours: "Price on request", apple: "Higher" },
             ]}
           />
           <p>

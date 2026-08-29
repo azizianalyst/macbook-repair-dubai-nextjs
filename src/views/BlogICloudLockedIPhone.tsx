@@ -85,7 +85,7 @@ export default function BlogICloudLockedIPhone() {
 
           <h2 id="why-no-unlock">Why we don't offer "iCloud unlock" (it's mostly fraud)</h2>
           <p>
-            Search "iCloud unlock Dubai" and you'll find dozens of services charging AED 500-2,000. Here's
+            Search "iCloud unlock Dubai" and you'll find dozens of services charging a hefty fee. Here's
             what they actually do:
           </p>
           <ul className="list-disc list-inside space-y-xs">
@@ -95,7 +95,7 @@ export default function BlogICloudLockedIPhone() {
             <li><strong>Just take your money and disappear:</strong> Most common.</li>
           </ul>
           <p>
-            We're not going to do any of these. Our reputation matters more than the AED 500 fee.
+            We're not going to do any of these. Our reputation matters more than a quick fee.
           </p>
 
           <h2 id="legitimate-recovery">Legitimate recovery via Apple</h2>
@@ -121,7 +121,7 @@ export default function BlogICloudLockedIPhone() {
             <li><strong>If bought via Dubizzle / Facebook Marketplace</strong>: Report the listing. Both platforms have refund processes for verified fraud.</li>
             <li><strong>If paid by credit card</strong>: File a chargeback with your bank within 60 days. Provide the iCloud-lock proof.</li>
             <li><strong>If paid in cash</strong>: File a complaint with Dubai Police via the Dubai Police app or 901. UAE law treats selling a locked phone without disclosure as fraud (Federal Penal Code Article 399).</li>
-            <li><strong>Last resort</strong>: We'll buy the locked device for parts. Pricing is roughly 15-25% of working value (logic board is dead, but screen, battery, frame, cameras, charging port have parts value).</li>
+            <li><strong>Last resort</strong>: We'll buy the locked device for parts (logic board is dead, but screen, battery, frame, cameras, charging port have parts value). Message us on WhatsApp with the model and condition for a buy-back offer.</li>
           </ol>
 
           <h2 id="check-before-buying">How to check before buying second-hand iPhone</h2>
@@ -156,7 +156,7 @@ export default function BlogICloudLockedIPhone() {
         { q: "Can you remove iCloud Activation Lock for me?", a: "No. There is no legitimate technical method to remove Activation Lock without the original Apple ID password. Anyone offering this service in Dubai is either committing fraud, dealing in stolen devices, or selling a temporary jailbreak that will brick your phone on the next update. We will not do any of these." },
         { q: "I forgot my own Apple ID - what's the fastest recovery?", a: "Use iforgot.apple.com with your trusted phone number or trusted device. If both are unavailable, Account Recovery takes 24 hours to 14 days. Having your original UAE purchase receipt and IMEI dramatically speeds it up." },
         { q: "Is buying an iCloud-locked iPhone for parts legal in the UAE?", a: "Yes - provided the device is not reported lost or stolen on the GSMA blacklist or Apple's lost-mode database. We check both before buying. If either flag exists, we will not buy and we are required to report to UAE authorities." },
-        { q: "How much will you pay for a locked iPhone?", a: "Roughly 15-25% of working-condition market value. The logic board is essentially dead (Activation Lock cannot be bypassed), but screen, battery, frame, cameras, taptic engine, and charging port have legitimate parts value. Get a free quote via WhatsApp with model + condition." },
+        { q: "How much will you pay for a locked iPhone?", a: "It depends on the model and condition. The logic board is essentially dead (Activation Lock cannot be bypassed), but screen, battery, frame, cameras, taptic engine, and charging port have legitimate parts value. Get a free buy-back offer via WhatsApp with your model and condition." },
         { q: "Can Apple Store Dubai unlock my old iPhone if I have proof of purchase?", a: "Sometimes - at Apple's discretion. You'll need the original receipt (matching serial / IMEI), government photo ID, the device, and an appointment. Approval typically takes 5-10 business days. Apple will not help without UAE authorised-retailer proof of purchase." },
         { q: "What about 'iCloud unlock' apps like iRemoval / Checkra1n / Tenorshare 4MeKey?", a: "These either don't work on modern iPhones (anything A12+ / iPhone XS or newer) or produce a 'bypassed' state that loses iCloud, App Store, Find My, and breaks on the next iOS update. They are not real fixes - they are toys for older iPhone X-and-below devices. Save your money." },
       ]}

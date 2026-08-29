@@ -5,7 +5,7 @@ export default function IMacOverheatingFix() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Overheating Fix Dubai - Fan Clean, Thermal Paste | 055 741 3706"
-      seoDescription="iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. AED 350. 1 day. Free home visit."
+      seoDescription="iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. 1 day. Free home visit. WhatsApp for a price."
       path="/imac-overheating-fix-dubai"
       eyebrow="iMac overheating"
       h1="iMac Overheating Fix Dubai - Fan Clean & Thermal Refresh"

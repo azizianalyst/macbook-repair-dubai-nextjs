@@ -10,19 +10,20 @@ import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const REPAIRS = [
-  { label: "Screen replacement",   price: "From AED 179",  time: "40 min",   note: "OLED True Tone on iPhone 11–17" },
-  { label: "Battery replacement",  price: "From AED 250",  time: "30 min",   note: "3-month warranty, 80% capacity guarantee" },
-  { label: "Back glass repair",    price: "From AED 300",  time: "Same day", note: "iPhone 8 through 16 Pro Max" },
-  { label: "Face ID repair",       price: "From AED 350",  time: "Same day", note: "Dot-projector assembly, iPhone X–17" },
-  { label: "Charging port repair", price: "From AED 200",  time: "1 hr",     note: "Lightning and USB-C" },
-  { label: "Water damage",         price: "From AED 300",  time: "1–2 days", note: "Ultrasonic clean + board inspection" },
-  { label: "Camera repair",        price: "From AED 350",  time: "Same day", note: "Front, rear, periscope zoom modules" },
-  { label: "Logic board repair",   price: "From AED 450",  time: "2–5 days", note: "Component-level micro-soldering" },
+  { label: "Screen replacement",   price: "Price on request",  time: "40 min",   note: "OLED True Tone on iPhone 11–17" },
+  { label: "Battery replacement",  price: "Price on request",  time: "30 min",   note: "3-month warranty, 80% capacity guarantee" },
+  { label: "Back glass repair",    price: "Price on request",  time: "Same day", note: "iPhone 8 through 16 Pro Max" },
+  { label: "Face ID repair",       price: "Price on request",  time: "Same day", note: "Dot-projector assembly, iPhone X–17" },
+  { label: "Charging port repair", price: "Price on request",  time: "1 hr",     note: "Lightning and USB-C" },
+  { label: "Water damage",         price: "Price on request",  time: "1–2 days", note: "Ultrasonic clean + board inspection" },
+  { label: "Camera repair",        price: "Price on request",  time: "Same day", note: "Front, rear, periscope zoom modules" },
+  { label: "Logic board repair",   price: "Price on request",  time: "2–5 days", note: "Component-level micro-soldering" },
 ];
 
 const CRITERIA = [
@@ -33,9 +34,9 @@ const CRITERIA = [
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)", screen: "From AED 179", time: "40 min", warranty: "Up to 12 months", faceId: "Preserved", pickup: "Free" },
-  { shop: "Apple Store / AASP",        screen: "AED 549–1,699", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", pickup: "No" },
-  { shop: "Karama / generic shops",    screen: "AED 80–150",    time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", pickup: "No" },
+  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "Up to 12 months", faceId: "Preserved", pickup: "Free" },
+  { shop: "Apple Store / AASP",        screen: "Price on request", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", pickup: "No" },
+  { shop: "Karama / generic shops",    screen: "Price on request", time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", pickup: "No" },
 ];
 
 const WHY_US = [
@@ -53,11 +54,11 @@ const FAQS = [
   { q: "What is the best iPhone repair shop in Dubai?",
     a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty of at least 6 months, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 216+ verified reviews." },
   { q: "How much does the best iPhone screen repair cost in Dubai?",
-    a: "Quality iPhone screen repair in Dubai starts from AED 179 for older LCD models and runs to AED 1,400 for the iPhone 17 Pro Max OLED. Cheap shops quote AED 80–120 but use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a 6-month written warranty." },
+    a: "Quality iPhone screen repair in Dubai depends on your exact model, from older LCD phones to the iPhone 17 Pro Max OLED, so message us on WhatsApp for today's exact price on yours. Cheap shops use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a 6-month written warranty." },
   { q: "Can iPhone Face ID be damaged during a screen repair?",
     a: "Yes, if the repair technician damages the dot-projector flex cable during screen removal, Face ID stops working permanently (Apple ties it to the original module and can't be replaced independently). The best iPhone repair shops in Dubai use screen-removal tools that protect the dot-projector bracket. We guarantee Face ID works after every screen replacement." },
   { q: "Is it better to use Apple Store or an independent shop for iPhone repair in Dubai?",
-    a: "Apple Store for screen repair under AppleCare+ costs AED 99, hard to beat. Out of warranty, Apple Store charges AED 549–1,699 for screen replacement. Independent specialists do the same job from AED 179 with comparable parts and a longer warranty. For logic board issues, independent specialists offer component-level repair at 40–60% of Apple's module-swap price." },
+    a: "Under AppleCare+ the Apple Store is hard to beat. Out of warranty, the Apple Store is far more expensive, and independent specialists do the same screen job with comparable parts and a longer warranty, usually for a lot less. For logic board issues, independent specialists offer component-level repair well below Apple's module-swap approach. Message us on WhatsApp for today's exact price on your model." },
   { q: "How fast can you fix my iPhone in Dubai?",
     a: "Screen replacement: 40 minutes. Battery replacement: 30 minutes. Back glass: same day. Face ID repair: same day. Water damage: 1–2 days. Logic board: 2–5 days. Drop in before 4 pm or request free pickup from anywhere in Dubai Mainland, screen and battery jobs return the same day." },
   { q: "Do you offer iPhone repair at home in Dubai?",
@@ -70,9 +71,9 @@ export default function BestIPhoneRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best iPhone Repair Dubai 2026. Screen from AED 179, 5★ | Since 2004",
+    title: "Best iPhone Repair Dubai 2026. OLED True Tone, 5★ | Since 2004",
     description:
-      "Best iPhone repair in Dubai. Screen from AED 179, battery from AED 250. OLED True Tone, Face ID preserved. Written warranty up to 12 months. 216+ reviews. Call 055 741 3706.",
+      "Best iPhone repair in Dubai. OLED True Tone screens, Face ID preserved, written warranty up to 12 months. 216+ reviews. WhatsApp us for your exact price. Since 2004.",
     path: "/best-iphone-repair-dubai",
   });
 
@@ -86,7 +87,7 @@ export default function BestIPhoneRepair() {
           tone="dark"
           eyebrow="Best iPhone repair · Dubai · Since 2004"
           title="Best iPhone Repair in Dubai, 2026"
-          subtitle="Screen from AED 179 · OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 216+ reviews."
+          subtitle="OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 216+ reviews · WhatsApp us for your exact price."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
@@ -107,7 +108,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer="The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, screen from AED 179 with OLED True Tone, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. 5.0 stars from 216+ verified reviews since 2004. WhatsApp 055 741 3706."
+            answer="The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. 5.0 stars from 216+ verified reviews since 2004. WhatsApp us for today's exact price on your model."
           />
         </section>
 
@@ -175,7 +176,7 @@ export default function BestIPhoneRepair() {
                 {REPAIRS.map((row) => (
                   <tr key={row.label} className="border-b border-border">
                     <td className="py-sm pr-lg font-medium">{row.label}</td>
-                    <td className="py-sm pr-lg text-accent font-semibold">{row.price}</td>
+                    <td className="py-sm pr-lg"><PriceCTA compact message={`Hi, price for iPhone ${row.label.toLowerCase()} in Dubai?`} /></td>
                     <td className="py-sm pr-lg text-text-muted whitespace-nowrap"><span className="inline-flex items-center gap-1"><Clock size={12} aria-hidden /> {row.time}</span></td>
                     <td className="py-sm text-text-muted">{row.note}</td>
                   </tr>

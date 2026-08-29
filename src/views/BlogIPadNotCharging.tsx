@@ -6,12 +6,12 @@ export default function BlogIPadNotCharging() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Not Charging? 5 Fixes and Repair Costs Dubai 2026"
-      seoDescription="iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Repair from AED 150 at our workshop."
+      seoDescription="iPad not charging in Dubai? 5 fixes for USB-C, Lightning, charging IC and battery faults. Free diagnosis, same-day repair. Message us for a quote."
       path="/blog/ipad-not-charging-dubai"
       wide={true}
       category="Fix guide · iPad"
       h1="iPad Not Charging in Dubai? 5 Things to Check Right Now"
-      hook="An iPad that refuses to charge is usually a lint-clogged port, a damaged USB-C or Lightning cable, or a failed charging IC, and our Dubai workshop diagnoses the fault free with repair starting from AED 150."
+      hook="An iPad that refuses to charge is usually a lint-clogged port, a damaged USB-C or Lightning cable, or a failed charging IC, and our Dubai workshop diagnoses the fault free — message us on WhatsApp for today's repair quote on your model."
       quickAnswer="iPad not charging is most commonly caused by a dirty or damaged charging port (check for pocket lint with a torch), a faulty cable or adapter, a dead battery that needs 30 minutes before the charging indicator appears, or a failed charging IC on the logic board. Try a different cable and charger before bringing it in."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
@@ -247,26 +247,27 @@ export default function BlogIPadNotCharging() {
           <section id="replacement-cost">
             <h2 id="replacement-cost">iPad not charging repair cost Dubai</h2>
             <p>
-              All prices below include free diagnosis, labour, and a 90-day written warranty.
+              Every quote includes free diagnosis, labour, and a 90-day written warranty.
               There is no call-out or inspection fee. If the repair is not viable (for example,
               a board-level fault on an older iPad where the repair cost exceeds the device
-              value), we will tell you before starting work.
+              value), we will tell you before starting work. Message us on WhatsApp for today's
+              exact price on your iPad model.
             </p>
             <BlogPriceTable
               caption="iPad charging repair pricing - MacBook Repair Dubai, June 2026"
               headers={["Repair / Service", "Our price", "Apple / third-party"]}
               rows={[
-                { model: "Port cleaning", ours: "AED 0", apple: "AED 100+" },
-                { model: "USB-C port replacement", ours: "AED 200", apple: "AED 500+" },
-                { model: "Lightning port replacement", ours: "AED 150", apple: "AED 400+" },
-                { model: "Charging IC repair", ours: "AED 350", apple: "AED 800+" },
-                { model: "Battery replacement", ours: "AED 200", apple: "AED 550+" },
+                { model: "Port cleaning", ours: "Free", apple: "Price on request" },
+                { model: "USB-C port replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "Lightning port replacement", ours: "Price on request", apple: "Price on request" },
+                { model: "Charging IC repair", ours: "Price on request", apple: "Price on request" },
+                { model: "Battery replacement", ours: "Price on request", apple: "Price on request" },
               ]}
             />
             <p className="text-[13px] text-text-muted mono">
               Apple does not offer component-level charging IC repair. Their service is a
-              flat-rate depot replacement (device swap). Third-party prices shown are market
-              averages for Dubai shopping-mall repair kiosks as of June 2026.
+              flat-rate depot replacement (device swap), which is typically far more expensive
+              than a targeted board-level fix at an independent workshop.
             </p>
             <p>
               Port cleaning is free at our workshop. Bring your iPad in and we will clean the

@@ -7,7 +7,7 @@ export default function BlogMacBookProM2WifiDropping() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M2 Wi-Fi Dropping Dubai 2026: Ventura Fix Guide"
-      seoDescription="MacBook Pro M2 Wi-Fi dropping or slow in Dubai? M2 uses Wi-Fi 6 (no 6E). Ventura 13.x had known Wi-Fi stability bugs fixed in 13.3. Step-by-step fix guide. Wi-Fi card repair from AED 350."
+      seoDescription="MacBook Pro M2 Wi-Fi dropping or slow in Dubai? M2 uses Wi-Fi 6 (no 6E). Ventura 13.x had known Wi-Fi stability bugs fixed in 13.3. Step-by-step fix guide plus Wi-Fi card repair with free diagnosis."
       path="/blog/macbook-pro-m2-wifi-dropping-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM2WifiDropping() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Wi-Fi Dropping in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M2 uses Wi-Fi 6 (802.11ax, 2.4 and 5GHz only, no 6GHz). Ventura 13.0-13.2 had documented Wi-Fi stability bugs that caused random disconnections and slow reconnection after sleep. Dubai's densely populated buildings with hundreds of competing Wi-Fi networks also stress the M2's Wi-Fi stack more than a suburban home would. Wi-Fi card repair costs AED 350 in Dubai if hardware is the fault."
+      hook="MacBook Pro M2 uses Wi-Fi 6 (802.11ax, 2.4 and 5GHz only, no 6GHz). Ventura 13.0-13.2 had documented Wi-Fi stability bugs that caused random disconnections and slow reconnection after sleep. Dubai's densely populated buildings with hundreds of competing Wi-Fi networks also stress the M2's Wi-Fi stack more than a suburban home would. If hardware is the fault, message us on WhatsApp for today's Wi-Fi card repair price on your M2, after a free diagnosis."
       quickAnswer="MacBook Pro M2 Wi-Fi dropping: update to Ventura 13.3+ first. This fixed the Wi-Fi stability regression. Then check your router: ensure 5GHz is separate from 2.4GHz (name them differently) and the M2 consistently connects to 5GHz. If Wi-Fi drops only after sleep, go to System Settings, Battery, and disable Wake for Wi-Fi network access. If Wi-Fi completely stops working after a drop event and requires restart, the Wi-Fi card may be failing."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -112,10 +112,10 @@ export default function BlogMacBookProM2WifiDropping() {
           <BlogPriceTable
             caption="MacBook Pro M2 Wi-Fi card repair pricing. June 2026"
             rows={[
-              { model: "Wi-Fi card replacement (M2 13-inch)", ours: "AED 350", apple: "Logic board replacement AED 2,000+", note: "BCM4387 chip replacement, Bluetooth included" },
-              { model: "Wi-Fi card replacement (M2 Pro/Max 14/16-inch)", ours: "AED 400", apple: "Logic board replacement AED 2,000+", note: "Same chip, larger board, same day" },
-              { model: "Wi-Fi antenna cable (damaged in drop)", ours: "AED 200", apple: "Full assembly", note: "Antenna routes through display hinge" },
-              { model: "Wi-Fi diagnostic", ours: "Free", apple: "AED 250", note: "Hardware vs software fault determination" },
+              { model: "Wi-Fi card replacement (M2 13-inch)", ours: "Price on request", apple: "Logic board replacement", note: "BCM4387 chip replacement, Bluetooth included" },
+              { model: "Wi-Fi card replacement (M2 Pro/Max 14/16-inch)", ours: "Price on request", apple: "Logic board replacement", note: "Same chip, larger board, same day" },
+              { model: "Wi-Fi antenna cable (damaged in drop)", ours: "Price on request", apple: "Full assembly", note: "Antenna routes through display hinge" },
+              { model: "Wi-Fi diagnostic", ours: "Free", apple: "Price on request", note: "Hardware vs software fault determination" },
             ]}
           />
 
@@ -153,7 +153,7 @@ export default function BlogMacBookProM2WifiDropping() {
         },
         {
           q: "How much does MacBook Pro M2 Wi-Fi card replacement cost in Dubai?",
-          a: "MacBook Pro M2 Wi-Fi card (BCM4387 chip) replacement costs AED 350 (13-inch) or AED 400 (14/16-inch Pro/Max). This also restores Bluetooth since both use the same chip. Wi-Fi antenna cable replacement costs AED 200. Free diagnostic to confirm whether the fault is hardware before proceeding with repair.",
+          a: "MacBook Pro M2 Wi-Fi card (BCM4387 chip) replacement also restores Bluetooth, since both use the same chip. We offer a free diagnostic to confirm whether the fault is hardware before proceeding, then message us on WhatsApp for today's exact price on your model, whether it's a 13-inch, 14/16-inch Pro/Max, or a Wi-Fi antenna cable replacement.",
         },
         {
           q: "MacBook Pro M2 Wi-Fi disappeared from menu bar, what happened?",

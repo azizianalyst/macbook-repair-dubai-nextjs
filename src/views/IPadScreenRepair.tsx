@@ -6,12 +6,12 @@ export default function IPadScreenRepair() {
   return (
     <DevicePageTemplate
       family="ipad"
-      seoTitle="iPad Screen Repair Dubai - From AED 139 | Pencil-Compatible | Same-Day"
-      seoDescription="iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. From AED 139. Call 055 741 3706."
+      seoTitle="iPad Screen Repair Dubai | Pencil-Compatible | Same-Day Quote"
+      seoDescription="iPad screen repair Dubai. Laminated displays for iPad, Air, Mini, Pro 11 and Pro 13. Apple Pencil layer preserved. WhatsApp for today's price. Call 055 741 3706."
       path="/ipad-screen-repair-dubai"
       eyebrow="iPad screen repair"
       h1="iPad Screen Repair Dubai"
-      subtitle="Cracked glass, dead touch, lines on the panel. Laminated displays replaced with the Pencil digitiser intact. From AED 139, most jobs same day."
+      subtitle="Cracked glass, dead touch, lines on the panel. Laminated displays replaced with the Pencil digitiser intact. Message us on WhatsApp for today's price, most jobs same day."
       startingPrice={139}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, my iPad screen is broken - model:"
@@ -25,7 +25,7 @@ export default function IPadScreenRepair() {
             iPad screens are not iPhone screens. They are <strong>fully laminated</strong> - glass, touch digitiser and LCD or OLED bonded as one unit. That changes the repair: there is no "glass-only" swap on a modern iPad. The whole assembly is replaced and the Apple Pencil layer is calibrated back into place.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            We quote the part you actually need, not a worst-case price. iPad 9 with cracked glass and clean LCD is AED 139. iPad Pro 13 with the tandem-OLED panel is AED 900 because the part is AED 700+ at trade. You see both numbers before we open the device.
+            We quote the part you actually need, not a worst-case price. An iPad 9 with cracked glass and a clean LCD is one of the most affordable jobs; an iPad Pro 13 with the tandem-OLED panel costs more because that part is expensive at trade. Message us on WhatsApp with your model and you see the exact price before we open the device.
           </p>
         </>
       }
@@ -53,7 +53,7 @@ export default function IPadScreenRepair() {
         "Free re-fit if any cosmetic gap appears in the first 30 days.",
       ]}
       comparisonRows={[
-        ["Starting price",        "AED 139",                         "AED 1,200+ (whole-unit swap on most models)"],
+        ["Starting price",        "Price on request",                "Whole-unit swap on most models (premium)"],
         ["Same-day option",       "Yes, on iPad, Mini, Air",         "No - usually 5-7 days"],
         ["Pickup & delivery",     "Free, Dubai mainland",            "Drop in to Mall of Emirates yourself"],
         ["Pencil calibration",    "Included on every job",           "Included"],

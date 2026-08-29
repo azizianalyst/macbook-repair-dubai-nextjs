@@ -32,7 +32,7 @@ const DEMO_PATH = "/landing-template-demo";
 const FAQS = [
   {
     q: "How much does MacBook screen repair cost in Dubai?",
-    a: "From AED 600 for a MacBook Air 13\" or MacBook Pro 13\" panel, AED 800 for the 14\" Pro, and AED 1,200 for the 16\" Pro. Glass-only repair is AED 600 on 2012-2015 Retina models; newer models need a full panel swap because Apple bonded the glass to the LCD.",
+    a: "It depends on your exact model - MacBook Air 13\", Pro 13\", 14\" Pro, and 16\" Pro all price differently. Glass-only repair is possible on 2012-2015 Retina models; newer models need a full panel swap because Apple bonded the glass to the LCD. WhatsApp your serial for today's exact price.",
   },
   {
     q: "How long does MacBook screen replacement take?",
@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: "Do you fix Flexgate on the 2016 and 2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable for AED 600, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 3-month warranty.",
+    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 3-month warranty - WhatsApp us for the exact price.",
   },
   {
     q: "Will True Tone still work after the screen is replaced?",
@@ -48,7 +48,7 @@ const FAQS = [
   },
   {
     q: "Can you replace just the cracked glass without changing the LCD?",
-    a: "On 2012-2015 Retina MacBooks, yes - an AED 600 glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. We will not charge for glass-only on bonded models because the result is unreliable.",
+    a: "On 2012-2015 Retina MacBooks, yes - a glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. We will not do glass-only on bonded models because the result is unreliable. WhatsApp us for a price on your model.",
   },
   {
     q: "Do you use genuine Apple screens?",
@@ -60,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Do you offer pickup for screen repair?",
-    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, and Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup is AED 100 each way.",
+    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, and Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup is available - message us for details.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function LandingTemplateDemo() {
   return (
     <LandingTemplate
       seo={{
-        title: "MacBook Screen Repair Dubai - From AED 600",
+        title: "MacBook Screen Repair Dubai - Same-Day, Quote on WhatsApp",
         description:
-          "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Call 055 741 3706.",
+          "MacBook screen repair Dubai. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. WhatsApp for a quote or call 055 741 3706.",
         path: DEMO_PATH,
         canonical: DEMO_PATH,
         noindex: true,
@@ -113,7 +113,7 @@ export default function LandingTemplateDemo() {
 
       /* Related internal links - GEO entity-linking */
       relatedServices={[
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen or short-lived battery, from AED 450, same day." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen or short-lived battery, same day - message us for a price." },
         { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Board-level micro-soldering for no-power and short faults." },
         { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid spill cleaning and corrosion repair, free diagnosis." },
       ]}
@@ -265,7 +265,7 @@ export default function LandingTemplateDemo() {
         badge: "MacBook screen repair - Dubai Media City",
         title: (
           <>
-            MacBook screen repair, <GradientText>from AED 600</GradientText>
+            MacBook screen repair, <GradientText>quote in minutes</GradientText>
           </>
         ),
         description:
@@ -290,7 +290,7 @@ export default function LandingTemplateDemo() {
             { value: "Same-day", label: "Most models" },
           ],
           breakdown: [
-            { name: "Price from", value: "AED 600" },
+            { name: "Price", value: "On request" },
             { name: "Diagnosis", value: "Free" },
             { name: "Turnaround", value: "Same day" },
             { name: "Warranty", value: "3 months" },
@@ -316,7 +316,7 @@ export default function LandingTemplateDemo() {
           {
             icon: Truck,
             title: "Free pickup in Dubai",
-            body: "Free pickup and delivery across Dubai mainland, same day. Sharjah and Abu Dhabi pickup is AED 100 each way.",
+            body: "Free pickup and delivery across Dubai mainland, same day. Sharjah and Abu Dhabi pickup is available - message us for details.",
           },
           {
             icon: ShieldCheck,
@@ -342,14 +342,14 @@ export default function LandingTemplateDemo() {
             name: "Flexgate cable fix",
             description:
               "Stage-light backlight and horizontal lines on the 2016-2017 Pro (A1706/A1707/A1708). Fixed with a 2 mm-longer flex cable so the wear pattern does not return.",
-            metric: { value: "AED 600", label: "Same-day cable swap" },
+            metric: { value: "Same day", label: "Cable swap turnaround" },
           },
           {
             icon: Layers,
             name: "Panel-only vs full assembly",
             description:
-              "LCD-only keeps the original camera, hinges, and antenna; full assembly swaps the whole lid. We quote both prices on every WhatsApp ticket.",
-            metric: { value: "AED 200-400", label: "Saved with LCD-only" },
+              "LCD-only keeps the original camera, hinges, and antenna; full assembly swaps the whole lid. We quote both options on every WhatsApp ticket.",
+            metric: { value: "LCD-only", label: "The cheaper option" },
           },
           {
             icon: Sun,
@@ -448,8 +448,8 @@ export default function LandingTemplateDemo() {
         tiers: [
           {
             name: "MacBook Air 13\" / Pro 13\"",
-            price: "AED 600",
-            period: "from",
+            price: "Price on request",
+            period: "",
             description: "Air 13\" M1/M2/M3 and Pro 13\" Touch Bar.",
             features: [
               "Same-day when in stock",
@@ -461,9 +461,9 @@ export default function LandingTemplateDemo() {
           },
           {
             name: "MacBook Pro 14-16\"",
-            price: "AED 800",
-            period: "from",
-            description: "Pro 14\" from AED 800, Pro 16\" from AED 1,200.",
+            price: "Price on request",
+            period: "",
+            description: "Pro 14\" and Pro 16\" - message us for your model's price.",
             features: [
               "Genuine Apple panel option",
               "True Tone retained on genuine",
@@ -475,13 +475,13 @@ export default function LandingTemplateDemo() {
           },
           {
             name: "Retina / assembly",
-            price: "AED 600",
-            period: "from",
+            price: "Price on request",
+            period: "",
             description: "2012-2015 Retina glass-only and 12\" Retina assembly.",
             features: [
               "Glass-only on 2012-2015 Retina",
               "Original Samsung panel sourcing",
-              "LCD-only saves AED 200-400",
+              "LCD-only is the cheaper option",
               "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },

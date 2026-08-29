@@ -150,20 +150,20 @@ export default function BlogIPhone15ProOverheating() {
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>Battery cell degradation</strong> - old or swelling cells generate excess
-              heat under charging. Settings → Battery → Battery Health. Replacement AED 350-450.
+              heat under charging. Settings → Battery → Battery Health. Message us on WhatsApp for the replacement price on your model.
             </li>
             <li>
               <strong>Charging IC fault</strong> - overheating specifically during charging.
-              Component-level repair AED 400-700.
+              Component-level repair - message us for the exact price.
             </li>
             <li>
               <strong>Liquid damage</strong> - corrosion creating partial short circuits that
-              waste energy as heat. Look for green corrosion in SIM tray slot. Tier 2/3 repair
-              AED 700-1,500.
+              waste energy as heat. Look for green corrosion in SIM tray slot. Tier 2/3 repair -
+              message us for a quote after diagnosis.
             </li>
             <li>
               <strong>A17 Pro thermal interface failure</strong> - the chip's thermal paste has
-              dried out (rare in a 2-year-old phone, but we've seen it). Repaste AED 350.
+              dried out (rare in a 2-year-old phone, but we've seen it). Message us for the repaste price.
             </li>
           </ul>
 

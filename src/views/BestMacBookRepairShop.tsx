@@ -15,23 +15,23 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const CRITERIA = [
-  { icon: Wrench,       title: "Component-level board repair",   body: "Most shops replace the whole logic board at AED 2,000+. The best MacBook repair shop in Dubai does component-level micro-soldering, fixing the specific chip or capacitor that failed. Cost: AED 800–1,500. Same outcome, 40–60% cheaper." },
+  { icon: Wrench,       title: "Component-level board repair",   body: "Most shops replace the whole logic board. The best MacBook repair shop in Dubai does component-level micro-soldering, fixing the specific chip or capacitor that failed. Same outcome, far cheaper than a full board swap. Message us on WhatsApp for today's exact price on your model." },
   { icon: Clock,        title: "Same-day for common repairs",     body: "Screen, battery, keyboard, trackpad, and charging port should be done the day you arrive. Any shop quoting 3–5 days for a battery replacement is either understaffed or outsourcing the work." },
   { icon: Shield,       title: "Written warranty on every repair", body: "The best shops back every repair with a written warranty, not a verbal promise. Look for at least 6 months on screens and 3 months on batteries with a capacity guarantee. Avoid any shop that quotes 'warranty depends on parts availability'." },
   { icon: Award,        title: "Transparent pricing before work starts", body: "A fixed written quote before any work begins separates professional shops from price-bait operations. You should never receive a higher bill than the quote, full stop." },
   { icon: CheckCircle2, title: "Experience with Apple Silicon",   body: "M1 through M5 MacBooks use a unified memory architecture that changes how board faults present. A technician who only worked on Intel Macs will misdiagnose Apple Silicon faults regularly. Ask: 'Have you fixed an M3 or M4 logic board?'" },
-  { icon: MapPin,       title: "Free diagnosis, no fix no fee",   body: "The best repair shops in Dubai diagnose for free and charge only if the repair succeeds. Any shop charging AED 100–200 'diagnostic fee' before they've even looked at the Mac is a red flag." },
+  { icon: MapPin,       title: "Free diagnosis, no fix no fee",   body: "The best repair shops in Dubai diagnose for free and charge only if the repair succeeds. Any shop charging a 'diagnostic fee' before they've even looked at the Mac is a red flag." },
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "Up to 12 months", sameDay: "Yes", pickup: "Free", price: "From AED 450" },
-  { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", pickup: "No", price: "From AED 900" },
+  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "Up to 12 months", sameDay: "Yes", pickup: "Free", price: "Price on request" },
+  { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", pickup: "No", price: "Price on request" },
   { shop: "Generic phone repair shops",   location: "Various (Karama etc.)",     board: "Some, inconsistent",  warranty: "Verbal / 1 month",  sameDay: "Sometimes",     pickup: "No", price: "Varies, no fixed quote" },
 ];
 
 const WHY_US = [
   "21 years repairing MacBooks in Dubai. Intel 2008 through M5 2025",
-  "Component-level logic board repair (not module swap), saves AED 500–1,000",
+  "Component-level logic board repair (not module swap), far cheaper than a full swap",
   "Same-day screen, battery, keyboard, and trackpad",
   "Free pickup and delivery across Dubai Mainland",
   "Written warranty up to 12 months on every repair",
@@ -42,15 +42,15 @@ const WHY_US = [
 
 const FAQS = [
   { q: "What makes the best MacBook repair shop in Dubai?",
-    a: "The best MacBook repair shop in Dubai does component-level logic board repair (not just module swaps), provides a written fixed quote before starting, offers same-day service for screen and battery, backs every repair with a written warranty of at least 6 months, and diagnoses for free. Price alone is not the best indicator, a shop quoting AED 200 for a screen is likely using grey-market panels that fail within 3 months." },
+    a: "The best MacBook repair shop in Dubai does component-level logic board repair (not just module swaps), provides a written fixed quote before starting, offers same-day service for screen and battery, backs every repair with a written warranty of at least 6 months, and diagnoses for free. Price alone is not the best indicator, a suspiciously cheap screen quote is likely using grey-market panels that fail within 3 months. Message us on WhatsApp for a fixed quote on your model." },
   { q: "Is MacBook Repair Dubai the best shop in Dubai?",
     a: "We have 5.0 stars from 216+ verified Google reviews, 21 years of MacBook repair experience in Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of up to 12 months. We let the track record speak, read the reviews and compare." },
   { q: "How do I choose between MacBook repair shops in Dubai?",
     a: "Ask four questions: (1) Do you diagnose free of charge? (2) Do you give a written fixed quote before starting? (3) Do you repair MacBook logic boards at component level or replace the whole board? (4) What is the written warranty? A good shop answers yes, yes, component level, and at least 6 months respectively." },
   { q: "Is it better to go to Apple Store or an independent MacBook repair shop in Dubai?",
-    a: "Apple Store (or AASP) for repairs under AppleCare+, the AED 99 screen repair fee is hard to beat. For out-of-warranty work, independent specialists cost 40–60% less. Apple Store replaces whole modules; independent specialists repair the component that failed, which is cheaper and produces the same outcome on most faults." },
+    a: "Apple Store (or AASP) is hard to beat for repairs covered under AppleCare+. For out-of-warranty work, independent specialists cost far less. Apple Store replaces whole modules; independent specialists repair the component that failed, which is cheaper and produces the same outcome on most faults. Message us on WhatsApp for your model's exact price." },
   { q: "How much does the best MacBook repair shop charge in Dubai?",
-    a: "Screen from AED 499, battery from AED 450, keyboard from AED 550, logic board from AED 800. Diagnosis is free. Compare: Apple Store charges AED 900–2,500 for the same jobs. Generic shops may quote less but often use grey-market parts without warranty." },
+    a: "Screen, battery, keyboard and logic-board repairs are all priced per model. Diagnosis is free, and you get a fixed written quote before any work starts, always lower than an Apple Store module swap. Generic shops may quote less but often use grey-market parts without warranty. Message us on WhatsApp for today's exact price on your MacBook." },
   { q: "Where is the best MacBook repair shop in Dubai located?",
     a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro station. Open Monday to Saturday 9 am–10 pm. Free pickup also available from anywhere in Dubai Mainland. WhatsApp 055 741 3706." },
 ];
@@ -61,9 +61,9 @@ export default function BestMacBookRepairShop() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best MacBook Repair Shop Dubai 2026, 5★, From AED 450 | Since 2004",
+    title: "Best MacBook Repair Shop Dubai 2026, 5★ Rated | Since 2004",
     description:
-      "Best MacBook repair shop in Dubai. 216+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. From AED 450. Call 055 741 3706.",
+      "Best MacBook repair shop in Dubai. 216+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. WhatsApp 055 741 3706 for a quote.",
     path: "/best-macbook-repair-shop-dubai",
   });
 
@@ -98,7 +98,7 @@ export default function BestMacBookRepairShop() {
           <QuickAnswer
             tone="dark"
             question="What is the best MacBook repair shop in Dubai?"
-            answer="The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, 5.0 stars from 216+ verified reviews, 21 years experience, component-level logic board repair, same-day screen and battery service, written warranty up to 12 months, free diagnosis. Screen from AED 499, battery from AED 450. WhatsApp 055 741 3706."
+            answer="The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, 5.0 stars from 216+ verified reviews, 21 years experience, component-level logic board repair, same-day screen and battery service, written warranty up to 12 months, free diagnosis. Message us on WhatsApp 055 741 3706 for today's exact price on your model."
           />
         </section>
 

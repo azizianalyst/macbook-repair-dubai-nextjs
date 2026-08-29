@@ -7,7 +7,7 @@ export default function BlogMacBookAirM3Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air M3 Common Problems Dubai 2024: Fix Guide"
-      seoDescription="MacBook Air M3 problems in Dubai: dual display bug, battery drain, overheating, MagSafe issues. All M3 Air faults fixed from AED 350. Free diagnosis."
+      seoDescription="MacBook Air M3 problems in Dubai: dual display bug, battery drain, overheating, MagSafe issues. All M3 Air faults fixed. Free diagnosis, WhatsApp for a quote."
       path="/blog/macbook-air-m3-common-problems-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirM3Problems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air M3 Common Problems in Dubai? Fix Guide 2024"
       hook="MacBook Air M3 introduced dual external display support and a slightly faster chip. In Dubai it introduced a new set of problems too. Here are the six most common M3 Air faults we fix at our Media City workshop."
-      quickAnswer="Most common MacBook Air M3 problems in Dubai: second external display not detected with lid closed (dock firmware or display limit misunderstood), battery draining faster than M2 (M3 has slightly higher TDP in the same fanless chassis), backlight glow inconsistency at low brightness on 13-inch, MagSafe 3 port collecting metal dust, WiFi unstable on Sequoia 15.0, and throttling under sustained load. Most are software fixes. Hardware from AED 350."
+      quickAnswer="Most common MacBook Air M3 problems in Dubai: second external display not detected with lid closed (dock firmware or display limit misunderstood), battery draining faster than M2 (M3 has slightly higher TDP in the same fanless chassis), backlight glow inconsistency at low brightness on 13-inch, MagSafe 3 port collecting metal dust, WiFi unstable on Sequoia 15.0, and throttling under sustained load. Most are software fixes, which are free. For hardware repairs, message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -47,7 +47,7 @@ export default function BlogMacBookAirM3Problems() {
             <li><strong>Hinge creak after 18 to 24 months of heavy use</strong>: the Air hinge is lighter than the Pro; daily open-and-close cycles cause play over time</li>
           </ol>
           <p>
-            Work through each section below. Software fixes are free. Hardware repairs start at AED 350.
+            Work through each section below. Software fixes are free. For hardware repairs, message us on WhatsApp for today's exact price on your model.
           </p>
 
           <h2 id="dual-display">MacBook Air M3 second display not working</h2>
@@ -108,7 +108,7 @@ export default function BlogMacBookAirM3Problems() {
           </p>
           <p>
             If the battery health shows below 80% capacity or "Service Recommended" in System
-            Settings → Battery, a replacement (AED 450) restores full runtime.{" "}
+            Settings → Battery, a replacement restores full runtime. Message us on WhatsApp for the exact battery price on your model.{" "}
             <Link to="/blog/macbook-air-battery-drain-dubai" className="text-accent font-semibold hover:underline">
               Full MacBook Air battery drain guide →
             </Link>
@@ -137,7 +137,7 @@ export default function BlogMacBookAirM3Problems() {
           <p>
             If the M3 Air throttles during light tasks like browsing or note-taking, that is not
             normal. Persistent idle throttling on a relatively new machine points to thermal pad
-            degradation or a board-level fault. Diagnostic and thermal pad replacement: AED 350.
+            degradation or a board-level fault. Diagnosis is free; message us on WhatsApp for the thermal pad replacement price on your model.
           </p>
 
           <h2 id="backlight">MacBook Air M3 screen backlight glow</h2>
@@ -157,8 +157,8 @@ export default function BlogMacBookAirM3Problems() {
           <p>
             Mild backlight glow is within Apple's tolerance specification for IPS LCD panels and
             is not covered under warranty unless severe. If it bothers you in your daily use
-            environment, a screen replacement (AED 600 for 13-inch) swaps the entire panel
-            assembly and the new panel will not have the same variance.
+            environment, a screen replacement swaps the entire panel
+            assembly and the new panel will not have the same variance. Message us on WhatsApp for the exact 13-inch screen price.
           </p>
           <p>
             The 15-inch M3 Air uses a larger panel with wider backlight spread and we see this
@@ -192,8 +192,8 @@ export default function BlogMacBookAirM3Problems() {
             attention.
           </p>
           <p>
-            Physical damage or corrosion to the MagSafe port: MagSafe board replacement AED 350.
-            Free diagnosis before any work starts.
+            Physical damage or corrosion to the MagSafe port means a MagSafe board replacement;
+            message us on WhatsApp for the exact price. Free diagnosis before any work starts.
           </p>
 
           <h2 id="dubai-specific">Dubai-specific MacBook Air M3 problems</h2>
@@ -213,14 +213,14 @@ export default function BlogMacBookAirM3Problems() {
             A MacBook Air M3 left on a car seat or in the boot for 30 minutes at these temperatures
             can cause LCD delamination. This shows as yellow or brown discolouration along the
             screen edges that spreads inward over weeks. It is a permanent cosmetic fault. Screen
-            replacement (AED 600 to 700) is the only fix.
+            replacement is the only fix; message us on WhatsApp for the exact screen price on your model.
           </p>
           <p>
             <strong>Battery cycle count check for Dubai buyers:</strong> after 12 months of use
             in Dubai, it is worth checking your battery cycle count in System Settings → Battery.
             Dubai heat accelerates cell ageing. If you are above 600 cycles, check maximum
             capacity. If capacity is below 85% at 600 cycles, the cell aged faster than normal
-            and replacement at AED 450 gives you back full runtime.
+            and a replacement gives you back full runtime; message us on WhatsApp for the exact battery price.
           </p>
 
           <h2 id="m3-vs-m2">MacBook Air M3 vs M2: what actually changed</h2>
@@ -294,12 +294,12 @@ export default function BlogMacBookAirM3Problems() {
             caption="MacBook Air M3 repair pricing Dubai. June 2026"
             headers={["Repair", "Our price", "Apple Store"]}
             rows={[
-              { model: "Battery: MacBook Air M3 13\"", ours: "AED 450", apple: "AED 899" },
-              { model: "Battery: MacBook Air M3 15\"", ours: "AED 500", apple: "AED 999" },
-              { model: "Screen: MacBook Air M3 13\"", ours: "AED 600", apple: "AED 1,099" },
-              { model: "Screen: MacBook Air M3 15\"", ours: "AED 700", apple: "AED 1,199" },
-              { model: "MagSafe port repair", ours: "AED 350", apple: "AED 800" },
-              { model: "Logic board diagnosis", ours: "Free", apple: "AED 150" },
+              { model: "Battery: MacBook Air M3 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Battery: MacBook Air M3 15\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Screen: MacBook Air M3 13\"", ours: "Price on request", apple: "Price on request" },
+              { model: "Screen: MacBook Air M3 15\"", ours: "Price on request", apple: "Price on request" },
+              { model: "MagSafe port repair", ours: "Price on request", apple: "Price on request" },
+              { model: "Logic board diagnosis", ours: "Free", apple: "Price on request" },
             ]}
           />
           <p>
@@ -327,7 +327,7 @@ export default function BlogMacBookAirM3Problems() {
         },
         {
           q: "Can the MacBook Air M3 screen glow be fixed?",
-          a: "Yes. Screen replacement (AED 600 for 13-inch, AED 700 for 15-inch) replaces the entire panel assembly. The replacement panel will not have the same backlight glow variance. This is a cosmetic repair and only worthwhile if the glow is visible in your normal working environment.",
+          a: "Yes. A screen replacement replaces the entire panel assembly on both the 13-inch and 15-inch, and the replacement panel will not have the same backlight glow variance. This is a cosmetic repair and only worthwhile if the glow is visible in your normal working environment. Message us on WhatsApp for today's exact screen price on your model.",
         },
         {
           q: "How do I clean MacBook Air M3 MagSafe port?",
@@ -335,7 +335,7 @@ export default function BlogMacBookAirM3Problems() {
         },
         {
           q: "Is MacBook Air M3 still worth buying in 2026?",
-          a: "Yes, at the right price. The dual external display support is its main advantage over M2. For a new purchase, the M4 Air is AED 200 to 400 more and offers a meaningfully faster chip on a newer process node. The M3 is the better value pick as a second-hand buy, where prices have dropped significantly since M4 launched.",
+          a: "Yes, at the right price. The dual external display support is its main advantage over M2. For a new purchase, the M4 Air costs a bit more and offers a meaningfully faster chip on a newer process node. The M3 is the better value pick as a second-hand buy, where prices have dropped significantly since M4 launched.",
         },
       ]}
       relatedLinks={[

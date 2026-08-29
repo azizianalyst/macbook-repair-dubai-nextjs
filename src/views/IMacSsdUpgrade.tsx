@@ -5,7 +5,7 @@ export default function IMacSsdUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac SSD Upgrade Dubai - Fusion Drive to NVMe | 055 741 3706"
-      seoDescription="iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. AED 700 labor. 1-2 days."
+      seoDescription="iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. Message us for a price. 1-2 days."
       path="/imac-ssd-upgrade-dubai"
       eyebrow="iMac SSD upgrade"
       h1="iMac SSD Upgrade Dubai - Fusion Drive to NVMe"

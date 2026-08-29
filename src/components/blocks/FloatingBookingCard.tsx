@@ -33,8 +33,7 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
       <div>
         <p className={cn("text-[12px] uppercase tracking-wider mono", dark ? "text-text-faint" : "text-text-faint")}>{service}</p>
         <p className="mt-1">
-          <span className={cn("text-[12px] uppercase tracking-wider", dark ? "text-text-faint" : "text-text-faint")}>From </span>
-          <span className={cn("mono text-[28px] font-bold", dark ? "text-accent" : "text-primary")}>AED {startingPrice}</span>
+          <span className={cn("mono text-[22px] font-bold", dark ? "text-accent" : "text-primary")}>Price on request</span>
         </p>
         <p className={cn("mono text-[13px] mt-1 flex items-center gap-1", dark ? "text-text-muted" : "text-text-muted")}>
           <Clock size={13} aria-hidden /> {timeline}

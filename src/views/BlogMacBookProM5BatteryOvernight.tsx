@@ -7,7 +7,7 @@ export default function BlogMacBookProM5BatteryOvernight() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Battery Draining Overnight? DarkWake Fix Dubai 2026"
-      seoDescription="MacBook Pro M5 battery draining overnight in Dubai? DarkWake, Power Nap, and background tasks drain 20-40% while sleeping. Step-by-step fix guide. Battery replacement from AED 650."
+      seoDescription="MacBook Pro M5 battery draining overnight in Dubai? DarkWake, Power Nap, and background tasks drain 20-40% while sleeping. Step-by-step fix guide plus same-day battery replacement."
       path="/blog/macbook-pro-m5-battery-draining-overnight-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM5BatteryOvernight() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Battery Draining Overnight in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M5 users in Dubai are waking up to 20-40% battery loss overnight with the lid closed. The cause is almost always DarkWake, Power Nap, or a background process preventing deep sleep. Most fixes take under 5 minutes and cost nothing. Battery replacement starts from AED 650 if the cell itself is at fault."
+      hook="MacBook Pro M5 users in Dubai are waking up to 20-40% battery loss overnight with the lid closed. The cause is almost always DarkWake, Power Nap, or a background process preventing deep sleep. Most fixes take under 5 minutes and cost nothing. If the cell itself is at fault, message us on WhatsApp for a same-day battery replacement quote."
       quickAnswer="MacBook Pro M5 battery draining overnight is caused by DarkWake network activity, Power Nap syncing, or a rogue process stopping the machine from entering deep sleep. Fix: Terminal, type 'pmset -g assertions' to see what is keeping the Mac awake. Disable Power Nap in System Settings, Battery, Options. If drain continues after that, check for the ApplePMGR kernel panic in Console. Hardware battery fault is rare on a new M5."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -185,10 +185,11 @@ export default function BlogMacBookProM5BatteryOvernight() {
             and replacement is covered under warranty.
           </p>
           <BlogPriceTable
-            caption="MacBook Pro M5 battery replacement pricing. June 2026"
+            caption="MacBook Pro M5 battery replacement. June 2026"
+            headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M5 14-inch battery", ours: "AED 650", apple: "AED 1,099", note: "70 Wh cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "AED 700", apple: "AED 1,199", note: "100 Wh cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty, same-day" },
             ]}
           />
           <p>
@@ -209,8 +210,8 @@ export default function BlogMacBookProM5BatteryOvernight() {
             <li>Battery drops to 0% overnight even when fully charged, and the machine requires holding power for 10 seconds to restart</li>
           </ul>
           <p>
-            Free diagnostic at our Dubai workshop. Board-level power management repair on
-            M5 starts from AED 1,200.{" "}
+            Free diagnostic at our Dubai workshop. For board-level power management repair on
+            the M5, message us on WhatsApp for a same-day quote on your exact model.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai
             </Link>

@@ -12,6 +12,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
@@ -79,8 +80,6 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     </div>
   );
 }
-
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookAirChipKeyboardPage({
   path,
@@ -163,7 +162,7 @@ export default function MacBookAirChipKeyboardPage({
             </div>
           </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> From {aed(lowestPrice)}</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Message us for your price</span>
             <span>·</span>
             <span>Free key-by-key diagnosis</span>
             <span>·</span>
@@ -240,7 +239,6 @@ export default function MacBookAirChipKeyboardPage({
                 <tr className="border-b border-border text-accent">
                   <th className="px-lg py-md font-semibold">Model / repair type</th>
                   <th className="px-lg py-md font-semibold">Our price</th>
-                  <th className="px-lg py-md font-semibold">Apple Store</th>
                   <th className="px-lg py-md font-semibold">Turnaround</th>
                   <th className="px-lg py-md font-semibold">Model page</th>
                 </tr>
@@ -249,9 +247,8 @@ export default function MacBookAirChipKeyboardPage({
                 {prices.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
-                    <td className="px-lg py-sm text-text-muted whitespace-nowrap">
-                      {r.applePrice ? aed(r.applePrice) : "Not serviced"}
+                    <td className="px-lg py-sm whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, price for ${r.model} keyboard repair in Dubai?`} />
                     </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
@@ -369,7 +366,7 @@ export default function MacBookAirChipKeyboardPage({
                 Chip-specific answers before you book.
               </p>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>From {aed(lowestPrice)}</span>
+                <span>Message us for your price</span>
                 <span>Free key-by-key diagnosis</span>
                 <span>15-day warranty</span>
                 <span>Free pickup Dubai-wide</span>
@@ -414,7 +411,7 @@ export default function MacBookAirChipKeyboardPage({
                 MacBook Air {chip} · {years}
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                MacBook Air {chip} keyboard from {aed(lowestPrice)} · Free diagnosis · 15-day warranty
+                MacBook Air {chip} keyboard repair · Free diagnosis · 15-day warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

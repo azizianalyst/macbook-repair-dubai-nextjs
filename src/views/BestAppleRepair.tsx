@@ -15,12 +15,12 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const DEVICES = [
-  { icon: Laptop,     label: "MacBook",          from: "AED 450",  href: "/",                          detail: "Air, Pro 13–16\", Intel & M1–M5. Screen, battery, keyboard, logic board." },
-  { icon: Monitor,    label: "iMac",              from: "AED 600",  href: "/imac-repair-dubai",         detail: "21.5\", 24\", 27\" Retina 5K. Screen, SSD, power supply, fan." },
-  { icon: Monitor,    label: "Mac mini & Studio", from: "AED 400",  href: "/mac-mini-repair-dubai",     detail: "M1–M4 Mac mini, Mac Studio. Logic board, SSD, diagnostics." },
-  { icon: Smartphone, label: "iPhone",            from: "AED 179",  href: "/iphone-repair-dubai",       detail: "iPhone 6 through 17 Pro Max. Screen in 40 min, battery in 30 min." },
-  { icon: Tablet,     label: "iPad",              from: "AED 350",  href: "/ipad-repair-dubai",         detail: "mini, Air, standard, Pro 11/13\". Screen, battery, charging port." },
-  { icon: Watch,      label: "Apple Watch",       from: "AED 250",  href: "/apple-watch-repair-dubai",  detail: "Series 3 through Ultra 2. Screen, battery, water damage, crown." },
+  { icon: Laptop,     label: "MacBook",          from: "Price on request",  href: "/",                          detail: "Air, Pro 13–16\", Intel & M1–M5. Screen, battery, keyboard, logic board." },
+  { icon: Monitor,    label: "iMac",              from: "Price on request",  href: "/imac-repair-dubai",         detail: "21.5\", 24\", 27\" Retina 5K. Screen, SSD, power supply, fan." },
+  { icon: Monitor,    label: "Mac mini & Studio", from: "Price on request",  href: "/mac-mini-repair-dubai",     detail: "M1–M4 Mac mini, Mac Studio. Logic board, SSD, diagnostics." },
+  { icon: Smartphone, label: "iPhone",            from: "Price on request",  href: "/iphone-repair-dubai",       detail: "iPhone 6 through 17 Pro Max. Screen in 40 min, battery in 30 min." },
+  { icon: Tablet,     label: "iPad",              from: "Price on request",  href: "/ipad-repair-dubai",         detail: "mini, Air, standard, Pro 11/13\". Screen, battery, charging port." },
+  { icon: Watch,      label: "Apple Watch",       from: "Price on request",  href: "/apple-watch-repair-dubai",  detail: "Series 3 through Ultra 2. Screen, battery, water damage, crown." },
 ];
 
 const WHY_US = [
@@ -40,9 +40,9 @@ const FAQS = [
   { q: "Can one shop repair all my Apple devices in Dubai?",
     a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 17 Pro Max), iPad (all generations including Pro M5), and Apple Watch (Series 3 through Ultra 2). One workshop, one warranty card, one WhatsApp thread." },
   { q: "How does the best Apple repair in Dubai compare to Apple Store?",
-    a: "Apple Store cost 40–60% more for the same repair and only does module swaps (no component-level board repair). Independent specialists like us repair the specific component that failed, cheaper outcome, same device functionality. For repairs under AppleCare+, use Apple first. Out of warranty, independent repair is the better value in almost every case." },
+    a: "Apple Store typically costs far more for the same repair and only does module swaps (no component-level board repair). Independent specialists like us repair the specific component that failed, cheaper outcome, same device functionality. For repairs under AppleCare+, use Apple first. Out of warranty, independent repair is the better value in almost every case." },
   { q: "How much does Apple repair cost in Dubai?",
-    a: "MacBook screen from AED 499, iPhone screen from AED 179, iPad screen from AED 350, MacBook battery from AED 450, iPhone battery from AED 250, Apple Watch battery from AED 250. Logic board repair from AED 800. Diagnosis is always free. WhatsApp 055 741 3706 with your device model and fault for a fixed quote." },
+    a: "Apple repair cost in Dubai depends on your exact device and fault, covering MacBook, iPhone, iPad and Apple Watch screens, batteries and logic boards. Diagnosis is always free. WhatsApp 055 741 3706 with your device model and fault for a fixed quote before any work starts." },
   { q: "Do you repair Apple devices that are no longer supported by Apple?",
     a: "Yes, we repair MacBooks from 2012 onward, iPhones from iPhone 6, iPads from iPad Air 1st gen, and iMacs from 2013. Apple stops supporting older devices; independent specialists continue to repair them as long as parts and boards are available." },
   { q: "Do you offer Apple repair pickup in Dubai?",
@@ -55,9 +55,9 @@ export default function BestAppleRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best Apple Repair Dubai 2026. All Devices, From AED 179 | 5★ Since 2004",
+    title: "Best Apple Repair Dubai 2026. All Devices | 5★ Since 2004",
     description:
-      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. From AED 179. 216+ 5-star reviews. Written warranty up to 12 months. Free pickup. Call 055 741 3706.",
+      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. 216+ 5-star reviews. Written warranty up to 12 months. Free pickup. WhatsApp for a quote.",
     path: "/best-apple-repair-dubai",
   });
 
@@ -71,7 +71,7 @@ export default function BestAppleRepair() {
           tone="dark"
           eyebrow="Best Apple repair · Dubai · Since 2004"
           title="Best Apple Repair in Dubai, 2026"
-          subtitle="Every Apple device. MacBook, iMac, iPhone, iPad, Apple Watch. From AED 179. 5.0 stars · 216+ reviews. Free pickup. Warranty up to 12 months."
+          subtitle="Every Apple device. MacBook, iMac, iPhone, iPad, Apple Watch. Message us on WhatsApp for a fixed quote. 5.0 stars · 216+ reviews. Free pickup. Warranty up to 12 months."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 216+ reviews</span>
@@ -92,13 +92,13 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, every Apple device repaired (MacBook, iMac, iPhone, iPad, Apple Watch), from AED 179, 5.0 stars from 216+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706."
+            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, every Apple device repaired (MacBook, iMac, iPhone, iPad, Apple Watch), 5.0 stars from 216+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device."
           />
         </section>
 
         {/* Device grid */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Every Apple device repaired, starting prices</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Every Apple device repaired</h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One specialist for the whole Apple ecosystem, not a shop that does iPhones and subcontracts everything else.</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {DEVICES.map(({ icon: Icon, label, from, href, detail }) => (
@@ -107,7 +107,7 @@ export default function BestAppleRepair() {
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
                 </div>
-                <p className="text-[22px] font-bold text-accent">From {from}</p>
+                <p className="text-[22px] font-bold text-accent">{from}</p>
                 <p className="text-[13px] text-text-muted leading-relaxed">{detail}</p>
               </a>
             ))}

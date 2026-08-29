@@ -7,7 +7,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 External Monitor Not Detected Dubai 2026: Fix Guide"
-      seoDescription="MacBook Pro M4 external monitor not detected in Dubai? Thunderbolt 5 dock drops, display not showing, wrong resolution. Step-by-step fix guide. Port repair from AED 350."
+      seoDescription="MacBook Pro M4 external monitor not detected in Dubai? Thunderbolt 5 dock drops, display not showing, wrong resolution. Step-by-step fix guide + free diagnosis."
       path="/blog/macbook-pro-m4-external-monitor-not-detected-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 External Monitor Not Detected in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M4 external monitor not being detected is one of the most reported issues on Apple Community since the M4's launch. Most cases trace to outdated Thunderbolt 5 dock firmware, display cable mismatches, or the M4 Pro's two-display limit being exceeded. Free diagnosis in Dubai. Port repair from AED 350."
+      hook="MacBook Pro M4 external monitor not being detected is one of the most reported issues on Apple Community since the M4's launch. Most cases trace to outdated Thunderbolt 5 dock firmware, display cable mismatches, or the M4 Pro's two-display limit being exceeded. Free diagnosis in Dubai. Message us on WhatsApp for today's exact port repair price on your M4."
       quickAnswer="MacBook Pro M4 external monitor not detected: update your Thunderbolt 5 dock firmware first (CalDigit, OWC, Belkin all have TB5 updates). Check you are using a Thunderbolt 5 cable, not a USB-C cable. In System Settings, Displays, hold Option and click Detect Displays. M4 Pro supports 2 external displays; M4 Max supports 4. A third monitor on M4 Pro needs a DisplayLink adapter."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -142,9 +142,9 @@ export default function BlogMacBookProM4ExternalMonitor() {
           <BlogPriceTable
             caption="MacBook Pro M4 port repair pricing. June 2026"
             rows={[
-              { model: "TB5 port repair (M4 14 or 16-inch)", ours: "AED 350", apple: "AED 950+", note: "Port replacement or controller rework" },
-              { model: "HDMI port repair (M4 16-inch)", ours: "AED 300", apple: "AED 800+", note: "HDMI connector replacement" },
-              { model: "Port diagnostic (all ports)", ours: "Free", apple: "AED 250", note: "Test all 3 TB5 + HDMI before committing" },
+              { model: "TB5 port repair (M4 14 or 16-inch)", ours: "Price on request", apple: "Apple Store", note: "Port replacement or controller rework" },
+              { model: "HDMI port repair (M4 16-inch)", ours: "Price on request", apple: "Apple Store", note: "HDMI connector replacement" },
+              { model: "Port diagnostic (all ports)", ours: "Free", apple: "Apple Store", note: "Test all 3 TB5 + HDMI before committing" },
             ]}
           />
 
@@ -155,7 +155,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
             <li>Port delivers USB power and data but no video on any monitor or cable tested</li>
           </ul>
           <p>
-            Board-level TB5 controller repair from AED 1,200. Free diagnostic first.{" "}
+            Board-level TB5 controller repair is available in Dubai — message us on WhatsApp for the exact price on your M4. Free diagnostic first.{" "}
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair Dubai
             </Link>
@@ -185,7 +185,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
         },
         {
           q: "How much does MacBook Pro M4 Thunderbolt port repair cost in Dubai?",
-          a: "Thunderbolt 5 port repair costs AED 350 at our Dubai workshop. Free diagnostic first to confirm whether it is a port fault, dock firmware issue, or cable problem before any repair is started. Same-day repair in most cases.",
+          a: "Message us on WhatsApp for today's exact Thunderbolt 5 port repair price on your M4 at our Dubai workshop. Free diagnostic first to confirm whether it is a port fault, dock firmware issue, or cable problem before any repair is started. Same-day repair in most cases.",
         },
       ]}
       relatedLinks={[

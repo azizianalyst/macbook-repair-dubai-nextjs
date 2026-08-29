@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM1ScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M1 Screen Repair Cost Dubai 2026: LCD and mini-LED Prices"
-      seoDescription="MacBook Pro M1 screen repair cost in Dubai 2026. M1 13-inch IPS LCD from AED 450. M1 Pro/Max 14/16-inch mini-LED from AED 500. Same-day service. 12-month warranty."
+      seoTitle="MacBook Pro M1 Screen Repair Dubai 2026: LCD and mini-LED"
+      seoDescription="MacBook Pro M1 screen repair in Dubai 2026. M1 13-inch IPS LCD and M1 Pro/Max mini-LED. Same-day service, 12-month warranty. Message us on WhatsApp for your price."
       path="/blog/macbook-pro-m1-screen-repair-cost-dubai"
       wide
       toc={[
@@ -22,9 +22,9 @@ export default function BlogMacBookProM1ScreenRepair() {
         { id: "when-cable", label: "When only cable needs replacing" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M1 Screen Repair Cost in Dubai 2026: LCD and mini-LED Prices"
-      hook="MacBook Pro M1 screen repair in Dubai costs AED 450-600 depending on model, significantly less than Apple's AED 950-1,200+. M1 13-inch uses an IPS LCD (same technology as M2 13-inch). M1 Pro and M1 Max 14/16-inch use the first-generation mini-LED panels. At 5 years old, M1 display cable faults are now appearing alongside physical damage as common repair reasons."
-      quickAnswer="MacBook Pro M1 screen repair Dubai: M1 13-inch LCD = AED 450. M1 Pro 14-inch mini-LED = AED 500. M1 Max 16-inch mini-LED = AED 600. Free diagnosis. Same-day service. 12-month warranty on replacement panels. If screen flickers only at certain lid angles, display cable replacement (AED 180) may be all that is needed. No data loss during screen repair."
+      h1="MacBook Pro M1 Screen Repair in Dubai 2026: LCD and mini-LED"
+      hook="MacBook Pro M1 screen repair in Dubai costs significantly less than Apple, and pricing depends on your exact model. M1 13-inch uses an IPS LCD (same technology as M2 13-inch). M1 Pro and M1 Max 14/16-inch use the first-generation mini-LED panels. At 5 years old, M1 display cable faults are now appearing alongside physical damage as common repair reasons. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M1 screen repair Dubai: we replace M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels. Free diagnosis. Same-day service. 12-month warranty on replacement panels. If your screen flickers only at certain lid angles, a display cable replacement may be all that is needed. No data loss during screen repair. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -53,7 +53,7 @@ export default function BlogMacBookProM1ScreenRepair() {
             <li><strong>Cracked glass with no dead pixels</strong>: glass crack with functional display behind it. On M1 13-inch, glass-only replacement may be possible at lower cost. On M1 Pro/Max mini-LED, glass and panel are integrated: full panel replacement required</li>
             <li><strong>Black screen (backlight failure)</strong>: use a bright torch. If you can faintly see content, the backlight has failed. On M1 13-inch, backlight board can sometimes be repaired separately. On mini-LED, the LED array requires panel replacement</li>
             <li><strong>Lines or dead pixel columns</strong>: column driver damage from impact. Full panel replacement on all M1 models</li>
-            <li><strong>Flickering at certain lid angles</strong>: display cable micro-fracture. Cable replacement (AED 180) rather than full panel replacement</li>
+            <li><strong>Flickering at certain lid angles</strong>: display cable micro-fracture. Cable replacement rather than full panel replacement, so message us for the exact price</li>
             <li><strong>Pressure marks or colour bleed</strong>: physical pressure damage to LCD layers. Requires panel replacement. Check for bag strap pressure on closed lid as a cause</li>
           </ul>
 
@@ -114,13 +114,14 @@ export default function BlogMacBookProM1ScreenRepair() {
 
           <h2 id="repair-cost">MacBook Pro M1 screen repair cost in Dubai 2026</h2>
           <BlogPriceTable
-            caption="MacBook Pro M1 screen repair pricing. June 2026"
+            caption="MacBook Pro M1 screen repair. June 2026"
+            headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "AED 450", apple: "AED 950+", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "AED 500", apple: "AED 1,050+", note: "Liquid Retina XDR, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "AED 600", apple: "AED 1,200+", note: "Liquid Retina XDR, 12-month warranty" },
-              { model: "Display cable (M1 13-inch hinge cable)", ours: "AED 180", apple: "Full panel assembly", note: "Flicker at specific lid angles: cable fault" },
-              { model: "Screen diagnostic", ours: "Free", apple: "AED 250", note: "Damage type: cable vs panel vs GPU" },
+              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Full panel assembly", note: "Full LCD panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 12-month warranty, same-day" },
+              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 12-month warranty" },
+              { model: "Display cable (M1 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "Flicker at specific lid angles: cable fault" },
+              { model: "Screen diagnostic", ours: "Free", apple: "Charged", note: "Damage type: cable vs panel vs GPU" },
             ]}
           />
 
@@ -142,7 +143,7 @@ export default function BlogMacBookProM1ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M1 screen repair cost in Dubai?",
-          a: "MacBook Pro M1 13-inch LCD screen replacement costs AED 450. M1 Pro 14-inch mini-LED costs AED 500. M1 Max 16-inch mini-LED costs AED 600. Display cable replacement (if only the cable is faulty) costs AED 180. All with 12-month warranty. Apple charges AED 950-1,200+. Free diagnosis to confirm damage scope.",
+          a: "We replace the M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels, plus the display cable on its own if only the cable is faulty. All come with a 12-month warranty and cost noticeably less than Apple. Free diagnosis confirms the damage scope. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does MacBook Pro M1 13-inch use the same screen as M1 Pro 14-inch?",
@@ -162,7 +163,7 @@ export default function BlogMacBookProM1ScreenRepair() {
         },
         {
           q: "How do I know if MacBook Pro M1 only needs display cable, not full screen?",
-          a: "Do the lid angle test: while flickering is visible, slowly open and close the lid by 10-15 degrees. If the flicker changes or disappears at certain angles, the cable has micro-fractures at the hinge bend. Cable replacement (AED 180) is sufficient. If flickering is constant regardless of angle, or there is physical damage (cracks, dead pixels), full panel replacement is needed.",
+          a: "Do the lid angle test: while flickering is visible, slowly open and close the lid by 10-15 degrees. If the flicker changes or disappears at certain angles, the cable has micro-fractures at the hinge bend. A cable replacement is sufficient and cheaper than a full panel, so message us for the exact price. If flickering is constant regardless of angle, or there is physical damage (cracks, dead pixels), full panel replacement is needed.",
         },
       ]}
       relatedLinks={[

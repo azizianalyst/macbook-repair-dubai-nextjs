@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProM2ScreenRepair";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M2 Screen Repair Cost Dubai 2026",
-  description: "MacBook Pro M2 screen repair cost in Dubai 2026. M2 13-inch uses IPS LCD. M2 Pro/Max 14/16-inch uses mini-LED. Same-day repair from AED 450. All models covered.",
+  description: "MacBook Pro M2 screen repair in Dubai 2026. M2 13-inch uses IPS LCD; M2 Pro/Max 14/16-inch mini-LED. Same-day service, all models. Message us on WhatsApp for pricing.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

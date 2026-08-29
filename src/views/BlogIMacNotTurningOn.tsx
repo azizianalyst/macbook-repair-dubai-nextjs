@@ -6,7 +6,7 @@ export default function BlogIMacNotTurningOn() {
   return (
     <BlogPostTemplate
       seoTitle="iMac Not Turning On? Power Supply Fix Guide 2026"
-      seoDescription="iMac 27″ 2017-2020 power supply failures are common. Symptoms, the LED-count diagnostic trick, and repair from AED 400 plus the PSU part in Dubai."
+      seoDescription="iMac 27″ 2017-2020 power supply failures are common. Symptoms, the LED-count diagnostic trick, and same-day PSU repair in Dubai. Message us for a quote."
       path="/blog/imac-not-turning-on-power-supply-issues"
       wide
       toc={[
@@ -22,7 +22,7 @@ export default function BlogIMacNotTurningOn() {
       category="Problem solving · iMac"
       h1="iMac Not Turning On? Power Supply Issues Explained"
       hook="iMac 27-inch 2017-2020 power supply failures are widespread by 2026 - here's how to confirm the diagnosis, the LED count trick, and what the repair costs."
-      quickAnswer="If your iMac won't power on with no fan spin and no chime, the usual cause on 27″ 2017-2020 models is a failed internal power supply (PSU). Diagnose by counting the LEDs through the back vent: 1 LED means 12V is present, 0 means the PSU is dead. Repair is AED 400 labour plus AED 250-400 for the part."
+      quickAnswer="If your iMac won't power on with no fan spin and no chime, the usual cause on 27″ 2017-2020 models is a failed internal power supply (PSU). Diagnose by counting the LEDs through the back vent: 1 LED means 12V is present, 0 means the PSU is dead. It's usually a same-day component-level repair - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Ali", role: "Senior iMac repair technician" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -94,19 +94,20 @@ export default function BlogIMacNotTurningOn() {
             office storerooms see 5-6 years.
           </p>
 
-          <h2 id="repair-cost">Repair cost - AED 400 labour + PSU part</h2>
+          <h2 id="repair-cost">Repair cost - labour + PSU part</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Labour:</strong> AED 400 (full disassembly: glass, LCD, logic board removal, PSU swap, reassembly with new adhesive seal)</li>
-            <li><strong>PSU part - iMac 27″ 2017/2019:</strong> AED 250-350 (refurbished tested) or AED 450 (new old stock)</li>
-            <li><strong>PSU part - iMac 27″ 2020:</strong> AED 350-450 (less common, costs more)</li>
-            <li><strong>PSU part - iMac 21.5″ 4K:</strong> AED 200-300</li>
-            <li><strong>Adhesive re-seal kit:</strong> AED 50 (included)</li>
-            <li><strong>Total typical:</strong> AED 700-850 same-day</li>
+            <li><strong>Labour:</strong> full disassembly - glass, LCD, logic board removal, PSU swap, reassembly with new adhesive seal</li>
+            <li><strong>PSU part - iMac 27″ 2017/2019:</strong> refurbished tested, or new old stock</li>
+            <li><strong>PSU part - iMac 27″ 2020:</strong> less common, priced accordingly</li>
+            <li><strong>PSU part - iMac 21.5″ 4K:</strong> smaller unit</li>
+            <li><strong>Adhesive re-seal kit:</strong> included</li>
+            <li><strong>Turnaround:</strong> typically same-day</li>
           </ul>
           <p>
-            Compare to Apple Store: out-of-warranty iMac 27″ "Service" cost is AED 2,899 (whole
-            logic board + PSU swap whether needed or not). Our component-level approach saves
-            AED 2,000+ for the same outcome.
+            Our component-level PSU swap is dramatically cheaper than the Apple Store's
+            out-of-warranty iMac 27″ "Service" tier, which replaces the whole logic board and PSU
+            whether needed or not. Message us on WhatsApp for today's exact price on your model -
+            free diagnosis, and we only charge for the fix your iMac actually needs.
           </p>
 
           <h2 id="repair-time">How long the repair takes</h2>
@@ -132,22 +133,23 @@ export default function BlogIMacNotTurningOn() {
             <li>
               <strong>Display adhesive is unforgiving.</strong> The iMac display is glued to the
               aluminum chassis. DIY removal without a heated separation table almost always
-              cracks the LCD or chips the front glass. A AED 250 PSU repair becomes a AED 1,200
-              display + PSU repair.
+              cracks the LCD or chips the front glass, turning a straightforward PSU repair into
+              a far more expensive display + PSU repair.
             </li>
           </ol>
           <p>
-            iFixit sells a heated table and discharge tools for AED 1,500. If you're an
-            experienced electronics technician with a fume hood, sure. For everyone else, the
-            AED 700 we charge is genuinely the right answer.
+            The heated separation table and discharge tools this job needs cost more than most
+            people will ever recoup on a single repair. If you're an experienced electronics
+            technician with a fume hood, sure. For everyone else, letting us handle it is
+            genuinely the right answer - message us on WhatsApp for a quote.
           </p>
 
           <h2 id="apple-stance">Apple's stance - won't repair out-of-warranty</h2>
           <p>
             Apple Stores and AASPs in UAE will quote the "iMac whole logic board + PSU + display"
-            module replacement at AED 2,899-3,599 because that's the official Apple service tier.
-            They won't isolate the PSU. If your iMac is older than 6 years, Apple may decline
-            service entirely under "vintage and obsolete products" policy.
+            module replacement, because that's the official Apple service tier - and it costs far
+            more than an isolated PSU swap. They won't isolate the PSU. If your iMac is older than
+            6 years, Apple may decline service entirely under "vintage and obsolete products" policy.
           </p>
           <p>
             Our shop is one of about 4 in Dubai that does iMac PSU swap as a standalone service.
@@ -174,7 +176,7 @@ export default function BlogIMacNotTurningOn() {
         },
         {
           q: "Is it worth repairing a 7-year-old iMac, or should I buy a new one?",
-          a: "If the iMac display, SSD, and macOS install are still serving you well, AED 700 PSU repair extends the life by 3-5 years and is genuinely good value. If you're already considering a Mac mini M4 or iMac M3 upgrade for performance reasons, factor that in. We'll give honest advice - sometimes we recommend not repairing.",
+          a: "If the iMac display, SSD, and macOS install are still serving you well, a PSU repair extends the life by 3-5 years and is genuinely good value versus buying new. If you're already considering a Mac mini M4 or iMac M3 upgrade for performance reasons, factor that in. Message us on WhatsApp for a quote - we'll give honest advice, and sometimes we recommend not repairing.",
         },
         {
           q: "Will my data be safe during the PSU repair?",

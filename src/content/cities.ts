@@ -835,7 +835,7 @@ const BASE_CITIES: CityConfig[] = [
       },
       {
         "q": "How much is a typical MacBook repair?",
-        "a": "Screen repairs start at AED 780 and batteries from around AED 590, both VAT-inclusive, but the honest answer is it depends on the model and fault. We give you a fixed written price after the free diagnostic in Dubai, and nothing happens until you approve it. No surprise charges land on the return courier. WhatsApp the serial and we can usually narrow it down in a few minutes."
+        "a": "It depends on the model and the fault, and every price is VAT-inclusive with no surprise charges on the return courier. We give you a fixed written price after the free diagnostic in Dubai, and nothing happens until you approve it. WhatsApp the serial and we can usually narrow down your exact price in a few minutes."
       },
       {
         "q": "Will I lose my data or True Tone during the repair?",

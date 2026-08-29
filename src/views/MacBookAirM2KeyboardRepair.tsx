@@ -7,14 +7,14 @@ export default function MacBookAirM2KeyboardRepair() {
       path="/macbook-air-m2-keyboard-repair-dubai"
       chip="M2"
       years="2022–2023"
-      seoTitle="MacBook Air M2 Keyboard Repair Dubai — From AED 300"
-      seoDescription="MacBook Air M2 keyboard repair Dubai from AED 300. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Same-day service. Call 055 741 3706."
+      seoTitle="MacBook Air M2 Keyboard Repair Dubai — Same-Day"
+      seoDescription="MacBook Air M2 keyboard repair Dubai. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Same-day service. Message us for your price on WhatsApp."
       h1="MacBook Air M2 Keyboard Repair Dubai"
       eyebrow="M2 Air Magic Keyboard specialist · Dubai Media City · Same-day"
       keyboardType="Magic Keyboard (scissor switch)"
       switchMechanism="Scissor mechanism — 1 mm travel"
       touchId={true}
-      heroAnswer="MacBook Air M2 keyboard repair costs from AED 300 at MacBook Repair Dubai. The M2 Air (2022–2023) uses the same Magic Keyboard scissor-switch mechanism as the M1, but with a redesigned chassis and a new 15-inch size in 2023. Individual key caps can be replaced in most cases without a full top-case replacement. Same-day service on both 13-inch and 15-inch models."
+      heroAnswer="MacBook Air M2 keyboard repair is available same-day at MacBook Repair Dubai — message us on WhatsApp for today's exact price on your model. The M2 Air (2022–2023) uses the same Magic Keyboard scissor-switch mechanism as the M1, but with a redesigned chassis and a new 15-inch size in 2023. Individual key caps can be replaced in most cases without a full top-case replacement. Same-day service on both 13-inch and 15-inch models."
       chipUniquePoints={[
         "The MacBook Air M2 (2022) was a complete chassis redesign — flat top, no taper, new Midnight/Starlight/Silver/Space Grey colours. The keyboard layout is the same Magic Keyboard scissor switch as the M1 Air but with a revised function row (new emojis key on some configurations). The key caps and scissor mechanisms are M2-specific in some positions but the repair process is identical to M1.",
         "The M2 15-inch Air (2023) is the largest Air keyboard ever — a 15.3-inch chassis with a full-size keyboard layout including more spacing between keys. Key caps on the 15-inch are the same size as the 13-inch but the top-case assembly is a different (larger) unit. We stock top-case assemblies for both 13-inch and 15-inch M2 Air.",
@@ -55,7 +55,7 @@ export default function MacBookAirM2KeyboardRepair() {
       faults={[
         {
           title: "Single key stuck or not registering — M2 13-inch",
-          body: "Scissor mechanism wear or a broken clip on one key. Individual key cap and scissor replacement from AED 300, same-day. No need for full top-case if only one or two keys are affected.",
+          body: "Scissor mechanism wear or a broken clip on one key. Individual key cap and scissor replacement, same-day — message us for the exact price on your model. No need for full top-case if only one or two keys are affected.",
         },
         {
           title: "Midnight M2 Air keyboard — key caps fading unevenly",
@@ -81,7 +81,7 @@ export default function MacBookAirM2KeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M2 keyboard repair cost in Dubai?",
-          a: "MacBook Air M2 13-inch keyboard repair starts from AED 300 for individual keys, AED 480 for full top-case. 15-inch starts from AED 320 for individual keys, AED 520 for full top-case. Apple charges AED 549 (13-inch) and AED 599 (15-inch). Same-day service at MacBook Repair Dubai.",
+          a: "MacBook Air M2 keyboard repair covers both individual key caps and full top-case replacement, on the 13-inch and 15-inch. Pricing depends on your exact model and whether it's a single key or a full top-case — message us on WhatsApp for today's exact price. Same-day service at MacBook Repair Dubai, and we're typically well below Apple's counter price.",
         },
         {
           q: "Can the MacBook Air M2 15-inch keyboard be repaired individually?",

@@ -7,7 +7,7 @@ export default function BlogMacBookAirKeyboard() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Air Keyboard Not Working Dubai 2026: Butterfly vs Scissor Fix Guide"
-      seoDescription="MacBook Air keyboard not working in Dubai? Butterfly (Intel 2018-2019) vs scissor (Intel 2020, M-series) explained. Key stuck, double-typing fix. Repair from AED 300."
+      seoDescription="MacBook Air keyboard not working in Dubai? Butterfly (Intel 2018-2019) vs scissor (Intel 2020, M-series) explained. Key stuck, double-typing fix. Free diagnosis, same-day."
       path="/blog/macbook-air-keyboard-not-working-dubai"
       wide
       toc={[
@@ -24,7 +24,7 @@ export default function BlogMacBookAirKeyboard() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air Keyboard Not Working in Dubai? Butterfly vs Scissor Fix Guide 2026"
       hook="MacBook Air keyboard failures split into two completely different problems depending on your model. The 2018-2019 Intel Air has the notoriously fragile butterfly mechanism. Every other Air has scissor keys. The fixes are totally different. Here is what to do for each."
-      quickAnswer="MacBook Air keyboard not working: first try a soft reset (hold Power 10 sec), then check for stuck keys under bright light. Intel 2018-2019 butterfly keyboards fail from a single dust particle under the key. M-series scissor keyboards usually fail from liquid ingress or a driver crash (fix: boot to Recovery Mode and reinstall). If individual keys are completely dead, it is the top-case assembly. Repair from AED 300 in Dubai."
+      quickAnswer="MacBook Air keyboard not working: first try a soft reset (hold Power 10 sec), then check for stuck keys under bright light. Intel 2018-2019 butterfly keyboards fail from a single dust particle under the key. M-series scissor keyboards usually fail from liquid ingress or a driver crash (fix: boot to Recovery Mode and reinstall). If individual keys are completely dead, it is the top-case assembly. We diagnose for free in Dubai — message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -182,13 +182,13 @@ export default function BlogMacBookAirKeyboard() {
             </thead>
             <tbody>
               {[
-                ["MacBook Air 2017", "Scissor", "2mm", "Good", "AED 150-300"],
-                ["MacBook Air 2018", "Butterfly (4th gen)", "1mm", "Very poor", "AED 200 clean / AED 900 top-case"],
-                ["MacBook Air 2019", "Butterfly (4th gen)", "1mm", "Very poor", "AED 200 clean / AED 900 top-case"],
-                ["MacBook Air 2020 Intel", "Scissor", "1mm", "Good", "AED 150-900"],
-                ["MacBook Air M1 (2020)", "Scissor", "1mm", "Good", "AED 150-800"],
-                ["MacBook Air M2 (2022)", "Scissor", "1mm", "Good", "AED 150-800"],
-                ["MacBook Air M3/M4/M5 (2024-2026)", "Scissor", "1mm", "Good", "AED 150-850"],
+                ["MacBook Air 2017", "Scissor", "2mm", "Good", "Price on request"],
+                ["MacBook Air 2018", "Butterfly (4th gen)", "1mm", "Very poor", "Price on request"],
+                ["MacBook Air 2019", "Butterfly (4th gen)", "1mm", "Very poor", "Price on request"],
+                ["MacBook Air 2020 Intel", "Scissor", "1mm", "Good", "Price on request"],
+                ["MacBook Air M1 (2020)", "Scissor", "1mm", "Good", "Price on request"],
+                ["MacBook Air M2 (2022)", "Scissor", "1mm", "Good", "Price on request"],
+                ["MacBook Air M3/M4/M5 (2024-2026)", "Scissor", "1mm", "Good", "Price on request"],
               ].map((row) => (
                 <tr key={row[0]} className="border-t border-border">
                   {row.map((cell, i) => (
@@ -207,11 +207,11 @@ export default function BlogMacBookAirKeyboard() {
           <BlogPriceTable
             caption="MacBook Air keyboard repair pricing. June 2026"
             rows={[
-              { model: "Butterfly keyboard cleaning (Intel 2018-2019)", ours: "AED 200", apple: "AED 400" },
-              { model: "Top-case replacement: Intel 2018-2020", ours: "AED 900", apple: "AED 1,499" },
-              { model: "Top-case replacement: M1/M2", ours: "AED 800", apple: "AED 1,399" },
-              { model: "Top-case replacement: M3/M4/M5", ours: "AED 850", apple: "AED 1,499" },
-              { model: "Individual keycap replacement: scissor", ours: "AED 150", apple: "AED 300" },
+              { model: "Butterfly keyboard cleaning (Intel 2018-2019)", ours: "Price on request", apple: "Price on request" },
+              { model: "Top-case replacement: Intel 2018-2020", ours: "Price on request", apple: "Price on request" },
+              { model: "Top-case replacement: M1/M2", ours: "Price on request", apple: "Price on request" },
+              { model: "Top-case replacement: M3/M4/M5", ours: "Price on request", apple: "Price on request" },
+              { model: "Individual keycap replacement: scissor", ours: "Price on request", apple: "Price on request" },
             ]}
           />
           <p>

@@ -4,7 +4,7 @@ import View from "@/views/BlogMacBookProM1ScreenRepair";
 
 export const metadata: Metadata = {
   title: "MacBook Pro M1 Screen Repair Cost Dubai 2026",
-  description: "MacBook Pro M1 screen repair cost in Dubai 2026. M1 13-inch IPS LCD from AED 450. M1 Pro/Max 14/16-inch mini-LED from AED 500. Same-day service.",
+  description: "MacBook Pro M1 screen repair in Dubai 2026. M1 13-inch IPS LCD and M1 Pro/Max 14/16-inch mini-LED displays. Same-day service — WhatsApp us for your exact price.",
   openGraph: {
     type: "article",
     publishedTime: "2026-06-22",

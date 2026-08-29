@@ -70,7 +70,7 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             cracks within 1-2 weeks.
           </p>
           <p>
-            Stabilise immediately with a tempered-glass screen protector (any AED 30 one from a phone
+            Stabilise immediately with a tempered-glass screen protector (any cheap one from a phone
             shop). This won't repair the crack but will slow humidity ingress by ~50%.
           </p>
 
@@ -139,22 +139,22 @@ export default function BlogIPhoneScreenCrackedUrgent() {
             caption="Repair cost: glass-only vs full display by iPhone (April 2026)"
             headers={["iPhone model", "Glass-only (early)", "Full display (late)", "Premium for waiting"]}
             rows={[
-              { model: "iPhone 17 Pro Max", ours: "AED 850", apple: "AED 1,250", note: "+ AED 400" },
-              { model: "iPhone 17 Pro", ours: "AED 750", apple: "AED 1,100", note: "+ AED 350" },
-              { model: "iPhone 17", ours: "AED 550", apple: "AED 750", note: "+ AED 200" },
-              { model: "iPhone 16 Pro Max", ours: "AED 700", apple: "AED 1,050", note: "+ AED 350" },
-              { model: "iPhone 16 Pro", ours: "AED 650", apple: "AED 950", note: "+ AED 300" },
-              { model: "iPhone 16", ours: "AED 500", apple: "AED 700", note: "+ AED 200" },
-              { model: "iPhone 15 Pro Max", ours: "AED 600", apple: "AED 900", note: "+ AED 300" },
-              { model: "iPhone 15", ours: "AED 400", apple: "AED 550", note: "+ AED 150" },
-              { model: "iPhone 14 Pro", ours: "AED 500", apple: "AED 750", note: "+ AED 250" },
-              { model: "iPhone 13 Pro Max", ours: "AED 450", apple: "AED 650", note: "+ AED 200" },
+              { model: "iPhone 17 Pro Max", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 17 Pro", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 17", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 16 Pro Max", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 16 Pro", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 16", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 15 Pro Max", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 15", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 14 Pro", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
+              { model: "iPhone 13 Pro Max", ours: "Price on request", apple: "Price on request", note: "Waiting costs more" },
             ]}
           />
           <p>
             Glass-only repair is only possible while the OLED underneath is undamaged. Once bleeding or
-            dead-touch starts, only full display works. <strong>Acting within 7 days saves AED 200-400
-            on average.</strong>
+            dead-touch starts, only full display works. <strong>Acting within 7 days keeps you on the
+            cheaper glass-only repair - message us on WhatsApp for today's exact price on your model.</strong>
           </p>
           <p>
             Compare with our full pricing on the{" "}

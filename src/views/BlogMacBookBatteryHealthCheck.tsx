@@ -13,7 +13,7 @@ export default function BlogMacBookBatteryHealthCheck() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Battery Health Check: Every Method (2026)"
-      seoDescription="Check MacBook battery health 3 ways: System Settings, Option-click, Terminal. Cycle-count limits per model, M1-M5 chemistry, when to replace at AED 450+."
+      seoDescription="Check MacBook battery health 3 ways: System Settings, Option-click, Terminal. Cycle-count limits per model, M1-M5 chemistry, and when to replace. WhatsApp for price."
       path="/blog/macbook-battery-health-check-guide"
       wide
       toc={[
@@ -174,8 +174,8 @@ export default function BlogMacBookBatteryHealthCheck() {
             <Link to="/blog/macbook-battery-replacement-cost-2026" className="text-accent font-semibold hover:underline">
               MacBook battery cost guide
             </Link>{" "}
-            for every model. Quick summary: AED 450-500 for Air, AED 600-650 for 14″ Pro, AED
-            700 for 16″ Pro. Same-day. 3-month warranty.
+            for every model. Battery replacement covers every MacBook Air and Pro - message us on
+            WhatsApp for today's exact price on your model. Same-day. 3-month warranty.
           </p>
         </>
       }
@@ -198,7 +198,7 @@ export default function BlogMacBookBatteryHealthCheck() {
         },
         {
           q: "Will Apple replace my battery if it shows 'Service Recommended'?",
-          a: "Out-of-warranty: yes, AED 700-1,200 depending on model at Apple Store. Inside the 1-year Apple warranty: only if capacity is below 80% AND there's no liquid/physical damage. AppleCare+ covers it at no charge if below 80%.",
+          a: "Out-of-warranty: yes, at Apple Store prices that vary by model. Inside the 1-year Apple warranty: only if capacity is below 80% AND there's no liquid/physical damage. AppleCare+ covers it at no charge if below 80%. For an independent same-day option, message us on WhatsApp for today's price on your model.",
         },
         {
           q: "What's a good free app for detailed battery diagnostics?",

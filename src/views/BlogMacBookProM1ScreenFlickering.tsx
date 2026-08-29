@@ -7,7 +7,7 @@ export default function BlogMacBookProM1ScreenFlickering() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Screen Flickering Dubai 2026: Display and Trackpad Fix"
-      seoDescription="MacBook Pro M1 screen flickering in Dubai? Big Sur and Monterey display bugs, display cable fault, or GPU rendering issue. Trackpad also affected? Screen repair from AED 450."
+      seoDescription="MacBook Pro M1 screen flickering in Dubai? Big Sur and Monterey display bugs, display cable fault, or GPU rendering issue. Trackpad also affected? WhatsApp us for a quote."
       path="/blog/macbook-pro-m1-screen-flickering-dubai"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogMacBookProM1ScreenFlickering() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Screen Flickering in Dubai? Here is Why and How to Fix It"
-      hook="MacBook Pro M1 screen flickering has two distinct patterns on Apple Community: Big Sur 11.x and Monterey 12.0 had documented GPU rendering bugs causing intermittent display flickering that appeared with external monitors or after waking from sleep. At 4-5 years, display cable fatigue on the M1 13-inch now produces angle-dependent flickering. Screen repair starts at AED 450 in Dubai for hardware faults."
+      hook="MacBook Pro M1 screen flickering has two distinct patterns on Apple Community: Big Sur 11.x and Monterey 12.0 had documented GPU rendering bugs causing intermittent display flickering that appeared with external monitors or after waking from sleep. At 4-5 years, display cable fatigue on the M1 13-inch now produces angle-dependent flickering. Message us on WhatsApp for today's exact screen repair price on your model in Dubai."
       quickAnswer="MacBook Pro M1 screen flickering: take a screenshot (Cmd+Shift+3). If flicker appears in the screenshot file, the GPU or display panel is rendering corrupted frames. If screenshot is clean, the display cable or panel backplane is the fault. For software flickering after wake from sleep: update to Monterey 12.3+ and disable True Tone (System Settings, Displays, True Tone: Off) as a test. True Tone calibration conflicts caused flicker on M1 in early macOS versions."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -59,7 +59,7 @@ export default function BlogMacBookProM1ScreenFlickering() {
           <h2 id="step-3">Step 3: Display cable angle test for MacBook Pro M1</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>While flickering is visible on screen, slowly adjust the lid angle up and down by 10-15 degrees</li>
-            <li><strong>Flicker changes or stops at specific angles</strong>: display cable fault. The cable has micro-fractures that break contact at certain bend positions. Cable replacement costs AED 180, cheaper than full panel replacement</li>
+            <li><strong>Flicker changes or stops at specific angles</strong>: display cable fault. The cable has micro-fractures that break contact at certain bend positions. Cable replacement is cheaper than a full panel replacement, message us on WhatsApp for the exact price</li>
             <li><strong>Flicker constant regardless of angle</strong>: not a cable fault. Panel or GPU path is the issue</li>
             <li>The M1 13-inch display cable is similar in routing to the M2 13-inch and carries the same fatigue risk at the hinge bend point</li>
           </ul>
@@ -89,11 +89,11 @@ export default function BlogMacBookProM1ScreenFlickering() {
           <BlogPriceTable
             caption="MacBook Pro M1 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "AED 450", apple: "AED 950+", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "AED 500", apple: "AED 1,050+", note: "Liquid Retina XDR, 12-month warranty" },
-              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "AED 600", apple: "AED 1,200+", note: "Liquid Retina XDR, 12-month warranty" },
-              { model: "Display cable (M1 13-inch hinge cable)", ours: "AED 180", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
-              { model: "Screen diagnostic", ours: "Free", apple: "AED 250", note: "Software vs cable vs panel determination" },
+              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty" },
+              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty" },
+              { model: "Display cable (M1 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
+              { model: "Screen diagnostic", ours: "Free", apple: "Price on request", note: "Software vs cable vs panel determination" },
             ]}
           />
 
@@ -126,11 +126,11 @@ export default function BlogMacBookProM1ScreenFlickering() {
         },
         {
           q: "How do I do a MacBook Pro M1 lid angle test for display cable fault?",
-          a: "While flickering is visible, slowly open and close the lid by 10-15 degrees. If the flicker changes, disappears, or worsens at specific lid angles, the display cable has micro-fractures at the hinge bend. Cable replacement costs AED 180, less than full panel replacement. If flicker is constant at all lid angles, the panel or GPU is the fault.",
+          a: "While flickering is visible, slowly open and close the lid by 10-15 degrees. If the flicker changes, disappears, or worsens at specific lid angles, the display cable has micro-fractures at the hinge bend. Cable replacement is less than a full panel replacement, message us on WhatsApp for the exact price. If flicker is constant at all lid angles, the panel or GPU is the fault.",
         },
         {
           q: "How much does MacBook Pro M1 screen flickering repair cost in Dubai?",
-          a: "Display cable replacement costs AED 180 (if fault correlates with lid angle). Full LCD panel replacement costs AED 450 (M1 13-inch). M1 Pro 14-inch mini-LED costs AED 500. M1 Max 16-inch costs AED 600. Free diagnosis to confirm cable vs panel vs software before any repair. Software fixes (macOS update, display preference reset) are AED 100-200.",
+          a: "It depends on the fault: display cable replacement (if it correlates with lid angle) is cheaper than a full LCD panel replacement, and mini-LED panels on the M1 Pro 14-inch and M1 Max 16-inch cost more than the 13-inch LCD. Diagnosis is free to confirm cable vs panel vs software before any repair, and software-only fixes (macOS update, display preference reset) are the lowest cost. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat cause MacBook Pro M1 screen flickering?",

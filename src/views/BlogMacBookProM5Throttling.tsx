@@ -7,7 +7,7 @@ export default function BlogMacBookProM5Throttling() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Throttling Fix Dubai 2026: Why It Slows Down and How to Stop It"
-      seoDescription="MacBook Pro M5 throttling in Dubai? M5 slows down under load, fans don't spin, CPU drops to 600 MHz. Step-by-step fix guide for thermal throttling. Repair from AED 200."
+      seoDescription="MacBook Pro M5 throttling in Dubai? M5 slows down under load, fans don't spin, CPU drops to 600 MHz. Step-by-step thermal throttling fix guide. Free diagnosis."
       path="/blog/macbook-pro-m5-throttling-fix-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM5Throttling() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Throttling in Dubai? Here is Why It Slows Down and How to Fix It"
-      hook="MacBook Pro M5 users in Dubai are seeing CPU clock speeds drop to 600 MHz during sustained workloads, with fans either not spinning or running at full speed without cooling the chip. Most M5 throttling is caused by blocked vents, incorrect power mode settings, or a firmware regression in early Tahoe builds. Cooling fan replacement starts from AED 200 in Dubai."
-      quickAnswer="MacBook Pro M5 throttling is usually caused by: blocked intake vents (dust, closed on a soft surface), Power Mode set to Low instead of High, or a Tahoe firmware regression that caps clock speeds. Check Activity Monitor, Energy tab, for 'Thermal Pressure': yellow or red means the M5 is actively throttling. Shut down for 30 seconds to reset the power controller. Fan replacement from AED 200 if the fan is faulty."
+      hook="MacBook Pro M5 users in Dubai are seeing CPU clock speeds drop to 600 MHz during sustained workloads, with fans either not spinning or running at full speed without cooling the chip. Most M5 throttling is caused by blocked vents, incorrect power mode settings, or a firmware regression in early Tahoe builds. Message us on WhatsApp for today's cooling fan replacement price on your model in Dubai."
+      quickAnswer="MacBook Pro M5 throttling is usually caused by: blocked intake vents (dust, closed on a soft surface), Power Mode set to Low instead of High, or a Tahoe firmware regression that caps clock speeds. Check Activity Monitor, Energy tab, for 'Thermal Pressure': yellow or red means the M5 is actively throttling. Shut down for 30 seconds to reset the power controller. Message us on WhatsApp for the exact fan replacement price if the fan is faulty."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -83,7 +83,7 @@ export default function BlogMacBookProM5Throttling() {
           <ul className="list-disc list-inside space-y-xs">
             <li>If the M5 is under 2 years old and has never been opened, TIM is not the issue</li>
             <li>If the machine was previously opened and started throttling immediately after, incorrect TIM reapplication is the likely cause</li>
-            <li>Correct TIM reapplication requires removing the logic board, cleaning both the chip and heat sink with isopropyl alcohol, and applying a thin, even layer of high-conductivity thermal compound. From AED 200 at our Dubai workshop</li>
+            <li>Correct TIM reapplication requires removing the logic board, cleaning both the chip and heat sink with isopropyl alcohol, and applying a thin, even layer of high-conductivity thermal compound. Message us on WhatsApp for the price at our Dubai workshop</li>
           </ul>
 
           <h2 id="step-4">Step 4: Does Power Mode setting fix MacBook Pro M5 throttling?</h2>
@@ -145,10 +145,10 @@ export default function BlogMacBookProM5Throttling() {
           <BlogPriceTable
             caption="MacBook Pro M5 cooling repair pricing. June 2026"
             rows={[
-              { model: "Fan cleaning (dust removal)", ours: "AED 150", apple: "Not offered", note: "Compressed air + brush clean, 30 mins" },
-              { model: "Fan replacement (M5 14-inch)", ours: "AED 200", apple: "AED 600+", note: "OEM fan, tested at 6000 RPM, 1 hour" },
-              { model: "Fan replacement (M5 16-inch, each)", ours: "AED 250", apple: "AED 700+", note: "Dual-fan system, one or both fans" },
-              { model: "Thermal paste replacement", ours: "AED 200", apple: "Not offered separately", note: "Logic board removal required, 2 hours" },
+              { model: "Fan cleaning (dust removal)", ours: "Price on request", apple: "Not offered", note: "Compressed air + brush clean, 30 mins" },
+              { model: "Fan replacement (M5 14-inch)", ours: "Price on request", apple: "Price on request", note: "OEM fan, tested at 6000 RPM, 1 hour" },
+              { model: "Fan replacement (M5 16-inch, each)", ours: "Price on request", apple: "Price on request", note: "Dual-fan system, one or both fans" },
+              { model: "Thermal paste replacement", ours: "Price on request", apple: "Not offered separately", note: "Logic board removal required, 2 hours" },
             ]}
           />
 
@@ -161,7 +161,7 @@ export default function BlogMacBookProM5Throttling() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Board-level power fault: throttles immediately even at idle, Activity Monitor shows Heavy thermal pressure at 20% CPU load</li>
             <li>VRM (voltage regulator) fault: specific to the high-performance M5 Max with more power phases</li>
-            <li>Logic board repair from AED 1,200. Free diagnostic to confirm before any board work begins</li>
+            <li>Logic board repair with a free diagnostic to confirm the fault before any board work begins. Message us on WhatsApp for the exact price on your model</li>
           </ul>
           <p>
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
@@ -185,7 +185,7 @@ export default function BlogMacBookProM5Throttling() {
         },
         {
           q: "Does cleaning MacBook Pro M5 vents fix throttling?",
-          a: "Yes, if dust is the cause. Hold the M5 up and look through the bottom vents. Grey dust on the fan blades is visible with good lighting. A professional vent cleaning with compressed air and brushes costs AED 150 at our workshop and typically restores full sustained performance. Do not use a vacuum on the vents as it can generate static.",
+          a: "Yes, if dust is the cause. Hold the M5 up and look through the bottom vents. Grey dust on the fan blades is visible with good lighting. A professional vent cleaning with compressed air and brushes at our workshop typically restores full sustained performance. Message us on WhatsApp for the price. Do not use a vacuum on the vents as it can generate static.",
         },
         {
           q: "How long does MacBook Pro M5 fan replacement take in Dubai?",

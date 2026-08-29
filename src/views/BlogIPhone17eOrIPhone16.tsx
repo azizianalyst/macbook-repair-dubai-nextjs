@@ -7,7 +7,7 @@ export default function BlogIPhone17eOrIPhone16() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone 17e or iPhone 16? Honest Comparison 2026"
-      seoDescription="iPhone 17e (AED 2,499) or iPhone 16 (AED 2,899)? Side-by-side specs, Apple Intelligence, repair cost and resale value, with an honest verdict by user type."
+      seoDescription="iPhone 17e or iPhone 16? Side-by-side specs, Apple Intelligence, repair cost and resale value, with an honest verdict by user type. Message us on WhatsApp for prices."
       path="/blog/should-i-buy-iphone-17e-or-iphone-16"
       wide
       toc={[
@@ -23,7 +23,7 @@ export default function BlogIPhone17eOrIPhone16() {
       category="Buying guide · iPhone"
       h1="iPhone 17e or iPhone 16 - Which to Buy in 2026?"
       hook="iPhone 17e is newer and cheaper. iPhone 16 has more cameras. Here's the right pick."
-      quickAnswer="Buy iPhone 17e (AED 2,499) if budget matters and you're fine with a single 48MP camera - newer A19 chip, MagSafe, Dynamic Island, longer software life. Buy iPhone 16 (AED 2,899) if photo flexibility matters - dual cameras (main + ultrawide), 5 colours, more mature accessory ecosystem. Both support Apple Intelligence; both are excellent value in 2026."
+      quickAnswer="Buy iPhone 17e if budget matters and you're fine with a single 48MP camera - newer A19 chip, MagSafe, Dynamic Island, longer software life. Buy iPhone 16 if photo flexibility matters - dual cameras (main + ultrawide), 5 colours, more mature accessory ecosystem. Both support Apple Intelligence; both are excellent value in 2026. The 17e is the cheaper of the two - message us on WhatsApp for today's price on either model."
       author={{ name: "Usman", role: "iPhone repair specialist" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -60,14 +60,14 @@ export default function BlogIPhone17eOrIPhone16() {
               { model: "Action Button", ours: "Yes", apple: "Yes", note: "Same" },
               { model: "Camera Control", ours: "No", apple: "Yes", note: "16-only feature" },
               { model: "MagSafe", ours: "Yes (15W)", apple: "Yes (25W)", note: "Both work, 16 charges faster" },
-              { model: "Price (UAE base 128GB)", ours: "AED 2,499", apple: "AED 2,899", note: "17e is AED 400 less" },
+              { model: "Price (UAE base 128GB)", ours: "Price on request", apple: "Price on request", note: "17e is the cheaper of the two" },
             ]}
           />
 
           <h2 id="iphone-17e-advantages">iPhone 17e advantages</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>A19 chip</strong> - one generation newer, ~15% faster CPU, 20% faster GPU, more efficient.</li>
-            <li><strong>AED 400 cheaper</strong> at base config.</li>
+            <li><strong>Noticeably cheaper</strong> at base config - message us for today's price.</li>
             <li><strong>4-hour better battery life</strong> (26 hr video vs 22 hr).</li>
             <li><strong>Longer iOS support runway</strong> - 17e likely supported until iOS 31 (2030); 16 likely until iOS 30 (2029).</li>
             <li><strong>MagSafe + Dynamic Island</strong> - finally both available on the budget tier (the SE 4 / 17e is the first "e" model with both).</li>
@@ -110,16 +110,16 @@ export default function BlogIPhone17eOrIPhone16() {
             caption="iPhone 17e vs 16 - projected April 2028 resale (Dubai used market)"
             headers={["Model", "New price", "Projected 24-mo resale", "Depreciation"]}
             rows={[
-              { model: "iPhone 17e 128GB", ours: "AED 2,499", apple: "AED 1,300", note: "48%" },
-              { model: "iPhone 16 128GB", ours: "AED 2,899", apple: "AED 1,650", note: "43%" },
-              { model: "iPhone 17e 256GB", ours: "AED 2,799", apple: "AED 1,500", note: "46%" },
-              { model: "iPhone 16 256GB", ours: "AED 3,199", apple: "AED 1,850", note: "42%" },
+              { model: "iPhone 17e 128GB", ours: "Price on request", apple: "Price on request", note: "48%" },
+              { model: "iPhone 16 128GB", ours: "Price on request", apple: "Price on request", note: "43%" },
+              { model: "iPhone 17e 256GB", ours: "Price on request", apple: "Price on request", note: "46%" },
+              { model: "iPhone 16 256GB", ours: "Price on request", apple: "Price on request", note: "42%" },
             ]}
           />
           <p>
             iPhone 16 holds value slightly better thanks to the dual-camera system that buyers
-            specifically search for on the second-hand market. Net 24-month cost is similar (~AED
-            1,200-1,250 for either).
+            specifically search for on the second-hand market. Net 24-month cost of ownership works
+            out similar for either model - message us on WhatsApp for current pricing.
           </p>
 
           <h2 id="repair-cost">Repair cost comparison</h2>
@@ -127,12 +127,12 @@ export default function BlogIPhone17eOrIPhone16() {
             caption="iPhone 17e vs 16 - repair cost at our Dubai workshop"
             headers={["Repair", "iPhone 17e", "iPhone 16", "Notes"]}
             rows={[
-              { model: "Front screen", ours: "AED 750", apple: "AED 800", note: "17e easier panel sourcing now" },
-              { model: "Back glass", ours: "AED 450", apple: "AED 500", note: "Both colour-matched" },
-              { model: "Battery", ours: "AED 350", apple: "AED 350", note: "Same cell size" },
-              { model: "Charging port (USB-C)", ours: "AED 320", apple: "AED 320", note: "Same connector" },
-              { model: "Rear camera", ours: "AED 500 (single)", apple: "AED 600 (main) / AED 350 (ultra)", note: "16 has 2 cameras to potentially repair" },
-              { model: "Liquid damage clean", ours: "AED 600", apple: "AED 650", note: "Same IP68 sealing" },
+              { model: "Front screen", ours: "Price on request", apple: "Price on request", note: "17e easier panel sourcing now" },
+              { model: "Back glass", ours: "Price on request", apple: "Price on request", note: "Both colour-matched" },
+              { model: "Battery", ours: "Price on request", apple: "Price on request", note: "Same cell size" },
+              { model: "Charging port (USB-C)", ours: "Price on request", apple: "Price on request", note: "Same connector" },
+              { model: "Rear camera", ours: "Price on request", apple: "Price on request", note: "16 has 2 cameras to potentially repair" },
+              { model: "Liquid damage clean", ours: "Price on request", apple: "Price on request", note: "Same IP68 sealing" },
             ]}
           />
           <p>
@@ -143,22 +143,22 @@ export default function BlogIPhone17eOrIPhone16() {
 
           <h2 id="verdict-by-user">Verdict by user</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Student / first-time iPhone:</strong> iPhone 17e. AED 400 saved, longer support life.</li>
+            <li><strong>Student / first-time iPhone:</strong> iPhone 17e. Saves money, longer support life.</li>
             <li><strong>Photography enthusiast:</strong> iPhone 16. Ultrawide + macro + Camera Control are real differentiators.</li>
             <li><strong>Heavy traveller:</strong> iPhone 17e. Better battery life matters more than a second camera.</li>
             <li><strong>Replacing an iPhone 11/12:</strong> Either - both are massive upgrades. Buy on price/colour preference.</li>
             <li><strong>Replacing an iPhone SE 3:</strong> iPhone 17e. The most direct upgrade path, similar pricing.</li>
             <li><strong>Replacing an iPhone 14 / 15:</strong> Skip both - your current phone is still excellent. Wait for iPhone 18.</li>
-            <li><strong>Parent buying for a teenager:</strong> iPhone 17e. AED 400 saved, less to lose if cracked.</li>
+            <li><strong>Parent buying for a teenager:</strong> iPhone 17e. Saves money, less to lose if cracked.</li>
             <li><strong>Buying a second / spare phone:</strong> iPhone 17e for sure.</li>
           </ul>
 
           <p>
             Whichever you buy, drop us a line if anything goes wrong -{" "}
             <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
-              full iPhone service from AED 250
+              full iPhone service
             </Link>
-            , warranty of up to 12 months, free pickup across Dubai.
+            , warranty of up to 12 months, free pickup across Dubai. Message us on WhatsApp for a price.
           </p>
         </>
       }
@@ -180,12 +180,12 @@ export default function BlogIPhone17eOrIPhone16() {
           a: "Apple supports iPhones for ~6 years from launch. iPhone 17e launched in 2025, so expect iOS 31 (2030) at minimum, possibly iOS 32 (2031). iPhone 16 from 2024 has one fewer year of runway.",
         },
         {
-          q: "Is the iPhone 16's Camera Control button worth AED 400 by itself?",
+          q: "Is the iPhone 16's Camera Control button worth the extra spend by itself?",
           a: "If you take photos casually, no - it's a nice-to-have. If you take photos seriously (street, travel, kids), yes - single-button camera launch + slide-to-zoom is genuinely faster than the lock-screen camera shortcut. Real ergonomic upgrade.",
         },
         {
           q: "Can I trade in my old iPhone toward either model in UAE?",
-          a: "Yes - Apple UAE offers trade-in via apple.com/ae or Apple Store. Sharaf DG and Carrefour also run trade-in programmes. Typical trade-in for an iPhone 12 in 2026 is AED 600-800 toward a new device.",
+          a: "Yes - Apple UAE offers trade-in via apple.com/ae or Apple Store. Sharaf DG and Carrefour also run trade-in programmes. The trade-in value for an older iPhone in 2026 depends on model and condition - each retailer quotes its own figure.",
         },
       ]}
       relatedLinks={[

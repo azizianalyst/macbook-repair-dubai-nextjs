@@ -22,7 +22,7 @@ const MACBOOK_MODELS = [
 ];
 
 const SERVICES = [
-  { icon: Wrench, label: "Screen Repair", href: "/macbook-screen-repair-dubai", price: "From AED 499" },
+  { icon: Wrench, label: "Screen Repair", href: "/macbook-screen-repair-dubai", price: "From AED 600" },
   { icon: Zap, label: "Battery Replacement", href: "/macbook-battery-replacement-dubai", price: "From AED 450" },
   { icon: Wrench, label: "Keyboard Repair", href: "/macbook-keyboard-repair-dubai", price: "From AED 350" },
   { icon: Wrench, label: "Charging Port Repair", href: "/macbook-charging-port-repair-dubai", price: "From AED 300" },
@@ -39,7 +39,7 @@ const SERVICES = [
 const FAQS: FAQ[] = [
   {
     q: "How much does MacBook repair cost in Dubai?",
-    a: "MacBook repair in Dubai starts from AED 200 for a fan clean / overheating fix, AED 350 for keyboard or trackpad repair, AED 450 for battery replacement, AED 499 for screen repair, and AED 800 for logic board work. All prices are confirmed in writing on WhatsApp before any work begins. Free diagnosis, no charge if you decide not to proceed.",
+    a: "MacBook repair in Dubai starts from AED 200 for a fan clean / overheating fix, AED 350 for keyboard or trackpad repair, AED 450 for battery replacement, AED 600 for screen repair, and AED 800 for logic board work. All prices are confirmed in writing on WhatsApp before any work begins. Free diagnosis, no charge if you decide not to proceed.",
   },
   {
     q: "How long does MacBook repair take in Dubai?",
@@ -89,7 +89,7 @@ export default function MacBookRepairHub() {
     {
       title: "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
       description:
-        "MacBook repair Dubai. Air, Pro, Intel & M-series. Screen from AED 499, battery AED 450, logic board AED 800. Free diagnosis, free pickup, warranty up to 12 months.",
+        "MacBook repair Dubai. Air, Pro, Intel & M-series. Screen from AED 600, battery AED 450, logic board AED 800. Free diagnosis, free pickup, warranty up to 12 months.",
       path: "/macbook-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -134,7 +134,7 @@ export default function MacBookRepairHub() {
         {/* Quick answer */}
         <QuickAnswer
           question="Where can I get my MacBook repaired in Dubai?"
-          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen repair starts from AED 499, battery from AED 450, logic board from AED 800. Free diagnosis, free citywide pickup, OEM parts, and written warranty up to 12 months. In business since 2004."
+          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen repair starts from AED 600, battery from AED 450, logic board from AED 800. Free diagnosis, free citywide pickup, OEM parts, and written warranty up to 12 months. In business since 2004."
         />
 
         {/* Models */}

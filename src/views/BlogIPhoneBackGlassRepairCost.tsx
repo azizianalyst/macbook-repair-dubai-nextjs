@@ -7,7 +7,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Back Glass Repair Cost Dubai: Laser Method"
-      seoDescription="iPhone back glass repair in Dubai costs AED 400-950 by laser separation. Apple Store charges a full chassis swap from AED 1,800. MagSafe and charging kept."
+      seoDescription="iPhone back glass repair in Dubai by laser separation - glass only, not a full chassis swap. MagSafe and wireless charging kept. Message us for a same-day quote."
       path="/blog/iphone-back-glass-repair-cost-dubai"
       wide
       toc={[
@@ -22,8 +22,8 @@ export default function BlogIPhoneBackGlassRepairCost() {
       ]}
       category="Cost guide · iPhone"
       h1="iPhone Back Glass Repair Dubai - Cost Guide 2026"
-      hook="Apple Store charges a full chassis replacement for back glass damage. We laser-remove just the glass - saving you AED 1,000+ per phone."
-      quickAnswer="iPhone back glass repair in Dubai costs AED 400-950 in April 2026. We use 1064nm laser separation to remove cracked glass without damaging the MagSafe coil or wireless charging board. Apple Store quotes a chassis swap (AED 1,800-2,500). Same colour and finish as factory."
+      hook="Apple Store charges a full chassis replacement for back glass damage. We laser-remove just the glass - message us for your model's exact price."
+      quickAnswer="iPhone back glass repair in Dubai uses 1064nm laser separation to remove cracked glass without damaging the MagSafe coil or wireless charging board - so we swap the glass only, not the whole housing Apple Store quotes. Same colour and finish as factory. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Ali", role: "iPhone laser-separation specialist" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -54,22 +54,22 @@ export default function BlogIPhoneBackGlassRepairCost() {
 
           <h2 id="pricing-by-model">Pricing by iPhone model</h2>
           <BlogPriceTable
-            caption="iPhone back glass replacement pricing - Dubai, April 2026"
+            caption="iPhone back glass replacement - Dubai (message us for your model's exact price)"
             rows={[
-              { model: "iPhone 8 / 8 Plus / SE 2/3", ours: "AED 400", apple: "AED 1,499", note: "First glass-back models" },
-              { model: "iPhone X / XS / XR / XS Max", ours: "AED 450", apple: "AED 1,599", note: "Curved-edge glass" },
-              { model: "iPhone 11 / 11 Pro / 11 Pro Max", ours: "AED 500", apple: "AED 1,699" },
-              { model: "iPhone 12 series",          ours: "AED 550", apple: "AED 1,799", note: "MagSafe coil - careful work" },
-              { model: "iPhone 13 series",          ours: "AED 600", apple: "AED 1,899", note: "MagSafe + larger camera island" },
-              { model: "iPhone 14 / 14 Plus",       ours: "AED 650", apple: "AED 1,899", note: "Repair-friendly chassis (new design)" },
-              { model: "iPhone 14 Pro / Pro Max",   ours: "AED 750", apple: "AED 2,099", note: "Stainless steel frame" },
-              { model: "iPhone 15 / 15 Plus",       ours: "AED 700", apple: "AED 1,999", note: "Colour-infused glass" },
-              { model: "iPhone 15 Pro / Pro Max",   ours: "AED 800", apple: "AED 2,199", note: "Titanium frame" },
-              { model: "iPhone 16 series",          ours: "AED 750", apple: "AED 2,099", note: "Camera Control button" },
-              { model: "iPhone 16 Pro / Pro Max",   ours: "AED 850", apple: "AED 2,299" },
-              { model: "iPhone 17 / 17e",           ours: "AED 800", apple: "AED 2,199" },
-              { model: "iPhone Air",                ours: "AED 950", apple: "AED 2,499", note: "Ultra-thin glass, premium adhesive" },
-              { model: "iPhone 17 Pro / Pro Max",   ours: "AED 950", apple: "AED 2,499", note: "Vapor-chamber-adjacent glass" },
+              { model: "iPhone 8 / 8 Plus / SE 2/3", ours: "Price on request", apple: "Price on request", note: "First glass-back models" },
+              { model: "iPhone X / XS / XR / XS Max", ours: "Price on request", apple: "Price on request", note: "Curved-edge glass" },
+              { model: "iPhone 11 / 11 Pro / 11 Pro Max", ours: "Price on request", apple: "Price on request" },
+              { model: "iPhone 12 series",          ours: "Price on request", apple: "Price on request", note: "MagSafe coil - careful work" },
+              { model: "iPhone 13 series",          ours: "Price on request", apple: "Price on request", note: "MagSafe + larger camera island" },
+              { model: "iPhone 14 / 14 Plus",       ours: "Price on request", apple: "Price on request", note: "Repair-friendly chassis (new design)" },
+              { model: "iPhone 14 Pro / Pro Max",   ours: "Price on request", apple: "Price on request", note: "Stainless steel frame" },
+              { model: "iPhone 15 / 15 Plus",       ours: "Price on request", apple: "Price on request", note: "Colour-infused glass" },
+              { model: "iPhone 15 Pro / Pro Max",   ours: "Price on request", apple: "Price on request", note: "Titanium frame" },
+              { model: "iPhone 16 series",          ours: "Price on request", apple: "Price on request", note: "Camera Control button" },
+              { model: "iPhone 16 Pro / Pro Max",   ours: "Price on request", apple: "Price on request" },
+              { model: "iPhone 17 / 17e",           ours: "Price on request", apple: "Price on request" },
+              { model: "iPhone Air",                ours: "Price on request", apple: "Price on request", note: "Ultra-thin glass, premium adhesive" },
+              { model: "iPhone 17 Pro / Pro Max",   ours: "Price on request", apple: "Price on request", note: "Vapor-chamber-adjacent glass" },
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
@@ -116,7 +116,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
               { model: "Method",         ours: "Laser separation, glass-only", apple: "Whole housing swap" },
-              { model: "Price",          ours: "AED 800",                       apple: "AED 2,199" },
+              { model: "Price",          ours: "Price on request",             apple: "Price on request" },
               { model: "Turnaround",     ours: "1 day",                         apple: "5-10 days" },
               { model: "MagSafe preserved", ours: "Yes, retested",              apple: "New coil in new housing" },
               { model: "Original chassis kept", ours: "Yes",                    apple: "No - your serial moves to new housing (Apple records it)" },
@@ -138,8 +138,8 @@ export default function BlogIPhoneBackGlassRepairCost() {
         { q: "Is laser back-glass separation safe for the phone?", a: "Yes - when done with proper equipment. We use a 1064nm fibre laser at controlled wattage; only the adhesive vaporises. The chassis frame, MagSafe coil, and internal components are not heated. We've done thousands of jobs without internal damage." },
         { q: "Will MagSafe still work after back glass repair?", a: "Yes - we preserve the original MagSafe coil from the chassis and re-bond the new glass to it with Apple-spec adhesive. We test 7.5W Qi and 15W MagSafe before handing the phone back. Spec is at least 90% factory charging efficiency." },
         { q: "How long does iPhone back glass repair take?", a: "About 90 minutes at the bench plus a 4-hour adhesive cure. Most jobs are next-day pickup. We do not give the phone back the same day because rushing the cure compromises the seal." },
-        { q: "Can you do back glass repair on iPhone 17 Pro?", a: "Yes - we carry both the laser equipment and the colour-matched 17 Pro glass for Deep Blue, Cosmic Orange, Silver, and Black. Cost AED 950, includes vapor-chamber adjacency check post-install." },
-        { q: "Is it cheaper than Apple Store?", a: "Substantially - typically AED 1,000-1,500 cheaper depending on model. Apple's official 'fix' is a full housing swap because they don't offer a glass-only option. We do." },
+        { q: "Can you do back glass repair on iPhone 17 Pro?", a: "Yes - we carry both the laser equipment and the colour-matched 17 Pro glass for Deep Blue, Cosmic Orange, Silver, and Black. It includes a vapor-chamber adjacency check post-install. Message us on WhatsApp for the exact price." },
+        { q: "Is it cheaper than Apple Store?", a: "Substantially cheaper. Apple's official 'fix' is a full housing swap because they don't offer a glass-only option - we replace just the glass, which costs far less. Message us on WhatsApp for the exact price on your model." },
       ]}
       relatedLinks={[
         { label: "iPhone back glass repair hub", href: "/iphone-back-glass-repair-dubai", description: "Full service page - laser process, pricing, warranty." },

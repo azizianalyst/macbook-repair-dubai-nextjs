@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "MacBook Pro M4 M5 common problems in Dubai? Display flicker, Wi-Fi drops, memory pressure, thermal throttle, USB-C faults, with step-by-step fixes.",
   openGraph: {
     title: "MacBook Pro M4 M5 Common Problems? Fix Guide Dubai 2026",
-    description: "M4 M5 MacBook Pro problems in Dubai? Display flicker, Wi-Fi drops, USB-C faults diagnosed step-by-step. Repair from AED 350.",
+    description: "M4 M5 MacBook Pro problems in Dubai? Display flicker, Wi-Fi drops, USB-C faults diagnosed step-by-step. Free diagnosis — message us on WhatsApp.",
     url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m4-m5-common-problems-dubai",
     type: "article",
     publishedTime: "2026-06-22",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MacBook Pro M4 M5 Common Problems? Fix Guide Dubai 2026",
-    description: "Display flicker, Wi-Fi drops, memory pressure, thermal throttle, USB-C faults. Repair from AED 350 in Dubai.",
+    description: "Display flicker, Wi-Fi drops, memory pressure, thermal throttle, USB-C faults. Free diagnosis in Dubai — message us on WhatsApp.",
     images: ["https://macbook-repair-dubai.ae/images/topics/macbook-pro-common-repairs-dubai-desktop.avif"],
   },
   alternates: {
