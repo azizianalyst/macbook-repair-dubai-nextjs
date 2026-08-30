@@ -1,7 +1,7 @@
 "use client";
 // AI-citation block: 40-word factual answer at top of every service / model / blog page.
 // Renders Question + AcceptedAnswer microdata so crawlers (and AI Overviews) can lift it cleanly.
-// The wrapping `.quick-answer` class is referenced by SpeakableSpecification xpath in schema.ts.
+// The wrapping `.quick-answer` class is referenced by SpeakableSpecification cssSelector in schema.ts.
 import { ReactNode } from "react";
 import { warrantyClause, warrantyDaysForService } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";

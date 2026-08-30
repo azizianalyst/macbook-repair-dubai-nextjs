@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     publishedTime: "2026-06-22",
     modifiedTime: "2026-06-22",
     images: [{
-      url: "https://macbook-repair-dubai.ae/images/topics/blog-macbook-performance-dubai-desktop.avif",
+      url: "https://macbook-repair-dubai.ae/images/topics/mac-performance-tune-dubai-desktop.avif",
       width: 1600,
       height: 900,
       alt: "MacBook Air running slow, technician checking CPU throttling and memory pressure on MacBook Air at Dubai repair workshop",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MacBook Air Running Slow Fix Dubai 2026",
     description: "Thermal throttling, RAM pressure, full SSD. Free fixes; message us for repair pricing.",
-    images: ["https://macbook-repair-dubai.ae/images/topics/blog-macbook-performance-dubai-desktop.avif"],
+    images: ["https://macbook-repair-dubai.ae/images/topics/mac-performance-tune-dubai-desktop.avif"],
   },
   alternates: {
     canonical: "https://macbook-repair-dubai.ae/blog/macbook-air-running-slow-fix-dubai",

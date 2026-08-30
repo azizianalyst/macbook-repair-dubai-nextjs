@@ -926,5 +926,19 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
     "source": "/blog/best-apple-watch-dubai-2026",
     "destination": "/apple-repair-dubai/",
     "statusCode": 301
-  }
+  },
+  // --- Search Console "Not found (404)", reviewed 2026-08-30 ---------------------------
+  // Legacy WordPress per-technician pages. The team is now covered on /about, so these
+  // carry their equity there rather than dying as 404s.
+  { "source": "/team/hamza",      "destination": "/about/", "statusCode": 301 },
+  { "source": "/team/abdul-aziz", "destination": "/about/", "statusCode": 301 },
+  { "source": "/team/usman",      "destination": "/about/", "statusCode": 301 },
+  { "source": "/team/ali",        "destination": "/about/", "statusCode": 301 },
+  { "source": "/team/shafiq",     "destination": "/about/", "statusCode": 301 },
+  // Bare tag index was never built (only /blog/tag/<tag> exists, and those are noindex).
+  { "source": "/blog/tag", "destination": "/blog/", "statusCode": 301 },
+  // Crawled as a guess at the sitemap location.
+  { "source": "/sitemap", "destination": "/sitemap.xml", "statusCode": 301 },
+  // WordPress archive pagination that no longer exists.
+  { "source": "/iphone-repair-dubai/page/5", "destination": "/iphone-repair-dubai/", "statusCode": 301 }
 ];

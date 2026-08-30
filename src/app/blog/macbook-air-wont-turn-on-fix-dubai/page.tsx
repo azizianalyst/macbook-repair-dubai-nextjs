@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     publishedTime: "2026-06-22",
     modifiedTime: "2026-06-22",
     images: [{
-      url: "https://macbook-repair-dubai.ae/images/topics/blog-macbook-not-turning-on-dubai-desktop.avif",
+      url: "https://macbook-repair-dubai.ae/images/topics/macbook-diagnostic-dubai-desktop.avif",
       width: 1600,
       height: 900,
       alt: "MacBook Air won't turn on, technician diagnosing dead MacBook Air with power probe and multimeter at Dubai repair workshop",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MacBook Air Won't Turn On Fix Dubai 2026",
     description: "Dead vs black screen diagnosis. Free logic board diagnosis in Dubai — message us on WhatsApp.",
-    images: ["https://macbook-repair-dubai.ae/images/topics/blog-macbook-not-turning-on-dubai-desktop.avif"],
+    images: ["https://macbook-repair-dubai.ae/images/topics/macbook-diagnostic-dubai-desktop.avif"],
   },
   alternates: {
     canonical: "https://macbook-repair-dubai.ae/blog/macbook-air-wont-turn-on-fix-dubai",

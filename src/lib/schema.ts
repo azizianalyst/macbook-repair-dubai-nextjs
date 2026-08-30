@@ -2,7 +2,7 @@
 // inject via <script type="application/ld+json">{JSON.stringify(...)}</script>
 
 import { SITE } from "./seo";
-import { NAP, PRICING } from "@/content/site";
+import { NAP } from "@/content/site";
 import { SITE_SETTINGS } from "@/content/settings.generated";
 
 export const ORG_ID = `${SITE.url}/#organization`;
@@ -35,7 +35,7 @@ export function localBusiness() {
     name: SITE.name,
     legalName: "Azizi Technologies",
     description:
-      "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 216+ Google reviews.",
+      "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 232+ Google reviews.",
     image: [
       `${SITE.url}/images/brand/brand-storefront.jpg`,
       `${SITE.url}/images/brand/workshop-wide.jpg`,
@@ -45,7 +45,8 @@ export function localBusiness() {
     url: SITE.url,
     telephone: SITE.phoneE164,
     email: NAP.email || "info@macbook-repair-dubai.ae",
-    priceRange: `AED ${PRICING.floor} - AED ${PRICING.ceiling.toLocaleString("en-US")}`,
+    // priceRange intentionally omitted — prices are not shown to visitors, and structured data
+    // must not carry a figure the page doesn't display.
     currenciesAccepted: "AED",
     paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express"],
     address: {
@@ -94,15 +95,15 @@ export function localBusiness() {
       availableLanguage: ["en", "ar", "ru"],
       areaServed: { "@type": "City", name: "Dubai" },
     },
-    // Starting prices — kept in lockstep with PRICING (the same figures the visible
-    // price table + FAQ answers quote). Offers without a visible on-page price carry none.
+    // Offers carry no price — prices are not shown to visitors, so structured data must not
+    // quote one. The catalogue still declares what is offered, which is what Google needs.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Apple Repair Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" }, price: String(PRICING.screen.from), priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" }, price: String(PRICING.battery.from), priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" }, price: String(PRICING.waterDamage.from), priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "iPhone Screen Repair" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "iMac Screen Repair" } },
       ],
@@ -507,13 +508,14 @@ export function webPage(opts: {
 
 // SpeakableSpecification - tells voice assistants / AI Overviews which DOM nodes
 // hold the most quotable content. Referenced from WebPage via `speakable`.
-export function speakable(xpaths?: string[]) {
+// Uses cssSelector rather than xpath deliberately. An xpath value starts with "/html/...",
+// which Googlebot resolved against the origin and crawled as a URL — Search Console logged
+// /html/body//section[contains(@class,'quick-answer')] as a 404. cssSelector cannot be
+// mistaken for a path, and Google supports it equivalently for speakable.
+export function speakable(selectors?: string[]) {
   return {
     "@type": "SpeakableSpecification",
-    xpath: xpaths ?? [
-      "/html/body//section[contains(@class,'quick-answer')]",
-      "/html/body//section[contains(@class,'quick-answer')]//*[@itemprop='text']",
-    ],
+    cssSelector: selectors ?? [".quick-answer", ".quick-answer [itemprop='text']"],
   };
 }
 
