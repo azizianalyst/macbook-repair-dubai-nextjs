@@ -42,7 +42,7 @@ type QaItem = {
   totalAnswerCount?: number;
 };
 
-const TABS = ["Overview", "Reviews", "Posts", "Business Info", "Photos", "Q&A"] as const;
+const TABS = ["Overview", "Reviews", "Posts", "Business Info", "Services", "Photos", "Q&A"] as const;
 type Tab = (typeof TABS)[number];
 const CTA_TYPES = ["LEARN_MORE", "BOOK", "ORDER", "SHOP", "SIGN_UP", "CALL"] as const;
 const DAYS_ORDER = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
@@ -233,6 +233,7 @@ export default function GbpAdmin() {
           {tab === "Reviews" && <ReviewsTab />}
           {tab === "Posts" && <PostsTab locationName={status.locationName} />}
           {tab === "Business Info" && <InfoTab />}
+          {tab === "Services" && <ServicesTab />}
           {tab === "Photos" && <PhotosTab />}
           {tab === "Q&A" && <QaTab />}
         </>
@@ -1128,6 +1129,114 @@ function QaTab() {
         })}
         {questions.length === 0 && <div className="rounded-xl border border-border bg-bg-alt py-xl text-center"><HelpCircle size={28} className="mx-auto mb-2 text-text-faint" /><p className="m-0 text-[14px] text-text-faint">No questions yet on your Google listing.</p></div>}
       </div>
+    </div>
+  );
+}
+
+/**
+ * Services tab — publishes the generated service list to the profile.
+ *
+ * The list itself is src/content/gbp-content.generated.ts, produced by
+ * scripts/gen-gbp-content.mjs from docs/gbp-content-pack-2026-08-30.md.
+ * Nothing is typed by hand here; edit the markdown and re-run the script.
+ *
+ * Add the secondary categories in Google Business Profile Manager BEFORE
+ * publishing — the route files each service under a category the profile
+ * already has, so publishing early buries all 103 under the primary one. The
+ * dry-run card's "missing categories" list is the guard for exactly that.
+ *
+ * Services were the single biggest gap on this profile — the field was empty
+ * while the site had 103 matching pages, so Google had almost nothing to match
+ * implicit queries against.
+ */
+function ServicesTab() {
+  const [data, setData] = useState<{
+    live: { count: number; primaryCategory?: string; secondaryCategories: string[] };
+    willPublish: { count: number; categories: string[]; missingCategories: string[]; note: string };
+    canPublish: boolean;
+  } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const [done, setDone] = useState("");
+
+  const load = useCallback(async () => {
+    setLoading(true); setErr("");
+    const res = await fetch("/api/admin/gbp/services/", { cache: "no-store" });
+    const d = await res.json();
+    if (d.ok) setData(d); else setErr(d.error || "Failed to load services");
+    setLoading(false);
+  }, []);
+  useEffect(() => { load(); }, [load]);
+
+  async function publish() {
+    if (!confirm(
+      `Publish ${data?.willPublish.count} services?\n\n` +
+      `This REPLACES every service on the profile — Google has no partial update for services.`
+    )) return;
+    setBusy(true); setErr(""); setDone("");
+    const res = await fetch("/api/admin/gbp/services/", { method: "POST" });
+    const d = await res.json();
+    if (d.ok) { setDone(`Published ${d.published} services (was ${d.before}).`); await load(); }
+    else setErr(d.error || "Failed to publish");
+    setBusy(false);
+  }
+
+  if (loading) return <div className="flex justify-center py-xl"><Loader2 className="animate-spin text-text-faint" /></div>;
+  if (err && !data) return <p className="text-[14px] text-danger">{err}</p>;
+
+  return (
+    <div className="grid gap-md">
+      <div className="grid gap-md sm:grid-cols-2">
+        <div className="rounded-md border border-border bg-bg-card p-lg">
+          <p className="text-[13px] text-text-muted">On the profile now</p>
+          <p className="mt-xs text-[28px] font-bold text-text">{data?.live.count ?? 0}</p>
+          <p className="mt-xs text-[13px] text-text-muted">{data?.live.primaryCategory ?? "no primary category"}</p>
+        </div>
+        <div className="rounded-md border border-border bg-bg-card p-lg">
+          <p className="text-[13px] text-text-muted">Ready to publish</p>
+          <p className="mt-xs text-[28px] font-bold text-accent">{data?.willPublish.count ?? 0}</p>
+          <p className="mt-xs text-[13px] text-text-muted">{data?.willPublish.categories.length} categories</p>
+        </div>
+      </div>
+
+      {data?.willPublish.missingCategories.length ? (
+        <div className="rounded-md border border-border bg-bg-alt p-md">
+          <p className="text-[14px] font-semibold text-text">Add these categories first</p>
+          <p className="mt-xs text-[13px] text-text-muted">{data.willPublish.note}</p>
+          <ul className="mt-sm flex flex-wrap gap-2">
+            {data.willPublish.missingCategories.map((c) => (
+              <li key={c} className="rounded-full border border-border px-3 py-1 text-[13px] text-text-muted">{c}</li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-[13px] text-text-muted">{data?.willPublish.note}</p>
+      )}
+
+      {err && <p className="text-[14px] text-danger">{err}</p>}
+      {done && <p className="text-[14px] text-accent">{done}</p>}
+
+      <div className="flex flex-wrap items-center gap-sm">
+        <button
+          onClick={publish}
+          disabled={busy || !data?.canPublish}
+          className="inline-flex min-h-[44px] items-center gap-2 rounded-md bg-accent px-6 text-[14px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+        >
+          {busy ? <><Loader2 size={16} className="animate-spin" aria-hidden /> Publishing…</> : `Publish ${data?.willPublish.count ?? 0} services`}
+        </button>
+        <button
+          onClick={load}
+          disabled={busy}
+          className="inline-flex min-h-[44px] items-center rounded-md border border-border px-4 text-[14px] text-text-muted hover:text-text disabled:opacity-50"
+        >
+          Refresh
+        </button>
+      </div>
+      <p className="text-[12px] text-text-faint">
+        Replaces every service on the profile. Edit docs/gbp-content-pack-2026-08-30.md and re-run
+        scripts/gen-gbp-content.mjs to change the list.
+      </p>
     </div>
   );
 }

@@ -155,6 +155,38 @@ export async function deletePost(postName: string): Promise<void> {
 }
 
 // ── Business Info ─────────────────────────────────────────────────────────────
+
+/**
+ * A single GBP service.
+ *
+ * The API accepts two shapes and exactly one must be set per item:
+ *  - `structuredServiceItem` — a Google-defined service type, referenced by
+ *    `serviceTypeId`. Only available for types Google already knows for the
+ *    category, so most of our list cannot use it.
+ *  - `freeFormServiceItem`   — our own name and description, attached to one of
+ *    the location's own categories via `categoryId` (a "gcid:…" value).
+ *
+ * We use free-form for everything: the 103 services in
+ * docs/gbp-content-pack-2026-08-30.md are written for this business, not picked
+ * from Google's generic list.
+ *
+ * `description` is capped at 300 characters by Google. Longer values are
+ * rejected for the whole batch, not truncated — validate before sending.
+ */
+export type ServiceItem = {
+  structuredServiceItem?: { serviceTypeId: string; description?: string };
+  freeFormServiceItem?: {
+    categoryId: string;
+    label: { displayName: string; description?: string; languageCode?: string };
+  };
+};
+
+export type GbpCategory = {
+  /** The "gcid:…" identifier. Required as `categoryId` on a free-form service. */
+  name?: string;
+  displayName: string;
+};
+
 export type BusinessInfo = {
   name: string;
   title?: string;
@@ -162,10 +194,20 @@ export type BusinessInfo = {
   websiteUri?: string;
   regularHours?: { periods: { openDay: string; openTime: string; closeDay: string; closeTime: string }[] };
   description?: string;
-  categories?: { primaryCategory?: { displayName: string }; additionalCategories?: { displayName: string }[] };
+  categories?: { primaryCategory?: GbpCategory; additionalCategories?: GbpCategory[] };
+  /** Added 2026-08-30 — without this the 97-service content pack was unpublishable. */
+  serviceItems?: ServiceItem[];
+  /** Read-only here; we never write attributes we cannot verify. */
+  attributes?: { name: string; valueType?: string; values?: unknown[] }[];
 };
 
-const INFO_READ_MASK = "name,title,phoneNumbers,websiteUri,regularHours,description,categories";
+/**
+ * `serviceItems` and `attributes` added 2026-08-30. They were missing, which
+ * meant the integration could read and write identity fields but not services —
+ * and services are the single highest-value field on the profile.
+ */
+const INFO_READ_MASK =
+  "name,title,phoneNumbers,websiteUri,regularHours,description,categories,serviceItems,attributes";
 
 export async function getBusinessInfo(locationId: string): Promise<BusinessInfo> {
   // locationId here is the v1 resource name e.g. "locations/123..."
@@ -184,6 +226,56 @@ export async function updateBusinessInfo(locationId: string, patch: Partial<Busi
   });
   if (!res.ok) throw new Error(`updateBusinessInfo: ${res.status} ${await res.text().catch(() => "")}`);
   return res.json();
+}
+
+// ── Services ──────────────────────────────────────────────────────────────────
+
+/** Google's hard ceiling on a service description. Exceeding it rejects the batch. */
+export const SERVICE_DESCRIPTION_MAX = 300;
+
+export type ServiceInput = { name: string; description?: string; categoryId?: string };
+
+/**
+ * Build the `serviceItems` payload from a plain list.
+ *
+ * `categoryId` falls back to the location's PRIMARY category, which is what you
+ * want for most services. Pass one explicitly to file a service under a
+ * secondary category — that is how each claimed category gets substantiated,
+ * which is the rule the GBP standard applies to categories.
+ *
+ * Throws on a too-long description rather than letting Google reject the whole
+ * batch with an opaque 400.
+ */
+export function buildServiceItems(services: ServiceInput[], primaryCategoryId: string): ServiceItem[] {
+  const tooLong = services.filter((s) => (s.description?.length ?? 0) > SERVICE_DESCRIPTION_MAX);
+  if (tooLong.length) {
+    throw new Error(
+      `buildServiceItems: ${tooLong.length} description(s) over ${SERVICE_DESCRIPTION_MAX} chars: ` +
+        tooLong.map((s) => `${s.name} (${s.description!.length})`).join(", "),
+    );
+  }
+  return services.map((s) => ({
+    freeFormServiceItem: {
+      categoryId: s.categoryId || primaryCategoryId,
+      label: { displayName: s.name, description: s.description, languageCode: "en" },
+    },
+  }));
+}
+
+/**
+ * Replace the location's entire service list.
+ *
+ * NOTE: this is a REPLACE, not a merge — the API has no partial update for
+ * serviceItems. Read the current list first if you intend to append.
+ */
+export async function updateServices(locationId: string, serviceItems: ServiceItem[]): Promise<BusinessInfo> {
+  return updateBusinessInfo(locationId, { serviceItems }, "serviceItems");
+}
+
+/** The primary category's gcid, needed as the default `categoryId`. */
+export async function getPrimaryCategoryId(locationId: string): Promise<string | undefined> {
+  const info = await getBusinessInfo(locationId);
+  return info.categories?.primaryCategory?.name;
 }
 
 // ── Performance / Insights ────────────────────────────────────────────────────
