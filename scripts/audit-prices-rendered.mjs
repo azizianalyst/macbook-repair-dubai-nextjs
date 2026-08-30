@@ -51,12 +51,17 @@ function stripScripts(html) {
     .replace(/<[^>]+>/g, " "); // drop tags; keep visible text nodes only
 }
 
+// src/proxy.ts rate-limits to 60 req/min per IP and 429s the rest, but exempts search-engine
+// and AI-crawler UAs. Without this the gate reads throttle responses instead of pages and
+// "passes" because 429 bodies contain no prices.
+const CRAWLER_UA = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
+
 const leaks = [];
 let checked = 0, errors = 0;
 for (const route of routes) {
   const url = BASE.replace(/\/$/, "") + route;
   try {
-    const res = await fetch(url, { redirect: "follow" });
+    const res = await fetch(url, { redirect: "follow", headers: { "user-agent": CRAWLER_UA } });
     const html = await res.text();
     if (res.status >= 400) { errors++; console.log(`  ! ${res.status} ${route}`); continue; }
     const visible = stripScripts(html);
@@ -70,6 +75,13 @@ for (const route of routes) {
 }
 
 console.log(`\nChecked ${checked} routes (${errors} errors) against ${BASE}`);
+// A route that could not be fetched was not audited. Passing here would let an unreachable
+// server — or a rate-limited crawl — report a clean bill of health for pages nobody read.
+if (errors) {
+  console.log(`✗ FAIL — ${errors} route(s) could not be checked; the run is inconclusive.`);
+  console.log("  Is the server up, and is the crawler UA exempt from the proxy rate limiter?");
+  process.exit(1);
+}
 if (leaks.length === 0) {
   console.log("✓ PASS — no visible price figures in rendered output (JSON-LD schema excluded by design).");
   process.exit(0);
