@@ -120,6 +120,11 @@ export const USPS = [
 // Consumed by src/views/About.tsx (display) and src/lib/page-schema.ts (schema), so the
 // visible roster and the structured data can never drift. Keep names/years accurate.
 export const TEAM = [
+  // Abdul Aziz founded the business and works on Apple hardware himself; Shafiq runs the
+  // bench day to day. Both were previously described as "lead technician" - Abdul Aziz in a
+  // hardcoded Person node on the homepage, Shafiq here - so the structured data shipped two
+  // lead technicians with different years of experience. Distinct titles, one roster.
+  { name: "Abdul Aziz", years: 21, specialisation: "Founder · Apple Certified Mac Technician (ACMT)", credentials: ["Apple Certified Mac Technician (ACMT)"] },
   { name: "Shafiq", years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
   { name: "Usman",  years: 11, specialisation: "Board-level repair · M-series logic boards" },
   { name: "Ali",    years: 14, specialisation: "Data recovery · iMac and Mac mini" },

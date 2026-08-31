@@ -77,7 +77,15 @@ export function schemaForPath(path: string): unknown[] {
     return [
       organization(),
       localBusiness(),
-      ...TEAM.map((t) => person({ name: t.name, jobTitle: t.specialisation, yearsExperience: t.years })),
+      ...TEAM.map((t) =>
+        person({
+          name: t.name,
+          jobTitle: t.specialisation,
+          yearsExperience: t.years,
+          // Only Abdul Aziz carries a certification; the rest emit no hasCredential node.
+          credentials: "credentials" in t ? [...t.credentials] : undefined,
+        }),
+      ),
       ...imageNodes,
     ];
   }

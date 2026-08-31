@@ -348,7 +348,7 @@ const AMC: { t: string; d: string; href?: string }[] = [
 ];
 
 const WHY_CHOOSE = [
-  { t: "Experienced Apple Technicians", d: "Our lead technician Abdul Aziz has over 21 years of Mac repair experience, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
+  { t: "Experienced Apple Technicians", d: "Our founder Abdul Aziz has over 21 years of Mac repair experience, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
   { t: "Genuine & High-Grade Parts", d: "We use genuine Apple parts wherever they're available and high-grade compatible parts when they aren't - and we tell you which your repair uses before we start. Every repair carries a written warranty of up to 12 months, depending on the repair." },
   { t: "Comprehensive Services", d: "We offer a wide range of MacBook repairs based on your specific needs. From hardware and software issues to upgrades and maintenance, no matter the problem, we have the solution!" },
   { t: "Low Pricing", d: "We offer affordable and transparent costs for every MacBook repair or replacement. We discuss our repairs with you before we provide the best solution without any hidden fee." },
@@ -1315,7 +1315,7 @@ export default function Home() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageWithSpeakable({ url: SITE.url, name: TITLE, dateModified: SITEMAP_LAST_UPDATED })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Lead Repair Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Founder & Apple Certified Mac Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", url: SITE.url, warranty: "P1Y", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Message us on WhatsApp for a price on your model." })) }} />
         </section>
