@@ -20,6 +20,7 @@ import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
@@ -158,17 +159,7 @@ export default function MacBookProBatteryReplacement() {
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
           <div className="relative mx-auto max-w-content px-5 md:px-6">
-            <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-text-faint">
-              <ol className="flex flex-wrap items-center gap-2 list-none p-0 m-0">
-                <li><Link to="/" className="hover:text-accent">Home</Link></li>
-                <li aria-hidden>/</li>
-                <li><Link to="/macbook-pro-repair-dubai" className="hover:text-accent">MacBook Pro Repair</Link></li>
-                <li aria-hidden>/</li>
-                <li><Link to="/macbook-battery-replacement-dubai" className="hover:text-accent">Battery Replacement</Link></li>
-                <li aria-hidden>/</li>
-                <li className="text-text-muted">MacBook Pro</li>
-              </ol>
-            </nav>
+            <BreadcrumbTrail trail={[{ name: "Home", path: "/" }, { name: "MacBook Pro Repair", path: "/macbook-pro-repair-dubai" }, { name: "Battery Replacement", path: "/macbook-battery-replacement-dubai" }, { name: "MacBook Pro", path: "/macbook-pro-battery-replacement-dubai" }]} />
 
             <div className="grid gap-2xl md:grid-cols-12 items-start">
               <div className="md:col-span-7">

@@ -4,7 +4,12 @@ import { NextResponse } from "next/server";
 
 const SITE = "https://macbook-repair-dubai.ae";
 
-const EXCLUDE = /^\/(admin|landing-template-demo|blog)(\/|$)/;
+// Any *-template-demo route is a build-time scaffold demo: it ships `noindex, nofollow`,
+// so listing it in the sitemap tells Google "crawl this" while the page says "don't index" -
+// a mixed signal that wastes crawl budget. Matched by suffix rather than by name: the literal
+// list here covered `landing-template-demo` but not `azizi-template-demo`, which was added
+// later and reached the live sitemap as a noindex URL.
+const EXCLUDE = /^\/(admin|blog)(\/|$)|-template-demo(\/|$)/;
 const SERVICE_KW = /(screen|battery|keyboard|logic|water|trackpad|charging|speaker|camera|microphone|hinge|gpu|ssd|ram|fan|data|virus|overheat|touch|power|safe|backup|flexgate|cleaning|thermal|wifi|bluetooth|display|recovery|unlock|diagnostic|reinstall|maintenance|performance|port|activation|setup|migration|tune)/;
 const MODEL_KW = /(macbook-air-|macbook-pro-|imac-[0-9]|mac-mini-[a-z]|mac-studio-[a-z]|mac-pro-[a-z0-9]+-[0-9]|iphone-[0-9]|iphone-(se|x[sr]?|air|fold)|ipad-pro-|ipad-air-[0-9m]|ipad-mini-[0-9]|ipad-[0-9])/;
 const LOCATION_KW = /^\/macbook-repair-(?!near-me|cost|dubai$)[a-z-]+$/;

@@ -24,6 +24,7 @@ import { faqPage, localBusiness, organization, service as serviceSchema } from "
 import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 
 type PricingRow = { model: string; price: number; timeline: string };
 
@@ -186,15 +187,7 @@ export default function MacBookScreenRepair() {
         {/* ── Hero ───────────────────────────────────────────────── */}
         <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
           <div className="relative mx-auto max-w-content px-5 md:px-6">
-            <nav aria-label="Breadcrumb" className="mb-lg text-[13px] text-text-faint">
-              <ol className="flex flex-wrap items-center gap-2 list-none p-0 m-0">
-                <li><Link to="/" className="hover:text-accent">Home</Link></li>
-                <li aria-hidden>/</li>
-                <li><Link to="/" className="hover:text-accent">MacBook Repair</Link></li>
-                <li aria-hidden>/</li>
-                <li className="text-text-muted">Screen Repair</li>
-              </ol>
-            </nav>
+            <BreadcrumbTrail trail={[{ name: "Home", path: "/" }, { name: "MacBook Repair", path: "/macbook-repair-dubai" }, { name: "Screen Repair", path: "/macbook-screen-repair-dubai" }]} />
 
             <div className="grid gap-2xl md:grid-cols-12 items-start">
               <div className="md:col-span-7">
