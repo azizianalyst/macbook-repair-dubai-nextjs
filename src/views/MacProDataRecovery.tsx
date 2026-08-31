@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacProDataRecovery() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Pro Data Recovery Dubai - SSD Module and PCIe Recovery - From AED 800"
-      seoDescription="Mac Pro data recovery Dubai. Intel 2019: proprietary Apple SSD module (not standard M.2). M2 Ultra: soldered SSD. Both require specialist hardware. Free assessment. From AED 800. Call 055 741 3706."
+      seoTitle="Mac Pro Data Recovery Dubai - SSD Module and PCIe Recovery - Free Diagnosis"
+      seoDescription="Mac Pro data recovery Dubai. Intel 2019: proprietary Apple SSD module (not standard M.2). M2 Ultra: soldered SSD. Both require specialist hardware. Free assessment. Call 055 741 3706."
       path="/mac-pro-data-recovery-dubai"
       eyebrow="Intel 2019 + M2 Ultra · proprietary SSD · specialist extraction"
       h1="Mac Pro Data Recovery Dubai"

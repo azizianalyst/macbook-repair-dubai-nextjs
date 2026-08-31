@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookSsdUpgrade() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook SSD Upgrade Dubai - From AED 600 + Drive | Same Day"
-      seoDescription="MacBook SSD upgrade Dubai. Intel MacBook Pro 2013-2015 NVMe swap up to 2TB. M-series SSDs soldered (no upgrade). Cloning included. AED 600 + drive."
+      seoTitle="MacBook SSD Upgrade Dubai - + Drive | Same Day"
+      seoDescription="MacBook SSD upgrade Dubai. Intel MacBook Pro 2013-2015 NVMe swap up to 2TB. M-series SSDs soldered (no upgrade). Cloning included. + drive."
       path="/macbook-ssd-upgrade-dubai"
       eyebrow="MacBook SSD upgrade"
       h1="MacBook SSD Upgrade Dubai"

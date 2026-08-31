@@ -8,7 +8,7 @@ export default function MacBookNeoA18RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Neo A18 Pro Repair Dubai - First A-Chip MacBook 2026"
-      seoDescription="MacBook Neo A18 Pro repair Dubai (March 2026). Apple's $599 student MacBook with the A18 Pro chip from iPhone 16 Pro. Screen AED 650, battery AED 450. Free diagnosis. Warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work). Call 055 741 3706."
+      seoDescription="MacBook Neo A18 Pro repair Dubai (March 2026). Apple's $599 student MacBook with the A18 Pro chip from iPhone 16 Pro. Screen and battery work. Free diagnosis. Warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work). Call 055 741 3706."
       path="/macbook-neo-a18-repair-dubai"
       eyebrow="Apple A18 Pro · March 2026 · $599 · student MacBook"
       h1="MacBook Neo A18 Pro Repair Dubai - 2026"

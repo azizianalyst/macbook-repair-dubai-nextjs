@@ -5,7 +5,7 @@ export default function MacMiniRamUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini RAM Upgrade Dubai - 2018 Intel Only | 055 741 3706"
-      seoDescription="Mac Mini RAM upgrade Dubai. The 2018 Intel Mac Mini is the last upgradeable model - up to 64GB. M1/M2/M4 RAM is soldered. Honest answer first. AED 400."
+      seoDescription="Mac Mini RAM upgrade Dubai. The 2018 Intel Mac Mini is the last upgradeable model - up to 64GB. M1/M2/M4 RAM is soldered. Honest answer first."
       path="/mac-mini-ram-upgrade-dubai"
       eyebrow="Mac Mini RAM upgrade"
       h1="Mac Mini RAM Upgrade Dubai - 2018 Intel Only"

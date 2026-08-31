@@ -5,7 +5,7 @@ export default function MacMiniSsdUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac mini SSD Upgrade Dubai - Honest Guide (Soldered SSD)"
-      seoDescription="No Mac mini has a user-upgradeable SSD - the 2018 Intel mini through the M4 all have the SSD soldered to the board. We say so before you pay, and offer what does work: RAM upgrade (2018, from AED 500) and external SSD setup. Call 055 741 3706."
+      seoDescription="No Mac mini has a user-upgradeable SSD - the 2018 Intel mini through the M4 all have the SSD soldered to the board. We say so before you pay and offer what does work: RAM upgrade (2018) and external SSD setup. Call 055 741 3706."
       path="/mac-mini-ssd-upgrade-dubai"
       eyebrow="SSD soldered on every model · RAM upgrade (2018) · external SSD"
       h1="Mac mini SSD Upgrade Dubai - Honest Guide"

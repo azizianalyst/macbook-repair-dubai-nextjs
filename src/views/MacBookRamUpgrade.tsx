@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookRamUpgrade() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook RAM Upgrade Dubai - Honest Limits | Intel Only AED 400"
-      seoDescription="MacBook RAM upgrade Dubai. Honest answer: M1/M2/M3/M4/M5 RAM is soldered, not upgradeable. Intel MacBook Pro 2012-2015 upgradeable to 16GB. AED 400."
+      seoTitle="MacBook RAM Upgrade Dubai - Honest Limits | Intel Only"
+      seoDescription="MacBook RAM upgrade Dubai. Honest answer: M1/M2/M3/M4/M5 RAM is soldered, not upgradeable. Intel MacBook Pro 2012-2015 upgradeable to 16GB."
       path="/macbook-ram-upgrade-dubai"
       eyebrow="MacBook RAM upgrade"
       h1="MacBook RAM Upgrade Dubai"

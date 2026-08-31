@@ -6,7 +6,7 @@ export default function MacProM2UltraRepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro M2 Ultra Repair Dubai - 2023 First Apple Silicon Mac Pro"
-      seoDescription="Mac Pro M2 Ultra repair Dubai (2023, A2915). First Apple Silicon Mac Pro. Thunderbolt 4, HDMI 2.1, no MPX slots. Logic board, port repair, fan service. From AED 400. Call 055 741 3706."
+      seoDescription="Mac Pro M2 Ultra repair Dubai (2023, A2915). First Apple Silicon Mac Pro. Thunderbolt 4, HDMI 2.1, no MPX slots. Logic board, port repair, fan service. Call 055 741 3706."
       path="/mac-pro-m2-ultra-repair-dubai"
       eyebrow="Apple M2 Ultra · 2023 · first Apple Silicon Mac Pro · no MPX GPU slots"
       h1="Mac Pro M2 Ultra Repair Dubai - 2023"

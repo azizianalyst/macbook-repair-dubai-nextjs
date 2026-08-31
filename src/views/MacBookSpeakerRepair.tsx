@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookSpeakerRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Speaker Repair Dubai - AED 400 | 1 Day | All Models"
-      seoDescription="MacBook speaker repair Dubai. Blown drivers, distortion, water-damaged speakers, no sound from one side. AED 400, 1 day. Call 055 741 3706."
+      seoTitle="MacBook Speaker Repair Dubai - | 1 Day | All Models"
+      seoDescription="MacBook speaker repair Dubai. Blown drivers, distortion, water-damaged speakers, no sound from one side. One-day turnaround. Call 055 741 3706."
       path="/macbook-speaker-repair-dubai"
       eyebrow="MacBook speaker repair"
       h1="MacBook Speaker Repair Dubai"

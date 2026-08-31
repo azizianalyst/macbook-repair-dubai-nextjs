@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookTouchIDRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Touch ID Repair Dubai - AED 350 | Fingerprint & Power Button"
-      seoDescription="MacBook Touch ID repair Dubai. Fingerprint won't enrol, sensor not responding, power button dead. Honest diagnosis on T2 / Apple Silicon pairing. From AED 350, 1-2 days."
+      seoTitle="MacBook Touch ID Repair Dubai - | Fingerprint & Power Button"
+      seoDescription="MacBook Touch ID repair Dubai. Fingerprint won't enrol, sensor not responding, power button dead. Honest diagnosis on T2 / Apple Silicon pairing. 1-2 days."
       path="/macbook-touch-id-repair-dubai"
       eyebrow="MacBook Touch ID repair"
       h1="MacBook Touch ID Repair Dubai"

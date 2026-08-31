@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacStudioNoDisplayService() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Studio No Display Dubai? Black Screen Fix - From AED 400"
-      seoDescription="Mac Studio powers on but no display output in Dubai? Thunderbolt, HDMI, display cable, GPU/display IC. All models. Free diagnosis. From AED 400. Call 055 741 3706."
+      seoTitle="Mac Studio No Display Dubai? Black Screen Fix - Free Diagnosis"
+      seoDescription="Mac Studio powers on but no display output in Dubai? Thunderbolt, HDMI, display cable, GPU/display IC. All models. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-no-display-dubai"
       eyebrow="Mac Studio · All Models · No Display Fix"
       h1="Mac Studio No Display in Dubai? Black Screen Fix"

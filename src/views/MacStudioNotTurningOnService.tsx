@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacStudioNotTurningOnService() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Studio Not Turning On Dubai? Dead Mac Studio Fixed - From AED 600"
-      seoDescription="Mac Studio not turning on in Dubai? LED ring off, no fan, fans spin and stop. Power supply, SMC, board fault. All M1/M2/M3/M4 models. Free diagnosis. From AED 600. Call 055 741 3706."
+      seoTitle="Mac Studio Not Turning On Dubai? Dead Mac Studio Fixed - Free Diagnosis"
+      seoDescription="Mac Studio not turning on in Dubai? LED ring off, no fan, fans spin and stop. Power supply, SMC, board fault. All M1/M2/M3/M4 models. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-not-turning-on-dubai"
       eyebrow="Mac Studio · All Models · No Power Fix"
       h1="Mac Studio Not Turning On Dubai?"

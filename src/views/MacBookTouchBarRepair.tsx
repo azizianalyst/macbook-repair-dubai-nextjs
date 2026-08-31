@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookTouchBarRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Touch Bar Repair Dubai - AED 600 | Dead Strip Fixed"
-      seoDescription="MacBook Pro Touch Bar repair Dubai. Dead strip, flickering, half-lit, ghost touches, Touch ID at the end not working. AED 600, 1-2 days. WhatsApp 055 741 3706."
+      seoTitle="MacBook Touch Bar Repair Dubai - | Dead Strip Fixed"
+      seoDescription="MacBook Pro Touch Bar repair Dubai. Dead strip, flickering, half-lit, ghost touches, Touch ID at the end not working. 1-2 days. WhatsApp 055 741 3706."
       path="/macbook-touch-bar-repair-dubai"
       eyebrow="MacBook Touch Bar repair"
       h1="MacBook Touch Bar Repair Dubai"

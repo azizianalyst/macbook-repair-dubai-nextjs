@@ -9,8 +9,8 @@ import { Link } from "@/lib/router-compat";
 export default function MacbookNeoRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Repair Dubai - A18 Pro Budget MacBook from AED 250 | 055 741 3706"
-      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen AED 650, battery AED 450. Warranty up to 12 months. Free pickup."
+      seoTitle="MacBook Neo Repair Dubai - A18 Pro Budget MacBook | 055 741 3706"
+      seoDescription="MacBook Neo (March 2026) repair Dubai. A18 Pro chip, 12.9-inch screen, $599 budget MacBook. Screen and battery work. Warranty up to 12 months. Free pickup."
       path="/macbook-neo-repair-dubai"
       eyebrow="MacBook Neo · March 2026 · current Apple lineup · $599 entry-level"
       h1="MacBook Neo Repair Dubai - Apple's First A-Chip MacBook"

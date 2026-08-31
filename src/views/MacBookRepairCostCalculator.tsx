@@ -22,7 +22,7 @@ import { NAP } from "@/content/site";
 const PATH = "/macbook-repair-cost-calculator-dubai";
 const TITLE = "MacBook Repair Cost Dubai - Get a Written Quote";
 const DESC =
-  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair to see a real starting price in AED, then confirm on WhatsApp. Warranty up to 12 months.";
+  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair, then get a written quote back on WhatsApp. Warranty up to 12 months.";
 
 const FAQS = [
   { q: "How accurate is the repair cost estimate?", a: "We quote per model and per fault rather than publishing a list, because the same repair costs different amounts on a MacBook Air M1 and a 16-inch Pro. Pick your model and repair here, send it over, and you get a written quote back - fixed in writing after a free 20-minute diagnosis." },
@@ -62,7 +62,7 @@ export default function MacBookRepairCostCalculator() {
           tone="dark"
           eyebrow="Instant quote"
           title="MacBook Repair Cost in Dubai - Quoted per Model"
-          subtitle="Pick your exact Mac or iPad model and the repair you need to see a real starting price in AED - no forms, no waiting. Then confirm the exact quote on WhatsApp after a free diagnosis."
+          subtitle="Pick your exact Mac or iPad model and the repair you need, send it straight to a technician on WhatsApp, and get a written quote back - no forms, no waiting. The final price is confirmed after a free diagnosis."
           ctaLabel="Get a quote on WhatsApp"
         />
 

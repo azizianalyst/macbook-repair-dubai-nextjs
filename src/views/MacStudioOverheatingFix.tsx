@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacStudioOverheatingFix() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Studio Overheating Dubai? Fan Noise & Thermal Fix - From AED 350"
-      seoDescription="Mac Studio running hot or fan loud in Dubai? Dust intake clogged, thermal paste dried on sustained GPU/video workloads. Thermal service from AED 350. All models. Call 055 741 3706."
+      seoTitle="Mac Studio Overheating Dubai? Fan Noise & Thermal Fix - Free Diagnosis"
+      seoDescription="Mac Studio running hot or fan loud in Dubai? Dust intake clogged, thermal paste dried on sustained GPU/video workloads. Thermal service. All models. Call 055 741 3706."
       path="/mac-studio-overheating-fix-dubai"
       eyebrow="Mac Studio · All Models · Overheating and Fan Noise"
       h1="Mac Studio Overheating Dubai? Fan Noise Fix"

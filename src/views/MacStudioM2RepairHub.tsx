@@ -6,7 +6,7 @@ export default function MacStudioM2RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Studio M2 Max/Ultra Repair Dubai - 2023"
-      seoDescription="Mac Studio M2 Max and M2 Ultra repair Dubai (2023). Thunderbolt 4, HDMI 2.1, SD card reader. Fan service, port repair, logic board. From AED 350. Free diagnosis. Call 055 741 3706."
+      seoDescription="Mac Studio M2 Max and M2 Ultra repair Dubai (2023). Thunderbolt 4, HDMI 2.1, SD card reader. Fan service, port repair, logic board. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-m2-repair-dubai"
       eyebrow="M2 Max + M2 Ultra · 2023 · Thunderbolt 4 + HDMI 2.1"
       h1="Mac Studio M2 Repair Dubai - M2 Max and M2 Ultra 2023"

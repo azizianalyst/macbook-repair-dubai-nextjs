@@ -5,7 +5,7 @@ export default function MacProGpuRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro GPU Repair Dubai - MPX Modules & W6800X | 055 741 3706"
-      seoDescription="Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. From AED 1,200. 3-7 days."
+      seoDescription="Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. 3-7 days."
       path="/mac-pro-gpu-repair-dubai"
       eyebrow="Mac Pro GPU repair"
       h1="Mac Pro GPU Repair Dubai - MPX Modules"

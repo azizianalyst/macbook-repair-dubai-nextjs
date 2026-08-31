@@ -5,7 +5,7 @@ export default function MacNotTurningOn() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Not Turning On Dubai | 055 741 3706"
-      seoDescription="Mac desktop won't turn on? Power supply, SMC reset, Mac Pro diagnostic LEDs, Mac Studio PSU. From AED 400. 1-3 days. Free diagnostic first."
+      seoDescription="Mac desktop won't turn on? Power supply, SMC reset, Mac Pro diagnostic LEDs, Mac Studio PSU. 1-3 days. Free diagnostic first."
       path="/mac-not-turning-on-dubai"
       eyebrow="Mac no power"
       h1="Mac Mini, Studio & Pro Not Turning On Dubai"

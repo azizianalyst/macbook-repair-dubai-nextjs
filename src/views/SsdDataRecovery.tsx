@@ -60,9 +60,9 @@ export default function SsdDataRecovery() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "SSD Data Recovery Dubai. MacBook & External SSD | From AED 500",
+    title: "SSD Data Recovery Dubai. MacBook & External SSD | No-Fix No-Charge",
     description:
-      "SSD data recovery in Dubai. MacBook SSD, external SSD, deleted files, water damage. From AED 500. No-fix no-charge. Free assessment. Concord Tower, Media City. 055 741 3706.",
+      "SSD data recovery in Dubai. MacBook SSD, external SSD, deleted files, water damage. No-fix no-charge. Free assessment. Concord Tower, Media City. 055 741 3706.",
     path: "/ssd-data-recovery-dubai",
   });
 

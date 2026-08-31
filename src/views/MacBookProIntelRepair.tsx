@@ -7,7 +7,7 @@ export default function MacBookProIntelRepair() {
       path="/macbook-pro-intel-repair-dubai"
       chip="Intel"
       years="2017 – 2020"
-      seoTitle="MacBook Pro Intel Repair Dubai - 13&quot;, 15&quot; &amp; 16&quot; 2017–2020 | AED 150"
+      seoTitle="MacBook Pro Intel Repair Dubai - 13&quot;, 15&quot; &amp; 16&quot; 2017–2020"
       seoDescription="MacBook Pro Intel repair Dubai. 13&quot; (A1706–A2289), 15&quot; (A1707/A1990), 16&quot; (A2141). Butterfly keyboard, T2 chip, GPU issues. Free diagnosis, same-day. Call 055 741 3706."
       eyebrow="MacBook Pro Intel specialist"
       h1="MacBook Pro Intel Repair Dubai"

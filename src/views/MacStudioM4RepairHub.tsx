@@ -6,7 +6,7 @@ export default function MacStudioM4RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Studio M4 Max Repair Dubai - 2025 Thunderbolt 5"
-      seoDescription="Mac Studio M4 Max repair Dubai (2025). Thunderbolt 5, up to 128GB unified memory. Under 1 year old - check AppleCare+ first. Free diagnosis. From AED 400. Call 055 741 3706."
+      seoDescription="Mac Studio M4 Max repair Dubai (2025). Thunderbolt 5, up to 128GB unified memory. Under 1 year old - check AppleCare+ first. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-m4-repair-dubai"
       eyebrow="M4 Max · 2025 · Thunderbolt 5"
       h1="Mac Studio M4 Max Repair Dubai - 2025"

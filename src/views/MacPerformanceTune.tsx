@@ -5,7 +5,7 @@ export default function MacPerformanceTune() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Performance Tune Dubai | 055 741 3706"
-      seoDescription="Mac performance tune Dubai. macOS cleanup, startup audit, storage cleanup, log analysis. Find what's actually slowing it down. AED 350. 1 day."
+      seoDescription="Mac performance tune Dubai. macOS cleanup, startup audit, storage cleanup, log analysis. Find what's actually slowing it down. 1 day."
       path="/mac-performance-tune-dubai"
       eyebrow="Mac performance tune"
       h1="Mac Mini, Studio & Pro Performance Tune Dubai"

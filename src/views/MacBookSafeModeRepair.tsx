@@ -5,7 +5,7 @@ export default function MacBookSafeModeRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Safe Mode Repair Dubai | MacBook Repair Dubai"
-      seoDescription="MacBook won't start in safe mode? We run safe mode boot diagnostics in Dubai to isolate software from hardware faults. From AED 150, same day. Free diagnosis."
+      seoDescription="MacBook won't start in safe mode? We run safe mode boot diagnostics in Dubai to isolate software from hardware faults. Same day. Free diagnosis."
       path="/macbook-safe-mode-repair-dubai"
       eyebrow="Safe mode diagnostics"
       h1="MacBook Safe Mode Diagnostics and Repair in Dubai"

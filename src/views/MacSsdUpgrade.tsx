@@ -5,7 +5,7 @@ export default function MacSsdUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini & Mac Studio SSD Upgrade Dubai | 055 741 3706"
-      seoDescription="Mac Mini and Mac Studio SSD upgrade Dubai. Mac Mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable. Honest first. AED 600."
+      seoDescription="Mac Mini and Mac Studio SSD upgrade Dubai. Mac Mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable. Honest first."
       path="/mac-ssd-upgrade-dubai"
       eyebrow="Mac SSD upgrade"
       h1="Mac Mini & Mac Studio SSD Upgrade Dubai"

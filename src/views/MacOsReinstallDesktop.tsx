@@ -5,7 +5,7 @@ export default function MacOsReinstallDesktop() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro macOS Reinstall Dubai | 055 741 3706"
-      seoDescription="macOS reinstall on Mac Mini, Studio, Pro. Internet Recovery, Apple Configurator for revival, latest macOS compatibility. AED 300. Same day."
+      seoDescription="macOS reinstall on Mac Mini, Studio, Pro. Internet Recovery, Apple Configurator for revival, latest macOS compatibility. Same day."
       path="/mac-os-reinstall-dubai"
       eyebrow="macOS reinstall"
       h1="Mac Mini, Studio & Pro macOS Reinstall Dubai"

@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacProNotTurningOnService() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Pro Not Turning On Dubai? Tower & Rack Fix - From AED 700"
-      seoDescription="Mac Pro not turning on in Dubai? No power LED, power button does nothing, fans spin then stop. Intel PSU, M2 Ultra power board, Xeon W power delivery. Free diagnosis. From AED 700. Call 055 741 3706."
+      seoTitle="Mac Pro Not Turning On Dubai? Tower & Rack Fix - Free Diagnosis"
+      seoDescription="Mac Pro not turning on in Dubai? No power LED, power button does nothing, fans spin then stop. Intel PSU, M2 Ultra power board, Xeon W power delivery. Free diagnosis. Call 055 741 3706."
       path="/mac-pro-not-turning-on-dubai"
       eyebrow="Intel + M2 Ultra · PSU and power board · same-day diagnosis"
       h1="Mac Pro Not Turning On Dubai? Tower and Rack Fix"

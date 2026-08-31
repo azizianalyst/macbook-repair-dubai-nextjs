@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacMiniNoDisplay() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac mini No Display Dubai? HDMI & Thunderbolt Fix - From AED 200"
-      seoDescription="Mac mini powers on but no display? HDMI 2.0/2.1 port, Thunderbolt resolution handshake, display IC fault. All models. Free diagnosis. From AED 200. Call 055 741 3706."
+      seoTitle="Mac mini No Display Dubai? HDMI & Thunderbolt Fix - Free Diagnosis"
+      seoDescription="Mac mini powers on but no display? HDMI 2.0/2.1 port, Thunderbolt resolution handshake, display IC fault. All models. Free diagnosis. Call 055 741 3706."
       path="/mac-mini-no-display-dubai"
       eyebrow="All models · HDMI + Thunderbolt · same-day in most cases"
       h1="Mac mini No Display in Dubai? Black Screen Fix"

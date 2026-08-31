@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacProNoDisplayService() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Pro No Display Dubai? Black Screen Fix - From AED 250"
-      seoDescription="Mac Pro powers on but no display output in Dubai? Intel: MPX GPU fault. M2 Ultra: Thunderbolt or display IC. Free diagnosis. From AED 250. Call 055 741 3706."
+      seoTitle="Mac Pro No Display Dubai? Black Screen Fix - Free Diagnosis"
+      seoDescription="Mac Pro powers on but no display output in Dubai? Intel: MPX GPU fault. M2 Ultra: Thunderbolt or display IC. Free diagnosis. Call 055 741 3706."
       path="/mac-pro-no-display-dubai"
       eyebrow="Intel MPX GPU · M2 Ultra Thunderbolt · same-day diagnosis"
       h1="Mac Pro No Display in Dubai? Black Screen Fix"

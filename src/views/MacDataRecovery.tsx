@@ -125,7 +125,7 @@ export default function MacDataRecovery() {
     {
       title: "Mac Data Recovery Dubai - SSD, Deleted Files, Won't Boot",
       description:
-        "Mac data recovery Dubai. MacBook won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment. From AED 500. Call 055 741 3706.",
+        "Mac data recovery Dubai. MacBook won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment, no-fix no-charge. Call 055 741 3706.",
       path: "/mac-data-recovery-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },

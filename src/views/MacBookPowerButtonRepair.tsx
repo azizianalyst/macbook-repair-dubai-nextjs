@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookPowerButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Power Button & Touch ID Repair Dubai - AED 250"
-      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. From AED 250, same day, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="MacBook Power Button & Touch ID Repair Dubai"
+      seoDescription="MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. Same day, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-power-button-repair-dubai"
       eyebrow="MacBook power button repair"
       h1="MacBook Power Button & Touch ID Repair Dubai"

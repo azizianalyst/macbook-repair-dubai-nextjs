@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacStudioDataRecovery() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Studio Data Recovery Dubai - Soldered SSD Specialist - From AED 600"
-      seoDescription="Mac Studio data recovery Dubai. Soldered SSD (all models). Won't boot, deleted files, power failure during write. Specialist extraction hardware required. Free assessment. From AED 600. Call 055 741 3706."
+      seoTitle="Mac Studio Data Recovery Dubai - Soldered SSD Specialist - Free Diagnosis"
+      seoDescription="Mac Studio data recovery Dubai. Soldered SSD (all models). Won't boot, deleted files, power failure during write. Specialist extraction hardware required. Free assessment. Call 055 741 3706."
       path="/mac-studio-data-recovery-dubai"
       eyebrow="Mac Studio · All Models · Data Recovery"
       h1="Mac Studio Data Recovery Dubai"

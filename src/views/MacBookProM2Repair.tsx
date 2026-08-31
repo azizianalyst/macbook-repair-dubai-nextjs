@@ -7,7 +7,7 @@ export default function MacBookProM2Repair() {
       path="/macbook-pro-m2-repair-dubai"
       chip="M2"
       years="2022 – 2023"
-      seoTitle="MacBook Pro M2 Repair Dubai - 13&quot;, 14&quot; &amp; 16&quot; All M2 Models | AED 200"
+      seoTitle="MacBook Pro M2 Repair Dubai - 13&quot;, 14&quot; &amp; 16&quot; All M2 Models"
       seoDescription="MacBook Pro M2 repair Dubai. All variants: 13&quot; M2 (A2338), 14&quot; M2 Pro/Max (A2779), 16&quot; M2 Pro/Max (A2780). Same-day service. Call 055 741 3706."
       eyebrow="MacBook Pro M2 specialist"
       h1="MacBook Pro M2 Repair Dubai"

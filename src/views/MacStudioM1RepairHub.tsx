@@ -6,7 +6,7 @@ export default function MacStudioM1RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Studio M1 Max/Ultra Repair Dubai - 2022 First Generation"
-      seoDescription="Mac Studio M1 Max and M1 Ultra repair Dubai (2022). Fan bearing, overheating under workload, Thunderbolt 4 port, logic board. From AED 350. Free diagnosis. Call 055 741 3706."
+      seoDescription="Mac Studio M1 Max and M1 Ultra repair Dubai (2022). Fan bearing, overheating under workload, Thunderbolt 4 port, logic board. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-m1-repair-dubai"
       eyebrow="M1 Max + M1 Ultra · 2022 · first Mac Studio ever"
       h1="Mac Studio M1 Repair Dubai - M1 Max and M1 Ultra 2022"

@@ -6,7 +6,7 @@ export default function MacMiniM2RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac mini M2 Repair Dubai - M2 and M2 Pro 2023"
-      seoDescription="Mac mini M2 repair Dubai (2023, A2686 M2 / A2687 M2 Pro). Thunderbolt 4 on both; HDMI 2.1 on the M2 Pro. Logic board repair from AED 1,040. Known HDMI audio bug (M2 Pro) and Thunderbolt drops documented. From AED 200. Call 055 741 3706."
+      seoDescription="Mac mini M2 repair Dubai (2023, A2686 M2 / A2687 M2 Pro). Thunderbolt 4 on both; HDMI 2.1 on the M2 Pro. Logic board repair Known HDMI audio bug (M2 Pro) and Thunderbolt drops documented. Call 055 741 3706."
       path="/mac-mini-m2-repair-dubai"
       eyebrow="Apple M2 / M2 Pro · 2023 · Thunderbolt 4 (HDMI 2.1 on M2 Pro)"
       h1="Mac mini M2 Repair Dubai - M2 and M2 Pro 2023"

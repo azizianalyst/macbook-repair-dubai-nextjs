@@ -6,7 +6,7 @@ export default function MacMiniM1RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac mini M1 Repair Dubai - 2020 First Apple Silicon Mini"
-      seoDescription="Mac mini M1 repair Dubai (2020, A2348). First Apple Silicon Mac mini. SSD soldered, RAM soldered, 8-16GB. No display port: HDMI 2.0 + Thunderbolt 3. Logic board, port, thermal. From AED 200. Call 055 741 3706."
+      seoDescription="Mac mini M1 repair Dubai (2020, A2348). First Apple Silicon Mac mini. SSD soldered, RAM soldered, 8-16GB. No display port: HDMI 2.0 + Thunderbolt 3. Logic board, port, thermal. Call 055 741 3706."
       path="/mac-mini-m1-repair-dubai"
       eyebrow="Apple M1 · 2020 · first Apple Silicon Mac mini"
       h1="Mac mini M1 Repair Dubai - 2020"

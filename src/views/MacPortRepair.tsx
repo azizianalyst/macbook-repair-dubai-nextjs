@@ -5,7 +5,7 @@ export default function MacPortRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Port Repair Dubai - TB4/TB5, HDMI | 055 741 3706"
-      seoDescription="Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. AED 400. 2 days. Free clean if that's all it needs."
+      seoDescription="Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. 2 days. Free clean if that's all it needs."
       path="/mac-port-repair-dubai"
       eyebrow="Mac port repair"
       h1="Mac Mini, Studio & Pro Port Repair Dubai"

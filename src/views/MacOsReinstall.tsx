@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacOsReinstall() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day"
-      seoDescription="macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. AED 300, 2-4 hours."
+      seoTitle="MacBook macOS Reinstall Dubai - Clean Install Service | | Same Day"
+      seoDescription="macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. 2-4 hours."
       path="/macos-reinstall-dubai"
       eyebrow="macOS reinstall"
       h1="MacBook macOS Reinstall Dubai - Clean Install Service"

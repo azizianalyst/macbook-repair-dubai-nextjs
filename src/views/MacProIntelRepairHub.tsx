@@ -6,7 +6,7 @@ export default function MacProIntelRepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro Intel Repair Dubai - 2019 Xeon W Tower and Rack"
-      seoDescription="Mac Pro Intel 2019 repair Dubai. Tower and rack models, Xeon W CPU, MPX GPU modules, PCIe expansion. GPU repair, logic board, PSU, RAM. From AED 400. Free diagnosis. Call 055 741 3706."
+      seoDescription="Mac Pro Intel 2019 repair Dubai. Tower and rack models, Xeon W CPU, MPX GPU modules, PCIe expansion. GPU repair, logic board, PSU, RAM. Free diagnosis. Call 055 741 3706."
       path="/mac-pro-intel-repair-dubai"
       eyebrow="Intel Xeon W · 2019 · MPX GPU modules · PCIe expansion · tower and rack"
       h1="Mac Pro Intel Repair Dubai - 2019 Xeon W"

@@ -56,9 +56,9 @@ export default function MacRepairNearMe() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Mac Repair Near Me Dubai. MacBook, iMac & Mac mini | From AED 450",
+    title: "Mac Repair Near Me Dubai. MacBook, iMac & Mac mini",
     description:
-      "Mac repair near you in Dubai. MacBook screen from AED 600, battery from AED 450. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706.",
+      "Mac repair near you in Dubai. Screen, battery and board-level work. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706.",
     path: "/mac-repair-near-me-dubai",
   });
 

@@ -71,9 +71,9 @@ export default function SameDayMacBookRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Same-Day MacBook Repair Dubai. Screen from AED 600, Battery from AED 450",
+    title: "Same-Day MacBook Repair Dubai. Screen, Battery, Keyboard",
     description:
-      "Same-day MacBook repair in Dubai. Screen from AED 600, battery from AED 450. Free pickup across Dubai. Drop off by 2 pm, back the same day. Call 055 741 3706.",
+      "Same-day MacBook repair in Dubai. Screen, battery and keyboard. Free pickup across Dubai. Drop off by 2 pm, back the same day. Call 055 741 3706.",
     path: "/same-day-macbook-repair-dubai",
   });
 

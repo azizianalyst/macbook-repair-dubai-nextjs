@@ -51,7 +51,7 @@ export default function MacRepairCost() {
   useSeo({
     title: "Mac Repair Cost Dubai. MacBook, iMac, Mac mini | 2024 Prices",
     description:
-      "Mac repair cost in Dubai. MacBook screen from AED 600, battery from AED 450, logic board from AED 800. iMac screen from AED 699. Free diagnosis. Call 055 741 3706.",
+      "Mac repair cost in Dubai. MacBook screen, battery and logic board; iMac screen. Free diagnosis, written quote before any work. Call 055 741 3706.",
     path: "/mac-repair-cost-dubai",
   });
 

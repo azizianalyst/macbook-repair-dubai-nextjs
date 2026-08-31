@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacProFullDiagnostic() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac Pro Full Diagnostic Dubai - Pre-Purchase & Fault Check - AED 200"
-      seoDescription="Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. AED 200, waived if we do the repair. Free pickup. Call 055 741 3706."
+      seoTitle="Mac Pro Full Diagnostic Dubai - Pre-Purchase & Fault Check"
+      seoDescription="Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Free pickup. Call 055 741 3706."
       path="/mac-pro-full-diagnostic-dubai"
       eyebrow="Intel + M2 Ultra · AED 200 · waived on repair · pre-purchase check available"
       h1="Mac Pro Full Diagnostic Dubai - Pre-Purchase and Fault Check"

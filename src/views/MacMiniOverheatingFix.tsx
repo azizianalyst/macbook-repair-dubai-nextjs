@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacMiniOverheatingFix() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac mini Overheating Dubai? Fan Noise & Thermal Fix - From AED 250"
-      seoDescription="Mac mini overheating or loud fan in Dubai? Dust-clogged vents, dried thermal paste, M-chip sustained load throttling. Thermal service from AED 250. All models. Call 055 741 3706."
+      seoTitle="Mac mini Overheating Dubai? Fan Noise & Thermal Fix - Free Diagnosis"
+      seoDescription="Mac mini overheating or loud fan in Dubai? Dust-clogged vents, dried thermal paste, M-chip sustained load throttling. Thermal service. All models. Call 055 741 3706."
       path="/mac-mini-overheating-fix-dubai"
       eyebrow="All models · Intel + M-chip · same-day thermal service"
       h1="Mac mini Overheating Dubai? Fan Noise Fix"

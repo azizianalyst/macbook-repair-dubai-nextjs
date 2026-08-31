@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookTrackpadRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Trackpad Repair Dubai - AED 350 | 1 Day | Force Touch Specialists"
-      seoDescription="MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. AED 350. Call 055 741 3706."
+      seoTitle="MacBook Trackpad Repair Dubai - | 1 Day | Force Touch Specialists"
+      seoDescription="MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. Call 055 741 3706."
       path="/macbook-trackpad-repair-dubai"
       eyebrow="MacBook trackpad repair"
       h1="MacBook Trackpad Repair Dubai"

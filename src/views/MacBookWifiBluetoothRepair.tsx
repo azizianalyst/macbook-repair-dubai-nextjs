@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookWifiBluetoothRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Wi-Fi & Bluetooth Repair Dubai - AED 250 | Fast Fix"
-      seoDescription="MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. From AED 250, 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="MacBook Wi-Fi & Bluetooth Repair Dubai - | Fast Fix"
+      seoDescription="MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. 1-2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-wifi-bluetooth-repair-dubai"
       eyebrow="MacBook Wi-Fi & Bluetooth repair"
       h1="MacBook Wi-Fi & Bluetooth Repair Dubai"

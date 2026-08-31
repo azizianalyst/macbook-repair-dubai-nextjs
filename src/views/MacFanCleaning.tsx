@@ -5,7 +5,7 @@ export default function MacFanCleaning() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Fan Cleaning Dubai | 055 741 3706"
-      seoDescription="Mac desktop fan cleaning Dubai. Mac Studio big fan, Mac Pro dual fans, Mac Mini blower. Dubai dust deep clean. AED 250. Same day."
+      seoDescription="Mac desktop fan cleaning Dubai. Mac Studio big fan, Mac Pro dual fans, Mac Mini blower. Dubai dust deep clean. Same day."
       path="/mac-fan-cleaning-dubai"
       eyebrow="Mac fan cleaning"
       h1="Mac Mini, Studio & Pro Fan Cleaning Dubai"

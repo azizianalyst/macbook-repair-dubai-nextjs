@@ -6,7 +6,7 @@ export default function MacStudioM3RepairHub() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Studio M3 Ultra Repair Dubai - 2025"
-      seoDescription="Mac Studio M3 Ultra repair Dubai (2025). 32-core CPU, up to 512GB unified memory, Thunderbolt 5. Under 1 year old - check AppleCare+ first. Free diagnosis. From AED 400. Call 055 741 3706."
+      seoDescription="Mac Studio M3 Ultra repair Dubai (2025). 32-core CPU, up to 512GB unified memory, Thunderbolt 5. Under 1 year old - check AppleCare+ first. Free diagnosis. Call 055 741 3706."
       path="/mac-studio-m3-repair-dubai"
       eyebrow="M3 Ultra · 2025 · 32-core CPU · up to 512GB"
       h1="Mac Studio M3 Ultra Repair Dubai - 2025"

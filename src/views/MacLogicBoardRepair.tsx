@@ -5,7 +5,7 @@ export default function MacLogicBoardRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini & Studio Logic Board Repair Dubai | 055 741 3706"
-      seoDescription="Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest). From AED 299."
+      seoDescription="Mac Mini and Studio logic board repair Dubai. Component-level work on power delivery, Thunderbolt controller, USB. SoC failures = board swap (honest)."
       path="/mac-logic-board-repair-dubai"
       eyebrow="Mac logic board repair"
       h1="Mac Mini & Studio Logic Board Repair Dubai"

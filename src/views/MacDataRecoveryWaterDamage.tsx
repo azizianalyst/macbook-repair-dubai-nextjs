@@ -50,9 +50,9 @@ export default function MacDataRecoveryWaterDamage() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Mac Data Recovery After Water Damage Dubai. From AED 900 | No-Fix No-Charge",
+    title: "Mac Data Recovery After Water Damage Dubai | No-Fix No-Charge",
     description:
-      "Mac data recovery after water damage in Dubai. Free pickup, same-day emergency. From AED 900. No-fix no-charge. NAND chip-off capability. Call 055 741 3706.",
+      "Mac data recovery after water damage in Dubai. Free pickup, same-day emergency. No-fix no-charge. NAND chip-off capability. Call 055 741 3706.",
     path: "/mac-data-recovery-after-water-damage-dubai",
   });
 

@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacMiniNotTurningOn() {
   return (
     <SubServicePageTemplate
-      seoTitle="Mac mini Not Turning On Dubai? Dead Mac mini Fixed - From AED 200"
-      seoDescription="Mac mini not turning on in Dubai? Power LED off, fans spin then stop, no chime. Intel PSU failure, M-chip SMC reset, board fault. Free diagnosis. From AED 200. Call 055 741 3706."
+      seoTitle="Mac mini Not Turning On Dubai? Dead Mac mini Fixed - Free Diagnosis"
+      seoDescription="Mac mini not turning on in Dubai? Power LED off, fans spin then stop, no chime. Intel PSU failure, M-chip SMC reset, board fault. Free diagnosis. Call 055 741 3706."
       path="/mac-mini-not-turning-on-dubai"
       eyebrow="All models · Intel + M1/M2/M4 · same-day diagnosis"
       h1="Mac mini Not Turning On Dubai? Dead Mac Fixed"
