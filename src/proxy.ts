@@ -7,16 +7,33 @@ import { REDIRECTS } from "@/content/redirects.generated";
 // ── IP Rate limiter ────────────────────────────────────────────────────────────
 // Blocks automated site audits and AI-assisted scraping: after RATE_LIMIT requests
 // in RATE_WINDOW ms from one IP, all further requests return 429 for RATE_BLOCK ms.
-// A human browsing hits ~3-5 pages/min; even a fast skimmer rarely tops ~30. An audit hits 60+.
-// Threshold is HIGH (60/min) on purpose: this is a HARD per-IP block, and many UAE customers
-// share one IP (carrier-grade NAT, office networks), so a low limit risks walling a whole
-// building of real clients. Robust abuse protection belongs at the Cloudflare edge (a managed
-// challenge, not a hard block); this in-app limiter is only a coarse backstop for scraper
-// bursts. The cooldown is a fixed 2 min, NOT extended on every excess request, so a blocked
-// visitor is always released quickly.
+//
+// HISTORY — this limiter was blocking real customers in production. The old threshold (60/min)
+// was chosen on the assumption that "a human browsing hits ~3-5 pages/min". That assumption
+// ignored the App Router: every <Link> in the viewport is prefetched as an `?_rsc=` request,
+// so ONE homepage visit fired ~120 matcher-matching requests in about two seconds and roughly
+// 60 of them came back 429 — measured against production on 2026-08-31, before this fix. The
+// visitor exhausted their own budget before clicking anything.
+//
+// Two changes fix it:
+//   1. App-internal RSC traffic (prefetch + client-side navigation payloads) is NOT counted.
+//      It is the framework talking to itself, not page views, and 429ing a prefetch degrades
+//      navigation for a real user while stopping no scraper worth stopping — a content scraper
+//      wants HTML, and one that spoofs `_rsc` could just as easily spoof a Googlebot UA, which
+//      the exemption list above already allows. Same accepted trade-off, stated openly.
+//   2. The HTML threshold is raised to 200/min. A real reader loads 3-5 HTML pages/min, so this
+//      is ~40x headroom — deliberate, because many UAE customers share one public IP via
+//      carrier-grade NAT (Etisalat/du mobile) or an office network, and this is a HARD per-IP
+//      block that would otherwise wall a whole building of real clients.
+//
+// Named competitor tooling (Ahrefs, Semrush, Majestic, DataForSEO…) is still hard-blocked by UA
+// above, and cloners still get the poisoned honeypot. Robust abuse protection belongs at the
+// Cloudflare edge (a managed challenge, not a hard block); this in-app limiter is only a coarse
+// backstop for scraper bursts. The cooldown is a fixed 2 min, NOT extended on every excess
+// request, so a blocked visitor is always released quickly.
 // In-memory only — resets on server restart. Fine for single-instance Hostinger Node.
 const _rateMap = new Map<string, { count: number; resetAt: number; blocked?: boolean }>();
-const RATE_LIMIT  = 60;          // page navigations per window before lockout
+const RATE_LIMIT  = 200;         // HTML page views per window before lockout (RSC not counted)
 const RATE_WINDOW = 60_000;      // 1 minute window (ms)
 const RATE_BLOCK  = 2 * 60_000;  // 2 minute cooldown after exceeding limit (ms)
 
@@ -35,7 +52,23 @@ const RATE_EXEMPT_UA = [
   "perplexitybot", "perplexity-user",
 ];
 
+// Next App Router traffic that is NOT a page view: `<Link>` prefetches and client-side
+// navigation payloads. Next sets `RSC: 1` on every flight request and `Next-Router-Prefetch: 1`
+// on speculative ones; the `_rsc` query param is the same request seen without headers (e.g.
+// through a cache). Any of the three means "the framework is fetching its own payload".
+function isAppInternalRsc(req: NextRequest): boolean {
+  return (
+    req.headers.get("rsc") === "1" ||
+    req.headers.get("next-router-prefetch") === "1" ||
+    req.nextUrl.searchParams.has("_rsc")
+  );
+}
+
 function rateLimited(req: NextRequest): boolean {
+  // Prefetch/RSC is the framework talking to itself — one page view can be 100+ of these.
+  // Counting them made a single real visitor rate-limit themselves within seconds.
+  if (isAppInternalRsc(req)) return false;
+
   const ua = req.headers.get("user-agent")?.toLowerCase() ?? "";
   if (RATE_EXEMPT_UA.some((e) => ua.includes(e))) return false;
 

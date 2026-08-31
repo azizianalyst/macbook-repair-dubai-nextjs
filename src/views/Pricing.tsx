@@ -1,6 +1,5 @@
 "use client";
 import { Search, ShieldCheck, Banknote, Clock, Check, X, Truck, Sparkles, AlertTriangle } from "lucide-react";
-import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -87,9 +86,9 @@ export default function Pricing() {
       <Hero
         variant="service"
         tone="dark"
-        eyebrow="Full price list"
-        title="Transparent Pricing: No Hidden Fees"
-        subtitle="Every price below is an estimated starting price for the most common fault on the most common model. Your exact price is confirmed in writing after a free diagnosis. Quote before repair, warranty included."
+        eyebrow="Repair pricing"
+        title="Clear Pricing, Quoted Before We Start"
+        subtitle="Diagnosis is free, and your exact price is confirmed in writing on WhatsApp before any work begins. No deposit, no surprise charges - decline the quote and take the device back at no cost."
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -109,9 +108,13 @@ export default function Pricing() {
           ))}
         </div>
         <p className="text-[15px] text-text-muted mt-lg max-w-[72ch]">
-          Prefer an instant estimate for your exact model? Try our{" "}
-          <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent font-semibold hover:underline">MacBook repair cost calculator</Link>{" "}
-          - pick your device and repair to see a starting price in seconds.
+          Want a figure for your exact model? Send us the model and the fault on{" "}
+          <a
+            href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, quote please - my model and fault: ")}`}
+            target="_blank" rel="noopener noreferrer"
+            className="text-accent font-semibold hover:underline"
+          >WhatsApp</a>{" "}
+          - a technician replies with a written quote, usually the same day.
         </p>
       </section>
 
