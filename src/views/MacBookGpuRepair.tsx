@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookGpuRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook GPU Repair Dubai - AED 800 | Reballed AMD Radeon | 3-5 Days"
-      seoDescription="MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2016-2019 MacBook Pro. Reballed chip replacement, not reflow. AED 800. Call 055 741 3706."
+      seoTitle="MacBook GPU Repair Dubai - Reballed AMD Radeon | 3-5 Days"
+      seoDescription="MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2016-2019 MacBook Pro. Reballed chip replacement, not reflow. Call 055 741 3706."
       path="/macbook-gpu-repair-dubai"
       eyebrow="MacBook GPU repair"
       h1="MacBook GPU Repair Dubai"
-      subtitle="2016-2019 MacBook Pros with AMD Radeon failure - black screens, kernel panics, garbled graphics. We replace the GPU with a reballed chip, not a temporary reflow. AED 800."
+      subtitle="2016-2019 MacBook Pros with AMD Radeon failure - black screens, kernel panics, garbled graphics. We replace the GPU with a reballed chip, not a temporary reflow."
       startingPrice={800}
       timeline="3-5 days"
       whatsappPrefill="Hi, my MacBook Pro has a GPU fault - model and year:"
@@ -58,13 +58,13 @@ export default function MacBookGpuRepair() {
         { q: "Can you repair Apple Silicon GPUs (M1, M2, M3, M4, M5)?", a: "No, honestly. The GPU is fused into the SoC die alongside the CPU and unified memory. If the GPU fails, the entire SoC has failed, and SoC failure means board swap - no chip-level rework is possible. We diagnose for free and tell you." },
         { q: "How long does a reballed GPU last?", a: "When done correctly: as long as the original Apple solder bond, often longer because we use higher-melt-point lead-free balls. The warranty of up to 12 months is paperwork - actual lifespan is 4-6 years." },
         { q: "Will I lose my data?", a: "No. The GPU is on the logic board but separate from the SSD circuit. We don't touch your storage." },
-        { q: "What if it's not the GPU but the display itself?", a: "Free diagnosis confirms which. If it's the display panel, that's a different fix (AED 1,200-1,800) and we tell you upfront. We don't charge for GPU work that wasn't needed." },
+        { q: "What if it's not the GPU but the display itself?", a: "Free diagnosis confirms which. If it's the display panel, that's a different fix, and we tell you upfront. We don't charge for GPU work that wasn't needed." },
       ]}
       reviewNames={["Daniel Vyskoc", "joseph manalili", "Anatoliy Tarasenko"]}
       related={[
         { label: "MacBook Repair Hub",         href: "/",            description: "All MacBook services in one place." },
-        { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Sister board-level service. From AED 800." },
-        { label: "MacBook Screen Repair",      href: "/macbook-screen-repair-dubai",     description: "If it's not the GPU, it's the panel. From AED 1,200." },
+        { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Sister board-level service." },
+        { label: "MacBook Screen Repair",      href: "/macbook-screen-repair-dubai",     description: "If it's not the GPU, it's the panel." },
       ]}
       blogLink={{ label: "Why your 2016-2019 MacBook Pro GPU is failing", href: "/blog/macbook-flexgate-explained" }}
     />

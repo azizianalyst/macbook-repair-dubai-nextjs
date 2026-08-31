@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookHingeRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Hinge Repair Dubai - AED 300 | Clutch & Lid Fix"
-      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. From AED 300, 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="MacBook Hinge Repair Dubai - Clutch & Lid Fix"
+      seoDescription="MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. Usually 1-2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-hinge-repair-dubai"
       eyebrow="MacBook hinge repair"
       h1="MacBook Hinge & Clutch Repair Dubai"
-      subtitle="Lid won't stay up, hinge grinds, or the case is cracking near the clutch? We rebuild and replace MacBook hinge assemblies - from AED 300, most done in 1-2 days."
+      subtitle="Lid won't stay up, hinge grinds, or the case is cracking near the clutch? We rebuild and replace MacBook hinge assemblies, most done in 1-2 days."
       startingPrice={300}
       timeline="1-2 days"
       whatsappPrefill="Hi, my MacBook hinge has a problem - model and symptom:"
@@ -23,7 +23,7 @@ export default function MacBookHingeRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. AED 300 covers parts, labour and a warranty of up to 12 months.
+            <strong>MacBook hinge repair in Dubai</strong> covers a lid that won't stay open, a stiff or grinding clutch, a screen that won't close flush, and cracked bottom cases around the hinge mounts. The hinge (clutch) assembly also routes the delicate display flex cable - so a failing hinge often turns into a screen fault if left too long. We diagnose whether you need a hinge tightening, a new clutch assembly, or housing repair, and protect the cable in the process. The quote covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We carry hinge hardware for MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), and the older 2012-2015 Retina Pros where seized hinges are common.
@@ -51,7 +51,7 @@ export default function MacBookHingeRepair() {
         "Free re-adjust if the lid loosens inside 12 months.",
       ]}
       faqs={[
-        { q: "How much does MacBook hinge repair cost in Dubai?", a: "Hinge tightening and minor clutch work starts at AED 300. A full clutch/hinge assembly replacement runs AED 450-900 depending on model. If the bottom case is cracked around the mounts, housing repair is quoted separately after a free diagnosis." },
+        { q: "How much does MacBook hinge repair cost in Dubai?", a: "Hinge tightening and minor clutch work is the simpler job; a full clutch/hinge assembly replacement costs more and varies depending on model. If the bottom case is cracked around the mounts, housing repair is quoted separately after a free diagnosis." },
         { q: "Can a loose MacBook hinge damage the screen?", a: "Yes. A failing hinge strains the display flex cable that runs through the clutch, which can cause flickering, backlight issues or Flexgate-style faults. Fixing it early avoids a far costlier screen repair later." },
         { q: "Do you repair the hinge or replace the whole screen?", a: "In most cases we repair or replace just the hinge/clutch assembly - far cheaper than a full display. We only recommend a screen replacement if the panel or cable is already damaged." },
         { q: "How long does it take?", a: "Most hinge repairs are done in 1-2 days. If we need to order a model-specific clutch assembly it may take a little longer - we'll tell you up front." },
@@ -59,7 +59,7 @@ export default function MacBookHingeRepair() {
       ]}
       reviewNames={["David Boulos", "Anatoliy Tarasenko", "vinay menon"]}
       related={[
-        { label: "MacBook Screen Repair",     href: "/macbook-screen-repair-dubai",     description: "Cable strain from a bad hinge. From AED 600." },
+        { label: "MacBook Screen Repair",     href: "/macbook-screen-repair-dubai",     description: "Cable strain from a bad hinge." },
         { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Board-level fixes when the cable damages more." },
         { label: "MacBook Full Diagnostic",   href: "/macbook-full-diagnostic-dubai",    description: "Not sure what's wrong? Free diagnosis." },
       ]}

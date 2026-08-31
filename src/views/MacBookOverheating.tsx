@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "How much does MacBook overheating repair cost in Dubai?",
-    a: "Thermal paste replacement AED 150-250. Fan replacement AED 200-400. Deep clean plus thermal paste AED 200-300. Free diagnosis before any paid work.",
+    a: "It depends on the cause: a thermal paste replacement is the cheapest, a deep clean with fresh paste sits in the middle, and a fan replacement is the most involved. Free diagnosis before any paid work.",
   },
   {
     q: "My MacBook Air M2 runs hot -- is that normal?",
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "My MacBook Pro fans are running constantly and it is still hot -- what is wrong?",
-    a: "Dried thermal paste is the most common cause on Intel MacBook Pros after 3+ years. The paste between the CPU and heat spreader degrades and loses conductivity. Thermal paste replacement takes 45 minutes and typically drops temperatures by 20-30°C. AED 150-250.",
+    a: "Dried thermal paste is the most common cause on Intel MacBook Pros after 3+ years. The paste between the CPU and heat spreader degrades and loses conductivity. Thermal paste replacement takes 45 minutes and typically drops temperatures by 20-30°C.",
   },
   {
     q: "Can overheating damage my MacBook permanently?",
@@ -45,15 +45,15 @@ const FAQS = [
 const FAULTS = [
   {
     title: "Dried thermal paste (Intel models)",
-    body: "Intel MacBook Pros and Airs (2017-2020) use thermal paste that degrades in UAE heat after 3-4 years. Temperature at idle rises from 40°C to 80°C. Thermal paste replacement AED 150-250, same-day.",
+    body: "Intel MacBook Pros and Airs (2017-2020) use thermal paste that degrades in UAE heat after 3-4 years. Temperature at idle rises from 40°C to 80°C. Thermal paste replacement, same-day.",
   },
   {
     title: "Fan failure (MacBook Pro)",
-    body: "MacBook Pro uses one or two fans (depending on model). A failed fan bearing causes continuous high-pitched noise followed by thermal shutdown. Fan replacement AED 200-400, fan in stock for all Pro models.",
+    body: "MacBook Pro uses one or two fans (depending on model). A failed fan bearing causes continuous high-pitched noise followed by thermal shutdown. Fan replacement, with fans in stock for all Pro models.",
   },
   {
     title: "Dust-blocked vents (Pro models)",
-    body: "Dubai dust accumulates inside the Pro chassis and blocks airflow to the heat exchanger. Deep clean with compressed air and thermal paste replacement AED 150-200. Often prevents the need for a fan replacement.",
+    body: "Dubai dust accumulates inside the Pro chassis and blocks airflow to the heat exchanger. Deep clean with compressed air and thermal paste replacement. Often prevents the need for a fan replacement.",
   },
   {
     title: "M-chip thermal throttling from software load",
@@ -61,11 +61,11 @@ const FAULTS = [
   },
   {
     title: "Liquid damage on heat spreader",
-    body: "Liquid residue on the CPU or GPU heat spreader insulates the chip and causes runaway temperatures. Ultrasonic clean plus thermal paste replacement AED 400+. Board assessment included.",
+    body: "Liquid residue on the CPU or GPU heat spreader insulates the chip and causes runaway temperatures. Ultrasonic clean plus thermal paste replacement. Board assessment included.",
   },
   {
     title: "Logic board component overheating",
-    body: "A failing PMIC, VRM, or GPU core generates excess heat that the thermal system cannot handle. Component-level board repair AED 600+. Requires bench measurement under thermal camera.",
+    body: "A failing PMIC, VRM, or GPU core generates excess heat that the thermal system cannot handle. Component-level board repair. Requires bench measurement under thermal camera.",
   },
 ];
 
@@ -79,10 +79,10 @@ const SYMPTOMS = [
 ];
 
 const PRICING_ROWS = [
-  { repair: "Thermal paste replacement", price: "AED 150-250" },
-  { repair: "Fan replacement (MacBook Pro)", price: "AED 200-400" },
-  { repair: "Deep clean + thermal paste", price: "AED 200-300" },
-  { repair: "Diagnosis only", price: "AED 0 (free)" },
+  { repair: "Thermal paste replacement", price: "Quoted after free diagnosis" },
+  { repair: "Fan replacement (MacBook Pro)", price: "Quoted after free diagnosis" },
+  { repair: "Deep clean + thermal paste", price: "Quoted after free diagnosis" },
+  { repair: "Diagnosis only", price: "Free" },
 ];
 
 const WHY_US = [
@@ -97,7 +97,7 @@ export default function MacBookOverheating() {
     {
       title: "MacBook Overheating & Shutting Down Dubai -- Fix Same Day",
       description:
-        "MacBook overheating or shutting down in Dubai? Thermal paste dried out, fan failure, dust blocked vents, M-chip throttling. All models. Free diagnosis. From AED 150. Call 055 741 3706.",
+        "MacBook overheating or shutting down in Dubai? Thermal paste dried out, fan failure, dust blocked vents, M-chip throttling. All models. Free diagnosis before any paid work. Call 055 741 3706.",
       path: "/macbook-overheating-shutting-down-dubai",
       preloadImage: preloadFromHero(HERO_IMAGE),
     },
@@ -136,7 +136,7 @@ export default function MacBookOverheating() {
         imageAlt="MacBook Air open lid on a repair bench in Dubai Media City workshop"
       >
         <p className="mt-md max-w-[72ch] text-[17px] leading-relaxed text-text-muted">
-          MacBook overheating in Dubai is fixed at MacBook Repair Dubai from AED 150. Dubai's 40°C+ summer temperatures accelerate thermal paste degradation and dust accumulation. MacBook Pro models with fans are repaired with thermal paste replacement and deep clean. MacBook Air (fanless) is assessed for throttling versus genuine component fault. Free diagnosis before any repair.
+          MacBook overheating in Dubai is fixed at MacBook Repair Dubai. Dubai's 40°C+ summer temperatures accelerate thermal paste degradation and dust accumulation. MacBook Pro models with fans are repaired with thermal paste replacement and deep clean. MacBook Air (fanless) is assessed for throttling versus genuine component fault. Free diagnosis before any repair.
         </p>
       </Hero>
 
@@ -279,7 +279,7 @@ export default function MacBookOverheating() {
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
           <h2 className="text-text m-0 mb-md max-w-[36ch] mx-auto text-[28px] md:text-[32px]">
-            MacBook overheating in Dubai? Free diagnosis. Thermal paste from AED 150.
+            MacBook overheating in Dubai? Free diagnosis.
           </h2>
           <p className="text-text-muted max-w-[56ch] mx-auto mb-xl text-[17px]">
             Dubai heat specialists at MacBook Repair Dubai, Dubai Media City. Temperature readings before and after. Independent Apple specialist.

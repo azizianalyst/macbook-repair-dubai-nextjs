@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookCameraRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Camera Repair Dubai - FaceTime / Webcam Fix AED 200"
-      seoDescription="MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. From AED 200, 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+      seoTitle="MacBook Camera Repair Dubai - FaceTime & Webcam Fix"
+      seoDescription="MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. Most done in 1-2 days, warranty of up to 12 months. Call 055 741 3706."
       path="/macbook-camera-repair-dubai"
       eyebrow="MacBook camera repair"
       h1="MacBook FaceTime / Webcam Repair Dubai"
-      subtitle="Black screen on calls, 'no camera available', or blurry FaceTime video? We diagnose and repair MacBook webcams - from AED 200, most done in 1-2 days."
+      subtitle="Black screen on calls, 'no camera available', or blurry FaceTime video? We diagnose and repair MacBook webcams, most done in 1-2 days."
       startingPrice={200}
       timeline="1-2 days"
       whatsappPrefill="Hi, my MacBook camera has a problem - model and symptom:"
@@ -23,7 +23,7 @@ export default function MacBookCameraRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook camera repair in Dubai</strong> covers a black or green screen on FaceTime, Zoom and Teams, the "there is no connected camera" error, blurry video, and cameras that fail after a spill or a knock to the screen. The FaceTime HD camera sits in the display and connects through the hinge to the logic board - so the cause can be software, a damaged flex cable, a faulty module, or a board-level fault. We isolate the real cause first, so you don't pay to replace the whole screen when you don't need to. AED 200 covers parts, labour and a warranty of up to 12 months.
+            <strong>MacBook camera repair in Dubai</strong> covers a black or green screen on FaceTime, Zoom and Teams, the "there is no connected camera" error, blurry video, and cameras that fail after a spill or a knock to the screen. The FaceTime HD camera sits in the display and connects through the hinge to the logic board - so the cause can be software, a damaged flex cable, a faulty module, or a board-level fault. We isolate the real cause first, so you don't pay to replace the whole screen when you don't need to. The quote covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1-M5, MacBook Pro 13/14/16 (Intel and M-series), and older Retina models still in daily use across Dubai.
@@ -51,7 +51,7 @@ export default function MacBookCameraRepair() {
         "Free re-check if the fault returns inside 12 months.",
       ]}
       faqs={[
-        { q: "How much does MacBook camera repair cost in Dubai?", a: "If it's a software or permissions issue we often fix it during the free diagnosis at no charge. Camera module or flex-cable replacement starts at AED 200; board-level camera repairs start at AED 450. You get an exact quote first." },
+        { q: "How much does MacBook camera repair cost in Dubai?", a: "If it's a software or permissions issue we often fix it during the free diagnosis at no charge. A camera module or flex-cable replacement is the simpler job; board-level camera repairs cost more. You get an exact quote first." },
         { q: "Do you have to replace the whole screen to fix the camera?", a: "Usually no. The camera and its flex cable can often be serviced without replacing the entire display assembly, which keeps the cost far lower. We only recommend a full screen if the panel itself is also damaged." },
         { q: "My camera says \"not available\" - is it broken?", a: "Not necessarily. That error is often caused by macOS, an SMC glitch, or app permissions. Our free diagnosis tells you whether it's software (frequently a free fix) or a hardware fault before you pay anything." },
         { q: "How long does it take?", a: "Software fixes are same day. Module or flex-cable replacements typically take 1-2 days depending on parts." },

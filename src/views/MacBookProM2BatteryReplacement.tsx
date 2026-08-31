@@ -7,19 +7,19 @@ export default function MacBookProM2BatteryReplacement() {
       path="/macbook-pro-m2-battery-replacement-dubai"
       chip="M2"
       years="2023"
-      seoTitle="MacBook Pro M2 Battery Replacement Dubai — From AED 500"
-      seoDescription="MacBook Pro M2 Pro/Max battery replacement Dubai from AED 500. 69.6 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. Same-day 2-hour service. Call 055 741 3706."
+      seoTitle="MacBook Pro M2 Battery Replacement Dubai"
+      seoDescription="MacBook Pro M2 Pro/Max battery replacement Dubai. 69.6 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. Same-day 2-hour service. Call 055 741 3706."
       h1="MacBook Pro M2 Battery Replacement Dubai"
       eyebrow="M2 Pro/Max battery specialist · Dubai Media City · BMS re-pair included"
       capacity14="69.6 Wh"
       capacity16="99.6 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + Thunderbolt 4 (3 ports)"
-      heroAnswer="MacBook Pro M2 battery replacement in Dubai costs AED 500 for the 14-inch and AED 600 for the 16-inch at MacBook Repair Dubai. The M2 Pro uses a 69.6 Wh cell; the M2 Max 16-inch uses a 99.6 Wh cell. BMS firmware re-pair is included in every price. Same-day 2-hour service."
+      heroAnswer="MacBook Pro M2 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M2 Pro uses a 69.6 Wh cell; the M2 Max 16-inch uses a 99.6 Wh cell. BMS firmware re-pair is included in every price. Same-day 2-hour service."
       chipUniquePoints={[
         "The M2 Pro is more efficient than the M1 Pro at the same workload, which means the 69.6 Wh cell lasts longer per charge cycle. However, this also means many users push the M2 Pro harder before feeling limited, accumulating cycles faster than expected. At 2 years old, M2 Pros bought in early 2023 are now approaching 500 to 700 cycles.",
-        "The M2 Max 16-inch delivers up to 22 hours of battery life on a full 99.6 Wh cell. At AED 600 for a replacement cell, restoring that 22-hour runtime is excellent value compared to a new machine. The M2 Max remains one of the fastest laptops available anywhere in its class.",
-        "The M2 MacBook Pro introduced HDMI 2.1 and a full-size SD card reader alongside MagSafe 3 and Thunderbolt 4. These features make the M2 Pro a long-term professional tool worth maintaining. Battery replacement at AED 500 to AED 600 keeps it productive for another 3 to 5 years.",
+        "The M2 Max 16-inch delivers up to 22 hours of battery life on a full 99.6 Wh cell. Restoring that 22-hour runtime is excellent value compared to a new machine. The M2 Max remains one of the fastest laptops available anywhere in its class.",
+        "The M2 MacBook Pro introduced HDMI 2.1 and a full-size SD card reader alongside MagSafe 3 and Thunderbolt 4. These features make the M2 Pro a long-term professional tool worth maintaining. Battery replacement keeps it productive for another 3 to 5 years.",
         "M2 Pro machines bought in early 2023 are now 2 years old. In Dubai ambient temperatures above 40 degrees Celsius, battery calendrical aging means many M2 Pros may already be at 85 to 90 percent capacity even at moderate cycle counts. Check System Settings, Battery, Battery Health for your current reading.",
         "Apple charges AED 549 to AED 699 for M2 Pro battery replacement, typically requiring an appointment and wait time for parts. MacBook Repair Dubai completes M2 Pro battery replacement same-day with BMS re-pair for AED 500 to AED 600, no appointment needed.",
       ]}
@@ -40,7 +40,7 @@ export default function MacBookProM2BatteryReplacement() {
       faults={[
         {
           title: "Service Recommended on M2 Pro",
-          body: "System Settings shows Service Recommended when battery capacity drops below 80 percent or cycle count passes 1,000. For heavy M2 Pro users in Dubai, this can occur within 2 to 3 years. Battery replacement at AED 500 restores the full health status and runtime.",
+          body: "System Settings shows Service Recommended when battery capacity drops below 80 percent or cycle count passes 1,000. For heavy M2 Pro users in Dubai, this can occur within 2 to 3 years. Battery replacement restores the full health status and runtime.",
         },
         {
           title: "M2 Pro battery draining faster than expected",
@@ -56,17 +56,17 @@ export default function MacBookProM2BatteryReplacement() {
         },
         {
           title: "Sudden shutdown at 15 to 25 percent on M2 Pro",
-          body: "Premature shutdown is a BMS calibration drift issue as the cell ages. The protection circuit cuts power before the display reading reaches zero. Confirmed with coconutBattery. Fix: battery replacement plus BMS re-pair, AED 500 for the 14-inch.",
+          body: "Premature shutdown is a BMS calibration drift issue as the cell ages. The protection circuit cuts power before the display reading reaches zero. Confirmed with coconutBattery. Fix: battery replacement plus BMS re-pair on the 14-inch.",
         },
         {
           title: "Swollen cell lifting the trackpad on M2 Pro",
-          body: "The 69.6 Wh pouch cell on the 14-inch M2 Pro can swell if stored near full charge in high ambient temperatures. If the trackpad clicks unevenly or feels raised, stop using the machine and contact us immediately. AED 500 replacement before the trackpad ribbon damages.",
+          body: "The 69.6 Wh pouch cell on the 14-inch M2 Pro can swell if stored near full charge in high ambient temperatures. If the trackpad clicks unevenly or feels raised, stop using the machine and contact us immediately. Replacement before the trackpad ribbon damages.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Pro M2 battery replacement cost in Dubai?",
-          a: "MacBook Pro M2 battery replacement costs AED 500 for the 14-inch M2 Pro and AED 600 for the 16-inch M2 Max at MacBook Repair Dubai. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. No diagnostic fee.",
+          a: "MacBook Pro M2 battery replacement is quoted per size after a free diagnosis — the 14-inch M2 Pro and 16-inch M2 Max take different cells. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. No diagnostic fee.",
         },
         {
           q: "Does the M2 Pro 256GB SSD issue cause battery drain?",

@@ -273,7 +273,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Screen Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
   },
   "/": {
-    "description": "MacBook Repair Dubai. Expert service in Dubai, fast turnaround, genuine parts, warranty up to 12 months."
+    "title": "MacBook Repair Dubai | Expert Apple Repair, 40,000+ Fixed",
+    "description": "MacBook Repair Dubai since 2004. Screens, batteries and board-level Apple repair with free diagnosis, same-day service and free pickup. Book a free quote."
   },
   "/macbook-battery-replacement-dubai": {
     "title": "MacBook Battery Replacement Dubai. Free Diagnosis, Same-Day",
@@ -297,11 +298,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/annual-maintenance-contract-dubai": {
     "title": "Annual Maintenance Contract Dubai. Expert Same-Day 2026",
-    "description": "Annual Maintenance Contract Dubai. Annual Maintenance Contract (AMC) for Apple devices in Dubai. Scheduled servicing, battery checks, p"
+    "description": "Annual Maintenance Contract Dubai. Annual Maintenance Contract (AMC) for Apple devices in Dubai."
   },
   "/apple-display-repair-dubai": {
     "title": "Apple Display Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "Apple Display Repair Dubai. We fix Studio Display, iMac, and MacBook screens using genuine parts. Fast, professional service by"
+    "description": "Apple Display Repair Dubai. We fix Studio Display, iMac, and MacBook screens using genuine parts."
   },
   "/apple-repair-dubai": {
     "title": "Apple Repair Dubai. Free Diagnosis, Same-Day",
@@ -313,11 +314,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/apple-repair-programs-dubai": {
     "title": "Apple Repair Programs Dubai. Free Eligibility Check",
-    "description": "Apple Repair Programs Dubai. Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPho"
+    "description": "Apple Repair Programs Dubai. Apple offers free repairs for specific defects on certain models."
   },
   "/apple-service-center-dubai": {
     "title": "Apple Service Center Dubai. Expert Same-Day 2026",
-    "description": "Apple Service Center Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts. Fast, reliable suppor"
+    "description": "Apple Service Center Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts."
   },
   "/apple-t2-chip-data-recovery-dubai": {
     "title": "Apple T2 Chip Data Recovery Dubai",
@@ -329,7 +330,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/applecare-macbook-repair-dubai": {
     "title": "Applecare MacBook Repair Dubai. Expert Same-Day 2026",
-    "description": "Applecare MacBook Repair Dubai. In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent"
+    "description": "Applecare MacBook Repair Dubai. In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai."
   },
   "/best-apple-repair-dubai": {
     "title": "Best Apple Repair Dubai. Free Diagnosis, Same-Day",
@@ -369,7 +370,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/boot-camp-windows-macbook-dubai": {
     "title": "Boot Camp Windows MacBook Dubai. Free Diagnosis, Same-Day",
-    "description": "Boot Camp Windows MacBook Dubai. Boot Camp Windows install Dubai. Intel Macs only - Apple Silicon needs Parallels or VMware Fusion. A"
+    "description": "Boot Camp Windows MacBook Dubai. Boot Camp Windows install Dubai. Intel Macs only - Apple Silicon needs Parallels or VMware Fusion."
   },
   "/can-iphone-motherboard-be-repaired": {
     "title": "Can iPhone Motherboard Be Repaired. MacBook Repair Dubai 2026",
@@ -477,7 +478,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-full-diagnostic-dubai": {
     "title": "iMac Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "iMac Full Diagnostic Dubai. Free iMac diagnostic Dubai with optional free home visit. 30-point hardware and macOS check. No obli"
+    "description": "iMac Full Diagnostic Dubai. Free iMac diagnostic Dubai with optional free home visit. 30-point hardware and macOS check."
   },
   "/imac-gpu-repair-dubai": {
     "title": "iMac GPU Repair Dubai. Component-Level Repair",
@@ -493,7 +494,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-os-reinstall-dubai": {
     "title": "iMac macOS Reinstall Dubai. Same-Day, Data Preserved",
-    "description": "iMac Os Reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. Same day. Home"
+    "description": "iMac Os Reinstall Dubai. Latest supported macOS via Internet Recovery. Honest about model age limits. Same day."
   },
   "/imac-overheating-fix-dubai": {
     "title": "iMac Overheating Fix Dubai. Expert Same-Day 2026",
@@ -501,7 +502,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-power-supply-repair-dubai": {
     "title": "iMac Power Supply Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iMac Power Supply Repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. labor + part. 1-2 days. Free"
+    "description": "iMac Power Supply Repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. labor + part. 1-2 days."
   },
   "/imac-ram-upgrade-dubai": {
     "title": "iMac RAM Upgrade Dubai. Same-Day Fitting",
@@ -509,11 +510,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-repair-cost-dubai": {
     "title": "iMac Repair Cost Dubai. Expert Same-Day 2026",
-    "description": "iMac Repair Cost Dubai. Screen logic board repair RAM upgrade. All models. Free dia"
+    "description": "iMac Repair Cost Dubai. Screen logic board repair RAM upgrade. All models."
   },
   "/imac-repair-dubai": {
     "title": "iMac Repair Dubai. Expert Same-Day 2026",
-    "description": "iMac Repair Dubai. Our Apple specialists fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMa"
+    "description": "iMac Repair Dubai. Our Apple specialists fix screen, SSD, RAM, GPU & logic board issues."
   },
   "/imac-screen-repair-dubai": {
     "title": "iMac Screen Repair Dubai. Free Diagnosis, Same-Day",
@@ -585,7 +586,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-camera-repair-dubai": {
     "title": "iPad Camera Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPad Camera Repair Dubai. TrueDepth on Pro, landscape camera on Air M3+. Center Stage recalibrated. 1-2 days. Call 05"
+    "description": "iPad Camera Repair Dubai. TrueDepth on Pro, landscape camera on Air M3+. Center Stage recalibrated. 1-2 days."
   },
   "/ipad-charging-port-repair-dubai": {
     "title": "iPad Charging Port Repair Dubai. Component-Level Repair",
@@ -597,7 +598,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-full-diagnostic-dubai": {
     "title": "iPad Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "iPad Full Diagnostic Dubai. Free iPad diagnostic Dubai. 25-point check: screen, battery, Pencil, Smart Connector, cameras, speak"
+    "description": "iPad Full Diagnostic Dubai. Free iPad diagnostic Dubai. 25-point check: screen, battery, Pencil, Smart Connector, cameras."
   },
   "/ipad-home-button-repair-dubai": {
     "title": "iPad Home Button Repair Dubai. Free Diagnosis, Same-Day",
@@ -605,7 +606,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-icloud-unlock-dubai": {
     "title": "iPad Icloud Unlock Dubai. Expert Same-Day 2026",
-    "description": "iPad Icloud Unlock Dubai. iPad iCloud / Activation Lock - honest advice. We don't bypass Apple's security. Legitimate unlock p"
+    "description": "iPad Icloud Unlock Dubai. iPad iCloud / Activation Lock - honest advice. We don't bypass Apple's security."
   },
   "/ipad-logic-board-repair-dubai": {
     "title": "iPad Logic Board Repair Dubai. Component-Level Repair",
@@ -629,7 +630,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pencil-compatibility-dubai": {
     "title": "iPad Pencil Compatibility Dubai. Expert Same-Day 2026",
-    "description": "iPad Pencil Compatibility Dubai. iPad screen replacements that preserve Apple Pencil compatibility. Pencil 1, 2, USB-C and Pro all te"
+    "description": "iPad Pencil Compatibility Dubai. iPad screen replacements that preserve Apple Pencil compatibility."
   },
   "/ipad-power-button-repair-dubai": {
     "title": "iPad Power Button Repair Dubai. Free Diagnosis, Same-Day",
@@ -669,7 +670,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-repair-dubai": {
     "title": "iPad Repair Dubai. Expert Same-Day 2026",
-    "description": "iPad Repair Dubai. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple pa"
+    "description": "iPad Repair Dubai. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple."
   },
   "/ipad-screen-repair-dubai": {
     "title": "iPad Screen Repair Dubai. Free Diagnosis, Same-Day",
@@ -681,7 +682,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-software-reset-dubai": {
     "title": "iPad Software Reset Dubai. Free Diagnosis, Same-Day",
-    "description": "iPad Software Reset Dubai. iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserve"
+    "description": "iPad Software Reset Dubai. iPad stuck on Apple logo, frozen update, recovery loop."
   },
   "/ipad-speaker-repair-dubai": {
     "title": "iPad Speaker Repair Dubai. Free Diagnosis, Same-Day",
@@ -693,55 +694,55 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-13-mini-repair-dubai": {
     "title": "iPhone 13 Mini Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 13 Mini Repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen battery. Same-day, warranty of up to 12"
+    "description": "iPhone 13 Mini Repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen battery."
   },
   "/iphone-13-pro-max-repair-dubai": {
     "title": "iPhone 13 Pro Max Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 13 Pro Max Repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen battery. Same-day, warranty"
+    "description": "iPhone 13 Pro Max Repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen battery."
   },
   "/iphone-13-pro-repair-dubai": {
     "title": "iPhone 13 Pro Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 13 Pro Repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen battery. Same-day, warra"
+    "description": "iPhone 13 Pro Repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen battery."
   },
   "/iphone-13-repair-dubai": {
     "title": "iPhone 13 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 13 Repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen battery. Same-day, warrant"
+    "description": "iPhone 13 Repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen battery."
   },
   "/iphone-14-plus-repair-dubai": {
     "title": "iPhone 14 Plus Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 14 Plus Repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen battery. Same-day"
+    "description": "iPhone 14 Plus Repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen battery."
   },
   "/iphone-14-pro-max-repair-dubai": {
     "title": "iPhone 14 Pro Max Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 14 Pro Max Repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen Dynamic Island. Same-day, war"
+    "description": "iPhone 14 Pro Max Repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen Dynamic Island."
   },
   "/iphone-14-pro-repair-dubai": {
     "title": "iPhone 14 Pro Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 14 Pro Repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen Dynamic Island. Same-day, w"
+    "description": "iPhone 14 Pro Repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen Dynamic Island."
   },
   "/iphone-14-repair-dubai": {
     "title": "iPhone 14 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 14 Repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen battery. Same-day, warranty of up to 12"
+    "description": "iPhone 14 Repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen battery."
   },
   "/iphone-15-plus-repair-dubai": {
     "title": "iPhone 15 Plus Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 15 Plus Repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen USB-C port. Same-day, warranty of"
+    "description": "iPhone 15 Plus Repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen USB-C port."
   },
   "/iphone-15-pro-max-repair-dubai": {
     "title": "iPhone 15 Pro Max Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 15 Pro Max Repair Dubai. A17 Pro, titanium, 5x tetraprism telephoto (first), USB-C 3. Screen telephoto. Same"
+    "description": "iPhone 15 Pro Max Repair Dubai. A17 Pro, titanium, 5x tetraprism telephoto (first), USB-C 3. Screen telephoto."
   },
   "/iphone-15-pro-repair-dubai": {
     "title": "iPhone 15 Pro Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 15 Pro Repair Dubai. A17 Pro, titanium frame, USB-C Thunderbolt, Action Button. Screen USB-C 3 port. Sam"
+    "description": "iPhone 15 Pro Repair Dubai. A17 Pro, titanium frame, USB-C Thunderbolt, Action Button. Screen USB-C 3 port."
   },
   "/iphone-15-repair-dubai": {
     "title": "iPhone 15 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 15 Repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen USB-C port. Same-day, warranty of"
+    "description": "iPhone 15 Repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen USB-C port."
   },
   "/iphone-16-plus-repair-dubai": {
     "title": "iPhone 16 Plus Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16 Plus Repair Dubai. A18, 6.7-inch OLED, Camera Control, Apple Intelligence. Screen Camera Control. Same"
+    "description": "iPhone 16 Plus Repair Dubai. A18, 6.7-inch OLED, Camera Control, Apple Intelligence. Screen Camera Control."
   },
   "/iphone-16-pro-battery-capacity": {
     "title": "iPhone 16 Pro Battery Capacity. Expert Dubai Repair",
@@ -749,7 +750,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-16-pro-max-repair-dubai": {
     "title": "iPhone 16 Pro Max Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16 Pro Max Repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Screen. Same"
+    "description": "iPhone 16 Pro Max Repair Dubai. A18 Pro, 6.9-inch ProMotion (largest), titanium, 5x tetraprism, Camera Control. Screen."
   },
   "/iphone-16-pro-max-screen-flickering": {
     "title": "iPhone 16 Pro Max Screen Flickering. Expert Dubai Repair",
@@ -757,11 +758,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-16-pro-repair-dubai": {
     "title": "iPhone 16 Pro Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16 Pro Repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen. Same-day, w"
+    "description": "iPhone 16 Pro Repair Dubai. A18 Pro, 6.3-inch ProMotion (larger), titanium, Camera Control, USB-C 3. Screen."
   },
   "/iphone-16-repair-dubai": {
     "title": "iPhone 16 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16 Repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen Camera Control. Same"
+    "description": "iPhone 16 Repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen Camera Control."
   },
   "/iphone-16-shocks-while-charging": {
     "title": "iPhone 16 Shocks While Charging. Expert Dubai Repair",
@@ -769,23 +770,23 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-16e-repair-dubai": {
     "title": "iPhone 16E Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16E Repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen battery. Same-day, warranty of up"
+    "description": "iPhone 16E Repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen battery."
   },
   "/iphone-17-pro-max-repair-dubai": {
     "title": "iPhone 17 Pro Max Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 17 Pro Max Repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Screen. S"
+    "description": "iPhone 17 Pro Max Repair Dubai. A19 Pro, 6.9-inch ProMotion, aluminum unibody, vapor chamber, 8x zoom, up to 2TB. Screen."
   },
   "/iphone-17-pro-repair-dubai": {
     "title": "iPhone 17 Pro Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 17 Pro Repair Dubai. A19 Pro, aluminum unibody, vapor chamber cooling, 8x optical zoom, Center Stage front. Screen"
+    "description": "iPhone 17 Pro Repair Dubai. A19 Pro, aluminum unibody, vapor chamber cooling, 8x optical zoom, Center Stage front."
   },
   "/iphone-17-repair-dubai": {
     "title": "iPhone 17 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 17 Repair Dubai. A19, 6.3-inch ProMotion (first non-Pro), Always-On, Ceramic Shield 2, Wi-Fi 7. Screen. Same"
+    "description": "iPhone 17 Repair Dubai. A19, 6.3-inch ProMotion (first non-Pro), Always-On, Ceramic Shield 2, Wi-Fi 7. Screen."
   },
   "/iphone-17e-repair-dubai": {
     "title": "iPhone 17E Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 17E Repair Dubai. A19, Dynamic Island (added), MagSafe (first for e-series), USB-C, $599. Screen battery AED"
+    "description": "iPhone 17E Repair Dubai. A19, Dynamic Island (added), MagSafe (first for e-series), USB-C, $599."
   },
   "/iphone-air-repair-dubai": {
     "title": "iPhone Air Repair Dubai. Free Diagnosis, Same-Day",
@@ -821,11 +822,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-full-diagnostic-dubai": {
     "title": "iPhone Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Full Diagnostic Dubai. Free iPhone diagnostic in Dubai. 20-point check: battery, screen, ports, Face ID, antennas, water in"
+    "description": "iPhone Full Diagnostic Dubai. Free iPhone diagnostic in Dubai. 20-point check: battery, screen, ports, Face ID, antennas, water."
   },
   "/iphone-headphone-jack-repair-dubai": {
     "title": "iPhone Headphone Jack Repair Dubai",
-    "description": "iPhone Headphone Jack Repair Dubai. iPhone 3.5mm headphone jack repair Dubai. Lint clean often free. iPhone 6S and earlier only - newer"
+    "description": "iPhone Headphone Jack Repair Dubai. iPhone 3.5mm headphone jack repair Dubai. Lint clean often free."
   },
   "/iphone-home-button-repair-dubai": {
     "title": "iPhone Home Button Repair Dubai. Free Diagnosis, Same-Day",
@@ -865,11 +866,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-repair-near-me-dubai": {
     "title": "iPhone Repair Near Me Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Repair Near Me Dubai. Screen battery. Free pickup across Dubai. Same-day service. Concord Tower"
+    "description": "iPhone Repair Near Me Dubai. Screen battery. Free pickup across Dubai. Same-day service."
   },
   "/iphone-screen-repair-cost-dubai": {
     "title": "iPhone Screen Repair Cost Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Screen Repair Cost Dubai. (iPhone 6) to (17 Pro Max). OLED & LCD, same-day, 3-month warranty. No hidden fees"
+    "description": "iPhone Screen Repair Cost Dubai. (iPhone 6) to (17 Pro Max). OLED & LCD, same-day, 3-month warranty."
   },
   "/iphone-screen-repair-dubai": {
     "title": "iPhone Screen Repair Dubai. Free Diagnosis, Same-Day",
@@ -885,7 +886,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-software-fix-dubai": {
     "title": "iPhone Software Fix Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Software Fix Dubai. Stuck boot, recovery, DFU, downgrade, jailbreak removal, storage full. iPhone 6 to 17. WhatsApp 055"
+    "description": "iPhone Software Fix Dubai. Stuck boot, recovery, DFU, downgrade, jailbreak removal, storage full. iPhone 6 to 17."
   },
   "/iphone-speaker-repair-dubai": {
     "title": "iPhone Speaker Repair Dubai. Free Diagnosis, Same-Day",
@@ -897,7 +898,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-vibration-motor-repair-dubai": {
     "title": "iPhone Vibration Motor Repair Dubai",
-    "description": "iPhone Vibration Motor Repair Dubai. No vibration, no haptic feedback, rattle inside. 1 day, warranty of up to 12 months. Call 0"
+    "description": "iPhone Vibration Motor Repair Dubai. No vibration, no haptic feedback, rattle inside. 1 day, warranty of up to 12 months."
   },
   "/iphone-volume-button-repair-dubai": {
     "title": "iPhone Volume Button Repair Dubai. Free Diagnosis, Same-Day",
@@ -909,7 +910,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-wifi-bluetooth-repair-dubai": {
     "title": "iPhone Wifi Bluetooth Repair Dubai. Expert Dubai Repair 2026",
-    "description": "iPhone Wifi Bluetooth Repair Dubai. iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. 2 days"
+    "description": "iPhone Wifi Bluetooth Repair Dubai. iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work."
   },
   "/ipod-touch-7-repair-dubai": {
     "title": "iPod Touch 7 Repair Dubai. Expert Dubai Repair",
@@ -937,7 +938,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-full-diagnostic-dubai": {
     "title": "Mac Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "Mac Full Diagnostic Dubai. Free Mac desktop diagnostic Dubai. 25-point check on Mac mini, Studio, Pro. Free home pickup for Mac"
+    "description": "Mac Full Diagnostic Dubai. Free Mac desktop diagnostic Dubai. 25-point check on Mac mini, Studio, Pro."
   },
   "/mac-logic-board-repair-dubai": {
     "title": "Mac Logic Board Repair Dubai. Component-Level Repair",
@@ -977,7 +978,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-os-reinstall-dubai": {
     "title": "Mac macOS Reinstall Dubai. Clean Install, Data Preserved",
-    "description": "Mac Os Reinstall Dubai. macOS reinstall on Mac mini, Studio, Pro. Internet Recovery, Apple Configurator for revival, latest"
+    "description": "Mac Os Reinstall Dubai. macOS reinstall on Mac mini, Studio, Pro. Internet Recovery, Apple Configurator for revival."
   },
   "/mac-performance-tune-dubai": {
     "title": "Mac Performance Tune Dubai. Expert Same-Day 2026",
@@ -1001,7 +1002,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-pro-repair-dubai": {
     "title": "Mac Pro Repair Dubai. Expert Same-Day 2026",
-    "description": "Mac Pro Repair Dubai. Our Apple desktop specialists fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & ge"
+    "description": "Mac Pro Repair Dubai. Our Apple desktop specialists fix hardware, SSD, GPU, RAM & logic board issues."
   },
   "/mac-repair-cost-dubai": {
     "title": "Mac Repair Cost Dubai. Expert Same-Day 2026",
@@ -1009,7 +1010,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-repair-dubai": {
     "title": "Mac Repair Dubai. Expert Same-Day 2026",
-    "description": "Mac Repair Dubai. Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio. Expert Apple technicians provide screen"
+    "description": "Mac Repair Dubai. Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio."
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai. Free Diagnosis, Same-Day",
@@ -1017,11 +1018,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-setup-data-migration-dubai": {
     "title": "Mac Setup Data Migration Dubai. Expert Same-Day 2026",
-    "description": "Mac Setup Data Migration Dubai. Apple device setup & data migration in Dubai. New Mac setup, email/Wi-Fi/VPN, Office & Outlook, iClo"
+    "description": "Mac Setup Data Migration Dubai. Apple device setup & data migration in Dubai."
   },
   "/mac-ssd-upgrade-dubai": {
     "title": "Mac SSD Upgrade Dubai. Same-Day Fitting",
-    "description": "Mac Ssd Upgrade Dubai. Mac mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable. Honest fi"
+    "description": "Mac Ssd Upgrade Dubai. Mac mini 2014 and earlier user-accessible. M-series SSDs are SoC-tied and not upgradeable."
   },
   "/mac-studio-m1-max-2022-repair-dubai": {
     "title": "Mac Studio M1 Max 2022 Repair Dubai. Expert Same-Day",
@@ -1100,8 +1101,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Air 15 M5 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, 3-month warranty, free diagnosis. 055 741 3706."
   },
   "/macbook-air-repair-dubai": {
-    "title": "MacBook Air Repair Dubai. Expert Same-Day 2026",
-    "description": "MacBook Air Repair Dubai. Get your MacBook Air repaired quickly and affordably in Dubai. Certified technicians fix screen, bat"
+    "title": "MacBook Air Repair Dubai — Same-Day Screen & Battery",
+    "description": "MacBook Air repair in Dubai, Intel through M5. Free diagnosis, same-day screens and batteries, free pickup across Dubai. Book at our Media City workshop."
   },
   "/macbook-backup-service-dubai": {
     "title": "MacBook Backup Service Dubai. Expert Same-Day 2026",
@@ -1121,7 +1122,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-cleaning-maintenance-dubai": {
     "title": "MacBook Cleaning Maintenance Dubai. Expert Same-Day 2026",
-    "description": "MacBook Cleaning Maintenance Dubai. Dust and corrosion removal, fan and vent clean, free pickup, warranty of up to 12 months. Call 055 7"
+    "description": "MacBook Cleaning Maintenance Dubai. Dust and corrosion removal, fan and vent clean, free pickup, warranty of up to 12 months."
   },
   "/macbook-data-recovery-dubai": {
     "title": "MacBook Data Recovery Dubai. Free Assessment, No-Fix No-Charge",
@@ -1133,7 +1134,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-full-diagnostic-dubai": {
     "title": "MacBook Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "MacBook Full Diagnostic Dubai. Free MacBook diagnostic Dubai. 30-point comprehensive check: battery, screen, keyboard, ports, GPU,"
+    "description": "MacBook Full Diagnostic Dubai. Free MacBook diagnostic Dubai. 30-point comprehensive check: battery, screen, keyboard, ports."
   },
   "/macbook-gpu-repair-dubai": {
     "title": "MacBook GPU Repair Dubai. Component-Level Repair",
@@ -1149,7 +1150,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-insurance-dubai": {
     "title": "MacBook Insurance Dubai. Expert Same-Day 2026",
-    "description": "MacBook Insurance Dubai. Accidental damage, liquid, theft or loss and extended warranty cover for MacBooks in Dubai. Custom c"
+    "description": "MacBook Insurance Dubai. Accidental damage, liquid, theft or loss and extended warranty cover for MacBooks in Dubai."
   },
   "/macbook-microphone-repair-dubai": {
     "title": "MacBook Microphone Repair Dubai. Free Diagnosis, Same-Day",
@@ -1241,7 +1242,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-pro-repair-dubai": {
     "title": "MacBook Pro Repair Dubai. Expert Same-Day 2026",
-    "description": "MacBook Pro Repair Dubai. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, sa"
+    "description": "MacBook Pro Repair Dubai. Screen, battery, keyboard & logic board services by experienced Apple technicians."
   },
   "/macbook-ram-upgrade-dubai": {
     "title": "MacBook RAM Upgrade Dubai. Same-Day Fitting",
@@ -1285,7 +1286,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-repair-cost-calculator-dubai": {
     "title": "MacBook Repair Cost Calculator Dubai. Expert Same-Day 2026",
-    "description": "MacBook Repair Cost Calculator Dubai. Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the rep"
+    "description": "MacBook Repair Cost Calculator Dubai. Free instant MacBook repair cost calculator for Dubai."
   },
   "/macbook-repair-deira": {
     "title": "MacBook Repair Deira. Same-Day. Free Diagnosis, Same-Day",
@@ -1437,11 +1438,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/onsite-macbook-repair-dubai": {
     "title": "Onsite MacBook Repair Dubai. Expert Same-Day 2026",
-    "description": "Onsite MacBook Repair Dubai. Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround,"
+    "description": "Onsite MacBook Repair Dubai. Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day."
   },
   "/out-of-warranty-apple-repair-dubai": {
     "title": "Out Of Warranty Apple Repair Dubai. Expert Same-Day 2026",
-    "description": "Out Of Warranty Apple Repair Dubai. Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-lev"
+    "description": "Out Of Warranty Apple Repair Dubai. Out-of-warranty & expired-AppleCare Apple repair in Dubai."
   },
   "/pricing": {
     "title": "Pricing. MacBook Repair Dubai, Screen",
@@ -1465,11 +1466,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/sell-faulty-macbook-dubai": {
     "title": "Sell Faulty MacBook Dubai. Expert Same-Day 2026",
-    "description": "Sell Faulty MacBook Dubai. Water-damaged, cracked, dead logic board or won't turn on? We buy faulty MacBook, iMac, iPhone & iPa"
+    "description": "Sell Faulty MacBook Dubai. Water-damaged, cracked, dead logic board or won't turn on?"
   },
   "/sell-macbook-dubai": {
     "title": "Sell MacBook Dubai. Expert Same-Day 2026",
-    "description": "Sell MacBook Dubai. Sell your Mac, iPhone or iPad in Dubai - even if damaged. Free instant valuation, free pickup across"
+    "description": "Sell MacBook Dubai. Sell your Mac, iPhone or iPad in Dubai - even if damaged."
   },
   "/siri-stopped-working-on-macbook-air": {
     "title": "Siri Stopped Working On MacBook Air. MacBook Repair Dubai 2026",
@@ -1505,7 +1506,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/trade-in-macbook-dubai": {
     "title": "Trade In MacBook Dubai. Expert Same-Day 2026",
-    "description": "Trade In MacBook Dubai. Trade in your old Mac, iPhone or iPad in Dubai - working or faulty. Free valuation, free collection,"
+    "description": "Trade In MacBook Dubai. Trade in your old Mac, iPhone or iPad in Dubai - working or faulty."
   },
   "/warranty": {
     "title": "MacBook Repair Warranty Dubai. Up to 12 Months",

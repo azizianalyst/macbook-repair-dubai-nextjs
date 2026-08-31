@@ -7,19 +7,19 @@ export default function MacBookAirM3BatteryReplacement() {
       path="/macbook-air-m3-battery-replacement-dubai"
       chip="M3"
       years="2024"
-      seoTitle="MacBook Air M3 Battery Replacement Dubai — From AED 450"
-      seoDescription="MacBook Air M3 battery replacement Dubai from AED 450 (13-inch) or AED 500 (15-inch). BMS re-pair included. Same-day service. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Air M3 Battery Replacement Dubai"
+      seoDescription="MacBook Air M3 battery replacement Dubai. BMS re-pair included. Same-day service. Free diagnosis. Call 055 741 3706."
       h1="MacBook Air M3 Battery Replacement Dubai"
       eyebrow="M3 Air battery specialist · Dubai Media City · BMS re-pair included"
       capacity="52.6 Wh (13-inch) / 66.5 Wh (15-inch)"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + USB-C (Thunderbolt / USB 4)"
-      heroAnswer="MacBook Air M3 battery replacement costs AED 450 for the 13-inch and AED 500 for the 15-inch at MacBook Repair Dubai. The M3 Air uses the same battery capacities as the M2 (52.6 Wh and 66.5 Wh) but the M3 chip's improved efficiency means even better battery life before any degradation. BMS firmware re-pair included. Same-day service."
+      heroAnswer="MacBook Air M3 battery replacement is quoted after a free diagnosis at MacBook Repair Dubai. The M3 Air uses the same battery capacities as the M2 (52.6 Wh and 66.5 Wh) but the M3 chip's improved efficiency means even better battery life before any degradation. BMS firmware re-pair included. Same-day service."
       chipUniquePoints={[
         "The MacBook Air M3 (2024) shares the same chassis and battery capacities as the M2 Air: 52.6 Wh in the 13-inch and 66.5 Wh in the 15-inch. However, the M3 chip's 3nm process architecture is significantly more power-efficient than M2. Apple quotes 18 hours (13-inch) and 15 hours (15-inch) — achievable figures in real-world light use.",
         "At 1–2 years old in Dubai, most M3 Air batteries are still in good health. However, M3 Airs purchased in 2024 and used heavily (video editing, multiple external displays, sustained workloads) may already show 90–95% capacity. Dubai ambient temperatures contribute to faster heat-related degradation even at moderate cycle counts.",
         "The M3 Air can drive two external displays simultaneously (when the laptop lid is closed) via Thunderbolt, a feature the M1 and M2 Air lacked. Driving dual displays is a high-power scenario that increases battery cycling rate and thermal load. Users doing this regularly should check battery health more frequently.",
-        "M3 Air batteries require BMS firmware re-pair after replacement. The BMS stores cell chemistry data, calibration curves, and the cycle count that macOS reads. Without re-pair, readings are inaccurate and Optimized Charging will not function correctly. This is included in our AED 450 / 500 price.",
+        "M3 Air batteries require BMS firmware re-pair after replacement. The BMS stores cell chemistry data, calibration curves, and the cycle count that macOS reads. Without re-pair, readings are inaccurate and Optimized Charging will not function correctly. This is included in the price.",
         "The M3 Air fixes correctly without fan, same as M1 and M2. Passive cooling through the aluminium body keeps sustained-load temps manageable, but the battery still experiences more heat during MagSafe fast-charging. If your M3 Air gets warm near the bottom during charge, this is normal — but we can check cell health if you are concerned.",
       ]}
       prices={[
@@ -41,7 +41,7 @@ export default function MacBookAirM3BatteryReplacement() {
       faults={[
         {
           title: "M3 Air battery drops from 20% to 0% suddenly",
-          body: "Premature shutdown on M3 Airs is rare but reported when cells have early manufacturing variance or have been exposed to repeated high-heat charge cycles. Free diagnosis — if confirmed cell fault, replacement is AED 450 (13-inch) or AED 500 (15-inch) including BMS re-pair.",
+          body: "Premature shutdown on M3 Airs is rare but reported when cells have early manufacturing variance or have been exposed to repeated high-heat charge cycles. Free diagnosis — if confirmed cell fault, replacement covers either size including BMS re-pair.",
         },
         {
           title: "M3 Air shows lower battery life than M3 MacBook Pro",
@@ -49,7 +49,7 @@ export default function MacBookAirM3BatteryReplacement() {
         },
         {
           title: "macOS shows Service Recommended on M3 Air (rare at 1–2 years)",
-          body: "Unusual at this age but can occur if the battery was exposed to excessive heat or discharged to 0V repeatedly. Below 80% capacity = Service Recommended. AED 450 (13-inch) or AED 500 (15-inch), same-day, BMS re-pair included.",
+          body: "Unusual at this age but can occur if the battery was exposed to excessive heat or discharged to 0V repeatedly. Below 80% capacity = Service Recommended. Quoted per size, same-day, BMS re-pair included.",
         },
         {
           title: "M3 Air won't charge fully after running to 0%",
@@ -57,7 +57,7 @@ export default function MacBookAirM3BatteryReplacement() {
         },
         {
           title: "Battery health dropped fast — M3 15-inch used with dual displays",
-          body: "The M3 Air's new dual-display capability (lid closed) is a power-intensive mode. Running dual 4K displays via Thunderbolt for extended sessions puts sustained load on the 66.5 Wh cell. More cycling = faster degradation. If you use this mode daily, expect 80% capacity faster than casual use. AED 500 for replacement.",
+          body: "The M3 Air's new dual-display capability (lid closed) is a power-intensive mode. Running dual 4K displays via Thunderbolt for extended sessions puts sustained load on the 66.5 Wh cell. More cycling = faster degradation. If you use this mode daily, expect 80% capacity faster than casual use. Replacement is quoted after diagnosis.",
         },
         {
           title: "MagSafe 3 gets warm but doesn't charge on M3 Air",
@@ -67,7 +67,7 @@ export default function MacBookAirM3BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air M3 battery replacement cost in Dubai?",
-          a: "MacBook Air M3 13-inch battery replacement is AED 450; 15-inch is AED 500. Both prices include the 52.6 Wh or 66.5 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Same-day 2-hour service at Dubai Media City.",
+          a: "MacBook Air M3 13-inch battery replacement and the 15-inch are quoted separately after a free diagnosis. Both prices include the 52.6 Wh or 66.5 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Same-day 2-hour service at Dubai Media City.",
         },
         {
           q: "My M3 Air is only 1 year old — why would the battery need replacing?",

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
@@ -26,7 +27,7 @@ import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 
 type PricingRow = { model: string; price: number; timeline: string };
 
-// Pro-only pricing — mirrors the Pro rows in the generic battery page (AED 500/600) so the two
+// Pro-only rows — mirror the generic battery page so the two
 // pages never quote different numbers for the same pack.
 const PRICING: PricingRow[] = [
   { model: 'MacBook Pro 13" Retina (2012-2015)',          price: 500, timeline: "Same day · 2 hours" },
@@ -40,21 +41,21 @@ const PRICING: PricingRow[] = [
 
 const PROBLEMS = [
   { title: '"Service Recommended" on a 14"/16" Pro',
-    body: "Battery health under 80% or cycle count over 1,000, shown in System Settings > Battery > Battery Health. Pro machines reach this faster than an Air because sustained CPU/GPU load runs more full cycles. Replace before the count crosses ~1,200 to avoid swelling. AED 600." },
+    body: "Battery health under 80% or cycle count over 1,000, shown in System Settings > Battery > Battery Health. Pro machines reach this faster than an Air because sustained CPU/GPU load runs more full cycles. Replace before the count crosses ~1,200 to avoid swelling." },
   { title: "Battery swelling — trackpad lifts or case bulges",
-    body: 'Critical, and more common on the larger 16" 100Wh pack. The trackpad clicks oddly or the bottom case bows. Stop using it immediately — a swollen lithium pack is a fire risk and can crack the trackpad (extra AED 350 if it breaks). WhatsApp same hour for free pickup.' },
+    body: 'Critical, and more common on the larger 16" 100Wh pack. The trackpad clicks oddly or the bottom case bows. Stop using it immediately — a swollen lithium pack is a fire risk and can crack the trackpad, which then also needs replacing. WhatsApp same hour for free pickup.' },
   { title: "Heavy workload wear — battery aged in 18 months",
-    body: 'Video editing, Xcode builds and 3D work keep a Pro near 100% load, which runs full charge cycles fast and runs the pack hot. A 16" used for sustained rendering can cross 1,000 cycles inside two years. A new tier-1 pack restores full runtime, AED 600.' },
+    body: 'Video editing, Xcode builds and 3D work keep a Pro near 100% load, which runs full charge cycles fast and runs the pack hot. A 16" used for sustained rendering can cross 1,000 cycles inside two years. A new tier-1 pack restores full runtime.' },
   { title: "Runs hot then throttles, runtime collapsed",
     body: 'Heat is the battery killer on the 16". A pack that gets warm at idle has an internal short and is also throttling the M-series chip — both runtime and performance recover after the swap. Bring it in before it swells.' },
   { title: "MagSafe 3 fast-charge no longer holds charge",
-    body: "The 14\" (96W) and 16\" (140W) fast-charge over MagSafe 3 (USB-C PD 3.1). If it charges to ~80% then stops, or shows \"Not Charging\", it is usually battery end-of-life or the charge IC — free diagnosis tells which. Pack swap AED 600." },
+    body: "The 14\" (96W) and 16\" (140W) fast-charge over MagSafe 3 (USB-C PD 3.1). If it charges to ~80% then stops, or shows \"Not Charging\", it is usually battery end-of-life or the charge IC — free diagnosis tells which, then a pack swap." },
   { title: "Sudden shutdowns at 30-40% on a Touch Bar Pro",
     body: "PMIC misreads the voltages of a worn or swollen cell on the 2016-2020 13\"/15\" Touch Bar models. Battery replacement clears it; if shutdowns persist after the swap it points to a logic-board PMIC fault, diagnosed free the same visit." },
   { title: '2019 16" Intel (A2141) battery and heat',
-    body: 'The 2019 16" Intel runs a 100Wh pack and a hot 9th-gen CPU; batteries here degrade faster than the Apple-silicon 16". We fit a tier-1 100Wh replacement, AED 600, and check the thermal paste/fans at the same time on request.' },
+    body: 'The 2019 16" Intel runs a 100Wh pack and a hot 9th-gen CPU; batteries here degrade faster than the Apple-silicon 16". We fit a tier-1 100Wh replacement and check the thermal paste/fans at the same time on request.' },
   { title: "Only runs on the charger — won't power on without it",
-    body: "The pack has reached 0 V and the protection circuit has latched off. AED 500 to AED 600 swap solves it; the MagSafe 3 / USB-C charge board is checked free in case the charging circuit is also damaged." },
+    body: "The pack has reached 0 V and the protection circuit has latched off. A pack swap solves it; the MagSafe 3 / USB-C charge board is checked free in case the charging circuit is also damaged." },
   { title: "Battery health stuck at 100% but runtime gone",
     body: "Firmware quirk on macOS Sonoma/Sequoia. On Apple-silicon Pros a bench re-calibration cycle (charge full, run flat under load, charge full) corrects the reading — 4 hours, no charge if no new pack is needed." },
 ];
@@ -76,7 +77,7 @@ const STEPS = [
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook Pro battery replacement cost in Dubai?",
-    a: 'From AED 500 for the 13" Retina and Touch Bar Pro, and AED 600 for the 14", 15" and 16" (Intel and Apple Silicon). The 2025-2026 M5 is AED 650. The price includes the new tier-1 pack, labour, BMS firmware re-pair and the 4-hour calibration cycle. No diagnostic fee.' },
+    a: 'The 13-inch Retina and Touch Bar Pro take a different cell from the 14, 15 and 16-inch models, so each is quoted after a free diagnosis. The quote covers the pack, labour and the BMS firmware re-pair.' },
   { q: "Why does my MacBook Pro battery wear out faster than a MacBook Air?",
     a: "Because Pro workloads run more full charge cycles and run the pack hotter. Video editing, Xcode builds and 3D rendering keep the CPU/GPU near full load, and heat is what ages lithium cells fastest — especially in the larger 16\". An Air doing email and web lasts 36-48 months; a Pro under sustained load can reach 1,000 cycles in 18-24." },
   { q: "How big is the MacBook Pro 16\" battery, and can I fly with it?",
@@ -84,23 +85,23 @@ const FAQS: FAQ[] = [
   { q: "Does MagSafe 3 fast charging damage the battery?",
     a: 'No — fast charging (96W on the 14", 140W on the 16" via USB-C PD 3.1) is managed by the charge IC and macOS Optimised Battery Charging, which limits heat and holds at 80% until you need 100%. Normal cycle wear, not fast charge, is what ages the pack. Leaving Optimised Charging on is the single best way to extend Pro battery life in Dubai heat.' },
   { q: "Do you replace M1, M2, M3, M4 and M5 Pro batteries?",
-    a: 'Yes — every Apple-silicon Pro pack is in active stock, including the M3 Pro 14" and M4 Pro 16". Apple-silicon batteries are BMS-firmware re-paired to the logic board on the bench after the swap. Same-day, AED 600 (AED 650 on the M5).' },
+    a: 'Yes — every Apple-silicon Pro pack is in active stock, including the M3 Pro 14" and M4 Pro 16". Apple-silicon batteries are BMS-firmware re-paired to the logic board on the bench after the swap. Same-day, with the M5 pack costing a little more.' },
   { q: "My MacBook Pro battery is swollen — what do I do?",
-    a: "Stop using it immediately. Don't charge it or try to power it on. Lithium swelling is a fire risk and on a Pro can crack the trackpad assembly (extra AED 350 if it breaks). WhatsApp 055 741 3706 same hour — free emergency pickup across Dubai mainland." },
+    a: "Stop using it immediately. Don't charge it or try to power it on. Lithium swelling is a fire risk and on a Pro can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 same hour — free emergency pickup across Dubai mainland." },
   { q: "What's the warranty on a new MacBook Pro battery?",
     a: "3 months written warranty on cells plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months at under 200 cycles, the pack is replaced free. The warranty stays with the MacBook serial and transfers once free of charge." },
   { q: "Will I lose my data during a Pro battery swap?",
     a: "No. The SSD is soldered to the logic board and is untouched during a battery replacement — files, apps, FileVault encryption all stay intact. A Time Machine backup before any service is still good practice." },
   { q: "Do you replace the 2019 16\" Intel and older Touch Bar Pro batteries Apple calls obsolete?",
-    a: "Yes — every Pro back to the 2012 Retina is serviceable here. Apple stopped stocking some of these, but we carry tier-1 100Wh and Touch Bar packs from the original ATL/LG factories. AED 600 same day with the full 3-month warranty." },
+    a: "Yes — every Pro back to the 2012 Retina is serviceable here. Apple stopped stocking some of these, but we carry tier-1 100Wh and Touch Bar packs from the original ATL/LG factories. Same day, with the full 3-month warranty." },
   { q: "Do you offer free pickup for MacBook Pro battery service?",
-    a: "Yes — free pickup and delivery anywhere in Dubai mainland. Same-hour from Internet City, Knowledge Village, JLT and Al Barsha; same-day from Marina, Downtown, JBR, Palm and Business Bay. Sharjah and Abu Dhabi pickup AED 100 each way." },
+    a: "Yes — free pickup and delivery anywhere in Dubai mainland. Same-hour from Internet City, Knowledge Village, JLT and Al Barsha; same-day from Marina, Downtown, JBR, Palm and Business Bay. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
 
 const COMPARISON = [
   ["Repair window",            "30 min (booked) · 2 hrs walk-in",          "5 to 10 business days, mail-in"],
-  ['Starting price (14" Pro)',  "AED 600",                                  "AED 829 (Apple list)"],
-  ['Starting price (16" Pro)',  "AED 600",                                  "AED 949 (Apple list)"],
+  ['Starting price (14" Pro)',  "Free diagnosis, then a quote",             "AED 829 (Apple list)"],
+  ['Starting price (16" Pro)',  "Free diagnosis, then a quote",             "AED 949 (Apple list)"],
   ["Free pickup in Dubai",     "Yes, same hour from many areas",           "No, customer must courier"],
   ['100Wh 16" pack in stock',   "Yes — tier-1, IATA certified",            "Order only"],
   ["Calibration cycle",        "Yes, 4 hours included",                    "Not specified"],
@@ -110,7 +111,7 @@ const COMPARISON = [
 
 const TRUST = [
   { value: "5,200+", label: "Batteries fitted since 2004" },
-  { value: "From AED 500", label: 'Pro 13" cells' },
+  { value: "Free", label: "Diagnosis on every model" },
   { value: "100Wh", label: '16" tier-1 in stock' },
   { value: "3 months", label: "Warranty + 80% capacity" },
 ];
@@ -118,7 +119,6 @@ const TRUST = [
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookProBatteryReplacement() {
   const reviews = pickReviews([
@@ -132,9 +132,9 @@ export default function MacBookProBatteryReplacement() {
 
   useSeo(
     {
-      title: "MacBook Pro Battery Replacement Dubai — From AED 500",
+      title: "MacBook Pro Battery Replacement Dubai — Same Day, 2 Hours",
       description:
-        "MacBook Pro battery replacement Dubai from AED 500. Same-day 2-hour service. 14\"/16\" 100Wh, Intel & M1-M5, swelling, calibration. 3-month + 80% capacity warranty.",
+        "MacBook Pro battery replacement Dubai. Free diagnosis, same-day 2-hour service. 14\"/16\" 100Wh, Intel & M1-M5, swelling, calibration. 3-month + 80% capacity warranty.",
       path: "/macbook-pro-battery-replacement-dubai",
     },
     [
@@ -177,7 +177,7 @@ export default function MacBookProBatteryReplacement() {
                   <Battery size={14} className="text-accent" aria-hidden /> MacBook Pro battery replacement · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
-                  MacBook Pro Battery Replacement Dubai — <span className="text-accent">From AED 500</span>
+                  MacBook Pro Battery Replacement Dubai — <span className="text-accent">Same Day</span>
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Service Recommended? Swollen 100Wh pack? Sudden shutdowns? New tier-1 cells for the 14″, 15″ and 16″ Pro — Intel through M5 — in 2 hours, 3-month warranty plus 80% capacity guarantee.
@@ -232,7 +232,7 @@ export default function MacBookProBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-pro-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook Pro battery replacement in Dubai costs from AED 500 and finishes in 2 hours on the bench — including the calibration cycle macOS needs to read the new design capacity. The Pro is a bigger job than an Air: the 14″ carries a ~70Wh pack and the 16″ a ~100Wh pack (the airline-cabin ceiling), and Pro workloads run more full cycles and more heat, so packs age faster. We fit tier-1 cells from Samsung SDI, LG Chem and ATL — the same factories that supply Apple — with BMS firmware re-pairing on Apple Silicon, a 4-hour calibration, and a 3-month warranty plus 80% capacity guarantee. Swollen pack? Stop using the MacBook and WhatsApp same hour for free emergency pickup. For Air or other models, see the <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">full MacBook battery replacement</Link> page.
+            MacBook Pro battery replacement in Dubai finishes in 2 hours on the bench — including the calibration cycle macOS needs to read the new design capacity. The Pro is a bigger job than an Air: the 14″ carries a ~70Wh pack and the 16″ a ~100Wh pack (the airline-cabin ceiling), and Pro workloads run more full cycles and more heat, so packs age faster. We fit tier-1 cells from Samsung SDI, LG Chem and ATL — the same factories that supply Apple — with BMS firmware re-pairing on Apple Silicon, a 4-hour calibration, and a 3-month warranty plus 80% capacity guarantee. Swollen pack? Stop using the MacBook and WhatsApp same hour for free emergency pickup. For Air or other models, see the <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">full MacBook battery replacement</Link> page.
           </p></LinkifyProse>
         </section>
 
@@ -242,7 +242,7 @@ export default function MacBookProBatteryReplacement() {
             <SectionHead title="MacBook Pro models we replace batteries for" intro="Every MacBook Pro from the 2012 Retina through the 2026 M5 16″. Apple Silicon packs are BMS-paired to the logic board on the bench. Prices include cell, labour, calibration and the 3-month warranty." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
-              Bring-your-own-battery labour: AED 200 (only if the part is verified tier-1). Battery + trackpad swap if swelling cracked the trackpad: AED 900 combined.
+              Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. Battery + trackpad swap if swelling cracked the trackpad: AED 900 combined.
             </p>
           </div>
         </section>
@@ -293,7 +293,7 @@ export default function MacBookProBatteryReplacement() {
             <Card>
               <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Tier-1 cells (what we fit)</h3>
               <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Samsung SDI, LG Chem and ATL — the cell suppliers Apple uses — including the full 100Wh 16″ pack. Authorised distributors, traceable batch numbers, IATA shipping certificates. Cycle life: 1,000 cycles to 80%, matching the Apple rating.</p>
-              <p className="m-0 mono text-[13px] text-accent">AED 500 to AED 650 — included in the quote</p>
+              <p className="m-0 mono text-[13px] text-accent">Included in the quote</p>
             </Card>
             <Card>
               <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Sub-spec grey market (what we refuse)</h3>
@@ -302,7 +302,7 @@ export default function MacBookProBatteryReplacement() {
             </Card>
           </div>
           <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-            Already bought a battery elsewhere? Bring it in — we inspect the cells and only fit it if the brand is verifiable (AED 200 labour). Around 20% of customer-supplied Pro packs fail inspection.
+            Already bought a battery elsewhere? Bring it in — we inspect the cells and only fit it if the brand is verifiable, charged as labour only. Around 20% of customer-supplied Pro packs fail inspection.
           </p>
         </section>
 
@@ -329,7 +329,7 @@ export default function MacBookProBatteryReplacement() {
               <div>
                 <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Pro Battery Replacement · Same day · 2 hours</p>
                 <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your Pro battery quote in 4 minutes</h3>
-                <p className="m-0 mt-2 text-text-muted text-[15px]">Starting from <strong className="text-text">AED 500</strong>. WhatsApp the model + the Battery Health screenshot.</p>
+                <p className="m-0 mt-2 text-text-muted text-[15px]">Free diagnosis, then a firm quote. WhatsApp the model + the Battery Health screenshot.</p>
               </div>
               <CtaRow whatsappMessage="Hi Usman, MacBook Pro battery replacement quote please. Model: " />
             </div>
@@ -402,9 +402,9 @@ export default function MacBookProBatteryReplacement() {
           <SectionHead title="Related MacBook Pro repairs" />
           <div className="grid gap-lg md:grid-cols-3">
             {[
-              { label: "MacBook battery replacement (all models)", href: "/macbook-battery-replacement-dubai", description: "The full MacBook battery service — Air, Pro and Intel, from AED 450." },
+              { label: "MacBook battery replacement (all models)", href: "/macbook-battery-replacement-dubai", description: "The full MacBook battery service — Air, Pro and Intel." },
               { label: "MacBook Pro repair Dubai",                 href: "/macbook-pro-repair-dubai",          description: "Every MacBook Pro repair: screen, board, keyboard, water damage." },
-              { label: "MacBook Pro screen repair",                href: "/macbook-pro-screen-repair-dubai",   description: "XDR mini-LED, ProMotion, Flexgate and OLED panels from AED 600." },
+              { label: "MacBook Pro screen repair",                href: "/macbook-pro-screen-repair-dubai",   description: "XDR mini-LED, ProMotion, Flexgate and OLED panels." },
             ].map((r) => (
               <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
                 <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
@@ -499,7 +499,9 @@ function PriceTable({ rows }: { rows: PricingRow[] }) {
           {rows.map((r) => (
             <tr key={r.model} className="border-b border-border last:border-0">
               <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{aed(r.price)}</td>
+              <td className="px-lg py-sm whitespace-nowrap">
+                <PriceCTA compact message={`Hi, MacBook Pro battery replacement price for ${r.model}?`} />
+              </td>
               <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
             </tr>
           ))}

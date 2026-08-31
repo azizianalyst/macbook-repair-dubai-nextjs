@@ -3,12 +3,15 @@
 // template (src/views/MacBookProRepair.tsx). Used across every service / device /
 // area / city template so all pages carry the same recognisable look.
 // Brand-level facts only (always true, never contradicts a page's own warranty days).
-import { REVIEW_COUNT } from "@/content/site";
+import { REVIEW_COUNT, NAP } from "@/content/site";
 
 type Stat = { stat: string; label: string };
 
 const DEFAULT_STATS: Stat[] = [
-  { stat: "20+", label: "Years in Dubai" },
+  // Derived, not hardcoded: this read "20+" while NAP.yearsInBusiness was 21 and
+  // every other surface on the site said 21 years. StatBand renders on most
+  // pages, so the stale figure was contradicting them all.
+  { stat: `${NAP.yearsInBusiness}+`, label: "Years in Dubai" },
   { stat: `${REVIEW_COUNT}+`, label: "Google reviews" },
   { stat: "30 min", label: "Appointment repair" },
   { stat: "Up to 12mo", label: "Written warranty" },

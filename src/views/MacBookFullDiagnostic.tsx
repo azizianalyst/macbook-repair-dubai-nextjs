@@ -60,7 +60,7 @@ export default function MacBookFullDiagnostic() {
         { q: "Why do you offer the diagnostic for free?", a: "Honest answer: it builds trust, and most MacBooks that get diagnosed have at least one issue worth knowing about. Some convert to paid repairs - most don't, and that's fine. We'd rather you know your MacBook's health and come back to us when something genuinely needs fixing." },
         { q: "Can I really walk away with the report and never use you again?", a: "Yes. No catch. We don't ask for a deposit, we don't store your card, we don't follow up with sales calls. The report is yours." },
         { q: "What's in the report exactly?", a: "12 main sections covering battery, screen, keyboard, ports, speakers, camera, trackpad, thermals, GPU, SSD, RAM, networking. Each gets pass / warning / fail with a brief note. Hand-signed by the technician who did the work." },
-        { q: "Can you do this remotely?", a: "Some of it - battery health, SSD SMART, basic system info via TeamViewer for AED 100. But the full 30-point check needs the MacBook on our bench (port stress test, thermal probe, camera test). We recommend the in-person free version." },
+        { q: "Can you do this remotely?", a: "Some of it - battery health, SSD SMART, basic system info via TeamViewer, charged separately. But the full 30-point check needs the MacBook on our bench (port stress test, thermal probe, camera test). We recommend the in-person free version." },
         { q: "Will you find issues that aren't really problems?", a: "We don't pad the report to create work. A 92% capacity battery with 600 cycles gets a \"watch this in 6 months\" note, not a \"replace now\" recommendation. Fan running at 4,200 RPM at idle is a fail; at 1,800 it's a pass." },
         { q: "How accurate is the battery check vs Apple's?", a: "We use coconutBattery + Apple's own Battery Service indicator + cycle count + design capacity ratio + visible swelling check. More thorough than Apple Store's quick scan. We've caught swollen batteries that Apple's tool reported as healthy." },
         { q: "Should I bring my MacBook in even if it seems fine?", a: "If it's over 3 years old, yes - annually. Catches battery wear, dust accumulation, early SSD wear, and degraded thermal paste before they cause symptoms. The cost (zero) makes it worthwhile." },
@@ -69,8 +69,8 @@ export default function MacBookFullDiagnostic() {
       reviewNames={["Polycarp", "Mariia Chymyrysova", "Saeed Alam"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",              description: "Parent hub - all MacBook services." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Most-common follow-up to a diagnostic. From AED 450." },
-        { label: "MacBook Overheating Fix",     href: "/macbook-overheating-fix-dubai",      description: "Second-most-common follow-up. AED 300." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Most-common follow-up to a diagnostic." },
+        { label: "MacBook Overheating Fix",     href: "/macbook-overheating-fix-dubai",      description: "Second-most-common follow-up." },
       ]}
       blogLink={{ label: "How to read a MacBook diagnostic report", href: "/blog/macbook-battery-health-check-guide" }}
     />

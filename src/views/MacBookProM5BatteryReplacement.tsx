@@ -7,7 +7,7 @@ export default function MacBookProM5BatteryReplacement() {
       path="/macbook-pro-m5-battery-replacement-dubai"
       chip="M5"
       years="2025"
-      seoTitle="MacBook Pro M5 Battery Replacement Dubai — From AED 600"
+      seoTitle="MacBook Pro M5 Battery Replacement Dubai"
       seoDescription="MacBook Pro M5 Pro/Max battery replacement Dubai from AED 600 (estimate). 2 to 3 day turnaround. BMS re-pair included. Very likely still under Apple warranty — check first. Call 055 741 3706."
       h1="MacBook Pro M5 Battery Replacement Dubai"
       eyebrow="M5 Pro/Max battery specialist · Dubai Media City · Free diagnosis"

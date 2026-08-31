@@ -7,15 +7,15 @@ export default function MacBookProM3ScreenRepair() {
       path="/macbook-pro-m3-screen-repair-dubai"
       chip="M3"
       years="2023"
-      seoTitle="MacBook Pro M3 Screen Repair Dubai — From AED 1,000"
-      seoDescription="MacBook Pro M3 Pro/Max screen repair Dubai from AED 1,000. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion. Space Black available. Same-day diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Pro M3 Screen Repair Dubai"
+      seoDescription="MacBook Pro M3 Pro/Max screen repair Dubai. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion. Space Black available. Same-day diagnosis. Call 055 741 3706."
       h1="MacBook Pro M3 Screen Repair Dubai"
       eyebrow="M3 Pro/Max display specialist · Dubai Media City · Same-day diagnosis"
       displayType="Liquid Retina XDR (mini-LED)"
       resolution="3024x1964 (14-inch) / 3456x2234 (16-inch)"
       brightness="1,000 nits sustained / 1,600 nits peak"
       promotionHz="120Hz ProMotion (adaptive 24-120Hz)"
-      heroAnswer="MacBook Pro M3 screen repair in Dubai costs from AED 1,000 for the 14-inch and AED 1,200 for the 16-inch at MacBook Repair Dubai. The M3 Pro and M3 Max (late 2023) introduced the Space Black colour option alongside Silver, with a new anodisation process on the chassis. Screen replacement uses M3-specific assemblies. Same-day diagnosis; repair same-day to 1-2 days."
+      heroAnswer="MacBook Pro M3 screen repair in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different panels. The M3 Pro and M3 Max (late 2023) introduced the Space Black colour option alongside Silver, with a new anodisation process on the chassis. Screen replacement uses M3-specific assemblies. Same-day diagnosis; repair same-day to 1-2 days."
       chipUniquePoints={[
         "The M3 MacBook Pro introduced Space Black, a new chassis colour with a proprietary anodisation process that Apple developed to resist fingerprints better than previous dark finishes. The display assembly bezel on Space Black models matches this finish. We use M3 Space Black-specific display assemblies to ensure the bezel colour is preserved after repair.",
         "The M3 chip introduced hardware-accelerated ray tracing and mesh shading directly in silicon, a major GPU architecture upgrade over M2. This makes the M3 Pro and M3 Max significantly more capable for 3D rendering, game development, and GPU-intensive workflows. A screen repair at AED 1,000-1,200 preserves a machine with years of GPU headroom still ahead.",
@@ -30,27 +30,27 @@ export default function MacBookProM3ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight zone flickering on M3 Pro",
-          body: "Mini-LED local dimming zone failure causes visible brightness pulsing in parts of the screen. This is a panel-level fault requiring assembly replacement. Free diagnosis confirms before work starts. Cost: AED 1,000-1,200.",
+          body: "Mini-LED local dimming zone failure causes visible brightness pulsing in parts of the screen. This is a panel-level fault requiring assembly replacement. Free diagnosis confirms before work starts..",
         },
         {
           title: "Screen lines on M3 Pro display",
-          body: "Horizontal or vertical lines that persist across all content and do not change with movement indicate a panel or display cable fault. We diagnose which component is at fault before ordering parts. Cost: from AED 1,000.",
+          body: "Horizontal or vertical lines that persist across all content and do not change with movement indicate a panel or display cable fault. We diagnose which component is at fault before ordering parts..",
         },
         {
           title: "No backlight but Mac boots normally",
-          body: "If the screen is black but you can see a very faint image under torch light, the backlight circuit or display cable is the likely cause. The M3 logic board is typically undamaged in this scenario. Cost: AED 600-1,000.",
+          body: "If the screen is black but you can see a very faint image under torch light, the backlight circuit or display cable is the likely cause. The M3 logic board is typically undamaged in this scenario..",
         },
         {
           title: "Cracked screen 14-inch M3 Pro",
-          body: "Impact or pressure damage to the 14-inch Liquid Retina XDR panel. The panel, backlight, and glass are a bonded assembly and are replaced together. Cost: AED 1,000.",
+          body: "Impact or pressure damage to the 14-inch Liquid Retina XDR panel. The panel, backlight, and glass are a bonded assembly and are replaced together..",
         },
         {
           title: "Cracked screen 16-inch M3 Max",
-          body: "Physical damage to the 16-inch panel requires the 16-inch assembly. We confirm stock availability during the free diagnosis. Cost: AED 1,200.",
+          body: "Physical damage to the 16-inch panel requires the 16-inch assembly. We confirm stock availability during the free diagnosis..",
         },
         {
           title: "Colour tint or colour accuracy issues on M3 display",
-          body: "Colour banding, unexpected tint, or a localised area of incorrect colour reproduction indicates panel failure rather than a macOS calibration issue. Free diagnosis distinguishes hardware from software causes. Cost: AED 1,000-1,200.",
+          body: "Colour banding, unexpected tint, or a localised area of incorrect colour reproduction indicates panel failure rather than a macOS calibration issue. Free diagnosis distinguishes hardware from software causes..",
         },
       ]}
       faqs={[
@@ -68,7 +68,7 @@ export default function MacBookProM3ScreenRepair() {
         },
         {
           q: "Is it worth repairing a MacBook Pro M3 screen in Dubai?",
-          a: "Yes. The M3 Pro and M3 Max are among the most powerful laptop chips available. At AED 1,000-1,200 for a screen repair versus AED 9,500 or more for a new MacBook Pro, repair makes strong financial sense. The M3 chip will remain a high-performance option for many years.",
+          a: "Yes. The M3 Pro and M3 Max are among the most powerful laptop chips available. Against a new MacBook Pro, which Apple lists from AED 9,500 or more, a screen repair, repair makes strong financial sense. The M3 chip will remain a high-performance option for many years.",
         },
         {
           q: "Can I get a free diagnosis for my M3 MacBook Pro screen issue in Dubai?",

@@ -30,27 +30,27 @@ export default function MacBookProM5ScreenRepair() {
       faults={[
         {
           title: "OLED pixel failure on M5 MacBook Pro",
-          body: "Individual OLED sub-pixels can fail, showing as stuck bright, stuck dark, or off-colour pixels. Unlike LCD panels, individual pixels on OLED are independently lit. A small cluster of failed pixels is visible on a dark background. Diagnosis confirms the extent. Cost: AED 1,300-1,500.",
+          body: "Individual OLED sub-pixels can fail, showing as stuck bright, stuck dark, or off-colour pixels. Unlike LCD panels, individual pixels on OLED are independently lit. A small cluster of failed pixels is visible on a dark background. Diagnosis confirms the extent..",
         },
         {
           title: "Tandem OLED panel delamination",
-          body: "The tandem OLED structure uses two bonded OLED layers. Separation between layers, caused by impact or manufacturing stress, shows as a visible area of discolouration or irregular brightness. This requires full panel assembly replacement. Cost: AED 1,300-1,500.",
+          body: "The tandem OLED structure uses two bonded OLED layers. Separation between layers, caused by impact or manufacturing stress, shows as a visible area of discolouration or irregular brightness. This requires full panel assembly replacement..",
         },
         {
           title: "Cracked OLED screen 14-inch M5 Pro",
-          body: "Physical impact damage to the 14-inch OLED panel. OLED panels are more sensitive to impact than mini-LED LCD panels due to the thin organic layer structure. Full assembly replacement required. Cost: AED 1,300.",
+          body: "Physical impact damage to the 14-inch OLED panel. OLED panels are more sensitive to impact than mini-LED LCD panels due to the thin organic layer structure. Full assembly replacement required..",
         },
         {
           title: "Cracked OLED screen 16-inch M5 Max",
-          body: "Impact damage to the 16-inch OLED panel. The 16-inch assembly is sourced separately. Parts availability is confirmed during the free diagnosis. Cost: AED 1,500.",
+          body: "Impact damage to the 16-inch OLED panel. The 16-inch assembly is sourced separately. Parts availability is confirmed during the free diagnosis..",
         },
         {
           title: "OLED display showing colour shift or tint",
-          body: "Colour tint or inaccuracy on the M5 OLED display that persists across all content and cannot be corrected in macOS display settings indicates a panel fault. Free diagnosis distinguishes hardware from software causes. Cost: AED 1,300-1,500.",
+          body: "Colour tint or inaccuracy on the M5 OLED display that persists across all content and cannot be corrected in macOS display settings indicates a panel fault. Free diagnosis distinguishes hardware from software causes..",
         },
         {
           title: "Screen partially dark or uneven brightness on M5 OLED",
-          body: "Localised dimming or dark patches on an OLED panel indicate pixel group failure rather than the backlight zone failure seen on mini-LED models. The repair approach is the same: full panel assembly replacement. Free diagnosis confirms. Cost: AED 1,300-1,500.",
+          body: "Localised dimming or dark patches on an OLED panel indicate pixel group failure rather than the backlight zone failure seen on mini-LED models. The repair approach is the same: full panel assembly replacement. Free diagnosis confirms..",
         },
       ]}
       faqs={[

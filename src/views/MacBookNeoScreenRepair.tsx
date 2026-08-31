@@ -7,12 +7,12 @@ import { Link } from "@/lib/router-compat";
 export default function MacBookNeoScreenRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Screen Repair Dubai - 12.9-inch Liquid Retina from AED 650"
-      seoDescription="MacBook Neo screen repair Dubai from AED 650. 12.9-inch Liquid Retina display, A18 Pro (2026). Cracked glass, dead pixels, backlight failure. Free diagnosis. 3-month warranty. Call 055 741 3706."
+      seoTitle="MacBook Neo Screen Repair Dubai - 12.9-inch Liquid Retina"
+      seoDescription="MacBook Neo screen repair Dubai. 12.9-inch Liquid Retina display, A18 Pro (2026). Cracked glass, dead pixels, backlight failure. Free diagnosis. 3-month warranty. Call 055 741 3706."
       path="/macbook-neo-screen-repair-dubai"
-      eyebrow="12.9-inch Liquid Retina · A18 Pro · 2026 · from AED 650"
+      eyebrow="12.9-inch Liquid Retina · A18 Pro · 2026"
       h1="MacBook Neo Screen Repair Dubai"
-      subtitle="MacBook Neo 12.9-inch screen repair in Dubai. Cracked, dead pixels, backlight gone, lines? We replace the Liquid Retina panel from AED 650. At 6 months old, check AppleCare+ first."
+      subtitle="MacBook Neo 12.9-inch screen repair in Dubai. Cracked, dead pixels, backlight gone, lines? We replace the Liquid Retina panel. At 6 months old, check AppleCare+ first."
       startingPrice={650}
       timeline="3-5 days (parts still ramping for 2026 model)"
       whatsappPrefill="Hi, I need MacBook Neo screen repair:"
@@ -44,7 +44,7 @@ export default function MacBookNeoScreenRepair() {
             </p>
             <p className="text-[15px]">
               Out of warranty? We replace the full Liquid Retina assembly from{" "}
-              <strong>AED 650</strong> with a 3-month warranty.
+              a <strong>3-month warranty</strong>.
             </p>
           </div>
 
@@ -70,8 +70,8 @@ export default function MacBookNeoScreenRepair() {
             <Link to="/macbook-air-m4-screen-repair-dubai" className="text-accent hover:underline">
               MacBook Air M4 screen repair
             </Link>{" "}
-            at AED 720, which has the same panel construction but mature parts stock (same-day turnaround).
-            The Neo at AED 650 is slightly cheaper because it is a smaller 12.9-inch assembly.
+            which has the same panel construction but mature parts stock (same-day turnaround).
+            The Neo is slightly cheaper because it is a smaller 12.9-inch assembly.
           </p>
         </>
       }
@@ -112,7 +112,7 @@ export default function MacBookNeoScreenRepair() {
         },
         {
           q: "How does MacBook Neo screen repair cost compare to MacBook Air M4?",
-          a: "MacBook Neo screen repair is AED 650. MacBook Air M4 (13.6-inch) screen repair is AED 720. The Neo is slightly cheaper because its 12.9-inch panel is smaller than the Air's 13.6-inch Liquid Retina display. Both are full Liquid Retina IPS panel replacements with the same 3-month warranty.",
+          a: "The Neo screen repair is slightly cheaper than the MacBook Air M4 (13.6-inch), because its 12.9-inch panel is smaller than the Air's 13.6-inch Liquid Retina display. Both are full Liquid Retina IPS panel replacements with the same 3-month warranty.",
         },
         {
           q: "Is the MacBook Neo screen OLED?",
@@ -133,7 +133,7 @@ export default function MacBookNeoScreenRepair() {
         {
           label: "MacBook Neo Battery Replacement Dubai",
           href: "/macbook-neo-battery-replacement-dubai",
-          description: "A18 Pro battery replacement with BMS re-pair from AED 450.",
+          description: "A18 Pro battery replacement with BMS re-pair.",
         },
         {
           label: "MacBook Screen Repair Dubai",

@@ -8,13 +8,13 @@ export default function MacBookAirM4Repair() {
       chip="M4"
       years="2025"
       seoTitle="MacBook Air M4 Repair Dubai 2025: Screen, Battery & Logic Board"
-      seoDescription="MacBook Air M4 repair Dubai. Screen from AED 600, battery from AED 450. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+      seoDescription="MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
       eyebrow="MacBook Air M4 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M4 Repair Dubai"
       heroDescription="MacBook Air M4 launched in 2025 with a redesigned chip, 18-hour battery, and the same fanless wedge chassis in a new Sky Blue colourway. We repair both the 13-inch and 15-inch M4 Air for screen cracks, battery degradation, charging faults, and board-level issues at our Media City workshop."
       heroMeta={[
-        "Screen from AED 600",
-        "Battery from AED 450",
+        "Screen replacement",
+        "Battery replacement",
         "Free diagnosis",
         "Same-day most repairs",
       ]}
@@ -25,11 +25,11 @@ export default function MacBookAirM4Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M4 screen repair cost in Dubai?",
-          a: "MacBook Air M4 screen replacement costs AED 600 for the 13-inch and AED 700 for the 15-inch at our workshop, versus AED 1,099-1,199 at the Apple Store. We use OEM-grade Liquid Retina panels with the same resolution and brightness rating. Same-day service available.",
+          a: "The 13-inch and 15-inch take different Liquid Retina panels, so they are quoted separately after a free diagnosis. For comparison, the Apple Store charges AED 1,099-1,199. We use OEM-grade Liquid Retina panels with the same resolution and brightness rating. Same-day service available.",
         },
         {
           q: "How much does MacBook Air M4 battery replacement cost in Dubai?",
-          a: "MacBook Air M4 battery replacement costs AED 450 (13-inch) or AED 500 (15-inch) at our workshop, versus AED 899-999 at Apple. The M4 Air 13-inch has a 52.6 Wh cell, 15-inch has 66.5 Wh. Both replaced using OEM-grade cells with the same Wh rating. Turnaround: 45-60 minutes.",
+          a: "The 13-inch and 15-inch use different cells, so each is quoted separately after a free diagnosis. Apple charges AED 899-999 for the same job. The M4 Air 13-inch has a 52.6 Wh cell, 15-inch has 66.5 Wh. Both replaced using OEM-grade cells with the same Wh rating. Turnaround: 45-60 minutes.",
         },
         {
           q: "Does MacBook Air M4 overheat in Dubai summer?",
@@ -45,7 +45,7 @@ export default function MacBookAirM4Repair() {
         },
         {
           q: "Is it worth repairing MacBook Air M4 after liquid damage?",
-          a: "Depends on the damage. For minor spills caught quickly, board cleaning and thermal service (AED 350-450) restores most MacBook Air M4s. For heavy liquid with multiple board faults, we give you an honest assessment. If repair cost exceeds 60% of the machine's value, we'll tell you.",
+          a: "Depends on the damage. For minor spills caught quickly, board cleaning and thermal service restores most MacBook Air M4s. For heavy liquid with multiple board faults, we give you an honest assessment. If repair cost exceeds 60% of the machine's value, we'll tell you.",
         },
       ]}
     />

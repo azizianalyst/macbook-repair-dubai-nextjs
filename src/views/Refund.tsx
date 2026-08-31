@@ -41,7 +41,7 @@ export default function Refund() {
 
       <LegalSection id="no-fix" title="2. No fix, no charge">
         <ul>
-          <li>If a board or part cannot be repaired, the price is AED 0.</li>
+          <li>If a board or part cannot be repaired, there is no charge.</li>
           <li>You may collect the device at any time during business hours.</li>
           <li>The diagnostic report is yours to keep - print copy on request - and can be used at any other repair shop.</li>
           <li>Two pre-authorised exceptions: data recovery on physically damaged drives, and liquid damage cleaning. In both cases the labour figure is sent on WhatsApp and approved in writing before work begins.</li>

@@ -14,11 +14,11 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const MODELS = [
-  { model: "MacBook Air M1 / M2 / M3 / M4", price: "AED 450–550",  note: "Most common swollen battery, thin chassis makes bulge visible early" },
-  { model: "MacBook Pro 13\" M1 / M2",       price: "AED 500–600",  note: "Compact body; trackpad lift is the first symptom" },
-  { model: "MacBook Pro 14\" / 16\" M1–M5",  price: "AED 600–750",  note: "Larger cell, swelling usually after 3+ years" },
-  { model: "MacBook Pro Intel 2015–2019",     price: "AED 450–600",  note: "High-failure-rate batteries at 4–6 years old" },
-  { model: "MacBook Air Intel 2018–2020",     price: "AED 450–550",  note: "A1932 / A2179, well-documented swelling issue" },
+  { model: "MacBook Air M1 / M2 / M3 / M4", price: "Quoted after free check", note: "Most common swollen battery, thin chassis makes bulge visible early" },
+  { model: "MacBook Pro 13\" M1 / M2",       price: "Quoted after free check", note: "Compact body; trackpad lift is the first symptom" },
+  { model: "MacBook Pro 14\" / 16\" M1–M5",  price: "Quoted after free check", note: "Larger cell, swelling usually after 3+ years" },
+  { model: "MacBook Pro Intel 2015–2019",     price: "Quoted after free check", note: "High-failure-rate batteries at 4–6 years old" },
+  { model: "MacBook Air Intel 2018–2020",     price: "Quoted after free check", note: "A1932 / A2179, well-documented swelling issue" },
 ];
 
 const DANGER_SIGNS = [
@@ -46,7 +46,7 @@ const FAQS = [
   { q: "Can I still use my MacBook if the battery is swollen?",
     a: "Briefly, only to save your work and copy critical files. Power it down as soon as possible and don't charge it. A swollen battery under charge can rupture. Bring it in or request free pickup from Dubai Mainland, we replace swollen batteries the same day." },
   { q: "How much does swollen MacBook battery repair cost in Dubai?",
-    a: "Swollen battery replacement in Dubai costs AED 450–750 depending on model. MacBook Air M1–M4: AED 450–550. MacBook Pro 14\" / 16\": AED 600–750. The battery is completely replaced, we do not attempt to discharge and re-seal swollen cells. Diagnosis is free." },
+    a: "It depends on the model — an Air cell, a 13-inch Pro cell and a 14/16-inch Pro cell are three different parts. The battery is completely replaced; we do not attempt to discharge and re-seal swollen cells. Diagnosis is free." },
   { q: "Can a swollen battery damage my MacBook?",
     a: "Yes. The pressure from a swollen battery lifts the trackpad out of its housing (damaging the Force Touch mechanism), can crack the display from the inside, and warps the bottom case. Replace it before the swelling progresses, most early-stage swellings cause no secondary damage." },
   { q: "How long does swollen MacBook battery replacement take?",
@@ -61,9 +61,9 @@ export default function MacBookBatterySwollen() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "MacBook Swollen Battery Repair Dubai. From AED 450, Same Day | Urgent",
+    title: "MacBook Swollen Battery Repair Dubai. Same Day | Urgent",
     description:
-      "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement from AED 450. Free pickup. Concord Tower, Media City. Call 055 741 3706.",
+      "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement. Free pickup. Concord Tower, Media City. Call 055 741 3706.",
     path: "/macbook-battery-swollen-repair-dubai",
   });
 
@@ -77,7 +77,7 @@ export default function MacBookBatterySwollen() {
           tone="dark"
           eyebrow="URGENT. Swollen battery repair · Dubai · Same day"
           title="MacBook Swollen Battery Repair Dubai"
-          subtitle="A swollen battery is a fire risk, do not keep charging it. Same-day replacement from AED 450. Free pickup across Dubai."
+          subtitle="A swollen battery is a fire risk, do not keep charging it. Same-day replacement. Free pickup across Dubai."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1 text-red-400 font-semibold"><AlertTriangle size={16} aria-hidden /> Urgent, stop charging now</span>
@@ -98,7 +98,7 @@ export default function MacBookBatterySwollen() {
           <QuickAnswer
             tone="dark"
             question="My MacBook battery is swollen, what should I do?"
-            answer="Stop charging immediately and power down the MacBook. A swollen lithium battery is a fire risk, do not press on it or carry it in a bag under pressure. WhatsApp 055 741 3706 for same-day free pickup and battery replacement from AED 450. We prioritise swollen-battery jobs at Concord Tower, Dubai Media City."
+            answer="Stop charging immediately and power down the MacBook. A swollen lithium battery is a fire risk, do not press on it or carry it in a bag under pressure. WhatsApp 055 741 3706 for same-day free pickup and battery replacement. We prioritise swollen-battery jobs at Concord Tower, Dubai Media City."
           />
         </section>
 

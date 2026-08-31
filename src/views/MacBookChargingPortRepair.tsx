@@ -36,25 +36,25 @@ const PRICING: PricingRow[] = [
 
 const PROBLEMS = [
   { title: "USB-C port loose - cable wobbles or falls out",
-    body: "Worn-out spring tabs inside the port from 5,000+ insertions. Same charger that worked yesterday now needs to be held at an angle. AED 350 port swap, same day on Apple Silicon Air. The internal flex cable is checked free during the bench inspection." },
+    body: "Worn-out spring tabs inside the port from 5,000+ insertions. Same charger that worked yesterday now needs to be held at an angle. Port swap, same day on Apple Silicon Air. The internal flex cable is checked free during the bench inspection." },
   { title: "Port not recognized - no charging, no data",
-    body: "On the M1/M2 Air the USB-C port is soldered to the logic board with 32 fine-pitch pins. A bent or oxidised pin shows as \"port dead\" in System Information. Hot-air rework re-seats the port (AED 350) or full port swap if pins are damaged." },
+    body: "On the M1/M2 Air the USB-C port is soldered to the logic board with 32 fine-pitch pins. A bent or oxidised pin shows as \"port dead\" in System Information. Hot-air rework re-seats the port, or a full port swap if pins are damaged." },
   { title: "Bent pin in the USB-C connector",
-    body: "Cable yanked sideways while plugged in. The 24-pin USB-C connector has 4 power pins that bend most often. Free diagnosis under the microscope; if only 1-2 pins are bent the port itself can be straightened (AED 200 labour-only). 3+ bent pins means a full port swap." },
+    body: "Cable yanked sideways while plugged in. The 24-pin USB-C connector has 4 power pins that bend most often. Free diagnosis under the microscope; if only 1-2 pins are bent the port itself can be straightened, labour only. 3+ bent pins means a full port swap." },
   { title: "Intermittent charging - works only at certain angles",
-    body: "Cracked solder joint between port and board, usually from being plugged in while the MacBook flexed. Hot-air re-flow fixes 60% of these for AED 250. Full port swap for the other 40% at AED 350." },
+    body: "Cracked solder joint between port and board, usually from being plugged in while the MacBook flexed. Hot-air re-flow fixes 60% of these. The other 40% need a full port swap." },
   { title: "Charges but no data through USB-C",
-    body: "The port has 4 separate functions: USB 2.0 data, USB 3.1 data, DisplayPort, and power. A failed PMIC or USB controller can disable data while leaving power working. AED 450 board-level chip replacement on the failed IC." },
+    body: "The port has 4 separate functions: USB 2.0 data, USB 3.1 data, DisplayPort, and power. A failed PMIC or USB controller can disable data while leaving power working. Board-level chip replacement on the failed IC." },
   { title: "MagSafe 3 connector won't latch",
-    body: "Magnets weaken after liquid exposure or mechanical impact. AED 400 MagSafe 3 port swap on the M2/M3/M4 Pro 14\"/16\". The new port has fresh neodymium magnets - same retention force as factory-new." },
+    body: "Magnets weaken after liquid exposure or mechanical impact. MagSafe 3 port swap on the M2/M3/M4 Pro 14\"/16\". The new port has fresh neodymium magnets - same retention force as factory-new." },
   { title: "Charges only with a specific charger",
-    body: "USB-C PD (Power Delivery) negotiation chip failure. A 30 W charger works but the original 96 W charger doesn't, or vice versa. AED 450 PD controller chip replacement under microscope. Restores full-speed charging across all chargers." },
+    body: "USB-C PD (Power Delivery) negotiation chip failure. A 30 W charger works but the original 96 W charger doesn't, or vice versa. PD controller chip replacement under microscope. Restores full-speed charging across all chargers." },
   { title: "Burn marks or melted plastic inside the port",
-    body: "Caused by a bad third-party charger or moisture in the port. The port and the charging IC both need to be replaced (AED 600 combined). The workshop will not refit the original port even if it still works - the carbon residue causes intermittent shorts later." },
+    body: "Caused by a bad third-party charger or moisture in the port. The port and the charging IC both need to be replaced together. The workshop will not refit the original port even if it still works - the carbon residue causes intermittent shorts later." },
   { title: "Charger plugs in fine but no charge LED on MagSafe",
-    body: "DC-in board failure on Retina 2012-2019 (AED 350) or charging IC failure on M-series (AED 450). Free diagnosis confirms which. The DC-in board is the cheaper of the two on Intel Macs and very rarely fails on Apple Silicon." },
+    body: "DC-in board failure on Retina 2012-2019, or charging IC failure on M-series. Free diagnosis confirms which. The DC-in board is the cheaper of the two on Intel Macs and very rarely fails on Apple Silicon." },
   { title: "Slow charging - full charge takes twice as long",
-    body: "PD chip can't negotiate full wattage. The charger reverts to a 5 V / 3 A safe-mode (15 W) instead of 67-96 W. AED 450 PD chip replacement. Verifiable improvement on the bench - full wattage shows up in System Information > Power within seconds." },
+    body: "PD chip can't negotiate full wattage. The charger reverts to a 5 V / 3 A safe-mode (15 W) instead of 67-96 W. PD chip replacement. Verifiable improvement on the bench - full wattage shows up in System Information > Power within seconds." },
 ];
 
 const STEPS = [
@@ -74,37 +74,37 @@ const STEPS = [
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook charging port repair cost in Dubai?",
-    a: "USB-C port replacement: AED 350 same day on most models. MagSafe 3 port (M2/M3/M4 Pro 14\"/16\"): AED 400 same day. MagSafe 1/2 (2008-2017 Retina): AED 300-350. Charging IC board-level repair (when port is fine): AED 450. DC-in board on Retina Pro 2012-2019: AED 350." },
+    a: "It depends which of four jobs it is: a USB-C port swap, a MagSafe 3 port swap, a MagSafe 1/2 swap on older Retina, or a board-level charging IC repair. A free bench diagnosis identifies which before any paid work, and you get a firm quote then. Most port swaps finish the same day." },
   { q: "Same day or 1 day - what's typical?",
     a: "Same day on USB-C and MagSafe port swaps when the part is in stock - about 80% of tickets. 1 day if the charging IC needs board-level replacement (longer reflow + cooldown) or if both USB-C ports plus the PMIC need work. The bench can usually finish either category within 4 hours of drop-off." },
   { q: "What's the difference between a port swap and a charging IC repair?",
-    a: "Port swap (AED 350) replaces the physical USB-C or MagSafe connector that's loose, bent, or burned. Charging IC repair (AED 450) replaces the chip on the logic board that controls power negotiation - the port itself is fine but the chip can't talk to the charger. Free diagnosis tells which is needed." },
+    a: "A port swap replaces the physical USB-C or MagSafe connector that's loose, bent, or burned. A charging IC repair replaces the chip on the logic board that controls power negotiation - the port itself is fine but the chip can't talk to the charger. Free diagnosis tells which is needed." },
   { q: "Can you fix a bent pin in my USB-C port?",
-    a: "Yes. Under microscope at 40x, single bent pins on the 24-pin USB-C connector can be straightened with a tungsten probe (AED 200 labour-only) if the port is otherwise sound. 3+ bent pins or any broken pins means a full port swap at AED 350." },
+    a: "Yes. Under microscope at 40x, single bent pins on the 24-pin USB-C connector can be straightened with a tungsten probe, labour only, if the port is otherwise sound. 3+ bent pins or any broken pins means a full port swap." },
   { q: "My MacBook Pro charges with one USB-C port but not the other - why?",
-    a: "Each USB-C port has its own controller chip on the board. The bad port may have a dead PD chip (AED 450 chip swap) or simply a failed connector (AED 350 port swap). Both ports route to the same battery, so charging from either gives identical battery health - but using the failed port may also block a connected display." },
+    a: "Each USB-C port has its own controller chip on the board. The bad port may have a dead PD chip, or simply a failed connector. Both ports route to the same battery, so charging from either gives identical battery health - but using the failed port may also block a connected display." },
   { q: "Will my Apple charger still work after repair?",
-    a: "Yes - the original charger and cable are tested on the bench before handover. The port swap restores full PD negotiation, so the original 30 W / 67 W / 96 W charger delivers full wattage. If the charger itself is faulty (rare), the workshop can supply a genuine replacement at AED 280 (30 W), AED 400 (67 W), or AED 600 (96 W)." },
+    a: "Yes - the original charger and cable are tested on the bench before handover. The port swap restores full PD negotiation, so the original 30 W / 67 W / 96 W charger delivers full wattage. If the charger itself is faulty (rare), the workshop can supply a genuine replacement in 30 W, 67 W or 96 W." },
   { q: "Does MagSafe 3 (the M2/M3/M4 connector) need different parts than USB-C?",
-    a: "Yes. MagSafe 3 is a separate physical port on the right side of the Pro 14\"/16\" - it routes through its own controller chip. AED 400 part replacement, same day. The USB-C ports continue to work for charging if MagSafe 3 fails, so the MacBook is usable while waiting for a slot." },
+    a: "Yes. MagSafe 3 is a separate physical port on the right side of the Pro 14\"/16\" - it routes through its own controller chip. Part replacement, same day. The USB-C ports continue to work for charging if MagSafe 3 fails, so the MacBook is usable while waiting for a slot." },
   { q: "What's the warranty?",
     a: "written warranty up to 12 months on parts and labour. Covers port failure, charging IC failure, intermittent charging returning. Does not cover damage from a bad charger or moisture entering after the repair. Transferable once free of charge to a new owner." },
   { q: "Will my data be safe during charging port repair?",
     a: "Yes. The SSD is on a separate area of the logic board, untouched during port or IC work. Files, apps, FileVault encryption all stay intact. The workshop still recommends a Time Machine backup as standard practice." },
   { q: "Why does my MacBook charge slowly with a third-party charger but fast with the Apple one?",
-    a: "USB-C PD negotiation. The Apple charger advertises a specific power profile (e.g. 96 W at 20 V) that the MacBook recognises. Cheap third-party chargers often only advertise 15 W (5 V / 3 A safe mode), which the MacBook then accepts. If a previously fast third-party charger now charges slowly, the PD chip on the board may be failing - AED 450 board-level fix." },
+    a: "USB-C PD negotiation. The Apple charger advertises a specific power profile (e.g. 96 W at 20 V) that the MacBook recognises. Cheap third-party chargers often only advertise 15 W (5 V / 3 A safe mode), which the MacBook then accepts. If a previously fast third-party charger now charges slowly, the PD chip on the board may be failing, which is a board-level fix." },
   { q: "Can you repair a USB-C port on a MacBook Air M1?",
-    a: "Yes - the M1 Air has 2 USB-C ports both soldered to the main logic board with 32 fine-pitch pins each. Port swap takes 90 minutes under microscope at AED 350. The port is sourced from the original Foxconn factory that builds the Apple part." },
+    a: "Yes - the M1 Air has 2 USB-C ports both soldered to the main logic board with 32 fine-pitch pins each. Port swap takes 90 minutes under microscope. The port is sourced from the original Foxconn factory that builds the Apple part." },
   { q: "Do you offer pickup for charging port repair?",
-    a: "Yes, free pickup and delivery across Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Sharjah and Abu Dhabi pickup AED 100 each way." },
+    a: "Yes, free pickup and delivery across Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
 
 const COMPARISON = [
   ["Repair window",                       "Same day to 1 day",                      "5 to 14 business days, mail-in"],
-  ["USB-C port swap (single)",            "AED 350",                                 "Refused - full board swap only AED 4,000+"],
-  ["MagSafe 3 port swap",                 "AED 400",                                 "Refused - full board swap only"],
-  ["Charging IC board-level",             "AED 450",                                 "Refused - full board swap only"],
-  ["Bent-pin straightening (1-2 pins)",   "AED 200 labour-only",                    "Refused"],
+  ["USB-C port swap (single)",            "Free diagnosis, then a quote",            "Refused - full board swap only"],
+  ["MagSafe 3 port swap",                 "Free diagnosis, then a quote",            "Refused - full board swap only"],
+  ["Charging IC board-level",             "Free diagnosis, then a quote",            "Refused - full board swap only"],
+  ["Bent-pin straightening (1-2 pins)",   "Labour only, quoted on diagnosis",        "Refused"],
   ["Free pickup in Dubai",                "Yes",                                     "No, customer must courier"],
   ["Warranty",                            "12 months written",                         "12 months"],
   ["Vintage/obsolete (pre-2017)",         "Yes - back to MagSafe 1 (2008)",         "Refused"],
@@ -122,9 +122,9 @@ export default function MacBookChargingPortRepair() {
 
   useSeo(
     {
-      title: "MacBook Charging Port Repair Dubai - From AED 350",
+      title: "MacBook Charging Port Repair Dubai - Same-Day USB-C",
       description:
-        "MacBook USB-C and MagSafe 3 port repair Dubai from AED 350. Same-day port swap, charging IC board-level repair. M1-M5. Warranty up to 12 months. 055 741 3706.",
+        "MacBook USB-C and MagSafe 3 port repair Dubai. Same-day port swap, charging IC board-level repair, M1-M5. Free diagnosis, warranty up to 12 months. Call 055 741 3706.",
       path: "/macbook-charging-port-repair-dubai",
     },
     [
@@ -152,7 +152,7 @@ export default function MacBookChargingPortRepair() {
         tone="dark"
         eyebrow="MacBook charging port repair"
         title="MacBook Charging Port Repair Dubai - USB-C and MagSafe"
-        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Port swap from AED 350 same day, charging IC repair AED 450, warranty of up to 12 months."
+        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Same-day port swap or board-level charging IC repair, with a warranty of up to 12 months."
         startingPrice={350}
         timeline="Same day · 1 day"
       >
@@ -177,7 +177,7 @@ export default function MacBookChargingPortRepair() {
           {/* Intro */}
           <section>
             <LinkifyProse selfHref="/macbook-charging-port-repair-dubai"><p className="text-[17px] text-text leading-relaxed">
-              MacBook charging port repair in Dubai starts at AED 350 for a USB-C port swap and AED 400 for a MagSafe 3 port - most jobs finish the same day. The workshop has fitted 1,400+ USB-C ports and 280+ MagSafe 3 ports since 2018. Loose connectors, bent pins, intermittent charging, dead ports, slow charging from PD negotiation failure - all covered. When the port itself is fine but the charging IC on the logic board has failed, board-level chip replacement under microscope is AED 450. Free diagnosis confirms which is needed before any paid work begins.
+              MacBook charging port repair in Dubai covers both the USB-C port swap and the MagSafe 3 port - most jobs finish the same day. The workshop has fitted 1,400+ USB-C ports and 280+ MagSafe 3 ports since 2018. Loose connectors, bent pins, intermittent charging, dead ports, slow charging from PD negotiation failure - all covered. When the port itself is fine but the charging IC on the logic board has failed, board-level chip replacement under microscope is the alternative. Free diagnosis confirms which is needed before any paid work begins.
             </p></LinkifyProse>
           </section>
 
@@ -224,16 +224,16 @@ export default function MacBookChargingPortRepair() {
             <h2 className="text-[22px] mb-md text-text">Port swap vs charging IC repair - which one do you need?</h2>
             <div className="grid gap-md md:grid-cols-2">
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-text">Port swap (AED 350-400)</h3>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Port swap</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">The physical connector is loose, bent, burned, or has worn-out spring tabs. The board itself is healthy - voltage reaches the port pins correctly. 70% of tickets.</p>
               </div>
               <div>
-                <h3 className="text-[16px] font-bold mb-sm text-text">Charging IC repair (AED 450)</h3>
+                <h3 className="text-[16px] font-bold mb-sm text-text">Charging IC repair</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed">The port looks perfect but the controller chip on the logic board has failed. Symptoms: charges slowly, charges only with one specific charger, or doesn't charge at all despite a clean port. 30% of tickets.</p>
               </div>
             </div>
             <p className="text-[14px] text-text-muted mt-md">
-              The free 15-minute bench diagnosis identifies which category before any paid work. About 5% of tickets need both - combo price AED 600 instead of AED 800 if booked together.
+              The free 15-minute bench diagnosis identifies which category before any paid work. About 5% of tickets need both, and booking them together costs less than two separate visits.
             </p>
           </section>
 
@@ -263,7 +263,7 @@ export default function MacBookChargingPortRepair() {
               <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Genuine Foxconn / Apple-spec ports</h3>
                 <p className="text-[14px] text-text-muted leading-relaxed mb-sm">USB-C and MagSafe ports sourced from the original Foxconn assembly line that builds the Apple part. Same neodymium magnets in MagSafe 3, same gold-plated spring tabs in USB-C.</p>
-                <p className="mono text-[13px] text-accent">AED 350-400 - included</p>
+                <p className="mono text-[13px] text-accent">Included in the quote</p>
               </article>
               <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Quick 861DW hot-air station + microscope</h3>
@@ -385,9 +385,9 @@ export default function MacBookChargingPortRepair() {
           {/* Related */}
           <section>
             <RelatedServices tone="dark" items={[
-              { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450 in 2 hours. Often paired with charging-port work if the battery has stopped holding charge." },
-              { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai",  description: "Component-level board work from AED 800. PMIC, SMC, T2 - same microscope and bench." },
-              { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid in the port? AED 700 ultrasonic clean - bring it in within 24 hours." },
+              { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Around 2 hours. Often paired with charging-port work if the battery has stopped holding charge." },
+              { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai",  description: "Component-level board work: PMIC, SMC, T2 - same microscope and bench." },
+              { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid in the port? Ultrasonic clean - bring it in within 24 hours." },
             ]} />
           </section>
 

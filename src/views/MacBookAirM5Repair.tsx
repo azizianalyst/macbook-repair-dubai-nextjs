@@ -8,13 +8,13 @@ export default function MacBookAirM5Repair() {
       chip="M5"
       years="2026"
       seoTitle="MacBook Air M5 Repair Dubai 2026: Screen, Battery & Logic Board"
-      seoDescription="MacBook Air M5 repair Dubai. Screen from AED 650, battery from AED 450. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+      seoDescription="MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
       eyebrow="MacBook Air M5 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M5 Repair Dubai"
       heroDescription="MacBook Air M5 launched in 2026 with the most power-efficient chip in the Air line, 30-hour rated battery life, and the same fanless aluminium chassis. When something goes wrong, our Media City workshop handles screen, battery, charging, and board repair for both the 13-inch and 15-inch M5 Air."
       heroMeta={[
-        "Screen from AED 650",
-        "Battery from AED 450",
+        "Screen replacement",
+        "Battery replacement",
         "Free diagnosis",
         "Same-day most repairs",
       ]}
@@ -25,11 +25,11 @@ export default function MacBookAirM5Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M5 screen repair cost in Dubai?",
-          a: "MacBook Air M5 screen replacement costs AED 650 for both the 13-inch and 15-inch models at our workshop, versus AED 1,099 at the Apple Store. We use OEM-grade Liquid Retina panels. Same-day service if you drop off before 11am.",
+          a: "Both the 13-inch and 15-inch take the same Liquid Retina panel, quoted after a free diagnosis. For comparison, the Apple Store charges AED 1,099. We use OEM-grade Liquid Retina panels. Same-day service if you drop off before 11am.",
         },
         {
           q: "How much does MacBook Air M5 battery replacement cost in Dubai?",
-          a: "MacBook Air M5 battery replacement costs AED 450 for the 13-inch and AED 500 for the 15-inch at our workshop. The M5 Air has a rated 30-hour battery life and a 52.6 Wh cell. We use OEM-grade cells with the same Wh rating. Turnaround is 45-60 minutes.",
+          a: "The 13-inch and 15-inch use different cells, so each is quoted separately after a free diagnosis. The M5 Air has a rated 30-hour battery life and a 52.6 Wh cell. We use OEM-grade cells with the same Wh rating. Turnaround is 45-60 minutes.",
         },
         {
           q: "Does MacBook Air M5 overheat in Dubai?",
@@ -45,7 +45,7 @@ export default function MacBookAirM5Repair() {
         },
         {
           q: "Is it worth repairing a MacBook Air M5 with a cracked screen?",
-          a: "Yes. A cracked MacBook Air M5 screen repair at AED 650 is far cheaper than a new M5 Air starting at AED 4,999. The M5 is also a current model with at least 5-6 years of software support ahead. Board damage and severe liquid damage are the cases where we recommend against repair.",
+          a: "Yes. A cracked screen repair is far cheaper than a new M5 Air, which Apple lists from AED 4,999. The M5 is also a current model with at least 5-6 years of software support ahead. Board damage and severe liquid damage are the cases where we recommend against repair.",
         },
       ]}
     />

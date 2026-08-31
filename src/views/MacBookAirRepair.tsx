@@ -1,441 +1,327 @@
 "use client";
+/**
+ * MacBook Air Repair Dubai — rebuilt onto AziziTemplate (2026-08-30).
+ *
+ * GSC: position 57 with impressions and ~0 clicks. The previous version scored
+ * 68% on the landing tier and carried a nine-row price table, a priced hero
+ * subtitle and four priced FAQ answers — all of which the hide-prices decision
+ * removes. Cost intent is served by the free-diagnosis CTA instead.
+ *
+ * Everything factual here is carried over from the previous version or read
+ * from site data: the model matrix, turnaround times, warranty terms and
+ * pickup coverage. Reviews are filtered from the real 212-review set at render
+ * time rather than pasted, so the page follows the store. The byline names
+ * Shafiq because he is the real lead technician for screens, batteries and
+ * water damage in TEAM — the three failures this page is mostly about.
+ */
 import {
-  Star, MessageCircle, Phone,
-  Keyboard, Monitor, BatteryCharging, Droplets, PlugZap,
-  MousePointer2, HardDrive, Cpu, Thermometer,
-  Power, Gauge, Link2, Wifi,
-  Wrench, ShieldCheck, Clock, Award,
-  Search, BadgeCheck, Truck, Laptop,
+  Monitor, BatteryCharging, Keyboard, Droplets, Cpu, Thermometer,
+  Search, ShieldCheck, Clock, Truck,
 } from "lucide-react";
-import { Link } from "@/lib/router-compat";
-import { PageShell } from "@/components/layout/PageShell";
-import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { Hero } from "@/components/blocks/Hero";
-import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
-import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { LocationBlock } from "@/components/blocks/LocationBlock";
-import { Button } from "@/components/ui/button";
-import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
-import { useSeo, preloadFromHero } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
-import type { LucideIcon } from "lucide-react";
 
-const IMG = {
-  hero: {
-    src: "/images/real/lab/macbook-air-lid-dubai.jpg",
-    alt: "MacBook Air open on the workshop bench at MacBook Repair Dubai, Media City",
-  },
-  services: {
-    src: "/images/topics/macbook-air-repair-hub-dubai.jpg",
-    alt: "MacBook Air repair services Dubai: screen, battery, keyboard and logic board",
-    caption: "The four MacBook Air repairs we do most: screen, battery, keyboard and logic board.",
-  },
-};
+import { AziziTemplate } from "@/components/azizi/AziziTemplate";
+import { PRESETS } from "@/data/form-presets";
+import { REVIEWS } from "@/content/reviews";
+import { REVIEW_AVERAGE, REVIEW_COUNT } from "@/content/business.generated";
 
-function TopicFigure({ img }: { img: { src: string; alt: string; caption: string } }) {
-  return (
-    <figure className="mt-xl mx-auto max-w-[860px] overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
-      <ResponsiveImage
-        src={img.src}
-        alt={img.alt}
-        width={1600}
-        height={1200}
-        sizes="(max-width: 414px) 360px, (max-width: 1068px) 800px, 860px"
-        imgClassName="w-full h-auto"
-      />
-      <figcaption className="border-t border-border px-lg py-3 text-center text-[13px] text-text-muted">
-        {img.caption}
-      </figcaption>
-    </figure>
-  );
-}
+const PATH = "/macbook-air-repair-dubai";
 
-const SIBLINGS = [
-  { label: "MacBook Pro", href: "/macbook-pro-repair-dubai" },
-  { label: "iMac", href: "/imac-repair-dubai" },
-  { label: "Mac Pro", href: "/mac-pro-repair-dubai" },
-  { label: "Mac mini", href: "/mac-mini-repair-dubai" },
-  { label: "Mac Studio", href: "/mac-studio-repair-dubai" },
-];
+/* Real MacBook Air reviews, filtered from the live set rather than pasted in.
+   Constrained to ones that name an actual Air repair so the module is relevant,
+   and long enough to read as evidence. If the store changes, this changes. */
+const airReviews = REVIEWS
+  .filter(
+    (r) =>
+      /macbook air/i.test(r.text ?? "") &&
+      /(screen|battery|display|spill|slow)/i.test(r.text ?? "") &&
+      (r.text?.length ?? 0) > 110,
+  )
+  .slice(0, 3)
+  .map((r) => ({ name: r.name, date: r.date, rating: r.rating, text: r.text }));
 
-type Model = { label: string; href?: string; aNum?: string };
-type ModelGroup = { chip: string; years: string; chipHref: string; models: Model[] };
-const MODEL_GROUPS: ModelGroup[] = [
-  {
-    chip: "M5", years: "2026", chipHref: "/macbook-air-m5-repair-dubai",
-    models: [
-      { label: `15" M5`, href: "/macbook-air-15-m5-2026-repair-dubai" },
-      { label: `13" M5`, href: "/macbook-air-13-m5-2026-repair-dubai" },
-    ],
-  },
-  {
-    chip: "M4", years: "2025", chipHref: "/macbook-air-m4-repair-dubai",
-    models: [
-      { label: `15" M4`, href: "/macbook-air-15-m4-2025-repair-dubai" },
-      { label: `13" M4`, href: "/macbook-air-13-m4-2025-repair-dubai" },
-    ],
-  },
-  {
-    chip: "M3", years: "2024", chipHref: "/macbook-air-m3-repair-dubai",
-    models: [
-      { label: `15" M3`, href: "/macbook-air-15-m3-2024-repair-dubai" },
-      { label: `13" M3`, href: "/macbook-air-13-m3-2024-repair-dubai" },
-    ],
-  },
-  {
-    chip: "M2", years: "2022 – 2023", chipHref: "/macbook-air-m2-repair-dubai",
-    models: [
-      { label: `15" M2`, href: "/macbook-air-15-m2-2023-repair-dubai", aNum: "A2941" },
-      { label: `13" M2`, href: "/macbook-air-13-m2-2022-repair-dubai", aNum: "A2681" },
-    ],
-  },
-  {
-    chip: "M1", years: "2020", chipHref: "/macbook-air-m1-repair-dubai",
-    models: [
-      { label: `13" M1`, href: "/macbook-air-13-m1-2020-repair-dubai", aNum: "A2337" },
-    ],
-  },
-  {
-    chip: "Intel", years: "2017 – 2020", chipHref: "/macbook-air-intel-repair-dubai",
-    models: [
-      { label: `13" Intel 2020`, href: "/macbook-air-13-intel-2020-repair-dubai", aNum: "A2179" },
-      { label: `13" Intel 2019`, href: "/macbook-air-13-intel-2019-repair-dubai", aNum: "A1932" },
-      { label: `13" Intel 2018`, href: "/macbook-air-13-intel-2018-repair-dubai", aNum: "A1932" },
-    ],
-  },
-];
+/* Every Air generation we service, newest first. This is also the page's main
+   internal-link surface — the model pages have no other hub pointing at them. */
+const MODEL_LINKS = [
+  { label: 'MacBook Air 15" M5 (2026)', to: "/macbook-air-15-m5-2026-repair-dubai" },
+  { label: 'MacBook Air 13" M5 (2026)', to: "/macbook-air-13-m5-2026-repair-dubai" },
+  { label: 'MacBook Air 15" M4 (2025)', to: "/macbook-air-15-m4-2025-repair-dubai" },
+  { label: 'MacBook Air 13" M4 (2025)', to: "/macbook-air-13-m4-2025-repair-dubai" },
+  { label: 'MacBook Air 15" M3 (2024)', to: "/macbook-air-15-m3-2024-repair-dubai" },
+  { label: 'MacBook Air 13" M3 (2024)', to: "/macbook-air-13-m3-2024-repair-dubai" },
+  { label: 'MacBook Air 15" M2 (2023, A2941)', to: "/macbook-air-15-m2-2023-repair-dubai" },
+  { label: 'MacBook Air 13" M2 (2022, A2681)', to: "/macbook-air-13-m2-2022-repair-dubai" },
+  { label: 'MacBook Air 13" M1 (2020, A2337)', to: "/macbook-air-13-m1-2020-repair-dubai" },
+  { label: 'MacBook Air 13" Intel (2020, A2179)', to: "/macbook-air-13-intel-2020-repair-dubai" },
+  { label: 'MacBook Air 13" Intel (2019, A1932)', to: "/macbook-air-13-intel-2019-repair-dubai" },
+  { label: 'MacBook Air 13" Intel (2018, A1932)', to: "/macbook-air-13-intel-2018-repair-dubai" },
+  { label: "MacBook Air M5 — all sizes", to: "/macbook-air-m5-repair-dubai" },
+  { label: "MacBook Air M4 — all sizes", to: "/macbook-air-m4-repair-dubai" },
+  { label: "MacBook Air M3 — all sizes", to: "/macbook-air-m3-repair-dubai" },
+  { label: "MacBook Air M2 — all sizes", to: "/macbook-air-m2-repair-dubai" },
+  { label: "MacBook Air M1", to: "/macbook-air-m1-repair-dubai" },
+  { label: "MacBook Air Intel", to: "/macbook-air-intel-repair-dubai" },
+] as const;
 
-const SERVICES: { title: string; body: string; Icon: LucideIcon; href?: string }[] = [
-  { Icon: Monitor,         title: "Screen Repair & Replacement", href: "/macbook-screen-repair-dubai",        body: "Cracked, flickering, or dead Liquid Retina display? We replace LCD panels same day for all Air models, Intel through M5." },
-  { Icon: BatteryCharging, title: "Battery Replacement",         href: "/macbook-battery-replacement-dubai",  body: "Swollen battery, rapid drain, or heat issues? We swap genuine-grade cells and restore full capacity. AED 450–500 same day." },
-  { Icon: Keyboard,        title: "Keyboard Repair",             href: "/macbook-keyboard-repair-dubai",      body: "Keys stuck or unresponsive? We repair Intel butterfly keyboards and M-series scissor keyboards, individual keys or full assembly." },
-  { Icon: Droplets,        title: "Water Damage Repair",         href: "/macbook-water-damage-repair-dubai",  body: "Liquid spill? Power off immediately and bring it in. Our board-level technicians dry, clean, and restore water-damaged MacBook Airs." },
-  { Icon: PlugZap,         title: "Not Charging Fix",            href: "/macbook-charging-port-repair-dubai", body: "USB-C or MagSafe 2 not charging? We diagnose the port, cable, or charging IC and get your MacBook Air powering up again." },
-  { Icon: PlugZap,         title: "MacBook Air Charging Port Repair (MagSafe 3 & USB-C)", href: "/macbook-air-charging-port-repair-dubai", body: "MagSafe 3 or USB-C port worn, loose, or not charging? We repair and replace MacBook Air charging ports for Intel and M-series models." },
-  { Icon: MousePointer2,   title: "Trackpad Repair",             href: "/macbook-trackpad-repair-dubai",      body: "Trackpad not clicking or erratic? We recalibrate, repair, or replace Force Touch trackpads on all MacBook Air models." },
-  { Icon: Cpu,             title: "Logic Board Repair",          href: "/macbook-logic-board-repair-dubai",   body: "Power rail faults, no-video, or dead machine? Component-level repair restores function without a full board swap." },
-  { Icon: HardDrive,       title: "Data Recovery",               href: "/mac-data-recovery-dubai",            body: "Lost files after a failed drive or liquid damage? We retrieve data from faulty SSDs and logic boards." },
-  { Icon: Thermometer,     title: "Overheating Fix",             href: "/macbook-overheating-fix-dubai",      body: "MacBook Air running hot silently? Fanless design means heat builds in the chassis. We reclean thermal pads and inspect for board faults." },
-  { Icon: Power,           title: "Won't Turn On",               href: "/mac-not-turning-on-dubai",           body: "Dead MacBook Air? We diagnose power rail failures, SMC issues, and logic board faults to bring it back to life." },
-  { Icon: Gauge,           title: "Running Slow",                href: "/mac-performance-tune-dubai",         body: "Slow startup or sluggish apps? We tune macOS settings and identify background processes throttling your Air's performance." },
-  { Icon: Wifi,            title: "WiFi & Bluetooth Fix",        href: "/macbook-repair-dubai",               body: "WiFi dropping after sleep or Bluetooth won't pair? We diagnose antenna faults, driver issues, and board-level wireless chip failures." },
-  { Icon: Link2,           title: "Hinge Repair",                href: "/macbook-hinge-repair-dubai",         body: "Loose or stiff lid hinge? We repair or replace MacBook Air hinges so the screen opens and closes smoothly again." },
-];
+const AIR_SERVICES = [
+  { label: "MacBook Air screen repair", to: "/macbook-air-screen-repair-dubai" },
+  { label: "MacBook Air battery replacement", to: "/macbook-air-battery-replacement-dubai" },
+  { label: "MacBook Air keyboard repair", to: "/macbook-air-keyboard-repair-dubai" },
+  { label: "MacBook Air charging port repair", to: "/macbook-air-charging-port-repair-dubai" },
+  { label: "MacBook screen repair", to: "/macbook-screen-repair-dubai" },
+  { label: "MacBook battery replacement", to: "/macbook-battery-replacement-dubai" },
+  { label: "MacBook keyboard repair", to: "/macbook-keyboard-repair-dubai" },
+  { label: "MacBook water damage repair", to: "/macbook-water-damage-repair-dubai" },
+  { label: "MacBook logic board repair", to: "/macbook-logic-board-repair-dubai" },
+  { label: "MacBook trackpad repair", to: "/macbook-trackpad-repair-dubai" },
+  { label: "MacBook hinge repair", to: "/macbook-hinge-repair-dubai" },
+  { label: "MacBook overheating fix", to: "/macbook-overheating-fix-dubai" },
+  { label: "Mac data recovery", to: "/mac-data-recovery-dubai" },
+  { label: "Mac not turning on", to: "/mac-not-turning-on-dubai" },
+] as const;
 
-const USP_ITEMS = [
-  { Icon: Search,     label: "Free diagnosis" },
-  { Icon: ShieldCheck,label: "Warranty up to 12 months" },
-  { Icon: Clock,      label: "Same-day most repairs" },
-  { Icon: BadgeCheck, label: "OEM-grade parts" },
-  { Icon: Truck,      label: "Free pickup Dubai" },
-  { Icon: Laptop,     label: "All Air models" },
-  { Icon: Award,      label: "21 years experience" },
-  { Icon: Wrench,     label: "No fix, no charge" },
-];
-
-const PRICING_ROWS = [
-  { service: "Screen replacement: 13\" M1/M2/M3/M4",   ours: "AED 600",   apple: "AED 1,099" },
-  { service: "Screen replacement: 15\" M2/M3/M4",       ours: "AED 700",   apple: "AED 1,199" },
-  { service: "Screen replacement: 13\"/15\" M5",         ours: "AED 650",   apple: "AED 1,099" },
-  { service: "Screen replacement: Intel 13\"",            ours: "AED 500",   apple: "AED 899"   },
-  { service: "Battery replacement: 13\" models",         ours: "AED 450",   apple: "AED 899"   },
-  { service: "Battery replacement: 15\" models",         ours: "AED 500",   apple: "AED 999"   },
-  { service: "Keyboard / top-case",                       ours: "AED 700",   apple: "AED 1,399" },
-  { service: "Logic board (component-level)",             ours: "AED 1,000", apple: "AED 3,500+" },
-  { service: "Water damage assessment + clean",           ours: "AED 350",   apple: "AED 700+"  },
-];
-
-const PROCESS_STEPS = [
-  { title: "Free diagnosis",      body: "Drop off or request pickup. Our tech diagnoses the fault at no cost and tells you exactly what's wrong before any work starts." },
-  { title: "Clear quote",         body: "You receive a written quote with part cost, labour, and estimated turnaround. No hidden fees. You approve before we touch anything." },
-  { title: "Same-day repair",     body: "Most MacBook Air screen and battery jobs are done in 45–90 minutes. We use OEM-grade parts with the same capacity and quality as original Apple components." },
-  { title: "Quality check",       body: "Every repair goes through a full function test before handover: display calibration, battery cycle check, keyboard scan, and trackpad response." },
-];
+const RELATED_HUBS = [
+  { label: "MacBook Repair Dubai", to: "/macbook-repair-dubai" },
+  { label: "MacBook Pro Repair Dubai", to: "/macbook-pro-repair-dubai" },
+  { label: "Mac Repair Dubai", to: "/mac-repair-dubai" },
+  { label: "iMac Repair Dubai", to: "/imac-repair-dubai" },
+  { label: "Mac mini Repair Dubai", to: "/mac-mini-repair-dubai" },
+  { label: "Mac Studio Repair Dubai", to: "/mac-studio-repair-dubai" },
+  { label: "Mac Pro Repair Dubai", to: "/mac-pro-repair-dubai" },
+  { label: "Apple Repair Dubai", to: "/apple-repair-dubai" },
+  { label: "Same-day MacBook repair", to: "/same-day-macbook-repair-dubai" },
+  { label: "Onsite MacBook repair", to: "/onsite-macbook-repair-dubai" },
+] as const;
 
 const FAQS = [
   {
     q: "Which MacBook Air models do you repair?",
-    a: "We repair every MacBook Air ever made, from the original 2008 model through the latest M5. That includes all Intel models (2017–2020), M1 (2020), M2 13\" and 15\" (2022–2023), M3 13\" and 15\" (2024), M4 13\" and 15\" (2025), and the M5 lineup (2026). Free diagnosis on all models.",
+    a: "Every MacBook Air generation. That covers Intel 2017–2020 (A1932, A2179), M1 2020 (A2337), M2 13-inch and 15-inch (A2681, A2941), M3 13-inch and 15-inch, M4 13-inch and 15-inch, and the current M5 line. Older unibody Airs are still repairable for screens and batteries. Diagnosis is free on all of them, so bring it in even if you are not sure which model you have.",
   },
   {
-    q: "How much does MacBook Air screen repair cost in Dubai?",
-    a: "MacBook Air screen replacement costs AED 500–700 at our workshop depending on the model, versus AED 899–1,199 at the Apple Store. M-series 13\" screens start from AED 600, 15\" from AED 700. Intel 13\" from AED 500. Same-day service for most models. Quote confirmed before any work starts.",
+    q: "How long does a MacBook Air repair take?",
+    a: "Screen and battery replacements are usually 45–90 minutes. Keyboard and top-case work is 2–3 hours because the whole assembly comes out. Water damage is assessed the same day, with the repair itself depending on what the board looks like once it is cleaned. Component-level logic board work is 24–48 hours. You get an estimated completion time when we confirm the quote, not before.",
   },
   {
-    q: "How much does MacBook Air battery replacement cost in Dubai?",
-    a: "MacBook Air battery replacement costs AED 450 for 13\" models and AED 500 for 15\" models, versus AED 899–999 at the Apple Store. We use OEM-grade cells with the same Wh rating as the original. Turnaround is 45–60 minutes, same-day if you drop off before 11am.",
+    q: "What does a MacBook Air repair cost?",
+    a: "We quote after the diagnosis, never before it — the same symptom can be a cable, a panel or a board fault, and those are very different jobs. Diagnosis is free, the written quote is free, and if we cannot fix the fault there is no charge at all. Message us on WhatsApp with your model and what it is doing and we will tell you what is involved.",
+  },
+  {
+    q: "Do you charge for the diagnosis?",
+    a: "No. Diagnosis is free on every MacBook Air and there is no obligation to go ahead afterwards. If the machine cannot be repaired you owe nothing — no diagnostic fee, no inspection charge, no labour.",
+  },
+  {
+    q: "My MacBook Air is fanless — why does it still overheat?",
+    a: "Every M-series Air is fanless, so heat leaves through the chassis rather than through a vent. Sustained loads such as video export or long Teams calls make the aluminium hot and macOS throttles to protect the SoC. That is normal. What is not normal is shutting down, waking hot from sleep, or getting hot while idle — those point to a battery or board fault and are worth a free diagnosis.",
+  },
+  {
+    q: "My MacBook Air battery is swollen. Is it safe to use?",
+    a: "Stop using it and do not charge it. A swelling cell is under mechanical stress and pressure on the trackpad or the underside of the case is the usual first sign. Power it down, keep it somewhere cool and away from anything flammable, and bring it in or request a pickup. We remove swollen cells routinely and it is a same-day job on most Air models.",
   },
   {
     q: "Is it worth repairing an older Intel MacBook Air?",
-    a: "For screen or battery on a 2018–2020 Intel Air, usually yes. The machine still runs macOS Ventura well and a AED 400–500 repair is far cheaper than a new Air at AED 4,499+. For logic board faults on pre-2018 models, we'll tell you honestly if the repair cost exceeds the device's value.",
+    a: "For a screen or a battery on a 2018–2020 Intel Air, usually yes — the machine still runs current macOS well and the repair costs a fraction of replacing it. For a logic board fault on a pre-2018 model we will tell you honestly when the repair is not worth it against what the machine is worth. We would rather lose the job than take money for a machine you should replace.",
   },
   {
     q: "Do you offer free pickup for MacBook Air repair in Dubai?",
-    a: "Yes: free door-to-door pickup anywhere in mainland Dubai. A courier collects your MacBook Air, we diagnose and repair it at our Media City workshop, and return it same day or next day depending on the job.",
-  },
-  {
-    q: "How long does MacBook Air repair take?",
-    a: "Screen and battery replacements: 45–90 minutes. Keyboard / top-case: 2–3 hours. Water damage assessment: same day. Logic board repair: 24–48 hours depending on component availability. We give an estimated completion time when we confirm the quote.",
+    a: "Yes, free door-to-door collection and delivery anywhere in mainland Dubai — Marina, Downtown, JBR, JLT, Business Bay, Al Barsha, Media City and the rest. A courier collects the machine, we diagnose and repair it at the Concord Tower workshop, and it comes back to you. You can also walk in without an appointment.",
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",
-    a: "If you're still inside the 1-year Apple warranty, go to Apple first. They'll fix manufacturing defects free. If you're out of warranty, there's nothing to void. Our repairs carry their own written warranty of up to 12 months on screen and battery, 90 days on other hardware.",
+    a: "If the machine is still inside Apple's one-year warranty or an active AppleCare+ plan, use Apple first — they will fix a manufacturing defect at no cost and we will tell you so. If you are out of warranty there is nothing left to void. Our own work carries a written warranty of up to 12 months on screens and batteries and 90 days on other hardware.",
+  },
+  {
+    q: "Will I lose my data during a MacBook Air repair?",
+    a: "Not for a screen, battery, keyboard or trackpad job — the storage is untouched. On M-series Airs the SSD is soldered to the logic board, so board-level work is the one case where data is genuinely at risk. We tell you that before starting and recover data first where it matters. Back up before any repair anywhere if you can.",
   },
 ];
 
-function CallButtons({ dark }: { dark?: boolean }) {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
-      </Button>
-      <Button asChild variant={dark ? "secondary" : "outline"} size="lg">
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
-
 export default function MacBookAirRepair() {
-  useSeo(
-    {
-      title: "MacBook Air Repair Dubai: Screen, Battery & Logic Board | From AED 450",
-      description: "MacBook Air repair Dubai. All models M1–M5 and Intel. Screen from AED 500, battery from AED 450. Free diagnosis, same-day service, free pickup across Dubai. 21 years experience.",
-      path: "/macbook-air-repair-dubai",
-    },
-    [localBusiness(), organization()],
-  );
-  preloadFromHero(IMG.hero.src);
-
   return (
-    <PageShell>
-      <div className="bg-bg-alt text-text -mb-[4rem]">
+    <AziziTemplate
+      path={PATH}
+      preset={PRESETS.repair}
+      /* DEVICE_TYPES has no "MacBook Air" member — the Air is a MacBook for
+         lead-routing purposes, and the model is captured in the message. */
+      leadFormDeviceType="MacBook"
 
-        {/* ── HERO ── */}
-        <Hero
-          image={IMG.hero.src}
-          imageAlt={IMG.hero.alt}
-          variant="device"
-          tone="dark"
-          eyebrow="MacBook Air specialist · All models M1–M5 & Intel"
-          title="MacBook Air Repair Dubai"
-          subtitle="Screen from AED 500 · Battery from AED 450 · Free diagnosis · Same-day service · Free pickup across Dubai"
-        >
-          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 stars · 40,000+ devices repaired</span>
-            <span>·</span>
-            <span>21 years experience</span>
-            <span>·</span>
-            <span>No fix, no charge</span>
-          </p>
-        </Hero>
+      breadcrumb={[
+        { name: "Home", path: "/" },
+        { name: "MacBook Repair Dubai", path: "/macbook-repair-dubai" },
+        { name: "MacBook Air Repair Dubai", path: PATH },
+      ]}
 
-        {/* ── BREADCRUMB ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-          <BreadcrumbTrail tone="dark" trail={[
-            { name: "Home", path: "/" },
-            { name: "MacBook Repair Dubai", path: "/macbook-repair-dubai" },
-            { name: "MacBook Air Repair Dubai", path: "/macbook-air-repair-dubai" },
-          ]} />
-        </section>
+      hero={{
+        eyebrow: "MacBook Air specialist · Intel through M5",
+        title: "MacBook Air Repair Dubai",
+        subtitle:
+          "Screens, batteries, keyboards and board-level faults on every MacBook Air generation. Free diagnosis, same-day on most jobs, free pickup across Dubai.",
+        timeline: "Most screen and battery jobs: same day",
+        image: "/images/real/lab/macbook-air-lid-dubai.jpg",
+        imageAlt:
+          "MacBook Air open on the workshop bench at MacBook Repair Dubai, Dubai Media City",
+        ctaLabel: "Get a free diagnosis",
+      }}
 
-        {/* ── SIBLING NAV ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-md">
-          <div className="flex flex-wrap gap-2 text-[13px]">
-            {SIBLINGS.map((s) => (
-              <Link key={s.href} to={s.href} className="px-3 py-1.5 border border-border rounded-full text-text-muted hover:text-accent hover:border-accent transition-colors">{s.label} →</Link>
-            ))}
-          </div>
-        </section>
+      authorByline={{
+        author: "Shafiq",
+        role: "Lead technician — screens, batteries and water damage",
+        reviewer: "MacBook Repair Dubai workshop team",
+        updated: "August 2026",
+      }}
 
-        {/* ── MODELS BY CHIP ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Every model covered</p>
-          <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air models we repair</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {MODEL_GROUPS.map((g) => (
-              <div key={g.chip} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5">
-                <div className="flex items-baseline justify-between mb-3">
-                  <Link to={g.chipHref} className="text-[18px] font-bold text-accent hover:underline">
-                    MacBook Air {g.chip}
-                  </Link>
-                  <span className="text-[12px] text-text-muted">{g.years}</span>
-                </div>
-                <ul className="space-y-1">
-                  {g.models.map((m) => (
-                    <li key={m.label}>
-                      {m.href ? (
-                        <Link to={m.href} className="text-[13px] text-text hover:text-accent transition-colors flex items-center justify-between">
-                          <span>{m.label}</span>
-                          {m.aNum && <span className="text-text-faint text-[11px]">{m.aNum}</span>}
-                        </Link>
-                      ) : (
-                        <span className="text-[13px] text-text-muted">{m.label}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+      quickAnswer={{
+        question: "What is MacBook Air repair at MacBook Repair Dubai?",
+        answer:
+          "MacBook Air repair at MacBook Repair Dubai is in-workshop repair of any MacBook Air — display, battery, keyboard, trackpad, charging port or logic board — carried out at Office 45, Concord Tower, Dubai Media City. We have repaired Apple hardware since 2004 and cover every Air generation from the Intel models through the current M5. Diagnosis is free, most screen and battery work is finished the same day, and there is no charge if we cannot fix the fault.",
+      }}
 
-        {/* ── SERVICES GRID ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">What we fix</p>
-          <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air repair services Dubai</h2>
-          <TopicFigure img={IMG.services} />
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s) => (
-              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5 hover:border-accent/40 transition-colors">
-                <div className="flex items-center gap-2 mb-2">
-                  <s.Icon size={18} className="text-accent shrink-0" aria-hidden />
-                  {s.href ? (
-                    <Link to={s.href} className="text-[15px] font-semibold text-text hover:text-accent">{s.title}</Link>
-                  ) : (
-                    <span className="text-[15px] font-semibold text-text">{s.title}</span>
-                  )}
-                </div>
-                <p className="text-[13px] text-text-muted leading-relaxed">{s.body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-6"><CallButtons /></div>
-        </section>
+      keyTakeaways={{
+        updated: "August 2026",
+        lead:
+          "MacBook Repair Dubai repairs every MacBook Air generation at its own workshop inside Concord Tower, Dubai Media City.",
+        items: [
+          "Most MacBook Air screen and battery replacements are finished the same day.",
+          "Diagnosis is free and there is no charge if the fault cannot be fixed.",
+          "Every M-series Air is fanless, so heat is normal under load — shutting down is not.",
+          "A swollen battery pushing up the trackpad should be powered off and not charged.",
+          "On M-series Airs the SSD is soldered to the board, so board faults put data at risk.",
+          "Free collection and delivery anywhere in mainland Dubai, or walk in without an appointment.",
+        ],
+      }}
 
-        {/* ── USP STRIP ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {USP_ITEMS.map((u) => (
-              <div key={u.label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-4 flex items-center gap-3">
-                <u.Icon size={20} className="text-accent shrink-0" aria-hidden />
-                <span className="text-[13px] font-medium text-text">{u.label}</span>
-              </div>
-            ))}
-          </div>
-        </section>
+      whatIs={{
+        heading: "What actually fails on a MacBook Air",
+        entityName: "MacBook Air repair",
+        definition: (
+          <>
+            <p>
+              The MacBook Air fails differently from the Pro, and the reason is the
+              chassis. There is no fan in any M-series Air, so heat leaves through the
+              aluminium. That makes the machine silent, and it also means thermal stress
+              lands on the battery and the board rather than being carried out through a
+              vent. Swollen cells and heat-related board faults are the two things we see
+              most on Airs that are three years old or more.
+            </p>
+            <p>
+              The other pattern is mechanical. The Air is the machine people carry, so it
+              takes the drops, the bag pressure and the spilled coffee. Cracked displays
+              and liquid damage make up most of what arrives on the bench. Intel-era Airs
+              add the butterfly keyboard, where a single piece of grit under a key is
+              enough to kill it. We repair all of it at component level where the fault
+              allows, rather than replacing a whole board because one rail is down.
+            </p>
+          </>
+        ),
+        benefits: [
+          { icon: Search, title: "Free diagnosis, then a quote", body: "We find the actual fault before quoting. The same symptom can be a cable, a panel or a board — those are different jobs and different costs." },
+          { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries are typically 45–90 minutes. Drop off in the morning and the machine is usually ready that evening." },
+          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months on screens and batteries, 90 days on other hardware. In writing, on the job sheet, not a verbal promise." },
+          { icon: Truck, title: "Free pickup across Dubai", body: "Door-to-door collection and return anywhere on the mainland, or walk into the Media City workshop without an appointment." },
+        ],
+      }}
 
-        {/* ── PRICING ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Transparent pricing</p>
-          <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-2">MacBook Air repair cost Dubai: us vs Apple Store</h2>
-          <p className="text-[14px] text-text-muted mb-6 max-w-[65ch]">All prices in AED. Quote confirmed before any work starts. No fix, no charge policy on all jobs.</p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-[14px]">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-3 pr-4 font-semibold text-text">Repair</th>
-                  <th className="text-left py-3 pr-4 font-semibold text-accent">Our price</th>
-                  <th className="text-left py-3 font-semibold text-text-muted">Apple Store</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING_ROWS.map((r) => (
-                  <tr key={r.service} className="border-b border-border/50">
-                    <td className="py-3 pr-4 text-text">{r.service}</td>
-                    <td className="py-3 pr-4 font-semibold text-accent">{r.ours}</td>
-                    <td className="py-3 text-text-muted line-through">{r.apple}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-[12px] text-text-faint mt-3">Prices as of June 2026. Screen prices vary by panel condition and model. Logic board priced after component-level diagnosis.</p>
-        </section>
+      features={{
+        heading: "MacBook Air repairs we do most",
+        subheading: "Each of these is a same-week job on every Air generation, Intel through M5.",
+        features: [
+          { icon: Monitor, name: "Screen replacement", description: "Cracked, flickering or dead Liquid Retina panels. We replace the LCD alone where possible, which keeps your original camera, hinges and antenna." },
+          { icon: BatteryCharging, name: "Battery replacement", description: "Swelling, rapid drain, or a machine that dies away from the charger. Cells matched to the original Wh rating, with a battery health check afterwards." },
+          { icon: Keyboard, name: "Keyboard and top case", description: "Butterfly keyboards on Intel Airs and scissor keyboards on M-series. Single keys where the mechanism allows, full assembly where it does not." },
+          { icon: Droplets, name: "Water and liquid damage", description: "Ultrasonic clean and board rework. Bring it in powered off — rice does nothing and time on the board is what costs you the machine." },
+          { icon: Cpu, name: "Logic board repair", description: "Power rail faults, no video, no power. Component-level rework rather than a board swap, which is what makes an out-of-warranty Air worth fixing." },
+          { icon: Thermometer, name: "Overheating and throttling", description: "Fanless design means heat is expected, shutdowns are not. We check thermal interface, battery health and board temperatures together." },
+        ],
+      }}
 
-        {/* ── VS APPLE STORE ── */}
-        <VsAppleStore tone="dark" />
+      comparison={{
+        eyebrow: "Independent vs Apple Store",
+        headline: "How an independent workshop differs from the Apple Store",
+        description:
+          "We are an independent Apple repair specialist — not an Apple Authorised Service Provider. That has real trade-offs in both directions, so here they are.",
+        leftLabel: "MacBook Repair Dubai",
+        rightLabel: "Apple Store / AASP",
+        rows: [
+          { feature: "Diagnosis", left: "Free, no appointment needed", right: "Genius Bar appointment required" },
+          { feature: "Turnaround on screens and batteries", left: "Usually same day", right: "Typically several days, often sent away" },
+          { feature: "Board-level repair", left: "Component-level rework on the board", right: "Whole-board replacement" },
+          { feature: "Out-of-warranty older models", left: "Repaired while parts exist", right: "Refused once classed as vintage" },
+          { feature: "Collection", left: "Free pickup and delivery in mainland Dubai", right: "You travel to the store" },
+          { feature: "If it cannot be fixed", left: "No charge at all", right: "Diagnostic fee may still apply" },
+          { feature: "Apple warranty on the device", left: "Use Apple first if still covered — we will say so", right: "Correct choice while in warranty or AppleCare+" },
+        ],
+      }}
 
-        {/* ── PROCESS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">How it works</p>
-          <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air repair process</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {PROCESS_STEPS.map((step, i) => (
-              <div key={step.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-5">
-                <div className="w-8 h-8 rounded-full bg-accent/10 text-accent font-bold flex items-center justify-center text-[14px] mb-3">{i + 1}</div>
-                <h3 className="text-[15px] font-semibold text-text mb-1">{step.title}</h3>
-                <p className="text-[13px] text-text-muted leading-relaxed">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+      methodology={{
+        heading: "How a MacBook Air repair runs",
+        intro: "Four steps, and you approve the cost before anything is opened.",
+        steps: [
+          { title: "Free diagnosis", body: "Drop in or request a pickup. A technician finds the actual fault at no cost and explains it before any work is discussed." },
+          { title: "Written quote", body: "You get the parts, the labour and the turnaround in writing. Nothing is opened until you approve it, and there is no charge to walk away." },
+          { title: "Repair", body: "Most screen and battery work is 45–90 minutes. Board-level jobs are 24–48 hours. We tell you if the timeline changes rather than letting it slip." },
+          { title: "Bench test and handover", body: "Display calibration, battery cycle count, keyboard scan and trackpad response are all checked before the machine goes back to you." },
+        ],
+      }}
 
-        {/* ── FAQ ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Common questions</p>
-          <h2 className="text-[26px] md:text-[30px] font-bold tracking-tight text-text mb-6">MacBook Air repair Dubai: FAQ</h2>
-          <FAQAccordion items={FAQS} injectSchema tone="dark" />
-        </section>
+      partsAndTooling={{
+        headline: "Parts and tooling we use on MacBook Air",
+        intro: "What the bench actually runs on. We are independent, so we are explicit about part grades rather than implying everything is Apple original.",
+        items: [
+          { name: "Genuine and OEM-grade display panels", note: "Genuine Apple panels where supply allows, OEM-grade otherwise. True Tone is preserved on genuine panels. We tell you which you are getting before fitting." },
+          { name: "Capacity-matched battery cells", note: "Matched to the original Wh rating, with the battery management system re-paired so macOS reports cycle count and health correctly." },
+          { name: "Hot-air rework and micro-soldering", note: "Board-level component replacement — power rails, charging ICs, backlight circuits — instead of replacing a whole logic board." },
+          { name: "Ultrasonic cleaning bath", note: "For liquid damage. Removes corrosion and residue from under chips, which a manual clean cannot reach." },
+          { name: "Thermal camera and bench PSU", note: "Finds shorted rails by where the board gets hot, so a dead machine can be traced without guesswork." },
+          { name: "Calibrated display test rig", note: "Dead-pixel, backlight-uniformity and colour checks on every panel before the lid is closed and the machine handed back." },
+        ],
+      }}
 
-        {/* ── LOCATION ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-6">Find us</p>
-          <LocationBlock tone="dark" compact />
-        </section>
+      showLocation
+      showTeam
+      showStats
 
-        {/* ── RELATED SERVICES ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">Related services</p>
-          <div className="flex flex-wrap justify-center gap-sm text-[15px]">
-            {[
-              { label: "MacBook Repair Dubai", href: "/macbook-repair-dubai" },
-              { label: "MacBook Pro Repair Dubai", href: "/macbook-pro-repair-dubai" },
-              { label: "MacBook Screen Repair Dubai", href: "/macbook-screen-repair-dubai" },
-              { label: "MacBook Battery Replacement Dubai", href: "/macbook-battery-replacement-dubai" },
-              { label: "MacBook Water Damage Repair Dubai", href: "/macbook-water-damage-repair-dubai" },
-              { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
-            ].map((l) => (
-              <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>
-            ))}
-          </div>
-        </section>
+      relatedServices={{
+        heading: "MacBook Air services and related repairs",
+        links: AIR_SERVICES,
+      }}
 
-        {/* ── BLOG LINKS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">From our blog</p>
-          <h2 className="text-[22px] md:text-[26px] font-bold tracking-tight text-text mb-5">MacBook Air guides &amp; repair advice</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {([
-              ["MacBook Air battery draining fast? Causes & fixes", "/blog/macbook-air-battery-drain-dubai"],
-              ["MacBook Air not charging fix Dubai: USB-C & MagSafe 2", "/blog/macbook-air-not-charging-dubai"],
-              ["MacBook Air overheating fix Dubai: M1 to M5", "/blog/macbook-air-overheating-dubai"],
-              ["MacBook Air screen repair cost Dubai: all models", "/blog/macbook-air-screen-repair-cost-dubai"],
-              ["MacBook Air keyboard not working Dubai", "/blog/macbook-air-keyboard-not-working-dubai"],
-              ["MacBook Air WiFi & Bluetooth fix Dubai", "/blog/macbook-air-wifi-bluetooth-fix-dubai"],
-              ["MacBook Air won't turn on fix Dubai", "/blog/macbook-air-wont-turn-on-fix-dubai"],
-              ["MacBook Air running slow fix Dubai", "/blog/macbook-air-running-slow-fix-dubai"],
-            ] as [string, string][]).map(([label, href]) => (
-              <Link
-                key={href}
-                to={href}
-                className="flex items-start rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors group"
-              >
-                <span className="text-[14px] font-medium text-text leading-snug group-hover:text-accent">{label}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
+      relatedPosts
+      relatedPostsFamily="macbook-air"
 
-        {/* ── CTA ── */}
-        <section className="mt-[80px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6 py-[48px] flex flex-col sm:flex-row items-center justify-between gap-md">
-            <div>
-              <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your MacBook Air?</p>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
-              </h2>
-            </div>
-            <div className="flex flex-wrap gap-sm shrink-0">
-              <CallButtons dark />
-            </div>
-          </div>
-        </section>
+      faqs={{
+        heading: "MacBook Air repair Dubai: common questions",
+        intro: "The questions we are actually asked at the counter, answered straight.",
+        items: FAQS,
+      }}
 
-      </div>
-      <RelatedArticles path="/macbook-air-repair-dubai" />
-    </PageShell>
+      sources={{
+        heading: "Apple's own documentation",
+        links: [
+          { label: "Apple — MacBook Air service and repair", href: "https://support.apple.com/mac/repair", note: "Apple's official repair options and warranty status check." },
+          { label: "Apple — check your coverage", href: "https://checkcoverage.apple.com/", note: "Confirm whether your Air is still inside warranty or AppleCare+ before paying anyone." },
+          { label: "Apple — about battery service", href: "https://support.apple.com/mac-notebooks/repair/battery-replacement", note: "Apple's guidance on battery health, cycle counts and when a battery needs replacing." },
+          { label: "Apple — vintage and obsolete products", href: "https://support.apple.com/en-us/102772", note: "Which models Apple has stopped servicing — the point where an independent workshop becomes the only option." },
+        ],
+      }}
+
+      relatedHubs={{ heading: "Other Apple repair hubs", links: RELATED_HUBS }}
+
+      hubLinks={{
+        eyebrow: "Every model covered",
+        heading: "MacBook Air models we repair",
+        links: MODEL_LINKS,
+      }}
+
+      reviews={airReviews}
+      reviewsHeading={`MacBook Air customers · ${REVIEW_AVERAGE}.0 from ${REVIEW_COUNT}+ Google reviews`}
+
+      finalCta={{
+        eyebrow: "Ready when you are",
+        headline: "Free diagnosis, no charge if we cannot fix it",
+        description:
+          "Send us the model and what it is doing, and we will tell you what is involved before you commit to anything.",
+        primary: { label: "Message us on WhatsApp", href: "https://wa.me/971557413706" },
+        secondary: { label: "Call 055 741 3706", href: "tel:+971557413706" },
+      }}
+    />
   );
 }

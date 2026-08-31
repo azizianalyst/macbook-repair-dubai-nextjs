@@ -7,8 +7,8 @@ export default function MacBookAirM4ScreenRepair() {
       path="/macbook-air-m4-screen-repair-dubai"
       chip="M4"
       years="2025"
-      seoTitle="MacBook Air M4 Screen Repair Dubai — From AED 720"
-      seoDescription="MacBook Air M4 screen repair Dubai from AED 720. Liquid Retina 13-inch and 15-inch, True Tone, P3. New 2025 redesign. Free diagnosis. 1–2 day turnaround. Call 055 741 3706."
+      seoTitle="MacBook Air M4 Screen Repair Dubai"
+      seoDescription="MacBook Air M4 screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. New 2025 redesign. Free diagnosis. 1–2 day turnaround. Call 055 741 3706."
       h1="MacBook Air M4 Screen Repair Dubai"
       eyebrow="M4 Air screen specialist · Dubai Media City · Genuine parts"
       displayType="Liquid Retina"
@@ -16,7 +16,7 @@ export default function MacBookAirM4ScreenRepair() {
       trueTone={true}
       p3={true}
       brightness="500 nits"
-      heroAnswer="MacBook Air M4 screen repair costs AED 720 for the 13-inch and AED 780 for the 15-inch at MacBook Repair Dubai. The M4 Air (2025) uses a Liquid Retina display with True Tone and P3, housed in a redesigned chassis with new colour options. Parts are newer stock, which currently means a 1–2 day turnaround while M4 panel supply normalises. Free diagnosis confirms whether the fault is hardware before any parts are ordered."
+      heroAnswer="MacBook Air M4 screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 Air (2025) uses a Liquid Retina display with True Tone and P3, housed in a redesigned chassis with new colour options. Parts are newer stock, which currently means a 1–2 day turnaround while M4 panel supply normalises. Free diagnosis confirms whether the fault is hardware before any parts are ordered."
       chipUniquePoints={[
         "The MacBook Air M4 (2025) features a redesigned chassis — slimmer and lighter than the M3 — with new colour options including Sky Blue, Rose Gold, Starlight, and Midnight. The Liquid Retina display specification is the same as M2 and M3 (2560x1664 at 13-inch, 2880x1864 at 15-inch, 500 nits, True Tone, P3) but the screen assembly is a new part number unique to M4.",
         "The M4 chip includes a 10-core GPU with improved display controller that handles the Liquid Retina panel more efficiently than M3. This does not change the display spec but improves power draw from the screen — M4 Air battery life is partly attributed to this display efficiency gain.",
@@ -43,7 +43,7 @@ export default function MacBookAirM4ScreenRepair() {
       faults={[
         {
           title: "Cracked screen from a drop — new thin design",
-          body: "The M4 Air's redesigned chassis is thinner than M3, which reduces corner protection. Screen cracks from drops or bag compression are the most common M4 Air repair we see. Full Liquid Retina replacement at AED 720 (13-inch) or AED 780 (15-inch). 1–2 day turnaround from our official parts channel.",
+          body: "The M4 Air's redesigned chassis is thinner than M3, which reduces corner protection. Screen cracks from drops or bag compression are the most common M4 Air repair we see. Full Liquid Retina replacement, quoted per size. 1–2 day turnaround from our official parts channel.",
         },
         {
           title: "True Tone flickering or rapid brightness changes",
@@ -51,7 +51,7 @@ export default function MacBookAirM4ScreenRepair() {
         },
         {
           title: "Display cable fault at the redesigned hinge",
-          body: "The M4 Air's thinner chassis has a tighter hinge cable routing than M3. Cable stress at the hinge manifests as flickering or lines at specific lid angles. The cable is integrated into the screen assembly — full Liquid Retina replacement at AED 720 or AED 780.",
+          body: "The M4 Air's thinner chassis has a tighter hinge cable routing than M3. Cable stress at the hinge manifests as flickering or lines at specific lid angles. The cable is integrated into the screen assembly — full Liquid Retina replacement, quoted per size.",
         },
         {
           title: "Screen cracked under bag pressure",
@@ -69,11 +69,11 @@ export default function MacBookAirM4ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M4 screen repair cost in Dubai?",
-          a: "MacBook Air M4 13-inch screen repair is AED 720 at MacBook Repair Dubai. The M4 15-inch is AED 780. Apple Store Dubai charges AED 1,549–1,699. Parts are from the local Apple-authorised distributor. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
+          a: "MacBook Air M4 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 15-inch is quoted separately. Apple Store Dubai charges AED 1,549–1,699. Parts are from the local Apple-authorised distributor. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
         },
         {
           q: "Why is MacBook Air M4 screen repair more than M3?",
-          a: "M4 Air panels are a newer part number (different from M3) and are priced slightly higher at the distributor level because they are recent stock. The AED 20–30 difference narrows over 12–18 months as supply expands. The repair process is identical.",
+          a: "M4 Air panels are a newer part number (different from M3) and are priced slightly higher at the distributor level because they are recent stock. That small difference narrows over 12–18 months as supply expands. The repair process is identical.",
         },
         {
           q: "How long does MacBook Air M4 screen repair take in Dubai?",
@@ -89,7 +89,7 @@ export default function MacBookAirM4ScreenRepair() {
         },
         {
           q: "Should I repair my MacBook Air M4 screen or claim on insurance?",
-          a: "If you have device insurance that covers accidental damage, a claim may be worth exploring. Typical excess on UAE device insurance is AED 300–400, so the net cost after excess is AED 300–400 vs AED 720–780 at MacBook Repair Dubai. Check whether your insurer requires an Authorised Service Provider — MacBook Repair Dubai is independent. Either way, bring it in for a free diagnosis first.",
+          a: "If you have device insurance that covers accidental damage, a claim may be worth exploring. UAE device insurance usually carries an excess, so the net cost after a claim is often close to what we would quote directly. Check whether your insurer requires an Authorised Service Provider — MacBook Repair Dubai is independent. Either way, bring it in for a free diagnosis first.",
         },
       ]}
       blogHref="/blog/macbook-air-screen-repair-cost-dubai"

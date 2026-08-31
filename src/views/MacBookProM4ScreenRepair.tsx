@@ -7,15 +7,15 @@ export default function MacBookProM4ScreenRepair() {
       path="/macbook-pro-m4-screen-repair-dubai"
       chip="M4"
       years="2024"
-      seoTitle="MacBook Pro M4 Screen Repair Dubai — From AED 1,100"
-      seoDescription="MacBook Pro M4 Pro/Max screen repair Dubai from AED 1,100. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion, Thunderbolt 5. 1-2 day turnaround. Call 055 741 3706."
+      seoTitle="MacBook Pro M4 Screen Repair Dubai"
+      seoDescription="MacBook Pro M4 Pro/Max screen repair Dubai. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion, Thunderbolt 5. 1-2 day turnaround. Call 055 741 3706."
       h1="MacBook Pro M4 Screen Repair Dubai"
       eyebrow="M4 Pro/Max display specialist · Dubai Media City · Free diagnosis"
       displayType="Liquid Retina XDR (mini-LED)"
       resolution="3024x1964 (14-inch) / 3456x2234 (16-inch)"
       brightness="1,000 nits sustained / 1,600 nits peak"
       promotionHz="120Hz ProMotion (adaptive 24-120Hz)"
-      heroAnswer="MacBook Pro M4 screen repair in Dubai costs from AED 1,100 for the 14-inch and AED 1,300 for the 16-inch at MacBook Repair Dubai. The M4 Pro and M4 Max (2024) introduce Thunderbolt 5 as a major connectivity upgrade and come in Silver, Space Black, and the new Desert Titanium finish. Screen replacement uses M4-specific assemblies. As a 2024 model, parts supply is building and turnaround is 1-2 days. Free diagnosis before any repair is quoted."
+      heroAnswer="MacBook Pro M4 screen repair in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different panels. The M4 Pro and M4 Max (2024) introduce Thunderbolt 5 as a major connectivity upgrade and come in Silver, Space Black, and the new Desert Titanium finish. Screen replacement uses M4-specific assemblies. As a 2024 model, parts supply is building and turnaround is 1-2 days. Free diagnosis before any repair is quoted."
       chipUniquePoints={[
         "The M4 MacBook Pro is the first MacBook Pro with Thunderbolt 5, delivering up to 120Gbps bandwidth and support for up to 8K external displays. This connectivity upgrade makes the M4 Pro a significant step forward for video production and data transfer workflows common in Dubai's media sector. A screen repair at AED 1,100-1,300 preserves a machine built around this connectivity architecture.",
         "The M4 Pro has a 12-core CPU, double the core count of the M3 Pro's 6 performance cores. Combined with up to 64GB unified memory, the M4 Pro handles tasks that would have required a Max chip in the previous generation. The display is the same Liquid Retina XDR panel technology, but the machine itself is a substantial performance upgrade.",
@@ -30,27 +30,27 @@ export default function MacBookProM4ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight flickering on M4 Pro",
-          body: "Mini-LED local dimming zone failure causes visible pulsing or uneven brightness across the screen. Panel assembly replacement is required. Free diagnosis confirms the fault before any work is started. Cost: AED 1,100-1,300.",
+          body: "Mini-LED local dimming zone failure causes visible pulsing or uneven brightness across the screen. Panel assembly replacement is required. Free diagnosis confirms the fault before any work is started..",
         },
         {
           title: "Screen lines on M4 Pro display",
-          body: "Persistent horizontal or vertical lines on the M4 Pro screen indicate panel or display cable failure. We diagnose the specific fault before quoting. Cost: from AED 1,100.",
+          body: "Persistent horizontal or vertical lines on the M4 Pro screen indicate panel or display cable failure. We diagnose the specific fault before quoting..",
         },
         {
           title: "No backlight on M4 MacBook Pro",
-          body: "Black screen with a faint image visible under torch light indicates a backlight circuit or cable issue. The M4 logic board is typically undamaged. Cost: AED 700-1,100.",
+          body: "Black screen with a faint image visible under torch light indicates a backlight circuit or cable issue. The M4 logic board is typically undamaged..",
         },
         {
           title: "Cracked screen 14-inch M4 Pro",
-          body: "Physical impact or pressure damage to the 14-inch Liquid Retina XDR panel. Full assembly replacement required. Cost: AED 1,100.",
+          body: "Physical impact or pressure damage to the 14-inch Liquid Retina XDR panel. Full assembly replacement required..",
         },
         {
           title: "Cracked screen 16-inch M4 Max",
-          body: "Impact damage to the 16-inch panel. The larger assembly is stocked separately. Parts availability is confirmed during diagnosis. Cost: AED 1,300.",
+          body: "Impact damage to the 16-inch panel. The larger assembly is stocked separately. Parts availability is confirmed during diagnosis..",
         },
         {
           title: "Display colour issues on M4 Pro",
-          body: "Colour tint, banding, or loss of colour accuracy on the M4 Pro display indicates panel failure. Free diagnosis distinguishes hardware from macOS profile issues. Cost: AED 1,100-1,300.",
+          body: "Colour tint, banding, or loss of colour accuracy on the M4 Pro display indicates panel failure. Free diagnosis distinguishes hardware from macOS profile issues..",
         },
       ]}
       faqs={[

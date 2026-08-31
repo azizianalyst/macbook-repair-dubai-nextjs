@@ -7,14 +7,14 @@ export default function MacBookAirM3KeyboardRepair() {
       path="/macbook-air-m3-keyboard-repair-dubai"
       chip="M3"
       years="2024"
-      seoTitle="MacBook Air M3 Keyboard Repair Dubai — From AED 300"
-      seoDescription="MacBook Air M3 keyboard repair Dubai from AED 300. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Same-day service. Call 055 741 3706."
+      seoTitle="MacBook Air M3 Keyboard Repair Dubai — Same-Day Key Caps"
+      seoDescription="MacBook Air M3 keyboard repair Dubai. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Same-day service. Call 055 741 3706."
       h1="MacBook Air M3 Keyboard Repair Dubai"
       eyebrow="M3 Air Magic Keyboard specialist · Dubai Media City · Same-day"
       keyboardType="Magic Keyboard (scissor switch)"
       switchMechanism="Scissor mechanism — 1 mm travel"
       touchId={true}
-      heroAnswer="MacBook Air M3 keyboard repair costs from AED 300 at MacBook Repair Dubai. The M3 Air (2024) uses the same chassis and Magic Keyboard as the M2 Air, with the same scissor-switch mechanism. At 1–2 years old, most M3 Air keyboards are in good condition — but key caps break, liquid spills happen, and scissor clips wear. Individual key replacement in 30–60 minutes, same-day."
+      heroAnswer="MacBook Air M3 keyboard repair is quoted after a free diagnosis at MacBook Repair Dubai. The M3 Air (2024) uses the same chassis and Magic Keyboard as the M2 Air, with the same scissor-switch mechanism. At 1–2 years old, most M3 Air keyboards are in good condition — but key caps break, liquid spills happen, and scissor clips wear. Individual key replacement in 30–60 minutes, same-day."
       chipUniquePoints={[
         "The MacBook Air M3 (2024) shares the same chassis as the M2 Air, which means the keyboard layout, top-case assembly dimensions, and key cap sizes are virtually identical. The key difference is the M3 chip's Secure Enclave configuration, which means M3 Air top-case assemblies should use M3-specific Touch ID buttons. We source genuine M3 Air parts and do not cross-fit M2 components.",
         "At 1–2 years old in Dubai, M3 Air keyboards are typically in excellent condition. Keyboard repair on M3 Airs is usually isolated to: a single key cap broken by impact, a spill that dried under specific keys, or Touch ID button damage after a drop. Full keyboard failure is rare at this age.",
@@ -55,11 +55,11 @@ export default function MacBookAirM3KeyboardRepair() {
       faults={[
         {
           title: "Key cap broken or popped off on M3 Air",
-          body: "Most common keyboard fault on newer M3 Airs — a key cap snapped by an object dropped on the keyboard or forced off at an angle. If the scissor clip is intact, cap re-seat costs AED 300. If both cap and clip are broken, replacement of both parts at the same price.",
+          body: "Most common keyboard fault on newer M3 Airs — a key cap snapped by an object dropped on the keyboard or forced off at an angle. If the scissor clip is intact, the cap is simply re-seated. If both cap and clip are broken, replacement of both parts at the same price.",
         },
         {
           title: "Liquid spill on M3 Air keyboard",
-          body: "Bring the machine in immediately — the sooner we clean the scissor mechanisms after a spill, the lower the repair cost. Dried residue bonds the mechanism. Individual key cleaning and clip replacement from AED 300. If liquid reached the flex cable, free diagnosis determines scope.",
+          body: "Bring the machine in immediately — the sooner we clean the scissor mechanisms after a spill, the lower the repair cost. Dried residue bonds the mechanism. Individual key cleaning and clip replacement. If liquid reached the flex cable, free diagnosis determines scope.",
         },
         {
           title: "Touch ID not recognising fingerprints on M3 Air",
@@ -67,11 +67,11 @@ export default function MacBookAirM3KeyboardRepair() {
         },
         {
           title: "Space bar sticking on M3 Air",
-          body: "The space bar uses a larger scissor mechanism with two separate clip points. If one clip wears or breaks, the bar tilts and sticks on one side. We replace the space bar scissor mechanism from AED 300 — no full top-case needed.",
+          body: "The space bar uses a larger scissor mechanism with two separate clip points. If one clip wears or breaks, the bar tilts and sticks on one side. We replace the space bar scissor mechanism on its own — no full top-case needed.",
         },
         {
           title: "Function keys (F1–F12) dim or unresponsive",
-          body: "Function keys on M3 Air use the same scissor mechanism as letter keys. If a function key fails, it is usually the same clip or cap issue. From AED 300. If multiple function keys fail at once, the flex cable behind the top row should be inspected.",
+          body: "Function keys on M3 Air use the same scissor mechanism as letter keys. If a function key fails, it is usually the same clip or cap issue. If multiple function keys fail at once, the flex cable behind the top row should be inspected.",
         },
         {
           title: "Backlight patchy — M3 Air 13-inch",
@@ -81,7 +81,7 @@ export default function MacBookAirM3KeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M3 keyboard repair cost in Dubai?",
-          a: "MacBook Air M3 13-inch keyboard repair starts from AED 300 (individual key), AED 490 (full top-case). 15-inch starts from AED 320 (individual key), AED 530 (full top-case). Apple charges AED 549–599 for keyboard repair. Same-day service at MacBook Repair Dubai.",
+          a: "An individual key is the cheapest fix and a full top-case the most involved, with the 15-inch costing a little more than the 13-inch. Diagnosis is free and your model is quoted before work starts. Apple charges AED 549–599 for keyboard repair. Same-day service at MacBook Repair Dubai.",
         },
         {
           q: "My M3 Air is 1 year old — should I use Apple warranty for keyboard issues?",
@@ -93,7 +93,7 @@ export default function MacBookAirM3KeyboardRepair() {
         },
         {
           q: "Can the MacBook Air M3 keyboard be repaired for individual keys?",
-          a: "Yes. Same as M1 and M2, the M3 Air uses Magic Keyboard scissor switches. Individual key caps and scissor clips are replaceable without full top-case replacement. Most single-key issues are fixed for AED 300 same-day.",
+          a: "Yes. Same as M1 and M2, the M3 Air uses Magic Keyboard scissor switches. Individual key caps and scissor clips are replaceable without full top-case replacement. Most single-key issues are fixed same-day.",
         },
         {
           q: "How long does M3 Air keyboard repair take?",

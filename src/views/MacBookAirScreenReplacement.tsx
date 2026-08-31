@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -61,13 +62,13 @@ const MODELS_BY_YEAR = [
 ];
 
 const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
-  { Icon: Monitor,         label: "Cracked screen",         body: "Glass shattered after a drop — M1 and later are bonded assemblies needing a full panel swap from AED 500." },
+  { Icon: Monitor,         label: "Cracked screen",         body: "Glass shattered after a drop — M1 and later are bonded assemblies needing a full panel swap." },
   { Icon: Gauge,           label: "Flickering display",     body: "Screen pulses or strobes — usually the display flex cable on M1/M2 or a failing backlight circuit on Intel." },
   { Icon: AlertTriangle,   label: "Lines on screen",        body: "Horizontal or vertical lines — cable-related if they shift with lid angle, panel damage if fixed in position." },
   { Icon: Droplets,        label: "Tint or discolouration", body: "Pink, green or purple tint across the display — typically a loose eDP connector after a knock." },
   { Icon: BatteryCharging, label: "Dark screen",            body: "Laptop on, keyboard lights up, but screen stays black — backlight IC fault on Intel or panel failure on Apple Silicon." },
   { Icon: ShieldCheck,     label: "True Tone lost",         body: "Only relevant on M2/M3/M4 — True Tone gone after a third-party repair means an aftermarket panel without the calibration chip." },
-  { Icon: AlertTriangle,   label: "Dead pixels",            body: "Pixel cluster after a drop points to impact damage inside the bonded panel — replacement from AED 450." },
+  { Icon: AlertTriangle,   label: "Dead pixels",            body: "Pixel cluster after a drop points to impact damage inside the bonded panel, so it is replaced as a unit." },
   { Icon: Droplets,        label: "Liquid near the hinge",  body: "Corrosion reaches the display connector within 24 hours of a spill near the USB-C ports or hinge." },
 ];
 
@@ -90,28 +91,27 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: Wrench,      title: "Every display fault covered", body: "Screen, cable, backlight, hinge — all handled in one place. No need to go elsewhere if a cable rather than the panel turns out to be the fault." },
   { Icon: Cpu,         title: "Genuine Apple panels",        body: "Genuine Apple Liquid Retina panels stocked for M3 and M4. A-grade Samsung/LG for M1 and M2. Intel gets A-grade IPS. Every grade is stated upfront." },
   { Icon: HardDrive,   title: "Data stays private",          body: "Screen replacement never requires accessing your files. We follow strict confidentiality procedures — your data stays your business." },
-  { Icon: Truck,       title: "Free pickup Dubai-wide",      body: "Free collection and return across all Dubai mainland areas. Sharjah and Abu Dhabi pickup available at AED 100 each way." },
+  { Icon: Truck,       title: "Free pickup Dubai-wide",      body: "Free collection and return across all Dubai mainland areas. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
 
 const FAQ_ITEMS = [
-  { q: "How much does MacBook Air screen replacement cost in Dubai?", a: "MacBook Air screen replacement in Dubai starts at AED 450 for the Intel 11\", AED 500 for the Intel 13\" and M1 13\", AED 600 for the M2 13\", AED 700 for the M3 13\", and AED 720–780 for the M4 13\"/15\". All prices include the panel, labour, and warranty — no diagnostic fee. WhatsApp the model for an exact quote." },
+  { q: "How much does MacBook Air screen replacement cost in Dubai?", a: "It depends on the model — the Intel 11-inch and 13-inch, the M1, and the M2 through M4 Liquid Retina panels are all different parts, and 15-inch panels cost more than 13-inch. Diagnosis is free and your exact model is quoted before any work starts." },
   { q: "How long does MacBook Air screen replacement take?", a: "Intel, M1 and M2 13\" models are same-day when the panel is in stock — around 3 to 4 hours including adhesive cure. Book a 30-minute appointment slot and we stage the panel before you arrive. M3 and M4 models take 1 to 2 days. WhatsApp the serial number to confirm availability before you travel." },
   { q: "Do you use original Apple screens for MacBook Air replacement?", a: "Genuine Apple Liquid Retina panels are stocked for the M3 and M4 Air — the only grade that keeps True Tone active. M1 and M2 models get A-grade panels from Samsung or LG (the same factories that supply Apple), which are full-resolution and full-brightness but disable True Tone on M2. Intel models get A-grade IPS. Every grade is listed on the WhatsApp quote." },
   { q: "Will True Tone still work after the screen is replaced?", a: "True Tone only exists on M2, M3 and M4 MacBook Air. With a genuine Apple panel it is calibrated to the board serial and works normally. With an A-grade aftermarket panel, macOS disables True Tone — everything else (brightness, P3 colour, resolution) runs at full spec. True Tone status is stated on every quote." },
   { q: "Can you replace just the glass on a MacBook Air?", a: "Only on Intel 11\" and certain Intel 13\" pre-2016 models where the glass is a separate piece. From the M1 Air onward — and on most Intel 13\" from 2018 — the glass is bonded to the panel as one assembly. There is no reliable glass-only option on bonded models: we replace the full panel assembly." },
-  { q: "Do you offer pickup for MacBook Air screen replacement in Dubai?", a: "Yes — free pickup and delivery across all Dubai mainland areas: Marina, Downtown, JBR, JLT, Palm Jumeirah, Business Bay, Al Barsha, DIFC, Deira and more. Same-hour pickup is available from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup is available at AED 100 each way." },
-  { q: "My MacBook Air has lines on the screen — is it the panel or cable?", a: "Lines that shift or disappear when you open and close the lid at different angles point to the display flex cable — cable replacement costs AED 300 to AED 400, much less than a panel. Fixed lines that stay in the same position regardless of lid angle point to the panel — replacement from AED 500. Free 15-minute bench diagnosis confirms the fault before any repair is authorised." },
-  { q: "How much cheaper is MacBook Air screen replacement than Apple?", a: "Apple charges AED 900–1,200 for M1/M2 Air screen replacement out of warranty, and AED 1,100–1,900 for M3/M4, with a 5–14 business-day wait. We charge AED 500–780 for the same models, same-day to 2 days, with free pickup across Dubai. Apple does not service Intel models declared vintage — we replace them from AED 450." },
+  { q: "Do you offer pickup for MacBook Air screen replacement in Dubai?", a: "Yes — free pickup and delivery across all Dubai mainland areas: Marina, Downtown, JBR, JLT, Palm Jumeirah, Business Bay, Al Barsha, DIFC, Deira and more. Same-hour pickup is available from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { q: "My MacBook Air has lines on the screen — is it the panel or cable?", a: "Lines that shift or disappear when you open and close the lid at different angles point to the display flex cable — cable replacement costs much less than a panel. Fixed lines that stay in the same position regardless of lid angle point to the panel, which is replaced as a unit. Free 15-minute bench diagnosis confirms the fault before any repair is authorised." },
+  { q: "How much cheaper is MacBook Air screen replacement than Apple?", a: "Apple charges AED 900–1,200 for M1/M2 Air screen replacement out of warranty, and AED 1,100–1,900 for M3/M4, with a 5–14 business-day wait. We quote after a free diagnosis, same-day to 2 days, with free pickup across Dubai. Apple does not service Intel models declared vintage — we replace them from AED 450." },
 ];
 
 const RELATED = [
-  { label: "MacBook Air Screen Repair Dubai",        href: "/macbook-air-screen-repair-dubai",          description: "Our full Air screen service hub — all models from AED 450." },
-  { label: "MacBook Screen Repair Dubai",            href: "/macbook-screen-repair-dubai",              description: "All MacBook screen repairs — Air, Pro, Intel, from AED 450." },
+  { label: "MacBook Air Screen Repair Dubai",        href: "/macbook-air-screen-repair-dubai",          description: "Our full Air screen service hub — all models." },
+  { label: "MacBook Screen Repair Dubai",            href: "/macbook-screen-repair-dubai",              description: "All MacBook screen repairs — Air, Pro, Intel." },
   { label: "MacBook Air Repair Dubai",               href: "/macbook-air-repair-dubai",                 description: "All MacBook Air repairs: battery, keyboard, charging port, logic board." },
   { label: "MacBook Air Battery Replacement Dubai",  href: "/macbook-air-battery-replacement-dubai",    description: "Air battery service — M1 through M4, swelling, cycle count check." },
 ];
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 /* ── Sub-components ─────────────────────────────────────────────── */
 
@@ -150,9 +150,9 @@ export default function MacBookAirScreenReplacement() {
   const reviews = pickReviews(["Mehdi Karimi", "Sophie Bennett", "Carlos Rodriguez"]);
 
   useSeo({
-    title: "MacBook Air Screen Replacement Dubai — From AED 450",
+    title: "MacBook Air Screen Replacement Dubai — Same Day",
     description:
-      "MacBook Air screen replacement Dubai from AED 450. M1–M4 Liquid Retina, Intel IPS, True Tone preserved. Same-day on most models, free pickup Dubai-wide. Call 055 741 3706.",
+      "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone preserved. Same-day on most models, free pickup Dubai-wide. Call 055 741 3706.",
     path: "/macbook-air-screen-replacement-dubai",
     preloadImage: preloadFromHero(IMG.hero.src),
   });
@@ -188,7 +188,7 @@ export default function MacBookAirScreenReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air screens from AED 450 at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, free citywide pickup, genuine Apple panels for M3 and M4, written warranty up to 3 months.
+                MacBook Repair Dubai replaces MacBook Air screens at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, free citywide pickup, genuine Apple panels for M3 and M4, written warranty up to 3 months.
               </p>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function MacBookAirScreenReplacement() {
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
                 { stat: "2,800+", label: "Air screens replaced" },
-                { stat: "AED 450", label: "Starting price" },
+                { stat: "Free", label: "Diagnosis" },
                 { stat: "30 min", label: "Appointment replacement" },
                 { stat: "3 mo",   label: "Written warranty" },
               ].map(({ stat, label }, i) => (
@@ -246,7 +246,7 @@ export default function MacBookAirScreenReplacement() {
           <SectionHeading
             label="Every Air panel, one place"
             title="MacBook Air screen replacement cost Dubai"
-            sub="Panel + labour + warranty all-in from AED 450. No diagnostic fee, no adhesive surcharge. Prices by model below."
+            sub="Panel, labour and warranty all-in. No diagnostic fee, no adhesive surcharge. Quoted per model after a free diagnosis."
           />
           <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
@@ -262,7 +262,9 @@ export default function MacBookAirScreenReplacement() {
                 {PRICING.map((r) => (
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{aed(r.price)}</td>
+                    <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
+                      <PriceCTA compact message={`Hi, MacBook Air screen replacement price for ${r.model}?`} />
+                    </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
                       {r.l6href && (
@@ -433,7 +435,7 @@ export default function MacBookAirScreenReplacement() {
             <div className="text-center mb-[56px]">
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">216+ verified Google reviews. Here are three.</p>
+              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
             </div>
             <div className="grid gap-lg md:grid-cols-3">
               {(reviews.length ? reviews.map(r => ({ name: r.name, body: r.text })) : [

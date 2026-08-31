@@ -40,41 +40,41 @@ const CAUSES = [
   {
     icon: <HardDrive size={22} className="text-accent" aria-hidden />,
     title: "Failing SSD",
-    price: "AED 300-800",
-    body: "A drive with bad sectors can trigger a kernel panic when macOS tries to read from a failing block. Diagnosis is free. If the SSD is failing we recover your data first, then replace the drive. Data recovery plus SSD replacement from AED 300.",
+    price: "Quoted after free diagnosis",
+    body: "A drive with bad sectors can trigger a kernel panic when macOS tries to read from a failing block. Diagnosis is free. If the SSD is failing we recover your data first, then replace the drive. Data recovery first, then SSD replacement.",
   },
   {
     icon: <Database size={22} className="text-accent" aria-hidden />,
     title: "Incompatible RAM (Intel Mac)",
-    price: "AED 0-200+",
-    body: "Intel MacBooks with aftermarket RAM upgrades occasionally panic when a module is incompatible or seated incorrectly. Removing the third-party RAM and reverting to original spec costs nothing. If the original RAM is faulty, replacement starts at AED 200.",
+    price: "Often free; quoted if parts are needed",
+    body: "Intel MacBooks with aftermarket RAM upgrades occasionally panic when a module is incompatible or seated incorrectly. Removing the third-party RAM and reverting to original spec costs nothing. If the original RAM is faulty, it is replaced.",
   },
   {
     icon: <Wrench size={22} className="text-accent" aria-hidden />,
     title: "Logic board solder fault under GPU or CPU",
-    price: "AED 800-2500",
+    price: "Quoted after free diagnosis",
     body: "A cold solder joint or failed capacitor near the GPU or CPU causes the chip to misbehave under load, which macOS logs as a kernel panic. Component-level board repair under the microscope. More common on Intel 2011-2013 models and the 2016 Touch Bar.",
   },
   {
     icon: <AlertTriangle size={22} className="text-accent" aria-hidden />,
     title: "Overheating causing emergency thermal shutdown",
-    price: "AED 150-300",
-    body: "When a Mac hits its thermal limit it shuts down immediately and logs the event as a kernel panic. Blocked vents, dried thermal paste, or a failing fan are the usual causes. Thermal re-paste, vent clean and fan check from AED 150.",
+    price: "Quoted after free diagnosis",
+    body: "When a Mac hits its thermal limit it shuts down immediately and logs the event as a kernel panic. Blocked vents, dried thermal paste, or a failing fan are the usual causes. Thermal re-paste, vent clean and fan check.",
   },
   {
     icon: <Search size={22} className="text-accent" aria-hidden />,
     title: "macOS corruption after a bad update",
-    price: "AED 0-200",
-    body: "A partial or interrupted macOS update can leave the system volume in a state that panics on boot. macOS reinstall over your data costs AED 0-200 depending on whether we need to image the drive first. Your files stay intact.",
+    price: "Often free; quoted if imaging is needed",
+    body: "A partial or interrupted macOS update can leave the system volume in a state that panics on boot. A macOS reinstall over your data is often free, and only costs more if we need to image the drive first. Your files stay intact.",
   },
 ];
 
 const PRICING_ROWS = [
-  { label: "Software fix (bad kernel extension, macOS reinstall)", price: "AED 0-200" },
+  { label: "Software fix (bad kernel extension, macOS reinstall)", price: "Often free" },
   { label: "SSD diagnosis", price: "Free" },
-  { label: "SSD replacement (data recovered first)", price: "AED 300-800" },
-  { label: "Logic board repair (GPU/CPU solder fault)", price: "AED 800-2500" },
-  { label: "Thermal fix (paste, vent clean, fan)", price: "AED 150-300" },
+  { label: "SSD replacement (data recovered first)", price: "Quoted after diagnosis" },
+  { label: "Logic board repair (GPU/CPU solder fault)", price: "Quoted after diagnosis" },
+  { label: "Thermal fix (paste, vent clean, fan)", price: "Quoted after diagnosis" },
 ];
 
 const FAQS = [
@@ -84,7 +84,7 @@ const FAQS = [
   },
   {
     q: "How much does MacBook kernel panic repair cost in Dubai?",
-    a: "From AED 0 for software fixes to AED 800-2500 for logic board repair. Most kernel panics are software or SSD-related and cost AED 0-400. Free diagnosis at MacBook Repair Dubai confirms the cause before any paid work.",
+    a: "It depends on the cause. Most kernel panics turn out to be software or SSD-related, which are the cheapest to fix; a logic board repair is the most expensive. Free diagnosis at MacBook Repair Dubai confirms the cause before any paid work.",
   },
   {
     q: "How do I know if my kernel panic is hardware or software?",
@@ -109,7 +109,7 @@ export default function MacBookKernelPanic() {
     {
       title: "MacBook Kernel Panic Dubai - Random Restart Fix Same Day",
       description:
-        "MacBook kernel panic in Dubai? Random restarts, grey/black screen crash, crash log showing kernel panic. Logic board, RAM, SSD or software. Free diagnosis. From AED 200. Call 055 741 3706.",
+        "MacBook kernel panic in Dubai? Random restarts, grey/black screen crash, crash log showing kernel panic. Logic board, RAM, SSD or software. Free diagnosis before any paid work. Call 055 741 3706.",
       path: "/macbook-kernel-panic-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },
@@ -123,7 +123,7 @@ export default function MacBookKernelPanic() {
         warranty: "P90D",
         url: "/macbook-kernel-panic-dubai",
         description:
-          "MacBook kernel panic diagnosis and repair in Dubai. Software conflicts, SSD failure, RAM, overheating, and logic board faults. Free diagnosis. From AED 200.",
+          "MacBook kernel panic diagnosis and repair in Dubai. Software conflicts, SSD failure, RAM, overheating, and logic board faults. Free diagnosis before any paid work.",
       }),
     ],
   );
@@ -159,7 +159,7 @@ export default function MacBookKernelPanic() {
           <div className="rounded-2xl border border-accent/30 bg-accent/[0.06] p-lg md:p-xl">
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">Quick answer</p>
             <p className="text-[16px] md:text-[17px] leading-relaxed text-text m-0">
-              MacBook kernel panics in Dubai are diagnosed free at MacBook Repair Dubai. Most kernel panics are caused by a software or driver conflict (free fix), failing SSD (AED 300-800 data recovery plus SSD), RAM fault, or logic board component failure (AED 800-2500). A single kernel panic is not a crisis -- repeated panics need diagnosis.
+              MacBook kernel panics in Dubai are diagnosed free at MacBook Repair Dubai. Most kernel panics are caused by a software or driver conflict (free fix), a failing SSD (data recovery plus a new SSD), a RAM fault, or logic board component failure. A single kernel panic is not a crisis -- repeated panics need diagnosis.
             </p>
           </div>
         </div>
@@ -324,7 +324,7 @@ export default function MacBookKernelPanic() {
             <div>
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-3">MacBook kernel panic repair · Dubai Media City</p>
               <h2 className="m-0 text-[26px] md:text-[32px] font-bold text-white leading-tight">
-                MacBook restarting with kernel panic? Free diagnosis. From AED 200.
+                MacBook restarting with kernel panic? Free diagnosis.
               </h2>
             </div>
             <div className="shrink-0">

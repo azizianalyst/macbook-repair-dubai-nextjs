@@ -129,13 +129,18 @@ export function Hero({
             </div>
           )}
 
+          {/* size="lg" (h-11 = 44px), not the default h-10 = 40px. These are the
+              page's primary conversion buttons and they sit on every page; at the
+              default size they measured 40px on a 375px viewport and failed the
+              44px tap-target rule by 4px. Measured, not eyeballed — at 2x DPR
+              they look comfortably large in a screenshot. */}
           <Reveal delay={240} className="mt-lg flex flex-wrap gap-sm">
-            <Button asChild variant="whatsapp">
+            <Button asChild variant="whatsapp" size="lg">
               <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> {ctaLabel ?? "Message on WhatsApp"}
               </a>
             </Button>
-            <Button asChild variant={onDark ? "secondary" : "primary"}>
+            <Button asChild variant={onDark ? "secondary" : "primary"} size="lg">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>

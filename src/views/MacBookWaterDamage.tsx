@@ -75,34 +75,34 @@ const RECOVERY_RATES = [
 const DAMAGE_PATTERNS = [
   {
     title: "Keyboard damage",
-    body: "Liquid shorts key circuits and corrodes membrane contacts. Individual key replacement is possible; in severe cases a full top-case swap is the cleanest fix. From AED 350.",
+    body: "Liquid shorts key circuits and corrodes membrane contacts. Individual key replacement is possible; in severe cases a full top-case swap is the cleanest fix.",
   },
   {
     title: "Trackpad failure",
-    body: "Liquid under the Force Touch sensor causes erratic clicks, ghost taps, or full trackpad death. Board-level repair or trackpad replacement. From AED 300.",
+    body: "Liquid under the Force Touch sensor causes erratic clicks, ghost taps, or full trackpad death. Board-level repair or trackpad replacement.",
   },
   {
     title: "Logic board corrosion",
-    body: "The most critical damage pattern. Corrosion bridges power rails and destroys ICs within 24-72 hours. Ultrasonic clean plus component repair. From AED 600.",
+    body: "The most critical damage pattern. Corrosion bridges power rails and destroys ICs within 24-72 hours. Ultrasonic clean plus component repair.",
   },
   {
     title: "Battery swelling",
-    body: "Liquid shorting a battery cell causes heat and swelling. A swollen battery is a fire risk. Battery replacement is mandatory in these cases. From AED 450.",
+    body: "Liquid shorting a battery cell causes heat and swelling. A swollen battery is a fire risk. Battery replacement is mandatory in these cases.",
   },
   {
     title: "Speaker damage",
-    body: "Liquid in the speaker cavity corrodes the voice coil within hours. Speakers sound crackling, distorted, or dead. Speaker replacement from AED 200 per side.",
+    body: "Liquid in the speaker cavity corrodes the voice coil within hours. Speakers sound crackling, distorted, or dead. Speaker replacement, charged per side.",
   },
   {
     title: "USB-C port corrosion",
-    body: "The USB-C ports sit low in the chassis and collect liquid first. Corroded pins cause charging failure or no-detection on peripherals. Port replacement from AED 300.",
+    body: "The USB-C ports sit low in the chassis and collect liquid first. Corroded pins cause charging failure or no-detection on peripherals. Port replacement.",
   },
 ];
 
 const PRICING_ROWS = [
-  { model: "MacBook Air water damage (all models)", price: "From AED 400" },
-  { model: "MacBook Pro water damage (all models)", price: "From AED 500" },
-  { model: "iMac water damage",                     price: "From AED 600" },
+  { model: "MacBook Air water damage (all models)", price: "Free diagnosis" },
+  { model: "MacBook Pro water damage (all models)", price: "Free diagnosis" },
+  { model: "iMac water damage",                     price: "Free diagnosis" },
 ];
 
 const FAQS = [
@@ -112,7 +112,7 @@ const FAQS = [
   },
   {
     q: "How much does MacBook water damage repair cost in Dubai?",
-    a: "From AED 400 for MacBook Air, AED 500 for MacBook Pro. The exact cost depends on what the ultrasonic clean and microscope inspection reveals. Simple corrosion cleaning with no component replacements is AED 400-600. Logic board component repair (corroded ICs, capacitors, MOSFETs) is AED 600-1500. We quote after diagnosis and before starting any paid work.",
+    a: "It depends what the ultrasonic clean reveals. Simple corrosion cleaning with no component replacements is the cheapest outcome; logic board component repair on corroded ICs, capacitors or MOSFETs is the most involved. We quote after diagnosis and before starting any paid work.",
   },
   {
     q: "Does rice actually work for a wet MacBook?",
@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Is water damage covered by Apple warranty or AppleCare+?",
-    a: "Standard Apple warranty does not cover liquid damage. AppleCare+ covers accidental damage including liquid spills for a AED 149 service fee per incident. MacBook Repair Dubai offers independent repair from AED 400 with a faster turnaround -- typically same-day or next-day rather than the Apple Store timeline of several business days. We are an independent Apple specialist, not an Apple Authorized Service Provider.",
+    a: "Standard Apple warranty does not cover liquid damage. AppleCare+ covers accidental damage including liquid spills for a AED 149 service fee per incident. MacBook Repair Dubai offers independent repair with a faster turnaround -- typically same-day or next-day rather than the Apple Store timeline of several business days. We are an independent Apple specialist, not an Apple Authorized Service Provider.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function MacBookWaterDamage() {
     {
       title: "MacBook Water Damage Repair Dubai -- Act Fast, Save Your Mac",
       description:
-        "MacBook water damage repair Dubai. Coffee, water, juice spill on MacBook Air or Pro. Act within 24 hours for best recovery rate. Free diagnosis. From AED 400. Call 055 741 3706.",
+        "MacBook water damage repair Dubai. Coffee, water, juice spill on MacBook Air or Pro. Act within 24 hours for best recovery rate. Free diagnosis before any paid work. Call 055 741 3706.",
       path: "/macbook-water-damage-repair-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },
@@ -151,7 +151,7 @@ export default function MacBookWaterDamage() {
         warranty: "P90D",
         url: "/macbook-water-damage-repair-dubai",
         description:
-          "MacBook water damage repair in Dubai. Liquid spill on MacBook Air or Pro. Ultrasonic clean, component-level board repair, full function test. Free diagnosis. From AED 400.",
+          "MacBook water damage repair in Dubai. Liquid spill on MacBook Air or Pro. Ultrasonic clean, component-level board repair, full function test. Free diagnosis before any paid work.",
       }),
     ],
   );
@@ -240,7 +240,7 @@ export default function MacBookWaterDamage() {
                 What to do right now after a MacBook spill
               </h2>
               <p className="mt-md text-[17px] text-text-muted leading-relaxed">
-                These five steps in the first 10 minutes can be the difference between a AED 400 clean and a AED 1500 board repair.
+                These five steps in the first 10 minutes can be the difference between a straightforward clean and a full board repair.
               </p>
             </div>
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">

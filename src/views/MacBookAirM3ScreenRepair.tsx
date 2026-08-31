@@ -7,8 +7,8 @@ export default function MacBookAirM3ScreenRepair() {
       path="/macbook-air-m3-screen-repair-dubai"
       chip="M3"
       years="2024"
-      seoTitle="MacBook Air M3 Screen Repair Dubai — From AED 700"
-      seoDescription="MacBook Air M3 screen repair Dubai from AED 700. Liquid Retina 13-inch and 15-inch, True Tone, P3. Genuine Apple panels stocked. Same-day service. Call 055 741 3706."
+      seoTitle="MacBook Air M3 Screen Repair Dubai"
+      seoDescription="MacBook Air M3 screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. Genuine Apple panels stocked. Same-day service. Call 055 741 3706."
       h1="MacBook Air M3 Screen Repair Dubai"
       eyebrow="M3 Air Liquid Retina specialist · Dubai Media City · Same-day"
       displayType="Liquid Retina"
@@ -16,7 +16,7 @@ export default function MacBookAirM3ScreenRepair() {
       trueTone={true}
       p3={true}
       brightness="500 nits"
-      heroAnswer="MacBook Air M3 screen repair costs AED 700 for the 13-inch and AED 750 for the 15-inch at MacBook Repair Dubai. The M3 Air uses the same Liquid Retina specification as the M2 but with a slightly improved display controller. Genuine Apple panels are stocked for M3, meaning True Tone is fully preserved after replacement. Turnaround is same-day for both sizes."
+      heroAnswer="MacBook Air M3 screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M3 Air uses the same Liquid Retina specification as the M2 but with a slightly improved display controller. Genuine Apple panels are stocked for M3, meaning True Tone is fully preserved after replacement. Turnaround is same-day for both sizes."
       chipUniquePoints={[
         "The MacBook Air M3 (2024) uses the same Liquid Retina panel specification as the M2 Air — 2560x1664 (13-inch) and 2880x1864 (15-inch) at 500 nits with True Tone and P3 wide colour — but with an upgraded M3 display controller that improves power efficiency.",
         "The M3 Air is the first MacBook Air to officially support two external displays simultaneously, but only when the lid is closed (clamshell mode). This requires the M3 chip — the display hardware is otherwise identical to M2.",
@@ -43,7 +43,7 @@ export default function MacBookAirM3ScreenRepair() {
       faults={[
         {
           title: "Cracked Liquid Retina panel (M3 13-inch or 15-inch)",
-          body: "The M3 Air screen is a fully bonded glass-and-Liquid Retina assembly. Full panel replacement at AED 700 (13-inch) or AED 750 (15-inch). Genuine Apple panels stocked — no waiting. Same-day turnaround.",
+          body: "The M3 Air screen is a fully bonded glass-and-Liquid Retina assembly. Full panel replacement, quoted per size. Genuine Apple panels stocked — no waiting. Same-day turnaround.",
         },
         {
           title: "Screen flickering or pulsing brightness",
@@ -55,7 +55,7 @@ export default function MacBookAirM3ScreenRepair() {
         },
         {
           title: "Display cable fault — lines at certain lid angles",
-          body: "Lines or flickering that change when the lid is moved are a display cable fault inside the hinge. On M3 Air the cable is integrated into the screen assembly. Full Liquid Retina panel replacement at AED 700 or AED 750 resolves the fault.",
+          body: "Lines or flickering that change when the lid is moved are a display cable fault inside the hinge. On M3 Air the cable is integrated into the screen assembly. Full Liquid Retina panel replacement, quoted per size resolves the fault.",
         },
         {
           title: "Backlight flicker at low brightness only",
@@ -63,13 +63,13 @@ export default function MacBookAirM3ScreenRepair() {
         },
         {
           title: "Screen cracked after bag impact or drop",
-          body: "The M3 Air's thin 11.3mm chassis offers less protection from drops than older designs. The glass-and-panel bonded assembly cracks as one unit. Full Liquid Retina replacement at AED 700 (13-inch) or AED 750 (15-inch), genuine Apple panel, same-day.",
+          body: "The M3 Air's thin 11.3mm chassis offers less protection from drops than older designs. The glass-and-panel bonded assembly cracks as one unit. Full Liquid Retina replacement, quoted per size, genuine Apple panel, same-day.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Air M3 screen repair cost in Dubai?",
-          a: "MacBook Air M3 13-inch screen repair is AED 700 at MacBook Repair Dubai. The M3 15-inch is AED 750. Both use genuine Apple Liquid Retina panels that preserve True Tone. Apple Store Dubai charges AED 1,499–1,649 for the same models. Same-day turnaround.",
+          a: "MacBook Air M3 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M3 15-inch is quoted separately. Both use genuine Apple Liquid Retina panels that preserve True Tone. Apple Store Dubai charges AED 1,499–1,649 for the same models. Same-day turnaround.",
         },
         {
           q: "Will True Tone work after MacBook Air M3 screen replacement?",
@@ -81,7 +81,7 @@ export default function MacBookAirM3ScreenRepair() {
         },
         {
           q: "Is MacBook Air M3 screen the same as M2?",
-          a: "The resolution, brightness, True Tone, and P3 spec are identical between M2 and M3 Air. However, the screen assemblies have different part numbers and are not interchangeable. Repair cost differs: M3 is AED 700/750 vs M2 at AED 600/650.",
+          a: "The resolution, brightness, True Tone, and P3 spec are identical between M2 and M3 Air. However, the screen assemblies have different part numbers and are not interchangeable. The M3 panel costs more than the M2.",
         },
         {
           q: "How long does MacBook Air M3 screen replacement take in Dubai?",
@@ -89,7 +89,7 @@ export default function MacBookAirM3ScreenRepair() {
         },
         {
           q: "Is it worth repairing MacBook Air M3 screen versus buying a new M4 Air?",
-          a: "At AED 700–750 for a screen repair versus AED 4,499 for a new MacBook Air M4, repair is strongly the better value. The M3 Air is a current-generation machine that will receive macOS updates until at least 2029. The performance difference between M3 and M4 Air is about 25 percent — not enough to justify replacing a machine with a damaged screen.",
+          a: "Against a new MacBook Air M4, which Apple lists at AED 4,499, a screen repair, repair is strongly the better value. The M3 Air is a current-generation machine that will receive macOS updates until at least 2029. The performance difference between M3 and M4 Air is about 25 percent — not enough to justify replacing a machine with a damaged screen.",
         },
       ]}
       blogHref="/blog/macbook-air-m3-screen-flickering-dubai"

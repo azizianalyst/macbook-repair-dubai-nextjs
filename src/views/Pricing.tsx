@@ -10,6 +10,7 @@ import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
 import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { NAP } from "@/content/site";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { PRICE_ROWS_BY_GROUP, type PriceRow } from "@/content/prices.generated";
 
 // ---------- price tables ----------
@@ -31,44 +32,44 @@ const ALL_TABLES: { id: string; title: string; subtitle: string; rows: Row[] }[]
 const HOW_PRICING_WORKS = [
   { icon: Search,      title: "Free diagnosis",     body: "Walk in or send a WhatsApp. The technician opens the device and finds the actual fault - no charge, even if you walk away." },
   { icon: Banknote,    title: "Quote before repair", body: "Final price in writing on WhatsApp before any screwdriver moves. Approve, decline, or take the device back - your call." },
-  { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe AED 0. The diagnosis report is yours to keep." },
+  { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe nothing. The diagnosis report is yours to keep." },
   { icon: Clock,       title: "Up to 12-month warranty",    body: "Written warranty up to 12 months - 12 months on most hardware, 3 months on batteries, 15 days on software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
 ];
 
 const COMPARISON = [
-  { row: "Diagnosis fee",          us: "AED 0 (free)",            apple: "AED 200-350" },
+  { row: "Diagnosis fee",          us: "Free",                     apple: "AED 200-350 (Apple list)" },
   { row: "Turnaround time",        us: "Same day to 5 days",      apple: "5-14 days (sent to Ireland for some repairs)" },
   { row: "Free pickup & delivery", us: "Yes - across Dubai",      apple: "No - drop-off only" },
   { row: "Warranty",               us: "Up to 12 months (by repair)",         apple: "90 days on repairs" },
-  { row: "MacBook screen repair",  us: "From AED 600",            apple: "AED 1,400-2,200" },
-  { row: "MacBook battery",        us: "From AED 590",            apple: "AED 750-950" },
+  { row: "MacBook screen repair",  us: "Quote after free diagnosis", apple: "AED 1,400-2,200 (Apple list)" },
+  { row: "MacBook battery",        us: "Quote after free diagnosis", apple: "AED 750-950 (Apple list)" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
   { row: "Out-of-warranty Macs",   us: "Yes - including Intel models back to 2012", apple: "Limited - vintage models refused" },
 ];
 
 const PRICING_FAQS = [
-  { q: "Why is your MacBook screen repair from AED 600 when the Apple Store quotes AED 1,800?",
+  { q: "Why is your MacBook screen repair so much less than the Apple Store?",
     a: "Two reasons. First, component-level repair: when only the LCD panel is damaged, the team replaces the panel alone instead of swapping the entire display assembly. Second, no Apple Store overhead - Concord Tower rent is a fraction of a Mall of the Emirates retail unit." },
   { q: "Are the prices listed final?",
     a: "The prices are starting prices for the most common fault on the most common model. After the free diagnosis, you receive a final price on WhatsApp. 80% of repairs land within 10% of the listed price." },
   { q: "Do prices include VAT?",
-    a: "Yes. Every price on this page is the all-in amount you pay. AED 600 means AED 600 - no 5% added at checkout." },
+    a: "Yes. Every quote we give is the all-in amount you pay - no 5% added at checkout." },
   { q: "What payment methods do you accept?",
     a: "Cash (AED), Visa, Mastercard, Apple Pay, Samsung Pay, and bank transfer to Emirates NBD. Payment on collection only - never before the repair is approved." },
   { q: "Do you offer a discount for multiple devices?",
     a: "For 3 or more devices in one drop-off (common with corporate clients in Media City and JLT), the labour component drops 15%. WhatsApp Shafiq with the model list for a fixed quote." },
-  { q: "Is the AED 299 starting price guaranteed to fix a water-damaged MacBook?",
-    a: "No. Liquid damage recovery is 80-90% successful, not 100%. The AED 299 starting price covers the ultrasonic clean; heavier corrosion treatment and component replacement (up to 4 chips) is quoted after the free diagnosis. If the board is unrecoverable, you pay AED 0 and receive the data recovery quote separately." },
+  { q: "Is the water-damage starting price guaranteed to fix the MacBook?",
+    a: "No. Liquid damage recovery is 80-90% successful, not 100%. The starting price covers the ultrasonic clean; heavier corrosion treatment and component replacement (up to 4 chips) is quoted after the free diagnosis. If the board is unrecoverable, you pay nothing and receive the data recovery quote separately." },
   { q: "Why is the iPhone 15 screen so much more than the iPhone 14?",
-    a: "Apple changed the display assembly on iPhone 15 - the panel now ships paired with the True Tone IC. Aftermarket panels lose True Tone. Genuine OEM panels for iPhone 15 cost the workshop AED 720 wholesale, which sets the AED 1,040 customer price." },
+    a: "Apple changed the display assembly on iPhone 15 - the panel now ships paired with the True Tone IC. Aftermarket panels lose True Tone. Genuine OEM panels for the iPhone 15 cost the workshop several times what an aftermarket panel does, which is what sets the customer price." },
   { q: "Do the prices change for older Intel MacBooks?",
-    a: "Most repairs cost the same. Two exceptions: full display assemblies on 2016-2019 Touch Bar Pros run AED 1,820 (instead of AED 600 for panel-only) because the entire lid swaps as one unit. RAM upgrades are AED 400 - Apple Silicon RAM is soldered and can't be upgraded." },
+    a: "Most repairs cost the same. Two exceptions: full display assemblies on 2016-2019 Touch Bar Pros cost far more than a panel-only repair, because the entire lid swaps as one unit. RAM upgrades are quoted separately - Apple Silicon RAM is soldered and can't be upgraded." },
   { q: "What's the cheapest way to fix a slow, old MacBook?",
-    a: "SSD upgrade labour plus a fresh macOS install - AED 600 + AED 300 = AED 900 (plus the drive). A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
+    a: "SSD upgrade labour plus a fresh macOS install, quoted together (plus the drive). A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
   { q: "Is data recovery extra on top of the repair price?",
-    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board: AED 299 minimum, up to AED 2,600 for chip-off forensic recovery on T2/M-series boards." },
+    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment, with chip-off forensic recovery on T2/M-series boards at the top of the range." },
   { q: "Do you charge for pickup and delivery?",
-    a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Sharjah and Abu Dhabi pickup runs AED 100 each way. Pickup window: Monday to Saturday, 9 am to 5 pm." },
+    a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch. Pickup window: Monday to Saturday, 9 am to 5 pm." },
   { q: "What happens if the same fault returns inside the warranty?",
     a: "Bring the device back, no questions asked. The original technician - usually Shafiq for MacBook board work or Usman for iPhone screens - re-opens the unit and redoes the repair free of charge. Average warranty claim turnaround: 24 hours." },
 ];
@@ -269,7 +270,7 @@ function PriceSection({
           <li key={r.service} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="font-semibold text-text">{r.service}</p>
             <div className="mt-xs flex items-baseline justify-between gap-md">
-              <span className="mono font-semibold text-accent text-[16px]">AED {r.price}</span>
+              <PriceCTA compact message={`Hi Shafiq, quote please for: ${r.service}`} />
               <a
                 href={`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`}
                 target="_blank"
@@ -287,11 +288,11 @@ function PriceSection({
       </ul>
       <ScrollHintTable className="hidden md:block border border-border rounded-md bg-bg-alt" fadeClass="from-bg-alt">
         <table className="w-full text-[14px] min-w-[720px]">
-          <caption className="sr-only">{title} - starting prices, timelines, and warranty terms.</caption>
+          <caption className="sr-only">{title} - timelines, warranty terms, and how to get a price.</caption>
           <thead className="bg-bg-card">
             <tr className="text-left">
               <th scope="col" className="px-md py-sm font-semibold">Service</th>
-              <th scope="col" className="px-md py-sm font-semibold">Starting price</th>
+              <th scope="col" className="px-md py-sm font-semibold">Price</th>
               <th scope="col" className="px-md py-sm font-semibold">Timeline</th>
               <th scope="col" className="px-md py-sm font-semibold">Warranty</th>
               <th scope="col" className="px-md py-sm font-semibold text-right">Quote</th>
@@ -301,7 +302,9 @@ function PriceSection({
             {rows.map((r, i) => (
               <tr key={r.service} className={i % 2 ? "bg-bg-alt" : ""}>
                 <td className="px-md py-sm">{r.service}</td>
-                <td className="px-md py-sm mono font-semibold text-accent whitespace-nowrap">AED {r.price}</td>
+                <td className="px-md py-sm whitespace-nowrap">
+                  <PriceCTA compact message={`Hi Shafiq, quote please for: ${r.service}`} />
+                </td>
                 <td className="px-md py-sm mono text-text-muted whitespace-nowrap">{r.timeline}</td>
                 <td className="px-md py-sm text-text-muted">{r.warranty}</td>
                 <td className="px-md py-sm text-right">

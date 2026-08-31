@@ -55,11 +55,11 @@ export default function MacBookAirM2ScreenRepair() {
         },
         {
           title: "Screen flickering at low brightness or when dimming",
-          body: "Low-brightness flicker on M2 Air is a backlight PWM issue — the pulse-width modulation circuit that dims the backlight becomes visible. This is a screen assembly fault resolved by panel replacement at AED 600 or AED 650. Free diagnosis confirms.",
+          body: "Low-brightness flicker on M2 Air is a backlight PWM issue — the pulse-width modulation circuit that dims the backlight becomes visible. This is a screen assembly fault resolved by panel replacement, quoted per size. Free diagnosis confirms.",
         },
         {
           title: "Display cable fault at the hinge",
-          body: "The most common M2 Air screen issue at 2–3 years. The cable runs through a tight hinge and cracks after repeated flexing. Signs: flickering or lines that appear at certain lid angles. Cable is part of the Liquid Retina assembly — full panel replacement at AED 600 or AED 650.",
+          body: "The most common M2 Air screen issue at 2–3 years. The cable runs through a tight hinge and cracks after repeated flexing. Signs: flickering or lines that appear at certain lid angles. Cable is part of the Liquid Retina assembly — full panel replacement, quoted per size.",
         },
         {
           title: "Pink or green tint across the screen",
@@ -69,7 +69,7 @@ export default function MacBookAirM2ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M2 screen repair cost in Dubai?",
-          a: "MacBook Air M2 13-inch screen repair is AED 600 at MacBook Repair Dubai. The M2 15-inch is AED 650. Both include the Liquid Retina panel, labour, and a 15-day warranty on A-grade parts. Genuine Apple panels (with True Tone calibration) are available at an additional AED 150–200. Same-day turnaround.",
+          a: "MacBook Air M2 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M2 15-inch is quoted separately. Both include the Liquid Retina panel, labour, and a 15-day warranty on A-grade parts. Genuine Apple panels (with True Tone calibration) are available at additional cost. Same-day turnaround.",
         },
         {
           q: "Will True Tone still work after MacBook Air M2 screen replacement?",
@@ -77,7 +77,7 @@ export default function MacBookAirM2ScreenRepair() {
         },
         {
           q: "Is MacBook Air M2 screen repair the same as M3?",
-          a: "The M2 and M3 Air use the same Liquid Retina display specification (same resolution, same True Tone, same P3) but the screen assemblies are not interchangeable — different part numbers and slightly different cable routing. Repair cost is also different: M2 is AED 600/650 vs M3 at AED 700/750.",
+          a: "The M2 and M3 Air use the same Liquid Retina display specification (same resolution, same True Tone, same P3) but the screen assemblies are not interchangeable — different part numbers and slightly different cable routing. The M2 panel costs more than the M3.",
         },
         {
           q: "My MacBook Air M2 has horizontal lines across the screen. What is wrong?",
@@ -89,7 +89,7 @@ export default function MacBookAirM2ScreenRepair() {
         },
         {
           q: "What is the difference between the MacBook Air M2 13-inch and 15-inch screen repair?",
-          a: "Both use Liquid Retina with True Tone and P3 but different panel sizes: 2560x1664 (13-inch) vs 2880x1864 (15-inch). The repair process is identical but parts are different. Pricing: AED 600 for 13-inch, AED 650 for 15-inch. Both same-day.",
+          a: "Both use Liquid Retina with True Tone and P3 but different panel sizes: 2560x1664 (13-inch) vs 2880x1864 (15-inch). The repair process is identical but parts are different. The two sizes are quoted separately. Both same-day.",
         },
       ]}
       blogHref="/blog/macbook-air-m2-screen-lines-dubai"

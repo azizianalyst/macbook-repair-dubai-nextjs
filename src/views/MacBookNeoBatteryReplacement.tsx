@@ -7,12 +7,12 @@ import { Link } from "@/lib/router-compat";
 export default function MacBookNeoBatteryReplacement() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Battery Replacement Dubai - From AED 450"
-      seoDescription="MacBook Neo battery replacement Dubai from AED 450. A18 Pro MacBook (March 2026), 18-hour rated life. BMS re-pair included. Check AppleCare+ before booking. Free diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Neo Battery Replacement Dubai - BMS Re-Pair Included"
+      seoDescription="MacBook Neo battery replacement Dubai. A18 Pro MacBook (March 2026), 18-hour rated life. BMS re-pair included. Check AppleCare+ before booking. Free diagnosis. Call 055 741 3706."
       path="/macbook-neo-battery-replacement-dubai"
       eyebrow="A18 Pro · 2026 · 18-hour battery · BMS re-pair included"
       h1="MacBook Neo Battery Replacement Dubai"
-      subtitle="MacBook Neo battery replacement in Dubai from AED 450. At 6 months old it is almost certainly under Apple warranty - we check before touching anything. If out of warranty: BMS re-pair included."
+      subtitle="MacBook Neo battery replacement in Dubai. At 6 months old it is almost certainly under Apple warranty - we check before touching anything. If out of warranty: BMS re-pair included."
       startingPrice={450}
       timeline="3-5 days (parts building)"
       whatsappPrefill="Hi, I need MacBook Neo battery replacement:"
@@ -56,7 +56,7 @@ export default function MacBookNeoBatteryReplacement() {
             firmware-paired to the logic board. After a battery swap, the new cell must be re-paired to the board
             so macOS reports accurate capacity, cycle count, and health. Without BMS re-pair, the system may
             show "Service Recommended" immediately after a new battery is fitted, or the health reading may be
-            inaccurate. This step is included in the AED 450 price and takes approximately 4 hours on the bench.
+            inaccurate. This step is included in the price and takes approximately 4 hours on the bench.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">How to check MacBook Neo battery health</h2>
@@ -73,7 +73,7 @@ export default function MacBookNeoBatteryReplacement() {
         </>
       }
       whatWeFix={[
-        "Battery replacement with BMS firmware re-pair - AED 450",
+        "Battery replacement with BMS firmware re-pair",
         "Battery health assessment and capacity report - free",
         '"Service Recommended" status after confirming out-of-warranty',
         "Sudden shutdown at 20-40% charge",
@@ -109,7 +109,7 @@ export default function MacBookNeoBatteryReplacement() {
         },
         {
           q: "What is BMS re-pair and why is it needed on MacBook Neo?",
-          a: "BMS stands for Battery Management System. On every Apple Silicon Mac - including the MacBook Neo - the BMS firmware is cryptographically paired to the logic board at the factory. When the battery is replaced, the new cell must be re-paired using Apple diagnostics so macOS can read accurate capacity, cycle count, and health data. Without re-pair, the system reports the old battery's data, or shows an immediate 'Service Recommended' warning. BMS re-pair is included in our AED 450 price and takes about 4 hours on the bench.",
+          a: "BMS stands for Battery Management System. On every Apple Silicon Mac - including the MacBook Neo - the BMS firmware is cryptographically paired to the logic board at the factory. When the battery is replaced, the new cell must be re-paired using Apple diagnostics so macOS can read accurate capacity, cycle count, and health data. Without re-pair, the system reports the old battery's data, or shows an immediate 'Service Recommended' warning. BMS re-pair is included in our price and takes about 4 hours on the bench.",
         },
         {
           q: "MacBook Neo battery draining fast - is it the battery or software?",
@@ -130,12 +130,12 @@ export default function MacBookNeoBatteryReplacement() {
         {
           label: "MacBook Neo Screen Repair Dubai",
           href: "/macbook-neo-screen-repair-dubai",
-          description: "12.9-inch Liquid Retina screen replacement from AED 650.",
+          description: "12.9-inch Liquid Retina screen replacement.",
         },
         {
           label: "MacBook Pro Battery Replacement Dubai",
           href: "/macbook-pro-battery-replacement-dubai",
-          description: "Pro battery replacement - 14-inch and 16-inch from AED 500.",
+          description: "Pro battery replacement - 14-inch and 16-inch.",
         },
       ]}
       blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}

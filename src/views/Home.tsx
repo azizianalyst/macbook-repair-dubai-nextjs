@@ -26,7 +26,8 @@ import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { QuoteForm } from "@/components/blocks/QuoteForm";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { WorkshopSlider } from "@/components/blocks/WorkshopSlider";
 import { Reveal } from "@/components/blocks/Reveal";
@@ -647,7 +648,7 @@ export default function Home() {
             </div>
             <nav aria-label="On this page" className="mt-lg flex flex-wrap justify-center gap-2.5">
               {PAGE_ANCHORS.map((a) => (
-                <a key={a.href} href={a.href} className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted transition-colors hover:border-accent/40 hover:text-accent">
+                <a key={a.href} href={a.href} className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted transition-colors hover:border-accent/40 hover:text-accent">
                   {a.label} <ChevronDown size={13} aria-hidden />
                 </a>
               ))}
@@ -789,8 +790,8 @@ export default function Home() {
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow={`${REVIEW_AVERAGE.toFixed(1)} average · Google verified`} title="What Customers Say" />
             <div className="-mt-2xl mb-2xl flex flex-wrap items-center justify-center gap-lg">
-              <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read our {REVIEW_COUNT}+ reviews on Google <ExternalLink size={14} aria-hidden /></a>
-              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">All reviews <ArrowRight size={15} aria-hidden /></Link>
+              <a href={GBP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-accent hover:underline inline-flex min-h-[44px] items-center gap-1">Read our {REVIEW_COUNT}+ reviews on Google <ExternalLink size={14} aria-hidden /></a>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex min-h-[44px] items-center gap-1">All reviews <ArrowRight size={15} aria-hidden /></Link>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {REVIEWS.slice(0, 6).map((r) => (
@@ -861,7 +862,12 @@ export default function Home() {
               <li className="flex items-center gap-2"><Users size={18} className="text-accent shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
             </ul>
           </div>
-          <QuoteForm />
+          {/* The standard's LeadForm, not the old QuoteForm: the homepage was the
+              last page still on a plain field-stack with no preset — no aria-pressed
+              chips, no staged questions, and lead routing inferred rather than
+              declared. `repair` is what presetForSlug() resolves for the Mac and
+              iPhone cluster this page fronts. */}
+          <LeadForm preset={PRESETS.repair} sourcePath="/" defaultDeviceType="MacBook" />
         </section>
 
         {/* ════ REASSURANCE ZONE: why us + expert setup ════ */}
@@ -985,7 +991,7 @@ export default function Home() {
           <SectionHead eyebrow="Beyond the MacBook" title="We Repair Every Apple Device in Dubai" intro="MacBook is our speciality, but our bench covers the whole Apple line-up - Mac, iPhone, iPad, iMac and Apple displays, in and out of warranty." />
           <div className="flex flex-wrap gap-2.5">
             {DEVICE_HUB.map((l) => (
-              <Link key={l.href} to={l.href} className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
+              <Link key={l.href} to={l.href} className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                 <ArrowRight size={14} className="text-accent shrink-0" aria-hidden /> {l.label}
               </Link>
             ))}
@@ -1311,7 +1317,7 @@ export default function Home() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Lead Repair Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", price: PRICING.floor, url: SITE.url, warranty: "P1Y", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Message us on WhatsApp for a price on your model." })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", url: SITE.url, warranty: "P1Y", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Message us on WhatsApp for a price on your model." })) }} />
         </section>
 
         {/* ── 30 · Final CTA ─────────────────────────────────────── */}

@@ -22,24 +22,24 @@ const MACBOOK_MODELS = [
 ];
 
 const SERVICES = [
-  { icon: Wrench, label: "Screen Repair", href: "/macbook-screen-repair-dubai", price: "From AED 600" },
-  { icon: Zap, label: "Battery Replacement", href: "/macbook-battery-replacement-dubai", price: "From AED 450" },
-  { icon: Wrench, label: "Keyboard Repair", href: "/macbook-keyboard-repair-dubai", price: "From AED 350" },
-  { icon: Wrench, label: "Charging Port Repair", href: "/macbook-charging-port-repair-dubai", price: "From AED 300" },
-  { icon: Wrench, label: "Water Damage Repair", href: "/macbook-water-damage-repair-dubai", price: "From AED 600" },
-  { icon: Wrench, label: "Logic Board Repair", href: "/macbook-logic-board-repair-dubai", price: "From AED 800" },
-  { icon: Wrench, label: "SSD Upgrade", href: "/macbook-ssd-upgrade-dubai", price: "From AED 700" },
-  { icon: Wrench, label: "Data Recovery", href: "/macbook-data-recovery-dubai", price: "From AED 500" },
-  { icon: Wrench, label: "Trackpad Repair", href: "/macbook-trackpad-repair-dubai", price: "From AED 350" },
-  { icon: Wrench, label: "Hinge Repair", href: "/macbook-hinge-repair-dubai", price: "From AED 400" },
-  { icon: Wrench, label: "Overheating Fix", href: "/macbook-overheating-fix-dubai", price: "From AED 200" },
-  { icon: Wrench, label: "RAM Upgrade", href: "/macbook-ram-upgrade-dubai", price: "From AED 600" },
+  { icon: Wrench, label: "Screen Repair", href: "/macbook-screen-repair-dubai", price: "Free diagnosis" },
+  { icon: Zap, label: "Battery Replacement", href: "/macbook-battery-replacement-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Keyboard Repair", href: "/macbook-keyboard-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Charging Port Repair", href: "/macbook-charging-port-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Water Damage Repair", href: "/macbook-water-damage-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Logic Board Repair", href: "/macbook-logic-board-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "SSD Upgrade", href: "/macbook-ssd-upgrade-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Data Recovery", href: "/macbook-data-recovery-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Trackpad Repair", href: "/macbook-trackpad-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Hinge Repair", href: "/macbook-hinge-repair-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "Overheating Fix", href: "/macbook-overheating-fix-dubai", price: "Free diagnosis" },
+  { icon: Wrench, label: "RAM Upgrade", href: "/macbook-ram-upgrade-dubai", price: "Free diagnosis" },
 ];
 
 const FAQS: FAQ[] = [
   {
     q: "How much does MacBook repair cost in Dubai?",
-    a: "MacBook repair in Dubai starts from AED 200 for a fan clean / overheating fix, AED 350 for keyboard or trackpad repair, AED 450 for battery replacement, AED 600 for screen repair, and AED 800 for logic board work. All prices are confirmed in writing on WhatsApp before any work begins. Free diagnosis, no charge if you decide not to proceed.",
+    a: "It depends on the job: a fan clean, keyboard or trackpad work, a battery, a screen and a logic board repair are five very different jobs. Diagnosis is free, and the figure for your model is confirmed in writing on WhatsApp before any work begins. Free diagnosis, no charge if you decide not to proceed.",
   },
   {
     q: "How long does MacBook repair take in Dubai?",
@@ -59,7 +59,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "Can you repair a MacBook that Apple refused to fix?",
-    a: "Yes. As an independent Apple specialist we perform component-level logic board repair that Apple does not offer at its Genius Bar. Many MacBooks Apple quotes as BER (beyond economical repair) are repairable at our workshop from AED 800. Send us a WhatsApp with the fault description for an honest assessment.",
+    a: "Yes. As an independent Apple specialist we perform component-level logic board repair that Apple does not offer at its Genius Bar. Many MacBooks Apple quotes as BER (beyond economical repair) are repairable at our workshop. Send us a WhatsApp with the fault description for an honest assessment.",
   },
   {
     q: "Do you offer free pickup for MacBook repair in Dubai?",
@@ -89,7 +89,7 @@ export default function MacBookRepairHub() {
     {
       title: "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
       description:
-        "MacBook repair Dubai. Air, Pro, Intel & M-series. Screen from AED 600, battery AED 450, logic board AED 800. Free diagnosis, free pickup, warranty up to 12 months.",
+        "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, free pickup, warranty up to 12 months.",
       path: "/macbook-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -134,7 +134,7 @@ export default function MacBookRepairHub() {
         {/* Quick answer */}
         <QuickAnswer
           question="Where can I get my MacBook repaired in Dubai?"
-          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen repair starts from AED 600, battery from AED 450, logic board from AED 800. Free diagnosis, free citywide pickup, OEM parts, and written warranty up to 12 months. In business since 2004."
+          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen, battery and logic board work all start with a free diagnosis, then a written quote. Free citywide pickup, OEM parts, and written warranty up to 12 months. In business since 2004."
         />
 
         {/* Models */}

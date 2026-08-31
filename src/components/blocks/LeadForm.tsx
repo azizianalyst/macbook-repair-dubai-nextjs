@@ -9,7 +9,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { NAP } from "@/content/site";
 import { LeadSchema, DEVICE_TYPES, CONTACT_METHODS, type Lead } from "@/lib/lead-schema";
+import type { FormPreset } from "@/data/form-presets";
 
+/**
+ * Fallback chips for pages with no preset. Kept deliberately generic — a page
+ * that resolves to a preset never sees this list. See src/data/form-presets.ts
+ * for which slugs are unmatched on purpose.
+ */
 const ISSUES = [
   "Screen / display",
   "Battery",
@@ -39,7 +45,9 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "rounded-full border px-4 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+        // min-h-[44px]: chips were px-4 py-2 (~38px tall) and failed the 44px
+        // tap-target rule the template standard requires. Measured, not eyeballed.
+        "inline-flex items-center min-h-[44px] rounded-full border px-4 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
           ? "border-accent bg-accent/10 text-text font-semibold"
           : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
@@ -56,6 +64,14 @@ export type LeadFormProps = {
   defaultIssue?: string;
   sourcePath?: string;
   variant?: "full" | "compact";
+  /**
+   * Topic preset from src/data/form-presets.ts. When set, it supplies the
+   * heading, the device subset, the issue chips and an optional third
+   * qualifier, and declares which team the lead routes to. When omitted the
+   * form behaves exactly as before — that fallback is the contract that makes
+   * rolling this out page by page safe.
+   */
+  preset?: FormPreset | null;
   className?: string;
 };
 
@@ -65,8 +81,11 @@ export function LeadForm({
   defaultIssue = "",
   sourcePath = "",
   variant = "full",
+  preset = null,
   className,
 }: LeadFormProps) {
+  /** Answer to the preset's optional third question, folded into `details`. */
+  const [qualifier, setQualifier] = useState("");
   const [step, setStep] = useState(0); // 0 device · 1 contact · 2 review
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [errors, setErrors] = useState<Errors>({});
@@ -127,10 +146,24 @@ export function LeadForm({
     }
     setStatus("submitting");
     try {
+      /**
+       * Routing is taken from the preset's declared `route`, never inferred by
+       * matching words in the free text. A chip answer like "Repairs for
+       * several devices" contains no token that identifies the motion, so
+       * regex inference would silently misroute it.
+       */
+      const payload: Lead = {
+        ...form,
+        details: qualifier
+          ? `${form.details ? form.details + "\n" : ""}- [${preset?.qualifier?.name ?? "qualifier"}] ${qualifier}`
+          : form.details,
+        route: preset?.route,
+        presetId: preset?.id,
+      };
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
@@ -190,6 +223,15 @@ export function LeadForm({
 
   return (
     <div className={cn("rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl", className)}>
+      {/* Preset heading. A page that sets no preset keeps the form exactly as
+          it was — no heading, straight into the steps. */}
+      {preset && (
+        <div className="mb-lg">
+          <h3 className="text-[22px] font-bold leading-tight text-text">{preset.heading}</h3>
+          <p className="mt-sm max-w-[58ch] text-[15px] leading-relaxed text-text-muted">{preset.description}</p>
+        </div>
+      )}
+
       {/* progress / step indicator */}
       <div className="mb-lg">
         <div className="flex items-center justify-between gap-2">
@@ -230,9 +272,14 @@ export function LeadForm({
       {step === 0 && (
         <div className="grid gap-md">
           <div>
-            <Label className="text-text-muted">What device needs repair?</Label>
+            <Label className="text-text-muted">
+              {preset?.route === "buyback" ? "What are you selling?" : "What device needs repair?"}
+            </Label>
             <div className="mt-2 flex flex-wrap gap-2">
-              {DEVICE_TYPES.map((d) => (
+              {/* A preset may narrow the device list but never widen it — every
+                  option must stay a real DEVICE_TYPES member or LeadSchema
+                  rejects the submission server-side. */}
+              {(preset?.devices ?? DEVICE_TYPES).map((d) => (
                 <Chip key={d} active={form.deviceType === d} onClick={() => set("deviceType", d)}>{d}</Chip>
               ))}
             </div>
@@ -243,14 +290,45 @@ export function LeadForm({
               className={FIELD} placeholder='e.g. MacBook Pro 14" M2, iPhone 15 Pro' />
           </div>
           <div>
-            <Label className="text-text-muted">What&apos;s wrong?</Label>
+            <Label className="text-text-muted">
+              {preset?.route === "buyback" ? "What condition is it in?" : "What's wrong?"}
+            </Label>
             <div className="mt-2 flex flex-wrap gap-2">
-              {ISSUES.map((it) => (
-                <Chip key={it} active={form.issue === it} onClick={() => set("issue", it)}>{it}</Chip>
+              {(preset?.issues ?? ISSUES).map((it) => (
+                <Chip
+                  key={it}
+                  active={form.issue === it}
+                  onClick={() => {
+                    set("issue", it);
+                    // Changing this answer invalidates the qualifier revealed
+                    // below it — a stale answer must not ride along into the
+                    // message.
+                    setQualifier("");
+                  }}
+                >
+                  {it}
+                </Chip>
               ))}
             </div>
             {errors.issue && <p className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
           </div>
+
+          {/* Third question, revealed only once the one above it is answered,
+              so the visitor never meets a wall of chips. */}
+          {preset?.qualifier && form.issue && (
+            <div>
+              <Label className="text-text-muted">
+                {preset.qualifier.label} <span className="text-text-faint">(optional)</span>
+              </Label>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {preset.qualifier.options.map((o) => (
+                  <Chip key={o} active={qualifier === o} onClick={() => setQualifier(qualifier === o ? "" : o)}>
+                    {o}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+          )}
           <div>
             <Label htmlFor="details" className="text-text-muted">Describe the problem <span className="text-text-faint">(optional)</span></Label>
             <Textarea id="details" value={form.details} maxLength={1000} onChange={(e) => set("details", e.target.value)}
@@ -341,13 +419,31 @@ export function LeadForm({
         )}
       </div>
 
-      {variant === "full" && (
-        <p className="mt-md text-center text-[13px] text-text-muted">
-          Prefer to chat now?{" "}
-          <button type="button" onClick={whatsappFallback} className="font-semibold text-accent hover:underline">
-            Message us on WhatsApp
-          </button>
-        </p>
+      {/* Urgent presets lead with WhatsApp — somebody whose only copy of their
+          data is on a failing drive should not be waiting on email. The form
+          stays, demoted to the secondary action. */}
+      {preset?.primaryCta === "whatsapp" ? (
+        <div className="mt-lg rounded-md border border-accent/30 bg-accent/5 p-md text-center">
+          <p className="text-[14px] text-text-muted">
+            Faster for urgent cases — we usually reply within minutes during workshop hours.
+          </p>
+          <Button variant="whatsapp" size="lg" className="mt-sm" onClick={whatsappFallback}>
+            <MessageCircle aria-hidden /> Message us on WhatsApp
+          </Button>
+        </div>
+      ) : (
+        variant === "full" && (
+          <p className="mt-md text-center text-[13px] text-text-muted">
+            Prefer to chat now?{" "}
+            <button
+              type="button"
+              onClick={whatsappFallback}
+              className="inline-flex min-h-[44px] items-center font-semibold text-accent hover:underline"
+            >
+              Message us on WhatsApp
+            </button>
+          </p>
+        )
       )}
     </div>
   );

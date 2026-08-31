@@ -15,6 +15,7 @@ import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/Quick
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
@@ -41,23 +42,23 @@ const PROBLEMS = [
   { title: "\"Service Recommended\" warning in macOS",
     body: "Battery health below 80% or cycle count over 1,000. macOS shows the warning under System Settings > Battery > Battery Health. Battery still works but holds 60-80% of original capacity. Replace before the cycle count crosses 1,200 to avoid swelling." },
   { title: "Battery swelling - trackpad lifts off the case",
-    body: "Critical. The trackpad clicks weirdly or the bottom case bulges. Stop using the MacBook immediately - a swollen lithium pack is a fire risk and can crack the trackpad assembly (extra AED 350 if it breaks). WhatsApp same hour for free pickup." },
+    body: "Critical. The trackpad clicks weirdly or the bottom case bulges. Stop using the MacBook immediately - a swollen lithium pack is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp same hour for free pickup." },
   { title: "Sudden shutdowns at 30-40% remaining",
     body: "PMIC cannot read the swollen cell voltages correctly. Battery replacement clears it. If shutdowns continue after the swap, that points to a logic-board PMIC issue - diagnosed free during the same visit." },
   { title: "MacBook only runs on charger - won't power on without it",
-    body: "Battery has reached 0 voltage and the protection circuit has latched off. AED 450 to AED 600 battery swap solves it. The DC-in board is checked free in case the charging circuit is also damaged." },
+    body: "Battery has reached 0 voltage and the protection circuit has latched off. A battery swap solves it. The DC-in board is checked free in case the charging circuit is also damaged." },
   { title: "Battery drains overnight in sleep",
     body: "Cell self-discharge from age. Anything over 1.5% drain per hour in sleep means the battery is end-of-life. New cells lose less than 0.3% per hour at the same firmware version." },
   { title: "Cycle count over 1,000 on M1/M2 MacBook Air",
-    body: "Apple rates Apple Silicon batteries for 1,000 cycles to 80% capacity. Many M1/M2 MacBook Airs cross 1,000 cycles within 24 months of heavy use. AED 450 swap restores full runtime." },
+    body: "Apple rates Apple Silicon batteries for 1,000 cycles to 80% capacity. Many M1/M2 MacBook Airs cross 1,000 cycles within 24 months of heavy use. A swap restores full runtime." },
   { title: "Battery health stuck at 100% but runtime collapsed",
     body: "Firmware bug on macOS Ventura/Sonoma. SMC reset clears it on Intel Macs, free of charge. On Apple Silicon a battery health re-calibration cycle is run on the bench - 4 hours, no charge." },
   { title: "Charger plugs in but no charge LED, no charging",
-    body: "DC-in board failure on 80% of cases, swollen battery on 20%. Free diagnosis confirms which. AED 350 DC-in board swap or AED 450-600 battery swap." },
+    body: "DC-in board failure on 80% of cases, swollen battery on 20%. Free diagnosis confirms which. Either a DC-in board swap or a battery swap." },
   { title: "Hot battery - case warm to touch in idle",
     body: "Internal short in the cells. Replace before it swells further. The hot battery is also throttling the CPU - runtime and performance both improve after the swap." },
   { title: "Battery is original (8+ years old) on 2015-2017 Air or Pro",
-    body: "Apple lists these as obsolete. The workshop carries new cells for every Air and Pro back to 2010. AED 450 to AED 600 swap, same day, with the 3-month warranty applied." },
+    body: "Apple lists these as obsolete. The workshop carries new cells for every Air and Pro back to 2010. Same-day swap, with the 3-month warranty applied." },
 ];
 
 const STEPS = [
@@ -77,7 +78,7 @@ const STEPS = [
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook battery replacement cost in Dubai?",
-    a: "From AED 450 for MacBook Air 11\", 13\", and 15\" (Intel and Apple Silicon). AED 500 for MacBook Pro 13\". AED 600 for MacBook Pro 14\", 15\", and 16\". The price includes the new battery, labour, BMS firmware re-pair, and the 4-hour calibration cycle. No diagnostic fee." },
+    a: "It depends on the model: an Air, a 13-inch Pro and a 14/16-inch Pro take different cells, and the quote includes the battery, labour and the firmware re-pair. Diagnosis is free and we confirm the figure before starting. Send the model and a Battery Health screenshot on WhatsApp." },
   { q: "How long does a MacBook battery replacement take?",
     a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is done in 30 minutes, guaranteed, or the repair is free. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
   { q: "How do I check my MacBook battery health?",
@@ -85,42 +86,42 @@ const FAQS: FAQ[] = [
   { q: "How many charge cycles does a MacBook battery last?",
     a: "Apple rates current MacBooks (2017+) for 1,000 cycles to 80% capacity. Heavy users (web dev, video editing) hit 1,000 cycles in 18-24 months. Light office use easily reaches 36-48 months. After 1,000 cycles the battery still works but runtime drops noticeably and Service Recommended starts appearing." },
   { q: "Do you replace M1, M2, M3, M4, and M5 MacBook batteries?",
-    a: "Yes - every Apple Silicon MacBook battery is in active stock, including the M3 Pro 14\" and M4 Pro 16\". Apple Silicon batteries need BMS firmware re-pairing to the logic board after the swap, which the workshop does on the bench. Same-day, AED 450 (Air) or AED 600 (Pro 14\"/16\")." },
-  { q: "Why don't you recommend cheap batteries under AED 200?",
-    a: "Sub-AED-200 batteries on AliExpress and the Dragon Mart grey market typically use B-grade cells with 30% lower energy density and 2x faster wear. The workshop has seen 40% of these fail within 6 months and 15% swell within 12 months. The AED 450 cells used here are tier-1 (Samsung SDI, LG Chem, ATL) with traceable batch numbers." },
+    a: "Yes - every Apple Silicon MacBook battery is in active stock, including the M3 Pro 14\" and M4 Pro 16\". Apple Silicon batteries need BMS firmware re-pairing to the logic board after the swap, which the workshop does on the bench. Same-day on both Air and Pro 14\"/16\"." },
+  { q: "Why don't you recommend the cheapest replacement batteries?",
+    a: "Sub-AED-200 batteries on AliExpress and the Dragon Mart grey market typically use B-grade cells with 30% lower energy density and 2x faster wear. The workshop has seen 40% of these fail within 6 months and 15% swell within 12 months. The cells used here are tier-1 (Samsung SDI, LG Chem, ATL) with traceable batch numbers." },
   { q: "What's the warranty on a new MacBook battery?",
     a: "3 months written warranty on cells, plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months of the swap (and cycle count is under 200), the battery is replaced free of charge. The warranty stays with the MacBook serial number - transferable once free of charge." },
   { q: "My battery is swollen - what do I do?",
-    a: "Stop using the MacBook immediately. Don't charge it, don't try to power it on. Lithium swelling is a fire risk and can crack the trackpad assembly (additional AED 350 if it breaks). WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland." },
+    a: "Stop using the MacBook immediately. Don't charge it, don't try to power it on. Lithium swelling is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland." },
   { q: "Will I lose my data during a battery swap?",
     a: "No. The SSD is on the logic board, untouched during a battery replacement. Files, apps, settings, FileVault encryption - all stay intact. The workshop still recommends a Time Machine backup before any service, just as a habit." },
   { q: "Do you replace MacBook Air 2017 and earlier batteries that Apple calls obsolete?",
-    a: "Yes - every MacBook back to the 2010 Air is serviceable here. Apple stopped stocking parts for these models, but the workshop carries new cells from the original ATL and LG factories that built the Apple parts. AED 450 same-day with the same 3-month warranty as a current model." },
+    a: "Yes - every MacBook back to the 2010 Air is serviceable here. Apple stopped stocking parts for these models, but the workshop carries new cells from the original ATL and LG factories that built the Apple parts. Same-day, with the same 3-month warranty as a current model." },
   { q: "Can I replace the battery myself?",
-    a: "Technically yes on 2008-2012 unibody MacBooks with screw-in batteries - iFixit sells kits at AED 200-400. From 2013 onward Apple glued the cells to the case, requiring isopropyl 99%, a heat gun, and 60+ minutes of careful work. DIY swaps that go wrong cost more to recover than the original AED 450 service. The workshop's labour-only swap if you bring your own (verified) battery is AED 200." },
+    a: "Technically yes on 2008-2012 unibody MacBooks with screw-in batteries - iFixit sells DIY kits for those. From 2013 onward Apple glued the cells to the case, requiring isopropyl 99%, a heat gun, and 60+ minutes of careful work. DIY swaps that go wrong cost more to recover than the original service. The workshop's labour-only swap is available if you bring your own verified battery." },
   { q: "Do you offer free pickup for battery service?",
-    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm, Business Bay. Sharjah and Abu Dhabi pickup AED 100 each way." },
+    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm, Business Bay. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
   { q: "Is battery replacement cheaper than the Apple Store?",
-    a: "Yes. We replace MacBook batteries from AED 450 (Air) up to AED 700 (16-inch Pro), labour and firmware re-pair included, which is well below Apple out-of-warranty pricing, and same-day in about 2 hours. Every battery includes an 80% capacity guarantee." },
+    a: "Yes. We replace MacBook batteries on every model from the Air to the 16-inch Pro, labour and firmware re-pair included, which is well below Apple out-of-warranty pricing, and same-day in about 2 hours. Every battery includes an 80% capacity guarantee." },
   { q: "Should I just go to Apple, and what about AppleCare+?",
     a: "If your MacBook is still covered by AppleCare+ and the battery is below 80% health, Apple may replace it free, and we will point you there. Out of warranty, our replacement is cheaper, same-day, and uses a tier-1 cell with a 3-month warranty plus an 80% capacity guarantee." },
 ];
 
 const COMPARISON = [
   ["Repair window",          "30 min (booked appointment) · 2 hrs walk-in", "5 to 10 business days, mail-in"],
-  ["Starting price (Air)",   "AED 450",                                      "AED 549 (Apple list)"],
-  ["Starting price (Pro 14)","AED 600",                                      "AED 829 (Apple list)"],
-  ["Starting price (Pro 16)","AED 600",                                      "AED 949 (Apple list)"],
+  ["Starting price (Air)",   "Free diagnosis, then a quote",                 "AED 549 (Apple list)"],
+  ["Starting price (Pro 14)","Free diagnosis, then a quote",                 "AED 829 (Apple list)"],
+  ["Starting price (Pro 16)","Free diagnosis, then a quote",                 "AED 949 (Apple list)"],
   ["Free pickup in Dubai",   "Yes, same hour from many areas",               "No, customer must courier"],
   ["Calibration cycle",      "Yes, 4 hours included",                        "Not specified"],
   ["Warranty",               "3 months + 80% capacity guarantee",            "1 year (Apple)"],
   ["Vintage/obsolete models","Yes - 2010 onwards",                            "Refused on obsolete (pre-2017)"],
-  ["BYO battery labour",     "AED 200 if part is verified",                  "Refused"],
+  ["BYO battery labour",     "Labour only if the part is verified",          "Refused"],
 ];
 
 const TRUST = [
   { value: "5,200+", label: "Batteries fitted since 2004" },
-  { value: "From AED 450", label: "Air 11-15\" cells" },
+  { value: "Free", label: "Diagnosis on every model" },
   { value: "30 min", label: "Guaranteed by appointment" },
   { value: "3 months", label: "Warranty + 80% capacity" },
 ];
@@ -128,7 +129,6 @@ const TRUST = [
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookBatteryReplacement() {
   const reviews = pickReviews([
@@ -142,9 +142,9 @@ export default function MacBookBatteryReplacement() {
 
   useSeo(
     {
-      title: "MacBook Battery Replacement Dubai - From AED 450",
+      title: "MacBook Battery Replacement Dubai - Same Day, 2 Hours",
       description:
-        "MacBook battery replacement Dubai from AED 450. Same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 3-month warranty + 80% capacity guarantee. 055 741 3706.",
+        "MacBook battery replacement Dubai. Free diagnosis, same-day 2-hour service. Air, Pro 13\"/14\"/16\". M1-M5. 3-month warranty + 80% capacity guarantee. 055 741 3706.",
       path: "/macbook-battery-replacement-dubai",
     },
     [
@@ -242,7 +242,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook battery replacement in Dubai costs from AED 450 and finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent hover:underline">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
+            MacBook battery replacement in Dubai finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent hover:underline">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
           </p></LinkifyProse>
         </section>
 
@@ -252,7 +252,7 @@ export default function MacBookBatteryReplacement() {
             <SectionHead title="MacBook models we replace batteries for" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Prices include cell, labour, calibration, and the 3-month warranty." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
-              Bring-your-own-battery labour: AED 200 (only if the part is verified tier-1). Battery + trackpad swap if the swelling cracked the trackpad: AED 800 combined.
+              Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. If the swelling cracked the trackpad, the battery and trackpad are done together.
             </p>
           </div>
         </section>
@@ -323,7 +323,7 @@ export default function MacBookBatteryReplacement() {
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Tier-1 cells (what we fit)</h3>
                 <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Samsung SDI, LG Chem, ATL - the three cell suppliers Apple uses. Sourced from authorised distributors with traceable batch numbers and IATA shipping certificates. Cycle life: 1,000 cycles to 80% (matches Apple rating).</p>
-                <p className="m-0 mono text-[13px] text-accent">AED 450 to AED 600 - included in the quote</p>
+                <p className="m-0 mono text-[13px] text-accent">Included in the quote</p>
               </Card>
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Sub-AED-200 grey market (what we refuse)</h3>
@@ -332,7 +332,7 @@ export default function MacBookBatteryReplacement() {
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              If you've already bought a battery elsewhere, bring it in - the workshop will inspect the cells and only fit it if the brand is verifiable (AED 200 labour). Around 20% of customer-supplied batteries fail inspection.
+              If you've already bought a battery elsewhere, bring it in - the workshop will inspect the cells and only fit it if the brand is verifiable, charged as labour only. Around 20% of customer-supplied batteries fail inspection.
             </p>
           </div>
         </section>
@@ -359,7 +359,7 @@ export default function MacBookBatteryReplacement() {
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Battery Replacement · Same day · 2 hours</p>
                   <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your battery quote in 4 minutes</h3>
-                  <p className="m-0 mt-2 text-text-muted text-[15px]">Starting from <strong className="text-text">AED 450</strong>. WhatsApp the model + the Battery Health screenshot.</p>
+                  <p className="m-0 mt-2 text-text-muted text-[15px]">Free diagnosis, then a firm quote. WhatsApp the model + the Battery Health screenshot.</p>
                 </div>
                 <CtaRow whatsappMessage="Hi Usman, MacBook battery replacement quote please. Model: " />
               </div>
@@ -476,9 +476,9 @@ export default function MacBookBatteryReplacement() {
             <SectionHead title="Related MacBook repairs" />
             <div className="grid gap-lg md:grid-cols-3">
               {[
-                { label: "MacBook Screen Repair",       href: "/macbook-screen-repair-dubai",       description: "Cracked glass, Flexgate, dead pixels from AED 600. Same-day on Air & Pro 14\"." },
-                { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap from AED 350. Often paired with battery if swelling cracked it." },
-                { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",     description: "Key cap from AED 150, top case from AED 700. Butterfly and Magic keyboards." },
+                { label: "MacBook Screen Repair",       href: "/macbook-screen-repair-dubai",       description: "Cracked glass, Flexgate, dead pixels. Same-day on Air & Pro 14\"." },
+                { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap, often paired with the battery if swelling cracked it." },
+                { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",     description: "Key caps and full top cases. Butterfly and Magic keyboards." },
               ].map((r) => (
                 <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
                   <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
@@ -572,7 +572,9 @@ function PriceTable({ rows }: { rows: PricingRow[] }) {
           {rows.map((r) => (
             <tr key={r.model} className="border-b border-border last:border-0">
               <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{aed(r.price)}</td>
+              <td className="px-lg py-sm whitespace-nowrap">
+                <PriceCTA compact message={`Hi, battery replacement price for ${r.model}?`} />
+              </td>
               <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
             </tr>
           ))}

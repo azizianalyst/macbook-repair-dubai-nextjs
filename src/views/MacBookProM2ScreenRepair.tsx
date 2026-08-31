@@ -7,15 +7,15 @@ export default function MacBookProM2ScreenRepair() {
       path="/macbook-pro-m2-screen-repair-dubai"
       chip="M2"
       years="2023"
-      seoTitle="MacBook Pro M2 Screen Repair Dubai — From AED 1,000"
-      seoDescription="MacBook Pro M2 Pro/Max screen repair Dubai from AED 1,000. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion, nano-texture glass available. Same-day diagnosis. Call 055 741 3706."
+      seoTitle="MacBook Pro M2 Screen Repair Dubai"
+      seoDescription="MacBook Pro M2 Pro/Max screen repair Dubai. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion, nano-texture glass available. Same-day diagnosis. Call 055 741 3706."
       h1="MacBook Pro M2 Screen Repair Dubai"
       eyebrow="M2 Pro/Max display specialist · Dubai Media City · Same-day diagnosis"
       displayType="Liquid Retina XDR (mini-LED)"
       resolution="3024x1964 (14-inch) / 3456x2234 (16-inch)"
       brightness="1,000 nits sustained / 1,600 nits peak"
       promotionHz="120Hz ProMotion (adaptive 24-120Hz)"
-      heroAnswer="MacBook Pro M2 screen repair in Dubai costs from AED 1,000 for the 14-inch and AED 1,200 for the 16-inch at MacBook Repair Dubai. The M2 Pro and M2 Max (2023) use the same Liquid Retina XDR mini-LED panel technology as the M1 Pro but in a revised chassis that requires M2-specific replacement assemblies. Some M2 Pro models were ordered with nano-texture glass, which affects replacement parts and pricing. Same-day diagnosis; most repairs completed same-day to 1 day."
+      heroAnswer="MacBook Pro M2 screen repair in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different panels. The M2 Pro and M2 Max (2023) use the same Liquid Retina XDR mini-LED panel technology as the M1 Pro but in a revised chassis that requires M2-specific replacement assemblies. Some M2 Pro models were ordered with nano-texture glass, which affects replacement parts and pricing. Same-day diagnosis; most repairs completed same-day to 1 day."
       chipUniquePoints={[
         "The M2 Pro uses the same Liquid Retina XDR mini-LED technology as the M1 Pro but the chassis is revised for the 2023 model year. M1 and M2 display assemblies are not interchangeable. We stock M2-specific replacement panels for both 14-inch and 16-inch. Using an M1 assembly in an M2 chassis causes fitment and calibration issues.",
         "Nano-texture glass was an optional add-on for the M2 Pro and M2 Max at the time of purchase. The nano-texture finish is an etched matte coating on the outer glass surface that reduces glare compared to the standard glossy panel. Nano-texture replacement assemblies are priced slightly higher than standard glass. We confirm which panel your machine has before quoting so there are no surprises.",
@@ -30,27 +30,27 @@ export default function MacBookProM2ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight flickering on M2 Pro",
-          body: "Localised mini-LED zone failure causes areas of the screen to flicker or vary in brightness independently of system brightness settings. This is a panel assembly fault. Free diagnosis confirms. Cost: AED 1,000-1,200.",
+          body: "Localised mini-LED zone failure causes areas of the screen to flicker or vary in brightness independently of system brightness settings. This is a panel assembly fault. Free diagnosis confirms..",
         },
         {
           title: "Vertical or horizontal lines on M2 Pro display",
-          body: "Continuous coloured or black lines running across the full width or height of the screen indicate panel damage or a display cable interruption. We diagnose which component is at fault before any parts are ordered. Cost: from AED 1,000.",
+          body: "Continuous coloured or black lines running across the full width or height of the screen indicate panel damage or a display cable interruption. We diagnose which component is at fault before any parts are ordered..",
         },
         {
           title: "Black screen with Mac booting (backlight or cable fault)",
-          body: "A faint image visible under torch light but no backlight indicates a backlight driver fault or cable issue on the M2 board. The logic board itself is typically undamaged. Cost: AED 600-1,000.",
+          body: "A faint image visible under torch light but no backlight indicates a backlight driver fault or cable issue on the M2 board. The logic board itself is typically undamaged..",
         },
         {
           title: "Cracked screen 14-inch M2 Pro",
-          body: "Impact damage to the 14-inch Liquid Retina XDR panel requires full assembly replacement. The mini-LED array is bonded to the LCD and cannot be replaced separately. Cost: AED 1,000.",
+          body: "Impact damage to the 14-inch Liquid Retina XDR panel requires full assembly replacement. The mini-LED array is bonded to the LCD and cannot be replaced separately..",
         },
         {
           title: "Cracked screen 16-inch M2 Max",
-          body: "Physical screen damage on the 16-inch model requires the larger 16-inch assembly. Stock is confirmed before work begins. Cost: AED 1,200.",
+          body: "Physical screen damage on the 16-inch model requires the larger 16-inch assembly. Stock is confirmed before work begins..",
         },
         {
           title: "Colour shift or incorrect colour on M2 Pro display",
-          body: "Panel failure can cause colour banding, green or pink tint, or areas of washed-out colour. This is distinct from a macOS display profile misconfiguration. Free diagnosis identifies the cause. Cost: AED 1,000-1,200.",
+          body: "Panel failure can cause colour banding, green or pink tint, or areas of washed-out colour. This is distinct from a macOS display profile misconfiguration. Free diagnosis identifies the cause..",
         },
       ]}
       faqs={[

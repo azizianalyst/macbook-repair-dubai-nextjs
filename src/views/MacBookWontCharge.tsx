@@ -22,15 +22,15 @@ const FAQS = [
   },
   {
     q: "How much does MacBook charging repair cost in Dubai?",
-    a: "From AED 200 for cable or port issues up to AED 800 for logic board power circuit repair. MagSafe 3 board replacement AED 250-400. Battery replacement AED 400-550. Free diagnosis before any paid work.",
+    a: "It depends which of four things it is: the cable or adapter, the MagSafe 3 or USB-C port, the battery, or the logic board power circuit. Those range from the cheapest fix to the most involved. Free diagnosis identifies which before any paid work.",
   },
   {
     q: "My MacBook charges via USB-C but not MagSafe -- what is wrong?",
-    a: "The MagSafe 3 and USB-C charging circuits are separate on M2/M3/M4 Air and M1-M5 Pro. If USB-C charges but MagSafe does not, the MagSafe 3 board (a small daughter board) has failed. Replacement AED 250-400, same-day.",
+    a: "The MagSafe 3 and USB-C charging circuits are separate on M2/M3/M4 Air and M1-M5 Pro. If USB-C charges but MagSafe does not, the MagSafe 3 board (a small daughter board) has failed. Same-day replacement.",
   },
   {
     q: "My MacBook shows charging but percentage never goes up -- why?",
-    a: "The battery is not accepting charge -- either the BMS protection circuit tripped (common after deep discharge) or the cell is failing. Bring in for a battery health check. Battery replacement AED 400-550.",
+    a: "The battery is not accepting charge -- either the BMS protection circuit tripped (common after deep discharge) or the cell is failing. Bring in for a battery health check before any replacement.",
   },
   {
     q: "How do I clean a MacBook USB-C port?",
@@ -38,7 +38,7 @@ const FAQS = [
   },
   {
     q: "Can a MacBook charger damage the logic board?",
-    a: "A genuine Apple charger or MFi-certified USB-C PD charger will not damage the board. Cheap non-certified chargers can deliver incorrect voltage and blow the input protection fuse. If you used a cheap charger and the Mac stopped charging, bring in for a fuse check (AED 200-300).",
+    a: "A genuine Apple charger or MFi-certified USB-C PD charger will not damage the board. Cheap non-certified chargers can deliver incorrect voltage and blow the input protection fuse. If you used a cheap charger and the Mac stopped charging, bring in for a fuse check.",
   },
 ];
 
@@ -49,23 +49,23 @@ const FAULTS = [
   },
   {
     title: "MagSafe 3 board failed",
-    body: "The MagSafe 3 board is a small daughter board on M2/M3/M4 Air and M1-M5 Pro. When it fails, USB-C still charges but the MagSafe port is dead. Replacement AED 250-400, same-day.",
+    body: "The MagSafe 3 board is a small daughter board on M2/M3/M4 Air and M1-M5 Pro. When it fails, USB-C still charges but the MagSafe port is dead. Same-day replacement.",
   },
   {
     title: "USB-C port bent or debris inside",
-    body: "A bent pin or compacted debris inside the USB-C port prevents connection. Port cleaning AED 200, port replacement AED 200-350 if the connector is physically damaged.",
+    body: "A bent pin or compacted debris inside the USB-C port prevents connection. Port cleaning first, and port replacement only if the connector is physically damaged.",
   },
   {
     title: "Battery not detected or will not accept charge",
-    body: "BMS protection circuit tripped after deep discharge, or the cell is end-of-life. Battery health check is free. Battery replacement AED 400-550 if the cell is failing.",
+    body: "BMS protection circuit tripped after deep discharge, or the cell is end-of-life. Battery health check is free; the cell is replaced only if it is failing.",
   },
   {
     title: "Logic board power circuit fault",
-    body: "Input protection fuse, PMIC, or power regulation circuit on the board. Common after a cheap charger or liquid exposure. Component-level board repair AED 400-800.",
+    body: "Input protection fuse, PMIC, or power regulation circuit on the board. Common after a cheap charger or liquid exposure. Component-level board repair.",
   },
   {
     title: "Liquid damage on charging circuit",
-    body: "Liquid on the USB-C or MagSafe 3 area corrodes the charging circuit over weeks. Ultrasonic clean plus component repair AED 400-1000 depending on extent of corrosion.",
+    body: "Liquid on the USB-C or MagSafe 3 area corrodes the charging circuit over weeks. Ultrasonic clean plus component repair, depending on the extent of the corrosion.",
   },
 ];
 
@@ -86,11 +86,11 @@ const PORT_BY_MODEL = [
 ];
 
 const PRICING_ROWS = [
-  { repair: "Cable or adapter replacement", price: "AED 80-150" },
-  { repair: "MagSafe 3 board repair", price: "AED 250-400" },
-  { repair: "USB-C port repair", price: "AED 200-350" },
-  { repair: "Battery replacement", price: "AED 400-550" },
-  { repair: "Logic board power repair", price: "AED 400-800" },
+  { repair: "Cable or adapter replacement", price: "Quoted after free diagnosis" },
+  { repair: "MagSafe 3 board repair", price: "Quoted after free diagnosis" },
+  { repair: "USB-C port repair", price: "Quoted after free diagnosis" },
+  { repair: "Battery replacement", price: "Quoted after free diagnosis" },
+  { repair: "Logic board power repair", price: "Quoted after free diagnosis" },
 ];
 
 const WHY_US = [
@@ -105,7 +105,7 @@ export default function MacBookWontCharge() {
     {
       title: "MacBook Not Charging Dubai? MagSafe & USB-C Fix Same Day",
       description:
-        "MacBook not charging in Dubai? MagSafe 3 dead, USB-C port fault, DC-in board, battery not detected. All Air and Pro models. Free diagnosis. From AED 200. Call 055 741 3706.",
+        "MacBook not charging in Dubai? MagSafe 3 dead, USB-C port fault, DC-in board, battery not detected. All Air and Pro models. Free diagnosis before any paid work. Call 055 741 3706.",
       path: "/macbook-wont-charge-dubai",
       preloadImage: preloadFromHero(HERO_IMAGE),
     },
@@ -144,7 +144,7 @@ export default function MacBookWontCharge() {
         imageAlt="MacBook Air open lid on a repair bench in Dubai Media City workshop"
       >
         <p className="mt-md max-w-[72ch] text-[17px] leading-relaxed text-text-muted">
-          MacBook not charging in Dubai? The most common causes are a faulty MagSafe 3 or USB-C cable (free fix), a damaged DC-in board (AED 200-400), a dead battery that will not accept charge (AED 400-550), or a logic board power circuit fault (AED 400-800). MacBook Repair Dubai diagnoses the exact cause for free before any repair is started.
+          MacBook not charging in Dubai? The most common causes are a faulty MagSafe 3 or USB-C cable (free fix), a damaged DC-in board, a dead battery that will not accept charge, or a logic board power circuit fault. MacBook Repair Dubai diagnoses the exact cause for free before any repair is started.
         </p>
       </Hero>
 
@@ -296,7 +296,7 @@ export default function MacBookWontCharge() {
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
           <h2 className="text-text m-0 mb-md max-w-[32ch] mx-auto text-[28px] md:text-[32px]">
-            MacBook not charging? Free diagnosis. From AED 200.
+            MacBook not charging? Free diagnosis.
           </h2>
           <p className="text-text-muted max-w-[56ch] mx-auto mb-xl text-[17px]">
             MagSafe 3 board, USB-C port, battery, or logic board power circuit. All Air and Pro models. Independent Apple specialist, Dubai Media City.

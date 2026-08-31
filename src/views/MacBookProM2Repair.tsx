@@ -8,7 +8,7 @@ export default function MacBookProM2Repair() {
       chip="M2"
       years="2022 – 2023"
       seoTitle="MacBook Pro M2 Repair Dubai - 13&quot;, 14&quot; &amp; 16&quot; All M2 Models | AED 200"
-      seoDescription="MacBook Pro M2 repair Dubai. All variants: 13&quot; M2 (A2338), 14&quot; M2 Pro/Max (A2779), 16&quot; M2 Pro/Max (A2780). Same-day service from AED 200. Call 055 741 3706."
+      seoDescription="MacBook Pro M2 repair Dubai. All variants: 13&quot; M2 (A2338), 14&quot; M2 Pro/Max (A2779), 16&quot; M2 Pro/Max (A2780). Same-day service. Call 055 741 3706."
       eyebrow="MacBook Pro M2 specialist"
       h1="MacBook Pro M2 Repair Dubai"
       heroDescription="The M2 MacBook Pro (2022–2023) added the 14&quot; and 16&quot; Pro models alongside the updated 13&quot;. We service all five M2 variants with the same same-day turnaround and free diagnosis."

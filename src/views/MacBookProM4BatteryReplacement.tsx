@@ -7,15 +7,15 @@ export default function MacBookProM4BatteryReplacement() {
       path="/macbook-pro-m4-battery-replacement-dubai"
       chip="M4"
       years="2024"
-      seoTitle="MacBook Pro M4 Battery Replacement Dubai — From AED 550"
-      seoDescription="MacBook Pro M4 Pro/Max battery replacement Dubai from AED 550. 72.4 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. 1 to 2 day turnaround. Call 055 741 3706."
+      seoTitle="MacBook Pro M4 Battery Replacement Dubai"
+      seoDescription="MacBook Pro M4 Pro/Max battery replacement Dubai. 72.4 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. 1 to 2 day turnaround. Call 055 741 3706."
       h1="MacBook Pro M4 Battery Replacement Dubai"
       eyebrow="M4 Pro/Max battery specialist · Dubai Media City · BMS re-pair included"
       capacity14="72.4 Wh"
       capacity16="99.6 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + Thunderbolt 5 (3 ports)"
-      heroAnswer="MacBook Pro M4 battery replacement in Dubai costs AED 550 for the 14-inch and AED 650 for the 16-inch at MacBook Repair Dubai. The M4 Pro uses a 72.4 Wh cell; the M4 Max 16-inch uses a 99.6 Wh cell. The M4 is a 2024 machine and likely still under Apple warranty — check before booking. If out of warranty, MacBook Repair Dubai provides 1 to 2 day turnaround with BMS re-pair included."
+      heroAnswer="MacBook Pro M4 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M4 Pro uses a 72.4 Wh cell; the M4 Max 16-inch uses a 99.6 Wh cell. The M4 is a 2024 machine and likely still under Apple warranty — check before booking. If out of warranty, MacBook Repair Dubai provides 1 to 2 day turnaround with BMS re-pair included."
       chipUniquePoints={[
         "The M4 Pro introduced Thunderbolt 5 on the MacBook Pro for the first time, replacing Thunderbolt 4. Thunderbolt 5 delivers 120 Gbps bidirectional bandwidth and supports external displays up to 8K. The battery replacement process is not affected by the port change, but the Thunderbolt 5 controller does interact with the BMS on charge cycles, which is another reason BMS re-pair is essential.",
         "The M4 Max 16-inch offers up to a 32-core GPU and up to 128 GB unified memory. This is a workstation-class laptop that commands AED 10,000 to AED 18,000 new. A battery replacement at AED 650 to extend its life by 3 to 5 years is an obvious investment.",
@@ -66,7 +66,7 @@ export default function MacBookProM4BatteryReplacement() {
         },
         {
           q: "How much does MacBook Pro M4 battery replacement cost in Dubai?",
-          a: "MacBook Pro M4 battery replacement costs AED 550 for the 14-inch M4 Pro and AED 650 for the 16-inch M4 Max at MacBook Repair Dubai. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. Turnaround is 1 to 2 days.",
+          a: "MacBook Pro M4 battery replacement is quoted per size after a free diagnosis — the 14-inch M4 Pro and 16-inch M4 Max take different cells. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. Turnaround is 1 to 2 days.",
         },
         {
           q: "Does the Thunderbolt 5 port on the M4 Pro affect battery replacement?",

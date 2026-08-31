@@ -1,18 +1,18 @@
 "use client";
 // MacBook Neo keyboard repair spoke (L5) - Magic Keyboard scissor-switch, Touch ID, March 2026.
-// Individual key cap replacement from AED 300. Top-case from AED 500. Check AppleCare+ first.
+// Individual key cap replacement, or a full top-case. Check AppleCare+ first.
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 import { Link } from "@/lib/router-compat";
 
 export default function MacBookNeoKeyboardRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Keyboard Repair Dubai - Magic Keyboard + Touch ID from AED 300"
-      seoDescription="MacBook Neo keyboard repair Dubai from AED 300. Magic Keyboard with Touch ID (A18 Pro model, 2026). Individual key cap replacement or top-case. Check AppleCare+ first. Call 055 741 3706."
+      seoTitle="MacBook Neo Keyboard Repair Dubai - Magic Keyboard + Touch ID"
+      seoDescription="MacBook Neo keyboard repair Dubai. Magic Keyboard with Touch ID (A18 Pro model, 2026). Individual key cap replacement or top-case. Check AppleCare+ first. Call 055 741 3706."
       path="/macbook-neo-keyboard-repair-dubai"
       eyebrow="Magic Keyboard · Touch ID · A18 Pro · 2026"
       h1="MacBook Neo Keyboard Repair Dubai"
-      subtitle="MacBook Neo uses the same Magic Keyboard scissor-switch design Apple introduced on the MacBook Air M1. Individual key cap replacement from AED 300. Top-case replacement from AED 500. Likely under AppleCare+."
+      subtitle="MacBook Neo uses the same Magic Keyboard scissor-switch design Apple introduced on the MacBook Air M1. Individual key cap replacement, or a full top-case. Likely under AppleCare+."
       startingPrice={300}
       timeline="Same day (key cap) · 2-3 days (top-case)"
       whatsappPrefill="Hi, I need MacBook Neo keyboard repair:"
@@ -40,7 +40,7 @@ export default function MacBookNeoKeyboardRepair() {
               The MacBook Neo is a popular choice with students, and the most frequent keyboard complaint in the
               first 6 months is a <strong>key cap that popped off</strong> - either from aggressive typing or
               pulling the keycap when something got stuck under it. The scissor mechanism clip can break when
-              the cap is removed without care. This is a straightforward same-day repair from AED 300.
+              the cap is removed without care. This is a straightforward same-day repair.
             </p>
             <p className="text-[15px]">
               Spill damage is the second most common cause. If liquid reached the keyboard, bring it in within
@@ -52,12 +52,12 @@ export default function MacBookNeoKeyboardRepair() {
 
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Key cap vs top-case: what is the difference?</h2>
           <p className="text-[15px] mb-md text-text-muted">
-            <strong>Key cap and clip replacement (AED 300):</strong> When a single key has popped off or the
+            <strong>Key cap and clip replacement:</strong> When a single key has popped off or the
             scissor clip is broken but the underlying switch is functional, we replace just the cap and clip.
             Same day, no data risk.
           </p>
           <p className="text-[15px] mb-md text-text-muted">
-            <strong>Top-case replacement (AED 500):</strong> When a spill has damaged multiple switches, the
+            <strong>Top-case replacement:</strong> When a spill has damaged multiple switches, the
             backlight layer, or the trackpad mechanism that lives in the same assembly, the entire top-case
             (keyboard + trackpad + palm rest) is replaced as a single unit. This is a 2 to 3 day job. All data
             stays on the logic board - your files are untouched.
@@ -77,17 +77,17 @@ export default function MacBookNeoKeyboardRepair() {
         </>
       }
       whatWeFix={[
-        "Individual key cap and scissor clip replacement - AED 300",
+        "Individual key cap and scissor clip replacement",
         "Sticky or unresponsive keys - switch cleaning or cap replacement",
         "Spill-damaged individual keys - ultrasonic clean + key swap",
         "Keyboard backlight failure - layer inspection or top-case",
         "Touch ID power button replacement",
-        "Full top-case replacement (severe spill or multi-key failure) - AED 500",
+        "Full top-case replacement (severe spill or multi-key failure)",
       ]}
       steps={[
         {
           title: "Key inspection and quote",
-          body: "We test every key on the keyboard and map the damage before quoting. A single popped cap is AED 300. Multi-key failure or backlight damage is quoted for top-case. Apple warranty checked at this step - if covered, no charge.",
+          body: "We test every key on the keyboard and map the damage before quoting. A single popped cap is the cheapest fix. Multi-key failure or backlight damage is quoted for top-case. Apple warranty checked at this step - if covered, no charge.",
         },
         {
           title: "Key cap / clip or top-case replacement",
@@ -109,7 +109,7 @@ export default function MacBookNeoKeyboardRepair() {
       faqs={[
         {
           q: "Can individual keys be replaced on MacBook Neo?",
-          a: "Yes. The MacBook Neo uses a scissor-switch keyboard, which means each key has a replaceable cap and a plastic scissor mechanism clip. If a key cap has popped off or the clip is broken, we replace just that cap and clip - same day, AED 300. This is much more cost-effective than a full top-case if only one or two keys are affected.",
+          a: "Yes. The MacBook Neo uses a scissor-switch keyboard, which means each key has a replaceable cap and a plastic scissor mechanism clip. If a key cap has popped off or the clip is broken, we replace just that cap and clip, same day. This is much more cost-effective than a full top-case if only one or two keys are affected.",
         },
         {
           q: "Is MacBook Neo keyboard the same as MacBook Air M2?",
@@ -121,7 +121,7 @@ export default function MacBookNeoKeyboardRepair() {
         },
         {
           q: "How does MacBook Neo keyboard repair cost compare to a full top-case?",
-          a: "Individual key cap and clip replacement: AED 300, same day. Full top-case replacement (keyboard, trackpad and palm rest as a single assembly): AED 500, 2 to 3 days. Top-case is recommended when a spill has damaged more than 3 to 4 keys or when the backlight layer is non-functional. If only one or two keys are affected, individual replacement is always the right first step.",
+          a: "Individual key cap and clip replacement is same day. A full top-case replacement (keyboard, trackpad and palm rest as a single assembly) takes 2 to 3 days. Top-case is recommended when a spill has damaged more than 3 to 4 keys or when the backlight layer is non-functional. If only one or two keys are affected, individual replacement is always the right first step.",
         },
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Binod Shrestha"]}
@@ -134,12 +134,12 @@ export default function MacBookNeoKeyboardRepair() {
         {
           label: "MacBook Neo Screen Repair Dubai",
           href: "/macbook-neo-screen-repair-dubai",
-          description: "12.9-inch Liquid Retina screen replacement from AED 650.",
+          description: "12.9-inch Liquid Retina screen replacement.",
         },
         {
           label: "MacBook Air Keyboard Repair Dubai",
           href: "/macbook-air-keyboard-repair-dubai",
-          description: "Magic Keyboard repair for MacBook Air M1 through M4 from AED 300.",
+          description: "Magic Keyboard repair for MacBook Air M1 through M4.",
         },
       ]}
       blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}

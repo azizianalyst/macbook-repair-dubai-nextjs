@@ -15,6 +15,7 @@ import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/Quick
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { Button } from "@/components/ui/button";
@@ -39,25 +40,25 @@ const PRICING: PricingRow[] = [
 
 const COMMON_PROBLEMS = [
   { title: "Flexgate - horizontal lines or no backlight",
-    body: "MacBook Pro 13\" and 15\" 2016-2017 (A1706, A1707, A1708). The display flex cable wears through after ~10,000 lid open/close cycles. Symptom: stage-light backlight, then full backlight death. Fix: AED 600 cable swap on 2016-2017, AED 1,000 panel swap on 2018+." },
+    body: "MacBook Pro 13\" and 15\" 2016-2017 (A1706, A1707, A1708). The display flex cable wears through after ~10,000 lid open/close cycles. Symptom: stage-light backlight, then full backlight death. Fix: a flex-cable swap on 2016-2017, a full panel swap on 2018+." },
   { title: "Cracked outer glass, LCD intact",
-    body: "Common on 13\" and 14\" Pros after a drop. If touch and image still work under the cracks, AED 600 glass-only on 2012-2015 Retina. From 2016 onward Apple bonded the glass to the LCD - full panel replacement at AED 600 to AED 1,200." },
+    body: "Common on 13\" and 14\" Pros after a drop. If touch and image still work under the cracks, a glass-only repair is possible on 2012-2015 Retina. From 2016 onward Apple bonded the glass to the LCD - full panel replacement." },
   { title: "Pink, green, or purple tint across the screen",
     body: "Loose or oxidised eDP cable, or a failing T-CON board. Reseating the cable fixes 30% of cases at no charge - full panel swap on the rest." },
   { title: "Dead pixels or stuck pixels",
-    body: "Apple replaces the panel only if more than 5 dead pixels appear in a 50 mm² area. The workshop replaces from a single visible dead pixel - AED 600 starting." },
+    body: "Apple replaces the panel only if more than 5 dead pixels appear in a 50 mm² area. The workshop replaces from a single visible dead pixel." },
   { title: "Backlight bleed in corners",
-    body: "Manufacturing defect on Retina 2012-2015 and Air 2018+. LCD panel swap, AED 600 to AED 1,000. The replacement uses a tested A-grade panel with a 15-day workshop warranty (up to 3 months on genuine Apple panels)." },
+    body: "Manufacturing defect on Retina 2012-2015 and Air 2018+. LCD panel swap. The replacement uses a tested A-grade panel with a 15-day workshop warranty (up to 3 months on genuine Apple panels)." },
   { title: "Ghosting or burn-in (image retention)",
-    body: "More common on the 2012 Retina LG-built panels. New panels from the original Samsung supplier eliminate the ghosting. AED 910." },
+    body: "More common on the 2012 Retina LG-built panels. New panels from the original Samsung supplier eliminate the ghosting." },
   { title: "Display works but lid sensor reports closed",
-    body: "Hall-effect sensor failure inside the bezel. AED 330 sensor swap, same day, no panel replacement needed." },
+    body: "Hall-effect sensor failure inside the bezel. Sensor swap, same day, no panel replacement needed." },
   { title: "True Tone disabled after panel swap",
     body: "Genuine Apple panels keep True Tone. Aftermarket panels carry a calibration chip programmed against the logic board's serial number - if True Tone matters to you, ask for the genuine option at quote time." },
   { title: "Screen flickers when battery drops below 20%",
-    body: "PMIC voltage sag on the LCD rail. Capacitor replacement on the logic board, AED 460. No panel swap needed in 80% of these tickets." },
+    body: "PMIC voltage sag on the LCD rail. Capacitor replacement on the logic board. No panel swap needed in 80% of these tickets." },
   { title: "Screen comes loose from the lid",
-    body: "Failed bezel adhesive on Retina 2013-2015. Re-bond with industrial 3M tape and a heated press, AED 260, no panel swap." },
+    body: "Failed bezel adhesive on Retina 2013-2015. Re-bond with industrial 3M tape and a heated press, no panel swap." },
 ];
 
 const STEPS = [
@@ -78,42 +79,42 @@ const STEPS = [
 type FAQ = { q: string; a: string };
 const FAQS: FAQ[] = [
   { q: "How much does MacBook screen repair cost in Dubai?",
-    a: "From AED 600 for a MacBook Air 13\" or MacBook Pro 13\" panel. AED 1,000 for the 14\" Pro. AED 1,200 for the 16\" Pro. Glass-only repair is AED 600 on 2012-2015 Retina models - newer models need full panel swap because the glass is bonded to the LCD." },
+    a: "It depends on the model and the panel grade, so we quote after a free diagnosis rather than before it. A 13-inch Air panel, a 14-inch Pro and a 16-inch Pro are three different jobs. Send the model and a photo of the damage on WhatsApp and we will tell you what is involved." },
   { q: "How long does MacBook screen replacement take?",
     a: "Same day for MacBook Air, MacBook Pro 13\", and 14\" Pro when the panel is in stock - typically 3 to 5 hours including the 90-minute adhesive cure. The 16\" Pro panel is sometimes a 1 to 2 day order. WhatsApp the serial first to confirm stock." },
   { q: "Do you fix Flexgate on the 2016 and 2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, AED 600, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. 3-month warranty." },
+    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. 3-month warranty." },
   { q: "Will True Tone still work after the screen is replaced?",
     a: "True Tone works on genuine Apple panels - the workshop calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS; everything else (P3 colour, brightness, contrast) is identical. Genuine Apple panels carry a 3-month warranty; A-grade aftermarket panels carry a 15-day warranty." },
   { q: "Can you replace just the cracked glass without changing the LCD?",
-    a: "On 2012-2015 Retina MacBooks, yes - AED 600 glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. The workshop will not charge for glass-only on bonded models because the result is unreliable." },
+    a: "On 2012-2015 Retina MacBooks, yes - a glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. The workshop will not charge for glass-only on bonded models because the result is unreliable." },
   { q: "What's the difference between LCD-only and full display assembly replacement?",
-    a: "LCD-only is the panel inside the lid - the camera, hinges, and antenna stay original. Full display assembly is the entire lid pre-built. LCD-only is AED 260 to AED 520 cheaper but takes 90 extra minutes of labour. The workshop quotes both prices on every WhatsApp ticket." },
+    a: "LCD-only is the panel inside the lid - the camera, hinges, and antenna stay original. Full display assembly is the entire lid pre-built. LCD-only costs less but takes 90 extra minutes of labour. The workshop quotes both options on every WhatsApp ticket." },
   { q: "Do you use genuine Apple screens?",
     a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models the workshop fits A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote; genuine Apple panels carry a 3-month warranty, A-grade aftermarket 15 days." },
   { q: "What if my screen is fine but I see horizontal lines at the bottom?",
-    a: "Classic Flexgate. The flex cable inside the hinge is failing. Open and close the lid slowly - if the lines come and go, it's confirmed. AED 600 cable replacement, same day, and the new cable is the 2-mm-longer revised version." },
+    a: "Classic Flexgate. The flex cable inside the hinge is failing. Open and close the lid slowly - if the lines come and go, it's confirmed. Cable replacement, same day, and the new cable is the 2-mm-longer revised version." },
   { q: "Will my MacBook screen replacement work with my external monitor?",
-    a: "Yes - the external display output is a separate circuit on the logic board. If your built-in display died but external still works, that confirms a panel-side fault, not a logic-board GPU fault. AED 600 to AED 1,200 panel swap solves it." },
+    a: "Yes - the external display output is a separate circuit on the logic board. If your built-in display died but external still works, that confirms a panel-side fault, not a logic-board GPU fault. A panel swap solves it." },
   { q: "Is there a warranty on the new screen?",
     a: "It depends on the panel grade: genuine Apple panels carry a 3-month written warranty, high-grade A-grade aftermarket panels carry 15 days. Both cover manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure - neither covers new physical damage. The grade and its warranty are confirmed on your quote. Transferable once free of charge to a new owner if the MacBook is sold." },
   { q: "Can you fix a MacBook screen with no image but the laptop still chimes?",
-    a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps at AED 600 to AED 1,200." },
+    a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps." },
   { q: "Do you offer pickup for screen repair?",
-    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup AED 100 each way." },
+    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
   { q: "Is MacBook screen repair cheaper than the Apple Store?",
-    a: "Yes, usually around half the price. A MacBook Air 13-inch (M2/M3) screen is AED 750 here versus about AED 1,299 at Apple; a 14-inch Pro is AED 1,000 versus about AED 1,799; a 13-inch Pro is AED 800 versus about AED 1,499. You also keep your data and skip the Genius Bar appointment wait." },
+    a: "Yes, usually around half. Apple lists about AED 1,299 for a 13-inch Air screen, about AED 1,799 for a 14-inch Pro and about AED 1,499 for a 13-inch Pro; our quote comes in well under each after a free diagnosis. You also keep your data and skip the Genius Bar appointment wait." },
   { q: "Should I just go to Apple, and what about AppleCare+?",
     a: "If your MacBook is still covered by AppleCare+ and the screen repair is free or a small deductible, go to Apple, and we will tell you so honestly. Once you are out of warranty, an independent repair is far cheaper, same-day on most models, and does not affect any Apple parts we do not touch." },
 ];
 
 const COMPARISON = [
   ["Repair window",         "Same day on MacBook Air 13\" and Pro 14\"",  "5 to 14 business days, mail-in"],
-  ["Starting price (Air 13\")", "AED 600",                                  "AED 1,449 (Apple list)"],
-  ["Starting price (Pro 14\")", "AED 1,000",                                  "AED 2,099 (Apple list)"],
-  ["Starting price (Pro 16\")", "AED 1,200",                                 "AED 2,600 (Apple list)"],
+  ["Starting price (Air 13\")", "Free diagnosis, then a quote",              "AED 1,449 (Apple list)"],
+  ["Starting price (Pro 14\")", "Free diagnosis, then a quote",              "AED 2,099 (Apple list)"],
+  ["Starting price (Pro 16\")", "Free diagnosis, then a quote",              "AED 2,600 (Apple list)"],
   ["Free pickup in Dubai",  "Yes, same day",                                "No, customer must courier"],
-  ["LCD-only option",       "Yes - AED 260 to AED 520 cheaper",             "No, full assembly only"],
+  ["LCD-only option",       "Yes - costs less than a full assembly",         "No, full assembly only"],
   ["Warranty",              "15 days - 3 months (by panel grade)",           "12 months"],
   ["No-fix-no-charge",      "Yes",                                           "No, diagnostic fee charged"],
   ["Vintage/obsolete models","Yes - 2012 onwards",                           "Refused on obsolete (pre-2017)"],
@@ -131,14 +132,14 @@ const TIMELINE = [
 ];
 
 const RELATED = [
-  { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 590, 2 hours, 3-month battery warranty." },
-  { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai",  description: "Component-level board work from AED 299. Microscope + hot air rework." },
-  { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Ultrasonic cleaning + corrosion removal from AED 910. Bring it in within 24 hours." },
+  { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Around 2 hours, with a 3-month battery warranty." },
+  { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai",  description: "Component-level board work. Microscope and hot-air rework." },
+  { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Ultrasonic cleaning and corrosion removal. Bring it in within 24 hours." },
 ];
 
 const TRUST = [
   { value: "3,400+", label: "Displays fitted since 2004" },
-  { value: "From AED 600", label: "Air 13″ & Pro 13″ panel" },
+  { value: "Free", label: "Diagnosis on every model" },
   { value: "30 min", label: "Guaranteed by appointment" },
   { value: "3 months", label: "Written warranty" },
 ];
@@ -146,7 +147,6 @@ const TRUST = [
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookScreenRepair() {
   const reviews = pickReviews([
@@ -160,9 +160,9 @@ export default function MacBookScreenRepair() {
 
   useSeo(
     {
-      title: "MacBook Screen Repair Dubai - From AED 600",
+      title: "MacBook Screen Repair Dubai - Same-Day Air & Pro",
       description:
-        "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. Concord Tower. 055 741 3706.",
+        "MacBook screen repair Dubai. Same-day Air and Pro 14\". Flexgate, cracked glass, dead pixels. Free diagnosis, 3-month warranty. Call 055 741 3706.",
       path: "/macbook-screen-repair-dubai",
     },
     [
@@ -203,7 +203,7 @@ export default function MacBookScreenRepair() {
                   <Monitor size={14} className="text-accent" aria-hidden /> MacBook screen repair · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
-                  MacBook Screen Repair Dubai - <span className="text-accent">From AED 600</span>
+                  MacBook Screen Repair Dubai - <span className="text-accent">Same Day</span>
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Cracked glass, Flexgate, dead pixels, no backlight. Air, Pro 13″, 14″, 16″ - Intel through M5.
@@ -262,7 +262,7 @@ export default function MacBookScreenRepair() {
               </span>
             </div>
             <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-              {[["Starting price", "AED 600"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days - 3 months"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days - 3 months"], ["Diagnosis", "FREE"]].map(([k, v]) => (
                 <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
                   <span className="text-text-faint">{k}</span>
                   <span className="font-semibold text-text">{v}</span>
@@ -296,7 +296,7 @@ export default function MacBookScreenRepair() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-screen-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook screen repair in Dubai starts at AED 600 and finishes the same day on the MacBook Air 13″, Pro 13″, and Pro 14″ when the panel is in stock. The workshop has fitted 3,400+ MacBook displays since 2004 - Flexgate cable swaps on the 2016-2017 Pro, full panel replacements on the M1 to M5 Pro, glass-only repairs on the 2012-2015 Retina range. Every panel is bench-tested for dead pixels, backlight uniformity, and P3 colour before it leaves the bench. True Tone is preserved on genuine Apple panels, calibrated against the original logic-board serial. Repairing a MacBook Pro specifically? The <Link to="/macbook-pro-screen-repair-dubai" className="text-accent hover:underline">MacBook Pro screen repair</Link> page covers Liquid Retina XDR mini-LED, ProMotion and the M5 OLED in depth.
+            MacBook screen repair in Dubai finishes the same day on the MacBook Air 13″, Pro 13″, and Pro 14″ when the panel is in stock. The workshop has fitted 3,400+ MacBook displays since 2004 - Flexgate cable swaps on the 2016-2017 Pro, full panel replacements on the M1 to M5 Pro, glass-only repairs on the 2012-2015 Retina range. Every panel is bench-tested for dead pixels, backlight uniformity, and P3 colour before it leaves the bench. True Tone is preserved on genuine Apple panels, calibrated against the original logic-board serial. Repairing a MacBook Pro specifically? The <Link to="/macbook-pro-screen-repair-dubai" className="text-accent hover:underline">MacBook Pro screen repair</Link> page covers Liquid Retina XDR mini-LED, ProMotion and the M5 OLED in depth.
           </p></LinkifyProse>
         </section>
 
@@ -306,7 +306,7 @@ export default function MacBookScreenRepair() {
             <SectionHead eyebrow="Every screen, one place" title="MacBook models we repair" intro="Every MacBook from the 2008 unibody through the 2025 M5 Pro 16″. Prices below are the panel + labour + warranty up to 3 months all-in. No diagnostic fee, no hidden adhesive charge." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
-              Glass-only repair on 2012-2015 Retina starts at AED 600. From 2016 the glass is bonded to the LCD - full assembly only.
+              Glass-only repair is possible on 2012-2015 Retina. From 2016 the glass is bonded to the LCD - full assembly only.
             </p>
           </div>
         </section>
@@ -373,12 +373,12 @@ export default function MacBookScreenRepair() {
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
                 <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for M3, M4, and M5 Pro 14″ and 16″. Sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone calibration retained.</p>
-                <p className="m-0 mono text-[13px] text-accent">Add AED 260 to AED 520 over A-grade pricing</p>
+                <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade - quoted side by side</p>
               </Card>
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">A-grade aftermarket (Samsung / LG)</h3>
                 <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Same Samsung and LG factories that build the Apple panel - sold without the Apple label and calibration chip. P3 colour, full brightness, 60 Hz or 120 Hz to match original. True Tone disabled by macOS.</p>
-                <p className="m-0 mono text-[13px] text-accent">Standard pricing - AED 600 to AED 1,200</p>
+                <p className="m-0 mono text-[13px] text-accent">Our standard panel grade</p>
               </Card>
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Used pull-out (genuine)</h3>
@@ -387,7 +387,7 @@ export default function MacBookScreenRepair() {
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              Genuine Apple panels carry a 3-month warranty; the A-grade aftermarket grades carry 15 days. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit unbranded panels under AED 520 because failure rates above 20% are normal in that grade.
+              Genuine Apple panels carry a 3-month warranty; the A-grade aftermarket grades carry 15 days. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit the cheapest unbranded panels because failure rates above 20% are normal in that grade.
             </p>
           </div>
         </section>
@@ -419,7 +419,7 @@ export default function MacBookScreenRepair() {
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Screen Repair · Same day · 1-2 days</p>
                   <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your screen quote in 4 minutes</h3>
-                  <p className="m-0 mt-2 text-text-muted text-[15px]">Starting from <strong className="text-text">AED 600</strong>. WhatsApp the model + a photo of the damage.</p>
+                  <p className="m-0 mt-2 text-text-muted text-[15px]">Free diagnosis, then a firm quote. WhatsApp the model + a photo of the damage.</p>
                 </div>
                 <CtaRow whatsappMessage="Hi Shafiq, MacBook screen repair quote please. Model: " />
               </div>
@@ -645,7 +645,9 @@ function PriceTable({ rows }: { rows: PricingRow[] }) {
           {rows.map((r) => (
             <tr key={r.model} className="border-b border-border last:border-0">
               <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{aed(r.price)}</td>
+              <td className="px-lg py-sm whitespace-nowrap">
+                <PriceCTA compact message={`Hi, screen repair price for ${r.model}?`} />
+              </td>
               <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
             </tr>
           ))}

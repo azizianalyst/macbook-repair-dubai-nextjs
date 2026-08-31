@@ -7,15 +7,15 @@ export default function MacBookProM3BatteryReplacement() {
       path="/macbook-pro-m3-battery-replacement-dubai"
       chip="M3"
       years="2023"
-      seoTitle="MacBook Pro M3 Battery Replacement Dubai — From AED 500"
-      seoDescription="MacBook Pro M3 Pro/Max battery replacement Dubai from AED 500. 70 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. Same-day 2-hour service. Call 055 741 3706."
+      seoTitle="MacBook Pro M3 Battery Replacement Dubai"
+      seoDescription="MacBook Pro M3 Pro/Max battery replacement Dubai. 70 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. Same-day 2-hour service. Call 055 741 3706."
       h1="MacBook Pro M3 Battery Replacement Dubai"
       eyebrow="M3 Pro/Max battery specialist · Dubai Media City · BMS re-pair included"
       capacity14="70 Wh"
       capacity16="99.6 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + Thunderbolt 4 (3 ports)"
-      heroAnswer="MacBook Pro M3 battery replacement in Dubai costs AED 500 for the 14-inch and AED 600 for the 16-inch at MacBook Repair Dubai. The M3 Pro uses a 70 Wh cell; the M3 Max 16-inch uses a 99.6 Wh cell. The M3 is the last mini-LED generation before the OLED M5, making it a long-term keeper worth servicing. BMS firmware re-pair is included in every price. Same-day 2-hour service."
+      heroAnswer="MacBook Pro M3 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M3 Pro uses a 70 Wh cell; the M3 Max 16-inch uses a 99.6 Wh cell. The M3 is the last mini-LED generation before the OLED M5, making it a long-term keeper worth servicing. BMS firmware re-pair is included in every price. Same-day 2-hour service."
       chipUniquePoints={[
         "The M3 chip is built on TSMC 3nm technology, making it significantly more efficient than the M2 at the same workload. The 14-inch M3 Pro uses a 70 Wh cell — slightly larger than the M2 Pro 69.6 Wh — contributing to up to 18 hours of battery life under Apple test conditions.",
         "The M3 Max 16-inch is a serious workstation laptop with hardware ray tracing, up to 40-core GPU, and up to 128 GB unified memory. At 99.6 Wh, the 16-inch cell is the largest allowed on commercial flights. A new cell at AED 600 restores full runtime on a machine that can otherwise last many years in professional use.",
@@ -40,7 +40,7 @@ export default function MacBookProM3BatteryReplacement() {
       faults={[
         {
           title: "Service Recommended on M3 Pro after 1 to 2 years",
-          body: "The M3 Pro is 1 to 2 years old in 2025. Heavy users running Xcode, DaVinci Resolve, or sustained GPU workloads can reach 500 to 700 cycles within that period. Below 80 percent capacity, macOS shows Service Recommended. Battery replacement at AED 500 restores full health.",
+          body: "The M3 Pro is 1 to 2 years old in 2025. Heavy users running Xcode, DaVinci Resolve, or sustained GPU workloads can reach 500 to 700 cycles within that period. Below 80 percent capacity, macOS shows Service Recommended. Battery replacement restores full health.",
         },
         {
           title: "M3 Pro battery draining faster than the rated 18 hours",
@@ -66,7 +66,7 @@ export default function MacBookProM3BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M3 battery replacement cost in Dubai?",
-          a: "MacBook Pro M3 battery replacement costs AED 500 for the 14-inch M3 Pro and AED 600 for the 16-inch M3 Max at MacBook Repair Dubai. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. No diagnostic fee.",
+          a: "MacBook Pro M3 battery replacement is quoted per size after a free diagnosis — the 14-inch M3 Pro and 16-inch M3 Max take different cells. Both prices include the new cell, BMS firmware re-pair, labour, and a 3-month written warranty. No diagnostic fee.",
         },
         {
           q: "Should I check AppleCare+ before booking M3 Pro battery replacement?",

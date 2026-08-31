@@ -19,32 +19,32 @@ const HERO_ALT = "MacBook not turning on diagnosis at MacBook Repair Dubai, Medi
 const CAUSES = [
   {
     title: "Dead or drained battery",
-    price: "AED 200-450",
-    body: "The most common cause of a MacBook that appears dead. A battery at 0V trips the protection circuit and the Mac refuses to boot even on the charger. Battery replacement resolves it. AED 200-450 depending on model.",
+    price: "Quoted after free diagnosis",
+    body: "The most common cause of a MacBook that appears dead. A battery at 0V trips the protection circuit and the Mac refuses to boot even on the charger. Battery replacement resolves it, and the cost depends on the model.",
   },
   {
     title: "Blown logic board fuse",
-    price: "AED 300-500",
-    body: "A fuse on the power rail protects the board from overcurrent. A failed charger or power surge can blow it silently. The Mac looks completely dead. Fuse replacement at component level is AED 300-500, same or next day.",
+    price: "Quoted after free diagnosis",
+    body: "A fuse on the power rail protects the board from overcurrent. A failed charger or power surge can blow it silently. The Mac looks completely dead. Fuse replacement at component level is a same or next-day job.",
   },
   {
     title: "Liquid damage",
-    price: "AED 400-1500",
-    body: "Liquid causes corrosion on power rails and bridge circuits. A Mac that worked after a spill and then died 24-72 hours later is a classic liquid-corrosion failure. Ultrasonic clean plus component repair from AED 400.",
+    price: "Quoted after free diagnosis",
+    body: "Liquid causes corrosion on power rails and bridge circuits. A Mac that worked after a spill and then died 24-72 hours later is a classic liquid-corrosion failure. Ultrasonic clean plus component repair.",
   },
   {
     title: "Failed DC-in or MagSafe board",
-    price: "AED 300-600",
-    body: "The DC-in board converts charger voltage for the logic board. A failed board means no power reaches the system even from a working charger. No MagSafe LED on a known-good charger points here. Repair from AED 300.",
+    price: "Quoted after free diagnosis",
+    body: "The DC-in board converts charger voltage for the logic board. A failed board means no power reaches the system even from a working charger. No MagSafe LED on a known-good charger points here.",
   },
   {
     title: "Corrupted firmware or T2 chip",
-    price: "AED 200-400",
-    body: "A failed macOS update or T2 security chip fault can prevent a Mac from booting with no other hardware damage. Firmware restore or T2 revive via Apple Configurator fixes this from AED 200, no hardware swap needed.",
+    price: "Quoted after free diagnosis",
+    body: "A failed macOS update or T2 security chip fault can prevent a Mac from booting with no other hardware damage. Firmware restore or T2 revive via Apple Configurator fixes this, no hardware swap needed.",
   },
   {
     title: "Logic board failure",
-    price: "AED 800-2500",
+    price: "Quoted after free diagnosis",
     body: "A failed CPU, GPU, or power management IC requires component-level board repair. This is the worst-case scenario but still repairable in most cases. Free diagnosis confirms scope before any commitment.",
   },
 ];
@@ -78,11 +78,11 @@ const DIAG_STEPS = [
 ];
 
 const PRICING_ROWS = [
-  { model: "MacBook Air (Intel, 2017-2020)", price: "From AED 200" },
-  { model: "MacBook Air M1-M4 (2020-2025)", price: "From AED 250" },
-  { model: "MacBook Pro (Intel, 2012-2020)", price: "From AED 300" },
-  { model: "MacBook Pro M1-M5 (2021-2026)", price: "From AED 350" },
-  { model: "iMac / Mac mini", price: "From AED 300" },
+  { model: "MacBook Air (Intel, 2017-2020)", price: "Free diagnosis" },
+  { model: "MacBook Air M1-M4 (2020-2025)", price: "Free diagnosis" },
+  { model: "MacBook Pro (Intel, 2012-2020)", price: "Free diagnosis" },
+  { model: "MacBook Pro M1-M5 (2021-2026)", price: "Free diagnosis" },
+  { model: "iMac / Mac mini", price: "Free diagnosis" },
 ];
 
 const WHY_US = [
@@ -115,7 +115,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost to fix a MacBook that won't turn on in Dubai?",
-    a: "From AED 200 depending on the cause. A dead battery costs AED 200-450 to replace. A blown logic board fuse costs AED 300-500 at component level. Liquid damage repair starts at AED 400. A failed DC-in board is AED 300-600. We diagnose for free and quote before starting any paid work, so you know the cost before committing.",
+    a: "It depends on the cause, and there are five common ones: a dead battery, a blown logic-board fuse, liquid damage, a failed DC-in board, or firmware. Diagnosis is free and we quote before starting any paid work, so you know the cost before committing.",
   },
   {
     q: "Can a dead MacBook be recovered without losing data?",
@@ -127,11 +127,11 @@ const FAQS = [
   },
   {
     q: "My MacBook shows no MagSafe light at all -- what does that mean?",
-    a: "No MagSafe or USB-C charging LED on a known-good charger means power is not reaching the logic board. First eliminate the charger: borrow a known-good Apple charger and try it. If still no light, the likely causes are a failed DC-in board (AED 300-600), a blown power rail fuse (AED 300-500), or liquid damage to the charging circuit (AED 400+). Free diagnosis at our Media City workshop confirms which.",
+    a: "No MagSafe or USB-C charging LED on a known-good charger means power is not reaching the logic board. First eliminate the charger: borrow a known-good Apple charger and try it. If still no light, the likely causes are a failed DC-in board, a blown power rail fuse, or liquid damage to the charging circuit. Free diagnosis at our Media City workshop confirms which.",
   },
   {
     q: "Is it worth repairing a MacBook that won't turn on?",
-    a: "Yes in most cases. The data alone is often worth the AED 200 diagnosis cost - a Mac that appears dead frequently has a simple power fault. Most dead-Mac repairs cost AED 200-600, which is a fraction of a replacement Mac. Even in the worst case of logic board failure, component-level repair (AED 800-2500) is often cheaper than a new machine. We give you a free assessment so you can make an informed decision.",
+    a: "Yes in most cases. Diagnosis is free, and a Mac that appears dead frequently has a simple power fault. Most dead-Mac repairs cost a fraction of a replacement Mac. Even in the worst case of logic board failure, component-level repair is often cheaper than a new machine. We give you a free assessment so you can make an informed decision.",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function MacBookNotTurningOn() {
     {
       title: "MacBook Not Turning On Dubai? Dead Mac Fixed Same Day",
       description:
-        "MacBook not turning on in Dubai? Free diagnosis. SMC reset, logic board fault, dead battery, liquid damage. All models MacBook Air and Pro. Same-day service from AED 200. Call 055 741 3706.",
+        "MacBook not turning on in Dubai? Free diagnosis. SMC reset, logic board fault, dead battery, liquid damage. All models MacBook Air and Pro. Free diagnosis, same-day service. Call 055 741 3706.",
       path: "/macbook-not-turning-on-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },
@@ -154,7 +154,7 @@ export default function MacBookNotTurningOn() {
         warranty: "P90D",
         url: "/macbook-not-turning-on-dubai",
         description:
-          "MacBook not turning on repair in Dubai. Free diagnosis. Dead battery, blown fuse, liquid damage, DC-in board, T2 firmware. All models MacBook Air and Pro, Intel through M5. From AED 200.",
+          "MacBook not turning on repair in Dubai. Free diagnosis. Dead battery, blown fuse, liquid damage, DC-in board, T2 firmware. All models MacBook Air and Pro, Intel through M5. Free diagnosis.",
       }),
     ],
   );
@@ -187,7 +187,7 @@ export default function MacBookNotTurningOn() {
           imageAlt={HERO_ALT}
         >
           <p className="mt-md text-[16px] leading-relaxed text-text-muted max-w-[64ch]">
-            A MacBook that won't turn on is diagnosed free at MacBook Repair Dubai. The most common causes are a drained or dead battery (fix from AED 200), a blown fuse on the logic board (AED 300-500), liquid damage, or a failed DC-in board. Most dead Macs are repaired same-day once the cause is confirmed.
+            A MacBook that won't turn on is diagnosed free at MacBook Repair Dubai. The most common causes are a drained or dead battery, a blown fuse on the logic board, liquid damage, or a failed DC-in board. Most dead Macs are repaired same-day once the cause is confirmed.
           </p>
           <div className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
@@ -356,7 +356,7 @@ export default function MacBookNotTurningOn() {
                     Dead Mac? We diagnose free -- quote before any work
                   </h3>
                   <p className="m-0 mt-2 text-amber-200/70 text-[15px]">
-                    Most power faults fixed same-day from AED 200. No fix, no charge.
+                    Most power faults fixed same-day. No fix, no charge.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-sm shrink-0">

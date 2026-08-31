@@ -8,7 +8,7 @@ export default function MacBookProM5Repair() {
       chip="M5"
       years="2025 – 2026"
       seoTitle="MacBook Pro M5 Repair Dubai - 14&quot; &amp; 16&quot; All M5 Models | AED 200"
-      seoDescription="MacBook Pro M5 repair Dubai. All variants: 14&quot; M5, M5 Pro (A3426), M5 Max (A3427), 16&quot; M5 Pro (A3428), M5 Max (A3429). Same-day service from AED 200. Call 055 741 3706."
+      seoDescription="MacBook Pro M5 repair Dubai. All variants: 14&quot; M5, M5 Pro (A3426), M5 Max (A3427), 16&quot; M5 Pro (A3428), M5 Max (A3429). Same-day service. Call 055 741 3706."
       eyebrow="MacBook Pro M5 specialist"
       h1="MacBook Pro M5 Repair Dubai"
       heroDescription="Apple's most powerful laptop chip. Whether you have the 14&quot; M5, M5 Pro, M5 Max, or the 16&quot; M5 Pro and M5 Max, our Dubai technicians service every variant with same-day turnaround."

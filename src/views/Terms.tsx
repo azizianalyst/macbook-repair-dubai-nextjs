@@ -46,7 +46,7 @@ export default function Terms() {
         <ul>
           <li>The initial diagnosis is free for every device, every customer, no exceptions.</li>
           <li>A written quote is sent to your WhatsApp number before any work begins.</li>
-          <li>If a board or part cannot be repaired, you owe AED 0 - no diagnostic fee, no inspection charge, no labour fee.</li>
+          <li>If a board or part cannot be repaired, you owe nothing - no diagnostic fee, no inspection charge, no labour fee.</li>
           <li>You may collect the unrepaired device at any time during business hours.</li>
           <li>Two exceptions where a fee may apply: (a) data recovery attempts on physically damaged drives where labour is quoted in writing in advance; (b) liquid damage cases where the cleaning step has already been authorised in writing.</li>
         </ul>

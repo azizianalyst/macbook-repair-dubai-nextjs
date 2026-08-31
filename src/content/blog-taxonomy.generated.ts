@@ -7,9 +7,9 @@ export const CATEGORIES: BlogCategory[] = [
   {
     "slug": "repair-costs",
     "name": "Repair Costs",
-    "eyebrow": "AED pricing · 2026",
+    "eyebrow": "Repair costs · 2026",
     "blurb": "What every Apple repair actually costs in Dubai - real AED prices.",
-    "intro": "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - each with current April 2026 AED pricing, model-by-model tables, and a side-by-side against Apple Store quotes. No call-for-price games: we publish the numbers so you can budget before you book. Every figure here is what our Dubai Media City workshop charges, backed by a warranty of up to 12 months and our no-fix-no-charge promise.",
+    "intro": "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - what actually drives the cost of each repair, how it compares with an Apple Store quote, and what to check before you book. Every guide reflects what our Dubai Media City workshop sees day to day, backed by a warranty of up to 12 months and our no-fix-no-charge promise. Free diagnosis first, then a fixed quote before any work starts.",
     "types": [
       "Cost guide",
       "Cost comparison",

@@ -254,7 +254,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
               <SectionHeading
                 eyebrow="What customers say"
                 title="Real iPhone-repair reviews"
-                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 216+ →</a></>}
+                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 232+ →</a></>}
               />
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>

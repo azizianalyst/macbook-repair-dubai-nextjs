@@ -15,6 +15,7 @@ import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/Quick
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
@@ -39,25 +40,25 @@ const PRICING: PricingRow[] = [
 
 const PROBLEMS = [
   { title: "Sticky or repeating keys (butterfly 2016-2019)",
-    body: "Classic butterfly failure - a single dust particle under the dome triggers double-presses or no-press. Apple's own service program ended December 2022. The workshop replaces the entire top case (keyboard + battery + speakers as one bonded unit) for AED 700 because Apple designed the butterfly to be unrepairable per-key." },
+    body: "Classic butterfly failure - a single dust particle under the dome triggers double-presses or no-press. Apple's own service program ended December 2022. The workshop replaces the entire top case (keyboard + battery + speakers as one bonded unit) because Apple designed the butterfly to be unrepairable per-key." },
   { title: "Dead key - letter, number, or modifier won't register",
-    body: "On Magic Keyboard (2019+) a single key cap and scissor switch can be swapped for AED 250. On butterfly models (2016-2019) the entire top case must go. On 2012-2015 Retina the keyboard alone (without battery) costs AED 450." },
+    body: "On Magic Keyboard (2019+) a single key cap and scissor switch can be swapped individually. On butterfly models (2016-2019) the entire top case must go. On 2012-2015 Retina the keyboard alone can be replaced without the battery." },
   { title: "Worn key letter - print rubbed off the cap",
-    body: "Common on the E, A, S, N, T, space, and right shift after 2-3 years. AED 150 per cap on Magic Keyboard. On butterfly the cap pops off easily but the silicone membrane underneath is the bigger failure point - top case swap recommended." },
+    body: "Common on the E, A, S, N, T, space, and right shift after 2-3 years. Individual caps are replaceable on Magic Keyboard. On butterfly the cap pops off easily but the silicone membrane underneath is the bigger failure point - top case swap recommended." },
   { title: "Backlight stopped working - keys still work",
-    body: "Failed backlight chip on the keyboard PCB. AED 250 chip-level repair on Magic Keyboard, no full-keyboard swap needed. On butterfly the LED strip is bonded into the top case - full case at AED 700." },
+    body: "Failed backlight chip on the keyboard PCB. Chip-level repair on Magic Keyboard, no full-keyboard swap needed. On butterfly the LED strip is bonded into the top case, so the full case goes." },
   { title: "Liquid spill - multiple keys dead",
-    body: "Coffee, juice, water, or beer through the keyboard. The membrane corrodes within 6-12 hours. Same-day ultrasonic clean (AED 350) saves the keyboard in 60% of cases. If the membrane is gone, keyboard or top case replacement at AED 450 to AED 700." },
+    body: "Coffee, juice, water, or beer through the keyboard. The membrane corrodes within 6-12 hours. A same-day ultrasonic clean saves the keyboard in 60% of cases. If the membrane is gone, the keyboard or top case is replaced." },
   { title: "Caps lock or function keys stuck on",
-    body: "Karabiner Elements or a Bluetooth keyboard pairing conflict in 30% of cases (free fix). Mechanical fault on the remaining 70% - single key swap on Magic Keyboard for AED 150 to AED 250." },
+    body: "Karabiner Elements or a Bluetooth keyboard pairing conflict in 30% of cases (free fix). Mechanical fault on the remaining 70% - a single key swap on Magic Keyboard." },
   { title: "Touch ID won't read fingerprint after a knock",
-    body: "Touch ID is part of the top case on every modern MacBook. After a drop the sensor flex disconnects. AED 350 to AED 700 top case swap re-pairs Touch ID with the T2/M-series secure enclave on the bench." },
+    body: "Touch ID is part of the top case on every modern MacBook. After a drop the sensor flex disconnects. A top case swap re-pairs Touch ID with the T2/M-series secure enclave on the bench." },
   { title: "Force-touch trackpad clicks, keys feel mushy",
-    body: "Battery swelling under the keyboard pushes the membrane up. Battery + keyboard combo job - AED 1,050 (battery 450 + top case 700) on butterfly. AED 800 (battery 450 + Magic Keyboard 350) on Apple Silicon." },
+    body: "Battery swelling under the keyboard pushes the membrane up. Battery and keyboard are done as one combo job on butterfly, and as a cheaper pair on Apple Silicon." },
   { title: "Wrong layout - UK keyboard on US software (or vice versa)",
-    body: "Karabiner Elements remap is free and reversible. If you want a physical Russian, Arabic, or French AZERTY layout, the workshop sources OEM-spec keyboards in 1-2 days at AED 450." },
+    body: "Karabiner Elements remap is free and reversible. If you want a physical Russian, Arabic, or French AZERTY layout, the workshop sources OEM-spec keyboards in 1-2 days." },
   { title: "Top row function keys don't work (Touch Bar dead)",
-    body: "Touch Bar driver crash (free fix via SMC/NVRAM reset) on 25% of cases. Touch Bar IC failure on 75% - the workshop fits a replacement Touch Bar assembly for AED 600, separate from a full top case swap." },
+    body: "Touch Bar driver crash (free fix via SMC/NVRAM reset) on 25% of cases. Touch Bar IC failure on 75% - the workshop fits a replacement Touch Bar assembly, separate from a full top case swap." },
 ];
 
 const STEPS = [
@@ -77,17 +78,17 @@ const STEPS = [
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook keyboard repair cost in Dubai?",
-    a: "From AED 150 for a single key cap on Magic Keyboard. AED 350 for a full Magic Keyboard swap on Apple Silicon and 2019+ models. AED 700 for a butterfly top case on the 2016-2019 MacBook Pro and 12\" Retina (the butterfly design forces the keyboard, battery, and speakers to be replaced as one unit). AED 450 for a 2012-2015 Retina keyboard." },
+    a: "It depends on the keyboard generation: a single key cap on a Magic Keyboard, a full Magic Keyboard swap on Apple Silicon, a butterfly top case on 2016-2019 Pros, or a 2012-2015 Retina keyboard are four different jobs. Free diagnosis first, then a firm quote. Send us the model on WhatsApp." },
   { q: "How long does MacBook keyboard repair take?",
     a: "Single Magic Keyboard key: 30 minutes same day. Full Magic Keyboard swap on Apple Silicon: 4 hours, same day to next day. Butterfly top case (with battery and speakers): 1 to 2 days because the top case must come from local distributor stock and the trackpad re-pairing takes 90 minutes." },
   { q: "Why can't you replace just one butterfly key?",
-    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's own butterfly service program (ended December 2022) replaced the entire top case - same approach here for AED 700, vs Apple's typical AED 1,800 to AED 2,400 charge." },
+    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's own butterfly service program (ended December 2022) replaced the entire top case - same approach here, and Apple typically charges AED 1,800 to AED 2,400 for it." },
   { q: "What's the difference between butterfly and Magic Keyboard?",
     a: "Butterfly (2015-2019): low-profile, thin, prone to dust failures, individual keys can't be replaced. Magic Keyboard (2019+ on Pro 16\", 2020+ on all other models): scissor switch, taller travel, individually replaceable key caps and scissor mechanisms. Apple Silicon MacBooks all use Magic Keyboard - much easier and cheaper to repair." },
   { q: "Can you replace the keyboard layout from Arabic to English (or vice versa)?",
-    a: "Yes - physical layout swaps are AED 450 and take 1 to 2 days. Common requests: UK to US (or vice versa), Arabic to English, English to Russian, English to French AZERTY. The workshop sources the OEM-spec keyboard for the exact MacBook model - same backlight, same Touch ID compatibility." },
+    a: "Yes - physical layout swaps take 1 to 2 days. Common requests: UK to US (or vice versa), Arabic to English, English to Russian, English to French AZERTY. The workshop sources the OEM-spec keyboard for the exact MacBook model - same backlight, same Touch ID compatibility." },
   { q: "What if I just spilled liquid on the keyboard right now?",
-    a: "Power off immediately. Turn the MacBook upside down on a towel. Do NOT power it on to test. Do NOT use rice. WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland. Same-day ultrasonic clean for AED 350 saves the keyboard in 60% of cases if it arrives within 24 hours." },
+    a: "Power off immediately. Turn the MacBook upside down on a towel. Do NOT power it on to test. Do NOT use rice. WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland. A same-day ultrasonic clean saves the keyboard in 60% of cases if it arrives within 24 hours." },
   { q: "Will Touch ID still work after the keyboard is replaced?",
     a: "Yes - the workshop pairs the new Touch ID sensor with the T2/M-series secure enclave on the bench. Takes about 15 minutes after the top case is fitted. If the secure enclave is locked (very rare), Touch ID is reset and you re-enrol your fingerprint at first login." },
   { q: "Do you use genuine Apple keyboards?",
@@ -97,17 +98,17 @@ const FAQS: FAQ[] = [
   { q: "Can I use my MacBook with one dead key while I wait for repair?",
     a: "Short term yes - Karabiner Elements (free) lets you remap the dead key to an unused one (e.g. caps lock to letter \"A\"). Long term no - dead keys typically multiply on butterfly keyboards and the eventual top-case swap is the same price whether 1 key or 10 are dead." },
   { q: "Why are butterfly keyboards on the 2016-2019 MacBook Pro so unreliable?",
-    a: "Apple's first-generation butterfly switch (2015 12\" MacBook) had no dust ingress protection. The second-gen (2016-2017 Pro) added a silicone membrane but dust still entered. The third-gen (2018-2019) added a slightly improved seal but failure rates remained at 5-10x scissor switches. Apple ran a 4-year service program (ended December 2022). The workshop still services these for AED 700 vs Apple's AED 1,800 to AED 2,400." },
+    a: "Apple's first-generation butterfly switch (2015 12\" MacBook) had no dust ingress protection. The second-gen (2016-2017 Pro) added a silicone membrane but dust still entered. The third-gen (2018-2019) added a slightly improved seal but failure rates remained at 5-10x scissor switches. Apple ran a 4-year service program (ended December 2022). The workshop still services these; Apple lists about AED 1,800 to AED 2,400." },
   { q: "Do you offer free pickup for keyboard repair?",
-    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Sharjah and Abu Dhabi pickup AED 100 each way." },
+    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
 
 const COMPARISON = [
   ["Repair window",                "Same day to 2 days",                          "5 to 14 business days, mail-in"],
-  ["Single key cap (Magic)",       "AED 150",                                      "Refused - full keyboard only"],
-  ["Magic Keyboard full swap",     "AED 350",                                      "AED 1,449 (Apple list)"],
-  ["Butterfly top case (out of program)", "AED 700",                              "AED 1,829 to AED 2,449"],
-  ["Layout change (Arabic / Russian)", "AED 450",                                 "Refused"],
+  ["Single key cap (Magic)",       "Free diagnosis, then a quote",                 "Refused - full keyboard only"],
+  ["Magic Keyboard full swap",     "Free diagnosis, then a quote",                 "AED 1,449 (Apple list)"],
+  ["Butterfly top case (out of program)", "Free diagnosis, then a quote",         "AED 1,829 to AED 2,449 (Apple list)"],
+  ["Layout change (Arabic / Russian)", "Free diagnosis, then a quote",            "Refused"],
   ["Free pickup in Dubai",         "Yes",                                          "No, customer must courier"],
   ["Warranty",                     "15 days written",                              "12 months"],
   ["Vintage/obsolete (pre-2017)",  "Yes",                                          "Refused"],
@@ -115,7 +116,7 @@ const COMPARISON = [
 
 const TRUST = [
   { value: "2,100+", label: "Keyboards fitted since 2004" },
-  { value: "From AED 150", label: "Single key cap" },
+  { value: "Free", label: "Diagnosis on every model" },
   { value: "Same day", label: "Magic Keyboard swaps" },
   { value: "15 days", label: "Written warranty" },
 ];
@@ -123,7 +124,6 @@ const TRUST = [
 const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
 const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
-const aed = (n: number) => `AED ${n.toLocaleString()}`;
 
 export default function MacBookKeyboardRepair() {
   const reviews = pickReviews([
@@ -137,9 +137,9 @@ export default function MacBookKeyboardRepair() {
 
   useSeo(
     {
-      title: "MacBook Keyboard Repair Dubai - From AED 150",
+      title: "MacBook Keyboard Repair Dubai - Same-Day Key Caps",
       description:
-        "MacBook keyboard repair Dubai from AED 150. Magic Keyboard, butterfly top case, key caps, layout swaps. Same-day. 15-day warranty. 055 741 3706.",
+        "MacBook keyboard repair Dubai. Magic Keyboard, butterfly top case, key caps, layout swaps. Free diagnosis, same-day. 15-day warranty. 055 741 3706.",
       path: "/macbook-keyboard-repair-dubai",
     },
     [
@@ -183,7 +183,7 @@ export default function MacBookKeyboardRepair() {
                   MacBook Keyboard Repair Dubai
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
-                  Sticky keys, dead keys, butterfly failures, layout swaps. Magic Keyboard from AED 150 same day. Butterfly top case from AED 700, 1-2 days.
+                  Sticky keys, dead keys, butterfly failures, layout swaps. Magic Keyboard work same day. Butterfly top case in 1-2 days.
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
@@ -235,7 +235,7 @@ export default function MacBookKeyboardRepair() {
               </span>
             </div>
             <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-              {[["Starting price", "AED 150"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days"], ["Diagnosis", "FREE"]].map(([k, v]) => (
                 <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
                   <span className="text-text-faint">{k}</span>
                   <span className="font-semibold text-text">{v}</span>
@@ -264,7 +264,7 @@ export default function MacBookKeyboardRepair() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-keyboard-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook keyboard repair in Dubai starts at AED 150 for a single key cap on Magic Keyboard, AED 350 for a full Magic Keyboard swap on Apple Silicon, and AED 700 for a butterfly top case on the 2016-2019 MacBook Pro. The workshop has fitted 2,100+ MacBook keyboards since 2004 - every Magic Keyboard since 2019, every butterfly top case since 2016, every scissor keyboard back to 2008. The butterfly mechanism is unique: Apple designed the keys, battery, and speakers to be replaced as one bonded unit, which is why Apple's own service program (ended December 2022) and the workshop both swap the entire top case rather than individual keys. Magic Keyboard (2019+) is far easier to service - single keys and scissor switches replaceable for AED 150 to AED 250.
+            MacBook keyboard repair in Dubai covers a single key cap on Magic Keyboard, a full Magic Keyboard swap on Apple Silicon, and a butterfly top case on the 2016-2019 MacBook Pro. The workshop has fitted 2,100+ MacBook keyboards since 2004 - every Magic Keyboard since 2019, every butterfly top case since 2016, every scissor keyboard back to 2008. The butterfly mechanism is unique: Apple designed the keys, battery, and speakers to be replaced as one bonded unit, which is why Apple's own service program (ended December 2022) and the workshop both swap the entire top case rather than individual keys. Magic Keyboard (2019+) is far easier to service - single keys and scissor switches are individually replaceable.
           </p></LinkifyProse>
         </section>
 
@@ -346,8 +346,8 @@ export default function MacBookKeyboardRepair() {
               </Card>
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">OEM-spec butterfly top cases</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. AED 700 vs Apple's AED 1,800 to AED 2,400.</p>
-                <p className="m-0 mono text-[13px] text-accent">AED 700 - same 15-day warranty</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. Apple lists about AED 1,800 to AED 2,400 for the same job.</p>
+                <p className="m-0 mono text-[13px] text-accent">Same 15-day warranty</p>
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
@@ -381,7 +381,7 @@ export default function MacBookKeyboardRepair() {
                 <div>
                   <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Keyboard Repair · Same day · 1-2 days</p>
                   <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your keyboard quote in 4 minutes</h3>
-                  <p className="m-0 mt-2 text-text-muted text-[15px]">Starting from <strong className="text-text">AED 150</strong>. WhatsApp the model + a short video of which keys fail.</p>
+                  <p className="m-0 mt-2 text-text-muted text-[15px]">Free diagnosis, then a firm quote. WhatsApp the model + a short video of which keys fail.</p>
                 </div>
                 <CtaRow whatsappMessage="Hi Usman, MacBook keyboard repair quote please. Model + which keys: " />
               </div>
@@ -469,7 +469,7 @@ export default function MacBookKeyboardRepair() {
                 <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">All six reviews are verbatim from Google</p>
                 <h2 className="m-0 text-text">Real keyboard-repair reviews</h2>
               </div>
-              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 216+ <ArrowRight size={15} aria-hidden /></Link>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 232+ <ArrowRight size={15} aria-hidden /></Link>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
@@ -498,9 +498,9 @@ export default function MacBookKeyboardRepair() {
             <SectionHead title="Related MacBook repairs" />
             <div className="grid gap-lg md:grid-cols-3">
               {[
-                { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450, 2 hours. Often paired with butterfly top case swap." },
-                { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap from AED 350. Touch ID re-pair included on supported models." },
-                { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid spilled on the keyboard? AED 700 ultrasonic clean - bring it in within 24 hours." },
+                { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Around 2 hours. Often paired with a butterfly top case swap." },
+                { label: "MacBook Trackpad Repair",     href: "/macbook-trackpad-repair-dubai",     description: "Trackpad swap with Touch ID re-pair on supported models." },
+                { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid spilled on the keyboard? Ultrasonic clean - bring it in within 24 hours." },
               ].map((r) => (
                 <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
                   <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
@@ -590,7 +590,9 @@ function PriceTable({ rows }: { rows: PricingRow[] }) {
           {rows.map((r) => (
             <tr key={r.model} className="border-b border-border last:border-0">
               <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm mono whitespace-nowrap text-accent font-semibold">{aed(r.price)}</td>
+              <td className="px-lg py-sm whitespace-nowrap">
+                <PriceCTA compact message={`Hi, keyboard repair price for ${r.model}?`} />
+              </td>
               <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
             </tr>
           ))}

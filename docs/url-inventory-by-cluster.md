@@ -1,0 +1,656 @@
+# URL inventory by cluster — macbook-repair-dubai.ae
+
+Generated 2026-08-30 from src/app (excludes /admin and dynamic routes).
+
+**Total live URLs: 588**
+
+| Cluster | Pages |
+|---|---|
+| Blog | 195 |
+| MacBook — model & service pages | 83 |
+| MacBook — generic service/fault | 72 |
+| iPhone / iPod | 56 |
+| iPad | 40 |
+| Other / long-tail question pages | 35 |
+| iMac | 26 |
+| Mac / Apple umbrella | 18 |
+| Mac mini | 15 |
+| Mac Studio | 15 |
+| Trust / legal / utility | 11 |
+| Mac Pro | 10 |
+| Area / location | 7 |
+| Data recovery | 4 |
+| Apple Watch | 1 |
+
+## Blog (195)
+
+- `/blog/apple-intelligence-on-old-iphones`
+- `/blog/apple-mac-pro-discontinued-what-now`
+- `/blog/apple-news`
+- `/blog/apple-repair-cost-dubai`
+- `/blog/apple-silicon-vs-intel-repair-difference`
+- `/blog/applecare-vs-independent-repair-dubai`
+- `/blog/best-imac-for-business-dubai`
+- `/blog/best-mac-for-creative-pros-dubai`
+- `/blog/best-mac-for-developers-dubai-2026`
+- `/blog/best-macbook-for-students-dubai-2026`
+- `/blog/best-refurbished-iphone-dubai`
+- `/blog/best-way-to-sell-old-iphone-dubai`
+- `/blog/buying-guides`
+- `/blog/care-maintenance`
+- `/blog/data-recovery-broken-macbook-2026`
+- `/blog/dubai-shopping-festival-apple-deals`
+- `/blog/fixes`
+- `/blog/free-pickup-delivery-dubai-how-it-works`
+- `/blog/genuine-parts-vs-quality-alternative-explained`
+- `/blog/how-much-is-my-iphone-worth-dubai`
+- `/blog/how-to-factory-reset-iphone-before-selling`
+- `/blog/icloud-locked-iphone-what-to-do`
+- `/blog/imac-no-display-black-screen-dubai`
+- `/blog/imac-not-turning-on-power-supply-issues`
+- `/blog/imac-overheating-fan-noise-dubai`
+- `/blog/imac-running-slow-dubai`
+- `/blog/imac-screen-repair-cost-dubai`
+- `/blog/imac-ssd-upgrade-dubai`
+- `/blog/imac-vs-mac-mini-vs-mac-studio`
+- `/blog/ipad-air-m4-vs-pro-m5-2026`
+- `/blog/ipad-battery-drain-dubai`
+- `/blog/ipad-battery-replacement-cost-dubai`
+- `/blog/ipad-not-charging-dubai`
+- `/blog/ipad-screen-repair-cost-dubai`
+- `/blog/ipad-screen-repair-cost-dubai-2026`
+- `/blog/ipad-water-damage-repair-dubai-guide`
+- `/blog/iphone-15-pro-overheating-fix`
+- `/blog/iphone-15-vs-iphone-17-repair-cost-comparison`
+- `/blog/iphone-17-vs-iphone-air-which-buy`
+- `/blog/iphone-air-design-engineering-marvel`
+- `/blog/iphone-air-what-not-to-do`
+- `/blog/iphone-back-glass-repair-cost-dubai`
+- `/blog/iphone-battery-replacement-cost-dubai`
+- `/blog/iphone-battery-replacement-cost-dubai-all-models`
+- `/blog/iphone-cracked-screen-repair-dubai`
+- `/blog/iphone-fold-2026-what-to-expect`
+- `/blog/iphone-not-charging-7-fixes`
+- `/blog/iphone-not-turning-on-dubai`
+- `/blog/iphone-overheating-dubai-summer-fix`
+- `/blog/iphone-repair-near-me-dubai`
+- `/blog/iphone-repair-vs-applecare-which-better`
+- `/blog/iphone-repair-vs-replace-decision-guide`
+- `/blog/iphone-screen-cracked-is-it-urgent`
+- `/blog/iphone-screen-repair-cost-dubai-2026`
+- `/blog/iphone-screen-repair-voucher-dubai`
+- `/blog/iphone-screen-replaced-but-issues-after`
+- `/blog/iphone-water-damage-action-plan`
+- `/blog/iphone-water-damage-repair-cost-dubai`
+- `/blog/iphone-water-damage-repair-dubai`
+- `/blog/laptop-repair-vs-buy-new-2026`
+- `/blog/lightning-vs-usb-c-explained-2026`
+- `/blog/m5-chip-explained-vs-m4`
+- `/blog/mac-mini-m4-worth-it`
+- `/blog/mac-mini-no-display-hdmi-dubai`
+- `/blog/mac-mini-not-turning-on-dubai`
+- `/blog/mac-mini-overheating-dubai`
+- `/blog/mac-mini-running-slow-fix`
+- `/blog/mac-mini-ssd-ram-upgrade-dubai`
+- `/blog/mac-mini-vs-mac-studio-2026`
+- `/blog/mac-pro-2019-still-worth-it`
+- `/blog/mac-pro-gpu-repair-dubai`
+- `/blog/mac-pro-no-display-dubai`
+- `/blog/mac-pro-not-turning-on-dubai`
+- `/blog/mac-pro-ssd-upgrade-dubai`
+- `/blog/mac-studio-m3-ultra-vs-m4-max-which`
+- `/blog/mac-studio-no-display-dubai`
+- `/blog/mac-studio-not-turning-on-dubai`
+- `/blog/mac-studio-overheating-dubai`
+- `/blog/macbook-air-battery-drain-dubai`
+- `/blog/macbook-air-intel-common-problems-dubai`
+- `/blog/macbook-air-keyboard-not-working-dubai`
+- `/blog/macbook-air-m1-common-problems-dubai`
+- `/blog/macbook-air-m2-common-problems-dubai`
+- `/blog/macbook-air-m2-screen-lines-dubai`
+- `/blog/macbook-air-m3-common-problems-dubai`
+- `/blog/macbook-air-m3-screen-flickering-dubai`
+- `/blog/macbook-air-m4-common-problems-dubai`
+- `/blog/macbook-air-m5-common-problems-dubai`
+- `/blog/macbook-air-not-charging-dubai`
+- `/blog/macbook-air-overheating-dubai`
+- `/blog/macbook-air-running-slow-fix-dubai`
+- `/blog/macbook-air-screen-repair-cost-dubai`
+- `/blog/macbook-air-vs-macbook-pro-2026`
+- `/blog/macbook-air-wifi-bluetooth-fix-dubai`
+- `/blog/macbook-air-wont-turn-on-fix-dubai`
+- `/blog/macbook-back-to-school-dubai`
+- `/blog/macbook-battery-health-check-guide`
+- `/blog/macbook-battery-replacement-cost-2026`
+- `/blog/macbook-black-screen-fix`
+- `/blog/macbook-fan-loud-always-on`
+- `/blog/macbook-flexgate-explained`
+- `/blog/macbook-kernel-panic-restarts-fix`
+- `/blog/macbook-keyboard-not-working-fix`
+- `/blog/macbook-keyboard-repair-cost-by-model`
+- `/blog/macbook-logic-board-repair-cost-dubai`
+- `/blog/macbook-maintenance-checklist-dubai`
+- `/blog/macbook-neo-worth-buying-2026`
+- `/blog/macbook-not-turning-on-fix-guide`
+- `/blog/macbook-pro-battery-draining-fast`
+- `/blog/macbook-pro-butterfly-keyboard-failing-dubai`
+- `/blog/macbook-pro-intel-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-intel-common-problems-dubai`
+- `/blog/macbook-pro-intel-flexgate-dubai`
+- `/blog/macbook-pro-intel-gpu-failure-dubai`
+- `/blog/macbook-pro-intel-not-turning-on-dubai`
+- `/blog/macbook-pro-intel-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m1-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-m1-battery-swelling-dubai`
+- `/blog/macbook-pro-m1-common-problems-dubai`
+- `/blog/macbook-pro-m1-kernel-panic-dubai`
+- `/blog/macbook-pro-m1-not-turning-on-dubai`
+- `/blog/macbook-pro-m1-screen-flickering-dubai`
+- `/blog/macbook-pro-m1-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m1-touch-bar-failing-dubai`
+- `/blog/macbook-pro-m2-battery-draining-fast-dubai`
+- `/blog/macbook-pro-m2-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-m2-common-problems-dubai`
+- `/blog/macbook-pro-m2-logic-board-failure-dubai`
+- `/blog/macbook-pro-m2-not-turning-on-dubai`
+- `/blog/macbook-pro-m2-screen-lines-dubai`
+- `/blog/macbook-pro-m2-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m2-ssd-degrading-fast-dubai`
+- `/blog/macbook-pro-m2-wifi-dropping-dubai`
+- `/blog/macbook-pro-m3-battery-draining-when-not-in-use-dubai`
+- `/blog/macbook-pro-m3-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-m3-common-problems-dubai`
+- `/blog/macbook-pro-m3-hdmi-wrong-resolution-dubai`
+- `/blog/macbook-pro-m3-not-turning-on-dubai`
+- `/blog/macbook-pro-m3-screen-going-dark-dubai`
+- `/blog/macbook-pro-m3-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m3-sd-card-not-showing-dubai`
+- `/blog/macbook-pro-m3-wifi-dropping-dubai`
+- `/blog/macbook-pro-m4-battery-draining-fast-dubai`
+- `/blog/macbook-pro-m4-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-m4-common-problems-dubai`
+- `/blog/macbook-pro-m4-external-monitor-not-detected-dubai`
+- `/blog/macbook-pro-m4-gets-hot-lid-closed-dubai`
+- `/blog/macbook-pro-m4-keyboard-not-working-dubai`
+- `/blog/macbook-pro-m4-m5-common-problems-dubai`
+- `/blog/macbook-pro-m4-memory-pressure-16gb-dubai`
+- `/blog/macbook-pro-m4-not-turning-on-dubai`
+- `/blog/macbook-pro-m4-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m4-vs-m5-worth-upgrade`
+- `/blog/macbook-pro-m4-wifi-dropping-dubai`
+- `/blog/macbook-pro-m5-battery-draining-overnight-dubai`
+- `/blog/macbook-pro-m5-battery-replacement-cost-dubai`
+- `/blog/macbook-pro-m5-common-problems-dubai`
+- `/blog/macbook-pro-m5-external-monitor-not-working-dubai`
+- `/blog/macbook-pro-m5-fan-noise-dubai`
+- `/blog/macbook-pro-m5-not-turning-on-dubai`
+- `/blog/macbook-pro-m5-oled-display-issues-dubai`
+- `/blog/macbook-pro-m5-screen-repair-cost-dubai`
+- `/blog/macbook-pro-m5-throttling-fix-dubai`
+- `/blog/macbook-pro-m5-vs-apple-store-repair-cost`
+- `/blog/macbook-pro-m5-wifi-slow-fix-dubai`
+- `/blog/macbook-pro-m5-wont-charge-past-80-dubai`
+- `/blog/macbook-pro-not-charging-fix-dubai`
+- `/blog/macbook-pro-overheating-fix-dubai`
+- `/blog/macbook-pro-screen-replacement-cost-dubai`
+- `/blog/macbook-repair-warranty-explained`
+- `/blog/macbook-running-slow-10-fixes`
+- `/blog/macbook-screen-flickering-fix`
+- `/blog/macbook-screen-repair-cost-dubai-2026`
+- `/blog/macbook-stuck-on-apple-logo`
+- `/blog/macbook-touch-bar-not-working`
+- `/blog/macbook-water-damage-repair-cost-success-rates`
+- `/blog/macbook-wifi-not-working-fix`
+- `/blog/macbook-wont-charge-fixes`
+- `/blog/no-fix-no-charge-policy-explained`
+- `/blog/protect-macbook-dubai-summer-heat`
+- `/blog/ramadan-hours-apple-repair-dubai`
+- `/blog/repair-costs`
+- `/blog/sell-trade-in`
+- `/blog/should-i-buy-iphone-17e-or-iphone-16`
+- `/blog/should-i-buy-refurbished-macbook-dubai`
+- `/blog/tag/imac`
+- `/blog/tag/ipad`
+- `/blog/tag/iphone`
+- `/blog/tag/mac`
+- `/blog/tag/macbook`
+- `/blog/transparent-repair-pricing-explained`
+- `/blog/troubleshoot-charging-on-new-iphone`
+- `/blog/water-damage-macbook-immediate-action`
+- `/blog/why-21-years-experience-matters`
+- `/blog/why-us`
+
+## MacBook — model & service pages (83)
+
+- `/macbook-air-13-intel-2018-repair-dubai`
+- `/macbook-air-13-intel-2019-repair-dubai`
+- `/macbook-air-13-intel-2020-repair-dubai`
+- `/macbook-air-13-m1-2020-repair-dubai`
+- `/macbook-air-13-m2-2022-repair-dubai`
+- `/macbook-air-13-m3-2024-repair-dubai`
+- `/macbook-air-13-m4-2025-repair-dubai`
+- `/macbook-air-13-m5-2026-repair-dubai`
+- `/macbook-air-15-m2-2023-repair-dubai`
+- `/macbook-air-15-m3-2024-repair-dubai`
+- `/macbook-air-15-m4-2025-repair-dubai`
+- `/macbook-air-15-m5-2026-repair-dubai`
+- `/macbook-air-battery-replacement-dubai`
+- `/macbook-air-charging-port-repair-dubai`
+- `/macbook-air-intel-battery-replacement-dubai`
+- `/macbook-air-intel-charging-port-repair-dubai`
+- `/macbook-air-intel-keyboard-repair-dubai`
+- `/macbook-air-intel-repair-dubai`
+- `/macbook-air-intel-screen-repair-dubai`
+- `/macbook-air-keyboard-repair-dubai`
+- `/macbook-air-m1-battery-replacement-dubai`
+- `/macbook-air-m1-keyboard-repair-dubai`
+- `/macbook-air-m1-repair-dubai`
+- `/macbook-air-m1-screen-repair-dubai`
+- `/macbook-air-m2-battery-replacement-dubai`
+- `/macbook-air-m2-charging-port-repair-dubai`
+- `/macbook-air-m2-keyboard-repair-dubai`
+- `/macbook-air-m2-repair-dubai`
+- `/macbook-air-m2-screen-repair-dubai`
+- `/macbook-air-m3-battery-replacement-dubai`
+- `/macbook-air-m3-keyboard-repair-dubai`
+- `/macbook-air-m3-repair-dubai`
+- `/macbook-air-m3-screen-repair-dubai`
+- `/macbook-air-m4-battery-replacement-dubai`
+- `/macbook-air-m4-keyboard-repair-dubai`
+- `/macbook-air-m4-repair-dubai`
+- `/macbook-air-m4-screen-repair-dubai`
+- `/macbook-air-m5-repair-dubai`
+- `/macbook-air-repair-dubai`
+- `/macbook-air-screen-repair-dubai`
+- `/macbook-air-screen-replacement-dubai`
+- `/macbook-neo-a18-repair-dubai`
+- `/macbook-neo-battery-replacement-dubai`
+- `/macbook-neo-keyboard-repair-dubai`
+- `/macbook-neo-repair-dubai`
+- `/macbook-neo-screen-repair-dubai`
+- `/macbook-pro-13-intel-2019-repair-dubai`
+- `/macbook-pro-13-intel-2020-repair-dubai`
+- `/macbook-pro-13-m1-2020-repair-dubai`
+- `/macbook-pro-13-m2-2022-repair-dubai`
+- `/macbook-pro-14-m1-pro-2021-repair-dubai`
+- `/macbook-pro-14-m2-pro-2023-repair-dubai`
+- `/macbook-pro-14-m3-2023-repair-dubai`
+- `/macbook-pro-14-m4-2024-repair-dubai`
+- `/macbook-pro-14-m5-2025-repair-dubai`
+- `/macbook-pro-14-m5-max-2026-repair-dubai`
+- `/macbook-pro-14-m5-pro-2026-repair-dubai`
+- `/macbook-pro-16-m1-pro-2021-repair-dubai`
+- `/macbook-pro-16-m2-pro-2023-repair-dubai`
+- `/macbook-pro-16-m3-2023-repair-dubai`
+- `/macbook-pro-16-m4-2024-repair-dubai`
+- `/macbook-pro-16-m5-max-2026-repair-dubai`
+- `/macbook-pro-16-m5-pro-2026-repair-dubai`
+- `/macbook-pro-battery-replacement-dubai`
+- `/macbook-pro-intel-repair-dubai`
+- `/macbook-pro-m1-battery-replacement-dubai`
+- `/macbook-pro-m1-repair-dubai`
+- `/macbook-pro-m1-screen-repair-dubai`
+- `/macbook-pro-m2-battery-replacement-dubai`
+- `/macbook-pro-m2-repair-dubai`
+- `/macbook-pro-m2-screen-repair-dubai`
+- `/macbook-pro-m3-battery-replacement-dubai`
+- `/macbook-pro-m3-repair-dubai`
+- `/macbook-pro-m3-screen-repair-dubai`
+- `/macbook-pro-m4-battery-replacement-dubai`
+- `/macbook-pro-m4-repair-dubai`
+- `/macbook-pro-m4-screen-repair-dubai`
+- `/macbook-pro-m4-with-thunderbolt-5-and-portable-monitor`
+- `/macbook-pro-m5-battery-replacement-dubai`
+- `/macbook-pro-m5-repair-dubai`
+- `/macbook-pro-m5-screen-repair-dubai`
+- `/macbook-pro-repair-dubai`
+- `/macbook-pro-screen-repair-dubai`
+
+## MacBook — generic service/fault (72)
+
+- `/macbook-backup-service-dubai`
+- `/macbook-battery-replacement-dubai`
+- `/macbook-battery-swollen-repair-dubai`
+- `/macbook-camera-repair-dubai`
+- `/macbook-charging-port-repair-dubai`
+- `/macbook-cleaning-maintenance-dubai`
+- `/macbook-data-recovery-dubai`
+- `/macbook-flexgate-repair-dubai`
+- `/macbook-freezing-repair-dubai`
+- `/macbook-full-diagnostic-dubai`
+- `/macbook-gpu-repair-dubai`
+- `/macbook-guides`
+- `/macbook-hinge-repair-dubai`
+- `/macbook-insurance-dubai`
+- `/macbook-kernel-panic-dubai`
+- `/macbook-keyboard-repair-dubai`
+- `/macbook-logic-board-repair-dubai`
+- `/macbook-microphone-repair-dubai`
+- `/macbook-not-turning-on-dubai`
+- `/macbook-overheating-fix-dubai`
+- `/macbook-overheating-shutting-down-dubai`
+- `/macbook-power-button-repair-dubai`
+- `/macbook-ram-upgrade-dubai`
+- `/macbook-repair-abu-dhabi`
+- `/macbook-repair-ajman`
+- `/macbook-repair-al-ain`
+- `/macbook-repair-al-sufouh`
+- `/macbook-repair-arabian-ranches`
+- `/macbook-repair-barsha`
+- `/macbook-repair-barsha-heights`
+- `/macbook-repair-bur-dubai`
+- `/macbook-repair-business-bay`
+- `/macbook-repair-cost-calculator-dubai`
+- `/macbook-repair-deira`
+- `/macbook-repair-difc`
+- `/macbook-repair-discovery-gardens`
+- `/macbook-repair-downtown-dubai`
+- `/macbook-repair-dubai`
+- `/macbook-repair-dubai-hills`
+- `/macbook-repair-dubai-marina`
+- `/macbook-repair-emirates-living`
+- `/macbook-repair-fujairah`
+- `/macbook-repair-internet-city`
+- `/macbook-repair-jbr`
+- `/macbook-repair-jlt`
+- `/macbook-repair-jumeirah`
+- `/macbook-repair-jvc`
+- `/macbook-repair-kalba`
+- `/macbook-repair-karama`
+- `/macbook-repair-khor-fakkan`
+- `/macbook-repair-mirdif`
+- `/macbook-repair-motor-city`
+- `/macbook-repair-near-me`
+- `/macbook-repair-palm-jumeirah`
+- `/macbook-repair-production-city`
+- `/macbook-repair-ras-al-khaimah`
+- `/macbook-repair-sharjah`
+- `/macbook-repair-silicon-oasis`
+- `/macbook-repair-the-greens`
+- `/macbook-repair-umm-al-quwain`
+- `/macbook-safe-mode-repair-dubai`
+- `/macbook-screen-repair-dubai`
+- `/macbook-speaker-repair-dubai`
+- `/macbook-ssd-upgrade-dubai`
+- `/macbook-system-crashing-repair-dubai`
+- `/macbook-touch-bar-repair-dubai`
+- `/macbook-touch-id-repair-dubai`
+- `/macbook-trackpad-repair-dubai`
+- `/macbook-virus-removal-dubai`
+- `/macbook-water-damage-repair-dubai`
+- `/macbook-wifi-bluetooth-repair-dubai`
+- `/macbook-wont-charge-dubai`
+
+## iPhone / iPod (56)
+
+- `/iphone-13-mini-repair-dubai`
+- `/iphone-13-pro-max-repair-dubai`
+- `/iphone-13-pro-repair-dubai`
+- `/iphone-13-repair-dubai`
+- `/iphone-14-plus-repair-dubai`
+- `/iphone-14-pro-max-repair-dubai`
+- `/iphone-14-pro-repair-dubai`
+- `/iphone-14-repair-dubai`
+- `/iphone-15-plus-repair-dubai`
+- `/iphone-15-pro-max-repair-dubai`
+- `/iphone-15-pro-repair-dubai`
+- `/iphone-15-repair-dubai`
+- `/iphone-16-plus-repair-dubai`
+- `/iphone-16-pro-battery-capacity`
+- `/iphone-16-pro-max-repair-dubai`
+- `/iphone-16-pro-max-screen-flickering`
+- `/iphone-16-pro-repair-dubai`
+- `/iphone-16-repair-dubai`
+- `/iphone-16-shocks-while-charging`
+- `/iphone-16e-repair-dubai`
+- `/iphone-17-pro-max-repair-dubai`
+- `/iphone-17-pro-repair-dubai`
+- `/iphone-17-repair-dubai`
+- `/iphone-17e-repair-dubai`
+- `/iphone-air-repair-dubai`
+- `/iphone-back-glass-repair-dubai`
+- `/iphone-battery-replacement-dubai`
+- `/iphone-camera-repair-dubai`
+- `/iphone-charging-port-repair-dubai`
+- `/iphone-data-recovery-dubai`
+- `/iphone-earpiece-repair-dubai`
+- `/iphone-face-id-repair-dubai`
+- `/iphone-full-diagnostic-dubai`
+- `/iphone-headphone-jack-repair-dubai`
+- `/iphone-home-button-repair-dubai`
+- `/iphone-icloud-unlock-dubai`
+- `/iphone-lightning-port-repair-dubai`
+- `/iphone-logic-board-repair-dubai`
+- `/iphone-microphone-repair-dubai`
+- `/iphone-network-unlock-dubai`
+- `/iphone-nfc-repair-dubai`
+- `/iphone-power-button-repair-dubai`
+- `/iphone-repair-dubai`
+- `/iphone-repair-near-me-dubai`
+- `/iphone-screen-repair-cost-dubai`
+- `/iphone-screen-repair-dubai`
+- `/iphone-se-3rd-gen-repair-dubai`
+- `/iphone-sim-tray-repair-dubai`
+- `/iphone-software-fix-dubai`
+- `/iphone-speaker-repair-dubai`
+- `/iphone-usb-c-port-repair-dubai`
+- `/iphone-vibration-motor-repair-dubai`
+- `/iphone-volume-button-repair-dubai`
+- `/iphone-water-damage-repair-dubai`
+- `/iphone-wifi-bluetooth-repair-dubai`
+- `/ipod-touch-7-repair-dubai`
+
+## iPad (40)
+
+- `/ipad-10th-gen-repair-dubai`
+- `/ipad-11th-gen-repair-dubai`
+- `/ipad-9th-gen-repair-dubai`
+- `/ipad-air-4-repair-dubai`
+- `/ipad-air-5-repair-dubai`
+- `/ipad-air-m2-11-repair-dubai`
+- `/ipad-air-m2-13-repair-dubai`
+- `/ipad-air-m3-11-repair-dubai`
+- `/ipad-air-m3-13-repair-dubai`
+- `/ipad-air-m4-11-repair-dubai`
+- `/ipad-air-m4-13-repair-dubai`
+- `/ipad-back-glass-repair-dubai`
+- `/ipad-battery-replacement-dubai`
+- `/ipad-camera-repair-dubai`
+- `/ipad-charging-port-repair-dubai`
+- `/ipad-data-recovery-dubai`
+- `/ipad-full-diagnostic-dubai`
+- `/ipad-home-button-repair-dubai`
+- `/ipad-icloud-unlock-dubai`
+- `/ipad-logic-board-repair-dubai`
+- `/ipad-mini-5-repair-dubai`
+- `/ipad-mini-6-repair-dubai`
+- `/ipad-mini-7-repair-dubai`
+- `/ipad-older-gen-repair-dubai`
+- `/ipad-pencil-compatibility-dubai`
+- `/ipad-power-button-repair-dubai`
+- `/ipad-pro-11-m1-repair-dubai`
+- `/ipad-pro-11-m2-repair-dubai`
+- `/ipad-pro-11-m4-repair-dubai`
+- `/ipad-pro-11-m5-repair-dubai`
+- `/ipad-pro-12.9-m1-repair-dubai`
+- `/ipad-pro-12.9-m2-repair-dubai`
+- `/ipad-pro-13-m4-repair-dubai`
+- `/ipad-pro-13-m5-repair-dubai`
+- `/ipad-repair-dubai`
+- `/ipad-screen-repair-dubai`
+- `/ipad-smart-connector-repair-dubai`
+- `/ipad-software-reset-dubai`
+- `/ipad-speaker-repair-dubai`
+- `/ipad-water-damage-repair-dubai`
+
+## Other / long-tail question pages (35)
+
+- `/`
+- `/annual-maintenance-contract-dubai`
+- `/best-macbook-repair-shop-dubai`
+- `/blog`
+- `/boot-camp-windows-macbook-dubai`
+- `/can-iphone-motherboard-be-repaired`
+- `/do-macbooks-last-over-a-decade`
+- `/how-can-i-record-audio-while-screen-recording-on-mac`
+- `/how-do-i-reset-passwords-on-my-macbook`
+- `/how-to-change-macbook-name`
+- `/how-to-choose-the-best-apple-laptop-for-gaming`
+- `/how-to-choose-the-right-configuration-for-a-macbook`
+- `/how-to-clean-a-macbook-screen`
+- `/how-to-clean-macbook-pro-keyboard`
+- `/how-to-copy-and-paste-on-a-macbook`
+- `/how-to-erase-all-data-on-my-mac-before-giving-it-away`
+- `/how-to-recover-macbook-password`
+- `/how-to-reset-a-macbook`
+- `/how-to-take-a-screenshot-on-a-macbook`
+- `/macos-reinstall-dubai`
+- `/migrating-data-from-old-macbook-to-new-macbook-without-icloud`
+- `/sell-faulty-macbook-dubai`
+- `/sell-macbook-dubai`
+- `/siri-stopped-working-on-macbook-air`
+- `/sources-to-purchase-a-refurbished-macbook`
+- `/the-caps-lock-key-is-not-responding-after-restarting-my-macbook`
+- `/the-macbook-does-not-see-the-internal-ssd`
+- `/the-server-gave-an-error-during-download-403-forbidden`
+- `/top-10-common-macbook-problems-and-how-to-fix-them`
+- `/trade-in-macbook-dubai`
+- `/what-causes-color-distortion-on-macbook-screens`
+- `/where-to-repair-macbook-dubai`
+- `/white-or-grey-horizontal-lines-appearing-on-macbook-screen`
+- `/why-does-my-macbook-air-m4-heat-up-so-quickly`
+- `/why-is-my-ipad-not-charging`
+
+## iMac (26)
+
+- `/imac-24-m1-2021-repair-dubai`
+- `/imac-24-m3-2023-repair-dubai`
+- `/imac-24-m4-2024-repair-dubai`
+- `/imac-27-intel-2017-repair-dubai`
+- `/imac-27-intel-2019-repair-dubai`
+- `/imac-27-intel-2020-repair-dubai`
+- `/imac-27-pro-2017-repair-dubai`
+- `/imac-data-recovery-dubai`
+- `/imac-fan-cleaning-dubai`
+- `/imac-full-diagnostic-dubai`
+- `/imac-gpu-repair-dubai`
+- `/imac-intel-repair-dubai`
+- `/imac-logic-board-repair-dubai`
+- `/imac-m1-repair-dubai`
+- `/imac-m3-repair-dubai`
+- `/imac-m4-repair-dubai`
+- `/imac-not-turning-on-dubai`
+- `/imac-os-reinstall-dubai`
+- `/imac-overheating-fix-dubai`
+- `/imac-power-supply-repair-dubai`
+- `/imac-ram-upgrade-dubai`
+- `/imac-repair-cost-dubai`
+- `/imac-repair-dubai`
+- `/imac-screen-repair-dubai`
+- `/imac-ssd-upgrade-dubai`
+- `/imac-virus-removal-dubai`
+
+## Mac / Apple umbrella (18)
+
+- `/apple-display-repair-dubai`
+- `/apple-repair-dubai`
+- `/apple-repair-near-me-dubai`
+- `/apple-repair-programs-dubai`
+- `/apple-service-center-dubai`
+- `/mac-activation-lock-unlock-dubai`
+- `/mac-fan-cleaning-dubai`
+- `/mac-full-diagnostic-dubai`
+- `/mac-logic-board-repair-dubai`
+- `/mac-not-turning-on-dubai`
+- `/mac-os-reinstall-dubai`
+- `/mac-performance-tune-dubai`
+- `/mac-port-repair-dubai`
+- `/mac-repair-cost-dubai`
+- `/mac-repair-dubai`
+- `/mac-repair-near-me-dubai`
+- `/mac-setup-data-migration-dubai`
+- `/mac-ssd-upgrade-dubai`
+
+## Mac mini (15)
+
+- `/mac-mini-data-recovery-dubai`
+- `/mac-mini-m1-2020-repair-dubai`
+- `/mac-mini-m1-repair-dubai`
+- `/mac-mini-m2-2023-repair-dubai`
+- `/mac-mini-m2-pro-2023-repair-dubai`
+- `/mac-mini-m2-repair-dubai`
+- `/mac-mini-m4-2024-repair-dubai`
+- `/mac-mini-m4-pro-2024-repair-dubai`
+- `/mac-mini-m4-repair-dubai`
+- `/mac-mini-no-display-dubai`
+- `/mac-mini-not-turning-on-dubai`
+- `/mac-mini-overheating-fix-dubai`
+- `/mac-mini-ram-upgrade-dubai`
+- `/mac-mini-repair-dubai`
+- `/mac-mini-ssd-upgrade-dubai`
+
+## Mac Studio (15)
+
+- `/mac-studio-data-recovery-dubai`
+- `/mac-studio-m1-max-2022-repair-dubai`
+- `/mac-studio-m1-repair-dubai`
+- `/mac-studio-m1-ultra-2022-repair-dubai`
+- `/mac-studio-m2-max-2023-repair-dubai`
+- `/mac-studio-m2-repair-dubai`
+- `/mac-studio-m2-ultra-2023-repair-dubai`
+- `/mac-studio-m3-repair-dubai`
+- `/mac-studio-m3-ultra-2025-repair-dubai`
+- `/mac-studio-m4-max-2025-repair-dubai`
+- `/mac-studio-m4-repair-dubai`
+- `/mac-studio-no-display-dubai`
+- `/mac-studio-not-turning-on-dubai`
+- `/mac-studio-overheating-fix-dubai`
+- `/mac-studio-repair-dubai`
+
+## Trust / legal / utility (11)
+
+- `/about`
+- `/contact`
+- `/cookies`
+- `/image-usage-license`
+- `/landing-template-demo`
+- `/pricing`
+- `/privacy`
+- `/refund`
+- `/reviews`
+- `/terms`
+- `/warranty`
+
+## Mac Pro (10)
+
+- `/mac-pro-data-recovery-dubai`
+- `/mac-pro-full-diagnostic-dubai`
+- `/mac-pro-gpu-repair-dubai`
+- `/mac-pro-intel-2019-repair-dubai`
+- `/mac-pro-intel-repair-dubai`
+- `/mac-pro-m2-ultra-2023-repair-dubai`
+- `/mac-pro-m2-ultra-repair-dubai`
+- `/mac-pro-no-display-dubai`
+- `/mac-pro-not-turning-on-dubai`
+- `/mac-pro-repair-dubai`
+
+## Area / location (7)
+
+- `/applecare-macbook-repair-dubai`
+- `/best-apple-repair-dubai`
+- `/best-iphone-repair-dubai`
+- `/corporate-macbook-repair-dubai`
+- `/onsite-macbook-repair-dubai`
+- `/out-of-warranty-apple-repair-dubai`
+- `/same-day-macbook-repair-dubai`
+
+## Data recovery (4)
+
+- `/apple-t2-chip-data-recovery-dubai`
+- `/mac-data-recovery-after-water-damage-dubai`
+- `/mac-data-recovery-dubai`
+- `/ssd-data-recovery-dubai`
+
+## Apple Watch (1)
+
+- `/apple-watch-repair-dubai`

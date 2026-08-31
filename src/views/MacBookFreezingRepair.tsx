@@ -4,7 +4,7 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookFreezingRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Freezing Repair Dubai - Locks Up & Hangs Fixed | AED 200"
+      seoTitle="MacBook Freezing Repair Dubai - Locks Up & Hangs Fixed"
       seoDescription="MacBook freezing or locking up in Dubai? We diagnose hardware and software freeze causes and restore smooth operation. Free diagnosis, same day. Call 055 741 3706."
       path="/macbook-freezing-repair-dubai"
       eyebrow="MacBook freezing repair"
@@ -52,7 +52,7 @@ export default function MacBookFreezingRepair() {
         { q: "What's the difference between freezing and crashing?", a: "A crash restarts the machine, you see the 'Your computer restarted because of a problem' screen. A freeze leaves it powered but completely unresponsive. Both need diagnosis but often have different root causes." },
         { q: "My MacBook only freezes on wake from sleep, is that fixable?", a: "Yes, and it's one of the most common patterns. Sleep-wake freezes on Intel MacBooks are often a GPU power-state bug, a failing SSD, or a corrupted sleep image. We address all three systematically." },
         { q: "Can freezing damage my data?", a: "Repeated forced reboots can corrupt the filesystem over time, especially on macOS Ventura and earlier. We run filesystem checks as part of our diagnostics and repair any directory errors found." },
-        { q: "How much does MacBook freezing repair cost in Dubai?", a: "Diagnosis is AED 200, applied toward the repair. Software fixes from AED 300. SSD replacement from AED 500. Thermal service AED 300. Logic board GPU repair is quoted after diagnosis." },
+        { q: "How much does MacBook freezing repair cost in Dubai?", a: "Diagnosis is free. From there it depends on the cause: a software fix is the cheapest, then a thermal service, then an SSD replacement, with a logic board GPU repair the most involved. Each is quoted after diagnosis." },
       ]}
     />
   );
