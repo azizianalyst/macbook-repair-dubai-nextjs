@@ -36,10 +36,27 @@ export default function WhatIsSection({
           <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
             {heading}
           </h2>
-          <p className="mt-md text-[17px] md:text-[19px] leading-relaxed text-text-muted">
-            <span className="font-semibold text-text">{entityName}</span>{" "}
-            {definition}
-          </p>
+          {/* `definition` is typed `string | ReactNode`, and every real caller passes
+              multiple <p> elements — but this wrapper was itself a <p>, so the markup
+              came out as <p><p>…</p></p>. That is invalid HTML: the browser auto-closes
+              the outer paragraph, the server and client trees disagree, and React threw
+              "Hydration failed" on every page using the module, including the
+              /azizi-template-demo proof page. A <div> makes block children legal.
+              Rendered appearance is unchanged — the browser was already closing the
+              outer <p> at the same point. */}
+          <div className="mt-md text-[17px] md:text-[19px] leading-relaxed text-text-muted [&>p+p]:mt-md">
+            {typeof definition === "string" ? (
+              <p>
+                <span className="font-semibold text-text">{entityName}</span>{" "}
+                {definition}
+              </p>
+            ) : (
+              <>
+                <span className="font-semibold text-text">{entityName}</span>{" "}
+                {definition}
+              </>
+            )}
+          </div>
         </div>
 
         {benefits.length > 0 && (

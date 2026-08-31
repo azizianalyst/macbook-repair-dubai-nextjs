@@ -89,13 +89,21 @@ export function schemaForPath(path: string): unknown[] {
   // from PRICING_SERVICES, which mirrors the visible price tables, so the Offers match the
   // on-page prices (no rich-result mismatch). FAQPage + BreadcrumbList are already
   // server-rendered by <FAQAccordion injectSchema> / <BreadcrumbTrail> in the view.
+  //
+  // HIDE-PRICES: these Offers keep their prices ONLY while /pricing still displays them.
+  // Strip them in the same change that removes the visible tables — never before, or the
+  // schema stops matching the page in the opposite direction. (localBusiness() already
+  // carries no priceRange, because it renders on pages that show no price at all.)
   if (path === "/pricing") {
     return [
       localBusiness(),
+      // No `price` passed: prices are hidden site-wide, so the Offers are emitted without a
+      // figure. This MUST change in the same commit as the visible /pricing tables — a priced
+      // Offer on a page that shows no price is a rich-result mismatch, and the reverse leaves
+      // Google quoting a number the visitor never sees.
       ...PRICING_SERVICES.map((s) =>
         service({
           name: s.name,
-          price: s.price,
           timeline: s.timeline,
           warranty: s.warranty,
           url: s.url ? pageUrl(s.url) : undefined,

@@ -29,6 +29,12 @@ const WHITELIST = [
   "src/lib/dynamic-meta.ts",
   "src/lib/page-meta.ts",     // meta-layer logic (comment references "from AED" as an example)
 ];
+// decision replaces OUR figure with a quote CTA while keeping Apple's list price, because the
+// whole point of the comparison is the delta. Only lines that name Apple as the source are
+// exempt — an unattributed figure is still a leak.
+// and still leaks our figure. So we remove only the Apple-attributed phrase (the attribution plus
+// the figure that follows it) and test what remains. 8 real lines were being wrongly cleared.
+
 const WHITELIST_RE = [
   /\.json$/,                 // model data JSON — pricing kept for logic/schema, never rendered
   /Admin\.tsx$/,             // /admin/* is noindex + auth-gated, never public
@@ -55,12 +61,51 @@ function walk(dir, out = []) {
   return out;
 }
 
+// Apple's PUBLISHED price, attributed to Apple, is not our price — the comparison tables and
+// "cheaper than Apple" answers depend on keeping it. But exemption has to be per-FIGURE, not
+// per-line: "Apple charges AED 900; ours is AED 600" must keep AED 600 visible. Line-level
+// stripping failed both ways (it cleared our figures, or re-flagged Apple's) until this was
+// modelled as: for each figure, is the nearest preceding attribution closer than the nearest
+// preceding "ours" marker?
+const ATTRIB = /\(Apple list\)|Apple list price|Apple Store|at Apple\b|Apple lists?|Apple (?:typically )?charges|Apple's|per Apple's|AppleCare\+?|Genius Bar/gi;
+// Deliberately only STRONG ownership markers. "from" and "starts at" were in this list and
+// broke on "Apple lists from AED 4,999" — the weak word sat between the attribution and the
+// figure and stole it back for us.
+const OURS   = /\bour(?:s| workshop| price| quote)?\b|\bwe charge\b|\bwe fit\b|\bat our\b/gi;
+const FIGURE = /AED\s?[\d,]+/gi;
+
+/** true when every AED figure on the line is attributed to Apple rather than to us. */
+function allFiguresAreApple(line) {
+  const lastBefore = (re, idx) => {
+    let last = -1, m; re.lastIndex = 0;
+    while ((m = re.exec(line)) && m.index < idx) last = m.index;
+    return last;
+  };
+  let any = false, m;
+  FIGURE.lastIndex = 0;
+  while ((m = FIGURE.exec(line))) {
+    any = true;
+    const a = lastBefore(new RegExp(ATTRIB.source, "gi"), m.index);
+    const o = lastBefore(new RegExp(OURS.source, "gi"), m.index);
+    // Look ahead for a trailing attribution ("AED 1,449 (Apple list)") — but stop at the first
+    // ours-marker or comparison word, or "AED 500 at our workshop, versus AED 899 at Apple"
+    // would let our figure borrow Apple's attribution.
+    let trailing = line.slice(m.index, m.index + 60);
+    const stop = trailing.search(/\bour\b|\bours\b|\bwe\b|\bversus\b|\bvs\.?\b|\bhere\b/i);
+    if (stop > 0) trailing = trailing.slice(0, stop);
+    const attributedAfter = /\((?:Apple list|Apple list price|Genius Bar)[^)]*\)|\bat (?:the )?Apple\b/i.test(trailing);
+    if (!attributedAfter && !(a >= 0 && a > o)) return false;   // this figure is ours
+  }
+  return any;
+}
+
 const leaks = [];
 for (const file of walk(SRC)) {
   const rel = relative(ROOT, file);
   if (WHITELIST.includes(rel) || WHITELIST_RE.some((re) => re.test(rel))) continue;
   const lines = readFileSync(file, "utf8").split("\n");
   lines.forEach((line, i) => {
+    if (allFiguresAreApple(line)) return;      // every figure here is Apple's, attributed
     if (PRICE_RE.test(line) || GARBLE_RE.test(line)) {
       leaks.push({ rel, n: i + 1, text: line.trim().slice(0, 140) });
     }

@@ -143,7 +143,9 @@ function warrantyPromise(iso: string) {
 
 export function service(opts: {
   name: string;
-  price: number;
+  /** Omit under the hide-prices policy: the Offer is then emitted without a figure, which
+      still declares the service is offered without publishing a price to rich results. */
+  price?: number;
   priceMax?: number;
   description?: string;
   url?: string;
@@ -153,7 +155,18 @@ export function service(opts: {
   category?: string;
 }) {
   const url = opts.url;
-  const offers = opts.priceMax
+  // No price supplied -> a priceless Offer. schema.org allows an Offer with availability and
+  // no price; it keeps the Service discoverable without shipping a figure. This is what stops
+  // a page whose visible copy says "message us for a price" from still publishing "price":"600"
+  // in JSON-LD — which is exactly what the homepage was doing.
+  const offers = opts.price === undefined
+    ? {
+        "@type": "Offer",
+        url,
+        availability: "https://schema.org/InStock",
+        warranty: opts.warranty ? warrantyPromise(opts.warranty) : undefined,
+      }
+    : opts.priceMax
     ? {
         "@type": "AggregateOffer",
         url,

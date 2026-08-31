@@ -1,8 +1,8 @@
 // Authoritative price-leak gate: crawl the RUNNING site and check what a visitor actually sees.
 // Unlike the source heuristic, this catches interpolated/runtime figures and confirms the real
-// rendered output. JSON-LD (<script type="application/ld+json">) and the Next hydration payload
-// (<script>self.__next_f…) are intentionally EXCLUDED — schema prices are kept by design and are
-// never visible to a human. We check the visible HTML (all <script>/<style> stripped).
+// rendered output. Checks FOUR surfaces and names the one a leak sits on: visible body, the
+// <head> meta layer, JSON-LD, and Next's hydration payload. Nothing is excluded — the policy is
+// prices stripped everywhere, including SERP and schema.
 //
 // Usage:
 //   1) build + start the site:  npm run build && (npx next start -p 4123 &)
@@ -41,15 +41,42 @@ if (routesFile && existsSync(routesFile)) {
   routes = readFileSync(routesFile, "utf8").split("\n").map((s) => s.trim()).filter(Boolean);
 }
 
-function stripScripts(html) {
-  return html
-    // <head> holds the SEO meta layer (<title>, meta description, OG/Twitter) — prices are KEPT
-    // there on purpose for ranking, and are never visible on the page body. Exclude it entirely.
-    .replace(/<head\b[^>]*>[\s\S]*?<\/head>/i, " ")
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " "); // drop tags; keep visible text nodes only
+// Four surfaces, checked separately so a leak reports WHERE it lives and the fix is targeted.
+// The original checked only the visible body and excluded <head> and every <script>, on the
+// grounds that meta and schema prices were kept deliberately. That is no longer the policy —
+// prices are now stripped everywhere, including SERP — so those exclusions were hiding
+// 92 routes of JSON-LD and 4 routes whose price sits in the hydration payload.
+function surfaces(html) {
+  const head = (html.match(/<head\b[^>]*>[\s\S]*?<\/head>/i) || [""])[0];
+  return {
+    // Visible text: tags become spaces, so a React-split price (AED <!-- -->600) still reads
+    // as "AED  600" here and is caught by PRICE_RE.
+    body: html
+      .replace(/<head\b[^>]*>[\s\S]*?<\/head>/i, " ")
+      .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " "),
+    // <title>, meta description, OG/Twitter — including og:image:alt.
+    meta: [...head.matchAll(/<title>([^<]*)<\/title>|content="([^"]*)"/gi)]
+      .map((m) => m[1] || m[2] || "").join(" | "),
+    // Offer/priceRange nodes.
+    schema: [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
+      .map((m) => m[1]).join("\n"),
+    // Next's flight payload. A price here repaints into the DOM after hydration even when the
+    // server HTML is clean, so masking the body alone is not enough.
+    hydration: [...html.matchAll(/<script[^>]*>(self\.__next_f[\s\S]*?)<\/script>/gi)]
+      .map((m) => m[1]).join("\n"),
+  };
 }
+
+// A partial mask leaves "Request a quote7" — catch it rather than shipping garbled copy.
+const GARBLE_RE = /Request a quote\s*\d/gi;
+
+// Structured prices in JSON-LD carry no adjacent currency, so PRICE_RE cannot see them:
+// /pricing serialises Offers as "price":"600" with "priceCurrency":"AED" as a separate field.
+// Without this the page would report PASS once the visible tables are stripped while still
+// publishing 38 priced Offers to Google.
+const SCHEMA_PRICE_RE = /"(?:price|lowPrice|highPrice|priceRange)"\s*:\s*"?[\d.,]+"?/gi;
 
 // src/proxy.ts rate-limits to 60 req/min per IP and 429s the rest, but exempts search-engine
 // and AI-crawler UAs. Without this the gate reads throttle responses instead of pages and
@@ -64,9 +91,17 @@ for (const route of routes) {
     const res = await fetch(url, { redirect: "follow", headers: { "user-agent": CRAWLER_UA } });
     const html = await res.text();
     if (res.status >= 400) { errors++; console.log(`  ! ${res.status} ${route}`); continue; }
-    const visible = stripScripts(html);
-    const found = [...new Set(visible.match(PRICE_RE) || [])];
-    if (found.length) leaks.push({ route, found });
+    const s = surfaces(html);
+    const per = {};
+    for (const [name, text] of Object.entries(s)) {
+      const hits = [...new Set(text.match(PRICE_RE) || [])];
+      if (hits.length) per[name] = hits;
+    }
+    const structured = [...new Set(s.schema.match(SCHEMA_PRICE_RE) || [])];
+    if (structured.length) per.schemaPrice = structured;
+    const garble = [...new Set(s.body.match(GARBLE_RE) || [])];
+    if (garble.length) per.garble = garble;
+    if (Object.keys(per).length) leaks.push({ route, per });
     checked++;
   } catch (e) {
     errors++;
@@ -83,9 +118,16 @@ if (errors) {
   process.exit(1);
 }
 if (leaks.length === 0) {
-  console.log("✓ PASS — no visible price figures in rendered output (JSON-LD schema excluded by design).");
+  console.log("✓ PASS — no prices in body, meta, JSON-LD or hydration payload, and no garble.");
   process.exit(0);
 }
-console.log(`✗ FAIL — visible prices on ${leaks.length} route(s):`);
-for (const l of leaks) console.log(`  ${l.route}  →  ${l.found.slice(0, 8).join("  ·  ")}`);
+console.log(`✗ FAIL — prices on ${leaks.length} route(s):`);
+const tally = {};
+for (const l of leaks) for (const k of Object.keys(l.per)) tally[k] = (tally[k] || 0) + 1;
+console.log("  by surface: " + Object.entries(tally).map(([k, n]) => `${k}=${n}`).join(" · "));
+for (const l of leaks.slice(0, 40)) {
+  const bits = Object.entries(l.per).map(([k, v]) => `${k}: ${v.slice(0, 4).join(" ")}`);
+  console.log(`  ${l.route}\n      ${bits.join("\n      ")}`);
+}
+if (leaks.length > 40) console.log(`  … +${leaks.length - 40} more routes`);
 process.exit(1);
