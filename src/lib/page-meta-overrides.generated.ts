@@ -93,8 +93,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro M3 screen repair cost in Dubai 2026. mini-LED LCD replacement. Cracked display, backlight fault, local dimming zones, and display cable issues explained."
   },
   "/blog/macbook-pro-m3-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro M3 Battery Replacement Cost Dubai 2026: AED Prices and Guide",
-    "description": "MacBook Pro M3 battery replacement cost in Dubai 2026. When to replace, battery health check, swollen battery signs, and AED prices. M3 battery. Same-day service."
+    "title": "MacBook Pro M3 Battery Replacement Cost Dubai 2026: What It Costs and Why",
+    "description": "MacBook Pro M3 battery replacement cost in Dubai 2026. When to replace, battery health check, swollen battery signs, and what drives the cost. M3 battery. Same-day service."
   },
   "/blog/macbook-pro-m3-not-turning-on-dubai": {
     "title": "MacBook Pro M3 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide",
@@ -117,7 +117,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro M1 screen flickering in Dubai? Big Sur and Monterey display bugs, display cable fault, or GPU rendering issue. Trackpad also affected? Screen repair."
   },
   "/blog/macbook-pro-m1-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro M1 Battery Replacement Cost Dubai 2026: AED Prices Guide",
+    "title": "MacBook Pro M1 Battery Replacement Cost Dubai 2026: Full Cost Guide",
     "description": "MacBook Pro M1 battery replacement cost in Dubai 2026. M1 13-inch. M1 Pro 14-inch. M1 Max 16-inch. Same-day service. 3-month warranty."
   },
   "/blog/macbook-pro-m1-screen-repair-cost-dubai": {
@@ -141,7 +141,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro Flexgate display cable fault in Dubai? 2016-2017 13/15-inch develops a stage-light effect at the bottom of the screen. Display cable replacement."
   },
   "/blog/macbook-pro-intel-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro Intel Battery Replacement Cost Dubai 2026: AED Price Guide",
+    "title": "MacBook Pro Intel Battery Replacement Cost Dubai 2026: Full Cost Guide",
     "description": "MacBook Pro Intel battery replacement cost in Dubai 2026. 2016-2020 Intel MacBook Pro. Same-day service. Swollen battery urgent care. 3-month warranty."
   },
   "/blog/macbook-pro-intel-screen-repair-cost-dubai": {
@@ -177,7 +177,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro M2 screen repair cost in Dubai 2026. M2 13-inch uses IPS LCD. M2 Pro/Max 14/16-inch uses mini-LED. Same-day repair. All models covered."
   },
   "/blog/macbook-pro-m2-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro M2 Battery Replacement Cost Dubai 2026: AED Prices Guide",
+    "title": "MacBook Pro M2 Battery Replacement Cost Dubai 2026: Full Cost Guide",
     "description": "MacBook Pro M2 battery replacement cost in Dubai 2026. M2 13-inch. M2 Pro 14-inch. M2 Max 16-inch. Same-day service. 3-month warranty."
   },
   "/blog/macbook-pro-m2-not-turning-on-dubai": {
@@ -213,7 +213,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro M4 16GB memory pressure in Dubai? Apps slow, fans spinning, system unresponsive? How M4 unified memory works, when 16GB is genuinely insufficient, and upgrade options."
   },
   "/blog/macbook-pro-m4-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro M4 Battery Replacement Cost Dubai 2026: AED Prices and Guide",
+    "title": "MacBook Pro M4 Battery Replacement Cost Dubai 2026: What It Costs and Why",
     "description": "MacBook Pro M4 battery replacement cost in Dubai 2026. When to replace, swollen battery warning signs, and what to expect after replacement. Prices."
   },
   "/blog/macbook-pro-m4-not-turning-on-dubai": {
@@ -237,7 +237,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook Pro M5 screen repair cost in Dubai 2026. OLED screen cracked, backlight failed, or display lines. Replacement. Same-day repair available."
   },
   "/blog/macbook-pro-m5-battery-replacement-cost-dubai": {
-    "title": "MacBook Pro M5 Battery Replacement Cost Dubai 2026: AED Prices and Guide",
+    "title": "MacBook Pro M5 Battery Replacement Cost Dubai 2026: What It Costs and Why",
     "description": "MacBook Pro M5 battery replacement cost in Dubai 2026. M5 14-inch 16-inch. When to replace, signs of battery failure, and what to expect."
   },
   "/blog/macbook-pro-m5-not-turning-on-dubai": {
@@ -1518,7 +1518,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/where-to-repair-macbook-dubai": {
     "title": "Where To Repair MacBook Dubai. Expert Same-Day 2026",
-    "description": "Where To Repair MacBook Dubai. When each route wins, with real AED prices and a warranty of up to 12 months."
+    "description": "Where To Repair MacBook Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     "title": "White Or Grey Horizontal Lines Appearing On MacBook Screen -",
@@ -2053,7 +2053,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPhone cracked screen repair Dubai. OLED and LCD replacement for all iPhone models. Free diagnosis, same-day service."
   },
   "/blog/iphone-battery-replacement-cost-dubai": {
-    "title": "iPhone Battery Replacement Cost Dubai 2026: AED Prices by Model",
+    "title": "iPhone Battery Replacement Cost Dubai 2026: Cost by Model",
     "description": "iPhone battery replacement cost Dubai to by model. Independent Apple specialist, genuine cells, 3-month warranty."
   },
   "/blog/iphone-water-damage-repair-dubai": {
