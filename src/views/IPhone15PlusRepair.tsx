@@ -60,7 +60,7 @@ export default function IPhone15PlusRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.7-inch OLED with Dynamic Island in stock, in both genuine Apple-pull and OEM-grade. Colour-infused back glass available in all 15-series colours. Message us on WhatsApp for current part pricing.
           </p>

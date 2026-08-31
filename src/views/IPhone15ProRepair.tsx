@@ -62,7 +62,7 @@ export default function IPhone15ProRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             ProMotion OLED with Dynamic Island in stock, including genuine Apple-pull panels. USB-C 3 (Thunderbolt) port is more complex than USB-C 2 - full data + charge tested before return. Action Button mechanism in stock. Message us on WhatsApp for the exact price on your model.
           </p>

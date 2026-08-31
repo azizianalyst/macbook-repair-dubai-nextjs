@@ -117,7 +117,7 @@ export default function BlogIPhone15Vs17RepairCost() {
             quote so you can compare.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             See the full{" "}
             <Link to="/iphone-15-repair-dubai" className="text-accent font-semibold hover:underline">

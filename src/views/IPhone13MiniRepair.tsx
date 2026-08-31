@@ -60,7 +60,7 @@ export default function IPhone13MiniRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             5.4-inch hard-OLED in stock, with genuine Apple-pull panels also available. The diagonal dual-camera module is a sealed assembly - both lenses replaced together. MagSafe-equipped back glass available. Message us on WhatsApp for today's price on any part.
           </p>

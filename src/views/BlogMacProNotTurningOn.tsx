@@ -161,7 +161,7 @@ export default function BlogMacProNotTurningOn() {
             toward heat-fatigued components first.
           </p>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The Mac Pro line spans Intel and Apple Silicon, and the no-power diagnosis differs between them.
             Knowing which one you own narrows the cause quickly.
@@ -215,7 +215,7 @@ export default function BlogMacProNotTurningOn() {
             </Link>.
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             Most no-power Mac Pros are a power supply or an SMC fix. A smaller share turn out to be deeper
             board faults, and there are clear signs that point that way. If the power supply tests good but

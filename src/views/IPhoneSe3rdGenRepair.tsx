@@ -58,7 +58,7 @@ export default function IPhoneSe3rdGenRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             Excellent - Apple is still producing this device's spare parts. We stock genuine displays, OEM batteries, and full charging port flex assemblies. Same-day on everything standard.
           </p>

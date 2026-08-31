@@ -155,7 +155,7 @@ export default function BlogMacMiniOverheating() {
             <li><strong>Do not run it in an unconditioned room</strong>: a mini left as a 24/7 server in a hot store room will throttle constantly and age faster.</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The cause and the fix change a lot depending on whether your Mac mini is Intel or Apple
             Silicon. Knowing which you have tells you what to expect before you bring it in.
@@ -222,7 +222,7 @@ export default function BlogMacMiniOverheating() {
             </Link>
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             In a small number of cases, an overheating Mac mini is not about airflow at all. If the
             cooling is clean and freshly serviced and the mini still cooks or shuts down, the heat

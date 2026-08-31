@@ -386,7 +386,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── DIY ────────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="When DIY makes sense - and when it doesn't" />
+            <SectionHead title="Should I try to fix this myself?" />
             <div className="grid gap-lg md:grid-cols-2">
               <Card className="border-accent/30 bg-accent/[0.06]">
                 <h3 className="m-0 mb-md text-text text-[18px] font-bold">Try it yourself first</h3>
@@ -490,7 +490,7 @@ export default function MacBookBatteryReplacement() {
 
         {/* ── Location ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Where to bring your MacBook" />
+          <SectionHead title="Where do I bring my MacBook in Dubai?" />
           <div className="grid gap-lg md:grid-cols-2 items-stretch">
             <div className="overflow-hidden rounded-2xl border border-border">
               <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />

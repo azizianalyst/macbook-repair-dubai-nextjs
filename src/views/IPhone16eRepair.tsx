@@ -60,7 +60,7 @@ export default function IPhone16eRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             14 months in, the 16e supply chain is mature. OLED, battery, USB-C and Action Button all in stock for same-day repair. Back-glass colour matching for the white and black finishes is fast; rare colours may need 1-2 days to source.
           </p>

@@ -156,7 +156,7 @@ export default function BlogMacProNoDisplay() {
             <li><strong>Watch the early signs</strong>: brief flickers, snow, or random black-outs under load are heat-stressed hardware warning you before it fails for good</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The Mac Pro line splits cleanly into the 2019 Intel model and the 2023 Apple Silicon
             model, and they fail in different ways when there is no display. Knowing which you have
@@ -219,7 +219,7 @@ export default function BlogMacProNoDisplay() {
             .
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             Most Mac Pro black screens are a module, a port, or a cable. In a smaller number of cases
             the fault sits on the logic board itself, and the signs are specific. These point away

@@ -61,7 +61,7 @@ export default function IPhone17Repair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             ProMotion OLED with Ceramic Shield 2 in stock for same-day repair, in both genuine Apple-pull and OEM-grade options - message us for the exact price on your model. Camera Control button assemblies arrive on 48-hour replenishment from our authorised supplier. Wi-Fi 7 / N1 antenna assemblies available.
           </p>

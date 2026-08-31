@@ -61,7 +61,7 @@ export default function IPhone13ProMaxRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.7-inch ProMotion 120Hz LTPO OLED in stock, with genuine Apple-pull panels available on request. Triple-camera + LiDAR is a single sealed module. MagSafe-equipped back glass in stock. Message us on WhatsApp for today's price on any part.
           </p>

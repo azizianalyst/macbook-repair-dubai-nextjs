@@ -61,7 +61,7 @@ export default function IPhone16PlusRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             All iPhone 16 Plus parts are current-production and abundant. Genuine Apple-pull 6.7-inch OLED and Camera Control button assemblies in stock - message us on WhatsApp for the current price on either.
           </p>

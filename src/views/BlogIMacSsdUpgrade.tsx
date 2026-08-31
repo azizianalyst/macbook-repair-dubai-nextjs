@@ -188,7 +188,7 @@ export default function BlogIMacSsdUpgrade() {
           </section>
 
           <section id="model-notes">
-            <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+            <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
             <p>
               This upgrade is an Intel iMac story. Every Intel iMac from the 2012 redesign through to the
               last 27-inch model in 2020 uses a removable internal disk: a SATA hard drive, a Fusion Drive,
@@ -249,7 +249,7 @@ export default function BlogIMacSsdUpgrade() {
           </section>
 
           <section id="when-deeper">
-            <h2 id="when-deeper">When it is a deeper board fault</h2>
+            <h2 id="when-deeper">When is it a deeper board fault?</h2>
             <p>
               Occasionally an iMac is slow for reasons a new SSD will not fix, and it is worth knowing the
               signs so you do not pay for the wrong repair. If the machine is still slow after a clean SSD

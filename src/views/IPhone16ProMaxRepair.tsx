@@ -64,7 +64,7 @@ export default function IPhone16ProMaxRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.9-inch ProMotion OLED with Dynamic Island - the largest hard-OLED in stock. Genuine Apple-pull and OEM-grade options both available - message us on WhatsApp for today's price. Tetraprism module, Camera Control flex, USB-C 3 all in stock.
           </p>

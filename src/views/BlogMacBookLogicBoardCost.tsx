@@ -172,7 +172,7 @@ export default function BlogMacBookLogicBoardCost() {
             and we're proud to be one.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Logic board diagnosis is free at our workshop - bring or ship the MacBook, we open it,
             measure rails on the bench, and quote you the exact repair before doing anything. No

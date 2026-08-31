@@ -141,7 +141,7 @@ export default function BlogMacBookKeyboardNotWorking() {
             rather than waiting.
           </p>
 
-          <h2 id="repair-cost">What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's a clean, a key, a spill or the battery before you

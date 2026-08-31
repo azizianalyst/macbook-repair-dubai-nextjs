@@ -174,7 +174,7 @@ export default function BlogIMacOverheating() {
           </section>
 
           <section id="model-notes">
-            <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+            <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
             <p>
               The cause of overheating depends heavily on which iMac you own. Intel iMacs (21.5-inch and
               27-inch models up to 2020, with Core i5, i7 and i9 chips) are the ones we see overheating most.
@@ -233,7 +233,7 @@ export default function BlogIMacOverheating() {
           </section>
 
           <section id="when-deeper">
-            <h2 id="when-deeper">When it is a deeper board fault</h2>
+            <h2 id="when-deeper">When is it a deeper board fault?</h2>
             <p>
               In a small number of cases the iMac stays hot and loud even after a thorough clean, a fresh
               repaste, and a confirmed-good fan. When the cooling system is healthy but temperatures are still

@@ -193,7 +193,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
             "non-genuine display" warning, full True Tone, full Apple parts traceability.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Bring the iPhone in for a free 5-minute diagnostic. We'll tell you exactly what the
             previous shop did wrong and what we can fix. See our{" "}

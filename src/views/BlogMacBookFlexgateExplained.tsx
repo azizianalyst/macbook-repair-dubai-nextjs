@@ -130,7 +130,7 @@ export default function BlogMacBookFlexgateExplained() {
             the 2016-2019 models partly because of this.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             WhatsApp us a photo of the screen with the lid open at full angle (so we can see the
             stage-lighting pattern) - we'll tell you within 5 minutes whether you need a cable-only

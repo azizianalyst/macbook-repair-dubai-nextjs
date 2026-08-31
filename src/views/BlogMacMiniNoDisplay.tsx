@@ -163,7 +163,7 @@ export default function BlogMacMiniNoDisplay() {
             <li><strong>Watch for heat-linked dropouts</strong>: an HDMI signal that fails only when the mini is warm is a classic sign of a heat-stressed solder joint that needs a bench fix</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             How a Mac mini handles HDMI changed a lot between the Intel and Apple Silicon
             generations, and the model you own affects both the likely cause and the fix. Knowing
@@ -211,7 +211,7 @@ export default function BlogMacMiniNoDisplay() {
             </Link>
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             In a minority of cases the no-display symptom is not the HDMI port at all but a wider
             problem on the logic board, such as a failed GPU stage, a power-rail short, or surge or

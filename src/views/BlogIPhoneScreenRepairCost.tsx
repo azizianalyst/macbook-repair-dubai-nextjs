@@ -160,7 +160,7 @@ export default function BlogIPhoneScreenRepairCost() {
             iFixit teardown for your specific model first.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             <Link to="/iphone-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our iPhone screen repair page

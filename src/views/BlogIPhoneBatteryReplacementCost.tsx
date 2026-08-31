@@ -132,7 +132,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
             mainland; bring ID for collection.
           </p>
 
-          <h2 id="what-next">What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               Visit our iPhone battery replacement page

@@ -61,7 +61,7 @@ export default function IPhone17eRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             <strong>Honest update for April 2026:</strong> OLED, battery and USB-C in stock for same-day repair. MagSafe-equipped back glass (a brand-new 17e part) and Action Button assembly currently take 2-3 days from our authorised supplier - both are e-series-exclusive parts and the supply pipeline is still ramping up. We expect 24-hour replenishment by June 2026.
           </p>

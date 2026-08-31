@@ -62,7 +62,7 @@ export default function IPhoneAirRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             OLED and battery in stock. Back glass with MagSafe coil pre-aligned takes 2 days due to the bespoke Air-only assembly. Frame straightening uses precision jigs - we are one of two workshops in Dubai with the correct Air-spec tooling.
           </p>

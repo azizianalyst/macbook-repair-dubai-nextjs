@@ -147,7 +147,7 @@ export default function BlogMacBookWaterDamageCost() {
             covered. Check the card terms.
           </p>
 
-          <h2 id="what-next">What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             Time matters. WhatsApp <strong>055 741 3706</strong> with a photo of your MacBook -
             we'll dispatch the free pickup driver same day for any mainland Dubai address. Or visit

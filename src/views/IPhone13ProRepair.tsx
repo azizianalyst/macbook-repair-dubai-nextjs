@@ -62,7 +62,7 @@ export default function IPhone13ProRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             ProMotion 120Hz OLED in stock - note 120Hz costs more than the standard 13 panel. Genuine Apple-pull panels are also available on request. Triple-camera + LiDAR is a single sealed module. MagSafe-equipped back glass in stock. Message us on WhatsApp for current pricing.
           </p>

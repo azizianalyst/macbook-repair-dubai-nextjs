@@ -124,7 +124,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
             ]}
           />
 
-          <h2 id="what-next">What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             <Link to="/iphone-back-glass-repair-dubai" className="text-accent font-semibold hover:underline">
               See the iPhone back-glass repair service page

@@ -149,7 +149,7 @@ export default function BlogMacStudioNoDisplay() {
             <li><strong>Avoid hot, closed rooms</strong>: do not leave the Studio running in a sealed room once the AC is off.</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The Mac Studio has only ever shipped with Apple Silicon: the M1 Max and M1 Ultra in
             2022, the M2 Max and M2 Ultra in 2023, and the M3 Ultra and M4 Max in 2025. There is no
@@ -196,7 +196,7 @@ export default function BlogMacStudioNoDisplay() {
             workshop and we diagnose it free.
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             If the diagnosis shows the fault has spread past a single port, the repair moves to the
             logic board itself. This is most common after a power surge, after liquid reached the

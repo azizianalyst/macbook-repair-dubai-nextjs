@@ -60,7 +60,7 @@ export default function IPhone14PlusRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.7-inch hard-OLED in stock. Genuine Apple-pull panels available too - message us for the price. Same easier back-glass design as iPhone 14 (rear-removable). MagSafe-equipped back glass in stock.
           </p>

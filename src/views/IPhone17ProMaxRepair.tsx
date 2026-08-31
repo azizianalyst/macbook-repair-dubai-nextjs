@@ -67,7 +67,7 @@ export default function IPhone17ProMaxRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.9-inch OLED, battery and USB-C 3 in stock for same-day repair. 8× telephoto and Center Stage front cameras on 48-hour replenishment. We have invested in the dedicated aluminum-unibody polishing rig and vapor chamber service kit - currently one of three workshops in Dubai with full 17 Pro Max tooling.
           </p>

@@ -137,7 +137,7 @@ export default function BlogMacBookBatteryReplacementCost() {
             right the first time. The small saving isn't worth it.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook battery replacement service page

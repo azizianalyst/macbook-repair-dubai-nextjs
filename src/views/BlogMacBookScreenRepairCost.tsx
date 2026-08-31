@@ -154,7 +154,7 @@ export default function BlogMacBookScreenRepairCost() {
             <li>3-month written warranty on parts and labour</li>
           </ul>
 
-          <h2 id="what-next">What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               See our MacBook screen repair page

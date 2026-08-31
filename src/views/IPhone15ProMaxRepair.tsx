@@ -63,7 +63,7 @@ export default function IPhone15ProMaxRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.7-inch ProMotion OLED with Dynamic Island in stock, including genuine Apple-pull panels. The 5× tetraprism telephoto is a single sealed module - no internal disassembly possible. Sourced via Apple's authorised supply chain. Message us on WhatsApp for current pricing on your part.
           </p>

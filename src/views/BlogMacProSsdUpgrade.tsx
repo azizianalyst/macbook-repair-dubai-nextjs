@@ -191,7 +191,7 @@ export default function BlogMacProSsdUpgrade() {
           </section>
 
           <section id="model-notes">
-            <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+            <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
             <p>
               The whole Mac Pro line so far is Intel, and that is what makes this upgrade possible. The 2019
               Mac Pro uses Intel Xeon W processors with the T2 security chip, paired Apple SSD modules, and
@@ -253,7 +253,7 @@ export default function BlogMacProSsdUpgrade() {
           </section>
 
           <section id="when-deeper">
-            <h2 id="when-deeper">When it is a deeper board fault</h2>
+            <h2 id="when-deeper">When is it a deeper board fault?</h2>
             <p>
               Now and then a Mac Pro storage problem is not really about storage, and it is worth knowing
               the signs so you do not pay for the wrong repair. If a newly fitted SSD still will not appear,

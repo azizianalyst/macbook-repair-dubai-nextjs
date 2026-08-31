@@ -141,7 +141,7 @@ export default function BlogMacMiniUpgrade() {
             <li><strong>An SSD runs cooler</strong>: solid-state storage has no moving parts and generates less heat than the hard drive it replaces, a small but real benefit in a hot room</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             This is the single most important point, and it decides whether an upgrade is even possible.
             The Mac mini split into two completely different worlds when Apple moved to its own chips.

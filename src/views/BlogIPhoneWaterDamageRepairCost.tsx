@@ -124,7 +124,7 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             independent board-level workshop like ours.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Phone in water? <strong>Power off, do not charge, message us now.</strong>{" "}
             <Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">

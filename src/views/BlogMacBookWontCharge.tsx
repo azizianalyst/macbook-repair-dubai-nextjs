@@ -191,7 +191,7 @@ export default function BlogMacBookWontCharge() {
             expensive one.
           </p>
 
-          <h2 id="what-next">What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             If you've worked through all eight and the Mac still won't charge, bring it to our Dubai
             Media City workshop for a free diagnostic. We've been fixing Apple hardware at Concord Tower

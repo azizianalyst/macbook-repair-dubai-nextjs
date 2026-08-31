@@ -416,7 +416,7 @@ export default function MacBookProBatteryReplacement() {
         {/* ── Location ───────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="Where to bring your MacBook Pro" />
+            <SectionHead title="Where do I bring my MacBook Pro in Dubai?" />
             <div className="grid gap-lg md:grid-cols-2 items-stretch">
               <div className="overflow-hidden rounded-2xl border border-border">
                 <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />

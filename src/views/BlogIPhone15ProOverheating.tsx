@@ -182,7 +182,7 @@ export default function BlogIPhone15ProOverheating() {
             </Link>.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             If software fixes don't resolve the heat, walk in for a free diagnostic at our Dubai
             Media City workshop. We measure the iPhone's thermal pattern with an infrared camera

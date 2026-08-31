@@ -172,7 +172,7 @@ export default function BlogMacStudioNotTurningOn() {
           </section>
 
           <section>
-            <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+            <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
             <p>
               The Mac Studio has only ever shipped with Apple Silicon, starting with the M1 Max
               and M1 Ultra in 2022 and running through the M2 generation to the current M4 Max
@@ -223,7 +223,7 @@ export default function BlogMacStudioNotTurningOn() {
           </section>
 
           <section>
-            <h2 id="when-deeper">When it is a deeper board fault</h2>
+            <h2 id="when-deeper">When is it a deeper board fault?</h2>
             <p>
               Sometimes the no-power symptom is the surface of a deeper board fault. If the
               machine took a power surge, sat in a humid room for a long period, or had liquid

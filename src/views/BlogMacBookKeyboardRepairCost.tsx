@@ -124,7 +124,7 @@ export default function BlogMacBookKeyboardRepairCost() {
             corrodes the underlying membrane within 48 hours.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair service page

@@ -167,7 +167,7 @@ export default function BlogMacStudioOverheating() {
             35°C does more for fan noise than any software tweak.
           </p>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The Mac Studio has only ever shipped with Apple Silicon. There is no Intel Mac Studio, so
             if you are searching for an "Intel Mac Studio" you are most likely thinking of the older
@@ -213,7 +213,7 @@ export default function BlogMacStudioOverheating() {
             Studio runs cool again under load.
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             In a small number of cases, heat or loud fans are not about airflow at all but about the
             logic board. These are the signs that point past a simple clean:

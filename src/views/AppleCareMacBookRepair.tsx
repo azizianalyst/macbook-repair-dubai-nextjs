@@ -181,7 +181,7 @@ export default function AppleCareMacBookRepair() {
 
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your MacBook</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-lg">Where do I bring my MacBook in Dubai?</h2>
         <LocationBlock tone="dark" />
       </section>
 

@@ -139,7 +139,7 @@ export default function BlogMacBookWifiNotWorking() {
             before any quote.
           </p>
 
-          <h2 id="repair-cost-dubai">What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost-dubai">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's the antenna, a spill or the board before you commit.

@@ -65,7 +65,7 @@ export default function IPhone17ProRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             OLED, battery and USB-C 3 in stock for same-day repair. The 8× telephoto module and Center Stage front camera arrive on 48-hour replenishment. Aluminum-unibody cosmetic work uses different abrasives and laser polishing than titanium - we have the correct equipment.
           </p>

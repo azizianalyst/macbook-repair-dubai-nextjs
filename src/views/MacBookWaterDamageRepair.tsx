@@ -392,7 +392,7 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to bring your MacBook (or call for pickup)</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where do I bring my MacBook, or can you collect it?</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>

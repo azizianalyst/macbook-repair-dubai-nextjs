@@ -61,7 +61,7 @@ export default function IPhone14ProMaxRepair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.7-inch ProMotion OLED with Dynamic Island cutout in stock, including genuine Apple-pull panels. 48MP main module sold separately or as full triple+LiDAR assembly. MagSafe-equipped back glass in stock. Message us on WhatsApp for today's exact part price.
           </p>

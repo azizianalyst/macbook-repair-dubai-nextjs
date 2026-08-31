@@ -313,7 +313,7 @@ export default function MacBookChargingPortRepair() {
 
           {/* DIY */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-md text-text">When DIY makes sense - and when it doesn't</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md text-text">Should I try to fix this myself?</h2>
             <div className="grid gap-md md:grid-cols-2">
               <article className="bg-accent/5 border border-accent/30 rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm text-text">Try it yourself first</h3>
@@ -401,7 +401,7 @@ export default function MacBookChargingPortRepair() {
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where to bring your MacBook</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where do I bring my MacBook in Dubai?</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>

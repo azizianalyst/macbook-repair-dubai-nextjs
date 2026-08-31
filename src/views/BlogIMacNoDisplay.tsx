@@ -152,7 +152,7 @@ export default function BlogIMacNoDisplay() {
           </section>
 
           <section>
-            <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+            <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
             <p>
               The display fault chain is broadly the same across iMac generations, but the parts and
               the likely cause shift depending on whether you have an Intel iMac or an Apple Silicon
@@ -201,7 +201,7 @@ export default function BlogIMacNoDisplay() {
           </section>
 
           <section>
-            <h2 id="when-deeper">When it is a deeper board fault</h2>
+            <h2 id="when-deeper">When is it a deeper board fault?</h2>
             <p>
               Sometimes the black screen is a symptom of something further back on the logic board
               than the display chain. If an external monitor is also black, the GPU output stage,

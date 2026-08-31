@@ -147,7 +147,7 @@ export default function BlogIPhoneRepairVsReplace() {
             convenient but consistently the lowest offer.
           </p>
 
-          <h2 id="what-to-do-next">What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Not sure which side of the line your iPhone falls on?{" "}
             <Link to="/iphone-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">

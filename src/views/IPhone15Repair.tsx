@@ -60,7 +60,7 @@ export default function IPhone15Repair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             6.1-inch OLED with Dynamic Island cutout in stock. Genuine Apple-pull panels available - message us for today's price. USB-C port is a Tristar-2 design, in stock. Colour-infused back glass available in all five 15-series colours (pink, yellow, green, blue, black).
           </p>

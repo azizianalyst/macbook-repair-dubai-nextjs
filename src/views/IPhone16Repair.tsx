@@ -61,7 +61,7 @@ export default function IPhone16Repair() {
               </tbody>
             </table>
           </div>
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in 2026</h2>
+          <h2 className="text-[24px] md:text-[28px] mb-md">Are parts still available in 2026?</h2>
           <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
             All iPhone 16 parts are current-production and abundant, including genuine Apple-pull OLED panels. The Camera Control button uses a new capacitive + force-touch + haptic-engine assembly - sourced as a single sealed flex. Message us on WhatsApp for today's exact part and repair price.
           </p>

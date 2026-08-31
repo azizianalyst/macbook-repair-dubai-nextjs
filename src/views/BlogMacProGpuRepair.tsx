@@ -169,7 +169,7 @@ export default function BlogMacProGpuRepair() {
             <li><strong>Schedule a clean</strong>: an annual dust-out of the heatsinks and MPX bay in a dusty Dubai environment is cheap insurance against premature module failure.</li>
           </ul>
 
-          <h2 id="model-notes">Intel vs Apple Silicon: what differs</h2>
+          <h2 id="model-notes">What is different between Intel and Apple Silicon repairs?</h2>
           <p>
             The single most important fact for a Mac Pro GPU problem is which generation you have,
             because the repair path is completely different. The 2019 Intel Mac Pro is the modular
@@ -219,7 +219,7 @@ export default function BlogMacProGpuRepair() {
             module is genuine and macOS-recognized before you collect.
           </p>
 
-          <h2 id="when-deeper">When it is a deeper board fault</h2>
+          <h2 id="when-deeper">When is it a deeper board fault?</h2>
           <p>
             Most Mac Pro graphics problems end at the module, but a minority point to the logic board
             or its power delivery. The tell is when a known-good module fails the same way, or when
