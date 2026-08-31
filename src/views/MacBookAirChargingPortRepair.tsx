@@ -154,7 +154,6 @@ export default function MacBookAirChargingPortRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Air Charging Port Repair Dubai",
-        price: 220,
         timeline: "Same day · 1-2 hours",
         warranty: "P3M",
         url: "/macbook-air-charging-port-repair-dubai",

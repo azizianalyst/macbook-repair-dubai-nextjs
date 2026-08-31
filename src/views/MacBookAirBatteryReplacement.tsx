@@ -226,7 +226,6 @@ export default function MacBookAirBatteryReplacement() {
       organization(),
       serviceSchema({
         name: "MacBook Air Battery Replacement Dubai",
-        price: 450,
         timeline: "Same day · 2 hours",
         warranty: "P3M",
         url: "/macbook-air-battery-replacement-dubai",

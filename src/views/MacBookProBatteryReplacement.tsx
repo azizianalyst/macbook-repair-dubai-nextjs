@@ -142,7 +142,6 @@ export default function MacBookProBatteryReplacement() {
       organization(),
       serviceSchema({
         name: "MacBook Pro Battery Replacement Dubai",
-        price: 500,
         timeline: "Same day · 2 hours",
         warranty: "P90D",
         url: "/macbook-pro-battery-replacement-dubai",

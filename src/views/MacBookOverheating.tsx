@@ -106,7 +106,6 @@ export default function MacBookOverheating() {
       organization(),
       serviceSchema({
         name: "MacBook Overheating Repair Dubai",
-        price: 150,
         timeline: "Same day",
         warranty: "P90D",
         url: "/macbook-overheating-shutting-down-dubai",

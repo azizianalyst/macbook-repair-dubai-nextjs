@@ -43,7 +43,6 @@ export default function MacBookRepairCostCalculator() {
       pageWithSpeakable({ url, name: TITLE }),
       serviceSchema({
         name: "MacBook Repair Cost Estimate",
-        price: 49,
         timeline: "Same day",
         warranty: "P1Y",
         url: PATH,

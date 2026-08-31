@@ -86,7 +86,6 @@ export default function AppleRepair() {
       organization(),
       serviceSchema({
         name: "Apple Device Repair Dubai",
-        price: 250,
         timeline: "Same day to 5 days",
         warranty: "P1Y",
         url: "/apple-repair-dubai",

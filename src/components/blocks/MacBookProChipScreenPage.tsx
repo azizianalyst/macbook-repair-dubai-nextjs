@@ -104,7 +104,6 @@ export default function MacBookProChipScreenPage({
   l3href,
   l3label,
 }: Props) {
-  const lowestPrice = Math.min(...prices.map((p) => p.price));
 
   useSeo(
     {
@@ -118,7 +117,6 @@ export default function MacBookProChipScreenPage({
       organization(),
       serviceSchema({
         name: `MacBook Pro ${chip} Screen Repair Dubai`,
-        price: lowestPrice,
         timeline: prices[0]?.timeline ?? "Same day",
         warranty: "P3M",
         url: path,

@@ -52,7 +52,6 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
       organization(),
       serviceSchema({
         name: `${p.family} Repair Dubai`,
-        price: p.startingPrice,
         timeline: "Same-day to 5 days",
         warranty: "P1Y",
         url: p.path,

@@ -235,7 +235,6 @@ export default function MacBookAirScreenRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Air Screen Repair Dubai",
-        price: 450,
         timeline: "Same day to 2 days",
         warranty: "P3M",
         url: "/macbook-air-screen-repair-dubai",

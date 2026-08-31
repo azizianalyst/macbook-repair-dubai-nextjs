@@ -132,7 +132,6 @@ export default function MacBookChargingPortRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Charging Port Repair Dubai",
-        price: 350,
         timeline: "Same day to 1 day",
         warranty: "P1Y",
         url: "/macbook-charging-port-repair-dubai",

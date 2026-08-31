@@ -132,7 +132,6 @@ export default function MacBookDataRecovery() {
       organization(),
       serviceSchema({
         name: "MacBook Data Recovery Dubai",
-        price: 299,
         timeline: "24 hours to 7 days",
         warranty: "P7D",
         url: "/macbook-data-recovery-dubai",

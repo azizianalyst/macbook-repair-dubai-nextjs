@@ -114,7 +114,6 @@ export default function MacBookWontCharge() {
       organization(),
       serviceSchema({
         name: "MacBook Not Charging Repair Dubai",
-        price: 200,
         timeline: "Same day",
         warranty: "P90D",
         url: "/macbook-wont-charge-dubai",

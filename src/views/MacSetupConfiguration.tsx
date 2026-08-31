@@ -51,7 +51,6 @@ export default function MacSetupConfiguration() {
       organization(),
       serviceSchema({
         name: "Mac Setup, Configuration & Data Migration Dubai",
-        price: 150,
         timeline: "Same day",
         warranty: "P15D",
         url: "/mac-setup-data-migration-dubai",

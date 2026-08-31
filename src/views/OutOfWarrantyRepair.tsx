@@ -47,7 +47,6 @@ export default function OutOfWarrantyRepair() {
       organization(),
       serviceSchema({
         name: "Out-of-Warranty Apple Repair Dubai",
-        price: 200,
         timeline: "Same day to 5 days",
         warranty: "P1Y",
         url: "/out-of-warranty-apple-repair-dubai",

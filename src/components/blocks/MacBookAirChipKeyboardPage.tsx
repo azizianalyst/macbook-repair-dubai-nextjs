@@ -102,7 +102,6 @@ export default function MacBookAirChipKeyboardPage({
   l3href,
   l3label,
 }: Props) {
-  const lowestPrice = Math.min(...prices.map((p) => p.price));
 
   useSeo(
     {
@@ -116,7 +115,6 @@ export default function MacBookAirChipKeyboardPage({
       organization(),
       serviceSchema({
         name: `MacBook Air ${chip} Keyboard Repair Dubai`,
-        price: lowestPrice,
         timeline: prices[0]?.timeline ?? "Same day · 2 hours",
         warranty: "P15D",
         url: path,

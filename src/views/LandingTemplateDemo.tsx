@@ -81,8 +81,6 @@ export default function LandingTemplateDemo() {
           organization(),
           serviceSchema({
             name: "MacBook Screen Repair Dubai",
-            price: 600,
-            priceMax: 1200,
             timeline: "Same day to 2 days",
             warranty: "P3M",
             url: DEMO_PATH,

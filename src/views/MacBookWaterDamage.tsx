@@ -146,7 +146,6 @@ export default function MacBookWaterDamage() {
       organization(),
       serviceSchema({
         name: "MacBook Water Damage Repair Dubai",
-        price: 400,
         timeline: "Same day - 2 days",
         warranty: "P90D",
         url: "/macbook-water-damage-repair-dubai",

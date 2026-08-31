@@ -102,7 +102,6 @@ export default function MacBookAirChipBatteryPage({
   l3href,
   l3label,
 }: Props) {
-  const lowestPrice = Math.min(...prices.map((p) => p.price));
 
   useSeo(
     {
@@ -116,7 +115,6 @@ export default function MacBookAirChipBatteryPage({
       organization(),
       serviceSchema({
         name: `MacBook Air ${chip} Battery Replacement Dubai`,
-        price: lowestPrice,
         timeline: prices[0]?.timeline ?? "Same day · 2 hours",
         warranty: "P3M",
         url: path,

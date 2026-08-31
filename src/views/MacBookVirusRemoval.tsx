@@ -143,7 +143,6 @@ export default function MacBookVirusRemoval() {
       organization(),
       serviceSchema({
         name: "MacBook Virus & Malware Removal Dubai",
-        price: 250,
         timeline: "Same day to 2 days",
         warranty: "P15D",
         url: "/macbook-virus-removal-dubai",

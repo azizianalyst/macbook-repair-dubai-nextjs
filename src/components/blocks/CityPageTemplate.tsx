@@ -45,7 +45,6 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
       pageWithSpeakable({ url, name: title }),
       serviceSchema({
         name: `MacBook Repair ${cfg.city}`,
-        price: 350,
         timeline: cfg.turnaround,
         warranty: "P1Y",
         url: path,

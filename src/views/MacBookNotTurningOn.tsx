@@ -149,7 +149,6 @@ export default function MacBookNotTurningOn() {
       organization(),
       serviceSchema({
         name: "MacBook Not Turning On Repair Dubai",
-        price: 200,
         timeline: "Same day",
         warranty: "P90D",
         url: "/macbook-not-turning-on-dubai",

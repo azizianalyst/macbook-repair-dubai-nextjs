@@ -93,7 +93,6 @@ export default function MacBookInsurance() {
       organization(),
       serviceSchema({
         name: "MacBook Insurance Dubai",
-        price: 0,
         timeline: "Annual plan",
         warranty: "P1Y",
         url: "/macbook-insurance-dubai",

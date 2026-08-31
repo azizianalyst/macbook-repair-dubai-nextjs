@@ -118,7 +118,6 @@ export default function MacBookKernelPanic() {
       organization(),
       serviceSchema({
         name: "MacBook Kernel Panic Repair Dubai",
-        price: 200,
         timeline: "Same day",
         warranty: "P90D",
         url: "/macbook-kernel-panic-dubai",

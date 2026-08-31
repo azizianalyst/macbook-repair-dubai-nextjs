@@ -93,7 +93,6 @@ export default function AppleRepairProgramsDubai() {
       pageWithSpeakable({ url: URL, name: "Apple Free Repair Programs Dubai" }),
       serviceSchema({
         name: "Apple repair programme eligibility check",
-        price: 0,
         timeline: "Same day",
         warranty: "P1Y",
         url: PATH,

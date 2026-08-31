@@ -55,7 +55,6 @@ export default function AppleCareMacBookRepair() {
       organization(),
       serviceSchema({
         name: "AppleCare and In-Warranty MacBook Repair Dubai",
-        price: 450,
         timeline: "Same day to 5 days",
         warranty: "P1Y",
         url: "/applecare-macbook-repair-dubai",

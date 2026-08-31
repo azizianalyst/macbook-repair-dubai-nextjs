@@ -94,7 +94,6 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
       organization(),
       serviceSchema({
         name: p.serviceName,
-        price: p.startingPrice,
         timeline: p.timeline,
         warranty: warrantyIso(p.warrantyDays),
         url: p.path,

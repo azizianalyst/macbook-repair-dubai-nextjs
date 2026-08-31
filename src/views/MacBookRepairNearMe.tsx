@@ -152,7 +152,6 @@ export default function MacBookRepairNearMe() {
       }),
       serviceSchema({
         name: "MacBook Repair Near Me Dubai",
-        price: 350,
         timeline: "Same day",
         warranty: "P1Y",
         url: "/macbook-repair-near-me",

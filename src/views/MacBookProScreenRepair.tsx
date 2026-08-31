@@ -160,7 +160,6 @@ export default function MacBookProScreenRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Pro Screen Repair Dubai",
-        price: 600,
         timeline: "Same day to 3 days",
         warranty: "P3M",
         url: "/macbook-pro-screen-repair-dubai",

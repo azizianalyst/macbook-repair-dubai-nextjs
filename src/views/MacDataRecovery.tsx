@@ -134,7 +134,6 @@ export default function MacDataRecovery() {
       organization(),
       serviceSchema({
         name: "Mac Data Recovery Dubai",
-        price: 500,
         timeline: "Same day to 5 days",
         warranty: "P90D",
         url: "/mac-data-recovery-dubai",

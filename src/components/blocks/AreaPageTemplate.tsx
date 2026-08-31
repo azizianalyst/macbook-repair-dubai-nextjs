@@ -44,7 +44,6 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       // to avoid a duplicate Place node after hydration.
       serviceSchema({
         name: `MacBook Repair ${cfg.area}`,
-        price: 350,
         timeline: "Same day",
         warranty: "P1Y",
         url: path,

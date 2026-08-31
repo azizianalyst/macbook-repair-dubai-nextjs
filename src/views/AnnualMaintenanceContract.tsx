@@ -58,7 +58,6 @@ export default function AnnualMaintenanceContract() {
       organization(),
       serviceSchema({
         name: "Apple Annual Maintenance Contract Dubai",
-        price: 0,
         timeline: "Annual contract",
         warranty: "P1Y",
         url: "/annual-maintenance-contract-dubai",

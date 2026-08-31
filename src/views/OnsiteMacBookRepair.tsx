@@ -67,7 +67,6 @@ export default function OnsiteMacBookRepair() {
       organization(),
       serviceSchema({
         name: "Onsite MacBook Repair Dubai",
-        price: 0,
         timeline: "Same-day on most repairs",
         warranty: "P1Y",
         url: "/onsite-macbook-repair-dubai",

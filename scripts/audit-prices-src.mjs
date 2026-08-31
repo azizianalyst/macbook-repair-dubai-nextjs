@@ -112,6 +112,35 @@ for (const file of walk(SRC)) {
   });
 }
 
+// ── Structured-data prices (schema) ────────────────────────────────────────────
+// These do NOT appear in the text scan above: `price: 500` has no "AED" next to it, so PRICE_RE
+// cannot see it. They matter more than visible copy, because they are what Google reads for
+// rich results — and the rendered gate misses them too, since it fetches raw HTML while this
+// schema is injected client-side by useSeo. On 2026-08-31 a raw-HTML scan reported "0 structured
+// prices" while the JS-rendered page carried "price":"500"; Googlebot renders JS and saw it.
+// Checked here, at the source, where neither blind spot applies.
+const SCHEMA_CALL = /(?:serviceSchema|service)\(\{(?:[^{}]|\{[^{}]*\})*?\}\)/gs;
+const SCHEMA_PRICE = /^[ \t]*price(?:Max)?\s*:/m;
+const schemaLeaks = [];
+for (const file of walk(SRC)) {
+  const rel = relative(ROOT, file);
+  if (WHITELIST.includes(rel) || WHITELIST_RE.some((re) => re.test(rel))) continue;
+  const src = readFileSync(file, "utf8");
+  for (const m of src.matchAll(SCHEMA_CALL)) {
+    if (SCHEMA_PRICE.test(m[0])) {
+      const n = src.slice(0, m.index).split("\n").length;
+      schemaLeaks.push({ rel, n });
+    }
+  }
+}
+if (schemaLeaks.length) {
+  console.log(`✗ FAIL — ${schemaLeaks.length} schema call(s) publish a price to rich results:`);
+  for (const l of schemaLeaks.slice(0, 20)) console.log(`  ${l.rel}:${l.n}`);
+  if (schemaLeaks.length > 20) console.log(`  … +${schemaLeaks.length - 20} more`);
+  console.log("  Fix: drop the `price:` field — service() emits a priceless Offer when it is omitted.");
+  process.exit(1);
+}
+
 if (leaks.length === 0) {
   console.log("✓ PASS — no visible price figures found in the source layer.");
   process.exit(0);

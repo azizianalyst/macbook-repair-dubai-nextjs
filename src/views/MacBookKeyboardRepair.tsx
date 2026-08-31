@@ -147,7 +147,6 @@ export default function MacBookKeyboardRepair() {
       organization(),
       serviceSchema({
         name: "MacBook Keyboard Repair Dubai",
-        price: 150,
         timeline: "Same day to 2 days",
         warranty: "P15D",
         url: "/macbook-keyboard-repair-dubai",
