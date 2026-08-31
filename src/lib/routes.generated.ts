@@ -35,6 +35,7 @@ export const ROUTES: string[] = [
   "/apple-t2-chip-data-recovery-dubai",
   "/apple-watch-repair-dubai",
   "/applecare-macbook-repair-dubai",
+  "/azizi-template-demo",
   "/best-apple-repair-dubai",
   "/best-iphone-repair-dubai",
   "/best-macbook-repair-shop-dubai",

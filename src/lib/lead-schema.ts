@@ -34,6 +34,12 @@ export const LeadSchema = z.object({
   area: z.string().trim().max(80).optional().or(z.literal("")),
   // meta (set by client; informational only)
   sourcePath: z.string().trim().max(200).optional().or(z.literal("")),
+  // Which team picks this up, and which form preset produced it. Declared by
+  // the preset (src/data/form-presets.ts), never inferred from the free text —
+  // free-text inference cannot survive chip answers, because a chip like
+  // "Repairs for several devices" contains no word that identifies the motion.
+  route: z.enum(["repair", "buyback", "business"]).optional(),
+  presetId: z.string().trim().max(40).optional().or(z.literal("")),
   // honeypot - humans never fill it. Validated loosely so the route can silently
   // drop bot submissions (return ok without saving) instead of revealing a 400.
   company: z.string().max(100).optional().or(z.literal("")),
