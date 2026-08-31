@@ -18,10 +18,10 @@ export default function MacBookProM3BatteryReplacement() {
       heroAnswer="MacBook Pro M3 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M3 Pro uses a 70 Wh cell; the M3 Max 16-inch uses a 99.6 Wh cell. The M3 is the last mini-LED generation before the OLED M5, making it a long-term keeper worth servicing. BMS firmware re-pair is included in every price. Same-day 2-hour service."
       chipUniquePoints={[
         "The M3 chip is built on TSMC 3nm technology, making it significantly more efficient than the M2 at the same workload. The 14-inch M3 Pro uses a 70 Wh cell — slightly larger than the M2 Pro 69.6 Wh — contributing to up to 18 hours of battery life under Apple test conditions.",
-        "The M3 Max 16-inch is a serious workstation laptop with hardware ray tracing, up to 40-core GPU, and up to 128 GB unified memory. At 99.6 Wh, the 16-inch cell is the largest allowed on commercial flights. A new cell at AED 600 restores full runtime on a machine that can otherwise last many years in professional use.",
+        "The M3 Max 16-inch is a serious workstation laptop with hardware ray tracing, up to 40-core GPU, and up to 128 GB unified memory. At 99.6 Wh, the 16-inch cell is the largest allowed on commercial flights. A new cell restores full runtime on a machine that can otherwise last many years in professional use.",
         "The Space Black finish launched with the M3 Max in late 2023, and many Dubai buyers chose this model. The anodisation does not affect battery replacement, but the bottom case needs careful re-seating. Our technicians handle both Space Black and Silver M3 Max 16-inch battery replacements same-day.",
         "M3 MacBook Pros bought in late 2023 may still be under AppleCare+ if purchased with a 2-year or 3-year plan. Check your AppleCare+ coverage at mysupport.apple.com before booking with us. If the battery is below 80 percent capacity and you have AppleCare+, Apple may replace it at reduced cost or free of charge.",
-        "The M3 is the last MacBook Pro generation using mini-LED display before the OLED screens introduced in the M5 (2025). This makes the M3 Pro and M3 Max attractive long-term platforms. Battery replacement at AED 500 to AED 600 is a straightforward investment to extend the life of an otherwise current machine.",
+        "The M3 is the last MacBook Pro generation using mini-LED display before the OLED screens introduced in the M5 (2025). This makes the M3 Pro and M3 Max attractive long-term platforms. Battery replacement is a straightforward investment to extend the life of an otherwise current machine.",
       ]}
       prices={[
         {
@@ -48,7 +48,7 @@ export default function MacBookProM3BatteryReplacement() {
         },
         {
           title: "M3 Max not reaching rated 22 hours battery life",
-          body: "The M3 Max 16-inch is rated for up to 22 hours. At 70 to 80 percent cell capacity, that drops to 15 to 17 hours. A new 99.6 Wh cell at AED 600 restores the full 22-hour rating. BMS re-pair recalibrates the capacity reading in macOS so it reflects the new cell accurately.",
+          body: "The M3 Max 16-inch is rated for up to 22 hours. At 70 to 80 percent cell capacity, that drops to 15 to 17 hours. A new 99.6 Wh cell restores the full 22-hour rating. BMS re-pair recalibrates the capacity reading in macOS so it reflects the new cell accurately.",
         },
         {
           title: "M3 Pro showing Battery Health as Unknown",
@@ -60,7 +60,7 @@ export default function MacBookProM3BatteryReplacement() {
         },
         {
           title: "AppleCare+ expired but battery is below 80 percent",
-          body: "If your M3 Pro AppleCare+ has lapsed and battery health is below 80 percent, MacBook Repair Dubai provides a same-day replacement at AED 500 with BMS re-pair and 3-month warranty. Significantly faster than the Apple Store appointment process and competitively priced.",
+          body: "If your M3 Pro AppleCare+ has lapsed and battery health is below 80 percent, MacBook Repair Dubai provides a same-day replacement with BMS re-pair and 3-month warranty. Message us for the current price. Significantly faster than the Apple Store appointment process and competitively priced.",
         },
       ]}
       faqs={[
@@ -70,7 +70,7 @@ export default function MacBookProM3BatteryReplacement() {
         },
         {
           q: "Should I check AppleCare+ before booking M3 Pro battery replacement?",
-          a: "Yes. If you bought your M3 MacBook Pro in late 2023 with a 2-year AppleCare+ plan, it may still be covered through late 2025. Apple replaces batteries below 80 percent capacity under AppleCare+ for a reduced service fee. Check your coverage at mysupport.apple.com. If you are not covered, we offer same-day service at AED 500 to AED 600.",
+          a: "Yes. If you bought your M3 MacBook Pro in late 2023 with a 2-year AppleCare+ plan, it may still be covered through late 2025. Apple replaces batteries below 80 percent capacity under AppleCare+ for a reduced service fee. Check your coverage at mysupport.apple.com. If you are not covered, we offer same-day service and will quote you before any work starts.",
         },
         {
           q: "What is BMS re-pair and why does the M3 Pro need it?",
@@ -78,7 +78,7 @@ export default function MacBookProM3BatteryReplacement() {
         },
         {
           q: "Is the MacBook Pro M3 worth repairing in 2025?",
-          a: "Yes. The M3 Pro and M3 Max are still current-generation machines with mini-LED displays, hardware ray tracing, and full macOS support for the foreseeable future. Battery replacement at AED 500 to AED 600 adds years of useful life to a machine that would cost AED 8,000 to AED 16,000 to replace.",
+          a: "Yes. The M3 Pro and M3 Max are still current-generation machines with mini-LED displays, hardware ray tracing, and full macOS support for the foreseeable future. A battery replacement adds years of useful life to a machine that costs many times more to replace outright.",
         },
         {
           q: "How do I check my MacBook Pro M3 battery cycle count?",
