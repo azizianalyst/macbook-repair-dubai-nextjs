@@ -5,7 +5,7 @@ export default function MacBookSystemCrashing() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook System Crashing Repair Dubai - Kernel Panics & Crashes Fixed | AED 200"
-      seoDescription="MacBook crashing, kernel panics, or beach balls in Dubai? We diagnose RAM, SSD, logic board faults and fix the root cause. AED 200 diagnosis, same day. Call 055 741 3706."
+      seoDescription="MacBook crashing, kernel panics, or beach balls in Dubai? We diagnose RAM, SSD and logic board faults and fix the root cause. Free diagnosis, same day. Call 055 741 3706."
       path="/macbook-system-crashing-repair-dubai"
       eyebrow="MacBook system crashing repair"
       h1="MacBook System Crashing Repair Dubai"

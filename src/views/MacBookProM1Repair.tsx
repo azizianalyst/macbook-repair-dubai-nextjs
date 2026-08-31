@@ -8,7 +8,7 @@ export default function MacBookProM1Repair() {
       chip="M1"
       years="2020 – 2021"
       seoTitle="MacBook Pro M1 Repair Dubai - 13&quot;, 14&quot; &amp; 16&quot; All M1 Models | AED 200"
-      seoDescription="MacBook Pro M1 repair Dubai. All variants: 13&quot; M1 (A2338), 14&quot; M1 Pro (A2442), 16&quot; M1 Pro/Max (A2485). First Apple Silicon. From AED 200. Call 055 741 3706."
+      seoDescription="MacBook Pro M1 repair Dubai. All variants: 13&quot; M1 (A2338), 14&quot; M1 Pro (A2442), 16&quot; M1 Pro/Max (A2485). First Apple Silicon. Free diagnosis, quote before repair. Call 055 741 3706."
       eyebrow="MacBook Pro M1 specialist"
       h1="MacBook Pro M1 Repair Dubai"
       heroDescription="The original Apple Silicon MacBook Pro. Whether you have the 13&quot; M1, 14&quot; M1 Pro, or 16&quot; M1 Pro/Max, our technicians have been servicing first-gen Apple Silicon since day one."

@@ -32,6 +32,18 @@ import { REDIRECTS } from "@/content/redirects.generated";
 // backstop for scraper bursts. The cooldown is a fixed 2 min, NOT extended on every excess
 // request, so a blocked visitor is always released quickly.
 // In-memory only — resets on server restart. Fine for single-instance Hostinger Node.
+// MASTER SWITCH — OFF. The owner asked for the limiter to be removed: no visitor should ever
+// see "Too many requests. Please slow down." With this false, rateLimited() returns false before
+// touching any state, so no 429 is ever produced and the counter map stays empty.
+//
+// It is left as a switch rather than deleted so the mechanism is still here if a scraper burst
+// ever makes it worth re-arming (flip to true). Real abuse protection belongs at the Cloudflare
+// edge as a managed challenge, which does not hard-block shared UAE carrier-grade NAT IPs the
+// way this did. Named competitor crawlers (Ahrefs, Semrush, Majestic, DataForSEO…) are still
+// hard-blocked by UA below, and cloner tools still get the poisoned honeypot — removing this
+// limiter does not weaken either of those.
+const RATE_LIMIT_ENABLED = false;
+
 const _rateMap = new Map<string, { count: number; resetAt: number; blocked?: boolean }>();
 const RATE_LIMIT  = 200;         // HTML page views per window before lockout (RSC not counted)
 const RATE_WINDOW = 60_000;      // 1 minute window (ms)
@@ -65,6 +77,8 @@ function isAppInternalRsc(req: NextRequest): boolean {
 }
 
 function rateLimited(req: NextRequest): boolean {
+  if (!RATE_LIMIT_ENABLED) return false;
+
   // Prefetch/RSC is the framework talking to itself — one page view can be 100+ of these.
   // Counting them made a single real visitor rate-limit themselves within seconds.
   if (isAppInternalRsc(req)) return false;

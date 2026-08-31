@@ -11,7 +11,11 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 // Anti-spam: per-IP cap on this public endpoint. Tunable via env.
-const RATE_MAX = Number(process.env.LEAD_RATE_MAX || 5);
+// 5/10min per IP was too tight for UAE carrier-grade NAT: Etisalat/du mobile users share one
+// public IP, so a handful of genuine enquiries from different people could exhaust it and the
+// form would refuse a real lead. 20 still stops a spam script (which submits hundreds) while
+// leaving room for a shared IP. Override with LEAD_RATE_MAX if it ever needs tightening.
+const RATE_MAX = Number(process.env.LEAD_RATE_MAX || 20);
 const RATE_WINDOW_MS = Number(process.env.LEAD_RATE_WINDOW_MS || 10 * 60 * 1000);
 
 const LEADS_FILE = process.env.LEADS_FILE || path.join(process.cwd(), "data", "leads.jsonl");

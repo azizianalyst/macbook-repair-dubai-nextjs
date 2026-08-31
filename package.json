@@ -27,8 +27,8 @@
     "check:orphans": "node scripts/orphan-check.cjs",
     "check:internal": "node scripts/link-check.cjs && node scripts/orphan-check.cjs",
     "indexnow": "node scripts/indexnow-ping.mjs",
-    "predev": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs",
-    "prebuild": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs",
+    "predev": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/extract-meta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs",
+    "prebuild": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/extract-meta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
