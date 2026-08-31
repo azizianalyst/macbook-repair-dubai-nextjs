@@ -369,7 +369,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. Message us for a price."
   },
   "/blog/macbook-air-m3-common-problems-dubai": {
-    "title": "MacBook Air M3 Common Problems Dubai 2024: Fix Guide",
+    "title": "MacBook Air M3 Common Problems Dubai 2026: Fix Guide",
     "description": "MacBook Air M3 problems in Dubai: dual display bug, battery drain, overheating, MagSafe issues. All M3 Air faults fixed. Free diagnosis, WhatsApp for a quote."
   },
   "/blog/macbook-air-m3-screen-flickering-dubai": {
@@ -377,7 +377,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook Air M3 screen flickering in Dubai? True Tone conflicts, display cable, software bugs, backlight issues. Free diagnosis, same-day repair. WhatsApp us for a quote."
   },
   "/blog/macbook-air-m4-common-problems-dubai": {
-    "title": "MacBook Air M4 Common Problems Dubai 2025: Fix Guide",
+    "title": "MacBook Air M4 Common Problems Dubai 2026: Fix Guide",
     "description": "MacBook Air M4 problems in Dubai: battery drain, thermal throttle, keyboard issues, WiFi drops. All M4 Air faults fixed same-day. Free diagnosis, WhatsApp us."
   },
   "/blog/macbook-air-m5-common-problems-dubai": {
@@ -1328,7 +1328,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Expert Mac Pro repair in Dubai. Our Apple desktop specialists fix hardware, SSD, GPU, RAM & logic board issues. Fast turnaround & genuine parts."
   },
   "/mac-repair-cost-dubai": {
-    "title": "Mac Repair Cost Dubai. MacBook, iMac, Mac mini | 2024 Prices",
+    "title": "Mac Repair Cost Dubai. MacBook, iMac & Mac mini 2026",
     "description": "Mac repair cost in Dubai. MacBook screen, battery and logic board; iMac screen. Free diagnosis, written quote before any work. Call 055 741 3706."
   },
   "/mac-repair-dubai": {
@@ -1460,7 +1460,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook Air M3 keyboard repair Dubai. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Same-day service. Call 055 741 3706."
   },
   "/macbook-air-m3-repair-dubai": {
-    "title": "MacBook Air M3 Repair Dubai 2024: Screen, Battery & Logic Board",
+    "title": "MacBook Air M3 Repair Dubai 2026: Screen, Battery & Logic Board",
     "description": "MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
   },
   "/macbook-air-m3-screen-repair-dubai": {
@@ -1476,7 +1476,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook Air M4 keyboard repair Dubai. Magic Keyboard scissor switch, individual key caps, Touch ID. 13-inch and 15-inch. Free diagnosis. Call 055 741 3706."
   },
   "/macbook-air-m4-repair-dubai": {
-    "title": "MacBook Air M4 Repair Dubai 2025: Screen, Battery & Logic Board",
+    "title": "MacBook Air M4 Repair Dubai 2026: Screen, Battery & Logic Board",
     "description": "MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
   },
   "/macbook-air-m4-screen-repair-dubai": {

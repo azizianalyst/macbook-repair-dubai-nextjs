@@ -7,7 +7,7 @@ export default function MacBookAirM3Repair() {
       path="/macbook-air-m3-repair-dubai"
       chip="M3"
       years="2024"
-      seoTitle="MacBook Air M3 Repair Dubai 2024: Screen, Battery & Logic Board"
+      seoTitle="MacBook Air M3 Repair Dubai 2026: Screen, Battery & Logic Board"
       seoDescription="MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
       eyebrow="MacBook Air M3 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M3 Repair Dubai"

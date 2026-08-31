@@ -7,9 +7,9 @@ export default function MacProFullDiagnostic() {
       seoTitle="Mac Pro Full Diagnostic Dubai - Pre-Purchase & Fault Check"
       seoDescription="Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Free pickup. Call 055 741 3706."
       path="/mac-pro-full-diagnostic-dubai"
-      eyebrow="Intel + M2 Ultra · AED 200 · waived on repair · pre-purchase check available"
+      eyebrow="Intel + M2 Ultra · diagnostic waived on repair · pre-purchase check available"
       h1="Mac Pro Full Diagnostic Dubai - Pre-Purchase and Fault Check"
-      subtitle="Mac Pro diagnostic in Dubai: AED 200, waived if we do the repair. Pre-purchase check for used Mac Pros. Fault isolation if something's wrong. Full written report. Free pickup from Dubai Media City."
+      subtitle="Mac Pro diagnostic in Dubai, and the fee is waived if we do the repair. Pre-purchase check for used Mac Pros. Fault isolation if something's wrong. Full written report. Free pickup from Dubai Media City."
       startingPrice={200}
       timeline="Same day (3-4 hours for full diagnostic)"
       whatsappPrefill="Hi, I would like a Mac Pro diagnostic. Model and reason:"
@@ -23,13 +23,13 @@ export default function MacProFullDiagnostic() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            A full Mac Pro diagnostic in Dubai is AED 200, waived if we carry out the repair, and takes 3 to 4 hours. Used Mac Pros circulate heavily in Dubai's creative and broadcast sector, so a pre-purchase check is the cheapest insurance available.
+            A full Mac Pro diagnostic in Dubai carries a flat fee that is waived if we carry out the repair, and takes 3 to 4 hours. Used Mac Pros circulate heavily in Dubai's creative and broadcast sector, so a pre-purchase check is the cheapest insurance available.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             We check everything: PSU health (Intel), GPU module function (Intel), all PCIe slots, every Thunderbolt port, RAM health per DIMM (Intel) or unified memory health (M2 Ultra), storage health and read/write speed, thermals, and fan RPMs.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            You get a written report with findings and repair recommendations. If we find nothing wrong, you pay AED 200 and leave with confidence. If we find something and you book the repair with us, the AED 200 is waived.
+            You get a written report with findings and repair recommendations. If we find nothing wrong, you pay the diagnostic fee only and leave with confidence. If we find something and you book the repair with us, the diagnostic fee is waived.
           </p>
         </>
       }
@@ -59,7 +59,7 @@ export default function MacProFullDiagnostic() {
       ]}
       warrantyDays={0}
       warrantyBullets={[
-        "Diagnostic fee AED 200.",
+        "Flat diagnostic fee, quoted up front.",
         "Fee waived if you book a repair with us in the same visit.",
         "Written report provided - keep it for your records.",
       ]}
@@ -69,8 +69,8 @@ export default function MacProFullDiagnostic() {
           a: "Intel Mac Pro: PSU, MPX GPU module, all Thunderbolt 3 ports, all 12 RAM slots, SSD, thermals, fans, PCIe slots, and display output. M2 Ultra Mac Pro: Thunderbolt 4 ports, HDMI 2.1, USB-A, fans, SSD, thermals, and M2 Ultra health indicators.",
         },
         {
-          q: "Is the AED 200 fee waived if I get a repair?",
-          a: "Yes. If you book any repair with us in the same visit, the AED 200 diagnostic fee is waived. You pay for the repair only.",
+          q: "Is the diagnostic fee waived if I get a repair?",
+          a: "Yes. If you book any repair with us in the same visit, the diagnostic fee is waived and you pay for the repair only.",
         },
         {
           q: "Can you do a pre-purchase check on a used Mac Pro I haven't bought yet?",

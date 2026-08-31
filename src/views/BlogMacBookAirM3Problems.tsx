@@ -6,7 +6,7 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookAirM3Problems() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Air M3 Common Problems Dubai 2024: Fix Guide"
+      seoTitle="MacBook Air M3 Common Problems Dubai 2026: Fix Guide"
       seoDescription="MacBook Air M3 problems in Dubai: dual display bug, battery drain, overheating, MagSafe issues. All M3 Air faults fixed. Free diagnosis, WhatsApp for a quote."
       path="/blog/macbook-air-m3-common-problems-dubai"
       wide

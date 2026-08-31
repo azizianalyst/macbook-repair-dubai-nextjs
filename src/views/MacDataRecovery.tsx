@@ -34,47 +34,47 @@ const SCENARIOS = [
   {
     icon: <HardDrive size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "MacBook won't boot or stuck on spinning wheel",
-    price: "AED 500-800",
+    price: "On request",
     body: "Often a corrupted macOS volume or failing SSD directory, not necessarily a dead drive. We image the drive state without writing to it first, then attempt logical recovery. High success rate on drives that won't boot but are still detected.",
   },
   {
     icon: <AlertTriangle size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "Accidental file delete or format",
-    price: "AED 500-700",
+    price: "On request",
     body: "Time-sensitive. Stop using the Mac immediately -- every write reduces the recovery window. Do not empty the Trash. Bring in or send to us as soon as possible. Logical file recovery from a still-functioning SSD has a very high success rate when the drive has not been written to since deletion.",
   },
   {
     icon: <Truck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "Water damage",
-    price: "AED 600-1500",
-    body: "Logic board repair usually comes first (ultrasonic clean, corrosion removal, component work), then SSD health is assessed. If the SSD controller was damaged by liquid, chip-level recovery techniques are used. AED 800-1500 all-in for board repair plus recovery.",
+    price: "On request",
+    body: "Logic board repair usually comes first (ultrasonic clean, corrosion removal, component work), then SSD health is assessed. If the SSD controller was damaged by liquid, chip-level recovery techniques are used. Board repair and recovery are quoted together as one job.",
   },
   {
     icon: <Database size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "SSD failure -- not detected or clicking",
-    price: "AED 600-1200",
+    price: "On request",
     body: "A drive that is not detected may have a failed SSD controller or bad NAND blocks. We run non-destructive diagnostics first. Physical SSD failure recovery is successful in 60-75% of cases. Apple Silicon SSDs are soldered and require board-level work for physical failures.",
   },
   {
     icon: <Cpu size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "macOS corruption after update",
-    price: "AED 300-600",
+    price: "On request",
     body: "A partial or interrupted macOS update can leave the system volume corrupted. In most cases your data is intact on the volume -- we reinstall macOS around it without erasing. Full data recovery is rarely needed for this scenario.",
   },
   {
     icon: <ShieldCheck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
     title: "T2 chip lock or FileVault encrypted drive",
-    price: "AED 500-1000",
+    price: "On request",
     body: "T2-secured Macs (2018-2020 Intel) encrypt the SSD at the hardware level. Recovery requires your Apple ID and FileVault password -- without them, data cannot be decrypted by anyone. We assist with account recovery and T2 bypass diagnostics where possible.",
   },
 ];
 
 const PRICING_ROWS = [
-  { label: "Logical recovery (won't boot, corrupted macOS)", price: "AED 500-700" },
-  { label: "Accidental format or file delete", price: "AED 500-700" },
-  { label: "Physical SSD failure", price: "AED 700-1200" },
-  { label: "Water damage board repair plus recovery", price: "AED 800-1500" },
-  { label: "T2 chip lock or FileVault issues", price: "AED 500-1000" },
+  { label: "Logical recovery (won't boot, corrupted macOS)", price: "On request" },
+  { label: "Accidental format or file delete", price: "On request" },
+  { label: "Physical SSD failure", price: "On request" },
+  { label: "Water damage board repair plus recovery", price: "On request" },
+  { label: "T2 chip lock or FileVault issues", price: "On request" },
 ];
 
 const SUCCESS_RATES = [
@@ -100,7 +100,7 @@ const FAQS = [
   },
   {
     q: "How much does Mac data recovery cost in Dubai?",
-    a: "From AED 500 for logical recovery (corrupted macOS, won't boot). AED 700-1200 for physical SSD failure. AED 800-1500 for water damage. Free assessment before any paid work -- we tell you the recovery probability and cost before you commit.",
+    a: "It depends on why the data is unreachable. Logical recovery (corrupted macOS, won't boot) is the least involved; physical SSD failure needs specialist hardware; water damage means repairing the board before recovery can even start, so it costs the most. The assessment is free and we tell you both the recovery probability and the price before you commit to anything.",
   },
   {
     q: "Can data be recovered from a MacBook with a soldered Apple Silicon SSD?",
@@ -116,7 +116,7 @@ const FAQS = [
   },
   {
     q: "Is data recovery from a water-damaged MacBook possible?",
-    a: "Yes, in 60-75% of cases after water damage. We repair the logic board first (ultrasonic clean, component repair), then assess SSD health. If the SSD controller was damaged by liquid, recovery is harder but still possible with chip-level techniques. AED 800-1500 all-in.",
+    a: "Yes, in 60-75% of cases after water damage. We repair the logic board first (ultrasonic clean, component repair), then assess SSD health. If the SSD controller was damaged by liquid, recovery is harder but still possible with chip-level techniques. Board repair and recovery are quoted as a single job.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function MacDataRecovery() {
           <div className="rounded-2xl border border-accent/30 bg-accent/[0.06] p-lg md:p-xl">
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">Quick answer</p>
             <p className="text-[16px] md:text-[17px] leading-relaxed text-text m-0">
-              Mac data recovery in Dubai starts with a free assessment at MacBook Repair Dubai. We recover data from MacBooks that won't boot, have failed SSDs, suffered water damage, or were accidentally formatted. Apple Silicon (M1-M4) recovery is more complex due to soldered SSD but achievable in most cases. From AED 500 for standard recovery.
+              Mac data recovery in Dubai starts with a free assessment at MacBook Repair Dubai. We recover data from MacBooks that won't boot, have failed SSDs, suffered water damage, or were accidentally formatted. Apple Silicon (M1-M4) recovery is more complex due to soldered SSD but achievable in most cases. The assessment is free and you get a written price before any paid work.
             </p>
           </div>
         </div>
@@ -364,7 +364,7 @@ export default function MacDataRecovery() {
               </table>
             </div>
             <p className="mt-md text-[13px] text-on-primary-muted">
-              All prices in AED, VAT inclusive. Free assessment before any paid work. No recovery, no charge. Payment on data delivery.
+              Every job is quoted in writing before any paid work, VAT inclusive. Free assessment. No recovery, no charge. Payment on data delivery.
             </p>
           </div>
         </section>

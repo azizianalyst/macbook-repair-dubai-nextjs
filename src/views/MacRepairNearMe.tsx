@@ -14,14 +14,14 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const REPAIRS = [
-  { icon: Laptop,    label: "MacBook screen repair",      price: "From AED 600",  time: "Same day",  note: "Air & Pro 13\". IPS panels in stock" },
-  { icon: Laptop,    label: "MacBook battery replacement", price: "From AED 450",  time: "1–2 hrs",   note: "All M1–M5 and Intel models" },
-  { icon: Laptop,    label: "MacBook keyboard repair",     price: "From AED 550",  time: "2–3 hrs",   note: "Butterfly and scissor keyboards" },
-  { icon: Laptop,    label: "MacBook water damage",        price: "From AED 500",  time: "1–3 days",  note: "Ultrasonic clean + board repair" },
-  { icon: Laptop,    label: "MacBook logic board repair",  price: "From AED 800",  time: "2–5 days",  note: "Component-level micro-soldering" },
-  { icon: Monitor,   label: "iMac screen repair",          price: "From AED 800",  time: "2–4 days",  note: "21.5\", 24\" and 27\" Retina 5K" },
-  { icon: Monitor,   label: "iMac SSD upgrade",            price: "From AED 600",  time: "Same day",  note: "Fusion to SSD, any capacity" },
-  { icon: HardDrive, label: "Mac mini / Studio repair",    price: "From AED 400",  time: "Same day",  note: "M1–M4 Mac mini and Studio" },
+  { icon: Laptop,    label: "MacBook screen repair",      price: "On request",  time: "Same day",  note: "Air & Pro 13\". IPS panels in stock" },
+  { icon: Laptop,    label: "MacBook battery replacement", price: "On request",  time: "1–2 hrs",   note: "All M1–M5 and Intel models" },
+  { icon: Laptop,    label: "MacBook keyboard repair",     price: "On request",  time: "2–3 hrs",   note: "Butterfly and scissor keyboards" },
+  { icon: Laptop,    label: "MacBook water damage",        price: "On request",  time: "1–3 days",  note: "Ultrasonic clean + board repair" },
+  { icon: Laptop,    label: "MacBook logic board repair",  price: "On request",  time: "2–5 days",  note: "Component-level micro-soldering" },
+  { icon: Monitor,   label: "iMac screen repair",          price: "On request",  time: "2–4 days",  note: "21.5\", 24\" and 27\" Retina 5K" },
+  { icon: Monitor,   label: "iMac SSD upgrade",            price: "On request",  time: "Same day",  note: "Fusion to SSD, any capacity" },
+  { icon: HardDrive, label: "Mac mini / Studio repair",    price: "On request",  time: "Same day",  note: "M1–M4 Mac mini and Studio" },
 ];
 
 const AREAS = [
@@ -30,7 +30,7 @@ const AREAS = [
   { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Free pickup · 2–4 hrs" },
   { area: "Deira / Bur Dubai / Karama",       time: "Free pickup · 2–4 hrs" },
   { area: "Dubai Hills / Al Barsha / Mirdif", time: "Free pickup · 2–4 hrs" },
-  { area: "Sharjah / Abu Dhabi",              time: "AED 100 each way" },
+  { area: "Sharjah / Abu Dhabi",              time: "Pickup quoted on request" },
 ];
 
 const FAQS = [
@@ -41,7 +41,7 @@ const FAQS = [
   { q: "Do you offer free Mac pickup near me in Dubai?",
     a: "Yes, free courier pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706, share your area and fault. A courier arrives within 2–4 hours. Mac is repaired and returned the same day for battery, keyboard, and software jobs." },
   { q: "How much does MacBook repair cost near me in Dubai?",
-    a: "Screen from AED 600, battery from AED 450, keyboard from AED 550. Diagnosis is always free. WhatsApp 055 741 3706 with your exact model (check the serial number under System Settings → General → About) for a fixed written quote in under 4 minutes." },
+    a: "It depends on the model and which part failed. Diagnosis is always free. WhatsApp 055 741 3706 with your exact model (check the serial number under System Settings → General → About) for a fixed written quote in under 4 minutes." },
   { q: "Do you repair iMac and Mac mini near me in Dubai?",
     a: "Yes, iMac 21.5\", 24\", and 27\" screen repair, power supply, SSD upgrade, and fan cleaning. Mac mini M1–M4 logic board and SSD. Mac Studio and Mac Pro diagnostics and repair. All handled at Concord Tower, Dubai Media City, with free courier pickup for heavier units." },
   { q: "What if my Mac was bought in the USA or UK, can you still repair it near me?",
@@ -72,7 +72,7 @@ export default function MacRepairNearMe() {
           tone="dark"
           eyebrow="Mac repair near you · Dubai Media City · Since 2004"
           title="Mac Repair Near Me. Dubai"
-          subtitle="MacBook, iMac & Mac mini. Screen from AED 600, battery from AED 450. Free pickup. Same-day at Concord Tower, Media City."
+          subtitle="MacBook, iMac & Mac mini. Screen, battery, keyboard and board-level repair. Free diagnosis and free pickup. Same-day at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
@@ -100,7 +100,7 @@ export default function MacRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Mac repaired near me in Dubai?"
-            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. MacBook screen from AED 600, battery from AED 450, same-day service. Can't travel? Free courier pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
+            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Screen, battery and board-level repair, same-day service. Can't travel? Free courier pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
           />
         </section>
 

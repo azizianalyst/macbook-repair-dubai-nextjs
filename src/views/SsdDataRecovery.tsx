@@ -14,12 +14,12 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const SCENARIOS = [
-  { icon: HardDrive,    label: "MacBook SSD not detected",        price: "AED 800–2,000",  note: "Logic board SSD controller fault or dead NAND chip" },
-  { icon: AlertTriangle,label: "Accidental deletion / format",    price: "AED 600–1,200",  note: "Files deleted or drive formatted, high success rate" },
-  { icon: Database,     label: "macOS won't boot. SSD fault",    price: "AED 700–1,500",  note: "Corrupted APFS container or failing NAND" },
-  { icon: HardDrive,    label: "Water-damaged MacBook SSD",       price: "AED 900–2,500",  note: "NAND chips desoldered, cleaned, and re-read" },
-  { icon: AlertTriangle,label: "Firmware-locked / T2 encrypted SSD", price: "AED 1,000–2,500", note: "Requires Apple ID + logic board chip-off read" },
-  { icon: Shield,       label: "External SSD / USB drive recovery", price: "AED 500–1,200", note: "Samsung T7, WD My Passport, Kingston USB drives" },
+  { icon: HardDrive,    label: "MacBook SSD not detected",        price: "On request",  note: "Logic board SSD controller fault or dead NAND chip" },
+  { icon: AlertTriangle,label: "Accidental deletion / format",    price: "On request",  note: "Files deleted or drive formatted, high success rate" },
+  { icon: Database,     label: "macOS won't boot. SSD fault",    price: "On request",  note: "Corrupted APFS container or failing NAND" },
+  { icon: HardDrive,    label: "Water-damaged MacBook SSD",       price: "On request",  note: "NAND chips desoldered, cleaned, and re-read" },
+  { icon: AlertTriangle,label: "Firmware-locked / T2 encrypted SSD", price: "On request", note: "Requires Apple ID + logic board chip-off read" },
+  { icon: Shield,       label: "External SSD / USB drive recovery", price: "On request", note: "Samsung T7, WD My Passport, Kingston USB drives" },
 ];
 
 const SUCCESS_RATES = [

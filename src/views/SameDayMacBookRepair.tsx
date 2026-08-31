@@ -15,14 +15,14 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const SAME_DAY_REPAIRS = [
-  { label: "Screen replacement (non-OLED)",   price: "From AED 600",  hours: "2–4 hrs",  note: "MacBook Air M1/M2/M3, MacBook Pro 13\". IPS panel, in-stock." },
-  { label: "Battery replacement",              price: "From AED 450",  hours: "1–2 hrs",  note: "All Air and Pro models M1–M5, Intel 2015–2019." },
-  { label: "Keyboard replacement",             price: "From AED 550",  hours: "2–3 hrs",  note: "Butterfly (2016–2019) and scissor keyboards." },
-  { label: "Trackpad replacement",             price: "From AED 450",  hours: "2–3 hrs",  note: "Force Touch trackpad, all models 2015–2024." },
-  { label: "USB-C charging port repair",       price: "From AED 350",  hours: "1–2 hrs",  note: "Single port or Thunderbolt board repair." },
+  { label: "Screen replacement (non-OLED)",   price: "On request",  hours: "2–4 hrs",  note: "MacBook Air M1/M2/M3, MacBook Pro 13\". IPS panel, in-stock." },
+  { label: "Battery replacement",              price: "On request",  hours: "1–2 hrs",  note: "All Air and Pro models M1–M5, Intel 2015–2019." },
+  { label: "Keyboard replacement",             price: "On request",  hours: "2–3 hrs",  note: "Butterfly (2016–2019) and scissor keyboards." },
+  { label: "Trackpad replacement",             price: "On request",  hours: "2–3 hrs",  note: "Force Touch trackpad, all models 2015–2024." },
+  { label: "USB-C charging port repair",       price: "On request",  hours: "1–2 hrs",  note: "Single port or Thunderbolt board repair." },
   { label: "RAM / SSD diagnostic",             price: "Free",          hours: "30 min",   note: "Full hardware diagnostic + written report." },
-  { label: "macOS reinstall / software fix",   price: "From AED 200",  hours: "1–2 hrs",  note: "Internet Recovery, corrupted OS, boot loop." },
-  { label: "Fan cleaning / thermal paste",     price: "From AED 250",  hours: "1 hr",     note: "Overheating Intel MacBook, performance restored." },
+  { label: "macOS reinstall / software fix",   price: "On request",  hours: "1–2 hrs",  note: "Internet Recovery, corrupted OS, boot loop." },
+  { label: "Fan cleaning / thermal paste",     price: "On request",  hours: "1 hr",     note: "Overheating Intel MacBook, performance restored." },
 ];
 
 const NOT_SAME_DAY = [
@@ -38,7 +38,7 @@ const ZONES = [
   { area: "Jumeirah / Umm Suqeim / Al Quoz",   pickup: "Free", time: "Same day" },
   { area: "Deira / Bur Dubai / Karama",         pickup: "Free", time: "Same day" },
   { area: "Dubai Hills / Mirdif / Al Barsha",   pickup: "Free", time: "Same day" },
-  { area: "Sharjah / Abu Dhabi",                pickup: "AED 100 each way", time: "Next day" },
+  { area: "Sharjah / Abu Dhabi",                pickup: "Quoted on request", time: "Next day" },
 ];
 
 const STEPS = [
@@ -56,7 +56,7 @@ const FAQS = [
   { q: "Do you do MacBook repair at home in Dubai?",
     a: "We pick up and return the MacBook for free across Dubai Mainland, same practical outcome as an on-site visit. The workshop at Concord Tower, Dubai Media City has the tools, parts stock, and cleanroom conditions for quality repairs that a home visit can't match. For corporate bulk repairs (5+ devices), on-site visits can be arranged." },
   { q: "How much does same-day MacBook repair cost in Dubai?",
-    a: "Screen from AED 600, battery from AED 450, keyboard from AED 550. Diagnosis is free. WhatsApp 055 741 3706 with your exact model and fault for a fixed quote, no hidden fees, no surprises." },
+    a: "It depends on your model and which part failed. Diagnosis is free. WhatsApp 055 741 3706 with your exact model and fault for a fixed quote, no hidden fees, no surprises." },
   { q: "What time do I need to drop off my MacBook for same-day repair?",
     a: "Drop-off or pickup before 2 pm guarantees same-day completion for screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Saturday 9 am to 10 pm at Concord Tower, Dubai Media City." },
   { q: "Is a same-day repair covered by a warranty?",
@@ -87,7 +87,7 @@ export default function SameDayMacBookRepair() {
           tone="dark"
           eyebrow="Same-day MacBook repair · Dubai · Since 2004"
           title="Same-Day MacBook Repair Dubai"
-          subtitle="Screen from AED 600, battery from AED 450. Free pickup across Dubai. Drop off before 2 pm, back the same day."
+          subtitle="Screen, battery, keyboard, trackpad and charging port. Free pickup across Dubai. Drop off before 2 pm, back the same day."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
@@ -115,7 +115,7 @@ export default function SameDayMacBookRepair() {
           <QuickAnswer
             tone="dark"
             question="Can I get my MacBook repaired the same day in Dubai?"
-            answer="Yes. Screen (from AED 600), battery (from AED 450), keyboard, trackpad, and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, drop off or free pickup before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty up to 12 months. WhatsApp 055 741 3706."
+            answer="Yes. Screen, battery, keyboard, trackpad and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, drop off or free pickup before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty up to 12 months. WhatsApp 055 741 3706."
           />
         </section>
 

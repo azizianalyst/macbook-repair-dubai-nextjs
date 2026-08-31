@@ -16,27 +16,27 @@ import { NAP } from "@/content/site";
 type RepairRow = { label: string; macbook: string; imac: string; mac_mini: string; notes: string };
 
 const REPAIRS: RepairRow[] = [
-  { label: "Screen replacement",    macbook: "AED 600–1,499", imac: "AED 699–1,800", mac_mini: "N/A",         notes: "MacBook varies by model; iMac varies by size" },
-  { label: "Battery replacement",   macbook: "AED 450–750",   imac: "N/A",           mac_mini: "N/A",         notes: "3-month warranty, 80% capacity guarantee" },
-  { label: "Logic board repair",    macbook: "AED 800–2,500", imac: "AED 900–2,500", mac_mini: "AED 800–2,000", notes: "Component-level, no board swapping" },
-  { label: "SSD upgrade/repair",    macbook: "AED 500–1,200", imac: "AED 450–1,200", mac_mini: "AED 400–1,000", notes: "M-series SSD is soldered, repair not upgrade" },
-  { label: "RAM upgrade",           macbook: "N/A (M-series soldered)", imac: "AED 300–700", mac_mini: "AED 200–600", notes: "Intel models only; M-series RAM is soldered" },
-  { label: "Keyboard replacement",  macbook: "AED 550–900",   imac: "N/A",           mac_mini: "N/A",         notes: "Butterfly and scissor, US and UK layouts" },
-  { label: "Data recovery",         macbook: "AED 500–2,500", imac: "AED 800–2,500", mac_mini: "AED 500–2,000", notes: "No-fix no-charge; T2/Apple Silicon requires Apple ID" },
-  { label: "Annual maintenance",    macbook: "AED 150",       imac: "AED 200",       mac_mini: "AED 150",     notes: "Fan clean, thermal paste, battery health report" },
+  { label: "Screen replacement",    macbook: "On request", imac: "On request", mac_mini: "N/A",         notes: "MacBook varies by model; iMac varies by size" },
+  { label: "Battery replacement",   macbook: "On request",   imac: "N/A",           mac_mini: "N/A",         notes: "3-month warranty, 80% capacity guarantee" },
+  { label: "Logic board repair",    macbook: "On request", imac: "On request", mac_mini: "On request", notes: "Component-level, no board swapping" },
+  { label: "SSD upgrade/repair",    macbook: "On request", imac: "On request", mac_mini: "On request", notes: "M-series SSD is soldered, repair not upgrade" },
+  { label: "RAM upgrade",           macbook: "N/A (M-series soldered)", imac: "On request", mac_mini: "On request", notes: "Intel models only; M-series RAM is soldered" },
+  { label: "Keyboard replacement",  macbook: "On request",   imac: "N/A",           mac_mini: "N/A",         notes: "Butterfly and scissor, US and UK layouts" },
+  { label: "Data recovery",         macbook: "On request", imac: "On request", mac_mini: "On request", notes: "No-fix no-charge; T2/Apple Silicon requires Apple ID" },
+  { label: "Annual maintenance",    macbook: "On request",       imac: "On request",       mac_mini: "On request",     notes: "Fan clean, thermal paste, battery health report" },
 ];
 
 const FAQS = [
   { q: "How much does Mac repair cost in Dubai?",
-    a: "Mac repair cost in Dubai: MacBook screen from AED 600, battery from AED 450, logic board repair from AED 800, keyboard from AED 550. iMac screen from AED 699, logic board from AED 900. Mac mini logic board from AED 800. Diagnosis is always free. WhatsApp 055 741 3706 for a specific model quote." },
+    a: "It depends on the device, the exact model and which part failed - a 13-inch Air screen and a 16-inch Pro screen are different jobs with different panels. Diagnosis is always free, and you get a written quote before anything is opened up. WhatsApp 055 741 3706 with your model and the fault for a specific number." },
   { q: "Is it worth repairing a MacBook in Dubai vs buying new?",
-    a: "Generally yes if the repair is under 40–50% of replacement value. A MacBook screen repair at AED 600–800 vs a new MacBook Air at AED 4,000+ is almost always worth it. Logic board repair at AED 800–1,500 on a relatively recent model is also worth it. We give you an honest recommendation after free diagnosis." },
+    a: "Our rule of thumb: if the repair comes to less than 40-50% of what the machine is worth replaced, repair wins. A screen or battery on a machine that is otherwise healthy almost always clears that bar, and so does board-level work on a recent model. We give you an honest recommendation after the free diagnosis - including when the answer is not to repair it." },
   { q: "How much does MacBook screen repair cost in Dubai?",
-    a: "MacBook screen repair costs AED 600–1,499 in Dubai depending on model: MacBook Air M1/M2/M3 AED 600–799; MacBook Pro 13\" AED 699–999; MacBook Pro 14\" AED 999–1,299; MacBook Pro 16\" AED 1,099–1,499. Same-day for most models." },
+    a: "It scales with the panel: a MacBook Air M1/M2/M3 is the least expensive, a Pro 13-inch sits above it, and the 14-inch and 16-inch Liquid Retina XDR panels are the most expensive because the part itself costs more. Tell us the model and we will quote it. Same-day for most models." },
   { q: "How much does MacBook battery replacement cost in Dubai?",
-    a: "MacBook battery replacement costs AED 450–750 in Dubai: MacBook Air M1–M4 AED 450–550; MacBook Pro 13\" M1/M2 AED 500–600; MacBook Pro 14\"/16\" AED 600–750. 3-month warranty with 80% capacity guarantee. Same-day service." },
+    a: "It follows cell size: a MacBook Air is the cheapest, a Pro 13-inch is a step up, and the 14-inch and 16-inch Pro carry the largest cells. Every replacement includes BMS re-pairing, a 3-month warranty and an 80% capacity guarantee. Same-day service - message us the model for a number." },
   { q: "How much does Mac logic board repair cost in Dubai?",
-    a: "Mac logic board repair costs AED 800–2,500 in Dubai depending on fault and model. Component-level repair (not board replacement), we diagnose the specific chip or component at fault. MacBook AED 800–2,500; iMac AED 900–2,500; Mac mini AED 800–2,000. 3–7 business days. Free diagnosis." },
+    a: "It depends entirely on which component failed - that is why we quote after diagnosis rather than before. We repair at component level rather than swapping the whole board, which is what keeps it well below Apple\u2019s board-replacement route. Typically 3-7 business days. Free diagnosis, no-fix no-charge." },
   { q: "Do you charge for Mac diagnosis in Dubai?",
     a: "No, diagnosis is always free. Walk in to Concord Tower, Dubai Media City or schedule free pickup across Dubai Mainland. You receive a written quote with the exact fault, parts, and cost before any work starts. No obligation to proceed." },
   { q: "How long does Mac repair take in Dubai?",
@@ -49,7 +49,7 @@ export default function MacRepairCost() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Mac Repair Cost Dubai. MacBook, iMac, Mac mini | 2024 Prices",
+    title: "Mac Repair Cost Dubai. MacBook, iMac & Mac mini 2026",
     description:
       "Mac repair cost in Dubai. MacBook screen, battery and logic board; iMac screen. Free diagnosis, written quote before any work. Call 055 741 3706.",
     path: "/mac-repair-cost-dubai",
@@ -65,7 +65,7 @@ export default function MacRepairCost() {
           tone="dark"
           eyebrow="Mac repair cost · Dubai · MacBook · iMac · Mac mini"
           title="Mac Repair Cost Dubai"
-          subtitle="MacBook screen from AED 600. Battery from AED 450. Logic board repair from AED 800. iMac screen from AED 699. Free diagnosis. Concord Tower, Media City."
+          subtitle="Screen, battery, logic board and data recovery for MacBook, iMac and Mac mini. Free diagnosis, written quote before any work, no-fix no-charge. Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><CheckCircle2 size={14} aria-hidden /> Free diagnosis</span>
@@ -86,7 +86,7 @@ export default function MacRepairCost() {
           <QuickAnswer
             tone="dark"
             question="How much does Mac repair cost in Dubai?"
-            answer="Mac repair in Dubai: MacBook screen AED 600–1,499, battery AED 450–750, logic board repair AED 800–2,500. iMac screen AED 699–1,800. Mac mini logic board AED 800–2,000. Diagnosis always free. Written quote before any work starts. Concord Tower, Dubai Media City. Call 055 741 3706."
+            answer="Mac repair cost in Dubai depends on the device, the model and which part failed. We diagnose free, then send a written quote on WhatsApp before any work starts - approve it, decline it, or take the machine back at no charge. Component-level board repair rather than board swaps. Concord Tower, Dubai Media City. Call 055 741 3706."
           />
         </section>
 

@@ -6,7 +6,7 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookAirM4Problems() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Air M4 Common Problems Dubai 2025: Fix Guide"
+      seoTitle="MacBook Air M4 Common Problems Dubai 2026: Fix Guide"
       seoDescription="MacBook Air M4 problems in Dubai: battery drain, thermal throttle, keyboard issues, WiFi drops. All M4 Air faults fixed same-day. Free diagnosis, WhatsApp us."
       path="/blog/macbook-air-m4-common-problems-dubai"
       wide

@@ -7,7 +7,7 @@ export default function MacBookAirM4Repair() {
       path="/macbook-air-m4-repair-dubai"
       chip="M4"
       years="2025"
-      seoTitle="MacBook Air M4 Repair Dubai 2025: Screen, Battery & Logic Board"
+      seoTitle="MacBook Air M4 Repair Dubai 2026: Screen, Battery & Logic Board"
       seoDescription="MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
       eyebrow="MacBook Air M4 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M4 Repair Dubai"

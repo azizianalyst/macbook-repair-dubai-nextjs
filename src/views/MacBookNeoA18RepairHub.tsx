@@ -12,7 +12,7 @@ export default function MacBookNeoA18RepairHub() {
       path="/macbook-neo-a18-repair-dubai"
       eyebrow="Apple A18 Pro · March 2026 · $599 · student MacBook"
       h1="MacBook Neo A18 Pro Repair Dubai - 2026"
-      subtitle="MacBook Neo is Apple's most affordable Mac ever - A18 Pro, 12.9-inch display, $599. At under 6 months old, check AppleCare+ first. If out of warranty: screen AED 650, battery AED 450."
+      subtitle="MacBook Neo is Apple's most affordable Mac ever - A18 Pro, 12.9-inch display, $599. At under 6 months old, check AppleCare+ first. If out of warranty: screen and battery work, quoted in writing after a free diagnosis."
       startingPrice={250}
       timeline="Same day (diagnosis) · 3-5 days (screen/battery)"
       whatsappPrefill="Hi, I have a MacBook Neo (A18 Pro, 2026) and need help with:"
@@ -27,7 +27,7 @@ export default function MacBookNeoA18RepairHub() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook Neo (A18 Pro, 2026) repair in Dubai: screen from AED 650, battery from AED 450, with
+            <strong>MacBook Neo (A18 Pro, 2026) repair in Dubai: screen and battery replacement, with
             free diagnosis and a warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work).</strong> What makes the MacBook Neo different from a MacBook Air?
             The Neo runs an <strong>A18 Pro chip</strong> - the same silicon inside the iPhone 16 Pro - rather than
             Apple's M-series laptop chip. That single difference explains the $599 price: the A18 Pro is a mobile chip,
@@ -46,8 +46,8 @@ export default function MacBookNeoA18RepairHub() {
               do not charge for the diagnosis visit.
             </p>
             <p className="text-[15px]">
-              Out of warranty? We repair the MacBook Neo from AED 250 for a diagnosis, AED 650 for a screen replacement
-              and AED 450 for a battery swap. See the full{" "}
+              Out of warranty? We repair the MacBook Neo - diagnosis is free, and screen replacement
+              and battery swaps are quoted in writing first. See the full{" "}
               <Link to="/macbook-neo-repair-dubai" className="text-accent font-semibold hover:underline">
                 MacBook Neo repair page
               </Link>{" "}
@@ -113,11 +113,11 @@ export default function MacBookNeoA18RepairHub() {
         </>
       }
       whatWeFix={[
-        "Screen / display replacement - 12.9-inch Liquid Retina from AED 650",
-        "Battery replacement with BMS re-pair - AED 450",
-        "USB-C/Thunderbolt 4 port repair - AED 400",
-        "MagSafe 3 board replacement - AED 350",
-        "Water damage assessment and ultrasonic board clean - AED 250",
+        "Screen / display replacement - 12.9-inch Liquid Retina",
+        "Battery replacement with BMS re-pair",
+        "USB-C/Thunderbolt 4 port repair",
+        "MagSafe 3 board replacement",
+        "Water damage assessment and ultrasonic board clean",
         "Logic board diagnosis (A18 Pro) - free estimate",
       ]}
       steps={[
@@ -169,12 +169,12 @@ export default function MacBookNeoA18RepairHub() {
         {
           label: "MacBook Neo Screen Repair Dubai",
           href: "/macbook-neo-screen-repair-dubai",
-          description: "12.9-inch Liquid Retina screen replacement from AED 650. 3-month warranty.",
+          description: "12.9-inch Liquid Retina screen replacement. 3-month warranty.",
         },
         {
           label: "MacBook Neo Battery Replacement Dubai",
           href: "/macbook-neo-battery-replacement-dubai",
-          description: "A18 Pro battery replacement from AED 450. BMS re-pair included.",
+          description: "A18 Pro battery replacement. BMS re-pair included.",
         },
       ]}
       blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
