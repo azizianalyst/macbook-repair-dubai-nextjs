@@ -8,6 +8,12 @@ import type { Lead } from "@/lib/lead-schema";
 // LEADS_DB to a persistent path so records survive redeploys. Writes are
 // serialized via an in-process queue to avoid read-modify-write races.
 
+// KNOWN BUILD WARNING ("whole project was traced unintentionally"): Next's file tracer follows
+// this runtime-configurable path (LEADS_DB) and over-traces. The documented
+// /*turbopackIgnore: true*/ comment does NOT suppress it on Next 16.2 (tested on the join and
+// on every fs call site, clean .next). Harmless on THIS deploy model: the archive excludes
+// .next and Hostinger builds server-side, so no shipped artifact grows. Revisit if the deploy
+// ever moves to `output: "standalone"`.
 const FILE = process.env.LEADS_DB || path.join(process.cwd(), "data", "leads.json");
 
 export const LEAD_STATUSES = ["New", "Contacted", "Quoted", "Won", "Lost"] as const;
@@ -34,7 +40,7 @@ async function load(): Promise<DB> {
 }
 
 async function save(db: DB): Promise<void> {
-  await fs.mkdir(path.dirname(FILE), { recursive: true });
+  await fs.mkdir(/*turbopackIgnore: true*/ path.dirname(FILE), { recursive: true });
   const tmp = `${FILE}.tmp`;
   await fs.writeFile(tmp, JSON.stringify(db), "utf8");
   await fs.rename(tmp, FILE); // atomic replace

@@ -20,13 +20,20 @@ function routes(dir, base = "") {
   }
   return r;
 }
-const pages = [...new Set(routes(APP))].sort();
+const pages = [...new Set(routes(APP))].sort().filter((p) => !p.includes("[")); // dynamic-route patterns are not fetchable URLs
 const norm = (h) => h.split("#")[0].split("?")[0].replace(/\/$/, "") || "/";
 const linked = new Set(); // every path that is the target of an internal link from another page
 
+// Fail-open bug (2026-08-31 audit): the bare catch swallowed every fetch failure, so a dead
+// server - or a 429 storm from the old rate limiter - reported "609 orphans" instead of
+// erroring. Same defect class as audit-prices-rendered.mjs had. Now every unreadable page is
+// counted and the run aborts as inconclusive rather than lying.
+let fetchErrors = 0;
 async function collect(p) {
   try {
-    const html = await (await fetch(BASE + p)).text();
+    const res = await fetch(BASE + p, { headers: { "user-agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } });
+    if (res.status >= 400) { fetchErrors++; console.log("  ! " + res.status + " " + p); return; }
+    const html = await res.text();
     const hrefs = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]);
     for (let h of hrefs) {
       if (h.startsWith("//") || h.startsWith("/_next") || h.startsWith("/api")) continue;
@@ -34,14 +41,23 @@ async function collect(p) {
       h = norm(h);
       if (h !== norm(p)) linked.add(h); // ignore self-links
     }
-  } catch {}
+  } catch (e) { fetchErrors++; console.log("  ! ERR " + p + " " + e.message); }
 }
 
 (async () => {
   const CONC = 12;
   for (let i = 0; i < pages.length; i += CONC) await Promise.all(pages.slice(i, i + CONC).map(collect));
-  const orphans = pages.filter((p) => !ALLOW.has(norm(p)) && !linked.has(norm(p)));
   console.log("=== ORPHAN PAGE CHECK ===");
+  if (fetchErrors > 0) {
+    console.log(`INCONCLUSIVE - ${fetchErrors}/${pages.length} pages could not be fetched.`);
+    console.log("Is the server up, and is the crawler UA allowed through?");
+    process.exit(1);
+  }
+  // /admin/* is the local-only console (404 in production, noindex, reachable by URL only)
+  // and *-template-demo pages are noindex scaffolding - neither is meant to be linked, so
+  // neither is an orphan. Without this, every clean run cried wolf with 24 findings.
+  const intentionallyUnlinked = (p) => p === "/admin" || p.startsWith("/admin/") || /-template-demo$/.test(norm(p));
+  const orphans = pages.filter((p) => !ALLOW.has(norm(p)) && !intentionallyUnlinked(p) && !linked.has(norm(p)));
   console.log("pages: " + pages.length);
   console.log("inbound-linked targets: " + linked.size);
   console.log("orphans (no inbound internal link): " + orphans.length);
