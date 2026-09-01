@@ -28,8 +28,8 @@
 | | Task | Owner |
 |---|---|---|
 | ☐ | Paste new description (734/750 chars, counted) | 🧑 |
-| ☐ | Add 7 secondary categories | 🧑 |
-| ☐ | Remove 3 diluting categories → move to Azizi listing | 🧑 |
+| ☐ | Add 4 secondary categories (3 of the original 7 are already live) | 🧑 |
+| ☐ | Remove 5 diluting categories → some move to Azizi listing | 🧑 |
 | ☐ | Tick the 6 verified attributes | 🧑 |
 | ☐ | Set opening date 10 Oct 2004 | 🧑 |
 | ☐ | Set short name → unlocks the clean review link | 🧑 |

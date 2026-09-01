@@ -27,11 +27,16 @@
 
 **Primary:** Computer repair service — *do not change, it is correct*
 
-**Add as secondary (7):**
-Mobile phone repair shop · Phone repair service · Electronics repair shop · Data recovery service · Screen repair service · Computer service · Computer support and services
+**Live today (verified in Business Profile Manager, 2026-09-01): 1 primary + 8 secondary.**
+Of the 8 secondary, 3 are already correct and stay: Computer service · Data recovery service · Screen repair service.
 
-**Remove (3):** Used computer store · Computer software store · Computer accessories store
-→ these move to the Azizi Technologies listing.
+**Add as secondary (4):**
+Mobile phone repair shop · Phone repair service · Electronics repair shop · Computer support and services
+
+**⚠️ Caution on "Computer support and services":** Azizi Technologies, at the same Concord Tower Office 45 address, may also carry this category. Same-address + same-category is a duplicate-listing risk signal. Verify Azizi Technologies' category list in Business Profile Manager before adding — if it already has this category, skip it here rather than risk a collision.
+
+**Remove (5):** Computer Shop · Computer consultant · Second-hand Computer Shop · Computer Software Shop · Computer Accessories Shop
+→ these dilute relevance; Computer Shop / Second-hand Computer Shop / Computer Accessories Shop can move to the Azizi Technologies listing if genuinely relevant there.
 
 ## Attributes
 

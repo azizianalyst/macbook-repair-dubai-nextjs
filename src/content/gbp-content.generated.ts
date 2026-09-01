@@ -28,15 +28,14 @@ export const GBP_CATEGORIES = {
     "Mobile phone repair shop",
     "Phone repair service",
     "Electronics repair shop",
-    "Data recovery service",
-    "Screen repair service",
-    "Computer service",
     "Computer support and services"
   ],
   "remove": [
-    "Used computer store",
-    "Computer software store",
-    "Computer accessories store"
+    "Computer Shop",
+    "Computer consultant",
+    "Second-hand Computer Shop",
+    "Computer Software Shop",
+    "Computer Accessories Shop"
   ]
 };
 
