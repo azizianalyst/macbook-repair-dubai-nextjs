@@ -20,6 +20,12 @@ removed or neutralised; a claim with a source gets the source recorded here.
 
 ## Verified true (source recorded)
 
+- **"232+ Google reviews · 5.0" — VERIFIED 2026-09-01.** Google knowledge panel for the correct
+  listing (Concord Tower Office #45, Dubai Media City, 055 741 3706, macbook-repair-dubai.ae)
+  reads exactly "5.0 · 232 Google reviews". Checked via the site's own sameAs maps link, so this
+  is our listing, not the same-name competitor. Re-check quarterly; the store
+  (data/seo.json → REVIEW_COUNT) is the one place to update.
+
 - **Founded October 2004 / 21 years / since 2004** — consistent across all 38 occurrences. 21y matches 2004→2026 arithmetic.
 - **"Shafiq Ahmed" surname** — attested by a customer review dated 11 Oct 2023 (reviews.ts:200, REVIEWS_LIBRARY.md:1137). Not an invention.
 - **FAQ visibility** — FAQAccordion keeps collapsed answers in the DOM (`hidden` attr, not unmount), so FAQPage JSON-LD matches visible text. Google policy: compliant.
@@ -31,7 +37,6 @@ removed or neutralised; a claim with a source gets the source recorded here.
 
 | Claim | Where | What would settle it |
 |---|---|---|
-| **"232+ Google reviews · 5.0"** | 32 pages + schema (`REVIEW_COUNT = 232` from data/seo.json) | Screenshot of the live GBP review count + rating, dated. reviews.ts holds 212 imported 5★ texts, so 232 is plausible as the GBP total — but the GBP is unverifiable from this machine (see memory: supermetrics-trial-expired) and a second business trades under the same name (gbp-brand-name-collision), so verify against OUR listing specifically. |
 | **`founder: Azizi Technologies`** (Organization schema, schema.ts:73) | sitewide | Confirm the legal structure: is the business founded/operated by Azizi Technologies with Abdul Aziz as its founder? If yes this is fine alongside the Person nodes; if not, point it at Abdul Aziz. |
 | **Mohammed 14y / Sayed 12y / Shafeeq 12y** | roster + bylines | Owner confirmed the people; the year values are the previously published ones, not independently confirmed. Correct in site.ts TEAM if wrong — everything now flows from there. |
 | **"about 60 per month" USB-C repairs, "around 80" M5 repairs** | Blog21YearsExperience | Workshop job counts. Plausible; unverifiable here. |
