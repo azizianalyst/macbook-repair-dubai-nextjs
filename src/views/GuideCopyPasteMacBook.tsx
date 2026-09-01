@@ -15,7 +15,7 @@ export default function GuideCopyPasteMacBook() {
     <BlogPostTemplate
       seoTitle="How to Copy and Paste on a MacBook"
       seoDescription="Copy and paste on a MacBook the easy way: Cmd-C, Cmd-V, Cmd-X to cut, paste and match style, the right-click menu, copying files, and fixes when it fails."
-      path="/how-to-copy-and-paste-on-a-macbook"
+      path="/blog/how-to-copy-and-paste-on-a-macbook"
       category="How-to · macOS"
       h1="How to Copy and Paste on a MacBook"
       hook="Copy and paste is the single most-used trick on any Mac - and there's more to it than Cmd-C. Here's every method, plus how to copy from your iPhone straight to your MacBook."

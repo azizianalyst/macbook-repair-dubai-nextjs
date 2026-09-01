@@ -32,7 +32,7 @@ const LINK_ICONS: Record<string, LucideIcon> = {
   "/pricing": Tag,
   "/warranty": ShieldCheck,
   "/applecare-macbook-repair-dubai": BadgeCheck,
-  "/where-to-repair-macbook-dubai": Building2,
+  "/blog/where-to-repair-macbook-dubai": Building2,
   "/out-of-warranty-apple-repair-dubai": Wrench,
   "/onsite-macbook-repair-dubai": Truck,
 };

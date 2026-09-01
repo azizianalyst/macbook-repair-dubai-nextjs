@@ -19,7 +19,7 @@ export default function GuideEraseMacBeforeSelling() {
     <BlogPostTemplate
       seoTitle="How to Erase All Data on a Mac Before Selling"
       seoDescription="The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
-      path="/how-to-erase-all-data-on-my-mac-before-giving-it-away"
+      path="/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away"
       category="How-to · macOS"
       h1="How to Erase All Data on Your Mac Before Giving It Away"
       hook="Before you sell or hand over your MacBook, wiping it the right way protects your data and stops the new owner from getting locked out by Activation Lock - here's the exact 2026 order."

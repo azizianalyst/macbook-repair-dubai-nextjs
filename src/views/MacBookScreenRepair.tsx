@@ -589,7 +589,7 @@ export default function MacBookScreenRepair() {
     <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
       <h2 className="text-[20px] font-semibold mb-md text-text">Related guides</h2>
       <ul className="flex flex-col gap-sm">
-        <li><Link to="/what-causes-color-distortion-on-macbook-screens" className="text-accent underline underline-offset-2">MacBook screen colour distortion</Link><span className="text-text-muted text-[14px] ml-2">What causes colour distortion on MacBook screens and how to fix it.</span></li>
+        <li><Link to="/blog/what-causes-color-distortion-on-macbook-screens" className="text-accent underline underline-offset-2">MacBook screen colour distortion</Link><span className="text-text-muted text-[14px] ml-2">What causes colour distortion on MacBook screens and how to fix it.</span></li>
         <li><Link to="/white-or-grey-horizontal-lines-appearing-on-macbook-screen" className="text-accent underline underline-offset-2">MacBook horizontal lines on screen</Link><span className="text-text-muted text-[14px] ml-2">Why white or grey horizontal lines appear on MacBook screens.</span></li>
       </ul>
     </section>

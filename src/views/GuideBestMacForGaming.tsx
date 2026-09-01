@@ -7,7 +7,7 @@ export default function GuideBestMacForGaming() {
     <BlogPostTemplate
       seoTitle="Best MacBook for Gaming (2026): Honest Guide"
       seoDescription="Picking a MacBook for gaming in 2026? M-base vs Pro vs Max GPU tiers, how much RAM you really need, Air vs Pro thermals, and Game Porting Toolkit."
-      path="/how-to-choose-the-best-apple-laptop-for-gaming"
+      path="/blog/how-to-choose-the-best-apple-laptop-for-gaming"
       category="Buying guide · MacBook"
       h1="How to Choose the Best Apple Laptop for Gaming"
       hook="Macs can finally game in 2026 - but only if you buy the right chip and the right RAM up front. Here's the honest, no-hype breakdown from someone who repairs these machines every day."

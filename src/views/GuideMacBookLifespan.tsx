@@ -7,7 +7,7 @@ export default function GuideMacBookLifespan() {
     <BlogPostTemplate
       seoTitle="Do MacBooks Last Over a Decade? Honest Answer"
       seoDescription="Do MacBooks last over a decade? Yes, 7 to 10+ years is normal. What limits lifespan, what extends it, and when to repair instead of replacing your Mac."
-      path="/do-macbooks-last-over-a-decade"
+      path="/blog/do-macbooks-last-over-a-decade"
       category="Buying advice · MacBook"
       h1="Do MacBooks Last Over a Decade?"
       hook="After 21 years fixing Apple machines in Dubai, here's the honest answer: a well-kept MacBook often lasts 7-10+ years - and a couple of cheap repairs usually beat buying new."

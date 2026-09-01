@@ -388,55 +388,55 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "Corporate MacBook Repair Dubai. Expert Same-Day 2026",
     "description": "Corporate MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
   },
-  "/do-macbooks-last-over-a-decade": {
+  "/blog/do-macbooks-last-over-a-decade": {
     "title": "Do Macbooks Last Over A Decade. MacBook Repair Dubai 2026",
     "description": "Do Macbooks Last Over A Decade. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-can-i-record-audio-while-screen-recording-on-mac": {
+  "/blog/how-can-i-record-audio-while-screen-recording-on-mac": {
     "title": "How Can I Record Audio While Screen Recording On Mac. MacBo 2026",
     "description": "How Can I Record Audio While Screen Recording On Mac. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-do-i-reset-passwords-on-my-macbook": {
+  "/blog/how-do-i-reset-passwords-on-my-macbook": {
     "title": "How Do I Reset Passwords On My MacBook. MacBook Repair Duba 2026",
     "description": "How Do I Reset Passwords On My MacBook. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-change-macbook-name": {
+  "/blog/how-to-change-macbook-name": {
     "title": "How To Change MacBook Name. MacBook Repair Dubai 2026",
     "description": "How To Change MacBook Name. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-choose-the-best-apple-laptop-for-gaming": {
+  "/blog/how-to-choose-the-best-apple-laptop-for-gaming": {
     "title": "How To Choose The Best Apple Laptop For Gaming. MacBook Rep 2026",
     "description": "How To Choose The Best Apple Laptop For Gaming. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-choose-the-right-configuration-for-a-macbook": {
+  "/blog/how-to-choose-the-right-configuration-for-a-macbook": {
     "title": "How To Choose The Right Configuration For A MacBook. MacBoo 2026",
     "description": "How To Choose The Right Configuration For A MacBook. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-clean-a-macbook-screen": {
+  "/blog/how-to-clean-a-macbook-screen": {
     "title": "How To Clean A MacBook Screen. MacBook Repair Dubai 2026",
     "description": "How To Clean A MacBook Screen. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-clean-macbook-pro-keyboard": {
+  "/blog/how-to-clean-macbook-pro-keyboard": {
     "title": "How To Clean MacBook Pro Keyboard. MacBook Repair Dubai 2026",
     "description": "How To Clean MacBook Pro Keyboard. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-copy-and-paste-on-a-macbook": {
+  "/blog/how-to-copy-and-paste-on-a-macbook": {
     "title": "How To Copy And Paste On A MacBook. MacBook Repair Dubai 2026",
     "description": "How To Copy And Paste On A MacBook. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
+  "/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
     "title": "How To Erase All Data On My Mac Before Giving It Away. MacB 2026",
     "description": "How To Erase All Data On My Mac Before Giving It Away. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-recover-macbook-password": {
+  "/blog/how-to-recover-macbook-password": {
     "title": "How To Recover MacBook Password. MacBook Repair Dubai 2026",
     "description": "How To Recover MacBook Password. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-reset-a-macbook": {
+  "/blog/how-to-reset-a-macbook": {
     "title": "How To Reset A MacBook. MacBook Repair Dubai 2026",
     "description": "How To Reset A MacBook. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/how-to-take-a-screenshot-on-a-macbook": {
+  "/blog/how-to-take-a-screenshot-on-a-macbook": {
     "title": "How To Take A Screenshot On A MacBook. MacBook Repair Dubai 2026",
     "description": "How To Take A Screenshot On A MacBook. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
@@ -1512,11 +1512,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "MacBook Repair Warranty Dubai. Up to 12 Months",
     "description": "Our MacBook repair warranty in Dubai: up to 12 months on screen and battery, 90 days on other repairs, what is covered and how to claim. Independent Apple specialists since 2004."
   },
-  "/what-causes-color-distortion-on-macbook-screens": {
+  "/blog/what-causes-color-distortion-on-macbook-screens": {
     "title": "What Causes Color Distortion On MacBook Screens. MacBook Re 2026",
     "description": "What Causes Color Distortion On MacBook Screens. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/where-to-repair-macbook-dubai": {
+  "/blog/where-to-repair-macbook-dubai": {
     "title": "Where To Repair MacBook Dubai. Expert Same-Day 2026",
     "description": "Where To Repair MacBook Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
   },
@@ -1524,11 +1524,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "White Or Grey Horizontal Lines Appearing On MacBook Screen -",
     "description": "White Or Grey Horizontal Lines Appearing On MacBook Screen. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/why-does-my-macbook-air-m4-heat-up-so-quickly": {
+  "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
     "title": "Why Does My MacBook Air M4 Heat Up So Quickly. MacBook Repa",
     "description": "Why Does My MacBook Air M4 Heat Up So Quickly. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },
-  "/why-is-my-ipad-not-charging": {
+  "/blog/why-is-my-ipad-not-charging": {
     "title": "Why Is My iPad Not Charging. MacBook Repair Dubai 2026",
     "description": "Why Is My iPad Not Charging. Expert guide from Dubai's MacBook repair specialists. Free advice, call 055 741 3706."
   },

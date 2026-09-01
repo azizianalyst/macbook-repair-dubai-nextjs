@@ -16,7 +16,7 @@ export default function GuideResetMacBookPassword() {
     <BlogPostTemplate
       seoTitle="How to Reset Passwords on a MacBook (2026 Guide)"
       seoDescription="Change or reset every password on your MacBook: your login password, another user's, the login Keychain, Apple ID, firmware and Screen Time, step by step."
-      path="/how-do-i-reset-passwords-on-my-macbook"
+      path="/blog/how-do-i-reset-passwords-on-my-macbook"
       category="How-to · macOS"
       h1="How Do I Reset Passwords on My MacBook?"
       hook="Your MacBook holds several different passwords - login, Keychain, Apple ID, firmware and Screen Time. Here's how to change or reset each one safely when you still know your way in."
@@ -50,7 +50,7 @@ export default function GuideResetMacBookPassword() {
             This guide covers <strong>changing or resetting passwords you still know</strong>, plus
             Keychain, Apple ID, firmware and Screen Time. If you are completely locked out and have
             forgotten your login password, that's a different flow - see our{" "}
-            <Link to="/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
+            <Link to="/blog/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
               forgotten MacBook password recovery guide
             </Link>{" "}
             which walks through Recovery mode and the Reset Password assistant.
@@ -176,7 +176,7 @@ export default function GuideResetMacBookPassword() {
               macOS reinstall
             </Link>{" "}
             or a full{" "}
-            <Link to="/how-to-reset-a-macbook" className="text-accent font-semibold hover:underline">
+            <Link to="/blog/how-to-reset-a-macbook" className="text-accent font-semibold hover:underline">
               factory reset of your MacBook
             </Link>
             . Call or WhatsApp{" "}
@@ -220,8 +220,8 @@ export default function GuideResetMacBookPassword() {
         },
       ]}
       relatedLinks={[
-        { label: "Forgot your MacBook password?", href: "/how-to-recover-macbook-password", description: "Locked out and can't log in? Reset a forgotten password via Recovery mode." },
-        { label: "Factory reset a MacBook", href: "/how-to-reset-a-macbook", description: "Wipe and start fresh, the safe way, before selling or after a tangled reset." },
+        { label: "Forgot your MacBook password?", href: "/blog/how-to-recover-macbook-password", description: "Locked out and can't log in? Reset a forgotten password via Recovery mode." },
+        { label: "Factory reset a MacBook", href: "/blog/how-to-reset-a-macbook", description: "Wipe and start fresh, the safe way, before selling or after a tangled reset." },
         { label: "macOS reinstall in Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS reinstall if a reset left your Mac unbootable." },
       ]}
     />

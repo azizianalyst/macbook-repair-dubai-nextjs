@@ -19,7 +19,7 @@ export default function GuideIPadNotCharging() {
     <BlogPostTemplate
       seoTitle="iPad Not Charging? 8 Fixes That Actually Work (2026)"
       seoDescription="iPad not charging is usually a cable, port debris, or adapter fault, not a dead battery. Fixes in order: swap cable, clean port, force restart, different adapter, check battery health."
-      path="/why-is-my-ipad-not-charging"
+      path="/blog/why-is-my-ipad-not-charging"
       category="Troubleshooting · iPad"
       h1="Why Is My iPad Not Charging?"
       hook="An iPad that won't charge is almost always a cable, debris in the port, or an adapter that's too weak, not a dead battery. Here's how to fix it in order."

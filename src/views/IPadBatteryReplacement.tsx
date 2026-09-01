@@ -32,7 +32,7 @@ export default function IPadBatteryReplacement() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             If your iPad is two years old and lasts two hours, the cell is finished. If it shuts down at 30% and reboots, the protection circuit is calling time. Both are the same fix. Quote, pickup, swap, calibrate - usually back to you the same day. If your iPad isn't charging at all, see our guide:{" "}
-            <Link to="/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why an iPad stops charging and how to fix it</Link>.
+            <Link to="/blog/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why an iPad stops charging and how to fix it</Link>.
           </p>
         </>
       }
@@ -84,7 +84,7 @@ export default function IPadBatteryReplacement() {
         "/ipad-water-damage-repair-dubai",
       ]}
       relatedExtra={[
-        { label: "iPad not charging?", href: "/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
+        { label: "iPad not charging?", href: "/blog/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
       ]}
     />
   );

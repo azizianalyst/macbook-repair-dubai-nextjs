@@ -49,7 +49,7 @@ export default function WhereToRepairMacBookDubai() {
     <SubServicePageTemplate
       seoTitle="Where to Repair a MacBook in Dubai: Apple vs Independent"
       seoDescription="Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
-      path="/where-to-repair-macbook-dubai"
+      path="/blog/where-to-repair-macbook-dubai"
       eyebrow="Apple Store vs independent"
       h1="Where to Repair a MacBook in Dubai: Apple Store, Authorised Centre or Independent?"
       subtitle="Three honest routes, one decision. We're an independent specialist, not an Apple Authorised Service Provider, so here's the straight comparison, with our real prices, including when Apple or an authorised centre is genuinely the better choice for you."
@@ -59,7 +59,7 @@ export default function WhereToRepairMacBookDubai() {
       breadcrumb={[
         { name: "Home",                 path: "/" },
         { name: "Apple Repair",         path: "/apple-repair-dubai" },
-        { name: "Where to Repair a MacBook", path: "/where-to-repair-macbook-dubai" },
+        { name: "Where to Repair a MacBook", path: "/blog/where-to-repair-macbook-dubai" },
       ]}
       technician={{ name: "Abdul Aziz", years: 21, specialisation: "MacBook board-level repair & honest repair advice" }}
       serviceName="MacBook Repair (independent vs Apple Store) Dubai"

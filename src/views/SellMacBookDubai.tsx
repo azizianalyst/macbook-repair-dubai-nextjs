@@ -433,7 +433,7 @@ export default function SellMacBookDubai() {
         <p className="text-[15px] text-text-muted max-w-[72ch] mt-lg m-0">
           Planning to sell? Read our guides on{" "}
           <Link
-            to="/how-to-erase-all-data-on-my-mac-before-giving-it-away"
+            to="/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away"
             className="text-accent underline underline-offset-2"
           >
             erasing your Mac before giving it away

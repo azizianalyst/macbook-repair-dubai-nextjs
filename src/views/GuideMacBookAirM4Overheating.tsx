@@ -17,7 +17,7 @@ export default function GuideMacBookAirM4Overheating() {
     <BlogPostTemplate
       seoTitle="Why Does My MacBook Air M4 Heat Up So Quickly?"
       seoDescription="MacBook Air M4 has no fan, heat during heavy tasks is expected. Here's what's normal, what's a problem, and how to keep it running cool."
-      path="/why-does-my-macbook-air-m4-heat-up-so-quickly"
+      path="/blog/why-does-my-macbook-air-m4-heat-up-so-quickly"
       category="Troubleshooting · MacBook Air"
       h1="Why Does My MacBook Air M4 Heat Up So Quickly?"
       hook="The M4 Air runs hotter than you might expect because it has no fan, understanding why helps you know when to act."

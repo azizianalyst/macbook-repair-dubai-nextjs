@@ -17,7 +17,7 @@ export default function GuideMacBookColorDistortion() {
     <BlogPostTemplate
       seoTitle="What Causes Color Distortion on MacBook Screens? Fix Guide"
       seoDescription="MacBook screen colour distortion, tints, washed-out, oversaturated, is usually Night Shift, True Tone, or a wrong colour profile. Full diagnosis and fixes."
-      path="/what-causes-color-distortion-on-macbook-screens"
+      path="/blog/what-causes-color-distortion-on-macbook-screens"
       category="Troubleshooting · MacBook Display"
       h1="What Causes Colour Distortion on MacBook Screens?"
       hook="Most MacBook colour distortion is a macOS display setting, here's how to find and fix it in under five minutes."

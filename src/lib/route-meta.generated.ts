@@ -96,6 +96,10 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Data Recovery from a Broken MacBook in Dubai 2026",
     "description": "Recover data from a dead, water-damaged or board-failed MacBook in Dubai. Message us for a price by damage type, with Apple Silicon, FileVault and T2 limits explained."
   },
+  "/blog/do-macbooks-last-over-a-decade": {
+    "title": "Do MacBooks Last Over a Decade? Honest Answer",
+    "description": "Do MacBooks last over a decade? Yes, 7 to 10+ years is normal. What limits lifespan, what extends it, and when to repair instead of replacing your Mac."
+  },
   "/blog/dubai-shopping-festival-apple-deals": {
     "title": "Dubai Shopping Festival Apple Deals 2026: When to Buy",
     "description": "DSF, White Friday, Apple Education: when does Apple actually discount in Dubai? Reseller deals, tax-free shopping, trade-in and the months you should not buy."
@@ -108,13 +112,61 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Genuine Apple Parts vs Alternatives: Honest Guide 2026",
     "description": "What 'genuine Apple part' really means, the OEM/equivalent/aftermarket tier system, when each tier is fine, and what we use at MacBook Repair Dubai."
   },
+  "/blog/how-can-i-record-audio-while-screen-recording-on-mac": {
+    "title": "How to Record Audio While Screen Recording on Mac",
+    "description": "No system sound when screen recording on Mac? Why Cmd-Shift-5 and QuickTime catch only the mic, and how BlackHole plus a Multi-Output Device grab it."
+  },
+  "/blog/how-do-i-reset-passwords-on-my-macbook": {
+    "title": "How to Reset Passwords on a MacBook (2026 Guide)",
+    "description": "Change or reset every password on your MacBook: your login password, another user's, the login Keychain, Apple ID, firmware and Screen Time, step by step."
+  },
   "/blog/how-much-is-my-iphone-worth-dubai": {
     "title": "How Much Is My iPhone Worth in Dubai 2026? Resale Guide",
     "description": "What every iPhone is worth in Dubai - mint, good, cracked. Compare Dubizzle, Apple Trade-In and our cash buy-back. Message us for today's exact offer."
   },
+  "/blog/how-to-change-macbook-name": {
+    "title": "How to Change Your MacBook's Name (2026 Guide)",
+    "description": "Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
+  },
+  "/blog/how-to-choose-the-best-apple-laptop-for-gaming": {
+    "title": "Best MacBook for Gaming (2026): Honest Guide",
+    "description": "Picking a MacBook for gaming in 2026? M-base vs Pro vs Max GPU tiers, how much RAM you really need, Air vs Pro thermals, and Game Porting Toolkit."
+  },
+  "/blog/how-to-choose-the-right-configuration-for-a-macbook": {
+    "title": "How to Choose the Right MacBook Configuration",
+    "description": "Picking a MacBook in Dubai? The honest spec guide: how much RAM and SSD to buy, M-base vs Pro vs Max, Air vs Pro, and the right config for your use case."
+  },
+  "/blog/how-to-clean-a-macbook-screen": {
+    "title": "How to Clean a MacBook Screen Safely",
+    "description": "Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
+  },
+  "/blog/how-to-clean-macbook-pro-keyboard": {
+    "title": "How to Clean a MacBook Pro Keyboard Safely",
+    "description": "Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
+  },
+  "/blog/how-to-copy-and-paste-on-a-macbook": {
+    "title": "How to Copy and Paste on a MacBook",
+    "description": "Copy and paste on a MacBook the easy way: Cmd-C, Cmd-V, Cmd-X to cut, paste and match style, the right-click menu, copying files, and fixes when it fails."
+  },
+  "/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
+    "title": "How to Erase All Data on a Mac Before Selling",
+    "description": "The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
+  },
   "/blog/how-to-factory-reset-iphone-before-selling": {
     "title": "How to Factory Reset iPhone Before Selling - 2026 Step Guide",
     "description": "Five steps to wipe an iPhone before selling: sign out of iCloud, iMessage and FaceTime, unpair Watch, Erase All Content. Avoid Activation Lock issues."
+  },
+  "/blog/how-to-recover-macbook-password": {
+    "title": "How to Recover a Forgotten MacBook Password",
+    "description": "Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
+  },
+  "/blog/how-to-reset-a-macbook": {
+    "title": "How to Reset a MacBook: Restart, SMC, NVRAM & Factory",
+    "description": "Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
+  },
+  "/blog/how-to-take-a-screenshot-on-a-macbook": {
+    "title": "How to Take a Screenshot on a MacBook",
+    "description": "Take a screenshot on any MacBook in seconds: Shift-Cmd-3, 4 and 5 explained, where files save, how to copy to clipboard, and fixes when screenshots fail."
   },
   "/blog/icloud-locked-iphone-what-to-do": {
     "title": "iCloud Locked iPhone in Dubai: Your Real Options 2026",
@@ -780,9 +832,25 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Spilled Water on MacBook? Do This Right Now (2026)",
     "description": "MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
   },
+  "/blog/what-causes-color-distortion-on-macbook-screens": {
+    "title": "What Causes Color Distortion on MacBook Screens? Fix Guide",
+    "description": "MacBook screen colour distortion, tints, washed-out, oversaturated, is usually Night Shift, True Tone, or a wrong colour profile. Full diagnosis and fixes."
+  },
+  "/blog/where-to-repair-macbook-dubai": {
+    "title": "Where to Repair a MacBook in Dubai: Apple vs Independent",
+    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
+  },
   "/blog/why-21-years-experience-matters": {
     "title": "Why 21 Years of Apple Repair Experience Matters in 2026",
     "description": "40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
+  },
+  "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
+    "title": "Why Does My MacBook Air M4 Heat Up So Quickly?",
+    "description": "MacBook Air M4 has no fan, heat during heavy tasks is expected. Here's what's normal, what's a problem, and how to keep it running cool."
+  },
+  "/blog/why-is-my-ipad-not-charging": {
+    "title": "iPad Not Charging? 8 Fixes That Actually Work (2026)",
+    "description": "iPad not charging is usually a cable, port debris, or adapter fault, not a dead battery. Fixes in order: swap cable, clean port, force restart, different adapter, check battery health."
   },
   "/boot-camp-windows-macbook-dubai": {
     "title": "Boot Camp Windows on MacBook Dubai - Intel Boot Camp & Apple Silicon Parallels",
@@ -795,58 +863,6 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   "/corporate-macbook-repair-dubai": {
     "title": "Corporate MacBook Repair Dubai. Fleet Service, VAT Invoice | AMC Available",
     "description": "Corporate MacBook repair Dubai. Office collection & return, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706."
-  },
-  "/do-macbooks-last-over-a-decade": {
-    "title": "Do MacBooks Last Over a Decade? Honest Answer",
-    "description": "Do MacBooks last over a decade? Yes, 7 to 10+ years is normal. What limits lifespan, what extends it, and when to repair instead of replacing your Mac."
-  },
-  "/how-can-i-record-audio-while-screen-recording-on-mac": {
-    "title": "How to Record Audio While Screen Recording on Mac",
-    "description": "No system sound when screen recording on Mac? Why Cmd-Shift-5 and QuickTime catch only the mic, and how BlackHole plus a Multi-Output Device grab it."
-  },
-  "/how-do-i-reset-passwords-on-my-macbook": {
-    "title": "How to Reset Passwords on a MacBook (2026 Guide)",
-    "description": "Change or reset every password on your MacBook: your login password, another user's, the login Keychain, Apple ID, firmware and Screen Time, step by step."
-  },
-  "/how-to-change-macbook-name": {
-    "title": "How to Change Your MacBook's Name (2026 Guide)",
-    "description": "Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
-  },
-  "/how-to-choose-the-best-apple-laptop-for-gaming": {
-    "title": "Best MacBook for Gaming (2026): Honest Guide",
-    "description": "Picking a MacBook for gaming in 2026? M-base vs Pro vs Max GPU tiers, how much RAM you really need, Air vs Pro thermals, and Game Porting Toolkit."
-  },
-  "/how-to-choose-the-right-configuration-for-a-macbook": {
-    "title": "How to Choose the Right MacBook Configuration",
-    "description": "Picking a MacBook in Dubai? The honest spec guide: how much RAM and SSD to buy, M-base vs Pro vs Max, Air vs Pro, and the right config for your use case."
-  },
-  "/how-to-clean-a-macbook-screen": {
-    "title": "How to Clean a MacBook Screen Safely",
-    "description": "Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
-  },
-  "/how-to-clean-macbook-pro-keyboard": {
-    "title": "How to Clean a MacBook Pro Keyboard Safely",
-    "description": "Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
-  },
-  "/how-to-copy-and-paste-on-a-macbook": {
-    "title": "How to Copy and Paste on a MacBook",
-    "description": "Copy and paste on a MacBook the easy way: Cmd-C, Cmd-V, Cmd-X to cut, paste and match style, the right-click menu, copying files, and fixes when it fails."
-  },
-  "/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
-    "title": "How to Erase All Data on a Mac Before Selling",
-    "description": "The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
-  },
-  "/how-to-recover-macbook-password": {
-    "title": "How to Recover a Forgotten MacBook Password",
-    "description": "Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
-  },
-  "/how-to-reset-a-macbook": {
-    "title": "How to Reset a MacBook: Restart, SMC, NVRAM & Factory",
-    "description": "Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
-  },
-  "/how-to-take-a-screenshot-on-a-macbook": {
-    "title": "How to Take a Screenshot on a MacBook",
-    "description": "Take a screenshot on any MacBook in seconds: Shift-Cmd-3, 4 and 5 explained, where files save, how to copy to clipboard, and fixes when screenshots fail."
   },
   "/imac-data-recovery-dubai": {
     "title": "iMac Data Recovery Dubai - Fusion Drive, SSD, T2 | 055 741 3706",
@@ -1835,24 +1851,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Warranty Policy - MacBook Repair Dubai",
     "description": "Warranty of up to 12 months on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026."
   },
-  "/what-causes-color-distortion-on-macbook-screens": {
-    "title": "What Causes Color Distortion on MacBook Screens? Fix Guide",
-    "description": "MacBook screen colour distortion, tints, washed-out, oversaturated, is usually Night Shift, True Tone, or a wrong colour profile. Full diagnosis and fixes."
-  },
-  "/where-to-repair-macbook-dubai": {
-    "title": "Where to Repair a MacBook in Dubai: Apple vs Independent",
-    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
-  },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     "title": "White or Grey Horizontal Lines on MacBook Screen (Fix)",
     "description": "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide plus free Dubai check."
-  },
-  "/why-does-my-macbook-air-m4-heat-up-so-quickly": {
-    "title": "Why Does My MacBook Air M4 Heat Up So Quickly?",
-    "description": "MacBook Air M4 has no fan, heat during heavy tasks is expected. Here's what's normal, what's a problem, and how to keep it running cool."
-  },
-  "/why-is-my-ipad-not-charging": {
-    "title": "iPad Not Charging? 8 Fixes That Actually Work (2026)",
-    "description": "iPad not charging is usually a cable, port debris, or adapter fault, not a dead battery. Fixes in order: swap cable, clean port, force restart, different adapter, check battery health."
   }
 };

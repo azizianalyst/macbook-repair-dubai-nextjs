@@ -16,7 +16,7 @@ export default function GuideCleanMacBookScreen() {
     <BlogPostTemplate
       seoTitle="How to Clean a MacBook Screen Safely"
       seoDescription="Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
-      path="/how-to-clean-a-macbook-screen"
+      path="/blog/how-to-clean-a-macbook-screen"
       category="How-to · MacBook care"
       h1="How to Clean a MacBook Screen Safely"
       hook="Fingerprints and dust are easy to wipe away - but the wrong cleaner strips the anti-reflective coating for good. Here is the safe method we use at the bench."

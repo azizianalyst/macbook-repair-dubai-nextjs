@@ -91,7 +91,7 @@ export const MEGA_MENU: MegaPanel[] = [
       },
       {
         "label": "Apple Store vs independent",
-        "href": "/where-to-repair-macbook-dubai"
+        "href": "/blog/where-to-repair-macbook-dubai"
       },
       {
         "label": "Out-of-warranty repair",

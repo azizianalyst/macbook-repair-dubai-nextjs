@@ -92,7 +92,7 @@ export default function GuideCapsLockNotResponding() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Debris under the key</strong>: a crumb or dust under a low-profile or butterfly key blocks the dome. Our{" "}
-              <Link to="/how-to-clean-macbook-pro-keyboard" className="text-accent font-semibold hover:underline">guide to cleaning a MacBook keyboard</Link>{" "}covers the safe way to clear it.</li>
+              <Link to="/blog/how-to-clean-macbook-pro-keyboard" className="text-accent font-semibold hover:underline">guide to cleaning a MacBook keyboard</Link>{" "}covers the safe way to clear it.</li>
             <li><strong>Butterfly-keyboard failure</strong>: the 2016–2019 MacBook and MacBook Pro butterfly mechanism is notorious for individual keys dying. These are not user-serviceable; the top case or keyboard assembly is replaced.</li>
             <li><strong>Liquid damage</strong>: even a small spill can corrode the flex cable so one key or a row stops responding.</li>
           </ul>
@@ -140,7 +140,7 @@ export default function GuideCapsLockNotResponding() {
       ]}
       relatedLinks={[
         { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky or unresponsive keys fixed, single key, flex cable or full assembly." },
-        { label: "How to clean a MacBook Pro keyboard", href: "/how-to-clean-macbook-pro-keyboard", description: "Clear debris under a stuck key safely before assuming hardware failure." },
+        { label: "How to clean a MacBook Pro keyboard", href: "/blog/how-to-clean-macbook-pro-keyboard", description: "Clear debris under a stuck key safely before assuming hardware failure." },
         { label: "Free MacBook diagnostic in Dubai", href: "/macbook-full-diagnostic-dubai", description: "Not sure if it's the key, the cable or macOS? We'll find the cause first, free." },
       ]}
     />

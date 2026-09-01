@@ -94,7 +94,7 @@ export default function MacBookRepairCostCalculator() {
           <h2 className="text-[28px] md:text-[32px] mb-md">What changes the final price</h2>
           <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">The calculator shows a <strong className="text-text">starting</strong> price. The exact figure depends on your specific model, how severe the fault is (a cracked outer glass costs less than a fully dead panel), and whether a genuine or high-grade OEM-spec part is used - we always tell you which before we start.</p>
-            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent underline underline-offset-2">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/where-to-repair-macbook-dubai" className="text-accent underline underline-offset-2">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
+            <p className="m-0">For the full published list see our <Link to="/pricing" className="text-accent underline underline-offset-2">transparent MacBook repair price list</Link>, and to decide between routes read <Link to="/blog/where-to-repair-macbook-dubai" className="text-accent underline underline-offset-2">where to repair your MacBook in Dubai: Apple Store vs independent</Link>.</p>
           </div>
         </section>
 

@@ -648,7 +648,7 @@ export default function MacBookAirBatteryReplacement() {
               ["MacBook battery health check guide",          "/blog/macbook-battery-health-check-guide"],
               ["MacBook Air M3 common problems Dubai",        "/blog/macbook-air-m3-common-problems-dubai"],
               ["MacBook Air M2 common problems Dubai",        "/blog/macbook-air-m2-common-problems-dubai"],
-              ["How long do MacBooks last?",                  "/do-macbooks-last-over-a-decade"],
+              ["How long do MacBooks last?",                  "/blog/do-macbooks-last-over-a-decade"],
             ] as [string, string][]).map(([label, href]) => (
               <Link
                 key={href}

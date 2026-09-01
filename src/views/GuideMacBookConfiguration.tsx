@@ -7,7 +7,7 @@ export default function GuideMacBookConfiguration() {
     <BlogPostTemplate
       seoTitle="How to Choose the Right MacBook Configuration"
       seoDescription="Picking a MacBook in Dubai? The honest spec guide: how much RAM and SSD to buy, M-base vs Pro vs Max, Air vs Pro, and the right config for your use case."
-      path="/how-to-choose-the-right-configuration-for-a-macbook"
+      path="/blog/how-to-choose-the-right-configuration-for-a-macbook"
       category="Buying guide · MacBook"
       h1="How to Choose the Right Configuration for a MacBook"
       hook="The cruel truth about M-series MacBooks: RAM and storage are soldered to the chip and can never be upgraded. The config you buy is the config you live with for 5+ years. Here's how to get it right the first time."

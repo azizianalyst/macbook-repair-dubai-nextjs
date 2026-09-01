@@ -194,19 +194,19 @@ const OVERRIDE: Record<string, Meta> = {
     description: "Mac data recovery Dubai. Won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment. Call 055 741 3706.",
   },
   // CTR improvements: pages with high impressions but below-benchmark click rates.
-  "/do-macbooks-last-over-a-decade": {
+  "/blog/do-macbooks-last-over-a-decade": {
     title: "How Long Do MacBooks Last? Most Reach 7–10 Years",
     description: "Most MacBooks last 7–10 years — some push 12+. What shortens lifespan, what extends it, and the repair-vs-replace tipping point explained year by year.",
   },
-  "/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
+  "/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
     title: "Erase Mac Before Selling — Don't Skip These Steps (2026)",
     description: "Erase your Mac safely before selling: sign out of iCloud and Find My first, then Erase All Content and Settings. Skipping iCloud locks the buyer out permanently.",
   },
-  "/how-to-clean-a-macbook-screen": {
+  "/blog/how-to-clean-a-macbook-screen": {
     title: "How to Clean a MacBook Screen (Without Damaging It)",
     description: "Clean your MacBook screen without streaks or coating damage. The exact cloth and technique Apple recommends — plus the common mistakes that cause permanent marks.",
   },
-  "/how-to-recover-macbook-password": {
+  "/blog/how-to-recover-macbook-password": {
     title: "Forgot MacBook Password? 4 Ways to Get Back In (2026)",
     description: "Recover a forgotten MacBook login password via Apple ID, Recovery Mode resetpassword tool, your hint, or FileVault key. Step-by-step for all macOS versions.",
   },
@@ -236,7 +236,7 @@ const OVERRIDE: Record<string, Meta> = {
     description: `iMac logic board repair Dubai. Component-level rework on 27" Intel and 24" M-series: power delivery, GPU, T2, SoC limits.`,
   },
   // Restored Q&A guide pages (previously redirected, now real pages).
-  "/why-does-my-macbook-air-m4-heat-up-so-quickly": {
+  "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
     title: "Why Does My MacBook Air M4 Heat Up So Quickly?",
     description: "MacBook Air M4 has no fan — heat during heavy tasks is expected. Here's what's normal, what's a problem, and how to keep it running cool.",
   },
@@ -252,7 +252,7 @@ const OVERRIDE: Record<string, Meta> = {
     title: "Can an iPhone Motherboard Be Repaired? Yes — Here's How",
     description: "Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power issues, Face ID, audio, and GPU faults. Dubai pricing included.",
   },
-  "/what-causes-color-distortion-on-macbook-screens": {
+  "/blog/what-causes-color-distortion-on-macbook-screens": {
     title: "What Causes Color Distortion on MacBook Screens? Fix Guide",
     description: "MacBook screen colour distortion — tints, washed-out, oversaturated — is usually Night Shift, True Tone, or a wrong colour profile. Full diagnosis and fixes.",
   },
@@ -264,7 +264,7 @@ const OVERRIDE: Record<string, Meta> = {
     title: "iPhone 16 Pro Battery Capacity, Life & Replacement Cost",
     description: "iPhone 16 Pro has a 3,582 mAh battery rated for 27 hrs video. What affects battery life, when to replace, and Dubai replacement cost ().",
   },
-  "/how-to-take-a-screenshot-on-a-macbook": {
+  "/blog/how-to-take-a-screenshot-on-a-macbook": {
     title: "How to Take a Screenshot on a MacBook (All 3 Shortcuts)",
     description: "Shift-Cmd-3 = full screen. Shift-Cmd-4 = drag a selection. Shift-Cmd-5 = every option. Where screenshots save, how to copy to clipboard, and fixes when it stops working.",
   },
@@ -272,7 +272,7 @@ const OVERRIDE: Record<string, Meta> = {
     title: "MacBook Battery Health Check: 3 Ways in 30 Seconds (2026)",
     description: "Check MacBook battery health: System Settings → Battery → Battery Health. Or Option-click the battery icon. Cycle-count limits per model, what 80% means, when to replace.",
   },
-  "/how-to-choose-the-best-apple-laptop-for-gaming": {
+  "/blog/how-to-choose-the-best-apple-laptop-for-gaming": {
     title: "Best MacBook for Gaming 2026: M4 Air vs Pro vs Max",
     description: "M4 MacBook Air handles most games well. M4 Pro handles everything. M4 Max is overkill unless you edit too. GPU tiers, RAM needs, thermals, and which titles run natively in 2026.",
   },
@@ -280,7 +280,7 @@ const OVERRIDE: Record<string, Meta> = {
     title: "Where to Buy a Refurbished MacBook: 5 Sources Ranked",
     description: "Apple Certified Refurbished is the safest. Independent shops beat Dubizzle for warranty. Dubizzle works if you know what to check. All sources ranked by risk, value, and warranty.",
   },
-  "/why-is-my-ipad-not-charging": {
+  "/blog/why-is-my-ipad-not-charging": {
     title: "iPad Not Charging? 8 Fixes That Actually Work (2026)",
     description: "iPad not charging is usually a cable, port debris, or adapter fault — not a dead battery. Fixes in order: swap cable, clean port, force restart, different adapter, check battery health.",
   },

@@ -33,7 +33,7 @@ export default function IPadChargingPortRepair() {
             </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             The Smart Connector on Pro and Air models is a separate three-pin contact for keyboard cases. It can fail on its own without the main port being touched. We test all three on every charging-port job. For software-side charging issues, see:{" "}
-            <Link to="/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why your iPad stopped charging and how to fix it</Link>.
+            <Link to="/blog/why-is-my-ipad-not-charging" className="text-accent underline underline-offset-2">why your iPad stopped charging and how to fix it</Link>.
           </p>
         </>
       }
@@ -85,7 +85,7 @@ export default function IPadChargingPortRepair() {
         "/ipad-water-damage-repair-dubai",
       ]}
       relatedExtra={[
-        { label: "iPad not charging?", href: "/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
+        { label: "iPad not charging?", href: "/blog/why-is-my-ipad-not-charging", description: "Common reasons an iPad stops charging and how to fix them." },
       ]}
     />
   );

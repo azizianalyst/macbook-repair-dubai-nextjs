@@ -17,7 +17,7 @@ export default function GuideCleanMacBookKeyboard() {
     <BlogPostTemplate
       seoTitle="How to Clean a MacBook Pro Keyboard Safely"
       seoDescription="Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
-      path="/how-to-clean-macbook-pro-keyboard"
+      path="/blog/how-to-clean-macbook-pro-keyboard"
       category="How-to · MacBook"
       h1="How to Clean a MacBook Pro Keyboard"
       hook="A clean keyboard types better, lasts longer, and holds resale value - but one wrong move with liquid can mean a logic-board repair. Here's the safe, technician-approved method."

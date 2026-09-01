@@ -18,7 +18,7 @@ export default function GuideScreenRecordAudioMac() {
     <BlogPostTemplate
       seoTitle="How to Record Audio While Screen Recording on Mac"
       seoDescription="No system sound when screen recording on Mac? Why Cmd-Shift-5 and QuickTime catch only the mic, and how BlackHole plus a Multi-Output Device grab it."
-      path="/how-can-i-record-audio-while-screen-recording-on-mac"
+      path="/blog/how-can-i-record-audio-while-screen-recording-on-mac"
       category="How-to · macOS"
       h1="How to Record Audio While Screen Recording on a Mac"
       hook="The built-in screen recorder grabs your microphone but silently drops all internal sound - here's the catch, and the free fix that captures system audio and your voice together."

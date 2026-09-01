@@ -18,7 +18,7 @@ export default function GuideRecoverMacBookPassword() {
     <BlogPostTemplate
       seoTitle="How to Recover a Forgotten MacBook Password"
       seoDescription="Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
-      path="/how-to-recover-macbook-password"
+      path="/blog/how-to-recover-macbook-password"
       category="How-to · macOS"
       h1="How to Recover a Forgotten MacBook Password"
       hook="Locked out of your own MacBook? You usually do not need to wipe it - here are the safe, Apple-approved ways to reset a forgotten login password, in the order we use them at the bench."
@@ -49,7 +49,7 @@ export default function GuideRecoverMacBookPassword() {
             This guide is specifically about a forgotten <strong>login</strong> password. If you just
             want to change passwords you already know - including the keychain or a firmware password -
             read{" "}
-            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
+            <Link to="/blog/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
               how do I reset passwords on my MacBook
             </Link>{" "}
             instead, which covers that broader ground.
@@ -158,7 +158,7 @@ export default function GuideRecoverMacBookPassword() {
             Bottom line: a reset login password gets you back in, but the old keychain stays locked until
             you can supply the old password. Save both for a while. For more on managing the keychain
             itself, see{" "}
-            <Link to="/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
+            <Link to="/blog/how-do-i-reset-passwords-on-my-macbook" className="text-accent font-semibold hover:underline">
               our broader password-reset guide
             </Link>.
           </p>
@@ -235,7 +235,7 @@ export default function GuideRecoverMacBookPassword() {
         },
       ]}
       relatedLinks={[
-        { label: "How do I reset passwords on my MacBook", href: "/how-do-i-reset-passwords-on-my-macbook", description: "Change keychain, firmware and account passwords you already know." },
+        { label: "How do I reset passwords on my MacBook", href: "/blog/how-do-i-reset-passwords-on-my-macbook", description: "Change keychain, firmware and account passwords you already know." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "FileVault locked or key lost? We assess what's salvageable." },
         { label: "MacBook full diagnostic", href: "/macbook-full-diagnostic-dubai", description: "We confirm whether it's a simple reset or something deeper." },
       ]}

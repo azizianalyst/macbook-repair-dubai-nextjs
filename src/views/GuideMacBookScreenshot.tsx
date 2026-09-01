@@ -17,7 +17,7 @@ export default function GuideMacBookScreenshot() {
     <BlogPostTemplate
       seoTitle="How to Take a Screenshot on a MacBook"
       seoDescription="Take a screenshot on any MacBook in seconds: Shift-Cmd-3, 4 and 5 explained, where files save, how to copy to clipboard, and fixes when screenshots fail."
-      path="/how-to-take-a-screenshot-on-a-macbook"
+      path="/blog/how-to-take-a-screenshot-on-a-macbook"
       category="How-to · macOS"
       h1="How to Take a Screenshot on a MacBook"
       hook="Every MacBook can screenshot the full screen, a selection, or a single window without any extra app - here's every shortcut and where the files end up."

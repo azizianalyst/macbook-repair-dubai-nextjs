@@ -28,7 +28,7 @@ export default function MacBookOverheatingFix() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Most common on 2016-2019 Intel MacBook Pros (the i7/i9 quad-core models that ran hot from new). Apple Silicon MacBooks throttle less aggressively but still benefit from a clean and re-paste after 3-4 years. See also:{" "}
-            <Link to="/why-does-my-macbook-air-m4-heat-up-so-quickly" className="text-accent underline underline-offset-2">why the MacBook Air M4 heats up</Link>.
+            <Link to="/blog/why-does-my-macbook-air-m4-heat-up-so-quickly" className="text-accent underline underline-offset-2">why the MacBook Air M4 heats up</Link>.
           </p>
         </>
       }
@@ -70,7 +70,7 @@ export default function MacBookOverheatingFix() {
         { label: "MacBook Fan Cleaning",        href: "/mac-fan-cleaning-dubai", description: "Dust-choked fans cause the same overheating. Often done together." },
         { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen batteries cause heat." },
         { label: "MacBook Logic Board Repair",  href: "/macbook-logic-board-repair-dubai", description: "Component-level work when thermal isn't enough." },
-        { label: "MacBook Air M4 overheating", href: "/why-does-my-macbook-air-m4-heat-up-so-quickly", description: "Why the MacBook Air M4 heats up quickly and what to do." },
+        { label: "MacBook Air M4 overheating", href: "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly", description: "Why the MacBook Air M4 heats up quickly and what to do." },
       ]}
       quickAnswer={{
         question: "How much does a MacBook overheating fix cost in Dubai?",

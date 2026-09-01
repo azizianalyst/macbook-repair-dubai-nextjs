@@ -16,7 +16,7 @@ export default function GuideChangeMacBookName() {
     <BlogPostTemplate
       seoTitle="How to Change Your MacBook's Name (2026 Guide)"
       seoDescription="Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
-      path="/how-to-change-macbook-name"
+      path="/blog/how-to-change-macbook-name"
       category="How-to · macOS"
       h1="How to Change Your MacBook's Name"
       hook="Renaming your MacBook takes about 30 seconds and instantly updates AirDrop, Finder sharing, and your iCloud device list - here's the simple way, plus the Terminal trick for the technical hostname."

@@ -1142,7 +1142,7 @@ export default function Home() {
                 <ul className="mt-sm grid gap-1.5 sm:grid-cols-2 list-none p-0 text-[13.5px] text-text-muted">
                   {OOW_ISSUES.map((i) => <li key={i} className="flex items-start gap-2"><Check size={15} className="text-accent mt-0.5 shrink-0" aria-hidden /> {i}</li>)}
                 </ul>
-                <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent underline underline-offset-2">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent underline underline-offset-2">Apple repair programmes &amp; recalls</Link>, or <Link to="/where-to-repair-macbook-dubai" className="text-accent underline underline-offset-2">where to repair your MacBook in Dubai</Link>.</p>
+                <p className="m-0 mt-md text-[13.5px] text-text-muted">More on <Link to="/out-of-warranty-apple-repair-dubai" className="text-accent underline underline-offset-2">out-of-warranty Apple repair</Link>, <Link to="/apple-repair-programs-dubai" className="text-accent underline underline-offset-2">Apple repair programmes &amp; recalls</Link>, or <Link to="/blog/where-to-repair-macbook-dubai" className="text-accent underline underline-offset-2">where to repair your MacBook in Dubai</Link>.</p>
               </Card>
             </div>
             <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">

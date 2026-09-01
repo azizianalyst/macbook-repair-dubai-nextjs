@@ -516,10 +516,10 @@ export default function MacBookAirScreenReplacement() {
               ["MacBook Air M3 screen flickering Dubai",           "/blog/macbook-air-m3-screen-flickering-dubai"],
               ["MacBook Air M2 screen lines Dubai",                "/blog/macbook-air-m2-screen-lines-dubai"],
               ["White or grey lines on MacBook screen",            "/white-or-grey-horizontal-lines-appearing-on-macbook-screen"],
-              ["What causes colour distortion on MacBook screens?","/what-causes-color-distortion-on-macbook-screens"],
+              ["What causes colour distortion on MacBook screens?","/blog/what-causes-color-distortion-on-macbook-screens"],
               ["MacBook Air vs MacBook Pro 2026",                  "/blog/macbook-air-vs-macbook-pro-2026"],
               ["MacBook battery replacement cost Dubai 2026",      "/blog/macbook-battery-replacement-cost-2026"],
-              ["How long do MacBooks last?",                       "/do-macbooks-last-over-a-decade"],
+              ["How long do MacBooks last?",                       "/blog/do-macbooks-last-over-a-decade"],
             ] as [string, string][]).map(([label, href]) => (
               <Link key={href} to={href}
                 className="flex items-start rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4 hover:border-accent/50 transition-colors group">

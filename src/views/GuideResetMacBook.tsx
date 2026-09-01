@@ -17,7 +17,7 @@ export default function GuideResetMacBook() {
     <BlogPostTemplate
       seoTitle="How to Reset a MacBook: Restart, SMC, NVRAM & Factory"
       seoDescription="Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
-      path="/how-to-reset-a-macbook"
+      path="/blog/how-to-reset-a-macbook"
       category="How-to · macOS"
       h1="How to Reset a MacBook (Restart, SMC, NVRAM & Factory Reset)"
       hook="'Reset' can mean five different things on a Mac - from a 10-second restart to a full factory wipe. Here's exactly which one you need, and how Apple Silicon and Intel differ."
@@ -51,7 +51,7 @@ export default function GuideResetMacBook() {
           <p>
             Important: this guide is about resetting the <em>Mac</em>. If you've forgotten your login
             password and just need back in, you don't need any of this - see{" "}
-            <Link to="/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
+            <Link to="/blog/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
               how to recover a MacBook password
             </Link>{" "}instead.
           </p>
@@ -227,7 +227,7 @@ export default function GuideResetMacBook() {
       relatedLinks={[
         { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Recover files erased during a factory reset without backup." },
-        { label: "How to recover a MacBook password", href: "/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },
+        { label: "How to recover a MacBook password", href: "/blog/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },
       ]}
     />
   );

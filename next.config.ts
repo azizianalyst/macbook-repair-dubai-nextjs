@@ -43,6 +43,27 @@ const nextConfig: NextConfig = {
       // existing pages, not new builds - see docs/keyword-service-gap-audit-2026-08-30.md.
       { source: "/best-macbook-repair-shop-dubai", destination: "/best-macbook-repair-dubai/", statusCode: 301 },
       { source: "/macbook-repair-near-me", destination: "/macbook-repair-near-me-dubai/", statusCode: 301 },
+      // 2026-09-01 slug hygiene, Finding 2 (docs/keyword-service-gap-audit-2026-08-30.md):
+      // 17 sentence-shaped root slugs, all already built as BlogPostTemplate content -
+      // moved under /blog/ rather than renamed to service slugs, since the content itself
+      // is genuinely informational, not a service page in disguise.
+      { source: "/do-macbooks-last-over-a-decade", destination: "/blog/do-macbooks-last-over-a-decade/", statusCode: 301 },
+      { source: "/how-can-i-record-audio-while-screen-recording-on-mac", destination: "/blog/how-can-i-record-audio-while-screen-recording-on-mac/", statusCode: 301 },
+      { source: "/how-do-i-reset-passwords-on-my-macbook", destination: "/blog/how-do-i-reset-passwords-on-my-macbook/", statusCode: 301 },
+      { source: "/how-to-change-macbook-name", destination: "/blog/how-to-change-macbook-name/", statusCode: 301 },
+      { source: "/how-to-choose-the-best-apple-laptop-for-gaming", destination: "/blog/how-to-choose-the-best-apple-laptop-for-gaming/", statusCode: 301 },
+      { source: "/how-to-choose-the-right-configuration-for-a-macbook", destination: "/blog/how-to-choose-the-right-configuration-for-a-macbook/", statusCode: 301 },
+      { source: "/how-to-clean-a-macbook-screen", destination: "/blog/how-to-clean-a-macbook-screen/", statusCode: 301 },
+      { source: "/how-to-clean-macbook-pro-keyboard", destination: "/blog/how-to-clean-macbook-pro-keyboard/", statusCode: 301 },
+      { source: "/how-to-copy-and-paste-on-a-macbook", destination: "/blog/how-to-copy-and-paste-on-a-macbook/", statusCode: 301 },
+      { source: "/how-to-erase-all-data-on-my-mac-before-giving-it-away", destination: "/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away/", statusCode: 301 },
+      { source: "/how-to-recover-macbook-password", destination: "/blog/how-to-recover-macbook-password/", statusCode: 301 },
+      { source: "/how-to-reset-a-macbook", destination: "/blog/how-to-reset-a-macbook/", statusCode: 301 },
+      { source: "/how-to-take-a-screenshot-on-a-macbook", destination: "/blog/how-to-take-a-screenshot-on-a-macbook/", statusCode: 301 },
+      { source: "/what-causes-color-distortion-on-macbook-screens", destination: "/blog/what-causes-color-distortion-on-macbook-screens/", statusCode: 301 },
+      { source: "/where-to-repair-macbook-dubai", destination: "/blog/where-to-repair-macbook-dubai/", statusCode: 301 },
+      { source: "/why-does-my-macbook-air-m4-heat-up-so-quickly", destination: "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly/", statusCode: 301 },
+      { source: "/why-is-my-ipad-not-charging", destination: "/blog/why-is-my-ipad-not-charging/", statusCode: 301 },
       // 2026-09-01 GSC 404 validation round two: URLs Google still crawls that the first
       // 404-fix pass missed. /team/:slug is self-inflicted - the Person schema @id uses
       // /team/<name>#person and Google crawls the path; About is where those people live.
