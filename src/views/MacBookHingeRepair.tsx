@@ -18,7 +18,7 @@ export default function MacBookHingeRepair() {
         { name: "MacBook Repair", path: "/" },
         { name: "Hinge Repair",   path: "/macbook-hinge-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook chassis & hinge repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook chassis & hinge repair" }}
       serviceName="MacBook Hinge Repair Dubai"
       intro={
         <>

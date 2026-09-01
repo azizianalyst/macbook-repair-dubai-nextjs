@@ -18,7 +18,7 @@ export default function MacBookMicrophoneRepair() {
         { name: "MacBook Repair",  path: "/" },
         { name: "Microphone Repair", path: "/macbook-microphone-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook audio & board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook audio & board-level repair" }}
       serviceName="MacBook Microphone Repair Dubai"
       intro={
         <>

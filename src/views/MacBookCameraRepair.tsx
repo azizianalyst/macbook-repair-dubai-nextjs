@@ -18,7 +18,7 @@ export default function MacBookCameraRepair() {
         { name: "MacBook Repair", path: "/" },
         { name: "Camera Repair",  path: "/macbook-camera-repair-dubai" },
       ]}
-      technician={{ name: "Usman", years: 14, specialisation: "MacBook display & camera repair" }}
+      technician={{ name: "Usman", years: 11, specialisation: "MacBook display & camera repair" }}
       serviceName="MacBook Camera Repair Dubai"
       intro={
         <>

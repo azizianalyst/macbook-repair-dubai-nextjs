@@ -13,7 +13,7 @@ export default function IPhoneBackGlassRepair() {
       startingPrice={350}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone back glass repair quote please. Model: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Laser back-glass removal" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Laser back-glass removal" }}
       serviceName="iPhone Back Glass Repair Dubai"
       pricingRows={[
         { model: "iPhone 8 / 8 Plus",                price: 350, timeline: "Same day" },

@@ -18,7 +18,7 @@ export default function IPhoneLogicBoardRepair() {
         { name: "iPhone Repair", path: "/iphone-repair-dubai" },
         { name: "Logic Board",   path: "/iphone-logic-board-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "iPhone board-level micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "iPhone board-level micro-soldering" }}
       serviceName="iPhone Logic Board Repair Dubai"
       intro={
         <>

@@ -13,7 +13,7 @@ export default function IPhoneWaterDamageRepair() {
       startingPrice={179}
       timeline="Same day · 1-3 days"
       whatsappPrefill="URGENT - iPhone water damage. Model + when it happened: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Water damage & micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Water damage & micro-soldering" }}
       serviceName="iPhone Water Damage Repair Dubai"
       pricingRows={[
         { model: "iPhone 6 / 7 / 8 / SE - clean only",      price: 179, timeline: "Same day" },

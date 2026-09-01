@@ -12,7 +12,7 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
       h1="MacBook Pro M4 with Thunderbolt 5 and a Portable Monitor"
       hook="Thunderbolt 5 on the M4 MacBook Pro triples the bandwidth of its predecessor and when paired with the right portable monitor, it unlocks a genuinely powerful dual-screen setup that travels anywhere."
       quickAnswer="The MacBook Pro M4 Pro and M4 Max support Thunderbolt 5 (120 Gb/s), which is fast enough for a 4K 144 Hz external monitor over a single cable. A quality USB-C portable display (like the LG 16MQ70 or ASUS ProArt PA169CDV) connects directly, no dock required. A good portable display that makes the most of TB5 is a worthwhile investment for anyone working on the move."
-      author={{ name: "Shafiq", role: "Founder & senior Apple technician" }}
+      author={{ name: "Shafiq", role: "Lead technician" }}
       datePublished="2026-05-10"
       dateModified="2026-06-16"
       readingMinutes={8}

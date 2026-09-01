@@ -24,7 +24,7 @@ export default function BlogLaptopRepairVsBuyNew() {
       h1="MacBook Repair or Buy New? Decision Math 2026"
       hook="Old MacBook broken. Repair it or buy new? Here's the formula that decides it."
       quickAnswer="Rule of thumb: repair if the quoted cost is under 50% of the MacBook's resale value. Apple Silicon Macs (M1 onwards) are almost always worth repairing, holding value and running macOS Tahoe smoothly. Intel MacBook Pro 2018-2020 is usually worth fixing. Pre-2017 models usually replace. The MacBook Air M1 has the best repair ROI. Message us on WhatsApp for a firm repair quote on your exact model."
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Ali", role: "Senior technician · data recovery" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={10}

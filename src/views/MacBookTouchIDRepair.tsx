@@ -18,7 +18,7 @@ export default function MacBookTouchIDRepair() {
         { name: "MacBook Repair",  path: "/" },
         { name: "Touch ID Repair", path: "/macbook-touch-id-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook board-level & secure-element repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook board-level & secure-element repair" }}
       serviceName="MacBook Touch ID Repair Dubai"
       intro={
         <>

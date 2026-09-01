@@ -13,7 +13,7 @@ export default function IPhoneICloudUnlock() {
       startingPrice={250}
       timeline="3 days - 4 weeks (Apple-side)"
       whatsappPrefill="iCloud unlock help - model, IMEI, and what happened (forgotten Apple ID / inherited / second-hand): "
-      technician={{ name: "Usman", years: 12, specialisation: "Apple liaison & ownership recovery" }}
+      technician={{ name: "Usman", years: 11, specialisation: "Apple liaison & ownership recovery" }}
       serviceName="iPhone iCloud Unlock Help Dubai"
       pricingRows={[
         { model: "Forgotten Apple ID - recovery via Apple",      price: 250, timeline: "1-7 days" },

@@ -18,7 +18,7 @@ export default function MacBookPowerButtonRepair() {
         { name: "MacBook Repair",      path: "/" },
         { name: "Power Button Repair", path: "/macbook-power-button-repair-dubai" },
       ]}
-      technician={{ name: "Usman", years: 14, specialisation: "MacBook power & Touch ID repair" }}
+      technician={{ name: "Usman", years: 11, specialisation: "MacBook power & Touch ID repair" }}
       serviceName="MacBook Power Button Repair Dubai"
       intro={
         <>

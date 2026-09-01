@@ -13,7 +13,7 @@ export default function IPhoneDataRecovery() {
       startingPrice={279}
       timeline="1-5 days"
       whatsappPrefill="iPhone data recovery - model + what happened: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Chip-off recovery & micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Chip-off recovery & micro-soldering" }}
       serviceName="iPhone Data Recovery Dubai"
       pricingRows={[
         { model: "iCloud-assisted recovery (any model)",        price: 279, timeline: "Same day" },

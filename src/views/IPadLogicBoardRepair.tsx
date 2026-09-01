@@ -18,7 +18,7 @@ export default function IPadLogicBoardRepair() {
         { name: "iPad Repair", path: "/ipad-repair-dubai" },
         { name: "Logic Board", path: "/ipad-logic-board-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "iPad board-level micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "iPad board-level micro-soldering" }}
       serviceName="iPad Logic Board Repair Dubai"
       intro={
         <>

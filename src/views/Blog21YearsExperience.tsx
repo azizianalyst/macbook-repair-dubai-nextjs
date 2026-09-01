@@ -26,7 +26,7 @@ export default function Blog21YearsExperience() {
       h1="Why 21 Years of Apple Repair Experience Matters"
       hook="Started October 2004. 40,000+ MacBooks fixed. Here's what longevity actually means for your repair."
       quickAnswer="21 years of Apple-only repair means: model-specific failure pattern memory across 6 chip generations (PowerPC → Intel → Apple Silicon), specialty tooling built up since 2004, deep parts-network relationships, and a continuity team (Shafiq since 2008, Usman since 2012). Pop-up shops can't replicate that knowledge density on iPhone 16 Pro or MacBook Pro M5 issues."
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Abdul Aziz", role: "Founder" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
@@ -133,9 +133,9 @@ export default function Blog21YearsExperience() {
 
           <h2 id="team-continuity">Team continuity</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Shafiq</strong> - Senior MacBook technician, with us since 2008. 17 years of MacBook experience. Trained on butterfly keyboard, flexgate, Touch Bar, and Apple Silicon repairs as each launched.</li>
-            <li><strong>Usman</strong> - Parts manager + senior iPhone/iPad technician, with us since 2012. 13 years on iPhone repair across iPhone 4S → 17 Pro Max.</li>
-            <li><strong>Ali</strong> - Founder + workshop manager. Active on logic-board repairs.</li>
+            <li><strong>Shafiq</strong> - Lead technician, 15 years on MacBook screens, batteries and water damage. Trained on butterfly keyboard, flexgate, Touch Bar, and Apple Silicon repairs as each launched.</li>
+            <li><strong>Usman</strong> - Board-level repair specialist, 11 years on M-series logic boards. <strong>Hamza</strong> covers iPhone and iPad across iPhone 4S → 17 Pro Max.</li>
+            <li><strong>Ali</strong> - Senior technician, 14 years - data recovery, iMac and Mac mini.</li>
           </ul>
           <p>
             Pop-up shops typically have 6-18 month staff tenure. That means your repair is usually
@@ -164,7 +164,7 @@ export default function Blog21YearsExperience() {
         { q: "Are you Apple-Authorised?", a: "No - and we won't pursue it because the AASP terms restrict pricing, restrict the model range we can service, and require us to refuse out-of-warranty older devices. Independent gives us range, AASP gives Apple control. We chose range." },
         { q: "Can you really still repair a 2004 PowerBook?", a: "Yes - we keep PowerPC tooling and source parts from the vintage market. Less common but possible. Most vintage repairs are battery replacement, screen, or HDD-to-SSD upgrade." },
         { q: "What's the most common Apple Silicon (M1+) repair you do?", a: "Charging port (USB-C) failure on MacBook Air M1 / M2 - about 60 per month. The port is reflowable, so we repair it instead of swapping the whole logic board - far cheaper than Apple's quote. Message us on WhatsApp for today's exact price on your model." },
-        { q: "Does the founder still work on devices?", a: "Yes - Ali handles logic-board work and any escalated case. Day-to-day MacBook repairs are Shafiq's lead, iPhone is Usman's, with 4 junior technicians supporting." },
+        { q: "Does the founder still work on devices?", a: "Yes - Abdul Aziz still works on Apple hardware and takes escalated cases. Day-to-day MacBook repairs are led by Shafiq, board-level work is Usman's bench, and Hamza covers iPhone and iPad." },
         { q: "How many MacBook Pro M5 (2025/26) repairs have you done?", a: "Around 80 since November 2025 launch - mostly accidental damage screens (chassis is thinner so drops crack screens easier) and a few liquid spills. Apple Silicon platform itself has been highly reliable so far." },
       ]}
       relatedLinks={[

@@ -14,7 +14,7 @@ export default function IPhoneScreenRepair() {
       startingPrice={179}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone screen repair quote please. Model: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Display & micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Display & micro-soldering" }}
       serviceName="iPhone Screen Repair Dubai"
       pricingRows={IPHONE_SCREEN_PRICES.map((r) => ({ ...r, timeline: r.price >= 1000 ? "1 day" : "Same day" }))}
       pricingCaption="Per-model pricing. Original Apple OLED (preserves True Tone) is an add-on option - message us for the exact price on your model."

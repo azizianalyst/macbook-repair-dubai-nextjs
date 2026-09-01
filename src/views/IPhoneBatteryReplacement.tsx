@@ -13,7 +13,7 @@ export default function IPhoneBatteryReplacement() {
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, iPhone battery replacement quote please. Model: "
-      technician={{ name: "Usman", years: 12, specialisation: "Battery & charging systems" }}
+      technician={{ name: "Usman", years: 11, specialisation: "Battery & charging systems" }}
       serviceName="iPhone Battery Replacement Dubai"
       pricingRows={[
         { model: "iPhone 6 / 6s / 7 / 8 / SE",        price: 250, timeline: "Same day" },

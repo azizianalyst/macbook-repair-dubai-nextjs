@@ -53,7 +53,7 @@ export default function IMacIntelRepairHub() {
         { name: "iMac Repair", path: "/imac-repair-dubai" },
         { name: "iMac Intel Repair", path: "/imac-intel-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "iMac and Mac desktop lead technician" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iMac and Mac desktop lead technician" }}
       serviceName="iMac Intel Repair Dubai"
       intro={intro}
       whatWeFix={[

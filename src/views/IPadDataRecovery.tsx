@@ -18,7 +18,7 @@ export default function IPadDataRecovery() {
         { name: "iPad Repair",   path: "/ipad-repair-dubai" },
         { name: "Data Recovery", path: "/ipad-data-recovery-dubai" },
       ]}
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Chip-off recovery & micro-soldering" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Chip-off recovery & micro-soldering" }}
       serviceName="iPad Data Recovery Dubai"
       intro={
         <>

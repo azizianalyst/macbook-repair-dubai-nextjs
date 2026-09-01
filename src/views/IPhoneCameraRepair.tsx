@@ -13,7 +13,7 @@ export default function IPhoneCameraRepair() {
       startingPrice={350}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone camera repair quote please. Model + which camera: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Camera, Face ID & ISP calibration" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Camera, Face ID & ISP calibration" }}
       serviceName="iPhone Camera Repair Dubai"
       pricingRows={[
         { model: "iPhone 6 / 7 / 8 - rear camera",            price: 350, timeline: "Same day" },

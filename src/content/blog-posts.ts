@@ -197,7 +197,7 @@ const HAND_POSTS: Post[] = [
   {
     slug: "/blog/why-21-years-experience-matters",
     title: "Why 21 Years of Apple Repair Experience Matters",
-    excerpt: "Founded October 2004 - PowerBook G4 era. 40,000+ devices. Pattern-recognition knowledge across 6 chip generations, deep tooling investment, and team continuity (Shafiq since 2008, Usman since 2012).",
+    excerpt: "Founded October 2004 - PowerBook G4 era. 40,000+ devices. Pattern-recognition knowledge across 6 chip generations, deep tooling investment, and team continuity (the same senior bench for over a decade).",
     category: "Trust · About us",
     author: "Ali",
     date: "April 2026",

@@ -18,7 +18,7 @@ export default function MacBookFlexgateRepair() {
         { name: "MacBook Repair",  path: "/" },
         { name: "Flexgate Repair", path: "/macbook-flexgate-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook display & board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook display & board-level repair" }}
       serviceName="MacBook Flexgate Repair Dubai"
       intro={
         <>

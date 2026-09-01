@@ -15,7 +15,7 @@ export default function IPadBatteryReplacement() {
       startingPrice={350}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, my iPad battery is dying - model:"
-      technician={{ name: "Usman", years: 9, specialisation: "iPad & iPhone battery specialist" }}
+      technician={{ name: "Usman", years: 11, specialisation: "iPad & iPhone battery specialist" }}
       serviceName="iPad Battery Replacement Dubai"
       pricingRows={[
         { model: "iPad (9th / 10th / 11th gen)",  price: 350, timeline: "Same day" },

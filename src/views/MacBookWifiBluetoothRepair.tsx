@@ -18,7 +18,7 @@ export default function MacBookWifiBluetoothRepair() {
         { name: "MacBook Repair",          path: "/" },
         { name: "Wi-Fi & Bluetooth Repair", path: "/macbook-wifi-bluetooth-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook wireless & board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook wireless & board-level repair" }}
       serviceName="MacBook Wi-Fi & Bluetooth Repair Dubai"
       intro={
         <>

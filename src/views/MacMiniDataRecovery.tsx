@@ -18,7 +18,7 @@ export default function MacMiniDataRecovery() {
         { name: "Mac mini Repair",   path: "/mac-mini-repair-dubai" },
         { name: "Data Recovery",     path: "/mac-mini-data-recovery-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "Mac data recovery and board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "Mac data recovery and board-level repair" }}
       serviceName="Mac mini Data Recovery Dubai"
       intro={
         <>

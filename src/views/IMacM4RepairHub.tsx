@@ -44,7 +44,7 @@ export default function IMacM4RepairHub() {
         { name: "iMac Repair", path: "/imac-repair-dubai" },
         { name: "iMac M4 Repair", path: "/imac-m4-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "iMac and Mac desktop lead technician" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iMac and Mac desktop lead technician" }}
       serviceName="iMac M4 Repair Dubai"
       intro={intro}
       whatWeFix={[

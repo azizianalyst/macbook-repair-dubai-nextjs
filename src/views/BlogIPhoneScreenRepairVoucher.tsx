@@ -23,7 +23,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
       h1="iPhone Screen Repair Voucher Dubai - Save With Vouchers"
       hook="We offer pre-purchase vouchers for screen repair. Buy now, use within 1 year. Save 15%."
       quickAnswer="Our iPhone screen repair voucher saves 15% off standard pricing when bought in advance - message us on WhatsApp for today's exact voucher price on your model. Vouchers last 12 months, cover any iPhone screen repair at our Media City workshop, and are transferable and refundable. Best for parents of teenagers, companies, or anyone locking in current pricing."
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Ali", role: "Senior technician · data recovery" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={7}

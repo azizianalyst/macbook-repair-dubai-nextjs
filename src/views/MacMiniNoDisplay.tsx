@@ -18,7 +18,7 @@ export default function MacMiniNoDisplay() {
         { name: "Mac mini Repair",   path: "/mac-mini-repair-dubai" },
         { name: "No Display",        path: "/mac-mini-no-display-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "Mac mini logic board and power circuit repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "Mac mini logic board and power circuit repair" }}
       serviceName="Mac mini No Display Repair"
       intro={
         <>

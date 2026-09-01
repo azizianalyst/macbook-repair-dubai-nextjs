@@ -13,7 +13,7 @@ export default function IPhoneChargingPortRepair() {
       startingPrice={149}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone charging port repair quote please. Model: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Charging port & Face ID flex" }}
+      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Charging port & Face ID flex" }}
       serviceName="iPhone Charging Port Repair Dubai"
       pricingRows={[
         { model: "iPhone 6 / 6s / 7 / 8 / SE (Lightning)",  price: 149, timeline: "Same day" },

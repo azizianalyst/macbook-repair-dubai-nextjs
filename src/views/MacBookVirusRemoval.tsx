@@ -328,7 +328,7 @@ export default function MacBookVirusRemoval() {
           {/* Technician */}
           <section className="bg-bg-alt rounded-md p-lg border border-border">
             <h2 className="text-[22px] mb-md text-text">Lead technician on virus removal jobs</h2>
-            <TechnicianBadge name="Usman" years={9} specialisation="macOS software & malware" tone="dark" />
+            <TechnicianBadge name="Usman" years={11} specialisation="macOS software & malware" tone="dark" />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Usman has cleaned 900+ MacBooks since 2017 and runs every spyware audit personally with NDA on file. Background in macOS internals - launchctl, dtrace, and the Apple security framework.
             </p>

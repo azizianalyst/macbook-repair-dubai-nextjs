@@ -18,7 +18,7 @@ export default function MacMiniOverheatingFix() {
         { name: "Mac mini Repair",   path: "/mac-mini-repair-dubai" },
         { name: "Overheating Fix",   path: "/mac-mini-overheating-fix-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "Mac mini logic board and power circuit repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "Mac mini logic board and power circuit repair" }}
       serviceName="Mac mini Overheating Fix Dubai"
       intro={
         <>

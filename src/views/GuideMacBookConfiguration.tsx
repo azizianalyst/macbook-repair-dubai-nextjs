@@ -12,7 +12,7 @@ export default function GuideMacBookConfiguration() {
       h1="How to Choose the Right Configuration for a MacBook"
       hook="The cruel truth about M-series MacBooks: RAM and storage are soldered to the chip and can never be upgraded. The config you buy is the config you live with for 5+ years. Here's how to get it right the first time."
       quickAnswer="For most people in 2026, buy 16GB RAM and 512GB SSD minimum on an M-base chip. RAM and SSD are soldered on M-series MacBooks and cannot be upgraded later, so spend up front. Only choose Pro/Max chips and 1TB+ if you edit video, compile large code, or run heavy 3D work."
-      author={{ name: "Shafiq", role: "Founder & senior Apple technician" }}
+      author={{ name: "Shafiq", role: "Lead technician" }}
       datePublished="2026-05-30"
       dateModified="2026-05-30"
       readingMinutes={11}

@@ -129,4 +129,11 @@ export const TEAM = [
   { name: "Usman",  years: 11, specialisation: "Board-level repair · M-series logic boards" },
   { name: "Ali",    years: 14, specialisation: "Data recovery · iMac and Mac mini" },
   { name: "Hamza",  years: 7,  specialisation: "iPhone, iPad" },
+  // Added 2026-08-31 after a content-truth audit found them bylined on 55+ pages but absent
+  // here — the owner confirmed both are real staff. Shafeeq is a separate person from Shafiq
+  // (also owner-confirmed), despite the similar name. Specialisations distilled from the pages
+  // each already fronts; years are the values those pages have published consistently.
+  { name: "Mohammed", years: 14, specialisation: "Mac desktop repair · Mac mini, Studio & Pro" },
+  { name: "Sayed",    years: 12, specialisation: "macOS software · installs, migration & tune-up" },
+  { name: "Shafeeq",  years: 12, specialisation: "iPad repair · boards, ports & displays" },
 ] as const;

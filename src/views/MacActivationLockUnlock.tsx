@@ -18,7 +18,7 @@ export default function MacActivationLockUnlock() {
         { name: "Mac Repair", path: "/mac-repair-dubai" },
         { name: "Activation Lock & Firmware Unlock", path: "/mac-activation-lock-unlock-dubai" },
       ]}
-      technician={{ name: "Usman", years: 12, specialisation: "Apple liaison & ownership recovery" }}
+      technician={{ name: "Usman", years: 11, specialisation: "Apple liaison & ownership recovery" }}
       serviceName="Mac Activation Lock & Firmware Unlock Help Dubai"
       intro={
         <>

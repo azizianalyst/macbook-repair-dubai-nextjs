@@ -25,7 +25,7 @@ export default function BlogAppleSiliconVsIntelRepair() {
       h1="Apple Silicon vs Intel Mac Repair - The Real Differences"
       hook="M1 through M5 vs Intel Macs. Repair is a whole different game. Here's how."
       quickAnswer="Apple Silicon Macs (M1+, 2020 onwards) are harder to repair than Intel Macs. RAM and SSD are soldered to the SoC, so logic-board faults often mean a full board swap where Intel allowed cheaper component fixes. On the upside they have fewer failure modes and run cooler. Battery, screen, keyboard and port repairs are unchanged. Message us on WhatsApp for today's exact price on your model."
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Ali", role: "Senior technician · data recovery" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={11}

@@ -43,7 +43,7 @@ export default function IMacM3RepairHub() {
         { name: "iMac Repair", path: "/imac-repair-dubai" },
         { name: "iMac M3 Repair", path: "/imac-m3-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 12, specialisation: "iMac and Mac desktop lead technician" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "iMac and Mac desktop lead technician" }}
       serviceName="iMac M3 Repair Dubai"
       intro={intro}
       whatWeFix={[

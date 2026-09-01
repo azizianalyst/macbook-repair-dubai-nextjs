@@ -295,7 +295,7 @@ export default function MacBookDataRecovery() {
           {/* Technician */}
           <section className="bg-bg-card rounded-md p-lg border border-border">
             <h2 className="text-[22px] mb-md">Lead technician on data recovery jobs</h2>
-            <TechnicianBadge tone="dark" name="Shafiq Ahmed" years={21} specialisation="Logic board & data recovery" />
+            <TechnicianBadge tone="dark" name="Shafiq Ahmed" years={15} specialisation="Logic board & data recovery" />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Shafiq personally runs every chip-off NAND recovery on the dedicated forensic rig and signs every NDA. T2 and Apple Silicon recovery work happens on his bench only.
             </p>

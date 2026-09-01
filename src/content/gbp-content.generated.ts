@@ -1109,7 +1109,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
   {
     "week": 43,
     "type": "TRUST",
-    "opening": "21 years, same workshop, same team. Shafiq has been on Apple boards since 2008, Usman since 2012. Your machine is worked on by one named technician, not passed around.",
+    "opening": "21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11. Your machine is worked on by one named technician, not passed around.",
     "url": "/about/",
     "image": "real/team/team-workshop-dubai.jpg"
   },

@@ -330,7 +330,7 @@ export default function MacBookWaterDamageRepair() {
           {/* Technician */}
           <section className="bg-bg-alt rounded-md p-lg border border-border">
             <h2 className="text-[22px] mb-md text-text">Lead technician on water damage jobs</h2>
-            <TechnicianBadge name="Shafiq Ahmed" years={21} specialisation="Water damage & logic board" tone="dark" />
+            <TechnicianBadge name="Shafiq Ahmed" years={15} specialisation="Water damage & logic board" tone="dark" />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
               Shafiq founded the workshop in 2004 and personally handles 80% of water-damage strip-downs. The 7-day soak test protocol is his - designed after 21 years of seeing delayed-failure boards come back in week 2.
             </p>

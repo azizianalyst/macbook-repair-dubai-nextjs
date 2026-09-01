@@ -24,7 +24,7 @@ export default function BlogMacBookBackToSchool() {
       h1="MacBook Back to School Dubai 2026"
       hook="September school year. Here's the right MacBook per grade and budget."
       quickAnswer={`Primary school: a refurbished iPad (10th gen) is better value than any MacBook. Secondary school: MacBook Air M3 13" (8GB/256GB) is the sweet spot. University general use: MacBook Air M4 13" or 15" (16GB base). University engineering, design, video: MacBook Pro 14" M4 (24GB / 512GB). Always choose 16GB+ RAM if budget allows - RAM is non-upgradeable. AppleCare+ for Schools is recommended.`}
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Ali", role: "Senior technician · data recovery" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={11}

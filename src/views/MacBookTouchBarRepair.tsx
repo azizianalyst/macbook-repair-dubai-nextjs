@@ -18,7 +18,7 @@ export default function MacBookTouchBarRepair() {
         { name: "MacBook Repair",  path: "/" },
         { name: "Touch Bar Repair", path: "/macbook-touch-bar-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 21, specialisation: "MacBook board-level & Touch Bar repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook board-level & Touch Bar repair" }}
       serviceName="MacBook Touch Bar Repair Dubai"
       intro={
         <>

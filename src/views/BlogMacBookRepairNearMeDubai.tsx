@@ -24,7 +24,7 @@ export default function BlogMacBookRepairNearMeDubai() {
       h1="MacBook Repair Near Me in Dubai - Workshop Location & Service Map"
       hook="Workshop in Concord Tower, Dubai Media City. Free pickup across all of Dubai. Here's the coverage map."
       quickAnswer="Our workshop is at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, minutes from Marina, JLT, Tecom, and Barsha. We offer free pickup and delivery anywhere in Dubai, with Sharjah and Abu Dhabi covered via paid logistics. WhatsApp +971 55 741 3706 to book; same-day service on most repairs."
-      author={{ name: "Ali", role: "Founder" }}
+      author={{ name: "Ali", role: "Senior technician · data recovery" }}
       datePublished="2026-04-29"
       dateModified="2026-04-29"
       readingMinutes={8}
