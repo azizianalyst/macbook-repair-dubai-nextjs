@@ -9,6 +9,9 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -186,6 +189,20 @@ export default function IPadRepairHub() {
             <span>·</span><span>Same-day delivery</span>
           </p>
         </Hero>
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Shafeeq, iPad repair specialist"
+          years={12}
+          items={[
+            "Every iPad family is covered - iPad, Air, mini and Pro, from the 2018 generations through the current M-series.",
+            "Screens and batteries are same-day on most models; board-level work runs 2-5 days.",
+            "iPad glass and LCD are bonded on modern models, so a crack means a full front assembly - we fit it laminated, not glued by hand.",
+            "Charging-port faults are usually board-level on iPads and are repaired at component level rather than by board swap.",
+            "Diagnosis is free with a written quote before any work, and a warranty of up to 12 months.",
+            "Free pickup and delivery across Dubai mainland from Concord Tower, Media City.",
+          ]}
+        />
 
         {/* ── USP STRIP ── */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
@@ -420,6 +437,13 @@ export default function IPadRepairHub() {
         </section>
 
       </div>
+      
+        {/* On-page capture, the standard's form with the shared repair preset. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="ipad-lead">
+          <h2 id="ipad-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iPad repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/ipad-repair-dubai" defaultDeviceType="iPad" />
+        </section>
+
       <RelatedArticles path="/ipad-repair-dubai" />
     </PageShell>
   );

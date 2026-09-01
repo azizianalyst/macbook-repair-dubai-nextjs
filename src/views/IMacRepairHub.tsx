@@ -8,6 +8,9 @@ import { Link } from "@/lib/router-compat";
 import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -164,6 +167,20 @@ export default function IMacRepairHub() {
           <span>Free pickup & delivery</span>
         </p>
       </Hero>
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Mohammed, Mac desktop specialist"
+          years={14}
+          items={[
+            "All iMac generations are repaired here - 21.5-inch and 27-inch Intel through the 24-inch M1, M3 and M4.",
+            "The 27-inch Retina screen lifts off magnetically; modern 24-inch panels are bonded - both are workshop jobs we do weekly.",
+            "Fusion Drive to SSD upgrades remain the single biggest speed fix for Intel iMacs.",
+            "Power-supply failure is the most common no-power cause on the 27-inch 2017-2020 - a board-level repair, not a chassis swap.",
+            "Diagnosis is free with a written quote first, and a warranty of up to 12 months.",
+            "Free pickup for iMacs across Dubai mainland - no need to carry a 27-inch machine to Media City.",
+          ]}
+        />
 
       <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
@@ -335,7 +352,14 @@ export default function IMacRepairHub() {
         </div>
       </section>
       </div>
-    <RelatedArticles path="/imac-repair-dubai" />
+    
+        {/* On-page capture, the standard's form with the shared repair preset. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="imac-lead">
+          <h2 id="imac-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iMac repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/imac-repair-dubai" defaultDeviceType="iMac" />
+        </section>
+
+      <RelatedArticles path="/imac-repair-dubai" />
     </PageShell>
   );
 }

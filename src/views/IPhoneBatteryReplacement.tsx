@@ -14,6 +14,14 @@ export default function IPhoneBatteryReplacement() {
       timeline="Same day"
       whatsappPrefill="Hi, iPhone battery replacement quote please. Model: "
       technician={{ name: "Usman", years: 11, specialisation: "Battery & charging systems" }}
+      takeaways={[
+        "Every iPhone from the 6 through the 17 family gets a same-day battery, most fitted in about 40 minutes.",
+        "Cells are bench-tested for capacity, peak output and short-circuit safety before they go in.",
+        "BMS pairing is done on every model that needs it, so Settings shows real battery health, not 'Unknown Part'.",
+        "Below 80% maximum capacity is Apple's own replacement threshold - random shutdowns usually start before that.",
+        "A swollen battery is urgent: stop charging and bring it in the same day.",
+        "3-month battery warranty, free diagnosis, written quote on WhatsApp first.",
+      ]}
       serviceName="iPhone Battery Replacement Dubai"
       pricingRows={[
         { model: "iPhone 6 / 6s / 7 / 8 / SE",        price: 250, timeline: "Same day" },

@@ -9,6 +9,9 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -193,6 +196,20 @@ export default function IPhoneRepairHub() {
             <span>·</span><span>Same-day service</span>
           </p>
         </Hero>
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Hamza, iPhone & iPad technician"
+          years={7}
+          items={[
+            "Every iPhone from the 6 through the current 17 family is repaired in-workshop, including the Air and Fold.",
+            "Screens and batteries are same-day; most are done in under an hour.",
+            "Genuine and OEM-grade parts are both offered, and we tell you which your repair uses before we start.",
+            "Face ID and Touch ID faults are diagnosed honestly - we say when Apple pairing limits what any independent can do.",
+            "Diagnosis is free with a written quote on WhatsApp before any work.",
+            "Warranty up to 12 months, and no charge if the fault cannot be fixed.",
+          ]}
+        />
 
         {/* ── USP STRIP ── */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
@@ -461,6 +478,13 @@ export default function IPhoneRepairHub() {
         </section>
 
       </div>
+      
+        {/* On-page capture, the standard's form with the shared repair preset. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="iphone-lead">
+          <h2 id="iphone-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iPhone repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/iphone-repair-dubai" defaultDeviceType="iPhone" />
+        </section>
+
       <RelatedArticles path="/iphone-repair-dubai" />
     </PageShell>
   );

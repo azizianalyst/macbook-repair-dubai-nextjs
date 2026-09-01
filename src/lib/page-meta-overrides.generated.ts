@@ -306,7 +306,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/apple-repair-dubai": {
     "title": "Apple Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "Apple Repair Dubai. Expert independent Apple repair, same-day, 3-month warranty."
+    "description": "Apple Repair Dubai. Expert independent repair for every Apple device, same-day, 3-month warranty. Free diagnosis, quote on WhatsApp."
   },
   "/apple-repair-near-me-dubai": {
     "title": "Apple Repair Near Me Dubai. Free Diagnosis, Same-Day",
@@ -514,7 +514,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-repair-dubai": {
     "title": "iMac Repair Dubai. Expert Same-Day 2026",
-    "description": "iMac Repair Dubai. Our Apple specialists fix screen, SSD, RAM, GPU & logic board issues."
+    "description": "iMac Repair Dubai. Screen, SSD, RAM, GPU & logic board by Apple specialists. Free diagnosis, written quote before any work."
   },
   "/imac-screen-repair-dubai": {
     "title": "iMac Screen Repair Dubai. Free Diagnosis, Same-Day",
@@ -670,7 +670,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-repair-dubai": {
     "title": "iPad Repair Dubai. Expert Same-Day 2026",
-    "description": "iPad Repair Dubai. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple."
+    "description": "iPad Repair Dubai. Screens, batteries, charging ports and logic boards fixed same-day. Free diagnosis, quote on WhatsApp."
   },
   "/ipad-screen-repair-dubai": {
     "title": "iPad Screen Repair Dubai. Free Diagnosis, Same-Day",
@@ -798,7 +798,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-battery-replacement-dubai": {
     "title": "iPhone Battery Replacement Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Battery Replacement Dubai. Expert iPhone repair in Dubai. 40 min screen/battery, 3-month warranty. 055 741 3706."
+    "description": "iPhone Battery Replacement Dubai. 40-minute fitting, BMS pairing, 3-month warranty. Free diagnosis, quote on WhatsApp."
   },
   "/iphone-camera-repair-dubai": {
     "title": "iPhone Camera Repair Dubai. Free Diagnosis, Same-Day",
@@ -862,7 +862,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-repair-dubai": {
     "title": "iPhone Repair Dubai. Expert Same-Day 2026",
-    "description": "iPhone Repair Dubai. Independent Apple specialists. Fast service with original Apple parts."
+    "description": "iPhone Repair Dubai. Independent Apple specialists, original-grade parts, same-day service. Free diagnosis, quote on WhatsApp."
   },
   "/iphone-repair-near-me-dubai": {
     "title": "iPhone Repair Near Me Dubai. Free Diagnosis, Same-Day",

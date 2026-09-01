@@ -22,6 +22,7 @@ import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
@@ -45,6 +46,8 @@ export type IPhoneTemplateProps = {
   whatsappPrefill: string;
   // Lead tech
   technician: { name: string; years: number; specialisation: string };
+  /** Page-specific key takeaways (5-6 real facts). Renders the standard block after QuickAnswer. */
+  takeaways?: string[];
   // Page body
   serviceName: string;        // "iPhone Screen Repair Dubai" - used in schema + pricing header
   pricingRows: PricingRow[];
@@ -120,6 +123,15 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
       </Hero>
 
       <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
+
+      {p.takeaways && (
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer={`${p.technician.name}, ${p.technician.specialisation}`}
+          years={p.technician.years}
+          items={p.takeaways}
+        />
+      )}
 
       <WarrantyBar tone="dark" warrantyDays={p.warrantyDays} />
 

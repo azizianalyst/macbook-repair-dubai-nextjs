@@ -32,7 +32,7 @@ export function TechnicianBadge({ name, years, specialisation, photo, tone = "li
       )}
       <div>
         <p className={cn("font-semibold text-[15px]", dark ? "text-text" : "text-text")}>{name}</p>
-        <p className={cn("text-[13px]", dark ? "text-text-muted" : "text-text-muted")}>{specialisation} · {years} yrs</p>
+        <p className={cn("text-[13px]", dark ? "text-text-muted" : "text-text-muted")}>{specialisation} · {years} years on Apple hardware</p>
       </div>
     </div>
   );

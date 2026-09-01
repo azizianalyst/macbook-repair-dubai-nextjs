@@ -6,6 +6,9 @@ import {
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -119,6 +122,20 @@ export default function AppleRepair() {
         </p>
       </Hero>
 
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Abdul Aziz, Founder"
+          years={21}
+          items={[
+            "One workshop repairs all nine Apple device families - MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone, iPad, Apple Watch and Apple TV.",
+            "Diagnosis is free on every device, and the exact price is confirmed in writing before any work starts.",
+            "Cross-device faults - iCloud lock-outs, migration, shared-cable charging issues - are handled in one visit instead of three shops.",
+            "Board-level repair on every family, so a single failed chip does not mean a whole-board swap.",
+            "Written warranty up to 12 months, no charge if the fault cannot be fixed.",
+            "Concord Tower, Office 45, Dubai Media City - walk in or free pickup across Dubai mainland.",
+          ]}
+        />
+
       <USPStrip tone="dark" />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -224,7 +241,14 @@ export default function AppleRepair() {
         <LocationBlock tone="dark" />
       </section>
       </div>
-    <RelatedArticles path="/apple-repair-dubai" />
+    
+        {/* On-page capture, the standard's form with the shared repair preset. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="apple-lead">
+          <h2 id="apple-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your Apple repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/apple-repair-dubai" defaultDeviceType="MacBook" />
+        </section>
+
+      <RelatedArticles path="/apple-repair-dubai" />
     </PageShell>
   );
 }

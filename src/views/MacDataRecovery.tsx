@@ -8,6 +8,9 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
@@ -169,6 +172,20 @@ export default function MacDataRecovery() {
           imageAlt="MacBook on repair bench in Dubai Media City workshop for data recovery assessment"
         />
 
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Ali, Senior technician - data recovery"
+          years={14}
+          items={[
+            "Recovery covers every Mac - MacBook, iMac, Mac mini, Studio and Pro, Apple Silicon and Intel.",
+            "The assessment is free, and no-recovery-no-charge means you pay only when your files come back.",
+            "On M-series Macs the SSD is soldered, so board repair often has to come before recovery - both happen on one bench here.",
+            "T2 and Apple Silicon encryption means recovery needs your Apple ID password - no password, no data, by design.",
+            "Stop using a failing drive immediately; every write lowers the recovery odds.",
+            "You approve a written quote and a file-list preview before paying anything.",
+          ]}
+        />
         {/* AI-quotable answer */}
         <div className="mx-auto max-w-content px-5 md:px-6 mt-[40px]">
           <div className="rounded-2xl border border-accent/30 bg-accent/[0.06] p-lg md:p-xl">
@@ -404,6 +421,11 @@ export default function MacDataRecovery() {
         </div>
 
         {/* Related Articles */}
+                <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-lead">
+          <h2 id="recovery-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start your free recovery assessment</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/mac-data-recovery-dubai" defaultDeviceType="MacBook" />
+        </section>
+
         <RelatedArticles path="/mac-data-recovery-dubai" topics={["data recovery", "mac", "ssd"]} />
 
         {/* Final CTA bar */}
