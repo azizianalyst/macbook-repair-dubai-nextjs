@@ -2,7 +2,7 @@
 **Date:** 2026-08-30 · **Audit:** [gbp-audit-2026-08-30.md](gbp-audit-2026-08-30.md)
 **Owner decisions applied:** ① Prices hidden everywhere — **no figures anywhere on GBP**. ② Azizi Technologies and MacBook Repair Dubai deliberately differentiated.
 
-**Binding constraint: completeness, not reviews.** You hold the best rating in your competitive set (5.0 vs 4.7–4.9) and lead the genuine third-party review median (232 vs 175). What is capping you is an empty Services field, empty Products, empty Q&A. Modules 2, 3 and 8 are worth more than review volume this quarter.
+**Binding constraint: completeness, not reviews.** You hold the best rating in your competitive set (5.0 vs 4.7–4.9) and lead the genuine third-party review median (232 vs 175). What is capping you is a diluted, off-strategy Services field (**CORRECTED 2026-09-01 — it is live-populated, not empty; see [gbp-audit-2026-08-30.md](gbp-audit-2026-08-30.md#binding-constraint)**), empty Products, empty Q&A. Modules 2, 3 and 8 are worth more than review volume this quarter. Module 3 is a **replace of a real, populated field** — check the `/admin/gbp` dry-run count before publishing, not a first fill of a blank one.
 
 **Publishing:** everything below is paste-ready for `/admin/gbp`, which publishes to Google directly (`business.manage`). Nothing here has been published — every item needs your click.
 

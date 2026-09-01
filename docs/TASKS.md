@@ -47,6 +47,8 @@
 
 > ✅ **Blocker cleared 2026-08-30.** `serviceItems` and `attributes` are now in `INFO_READ_MASK`, with `buildServiceItems()`, `updateServices()` and `getPrimaryCategoryId()` helpers. The existing `PATCH /api/admin/gbp/info` route publishes them — no new route needed. Descriptions are validated against Google's 300-char ceiling locally, so a bad batch fails here rather than as an opaque 400 from Google.
 
+> ⚠️ **Audit finding corrected 2026-09-01.** The original audit said "Services: EMPTY" and built the whole plan's "completeness is binding" framing on it. Live-checked in Business Profile Manager: Services is **not empty** — it's populated, diluted, off-strategy. Publishing the 103 is a **replace, not a fill**. Check the `/admin/gbp` dry-run count before publishing. Both `gbp-audit-2026-08-30.md` and `gbp-master-plan-2026-08-30.md` now carry correction notes rather than silently rewritten history.
+
 ## Module 4 · Products
 
 | | Task | Owner |
@@ -95,6 +97,7 @@
 | | Task | Owner |
 |---|---|---|
 | ☐ | Fix GBP address "Al Safouh Second" → "Al Sufouh" | 🧑 |
+| ✅ | Site-side NAP check — grepped every `.ts`/`.tsx` file for "Al Safouh": zero hits. Site already spells it "Al Sufouh" everywhere (schema, area pages, contact). Only the live GBP listing has the wrong spelling — nothing to fix in the codebase | 🤖 |
 | ☐ | Claim the LinkedIn page — a competitor owns your brand name there | 🧑 |
 | ☐ | Claim Apple Business Connect | 🧑 |
 | ☐ | Bing Places · OpenStreetMap · UAE directories | 🧑 |
