@@ -117,7 +117,7 @@ function allFiguresAreFacility(line) {
     // a bare figure does NOT exempt it — "repair costs AED 999 with free parking" stays caught.
     const before = line.slice(Math.max(0, m.index - 40), m.index);
     const after  = line.slice(m.index + m[0].length, m.index + m[0].length + 12);
-    return /parking|valet|EV charging/i.test(before) || /^\s*(?:\/|per\s*)(?:hour|day)|^\s*flat\b|^\/day/i.test(after);
+    return /parking|valet|EV charging/i.test(before) || /^[\d,]*\s*(?:\/|per\s*)(?:hour|day)|^[\d,]*\s*flat\b/i.test(after); // digits absorbed: 'AED 25/day' can match as 'AED 2'+'5/day'
   });
 }
 

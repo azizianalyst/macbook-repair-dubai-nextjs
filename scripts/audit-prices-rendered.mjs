@@ -33,7 +33,9 @@ function isAllowedFigure(text, idx, len) {
   const after  = text.slice(idx + len, idx + len + 40);
   // Facility fee: facility word before, or rate suffix directly after.
   const facBefore = /parking|valet|EV charging/i.test(text.slice(Math.max(0, idx - 40), idx));
-  const rateAfter = /^\s*(?:\/|per\s*)(?:hour|day)|^\s*flat\b|^\/day/i.test(after);
+  // PRICE_RE can match just "AED 2" of "AED 25/day", leaving "5/day" in `after` -
+  // allow the remaining digits before the rate suffix or the 25/day cap slips through.
+  const rateAfter = /^[\d,]*\s*(?:\/|per\s*)(?:hour|day)|^[\d,]*\s*flat\b/i.test(after);
   if (facBefore || rateAfter) return true;
   // Apple attribution near the figure, without a nearer ours-marker before it.
   const attribNear = ATTRIB.test(before) || ATTRIB.test(after);
