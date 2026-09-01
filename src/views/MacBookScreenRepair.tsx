@@ -562,6 +562,7 @@ export default function MacBookScreenRepair() {
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
               <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <p className="text-[14px] text-text-muted m-0">Not near Media City? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See same-hour and same-day pickup by area</Link>.</p>
             </div>
           </div>
         </section>

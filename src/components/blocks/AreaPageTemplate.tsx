@@ -245,7 +245,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               MacBook repair {a.area}
             </Link>
           ))}
-          <Link to="/macbook-repair-near-me" className="rounded-full border border-accent/40 bg-bg-card px-4 py-2 text-[14px] text-text transition-colors hover:border-accent">
+          <Link to="/macbook-repair-near-me-dubai" className="rounded-full border border-accent/40 bg-bg-card px-4 py-2 text-[14px] text-text transition-colors hover:border-accent">
             MacBook repair near me →
           </Link>
           <Link to="/macbook-repair-sharjah" className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">

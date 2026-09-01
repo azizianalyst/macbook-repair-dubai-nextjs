@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { metaForPath } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
-import View from "@/views/MacBookRepairNearMe";
+import View from "@/views/BestMacBookRepairDubai";
 
-export const metadata: Metadata = metaForPath("/macbook-repair-near-me");
+export const metadata: Metadata = metaForPath("/best-macbook-repair-dubai");
 
 export default function Page() {
   return (
     <>
-      <PageSchema path="/macbook-repair-near-me" />
+      <PageSchema path="/best-macbook-repair-dubai" />
       <View />
     </>
   );

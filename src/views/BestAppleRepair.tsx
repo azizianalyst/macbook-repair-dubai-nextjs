@@ -164,7 +164,7 @@ export default function BestAppleRepair() {
           <h2 className="text-[22px] font-bold mb-md">Best repair by device</h2>
           <div className="flex flex-wrap gap-sm">
             {[
-              { label: "Best MacBook Repair Shop Dubai", href: "/best-macbook-repair-shop-dubai" },
+              { label: "Best MacBook Repair Dubai", href: "/best-macbook-repair-dubai" },
               { label: "Best iPhone Repair Dubai", href: "/best-iphone-repair-dubai" },
               { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
               { label: "Apple Repair Near Me Dubai", href: "/apple-repair-near-me-dubai" },

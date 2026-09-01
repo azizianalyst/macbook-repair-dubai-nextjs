@@ -340,9 +340,9 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "Best iPhone Repair Dubai. Free Diagnosis, Same-Day",
     "description": "Best iPhone Repair Dubai. Best iPhone repair in Dubai. Screen battery. OLED True Tone, Face ID pres."
   },
-  "/best-macbook-repair-shop-dubai": {
-    "title": "Best MacBook Repair Shop Dubai. Free Diagnosis, Same-Day",
-    "description": "Best MacBook Repair Shop Dubai. Expert independent Apple repair, same-day, 3-month warranty."
+  "/best-macbook-repair-dubai": {
+    "title": "Best MacBook Repair Dubai. Free Diagnosis, Same-Day",
+    "description": "Best MacBook Repair Dubai. Expert independent Apple repair, same-day, 3-month warranty."
   },
   "/blog": {
     "title": "MacBook Repair Blog Dubai. Expert Guides & Tips 2026",
@@ -1364,7 +1364,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "MacBook Repair Motor City. Same-Day",
     "description": "MacBook Repair Motor City. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
   },
-  "/macbook-repair-near-me": {
+  "/macbook-repair-near-me-dubai": {
     "title": "MacBook Repair Near Me. Same-Day. Free Diagnosis, Same-Day",
     "description": "MacBook Repair Near Me. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
   },

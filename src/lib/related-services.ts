@@ -240,7 +240,7 @@ export function relatedServices({ path, limit = 3 }: { path: string; limit?: num
 const CONVERSION_THEMES: string[][] = [
   ["/sell-macbook-dubai", "/sell-faulty-macbook-dubai", "/trade-in-macbook-dubai"],
   ["/applecare-macbook-repair-dubai", "/out-of-warranty-apple-repair-dubai", "/annual-maintenance-contract-dubai", "/macbook-insurance-dubai", "/apple-repair-programs-dubai"],
-  ["/onsite-macbook-repair-dubai", "/macbook-repair-near-me"],
+  ["/onsite-macbook-repair-dubai", "/macbook-repair-near-me-dubai"],
 ];
 
 /** Sibling conversion pages for a money page — same intent group first, then other groups. */

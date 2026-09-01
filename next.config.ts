@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
       // 2026-09-01 slug hygiene: sentence-shaped question slug -> service keyword slug.
       // GSC: 3,436 impressions at position 16 for the service query this page answers.
       { source: "/can-iphone-motherboard-be-repaired", destination: "/iphone-motherboard-repair-dubai/", statusCode: 301 },
+      // 2026-09-01 keyword-gap audit, exact-match slug rule: URL now equals the target
+      // keyword (dropped the extra "shop" / added the missing "-dubai"). Substantial
+      // existing pages, not new builds - see docs/keyword-service-gap-audit-2026-08-30.md.
+      { source: "/best-macbook-repair-shop-dubai", destination: "/best-macbook-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-repair-near-me", destination: "/macbook-repair-near-me-dubai/", statusCode: 301 },
       // 2026-09-01 GSC 404 validation round two: URLs Google still crawls that the first
       // 404-fix pass missed. /team/:slug is self-inflicted - the Person schema @id uses
       // /team/<name>#person and Google crawls the path; About is where those people live.
@@ -54,7 +59,9 @@ const nextConfig: NextConfig = {
       // Cannibalization merges (2026-06 architecture audit): same service / same intent
       // on two URLs — consolidated into the stronger page.
       { source: "/macbook-thermal-paste-replacement-dubai", destination: "/macbook-overheating-fix-dubai/", statusCode: 301 },
-      { source: "/blog/macbook-repair-near-me-dubai", destination: "/macbook-repair-near-me/", statusCode: 301 },
+      // 2026-09-01: destination renamed to /macbook-repair-near-me-dubai/ - repointed
+      // directly rather than left to chain through the new redirect above.
+      { source: "/blog/macbook-repair-near-me-dubai", destination: "/macbook-repair-near-me-dubai/", statusCode: 301 },
       // Migration casualties found via the GSC top-pages audit (2026-06): legacy WordPress
       // Q&A / listing URLs Google still indexes that had no page AND no redirect, so the
       // trailing-slash normalisation dead-ended them at 404. The low-traffic ones (1–22

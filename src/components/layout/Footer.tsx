@@ -158,7 +158,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
             colKey="locations"
             heading={locationsCol?.heading ?? "Service areas"}
             links={LOCATION_LINKS}
-            viewAll={{ label: "All areas & UAE", href: "/macbook-repair-near-me" }}
+            viewAll={{ label: "All areas & UAE", href: "/macbook-repair-near-me-dubai" }}
           />
         </div>
       </div>

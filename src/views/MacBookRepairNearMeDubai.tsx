@@ -130,7 +130,7 @@ const FAQS = [
 
 const REVIEW_INDEXES = [0, 5, 8, 10, 13, 21];
 
-export default function MacBookRepairNearMe() {
+export default function MacBookRepairNearMeDubai() {
   const reviews = REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo(
@@ -138,7 +138,7 @@ export default function MacBookRepairNearMe() {
       title: "MacBook Repair Near Me Dubai - Free Pickup Across the City",
       description:
         "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706.",
-      path: "/macbook-repair-near-me",
+      path: "/macbook-repair-near-me-dubai",
     },
     [
       localBusiness(),
@@ -146,7 +146,7 @@ export default function MacBookRepairNearMe() {
       webPage({
         title: "MacBook Repair Near Me Dubai",
         description: "Find a MacBook repair specialist near your Dubai address. Free pickup and delivery across all major areas.",
-        path: "/macbook-repair-near-me",
+        path: "/macbook-repair-near-me-dubai",
         dateModified: "2026-04-01",
         datePublished: "2024-06-01",
       }),
@@ -154,7 +154,7 @@ export default function MacBookRepairNearMe() {
         name: "MacBook Repair Near Me Dubai",
         timeline: "Same day",
         warranty: "P1Y",
-        url: "/macbook-repair-near-me",
+        url: "/macbook-repair-near-me-dubai",
         description: "MacBook screen, battery, keyboard, and water damage repair with free door-to-door pickup across Dubai Mainland.",
       }),
     ],
@@ -164,8 +164,8 @@ export default function MacBookRepairNearMe() {
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
-        image={topicForPath("/macbook-repair-near-me")?.src}
-        imageAlt={topicForPath("/macbook-repair-near-me")?.alt}
+        image={topicForPath("/macbook-repair-near-me-dubai")?.src}
+        imageAlt={topicForPath("/macbook-repair-near-me-dubai")?.alt}
         variant="service"
         tone="dark"
         eyebrow="Free pickup across Dubai"
@@ -184,7 +184,7 @@ export default function MacBookRepairNearMe() {
       <USPStrip tone="dark" />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "MacBook Repair Near Me", path: "/macbook-repair-near-me" }]} />
+        <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "MacBook Repair Near Me", path: "/macbook-repair-near-me-dubai" }]} />
       </section>
 
       {/* Find us */}
@@ -199,7 +199,7 @@ export default function MacBookRepairNearMe() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Areas we cover across Dubai</h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          Free door-to-door pickup and same-day delivery from every Dubai neighbourhood. Tap your area for local pickup windows and drive times.
+          Free door-to-door pickup and same-day delivery from every Dubai neighbourhood. Tap your area for local pickup windows and drive times. Cracked screen specifically? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See screen repair pickup times by area</Link>.
         </p>
         <div className="flex flex-wrap gap-2">
           {[
@@ -350,7 +350,7 @@ export default function MacBookRepairNearMe() {
         </div>
       </section>
       </div>
-    <RelatedArticles path="/macbook-repair-near-me" />
+    <RelatedArticles path="/macbook-repair-near-me-dubai" />
     </PageShell>
   );
 }

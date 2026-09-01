@@ -57,14 +57,14 @@ const FAQS = [
 
 const FEATURED_REVIEW_INDEXES = [0, 2, 5, 10, 17, 24];
 
-export default function BestMacBookRepairShop() {
+export default function BestMacBookRepairDubai() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best MacBook Repair Shop Dubai 2026, 5★ Rated | Since 2004",
+    title: "Best MacBook Repair Dubai 2026, 5★ Rated | Since 2004",
     description:
       "Best MacBook repair shop in Dubai. 232+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. WhatsApp 055 741 3706 for a quote.",
-    path: "/best-macbook-repair-shop-dubai",
+    path: "/best-macbook-repair-dubai",
   });
 
   return (
@@ -91,7 +91,7 @@ export default function BestMacBookRepairShop() {
         <USPStrip tone="dark" />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-          <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "Best MacBook Repair Shop Dubai", path: "/best-macbook-repair-shop-dubai" }]} />
+          <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "Best MacBook Repair Dubai", path: "/best-macbook-repair-dubai" }]} />
         </section>
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -219,7 +219,7 @@ export default function BestMacBookRepairShop() {
           <LocationBlock tone="dark" />
         </section>
       </div>
-      <RelatedArticles path="/best-macbook-repair-shop-dubai" />
+      <RelatedArticles path="/best-macbook-repair-dubai" />
     </PageShell>
   );
 }

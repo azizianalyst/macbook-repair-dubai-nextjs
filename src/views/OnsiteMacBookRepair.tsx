@@ -167,7 +167,7 @@ export default function OnsiteMacBookRepair() {
             <MapPin size={28} className="text-accent" aria-hidden /> Areas we collect from
           </h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> for every community we serve.
+            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me-dubai" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> for every community we serve.
           </p>
           <ul className="grid gap-sm grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 list-none p-0 m-0">
             {AREAS.map((a) => (

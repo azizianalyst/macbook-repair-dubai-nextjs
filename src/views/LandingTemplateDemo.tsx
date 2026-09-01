@@ -150,7 +150,7 @@ export default function LandingTemplateDemo() {
               { label: "Business Bay", href: "/macbook-repair-business-bay" },
               { label: "JBR", href: "/macbook-repair-jbr" },
               { label: "DIFC", href: "/macbook-repair-difc" },
-              { label: "MacBook repair near me", href: "/macbook-repair-near-me" },
+              { label: "MacBook repair near me", href: "/macbook-repair-near-me-dubai" },
             ],
           },
           {

@@ -236,7 +236,7 @@ export default function BestIPhoneRepair() {
             {[
               { label: "iPhone Repair Dubai", href: "/iphone-repair-dubai" },
               { label: "iPhone Repair Near Me Dubai", href: "/iphone-repair-near-me-dubai" },
-              { label: "Best MacBook Repair Shop Dubai", href: "/best-macbook-repair-shop-dubai" },
+              { label: "Best MacBook Repair Dubai", href: "/best-macbook-repair-dubai" },
               { label: "Best Apple Repair Dubai", href: "/best-apple-repair-dubai" },
               { label: "MacBook Repair Dubai", href: "/" },
               { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },

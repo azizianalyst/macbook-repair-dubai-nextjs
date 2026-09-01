@@ -44,8 +44,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Best iPhone Repair Dubai 2026. OLED True Tone, 5★ | Since 2004",
     "description": "Best iPhone repair in Dubai. OLED True Tone screens, Face ID preserved, written warranty up to 12 months. 232+ reviews. WhatsApp us for your exact price. Since 2004."
   },
-  "/best-macbook-repair-shop-dubai": {
-    "title": "Best MacBook Repair Shop Dubai 2026, 5★ Rated | Since 2004",
+  "/best-macbook-repair-dubai": {
+    "title": "Best MacBook Repair Dubai 2026, 5★ Rated | Since 2004",
     "description": "Best MacBook repair shop in Dubai. 232+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. WhatsApp 055 741 3706 for a quote."
   },
   "/blog/apple-intelligence-on-old-iphones": {
@@ -1703,7 +1703,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
     "description": "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, free pickup, warranty up to 12 months."
   },
-  "/macbook-repair-near-me": {
+  "/macbook-repair-near-me-dubai": {
     "title": "MacBook Repair Near Me Dubai - Free Pickup Across the City",
     "description": "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706."
   },
@@ -1714,6 +1714,10 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   "/macbook-screen-repair-dubai": {
     "title": "MacBook Screen Repair Dubai - Same-Day Air & Pro",
     "description": "MacBook screen repair Dubai. Same-day Air and Pro 14\". Flexgate, cracked glass, dead pixels. Free diagnosis, 3-month warranty. Call 055 741 3706."
+  },
+  "/macbook-screen-repair-near-me-dubai": {
+    "title": "MacBook Screen Repair Near Me Dubai - Free Pickup, Same-Day | 055 741 3706",
+    "description": "MacBook screen repair near me in Dubai. Free door-to-door pickup, same-day on most models. Concord Tower, Media City. Message us on WhatsApp for a price."
   },
   "/macbook-speaker-repair-dubai": {
     "title": "MacBook Speaker Repair Dubai - | 1 Day | All Models",

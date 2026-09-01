@@ -1032,7 +1032,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <p className="mt-lg text-[14px] text-text-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
+          <p className="mt-lg text-[14px] text-text-muted m-0">Outside these areas? <Link to="/macbook-repair-near-me-dubai" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> - we cover 60+ Dubai communities.</p>
         </section>
 
         {/* ── 19 · Near me ───────────────────────────────────────── */}

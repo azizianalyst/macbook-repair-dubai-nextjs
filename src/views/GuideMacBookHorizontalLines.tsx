@@ -104,7 +104,7 @@ export default function GuideMacBookHorizontalLines() {
           <p>
             We diagnose first at no charge and give you a fixed price before any work starts.
             Bring it to Concord Tower, Dubai Media City, or use our{" "}
-            <Link to="/macbook-repair-near-me" className="text-accent font-semibold hover:underline">
+            <Link to="/macbook-repair-near-me-dubai" className="text-accent font-semibold hover:underline">
               free pickup service
             </Link>. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">

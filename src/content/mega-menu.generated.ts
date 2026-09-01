@@ -102,7 +102,7 @@ export const MEGA_MENU: MegaPanel[] = [
   {
     "key": "locations",
     "label": "Locations",
-    "href": "/macbook-repair-near-me",
+    "href": "/macbook-repair-near-me-dubai",
     "viewAll": "All areas & UAE",
     "links": [
       {
