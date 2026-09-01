@@ -98,7 +98,8 @@
 | ☐ | Claim the LinkedIn page — a competitor owns your brand name there | 🧑 |
 | ☐ | Claim Apple Business Connect | 🧑 |
 | ☐ | Bing Places · OpenStreetMap · UAE directories | 🧑 |
-| ☐ | Execute the Azizi differentiation (move the 3 categories) | 🧑 |
+| ☐ | Execute the Azizi differentiation (move the 5 removed categories, as relevant) | 🧑 |
+| ✅ | "Computer support and services" collision check — Azizi's primary is "IT support and services" (different string), no exact match, safe to add. Pre-existing overlap on 4 other categories flagged, not a blocker | 🤖 |
 
 ## Module 10 · Website ↔ GBP alignment
 

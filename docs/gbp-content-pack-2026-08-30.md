@@ -33,7 +33,9 @@ Of the 8 secondary, 3 are already correct and stay: Computer service · Data rec
 **Add as secondary (4):**
 Mobile phone repair shop · Phone repair service · Electronics repair shop · Computer support and services
 
-**⚠️ Caution on "Computer support and services":** Azizi Technologies, at the same Concord Tower Office 45 address, may also carry this category. Same-address + same-category is a duplicate-listing risk signal. Verify Azizi Technologies' category list in Business Profile Manager before adding — if it already has this category, skip it here rather than risk a collision.
+**✅ "Computer support and services" caution resolved (2026-09-01):** checked Azizi Technologies' live category list in Business Profile Manager. Its primary is "IT support and services" — a different string — and its secondaries are Computer service · Second-hand Computer Shop · Data recovery service · Screen repair service · Computer repair service · Computer networking service · Internet marketing service. No exact match on "Computer support and services", so it's safe to add here.
+
+**FYI, not a blocker:** Azizi Technologies (same Concord Tower Office 45 address) already shares 4 categories with this profile — Computer service, Data recovery service, Screen repair service, and Computer repair service (the last is this profile's *primary*, Azizi's *secondary*). Pre-existing, not introduced by this plan. Flagged for Module 9 (NAP & entity consolidation) if it's ever worth differentiating further.
 
 **Remove (5):** Computer Shop · Computer consultant · Second-hand Computer Shop · Computer Software Shop · Computer Accessories Shop
 → these dilute relevance; Computer Shop / Second-hand Computer Shop / Computer Accessories Shop can move to the Azizi Technologies listing if genuinely relevant there.
