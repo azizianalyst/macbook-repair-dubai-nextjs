@@ -56,7 +56,7 @@ export default function MacBookProM1ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M1 screen repair cost in Dubai?",
-          a: "MacBook Pro M1 screen repair at MacBook Repair Dubai costs AED 1,000 for the 14-inch and AED 1,200 for the 16-inch. This is the all-in price: panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively, so our price is significantly lower.",
+          a: "MacBook Pro M1 screen repair at MacBook Repair Dubai is quoted per size in writing - all-in: panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively; our quote comes in significantly lower.",
         },
         {
           q: "How long does MacBook Pro M1 screen repair take in Dubai?",

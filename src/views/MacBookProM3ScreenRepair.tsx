@@ -18,7 +18,7 @@ export default function MacBookProM3ScreenRepair() {
       heroAnswer="MacBook Pro M3 screen repair in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different panels. The M3 Pro and M3 Max (late 2023) introduced the Space Black colour option alongside Silver, with a new anodisation process on the chassis. Screen replacement uses M3-specific assemblies. Same-day diagnosis; repair same-day to 1-2 days."
       chipUniquePoints={[
         "The M3 MacBook Pro introduced Space Black, a new chassis colour with a proprietary anodisation process that Apple developed to resist fingerprints better than previous dark finishes. The display assembly bezel on Space Black models matches this finish. We use M3 Space Black-specific display assemblies to ensure the bezel colour is preserved after repair.",
-        "The M3 chip introduced hardware-accelerated ray tracing and mesh shading directly in silicon, a major GPU architecture upgrade over M2. This makes the M3 Pro and M3 Max significantly more capable for 3D rendering, game development, and GPU-intensive workflows. A screen repair at AED 1,000-1,200 preserves a machine with years of GPU headroom still ahead.",
+        "The M3 chip introduced hardware-accelerated ray tracing and mesh shading directly in silicon, a major GPU architecture upgrade over M2. This makes the M3 Pro and M3 Max significantly more capable for 3D rendering, game development, and GPU-intensive workflows. A screen repair preserves a machine with years of GPU headroom still ahead.",
         "The M3 is built on Apple's 3nm process, delivering higher efficiency per watt than the 5nm M2. The M3 MacBook Pro achieves up to 22 hours battery life. The logic board and battery are unaffected by a screen replacement. Your machine returns with full performance and battery capacity intact.",
         "The M3 Max supports up to three external displays simultaneously via Thunderbolt 4, making it a popular choice for multi-monitor setups in Dubai's financial, media, and architecture sectors. Screen damage on an M3 Max that is still used primarily with external monitors is still worth repairing to restore the built-in display for mobile use.",
         "M3 display cable improvements over M2 reduce the risk of flex fatigue over time. However, the cable assembly is still part of the display unit and is replaced with the panel when screen damage occurs. We do not replace the cable separately from the panel on M3 models.",
@@ -56,7 +56,7 @@ export default function MacBookProM3ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M3 screen repair cost in Dubai?",
-          a: "MacBook Pro M3 screen repair at MacBook Repair Dubai costs AED 1,000 for the 14-inch and AED 1,200 for the 16-inch. This includes the panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively.",
+          a: "MacBook Pro M3 screen repair at MacBook Repair Dubai is quoted per size in writing. The quote includes the panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively.",
         },
         {
           q: "How long does MacBook Pro M3 screen repair take in Dubai?",
@@ -68,7 +68,7 @@ export default function MacBookProM3ScreenRepair() {
         },
         {
           q: "Is it worth repairing a MacBook Pro M3 screen in Dubai?",
-          a: "Yes. The M3 Pro and M3 Max are among the most powerful laptop chips available. Against a new MacBook Pro, which Apple lists from AED 9,500 or more, a screen repair, repair makes strong financial sense. The M3 chip will remain a high-performance option for many years.",
+          a: "Yes. The M3 Pro and M3 Max are among the most powerful laptop chips available. Against a new MacBook Pro, which Apple lists from AED 9,500 or more, a screen repair makes strong financial sense. The M3 chip will remain a high-performance option for many years.",
         },
         {
           q: "Can I get a free diagnosis for my M3 MacBook Pro screen issue in Dubai?",

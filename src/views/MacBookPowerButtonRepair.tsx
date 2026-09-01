@@ -23,7 +23,7 @@ export default function MacBookPowerButtonRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. AED 250 covers parts, labour and a warranty of up to 12 months.
+            <strong>MacBook power button repair in Dubai</strong> covers a button that does nothing when pressed, a stuck or mushy button, and Touch ID that no longer reads your fingerprint. On modern MacBooks the power button doubles as the Touch ID sensor and ties into the logic board's secure enclave, so a fault can leave you unable to power on or unlock. We diagnose whether it's the button assembly, the flex cable, or a board-level fault before quoting. The quoted price covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged power circuits and board-level Touch ID faults.
@@ -51,7 +51,7 @@ export default function MacBookPowerButtonRepair() {
         "Free re-fit if the fault returns inside 12 months.",
       ]}
       faqs={[
-        { q: "How much does MacBook power button repair cost in Dubai?", a: "Power button / Touch ID assembly replacement is one flat quoted job. If the fault is board-level (secure enclave or power circuitry), micro-soldering repair starts at AED 450. You get an exact quote after a free diagnosis." },
+        { q: "How much does MacBook power button repair cost in Dubai?", a: "Power button / Touch ID assembly replacement is one flat quoted job. If the fault is board-level (secure enclave or power circuitry), micro-soldering costs more and is quoted the same way. You get an exact quote after a free diagnosis." },
         { q: "Can you restore Touch ID, or just the power button?", a: "Both, in most cases. On many MacBooks the power button and Touch ID are one assembly. Note Touch ID is cryptographically paired to the logic board - on some models the fingerprint sensor can only be re-paired with original parts. We'll tell you exactly what's possible for your model first." },
         { q: "My MacBook still turns on with the lid - do I need this repair?", a: "If the button is dead, opening the lid or connecting power may still boot the Mac, but you lose reliable power control, sleep/wake and Touch ID. We recommend fixing it before you get locked out." },
         { q: "How long does it take?", a: "Most assembly replacements are same day. Board-level Touch ID or power-circuit repairs typically take 1-2 days depending on parts." },

@@ -9,7 +9,7 @@ export default function MacBookTrackpadRepair() {
       path="/macbook-trackpad-repair-dubai"
       eyebrow="MacBook trackpad repair"
       h1="MacBook Trackpad Repair Dubai"
-      subtitle="Click stopped working, cursor jumping, trackpad lifting from the body. Often a swollen battery underneath - we always check both. AED 350, 1 day."
+      subtitle="Click stopped working, cursor jumping, trackpad lifting from the body. Often a swollen battery underneath - we always check both. One-day turnaround, written quote first."
       startingPrice={350}
       timeline="1 day"
       whatsappPrefill="Hi, my MacBook trackpad isn't working - model:"
@@ -63,7 +63,7 @@ export default function MacBookTrackpadRepair() {
       reviewNames={["Saeed Alam", "Polycarp", "Mariia Chymyrysova"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",              description: "Parent hub - all MacBook services." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first. From AED 450." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first." },
         { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",       description: "Sister input fault. Same-day on most models." },
       ]}
       blogLink={{ label: "How a swollen MacBook battery breaks your trackpad", href: "/blog/macbook-battery-replacement-cost-2026" }}

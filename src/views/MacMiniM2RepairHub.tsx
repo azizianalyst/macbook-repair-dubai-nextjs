@@ -10,7 +10,7 @@ export default function MacMiniM2RepairHub() {
       path="/mac-mini-m2-repair-dubai"
       eyebrow="Apple M2 / M2 Pro · 2023 · Thunderbolt 4 (HDMI 2.1 on M2 Pro)"
       h1="Mac mini M2 Repair Dubai - M2 and M2 Pro 2023"
-      subtitle="The M2 Mac mini (2023) added Thunderbolt 4 on both models, with HDMI 2.1 and two extra Thunderbolt ports on the M2 Pro. Known issues: HDMI 2.1 audio dropout bug on the M2 Pro (firmware), Thunderbolt bandwidth drops, fan noise. Logic board repair from AED 1,040."
+      subtitle="The M2 Mac mini (2023) added Thunderbolt 4 on both models, with HDMI 2.1 and two extra Thunderbolt ports on the M2 Pro. Known issues: HDMI 2.1 audio dropout bug on the M2 Pro (firmware), Thunderbolt bandwidth drops, fan noise. Logic board repair quoted after diagnosis."
       startingPrice={200}
       timeline="Same day (diagnosis + thermal) · 3-5 days (logic board)"
       whatsappPrefill="Hi, I need Mac mini M2 (2023) repair. Issue:"

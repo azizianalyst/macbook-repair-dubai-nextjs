@@ -157,28 +157,30 @@ export default function GbpPlaybook() {
       </div>
 
       {/* REMAINING PLAN */}
-      <div className="mt-4">
-        <Card title={`Weeks ${GBP_POSTS.length + 1}–${GBP_POST_BRIEFS.length} — briefs, bodies not written yet`}>
-          <p className="m-0 mb-2 text-[12.5px] text-text-muted">
-            Openings and matched images only. Week 14 breaks rotation for UAE National Day (2 December). Weeks 16, 20
-            and 40 carry Ramadan and Eid dates, which shift yearly — confirm before scheduling.
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-[12px]">
-              <tbody>
-                {laterBriefs.map((b) => (
-                  <tr key={b.week} className="border-b border-border/60 last:border-0 align-top">
-                    <td className="py-1.5 pr-2 font-semibold text-text-faint">W{b.week}</td>
-                    <td className="py-1.5 pr-2"><span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] text-accent">{b.type}</span></td>
-                    <td className="py-1.5 pr-2 text-text-muted">{b.opening}</td>
-                    <td className="py-1.5 text-text-faint whitespace-nowrap">{b.url}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </Card>
-      </div>
+      {laterBriefs.length > 0 && (
+        <div className="mt-4">
+          <Card title={`Weeks ${GBP_POSTS.length + 1}–${GBP_POST_BRIEFS.length} — briefs, bodies not written yet`}>
+            <p className="m-0 mb-2 text-[12.5px] text-text-muted">
+              Openings and matched images only. Week 14 breaks rotation for UAE National Day (2 December). Weeks 24, 28
+              and 36 carry Ramadan and Eid dates, which shift yearly — confirm before scheduling.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[12px]">
+                <tbody>
+                  {laterBriefs.map((b) => (
+                    <tr key={b.week} className="border-b border-border/60 last:border-0 align-top">
+                      <td className="py-1.5 pr-2 font-semibold text-text-faint">W{b.week}</td>
+                      <td className="py-1.5 pr-2"><span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] text-accent">{b.type}</span></td>
+                      <td className="py-1.5 pr-2 text-text-muted">{b.opening}</td>
+                      <td className="py-1.5 text-text-faint whitespace-nowrap">{b.url}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+        </div>
+      )}
 
       {/* ── HISTORY ─────────────────────────────────────────────────────────── */}
       <div className="mt-8 mb-3 flex items-center gap-2 border-t border-border pt-5">

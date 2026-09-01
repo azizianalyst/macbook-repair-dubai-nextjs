@@ -56,7 +56,7 @@ export default function MacBookProM5ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M5 OLED screen repair cost in Dubai?",
-          a: "MacBook Pro M5 screen repair at MacBook Repair Dubai costs AED 1,300 for the 14-inch and AED 1,500 for the 16-inch. This includes the OLED panel assembly, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,699 and AED 1,899 respectively.",
+          a: "MacBook Pro M5 screen repair at MacBook Repair Dubai is quoted per size in writing. The quote includes the OLED panel assembly, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,699 and AED 1,899 respectively.",
         },
         {
           q: "How long does MacBook Pro M5 screen repair take in Dubai?",

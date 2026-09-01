@@ -18,10 +18,10 @@ export default function MacBookProM4BatteryReplacement() {
       heroAnswer="MacBook Pro M4 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M4 Pro uses a 72.4 Wh cell; the M4 Max 16-inch uses a 99.6 Wh cell. The M4 is a 2024 machine and likely still under Apple warranty — check before booking. If out of warranty, MacBook Repair Dubai provides 1 to 2 day turnaround with BMS re-pair included."
       chipUniquePoints={[
         "The M4 Pro introduced Thunderbolt 5 on the MacBook Pro for the first time, replacing Thunderbolt 4. Thunderbolt 5 delivers 120 Gbps bidirectional bandwidth and supports external displays up to 8K. The battery replacement process is not affected by the port change, but the Thunderbolt 5 controller does interact with the BMS on charge cycles, which is another reason BMS re-pair is essential.",
-        "The M4 Max 16-inch offers up to a 32-core GPU and up to 128 GB unified memory. This is a workstation-class laptop that commands AED 10,000 to AED 18,000 new. A battery replacement at AED 650 to extend its life by 3 to 5 years is an obvious investment.",
+        "The M4 Max 16-inch offers up to a 32-core GPU and up to 128 GB unified memory. This is a workstation-class laptop that costs many times a battery job to replace new. A battery replacement at aextend its life by 3 to 5 years is an obvious investment.",
         "The M4 MacBook Pro launched in late 2024. Many Dubai buyers purchased in November or December 2024, which means these machines are less than 1 year old. AppleCare+ and the standard 1-year Apple warranty likely still cover manufacturing defects including premature battery degradation. Check your coverage before booking.",
         "Replacement parts for the M4 MacBook Pro are newer in the supply chain. MacBook Repair Dubai stocks M4 Pro cells and can complete the 14-inch in 1 to 2 days. The 16-inch M4 Max may require a parts order on rare occasions. Contact us to confirm stock before dropping off.",
-        "Apple charges AED 599 to AED 799 for M4 Pro battery replacement. MacBook Repair Dubai charges AED 550 to AED 650 with same-day to 1 to 2 day turnaround, BMS re-pair included, and a 3-month written warranty. If the machine is under warranty, Apple may be the correct first call.",
+        "Apple charges AED 599 to AED 799 for M4 Pro battery replacement. MacBook Repair Dubai quotes per model in writing, with same-day to 1 to 2 day turnaround, BMS re-pair included, and a 3-month written warranty. If the machine is under warranty, Apple may be the correct first call.",
       ]}
       prices={[
         {
@@ -56,7 +56,7 @@ export default function MacBookProM4BatteryReplacement() {
         },
         {
           title: "Manufacturing defect coverage on M4 Pro",
-          body: "If your M4 Pro battery shows Service Recommended or significant capacity loss within the first year, this may be a manufacturing defect covered under the standard Apple warranty at no charge. Document the fault in System Settings, Battery Health, and contact Apple support first. If warranty has lapsed, MacBook Repair Dubai replaces at AED 550.",
+          body: "If your M4 Pro battery shows Service Recommended or significant capacity loss within the first year, this may be a manufacturing defect covered under the standard Apple warranty at no charge. Document the fault in System Settings, Battery Health, and contact Apple support first. If warranty has lapsed, MacBook Repair Dubai replaces it with a written quote first.",
         },
       ]}
       faqs={[
@@ -74,7 +74,7 @@ export default function MacBookProM4BatteryReplacement() {
         },
         {
           q: "Is the MacBook Pro M4 worth repairing?",
-          a: "Yes. The M4 is a brand-new machine worth AED 8,000 to AED 18,000 depending on configuration. Battery replacement at AED 550 to AED 650 is a small fraction of the machine's value. The M4 chip and Thunderbolt 5 will remain capable for many years.",
+          a: "Yes. The M4 is a brand-new machine worth many times the cost of a battery job. Battery replacement is a small fraction of the machine's value. The M4 chip and Thunderbolt 5 will remain capable for many years.",
         },
         {
           q: "What is BMS re-pair and why does the M4 Pro need it?",

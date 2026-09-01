@@ -56,7 +56,7 @@ export default function MacBookProM2ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "MacBook Pro M2 screen repair at MacBook Repair Dubai costs AED 1,000 for the 14-inch and AED 1,200 for the 16-inch, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively.",
+          a: "MacBook Pro M2 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively.",
         },
         {
           q: "How long does MacBook Pro M2 screen repair take in Dubai?",
@@ -68,7 +68,7 @@ export default function MacBookProM2ScreenRepair() {
         },
         {
           q: "Is it worth repairing a MacBook Pro M2 screen in Dubai?",
-          a: "Yes. The M2 Pro and M2 Max are high-performance machines with years of usable life ahead. At AED 1,000-1,200 for a screen repair versus AED 9,000+ for a new MacBook Pro, repair is strongly cost-effective for most users.",
+          a: "Yes. The M2 Pro and M2 Max are high-performance machines with years of usable life ahead. A screen repair costs a small fraction of a new MacBook Pro, so repair is strongly cost-effective for most users.",
         },
         {
           q: "Can I use an M1 display assembly to repair an M2 MacBook Pro?",

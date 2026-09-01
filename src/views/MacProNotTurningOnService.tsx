@@ -9,7 +9,7 @@ export default function MacProNotTurningOnService() {
       path="/mac-pro-not-turning-on-dubai"
       eyebrow="Intel + M2 Ultra · PSU and power board · same-day diagnosis"
       h1="Mac Pro Not Turning On Dubai? Tower and Rack Fix"
-      subtitle="Mac Pro not turning on in Dubai? Intel models have a modular, user-serviceable PSU (one of the only Macs where this is true). M2 Ultra power delivery is on the main board. Free diagnosis. From AED 700."
+      subtitle="Mac Pro not turning on in Dubai? Intel models have a modular, user-serviceable PSU (one of the only Macs where this is true). M2 Ultra power delivery is on the main board. Free diagnosis, written quote first."
       startingPrice={700}
       timeline="Same day (diagnosis) · 3-7 days (PSU or board)"
       whatsappPrefill="Hi, my Mac Pro won't turn on. Model (Intel or M2 Ultra) and year:"
@@ -29,7 +29,7 @@ export default function MacProNotTurningOnService() {
             M2 Ultra Mac Pro: power delivery is handled on the main logic board. Board-level component repair is possible but more involved.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            Free diagnosis. Board-level power-fault repair starts at AED 700; full PSU replacement (Intel) is from AED 1,040; M2 Ultra board-level power repair from AED 1,200. The AED 700 floor covers board-level power-fault work where no PSU swap is needed.
+            Free diagnosis. Board-level power-fault repair, full PSU replacement (Intel) and M2 Ultra board-level power work are each quoted in writing after diagnosis. The quoted price covers board-level power-fault work where no PSU swap is needed.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Before anything else: check the power cable, surge protector, and wall outlet. Mac Pro draws significant current and a weak outlet or surge protector can cause a no-power symptom. We check these first, at no charge.
@@ -75,7 +75,7 @@ export default function MacProNotTurningOnService() {
         },
         {
           q: "How much does Mac Pro PSU replacement cost in Dubai?",
-          a: "Intel Mac Pro PSU replacement is from AED 1,040 including labour and 6-month warranty. Board-level power repair on M2 Ultra starts at AED 1,200.",
+          a: "Intel Mac Pro PSU replacement is one flat quoted job including labour and a 6-month warranty. Board-level power repair on the M2 Ultra is quoted after diagnosis.",
         },
         {
           q: "Mac Pro power button does nothing. Is that the PSU or the board?",

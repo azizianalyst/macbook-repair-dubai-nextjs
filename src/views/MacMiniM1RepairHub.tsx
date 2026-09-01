@@ -10,7 +10,7 @@ export default function MacMiniM1RepairHub() {
       path="/mac-mini-m1-repair-dubai"
       eyebrow="Apple M1 · 2020 · first Apple Silicon Mac mini"
       h1="Mac mini M1 Repair Dubai - 2020"
-      subtitle="The M1 Mac mini (2020, A2348) - compact, fast, silent. At 5-6 years old, common faults include Thunderbolt port failure, overheating after years of 24/7 use, and fan bearing issues. Logic board repair from AED 600."
+      subtitle="The M1 Mac mini (2020, A2348) - compact, fast, silent. At 5-6 years old, common faults include Thunderbolt port failure, overheating after years of 24/7 use, and fan bearing issues. Logic board repair quoted after diagnosis."
       startingPrice={200}
       timeline="Same day (diagnosis + thermal) · 3-5 days (logic board)"
       whatsappPrefill="Hi, I need Mac mini M1 (2020) repair. Issue:"

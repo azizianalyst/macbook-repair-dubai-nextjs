@@ -78,7 +78,7 @@ export default function MacBookProM2BatteryReplacement() {
         },
         {
           q: "Is a MacBook Pro M2 worth repairing in 2025?",
-          a: "Yes. The M2 Pro and M2 Max are still fast machines running all current macOS features. At AED 500 to AED 600 for battery replacement versus AED 8,000 to AED 14,000 for a new M4 Pro, repair is clearly cost-effective for a 2-year-old machine in otherwise good condition.",
+          a: "Yes. The M2 Pro and M2 Max are still fast machines running all current macOS features. A battery replacement costs a small fraction of a new M4 Pro, so repair is clearly cost-effective for a 2-year-old machine in otherwise good condition.",
         },
         {
           q: "How do I check my MacBook Pro M2 battery health?",

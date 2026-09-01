@@ -9,7 +9,7 @@ export default function MacProNoDisplayService() {
       path="/mac-pro-no-display-dubai"
       eyebrow="Intel MPX GPU · M2 Ultra Thunderbolt · same-day diagnosis"
       h1="Mac Pro No Display in Dubai? Black Screen Fix"
-      subtitle="Mac Pro turns on but nothing appears on screen? Intel and M2 Ultra Mac Pro have completely different causes. Intel: MPX GPU module most likely. M2 Ultra: Thunderbolt 4 port or HDMI. From AED 250."
+      subtitle="Mac Pro turns on but nothing appears on screen? Intel and M2 Ultra Mac Pro have completely different causes. Intel: MPX GPU module most likely. M2 Ultra: Thunderbolt 4 port or HDMI. Free diagnosis, written quote first."
       startingPrice={250}
       timeline="Same day (diagnosis and simple fixes) · 3-7 days (GPU module or board)"
       whatsappPrefill="Hi, my Mac Pro turns on but has no display. Model (Intel or M2 Ultra):"

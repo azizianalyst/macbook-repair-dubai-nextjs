@@ -22,7 +22,7 @@ export default function MacBookProM2Repair() {
       ]}
       faqs={[
         { q: "Which M2 MacBook Pro models do you repair?", a: "We repair all M2 variants: 13&quot; M2 (A2338), 14&quot; M2 Pro/Max (A2779), and 16&quot; M2 Pro/Max (A2780)." },
-        { q: "How much does MacBook Pro M2 screen repair cost in Dubai?", a: "M2 MacBook Pro screen replacement starts from AED 350 for the 13&quot;, AED 600 for the 14&quot;, and AED 700 for the 16&quot;." },
+        { q: "How much does MacBook Pro M2 screen repair cost in Dubai?", a: "It scales with panel size - 13&quot; lowest, then 14&quot;, with the 16&quot; costing the most. Send the model on WhatsApp for a written quote." },
         { q: "Do you offer a warranty on M2 MacBook Pro repairs?", a: "Yes. Screen and battery replacements carry a 12-month warranty. All other hardware repairs carry a 90-day warranty." },
         { q: "Can you repair a MacBook Pro M2 that won't turn on?", a: "Yes. We diagnose power rail failures, SMC faults, and logic board issues on all M2 MacBook Pro models. Free diagnosis, same-day in most cases." },
       ]}

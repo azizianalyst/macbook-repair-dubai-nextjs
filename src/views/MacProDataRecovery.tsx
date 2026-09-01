@@ -63,7 +63,7 @@ export default function MacProDataRecovery() {
       warrantyDays={0}
       warrantyBullets={[
         "Free assessment - no charge if recovery is not possible.",
-        "AED 800 starting price for successful recovery.",
+        "Written quote up front; you pay only for successful recovery.",
         "Data delivered on external drive included in price.",
       ]}
       faqs={[

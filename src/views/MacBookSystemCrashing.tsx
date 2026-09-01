@@ -52,7 +52,7 @@ export default function MacBookSystemCrashing() {
         { q: "How do I know if it's RAM or SSD causing crashes?", a: "RAM failures usually produce kernel panics with memory-related error codes (com.apple.kernel). SSD failures show up as filesystem errors or crashes only when reading large files. Our diagnostics tell you within the hour." },
         { q: "Can you fix it without losing my data?", a: "In most cases yes. We clone the drive before any work begins. If the SSD is failing we recover your data first, then replace the drive and restore." },
         { q: "My MacBook only crashes after a macOS update, is that different?", a: "Often yes, a bad kernel extension or incompatible system extension introduced by the update. We can roll back or do a clean install targeting the stable version for your hardware." },
-        { q: "How much does MacBook crash repair cost in Dubai?", a: "Diagnosis is AED 200 and is applied toward the repair. Software fixes start at AED 300. RAM replacement from AED 400. SSD replacement from AED 500. Logic board faults are quoted after diagnosis." },
+        { q: "How much does MacBook crash repair cost in Dubai?", a: "Diagnosis carries a flat fee that is applied toward the repair. Software fixes are the least involved; RAM and SSD replacement cost more; logic board faults are quoted after diagnosis. Every job gets a written quote first." },
       ]}
     />
   );

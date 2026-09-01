@@ -22,7 +22,7 @@ export default function MacBookProM5Repair() {
       ]}
       faqs={[
         { q: "Which M5 MacBook Pro models do you repair?", a: "We repair all M5 variants: 14&quot; M5 (A3434), 14&quot; M5 Pro (A3426), 14&quot; M5 Max (A3427), 16&quot; M5 Pro (A3428), and 16&quot; M5 Max (A3429)." },
-        { q: "How much does MacBook Pro M5 screen repair cost in Dubai?", a: "MacBook Pro M5 screen replacement starts from AED 650 for the 14&quot; and AED 750 for the 16&quot;. Same-day service available for most models." },
+        { q: "How much does MacBook Pro M5 screen repair cost in Dubai?", a: "It is quoted per size in writing - the 16&quot; OLED costs more than the 14&quot;. Same-day service available for most models." },
         { q: "Do you offer a warranty on M5 MacBook Pro repairs?", a: "Yes. All parts and labour carry a warranty: up to 12 months on screen and battery replacements, 90 days on other hardware repairs." },
         { q: "Can you repair M5 MacBook Pro liquid damage?", a: "Yes. Power off immediately and bring it in. Our board-level technicians clean, dry, and restore water-damaged M5 MacBook Pro units." },
       ]}

@@ -69,7 +69,7 @@ const FAQ_GROUPS = [
   {
     category: "Pricing & booking",
     items: [
-      { q: "How much does Mac repair cost in Dubai?", a: "Mac repair is priced by the fault and model, after a free diagnosis. Screen replacement starts from AED 600, battery replacement from AED 450, keyboard repair from AED 300, and water damage diagnosis from AED 200. We give you a full written quote before any work begins, no hidden charges." },
+      { q: "How much does Mac repair cost in Dubai?", a: "Mac repair is priced by the fault and model, after a free diagnosis - screens are the biggest jobs, batteries and keyboards sit below them, and water-damage work is quoted after inspection. We give you a full written quote before any work begins, no hidden charges." },
       { q: "Can I get a quote before the repair?", a: "Yes. We diagnose your Mac first (free of charge) then give you a written quote covering parts and labour. No repair starts until you approve the price. If you decline, you pay nothing." },
       { q: "Do you offer same-day repair?", a: "Yes, most common repairs (screen, battery, keyboard, charging port) are completed same day. Logic board and water damage repairs may take 24–48 hours. We confirm the timeline at diagnosis." },
       { q: "Do you offer free pickup and delivery in Dubai?", a: "Yes. We offer free pickup and return delivery across Dubai. WhatsApp us your location and we arrange collection the same day." },

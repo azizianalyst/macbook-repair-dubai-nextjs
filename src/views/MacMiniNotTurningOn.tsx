@@ -9,7 +9,7 @@ export default function MacMiniNotTurningOn() {
       path="/mac-mini-not-turning-on-dubai"
       eyebrow="All models · Intel + M1/M2/M4 · same-day diagnosis"
       h1="Mac mini Not Turning On Dubai? Dead Mac Fixed"
-      subtitle="Mac mini won't power on, no power LED, or fans spin then cut? Usually power supply (Intel), SMC firmware (M-chip), or a board fault. Free diagnosis. From AED 200."
+      subtitle="Mac mini won't power on, no power LED, or fans spin then cut? Usually power supply (Intel), SMC firmware (M-chip), or a board fault. Free diagnosis, written quote first."
       startingPrice={200}
       timeline="Same day (SMC/PSU) · 3-5 days (board)"
       whatsappPrefill="Hi, my Mac mini won't turn on. Model and year:"

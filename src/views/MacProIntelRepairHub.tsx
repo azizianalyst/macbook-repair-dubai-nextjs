@@ -10,7 +10,7 @@ export default function MacProIntelRepairHub() {
       path="/mac-pro-intel-repair-dubai"
       eyebrow="Intel Xeon W · 2019 · MPX GPU modules · PCIe expansion · tower and rack"
       h1="Mac Pro Intel Repair Dubai - 2019 Xeon W"
-      subtitle="The Intel Mac Pro 2019 is Apple's most repairable modern Mac. PCIe slots, user-replaceable RAM, MPX GPU modules that can be swapped without tools. At 5 to 7 years old: GPU module faults (most common), PSU failure, Thunderbolt 3 damage. GPU from AED 1,200."
+      subtitle="The Intel Mac Pro 2019 is Apple's most repairable modern Mac. PCIe slots, user-replaceable RAM, MPX GPU modules that can be swapped without tools. At 5 to 7 years old: GPU module faults (most common), PSU failure, Thunderbolt 3 damage. Each quoted per fault."
       startingPrice={400}
       timeline="Same day (diagnostic) · 5-10 days (MPX module sourcing)"
       whatsappPrefill="Hi, I have a Mac Pro Intel 2019 and need help with:"
@@ -30,7 +30,7 @@ export default function MacProIntelRepairHub() {
             At 5 to 7 years old, the most common faults are: AMD Radeon Pro MPX GPU module failure (display artifacts, no output), PSU failure, Thunderbolt 3 port wear, and cooling system clog from dust accumulating in the tower chassis.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            On pricing: AED 400 is the floor for thermal cleaning and minor jobs. GPU module work starts from AED 1,200 and PSU replacement from AED 1,040, since those involve parts sourcing and higher-cost components.
+            On pricing: thermal cleaning and minor jobs sit at the low end; GPU module work and PSU replacement cost more, since those involve parts sourcing and higher-cost components.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Note: tower and rack form factors share the same internals and repair options. See our dedicated <Link to="/mac-pro-intel-2019-repair-dubai">Mac Pro Intel 2019 repair page</Link> for model-specific detail.
@@ -40,7 +40,7 @@ export default function MacProIntelRepairHub() {
       whatWeFix={[
         "MPX GPU module repair or replacement",
         "Thunderbolt 3 port repair",
-        "PSU replacement (from AED 1,040)",
+        "PSU replacement (quoted per fault)",
         "RAM upgrade or faulty DIMM replacement",
         "PCIe card slot repair",
         "Thermal cleaning and paste replacement",
@@ -71,7 +71,7 @@ export default function MacProIntelRepairHub() {
       faqs={[
         {
           q: "Is the Intel Mac Pro 2019 still worth repairing in 2026?",
-          a: "For most users, yes. The 2019 Mac Pro runs 8 to 28-core Xeon W processors with up to 1.5TB of ECC RAM and full PCIe expansion. A GPU module repair at AED 1,200 to 2,000 is far cheaper than replacing the machine for video, 3D, and compute workloads.",
+          a: "For most users, yes. The 2019 Mac Pro runs 8 to 28-core Xeon W processors with up to 1.5TB of ECC RAM and full PCIe expansion. A GPU module repair is far cheaper than replacing the machine for video, 3D, and compute workloads.",
         },
         {
           q: "Can I upgrade RAM in the Mac Pro 2019?",

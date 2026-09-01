@@ -53,7 +53,7 @@ export default function MacNotTurningOn() {
       faqs={[
         { q: "Have I tried everything before bringing it in?", a: "Try a different cable and wall socket. On Mac Mini, hold the power button 10 seconds for an SMC reset. On Mac Pro, check the diagnostic LEDs through the side window. If none of that revives it, bring it in for the free diagnostic." },
         { q: "What do the Mac Pro diagnostic LEDs mean?", a: "They sit near the lower-rear of the logic board and tell you which boot stage the Mac reached. We can read them in 5 seconds and tell you whether the issue is PSU, board power, or boot ROM." },
-        { q: "How much does a Mac Mini PSU cost to replace?", a: "Usually AED 400 labor plus AED 350-600 for the PSU depending on model. Total typically AED 750-1,000." },
+        { q: "How much does a Mac Mini PSU cost to replace?", a: "A flat labour fee plus the PSU itself at market price, which varies by model. We confirm the total in a written quote before starting." },
         { q: "Could it just be the wall socket?", a: "Surprisingly often, yes - especially on multi-strip outlets where one socket has died. Try a different known-good wall outlet first. We've handed Macs back unmodified after this 5-minute check." },
         { q: "Is data safe if it's a power issue?", a: "Yes - power supply faults don't touch the SSD. Once we've fixed the power side, your data is exactly where you left it. The exception is M-series Macs where a board fault has killed the SoC: then SSD recovery becomes much harder." },
         { q: "Free pickup for Mac Pro?", a: "Yes - Mac Pro is heavy and awkward to transport. Free pickup and drop-off across Dubai mainland." },

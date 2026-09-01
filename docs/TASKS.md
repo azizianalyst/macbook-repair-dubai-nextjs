@@ -70,8 +70,9 @@
 | | Task | Owner |
 |---|---|---|
 | ✅ | 52-week calendar, 4-type rotation, every post mapped to a real repo image | 🤖 |
+| ✅ | **All 52 weeks now have full paste-ready bodies (2026-09-01)** — was 13, now 52. SEASONAL weeks re-anchored to the real 2026/2027 calendar (previous week 16/20/40 labels didn't match real dates once anchored to the actual 31 Aug 2026 start) | 🤖 |
 | ☐ | Publish weekly, no gaps | 🧑 |
-| ⚠️ | Confirm Ramadan/Eid 2027 dates before scheduling weeks 16, 20 | 🧑 |
+| ⚠️ | Confirm Ramadan (w24, ~8 Feb 2027), Eid Al Fitr (w28, ~9–10 Mar 2027), Eid Al Adha (w36, ~16–17 May 2027) before those weeks post — estimated from web-verified 2027 projections, official dates confirmed only after moon-sighting | 🧑 |
 
 ## Module 7 · Review engine
 
@@ -180,7 +181,7 @@ Then: cluster hubs → top MacBook services → top iPhone services. **Not all 2
 |---|---|---|
 | 1 | Languages, accessibility, payment methods — confirm each | Module 2 attributes |
 | 2 | Warranty wording: "90-day to 12-month" (GBP) or "up to 12 months" (site)? | Module 2, page copy |
-| 3 | Ramadan / Eid 2027 dates | Module 6 weeks 16, 20 |
+| 3 | Ramadan / Eid 2027 dates (estimated w24/w28/w36, confirm before posting) | Module 6 |
 | 4 | Extend `gbp.ts` for services, or type all 103 by hand? | Module 3 |
 | 5 | Which technician reviews which page for the bylines? | Page rebuilds |
 | 6 | Was the 83-page consolidation deliberate? | AirPods/Watch (parked) |

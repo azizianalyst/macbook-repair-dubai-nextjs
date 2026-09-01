@@ -93,7 +93,7 @@ export default function AziziTemplateDemo() {
         { name: "Screen Repair", path: PATH },
       ]}
 
-      /* 3 — HERO. No price: the old demo's hero carried "from AED…"; this one
+      /* 3 — HERO. No price: the old demo's hero carried a from-price; this one
          leads on turnaround and the free diagnosis instead. */
       hero={{
         eyebrow: "MacBook screen repair · Dubai Media City",

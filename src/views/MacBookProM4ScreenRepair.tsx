@@ -17,7 +17,7 @@ export default function MacBookProM4ScreenRepair() {
       promotionHz="120Hz ProMotion (adaptive 24-120Hz)"
       heroAnswer="MacBook Pro M4 screen repair in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different panels. The M4 Pro and M4 Max (2024) introduce Thunderbolt 5 as a major connectivity upgrade and come in Silver, Space Black, and the new Desert Titanium finish. Screen replacement uses M4-specific assemblies. As a 2024 model, parts supply is building and turnaround is 1-2 days. Free diagnosis before any repair is quoted."
       chipUniquePoints={[
-        "The M4 MacBook Pro is the first MacBook Pro with Thunderbolt 5, delivering up to 120Gbps bandwidth and support for up to 8K external displays. This connectivity upgrade makes the M4 Pro a significant step forward for video production and data transfer workflows common in Dubai's media sector. A screen repair at AED 1,100-1,300 preserves a machine built around this connectivity architecture.",
+        "The M4 MacBook Pro is the first MacBook Pro with Thunderbolt 5, delivering up to 120Gbps bandwidth and support for up to 8K external displays. This connectivity upgrade makes the M4 Pro a significant step forward for video production and data transfer workflows common in Dubai's media sector. A screen repair preserves a machine built around this connectivity architecture.",
         "The M4 Pro has a 12-core CPU, double the core count of the M3 Pro's 6 performance cores. Combined with up to 64GB unified memory, the M4 Pro handles tasks that would have required a Max chip in the previous generation. The display is the same Liquid Retina XDR panel technology, but the machine itself is a substantial performance upgrade.",
         "The M4 MacBook Pro is 1-2 years old as of mid-2026, meaning it may still be within its Apple one-year warranty or an AppleCare+ plan. Before booking a screen repair with us, check your purchase date. If you bought after November 2024, contact Apple first as screen damage from manufacturing defects (not physical impact) may be covered.",
         "Desert Titanium is a new colour introduced with the M4 MacBook Pro alongside Space Black and Silver. Like Space Black, the Desert Titanium chassis has a specific anodised finish. We use M4-specific display assemblies to ensure the bezel frame matches your machine's original finish after repair.",
@@ -56,7 +56,7 @@ export default function MacBookProM4ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M4 screen repair cost in Dubai?",
-          a: "MacBook Pro M4 screen repair at MacBook Repair Dubai costs AED 1,100 for the 14-inch and AED 1,300 for the 16-inch, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,599 and AED 1,799 respectively.",
+          a: "MacBook Pro M4 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,599 and AED 1,799 respectively.",
         },
         {
           q: "How long does MacBook Pro M4 screen repair take in Dubai?",
@@ -72,7 +72,7 @@ export default function MacBookProM4ScreenRepair() {
         },
         {
           q: "Is it worth repairing a MacBook Pro M4 screen in Dubai?",
-          a: "Yes. The M4 Pro and M4 Max are among the most powerful laptop chips available in 2025-2026. At AED 1,100-1,300 for a screen repair versus AED 10,000 or more for a new M4 MacBook Pro, repair is strongly cost-effective, particularly for a machine that is only 1-2 years old.",
+          a: "Yes. The M4 Pro and M4 Max are among the most powerful laptop chips available in 2025-2026. Set a screen repair against the cost of a new M4 MacBook Pro and repair is strongly cost-effective, particularly for a machine that is only 1-2 years old.",
         },
       ]}
       blogHref="/blog/macbook-pro-m4-screen-repair-cost-dubai"

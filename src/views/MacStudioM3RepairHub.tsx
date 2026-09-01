@@ -10,7 +10,7 @@ export default function MacStudioM3RepairHub() {
       path="/mac-studio-m3-repair-dubai"
       eyebrow="M3 Ultra · 2025 · 32-core CPU · up to 512GB"
       h1="Mac Studio M3 Ultra Repair Dubai - 2025"
-      subtitle="Mac Studio M3 Ultra (2025) is less than a year old - almost certainly under warranty. Free diagnosis. If out of warranty: logic board repair from AED 2,600, fan service from AED 400."
+      subtitle="Mac Studio M3 Ultra (2025) is less than a year old - almost certainly under warranty. Free diagnosis. If out of warranty: logic board repair and fan service are quoted in writing per fault."
       startingPrice={400}
       timeline="Same day (diagnosis) · 3-7 days (board)"
       whatsappPrefill="Hi, I need Mac Studio M3 Ultra repair. Issue:"
@@ -41,7 +41,7 @@ export default function MacStudioM3RepairHub() {
         "Fan and thermal service - rare at this age, but possible in heavy workloads",
         "Thunderbolt 5 port repair - physical damage, no device detected",
         "HDMI 2.1 port - loose connector, intermittent display output",
-        "Logic board repair - out of warranty, from AED 2,600",
+        "Logic board repair - out of warranty, quoted after diagnosis",
         "Data recovery - soldered SSD specialist extraction",
       ]}
       steps={[
@@ -60,7 +60,7 @@ export default function MacStudioM3RepairHub() {
         { q: "Is the M3 Ultra Mac Studio under warranty in 2026?", a: "Almost certainly yes, if purchased in early to mid 2025. Standard Apple warranty covers 12 months from purchase. AppleCare+ extends that to 36 months. Check your coverage in System Settings under General > About > Coverage. If covered, use the Apple warranty - do not pay for a repair that is free under warranty." },
         { q: "What can fail on a brand-new Mac Studio M3 Ultra?", a: "At under one year old, hardware faults are very rare. The most likely issues are software or firmware related - a macOS update that broke compatibility, an SMC glitch causing fan behaviour, or a display handshake issue with a connected monitor. Physical damage to ports from cables or drops can occur at any age. Genuine component failure this early is uncommon." },
         { q: "Does the M3 Ultra support Thunderbolt 5?", a: "Yes. The 2025 Mac Studio M3 Ultra supports Thunderbolt 5 (up to 120 Gb/s) - 6 rear Thunderbolt 5 ports plus 2 front. Both the M3 Ultra and M4 Max configurations shipped with Thunderbolt 5. Thunderbolt 5 is fully compatible with Thunderbolt 4, Thunderbolt 3, and USB4 devices and cables." },
-        { q: "How much does M3 Ultra Mac Studio logic board repair cost?", a: "Logic board repair for the Mac Studio M3 Ultra starts at AED 2,600 if out of warranty. The exact cost depends on the specific fault - power circuit, Thunderbolt controller, or USB hub damage carry different component costs. We give you a precise quote after a free diagnosis before any work starts." },
+        { q: "How much does M3 Ultra Mac Studio logic board repair cost?", a: "Logic board repair for the Mac Studio M3 Ultra is quoted in writing if out of warranty. The exact cost depends on the specific fault - power circuit, Thunderbolt controller, or USB hub damage carry different component costs. We give you a precise quote after a free diagnosis before any work starts." },
       ]}
       reviewNames={["Ahmad Khalid", "David Chen"]}
       related={[

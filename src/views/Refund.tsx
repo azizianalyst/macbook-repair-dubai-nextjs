@@ -74,7 +74,7 @@ export default function Refund() {
           <li><strong>Cosmetic preferences</strong> on aftermarket parts when the part type was disclosed in the WhatsApp quote.</li>
           <li><strong>Touch ID, Face ID, or True Tone</strong> features lost due to Apple's calibration lock - disclosed in writing before the repair.</li>
           <li><strong>Data loss during repair</strong> when the customer was advised to back up and chose not to.</li>
-          <li><strong>Pickup and delivery fees</strong> for Sharjah and Abu Dhabi (AED 100 each way) are non-refundable once the trip is dispatched.</li>
+          <li><strong>Pickup and delivery fees</strong> for Sharjah and Abu Dhabi (quoted at booking) are non-refundable once the trip is dispatched.</li>
         </ul>
       </LegalSection>
 

@@ -9,7 +9,7 @@ export default function MacMiniOverheatingFix() {
       path="/mac-mini-overheating-fix-dubai"
       eyebrow="All models · Intel + M-chip · same-day thermal service"
       h1="Mac mini Overheating Dubai? Fan Noise Fix"
-      subtitle="Mac mini running hot, fan spinning at full speed, or throttling under load? In Dubai's climate, dust-clogged vents and dried thermal compound (Intel models) are the most common causes. Thermal service from AED 250."
+      subtitle="Mac mini running hot, fan spinning at full speed, or throttling under load? In Dubai's climate, dust-clogged vents and dried thermal compound (Intel models) are the most common causes. Thermal service quoted per model."
       startingPrice={250}
       timeline="Same day (thermal service) · 2-3 days (fan replacement)"
       whatsappPrefill="Hi, my Mac mini is overheating or the fan is very loud. Model and year:"

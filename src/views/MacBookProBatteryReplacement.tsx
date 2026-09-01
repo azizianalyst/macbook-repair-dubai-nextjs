@@ -232,7 +232,7 @@ export default function MacBookProBatteryReplacement() {
             <SectionHead title="MacBook Pro models we replace batteries for" intro="Every MacBook Pro from the 2012 Retina through the 2026 M5 16″. Apple Silicon packs are BMS-paired to the logic board on the bench. Prices include cell, labour, calibration and the 3-month warranty." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
-              Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. Battery + trackpad swap if swelling cracked the trackpad: AED 900 combined.
+              Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. Battery + trackpad swap if swelling cracked the trackpad: quoted as one combined job.
             </p>
           </div>
         </section>

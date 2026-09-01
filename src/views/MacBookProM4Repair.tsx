@@ -21,7 +21,7 @@ export default function MacBookProM4Repair() {
       ]}
       faqs={[
         { q: "Which M4 MacBook Pro models do you repair?", a: "We repair all M4 variants: 14&quot; M4 (A3112), 14&quot; M4 Pro (A3401), 16&quot; M4 Pro (A3403), and 16&quot; M4 Max (A3186)." },
-        { q: "How much does MacBook Pro M4 screen repair cost in Dubai?", a: "M4 MacBook Pro OLED screen replacement starts from AED 700 for the 14&quot; and AED 800 for the 16&quot;. Quote given before any work starts." },
+        { q: "How much does MacBook Pro M4 screen repair cost in Dubai?", a: "It is quoted per size in writing - OLED panels cost more than earlier generations, and the 16&quot; more than the 14&quot;. Quote given before any work starts." },
         { q: "Do you offer a warranty on M4 MacBook Pro repairs?", a: "Yes. Screen and battery replacements carry a 12-month warranty. All other hardware repairs carry a 90-day warranty." },
         { q: "Can you repair the Thunderbolt 5 port on the M4 MacBook Pro?", a: "Yes. We repair USB-C and Thunderbolt 5 port faults on M4 MacBook Pro models, including no-charge and no-display issues caused by port damage." },
       ]}

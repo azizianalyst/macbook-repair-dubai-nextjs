@@ -60,7 +60,7 @@ const FAQS = [
   { q: "Should I erase my data before selling a faulty Mac?",
     a: "If the Mac still boots, sign out of your Apple Account and erase it first - see our guide on erasing a Mac before giving it away. If it's dead or water-damaged and won't start, we'll handle the data securely and walk you through removing Activation Lock so the sale completes cleanly." },
   { q: "Is it better to repair my MacBook or sell it as faulty?",
-    a: "Often a repair is the smarter move - a screen from AED 600, battery from AED 450 or data recovery from AED 400 can be far less than a new Mac and restore most of the value. We'll give you both numbers honestly: what the repair costs versus what we'd pay for it as-is, so you can choose. Start at our MacBook Repair Dubai page if you're unsure." },
+    a: "Often a repair is the smarter move - a screen, battery or data-recovery job can be far less than a new Mac and restore most of the value. We'll give you both numbers honestly: what the repair costs versus what we'd pay for it as-is, so you can choose. Start at our MacBook Repair Dubai page if you're unsure." },
 ];
 
 // Offer / Service JSON-LD for the buy/trade service (literal - distinct from repair Service helper).

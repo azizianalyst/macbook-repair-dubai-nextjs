@@ -76,7 +76,7 @@ export default function MacBookProM1BatteryReplacement() {
         },
         {
           q: "Is a MacBook Pro M1 worth repairing in 2025?",
-          a: "Yes. The M1 Pro and M1 Max remain very capable machines and continue to receive macOS updates. At AED 500 to AED 600 for battery replacement versus AED 7,000 to AED 12,000 for a new M4 Pro, repair makes strong financial sense for an otherwise healthy machine.",
+          a: "Yes. The M1 Pro and M1 Max remain very capable machines and continue to receive macOS updates. A battery replacement costs a small fraction of a new M4 Pro, so repair makes strong financial sense for an otherwise healthy machine.",
         },
         {
           q: "How do I check the cycle count on my MacBook Pro M1?",

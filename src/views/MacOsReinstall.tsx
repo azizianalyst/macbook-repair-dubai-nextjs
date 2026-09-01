@@ -23,7 +23,7 @@ export default function MacOsReinstall() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>macOS reinstall in Dubai</strong> is the cure for the things software updates and trying-too-many-tools won't fix: kernel panics, runaway processes, corrupted preferences, half-installed apps that won't uninstall, mysterious slowdowns, broken Spotlight, iCloud sync that's stuck. We do clean installs of macOS Sequoia 15, Sonoma 14, Ventura 13, or whichever is the latest your Mac supports. AED 300, same-day.
+            <strong>macOS reinstall in Dubai</strong> is the cure for the things software updates and trying-too-many-tools won't fix: kernel panics, runaway processes, corrupted preferences, half-installed apps that won't uninstall, mysterious slowdowns, broken Spotlight, iCloud sync that's stuck. We do clean installs of macOS Sequoia 15, Sonoma 14, Ventura 13, or whichever is the latest your Mac supports. Flat quoted fee, same-day.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Two flavours: <strong>clean install with data preservation</strong> (we Time Machine your user folder, wipe, reinstall, restore your data - apps need re-installing fresh) or <strong>full clean install</strong> (everything wiped, fresh start, you reinstall apps yourself afterwards). We recommend with data preservation for most users.

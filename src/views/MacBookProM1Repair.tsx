@@ -20,7 +20,7 @@ export default function MacBookProM1Repair() {
       ]}
       faqs={[
         { q: "Which M1 MacBook Pro models do you repair?", a: "We repair all M1 variants: 13&quot; M1 (A2338), 14&quot; M1 Pro (A2442), 16&quot; M1 Pro (A2485), and 16&quot; M1 Max (A2485)." },
-        { q: "How much does MacBook Pro M1 screen repair cost in Dubai?", a: "M1 MacBook Pro screen replacement starts from AED 300 for the 13&quot;, AED 550 for the 14&quot;, and AED 650 for the 16&quot;." },
+        { q: "How much does MacBook Pro M1 screen repair cost in Dubai?", a: "It scales with panel size - 13&quot; lowest, then 14&quot;, with the 16&quot; costing the most. Send the model on WhatsApp for a written quote." },
         { q: "Do you offer a warranty on M1 MacBook Pro repairs?", a: "Yes. Screen and battery replacements carry a 12-month warranty. All other hardware repairs carry a 90-day warranty." },
         { q: "Can you repair MacBook Pro M1 Touch Bar issues?", a: "Yes. We repair and replace Touch Bar assemblies on the 13&quot; M1 MacBook Pro, including unresponsive Touch Bar and Touch ID failures." },
       ]}

@@ -9,7 +9,7 @@ export default function MacStudioOverheatingFix() {
       path="/mac-studio-overheating-fix-dubai"
       eyebrow="Mac Studio · All Models · Overheating and Fan Noise"
       h1="Mac Studio Overheating Dubai? Fan Noise Fix"
-      subtitle="Mac Studio fan running loud constantly, grinding noise, or thermal throttling during renders? Thermal service from AED 350. All M1, M2, M3, and M4 models. Same-day service in Dubai."
+      subtitle="Mac Studio fan running loud constantly, grinding noise, or thermal throttling during renders? Thermal service quoted per model. All M1, M2, M3, and M4 models. Same-day service in Dubai."
       startingPrice={350}
       timeline="Same day (thermal service) · 1-2 days (fan bearing)"
       whatsappPrefill="Hi, my Mac Studio is overheating or fan is loud. Model:"
@@ -43,7 +43,7 @@ export default function MacStudioOverheatingFix() {
       ]}
       steps={[
         { title: "Thermal diagnosis", body: "We run a sustained load test and log CPU and GPU temperatures versus fan speed. This tells us whether the fault is dust, dried thermal paste, or a failing fan bearing." },
-        { title: "Clear quote", body: "We tell you the fault, the service needed, the cost, and the timeline. Thermal paste and vent cleaning is typically AED 350. Fan bearing replacement is additional." },
+        { title: "Clear quote", body: "We tell you the fault, the service needed, the cost, and the timeline - in writing before any work. Fan bearing replacement is quoted separately from the thermal service." },
         { title: "Thermal service and stress test", body: "Full disassembly in our Dubai Media City workshop. Clean intake vent, replace thermal compound, replace fan bearing if needed. One-hour stress test at full load before collection." },
       ]}
       warrantyDays={90}

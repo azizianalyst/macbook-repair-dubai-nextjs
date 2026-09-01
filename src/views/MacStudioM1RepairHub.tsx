@@ -41,7 +41,7 @@ export default function MacStudioM1RepairHub() {
         "Fan bearing replacement - grinding or rattling at load",
         "Thermal paste replacement - overheating, thermal throttling",
         "Thunderbolt 4 port - no device detected, intermittent connection",
-        "Logic board repair - no power, kernel panics, hardware faults (from AED 1,000)",
+        "Logic board repair - no power, kernel panics, hardware faults (quoted after diagnosis)",
         "HDMI port - loose connection, no display output",
         "Full diagnostic - hardware test, memory, storage health check",
         "Data recovery - soldered SSD specialist extraction",
@@ -60,8 +60,8 @@ export default function MacStudioM1RepairHub() {
       ]}
       faqs={[
         { q: "Why does the Mac Studio M1 fan get louder over time?", a: "The fan bearing accumulates dust and wear after thousands of hours of use. Mac Studio M1 models run their single fan near-continuously under video and GPU workloads, which accelerates bearing wear. Thermal compound also dries out, causing higher chip temperatures and the fan spinning harder to compensate. A fan bearing replacement with fresh thermal paste typically restores quiet operation." },
-        { q: "Can the M1 Ultra logic board be repaired?", a: "Yes. We perform component-level repair on Mac Studio logic boards, including the M1 Ultra. This covers power faults, kernel panic loops, USB controller damage, and Thunderbolt controller failure. Board-level repair from AED 1,000 with a 90-day warranty. Full replacement boards are available if the fault is beyond component-level repair." },
-        { q: "Is the M1 Mac Studio still worth repairing in 2026?", a: "Yes, in most cases. The M1 Ultra in particular remains a very capable machine for video editing, 3D rendering, and audio production. Fan and thermal repairs cost AED 350 to 500 - a fraction of the cost of a replacement. Logic board repair starts at AED 1,000. We give you a straight cost-benefit answer before you commit." },
+        { q: "Can the M1 Ultra logic board be repaired?", a: "Yes. We perform component-level repair on Mac Studio logic boards, including the M1 Ultra. This covers power faults, kernel panic loops, USB controller damage, and Thunderbolt controller failure. Board-level repair is quoted after diagnosis, with a 90-day warranty. Full replacement boards are available if the fault is beyond component-level repair." },
+        { q: "Is the M1 Mac Studio still worth repairing in 2026?", a: "Yes, in most cases. The M1 Ultra in particular remains a very capable machine for video editing, 3D rendering, and audio production. Fan and thermal repairs cost a fraction of a replacement. Logic board repair is quoted per fault. We give you a straight cost-benefit answer before you commit." },
         { q: "How long does fan bearing replacement take?", a: "Same day in most cases. We stock Mac Studio fan assemblies in our Dubai Media City workshop. Drop off in the morning, collect the same afternoon. If the fan requires a specific bearing size we do not have in stock, we can typically source it within 1 to 2 working days." },
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Ali Hassan"]}

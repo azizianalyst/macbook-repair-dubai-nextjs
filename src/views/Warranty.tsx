@@ -70,7 +70,7 @@ export default function Warranty() {
       <LegalSection id="extended" title="4. Extended warranty">
         <ul>
           <li><strong>Battery+ option:</strong> a 3-month warranty on MacBook and iPhone batteries is included automatically - no extra fee.</li>
-          <li><strong>Logic board peace-of-mind:</strong> logic-board and liquid-damage repairs carry a 15-day warranty as standard; for an additional AED 150 on the original repair you can extend it to 6 months. Offered only on first-time board repairs.</li>
+          <li><strong>Logic board peace-of-mind:</strong> logic-board and liquid-damage repairs carry a 15-day warranty as standard; for a small flat fee on the original repair you can extend it to 6 months. Offered only on first-time board repairs.</li>
           <li>No extended warranty is sold separately after the original repair - the offer must be accepted at the time of the WhatsApp quote.</li>
         </ul>
       </LegalSection>
@@ -100,7 +100,7 @@ export default function Warranty() {
             <tr><td>MacBook battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>iPhone battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>MacBook keyboard replacement</td><td>15 days</td><td>Covers any single key failure</td></tr>
-            <tr><td>MacBook logic board repair</td><td>15 days</td><td>Extendable to 6 months for AED 150</td></tr>
+            <tr><td>MacBook logic board repair</td><td>15 days</td><td>Extendable to 6 months for a small flat fee</td></tr>
             <tr><td>Water / liquid damage recovery</td><td>15 days on repaired components only</td><td>No warranty on a future spill</td></tr>
             <tr><td>iPad screen replacement</td><td>15 days (aftermarket) to 3 months (genuine)</td><td>Covers panel and digitiser</td></tr>
             <tr><td>Data recovery</td><td>15 days on the repair work</td><td>No guarantee on data integrity (industry standard)</td></tr>

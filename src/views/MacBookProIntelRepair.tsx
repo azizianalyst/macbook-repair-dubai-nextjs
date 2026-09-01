@@ -25,7 +25,7 @@ export default function MacBookProIntelRepair() {
       ]}
       faqs={[
         { q: "Which Intel MacBook Pro models do you repair?", a: "We repair Intel MacBook Pro 13&quot; (2017–2020, A1706–A2289), 15&quot; (2017–2019, A1707/A1990), and 16&quot; (2019, A2141)." },
-        { q: "How much does Intel MacBook Pro screen repair cost in Dubai?", a: "Intel MacBook Pro screen replacement starts from AED 250 for the 13&quot;, AED 400 for the 15&quot;, and AED 500 for the 16&quot;." },
+        { q: "How much does Intel MacBook Pro screen repair cost in Dubai?", a: "It scales with panel size - the 13&quot; is the least expensive, the 15&quot; sits above it, and the 16&quot; costs the most. Send the model on WhatsApp for a written quote." },
         { q: "Can you fix the butterfly keyboard on Intel MacBook Pro?", a: "Yes. We repair or replace butterfly keyboard mechanisms on 2017–2019 models, including individual key replacement and full top-case swaps on 2019–2020 models." },
         { q: "Do you fix Intel MacBook Pro GPU issues?", a: "Yes. We handle AMD GPU failures on 2017–2019 15&quot; models, and T2 chip faults, touch bar failures, and power rail issues on 2019–2020 models." },
       ]}

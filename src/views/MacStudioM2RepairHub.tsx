@@ -10,7 +10,7 @@ export default function MacStudioM2RepairHub() {
       path="/mac-studio-m2-repair-dubai"
       eyebrow="M2 Max + M2 Ultra · 2023 · Thunderbolt 4 + HDMI 2.1"
       h1="Mac Studio M2 Repair Dubai - M2 Max and M2 Ultra 2023"
-      subtitle="Mac Studio M2 (2023) added Thunderbolt 4, HDMI 2.1, and a front SD card reader. At 2 to 3 years old, these added ports see the most wear. Logic board repair from AED 1,560."
+      subtitle="Mac Studio M2 (2023) added Thunderbolt 4, HDMI 2.1, and a front SD card reader. At 2 to 3 years old, these added ports see the most wear. Logic board repair quoted after diagnosis."
       startingPrice={350}
       timeline="Same day (thermal) · 3-7 days (logic board)"
       whatsappPrefill="Hi, I need Mac Studio M2 repair. Issue:"
@@ -42,7 +42,7 @@ export default function MacStudioM2RepairHub() {
         "Thunderbolt 4 port - no device detected, slow transfer speeds",
         "SD card reader - card not detected, intermittent read errors",
         "Fan bearing replacement and thermal paste service",
-        "Logic board repair - no power, hardware faults (from AED 1,560)",
+        "Logic board repair - no power, hardware faults (quoted after diagnosis)",
         "Full diagnostic - hardware test, memory, storage health check",
       ]}
       steps={[

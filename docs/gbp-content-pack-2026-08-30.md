@@ -270,6 +270,8 @@ All 24 verified: JPG, ≥720px, well under 5 MB. Upload the whole batch in week 
 
 Images are repo-relative under `public/images/`.
 
+**⚠️ This table is one-liner briefs only, superseded in full by §5A below (2026-09-01: all 52 weeks now have full bodies, not just weeks 1–13).** Ten of the SEASONAL rows here (16, 20, 24, 28, 32, 36, 40, 44, 48, 52) were written against a generic notional calendar and don't match what actually falls on those weeks once anchored to the real start date of Mon 31 Aug 2026 — e.g. row 16 says "Ramadan hours" but that week is 14 Dec 2026, nowhere near Ramadan. §5A re-anchors every SEASONAL week to a real 2026/2027 UAE date; treat the SEASONAL wording in *this* table as stale and read §5A instead. DEVICE/AREA/TRUST rows aren't calendar-dependent and are accurate as topics, just one-line vs full body.
+
 | Wk | Type | Post opening (first 100 chars carry it) | Link | Image |
 |---|---|---|---|---|
 | 1 | DEVICE | MacBook Pro won't wake, or black screen with fans running? Usually the display cable or backlight circuit — both repairable at board level. Free diagnosis, same-day on most models, written warranty. | `/macbook-screen-repair-dubai/` | `topics/blog-screen-display-dubai.jpg` |
@@ -325,20 +327,28 @@ Images are repo-relative under `public/images/`.
 | 51 | TRUST | Choosing a repair shop — refuse these: no written quote, no warranty in writing, "we'll call you with the price", and anyone who won't say whether a part is genuine. | `/about/` | `real/lab/repair-workbench-dubai.jpg` |
 | 52 | SEASONAL | New year, device health check: battery cycles, storage health, thermals and backup. Free diagnosis, no obligation. Start the year knowing where you stand. | `/macbook-full-diagnostic-dubai/` | `topics/macbook-diagnostic-dubai.jpg` |
 
-⚠️ **Weeks 16, 20, 40 carry dates that move.** Ramadan and Eid shift yearly; National Day is fixed at 2 December. Confirm before scheduling.
+⚠️ **Superseded — see §5A.** This row's "Ramadan"/"Eid"/"National Day" labels at weeks 16/20/40 don't match the real calendar once anchored to 31 Aug 2026 start. §5A moves them to weeks 24 (Ramadan), 28 (Eid Al Fitr), 36 (Eid Al Adha) and 14 (National Day) instead — the weeks those events actually fall in.
 
 ---
 
-# §5A — Full post bodies, weeks 1–13
+# §5A — Full post bodies, all 52 weeks
 
-The table above holds openings only. These are the complete paste-ready bodies for the first
-quarter, re-anchored to real Mondays starting **31 August 2026**, which moves the seasonal slots
-onto their actual anchors: w4 = Apple launch season, w8 = GITEX, w12 = White Friday.
+**Updated 2026-09-01: full paste-ready bodies now exist for every week, not just the first quarter.**
+Re-anchored to real Mondays starting **31 August 2026**, spanning through **23 August 2027**. Every
+SEASONAL slot maps to the actual 2026/2027 UAE calendar event nearest its real week — Apple launch
+season (w4), GITEX (w8), White Friday (w12), UAE National Day (w14, breaking rotation — see below),
+Dubai Shopping Festival (w16), New Year (w20), Ramadan (w24), Eid Al Fitr (w28), spring heat (w32),
+Eid Al Adha (w36), new macOS release (w40), peak summer + travel (w44), back-to-school prep (w48),
+back-to-school final push (w52). Lunar-calendar weeks (24, 28, 36) carry estimated dates from
+web-verified 2027 projections, flagged **CONFIRM before scheduling** in each block — UAE authorities
+only confirm exact dates after moon-sighting, close to the month.
 
-**§5A supersedes rows 1–13 of the §5 table.** Weeks 14–52 still run from the table's briefs.
+**§5A supersedes the §5 table in full.** The table above is kept for the week/type/link/image
+skeleton only — read the post body and date notes here, not the table's SEASONAL wording.
 
-⚠️ **Week 14 (Mon 30 Nov) breaks rotation** — run a UAE National Day post for 2 December instead of
-the normal DEVICE slot.
+⚠️ **Week 14 (Mon 30 Nov) breaks rotation** — runs a UAE National Day post for 2 December instead of
+the normal AREA slot (the §5 table's rotation math said AREA for week 14; the table wasn't updated
+for this deliberate break — a documentation gap, not a scheduling error).
 
 Parsed by `scripts/gen-gbp-content.mjs`. The UTM is appended by the generator, not stored here —
 one place builds it, so it cannot drift.
@@ -523,6 +533,563 @@ We remove and replace swollen batteries safely, same day on most models, and che
 Don't charge it and don't fly with it. WhatsApp 055 741 3706 and we'll collect it free, anywhere in Dubai.
 
 #SwollenBattery #MacBookRepairDubai #AppleRepairDubai
+```
+
+### W14 · Mon 30 Nov 2026 · SEASONAL
+**Breaks rotation** — UAE National Day (2 December) takes this slot instead of the normal AREA post.
+**CTA:** Contact us → `/contact/`
+**Image:** `brand/brand-storefront.jpg`
+
+```text
+Happy UAE National Day! We're marking 55 years with adjusted opening hours around 2 December — check WhatsApp for this week's exact times before you head over.
+
+Collection and delivery keep running through the holiday period for anything urgent. Free diagnosis, written quote, no fix no fee — same as every other week of the year.
+
+Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+
+#UAENationalDay #MacBookRepairDubai #DubaiMediaCity
+```
+
+### W15 · Mon 7 Dec 2026 · TRUST
+**CTA:** Learn more → `/warranty/`
+**Image:** `topics/applecare-warranty-repair-dubai.jpg`
+
+```text
+Our warranty in plain terms, not fine print: up to 12 months, stated on the invoice, before you approve any work — never after.
+
+Different repairs carry different terms. A battery replacement isn't warrantied the same way as a board-level logic repair, and we tell you which applies before you say yes, not when something goes wrong six months later.
+
+Ask up front. We'd rather you know than assume.
+
+#WrittenWarranty #MacBookRepairDubai #AppleRepairDubai
+```
+
+### W16 · Mon 14 Dec 2026 · SEASONAL
+**Re-anchored to the real calendar** — Dubai Shopping Festival, not the original "Ramadan hours" slot (Ramadan 2027 lands on week 24 instead).
+**CTA:** Learn more → `/macbook-full-diagnostic-dubai/`
+**Image:** `topics/guide-choose-macbook-dubai.jpg`
+
+```text
+Buying a used MacBook in the Dubai Shopping Festival deals? Bring it to us before you pay, not after.
+
+We check battery cycle count and real health, whether the screen or keyboard has been swapped before, and — the one that turns a bargain into a paperweight — whether it's still locked to someone else's Apple ID. Twenty minutes, free, no obligation.
+
+Concord Tower, Office 45, Dubai Media City.
+
+#DubaiShoppingFestival #MacBookRepairDubai #DubaiDeals
+```
+
+### W17 · Mon 21 Dec 2026 · DEVICE
+**CTA:** Learn more → `/mac-mini-ssd-upgrade-dubai/`
+**Image:** `topics/mac-mini-repair-dubai.jpg`
+
+```text
+Mac mini running out of space? On compatible models we fit a larger, faster SSD and migrate everything across — your apps, files and settings land exactly where you left them.
+
+Free diagnosis first, so you know the model qualifies before you commit to anything. Most upgrades are same-day.
+
+WhatsApp 055 741 3706 with your Mac mini's year and we'll confirm compatibility before you bring it in.
+
+#MacMiniUpgrade #SSDUpgrade #MacBookRepairDubai
+```
+
+### W18 · Mon 28 Dec 2026 · AREA
+**CTA:** Learn more → `/macbook-repair-deira/`
+**Image:** `topics/macbook-repair-old-dubai.jpg`
+
+```text
+Deira and Bur Dubai: free collection, same-day diagnosis at our Dubai Media City workshop, delivered back to you when it's done.
+
+Screens, batteries, keyboards, water damage and board-level faults — all handled in-house, with a written warranty on the work and a fixed quote before anything starts.
+
+WhatsApp 055 741 3706 and we'll arrange pickup today.
+
+#Deira #BurDubai #MacBookRepairDubai
+```
+
+### W19 · Mon 4 Jan 2027 · TRUST
+**CTA:** Contact us → `/contact/`
+**Image:** `topics/macbook-diagnostic-dubai.jpg`
+
+```text
+No fix, no fee — literally. If we can't repair it, you owe nothing: no diagnostic fee, no inspection charge, no labour, and the collection was free too.
+
+That's not a promotional line, it's how every job here is quoted. We diagnose first, tell you honestly what's wrong, and only charge if there's a fix to charge for.
+
+Free pickup anywhere in Dubai. WhatsApp 055 741 3706.
+
+#NoFixNoFee #MacBookRepairDubai #FreeDiagnosis
+```
+
+### W20 · Mon 11 Jan 2027 · SEASONAL
+**Re-anchored to the real calendar** — New Year device health check, not the original "Eid hours" slot (Eid Al Fitr 2027 lands on week 28 instead).
+**CTA:** Learn more → `/macbook-full-diagnostic-dubai/`
+**Image:** `topics/macbook-diagnostic-dubai.jpg`
+
+```text
+New year, and a good moment for a device health check: battery cycle count, storage health, thermals under load, and a full backup.
+
+We run all of it free, hand you a written report, and give you an honest answer — including "this one's fine" when that's the truth. No obligation, no upsell.
+
+Start the year knowing exactly where your Mac stands. WhatsApp 055 741 3706.
+
+#NewYear #DeviceHealthCheck #MacBookRepairDubai
+```
+
+### W21 · Mon 18 Jan 2027 · DEVICE
+**CTA:** Learn more → `/macbook-keyboard-repair-dubai/`
+**Image:** `real/lab/macbook-keyboard-repair-dubai.jpg`
+
+```text
+Keys repeating, dropping, or feeling sticky on a 2016–2019 MacBook? That's the butterfly-mechanism generation — a known design fault, not something you did wrong.
+
+We repair and replace those top-case keyboard assemblies, restoring proper key travel and feel rather than papering over the symptom.
+
+Free diagnosis, written warranty on the work, free collection across Dubai.
+
+#ButterflyKeyboard #MacBookKeyboardRepair #MacBookRepairDubai
+```
+
+### W22 · Mon 25 Jan 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-barsha/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+Al Barsha and Barsha Heights: free MacBook collection, same-day diagnosis at our Dubai Media City workshop, and a written quote before any work starts.
+
+No surprise invoices — the figure we quote after diagnosis is the figure you pay.
+
+WhatsApp 055 741 3706 to book a pickup today.
+
+#AlBarsha #BarshaHeights #MacBookRepairDubai
+```
+
+### W23 · Mon 1 Feb 2027 · TRUST
+**CTA:** Contact us → `/contact/`
+**Image:** `real/lab/repair-workbench-dubai.jpg`
+
+```text
+How we quote, every time: diagnose first, find the actual failed component, then quote one fixed figure in writing.
+
+No "starting from" that changes once we've had your machine for a day. No surprise parts added at collection. What we tell you on the phone or in the shop is what you pay.
+
+Free diagnosis, no obligation to proceed.
+
+#FixedQuote #HonestRepair #MacBookRepairDubai
+```
+
+### W24 · Mon 8 Feb 2027 · SEASONAL
+**⚠️ Ramadan 2027 — estimated start Mon 8 Feb 2027, CONFIRM before scheduling.** Moon-sighting dependent; the exact date is announced by UAE authorities only close to the month.
+**CTA:** Contact us → `/contact/`
+**Image:** `brand/brand-storefront.jpg`
+
+```text
+Ramadan Kareem. Our hours adjust for the month — check WhatsApp for this week's exact opening times before you head over.
+
+Collection and delivery continue as normal throughout Ramadan, so you don't need to change your plans around ours. Free diagnosis, written quote, no fix no fee, same as always.
+
+Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+
+#Ramadan #MacBookRepairDubai #DubaiMediaCity
+```
+
+### W25 · Mon 15 Feb 2027 · DEVICE
+**CTA:** Learn more → `/macbook-water-damage-repair-dubai/`
+**Image:** `topics/blog-water-damage-dubai.jpg`
+
+```text
+Spilled something on your MacBook? Don't charge it, and don't bury it in rice — both make the corrosion worse, not better.
+
+Bring it in. Ultrasonic cleaning and board-level corrosion treatment recover machines other workshops write off outright. Free diagnosis tells you honestly whether it's worth doing before you spend anything.
+
+Free collection anywhere in Dubai.
+
+#WaterDamage #LiquidDamageRepair #MacBookRepairDubai
+```
+
+### W26 · Mon 22 Feb 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-difc/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+DIFC: free collection for Macs and iPhones, same-day diagnosis at our Media City workshop, delivered back to your office when it's done.
+
+Corporate accounts welcome — bulk repairs, priority turnaround and consolidated invoicing for teams running Apple hardware.
+
+WhatsApp 055 741 3706 to arrange a pickup.
+
+#DIFC #MacBookRepairDubai #CorporateRepair
+```
+
+### W27 · Mon 1 Mar 2027 · TRUST
+**CTA:** Learn more → `/mac-data-recovery-dubai/`
+**Image:** `topics/macbook-data-recovery-dubai.jpg`
+
+```text
+Data recovery here works one way: no recovery, no charge.
+
+We assess the drive free, tell you honestly what the odds actually are — not an inflated "we can probably get it" — and only charge if your files come back. If the odds are poor, we say so before you spend anything.
+
+Free diagnosis, free collection across Dubai.
+
+#DataRecovery #NoRecoveryNoCharge #MacBookRepairDubai
+```
+
+### W28 · Mon 8 Mar 2027 · SEASONAL
+**⚠️ Eid Al Fitr 2027 — estimated 9–10 Mar 2027, CONFIRM before scheduling.** Moon-sighting dependent.
+**CTA:** Contact us → `/contact/`
+**Image:** `brand/brand-storefront.jpg`
+
+```text
+Eid Mubarak! Holiday opening hours this week — check WhatsApp for exact times before visiting.
+
+Collection and delivery keep running across Dubai through the holiday for anything urgent. Free diagnosis, written quote, no fix no fee, as always.
+
+Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+
+#EidAlFitr #MacBookRepairDubai #DubaiMediaCity
+```
+
+### W29 · Mon 15 Mar 2027 · DEVICE
+**CTA:** Learn more → `/apple-watch-repair-dubai/`
+**Image:** `topics/apple-repair-dubai.jpg`
+
+```text
+Cracked Apple Watch screen, or a battery that won't make it through the day anymore? We repair Apple Watch in-house rather than sending it away for weeks.
+
+Free diagnosis first, written quote, and a warranty on the work — the same standard we apply to every device on the bench.
+
+Free collection anywhere in Dubai.
+
+#AppleWatchRepair #MacBookRepairDubai #AppleRepairDubai
+```
+
+### W30 · Mon 22 Mar 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-al-sufouh/`
+**Image:** `brand/brand-storefront.jpg`
+
+```text
+Al Sufouh and Media City — we're your neighbours. Tenth floor of Concord Tower, directly opposite Media City Metro.
+
+Walk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.
+
+Or WhatsApp 055 741 3706 and we'll collect it from your door instead.
+
+#AlSufouh #DubaiMediaCity #MacBookRepairDubai
+```
+
+### W31 · Mon 29 Mar 2027 · TRUST
+**CTA:** Learn more → `/warranty/`
+**Image:** `real/lab/macbook-full-internals-dubai.jpg`
+
+```text
+Genuine parts versus quality-alternative parts: we offer both, and we tell you plainly which is which before you decide.
+
+Each carries different warranty terms and a different cost — we explain both up front, including what we'd choose for our own machine and why, rather than defaulting you into the pricier option by omission.
+
+Ask, and we'll walk you through it.
+
+#GenuineParts #PartsTransparency #MacBookRepairDubai
+```
+
+### W32 · Mon 5 Apr 2027 · SEASONAL
+**Re-anchored to the real calendar** — Dubai's heat ramps up from April, ahead of the original "peak heat" wording.
+**CTA:** Learn more → `/mac-fan-cleaning-dubai/`
+**Image:** `real/lab/macbook-fan-heatsink-dubai.jpg`
+
+```text
+Temperatures are climbing, and that's when marginal cooling systems start showing it. Fans that never idle, or a Mac that throttles under normal use, usually means dust, dried thermal paste, or a fan on its way out.
+
+We service the whole thermal path — clean, repaste, replace what's failed — and verify temperatures under load before it goes back, not just blow it out and hope.
+
+Free diagnosis first.
+
+#DubaiHeat #ThermalService #MacBookRepairDubai
+```
+
+### W33 · Mon 12 Apr 2027 · DEVICE
+**CTA:** Learn more → `/ipad-screen-repair-dubai/`
+**Image:** `topics/ipad-screen-repair-dubai.jpg`
+
+```text
+iPad Pro screen cracked, or the digitiser not responding properly? We replace displays across iPad, iPad Air, mini and Pro.
+
+Free diagnosis first to confirm it's the glass and not the board underneath it, then a written quote and a warranty on the work.
+
+Most iPad screens are same-day. Free collection across Dubai.
+
+#iPadScreenRepair #iPadRepairDubai #MacBookRepairDubai
+```
+
+### W34 · Mon 19 Apr 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-jumeirah/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+Jumeirah and Umm Suqeim: free Mac and iPhone collection, same-day diagnosis at our Media City workshop, returned straight to your door.
+
+Villas, apartments and hotel guests all get the same free-pickup treatment — no minimum, no exceptions.
+
+WhatsApp 055 741 3706 to arrange collection.
+
+#Jumeirah #UmmSuqeim #MacBookRepairDubai
+```
+
+### W35 · Mon 26 Apr 2027 · TRUST
+**CTA:** Learn more → `/about/`
+**Image:** `real/team/technician-support-call-dubai.jpg`
+
+```text
+Repairs we refuse: if a fix won't genuinely hold, we tell you rather than take your money for something that fails again in a month.
+
+Sometimes the honest answer is that the machine isn't worth the spend — we'll say that too, even though it costs us the job. You make a better decision with the real picture than with an optimistic one.
+
+Free diagnosis gets you that picture, no charge.
+
+#HonestAdvice #MacBookRepairDubai #AppleRepairDubai
+```
+
+### W36 · Mon 3 May 2027 · SEASONAL
+**⚠️ Eid Al Adha 2027 — estimated 16–17 May 2027, CONFIRM before scheduling.** Posted ~2 weeks ahead as advance notice, standard practice for holiday-hours posts. Moon-sighting dependent.
+**CTA:** Contact us → `/contact/`
+**Image:** `brand/brand-storefront.jpg`
+
+```text
+Eid Al Adha is coming up in a couple of weeks — we'll post confirmed hours closer to the date, but wanted to flag it now if you're planning a repair around the holiday.
+
+Book before the break if your device needs attention, and we'll have it back to you before hours change. Collection and delivery continue through the holiday itself for anything urgent.
+
+WhatsApp 055 741 3706 to plan around it.
+
+#EidAlAdha #MacBookRepairDubai #DubaiMediaCity
+```
+
+### W37 · Mon 10 May 2027 · DEVICE
+**CTA:** Learn more → `/mac-studio-overheating-fix-dubai/`
+**Image:** `topics/mac-studio-repair-dubai.jpg`
+
+```text
+Mac Studio throttling under render or export load? That's usually the cooling assembly needing service, not the chip itself giving up.
+
+We service the fans and heatsink and verify thermals properly under sustained load, rather than just clearing dust and calling it done.
+
+Free diagnosis, written quote before any work.
+
+#MacStudio #ThermalService #MacBookRepairDubai
+```
+
+### W38 · Mon 17 May 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-dubai-marina/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+Dubai Marina again — our most-collected area, and for good reason: free pickup, same-day diagnosis, delivered straight back to your tower.
+
+Screens, batteries, water damage, board-level faults — all handled at our Media City workshop, ten minutes away.
+
+WhatsApp 055 741 3706 and we'll have someone at your door.
+
+#DubaiMarina #MacBookRepairDubai #FreePickup
+```
+
+### W39 · Mon 24 May 2027 · TRUST
+**CTA:** Learn more → `/mac-data-recovery-dubai/`
+**Image:** `real/lab/macbook-pro-internal-layout-dubai.jpg`
+
+```text
+Your data stays on your machine, not on our bench somewhere. We repair the board itself rather than swapping it outright, so your SSD and everything on it never has to leave the device.
+
+That matters most on logic-board and water-damage jobs, where a straight swap would mean copying your files onto unfamiliar hardware first.
+
+Free diagnosis explains exactly what we'd need to touch.
+
+#YourDataStays #BoardLevelRepair #MacBookRepairDubai
+```
+
+### W40 · Mon 31 May 2027 · SEASONAL
+**Re-anchored to the real calendar** — new macOS release season (WWDC is early June), not the original "UAE National Day" slot (already placed correctly at week 14).
+**CTA:** Learn more → `/macos-reinstall-dubai/`
+**Image:** `topics/macos-reinstall-dubai.jpg`
+
+```text
+New macOS release season. If an update has left an older Mac sluggish, laggy, or refusing to install altogether, that's often storage headroom or an ageing drive — not a machine that needs replacing.
+
+We do clean reinstalls, storage upgrades and data migration, so the update actually helps instead of making an old Mac worse.
+
+Free diagnosis first, to check what your Mac can actually take.
+
+#macOS #SoftwareUpdate #MacBookRepairDubai
+```
+
+### W41 · Mon 7 Jun 2027 · DEVICE
+**CTA:** Learn more → `/iphone-back-glass-repair-dubai/`
+**Image:** `topics/iphone-back-glass-repair-dubai.jpg`
+
+```text
+Shattered iPhone back glass? We remove and replace it with laser-assisted separation, without disturbing the wireless charging coil or antennas underneath.
+
+Free diagnosis confirms it's cosmetic and not masking an internal issue, then a written quote and warranty on the work.
+
+Most back-glass jobs are same-day. Free collection across Dubai.
+
+#iPhoneBackGlass #iPhoneRepairDubai #MacBookRepairDubai
+```
+
+### W42 · Mon 14 Jun 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-downtown-dubai/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+Downtown and Business Bay: free collection, same-day diagnosis at our Media City workshop, delivered back to your office.
+
+Corporate accounts and consolidated invoicing available for teams running multiple Apple devices.
+
+WhatsApp 055 741 3706 to book a pickup.
+
+#DowntownDubai #BusinessBay #MacBookRepairDubai
+```
+
+### W43 · Mon 21 Jun 2027 · TRUST
+**CTA:** Learn more → `/about/`
+**Image:** `real/team/team-workshop-dubai.jpg`
+
+```text
+21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 of them, with Usman on board-level repair for 11.
+
+That continuity matters on the hard cases — the ones that need someone who's seen the fault before, not a rotating roster. Your machine is worked on by one named technician, not passed around the shop.
+
+Free diagnosis, written warranty on whatever gets fixed.
+
+#21Years #SameTeam #MacBookRepairDubai
+```
+
+### W44 · Mon 28 Jun 2027 · SEASONAL
+**Re-anchored to the real calendar** — peak Dubai summer heat and travel season, not the original "Dubai Shopping Festival" slot (moved to week 16, which lines up with the real December DSF window).
+**CTA:** Learn more → `/macbook-full-diagnostic-dubai/`
+**Image:** `topics/macbook-diagnostic-dubai.jpg`
+
+```text
+Peak Dubai summer, and peak travel season too. Before you fly, get your MacBook, iPhone or iPad checked — battery health, storage, and whether it'll survive a hot car or an overheated cabin bag.
+
+A swollen battery is a genuine problem at altitude, and airlines take it seriously. Better to know before security does.
+
+Free diagnosis, twenty minutes, no obligation.
+
+#DubaiSummer #TravelChecklist #MacBookRepairDubai
+```
+
+### W45 · Mon 5 Jul 2027 · DEVICE
+**CTA:** Learn more → `/imac-screen-repair-dubai/`
+**Image:** `topics/imac-screen-repair-dubai.jpg`
+
+```text
+iMac 5K display failing — banding, dead pixels, or the backlight gone entirely? We replace the panel and run full colour testing before it goes back, so it isn't just working, it's calibrated correctly.
+
+Free diagnosis first tells you whether it's the panel or a board fault behind it — the two look identical from the outside but cost very differently.
+
+Written quote before any work starts.
+
+#iMacScreenRepair #iMac5K #MacBookRepairDubai
+```
+
+### W46 · Mon 12 Jul 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-jvc/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+JVC, Motor City, Sports City and Dubai Hills — yes, we collect from there too. Free pickup, same-day diagnosis at our Media City workshop, returned when it's done.
+
+Distance from us isn't a reason to pay more or wait longer. Same free-collection terms as anywhere else in Dubai.
+
+WhatsApp 055 741 3706 to book.
+
+#JVC #MotorCity #MacBookRepairDubai
+```
+
+### W47 · Mon 19 Jul 2027 · TRUST
+**CTA:** Learn more → `/macbook-water-damage-repair-dubai/`
+**Image:** `topics/blog-water-damage-dubai.jpg`
+
+```text
+The minute you spill something: shut it down, unplug it, turn it upside down to drain. Do NOT charge it, and do NOT put it in rice.
+
+Charging a wet board is what actually kills a MacBook after a spill — the liquid alone often isn't fatal, the current through it is. Get it to us before anyone plugs it in.
+
+Free diagnosis, free collection anywhere in Dubai.
+
+#SpillFirstAid #LiquidDamage #MacBookRepairDubai
+```
+
+### W48 · Mon 26 Jul 2027 · SEASONAL
+**Re-anchored to the real calendar** — back-to-school prep begins here, ahead of the UAE school year starting in early September.
+**CTA:** Learn more → `/mac-setup-data-migration-dubai/`
+**Image:** `topics/macbook-backup-service-dubai.jpg`
+
+```text
+Term starts in a few weeks. If this year's Mac is a hand-me-down or newly bought, now's the time for setup and data migration — not the night before.
+
+We move everything across from the old machine, set up backups properly, and check battery and storage health while it's on the bench, so nothing surfaces mid-semester.
+
+Free diagnosis included.
+
+#BackToSchool #MacSetup #MacBookRepairDubai
+```
+
+### W49 · Mon 2 Aug 2027 · DEVICE
+**CTA:** Learn more → `/macbook-pro-repair-dubai/`
+**Image:** `topics/macbook-pro-repair-hub-dubai.jpg`
+
+```text
+MacBook Pro M5 already needing a repair? Even the newest machines get liquid damage, cracked screens and swollen batteries — being new doesn't make a device immune.
+
+We're tooled for Apple Silicon across the M-series, including M5, with the same component-level approach we've used since 2004.
+
+Free diagnosis, written warranty, same-day on most models.
+
+#MacBookProM5 #AppleSilicon #MacBookRepairDubai
+```
+
+### W50 · Mon 9 Aug 2027 · AREA
+**CTA:** Learn more → `/macbook-repair-jbr/`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
+
+```text
+JBR and Marina Walk: free collection, same-day diagnosis at our Media City workshop, delivered back to you. No fix, no fee.
+
+Ten minutes from your door to our bench — most JBR pickups are collected within the hour of a WhatsApp message.
+
+055 741 3706, any day except Sunday.
+
+#JBR #MarinaWalk #MacBookRepairDubai
+```
+
+### W51 · Mon 16 Aug 2027 · TRUST
+**CTA:** Learn more → `/about/`
+**Image:** `real/lab/repair-workbench-dubai.jpg`
+
+```text
+Choosing a repair shop — refuse these: no written quote, no warranty on paper, "we'll call you with the price," or anyone who won't say plainly whether a part is genuine or alternative.
+
+Any one of those is a reason to walk. All four together means walk fast.
+
+We give you all four, every time, before you say yes.
+
+#ChooseWisely #HonestRepair #MacBookRepairDubai
+```
+
+### W52 · Mon 23 Aug 2027 · SEASONAL
+**Re-anchored to the real calendar** — the week before UAE term starts, not the original "New year" wording (moved to week 20, the real January slot).
+**CTA:** Learn more → `/macbook-full-diagnostic-dubai/`
+**Image:** `topics/guide-choose-macbook-dubai.jpg`
+
+```text
+Term starts next week. Last call to get MacBooks, iPads and iPhones sorted before the first day — cracked screens, dead batteries, slow storage, all of it.
+
+Free diagnosis, most repairs same-day, free collection anywhere in Dubai. Get it back before the bell rings, not during exam week.
+
+WhatsApp 055 741 3706.
+
+#BackToSchool #NewTermReady #MacBookRepairDubai
 ```
 
 ---

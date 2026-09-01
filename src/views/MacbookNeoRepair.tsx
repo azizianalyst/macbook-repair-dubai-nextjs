@@ -40,7 +40,7 @@ export default function MacbookNeoRepair() {
             <li>• <strong>Storage:</strong> 256GB / 512GB SSD (soldered)</li>
             <li>• <strong>Ports:</strong> 1× USB-C / Thunderbolt 4, MagSafe 3, 3.5mm jack</li>
             <li>• <strong>Wireless:</strong> Wi-Fi 6E, Bluetooth 5.3</li>
-            <li>• <strong>Starting price:</strong> $599 USD (~AED 2,200)</li>
+            <li>• <strong>Starting price:</strong> Apple lists it at $599 USD (~AED 2,200)</li>
           </ul>
 
           <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
@@ -98,7 +98,7 @@ export default function MacbookNeoRepair() {
           <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
             <h3 className="text-[18px] font-bold mb-sm">Can we upgrade the RAM or SSD?</h3>
             <p className="text-[15px]">
-              <strong>No.</strong> Like every Apple Silicon Mac, the A18 Pro&apos;s 8GB RAM is unified into the SoC and the SSD is soldered. Buy enough storage when you order - there&apos;s no upgrade path. For data on a failed SSD we offer chip-off recovery (AED 2,000+).{" "}
+              <strong>No.</strong> Like every Apple Silicon Mac, the A18 Pro&apos;s 8GB RAM is unified into the SoC and the SSD is soldered. Buy enough storage when you order - there&apos;s no upgrade path. For data on a failed SSD we offer chip-off recovery, quoted after assessment.{" "}
               <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">More on data recovery →</Link>
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function MacbookNeoRepair() {
         },
         {
           q: "Can I upgrade the RAM or SSD on the MacBook Neo?",
-          a: "No. The A18 Pro&apos;s 8GB RAM is unified into the chip package and the SSD is soldered to the logic board. Like every Apple Silicon Mac, the original spec is what you keep. For data on a failed SSD we offer chip-off recovery (AED 2,000+).",
+          a: "No. The A18 Pro&apos;s 8GB RAM is unified into the chip package and the SSD is soldered to the logic board. Like every Apple Silicon Mac, the original spec is what you keep. For data on a failed SSD we offer chip-off recovery, quoted after assessment.",
         },
         {
           q: "Is the MacBook Neo worth buying for a student?",

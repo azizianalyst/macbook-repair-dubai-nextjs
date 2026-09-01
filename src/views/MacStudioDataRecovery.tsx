@@ -9,7 +9,7 @@ export default function MacStudioDataRecovery() {
       path="/mac-studio-data-recovery-dubai"
       eyebrow="Mac Studio · All Models · Data Recovery"
       h1="Mac Studio Data Recovery Dubai"
-      subtitle="Soldered SSD on all Mac Studio models. Standard USB adapters cannot access it. We use specialist extraction hardware. Free assessment - no charge if data is unrecoverable. From AED 600."
+      subtitle="Soldered SSD on all Mac Studio models. Standard USB adapters cannot access it. We use specialist extraction hardware. Free assessment - no charge if data is unrecoverable. Written quote first."
       startingPrice={600}
       timeline="1-5 working days"
       whatsappPrefill="Hi, I need Mac Studio data recovery. Model:"

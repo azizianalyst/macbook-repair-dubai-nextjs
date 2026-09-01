@@ -33,7 +33,7 @@ const FAQS = [
   { q: "What should I do immediately after spilling liquid on my Mac?",
     a: "Power off immediately (hold power button 5 seconds). Unplug the charger. Tilt the Mac to drain. Do not press keys, do not use a hair dryer, do not try to restart. Every minute the board is wet with power increases corrosion. WhatsApp 055 741 3706 for same-day free pickup." },
   { q: "How much does Mac data recovery after water damage cost in Dubai?",
-    a: "Mac water damage data recovery costs AED 900–2,500 depending on damage severity. Mild water damage with intact NAND: AED 900–1,500. Severe corrosion requiring chip-off NAND read: AED 1,500–2,500. No-fix no-charge: if we cannot recover your data, you pay nothing." },
+    a: "It depends on damage severity. Mild water damage with intact NAND is the least involved; severe corrosion requiring a chip-off NAND read costs the most. Every case is quoted in writing after the free assessment, before you commit to anything. No-fix no-charge: if we cannot recover your data, you pay nothing." },
   { q: "How long does water damage data recovery take?",
     a: "Ultrasonic board clean: 1 day. SSD chip inspection and data extraction: 1–3 days. Severe corrosion with chip-off NAND read: 3–7 days. We send daily updates via WhatsApp and notify you when data is confirmed recovered." },
   { q: "My Mac turned on after water damage, is the data safe?",
@@ -66,7 +66,7 @@ export default function MacDataRecoveryWaterDamage() {
           tone="dark"
           eyebrow="URGENT. Mac water damage data recovery · Dubai"
           title="Mac Data Recovery After Water Damage. Dubai"
-          subtitle="Act fast, every hour increases corrosion. Free pickup today. From AED 900. No-fix no-charge. NAND chip-off capability."
+          subtitle="Act fast, every hour increases corrosion. Free pickup today. No-fix no-charge. NAND chip-off capability."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1 text-red-400 font-semibold"><AlertTriangle size={16} aria-hidden /> Power off now, do not charge</span>
@@ -87,7 +87,7 @@ export default function MacDataRecoveryWaterDamage() {
           <QuickAnswer
             tone="dark"
             question="Can I recover data from a water-damaged Mac in Dubai?"
-            answer="Yes. Mac data recovery after water damage is possible in 60–80% of cases if the Mac was powered off quickly and not charged while wet. NAND chips are often intact even when the board fails. Free pickup today across Dubai. From AED 900. No-fix no-charge. WhatsApp 055 741 3706."
+            answer="Yes. Mac data recovery after water damage is possible in 60–80% of cases if the Mac was powered off quickly and not charged while wet. NAND chips are often intact even when the board fails. Free pickup today across Dubai. No-fix no-charge. WhatsApp 055 741 3706."
           />
         </section>
 

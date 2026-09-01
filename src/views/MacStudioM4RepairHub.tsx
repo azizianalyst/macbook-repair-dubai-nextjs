@@ -41,7 +41,7 @@ export default function MacStudioM4RepairHub() {
         "Thunderbolt 5 port - physical damage, no device detected",
         "HDMI 2.1 port - intermittent signal, display issues",
         "Fan and thermal service - if running hot under sustained workload",
-        "Logic board repair - out of warranty only, from AED 1,200",
+        "Logic board repair - out of warranty only, quoted after diagnosis",
         "Data recovery - soldered SSD specialist extraction",
       ]}
       steps={[

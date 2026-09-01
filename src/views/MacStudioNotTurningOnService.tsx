@@ -9,7 +9,7 @@ export default function MacStudioNotTurningOnService() {
       path="/mac-studio-not-turning-on-dubai"
       eyebrow="Mac Studio · All Models · No Power Fix"
       h1="Mac Studio Not Turning On Dubai?"
-      subtitle="LED ring not lighting. Fan spins then stops. Dead on power button press. We diagnose and fix all Mac Studio no-power faults across M1, M2, M3, and M4 models. Free diagnosis. From AED 600."
+      subtitle="LED ring not lighting. Fan spins then stops. Dead on power button press. We diagnose and fix all Mac Studio no-power faults across M1, M2, M3, and M4 models. Free diagnosis, written quote first."
       startingPrice={600}
       timeline="Same day (SMC/diagnosis) · 3-7 days (board repair)"
       whatsappPrefill="Hi, my Mac Studio is not turning on. Model:"
@@ -54,7 +54,7 @@ export default function MacStudioNotTurningOnService() {
       ]}
       faqs={[
         { q: "Mac Studio LED ring not lighting at all - what does this mean?", a: "A completely dark LED ring means the machine is receiving no power, or the power stage is failing before anything can initialise. First check the power cable and try a different wall outlet. If the ring stays dark with a known-good cable and socket, the internal power board or the logic board power stage has failed and needs a workshop diagnosis." },
-        { q: "Is it the power supply or the logic board?", a: "The Mac Studio integrates its power supply onto a dedicated board inside the chassis, separate from the main logic board. We measure voltage at key test points to determine which board is failing. Power board faults (typically around AED 600 to 800 to repair) are more common and cheaper than full logic board faults (from AED 1,000). Diagnosis will tell you which it is before you commit to repair." },
+        { q: "Is it the power supply or the logic board?", a: "The Mac Studio integrates its power supply onto a dedicated board inside the chassis, separate from the main logic board. We measure voltage at key test points to determine which board is failing. Power board faults are more common and cheaper to repair than full logic board faults. Diagnosis will tell you which it is before you commit to repair." },
         { q: "Do Mac Studios have an external power brick?", a: "No. All Mac Studio models from M1 through M4 Max use an internal power supply - power enters through a standard IEC C14 (3-pin grounded) connector on the rear of the machine. There is no external brick to replace. This means power supply faults require opening the machine to access the internal board." },
         { q: "SMC reset on Mac Studio - how does it work?", a: "On M-chip Mac Studios (all current models), there is no physical SMC reset button or key combination. The SMC resets automatically when you disconnect power completely for 30 seconds. Unplug the power cable, wait 30 seconds, then reconnect and press the power button. If the machine still will not start after this, the fault is hardware-level and needs a workshop diagnosis." },
       ]}
