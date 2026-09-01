@@ -159,17 +159,17 @@ Scored `(Commercial Intent × Business Potential) ÷ Competition`. Only ≥3 sho
 
 | # | Action | Target | Score | Why |
 |---|---|---|---|---|
-| 1 | **Restore** | `/airpods-repair-dubai/` | **9** | Ranked ~13 before deletion, GSC shows live demand, currently no page at all |
-| 2 | **Restore** | `/airpods-battery-replacement-dubai/` | **9** | GSC names "airpods battery replacement near me" explicitly |
-| 3 | **Strengthen** | `/apple-watch-repair-dubai/` | **9** | Survives, but 32 sibling pages were folded away; absorb their intent here |
-| 4 | **Build** | `/apple-watch-battery-replacement-dubai/` | **9** | GSC position 27 with no dedicated page |
-| 5 | **Rename+301** | `/can-iphone-motherboard-be-repaired` → `/iphone-motherboard-repair-dubai` | **6** | 3,436 impressions, position 16, sentence slug |
-| 6 | **Build** | `/macbook-repair-near-me-dubai/` | **6** | "near me" is separate mobile-urgent intent; converts higher |
-| 7 | **Build** | `/best-macbook-repair-dubai/` | **6** | Commercial-comparison intent; only the "shop" variant exists |
-| 8 | **Strengthen** | `/apple-service-center-dubai/` | **6** | Many impressions at 20–37; own the *independent alternative* angle |
-| 9 | **Build** | `/macbook-screen-repair-near-me-dubai/` | **4** | Highest-volume service × urgent intent |
-| 10 | **Rename+301** | 4 more service-intent question slugs | **4** | Zero-volume slugs on service intent |
-| 11 | **Move** | ~14 informational question slugs → `/blog/` | **3** | Stop them competing as root-level service pages |
+| 1 | ~~Restore~~ | `/airpods-repair-dubai/` | 9 | **DROPPED 2026-09-01** — owner confirmed no in-house AirPods service; the honest answer is no page, regardless of demand |
+| 2 | ~~Restore~~ | `/airpods-battery-replacement-dubai/` | 9 | **DROPPED 2026-09-01** — same reason |
+| 3 | ~~Strengthen~~ | `/apple-watch-repair-dubai/` | 9 | **DROPPED 2026-09-01** — no in-house Apple Watch service |
+| 4 | ~~Build~~ | `/apple-watch-battery-replacement-dubai/` | 9 | **DROPPED 2026-09-01** — same reason |
+| 5 | ✅ **Renamed+301** | `/can-iphone-motherboard-be-repaired` → `/iphone-motherboard-repair-dubai` | 6 | Already done pre-2026-09-01 (commit `06f5caa`) |
+| 6 | ✅ **Renamed+301** | `/macbook-repair-near-me` → `/macbook-repair-near-me-dubai/` | 6 | **Done 2026-09-01** — was a substantial existing page (356 lines) on the wrong slug, not a gap |
+| 7 | ✅ **Renamed+301** | `/best-macbook-repair-shop-dubai` → `/best-macbook-repair-dubai/` | 6 | **Done 2026-09-01** — same situation, 225 lines of existing content |
+| 8 | **Strengthen** | `/apple-service-center-dubai/` | 6 | Many impressions at 20–37; own the *independent alternative* angle — still open |
+| 9 | ✅ **Built** | `/macbook-screen-repair-near-me-dubai/` | 4 | **Done 2026-09-01** — the one candidate that was a genuine gap, not an existing page under a different slug |
+| 10 | **Rename+301** | 4 more service-intent question slugs | 4 | Zero-volume slugs on service intent — still open |
+| 11 | **Move** | ~14 informational question slugs → `/blog/` | 3 | Stop them competing as root-level service pages — still open |
 
 ### Cut deliberately, and why
 
@@ -182,47 +182,42 @@ Scored `(Commercial Intent × Business Potential) ÷ Competition`. Only ≥3 sho
 
 # PART 4 — IMPLEMENTATION
 
-## Batch A — restore the deleted demand (highest value)
+## Batch A — DROPPED 2026-09-01
 
-Four pages, all on the new `AziziTemplate`:
+Both open questions below are answered: consolidation was deliberate, and there's no
+in-house AirPods/Apple Watch service. Restoring these pages would mean claiming a
+capability the business doesn't have — the honest answer is no page, regardless of
+GSC demand. `DEVICE_TYPES` stays as-is; no AirPods/Watch option needed.
 
-| Page | Preset | Breadcrumb parent |
-|---|---|---|
-| `/airpods-repair-dubai/` | `repair` | `/apple-repair-dubai/` |
-| `/airpods-battery-replacement-dubai/` | `repair` | `/airpods-repair-dubai/` |
-| `/apple-watch-battery-replacement-dubai/` | `repair` | `/apple-watch-repair-dubai/` |
-| `/macbook-repair-near-me-dubai/` | `repair` | `/macbook-repair-dubai/` |
+## Batch B — slug hygiene (partially done)
 
-**Each needs, per the template standard:** 1 H1 · ~16 H2 · 10 FAQs · ~78 internal links · one LCP-primed hero · a written QuickAnswer · 6 KeyTakeaways · real reviews or none · no prices.
-
-**Three registrations, not one** — miss any and it is a silent 404:
-1. `src/app/<slug>/page.tsx` (metadata + `<PageSchema>` + view)
-2. `src/views/<Name>.tsx` (the `AziziTemplate` view)
-3. **Remove the slug from `redirects.generated.ts`** — otherwise the redirect wins and the new page is unreachable
-
-⚠️ **Step 3 is the one that will bite.** `/airpods-repair-dubai` currently 301s to `/apple-repair-dubai/`. Building the page without removing the redirect ships an invisible page.
-
-**Blocked on you:** `airpods-repair` needs two more `DEVICE_TYPES` — the enum has no AirPods or Apple Watch option, so the lead form cannot categorise these leads. Add `"Apple Watch"` and `"AirPods"` to `src/lib/lead-schema.ts`, or accept they arrive as "Other Apple device".
-
-## Batch B — slug hygiene
-
-- 5 service-intent renames + 301s
-- ~14 informational pages moved under `/blog/` with 301s
-- Verify no redirect chains afterwards (`A→B→C` must become `A→C`)
+- ✅ 3 of ~6 service-intent renames + 301s done — see Part 3, items 5–7
+- ☐ 4 more service-intent question slugs → rename + 301 — still open
+- ☐ ~14 informational pages → move under `/blog/` with 301s — still open
+- Verify no redirect chains afterwards (`A→B→C` must become `A→C`) — caught and fixed one
+  live case during the 2026-09-01 renames (`/blog/macbook-repair-near-me-dubai` was chaining
+  through the old slug)
 
 ## Batch C — strengthen, don't build
 
-`/apple-watch-repair-dubai/` and `/apple-service-center-dubai/` onto `AziziTemplate`, absorbing the intent of the pages folded into them.
+`/apple-service-center-dubai/` onto `AziziTemplate`, absorbing the intent of the pages folded
+into it. (`/apple-watch-repair-dubai/` dropped along with the rest of Batch A.)
 
-## Sequence
+## Genuine build — done 2026-09-01
 
-1. **Batch A** — restores measurable lost demand
-2. **The 8 GSC money pages** onto `AziziTemplate` (already agreed)
-3. **Batch B** — slug hygiene, low risk, mechanical
-4. **Batch C** — strengthen the two survivors
+`/macbook-screen-repair-near-me-dubai/` — the one candidate from Part 3 that was an actual
+gap, not an existing page on the wrong slug. Built on `SubServicePageTemplate`, linked in from
+`/macbook-screen-repair-dubai/` and `/macbook-repair-near-me-dubai/`.
 
-## Open questions for you
+## Sequence (updated)
 
-1. **Was the 83-page consolidation deliberate?** If someone chose to exit Apple Watch and AirPods as business lines, findings 1 and the whole of Batch A are wrong and I should drop them. If it was a crawl-budget or thin-content cleanup, it over-corrected on the two lines with real demand.
-2. **Do you actually repair AirPods and Apple Watch in-house?** Everything above assumes yes. If they are sent out, the honest answer is no page.
-3. **`DEVICE_TYPES`** — add Apple Watch and AirPods to the lead form enum?
+1. ~~Batch A~~ — dropped
+2. **The 8 GSC money pages** onto `AziziTemplate` (already agreed) — still open
+3. **Batch B remainder** — 4 renames + 14 blog moves, low risk, mechanical
+4. **Batch C** — strengthen `/apple-service-center-dubai/`
+
+## Open questions — resolved 2026-09-01
+
+1. ~~Was the 83-page consolidation deliberate?~~ **Yes, confirmed by the owner.**
+2. ~~Do you actually repair AirPods and Apple Watch in-house?~~ **No — sent out, not offered.**
+3. ~~`DEVICE_TYPES` — add Apple Watch and AirPods?~~ **No, not needed — moot given #2.**

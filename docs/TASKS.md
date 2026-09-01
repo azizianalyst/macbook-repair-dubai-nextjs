@@ -158,10 +158,11 @@ Then: cluster hubs → top MacBook services → top iPhone services. **Not all 2
 
 | | Task | Owner |
 |---|---|---|
-| ☐ | Rename 5 service-intent question slugs + 301 | 🤖 |
+| ✅ | Rename service-intent question slugs + 301 — `/can-iphone-motherboard-be-repaired` done pre-2026-09-01, `/best-macbook-repair-shop-dubai` → `/best-macbook-repair-dubai` and `/macbook-repair-near-me` → `/macbook-repair-near-me-dubai` done 2026-09-01 | 🤖 |
+| ☐ | Rename remaining 4 service-intent question slugs + 301 | 🤖 |
 | ☐ | Move ~14 informational question slugs under `/blog/` | 🤖 |
-| ☐ | Build `/macbook-repair-near-me-dubai/` and `/best-macbook-repair-dubai/` | 🤖 |
-| ⏸️ | AirPods + Apple Watch restores — **parked**, you deprioritised these | — |
+| ✅ | Build `/macbook-screen-repair-near-me-dubai/` — the one candidate that was a genuine gap (2026-09-01) | 🤖 |
+| ✅ | AirPods + Apple Watch restores — **dropped**, confirmed no in-house service (2026-09-01) | — |
 
 ## Hide-prices migration — blocked, own session
 
@@ -184,7 +185,7 @@ Then: cluster hubs → top MacBook services → top iPhone services. **Not all 2
 | 3 | Ramadan / Eid 2027 dates (estimated w24/w28/w36, confirm before posting) | Module 6 |
 | 4 | Extend `gbp.ts` for services, or type all 103 by hand? | Module 3 |
 | 5 | Which technician reviews which page for the bylines? | Page rebuilds |
-| 6 | Was the 83-page consolidation deliberate? | AirPods/Watch (parked) |
+| 6 | ~~Was the 83-page consolidation deliberate?~~ | **Answered 2026-09-01: yes, deliberate — no in-house AirPods/Watch service. Dropped.** |
 
 ---
 
