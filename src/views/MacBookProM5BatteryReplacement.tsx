@@ -15,13 +15,13 @@ export default function MacBookProM5BatteryReplacement() {
       capacity16="~99.6 Wh (est.)"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + Thunderbolt 5 (3 ports)"
-      heroAnswer="MacBook Pro M5 battery replacement in Dubai is estimated at AED 600 for the 14-inch and AED 750 for the 16-inch at MacBook Repair Dubai, with a 2 to 3 day turnaround. The M5 launched in 2025 and is almost certainly still under Apple warranty — check your coverage at mysupport.apple.com before booking any repair. We offer free diagnosis and can advise whether warranty or out-of-warranty service is the right route."
+      heroAnswer="MacBook Pro M5 battery replacement in Dubai is quoted per model in writing at MacBook Repair Dubai, with a 2 to 3 day turnaround. The M5 launched in 2025 and is almost certainly still under Apple warranty — check your coverage at mysupport.apple.com before booking any repair. We offer free diagnosis and can advise whether warranty or out-of-warranty service is the right route."
       chipUniquePoints={[
         "The M5 is Apple's second-generation 3nm chip, delivering measurably faster performance than the M4 with improved power efficiency. The M5 Pro MacBook Pro battery capacity is estimated at around 72 Wh for the 14-inch, consistent with the M4 Pro. Confirmed capacity will be published once we have serviced the first units.",
         "The M5 MacBook Pro is the first MacBook Pro with an OLED display (Liquid Retina XDR OLED). The display is a separate assembly from the battery. OLED screens and battery replacements are independent repairs. A battery fault does not require a display replacement, and vice versa.",
         "The M5 MacBook Pro launched in 2025 and is less than 1 year old at the time of writing. Apple's standard 1-year warranty covers manufacturing defects including premature battery degradation. If your M5 Pro battery health is unexpectedly low, this is most likely a warranty claim, not an out-of-warranty repair.",
         "Parts supply for the M5 MacBook Pro is in the early stages of the service chain. MacBook Repair Dubai is building M5 Pro cell inventory. Contact us with your model and serial number before dropping off so we can confirm parts availability and give you an accurate turnaround estimate.",
-        "MacBook Repair Dubai quotes M5 Pro battery replacement at AED 600 to AED 750 as a working estimate. Apple charges AED 649 to AED 849. Final pricing is confirmed after inspection and parts check. If the machine is under warranty, Apple is the correct first contact and we will tell you so honestly.",
+        "MacBook Repair Dubai quotes M5 Pro battery replacement in writing per model. Apple charges AED 649 to AED 849. Our final price is confirmed after inspection and parts check. If the machine is under warranty, Apple is the correct first contact and we will tell you so honestly.",
       ]}
       prices={[
         {
@@ -66,7 +66,7 @@ export default function MacBookProM5BatteryReplacement() {
         },
         {
           q: "How much does MacBook Pro M5 battery replacement cost in Dubai?",
-          a: "MacBook Repair Dubai estimates MacBook Pro M5 battery replacement at AED 600 for the 14-inch and AED 750 for the 16-inch, including BMS re-pair, labour, and a 3-month written warranty. Prices are estimates pending confirmed parts supply and may be updated. Contact us with your serial number for a confirmed quote.",
+          a: "MacBook Repair Dubai quotes MacBook Pro M5 battery replacement per model in writing, including BMS re-pair, labour, and a 3-month written warranty. Prices are estimates pending confirmed parts supply and may be updated. Contact us with your serial number for a confirmed quote.",
         },
         {
           q: "Does the OLED display on the M5 Pro affect battery replacement?",
@@ -74,7 +74,7 @@ export default function MacBookProM5BatteryReplacement() {
         },
         {
           q: "Is the MacBook Pro M5 worth repairing?",
-          a: "Yes. The M5 Pro and M5 Max are the most powerful MacBook Pros ever made. A battery replacement at AED 600 to AED 750 is a tiny fraction of the AED 9,000 to AED 20,000 machine cost. The OLED display, Thunderbolt 5, and M5 chip will remain industry-leading for 5 or more years.",
+          a: "Yes. The M5 Pro and M5 Max are the most powerful MacBook Pros ever made. A battery replacement costs a tiny fraction of what the machine itself is worth. The OLED display, Thunderbolt 5, and M5 chip will remain industry-leading for 5 or more years.",
         },
         {
           q: "How long does MacBook Pro M5 battery replacement take in Dubai?",

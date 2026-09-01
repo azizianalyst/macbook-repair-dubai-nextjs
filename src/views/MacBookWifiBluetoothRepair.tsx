@@ -9,7 +9,7 @@ export default function MacBookWifiBluetoothRepair() {
       path="/macbook-wifi-bluetooth-repair-dubai"
       eyebrow="MacBook Wi-Fi & Bluetooth repair"
       h1="MacBook Wi-Fi & Bluetooth Repair Dubai"
-      subtitle="'Wi-Fi: No hardware installed', constant drop-outs, or Bluetooth that won't pair? We diagnose and repair MacBook wireless faults - from AED 250, most done in 1-2 days."
+      subtitle="'Wi-Fi: No hardware installed', constant drop-outs, or Bluetooth that won't pair? We diagnose and repair MacBook wireless faults - most done in 1-2 days, quoted in writing first."
       startingPrice={250}
       timeline="1-2 days"
       whatsappPrefill="Hi, my MacBook Wi-Fi / Bluetooth has a problem - model and symptom:"
@@ -23,7 +23,7 @@ export default function MacBookWifiBluetoothRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook Wi-Fi and Bluetooth repair in Dubai</strong> covers the "Wi-Fi: No hardware installed" message, connections that keep dropping, weak signal next to the router, and Bluetooth that won't turn on or stay paired. Wi-Fi and Bluetooth share the same wireless module and antennas, routed through the display hinge - so the cause can be macOS, a damaged antenna cable, a failed module, or a board-level power fault. We pinpoint the real issue so you're not paying to replace parts that work. AED 250 covers parts, labour and a warranty of up to 12 months.
+            <strong>MacBook Wi-Fi and Bluetooth repair in Dubai</strong> covers the "Wi-Fi: No hardware installed" message, connections that keep dropping, weak signal next to the router, and Bluetooth that won't turn on or stay paired. Wi-Fi and Bluetooth share the same wireless module and antennas, routed through the display hinge - so the cause can be macOS, a damaged antenna cable, a failed module, or a board-level power fault. We pinpoint the real issue so you're not paying to replace parts that work. The quoted price covers parts, labour and a warranty of up to 12 months.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             We service MacBook Air M1/M2/M3, MacBook Pro 13/14/16 (Intel and M-series), including liquid-damaged wireless circuits and post-repair antenna faults.
@@ -51,7 +51,7 @@ export default function MacBookWifiBluetoothRepair() {
         "Free re-check if the fault returns inside 12 months.",
       ]}
       faqs={[
-        { q: "How much does MacBook Wi-Fi or Bluetooth repair cost in Dubai?", a: "A software or settings fix is often done free during the diagnosis. Antenna or wireless-module repair starts at AED 250; board-level wireless repairs start at AED 450. You get an exact quote after a free diagnosis." },
+        { q: "How much does MacBook Wi-Fi or Bluetooth repair cost in Dubai?", a: "A software or settings fix is often done free during the diagnosis. Antenna or wireless-module repair is the most common paid fix; board-level wireless repairs cost more. Either way you get an exact written quote after a free diagnosis." },
         { q: "Why does my MacBook say \"No hardware installed\"?", a: "That usually means macOS can't see the wireless module - which can be a software glitch, a loose or damaged antenna, or a failed chip. Our free diagnosis tells you which it is before you commit to a repair." },
         { q: "Wi-Fi and Bluetooth both stopped - is that one fault?", a: "Often yes. On MacBooks they share a single module and antenna path, so one hardware fault can take out both. That also means a single repair frequently restores both." },
         { q: "How long does it take?", a: "Software fixes are same day. Antenna or module replacement and board-level repairs typically take 1-2 days depending on parts." },
@@ -60,7 +60,7 @@ export default function MacBookWifiBluetoothRepair() {
       reviewNames={["David Boulos", "Anatoliy Tarasenko", "vinay menon"]}
       related={[
         { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Board-level wireless power faults." },
-        { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid hit the wireless card? From AED 700." },
+        { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid hit the wireless card? Board-level repair, quoted after diagnosis." },
         { label: "macOS Reinstall & Software",  href: "/macos-reinstall-dubai",          description: "Software-side network fixes." },
       ]}
     />

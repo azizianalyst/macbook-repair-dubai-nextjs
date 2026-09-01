@@ -13,7 +13,7 @@ const COMPARISON: { factor: string; apple: string; aasp: string; us: string }[] 
   { factor: "Typical cost",
     apple: "Highest, full Apple service pricing",
     aasp: "Apple's published price list",
-    us: "Lower, from AED 49 diagnosis; screens from AED 600, battery from AED 450" },
+    us: "Lower - free diagnosis, written quote per model before any work" },
   { factor: "Parts",
     apple: "Genuine Apple only",
     aasp: "Genuine Apple only",
@@ -65,7 +65,7 @@ export default function WhereToRepairMacBookDubai() {
       serviceName="MacBook Repair (independent vs Apple Store) Dubai"
       quickAnswer={{
         question: "Where should I repair my MacBook in Dubai?",
-        answer: "If your MacBook is in warranty or covered by AppleCare+, use an Apple Store or an Apple Authorised Service Provider. If it's out of warranty, older, or you want a faster, lower-cost board-level repair, an independent specialist like us is usually the better value - from AED 49 diagnosis, same-day on most repairs, with a written warranty up to 12 months. We'll always tell you honestly when an Apple claim is the smarter route.",
+        answer: "If your MacBook is in warranty or covered by AppleCare+, use an Apple Store or an Apple Authorised Service Provider. If it's out of warranty, older, or you want a faster, lower-cost board-level repair, an independent specialist like us is usually the better value - free diagnosis, same-day on most repairs, with a written warranty up to 12 months. We'll always tell you honestly when an Apple claim is the smarter route.",
       }}
       intro={
         <>
@@ -108,8 +108,8 @@ export default function WhereToRepairMacBookDubai() {
         </>
       }
       whatWeFix={[
-        "MacBook screen replacement - from AED 600, genuine where available",
-        "Battery replacement - from AED 450, 3-month battery cover",
+        "MacBook screen replacement - genuine panels where available, quoted per model",
+        "Battery replacement - 3-month battery cover, quoted per model",
         "Logic-board & board-level repair Apple would whole-swap at far higher cost",
         "Water-damage recovery and corrosion treatment",
         "Keyboard, trackpad, charging port and speaker repair",
@@ -134,7 +134,7 @@ export default function WhereToRepairMacBookDubai() {
         { q: "Are you an Apple Authorised Service Provider?", a: "No. We're an independent Apple repair specialist working in Dubai since 2004. We repair in-warranty-expired, AppleCare-ineligible and out-of-warranty Macs, and we'll honestly tell you when an Apple Store or authorised centre is the better route." },
         { q: "Will using an independent repairer void my Apple warranty or AppleCare+?", a: "If your Mac is still under Apple's warranty or AppleCare+, a non-Apple repair can affect that cover - so for in-warranty machines we'll point you to Apple first. Once a Mac is out of warranty there's no Apple cover left to affect." },
         { q: "Do you use genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't - and we tell you which your repair uses before we start. Both carry our written warranty up to 12 months." },
-        { q: "How much cheaper is independent repair than the Apple Store?", a: "It varies by fault, but board-level repair is typically far less than Apple's whole-board replacement. We publish our starting prices (diagnosis from AED 49, screens from AED 600, battery from AED 450) and confirm the exact price in writing after a free diagnosis." },
+        { q: "How much cheaper is independent repair than the Apple Store?", a: "It varies by fault, but board-level repair is typically far less than Apple's whole-board replacement, because we fix the failed component instead of swapping the whole board. Diagnosis is free, and we confirm the exact price in writing before any work starts." },
         { q: "When should I go to Apple instead of you?", a: "If your MacBook is in warranty, eligible for an AppleCare+ claim, or you specifically require only Apple-supplied parts and cost isn't a factor. In those cases the Apple Store or an Apple Authorised Service Provider is the better choice - and we'll say so." },
       ]}
       reviewNames={["Habeeb Rahman", "Aditya Kaushik", "Neil Morecraft"]}

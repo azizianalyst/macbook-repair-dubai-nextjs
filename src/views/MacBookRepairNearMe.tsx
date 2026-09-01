@@ -121,7 +121,7 @@ const FAQS = [
   { q: "How long does free pickup take?",
     a: "Within Dubai Marina, JLT, Internet City, Knowledge Village, Al Barsha - same hour during business hours. Downtown, Business Bay, JBR, Palm - same day. Mirdif, Arabian Ranches, Silicon Oasis - next morning." },
   { q: "Do you cover Sharjah and Abu Dhabi?",
-    a: "Pickup available for AED 100 each way. Sharjah next-day, Abu Dhabi same-week (Tuesdays and Fridays only - courier runs the route twice weekly)." },
+    a: "Pickup to Sharjah and Abu Dhabi is available for a small courier fee, quoted when you book. Sharjah next-day, Abu Dhabi same-week (Tuesdays and Fridays only - courier runs the route twice weekly)." },
   { q: "What if I'm in a hurry - same-day on-site repair?",
     a: "Walk in with an in-stock part fault (MacBook screen, battery, keyboard, iPhone screen, iPhone battery) and the repair finishes in 40 minutes to 2 hours. Wait in the AC office or grab coffee at the Costa downstairs in the tower lobby." },
   { q: "Are you open weekends?",

@@ -99,6 +99,28 @@ function allFiguresAreApple(line) {
   return any;
 }
 
+// Facility fees are third-party facts, not our prices: Concord Tower's parking and valet
+// rates are what the TOWER charges, exactly as Apple's list prices are what APPLE charges.
+// Visitors planning a drop-off genuinely need them, and hiding them would make the page
+// worse while protecting nothing. Narrow on purpose: the line must name the facility fee
+// context; "parking" alone in a sentence about our prices would not be exempted.
+// Per-FIGURE, not per-line: a figure is exempt only when parking/valet context sits within
+// 30 characters of that figure. A line mixing "our repair costs AED 999" with the word
+// "parking" elsewhere keeps failing on the repair figure — proven by self-test below.
+const FACILITY_NEAR = /(?:parking|valet|EV charging)[^.]{0,30}(?:AED|Dhs?\.?)\s*[\d,]+|(?:AED|Dhs?\.?)\s*[\d,]+(?:\/|\s*per\s*)?(?:hour|day)?[^.]{0,30}?(?:parking|valet|day (?:max|cap)|flat\b)/i;
+function allFiguresAreFacility(line) {
+  const figs = [...line.matchAll(/(?:AED|Dhs?\.?)\s*[\d,]+/gi)];
+  if (figs.length === 0) return false;
+  return figs.every((m) => {
+    // Facility word BEFORE the figure ("valet parking ... AED 30"), or the figure is a
+    // rate/flat fee ("AED 5/hour", "AED 25/day max", "AED 30 flat"). A facility word AFTER
+    // a bare figure does NOT exempt it — "repair costs AED 999 with free parking" stays caught.
+    const before = line.slice(Math.max(0, m.index - 40), m.index);
+    const after  = line.slice(m.index + m[0].length, m.index + m[0].length + 12);
+    return /parking|valet|EV charging/i.test(before) || /^\s*(?:\/|per\s*)(?:hour|day)|^\s*flat\b|^\/day/i.test(after);
+  });
+}
+
 const leaks = [];
 for (const file of walk(SRC)) {
   const rel = relative(ROOT, file);
@@ -106,6 +128,7 @@ for (const file of walk(SRC)) {
   const lines = readFileSync(file, "utf8").split("\n");
   lines.forEach((line, i) => {
     if (allFiguresAreApple(line)) return;      // every figure here is Apple's, attributed
+    if (allFiguresAreFacility(line)) return;  // tower parking/valet fees, third-party facts
     if (PRICE_RE.test(line) || GARBLE_RE.test(line)) {
       leaks.push({ rel, n: i + 1, text: line.trim().slice(0, 140) });
     }

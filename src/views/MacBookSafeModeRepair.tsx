@@ -9,7 +9,7 @@ export default function MacBookSafeModeRepair() {
       path="/macbook-safe-mode-repair-dubai"
       eyebrow="Safe mode diagnostics"
       h1="MacBook Safe Mode Diagnostics and Repair in Dubai"
-      subtitle="Crashes, boot loops, a Mac that won't behave. Safe mode strips macOS back to the essentials so we can see what's really wrong, then fix it. Same day, from AED 150, free diagnosis."
+      subtitle="Crashes, boot loops, a Mac that won't behave. Safe mode strips macOS back to the essentials so we can see what's really wrong, then fix it. Same day, free diagnosis, written quote first."
       startingPrice={150}
       timeline="Same day"
       whatsappPrefill="Hi, my MacBook is crashing / won't boot properly - model and what happens:"
@@ -53,12 +53,12 @@ export default function MacBookSafeModeRepair() {
         "If safe mode points to hardware, we quote the part in writing before any repair starts.",
       ]}
       faqs={[
-        { q: "How much does safe mode diagnosis and repair cost in Dubai?", a: "Software-level safe mode work starts at AED 150, VAT included, with same-day turnaround on most jobs. The diagnosis itself is free - you only pay if we fix something and you approve it first. If safe mode shows the fault is hardware, we quote that part separately before we start. WhatsApp the model to get a number in a few minutes." },
+        { q: "How much does safe mode diagnosis and repair cost in Dubai?", a: "Software-level safe mode work is a flat quoted job, VAT included, with same-day turnaround on most jobs. The diagnosis itself is free - you only pay if we fix something and you approve it first. If safe mode shows the fault is hardware, we quote that part separately before we start. WhatsApp the model to get a number in a few minutes." },
         { q: "What is safe mode and what does it actually do?", a: "Safe mode is a stripped-back way to start macOS. It loads only Apple's own software, skips third-party kernel extensions and startup items, and clears certain system caches on the way up. That gives a clean baseline. If the Mac behaves in safe mode but not normally, something you installed is the cause - which is exactly what we want to know on day one in the workshop." },
         { q: "My Mac won't enter safe mode at all - what does that mean?", a: "A Mac that won't reach safe mode has usually moved past a software problem. We see this with a failing SSD, bad RAM, a corrupt system volume or a logic-board fault. It's not a dead end. We run a full hardware pass on the bench at our Media City workshop, find the failing part, and quote the repair before touching it. Diagnosis stays free." },
         { q: "How do I enter safe mode on an Intel versus an Apple Silicon MacBook?", a: "On Intel Macs you hold Shift right after the startup chime until the login window appears. On Apple Silicon (M1, M2, M3, M4) you shut down, hold the power button until you see startup options, pick your disk, then hold Shift and choose Continue in Safe Mode. We handle both daily in Dubai, so if you're not sure which yours is, send the model on WhatsApp." },
         { q: "Will I lose my data during safe mode diagnosis?", a: "No. Safe mode diagnosis and software clean-up are non-destructive - we're removing conflicting extensions and rebuilding caches, not wiping the drive. Your files, apps and settings stay where they are. If a repair ever needs a full macOS reinstall, we tell you first and back up your data before anything is erased." },
-        { q: "Is the diagnosis really free?", a: "Yes. We boot into safe mode, run the hardware checks and tell you what's wrong at no charge. You only pay if you approve a fix, and software work starts at AED 150. There's no fix-no-charge on the diagnostic, so you're never out of pocket just for finding out what's going on with your Mac." },
+        { q: "Is the diagnosis really free?", a: "Yes. We boot into safe mode, run the hardware checks and tell you what's wrong at no charge. You only pay if you approve a fix, and software work is quoted before we stD 150. There's no fix-no-charge on the diagnostic, so you're never out of pocket just for finding out what's going on with your Mac." },
         { q: "How long does it take to turn around?", a: "Most software faults found through safe mode are sorted the same day at our Dubai workshop - removing a bad kext, clearing caches or resetting login items takes a few hours. A full macOS reinstall is usually same day too. If safe mode uncovers a hardware fault, the timeline depends on the part, and we give you a clear estimate up front." },
         { q: "When does safe mode tell you it's a hardware problem?", a: "When the Mac still crashes, loops or freezes in safe mode, or refuses to enter it, the software has been ruled out. From there we test the SSD for read errors, run a memory check, and inspect the logic board for the usual failure points. Common culprits are a dying drive, faulty RAM or a board fault - all of which we repair in Dubai." },
         { q: "Can a macOS update cause these crashes?", a: "Often, yes. After a major update we see Macs that boot-loop or panic because an old driver, antivirus tool or VPN kext no longer matches the new system. Safe mode skips those, so if the Mac is stable in safe mode after an update, we know exactly what to remove or update. Same-day fix in most cases." },
@@ -71,7 +71,7 @@ export default function MacBookSafeModeRepair() {
       ]}
       quickAnswer={{
         question: "What does MacBook safe mode repair cost in Dubai and how does it work?",
-        answer: "Safe mode diagnosis is free at MacBook Repair Dubai, and software repair starts at AED 150 with same-day turnaround. Safe mode boots macOS with only Apple's own software, so we can tell within minutes whether your crashes, boot loops or instability are software or hardware - then fix the cause. If the Mac won't enter safe mode at all, that points to a drive, RAM or logic-board fault, which we repair on the bench in Dubai Media City.",
+        answer: "Safe mode diagnosis is free at MacBook Repair Dubai, and software repair is quoted in writing with same-day turnaround. Safe mode boots macOS with only Apple's own software, so we can tell within minutes whether your crashes, boot loops or instability are software or hardware - then fix the cause. If the Mac won't enter safe mode at all, that points to a drive, RAM or logic-board fault, which we repair on the bench in Dubai Media City.",
       }}
     />
   );
