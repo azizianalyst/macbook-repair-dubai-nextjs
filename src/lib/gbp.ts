@@ -131,6 +131,7 @@ export type CreatePostPayload = {
   summary: string;
   callToAction?: { actionType: string; url?: string };
   event?: { title: string };
+  media?: { mediaFormat: "PHOTO"; sourceUrl: string }[];
 };
 
 export async function listPosts(locationId: string): Promise<GbpPost[]> {

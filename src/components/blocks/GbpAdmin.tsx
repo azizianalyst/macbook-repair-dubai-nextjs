@@ -24,6 +24,7 @@ type Post = {
   createTime: string; updateTime: string;
   callToAction?: { actionType: string; url?: string };
   searchUrl?: string;
+  media?: { mediaFormat: string; sourceUrl?: string }[];
 };
 type BusinessInfo = {
   title?: string; description?: string;
@@ -613,7 +614,7 @@ function PostsTab({ locationName }: { locationName?: string }) {
   const [creating, setCreating] = useState(false);
   const [busy, setBusy] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
-  const [draft, setDraft] = useState({ topicType: "STANDARD", summary: "", ctaType: "LEARN_MORE", ctaUrl: "", addCta: false });
+  const [draft, setDraft] = useState({ topicType: "STANDARD", summary: "", ctaType: "LEARN_MORE", ctaUrl: "", addCta: false, imageUrl: "" });
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -630,9 +631,10 @@ function PostsTab({ locationName }: { locationName?: string }) {
     setBusy(true);
     const payload: Record<string, unknown> = { topicType: draft.topicType, summary: draft.summary };
     if (draft.addCta && draft.ctaType) payload.callToAction = { actionType: draft.ctaType, ...(draft.ctaUrl ? { url: draft.ctaUrl } : {}) };
+    if (draft.imageUrl.trim()) payload.imageUrl = draft.imageUrl.trim();
     const res = await fetch("/api/admin/gbp/posts/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
     const d = await res.json();
-    if (d.ok) { setCreating(false); setDraft({ topicType: "STANDARD", summary: "", ctaType: "LEARN_MORE", ctaUrl: "", addCta: false }); await load(); }
+    if (d.ok) { setCreating(false); setDraft({ topicType: "STANDARD", summary: "", ctaType: "LEARN_MORE", ctaUrl: "", addCta: false, imageUrl: "" }); await load(); }
     else setErr(d.error || "Publish failed");
     setBusy(false);
   }
@@ -694,6 +696,20 @@ function PostsTab({ locationName }: { locationName?: string }) {
                 className={`${inp} resize-none`} maxLength={1500} />
             </div>
 
+            <div>
+              <label className="mb-1 block text-[12px] text-text-faint">Image URL (optional, but posts with an image perform far better)</label>
+              <input value={draft.imageUrl} onChange={(e) => setDraft({ ...draft, imageUrl: e.target.value })}
+                placeholder="/images/devices/iphone-17.jpg or https://…" className={inp} />
+              {draft.imageUrl.trim() && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={draft.imageUrl.trim()}
+                  alt="" className="mt-2 h-32 w-auto rounded-md border border-border object-cover"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
+              )}
+            </div>
+
             {/* [6] Post preview toggle */}
             {draft.summary.trim() && (
               <button onClick={() => setShowPreview((p) => !p)}
@@ -713,6 +729,10 @@ function PostsTab({ locationName }: { locationName?: string }) {
                       <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${typeBadge(draft.topicType)}`}>{typeLabel(draft.topicType)}</span>
                     </div>
                   </div>
+                  {draft.imageUrl.trim() && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={draft.imageUrl.trim()} alt="" className="mb-2 h-40 w-full rounded-md object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                  )}
                   <p className="m-0 text-[13px] text-text leading-relaxed">{draft.summary}</p>
                   {draft.addCta && draft.ctaType && (
                     <div className="mt-2">
@@ -759,7 +779,11 @@ function PostsTab({ locationName }: { locationName?: string }) {
         {posts.map((p) => (
           <div key={p.name} className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0">
+              {p.media?.[0]?.sourceUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={p.media[0].sourceUrl} alt="" className="h-16 w-16 shrink-0 rounded-md object-cover" />
+              )}
+              <div className="min-w-0 flex-1">
                 <span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold mb-2 ${typeBadge(p.topicType)}`}>{typeLabel(p.topicType)}</span>
                 <p className="m-0 text-[13px] text-text">{p.summary || "(no text)"}</p>
                 <p className="m-0 mt-1 text-[11px] text-text-faint">{fmtDate(p.createTime)}</p>
