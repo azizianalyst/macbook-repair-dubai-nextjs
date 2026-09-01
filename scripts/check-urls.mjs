@@ -18,8 +18,12 @@ const routes = new Set();
 
 // 2. old-site redirect map
 const redirectsSrc = readFileSync("redirects.generated.ts", "utf8");
+// The file is TS, not JSON: section comments inside the array ("// --- Search Console 404s")
+// are valid there and broke the naive slice-and-parse. Strip line comments before parsing.
 const redirects = JSON.parse(
-  redirectsSrc.slice(redirectsSrc.indexOf("= [") + 2, redirectsSrc.lastIndexOf("]") + 1)
+  redirectsSrc
+    .slice(redirectsSrc.indexOf("= [") + 2, redirectsSrc.lastIndexOf("]") + 1)
+    .replace(/^\s*\/\/.*$/gm, "")
 );
 
 let fail = 0;
@@ -62,7 +66,8 @@ const sources = new Set(redirects.map((r) => r.source));
 const noSlash = (p) => p.replace(/\/$/, "") || "/";
 for (const r of redirects) {
   const dest = noSlash(r.destination);
-  if (!routes.has(dest) && !sources.has(dest))
+  // .xml/.txt destinations are served by route handlers (route.ts), not page.tsx.
+  if (!routes.has(dest) && !sources.has(dest) && !/\.(xml|txt)$/.test(dest))
     bad(`${r.source} → ${r.destination} (destination has no page.tsx)`);
 }
 for (const r of redirects) {
@@ -79,7 +84,7 @@ const NOINDEX = new Set([
   "/cookies",
   "/blog/tag/imac", "/blog/tag/ipad", "/blog/tag/iphone", "/blog/tag/mac", "/blog/tag/macbook",
 ]);
-const isNoindex = (p) => NOINDEX.has(p) || p.startsWith("/admin");
+const isNoindex = (p) => NOINDEX.has(p) || p.startsWith("/admin") || /-template-demo$/.test(p); // noindex scaffolding, excluded from sitemaps by design
 console.log(`\n[2] live sitemap ↔ codebase routes (${routes.size} routes)`);
 const childSitemaps = [...(await (await fetch(`${SITE}/sitemap.xml`)).text())
   .matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
@@ -101,8 +106,17 @@ if (LIVE) {
   const check = async (path, expect, expectLoc, retries = 2) => {
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
-        const res = await fetch(SITE + path, { redirect: "manual", headers: { "user-agent": "url-check" } });
-        if (res.status !== expect) return bad(`${path} → ${res.status} (want ${expect})`);
+        const res = await fetch(SITE + path, { redirect: "manual", headers: { "user-agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } /* Cloudflare Browser Integrity Check 403s bot-shaped UAs under volume; the crawler UA passes, same as every other audit script here */ });
+        if (res.status !== expect) {
+          // A retry loop existed here but `return bad()` on the first wrong status defeated
+          // it - which is how transient Cloudflare 525s failed healthy pages. 5xx now uses
+          // the remaining attempts; a wrong non-5xx status is a real finding and fails fast.
+          if (res.status >= 500 && attempt < retries) {
+            await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+            continue;
+          }
+          return bad(`${path} → ${res.status} (want ${expect})`);
+        }
         if (expectLoc) {
           const loc = new URL(res.headers.get("location"), SITE).pathname;
           if (loc !== expectLoc) return bad(`${path} 301 → ${loc} (want ${expectLoc})`);
