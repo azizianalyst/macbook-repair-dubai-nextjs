@@ -3,6 +3,8 @@ import { Star, MessageCircle, Phone, CheckCircle2, Wrench, Zap } from "lucide-re
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -242,7 +244,12 @@ export default function MacBookRepairHub() {
 
         <LocationBlock />
       </div>
-      <RelatedArticles path="/macbook-repair-dubai" />
+              <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="mb-lead">
+          <h2 id="mb-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your MacBook repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/macbook-repair-dubai" defaultDeviceType="MacBook" />
+        </section>
+
+        <RelatedArticles path="/macbook-repair-dubai" />
     </PageShell>
   );
 }

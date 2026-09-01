@@ -2,7 +2,8 @@
 // Unlike the source heuristic, this catches interpolated/runtime figures and confirms the real
 // rendered output. Checks FOUR surfaces and names the one a leak sits on: visible body, the
 // <head> meta layer, JSON-LD, and Next's hydration payload. Nothing is excluded — the policy is
-// prices stripped everywhere, including SERP and schema.
+// OUR prices stripped everywhere including SERP and schema; Apple's attributed figures
+// and third-party facility fees are allowed (owner decisions, 2026-08/09).
 //
 // Usage:
 //   1) build + start the site:  npm run build && (npx next start -p 4123 &)
@@ -17,6 +18,38 @@ const ROOT = join(import.meta.dirname, "..");
 
 // Visible price figure (same broadened detector as the source audit, minus the code-only forms).
 const PRICE_RE = /\bAED\s*\d|\d[\d,]*\s*AED\b|\d[\d,]*\s*[Dd]irhams?\b|\bDhs?\.?\s*\d/g;
+
+// Two figure classes are policy-ALLOWED and must not fail the gate (mirrors the source gate):
+//  1. Apple's attributed prices - the owner's decision keeps Apple's figure in comparison
+//     tables and "Apple charges AED N" sentences; ours became the CTA.
+//  2. Concord Tower's parking/valet rates - the tower's fees, not ours; facility word before
+//     the figure or a rate suffix (/hour, /day, flat).
+// Everything else - OUR prices - still fails. Exemption is per-figure on a +/-90-char window,
+// with an ours-marker override so "our price AED 600 (vs Apple ...)" is still caught.
+const ATTRIB = /\(Apple list\)|Apple list price|Apple Store|at Apple\b|Apple lists?|Apple (?:typically )?charges|Apple['\u2019]s|per Apple['\u2019]s|AppleCare\+?|Genius Bar/i;
+const OURS = /\bour(?:s| workshop| price| quote)?\b|\bwe charge\b|\bwe fit\b|\bat our\b|MacBook Repair Dubai (?:charges|quotes|estimates|replaces|provides)/i;
+function isAllowedFigure(text, idx, len) {
+  const before = text.slice(Math.max(0, idx - 90), idx);
+  const after  = text.slice(idx + len, idx + len + 40);
+  // Facility fee: facility word before, or rate suffix directly after.
+  const facBefore = /parking|valet|EV charging/i.test(text.slice(Math.max(0, idx - 40), idx));
+  const rateAfter = /^\s*(?:\/|per\s*)(?:hour|day)|^\s*flat\b|^\/day/i.test(after);
+  if (facBefore || rateAfter) return true;
+  // Apple attribution near the figure, without a nearer ours-marker before it.
+  const attribNear = ATTRIB.test(before) || ATTRIB.test(after);
+  if (!attribNear) return false;
+  const oursMatch = [...before.matchAll(new RegExp(OURS.source, "gi"))].pop();
+  const attribMatch = [...before.matchAll(new RegExp(ATTRIB.source, "gi"))].pop();
+  if (oursMatch && (!attribMatch || oursMatch.index > attribMatch.index)) return false;
+  return true;
+}
+function realHits(text) {
+  const out = [];
+  for (const m of text.matchAll(PRICE_RE)) {
+    if (!isAllowedFigure(text, m.index, m[0].length)) out.push(m[0]);
+  }
+  return [...new Set(out)];
+}
 
 // High-risk + representative sample (cost/pricing pages, hubs, one of each template family,
 // blog cost posts, home). Override by passing a routes file listing every route for a full sweep.
@@ -94,7 +127,7 @@ for (const route of routes) {
     const s = surfaces(html);
     const per = {};
     for (const [name, text] of Object.entries(s)) {
-      const hits = [...new Set(text.match(PRICE_RE) || [])];
+      const hits = realHits(text);
       if (hits.length) per[name] = hits;
     }
     const structured = [...new Set(s.schema.match(SCHEMA_PRICE_RE) || [])];

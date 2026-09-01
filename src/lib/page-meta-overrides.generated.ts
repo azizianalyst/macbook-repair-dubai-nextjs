@@ -270,7 +270,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-screen-repair-dubai": {
     "title": "MacBook Screen Repair Dubai. Same-Day",
-    "description": "MacBook Screen Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
+    "description": "MacBook Screen Repair Dubai at Concord Tower, Media City. Same-day, 3-month warranty. Free diagnosis, quote on WhatsApp."
   },
   "/": {
     "title": "MacBook Repair Dubai | Expert Apple Repair, 40,000+ Fixed",
@@ -278,11 +278,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-battery-replacement-dubai": {
     "title": "MacBook Battery Replacement Dubai. Free Diagnosis, Same-Day",
-    "description": "MacBook Battery Replacement Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
+    "description": "MacBook Battery Replacement Dubai at Concord Tower, Media City. Same-day, 3-month warranty. Free diagnosis, quote on WhatsApp."
   },
   "/macbook-logic-board-repair-dubai": {
     "title": "MacBook Logic Board Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "MacBook Logic Board Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
+    "description": "MacBook Logic Board Repair Dubai - component-level, at Concord Tower, Media City. Free diagnosis, written quote first."
   },
   "/macbook-water-damage-repair-dubai": {
     "title": "MacBook Water Damage Repair Dubai — Act Fast, Save Your Mac",
@@ -806,7 +806,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-charging-port-repair-dubai": {
     "title": "iPhone Charging Port Repair Dubai. Component-Level Repair",
-    "description": "iPhone Charging Port Repair Dubai. Expert iPhone repair in Dubai. 40 min screen/battery, 3-month warranty. 055 741 3706."
+    "description": "iPhone Charging Port Repair Dubai. Same-day board-level port repair, 3-month warranty. Free diagnosis, quote on WhatsApp."
   },
   "/iphone-data-recovery-dubai": {
     "title": "iPhone Data Recovery Dubai. Free Assessment, No-Fix No-Charge",
@@ -874,7 +874,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-screen-repair-dubai": {
     "title": "iPhone Screen Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone Screen Repair Dubai. Expert iPhone repair in Dubai. 40 min screen/battery, 3-month warranty. 055 741 3706."
+    "description": "iPhone Screen Repair Dubai. 40-minute fitting, 3-month warranty. Free diagnosis, quote on WhatsApp. 055 741 3706."
   },
   "/iphone-se-3rd-gen-repair-dubai": {
     "title": "iPhone Se 3rd Gen Repair Dubai. Expert Dubai Repair",
@@ -1010,7 +1010,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-repair-dubai": {
     "title": "Mac Repair Dubai. Expert Same-Day 2026",
-    "description": "Mac Repair Dubai. Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio."
+    "description": "Mac Repair Dubai for MacBook, iMac, Mac mini & Studio. Free diagnosis, written quote before any work, same-day on most repairs."
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai. Free Diagnosis, Same-Day",
@@ -1306,7 +1306,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai. Expert, Same-Day",
-    "description": "MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, 3-month warranty. 055 741 3706."
+    "description": "MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, warranty up to 12 months. Free diagnosis, quote on WhatsApp."
   },
   "/macbook-repair-dubai-hills": {
     "title": "MacBook Repair Dubai Hills. Same-Day",

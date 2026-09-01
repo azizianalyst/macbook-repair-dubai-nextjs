@@ -10,6 +10,9 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -187,6 +190,20 @@ export default function MacRepairHub() {
           </p>
         </Hero>
 
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Mohammed, Mac desktop specialist"
+          years={14}
+          items={[
+            "One workshop covers every Mac - MacBook, iMac, Mac mini, Mac Studio and Mac Pro, Intel and Apple Silicon.",
+            "Diagnosis is free on every machine, with the exact price confirmed in writing before any work.",
+            "Board-level component repair is the default here - a failed chip does not mean a whole new board.",
+            "Screens and batteries are same-day on most models; board and liquid work runs 2-5 days.",
+            "Written warranty up to 12 months, and no charge if the fault cannot be fixed.",
+            "Free pickup and delivery across Dubai mainland from Concord Tower, Media City.",
+          ]}
+        />
         {/* ── USP STRIP ── */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
           <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap justify-center gap-x-xl gap-y-sm">
@@ -421,7 +438,12 @@ export default function MacRepairHub() {
         </section>
 
       </div>
-      <RelatedArticles path="/mac-repair-dubai" />
+              <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="mac-lead">
+          <h2 id="mac-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your Mac repair quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/mac-repair-dubai" defaultDeviceType="MacBook" />
+        </section>
+
+        <RelatedArticles path="/mac-repair-dubai" />
     </PageShell>
   );
 }

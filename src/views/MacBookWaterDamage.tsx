@@ -8,6 +8,9 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
@@ -203,6 +206,20 @@ export default function MacBookWaterDamage() {
           </div>
         </Hero>
 
+
+        <TakeawaysByline
+          updated="September 2026"
+          reviewer="Shafiq, Lead technician"
+          years={15}
+          items={[
+            "Power off now and do not charge - electricity plus liquid is what kills boards, not the liquid alone.",
+            "The first 24-48 hours decide the outcome; corrosion spreads while the machine sits.",
+            "Rice does nothing. The board needs an ultrasonic bath and corrosion removal under a microscope.",
+            "We repair at component level after cleaning - most liquid-damaged MacBooks are saveable.",
+            "Liquid work carries a 15-day warranty and no-fix no-charge; data usually survives on the SSD.",
+            "Free pickup across Dubai - the sooner it reaches the bench, the better the odds.",
+          ]}
+        />
         {/* URGENT warning strip */}
         <div className="border-y border-red-900/40 bg-red-950/40">
           <div className="mx-auto max-w-content px-5 md:px-6 py-md">
@@ -432,6 +449,11 @@ export default function MacBookWaterDamage() {
         </section>
 
         {/* Related articles */}
+                <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="water-lead">
+          <h2 id="water-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get urgent liquid-damage help</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/macbook-water-damage-repair-dubai" defaultDeviceType="MacBook" />
+        </section>
+
         <RelatedArticles path="/macbook-water-damage-repair-dubai" topics={["water damage", "macbook", "liquid"]} />
 
         {/* Final CTA */}
