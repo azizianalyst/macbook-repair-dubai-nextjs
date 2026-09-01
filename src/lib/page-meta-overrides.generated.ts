@@ -317,8 +317,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Apple Repair Programs Dubai. Apple offers free repairs for specific defects on certain models."
   },
   "/apple-service-center-dubai": {
-    "title": "Apple Service Center Dubai. Expert Same-Day 2026",
-    "description": "Apple Service Center Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts."
+    "title": "Apple Service Center Dubai - Independent, Not Authorised",
+    "description": "Independent Apple service center in Dubai, not Apple Authorised. MacBook, iPhone, iPad & iMac repairs, genuine or quality-tested parts, same-day."
   },
   "/apple-t2-chip-data-recovery-dubai": {
     "title": "Apple T2 Chip Data Recovery Dubai",

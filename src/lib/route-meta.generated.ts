@@ -21,8 +21,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPhone 11 display issues. We help check your eligibility."
   },
   "/apple-service-center-dubai": {
-    "title": "Apple Service Center Dubai - Mac, iPhone & iPad Repairs",
-    "description": "Trusted Apple service center in Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts. Fast, reliable support."
+    "title": "Apple Service Center Dubai - Independent, Not Authorised",
+    "description": "Independent Apple service center in Dubai - not Apple Authorised. MacBook, iPhone, iPad & iMac repairs, genuine or quality-tested parts, same-day. WhatsApp for a price."
   },
   "/apple-t2-chip-data-recovery-dubai": {
     "title": "Apple T2 Chip Data Recovery Dubai. MacBook 2018–2020 | No-Fix No-Charge",

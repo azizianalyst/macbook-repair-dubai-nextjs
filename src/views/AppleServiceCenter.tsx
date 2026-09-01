@@ -10,10 +10,20 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
 import { NAP } from "@/content/site";
+
+const SERVICE_CENTER_COMPARISON = [
+  { label: "Wait for an appointment", us: "Walk in or free pickup, no booking needed", them: "Genius Bar appointment often days out" },
+  { label: "Typical price", us: "Around half of Apple's pricing", them: "Full retail / whole-module swap" },
+  { label: "Out-of-warranty & vintage Macs", us: "Component-level board repair", them: "Often “not serviceable” - replace" },
+  { label: "In-warranty or AppleCare+ fault", us: "We tell you honestly to go to Apple instead", them: "Covered, no charge - the right call" },
+  { label: "Turnaround", us: "Same-day on most repairs", them: "5-10 business days, often sent away" },
+  { label: "Warranty on the repair", us: "Written warranty up to 12 months", them: "Varies by service" },
+];
 
 const BADGES = ["Professional Services", "Customer Satisfaction", "Same Day Service", "Friendly Team"];
 
@@ -71,11 +81,11 @@ const WHEN = [
 const BENEFITS = [
   { title: "Expert Assistance", body: "Receive professional help from expert technicians." },
   { title: "Quality Repairs", body: "Our team ensures high-quality repairs using only genuine parts." },
-  { title: "Help Guidance", body: "24/7 online support available by live chat service." },
+  { title: "Help Guidance", body: "WhatsApp is answered 24/7, so you can ask a question or get a quote any time." },
   { title: "Timely Service", body: "We make sure to fulfil all commitments we made with you, on time." },
   { title: "Extended Device Life", body: "Our skilled team enhances the longevity and performance of your device." },
   { title: "Technical Advice", body: "Receive guidance from experts on device maintenance and usage." },
-  { title: "Remote Service", body: "Experts are available 24/7 for remote services." },
+  { title: "Remote Software Support", body: "Software issues - slow performance, iCloud sync, app crashes - are often diagnosed and fixed remotely, without a pickup." },
   { title: "Peace of Mind", body: "Relax knowing your device is in reliable hands." },
 ];
 
@@ -95,6 +105,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQS = [
+  { q: "Are you an official or Apple Authorised Service Center?", a: "No - we are an independent Apple service center, not an Apple Authorised Service Provider. If your device is still covered by Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple, because that route is free for a covered fault. For everything else - out-of-warranty, older models, or component-level board repair Apple won't attempt - we're usually faster and around half the price." },
   { q: "Is it possible to drop off my Apple device, or do I have to schedule an appointment first?", a: "You can absolutely drop off your Apple device at our location. Our service is designed to be convenient and efficient, whether you schedule an appointment or drop off your device spontaneously." },
   { q: "Do you provide a warranty on repairs?", a: "Yes, we provide a warranty for your peace of mind. Depending on the type of repair, we offer a warranty covering both parts and labour, and our team will take care of any issues you have with your device after we repair it." },
   { q: "My device is out of warranty. Can you still repair it?", a: "Yes, we offer repair services for both in-warranty and out-of-warranty devices. Any device can be diagnosed and repaired by one of our skilled technicians." },
@@ -117,9 +128,9 @@ function CallButtons() {
 export default function AppleServiceCenter() {
   useSeo(
     {
-      title: "Apple Service Center Dubai - Mac, iPhone & iPad Repairs",
+      title: "Apple Service Center Dubai - Independent, Not Authorised",
       description:
-        "Trusted Apple service center in Dubai. Certified technicians for MacBook, iPhone, iPad & iMac repairs. Genuine parts. Fast, reliable support.",
+        "Independent Apple service center in Dubai - not Apple Authorised. MacBook, iPhone, iPad & iMac repairs, genuine or quality-tested parts, same-day. WhatsApp for a price.",
       path: "/apple-service-center-dubai",
     },
     [localBusiness(), organization()],
@@ -133,14 +144,14 @@ export default function AppleServiceCenter() {
         imageAlt={topicForPath("/apple-service-center-dubai")?.alt}
         variant="device"
         tone="dark"
-        eyebrow="Apple Service Center"
-        title="Apple Service Center Dubai - Trusted Repairs for MacBook, iMac & iMac Pro"
-        subtitle="We offer fast, certified repairs for your MacBook Pro, MacBook Air and other Apple devices. From maintenance and cleaning to screen replacements and battery fixes, our expert technicians use only genuine Apple parts. Join hundreds of satisfied customers and experience our 5.0-star service today."
+        eyebrow="Independent Apple Service Center - Not Apple Authorised"
+        title="Apple Service Center Dubai - Independent Repairs for MacBook, iMac & More"
+        subtitle="Fast, honest repairs for your MacBook Pro, MacBook Air and other Apple devices. From maintenance and cleaning to screen replacements and battery fixes, our technicians use genuine Apple parts where available and quality-tested parts otherwise - we tell you which before any work starts. Join hundreds of satisfied customers and experience our 5.0-star service today."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Customer rating 5.0</span>
           <span>·</span>
-          <span>Genuine Apple parts</span>
+          <span>Independent, not Apple Authorised</span>
           <span>·</span>
           <span>Same-day service</span>
         </p>
@@ -171,6 +182,13 @@ export default function AppleServiceCenter() {
           ))}
         </div>
       </section>
+
+      <VsAppleStore
+        tone="dark"
+        heading="Independent Apple Service Center vs an Authorised Center"
+        intro="We are an independent Apple service center in Dubai, not an Apple Authorised Service Provider. Here's honestly how the two compare - including when Apple or an authorised center is genuinely the better call."
+        rows={SERVICE_CENTER_COMPARISON}
+      />
 
       {/* Services */}
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
@@ -262,7 +280,7 @@ export default function AppleServiceCenter() {
       {/* Tools */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Tools We Use for Apple Repairs</h2>
-        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too. These tools help ensure Apple devices are repaired safely, efficiently, and in accordance with Apple's standards.</p>
+        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too - the same precision tooling an authorised center uses, run by an independent team.</p>
         <ul className="flex flex-wrap gap-2">
           {TOOLS.map((t) => (
             <li key={t} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text-muted">{t}</li>
@@ -288,7 +306,7 @@ export default function AppleServiceCenter() {
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Certified technicians, genuine Apple parts, same-day service. WhatsApp or call us for a free assessment of your Apple device.
+            Independent Apple specialists, genuine or quality-tested parts, same-day service. WhatsApp or call us for a free assessment of your Apple device.
           </p>
           <CallButtons />
           </div>
