@@ -4,6 +4,7 @@
 // Google Images licensable-image spec.
 import { ROUTES } from "@/lib/routes.generated";
 import { SITEMAP_LAST_UPDATED } from "@/content/site";
+import { LASTMOD } from "@/content/lastmod.generated";
 import { imageForRoute } from "@/lib/page-images";
 import { NextResponse } from "next/server";
 
@@ -25,7 +26,7 @@ ${entries
   .map(
     (e) => `  <url>
     <loc>${SITE}${e.path}/</loc>
-    <lastmod>${SITEMAP_LAST_UPDATED}</lastmod>
+    <lastmod>${LASTMOD[e.path] ?? SITEMAP_LAST_UPDATED}</lastmod>
     <image:image>
       <image:loc>${SITE}${e.img.src}</image:loc>
     </image:image>

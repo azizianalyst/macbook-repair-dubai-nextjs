@@ -190,7 +190,7 @@ export default function MacBookAirRepair() {
       }}
 
       whatIs={{
-        heading: "What actually fails on a MacBook Air",
+        heading: "What actually fails on a MacBook Air?",
         entityName: "MacBook Air repair",
         definition: (
           <>
@@ -235,7 +235,7 @@ export default function MacBookAirRepair() {
 
       comparison={{
         eyebrow: "Independent vs Apple Store",
-        headline: "How an independent workshop differs from the Apple Store",
+        headline: "How is an independent workshop different from the Apple Store?",
         description:
           "We are an independent Apple repair specialist — not an Apple Authorised Service Provider. That has real trade-offs in both directions, so here they are.",
         leftLabel: "MacBook Repair Dubai",
@@ -252,7 +252,7 @@ export default function MacBookAirRepair() {
       }}
 
       methodology={{
-        heading: "How a MacBook Air repair runs",
+        heading: "How does a MacBook Air repair work?",
         intro: "Four steps, and you approve the cost before anything is opened.",
         steps: [
           { title: "Free diagnosis", body: "Drop in or request a pickup. A technician finds the actual fault at no cost and explains it before any work is discussed." },
@@ -263,7 +263,7 @@ export default function MacBookAirRepair() {
       }}
 
       partsAndTooling={{
-        headline: "Parts and tooling we use on MacBook Air",
+        headline: "What parts and tooling do we use on MacBook Air?",
         intro: "What the bench actually runs on. We are independent, so we are explicit about part grades rather than implying everything is Apple original.",
         items: [
           { name: "Genuine and OEM-grade display panels", note: "Genuine Apple panels where supply allows, OEM-grade otherwise. True Tone is preserved on genuine panels. We tell you which you are getting before fitting." },

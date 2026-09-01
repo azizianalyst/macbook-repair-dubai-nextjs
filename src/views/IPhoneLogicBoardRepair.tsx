@@ -66,7 +66,7 @@ export default function IPhoneLogicBoardRepair() {
         { label: "iPhone Repair Hub",          href: "/iphone-repair-dubai",                description: "Every iPhone service in one place." },
         { label: "iPhone Water Damage Repair", href: "/iphone-water-damage-repair-dubai",    description: "Sister fault - liquid kills boards. Message us for a quote." },
         { label: "iPhone Data Recovery",        href: "/iphone-data-recovery-dubai",          description: "Pull data off a dead-board iPhone. Message us for a quote." },
-        { label: "Can iPhone motherboard be repaired?", href: "/can-iphone-motherboard-be-repaired", description: "A full guide to iPhone logic board repair options." },
+        { label: "Can iPhone motherboard be repaired?", href: "/iphone-motherboard-repair-dubai", description: "A full guide to iPhone logic board repair options." },
       ]}
     />
   );

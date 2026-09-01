@@ -248,7 +248,7 @@ const OVERRIDE: Record<string, Meta> = {
     title: "iPhone Shocking You While Charging? Causes and Safe Fixes",
     description: "A tingle or mild shock when charging your iPhone is almost always a charger grounding issue, not a phone fault. Here's what causes it and how to fix it.",
   },
-  "/can-iphone-motherboard-be-repaired": {
+  "/iphone-motherboard-repair-dubai": {
     title: "Can an iPhone Motherboard Be Repaired? Yes — Here's How",
     description: "Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power issues, Face ID, audio, and GPU faults. Dubai pricing included.",
   },

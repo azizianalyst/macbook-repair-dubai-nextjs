@@ -1,5 +1,6 @@
 import { ROUTES } from "@/lib/routes.generated";
 import { SITEMAP_LAST_UPDATED } from "@/content/site";
+import { LASTMOD } from "@/content/lastmod.generated";
 import { NextResponse } from "next/server";
 
 const SITE = "https://macbook-repair-dubai.ae";
@@ -11,7 +12,7 @@ export function GET() {
   const urls = ROUTES.filter(isGuide);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((p) => `  <url><loc>${SITE}${p}/</loc><lastmod>${SITEMAP_LAST_UPDATED}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join("\n")}
+${urls.map((p) => `  <url><loc>${SITE}${p}/</loc><lastmod>${LASTMOD[p] ?? SITEMAP_LAST_UPDATED}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join("\n")}
 </urlset>`;
   return new NextResponse(xml, { headers: { "Content-Type": "application/xml" } });
 }

@@ -35,6 +35,9 @@ const nextConfig: NextConfig = {
       // Manual redirects (hand-added, kept separate from the auto-generated legacy set in
       // redirects.generated.ts). Common WordPress service-business paths that have no live
       // route — map them to the services hub instead of letting them 404.
+      // 2026-09-01 slug hygiene: sentence-shaped question slug -> service keyword slug.
+      // GSC: 3,436 impressions at position 16 for the service query this page answers.
+      { source: "/can-iphone-motherboard-be-repaired", destination: "/iphone-motherboard-repair-dubai/", statusCode: 301 },
       { source: "/services", destination: "/apple-repair-dubai/", statusCode: 301 },
       { source: "/our-services", destination: "/apple-repair-dubai/", statusCode: 301 },
       // Cannibalization merges (2026-06 architecture audit): same service / same intent

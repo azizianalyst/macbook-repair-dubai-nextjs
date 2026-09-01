@@ -7,7 +7,7 @@ export default function GuideIPhoneMotherboardRepair() {
     <BlogPostTemplate
       seoTitle="Can an iPhone Motherboard Be Repaired? Yes. Here's How"
       seoDescription="Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power, charging, Face ID and audio faults in Dubai. Message us for a quote."
-      path="/can-iphone-motherboard-be-repaired"
+      path="/iphone-motherboard-repair-dubai"
       category="Repairs · iPhone Logic Board"
       h1="Can an iPhone Motherboard Be Repaired?"
       hook="Yes, iPhone logic board repair is possible at the component level, and it's often far cheaper than a replacement phone."

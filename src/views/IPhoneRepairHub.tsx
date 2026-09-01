@@ -340,7 +340,7 @@ export default function IPhoneRepairHub() {
 
         {/* ── SIGNS ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <SectionHeading label="Warning signs" title="Signs your iPhone needs repair" />
+          <SectionHeading label="Warning signs" title="How do I know my iPhone needs repair?" />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-[900px] mx-auto">
             {[
               "Water damage or liquid exposure",
@@ -442,7 +442,7 @@ export default function IPhoneRepairHub() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[48px]">
           <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Related guides</p>
           <ul className="flex flex-col gap-sm">
-            <li><Link to="/can-iphone-motherboard-be-repaired" className="text-accent hover:underline">Can iPhone motherboard be repaired?</Link><span className="text-text-muted text-[14px] ml-2">A full guide to iPhone logic board repair options.</span></li>
+            <li><Link to="/iphone-motherboard-repair-dubai" className="text-accent hover:underline">Can iPhone motherboard be repaired?</Link><span className="text-text-muted text-[14px] ml-2">A full guide to iPhone logic board repair options.</span></li>
             <li><Link to="/iphone-16-shocks-while-charging" className="text-accent hover:underline">iPhone shocking while charging</Link><span className="text-text-muted text-[14px] ml-2">Why your iPhone gives electric shocks when charging and how to fix it.</span></li>
           </ul>
         </section>

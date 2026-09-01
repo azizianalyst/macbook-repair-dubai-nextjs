@@ -788,10 +788,6 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Boot Camp Windows on MacBook Dubai - Intel Boot Camp & Apple Silicon Parallels",
     "description": "Boot Camp Windows install Dubai. Intel Macs use Boot Camp; Apple Silicon needs Parallels or VMware. Same-day setup. WhatsApp us for today's price."
   },
-  "/can-iphone-motherboard-be-repaired": {
-    "title": "Can an iPhone Motherboard Be Repaired? Yes. Here's How",
-    "description": "Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power, charging, Face ID and audio faults in Dubai. Message us for a quote."
-  },
   "/cookies": {
     "title": "Cookie Policy - MacBook Repair Dubai",
     "description": "The 4 cookies set by macbook-repair-dubai.ae, what each one does, and how to disable them. No advertising trackers. Updated April 2026."
@@ -1150,6 +1146,10 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   "/iphone-microphone-repair-dubai": {
     "title": "iPhone Microphone Repair Dubai | 1-Day Turnaround",
     "description": "iPhone microphone repair Dubai. Modern iPhones have 4 mics - we isolate which is broken. Often water-damage related. 1 day. Message us for a price. Call 055 741 3706."
+  },
+  "/iphone-motherboard-repair-dubai": {
+    "title": "Can an iPhone Motherboard Be Repaired? Yes. Here's How",
+    "description": "Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power, charging, Face ID and audio faults in Dubai. Message us for a quote."
   },
   "/iphone-network-unlock-dubai": {
     "title": "iPhone Network Unlock Dubai - Carrier Unlock via IMEI",

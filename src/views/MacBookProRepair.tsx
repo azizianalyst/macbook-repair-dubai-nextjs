@@ -474,7 +474,7 @@ export default function MacBookProRepair() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <SectionHeading
             label="Warning signs"
-            title="Signs your MacBook Pro needs repair"
+            title="How do I know my MacBook Pro needs repair?"
           />
           {/* Left/right split: image on left, cards on right */}
           <div className="flex flex-col lg:flex-row gap-10 items-start">
