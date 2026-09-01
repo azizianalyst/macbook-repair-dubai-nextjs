@@ -38,6 +38,17 @@ const nextConfig: NextConfig = {
       // 2026-09-01 slug hygiene: sentence-shaped question slug -> service keyword slug.
       // GSC: 3,436 impressions at position 16 for the service query this page answers.
       { source: "/can-iphone-motherboard-be-repaired", destination: "/iphone-motherboard-repair-dubai/", statusCode: 301 },
+      // 2026-09-01 GSC 404 validation round two: URLs Google still crawls that the first
+      // 404-fix pass missed. /team/:slug is self-inflicted - the Person schema @id uses
+      // /team/<name>#person and Google crawls the path; About is where those people live.
+      { source: "/team/:slug", destination: "/about/", statusCode: 301 },
+      // Model-slug variants without the chip tier ("-pro-") that Google holds from old links.
+      { source: "/macbook-pro-14-m1-2021-repair-dubai", destination: "/macbook-pro-14-m1-pro-2021-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-14-m2-2023-repair-dubai", destination: "/macbook-pro-14-m2-pro-2023-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-16-m2-2023-repair-dubai", destination: "/macbook-pro-16-m2-pro-2023-repair-dubai/", statusCode: 301 },
+      // Blog-prefixed variants of service pages / renamed posts.
+      { source: "/blog/macbook-pro-m2-screen-repair-dubai", destination: "/macbook-pro-m2-screen-repair-dubai/", statusCode: 301 },
+      { source: "/blog/macbook-pro-battery-drain-dubai", destination: "/blog/macbook-pro-battery-draining-fast/", statusCode: 301 },
       { source: "/services", destination: "/apple-repair-dubai/", statusCode: 301 },
       { source: "/our-services", destination: "/apple-repair-dubai/", statusCode: 301 },
       // Cannibalization merges (2026-06 architecture audit): same service / same intent
