@@ -40,7 +40,7 @@ async function load(): Promise<DB> {
 }
 
 async function save(db: DB): Promise<void> {
-  await fs.mkdir(/*turbopackIgnore: true*/ path.dirname(FILE), { recursive: true });
+  await fs.mkdir(path.dirname(FILE), { recursive: true });
   const tmp = `${FILE}.tmp`;
   await fs.writeFile(tmp, JSON.stringify(db), "utf8");
   await fs.rename(tmp, FILE); // atomic replace
