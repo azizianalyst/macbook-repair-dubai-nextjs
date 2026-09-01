@@ -166,7 +166,7 @@ Scored `(Commercial Intent × Business Potential) ÷ Competition`. Only ≥3 sho
 | 5 | ✅ **Renamed+301** | `/can-iphone-motherboard-be-repaired` → `/iphone-motherboard-repair-dubai` | 6 | Already done pre-2026-09-01 (commit `06f5caa`) |
 | 6 | ✅ **Renamed+301** | `/macbook-repair-near-me` → `/macbook-repair-near-me-dubai/` | 6 | **Done 2026-09-01** — was a substantial existing page (356 lines) on the wrong slug, not a gap |
 | 7 | ✅ **Renamed+301** | `/best-macbook-repair-shop-dubai` → `/best-macbook-repair-dubai/` | 6 | **Done 2026-09-01** — same situation, 225 lines of existing content |
-| 8 | **Strengthen** | `/apple-service-center-dubai/` | 6 | Many impressions at 20–37; own the *independent alternative* angle — still open |
+| 8 | ✅ **Strengthened** | `/apple-service-center-dubai/` | 6 | **Done 2026-09-01** — found worse than expected: the live page claimed "Certified technicians" with zero disclaimer, the exact violation this finding said to avoid. Fixed the framing throughout, added the `VsAppleStore` comparison + disclaimer, added a direct FAQ. |
 | 9 | ✅ **Built** | `/macbook-screen-repair-near-me-dubai/` | 4 | **Done 2026-09-01** — the one candidate that was a genuine gap, not an existing page under a different slug |
 | 10 | ~~Rename+301~~ | 4 more service-intent question slugs | 4 | **CORRECTED + DONE 2026-09-01** — checked all 17 remaining sentence slugs against their actual pages: every one is `BlogPostTemplate` content, none are service pages behind a question slug. Item 10 was based on guessing intent from slug wording alone. |
 | 11 | ✅ **Moved** | 17 informational question slugs → `/blog/` | 3 | **Done 2026-09-01** — all 17 (not ~14; the audit undercounted), each with a 301 and every cross-link fixed |
@@ -199,10 +199,11 @@ GSC demand. `DEVICE_TYPES` stays as-is; no AirPods/Watch option needed.
   live case during the 2026-09-01 renames (`/blog/macbook-repair-near-me-dubai` was chaining
   through the old slug)
 
-## Batch C — strengthen, don't build
+## Batch C — strengthen, don't build — DONE 2026-09-01
 
-`/apple-service-center-dubai/` onto `AziziTemplate`, absorbing the intent of the pages folded
-into it. (`/apple-watch-repair-dubai/` dropped along with the rest of Batch A.)
+`/apple-service-center-dubai/` fixed in place (kept its existing hand-built template rather
+than a rebuild onto `AziziTemplate` — the actual problem was a live false claim, not a
+template mismatch). `/apple-watch-repair-dubai/` dropped along with the rest of Batch A.
 
 ## Genuine build — done 2026-09-01
 
@@ -213,9 +214,13 @@ gap, not an existing page on the wrong slug. Built on `SubServicePageTemplate`, 
 ## Sequence (updated)
 
 1. ~~Batch A~~ — dropped
-2. **The 8 GSC money pages** onto `AziziTemplate` (already agreed) — still open
+2. **The 8 GSC money pages** onto `AziziTemplate` (already agreed) — still open, the only item left
 3. ~~Batch B remainder~~ — done
-4. **Batch C** — strengthen `/apple-service-center-dubai/` — still open, the last item from this audit
+4. ~~Batch C~~ — done
+
+**This audit is closed out.** Everything scored ≥3 in Part 3 is done, dropped, or corrected.
+The only outstanding work from this document is item 2 above, which was never part of this
+audit's own scoring — it's a separate, already-agreed track.
 
 ## Open questions — resolved 2026-09-01
 

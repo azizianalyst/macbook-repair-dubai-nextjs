@@ -163,6 +163,9 @@ Then: cluster hubs → top MacBook services → top iPhone services. **Not all 2
 | ✅ | Move sentence-slug question pages under `/blog/` + 301 — all 17 done (2026-09-01) | 🤖 |
 | ✅ | Build `/macbook-screen-repair-near-me-dubai/` — the one candidate that was a genuine gap (2026-09-01) | 🤖 |
 | ✅ | AirPods + Apple Watch restores — **dropped**, confirmed no in-house service (2026-09-01) | — |
+| ✅ | Strengthen `/apple-service-center-dubai/` — found and fixed a live "certified technicians" claim with zero authorisation disclaimer; added the honest independent-alternative comparison (2026-09-01) | 🤖 |
+
+**The keyword-gap audit is closed out** — everything it scored is done, dropped, or corrected. See [keyword-service-gap-audit-2026-08-30.md](keyword-service-gap-audit-2026-08-30.md).
 
 ## Hide-prices migration — blocked, own session
 
