@@ -18,6 +18,8 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { localBusiness, organization } from "@/lib/schema";
 import { NAP } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
@@ -272,7 +274,7 @@ export default function MacBookProRepair() {
     {
       title: "MacBook Pro Repair Dubai - M1-M5 Screen, Battery & Logic Fix",
       description:
-        "Expert MacBook Pro repair in Dubai for M1-M5 and Intel models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service.",
+        "Expert MacBook Pro repair in Dubai, M1-M5 and Intel. Screen, battery, keyboard & logic board. Free diagnosis, quote on WhatsApp, same-day service.",
       path: "/macbook-pro-repair-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -289,7 +291,7 @@ export default function MacBookProRepair() {
             <BreadcrumbTrail tone="dark" trail={[
               { name: "Home", path: "/" },
               { name: "Apple Repair", path: "/apple-repair-dubai" },
-              { name: "MacBook Repair", path: "/" },
+              { name: "MacBook Repair", path: "/macbook-repair-dubai" },
               { name: "MacBook Pro Repair", path: "/macbook-pro-repair-dubai" },
             ]} />
           </div>
@@ -325,6 +327,25 @@ export default function MacBookProRepair() {
             <span>·</span><span>Retina XDR screen specialist</span>
           </p>
         </Hero>
+
+        {/* ── KEY TAKEAWAYS + BYLINE ── answer-first block for AI retrieval; the byline
+            names the roster's lead technician so the claim matches the About-page schema. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+            <h2 className="text-[22px] md:text-[26px] font-bold mb-sm">Key takeaways</h2>
+            <p className="text-[13px] text-text-muted mb-md">
+              Updated September 2026 · Reviewed by Shafiq, Lead technician · 15 years on Apple hardware
+            </p>
+            <ul className="grid gap-2 md:grid-cols-2 text-[15px] leading-relaxed list-disc pl-5">
+              <li>Every MacBook Pro generation is repaired here - Intel Touch Bar through the current M5 OLED.</li>
+              <li>Diagnosis is free and the exact price is confirmed in writing before any work starts.</li>
+              <li>Screens and batteries are same-day on most models; board-level work runs 2-5 days.</li>
+              <li>Logic boards are repaired at component level rather than swapped whole - that is the cost difference against Apple.</li>
+              <li>Written warranty up to 12 months, with no charge if the fault cannot be fixed.</li>
+              <li>Free pickup and delivery across Dubai mainland from Concord Tower, Media City.</li>
+            </ul>
+          </div>
+        </section>
 
         {/* ── USP STRIP ── */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
@@ -646,6 +667,12 @@ export default function MacBookProRepair() {
               </Link>
             ))}
           </div>
+        </section>
+
+        {/* ── LEAD FORM ── the standard's on-page capture; same preset the homepage uses. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="pro-lead">
+          <h2 id="pro-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your MacBook Pro quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/macbook-pro-repair-dubai" defaultDeviceType="MacBook" />
         </section>
 
         {/* ── CTA ── */}

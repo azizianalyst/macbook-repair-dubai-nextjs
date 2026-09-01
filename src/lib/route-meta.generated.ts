@@ -1677,7 +1677,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-pro-repair-dubai": {
     "title": "MacBook Pro Repair Dubai - M1-M5 Screen, Battery & Logic Fix",
-    "description": "Expert MacBook Pro repair in Dubai for M1-M5 and Intel models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service."
+    "description": "Expert MacBook Pro repair in Dubai, M1-M5 and Intel. Screen, battery, keyboard & logic board. Free diagnosis, quote on WhatsApp, same-day service."
   },
   "/macbook-pro-screen-repair-dubai": {
     "title": "MacBook Pro Screen Repair Dubai — Same-Day XDR & Retina",

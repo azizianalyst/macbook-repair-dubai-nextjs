@@ -1242,7 +1242,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-pro-repair-dubai": {
     "title": "MacBook Pro Repair Dubai. Expert Same-Day 2026",
-    "description": "MacBook Pro Repair Dubai. Screen, battery, keyboard & logic board services by experienced Apple technicians."
+    "description": "MacBook Pro Repair Dubai. Screen, battery, keyboard & logic board by Apple specialists. Free diagnosis, quote on WhatsApp, same-day service."
   },
   "/macbook-ram-upgrade-dubai": {
     "title": "MacBook RAM Upgrade Dubai. Same-Day Fitting",
