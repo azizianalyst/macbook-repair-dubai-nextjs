@@ -159,8 +159,8 @@ Then: cluster hubs → top MacBook services → top iPhone services. **Not all 2
 | | Task | Owner |
 |---|---|---|
 | ✅ | Rename service-intent question slugs + 301 — `/can-iphone-motherboard-be-repaired` done pre-2026-09-01, `/best-macbook-repair-shop-dubai` → `/best-macbook-repair-dubai` and `/macbook-repair-near-me` → `/macbook-repair-near-me-dubai` done 2026-09-01 | 🤖 |
-| ☐ | Rename remaining 4 service-intent question slugs + 301 | 🤖 |
-| ☐ | Move ~14 informational question slugs under `/blog/` | 🤖 |
+| ✅ | ~~Rename remaining 4 service-intent question slugs~~ — **checked the actual pages (2026-09-01): all 17 remaining sentence slugs are BlogPostTemplate content, none are service pages in disguise. Moved all 17 to `/blog/` instead** | 🤖 |
+| ✅ | Move sentence-slug question pages under `/blog/` + 301 — all 17 done (2026-09-01) | 🤖 |
 | ✅ | Build `/macbook-screen-repair-near-me-dubai/` — the one candidate that was a genuine gap (2026-09-01) | 🤖 |
 | ✅ | AirPods + Apple Watch restores — **dropped**, confirmed no in-house service (2026-09-01) | — |
 

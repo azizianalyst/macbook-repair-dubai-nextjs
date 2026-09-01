@@ -168,8 +168,8 @@ Scored `(Commercial Intent × Business Potential) ÷ Competition`. Only ≥3 sho
 | 7 | ✅ **Renamed+301** | `/best-macbook-repair-shop-dubai` → `/best-macbook-repair-dubai/` | 6 | **Done 2026-09-01** — same situation, 225 lines of existing content |
 | 8 | **Strengthen** | `/apple-service-center-dubai/` | 6 | Many impressions at 20–37; own the *independent alternative* angle — still open |
 | 9 | ✅ **Built** | `/macbook-screen-repair-near-me-dubai/` | 4 | **Done 2026-09-01** — the one candidate that was a genuine gap, not an existing page under a different slug |
-| 10 | **Rename+301** | 4 more service-intent question slugs | 4 | Zero-volume slugs on service intent — still open |
-| 11 | **Move** | ~14 informational question slugs → `/blog/` | 3 | Stop them competing as root-level service pages — still open |
+| 10 | ~~Rename+301~~ | 4 more service-intent question slugs | 4 | **CORRECTED + DONE 2026-09-01** — checked all 17 remaining sentence slugs against their actual pages: every one is `BlogPostTemplate` content, none are service pages behind a question slug. Item 10 was based on guessing intent from slug wording alone. |
+| 11 | ✅ **Moved** | 17 informational question slugs → `/blog/` | 3 | **Done 2026-09-01** — all 17 (not ~14; the audit undercounted), each with a 301 and every cross-link fixed |
 
 ### Cut deliberately, and why
 
@@ -189,11 +189,12 @@ in-house AirPods/Apple Watch service. Restoring these pages would mean claiming 
 capability the business doesn't have — the honest answer is no page, regardless of
 GSC demand. `DEVICE_TYPES` stays as-is; no AirPods/Watch option needed.
 
-## Batch B — slug hygiene (partially done)
+## Batch B — slug hygiene — DONE 2026-09-01
 
-- ✅ 3 of ~6 service-intent renames + 301s done — see Part 3, items 5–7
-- ☐ 4 more service-intent question slugs → rename + 301 — still open
-- ☐ ~14 informational pages → move under `/blog/` with 301s — still open
+- ✅ 3 service-intent renames + 301s — see Part 3, items 5–7
+- ✅ All 17 remaining sentence slugs moved under `/blog/` + 301 — see Part 3, item 11.
+  The audit's original 4-rename/14-move split was a guess from slug wording; checking the
+  actual pages showed all 17 are `BlogPostTemplate` content, so all 17 moved uniformly.
 - Verify no redirect chains afterwards (`A→B→C` must become `A→C`) — caught and fixed one
   live case during the 2026-09-01 renames (`/blog/macbook-repair-near-me-dubai` was chaining
   through the old slug)
@@ -213,8 +214,8 @@ gap, not an existing page on the wrong slug. Built on `SubServicePageTemplate`, 
 
 1. ~~Batch A~~ — dropped
 2. **The 8 GSC money pages** onto `AziziTemplate` (already agreed) — still open
-3. **Batch B remainder** — 4 renames + 14 blog moves, low risk, mechanical
-4. **Batch C** — strengthen `/apple-service-center-dubai/`
+3. ~~Batch B remainder~~ — done
+4. **Batch C** — strengthen `/apple-service-center-dubai/` — still open, the last item from this audit
 
 ## Open questions — resolved 2026-09-01
 
