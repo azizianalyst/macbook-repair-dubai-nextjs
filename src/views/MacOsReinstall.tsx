@@ -9,7 +9,7 @@ export default function MacOsReinstall() {
       path="/macos-reinstall-dubai"
       eyebrow="macOS reinstall"
       h1="MacBook macOS Reinstall Dubai - Clean Install Service"
-      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall fixes 90% of software problems. AED 300, same-day, with or without data preservation."
+      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall fixes 90% of software problems. Same-day, flat quoted fee, with or without data preservation."
       startingPrice={300}
       timeline="Same day (2-4 hours)"
       whatsappPrefill="Hi, I need a macOS reinstall - model and current macOS version:"
@@ -64,8 +64,8 @@ export default function MacOsReinstall() {
       reviewNames={["Polycarp", "Mariia Chymyrysova", "Daniel Vyskoc"]}
       related={[
         { label: "MacBook Repair Hub",       href: "/",            description: "All MacBook services in one place." },
-        { label: "MacBook Virus Removal",    href: "/macbook-virus-removal-dubai",     description: "Persistent malware? Reinstall is the cure. AED 350." },
-        { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first. From AED 800." },
+        { label: "MacBook Virus Removal",    href: "/macbook-virus-removal-dubai",     description: "Persistent malware? Reinstall is the cure." },
+        { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first." },
         { label: "iMac macOS Reinstall",     href: "/imac-os-reinstall-dubai",         description: "Reinstalling on an iMac instead? Same clean-install service." },
         { label: "Mac mini/Studio/Pro Reinstall", href: "/mac-os-reinstall-dubai",     description: "Desktop Mac needs a clean macOS? We do those too." },
       ]}

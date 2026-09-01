@@ -41,7 +41,7 @@ const FAQS = [
   { q: "Can data be recovered from a MacBook SSD in Dubai?",
     a: "Yes in most cases. MacBook SSDs use NAND flash chips that can be read even when the logic board fails. Success rate depends on the failure type: accidental deletion recovers 85–95% of data; water damage recovers 60–80%; encrypted T2/Apple Silicon drives without the original Apple ID recover 0% (unbreakable encryption). WhatsApp 055 741 3706 with your model and failure description for a free assessment." },
   { q: "How much does SSD data recovery cost in Dubai?",
-    a: "SSD data recovery in Dubai costs AED 500–2,500 depending on the failure type and drive. Accidental deletion: AED 600–1,200. Logic board SSD controller fault: AED 800–2,000. Water damage with NAND chip removal: AED 900–2,500. No-fix no-charge policy: if we cannot recover your data, you pay nothing." },
+    a: "It depends on the failure type and the drive. Accidental deletion is the least involved; a logic-board SSD controller fault needs board work first; water damage with NAND chip removal is the most involved. Every case gets a written quote after the free assessment. No-fix no-charge policy: if we cannot recover your data, you pay nothing." },
   { q: "How long does SSD data recovery take in Dubai?",
     a: "Logical recovery (deletion, format, corruption): 1–3 days. Logic board fault with SSD controller repair: 3–7 days. Water damage with chip-off NAND read: 3–7 days. We give you a daily status update via WhatsApp and notify you the moment data is confirmed recoverable." },
   { q: "Can you recover data from a water-damaged MacBook SSD?",
@@ -51,7 +51,7 @@ const FAQS = [
   { q: "What is your no-fix no-charge policy for data recovery?",
     a: "If we cannot recover your files, you pay nothing. We confirm what is recoverable before billing, you approve the file list before we complete the extraction. We do not charge for failed recovery attempts." },
   { q: "Can you recover data from an external SSD or USB drive in Dubai?",
-    a: "Yes. Samsung T7, T9, WD My Passport SSD, Kingston USB drives, and most external NAND-based storage. Price from AED 500. Same process: free assessment, file list confirmed before billing, no-fix no-charge." },
+    a: "Yes. Samsung T7, T9, WD My Passport SSD, Kingston USB drives, and most external NAND-based storage. Same process: free assessment, file list confirmed before billing, no-fix no-charge." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [5, 9, 15, 21, 27];
@@ -76,7 +76,7 @@ export default function SsdDataRecovery() {
           tone="dark"
           eyebrow="SSD data recovery · Dubai · No-fix no-charge"
           title="SSD Data Recovery Dubai"
-          subtitle="MacBook SSD, external SSD, deleted files, water damage. From AED 500. No-fix no-charge. Free assessment. Concord Tower, Media City."
+          subtitle="MacBook SSD, external SSD, deleted files, water damage. No-fix no-charge. Free assessment, written quote first. Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Shield size={14} aria-hidden /> No-fix no-charge</span>
@@ -97,7 +97,7 @@ export default function SsdDataRecovery() {
           <QuickAnswer
             tone="dark"
             question="Can you recover data from a failed SSD in Dubai?"
-            answer="Yes. SSD data recovery in Dubai from AED 500. MacBook SSD (controller fault, deletion, corruption, water damage), external SSD, and USB drives. No-fix no-charge: you only pay if we recover your data. Free assessment. WhatsApp 055 741 3706 at Concord Tower, Dubai Media City."
+            answer="Yes. SSD data recovery in Dubai covers MacBook SSDs (controller fault, deletion, corruption, water damage), external SSDs, and USB drives. Free assessment with a written quote, and no-fix no-charge: you only pay if we recover your data. Free assessment. WhatsApp 055 741 3706 at Concord Tower, Dubai Media City."
           />
         </section>
 

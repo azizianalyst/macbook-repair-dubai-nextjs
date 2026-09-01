@@ -14,7 +14,7 @@ export default function MacbookNeoRepair() {
       path="/macbook-neo-repair-dubai"
       eyebrow="MacBook Neo · March 2026 · current Apple lineup · $599 entry-level"
       h1="MacBook Neo Repair Dubai - Apple's First A-Chip MacBook"
-      subtitle="The new $599 MacBook with the iPhone-class A18 Pro chip. Same hands that fix your iPhone 17 fix your Neo. From AED 250."
+      subtitle="The new $599 MacBook with the iPhone-class A18 Pro chip. Same hands that fix your iPhone 17 fix your Neo. Free diagnosis, written quote first."
       startingPrice={250}
       timeline="3-5 days (parts ramping)"
       whatsappPrefill="Hi, I have a MacBook Neo (March 2026, A18 Pro) and I need help with:"
@@ -28,7 +28,7 @@ export default function MacbookNeoRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook Neo owner - yes, we repair it.</strong> Released March 2026 at $599, the MacBook Neo is Apple's budget MacBook - the first ever to use an iPhone-class chip (A18 Pro) instead of an M-series chip. It targets students, light users and anyone who wants a real Mac at a real price. The same hands and tools that fix your iPhone 17&apos;s A19 Bionic handle the A18 Pro in your Neo. From AED 250 for common repairs.
+            <strong>MacBook Neo owner - yes, we repair it.</strong> Released March 2026 at $599, the MacBook Neo is Apple's budget MacBook - the first ever to use an iPhone-class chip (A18 Pro) instead of an M-series chip. It targets students, light users and anyone who wants a real Mac at a real price. The same hands and tools that fix your iPhone 17&apos;s A19 Bionic handle the A18 Pro in your Neo. Common repairs are quoted in writing after a free diagnosis.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the MacBook Neo</h2>
@@ -112,7 +112,7 @@ export default function MacbookNeoRepair() {
           <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">Yes - and check Apple&apos;s warranty first</p>
             <p className="text-[15px]">
-              The Neo is in Apple&apos;s current lineup. Most units are still under the standard 1-year warranty or AppleCare+. Always start with the Apple Store. We&apos;re here for accidental damage Apple won&apos;t cover and out-of-warranty work. At $599 new, the math on a paid screen replacement (AED 650) is borderline - we&apos;ll always show you the numbers honestly before you commit.
+              The Neo is in Apple&apos;s current lineup. Most units are still under the standard 1-year warranty or AppleCare+. Always start with the Apple Store. We&apos;re here for accidental damage Apple won&apos;t cover and out-of-warranty work. At $599 new, the math on any paid screen replacement is borderline - we&apos;ll always show you the numbers honestly before you commit.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function MacbookNeoRepair() {
         },
         {
           q: "How much does a MacBook Neo screen replacement cost?",
-          a: "12.9-inch Liquid Retina screen replacement on the MacBook Neo is AED 650. Timeline 3-5 days while parts supply ramps. Includes a 3-month written warranty.",
+          a: "12.9-inch Liquid Retina screen replacement on the MacBook Neo is quoted in writing after a free diagnosis. Timeline 3-5 days while parts supply ramps. Includes a 3-month written warranty.",
         },
         {
           q: "Can I upgrade the RAM or SSD on the MacBook Neo?",
