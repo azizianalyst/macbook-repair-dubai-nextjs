@@ -1087,6 +1087,14 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "iPhone 17e Repair Dubai - A19 Budget iPhone, Dynamic Island | 055 741 3706",
     "description": "iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island, MagSafe, USB-C. Same-day screen and battery. Message us on WhatsApp for today's exact price."
   },
+  "/iphone-18-pro-max-repair-dubai": {
+    "title": "iPhone 18 Pro Max Repair Dubai - Ready From Launch Day | 055 741 3706",
+    "description": "iPhone 18 Pro Max repair Dubai, ready from day one. Apple unveils it 9 Sept 2026 - we update this page with confirmed specs within 24 hours. WhatsApp for a price."
+  },
+  "/iphone-18-pro-repair-dubai": {
+    "title": "iPhone 18 Pro Repair Dubai - Ready From Launch Day | 055 741 3706",
+    "description": "iPhone 18 Pro repair Dubai, ready from day one. Apple unveils it 9 Sept 2026 - we update this page with confirmed specs within 24 hours. WhatsApp for a price."
+  },
   "/iphone-air-repair-dubai": {
     "title": "iPhone Air Repair Dubai - Thinnest iPhone Ever | 055 741 3706",
     "description": "iPhone Air (Sept 2025) repair Dubai. A19, 6.5-inch OLED, single camera, thinnest iPhone ever. Screen, battery and more - same-day. Message us for a quote."

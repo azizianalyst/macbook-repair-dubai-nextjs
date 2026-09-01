@@ -343,6 +343,8 @@ export const ROUTES: string[] = [
   "/iphone-17-pro-repair-dubai",
   "/iphone-17-repair-dubai",
   "/iphone-17e-repair-dubai",
+  "/iphone-18-pro-max-repair-dubai",
+  "/iphone-18-pro-repair-dubai",
   "/iphone-air-repair-dubai",
   "/iphone-back-glass-repair-dubai",
   "/iphone-battery-replacement-dubai",

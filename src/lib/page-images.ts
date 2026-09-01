@@ -18,6 +18,10 @@ const REAL = "/images/real/lab";
 
 function iphoneImage(slug: string): string | undefined {
   const s = slug.toLowerCase();
+  // iPhone 18 has no product photo yet (pre-announcement, launches 9 Sept 2026) -
+  // reuse the newest real asset (17) as the closest stand-in rather than falling
+  // through to the much older 15 default below.
+  if (s.includes("iphone-18")) return `${DEVICE}/iphone-17.jpg`;
   if (s.includes("iphone-air")) return `${DEVICE}/iphone-air.jpg`;
   if (s.includes("iphone-17e")) return `${DEVICE}/iphone-17e.jpg`;
   if (s.includes("iphone-17")) return `${DEVICE}/iphone-17.jpg`;

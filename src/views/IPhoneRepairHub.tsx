@@ -24,6 +24,7 @@ import { NAP } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
 
 const MODEL_PAGES = [
+  ["iPhone 18 Pro Max", "/iphone-18-pro-max-repair-dubai"], ["iPhone 18 Pro", "/iphone-18-pro-repair-dubai"],
   ["iPhone 17 Pro Max", "/iphone-17-pro-max-repair-dubai"], ["iPhone 17 Pro", "/iphone-17-pro-repair-dubai"], ["iPhone 17", "/iphone-17-repair-dubai"], ["iPhone 17e", "/iphone-17e-repair-dubai"], ["iPhone Air", "/iphone-air-repair-dubai"],
   ["iPhone 16 Pro Max", "/iphone-16-pro-max-repair-dubai"], ["iPhone 16 Pro", "/iphone-16-pro-repair-dubai"], ["iPhone 16 Plus", "/iphone-16-plus-repair-dubai"], ["iPhone 16", "/iphone-16-repair-dubai"], ["iPhone 16e", "/iphone-16e-repair-dubai"],
   ["iPhone 15 Pro Max", "/iphone-15-pro-max-repair-dubai"], ["iPhone 15 Pro", "/iphone-15-pro-repair-dubai"], ["iPhone 15 Plus", "/iphone-15-plus-repair-dubai"], ["iPhone 15", "/iphone-15-repair-dubai"],
@@ -42,7 +43,7 @@ const PRICING = [
 ];
 
 const SERVICES: { title: string; body: string; Icon: LucideIcon; href?: string }[] = [
-  { Icon: Monitor,         title: "Screen Repair",          href: "/iphone-screen-repair-dubai",         body: "Cracked or shattered display? We repair OLED and LCD screens on all iPhone models from iPhone 8 through iPhone 17 series." },
+  { Icon: Monitor,         title: "Screen Repair",          href: "/iphone-screen-repair-dubai",         body: "Cracked or shattered display? We repair OLED and LCD screens on all iPhone models from iPhone 8 through iPhone 18 series." },
   { Icon: BatteryCharging, title: "Battery Replacement",    href: "/iphone-battery-replacement-dubai",   body: "Battery draining too fast or swelling? We replace genuine-grade batteries on all models and calibrate for accurate capacity reporting." },
   { Icon: Camera,          title: "Camera Repair",          href: "/iphone-camera-repair-dubai",         body: "Blurry, dark, or non-focusing camera? We repair front and rear camera modules, OIS, and macro lens assemblies." },
   { Icon: Droplets,        title: "Water Damage Repair",    href: "/iphone-water-damage-repair-dubai",   body: "Liquid spill or pool drop? Power off immediately and bring it in. Ultrasonic board clean and component repair." },
@@ -255,7 +256,7 @@ export default function IPhoneRepairHub() {
           <SectionHeading
             label="Supported models"
             title="iPhone models we repair"
-            sub="Every iPhone from the SE through iPhone 17 Pro Max. Tap a model for its dedicated repair page."
+            sub="Every iPhone from the SE through iPhone 18 Pro Max. Tap a model for its dedicated repair page."
           />
           <ul className="flex flex-wrap gap-2">
             {MODEL_PAGES.map(([label, href]) => (
