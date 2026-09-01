@@ -24,7 +24,6 @@ export function ResponsiveImage({
   const m = src.match(/^(.*)\.(jpe?g|png)$/i);
   const base = m ? m[1] : null;
   const avif = base && `${base}-mobile.avif 360w, ${base}-tablet.avif 800w, ${base}-desktop.avif 1600w`;
-  const webp = base && `${base}-mobile.webp 360w, ${base}-tablet.webp 800w, ${base}-desktop.webp 1600w`;
 
   // LCP image: emit <link rel="preload"> in <head> so the fetch starts with the
   // document instead of after layout. type=image/avif makes non-AVIF browsers
@@ -42,7 +41,9 @@ export function ResponsiveImage({
   return (
     <picture className={className}>
       {avif && <source type="image/avif" srcSet={avif} sizes={sizes ?? DEFAULT_SIZES} />}
-      {webp && <source type="image/webp" srcSet={webp} sizes={sizes ?? DEFAULT_SIZES} />}
+      {/* webp tier removed 2026-09-01: it was 124MB of the 206MB deploy for the ~2% of
+          browsers that have webp but not avif - and they still get the jpg <img> below.
+          avif (39MB) covers ~95%+ of traffic; the base jpg covers the rest. */}
       <img
         src={src}
         alt={alt}

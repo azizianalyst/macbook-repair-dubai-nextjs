@@ -37,7 +37,6 @@ function variantPaths(image: string) {
   const base = m[1];
   return {
     avif: `${base}-mobile.avif 360w, ${base}-tablet.avif 800w, ${base}-desktop.avif 1600w`,
-    webp: `${base}-mobile.webp 360w, ${base}-tablet.webp 800w, ${base}-desktop.webp 1600w`,
     fallback: image,
   };
 }
@@ -160,7 +159,6 @@ export function Hero({
           <div className="md:col-span-5">
             <picture>
               {paths && <source type="image/avif" srcSet={paths.avif} sizes={HERO_SIZES} />}
-              {paths && <source type="image/webp" srcSet={paths.webp} sizes={HERO_SIZES} />}
               <img
                 src={image}
                 alt={imageAlt || title}
