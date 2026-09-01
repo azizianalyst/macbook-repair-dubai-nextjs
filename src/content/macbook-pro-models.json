@@ -36,7 +36,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Top-case (with butterfly keyboard) 1-2 days.",
-    "honestyNote": "Flexgate is the silent killer of this generation - backlight cable wears through with normal use. We can replace the display assembly (AED 910) but on a 7-year-old machine, the math gets tight. We always show you the numbers before we start.",
+    "honestyNote": "Flexgate is the silent killer of this generation - backlight cable wears through with normal use. We can replace the display assembly, but on a 7-year-old machine the math gets tight. We always show you the numbers before we start.",
     "heroTagline": "The last Touch Bar Pro generation. We know its quirks - Flexgate, butterfly, Touch Bar."
   },
   {
@@ -433,7 +433,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. M5 Max logic board: 7-10 days (specialist sourcing).",
-    "honestyNote": "Released March 2026. The fastest 14\" Pro Apple has ever built - and the most expensive to repair at logic-board level (AED 4,550 for an M5 Max board). Almost every unit is under Apple warranty - always start there. AppleCare+ is highly recommended on this configuration.",
+    "honestyNote": "Released March 2026. The fastest 14\" Pro Apple has ever built - and the most expensive to repair at logic-board level - an M5 Max board costs more than some whole laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is highly recommended on this configuration.",
     "heroTagline": "M5 Max 14\". The peak of Apple's portable performance. We treat it accordingly."
   },
   {
@@ -473,7 +473,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (specialist mini-LED panel). Battery same-day. Top-case 1-2 days.",
-    "honestyNote": "First 16\" with Apple Silicon and the redesign. Largest screen in the Apple laptop line. Screen replacement is the most expensive single repair we do (AED 1,560) - drop protection truly matters on this machine.",
+    "honestyNote": "First 16\" with Apple Silicon and the redesign. Largest screen in the Apple laptop line. Screen replacement is the most expensive single repair we do on it - drop protection truly matters on this machine.",
     "heroTagline": "The first Apple Silicon 16\". MagSafe is back, ports are back, screen is enormous."
   },
   {
@@ -671,7 +671,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. M5 Max logic board: 10-14 days (specialist sourcing).",
-    "honestyNote": "Released March 2026. The single most powerful - and most expensive to repair - laptop Apple has ever made. Logic board replacement is AED 5,850. Almost every unit is under Apple warranty - always start there. AppleCare+ is essential on this configuration.",
+    "honestyNote": "Released March 2026. The single most powerful - and most expensive to repair - laptop Apple has ever made. Logic board replacement costs more than most complete laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is essential on this configuration.",
     "heroTagline": "M5 Max 16\". The peak of portable Apple power. We treat every job as insurance-grade."
   }
 ]

@@ -27,9 +27,9 @@ const PRICE_RE = /\bAED\s*\d|\d[\d,]*\s*AED\b|\d[\d,]*\s*[Dd]irhams?\b|\bDhs?\.?
 // Everything else - OUR prices - still fails. Exemption is per-figure on a +/-90-char window,
 // with an ours-marker override so "our price AED 600 (vs Apple ...)" is still caught.
 const ATTRIB = /\(Apple list\)|Apple list price|Apple Store|at Apple\b|Apple lists?|Apple (?:typically )?charges|Apple['\u2019]s|per Apple['\u2019]s|AppleCare\+?|Genius Bar/i;
-const OURS = /\bour(?:s| workshop| price| quote)?\b|\bwe charge\b|\bwe fit\b|\bat our\b|MacBook Repair Dubai (?:charges|quotes|estimates|replaces|provides)/i;
+const OURS = /\\bour(?:s| workshop| price| quote)?\\b|\\bwe (?:charge|fit|repair|replace|fix|quote|estimate|do it|service)\\b|\\bat our\\b|MacBook Repair Dubai (?:charges|quotes|estimates|replaces|provides)/i;
 function isAllowedFigure(text, idx, len) {
-  const before = text.slice(Math.max(0, idx - 90), idx);
+  const before = text.slice(Math.max(0, idx - 140), idx); // 140: an attribution can sit a whole list-item behind the figure
   const after  = text.slice(idx + len, idx + len + 40);
   // Facility fee: facility word before, or rate suffix directly after.
   const facBefore = /parking|valet|EV charging/i.test(text.slice(Math.max(0, idx - 40), idx));
@@ -79,19 +79,30 @@ if (routesFile && existsSync(routesFile)) {
 // grounds that meta and schema prices were kept deliberately. That is no longer the policy —
 // prices are now stripped everywhere, including SERP — so those exclusions were hiding
 // 92 routes of JSON-LD and 4 routes whose price sits in the hydration payload.
+// Rendered text carries HTML entities; "Apple&#x27;s parts channel" must read as
+// "Apple's" or the attribution regex misses it and flags Apple's own figure as ours.
+function decodeEntities(t) {
+  return t
+    .replace(/&#x27;|&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&")
+    .replace(/&#x2019;|&rsquo;/g, "\u2019")
+    .replace(/&nbsp;/g, " ");
+}
+
 function surfaces(html) {
   const head = (html.match(/<head\b[^>]*>[\s\S]*?<\/head>/i) || [""])[0];
   return {
     // Visible text: tags become spaces, so a React-split price (AED <!-- -->600) still reads
     // as "AED  600" here and is caught by PRICE_RE.
-    body: html
+    body: decodeEntities(html
       .replace(/<head\b[^>]*>[\s\S]*?<\/head>/i, " ")
       .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
       .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
-      .replace(/<[^>]+>/g, " "),
+      .replace(/<[^>]+>/g, " ")),
     // <title>, meta description, OG/Twitter — including og:image:alt.
-    meta: [...head.matchAll(/<title>([^<]*)<\/title>|content="([^"]*)"/gi)]
-      .map((m) => m[1] || m[2] || "").join(" | "),
+    meta: decodeEntities([...head.matchAll(/<title>([^<]*)<\/title>|content="([^"]*)"/gi)]
+      .map((m) => m[1] || m[2] || "").join(" | ")),
     // Offer/priceRange nodes.
     schema: [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
       .map((m) => m[1]).join("\n"),

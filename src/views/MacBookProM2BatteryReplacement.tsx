@@ -21,7 +21,7 @@ export default function MacBookProM2BatteryReplacement() {
         "The M2 Max 16-inch delivers up to 22 hours of battery life on a full 99.6 Wh cell. Restoring that 22-hour runtime is excellent value compared to a new machine. The M2 Max remains one of the fastest laptops available anywhere in its class.",
         "The M2 MacBook Pro introduced HDMI 2.1 and a full-size SD card reader alongside MagSafe 3 and Thunderbolt 4. These features make the M2 Pro a long-term professional tool worth maintaining. Battery replacement keeps it productive for another 3 to 5 years.",
         "M2 Pro machines bought in early 2023 are now 2 years old. In Dubai ambient temperatures above 40 degrees Celsius, battery calendrical aging means many M2 Pros may already be at 85 to 90 percent capacity even at moderate cycle counts. Check System Settings, Battery, Battery Health for your current reading.",
-        "Apple charges AED 549 to AED 699 for M2 Pro battery replacement, typically requiring an appointment and wait time for parts. MacBook Repair Dubai completes M2 Pro battery replacement same-day with BMS re-pair for AED 500 to AED 600, no appointment needed.",
+        "Apple charges AED 549 to AED 699 for M2 Pro battery replacement, typically requiring an appointment and wait time for parts. MacBook Repair Dubai completes M2 Pro battery replacement same-day with BMS re-pair, quoted per model in writing - no appointment needed.",
       ]}
       prices={[
         {

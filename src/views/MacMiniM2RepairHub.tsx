@@ -34,7 +34,7 @@ export default function MacMiniM2RepairHub() {
             for model-specific pages.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            These machines are approximately 2 to 3 years old in 2026. If yours is still under AppleCare+ (3-year plan), we recommend checking that first - we will tell you honestly whether Apple covers your fault before we quote. For out-of-warranty repairs, logic board work starts from AED 1,040.
+            These machines are approximately 2 to 3 years old in 2026. If yours is still under AppleCare+ (3-year plan), we recommend checking that first - we will tell you honestly whether Apple covers your fault before we quote. For out-of-warranty repairs, logic board work is quoted in writing after diagnosis.
           </p>
         </>
       }

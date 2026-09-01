@@ -27,7 +27,7 @@ const FAQS = [
   { q: "Will using you void anything?",
     a: "If your AppleCare or warranty is already expired, there's nothing left to void. If it's still active, we'll always flag that before you commit so you can choose the best route. Our repairs use genuine or premium OEM parts and carry their own warranty of up to 12 months." },
   { q: "How much cheaper is out-of-warranty repair with you vs Apple?",
-    a: "Apple's out-of-warranty service is usually a flat board/whole-unit fee. Because we repair at component level, a logic-board fix from AED 800 can replace an Apple quote of several thousand dirhams. You get an exact written quote after a free diagnosis - no obligation." },
+    a: "Apple's out-of-warranty service is usually a flat board/whole-unit fee. Because we repair at component level, a logic-board fix here can replace an Apple quote of several thousand dirhams. You get an exact written quote after a free diagnosis - no obligation." },
   { q: "Are the parts genuine?",
     a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit premium OEM-factory parts and label them as such on your quote. Both carry the same warranty of up to 12 months." },
   { q: "What about data during a board repair?",

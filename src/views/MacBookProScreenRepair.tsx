@@ -85,7 +85,7 @@ const FAQS: FAQ[] = [
   { q: "What is the difference between repairing a 14\"/16\" XDR screen and an older Retina Pro?",
     a: 'The 14"/16" (2021+) use a Liquid Retina XDR mini-LED panel with ~10,000 dimming zones and a 120Hz ProMotion timing controller — a more involved, higher-cost assembly. The 2012-2015 Retina is a conventional LCD where a cheaper glass-only repair is still possible. The 2016-2020 Touch Bar models sit in between: bonded LCD, full-panel only.' },
   { q: "Do you repair Flexgate on the 2016-2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706/A1707/A1708 is fixed with a revised flex cable that is 2 mm longer than Apple's original - one flat quoted job, same day, 3-month warranty. If the cable tore late and damaged the backlight strip (under 15% of cases) it becomes a full panel from AED 1,000." },
+    a: "Yes. Flexgate on the A1706/A1707/A1708 is fixed with a revised flex cable that is 2 mm longer than Apple's original - one flat quoted job, same day, 3-month warranty. If the cable tore late and damaged the backlight strip (under 15% of cases) it becomes a full panel job, quoted by size." },
   { q: "Is mini-LED blooming on my MacBook Pro a fault?",
     a: 'A soft halo around bright objects on a dark background is normal HDR behaviour on every Liquid Retina XDR panel — not a defect and not repairable, because it is how mini-LED local dimming works. A fixed bright or dead patch that stays in one place regardless of content is a failed zone and needs a panel swap.' },
   { q: "Can the 2026 M5 OLED MacBook Pro screen be replaced?",

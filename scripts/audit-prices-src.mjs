@@ -71,7 +71,7 @@ const ATTRIB = /\(Apple list\)|Apple list price|Apple Store|at Apple\b|Apple lis
 // Deliberately only STRONG ownership markers. "from" and "starts at" were in this list and
 // broke on "Apple lists from AED 4,999" — the weak word sat between the attribution and the
 // figure and stole it back for us.
-const OURS   = /\bour(?:s| workshop| price| quote)?\b|\bwe charge\b|\bwe fit\b|\bat our\b/gi;
+const OURS   = /\\bour(?:s| workshop| price| quote)?\\b|\\bwe (?:charge|fit|repair|replace|fix|quote|estimate|do it|service)\\b|\\bat our\\b|MacBook Repair Dubai (?:charges|quotes|estimates|replaces|provides)/gi;
 const FIGURE = /AED\s?[\d,]+/gi;
 
 /** true when every AED figure on the line is attributed to Apple rather than to us. */

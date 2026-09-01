@@ -85,7 +85,7 @@ export default function MacBookAirM3KeyboardRepair() {
         },
         {
           q: "My M3 Air is 1 year old — should I use Apple warranty for keyboard issues?",
-          a: "If your M3 Air is under AppleCare+ and the keyboard failure is not from accidental damage (e.g. a manufacturing defect), it may be covered. Accidental damage (spill, broken key cap from impact) has an AED 99 AppleCare+ service fee. If you are out of warranty or prefer not to go through Apple, MacBook Repair Dubai repairs same-day from AED 300.",
+          a: "If your M3 Air is under AppleCare+ and the keyboard failure is not from accidental damage (e.g. a manufacturing defect), it may be covered. Accidental damage (spill, broken key cap from impact) has an AED 99 AppleCare+ service fee. If you are out of warranty or prefer not to go through Apple, MacBook Repair Dubai repairs it same-day with a written quote first.",
         },
         {
           q: "Is the M3 Air keyboard the same as M2?",

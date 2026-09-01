@@ -21,7 +21,7 @@ export default function MacBookProM1BatteryReplacement() {
         "BMS re-pair is mandatory on all M1 and newer MacBook Pro battery replacements. The Battery Management System firmware maps the new cell chemistry to the SMC so macOS reports accurate capacity, cycle count, and safe charge curves. Without BMS re-pair, readings are undefined and Optimized Charging does not work correctly.",
         "The M1 Pro and M1 Max share the same battery cell for the 14-inch model. The chip variant does not change the battery cost — only the screen size determines which cell you need.",
         "The M1 MacBook Pro is 3 to 4 years old in Dubai in 2025. At UAE ambient temperatures of 40 degrees Celsius and above, battery calendrical aging accelerates significantly. Many M1 Pros bought in 2021 are now at 75 to 85 percent capacity and showing Service Recommended in System Settings.",
-        "Apple charges AED 549 to AED 699 for M1 Pro battery replacement, with longer wait times due to appointment scheduling and parts ordering. MacBook Repair Dubai completes M1 Pro battery replacement same-day with BMS re-pair for AED 500 to AED 600.",
+        "Apple charges AED 549 to AED 699 for M1 Pro battery replacement, with longer wait times due to appointment scheduling and parts ordering. MacBook Repair Dubai completes M1 Pro battery replacement same-day with BMS re-pair, quoted per model in writing.",
       ]}
       prices={[
         {

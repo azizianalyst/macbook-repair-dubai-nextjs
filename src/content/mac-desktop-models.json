@@ -424,7 +424,7 @@
       "thermalPaste": 520,
       "diagnostic": 0
     },
-    "timelineNotes": "MPX GPU module replacement is labour AED 1,950 + part (parts vary wildly - AED 4,000 to 25,000 depending on module). PSU 2-3 days. Xeon CPU swaps technically possible but rarely economic in 2026. RAM upgrades same-day.",
+    "timelineNotes": "MPX GPU module replacement is a flat labour fee + the module itself (module prices vary wildly by model - we confirm both in the written quote). PSU 2-3 days. Xeon CPU swaps technically possible but rarely economic in 2026. RAM upgrades same-day.",
     "honestyNote": "The 'cheese grater' Mac Pro. PCIe expansion, MPX GPU modules, 1.5TB ECC RAM, 8 Thunderbolt 3 ports - nothing else Apple makes can do this. Apple has not released a true successor (the M2 Ultra Mac Pro lost MPX support). If yours is working, keep it running. We service these professionally with all the genuine Apple parts and MPX modules that are still available.",
     "heroTagline": "The cheese grater. PCIe, MPX modules, 1.5TB ECC RAM. Still no true successor in 2026."
   },

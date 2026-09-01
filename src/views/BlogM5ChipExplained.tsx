@@ -139,8 +139,7 @@ export default function BlogM5ChipExplained() {
           <h2 id="should-you-upgrade">Should you upgrade from M4? (probably not yet)</h2>
           <p>
             <strong>If you own M4:</strong> The 18% CPU bump is real but you will not feel it in everyday use.
-            Wait for M6 (expected late 2026/early 2027). Selling your M4 now to fund an M5 will cost AED
-            2,500-3,500 net after depreciation.
+            Wait for M6 (expected late 2026/early 2027). Selling your M4 now to fund an M5 means eating a meaningful chunk of depreciation.
           </p>
           <p>
             <strong>If you do AI/ML work:</strong> The 38-390% AI workload gain is genuinely meaningful. Upgrade
