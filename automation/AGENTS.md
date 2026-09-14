@@ -34,6 +34,20 @@ Business Profile alive, and never let the lead path break silently.
 - Generated files: `npm run build` runs `prebuild` (all `gen-*` + `extract-meta.cjs`).
   Never hand-edit `*.generated.ts`.
 
+## Production branch guard (learned 2026-09-14 — do not remove)
+
+`PRODUCTION_BRANCH` is the branch whose HEAD is what runs on the live site. Today it is
+**`hide-prices-whatsapp`** (origin/main is a 3-commit June skeleton; do NOT deploy main until
+Aziz merges). Before ANY build or deploy:
+
+1. Resolve `PRODUCTION_BRANCH` from the line above. If it is not `main`, the worktree must be
+   created from that branch and it must exist on `origin`; if it exists only locally
+   (`git branch -r` lacks it), **do not build or deploy** — log "production branch unpushed"
+   and put it under Needs Aziz.
+2. Sanity gate after the build: `ls src/app | wc -l` in the worktree must be ≥ 95% of the
+   live sitemap URL count / 3 (rough page count). If the worktree looks smaller than the live
+   site, abort the deploy.
+
 ## Working tree rule (important)
 
 Aziz often has an uncommitted feature branch checked out in the project directory.
@@ -43,8 +57,8 @@ Aziz often has an uncommitted feature branch checked out in the project director
 ROOT=/Users/azizi/Claude/Projects/macbook-repair-dubai.ae-nextjs
 WT=$ROOT/.claude/worktrees/autopilot
 cd $ROOT && git fetch -q origin main
-[ -d $WT ] || git worktree add -q $WT main
-cd $WT && git checkout -q main && git reset -q --hard origin/main
+[ -d $WT ] || git worktree add -q $WT $PRODUCTION_BRANCH
+cd $WT && git checkout -q $PRODUCTION_BRANCH && git reset -q --hard origin/$PRODUCTION_BRANCH
 [ -e node_modules ] || ln -s $ROOT/node_modules node_modules
 [ -e .env.local ]   || cp $ROOT/.env.local .env.local
 ```
@@ -62,8 +76,12 @@ and push. Logs under `automation/` are committed from the worktree too.
    `src/content/site.ts` says; do not bump it without a screenshot-verified Google number.
 3. **Brand** — "MacBook Repair Dubai" is also traded by another business; never cite or
    link the wrong LinkedIn/GBP. Our GBP is Concord Tower Office #45, Dubai Media City.
-4. **Rate limiter** — one page view is ~120 proxy requests; never size per-IP limits in
-   page views, and never hammer the live site in loops faster than ~2 s between requests.
+4. **Rate limiter** — the live build (as of 2026-09-14) still runs the old proxy.ts limiter:
+   ~15–60 requests/min from one IP → plain `429` on every path, and the block does not
+   release. Budget the canary at **≤ 10 live requests per minute**, always send a browser
+   User-Agent (`curl` is on the scraper list), always `-L` (pages 308 to a trailing slash),
+   and if any check returns 429, stop hitting the site, mark the remaining checks "skipped
+   (429)", and treat it as a failure of check 13. Never retry in a loop.
 5. **Templates** — new pages use the existing block templates in `src/components/blocks/`
    and the pattern in `docs/azizi-template-standard.md`; every page needs a server-rendered
    `PageSchema`, a 40–60 word answer block, FAQ, and ≥3 inbound internal links.

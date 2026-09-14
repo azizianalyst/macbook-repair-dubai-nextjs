@@ -12,7 +12,10 @@ Do **Part 1 every day**. Add **Part 2 on Monday**, **Part 3 on Thursday**,
 whole run; everything else is skip-and-log. Finish with the FINISH section.
 
 `ADMIN_KEY` comes from `.env.local` (`grep ^ADMIN_KEY .env.local | cut -d= -f2`).
-`LIVE=https://macbook-repair-dubai.ae`. Sleep 2 s between live requests.
+`LIVE=https://macbook-repair-dubai.ae`. Every live request uses
+`UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"`
+via `curl -sL -A "$UA" --max-time 20`, with **6 s** between requests (≤ 10/min). The first 429
+ends all further live requests for this run (see AGENTS.md rule 4).
 
 ---
 
@@ -26,9 +29,11 @@ whole run; everything else is skip-and-log. Finish with the FINISH section.
    `/contact`, `/reviews`, `/blog`. (If a slug 404s, check `src/app` for the real one before
    calling it a failure — then fix this list in a commit.)
 3. `www` → 308 to non-www: `curl -sI https://www.macbook-repair-dubai.ae/ | grep -iE "^(HTTP|location)"`.
-4. `curl -s $LIVE/robots.txt` must contain `Sitemap:` and must NOT contain `Disallow: /` on its own line.
-5. Sitemap URL count: `curl -s $LIVE/sitemap.xml | grep -c "<loc>"`. Compare to yesterday's health
-   file; a drop of more than 5% is a failure.
+4. robots.txt must contain `Sitemap:`; in the **first** `User-Agent: *` group the only Disallows may be
+   `/api/` and `/admin/` (a `Disallow: /` further down belongs to the scraper-bot group and is fine).
+5. `/sitemap.xml` is an index. Fetch `/sitemap/services.xml`, `models.xml`, `locations.xml`, `blog.xml`,
+   `guides.xml`, `general.xml`, `categories.xml` (7 requests) and sum the `<loc>` counts. Compare to the
+   last health file that has a number; a drop of more than 5% is a failure.
 6. WhatsApp lead path: for `/`, `/contact` and `/macbook-screen-repair-dubai`, the HTML must contain
    `https://wa.me/971557413706` (`curl -s $LIVE/<path> | grep -c "wa.me/971557413706"` > 0) and
    `curl -sI https://wa.me/971557413706` must not be a 4xx/5xx. A page missing the link, or a wrong
@@ -40,10 +45,11 @@ whole run; everything else is skip-and-log. Finish with the FINISH section.
 7. Live build matches main: `curl -s $LIVE/build-id.txt` if that file exists; otherwise compare
    `lastmod` of `/` in the sitemap with `src/content/lastmod.generated.ts` on origin/main. A gap of
    more than 24 h after a push is a failure ("deploy did not land").
-8. Latest Hostinger build: `mcp__hostinger-macbookrepair__hosting_listJsDeployments` (`perPage: 1`)
+8. Latest Hostinger build (only if `hosting_listWebsitesV1` on `hostinger-macbookrepair` lists the domain;
+   otherwise record "MCP on wrong account" as a failure): `mcp__hostinger-macbookrepair__hosting_listJsDeployments` (`perPage: 1`)
    → record state.
 
-**B. GBP care (through the live admin API).**
+**B. GBP care (through the live admin API — skip all of B if a 429 was seen).**
 
 9. `GET $LIVE/api/admin/gbp/status` → connected? If not, this is a failure ("GBP token expired —
    Aziz must reconnect at /admin/gbp").
@@ -61,7 +67,7 @@ whole run; everything else is skip-and-log. Finish with the FINISH section.
 
 **C. Write and alert.**
 
-Write `automation/logs/health/YYYY-MM-DD.md`: a table of checks 1–13 with results, plus
+Write `automation/logs/health/YYYY-MM-DD.md`: a table of checks 1–13 with results (13 = "no 429 seen this run"), plus
 "Leads: N (24 h) / N (7 d)", "GBP: reviews replied N, post published Y/N, insights ...", and a
 "Still needs Aziz" list built from the open 🧑 items in `docs/TASKS.md` Module 1–2 plus anything
 found today. Append one line to `automation/logs/YYYY-MM.md`: "canary: N/13 pass — <failures>".
@@ -79,6 +85,10 @@ passes. Do not repeat an unchanged failure two days running.
 ## PART 2 — Weekly growth run (Monday only)
 
 Goal: ship one page that can win a lead-bearing query, then point GBP at it.
+
+**Precondition:** the production branch guard in AGENTS.md passes (branch exists on origin) AND
+`hostinger-macbookrepair` lists macbook-repair-dubai.ae. If either fails, do steps 1–2 only
+(measure and pick), write the pick to the log as "Next Monday", and skip 3–7.
 
 1. **MEASURE** — In the logged-in Chrome session open Search Console (URL in AGENTS.md), last
    28 days vs previous 28, Queries tab then Pages tab. Capture: top 30 queries by impressions with
