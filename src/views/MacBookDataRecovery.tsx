@@ -368,7 +368,7 @@ export default function MacBookDataRecovery() {
           {/* FAQ */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">MacBook data recovery FAQ</h2>
-            <FAQAccordion tone="dark" items={FAQS} injectSchema />
+            <FAQAccordion items={FAQS} injectSchema />
           </section>
 
           {/* Related */}

@@ -201,7 +201,7 @@ export default function MacDataRecovery() {
           <div className="rounded-2xl border border-orange-500/40 bg-orange-500/[0.08] p-lg md:p-xl flex gap-md items-start">
             <AlertTriangle size={22} className="text-orange-400 shrink-0 mt-0.5" aria-hidden />
             <div>
-              <p className="text-[14px] font-bold text-orange-300 m-0 mb-2">Do not attempt DIY recovery on Apple Silicon Macs</p>
+              <p className="text-[14px] font-bold text-orange-700 m-0 mb-2">Do not attempt DIY recovery on Apple Silicon Macs</p>
               <p className="text-[14px] text-text-muted leading-relaxed m-0">
                 The SSD is soldered to the logic board on all M1-M4 MacBooks. Running disk repair tools on a failing drive can permanently destroy data by overwriting the recovery window. Bring in for professional assessment before trying anything.
               </p>

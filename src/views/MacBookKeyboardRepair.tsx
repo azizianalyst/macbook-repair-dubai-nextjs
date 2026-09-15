@@ -481,7 +481,7 @@ export default function MacBookKeyboardRepair() {
         {/* ── FAQ ────────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead title="MacBook keyboard repair FAQ" />
-          <FAQAccordion items={FAQS} injectSchema tone="dark" />
+          <FAQAccordion items={FAQS} injectSchema />
         </section>
 
         {/* ── Related ────────────────────────────────────────────── */}

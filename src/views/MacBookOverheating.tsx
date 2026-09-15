@@ -264,7 +264,7 @@ export default function MacBookOverheating() {
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <h2 className="text-[28px] md:text-[32px] mb-xl text-text">MacBook overheating FAQ</h2>
-          <FAQAccordion items={FAQS} injectSchema={true} tone="dark" />
+          <FAQAccordion items={FAQS} injectSchema={true} />
         </div>
       </section>
 

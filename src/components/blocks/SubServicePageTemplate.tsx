@@ -225,7 +225,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
             {/* 13. FAQ — long-tail keywords and objection handling */}
             <section>
               <h2 className="text-[28px] md:text-[32px] mb-md text-text">FAQ</h2>
-              <FAQAccordion items={p.faqs} injectSchema tone="dark" />
+              <FAQAccordion items={p.faqs} injectSchema />
             </section>
 
             {/* 14. RELATED SERVICES — internal linking */}

@@ -69,7 +69,7 @@ export default function MacDataRecoveryWaterDamage() {
           subtitle="Act fast, every hour increases corrosion. Free pickup today. No-fix no-charge. NAND chip-off capability."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1 text-red-400 font-semibold"><AlertTriangle size={16} aria-hidden /> Power off now, do not charge</span>
+            <span className="flex items-center gap-1 text-red-700 font-semibold"><AlertTriangle size={16} aria-hidden /> Power off now, do not charge</span>
             <span>·</span>
             <span>No-fix no-charge</span>
             <span>·</span>
@@ -125,7 +125,7 @@ export default function MacDataRecoveryWaterDamage() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <div className="border border-red-700/40 bg-red-900/10 rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
-              <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-400" aria-hidden /> Water damage, act now</h2>
+              <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-700" aria-hidden /> Water damage, act now</h2>
               <p className="text-[15px] text-text-muted">Free pickup across Dubai. No-fix no-charge. Every hour increases corrosion, contact us today.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
@@ -148,7 +148,7 @@ export default function MacDataRecoveryWaterDamage() {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">Mac data recovery after water damage. FAQ</h2>
-          <FAQAccordion items={FAQS} injectSchema tone="dark" />
+          <FAQAccordion items={FAQS} injectSchema />
         </section>
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">

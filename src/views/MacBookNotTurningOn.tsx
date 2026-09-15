@@ -345,7 +345,7 @@ export default function MacBookNotTurningOn() {
         {/* CTA bar */}
         <section className="border-y border-border bg-bg-alt">
           <div className="mx-auto max-w-content px-5 md:px-6 py-xl">
-            <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-amber-950/30 p-xl md:p-2xl">
+            <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-amber-950 p-xl md:p-2xl">
               <div className="flex flex-col gap-md md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="m-0 text-[12px] uppercase tracking-wider text-amber-400 font-semibold mb-2">
@@ -390,7 +390,7 @@ export default function MacBookNotTurningOn() {
                 MacBook not turning on -- FAQ
               </h2>
             </div>
-            <FAQAccordion items={FAQS} injectSchema={true} tone="dark" />
+            <FAQAccordion items={FAQS} injectSchema={true} />
           </div>
         </section>
 

@@ -378,7 +378,7 @@ export default function MacBookChargingPortRepair() {
           {/* FAQ */}
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">MacBook charging port FAQ</h2>
-            <FAQAccordion items={FAQS} injectSchema tone="dark" />
+            <FAQAccordion items={FAQS} injectSchema />
           </section>
 
           {/* Related */}

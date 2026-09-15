@@ -232,7 +232,7 @@ export default function Pricing() {
       {/* FAQ */}
       <section aria-labelledby="pricing-faq" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 id="pricing-faq" className="text-[28px] md:text-[32px] mb-md">Pricing FAQ</h2>
-        <FAQAccordion items={PRICING_FAQS} injectSchema tone="dark" />
+        <FAQAccordion items={PRICING_FAQS} injectSchema />
       </section>
 
       {/* Final CTA */}

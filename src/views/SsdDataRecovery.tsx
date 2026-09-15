@@ -132,7 +132,7 @@ export default function SsdDataRecovery() {
                   {SUCCESS_RATES.map((row) => (
                     <tr key={row.scenario} className="border-b border-border">
                       <td className="py-sm pr-lg">{row.scenario}</td>
-                      <td className={`py-sm font-semibold ${row.rate.startsWith("0%") ? "text-red-400" : "text-accent"}`}>{row.rate}</td>
+                      <td className={`py-sm font-semibold ${row.rate.startsWith("0%") ? "text-red-700" : "text-accent"}`}>{row.rate}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -147,7 +147,7 @@ export default function SsdDataRecovery() {
           <ul className="space-y-sm mt-lg">
             {DONT_DO.map((item) => (
               <li key={item} className="flex items-start gap-sm text-[15px] border border-red-700/30 bg-red-900/10 rounded-md p-md">
-                <AlertTriangle size={16} className="text-red-400 shrink-0 mt-[2px]" aria-hidden />
+                <AlertTriangle size={16} className="text-red-700 shrink-0 mt-[2px]" aria-hidden />
                 <span>{item}</span>
               </li>
             ))}
@@ -181,7 +181,7 @@ export default function SsdDataRecovery() {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">SSD data recovery Dubai. FAQ</h2>
-          <FAQAccordion items={FAQS} injectSchema tone="dark" />
+          <FAQAccordion items={FAQS} injectSchema />
         </section>
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">

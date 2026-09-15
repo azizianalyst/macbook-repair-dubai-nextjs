@@ -477,7 +477,7 @@ export default function MacBookAirScreenReplacement() {
               </div>
             </div>
             <div>
-              <FAQAccordion items={FAQ_ITEMS} injectSchema tone="dark" />
+              <FAQAccordion items={FAQ_ITEMS} injectSchema />
             </div>
           </div>
         </section>

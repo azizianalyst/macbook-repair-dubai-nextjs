@@ -543,7 +543,7 @@ export default function LandingTemplate({
             <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
               Frequently asked questions
             </h2>
-            <FAQAccordion items={faqs} injectSchema tone="dark" />
+            <FAQAccordion items={faqs} injectSchema />
           </div>
         </Reveal>
       )}

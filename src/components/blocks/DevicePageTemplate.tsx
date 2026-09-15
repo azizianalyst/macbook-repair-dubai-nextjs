@@ -275,7 +275,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
 
           <section>
             <h2 className="text-[28px] md:text-[32px] mb-md">{p.serviceName} FAQ</h2>
-            <FAQAccordion items={p.faqs} injectSchema tone="dark" />
+            <FAQAccordion items={p.faqs} injectSchema />
           </section>
 
           <section>

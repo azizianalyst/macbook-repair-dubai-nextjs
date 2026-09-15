@@ -376,7 +376,7 @@ export default function MacBookProChipScreenPage({
                 <span>Free pickup Dubai-wide</span>
               </div>
             </div>
-            <FAQAccordion items={faqs} injectSchema tone="dark" />
+            <FAQAccordion items={faqs} injectSchema />
           </div>
         </section>
 

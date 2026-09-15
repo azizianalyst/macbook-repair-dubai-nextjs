@@ -208,7 +208,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">{cfg.area} - frequently asked questions</h2>
-        <FAQAccordion tone="dark" items={cfg.faqs} injectSchema />
+        <FAQAccordion items={cfg.faqs} injectSchema />
       </section>
 
       {/* Find us */}

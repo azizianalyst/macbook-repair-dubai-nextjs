@@ -17,7 +17,7 @@ export const crmLinks = {
 };
 
 export async function mirrorLeadToCrm(lead: Lead): Promise<boolean> {
-  const intent = lead.route === "buyback" ? "sell" : lead.route === "business" ? "business" : "repair";
+  const intent = lead.route === "buyback" ? "sell" : lead.route === "business" ? "it_support" : "repair";
   const body = {
     brand: CRM_BRAND,
     website: "", // honeypot stays empty

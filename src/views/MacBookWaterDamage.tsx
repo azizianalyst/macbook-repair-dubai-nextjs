@@ -221,7 +221,7 @@ export default function MacBookWaterDamage() {
           ]}
         />
         {/* URGENT warning strip */}
-        <div className="border-y border-red-900/40 bg-red-950/40">
+        <div className="border-y border-red-900/40 bg-red-950">
           <div className="mx-auto max-w-content px-5 md:px-6 py-md">
             <div className="flex flex-wrap items-center justify-center gap-x-xl gap-y-sm text-center">
               {[
@@ -252,7 +252,7 @@ export default function MacBookWaterDamage() {
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <div className="mb-2xl max-w-[64ch]">
               <h2 className="m-0 text-text text-[clamp(1.5rem,2.8vw,2rem)] font-bold flex items-center gap-sm">
-                <AlertTriangle size={24} className="text-red-400" aria-hidden />
+                <AlertTriangle size={24} className="text-red-700" aria-hidden />
                 What to do right now after a MacBook spill
               </h2>
               <p className="mt-md text-[17px] text-text-muted leading-relaxed">
@@ -264,7 +264,7 @@ export default function MacBookWaterDamage() {
                 <li key={s.step} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                   <span
                     aria-hidden
-                    className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-red-900/30 font-bold text-[18px] text-red-400"
+                    className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-red-900/30 font-bold text-[18px] text-red-700"
                   >
                     {s.step}
                   </span>
@@ -323,7 +323,7 @@ export default function MacBookWaterDamage() {
                   {RECOVERY_RATES.map((r, i) => (
                     <tr key={r.time} className="border-b border-border last:border-0">
                       <td className="px-lg py-sm font-medium text-text">{r.time}</td>
-                      <td className={`px-lg py-sm font-semibold ${i === 0 ? "text-green-400" : i === 1 ? "text-accent" : i === 2 ? "text-amber-400" : "text-red-400"}`}>
+                      <td className={`px-lg py-sm font-semibold ${i === 0 ? "text-green-700" : i === 1 ? "text-accent" : i === 2 ? "text-amber-700" : "text-red-700"}`}>
                         {r.rate}
                       </td>
                     </tr>
@@ -395,7 +395,7 @@ export default function MacBookWaterDamage() {
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
-          <div className="relative overflow-hidden rounded-2xl border border-red-900/30 bg-red-950/20 p-xl md:p-2xl">
+          <div className="relative overflow-hidden rounded-2xl border border-red-900/30 bg-red-950 p-xl md:p-2xl">
             <div className="flex flex-col gap-md md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="m-0 text-[12px] uppercase tracking-wider text-red-400 font-semibold mb-2">
@@ -439,7 +439,7 @@ export default function MacBookWaterDamage() {
                 MacBook water damage repair -- FAQ
               </h2>
             </div>
-            <FAQAccordion items={FAQS} injectSchema={true} tone="dark" />
+            <FAQAccordion items={FAQS} injectSchema={true} />
           </div>
         </section>
 

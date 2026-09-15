@@ -125,7 +125,7 @@ export default function Contact() {
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <h2 className="m-0 mb-xl">Visiting us: common questions</h2>
-          <FAQAccordion items={FAQS} tone="dark" />
+          <FAQAccordion items={FAQS} />
           <p className="text-[14px] text-text-muted mt-lg flex items-center gap-2">
             <Languages size={16} className="text-accent" aria-hidden />
             Multilingual reception · English · Arabic · Hindi · Urdu · basic Russian.

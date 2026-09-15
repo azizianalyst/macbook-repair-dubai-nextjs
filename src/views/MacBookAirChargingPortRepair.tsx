@@ -359,8 +359,7 @@ export default function MacBookAirChargingPortRepair() {
               <FAQAccordion
                 items={FAQS}
                 injectSchema={true}
-                tone="dark"
-              />
+                />
             </div>
           </div>
         </section>

@@ -291,7 +291,7 @@ export default function TradeInMacBookDubai() {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Trade-in & buyback FAQ</h2>
-        <FAQAccordion items={FAQS} injectSchema tone="dark" />
+        <FAQAccordion items={FAQS} injectSchema />
       </section>
 
       {/* More options, sell / trade-in / protect (cross-links the conversion cluster) */}

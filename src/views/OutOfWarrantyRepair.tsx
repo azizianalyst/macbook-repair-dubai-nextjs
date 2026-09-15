@@ -150,7 +150,7 @@ export default function OutOfWarrantyRepair() {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Out-of-warranty repair FAQ</h2>
-        <FAQAccordion items={FAQS} injectSchema tone="dark" />
+        <FAQAccordion items={FAQS} injectSchema />
       </section>
 
       {/* Location */}

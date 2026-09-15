@@ -299,7 +299,7 @@ export default function MacBookKernelPanic() {
                 <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-white leading-[1.1] mb-md">
                   Kernel panic questions
                 </h2>
-                <p className="text-[15px] text-text-muted leading-relaxed mb-lg">
+                <p className="text-[15px] text-on-primary-muted leading-relaxed mb-lg">
                   Common questions about MacBook kernel panics, crash logs, and repair costs in Dubai.
                 </p>
                 <CallButtons dark />

@@ -134,11 +134,25 @@ export type CreatePostPayload = {
   media?: { mediaFormat: "PHOTO"; sourceUrl: string }[];
 };
 
-export async function listPosts(locationId: string): Promise<GbpPost[]> {
-  const res = await gbpFetch(`${MYB_URL}/${locationId}/localPosts?pageSize=20`);
-  if (!res.ok) throw new Error(`listPosts: ${res.status}`);
-  const d = await res.json();
-  return d.localPosts || [];
+/**
+ * List local posts. Google caps a page at 100; the archive on an established
+ * profile runs to hundreds, so page through until exhausted rather than
+ * silently returning only the newest slice. `limit` guards against a runaway
+ * loop if the API ever keeps handing back a token.
+ */
+export async function listPosts(locationId: string, limit = 500): Promise<GbpPost[]> {
+  const out: GbpPost[] = [];
+  let pageToken: string | undefined;
+  do {
+    const qs = new URLSearchParams({ pageSize: "100" });
+    if (pageToken) qs.set("pageToken", pageToken);
+    const res = await gbpFetch(`${MYB_URL}/${locationId}/localPosts?${qs}`);
+    if (!res.ok) throw new Error(`listPosts: ${res.status}`);
+    const d = await res.json();
+    out.push(...(d.localPosts || []));
+    pageToken = d.nextPageToken || undefined;
+  } while (pageToken && out.length < limit);
+  return out;
 }
 
 export async function createPost(locationId: string, payload: CreatePostPayload): Promise<GbpPost> {

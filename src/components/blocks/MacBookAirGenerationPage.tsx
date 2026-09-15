@@ -412,7 +412,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
               {faqGroups.map((g, gi) => (
                 <div key={g.category}>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">{g.category}</p>
-                  <FAQAccordion items={g.items} injectSchema={gi === 0} tone="dark" />
+                  <FAQAccordion items={g.items} injectSchema={gi === 0} />
                 </div>
               ))}
             </div>

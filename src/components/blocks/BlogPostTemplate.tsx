@@ -265,7 +265,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
               </div>
               <section className="mt-xl">
                 <h2 className="text-[28px] md:text-[32px] mb-md text-text">Frequently asked questions</h2>
-                <FAQAccordion tone="dark" items={p.faqs} injectSchema />
+                <FAQAccordion items={p.faqs} injectSchema />
               </section>
               <section className="mt-xl">
                 <h2 className="text-[24px] mb-md text-text">Related on MacBook Repair Dubai</h2>
@@ -306,7 +306,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
             </div>
             <section className="mt-xl">
               <h2 className="text-[28px] md:text-[32px] mb-md text-text">Frequently asked questions</h2>
-              <FAQAccordion tone="dark" items={p.faqs} injectSchema />
+              <FAQAccordion items={p.faqs} injectSchema />
             </section>
             <section className="max-w-[72ch] mt-xl">
               <h2 className="text-[24px] mb-md text-text">Related on MacBook Repair Dubai</h2>

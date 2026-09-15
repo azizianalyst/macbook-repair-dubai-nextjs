@@ -1279,6 +1279,10 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "Mac mini M4 Repair Dubai - Redesigned 2024 Compact Mini",
     "description": "Mac mini M4 repair Dubai (2024). Completely redesigned - smallest Mac mini ever. M4 and M4 Pro. Thunderbolt 5 (Pro only). 1-2 years old, likely under warranty. Free diagnosis. Call 055 741 3706."
   },
+  "/mac-mini-m6-repair-dubai": {
+    "title": "Mac mini M6 & M5 Pro Repair Dubai - 2026 Model",
+    "description": "Mac mini M6 and M5 Pro (2026) repair Dubai. Apple's first 2nm Mac, Wi-Fi 7, Thunderbolt 5 on the Pro. Brand-new model - we check warranty first. Free diagnosis. Call 055 741 3706."
+  },
   "/mac-mini-no-display-dubai": {
     "title": "Mac mini No Display Dubai? HDMI & Thunderbolt Fix - Free Diagnosis",
     "description": "Mac mini powers on but no display? HDMI 2.0/2.1 port, Thunderbolt resolution handshake, display IC fault. All models. Free diagnosis. Call 055 741 3706."
@@ -1390,6 +1394,10 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   "/mac-studio-m4-repair-dubai": {
     "title": "Mac Studio M4 Max Repair Dubai - 2025 Thunderbolt 5",
     "description": "Mac Studio M4 Max repair Dubai (2025). Thunderbolt 5, up to 128GB unified memory. Under 1 year old - check AppleCare+ first. Free diagnosis. Call 055 741 3706."
+  },
+  "/mac-studio-m5-repair-dubai": {
+    "title": "Mac Studio M5 Max & M5 Ultra Repair Dubai - 2026 Model",
+    "description": "Mac Studio M5 Max and M5 Ultra (2026) repair Dubai. Apple's most powerful Mac now the Mac Pro is gone. Thunderbolt 5, Wi-Fi 7, up to 512GB RAM. Warranty checked first. Free diagnosis. Call 055 741 3706."
   },
   "/mac-studio-no-display-dubai": {
     "title": "Mac Studio No Display Dubai? Black Screen Fix - Free Diagnosis",
@@ -1507,9 +1515,21 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "MacBook Air M4 Screen Repair Dubai",
     "description": "MacBook Air M4 screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. New 2025 redesign. Free diagnosis. 1–2 day turnaround. Call 055 741 3706."
   },
+  "/macbook-air-m5-battery-replacement-dubai": {
+    "title": "MacBook Air M5 Battery Replacement Dubai",
+    "description": "MacBook Air M5 (2026) battery replacement Dubai. 13-inch and 15-inch, BMS re-pair included, warranty checked first. Free diagnosis. Call 055 741 3706."
+  },
+  "/macbook-air-m5-keyboard-repair-dubai": {
+    "title": "MacBook Air M5 Keyboard Repair Dubai",
+    "description": "MacBook Air M5 (2026) keyboard repair Dubai. Magic Keyboard scissor switch, single keys or full top-case, Touch ID transfer. Free diagnosis. Call 055 741 3706."
+  },
   "/macbook-air-m5-repair-dubai": {
     "title": "MacBook Air M5 Repair Dubai 2026: Screen, Battery & Logic Board",
     "description": "MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+  },
+  "/macbook-air-m5-screen-repair-dubai": {
+    "title": "MacBook Air M5 Screen Repair Dubai",
+    "description": "MacBook Air M5 (2026) screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. Genuine panels, free diagnosis, 1–2 day turnaround. Call 055 741 3706."
   },
   "/macbook-air-screen-repair-dubai": {
     "title": "MacBook Air Screen Repair Dubai — Same-Day M1 to M4",

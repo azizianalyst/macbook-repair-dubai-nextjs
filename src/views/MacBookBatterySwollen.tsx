@@ -80,7 +80,7 @@ export default function MacBookBatterySwollen() {
           subtitle="A swollen battery is a fire risk, do not keep charging it. Same-day replacement. Free pickup across Dubai."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1 text-red-400 font-semibold"><AlertTriangle size={16} aria-hidden /> Urgent, stop charging now</span>
+            <span className="flex items-center gap-1 text-red-700 font-semibold"><AlertTriangle size={16} aria-hidden /> Urgent, stop charging now</span>
             <span>·</span>
             <span>Same-day replacement</span>
             <span>·</span>
@@ -108,7 +108,7 @@ export default function MacBookBatterySwollen() {
           <div className="grid gap-sm md:grid-cols-2 mt-lg">
             {DANGER_SIGNS.map(({ label }) => (
               <div key={label} className="flex items-start gap-sm border border-red-800/30 bg-red-900/10 rounded-md p-md">
-                <AlertTriangle size={16} className="text-red-400 shrink-0 mt-[2px]" aria-hidden />
+                <AlertTriangle size={16} className="text-red-700 shrink-0 mt-[2px]" aria-hidden />
                 <p className="text-[14px]">{label}</p>
               </div>
             ))}
@@ -122,7 +122,7 @@ export default function MacBookBatterySwollen() {
             <ul className="space-y-sm">
               {DONT_DO.map((item) => (
                 <li key={item} className="flex items-start gap-sm text-[15px]">
-                  <XCircle size={18} className="text-red-400 shrink-0 mt-[2px]" aria-hidden />
+                  <XCircle size={18} className="text-red-700 shrink-0 mt-[2px]" aria-hidden />
                   <span>{item}</span>
                 </li>
               ))}
@@ -160,7 +160,7 @@ export default function MacBookBatterySwollen() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <div className="border border-red-700/40 bg-red-900/10 rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
-              <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-400" aria-hidden /> Swollen battery, act today</h2>
+              <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-700" aria-hidden /> Swollen battery, act today</h2>
               <p className="text-[15px] text-text-muted">Free pickup across Dubai Mainland. Same-day replacement. We prioritise swollen battery jobs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
@@ -183,7 +183,7 @@ export default function MacBookBatterySwollen() {
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 className="text-[28px] md:text-[32px] mb-md">Swollen MacBook battery FAQ</h2>
-          <FAQAccordion items={FAQS} injectSchema tone="dark" />
+          <FAQAccordion items={FAQS} injectSchema />
         </section>
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">

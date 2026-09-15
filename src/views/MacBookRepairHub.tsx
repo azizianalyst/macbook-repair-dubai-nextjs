@@ -218,7 +218,7 @@ export default function MacBookRepairHub() {
         {/* FAQs */}
         <section>
           <h2 className="text-2xl font-bold mb-md">MacBook Repair Dubai. FAQ</h2>
-          <FAQAccordion tone="dark" items={FAQS} injectSchema />
+          <FAQAccordion items={FAQS} injectSchema />
         </section>
 
         {/* Related links */}

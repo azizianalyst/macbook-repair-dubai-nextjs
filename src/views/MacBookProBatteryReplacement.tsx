@@ -383,7 +383,7 @@ export default function MacBookProBatteryReplacement() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="MacBook Pro battery replacement FAQ" />
-            <FAQAccordion items={FAQS} injectSchema tone="dark" />
+            <FAQAccordion items={FAQS} injectSchema />
           </div>
         </section>
 
