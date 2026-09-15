@@ -48,6 +48,23 @@ Aziz merges). Before ANY build or deploy:
    live sitemap URL count / 3 (rough page count). If the worktree looks smaller than the live
    site, abort the deploy.
 
+## Edge rule (learned 2026-09-15 — the 429 outage)
+
+macbook-repair-dubai.ae is fronted by **Cloudflare** (nameservers austin/nina.ns.cloudflare.com,
+zone in Azizianalyst@gmail.com's account). Hostinger's own CDN (hCDN, `*.cdn.hstgr.net`,
+`x-hcdn-request-id` header) must **never** sit behind Cloudflare on this site: hCDN sees every
+visitor as one of a few Cloudflare IPs, its per-IP security throttle bans that IP, and every
+visitor worldwide gets a bare `429` (11,614 of ~18,000 requests in the week of 8–15 Sep).
+
+Correct state: Cloudflare `A macbook-repair-dubai.ae → 46.17.175.101` (origin, proxied), no
+other apex A/AAAA, `www` CNAME → `macbook-repair-dubai.ae`, hPanel → Performance → CDN =
+**Disabled** for this site, hPanel CDN security level irrelevant once disabled. Hostinger
+auto-enables CDN on sites; if it ever reappears (header present on a response), that is a
+red alert (check 14).
+
+Any 429 on this domain is an outage, never "rate limiting working as intended": the app's own
+limiter was removed on 2026-08-31 (commit ea226f2) and the live build is from 2026-09-02.
+
 ## Working tree rule (important)
 
 Aziz often has an uncommitted feature branch checked out in the project directory.
@@ -76,12 +93,9 @@ and push. Logs under `automation/` are committed from the worktree too.
    `src/content/site.ts` says; do not bump it without a screenshot-verified Google number.
 3. **Brand** — "MacBook Repair Dubai" is also traded by another business; never cite or
    link the wrong LinkedIn/GBP. Our GBP is Concord Tower Office #45, Dubai Media City.
-4. **Rate limiter** — the live build (as of 2026-09-14) still runs the old proxy.ts limiter:
-   ~15–60 requests/min from one IP → plain `429` on every path, and the block does not
-   release. Budget the canary at **≤ 10 live requests per minute**, always send a browser
-   User-Agent (`curl` is on the scraper list), always `-L` (pages 308 to a trailing slash),
-   and if any check returns 429, stop hitting the site, mark the remaining checks "skipped
-   (429)", and treat it as a failure of check 13. Never retry in a loop.
+4. **Requests to the live site** — always a browser User-Agent (`curl` is on the scraper
+   list), always `-L` (pages 308 to a trailing slash), ≤ 30 requests per run. A `429` is an
+   outage (see Edge rule): stop, mark remaining checks "skipped (429)", fail check 13, alert.
 5. **Templates** — new pages use the existing block templates in `src/components/blocks/`
    and the pattern in `docs/azizi-template-standard.md`; every page needs a server-rendered
    `PageSchema`, a 40–60 word answer block, FAQ, and ≥3 inbound internal links.

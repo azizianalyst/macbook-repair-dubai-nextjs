@@ -45,6 +45,12 @@ ends all further live requests for this run (see AGENTS.md rule 4).
 7. Live build matches main: `curl -s $LIVE/build-id.txt` if that file exists; otherwise compare
    `lastmod` of `/` in the sitemap with `src/content/lastmod.generated.ts` on origin/main. A gap of
    more than 24 h after a push is a failure ("deploy did not land").
+7b. **Edge probe (the 429 guard)** — 10 requests, 1 s apart, browser UA, to `/`, `/contact/`,
+   `/macbook-screen-repair-dubai/`, `/macbook-battery-replacement-dubai/`, `/iphone-repair-dubai/`,
+   `/reviews/`, `/blog/`, `/robots.txt`, `/sitemap.xml`, `/macbook-repair-dubai/`. Record every status
+   and whether any response carries `x-hcdn-request-id` or `platform: hostinger`. **Any 429 = check 13
+   fails. Any hCDN header = check 14 fails** ("Hostinger CDN is back in front of the site — see AGENTS.md
+   Edge rule"). Both are alert conditions.
 8. Latest Hostinger build (only if `hosting_listWebsitesV1` on `hostinger-macbookrepair` lists the domain;
    otherwise record "MCP on wrong account" as a failure): `mcp__hostinger-macbookrepair__hosting_listJsDeployments` (`perPage: 1`)
    → record state.
@@ -67,16 +73,16 @@ ends all further live requests for this run (see AGENTS.md rule 4).
 
 **C. Write and alert.**
 
-Write `automation/logs/health/YYYY-MM-DD.md`: a table of checks 1–13 with results (13 = "no 429 seen this run"), plus
+Write `automation/logs/health/YYYY-MM-DD.md`: a table of checks 1–14 with results (13 = "no 429 seen this run", 14 = "no hCDN header seen"), plus
 "Leads: N (24 h) / N (7 d)", "GBP: reviews replied N, post published Y/N, insights ...", and a
 "Still needs Aziz" list built from the open 🧑 items in `docs/TASKS.md` Module 1–2 plus anything
-found today. Append one line to `automation/logs/YYYY-MM.md`: "canary: N/13 pass — <failures>".
+found today. Append one line to `automation/logs/YYYY-MM.md`: "canary: N/14 pass — <failures>".
 
 ALERT RULE. Email azizianalyst@gmail.com via the Gmail connector ONLY if: the site is down or
-blank; the WhatsApp path (check 6) or form path (check 6b) fails; robots.txt fails; the sitemap dropped >5%; a deploy has not
+blank; any 429 or hCDN header (checks 13/14); the WhatsApp path (check 6) or form path (check 6b) fails; robots.txt fails; the sitemap dropped >5%; a deploy has not
 landed for >24 h; the GBP connection is dead. Subject: "macbook-repair-dubai.ae canary: <what
 failed>". Body: the failing check, one sentence on what it means, and the exact action only Aziz
-can take (lead path: check `SMTP_*` + `LEAD_TO_EMAIL` in Hostinger → Node.js → Environment
+can take (429/hCDN: Cloudflare DNS must be A → 46.17.175.101 only, www CNAME → apex, hPanel CDN Disabled; lead path: check `SMTP_*` + `LEAD_TO_EMAIL` in Hostinger → Node.js → Environment
 variables; GBP: reconnect at /admin/gbp; deploy: rerun `DEPLOY.md`). Do not email when everything
 passes. Do not repeat an unchanged failure two days running.
 
@@ -174,7 +180,7 @@ C. Write `automation/ai-visibility/YYYY-MM-DD.md` with both tables and up to 3 c
 From `$WT`: `git add automation docs && git commit -m "Autopilot YYYY-MM-DD: <parts run>" && git push origin main`
 (if there is nothing to commit, say so). End with a short report:
 
-- Canary: N/13 pass, alert sent Y/N, leads 24 h / 7 d, GBP reviews replied, post published.
+- Canary: N/14 pass, alert sent Y/N, leads 24 h / 7 d, GBP reviews replied, post published.
 - For any other part: what shipped (live URL), what was skipped and why, gate result, deploy
   verified Y/N, IndexNow Y/N.
 - **Needs Aziz**: the human-only items, each with the exact action.
