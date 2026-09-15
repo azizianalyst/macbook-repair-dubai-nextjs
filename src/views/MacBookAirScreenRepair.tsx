@@ -50,6 +50,8 @@ const PRICING: PricingRow[] = [
   { model: 'MacBook Air 15" M3 (2024)',           price: 750, timeline: "Same day · 1d", l6href: "/macbook-air-m3-screen-repair-dubai"    },
   { model: 'MacBook Air 13" M4 (2025)',           price: 720, timeline: "1–2 days",      l6href: "/macbook-air-m4-screen-repair-dubai"    },
   { model: 'MacBook Air 15" M4 (2025)',           price: 780, timeline: "1–2 days",      l6href: "/macbook-air-m4-screen-repair-dubai"    },
+  { model: 'MacBook Air 13" M5 (2026)',           price: 740, timeline: "1–2 days",      l6href: "/macbook-air-m5-screen-repair-dubai"    },
+  { model: 'MacBook Air 15" M5 (2026)',           price: 800, timeline: "1–2 days",      l6href: "/macbook-air-m5-screen-repair-dubai"    },
 ];
 
 type DisplaySpec = { chip: string; display: string; resolution: string; trueTone: boolean; p3: boolean; l3href: string };
@@ -59,6 +61,7 @@ const DISPLAY_SPECS: DisplaySpec[] = [
   { chip: "M2 (2022–2024)",   display: "Liquid Retina", resolution: '2560×1600 (13") · 2880×1800 (15")', trueTone: true,  p3: true,  l3href: "/macbook-air-m2-repair-dubai"  },
   { chip: "M3 (2024)",        display: "Liquid Retina", resolution: '2560×1600 (13") · 2880×1800 (15")', trueTone: true,  p3: true,  l3href: "/macbook-air-m3-repair-dubai"  },
   { chip: "M4 (2025)",        display: "Liquid Retina", resolution: '2560×1600 (13") · 2880×1800 (15")', trueTone: true,  p3: true,  l3href: "/macbook-air-m4-repair-dubai"  },
+  { chip: "M5 (2026)",        display: "Liquid Retina", resolution: '2560×1664 (13") · 2880×1864 (15")', trueTone: true,  p3: true,  l3href: "/macbook-air-m5-repair-dubai"  },
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
@@ -636,7 +639,7 @@ export default function MacBookAirScreenRepair() {
               {FAQ_GROUPS.map((g, gi) => (
                 <div key={g.category} id={`faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">{g.category}</p>
-                  <FAQAccordion items={g.items} injectSchema={gi === 0} tone="dark" />
+                  <FAQAccordion items={g.items} injectSchema={gi === 0} />
                 </div>
               ))}
             </div>

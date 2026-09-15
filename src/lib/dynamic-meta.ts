@@ -38,45 +38,32 @@ const IPAD = ipadModels as ModelEntry[];
 const MAC_DESKTOP = desktopModels as ModelEntry[];
 const IMAC = imacModels as ModelEntry[];
 
+// Price-free by policy (hide-prices-whatsapp): titles/descriptions never carry AED figures.
 function macbookMeta(m: ModelEntry): Meta {
-  const p = m.pricing;
-  const startingPrice = Math.min(p.battery!, p.port!, p.fanCleaning || 9999);
   return {
-    title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, keyboard AED ${p.keyboard}. warranty up to 12 months.`,
+    title: `${m.name} Repair Dubai - Request a Quote`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery, keyboard and logic-board repair with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function ipadMeta(m: ModelEntry): Meta {
-  const p = m.pricing;
-  const startingPrice = Math.min(p.battery!, p.port!);
   return {
-    title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen AED ${p.screen}, battery AED ${p.battery}, port AED ${p.port}. warranty up to 12 months. Free pickup.`,
+    title: `${m.name} Repair Dubai - Request a Quote`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery and charging-port repair with free diagnosis, free pickup and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function macDesktopMeta(m: ModelEntry): Meta {
-  const p = m.pricing;
-  const candidates = [p.fanCleaning, p.thermalPaste, p.port, p.psu].filter(
-    (v): v is number => typeof v === "number" && v > 0,
-  );
-  const startingPrice = candidates.length ? Math.min(...candidates) : p.logicBoard!;
   return {
-    title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} repair Dubai. Logic board AED ${p.logicBoard}${p.psu ? `, PSU AED ${p.psu}` : ""}${p.port ? `, port AED ${p.port}` : ""}. warranty up to 12 months.`,
+    title: `${m.name} Repair Dubai - Request a Quote`,
+    description: `${m.name} repair Dubai. Logic board${m.pricing.psu ? ", power supply" : ""}${m.pricing.port ? ", port" : ""}, SSD data recovery and thermal service with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function imacMeta(m: ModelEntry): Meta {
-  const p = m.pricing;
-  const candidates = [p.powerSupply, p.ramUpgrade, p.fanCleaning, p.thermalPaste].filter(
-    (v): v is number => typeof v === "number" && v > 0,
-  );
-  const startingPrice = candidates.length ? Math.min(...candidates) : p.screen!;
   return {
-    title: `${m.name} Repair Dubai - From AED ${startingPrice}`,
-    description: `${m.name} repair Dubai. Screen AED ${p.screen}, logic board AED ${p.logicBoard}${p.powerSupply ? `, PSU AED ${p.powerSupply}` : ""}. warranty up to 12 months.`,
+    title: `${m.name} Repair Dubai - Request a Quote`,
+    description: `${m.name} repair Dubai. Screen, logic board${m.pricing.powerSupply ? ", power supply" : ""} and SSD repair with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
@@ -108,7 +95,7 @@ for (const c of CATEGORIES) {
   const count = postsInCategory(c.slug).length;
   MAP[`/blog/${c.slug}`] = {
     title: `${c.name} - Apple Repair Blog Dubai`,
-    description: `${c.blurb} Technician-written, with 2026 AED pricing. ${count} guides.`,
+    description: `${c.blurb} Technician-written, quotes on WhatsApp. ${count} guides.`,
   };
 }
 

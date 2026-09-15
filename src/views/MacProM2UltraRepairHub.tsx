@@ -33,7 +33,7 @@ export default function MacProM2UltraRepairHub() {
             The most common misunderstanding: customers expect to swap the GPU as they could on the Intel model. This is not possible on the M2 Ultra.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            At 2 to 3 years old, check AppleCare+ status before booking any repair. See our <Link to="/mac-pro-m2-ultra-2023-repair-dubai">M2 Ultra 2023 dedicated repair page</Link> for model-specific detail.
+            Apple discontinued the Mac Pro line in March 2026, so the M2 Ultra is the last Mac Pro ever made - and the one we plan to support longest. At 2 to 3 years old, check AppleCare+ status before booking any repair. See our <Link to="/mac-pro-m2-ultra-2023-repair-dubai">M2 Ultra 2023 dedicated repair page</Link> for model-specific detail.
           </p>
         </>
       }

@@ -181,6 +181,7 @@ export default function MacMiniRepair() {
           <Link to="/mac-mini-m1-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
           <Link to="/mac-mini-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M2 / M2 Pro (2023) →</Link>
           <Link to="/mac-mini-m4-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M4 / M4 Pro (2024) →</Link>
+          <Link to="/mac-mini-m6-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M6 / M5 Pro (2026) →</Link>
         </div>
       </section>
 
@@ -281,7 +282,7 @@ export default function MacMiniRepair() {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion tone="dark" items={FAQS} injectSchema />
+        <FAQAccordion items={FAQS} injectSchema />
       </section>
 
       {/* Location */}

@@ -39,6 +39,8 @@ const PRICING: PricingRow[] = [
   { model: 'MacBook Air 15" M3 (2024) — individual key',   price: 320, timeline: "Same day · 1–2 hours", l6href: "/macbook-air-m3-keyboard-repair-dubai" },
   { model: 'MacBook Air 13" M4 (2025) — individual key',   price: 350, timeline: "1–2 business days",   l6href: "/macbook-air-m4-keyboard-repair-dubai" },
   { model: 'MacBook Air 15" M4 (2025) — individual key',   price: 380, timeline: "1–2 business days",   l6href: "/macbook-air-m4-keyboard-repair-dubai" },
+  { model: 'MacBook Air 13" M5 (2026) — individual key',   price: 350, timeline: "1–2 business days",   l6href: "/macbook-air-m5-keyboard-repair-dubai" },
+  { model: 'MacBook Air 15" M5 (2026) — individual key',   price: 380, timeline: "1–2 business days",   l6href: "/macbook-air-m5-keyboard-repair-dubai" },
 ];
 
 type KeyboardGenRow = { chip: string; type: string; touchId: boolean; repairNote: string; href: string };
@@ -49,6 +51,7 @@ const KEYBOARD_GENS: KeyboardGenRow[] = [
   { chip: "M2 (2022–2023)",    type: "Magic Keyboard (scissor)",  touchId: true,  repairNote: "Same as M1; 15-inch top-case is a larger separate unit", href: "/macbook-air-m2-keyboard-repair-dubai" },
   { chip: "M3 (2024)",         type: "Magic Keyboard (scissor)",  touchId: true,  repairNote: "Same as M1/M2; Sky Blue colour-matched key caps available", href: "/macbook-air-m3-keyboard-repair-dubai" },
   { chip: "M4 (2025)",         type: "Magic Keyboard (scissor)",  touchId: true,  repairNote: "New chassis — 1–2 day turnaround as parts supply builds", href: "/macbook-air-m4-keyboard-repair-dubai" },
+  { chip: "M5 (2026)",         type: "Magic Keyboard (scissor)",  touchId: true,  repairNote: "Same chassis as M4 — M5-specific parts, 1–2 day turnaround", href: "/macbook-air-m5-keyboard-repair-dubai" },
 ];
 
 type SymptomCard = { title: string; body: string };
@@ -400,7 +403,6 @@ export default function MacBookAirKeyboardRepair() {
                   key={group.title}
                   items={group.items}
                   injectSchema={group.injectSchema ?? false}
-                  tone="dark"
                 />
               ))}
             </div>

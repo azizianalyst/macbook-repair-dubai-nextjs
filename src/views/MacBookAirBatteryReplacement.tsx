@@ -43,6 +43,8 @@ const PRICING: PricingRow[] = [
   { model: 'MacBook Air 15" M3 (2024)',         price: 500, timeline: "Same day · 2 hours", l6href: "/macbook-air-m3-battery-replacement-dubai"   },
   { model: 'MacBook Air 13" M4 (2025)',         price: 500, timeline: "1–2 days",           l6href: "/macbook-air-m4-battery-replacement-dubai"   },
   { model: 'MacBook Air 15" M4 (2025)',         price: 550, timeline: "1–2 days",           l6href: "/macbook-air-m4-battery-replacement-dubai"   },
+  { model: 'MacBook Air 13" M5 (2026)',         price: 520, timeline: "1–2 days",           l6href: "/macbook-air-m5-battery-replacement-dubai"   },
+  { model: 'MacBook Air 15" M5 (2026)',         price: 570, timeline: "1–2 days",           l6href: "/macbook-air-m5-battery-replacement-dubai"   },
 ];
 
 type BatterySpec = {
@@ -63,6 +65,8 @@ const BATTERY_SPECS: BatterySpec[] = [
   { chip: 'M3 15" (2024)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m3-repair-dubai"  },
   { chip: 'M4 13" (2025)',    capacity: "52.6 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m4-repair-dubai"  },
   { chip: 'M4 15" (2025)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m4-repair-dubai"  },
+  { chip: 'M5 13" (2026)',    capacity: "~54 Wh",  cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m5-repair-dubai"  },
+  { chip: 'M5 15" (2026)',    capacity: "66.5 Wh", cycleLimit: "1,000 cycles", chargingPort: "MagSafe 3 + USB-C", appleService: "Charged by Apple",     l3href: "/macbook-air-m5-repair-dubai"  },
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
@@ -607,7 +611,7 @@ export default function MacBookAirBatteryReplacement() {
               {FAQ_GROUPS.map((g, gi) => (
                 <div key={g.category} id={`faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}>
                   <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">{g.category}</p>
-                  <FAQAccordion items={g.items} injectSchema={gi === 0} tone="dark" />
+                  <FAQAccordion items={g.items} injectSchema={gi === 0} />
                 </div>
               ))}
             </div>

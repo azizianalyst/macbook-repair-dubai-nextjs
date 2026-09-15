@@ -195,6 +195,7 @@ export default function MacStudioRepair() {
           <Link to="/mac-studio-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M2 Max/Ultra (2023) →</Link>
           <Link to="/mac-studio-m3-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M3 Ultra (2025) →</Link>
           <Link to="/mac-studio-m4-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M4 Max (2025) →</Link>
+          <Link to="/mac-studio-m5-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M5 Max / M5 Ultra (2026) →</Link>
         </div>
       </section>
 
@@ -299,7 +300,7 @@ export default function MacStudioRepair() {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion tone="dark" items={FAQS} injectSchema />
+        <FAQAccordion items={FAQS} injectSchema />
         <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
           <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>

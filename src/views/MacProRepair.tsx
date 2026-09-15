@@ -96,6 +96,7 @@ const FAQS = [
   { q: "How much do Mac Pro repairs cost in Dubai?", a: "The kind and extent of damage determine the total cost. For example, screen replacement is the most expensive repair, and repairs for a newer model are significantly more costly. The difficulty level, the time required, and the cost of the part are the final factors that affect repair costs." },
   { q: "How can I know the status of my Mac Pro repair?", a: "We'll keep you informed about the progress of your repair, and our technicians will get in touch with you to let you know when it's complete." },
   { q: "Will my Mac Pro's data be protected during the repair?", a: "We respect our customers' data privacy. We do a pre-quality check and a post-repair quality test, and throughout the repair process all of your data is safe. Our quality test assures there are no unreported issues with your Mac both before and after the repair." },
+  { q: "Apple discontinued the Mac Pro - can it still be repaired in Dubai?", a: "Yes. Apple ended the Mac Pro line in March 2026 (the 2023 M2 Ultra was the last model) and now positions the Mac Studio M5 Ultra as its top desktop. Discontinuation does not stop repair: 2019 Intel parts (RAM, PSU, MPX GPU modules, SSD modules) remain available, and the M2 Ultra is serviced at board level. We expect to support both Mac Pro generations for years." },
   { q: "My Mac Pro is a few years old. Is it worth repairing?", a: "After assessing the exact issues with your system, we can make a recommendation. Depending on the condition and the repair cost, upgrading can sometimes be more cost-effective." },
 ];
 
@@ -148,7 +149,7 @@ export default function MacProRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Pro repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs the Mac Pro, 2019 Intel and 2023 M2 Ultra, at its Concord Tower workshop in Dubai Media City. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months, in business since 2004."
+        answer="MacBook Repair Dubai repairs both Mac Pro generations, the 2019 Intel tower and the 2023 M2 Ultra, at its Concord Tower workshop in Dubai Media City. Apple discontinued the Mac Pro in March 2026 with no successor, so independent repair is now the way to keep one running. Services include GPU and logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months, in business since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -296,7 +297,7 @@ export default function MacProRepair() {
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion tone="dark" items={FAQS} injectSchema />
+        <FAQAccordion items={FAQS} injectSchema />
       </section>
 
       {/* Location */}

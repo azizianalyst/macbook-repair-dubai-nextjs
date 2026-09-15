@@ -34,7 +34,7 @@ export default function BlogMacMiniM4WorthIt() {
         <>
           <h2 id="quick-answer">Mac Mini M4 Worth It. Quick answer</h2>
           <p>
-            Mac Mini M4 is the value pick of Apple's current lineup. Tiny new chassis (12.7 cm square),
+            Mac Mini M4 was the value pick of Apple's lineup until the M6 Mac mini replaced it in August 2026 - which now makes it the best-value used Mac mini in Dubai. Tiny new chassis (12.7 cm square),
             M4 chip, 16 GB RAM standard (Apple finally moved off 8 GB). For office
             work, web dev, light Final Cut, and home use it is overpowered for the money.
           </p>

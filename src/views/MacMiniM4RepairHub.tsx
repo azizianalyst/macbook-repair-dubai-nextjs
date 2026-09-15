@@ -24,10 +24,10 @@ export default function MacMiniM4RepairHub() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            The M4 Mac mini (2024) is a complete physical redesign - the smallest Mac mini Apple has ever made, roughly the size of an iPhone Pro box. The front carries two USB-C ports (USB 3) plus a headphone jack. The standard M4 has two Thunderbolt 4 ports and one HDMI 2.1 on the back. The M4 Pro instead has three Thunderbolt 5 ports on the back, supporting up to 120Gb/s for demanding storage and display setups.
+            The M4 Mac mini (2024) is a complete physical redesign - the smallest Mac mini Apple has ever made, roughly the size of an iPhone Pro box. The front carries two USB-C ports (USB 3) plus a headphone jack. The standard M4 has three Thunderbolt 4 ports and one HDMI 2.1 on the back. The M4 Pro instead has three Thunderbolt 5 ports on the back, supporting up to 120Gb/s for demanding storage and display setups.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            At 1 to 2 years old in 2026, your M4 Mac mini is very likely still covered by the standard 1-year Apple warranty or an AppleCare+ plan (which extends coverage to 3 years). We check your serial number and coverage status before we do any paid work - if Apple should fix it, we tell you. For dedicated model pages see{" "}
+            Apple replaced this generation with the <Link to="/mac-mini-m6-repair-dubai" className="text-accent hover:underline">M6 / M5 Pro Mac mini</Link> in August 2026, but at 1 to 2 years old your M4 Mac mini is very likely still covered by the standard 1-year Apple warranty or an AppleCare+ plan (which extends coverage to 3 years). We check your serial number and coverage status before we do any paid work - if Apple should fix it, we tell you. For dedicated model pages see{" "}
             <Link to="/mac-mini-m4-2024-repair-dubai" className="text-accent hover:underline">Mac mini M4 2024 repair</Link>{" "}
             and{" "}
             <Link to="/mac-mini-m4-pro-2024-repair-dubai" className="text-accent hover:underline">Mac mini M4 Pro 2024 repair</Link>.
