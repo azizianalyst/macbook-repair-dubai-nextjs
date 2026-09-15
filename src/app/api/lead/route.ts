@@ -4,6 +4,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { LeadSchema, type Lead } from "@/lib/lead-schema";
 import { insertLead } from "@/lib/store";
+import { mirrorLeadToCrm } from "@/lib/crm";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 // Needs the Node runtime (filesystem + nodemailer SMTP). Not edge-compatible.
@@ -121,6 +122,8 @@ export async function POST(req: Request) {
   // backup. A lead survives if either store or the email succeeded.
   const storeOk = await insertLead(record);
   const fileOk = await saveLead(record);
+  // Copy to the Azizi CRM (Inbox › Enquiries) — never decides the visitor's outcome.
+  void mirrorLeadToCrm(parsed.data);
 
   if (!storeOk && !fileOk && !emailed) {
     return NextResponse.json({ ok: false, error: "Could not record your request" }, { status: 500 });

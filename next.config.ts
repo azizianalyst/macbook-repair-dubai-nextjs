@@ -144,7 +144,7 @@ const nextConfig: NextConfig = {
     const scriptSrc = [
       "script-src 'self' 'unsafe-inline'",
       isDev ? "'unsafe-eval'" : "",
-      "https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com",
+      "https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com https://azizgc.com",
     ]
       .filter(Boolean)
       .join(" ");
@@ -159,7 +159,8 @@ const nextConfig: NextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
       "font-src 'self' data:",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://cloudflareinsights.com",
+      // azizgc.com = the Azizi CRM live-chat widget.
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://cloudflareinsights.com https://azizgc.com",
       "frame-src https://www.google.com",
       "upgrade-insecure-requests",
     ].join("; ");

@@ -55,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>{children}</Providers>
         <ConsentBanner />
         <NoContextMenu />
+        {/* Azizi CRM live chat (answered from Inbox › Conversations) */}
+        <script src="https://azizgc.com/leads/widget.js" data-brand="mrd" data-base="https://azizgc.com" defer />
       </body>
     </html>
   );

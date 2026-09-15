@@ -167,6 +167,9 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
       <div className="relative mx-auto max-w-content px-5 md:px-6 mt-2xl border-t border-border py-lg flex flex-wrap items-center justify-between gap-md text-[13px] text-text-faint">
         <p className="m-0">© {year} {NAP.name}. All rights reserved.</p>
         <nav className="-my-1 flex flex-wrap gap-x-md" aria-label="Legal">
+          <a href="https://azizgc.com/repair-status" className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Track your repair</a>
+          <a href="https://azizgc.com/book?brand=mrd" className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Book a drop-off</a>
+          <a href="https://azizgc.com/w/check" className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Check warranty</a>
           <Link to="/privacy"  className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Privacy</Link>
           <Link to="/terms"    className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Terms</Link>
           <Link to="/warranty" className="inline-flex min-h-[44px] items-center transition-colors hover:text-accent">Warranty</Link>
