@@ -34,6 +34,11 @@ Business Profile alive, and never let the lead path break silently.
 - Generated files: `npm run build` runs `prebuild` (all `gen-*` + `extract-meta.cjs`).
   Never hand-edit `*.generated.ts`.
 
+## Edge state (2026-09-16 — do not undo)
+- Cloudflare DNS: apex `A 46.17.175.101` only (the hCDN `A 92.112.198.248` + two `AAAA 2a02:4780:…` records were deleted 2026-09-16), `www` CNAME → apex, all proxied.
+- hPanel → Performance → CDN: **disabled**, and the site is ticked under "Opt out of automatic CDN" (Hostinger silently re-enables CDN otherwise — that is what put hCDN back in September).
+- Daily check 14 (any `x-hcdn-request-id` header) is the alarm that either setting has reverted.
+
 ## Production branch guard (learned 2026-09-14 — do not remove)
 
 `PRODUCTION_BRANCH` is the branch whose HEAD is what runs on the live site. Today it is
