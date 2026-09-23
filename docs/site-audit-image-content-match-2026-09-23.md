@@ -264,12 +264,11 @@ not contain them. Pattern widened and the two sitemaps kept disjoint.
 
 ## New findings — NOT fixed, need your decision
 
-### 🔴 Analytics has never fired in production
-There is **no GA tag on the live site at all**. `NEXT_PUBLIC_GA_ID` is not set in the
-Hostinger build environment, so `src/lib/analytics.ts` no-ops and no gtag script is
-emitted. Every call, WhatsApp click and form submit has gone unmeasured. This is the exact
-silent failure the audit checklist calls out (§J). Fix: set `NEXT_PUBLIC_GA_ID=G-…` in the
-Hostinger Node env, then rebuild — build-time vars require a new build.
+### ~~🔴 Analytics has never fired in production~~ — **WRONG, RETRACTED**
+**This finding was incorrect.** See the GA4 section at the end of this document. GA4 is
+configured (`G-PGQD65R9C6`), live, and firing. I concluded it was dead because there was no
+gtag `<script>` in the prerendered HTML — but this implementation injects gtag client-side
+only after consent, so its absence there proved nothing.
 
 ### 🔴 Next.js critical CVE, and this site uses the affected feature
 `npm audit --omit=dev`: **1 critical, 6 high, 1 moderate.** The critical is a Next.js
@@ -387,3 +386,57 @@ they never enter real reporting.
 GitHub Actions is emailing **repeated canary failures for two other sites**:
 `azizitechnologies.ae` (Uptime canary — all jobs failed) and `azizitechnologies.co.uk`
 (Site health canary — failing since 22 Sept). Different projects, so untouched here.
+
+
+---
+
+# GA4 — 2026-09-23 (commit 647468f)
+
+## Correction: GA4 was never broken
+My earlier 🔴 "analytics has never fired in production" was **wrong**, and it is worth being
+precise about why: I checked for a `googletagmanager.com/gtag/js` script tag in the
+prerendered HTML and found none. But `src/lib/analytics.ts` injects gtag **client-side, only
+after the visitor accepts consent** — so it can never appear in static HTML. Absence there
+proved nothing. No GA4 setup was required.
+
+**Verified in the browser against production:**
+
+| Check | Result |
+|---|---|
+| Measurement ID in the live bundle | ✅ `G-PGQD65R9C6` |
+| gtag script loads after consent | ✅ `googletagmanager.com/gtag/js?id=G-PGQD65R9C6` |
+| `config` with `anonymize_ip` | ✅ |
+| `page_view` fires | ✅ |
+| SPA route changes tracked | ✅ `gtm.historyChange-v2` |
+| Consent persistence | ✅ `mrd_consent` cookie, 12 months (not localStorage — which is why my first check looked empty) |
+| Honeypot field hidden correctly | ✅ 0×0, off-screen, `aria-hidden`, `tabIndex -1` |
+
+## Two real gaps, both fixed
+
+### 🟠 A completed quote form fired no event at all
+The click handler covers `tel:` / WhatsApp / `mailto:` but cannot observe a `fetch`, so the
+**highest-value conversion on the site was the one lead path GA never saw**. Now reported as
+the same `contact` event with `method:"form"` — one GA4 key event covers all four lead paths
+and segments by method, instead of splitting the conversion across two events.
+
+Gated on `data.id`, not `data.ok`: a filled honeypot also answers `{ok:true}` deliberately, so
+counting those would inflate conversions with submissions that were never stored.
+
+### 🟠 ~3 in 4 CTA clicks reported `placement: "untagged"`
+`data-track` was present on **8 of ~30** contact CTAs, making the "which CTA converts" report
+useless. Added a fallback chain (ancestor `data-track` → `data-section` → header/footer/nav →
+the link's own label) plus `page_path`. Verified live in the browser: a WhatsApp link with no
+`data-track` now reports `placement:"header"`.
+
+**Honest limit:** the form-submit event is verified *by construction* — the endpoint returns an
+`id` only for stored leads, the call sits on exactly that branch, and the same `send()` path was
+captured firing from a real link click. I did not succeed in driving the multi-step React form
+end-to-end in the browser.
+
+## Left to do in the GA4 UI (I cannot do these from code)
+1. **Mark `contact` as a key event** (Admin → Events). Without this, none of the lead tracking
+   counts as a conversion. This is the single highest-value remaining step.
+2. Link GA4 ↔ Search Console (Admin → Property → Search Console Links).
+3. Exclude internal traffic (Admin → Data Streams → Configure tag settings → Define internal
+   traffic, then a Data Filter) so workshop visits do not pollute the numbers.
+4. Optionally build a "lead" funnel segmented by the `method` and `placement` parameters.
