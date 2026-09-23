@@ -250,3 +250,69 @@ The three `/images/brand/*` files are AI-generated placeholders (the file header
 | `/cookies` `/privacy` `/refund` `/terms` `/warranty` `/image-usage-license` | Legal/utility text pages |
 | `/landing-template-demo` | `noindex` demo |
 | `/apple-watch-repair-dubai` | **Genuinely blocked** — no Apple Watch image exists anywhere in the repo |
+
+---
+
+# THIRD PASS — coverage, analytics, dependencies (2026-09-23)
+
+## Fixed (commit c1fe4fb)
+🟠 **17 how-to guides were in no sitemap at all.** `guides.xml` matched only root-level
+`/how-to…` paths, but every guide lives at `/blog/how-to…`, so it caught 2 of 19.
+`blog.xml` could not cover them either — it is driven by the `POSTS` registry, which does
+not contain them. Pattern widened and the two sitemaps kept disjoint.
+**Sitemap coverage: 576 → 593 URLs = every indexable page, 0 duplicates, 0 missing.**
+
+## New findings — NOT fixed, need your decision
+
+### 🔴 Analytics has never fired in production
+There is **no GA tag on the live site at all**. `NEXT_PUBLIC_GA_ID` is not set in the
+Hostinger build environment, so `src/lib/analytics.ts` no-ops and no gtag script is
+emitted. Every call, WhatsApp click and form submit has gone unmeasured. This is the exact
+silent failure the audit checklist calls out (§J). Fix: set `NEXT_PUBLIC_GA_ID=G-…` in the
+Hostinger Node env, then rebuild — build-time vars require a new build.
+
+### 🔴 Next.js critical CVE, and this site uses the affected feature
+`npm audit --omit=dev`: **1 critical, 6 high, 1 moderate.** The critical is a Next.js
+**Middleware / Proxy bypass in App Router apps** — and `src/proxy.ts` exists, so the
+affected surface is in use.
+- Installed **16.2.7** · fixed in **16.3.6** · `isSemVerMajor: false`
+- Also high: `sharp` (libvips CVEs — used by the image pipeline), `nodemailer` (used by
+  the lead mailer), `postcss`, `nanoid`, `brace-expansion`, `linkify-it`
+- A framework bump on a 601-page production site should be deliberate, so I have not run it.
+
+### 🟡 107 pages have only 1–2 inbound internal links
+**0 orphans** — every indexable page is linked from somewhere. But 107 sit on 1–2 inbound
+links, including money pages (`/best-macbook-repair-dubai`, `/best-iphone-repair-dubai`,
+`/apple-display-repair-dubai`). Hub-to-spoke linking would concentrate crawl priority.
+
+---
+
+# WHAT IS LEFT — consolidated
+
+## Blocked on you
+| # | Item | Why it needs you |
+|---|---|---|
+| 1 | 🔴 Set `NEXT_PUBLIC_GA_ID` in Hostinger env | Only you can set the build env |
+| 2 | 🔴 `npm i next@16.3.6` + the other audit fixes | Framework bump on production — your call |
+| 3 | 🟠 Higgsfield credits (account is free plan, 0 credits) | Unblocks the real MacBook screen image |
+| 4 | 🟠 `www` SSL → 301 to apex (currently **525**) | Hostinger/Cloudflare, not code |
+| 5 | 🟠 AI storefront queued for 9 GBP posts | Publishes outward; needs your decision |
+| 6 | 🟡 Prices baked into infographics as pixels | Conflicts with `hide-prices-whatsapp`; needs image regeneration |
+
+## I can do next, on your word
+- 🟡 Internal linking pass for the 107 weak pages
+- 🟡 Shorten the 7 blog titles that lose "2026" to truncation
+- 🟡 `/apple-watch-repair-dubai` — still no watch image anywhere in the repo
+- 🟢 Pre-existing React duplicate-key warning on `/macbook-screen-repair-dubai`
+
+## Never audited — real gaps, need live tools or a human
+| Area | Why it is still unknown |
+|---|---|
+| **Core Web Vitals (field)** | Needs PageSpeed Insights / GSC field data |
+| **Accessibility beyond alt** | Contrast, keyboard nav, focus order, ARIA — needs axe/Lighthouse + manual keyboard pass. Only alt text and landmarks were checked |
+| **Schema validity** | Presence verified on all 601 pages; never validated against Google's Rich Results Test |
+| **GSC indexation reality** | Coverage, exclusions, manual actions — needs Search Console access |
+| **Redirect chains / legacy URLs** | `redirects.generated.ts` never traced end to end |
+| **Content truth** | `TRUST-CLAIMS.md` exists but claims like "40,000+ repairs", "5.0 from 232+ reviews", "since 2004" were never verified against source records |
+| **Responsive/visual QA** | Only spot-checked at 1280px; no systematic multi-viewport pass |
+| **Lead delivery** | Never tested that a submitted form actually reaches a human |
