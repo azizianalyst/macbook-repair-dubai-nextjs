@@ -616,6 +616,8 @@ export const ROUTES: string[] = [
   "/siri-stopped-working-on-macbook-air",
   "/sources-to-purchase-a-refurbished-macbook",
   "/ssd-data-recovery-dubai",
+  "/studio-display-repair-dubai",
+  "/studio-display-xdr-repair-dubai",
   "/terms",
   "/the-caps-lock-key-is-not-responding-after-restarting-my-macbook",
   "/the-macbook-does-not-see-the-internal-ssd",

@@ -69,6 +69,15 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
 /* when the page does not pass an explicit override.                  */
 /* ------------------------------------------------------------------ */
 
+// Most callers pass a serviceName that already ends in "Dubai" (e.g. "MacBook Wifi
+// Bluetooth Repair Dubai"), and this helper then appended " in Dubai" again - shipping
+// "…Repair Dubai in Dubai" on 138 pages, inside the QuickAnswer block, which is exactly
+// the answer-first text Google and LLMs quote. Strip a trailing city before appending.
+// (audit 2026-09-24)
+function withoutTrailingCity(name: string): string {
+  return name.replace(/[\s,\-–]+(?:in\s+)?Dubai\s*$/i, "").trim() || name;
+}
+
 export function deriveServiceQuickAnswer(opts: {
   serviceName: string;
   startingPrice: number;
@@ -76,12 +85,13 @@ export function deriveServiceQuickAnswer(opts: {
   warrantyDays?: number;
 }): { question: string; answer: string } {
   const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
+  const name = withoutTrailingCity(opts.serviceName);
   return {
-    question: `How much does ${opts.serviceName} in Dubai cost?`,
+    question: `How much does ${name} in Dubai cost?`,
     answer:
       (opts.startingPrice > 0
-        ? `${opts.serviceName} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
-        : `${opts.serviceName} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
+        ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
+        : `${name} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
       `Typical turnaround: ${opts.timeline}. ` +
       `All repairs include ${warrantyClause(warrantyDays)} on parts and labour, ` +
       `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
@@ -93,9 +103,9 @@ export function deriveFamilyQuickAnswer(opts: {
   startingPrice: number;
 }): { question: string; answer: string } {
   return {
-    question: `How much does ${opts.family} repair in Dubai cost?`,
+    question: `How much does ${withoutTrailingCity(opts.family)} repair in Dubai cost?`,
     answer:
-      `${opts.family} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty up to 12 months. ` +
+      `${withoutTrailingCity(opts.family)} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty up to 12 months. ` +
       `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };

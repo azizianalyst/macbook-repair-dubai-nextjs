@@ -724,10 +724,6 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "MacBook Pro M5 Not Turning On Dubai 2026: Dead or Black Screen Fix Guide",
     "description": "MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Free diagnosis."
   },
-  "/blog/macbook-pro-m5-oled-display-issues-dubai": {
-    "title": "MacBook Pro M5 OLED Display Problems Dubai 2026: Lines, Flicker, Burn-In Fix",
-    "description": "MacBook Pro M5 OLED display issues in Dubai? Lines, flickering at low brightness, colour shift, burn-in. What is normal for OLED and what needs repair. Free diagnosis, message us for pricing."
-  },
   "/blog/macbook-pro-m5-screen-repair-cost-dubai": {
     "title": "MacBook Pro M5 Screen Repair Cost Dubai 2026: OLED Replacement Prices",
     "description": "MacBook Pro M5 screen repair in Dubai 2026. OLED cracked, backlight failed, or display lines. Same-day repair, 12-month warranty. Message us on WhatsApp for a quote."
@@ -1104,12 +1100,12 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "iPhone 17e (March 2026) repair Dubai. A19, Dynamic Island, MagSafe, USB-C. Same-day screen and battery. Message us on WhatsApp for today's exact price."
   },
   "/iphone-18-pro-max-repair-dubai": {
-    "title": "iPhone 18 Pro Max Repair Dubai - Ready From Launch Day | 055 741 3706",
-    "description": "iPhone 18 Pro Max repair Dubai, ready from day one. Apple unveils it 9 Sept 2026 - we update this page with confirmed specs within 24 hours. WhatsApp for a price."
+    "title": "iPhone 18 Pro Max Repair Dubai - Free Diagnosis, Same-Day",
+    "description": "iPhone 18 Pro Max repair in Dubai - screen, battery, charging port and logic board. Free diagnosis, written quote before any work. WhatsApp us for current parts availability."
   },
   "/iphone-18-pro-repair-dubai": {
-    "title": "iPhone 18 Pro Repair Dubai - Ready From Launch Day | 055 741 3706",
-    "description": "iPhone 18 Pro repair Dubai, ready from day one. Apple unveils it 9 Sept 2026 - we update this page with confirmed specs within 24 hours. WhatsApp for a price."
+    "title": "iPhone 18 Pro Repair Dubai - Free Diagnosis, Same-Day",
+    "description": "iPhone 18 Pro repair in Dubai - screen, battery, charging port and logic board. Free diagnosis, written quote before any work. WhatsApp us for current parts availability."
   },
   "/iphone-air-repair-dubai": {
     "title": "iPhone Air Repair Dubai - Thinnest iPhone Ever | 055 741 3706",
@@ -1842,6 +1838,14 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   "/ssd-data-recovery-dubai": {
     "title": "SSD Data Recovery Dubai. MacBook & External SSD | No-Fix No-Charge",
     "description": "SSD data recovery in Dubai. MacBook SSD, external SSD, deleted files, water damage. No-fix no-charge. Free assessment. Concord Tower, Media City. 055 741 3706."
+  },
+  "/studio-display-repair-dubai": {
+    "title": "Studio Display Repair Dubai - Screen, Backlight & Power",
+    "description": "Apple Studio Display repair in Dubai - cracked panel, backlight failure, no power, Thunderbolt and speaker faults. Free diagnosis, written quote before any work."
+  },
+  "/studio-display-xdr-repair-dubai": {
+    "title": "Studio Display XDR Repair Dubai - Screen, Backlight & Power",
+    "description": "Apple Studio Display XDR repair in Dubai - cracked panel, backlight failure, no power, Thunderbolt and speaker faults. Free diagnosis, written quote before any work."
   },
   "/terms": {
     "title": "Terms of Service - MacBook Repair Dubai",

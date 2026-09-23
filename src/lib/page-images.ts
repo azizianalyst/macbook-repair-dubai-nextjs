@@ -184,7 +184,11 @@ export function topicForPath(path: string): TopicImage | undefined {
   if (p.includes("out-of-warranty")) return T("out-of-warranty-repair-dubai");
   if (p.includes("insurance")) return T("macbook-insurance-dubai");
   if (p.includes("apple-service-center")) return T("apple-service-center-dubai");
-  if (p.includes("apple-display")) return T("apple-display-repair-dubai");
+  // No Apple Watch imagery exists anywhere in the repo. The service-centre infographic is
+  // device-neutral (reception, lab, microscopy, process timeline) and carries no prices, so
+  // it is honest here in a way any Mac/iPhone asset would not be. (audit 2026-09-24)
+  if (p.includes("watch")) return T("apple-service-center-dubai");
+  if (p.includes("studio-display") || p.includes("apple-display")) return T("apple-display-repair-dubai");
   if (p === "/apple-repair-dubai" || p === "/best-apple-repair-dubai") return T("apple-repair-dubai");
   // Hubs that previously matched nothing and so rendered no imagery at all.
   if (p === "/blog") return T("blog-apple-news-dubai");

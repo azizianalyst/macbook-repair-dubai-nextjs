@@ -4,6 +4,7 @@ import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
@@ -72,12 +73,15 @@ export default function AppleWatchRepair() {
     path: "/apple-watch-repair-dubai",
   });
 
+  // Scaffolded with image={undefined} (audit 2026-09-24).
+  const heroImg = imageForRoute("/apple-watch-repair-dubai");
+
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
-          image={undefined}
-          imageAlt="Apple Watch repair Dubai, screen, battery, and water damage"
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
           variant="device"
           tone="dark"
           eyebrow="Apple Watch specialist · Dubai · Since 2004"

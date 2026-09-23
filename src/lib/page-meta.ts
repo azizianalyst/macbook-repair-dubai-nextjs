@@ -14,7 +14,7 @@ const ACRONYMS: Record<string, string> = {
   cpu: "CPU", nfc: "NFC", wifi: "Wi-Fi", usb: "USB", hdmi: "HDMI", anc: "ANC", se: "SE",
   pro: "Pro", air: "Air", mini: "mini", max: "Max", plus: "Plus", ultra: "Ultra",
   m1: "M1", m2: "M2", m3: "M3", m4: "M4", m5: "M5", vs: "vs",
-  jbr: "JBR", jlt: "JLT", difc: "DIFC",
+  jbr: "JBR", jlt: "JLT", difc: "DIFC", xdr: "XDR",
 };
 
 // SERP hygiene applied to every route's final meta, regardless of source:

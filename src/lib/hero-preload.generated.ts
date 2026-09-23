@@ -214,4 +214,6 @@ export const HERO_PRELOAD_ROUTES: ReadonlySet<string> = new Set([
   "/macbook-trackpad-repair-dubai",
   "/macbook-wifi-bluetooth-repair-dubai",
   "/macos-reinstall-dubai",
+  "/studio-display-repair-dubai",
+  "/studio-display-xdr-repair-dubai",
 ]);
