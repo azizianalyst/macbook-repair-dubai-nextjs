@@ -20,7 +20,7 @@ export default function MacBookAirM4KeyboardRepair() {
         "M4 Air top-case assemblies are newer parts with still-building inventory across the repair supply chain. MacBook Repair Dubai stocks M4 Air key caps and individual scissor mechanisms for common key repairs. Full top-case assemblies for M4 Air have a 1–2 business day turnaround as we source from our tier-1 parts network.",
         "The M4 Air Touch ID button is paired to the M4 chip's Secure Enclave at manufacture, same as M1–M3. If top-case replacement is required, the original Touch ID button must be transferred — a third-party button permanently disables Touch ID. We perform this transfer on every top-case job as standard.",
         "The new Sky Blue colour on M4 Air uses a unique anodisation process that differs from previous Air colours. Sky Blue key caps are colour-specific and cannot be substituted with components from other M4 Air colours. We source colour-matched replacement key caps for Sky Blue, Starlight, Silver, and Space Grey M4 Air models.",
-        "M4 Air at under 6–12 months old in Dubai: keyboard issues at this age are almost always accidental (dropped object, spill) rather than wear. Check your warranty status — if the keyboard failure is a manufacturing defect, Apple's 1-year warranty covers it at no cost. If it is accidental damage, AppleCare+ has a AED 99 service fee. MacBook Repair Dubai offers independent repair from AED 350 with no wait for a service appointment.",
+        "M4 Air at under 6–12 months old in Dubai: keyboard issues at this age are almost always accidental (dropped object, spill) rather than wear. Check your warranty status — if the keyboard failure is a manufacturing defect, Apple's 1-year warranty covers it at no cost. If it is accidental damage, AppleCare+ has a AED 99 service fee. MacBook Repair Dubai offers independent repair quoted on WhatsApp, with no wait for a service appointment.",
       ]}
       prices={[
         {
@@ -85,7 +85,7 @@ export default function MacBookAirM4KeyboardRepair() {
         },
         {
           q: "My M4 Air is under 1 year old — should I use Apple warranty?",
-          a: "Yes, check first. If the keyboard failure is a manufacturing defect (not accidental damage), Apple's 1-year warranty covers it at no cost. Accidental damage under AppleCare+ has a AED 99 service fee. If you want faster turnaround or are out of warranty, MacBook Repair Dubai offers independent repair from AED 350 without waiting for a Genius Bar appointment.",
+          a: "Yes, check first. If the keyboard failure is a manufacturing defect (not accidental damage), Apple's 1-year warranty covers it at no cost. Accidental damage under AppleCare+ has a AED 99 service fee. If you want faster turnaround or are out of warranty, MacBook Repair Dubai offers independent repair quoted on WhatsApp, without waiting for a Genius Bar appointment.",
         },
         {
           q: "Does the M4 Air keyboard use the same parts as M3?",

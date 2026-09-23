@@ -249,6 +249,9 @@ export default function MacBookRepairHub() {
           <LeadForm preset={PRESETS.repair} sourcePath="/macbook-repair-dubai" defaultDeviceType="MacBook" />
         </section>
 
+        <p className="mx-auto max-w-content px-5 md:px-6 text-[15px] text-text-muted">
+          Comparing workshops? Here is <Link to="/best-macbook-repair-dubai" className="text-accent underline underline-offset-2">how to choose the best MacBook repair shop in Dubai</Link>.
+        </p>
         <RelatedArticles path="/macbook-repair-dubai" />
     </PageShell>
   );

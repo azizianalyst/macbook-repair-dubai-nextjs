@@ -562,7 +562,7 @@ export default function MacBookAirScreenRepair() {
             <SectionHeading
               label="Why us"
               title="The independent Apple screen specialists in Dubai"
-              sub="Not an Apple Authorised Service Centre — the faster, fairer-priced alternative with 20 years of experience replacing MacBook displays."
+              sub={`Not an Apple Authorised Service Centre — the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience replacing MacBook displays.`}
             />
             <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
               {WHY.map((w) => (

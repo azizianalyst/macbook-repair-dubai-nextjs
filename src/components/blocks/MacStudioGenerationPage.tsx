@@ -356,7 +356,7 @@ export default function MacStudioGenerationPage(p: MacStudioGenerationProps) {
             <SectionHeading
               label="Why us"
               title="The independent Apple specialists in Dubai"
-              sub="Not an Apple Authorised Service Centre. We are the faster, fairer-priced alternative with 21 years of experience."
+              sub={`Not an Apple Authorised Service Centre. We are the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
             />
             <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
               {WHY.map((w) => <IconCard key={w.title} Icon={w.Icon} title={w.title} body={w.body} />)}

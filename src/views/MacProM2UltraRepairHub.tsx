@@ -10,7 +10,7 @@ export default function MacProM2UltraRepairHub() {
       path="/mac-pro-m2-ultra-repair-dubai"
       eyebrow="Apple M2 Ultra · 2023 · first Apple Silicon Mac Pro · no MPX GPU slots"
       h1="Mac Pro M2 Ultra Repair Dubai - 2023"
-      subtitle="The M2 Ultra Mac Pro (2023) looks like the Intel model but inside it is completely different: M2 Ultra chip, no MPX GPU slots, no PCIe GPU expansion, no user-installed RAM. At 2 to 3 years old, check AppleCare+ first. Logic board repair from AED 3,250."
+      subtitle="The M2 Ultra Mac Pro (2023) looks like the Intel model but inside it is completely different: M2 Ultra chip, no MPX GPU slots, no PCIe GPU expansion, no user-installed RAM. At 2 to 3 years old, check AppleCare+ first. Logic board repair quoted per fault after a free diagnosis."
       startingPrice={400}
       timeline="Same day (diagnosis) · 5-10 days (board)"
       whatsappPrefill="Hi, I have a Mac Pro M2 Ultra 2023 and need help with:"

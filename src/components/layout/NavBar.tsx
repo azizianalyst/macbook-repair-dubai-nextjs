@@ -221,6 +221,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
                         : "opacity-0 -translate-y-1 scale-[0.98] pointer-events-none",
                     )}
                     aria-hidden={!isOpen}
+                    inert={!isOpen}
                   >
                     <MegaDropdown panel={panel} onNavigate={() => setOpenKey(null)} />
                   </div>

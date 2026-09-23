@@ -6,7 +6,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
 import { imageForRoute } from "@/lib/page-images";
 import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
+import { localBusiness, organization, webSite } from "@/lib/schema";
 import { TAGS, tagBySlug, postsByTag } from "@/content/blog-posts";
 import type { TagSlug } from "@/content/blog-posts";
 
@@ -55,6 +55,12 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
+        {/* Server-rendered entity nodes. These were passed to useSeo(), which injects
+            client-side only, so crawlers saw no Organization/LocalBusiness on this page
+            at all (audit 2026-09-23). */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
         <Hero
           variant="service"
           tone="dark"

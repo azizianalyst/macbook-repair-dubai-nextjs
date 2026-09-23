@@ -7,7 +7,27 @@ import {
 } from "./business.generated";
 import { SITE_SETTINGS } from "./settings.generated";
 
-export const NAP = GEN_NAP;
+// `yearsInBusiness` in business.generated.ts is a HARDCODED number that silently
+// becomes false on each anniversary - it was due to expire on 10 October 2026
+// (audit 2026-09-23). Derive it from `founded` instead so it can never drift, and
+// override the generated field. Anything rendering tenure must read NAP.yearsInBusiness,
+// never a literal: the site already shipped "20 years" on 12 pages and "21 years" on 6.
+function yearsSince(founded: string): number {
+  const start = new Date(founded);
+  if (Number.isNaN(start.getTime())) return GEN_NAP.yearsInBusiness;
+  const now = new Date();
+  let years = now.getFullYear() - start.getFullYear();
+  const beforeAnniversary =
+    now.getMonth() < start.getMonth() ||
+    (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
+  if (beforeAnniversary) years -= 1;
+  return years;
+}
+
+export const NAP = {
+  ...GEN_NAP,
+  yearsInBusiness: yearsSince(GEN_NAP.founded),
+};
 export const REVIEW_COUNT = GEN_REVIEW_COUNT;
 export const REVIEW_AVERAGE = GEN_REVIEW_AVERAGE;
 

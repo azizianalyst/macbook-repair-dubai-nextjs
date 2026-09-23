@@ -4,7 +4,7 @@ import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacBookAirBatteryDrain";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-air-battery-drain-dubai", {
-  title: "MacBook Air Battery Draining Fast? 7 Causes and Fixes Dubai 2026",
+  title: "MacBook Air Battery Draining Fast Dubai: 7 Fixes 2026",
   description: "MacBook Air battery draining fast in Dubai? 7 common causes for M1, M2, M3, M4 and Intel. Fast battery replacement in 30 minutes — message us for a price.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",

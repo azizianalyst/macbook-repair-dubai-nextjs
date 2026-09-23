@@ -381,7 +381,7 @@ export default function MacBookProGenerationPage(p: MacBookProGenerationProps) {
             <SectionHeading
               label="Why us"
               title="The independent Apple specialists in Dubai"
-              sub="Not an Apple Authorised Service Centre — we're the faster, fairer-priced alternative with 20 years of experience."
+              sub={`Not an Apple Authorised Service Centre — we're the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
             />
             <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
               {WHY.map((w) => (

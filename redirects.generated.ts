@@ -763,7 +763,7 @@ export const REDIRECTS: { source: string; destination: string; statusCode: numbe
   },
   {
     "source": "/how-to-record-audio-while-screen-recording-on-mac",
-    "destination": "/how-can-i-record-audio-while-screen-recording-on-mac/",
+    "destination": "/blog/how-can-i-record-audio-while-screen-recording-on-mac/",
     "statusCode": 301
   },
 

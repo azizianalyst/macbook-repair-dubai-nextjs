@@ -125,7 +125,19 @@ export function LeadForm({
   }
 
   function next() {
-    if (validateStep(step)) setStep((s) => Math.min(s + 1, 2));
+    if (validateStep(step)) {
+      setStep((s) => Math.min(s + 1, 2));
+      return;
+    }
+    // Validation failed: without this the function returned silently, leaving the
+    // error text unreachable and unannounced. Focus the first invalid control so the
+    // linked aria-describedby message is read out. (audit 2026-09-23)
+    if (typeof document !== "undefined") {
+      requestAnimationFrame(() => {
+        const firstInvalid = document.querySelector<HTMLElement>('[aria-invalid="true"]');
+        firstInvalid?.focus();
+      });
+    }
   }
   function back() {
     setStep((s) => Math.max(s - 1, 0));
@@ -249,9 +261,14 @@ export function LeadForm({
 
       {/* progress / step indicator */}
       <div className="mb-lg">
+        {/* Polite live region: the only thing that tells a screen-reader user the panel
+            changed, since the step swap is a silent DOM replacement. */}
+        <p className="sr-only" aria-live="polite">
+          {`Step ${step + 1} of ${stepMeta.length}: ${stepMeta[step]?.label ?? ""}`}
+        </p>
         <div className="flex items-center justify-between gap-2">
           {stepMeta.map((m, i) => (
-            <div key={m.n} className="flex flex-1 items-center gap-2">
+            <div key={m.n} className="flex flex-1 items-center gap-2" aria-current={i === step ? "step" : undefined}>
               <span
                 className={cn(
                   "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold",
@@ -325,7 +342,7 @@ export function LeadForm({
                 </Chip>
               ))}
             </div>
-            {errors.issue && <p className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
+            {errors.issue && <p id="issue-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
           </div>
 
           {/* Third question, revealed only once the one above it is answered,
@@ -358,20 +375,20 @@ export function LeadForm({
           <div>
             <Label htmlFor="name" className="text-text-muted">Your name</Label>
             <Input id="name" value={form.name} maxLength={80} autoComplete="name" onChange={(e) => set("name", e.target.value)}
-              className={FIELD} aria-invalid={!!errors.name} />
-            {errors.name && <p className="mt-1 text-[13px] text-danger">{errors.name}</p>}
+              className={FIELD} aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-err" : undefined} />
+            {errors.name && <p id="name-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.name}</p>}
           </div>
           <div>
             <Label htmlFor="phone" className="text-text-muted">Phone / WhatsApp number</Label>
             <Input id="phone" value={form.phone} maxLength={20} type="tel" inputMode="tel" autoComplete="tel"
-              onChange={(e) => set("phone", e.target.value)} className={FIELD} placeholder="+971 5x xxx xxxx" aria-invalid={!!errors.phone} />
-            {errors.phone && <p className="mt-1 text-[13px] text-danger">{errors.phone}</p>}
+              onChange={(e) => set("phone", e.target.value)} className={FIELD} placeholder="+971 5x xxx xxxx" aria-invalid={!!errors.phone} aria-describedby={errors.phone ? "phone-err" : undefined} />
+            {errors.phone && <p id="phone-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.phone}</p>}
           </div>
           <div>
             <Label htmlFor="email" className="text-text-muted">Email <span className="text-text-faint">(optional)</span></Label>
             <Input id="email" value={form.email} maxLength={120} type="email" autoComplete="email"
-              onChange={(e) => set("email", e.target.value)} className={FIELD} aria-invalid={!!errors.email} />
-            {errors.email && <p className="mt-1 text-[13px] text-danger">{errors.email}</p>}
+              onChange={(e) => set("email", e.target.value)} className={FIELD} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-err" : undefined} />
+            {errors.email && <p id="email-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.email}</p>}
           </div>
           <div>
             <Label className="text-text-muted">Best way to reach you</Label>

@@ -35,7 +35,7 @@ import { Button } from "@/components/ui/button";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, CONTENT_REVIEWED, PRICING, SITEMAP_LAST_UPDATED } from "@/content/site";
 import { REVIEWS } from "@/content/reviews";
 import { SITE } from "@/lib/seo";
-import { itemList, service as serviceSchema, person, faqPage, localBusinessWithRating, organization, webSite, pageWithSpeakable, licensedImage } from "@/lib/schema";
+import { itemList, service as serviceSchema, person, faqPage, localBusiness, organization, webSite, pageWithSpeakable, licensedImage } from "@/lib/schema";
 import { linkifyString as linkify } from "@/lib/linkify";
 
 // TITLE kept identical to the old ranking WordPress home (title is a ranking factor, preserve it).
@@ -1314,7 +1314,12 @@ export default function Home() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageWithSpeakable({ url: SITE.url, name: TITLE, dateModified: SITEMAP_LAST_UPDATED })) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
+          {/* localBusiness(), NOT localBusinessWithRating(): self-collected reviews of your
+              own business marked up on your own site are Google's review-snippet spam
+              category - no stars are shown for them and it risks a manual action. The
+              rating stays visible as on-page text and earns stars on the Google Business
+              Profile instead. (audit 2026-09-23) */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Founder & Apple Certified Mac Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", url: SITE.url, warranty: "P1Y", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Message us on WhatsApp for a price on your model." })) }} />

@@ -9,7 +9,7 @@ import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
-import { reviewSchema, localBusinessWithRating, organization } from "@/lib/schema";
+import { localBusiness, organization } from "@/lib/schema";
 import { REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 
 const SERVICE_FILTERS: ReadonlyArray<"All" | ReviewService> = [
@@ -48,14 +48,6 @@ export default function Reviews() {
 
   const visibleReviews = filtered.slice(0, visible);
 
-  const reviewSchemas = useMemo(
-    () =>
-      // Only emit Review nodes for reviews that have real text - never fabricate a reviewBody.
-      REVIEWS.slice(0, 50)
-        .filter((r) => r.text && r.text.trim().length > 0)
-        .map((r) => reviewSchema({ author: r.name, rating: r.rating, body: r.text })),
-    [],
-  );
 
   // JSON-LD is rendered SERVER-SIDE below (JSX <script>) so the AggregateRating star
   // rating + Review nodes reach the static HTML Google indexes. Previously these went
@@ -72,12 +64,14 @@ export default function Reviews() {
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
-      {/* Server-rendered JSON-LD: business (with rating nested) + organization + Review nodes */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessWithRating(REVIEW_AVERAGE, REVIEW_COUNT)) }} />
+      {/* Server-rendered JSON-LD: business + organization.
+          NO AggregateRating and NO Review nodes. Self-collected reviews of your own
+          business, marked up on your own site, are the review-snippet spam category
+          Google excludes - it does not show stars for them and it can issue a manual
+          action. The ratings stay as visible on-page text and live for real on the
+          Google Business Profile, which is where they earn stars. (audit 2026-09-23) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
-      {reviewSchemas.map((s, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
-      ))}
       <Hero
         variant="service"
         tone="dark"
@@ -103,11 +97,13 @@ export default function Reviews() {
         </h2>
         <div className="flex flex-col gap-sm text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
           <p>
-            Every review below is a real, unedited Google review posted directly to our{" "}
+            Every review below was posted by a real customer to our{" "}
             <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               Google Business Profile
             </a>
-            . Nothing has been rewritten, curated, or removed. {REVIEW_COUNT}+ verified reviews,{" "}
+            . We never rewrite a review&apos;s wording, but this page shows a selection rather
+            than all of them, and longer reviews are shortened with an ellipsis - open any of
+            them on Google to read the full text. {REVIEW_COUNT}+ Google reviews,{" "}
             {REVIEW_AVERAGE} average rating - from MacBook screen and battery repairs to water damage
             recovery, iMac upgrades, iPhone screen replacements, and iPad repairs, all at{" "}
             our Concord Tower workshop in Dubai Media City.
@@ -222,7 +218,7 @@ export default function Reviews() {
             Two reasons. First, customers spent 30 seconds writing about their MacBook - that earns 30 seconds back. Second, a public reply commits the business in writing: when 5,000+ people read a 5-star review with a thoughtful response, the standard for the next repair is set in public.
           </p>
           <p>
-            Below are 3 unedited examples from the past 6 months. Every word is verbatim.
+            Below are 3 examples from the past 6 months, quoted verbatim.
           </p>
         </div>
 

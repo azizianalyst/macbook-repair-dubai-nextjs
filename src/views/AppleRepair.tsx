@@ -3,6 +3,7 @@ import {
   Laptop, Monitor, HardDrive, Smartphone, Tablet,
   Cloud, Repeat, Wifi, Users, Wrench, Star,
 } from "lucide-react";
+import { Link } from "@/lib/router-compat";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -248,6 +249,9 @@ export default function AppleRepair() {
           <LeadForm preset={PRESETS.repair} sourcePath="/apple-repair-dubai" defaultDeviceType="MacBook" />
         </section>
 
+      <p className="mx-auto max-w-content px-5 md:px-6 text-[15px] text-text-muted">
+        Weighing up providers? Read <Link to="/best-apple-repair-dubai" className="text-accent underline underline-offset-2">what makes the best Apple repair centre in Dubai</Link>.
+      </p>
       <RelatedArticles path="/apple-repair-dubai" />
     </PageShell>
   );

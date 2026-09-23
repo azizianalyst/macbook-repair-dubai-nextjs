@@ -348,7 +348,7 @@ export default function IPhoneRepairHub() {
             <SectionHeading
               label="Why us"
               title="The independent Apple specialists in Dubai"
-              sub="Not an Apple Authorised Service Centre. We're the faster, fairer-priced alternative with 20 years of experience."
+              sub={`Not an Apple Authorised Service Centre. We're the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
             />
             <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
               {WHY.map((w) => <IconCard key={w.title} Icon={w.Icon} title={w.title} body={w.body} />)}
@@ -486,6 +486,9 @@ export default function IPhoneRepairHub() {
           <LeadForm preset={PRESETS.repair} sourcePath="/iphone-repair-dubai" defaultDeviceType="iPhone" />
         </section>
 
+      <p className="mx-auto max-w-content px-5 md:px-6 text-[15px] text-text-muted">
+        Not sure who to trust? See <Link to="/best-iphone-repair-dubai" className="text-accent underline underline-offset-2">how to pick the best iPhone repair in Dubai</Link>.
+      </p>
       <RelatedArticles path="/iphone-repair-dubai" />
     </PageShell>
   );

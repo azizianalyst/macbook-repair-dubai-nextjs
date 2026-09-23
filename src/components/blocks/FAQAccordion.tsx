@@ -41,6 +41,7 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
                 <button
                   type="button"
                   className="w-full flex items-start justify-between gap-md py-md text-left rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  id={`${id}-btn`}
                   aria-expanded={isOpen}
                   aria-controls={`${id}-panel`}
                   onClick={() => toggle(i)}
@@ -54,6 +55,7 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
               <div
                 id={`${id}-panel`}
                 role="region"
+                aria-labelledby={`${id}-btn`}
                 hidden={!isOpen}
                 className={cn("pb-md text-[15px] leading-relaxed max-w-[70ch]", dark ? "text-on-primary-muted" : "text-text-muted")}
               >

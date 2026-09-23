@@ -13,7 +13,7 @@
 //     zero risk of a price mismatch vs the visible page price; adding accurate per-page
 //     Offers is a safe follow-up once a verified price-per-route map exists).
 import { SITE } from "./seo";
-import { licensedImage, organization, localBusiness, person, place, service, pageUrl } from "./schema";
+import { licensedImage, organization, localBusiness, webSite, person, place, service, pageUrl } from "./schema";
 import { imageForRoute } from "./page-images";
 import { BUSINESS_ID } from "./schema";
 import { TEAM } from "@/content/site";
@@ -104,6 +104,7 @@ export function schemaForPath(path: string): unknown[] {
   // carries no priceRange, because it renders on pages that show no price at all.)
   if (path === "/pricing") {
     return [
+      organization(), // was absent: localBusiness references #organization by @id
       localBusiness(),
       // No `price` passed: prices are hidden site-wide, so the Offers are emitted without a
       // figure. This MUST change in the same commit as the visible /pricing tables — a priced
@@ -146,9 +147,17 @@ export function schemaForPath(path: string): unknown[] {
     return [organization(), localBusiness(), tradeService, ...imageNodes];
   }
 
-  if (SELF_OR_NON_SERVICE.test(path)) return imageNodes;
-  if (INFORMATIONAL.test(path)) return imageNodes;
-  if (!SERVICE_RE.test(path)) return imageNodes;
+  // These three branches used to return imageNodes ALONE, which left two holes
+  // (audit 2026-09-23): 26 pages referenced an #organization @id that was never
+  // defined on them (licensedImage sets creator/copyrightHolder to it), and 46
+  // pages - including commercial ones like /macbook-insurance-dubai and
+  // /annual-maintenance-contract-dubai - carried no business entity at all. Every
+  // page on this site belongs to the same business, so the entity nodes always
+  // belong; only the Service node is page-type specific.
+  const entityNodes = [organization(), localBusiness(), webSite()];
+  if (SELF_OR_NON_SERVICE.test(path)) return [...entityNodes, ...imageNodes];
+  if (INFORMATIONAL.test(path)) return [...entityNodes, ...imageNodes];
+  if (!SERVICE_RE.test(path)) return [...entityNodes, ...imageNodes];
 
   const seg = path.replace(/^\/+|\/+$/g, "").split("/");
   const name = titleCase(seg[seg.length - 1]);

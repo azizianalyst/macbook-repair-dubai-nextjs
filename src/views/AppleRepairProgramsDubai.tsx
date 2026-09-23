@@ -50,7 +50,7 @@ const FAQS = [
   { q: "My MacBook Pro 2016 has Flexgate (Stage Light effect). Can Apple still help?",
     a: "Apple's Display Backlight Service Programme for the 13\" MacBook Pro (2016) ended in 2021. We offer two routes: (a) replace just the flex cable if the display panel is intact, or (b) a full display assembly if the panel is also damaged. Both come with a 3-month warranty - message us on WhatsApp for today's exact price on your model." },
   { q: "Are you an Apple Authorised Service Provider?",
-    a: "No. We are an independent Apple repair specialist with 21 years of experience, not an AASP. That means we cannot honour Apple's warranty or in-warranty programmes ourselves - but we will tell you if Apple should fix your device for free, and we'll handle any work that falls outside Apple's coverage." },
+    a: `No. We are an independent Apple repair specialist with ${NAP.yearsInBusiness} years of experience, not an AASP. That means we cannot honour Apple's warranty or in-warranty programmes ourselves - but we will tell you if Apple should fix your device for free, and we'll handle any work that falls outside Apple's coverage.` },
   { q: "Why do you recommend Apple first when my device is eligible for a free programme?",
     a: "Honesty wins long-term customers. If Apple will fix your device for free, that's the best outcome for you. We'd rather lose one job today and earn your trust for the next 10 years of repairs across your household and office. Roughly 5% of devices we check qualify for a free Apple programme - we send those customers straight to Apple." },
   { q: "What happens if Apple refuses my programme repair?",

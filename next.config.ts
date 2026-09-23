@@ -90,7 +90,7 @@ const nextConfig: NextConfig = {
       // internal-SSD, Siri, 403-download) were restored as real pages instead of redirected.
       { source: "/how-can-i-fix-the-missing-touch-bar-controls-for-the-calculator-in-macbook-pro", destination: "/macbook-touch-bar-repair-dubai/", statusCode: 301 },
 
-      { source: "/how-can-i-inherit-folder-permissions-on-a-macbook", destination: "/how-do-i-reset-passwords-on-my-macbook/", statusCode: 301 },
+      { source: "/how-can-i-inherit-folder-permissions-on-a-macbook", destination: "/blog/how-do-i-reset-passwords-on-my-macbook/", statusCode: 301 },
       { source: "/macbook-keyboard-repair-replacement/page/2", destination: "/macbook-keyboard-repair-dubai/", statusCode: 301 },
       // GSC 404 batch (2026-06-19): legacy WordPress URLs still indexed — paginated listing,
       // orphaned category page, renamed service page, and malformed doubled-URL crawl error.

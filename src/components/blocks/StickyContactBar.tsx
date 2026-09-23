@@ -42,6 +42,7 @@ export function StickyContactBar() {
           : "opacity-0 motion-safe:translate-y-4 pointer-events-none",
       )}
       aria-hidden={!shown}
+      inert={!shown}
     >
       {/* 1 — Tech help: opens QuickHelpWidget */}
       <button

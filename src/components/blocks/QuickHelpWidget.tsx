@@ -277,6 +277,7 @@ export function QuickHelpWidget() {
                   maxLength={60}
                   autoComplete="name"
                   placeholder="Your name"
+                  aria-label="Your name"
                   className="h-11 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 />
                 <input
@@ -287,6 +288,7 @@ export function QuickHelpWidget() {
                   inputMode="tel"
                   autoComplete="tel"
                   placeholder="Phone number"
+                  aria-label="Phone number"
                   className="h-11 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 text-[14px] text-text placeholder:text-text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 />
               </div>

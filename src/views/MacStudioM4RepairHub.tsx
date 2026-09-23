@@ -10,7 +10,7 @@ export default function MacStudioM4RepairHub() {
       path="/mac-studio-m4-repair-dubai"
       eyebrow="M4 Max · 2025 · Thunderbolt 5"
       h1="Mac Studio M4 Max Repair Dubai - 2025"
-      subtitle="Mac Studio M4 Max (2025) features Thunderbolt 5, introduced across the 2025 Studio generation. Brand new in 2025 - almost certainly under AppleCare+. Free diagnosis always. Repair from AED 400 if out of warranty."
+      subtitle="Mac Studio M4 Max (2025) features Thunderbolt 5, introduced across the 2025 Studio generation. Brand new in 2025 - almost certainly under AppleCare+. Free diagnosis always. Out-of-warranty repairs are quoted in writing before any work."
       startingPrice={400}
       timeline="Same day (diagnosis) · 3-7 days (board)"
       whatsappPrefill="Hi, I need Mac Studio M4 Max repair. Issue:"

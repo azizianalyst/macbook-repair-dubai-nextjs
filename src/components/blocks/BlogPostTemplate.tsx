@@ -15,7 +15,7 @@ import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { GuideServiceBridge } from "@/components/blocks/GuideServiceBridge";
 import { Button } from "@/components/ui/button";
-import { article as articleSchema, localBusiness, organization, pageWithSpeakable } from "@/lib/schema";
+import { article as articleSchema, localBusiness, organization, webSite, pageWithSpeakable } from "@/lib/schema";
 import { blogTopicForPath } from "@/lib/page-images";
 import ResponsiveImage from "@/components/blocks/ResponsiveImage";
 
@@ -93,6 +93,9 @@ export default function BlogPostTemplate(p: BlogPostProps) {
   const schemaNodes = [
     localBusiness(),
     organization(),
+    // pageWithSpeakable below sets isPartOf:{"@id":…#website}; without webSite() here
+    // that @id resolved to nothing on 213 pages (audit 2026-09-23).
+    webSite(),
     ...(articleNode ? [articleNode] : []),
     pageWithSpeakable({ url: SITE.url + p.path, name: p.seoTitle }),
     ...(p.extraSchemas ?? []),
