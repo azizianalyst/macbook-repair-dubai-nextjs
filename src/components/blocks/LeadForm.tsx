@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { trackLeadSubmit } from "@/lib/analytics";
 import { Check, Loader2, MessageCircle, ChevronLeft, ChevronRight, Wrench, User } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -170,6 +171,17 @@ export function LeadForm({
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
+        // A completed quote form is the highest-value conversion on the site and
+        // was the ONLY lead path GA never saw - the click handler in analytics.ts
+        // covers tel:/WhatsApp/mailto but cannot observe a fetch. (audit 2026-09-23)
+        //
+        // Gate on data.id, not data.ok: a filled honeypot also answers {ok:true}
+        // (deliberately, so bots see success), and counting those would inflate
+        // conversions with submissions that were never stored. An id comes back
+        // only for a lead that actually landed.
+        if (data.id != null) {
+          trackLeadSubmit(preset?.id ? `form:${preset.id}` : "form:lead-form");
+        }
         setStatus("success");
         return;
       }
