@@ -30,6 +30,28 @@ const PLANS = [
   { name: "Enterprise & education", body: "25+ devices. Custom SLA, monthly visits, loaner units, and a single point of contact for your IT team.", best: "Schools, large offices" },
 ];
 
+const ONBOARDING = [
+  { step: "Free device audit", body: "We list every Apple device you run - model, year, serial, battery cycle count, storage health and current macOS. You get the audit as a written asset register whether or not you sign anything." },
+  { step: "Plan and scope in writing", body: "We come back with the recommended plan, what is in scope, what is charged separately, and the response commitment for your fleet. Nothing starts until you approve it in writing." },
+  { step: "First service visit", body: "The first visit clears the backlog: thermal cleaning and repaste, batteries flagged in the audit, macOS and storage housekeeping, and backup checks on machines that have none." },
+  { step: "Scheduled cycle begins", body: "After that the fleet runs on the agreed schedule, with a named technician who knows your machines and a single WhatsApp thread for the whole account." },
+];
+
+// Stated plainly on purpose. Businesses compare contracts on the exclusions, and
+// discovering them after signing is how a maintenance contract loses a client.
+const NOT_INCLUDED = [
+  { title: "Replacement parts", body: "Batteries, screens, SSDs and boards are charged at your contract rate, not included in the annual fee. The rate is fixed in the contract so there is no negotiation when something breaks." },
+  { title: "Accidental and liquid damage", body: "A dropped or drowned Mac is a repair, quoted separately. Contract devices still get priority turnaround and the contract parts rate." },
+  { title: "Apple hardware purchases", body: "We service and repair; we do not sell you the fleet. If a machine is genuinely past economic repair we will tell you, and we have no incentive to say otherwise." },
+  { title: "Software licences and cloud subscriptions", body: "We manage and support what you own. Licences, Apple Business Manager seats and cloud storage stay your cost." },
+];
+
+const OFFBOARDING = [
+  { title: "Secure wipe on staff exit", body: "When someone leaves, we wipe and re-provision the Mac to your standard and confirm it in writing - the record your IT or compliance file usually needs." },
+  { title: "Asset register kept current", body: "Every visit updates the register: what is in service, what was replaced, what is nearing end of life. It is yours to keep, and you leave with it if you leave us." },
+  { title: "No lock-in on your data", body: "Nothing about the contract holds your devices or your records hostage. Backups are configured to systems you control, not to us." },
+];
+
 const FAQS = [
   { q: "What is an Apple Annual Maintenance Contract (AMC) in Dubai?",
     a: "An AMC is a yearly agreement that keeps your Apple devices serviced and supported for a fixed annual fee. It covers scheduled cleaning, battery and health checks, software upkeep, priority repairs and discounted parts - so you avoid surprise downtime and surprise bills." },
@@ -43,6 +65,20 @@ const FAQS = [
     a: "Yes - on-site servicing and free pickup/delivery across Dubai mainland are part of every business and enterprise plan. We work around your schedule to avoid disrupting the team." },
   { q: "How do we start?",
     a: "Send us your device list on WhatsApp or call 055 741 3706. We do a free audit, recommend the right plan, and put it in writing - no obligation until you approve." },
+  { q: "What is NOT covered by the AMC?",
+    a: "Replacement parts (batteries, screens, SSDs, boards) are charged at your contract rate rather than included, and accidental or liquid damage is quoted as a separate repair. Hardware purchases and software licences are not included either. All of it is listed in the contract before you sign - we would rather lose the deal than have you find out later." },
+  { q: "What response time do we get?",
+    a: "The response commitment is agreed per contract and written into it, because it depends on fleet size, location and whether you need on-site attendance or collection. Contract devices always take priority over walk-in work, and most in-stock-part repairs are same-day." },
+  { q: "Can we cancel or change the plan mid-term?",
+    a: "Yes. Fleets change - people join, people leave, machines are retired. Device counts can be adjusted during the term, and the terms for ending the contract are written into it rather than buried." },
+  { q: "Do you provide loaner devices while ours are repaired?",
+    a: "Loaner units are part of the enterprise and education plans and can be added to a business plan. Availability depends on the model, so it is agreed in the contract rather than promised on a web page." },
+  { q: "What happens to a device when an employee leaves?",
+    a: "We wipe it securely, re-provision it to your standard and confirm the wipe in writing. That written confirmation is usually what an IT or compliance file needs, and it is included rather than charged as an extra." },
+  { q: "Is an AMC actually cheaper than paying per repair?",
+    a: "It depends on your fleet. For a handful of newer machines, paying per repair is often the sensible choice and we will say so. An AMC starts paying for itself once you have enough devices, or old enough devices, that something is failing every few months - and the audit tells us which situation you are in before you commit." },
+  { q: "Do you work with our existing IT provider?",
+    a: "Yes, and it is common. Plenty of Dubai companies have a general IT partner for network and Windows, and use us for the Apple hardware they cannot service. We work alongside them rather than trying to replace them." },
 ];
 
 export default function AnnualMaintenanceContract() {
@@ -166,6 +202,56 @@ export default function AnnualMaintenanceContract() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Onboarding */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">How an AMC starts - the first four weeks</h2>
+        <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+          You get the device audit as a written asset register before any money changes hands, so the
+          first thing an AMC produces is a clear picture of what you actually own and what state it is in.
+        </p>
+        <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
+          {ONBOARDING.map((o, i) => (
+            <li key={o.step} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+              <span className="mono text-accent text-[13px] font-bold">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="text-[17px] font-bold mb-sm mt-1">{o.step}</h3>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{o.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* What is not included */}
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+        <div className="mx-auto max-w-content px-5 md:px-6">
+          <h2 className="text-[28px] md:text-[32px] mb-md">What an AMC does not cover</h2>
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+            Every maintenance contract has exclusions. Ours are listed here and in the contract itself,
+            because finding them out after signing is the fastest way to lose a client.
+          </p>
+          <div className="grid gap-md md:grid-cols-2">
+            {NOT_INCLUDED.map((n) => (
+              <article key={n.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <h3 className="text-[17px] font-bold mb-sm">{n.title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{n.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Offboarding / governance */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Staff changes, records and leaving us</h2>
+        <div className="grid gap-md md:grid-cols-3">
+          {OFFBOARDING.map((o) => (
+            <article key={o.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+              <h3 className="text-[17px] font-bold mb-sm">{o.title}</h3>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{o.body}</p>
+            </article>
+          ))}
         </div>
       </section>
 

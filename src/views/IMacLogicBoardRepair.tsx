@@ -58,7 +58,8 @@ export default function IMacLogicBoardRepair() {
       warrantyBullets={[
         "Covers the specific repair performed and adjacent rails on the same circuit.",
         "Excludes new failures elsewhere on the board (separate fault).",
-        "Free re-work if the same fault returns within 12 months.",
+        "Free re-work if the same repaired fault returns inside the warranty period.",
+        "Extendable to 6 months for a small flat fee - agreed on the quote, before work starts.",
       ]}
       comparisonRows={[
         ["Starting price",          "Price on request",                   "Whole-board swap only"],

@@ -26,7 +26,7 @@ export default function MacBookLogicBoardRepair() {
             <strong>MacBook logic board repair in Dubai</strong> means component-level rework - replacing the actual failed chip on the board, not swapping the whole board. The difference matters: a typical board swap at the Apple Store is AED 4,000-6,000. A component-level fix on the failed PMIC, MOSFET, charging IC, or USB-C controller costs a fraction of that. Same outcome, original board kept (which preserves T2 SSD pairing on Intel MacBooks).
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            We work under stereo microscope with a JBC hot-air station, controlled thermal profiles, and reballed Apple-spec replacement chips. The warranty of up to 12 months is paperwork - done correctly, the repair lasts as long as the original.
+            We work under stereo microscope with a JBC hot-air station, controlled thermal profiles, and reballed Apple-spec replacement chips. Board-level repairs carry a 15-day written warranty as standard - shorter than our 12-month cover on screens and batteries, because a board that has already failed once is harder to guarantee - and it can be extended to 6 months for a small flat fee. Done correctly, the repair lasts as long as the original.
           </p>
         </>
       }
@@ -50,7 +50,8 @@ export default function MacBookLogicBoardRepair() {
       warrantyBullets={[
         "Covers the specific component repaired and adjacent rails.",
         "Excludes new failures elsewhere on the board (separate fault).",
-        "Free re-work if the same fault returns within 12 months.",
+        "Free re-work if the same repaired fault returns inside the warranty period.",
+        "Extendable to 6 months for a small flat fee - agreed on the quote, before work starts.",
       ]}
       faqs={[
         { q: "What's the difference between component-level repair and board swap?", a: "Component-level: we identify the failed chip (a USD 5-30 part), desolder it under microscope, install a new one. Board swap: throw out the entire board — Apple charges AED 4,000+ for that — and fit a new one. Same outcome on the symptom, very different cost - and only component-level keeps your original board (and your T2-paired SSD on Intel models)." },
@@ -60,6 +61,12 @@ export default function MacBookLogicBoardRepair() {
         { q: "What chips do you commonly replace?", a: "Apple's PMIC (NXP / TI), the BQ24172/24780 charging ICs, ISL95828 buck converters, the U7000-series USB-C controllers, ALC display backlight FETs, and SMC chips. Stock kept in the workshop for the most common ones." },
         { q: "Is reflow ever a viable fix?", a: "Almost never. Reflow (re-heating an existing chip to re-bond) buys weeks, not years. We replace the chip with a fresh reballed unit - costs marginally more, lasts 100x longer." },
         { q: "Have you fixed liquid-damaged boards before?", a: "Hundreds. Liquid often kills one specific chip (because it shorted a particular rail) and the rest of the board is fine. We isolate, replace, ultrasonic clean." },
+        { q: "What warranty comes with a logic board repair?", a: "15 days as standard, and it can be extended to 6 months for a small flat fee agreed on the quote before work starts. It is shorter than the 12 months we give on screens and batteries, and deliberately so: a board that has already failed once, often after corrosion, is harder to guarantee than a new panel. The exact period is printed on your invoice." },
+        { q: "When would you tell me NOT to repair the board?", a: "When the economics do not work or the odds are poor. SoC failure on M-series machines means a board swap, not a repair. Boards with widespread corrosion across multiple rails can be repaired and then fail somewhere else weeks later - we will say so and quote it as best-effort, or decline. And on an older Intel machine, the repair sometimes costs more than the Mac is worth. You get that assessment free." },
+        { q: "What are the realistic odds of success?", a: "It depends entirely on the fault. A single failed PMIC or charging IC on an otherwise clean board is routine work. A board recovered from a serious liquid spill is genuinely uncertain, and we will tell you it is uncertain before you commit rather than after. If we are not confident, we say so in the quote and you can walk away having paid nothing." },
+        { q: "What happens to my data if the board repair fails?", a: "Nothing - we do not touch the SSD. If the board cannot be revived and the data matters, we move to data recovery instead, reading the storage at component level. On Apple silicon and T2 Macs the SSD is soldered and paired to the board, which is exactly why keeping the original board matters." },
+        { q: "Do I pay anything if you cannot fix it?", a: "No. Diagnosis is free and there is no fee if we cannot fix the machine. You only pay for a repair you approved in writing and that we completed." },
+        { q: "Is a cheaper board swap from another shop a better deal?", a: "Sometimes, and we will say so when it is. But check what you are buying: a replacement board on an Intel T2 machine is not paired to your SSD, so the data on it becomes unreadable. On M-series the same applies. A swapped board is also usually a used board of unknown history. Component-level repair keeps the board you own." },
       ]}
       reviewNames={["Janna Nurahmetova", "Marina Larioshina", "joseph manalili"]}
       related={[

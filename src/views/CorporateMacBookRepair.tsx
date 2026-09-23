@@ -42,6 +42,23 @@ const REPAIRS = [
   { label: "Annual maintenance check",     price: "Price on request",  note: "Fan clean, thermal paste, battery health report" },
 ];
 
+// The questions a procurement or IT lead asks before approving a vendor, which the
+// page previously did not answer anywhere: chain of custody, data handling on
+// staff exit, and how we fit alongside an existing IT provider.
+const GOVERNANCE = [
+  { title: "Chain of custody", body: "Every collection is logged by serial number and confirmed on WhatsApp with a photo at handover. You always know which machine is with us, what stage it is at, and who signed for it." },
+  { title: "Data handling", body: "Machines are worked on at one bench and not passed between hands. We do not browse or copy company data beyond what a repair or recovery requires, and we will not unlock a device without evidence the company owns it." },
+  { title: "Secure wipe, confirmed in writing", body: "For staff exits or device disposal we wipe the Mac and confirm it in writing, which is normally what an IT or compliance file needs on record." },
+  { title: "Alongside your IT provider", body: "Most of our corporate clients already have a general IT partner for network and Windows. We handle the Apple hardware they cannot service, and work with them rather than around them." },
+];
+
+const FLEET_PROCESS = [
+  { step: "Send the device list", body: "Models, serials and a one-line fault each, on WhatsApp. If you do not have serials, we capture them at collection and send the list back to you." },
+  { step: "Free diagnosis, one written quote", body: "Every machine is diagnosed at no cost and quoted on a single document by serial number, so you can approve some, defer others, and retire the rest." },
+  { step: "Staged collection", body: "Fleets are collected in waves rather than all at once, so the team is never without machines. We agree the waves with you before the first pickup." },
+  { step: "Return, invoice, asset record", body: "Devices come back with a consolidated VAT invoice listing each serial, the work done and the parts used - and an updated record of what is now in service." },
+];
+
 const FAQS = [
   { q: "Do you offer corporate MacBook repair in Dubai?",
     a: "Yes, corporate accounts with office collection and return, priority same-day turnaround, consolidated VAT invoices, and a 15% multi-device labour discount. We serve companies in Dubai Media City, JLT, DIFC, Downtown Dubai, Business Bay, and Dubai Internet City. WhatsApp 055 741 3706 to set up a corporate account." },
@@ -57,6 +74,18 @@ const FAQS = [
     a: "Yes, the Annual Maintenance Contract (AMC) covers scheduled servicing, battery health checks, fan cleaning and thermal paste replacement, priority repair scheduling, and discounted parts. Pricing depends on fleet size. See /annual-maintenance-contract-dubai or WhatsApp for a quote." },
   { q: "What areas in Dubai do you collect corporate MacBooks from?",
     a: "Dubai Media City, JLT, JBR, Downtown Dubai, Business Bay, DIFC, Jumeirah Lake Towers, Al Quoz, Deira, Bur Dubai, Dubai Internet City, Dubai Silicon Oasis, and all Dubai Mainland commercial zones. Collection is free." },
+  { q: "How do you handle confidential company data during a repair?",
+    a: "Machines are worked on at one bench by one technician rather than passed between hands, and we do not browse or copy company data beyond what the repair or recovery requires. If you need the drive wiped before the device is returned or disposed of, we do it and confirm in writing." },
+  { q: "An employee left and nobody can log into their MacBook. Can you unlock it?",
+    a: "Only with evidence that the company owns the device - a purchase invoice or an asset record. We will ask for it, and we decline when ownership cannot be shown. That policy protects you as much as it constrains you." },
+  { q: "Can you work with our existing IT provider rather than replace them?",
+    a: "Yes, and that is the usual arrangement. Most corporate clients keep a general IT partner for network, Windows and helpdesk, and use us for the Apple hardware and board-level work that partner cannot do in-house." },
+  { q: "Do you need a PO, and can you onboard as a vendor?",
+    a: "Yes to both. We can work against a purchase order and complete standard vendor-onboarding paperwork, including trade licence and VAT registration details. Send what your accounts team needs and we will return it." },
+  { q: "Will our whole team be without laptops while you repair them?",
+    a: "No. Fleets are collected in waves that we agree with you first, so part of the team is always working. For larger accounts, loaner units can be arranged as part of a maintenance contract." },
+  { q: "What if a device is not worth repairing?",
+    a: "We will say so, with the reason, rather than quote work that does not make economic sense. We do not sell hardware, so we have no incentive to push you toward a replacement - or away from one." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [4, 9, 14, 20, 25];
@@ -188,6 +217,42 @@ export default function CorporateMacBookRepair() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="text-[28px] md:text-[32px] mb-md">What our corporate clients say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        {/* Fleet process */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">How a fleet repair actually runs</h2>
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+            The thing that worries an office manager is not the repair - it is ten people without laptops
+            on the same day. Fleets are collected in waves so that never happens.
+          </p>
+          <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
+            {FLEET_PROCESS.map((f, i) => (
+              <li key={f.step} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <span className="mono text-accent text-[13px] font-bold">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="text-[17px] font-bold mb-sm mt-1">{f.step}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.body}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Governance */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">Custody, data and vendor questions</h2>
+            <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+              What a procurement or IT lead needs answered before approving a repair vendor.
+            </p>
+            <div className="grid gap-md md:grid-cols-2">
+              {GOVERNANCE.map((g) => (
+                <article key={g.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                  <h3 className="text-[17px] font-bold mb-sm">{g.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{g.body}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
