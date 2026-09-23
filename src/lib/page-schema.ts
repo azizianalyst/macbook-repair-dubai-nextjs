@@ -19,12 +19,14 @@ import { BUSINESS_ID } from "./schema";
 import { TEAM } from "@/content/site";
 import { PRICING_SERVICES } from "@/content/pricing-services";
 import { AREAS } from "@/content/areas";
+import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 
 // Dubai area landing pages (NOT the multi-emirate city pages): slug -> config. Used to
 // attach a per-area Place node anchoring the page to a Dubai neighbourhood near the
 // workshop. City pages (Abu Dhabi, Sharjah, …) intentionally get NO Place node — the
 // business geo is in Dubai and a Dubai-geo Place on another emirate would be wrong.
 const AREA_BY_SLUG = new Map(AREAS.map((a) => [a.slug, a]));
+const DR_AREA_BY_SLUG = new Map(DATA_RECOVERY_AREAS.map((a) => [a.slug, a]));
 
 // Trade-in / sell / buy-back routes. These high-value commercial pages don't match SERVICE_RE
 // (no repair keyword), so they previously shipped only an image node — leaving the best-ranking
@@ -160,8 +162,13 @@ export function schemaForPath(path: string): unknown[] {
   if (!SERVICE_RE.test(path)) return [...entityNodes, ...imageNodes];
 
   const seg = path.replace(/^\/+|\/+$/g, "").split("/");
-  const name = titleCase(seg[seg.length - 1]);
   const url = pageUrl(path);
+
+  // Mac data-recovery area pages: the slug-derived name would read "Mac Data Recovery Jlt".
+  // Use the configured area name so serviceType matches the H1 and the meta title.
+  const drSlug = path.startsWith("/mac-data-recovery-") ? path.slice("/mac-data-recovery-".length) : "";
+  const drArea = drSlug ? DR_AREA_BY_SLUG.get(drSlug) : undefined;
+  const name = drArea ? `Mac Data Recovery ${drArea.area}` : titleCase(seg[seg.length - 1]);
 
   const serviceNode = {
     "@context": "https://schema.org",
@@ -190,7 +197,12 @@ export function schemaForPath(path: string): unknown[] {
         areaName: area.area,
         description: `MacBook repair service area covering ${area.area}, Dubai — free pickup and delivery from our Concord Tower workshop in Dubai Media City (${area.driveTime} away).`,
       })]
-    : [];
+    : drArea
+      ? [place({
+          areaName: drArea.area,
+          description: `Mac data-recovery service area covering ${drArea.area}, Dubai — free collection to our Concord Tower workshop in Dubai Media City (${drArea.driveTime} away).`,
+        })]
+      : [];
 
   // Entity definition on every money page: previously these Service nodes pointed their
   // provider @id at BUSINESS_ID (#localbusiness) but the Organization/LocalBusiness nodes
