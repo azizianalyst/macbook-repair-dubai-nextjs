@@ -25,12 +25,24 @@ import { REVIEWS } from "@/content/reviews";
 import { AREAS, type AreaConfig } from "@/content/areas";
 import { areaTopicForSlug } from "@/lib/page-images";
 
+// Every Mac family we collect from, shown on every area page. The domain is MacBook-led,
+// but the same courier run covers the desktops - these links are how an area page ranks
+// for "imac repair <area>", "mac mini repair <area>" and "data recovery <area>".
+const MAC_FAMILY_LINKS = [
+  { label: "iMac repair", href: "/imac-repair-dubai", note: "24\" M4 and older Intel 21.5\"/27\" - screen, SSD, power supply, logic board." },
+  { label: "Mac mini repair", href: "/mac-mini-repair-dubai", note: "M6, M4, M2 and Intel - no display, no power, SSD and port faults." },
+  { label: "Mac Studio repair", href: "/mac-studio-repair-dubai", note: "M5 Max and M5 Ultra through M1 - thermal, power and board-level work." },
+  { label: "Mac Pro repair", href: "/mac-pro-repair-dubai", note: "M2 Ultra and Intel 2019 tower - GPU, PSU and expansion faults." },
+  { label: "MacBook Neo repair", href: "/macbook-neo-repair-dubai", note: "The A18 Pro MacBook - screen, battery and keyboard." },
+  { label: "Mac data recovery", href: "/mac-data-recovery-dubai", note: "Soldered SSD, T2 and Apple-silicon recovery from a Mac that will not boot." },
+];
+
 export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
   const path = `/macbook-repair-${cfg.slug}`;
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const title = `MacBook Repair ${cfg.area} - Free Pickup & Delivery`;
-  const description = `MacBook repair in ${cfg.area} with free pickup & same-day delivery from our Concord Tower workshop. Warranty up to 12 months. Call 055 741 3706.`;
+  const description = `MacBook repair in ${cfg.area} with free pickup & same-day delivery from our Concord Tower workshop. Written warranty up to 12 months. Call 055 741 3706.`;
 
   useSeo(
     { title, description, path },
@@ -172,6 +184,27 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
             >
               <p className="font-bold text-[16px] mb-1">{s.label}</p>
               <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of up to 12 months</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Other Macs we collect from this area */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <SectionHeading
+          eyebrow="Every Mac, not just MacBooks"
+          title={`Do you repair iMac, Mac mini and Mac Studio in ${cfg.area}?`}
+          sub={`Yes. The same free collection and return covers every Mac in ${cfg.area} - desktops included. Desktops are collected by appointment so the courier brings the right packaging for the display or chassis.`}
+        />
+        <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
+          {MAC_FAMILY_LINKS.map((s) => (
+            <Link
+              key={s.href}
+              to={s.href}
+              className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition"
+            >
+              <p className="font-bold text-[16px] mb-1">{s.label}</p>
+              <p className="text-[13px] text-text-muted">{s.note}</p>
             </Link>
           ))}
         </div>

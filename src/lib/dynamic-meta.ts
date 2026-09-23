@@ -85,7 +85,7 @@ for (const c of CITIES) {
 for (const a of AREAS) {
   MAP[`/macbook-repair-${a.slug}`] = {
     title: `MacBook Repair ${a.area} - Free Pickup & Delivery`,
-    description: `MacBook repair in ${a.area} with free pickup & same-day delivery from our Concord Tower workshop. warranty up to 12 months. Call 055 741 3706.`,
+    description: `MacBook repair in ${a.area} with free pickup & same-day delivery from our Concord Tower workshop. Written warranty up to 12 months. Call 055 741 3706.`,
   };
 }
 
