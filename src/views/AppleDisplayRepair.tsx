@@ -18,6 +18,11 @@ import { localBusiness, organization } from "@/lib/schema";
 import { NAP } from "@/content/site";
 
 const SIBLINGS = [
+  // Studio Display and Studio Display XDR were orphaned (no inbound internal link
+  // anywhere on the site, found by scripts/orphan-check.cjs). This hub is their
+  // natural parent, so they belong here first.
+  { label: "Studio Display", href: "/studio-display-repair-dubai" },
+  { label: "Studio Display XDR", href: "/studio-display-xdr-repair-dubai" },
   { label: "Mac Repair", href: "/mac-repair-dubai" },
   { label: "iMac", href: "/imac-repair-dubai" },
   { label: "MacBook Pro", href: "/macbook-pro-repair-dubai" },
@@ -216,6 +221,24 @@ export default function AppleDisplayRepair() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Related Apple repairs - SIBLINGS was declared but never rendered, which is why
+          /studio-display-repair-dubai and /studio-display-xdr-repair-dubai were orphaned. */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Related Apple repairs</h2>
+        <ul className="grid gap-sm md:grid-cols-3">
+          {SIBLINGS.map((sib) => (
+            <li key={sib.href}>
+              <Link
+                to={sib.href}
+                className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent/40 transition text-[15px]"
+              >
+                {sib.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* FAQ */}

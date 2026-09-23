@@ -35,6 +35,7 @@ const MAC_FAMILY_LINKS = [
   { label: "Mac Pro repair", href: "/mac-pro-repair-dubai", note: "M2 Ultra and Intel 2019 tower - GPU, PSU and expansion faults." },
   { label: "MacBook Neo repair", href: "/macbook-neo-repair-dubai", note: "The A18 Pro MacBook - screen, battery and keyboard." },
   { label: "Mac data recovery", href: "/mac-data-recovery-dubai", note: "Soldered SSD, T2 and Apple-silicon recovery from a Mac that will not boot." },
+  { label: "Apple display repair", href: "/apple-display-repair-dubai", note: "Studio Display, Studio Display XDR and older Thunderbolt panels." },
 ];
 
 export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
