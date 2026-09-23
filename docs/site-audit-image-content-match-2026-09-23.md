@@ -440,3 +440,90 @@ end-to-end in the browser.
 3. Exclude internal traffic (Admin → Data Streams → Configure tag settings → Define internal
    traffic, then a Data Filter) so workshop visits do not pollute the numbers.
 4. Optionally build a "lead" funnel segmented by the `method` and `placement` parameters.
+
+---
+
+# EXPERT AUDIT PASS — 2026-09-23 (commit 04b4cc3)
+
+Four parallel expert audits (schema, accessibility, content-truth, crawl/redirects) run
+against the live site and a fresh build, plus the `/audit-website-expert-100` checklist.
+
+## Fixed
+
+| Area | Before | After |
+|---|---|---|
+| npm vulnerabilities | 1 critical, 6 high, 1 moderate | **0** |
+| Self-serving review markup | `aggregateRating` on 2 pages, 40 `Review` nodes | **0** |
+| Dangling JSON-LD `@id` refs | 239 | **0** |
+| Pages with no business entity | 46 | **1** (the noindex demo) |
+| Hardcoded tenure | "20 years" ×12, "21 years" ×6 | **derived from founding date** |
+| Redirect chains | 2 | **0** |
+| Orphaned money pages | 3 | **0** |
+
+**The critical Next.js CVE mattered here specifically:** it is a Middleware/Proxy bypass
+in App Router apps, and `src/proxy.ts` exists — the affected surface was in use.
+
+### Provably false statements removed
+- **`/reviews` claimed "Nothing has been rewritten, curated, or removed."** All three were
+  false: the store holds **212 of the 232** reviews, **72 entries are truncated** with an
+  ellipsis, and `find-reviews.ts` curates per device. This was the one explicitly verifiable
+  honesty claim on the site, and it was the one that failed.
+- **The iPhone 18 pages** said *"we can't repair a device that doesn't exist"* and promised a
+  rewrite *"within 24 hours of the keynote"* — **14 days after that keynote**, in visible copy
+  **and** in FAQPage JSON-LD Google ingests.
+- **Tenure was 15 days from expiring** (`yearsInBusiness: 21` hardcoded against a 10 October
+  founding date). Now computed, so it can never drift again.
+
+### The accessibility finding that was costing you leads
+`LeadForm` validation errors were neither linked to their input nor announced. A
+screen-reader user filled the form, pressed **Next**, and *nothing was spoken* — the step
+didn't advance and the error was inserted silently. The form was a dead end. Now
+`role="alert"` + `aria-describedby`, focus moves to the first invalid field, and step
+changes are announced.
+
+Also: the focus ring measured **2.15–2.72:1** on the dark bands used across 29 views (3:1
+required), so keyboard users lost the cursor exactly where the CTAs are.
+
+## New: `scripts/audit-gates.mjs`
+Eight regression gates, each one guarding a defect class that **already shipped once** and
+was invisible to every other check. Exit 0 = clean; wire it into CI beside the build.
+
+```bash
+npm run build && node scripts/audit-gates.mjs
+```
+
+1. Every referenced image file exists *(catches template-literal paths a grep misses)*
+2. No self-serving `aggregateRating` / `Review` markup
+3. No dangling JSON-LD `@id` references
+4. All JSON-LD parses
+5. No AVIF `og:image` *(breaks every major share card)*
+6. No redirect chains
+7. Tenure is derived, never hardcoded
+8. Images have alt text and dimensions
+
+**All 8 pass.** Two gates initially fired on their own false positives (route patterns read
+as redirect chains; a blog-post title read as a tenure claim) — the gate logic was fixed,
+not the finding suppressed.
+
+## Still open — your decision, not mine
+
+These need a fact only you have, so I did not guess:
+
+| # | Item | What I need from you |
+|---|---|---|
+| 1 | **"No fix, no charge — you pay nothing"** vs two pages saying *"only a small diagnostic fee is charged"* | Is there a fee? 558 pages say no, 2 say yes, and the exception won't name the amount |
+| 2 | **"30 minutes guaranteed or it is free"** — an enforceable money-back guarantee, published in schema | Back it with a written policy (which models, when the clock starts, how the refund works) or soften to "typically 30 minutes". The badge on 300 other pages omits the "or it's free" |
+| 3 | **Face ID page: 12-month warranty vs "covered for 30 days"** on the same page | Which tier is real? |
+| 4 | **`sameAs` merges two brands** — 3 of 5 profiles are "Azizi Technologies" while `name` is "MacBook Repair Dubai" | Deliberate entity consolidation? It cannot be cleanly unwound later |
+| 5 | **AI storefront queued for 9 GBP posts** + GBP post copy carrying prices | Publishes outward |
+| 6 | **Higgsfield credits (0, free plan)** | Unblocks the real MacBook screen image and regenerating infographics without baked-in prices |
+| 7 | **`www` returns 525** | I checked: the Hostinger token for this project does **not** own the domain (`403 Customer does not own macbook-repair-dubai.ae`) and `hostinger-azizi` failed to connect this session |
+| 8 | **Mark `contact` as a GA4 key event** | GA4 UI only — without it none of the lead tracking counts as a conversion |
+
+## Lower priority, not done
+- 35 HowTo pages mark up steps that appear only in JSON-LD, never in the visible body
+- Review dates are frozen relative strings ("14 hours ago") baked into static HTML
+- 107 pages still sit on 1–2 inbound internal links
+- 249 titles hardcode "2026"; `CONTENT_REVIEWED` is a manual field, now a month stale
+- `/apple-watch-repair-dubai` still has no image anywhere in the repo
+- `robots.txt` blocks Screaming Frog, Sitebulb, Ahrefs Site Audit and curl — your own tools
