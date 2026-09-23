@@ -193,12 +193,7 @@ in-browser.
    Run after topping up: `node scripts/topic-images/generate.mjs && node scripts/topic-images/process.mjs && node scripts/topic-images/gen-ts.mjs`
 2. 🟠 **`https://www.` returns 525.** Origin SSL does not cover the www hostname, so the
    www variant errors instead of 301-ing to apex. Hostinger/Cloudflare fix, not code.
-3. 🟠 **31 pages still have no in-page image.** 22 already have a device-correct image
-   available via `imageForRoute()` and only need it passed to their `Hero` — but each is
-   a bespoke view and several use the `sidecar` slot (a price/booking card) that occupies
-   the image position, so this is a per-page design call, not a safe bulk edit. The
-   remaining 9 (legal, `/about`, `/contact`, `/pricing`, `/reviews`, `/blog`) have no
-   topic image at all and need art direction.
+3. ✅ **DONE** (commit 8e71c10) — see "Second pass" below.
 4. 🟡 **Prices baked into the topic infographics as pixels** (e.g. "AED 8,000–16,000" in
    `blog-repair-cost-dubai.jpg`). Build-time price stripping cannot reach text inside a
    JPEG, so `hide-prices-whatsapp` will ship with prices still publicly visible. Needs
@@ -207,3 +202,51 @@ in-browser.
    Shorten the source titles so the year survives.
 6. 🟢 Pre-existing React duplicate-key warning on `/macbook-screen-repair-dubai`
    ("Diagnosis" list). Unrelated to this work; not touched.
+
+
+---
+
+# SECOND PASS — hero imagery (commit 8e71c10)
+
+**Pages with no imagery: 39 → 8.**
+
+The 13 bespoke views were not a design decision. Each was scaffolded with a literal
+`image={undefined}` **and an `imageAlt` already written for the image** — git shows they
+were born that way (`d485064`), never wired up. None used the `sidecar` slot, so my
+earlier caution about that was unfounded. All 13 now take `src` **and** `alt` from
+`imageForRoute()`, so the two cannot drift apart — that drift is exactly what produced
+the original iPhone-on-a-MacBook-page bug.
+
+Also wired: `BlogTag` (5 pages), `BestAppleRepair`, `/blog`, `/pricing`, and
+`/about`, `/contact`, `/reviews`.
+
+## A third missing-asset problem
+The earlier sweep only matched quoted literal paths, so it missed everything assembled
+from a template literal in `page-images.ts`. **12 more files did not exist.** None were
+rendered yet — they were 404s waiting for a route:
+
+- **No Apple Watch photography exists at all.** `watchImage()` returned five paths that
+  cannot resolve. It now returns `undefined` so the Hero degrades to text-only.
+- `mac-mini.jpg`, `mac-mini-pro.jpg`, `mac-pro-rack.jpg` never existed → repointed at the
+  real product shots.
+- iPhone 12 / 11 / X-era / 6–8 branches had neither routes nor assets → removed.
+
+## AI-generated images presented as the real business 🟠
+The three `/images/brand/*` files are AI-generated placeholders (the file header in
+`page-images.ts` says so). Two places treated them as real:
+
+1. **`schema.ts` — FIXED.** `LocalBusiness.image` tells Google "these are photographs of
+   this business" and listed all three, including a synthetic storefront **bearing an
+   Apple logo**, which an independent repair shop may not display. Swapped for genuine
+   Concord Tower photos.
+2. **`gbp-content.generated.ts` — NOT FIXED, needs your decision.** That same AI storefront
+   is queued as the image for **9 Google Business Profile posts**. Google requires GBP
+   photos to genuinely represent the business, and the Apple-logo signage is a trademark
+   exposure. Left alone because it publishes outward.
+
+## Remaining 8 without imagery — all deliberate
+| Page | Why |
+|---|---|
+| `/cookies` `/privacy` `/refund` `/terms` `/warranty` `/image-usage-license` | Legal/utility text pages |
+| `/landing-template-demo` | `noindex` demo |
+| `/apple-watch-repair-dubai` | **Genuinely blocked** — no Apple Watch image exists anywhere in the repo |
