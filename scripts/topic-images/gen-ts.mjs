@@ -1,13 +1,23 @@
 // Emits src/lib/topic-images.generated.ts from the manifest so templates get
 // src + alt for every topic image without duplicating data by hand.
 // Usage: node scripts/topic-images/gen-ts.mjs
-import { writeFileSync } from "node:fs";
+import { writeFileSync, existsSync } from "node:fs";
 import { IMAGES } from "./manifest.mjs";
 
 const DIR = new URL(".", import.meta.url).pathname;
 const out = `${DIR}../../src/lib/topic-images.generated.ts`;
+const TOPICS = `${DIR}../../public/images/topics`;
 
-const entries = IMAGES.map(
+// Only emit entries whose master JPEG actually exists. A manifest entry is a
+// *request* for an image; it is not proof one was generated. Emitting them
+// unconditionally is how 12 topic images shipped as silent 404s (audit
+// 2026-09-23) - callers got a src that resolved to nothing. Skipping them
+// instead makes TOPIC_IMAGES[key] undefined, so `?? fallback` in page-images.ts
+// can do its job and nothing ever points at a missing file.
+const present = IMAGES.filter((s) => existsSync(`${TOPICS}/${s.file}.jpg`));
+const absent = IMAGES.filter((s) => !existsSync(`${TOPICS}/${s.file}.jpg`));
+
+const entries = present.map(
   (s) => `  "${s.file}": { src: "/images/topics/${s.file}.jpg", alt: ${JSON.stringify(s.alt)} },`,
 ).join("\n");
 
@@ -23,4 +33,12 @@ ${entries}
 };
 `,
 );
-console.log(`wrote ${out} (${IMAGES.length} entries)`);
+console.log(`wrote ${out} (${present.length} entries)`);
+if (absent.length) {
+  console.warn(
+    `\n${absent.length} manifest entr${absent.length === 1 ? "y has" : "ies have"} no generated image ` +
+    `and ${absent.length === 1 ? "was" : "were"} SKIPPED:\n` +
+    absent.map((s) => `  - ${s.file}`).join("\n") +
+    `\nRun: node scripts/topic-images/generate.mjs && node scripts/topic-images/process.mjs\n`,
+  );
+}

@@ -8,6 +8,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
+import { imageForRoute } from "@/lib/page-images";
 import {
   CATEGORIES,
   categoryBySlug,
@@ -18,6 +19,9 @@ import {
 export default function BlogCategory({ slug }: { slug: string }) {
   const category = categoryBySlug(slug);
   const posts = postsInCategory(slug);
+  // Category hubs shipped with no imagery at all (audit 2026-09-23); reuse the
+  // route's own topic image so each hub is illustrated by its actual subject.
+  const hero = imageForRoute(`/blog/${slug}`);
   const counts = categoryCounts();
   const others = CATEGORIES.filter((c) => c.slug !== slug);
 
@@ -71,6 +75,8 @@ export default function BlogCategory({ slug }: { slug: string }) {
           eyebrow={category?.eyebrow ?? "Apple repair blog"}
           title={`${name} - Dubai`}
           subtitle={category?.blurb}
+          image={hero?.src}
+          imageAlt={hero?.alt}
         />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">

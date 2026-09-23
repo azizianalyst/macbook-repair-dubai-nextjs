@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacBookAirM2Problems";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/macbook-air-m2-common-problems-dubai", {
   title: "MacBook Air M2 Common Problems Dubai — Fix Guide 2026",
   description: "MacBook Air M2 problems in Dubai: SSD degradation, overheating, hinge crack, MagSafe 3. All M2 Air faults fixed fast. Free diagnosis, same-day service.",
-  openGraph: {
-    title: "MacBook Air M2 Common Problems Dubai: 13-inch & 15-inch Fix Guide 2026",
-    description: "MacBook Air M2 problems? SSD wear, battery swelling, hinge crack, MagSafe. Fix guide plus WhatsApp us for a quote. Free diagnosis in Dubai.",
-    url: "https://macbook-repair-dubai.ae/blog/macbook-air-m2-common-problems-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-  },
-  alternates: { canonical: "https://macbook-repair-dubai.ae/blog/macbook-air-m2-common-problems-dubai" },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

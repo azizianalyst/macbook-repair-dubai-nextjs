@@ -21,8 +21,27 @@ const ACRONYMS: Record<string, string> = {
 //  - titles never carry the workshop phone number and stay <= 60 chars (SERP truncation)
 //  - descriptions stay <= 160 chars
 const PHONE_IN_TITLE = /\s*[|\-–·]\s*(?:Call\s+)?0?5?5\s*741\s*3706\.?\s*$/i;
+
+// Some route-meta entries were authored with HTML entities baked into what is
+// really a plain-text field (e.g. `13&quot;` for a 13-inch model). Next escapes
+// metadata again on render, so `&quot;` shipped as `&amp;quot;` and users saw a
+// literal `&quot;` in the SERP. Worse, the truncators below measured the
+// ESCAPED length and could cut mid-entity, leaving a dangling `&amp;amp;`.
+// Decoding first fixes the rendering and makes the length limits count the
+// characters a human actually sees. (audit 2026-09-23)
+function decodeEntities(s: string): string {
+  return s
+    .replace(/&quot;/g, '"')
+    .replace(/&#(?:0*39|x0*27);/gi, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&"); // must run last, or it re-creates the entities above
+}
+
 function cleanTitle(t: string): string {
-  let s = t.replace(PHONE_IN_TITLE, "").trim();
+  let s = decodeEntities(t).replace(PHONE_IN_TITLE, "").trim();
   if (s.length > 60) {
     const cut = s.lastIndexOf(" ", 60);
     s = (cut > 0 ? s.slice(0, cut) : s.slice(0, 60)).trim();
@@ -39,8 +58,9 @@ function cleanTitle(t: string): string {
   return s;
 }
 function cleanDescription(d: string): string {
-  if (d.length <= 160) return d;
-  return d.slice(0, 157).replace(/\s+\S*$/, "").trim() + "…";
+  const s = decodeEntities(d);
+  if (s.length <= 155) return s;
+  return s.slice(0, 152).replace(/\s+\S*$/, "").trim() + "…";
 }
 
 function titleCase(s: string): string {
@@ -87,14 +107,37 @@ export function metaForPath(path: string): Metadata {
 // through the SAME machinery as metaForPath: admin overrides, length caps, canonical,
 // OpenGraph, Twitter and robots. Use on pages that author their meta inline so they don't
 // silently miss og/twitter/robots tags (a common gap that hurts share-card CTR + AEO).
-export function metaFromFields(path: string, fields: { title: string; description: string }): Metadata {
-  return composeMeta(path, fields.title, fields.description);
+export function metaFromFields(
+  path: string,
+  fields: { title: string; description: string; publishedTime?: string; modifiedTime?: string },
+): Metadata {
+  // preferFields: a page that authors its own title/description does so
+  // deliberately, and these pages never saw the /admin/pageseo override before
+  // they were routed through here. Letting admin win would silently rewrite 56
+  // blog titles (and truncate the "2026" freshness suffix off many of them), so
+  // the inline fields stay authoritative; admin still supplies og/robots/canonical.
+  const meta = composeMeta(path, fields.title, fields.description, true);
+  // Preserve article timestamps that inline-authored blog pages carry; composeMeta
+  // has no notion of them and dropping them would lose the freshness signal.
+  if (fields.publishedTime || fields.modifiedTime) {
+    meta.openGraph = {
+      ...meta.openGraph,
+      publishedTime: fields.publishedTime,
+      modifiedTime: fields.modifiedTime ?? fields.publishedTime,
+    } as Metadata["openGraph"];
+  }
+  return meta;
 }
 
-function composeMeta(path: string, baseTitle: string, baseDescription: string): Metadata {
+function composeMeta(
+  path: string,
+  baseTitle: string,
+  baseDescription: string,
+  preferFields = false,
+): Metadata {
   const admin = adminMetaOverride(path);
-  const title = cleanTitle(admin?.title || baseTitle);
-  const description = cleanDescription(admin?.description || baseDescription);
+  const title = cleanTitle(preferFields ? baseTitle : admin?.title || baseTitle);
+  const description = cleanDescription(preferFields ? baseDescription : admin?.description || baseDescription);
   // Trailing-slash canonical form (matches next.config trailingSlash:true). Root -> "/".
   const url = SITE_URL + (path === "/" ? "/" : path + "/");
   // Blog posts are articles, not "website" — gives social/AI the right entity type.

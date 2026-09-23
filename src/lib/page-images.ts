@@ -76,7 +76,7 @@ function macDesktopImage(slug: string): string | undefined {
   const s = slug.toLowerCase();
   if (s.includes("mac-pro") && s.includes("rack")) return `${DEVICE}/mac-pro-rack.jpg`;
   if (s.includes("mac-pro")) return `${DEVICE}/mac-pro-tower.jpg`;
-  if (s.includes("mac-studio")) return `${REAL}/mac-studio-dubai.jpg`;
+  if (s.includes("mac-studio")) return T("mac-studio-repair-dubai")?.src;
   if (s.includes("mini") && s.includes("pro")) return `${DEVICE}/mac-mini-pro.jpg`;
   if (s.includes("mini")) return `${DEVICE}/mac-mini.jpg`;
   return undefined;
@@ -101,7 +101,7 @@ export function imageForFamily(family: string): string | undefined {
   if (f.includes("watch")) return `${DEVICE}/watch-series.jpg`;
   if (f.includes("imac")) return `${REAL}/imac-front-dubai.jpg`;
   if (f.includes("mac mini") || f.includes("mini")) return `${DEVICE}/mac-mini.jpg`;
-  if (f.includes("studio")) return `${REAL}/mac-studio-dubai.jpg`;
+  if (f.includes("studio")) return T("mac-studio-repair-dubai")?.src;
   if (f.includes("mac pro")) return `${DEVICE}/mac-pro-tower.jpg`;
   return undefined;
 }
@@ -192,14 +192,24 @@ export function topicForPath(path: string): TopicImage | undefined {
   if (p.includes("sell-") || p.includes("trade-in")) return T("macbook-trade-in-dubai");
   if (p.includes("near-me") || p.includes("cost-calculator")) return T("macbook-repair-near-me");
 
-  // Mac mini / Studio / Pro
-  if (p.includes("mac-mini-ram")) return T("macbook-ram-upgrade-dubai");
+  // Mac mini / Studio / Pro. These MUST be exhaustive: anything that falls
+  // through here lands in the MacBook block below and ships a laptop image on a
+  // desktop-Mac page (audit 2026-09-23). Each desktop family ends in its own
+  // hub image rather than a MacBook one.
   if (p.includes("mac-mini")) return T("mac-mini-repair-dubai");
-  if (p.includes("mac-pro-gpu")) return T("macbook-gpu-repair-dubai");
-  if (p === "/mac-pro-repair-dubai") return T("mac-pro-repair-dubai");
+  if (p.includes("mac-studio")) return T("mac-studio-repair-dubai");
+  if (p.includes("mac-pro")) return T("mac-pro-repair-dubai");
 
-  // MacBook / Mac services (real lab photos keep priority in imageForService)
-  if (p.includes("screen") || p.includes("display")) return T("apple-display-repair-dubai");
+  // MacBook / Mac services (real lab photos keep priority in imageForService).
+  // NB: apple-display-repair-dubai is an Apple Studio Display / 27" 5K panel
+  // infographic - correct on its own page, WRONG on MacBook screen pages.
+  // `macbook-screen-repair-dubai` is defined in the topic manifest but not yet
+  // generated (Higgsfield credits exhausted, 2026-09-23), so gen-ts.mjs omits
+  // it and T() returns undefined. Until it is generated we fall back to the
+  // display-technology infographic, which is at least MacBook-inclusive and
+  // honestly captioned. Generating the asset flips this over automatically.
+  if (p.includes("screen") || p.includes("display"))
+    return T("macbook-screen-repair-dubai") ?? T("blog-screen-display-dubai");
   if (p.includes("battery")) return T("macbook-battery-replacement-dubai");
   if (p.includes("trackpad")) return T("macbook-trackpad-repair-dubai");
   if (p.includes("hinge")) return T("macbook-hinge-repair-dubai");
@@ -245,9 +255,16 @@ export function blogTopicForPath(path: string): TopicImage | undefined {
   if (p.includes("last-over-a-decade") || p.includes("common-macbook-problems") || p.includes("where-to-repair"))
     return T("guide-macbook-longevity-dubai");
 
-  // Device-specific posts first, then topic clusters
+  // Device-specific posts first, then topic clusters. Desktop Macs must be
+  // claimed here: otherwise an iMac/Studio/mini post falls through to a MacBook
+  // cluster image and the alt text then describes a device that is not shown
+  // (audit 2026-09-23, /blog/imac-not-turning-on-power-supply-issues).
   if (p.includes("iphone") || p.includes("airpods") || p.includes("ipod")) return T("blog-iphone-guides-dubai");
   if (p.includes("ipad")) return T("blog-ipad-guides-dubai");
+  if (p.includes("imac")) return T("imac-repair-hub-dubai");
+  if (p.includes("mac-studio")) return T("mac-studio-repair-dubai");
+  if (p.includes("mac-mini")) return T("mac-mini-repair-dubai");
+  if (p.includes("mac-pro")) return T("mac-pro-repair-dubai");
   if (p.includes("battery")) return T("blog-battery-health-dubai");
   if (p.includes("overheat") || p.includes("cooling") || p.includes("thermal")) return T("blog-overheating-cooling-dubai");
   if (p.includes("water") || p.includes("liquid") || p.includes("spill")) return T("blog-water-damage-dubai");
@@ -315,14 +332,18 @@ export function areaTopicForSlug(slug: string): TopicImage | undefined {
 export function imageForService(path: string): string | undefined {
   const p = path.toLowerCase();
   const isIDevice = p.includes("iphone") || p.includes("ipod") || p.includes("ipad");
-  if (!isIDevice && !p.includes("imac")) {
+  // Real MacBook lab photos are only honest on MacBook routes. Desktop Macs
+  // (iMac, mini, Studio, Pro) must fall straight through to their own topic
+  // image instead of borrowing a laptop photo (audit 2026-09-23).
+  const isDesktopMac = p.includes("imac") || p.includes("mac-mini")
+    || p.includes("mac-studio") || p.includes("mac-pro");
+  if (!isIDevice && !isDesktopMac) {
     if (p.includes("logic-board")) return `${REAL}/macbook-pro-internal-layout-dubai.jpg`;
     if (p.includes("keyboard")) return `${REAL}/macbook-keyboard-repair-dubai.jpg`;
     if (p.includes("fan") || p.includes("overheat") || p.includes("cooling"))
       return `${REAL}/macbook-fan-heatsink-dubai.jpg`;
     if (p.includes("battery")) return `${REAL}/macbook-battery-internals-dubai.jpg`;
     if (p.includes("water")) return `${REAL}/macbook-full-internals-dubai.jpg`;
-    if (p.includes("screen")) return `${SVC}/svc-screen.jpg`;
   }
   return topicForPath(path)?.src;
 }

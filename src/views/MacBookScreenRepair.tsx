@@ -224,8 +224,8 @@ export default function MacBookScreenRepair() {
                 
                 <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
                   <ResponsiveImage
-                    src="/images/services/svc-screen.jpg"
-                    alt="MacBook screen replacement in Dubai - technician fitting a new Retina display at our Media City workshop"
+                    src="/images/topics/blog-screen-display-dubai.jpg"
+                    alt="MacBook Retina display assembly and common screen failures - cracked glass, backlight stage-light, dead pixels - explained"
                     width={800}
                     height={600}
                     sizes="(max-width: 768px) 92vw, 420px"

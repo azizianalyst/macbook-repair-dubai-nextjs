@@ -336,6 +336,21 @@ export const IMAGES = [
     ],
   },
   {
+    // Added 2026-09-23 (image/content audit). iPhone, iPad and iMac each had a
+    // screen-repair topic image; MacBook did not, so every MacBook screen page
+    // fell through to the Apple Studio Display (27" 5K) infographic and, in the
+    // hero slot, to an iPhone suction-cup photo. This is the missing asset.
+    file: "macbook-screen-repair-dubai",
+    cluster: "macbook-services",
+    alt: "MacBook screen repair Dubai - Retina display assembly exploded-view engineering infographic",
+    quads: [
+      "MacBook Pro 14-inch open on a bench with the full Liquid Retina XDR display assembly lifted away from the aluminium lid, hinge and display flex connector annotated",
+      "Exploded display stack - cover glass, LCD/mini-LED panel, backlight layer, aluminium lid - floating apart with thickness dimensions",
+      "Technician in gloves seating a replacement MacBook display assembly and routing the display flex cable to the logic board under a bench lamp",
+      "Common MacBook screen failure map - cracked glass, backlight stage-light, dead pixels, ghosting - as four labelled panel diagrams"
+    ],
+  },
+  {
     file: "macbook-flexgate-repair-dubai",
     cluster: "macbook-services",
     alt: "MacBook flexgate display cable repair Dubai - backlight ribbon engineering infographic",

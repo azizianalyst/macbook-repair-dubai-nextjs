@@ -209,8 +209,8 @@ export default function MacBookProScreenRepair() {
               <div className="md:col-span-5">
                 <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
                   <ResponsiveImage
-                    src="/images/services/svc-screen.jpg"
-                    alt="MacBook Pro screen replacement in Dubai — technician fitting a Liquid Retina XDR panel at our Media City workshop"
+                    src="/images/topics/blog-screen-display-dubai.jpg"
+                    alt="MacBook Pro Liquid Retina XDR display assembly and common screen failure modes explained"
                     width={800}
                     height={600}
                     sizes="(max-width: 768px) 92vw, 420px"

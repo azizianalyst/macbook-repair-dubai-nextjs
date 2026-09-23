@@ -1,34 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacBookProM2Problems";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m2-common-problems-dubai", {
   title: "MacBook Pro M2 Common Problems? Fix Guide Dubai 2026",
   description: "MacBook Pro M2 common problems in Dubai? 13-inch SSD write amplification, charging faults, HDMI output glitches, battery swelling in older units.",
-  openGraph: {
-    title: "MacBook Pro M2 Common Problems? Fix Guide Dubai 2026",
-    description: "SSD write amplification, charging faults, HDMI glitches on MacBook Pro M2. Expert fixes in Dubai — message us on WhatsApp.",
-    url: "https://macbook-repair-dubai.ae/blog/macbook-pro-m2-common-problems-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-    images: [{
-      url: "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif",
-      width: 1600,
-      height: 900,
-      alt: "MacBook Pro M2 common problems, technician checking SSD health and charging port at Dubai repair workshop",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "MacBook Pro M2 Common Problems? Fix Guide Dubai 2026",
-    description: "SSD write amplification, charging faults, HDMI glitches on MacBook Pro M2. Expert fixes in Dubai.",
-    images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
-  },
-  alternates: {
-    canonical: "https://macbook-repair-dubai.ae/blog/macbook-pro-m2-common-problems-dubai",
-  },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

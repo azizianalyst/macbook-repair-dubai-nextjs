@@ -17,9 +17,12 @@ import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
 
+// Was /images/real/lab/macbook-pro-screen-repair.jpg - that file has never
+// existed in public/ and returned 404 live on all five chip screen pages
+// (audit 2026-09-23), so the whole <picture> failed and the hero rendered blank.
 const HERO_IMG = {
-  src: "/images/real/lab/macbook-pro-screen-repair.jpg",
-  alt: "MacBook Pro screen repair at MacBook Repair Dubai, Dubai Media City workshop",
+  src: "/images/topics/blog-screen-display-dubai.jpg",
+  alt: "MacBook Pro Liquid Retina XDR display assembly and common screen failure modes explained",
 };
 
 export type ChipScreenPrice = {

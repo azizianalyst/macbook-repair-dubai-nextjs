@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogIMacNoDisplay";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/imac-no-display-black-screen-dubai", {
   title: "iMac No Display or Black Screen in Dubai? 6 Fixes 2026",
   description: "iMac turns on but no display or black screen in Dubai? 6 fixes for backlight, GPU, and panel faults. Message us on WhatsApp for a repair quote.",
-  openGraph: {
-    title: "iMac No Display or Black Screen in Dubai? 6 Fixes 2026",
-    description: "iMac turns on but no display or black screen in Dubai? 6 fixes for backlight, GPU, and panel faults. Message us on WhatsApp for a repair quote.",
-    url: "https://macbook-repair-dubai.ae/blog/imac-no-display-black-screen-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-    images: [{ url: "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif", width: 1600, height: 900, alt: "iMac no display, Dubai repair workshop" }],
-  },
-  twitter: { card: "summary_large_image", title: "iMac No Display or Black Screen in Dubai? 6 Fixes 2026", description: "iMac turns on but no display or black screen in Dubai? 6 fixes for backlight, GPU, and panel faults. Message us on WhatsApp for a repair quote.", images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"] },
-  alternates: { canonical: "https://macbook-repair-dubai.ae/blog/imac-no-display-black-screen-dubai" },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

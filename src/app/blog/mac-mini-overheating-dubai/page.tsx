@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacMiniOverheating";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/mac-mini-overheating-dubai", {
   title: "Mac mini Overheating or Loud Fan in Dubai? Fixes 2026",
   description: "Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Message us on WhatsApp for a thermal service quote.",
-  openGraph: {
-    title: "Mac mini Overheating or Loud Fan in Dubai? Fixes 2026",
-    description: "Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Message us on WhatsApp for a thermal service quote.",
-    url: "https://macbook-repair-dubai.ae/blog/mac-mini-overheating-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-    images: [{ url: "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif", width: 1600, height: 900, alt: "Mac mini overheating, Dubai repair workshop" }],
-  },
-  twitter: { card: "summary_large_image", title: "Mac mini Overheating or Loud Fan in Dubai? Fixes 2026", description: "Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Message us on WhatsApp for a thermal service quote.", images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"] },
-  alternates: { canonical: "https://macbook-repair-dubai.ae/blog/mac-mini-overheating-dubai" },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

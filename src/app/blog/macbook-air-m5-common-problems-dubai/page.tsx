@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacBookAirM5Problems";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/macbook-air-m5-common-problems-dubai", {
   title: "MacBook Air M5 Common Problems Dubai 2026: Fix Guide",
   description: "MacBook Air M5 problems in Dubai: battery drain, overheating, WiFi drops, screen issues. All M5 Air faults diagnosed and fixed. Free diagnosis, WhatsApp for a quote.",
-  openGraph: {
-    title: "MacBook Air M5 Common Problems Dubai 2026: Fix Guide",
-    description: "MacBook Air M5 problems? Battery, throttling, WiFi, charging issues. Dubai fix guide. Free diagnosis, WhatsApp us for a quote.",
-    url: "https://macbook-repair-dubai.ae/blog/macbook-air-m5-common-problems-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-  },
-  alternates: { canonical: "https://macbook-repair-dubai.ae/blog/macbook-air-m5-common-problems-dubai" },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

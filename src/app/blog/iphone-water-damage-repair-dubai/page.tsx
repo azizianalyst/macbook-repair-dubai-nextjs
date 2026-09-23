@@ -1,34 +1,14 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogIPhoneWaterDamage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/iphone-water-damage-repair-dubai", {
   title: "iPhone Water Damage Repair Dubai 2026: What to Do First",
   description: "iPhone water damage repair Dubai: board-level ultrasonic clean for pool, sea and rain-soaked iPhones. Free diagnosis — message us on WhatsApp for a quote.",
-  openGraph: {
-    title: "iPhone Water Damage Repair Dubai 2026: What to Do First",
-    description: "iPhone water damage repair Dubai: board-level ultrasonic clean for pool, sea and rain-soaked iPhones. Free diagnosis — message us on WhatsApp for a quote.",
-    url: "https://macbook-repair-dubai.ae/blog/iphone-water-damage-repair-dubai",
-    type: "article",
-    publishedTime: "2026-06-22",
-    modifiedTime: "2026-06-22",
-    images: [{
-      url: "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif",
-      width: 1600,
-      height: 900,
-      alt: "iPhone water damage repair Dubai, technician diagnosing device at Dubai repair workshop",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "iPhone Water Damage Repair Dubai 2026: What to Do First",
-    description: "iPhone water damage repair Dubai: board-level ultrasonic clean for pool, sea and rain-soaked iPhones. Free diagnosis — message us on WhatsApp for a quote.",
-    images: ["https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif"],
-  },
-  alternates: {
-    canonical: "https://macbook-repair-dubai.ae/blog/iphone-water-damage-repair-dubai",
-  },
-};
+  publishedTime: "2026-06-22",
+  modifiedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (

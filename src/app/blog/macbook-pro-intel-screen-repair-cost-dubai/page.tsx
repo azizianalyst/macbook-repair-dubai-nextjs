@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
+import { metaFromFields } from "@/lib/page-meta";
 import { PageSchema } from "@/components/PageSchema";
 import View from "@/views/BlogMacBookProIntelScreenRepair";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = metaFromFields("/blog/macbook-pro-intel-screen-repair-cost-dubai", {
   title: "MacBook Pro Intel Screen Repair Cost Dubai 2026",
   description: "MacBook Pro Intel screen repair Dubai: cracked, Flexgate, dead pixels on 13/15-inch 2016-2020. Free diagnosis, same-day. Message us for your exact price.",
-  openGraph: {
-    type: "article",
-    publishedTime: "2026-06-22",
-    images: [{ url: "https://macbook-repair-dubai.ae/images/topics/blog-apple-silicon-dubai-desktop.avif", width: 1600, height: 900 }],
-  },
-  twitter: { card: "summary_large_image" },
-  alternates: { canonical: "https://macbook-repair-dubai.ae/blog/macbook-pro-intel-screen-repair-cost-dubai" },
-};
+  publishedTime: "2026-06-22",
+});
 
 export default function Page() {
   return (
