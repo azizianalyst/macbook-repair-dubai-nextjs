@@ -316,3 +316,74 @@ links, including money pages (`/best-macbook-repair-dubai`, `/best-iphone-repair
 | **Content truth** | `TRUST-CLAIMS.md` exists but claims like "40,000+ repairs", "5.0 from 232+ reviews", "since 2004" were never verified against source records |
 | **Responsive/visual QA** | Only spot-checked at 1280px; no systematic multi-viewport pass |
 | **Lead delivery** | Never tested that a submitted form actually reaches a human |
+
+---
+
+# LEAD-DELIVERY CANARY — 2026-09-23 (commit 4af5bb1)
+
+## Verdict: ✅ the pipeline works — leads reach a human
+Unlike the sellyourmac.ae failure this check exists for, a submitted lead here is
+delivered on **two independent channels**, verified against production:
+
+| Channel | Evidence |
+|---|---|
+| **Email** | `emailed:true` — SMTP accepted the message |
+| **CRM** | `azizgc.com` issued a real ticket: **ref LD2026/3001, code MRD-1461** |
+
+Storage (`saved:true`), validation (400 on empty/invalid JSON) and the honeypot
+(200, silently dropped) all behave correctly.
+
+**One limit on that claim:** `emailed:true` proves SMTP *accepted* the message, not that
+it landed in an inbox. `LEAD_TO_EMAIL` is not `azizianalyst@gmail.com` — I searched that
+mailbox and the canary is not there — so final inbox delivery could not be confirmed from
+here. Worth one manual look at whatever address `LEAD_TO_EMAIL` points to.
+
+## Two real gaps found and fixed
+
+### 🟠 The CRM mirror could fail silently
+`mirrorLeadToCrm()` was called as `void mirrorLeadToCrm(...)` — fire-and-forget. Its
+boolean result went nowhere. If the CRM were down, the endpoint would still answer
+`{ok:true, emailed:true}` and the failure would exist only in a server log nobody reads.
+Now raced against a 2.5s budget (measured ~0.7s) and reported as `sent`/`failed`/`pending`,
+so a slow CRM degrades rather than blocking the visitor.
+
+### 🟠 No Origin check whatsoever
+The route never inspected `Origin` — any site could POST into the lead pipeline, with only
+the per-IP rate limit (20/10min) in the way. Foreign origins now get **403**. A *missing*
+Origin is still allowed: that is not a CSRF vector, and blocking it would break
+server-to-server monitors including this canary.
+
+### 🟡 Every submission ate a redirect
+`LeadForm` posted to `/api/lead` while `next.config` sets `trailingSlash: true` → a 308 on
+the conversion path. Fixed.
+
+## The endpoint now has a verifiable contract
+```jsonc
+{ "ok": true, "id": 1, "saved": true, "emailed": true,
+  "notified": { "email": "sent", "crm": "sent" } }
+```
+`id` proves it was **stored**; `notified` proves a human was **told**. Without the
+per-channel breakdown you cannot tell "delivered" from "written to a table nobody reads".
+
+## Re-runnable: `scripts/lead-canary.mjs`
+The shared `/lead-delivery-canary` script speaks a Supabase-shaped payload and fails this
+site's schema before reaching the delivery logic, so this is the project-local version.
+**All 11 checks pass.** Exit 0 = leads reach a human; alert on non-zero.
+
+```bash
+node scripts/lead-canary.mjs --require email,crm        # production
+node scripts/lead-canary.mjs --json                     # for cron/CI
+```
+Worth putting on a weekly schedule — this class of failure appears *later*, when a
+password rotates or a provider suspends an account.
+
+## ⚠️ Test records to delete
+These runs created real, deliberately-tagged records — roughly **5 CRM tickets** (including
+`LD2026/3001`) and **~4 emails**. All are labelled `CANARY … please ignore`, model
+`CANARY`, phone in the `+9715000000xx` block. Please delete them from the CRM Inbox so
+they never enter real reporting.
+
+## Unrelated, but it surfaced while searching mail
+GitHub Actions is emailing **repeated canary failures for two other sites**:
+`azizitechnologies.ae` (Uptime canary — all jobs failed) and `azizitechnologies.co.uk`
+(Site health canary — failing since 22 Sept). Different projects, so untouched here.
