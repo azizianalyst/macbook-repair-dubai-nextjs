@@ -4,6 +4,7 @@ import { CalendarDays, Clock, ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
 import { TAGS, tagBySlug, postsByTag } from "@/content/blog-posts";
@@ -14,6 +15,9 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
   const posts = postsByTag(slug);
   const name = tag?.name ?? slug;
   const path = `/blog/tag/${slug}`;
+  // These hubs rendered no imagery at all (audit 2026-09-23). noindex, so this is
+  // a reader-facing fix rather than an SEO one.
+  const heroImg = imageForRoute(path);
   const url = `https://macbook-repair-dubai.ae${path}`;
 
   useSeo(
@@ -57,6 +61,8 @@ export default function BlogTag({ slug }: { slug: TagSlug }) {
           eyebrow="Device tag"
           title={`${name}. Dubai Repair & Guides`}
           subtitle={`${posts.length} technician-written articles covering repairs, costs and buying advice for ${name} in Dubai.`}
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
         />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">

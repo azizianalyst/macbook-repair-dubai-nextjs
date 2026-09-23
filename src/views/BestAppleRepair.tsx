@@ -4,6 +4,7 @@ import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
@@ -61,12 +62,15 @@ export default function BestAppleRepair() {
     path: "/best-apple-repair-dubai",
   });
 
+  // Scaffolded with image={undefined} (audit 2026-09-23).
+  const heroImg = imageForRoute("/best-apple-repair-dubai");
+
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
-          image={undefined}
-          imageAlt="Best Apple repair Dubai, all Apple devices"
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
           variant="device"
           tone="dark"
           eyebrow="Best Apple repair · Dubai · Since 2004"

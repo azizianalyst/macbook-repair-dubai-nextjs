@@ -36,10 +36,15 @@ export function localBusiness() {
     legalName: "Azizi Technologies",
     description:
       "Independent Apple repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook, iMac, iPhone and iPad screen, battery, keyboard, water-damage and logic-board repair. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 232+ Google reviews.",
+    // LocalBusiness.image tells Google "these are photographs of this business",
+    // so it must only ever hold real documentary photos. It previously listed the
+    // three /images/brand/* AI-generated placeholders - including a synthetic
+    // storefront carrying an Apple logo, which independent repair shops may not
+    // display. Swapped for genuine Concord Tower photos (audit 2026-09-23).
     image: [
-      `${SITE.url}/images/brand/brand-storefront.jpg`,
-      `${SITE.url}/images/brand/workshop-wide.jpg`,
-      `${SITE.url}/images/brand/team-portrait.jpg`,
+      `${SITE.url}/images/real/team/team-workshop-dubai.jpg`,
+      `${SITE.url}/images/real/team/macbook-bench-repairs-dubai.jpg`,
+      `${SITE.url}/images/real/lab/repair-workbench-dubai.jpg`,
     ],
     logo: `${SITE.url}/logo-mrd.png`,
     url: SITE.url,

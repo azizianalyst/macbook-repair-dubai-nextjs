@@ -84,6 +84,8 @@ export default function Reviews() {
         eyebrow="Customer feedback"
         title="Real Reviews from Real Customers"
         subtitle="Every review below is a verified Google review. Nothing edited, nothing rewritten."
+        image="/images/real/team/macbook-bench-repairs-dubai.jpg"
+        imageAlt="Customer MacBooks on test at the MacBook Repair Dubai bench in Concord Tower, Dubai Media City"
       >
         <p className="mt-sm text-[13px] text-text-muted mono">
           21+ years in Dubai · {WRITTEN_REVIEW_COUNT} written reviews on this page

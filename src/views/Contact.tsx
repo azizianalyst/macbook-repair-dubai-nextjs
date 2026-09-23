@@ -50,6 +50,8 @@ export default function Contact() {
         eyebrow="Visit · call · WhatsApp"
         title="Contact MacBook Repair Dubai"
         subtitle="Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Walk in any day except Sunday between 9 am and 10 pm."
+        image="/images/real/team/technician-support-call-dubai.jpg"
+        imageAlt="A MacBook Repair Dubai technician taking a customer call at our Dubai Media City office"
       />
 
       {/* 2-col contact + form */}

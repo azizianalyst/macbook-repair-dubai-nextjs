@@ -46,6 +46,8 @@ export default function About() {
         eyebrow="About us"
         title="MacBook Repair Dubai - built by technicians, not marketers"
         subtitle="Started October 2004 in Dubai. Same address since 2010. Same techs since most of you bought your first MacBook."
+        image="/images/real/team/team-workshop-dubai.jpg"
+        imageAlt="Our technicians working on customer Macs at the MacBook Repair Dubai workshop in Concord Tower, Dubai Media City"
       />
 
       {/* story - varied paragraph rhythm */}

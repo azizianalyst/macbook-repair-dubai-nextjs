@@ -2,6 +2,7 @@
 import { Search, ShieldCheck, Banknote, Clock, Check, X, Truck, Sparkles, AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
@@ -80,6 +81,9 @@ export default function Pricing() {
   // be injected client-side via useSeo and never reached the prerendered HTML. The price
   // tables (MACBOOK/IMAC/…) and PRICING_SERVICES must stay in lockstep. Title/description:
   // App Router Metadata API.
+  // Hub rendered no imagery at all (audit 2026-09-23).
+  const heroImg = imageForRoute("/pricing");
+
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
@@ -89,6 +93,8 @@ export default function Pricing() {
         eyebrow="Repair pricing"
         title="Clear Pricing, Quoted Before We Start"
         subtitle="Diagnosis is free, and your exact price is confirmed in writing on WhatsApp before any work begins. No deposit, no surprise charges - decline the quote and take the device back at no cost."
+        image={heroImg?.src}
+        imageAlt={heroImg?.alt}
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">

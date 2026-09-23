@@ -4,6 +4,7 @@ import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
@@ -56,12 +57,17 @@ export default function MacDataRecoveryWaterDamage() {
     path: "/mac-data-recovery-after-water-damage-dubai",
   });
 
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/mac-data-recovery-after-water-damage-dubai");
+
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
-          image={undefined}
-          imageAlt="Mac data recovery after water damage Dubai"
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
           variant="device"
           tone="dark"
           eyebrow="URGENT. Mac water damage data recovery · Dubai"

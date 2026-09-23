@@ -7,6 +7,7 @@ import { CalendarDays, Clock, ArrowRight, ShoppingCart, Wrench, Banknote, Tag, Z
 import { PageShell } from "@/components/layout/PageShell";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
 import { POSTS, CATEGORIES, categoryCounts, type Post } from "@/content/blog-posts";
@@ -143,6 +144,8 @@ function PostCard({ p }: { p: Post }) {
 }
 
 export default function Blog() {
+  // Hub rendered no imagery at all (audit 2026-09-23).
+  const heroImg = imageForRoute("/blog");
   const counts = categoryCounts();
   const bySlug = useMemo(() => new Map(POSTS.map((p) => [p.slug, p])), []);
   const [active, setActive] = useState<string | null>(null);
@@ -186,6 +189,8 @@ export default function Blog() {
         eyebrow="Apple repair blog · since 2004"
         title="Apple repair blog - Dubai"
         subtitle={`Honest guides written by working technicians at our Dubai Media City workshop. Pricing, comparisons, and decision frameworks. ${POSTS.length} posts published.`}
+        image={heroImg?.src}
+        imageAlt={heroImg?.alt}
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">

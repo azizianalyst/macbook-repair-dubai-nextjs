@@ -29,11 +29,10 @@ function iphoneImage(slug: string): string | undefined {
   if (s.includes("iphone-15")) return `${DEVICE}/iphone-15.jpg`;
   if (s.includes("iphone-14")) return `${DEVICE}/iphone-14.jpg`;
   if (s.includes("iphone-13")) return `${DEVICE}/iphone-13.jpg`;
-  if (s.includes("iphone-12")) return `${DEVICE}/iphone-12.jpg`;
-  if (s.includes("iphone-11")) return `${DEVICE}/iphone-11.jpg`;
-  if (s.match(/iphone-(x|xr|xs)/)) return `${DEVICE}/iphone-x-era.jpg`;
+  // iPhone 12 / 11 / X-era / 6-8 branches removed 2026-09-23: neither the routes
+  // nor the image files ever existed, so they were latent 404s. The oldest live
+  // model page is the 13. Re-add a branch together with its asset, not before.
   if (s.includes("iphone-se")) return `${DEVICE}/iphone-se.jpg`;
-  if (s.match(/iphone-([6-8])/)) return `${DEVICE}/iphone-legacy.jpg`;
   return `${DEVICE}/iphone-15.jpg`;
 }
 
@@ -59,13 +58,12 @@ function ipadImage(slug: string): string | undefined {
   return `${REAL}/ipad-rear-dubai.jpg`;
 }
 
-function watchImage(slug: string): string | undefined {
-  const s = slug.toLowerCase();
-  if (s.includes("ultra-3") || s.includes("ultra-2026")) return `${DEVICE}/watch-ultra-3.jpg`;
-  if (s.includes("ultra")) return `${DEVICE}/watch-ultra.jpg`;
-  if (s.includes("-se")) return `${DEVICE}/watch-se.jpg`;
-  if (s.match(/series-([4-6])/)) return `${DEVICE}/watch-series-classic.jpg`;
-  return `${DEVICE}/watch-series.jpg`;
+// No Apple Watch photography exists in /public/images/devices (audit 2026-09-23) -
+// every watch-*.jpg this used to return was a 404 waiting for a route. Returns
+// undefined so the Hero falls back to text-only. Restore the mapping when the
+// watch assets land.
+function watchImage(_slug: string): string | undefined {
+  return undefined;
 }
 
 function imacImage(slug: string): string | undefined {
@@ -74,11 +72,11 @@ function imacImage(slug: string): string | undefined {
 
 function macDesktopImage(slug: string): string | undefined {
   const s = slug.toLowerCase();
-  if (s.includes("mac-pro") && s.includes("rack")) return `${DEVICE}/mac-pro-rack.jpg`;
+  // mac-pro-rack.jpg / mac-mini-pro.jpg / mac-mini.jpg never existed on disk
+  // (audit 2026-09-23); these now point at the real product shots.
   if (s.includes("mac-pro")) return `${DEVICE}/mac-pro-tower.jpg`;
   if (s.includes("mac-studio")) return T("mac-studio-repair-dubai")?.src;
-  if (s.includes("mini") && s.includes("pro")) return `${DEVICE}/mac-mini-pro.jpg`;
-  if (s.includes("mini")) return `${DEVICE}/mac-mini.jpg`;
+  if (s.includes("mini")) return `${DEVICE}/mac-mini-product.jpg`;
   return undefined;
 }
 
@@ -98,9 +96,9 @@ export function imageForFamily(family: string): string | undefined {
   if (f.includes("iphone")) return `${DEVICE}/iphone-15.jpg`;
   if (f.includes("macbook")) return `${REAL}/macbook-pro-product-dubai.jpg`;
   if (f.includes("ipad")) return `${REAL}/ipad-rear-dubai.jpg`;
-  if (f.includes("watch")) return `${DEVICE}/watch-series.jpg`;
+  if (f.includes("watch")) return undefined; // no watch assets yet (see watchImage)
   if (f.includes("imac")) return `${REAL}/imac-front-dubai.jpg`;
-  if (f.includes("mac mini") || f.includes("mini")) return `${DEVICE}/mac-mini.jpg`;
+  if (f.includes("mac mini") || f.includes("mini")) return `${DEVICE}/mac-mini-product.jpg`;
   if (f.includes("studio")) return T("mac-studio-repair-dubai")?.src;
   if (f.includes("mac pro")) return `${DEVICE}/mac-pro-tower.jpg`;
   return undefined;
@@ -187,7 +185,10 @@ export function topicForPath(path: string): TopicImage | undefined {
   if (p.includes("insurance")) return T("macbook-insurance-dubai");
   if (p.includes("apple-service-center")) return T("apple-service-center-dubai");
   if (p.includes("apple-display")) return T("apple-display-repair-dubai");
-  if (p === "/apple-repair-dubai") return T("apple-repair-dubai");
+  if (p === "/apple-repair-dubai" || p === "/best-apple-repair-dubai") return T("apple-repair-dubai");
+  // Hubs that previously matched nothing and so rendered no imagery at all.
+  if (p === "/blog") return T("blog-apple-news-dubai");
+  if (p === "/pricing") return T("mac-repair-hub-dubai");
   if (p.includes("onsite")) return T("onsite-macbook-repair-dubai");
   if (p.includes("sell-") || p.includes("trade-in")) return T("macbook-trade-in-dubai");
   if (p.includes("near-me") || p.includes("cost-calculator")) return T("macbook-repair-near-me");
