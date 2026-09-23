@@ -527,3 +527,74 @@ These need a fact only you have, so I did not guess:
 - 249 titles hardcode "2026"; `CONTENT_REVIEWED` is a manual field, now a month stale
 - `/apple-watch-repair-dubai` still has no image anywhere in the repo
 - `robots.txt` blocks Screaming Frog, Sitebulb, Ahrefs Site Audit and curl — your own tools
+
+---
+
+# LIVE BROWSER + APPLE LINEUP — 2026-09-23 (commit 28a5bbd)
+
+## Live console: zero JavaScript errors
+Every page type checked on production — homepage, service, model, blog, pricing, reviews,
+contact. **No JS errors anywhere.** Two real defects surfaced from the warnings and the
+network panel instead.
+
+### 🟠 40 pages preloaded an image they never render
+`heroPreload()` fired for any `isServicePath()`, assuming that meant the page uses
+`SubServicePageTemplate`. It does not — those 40 routes use bespoke views that render their
+**topic infographic** instead. So each page issued a `fetchPriority=high` preload for a
+~200KB AVIF it never displayed, competing with its real LCP candidate. This is what produced
+the *"preloaded but not used"* warning visible in production.
+`hero-preload.generated.ts` is now derived from the views themselves, so the preload cannot
+drift from what is shown. **40 → 0.**
+
+### 🟠 113 redundant prefetch requests per page view
+A single model page made **205 requests**, of which **113 were RSC prefetches for just 28
+distinct routes** — each fetched **2–5 times** — and **195 KB of a 276 KB page load was
+redundant prefetch traffic** (~71%).
+
+Next prefetches every `<Link>` that scrolls into view; several links point at the same route,
+so each one prefetched it again. The `router-compat` shim now defaults to `prefetch={false}`,
+which **keeps** hover/touch prefetch — navigation still feels instant — but stops the viewport
+sweep. Worth noting: this is exactly the request shape that trips edge rate limits, which this
+repo has hit before (commit 8485079, "429 root cause").
+
+## Apple lineup — researched against Apple Newsroom, not training data
+
+**Your Mac model data was impressively current** — M6 Mac mini, M5 Pro mini, M5 Max/Ultra
+Studio, MacBook Neo and the M5 Pro/Max MacBook Pros all match Apple. The gaps were elsewhere.
+
+### Fixed
+| Was | Now |
+|---|---|
+| iPhone 18 pages hedged everything as "expected/rumoured" | Confirmed facts: **A20 Pro on 2nm, 48MP Fusion Main with variable aperture, vapor chamber, iOS 27**, shipping since **18 Sep 2026** |
+| `/blog/iphone-fold-2026`: *"Apple's first foldable iPhone launches September 2026"* | **No foldable was announced.** Page now says so plainly |
+| `/blog/macbook-pro-m5-oled-display-issues-dubai` | **Unpublished, 301'd** — see below |
+| Mac Pro listed as *"M2 Ultra / M2 Max"* | The 2023 Mac Pro was **M2 Ultra only**; the M2 Max variant never existed |
+| iPad Air M3 flagged `currentInLineup: true` | Superseded by the **iPad Air M4, March 2026** |
+| iPad Air M4 *"available from April 2026"* | Available **11 March 2026** |
+| Mac mini M4 *"replaced August 2026"* | Successor announced Aug, **on sale 22 September 2026** |
+
+**Two iPhone 18 models only.** Apple announced exactly the 18 Pro and 18 Pro Max — your slugs
+were already right. There is **no base iPhone 18** this cycle (it moves to spring 2027) and
+**no foldable**, so do not create pages for either. I deliberately published **no screen
+sizes**: Apple's release did not state them and no primary source confirmed them.
+
+### The page I unpublished
+`/blog/macbook-pro-m5-oled-display-issues-dubai` claimed *"MacBook Pro M5 users in Dubai are
+reporting OLED display complaints"* and gave PWM-dimming and burn-in advice. **No shipping
+MacBook has an OLED panel** — and your own `/blog/macbook-screen-repair-cost-dubai-2026` says
+exactly that: *"Apple has not yet shipped OLED on any MacBook."* Two live pages contradicted
+each other and one was fabricated.
+
+With **73 OLED references in 213 lines**, the premise was wrong rather than a detail, so
+patching it would have meant inventing replacement content. It is **301'd to
+`/macbook-pro-screen-repair-dubai`** and the view remains in git history for a proper rewrite.
+**Reverse it with one `git revert` if you disagree** — but it should not go back as-is.
+
+## Still open
+1. **Studio Display / Studio Display XDR have no repair pages** — launched March 2026, the
+   only genuine model gaps. Only `/apple-display-repair-dubai` exists.
+2. **Rewrite the unpublished OLED post** as a real MacBook Pro M5 display-fault guide
+   (mini-LED Liquid Retina XDR), or leave it retired.
+3. **Mac Pro discontinuation** (26 March 2026, no successor) is not mentioned on
+   `/mac-pro-repair-dubai`. It is a real search intent and a trust signal.
+4. Could not verify: iPhone 18 Pro / Pro Max exact display sizes.
