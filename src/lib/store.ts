@@ -56,20 +56,24 @@ function withLock<T>(fn: () => Promise<T>): Promise<T> {
 
 const nextId = (rows: { id: number }[]) => rows.reduce((m, r) => Math.max(m, r.id), 0) + 1;
 
-export async function insertLead(r: Lead & { submittedAt: string; emailed?: boolean }): Promise<boolean> {
+// Returns the new row's id, or null on failure. It used to return a bare boolean,
+// which meant the lead endpoint could not tell the caller WHICH row it stored -
+// so no canary could ever prove a submission was persisted. (audit 2026-09-23)
+export async function insertLead(r: Lead & { submittedAt: string; emailed?: boolean }): Promise<number | null> {
   try {
     return await withLock(async () => {
       const db = await load();
+      const id = nextId(db.leads);
       db.leads.push({
-        id: nextId(db.leads), created_at: r.submittedAt, updated_at: r.submittedAt, status: "New",
+        id, created_at: r.submittedAt, updated_at: r.submittedAt, status: "New",
         device_type: r.deviceType, model: r.model || null, issue: r.issue, details: r.details || null,
         name: r.name, phone: r.phone, email: r.email || null, preferred_contact: r.preferredContact,
         area: r.area || null, source_path: r.sourcePath || null, emailed: r.emailed ? 1 : 0, notes: [],
       });
       await save(db);
-      return true;
+      return id;
     });
-  } catch (err) { console.error("[lead] store insert failed:", err); return false; }
+  } catch (err) { console.error("[lead] store insert failed:", err); return null; }
 }
 
 export type LeadRow = Omit<StoredLead, "notes"> & { note_count: number };

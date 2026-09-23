@@ -160,7 +160,10 @@ export function LeadForm({
         route: preset?.route,
         presetId: preset?.id,
       };
-      const res = await fetch("/api/lead", {
+      // Trailing slash matters: next.config sets trailingSlash:true, so "/api/lead"
+      // answers 308 and every real submission paid an extra round trip on the
+      // conversion path. (audit 2026-09-23)
+      const res = await fetch("/api/lead/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

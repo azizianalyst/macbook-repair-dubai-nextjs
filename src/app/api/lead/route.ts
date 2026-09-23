@@ -19,6 +19,25 @@ export const dynamic = "force-dynamic";
 const RATE_MAX = Number(process.env.LEAD_RATE_MAX || 20);
 const RATE_WINDOW_MS = Number(process.env.LEAD_RATE_WINDOW_MS || 10 * 60 * 1000);
 
+type Channel = "sent" | "failed" | "skipped" | "pending";
+
+// This endpoint had no Origin check at all, so any site could POST leads into the
+// pipeline; only the per-IP rate limit stood in the way. Browsers always send Origin
+// on a cross-origin POST, so rejecting a foreign one is free. A missing Origin (curl,
+// server-to-server monitors) is allowed through - it is not a CSRF vector and blocking
+// it would break the delivery canary. (audit 2026-09-23)
+const ALLOWED_ORIGINS = new Set([
+  "https://macbook-repair-dubai.ae",
+  ...(process.env.LEAD_EXTRA_ORIGINS || "").split(",").map((o) => o.trim()).filter(Boolean),
+]);
+
+function originAllowed(req: Request): boolean {
+  const origin = req.headers.get("origin");
+  if (!origin) return true;
+  if (ALLOWED_ORIGINS.has(origin)) return true;
+  return process.env.NODE_ENV !== "production" && /^https?:\/\/localhost(:\d+)?$/.test(origin);
+}
+
 const LEADS_FILE = process.env.LEADS_FILE || path.join(process.cwd(), "data", "leads.jsonl");
 
 // Append the lead to a JSONL log (one JSON object per line). This is the durable
@@ -86,6 +105,9 @@ async function emailLead(lead: Lead, submittedAt: string): Promise<boolean> {
 }
 
 export async function POST(req: Request) {
+  if (!originAllowed(req)) {
+    return NextResponse.json({ ok: false, error: "Forbidden origin" }, { status: 403 });
+  }
   // Spam throttle (per IP) before doing any work.
   const rl = rateLimit(`lead:${clientIp(req)}`, RATE_MAX, RATE_WINDOW_MS);
   if (!rl.allowed) {
@@ -120,13 +142,39 @@ export async function POST(req: Request) {
 
   // Storage: JSON file store (primary, powers the CRM) + a JSONL append as a cheap
   // backup. A lead survives if either store or the email succeeded.
-  const storeOk = await insertLead(record);
+  const leadId = await insertLead(record);
   const fileOk = await saveLead(record);
-  // Copy to the Azizi CRM (Inbox › Enquiries) — never decides the visitor's outcome.
-  void mirrorLeadToCrm(parsed.data);
 
-  if (!storeOk && !fileOk && !emailed) {
+  // Copy to the Azizi CRM (Inbox › Enquiries). Still never decides the visitor's
+  // outcome, but we now WAIT BRIEFLY for its verdict so the response can report it.
+  // Previously this was `void mirrorLeadToCrm(...)`: if the CRM was down the endpoint
+  // still answered {ok:true, emailed:true} and the failure existed only in a server
+  // log nobody reads. A channel whose status is never reported is a channel that can
+  // die silently - the exact failure this contract exists to prevent. The race keeps
+  // the visitor's wait bounded (CRM measured ~0.7s; budget 2.5s), and a slow CRM
+  // degrades to "pending" rather than blocking the form. (audit 2026-09-23)
+  const CRM_BUDGET_MS = Number(process.env.LEAD_CRM_WAIT_MS || 2500);
+  const crm: Channel = await Promise.race([
+    mirrorLeadToCrm(parsed.data).then((ok): Channel => (ok ? "sent" : "failed")),
+    new Promise<Channel>((r) => setTimeout(() => r("pending"), CRM_BUDGET_MS)),
+  ]).catch((): Channel => "failed");
+
+  const saved = leadId !== null || fileOk;
+  if (!saved && !emailed && crm !== "sent") {
     return NextResponse.json({ ok: false, error: "Could not record your request" }, { status: 500 });
   }
-  return NextResponse.json({ ok: true, saved: storeOk || fileOk, emailed });
+
+  // Delivery contract: `id` proves it was STORED, `notified` proves a human was TOLD.
+  // Without the per-channel breakdown a monitor cannot tell "delivered" apart from
+  // "written to a table nobody reads".
+  return NextResponse.json({
+    ok: true,
+    id: leadId,
+    saved,
+    emailed, // retained: existing callers/tests read this
+    notified: {
+      email: emailed ? "sent" : emailConfigured() ? "failed" : "skipped",
+      crm,
+    },
+  });
 }
