@@ -144,3 +144,66 @@ domain name); 5 homepage "mismatches" (the device grid legitimately shows iMac/m
 
 ## Verify externally (🔍)
 Field CWV via PSI/GSC · GA4 real-time · Rich Results Test on the new schema · `npm audit`
+
+---
+
+# FIX LOG — 2026-09-23 (branch `fix/image-content-match`, commit 23c584e)
+
+## Root cause of the whole screen-image mess
+iPhone, iPad and iMac each had a `*-screen-repair-dubai` topic image. **MacBook never
+did.** So `topicForPath()` fell through to `apple-display-repair-dubai` (an Apple Studio
+Display / 27" 5K panel), and somebody hand-patched the hero with the iPhone photo. Both
+symptoms, one missing asset.
+
+## Fixed and verified
+
+| # | Issue | Scope | Status |
+|---|---|---|---|
+| 1 | iPhone photo on MacBook screen pages + false alt text | 4 pages | ✅ |
+| 2 | `macbook-pro-screen-repair.jpg` 404 → blank hero | 5 pages | ✅ |
+| 3 | **12 further images referenced but never processed into `public/`** | site-wide | ✅ |
+| 4 | `gen-ts.mjs` emitted manifest entries with no image (root defect behind #3) | build tooling | ✅ |
+| 5 | Mac mini photo presented as Mac Studio | 13 pages | ✅ |
+| 6 | Desktop Macs falling through to MacBook imagery | 11 routes | ✅ |
+| 7 | **91 blog pages: AVIF og:image, wrong dimensions → broken share cards** | 91 pages | ✅ |
+| 8 | Double-escaped entities (`13&amp;quot;`) in titles/descriptions | 6 routes | ✅ |
+| 9 | Over-length titles/descriptions | 28 pages | ✅ |
+| 10 | Blog posts with no og:image | 6 pages | ✅ |
+| 11 | Blog category hubs with no imagery | 8 pages | ✅ |
+
+**Final state:** 0 missing image references · 0 alt/image contradictions · 0 AVIF
+og:images · 0 over-length titles or descriptions · clean build · hero render confirmed
+in-browser.
+
+## Deliberately NOT changed (with reasons)
+
+- **`/imac-virus-removal-dubai`** keeps the MacBook virus-removal infographic. macOS
+  malware removal is identical across Macs and the image is a software/diagnostic
+  diagram, so topic-correctness beats chassis-correctness. Flagged, not forced.
+- **`/blog/mac-mini-vs-mac-studio-2026`** legitimately shows a Mac Studio; it is a
+  comparison post. Homepage device grid likewise shows every Mac on purpose.
+- **Blog tag pages** (`/blog/tag/*`) have no imagery but are `noindex` by design.
+
+## Still open — needs a decision or spend
+
+1. 🟠 **Generate `macbook-screen-repair-dubai`.** The manifest entry is written and
+   `gen-ts.mjs` will pick it up automatically once the image exists. Blocked: the
+   Higgsfield account is on the **free plan with 0 credits**. Until then MacBook screen
+   pages use `blog-screen-display-dubai` (honest, MacBook-inclusive, correctly alt'd).
+   Run after topping up: `node scripts/topic-images/generate.mjs && node scripts/topic-images/process.mjs && node scripts/topic-images/gen-ts.mjs`
+2. 🟠 **`https://www.` returns 525.** Origin SSL does not cover the www hostname, so the
+   www variant errors instead of 301-ing to apex. Hostinger/Cloudflare fix, not code.
+3. 🟠 **31 pages still have no in-page image.** 22 already have a device-correct image
+   available via `imageForRoute()` and only need it passed to their `Hero` — but each is
+   a bespoke view and several use the `sidecar` slot (a price/booking card) that occupies
+   the image position, so this is a per-page design call, not a safe bulk edit. The
+   remaining 9 (legal, `/about`, `/contact`, `/pricing`, `/reviews`, `/blog`) have no
+   topic image at all and need art direction.
+4. 🟡 **Prices baked into the topic infographics as pixels** (e.g. "AED 8,000–16,000" in
+   `blog-repair-cost-dubai.jpg`). Build-time price stripping cannot reach text inside a
+   JPEG, so `hide-prices-whatsapp` will ship with prices still publicly visible. Needs
+   regeneration of the affected images with the AED panels removed.
+5. 🟡 **7 blog titles exceed 60 chars** and lose their "2026" suffix to truncation.
+   Shorten the source titles so the year survives.
+6. 🟢 Pre-existing React duplicate-key warning on `/macbook-screen-repair-dubai`
+   ("Diagnosis" list). Unrelated to this work; not touched.
