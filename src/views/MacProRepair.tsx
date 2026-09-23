@@ -26,7 +26,7 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
-  "Mac Pro (M2 Ultra / M2 Max)",
+  "Mac Pro (2023) M2 Ultra",
   "Mac Pro (2019) Intel Xeon W",
   "Mac Pro (2013) Intel Xeon E5",
 ];

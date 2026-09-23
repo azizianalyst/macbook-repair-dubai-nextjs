@@ -1813,8 +1813,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iMac vs Mac Mini vs Mac Studio, which desktop Mac is the best pick for your work and budget in 2026, compared on power, ports, display and value."
   },
   "/blog/iphone-fold-2026-what-to-expect": {
-    "title": "iPhone Fold 2026: Expert What-to-Expect Guide",
-    "description": "iPhone Fold 2026, what we actually know about Apple's first foldable: rumoured specs, likely price, release timing, and whether it's worth the wait."
+    "title": "iPhone Fold: Not Announced - Where Things Stand 2026",
+    "description": "Apple announced no foldable at its September 2026 event - only the iPhone 18 Pro and Pro Max. What is actually confirmed, and what is still rumour."
   },
   "/blog/mac-pro-2019-still-worth-it": {
     "title": "Mac Pro 2019 Still Worth It? Expert 2026 Guide",

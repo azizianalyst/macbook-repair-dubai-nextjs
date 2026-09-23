@@ -368,7 +368,7 @@
       "512GB",
       "1TB"
     ],
-    "currentInLineup": true,
+    "currentInLineup": false,
     "commonIssues": [
       "Cracked Liquid Retina screen",
       "USB-C port wear",
@@ -387,7 +387,8 @@
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day.",
     "honestyNote": "Released March 2025 with M3 chip and the new Magic Keyboard for iPad Air. Many units still under Apple warranty - bring proof of purchase first.",
-    "heroTagline": "M3 Air, 11-inch. Apple's newest mid-tier iPad."
+    "heroTagline": "M3 Air, 11-inch. Apple's newest mid-tier iPad.",
+    "discontinued": "March 2026"
   },
   {
     "slug": "ipad-air-m3-13-repair-dubai",
@@ -404,7 +405,7 @@
       "512GB",
       "1TB"
     ],
-    "currentInLineup": true,
+    "currentInLineup": false,
     "commonIssues": [
       "Cracked 13-inch Liquid Retina screen",
       "USB-C port wear",
@@ -423,7 +424,8 @@
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day.",
     "honestyNote": "The current 13-inch Air with M3. Released March 2025 - most units still under Apple warranty. We'll check serial number and AppleCare status before any work.",
-    "heroTagline": "M3 Air, 13-inch. Big, fast, current."
+    "heroTagline": "M3 Air, 13-inch. Big, fast, current.",
+    "discontinued": "March 2026"
   },
   {
     "slug": "ipad-air-m4-11-repair-dubai",
@@ -457,8 +459,8 @@
       "waterDamage": 980,
       "diagnostic": 0
     },
-    "timelineNotes": "Screen 3-5 days (very new panel - limited stock April 2026). Battery same-day.",
-    "honestyNote": "Launched 2 March 2026, available from April 2026. Most units are still under Apple's standard 1-year warranty - start with the Apple Store. We're here for accidental damage and out-of-warranty work.",
+    "timelineNotes": "Screen 3-5 days (very new panel - limited stock March 2026). Battery same-day.",
+    "honestyNote": "Launched 2 March 2026, available from 11 March 2026. Most units are still under Apple's standard 1-year warranty - start with the Apple Store. We're here for accidental damage and out-of-warranty work.",
     "heroTagline": "Apple's newest Air. We're already trained and stocked."
   },
   {
@@ -494,7 +496,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (very new panel sourcing). Battery same-day.",
-    "honestyNote": "Launched 2 March 2026, available from April 2026. Almost every unit is under Apple's 1-year warranty - start there. For dropped/damaged units, bring it in.",
+    "honestyNote": "Launched 2 March 2026, available from 11 March 2026. Almost every unit is under Apple's 1-year warranty - start there. For dropped/damaged units, bring it in.",
     "heroTagline": "The big Air, brand new. We're ready when you need us."
   },
   {

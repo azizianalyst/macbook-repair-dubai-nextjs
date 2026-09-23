@@ -12,9 +12,19 @@ export type LinkProps = Omit<ComponentProps<typeof NextLink>, "href"> & {
   replace?: boolean;
 };
 
+// PREFETCH DEFAULT: Next prefetches every <Link> that scrolls into view. On this site a
+// single model page issued 113 RSC prefetch requests for 28 distinct routes - each route
+// fetched 2-5 times because several links point at it - and 195 KB of a 276 KB page load
+// was redundant prefetch traffic (measured on production, 2026-09-23). That is real
+// origin load from every visitor, and the shape that trips edge rate limits.
+//
+// `prefetch={false}` does NOT disable prefetching: it stops the automatic viewport
+// prefetch while keeping the on-hover/on-touch prefetch, so navigation still feels
+// instant but nothing is fetched until the visitor shows intent. Callers that genuinely
+// want eager prefetch can still pass `prefetch` explicitly - it is spread after this.
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ to, end: _end, replace, ...rest }, ref) => (
-    <NextLink ref={ref} href={to} replace={replace} {...rest} />
+    <NextLink ref={ref} href={to} replace={replace} prefetch={false} {...rest} />
   ),
 );
 Link.displayName = "Link";
@@ -36,7 +46,7 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
     const sty = typeof style === "function" ? style({ isActive }) : style;
     const kids = typeof children === "function" ? children(state) : children;
     return (
-      <NextLink ref={ref} href={to} className={cls} style={sty} aria-current={isActive ? "page" : undefined} {...rest}>
+      <NextLink ref={ref} href={to} className={cls} style={sty} prefetch={false} aria-current={isActive ? "page" : undefined} {...rest}>
         {kids}
       </NextLink>
     );

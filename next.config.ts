@@ -91,6 +91,8 @@ const nextConfig: NextConfig = {
       { source: "/how-can-i-fix-the-missing-touch-bar-controls-for-the-calculator-in-macbook-pro", destination: "/macbook-touch-bar-repair-dubai/", statusCode: 301 },
 
       { source: "/how-can-i-inherit-folder-permissions-on-a-macbook", destination: "/blog/how-do-i-reset-passwords-on-my-macbook/", statusCode: 301 },
+      // Unpublished 2026-09-23: asserted OLED faults on a MacBook that has no OLED panel.
+      { source: "/blog/macbook-pro-m5-oled-display-issues-dubai", destination: "/macbook-pro-screen-repair-dubai/", statusCode: 301 },
       { source: "/macbook-keyboard-repair-replacement/page/2", destination: "/macbook-keyboard-repair-dubai/", statusCode: 301 },
       // GSC 404 batch (2026-06-19): legacy WordPress URLs still indexed — paginated listing,
       // orphaned category page, renamed service page, and malformed doubled-URL crawl error.

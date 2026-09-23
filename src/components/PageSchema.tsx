@@ -6,6 +6,7 @@ import { preload } from "react-dom";
 import { schemaForPath } from "@/lib/page-schema";
 import { isServicePath } from "@/lib/related-services";
 import { imageForService, imageForSlug } from "@/lib/page-images";
+import { HERO_PRELOAD_ROUTES } from "@/lib/hero-preload.generated";
 
 // LCP preload for the hero image on service pages (SubServicePageTemplate). It must be emitted
 // here, in a server component — react-dom preload() called from the client Hero never reaches the
@@ -15,7 +16,14 @@ import { imageForService, imageForSlug } from "@/lib/page-images";
 // sizes so the preload matches the candidate the <picture> actually selects.
 const HERO_SIZES = "(max-width: 414px) 360px, (max-width: 1068px) 800px, 640px";
 function heroPreload(path: string) {
-  if (!isServicePath(path)) return;
+  // isServicePath() is broader than "rendered by SubServicePageTemplate": 40 service
+  // routes use bespoke views that show their topic infographic instead, so preloading
+  // the Hero candidate there fetched a ~200KB AVIF at high priority that the page never
+  // rendered - it competed with the real LCP image and produced the browser's
+  // "preloaded but not used" warning. HERO_PRELOAD_ROUTES is generated from the views
+  // themselves, so the preload can no longer drift from what is displayed.
+  // (audit 2026-09-23)
+  if (!isServicePath(path) || !HERO_PRELOAD_ROUTES.has(path)) return;
   const img = imageForService(path) ?? imageForSlug(path);
   const m = img?.match(/^(.*)\.(jpe?g|png)$/i);
   if (!m) return;

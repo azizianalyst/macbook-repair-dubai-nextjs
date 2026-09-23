@@ -138,7 +138,7 @@
       "thermalPaste": 320,
       "diagnostic": 0
     },
-    "timelineNotes": "Replaced by the M6 Mac Mini in August 2026 but still one of the most common minis on Dubai desks. Most parts via authorised channels. Logic-board 3-5 days, PSU same-day to 2 days.",
+    "timelineNotes": "Replaced by the M6 Mac mini, announced August 2026 and on sale 22 September 2026 but still one of the most common minis on Dubai desks. Most parts via authorised channels. Logic-board 3-5 days, PSU same-day to 2 days.",
     "honestyNote": "Complete redesign - much smaller (5×5 inches), 16GB base RAM (finally), front USB-C ports. The bottom power button placement (you reach UNDER the Mac Mini) is genuinely awkward but you rarely use it. Excellent value at 16GB base.",
     "heroTagline": "Complete redesign. 5×5 inches, front USB-C, 16GB base RAM. Replaced by the M6 mini in August 2026.",
     "discontinued": "August 2026"
@@ -499,7 +499,7 @@
       "fanCleaning": 390,
       "thermalPaste": 320
     },
-    "timelineNotes": "Apple's current Mac Mini - announced 25 August 2026, on sale 22 September 2026. Brand-new model: check Apple warranty and AppleCare+ before any paid work. Early parts via authorised channels only; logic-board 5-7 days while stock builds.",
+    "timelineNotes": "Apple's current Mac Mini - announced 25 August 2026, on sale since 22 September 2026. Brand-new model: check Apple warranty and AppleCare+ before any paid work. Early parts via authorised channels only; logic-board 5-7 days while stock builds.",
     "honestyNote": "Same 5×5-inch chassis as the M4 mini - Apple changed the internals, not the box. M6 is Apple's first 2-nanometre chip (12-core CPU vs 10 on M4) and the N1 chip brings Wi-Fi 7 and Bluetooth 6. Ethernet moved up to 2.5Gb as standard. In its first year almost every fault should go through Apple warranty - we tell you honestly when that is the better route.",
     "heroTagline": "Apple's 2026 Mac Mini. M6 (2nm), Wi-Fi 7, 2.5GbE. Same tiny 5×5-inch box."
   },
@@ -534,7 +534,7 @@
       "fanCleaning": 390,
       "thermalPaste": 320
     },
-    "timelineNotes": "Apple's current Pro-chip Mac Mini - announced 25 August 2026, on sale 22 September 2026. Warranty-first on a machine this new. Logic-board 5-7 days while authorised parts stock builds.",
+    "timelineNotes": "Apple's current Pro-chip Mac Mini - announced 25 August 2026, on sale since 22 September 2026. Warranty-first on a machine this new. Logic-board 5-7 days while authorised parts stock builds.",
     "honestyNote": "The M5 Pro mini is the 'small workstation' pick: up to 18 CPU cores, 64GB RAM ceiling and three Thunderbolt 5 ports in the same 5×5-inch chassis as the M4 Pro. 24GB base RAM (up from 16GB on the M4 Pro). It replaces the M4 Pro mini one-for-one - if you own an M4 Pro there is no reason to upgrade for repair-related reasons; we support both.",
     "heroTagline": "Apple's 2026 Pro mini. M5 Pro, Thunderbolt 5, 64GB capable, Wi-Fi 7."
   },
@@ -569,7 +569,7 @@
       "fanCleaning": 390,
       "thermalPaste": 390
     },
-    "timelineNotes": "Apple's current Max-chip Studio - announced 25 August 2026, on sale 22 September 2026. Same chassis as the 2025 Studio, so cooling and PSU service is identical. Logic-board 5-7 days while authorised parts stock builds.",
+    "timelineNotes": "Apple's current Max-chip Studio - announced 25 August 2026, on sale since 22 September 2026. Same chassis as the 2025 Studio, so cooling and PSU service is identical. Logic-board 5-7 days while authorised parts stock builds.",
     "honestyNote": "Apple kept the 2025 chassis and changed the silicon: M5 Max brings an 18-core CPU (6 'super' cores + 12 performance cores), up to 40 GPU cores and 36GB base RAM. The 128GB ceiling is unchanged from the M4 Max. Front ports are USB-C on the Max - only the Ultra gets front Thunderbolt 5. First-year faults should go through Apple warranty; we check coverage before quoting.",
     "heroTagline": "Apple's 2026 Max Studio. 18-core M5 Max, 36GB base, Thunderbolt 5, Wi-Fi 7."
   },
@@ -604,7 +604,7 @@
       "fanCleaning": 460,
       "thermalPaste": 460
     },
-    "timelineNotes": "Apple's current Ultra Studio and the top of the Mac range now that the Mac Pro is discontinued - announced 25 August 2026, on sale 22 September 2026. Logic-board work 5-7 days (Ultra board is the most complex Apple ships). Schedule fan + thermal service every 12 months for sustained 36-core workloads.",
+    "timelineNotes": "Apple's current Ultra Studio and the top of the Mac range now that the Mac Pro is discontinued - announced 25 August 2026, on sale since 22 September 2026. Logic-board work 5-7 days (Ultra board is the most complex Apple ships). Schedule fan + thermal service every 12 months for sustained 36-core workloads.",
     "honestyNote": "With the Mac Pro discontinued in March 2026, the M5 Ultra Studio is now Apple's most powerful Mac, full stop. 36 CPU cores, up to 80 GPU cores, 96GB base RAM and a 512GB ceiling (the 512GB build ships from October). Unlike the 2025 lineup - where the M3 Ultra was an older-generation chip than the M4 Max - the M5 Ultra and M5 Max are the same generation, so the Ultra wins on every workload. Warranty-first in year one.",
     "heroTagline": "Apple's most powerful Mac in 2026. 36-core M5 Ultra, 512GB capable, six Thunderbolt 5 ports."
   }

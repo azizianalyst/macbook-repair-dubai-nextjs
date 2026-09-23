@@ -213,7 +213,6 @@ export const ROUTES: string[] = [
   "/blog/macbook-pro-m5-external-monitor-not-working-dubai",
   "/blog/macbook-pro-m5-fan-noise-dubai",
   "/blog/macbook-pro-m5-not-turning-on-dubai",
-  "/blog/macbook-pro-m5-oled-display-issues-dubai",
   "/blog/macbook-pro-m5-screen-repair-cost-dubai",
   "/blog/macbook-pro-m5-throttling-fix-dubai",
   "/blog/macbook-pro-m5-vs-apple-store-repair-cost",

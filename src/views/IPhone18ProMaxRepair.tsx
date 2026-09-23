@@ -11,8 +11,8 @@ export default function IPhone18ProMaxRepair() {
       h1="iPhone 18 Pro Max Repair Dubai"
       subtitle="Screen, battery, charging port and board-level repair for the iPhone 18 Pro Max at our Concord Tower workshop. Message us on WhatsApp and we will confirm current parts availability and turnaround before you book."
       startingPrice={520}
-      timeline="Same day once parts land"
-      whatsappPrefill="Hi, I'm asking about iPhone 18 Pro Max repair ahead of the launch - can you tell me:"
+      timeline="Same day on most faults"
+      whatsappPrefill="Hi, I need an iPhone 18 Pro Max repair - can you tell me:"
       breadcrumb={[
         { name: "Home",              path: "/" },
         { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
@@ -31,14 +31,15 @@ export default function IPhone18ProMaxRepair() {
             <strong>iPhone 18 Pro Max repair, handled at board level in Dubai Media City.</strong> </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Specification highlights</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
-            <li>• <strong>Expected chip:</strong> Apple A20 Pro, reportedly Apple's first 2nm-process chip</li>
-            <li>• <strong>Expected display:</strong> 6.9-inch ProMotion OLED, the largest in the lineup</li>
-            <li>• <strong>Expected camera:</strong> 48 MP main with a rumoured variable-aperture lens, plus telephoto</li>
-            <li>• <strong>Expected battery:</strong> reportedly the largest iPhone battery yet, around 5,425 mAh</li>
-            <li>• <strong>Launch strategy:</strong> Pro and Pro Max ship in September; the standard iPhone 18 reportedly moves to spring 2027</li>
+            <li>• <strong>Chip:</strong> Apple A20 Pro on a 2nm process - 6-core CPU with integrated Neural Accelerators, 7-core GPU, dual 16-core Neural Engine</li>
+            <li>• <strong>Camera:</strong> 48MP Fusion Main with a variable aperture</li>
+            <li>• <strong>Cooling:</strong> next-generation vapor chamber, Apple&apos;s highest sustained performance in an iPhone</li>
+            <li>• <strong>Design:</strong> a smaller Dynamic Island</li>
+            <li>• <strong>Software:</strong> ships with iOS 27</li>
+            <li>• <strong>Availability:</strong> announced 9 September 2026, shipping since 18 September 2026. There is no standard iPhone 18 this cycle - it moves to spring 2027</li>
           </ul>
           <p className="text-[14px] text-text-muted mb-lg">
-            Specifications are summarised from public reporting and Apple’s own listings. Confirm the exact configuration of your handset with us before booking — parts differ by model and region.</p>
+            Specifications confirmed by Apple at the 9 September 2026 announcement. Confirm the exact configuration of your handset with us before booking — parts and availability differ by model and region.</p>
           <h2 className="text-[24px] md:text-[28px] mb-md">What we see most on a new iPhone generation</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
             Across eight generations of iPhone launches the pattern is consistent: the largest-screen model in any lineup sees the most cracked-display repairs, simply because it's the most exposed glass. Battery and charging-port issues follow once the first few months of daily use catch up. We stock screen glass and batteries for every current flagship and prioritise sourcing 18 Pro Max parts the moment specs are confirmed - we've done this at every iPhone launch since 2004.

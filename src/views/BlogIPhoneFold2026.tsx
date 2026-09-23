@@ -21,12 +21,12 @@ export default function BlogIPhoneFold2026() {
         { id: "repair-pricing", label: "Repair pricing predictions" },
       ]}
       category="Industry · iPhone Fold"
-      h1="iPhone Fold (Sept 2026) - Everything Known So Far"
-      hook="Apple's first foldable iPhone launches September 2026. Here's the credible info, no hype."
-      quickAnswer="Apple is expected to launch the iPhone Fold in September 2026 at a flagship price tier. Supply-chain reports point to a 7.8-inch internal OLED with a near-zero-crease hinge, A20 Pro chip, dual cameras, titanium frame, and 4,800 mAh battery. Inner-display repairs will be the most expensive part to service - message us on WhatsApp for a Fold repair estimate once it launches. We don't advise pre-ordering first-gen foldables."
+      h1="iPhone Fold: Still Not Announced - Where Things Actually Stand"
+      hook="Apple did not announce a foldable at its September 2026 event. Here is what is actually confirmed, and what is still rumour."
+      quickAnswer="Apple has not announced a foldable iPhone. Its 9 September 2026 event introduced only the iPhone 18 Pro and iPhone 18 Pro Max, and no foldable appeared. Everything below is supply-chain reporting about an unreleased product, not confirmed specification - treat it accordingly. We repair every iPhone Apple actually ships, and will service a foldable when one exists."
       author={{ name: "Usman", role: "Senior iPhone technician" }}
       datePublished="2026-04-26"
-      dateModified="2026-04-26"
+      dateModified="2026-09-23"
       readingMinutes={10}
       featuredImageAlt="iPhone Fold 2026 expected design Dubai launch"
       body={
