@@ -11,8 +11,8 @@
 //   await updateServices(loc, items);
 
 /** Business description — paste into /admin/gbp → Business Info. */
-export const GBP_DESCRIPTION = "Independent Apple repair specialists in Concord Tower, Dubai Media City, since 2004. We repair MacBook Air and MacBook Pro (Intel through M5), iMac, Mac mini, Mac Studio, iPhone and iPad: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Most repairs are completed the same day, and every repair carries a written warranty of up to 12 months. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level on the board itself, so faults other workshops replace whole units for can often be repaired instead. Walk in, or arrange free collection.";
-export const GBP_DESCRIPTION_LENGTH = 734;
+export const GBP_DESCRIPTION = "Independent Apple repair specialists in Concord Tower, Dubai Media City, since 2004. We repair MacBook Air, MacBook Pro and MacBook Neo (Intel through M6), iMac, Mac mini, Mac Studio, iPhone, iPad and Apple Watch: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Most repairs are completed the same day, and every repair carries a written warranty of up to 12 months. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.";
+export const GBP_DESCRIPTION_LENGTH = 728;
 
 /**
  * Categories.

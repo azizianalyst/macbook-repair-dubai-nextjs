@@ -104,7 +104,7 @@ const WHY_US = [
   {
     Icon: HardDrive,
     title: "All Mac models",
-    body: "MacBook Air, MacBook Pro, iMac, Mac mini - Intel through M5. If Apple made it, we repair it.",
+    body: "MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio - Intel through M6. If Apple made it, we repair it.",
   },
 ];
 

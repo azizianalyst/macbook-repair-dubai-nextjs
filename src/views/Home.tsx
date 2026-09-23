@@ -558,7 +558,7 @@ export default function Home() {
                 <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                   <p className="max-w-[60ch] text-[17px] leading-relaxed text-text-muted m-0" itemProp="text">
                     {linkify(
-                      "MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, iPhone and iPad, Intel through M5, with guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free), expert water-damage recovery, free diagnosis, free citywide pickup, and a written warranty of up to 12 months. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
+                      "MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, Intel through M6 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro — plus iPhone and iPad, with guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free), expert water-damage recovery, free diagnosis, free citywide pickup, and a written warranty of up to 12 months. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
                     )}
                   </p>
                 </div>
@@ -875,7 +875,7 @@ export default function Home() {
         {/* ── 12 · Why choose us ─────────────────────────────────── */}
         <section className="bg-bg border-t border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-            <SectionHead eyebrow="The difference" title="Why Choose Us for Apple Laptop Repair in Dubai?" />
+            <SectionHead eyebrow="The difference" title="Why Choose a Mac Specialist in Dubai?" />
             <div className="grid gap-lg grid-cols-2 lg:grid-cols-4">
               {WHY_CHOOSE.map((w) => {
                 const Icon = WHY_ICONS[w.t] || BadgeCheck;
