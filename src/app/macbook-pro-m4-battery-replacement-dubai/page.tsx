@@ -5,7 +5,7 @@ import View from "@/views/MacBookProM4BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/macbook-pro-m4-battery-replacement-dubai", {
   title: "MacBook Pro M4 Battery Replacement Dubai — Free Diagnosis",
-  description: "MacBook Pro M4 Pro/Max battery replacement Dubai. 72.4 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included, Thunderbolt 5. 1-2 day turnaround. WhatsApp for a quote: 055 741 3706.",
+  description: "MacBook Pro M4 Pro/Max battery replacement in Dubai for 14 and 16-inch, with BMS re-pairing. 1-2 day turnaround, 3-month warranty. Get a free quote.",
 });
 
 export default function Page() {

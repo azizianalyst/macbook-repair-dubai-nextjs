@@ -45,7 +45,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const title = `MacBook Repair ${cfg.area} - Free Pickup & Delivery`;
-  const description = `MacBook repair in ${cfg.area} with free pickup & same-day delivery from our Concord Tower workshop. Written warranty up to 12 months. Call 055 741 3706.`;
+  const description = `MacBook repair in ${cfg.area}: free pickup, same-day on most repairs, written warranty up to 12 months. Free diagnosis. Call 055 741 3706.`;
 
   useSeo(
     { title, description, path },

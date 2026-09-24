@@ -57,10 +57,33 @@ function cleanTitle(t: string): string {
   }
   return s;
 }
+// Length as it appears in the served HTML, where & ' " < > are entity-escaped
+// (so "Screen & battery" costs 4 more characters than it looks). Measuring the raw
+// string let descriptions pass here and still overrun 155 in the page source.
+const DESC_MAX = 155;
+const ESC: Record<string, string> = { "'": "&#x27;", '"': "&quot;", "<": "&lt;", ">": "&gt;" };
+function escLen(t: string): number {
+  return t.replace(/&/g, "&amp;").replace(/['"<>]/g, (c) => ESC[c]).length;
+}
+
+// Over-long descriptions used to be cut mid-word with "…", which is what Google then
+// showed in the snippet (96 pages on 2026-09-24). Prefer dropping whole trailing
+// sentences so the snippet always ends cleanly; only fall back to a word-boundary
+// cut when the opening sentence alone is too long to leave a useful description.
 function cleanDescription(d: string): string {
-  const s = decodeEntities(d);
-  if (s.length <= 155) return s;
-  return s.slice(0, 152).replace(/\s+\S*$/, "").trim() + "…";
+  const s = decodeEntities(d).trim();
+  if (escLen(s) <= DESC_MAX) return s;
+  const sentences = s.match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? [];
+  let out = "";
+  for (const sentence of sentences) {
+    const next = (out + " " + sentence.trim()).trim();
+    if (escLen(next) > DESC_MAX) break;
+    out = next;
+  }
+  if (out.length >= 90) return out;
+  let cut = s;
+  while (cut && escLen(cut + "…") > DESC_MAX) cut = cut.slice(0, -1);
+  return cut.replace(/\s+\S*$/, "").trim() + "…";
 }
 
 function titleCase(s: string): string {

@@ -7,7 +7,7 @@ import View from "@/views/StudioDisplayXdrRepair";
 // "Studio Display Xdr Repair Dubai" - the authored title belongs in the static <head>.
 export const metadata: Metadata = metaFromFields("/studio-display-xdr-repair-dubai", {
   title: "Studio Display XDR Repair Dubai - Panel & Power Faults",
-  description: "Apple Studio Display XDR repair in Dubai - cracked panel, backlight failure, no power, Thunderbolt and speaker faults. Free diagnosis, written quote before any work.",
+  description: "Apple Studio Display XDR repair in Dubai: cracked panel, backlight failure, no power, Thunderbolt and speaker faults. Free diagnosis - call us.",
 });
 
 export default function Page() {

@@ -38,7 +38,7 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const title = `Mac Data Recovery ${cfg.area} — Free Collection`;
-  const description = `Mac and MacBook data recovery in ${cfg.area}. Soldered SSD, T2 and Apple-silicon recovery, free diagnosis, no recovery no fee. Free collection. Call 055 741 3706.`;
+  const description = `Mac data recovery in ${cfg.area}: soldered-SSD, T2 and Apple-silicon recovery at board level. Free diagnosis, no recovery no fee. Call 055 741 3706.`;
 
   // Only the WebPage/speakable node is injected client-side. The Organization,
   // LocalBusiness, Service and Place nodes for this path are server-rendered by

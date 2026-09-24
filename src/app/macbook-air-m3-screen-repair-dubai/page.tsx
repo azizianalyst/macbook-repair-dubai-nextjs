@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirM3ScreenRepair";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-m3-screen-repair-dubai", {
   title: "MacBook Air M3 Screen Repair Dubai — Same-Day Service",
-  description: "MacBook Air M3 screen repair Dubai. Liquid Retina 13-inch & 15-inch, True Tone, P3. Genuine Apple panels, same-day service. WhatsApp 055 741 3706 for a quote.",
+  description: "MacBook Air M3 screen repair in Dubai: 13 and 15-inch Liquid Retina, True Tone kept, genuine panels stocked. 3-month warranty. Get a free quote.",
 });
 
 export default function Page() {

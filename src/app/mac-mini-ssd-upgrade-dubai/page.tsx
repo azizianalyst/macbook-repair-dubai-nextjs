@@ -5,7 +5,7 @@ import View from "@/views/MacMiniSsdUpgrade";
 
 export const metadata: Metadata = metaFromFields("/mac-mini-ssd-upgrade-dubai", {
   title: "Mac mini SSD Upgrade Dubai - Honest Guide (Soldered SSD)",
-  description: "No Mac mini has a user-upgradeable SSD - the 2018 Intel mini through the M4 all have it soldered to the board. We say so before you pay, and offer what works: 2018 RAM upgrades and external SSD setup. Call 055 741 3706.",
+  description: "Mac mini SSD upgrades in Dubai: which models can be upgraded, which are soldered, and the honest alternatives. Free advice - get a quote on WhatsApp.",
 });
 
 export default function Page() {

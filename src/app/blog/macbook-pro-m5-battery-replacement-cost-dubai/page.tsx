@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM5BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m5-battery-replacement-cost-dubai", {
   title: "MacBook Pro M5 Battery Replacement Cost Dubai 2026",
-  description: "MacBook Pro M5 battery replacement in Dubai 2026 for 14-inch and 16-inch. When to replace, signs of battery failure, same-day service — message us for your price.",
+  description: "MacBook Pro M5 battery replacement in Dubai (2026), 14 and 16-inch: when to replace, the warning signs, and what affects the cost. Free battery check.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

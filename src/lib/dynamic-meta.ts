@@ -86,14 +86,14 @@ for (const c of CITIES) {
 for (const a of AREAS) {
   MAP[`/macbook-repair-${a.slug}`] = {
     title: `MacBook Repair ${a.area} - Free Pickup & Delivery`,
-    description: `MacBook repair in ${a.area} with free pickup & same-day delivery from our Concord Tower workshop. Written warranty up to 12 months. Call 055 741 3706.`,
+    description: `MacBook repair in ${a.area}: free pickup, same-day on most repairs, written warranty up to 12 months. Free diagnosis. Call 055 741 3706.`,
   };
 }
 
 for (const a of DATA_RECOVERY_AREAS) {
   MAP[`/mac-data-recovery-${a.slug}`] = {
     title: `Mac Data Recovery ${a.area} - Free Collection`,
-    description: `Mac & MacBook data recovery in ${a.area}. Soldered-SSD, T2 and Apple-silicon recovery at board level. Free diagnosis, no recovery no fee. Call 055 741 3706.`,
+    description: `Mac data recovery in ${a.area}: soldered-SSD, T2 and Apple-silicon recovery at board level. Free diagnosis, no recovery no fee. Call 055 741 3706.`,
   };
 }
 
