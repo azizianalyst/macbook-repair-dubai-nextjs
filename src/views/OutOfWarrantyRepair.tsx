@@ -1,6 +1,8 @@
 "use client";
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Cpu, Battery, HardDrive, Wrench } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -156,6 +158,12 @@ export default function OutOfWarrantyRepair() {
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your device</h2>
+        {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+          <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath="/out-of-warranty-apple-repair-dubai" defaultDeviceType="MacBook" />
+        </section>
+
         <LocationBlock tone="dark" />
       </section>
 

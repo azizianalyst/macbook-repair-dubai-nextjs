@@ -15,6 +15,8 @@ import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
@@ -458,6 +460,12 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
         </section>
 
       </div>
+      {/* Lead form (template-audit 2026-09-24: this template shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath={p.path} defaultDeviceType="MacBook" />
+      </section>
+
       <RelatedArticles path={p.path} />
     </PageShell>
   );

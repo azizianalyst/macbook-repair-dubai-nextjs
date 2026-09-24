@@ -423,7 +423,7 @@ export default function MacDataRecovery() {
         {/* Related Articles */}
                 <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-lead">
           <h2 id="recovery-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start your free recovery assessment</h2>
-          <LeadForm preset={PRESETS.repair} sourcePath="/mac-data-recovery-dubai" defaultDeviceType="MacBook" />
+          <LeadForm preset={PRESETS["data-recovery"]} sourcePath="/mac-data-recovery-dubai" defaultDeviceType="MacBook" />
         </section>
 
         <RelatedArticles path="/mac-data-recovery-dubai" topics={["data recovery", "mac", "ssd"]} />

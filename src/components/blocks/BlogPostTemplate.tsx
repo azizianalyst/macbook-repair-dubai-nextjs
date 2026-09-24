@@ -13,6 +13,8 @@ import { PageShell } from "@/components/layout/PageShell";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { GuideServiceBridge } from "@/components/blocks/GuideServiceBridge";
 import { Button } from "@/components/ui/button";
 import { article as articleSchema, localBusiness, organization, webSite, pageWithSpeakable } from "@/lib/schema";
@@ -345,6 +347,13 @@ export default function BlogPostTemplate(p: BlogPostProps) {
       </article>
       <GuideServiceBridge tone="dark" slug={p.path} />
       {isGuide && <GuideClusterNav slug={p.path} />}
+      {/* Compact lead form: articles had four WhatsApp CTAs but no form, so visitors who
+          will not use WhatsApp had no way in (template-audit 2026-09-24). */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="article-lead">
+        <h2 id="article-lead" className="text-[24px] md:text-[28px] font-bold mb-md">Need this fixed? Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath={p.path} variant="compact" />
+      </section>
+
       <RelatedArticles tone="dark" path={p.path} />
       </div>
     </PageShell>

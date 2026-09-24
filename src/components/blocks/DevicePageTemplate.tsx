@@ -11,6 +11,9 @@ import { PageMeta } from "@/components/blocks/PageMeta";
 import { PricingTable, type PricingRow } from "@/components/blocks/PricingTable";
 import { StepList, type Step } from "@/components/blocks/StepList";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { DEVICE_TYPES } from "@/lib/lead-schema";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { TechnicianBadge } from "@/components/blocks/TechnicianBadge";
@@ -68,6 +71,16 @@ export type DeviceTemplateProps = {
   relatedExtra?: { label: string; href: string; description: string }[]; // additional free-form links appended after slug-resolved ones
   honestyCallout?: ReactNode;
 };
+
+// This template renders iMac, Mac mini/Studio/Pro and iPad pages as well as MacBook ones,
+// so the lead form's device default must follow the page, not assume "MacBook".
+function deviceTypeForPath(path: string): (typeof DEVICE_TYPES)[number] {
+  if (/\/imac/.test(path)) return "iMac";
+  if (/\/mac-(mini|studio|pro)/.test(path)) return "Mac mini / Studio / Pro";
+  if (/\/ipad/.test(path)) return "iPad";
+  if (/\/iphone/.test(path)) return "iPhone";
+  return "MacBook";
+}
 
 export default function DevicePageTemplate(p: DeviceTemplateProps) {
   const fam = DEVICE_FAMILY[p.family];
@@ -296,6 +309,12 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
         description={`Send the model and a photo of the issue. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
       />
       </div>
+      {/* Lead form (template-audit 2026-09-24: this template shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath={p.path} defaultDeviceType={deviceTypeForPath(p.path)} />
+      </section>
+
       <RelatedArticles path={p.path} />
     </PageShell>
   );

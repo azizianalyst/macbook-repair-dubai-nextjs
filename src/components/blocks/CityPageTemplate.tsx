@@ -18,6 +18,8 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 
 import { useSeo } from "@/hooks/use-seo";
@@ -184,6 +186,12 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
               <Link to="/reviews" className="text-accent underline underline-offset-2">Read all reviews →</Link>
             </p>
           </div>
+        </section>
+
+        {/* Lead form */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl" aria-labelledby="city-lead">
+          <h2 id="city-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Book a free collection from {cfg.city}</h2>
+          <LeadForm preset={PRESETS.repair} sourcePath={path} defaultDeviceType="MacBook" />
         </section>
 
         {/* FAQ */}

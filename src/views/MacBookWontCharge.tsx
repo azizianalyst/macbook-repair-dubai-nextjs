@@ -2,6 +2,8 @@
 import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive, Zap, Thermometer } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -318,6 +320,17 @@ export default function MacBookWontCharge() {
           </div>
         </div>
       </section>
+
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+
+        <LeadForm preset={PRESETS.repair} sourcePath="/macbook-wont-charge-dubai" defaultDeviceType="MacBook" />
+
+      </section>
+
 
       <RelatedArticles path="/macbook-wont-charge-dubai" topics={["charging", "macbook", "magsafe"]} />
     </PageShell>

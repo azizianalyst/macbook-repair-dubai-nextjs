@@ -15,6 +15,8 @@ import { CtaBand } from "@/components/blocks/CtaBand";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 
 import { useSeo } from "@/hooks/use-seo";
 import { pageWithSpeakable } from "@/lib/schema";
@@ -178,6 +180,13 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
               <Link to="/reviews" className="text-accent underline underline-offset-2">Read all reviews →</Link>
             </p>
           </div>
+        </section>
+
+        {/* Lead form - the data-recovery preset, not the generic repair one: it leads
+            with "stop powering the device on" and asks about backups. */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl" aria-labelledby="dr-lead">
+          <h2 id="dr-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start a free recovery assessment</h2>
+          <LeadForm preset={PRESETS["data-recovery"]} sourcePath={path} defaultDeviceType="MacBook" />
         </section>
 
         {/* FAQ */}

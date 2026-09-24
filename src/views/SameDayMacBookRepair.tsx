@@ -1,6 +1,8 @@
 "use client";
 import { Zap, Clock, MapPin, Star, Phone, MessageCircle, CheckCircle2, Truck, Shield } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
@@ -282,6 +284,12 @@ export default function SameDayMacBookRepair() {
           <LocationBlock tone="dark" />
         </section>
       </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/same-day-macbook-repair-dubai" defaultDeviceType="MacBook" />
+      </section>
+
       <RelatedArticles path="/same-day-macbook-repair-dubai" />
     </PageShell>
   );

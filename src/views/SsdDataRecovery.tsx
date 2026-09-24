@@ -1,6 +1,8 @@
 "use client";
 import { HardDrive, AlertTriangle, CheckCircle2, Clock, Shield, Phone, MessageCircle, Database } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
@@ -210,6 +212,12 @@ export default function SsdDataRecovery() {
           <LocationBlock tone="dark" />
         </section>
       </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start a free recovery assessment</h2>
+        <LeadForm preset={PRESETS["data-recovery"]} sourcePath="/ssd-data-recovery-dubai" defaultDeviceType="MacBook" />
+      </section>
+
       <RelatedArticles path="/ssd-data-recovery-dubai" />
     </PageShell>
   );

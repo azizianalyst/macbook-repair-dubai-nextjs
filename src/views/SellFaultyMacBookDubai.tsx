@@ -5,6 +5,8 @@ import {
   Wallet, Truck, ClipboardCheck, Recycle, CheckCircle2, BadgeDollarSign,
 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
@@ -316,6 +318,12 @@ export default function SellFaultyMacBookDubai() {
         </div>
       </section>
       </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get an offer for your Mac</h2>
+        <LeadForm preset={PRESETS["sell-tradein"]} sourcePath="/sell-faulty-macbook-dubai" defaultDeviceType="MacBook" />
+      </section>
+
       <RelatedArticles path={PATH} />
     </PageShell>
   );
