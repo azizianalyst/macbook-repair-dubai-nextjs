@@ -74,7 +74,7 @@ export default function MacBookAirIntelBatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air Intel battery replacement cost in Dubai?",
-          a: "MacBook Air Intel 13-inch (2018–2020) battery replacement at MacBook Repair Dubai includes the 49.9 Wh OEM-equivalent cell, adhesive re-fitting, labour, and a 15-day warranty. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your model.",
+          a: "MacBook Air Intel 13-inch (2018–2020) battery replacement at MacBook Repair Dubai includes the 49.9 Wh OEM-equivalent cell, adhesive re-fitting, labour, and a 3-month warranty. Same-day 2-hour service. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Apple still replace MacBook Air Intel batteries in Dubai?",

@@ -50,9 +50,9 @@ export default function IPadBatteryReplacement() {
         { title: "Bench check", body: "Read battery design vs current capacity, cycle count, and charging IC voltage. Confirm battery is the cause." },
         { title: "Adhesive release", body: "Display lifted with controlled heat, isopropyl injected under the cell, slow lift with plastic tools - no metal near the battery." },
         { title: "New cell + calibration", body: "OEM-grade cell installed, fresh adhesive frame, full discharge-to-charge cycle to register the new BMS readings." },
-        { title: "Free delivery", body: "Same day on most models with the 30-day warranty card." },
+        { title: "Free delivery", body: "Same day on most models with the 3-month warranty card." },
       ]}
-      warrantyDays={180}
+      warrantyDays={90}
       warrantyBullets={[
         "Covers battery cell, BMS reading and adhesive seal.",
         "Excludes new water exposure or impact damage.",

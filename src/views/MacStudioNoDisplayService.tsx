@@ -48,7 +48,7 @@ export default function MacStudioNoDisplayService() {
       ]}
       warrantyDays={90}
       warrantyBullets={[
-        "90-day written warranty on all repairs.",
+        "Written warranty on every repair - the period depends on the work and is printed on your invoice.",
         "Covers the part and the workmanship - not accidental damage.",
         "Free re-diagnosis if the same fault recurs within warranty.",
       ]}

@@ -47,9 +47,9 @@ export default function MacMiniDataRecovery() {
         { title: "Data extraction",                  body: "Specialist hardware connects to the SSD (M-chip) or removes the blade (Intel). Sector-by-sector image created. Files identified and catalogued." },
         { title: "Verification and delivery",        body: "Recovered files verified for integrity. Delivered on an external drive (bring your own or purchase one from us). Secure deletion of our working copy after your confirmation." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day warranty: if we cannot recover data, no charge for the attempt.",
+        "No recovery, no fee: if we cannot recover your data, you pay nothing for the attempt.",
         "No recovery, no fee policy - we quote honestly upfront.",
         "Recovered files verified before delivery - we do not hand over corrupt files.",
       ]}

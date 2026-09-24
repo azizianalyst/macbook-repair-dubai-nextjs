@@ -58,7 +58,7 @@ export default function MacProNotTurningOnService() {
           body: "1-hour test under full CPU and GPU load before handover to confirm stable power delivery.",
         },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "3 months parts and labour",
         "No fix no charge on diagnosis",

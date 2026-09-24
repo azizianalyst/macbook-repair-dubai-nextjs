@@ -95,10 +95,10 @@ export default function MacBookNeoKeyboardRepair() {
         },
         {
           title: "Full keyboard test",
-          body: "Every key tested for actuation, travel and registration. Backlight uniformity checked. Touch ID fingerprint enrolment confirmed. Written 3-month warranty on the replaced parts.",
+          body: "Every key tested for actuation, travel and registration. Backlight uniformity checked. Touch ID fingerprint enrolment confirmed. Written 15-day warranty on the replaced parts.",
         },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "3 months on key cap, clip, or top-case replacement",
         "Sticky key recurrence within warranty fixed free",

@@ -46,7 +46,7 @@ export default function MacStudioDataRecovery() {
         { title: "Specialist data extraction", body: "Using specialist hardware for soldered Apple SSDs, we extract the raw data from the flash storage chips. The Apple T2 and M-chip Secure Enclave encryption is handled via the board's own security processor." },
         { title: "Delivery on external drive", body: "Recovered data delivered on an external USB drive. You review the recovered files and confirm completeness before final payment." },
       ]}
-      warrantyDays={0}
+      warrantyDays={15}
       warrantyBullets={[
         "No charge if data cannot be recovered - free assessment, no obligation.",
         "Recovered data delivered on a formatted external drive.",

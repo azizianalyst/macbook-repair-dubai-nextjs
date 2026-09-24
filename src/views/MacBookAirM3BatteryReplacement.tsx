@@ -67,7 +67,7 @@ export default function MacBookAirM3BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air M3 battery replacement cost in Dubai?",
-          a: "MacBook Air M3 13-inch battery replacement and the 15-inch are quoted separately after a free diagnosis. Both prices include the 52.6 Wh or 66.5 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Same-day 2-hour service at Dubai Media City.",
+          a: "MacBook Air M3 13-inch battery replacement and the 15-inch are quoted separately after a free diagnosis. Both prices include the 52.6 Wh or 66.5 Wh cell, BMS firmware re-pair, adhesive refitting, labour, and a 3-month warranty. Same-day 2-hour service at Dubai Media City.",
         },
         {
           q: "My M3 Air is only 1 year old — why would the battery need replacing?",

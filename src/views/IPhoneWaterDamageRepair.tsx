@@ -58,7 +58,7 @@ export default function IPhoneWaterDamageRepair() {
       warrantyBullets={[
         "Covered: cleaning quality, soldered components installed during the repair, recurrence of the same fault within 30 days.",
         "Not covered: new water exposure, latent corrosion that surfaces beyond 30 days (water damage can keep evolving), unrelated faults.",
-        "Water damage repair carries a 30-day warranty (not 12 months like other repairs) because the long-term outcome depends on how much corrosion was inside before the repair.",
+        "Water damage repair carries a 15-day warranty on the repaired components - shorter than most hardware repairs - because the long-term outcome depends on how much corrosion was inside before the repair.",
       ]}
       comparisonRows={[
         ["Apple's official position", "Whole-device swap - water damage not covered under warranty", "Costly out-of-warranty service unit"],
@@ -68,7 +68,7 @@ export default function IPhoneWaterDamageRepair() {
         ["Save your Face ID?",         "Yes - original sensors retained",                            "Yes - new device"],
         ["No-fix-no-charge",           "Yes - only a small diagnostic fee",                          "No - full service price"],
         ["Time-sensitive (4-24h matters)", "Yes - emergency same-day handling",                      "Genius Bar appointment 1-3 days"],
-        ["Warranty on repair",          "30 days written",                                           "12 months on service unit"],
+        ["Warranty on repair",          "15 days written",                                           "12 months on service unit"],
       ]}
       faqs={[
         { q: "How much does iPhone water damage repair cost in Dubai?", a: "Price depends on the model and how much corrosion is inside - a clean-only on older iPhones is the entry point, light corrosion that needs reflowing costs more, and iPhone 16/17 and sea-water cases are the most complex. No-fix-no-charge applies - only a small diagnostic fee if the phone can't be saved. Message us on WhatsApp for today's exact price on your model." },

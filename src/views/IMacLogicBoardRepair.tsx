@@ -68,7 +68,7 @@ export default function IMacLogicBoardRepair() {
         ["Diagnostic fee",          "Free - refunded if you don't proceed", "Charged"],
         ["Lead time",               "3-5 days standard",                  "1-2 weeks"],
         ["Data on the SSD",         "Untouched on Intel; T2 paired carefully", "Often unit replacement"],
-        ["Warranty",                "12 months written, dated",             "12 months"],
+        ["Warranty",                "15 days written, extendable to 6 months",             "12 months"],
       ]}
       faqs={[
         { q: `Why is component-level repair cheaper than a board swap?`, a: `Because we replace the actual failed part - a single chip, the GPU, or the PMIC - instead of the entire logic board. The labour is high (microscope, hot-air station, JTAG) but it still works out at a fraction of board-swap pricing. Message us for your exact quote.` },

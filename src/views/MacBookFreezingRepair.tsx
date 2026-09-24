@@ -42,10 +42,10 @@ export default function MacBookFreezingRepair() {
         { title: "Target the fix", body: "SSD stall: replace drive and restore. Thermal freeze: full thermal service (paste + fan clean). Software hang: clean macOS reinstall. GPU fault: component-level logic board repair." },
         { title: "Soak test", body: "Stress the specific trigger for 2+ hours before return. Confirmed freeze-free before it leaves the workshop." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "90-day warranty on replaced hardware.",
-        "30-day warranty on software reinstall.",
+        "15-day warranty on software reinstall.",
         "Free re-diagnosis if the freeze pattern returns.",
       ]}
       faqs={[

@@ -46,9 +46,9 @@ export default function MacStudioNotTurningOnService() {
         { title: "Clear quote", body: "We identify the fault - SMC, power board, or logic board level - and give you the cost and timeline before any work starts. You approve it or take the machine back, no fee." },
         { title: "Repair and test", body: "Power board or logic board work completed in our Dubai Media City workshop. Multiple full boot and stress cycles before collection to confirm the fix is stable." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day written warranty on all repairs.",
+        "15-day written warranty on board-level repairs, extendable to 6 months; 12 months on a replacement power supply.",
         "Covers the part and the workmanship - not accidental damage.",
         "Free re-diagnosis if the same fault recurs within warranty.",
       ]}

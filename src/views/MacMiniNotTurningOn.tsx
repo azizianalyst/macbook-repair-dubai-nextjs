@@ -46,9 +46,9 @@ export default function MacMiniNotTurningOn() {
         { title: "Root cause repair",        body: "PSU swap (Intel), SMC firmware recovery (M-chip), or board-level power circuit work. Clear written quote before parts are touched." },
         { title: "1-hour soak test under load", body: "Machine powered on and run under load for 60 minutes. Multiple sleep/wake cycles. Confirmed stable before collection." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day written warranty on PSU and board-level repairs.",
+        "15-day written warranty on board-level repairs (extendable to 6 months); 12 months on a replacement power supply.",
         "SMC and firmware work: covered for 90 days on the same fault.",
         "Free re-test if the machine fails to start again within warranty.",
       ]}

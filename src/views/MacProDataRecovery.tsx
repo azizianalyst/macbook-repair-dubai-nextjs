@@ -60,7 +60,7 @@ export default function MacProDataRecovery() {
           body: "Recovered data delivered on a new external drive. We verify file integrity before handover.",
         },
       ]}
-      warrantyDays={0}
+      warrantyDays={15}
       warrantyBullets={[
         "Free assessment - no charge if recovery is not possible.",
         "Written quote up front; you pay only for successful recovery.",

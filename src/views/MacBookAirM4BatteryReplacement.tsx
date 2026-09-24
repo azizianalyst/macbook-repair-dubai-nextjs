@@ -63,7 +63,7 @@ export default function MacBookAirM4BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Air M4 battery replacement cost in Dubai?",
-          a: "MacBook Air M4 13-inch battery replacement and the 15-inch are quoted separately after a free diagnosis. Both prices include the new cell (52.6 Wh or 66.5 Wh), BMS firmware re-pair, adhesive refitting, labour, and a 15-day warranty. Current turnaround is 1–2 business days as M4 Air parts availability grows.",
+          a: "MacBook Air M4 13-inch battery replacement and the 15-inch are quoted separately after a free diagnosis. Both prices include the new cell (52.6 Wh or 66.5 Wh), BMS firmware re-pair, adhesive refitting, labour, and a 3-month warranty. Current turnaround is 1–2 business days as M4 Air parts availability grows.",
         },
         {
           q: "My M4 Air is under 1 year old — should I use Apple warranty first?",

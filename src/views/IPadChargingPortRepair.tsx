@@ -66,7 +66,7 @@ export default function IPadChargingPortRepair() {
         ["Board-level capability", "Yes - microscope IC repair",      "Whole-unit swap only"],
         ["Smart Connector covered", "Yes, separate quote if needed", "Whole-unit swap"],
         ["Data preserved",        "Always",                           "Restore from backup"],
-        ["Warranty",              "30 days written",                  "12 months on new unit"],
+        ["Warranty",              "12 months written",                  "12 months on new unit"],
       ]}
       faqs={[
         { q: "Why doesn't my iPad charge anymore?", a: "Five possible causes: the cable, the charger, the port pins, the charging IC, or the battery. Free diagnosis tells us which. About 60% of charging issues are a cheap cable - we'll never charge for a part you don't need." },

@@ -49,7 +49,7 @@ export default function IPadWaterDamageRepair() {
         { title: "Strip & visual inspection", body: "Battery disconnected first. Board pulled, photographed, water-damage indicators checked. You get the photos." },
         { title: "Ultrasonic bath", body: "Board cleaned in 99.9% isopropyl in a heated ultrasonic tank. Removes corrosion before it eats traces." },
         { title: "Component test & quote", body: "Board powered up under microscope. Failed components identified. Final quote sent for approval." },
-        { title: "Repair + 30-day warranty", body: "Replace what's broken, reassemble with fresh adhesive, full function test. Delivered with warranty card." },
+        { title: "Repair + 15-day warranty", body: "Replace what's broken, reassemble with fresh adhesive, full function test. Delivered with warranty card." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

@@ -42,10 +42,10 @@ export default function MacBookSystemCrashing() {
         { title: "Target the fix", body: "If RAM: replace the affected module. If SSD: clone, replace, restore. If software: clean reinstall preserving your data. If logic board: component-level repair." },
         { title: "48-hour soak test", body: "Leave the MacBook running stress workloads for 48 hours before return. Zero crashes = confirmed fix." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "90-day warranty on any replaced hardware component.",
-        "30-day warranty on software reinstall work.",
+        "15-day warranty on software reinstall work.",
         "Free re-diagnosis if the same crash pattern returns.",
       ]}
       faqs={[

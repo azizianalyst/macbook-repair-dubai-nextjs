@@ -199,7 +199,7 @@ const FAQ_GROUPS = [
     category: "Parts & warranty",
     items: [
       { q: "Do you use genuine Apple parts?", a: "We use 100% genuine Apple parts or certified OEM-grade replacements, depending on your preference and budget. We tell you exactly which type of part we're using before we start, and the choice is yours." },
-      { q: "What warranty do you provide?", a: "We offer a written warranty of up to 12 months on parts and labour, depending on the repair type. Battery replacements carry a 3-month capacity warranty. Logic board repairs carry a 90-day warranty. All warranties are documented and honoured, no questions asked." },
+      { q: "What warranty do you provide?", a: "We offer a written warranty of up to 12 months on parts and labour, depending on the repair type. Battery replacements carry a 3-month capacity warranty. Logic board repairs carry a 15-day warranty, extendable to 6 months for a small flat fee. All warranties are documented and honoured, no questions asked." },
       { q: "What if my MacBook Pro has the same problem after repair?", a: "If the same fault returns within the warranty period, we re-diagnose and re-repair at no cost. We stand behind our work fully." },
     ],
   },

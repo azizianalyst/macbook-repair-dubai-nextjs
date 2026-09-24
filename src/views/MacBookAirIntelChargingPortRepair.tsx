@@ -54,7 +54,7 @@ export default function MacBookAirIntelChargingPortRepair() {
           body: "We test both USB-C ports with two different chargers (61W and 96W) and verify charging current is correct via a USB-C power meter. The laptop is returned fully charged with a 3-month warranty on the new board.",
         },
       ]}
-      warrantyDays={90}
+      warrantyDays={365}
       warrantyBullets={[
         "3-month written warranty on the replacement USB-C charging board",
         "Covers: port not charging, loose cable fit, intermittent connection",

@@ -67,7 +67,7 @@ export default function IMacNotTurningOn() {
         ["Same-day fixes",        "Yes - PSU and SMC jobs",            "No - minimum 1 week typical"],
         ["Pickup & delivery",     "Free, Dubai mainland",              "Drop-in only"],
         ["T2 SSD preservation",   "Yes - original board paired",       "Often unit-replaced, full restore"],
-        ["Warranty",              "12 months written, dated",            "12 months"],
+        ["Warranty",              "15 days written, extendable to 6 months",            "12 months"],
       ]}
       faqs={[
         { q: `What does the LED on the back of my iMac mean?`, a: `Older Intel iMacs (2009-2015) have a small diagnostic LED behind the rear vent. One steady light = power supply alive but no boot signal. No light = PSU or input fuse fault. We use this within 30 seconds of the iMac arriving at the bench.` },

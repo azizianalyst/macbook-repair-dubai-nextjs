@@ -58,7 +58,7 @@ export default function MacBookScreenRepairNearMeDubai() {
         { title: "Free delivery back",  body: "Tested, warrantied, and returned to the same address - no need to come to us." },
       ]}
       glassNotice
-      warrantyDays={365}
+      warrantyDays={90}
       warrantyBullets={[
         "12 months on parts and labour.",
         "Dead pixels, ghost touch and backlight faults covered.",
