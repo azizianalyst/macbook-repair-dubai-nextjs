@@ -133,7 +133,7 @@ export default function MacBookDataRecovery() {
       serviceSchema({
         name: "MacBook Data Recovery Dubai",
         timeline: "24 hours to 7 days",
-        warranty: "P7D",
+        warranty: "P15D",
         url: "/macbook-data-recovery-dubai",
         description:
           "MacBook data recovery in Dubai. Dead logic board, water damage, deleted files, T2 chip and Apple Silicon NAND recovery, FileVault, Time Machine restore.",

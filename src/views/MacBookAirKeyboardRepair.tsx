@@ -12,6 +12,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
@@ -205,6 +206,12 @@ export default function MacBookAirKeyboardRepair() {
             <span>15-day warranty</span>
           </p>
         </Hero>
+
+        <QuickAnswer
+          tone="dark"
+          question="Can you replace a single MacBook Air key?"
+          answer="On M1 to M4 MacBook Airs, usually yes - individual keys can be replaced. Intel Airs with the butterfly keyboard (2018-2020) often need a full top-case replacement instead. We stock parts for every Air keyboard generation, diagnose free, and finish most keyboard repairs the same day, often in about two hours."
+        />
 
         {/* USP STRIP */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>

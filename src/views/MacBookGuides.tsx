@@ -5,6 +5,8 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { useSeo } from "@/hooks/use-seo";
@@ -13,6 +15,13 @@ import { SITE } from "@/lib/seo";
 import { GUIDES, GUIDE_THEMES } from "@/content/guides";
 
 const PATH = "/macbook-guides";
+
+const GUIDE_FAQS = [
+  { q: "Are these guides safe to follow on my own?", a: "The everyday ones - screenshots, renaming, copy and paste, cleaning the screen - are completely safe. Anything involving a reset or erasing the drive says so clearly at the top: back up first, because an erase cannot be undone." },
+  { q: "Do the guides work on both Apple silicon and Intel MacBooks?", a: "Most steps are the same on both. Where they differ - recovery mode, resets and startup options are the usual ones - the guide gives the Apple silicon and Intel steps separately." },
+  { q: "What if a guide does not fix my MacBook?", a: "Then it is probably a hardware fault rather than a setting. Diagnosis at our Media City workshop is free, pickup across Dubai is free, and there is no fee if we cannot fix it." },
+  { q: "Who writes these guides?", a: "The technicians who repair MacBooks at our Concord Tower workshop in Dubai Media City. They are written from the problems customers actually bring in, not rewritten from other websites." },
+];
 
 export default function MacBookGuides() {
   useSeo(
@@ -42,6 +51,11 @@ export default function MacBookGuides() {
         eyebrow="Guides · written by working technicians"
         title="MacBook Guides & How-Tos"
         subtitle="Plain-English, step-by-step guides for everyday MacBook tasks, screenshots, resets, passwords, cleaning and care. Written at our Dubai Media City workshop, no jargon."
+      />
+
+      <QuickAnswer
+        question="What do these MacBook guides cover?"
+        answer="Plain-English, step-by-step guides written by the technicians at our Dubai Media City workshop: screenshots, resets, passwords, cleaning and care, plus troubleshooting for a black screen, a Mac stuck on the Apple logo, loud fans and charging faults. If a guide does not fix it, the diagnosis at the workshop is free."
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -82,6 +96,12 @@ export default function MacBookGuides() {
 
       </section>
 
+
+      {/* FAQ - the guides hub was the only commercial-tier page without one. */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">MacBook guides - frequently asked questions</h2>
+        <FAQAccordion items={GUIDE_FAQS} injectSchema />
+      </section>
 
       <RelatedArticles path={PATH} family="macbook" />
 

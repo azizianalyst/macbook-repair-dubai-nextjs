@@ -181,9 +181,14 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
           image={HERO_IMG}
           imageAlt={HERO_ALT}
         >
-          <p className="text-[15px] text-text-muted leading-relaxed mt-md">
-            {p.heroDescription}
-          </p>
+          <div className="quick-answer mt-md" aria-label="Quick answer" itemScope itemType="https://schema.org/Question">
+            <p className="text-[15px] font-semibold text-text mb-2" itemProp="name">
+              Which MacBook Air {p.chip} models do you repair in Dubai?
+            </p>
+            <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
+              <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">{p.heroDescription}</p>
+            </div>
+          </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             {p.heroMeta.map((m, i) => (
               <span key={i} className="flex items-center gap-1">

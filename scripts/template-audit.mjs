@@ -121,9 +121,27 @@ const TIERS = {
   index:   ["h1","title","meta","meta-len","canonical","schema","internal"],
 };
 
+/**
+ * Blog category and tag hubs list many posts by many writers - there is no single
+ * author, so grading them as articles (byline required) produced 10 false failures.
+ * Read the real category slugs from the generated taxonomy rather than guessing from
+ * missing markup: /blog/where-to-repair-macbook-dubai also lacks Article schema, but
+ * it is a comparison landing page, not a hub.
+ */
+const BLOG_HUBS = (() => {
+  try {
+    const src = readFileSync(new URL("../src/content/blog-taxonomy.generated.ts", import.meta.url), "utf8");
+    const cats = src.slice(src.indexOf("export const CATEGORIES"), src.indexOf("export const TAGS"));
+    return new Set([...cats.matchAll(/"slug":\s*"([^"]+)"/g)].map((m) => `blog/${m[1]}`));
+  } catch {
+    return new Set();
+  }
+})();
+
 function tierOf(slug, html) {
   if (LANDING.has(slug)) return "landing";
   if (UTILITY.test(slug)) return "index";
+  if (slug.startsWith("blog/tag/") || BLOG_HUBS.has(slug)) return "index";
   if (slug.startsWith("blog/") || /BlogPosting/i.test(html)) return "article";
   // Question-shaped slugs are explainers, not sellable services.
   if (/^(how|why|what|can|is|does|where|which|the)-/.test(slug)) return "article";

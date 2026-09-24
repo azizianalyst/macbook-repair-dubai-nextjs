@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -106,6 +107,12 @@ export default function OnsiteMacBookRepair() {
           <span>Repairing Apple hardware since 2004</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Do you come to my home or office for MacBook repair?"
+        answer="We collect from your home or office anywhere in Dubai mainland, free and with no callout charge, and bring the Mac back when it is done - most repairs are returned the same day. Diagnosis is free and there is no fee if we cannot fix it, so you never need to leave your desk."
+      />
 
       <USPStrip tone="dark" />
 

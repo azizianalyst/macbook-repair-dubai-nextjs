@@ -182,7 +182,7 @@ export default function MacBookAirScreenReplacement() {
           image={IMG.hero.src}
           imageAlt={IMG.hero.alt}
         >
-          <div className="mt-md" itemScope itemType="https://schema.org/Question">
+          <div className="quick-answer mt-md" aria-label="Quick answer" itemScope itemType="https://schema.org/Question">
             <p className="text-[15px] font-semibold text-text mb-2" itemProp="name">
               Where can I get MacBook Air screen replacement in Dubai?
             </p>

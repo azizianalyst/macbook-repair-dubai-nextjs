@@ -209,7 +209,7 @@ const GUIDES: { label: string; href: string }[] = [
   { label: "MacBook Pro M2 Wi-Fi dropping after sleep - fix", href: "/blog/macbook-pro-m2-wifi-dropping-dubai" },
   { label: "MacBook Pro M3 SD card not showing - fix", href: "/blog/macbook-pro-m3-sd-card-not-showing-dubai" },
   { label: "MacBook Pro M5 fan noise - causes & fix", href: "/blog/macbook-pro-m5-fan-noise-dubai" },
-  { label: "MacBook Pro M5 OLED display issues explained", href: "/blog/macbook-pro-m5-oled-display-issues-dubai" },
+  { label: "MacBook Pro screen faults - repair options", href: "/macbook-pro-screen-repair-dubai" },
 ];
 
 const OTHER_DEVICES = [

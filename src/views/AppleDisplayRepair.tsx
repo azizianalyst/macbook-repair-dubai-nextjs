@@ -8,6 +8,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -129,6 +130,12 @@ export default function AppleDisplayRepair() {
           <span>Same-day pick-up &amp; delivery</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Can you repair an Apple Studio Display in Dubai?"
+        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and pickup and delivery across Dubai are free."
+      />
 
       <USPStrip tone="dark" />
 

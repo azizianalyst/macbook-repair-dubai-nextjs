@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -94,6 +95,12 @@ export default function AppleCareMacBookRepair() {
           <span>Free diagnosis</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Should I use AppleCare or an independent repair?"
+        answer="If your Mac is still under Apple's warranty or an active AppleCare plan, Apple is usually the better route, and we will tell you so. For AppleCare-expired and out-of-warranty Macs, we repair at component level at our Media City workshop, with a free diagnosis and a written warranty of up to 12 months depending on the repair."
+      />
 
       <USPStrip tone="dark" />
 

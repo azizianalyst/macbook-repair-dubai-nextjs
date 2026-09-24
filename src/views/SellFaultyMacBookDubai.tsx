@@ -8,6 +8,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -144,6 +145,12 @@ export default function SellFaultyMacBookDubai() {
           <span>Free collection · same-day cash</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Can I sell a broken MacBook in Dubai?"
+        answer="Yes. We buy water-damaged, cracked, dead or non-booting MacBooks, iMacs, iPhones and iPads that other buyers turn down. You get a free valuation, free collection across Dubai and same-day payment in cash - or you can take the value as credit against a repair or another device."
+      />
 
       <USPStrip tone="dark" />
 

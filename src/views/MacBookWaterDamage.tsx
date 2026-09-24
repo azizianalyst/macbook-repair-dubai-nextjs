@@ -150,7 +150,7 @@ export default function MacBookWaterDamage() {
       serviceSchema({
         name: "MacBook Water Damage Repair Dubai",
         timeline: "Same day - 2 days",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/macbook-water-damage-repair-dubai",
         description:
           "MacBook water damage repair in Dubai. Liquid spill on MacBook Air or Pro. Ultrasonic clean, component-level board repair, full function test. Free diagnosis before any paid work.",

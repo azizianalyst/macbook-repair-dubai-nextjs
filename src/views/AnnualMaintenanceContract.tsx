@@ -4,6 +4,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -133,6 +134,12 @@ export default function AnnualMaintenanceContract() {
           <span>21+ years on Apple hardware</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="What does an Apple AMC cover for a Dubai business?"
+        answer="An Annual Maintenance Contract covers every Mac, iPhone and iPad in your business for one yearly fee: scheduled servicing, battery and health checks, priority repairs and on-site support. Replacement parts are charged at a fixed contract rate and accidental damage is quoted separately. It starts with a free device audit, delivered as a written asset register."
+      />
 
       <USPStrip tone="dark" />
 

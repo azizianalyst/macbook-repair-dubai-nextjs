@@ -6,6 +6,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -158,6 +159,12 @@ export default function AppleServiceCenter() {
           <span>Same-day service</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Is this an official Apple service centre?"
+        answer="No. MacBook Repair Dubai is an independent Apple specialist in Dubai Media City, not an Apple Authorised Service Provider. We repair MacBook, iMac and other Apple devices at component level, using genuine parts where available and telling you before work starts when a part is not genuine. If your device is still under AppleCare, we will say when Apple is the better route."
+      />
 
       <USPStrip tone="dark" />
 

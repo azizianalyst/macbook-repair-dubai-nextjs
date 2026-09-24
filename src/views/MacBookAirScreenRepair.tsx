@@ -273,7 +273,8 @@ export default function MacBookAirScreenRepair() {
           imageAlt={IMG.hero.alt}
         >
           <div
-            className="mt-md"
+            className="quick-answer mt-md"
+            aria-label="Quick answer"
             itemScope
             itemType="https://schema.org/Question"
           >

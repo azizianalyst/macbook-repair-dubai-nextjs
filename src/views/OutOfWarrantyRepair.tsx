@@ -4,6 +4,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -86,6 +87,12 @@ export default function OutOfWarrantyRepair() {
           <span>Free diagnosis</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Can you repair an Apple device after AppleCare expires?"
+        answer="Yes. We repair out-of-warranty and AppleCare-expired MacBook, iMac, iPhone and iPad at component level, often for around half the Apple Store price, using genuine or quality-tested parts and a written warranty of up to 12 months depending on the repair. Diagnosis is free."
+      />
 
       <USPStrip tone="dark" />
 

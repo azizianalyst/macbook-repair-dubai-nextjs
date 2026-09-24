@@ -21,6 +21,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -240,6 +241,12 @@ export default function SellMacBookDubai() {
           <span>Paid same day - cash or transfer</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="How do I sell my Mac in Dubai?"
+        answer="Send the model and a few photos on WhatsApp for a free valuation. If you accept the offer, we collect free anywhere in Dubai and pay the same day by cash or transfer. We buy working and faulty Macs, iPhones and iPads alike."
+      />
 
       <USPStrip tone="dark" />
 

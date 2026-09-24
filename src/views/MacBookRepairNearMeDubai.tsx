@@ -6,6 +6,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -182,6 +183,12 @@ export default function MacBookRepairNearMeDubai() {
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Is there a MacBook repair shop near me in Dubai?"
+        answer="Our workshop is in Concord Tower, Dubai Media City, and free door-to-door pickup makes 'near me' anywhere in Dubai mainland - same-hour pickup from six nearby areas and same-day from the rest. Diagnosis is free, there is no fee if we cannot fix it, and the repaired Mac comes back to your door."
+      />
 
       <USPStrip tone="dark" />
 

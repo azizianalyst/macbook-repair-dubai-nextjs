@@ -138,7 +138,7 @@ export default function MacDataRecovery() {
       serviceSchema({
         name: "Mac Data Recovery Dubai",
         timeline: "Same day to 5 days",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/mac-data-recovery-dubai",
         description:
           "Mac data recovery in Dubai from MacBooks that won't boot, have failed SSDs, suffered water damage, or were accidentally formatted. Apple Silicon (M1-M4) and Intel. Free assessment.",

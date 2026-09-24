@@ -1417,7 +1417,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-charging-port-repair-dubai": {
     "title": "MacBook Air Charging Port Repair Dubai - MagSafe 3 and USB-C",
-    "description": "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 3-month warranty. WhatsApp for a price."
+    "description": "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 12-month warranty. WhatsApp for a price."
   },
   "/macbook-air-intel-battery-replacement-dubai": {
     "title": "MacBook Air Intel Battery Replacement Dubai — Same-Day",

@@ -153,7 +153,7 @@ export default function MacBookProChipBatteryPage({
           image={HERO_IMG.src}
           imageAlt={HERO_IMG.alt}
         >
-          <div className="mt-md" itemScope itemType="https://schema.org/Question">
+          <div className="quick-answer mt-md" aria-label="Quick answer" itemScope itemType="https://schema.org/Question">
             <p className="text-[15px] font-semibold text-text mb-2" itemProp="name">
               How much does MacBook Pro {chip} battery replacement cost in Dubai?
             </p>

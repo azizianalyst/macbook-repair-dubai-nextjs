@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
@@ -140,6 +141,17 @@ export default function MacBookOverheating() {
           MacBook overheating in Dubai is fixed at MacBook Repair Dubai. Dubai's 40°C+ summer temperatures accelerate thermal paste degradation and dust accumulation. MacBook Pro models with fans are repaired with thermal paste replacement and deep clean. MacBook Air (fanless) is assessed for throttling versus genuine component fault. Free diagnosis before any repair.
         </p>
       </Hero>
+
+
+      <QuickAnswer
+
+        tone="dark"
+
+        question="Why does my MacBook overheat and shut down in Dubai?"
+
+        answer="Dubai's 40°C-plus summers dry out thermal paste and pack fans with dust, so MacBooks throttle or shut down. On MacBook Pro models with fans we replace the thermal paste and deep-clean the cooling system; fanless MacBook Airs are checked for throttling versus a genuine component fault. Diagnosis is free before any work."
+
+      />
 
       {/* ── Dubai heat note ────────────────────────────────────────── */}
       <section className="border-y border-border bg-bg-alt">

@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
@@ -152,7 +153,7 @@ export default function MacBookNotTurningOn() {
       serviceSchema({
         name: "MacBook Not Turning On Repair Dubai",
         timeline: "Same day",
-        warranty: "P90D",
+        warranty: "P15D",
         url: "/macbook-not-turning-on-dubai",
         description:
           "MacBook not turning on repair in Dubai. Free diagnosis. Dead battery, blown fuse, liquid damage, DC-in board, T2 firmware. All models MacBook Air and Pro, Intel through M5. Free diagnosis.",
@@ -207,6 +208,12 @@ export default function MacBookNotTurningOn() {
             </Button>
           </div>
         </Hero>
+
+        <QuickAnswer
+          tone="dark"
+          question="Why won't my MacBook turn on?"
+          answer="The most common causes are a drained or failed battery, a blown fuse on the logic board, liquid damage, or a failed DC-in board. We diagnose it free at our Media City workshop, and most dead Macs are repaired the same day once the cause is confirmed. If we cannot fix it there is no fee, and the data can usually still be recovered."
+        />
 
         {/* USP strip */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>

@@ -5,6 +5,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
@@ -148,6 +149,17 @@ export default function MacBookWontCharge() {
           MacBook not charging in Dubai? The most common causes are a faulty MagSafe 3 or USB-C cable (free fix), a damaged DC-in board, a dead battery that will not accept charge, or a logic board power circuit fault. MacBook Repair Dubai diagnoses the exact cause for free before any repair is started.
         </p>
       </Hero>
+
+
+      <QuickAnswer
+
+        tone="dark"
+
+        question="Why is my MacBook not charging?"
+
+        answer="The most common causes are a faulty MagSafe 3 or USB-C cable, a damaged DC-in board, a dead battery that no longer accepts charge, or a power fault on the logic board. Around one in five charging faults are fixed with simple checks you can try first; otherwise we diagnose the exact cause free before any repair starts."
+
+      />
 
       {/* ── USP strip ─────────────────────────────────────────────── */}
       <section className="border-y border-border bg-bg-alt">

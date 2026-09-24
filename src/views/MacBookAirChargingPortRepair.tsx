@@ -10,6 +10,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
@@ -147,7 +148,7 @@ export default function MacBookAirChargingPortRepair() {
   useSeo(
     {
       title: "MacBook Air Charging Port Repair Dubai - MagSafe 3 and USB-C",
-      description: "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 3-month warranty. WhatsApp for a price.",
+      description: "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 12-month warranty. WhatsApp for a price.",
       path: "/macbook-air-charging-port-repair-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -157,7 +158,7 @@ export default function MacBookAirChargingPortRepair() {
       serviceSchema({
         name: "MacBook Air Charging Port Repair Dubai",
         timeline: "Same day · 1-2 hours",
-        warranty: "P3M",
+        warranty: "P1Y",
         url: "/macbook-air-charging-port-repair-dubai",
         description: "MacBook Air charging port repair Dubai. MagSafe 3 board replacement (M2/M3/M4) and USB-C port replacement (Intel/M1). Same-day service. Message us on WhatsApp for a price.",
       }),
@@ -201,9 +202,15 @@ export default function MacBookAirChargingPortRepair() {
             <span>·</span>
             <span>Free diagnosis</span>
             <span>·</span>
-            <span>3-month warranty</span>
+            <span>12-month warranty</span>
           </p>
         </Hero>
+
+        <QuickAnswer
+          tone="dark"
+          question="Can a MacBook Air charging port be repaired?"
+          answer="Yes. Intel and M1 MacBook Airs charge through a USB-C port board, and M2, M3 and M4 models through a MagSafe 3 board - both are replaceable. A free diagnosis confirms whether the fault is the port, the cable or the board, and most repairs take 1-2 hours the same day, with a 12-month warranty."
+        />
 
         {/* USP STRIP */}
         <div style={{ borderBottom: "1px solid var(--color-border)" }}>
@@ -213,7 +220,7 @@ export default function MacBookAirChargingPortRepair() {
               { Icon: Check,       label: "MagSafe 3 + USB-C" },
               { Icon: Clock,       label: "Same-day 1-2 hours" },
               { Icon: ShieldCheck, label: "Free diagnosis" },
-              { Icon: ShieldCheck, label: "3-month warranty" },
+              { Icon: ShieldCheck, label: "12-month warranty" },
               { Icon: Wrench,      label: "Independent Apple specialist since 2004" },
             ].map(({ Icon, label }) => (
               <li key={label} className="flex items-center gap-xs text-[14px] font-medium text-text">
@@ -353,7 +360,7 @@ export default function MacBookAirChargingPortRepair() {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>Price on request</span>
                 <span>Free diagnosis</span>
-                <span>3-month warranty</span>
+                <span>12-month warranty</span>
                 <span>Same-day on most models</span>
               </div>
             </div>
@@ -389,7 +396,7 @@ export default function MacBookAirChargingPortRepair() {
                 MacBook Air · All generations
               </p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                MacBook Air charging port repair · Free diagnosis · 3-month warranty
+                MacBook Air charging port repair · Free diagnosis · 12-month warranty
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">
