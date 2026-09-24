@@ -127,7 +127,7 @@ const FAQS = [
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",
-    a: "If the machine is still inside Apple's one-year warranty or an active AppleCare+ plan, use Apple first — they will fix a manufacturing defect at no cost and we will tell you so. If you are out of warranty there is nothing left to void. Our own work carries a written warranty of up to 12 months on screens and batteries and 90 days on other hardware.",
+    a: "If the machine is still inside Apple's one-year warranty or an active AppleCare+ plan, use Apple first — they will fix a manufacturing defect at no cost and we will tell you so. If you are out of warranty there is nothing left to void. Our own work carries a written warranty that depends on the repair: 3 months on screens and batteries, up to 12 months on other hardware such as trackpads, ports and hinges, and 15 days on keyboard, logic-board and liquid-damage work.",
   },
   {
     q: "Will I lose my data during a MacBook Air repair?",
@@ -215,7 +215,7 @@ export default function MacBookAirRepair() {
         benefits: [
           { icon: Search, title: "Free diagnosis, then a quote", body: "We find the actual fault before quoting. The same symptom can be a cable, a panel or a board — those are different jobs and different costs." },
           { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries are typically 45–90 minutes. Drop off in the morning and the machine is usually ready that evening." },
-          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months on screens and batteries, 90 days on other hardware. In writing, on the job sheet, not a verbal promise." },
+          { icon: ShieldCheck, title: "Written warranty", body: "3 months on screens and batteries, up to 12 months on other hardware, 15 days on board and liquid work. In writing, on the job sheet, not a verbal promise." },
           { icon: Truck, title: "Free pickup across Dubai", body: "Door-to-door collection and return anywhere on the mainland, or walk into the Media City workshop without an appointment." },
         ],
       }}
