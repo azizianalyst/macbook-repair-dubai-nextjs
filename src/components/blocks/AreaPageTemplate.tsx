@@ -25,6 +25,7 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
 import { AREAS, type AreaConfig } from "@/content/areas";
+import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { areaTopicForSlug } from "@/lib/page-images";
 
 // Every Mac family we collect from, shown on every area page. The domain is MacBook-led,
@@ -43,6 +44,17 @@ const MAC_FAMILY_LINKS = [
 export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
   const path = `/macbook-repair-${cfg.slug}`;
   const url = `${SITE.url}${path}`;
+  // Where this area has its own data-recovery page, the "Mac data recovery" card points
+  // there instead of the Dubai-wide page - that is the only in-content route into those
+  // pages from the rest of the site (cluster-audit 2026-09-25: they were unreachable).
+  const drArea = DATA_RECOVERY_AREAS.find((d) => d.slug === cfg.slug);
+  const macFamily = drArea
+    ? MAC_FAMILY_LINKS.map((l) =>
+        l.href === "/mac-data-recovery-dubai"
+          ? { ...l, label: `Mac data recovery in ${cfg.area}`, href: `/mac-data-recovery-${drArea.slug}` }
+          : l,
+      )
+    : MAC_FAMILY_LINKS;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const title = `MacBook Repair ${cfg.area} - Free Pickup & Delivery`;
   const description = `MacBook repair in ${cfg.area}: free pickup, same-day on most repairs, written warranty up to 12 months. Free diagnosis. Call 055 741 3706.`;
@@ -200,7 +212,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           sub={`Yes. The same free collection and return covers every Mac in ${cfg.area} - desktops included. Desktops are collected by appointment so the courier brings the right packaging for the display or chassis.`}
         />
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
-          {MAC_FAMILY_LINKS.map((s) => (
+          {macFamily.map((s) => (
             <Link
               key={s.href}
               to={s.href}
@@ -211,6 +223,12 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
             </Link>
           ))}
         </div>
+        <p className="text-[15px] text-text-muted mt-md max-w-[72ch]">
+          Looking after a team of Macs in {cfg.area}? See{" "}
+          <Link to="/corporate-macbook-repair-dubai" className="text-accent underline underline-offset-2">corporate MacBook repair</Link>
+          {" "}and our{" "}
+          <Link to="/annual-maintenance-contract-dubai" className="text-accent underline underline-offset-2">annual maintenance contracts</Link>.
+        </p>
       </section>
 
       {/* Landmarks */}

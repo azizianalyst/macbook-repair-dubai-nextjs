@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 
 const HERO_IMG = "/images/real/lab/macbook-air-lid-dubai.jpg";
 
@@ -421,6 +422,24 @@ export default function MacDataRecovery() {
         </div>
 
         {/* Related Articles */}
+        {/* Data recovery by area - the only in-content route into the area pages from the
+            Dubai-wide hub (cluster-audit 2026-09-25 found them unreachable from /). */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-areas">
+          <h2 id="recovery-areas" className="text-[26px] md:text-[32px] font-bold mb-md">Mac data recovery by area</h2>
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-md">
+            Free collection from anywhere in Dubai. These areas have their own page covering the failures we see most often there.
+          </p>
+          <ul className="flex flex-wrap gap-sm">
+            {DATA_RECOVERY_AREAS.map((a) => (
+              <li key={a.slug}>
+                <Link to={`/mac-data-recovery-${a.slug}`} className="inline-block border border-border/70 bg-bg-card rounded-md px-md py-sm hover:border-accent/40 transition text-[15px]">
+                  Mac data recovery {a.area}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
                 <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-lead">
           <h2 id="recovery-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start your free recovery assessment</h2>
           <LeadForm preset={PRESETS["data-recovery"]} sourcePath="/mac-data-recovery-dubai" defaultDeviceType="MacBook" />

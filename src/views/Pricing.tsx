@@ -10,6 +10,7 @@ import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
 import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { NAP } from "@/content/site";
+import { Link } from "@/lib/router-compat";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { PRICE_ROWS_BY_GROUP, type PriceRow } from "@/content/prices.generated";
 
@@ -132,6 +133,13 @@ export default function Pricing() {
             <a key={t.id} href={`#${t.id}`} className="text-accent underline underline-offset-2">{t.title.replace(" pricing", "")}</a>
           ))}
         </nav>
+        {/* The two cost explainers were reachable only through the nav menu (cluster-audit). */}
+        <p className="text-[15px] text-text-muted mt-md">
+          What changes the price, explained:{" "}
+          <Link to="/mac-repair-cost-dubai" className="text-accent underline underline-offset-2">Mac repair costs</Link>
+          {" · "}
+          <Link to="/imac-repair-cost-dubai" className="text-accent underline underline-offset-2">iMac repair costs</Link>
+        </p>
       </section>
 
       {/* Pricing tables */}
