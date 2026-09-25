@@ -5,6 +5,15 @@
 
 **Source docs:** [GBP audit](gbp-audit-2026-08-30.md) · [GBP plan](gbp-master-plan-2026-08-30.md) · [Content pack](gbp-content-pack-2026-08-30.md) · [Execution log](gbp-execution-log-2026-08-30.md) · [Keyword gap](keyword-service-gap-audit-2026-08-30.md) · [Template standard](azizi-template-standard.md) · [GBP extract prompt](gbp-extract-and-audit-prompt.md)
 
+> **2026-09-26 — Semrush research and master plan.** [SEO master plan](seo-master-plan-2026-09-26.md) is now the order of work for the site. It has 7 phases, and each task has an owner and a check. The content queue lives in [low-competition content bank](keywords/low-competition-content-bank.md): 294 topics, 2,028 keywords, 47,980 searches/month. The first 12 builds are in plan §Phase 3.
+>
+> Supporting files:
+> - Raw Semrush data and classified CSVs: [keywords/](keywords/)
+> - Verified Apple lineup: [apple-lineup-2026-09-26.md](apple-lineup-2026-09-26.md)
+> - Code audit: [repo-audit-2026-09-26.md](repo-audit-2026-09-26.md)
+>
+> New owner decisions D2–D5 (iPhone buy-back, azizitechnologies.ae, the Apple Watch page, generic laptop repair) are in plan §9.
+
 ---
 
 # WORKSTREAM A — Google Business Profile
