@@ -9,6 +9,8 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -63,11 +65,8 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: Cpu,         title: "Chip-Level Repairs",      body: "We repair at component level, not just module-swap. Board repairs Apple would quote as 'unrepairable' are handled in our Dubai Media City workshop." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Leilla Manic", body: "My iPad's charging port was faulty and I had trouble finding a place that could fix it quickly. The service provider addressed the issue promptly, ensuring a smooth, hassle-free process. The repair was efficient and affordable, highly recommended." },
-  { name: "Sarah Ahmad",  body: "I couldn't find anyone to fix my iPad near me. Luckily, the repair service offered a mail-in option. I sent it in, got it fixed, and had it back in a few days. Very convenient." },
-  { name: "Vinketish",    body: "My iPad had suffered water damage and I was worried about losing all my data. The experts not only restored my iPad but also saved all my important files. Their attention to detail and customer service is top-notch." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQ_GROUPS = [
   {
@@ -139,6 +138,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 }
 
 export default function IPadRepairHub() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/ipad-repair-dubai"), min: 3, seed: "/ipad-repair-dubai" });
   useSeo(
     {
       title: "iPad Repair Dubai - Screen, Battery & Logic Board Experts",
@@ -353,17 +353,7 @@ export default function IPadRepairHub() {
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
             </div>
-            <div className="grid gap-lg md:grid-cols-3">
-              {TESTIMONIALS.map((t) => (
-                <figure key={t.name} className="flex flex-col gap-md p-xl rounded-2xl" style={{ background: "#242a30" }}>
-                  <div className="flex gap-1" role="img" aria-label="5 star rating">
-                    {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={15} className="fill-star text-star" aria-hidden />)}
-                  </div>
-                  <blockquote className="text-[15px] text-on-primary-muted leading-relaxed flex-1">&ldquo;{t.body}&rdquo;</blockquote>
-                  <figcaption className="font-semibold text-[14px] text-white">- {t.name}</figcaption>
-                </figure>
-              ))}
-            </div>
+            <ReviewGrid reviews={reviews} tone="dark" />
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
               <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
               <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>

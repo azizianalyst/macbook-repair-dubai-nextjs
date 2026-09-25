@@ -5,6 +5,8 @@ import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -95,10 +97,8 @@ const SPECS = [
   { title: "Mac Studio M2 Ultra Repair", items: ["24-core CPU", "Up to 76-core GPU", "Up to 192GB unified memory", "800GB/s memory bandwidth"] },
 ];
 
-const TESTIMONIALS = [
-  { name: "Khurram Shahid", body: "To handle my heavy video editing work, I had to add more RAM to my Mac Studio. The techs helped me pick the right RAM and quickly installed it. There's no more lag when I edit my movies." },
-  { name: "Sarah Omer", body: "I was worried about how long and how much it would cost to fix my cracked Mac Studio screen. The technicians fixed it really quickly and kept me informed the whole time. The team was very skilled and the service was great." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
   { q: "How much time will it take to fix my Mac Studio?", a: "The majority of repairs are completed the same day. The precise timing depends on the availability of parts and the device's diagnostic results." },
@@ -121,6 +121,7 @@ function CallButtons() {
 }
 
 export default function MacStudioRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-studio-repair-dubai"), min: 3, seed: "/mac-studio-repair-dubai" });
   useSeo(
     {
       title: "Mac Studio Repair Dubai - Expert Logic Board & SSD Fix",
@@ -286,17 +287,7 @@ export default function MacStudioRepair() {
       {/* Testimonials */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-        <div className="grid gap-md md:grid-cols-2">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-              </div>
-              <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-              <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <ReviewGrid reviews={reviews} tone="dark" />
       </section>
 
       {/* FAQ */}

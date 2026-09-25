@@ -367,11 +367,11 @@ export default function MacBookBatteryReplacement() {
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 font-heading text-[20px] font-bold text-accent">U</span>
               <div>
                 <p className="m-0 font-semibold text-text text-[18px]">Usman</p>
-                <p className="m-0 text-[13.5px] text-text-faint">9 years experience · Battery, keyboard &amp; trackpad</p>
+                <p className="m-0 text-[13.5px] text-text-faint">11 years experience · Battery, keyboard &amp; trackpad</p>
               </div>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              Usman has fitted 4,800+ MacBook batteries since joining the workshop in 2017. Personally runs every Apple Silicon BMS re-pair and every 4-hour calibration cycle.
+              Usman has fitted 4,800+ MacBook batteries since joining the workshop in 2015. Personally runs every Apple Silicon BMS re-pair and every 4-hour calibration cycle.
             </p>
           </Card>
         </section>

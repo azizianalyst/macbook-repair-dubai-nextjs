@@ -6,6 +6,8 @@
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
@@ -107,10 +109,8 @@ const WHY = [
   { title: "A qualified technician is the only one who should fix it", body: "All of our repair techs are certified with a lot of experience across all iMac types. They go through extensive training to deliver quick, perfect, and long-lasting repairs." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Jay Sharma", body: "The best place in Dubai to get your iMac fixed. The team works quickly to solve the problem. Liquid had ruined it and there seemed to be no way to fix it, but the team got it back in working order. Thanks to the team - if you have any related problems, I strongly suggest this tech service shop." },
-  { name: "Atif Saleem", body: "The repair team did another great job fixing my iMac. After a leaky roof caused a lot of water damage, Apple Support told me I should replace the whole thing - but they saved me a lot of money. Very strongly recommended." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
   { q: "How long will the iMac repair take?", a: "iMac display, power supply, and camera replacements take 3-4 hours. When parts are not in stock, it typically takes 1-2 business days to receive them from our suppliers. You can pre-book your repair to receive premium services." },
@@ -135,6 +135,7 @@ function CallButtons() {
 }
 
 export default function IMacRepairHub() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/imac-repair-dubai"), min: 3, seed: "/imac-repair-dubai" });
   useSeo(
     {
       title: "iMac Repair Dubai - Certified Logic Board & SSD Specialists",
@@ -292,17 +293,7 @@ export default function IMacRepairHub() {
       {/* Testimonials */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-        <div className="grid gap-md md:grid-cols-2">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-              </div>
-              <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-              <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <ReviewGrid reviews={reviews} tone="dark" />
       </section>
 
       {/* Schedule CTA */}

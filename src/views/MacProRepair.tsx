@@ -5,6 +5,8 @@ import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -89,10 +91,8 @@ const WHY = [
   "Our main goal is to make sure every customer is happy, and we do that by bringing the best services right to your door. After booking your Mac Pro repair in Dubai, you can easily monitor the technicians' progress until you receive your device back.",
 ];
 
-const TESTIMONIALS = [
-  { name: "Zayn Ahmad", body: "Dubai's top Mac Pro repair service. The team works quickly to solve the issue. My gadget was liquid-damaged and there was no prospect of repair, yet the crew got it into a functional condition. Thank you to the crew - I highly recommend their services for any Mac-related concerns." },
-  { name: "Jamshed", body: "I had a problem with my Mac Pro's display and was concerned about finding a reputable repair service in Dubai. The technicians not only rapidly resolved the issue but also gave excellent customer care. Highly recommended." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
   { q: "How much do Mac Pro repairs cost in Dubai?", a: "The kind and extent of damage determine the total cost. For example, screen replacement is the most expensive repair, and repairs for a newer model are significantly more costly. The difficulty level, the time required, and the cost of the part are the final factors that affect repair costs." },
@@ -116,6 +116,7 @@ function CallButtons() {
 }
 
 export default function MacProRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-pro-repair-dubai"), min: 3, seed: "/mac-pro-repair-dubai" });
   useSeo(
     {
       title: "Mac Pro Repair Dubai - Independent Apple Desktop Specialists",
@@ -277,17 +278,7 @@ export default function MacProRepair() {
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-          <div className="grid gap-md md:grid-cols-2">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <ReviewGrid reviews={reviews} tone="dark" />
           <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
             <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>

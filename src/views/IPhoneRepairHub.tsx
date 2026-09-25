@@ -9,6 +9,8 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -71,11 +73,8 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: Wrench,      title: "Transparent Pricing",      body: "Upfront pricing confirmed in writing before we touch the phone. No surprises, no hidden fees." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Nathan Brown", body: "I want to thank the repair team for their excellent service. They changed the battery and front camera on my son's iPhone 13. I highly recommend this service center and thank the team for their amazing service." },
-  { name: "Sarah Omer",  body: "I wasn't sure what was wrong with my iPhone, but the repair center swiftly detected the problem and quoted a reasonable fee. They didn't try to upsell me on anything needless, which I greatly appreciated. They've won my trust." },
-  { name: "Ali Hassan",  body: "Dropped my iPhone 15 Pro and completely shattered the screen. They fixed it same day with an OLED panel that looks exactly like the original. Professional service and fair pricing." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQ_GROUPS = [
   {
@@ -147,6 +146,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 }
 
 export default function IPhoneRepairHub() {
+  const reviews = pickReviews(["Ali Hassan"], { devices: reviewDevicesForPath("/iphone-repair-dubai"), min: 3, seed: "/iphone-repair-dubai" });
   useSeo(
     {
       title: "iPhone Repair Dubai - Independent Apple Repair Specialists",
@@ -386,17 +386,7 @@ export default function IPhoneRepairHub() {
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
             </div>
-            <div className="grid gap-lg md:grid-cols-3">
-              {TESTIMONIALS.map((t) => (
-                <figure key={t.name} className="flex flex-col gap-md p-xl rounded-2xl" style={{ background: "#242a30" }}>
-                  <div className="flex gap-1" role="img" aria-label="5 star rating">
-                    {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={15} className="fill-star text-star" aria-hidden />)}
-                  </div>
-                  <blockquote className="text-[15px] text-on-primary-muted leading-relaxed flex-1">&ldquo;{t.body}&rdquo;</blockquote>
-                  <figcaption className="font-semibold text-[14px] text-white">- {t.name}</figcaption>
-                </figure>
-              ))}
-            </div>
+            <ReviewGrid reviews={reviews} tone="dark" />
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
               <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
               <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>

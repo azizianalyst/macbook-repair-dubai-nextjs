@@ -19,6 +19,8 @@ import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 
 const SIBLINGS = [
   // Studio Display and Studio Display XDR were orphaned (no inbound internal link
@@ -71,17 +73,15 @@ const MODELS = [
   { title: "Pro Display XDR", body: "The 32-inch Pro Display XDR is a high-end 6K Retina monitor for professional use, with Extreme Dynamic Range (XDR) and a wide colour gamut. For a broken screen, brightness issues, or connection problems, our team knows its specific needs and built-in features." },
 ];
 
-const WHY = ["On-site repair", "Original screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "The lowest prices on all screens", "Repair techs with years of experience", "Free same-day pick-up and delivery"];
+const WHY = ["On-site repair", "Genuine or quality-tested screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "Repair techs with years of experience", "Free same-day pick-up and delivery"];
 
-const TESTIMONIALS = [
-  { name: "Salman Ahmed, Graphic Designer", body: "I was heartbroken when I broke the screen on my Apple system by accident, but a reliable repair service saved the day. Their techs were nice, knew what they were doing, and worked quickly. They used a genuine Apple part, and now my system looks and works like new. I strongly advise their services!" },
-  { name: "Mohammed Khalid, Student", body: "I looked online and found a reputable repair service. They quickly figured out what was wrong and replaced the broken LCD panel. The fix took very little time and cost a very fair amount. I'm very pleased with their service." },
-  { name: "Fatima Hassan, Businesswoman", body: "I depend on my MacBook for daily tasks, so I freaked out when the screen went black. A coworker told me about this reliable repair service. Their technicians were skilled and explained the repair fully. They fixed the screen in record time and I was back to work right away. I'll tell all my friends and coworkers." },
-];
+// The three named "testimonials" that lived here (Salman Ahmed, Mohammed Khalid, Fatima
+// Hassan) did not exist in the verified Google review library, so they were removed in the
+// content-truth audit of 2026-09-25. Real reviews are rendered below via pickReviews().
 
 const FAQS = [
   { q: "How long does it take to fix the screen on an Apple device?", a: "How long it takes varies on how bad the damage is, but most screen repairs can be done in 24 to 48 hours." },
-  { q: "Do you use genuine Apple parts to repair?", a: "Yes, we only use original Apple parts to ensure the best quality and fit with your system." },
+  { q: "Do you use genuine Apple parts to repair?", a: "We use genuine Apple parts where available and quality-tested parts otherwise, and we tell you which before any work starts, to ensure the best quality and fit with your system." },
   { q: "Can you fix a display that has been ruined by water?", a: "We can fix Apple displays that have been damaged by water, but the success of the fix depends on how bad the damage is. We suggest you bring your device in for a technical check." },
   { q: "Are there any guarantees when you fix an Apple Display?", a: "Yes, we provide a limited warranty when we fix your Apple display. The length of the warranty may differ for each repair job." },
 ];
@@ -100,6 +100,7 @@ function CallButtons() {
 }
 
 export default function AppleDisplayRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/apple-display-repair-dubai"), min: 3, seed: "/apple-display-repair-dubai" });
   useSeo(
     {
       title: "Apple Display Repair Dubai - Studio Display & iMac Screen Fix",
@@ -123,7 +124,7 @@ export default function AppleDisplayRepair() {
         subtitle="Device failure always seems to happen at the most unplanned moment. Our expert repair service is here with top Apple Display repair in Dubai. Throughout the process, your device's functionality and preferences remain the same."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Genuine Apple parts</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Genuine parts where available</span>
           <span>·</span>
           <span>Studio Display &amp; Pro Display XDR</span>
           <span>·</span>
@@ -214,21 +215,12 @@ export default function AppleDisplayRepair() {
         </ul>
       </section>
 
-      {/* Testimonials */}
+      {/* Real Google reviews - verbatim from the verified library, never edited */}
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-          <div className="grid gap-md md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <h2 className="text-[28px] md:text-[32px] mb-md">What customers say</h2>
+          <p className="text-[15px] text-text-muted mb-md">Verbatim from Google. Nothing edited, nothing incentivised. <Link to="/reviews" className="text-accent underline underline-offset-2">Read all 232+ →</Link></p>
+          <ReviewGrid reviews={reviews} tone="dark" />
         </div>
       </section>
 

@@ -10,6 +10,8 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -62,11 +64,8 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: HardDrive,   title: "Data Privacy",            body: "Your Mac is your business. We follow strict confidentiality procedures and never access personal data during repairs." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Alina",        body: "The best place to get your MacBook fixed. I thought it wouldn't work again after spilling coffee on it. When I contacted the repair team, they assured me they would fix the issue and they did. Highly recommend." },
-  { name: "Green Light",  body: "Another great job by the repair service. They saved me money because I didn't have to replace the whole MacBook Pro like Apple Support told me." },
-  { name: "Maxwell",      body: "Quick and cheap home service. Email and WhatsApp make it easy to reach the team. Honest and hard-working people. I would recommend to anyone." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQ_GROUPS = [
   {
@@ -139,6 +138,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 }
 
 export default function MacRepairHub() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-repair-dubai"), min: 3, seed: "/mac-repair-dubai" });
   useSeo(
     {
       title: "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
@@ -341,17 +341,7 @@ export default function MacRepairHub() {
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
               <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
             </div>
-            <div className="grid gap-lg md:grid-cols-3">
-              {TESTIMONIALS.map((t) => (
-                <figure key={t.name} className="flex flex-col gap-md p-xl rounded-2xl" style={{ background: "#242a30" }}>
-                  <div className="flex gap-1" role="img" aria-label="5 star rating">
-                    {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={15} className="fill-star text-star" aria-hidden />)}
-                  </div>
-                  <blockquote className="text-[15px] text-on-primary-muted leading-relaxed flex-1">&ldquo;{t.body}&rdquo;</blockquote>
-                  <figcaption className="font-semibold text-[14px] text-white">- {t.name}</figcaption>
-                </figure>
-              ))}
-            </div>
+            <ReviewGrid reviews={reviews} tone="dark" />
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
               <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
               <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>

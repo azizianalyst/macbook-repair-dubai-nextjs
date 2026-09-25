@@ -9,6 +9,7 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -19,7 +20,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { Button } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
-import { pickReviews } from "@/lib/find-reviews";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
 
@@ -147,7 +148,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 /* ── MAIN COMPONENT ─────────────────────────────────────────────── */
 
 export default function MacBookAirScreenReplacement() {
-  const reviews = pickReviews(["Mehdi Karimi", "Sophie Bennett", "Carlos Rodriguez"]);
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/macbook-air-screen-replacement-dubai"), min: 3, seed: "/macbook-air-screen-replacement-dubai" });
 
   useSeo({
     title: "MacBook Air Screen Replacement Dubai — Same Day",

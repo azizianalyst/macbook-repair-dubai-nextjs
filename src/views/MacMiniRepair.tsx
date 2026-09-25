@@ -5,6 +5,8 @@ import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -71,11 +73,8 @@ const TIPS = [
   "Join online communities and forums to share tips and discover new ways to use your device.",
 ];
 
-const TESTIMONIALS = [
-  { name: "Mukhtar Ahmad", body: "I was looking for a trusted source to repair my Mac Mini because it was not turning on, and I came upon this service. They fixed the issue, and now it works perfectly. Thank you to the tech support team for your dependable and trustworthy service." },
-  { name: "Maryam Bilal", body: "Previously, my Mac Mini kept making strange noises and I didn't know what to do. Then I came across this reputable tech repair shop in Dubai. They investigated and resolved the issue. My device is now as peaceful and joyful as I am." },
-  { name: "Satish Sharma", body: "I recommend this service center. The price was more than reasonable, and the Apple battery was authentic and brand new (confirmed by the system report). They were friendly and helped me install it. Call them first for any laptop repairs or needs." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
   { q: "What types of issues can a Mac Mini repair service fix?", a: "We cover many issues, including hardware problems like faulty hard drives, RAM, and power supply issues. We also fix software-related problems such as OS crashes, data recovery, and virus removal. Our experienced technicians can diagnose and repair any problem." },
@@ -98,6 +97,7 @@ function CallButtons() {
 }
 
 export default function MacMiniRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-mini-repair-dubai"), min: 3, seed: "/mac-mini-repair-dubai" });
   useSeo(
     {
       title: "Mac Mini Repair Dubai - M1, M2, Intel Logic Board & SSD Experts",
@@ -262,17 +262,7 @@ export default function MacMiniRepair() {
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-          <div className="grid gap-md md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <ReviewGrid reviews={reviews} tone="dark" />
           <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
             <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>

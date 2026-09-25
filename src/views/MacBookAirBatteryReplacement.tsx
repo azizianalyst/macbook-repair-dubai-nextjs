@@ -9,6 +9,7 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
@@ -18,7 +19,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
-import { pickReviews } from "@/lib/find-reviews";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import type { LucideIcon } from "lucide-react";
@@ -124,11 +125,8 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: HardDrive,   title: "Data Privacy",            body: "Your MacBook is your business. We follow strict confidentiality procedures and never access personal data during battery replacements." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Laila K.",  body: "M3 MacBook Air battery was down to 4 hours on a full charge. New cell from MacBook Repair Dubai and I'm back to 15 hours. Same-day, fair price, done." },
-  { name: "Omar F.",   body: "Intel Air trackpad stopped clicking, turned out to be a swollen battery. Fixed same day with free pickup from Jumeirah. Excellent service." },
-  { name: "Priya N.",  body: "M2 Air was losing 40% overnight. Technician found it was the SSD power issue, not the battery, saved me the repair cost. Honest and knowledgeable." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQ_GROUPS = [
   {
@@ -215,7 +213,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 /* ── MAIN COMPONENT ─────────────────────────────────────────────── */
 
 export default function MacBookAirBatteryReplacement() {
-  const reviews = pickReviews(["Laila Khalil", "Omar Farhat", "Priya Nair"]);
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/macbook-air-battery-replacement-dubai"), min: 3, seed: "/macbook-air-battery-replacement-dubai" });
 
   useSeo(
     {
@@ -554,7 +552,7 @@ export default function MacBookAirBatteryReplacement() {
               <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
             </div>
             <div className="grid gap-lg md:grid-cols-3">
-              {(reviews.length ? reviews.map(r => ({ name: r.name, body: r.text })) : TESTIMONIALS).map((t) => (
+              {reviews.map((r) => ({ name: r.name, body: r.text })).map((t) => (
                 <figure key={t.name} className="flex flex-col gap-md p-xl rounded-2xl" style={{ background: "#242a30" }}>
                   <div className="flex gap-1" role="img" aria-label="5 star rating">
                     {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={15} className="fill-star text-star" aria-hidden />)}

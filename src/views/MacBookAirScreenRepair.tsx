@@ -9,6 +9,7 @@ import {
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -20,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
-import { pickReviews } from "@/lib/find-reviews";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
 
@@ -123,11 +124,8 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: HardDrive,   title: "Data Privacy",            body: "Your MacBook is your business. We follow strict confidentiality procedures and never access personal data during screen repairs." },
 ];
 
-const TESTIMONIALS = [
-  { name: "Mehdi K.",  body: "Brought my M2 MacBook Air in with a cracked screen. Same-day repair, genuine Apple panel, and True Tone still works. Really impressive — much faster and cheaper than Apple." },
-  { name: "Sophie B.", body: "Screen was flickering after a small drop. Turned out to be the display cable, not the panel — saved me hundreds. Shafiq was upfront about the cost from the start." },
-  { name: "Carlos R.", body: "M3 Air screen went completely black after liquid got near the hinge. Fixed the same day — they cleaned the connector and replaced the panel. Fantastic work, highly recommend." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQ_GROUPS = [
   {
@@ -223,7 +221,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 /* ── MAIN COMPONENT ─────────────────────────────────────────────── */
 
 export default function MacBookAirScreenRepair() {
-  const reviews = pickReviews(["Mehdi Karimi", "Sophie Bennett", "Carlos Rodriguez"]);
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/macbook-air-screen-repair-dubai"), min: 3, seed: "/macbook-air-screen-repair-dubai" });
 
   useSeo(
     {
@@ -582,7 +580,7 @@ export default function MacBookAirScreenRepair() {
               <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
             </div>
             <div className="grid gap-lg md:grid-cols-3">
-              {(reviews.length ? reviews.map(r => ({ name: r.name, body: r.text })) : TESTIMONIALS).map((t) => (
+              {reviews.map((r) => ({ name: r.name, body: r.text })).map((t) => (
                 <figure key={t.name} className="flex flex-col gap-md p-xl rounded-2xl" style={{ background: "#242a30" }}>
                   <div className="flex gap-1" role="img" aria-label="5 star rating">
                     {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={15} className="fill-star text-star" aria-hidden />)}

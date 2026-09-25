@@ -25,20 +25,24 @@ export function pickReviews(
   const min = opts?.min ?? 0;
   const onDevice = (r: TaggedReview) =>
     !devices || devices.length === 0 || r.services.some((s) => devices.includes(s));
+  // Rating-only reviews (no written text) render as nothing in ReviewGrid, which drops
+  // them AFTER selection - so a seed that landed on three of them produced an empty
+  // "What customers say" section (/macbook-pro-repair-dubai, 2026-09-25). Never pick them.
+  const hasText = (r: TaggedReview) => Boolean(r.text && r.text.trim());
 
   const out: TaggedReview[] = [];
   const used = new Set<string>();
   // 1. curated names first — but only those that match the page's device
   for (const n of names) {
     const r = REVIEWS.find((x) => x.name === n);
-    if (r && onDevice(r) && !used.has(r.name)) {
+    if (r && onDevice(r) && hasText(r) && !used.has(r.name)) {
       out.push(r);
       used.add(r.name);
     }
   }
   // 2. backfill from the on-device pool to reach `min`, rotated by seed for per-page variety
   if (out.length < min) {
-    const pool = REVIEWS.filter((r) => onDevice(r) && !used.has(r.name));
+    const pool = REVIEWS.filter((r) => onDevice(r) && hasText(r) && !used.has(r.name));
     const seed = opts?.seed ?? names.join("|");
     let h = 0;
     for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) | 0;

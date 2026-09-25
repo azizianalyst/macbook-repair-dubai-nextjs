@@ -146,8 +146,8 @@ export default function BlogIPhoneRepairNearMeDubai() {
             rows={[
               { model: "1. Physical address", ours: "Office #45, 10th Floor, Concord Tower, Dubai Media City - open Mon-Sat 9am-10pm" },
               { model: "2. Years in business", ours: "Since 10 October 2004 - 21 years, same name, same family ownership" },
-              { model: "3. Google reviews", ours: "1,400+ reviews, 4.8 average, fresh weekly" },
-              { model: "4. Warranty", ours: "Written: 30 days screens, 3 months batteries, 6 months logic boards" },
+              { model: "3. Google reviews", ours: "232+ reviews, 5.0 average, replied to personally" },
+              { model: "4. Warranty", ours: "Written: 3 months screens and batteries, 15 days board-level (extendable to 6 months), up to 12 months on most other hardware" },
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },
               { model: "6. Same-day repair", ours: "Screen, battery, back glass: 30-90 min. Logic board: 1-3 days" },
               { model: "7. Free diagnosis", ours: "Free, with written quote, no obligation" },

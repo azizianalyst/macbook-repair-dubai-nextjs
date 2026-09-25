@@ -4,6 +4,8 @@
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
@@ -100,12 +102,8 @@ const TOOLS = [
   "SIM Card Eject Tool", "Display Assembly Fixtures",
 ];
 
-const TESTIMONIALS = [
-  { name: "Julieta Encarnacion", body: "I enthusiastically recommend this shop for MacBook repair in Dubai. The staff are highly professional and exceptionally accommodating. They provide clear assessments of your laptop's condition and suggest appropriate solutions." },
-  { name: "Aron", body: "These guys are magicians! My laptop suddenly had motherboard issues, but just a quick WhatsApp message and within an hour they were at my doorstep to pick it up. Isn't that amazing?" },
-  { name: "Дмитрий Строков", body: "Very great service. Replaced battery, screen and keyboard for an old 2018 MacBook Pro. I've been nicely informed about the steps; the laptop was picked up and delivered to me very shortly after. Quality of work is very good - thank you guys." },
-  { name: "Iryna Buchynska", body: "We had trouble with my sister's Mac and the guys went the extra mile by collecting it from our home after the rain. A good service for decent money. Definitely recommended." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
   { q: "Are you an official or Apple Authorised Service Center?", a: "No - we are an independent Apple service center, not an Apple Authorised Service Provider. If your device is still covered by Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple, because that route is free for a covered fault. For everything else - out-of-warranty, older models, or component-level board repair Apple won't attempt - we're usually faster and around half the price." },
@@ -129,6 +127,7 @@ function CallButtons() {
 }
 
 export default function AppleServiceCenter() {
+  const reviews = pickReviews(["Aron", "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u0421\u0442\u0440\u043e\u043a\u043e\u0432", "Iryna Buchynska"], { devices: reviewDevicesForPath("/apple-service-center-dubai"), min: 3, seed: "/apple-service-center-dubai" });
   useSeo(
     {
       title: "Apple Service Center Dubai - Independent, Not Authorised",
@@ -272,17 +271,7 @@ export default function AppleServiceCenter() {
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Customer Reviews</h2>
           <p className="text-[16px] text-text-muted mb-lg">Don't take just our word for it - our satisfied customers say it best.</p>
-          <div className="grid gap-md md:grid-cols-2">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" role="img" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-text-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-text">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <ReviewGrid reviews={reviews} tone="dark" />
         </div>
       </section>
 
