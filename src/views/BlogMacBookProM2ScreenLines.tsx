@@ -107,9 +107,9 @@ export default function BlogMacBookProM2ScreenLines() {
           <BlogPriceTable
             caption="MacBook Pro M2 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M2 13-inch screen", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Pro 14-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Max 16-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 13-inch screen", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M2 Pro 14-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M2 Max 16-inch screen", ours: "Price on request", apple: "Price on request", note: "mini-LED panel, 90-day warranty, same-day" },
               { model: "Display cable (M2 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
               { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Panel vs cable vs GPU" },
             ]}
@@ -144,7 +144,7 @@ export default function BlogMacBookProM2ScreenLines() {
         },
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "MacBook Pro M2 screen repair covers the 13-inch, M2 Pro 14-inch and M2 Max 16-inch, plus the cheaper display cable replacement on the M2 13-inch. All come with a 12-month warranty, and diagnosis is free to confirm the exact fault first. Message us on WhatsApp for today's exact price on your model.",
+          a: "MacBook Pro M2 screen repair covers the 13-inch, M2 Pro 14-inch and M2 Max 16-inch, plus the cheaper display cable replacement on the M2 13-inch. All come with a 90-day warranty, and diagnosis is free to confirm the exact fault first. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat make MacBook Pro M2 display lines worse?",
@@ -156,7 +156,7 @@ export default function BlogMacBookProM2ScreenLines() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. LCD and OLED." },
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. Liquid Retina XDR and Retina LCD." },
         { label: "MacBook Pro M2 repair Dubai", href: "/macbook-pro-m2-repair-dubai", description: "All M2 models: 13-inch M2, 14/16-inch M2 Pro, M2 Max service." },
         { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "Full price guide for MacBook Pro screen repair, all models 2026." },
         { label: "MacBook Pro M2 common problems", href: "/blog/macbook-pro-m2-common-problems-dubai", description: "Full M2 issue guide covering SSD, screen, and battery." },

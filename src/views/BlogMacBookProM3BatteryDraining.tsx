@@ -113,8 +113,8 @@ export default function BlogMacBookProM3BatteryDraining() {
           <BlogPriceTable
             caption="MacBook Pro M3 battery replacement pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh OEM-grade cell, 3-month warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 3-month warranty, same-day" },
               { model: "Battery diagnostic", ours: "Free", apple: "Price on request", note: "Cycle count, capacity, cell voltage" },
             ]}
           />
@@ -152,7 +152,7 @@ export default function BlogMacBookProM3BatteryDraining() {
         },
         {
           q: "How much does MacBook Pro M3 battery replacement cost in Dubai?",
-          a: "We replace MacBook Pro M3 14-inch and 16-inch batteries at our Dubai workshop with a 12-month warranty on the replacement cell and same-day service in most cases. Pricing depends on your exact model and battery condition, and we are typically well below Apple. Message us on WhatsApp with your model for today's exact price.",
+          a: "We replace MacBook Pro M3 14-inch and 16-inch batteries at our Dubai workshop with a 3-month warranty and an 80% capacity guarantee on the replacement cell, and same-day service in most cases. Pricing depends on your exact model and battery condition, and we quote before any work so you can compare with Apple. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Is it safe to use MacBook Pro M3 with high battery drain during sleep?",

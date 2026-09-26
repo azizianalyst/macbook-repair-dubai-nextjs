@@ -85,21 +85,24 @@ export default function BlogMacBookScreenRepairCost() {
             but the backlight is divided into roughly 2,500 local dimming zones for HDR contrast.
           </p>
           <p>
-            For repair this means two things. The <strong>part costs more</strong> (about 60-80%
-            premium over standard Retina), and the <strong>local dimming algorithm needs
-            re-profiling</strong> after a swap. If the shop just bolts in a replacement and skips
-            the calibration, you'll see "blooming" (haloes around bright objects on a dark
-            background) within a week. We always profile before handing back.
+            For repair this means two things. The <strong>part costs more</strong> than a standard
+            Retina panel, and the <strong>replacement must be the exact assembly</strong> for your
+            model and size (including nano-texture on M4 and M5 models that have it). "Blooming"
+            (haloes around bright objects on a dark background) is normal on every mini-LED XDR
+            screen, original or replacement, and is not a sign of a bad repair. A fixed dark or
+            bright block is a fault. We check every dimming zone before handing back.
           </p>
 
           <h2 id="tandem-oled">Tandem OLED (iPad Pro) vs MacBook screens</h2>
           <p>
-            Apple has not yet shipped OLED on any MacBook as of April 2026 - every shipping MacBook
-            is still LCD. The Tandem OLED panels in the iPad Pro M4 are widely expected to migrate
-            to MacBook Pro in 2027-2028. When they do, repair pricing will jump significantly -
-            iPad Pro M4 OLED replacements already cost roughly twice what an iPad Pro M2 LCD
-            replacement does. If you're buying a MacBook Pro now and plan to keep it 5+ years,
-            today's Liquid Retina XDR is the cheaper-to-maintain choice.
+            Apple has not shipped OLED on any MacBook - every MacBook on sale in 2026 is LCD:
+            Liquid Retina on the Air and Neo, mini-LED Liquid Retina XDR on the 14″ and 16″ Pro,
+            including the M5. The tandem OLED panels Apple uses in the iPad Pro (M4 and M5) are
+            rumoured to come to a future MacBook Pro, but Apple has not announced one and the
+            timing is unclear. If it happens, expect screen repair on those models to cost more,
+            because a tandem OLED display assembly is an expensive part. If you're buying a
+            MacBook Pro now and plan to keep it 5+ years, today's Liquid Retina XDR is a
+            well-understood display to maintain.
           </p>
 
           <h2 id="flexgate">Flexgate explained - 2016-2017 MacBook Pro screens</h2>

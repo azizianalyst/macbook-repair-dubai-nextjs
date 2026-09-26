@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   Monitor, Laptop, HardDrive, Server,
@@ -89,7 +90,7 @@ const FAQ_GROUPS = [
     category: "Parts & warranty",
     items: [
       { q: "Do you use genuine Apple parts?", a: "We use 100% genuine Apple parts or certified OEM-grade replacements, depending on your preference and budget. We tell you exactly which type before we start. The choice is yours." },
-      { q: "What warranty do you provide?", a: "Written warranty up to 12 months on parts and labour, depending on the repair type. Battery replacements carry a 3-month capacity warranty. Logic board repairs carry a 90-day warranty. All warranties are documented and honoured, no questions asked." },
+      { q: "What warranty do you provide?", a: "Written warranty up to 12 months on parts and labour, depending on the repair type. Battery replacements carry 3 months with an 80% capacity guarantee, screens 90 days, and keyboard, logic board and liquid-damage repairs 15 days. All warranties are documented and honoured, no questions asked." },
     ],
   },
 ];
@@ -128,7 +129,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant={dark ? "secondary" : "outline"} size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -231,7 +232,7 @@ export default function MacRepairHub() {
                 { stat: "20+",   label: "Years in Dubai" },
                 { stat: "232+",  label: "Google reviews" },
                 { stat: "30 min",label: "Appointment repair" },
-                { stat: "12 mo", label: "Written warranty" },
+                { stat: "12 mo", label: "Max written warranty" },
               ].map(({ stat, label }, i) => (
                 <div key={label} className="py-lg px-xl flex flex-col justify-center"
                   style={{ borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : undefined, textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
@@ -410,7 +411,7 @@ export default function MacRepairHub() {
               { label: "Mac mini Repair Dubai",      href: "/mac-mini-repair-dubai" },
               { label: "iPhone Repair Dubai",        href: "/iphone-repair-dubai" },
               { label: "Apple Repair Dubai",         href: "/apple-repair-dubai" },
-            ].map((l) => <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>)}
+            ].map((l) => <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>)}
           </div>
         </section>
 

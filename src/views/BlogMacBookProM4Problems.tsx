@@ -7,12 +7,12 @@ export default function BlogMacBookProM4Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M4 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M4 common problems in Dubai? First OLED display issues, Thunderbolt 5 faults, memory pressure on 16GB M4. Expert fixes. Message us on WhatsApp for a quote."
+      seoDescription="MacBook Pro M4 common problems in Dubai: display faults, Thunderbolt 5 issues and memory pressure on 16GB models. Expert fixes and repair."
       path="/blog/macbook-pro-m4-common-problems-dubai"
       wide
       toc={[
         { id: "why-m4-problems", label: "Why does M4 have problems?" },
-        { id: "oled-display", label: "Step 1. First OLED display issues" },
+        { id: "oled-display", label: "Step 1. Liquid Retina XDR display issues" },
         { id: "thunderbolt5-m4", label: "Step 2. Thunderbolt 5 faults" },
         { id: "thermal-m4", label: "Step 3. Thermal throttling check" },
         { id: "memory-m4", label: "Step 4. 16GB memory pressure" },
@@ -23,41 +23,42 @@ export default function BlogMacBookProM4Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="The MacBook Pro M4 brought the first OLED display to the MacBook lineup. First-generation OLED panels, new Thunderbolt 5 ports, and macOS Sequoia bugs created a set of issues specific to M4 owners in Dubai. Most are free to fix. For screen repair, message us on WhatsApp for today's price on your model."
-      quickAnswer="MacBook Pro M4 common problems include: first-gen OLED dead pixels or uniformity banding (check on grey screen at 50% brightness), Thunderbolt 5 docks not recognised (update hub firmware), 16GB memory pressure under heavy workloads (quit Chrome and Teams), and thermal throttling on sustained tasks. Most are software fixes. For OLED screen replacement in Dubai, message us on WhatsApp for today's exact price."
+      hook="The MacBook Pro M4 kept the mini-LED Liquid Retina XDR display (it is not OLED) and brought Thunderbolt 5 to the M4 Pro and M4 Max. Display behaviour mistaken for faults, new Thunderbolt 5 ports, and early macOS Sequoia bugs created a set of issues specific to M4 owners in Dubai. Most are free to fix. For screen repair, message us on WhatsApp for today's price on your model."
+      quickAnswer="MacBook Pro M4 common problems: mini-LED display faults such as a dark zone, lines or dead pixels (a soft halo around bright objects is normal blooming), Thunderbolt 5 docks not recognised (update the hub firmware), memory pressure on 16GB, and throttling on sustained loads. Most are software fixes. Message us on WhatsApp for a screen repair price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-09-26"
       readingMinutes={10}
-      featuredImageAlt="MacBook Pro M4 common problems, technician testing first OLED display and Thunderbolt 5 ports at Dubai repair workshop"
+      featuredImageAlt="MacBook Pro M4 common problems, technician testing the Liquid Retina XDR display and Thunderbolt 5 ports at Dubai repair workshop"
       body={
         <>
           <h2 id="why-m4-problems">Why does the MacBook Pro M4 have problems?</h2>
           <p>
-            The MacBook Pro M4 (released November 2024) made two major changes to the MacBook Pro
-            lineup: it was the first MacBook Pro to use an OLED display, and it introduced
-            Thunderbolt 5 on Pro and Max models. Both are first-generation implementations with
-            known early-batch issues.
+            The MacBook Pro M4 (released November 2024) kept the mini-LED Liquid Retina XDR
+            display the 14-inch and 16-inch MacBook Pro have used since 2021 (it is not OLED),
+            added brighter SDR output and an optional nano-texture screen, and introduced
+            Thunderbolt 5 on Pro and Max models. Thunderbolt 5 is a first-generation
+            implementation with known early compatibility issues.
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li><strong>First-gen OLED MacBook Pro</strong>: dead pixels, uniformity banding, and colour shift at off-angles appear more often on first-batch OLED than on mature mini-LED panels</li>
+            <li><strong>Mini-LED display behaviour mistaken for faults</strong>: blooming around bright objects on a black background is normal local dimming; a fixed dark zone, lines or dead pixels are real faults</li>
             <li><strong>Thunderbolt 5 hub compatibility</strong>: existing TB3 and TB4 docks need firmware updates to work correctly at full TB5 speeds</li>
-            <li><strong>macOS Sequoia (15.0-15.1) bugs</strong>: the M4 shipped with Sequoia which had documented Wi-Fi drops and power management regressions, both fixed in 15.2+</li>
-            <li><strong>Base model 16GB memory</strong>: the M4 Neural Engine is more active than M3, increasing background task memory consumption on the base 16GB config</li>
-            <li><strong>Thinner 14-inch chassis</strong>: the M4 14-inch runs warmer than the M3 14-inch under sustained M4 Pro workloads due to the revised thermal design</li>
+            <li><strong>Early macOS Sequoia bugs</strong>: the M4 shipped with macOS Sequoia, and early point releases of any new macOS can carry Wi-Fi and power-management bugs. Update to the latest release first</li>
+            <li><strong>Base model 16GB memory</strong>: on-device AI features, browsers and chat apps push the base 16GB config closer to its ceiling</li>
+            <li><strong>14-inch chassis under sustained load</strong>: the M4 Pro has more cores than the M3 Pro in the same 14-inch chassis, so it runs warmer on long exports and builds</li>
           </ol>
 
-          <h2 id="oled-display">Step 1: How do I check my MacBook Pro M4 OLED display for problems?</h2>
+          <h2 id="oled-display">Step 1: How do I check my MacBook Pro M4 display for problems?</h2>
           <p>
-            The M4 is the first MacBook Pro with OLED. First-gen OLED MacBook Pro panels showed
-            a higher rate of uniformity complaints and dead pixels than the mini-LED panels in
-            M1, M2, and M3 models. Here's how to check yours:
+            The M4 MacBook Pro uses the same kind of display as the M1 Pro, M2 Pro and M3
+            models: a Liquid Retina XDR screen, which is an LCD lit by a mini-LED backlight split
+            into local dimming zones. It is not OLED. Here's how to check yours:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Grey screen uniformity test</strong>: open a solid grey fullscreen image at 50% brightness. Any visible darker or lighter bands on the left or right edge are panel uniformity variation. Mild banding within 5% luminance is within spec; visible banding at normal viewing distance is not</li>
-            <li><strong>Dead pixel check</strong>: open a solid black fullscreen, then solid white. A single pixel that is always lit on black (bright dot) or always off on white (dark dot) is a dead pixel. Apple's policy: one or more dead pixels within 3 inches of screen centre qualifies for replacement</li>
-            <li><strong>Colour shift at angles</strong>: OLED panels shift colour (often green or blue tint) when viewed from 30+ degrees off-axis. This is normal for OLED. It is not normal on the M4 display viewed directly head-on</li>
-            <li><strong>Image retention test</strong>: leave a high-contrast static image for 30 minutes, then switch to a solid grey screen. Faint ghosting that clears in under 60 seconds is normal OLED behaviour. Persistent ghosting beyond 2 minutes is a fault</li>
+            <li><strong>Black screen test</strong>: open a solid black fullscreen image in a dim room and move the cursor around. A soft halo that follows the cursor is blooming, normal for mini-LED. A fixed rectangular patch that stays lit, or a zone that stays dark on other colours, is a failed backlight zone</li>
+            <li><strong>Grey screen uniformity test</strong>: open a solid grey fullscreen image at 50% brightness. Slightly darker corners are common on LCDs. Sharp-edged dark blocks, bands or lines that stay in place are a panel fault</li>
+            <li><strong>Dead pixel check</strong>: open a solid black fullscreen, then solid white. A single pixel that is always lit on black (bright dot) or always off on white (dark dot) is a dead pixel. On a machine in warranty, Apple assesses these under its own display policy</li>
+            <li><strong>Pressure marks</strong>: key-shaped marks or bright spots usually come from closing the lid on a pen, earphones or a charger tip. If they show on every colour, the LCD layer is damaged and the display assembly needs replacing</li>
           </ul>
 
           <h2 id="thunderbolt5-m4">Step 2: Does Thunderbolt 5 cause problems on MacBook Pro M4?</h2>
@@ -108,12 +109,13 @@ export default function BlogMacBookProM4Problems() {
 
           <h2 id="dubai-heat-m4">Step 5: Does Dubai heat affect MacBook Pro M4?</h2>
           <p>
-            The M4's OLED display is more sensitive to heat than the mini-LED in M3. OLED organic
-            compounds degrade irreversibly above 55-60°C, and a car dashboard in UAE summer
-            hits 80-90°C.
+            The M4 display is an LCD, and liquid crystal is heat-sensitive: a very hot panel looks
+            darker and responds more slowly until it cools, and sustained heat stresses the
+            adhesives inside the display assembly. Apple rates the MacBook Pro for storage up to
+            45°C, and a car in UAE summer sun goes far past that.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Never leave the M4 MacBook Pro in a parked car in Dubai, even 20 minutes can cause permanent OLED damage and battery degradation</li>
+            <li>Never leave the M4 MacBook Pro in a parked car in Dubai. Heat that high can cause patches or layer separation in the display and accelerates battery degradation</li>
             <li>Floor-to-ceiling glass in Dubai offices: if sunlight hits the closed lid, internal temperatures rise significantly even when the machine is off. Use a sleeve or keep it away from direct sun</li>
             <li>Optimised Battery Charging (System Settings → Battery) stops the battery sitting at 100% overnight, reducing heat-accelerated cell degradation</li>
           </ul>
@@ -126,8 +128,8 @@ export default function BlogMacBookProM4Problems() {
             <tbody>
               <tr>
                 <td>Display type</td>
-                <td>Mini-LED (Liquid Retina XDR), no OLED issues</td>
-                <td>OLED: dead pixels, uniformity, and image retention possible</td>
+                <td>Mini-LED Liquid Retina XDR (LCD): blooming normal, zone faults need a new assembly</td>
+                <td>Same mini-LED Liquid Retina XDR (not OLED): brighter SDR, optional nano-texture</td>
               </tr>
               <tr>
                 <td>Thunderbolt</td>
@@ -151,16 +153,16 @@ export default function BlogMacBookProM4Problems() {
           <BlogPriceTable
             caption="MacBook Pro M4 repair services"
             rows={[
-              { model: "MacBook Pro M4 14\" OLED screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M4 16\" OLED screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M4 battery 14\"", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M4 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, same-day when in stock" },
+              { model: "MacBook Pro M4 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, same-day when in stock" },
+              { model: "MacBook Pro M4 battery 14\"", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 3-month warranty + 80% capacity guarantee" },
               { model: "MacBook Pro M4 battery 16\"", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, same-day" },
               { model: "Thunderbolt 5 port repair", ours: "Price on request", apple: "Price on request", note: "Single port or controller rework" },
               { model: "Thermal cleaning + repaste (M4)", ours: "Price on request", apple: "Not offered", note: "Fixes sustained throttling" },
             ]}
           />
           <p>
-            Same-day on screen and battery jobs when dropped before 11am.{" "}
+            Same-day on screen and battery jobs when the part is in stock and you drop off before 11am; otherwise allow 1–2 days.{" "}
             <Link to="/macbook-pro-m4-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro M4 repair Dubai →
             </Link>
@@ -187,12 +189,12 @@ export default function BlogMacBookProM4Problems() {
       }
       faqs={[
         {
-          q: "Why does my MacBook Pro M4 OLED screen have a faint band on one side?",
-          a: "Faint uniformity banding on the left or right edge of first-gen OLED MacBook Pro M4 panels is a known issue with early batches. If the banding is visible at normal viewing distances on a solid grey background, this qualifies as a display defect. Under warranty this is a free screen replacement. Out of warranty we replace OLED panels too. Message us on WhatsApp for the exact price on your model.",
+          q: "Why does my MacBook Pro M4 screen have a glow or a faint band?",
+          a: "A soft glow around bright objects on a black background is blooming, a normal trait of the M4's mini-LED local dimming. The M4 is not OLED. A sharp-edged band, a dark block or lines that stay in place on a solid grey screen are a display fault. In warranty, Apple assesses it; out of warranty we replace the display assembly. Message us on WhatsApp for the exact price on your model.",
         },
         {
-          q: "Does Dubai heat permanently damage MacBook Pro M4 OLED?",
-          a: "Yes. OLED organic compounds degrade irreversibly above approximately 60°C internal panel temperature. A parked car dashboard in Dubai summer hits 80-90°C, which is well beyond the safe limit. Even 30 minutes in a hot car can cause permanent OLED burn-in or dead pixels. The battery will also degrade significantly in the same event.",
+          q: "Does Dubai heat permanently damage the MacBook Pro M4 display?",
+          a: "It can. Apple rates the MacBook Pro for storage up to 45°C, and a parked car in a Dubai summer goes well past that. Sustained heat can cause patches, uneven brightness or layer separation in the display assembly, and the battery ages faster in the same event. Normal use in an air-conditioned room is fine. Never leave the M4 in a car.",
         },
         {
           q: "How long should MacBook Pro M4 battery last?",
@@ -204,11 +206,11 @@ export default function BlogMacBookProM4Problems() {
         },
         {
           q: "How long does MacBook Pro M4 screen replacement take in Dubai?",
-          a: "OLED screen replacement on M4 takes 90-120 minutes for the 14-inch and 2 hours for the 16-inch. We calibrate white balance and brightness after fitting. Drop off before 11am for same-day collection.",
+          a: "When the display assembly is in stock, replacement on M4 takes 90-120 minutes for the 14-inch and 2 hours for the 16-inch. We check white balance, brightness uniformity and every backlight zone after fitting. Drop off before 11am for same-day collection; if the assembly has to be sourced, allow 1–2 days.",
         },
         {
-          q: "Is it safe to use MacBook Pro M4 with OLED image retention?",
-          a: "Temporary image retention that clears in under 60 seconds is safe and normal. Persistent image retention visible on a grey screen after 5+ minutes is a panel degradation issue. Continue using it but reduce static screen time (enable screensaver after 5 minutes, lower brightness) and book a diagnosis.",
+          q: "Is it safe to keep using a MacBook Pro M4 with a dark zone or lines on screen?",
+          a: "Yes, a display fault does not harm the rest of the machine, and an external monitor works as a stopgap. The M4 is an LCD, not OLED, so it does not get OLED-style burn-in. A dark zone, lines or a spreading black blot will not fix themselves, and cracks can spread. Back up your data and book a free diagnosis.",
         },
       ]}
       relatedLinks={[

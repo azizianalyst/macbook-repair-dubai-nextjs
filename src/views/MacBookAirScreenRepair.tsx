@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   Monitor, ShieldCheck, Clock, Award,
@@ -134,7 +135,7 @@ const FAQ_GROUPS = [
       { q: "How much does MacBook Air screen repair cost in Dubai?", a: "It depends on the model — the Intel 11-inch, the M1 13-inch, and the M2 through M4 panels are all different parts, and the 15-inch costs more than the 13-inch. Diagnosis is free and we quote your exact model before starting. All prices include the panel, labour, and warranty — no diagnostic fee. WhatsApp the model name or chip for the exact figure." },
       { q: "How long does MacBook Air screen repair take in Dubai?", a: "Same day on Intel, M1, and M2 13\" when the panel is in stock (3–4 hours including adhesive cure). M2 15\" and M3 13\"/15\" are usually same day or next day. M4 models currently take 1–2 days. WhatsApp the serial to confirm before you travel." },
       { q: "Do you offer free pickup for MacBook Air screen repair in Dubai?", a: "Yes — free pickup and delivery across Dubai mainland, including Marina, Downtown, JBR, JLT, Palm Jumeirah, Business Bay and Al Barsha. Same-hour pickup is available from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
-      { q: "How much is MacBook Air screen repair compared to the Apple Store?", a: "Apple charges from around AED 900–1,200 for an M1/M2 Air screen out of warranty (AED 1,100–1,900 for M3/M4), with a 5–14 business day wait and no pickup option. We quote after a free diagnosis, finish same day to 2 days, and offer free pickup across Dubai. Apple does not service Intel models it has declared vintage — we still repair them, quoted per model." },
+      { q: "How much is MacBook Air screen repair compared to the Apple Store?", a: "Apple does not publish a MacBook Air screen price in the UAE: it inspects the Mac first and usually replaces the whole display assembly, and it has no pickup option. We quote after a free diagnosis, finish same day to 2 days, and offer free pickup across Dubai. Apple does not service Intel models it has declared vintage — we still repair them, quoted per model." },
     ],
   },
   {
@@ -207,7 +208,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air screen repair quote please. Model: ")}`} target="_blank" rel="noopener noreferrer">
+        <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air screen repair quote please. Model: ")}`)} target="_blank" rel="noopener noreferrer">
           <MessageCircle aria-hidden /> WhatsApp Us
         </a>
       </Button>
@@ -664,7 +665,7 @@ export default function MacBookAirScreenRepair() {
               { label: "MacBook Water Damage Repair Dubai",   href: "/macbook-water-damage-repair-dubai" },
               { label: "Mac Repair Dubai",                    href: "/mac-repair-dubai" },
             ].map((l) => (
-              <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>
+              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>
             ))}
           </div>
         </section>

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // MacBook Keyboard Repair - re-skinned in the dark theme to match the battery /
 // screen repair pages (the canonical dark design). All content, pricing, problems,
 // process, parts, warranty, comparison, reviews and FAQs are preserved verbatim;
@@ -107,8 +108,8 @@ const FAQS: FAQ[] = [
 const COMPARISON = [
   ["Repair window",                "Same day to 2 days",                          "5 to 14 business days, mail-in"],
   ["Single key cap (Magic)",       "Free diagnosis, then a quote",                 "Refused - full keyboard only"],
-  ["Magic Keyboard full swap",     "Free diagnosis, then a quote",                 "AED 1,449 (Apple list)"],
-  ["Butterfly top case (out of program)", "Free diagnosis, then a quote",         "AED 1,829 to AED 2,449 (Apple list)"],
+  ["Magic Keyboard full swap",     "Free diagnosis, then a quote",                 "No published price - quoted after inspection"],
+  ["Butterfly top case (out of program)", "Free diagnosis, then a quote",         "No published price - quoted after inspection"],
   ["Layout change (Arabic / Russian)", "Free diagnosis, then a quote",            "Refused"],
   ["Free pickup in Dubai",         "Yes",                                          "No, customer must courier"],
   ["Warranty",                     "15 days written",                              "12 months"],
@@ -179,7 +180,7 @@ export default function MacBookKeyboardRepair() {
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
-                    <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Usman, MacBook keyboard repair quote please. Model + which keys: ")}`} target="_blank" rel="noopener noreferrer">
+                    <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Usman, MacBook keyboard repair quote please. Model + which keys: ")}`)} target="_blank" rel="noopener noreferrer">
                       <MessageCircle aria-hidden /> Get a quote on WhatsApp
                     </a>
                   </Button>
@@ -236,7 +237,7 @@ export default function MacBookKeyboardRepair() {
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
               <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>
         </div>
@@ -514,7 +515,7 @@ export default function MacBookKeyboardRepair() {
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
             </div>
           </div>
         </section>
@@ -527,7 +528,7 @@ export default function MacBookKeyboardRepair() {
               Send the model, year, and a short video of the keys that fail. Free pickup across Dubai mainland. 15-day written warranty on every keyboard fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
-              <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
+              <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a></Button>
             </div>
           </div>
@@ -561,7 +562,7 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
   const href = whatsappMessage ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}` : NAP.whatsappUrl;
   return (
     <div className="flex flex-wrap gap-sm shrink-0">
-      <Button asChild variant="whatsapp" size="lg"><a href={href} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
+      <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );

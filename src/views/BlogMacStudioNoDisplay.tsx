@@ -172,7 +172,8 @@ export default function BlogMacStudioNoDisplay() {
           <p>
             The cost depends on which part failed, and our free diagnosis tells you exactly that
             before any work begins. Because we repair the failed component instead of replacing the
-            whole logic board, our prices stay well under Apple and most third-party quotes.
+            whole logic board, you pay for the part that failed - and we quote before any work so you
+            can compare with Apple.
           </p>
           <BlogPriceTable
             caption="Mac Studio no display repair cost in Dubai"

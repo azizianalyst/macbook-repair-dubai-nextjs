@@ -13,7 +13,7 @@ const COMPARISON: { factor: string; apple: string; aasp: string; us: string }[] 
   { factor: "Typical cost",
     apple: "Highest, full Apple service pricing",
     aasp: "Apple's published price list",
-    us: "Lower - free diagnosis, written quote per model before any work" },
+    us: "Free diagnosis, then a written quote per model before any work, so you can compare" },
   { factor: "Parts",
     apple: "Genuine Apple only",
     aasp: "Genuine Apple only",
@@ -25,7 +25,7 @@ const COMPARISON: { factor: string; apple: string; aasp: string; us: string }[] 
   { factor: "Warranty on the repair",
     apple: "12 months",
     aasp: "12 months (or remaining Apple cover)",
-    us: "written warranty up to 12 months + 3-month battery cover" },
+    us: "Written, by repair type: up to 12 months on hardware parts, 90 days on screens, 3 months on batteries, 15 days on board work" },
   { factor: "Turnaround",
     apple: "Often sent off-site, can take longer",
     aasp: "Typically a few days",
@@ -120,14 +120,16 @@ export default function WhereToRepairMacBookDubai() {
         { title: "Free pickup or walk in",       body: "Free door-to-door collection anywhere in Dubai, or drop in to our Concord Tower workshop in Media City, 9 am - 10 pm Mon-Sat." },
         { title: "Free diagnosis & written quote", body: "We diagnose the real fault and send a fixed written quote - including an honest note if an Apple Store or AASP claim would serve you better." },
         { title: "Approve & we repair",          body: "Most common repairs finish the same day at component level. You only pay once you approve the quote." },
-        { title: "Return + warranty of up to 12 months",     body: "Free return delivery with a written warranty of up to 12 months on the repair (3 months on batteries)." },
+        { title: "Return + warranty of up to 12 months",     body: "Free return delivery with a written warranty of up to 12 months on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "written warranty up to 12 months on the replaced part and the workmanship.",
-        "3-month cover on battery replacements.",
+        "Up to 12 months on replaced hardware parts such as trackpads, ports and SSDs.",
+        "90 days on screens; 3 months on batteries, with an 80% capacity guarantee.",
+        "15 days on keyboard, logic-board and liquid-damage work.",
         "Same fault returns inside the period? We re-repair free - no quibbling.",
-        "Honest, single warranty policy - not a headline figure the fine print contradicts.",
+        "The period for your repair is written on the invoice before you pay.",
       ]}
       faqs={[
         { q: "Is independent MacBook repair as good as the Apple Store?", a: "For out-of-warranty and board-level work, an independent specialist is often better value - we repair the actual failed component where Apple replaces the whole logic board. For in-warranty or AppleCare+ repairs, the Apple Store or an authorised centre is the right call, and we'll tell you so." },

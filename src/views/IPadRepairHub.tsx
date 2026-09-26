@@ -1,10 +1,15 @@
 "use client";
+// /ipad-repair-dubai/ - iPad cluster hub, rebuilt 2026-09-26 (SEO master plan, Phase 3 build 5).
+// Targets: ipad repair dubai, ipad repair, ipad repair near me, apple ipad repair dubai,
+// ipad repair uae / abu dhabi, ipad pro repair, ipad charging port repair.
+// Current Apple line-up first (src/content/ipad-cluster.ts, verified 26 Sep 2026), older
+// generations after. No prices of ours anywhere - quotes go through WhatsApp.
+import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
-  Monitor, BatteryCharging, Droplets, PlugZap, Code2, Database,
-  Cpu, Camera, Volume2, Home, Wifi,
-  Wrench, ShieldCheck, Clock, Award, Search, BadgeCheck, Truck,
-  CheckCircle2,
+  Monitor, BatteryCharging, Droplets, PlugZap, Database,
+  Cpu, Camera, Home,
+  ShieldCheck, Clock, Search, BadgeCheck, Truck, Layers,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -16,85 +21,128 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { StatBand } from "@/components/blocks/StatBand";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { CtaBand } from "@/components/blocks/CtaBand";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { pageWithSpeakable } from "@/lib/schema";
+import { SITE } from "@/lib/seo";
+import { NAP, REVIEW_COUNT, HOURS, TEAM } from "@/content/site";
+import { CURRENT_IPADS, OLDER_IPAD_PAGES, ipadWa } from "@/content/ipad-cluster";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
-const MODEL_PAGES = [
-  ["iPad Pro 13\" M5", "/ipad-pro-13-m5-repair-dubai"], ["iPad Pro 13\" M4", "/ipad-pro-13-m4-repair-dubai"], ["iPad Pro 12.9\" M2", "/ipad-pro-12.9-m2-repair-dubai"], ["iPad Pro 12.9\" M1", "/ipad-pro-12.9-m1-repair-dubai"], ["iPad Pro 11\" M5", "/ipad-pro-11-m5-repair-dubai"], ["iPad Pro 11\" M4", "/ipad-pro-11-m4-repair-dubai"], ["iPad Pro 11\" M2", "/ipad-pro-11-m2-repair-dubai"], ["iPad Pro 11\" M1", "/ipad-pro-11-m1-repair-dubai"],
-  ["iPad Air M4 13\"", "/ipad-air-m4-13-repair-dubai"], ["iPad Air M4 11\"", "/ipad-air-m4-11-repair-dubai"], ["iPad Air M3 13\"", "/ipad-air-m3-13-repair-dubai"], ["iPad Air M3 11\"", "/ipad-air-m3-11-repair-dubai"], ["iPad Air M2 13\"", "/ipad-air-m2-13-repair-dubai"], ["iPad Air M2 11\"", "/ipad-air-m2-11-repair-dubai"], ["iPad Air 5", "/ipad-air-5-repair-dubai"], ["iPad Air 4", "/ipad-air-4-repair-dubai"],
-  ["iPad 11th gen", "/ipad-11th-gen-repair-dubai"], ["iPad 10th gen", "/ipad-10th-gen-repair-dubai"], ["iPad 9th gen", "/ipad-9th-gen-repair-dubai"], ["iPad (older gen)", "/ipad-older-gen-repair-dubai"],
-  ["iPad mini 7", "/ipad-mini-7-repair-dubai"], ["iPad mini 6", "/ipad-mini-6-repair-dubai"], ["iPad mini 5", "/ipad-mini-5-repair-dubai"],
-];
+const PATH = "/ipad-repair-dubai";
+const PREFILL = "Hi, I need an iPad repair. Model and fault:";
+// Roster: "iPad repair · boards, ports & displays".
+const TECH = TEAM.find((t) => t.name === "Shafeeq")!;
+const inlineLink = "text-accent underline underline-offset-2";
 
 const SERVICE_PAGES = [
-  ["Screen Repair", "/ipad-screen-repair-dubai"], ["Battery Replacement", "/ipad-battery-replacement-dubai"], ["Charging Port", "/ipad-charging-port-repair-dubai"], ["Back Glass", "/ipad-back-glass-repair-dubai"], ["Camera Repair", "/ipad-camera-repair-dubai"], ["Speaker", "/ipad-speaker-repair-dubai"], ["Home Button", "/ipad-home-button-repair-dubai"], ["Power Button", "/ipad-power-button-repair-dubai"], ["Smart Connector", "/ipad-smart-connector-repair-dubai"], ["Water Damage", "/ipad-water-damage-repair-dubai"], ["Software Reset", "/ipad-software-reset-dubai"], ["Full Diagnostic", "/ipad-full-diagnostic-dubai"], ["iCloud Unlock", "/ipad-icloud-unlock-dubai"], ["Pencil Compatibility", "/ipad-pencil-compatibility-dubai"],
+  ["Screen Repair", "/ipad-screen-repair-dubai"], ["Battery Replacement", "/ipad-battery-replacement-dubai"], ["Charging Port", "/ipad-charging-port-repair-dubai"], ["Back Glass", "/ipad-back-glass-repair-dubai"], ["Camera Repair", "/ipad-camera-repair-dubai"], ["Speaker", "/ipad-speaker-repair-dubai"], ["Home Button", "/ipad-home-button-repair-dubai"], ["Power Button", "/ipad-power-button-repair-dubai"], ["Smart Connector", "/ipad-smart-connector-repair-dubai"], ["Water Damage", "/ipad-water-damage-repair-dubai"], ["Logic Board", "/ipad-logic-board-repair-dubai"], ["Data Recovery", "/ipad-data-recovery-dubai"], ["Software Reset", "/ipad-software-reset-dubai"], ["Full Diagnostic", "/ipad-full-diagnostic-dubai"], ["iCloud Unlock", "/ipad-icloud-unlock-dubai"], ["Pencil Compatibility", "/ipad-pencil-compatibility-dubai"],
 ];
 
-const SERVICES: { title: string; body: string; Icon: LucideIcon; href?: string }[] = [
-  { Icon: Monitor,         title: "Screen Repair",          href: "/ipad-screen-repair-dubai",          body: "Cracked or shattered display? We replace iPad Pro OLED panels, Air LCD panels, and standard iPad glass with same-day service on most models." },
-  { Icon: BatteryCharging, title: "Battery Replacement",    href: "/ipad-battery-replacement-dubai",    body: "Battery draining fast or swelling? We fit genuine-grade cells on all iPad models and recalibrate for accurate charge reporting." },
-  { Icon: PlugZap,         title: "Charging Port Repair",   href: "/ipad-charging-port-repair-dubai",   body: "iPad not charging? We repair USB-C and Lightning charging ports, smart connectors, and charging IC faults on all models." },
-  { Icon: Camera,          title: "Camera Repair",          href: "/ipad-camera-repair-dubai",          body: "Blurry or non-functioning camera? We replace front and rear camera modules and restore Face ID / Touch ID to full function." },
-  { Icon: Cpu,             title: "Logic Board Repair",     href: undefined,                             body: "Component-level board repair: chip replacement, micro-solder, power-rail faults. We fix what Apple would replace at full-board cost." },
-  { Icon: Droplets,        title: "Water Damage Repair",    href: "/ipad-water-damage-repair-dubai",    body: "Liquid spill? Stop using it right away and contact us. Ultrasonic board clean and component repair restore most water-damaged iPads." },
-  { Icon: Volume2,         title: "Speaker Repair",         href: "/ipad-speaker-repair-dubai",         body: "Crackling, muffled, or silent audio? We repair loudspeaker assemblies and microphone modules on all iPad generations." },
-  { Icon: Home,            title: "Home Button Repair",     href: "/ipad-home-button-repair-dubai",     body: "Home button or Touch ID not responding? We replace the button assembly and pair a new Touch ID sensor for full function." },
-  { Icon: Database,        title: "Data Recovery",          href: undefined,                             body: "Lost files or contacts? We recover data from broken-screen iPads, water-damaged boards, and failed SSDs." },
-  { Icon: Code2,           title: "Software Reset",         href: "/ipad-software-reset-dubai",         body: "Boot loops, frozen OS, or activation issues? We diagnose and fix software problems without erasing your data where possible." },
-  { Icon: Wifi,            title: "Wi-Fi & Connectivity",   href: undefined,                             body: "Can't connect or dropping Wi-Fi? We repair antenna cables, Wi-Fi modules, and Bluetooth chips on all iPad models." },
-  { Icon: Monitor,         title: "Back Glass Repair",      href: "/ipad-back-glass-repair-dubai",      body: "Cracked rear glass? We replace the back panel on iPad Pro models and restore the original finish." },
+const SERVICES: { title: string; body: string; Icon: LucideIcon; href: string }[] = [
+  { Icon: Monitor,         title: "Screen Repair",        href: "/ipad-screen-repair-dubai",        body: "Cracked glass, dead touch, lines or dark patches. Full display assemblies on laminated models; glass and digitiser only on a standard iPad whose LCD still works." },
+  { Icon: BatteryCharging, title: "Battery Replacement",  href: "/ipad-battery-replacement-dubai",  body: "Fast drain, shutdowns at 20-30% or a swollen case. The glued cell is tested first, removed safely and the display re-sealed." },
+  { Icon: PlugZap,         title: "Charging Port Repair", href: "/ipad-charging-port-repair-dubai", body: "USB-C or Lightning that is loose, intermittent or dead. We check the port and the charging circuit before quoting." },
+  { Icon: Droplets,        title: "Water Damage Repair",  href: "/ipad-water-damage-repair-dubai",  body: "Power it off and don't charge it. The board is cleaned and inspected, then we quote for what the liquid actually reached." },
+  { Icon: Cpu,             title: "Logic Board Repair",   href: "/ipad-logic-board-repair-dubai",   body: "No power, boot loops, no charge after a port swap. Component-level diagnosis and micro-soldering in our Media City workshop." },
+  { Icon: Database,        title: "Data Recovery",        href: "/ipad-data-recovery-dubai",        body: "Photos and files from iPads with broken screens, liquid damage or board faults." },
+  { Icon: Camera,          title: "Camera Repair",        href: "/ipad-camera-repair-dubai",        body: "Blurry, black or shaking front and rear cameras. Modules replaced and tested." },
+  { Icon: Layers,          title: "Back Glass Repair",    href: "/ipad-back-glass-repair-dubai",    body: "Cracked rear glass on iPad Pro models, replaced and sealed." },
+  { Icon: Home,            title: "Buttons & Speakers",   href: "/ipad-home-button-repair-dubai",   body: "Home, power and volume buttons and loudspeakers. If Touch ID is involved, we tell you before we start whether it can be kept." },
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Search,      title: "Free Diagnosis",           body: "Walk in or WhatsApp. Our technician inspects your iPad, identifies the fault, and explains the options, free of charge, even if you walk away." },
-  { Icon: Clock,       title: "Quote Before Repair",      body: "Final written price on WhatsApp before any repair starts. Approve, decline, or collect your device, your choice, zero obligation." },
-  { Icon: ShieldCheck, title: "Quality Check & Warranty", body: "After repair we run a full function test covering screen, touch, cameras, and connectivity. Written warranty up to 12 months included." },
+  { Icon: Search,      title: "Free diagnosis",          body: "WhatsApp a photo and your model, walk in, or book a free pickup. We test the iPad and tell you what is wrong, free, even if you decide not to repair." },
+  { Icon: Clock,       title: "Written quote first",     body: "Price, part grade (genuine or quality-tested) and timing come in writing on WhatsApp. Nothing is repaired until you approve." },
+  { Icon: ShieldCheck, title: "Repair, test, warranty",  body: "We test display, touch, Pencil, cameras, charging and Wi-Fi, then return the iPad with the written warranty for that repair type." },
 ];
 
-const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Award,       title: "Experienced Technicians", body: "Our technicians handle every iPad model from the entry-level standard iPad to the iPad Pro M5, with chip-level board repair experience." },
-  { Icon: ShieldCheck, title: "Genuine Parts",           body: "We use original Apple or OEM-grade replacement parts to ensure your iPad performs like new; and we label which you're getting before work starts." },
-  { Icon: Clock,       title: "Same-Day Delivery",       body: "Most iPad screen and battery jobs finish the same day. Free door-to-door pickup and return delivery across Dubai." },
-  { Icon: Truck,       title: "Free Pickup Dubai-wide",  body: "Free courier pickup and return delivery from any Dubai address. WhatsApp your model and area. We confirm collection within minutes." },
-  { Icon: Cpu,         title: "Chip-Level Repairs",      body: "We repair at component level, not just module-swap. Board repairs Apple would quote as 'unrepairable' are handled in our Dubai Media City workshop." },
+const FAULTS: { title: string; body: ReactNode }[] = [
+  {
+    title: "Screens: digitiser, LCD or OLED",
+    body: (
+      <>
+        The touch glass (digitiser) and the panel that makes the picture are separate parts on the standard iPad and one bonded assembly on Air, mini and Pro. Lines, dark spots and flicker point to the panel, not the glass: see{" "}
+        <Link to="/blog/ipad-screen-lines-dark-spots/" className={inlineLink}>lines and dark spots on an iPad screen</Link>. Full detail on{" "}
+        <Link to="/ipad-screen-repair-dubai/" className={inlineLink}>iPad screen repair</Link>.
+      </>
+    ),
+  },
+  {
+    title: "Batteries",
+    body: (
+      <>
+        Apple says an iPad battery is designed to keep up to 80% of its original capacity at 1,000 complete charge cycles. The cell is glued under the display, so replacing it is a longer job than on a phone. We test it before replacing anything:{" "}
+        <Link to="/ipad-battery-replacement-dubai/" className={inlineLink}>iPad battery replacement</Link>.
+      </>
+    ),
+  },
+  {
+    title: "Charging ports",
+    body: (
+      <>
+        USB-C on current models and Lightning on older ones wear, collect lint and loosen. Some only need cleaning; others need the port or the charging circuit repaired. See{" "}
+        <Link to="/ipad-charging-port-repair-dubai/" className={inlineLink}>iPad charging port repair</Link>, or{" "}
+        <Link to="/blog/ipad-not-charging-dubai/" className={inlineLink}>why an iPad stops charging</Link> first.
+      </>
+    ),
+  },
+  {
+    title: "Liquid and board faults",
+    body: (
+      <>
+        Liquid damage and no-power faults are board-level work. They take longer, carry a 15-day warranty, and are quoted only after inspection:{" "}
+        <Link to="/ipad-water-damage-repair-dubai/" className={inlineLink}>water damage</Link> ·{" "}
+        <Link to="/ipad-logic-board-repair-dubai/" className={inlineLink}>logic board</Link>.
+      </>
+    ),
+  },
 ];
 
-// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
-// verified Google review library. Real reviews render below via pickReviews().
-
-const FAQ_GROUPS = [
+const FAQS = [
   {
-    category: "Pricing & booking",
-    items: [
-      { q: "How much does iPad repair cost in Dubai?", a: "It depends on your exact model and fault, screen, battery, charging port, and water damage are all priced individually. Message us on WhatsApp with your iPad model for today's exact price, confirmed in writing after a free diagnosis with no obligation to proceed." },
-      { q: "How long does iPad repair take?", a: "Most common repairs (screen, battery, charging port) are completed the same day, often in 2–4 hours. Logic board and water damage repairs take 24–72 hours depending on severity. We confirm the timeline at diagnosis." },
-      { q: "Do you offer free pickup in Dubai?", a: "Yes. Free door-to-door pickup and return delivery anywhere in Dubai. WhatsApp us your address and we arrange collection same day." },
-    ],
+    q: "How much does iPad repair cost in Dubai?",
+    a: "It depends on the model and the fault: glass on an iPad (A16) and a tandem OLED panel on an iPad Pro (M5) are very different parts. Send your model and a photo on WhatsApp for a quote, confirmed in writing after a free diagnosis. For comparison, Apple's UAE battery fees for current models are listed on our iPad battery page.",
   },
   {
-    category: "Parts & warranty",
-    items: [
-      { q: "Do you use genuine Apple parts?", a: "We use original Apple parts where available and OEM-grade alternatives otherwise; and we tell you which before work starts. Every iPad repair carries a written warranty up to 12 months." },
-      { q: "Is it worth replacing an iPad screen?", a: "Almost always yes. A screen replacement extends iPad life by years at a fraction of the cost of a new device. Even on older iPads (iPad 9, iPad Air 4), repair is far cheaper than buying new, message us on WhatsApp for the exact price on your model." },
-    ],
+    q: "How long does an iPad repair take?",
+    a: "Screen, battery and charging-port jobs are often finished the same day when the part is on the shelf. Parts for the newest iPad Pro and iPad Air are usually ordered for your model, which adds a few working days. Board and liquid-damage work takes longer. We confirm timing before you drop off.",
   },
   {
-    category: "Specific repairs",
-    items: [
-      { q: "Will replacing the screen erase my data?", a: "No. Screen replacement is entirely separate from data storage. Your files, apps, and settings remain completely intact unless the board itself is damaged." },
-      { q: "Can you fix iPad Pro OLED display?", a: "Yes. iPad Pro M4 and newer use OLED panels. We source genuine Apple OLED displays and replace them with full ProMotion and True Tone calibration restored. Repair costs are higher than LCD models due to panel cost." },
-      { q: "Can you repair iPad that won't charge or turn on?", a: "Yes. We diagnose the fault, dead battery, failed charging IC, port damage, or board fault, and quote for the specific component. Most won't-charge faults are fixed same day." },
-    ],
+    q: "Will I lose my data during an iPad repair?",
+    a: "Not for a screen, battery, port, camera or button repair: those parts hold no data and we do not erase the iPad. Board and liquid-damage repairs carry more risk, so back up first if the iPad still turns on. If it doesn't and the data matters most, tell us before we start.",
+  },
+  {
+    q: "Are you an Apple Authorised Service Provider?",
+    a: "No. We are an independent repair workshop, not Apple Authorised. We use genuine parts where they are available and quality-tested parts otherwise, and your quote says which. If your iPad is still under Apple warranty or AppleCare+, we tell you, because Apple may be the better route for a covered fault.",
+  },
+  {
+    q: "Do you repair older iPads?",
+    a: "Yes. Alongside the current line-up we work on older generations, from recent iPad Pro, Air and mini models back to the iPad 2. Parts for the oldest models are sourced per job, so we confirm availability on WhatsApp before you bring the iPad in.",
+  },
+  {
+    q: "Do you collect iPads from outside Dubai?",
+    a: "Yes. Pickup and return are free anywhere in Dubai. From Sharjah or Abu Dhabi we arrange courier collection, usually 1 to 2 days door to door. Message your location on WhatsApp and we book it.",
   },
 ];
 
-function SectionHeading({ label, title, sub }: { label?: string; title: string; sub?: string }) {
+// iPad-specific, honest comparison. Apple's figures are on the battery page, attributed.
+const VS_APPLE_ROWS = [
+  { label: "Who does the work", us: "Independent workshop in Dubai Media City, not Apple Authorised", them: "Apple or an Apple Authorised Service Provider" },
+  { label: "Screen damage", us: "Display assembly (or glass only on a standard iPad) fitted to your own iPad", them: "Apple's UAE list has no separate iPad screen fee, only battery service and 'other damage'" },
+  { label: "Parts", us: "Genuine where available, quality-tested otherwise, named on your quote", them: "Genuine Apple parts" },
+  { label: "Your data", us: "Stays on the iPad for screen, battery and port jobs", them: "Apple asks you to back up before service" },
+  { label: "Quote", us: "Free diagnosis, written quote on WhatsApp before any work", them: "Apple's published fees, excluding VAT" },
+];
+
+function SectionHeading({ label, title, sub }: { label?: string; title: string; sub?: ReactNode }) {
   return (
     <div className="text-center mb-[56px]">
       {label && (
@@ -128,7 +176,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(ipadWa(PREFILL))} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant={dark ? "secondary" : "outline"} size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -138,16 +186,13 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
 }
 
 export default function IPadRepairHub() {
-  const reviews = pickReviews([], { devices: reviewDevicesForPath("/ipad-repair-dubai"), min: 3, seed: "/ipad-repair-dubai" });
+  const reviews = pickReviews([], { devices: reviewDevicesForPath(PATH), min: 3, seed: PATH });
   useSeo(
-    {
-      title: "iPad Repair Dubai - Screen, Battery & Logic Board Experts",
-      description:
-        "Professional iPad repair in Dubai for all models. Certified technicians fix screens, batteries, charging ports, and logic boards with genuine Apple parts.",
-      path: "/ipad-repair-dubai",
-    },
-    [localBusiness(), organization()],
+    { title: "iPad Repair Dubai", description: "", path: PATH },
+    [pageWithSpeakable({ url: SITE.url + PATH, name: "iPad Repair Dubai" })],
   );
+  const weekdayHours = HOURS[0].open;
+  const sunday = HOURS.find((h) => h.day === "Sunday")?.open ?? "";
 
   return (
     <PageShell>
@@ -159,7 +204,7 @@ export default function IPadRepairHub() {
             <BreadcrumbTrail tone="dark" trail={[
               { name: "Home", path: "/" },
               { name: "Apple Repair", path: "/apple-repair-dubai" },
-              { name: "iPad Repair", path: "/ipad-repair-dubai" },
+              { name: "iPad Repair", path: PATH },
             ]} />
           </div>
         </div>
@@ -170,49 +215,46 @@ export default function IPadRepairHub() {
           imageAlt="iPad repair Dubai - iPad Pro M5 full teardown exploded-view engineering infographic"
           variant="device"
           tone="dark"
-          eyebrow="iPad specialist"
-          title="Cost-Effective iPad Repair Dubai"
+          eyebrow="Independent iPad specialist · Dubai Media City"
+          title="iPad Repair Dubai"
+          subtitle="Screens, batteries, charging ports, liquid damage and board faults on every iPad, from the current iPad Pro (M5) back to older generations. Free diagnosis and a written quote on WhatsApp before any work."
+          ctaLabel="WhatsApp your iPad model"
         >
-          <div className="mt-md" itemScope itemType="https://schema.org/Question">
-            <p className="text-[15px] font-semibold text-text mb-2" itemProp="name">
-              Where can I get my iPad repaired in Dubai?
-            </p>
-            <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-              <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai repairs every iPad, from the standard iPad through iPad Pro M5, at Concord Tower, Dubai Media City. Screen, battery, charging port, water damage, and board-level repair with free diagnosis, free citywide pickup, genuine or OEM-grade parts, and written warranty up to 12 months.
-              </p>
-            </div>
-          </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Expert Apple technicians</span>
-            <span>·</span><span>Genuine / OEM parts</span>
-            <span>·</span><span>Same-day delivery</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {REVIEW_COUNT}+ Google reviews</span>
+            <span>·</span><span>Genuine or quality-tested parts</span>
+            <span>·</span><span>Free pickup in Dubai</span>
           </p>
         </Hero>
 
+        <QuickAnswer
+          question="Where can I get an iPad repaired in Dubai?"
+          answer="MacBook Repair Dubai is an independent workshop at Concord Tower, Dubai Media City, repairing every iPad from the current iPad Pro (M5), iPad Air (M4), iPad mini (A17 Pro) and iPad (A16) back to older generations. Diagnosis is free, the quote comes in writing on WhatsApp before any work, and pickup across Dubai is free."
+        />
+
         <TakeawaysByline
           updated="September 2026"
-          reviewer="Shafeeq, iPad repair specialist"
-          years={12}
+          reviewer={`${TECH.name}, ${TECH.specialisation}`}
+          years={TECH.years}
           items={[
-            "Every iPad family is covered - iPad, Air, mini and Pro, from the 2018 generations through the current M-series.",
-            "Screens and batteries are same-day on most models; board-level work runs 2-5 days.",
-            "iPad glass and LCD are bonded on modern models, so a crack means a full front assembly - we fit it laminated, not glued by hand.",
-            "Charging-port faults are usually board-level on iPads and are repaired at component level rather than by board swap.",
-            "Diagnosis is free with a written quote before any work, and a warranty of up to 12 months.",
-            "Free pickup and delivery across Dubai mainland from Concord Tower, Media City.",
+            "Current models covered: iPad Pro 11- and 13-inch (M5), iPad Air 11- and 13-inch (M4), iPad mini (A17 Pro) and iPad (A16), plus older generations.",
+            "iPad Pro (M4 and M5) uses a tandem OLED panel; Air, mini and the standard iPad use an LCD. The panel type sets the screen part.",
+            "Air, mini and Pro screens are fully laminated, so a crack means a full display assembly; the standard iPad's glass can often be replaced on its own.",
+            "Screen, battery and charging-port repairs leave your data in place; we do not erase an iPad for those jobs.",
+            "Warranty depends on the repair: up to 12 months on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens, 15 days on board, liquid and data work.",
+            "Free diagnosis and a written WhatsApp quote before any work; free pickup and delivery across Dubai.",
           ]}
         />
 
         {/* ── USP STRIP ── */}
-        <div style={{ borderBottom: "1px solid var(--color-border)" }}>
+        <div className="mt-xl" style={{ borderBottom: "1px solid var(--color-border)", borderTop: "1px solid var(--color-border)" }}>
           <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap justify-center gap-x-xl gap-y-sm">
             {[
               { Icon: Search,     label: "Free iPad diagnosis" },
               { Icon: BadgeCheck, label: "No fix, no charge" },
               { Icon: Truck,      label: "Free pickup Dubai-wide" },
-              { Icon: ShieldCheck,label: "Genuine & OEM-grade parts" },
-              { Icon: Clock,      label: "Same-day service" },
+              { Icon: ShieldCheck,label: "Genuine or quality-tested parts" },
+              { Icon: Clock,      label: "Written quote first" },
               { Icon: Star,       label: "Trusted since 2004" },
             ].map(({ Icon, label }) => (
               <li key={label} className="flex items-center gap-xs text-[14px] font-medium text-text">
@@ -223,38 +265,50 @@ export default function IPadRepairHub() {
           </ul>
         </div>
 
-        {/* ── STATS ── */}
-        <section style={{ background: "#2C3137", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.15)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {[
-                { stat: "20+",   label: "Years in Dubai" },
-                { stat: "232+",  label: "Google reviews" },
-                { stat: "2–4 h", label: "Screen repair" },
-                { stat: "12 mo", label: "Written warranty" },
-              ].map(({ stat, label }, i) => (
-                <div key={label} className="py-lg px-xl flex flex-col justify-center"
-                  style={{ borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : undefined, textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-                  <p className="text-[32px] md:text-[40px] font-bold leading-none tracking-tight text-white">{stat}</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-on-primary-muted">{label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <StatBand
+          className=""
+          stats={[
+            { stat: `${NAP.yearsInBusiness}+`, label: "Years in Dubai" },
+            { stat: `${REVIEW_COUNT}+`, label: "Google reviews" },
+            { stat: "Free", label: "Diagnosis" },
+            { stat: "Up to 12 mo", label: "Written warranty" },
+          ]}
+        />
 
-        {/* ── MODELS ── */}
+        {/* ── CURRENT MODELS ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
           <SectionHeading
-            label="Supported models"
-            title="iPad models we repair"
-            sub="Every iPad from the standard iPad through iPad Pro M5. Tap a model for its dedicated repair page."
+            label="Current models first"
+            title="Which iPad do you have?"
+            sub={<>Find it in Settings → General → About → Model Name. These are the iPads Apple sells today (September 2026).</>}
           />
-          <ul className="flex flex-wrap gap-2">
-            {MODEL_PAGES.map(([label, href]) => (
-              <li key={href}>
-                <Link to={href} className="inline-flex items-center px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
-                  {label}
+          <div className="grid gap-md sm:grid-cols-2">
+            {CURRENT_IPADS.map((m) => (
+              <article key={m.name} className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6 flex flex-col gap-sm">
+                <h3 className="text-[18px] font-semibold text-text">{m.name}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">
+                  {m.display}. {m.laminated ? "Fully laminated, so a crack means a full display assembly." : "Not laminated, so a cracked glass can usually be replaced without the LCD."}
+                </p>
+                <p className="text-[14px] flex flex-wrap gap-x-md gap-y-1 mt-auto">
+                  {m.pages.map((p) => <Link key={p.href} to={p.href} className="text-accent font-semibold hover:underline">{p.label} repair ›</Link>)}
+                  <a href={ipadWa(`Hi, I need a repair on my ${m.name}. Fault:`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent font-semibold hover:underline">
+                    <MessageCircle size={14} aria-hidden /> WhatsApp
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-md text-[14px] text-text-muted text-center max-w-[70ch] mx-auto">
+            The iPad Air (M4) went on sale in March 2026, so we confirm part availability on WhatsApp before you book. Deciding between the two? Read{" "}
+            <Link to="/blog/ipad-air-m4-vs-pro-m5-2026/" className={inlineLink}>iPad Air M4 vs iPad Pro M5</Link>.
+          </p>
+
+          <h3 className="text-[18px] font-semibold text-text mt-[56px] mb-md text-center">Older generations</h3>
+          <ul className="flex flex-wrap justify-center gap-2">
+            {OLDER_IPAD_PAGES.map((p) => (
+              <li key={p.href}>
+                <Link to={p.href} className="inline-flex items-center px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
+                  {p.label}
                 </Link>
               </li>
             ))}
@@ -266,130 +320,124 @@ export default function IPadRepairHub() {
           <SectionHeading
             label="What we fix"
             title="iPad repair services"
-            sub="From a cracked iPad Pro screen to a dead charging IC, our technicians handle every repair in our Dubai Media City workshop."
+            sub="Every repair below is done in our Dubai Media City workshop."
           />
           <div className="grid gap-x-xl gap-y-[56px] sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
               <IconCard key={s.title} Icon={s.Icon} title={s.title} body={s.body} href={s.href} />
             ))}
           </div>
-          <div className="mt-xl flex justify-center"><CallButtons /></div>
-        </section>
-
-        {/* ── PROCESS ── */}
-        <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading label="How it works" title="Our iPad repair process" sub="Simple, transparent, and fast." />
-            <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
-              {PROCESS.map((step, i) => (
-                <div key={step.title} className="flex flex-col">
-                  <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
-                  <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
-                    <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
-                  </div>
-                  <h3 className="text-[19px] font-semibold text-text mb-sm">{step.title}</h3>
-                  <p className="text-[15px] text-text-muted leading-relaxed">{step.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── SIGNS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <SectionHeading label="Warning signs" title="Signs your iPad needs service" />
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-[900px] mx-auto">
-            {[
-              "Cracked or shattered screen",
-              "Exposure to liquid or water damage",
-              "Unresponsive or inconsistent touchscreen",
-              "Battery draining unusually quickly",
-              "Won't charge or charges intermittently",
-              "Malfunctioning cameras or flashlight",
-              "Distorted, crackling, or no speaker sound",
-              "Inability to connect to Wi-Fi or cellular",
-              "Frequent overheating, even when not in use",
-            ].map((s) => (
-              <li key={s} className="flex items-start gap-3 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
-                <CheckCircle2 size={18} className="text-accent shrink-0 mt-0.5" aria-hidden />
-                <span className="text-[14px] text-text-muted leading-relaxed">{s}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ── ALL REPAIRS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">All repair types</p>
-          <ul className="flex flex-wrap gap-2">
+          <ul className="mt-[56px] flex flex-wrap justify-center gap-2">
             {SERVICE_PAGES.map(([label, href]) => (
               <li key={href}>
-                <Link to={href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
+                <Link to={href} className="inline-flex px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
+          <div className="mt-xl flex justify-center"><CallButtons /></div>
         </section>
 
-        {/* ── WHY ── */}
+        {/* ── WHAT FAILS ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading
-              label="Why us"
-              title="The independent Apple specialists in Dubai"
-              sub={`Not an Apple Authorised Service Centre. We're the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
-            />
-            <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
-              {WHY.map((w) => <IconCard key={w.title} Icon={w.Icon} title={w.title} body={w.body} />)}
+            <SectionHeading label="From the bench" title="What usually fails on an iPad" sub="And what each fault means for the repair." />
+            <div className="grid gap-md md:grid-cols-2">
+              {FAULTS.map((f) => (
+                <article key={f.title} className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
+                  <h3 className="text-[17px] font-semibold text-text mb-sm">{f.title}</h3>
+                  <p className="text-[15px] text-text-muted leading-relaxed">{f.body}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-xl max-w-[72ch] mx-auto">
+              <h3 className="text-[19px] font-semibold text-text mb-sm">iPad Pro repair</h3>
+              <p className="text-[15px] text-text-muted leading-relaxed">
+                iPad Pro is the costliest iPad to repair because of its panel: tandem OLED on the M4 and M5, mini-LED Liquid Retina XDR on the 12.9-inch M1 and M2, and a standard LCD on the 11-inch M1 and M2. Each needs its own part, and M5 parts are ordered for your model. See the{" "}
+                <Link to="/ipad-pro-11-m5-repair-dubai/" className={inlineLink}>iPad Pro 11" M5</Link> and{" "}
+                <Link to="/ipad-pro-13-m5-repair-dubai/" className={inlineLink}>iPad Pro 13" M5</Link> pages.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ── */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <div className="text-center mb-[56px]">
-              <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
-              <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-            </div>
-            <ReviewGrid reviews={reviews} tone="dark" />
-            <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
-              <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
-              <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>
-            </div>
+        {/* ── PROCESS ── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
+          <SectionHeading label="How it works" title="Our iPad repair process" />
+          <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
+            {PROCESS.map((step, i) => (
+              <div key={step.title} className="flex flex-col">
+                <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
+                <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
+                  <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-[19px] font-semibold text-text mb-sm">{step.title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed">{step.body}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ── VS APPLE + FAQ ── */}
-        <VsAppleStore tone="dark" />
+        {/* ── WARRANTY + NEAR ME ── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px] grid gap-lg md:grid-cols-2">
+          <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
+            <h2 className="text-[24px] font-bold tracking-tight text-text mb-md">What warranty comes with an iPad repair?</h2>
+            <ul className="text-[15px] text-text-muted leading-relaxed space-y-2 list-disc pl-5">
+              <li><strong className="text-text">Hardware</strong> (charging port, cameras, buttons, speakers): up to 12 months.</li>
+              <li><strong className="text-text">Battery:</strong> 3 months, with an 80% capacity guarantee.</li>
+              <li><strong className="text-text">Screens:</strong> 90 days.</li>
+              <li><strong className="text-text">Board, liquid, software and data work:</strong> 15 days.</li>
+            </ul>
+            <p className="mt-md text-[14px] text-text-muted">A new crack or spill after the repair is not covered. Full terms: <Link to="/warranty/" className={inlineLink}>warranty</Link>.</p>
+          </div>
+          <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
+            <h2 className="text-[24px] font-bold tracking-tight text-text mb-md">iPad repair near me: where we are</h2>
+            <p className="text-[15px] text-text-muted leading-relaxed mb-sm">
+              One workshop, not a chain: {NAP.street}, {NAP.area}. Open Monday to Saturday, {weekdayHours}; Sunday {sunday.toLowerCase()}.
+            </p>
+            <p className="text-[15px] text-text-muted leading-relaxed">
+              From Media City, JLT, Marina or Al Barsha, walking in is quickest; message first so we can check the part. Anywhere else in Dubai we collect and return free, and from Sharjah or Abu Dhabi we arrange a courier. More on our{" "}
+              <Link to="/apple-repair-near-me-dubai/" className={inlineLink}>Apple repair near me</Link> page.
+            </p>
+          </div>
+        </section>
 
+        {/* ── VS APPLE ── */}
+        <VsAppleStore
+          tone="dark"
+          heading="Independent iPad repair or Apple?"
+          intro="An honest comparison. Apple's own UAE iPad fees are on our battery replacement page, attributed and dated."
+          rows={VS_APPLE_ROWS}
+        />
+
+        {/* ── REVIEWS ── */}
+        {reviews.length > 0 && (
+          <section className="mt-[96px] py-[80px]" style={{ background: "#2C3137" }}>
+            <div className="mx-auto max-w-content px-5 md:px-6">
+              <div className="text-center mb-[56px]">
+                <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
+                <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">iPad repair reviews from Google</h2>
+              </div>
+              <ReviewGrid reviews={reviews} tone="dark" />
+            </div>
+          </section>
+        )}
+
+        {/* ── FAQ ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
             <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
               <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
-              <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">Frequently asked questions</h2>
+              <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">iPad repair questions</h2>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
                 <span>✓ Free pickup Dubai-wide</span>
               </div>
-              <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
-                {FAQ_GROUPS.map((g) => (
-                  <a key={g.category} href={`#faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}
-                    className="text-[13px] text-accent hover:underline capitalize">{g.category}</a>
-                ))}
-              </div>
             </div>
-            <div className="flex flex-col gap-[48px]">
-              {FAQ_GROUPS.map((g, gi) => (
-                <div key={g.category} id={`faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">{g.category}</p>
-                  <FAQAccordion items={g.items} injectSchema={gi === 0} />
-                </div>
-              ))}
-            </div>
+            <FAQAccordion items={FAQS} injectSchema />
           </div>
         </section>
 
@@ -399,42 +447,39 @@ export default function IPadRepairHub() {
           <LocationBlock tone="dark" compact />
         </section>
 
-        {/* ── RELATED SERVICES ── */}
+        {/* ── RELATED ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">Related services</p>
-          <div className="flex flex-wrap justify-center gap-sm text-[15px]">
+          <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">Related</p>
+          <div className="flex flex-wrap justify-center gap-x-lg gap-y-sm text-[15px]">
             {[
-              { label: "iPad Screen Repair Dubai",     href: "/ipad-screen-repair-dubai" },
-              { label: "iPad Battery Replacement",     href: "/ipad-battery-replacement-dubai" },
-              { label: "iPhone Repair Dubai",          href: "/iphone-repair-dubai" },
-              { label: "MacBook Repair Dubai",         href: "/macbook-repair-dubai" },
-              { label: "Apple Repair Dubai",           href: "/apple-repair-dubai" },
-            ].map((l) => <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>)}
+              { label: "iPad Screen Repair Dubai",      href: "/ipad-screen-repair-dubai" },
+              { label: "iPad Battery Replacement",      href: "/ipad-battery-replacement-dubai" },
+              { label: "iPad Charging Port Repair",     href: "/ipad-charging-port-repair-dubai" },
+              { label: "iPad battery drain guide",      href: "/blog/ipad-battery-drain-dubai" },
+              { label: "iPhone Repair Dubai",           href: "/iphone-repair-dubai" },
+              { label: "MacBook Repair Dubai",          href: "/macbook-repair-dubai" },
+              { label: "Apple Repair Dubai",            href: "/apple-repair-dubai" },
+            ].map((l) => <Link key={l.href} to={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</Link>)}
           </div>
         </section>
 
         {/* ── CTA ── */}
-        <section className="mt-[80px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6 py-[48px] flex flex-col sm:flex-row items-center justify-between gap-md">
-            <div>
-              <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your iPad?</p>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
-              </h2>
-            </div>
-            <div className="flex flex-wrap gap-sm shrink-0"><CallButtons dark /></div>
-          </div>
-        </section>
+        <CtaBand
+          eyebrow="Ready to fix your iPad?"
+          headline="Free diagnosis · No fix, no charge · Warranty up to 12 months"
+          description="Send your iPad model and a photo of the fault. We reply with a quote and book a walk-in or a free pickup across Dubai."
+          whatsappHref={ipadWa(PREFILL)}
+        />
 
       </div>
-      
-        {/* On-page capture, the standard's form with the shared repair preset. */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="ipad-lead">
-          <h2 id="ipad-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iPad repair quote</h2>
-          <LeadForm preset={PRESETS.repair} sourcePath="/ipad-repair-dubai" defaultDeviceType="iPad" />
-        </section>
 
-      <RelatedArticles path="/ipad-repair-dubai" />
+      {/* On-page capture, the standard's form with the shared repair preset. */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="ipad-lead">
+        <h2 id="ipad-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iPad repair quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath={PATH} defaultDeviceType="iPad" />
+      </section>
+
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

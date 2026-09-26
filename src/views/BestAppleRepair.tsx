@@ -1,5 +1,6 @@
 "use client";
-import { Star, CheckCircle2, Phone, MessageCircle, Laptop, Smartphone, Tablet, Monitor, Watch } from "lucide-react";
+import { withSlash } from "@/lib/utils";
+import { Star, CheckCircle2, Phone, MessageCircle, Laptop, Smartphone, Tablet, Monitor } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -23,11 +24,10 @@ const DEVICES = [
   { icon: Monitor,    label: "Mac mini & Studio", from: "Price on request",  href: "/mac-mini-repair-dubai",     detail: "M1–M4 Mac mini, Mac Studio. Logic board, SSD, diagnostics." },
   { icon: Smartphone, label: "iPhone",            from: "Price on request",  href: "/iphone-repair-dubai",       detail: "iPhone 6 through 17 Pro Max. Screen in 40 min, battery in 30 min." },
   { icon: Tablet,     label: "iPad",              from: "Price on request",  href: "/ipad-repair-dubai",         detail: "mini, Air, standard, Pro 11/13\". Screen, battery, charging port." },
-  { icon: Watch,      label: "Apple Watch",       from: "Price on request",  href: "/apple-watch-repair-dubai",  detail: "Series 3 through Ultra 2. Screen, battery, water damage, crown." },
 ];
 
 const WHY_US = [
-  "Every Apple device. MacBook, iMac, Mac mini, Mac Studio, iPhone, iPad, Apple Watch",
+  "Mac, iPhone and iPad. MacBook, iMac, Mac mini, Mac Studio, iPhone, iPad",
   "21 years of Apple-only repair experience in Dubai since 2004",
   "Component-level logic board repair, not module swaps",
   "Same-day for iPhone screen, MacBook battery, iPad screen",
@@ -41,11 +41,11 @@ const FAQS = [
   { q: "What is the best Apple repair service in Dubai?",
     a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, provides a written warranty of at least 6 months, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
   { q: "Can one shop repair all my Apple devices in Dubai?",
-    a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 17 Pro Max), iPad (all generations including Pro M5), and Apple Watch (Series 3 through Ultra 2). One workshop, one warranty card, one WhatsApp thread." },
+    a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations including Pro M5). One workshop, one warranty card, one WhatsApp thread." },
   { q: "How does the best Apple repair in Dubai compare to Apple Store?",
     a: "Apple Store typically costs far more for the same repair and only does module swaps (no component-level board repair). Independent specialists like us repair the specific component that failed, cheaper outcome, same device functionality. For repairs under AppleCare+, use Apple first. Out of warranty, independent repair is the better value in almost every case." },
   { q: "How much does Apple repair cost in Dubai?",
-    a: "Apple repair cost in Dubai depends on your exact device and fault, covering MacBook, iPhone, iPad and Apple Watch screens, batteries and logic boards. Diagnosis is always free. WhatsApp 055 741 3706 with your device model and fault for a fixed quote before any work starts." },
+    a: "Apple repair cost in Dubai depends on your exact device and fault, covering MacBook, iPhone and iPad screens, batteries and logic boards. Diagnosis is always free. WhatsApp 055 741 3706 with your device model and fault for a fixed quote before any work starts." },
   { q: "Do you repair Apple devices that are no longer supported by Apple?",
     a: "Yes, we repair MacBooks from 2012 onward, iPhones from iPhone 6, iPads from iPad Air 1st gen, and iMacs from 2013. Apple stops supporting older devices; independent specialists continue to repair them as long as parts and boards are available." },
   { q: "Do you offer Apple repair pickup in Dubai?",
@@ -60,7 +60,7 @@ export default function BestAppleRepair() {
   useSeo({
     title: "Best Apple Repair Dubai 2026. All Devices | 5★ Since 2004",
     description:
-      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac, Apple Watch. 232+ 5-star reviews. Written warranty up to 12 months. Free pickup. WhatsApp for a quote.",
+      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac and Mac mini. 232+ 5-star reviews. Written warranty up to 12 months. Free pickup. WhatsApp for a quote.",
     path: "/best-apple-repair-dubai",
   });
 
@@ -77,7 +77,7 @@ export default function BestAppleRepair() {
           tone="dark"
           eyebrow="Best Apple repair · Dubai · Since 2004"
           title="Best Apple Repair in Dubai, 2026"
-          subtitle="Every Apple device. MacBook, iMac, iPhone, iPad, Apple Watch. Message us on WhatsApp for a fixed quote. 5.0 stars · 232+ reviews. Free pickup. Warranty up to 12 months."
+          subtitle="MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. 5.0 stars · 232+ reviews. Free pickup. Warranty up to 12 months."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
@@ -98,7 +98,7 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, every Apple device repaired (MacBook, iMac, iPhone, iPad, Apple Watch), 5.0 stars from 232+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device."
+            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, 5.0 stars from 232+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device."
           />
         </section>
 
@@ -108,7 +108,7 @@ export default function BestAppleRepair() {
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One specialist for the whole Apple ecosystem, not a shop that does iPhones and subcontracts everything else.</p>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {DEVICES.map(({ icon: Icon, label, from, href, detail }) => (
-              <a key={label} href={href} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
+              <a key={label} href={withSlash(href)} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
                 <div className="flex items-center gap-sm">
                   <Icon size={22} className="text-accent shrink-0" aria-hidden />
                   <h3 className="text-[17px] font-bold">{label}</h3>
@@ -144,7 +144,7 @@ export default function BestAppleRepair() {
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · Same-day for common repairs · Warranty up to 12 months · Free pickup.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -177,7 +177,7 @@ export default function BestAppleRepair() {
               { label: "MacBook Repair Dubai", href: "/" },
               { label: "iPhone Repair Dubai", href: "/iphone-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
             ))}
           </div>
         </section>

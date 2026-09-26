@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useState } from "react";
 import { Copy, Check, AlertTriangle, TrendingDown, Search, ListOrdered, History } from "lucide-react";
 import {
@@ -55,7 +56,7 @@ export default function GbpPlaybook() {
         <p className="m-0 mt-1 text-[13px] text-text-muted">
           Paste-ready Google Business Profile content, generated from the August content pack — every item below has
           passed the policy gate (no prices, no Apple certification claim, no hardcoded review count).
-          Publish services in one click from <a href="/admin/gbp" className="text-accent hover:underline">GBP → Services</a>;
+          Publish services in one click from <a href="/admin/gbp/" className="text-accent hover:underline">GBP → Services</a>;
           everything else is copy-and-paste.
         </p>
       </div>
@@ -145,7 +146,7 @@ export default function GbpPlaybook() {
                 <p className="m-0 whitespace-pre-line text-[12px] text-text-muted leading-relaxed">{p.body}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-faint">
                   <span className="flex items-center gap-1.5">
-                    🔗 <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{p.url.replace(/^https:\/\/[^/]+/, "").split("?")[0]}</a>
+                    🔗 <a href={withSlash(p.url)} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{p.url.replace(/^https:\/\/[^/]+/, "").split("?")[0]}</a>
                     <CopyBtn text={p.url} label="URL" />
                   </span>
                   <span>🖼 {p.image}</span>
@@ -190,7 +191,7 @@ export default function GbpPlaybook() {
       <p className="m-0 mb-3 text-[12.5px] text-text-muted">
         Pulled via Supermetrics on {GBP_PULLED_AT}. That connection expired on 30 June 2026 and cannot be re-pulled, so
         these figures are frozen and some are already superseded — the profile now shows 232 reviews at 5.0, and the
-        Sunday hours defect below was fixed. Use <a href="/admin/gbp" className="text-accent hover:underline">GBP → Overview</a> for
+        Sunday hours defect below was fixed. Use <a href="/admin/gbp/" className="text-accent hover:underline">GBP → Overview</a> for
         current numbers. Kept because the trend and the search-term breakdown are still the best read available.
       </p>
 

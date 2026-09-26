@@ -8,7 +8,7 @@ export default function IPhone16Repair() {
       seoTitle="iPhone 16 Repair Dubai - A18, Camera Control, Screen & Battery | 055 741 3706"
       seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen, Camera Control, USB-C and battery. Same-day, warranty of up to 12 months."
       path="/iphone-16-repair-dubai"
-      eyebrow="iPhone 16 (2024, current Apple lineup)"
+      eyebrow="iPhone 16 (2024, still sold by Apple)"
       h1="iPhone 16 Repair Dubai - Screen, Camera Control, USB-C, Battery"
       subtitle="The current 6.1-inch budget flagship - A18, Camera Control button (first), Apple Intelligence, Dynamic Island. Message us for today's exact price on your model."
       startingPrice={350}
@@ -88,8 +88,9 @@ export default function IPhone16Repair() {
         { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

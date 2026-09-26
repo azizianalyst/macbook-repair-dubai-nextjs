@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useMemo, useState } from "react";
 import { ExternalLink, MessageSquareQuote } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
@@ -190,7 +191,7 @@ export default function Reviews() {
               Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
             </p>
             <Button asChild variant="primary" className="mt-lg">
-              <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(GOOGLE_REVIEW_URL)} target="_blank" rel="noopener noreferrer">
                 Write a Google review <ExternalLink size={16} aria-hidden />
               </a>
             </Button>

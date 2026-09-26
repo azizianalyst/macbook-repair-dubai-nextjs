@@ -39,7 +39,7 @@ export default function BlogMacBookProM5NotTurningOn() {
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Deeply discharged battery</strong>: if the battery has been at 0% for more than a week, the battery management system goes into deep discharge protection mode and the M5 will not respond to the power button until a minimum charge threshold is reached via the charger</li>
             <li><strong>Frozen boot or sleep state</strong>: the M5 froze during a macOS update, sleep transition, or application crash and appears dead but is actually in a hung state</li>
-            <li><strong>Display fault with normal power</strong>: the M5 is actually on (fan spinning, charging indicator active) but the OLED display has failed, making it appear dead</li>
+            <li><strong>Display fault with normal power</strong>: the M5 is actually on (fan spinning, charging indicator active) but the Liquid Retina XDR display or its mini-LED backlight has failed, making it appear dead</li>
             <li><strong>Boot disk corruption</strong>: macOS startup disk issue causes the M5 to attempt a boot, fail, and restart in a loop. Appears as a brief flash of the Apple logo followed by black screen repeated</li>
             <li><strong>Logic board power fault</strong>: hardware failure on the power delivery circuit, MagSafe charging board, or the M5 chip itself. Requires workshop diagnosis</li>
           </ol>
@@ -79,8 +79,8 @@ export default function BlogMacBookProM5NotTurningOn() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Check the fan</strong>: press the power button and hold your hand near the right vent. A fan spinning means the M5 powered on. Black screen with fan spin = display fault</li>
             <li><strong>Listen for the startup chime</strong>: macOS Tahoe plays a chime at startup. If you hear the chime but see no image, the display is the fault</li>
-            <li><strong>Connect an external monitor</strong>: use a Thunderbolt 5 to HDMI cable and connect to a TV or monitor. If the external display shows the macOS login screen, the M5 logic board is working and only the internal OLED is failed</li>
-            <li><strong>Torch test</strong>: hold a torch at an angle to the M5 screen. If you can see a very faint image, the OLED panel has failed but the GPU is still sending signal (panel power fault)</li>
+            <li><strong>Connect an external monitor</strong>: use a Thunderbolt 5 to HDMI cable and connect to a TV or monitor. If the external display shows the macOS login screen, the M5 logic board is working and the fault is in the internal display or its backlight</li>
+            <li><strong>Torch test</strong>: hold a torch at an angle to the M5 screen. The M5 display is an LCD with a mini-LED backlight, not OLED. If you can see a very faint image, the LCD is receiving a picture but the backlight has failed or is not getting power. That is either the backlight power circuit on the logic board or the display assembly</li>
           </ul>
 
           <h2 id="step-4">Step 4: How do I boot MacBook Pro M5 into Recovery Mode to fix a startup issue?</h2>
@@ -142,7 +142,7 @@ export default function BlogMacBookProM5NotTurningOn() {
             rows={[
               { model: "MagSafe port repair (M5)", ours: "Price on request", apple: "Price on request", note: "Charging board component repair" },
               { model: "Power circuit board repair", ours: "Price on request", apple: "Logic board replacement", note: "Power rail / PMIC fault" },
-              { model: "OLED screen replacement (black screen)", ours: "Price on request", apple: "Price on request", note: "If screen is confirmed dead" },
+              { model: "Display assembly replacement (black screen)", ours: "Price on request", apple: "Price on request", note: "If the Liquid Retina XDR display is confirmed dead" },
               { model: "Diagnostic (free)", ours: "Free", apple: "Price on request", note: "Confirm hardware vs software cause before repair" },
             ]}
           />
@@ -184,7 +184,7 @@ export default function BlogMacBookProM5NotTurningOn() {
         },
         {
           q: "How much does MacBook Pro M5 not turning on repair cost in Dubai?",
-          a: "Free diagnosis first to confirm the cause, whether it is a MagSafe port repair, a power circuit repair, or an OLED screen replacement if the display is the cause. We test and confirm the fault before starting any repair. Message us on WhatsApp for the exact price on your model.",
+          a: "Free diagnosis first to confirm the cause, whether it is a MagSafe port repair, a power circuit repair, or a display assembly replacement if the screen is the cause. We test and confirm the fault before starting any repair. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How do I boot MacBook Pro M5 into Recovery Mode?",
@@ -194,8 +194,8 @@ export default function BlogMacBookProM5NotTurningOn() {
       relatedLinks={[
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro not charging fix Dubai", href: "/blog/macbook-pro-not-charging-fix-dubai", description: "Full diagnosis for MacBook Pro not charging across all chip generations." },
-        { label: "MacBook Pro M5 screen repair cost Dubai", href: "/blog/macbook-pro-m5-screen-repair-cost-dubai", description: "M5 OLED screen damage types, replacement cost, and what to expect." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 screen repair cost Dubai", href: "/blog/macbook-pro-m5-screen-repair-cost-dubai", description: "M5 Liquid Retina XDR screen damage types, replacement cost, and what to expect." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
       ]}
     />
   );

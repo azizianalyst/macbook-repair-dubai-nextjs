@@ -139,7 +139,7 @@ export default function BlogBestRefurbishedIPhone() {
           <p>
             Need a battery replaced after purchase?{" "}
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
-              iPhone battery replacement with warranty of up to 12 months
+              iPhone battery replacement with a 3-month warranty and 80% capacity guarantee
             </Link>
             .
           </p>

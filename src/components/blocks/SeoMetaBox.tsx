@@ -148,7 +148,7 @@ export default function SeoMetaBox({
               </div>
             </div>
             <p className="m-0 rounded-md border border-border bg-bg-alt px-3 py-2 text-[12px] text-text-muted">
-              Your <strong className="text-text">global social profiles</strong> (Facebook / Instagram / YouTube — used in site schema) are managed in <a href="/admin/business" className="text-accent hover:underline">Business / NAP</a>. The fields above are the per-page share card only.
+              Your <strong className="text-text">global social profiles</strong> (Facebook / Instagram / YouTube — used in site schema) are managed in <a href="/admin/business/" className="text-accent hover:underline">Business / NAP</a>. The fields above are the per-page share card only.
             </p>
           </div>
         )}

@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type PricingTier = {
   name: string;
@@ -114,7 +114,7 @@ export default function PricingTiers({
                   >
                     {isExternal ? (
                       <a
-                        href={t.cta.href}
+                        href={withSlash(t.cta.href)}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

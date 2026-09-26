@@ -17,7 +17,7 @@
     "discontinued": "January 2023",
     "commonIssues": [
       "Internal PSU thermal stress (integrated 150W brick)",
-      "Soldered SSD failure - chip-off recovery required",
+      "Soldered SSD failure - data recovery needs the original board running (no chip-off on Apple silicon)",
       "HDMI 2.0 port wear (heavy display swap usage)",
       "Wi-Fi module failure (rare but documented)",
       "Bluetooth dropouts after macOS updates"
@@ -343,7 +343,7 @@
       "Fan dust buildup in heavy creative workloads",
       "Front Thunderbolt 5 port wear",
       "10GbE port failures",
-      "Soldered SSD failure (rare, chip-off recovery available)"
+      "Soldered SSD failure (rare) - data recovery needs the original board running"
     ],
     "pricing": {
       "logicBoard": 1820,
@@ -379,7 +379,7 @@
       "Thunderbolt 5 controller heat",
       "Internal heatsink thermal paste degradation faster than M2 Ultra under extreme loads",
       "10GbE port failures",
-      "Soldered SSD failure (chip-off recovery available)"
+      "Soldered SSD failure - data recovery needs the original board running"
     ],
     "pricing": {
       "logicBoard": 2600,
@@ -448,7 +448,7 @@
     "wirelessChip": "Wi-Fi 6E, Bluetooth 5.3",
     "currentInLineup": false,
     "commonIssues": [
-      "Soldered SSD failure - chip-off recovery required (no Apple SSD modules to swap)",
+      "Soldered SSD failure - data recovery needs the original board running (no Apple SSD modules to swap)",
       "Logic board failure is catastrophic - no MPX rescue path",
       "Thunderbolt 4 controller heat across 8 ports",
       "1000W PSU thermal stress",
@@ -476,19 +476,19 @@
     "family": "mini",
     "chassisGen": "new",
     "era": "apple-silicon",
-    "chip": "Apple M6 (12-core CPU, 12-core GPU, 2nm)",
-    "maxRAM": "32GB unified (soldered)",
-    "maxStorage": "2TB (soldered SSD)",
-    "baseStorage": "256GB",
-    "ports": "Front: 2× USB-C (10Gb/s), 3.5mm. Rear: 3× Thunderbolt 4, HDMI 2.1, 2.5Gb Ethernet (10GbE option)",
-    "wirelessChip": "Apple N1 - Wi-Fi 7, Bluetooth 6, Thread",
+    "chip": "Apple M6 chip (Apple's first 2nm Mac chip)",
+    "maxRAM": "",
+    "maxStorage": "",
+    "baseStorage": "",
+    "ports": "",
+    "wirelessChip": "",
     "currentInLineup": true,
     "commonIssues": [
-      "Bottom power button placement (same chassis as the M4 mini)",
-      "Front USB-C port wear from daily plug/unplug",
-      "Wi-Fi 7 / N1 networking teething issues on older routers (usually software, not hardware)",
-      "2.5GbE port negotiation faults with older switches",
-      "Internal PSU thermal stress in the 5×5-inch chassis"
+      "Too new for a fault pattern: on sale since 22 September 2026, so there is no repair track record yet",
+      "Accidental damage Apple's warranty excludes - liquid spills, drops and power surges",
+      "Port damage from heavy dock and cable use",
+      "Network, display and dock setup problems that look like hardware",
+      "Dust build-up in the fan over time"
     ],
     "pricing": {
       "diagnostic": 0,
@@ -500,8 +500,8 @@
       "thermalPaste": 320
     },
     "timelineNotes": "Apple's current Mac Mini - announced 25 August 2026, on sale since 22 September 2026. Brand-new model: check Apple warranty and AppleCare+ before any paid work. Early parts via authorised channels only; logic-board 5-7 days while stock builds.",
-    "honestyNote": "Same 5×5-inch chassis as the M4 mini - Apple changed the internals, not the box. M6 is Apple's first 2-nanometre chip (12-core CPU vs 10 on M4) and the N1 chip brings Wi-Fi 7 and Bluetooth 6. Ethernet moved up to 2.5Gb as standard. In its first year almost every fault should go through Apple warranty - we tell you honestly when that is the better route.",
-    "heroTagline": "Apple's 2026 Mac Mini. M6 (2nm), Wi-Fi 7, 2.5GbE. Same tiny 5×5-inch box."
+    "honestyNote": "Apple changed the silicon: the M6 is Apple's first 2-nanometre Mac chip. We do not repeat brochure specs here - Apple's spec page for your exact configuration is the reference. In its first year almost every factory fault should go through Apple warranty - we tell you honestly when that is the better route.",
+    "heroTagline": "Apple's 2026 Mac Mini with M6 - Apple's first 2nm Mac chip."
   },
   {
     "slug": "mac-mini-m5-pro-2026-repair-dubai",
@@ -511,19 +511,19 @@
     "family": "mini",
     "chassisGen": "new",
     "era": "apple-silicon",
-    "chip": "Apple M5 Pro (up to 18-core CPU, up to 20-core GPU)",
-    "maxRAM": "64GB unified (soldered)",
-    "maxStorage": "8TB (soldered SSD)",
-    "baseStorage": "512GB",
-    "ports": "Front: 2× USB-C (10Gb/s), 3.5mm. Rear: 3× Thunderbolt 5 (120Gb/s), HDMI 2.1, 2.5Gb Ethernet (10GbE option)",
-    "wirelessChip": "Apple N1 - Wi-Fi 7, Bluetooth 6, Thread",
+    "chip": "Apple M5 Pro chip",
+    "maxRAM": "",
+    "maxStorage": "",
+    "baseStorage": "",
+    "ports": "",
+    "wirelessChip": "",
     "currentInLineup": true,
     "commonIssues": [
-      "Thunderbolt 5 controller heat under sustained multi-display or NVMe loads",
-      "Front USB-C port wear",
-      "Fan dust build-up on desks with sustained 18-core workloads",
-      "10GbE option port failures",
-      "Internal PSU thermal stress in the compact chassis"
+      "Too new for a fault pattern: on sale since 22 September 2026, so there is no repair track record yet",
+      "Accidental damage Apple's warranty excludes - liquid spills, drops and power surges",
+      "Port damage from heavy dock and cable use",
+      "Network, display and dock setup problems that look like hardware",
+      "Dust build-up in the fan under sustained workloads"
     ],
     "pricing": {
       "diagnostic": 0,
@@ -535,8 +535,8 @@
       "thermalPaste": 320
     },
     "timelineNotes": "Apple's current Pro-chip Mac Mini - announced 25 August 2026, on sale since 22 September 2026. Warranty-first on a machine this new. Logic-board 5-7 days while authorised parts stock builds.",
-    "honestyNote": "The M5 Pro mini is the 'small workstation' pick: up to 18 CPU cores, 64GB RAM ceiling and three Thunderbolt 5 ports in the same 5×5-inch chassis as the M4 Pro. 24GB base RAM (up from 16GB on the M4 Pro). It replaces the M4 Pro mini one-for-one - if you own an M4 Pro there is no reason to upgrade for repair-related reasons; we support both.",
-    "heroTagline": "Apple's 2026 Pro mini. M5 Pro, Thunderbolt 5, 64GB capable, Wi-Fi 7."
+    "honestyNote": "The M5 Pro is the higher-performance 2026 Mac mini, above the M6 model, and it replaces the M4 Pro mini. If you own an M4 Pro there is no repair-related reason to upgrade; we support both. First-year factory faults should go through Apple warranty; we check coverage before quoting.",
+    "heroTagline": "Apple's 2026 Mac Mini with the M5 Pro chip."
   },
   {
     "slug": "mac-studio-m5-max-2026-repair-dubai",
@@ -546,19 +546,19 @@
     "family": "studio",
     "chassisGen": "studio",
     "era": "apple-silicon",
-    "chip": "Apple M5 Max (18-core CPU - 6 super + 12 performance cores, up to 40-core GPU)",
-    "maxRAM": "128GB unified (soldered)",
-    "maxStorage": "8TB (soldered SSD)",
-    "baseStorage": "512GB",
-    "ports": "Front: 2× USB-C, SDXC. Rear: 4× Thunderbolt 5, 2× USB-A, HDMI 2.1, 10GbE, 3.5mm",
-    "wirelessChip": "Apple N1 - Wi-Fi 7, Bluetooth 6, Thread",
+    "chip": "Apple M5 Max chip",
+    "maxRAM": "",
+    "maxStorage": "",
+    "baseStorage": "",
+    "ports": "",
+    "wirelessChip": "",
     "currentInLineup": true,
     "commonIssues": [
-      "Thunderbolt 5 controller heat (four rear ports driving multiple 6K displays)",
-      "Fan dust build-up in sustained creative workloads",
-      "Front USB-C port wear (front ports are USB-C on the Max, not Thunderbolt 5)",
-      "10GbE port failures",
-      "Soldered SSD failure (rare, chip-off recovery available)"
+      "Too new for a fault pattern: on sale since 22 September 2026, so there is no repair track record yet",
+      "Accidental damage Apple's warranty excludes - liquid spills, drops and power surges",
+      "Port damage from heavy dock and cable use",
+      "Network, display and dock setup problems that look like hardware",
+      "Fan dust build-up in sustained creative workloads"
     ],
     "pricing": {
       "diagnostic": 0,
@@ -569,9 +569,9 @@
       "fanCleaning": 390,
       "thermalPaste": 390
     },
-    "timelineNotes": "Apple's current Max-chip Studio - announced 25 August 2026, on sale since 22 September 2026. Same chassis as the 2025 Studio, so cooling and PSU service is identical. Logic-board 5-7 days while authorised parts stock builds.",
-    "honestyNote": "Apple kept the 2025 chassis and changed the silicon: M5 Max brings an 18-core CPU (6 'super' cores + 12 performance cores), up to 40 GPU cores and 36GB base RAM. The 128GB ceiling is unchanged from the M4 Max. Front ports are USB-C on the Max - only the Ultra gets front Thunderbolt 5. First-year faults should go through Apple warranty; we check coverage before quoting.",
-    "heroTagline": "Apple's 2026 Max Studio. 18-core M5 Max, 36GB base, Thunderbolt 5, Wi-Fi 7."
+    "timelineNotes": "Apple's current Max-chip Studio - announced 25 August 2026, on sale since 22 September 2026. Logic-board 5-7 days while authorised parts stock builds.",
+    "honestyNote": "The M5 Max is the entry chip for the 2026 Mac Studio, with the M5 Ultra above it; both are the same M5 generation. We do not repeat brochure specs here - Apple's spec page for your exact configuration is the reference. First-year factory faults should go through Apple warranty; we check coverage before quoting.",
+    "heroTagline": "Apple's 2026 Mac Studio with the M5 Max chip."
   },
   {
     "slug": "mac-studio-m5-ultra-2026-repair-dubai",
@@ -581,19 +581,19 @@
     "family": "studio",
     "chassisGen": "studio",
     "era": "apple-silicon",
-    "chip": "Apple M5 Ultra (up to 36-core CPU - 12 super + 24 performance cores, up to 80-core GPU - two M5 Max fused)",
-    "maxRAM": "512GB unified (soldered) - 512GB option ships October 2026",
-    "maxStorage": "16TB (soldered SSD)",
-    "baseStorage": "1TB",
-    "ports": "Front: 2× Thunderbolt 5, SDXC. Rear: 4× Thunderbolt 5, 2× USB-A, HDMI 2.1, 10GbE, 3.5mm",
-    "wirelessChip": "Apple N1 - Wi-Fi 7, Bluetooth 6, Thread",
+    "chip": "Apple M5 Ultra chip",
+    "maxRAM": "Up to 512GB on the top Mac Studio configuration (soldered)",
+    "maxStorage": "",
+    "baseStorage": "",
+    "ports": "",
+    "wirelessChip": "",
     "currentInLineup": true,
     "commonIssues": [
-      "Heavy fan dust build-up - 36-core CPU under sustained load is the heaviest desktop workload Apple ships",
-      "Thunderbolt 5 controller heat across six ports",
-      "Thermal-paste degradation on the Ultra heatsink under extreme loads",
-      "10GbE port failures",
-      "Soldered SSD failure (chip-off recovery available)"
+      "Too new for a fault pattern: on sale since 22 September 2026, so there is no repair track record yet",
+      "Accidental damage Apple's warranty excludes - liquid spills, drops and power surges",
+      "Port damage from heavy dock and cable use",
+      "Network, display and dock setup problems that look like hardware",
+      "Heavy fan dust build-up under sustained all-day workloads"
     ],
     "pricing": {
       "diagnostic": 0,
@@ -604,8 +604,8 @@
       "fanCleaning": 460,
       "thermalPaste": 460
     },
-    "timelineNotes": "Apple's current Ultra Studio and the top of the Mac range now that the Mac Pro is discontinued - announced 25 August 2026, on sale since 22 September 2026. Logic-board work 5-7 days (Ultra board is the most complex Apple ships). Schedule fan + thermal service every 12 months for sustained 36-core workloads.",
-    "honestyNote": "With the Mac Pro discontinued in March 2026, the M5 Ultra Studio is now Apple's most powerful Mac, full stop. 36 CPU cores, up to 80 GPU cores, 96GB base RAM and a 512GB ceiling (the 512GB build ships from October). Unlike the 2025 lineup - where the M3 Ultra was an older-generation chip than the M4 Max - the M5 Ultra and M5 Max are the same generation, so the Ultra wins on every workload. Warranty-first in year one.",
-    "heroTagline": "Apple's most powerful Mac in 2026. 36-core M5 Ultra, 512GB capable, six Thunderbolt 5 ports."
+    "timelineNotes": "Apple's current Ultra Studio and the top of the Mac range now that the Mac Pro is discontinued - announced 25 August 2026, on sale since 22 September 2026. Logic-board work 5-7 days (Ultra boards are the most complex we work on). Schedule fan + thermal service every 12 months for sustained heavy workloads.",
+    "honestyNote": "With the Mac Pro discontinued in March 2026, the M5 Ultra Mac Studio is the top of Apple's Mac range, configurable up to 512GB. The M5 Ultra and M5 Max are the same chip generation, so choose by budget and memory need. Warranty-first in year one.",
+    "heroTagline": "The top of Apple's 2026 Mac range: M5 Ultra, configurable up to 512GB."
   }
 ]

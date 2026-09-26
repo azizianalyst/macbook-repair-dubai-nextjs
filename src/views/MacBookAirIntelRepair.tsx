@@ -26,7 +26,7 @@ export default function MacBookAirIntelRepair() {
       faqs={[
         {
           q: "How much does MacBook Air Intel screen repair cost in Dubai?",
-          a: "MacBook Air Intel screen replacement covers 2018-2020 models (A1932, A2179) as well as the 2017 model (A1466) at our workshop — usually well below Apple's price. All OEM-grade panels, same-day service available for stock models. Message us on WhatsApp for today's exact price on your model.",
+          a: "MacBook Air Intel screen replacement covers 2018-2020 models (A1932, A2179) as well as the 2017 model (A1466) at our workshop — quoted before any work so you can compare with Apple. All OEM-grade panels, same-day service available for stock models. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "MacBook Air Intel butterfly keyboard not working in Dubai, what to do?",

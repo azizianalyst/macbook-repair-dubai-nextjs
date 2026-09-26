@@ -20,7 +20,7 @@ export default function PricesHub() {
   return (
     <div className="mx-auto max-w-content">
       <div className="mb-lg flex items-center gap-3">
-        <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
+        <a href="/admin/" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
         <h1 className="m-0 text-[24px] text-text">Prices</h1>
       </div>
 

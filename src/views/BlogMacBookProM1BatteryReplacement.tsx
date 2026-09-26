@@ -23,7 +23,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Battery Replacement Cost in Dubai 2026: What to Expect"
-      hook="MacBook Pro M1 13-inch (2020) is now 5-6 years old in Dubai, well within the replacement window for original batteries. Independent replacement costs significantly less than Apple's service, and we quote your exact price on WhatsApp. M1 Pro and M1 Max models (2021) are entering their peak replacement wave at 4-5 years in UAE's warm climate."
+      hook="MacBook Pro M1 13-inch (2020) is now 5-6 years old in Dubai, well within the replacement window for original batteries. We quote your exact price on WhatsApp before any work, so you can compare it with Apple's battery service price. M1 Pro and M1 Max models (2021) are entering their peak replacement wave at 4-5 years in UAE's warm climate."
       quickAnswer="MacBook Pro M1 battery replacement in Dubai covers M1 13-inch, M1 Pro 14-inch, M1 Max 14-inch and M1 Max 16-inch. Same-day service, free battery health check first, 3-month warranty on replacement cells. Message us on WhatsApp for today's exact price on your model. Replace when capacity drops below 80% or the machine shuts down unexpectedly."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -150,7 +150,7 @@ export default function BlogMacBookProM1BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M1 battery replacement cost in Dubai?",
-          a: "We replace batteries on M1 13-inch, M1 Pro 14-inch, M1 Max 14-inch and M1 Max 16-inch, and swollen batteries cost slightly more for the extra work. All include a 3-month warranty and same-day service, and we come in well under Apple's independent pricing. Message us on WhatsApp for today's exact price on your model.",
+          a: "We replace batteries on M1 13-inch, M1 Pro 14-inch, M1 Max 14-inch and M1 Max 16-inch, and swollen batteries cost slightly more for the extra work. All include a 3-month warranty with an 80% capacity guarantee and same-day service, and we quote before any work so you can compare with Apple. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I check MacBook Pro M1 battery health in Dubai?",

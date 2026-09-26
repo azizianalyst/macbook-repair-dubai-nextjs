@@ -42,8 +42,8 @@ export default function ServicePanel({ urlPath }: { urlPath?: string }) {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
-        <p className="m-0 text-[12px] text-text-muted">Prices linked to <code className="text-text">{path}</code> — edits sync to the <a href="/admin/prices" className="text-accent hover:underline">Prices module</a> &amp; the live Offer schema.</p>
-        <a href="/admin/prices" className="inline-flex items-center gap-1 text-[12px] text-text-faint hover:text-text">Prices <ExternalLink size={12} /></a>
+        <p className="m-0 text-[12px] text-text-muted">Prices linked to <code className="text-text">{path}</code> — edits sync to the <a href="/admin/prices/" className="text-accent hover:underline">Prices module</a> &amp; the live Offer schema.</p>
+        <a href="/admin/prices/" className="inline-flex items-center gap-1 text-[12px] text-text-faint hover:text-text">Prices <ExternalLink size={12} /></a>
       </div>
 
       {loading ? (

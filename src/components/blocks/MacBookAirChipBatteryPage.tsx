@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
@@ -64,7 +65,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
         <a
-          href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air battery replacement quote please. Model: ")}`}
+          href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air battery replacement quote please. Model: ")}`)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -399,7 +400,7 @@ export default function MacBookAirChipBatteryPage({
                 .filter((p) => p.l4href)
                 .map((p) => ({ label: p.model, href: p.l4href! })),
             ].map((l) => (
-              <a key={l.href} href={l.href} className="text-accent hover:underline">
+              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">
                 {l.label} ›
               </a>
             ))}

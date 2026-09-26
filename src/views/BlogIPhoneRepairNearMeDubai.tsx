@@ -65,8 +65,8 @@ export default function BlogIPhoneRepairNearMeDubai() {
           <h3>4. Warranty offered</h3>
           <p>
             <strong>Written</strong> warranty, on the receipt, with terms. "We give 12 months warranty"
-            verbally doesn't count. Industry minimum: 30 days on screens, 3 months on batteries, 6
-            months on logic boards. If a shop offers no warranty or "as-is sold", walk out.
+            verbally doesn't count. Periods differ by repair type (screens, batteries and board work
+            rarely carry the same term), so ask for yours in writing. If a shop offers no warranty or "as-is sold", walk out.
           </p>
 
           <h3>5. Genuine parts policy</h3>

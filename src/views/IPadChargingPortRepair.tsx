@@ -51,7 +51,7 @@ export default function IPadChargingPortRepair() {
         { title: "Free diagnosis", body: "Test cable, port, voltage at the charging IC, and Smart Connector. You see the actual fault before approving the repair." },
         { title: "Port replacement or board work", body: "Most jobs are a flex-cable port swap (same day). Board-level IC repair takes a microscope and 1-2 days." },
         { title: "Full charge cycle test", body: "Wired charge from 0 to 100, fast-charge negotiation test, accessory test. Smart Connector tested with a Magic Keyboard." },
-        { title: "Free delivery + warranty card", body: "Back to you with the 30-day written warranty." },
+        { title: "Free delivery + warranty card", body: "Back to you with the 12-month written warranty." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Loader2, RefreshCw, Camera, ArrowLeft, ExternalLink, TrendingUp } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
@@ -82,7 +83,7 @@ export default function RankingsDashboard() {
     <div className="mx-auto max-w-content">
       <div className="mb-lg flex flex-wrap items-center justify-between gap-sm">
         <div className="flex items-center gap-3">
-          <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
+          <a href="/admin/" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
           <h1 className="m-0 text-[24px] text-text">Rankings</h1>
           {live && <span className="text-[12px] text-text-faint">{live.range_start} → {live.range_end}{data?.source === "snapshot" ? " · saved snapshot" : ""}</span>}
         </div>
@@ -209,7 +210,7 @@ function RowTable({ rows, keyLabel, linkify }: { rows: Row[]; keyLabel: string; 
         {rows.map((r, i) => (
           <tr key={i} className="border-t border-border hover:bg-bg-alt">
             <td className="px-3 py-2 text-text">
-              {linkify ? <a href={r.key} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-accent">{path(r.key)} <ExternalLink size={11} className="text-text-faint" /></a> : r.key}
+              {linkify ? <a href={withSlash(r.key)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-accent">{path(r.key)} <ExternalLink size={11} className="text-text-faint" /></a> : r.key}
             </td>
             <td className="px-3 py-2 text-text-muted">{r.clicks}</td>
             <td className="px-3 py-2 text-text-muted">{r.impressions.toLocaleString()}</td>

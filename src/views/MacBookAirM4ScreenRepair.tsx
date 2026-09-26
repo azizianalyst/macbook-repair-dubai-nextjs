@@ -69,7 +69,7 @@ export default function MacBookAirM4ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M4 screen repair cost in Dubai?",
-          a: "MacBook Air M4 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 15-inch is quoted separately. Apple Store Dubai charges AED 1,549–1,699. Parts are from the local Apple-authorised distributor. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
+          a: "MacBook Air M4 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 15-inch is quoted separately. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. Parts are from the local Apple-authorised distributor. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
         },
         {
           q: "Why is MacBook Air M4 screen repair more than M3?",

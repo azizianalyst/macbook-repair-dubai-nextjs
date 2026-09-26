@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { AlertTriangle, Battery, Clock, Shield, Phone, MessageCircle, CheckCircle2, XCircle } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -172,7 +173,7 @@ export default function MacBookBatterySwollen() {
               <p className="text-[15px] text-text-muted">Free pickup across Dubai Mainland. Same-day replacement. We prioritise swollen battery jobs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp Now
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -203,7 +204,7 @@ export default function MacBookBatterySwollen() {
               { label: "MacBook Repair Dubai", href: "/" },
               { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
             ))}
           </div>
         </section>

@@ -23,8 +23,8 @@ export default function BlogMacBookProM4BatteryReplacement() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M4 Battery Replacement in Dubai 2026: When to Replace and What to Expect"
-      hook="MacBook Pro M4 battery replacement at our Dubai workshop covers both the 14-inch and 16-inch, and typically costs well below Apple's out-of-warranty rate. Message us on WhatsApp for today's exact price on your model. The right time to replace is when capacity drops below 80% or the system shows Replace Soon, not when the machine is new and showing normal optimised charging behaviour."
-      quickAnswer="Replace your MacBook Pro M4 battery when: maximum capacity is below 80%, the M4 shuts down unexpectedly under load, or the battery shows physical swelling (trackpad rising, case gaps). We cover both the 14-inch and 16-inch in Dubai with same-day service and a 12-month warranty, usually well under Apple's rate. Message us on WhatsApp for today's exact price on your model."
+      hook="MacBook Pro M4 battery replacement at our Dubai workshop covers both the 14-inch and 16-inch. We quote before any work, so you can compare with Apple's out-of-warranty price - message us on WhatsApp for today's exact price on your model. The right time to replace is when capacity drops below 80% or the system shows Replace Soon, not when the machine is new and showing normal optimised charging behaviour."
+      quickAnswer="Replace your MacBook Pro M4 battery when: maximum capacity is below 80%, the M4 shuts down unexpectedly under load, or the battery shows physical swelling (trackpad rising, case gaps). We cover both the 14-inch and 16-inch in Dubai with same-day service and a 3-month warranty with an 80% capacity guarantee, and we quote before any work so you can compare with Apple. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -123,8 +123,8 @@ export default function BlogMacBookProM4BatteryReplacement() {
             caption="MacBook Pro M4 battery replacement. June 2026"
             headers={["Model", "Our service", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M4 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70.8 Wh OEM-grade cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M4 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M4 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70.8 Wh OEM-grade cell, 3-month warranty, same-day" },
+              { model: "MacBook Pro M4 16-inch battery", ours: "Price on request", apple: "Price on request", note: "99.6 Wh OEM-grade cell, 3-month warranty, same-day" },
               { model: "Battery + trackpad repair (if swelling caused damage)", ours: "Price on request", apple: "Price on request", note: "Both replaced together: swelling trackpad pressure damage" },
               { model: "Battery health check (no repair)", ours: "Free", apple: "Price on request", note: "Cycle count, capacity, cell voltage check" },
             ]}
@@ -133,7 +133,7 @@ export default function BlogMacBookProM4BatteryReplacement() {
           <h2 id="warranty">AppleCare vs independent repair: battery warranty in Dubai</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Under AppleCare+</strong>: battery replacement is covered at no cost when capacity drops below 80% within the AppleCare period. In UAE, AppleCare+ is purchased at point of sale from Apple or authorised resellers (Sharaf DG, iStyle, etc.)</li>
-            <li><strong>Without AppleCare+</strong>: Apple's out-of-warranty battery replacement in UAE is significantly more expensive than an independent repair. We come in well below Apple's rate with a 12-month parts and labour warranty. Message us on WhatsApp for today's exact price on your 14-inch or 16-inch</li>
+            <li><strong>Without AppleCare+</strong>: Apple publishes its UAE out-of-warranty battery price for each model on its support site. We quote before any work so you can compare, and our replacement carries a 3-month warranty with an 80% capacity guarantee. Message us on WhatsApp for today's exact price on your 14-inch or 16-inch</li>
             <li><strong>Warranty after independent repair</strong>: a genuine battery replacement at a non-Apple service provider does not void the remaining warranty on other M4 components under UAE consumer protection law (Federal Decree-Law No. 5 of 2023). Apple may decline future battery-related warranty claims on that unit</li>
           </ul>
           <p>
@@ -146,7 +146,7 @@ export default function BlogMacBookProM4BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M4 battery replacement cost in Dubai?",
-          a: "We replace the MacBook Pro M4 battery on both the 14-inch and 16-inch in Dubai, usually well below Apple's out-of-warranty rate. We use OEM-grade replacement cells with a 12-month warranty and offer same-day service when you drop off by noon. Message us on WhatsApp with your model for today's exact price.",
+          a: "We replace the MacBook Pro M4 battery on both the 14-inch and 16-inch in Dubai, and we quote before any work so you can compare with Apple's out-of-warranty price. We use OEM-grade replacement cells with a 3-month warranty and an 80% capacity guarantee, and offer same-day service when you drop off by noon. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "How long does MacBook Pro M4 battery last in Dubai?",
@@ -173,7 +173,7 @@ export default function BlogMacBookProM4BatteryReplacement() {
         { label: "MacBook Pro battery replacement Dubai", href: "/macbook-pro-battery-replacement-dubai", description: "Battery replacement for all MacBook Pro models with pricing." },
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
         { label: "MacBook Pro M4 battery draining fast Dubai", href: "/blog/macbook-pro-m4-battery-draining-fast-dubai", description: "Why M4 battery drains fast and how to fix it before replacement." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
       ]}
     />
   );

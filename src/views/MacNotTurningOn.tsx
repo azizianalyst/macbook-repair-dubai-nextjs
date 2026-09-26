@@ -47,7 +47,7 @@ export default function MacNotTurningOn() {
       warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on power-supply replacements.",
-        "6-month warranty on SMC and component-level board work.",
+        "15-day warranty on SMC and component-level board work, extendable to 6 months for a small flat fee.",
         "Free re-attempt if the same fault recurs inside warranty.",
       ]}
       faqs={[

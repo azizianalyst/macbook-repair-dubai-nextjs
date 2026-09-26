@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Instant-quote picker (gap-audit strategic wedge — no UAE competitor has a working
 // device + repair selector). Reads our real per-model service list from the model JSON data
 // files, then hands off to WhatsApp for today's exact price (prefilled with the exact model
@@ -131,7 +132,7 @@ export function QuoteCalculator() {
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">
           <Button asChild variant="whatsapp" size="lg">
-            <a href={waHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Confirm on WhatsApp</a>
+            <a href={withSlash(waHref)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Confirm on WhatsApp</a>
           </Button>
           <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
             <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call</a>

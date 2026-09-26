@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Phone, MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
 
@@ -15,7 +16,7 @@ export function StickyMobileCTA() {
         <Phone size={18} aria-hidden /> Call now
       </a>
       <a
-        href={NAP.whatsappUrl}
+        href={withSlash(NAP.whatsappUrl)}
         target="_blank"
         rel="noopener noreferrer"
         data-track="sticky-bar-whatsapp"

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -194,7 +195,7 @@ export default function MacBookNotTurningOn() {
           <div className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
               <a
-                href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook won't turn on. Can I get a free diagnosis please? Model: ")}`}
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook won't turn on. Can I get a free diagnosis please? Model: ")}`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -370,7 +371,7 @@ export default function MacBookNotTurningOn() {
                 <div className="flex flex-wrap gap-sm shrink-0">
                   <Button asChild variant="whatsapp" size="lg">
                     <a
-                      href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook won't turn on. Can I get a free diagnosis? Model: ")}`}
+                      href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook won't turn on. Can I get a free diagnosis? Model: ")}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -428,7 +429,7 @@ export default function MacBookNotTurningOn() {
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> Message on WhatsApp
                 </a>
               </Button>

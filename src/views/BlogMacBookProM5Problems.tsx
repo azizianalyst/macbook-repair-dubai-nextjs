@@ -7,12 +7,12 @@ export default function BlogMacBookProM5Problems() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 Common Problems? Fix Guide Dubai 2026"
-      seoDescription="MacBook Pro M5 common problems in Dubai? OLED display issues, Thunderbolt 5 faults, thermal throttling, memory pressure on 16GB M5. Expert fixes, message us on WhatsApp."
+      seoDescription="MacBook Pro M5 common problems in Dubai: display faults, Thunderbolt 5 issues, thermal throttling and memory pressure on 16GB models. Fixes and repair."
       path="/blog/macbook-pro-m5-common-problems-dubai"
       wide
       toc={[
         { id: "why-m5-problems", label: "Why does M5 have problems?" },
-        { id: "oled-display", label: "Step 1. OLED display issues" },
+        { id: "oled-display", label: "Step 1. Liquid Retina XDR display issues" },
         { id: "thunderbolt5", label: "Step 2. Thunderbolt 5 faults" },
         { id: "thermal-throttling", label: "Step 3. Thermal throttling check" },
         { id: "memory-pressure", label: "Step 4. Memory pressure fix" },
@@ -23,57 +23,59 @@ export default function BlogMacBookProM5Problems() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Common Problems in Dubai? Here's Why and How to Fix It"
-      hook="MacBook Pro M5 owners in Dubai report OLED uniformity concerns, Thunderbolt 5 accessory glitches, and unexpected thermal throttling. Most are firmware or configuration issues fixed in minutes. For hardware faults, message us on WhatsApp for today's exact price on your model."
-      quickAnswer="MacBook Pro M5 common problems include: OLED display image retention (check after 30 minutes static image), Thunderbolt 5 hubs not recognised (update hub firmware), thermal throttling on sustained tasks (clean vents, check Activity Monitor), and memory pressure on 16GB base config. Most fixes are free. For screen replacement or logic board repair in Dubai, message us on WhatsApp for today's exact price on your model."
+      hook="MacBook Pro M5 owners in Dubai ask about mini-LED blooming and display uniformity, Thunderbolt accessory glitches, and unexpected thermal throttling. Most are firmware or configuration issues fixed in minutes. For hardware faults, message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M5 common problems: display concerns on the mini-LED Liquid Retina XDR screen (blooming is normal; a fixed dark zone or lines is a fault), Thunderbolt 5 hubs not recognised (update the hub firmware), throttling on sustained loads, and memory pressure on 16GB. Most fixes are free. Message us on WhatsApp for a repair price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-09-26"
       readingMinutes={10}
-      featuredImageAlt="MacBook Pro M5 common problems, technician diagnosing OLED display and Thunderbolt 5 port at Dubai repair workshop"
+      featuredImageAlt="MacBook Pro M5 common problems, technician diagnosing the Liquid Retina XDR display and Thunderbolt 5 port at Dubai repair workshop"
       body={
         <>
           <h2 id="why-m5-problems">Why does the MacBook Pro M5 have problems?</h2>
           <p>
-            The MacBook Pro M5 (released 2025) introduced two major hardware firsts for the M5
-            generation: an OLED ProMotion display on all models and Thunderbolt 5 on every port.
-            First-generation implementations of new hardware always surface compatibility and
-            calibration issues in the first 12 months.
+            The MacBook Pro M5 (14-inch M5 from October 2025, M5 Pro and M5 Max from March 2026)
+            is an evolution, not a redesign. It keeps the mini-LED Liquid Retina XDR display the
+            14-inch and 16-inch MacBook Pro have used since 2021 (it is not OLED), and the Pro
+            and Max models keep the Thunderbolt 5 ports introduced with the M4 Pro and M4 Max.
+            Most reported M5 problems come from new software, accessories and workload, not
+            from new hardware:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li><strong>OLED display is brand-new to MacBook Pro</strong>: first-gen panels have more uniformity variation than the mature mini-LED they replaced</li>
+            <li><strong>Mini-LED display behaviour mistaken for faults</strong>: blooming around bright objects on black backgrounds is normal local dimming, while a fixed dark zone or lines is a real fault</li>
             <li><strong>Thunderbolt 5 hub compatibility</strong>: many existing Thunderbolt 4 docks mis-negotiate speed with TB5 ports</li>
-            <li><strong>macOS 16 bugs</strong>: the M5 launched with macOS 16 which had known power management regressions in the first two point releases</li>
-            <li><strong>Thermal architecture change</strong>: the thinner 14-inch M5 chassis runs hotter under sustained M5 Pro loads than the M4 Pro equivalent</li>
-            <li><strong>16GB base config memory pressure</strong>: M5's faster Neural Engine schedules more background ML tasks, pushing 16GB closer to its ceiling</li>
+            <li><strong>New macOS bugs</strong>: the M5 shipped with macOS Tahoe 26, and early point releases of any new macOS can carry power-management and display bugs. Update to the latest release first</li>
+            <li><strong>Sustained loads in the 14-inch chassis</strong>: a 14-inch M5 Pro or M5 Max has less cooling headroom than the 16-inch, so long exports and builds throttle sooner</li>
+            <li><strong>16GB base config memory pressure</strong>: on-device AI features, browsers and chat apps push 16GB closer to its ceiling</li>
           </ol>
           <p>
             Work through each issue in order. The majority of M5 MacBook Pro problems are
             firmware or software, not hardware failures.
           </p>
 
-          <h2 id="oled-display">Step 1: How do I check if my MacBook Pro M5 OLED display has a problem?</h2>
+          <h2 id="oled-display">Step 1: How do I check if my MacBook Pro M5 display has a problem?</h2>
           <p>
-            The M5 MacBook Pro is the first MacBook to use an OLED panel. OLED displays behave
-            differently to the mini-LED displays used in M1, M2, and M3 MacBook Pros. Here's
-            what's normal and what's a fault:
+            The M5 MacBook Pro uses a Liquid Retina XDR display: an LCD lit by a mini-LED
+            backlight split into local dimming zones. It is not OLED. Mini-LED has a few
+            behaviours that look like faults but are not. Here's what's normal and what's a fault:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Image retention (temporary)</strong>: leave a static UI on screen for 30 minutes, switch to a grey test page. A faint "ghost" that disappears in under 60 seconds is normal OLED behaviour, not a defect</li>
-            <li><strong>Black smearing</strong>: on early M5 units, fast dark-to-dark transitions can show smearing at 120Hz. Fix: System Settings → Displays → ProMotion, try setting to 60Hz to confirm. If it stops, that's a firmware-level issue, update macOS</li>
-            <li><strong>Uniformity banding</strong>: faint vertical banding visible on solid grey screens is common on first-gen OLED at low brightness. Compare yours against Apple's stated brightness floor (1 nit on M5 OLED)</li>
-            <li><strong>Dead pixels</strong>: a single stuck pixel on OLED is a warranty replacement. One pixel that is permanently lit (white or colour) in a dark scene qualifies under Apple's display policy</li>
+            <li><strong>Blooming (normal)</strong>: a faint glow or halo around a white cursor, subtitles or a bright window on a black background, most visible in a dark room. Every mini-LED MacBook Pro does this, and a replacement panel does too</li>
+            <li><strong>Dark-scene smearing</strong>: LCD pixels change state more slowly than OLED, so fast motion in dark scenes can leave a faint trail. Fix: System Settings → Displays → Refresh Rate, try 60Hz to confirm. If it only happens in one app, update macOS and the app</li>
+            <li><strong>Dark or stuck backlight zone (fault)</strong>: a fixed rectangular patch that stays dim, or stays lit on a black screen, is a failed mini-LED zone. The backlight is built into the display assembly, so this is an assembly replacement</li>
+            <li><strong>Lines, pressure marks or dead pixels (fault)</strong>: lines across the screen, key-shaped marks from closing the lid on an object, or pixels stuck on or off. On a new machine these are an Apple warranty matter, assessed under Apple&apos;s own display policy</li>
           </ul>
           <p>
-            Test your screen: open a full-screen grey image (search "grey screen test" in Safari)
-            at 50% brightness. Any dark patches, banding, or persistent ghost images that don't
-            clear in 2 minutes warrant a diagnostic.
+            Test your screen: open a full-screen black image, then a grey image (search "grey
+            screen test" in Safari) at 50% brightness. A soft halo around the cursor is normal.
+            Any fixed dark patches, bright blocks, lines or banding that stay put warrant a diagnostic.
           </p>
 
           <h2 id="thunderbolt5">Step 2: Does Thunderbolt 5 cause MacBook Pro M5 connectivity problems?</h2>
           <p>
             Thunderbolt 5 delivers 120Gbps bandwidth (versus 40Gbps on TB4), but it requires
-            updated hub and dock firmware to negotiate correctly. On the M5, all three ports
-            (two on left, one on right on the 16-inch) are full Thunderbolt 5.
+            updated hub and dock firmware to negotiate correctly. On M5 Pro and M5 Max models, all
+            three ports (two on the left, one on the right) are Thunderbolt 5.
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Dock not recognised at all</strong>: old TB3/TB4 docks that don't have updated firmware may fail to enumerate. Solution: update the dock's firmware via the manufacturer's app, or try a USB-C cable rather than TB cable to force USB 3.2 fallback</li>
@@ -134,16 +136,17 @@ export default function BlogMacBookProM5Problems() {
             without full AC) accelerate every hardware wear mechanism in the M5.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>OLED longevity</strong>: OLED panels degrade faster at high temperatures. Running the M5 in direct sunlight from a floor-to-ceiling window at full brightness shortens display life</li>
+            <li><strong>Display in direct sun</strong>: liquid crystal is heat-sensitive. A very hot LCD looks darker and responds more slowly until it cools, and sustained heat stresses the adhesives inside the display assembly. Avoid running the M5 in direct sunlight from a floor-to-ceiling window</li>
             <li><strong>Battery degradation</strong>: M5 battery rated for 1,000 cycles. In Dubai heat, cells kept above 35°C age faster. Enable Optimised Battery Charging (System Settings → Battery) to limit overnight charging to 80%</li>
             <li><strong>Fan vents</strong>: Dubai dust is ultra-fine and accumulates faster than in humid climates. Clean vents every 6 months</li>
-            <li><strong>Never leave in parked car</strong>: a car dashboard in UAE summer hits 80-90°C. A single afternoon in a hot car can damage the M5's OLED panel and accelerate battery degradation by months</li>
+            <li><strong>Never leave in parked car</strong>: Apple rates the MacBook Pro for storage up to 45°C, and a car in UAE summer sun goes far past that. Heat that high can cause patches or layer separation in the display and accelerates battery ageing</li>
           </ul>
 
           <h2 id="m5-vs-m4">MacBook Pro M5 vs M4: why faults differ</h2>
           <p>
-            The M5 and M4 share the OLED display and Thunderbolt 5 ports, but the M5 uses a
-            newer 3nm second-generation node. Here's how their fault profiles compare:
+            The M5 and M4 share the mini-LED Liquid Retina XDR display and, on Pro and Max
+            models, Thunderbolt 5 ports. The M5 chip moves to Apple&apos;s third-generation 3nm
+            process. Here's how their fault profiles compare:
           </p>
           <table>
             <thead>
@@ -151,14 +154,14 @@ export default function BlogMacBookProM5Problems() {
             </thead>
             <tbody>
               <tr>
-                <td>OLED display uniformity</td>
-                <td>First-gen OLED, higher variance in early batches</td>
-                <td>Improved calibration, fewer uniformity complaints in 2026 batches</td>
+                <td>Display</td>
+                <td>Mini-LED Liquid Retina XDR (not OLED): blooming normal, zone faults need a new assembly</td>
+                <td>Same mini-LED Liquid Retina XDR technology, same fault types</td>
               </tr>
               <tr>
                 <td>Thunderbolt 5 compatibility</td>
                 <td>Same TB5 ports, same dock firmware issues</td>
-                <td>Same issues, but macOS 16 improved TB5 negotiation</td>
+                <td>Same issues: keep macOS and dock firmware updated</td>
               </tr>
               <tr>
                 <td>Thermal throttling</td>
@@ -177,16 +180,16 @@ export default function BlogMacBookProM5Problems() {
           <BlogPriceTable
             caption="MacBook Pro M5 repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M5 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M5 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED ProMotion panel, same-day" },
-              { model: "MacBook Pro M5 battery replacement (14\")", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty" },
-              { model: "MacBook Pro M5 battery replacement (16\")", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M5 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, same-day when in stock" },
+              { model: "MacBook Pro M5 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, same-day when in stock" },
+              { model: "MacBook Pro M5 battery replacement (14\")", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 3-month warranty + 80% capacity guarantee" },
+              { model: "MacBook Pro M5 battery replacement (16\")", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 3-month warranty + 80% capacity guarantee" },
               { model: "Thunderbolt port repair (single)", ours: "Price on request", apple: "Price on request", note: "Port replacement or controller rework" },
               { model: "Thermal cleaning + repaste", ours: "Price on request", apple: "Not offered", note: "Vents + heatsink, fixes throttling" },
             ]}
           />
           <p>
-            Drop-off before 11am means same-day collection on screen and battery jobs.{" "}
+            Screen and battery jobs are same day only when the part is in stock and you drop off before 11am; M5 parts usually take 2–3 days.{" "}
             <Link to="/macbook-pro-m5-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro M5 repair Dubai full details →
             </Link>
@@ -215,24 +218,24 @@ export default function BlogMacBookProM5Problems() {
       }
       faqs={[
         {
-          q: "Why does my MacBook Pro M5 screen show a faint ghost image?",
-          a: "Short-term image retention (under 60 seconds) on the M5 OLED is normal and not a defect. OLED pixels hold charge briefly after displaying a static image. If the ghost persists beyond 2 minutes or appears at full brightness after short use, that is a panel defect covered under warranty. Bring it in for a free visual diagnosis.",
+          q: "Why does my MacBook Pro M5 screen show a glow or faint ghost image?",
+          a: "A soft glow around bright objects on a black background is blooming, a normal trait of the M5's mini-LED local dimming, not a defect. The M5 is an LCD, not OLED, so it does not get OLED-style burn-in. A ghost of a previous image that stays after a few minutes on a plain grey screen, or a fixed dark patch, is a panel fault. Bring it in for a free visual diagnosis.",
         },
         {
-          q: "Does Dubai heat permanently damage MacBook Pro M5 OLED?",
-          a: "Yes. OLED displays degrade faster above 35°C, accelerating pixel wear. In Dubai's summer (June-September), avoid leaving the M5 in direct sun through glass, in a parked car, or running full-brightness video for hours. Enable auto-brightness and limit screen-on time when stationary. The M5's ambient light sensor will reduce brightness automatically indoors.",
+          q: "Does Dubai heat permanently damage the MacBook Pro M5 display?",
+          a: "It can. Apple rates the MacBook Pro for storage up to 45°C, and a parked car or a sunlit window ledge in a Dubai summer goes well past that. Sustained heat can cause patches, uneven brightness or layer separation in the display assembly, and it ages the battery faster. Normal use in an air-conditioned room is fine. Keep the M5 out of direct sun and never leave it in a car.",
         },
         {
           q: "How long should MacBook Pro M5 battery last?",
           a: "Apple rates the M5 Pro 14-inch at up to 22 hours video playback and the M5 Max 16-inch at up to 24 hours. Real-world with browser, video calls, and code editing: expect 10-16 hours. Below 6 hours on a new M5 indicates a rogue background process rather than a hardware fault. Check Activity Monitor Energy tab first.",
         },
         {
-          q: "Will a MacBook Pro M5 screen replacement fix image retention?",
-          a: "If the image retention is permanent (ghost visible after 5+ minutes of a blank screen) it is a panel defect and replacement fixes it. If it clears in under 60 seconds, that is normal OLED behaviour and replacement is not needed. Bring it in for a free display test before deciding.",
+          q: "Will a MacBook Pro M5 screen replacement fix blooming or dark patches?",
+          a: "It fixes dark patches, stuck-bright zones, lines and a persistent ghost image, because those are faults in the display assembly. It does not remove blooming: the halo around bright objects on black is how every mini-LED Liquid Retina XDR screen works, and a new assembly shows it too. Bring it in for a free display test before deciding.",
         },
         {
           q: "How long does MacBook Pro M5 screen repair take in Dubai?",
-          a: "OLED screen replacement on the M5 14-inch takes 90-120 minutes. The 16-inch takes 2 hours. Drop off before 11am to collect same day. We test colour accuracy and touch response after fitting.",
+          a: "When the display assembly is in stock, replacement on the M5 14-inch takes 90-120 minutes and the 16-inch about 2 hours. Drop off before 11am to collect same day; if the assembly has to be sourced, allow 2–3 days. We test colour accuracy, brightness uniformity and every backlight zone after fitting.",
         },
         {
           q: "Is it safe to use MacBook Pro M5 with a Thunderbolt 5 port that sometimes disconnects?",
@@ -242,7 +245,7 @@ export default function BlogMacBookProM5Problems() {
       relatedLinks={[
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch and 16-inch, M5 Pro and M5 Max." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "Full MacBook Pro repair service, all chips and generations." },
-        { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "OLED vs mini-LED pricing comparison across all MacBook Pro models." },
+        { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "Mini-LED XDR vs Retina LCD pricing across all MacBook Pro models." },
         { label: "MacBook Pro battery draining fast fix", href: "/blog/macbook-pro-battery-draining-fast", description: "Step-by-step diagnosis for fast battery drain on all MacBook Pro chips." },
       ]}
     />

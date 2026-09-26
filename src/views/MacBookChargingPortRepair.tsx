@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Plug, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
@@ -151,7 +152,7 @@ export default function MacBookChargingPortRepair() {
         tone="dark"
         eyebrow="MacBook charging port repair"
         title="MacBook Charging Port Repair Dubai - USB-C and MagSafe"
-        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Same-day port swap or board-level charging IC repair, with a warranty of up to 12 months."
+        subtitle="Loose USB-C, bent pins, intermittent charging, MagSafe 3 won't latch. Same-day port swap with a 12-month warranty, or board-level charging IC repair with a 15-day warranty."
         startingPrice={350}
         timeline="Same day · 1 day"
       >
@@ -416,7 +417,7 @@ export default function MacBookChargingPortRepair() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

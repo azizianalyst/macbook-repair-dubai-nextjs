@@ -50,13 +50,13 @@ export default function MacBookGpuRepair() {
       warrantyBullets={[
         "Covers the GPU chip and the immediate solder bond.",
         "Excludes new physical impact or liquid damage.",
-        "Free re-work if the same GPU fault returns inside 12 months.",
+        "Free re-work if the same GPU fault returns inside the 15-day warranty.",
       ]}
       faqs={[
         { q: "Why do AMD Radeon GPUs fail in 2016-2019 MacBook Pros specifically?", a: "Apple ran these GPUs at the edge of their thermal envelope to fit them in the slim chassis. After 3-4 years of thermal cycling, the BGA solder bonds develop micro-cracks. Apple even ran a service programme for some 15\" MacBook Pro 2018/2019 serials. We see this fault every week." },
         { q: "Why don't you just reflow the GPU?", a: "Because reflow is a temporary fix - it re-melts the existing solder bonds to bridge the cracks. The cracks come back within weeks because the underlying thermal fatigue is unchanged. Reballing replaces the entire BGA bond with fresh balls, restoring original durability." },
         { q: "Can you repair Apple Silicon GPUs (M1, M2, M3, M4, M5)?", a: "No, honestly. The GPU is fused into the SoC die alongside the CPU and unified memory. If the GPU fails, the entire SoC has failed, and SoC failure means board swap - no chip-level rework is possible. We diagnose for free and tell you." },
-        { q: "How long does a reballed GPU last?", a: "When done correctly: as long as the original Apple solder bond, often longer because we use higher-melt-point lead-free balls. The warranty of up to 12 months is paperwork - actual lifespan is 4-6 years." },
+        { q: "How long does a reballed GPU last?", a: "When done correctly: as long as the original Apple solder bond, often longer because we use higher-melt-point lead-free balls. The 15-day warranty is paperwork - a good reball usually lasts years." },
         { q: "Will I lose my data?", a: "No. The GPU is on the logic board but separate from the SSD circuit. We don't touch your storage." },
         { q: "What if it's not the GPU but the display itself?", a: "Free diagnosis confirms which. If it's the display panel, that's a different fix, and we tell you upfront. We don't charge for GPU work that wasn't needed." },
       ]}

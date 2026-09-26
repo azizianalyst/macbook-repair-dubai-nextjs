@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Monitor, HardDrive, Cpu, MemoryStick, Phone, MessageCircle, CheckCircle2 } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -132,7 +133,7 @@ export default function IMacRepairCost() {
               <p className="text-[15px] text-text-muted">Free diagnosis, walk in or book free pickup across Dubai. Written quote before any work starts.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -164,7 +165,7 @@ export default function IMacRepairCost() {
               { label: "iMac Data Recovery Dubai", href: "/imac-data-recovery-dubai" },
               { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
             ))}
           </div>
         </section>

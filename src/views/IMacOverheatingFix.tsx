@@ -47,8 +47,8 @@ export default function IMacOverheatingFix() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "warranty of up to 12 months on the thermal work and adhesive seal.",
-        "Free re-clean if the same dust issue returns inside 6 months (it shouldn't).",
+        "15-day warranty on the thermal work and adhesive seal.",
+        "Free re-clean if the same dust issue returns inside those 15 days (it shouldn't).",
         "Free home visit option for the pickup and drop-off - iMacs are heavy.",
       ]}
       faqs={[

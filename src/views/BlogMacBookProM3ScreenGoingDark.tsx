@@ -115,8 +115,8 @@ export default function BlogMacBookProM3ScreenGoingDark() {
           <BlogPriceTable
             caption="MacBook Pro M3 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 12-month warranty, same-day" },
+              { model: "MacBook Pro M3 14-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M3 16-inch screen (mini-LED)", ours: "Price on request", apple: "Apple Store price", note: "Full panel, 90-day warranty, same-day" },
               { model: "Backlight repair only (M3, if driver circuit fault)", ours: "Price on request", apple: "Full display assembly", note: "Component-level repair if panel is undamaged" },
               { model: "Hinge display cable (M3)", ours: "Price on request", apple: "Full display assembly", note: "If darkening correlates with lid angle" },
               { model: "Display diagnostic", ours: "Free", apple: "Apple Store price", note: "Confirm panel vs cable vs software fault" },
@@ -164,7 +164,7 @@ export default function BlogMacBookProM3ScreenGoingDark() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. LCD and OLED." },
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. Liquid Retina XDR and Retina LCD." },
         { label: "MacBook Pro M3 repair Dubai", href: "/macbook-pro-m3-repair-dubai", description: "All M3 models: 14-inch M3 Pro, 16-inch M3 Max, full service." },
         { label: "MacBook Pro M3 common problems", href: "/blog/macbook-pro-m3-common-problems-dubai", description: "Full M3 issue guide covering mini-LED, Wi-Fi 6E, and battery." },
         { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "Full price guide for MacBook Pro screen repair, all models 2026." },

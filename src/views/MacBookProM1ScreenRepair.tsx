@@ -30,33 +30,33 @@ export default function MacBookProM1ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight flickering (mini-LED zone failure)",
-          body: "Localised dimming zone failure causes patches of the screen to flicker or pulse under varying brightness conditions. This is a panel assembly issue requiring replacement..",
+          body: "Localised dimming zone failure causes patches of the screen to flicker or pulse under varying brightness conditions. This is a panel assembly issue requiring replacement.",
         },
         {
           title: "Vertical or horizontal lines on M1 Pro display",
-          body: "Thin coloured lines running the full height or width of the display indicate panel damage or a display cable fault. Free diagnosis confirms which component is at fault before any repair is started..",
+          body: "Thin coloured lines running the full height or width of the display indicate panel damage or a display cable fault. Free diagnosis confirms which component is at fault before any repair is started.",
         },
         {
           title: "Black screen but Mac boots (backlight circuit or cable fault)",
-          body: "If you can see a faint image with a torch but the backlight is off, the fault is in the backlight driver circuit or the display cable. The M1 logic board is intact..",
+          body: "If you can see a faint image with a torch but the backlight is off, the fault is in the backlight driver circuit or the display cable. The M1 logic board is intact.",
         },
         {
           title: "Physical cracked screen 14-inch",
-          body: "Impact or pressure damage to the 14-inch Liquid Retina XDR panel. The mini-LED array is bonded to the panel and is replaced as a single assembly..",
+          body: "Impact or pressure damage to the 14-inch Liquid Retina XDR panel. The mini-LED array is bonded to the panel and is replaced as a single assembly.",
         },
         {
           title: "Physical cracked screen 16-inch",
-          body: "Impact or pressure damage to the 16-inch Liquid Retina XDR panel. The 16-inch assembly is larger and priced separately to the 14-inch..",
+          body: "Impact or pressure damage to the 16-inch Liquid Retina XDR panel. The 16-inch assembly is larger and priced separately to the 14-inch.",
         },
         {
           title: "Wrong colours or colour shift on M1 Pro panel",
-          body: "Colour banding, green or pink tint, or areas of incorrect colour reproduction indicate panel failure. This is distinct from a software display profile issue. Free diagnosis confirms..",
+          body: "Colour banding, green or pink tint, or areas of incorrect colour reproduction indicate panel failure. This is distinct from a software display profile issue. Free diagnosis confirms.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Pro M1 screen repair cost in Dubai?",
-          a: "MacBook Pro M1 screen repair at MacBook Repair Dubai is quoted per size in writing - all-in: panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively; our quote comes in significantly lower.",
+          a: "MacBook Pro M1 screen repair at MacBook Repair Dubai is quoted per size in writing - all-in: panel, labour, and 3-month warranty. Diagnosis is free. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare.",
         },
         {
           q: "How long does MacBook Pro M1 screen repair take in Dubai?",
@@ -68,7 +68,7 @@ export default function MacBookProM1ScreenRepair() {
         },
         {
           q: "Is it worth repairing a MacBook Pro M1 screen in Dubai?",
-          a: "Yes, in almost every case. The M1 Pro and M1 Max remain highly capable machines for video editing, development, and design. Against a new MacBook Pro, which Apple lists from AED 9,000 or more, a screen repair, repair is strongly cost-effective. The M1 chip itself has no repair needed, only the display assembly.",
+          a: "Yes, in almost every case. The M1 Pro and M1 Max remain highly capable machines for video editing, development, and design. Against a new MacBook Pro, which Apple lists from AED 7,199 (14-inch M5), a screen repair is strongly cost-effective. The M1 chip itself has no repair needed, only the display assembly.",
         },
         {
           q: "Can the mini-LED backlight be repaired separately without replacing the full panel?",

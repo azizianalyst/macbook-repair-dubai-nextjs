@@ -25,11 +25,11 @@ export default function MacBookAirM3Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M3 screen repair cost in Dubai?",
-          a: "The 13-inch and 15-inch take different Liquid Retina panels, so they are quoted separately after a free diagnosis. The Apple Store charges AED 1,099-1,199. We use OEM-grade Liquid Retina panels with the same 2560x1600 or 2880x1864 resolution. Same-day service available.",
+          a: "The 13-inch and 15-inch take different Liquid Retina panels, so they are quoted separately after a free diagnosis. Apple does not publish a Mac screen price (it inspects first), so we quote before any work and you can compare. We use OEM-grade Liquid Retina panels with the same 2560x1600 or 2880x1864 resolution. Same-day service available.",
         },
         {
           q: "How much does MacBook Air M3 battery replacement cost in Dubai?",
-          a: "The 13-inch (52.6 Wh) and 15-inch (66.5 Wh) use different cells, each quoted after a free diagnosis. Apple charges AED 899-999. We use OEM-grade cells and complete the job in 45-60 minutes. 12-month warranty on the replacement.",
+          a: "The 13-inch (52.6 Wh) and 15-inch (66.5 Wh) use different cells, each quoted after a free diagnosis, before any work, so you can compare with Apple's quote. We use OEM-grade cells and complete the job in 45-60 minutes. 3-month warranty on the replacement, with an 80% capacity guarantee.",
         },
         {
           q: "MacBook Air M3 not recognising second external display in Dubai?",
@@ -45,7 +45,7 @@ export default function MacBookAirM3Repair() {
         },
         {
           q: "Is MacBook Air M3 worth repairing vs upgrading to M4?",
-          a: "MacBook Air M3 is still a current-generation machine and will receive macOS updates until at least 2029. A screen or battery repair costs far less than upgrading to an M4, which Apple lists from AED 4,499. Unless you specifically need the M4's efficiency gains or Sky Blue colour, repair is the better value.",
+          a: "The MacBook Air M3 is no longer sold new, but it is still a capable, supported machine. A screen or battery repair costs far less than a new MacBook Air M5, which Apple lists from AED 4,599. Unless you specifically need the newer chip, repair is usually the better value.",
         },
       ]}
     />

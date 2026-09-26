@@ -46,8 +46,8 @@ export default function IMacFanCleaning() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "warranty of up to 12 months on the seal and the workmanship.",
-        "If fan noise returns inside 6 months we re-clean for free.",
+        "15-day warranty on the seal and the workmanship.",
+        "If fan noise returns inside those 15 days we re-clean for free.",
         "Free home pickup and drop-off across Dubai mainland.",
       ]}
       faqs={[

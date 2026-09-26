@@ -23,8 +23,8 @@ export default function BlogMacBookProM2ScreenRepair() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Screen Repair in Dubai 2026: LCD and mini-LED Panels"
-      hook="MacBook Pro M2 screen repair in Dubai is far cheaper at independent workshops than at Apple. The M2 13-inch uses a standard IPS LCD (faster to replace), while the M2 Pro and M2 Max 14/16-inch use mini-LED panels (longer availability). Same-day service is available for morning drop-offs. Message us on WhatsApp for today's exact price on your model."
-      quickAnswer="MacBook Pro M2 screen repair in Dubai covers M2 13-inch IPS LCD and M2 Pro/Max 14/16-inch mini-LED panels, at prices well below the Apple Store. Diagnosis is free. Same-day service for most models. No data loss during screen replacement. 12-month warranty on replacement panels. WhatsApp us for today's exact price on your model."
+      hook="MacBook Pro M2 screen repair in Dubai is quoted before any work starts, so you can compare it with Apple's quote. The M2 13-inch uses a standard IPS LCD (faster to replace), while the M2 Pro and M2 Max 14/16-inch use mini-LED panels (longer availability). Same-day service is available for morning drop-offs. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M2 screen repair in Dubai covers M2 13-inch IPS LCD and M2 Pro/Max 14/16-inch mini-LED panels, quoted before any work so you can compare with Apple. Diagnosis is free. Same-day service for most models. No data loss during screen replacement. 90-day warranty on replacement panels. WhatsApp us for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -80,7 +80,7 @@ export default function BlogMacBookProM2ScreenRepair() {
             <li>Display cable inspection (replaced if showing wear)</li>
             <li>True Tone and ProMotion (on Pro/Max) calibration data transfer to new panel</li>
             <li>Colour accuracy verification using colorimeter</li>
-            <li>12-month warranty on replacement panel</li>
+            <li>90-day warranty on replacement panel</li>
             <li>Reassembly with original screws</li>
           </ul>
 
@@ -126,9 +126,9 @@ export default function BlogMacBookProM2ScreenRepair() {
             caption="MacBook Pro M2 screen repair options. June 2026"
             headers={["Model", "Our repair", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M2 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty, same-day" },
-              { model: "MacBook Pro M2 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty, same-day" },
+              { model: "MacBook Pro M2 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M2 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 90-day warranty, same-day" },
+              { model: "MacBook Pro M2 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 90-day warranty, same-day" },
               { model: "Display cable (if also damaged)", ours: "Price on request", apple: "Included in Apple's assembly", note: "Added only if cable shows wear or damage" },
               { model: "Screen diagnostic", ours: "Free", apple: "Price on request", note: "Damage type and repair scope assessment" },
             ]}
@@ -151,7 +151,7 @@ export default function BlogMacBookProM2ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "Price depends on your exact model: the M2 13-inch uses an IPS LCD, while the M2 Pro 14-inch and M2 Max 16-inch use mini-LED panels. All repairs include a 12-month warranty and same-day service, and cost well below the Apple Store. Diagnosis is free. Message us on WhatsApp for today's exact price on your model.",
+          a: "Price depends on your exact model: the M2 13-inch uses an IPS LCD, while the M2 Pro 14-inch and M2 Max 16-inch use mini-LED panels. All repairs include a 90-day warranty and same-day service, and we quote before any work so you can compare with Apple. Diagnosis is free. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does MacBook Pro M2 13-inch use the same screen as the Pro/Max?",
@@ -175,7 +175,7 @@ export default function BlogMacBookProM2ScreenRepair() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. LCD and OLED." },
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. Liquid Retina XDR and Retina LCD." },
         { label: "MacBook Pro M2 repair Dubai", href: "/macbook-pro-m2-repair-dubai", description: "All M2 models: 13-inch M2, 14/16-inch M2 Pro, M2 Max service." },
         { label: "MacBook Pro M2 screen lines fix Dubai", href: "/blog/macbook-pro-m2-screen-lines-dubai", description: "Lines, flicker, black screen on M2: diagnosis guide." },
         { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "Full price guide for MacBook Pro screen repair, all models 2026." },

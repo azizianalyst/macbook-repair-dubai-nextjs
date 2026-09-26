@@ -1,356 +1,336 @@
 "use client";
-// iMac Repair Dubai - faithful rebuild of the original WordPress /imac-repair-dubai page
-// (user: "save data as I give you", 2026-06-01). Reproduces the old content INCLUDING its
-// AED pricing table. Preserves the model + service internal links the family hub provided.
-// ⚠️ HAND-EDITED - do NOT regenerate via build-family-hubs.mjs (it would overwrite this content).
-import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
-import { Link } from "@/lib/router-compat";
-import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
-import { ReviewGrid } from "@/components/blocks/ReviewGrid";
-import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { PageShell } from "@/components/layout/PageShell";
-import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
-import { LeadForm } from "@/components/blocks/LeadForm";
+/**
+ * iMac Repair Dubai — rebuilt 2026-09-26 onto the Azizi page standard
+ * (SEO master plan, Phase 2.3 item 6; plan 2.1 names this URL the target for
+ * "imac repair dubai" / "imac repair in dubai", where the homepage currently ranks #2
+ * and this page #51).
+ *
+ * What changed from the June WordPress port:
+ *  - The AED price table is gone (hide-prices policy). Cost intent is served by the
+ *    free diagnosis and a WhatsApp quote.
+ *  - Unsourced claims removed: "certified" technicians, "OEM parts only" (contradicted
+ *    the sitewide parts policy), "100% data-loss-free guarantee", "one of the highest
+ *    customer retention rates", and the claim that the 27-inch display "lifts off
+ *    magnetically" (every iMac since 2012 is held on with adhesive).
+ *  - Links to the retired /imac-m1|m3|m4-repair-dubai hubs (now 301s) replaced by the
+ *    dated model pages.
+ *  - useSeo() dropped: meta comes from metaForPath() in page.tsx and schema from
+ *    <PageSchema/>, as on every Azizi-template page. The old client-side title said
+ *    "Certified", which the truth gate forbids.
+ *
+ * Kept true facts: model coverage, free diagnosis, free pickup, on-site diagnosis and
+ * minor repairs, 3–4 hour in-stock timings, 1–2 business days for ordered parts, 27-inch
+ * RAM door (up to 128GB on 2019/2020), soldered M-series RAM/SSD, 2017 5K GPU faults.
+ * Keywords covered: imac repair dubai / in dubai / near me / abu dhabi-adjacent pickup,
+ * imac screen replacement, imac upgrade (RAM, SSD), imac parts, imac not turning on.
+ */
+import {
+  HardDrive, Fan, ShieldCheck, Camera, Droplets, Stethoscope,
+  Search, Truck, Wrench,
+} from "lucide-react";
+
+import { AziziMoneyPage, InLink, waHref } from "@/components/azizi/AziziMoneyPage";
 import { PRESETS } from "@/data/form-presets";
-import { Hero } from "@/components/blocks/Hero";
-import { USPStrip } from "@/components/blocks/USPStrip";
-import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
-import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { LocationBlock } from "@/components/blocks/LocationBlock";
-import { Button } from "@/components/ui/button";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { pickReviews } from "@/lib/find-reviews";
+import { NAP, TEAM } from "@/content/site";
 
-const SIBLINGS = [
-  { label: "MacBook Air", href: "/macbook-air-repair-dubai" },
-  { label: "MacBook Pro", href: "/macbook-pro-repair-dubai" },
-  { label: "Mac Pro", href: "/mac-pro-repair-dubai" },
-  { label: "Mac mini", href: "/mac-mini-repair-dubai" },
-  { label: "Mac Studio", href: "/mac-studio-repair-dubai" },
-];
+const PATH = "/imac-repair-dubai";
+const WA_MSG = "Hi, I need an iMac repair quote. Size/year: ... Fault: ...";
+const REVIEWER = TEAM.find((t) => t.name === "Mohammed");
 
-const MODELS = [
-  `24" M4 (2024)`, `24" M3 (2023)`,
-  `A2438 24" M1 (2021)`, `A2116 21.5" Intel (2020)`, `A2115 27" Intel (2020)`, `A2116 21.5" Intel (2019)`,
-  `A2115 27" Intel (2019)`, `A1419 27" Intel (2017)`, `A1418 21.5" Intel (2017)`, `iMac Pro A1862 (2017)`,
-  `A1419 27" Intel (2015)`, `A1419 27" Intel (2014)`, `A1419 27" Intel (Late 2013)`,
-];
-
-// Dedicated model pages (preserved from the family hub so they stay internally linked)
+/* Dated model pages — the only model URLs (the chip hubs 301 here). */
 const MODEL_PAGES = [
-  { label: "iMac 24\" M4 2024", href: "/imac-24-m4-2024-repair-dubai" },
-  { label: "iMac 24\" M3 2023", href: "/imac-24-m3-2023-repair-dubai" },
-  { label: "iMac 24\" M1 2021", href: "/imac-24-m1-2021-repair-dubai" },
-  { label: "iMac 27\" Intel 2020", href: "/imac-27-intel-2020-repair-dubai" },
-  { label: "iMac 27\" Intel 2019", href: "/imac-27-intel-2019-repair-dubai" },
-  { label: "iMac 27\" Intel 2017", href: "/imac-27-intel-2017-repair-dubai" },
-  { label: "iMac Pro 2017", href: "/imac-27-pro-2017-repair-dubai" },
-];
+  { label: 'iMac 24" M4 (2024) repair', to: "/imac-24-m4-2024-repair-dubai" },
+  { label: 'iMac 24" M3 (2023) repair', to: "/imac-24-m3-2023-repair-dubai" },
+  { label: 'iMac 24" M1 (2021) repair', to: "/imac-24-m1-2021-repair-dubai" },
+  { label: 'iMac 27" Intel 2020 repair', to: "/imac-27-intel-2020-repair-dubai" },
+  { label: 'iMac 27" Intel 2019 repair', to: "/imac-27-intel-2019-repair-dubai" },
+  { label: 'iMac 27" Intel 2017 repair', to: "/imac-27-intel-2017-repair-dubai" },
+  { label: "iMac Pro 2017 repair", to: "/imac-27-pro-2017-repair-dubai" },
+  { label: "iMac Intel repair (21.5- and 27-inch)", to: "/imac-intel-repair-dubai" },
+] as const;
 
-// Chip-generation hub pages (grouped landing pages by silicon generation)
-const CHIP_PAGES = [
-  { label: "iMac Intel Repair (27-inch 5K & 21.5-inch 4K)", href: "/imac-intel-repair-dubai" },
-  { label: "iMac M1 Repair (24-inch 2021)", href: "/imac-m1-repair-dubai" },
-  { label: "iMac M3 Repair (24-inch 2023)", href: "/imac-m3-repair-dubai" },
-  { label: "iMac M4 Repair (24-inch 2024)", href: "/imac-m4-repair-dubai" },
-];
+const SERVICE_LINKS = [
+  { label: "iMac screen repair", to: "/imac-screen-repair-dubai" },
+  { label: "iMac logic board repair", to: "/imac-logic-board-repair-dubai" },
+  { label: "iMac not turning on", to: "/imac-not-turning-on-dubai" },
+  { label: "iMac power supply repair", to: "/imac-power-supply-repair-dubai" },
+  { label: "iMac GPU repair", to: "/imac-gpu-repair-dubai" },
+  { label: "iMac RAM upgrade", to: "/imac-ram-upgrade-dubai" },
+  { label: "iMac SSD upgrade", to: "/imac-ssd-upgrade-dubai" },
+  { label: "iMac data recovery", to: "/imac-data-recovery-dubai" },
+  { label: "iMac overheating fix", to: "/imac-overheating-fix-dubai" },
+  { label: "iMac fan cleaning", to: "/imac-fan-cleaning-dubai" },
+  { label: "iMac OS reinstall", to: "/imac-os-reinstall-dubai" },
+  { label: "iMac virus removal", to: "/imac-virus-removal-dubai" },
+  { label: "iMac full diagnostic", to: "/imac-full-diagnostic-dubai" },
+  { label: "iMac repair cost", to: "/imac-repair-cost-dubai" },
+] as const;
 
-const SERVICE_PAGES = [
-  { label: "iMac Screen", href: "/imac-screen-repair-dubai" },
-  { label: "iMac Logic Board", href: "/imac-logic-board-repair-dubai" },
-  { label: "iMac Not Turning On", href: "/imac-not-turning-on-dubai" },
-  { label: "iMac RAM Upgrade", href: "/imac-ram-upgrade-dubai" },
-  { label: "iMac SSD Upgrade", href: "/imac-ssd-upgrade-dubai" },
-  { label: "iMac Data Recovery", href: "/imac-data-recovery-dubai" },
-  { label: "iMac Virus Removal", href: "/imac-virus-removal-dubai" },
-  { label: "iMac Overheating Fix", href: "/imac-overheating-fix-dubai" },
-  { label: "iMac OS Reinstall", href: "/imac-os-reinstall-dubai" },
-  { label: "iMac Fan Cleaning", href: "/imac-fan-cleaning-dubai" },
-  { label: "iMac Power Supply", href: "/imac-power-supply-repair-dubai" },
-  { label: "iMac GPU", href: "/imac-gpu-repair-dubai" },
-  { label: "iMac Full Diagnostic", href: "/imac-full-diagnostic-dubai" },
-];
-
-// Faithful pricing table from the original page
-const PRICING = [
-  { service: "Screen Repair", cost: "99-299", desc: "Minor repairs to fix screen issues.", time: "1-2 hours" },
-  { service: "Screen Replacement", cost: "499-2499", desc: "Complete screen replacement.", time: "2-4 hours" },
-  { service: "Hard Drive Replacement", cost: "99-499", desc: "Replacing faulty hard drive.", time: "1-2 hours" },
-  { service: "SSD Upgrade", cost: "299-2999", desc: "Upgrading to a faster SSD.", time: "1-3 hours" },
-  { service: "RAM Upgrade", cost: "99-499", desc: "Increasing memory capacity.", time: "1 hour" },
-  { service: "Logic Board Repair", cost: "99-799", desc: "Repairing the logic board.", time: "2-3 hours" },
-  { service: "Graphics Card Replacement", cost: "99-499", desc: "Replacing the graphics card.", time: "1-2 hours" },
-  { service: "Power Supply Replacement", cost: "299-799", desc: "Replacing the power supply unit.", time: "1-2 hours" },
-  { service: "Cooling Fan Replacement", cost: "199-499", desc: "Replacing the cooling fan.", time: "1-2 hours" },
-  { service: "Software Troubleshooting", cost: "49-199", desc: "Fixing software-related issues.", time: "1-2 hours" },
-  { service: "Virus Removal", cost: "49-199", desc: "Removing malware and viruses.", time: "1-2 hours" },
-  { service: "Keyboard Repair", cost: "49-199", desc: "Fixing or replacing keyboard issues.", time: "1 hour" },
-  { service: "Mouse Repair", cost: "49-199", desc: "Fixing or replacing mouse issues.", time: "1 hour" },
-  { service: "Speaker Repair", cost: "99-499", desc: "Repairing or replacing speakers.", time: "1-2 hours" },
-  { service: "Microphone Repair", cost: "99-499", desc: "Repairing or replacing the microphone.", time: "1-2 hours" },
-  { service: "Webcam Replacement", cost: "99-499", desc: "Replacing the built-in webcam.", time: "1-2 hours" },
-  { service: "Wi-Fi and Bluetooth Repair", cost: "99-499", desc: "Fixing connectivity issues.", time: "1-2 hours" },
-  { service: "USB Port Repair", cost: "99-499", desc: "Repairing USB ports.", time: "1-2 hours" },
-  { service: "iMac Display Port Repair", cost: "99-499", desc: "Repairing display port issues.", time: "1-2 hours" },
-  { service: "iMac Optical Drive Replacement", cost: "N/A", desc: "Replacing the optical drive.", time: "N/A" },
-  { service: "iMac Backup and Restore Services", cost: "99-999", desc: "Backup and restore data.", time: "Varies" },
-  { service: "iMac Liquid Damage Repair", cost: "99-499", desc: "Repairing liquid damage.", time: "2-4 hours" },
-  { service: "iMac OS Installation and Upgrade", cost: "49-299", desc: "Installing or upgrading macOS.", time: "1-2 hours" },
-  { service: "iMac Component-Level Repair", cost: "299-849", desc: "Repairing individual components.", time: "2-3 hours" },
-];
-
-const WHY = [
-  { title: "OEM parts for repairs", body: "To ensure your iMac works well, is compatible, and lasts a long time, we only use OEM parts. A genuine OEM part matches the exact specs and quality standards of the original iMac parts." },
-  { title: "Convenient on-site repairs", body: "Being without your iMac, even briefly, can be inconvenient - and your device likely holds valuable files. Our trained technicians provide on-site repairs, so your device is fixed in your presence, minimising downtime and keeping your data secure." },
-  { title: "Your iMac will be perfect again in no time", body: "We'll quickly figure out what's wrong and fix it so it works as well as it did before. There's no need to wait days without your iMac - we understand its importance and treat it accordingly." },
-  { title: "A qualified technician is the only one who should fix it", body: "All of our repair techs are certified with a lot of experience across all iMac types. They go through extensive training to deliver quick, perfect, and long-lasting repairs." },
-];
-
-// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
-// verified Google review library. Real reviews render below via pickReviews().
+const RELATED_HUBS = [
+  { label: "Mac Repair Dubai", to: "/mac-repair-dubai" },
+  { label: "MacBook Repair Dubai", to: "/macbook-repair-dubai" },
+  { label: "MacBook Air Repair Dubai", to: "/macbook-air-repair-dubai" },
+  { label: "MacBook Pro Repair Dubai", to: "/macbook-pro-repair-dubai" },
+  { label: "Mac mini Repair Dubai", to: "/mac-mini-repair-dubai" },
+  { label: "Mac Studio Repair Dubai", to: "/mac-studio-repair-dubai" },
+  { label: "Mac Data Recovery Dubai", to: "/mac-data-recovery-dubai" },
+  { label: "Apple Repair Dubai", to: "/apple-repair-dubai" },
+] as const;
 
 const FAQS = [
-  { q: "How long will the iMac repair take?", a: "iMac display, power supply, and camera replacements take 3-4 hours. When parts are not in stock, it typically takes 1-2 business days to receive them from our suppliers. You can pre-book your repair to receive premium services." },
-  { q: "Will the iMac repair process remove my data?", a: "Our professionals do not remove data unless the repair necessitates it. We always advise customers to keep a backup at all times." },
-  { q: "Will repairing my iMac impact my warranty?", a: "We are independent Apple specialists, not an Apple Authorised Service Centre - so if your iMac is still under Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple first, since a covered repair there keeps your Apple warranty intact. For out-of-warranty iMacs there's nothing left to void, and every repair we do is backed by our own written warranty up to 12 months." },
-  { q: "Can you fix any model of iMac?", a: "Yes, we repair all iMac models, from older Intel-based systems to the latest M4-powered iMacs. Our technicians handle both hardware and software issues for 21.5-inch, 24-inch, and 27-inch versions, including iMac Pro." },
-  { q: "Do you offer on-site iMac repair in Dubai?", a: "Absolutely! For your convenience, we provide on-site iMac repair and troubleshooting. Our technicians can come to your home or office to perform diagnostics or minor repairs, ensuring minimal downtime for your work." },
-  { q: "Do you offer free diagnostics for iMac repairs?", a: "Yes, we offer free diagnostics and inspection before starting any repair. Once the issue is identified, we'll share a transparent quote outlining the cost and time required - no hidden fees, no surprises." },
+  {
+    q: "How much does iMac repair cost in Dubai?",
+    a: "It depends on the model and the fault, so we quote after a free diagnosis. Send the size, year and symptom on WhatsApp and we will tell you what is involved. The written quote comes before any work, and there is no charge if we cannot fix it.",
+  },
+  {
+    q: "How long does an iMac repair take?",
+    a: "Display replacements take 2–3 days once the part is confirmed. Power supply and camera replacements take 3–4 hours when the part is in stock; if a part has to be ordered, allow 1–2 business days. Board-level and graphics repairs take longer, and you get a completion time with the quote.",
+  },
+  {
+    q: "Can you repair the 24-inch M4 iMac?",
+    a: "Yes, and the M1 and M3 models too. If it is still inside Apple's one-year warranty or AppleCare+, go to Apple first. For accidental damage or out-of-warranty faults we confirm part availability on WhatsApp before you bring it in.",
+  },
+  {
+    q: "Will the iMac repair erase my data?",
+    a: "Not unless the repair itself requires it, and we tell you before starting. On 24-inch Apple silicon iMacs the SSD is soldered to the logic board, so board work carries a real risk. If the iMac still boots, back it up first.",
+  },
+  {
+    q: "Do you offer on-site iMac repair in Dubai?",
+    a: "Yes. A technician can come to your home or office for diagnosis and minor repairs. Bigger jobs come back to the Concord Tower workshop, with free pickup and return anywhere in mainland Dubai. From Abu Dhabi we arrange courier collection for Macs, usually the next day; confirm the timing on WhatsApp before booking.",
+  },
+  {
+    q: "What warranty do you give on iMac repairs?",
+    a: "It depends on the repair: 90 days on screens, up to 12 months on other hardware such as power supplies, SSDs and RAM, and 15 days on logic-board, liquid-damage and software work. The terms are written on your job sheet.",
+  },
 ];
 
-function CallButtons() {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
-      </Button>
-      <Button asChild variant="secondary" size="lg">
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
-
 export default function IMacRepairHub() {
-  const reviews = pickReviews([], { devices: reviewDevicesForPath("/imac-repair-dubai"), min: 3, seed: "/imac-repair-dubai" });
-  useSeo(
-    {
-      title: "iMac Repair Dubai - Certified Logic Board & SSD Specialists",
-      description:
-        "Expert iMac repair in Dubai. Our Apple specialists fix screen, SSD, RAM, GPU & logic board issues. Support for Intel, M1 & M3 iMac models.",
-      path: "/imac-repair-dubai",
-    },
-    [localBusiness(), organization()],
-  );
-
-  const qa = deriveFamilyQuickAnswer({ family: "iMac", startingPrice: 1040 });
+  const reviews = pickReviews([], { devices: ["iMac"], min: 3, seed: PATH });
 
   return (
-    <PageShell>
-      <div className="bg-bg-alt text-text -mb-[4rem]">
-      <Hero
-        image="/images/topics/imac-repair-hub-dubai.jpg"
-        imageAlt="iMac repair Dubai - 24-inch M4 all-in-one teardown exploded-view engineering infographic"
-        variant="device"
-        tone="dark"
-        eyebrow="iMac specialist"
-        title="Professional iMac Repair in Dubai - Fast & Reliable Service"
-        subtitle="Do you have issues with your iMac? Our skilled technicians provide reliable and quick services for iMac repair in Dubai. If you want your iMac to run like new again, you can trust us to provide quality service."
-      >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Independent Apple specialists</span>
-          <span>·</span>
-          <span>OEM parts</span>
-          <span>·</span>
-          <span>Free pickup & delivery</span>
-        </p>
-      </Hero>
+    <AziziMoneyPage
+      path={PATH}
+      preset={PRESETS.repair}
+      leadFormDeviceType="iMac"
 
-        <TakeawaysByline
-          updated="September 2026"
-          reviewer="Mohammed, Mac desktop specialist"
-          years={14}
-          items={[
-            "All iMac generations are repaired here - 21.5-inch and 27-inch Intel through the 24-inch M1, M3 and M4.",
-            "The 27-inch Retina screen lifts off magnetically; modern 24-inch panels are bonded - both are workshop jobs we do weekly.",
-            "Fusion Drive to SSD upgrades remain the single biggest speed fix for Intel iMacs.",
-            "Power-supply failure is the most common no-power cause on the 27-inch 2017-2020 - a board-level repair, not a chassis swap.",
-            "Diagnosis is free with a written quote first, and a warranty of up to 12 months.",
-            "Free pickup for iMacs across Dubai mainland - no need to carry a 27-inch machine to Media City.",
-          ]}
-        />
+      breadcrumb={[
+        { name: "Home", path: "/" },
+        { name: "Mac Repair Dubai", path: "/mac-repair-dubai" },
+        { name: "iMac Repair Dubai", path: PATH },
+      ]}
 
-      <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
+      hero={{
+        eyebrow: "iMac specialist · 24-inch M1 to M4 · 21.5- and 27-inch Intel",
+        title: "iMac Repair Dubai",
+        subtitle:
+          "Screen, power supply, logic board, SSD and RAM work on every iMac, from the 27-inch 5K Intel models to the current 24-inch M4. Free diagnosis, and free pickup so you never have to carry it to Media City.",
+        image: "/images/real/lab/imac-front-dubai.jpg",
+        imageAlt:
+          "24-inch iMac on a desk at MacBook Repair Dubai in Dubai Media City, showing its About This Mac window",
+        ctaLabel: "WhatsApp for a free iMac diagnosis",
+      }}
 
-      <USPStrip tone="dark" />
+      authorByline={{
+        author: "MacBook Repair Dubai workshop team",
+        role: "Concord Tower, Dubai Media City",
+        reviewer: REVIEWER ? `${REVIEWER.name}, Mac desktop technician (${REVIEWER.years} years)` : undefined,
+        updated: "September 2026",
+      }}
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <BreadcrumbTrail tone="dark" trail={[
-          { name: "Home", path: "/" },
-          { name: "Apple Repair", path: "/apple-repair-dubai" },
-          { name: "Mac Repair", path: "/mac-repair-dubai" },
-          { name: "iMac Repair", path: "/imac-repair-dubai" },
-        ]} />
-      </section>
+      quickAnswer={{
+        question: "Where can I get an iMac repaired in Dubai?",
+        answer:
+          "MacBook Repair Dubai repairs every iMac — the current 24-inch M4, the 24-inch M1 and M3, and the 21.5- and 27-inch Intel models — at its workshop in Concord Tower, Dubai Media City. Diagnosis is free, you approve a written quote before work starts, and we collect iMacs free from anywhere in mainland Dubai.",
+      }}
 
+      keyTakeaways={{
+        updated: "September 2026",
+        lead:
+          "MacBook Repair Dubai is an independent workshop that repairs every iMac generation at Concord Tower, Dubai Media City.",
+        items: [
+          "The current iMac is the 24-inch M4; the M1 and M3 24-inch and the Intel iMacs are repaired too.",
+          "Every iMac since late 2012 has its display held on with adhesive, so opening one is a bench job.",
+          "RAM and SSD are soldered on 24-inch Apple silicon iMacs and cannot be upgraded.",
+          "On 27-inch Intel iMacs, an SSD in place of the Fusion Drive is still the biggest speed gain.",
+          "A 27-inch Intel iMac that won't power on may need a power supply, not a logic board.",
+          "Diagnosis is free, and there is no charge if we cannot fix it.",
+        ],
+      }}
 
+      whatIs={{
+        heading: "iMac repair in Dubai: what goes wrong on each generation",
+        entityName: "iMac repair",
+        definition: (
+          <>
+            <p>
+              The last Intel iMacs are now six years old or more, and they fail the way ageing desktops do:
+              Fusion Drives and hard drives slow to a crawl, internal power supplies die, and on the 2017
+              27-inch 5K models the AMD graphics chip can start drawing artefacts under load.
+            </p>
+            <p>
+              The 24-inch M1, M3 and M4 iMacs are simpler inside. The power supply is the external brick and
+              almost everything else sits on one small logic board, so repairs come down to the display, the
+              board or the adapter — and with soldered storage, board work puts data at risk.
+            </p>
+          </>
+        ),
+        benefits: [
+          { icon: Search, title: "Free diagnosis", body: "The fault is found and explained before any quote." },
+          { icon: Truck, title: "Free pickup", body: "Collected from anywhere in mainland Dubai." },
+          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
+          { icon: Wrench, title: "Honest upgrade advice", body: "We say so when an iMac cannot be upgraded." },
+        ],
+      }}
 
-      {/* Models */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">iMac models we repair</h2>
-        <ul className="flex flex-wrap gap-2 mb-lg">
-          {MODELS.map((m) => (
-            <li key={m} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text mono">{m}</li>
-          ))}
-        </ul>
-        <p className="text-[14px] mb-sm font-semibold text-text">Dedicated model pages:</p>
-        <ul className="flex flex-wrap gap-2">
-          {MODEL_PAGES.map((m) => (
-            <li key={m.href}><Link to={m.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors mono">{m.label}</Link></li>
-          ))}
-        </ul>
-        <p className="text-[14px] mt-lg mb-sm font-semibold text-text">Repair by chip generation:</p>
-        <ul className="flex flex-wrap gap-2">
-          {CHIP_PAGES.map((c) => (
-            <li key={c.href}><Link to={c.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{c.label}</Link></li>
-          ))}
-        </ul>
-      </section>
+      sections={[
+        {
+          id: "imac-screen",
+          heading: "iMac screen replacement",
+          body: (
+            <>
+              <p>
+                On every iMac since late 2012 the glass is laminated to the panel and the display is held on with
+                adhesive. Cracked glass therefore means a new display assembly, and every opening means fresh
+                adhesive strips on reassembly.
+              </p>
+              <p>
+                Lines, flicker or a pink tint are not always the screen. On 27-inch Intel iMacs we connect an
+                external display first to tell a panel fault from a graphics fault, so you do not pay for the
+                wrong part. Screens carry a 90-day warranty. See{" "}
+                <InLink to="/imac-screen-repair-dubai">iMac screen repair</InLink>.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "imac-upgrade",
+          heading: "iMac upgrade: SSD and RAM",
+          body: (
+            <p>
+              On 27-inch Intel iMacs from 2017 to 2020 the memory goes in through a door at the back — up to
+              64GB on the 2017 and 2019 models and 128GB on the 2020 model — while replacing a Fusion Drive with an SSD means taking the
+              display off. Both are covered on the <InLink to="/imac-ram-upgrade-dubai">iMac RAM upgrade</InLink>{" "}
+              and <InLink to="/imac-ssd-upgrade-dubai">iMac SSD upgrade</InLink> pages. On the 24-inch M1, M3
+              and M4, RAM and SSD are soldered: nobody can upgrade them, and we will tell you so.
+            </p>
+          ),
+        },
+        {
+          id: "imac-power",
+          heading: "iMac not turning on: power supply, logic board or graphics",
+          body: (
+            <p>
+              A 27-inch Intel iMac has its power supply inside the case, and a dead one looks exactly like a dead
+              logic board. We test the supply before quoting, so you are not charged for a board you did not
+              need. On 24-inch iMacs the external adapter is checked first. See{" "}
+              <InLink to="/imac-not-turning-on-dubai">iMac not turning on</InLink>,{" "}
+              <InLink to="/imac-power-supply-repair-dubai">iMac power supply repair</InLink>,{" "}
+              <InLink to="/imac-logic-board-repair-dubai">iMac logic board repair</InLink> and{" "}
+              <InLink to="/imac-gpu-repair-dubai">iMac GPU repair</InLink>.
+            </p>
+          ),
+        },
+        {
+          id: "imac-parts",
+          heading: "iMac parts we fit",
+          body: (
+            <p>
+              Display assemblies, SSDs, RAM, power supplies, fans, speakers and cameras, plus the adhesive every
+              opened iMac needs. Parts are genuine where supply allows and quality-tested otherwise, and you are
+              told which before we fit them. For the 24-inch M4, we confirm availability on WhatsApp before you
+              bring it in.
+            </p>
+          ),
+        },
+        {
+          id: "imac-models",
+          heading: "Which iMac do you have?",
+          body: (
+            <p>
+              Apple menu &gt; About This Mac shows the size and year. Each model has its own page:{" "}
+              <InLink to="/imac-24-m4-2024-repair-dubai">24-inch M4 (2024)</InLink>,{" "}
+              <InLink to="/imac-24-m3-2023-repair-dubai">24-inch M3 (2023)</InLink>,{" "}
+              <InLink to="/imac-24-m1-2021-repair-dubai">24-inch M1 (2021)</InLink>, 27-inch Intel{" "}
+              <InLink to="/imac-27-intel-2020-repair-dubai">2020</InLink>,{" "}
+              <InLink to="/imac-27-intel-2019-repair-dubai">2019</InLink> and{" "}
+              <InLink to="/imac-27-intel-2017-repair-dubai">2017</InLink>, and the{" "}
+              <InLink to="/imac-27-pro-2017-repair-dubai">2017 iMac Pro</InLink>. Other Intel iMacs are on the{" "}
+              <InLink to="/imac-intel-repair-dubai">iMac Intel repair</InLink> page.
+            </p>
+          ),
+        },
+      ]}
 
-      {/* iMac Repair Solution */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">iMac Repair Dubai. Expert Solution</h2>
-        <div className="space-y-md text-[16px] text-text-muted leading-relaxed max-w-[75ch]">
-          <p>For good reason, iMacs are considered among the best computers in their class. Even high-quality machines can develop problems that require service. A common reason for repairs is accidental drops or shocks, water damage, software issues, and DIY repairs. These issues are relatively common, but more severe problems such as motherboard failure can also occur. iMac repairs require patience, care, and expertise.</p>
-          <p>To repair Apple technology, you need specialists with extensive knowledge and experience. We at MacBook Repair Dubai are committed to providing high-quality iMac repair services in Dubai.</p>
-          <p>Does your iMac run slow or freeze up? Don't replace it just yet - our expert iMac repair and troubleshooting service might be all you need. Our skilled technicians will inspect your system and suggest the best upgrades to speed things up and boost performance without breaking your budget.</p>
-          <p>We offer everything from RAM upgrades to super-fast SSD installations. These changes can make your iMac start up quicker, transfer files faster, and run more smoothly overall. We only use high-quality parts from trusted brands and make sure every fix or upgrade meets your expectations.</p>
-        </div>
-      </section>
+      features={{
+        heading: "Other iMac repairs we do",
+        subheading: "All on the bench at our Media City workshop.",
+        features: [
+          { icon: HardDrive, name: "Data recovery", description: "Fusion Drive, SSD and T2-encrypted iMac recovery." },
+          { icon: Fan, name: "Overheating and fan noise", description: "Clogged fans and heat sinks cleaned or replaced." },
+          { icon: ShieldCheck, name: "macOS and malware", description: "Reinstalls, virus removal and slow-Mac tune-ups." },
+          { icon: Camera, name: "Camera, speakers, Wi-Fi", description: "Webcam, microphone, speaker and wireless faults." },
+          { icon: Droplets, name: "Liquid damage", description: "Board cleaning and component rework after a spill." },
+          { icon: Stethoscope, name: "Full diagnostic", description: "A complete hardware check before you buy or sell." },
+        ],
+      }}
 
-      {/* Pricing table */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Reliable iMac Upgrade Service</h2>
-          <p className="text-[16px] text-text-muted max-w-[70ch] mb-md">We fix the most common iMac problems at competitive prices. Estimated costs (AED) and timings:</p>
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
-            <table className="w-full text-[14px] min-w-[640px]">
-              <caption className="sr-only">iMac repair services, estimated AED cost, description, and estimated time.</caption>
-              <thead className="bg-bg-card">
-                <tr className="text-left">
-                  <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Est. cost (AED)</th>
-                  <th className="px-md py-sm font-semibold">Description</th>
-                  <th className="px-md py-sm font-semibold">Est. time</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING.map((r, i) => (
-                  <tr key={r.service} className={i % 2 ? "bg-bg-alt" : ""}>
-                    <td className="px-md py-sm font-semibold">{r.service}</td>
-                    <td className="px-md py-sm mono text-accent whitespace-nowrap">{r.cost}</td>
-                    <td className="px-md py-sm text-text-muted">{r.desc}</td>
-                    <td className="px-md py-sm text-text-muted whitespace-nowrap">{r.time}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-[13px] text-text-muted mt-sm">Estimated ranges only - final price confirmed after a free diagnosis.</p>
-          <div className="mt-lg"><CallButtons /></div>
-        </div>
-      </section>
+      comparison={{
+        eyebrow: "Independent vs Apple Store",
+        headline: "How is an independent iMac workshop different from the Apple Store?",
+        description: "We are independent, not an Apple Authorised Service Provider. The trade-offs run both ways.",
+        leftLabel: "MacBook Repair Dubai",
+        rightLabel: "Apple Store / AASP",
+        rows: [
+          { feature: "Diagnosis", left: "Free, no appointment", right: "Appointment required" },
+          { feature: "Older Intel iMacs", left: "Repaired while parts exist", right: "Refused once classed obsolete" },
+          { feature: "Getting it there", left: "Free pickup in mainland Dubai", right: "You carry it to the store" },
+          { feature: "If it cannot be fixed", left: "No charge", right: "Diagnostic fee may apply" },
+          { feature: "Inside Apple warranty", left: "We send you to Apple", right: "The right choice" },
+        ],
+      }}
 
-      {/* Service pages */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">iMac services we specialise in</h2>
-        <ul className="flex flex-wrap gap-2">
-          {SERVICE_PAGES.map((s) => (
-            <li key={s.href}><Link to={s.href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:bg-bg-alt transition-colors">{s.label}</Link></li>
-          ))}
-        </ul>
-      </section>
+      showLocation
+      showTeam
+      showStats
 
-      {/* Why choose us */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md">Why Choose Us?</h2>
-          <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Some of the top iMac repair techs in Dubai work at MacBook Repair Dubai. We have one of the highest customer retention rates in the UAE - most visitors become happy customers thanks to our low prices. We also offer free pickup and delivery to all our valued clients.</p>
-          <div className="grid gap-md sm:grid-cols-2">
-            {WHY.map((w) => (
-              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm">{w.title}</h3>
-                <p className="text-[15px] text-text-muted leading-relaxed">{w.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      relatedServices={{ heading: "iMac repair services", links: SERVICE_LINKS }}
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-        <ReviewGrid reviews={reviews} tone="dark" />
-      </section>
+      relatedPosts
 
-      {/* Schedule CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Save Time and Schedule Your Repair Now</h2>
-          <p className="relative text-text-muted text-[16px] max-w-[70ch]">
-            Our goal is to provide the supreme-quality Apple device repair available in Dubai, UAE - quick and reasonably priced. We fix all types of Apple Macs, iMac, Mac Pro, MacBook, iPad and iPhone with a 100% data-loss-free guarantee. Free diagnosis, same-day fixing, pickup and delivery available. Simply call us or fill out our short form and we'll get back to you right away.
-          </p>
-          <div className="relative"><CallButtons /></div>
-        </div>
-      </section>
+      faqs={{
+        heading: "iMac repair Dubai: common questions",
+        intro: "Straight answers to what we are asked most.",
+        items: FAQS,
+      }}
 
-      {/* FAQ */}
-      <VsAppleStore tone="dark" />
+      sources={{
+        heading: "Sources and Apple documentation",
+        links: [
+          { label: "Apple — check your coverage", href: "https://checkcoverage.apple.com/", note: "Check warranty or AppleCare+ status first." },
+          { label: "Apple UAE — iMac", href: "https://www.apple.com/ae/imac/", note: "The current 24-inch M4 lineup." },
+          { label: "Apple — vintage and obsolete products", href: "https://support.apple.com/en-us/102772", note: "Which iMacs Apple no longer services." },
+        ],
+      }}
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} injectSchema />
-        <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
-          <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
-        </div>
-      </section>
+      relatedHubs={{ heading: "Other Mac repair hubs", links: RELATED_HUBS }}
 
-      {/* Location */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg">Where to Find Us</h2>
-        <LocationBlock tone="dark" />
-      </section>
+      hubLinks={{
+        eyebrow: "Every model covered",
+        heading: "iMac models we repair",
+        links: MODEL_PAGES,
+      }}
 
-      {/* Related services */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[22px] font-semibold mb-sm">Related Services</h2>
-        <div className="flex flex-wrap gap-sm text-sm">
-          {[
-            { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
-            { label: "MacBook Repair Dubai", href: "/macbook-repair-dubai" },
-            { label: "MacBook Air Repair Dubai", href: "/macbook-air-repair-dubai" },
-            { label: "MacBook Pro Repair Dubai", href: "/macbook-pro-repair-dubai" },
-            { label: "Mac mini Repair Dubai", href: "/mac-mini-repair-dubai" },
-            { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
-          ].map((l) => (
-            <a key={l.href} href={l.href} className="text-accent underline underline-offset-2 hover:text-accent/80">{l.label}</a>
-          ))}
-        </div>
-      </section>
-      </div>
-    
-        {/* On-page capture, the standard's form with the shared repair preset. */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="imac-lead">
-          <h2 id="imac-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iMac repair quote</h2>
-          <LeadForm preset={PRESETS.repair} sourcePath="/imac-repair-dubai" defaultDeviceType="iMac" />
-        </section>
+      reviews={reviews}
+      reviewsHeading="What iMac customers say"
 
-      <RelatedArticles path="/imac-repair-dubai" />
-    </PageShell>
+      finalCta={{
+        eyebrow: "No need to carry it in",
+        headline: "Free iMac diagnosis, free pickup across Dubai",
+        description: "Send the size, year and what it is doing, and we will tell you what is involved before you commit.",
+        primary: { label: "Message us on WhatsApp", href: waHref(WA_MSG) },
+        secondary: { label: `Call ${NAP.phoneDisplay}`, href: `tel:${NAP.phoneE164}` },
+      }}
+    />
   );
 }

@@ -61,8 +61,8 @@ export default function BlogIPhoneBatteryReplacementCost() {
           <p className="text-[13px] text-text-muted mono">
             Message us on WhatsApp for today's exact price on your model. Apple's own battery pricing
             is published at{" "}
-            <a href="https://support.apple.com/iphone/repair/battery-power" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
-              support.apple.com/iphone/repair/battery-power
+            <a href="https://support.apple.com/iphone/repair/battery-replacement" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
+              support.apple.com/iphone/repair/battery-replacement
             </a>.
           </p>
 

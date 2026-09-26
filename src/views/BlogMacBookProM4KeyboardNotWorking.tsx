@@ -180,7 +180,7 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
         },
         {
           q: "How much does MacBook Pro M4 keyboard repair cost in Dubai?",
-          a: "It depends on the failure: a single keycap cleaning and refit for debris-related issues, or a full keyboard top case replacement for multiple dead keys or liquid damage (14-inch or 16-inch). We are well below Apple for the same top case replacement. Free diagnostic to confirm hardware vs software cause first, then message us on WhatsApp for the exact price on your model.",
+          a: "It depends on the failure: a single keycap cleaning and refit for debris-related issues, or a full keyboard top case replacement for multiple dead keys or liquid damage (14-inch or 16-inch). We quote before any work, so you can compare with Apple's quote for the same top case replacement. Free diagnostic to confirm hardware vs software cause first, then message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Can I replace just one key on MacBook Pro M4?",
@@ -193,7 +193,7 @@ export default function BlogMacBookProM4KeyboardNotWorking() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
         { label: "MacBook Pro M4 gets hot lid closed", href: "/blog/macbook-pro-m4-gets-hot-lid-closed-dubai", description: "Clamshell overheating fix for MacBook Pro M4 in Dubai." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models serviced in Dubai. Free diagnosis." },
       ]}

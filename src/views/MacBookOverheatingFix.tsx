@@ -52,7 +52,7 @@ export default function MacBookOverheatingFix() {
       warrantyBullets={[
         "Covers thermal pad, paste application and fan reseat.",
         "Excludes new dust ingress from external sources.",
-        "Free re-clean if temps creep back inside 12 months.",
+        "Free re-clean if temps creep back inside the 15-day warranty.",
       ]}
       faqs={[
         { q: "How much will my MacBook cool down after a re-paste?", a: "On 2016-2019 Intel MacBook Pros we routinely see a 15-25°C drop in sustained-load temperatures and 30-40% lower fan speed for the same workload. On Apple Silicon, a 5-10°C drop and noticeably quieter operation." },

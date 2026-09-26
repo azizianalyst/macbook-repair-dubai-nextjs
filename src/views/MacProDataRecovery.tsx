@@ -1,17 +1,24 @@
 "use client";
+/**
+ * Truth pass 2026-09-26: removed chip-off / JTAG recovery on the M2 Ultra Mac Pro and adapter
+ * reads of the Intel 2019 SSD modules. Both machines encrypt internal storage with a key held
+ * in their own security chip (the T2 on the 2019 Mac Pro, whose SSD modules are raw flash paired
+ * to it; the Secure Enclave inside the M2 Ultra), so recovery means getting the original machine
+ * running. Third-party PCIe NVMe cards are not T2-encrypted and can be read on the bench.
+ */
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 
 export default function MacProDataRecovery() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro Data Recovery Dubai - SSD Module and PCIe Recovery - Free Diagnosis"
-      seoDescription="Mac Pro data recovery Dubai. Intel 2019: proprietary Apple SSD module (not standard M.2). M2 Ultra: soldered SSD. Both require specialist hardware. Free assessment. Call 055 741 3706."
+      seoDescription="Mac Pro data recovery Dubai. Intel 2019: Apple SSD modules paired to the T2 chip. M2 Ultra: encrypted SSD paired to the chip. Recovery means getting the original Mac Pro running. Free assessment. Call 055 741 3706."
       path="/mac-pro-data-recovery-dubai"
-      eyebrow="Intel 2019 + M2 Ultra · proprietary SSD · specialist extraction"
+      eyebrow="Intel 2019 + M2 Ultra · encrypted internal SSD · board-level recovery"
       h1="Mac Pro Data Recovery Dubai"
-      subtitle="Mac Pro data recovery is not straightforward. Intel Mac Pro uses a proprietary Apple SSD module (not M.2, not standard). M2 Ultra has a soldered SSD. Both require specialist hardware. Free assessment before any charge."
+      subtitle="Mac Pro data recovery is not straightforward. The Intel 2019 Mac Pro's SSD modules are paired to its T2 chip, and the M2 Ultra's SSD is encrypted and paired to its chip. On both, the data is read by getting the original machine running. Free assessment before any charge."
       startingPrice={800}
-      timeline="Free assessment same day · recovery 2-5 days"
+      timeline="Free assessment · timeline given with your written quote"
       whatsappPrefill="Hi, I need data recovery from a Mac Pro. Model and what happened:"
       breadcrumb={[
         { name: "Home", path: "/" },
@@ -23,10 +30,10 @@ export default function MacProDataRecovery() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            Intel Mac Pro 2019 SSD: Apple uses a proprietary SSD module with an unusual form factor. Standard USB-M.2 enclosures do not fit. Specialist adapters are required, and even with the right adapter, a failed controller needs chip-off recovery tools.
+            Intel Mac Pro 2019 SSD: Apple's SSD modules are raw flash storage controlled and encrypted by the Mac Pro's T2 chip and paired to it. They cannot be read in an M.2 enclosure, an adapter or another Mac. Recovery means getting the original Mac Pro, with its own T2 and its own modules, to start again.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            M2 Ultra Mac Pro (2023): the SSD is soldered to the logic board, same as a MacBook Pro M-series. Recovery from a dead or damaged board requires specialist chip-off or JTAG techniques.
+            M2 Ultra Mac Pro (2023): the SSD storage sits on Apple's own modules, paired to the M2 Ultra and encrypted with a key held in its Secure Enclave, the same protection as any Apple silicon Mac. Desoldering the storage chips (chip-off) yields only encrypted data, so recovery from a dead board means repairing that board at component level until it runs.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             PCIe recovery (Intel 2019): many creative users add third-party NVMe-on-PCIe storage cards to the Intel Mac Pro's expansion slots. When the Mac itself fails, these cards can be removed and read on our bench. We extract the data directly from the NVMe drives even when the host machine will not boot.
@@ -37,8 +44,8 @@ export default function MacProDataRecovery() {
         </>
       }
       whatWeFix={[
-        "Intel Mac Pro proprietary SSD module data extraction",
-        "M2 Ultra soldered SSD chip-off recovery",
+        "Intel Mac Pro: original T2 system brought back up to read its SSD modules",
+        "M2 Ultra: board-level repair so the encrypted SSD can be read",
         "Won't boot recovery (both models)",
         "Corrupted APFS volume repair",
         "Power failure during write recovery",
@@ -53,7 +60,7 @@ export default function MacProDataRecovery() {
         },
         {
           title: "Specialist extraction",
-          body: "Proprietary SSD adapter (Intel) or chip-off extraction (M2 Ultra). We work in a static-safe environment with professional recovery tools.",
+          body: "Board-level repair until the original Mac Pro starts (Intel 2019 and M2 Ultra), or a bench read of third-party PCIe NVMe cards. We work in a static-safe environment and copy the data off before anything else."
         },
         {
           title: "Delivery on external drive",
@@ -69,19 +76,19 @@ export default function MacProDataRecovery() {
       faqs={[
         {
           q: "Is the Intel Mac Pro SSD compatible with a standard M.2 enclosure?",
-          a: "No. Apple's Mac Pro SSD module uses a proprietary connector and form factor. Standard M.2 USB enclosures will not accept it. Specialist adapters are required to access the drive, and a failed controller still needs chip-off recovery tools.",
+          a: "No. Apple's Mac Pro SSD modules use a proprietary connector and have no controller of their own: the T2 chip controls and encrypts them, and they are paired to it. They cannot be read in an M.2 enclosure or another Mac, so recovery means getting the original Mac Pro running.",
         },
         {
           q: "Can M2 Ultra Mac Pro data be recovered from a dead machine?",
-          a: "Yes, in many cases. The soldered SSD can be accessed via chip-off or JTAG techniques even when the board is dead. Success depends on the extent of physical damage to the SSD chips themselves.",
+          a: "Often, if the logic board can be repaired. The storage is encrypted with a key held in the M2 Ultra's Secure Enclave, so chip-off or reading the storage chips on their own cannot work. We repair the original board at component level until it starts, then copy the data off. If the chip or the storage is destroyed, or the board has been replaced, the data cannot be recovered by anyone.",
         },
         {
           q: "Is data recovery guaranteed?",
-          a: "No recovery service can guarantee results. Physical damage to the NAND chips may make recovery impossible. We assess first and only charge if recovery is successful.",
+          a: "No recovery service can guarantee results. Damage to the storage or to the security chip may make recovery impossible. We assess first and only charge if recovery is successful.",
         },
         {
           q: "How long does Mac Pro data recovery take?",
-          a: "Assessment is same day. Recovery takes 2 to 5 business days depending on drive condition, data volume, and whether chip-off extraction is needed.",
+          a: "It depends on the fault, the amount of data and how much board work is needed, so the timeline comes with your written quote after the free assessment.",
         },
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Ahmad Khalid"]}

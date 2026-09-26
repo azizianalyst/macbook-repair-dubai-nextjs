@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // MacBook Screen Repair - rebuilt in the dark theme to match the home page.
 // All content, pricing, problems, process, parts, warranty, comparison, reviews
 // and FAQs are preserved verbatim; only the presentation moved to the dark
@@ -104,16 +105,14 @@ const FAQS: FAQ[] = [
   { q: "Do you offer pickup for screen repair?",
     a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
   { q: "Is MacBook screen repair cheaper than the Apple Store?",
-    a: "Yes, usually around half. Apple lists about AED 1,299 for a 13-inch Air screen, about AED 1,799 for a 14-inch Pro and about AED 1,499 for a 13-inch Pro; our quote comes in well under each after a free diagnosis. You also keep your data and skip the Genius Bar appointment wait." },
+    a: "Often, but compare for yourself. Apple does not publish a MacBook screen price in the UAE: it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work, so you can set the two side by side. You also keep your data and skip the Genius Bar appointment wait." },
   { q: "Should I just go to Apple, and what about AppleCare+?",
-    a: "If your MacBook is still covered by AppleCare+ and the screen repair is free or a small deductible, go to Apple, and we will tell you so honestly. Once you are out of warranty, an independent repair is far cheaper, same-day on most models, and does not affect any Apple parts we do not touch." },
+    a: "If your MacBook is still covered by AppleCare+ and the screen repair is free or a small deductible, go to Apple, and we will tell you so honestly. Once you are out of warranty, we quote before any work so you can compare; the repair is same-day on most models and does not affect any Apple parts we do not touch." },
 ];
 
 const COMPARISON = [
   ["Repair window",         "Same day on MacBook Air 13\" and Pro 14\"",  "5 to 14 business days, mail-in"],
-  ["Starting price (Air 13\")", "Free diagnosis, then a quote",              "AED 1,449 (Apple list)"],
-  ["Starting price (Pro 14\")", "Free diagnosis, then a quote",              "AED 2,099 (Apple list)"],
-  ["Starting price (Pro 16\")", "Free diagnosis, then a quote",              "AED 2,600 (Apple list)"],
+  ["Price",                 "Free diagnosis, then a written quote",        "No published price; quoted after Apple inspects it"],
   ["Free pickup in Dubai",  "Yes, same day",                                "No, customer must courier"],
   ["LCD-only option",       "Yes - costs less than a full assembly",         "No, full assembly only"],
   ["Warranty",              "15 days - 3 months (by panel grade)",           "12 months"],
@@ -206,7 +205,7 @@ export default function MacBookScreenRepair() {
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
-                    <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook screen repair quote please. Model: ")}`} target="_blank" rel="noopener noreferrer">
+                    <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook screen repair quote please. Model: ")}`)} target="_blank" rel="noopener noreferrer">
                       <MessageCircle aria-hidden /> Get a quote on WhatsApp
                     </a>
                   </Button>
@@ -263,7 +262,7 @@ export default function MacBookScreenRepair() {
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
               <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>
         </div>
@@ -288,7 +287,7 @@ export default function MacBookScreenRepair() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-screen-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook screen repair in Dubai finishes the same day on the MacBook Air 13″, Pro 13″, and Pro 14″ when the panel is in stock. The workshop has fitted 3,400+ MacBook displays since 2004 - Flexgate cable swaps on the 2016-2017 Pro, full panel replacements on the M1 to M5 Pro, glass-only repairs on the 2012-2015 Retina range. Every panel is bench-tested for dead pixels, backlight uniformity, and P3 colour before it leaves the bench. True Tone is preserved on genuine Apple panels, calibrated against the original logic-board serial. Repairing a MacBook Pro specifically? The <Link to="/macbook-pro-screen-repair-dubai" className="text-accent hover:underline">MacBook Pro screen repair</Link> page covers Liquid Retina XDR mini-LED, ProMotion and the M5 OLED in depth.
+            MacBook screen repair in Dubai finishes the same day on the MacBook Air 13″, Pro 13″, and Pro 14″ when the panel is in stock. The workshop has fitted 3,400+ MacBook displays since 2004 - Flexgate cable swaps on the 2016-2017 Pro, full panel replacements on the M1 to M5 Pro, glass-only repairs on the 2012-2015 Retina range. Every panel is bench-tested for dead pixels, backlight uniformity, and P3 colour before it leaves the bench. True Tone is preserved on genuine Apple panels, calibrated against the original logic-board serial. Repairing a MacBook Pro specifically? The <Link to="/macbook-pro-screen-repair-dubai" className="text-accent hover:underline">MacBook Pro screen repair</Link> page covers Liquid Retina XDR mini-LED, ProMotion and the M5 in depth.
           </p></LinkifyProse>
         </section>
 
@@ -561,7 +560,7 @@ export default function MacBookScreenRepair() {
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
               <p className="text-[14px] text-text-muted m-0">Not near Media City? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See same-hour and same-day pickup by area</Link>.</p>
             </div>
           </div>
@@ -575,7 +574,7 @@ export default function MacBookScreenRepair() {
               Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. warranty up to 3 months on every panel fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
-              <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
+              <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a></Button>
             </div>
           </div>
@@ -617,7 +616,7 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
   const href = whatsappMessage ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}` : NAP.whatsappUrl;
   return (
     <div className="flex flex-wrap gap-sm shrink-0">
-      <Button asChild variant="whatsapp" size="lg"><a href={href} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
+      <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );

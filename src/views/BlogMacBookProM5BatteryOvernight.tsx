@@ -188,8 +188,8 @@ export default function BlogMacBookProM5BatteryOvernight() {
             caption="MacBook Pro M5 battery replacement. June 2026"
             headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 3-month warranty, same-day" },
+              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 3-month warranty, same-day" },
             ]}
           />
           <p>
@@ -246,7 +246,7 @@ export default function BlogMacBookProM5BatteryOvernight() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, all repairs." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 problem guide covering OLED, Thunderbolt 5, and throttling." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 problem guide covering the XDR display, Thunderbolt 5, and throttling." },
         { label: "MacBook Pro battery draining fast fix", href: "/blog/macbook-pro-battery-draining-fast", description: "Complete battery drain diagnosis for all MacBook Pro chips." },
         { label: "MacBook Pro M5 repair cost vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "Price comparison for every M5 repair at our workshop vs Apple Dubai." },
       ]}

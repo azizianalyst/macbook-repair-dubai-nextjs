@@ -7,7 +7,7 @@ export default function MacMiniDataRecovery() {
       seoTitle="Mac mini Data Recovery Dubai - Soldered SSD Specialist"
       seoDescription="Mac mini data recovery Dubai. M-chip Mac minis have soldered SSD - standard USB adapters don't work. Specialist recovery for won't boot, deleted files, corrupted SSD. Call 055 741 3706."
       path="/mac-mini-data-recovery-dubai"
-      eyebrow="Soldered SSD specialist · M1/M2/M4 · Intel · free assessment"
+      eyebrow="Board-level recovery · M1/M2/M4 · Intel · free assessment"
       h1="Mac mini Data Recovery Dubai"
       subtitle="Mac mini data recovery is more complex than MacBook recovery because the M-chip SSD is directly soldered. Standard recovery tools fail without specialist hardware. We handle all models - won't boot, deleted files, corrupted drive."
       startingPrice={500}
@@ -23,10 +23,10 @@ export default function MacMiniDataRecovery() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            Mac mini data recovery requires a different approach depending on the chip generation. Intel Mac minis (2018) use a proprietary Apple SSD blade that can be removed and accessed with the right adapter - the recovery process is similar to MacBook Pro. M-chip Mac minis (M1, M2, M4) have the SSD soldered directly to the logic board, which means standard USB recovery adapters simply do not work.
+            Mac mini data recovery requires a different approach depending on the chip generation. Older Intel Mac minis (2014 and earlier) use a hard drive, a Fusion Drive or a removable SSD that can be read on a separate workstation. The 2018 Intel Mac mini has a T2 chip with soldered, encrypted storage, and M-chip Mac minis (M1, M2, M4) have the SSD soldered to the logic board too, so standard USB recovery adapters simply do not work on them.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            For M-chip Mac minis, we use specialist hardware that interfaces with the logic board directly to access the soldered SSD. This requires the machine to be in a partially functional state in most cases - a Mac mini that has had serious board damage (liquid damage, power surge) presents a harder recovery challenge than one that simply won't boot macOS. We assess the damage first and give you a clear probability and cost estimate.
+            On M-chip Mac minis the SSD is encrypted with a key held in the chip&apos;s Secure Enclave, so it can only be read through the original board: desoldering the storage (chip-off) yields only encrypted data. If the board still powers on, we copy the data off; if not, we repair it at component level until it does. A Mac mini that has had serious board damage (liquid damage, power surge) presents a harder recovery challenge than one that simply won't boot macOS. We assess the damage first and give you a clear probability and cost estimate.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             The most common scenarios we see: Mac mini won't boot after a macOS update, Mac mini not turning on after a power cut, accidental file deletion, and corrupted APFS volumes. We recover photos, videos, creative project files, Xcode archives, and business documents. All data delivered on an external drive or via secure transfer.
@@ -37,14 +37,14 @@ export default function MacMiniDataRecovery() {
         "Won't boot data recovery - all models, macOS failure or kernel panic",
         "Deleted file recovery - APFS volume scan, all file types",
         "Corrupted macOS recovery - volume repair or direct extraction",
-        "M-chip soldered SSD data extraction - specialist hardware required",
-        "Intel Mac mini HDD and SSD recovery - proprietary blade adapter",
+        "M-chip Mac mini recovery - original board brought back up so the encrypted SSD can be read",
+        "Older Intel Mac mini (2014 and earlier) HDD and SSD recovery",
         "Power-cut recovery - Mac mini that lost power mid-write",
         "Liquid damage data recovery - where board can be partially restored",
       ]}
       steps={[
         { title: "Free assessment",                  body: "We inspect the machine, identify the failure type, and assess recovery probability. You receive a written quote covering best case, likely case, and effort ceiling before we start." },
-        { title: "Data extraction",                  body: "Specialist hardware connects to the SSD (M-chip) or removes the blade (Intel). Sector-by-sector image created. Files identified and catalogued." },
+        { title: "Data extraction",                  body: "The original M-chip board is brought up so the SSD can be read, or the drive is removed (older Intel minis). Sector-by-sector image created. Files identified and catalogued." },
         { title: "Verification and delivery",        body: "Recovered files verified for integrity. Delivered on an external drive (bring your own or purchase one from us). Secure deletion of our working copy after your confirmation." },
       ]}
       warrantyDays={15}
@@ -54,9 +54,9 @@ export default function MacMiniDataRecovery() {
         "Recovered files verified before delivery - we do not hand over corrupt files.",
       ]}
       faqs={[
-        { q: "Can the soldered SSD in a Mac mini M1 be data-recovered?", a: "Yes, in most cases. The soldered SSD is not physically destroyed in the majority of failures - macOS has failed, or a file system error has made it inaccessible. We use specialist hardware to access the SSD on the board and extract the data directly. Complete physical SSD failure (NAND damage) is rare and harder to recover from." },
+        { q: "Can the soldered SSD in a Mac mini M1 be data-recovered?", a: "Yes, in most cases. The soldered SSD is not physically destroyed in the majority of failures - macOS has failed, or a file system error has made it inaccessible. Because the SSD is encrypted to the M1 chip, the data is read through the original board once it runs - never by removing the storage chips. If the storage or the chip itself is destroyed, the data cannot be recovered." },
         { q: "How much does Mac mini data recovery cost?", a: "Assessment is free. Straightforward cases (won't boot, accidental deletion) are the least expensive. Complex cases - liquid damage, severe corruption, M-chip board faults - are quoted individually after assessment. We always confirm the cost before starting." },
-        { q: "What if the Mac mini won't turn on - can data still be recovered?", a: "Often yes. A Mac mini that won't power on may still have a working SSD. On Intel, the blade can be removed without the machine powering on. On M-chip, we need to assess whether the board can be partially powered for SSD access. We will tell you the probability and cost at the free assessment." },
+        { q: "What if the Mac mini won't turn on - can data still be recovered?", a: "Often yes. A Mac mini that won't power on may still have a working SSD. On older Intel minis (2014 and earlier), the drive can be removed without the machine powering on. On the 2018 T2 model and on M-chip minis, we need to assess whether the board can be partially powered for SSD access. We will tell you the probability and cost at the free assessment." },
         { q: "Is data recovery guaranteed?", a: "No recovery service can guarantee 100% success - this is an industry-wide reality. We give you an honest probability estimate before starting. If we cannot recover your data after our best effort, we do not charge for the work." },
       ]}
       reviewNames={["Mukhtar Ahmad", "Maryam Bilal"]}

@@ -1,148 +1,153 @@
 "use client";
-// MacBook Neo keyboard repair spoke (L5) - Magic Keyboard scissor-switch, Touch ID, March 2026.
-// Individual key cap replacement, or a full top-case. Check AppleCare+ first.
+// MacBook Neo keyboard repair spoke. Facts only from docs/apple-lineup-2026-09-26.md:
+// iFixit - keyboard replaceable but takes 41 screws; display/trackpad/battery/Touch ID swap without
+// parts-pairing warnings; pentalobe screws. Owner reports - no keyboard backlight, no Touch ID on
+// the base model (design limits, not faults). Apple UAE AppleCare+ fee for other accidental damage.
+// NB: the old copy claimed backlighting and a top-case swap - both removed as unverified/wrong.
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 import { Link } from "@/lib/router-compat";
 
 export default function MacBookNeoKeyboardRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Keyboard Repair Dubai - Magic Keyboard + Touch ID"
-      seoDescription="MacBook Neo keyboard repair Dubai. Magic Keyboard with Touch ID (A18 Pro model, 2026). Individual key cap replacement or top-case. Check AppleCare+ first. Call 055 741 3706."
+      seoTitle="MacBook Neo Keyboard Repair Dubai - Stuck Keys & Spills"
+      seoDescription="MacBook Neo keyboard repair in Dubai: stuck or missing keys, spills and full keyboard replacement. Free diagnosis, warranty checked first. WhatsApp us."
       path="/macbook-neo-keyboard-repair-dubai"
-      eyebrow="Magic Keyboard · Touch ID · A18 Pro · 2026"
+      eyebrow="MacBook Neo · keyboard · 41-screw replacement"
       h1="MacBook Neo Keyboard Repair Dubai"
-      subtitle="MacBook Neo uses the same Magic Keyboard scissor-switch design Apple introduced on the MacBook Air M1. Individual key cap replacement, or a full top-case. Likely under AppleCare+."
-      startingPrice={300}
-      timeline="Same day (key cap) · 2-3 days (top-case)"
-      whatsappPrefill="Hi, I need MacBook Neo keyboard repair:"
+      subtitle="Stuck, missing or dead keys, or a keyboard that stopped working after a spill? We fix MacBook Neo keyboards at our Dubai Media City workshop, trying the simple fixes before a full replacement."
+      startingPrice={0}
+      timeline="Free diagnosis same day · keyboard replacement time confirmed with your quote"
+      whatsappPrefill="Hi, I need a MacBook Neo keyboard repair:"
       breadcrumb={[
         { name: "Home",               path: "/" },
         { name: "MacBook Repair",     path: "/macbook-repair-dubai" },
         { name: "MacBook Neo Repair", path: "/macbook-neo-repair-dubai" },
         { name: "Keyboard Repair",    path: "/macbook-neo-keyboard-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook and A-chip board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook screens, batteries and water damage" }}
       serviceName="MacBook Neo Keyboard Repair Dubai"
+      quickAnswer={{
+        question: "Can you repair a MacBook Neo keyboard in Dubai?",
+        answer:
+          "Yes. We fix stuck or missing keys and replace MacBook Neo keyboards after spills. iFixit found the keyboard is replaceable, but it takes 41 screws, so a full replacement is labour-heavy and we try cleaning or single-key fixes first. The Neo has no keyboard backlight by design, so a dark keyboard is not a fault.",
+      }}
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            MacBook Neo ships with Apple's <strong>Magic Keyboard using scissor-switch mechanisms</strong> - the
-            same keyboard architecture introduced on the MacBook Air M1 in 2020 and continued on the M2, M3, and M4 Air.
-            Each key sits on a butterfly-free scissor mechanism that provides 1mm of travel and a satisfying click.
-            The power button doubles as a <strong>Touch ID fingerprint sensor</strong> and the full keyboard
-            includes backlighting.
+            <strong>The MacBook Neo&apos;s keyboard can be replaced on its own, but iFixit&apos;s teardown counted 41
+            screws to do it.</strong> That shapes how we approach every Neo keyboard fault. A full keyboard replacement
+            is a lot of labour, so we rule out the cheaper fixes first: debris under a key, a cap that has come off, a
+            small spill that cleaning can reverse. Only then do we quote the whole keyboard, and we tell you which of
+            those it is before any work starts.
           </p>
 
-          <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
-            <h3 className="text-[18px] font-bold mb-sm">Common keyboard issues on a 6-month-old Neo</h3>
-            <p className="text-[15px] mb-sm">
-              The MacBook Neo is a popular choice with students, and the most frequent keyboard complaint in the
-              first 6 months is a <strong>key cap that popped off</strong> - either from aggressive typing or
-              pulling the keycap when something got stuck under it. The scissor mechanism clip can break when
-              the cap is removed without care. This is a straightforward same-day repair.
-            </p>
-            <p className="text-[15px]">
-              Spill damage is the second most common cause. If liquid reached the keyboard, bring it in within
-              24 hours. We clean the affected keys and test all switches before quoting a top-case replacement.
-              At 6 months old, the machine is almost certainly still under Apple's 1-year warranty - we check
-              warranty status first on every visit.
-            </p>
-          </div>
-
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Key cap vs top-case: what is the difference?</h2>
-          <p className="text-[15px] mb-md text-text-muted">
-            <strong>Key cap and clip replacement:</strong> When a single key has popped off or the
-            scissor clip is broken but the underlying switch is functional, we replace just the cap and clip.
-            Same day, no data risk.
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Two things that are not faults</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            Two of the most common MacBook Neo owner complaints are design choices, not repairs:
           </p>
-          <p className="text-[15px] mb-md text-text-muted">
-            <strong>Top-case replacement:</strong> When a spill has damaged multiple switches, the
-            backlight layer, or the trackpad mechanism that lives in the same assembly, the entire top-case
-            (keyboard + trackpad + palm rest) is replaced as a single unit. This is a 2 to 3 day job. All data
-            stays on the logic board - your files are untouched.
+          <ul className="space-y-2 text-[15px] mb-lg">
+            <li>• <strong>No keyboard backlight.</strong> The Neo&apos;s keys do not light up. If yours are dark, the
+              keyboard is working as Apple designed it.</li>
+            <li>• <strong>No Touch ID on the base model.</strong> Only some configurations have Touch ID. If yours never
+              had it, there is nothing to repair.</li>
+          </ul>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">Stuck, missing or dead keys</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            A key that sticks, double-types or has stopped registering is usually debris or a damaged key mechanism,
+            not a failed keyboard. We inspect it under magnification and clean it first. If a cap has come off, we
+            check whether the cap and its clip are intact enough to refit; if they are not, we confirm on WhatsApp
+            whether a single-key part is available for the Neo before suggesting anything larger. When several keys
+            or a whole row fail together, the fault is more likely the keyboard itself or its connection, and a
+            replacement becomes the honest answer.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">MacBook Neo vs MacBook Air M2 keyboard - repair comparison</h2>
-          <p className="text-[15px] mb-md text-text-muted">
-            The Neo and the Air M2/M3 use scissor-switch keyboards with the same 1mm travel and the same backlight
-            layer. The key difference is the chassis: the Neo uses a slightly different top-case form factor sized
-            for its 12.9-inch footprint. Individual key caps from the Air M2 are not direct swap-ins, but the
-            repair technique is identical. See also the{" "}
-            <Link to="/macbook-air-keyboard-repair-dubai" className="text-accent hover:underline">
-              MacBook Air keyboard repair
-            </Link>{" "}
-            page for Air-specific pricing.
+          <h2 className="text-[24px] md:text-[28px] mb-md">Spills on a MacBook Neo keyboard</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Switch the Neo off, do not charge it, and turn it upside down to drain. Liquid that gets past the keyboard
+            reaches the logic board, and corrosion keeps working while there is power. Bring it in the same day if you
+            can. We open it, check the board as well as the keyboard, and clean before we decide what needs
+            replacing. If the board is affected, see{" "}
+            <Link to="/macbook-neo-a18-repair-dubai" className="text-accent hover:underline">MacBook Neo A18 Pro repair</Link>{" "}
+            and{" "}
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent hover:underline">MacBook water damage repair</Link>.
+          </p>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">Touch ID and the trackpad</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            On models that have Touch ID, iFixit found the Touch ID sensor can be swapped without parts-pairing
+            warnings, and so can the trackpad. So a failed Touch ID button or a dead trackpad does not automatically
+            mean a new keyboard: we test them separately and replace only what has failed. More on{" "}
+            <Link to="/macbook-touch-id-repair-dubai" className="text-accent hover:underline">MacBook Touch ID repair</Link>.
+          </p>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Warranty first: a keyboard that fails on its own inside Apple&apos;s one-year warranty is Apple&apos;s to
+            fix, and the Neo only went on sale on 11 March 2026. A spill is accidental damage, which the standard
+            warranty does not cover; with AppleCare+, Apple lists other accidental damage on the Neo at AED 579, excluding VAT.
+          </p>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">What to try first, and what to expect on time</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Before booking, plug in a USB keyboard. If it types normally, macOS is fine and the fault is in the
+            built-in keyboard. If it misbehaves too, the problem is more likely software, and a restart or a look
+            through the Keyboard settings may fix it for free. Keyboard work does not touch the soldered storage, so
+            your files stay in place, though we still suggest a backup first. Cleaning or refitting a key is usually
+            quick. A full 41-screw replacement depends on the part reaching us, so we give you a realistic turnaround
+            with the quote instead of guessing.
           </p>
         </>
       }
       whatWeFix={[
-        "Individual key cap and scissor clip replacement",
-        "Sticky or unresponsive keys - switch cleaning or cap replacement",
-        "Spill-damaged individual keys - ultrasonic clean + key swap",
-        "Keyboard backlight failure - layer inspection or top-case",
-        "Touch ID power button replacement",
-        "Full top-case replacement (severe spill or multi-key failure)",
+        "Stuck, sticky or double-typing keys (cleaned first)",
+        "Missing key caps: refit or single-key replacement where the part exists",
+        "Rows or groups of dead keys",
+        "Keyboard damaged by a spill (with a board check)",
+        "Full keyboard replacement (a 41-screw job)",
+        "Touch ID button faults on models that have Touch ID",
       ]}
       steps={[
-        {
-          title: "Key inspection and quote",
-          body: "We test every key on the keyboard and map the damage before quoting. A single popped cap is the cheapest fix. Multi-key failure or backlight damage is quoted for top-case. Apple warranty checked at this step - if covered, no charge.",
-        },
-        {
-          title: "Key cap / clip or top-case replacement",
-          body: "Single cap: cap and scissor clip replaced under magnification. Top-case: logic board transferred to new top-case, all cables reconnected, trackpad calibrated.",
-        },
-        {
-          title: "Full keyboard test",
-          body: "Every key tested for actuation, travel and registration. Backlight uniformity checked. Touch ID fingerprint enrolment confirmed. Written 15-day warranty on the replaced parts.",
-        },
+        { title: "Photo or video on WhatsApp", body: "Show us which keys fail. We tell you whether it looks like debris, a key or the whole keyboard." },
+        { title: "Free diagnosis",             body: "Every key tested, plus an Apple warranty check. Factory faults inside warranty go to Apple." },
+        { title: "Cheapest fix first",         body: "Clean, refit or single key where possible; a full keyboard only when nothing smaller will do." },
+        { title: "Test + return",              body: "Every key tested for travel and registration, plus Touch ID on models that have it." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "3 months on key cap, clip, or top-case replacement",
-        "Sticky key recurrence within warranty fixed free",
-        "Touch ID button: fingerprint registration covered for 3 months",
-        "Spill damage after repair is not covered",
-        "Claim: WhatsApp warranty card photo for free collection",
+        "15 days on keyboard work, as set out in our warranty policy.",
+        "Free re-diagnosis if the same fault returns within the warranty period.",
+        "New spills or physical damage after the repair are not covered.",
+        "Written on your invoice.",
       ]}
       faqs={[
         {
-          q: "Can individual keys be replaced on MacBook Neo?",
-          a: "Yes. The MacBook Neo uses a scissor-switch keyboard, which means each key has a replaceable cap and a plastic scissor mechanism clip. If a key cap has popped off or the clip is broken, we replace just that cap and clip, same day. This is much more cost-effective than a full top-case if only one or two keys are affected.",
+          q: "Can a single key be fixed on a MacBook Neo?",
+          a: "Often, yes. Sticky or unresponsive keys are usually debris, which we clean. A cap that has come off can be refitted if its clip is intact. If it is broken, we confirm on WhatsApp whether a single-key part is available for the Neo before suggesting a full keyboard replacement.",
         },
         {
-          q: "Is MacBook Neo keyboard the same as MacBook Air M2?",
-          a: "Very similar in design. Both use Apple's Magic Keyboard with the same 1mm scissor-switch travel and backlight layer. The Neo's top-case is a different part number sized for the Neo chassis, so key caps are not direct cross-compatible at the part level. Repair technique is identical, and the typing feel is the same. Neither model has a separate Touch ID key. On both the Neo and the MacBook Air M2, Touch ID is built into the power button.",
+          q: "Why doesn't my MacBook Neo keyboard light up?",
+          a: "The MacBook Neo has no keyboard backlight. It is one of the most common owner complaints, but it is a design choice rather than a fault, so there is nothing to repair. The base model also has no Touch ID, for the same reason.",
         },
         {
-          q: "My MacBook Neo Touch ID stopped working - is it the keyboard or logic board?",
-          a: "In most cases it is the keyboard assembly, specifically the Touch ID power button which contains the fingerprint sensor. On A-chip and M-chip Macs, Touch ID is managed partly in the Secure Enclave on the logic board, but the physical sensor is in the keyboard. If Touch ID fails after a drop or spill, we test the button first. If the button tests clean and Touch ID still does not register, we diagnose the logic board Secure Enclave connection - free as part of the same visit.",
+          q: "How hard is it to replace a MacBook Neo keyboard?",
+          a: "It can be replaced on its own, which is good, but iFixit's teardown counted 41 screws to do it. That makes it labour-heavy, so we only recommend a full keyboard when cleaning or a single-key fix will not solve the problem.",
         },
         {
-          q: "How does MacBook Neo keyboard repair cost compare to a full top-case?",
-          a: "Individual key cap and clip replacement is same day. A full top-case replacement (keyboard, trackpad and palm rest as a single assembly) takes 2 to 3 days. Top-case is recommended when a spill has damaged more than 3 to 4 keys or when the backlight layer is non-functional. If only one or two keys are affected, individual replacement is always the right first step.",
+          q: "I spilled a drink on my MacBook Neo. What should I do?",
+          a: "Switch it off straight away, do not charge it, and turn it upside down to drain. Bring it in the same day if you can. Liquid that gets past the keyboard reaches the logic board, so we check the board as well as the keys before quoting.",
+        },
+        {
+          q: "Is a MacBook Neo keyboard fault covered by Apple?",
+          a: "A keyboard that fails on its own is covered by Apple's one-year limited warranty, and most Neos are still inside it. Spills are accidental damage and need AppleCare+; Apple lists other accidental damage on the Neo at AED 579, excluding VAT. We check your coverage for free.",
         },
       ]}
-      reviewNames={["Marianne Chehade El Dfouni", "Binod Shrestha"]}
+      reviewNames={["Saeed Alam", "E. Saey Debrus"]}
       related={[
-        {
-          label: "MacBook Neo Repair Dubai",
-          href: "/macbook-neo-repair-dubai",
-          description: "All MacBook Neo repairs - screen, battery, ports, water damage.",
-        },
-        {
-          label: "MacBook Neo Screen Repair Dubai",
-          href: "/macbook-neo-screen-repair-dubai",
-          description: "12.9-inch Liquid Retina screen replacement.",
-        },
-        {
-          label: "MacBook Air Keyboard Repair Dubai",
-          href: "/macbook-air-keyboard-repair-dubai",
-          description: "Magic Keyboard repair for MacBook Air M1 through M4.",
-        },
+        { label: "MacBook Neo Repair Dubai",         href: "/macbook-neo-repair-dubai",          description: "Every MacBook Neo repair in one place." },
+        { label: "MacBook Neo A18 Pro Repair",       href: "/macbook-neo-a18-repair-dubai",      description: "Board-level work after spills and power faults." },
+        { label: "MacBook Keyboard Repair Dubai",    href: "/macbook-keyboard-repair-dubai",     description: "Keyboard repair for every MacBook Air and Pro." },
       ]}
-      blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
+      blogLink={{ label: "MacBook Neo: worth buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
     />
   );
 }

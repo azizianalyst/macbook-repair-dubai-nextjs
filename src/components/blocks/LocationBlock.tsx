@@ -1,7 +1,7 @@
 "use client";
 import { ExternalLink, MapPin, ParkingCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 // Verified Google Business Profile embed (pins the actual "MacBook Repair Dubai" listing).
 const MAPS_EMBED =
@@ -43,7 +43,7 @@ export function LocationBlock({ tone = "light", compact = false }: { tone?: "lig
         </p>
         <div className="flex flex-wrap gap-lg">
           <a
-            href={DIRECTIONS}
+            href={withSlash(DIRECTIONS)}
             target="_blank"
             rel="noopener noreferrer"
             className={cn("inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}
@@ -51,7 +51,7 @@ export function LocationBlock({ tone = "light", compact = false }: { tone?: "lig
             Get directions <ExternalLink size={14} aria-hidden />
           </a>
           <a
-            href={GBP_URL}
+            href={withSlash(GBP_URL)}
             target="_blank"
             rel="noopener noreferrer"
             className={cn("inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}

@@ -25,7 +25,7 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
+import { warrantyLabel, warrantyClause, warrantyIso, WARRANTY } from "@/content/site";
 import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { LinkifyProse } from "@/lib/linkify";
@@ -60,6 +60,11 @@ export type SubServiceProps = {
   steps: Step[];
   warrantyDays: number;
   warrantyBullets: string[];
+  /** Opt-in for hub pages that span several warranty tiers (screens 90 days, batteries
+   *  3 months, hardware up to 12 months...): render WARRANTY.headlineLong ("a written
+   *  warranty of up to 12 months, depending on the repair") instead of the single-tier
+   *  label derived from warrantyDays. Schema still uses warrantyDays. */
+  warrantyHeadline?: boolean;
   glassNotice?: boolean;      // screen/back-glass pages: highlight that broken glass isn't covered
   faqs: FAQ[];
   reviewNames: string[];
@@ -82,6 +87,12 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
   const heroAlt = topic && topic.src === heroImage ? topic.alt : p.h1;
   // Auto cross-link sibling iPhone models (only fires on iPhone model pages).
   const otherIphoneModels = relatedIphoneModels(p.path);
+  // Rendered warranty wording. Default: the single tier from warrantyDays ("a 12-month
+  // written warranty"). Multi-tier hubs opt in to the headline wording instead.
+  const warrantyText = p.warrantyHeadline ? WARRANTY.headlineLong : warrantyClause(p.warrantyDays);
+  const warrantyHeading = p.warrantyHeadline
+    ? WARRANTY.headlineLong[0].toUpperCase() + WARRANTY.headlineLong.slice(1)
+    : warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises";
   const qa = p.quickAnswer ?? deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
@@ -131,7 +142,8 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
         {/* 3. WARRANTY BAR — trust signals */}
-        <WarrantyBar tone="dark" warrantyDays={p.warrantyDays} />
+        {/* warrantyHeadline hubs omit warrantyDays → WarrantyBar's qualified "Up to 12-month warranty" */}
+        <WarrantyBar tone="dark" warrantyDays={p.warrantyHeadline ? undefined : p.warrantyDays} />
 
         {/* 3b. STATS BAND — shared brand trust band (matches master template) */}
         <StatBand />
@@ -181,7 +193,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               />
               <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col justify-center">
                 <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-text">
-                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises"}
+                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {warrantyHeading}
                 </h3>
                 <ul className="space-y-1 text-[14px] text-text-muted">
                   {p.warrantyBullets.map((b, i) => <li key={i}>• {b}</li>)}
@@ -210,7 +222,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               startingPrice={p.startingPrice}
               timeline={p.timeline}
               whatsappMessage={p.whatsappPrefill}
-              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${warrantyClause(p.warrantyDays)}.`}
+              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${warrantyText}.`}
             />
 
             {/* 12. LEAD FORM — full quote form after social proof */}
@@ -262,7 +274,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <CtaBand
           className="mt-3xl"
           headline={`Book your ${p.serviceName} on WhatsApp`}
-          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
+          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}.`}
         />
 
       </div>

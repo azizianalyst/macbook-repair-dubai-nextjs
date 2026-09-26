@@ -8,7 +8,7 @@ export default function IPhone16PlusRepair() {
       seoTitle="iPhone 16 Plus Repair Dubai - 6.7-inch A18 OLED | 055 741 3706"
       seoDescription="iPhone 16 Plus (2024) repair Dubai. A18, 6.7-inch OLED, Camera Control, Apple Intelligence. Screen, battery, Camera Control - same-day. WhatsApp for a quote."
       path="/iphone-16-plus-repair-dubai"
-      eyebrow="iPhone 16 Plus (2024, current Apple lineup)"
+      eyebrow="iPhone 16 Plus (2024)"
       h1="iPhone 16 Plus Repair Dubai - 6.7-inch OLED, Camera Control, Battery"
       subtitle="The current 6.7-inch budget big-screen iPhone - A18, Camera Control, Action Button, Apple Intelligence. WhatsApp us for today's exact repair price."
       startingPrice={400}
@@ -88,8 +88,9 @@ export default function IPhone16PlusRepair() {
         { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

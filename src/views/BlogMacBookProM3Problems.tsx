@@ -105,8 +105,8 @@ export default function BlogMacBookProM3Problems() {
 
           <h2 id="dubai-heat-m3">Step 5: Does Dubai heat affect MacBook Pro M3?</h2>
           <p>
-            The M3 uses the same mini-LED display as M1 and M2, which is more heat-tolerant
-            than the OLED in M4/M5. However, battery degradation and thermal throttling are
+            The M3 uses the same mini-LED Liquid Retina XDR display as the M1 Pro and M2 Pro
+            before it and the M4 and M5 after it. However, battery degradation and thermal throttling are
             still significantly affected by Dubai's ambient temperature.
           </p>
           <ul className="list-disc list-inside space-y-xs">
@@ -151,7 +151,7 @@ export default function BlogMacBookProM3Problems() {
             rows={[
               { model: "MacBook Pro M3 14\" screen replacement", ours: "Price on request", apple: "-", note: "Mini-LED Liquid Retina XDR, same-day" },
               { model: "MacBook Pro M3 16\" screen replacement", ours: "Price on request", apple: "-", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M3 battery 14\"", ours: "Price on request", apple: "-", note: "70 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M3 battery 14\"", ours: "Price on request", apple: "-", note: "70 Wh cell, 3-month warranty" },
               { model: "MacBook Pro M3 battery 16\"", ours: "Price on request", apple: "-", note: "100 Wh cell" },
               { model: "MagSafe port repair (M3)", ours: "Price on request", apple: "-", note: "MagSafe board or charging IC" },
               { model: "Thermal cleaning + repaste", ours: "Price on request", apple: "-", note: "Vents + heatsink, fixes throttling" },
@@ -188,7 +188,7 @@ export default function BlogMacBookProM3Problems() {
         },
         {
           q: "Does Dubai heat permanently damage MacBook Pro M3?",
-          a: "Yes, specifically the battery. The M3's mini-LED display is more heat-tolerant than OLED, but the battery degrades faster above 35°C. Dubai summer ambient temperatures mean M3 batteries in unprotected environments lose capacity 20-30% faster than the rated 1,000 cycle lifespan. Never leave the M3 in a hot car. Enable Optimised Battery Charging.",
+          a: "Yes, specifically the battery. The M3's mini-LED display copes with normal use, but the battery degrades faster above 35°C. Dubai summer ambient temperatures mean M3 batteries in unprotected environments lose capacity 20-30% faster than the rated 1,000 cycle lifespan. Never leave the M3 in a hot car. Enable Optimised Battery Charging.",
         },
         {
           q: "How long should MacBook Pro M3 battery last?",

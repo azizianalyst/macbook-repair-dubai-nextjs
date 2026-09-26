@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { MapPin, Clock, Star, Phone, MessageCircle, Truck, Laptop, Monitor, HardDrive } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -131,7 +132,7 @@ export default function MacRepairNearMe() {
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
                   WhatsApp 055 741 3706. A courier collects from your home or office anywhere in Dubai Mainland, no charge. Mac repaired and returned same day for battery, keyboard, and software jobs.
                 </p>
-                <a href={NAP.whatsappUrl} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp to book →</a>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp to book →</a>
               </article>
             </div>
           </div>
@@ -190,7 +191,7 @@ export default function MacRepairNearMe() {
               <p className="text-[15px] text-text-muted">Free diagnosis. Fixed price. Free pickup or drop-in. Same-day return for most repairs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp Now
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -226,7 +227,7 @@ export default function MacRepairNearMe() {
               { label: "Same-Day MacBook Repair", href: "/same-day-macbook-repair-dubai" },
               { label: "iMac Repair Dubai", href: "/imac-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
                 {label}
               </a>
             ))}

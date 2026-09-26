@@ -67,7 +67,7 @@ export default function MacBookAirM1KeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M1 keyboard repair cost in Dubai?",
-          a: "Both individual key replacement and full top-case replacement on the MacBook Air M1 are handled same-day at MacBook Repair Dubai, and our rate comes in below Apple's. Message us on WhatsApp with your model for today's exact price.",
+          a: "Both individual key replacement and full top-case replacement on the MacBook Air M1 are handled same-day at MacBook Repair Dubai, and we quote before any work so you can compare with Apple. Message us on WhatsApp with your model for today's exact price.",
         },
         {
           q: "Can individual keys be replaced on the MacBook Air M1?",

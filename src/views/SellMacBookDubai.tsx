@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import {
   Star,
@@ -488,7 +489,7 @@ export default function SellMacBookDubai() {
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" data-track="whatsapp-sell-cta">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" data-track="whatsapp-sell-cta">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

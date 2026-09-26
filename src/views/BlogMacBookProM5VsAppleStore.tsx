@@ -20,29 +20,30 @@ export default function BlogMacBookProM5VsAppleStore() {
       ]}
       category="Cost comparison · MacBook Pro"
       h1="MacBook Pro M5 Repair Cost - Us vs Apple Store Dubai"
-      hook="Same MacBook Pro M5 screen repair for a fraction of the Apple Store quote. Same-quality parts, transparent pricing: here's the side-by-side, and message us on WhatsApp for today's exact price."
-      quickAnswer="For a MacBook Pro M5 14″ repair in Dubai, MacBook Repair Dubai is consistently well below the Apple Store / AASP quote across screen, battery and logic board, using the same OEM-grade parts and the same warranty of up to 12 months (we offer 3 months on batteries). Message us on WhatsApp for today's exact price on your model."
+      hook="How a MacBook Pro M5 repair here compares with the Apple Store: what each side replaces, how long it takes, and the warranty. We quote before any work so you can compare - message us on WhatsApp for today's exact price."
+      quickAnswer="For a MacBook Pro M5 14″ repair in Dubai, the one price Apple publishes is battery service: AED 879 plus VAT (Apple list). For screens and other damage Apple inspects first, usually replacing a whole module, while we repair at component level where possible and quote before any work so you can compare. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, 15 days on keyboard and board work, up to 12 months on other hardware. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook technician" }}
       datePublished="2026-04-25"
-      dateModified="2026-06-22"
+      dateModified="2026-09-26"
       readingMinutes={10}
       featuredImageAlt="MacBook Pro M5 repair Dubai cost comparison vs Apple Store"
       body={
         <>
           <h2 id="price-comparison">The four-service comparison: MacBook Pro M5 14″</h2>
           <BlogPriceTable
-            caption="MacBook Pro 14″ M5 - repair cost comparison, June 2026"
-            headers={["Service", "MacBook Repair Dubai", "Apple Store / AASP", "You save"]}
+            caption="MacBook Pro 14″ M5 - repair comparison, September 2026"
+            headers={["Service", "MacBook Repair Dubai", "Apple Store / AASP", "Notes"]}
             rows={[
-              { model: "Screen replacement", ours: "Price on request", apple: "Full lid assembly swap", note: "Ask on WhatsApp" },
-              { model: "Battery replacement", ours: "Price on request", apple: "Top-case assembly swap", note: "Ask on WhatsApp" },
-              { model: "Top-case keyboard", ours: "Price on request", apple: "Full top-case swap", note: "Ask on WhatsApp" },
-              { model: "Logic board (component-level)", ours: "Price on request", apple: "Full board swap", note: "Ask on WhatsApp" },
+              { model: "Screen replacement", ours: "Price on request", apple: "Display assembly; price after inspection", note: "Ask on WhatsApp" },
+              { model: "Battery replacement", ours: "Price on request", apple: "AED 879 + VAT (Apple list)", note: "Ask on WhatsApp" },
+              { model: "Top-case keyboard", ours: "Price on request", apple: "Top-case swap; price after inspection", note: "Ask on WhatsApp" },
+              { model: "Logic board (component-level)", ours: "Price on request", apple: "Board swap; price after inspection", note: "Ask on WhatsApp" },
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing for non-AppleCare+ out-of-warranty service in Dubai (Mall of
-            Emirates and Dubai Mall locations) on 22 June 2026.
+            Apple&apos;s published UAE out-of-warranty battery price, read on support.apple.com/en-ae on
+            26 September 2026, excluding VAT. Apple publishes no Mac screen or board price; it
+            inspects the Mac first.
           </p>
 
           <h2 id="what-apple-charges">What Apple Store charges for what</h2>
@@ -50,14 +51,12 @@ export default function BlogMacBookProM5VsAppleStore() {
             Apple Store and Apple Authorised Service Providers (AASPs) in Dubai are required to
             follow Apple's official service procedure. For most MacBook Pro M5 issues that means{" "}
             <strong>replacing whole modules rather than fixing individual components</strong>.
-            A failed USB-C port? Logic board swap. A stuck key? Top-case swap (palmrest + keyboard
-            + trackpad + battery as one assembly). A cracked screen? Whole lid assembly.
+            A stuck key? Top-case swap. A cracked screen? The whole display assembly.
           </p>
           <p>
-            That's why the Apple Store quotes are so high: you're paying for a brand-new module
-            even when only one component inside it is broken. It's the safest service model from
-            Apple's point of view (zero re-failures), and it's what AppleCare+ subscribers
-            essentially pre-pay for.
+            That&apos;s why an Apple quote covers a brand-new module even when only one component
+            inside it is broken. It&apos;s the simplest service model from Apple&apos;s point of view,
+            and it&apos;s what AppleCare+ subscribers essentially pre-pay for.
           </p>
 
           <h2 id="whats-the-same">What's the same between us and Apple Store</h2>
@@ -76,15 +75,16 @@ export default function BlogMacBookProM5VsAppleStore() {
               before quoting any major repair. No guesswork.
             </li>
             <li>
-              <strong>Warranty length.</strong> 12 months on parts and labour, written on the
-              invoice. (We offer 3 months on batteries, which Apple doesn't.)
+              <strong>A written warranty.</strong> Ours is written on the invoice and depends on the
+              repair: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, 15
+              days on keyboard and board work, and up to 12 months on other hardware.
             </li>
           </ul>
 
           <h2 id="whats-different">What's different: turnaround and parts approach</h2>
           <p>
-            <strong>Turnaround.</strong> Apple Store quotes 5–10 business days for most MacBook Pro
-            repairs because parts ship from Apple's regional depot in Dubai South. We stock screens,
+            <strong>Turnaround.</strong> Apple often needs several days for a MacBook Pro repair,
+            depending on parts availability. We stock screens,
             batteries, and top-cases for current Pro M5 models in our Media City workshop. Most
             jobs are same-day if you drop off before 11am.
           </p>
@@ -92,8 +92,8 @@ export default function BlogMacBookProM5VsAppleStore() {
             <strong>Parts approach.</strong> Apple Store always swaps the entire affected module
             (whole lid, whole top-case, whole logic board). We do component-level repair where
             possible: replacing just the panel inside the lid, or just the keyboard inside the
-            top-case, or just the failed chip on the logic board. That's where 60–80% of the cost
-            saving comes from.
+            top-case, or just the failed chip on the logic board. That&apos;s where the difference
+            in price usually comes from.
           </p>
           <p>
             <strong>Pickup.</strong> Free door-to-door pickup anywhere in mainland Dubai. Apple
@@ -114,21 +114,21 @@ export default function BlogMacBookProM5VsAppleStore() {
             </li>
             <li>
               <strong>You plan to sell the MacBook in the next 6 months</strong> and the buyer is
-              checking serial-number service history. Apple-Store-serviced MacBooks command a
-              roughly 5% resale premium on Dubizzle.
+              checking serial-number service history. Some buyers pay more for an
+              Apple-serviced record.
             </li>
           </ol>
 
           <h2 id="applecare-math">AppleCare+ vs out-of-warranty repair math</h2>
           <p>
             AppleCare+ for MacBook Pro 14″ M5 is a fixed multi-year plan (or a monthly
-            subscription) that covers up to 2 incidents per year, each with an accidental-damage
-            deductible. Theft and loss are NOT covered (that's a separate plan in the US, not yet
-            in UAE). Check Apple's site for the current plan price and deductible.
+            subscription) that covers accidental damage, each incident with a service fee. Theft
+            and loss are not covered on a Mac. Check Apple&apos;s site for the current plan price
+            and service fees.
           </p>
           <p>
-            Cost-benefit: if you'll have at least one accident in 3 years, AppleCare+ is roughly
-            break-even versus paying us out-of-pocket. If you'll have two or more, AppleCare+ wins.
+            Cost-benefit: compare the plan price plus one service fee with a quote for the repair
+            you are most likely to need. The more accidents you expect, the better AppleCare+ looks.
             Heavy travellers and parents of teenagers: buy it. Office-only users with a careful
             history: skip it.
           </p>
@@ -148,8 +148,8 @@ export default function BlogMacBookProM5VsAppleStore() {
           a: "For screens, batteries, and top-cases: yes, we source through the Independent Repair Provider channel and trusted secondary distribution from the same OEMs (LG Display, BOE, Foxconn). For logic board components, we use original Apple-spec chips desoldered from donor boards or sourced through specialist channels.",
         },
         {
-          q: "Why is your logic board repair so much cheaper than Apple's?",
-          a: "Apple swaps the whole logic board for any fault. We diagnose to the failed component (a power IC, a charging chip, a single MOSFET) and replace just that component using a microscope and hot-air station. 80–90% of MacBook board failures are 1–3 components, not the whole board, so component-level repair costs a fraction of a full board swap. Message us on WhatsApp for the exact price on your model.",
+          q: "Why can component-level logic board repair cost less than Apple's board swap?",
+          a: "Apple swaps the whole logic board for any fault. We diagnose to the failed component (a power IC, a charging chip, a single MOSFET) and replace just that component using a microscope and hot-air station. Many board failures come down to one or a few components, not the whole board, so component-level repair usually costs less than a full board swap. Message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Will using your shop void my Apple warranty?",
@@ -161,7 +161,7 @@ export default function BlogMacBookProM5VsAppleStore() {
         },
         {
           q: "What if your repair fails, what's the warranty process?",
-          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned within 12 months (3 months for batteries), we re-do the repair free. We don't dodge or argue. About 1.2% of our jobs come back, and we honour the warranty on every one.",
+          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned inside the warranty for that repair (90 days on screens, 3 months on batteries, 15 days on keyboard and board work, up to 12 months on other hardware), we re-do the repair free. We don't dodge or argue.",
         },
       ]}
       relatedLinks={[

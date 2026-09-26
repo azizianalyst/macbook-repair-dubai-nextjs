@@ -326,7 +326,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Can you collect from the universities - Rochester, Heriot-Watt, BITS Pilani?", a: "Yes. Many students and faculty use us. Leave the device with security or the IT helpdesk on campus; we collect from there and return the device to the same point once repaired." },
       { q: "I work from home in Cedre Villas. Can the courier come to the door?", a: "Yes. Send the villa number and street; courier meets you at the gate. Same procedure for return delivery." },
       { q: "Can you do same-day in-person if I drive to Media City?", a: "Yes - most repairs (screen, battery, keyboard, trackpad) finish in 1.5-3 hours. Drop off, head to Mall of the Emirates for lunch, collect the same afternoon." },
-      { q: "Are you cheaper than the Apple Service Centre in Festival City?", a: "Roughly 40-60% cheaper for screen, battery and board repairs, with the same warranty of up to 12 months and genuine or OEM-grade parts. Walk-in transparent pricing - no 'minimum service charge'." },
+      { q: "Are you cheaper than the Apple Service Centre in Festival City?", a: "Often, but compare for yourself: we quote after a free diagnosis, before any work, so you can set our quote against Apple's. Out of warranty we repair at component level where Apple usually replaces a whole module, with genuine or OEM-grade parts and a written warranty of up to 12 months depending on the repair (90 days on screens, 3 months on batteries). No 'minimum service charge'." },
     ],
     reviewIndexes: [2, 7, 11, 15, 20, 24],
   },

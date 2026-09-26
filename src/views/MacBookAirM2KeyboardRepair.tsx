@@ -81,7 +81,7 @@ export default function MacBookAirM2KeyboardRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M2 keyboard repair cost in Dubai?",
-          a: "MacBook Air M2 keyboard repair covers both individual key caps and full top-case replacement, on the 13-inch and 15-inch. Pricing depends on your exact model and whether it's a single key or a full top-case — message us on WhatsApp for today's exact price. Same-day service at MacBook Repair Dubai, and we're typically well below Apple's counter price.",
+          a: "MacBook Air M2 keyboard repair covers both individual key caps and full top-case replacement, on the 13-inch and 15-inch. Pricing depends on your exact model and whether it's a single key or a full top-case — message us on WhatsApp for today's exact price. Same-day service at MacBook Repair Dubai, and we quote before any work so you can compare with Apple.",
         },
         {
           q: "Can the MacBook Air M2 15-inch keyboard be repaired individually?",

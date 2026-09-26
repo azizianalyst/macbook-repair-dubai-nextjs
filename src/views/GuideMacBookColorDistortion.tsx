@@ -10,7 +10,7 @@ export default function GuideMacBookColorDistortion() {
     { name: "Check for a colour filter", text: "System Settings → Accessibility → Display → Color Filters. If this is on, it can apply a red, green, blue, or greyscale filter to the entire display. Turn it off." },
     { name: "Check display brightness and Reduce White Point", text: "System Settings → Accessibility → Display → Reduce White Point lowers the maximum brightness and can make colours look dull or desaturated. Uncheck it and retest." },
     { name: "Test with an external monitor", text: "Connect an external display via USB-C/HDMI. If the external monitor shows accurate colours but the built-in screen doesn't, the issue is the internal display, hardware or a bad display cable." },
-    { name: "Check for physical damage", text: "Examine the screen edges for impact marks or pressure dents. Pressure on the LCD/OLED panel can cause colour distortion in specific areas. Look for any discolouration that changes with pressure on the bezel." },
+    { name: "Check for physical damage", text: "Examine the screen edges for impact marks or pressure dents. Pressure on the LCD panel can cause colour distortion in specific areas. Look for any discolouration that changes with pressure on the bezel." },
   ];
 
   return (

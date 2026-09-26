@@ -1,89 +1,177 @@
 "use client";
 import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
+import { Link } from "@/lib/router-compat";
+import { ProseSection, ModelNotes } from "@/components/blocks/ServiceExtraSections";
+import { TEAM } from "@/content/site";
+
+// Technician byline comes from the TEAM roster (TRUST-CLAIMS.md), never typed per page.
+const TECH = TEAM.find((t) => t.name === "Shafiq")!;
 
 export default function IPhoneWaterDamageRepair() {
   return (
     <IPhonePageTemplate
-      seoTitle="iPhone Water Damage Repair Dubai - Ultrasonic Clean | No-Fix-No-Charge"
-      seoDescription="iPhone water damage repair Dubai. Ultrasonic clean, corrosion removal, 24-hour window matters. iPhone 6 to 17. WhatsApp 055 741 3706 for today's price."
+      seoTitle="iPhone Water Damage Repair Dubai: No Fix, No Charge"
+      seoDescription="Water-damaged iPhone? Switch it off, don't charge it, skip the rice. Free diagnosis, ultrasonic board cleaning and corrosion repair in Dubai. WhatsApp us now."
       path="/iphone-water-damage-repair-dubai"
       eyebrow="iPhone Water Damage Repair"
       h1="iPhone Water Damage Repair Dubai"
-      subtitle="IP68 isn't bulletproof. Pool, sea, coffee, toilet. The 24-hour window matters more than the water type. Ultrasonic clean, corrosion removal, sealed back-glass workaround."
+      subtitle="Pool, sea, shower or a spilled drink. Switch it off, don't charge it and skip the rice. Free diagnosis, ultrasonic board cleaning and corrosion repair at Dubai Media City."
       startingPrice={179}
       timeline="Same day · 1-3 days"
-      whatsappPrefill="URGENT - iPhone water damage. Model + when it happened: "
-      technician={{ name: "Shafiq Ahmed", years: 15, specialisation: "Water damage & micro-soldering" }}
+      whatsappPrefill="URGENT - iPhone water damage. Model + what liquid + when: "
+      technician={{ name: TECH.name, years: TECH.years, specialisation: TECH.specialisation }}
       serviceName="iPhone Water Damage Repair Dubai"
-      pricingRows={[
-        { model: "iPhone 6 / 7 / 8 / SE - clean only",      price: 179, timeline: "Same day" },
-        { model: "iPhone X / XR / 11 - clean + light corrosion", price: 450, timeline: "1 day" },
-        { model: "iPhone 12 / 13 - clean + IC reflow",      price: 550, timeline: "1-2 days" },
-        { model: "iPhone 14 / 15 - clean + component replace", price: 700, timeline: "2 days" },
-        { model: "iPhone 16 / 17 - clean + Apple Silicon BGA", price: 850, timeline: "2-3 days" },
-        { model: "Sea-water (any model) - extended treatment",  price: 950, timeline: "3 days" },
+      quickAnswer={{
+        question: "How do you fix a water-damaged iPhone?",
+        answer:
+          "Switch it off, don't charge it and skip the rice. Water left inside corrodes the logic board, so the reliable fix is to open the phone, disconnect the battery, clean the board ultrasonically and replace corroded parts. Diagnosis at our Dubai Media City workshop is free, and the repair carries a 15-day written warranty.",
+      }}
+      takeaways={[
+        "Power off and don't charge: current through a wet board is what turns a clean-up into a board repair.",
+        "Apple advises against drying an iPhone in rice; small rice particles can damage it.",
+        "Water resistance is tested in fresh water in a lab and fades with wear. Apple's warranty doesn't cover liquid damage.",
+        "Salt water, pool water and sugary drinks corrode faster than fresh water, so sooner is better.",
       ]}
-      pricingCaption="No-fix-no-charge applies. If the phone can't be saved, only a small diagnostic fee is charged for unrecoverable phones - message us on WhatsApp for the exact figure."
+      pricingRows={[
+        { model: "iPhone 6 / 7 / 8 / SE - clean only",           price: 179, timeline: "Same day" },
+        { model: "iPhone X / XR / 11 - clean + light corrosion", price: 450, timeline: "1 day" },
+        { model: "iPhone 12 / 13 - clean + component repair",    price: 550, timeline: "1-2 days" },
+        { model: "iPhone 14 / 15 - clean + component repair",    price: 700, timeline: "2 days" },
+        { model: "iPhone 16 / 17 / 18 Pro - clean + board work", price: 850, timeline: "2-3 days" },
+        { model: "Sea water (any model) - extended treatment",   price: 950, timeline: "3 days" },
+      ]}
+      pricingCaption="No fix, no charge: if the phone can't be brought back, you pay nothing for the attempt. Every price is quoted in writing after the free diagnosis."
       intro={
         <>
           <p className="text-[17px] text-text leading-relaxed">
-            iPhone water damage repair in Dubai comes with a no-fix-no-charge guarantee - if the phone can't be saved, only a small diagnostic fee applies, and your exact price is free to get on WhatsApp. The single biggest factor in success is time. Within 4 hours of contact, success rate is around 90%. Within 24 hours, around 70%. Beyond 72 hours, corrosion has spread across the logic board and success drops below 30%. The workshop opens at 9 am Mon-Sat; outside hours WhatsApp the photo and the phone will be collected first thing.
+            iPhone water damage repair in Dubai is a race against corrosion, not against the water. Once liquid gets past the seals, the minerals, salt, chlorine or sugar it carried stay on the logic board after the water evaporates, and any current flowing through them, from the battery or a charger, eats connectors and components. That is why a phone that seems fine after a swim can fail weeks later.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mt-md">
-            IP68 (rated for 6m water for 30 minutes on iPhone 12+) is not a guarantee. Apple's small print specifies fresh water at room temperature, no soap, no pressure, no salt, and a fully sealed device. Beach water has salt and abrasive sand. Pool water has chlorine. Coffee has sugar. Wine has acid. Hot water vapourises and pushes past the silicone seals. Any drop or repair history breaks the IP68 rating entirely. The workshop sees IP68-rated phones with water damage every week. Do not rely on the rating once water has actually entered.
+            Bring it to Concord Tower, Dubai Media City, or book free pickup across Dubai mainland. We open the phone, disconnect the battery, inspect the board under a microscope, clean it ultrasonically and replace what has failed, with a written quote before any component work. If the phone can&apos;t be saved and you need the photos, see <Link to="/iphone-data-recovery-dubai" className="text-accent font-semibold hover:underline">iPhone data recovery</Link>.
           </p>
         </>
       }
       problems={[
-        { title: "Phone fell in the pool, screen now black", body: "Backlight short or display flex corroded. Same-day clean + flex inspection. Price depends on model - message us on WhatsApp for your exact figure. Don't try to charge - that's how the logic board dies." },
-        { title: "Coffee or juice spill - sticky residue inside", body: "Sugar conducts when wet. Ultrasonic bath in 99% isopropyl removes residue cleanly, usually same day. Sweet drinks are worse than plain water. Message us on WhatsApp for today's price." },
-        { title: "Sea water - saltwater is the worst case", body: "Salt is a corrosive electrolyte. Even 30 seconds in the sea creates corrosion paths across PCB traces. Extended treatment with deionised water bath, ultrasonic clean, then isopropyl. About 3 days - message us for the price." },
-        { title: "Phone says 'Liquid Detected in Lightning/USB-C Connector'", body: "Sensor inside the port detected moisture. Don't charge. Air-dry 24 hours, then the warning usually clears. If it persists or charging stays disabled, the sensor itself is corroded - port flex swap, message us for the price." },
-        { title: "Speaker muffled after water", body: "Water inside the speaker mesh. Ultrasonic clean of the speaker module restores 95% of these. If the membrane is torn, the speaker is swapped. Message us on WhatsApp for the exact price." },
-        { title: "Phone works but battery drains 50% overnight", body: "Parasitic current path from corrosion across the BMS. Ultrasonic clean + corrosion removal + battery replacement. Message us on WhatsApp for today's price on your model." },
-        { title: "Phone won't power on after spill", body: "Multiple possible failures - battery, charging IC, PMIC, Tristar. Free open-and-inspect diagnosis under microscope. Quote given before any work. No-fix-no-charge applies." },
-        { title: "Camera fogged from the inside", body: "Moisture under the rear lens cover. Lens cover removal, internal dry-out, reseal - message us for the price. If left, the lens stack rusts and the camera module needs full replacement." },
-        { title: "Face ID stopped working after a spill", body: "Flood illuminator or IR camera water-damaged. Sometimes a clean restores it; sometimes the IR camera needs replacement (rare and difficult - read the Face ID page for the honest assessment)." },
-        { title: "Phone bought used, suspected water damage history", body: "LCI (liquid contact indicator) inside the SIM tray turns red after water exposure. Free check on every walk-in. Helps decide whether to insure or trade in." },
+        { title: "iPhone won't turn on after water damage", body: "Don't keep pressing or charging it. Usual causes are a shorted power line, a corroded battery connector or a failed charging circuit, confirmed under the microscope before any quote." },
+        { title: "Keeps restarting after water damage", body: "Corrosion on a part the phone checks at start-up, often a sensor on the charging-port flex, or unstable power from a wet battery connector. Cleaning plus replacing that part usually ends the loop." },
+        { title: "Black screen, but it rings or vibrates", body: "The display connector or the screen has taken water. Cleaning the connector sometimes restores the picture; otherwise the screen is replaced." },
+        { title: "'Liquid Detected' when you plug in", body: "Unplug and let it dry. If the alert keeps coming back once the phone is dry, the port is corroded and needs cleaning or replacement." },
+        { title: "Muffled speaker or microphone", body: "Water in the mesh often clears as it dries. If sound stays muffled or crackles after a day, the mesh or speaker is cleaned or replaced." },
+        { title: "Fogged camera, dead Face ID, fast drain", body: "Moisture under the lens, a corroded Face ID flex, or corrosion leaking current overnight. Each starts with opening and cleaning the phone." },
       ]}
+      sections={
+        <>
+          <ProseSection
+            eyebrow="First hour"
+            title="How to fix a water-damaged iPhone: what to do right now"
+            sub="You can limit the damage at home. You can't clean the board at home."
+          >
+            <ol>
+              <li><strong>Switch it off.</strong> If it still works, back up to iCloud over Wi-Fi first, then power off. If it&apos;s already off, leave it off.</li>
+              <li><strong>Don&apos;t charge it</strong>, by cable or wireless, until it has been checked.</li>
+              <li><strong>Dry the outside.</strong> Remove the case, wipe it with a lint-free cloth, then tap it gently with the port facing down to let water out.</li>
+              <li><strong>No heat, no air blasts, no swabs.</strong> Skip hairdryers, compressed air and cotton buds in the port; Apple warns against all three.</li>
+              <li><strong>Skip the rice.</strong> Apple advises against it because small rice particles can damage the phone, and rice can&apos;t pull water out from under the chips.</li>
+              <li><strong>Bring it in soon</strong>, even if it seems to work. Corrosion continues after the phone dries.</li>
+            </ol>
+            <p>
+              A splash of sea water or a drink on a sealed, water-resistant iPhone (iPhone 7 or later) is different: Apple&apos;s guidance is to rinse the outside with tap water and dry it. A phone that went under, or a phone with a cracked screen or back, needs opening.
+            </p>
+          </ProseSection>
+
+          <ProseSection eyebrow="Honest answer" title="Can a water-damaged iPhone be fixed?">
+            <p>
+              Often, yes, but nobody can promise before opening it. The outcome depends on what the liquid was, how long the phone stayed on or was charged while wet, and which parts corrosion has reached. A phone that won&apos;t turn on after water damage may need only a cleaned battery connector, or it may need a failed power component replaced by <Link to="/iphone-logic-board-repair-dubai">board-level repair</Link>.
+            </p>
+            <p>
+              What we do promise: a free diagnosis, a written quote before any component work, and no charge if we can&apos;t fix it.
+            </p>
+          </ProseSection>
+
+          <ProseSection eyebrow="Indicator and warranty" title="iPhone water damage indicator, warranty and AppleCare+">
+            <p>
+              Every iPhone has liquid contact indicators that turn red when wet. On models with a SIM tray, one is visible inside the SIM slot with a torch. eSIM-only models, such as the iPhone Air and the UAE iPhone 18 Pro, have no tray, so the indicators only show once the phone is opened.
+            </p>
+            <p>
+              Apple&apos;s one-year limited warranty does not cover liquid damage, and Apple notes that splash and water resistance can decrease with normal wear. AppleCare+ covers accidental damage, including liquid, for a service fee, so check Settings &gt; General &gt; AppleCare &amp; Warranty before paying for a repair.
+            </p>
+          </ProseSection>
+
+          <ModelNotes
+            title="iPhone water damage by model"
+            sub="Water-resistance ratings are measured in fresh water, in a lab. Pool chlorine, salt, soap and hot water are outside that test."
+            items={[
+              {
+                title: "iPhone 6 and 6s water damage",
+                body: "No official water-resistance rating, so any real soaking reaches the board. Treat every spill as urgent and don't charge the phone.",
+                prefill: "Hi, iPhone 6 / 6s water damage. What liquid + when: ",
+              },
+              {
+                title: "iPhone 7 water damage (also 8, X, XR, SE)",
+                body: "IP67: tested to 1 metre for 30 minutes. Seals age, and a pool dive or sea swim goes beyond what the rating promises. On older phones, check the SIM-slot indicator.",
+                prefill: "Hi, iPhone 7 water damage repair please. Model + what liquid + when: ",
+              },
+              {
+                title: "iPhone 11 water damage (also XS)",
+                body: "IP68: 2 metres for the XS and 11, 4 metres for the 11 Pro, for 30 minutes. It often shows as a muffled speaker, a 'Liquid Detected' alert or a phone that won't charge.",
+                prefill: "Hi, iPhone 11 water damage. Model + symptom: ",
+              },
+              {
+                title: "iPhone 12 to iPhone 16",
+                body: "IP68 to 6 metres for 30 minutes. Any earlier screen, battery or back-glass repair weakens the seals, so treat a repaired phone as splash-resistant only.",
+                prefill: "Hi, iPhone 12-16 water damage. Model + what liquid + when: ",
+              },
+              {
+                title: "iPhone 17, 17 Pro and iPhone Air",
+                body: "IP68 to 6 metres for 30 minutes, the same rating as the 12 to 16. The iPhone Air is eSIM-only, so there is no SIM tray to check with a torch. After any repair that opens the phone, treat it as splash-resistant only.",
+                prefill: "Hi, iPhone 17 / iPhone Air water damage. Model + what liquid + when: ",
+              },
+              {
+                title: "iPhone 18 Pro and 18 Pro Max",
+                body: "eSIM-only in the UAE, so there's no SIM tray to check. iFixit found the display frame can lift during screen removal, which matters for resealing after any opening.",
+                prefill: "Hi, iPhone 18 Pro water damage. Model + what liquid + when: ",
+              },
+            ]}
+          />
+        </>
+      }
       steps={[
-        { title: "Stop charging immediately + power off", body: "Charging a wet iPhone is the #1 cause of total loss. Hold power+volume to force off if needed. Place on a towel - never in rice (it absorbs moisture but pushes starch dust into the speaker grilles)." },
-        { title: "WhatsApp now - even at 11 pm", body: "Photo of the phone + when and what type of water. Reply within 30 minutes to confirm collection. Workshop opens 9 am Mon-Sat; emergency drop-off can be arranged outside hours." },
-        { title: "Open within 1 hour of arrival", body: "Battery disconnected to stop short circuits. Logic board removed. Photographed under microscope to document corrosion before any cleaning starts." },
-        { title: "Ultrasonic cleaning bath", body: "Logic board placed in 99% isopropyl alcohol bath in an ultrasonic cleaner at 40kHz for 8 minutes. Removes water, residue, and surface corrosion without damaging components." },
-        { title: "Component-level inspection + repair", body: "Each chip checked under 40x microscope. Corroded resistors, capacitors, or ICs reflowed or replaced. Quote given before component replacement begins." },
-        { title: "Reassemble + 24-hour soak test", body: "Phone reassembled, charged on bench, soak-tested for 24 hours. All sensors verified (Face ID, cameras, ambient light, proximity, gyro, GPS)." },
+        { title: "Power off, don't charge, WhatsApp us", body: "Send the model, the liquid and when it happened. Outside opening hours, message anyway and we arrange drop-off or pickup." },
+        { title: "Free diagnosis", body: "Battery disconnected first to stop further corrosion; the board is inspected and photographed under a microscope." },
+        { title: "Ultrasonic cleaning", body: "The board is cleaned in an isopropyl ultrasonic bath to lift residue from under chips and inside connectors. Salt-water phones get an extra pre-clean." },
+        { title: "Component repair after your OK", body: "Corroded or shorted parts are replaced by micro-soldering once you approve the written quote." },
+        { title: "Reassembly and full test", body: "Screen, cameras, Face ID or Touch ID, speakers, microphones, charging, Wi-Fi and cellular checked before handover." },
+        { title: "Collect with a written warranty", body: "15 days on the repair. No fix, no charge." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "Covered: cleaning quality, soldered components installed during the repair, recurrence of the same fault within 30 days.",
-        "Not covered: new water exposure, latent corrosion that surfaces beyond 30 days (water damage can keep evolving), unrelated faults.",
-        "Water damage repair carries a 15-day warranty on the repaired components - shorter than most hardware repairs - because the long-term outcome depends on how much corrosion was inside before the repair.",
+        "Covered for 15 days: the cleaning and the components replaced, if the same fault returns.",
+        "Not covered: new liquid exposure, or corrosion elsewhere on the board that appears later. Liquid damage can keep developing after a repair, which is why this warranty is shorter than our hardware warranty.",
+        "No fix, no charge: if we can't bring the phone back, you pay nothing for the attempt.",
       ]}
       comparisonRows={[
-        ["Apple's official position", "Whole-device swap - water damage not covered under warranty", "Costly out-of-warranty service unit"],
-        ["Workshop method",            "Open, ultrasonic clean, micro-solder",                       "Whole-device replacement"],
-        ["Save your data?",            "Yes - original logic board kept",                            "No - service unit, data lost"],
-        ["Save your IMEI?",            "Yes - original device kept",                                 "No - new IMEI on service unit"],
-        ["Save your Face ID?",         "Yes - original sensors retained",                            "Yes - new device"],
-        ["No-fix-no-charge",           "Yes - only a small diagnostic fee",                          "No - full service price"],
-        ["Time-sensitive (4-24h matters)", "Yes - emergency same-day handling",                      "Genius Bar appointment 1-3 days"],
-        ["Warranty on repair",          "15 days written",                                           "12 months on service unit"],
+        ["Liquid damage under the standard warranty", "Repaired as a paid job, no fix no charge",        "Not covered by Apple's one-year limited warranty"],
+        ["Approach",                                  "Open, clean and repair your own board",           "Service quote after inspection"],
+        ["'Other damage' estimate, iPhone 17",        "Quote on WhatsApp",                               "Apple lists AED 2,639, excl. VAT (Sep 2026)"],
+        ["'Other damage' estimate, iPhone 18 Pro",    "Quote on WhatsApp",                               "Apple lists AED 3,279, excl. VAT (Sep 2026)"],
+        ["Your data",                                 "Stays on your own board if the board survives",   "Back up first; follow Apple's service advice"],
+        ["Free pickup in Dubai",                      "Yes, Dubai mainland",                             "No"],
+        ["Warranty on the repair",                    "15 days written",                                 "Apple's service warranty"],
       ]}
       faqs={[
-        { q: "How much does iPhone water damage repair cost in Dubai?", a: "Price depends on the model and how much corrosion is inside - a clean-only on older iPhones is the entry point, light corrosion that needs reflowing costs more, and iPhone 16/17 and sea-water cases are the most complex. No-fix-no-charge applies - only a small diagnostic fee if the phone can't be saved. Message us on WhatsApp for today's exact price on your model." },
-        { q: "How quickly should I bring my water-damaged iPhone in?", a: "Within 4 hours for the best outcome (90% success). Within 24 hours is good (70% success). After 72 hours success drops below 30% as corrosion spreads. WhatsApp the photo immediately even outside business hours - emergency same-day handling can be arranged." },
-        { q: "Should I put my iPhone in rice?", a: "No. Rice absorbs ambient moisture but cannot reach water already inside the phone, and rice dust gets into the speaker grilles and Lightning/USB-C port. Best home action: power off immediately, do not charge, place on a towel, bring it to the workshop within 24 hours." },
-        { q: "My iPhone is IP68-rated - why did it get water-damaged?", a: "IP68 is rated for fresh water at room temperature with the device fully sealed. The rating doesn't apply to: pool water (chlorine), sea water (salt + sand), hot water (vapourises past seals), soda or coffee (sugar/acid). The rating also degrades with every drop or repair. Apple does not honour warranty for water damage - the LCI inside the SIM tray confirms exposure." },
-        { q: "What does the ultrasonic cleaning do?", a: "The logic board is placed in 99% isopropyl alcohol inside a 40kHz ultrasonic cleaner. Microscopic cavitation bubbles dislodge water, residue, and corrosion from under chip packages and inside connectors - places no manual cleaning can reach. 8 minutes is the standard cycle; sea-water cases get two cycles." },
-        { q: "Will my data survive water damage repair?", a: "Yes in most cases - the workshop keeps the original logic board, so the storage chips and Secure Enclave stay intact. iCloud backup is still recommended before any repair, but in 80%+ of water-damage tickets the phone boots after cleaning and data is fully accessible." },
-        { q: "Can you save a phone that fell in the sea?", a: "Often yes, if brought in fast. Sea-water treatment uses a deionised water rinse (to dissolve salt) before the isopropyl bath. Even a 30-second sea swim creates corrosion that's harder to remove than 30 minutes in fresh water. About 3 days, no-fix-no-charge - message us on WhatsApp for the price." },
-        { q: "What's the warranty on water damage repair?", a: "30 days, not the standard 90, because water damage keeps evolving - corrosion that wasn't visible during the repair can surface weeks later. The 30 days covers the workshop's cleaning quality and any soldered components installed. Beyond 30 days, the same phone may develop new faults from latent corrosion." },
-        { q: "What about water damage on the speaker only?", a: "Speaker-only water damage from a beach day is common. A standalone speaker module clean restores most cases, usually same day. If the membrane is torn, the speaker is swapped. Message us on WhatsApp for today's exact price." },
-        { q: "Can I keep using a phone that survived a spill?", a: "If it powers on and basic functions work, yes - but get it professionally opened and cleaned within a week. Internal corrosion continues to spread silently. A phone that survives a spill but isn't cleaned often fails 6 to 18 months later from accumulated corrosion." },
+        { q: "How do I fix a water-damaged iPhone at home?", a: "You can limit the damage, not repair it. Switch it off, don't charge it, tap water out with the port facing down and leave it somewhere dry with airflow. Skip rice and heat. Water that got inside keeps corroding the board, so have it opened and cleaned soon, even if it seems to work." },
+        { q: "Can a water-damaged iPhone be fixed?", a: "Often, yes, but nobody can promise before opening it. It depends on the liquid, how long the phone stayed on or charged while wet, and what corrosion reached. Diagnosis is free, you get a written quote before component work, and if we can't fix it you pay nothing." },
+        { q: "Why does my iPhone keep restarting after water damage?", a: "A restart loop after a spill usually means corrosion on a part the phone checks at start-up, such as a sensor on the charging-port flex, or unstable power from a wet battery connector. Cleaning the board and replacing the corroded flex or component normally stops it." },
+        { q: "Does Apple's warranty cover iPhone water damage?", a: "No. Apple's one-year limited warranty excludes liquid damage, and Apple notes water resistance can decrease with normal wear. AppleCare+ does cover accidental damage, including liquid, for a service fee, so check Settings > General > AppleCare & Warranty before paying for a repair." },
+        { q: "Should I put my wet iPhone in rice?", a: "No. Apple advises against it because small rice particles can damage the phone, and rice can't draw water from under the chips anyway. Leave it switched off somewhere dry with airflow and bring it in." },
+        { q: "How much does iPhone water damage repair cost in Dubai?", a: "It depends on the model and how far corrosion has spread: a clean-only job costs least, component replacement more, and salt water usually needs the most work. Diagnosis is free, you approve a written quote first, and no fix means no charge. WhatsApp your model and what happened." },
       ]}
       reviewNames={["Janna Nurahmetova", "Daniel Layzell", "Yuki Koga", "Knight A. Shakir"]}
-      relatedSlugs={["/iphone-screen-repair-dubai", "/iphone-data-recovery-dubai", "/iphone-charging-port-repair-dubai"]}
+      relatedSlugs={["/iphone-data-recovery-dubai", "/iphone-charging-port-repair-dubai", "/iphone-camera-repair-dubai"]}
+      relatedExtra={[
+        { label: "iPhone logic board repair", href: "/iphone-logic-board-repair-dubai", description: "When corrosion has killed a chip: component-level micro-soldering." },
+        { label: "Water damage: the first 24 hours", href: "/blog/iphone-water-damage-action-plan", description: "A step-by-step action plan for a wet iPhone." },
+      ]}
     />
   );
 }

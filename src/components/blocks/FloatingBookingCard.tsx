@@ -2,7 +2,7 @@
 import { MessageCircle, Phone, Clock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Props = {
   service: string;            // "MacBook Screen Repair"
@@ -48,7 +48,7 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
 
       <div className="flex flex-col gap-sm">
         <Button asChild variant="whatsapp" size="lg" className="w-full">
-          <a href={wa} target="_blank" rel="noopener noreferrer">
+          <a href={withSlash(wa)} target="_blank" rel="noopener noreferrer">
             <MessageCircle aria-hidden /> WhatsApp quote
           </a>
         </Button>

@@ -170,8 +170,8 @@ export default function BlogMacBookProM5Battery80Percent() {
             rows={[
               { model: "MagSafe port cleaning", ours: "Price on request", apple: "Not offered", note: "Lint and debris removal, 20 mins" },
               { model: "MagSafe charging board repair (M5)", ours: "Price on request", apple: "Price on request", note: "Board-level charging circuit repair" },
-              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh, 12-month warranty, same-day" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh, 3-month warranty, same-day" },
+              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh, 3-month warranty, same-day" },
             ]}
           />
 
@@ -221,7 +221,7 @@ export default function BlogMacBookProM5Battery80Percent() {
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro M5 battery draining overnight", href: "/blog/macbook-pro-m5-battery-draining-overnight-dubai", description: "DarkWake and sleep drain fix for MacBook Pro M5." },
         { label: "MacBook Pro not charging fix Dubai", href: "/blog/macbook-pro-not-charging-fix-dubai", description: "Full diagnosis for MacBook Pro not charging across all chip generations." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
       ]}
     />
   );

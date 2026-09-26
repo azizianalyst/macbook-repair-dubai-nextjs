@@ -106,24 +106,27 @@ export default function BlogMacBookLogicBoardCost() {
 
           <h2 id="soldered-ssd-recovery">M-chip soldered SSD - data recovery implications</h2>
           <p>
-            On Intel MacBooks (2010-2020) the SSD is removable - even if the logic board is dead,
-            we pull the SSD module, plug it into a reader, and recover your data 95%+ of the time.
-            Message us on WhatsApp for the exact recovery fee on your model.
+            On older Intel MacBooks with a removable SSD (such as 2012-2015 MacBook Pros and MacBook
+            Airs up to 2017), even if the logic board is dead we pull the SSD, read it in an adapter,
+            and recover your data if the SSD itself is healthy. T2 Intel MacBooks (2018-2020) have a
+            soldered SSD encrypted by the T2 chip, so they follow the M-series rule below. Message us
+            on WhatsApp for the exact recovery fee on your model.
           </p>
           <p>
             On M-series MacBooks (2020+) the SSD is <strong>soldered to the logic board AND
-            cryptographically paired to the M-chip</strong>. To recover data we have two paths:
+            cryptographically paired to the M-chip</strong>. Recovery works like this:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>
-              <strong>Bring the board back to life</strong> long enough to image the SSD over
-              Target Disk Mode or a connected Mac. Possible in about 70% of M-series water-damage
-              cases.
+              <strong>Bring the board back to life</strong> long enough to copy the data off over
+              sharing mode or a connected Mac. This is the only route, and whether it is possible
+              depends on the damage - the free diagnosis tells you.
             </li>
             <li>
-              <strong>NAND chip-off</strong> - desolder the NAND flash chips and read them
-              directly. Works only if we can also recover the encryption keys from a still-living
-              M-chip. About 30% success rate - message us on WhatsApp for the exact fee.
+              <strong>No chip-off.</strong> Desoldering the storage chips yields only encrypted
+              data, because the key never leaves the M-chip. If the chip or the storage is
+              destroyed, nobody can recover the data - message us on WhatsApp and we will say
+              honestly which case you are in.
             </li>
           </ol>
           <p>

@@ -10,7 +10,7 @@ export default function IPhone17eRepair() {
       path="/iphone-17e-repair-dubai"
       eyebrow="iPhone 17e (March 2026, just released)"
       h1="iPhone 17e Repair Dubai - A19, Dynamic Island, MagSafe, USB-C"
-      subtitle="The newest budget iPhone - A19, Dynamic Island (added), MagSafe (first for e-series), Apple Intelligence. Released 6 weeks ago. Message us on WhatsApp for today's exact price on your model."
+      subtitle="The newest budget iPhone - A19, Dynamic Island (added), MagSafe (first for e-series), Apple Intelligence. Released March 2026. Message us on WhatsApp for today's exact price on your model."
       startingPrice={350}
       timeline="Same day (OLED + battery)"
       whatsappPrefill="Hi, I have an iPhone 17e (March 2026) and need help with:"
@@ -87,8 +87,9 @@ export default function IPhone17eRepair() {
         { title: "QC + return",          body: "OLED, Dynamic Island, USB-C, MagSafe alignment, Action Button and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "MagSafe: charge alignment verified to ±0.3 mm tolerance.",
         "Battery: capacity-drop coverage.",

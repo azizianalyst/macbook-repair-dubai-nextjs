@@ -1,485 +1,249 @@
 "use client";
-import {
-  Star, MessageCircle, Phone,
-  Monitor, BatteryCharging, Droplets, PlugZap, Code2, Database,
-  Cpu, Camera, Volume2, Shield, Lock, Wifi,
-  Wrench, ShieldCheck, Clock, Award, Search, BadgeCheck, Truck,
-  CheckCircle2,
-} from "lucide-react";
+// /iphone-repair-dubai: the iPhone hub. Rebuilt 2026-09-26 (plan Phase 2.3 #1 / Phase 3 build 1).
+// Targets: iphone repair dubai · iphone repair near me · iphone repair · iphone fix dubai ·
+// iphone service center dubai / near me · iphone repair abu dhabi (courier, stated honestly).
+// No prices of ours anywhere; Apple's UAE list prices only in the attributed "(Apple list)" form,
+// read from support.apple.com/en-ae on 26 Sep 2026 (docs/apple-lineup-2026-09-26.md §4a).
+// The iPhone 6-12 model pages were folded into this hub on purpose: their demand is served by the
+// model-family list below, not by new routes.
 import { Link } from "@/lib/router-compat";
-import { PageShell } from "@/components/layout/PageShell";
-import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { ReviewGrid } from "@/components/blocks/ReviewGrid";
-import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
-import { LeadForm } from "@/components/blocks/LeadForm";
-import { PRESETS } from "@/data/form-presets";
-import { Hero } from "@/components/blocks/Hero";
-import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
-import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { LocationBlock } from "@/components/blocks/LocationBlock";
-import { Button } from "@/components/ui/button";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
+import IPhoneMoneyPage, { A, DataTable, PageSection, WhatsAppButton } from "@/components/blocks/IPhoneMoneyPage";
 import { NAP } from "@/content/site";
-import type { LucideIcon } from "lucide-react";
 
-const MODEL_PAGES = [
-  ["iPhone 18 Pro Max", "/iphone-18-pro-max-repair-dubai"], ["iPhone 18 Pro", "/iphone-18-pro-repair-dubai"],
-  ["iPhone 17 Pro Max", "/iphone-17-pro-max-repair-dubai"], ["iPhone 17 Pro", "/iphone-17-pro-repair-dubai"], ["iPhone 17", "/iphone-17-repair-dubai"], ["iPhone 17e", "/iphone-17e-repair-dubai"], ["iPhone Air", "/iphone-air-repair-dubai"],
-  ["iPhone 16 Pro Max", "/iphone-16-pro-max-repair-dubai"], ["iPhone 16 Pro", "/iphone-16-pro-repair-dubai"], ["iPhone 16 Plus", "/iphone-16-plus-repair-dubai"], ["iPhone 16", "/iphone-16-repair-dubai"], ["iPhone 16e", "/iphone-16e-repair-dubai"],
-  ["iPhone 15 Pro Max", "/iphone-15-pro-max-repair-dubai"], ["iPhone 15 Pro", "/iphone-15-pro-repair-dubai"], ["iPhone 15 Plus", "/iphone-15-plus-repair-dubai"], ["iPhone 15", "/iphone-15-repair-dubai"],
-  ["iPhone 14 Pro Max", "/iphone-14-pro-max-repair-dubai"], ["iPhone 14 Pro", "/iphone-14-pro-repair-dubai"], ["iPhone 14 Plus", "/iphone-14-plus-repair-dubai"], ["iPhone 14", "/iphone-14-repair-dubai"],
-  ["iPhone 13 Pro Max", "/iphone-13-pro-max-repair-dubai"], ["iPhone 13 Pro", "/iphone-13-pro-repair-dubai"], ["iPhone 13", "/iphone-13-repair-dubai"], ["iPhone 13 mini", "/iphone-13-mini-repair-dubai"],
-  ["iPhone SE (3rd gen)", "/iphone-se-3rd-gen-repair-dubai"],
-  ["iPod touch (7th gen)", "/ipod-touch-7-repair-dubai"],
+const PATH = "/iphone-repair-dubai";
+
+const REPAIRS: { label: string; to: string; body: string }[] = [
+  { label: "iPhone screen repair", to: "/iphone-screen-repair-dubai", body: "Cracked glass, lines, black spots or dead touch. OLED or LCD to match your model." },
+  { label: "iPhone battery replacement", to: "/iphone-battery-replacement-dubai", body: "Battery health under 80%, sudden shutdowns or a swollen battery." },
+  { label: "iPhone back glass repair", to: "/iphone-back-glass-repair-dubai", body: "Shattered rear glass on the iPhone 8 and later, including the iPhone 18 Pro." },
+  { label: "Charging port repair", to: "/iphone-charging-port-repair-dubai", body: "Loose cable or no charging on Lightning and USB-C iPhones. Often it is lint, which we check first." },
+  { label: "Camera repair", to: "/iphone-camera-repair-dubai", body: "Blurry or black camera, a buzzing lens, or a cracked lens cover." },
+  { label: "Face ID repair", to: "/iphone-face-id-repair-dubai", body: "Face ID unavailable after a drop or liquid, diagnosed honestly, including pairing limits." },
+  { label: "Water damage repair", to: "/iphone-water-damage-repair-dubai", body: "Pool, sea or a spilled drink. Switch it off, don't charge it, bring it in." },
+  { label: "Logic board repair", to: "/iphone-logic-board-repair-dubai", body: "No power, no service or boot loops, repaired at component level." },
+  { label: "Data recovery", to: "/iphone-data-recovery-dubai", body: "Photos and chats from an iPhone that won't turn on or has a dead screen." },
 ];
 
-const SERVICE_PAGES = [
-  ["Screen Repair", "/iphone-screen-repair-dubai"], ["Back Glass", "/iphone-back-glass-repair-dubai"], ["Battery Replacement", "/iphone-battery-replacement-dubai"], ["Camera Repair", "/iphone-camera-repair-dubai"], ["Charging Port", "/iphone-charging-port-repair-dubai"], ["Lightning Port", "/iphone-lightning-port-repair-dubai"], ["USB-C Port", "/iphone-usb-c-port-repair-dubai"], ["Speaker", "/iphone-speaker-repair-dubai"], ["Earpiece", "/iphone-earpiece-repair-dubai"], ["Microphone", "/iphone-microphone-repair-dubai"], ["Headphone Jack", "/iphone-headphone-jack-repair-dubai"], ["Face ID", "/iphone-face-id-repair-dubai"], ["Home Button", "/iphone-home-button-repair-dubai"], ["Power Button", "/iphone-power-button-repair-dubai"], ["Volume Button", "/iphone-volume-button-repair-dubai"], ["Vibration Motor", "/iphone-vibration-motor-repair-dubai"], ["SIM Tray", "/iphone-sim-tray-repair-dubai"], ["NFC Repair", "/iphone-nfc-repair-dubai"], ["Wi-Fi & Bluetooth", "/iphone-wifi-bluetooth-repair-dubai"], ["Water Damage", "/iphone-water-damage-repair-dubai"], ["Logic Board Repair", "/iphone-logic-board-repair-dubai"], ["Data Recovery", "/iphone-data-recovery-dubai"], ["Software Fix", "/iphone-software-fix-dubai"], ["Full Diagnostic", "/iphone-full-diagnostic-dubai"], ["iCloud Unlock", "/iphone-icloud-unlock-dubai"], ["Network Unlock", "/iphone-network-unlock-dubai"],
+const MORE_REPAIRS: [string, string][] = [
+  ["Speaker", "/iphone-speaker-repair-dubai"], ["Earpiece", "/iphone-earpiece-repair-dubai"], ["Microphone", "/iphone-microphone-repair-dubai"],
+  ["Lightning port", "/iphone-lightning-port-repair-dubai"], ["USB-C port", "/iphone-usb-c-port-repair-dubai"], ["Power button", "/iphone-power-button-repair-dubai"],
+  ["Volume buttons", "/iphone-volume-button-repair-dubai"], ["Home button", "/iphone-home-button-repair-dubai"], ["Vibration motor", "/iphone-vibration-motor-repair-dubai"],
+  ["SIM tray", "/iphone-sim-tray-repair-dubai"], ["Wi-Fi and Bluetooth", "/iphone-wifi-bluetooth-repair-dubai"], ["NFC", "/iphone-nfc-repair-dubai"],
+  ["Software fix", "/iphone-software-fix-dubai"], ["Full diagnostic", "/iphone-full-diagnostic-dubai"], ["Network unlock", "/iphone-network-unlock-dubai"],
+  ["iCloud lock help", "/iphone-icloud-unlock-dubai"], ["Motherboard repair", "/iphone-motherboard-repair-dubai"], ["Headphone jack", "/iphone-headphone-jack-repair-dubai"],
 ];
 
-const PRICING = [
-  ["iPhone Screen Repair", "Price on request"], ["iPhone Screen Replacement", "Price on request"], ["iPhone Battery Replacement", "Price on request"], ["iPhone Back Glass Replacement", "Price on request"], ["iPhone Camera Repair", "Price on request"], ["iPhone Charging Port Repair", "Price on request"], ["iPhone Speaker Repair", "Price on request"], ["iPhone Microphone Repair", "Price on request"], ["iPhone Water Damage Repair", "Price on request"], ["iPhone Logic Board Repair", "Price on request"], ["iPhone Data Recovery", "Price on request"], ["iPhone Software Troubleshooting", "Price on request"], ["iPhone Button Repair", "Price on request"], ["iPhone Face ID Repair", "Price on request"],
+// Families newest first. A model with a page links to it; folded models (6 to 12) have none.
+const FAMILIES: { family: string; models: [string, string | null][]; note?: string }[] = [
+  { family: "iPhone 18 Pro", models: [["iPhone 18 Pro", "/iphone-18-pro-repair-dubai"], ["iPhone 18 Pro Max", "/iphone-18-pro-max-repair-dubai"]], note: "On sale in the UAE since 18 September 2026. We confirm part availability on WhatsApp." },
+  { family: "iPhone 17 and iPhone Air", models: [["iPhone 17", "/iphone-17-repair-dubai"], ["iPhone 17e", "/iphone-17e-repair-dubai"], ["iPhone Air", "/iphone-air-repair-dubai"], ["iPhone 17 Pro", "/iphone-17-pro-repair-dubai"], ["iPhone 17 Pro Max", "/iphone-17-pro-max-repair-dubai"]] },
+  { family: "iPhone 16", models: [["iPhone 16", "/iphone-16-repair-dubai"], ["iPhone 16 Plus", "/iphone-16-plus-repair-dubai"], ["iPhone 16 Pro", "/iphone-16-pro-repair-dubai"], ["iPhone 16 Pro Max", "/iphone-16-pro-max-repair-dubai"], ["iPhone 16e", "/iphone-16e-repair-dubai"]] },
+  { family: "iPhone 15", models: [["iPhone 15", "/iphone-15-repair-dubai"], ["iPhone 15 Plus", "/iphone-15-plus-repair-dubai"], ["iPhone 15 Pro", "/iphone-15-pro-repair-dubai"], ["iPhone 15 Pro Max", "/iphone-15-pro-max-repair-dubai"]] },
+  { family: "iPhone 14", models: [["iPhone 14", "/iphone-14-repair-dubai"], ["iPhone 14 Plus", "/iphone-14-plus-repair-dubai"], ["iPhone 14 Pro", "/iphone-14-pro-repair-dubai"], ["iPhone 14 Pro Max", "/iphone-14-pro-max-repair-dubai"]] },
+  { family: "iPhone 13", models: [["iPhone 13 mini", "/iphone-13-mini-repair-dubai"], ["iPhone 13", "/iphone-13-repair-dubai"], ["iPhone 13 Pro", "/iphone-13-pro-repair-dubai"], ["iPhone 13 Pro Max", "/iphone-13-pro-max-repair-dubai"]] },
+  { family: "iPhone 12", models: [["iPhone 12 mini", null], ["iPhone 12", null], ["iPhone 12 Pro", null], ["iPhone 12 Pro Max", null]] },
+  { family: "iPhone 11", models: [["iPhone 11", null], ["iPhone 11 Pro", null], ["iPhone 11 Pro Max", null]] },
+  { family: "iPhone X generation", models: [["iPhone X", null], ["iPhone XS", null], ["iPhone XS Max", null], ["iPhone XR", null]] },
+  { family: "iPhone SE", models: [["iPhone SE (2nd gen)", null], ["iPhone SE (3rd gen)", "/iphone-se-3rd-gen-repair-dubai"]] },
+  { family: "iPhone 6 to 8", models: [["iPhone 6 / 6 Plus", null], ["iPhone 6s / 6s Plus", null], ["iPhone 7 / 7 Plus", null], ["iPhone 8 / 8 Plus", null]] },
 ];
 
-const SERVICES: { title: string; body: string; Icon: LucideIcon; href?: string }[] = [
-  { Icon: Monitor,         title: "Screen Repair",          href: "/iphone-screen-repair-dubai",         body: "Cracked or shattered display? We repair OLED and LCD screens on all iPhone models from iPhone 8 through iPhone 18 series." },
-  { Icon: BatteryCharging, title: "Battery Replacement",    href: "/iphone-battery-replacement-dubai",   body: "Battery draining too fast or swelling? We replace genuine-grade batteries on all models and calibrate for accurate capacity reporting." },
-  { Icon: Camera,          title: "Camera Repair",          href: "/iphone-camera-repair-dubai",         body: "Blurry, dark, or non-focusing camera? We repair front and rear camera modules, OIS, and macro lens assemblies." },
-  { Icon: Droplets,        title: "Water Damage Repair",    href: "/iphone-water-damage-repair-dubai",   body: "Liquid spill or pool drop? Power off immediately and bring it in. Ultrasonic board clean and component repair." },
-  { Icon: PlugZap,         title: "Charging Port Repair",   href: "/iphone-charging-port-repair-dubai",  body: "iPhone not charging? We repair USB-C, Lightning, and charging IC faults on all models. Same-day turnaround." },
-  { Icon: Shield,          title: "Face ID Repair",         href: "/iphone-face-id-repair-dubai",        body: "Face ID not working? Sensor cluster replacement and TrueDepth camera calibration. Genuine Apple components only." },
-  { Icon: Volume2,         title: "Speaker Repair",         href: "/iphone-speaker-repair-dubai",        body: "Distorted, muffled, or silent speaker? We repair loudspeaker, earpiece, and microphone assemblies with same-day service." },
-  { Icon: Cpu,             title: "Logic Board Repair",     href: "/iphone-logic-board-repair-dubai",    body: "Component-level board repair: chip replacement, micro-solder, BGA reball. Apple replaces boards; we fix the component." },
-  { Icon: Database,        title: "Data Recovery",          href: "/iphone-data-recovery-dubai",         body: "Lost contacts, photos, or messages? We recover data from water-damaged, dead-screen, and broken-connector iPhones." },
-  { Icon: Code2,           title: "Software Fix",           href: "/iphone-software-fix-dubai",          body: "Boot loops, iOS corruption, or stuck activation? We diagnose and fix software issues without erasing your data." },
-  { Icon: Lock,            title: "iCloud Unlock",          href: "/iphone-icloud-unlock-dubai",         body: "Locked iPhone with a previous owner's Apple ID? We handle activation lock removal and iCloud account unlock." },
-  { Icon: Wifi,            title: "Wi-Fi & Bluetooth",      href: "/iphone-wifi-bluetooth-repair-dubai", body: "Connectivity dropping or not working? We repair Wi-Fi modules, Bluetooth chips, and antenna connectors." },
-];
-
-const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Wrench,      title: "Free Diagnosis",               body: "Walk in or WhatsApp us. Our technician checks your iPhone, identifies the exact fault, and explains the options, free of charge." },
-  { Icon: Clock,       title: "Quote Before Repair",          body: "Final written price on WhatsApp before we start. Approve, decline, or take your phone back, no charge either way." },
-  { Icon: ShieldCheck, title: "Quality Check & Warranty",     body: "After repair we run a full function test. Every iPhone repair carries a written warranty of up to 12 months: same fault back, repaired free." },
-];
-
-const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Award,       title: "Experienced Technicians",  body: "Our highly trained technicians deal with all types of iPhone repairs, keeping up with the newest Apple models and methods." },
-  { Icon: ShieldCheck, title: "Genuine Parts",            body: "We use original Apple or OEM-grade replacement parts to ensure your iPhone performs like new after the repair." },
-  { Icon: Clock,       title: "Same-Day Service",         body: "Most iPhone issues are fixed the same day. Screen, battery, and camera repairs finish in 30–90 minutes for walk-in appointments." },
-  { Icon: Truck,       title: "Free Pickup Dubai-wide",   body: "Free door-to-door pickup and return delivery anywhere in Dubai. WhatsApp your address and we arrange same-day collection." },
-  { Icon: Wrench,      title: "Transparent Pricing",      body: "Upfront pricing confirmed in writing before we touch the phone. No surprises, no hidden fees." },
-];
-
-// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
-// verified Google review library. Real reviews render below via pickReviews().
-
-const FAQ_GROUPS = [
-  {
-    category: "Pricing & booking",
-    items: [
-      { q: "How much does iPhone repair cost in Dubai?", a: "Cost depends on your exact model and fault — screen, battery, camera, and water damage repairs are all priced individually. Message us on WhatsApp for today's exact price, or bring your iPhone in: we confirm the price in writing after a free diagnosis, with no obligation to proceed." },
-      { q: "Do you offer same-day iPhone repair?", a: "Yes, most iPhone repairs (screen, battery, camera, charging port, buttons) finish the same day, often in 30–90 minutes for walk-in appointments. Logic board and water damage work may take 24–48 hours." },
-      { q: "Do you offer free pickup in Dubai?", a: "Yes. Free door-to-door pickup and return delivery across Dubai. WhatsApp us your location and a courier comes to you within hours during business hours." },
-    ],
-  },
-  {
-    category: "Parts & warranty",
-    items: [
-      { q: "Do you use genuine Apple parts?", a: "We use original Apple or OEM-grade parts, depending on your preference. We label which type your repair uses on the quote before work starts. Every repair carries a written warranty up to 12 months." },
-      { q: "What warranty comes with iPhone screen replacement?", a: "12-month warranty on OLED screen panels. If the same fault returns inside the period, we re-repair free of charge. Note: warranty does not cover new physical damage after the repair." },
-    ],
-  },
-  {
-    category: "Specific repairs",
-    items: [
-      { q: "Can you fix Face ID on iPhone?", a: "Yes. Face ID relies on the TrueDepth camera cluster and dot projector. We replace the sensor assembly with genuine Apple components and recalibrate Face ID. Third-party screens often break Face ID. We use panels that preserve it." },
-      { q: "My iPhone won't turn on, can you fix it?", a: "Yes. 'Won't turn on' has many causes: dead battery, failed charging IC, software boot-loop, or board fault. We run a systematic diagnosis to find the exact cause and give you a transparent quote before any repair." },
-      { q: "Can you recover data from a broken iPhone?", a: "In most cases, yes. If the screen is broken but the board works, we connect via DFU mode or a forensic cable to pull the data. For water-damaged boards, recovery success depends on damage extent. We assess free of charge." },
-    ],
-  },
-];
-
-function SectionHeading({ label, title, sub }: { label?: string; title: string; sub?: string }) {
-  return (
-    <div className="text-center mb-[56px]">
-      {label && (
-        <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">
-          {label}
-        </p>
-      )}
-      <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-text leading-[1.1]">{title}</h2>
-      {sub && <p className="text-center mt-5 text-[17px] text-text-muted max-w-[56ch] mx-auto leading-relaxed">{sub}</p>}
-    </div>
-  );
-}
-
-function IconCard({ Icon, title, body, href }: { Icon: LucideIcon; title: string; body: string; href?: string }) {
-  const inner = (
-    <div className="flex flex-col gap-sm group">
-      <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 mb-xs">
-        <Icon size={22} className="text-accent" strokeWidth={1.75} />
-      </div>
-      <h3 className="text-[17px] font-semibold text-text flex items-center gap-1">
-        {title}
-        {href && <span className="text-accent text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">→</span>}
-      </h3>
-      <p className="text-[15px] text-text-muted leading-relaxed">{body}</p>
-    </div>
-  );
-  return href ? <Link to={href} className="block">{inner}</Link> : inner;
-}
-
-function CallButtons({ dark = false }: { dark?: boolean }) {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
-      </Button>
-      <Button asChild variant={dark ? "secondary" : "outline"} size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
+const chip = "inline-flex items-center min-h-[40px] px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px]";
 
 export default function IPhoneRepairHub() {
-  const reviews = pickReviews(["Ali Hassan"], { devices: reviewDevicesForPath("/iphone-repair-dubai"), min: 3, seed: "/iphone-repair-dubai" });
-  useSeo(
-    {
-      title: "iPhone Repair Dubai - Independent Apple Repair Specialists",
-      description:
-        "Trusted iPhone repair in Dubai for screen, battery, water damage & logic board issues. Independent Apple specialists. Fast service with original Apple parts.",
-      path: "/iphone-repair-dubai",
-    },
-    [localBusiness(), organization()],
-  );
-
   return (
-    <PageShell>
-      <div className="-mb-[4rem] bg-bg text-text">
-
-        {/* ── BREADCRUMB ── */}
-        <div className="pt-[64px]" style={{ borderBottom: "1px solid var(--color-border)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6 py-[6px]">
-            <BreadcrumbTrail tone="dark" trail={[
-              { name: "Home", path: "/" },
-              { name: "Apple Repair", path: "/apple-repair-dubai" },
-              { name: "iPhone Repair", path: "/iphone-repair-dubai" },
-            ]} />
-          </div>
+    <IPhoneMoneyPage
+      path={PATH}
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "Apple Repair", path: "/apple-repair-dubai" },
+        { name: "iPhone Repair", path: PATH },
+      ]}
+      hero={{
+        eyebrow: "iPhone repair · Dubai Media City",
+        title: "iPhone Repair Dubai: iPhone 6 to iPhone 18 Pro Max",
+        subtitle:
+          "An independent iPhone workshop in Concord Tower, Dubai Media City. Screens, batteries, back glass, ports, cameras, water damage and board-level faults, with free diagnosis and a written quote on WhatsApp before any work.",
+        image: "/images/topics/iphone-repair-hub-dubai.jpg",
+        imageAlt: "iPhone repair Dubai - iPhone 17 Pro full teardown exploded-view engineering infographic",
+      }}
+      quickAnswer={{
+        question: "Where can I get my iPhone repaired in Dubai?",
+        answer:
+          "At MacBook Repair Dubai, an independent Apple repair workshop in Office #45, Concord Tower, Dubai Media City. We repair every iPhone from the iPhone 6 to the iPhone 18 Pro Max: screens, batteries, back glass, charging ports, cameras, water damage and logic boards. Diagnosis is free, and you get a written quote on WhatsApp before any work starts.",
+      }}
+      reviewer={{ name: "Hamza" }}
+      takeaways={[
+        "Every iPhone generation from the iPhone 6 to the iPhone 18 Pro Max is repaired at our own Dubai Media City workshop.",
+        "Diagnosis is free. You get a written quote on WhatsApp, and nothing is repaired until you approve it.",
+        "We are independent, not an Apple Authorised Service Provider. If your iPhone is still under Apple warranty or AppleCare+, Apple is usually the better route, and we tell you so.",
+        "Parts are genuine Apple where available and quality-tested alternatives otherwise. The grade is written on your quote before work starts.",
+        "Warranty follows the repair: up to 12 months on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens.",
+        "Free pickup anywhere in Dubai. Abu Dhabi customers use courier collection to our Dubai bench; we have no Abu Dhabi branch.",
+      ]}
+      faqHeading="iPhone repair in Dubai: common questions"
+      faqs={[
+        { q: "How much does iPhone repair cost in Dubai?", a: "It depends on the model, the fault and the part grade you choose: an iPhone 8 battery and an iPhone 18 Pro Max screen are very different jobs. WhatsApp the model and a photo of the fault for a quote. Diagnosis is free and you approve the written price before any work." },
+        { q: "Can you fix my iPhone the same day?", a: "Many screen and battery jobs on common models are finished the same day when the part is in stock. Water damage, board-level work and parts that must be ordered take longer, especially on the newest models. We confirm the timing on WhatsApp before you come in." },
+        { q: "Do you repair iPhones from Abu Dhabi?", a: "Yes, by courier. We have no Abu Dhabi branch; every repair happens at our Dubai Media City workshop. We arrange collection from your address, repair the iPhone in Dubai and courier it back, usually within 1 to 2 days. WhatsApp us to book the collection." },
+        { q: "Is MacBook Repair Dubai an Apple service center?", a: "No. We are an independent Apple repair workshop, not an Apple Store or an Apple Authorised Service Provider. We repair out-of-warranty iPhones, older models and board-level faults, and we tell you when Apple is the better choice, such as while your phone is under warranty or AppleCare+." },
+        { q: "Will I lose my data during an iPhone repair?", a: "Screen, battery, back glass and port repairs don't erase the phone, but back up to iCloud or a computer first if it still works. For water-damaged or dead iPhones, we tell you whether the data can be recovered before any repair that could affect it." },
+        { q: "Does an independent repair affect my Apple warranty?", a: "Apple can refuse warranty service for damage caused by a third-party repair. If your iPhone is still under Apple's warranty or AppleCare+, check with Apple first. Once it is out of warranty there is no Apple coverage left to lose, though Apple may decline to service a non-Apple part if you take the phone to them later." },
+      ]}
+      leadHeading="Get your iPhone repair quote"
+      cta={{
+        headline: "Send your iPhone model and a photo of the fault",
+        description: "Free diagnosis, a written quote before any work, and free pickup anywhere in Dubai.",
+        prefill: "Hi, iPhone repair quote please. Model and fault: ",
+      }}
+      related={[
+        { label: "iPhone screen repair Dubai", to: "/iphone-screen-repair-dubai" },
+        { label: "iPhone screen repair cost", to: "/iphone-screen-repair-cost-dubai" },
+        { label: "iPhone battery replacement", to: "/iphone-battery-replacement-dubai" },
+        { label: "iPhone back glass repair", to: "/iphone-back-glass-repair-dubai" },
+        { label: "iPhone repair near me", to: "/iphone-repair-near-me-dubai" },
+        { label: "How to pick an iPhone repair shop", to: "/best-iphone-repair-dubai" },
+        { label: "Apple repair Dubai", to: "/apple-repair-dubai" },
+        { label: "iPad repair Dubai", to: "/ipad-repair-dubai" },
+      ]}
+      sources={[
+        { label: "Apple UAE: iPhone screen and repair service estimates", href: "https://support.apple.com/en-ae/iphone/repair/screen-replacement", note: "Out-of-warranty estimates, excluding VAT. Read 26 Sep 2026." },
+        { label: "Apple UAE: iPhone battery service", href: "https://support.apple.com/en-ae/iphone/repair/battery-replacement", note: "Battery estimates and AppleCare+ battery coverage." },
+      ]}
+      reviewNames={["Ali Hassan", "Saeed Alam", "Tim Quick"]}
+    >
+      <PageSection id="repairs" eyebrow="What we fix" title="iPhone repairs we do in Dubai">
+        <p>
+          Whether it&apos;s a quick iPhone fix or a board-level repair, each job below has its own page explaining how we
+          do it. If your fault isn&apos;t listed, WhatsApp the symptom and we&apos;ll tell you honestly whether it&apos;s
+          repairable before you travel.
+        </p>
+        <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3 max-w-none mt-xs">
+          {REPAIRS.map((r) => (
+            <div key={r.to} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+              <h3 className="!mt-0 mb-xs"><Link to={r.to} className="hover:text-accent">{r.label}</Link></h3>
+              <p className="text-[15px]">{r.body}</p>
+            </div>
+          ))}
         </div>
+        <p className="mt-sm font-semibold text-text">All iPhone repair types</p>
+        <ul className="!list-none !pl-0 flex flex-wrap gap-2 max-w-none">
+          {MORE_REPAIRS.map(([label, to]) => (
+            <li key={to}><Link to={to} className={`${chip} text-accent hover:border-accent/40`}>{label}</Link></li>
+          ))}
+        </ul>
+      </PageSection>
 
-        {/* ── HERO ── */}
-        <Hero
-          image="/images/topics/iphone-repair-hub-dubai.jpg"
-          imageAlt="iPhone repair Dubai - iPhone 17 Pro full teardown exploded-view engineering infographic"
-          variant="device"
-          tone="dark"
-          eyebrow="iPhone specialist"
-          title="Top Rated iPhone Repair Dubai"
-        >
-          <div className="mt-md" itemScope itemType="https://schema.org/Question">
-            <p className="text-[15px] font-semibold text-text mb-2" itemProp="name">
-              Where can I get my iPhone repaired in Dubai?
-            </p>
-            <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-              <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai repairs every iPhone, from iPhone 8 through the iPhone 17 series, at Concord Tower, Dubai Media City. Screen, battery, camera, Face ID, water damage, and board-level repair with free diagnosis, free citywide pickup, and written warranty up to 12 months.
-              </p>
-            </div>
-          </div>
-          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Certified technicians</span>
-            <span>·</span><span>Genuine / OEM parts</span>
-            <span>·</span><span>Same-day service</span>
-          </p>
-        </Hero>
-
-        <TakeawaysByline
-          updated="September 2026"
-          reviewer="Hamza, iPhone & iPad technician"
-          years={7}
-          items={[
-            "Every iPhone from the 6 through the current 17 family is repaired in-workshop, including the Air and Fold.",
-            "Screens and batteries are same-day; most are done in under an hour.",
-            "Genuine and OEM-grade parts are both offered, and we tell you which your repair uses before we start.",
-            "Face ID and Touch ID faults are diagnosed honestly - we say when Apple pairing limits what any independent can do.",
-            "Diagnosis is free with a written quote on WhatsApp before any work.",
-            "Warranty up to 12 months, and no charge if the fault cannot be fixed.",
-          ]}
-        />
-
-        {/* ── USP STRIP ── */}
-        <div style={{ borderBottom: "1px solid var(--color-border)" }}>
-          <ul className="mx-auto max-w-content px-5 md:px-6 py-md flex flex-wrap justify-center gap-x-xl gap-y-sm">
-            {[
-              { Icon: Search,     label: "Free iPhone diagnosis" },
-              { Icon: BadgeCheck, label: "No fix, no charge" },
-              { Icon: Truck,      label: "Free pickup Dubai-wide" },
-              { Icon: ShieldCheck,label: "Genuine & OEM-grade parts" },
-              { Icon: Clock,      label: "Same-day service" },
-              { Icon: Star,       label: "Trusted since 2004" },
-            ].map(({ Icon, label }) => (
-              <li key={label} className="flex items-center gap-xs text-[14px] font-medium text-text">
-                <Icon size={15} className="text-accent shrink-0" aria-hidden />
-                {label}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* ── STATS ── */}
-        <section style={{ background: "#2C3137", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.15)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {[
-                { stat: "20+",   label: "Years in Dubai" },
-                { stat: "232+",  label: "Google reviews" },
-                { stat: "30 min",label: "Screen repair" },
-                { stat: "12 mo", label: "Written warranty" },
-              ].map(({ stat, label }, i) => (
-                <div key={label} className="py-lg px-xl flex flex-col justify-center"
-                  style={{ borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : undefined, textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
-                  <p className="text-[32px] md:text-[40px] font-bold leading-none tracking-tight text-white">{stat}</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-on-primary-muted">{label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── MODELS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <SectionHeading
-            label="Supported models"
-            title="iPhone models we repair"
-            sub="Every iPhone from the SE through iPhone 18 Pro Max. Tap a model for its dedicated repair page."
-          />
-          <ul className="flex flex-wrap gap-2">
-            {MODEL_PAGES.map(([label, href]) => (
-              <li key={href}>
-                <Link to={href} className="inline-flex items-center px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ── SERVICES ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <SectionHeading
-            label="What we fix"
-            title="iPhone repair services"
-            sub="From a cracked OLED screen to a dead logic board, our technicians handle every iPhone repair in our Dubai Media City workshop."
-          />
-          <div className="grid gap-x-xl gap-y-[56px] sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s) => (
-              <IconCard key={s.title} Icon={s.Icon} title={s.title} body={s.body} href={s.href} />
-            ))}
-          </div>
-          <div className="mt-xl flex justify-center"><CallButtons /></div>
-        </section>
-
-        {/* ── PRICING TABLE ── */}
-        <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading label="Pricing" title="Services & pricing" sub="Prices depend on your model — message us on WhatsApp for today's exact price. Every quote is confirmed in writing after a free diagnosis." />
-            <div className="overflow-x-auto border border-border rounded-xl bg-bg max-w-[640px] mx-auto">
-              <table className="w-full text-[14px]">
-                <thead className="bg-bg-card">
-                  <tr className="text-left">
-                    <th className="px-md py-sm font-semibold">Service</th>
-                    <th className="px-md py-sm font-semibold">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRICING.map(([s, p], i) => (
-                    <tr key={s} className={i % 2 ? "bg-bg-alt" : ""}>
-                      <td className="px-md py-sm font-semibold">{s}</td>
-                      <td className="px-md py-sm mono text-accent whitespace-nowrap">{p}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-[13px] text-text-muted mt-sm text-center">Message us on WhatsApp for your model's exact price. Final price confirmed in writing after a free diagnosis.</p>
-            <div className="mt-lg flex justify-center"><CallButtons /></div>
-          </div>
-        </section>
-
-        {/* ── PROCESS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <SectionHeading label="How it works" title="Our iPhone repair process" sub="Simple, transparent, and fast." />
-          <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
-            {PROCESS.map((step, i) => (
-              <div key={step.title} className="flex flex-col">
-                <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
-                <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
-                  <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
-                </div>
-                <h3 className="text-[19px] font-semibold text-text mb-sm">{step.title}</h3>
-                <p className="text-[15px] text-text-muted leading-relaxed">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── SPECIALISED REPAIRS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">All repair types</p>
-          <ul className="flex flex-wrap gap-2">
-            {SERVICE_PAGES.map(([label, href]) => (
-              <li key={href}>
-                <Link to={href} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-accent hover:border-accent/40 hover:bg-accent/5 transition-colors">
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ── WHY ── */}
-        <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading
-              label="Why us"
-              title="The independent Apple specialists in Dubai"
-              sub={`Not an Apple Authorised Service Centre. We're the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
-            />
-            <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
-              {WHY.map((w) => <IconCard key={w.title} Icon={w.Icon} title={w.title} body={w.body} />)}
-            </div>
-          </div>
-        </section>
-
-        {/* ── SIGNS ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <SectionHeading label="Warning signs" title="How do I know my iPhone needs repair?" />
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-[900px] mx-auto">
-            {[
-              "Water damage or liquid exposure",
-              "Battery draining unusually quickly",
-              "Cracked or shattered screen",
-              "Overheating during normal usage",
-              "Unresponsive or sluggish performance",
-              "Camera producing blurry or dark images",
-              "Sound problems: distorted or no audio",
-              "Charging issues: won't charge or intermittent",
-              "Buttons not working: power, volume, Home",
-            ].map((s) => (
-              <li key={s} className="flex items-start gap-3 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4">
-                <CheckCircle2 size={18} className="text-accent shrink-0 mt-0.5" aria-hidden />
-                <span className="text-[14px] text-text-muted leading-relaxed">{s}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ── TESTIMONIALS ── */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <div className="text-center mb-[56px]">
-              <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
-              <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-            </div>
-            <ReviewGrid reviews={reviews} tone="dark" />
-            <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
-              <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
-              <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── VS APPLE + FAQ ── */}
-        <VsAppleStore tone="dark" />
-
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
-          <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-            <div className="lg:sticky lg:top-24 rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">FAQ</p>
-              <h2 className="text-[22px] font-bold tracking-tight text-text leading-snug mb-3">Frequently asked questions</h2>
-              <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
-                <span>✓ Free diagnosis</span>
-                <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
-              </div>
-              <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
-                {FAQ_GROUPS.map((g) => (
-                  <a key={g.category} href={`#faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}
-                    className="text-[13px] text-accent hover:underline capitalize">{g.category}</a>
+      <PageSection id="models" eyebrow="Supported models" title="iPhone models we repair, from iPhone 6 to iPhone 18 Pro Max">
+        <p>
+          Newer models have their own repair pages; tap a model to open it. Older generations (iPhone 6 to 8, the X
+          generation, 11 and 12) are repaired here too: WhatsApp the model and fault and we confirm the part first.
+        </p>
+        <div className="grid gap-sm max-w-none">
+          {FAMILIES.map((f) => (
+            <div key={f.family} className="rounded-md border border-border/70 bg-bg-card p-md">
+              <h3 className="!mt-0 mb-xs text-[17px]">{f.family}</h3>
+              <ul className="!list-none !pl-0 flex flex-wrap gap-2">
+                {f.models.map(([name, to]) => (
+                  <li key={name}>
+                    {to ? (
+                      <Link to={to} className={`${chip} text-accent hover:border-accent/40`}>{name}</Link>
+                    ) : (
+                      <span className={`${chip} text-text`}>{name}</span>
+                    )}
+                  </li>
                 ))}
-              </div>
+              </ul>
+              {f.note && <p className="text-[14px] mt-xs">{f.note}</p>}
             </div>
-            <div className="flex flex-col gap-[48px]">
-              {FAQ_GROUPS.map((g, gi) => (
-                <div key={g.category} id={`faq-${g.category.replace(/\s+/g, "-").toLowerCase()}`}>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">{g.category}</p>
-                  <FAQAccordion items={g.items} injectSchema={gi === 0} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          ))}
+        </div>
+        <p>
+          iPod touch (7th gen) owners are covered on the <A to="/ipod-touch-7-repair-dubai">iPod touch repair page</A>.
+          iPhone Duo, Apple&apos;s first foldable, goes on sale in the UAE on 23 October 2026; we will add Duo repairs
+          once it is in customers&apos; hands.
+        </p>
+      </PageSection>
 
-        {/* ── LOCATION ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-6">Find us</p>
-          <LocationBlock tone="dark" compact />
-        </section>
+      <PageSection id="near-me" eyebrow="Walk in, pickup or courier" title="iPhone repair near me: how to reach our workshop">
+        <p>
+          <strong>Walk in.</strong> We are at {NAP.street}, {NAP.area}, a short drive from Internet City, JLT, Dubai
+          Marina and Al Barsha. Message us first so the part is ready.
+        </p>
+        <p>
+          <strong>Free pickup in Dubai.</strong> Send your location on WhatsApp and we collect the iPhone from your home
+          or office anywhere in Dubai, then return it. See{" "}
+          <A to="/blog/free-pickup-delivery-dubai-how-it-works">how free pickup works</A>.
+        </p>
+        <p>
+          <strong>iPhone repair from Abu Dhabi.</strong> We have no Abu Dhabi branch. We arrange courier collection to
+          our Dubai bench and back, usually 1 to 2 days door to door; Sharjah works the same way. The{" "}
+          <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page lists the Dubai areas we collect from.
+        </p>
+      </PageSection>
 
-        {/* ── RELATED SERVICES ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">Related services</p>
-          <div className="flex flex-wrap justify-center gap-sm text-[15px]">
-            {[
-              { label: "iPhone Screen Repair Dubai",    href: "/iphone-screen-repair-dubai" },
-              { label: "iPhone Battery Replacement",    href: "/iphone-battery-replacement-dubai" },
-              { label: "iPad Repair Dubai",             href: "/ipad-repair-dubai" },
-              { label: "MacBook Repair Dubai",          href: "/macbook-repair-dubai" },
-              { label: "Apple Repair Dubai",            href: "/apple-repair-dubai" },
-            ].map((l) => <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>)}
-          </div>
-        </section>
+      <PageSection id="vs-apple" eyebrow="Independent vs Apple" title="Independent iPhone repair or an Apple service center in Dubai?">
+        <p>
+          Searching for an &quot;iPhone service center in Dubai&quot; usually means Apple itself or a workshop that repairs
+          iPhones properly. We are the second kind. Apple publishes its UAE out-of-warranty prices, a fair reference
+          point. These are Apple&apos;s estimates, not ours, and exclude VAT:
+        </p>
+        <DataTable
+          caption="Apple's UAE out-of-warranty iPhone service estimates, excluding VAT"
+          head={["Model", "Screen", "Battery", "Back glass"]}
+          rows={[
+            ["iPhone 18 Pro Max", "AED 1,499 (Apple list)", "AED 499 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone 18 Pro", "AED 1,279 (Apple list)", "AED 499 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone 17 Pro Max", "AED 1,499 (Apple list)", "AED 465 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone Air", "AED 1,279 (Apple list)", "AED 465 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone 17", "AED 1,279 (Apple list)", "AED 385 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone 16", "AED 1,079 (Apple list)", "AED 385 (Apple list)", "AED 615 (Apple list)"],
+            ["iPhone 16e", "AED 889 (Apple list)", "AED 385 (Apple list)", "AED 615 (Apple list)"],
+          ]}
+          note="Source: support.apple.com/en-ae, read 26 September 2026. Apple's estimates change without notice and are subject to VAT."
+        />
+        <p>
+          <strong>Choose Apple</strong> while your iPhone is under Apple&apos;s warranty or AppleCare+, or if you want the
+          repair recorded as an Apple service. <strong>Choose an independent workshop</strong> when the phone is out of
+          warranty, an older model, or has a logic board fault. Apple&apos;s &quot;other damage&quot; estimate for an iPhone 18 Pro Max is AED 3,479 (Apple list);
+          a board-level repair addresses the fault itself. Our price for your model comes on WhatsApp.
+        </p>
+        <div className="flex flex-wrap gap-sm">
+          <WhatsAppButton text="Hi, can you compare your quote with Apple's price? Model and fault: " label="Get our quote on WhatsApp" />
+        </div>
+      </PageSection>
 
-        {/* ── RELATED GUIDES ── */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[48px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-1">Related guides</p>
-          <ul className="flex flex-col gap-sm">
-            <li><Link to="/iphone-motherboard-repair-dubai" className="text-accent hover:underline">Can iPhone motherboard be repaired?</Link><span className="text-text-muted text-[14px] ml-2">A full guide to iPhone logic board repair options.</span></li>
-            <li><Link to="/iphone-16-shocks-while-charging" className="text-accent hover:underline">iPhone shocking while charging</Link><span className="text-text-muted text-[14px] ml-2">Why your iPhone gives electric shocks when charging and how to fix it.</span></li>
-          </ul>
-        </section>
+      <PageSection id="cost" eyebrow="Pricing" title="What does iPhone repair cost in Dubai?">
+        <p>
+          Four things set the price: the model, the part (a Pro Max OLED costs more than an iPhone 8 LCD), the grade
+          (genuine Apple or a quality-tested alternative), and any other damage from the drop or spill. We quote in
+          writing after a free diagnosis. For screens, the{" "}
+          <A to="/iphone-screen-repair-cost-dubai">iPhone screen repair cost guide</A> breaks this down model by model.
+        </p>
+      </PageSection>
 
-        {/* ── CTA ── */}
-        <section className="mt-[80px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6 py-[48px] flex flex-col sm:flex-row items-center justify-between gap-md">
-            <div>
-              <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your iPhone?</p>
-              <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
-              </h2>
-            </div>
-            <div className="flex flex-wrap gap-sm shrink-0"><CallButtons dark /></div>
-          </div>
-        </section>
+      <PageSection id="process" eyebrow="How it works" title="How an iPhone repair works with us">
+        <ol>
+          <li><strong>WhatsApp the model and fault.</strong> The model is in Settings &gt; General &gt; About; add a photo of any crack.</li>
+          <li><strong>Free diagnosis.</strong> Walk in or use free pickup, and we confirm the cause.</li>
+          <li><strong>Written quote.</strong> Price, part grade and timing. Nothing starts until you approve.</li>
+          <li><strong>Repair and test.</strong> Touch, cameras, Face ID or Touch ID, speakers, charging and signal are checked.</li>
+          <li><strong>Collect with a written warranty</strong> for the period that applies to your repair.</li>
+        </ol>
+      </PageSection>
 
-      </div>
-      
-        {/* On-page capture, the standard's form with the shared repair preset. */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="iphone-lead">
-          <h2 id="iphone-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get your iPhone repair quote</h2>
-          <LeadForm preset={PRESETS.repair} sourcePath="/iphone-repair-dubai" defaultDeviceType="iPhone" />
-        </section>
-
-      <p className="mx-auto max-w-content px-5 md:px-6 text-[15px] text-text-muted">
-        Not sure who to trust? See <Link to="/best-iphone-repair-dubai" className="text-accent underline underline-offset-2">how to pick the best iPhone repair in Dubai</Link>.
-      </p>
-      <RelatedArticles path="/iphone-repair-dubai" />
-    </PageShell>
+      <PageSection id="parts" eyebrow="Parts and warranty" title="Genuine parts, honest grades and a written warranty">
+        <p>
+          We fit genuine Apple parts where available and quality-tested alternatives otherwise, and the grade is on
+          your quote. On recent iPhones, iOS can flag a screen, battery or camera not installed through Apple&apos;s own
+          process. The phone still works, and we tell you beforehand if yours will show that message.
+        </p>
+        <p>
+          Warranty depends on the job: up to 12 months on hardware, 3 months on batteries with an 80% capacity
+          guarantee, 90 days on screens, and 15 days on software, board-level and liquid-damage work. See the{" "}
+          <A to="/warranty">warranty terms</A>.
+        </p>
+      </PageSection>
+    </IPhoneMoneyPage>
   );
 }

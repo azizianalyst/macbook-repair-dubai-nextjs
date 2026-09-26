@@ -139,7 +139,7 @@ export default function BlogM5ChipExplained() {
           <h2 id="should-you-upgrade">Should you upgrade from M4? (probably not yet)</h2>
           <p>
             <strong>If you own M4:</strong> The 18% CPU bump is real but you will not feel it in everyday use.
-            Wait for M6 (expected late 2026/early 2027). Selling your M4 now to fund an M5 means eating a meaningful chunk of depreciation.
+            Wait for M6 (it reached the Mac mini in September 2026; MacBooks have not moved to it yet). Selling your M4 now to fund an M5 means eating a meaningful chunk of depreciation.
           </p>
           <p>
             <strong>If you do AI/ML work:</strong> The 38-390% AI workload gain is genuinely meaningful. Upgrade
@@ -164,7 +164,7 @@ export default function BlogM5ChipExplained() {
         { q: "Is M5 made on a new process node?", a: "Yes - TSMC N3P (3nm 'enhanced'), same family as M4's N3E but with denser cells and ~5% better power-performance characteristics. Not as big a jump as the M2-to-M3 node change (N5P → N3E)." },
         { q: "Why didn't Apple bump TOPS on the Neural Engine?", a: "Apple shifted AI compute strategy. The Neural Engine stays at 38 TOPS but new 'Neural Accelerators' inside each GPU shader core handle most modern AI workloads, delivering up to 4× throughput on real applications without raising the headline TOPS number." },
         { q: "Does M5 support Wi-Fi 7 and Thunderbolt 5?", a: "Yes - both. M5 MacBook Pros ship with Wi-Fi 7 and Thunderbolt 5 (80 Gbps, 120 Gbps boost mode for displays). M4 was Wi-Fi 6E and Thunderbolt 4 only." },
-        { q: "When will M6 arrive?", a: "Apple's typical cadence is 12-18 months between M-series generations. M6 is expected late 2026 (MacBook Pro) or early 2027. Likely on TSMC N2 process - could be a bigger jump than M4-to-M5." },
+        { q: "When will M6 arrive?", a: "M6 has already arrived in one Mac: Apple launched the Mac mini with M6, its first 2nm Mac chip, in September 2026. As of late September 2026 no MacBook uses M6 yet; Apple has not announced when the MacBook Air or MacBook Pro will move to it." },
         { q: "Can I upgrade my M4 MacBook to M5?", a: "No. Apple Silicon is soldered to the logic board, including unified memory and SSD. Upgrading the chip means replacing the logic board, which costs more than buying a new Mac." },
       ]}
       relatedLinks={[

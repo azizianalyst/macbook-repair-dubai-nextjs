@@ -108,7 +108,11 @@ export default function BlogICloudLockedIPhone() {
             <li>Original receipt with serial number / IMEI matching the device.</li>
             <li>Government-issued photo ID (Emirates ID).</li>
             <li>The locked device.</li>
-            <li>An appointment - book via the Apple Support app.</li>
+            <li>
+              An appointment - book via the Apple Support app. Our guide to{" "}
+              <Link to="/blog/apple-repair-appointment-dubai/">booking an Apple repair appointment in Dubai</Link>{" "}
+              walks through it.
+            </li>
           </ul>
           <p>
             Approval is at Apple's discretion and typically takes 5-10 business days. They will not help

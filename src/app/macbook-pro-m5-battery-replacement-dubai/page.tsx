@@ -5,7 +5,7 @@ import View from "@/views/MacBookProM5BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/macbook-pro-m5-battery-replacement-dubai", {
   title: "MacBook Pro M5 Battery Replacement Dubai — Free Diagnosis",
-  description: "MacBook Pro M5 Pro/Max battery replacement Dubai. BMS re-pair included. OLED display model (2025). Check Apple warranty first. Free diagnosis. Message us on WhatsApp for a price.",
+  description: "MacBook Pro M5, M5 Pro and M5 Max battery replacement in Dubai. BMS re-pair included. Check Apple warranty first. Free diagnosis, quote on WhatsApp.",
 });
 
 export default function Page() {

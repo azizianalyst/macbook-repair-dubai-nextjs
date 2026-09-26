@@ -104,9 +104,8 @@ export default function BlogIMacNotTurningOn() {
             <li><strong>Turnaround:</strong> typically same-day</li>
           </ul>
           <p>
-            Our component-level PSU swap is dramatically cheaper than the Apple Store's
-            out-of-warranty iMac 27″ "Service" tier, which replaces the whole logic board and PSU
-            whether needed or not. Message us on WhatsApp for today's exact price on your model -
+            We replace only the power supply when that is the fault, and quote before any work so
+            you can compare with Apple's out-of-warranty quote. Message us on WhatsApp for today's exact price on your model -
             free diagnosis, and we only charge for the fix your iMac actually needs.
           </p>
 

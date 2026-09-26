@@ -64,6 +64,10 @@ export type IPhoneTemplateProps = {
   relatedSlugs?: string[];    // 3 slugs from IPHONE_HUBS (not self); auto-resolved when omitted
   relatedExtra?: { label: string; href: string; description: string }[]; // additional free-form links appended after slug-resolved ones
   honestyCallout?: ReactNode; // for iCloud, Face ID, network unlock
+  /** Optional page-specific answer block (40-60 words). Overrides the derived cost answer. */
+  quickAnswer?: { question: string; answer: string };
+  /** Optional extra H2 sections (e.g. "By model", symptom checks), rendered after Common problems. */
+  sections?: ReactNode;
 };
 
 export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
@@ -78,7 +82,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
   // returns a generation fallback for ANY iphone path, so it must come second.
   const topic = topicForPath(p.path);
   const heroImage = topic?.src ?? imageForSlug(p.path) ?? imageForService(p.path);
-  const qa = deriveServiceQuickAnswer({
+  const qa = p.quickAnswer ?? deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
     timeline: p.timeline,
@@ -174,7 +178,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
             <SectionHeading
               eyebrow="Models & pricing"
               title="Which iPhone models do you repair?"
-              sub={<>From the iPhone 6 through the iPhone 17e. Every line below includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.</>}
+              sub={<>Find your model below. Every line includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.</>}
             />
             <PricingTable service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} tone="dark" />
             {p.pricingCaption && (
@@ -198,6 +202,9 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
               ))}
             </div>
           </section>
+
+          {/* Page-specific sections (by-model notes, symptom checks) */}
+          {p.sections}
 
           {/* Process */}
           <section>
@@ -255,7 +262,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
               </table>
             </ScrollHintTable>
             <p className="text-[13px] text-text-muted mt-sm mono">
-              Apple list pricing from apple.com/ae, retrieved May 2026. Comparison shown for transparency.
+              Apple figures are Apple&apos;s own published UAE prices (apple.com/ae; repair estimates from support.apple.com/en-ae exclude VAT) and can change at any time. Comparison shown for transparency.
             </p>
           </section>
 

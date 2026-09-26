@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type PricingRow = {
   model: string;
@@ -37,7 +37,7 @@ export function PricingTable({ service, rows, caption, tone = "light" }: Props) 
             </div>
             <div className="shrink-0 text-right">
               <a
-                href={quoteHref(r.model)}
+                href={withSlash(quoteHref(r.model))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-[13px] text-whatsapp font-semibold hover:underline"
@@ -68,7 +68,7 @@ export function PricingTable({ service, rows, caption, tone = "light" }: Props) 
                 <td className={cn("px-md py-sm mono", dark ? "text-text-muted" : "text-text-muted")}>{r.timeline}</td>
                 <td className="px-md py-sm text-right">
                   <a
-                    href={quoteHref(r.model)}
+                    href={withSlash(quoteHref(r.model))}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-whatsapp font-semibold hover:underline"

@@ -89,9 +89,9 @@ export default function BlogMacBookProM1ScreenFlickering() {
           <BlogPriceTable
             caption="MacBook Pro M1 screen repair pricing. June 2026"
             rows={[
-              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty" },
-              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 12-month warranty" },
+              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Price on request", note: "Full LCD panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 90-day warranty" },
+              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR, 90-day warranty" },
               { model: "Display cable (M1 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "If fault correlates with lid angle" },
               { model: "Screen diagnostic", ours: "Free", apple: "Price on request", note: "Software vs cable vs panel determination" },
             ]}
@@ -138,7 +138,7 @@ export default function BlogMacBookProM1ScreenFlickering() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. LCD and OLED." },
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. Liquid Retina XDR and Retina LCD." },
         { label: "MacBook Pro M1 repair Dubai", href: "/macbook-pro-m1-repair-dubai", description: "All M1 models: 13-inch M1, M1 Pro, M1 Max service in Dubai." },
         { label: "MacBook Pro M1 battery swelling Dubai", href: "/blog/macbook-pro-m1-battery-swelling-dubai", description: "Swollen battery causes trackpad and screen cable faults, check first." },
         { label: "MacBook Pro M1 common problems", href: "/blog/macbook-pro-m1-common-problems-dubai", description: "Full M1 issue guide covering Touch Bar, battery, and screen." },

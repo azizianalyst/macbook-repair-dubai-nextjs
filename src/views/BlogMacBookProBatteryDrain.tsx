@@ -79,7 +79,7 @@ export default function BlogMacBookProBatteryDrain() {
             <li>Turn on <strong>Auto-Brightness</strong> (System Settings → Displays → Automatically adjust brightness)</li>
             <li>Enable <strong>True Tone</strong>: reduces eye strain and keeps perceived brightness lower</li>
             <li>On ProMotion models (14″/16″ M1 Pro+): enable <strong>ProMotion</strong> only if you need 120Hz, it adds ~15% display power</li>
-            <li>Use <strong>Dark Mode</strong>: saves measurable power on the mini-LED / OLED panels used in recent Pro models</li>
+            <li>Use <strong>Dark Mode</strong>: saves some power on the 14- and 16-inch mini-LED panels, whose local dimming zones dim behind dark content</li>
           </ul>
 
           <h2 id="battery-health">Step 3: How do I check MacBook Pro battery health?</h2>

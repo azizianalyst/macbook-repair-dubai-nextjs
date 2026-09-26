@@ -94,7 +94,7 @@ export default function MacProNoDisplayService() {
         },
         {
           label: "Mac Pro Intel Repair Dubai",
-          href: "/mac-pro-intel-repair-dubai",
+          href: "/mac-pro-intel-2019-repair-dubai",
           description: "Intel Mac Pro 2019 hub with full service list.",
         },
       ]}

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Lightweight device-family hub. Built to fix breadcrumb gaps and orphan model pages.
 // Lists all model pages + relevant sub-services for the family on a single landing.
 import { ReactNode } from "react";
@@ -184,7 +185,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> Message on WhatsApp
                 </a>
               </Button>

@@ -198,7 +198,7 @@ export default function BlogMacBookProM5FanNoise() {
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro M5 throttling fix Dubai", href: "/blog/macbook-pro-m5-throttling-fix-dubai", description: "M5 slowing down under load: fan, vents, and Power Mode fix guide." },
         { label: "MacBook Pro overheating fix Dubai", href: "/blog/macbook-pro-overheating-fix-dubai", description: "MacBook Pro M1 to M5 overheating diagnosis and fix guide." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
       ]}
     />
   );

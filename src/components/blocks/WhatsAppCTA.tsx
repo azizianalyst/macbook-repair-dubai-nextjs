@@ -2,7 +2,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Props = {
   message?: string;        // prefilled text
@@ -25,7 +25,7 @@ export function WhatsAppCTA({
 
   return (
     <Button asChild variant="whatsapp" size={size} className={cn(block && "w-full", className)}>
-      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+      <a href={withSlash(href)} target="_blank" rel="noopener noreferrer" aria-label={label}>
         <MessageCircle aria-hidden /> {label}
       </a>
     </Button>

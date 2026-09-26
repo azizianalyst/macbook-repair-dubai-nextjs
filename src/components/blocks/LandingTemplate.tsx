@@ -37,7 +37,7 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { NAP } from "@/content/site";
 import { SITE } from "@/lib/seo";
 import { speakable, itemList } from "@/lib/schema";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 /** SEO props passed straight to <SEOHead>. */
 export type LandingSeo = {
@@ -197,7 +197,7 @@ function HeroCTA({
   return (
     <Button asChild variant={variant} size="lg">
       <a
-        href={cta.href}
+        href={withSlash(cta.href)}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {Icon && <Icon aria-hidden />}

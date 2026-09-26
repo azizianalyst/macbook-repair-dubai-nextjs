@@ -24,7 +24,7 @@ export default function BlogMacBookProM5BatteryReplacement() {
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M5 Battery Replacement in Dubai 2026: Full Guide"
       hook="MacBook Pro M5 battery replacement (14-inch and 16-inch) is available same-day at our Dubai workshop — message us on WhatsApp for today's exact price on your model. Apple rates the M5 battery for 1,000 charge cycles before it drops below 80% capacity. In Dubai's warm climate, heat accelerates degradation, so M5 users who charge daily in warm rooms may need replacement sooner."
-      quickAnswer="MacBook Pro M5 battery replacement (14-inch and 16-inch) is available same-day in Dubai with a 12-month warranty — message us on WhatsApp for today's exact price on your model. Replace when: System Settings shows battery capacity below 80%, macOS shows 'Replace Now', the M5 shuts down unexpectedly at 20-40% charge, or the battery is visibly swollen. Check battery health first in System Settings, Battery, Battery Health before committing to replacement."
+      quickAnswer="MacBook Pro M5 battery replacement (14-inch and 16-inch) is available same-day in Dubai with a 3-month warranty and an 80% capacity guarantee — message us on WhatsApp for today's exact price on your model. Replace when: System Settings shows battery capacity below 80%, macOS shows 'Replace Now', the M5 shuts down unexpectedly at 20-40% charge, or the battery is visibly swollen. Check battery health first in System Settings, Battery, Battery Health before committing to replacement."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -139,8 +139,8 @@ export default function BlogMacBookProM5BatteryReplacement() {
           <BlogPriceTable
             caption="MacBook Pro M5 battery replacement. June 2026. Message us on WhatsApp for today's exact price on your model"
             rows={[
-              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "Price on request", note: "70 Wh cell, 12-month warranty, same-day service" },
-              { model: "MacBook Pro M5 16-inch battery", ours: "Price on request", apple: "Price on request", note: "100 Wh cell, 12-month warranty, same-day service" },
+              { model: "MacBook Pro M5 14-inch battery", ours: "Price on request", apple: "AED 879 + VAT (Apple list)", note: "70 Wh cell, 3-month warranty, same-day service" },
+              { model: "MacBook Pro M5 Pro / M5 Max 16-inch battery", ours: "Price on request", apple: "AED 959 + VAT (Apple list)", note: "100 Wh cell, 3-month warranty, same-day service" },
               { model: "Battery diagnostic (health check)", ours: "Free", apple: "Price on request", note: "Full cycle count, capacity, and BMS check" },
               { model: "Swollen battery emergency replacement", ours: "Price on request", apple: "Price on request", note: "Priority same-day, includes safety inspection" },
             ]}
@@ -155,7 +155,7 @@ export default function BlogMacBookProM5BatteryReplacement() {
             <li>Cycle count resets to 0 for the new battery (the M5 tracks cycle count on the battery BMS, not the logic board)</li>
             <li>Runtime should match Apple's stated figures: up to 22-24 hours of light use on a full charge</li>
             <li>Allow 2-3 charge cycles for Optimised Battery Charging to re-learn your routine after the replacement</li>
-            <li>The new battery carries a 12-month warranty on the cell and our labour</li>
+            <li>The new battery carries a 3-month warranty on the cell and our labour, with an 80% capacity guarantee</li>
           </ul>
           <p>
             <Link to="/macbook-pro-m5-repair-dubai" className="text-accent font-semibold hover:underline">
@@ -167,7 +167,7 @@ export default function BlogMacBookProM5BatteryReplacement() {
       faqs={[
         {
           q: "How much does MacBook Pro M5 battery replacement cost in Dubai?",
-          a: "MacBook Pro M5 battery replacement (14-inch and 16-inch) is well below Apple's estimate and available same-day at our Dubai workshop. We use a 70 Wh or 100 Wh replacement cell with a 12-month warranty. Message us on WhatsApp for today's exact price on your model.",
+          a: "Apple lists MacBook Pro M5 battery service in the UAE at AED 879 (14-inch) and AED 959 (16-inch), excluding VAT. We quote before any work so you can compare, and the job is same-day at our Dubai workshop with a 70 Wh or 100 Wh replacement cell, a 3-month warranty and an 80% capacity guarantee. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How do I know if my MacBook Pro M5 needs a new battery?",

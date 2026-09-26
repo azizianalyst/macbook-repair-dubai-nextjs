@@ -15,13 +15,13 @@ export default function MacBookProM3BatteryReplacement() {
       capacity16="99.6 Wh"
       cycleLimit="1,000 cycles"
       chargingPort="MagSafe 3 + Thunderbolt 4 (3 ports)"
-      heroAnswer="MacBook Pro M3 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M3 Pro uses a 70 Wh cell; the M3 Max 16-inch uses a 99.6 Wh cell. The M3 is the last mini-LED generation before the OLED M5, making it a long-term keeper worth servicing. BMS firmware re-pair is included in every price. Same-day 2-hour service."
+      heroAnswer="MacBook Pro M3 battery replacement in Dubai is quoted per size after a free diagnosis at MacBook Repair Dubai — the 14-inch and 16-inch take different cells. The M3 Pro uses a 70 Wh cell; the M3 Max 16-inch uses a 99.6 Wh cell. The M3 shares the mini-LED Liquid Retina XDR display still used on the M4 and M5, making it a long-term keeper worth servicing. BMS firmware re-pair is included in every price. Same-day 2-hour service."
       chipUniquePoints={[
         "The M3 chip is built on TSMC 3nm technology, making it significantly more efficient than the M2 at the same workload. The 14-inch M3 Pro uses a 70 Wh cell — slightly larger than the M2 Pro 69.6 Wh — contributing to up to 18 hours of battery life under Apple test conditions.",
         "The M3 Max 16-inch is a serious workstation laptop with hardware ray tracing, up to 40-core GPU, and up to 128 GB unified memory. At 99.6 Wh, the 16-inch cell is the largest allowed on commercial flights. A new cell restores full runtime on a machine that can otherwise last many years in professional use.",
         "The Space Black finish launched with the M3 Max in late 2023, and many Dubai buyers chose this model. The anodisation does not affect battery replacement, but the bottom case needs careful re-seating. Our technicians handle both Space Black and Silver M3 Max 16-inch battery replacements same-day.",
         "M3 MacBook Pros bought in late 2023 may still be under AppleCare+ if purchased with a 2-year or 3-year plan. Check your AppleCare+ coverage at mysupport.apple.com before booking with us. If the battery is below 80 percent capacity and you have AppleCare+, Apple may replace it at reduced cost or free of charge.",
-        "The M3 is the last MacBook Pro generation using mini-LED display before the OLED screens introduced in the M5 (2025). This makes the M3 Pro and M3 Max attractive long-term platforms. Battery replacement is a straightforward investment to extend the life of an otherwise current machine.",
+        "The M3 Pro and M3 Max use the same mini-LED Liquid Retina XDR display as the M4 and M5 generations (no MacBook has an OLED screen), which makes them attractive long-term platforms. Battery replacement is a straightforward investment to extend the life of an otherwise current machine.",
       ]}
       prices={[
         {

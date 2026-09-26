@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Loader2, RefreshCw, Plus, Trash2, ExternalLink, Heart, Star, ArrowLeft, Search, BarChart3, TrendingUp, Award, Trophy, Medal, Sparkles, CheckCircle2 } from "lucide-react";
 
@@ -111,7 +112,7 @@ export default function KeywordTrackerDashboard({ embedded }: { embedded?: boole
       {!embedded && (
         <div className="mb-lg flex flex-wrap items-center justify-between gap-sm">
           <div className="flex items-center gap-3">
-            <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
+            <a href="/admin/" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
             <h1 className="m-0 text-[24px] text-text">Keyword Tracker</h1>
           </div>
           <button onClick={load} className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-2 text-[13px] text-text-muted hover:text-text"><RefreshCw size={14} /> Refresh</button>
@@ -231,7 +232,7 @@ export default function KeywordTrackerDashboard({ embedded }: { embedded?: boole
           </tbody>
         </table>
       </div>
-      <p className="mt-2 text-[12px] text-text-faint">Position = Google Search Console average position over the last 90 days (free, real data — not a live SERP scrape). Best/First/Change come from saved snapshots; take snapshots over time on the <a href="/admin/rankings" className="text-accent hover:underline">Rankings</a> page to build history. Search volume isn&apos;t available from GSC.</p>
+      <p className="mt-2 text-[12px] text-text-faint">Position = Google Search Console average position over the last 90 days (free, real data — not a live SERP scrape). Best/First/Change come from saved snapshots; take snapshots over time on the <a href="/admin/rankings/" className="text-accent hover:underline">Rankings</a> page to build history. Search volume isn&apos;t available from GSC.</p>
     </div>
   );
 }
@@ -256,7 +257,7 @@ function TrackRow({ r, onRemove }: { r: Row; onRemove: () => void }) {
       <td className="px-3 py-2 text-text-muted">{r.first ?? <span className="text-danger">N/A</span>}</td>
       <td className="px-3 py-2 text-text-muted">{r.impressions ? r.impressions.toLocaleString() : "—"}</td>
       <td className="px-3 py-2 whitespace-nowrap">
-        {r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-text-muted hover:text-accent" title={r.url}><span className="max-w-[200px] truncate">{r.url}</span><ExternalLink size={11} className="shrink-0 opacity-50" /></a> : <span className="text-text-faint">NOT FOUND</span>}
+        {r.url ? <a href={withSlash(r.url)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-text-muted hover:text-accent" title={r.url}><span className="max-w-[200px] truncate">{r.url}</span><ExternalLink size={11} className="shrink-0 opacity-50" /></a> : <span className="text-text-faint">NOT FOUND</span>}
       </td>
       <td className="px-2 py-2 text-right"><button onClick={onRemove} className="rounded p-1 text-text-faint hover:text-danger" title="Stop tracking"><Trash2 size={13} /></button></td>
     </tr>

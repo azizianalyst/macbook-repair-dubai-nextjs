@@ -30,7 +30,7 @@ export default function MacMiniSsdUpgrade() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             The one genuine internal upgrade on the 2018 Intel Mac mini is RAM: it uses two SO-DIMM slots and can be taken up to 64GB. For storage on any model - Intel or M-series - the practical path is a high-speed external SSD over Thunderbolt or USB-C, which on a modern drive feels close to internal. We also run storage health and wear diagnostics, handle data migration to a larger external, and refer flash data recovery to our{" "}
-            <a href="/mac-mini-data-recovery-dubai" className="text-accent hover:underline">Mac mini data recovery</a> service.
+            <a href="/mac-mini-data-recovery-dubai/" className="text-accent hover:underline">Mac mini data recovery</a> service.
           </p>
         </>
       }

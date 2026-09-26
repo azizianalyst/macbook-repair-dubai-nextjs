@@ -12,7 +12,7 @@ import { Logo } from "@/components/brand/Logo";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { MEGA_MENU } from "@/content/mega-menu";
 import type { MegaPanel, MegaLink } from "@/content/mega-menu";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 // One friendly icon per link so each row is instantly scannable.
 const LINK_ICONS: Record<string, LucideIcon> = {
@@ -97,7 +97,7 @@ function MegaDropdown({ panel, onNavigate }: { panel: MegaPanel; onNavigate: () 
           <ChevronRight size={14} aria-hidden className="transition-transform duration-200 group-hover/all:translate-x-0.5" />
         </Link>
         <Button asChild variant="whatsapp" size="sm">
-          <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">Free quote</a>
+          <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">Free quote</a>
         </Button>
       </div>
     </div>
@@ -241,7 +241,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
             </a>
           </Button>
           <Button asChild variant="whatsapp" size="sm" className="shadow-sm shadow-whatsapp/20">
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
               <MessageCircle size={15} aria-hidden /> Free quote
             </a>
           </Button>
@@ -285,7 +285,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
           {/* Persistent dual CTA */}
           <div className="grid grid-cols-2 gap-2 p-md border-b border-border">
             <Button asChild variant="whatsapp" size="lg" className="w-full">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={18} aria-hidden /> Free quote
               </a>
             </Button>

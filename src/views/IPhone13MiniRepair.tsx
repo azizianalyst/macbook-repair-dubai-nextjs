@@ -86,8 +86,9 @@ export default function IPhone13MiniRepair() {
         { title: "QC + return",          body: "OLED, MagSafe, cameras and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, green-tint covered.",
         "Battery: capacity-drop coverage.",
         "MagSafe coil: charge alignment tested before return.",

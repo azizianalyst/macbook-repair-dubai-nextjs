@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useState } from "react";
 import { Copy, Check, Phone, MessageCircle, MapPin, ParkingCircle, Languages } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
@@ -65,7 +66,7 @@ export default function Contact() {
               <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a>
             </Button>
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> WhatsApp 24/7
               </a>
             </Button>
@@ -146,7 +147,7 @@ export default function Contact() {
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
             </Button>
             <Button asChild variant="secondary" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
               <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>

@@ -2,7 +2,7 @@
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Props = {
   service: string;
@@ -34,7 +34,7 @@ export function PriceCard({ service, timeline, href, whatsappMessage, tone = "li
 
       <div className="mt-auto flex items-center justify-between gap-sm pt-sm">
         <a
-          href={wa}
+          href={withSlash(wa)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold text-whatsapp hover:underline"

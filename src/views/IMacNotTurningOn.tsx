@@ -53,13 +53,13 @@ export default function IMacNotTurningOn() {
         { title: "Free bench diagnosis", body: "Power-rail probe, PSU output check, T2 status read, startup-disk scan. Done in under an hour. Open quote, no obligation." },
         { title: "Approval", body: "We send a short voice note explaining what's wrong, what the fix costs, and how long it takes. You decide." },
         { title: "Repair", body: "PSU swap, board work, SSD recovery - whichever applies. Same-day for PSU and SMC, 1-3 days for board work." },
-        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a written warranty up to 12 months card and a description of what was fixed." },
+        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a dated written warranty card and a description of what was fixed." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
         "Covers the specific fault we repaired.",
         "Excludes new unrelated failures elsewhere in the iMac.",
-        "Free re-diagnosis if the same symptom comes back inside 12 months.",
+        "Free re-repair if the same symptom comes back inside the 15-day warranty.",
       ]}
       comparisonRows={[
         ["Diagnosis fee",         "Free, refundable if no work",      "Paid deposit"],

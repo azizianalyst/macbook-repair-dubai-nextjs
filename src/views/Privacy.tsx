@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { LegalLayout, LegalSection } from "@/components/layout/LegalLayout";
 import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
@@ -126,7 +127,7 @@ export default function Privacy() {
         <ul>
           <li><strong>Email:</strong> <a href="mailto:info@macbook-repair-dubai.ae">info@macbook-repair-dubai.ae</a></li>
           <li><strong>Phone (English / Russian / Arabic):</strong> <a href={`tel:${NAP.phoneE164}`}>{NAP.phoneDisplay}</a></li>
-          <li><strong>WhatsApp:</strong> <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">{NAP.phoneDisplay}</a></li>
+          <li><strong>WhatsApp:</strong> <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">{NAP.phoneDisplay}</a></li>
           <li><strong>In person:</strong> {NAP.street}, {NAP.area}, Monday - Saturday, 9 am - 10 pm</li>
         </ul>
       </LegalSection>

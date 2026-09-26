@@ -48,7 +48,7 @@ export default function MacProGpuRepair() {
       warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on MPX module replacements.",
-        "warranty of up to 12 months on component-level repairs (fan, VRM, caps).",
+        "15-day written warranty on component-level repairs (fan, VRM, caps), as on all board-level work.",
         "Honest 'no, we can't' verdict for M2 Ultra GPU faults - free diagnosis only.",
       ]}
       faqs={[

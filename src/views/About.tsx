@@ -25,7 +25,7 @@ const COMPARE = [
   { row: "Component-level board work", us: true,  apple: false, note: "Apple swaps the whole board - much pricier" },
   { row: "Free pickup across Dubai",  us: true,  apple: false },
   { row: "Genuine OEM parts",         us: true,  apple: true },
-  { row: "Written warranty",          us: "12 months",  apple: "12 months" },
+  { row: "Written warranty",          us: "Up to 12 months, by repair",  apple: "12 months" },
 ];
 
 export default function About() {

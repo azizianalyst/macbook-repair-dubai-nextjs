@@ -59,10 +59,11 @@ export const PRICING = {
 // Canonical warranty tiers. The warranty is NOT flat, it depends on the repair.
 // Single source of truth: visible copy, the /warranty page table, and every
 // JSON-LD WarrantyPromise (warranty: WARRANTY.*.iso) must agree with these.
-//   • hardware  → up to 12 months  (screen, keyboard, trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM)
+//   • hardware  → up to 12 months  (trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM)
+//   • screens   → 90 days (3 months), all devices
 //   • battery   → 3 months + 80% capacity guarantee (MacBook & iPhone)
-//   • short     → 15 days  (software / macOS reinstall / virus removal, diagnostics & no-fix,
-//                           data recovery, and logic-board + liquid-damage repairs)
+//   • short     → 15 days  (keyboard replacement, software / macOS reinstall / virus removal,
+//                           diagnostics & no-fix, data recovery, and logic-board + liquid-damage repairs)
 // Headline phrasing leads with the ceiling ("up to 12 months"), never "flat"/"every repair".
 export const WARRANTY = {
   hardware: { iso: "P1Y", label: "12 months" },

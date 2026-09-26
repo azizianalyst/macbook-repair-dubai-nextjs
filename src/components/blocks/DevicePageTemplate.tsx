@@ -70,6 +70,8 @@ export type DeviceTemplateProps = {
   relatedSlugs?: string[];       // 3 slugs from the device family hub list; auto-resolved when omitted
   relatedExtra?: { label: string; href: string; description: string }[]; // additional free-form links appended after slug-resolved ones
   honestyCallout?: ReactNode;
+  /** Optional page-written answer block; replaces the generic derived cost answer. */
+  quickAnswer?: { question: string; answer: string };
 };
 
 // This template renders iMac, Mac mini/Studio/Pro and iPad pages as well as MacBook ones,
@@ -91,7 +93,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
     .slice(0, 3)
     .map((h) => ({ label: h!.label, href: h!.slug, description: h!.desc }));
   const related = withCoverage([...(curated.length ? curated : relatedServices({ path: p.path })), ...(p.relatedExtra ?? [])], p.path);
-  const qa = deriveServiceQuickAnswer({
+  const qa = p.quickAnswer ?? deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
     timeline: p.timeline,

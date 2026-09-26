@@ -19,7 +19,7 @@
     "colours": "Blue, Green, Pink, Silver, Yellow, Orange, Purple",
     "commonIssues": [
       "Internal backup battery swelling (rare but documented)",
-      "Soldered SSD failure - chip-off recovery required",
+      "Soldered SSD failure - data recovery needs the original board running (no chip-off on Apple silicon)",
       "Power supply / power-brick failure",
       "Magic Keyboard / Touch ID pairing issues after macOS updates",
       "Webcam ribbon cable wear from screen open/close during repair attempts",
@@ -71,7 +71,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Most repairs 2-4 days. Apple SKIPPED M2 for iMac entirely - the M3 was the direct successor to M1.",
-    "honestyNote": "Apple skipped the M2 iMac generation entirely. If you have an 8GB M3, treat the SSD with care - heavy macOS swap usage on the soldered drive shortens its life. We've seen a few of these come in for chip-off SSD recovery already.",
+    "honestyNote": "Apple skipped the M2 iMac generation entirely. If you have an 8GB M3, treat the SSD with care - heavy macOS swap usage on the soldered drive shortens its life. We've already seen a few come in for data recovery, which on Apple silicon means getting the original board running again.",
     "heroTagline": "Apple skipped M2 - this was the M1's direct successor. Same 7 colours, more punch."
   },
   {
@@ -214,7 +214,7 @@
       "Nano-texture display surface scratches from incorrect cleaning",
       "Thermal paste degradation on i9 / 10-core variants",
       "10GbE port failures (option)",
-      "SSD failure (now soldered behind T2 - chip-off recovery required)"
+      "SSD failure (soldered and encrypted by the T2 - data recovery needs the original board running)"
     ],
     "pricing": {
       "screen": 1300,
@@ -229,7 +229,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "RAM upgrade same-day to 128GB. T2 chip means SSD is soldered - no SSD upgrade possible. Power supply 1-2 days. Last Intel iMac Apple ever made.",
-    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and SSD failure means chip-off recovery). Still receives the latest macOS Sequoia 15. Excellent buy used.",
+    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and because the T2 encrypts it, data recovery means getting the original board running). Still receives the latest macOS Sequoia 15. Excellent buy used.",
     "heroTagline": "Last Intel iMac. 128GB RAM-capable, T2-secured, still on macOS Sequoia in 2026."
   },
   {
@@ -256,7 +256,7 @@
       "Thermal paste degradation under Xeon load",
       "Power supply failure",
       "Parts scarcity - Xeon CPUs and Vega GPU modules are rare in 2026",
-      "T2 SSD failure - chip-off recovery only"
+      "T2 SSD failure - the modules are encrypted and paired to the T2, so recovery needs the original board running"
     ],
     "pricing": {
       "screen": 1560,

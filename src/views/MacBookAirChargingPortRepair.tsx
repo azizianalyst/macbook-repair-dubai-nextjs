@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import {
   Zap, MessageCircle, Phone,
   ShieldCheck, Clock, Check,
@@ -130,7 +131,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
         <a
-          href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, MacBook Air charging port repair quote please. Model: ")}`}
+          href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, MacBook Air charging port repair quote please. Model: ")}`)}
           target="_blank"
           rel="noopener noreferrer"
         >

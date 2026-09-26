@@ -62,7 +62,7 @@ export default function MacMiniOverheatingFix() {
       related={[
         { label: "Mac mini Repair Dubai",    href: "/mac-mini-repair-dubai",         description: "All Mac mini models and services." },
         { label: "Mac mini Not Turning On",  href: "/mac-mini-not-turning-on-dubai", description: "Heat shutdowns can look like no power." },
-        { label: "Mac mini M1 Repair",       href: "/mac-mini-m1-repair-dubai",      description: "M1-specific thermal and fan faults." },
+        { label: "Mac mini M1 Repair",       href: "/mac-mini-m1-2020-repair-dubai",      description: "M1-specific thermal and fan faults." },
       ]}
       blogLink={{ label: "Mac mini Overheating or Loud Fan in Dubai? Fixes 2026", href: "/blog/mac-mini-overheating-dubai" }}
     />

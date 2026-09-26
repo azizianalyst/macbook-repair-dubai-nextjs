@@ -47,8 +47,8 @@ export default function IMacGpuRepair() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "6-month warranty on GPU replacement work.",
-        "warranty of up to 12 months on reflow work (honest about its shorter life).",
+        "15-day written warranty on GPU replacement work, as on all board-level repairs.",
+        "Reflow carries the same 15 days, and we tell you up front that it has a shorter life than a replacement.",
         "Free re-attempt if reflow fails inside warranty - we'll move you to full replacement at the difference in price only.",
       ]}
       faqs={[

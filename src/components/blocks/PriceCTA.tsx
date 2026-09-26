@@ -6,7 +6,7 @@
 // cells / tight stat spots.
 import { MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Props = {
   /** Prefilled WhatsApp text, e.g. "Hi, price for MacBook Air M2 screen replacement?" */
@@ -23,7 +23,7 @@ export function PriceCTA({ message, label, compact = false, className }: Props) 
   const text = label ?? (compact ? "Price on WhatsApp" : "Get price on WhatsApp");
   return (
     <a
-      href={href}
+      href={withSlash(href)}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(

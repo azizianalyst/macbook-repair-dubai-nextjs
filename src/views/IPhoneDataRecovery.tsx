@@ -70,7 +70,7 @@ export default function IPhoneDataRecovery() {
       warrantyDays={15}
       warrantyBullets={[
         "No-fix-no-charge applies to logic-board repair attempts beyond the standard diagnostic.",
-        "Covered: data recovered during the work session, the logic-board repair itself for 30 days.",
+        "Covered: data recovered during the work session, the logic-board repair itself for 15 days.",
         "Not covered: data corruption pre-existing the repair, data on iCloud or third-party services, data the customer cannot decrypt due to forgotten passcode.",
       ]}
       comparisonRows={[
@@ -82,7 +82,7 @@ export default function IPhoneDataRecovery() {
         ["Data privacy",                "Not retained after delivery",                   "Apple does not access user data"],
         ["Free pickup in Dubai",        "Yes",                                           "No"],
         ["Free diagnosis",              "Yes - charged only if work proceeds",           "No, diagnostic fee charged"],
-        ["Warranty",                    "30 days on the repair",                         "12 months on service unit (no data)"],
+        ["Warranty",                    "15 days on the repair",                         "12 months on service unit (no data)"],
       ]}
       faqs={[
         { q: "Can you recover data from a dead iPhone?", a: "Often yes - most 'data recovery' cases are actually logic-board repairs that bring the phone back to bootable state, after which the customer enters their passcode and data is fully accessible. The price depends on your model - message us on WhatsApp for an exact quote. Genuine NAND-level failures requiring chip-off are rare." },

@@ -23,7 +23,7 @@ export default function BlogMacBookProM2LogicBoardFailure() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M2 Logic Board Failure in Dubai? Here is Why It Happens and What to Do"
-      hook="MacBook Pro M2 Pro and M2 Max (2023) machines are now reaching 2-4 years old in Dubai: the age when charging IC faults, power management IC failures, and first-generation Apple Silicon board faults start appearing. Unlike Intel MacBook Pros where liquid damage was the most common board failure cause, M2 board failures often present as sudden death with no liquid involvement. Component-level repair in Dubai is far cheaper than Apple's whole-board replacement: message us on WhatsApp for today's exact price on your model."
+      hook="MacBook Pro M2 Pro and M2 Max (2023) machines are now reaching 2-4 years old in Dubai: the age when charging IC faults, power management IC failures, and first-generation Apple Silicon board faults start appearing. Unlike Intel MacBook Pros where liquid damage was the most common board failure cause, M2 board failures often present as sudden death with no liquid involvement. Component-level repair replaces the failed part instead of the whole board, and we quote before any work so you can compare with Apple: message us on WhatsApp for today's exact price on your model."
       quickAnswer="MacBook Pro M2 sudden death: try force restart (hold power 10 seconds) and deep discharge recovery (plug in, wait 30 minutes). If no MagSafe LED lights up at all, the charging IC or power management IC has failed, not a software fix. DFU restore via Apple Configurator 2 is worth attempting before hardware repair. Component-level logic board repair in Dubai preserves your data (soldered SSD remains on board): message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
@@ -157,7 +157,7 @@ export default function BlogMacBookProM2LogicBoardFailure() {
         },
         {
           q: "How much does MacBook Pro M2 logic board repair cost in Dubai?",
-          a: "Component-level repairs (charging IC, PMIC sudden death, BGA joint rework) all retain the original SSD with data intact and cost far less than Apple's whole logic board replacement. We give free diagnosis to confirm the exact fault first, then message you the price. WhatsApp us for today's exact price on your model.",
+          a: "Component-level repairs (charging IC, PMIC sudden death, BGA joint rework) all retain the original SSD with data intact, unlike Apple's whole logic board replacement, which loses the data. We give free diagnosis to confirm the exact fault first, then message you the price. WhatsApp us for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat cause MacBook Pro M2 to suddenly die?",

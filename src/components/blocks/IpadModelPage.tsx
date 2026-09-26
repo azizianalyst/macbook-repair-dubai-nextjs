@@ -332,11 +332,12 @@ export default function IpadModelPage({ slug }: { slug: string }) {
         { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
+        "Screens 90 days; batteries 3 months with an 80% capacity guarantee; board and liquid work 15 days; other parts up to 12 months",
         "Covers the replaced part and the labour",
-        "Same fault returns? We re-repair free",
+        "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",
-        "No quibbling, no fine print",
       ]}
       faqs={faqs}
       reviewNames={pickIpadReviewers(slug)}

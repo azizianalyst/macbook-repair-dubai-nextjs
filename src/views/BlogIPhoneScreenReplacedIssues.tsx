@@ -238,6 +238,7 @@ export default function BlogIPhoneScreenReplacedIssues() {
         { label: "iPhone screen repair hub", href: "/iphone-screen-repair-dubai", description: "Full screen replacement service." },
         { label: "iPhone screen cost guide 2026", href: "/blog/iphone-screen-repair-cost-dubai-2026", description: "Pricing and panel grades for every model." },
         { label: "iPhone repair vs replace decision guide", href: "/blog/iphone-repair-vs-replace-decision-guide", description: "When repair makes economic sense." },
+        { label: "iPhone 18 Pro Face ID freezing", href: "/blog/iphone-18-pro-face-id-freezing", description: "Face ID trouble on the newest iPhone: software bug or hardware fault?" },
       ]}
     />
   );

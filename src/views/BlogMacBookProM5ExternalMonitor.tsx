@@ -205,7 +205,7 @@ export default function BlogMacBookProM5ExternalMonitor() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 problem guide covering OLED, Thunderbolt 5, and throttling." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 problem guide covering the XDR display, Thunderbolt 5, and throttling." },
         { label: "MacBook Pro M5 battery draining overnight", href: "/blog/macbook-pro-m5-battery-draining-overnight-dubai", description: "DarkWake and Power Nap fix for overnight battery drain on M5." },
         { label: "MacBook Pro M5 repair cost vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "How our workshop compares to Apple Dubai for every M5 repair." },
       ]}

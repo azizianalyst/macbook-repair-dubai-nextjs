@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { Button } from "@/components/ui/button";
@@ -58,7 +59,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
             </p>
             <div className="flex flex-wrap gap-sm mt-md">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> WhatsApp emergency
                 </a>
               </Button>

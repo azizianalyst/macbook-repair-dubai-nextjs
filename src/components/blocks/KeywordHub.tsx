@@ -58,7 +58,7 @@ export default function KeywordHub() {
     <div className="mx-auto max-w-content">
       {/* Header */}
       <div className="mb-lg flex flex-wrap items-center gap-3">
-        <a href="/admin" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
+        <a href="/admin/" className="inline-flex items-center gap-1 text-[13px] text-text-muted hover:text-text"><ArrowLeft size={14} /> Admin</a>
         <h1 className="m-0 text-[24px] text-text">SEO Command — Keywords, Prices &amp; Rankings</h1>
       </div>
 

@@ -1,101 +1,171 @@
 "use client";
-import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
+// /iphone-battery-replacement-dubai. Rebuilt 2026-09-26 (plan Phase 2.3 #2, 2.4, Phase 3 build 2).
+// Targets: iphone battery replacement (#7) · apple battery replacement (#6) · iphone battery
+// replacement dubai · replace iphone battery dubai · iphone battery replacement cost · iphone battery
+// price · iphone battery replacement near me · per-model battery terms (6s, 7, X, XS Max, 11 ...).
+// Our price is never shown; Apple's UAE estimates (docs/apple-lineup-2026-09-26.md §4a) only as
+// "AED X (Apple list)". Warranty wording from site.ts: 3 months with an 80% capacity guarantee.
+import IPhoneMoneyPage, { A, ByModelSection, DataTable, PageSection, WhatsAppButton } from "@/components/blocks/IPhoneMoneyPage";
+import { topicForPath } from "@/lib/page-images";
+
+const PATH = "/iphone-battery-replacement-dubai";
+const SERVICE = "iPhone battery replacement";
+const HERO = topicForPath(PATH);
 
 export default function IPhoneBatteryReplacement() {
   return (
-    <IPhonePageTemplate
-      seoTitle="iPhone Battery Replacement Dubai | Same-Day | Genuine Cells"
-      seoDescription="iPhone battery replacement Dubai - health % reset, BMS pairing, swelling check. iPhone 6 to 17. Same-day. 3-month warranty. WhatsApp 055 741 3706 for your price."
-      path="/iphone-battery-replacement-dubai"
-      eyebrow="iPhone Battery Replacement"
-      h1="iPhone Battery Replacement Dubai - Same-Day, Genuine Cells"
-      subtitle="Battery health below 80%? Random shutdowns? Swelling? iPhone 6 through iPhone 17 - genuine cells, BMS pairing, health % reset. Same-day, 3-month warranty."
-      startingPrice={250}
-      timeline="Same day"
-      whatsappPrefill="Hi, iPhone battery replacement quote please. Model: "
-      technician={{ name: "Usman", years: 11, specialisation: "Battery & charging systems" }}
+    <IPhoneMoneyPage
+      path={PATH}
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
+        { name: "iPhone Battery Replacement", path: PATH },
+      ]}
+      hero={{
+        eyebrow: "iPhone battery replacement",
+        title: "iPhone Battery Replacement Dubai: iPhone 6 to iPhone 18 Pro Max",
+        subtitle:
+          "Battery health under 80%, sudden shutdowns, a swollen battery or a phone that no longer lasts the day. Honest advice on genuine and quality batteries, and a 3-month warranty with an 80% capacity guarantee.",
+        image: HERO?.src ?? "/images/topics/iphone-battery-replacement-dubai.jpg",
+        imageAlt: HERO?.alt ?? "iPhone battery replacement Dubai",
+      }}
+      quickAnswer={{
+        question: "When should I replace my iPhone battery, and where in Dubai?",
+        answer:
+          "Replace it when Settings > Battery > Battery Health shows Maximum Capacity below 80%, when iOS warns about peak performance, or when the phone shuts down unexpectedly. We replace batteries on every iPhone from the 6 to the 18 Pro Max at Concord Tower, Dubai Media City, with a 3-month warranty and an 80% capacity guarantee.",
+      }}
+      reviewer={{ name: "Shafiq" }}
       takeaways={[
-        "Every iPhone from the 6 through the 17 family gets a same-day battery, most fitted in about 40 minutes.",
-        "Cells are bench-tested for capacity, peak output and short-circuit safety before they go in.",
-        "BMS pairing is done on every model that needs it, so Settings shows real battery health, not 'Unknown Part'.",
-        "Below 80% maximum capacity is Apple's own replacement threshold - random shutdowns usually start before that.",
-        "A swollen battery is urgent: stop charging and bring it in the same day.",
-        "3-month battery warranty, free diagnosis, written quote on WhatsApp first.",
+        "Apple treats a battery at or below 80% of its original capacity as worn and due for service.",
+        "Send a screenshot of Settings > Battery > Battery Health with your model.",
+        "On the iPhone XS, XR and later, iOS checks whether a battery is genuine; we tell you beforehand what Settings will show.",
+        "A swollen battery is urgent: stop charging, don't press the screen back down, and bring it in.",
+        "Apple lists AED 385 to AED 499 for batteries on the iPhone 16 to 18 Pro Max, excluding VAT. Our quote for your model comes on WhatsApp.",
+        "3-month warranty with an 80% capacity guarantee, and a written quote before work.",
       ]}
-      serviceName="iPhone Battery Replacement Dubai"
-      pricingRows={[
-        { model: "iPhone 6 / 6s / 7 / 8 / SE",        price: 250, timeline: "Same day" },
-        { model: "iPhone X / XR / XS",                 price: 350, timeline: "Same day" },
-        { model: "iPhone 11 / 11 Pro / 12 / 12 Pro",   price: 400, timeline: "Same day" },
-        { model: "iPhone 13 / 13 Pro / 14 / 14 Pro",   price: 450, timeline: "Same day" },
-        { model: "iPhone 15 / 15 Pro / 16 / 16 Pro",   price: 500, timeline: "Same day" },
-        { model: "iPhone 17 / Air / 17 Pro / 17e",     price: 600, timeline: "Same day · 1 day" },
-      ]}
-      pricingCaption="Pro Max sizes and the genuine Apple cell option (preserves the health % reading) cost a little more - message us on WhatsApp for the exact price on your model."
-      intro={
-        <>
-          <p className="text-[17px] text-text leading-relaxed">
-            iPhone battery replacement in Dubai finishes the same day on every model from the iPhone 6 through the iPhone 16 Pro Max - message us on WhatsApp for today's exact price on your model. The workshop fits more than 90 iPhone batteries every month - Usman runs the battery bench and has paired more than 4,000 BMS chips since 2018, when Apple introduced cell pairing on the iPhone XS. Every replacement battery is bench-tested for capacity (must read within 2% of label), peak power output, and short-circuit safety before installation. The phone leaves with a fresh "Maximum Capacity" reading at 100% and the cycle count reset to zero.
-          </p>
-          <p className="text-[16px] text-text-muted leading-relaxed mt-md">
-            Apple's 80% rule is the key trigger. macOS and iOS suggest a battery service when Maximum Capacity drops below 80%, because peak power can no longer sustain the processor under load - the result is random shutdowns, throttling, and reduced screen-on time. From the iPhone XS onward, Apple paired the battery to the logic board with a 1-wire authentication chip; non-paired cells will show "Unknown Part" and disable the health reading. The workshop reprograms the original BMS chip onto the new cell so the health reading remains accurate and unbothered.
-          </p>
-        </>
-      }
-      problems={[
-        { title: "Battery health below 80%", body: "iOS will display a yellow service warning. Random shutdowns under camera or game load are the next stage. Same-day replacement, BMS reprogrammed so health resets to 100% - message us on WhatsApp for your model's price." },
-        { title: "Swollen battery pushing the screen out", body: "Visible gap between OLED and chassis. Stop using the phone - pressure on the OLED will crack it. Same-day replacement, with free disposal of the swollen cell at a hazardous-waste vendor. Message us on WhatsApp for your model's price." },
-        { title: "Phone shuts off at 30%, 40%, even 50%", body: "Cell impedance is too high to sustain peak load. Classic on iPhone 6, 6s (Apple recall era) and iPhone X after 3+ years. Replacement restores correct shutdown at <5%." },
-        { title: "Phone doesn't last past lunchtime", body: "After 500-800 cycles capacity drops to 70-80%. Replacement returns the phone to all-day use. Most iPhones reach this point at 24-36 months of normal use." },
-        { title: "'Unknown Part' warning after a previous repair", body: "Cell was swapped without BMS pairing. The workshop reprograms the original BMS onto a fresh cell - warning gone, health % reading restored. A re-pairing-only fix is cheaper if the previous cell still works; full replacement otherwise. Message us on WhatsApp for your price." },
-        { title: "Phone hot during charging", body: "Charging IC under stress because battery impedance is high. Replacement battery plus a thermal-paste refresh on the charging IC. Message us on WhatsApp for the exact price on your model." },
-        { title: "Battery drains overnight from 100% to 60%", body: "Failed cell + parasitic drain on a damaged port. Replacement plus port inspection. Often a 2-in-1 ticket on water-damaged phones." },
-        { title: "iPhone 15+ won't reach 100% charge", body: "iPhone 15 onward uses lithium chemistry with optimised charging - capping at 80% or 100% by the user's setting. Check Settings > Battery > Charging before booking a replacement." },
-        { title: "Cycle count above 1,000", body: "Apple's design target is 80% capacity at 500 cycles for older models, 1,000 cycles for iPhone 15+. Beyond that capacity drops faster. Replacement restores the cycle counter to zero." },
-        { title: "Aftermarket battery installed elsewhere is failing fast", body: "Low-grade cells use recycled cores and inflated capacity labels. The workshop fits only A-grade or genuine Apple cells. Replacement comes with a 3-month warranty card listing the cell batch - message us on WhatsApp for your model's price." },
-      ]}
-      steps={[
-        { title: "WhatsApp model + screenshot of Battery Health", body: "Settings > Battery > Battery Health & Charging - screenshot showing Maximum Capacity. Quote back in 4 minutes." },
-        { title: "Free pickup or walk in", body: "Pickup anywhere on Dubai mainland or walk into the workshop. Diagnosis is 5 minutes - multimeter test on the original cell to confirm replacement is needed." },
-        { title: "Cell swap on the bench", body: "Pentalobe screws out, screen lifted at 70 °C, battery adhesive pulls activated, old cell removed. Bench-tested replacement seated, BMS chip transferred and re-paired." },
-        { title: "Battery health reset", body: "Health reading reset to 100%, cycle count to 0. iOS shows the new cell as paired with no warnings. Verified in Settings before reassembly." },
-        { title: "Charge cycle test", body: "Phone charged from 0% to 100% on the bench while monitored. Heat profile checked. No throttling under stress test." },
-        { title: "Free delivery + 3-month warranty", body: "Same day, anywhere on Dubai mainland. Warranty card lists the battery batch and original install date." },
-      ]}
-      warrantyDays={90}
-      warrantyBullets={[
-        "Covered: cell defects, capacity falling below 90% within 3 months, swelling, BMS pairing failure caused by the workshop.",
-        "Not covered: liquid damage post-repair, capacity drop after 500+ cycles in 3 months (heavy use), physical damage.",
-        "Genuine Apple cell option carries the workshop 3-month warranty plus Apple's distributor warranty (paperwork supplied on request).",
-      ]}
-      comparisonRows={[
-        ["Repair window",            "Same day, all models",                       "5 to 10 business days, mail-in"],
-        ["iPhone 11 battery",        "Price on request",                           "Apple list price (AE)"],
-        ["iPhone 14 battery",        "Price on request",                           "Apple list price (AE)"],
-        ["iPhone 16 Pro battery",    "Price on request",                           "Apple list price (AE)"],
-        ["Health % reset",           "Yes - BMS reprogrammed",                     "Yes - genuine cell only"],
-        ["Free pickup in Dubai",     "Yes",                                        "No"],
-        ["Walk-in same day",         "Yes - Concord Tower, Media City",            "Apple Store appointment required"],
-        ["Vintage models (6/6s)",    "Yes - price on request",                     "Refused, model obsolete"],
-        ["Warranty",                 "3 months written",                            "12 months"],
-      ]}
+      faqHeading="iPhone battery replacement: common questions"
       faqs={[
-        { q: "How much does iPhone battery replacement cost in Dubai?", a: "The price depends on your exact model - we cover the iPhone 6, 6s, 7, 8 and SE, the X, XR and XS, the 11 and 12, the 13 and 14, the 15 and 16, and the iPhone 17 line, plus a genuine Apple cell option. Message us on WhatsApp with your model for today's exact price - the quote is free." },
-        { q: "When should I replace my iPhone battery?", a: "When Maximum Capacity (Settings > Battery > Battery Health) drops below 80%. iOS shows a yellow 'Service' warning. Other triggers: random shutdowns above 20%, phone hot during normal use, battery dies overnight, screen lifting from chassis (swelling)." },
-        { q: "Will battery health reset to 100% after replacement?", a: "Yes - the workshop transfers the original BMS chip and re-pairs it with the new cell. iOS reads the new cell as paired and shows 100% Maximum Capacity with cycle count zero. No 'Unknown Part' warning." },
-        { q: "What's the difference between A-grade and genuine Apple cells?", a: "Genuine cells are sourced from a local Apple-authorised distributor with traceable serials - same chemistry, same capacity, identical to a brand-new iPhone. A-grade cells come from ATL or Sunwoda (Apple's cell suppliers) without the Apple sticker - same chemistry, ~5% capacity variance, 30% cheaper. Both carry the 3-month workshop warranty." },
-        { q: "Is it safe to use a swollen iPhone battery?", a: "No. Swelling means the cell has gas-vented internally and pressure is building up. The OLED can crack from below, the screen can detach, and in rare cases the cell can ignite. Stop using the phone, do not charge it, WhatsApp a photo and the workshop will collect same day." },
-        { q: "How long does iPhone battery replacement take?", a: "60 to 90 minutes on the bench for iPhone 6 through iPhone 16. Plus a 30-minute charge-cycle test. Same day, no overnight stay needed. Bring the phone in or use free pickup - typical end-to-end time is 3 to 5 hours." },
-        { q: "Will my Face ID still work after battery replacement?", a: "Yes. The battery sits below the logic board - Face ID hardware (dot projector, IR camera, flood) is in the screen and chassis, untouched during a battery swap." },
-        { q: "Why does iPhone 15+ have an 80% charge limit option?", a: "Apple introduced charge-cycle optimisation on iPhone 15 to extend battery lifespan - capping at 80% reduces stress on the lithium-ion chemistry. If you've enabled this in Settings > Battery > Charging, your phone will not reach 100% by design. Disable it for road trips, re-enable for daily use." },
-        { q: "Can you replace the battery without removing the screen?", a: "No. Apple designs the iPhone battery to be removed from the back of the chassis only after lifting the OLED screen. The workshop uses heat plates at 70 °C plus alcohol-activated adhesive pulls - the screen is reseated with fresh adhesive at the end. Total process takes 60 to 90 minutes." },
-        { q: "How long should an iPhone battery last?", a: "Apple's design target is 80% capacity at 500 charge cycles for iPhone X to 14 (~24 months of normal use), and 80% at 1,000 cycles for iPhone 15 and later (~36 months). Heavy users (gaming, video, hot weather) may reach the 80% threshold sooner. Above 1,000 cycles capacity drops faster." },
+        { q: "How much does iPhone battery replacement cost in Dubai?", a: "It depends on the model and on the battery grade: genuine Apple or a quality-tested cell. For reference, Apple lists AED 385 for an iPhone 16 or 17 battery and AED 499 for an iPhone 18 Pro (Apple list, excluding VAT). WhatsApp your model for our written quote." },
+        { q: "How long does an iPhone battery replacement take?", a: "Most battery swaps are done while you wait or the same day when the battery is in stock. Newer models such as the iPhone 18 Pro may need the part ordered, so we confirm availability on WhatsApp first." },
+        { q: "Will Battery Health show the new capacity after the replacement?", a: "With a genuine Apple battery, or where the original battery's data can be carried over, iOS shows the new capacity. On the iPhone XS, XR and later, some replacement cells trigger an 'Important Battery Message' and hide the percentage, though the battery works normally. We tell you which to expect first." },
+        { q: "Is it safe to keep using a swollen iPhone battery?", a: "No. A swollen battery can push the screen out, crack the display and, in rare cases, overheat. Stop charging it, don't press on the screen, and bring it in or book a free pickup in Dubai." },
+        { q: "Should I use AppleCare+ instead?", a: "If your iPhone has AppleCare+ and the battery holds less than 80% of its original capacity, Apple replaces it at no charge, so use that. The same goes for a battery defect under Apple's one-year warranty. We are the better option once that coverage ends." },
+        { q: "Do you offer iPhone battery replacement near me or outside Dubai?", a: "Walk in at Concord Tower in Dubai Media City, or book a free pickup anywhere in Dubai. For Abu Dhabi and Sharjah, we arrange courier collection to our Dubai workshop and back." },
+      ]}
+      leadHeading="Get your iPhone battery quote"
+      cta={{
+        headline: "Send your model and a Battery Health screenshot",
+        description: "Free diagnosis, a written quote before work, and a 3-month battery warranty with an 80% capacity guarantee.",
+        prefill: "Hi, iPhone battery replacement quote please. Model: ",
+      }}
+      related={[
+        { label: "iPhone repair Dubai", to: "/iphone-repair-dubai" },
+        { label: "iPhone screen repair", to: "/iphone-screen-repair-dubai" },
+        { label: "iPhone charging port repair", to: "/iphone-charging-port-repair-dubai" },
+        { label: "iPhone battery health guide", to: "/blog/iphone-battery-health-when-to-replace" },
+        { label: "iPhone water damage repair", to: "/iphone-water-damage-repair-dubai" },
+        { label: "iPhone 16 Pro battery capacity", to: "/iphone-16-pro-battery-capacity" },
+      ]}
+      sources={[
+        { label: "Apple UAE: iPhone battery service", href: "https://support.apple.com/en-ae/iphone/repair/battery-replacement", note: "Out-of-warranty estimates, excluding VAT. Read 26 Sep 2026." },
       ]}
       reviewNames={["Saeed Alam", "Wellington Academy", "Henry Choong", "marouane Ayadi"]}
-      relatedSlugs={["/iphone-screen-repair-dubai", "/iphone-charging-port-repair-dubai", "/iphone-water-damage-repair-dubai"]}
-      relatedExtra={[
-        { label: "iPhone 16 Pro battery capacity", href: "/iphone-16-pro-battery-capacity", description: "Specs and replacement cost for the iPhone 16 Pro battery." },
-      ]}
-    />
+    >
+      <PageSection id="when" eyebrow="Battery health" title="When should you replace your iPhone battery?">
+        <p>
+          Apple designs iPhone batteries to keep up to 80% of their original capacity after 500 complete charge cycles
+          (iPhone 14 and earlier) or 1,000 cycles (iPhone 15 and later). Replace yours when you see:
+        </p>
+        <ul>
+          <li><strong>Maximum Capacity below 80%</strong> in Settings &gt; Battery &gt; Battery Health.</li>
+          <li>A <strong>peak performance</strong> note about an unexpected shutdown, or a &quot;Service&quot; recommendation.</li>
+          <li>The phone <strong>switches off at 20 to 40%</strong>, or needs charging twice a day.</li>
+          <li>The screen <strong>lifting</strong> at one edge: a swollen battery.</li>
+        </ul>
+        <p>
+          Dubai heat matters: Apple recommends ambient temperatures up to 35°C, so a phone left in a summer car ages
+          faster. Our <A to="/blog/iphone-battery-health-when-to-replace">iPhone battery health guide</A> explains how
+          to read these numbers.
+        </p>
+      </PageSection>
+
+      <PageSection id="genuine" eyebrow="Genuine or quality cell" title="Genuine Apple battery, quality cell, and the 'Important Battery Message'">
+        <p>
+          From the iPhone XS and XR onward, iOS checks whether the battery is a genuine Apple part. If it can&apos;t
+          verify it, Settings shows an &quot;Important Battery Message&quot; and hides the health percentage. Apple says
+          this doesn&apos;t affect using the phone, but owners planning to sell usually want the reading.
+        </p>
+        <p>
+          So we quote a genuine Apple battery and a quality-tested cell where both exist. Where the original
+          battery&apos;s data can be carried over, the health reading keeps working. Your written quote names the grade
+          and what Settings will show.
+        </p>
+      </PageSection>
+
+      <PageSection id="cost" eyebrow="Cost" title="iPhone battery replacement cost: Apple's UAE prices and our quote">
+        <p>
+          For &quot;Apple battery replacement&quot; prices, Apple&apos;s own UAE out-of-warranty estimates are the reference.
+          They exclude VAT:
+        </p>
+        <DataTable
+          caption="Apple's UAE iPhone battery service estimates, excluding VAT"
+          head={["Model", "Apple's battery estimate"]}
+          minWidth={360}
+          rows={[
+            ["iPhone 18 Pro / 18 Pro Max", "AED 499 (Apple list)"],
+            ["iPhone 17 Pro / 17 Pro Max / Air", "AED 465 (Apple list)"],
+            ["iPhone 16 Pro Max", "AED 465 (Apple list)"],
+            ["iPhone 17 / 17e / 16 / 16e", "AED 385 (Apple list)"],
+          ]}
+          note="Source: support.apple.com/en-ae, read 26 September 2026. Subject to VAT; Apple may change these at any time."
+        />
+        <p>
+          For older models, and for our price on any iPhone, WhatsApp the model. We quote both battery grades side by
+          side, including fitting, new adhesive and testing.
+        </p>
+        <WhatsAppButton text="Hi, iPhone battery price please. Model: " label="Ask our battery price on WhatsApp" />
+      </PageSection>
+
+      <PageSection id="process" eyebrow="How we do it" title="How we replace an iPhone battery">
+        <ol>
+          <li><strong>Check first:</strong> Battery Health and charging, so a port or software fault isn&apos;t mistaken for wear.</li>
+          <li><strong>Open safely</strong> with gentle heat and the correct screws.</li>
+          <li><strong>Remove the old battery</strong> by its pull tabs, adhesive release or screws, without bending it.</li>
+          <li><strong>Fit and seal:</strong> new battery, new adhesive, new seal where the model has one.</li>
+          <li><strong>Test:</strong> charging, the health reading, Face ID or Touch ID, cameras and speakers.</li>
+        </ol>
+      </PageSection>
+
+      <ByModelSection
+        id="by-model"
+        title="iPhone battery replacement by model"
+        service={SERVICE}
+        intro={<p>What to expect on each generation. Tap WhatsApp on your model for a quote.</p>}
+        groups={[
+          { name: "iPhone 6, 6 Plus, 6s and 6s Plus", heading: "iPhone 6 and iPhone 6s battery replacement", body: <>Wear shows as shutdowns at 20 to 40%, or iOS slowing the phone to prevent them. A new battery fixes both.</> },
+          { name: "iPhone 7 and 7 Plus", heading: "iPhone 7 and 7 Plus battery replacement", body: <>Same performance management as the 6s, so a slow iPhone 7 often feels quicker with a new battery. No genuine-battery check.</> },
+          { name: "iPhone 8 and 8 Plus", body: <>Battery Health keeps reading after a quality replacement: the 8 predates Apple&apos;s genuine-battery check.</> },
+          { name: "iPhone SE (2nd and 3rd gen)", body: <>iPhone 8 body, but iOS runs the genuine-battery check. We tell you which option keeps the health reading.</> },
+          { name: "iPhone X", heading: "iPhone X battery replacement", body: <>The last model without the battery check. If an original iPhone X battery shows under 80%, it&apos;s due.</> },
+          { name: "iPhone XS, XS Max and XR", body: <>The first models with the battery check. Where possible we carry the original battery&apos;s data over to avoid the message.</> },
+          { name: "iPhone 11, 11 Pro and 11 Pro Max", body: <>Settings can also list the battery under Parts and Service History. Tell us if that matters for resale.</> },
+          { name: "iPhone 12 and 13 (including mini)", body: <>Many are on their second battery. The minis have small batteries, so owners notice wear first.</> },
+          { name: "iPhone 14, 14 Plus, 14 Pro and 14 Pro Max", body: <>Rated for about 80% capacity at 500 cycles, so a heavily used 14 can be due sooner than its age suggests.</> },
+          { name: "iPhone 15, 15 Plus, 15 Pro and 15 Pro Max", body: <>Rated for about 80% at 1,000 cycles. iOS can cap charging at 80%; check that before assuming wear.</> },
+          { name: "iPhone 16 family and 16e", body: <>Apple lists AED 385 for the 16 or 16e and AED 465 for the 16 Pro Max (Apple list, excluding VAT).</> },
+          { name: "iPhone 17, 17e and iPhone Air", body: <>Apple lists AED 385 for the 17 and 17e and AED 465 for the Air (Apple list). Many are still under Apple&apos;s warranty.</> },
+          { name: "iPhone 17 Pro and 17 Pro Max", modelPage: "/iphone-17-pro-repair-dubai", body: <>Apple lists AED 465 (Apple list). Discontinued in September 2026, and early units are now leaving Apple&apos;s one-year warranty.</> },
+          { name: "iPhone 18 Pro and 18 Pro Max", modelPage: "/iphone-18-pro-repair-dubai", body: <>Apple lists AED 499 (Apple list). iFixit found a screwed-in battery tray with no glue, but the display is still the way in. Still under Apple&apos;s warranty; we confirm parts on WhatsApp.</> },
+        ]}
+      />
+
+      <PageSection id="warranty" eyebrow="Warranty" title="Battery warranty: 3 months with an 80% capacity guarantee">
+        <p>
+          Every battery we fit carries a 3-month warranty with an 80% capacity guarantee, covering the cell and our
+          workmanship, not new drops or liquid damage. Cracked screen too? See{" "}
+          <A to="/iphone-screen-repair-dubai">iPhone screen repair</A> or the <A to="/iphone-repair-dubai">iPhone repair hub</A>.
+        </p>
+      </PageSection>
+    </IPhoneMoneyPage>
   );
 }

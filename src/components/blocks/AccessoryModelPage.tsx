@@ -150,11 +150,11 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, 12-Month Warranty`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, Up to 12-Month Warranty`}
       seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Free pickup, free diagnostic, warranty up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
-      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 12-Month Warranty`}
+      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, Up to 12-Month Warranty`}
       subtitle={`Free diagnostic. Message us on WhatsApp for today's price. We'll tell you honestly when repair makes sense - and when it doesn't.`}
       startingPrice={startingPrice}
       timeline="Same-day to 5 days depending on the job"
@@ -275,7 +275,9 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
         { title: "Repair + written warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written warranty of up to 12 months, depending on the repair." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
+        "Batteries: 3 months with an 80% capacity guarantee; screens: 90 days; other parts: up to 12 months",
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
         "Issued in writing on your invoice",

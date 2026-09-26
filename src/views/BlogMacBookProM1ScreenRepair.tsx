@@ -7,7 +7,7 @@ export default function BlogMacBookProM1ScreenRepair() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M1 Screen Repair Dubai 2026: LCD and mini-LED"
-      seoDescription="MacBook Pro M1 screen repair in Dubai 2026. M1 13-inch IPS LCD and M1 Pro/Max mini-LED. Same-day service, 12-month warranty. Message us on WhatsApp for your price."
+      seoDescription="MacBook Pro M1 screen repair in Dubai 2026. M1 13-inch IPS LCD and M1 Pro/Max mini-LED. Same-day service, 90-day warranty. Message us on WhatsApp for your price."
       path="/blog/macbook-pro-m1-screen-repair-cost-dubai"
       wide
       toc={[
@@ -23,8 +23,8 @@ export default function BlogMacBookProM1ScreenRepair() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro M1 Screen Repair in Dubai 2026: LCD and mini-LED"
-      hook="MacBook Pro M1 screen repair in Dubai costs significantly less than Apple, and pricing depends on your exact model. M1 13-inch uses an IPS LCD (same technology as M2 13-inch). M1 Pro and M1 Max 14/16-inch use the first-generation mini-LED panels. At 5 years old, M1 display cable faults are now appearing alongside physical damage as common repair reasons. Message us on WhatsApp for today's exact price on your model."
-      quickAnswer="MacBook Pro M1 screen repair Dubai: we replace M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels. Free diagnosis. Same-day service. 12-month warranty on replacement panels. If your screen flickers only at certain lid angles, a display cable replacement may be all that is needed. No data loss during screen repair. Message us on WhatsApp for today's exact price on your model."
+      hook="MacBook Pro M1 screen repair in Dubai is quoted before any work so you can compare with Apple, and pricing depends on your exact model. M1 13-inch uses an IPS LCD (same technology as M2 13-inch). M1 Pro and M1 Max 14/16-inch use the first-generation mini-LED panels. At 5 years old, M1 display cable faults are now appearing alongside physical damage as common repair reasons. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M1 screen repair Dubai: we replace M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels. Free diagnosis. Same-day service. 90-day warranty on replacement panels. If your screen flickers only at certain lid angles, a display cable replacement may be all that is needed. No data loss during screen repair. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-06-22"
@@ -71,7 +71,7 @@ export default function BlogMacBookProM1ScreenRepair() {
             <li>Display cable inspection: replaced if showing wear or damage at hinge</li>
             <li>True Tone calibration data transfer to new panel (M1 Pro/Max ProMotion also verified)</li>
             <li>Colour accuracy test post-replacement</li>
-            <li>12-month warranty on panel</li>
+            <li>90-day warranty on panel</li>
             <li>Reassembly and full function test before return</li>
           </ul>
 
@@ -117,9 +117,9 @@ export default function BlogMacBookProM1ScreenRepair() {
             caption="MacBook Pro M1 screen repair. June 2026"
             headers={["Model", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Full panel assembly", note: "Full LCD panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 12-month warranty, same-day" },
-              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 12-month warranty" },
+              { model: "MacBook Pro M1 13-inch screen (IPS LCD)", ours: "Price on request", apple: "Full panel assembly", note: "Full LCD panel, 90-day warranty, same-day" },
+              { model: "MacBook Pro M1 Pro 14-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 90-day warranty, same-day" },
+              { model: "MacBook Pro M1 Max 16-inch screen (mini-LED)", ours: "Price on request", apple: "Full panel assembly", note: "Liquid Retina XDR, 90-day warranty" },
               { model: "Display cable (M1 13-inch hinge cable)", ours: "Price on request", apple: "Full panel assembly", note: "Flicker at specific lid angles: cable fault" },
               { model: "Screen diagnostic", ours: "Free", apple: "Charged", note: "Damage type: cable vs panel vs GPU" },
             ]}
@@ -143,7 +143,7 @@ export default function BlogMacBookProM1ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M1 screen repair cost in Dubai?",
-          a: "We replace the M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels, plus the display cable on its own if only the cable is faulty. All come with a 12-month warranty and cost noticeably less than Apple. Free diagnosis confirms the damage scope. Message us on WhatsApp for today's exact price on your model.",
+          a: "We replace the M1 13-inch LCD, M1 Pro 14-inch mini-LED and M1 Max 16-inch mini-LED panels, plus the display cable on its own if only the cable is faulty. All come with a 90-day warranty, and we quote before any work so you can compare with Apple. Free diagnosis confirms the damage scope. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does MacBook Pro M1 13-inch use the same screen as M1 Pro 14-inch?",

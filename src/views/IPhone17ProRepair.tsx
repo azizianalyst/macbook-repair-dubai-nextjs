@@ -92,8 +92,9 @@ export default function IPhone17ProRepair() {
         { title: "QC + return",          body: "ProMotion, AOD, USB-C 3, 8x zoom, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Vapor chamber: 30-min sustained workload thermal verified.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",

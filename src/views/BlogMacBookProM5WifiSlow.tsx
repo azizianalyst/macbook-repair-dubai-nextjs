@@ -206,7 +206,7 @@ export default function BlogMacBookProM5WifiSlow() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
         { label: "MacBook Pro M5 battery draining overnight", href: "/blog/macbook-pro-m5-battery-draining-overnight-dubai", description: "DarkWake and sleep drain fix for MacBook Pro M5." },
         { label: "MacBook Pro M5 external monitor not working", href: "/blog/macbook-pro-m5-external-monitor-not-working-dubai", description: "Fix third display not detected, dock drops, and fullscreen blackout on M5." },
       ]}

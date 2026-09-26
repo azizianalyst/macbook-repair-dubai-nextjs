@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, CheckCircle2, Phone, MessageCircle, Shield, Clock, Wrench, Award } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -37,7 +38,7 @@ const CRITERIA = [
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "Up to 12 months", faceId: "Preserved", pickup: "Free" },
+  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "90 days (screens)", faceId: "Preserved", pickup: "Free" },
   { shop: "Apple Store / AASP",        screen: "Price on request", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", pickup: "No" },
   { shop: "Karama / generic shops",    screen: "Price on request", time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", pickup: "No" },
 ];
@@ -55,13 +56,13 @@ const WHY_US = [
 
 const FAQS = [
   { q: "What is the best iPhone repair shop in Dubai?",
-    a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty of at least 6 months, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
+    a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty on every repair, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
   { q: "How much does the best iPhone screen repair cost in Dubai?",
     a: "Quality iPhone screen repair in Dubai depends on your exact model, from older LCD phones to the iPhone 17 Pro Max OLED, so message us on WhatsApp for today's exact price on yours. Cheap shops use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a 6-month written warranty." },
   { q: "Can iPhone Face ID be damaged during a screen repair?",
     a: "Yes, if the repair technician damages the dot-projector flex cable during screen removal, Face ID stops working permanently (Apple ties it to the original module and can't be replaced independently). The best iPhone repair shops in Dubai use screen-removal tools that protect the dot-projector bracket. We guarantee Face ID works after every screen replacement." },
   { q: "Is it better to use Apple Store or an independent shop for iPhone repair in Dubai?",
-    a: "Under AppleCare+ the Apple Store is hard to beat. Out of warranty, the Apple Store is far more expensive, and independent specialists do the same screen job with comparable parts and a longer warranty, usually for a lot less. For logic board issues, independent specialists offer component-level repair well below Apple's module-swap approach. Message us on WhatsApp for today's exact price on your model." },
+    a: "Under AppleCare+ the Apple Store is hard to beat. Out of warranty, compare quotes: Apple lists its UAE out-of-warranty screen prices on its support site (for example AED 1,279 plus VAT for an iPhone 17 or iPhone 18 Pro), and we quote before any work so you can compare. For logic board issues, independent specialists can repair at component level, where Apple's out-of-warranty route is a unit replacement. Message us on WhatsApp for today's exact price on your model." },
   { q: "How fast can you fix my iPhone in Dubai?",
     a: "Screen replacement: 40 minutes. Battery replacement: 30 minutes. Back glass: same day. Face ID repair: same day. Water damage: 1–2 days. Logic board: 2–5 days. Drop in before 4 pm or request free pickup from anywhere in Dubai Mainland, screen and battery jobs return the same day." },
   { q: "Do you offer iPhone repair at home in Dubai?",
@@ -216,7 +217,7 @@ export default function BestIPhoneRepair() {
               <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · 40-min screen · Face ID preserved · Warranty up to 12 months.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -249,7 +250,7 @@ export default function BestIPhoneRepair() {
               { label: "MacBook Repair Dubai", href: "/" },
               { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
             ))}
           </div>
         </section>

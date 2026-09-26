@@ -85,8 +85,9 @@ export default function IPhoneSe3rdGenRepair() {
         { title: "QC + return",                  body: "Functional QC, signed warranty card, free delivery back." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour, in writing.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Battery: any sudden capacity drop covered.",
         "Screen: ghost-touch, dead pixels, backlight bleed covered.",
         "Touch ID preserved on every screen replacement (we keep your original home button).",

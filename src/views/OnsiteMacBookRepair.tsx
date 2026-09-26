@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, Truck, Check, MapPin, Wrench, Headphones } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -231,7 +232,7 @@ export default function OnsiteMacBookRepair() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

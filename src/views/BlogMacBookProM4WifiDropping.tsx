@@ -174,7 +174,7 @@ export default function BlogMacBookProM4WifiDropping() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
         { label: "MacBook Pro M5 Wi-Fi slow fix Dubai", href: "/blog/macbook-pro-m5-wifi-slow-fix-dubai", description: "MCS NSS 0 kernel error and 6GHz fix for MacBook Pro M5." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models serviced in Dubai. Free diagnosis." },
       ]}

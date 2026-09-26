@@ -60,7 +60,7 @@ export default function MacBookScreenRepairNearMeDubai() {
       glassNotice
       warrantyDays={90}
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "90 days on the panel and the fitting.",
         "Dead pixels, ghost touch and backlight faults covered.",
         "Genuine or OEM-grade panels - we tell you which before you agree to anything.",
       ]}

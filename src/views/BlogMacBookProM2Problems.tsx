@@ -162,7 +162,7 @@ export default function BlogMacBookProM2Problems() {
               { model: "MacBook Pro M2 13\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Retina display, same-day" },
               { model: "MacBook Pro M2 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED Liquid Retina XDR" },
               { model: "MacBook Pro M2 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M2 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M2 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 3-month warranty" },
               { model: "MacBook Pro M2 battery (14\"/16\")", ours: "Price on request", apple: "Price on request", note: "70 Wh / 100 Wh cell" },
               { model: "Charging IC repair (M2)", ours: "Price on request", apple: "Logic board replacement", note: "Component-level repair" },
             ]}
@@ -215,7 +215,7 @@ export default function BlogMacBookProM2Problems() {
         },
         {
           q: "Is it safe to use MacBook Pro M2 with an SSD health warning?",
-          a: "If DriveDx or smartmontools shows the SSD SMART status as 'FAILED' or 'Caution', stop non-essential use and back up immediately. A 'Caution' SSD can fail within weeks. If health is below 70%, replace before it fails. An SSD failure on Apple Silicon MacBook Pro means the data is unrecoverable without specialist chip-off techniques.",
+          a: "If DriveDx or smartmontools shows the SSD SMART status as 'FAILED' or 'Caution', stop non-essential use and back up immediately. A 'Caution' SSD can fail within weeks. If health is below 70%, replace before it fails. On an Apple silicon MacBook Pro the SSD is encrypted to the M2 chip, so chip-off cannot recover it: if the storage itself fails, the data is gone unless you have a backup.",
         },
       ]}
       relatedLinks={[

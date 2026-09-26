@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { ShieldAlert, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star, Bug } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -116,8 +117,8 @@ const COMPARISON = [
   ["Repair window",                      "Same day to 2 days",                "5 to 10 business days, mail-in"],
   ["Standard scan + clean",              "Free diagnosis, then a quote",       "Refused - refers to third party"],
   ["Deep clean / cryptominer",           "Free diagnosis, then a quote",       "Refused - refers to third party"],
-  ["Reinstall + file preservation",      "Free diagnosis, then a quote",       "AED 749 (Apple list, Genius Bar)"],
-  ["Free 15-min diagnosis",              "Yes",                                 "AED 379 evaluation fee (Apple list)"],
+  ["Reinstall + file preservation",      "Free diagnosis, then a quote",       "Software help by Genius Bar appointment"],
+  ["Free 15-min diagnosis",              "Yes",                                 "Appointment required"],
   ["Free pickup in Dubai",               "Yes",                                 "No, customer must courier"],
   ["30-day re-clean guarantee",          "Yes",                                 "Not offered"],
   ["Spyware / stalkerware audit",        "Quoted after diagnosis, with NDA",   "Not offered"],
@@ -441,7 +442,7 @@ export default function MacBookVirusRemoval() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

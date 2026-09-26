@@ -46,8 +46,8 @@ export default function MacFanCleaning() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "12-month workmanship warranty.",
-        "If fan noise returns inside 6 months we re-clean for free.",
+        "15-day workmanship warranty.",
+        "If fan noise returns inside those 15 days we re-clean for free.",
         "Free pickup for Mac Pro across Dubai mainland - they're heavy.",
       ]}
       faqs={[

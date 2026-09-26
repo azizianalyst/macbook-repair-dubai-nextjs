@@ -171,10 +171,10 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
   }
   if (m.pricing.ssdRecovery) {
     rows.push({
-      service: "Soldered SSD chip-off data recovery",
+      service: "Data recovery (failed drive or dead board)",
       price: "Price on request",
       href: "/imac-data-recovery-dubai",
-      timeline: "5-10 days",
+      timeline: "Quoted after assessment",
     });
   }
   if (m.pricing.fanCleaning) {
@@ -228,9 +228,9 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         ? `Can I upgrade the RAM or SSD on the ${model.shortName}?`
         : `Can I upgrade the RAM and SSD on my ${model.shortName}?`,
       a: isAppleSilicon
-        ? `No. Apple Silicon iMacs (M1, M3, M4) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. For data on a failed SSD, we offer chip-off recovery - message us for the exact price.`
+        ? `No. Apple Silicon iMacs (M1, M3, M4) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. The storage is encrypted and tied to the chip, so chip-off recovery is not possible: getting data back from a failed iMac means getting the original logic board running again - message us for a quote.`
         : model.family === "imac-intel" && model.releaseYear >= 2020
-          ? `RAM yes - up to ${model.maxRAM.split(" ")[0]} (DDR4, user-upgradeable). SSD no - the T2 chip on the 2020 iMac soldered the SSD to the board, so SSD upgrades are impossible. For SSD failure we offer chip-off recovery - message us for the exact price.`
+          ? `RAM yes - up to ${model.maxRAM.split(" ")[0]} (DDR4, user-upgradeable). SSD no - the T2 chip on the 2020 iMac soldered the SSD to the board, so SSD upgrades are impossible. Because the T2 also encrypts it, data recovery after a failure means getting the original logic board running again (chip-off does not work) - message us for a quote.`
           : `Yes - both. RAM is socketed and goes to ${model.maxRAM.split(" ")[0]} (DDR4). SSD upgrade or Fusion Drive → SSD swap is one of our most-requested jobs and the single biggest speed boost we can give an Intel iMac.`,
     },
     {
@@ -338,7 +338,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon iMacs (M1, M3, M4) have soldered memory and SoC-integrated SSD. What you buy is what you have for the life of the device.
               </p>
               <p className="text-[15px]">
-                Buy at least <strong>16GB RAM</strong> (not 8GB base) and <strong>512GB SSD</strong> (not 256GB) when ordering. This is the #1 advice we give iMac buyers in Dubai. For data on a failed SSD, we offer chip-off recovery - message us for the exact price.
+                Buy at least <strong>16GB RAM</strong> (not 8GB base) and <strong>512GB SSD</strong> (not 256GB) when ordering. This is the #1 advice we give iMac buyers in Dubai. The storage is encrypted and tied to the chip, so data recovery from a failed iMac means repairing the original logic board until it runs (chip-off does not work) - message us for a quote.
               </p>
             </div>
           )}
@@ -412,7 +412,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         `Cracked or unresponsive ${model.size}" ${model.shortName} display`,
         `Power supply failure - fans spin but no boot`,
         `Logic board faults - component-level repair where economical`,
-        isAppleSilicon ? "Soldered SSD failure - chip-off data recovery" : "RAM upgrade and SSD / Fusion → SSD swaps",
+        isAppleSilicon ? "Data recovery from a dead board - board-level repair so the original chip runs again (no chip-off on Apple silicon)" : "RAM upgrade and SSD / Fusion → SSD swaps",
         isPro ? "Vega Pro GPU module replacement (parts permitting)" : "Thermal paste refresh, fan cleaning, overheating fixes",
         "Liquid damage - ultrasonic clean, board-level recovery",
         "macOS reinstall, slow performance, boot loops",
@@ -425,11 +425,12 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
+        "Screens 90 days; logic board, liquid and thermal work 15 days; power supply, SSD and other parts up to 12 months",
         "Covers the replaced part and the labour",
-        "Same fault returns? We re-repair free",
+        "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",
-        "No quibbling, no fine print",
       ]}
       faqs={faqs}
       reviewNames={pickIMacReviewers(slug)}

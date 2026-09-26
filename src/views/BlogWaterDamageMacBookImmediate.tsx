@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { Button } from "@/components/ui/button";
@@ -61,7 +62,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             </p>
             <div className="flex flex-wrap gap-sm mt-md">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> WhatsApp emergency
                 </a>
               </Button>
@@ -164,8 +165,8 @@ export default function BlogWaterDamageMacBookImmediate() {
           <p>
             Water damage falls into three tiers: Tier 1 (clean only, MacBook boots fine), Tier 2
             (clean plus 1-2 damaged ICs) and Tier 3 (heavy board damage). Our component-level
-            approach is far cheaper than the Apple Store, which swaps the entire logic board for
-            any liquid damage. Message us on WhatsApp with a photo for today's exact price on your
+            approach repairs the damaged parts, where Apple's out-of-warranty route is a whole logic
+            board swap, and we quote before any work so you can compare. Message us on WhatsApp with a photo for today's exact price on your
             model, or see our{" "}
             <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent font-semibold hover:underline">
               full cost guide

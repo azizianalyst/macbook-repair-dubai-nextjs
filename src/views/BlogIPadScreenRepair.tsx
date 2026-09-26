@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 
@@ -15,7 +16,7 @@ export default function BlogIPadScreenRepair() {
       quickAnswer="iPad screen repair cost in Dubai depends on your model, from standard iPad panels to the iPad Pro M4 with its OLED display. LCD repairs are significantly cheaper than OLED. A free diagnosis confirms whether only the digitiser, the LCD, or the full display assembly needs replacing, then we message you the exact price on WhatsApp."
       author={{ name: "Memona", role: "Senior Apple device technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-09-26"
       readingMinutes={7}
       featuredImage="/images/topics/blog-apple-silicon-dubai-desktop.avif"
       featuredImageAlt="iPad screen repair cost Dubai, technician diagnosing device at Dubai repair workshop"
@@ -33,7 +34,7 @@ export default function BlogIPadScreenRepair() {
       faqs={[
         {
           q: "Why does an iPad screen develop dead zones or lines overnight or on standby?",
-          a: "A cracked glass panel allows humidity to seep into the LCD or digitiser layer. Dubai's air conditioning cycles between cool indoor air and hot humid outdoor air, which drives condensation into any micro-crack. Overnight on standby, without the heat of the backlight evaporating moisture, the ingress worsens. What was a hairline crack can produce a dead touch zone or spreading LCD bleed by morning. The fix is replacing the display assembly before water damage reaches the logic board.",
+          a: "A crack lets moisture and dust reach the layers underneath, and every knock, flex and temperature change keeps working on it, so a hairline crack can turn into a dead touch zone or spreading LCD bleed without warning. The fix is replacing the damaged glass or display before liquid reaches the logic board.",
         },
         {
           q: "Does Dubai heat (35°C+) permanently damage an iPad screen?",
@@ -53,7 +54,7 @@ export default function BlogIPadScreenRepair() {
         },
         {
           q: "Is it safe to use an iPad with a cracked screen?",
-          a: "Short-term use with a minor crack is generally safe, but continued use accelerates damage. Glass shards can injure fingers, especially at the edges. Cracks expose the digitiser layer to humidity and dust, which can kill touch responsiveness within days in Dubai's climate. A cracked screen also loses its IP-rated water resistance seal entirely. Using an iPad with severe LCD bleed or flickering is safe physically but can cause eye strain over time. We recommend having any cracked screen assessed within 48 hours to catch it before the underlying LCD is also damaged.",
+          a: "Short-term use with a minor crack is generally safe, but continued use accelerates damage. Glass shards can injure fingers, especially at the edges. Cracks expose the digitiser layer to moisture and dust, which can kill touch responsiveness over time. iPads have no IP water-resistance rating, and a cracked screen opens one more path for liquid. Using an iPad with severe LCD bleed or flickering is safe physically but can cause eye strain over time. We recommend having any cracked screen assessed within 48 hours to catch it before the underlying LCD is also damaged.",
         },
       ]}
       relatedLinks={[
@@ -96,20 +97,27 @@ export default function BlogIPadScreenRepair() {
               different repair cost. Knowing which layer is broken helps you understand the quote.
             </p>
             <ol className="list-decimal list-inside space-y-xs">
-              <li><strong>Glass digitiser:</strong> The outermost layer captures touch input. A cracked digitiser alone means the screen may display perfectly but have dead touch zones. On most iPad models the digitiser is bonded to the LCD, so it is almost always replaced as part of a full display assembly rather than separately.</li>
-              <li><strong>LCD panel:</strong> Sits behind the digitiser. LCD damage shows as coloured bleed (usually pink, purple, or black ink-like spread from the crack point), horizontal or vertical lines, or a completely black screen with the backlight still on. Once the LCD is cracked, a full display assembly replacement is required.</li>
+              <li><strong>Glass digitiser:</strong> The outermost layer captures touch input. A cracked digitiser alone means the screen may display perfectly but have dead touch zones. On standard iPads, up to the current A16 model, the glass digitiser is a separate part from the LCD, so cracked glass over a working display can be replaced on its own. On iPad Air 2 or later, iPad mini 4 or later and every iPad Pro, the glass is laminated to the display and is replaced as one assembly.</li>
+              <li><strong>LCD panel:</strong> Sits behind the digitiser. LCD damage shows as coloured bleed (usually pink, purple, or black ink-like spread from the crack point), horizontal or vertical lines, or a completely black screen with the backlight still on. Once the LCD is cracked it has to be replaced: on its own on a standard iPad, or as the full laminated assembly on iPad Air, mini and Pro models.</li>
               <li><strong>OLED panel (iPad Pro M4 / M5):</strong> The iPad Pro M4 and M5 use a Tandem OLED display, two OLED layers stacked for brightness. OLED damage can show as green tint, dead pixels, or permanent burn-in from static images. OLED panels cost significantly more to replace than LCD.</li>
             </ol>
             <p>
-              On standard iPads (9th, 10th, 11th generation) and iPad Air models, the glass and
-              LCD are sold as a bonded unit, so the repair price covers both regardless of which
-              layer broke. On iPad Pro models, the OLED panel is the dominant cost driver.
+              On standard iPads (9th, 10th and 11th generation, the 11th being the A16 model) the
+              glass digitiser and the LCD are separate, non-laminated parts, so you pay only for the
+              layer that broke. On iPad Air and iPad mini models they are laminated into one unit,
+              so the repair price covers both regardless of which layer broke. On the M4 and M5
+              iPad Pro, the OLED panel is the dominant cost driver.
             </p>
             <p>
               A flex cable connecting the display assembly to the logic board can also cause display
               faults. This presents identically to a broken LCD but costs far less to fix, as only
               the cable needs replacing rather than the full panel. Our diagnosis step checks the
               cable condition before ordering a panel.
+            </p>
+            <p>
+              Seeing lines or dark patches with no crack at all? Try the screenshot test in our guide to{" "}
+              <Link to="/blog/ipad-screen-lines-dark-spots/">lines and dark spots on an iPad screen</Link>{" "}
+              before you book anything.
             </p>
           </section>
 
@@ -129,11 +137,9 @@ export default function BlogIPadScreenRepair() {
               outward, turning a simple glass repair into a full assembly replacement at higher cost.
             </p>
             <p>
-              Structurally, a cracked screen also means the iPad has lost its IP rating for water
-              resistance. The iPad Air M3 and iPad 10th generation carry IP68 and IP52 ratings
-              respectively. A cracked screen invalidates those ratings entirely. Any contact with
-              rain or poolside splashing with a cracked screen carries the same risk as an older
-              unrated iPad.
+              Apple gives no iPad an IP rating for water resistance, and a cracked screen opens one
+              more path for liquid. Keep a cracked iPad away from rain and poolside splashes until
+              it is repaired.
             </p>
           </section>
 
@@ -182,15 +188,15 @@ export default function BlogIPadScreenRepair() {
           <section id="dubai-heat">
             <h2 id="dubai-heat">Does Dubai heat cause iPad screen delamination?</h2>
             <p>
-              Yes. Display delamination, where the glass layer separates from the LCD or OLED
-              panel beneath, is noticeably more common in Dubai than in cooler climates.
-              The cause is the adhesive (optically clear adhesive, OCA) that bonds the glass
-              to the panel softening under sustained temperatures above 35°C.
+              It can. On laminated displays (iPad Air, iPad mini and iPad Pro), delamination is
+              where the glass layer separates from the LCD or OLED panel beneath. The cause is the
+              optically clear adhesive (OCA) that bonds the glass to the panel softening under
+              sustained heat. Apple lists an operating ambient temperature of 0° to 35°C for iPad.
             </p>
             <p>
-              iPad left in a car, on a sunny balcony, or near an outdoor air conditioning unit
-              outlet can reach surface temperatures of 50-60°C within minutes. At these temperatures
-              the OCA layer loses cohesion. The result is a visible air gap between the glass and
+              An iPad left in a car, on a sunny balcony, or near an outdoor air conditioning unit
+              outlet can get far hotter than that. At those temperatures the OCA layer can lose
+              cohesion. The result is a visible air gap between the glass and
               the LCD that looks like a frosted or white patch, often in a corner. This is
               delamination. Unlike a crack, it is not caused by impact and the glass may appear
               perfectly intact. The fix is a display assembly replacement in most cases, as
@@ -198,8 +204,7 @@ export default function BlogIPadScreenRepair() {
               that exceeds the cost of a new panel.
             </p>
             <p>
-              Delamination from heat is not covered by Apple's warranty or AppleCare. Apple
-              categorises it as environmental damage. It is also not covered by most UAE consumer
+              Delamination from heat is generally not covered by Apple's warranty or AppleCare. It is also not covered by most UAE consumer
               electronics insurance policies unless the policy explicitly covers heat damage.
               Preventing it is straightforward: never leave an iPad in a parked car in Dubai,
               and avoid direct sunlight exposure for more than 10-15 minutes.

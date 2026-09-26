@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 
@@ -103,6 +104,11 @@ export default function BlogIPhoneBatteryReplacement() {
               abnormal cell behaviour, typically unexpected shutdowns or voltage instability. That
               is a firm recommendation to replace the battery, not just a suggestion. Ignoring it
               risks sudden shutoffs during calls or navigation.
+            </p>
+            <p>
+              For what each reading on that screen means, including Peak Performance Capability and
+              the menu differences between models, see our{" "}
+              <Link to="/blog/iphone-battery-health-when-to-replace/">iPhone battery health guide</Link>.
             </p>
           </section>
 

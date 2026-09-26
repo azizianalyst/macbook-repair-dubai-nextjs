@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 
@@ -6,7 +7,7 @@ export default function BlogIPadWaterDamageRepair() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Water Damage Repair Dubai 2026 - Costs & What To Do"
-      seoDescription="iPad water damage repair Dubai. First 30 minutes matter most, 80% recovery rate. Free pickup, warranty of up to 12 months. WhatsApp us for today's price."
+      seoDescription="iPad water damage repair Dubai. The first 30 minutes matter most. Ultrasonic cleaning, board-level repair, free pickup, 15-day written warranty. WhatsApp us for today's price."
       path="/blog/ipad-water-damage-repair-dubai-guide"
       wide
       toc={[
@@ -18,18 +19,18 @@ export default function BlogIPadWaterDamageRepair() {
         { id: "how-to-book", label: "Same-day repair in Dubai" },
       ]}
       category="Problem solving · iPad"
-      h1="iPad Water Damage Repair Dubai. Costs, Recovery Rate & What To Do First"
-      hook="Water damage is the number-one cause of total iPad loss, but 80% of iPads brought in within 24 hours are fully recovered. What you do in the first 30 minutes matters more than the repair itself."
+      h1="iPad Water Damage Repair Dubai. Costs, Recovery Odds & What To Do First"
+      hook="Water damage can write off an iPad, but many that reach the bench quickly can be saved. What you do in the first 30 minutes matters more than the repair itself."
       quickAnswer="iPad water damage repair cost in Dubai depends on board corrosion, whether it was fresh, salt or pool water, and how quickly you act. Do NOT charge or turn on a wet iPad, bring it in for ultrasonic cleaning first and WhatsApp us for today's exact price on your model."
       author={{ name: "Ali", role: "iPad water damage and board repair specialist" }}
       datePublished="2026-06-09"
-      dateModified="2026-06-09"
+      dateModified="2026-09-26"
       readingMinutes={10}
       featuredImageAlt="iPad water damage repair Dubai - ultrasonic cleaning tank and corroded logic board"
       faqs={[
         { q: "My iPad fell in the pool, what do I do right now?", a: "Power it off immediately if it's on. Do NOT press the home button or side button repeatedly. Shake out as much water as you can from the ports, stand it port-down on a dry surface, and WhatsApp us immediately. Pool water (chlorinated) is more corrosive than fresh tap water, every hour matters." },
-        { q: "My iPad is still working after getting wet, do I need to bring it in?", a: "Yes. A working iPad after a water event means the liquid hasn't reached a circuit yet or the corrosion hasn't started yet. Within 12-24 hours it will. The minerals in the water are depositing on the board right now. Bring it in for ultrasonic cleaning while it still works; don't wait for it to fail." },
-        { q: "Can you recover data from a water-damaged iPad that won't turn on?", a: "Often yes. If the NAND storage chip is physically intact (which it usually is, storage chips are sealed), we can attempt chip-level data extraction. This is a specialist job and the price depends on the iPad model and the extent of board damage. WhatsApp us and we give you a quote after initial inspection." },
+        { q: "My iPad is still working after getting wet, do I need to bring it in?", a: "Yes. A working iPad after a water event means the liquid hasn't reached a circuit yet or the corrosion hasn't taken hold yet. Corrosion keeps working as the liquid dries, and the minerals in the water are depositing on the board right now. Bring it in for ultrasonic cleaning while it still works; don't wait for it to fail." },
+        { q: "Can you recover data from a water-damaged iPad that won't turn on?", a: "Often yes, if the board can be brought back up. iPad storage is encrypted with a key held in the iPad's own chip, so the data can only be read through the original board - removing the storage chip does not work. We clean and repair the board until the iPad starts, then you unlock it with your passcode and back it up. The price depends on the iPad model and the extent of board damage. WhatsApp us and we give you a quote after initial inspection." },
         { q: "How long does iPad water damage repair take?", a: "Ultrasonic cleaning and initial diagnosis takes 4-6 hours. If the board is clean and no components need replacing, you can have it back the same day. Component-level repair (charging IC, touch controller, baseband) takes 1-3 additional days." },
         { q: "Is iPad water damage covered by AppleCare?", a: "Standard AppleCare does not cover liquid damage. AppleCare+ covers two incidents of accidental damage per year with an excess fee for an iPad. If you have an active AppleCare+ plan, contact Apple first. If you don't, we are the cost-effective alternative and we give you back your actual device rather than a refurbished replacement." },
       ]}
@@ -54,10 +55,9 @@ export default function BlogIPadWaterDamageRepair() {
             <li><strong>Turn it face-down, port-down</strong> to drain gravity-fed liquid away from the board, then bring or send it to us.</li>
           </ol>
           <p>
-            Every hour the iPad sits powered off and uncleaned, corrosion spreads further across
-            the logic board traces. iPads brought in within 2 hours have a 90%+ full recovery rate.
-            After 24 hours the rate drops to around 80%. After 72 hours, board damage is often
-            permanent.
+            While the iPad sits uncleaned, corrosion keeps spreading across the logic board
+            traces, even when it is powered off. The sooner it reaches the bench, the better the
+            odds; after a few days, board damage is often permanent.
           </p>
 
           <h2 id="repair-pricing">iPad water damage repair pricing. Dubai 2026</h2>
@@ -75,7 +75,7 @@ export default function BlogIPadWaterDamageRepair() {
             ]}
           />
           <p className="text-[13px] text-text-muted mono">
-            Apple does not offer liquid damage repair, their service is a flat-fee depot replacement (device swap), which costs the same as buying a refurbished unit.
+            Apple does not repair liquid damage on the board: its out-of-warranty service for a damaged iPad is a whole-unit replacement at a fixed fee.
           </p>
 
           <h2 id="what-repair-involves">What the repair actually involves</h2>
@@ -95,25 +95,31 @@ export default function BlogIPadWaterDamageRepair() {
             faults on iPads: charging IC failure, Touch ID failure, cellular baseband failure (on
             LTE/5G models), and camera or microphone signal loss. Minor corrosion on a capacitor
             or resistor is resolved by component replacement at the microscope; severe corrosion
-            on an A-series SoC is not repairable (data recovery may still be possible via NAND
-            chip work).
+            on an A-series or M-series chip is not repairable, and because iPad storage is
+            encrypted to that chip, the data goes with it unless it was backed up.
+          </p>
+          <p>
+            Liquid that reaches the display often shows up later as lines, cloudy blotches or dark
+            patches. Our guide to{" "}
+            <Link to="/blog/ipad-screen-lines-dark-spots/">lines and dark spots on an iPad screen</Link>{" "}
+            explains what each one points to.
           </p>
 
           <h2 id="fresh-vs-salt-water">Fresh water vs salt water vs pool water, why it matters</h2>
           <p>
-            Fresh (tap) water contains minerals but no chloride ions. It corrodes slowly -
-            you have the best recovery odds if you act within 24 hours.
+            Fresh (tap) water contains dissolved minerals but far fewer chloride ions than sea
+            or pool water. It corrodes more slowly - you have the best recovery odds if you act fast.
           </p>
           <p>
             <strong>Salt water</strong> (sea, ocean) contains sodium chloride. Chloride ions
             are highly conductive and react aggressively with copper traces on the logic board.
-            Recovery drops to 60–70% even with immediate action. If your iPad went in the sea,
+            The odds are lower even with immediate action. If your iPad went in the sea,
             rinse the exterior with fresh water immediately (do not let salt dry on the port or
             speaker grilles) and bring it to us the same day.
           </p>
           <p>
             <strong>Pool water</strong> contains chlorine and pH-adjustment chemicals, behaves
-            like diluted salt water for corrosion purposes. Act within 2 hours for the best outcome.
+            like diluted salt water for corrosion purposes. Bring it in the same day.
           </p>
           <p>
             <strong>Juice, tea, coffee, fizzy drinks</strong> are sugar-acid solutions that leave

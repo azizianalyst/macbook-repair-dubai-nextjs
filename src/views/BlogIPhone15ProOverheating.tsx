@@ -150,7 +150,10 @@ export default function BlogIPhone15ProOverheating() {
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>Battery cell degradation</strong> - old or swelling cells generate excess
-              heat under charging. Settings → Battery → Battery Health. Message us on WhatsApp for the replacement price on your model.
+              heat under charging. Check Settings → Battery → Battery Health; the iPhone 15 Pro shows its
+              cycle count there too, and our{" "}
+              <Link to="/blog/iphone-battery-health-when-to-replace/">iPhone battery health guide</Link>{" "}
+              explains what the numbers mean. Message us on WhatsApp for the replacement price on your model.
             </li>
             <li>
               <strong>Charging IC fault</strong> - overheating specifically during charging.

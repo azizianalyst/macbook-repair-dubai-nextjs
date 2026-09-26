@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 /**
  * TradeInEstimator - a valuation *request* tool, not a price oracle.
@@ -71,10 +71,14 @@ type Props = {
   className?: string;
   /** Optional heading override; falls back to a sensible default. */
   heading?: string;
+  /** Heading level. Use 2 when the estimator sits before the page's first H2, so the
+   *  outline doesn't jump H1 -> H3 (Semrush "poor heading hierarchy"). */
+  headingLevel?: 2 | 3;
   tone?: "light" | "dark";
 };
 
-export function TradeInEstimator({ className, heading, tone = "light" }: Props) {
+export function TradeInEstimator({ className, heading, headingLevel = 3, tone = "light" }: Props) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const dark = tone === "dark";
   const selectClasses = dark ? selectClassesDark : selectClassesLight;
   const [device, setDevice] = useState("");
@@ -108,9 +112,9 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
         className,
       )}
     >
-      <h3 className={cn("m-0 mb-xs text-[clamp(1.25rem,3vw,1.6rem)] font-bold tracking-tight", dark ? "text-text" : "text-text")}>
+      <Heading className={cn("m-0 mb-xs text-[clamp(1.25rem,3vw,1.6rem)] font-bold tracking-tight", dark ? "text-text" : "text-text")}>
         {heading ?? "Trade in your Apple device"}
-      </h3>
+      </Heading>
       <p className={cn("m-0 mb-lg text-[15px] leading-relaxed max-w-[58ch]", dark ? "text-text-muted" : "text-text-muted")}>
         Tell us what you have and Shafiq will send your exact offer on WhatsApp - working or not,
         we buy faulty devices too. Every quote is confirmed by a real technician, no lowball bots.
@@ -180,7 +184,7 @@ export function TradeInEstimator({ className, heading, tone = "light" }: Props) 
 
       <div className="mt-lg flex flex-col gap-xs">
         <a
-          href={whatsappHref}
+          href={withSlash(whatsappHref)}
           target="_blank"
           rel="noopener noreferrer"
           data-track="whatsapp-tradein"

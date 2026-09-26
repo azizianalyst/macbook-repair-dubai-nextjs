@@ -97,15 +97,15 @@ export default function BlogMacBookProM4VsM5() {
             an M5 screen - message us on WhatsApp for today's exact price on either replacement.
           </p>
 
-          <h2 id="price">Price difference in Dubai (June 2026)</h2>
+          <h2 id="price">Price difference in Dubai (September 2026)</h2>
           <BlogPriceTable
-            caption="MacBook Pro 14″ - Dubai pricing, base 16GB/512GB"
+            caption="MacBook Pro 14″ - Dubai pricing, Apple UAE list prices as of 26 September 2026"
             headers={["Model", "Apple Store UAE", "Authorised resellers (Sharaf DG, etc.)", "Notes"]}
             rows={[
-              { model: "M4 (2024): discounted", ours: "Price on request", apple: "Price on request", note: "Discontinued, limited stock" },
-              { model: "M4 Pro (2024)", ours: "Price on request", apple: "Price on request", note: "Same chip family" },
-              { model: "M5 (2025): current", ours: "Price on request", apple: "Price on request", note: "Current generation" },
-              { model: "M5 Pro (2025)", ours: "Price on request", apple: "Price on request", note: "12-core CPU, 16-core GPU" },
+              { model: "M4 (2024)", ours: "No longer sold by Apple", apple: "Remaining stock only", note: "Replaced by the M5 in October 2025" },
+              { model: "M4 Pro (2024)", ours: "No longer sold by Apple", apple: "Remaining stock only", note: "Discontinued March 2026" },
+              { model: "M5 (2025): current", ours: "AED 7,199 (Apple list)", apple: "Price on request", note: "Base moved to 1TB in March 2026" },
+              { model: "M5 Pro (2026)", ours: "AED 9,299 (Apple list)", apple: "Price on request", note: "12- or 14-core CPU, 18- or 20-core GPU" },
             ]}
           />
           <p>
@@ -169,7 +169,7 @@ export default function BlogMacBookProM4VsM5() {
         },
         {
           q: "If I crack my M4 screen, is the repair the same price as M5?",
-          a: "Yes: same Liquid Retina XDR panel, same repair at our workshop, same 3-month warranty - and typically well below Apple Store pricing. Message us on WhatsApp for today's exact price.",
+          a: "Yes: same Liquid Retina XDR panel, same repair at our workshop, same 90-day screen warranty. Apple publishes no Mac screen price (it inspects first), so we quote before any work and you can compare. Message us on WhatsApp for today's exact price.",
         },
       ]}
       relatedLinks={[

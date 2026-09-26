@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Search, Wrench, Battery, Cpu, HardDrive } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
@@ -38,7 +39,7 @@ const FAQS = [
   { q: "Do you use genuine Apple parts?",
     a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit high-grade compatible parts and label them as such on your quote. Both are covered by the same written warranty up to 12 months on our work." },
   { q: "What warranty do you give on the repair?",
-    a: "Every repair carries a written warranty up to 12 months, with three months on batteries. That covers the part we fitted and the workmanship. It's our own warranty, not Apple's - we're independent - but if the same fault comes back inside the window, we sort it at no extra cost." },
+    a: "Every repair carries a written warranty of up to 12 months, depending on the repair: three months on batteries, 90 days on screens and 15 days on keyboard, logic-board and liquid-damage work. That covers the part we fitted and the workmanship. It's our own warranty, not Apple's - we're independent - but if the same fault comes back inside the window, we sort it at no extra cost." },
   { q: "Can you help if Apple quoted a high out-of-warranty price?",
     a: "That's exactly the case we see most. Apple's out-of-warranty service tends to be a flat fee to replace the whole board or unit. We fix the single failed component instead, which is usually far cheaper than a whole-board swap. Send us Apple's quote and the model on WhatsApp and we'll tell you in a few minutes whether we can beat it." },
   { q: "Is the standard Apple warranty the same as AppleCare?",
@@ -203,7 +204,7 @@ export default function AppleCareMacBookRepair() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

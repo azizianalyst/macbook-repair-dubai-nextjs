@@ -89,8 +89,9 @@ export default function IPhoneAirRepair() {
         { title: "QC + return",          body: "ProMotion, AOD, MagSafe alignment, USB-C, single camera, frame straightness and Face ID tested, signed warranty, free delivery." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "12 months on parts and labour.",
+        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "MagSafe alignment verified to ±0.3 mm tolerance.",
         "Frame work: straightness measured on jig before return.",

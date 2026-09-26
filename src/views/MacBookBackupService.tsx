@@ -48,9 +48,9 @@ export default function MacBookBackupService() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "warranty of up to 12 months on the backup setup and any scheduling we configure.",
+        "15-day warranty on the backup setup and any scheduling we configure.",
         "Your data stays confidential - we don't browse, copy or keep anything beyond the job.",
-        "Free re-check inside 12 months if a scheduled backup stops running.",
+        "Free re-check inside those 15 days if a scheduled backup stops running.",
       ]}
       faqs={[
         { q: "How much is a MacBook backup service in Dubai?", a: "The simplest job is a Time Machine setup with a verified first backup. Data migration to a new Mac is usually the same band; a full pre-repair backup is included free when we're already repairing the machine. We quote on WhatsApp once you tell us how much data and where it's going." },

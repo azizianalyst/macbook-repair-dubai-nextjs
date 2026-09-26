@@ -26,7 +26,7 @@ import { CalendarCheck, ShieldCheck, UserRound, ArrowRight, ExternalLink, type L
 
 import { Link } from "@/lib/router-compat";
 import { Reveal } from "@/components/blocks/Reveal";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 import { TEAM, NAP } from "@/content/site";
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -272,7 +272,7 @@ export function AuthorityOutboundLinks({
         {links.map((l) => (
           <li key={l.href}>
             <a
-              href={l.href}
+              href={withSlash(l.href)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-medium text-accent hover:underline"

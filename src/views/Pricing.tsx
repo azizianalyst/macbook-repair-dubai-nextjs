@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Search, ShieldCheck, Banknote, Clock, Check, X, Truck, Sparkles, AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -34,16 +35,16 @@ const HOW_PRICING_WORKS = [
   { icon: Search,      title: "Free diagnosis",     body: "Walk in or send a WhatsApp. The technician opens the device and finds the actual fault - no charge, even if you walk away." },
   { icon: Banknote,    title: "Quote before repair", body: "Final price in writing on WhatsApp before any screwdriver moves. Approve, decline, or take the device back - your call." },
   { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe nothing. The diagnosis report is yours to keep." },
-  { icon: Clock,       title: "Up to 12-month warranty",    body: "Written warranty up to 12 months - 12 months on most hardware, 3 months on batteries, 15 days on software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
+  { icon: Clock,       title: "Up to 12-month warranty",    body: "Written warranty up to 12 months - 12 months on most hardware, 90 days on screens, 3 months on batteries, 15 days on keyboard, software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
 ];
 
 const COMPARISON = [
-  { row: "Diagnosis fee",          us: "Free",                     apple: "AED 200-350 (Apple list)" },
-  { row: "Turnaround time",        us: "Same day to 5 days",      apple: "5-14 days (sent to Ireland for some repairs)" },
+  { row: "Diagnosis fee",          us: "Free",                     apple: "Inspection by appointment" },
+  { row: "Turnaround time",        us: "Same day to 5 days",      apple: "Often several days, depending on parts" },
   { row: "Free pickup & delivery", us: "Yes - across Dubai",      apple: "No - drop-off only" },
   { row: "Warranty",               us: "Up to 12 months (by repair)",         apple: "90 days on repairs" },
-  { row: "MacBook screen repair",  us: "Quote after free diagnosis", apple: "AED 1,400-2,200 (Apple list)" },
-  { row: "MacBook battery",        us: "Quote after free diagnosis", apple: "AED 750-950 (Apple list)" },
+  { row: "MacBook screen repair",  us: "Quote after free diagnosis", apple: "No published price - quoted after inspection" },
+  { row: "MacBook battery",        us: "Quote after free diagnosis", apple: "AED 589-959 + VAT, current models (Apple list)" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
   { row: "Out-of-warranty Macs",   us: "Yes - including Intel models back to 2012", apple: "Limited - vintage models refused" },
 ];
@@ -68,7 +69,7 @@ const PRICING_FAQS = [
   { q: "What's the cheapest way to fix a slow, old MacBook?",
     a: "SSD upgrade labour plus a fresh macOS install, quoted together (plus the drive). A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
   { q: "Is data recovery extra on top of the repair price?",
-    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment, with chip-off forensic recovery on T2/M-series boards at the top of the range." },
+    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment. On T2 and Apple silicon Macs the storage is encrypted to the Mac's own chip, so recovery means repairing the original board until it runs; that board-level work sits at the top of the range." },
   { q: "Do you charge for pickup and delivery?",
     a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch. Pickup window: Monday to Saturday, 9 am to 5 pm." },
   { q: "What happens if the same fault returns inside the warranty?",
@@ -117,7 +118,7 @@ export default function Pricing() {
         <p className="text-[15px] text-text-muted mt-lg max-w-[72ch]">
           Want a figure for your exact model? Send us the model and the fault on{" "}
           <a
-            href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, quote please - my model and fault: ")}`}
+            href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, quote please - my model and fault: ")}`)}
             target="_blank" rel="noopener noreferrer"
             className="text-accent font-semibold hover:underline"
           >WhatsApp</a>{" "}
@@ -289,7 +290,7 @@ function PriceSection({
             <div className="mt-xs flex items-baseline justify-between gap-md">
               <PriceCTA compact message={`Hi Shafiq, quote please for: ${r.service}`} />
               <a
-                href={`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`}
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center gap-1 text-whatsapp font-semibold hover:underline whitespace-nowrap text-[14px]"
@@ -326,7 +327,7 @@ function PriceSection({
                 <td className="px-md py-sm text-text-muted">{r.warranty}</td>
                 <td className="px-md py-sm text-right">
                   <a
-                    href={`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`}
+                    href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-whatsapp font-semibold hover:underline whitespace-nowrap"

@@ -11,7 +11,7 @@ import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { FOOTER_COLUMNS } from "@/content/mega-menu";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 // The pre-footer CTA names the visitor's device so an iPhone/iPad page never asks
 // "Broken Mac?". Mixed/Mac pages keep the brand default.
@@ -73,7 +73,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg" className="shadow-sm shadow-whatsapp/20">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>
@@ -121,7 +121,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
                 <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white"><Phone size={14} aria-hidden /></span>
                 <span>{NAP.phoneDisplay}</span>
               </a>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex min-h-[44px] items-center gap-3 rounded-xl px-1 text-text-muted transition-colors hover:text-accent">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="group flex min-h-[44px] items-center gap-3 rounded-xl px-1 text-text-muted transition-colors hover:text-accent">
                 <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white"><MessageCircle size={14} aria-hidden /></span>
                 <span>WhatsApp 24/7</span>
               </a>
@@ -139,7 +139,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
               ].map(({ href, label, Icon }) => (
                 <a
                   key={label}
-                  href={href}
+                  href={withSlash(href)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}

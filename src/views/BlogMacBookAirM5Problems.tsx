@@ -260,7 +260,7 @@ export default function BlogMacBookAirM5Problems() {
         },
         {
           q: "Can MacBook Air M5 be repaired if the screen cracks?",
-          a: "Yes. Screen replacement for the M5 Air 13-inch is same-day at our Dubai workshop if dropped off before 11am, and typically well below Apple Store pricing without the wait. Message us on WhatsApp for today's exact price on your model.",
+          a: "Yes. Screen replacement for the M5 Air 13-inch is same-day at our Dubai workshop if dropped off before 11am, and we quote before any work so you can compare with Apple's quote. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Air M5 repair take in Dubai?",

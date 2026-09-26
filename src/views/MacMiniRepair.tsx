@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Mac Mini Repair Dubai - faithful rebuild of the live WordPress /mac-mini-repair-dubai page
 // (user: "same data", 2026-06-01; pulled from the live site). Prior DevicePageTemplate version in git history.
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
@@ -87,7 +88,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant="secondary" size="lg">
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -180,7 +181,7 @@ export default function MacMiniRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump to the chip-specific repair page for your Mac mini.</p>
         <div className="flex flex-wrap gap-2">
-          <Link to="/mac-mini-m1-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
+          <Link to="/mac-mini-m1-2020-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M1 (2020) →</Link>
           <Link to="/mac-mini-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M2 / M2 Pro (2023) →</Link>
           <Link to="/mac-mini-m4-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M4 / M4 Pro (2024) →</Link>
           <Link to="/mac-mini-m6-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac mini M6 / M5 Pro (2026) →</Link>

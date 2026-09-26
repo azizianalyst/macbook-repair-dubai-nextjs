@@ -53,9 +53,10 @@ export default function MacMiniM2RepairHub() {
         { title: "Hardware repair",        body: "Port, board-level, or thermal work completed in our workshop with a 1-hour load test before collection." },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (keyboard, ports, hinge, fan, speaker, SSD/RAM).",
-        "3 months on screen and battery replacements.",
+        "Up to 12 months on most hardware repairs (ports, hinge, fan, speaker, SSD/RAM).",
+        "90 days on screens; 3 months on batteries, with an 80% capacity guarantee.",
         "15 days on logic-board, liquid-damage, software and data-recovery work.",
         "Free re-diagnosis if the same fault recurs within the warranty period.",
       ]}

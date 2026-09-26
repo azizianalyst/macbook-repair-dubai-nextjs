@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
@@ -84,6 +85,12 @@ export default function BlogIPadScreenRepairCost() {
             Pro M4 and M5 are the most expensive iPads to screen-repair for the same reason
             iPhone 17 Pro screen repairs are expensive: OLED sourced from a single display maker.
           </p>
+          <p>
+            Each technology also fails differently: lines and grey blotches on LCD, ink-like black
+            patches on OLED. Our guide to{" "}
+            <Link to="/blog/ipad-screen-lines-dark-spots/">lines and dark spots on an iPad screen</Link>{" "}
+            shows how to tell a display fault from a software glitch before you pay for a panel.
+          </p>
 
           <h2 id="cracked-glass-only">Cracked glass only, do you need a full screen replacement?</h2>
           <p>
@@ -112,6 +119,12 @@ export default function BlogIPadScreenRepairCost() {
             iPad Pro M1/M2). iPad Pro M4 and M5 take 2–3 days for parts on first order, then
             same-day on reorder. You get a 3-month written warranty, free collection from anywhere
             in Dubai, and the repair price is confirmed in writing on WhatsApp before we start.
+          </p>
+          <p>
+            If the iPad is still under Apple&apos;s warranty or AppleCare+, go to Apple first. Our
+            guide to{" "}
+            <Link to="/blog/apple-repair-appointment-dubai/">booking an Apple repair appointment in Dubai</Link>{" "}
+            covers the Genius Bar booking and what to bring.
           </p>
 
           <h2 id="what-included">What the iPad screen repair includes</h2>

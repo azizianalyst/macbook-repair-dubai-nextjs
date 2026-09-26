@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import { ShieldCheck, ExternalLink, MessageCircle, Phone, AlertCircle, CheckCircle2, Clock } from "lucide-react";
 
@@ -302,7 +303,7 @@ export default function AppleRepairProgramsDubai() {
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Send a serial number
               </a>
             </Button>
@@ -329,7 +330,7 @@ export default function AppleRepairProgramsDubai() {
           <div>
             <p className="font-bold text-[15px] mb-1">Last updated: {LAST_UPDATED}</p>
             <p className="text-[14px] text-text-muted leading-relaxed">
-              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
+              We update this page quarterly as Apple announces new programmes and old ones expire. Spotted an inaccuracy or a programme we've missed? <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">Tell us on WhatsApp</a> and we'll correct it within 24 hours.
             </p>
           </div>
         </div>

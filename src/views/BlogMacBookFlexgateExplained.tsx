@@ -113,8 +113,8 @@ export default function BlogMacBookFlexgateExplained() {
           <p>
             When the Apple program was active, qualifying 13″ MacBook Pro repairs were free -
             program eligibility was based on serial number lookup. Today, Apple's out-of-warranty
-            display repair on these models is expensive. Our pricing comes in well under Apple's
-            current rate - message us on WhatsApp for today's exact price on your 13″ or 15″ model.
+            display repair on these models means a whole display assembly. We can replace just the
+            backlight cable, and we quote before any work so you can compare - message us on WhatsApp for today's exact price on your 13″ or 15″ model.
           </p>
 
           <h2 id="m-series-flexgate">Will Flexgate happen on M-series MacBooks?</h2>

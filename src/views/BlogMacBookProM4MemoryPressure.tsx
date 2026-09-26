@@ -204,7 +204,7 @@ export default function BlogMacBookProM4MemoryPressure() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
         { label: "MacBook Pro overheating fix Dubai", href: "/blog/macbook-pro-overheating-fix-dubai", description: "Throttling and overheating fix for all MacBook Pro M1 to M5." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models serviced in Dubai. Free diagnosis." },
       ]}

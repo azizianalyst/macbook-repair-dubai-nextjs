@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 import { NAP } from "@/content/site";
 import { LeadSchema, DEVICE_TYPES, CONTACT_METHODS, type Lead } from "@/lib/lead-schema";
 import type { FormPreset } from "@/data/form-presets";
@@ -230,7 +230,7 @@ export function LeadForm({
         </p>
         <div className="mt-lg flex flex-wrap justify-center gap-sm">
           <Button asChild variant="whatsapp" size="lg">
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
               <MessageCircle aria-hidden /> Message on WhatsApp
             </a>
           </Button>

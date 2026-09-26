@@ -30,33 +30,33 @@ export default function MacBookProM2ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight flickering on M2 Pro",
-          body: "Localised mini-LED zone failure causes areas of the screen to flicker or vary in brightness independently of system brightness settings. This is a panel assembly fault. Free diagnosis confirms..",
+          body: "Localised mini-LED zone failure causes areas of the screen to flicker or vary in brightness independently of system brightness settings. This is a panel assembly fault. Free diagnosis confirms.",
         },
         {
           title: "Vertical or horizontal lines on M2 Pro display",
-          body: "Continuous coloured or black lines running across the full width or height of the screen indicate panel damage or a display cable interruption. We diagnose which component is at fault before any parts are ordered..",
+          body: "Continuous coloured or black lines running across the full width or height of the screen indicate panel damage or a display cable interruption. We diagnose which component is at fault before any parts are ordered.",
         },
         {
           title: "Black screen with Mac booting (backlight or cable fault)",
-          body: "A faint image visible under torch light but no backlight indicates a backlight driver fault or cable issue on the M2 board. The logic board itself is typically undamaged..",
+          body: "A faint image visible under torch light but no backlight indicates a backlight driver fault or cable issue on the M2 board. The logic board itself is typically undamaged.",
         },
         {
           title: "Cracked screen 14-inch M2 Pro",
-          body: "Impact damage to the 14-inch Liquid Retina XDR panel requires full assembly replacement. The mini-LED array is bonded to the LCD and cannot be replaced separately..",
+          body: "Impact damage to the 14-inch Liquid Retina XDR panel requires full assembly replacement. The mini-LED array is bonded to the LCD and cannot be replaced separately.",
         },
         {
           title: "Cracked screen 16-inch M2 Max",
-          body: "Physical screen damage on the 16-inch model requires the larger 16-inch assembly. Stock is confirmed before work begins..",
+          body: "Physical screen damage on the 16-inch model requires the larger 16-inch assembly. Stock is confirmed before work begins.",
         },
         {
           title: "Colour shift or incorrect colour on M2 Pro display",
-          body: "Panel failure can cause colour banding, green or pink tint, or areas of washed-out colour. This is distinct from a macOS display profile misconfiguration. Free diagnosis identifies the cause..",
+          body: "Panel failure can cause colour banding, green or pink tint, or areas of washed-out colour. This is distinct from a macOS display profile misconfiguration. Free diagnosis identifies the cause.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Pro M2 screen repair cost in Dubai?",
-          a: "MacBook Pro M2 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,499 and AED 1,699 respectively.",
+          a: "MacBook Pro M2 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare.",
         },
         {
           q: "How long does MacBook Pro M2 screen repair take in Dubai?",

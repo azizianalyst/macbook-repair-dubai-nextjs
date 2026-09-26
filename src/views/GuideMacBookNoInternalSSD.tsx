@@ -103,8 +103,9 @@ export default function GuideMacBookNoInternalSSD() {
             <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data-recovery
             </Link>{" "}
-            case: we work at board level to read the NAND and pull your files, even when macOS can't
-            boot. If the drive itself is healthy and you simply want more space, that's a{" "}
+            case: on T2 and Apple silicon Macs the storage is encrypted to the Mac's own chip, so we
+            repair the original board at component level until it runs and the files can be copied
+            off, even when macOS can't boot. If the drive itself is healthy and you simply want more space, that's a{" "}
             <Link to="/macbook-ssd-upgrade-dubai" className="text-accent font-semibold hover:underline">
               MacBook SSD upgrade
             </Link>{" "}
@@ -137,7 +138,7 @@ export default function GuideMacBookNoInternalSSD() {
         },
         {
           q: "Is my data lost if the MacBook can't see the SSD?",
-          a: "Not necessarily. If the drive simply won't mount, the data is usually intact and recoverable with First Aid or recovery tools. Even when a soldered SSD's controller has failed, we can often read the NAND at board level. The biggest risk is repeatedly power-cycling a failing drive, which can make data unrecoverable.",
+          a: "Not necessarily. If the drive simply won't mount, the data is usually intact and recoverable with First Aid or recovery tools. Even when a soldered SSD stops responding, repairing the original board often brings it back so the data can be copied off (chip-off does not work on T2 or Apple silicon Macs, because the storage is encrypted to the Mac's own chip). The biggest risk is repeatedly power-cycling a failing drive, which can make data unrecoverable.",
         },
         {
           q: "Should I reinstall macOS to fix a drive that isn't detected?",

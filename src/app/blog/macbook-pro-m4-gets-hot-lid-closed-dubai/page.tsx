@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM4HotLidClosed";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m4-gets-hot-lid-closed-dubai", {
   title: "MacBook Pro M4 Gets Hot with Lid Closed Dubai 2026",
-  description: "MacBook Pro M4 overheating with lid closed in Dubai? Clamshell airflow restriction, Sequoia 15.0 fan delay bug fixed in 15.2, and Dubai heat headroom explained.",
+  description: "MacBook Pro M4 hot with the lid closed in Dubai? Clamshell airflow limits, the early Sequoia fan-delay bug (since fixed) and Dubai heat headroom.",
   publishedTime: "2026-06-22",
 });
 

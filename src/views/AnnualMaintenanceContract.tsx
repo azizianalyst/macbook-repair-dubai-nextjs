@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Building2, Calendar, Headphones } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -285,7 +286,7 @@ export default function AnnualMaintenanceContract() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

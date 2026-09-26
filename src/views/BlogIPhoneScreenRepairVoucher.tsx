@@ -60,7 +60,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
           <h2 id="voucher-terms">Voucher terms</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Validity:</strong> 12 months from purchase date. Single 6-month extension available on written request.</li>
-            <li><strong>Coverage:</strong> any iPhone screen repair (any model from iPhone 6 through current generation iPhone 17 Pro Max).</li>
+            <li><strong>Coverage:</strong> any iPhone screen repair (any model from iPhone 6 through iPhone 17 Pro Max).</li>
             <li><strong>Transferable:</strong> yes - give it to a spouse, child, parent, or friend. Just give us their name when they redeem.</li>
             <li><strong>Refundable:</strong> yes if unused - full refund less a small admin fee, processed within 7 days.</li>
             <li><strong>Stackable:</strong> only one voucher per repair. Cannot combine with other promotions (Eid offer, DSF discount, returning-customer credit).</li>

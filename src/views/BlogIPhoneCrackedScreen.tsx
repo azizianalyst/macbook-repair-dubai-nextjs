@@ -205,6 +205,7 @@ export default function BlogIPhoneCrackedScreen() {
         { label: "iPhone screen repair Dubai", href: "/iphone-screen-repair-dubai" },
         { label: "iPhone battery replacement cost Dubai", href: "/blog/iphone-battery-replacement-cost-dubai" },
         { label: "iPhone not turning on Dubai", href: "/blog/iphone-not-turning-on-dubai" },
+        { label: "iPhone 18 Pro screen replacement cost (UAE)", href: "/blog/iphone-18-pro-screen-replacement-cost-uae" },
       ]}
     />
   );

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Mac Pro Repair Dubai - faithful rebuild of the original WordPress /mac-pro-repair-dubai page
 // (user: "save data as I give you", 2026-06-01). Prior DevicePageTemplate version is in git history.
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
@@ -106,7 +107,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant="secondary" size="lg">
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -189,8 +190,8 @@ export default function MacProRepair() {
         <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Pick the Mac Pro generation you own for a dedicated repair page with model-specific faults and pricing.</p>
         <div className="flex flex-wrap gap-2">
-          <Link to="/mac-pro-intel-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Intel (2019 Xeon W) →</Link>
-          <Link to="/mac-pro-m2-ultra-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro M2 Ultra (2023) →</Link>
+          <Link to="/mac-pro-intel-2019-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro Intel (2019 Xeon W) →</Link>
+          <Link to="/mac-pro-m2-ultra-2023-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Pro M2 Ultra (2023) →</Link>
         </div>
       </section>
 

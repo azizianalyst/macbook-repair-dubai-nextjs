@@ -1,147 +1,158 @@
 "use client";
-// MacBook Neo screen repair spoke (L5) - 12.9-inch Liquid Retina, A18 Pro, March 2026.
-// Parts ramping as of mid-2026; 3-5 day turnaround. Check AppleCare+ first.
+// MacBook Neo screen repair spoke. Facts only from docs/apple-lineup-2026-09-26.md: 13-inch
+// A18 Pro MacBook (Apple, Mar 2026); iFixit: display swappable without parts-pairing warnings,
+// pentalobe screws; Apple UAE: no published out-of-warranty screen price ("needs inspection"),
+// AppleCare+ screen fee; owner reports of external-display scaling; Apple display troubleshooting page.
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 import { Link } from "@/lib/router-compat";
 
 export default function MacBookNeoScreenRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo Screen Repair Dubai - 12.9-inch Liquid Retina"
-      seoDescription="MacBook Neo screen repair Dubai. 12.9-inch Liquid Retina display, A18 Pro (2026). Cracked glass, dead pixels, backlight failure. Free diagnosis. 3-month warranty. Call 055 741 3706."
+      seoTitle="MacBook Neo Screen Repair Dubai - 13-inch Display"
+      seoDescription="MacBook Neo screen repair in Dubai: cracked, lines, dead areas or no picture. Free diagnosis, AppleCare+ checked first, 90-day warranty. WhatsApp us."
       path="/macbook-neo-screen-repair-dubai"
-      eyebrow="12.9-inch Liquid Retina · A18 Pro · 2026"
+      eyebrow="MacBook Neo · 13-inch display · A18 Pro"
       h1="MacBook Neo Screen Repair Dubai"
-      subtitle="MacBook Neo 12.9-inch screen repair in Dubai. Cracked, dead pixels, backlight gone, lines? We replace the Liquid Retina panel. At 6 months old, check AppleCare+ first."
-      startingPrice={650}
-      timeline="3-5 days (parts still ramping for 2026 model)"
-      whatsappPrefill="Hi, I need MacBook Neo screen repair:"
+      subtitle="Cracked screen, lines, dead areas or no picture on your MacBook Neo? We replace the 13-inch display at our Dubai Media City workshop, after a free diagnosis and an AppleCare+ check."
+      startingPrice={0}
+      timeline="Free diagnosis same day · repair time confirmed with your quote"
+      whatsappPrefill="Hi, I need a MacBook Neo screen repair:"
       breadcrumb={[
         { name: "Home",               path: "/" },
         { name: "MacBook Repair",     path: "/macbook-repair-dubai" },
         { name: "MacBook Neo Repair", path: "/macbook-neo-repair-dubai" },
         { name: "Screen Repair",      path: "/macbook-neo-screen-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook and A-chip board-level repair" }}
+      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook screens, batteries and water damage" }}
       serviceName="MacBook Neo Screen Repair Dubai"
+      glassNotice
+      quickAnswer={{
+        question: "Can you replace a MacBook Neo screen in Dubai?",
+        answer:
+          "Yes. We replace cracked or faulty MacBook Neo displays in Dubai Media City after a free diagnosis. iFixit found the Neo's display can be swapped without parts-pairing warnings. Apple publishes no out-of-warranty Neo screen price; with AppleCare+, Apple lists screen damage at AED 189. We confirm part availability and quote on WhatsApp.",
+      }}
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            MacBook Neo ships with a <strong>12.9-inch Liquid Retina display</strong> at 2560 x 1600 resolution
-            (224 ppi), 500 nits brightness, True Tone, and P3 wide colour. It is an IPS LCD panel - the same
-            IPS Liquid Retina LCD used across the MacBook Air M2, M3, and M4 - not an OLED. That matters for repair: full-assembly
-            replacement is required for cracked glass, dead pixels and backlight failure, the same approach as
-            on the Air.
+            <strong>A broken screen is the repair a MacBook Neo is best designed for.</strong> The Neo is Apple&apos;s
+            13-inch A18 Pro MacBook, on sale since 11 March 2026, and iFixit&apos;s teardown found that its display is
+            one of the parts that can be swapped without triggering parts-pairing warnings. In plain terms, a
+            replacement display is not flagged by macOS as an unknown part. That is not true of every Apple product,
+            and it makes an independent screen repair on the Neo a straightforward proposition.
           </p>
 
-          <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
-            <h3 className="text-[18px] font-bold mb-sm">Is your Neo screen covered by AppleCare+?</h3>
-            <p className="text-[15px] mb-sm">
-              MacBook Neo launched in March 2026. At under 6 months old, it is almost certainly within Apple's
-              standard 1-year warranty. If the original owner purchased AppleCare+, accidental damage to the screen
-              is covered for a reduced service fee (typically AED 400 at Apple). We check warranty status in the first
-              5 minutes of every visit, free of charge. If your machine is covered, we send you to Apple.
-            </p>
-            <p className="text-[15px]">
-              Out of warranty? We replace the full Liquid Retina assembly from{" "}
-              a <strong>3-month warranty</strong>.
-            </p>
-          </div>
-
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">MacBook Neo display specs</h2>
-          <ul className="space-y-1 text-[15px] mb-lg">
-            <li>• <strong>Size:</strong> 12.9 inches</li>
-            <li>• <strong>Resolution:</strong> 2560 x 1600 pixels at 224 ppi</li>
-            <li>• <strong>Peak brightness:</strong> 500 nits</li>
-            <li>• <strong>Panel type:</strong> Liquid Retina IPS LCD (not OLED)</li>
-            <li>• <strong>Colour:</strong> P3 wide colour, True Tone, sRGB</li>
-            <li>• <strong>Refresh rate:</strong> 60 Hz (no ProMotion)</li>
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Is it the screen, or something else?</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            Before you pay for a display, two minutes of checks can save the cost:
+          </p>
+          <ul className="space-y-2 text-[15px] mb-md">
+            <li>• <strong>Connect an external monitor.</strong> If the picture appears there, the Mac itself is running
+              and the fault is in the display or its connection. If nothing appears anywhere, the problem is more likely
+              power or the logic board; see{" "}
+              <Link to="/macbook-neo-a18-repair-dubai" className="text-accent hover:underline">MacBook Neo A18 Pro repair</Link>.</li>
+            <li>• <strong>Cracks, lines or dead areas</strong> that stay in the same place are physical panel damage.
+              A replacement display is the fix.</li>
+            <li>• <strong>Flicker or a dim picture</strong> can be a setting. Apple publishes troubleshooting steps for
+              MacBook Neo display problems, and they are worth trying first.</li>
+            <li>• <strong>Blurry or oddly scaled external displays</strong> are a known owner complaint on the Neo.
+              That is usually a settings or cable matter, not a reason to replace the built-in screen.</li>
           </ul>
-
-          <h2 className="text-[24px] md:text-[28px] mb-md">Parts availability in Dubai</h2>
-          <p className="text-[15px] mb-md text-text-muted">
-            Liquid Retina assembly stock for the MacBook Neo arrived in Dubai in May 2026. Lead time from our
-            supplier is 2 to 4 days, giving a total repair time of 3 to 5 days from the day you drop in the
-            machine. We will confirm availability and exact timing when you WhatsApp us the serial number.
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Still not sure? Send us a photo or a short video on WhatsApp and we will tell you what it looks like before
+            you make the trip.
           </p>
 
-          <p className="text-[15px] mb-md text-text-muted">
-            Compare with the{" "}
-            <Link to="/macbook-air-m4-screen-repair-dubai" className="text-accent hover:underline">
-              MacBook Air M4 screen repair
-            </Link>{" "}
-            which has the same panel construction but mature parts stock (same-day turnaround).
-            The Neo is slightly cheaper because it is a smaller 12.9-inch assembly.
+          <h2 className="text-[24px] md:text-[28px] mb-md">AppleCare+ first, then us</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            Apple does not publish an out-of-warranty screen price for the MacBook Neo in the UAE; for screen damage it
+            says it needs to inspect the machine. It does publish AppleCare+ fees, excluding VAT:
+          </p>
+          <ul className="space-y-1 text-[15px] mb-md">
+            <li>• With AppleCare+, Apple lists MacBook Neo screen damage at AED 189.</li>
+            <li>• With AppleCare+, Apple lists enclosure damage at AED 189.</li>
+          </ul>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            If you have AppleCare+, that is almost always the better deal and we will say so after a free serial-number
+            check. Apple&apos;s standard one-year warranty covers manufacturing defects, not a drop or a crushed lid. If
+            you have no cover, we quote the display on WhatsApp once we have confirmed the part.
+          </p>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">How we replace a MacBook Neo display</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            The case is closed with pentalobe screws, so the job starts with the right drivers and a battery disconnect
+            before anything else is touched. The damaged display is removed and the replacement fitted and routed, then
+            the Neo is closed up and tested with the lid open and shut: brightness, colour uniformity, a dead-pixel
+            scan, and sleep and wake when the lid closes. You see it working before you pay.
+          </p>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Because the Neo is a 2026 model, display parts reach independent workshops in stages. We confirm
+            availability and turnaround when you WhatsApp us your serial number, rather than promising same-day stock
+            we have not seen. For every other MacBook, see{" "}
+            <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">MacBook screen repair</Link>.
+          </p>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">What the free diagnosis checks, and your data</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            A drop rarely damages only the glass. During the free diagnosis we check the hinge action, whether the lid
+            still sits flush when closed, whether the case is bent near the impact, and whether the keyboard, trackpad
+            and ports still respond. That way the quote covers everything the drop affected, not just the panel. A
+            display replacement does not touch the soldered storage, so your files stay where they are; we still
+            recommend a Time Machine or iCloud backup first, as with any repair. If a new display alone will not fix
+            the Mac, we tell you before any part is ordered.
           </p>
         </>
       }
       whatWeFix={[
-        "Cracked display glass - full Liquid Retina assembly replacement",
-        "Dead pixels or pixel clusters",
-        "Backlight failure - dim or dark screen with image visible",
-        "Vertical or horizontal display lines (column/row driver failure)",
-        "Screen separation or delamination",
-        "Water damage to the display assembly",
+        "Cracked or shattered display",
+        "Lines, dead areas or dead pixels",
+        "Display that stays black while an external monitor works",
+        "Flicker or dim picture that survives Apple's troubleshooting steps",
+        "Display damaged by a spill (with a board check)",
+        "Lid and display damage after a drop",
       ]}
       steps={[
-        {
-          title: "Free diagnosis and warranty check",
-          body: "We confirm whether the damage is display-only or involves the connector and logic board. Apple warranty / AppleCare+ checked before any work is quoted. If covered, we refer you to Apple at no charge.",
-        },
-        {
-          title: "Full Liquid Retina assembly replacement",
-          body: "The entire display assembly is replaced: panel, backlight, glass and cables as a single unit. Shafiq carries out the replacement under a controlled environment to prevent dust contamination.",
-        },
-        {
-          title: "Colour calibration and full function test",
-          body: "After replacement: brightness uniformity check, True Tone sensor verification, dead-pixel scan across all 2560 x 1600 pixels. Written 3-month warranty card on collection.",
-        },
+        { title: "Photo on WhatsApp",           body: "Send a photo or short video. We tell you whether it looks like the panel, and confirm part availability." },
+        { title: "Free diagnosis + warranty",   body: "External-display test, damage check and an AppleCare+ lookup. If Apple should do it, we say so." },
+        { title: "Display replacement",         body: "Written quote first, then the display is replaced with the battery disconnected throughout." },
+        { title: "Test + return",               body: "Brightness, uniformity, dead-pixel scan and lid sleep/wake checked before collection." },
       ]}
       warrantyDays={90}
       warrantyBullets={[
-        "3 months on parts and labour",
-        "Dead pixels appearing after repair covered in full",
-        "Backlight failure within warranty period covered",
-        "Accidental damage after repair is not covered",
-        "Claim: WhatsApp warranty card photo for free collection",
+        "90 days on the replacement display and the fitting.",
+        "Dead pixels or display faults that appear within 90 days are covered.",
+        "New accidental damage after the repair is not covered.",
+        "Written on your invoice.",
       ]}
       faqs={[
         {
-          q: "Is MacBook Neo screen repair covered by AppleCare+?",
-          a: "Very likely, if you bought it at or near the March 2026 launch. Apple's standard 1-year limited warranty covers manufacturing defects but not accidental drops or cracked glass. AppleCare+ adds accidental damage cover for a reduced fee per incident (typically around AED 400 at Apple). We check warranty status free of charge in the first 5 minutes of every visit.",
+          q: "Can you replace a MacBook Neo screen in Dubai?",
+          a: "Yes. We replace MacBook Neo displays at our Dubai Media City workshop after a free diagnosis. The Neo went on sale in March 2026, so we confirm part availability on WhatsApp before you book. Screen replacements carry our 90-day warranty.",
         },
         {
-          q: "How does MacBook Neo screen repair cost compare to MacBook Air M4?",
-          a: "The Neo screen repair is slightly cheaper than the MacBook Air M4 (13.6-inch), because its 12.9-inch panel is smaller than the Air's 13.6-inch Liquid Retina display. Both are full Liquid Retina IPS panel replacements with the same 3-month warranty.",
+          q: "Does AppleCare+ cover a cracked MacBook Neo screen?",
+          a: "Yes, for a fee. With AppleCare+, Apple lists MacBook Neo screen damage at AED 189, excluding VAT, on its UAE support site. Apple's standard one-year warranty does not cover accidental damage. We check your coverage for free and send you to Apple when that is the better deal.",
         },
         {
-          q: "Is the MacBook Neo screen OLED?",
-          a: "No. The MacBook Neo uses a Liquid Retina IPS LCD display - not OLED. OLED on MacBooks is currently only available on the MacBook Pro 14-inch and 16-inch (M4 Pro / M4 Max, 2024). The Neo's Liquid Retina panel is the same IPS Liquid Retina LCD technology as the MacBook Air M2, M3, and M4 - excellent colour accuracy and brightness, but without OLED's per-pixel black levels or ProMotion refresh.",
+          q: "Will a replacement MacBook Neo screen show a parts warning?",
+          a: "iFixit's teardown found the MacBook Neo display can be swapped without parts-pairing warnings, along with the trackpad, battery and Touch ID. That is one reason iFixit scored the Neo 6 out of 10 and called it the most repairable MacBook in 14 years.",
         },
         {
-          q: "Can individual pixels be repaired or does the whole panel need replacing?",
-          a: "The entire panel assembly is replaced as a single unit. Individual pixel repair is not technically feasible on an IPS LCD at this display density (224 ppi). The replacement includes the glass, backlight and panel, which is why the price covers a complete Liquid Retina assembly rather than a spot repair.",
+          q: "My external monitor looks blurry on the MacBook Neo. Is the screen faulty?",
+          a: "No. Scaling problems on external displays are a known owner complaint on the Neo, and they involve the external monitor, not the built-in screen. Check display settings and try another cable first. If the built-in display itself shows lines or dead areas, that is a hardware fault.",
+        },
+        {
+          q: "How much does Apple charge for a MacBook Neo screen out of warranty?",
+          a: "Apple does not publish one. On its UAE support site, the only out-of-warranty MacBook Neo price Apple lists is battery service; for screens it says the machine needs inspection. We quote on WhatsApp after a photo and a free diagnosis.",
         },
       ]}
-      reviewNames={["Ali Hassan", "Fatima Al Zaabi"]}
+      reviewNames={["David Boulos", "Nihilius Nyx"]}
       related={[
-        {
-          label: "MacBook Neo Repair Dubai",
-          href: "/macbook-neo-repair-dubai",
-          description: "All MacBook Neo repairs - battery, keyboard, ports, water damage.",
-        },
-        {
-          label: "MacBook Neo Battery Replacement Dubai",
-          href: "/macbook-neo-battery-replacement-dubai",
-          description: "A18 Pro battery replacement with BMS re-pair.",
-        },
-        {
-          label: "MacBook Screen Repair Dubai",
-          href: "/macbook-screen-repair-dubai",
-          description: "Screen repair for all MacBook models - Air, Pro and Intel.",
-        },
+        { label: "MacBook Neo Repair Dubai",              href: "/macbook-neo-repair-dubai",               description: "Every MacBook Neo repair in one place." },
+        { label: "MacBook Neo Battery Replacement Dubai", href: "/macbook-neo-battery-replacement-dubai",  description: "18-screw battery tray, no pairing warnings." },
+        { label: "MacBook Screen Repair Dubai",           href: "/macbook-screen-repair-dubai",            description: "Screen repair for every MacBook Air and Pro." },
       ]}
-      blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
+      blogLink={{ label: "MacBook Neo: worth buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
     />
   );
 }

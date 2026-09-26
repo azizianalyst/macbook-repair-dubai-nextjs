@@ -181,7 +181,7 @@
       "Liquid Retina screen - laminated panel, expensive replacement",
       "MagSafe 3 connector debris / pin wear",
       "Notched display backlight issues after impact",
-      "256GB base SSD is single-NAND - slower and harder to chip-recover"
+      "256GB base SSD is single-NAND - slower reads and writes"
     ],
     "pricing": {
       "screen": 910,
@@ -276,7 +276,7 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Logic board 3-5 days.",
-    "honestyNote": "Very few problems in the field. Apple finally moved the 256GB base back to dual-NAND, so SSD speed and recoverability are good across the range. Worth repairing for years to come.",
+    "honestyNote": "Very few problems in the field. Apple finally moved the 256GB base back to dual-NAND, so SSD speed is good across the range. Worth repairing for years to come.",
     "heroTagline": "The mature M3 Air. Few issues, easy fixes when needed."
   },
   {

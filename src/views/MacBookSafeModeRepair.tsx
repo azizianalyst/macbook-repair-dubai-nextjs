@@ -48,7 +48,7 @@ export default function MacBookSafeModeRepair() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "12 months on the software work we carried out - the same fault won't come back on us.",
+        "15 days on the software work we carried out - if the same fault comes back in that window, we fix it free.",
         "Your files stay put. Software diagnosis and clean-up don't wipe data.",
         "If safe mode points to hardware, we quote the part in writing before any repair starts.",
       ]}

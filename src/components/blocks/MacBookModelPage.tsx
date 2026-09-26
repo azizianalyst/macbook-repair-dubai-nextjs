@@ -219,8 +219,8 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     {
       q: `Can I upgrade the RAM or SSD on the ${model.name}?`,
       a: isAppleSilicon
-        ? `No. Apple Silicon MacBooks (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM and storage are one package. Buy enough storage and RAM at order time - upgrade later is impossible. For data on a failed SSD, we offer chip-off recovery (complex but possible) - message us on WhatsApp for a price.`
-        : `RAM is soldered on the ${model.name} (Intel Air / Pro retina-era). SSD is also soldered on these models. The original spec is what you keep - neither is upgradeable. We can recover data from a failed SSD via chip-off recovery - message us on WhatsApp for a price.`,
+        ? `No. Apple Silicon MacBooks (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM and storage are one package. Buy enough storage and RAM at order time - upgrade later is impossible. The storage is encrypted and tied to the chip, so chip-off recovery is not possible: getting data back from a failed machine means getting the original logic board running again. Message us on WhatsApp for a quote.`
+        : `RAM and the SSD are both soldered to the logic board on the ${model.name}, so the original spec is what you keep - neither is upgradeable. The SSD is encrypted by the T2 security chip, so chip-off recovery does not work: getting data back means getting the original logic board running again. Message us on WhatsApp for a quote.`,
     },
     {
       q: isButterfly
@@ -321,7 +321,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon MacBooks (M1 through M5) have SoC-integrated RAM and a soldered SSD. The chip, RAM, and storage are one package on the logic board. Buy enough when you order - upgrading later is impossible.
               </p>
               <p className="text-[15px]">
-                For data recovery on a failed SSD, we offer chip-off recovery. Complex and specialised, but possible - message us on WhatsApp for a price. <Link to="/macbook-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link>
+                The storage is encrypted and tied to the chip, so chip-off recovery is not possible. Getting data back from a failed machine means repairing the original logic board until it runs again - message us on WhatsApp for a quote. <Link to="/macbook-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link>
               </p>
             </div>
           )}
@@ -388,11 +388,12 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
         { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
+        "Screens 90 days; batteries 3 months with an 80% capacity guarantee; keyboard, board and liquid work 15 days; other hardware up to 12 months",
         "Covers the replaced part and the labour",
-        "Same fault returns? We re-repair free",
+        "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",
-        "No quibbling, no fine print",
       ]}
       faqs={faqs}
       reviewNames={pickMacBookReviewers(slug)}

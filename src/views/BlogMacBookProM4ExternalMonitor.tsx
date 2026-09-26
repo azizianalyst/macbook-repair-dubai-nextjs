@@ -190,7 +190,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
         { label: "MacBook Pro M5 external monitor not working", href: "/blog/macbook-pro-m5-external-monitor-not-working-dubai", description: "Same issue on M5: dock firmware, third display limit, fullscreen black." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models serviced in Dubai. Free diagnosis." },
       ]}

@@ -163,8 +163,8 @@ export default function BlogMacBookStuckAppleLogo() {
             mount or won't repair is failing, and a failing drive degrades every time it spins up. If
             you've no recent backup and the disk is on its way out, stop trying to boot it and bring
             it straight in. We pull data off failing MacBook drives most weeks; the price depends on
-            whether the controller still responds or we need a chip-off, so message us on WhatsApp for
-            a quote. Our{" "}
+            whether the drive still responds or the board needs repair first (on T2 and Apple silicon
+            Macs, chip-off cannot work), so message us on WhatsApp for a quote. Our{" "}
             <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}

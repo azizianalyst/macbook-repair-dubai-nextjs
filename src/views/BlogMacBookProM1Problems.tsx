@@ -167,7 +167,7 @@ export default function BlogMacBookProM1Problems() {
               { model: "MacBook Pro M1 13\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Retina IPS, same-day" },
               { model: "MacBook Pro M1 14\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED Liquid Retina XDR" },
               { model: "MacBook Pro M1 16\" screen replacement", ours: "Price on request", apple: "Price on request", note: "Mini-LED, same-day" },
-              { model: "MacBook Pro M1 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 12-month warranty" },
+              { model: "MacBook Pro M1 battery (13\")", ours: "Price on request", apple: "Price on request", note: "58 Wh cell, 3-month warranty" },
               { model: "MacBook Pro M1 battery (14\"/16\")", ours: "Price on request", apple: "Price on request", note: "70 Wh / 100 Wh cell" },
               { model: "Touch Bar replacement (13\" M1)", ours: "Price on request", apple: "Price on request", note: "OLED Touch Bar + flex cable" },
             ]}
@@ -217,7 +217,7 @@ export default function BlogMacBookProM1Problems() {
         },
         {
           q: "How long does MacBook Pro M1 battery replacement take in Dubai?",
-          a: "Same-day: 60-90 minutes for the 13-inch and 90 minutes for the 14/16-inch. We bench-test capacity and charge cycle after fitting. Drop off before 11am to collect same day. 12-month warranty on all M1 battery replacements.",
+          a: "Same-day: 60-90 minutes for the 13-inch and 90 minutes for the 14/16-inch. We bench-test capacity and charge cycle after fitting. Drop off before 11am to collect same day. 3-month warranty, with an 80% capacity guarantee, on all M1 battery replacements.",
         },
         {
           q: "Is it worth repairing a 4-5 year old MacBook Pro M1?",

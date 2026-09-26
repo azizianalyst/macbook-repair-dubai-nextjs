@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, Settings, Check, Mail, RefreshCw, UserPlus } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -183,7 +184,7 @@ export default function MacSetupConfiguration() {
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

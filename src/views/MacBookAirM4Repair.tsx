@@ -25,11 +25,11 @@ export default function MacBookAirM4Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M4 screen repair cost in Dubai?",
-          a: "The 13-inch and 15-inch take different Liquid Retina panels, so they are quoted separately after a free diagnosis. For comparison, the Apple Store charges AED 1,099-1,199. We use OEM-grade Liquid Retina panels with the same resolution and brightness rating. Same-day service available.",
+          a: "The 13-inch and 15-inch take different Liquid Retina panels, so they are quoted separately after a free diagnosis. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. We use OEM-grade Liquid Retina panels with the same resolution and brightness rating. Same-day service available.",
         },
         {
           q: "How much does MacBook Air M4 battery replacement cost in Dubai?",
-          a: "The 13-inch and 15-inch use different cells, so each is quoted separately after a free diagnosis. Apple charges AED 899-999 for the same job. The M4 Air 13-inch has a 52.6 Wh cell, 15-inch has 66.5 Wh. Both replaced using OEM-grade cells with the same Wh rating. Turnaround: 45-60 minutes.",
+          a: "The 13-inch and 15-inch use different cells, so each is quoted separately after a free diagnosis, before any work, so you can compare with Apple's quote. The M4 Air 13-inch has a 52.6 Wh cell, 15-inch has 66.5 Wh. Both replaced using OEM-grade cells with the same Wh rating. Turnaround: 45-60 minutes.",
         },
         {
           q: "Does MacBook Air M4 overheat in Dubai summer?",

@@ -275,8 +275,8 @@ export default function BlogMacBookAirM4Problems() {
           <BlogPriceTable
             caption="MacBook Air M4 repairs Dubai: message us for today's price"
             rows={[
-              { model: "Battery: M4 Air 13\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 12-month warranty, same-day" },
-              { model: "Battery: M4 Air 15\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 12-month warranty, same-day" },
+              { model: "Battery: M4 Air 13\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 3-month warranty, same-day" },
+              { model: "Battery: M4 Air 15\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade cell, 3-month warranty, same-day" },
               { model: "Screen: M4 Air 13\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade panel, same-day" },
               { model: "Screen: M4 Air 15\"", ours: "Price on request", apple: "Price on request", note: "OEM-grade panel, same-day" },
               { model: "Top-case (keyboard): M4 Air", ours: "Price on request", apple: "Price on request", note: "Full keyboard and trackpad assembly" },
@@ -284,7 +284,7 @@ export default function BlogMacBookAirM4Problems() {
             ]}
           />
           <p>
-            All repairs carry a 12-month warranty on parts and labour. We use OEM-grade components
+            Warranty depends on the repair: 90 days on screens, 3 months on batteries, 15 days on keyboard and board work, and up to 12 months on other hardware. We use OEM-grade components
             matched to the M4 Air's specifications.{" "}
             <Link to="/macbook-air-m4-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Air M4 repair Dubai: full service page →
@@ -307,7 +307,7 @@ export default function BlogMacBookAirM4Problems() {
         },
         {
           q: "Can MacBook Air M4 screen be repaired in Dubai?",
-          a: "Yes. We replace both the M4 Air 13-inch and 15-inch screens using OEM-grade panels with the same colour calibration and brightness as the original. Same-day service if you drop off before 11am, and a 12-month warranty on the replacement panel. Message us on WhatsApp for today's exact price on your model.",
+          a: "Yes. We replace both the M4 Air 13-inch and 15-inch screens using OEM-grade panels with the same colour calibration and brightness as the original. Same-day service if you drop off before 11am, and a 90-day warranty on the replacement panel. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Air M4 battery replacement take?",

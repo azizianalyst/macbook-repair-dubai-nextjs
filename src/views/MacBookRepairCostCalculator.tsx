@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Instant MacBook repair cost calculator page (gap-audit strategic wedge).
 // Features the QuoteCalculator (real per-model pricing) on a dark, schema-rich landing page.
 import { Link } from "@/lib/router-compat";
@@ -115,7 +116,7 @@ export default function MacBookRepairCostCalculator() {
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a>
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a>
               </Button>
               <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
                 <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>

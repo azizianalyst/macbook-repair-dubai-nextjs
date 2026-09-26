@@ -157,7 +157,7 @@ export default function BlogMacBookProIntelGpuFailure() {
         },
         {
           q: "How much does MacBook Pro Intel AMD GPU repair cost in Dubai?",
-          a: "AMD GPU BGA reball on the 2017 or 2018-2019 15-inch restores full GPU function with a 3-month warranty, and is far cheaper than Apple's equivalent logic board replacement. Diagnosis to confirm the GPU is the fault is free. Message us on WhatsApp for today's exact price on your model, including data backup before board work.",
+          a: "AMD GPU BGA reball on the 2017 or 2018-2019 15-inch restores full GPU function, with a 15-day written warranty as on all board-level work. Apple's route for a GPU fault is a whole logic board replacement, where it still services the model. Diagnosis to confirm the GPU is the fault is free. Message us on WhatsApp for today's exact price on your model, including data backup before board work.",
         },
         {
           q: "Did Apple have a free repair program for MacBook Pro Intel GPU failure?",

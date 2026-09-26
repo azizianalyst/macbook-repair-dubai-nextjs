@@ -62,7 +62,7 @@ export default function MacMiniNotTurningOn() {
       related={[
         { label: "Mac mini Repair Dubai",   href: "/mac-mini-repair-dubai",         description: "All Mac mini models and services." },
         { label: "Mac mini No Display",     href: "/mac-mini-no-display-dubai",     description: "Powers on but no picture - different fault." },
-        { label: "Mac mini M1 Repair",      href: "/mac-mini-m1-repair-dubai",      description: "M1-specific faults and pricing." },
+        { label: "Mac mini M1 Repair",      href: "/mac-mini-m1-2020-repair-dubai",      description: "M1-specific faults and pricing." },
       ]}
       blogLink={{ label: "Mac mini Not Turning On Dubai? 6 Fixes 2026", href: "/blog/mac-mini-not-turning-on-dubai" }}
     />

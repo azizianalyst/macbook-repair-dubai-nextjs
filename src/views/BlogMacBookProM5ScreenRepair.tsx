@@ -6,44 +6,45 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookProM5ScreenRepair() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Pro M5 Screen Repair Cost Dubai 2026: OLED Replacement Prices"
-      seoDescription="MacBook Pro M5 screen repair in Dubai 2026. OLED cracked, backlight failed, or display lines. Same-day repair, 12-month warranty. Message us on WhatsApp for a quote."
+      seoTitle="MacBook Pro M5 Screen Repair Cost Dubai 2026"
+      seoDescription="MacBook Pro M5 screen repair cost in Dubai 2026: cracked Liquid Retina XDR, failed backlight or display lines, and what sets the price. Quote on WhatsApp."
       path="/blog/macbook-pro-m5-screen-repair-cost-dubai"
       wide
       toc={[
-        { id: "why-screen", label: "M5 OLED screen damage types" },
+        { id: "why-screen", label: "M5 Liquid Retina XDR damage types" },
         { id: "step-1", label: "Step 1. Cracked screen vs backlight fault" },
         { id: "step-2", label: "Step 2. Display lines or dead pixels" },
-        { id: "step-3", label: "Step 3. Backlight bleed and burn-in" },
+        { id: "step-3", label: "Step 3. Blooming, dark zones and burn-in" },
         { id: "step-4", label: "Step 4. Screen flickering at low brightness" },
-        { id: "dubai-heat", label: "Does Dubai heat damage M5 OLED?" },
-        { id: "m5-vs-m4", label: "M5 vs M4: OLED screen differences" },
+        { id: "dubai-heat", label: "Does Dubai heat damage the M5 display?" },
+        { id: "m5-vs-m4", label: "M5 vs M4: display differences" },
         { id: "repair-cost", label: "Screen replacement cost Dubai" },
         { id: "when-logic", label: "When screen damage means a board check" },
       ]}
       category="Fix guide · MacBook Pro"
-      h1="MacBook Pro M5 Screen Repair Cost in Dubai 2026: OLED Replacement and Fault Guide"
-      hook="MacBook Pro M5 uses the same OLED Liquid Retina XDR display as M4, with ProMotion up to 120Hz and a 1,000,000:1 contrast ratio. OLED panels are more fragile than the LCD panels in pre-M4 MacBook Pros and have specific failure modes that differ from LCD. We offer same-day screen replacement in most cases in Dubai. Message us on WhatsApp for today's exact price on your model."
-      quickAnswer="MacBook Pro M5 OLED screen replacement price in Dubai depends on the model (14-inch or 16-inch) — message us on WhatsApp for today's exact price. A cracked OLED cannot be repaired, only replaced. Display lines, half-screen black, or dead pixels also require panel replacement. Backlight flickering at low brightness may be a macOS calibration issue rather than hardware. Free diagnostic to confirm the fault type before any repair."
+      h1="MacBook Pro M5 Screen Repair Cost in Dubai 2026: Liquid Retina XDR Replacement and Fault Guide"
+      hook="MacBook Pro M5 uses the same Liquid Retina XDR display as the M4: an LCD panel lit by a mini-LED backlight with local dimming, ProMotion up to 120Hz and a 1,000,000:1 contrast ratio. It is not OLED. The mini-LED backlight and LCD layer are laminated into one display assembly, so most faults are fixed by replacing that assembly. Replacement usually takes 2–3 days in Dubai; same day only if the display assembly is in stock. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro M5 screen replacement in Dubai is priced by size (14-inch or 16-inch) and nano-texture option; message us on WhatsApp for today's price. The M5 uses a mini-LED Liquid Retina XDR display, not OLED. Cracks, lines or dark zones mean replacing the display assembly; blooming is normal. Turnaround is usually 2–3 days. Diagnosis is free."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-09-26"
       readingMinutes={9}
-      featuredImageAlt="MacBook Pro M5 OLED screen repair, technician replacing cracked display panel at Dubai repair workshop"
+      featuredImageAlt="MacBook Pro M5 Liquid Retina XDR screen repair, technician replacing a cracked display assembly at a Dubai repair workshop"
       body={
         <>
-          <h2 id="why-screen">What are the main MacBook Pro M5 OLED screen damage types?</h2>
+          <h2 id="why-screen">What are the main MacBook Pro M5 Liquid Retina XDR damage types?</h2>
           <p>
-            The M5 OLED display is more susceptible to certain damage types than the LCD
-            panels in MacBook Pros before 2024. Knowing which type you have determines
-            whether a replacement or a settings change is needed:
+            The M5 display is a mini-LED Liquid Retina XDR panel: a liquid crystal layer in front
+            of a backlight made of thousands of tiny LEDs grouped into local dimming zones. It
+            fails in different ways from the plain LCD screens on older MacBook Pros. Knowing
+            which fault you have determines whether a replacement or a settings change is needed:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li><strong>Physical crack</strong>: the glass digitizer or the OLED panel itself is cracked. No software fix. Replacement required</li>
-            <li><strong>Display lines or banding</strong>: vertical or horizontal lines across part or all of the screen. Can be OLED panel failure or a loose display cable connection at the hinge</li>
-            <li><strong>Backlight flickering at low brightness</strong>: OLED panels do not have a traditional backlight. Low-brightness flickering on OLED is caused by PWM (pulse-width modulation) at low brightness levels, which is a display characteristic, not a fault. Brightness above 50% eliminates it</li>
-            <li><strong>Burn-in</strong>: static content (a taskbar, dock icons, or a video conference overlay) left on screen for extended periods can cause temporary or permanent burn-in on OLED panels</li>
-            <li><strong>Half-screen black or colour shift</strong>: one half of the OLED panel stops working, shows incorrect colours, or goes dark while the other half is normal. Panel fault requiring replacement</li>
+            <li><strong>Physical crack</strong>: the cover glass or the LCD layer behind it is cracked. Ink-like black blots, spider-web lines or colour spreading from the impact point. No software fix. Display assembly replacement required</li>
+            <li><strong>Display lines or banding</strong>: vertical or horizontal lines across part or all of the screen. Usually an internal panel fault from impact or pressure, occasionally a poorly seated connector after a previous repair</li>
+            <li><strong>Mini-LED backlight zone fault</strong>: a rectangular patch that stays dark, or a zone that stays bright on a black screen. The backlight is built into the display assembly, so this is an assembly replacement</li>
+            <li><strong>Pressure marks</strong>: marks in the shape of keys, or bright or dark spots, caused by closing the lid on a pen, earphones or a charger tip. Can be cosmetic coating damage or damage to the LCD layer underneath</li>
+            <li><strong>Half-screen black or colour shift</strong>: one part of the panel stops working, shows incorrect colours, or goes dark while the rest is normal. Panel fault requiring replacement</li>
           </ol>
 
           <h2 id="step-1">Step 1: How do I tell if MacBook Pro M5 screen is cracked or just a backlight fault?</h2>
@@ -53,56 +54,59 @@ export default function BlogMacBookProM5ScreenRepair() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Cracked screen</strong>: visible cracks, spider web pattern, ink spreading from impact point, or areas of black that follow the crack pattern. Clear physical damage</li>
-            <li><strong>Backlight fault (LCD, not OLED)</strong>: the M5 uses OLED which has no separate backlight. If the screen is completely black but you can see a very faint image with a torch held to the screen, this indicates a power fault to the panel, not a cracked OLED</li>
-            <li><strong>Display cable fault</strong>: if the screen flickers only when you open or close the lid, or when you move the lid angle, the display cable at the hinge is damaged. This presents as lines, colour shifting, or intermittent blackout tied to lid movement</li>
+            <li><strong>Backlight fault</strong>: the M5 is an LCD with a mini-LED backlight. If the screen is completely black but you can see a very faint image with a torch held close to the screen, the LCD layer is working and the backlight (or the power to it) has failed. If one zone is dark and the rest is lit, that is a backlight zone fault</li>
+            <li><strong>Display connection fault</strong>: if the screen flickers only when you open or close the lid, or when you move the lid angle, the display flex that runs through the hinge may be damaged. On the 14-inch and 16-inch MacBook Pro that flex is part of the display assembly, so the fix is usually the assembly, not a separate cable</li>
           </ul>
 
-          <h2 id="step-2">Step 2: What causes display lines on MacBook Pro M5 OLED screen?</h2>
+          <h2 id="step-2">Step 2: What causes display lines on MacBook Pro M5 screen?</h2>
           <p>
             Display lines on M5 are caused by:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Physical impact</strong>: a knock to the screen edge or corner that does not crack the glass can fracture the OLED panel internally, causing a column of pixels to fail and appear as a vertical line</li>
-            <li><strong>Hinge cable damage</strong>: the flex cable connecting the M5 logic board to the display runs through the hinge. If the hinge is forced open too far or the cable is worn from repeated opening/closing, the cable develops a fault that shows as horizontal lines across the lower or upper portion of the screen</li>
-            <li><strong>Panel connector</strong>: the OLED panel connects to the display board with a ZIF (zero insertion force) connector. If the M5 was previously opened, this connector may not be fully seated, causing partial display lines</li>
+            <li><strong>Physical impact</strong>: a knock to the screen edge or corner that does not crack the glass can still damage the LCD layer or its driver circuitry, causing a column of pixels to fail and appear as a vertical line</li>
+            <li><strong>Pressure on the closed lid</strong>: weight on the lid (a bag packed tight, something stacked on top) can press the keyboard or an object into the panel, leaving lines or pressure spots</li>
+            <li><strong>Panel connector</strong>: the display connects to the logic board with a fine-pitch connector. If the M5 was previously opened, this connector may not be fully seated, causing partial display lines. This is the one case where lines are fixed without a new panel</li>
           </ul>
 
-          <h2 id="step-3">Step 3: Does MacBook Pro M5 OLED screen get backlight bleed or burn-in?</h2>
+          <h2 id="step-3">Step 3: Does MacBook Pro M5 screen get blooming, dark zones or burn-in?</h2>
           <p>
-            Backlight bleed is an LCD phenomenon. The M5 OLED has no backlight, so there
-            is no backlight bleed. However, OLED has its own concerns:
+            The M5 uses local dimming: each backlight zone brightens or dims to match the
+            image in front of it. That gives deep blacks, but it also creates behaviours worth
+            knowing before you book a repair:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Burn-in</strong>: OLED pixels wear unevenly when displaying static high-brightness content for extended periods. The macOS Dock, menu bar, and desktop icons are common burn-in sources if the display is left on at full brightness for hours daily. After 2-3 years of heavy use, faint ghost images may appear</li>
-            <li><strong>Prevention</strong>: set the M5 to auto-lock after 2-5 minutes in System Settings, Lock Screen. Enable True Tone. Use Auto-brightness. These extend OLED panel life by reducing static content burn-in</li>
-            <li><strong>In Dubai</strong>: running the M5 at maximum brightness outdoors in Dubai sun temporarily to overcome glare accelerates OLED wear. Use True Tone and auto-brightness rather than manual maximum</li>
+            <li><strong>Blooming is normal</strong>: a faint glow or halo around bright objects on a black background (a white cursor, subtitles, a terminal window) is visible in a dark room on every mini-LED MacBook Pro. It is a trait of local dimming, not a fault, and a new panel shows it too</li>
+            <li><strong>Dark or stuck zones are a fault</strong>: a fixed rectangular patch that stays dimmer, or stays lit on a black screen, points to a failed backlight zone. That needs a display assembly replacement</li>
+            <li><strong>Burn-in</strong>: the M5 is an LCD, so it does not suffer the permanent burn-in associated with OLED screens. If a faint ghost of the Dock or menu bar stays on screen, test again after an hour off; if it persists, bring it in for a panel check</li>
           </ul>
 
           <h2 id="step-4">Step 4: Why does MacBook Pro M5 screen flicker at low brightness?</h2>
           <p>
-            OLED displays control brightness by switching pixels on and off very rapidly
-            (PWM). At low brightness, the duty cycle is short, which some users perceive
-            as flickering. This is a characteristic of OLED technology, not a fault.
+            The mini-LED backlight is dimmed by switching the LEDs on and off very rapidly
+            (PWM). Most people never notice it, but a small number of sensitive users report
+            eye strain or perceived flicker at low brightness. That is a characteristic of the
+            backlight design, not a fault.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Set display brightness to 30% or above to reduce PWM flicker perception</li>
-            <li>Enable "Reduce Motion" in System Settings, Accessibility, Display to reduce the visual impact of PWM at low brightness</li>
-            <li>Use Night Shift or True Tone: these shift the colour temperature without affecting brightness, which some users find reduces the flicker appearance</li>
-            <li>If flickering occurs at all brightness levels and is clearly a display fault rather than PWM, connect an external display to confirm the fault is in the M5 panel, not the GPU</li>
+            <li>Set display brightness higher and use a darker wallpaper or Dark Mode in dim rooms instead of turning brightness right down</li>
+            <li>Try a fixed refresh rate: System Settings, Displays, Refresh Rate. Switching from ProMotion to 60Hz rules out variable-refresh flicker in specific apps</li>
+            <li>Update macOS: display-timing flicker in particular apps is sometimes fixed in software updates</li>
+            <li>If flickering occurs at all brightness levels and is clearly a display fault, connect an external display to confirm the fault is in the M5 panel, not the GPU</li>
           </ul>
 
-          <h2 id="dubai-heat">Does Dubai heat damage MacBook Pro M5 OLED screen?</h2>
+          <h2 id="dubai-heat">Does Dubai heat damage MacBook Pro M5 screen?</h2>
           <p>
-            OLED panels are more temperature-sensitive than LCD. Prolonged exposure to high
-            temperatures accelerates OLED organic compound degradation.
+            Liquid crystal is sensitive to heat. A very hot LCD can look darker or slower to
+            respond until it cools down, and sustained heat outside Apple&apos;s rated range
+            stresses the adhesives and layers inside the display assembly.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Never leave the M5 in a parked car in Dubai. A car interior in July reaches 60-70°C, which can cause the OLED adhesive layers to separate and create air gaps that appear as dark patches or colour shifts</li>
-            <li>The M5 display has a maximum safe storage temperature of 45°C. A Dubai summer car reaches this within 15 minutes in direct sun</li>
-            <li>Operating the M5 in an air-conditioned environment at normal Dubai office temperatures (20-24°C) does not damage the OLED panel. The concern is storage in heat, not normal use in AC</li>
+            <li>Never leave the M5 in a parked car in Dubai. A car interior in summer gets far hotter than the laptop is rated for, and heat that high can cause patches, colour shifts or layer separation in the display, as well as battery damage</li>
+            <li>Apple rates the MacBook Pro for storage up to 45°C. A Dubai summer car in direct sun passes that quickly</li>
+            <li>Operating the M5 in an air-conditioned environment at normal Dubai office temperatures does not damage the display. The concern is storage in heat, not normal use in AC</li>
           </ul>
 
-          <h2 id="m5-vs-m4">MacBook Pro M5 vs M4: OLED screen differences</h2>
+          <h2 id="m5-vs-m4">MacBook Pro M5 vs M4: display differences</h2>
           <table>
             <thead>
               <tr><th>Feature</th><th>MacBook Pro M4</th><th>MacBook Pro M5</th></tr>
@@ -110,23 +114,23 @@ export default function BlogMacBookProM5ScreenRepair() {
             <tbody>
               <tr>
                 <td>Panel type</td>
-                <td>OLED (Liquid Retina XDR): first OLED on MacBook Pro</td>
-                <td>OLED (same panel generation)</td>
+                <td>Liquid Retina XDR: LCD with mini-LED backlight (not OLED)</td>
+                <td>Liquid Retina XDR: same mini-LED design (not OLED)</td>
               </tr>
               <tr>
-                <td>PWM flicker sensitivity</td>
-                <td>Same as M5</td>
-                <td>Same as M4: OLED characteristic, not chip difference</td>
+                <td>Blooming around bright objects</td>
+                <td>Normal, a trait of local dimming</td>
+                <td>Same as M4: not a chip difference</td>
               </tr>
               <tr>
-                <td>Burn-in risk</td>
-                <td>Present after 2-3 years heavy use</td>
-                <td>Same risk, M5 too new for long-term reports yet</td>
+                <td>Nano-texture option</td>
+                <td>Available</td>
+                <td>Available. A nano-texture screen must be replaced with a nano-texture assembly</td>
               </tr>
               <tr>
                 <td>Replacement cost</td>
                 <td>Price on request</td>
-                <td>Price on request: slightly higher as M5 panels are newer supply</td>
+                <td>Price on request: M5 assemblies are newer supply</td>
               </tr>
             </tbody>
           </table>
@@ -136,10 +140,10 @@ export default function BlogMacBookProM5ScreenRepair() {
             caption="MacBook Pro M5 screen repair. June 2026"
             headers={["Service", "Our price", "Apple Store", "Notes"]}
             rows={[
-              { model: "MacBook Pro M5 14-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED panel, 12-month warranty, same-day" },
-              { model: "MacBook Pro M5 16-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "OLED panel, 12-month warranty, same-day" },
-              { model: "Display cable replacement (M5 14 or 16)", ours: "Price on request", apple: "Full screen replacement", note: "Flex cable only if panel undamaged" },
-              { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Confirm crack vs cable vs GPU fault" },
+              { model: "MacBook Pro M5 14-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, 90-day (3-month) warranty, usually 2–3 days" },
+              { model: "MacBook Pro M5 16-inch screen replacement", ours: "Price on request", apple: "Price on request", note: "Liquid Retina XDR display assembly, 90-day (3-month) warranty, usually 2–3 days" },
+              { model: "Display connector reseat or clean (M5 14 or 16)", ours: "Price on request", apple: "Full screen replacement", note: "Only when the panel itself is undamaged" },
+              { model: "Display diagnostic", ours: "Free", apple: "Price on request", note: "Confirm crack vs backlight vs connection vs GPU fault" },
             ]}
           />
           <p>
@@ -148,11 +152,11 @@ export default function BlogMacBookProM5ScreenRepair() {
 
           <h2 id="when-logic">When does MacBook Pro M5 screen damage mean a board check?</h2>
           <p>
-            Most M5 screen faults are panel or cable faults. Board involvement is suspected when:
+            Most M5 screen faults are panel or connection faults. Board involvement is suspected when:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li>External monitor also shows abnormal colour or lines (confirms GPU fault, not just the panel)</li>
-            <li>Both the internal OLED and external display are affected simultaneously</li>
+            <li>Both the internal display and external display are affected simultaneously</li>
             <li>The screen went blank after a liquid spill or drop, and no power is reaching the display</li>
           </ul>
           <p>
@@ -166,34 +170,34 @@ export default function BlogMacBookProM5ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Pro M5 screen repair cost in Dubai?",
-          a: "MacBook Pro M5 OLED screen replacement price depends on whether you have the 14-inch or 16-inch model, and it is well below an Apple Store replacement. We provide a 12-month warranty on the replacement panel and same-day repair in most cases. Message us on WhatsApp for today's exact price on your model.",
+          a: "MacBook Pro M5 screen replacement price depends on whether you have the 14-inch or 16-inch model and whether it has the nano-texture option. The replacement display assembly carries a 90-day (3-month) warranty. Turnaround is usually 2–3 days; same day only if the display assembly is in stock. Message us on WhatsApp for today's exact price on your model.",
         },
         {
-          q: "Can a cracked MacBook Pro M5 OLED screen be repaired without full replacement?",
-          a: "No. OLED panels cannot be repaired once cracked. The OLED organic layer and the glass are integrated into a single unit. A cracked M5 OLED requires the entire display assembly to be replaced. Unlike older LCD MacBook Pros where only the glass was sometimes cracked, M5 OLED damage always requires full panel replacement.",
+          q: "Can a cracked MacBook Pro M5 screen be repaired without full replacement?",
+          a: "No. The M5 Liquid Retina XDR is an LCD with a mini-LED backlight, and the glass, LCD layer and backlight are laminated into one display assembly. A crack that reaches the LCD layer means the whole display assembly is replaced. Unlike some older Retina MacBook Pros, where only the glass was sometimes cracked, M5 screen damage is fixed at the assembly level.",
         },
         {
-          q: "Does leaving MacBook Pro M5 in a Dubai car damage the OLED screen?",
-          a: "Yes. A car interior in Dubai summer reaches 60-70°C in direct sun. The MacBook Pro M5 maximum safe storage temperature is 45°C. Temperatures above this can separate the OLED adhesive layers, creating dark patches or colour distortion. The damage may not appear immediately but manifests over days as the panel degrades.",
+          q: "Does leaving MacBook Pro M5 in a Dubai car damage the screen?",
+          a: "It can. Apple rates the MacBook Pro for storage up to 45°C, and a car interior in a Dubai summer passes that quickly in direct sun. Heat that high can cause patches, colour shifts or layer separation in the display and also harms the battery. The damage may not appear immediately. Keep the laptop with you or in a cool, shaded place.",
         },
         {
           q: "Why does MacBook Pro M5 screen flicker at low brightness?",
-          a: "OLED screens control brightness using PWM (pulse-width modulation), switching pixels on and off rapidly. At low brightness, the off time is longer, which some users perceive as flickering. This is an OLED characteristic, not a hardware fault. Set brightness to 30% or above to reduce the effect. If flickering occurs at all brightness levels, that is a panel fault.",
+          a: "The M5 mini-LED backlight is dimmed by switching the LEDs on and off rapidly (PWM). Most people never notice it, but some sensitive users perceive flicker at low brightness. That is a trait of the backlight, not a fault. Raise brightness, or set a fixed 60Hz refresh rate in System Settings, Displays. If flickering occurs at all brightness levels, that is a panel fault.",
         },
         {
           q: "How long does MacBook Pro M5 screen replacement take in Dubai?",
-          a: "OLED screen replacement takes 2-3 hours. We align and calibrate the replacement panel before reassembly and run a full display test covering brightness uniformity, dead pixels, and colour accuracy. Same-day service available when you drop off in the morning.",
+          a: "Usually 2–3 days, because M5 display assemblies are newer to the supply chain; same day only if the display assembly is in stock. The fitting itself takes 2-3 hours: we fit the replacement assembly and run a full display test covering brightness uniformity, backlight zones, dead pixels, and colour accuracy.",
         },
         {
           q: "Is MacBook Pro M5 screen replacement covered by warranty in Dubai?",
-          a: "Manufacturing defects (dead pixels from new, display lines from new, backlight failure within the first year) are covered by Apple warranty. Physical damage (cracks from drops) and heat damage are not covered. Our workshop replacement panels carry a 12-month warranty on parts and labour.",
+          a: "Manufacturing defects (dead pixels from new, display lines from new, backlight failure within the first year) are covered by Apple warranty. Physical damage (cracks from drops) and heat damage are not covered. Our workshop replacement display assemblies carry a 90-day (3-month) warranty on parts and labour.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. OLED and LCD." },
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models. Liquid Retina XDR and Retina LCD." },
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro screen replacement cost Dubai", href: "/blog/macbook-pro-screen-replacement-cost-dubai", description: "Full price guide for MacBook Pro screen repair, all models 2026." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
       ]}
     />
   );

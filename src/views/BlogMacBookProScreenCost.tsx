@@ -169,7 +169,7 @@ export default function BlogMacBookProScreenCost() {
               </tr>
               <tr>
                 <td>M3/M4 (2023-2024)</td>
-                <td>Liquid Retina XDR, ProMotion 120Hz, OLED on some</td>
+                <td>Liquid Retina XDR (mini-LED), ProMotion 120Hz</td>
                 <td>Limited, newer panels, higher cost and lead time</td>
               </tr>
               <tr>

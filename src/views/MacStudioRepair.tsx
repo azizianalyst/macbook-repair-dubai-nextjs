@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Mac Studio Repair Dubai - faithful rebuild of the live WordPress /mac-studio-repair-dubai page
 // (user: "same data", 2026-06-01; pulled from live site). Prior DevicePageTemplate version in git history.
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
@@ -111,7 +112,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant="secondary" size="lg">
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -196,8 +197,8 @@ export default function MacStudioRepair() {
         <div className="flex flex-wrap gap-2">
           <Link to="/mac-studio-m1-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M1 Max/Ultra (2022) →</Link>
           <Link to="/mac-studio-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M2 Max/Ultra (2023) →</Link>
-          <Link to="/mac-studio-m3-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M3 Ultra (2025) →</Link>
-          <Link to="/mac-studio-m4-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M4 Max (2025) →</Link>
+          <Link to="/mac-studio-m3-ultra-2025-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M3 Ultra (2025) →</Link>
+          <Link to="/mac-studio-m4-max-2025-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M4 Max (2025) →</Link>
           <Link to="/mac-studio-m5-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M5 Max / M5 Ultra (2026) →</Link>
         </div>
       </section>

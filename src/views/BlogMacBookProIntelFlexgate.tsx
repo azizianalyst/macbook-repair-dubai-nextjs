@@ -79,7 +79,7 @@ export default function BlogMacBookProIntelFlexgate() {
             <li>A replacement cable, either OEM or aftermarket with the correct length (some aftermarket cables are intentionally slightly longer than the original defective Apple cable, reducing future re-tearing risk), is installed</li>
             <li>Backlight LED driver test at multiple lid angles post-repair to confirm the stage-light effect is eliminated</li>
             <li>No data loss: the logic board is not touched during display cable replacement</li>
-            <li>12-month warranty on replacement cable</li>
+            <li>90-day warranty on replacement cable</li>
           </ul>
 
           <h2 id="dubai-heat">Does Dubai heat worsen MacBook Pro Flexgate?</h2>
@@ -122,8 +122,8 @@ export default function BlogMacBookProIntelFlexgate() {
           <BlogPriceTable
             caption="MacBook Pro Intel Flexgate repair pricing. June 2026"
             rows={[
-              { model: "Display cable replacement (2016 13-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Longer-than-OEM cable, 12-month warranty" },
-              { model: "Display cable replacement (2017 13/15-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Same procedure, 12-month warranty" },
+              { model: "Display cable replacement (2016 13-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Longer-than-OEM cable, 90-day warranty" },
+              { model: "Display cable replacement (2017 13/15-inch)", ours: "Price on request", apple: "Display assembly replacement", note: "Same procedure, 90-day warranty" },
               { model: "Backlight diagnostic (stage-light test)", ours: "Free", apple: "Price on request", note: "Confirm Flexgate vs other backlight fault" },
               { model: "Full display assembly (if panel also damaged)", ours: "Price on request", apple: "Price on request", note: "Only if cable tear also damaged panel LEDs" },
             ]}
@@ -165,7 +165,7 @@ export default function BlogMacBookProIntelFlexgate() {
         },
         {
           q: "How much does MacBook Pro Flexgate repair cost in Dubai?",
-          a: "Display cable replacement comes with a 12-month warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel (rare, under 15% of cases), a full display assembly is needed. Message us on WhatsApp for today's exact price on your model.",
+          a: "Display cable replacement comes with a 90-day warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel (rare, under 15% of cases), a full display assembly is needed. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Pro Flexgate repair take in Dubai?",

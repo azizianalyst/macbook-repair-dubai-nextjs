@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import {
   Star, MessageCircle, Phone, Recycle, Banknote, Truck,
@@ -181,7 +182,7 @@ export default function TradeInMacBookDubai() {
       {/* Estimator */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <Reveal>
-          <TradeInEstimator tone="dark" heading="Get your free trade-in valuation" />
+          <TradeInEstimator tone="dark" heading="Get your free trade-in valuation" headingLevel={2} />
         </Reveal>
       </section>
 
@@ -317,7 +318,7 @@ export default function TradeInMacBookDubai() {
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

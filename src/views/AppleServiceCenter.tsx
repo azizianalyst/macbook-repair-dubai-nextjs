@@ -1,7 +1,15 @@
 "use client";
-// Apple Service Center Dubai - faithful rebuild of the original WordPress page
-// (user: "save data as I give you", 2026-06-01). Prior version is in git history.
-import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+// /apple-service-center-dubai - targets the "apple service center" navigational cluster
+// (apple service center / dubai / near me / abu dhabi / sharjah / authorized / appointment).
+// Rebuilt 2026-09-26 (SEO master plan Phase 3 build 8). The prominent "independent, not Apple
+// Authorised" disclaimer is the point of the page: it answers the searcher honestly, explains
+// their real options (Apple Store, authorised provider, independent), and offers the independent
+// route for out-of-warranty work. Prior "faithful WordPress rebuild" version is in git history;
+// its unsourced claims (24/7 WhatsApp, "only genuine parts", "best technicians in the UAE",
+// same-day badges) were dropped. No prices of ours; no Apple Watch / AirPods service.
+import { ShieldAlert, Store, BadgeCheck, Wrench, Check, ExternalLink, CalendarClock, Truck, CheckCircle2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
@@ -10,314 +18,317 @@ import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { topicForPath } from "@/lib/page-images";
-import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { Button } from "@/components/ui/button";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { CtaBand } from "@/components/blocks/CtaBand";
+import { NAP, REVIEW_COUNT } from "@/content/site";
 
-const SERVICE_CENTER_COMPARISON = [
-  { label: "Wait for an appointment", us: "Walk in or free pickup, no booking needed", them: "Genius Bar appointment often days out" },
-  { label: "Typical price", us: "Around half of Apple's pricing", them: "Full retail / whole-module swap" },
-  { label: "Out-of-warranty & vintage Macs", us: "Component-level board repair", them: "Often “not serviceable” - replace" },
-  { label: "In-warranty or AppleCare+ fault", us: "We tell you honestly to go to Apple instead", them: "Covered, no charge - the right call" },
-  { label: "Turnaround", us: "Same-day on most repairs", them: "5-10 business days, often sent away" },
-  { label: "Warranty on the repair", us: "Written warranty up to 12 months", them: "Varies by service" },
+const PATH = "/apple-service-center-dubai";
+const WA_QUOTE = `${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, I'd like a quote from your independent Apple service center. Device and model: . Fault: ")}`;
+const linkCls = "text-accent underline underline-offset-2 hover:no-underline";
+
+// The three real routes to Apple service in Dubai. Ours is one of them, not a substitute for Apple.
+const OPTIONS: { icon: LucideIcon; title: string; body: string; best: string }[] = [
+  {
+    icon: Store,
+    title: "Apple Store (Genius Bar)",
+    body: "Apple's own stores in Dubai, such as those at The Dubai Mall and Mall of the Emirates, repair devices at the Genius Bar, usually by appointment through the Apple Support app.",
+    best: "Best for faults covered by Apple's warranty or AppleCare+.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Apple Authorised Service Provider",
+    body: "Companies Apple authorises to repair its products with Apple's parts and processes. Apple's repair site lists the ones near you.",
+    best: "Also a good route for covered faults, and when you want Apple's process.",
+  },
+  {
+    icon: Wrench,
+    title: "Independent specialist (that's us)",
+    body: "Not authorised by Apple. Free diagnosis, component-level repair where the fault allows, and genuine parts where available or quality-tested parts otherwise, disclosed before work starts.",
+    best: "Best for out-of-warranty faults, older Macs, board-level and data-first repairs.",
+  },
 ];
 
-const BADGES = ["Professional Services", "Customer Satisfaction", "Same Day Service", "Friendly Team"];
-
-const VALUES = [
-  { title: "Integrity", body: "Genuine and Reliable" },
-  { title: "Thorough", body: "Comprehensive Solutions" },
-  { title: "Timely", body: "On-Time Solutions" },
-  { title: "Professional", body: "Expert and Skilled" },
+const COMPARISON: { label: string; us: string; them: string }[] = [
+  { label: "Who does the repair", us: "Our own technicians at one workshop in Dubai Media City", them: "Apple, or a company Apple authorises" },
+  { label: "Getting seen", us: "Walk in Monday to Saturday, 9 am to 10 pm, or free pickup across Dubai mainland", them: "Usually by appointment, booked through Apple Support" },
+  { label: "Under warranty or AppleCare+", us: "We send you to Apple: a covered repair there is free or a set fee", them: "The right place for a covered fault" },
+  { label: "Out of warranty", us: "Component-level repair where the fault allows it", them: "Usually a module or whole-unit replacement" },
+  { label: "Parts", us: "Genuine where available, quality-tested otherwise, disclosed before work", them: "Apple parts" },
+  { label: "Price", us: "Free diagnosis, then a written quote on WhatsApp", them: "Apple publishes UAE estimates for common repairs" },
+  { label: "Warranty on the repair", us: "Up to 12 months, depending on the repair", them: "Set by Apple or the provider" },
 ];
 
-const SERVICES = [
-  { title: "Screen Repair", body: "The most common issue with MacBooks is screen damage. If your screen has minor scratches or cracks and is in repairable condition, we recommend visiting one of our MacBook screen repair stores in Dubai - our experts treat it like a piece of cake." },
-  { title: "Screen Replacement", body: "After diagnosis, we replace or repair your MacBook screen using only genuine Apple screens at a very reasonable cost. Trust us for quality service and authentic parts. Contact us today!" },
-  { title: "Battery Replacement", body: "If your MacBook battery is draining quickly, heating up, or depleting to zero in no time, its life is likely over. Visit our store for a genuine MacBook battery replacement, or call us for a cost estimate." },
-  { title: "Keyboard Repair", body: "If your MacBook keyboard is stuck, has missing keys, or has backlight issues, come to our MacBook repair center in Dubai. Our expert technicians restore your keyboard to its original condition with precision and care." },
-  { title: "Keyboard Replacement", body: "If your MacBook has physical damage or a liquid spill, the keyboard may need replacing. We provide a quick, effective solution with a genuine Apple keyboard - often within 24 hours. Call us about parts availability." },
-  { title: "Touch Bar Replacement", body: "The MacBook touch bar needs replacement if it has display issues, physical damage, or is unresponsive. Visit our store or call us for touch bar replacement in Dubai so you can keep using your device with a fully functional touch bar." },
-  { title: "Logic Board Repair", body: "Is your MacBook not turning on, randomly shutting down, stuck on the Apple logo, or showing a blank screen? The logic board may be faulty. Our experienced experts handle MacBook logic-board issues with ease, restoring it to its original condition." },
-  { title: "Data Recovery", body: "Lost data on your MacBook - from permanent deletion, hardware failure, software issues, or power surges? Our data recovery experts can retrieve your data while maintaining confidentiality." },
-  { title: "SSD Upgrade", body: "Running out of storage space? An SSD upgrade increases storage and optimises overall performance. Visit our store today." },
-  { title: "RAM Upgrade", body: "More RAM means your Mac can perform more tasks simultaneously, reducing slowdowns and crashes. Visit us if your MacBook is experiencing slow performance." },
-  { title: "Software Troubleshooting", body: "Experiencing glitches, slowdowns, or system errors? Our skilled technicians diagnose and address software issues promptly, ensuring your MacBook operates smoothly." },
-  { title: "Virus Removal", body: "Macs are less prone to viruses, but an infection can slow your device or corrupt data. If you suspect a virus but can't detect it, visit our MacBook service center in Dubai or contact us for assistance." },
-  { title: "Trackpad Replacement", body: "Replacing a MacBook trackpad requires expert technicians, genuine parts, and the right tools - we have all of these at our workshop in Dubai, so your fingers experience the genuine feel of the trackpad." },
-  { title: "Charging Port Repair", body: "Sometimes, even after replacing the adapter, your Mac won't restart. The port might be burnt or have another issue an expert can detect. Give us a call for a free opinion." },
-  { title: "Speaker Repair", body: "Sound is integral to your device. If your Mac speaker is producing crackling sounds, it may need repair or replacement with genuine speakers. Call us to confirm availability." },
-  { title: "Fan Replacement", body: "Is your MacBook overheating, or is the fan noisy or broken? It affects performance. Our experts can replace your MacBook fan within a few hours." },
-  { title: "Overheating Issues Diagnosis and Repair", body: "Overheating can be caused by room temperature, fans not working, or blocked vents. Whatever the reason, our experts can diagnose and repair it for better performance of your Apple laptop." },
-  { title: "Hinge Repair", body: "The hinge holds the screen at the perfect angle. If it's loose or stuck, it can affect other parts and expose the display cable to dust. Our expert team can repair it perfectly." },
-  { title: "Wi-Fi and Bluetooth Issues Diagnosis and Repair", body: "If connectivity issues persist after checking settings and restarting, visit our service center for a thorough diagnosis and repair. Our team provides an on-the-spot time estimate for delivery." },
-  { title: "Water / Liquid Damage Repair", body: "Once liquid enters your device, the keyboard may become faulty or the Mac may short-circuit. Visit our service shop in Dubai for complete testing and solutions." },
-  { title: "Power Button Repair", body: "Press and hold the power button, check the power connections, and unplug all accessories - this may resolve the issue. If it persists, visit our store for a complete assessment." },
-  { title: "SSD Data Migration", body: "MacBook data migration from HDD to SSD, or transferring SSD data to another Mac. All data is transferred securely with confidentiality maintained. Time required depends on the volume of data." },
-  { title: "Backup and Restore Services", body: "Normally the Mac automatically restores your backup. If you need help with restoration or backup, our team can assist with a secure backup plan. Visit or call for further assistance." },
+// Compact, link-first service list - every href is a live route (routes.generated.ts).
+const SERVICE_GROUPS: { device: string; hub: string; items: { label: string; href: string }[] }[] = [
+  { device: "MacBook", hub: "/", items: [
+    { label: "Screen repair", href: "/macbook-screen-repair-dubai" },
+    { label: "Battery replacement", href: "/macbook-battery-replacement-dubai" },
+    { label: "Keyboard repair", href: "/macbook-keyboard-repair-dubai" },
+    { label: "Charging port repair", href: "/macbook-charging-port-repair-dubai" },
+    { label: "Logic board repair", href: "/macbook-logic-board-repair-dubai" },
+    { label: "Water damage repair", href: "/macbook-water-damage-repair-dubai" },
+    { label: "Data recovery", href: "/macbook-data-recovery-dubai" },
+  ] },
+  { device: "iMac and desktop Macs", hub: "/imac-repair-dubai", items: [
+    { label: "iMac repair", href: "/imac-repair-dubai" },
+    { label: "iMac screen repair", href: "/imac-screen-repair-dubai" },
+    { label: "Mac mini repair", href: "/mac-mini-repair-dubai" },
+    { label: "Mac Studio repair", href: "/mac-studio-repair-dubai" },
+    { label: "Mac Pro repair", href: "/mac-pro-repair-dubai" },
+  ] },
+  { device: "iPhone", hub: "/iphone-repair-dubai", items: [
+    { label: "Screen repair", href: "/iphone-screen-repair-dubai" },
+    { label: "Battery replacement", href: "/iphone-battery-replacement-dubai" },
+    { label: "Back glass repair", href: "/iphone-back-glass-repair-dubai" },
+    { label: "Charging port repair", href: "/iphone-charging-port-repair-dubai" },
+    { label: "Water damage repair", href: "/iphone-water-damage-repair-dubai" },
+  ] },
+  { device: "iPad", hub: "/ipad-repair-dubai", items: [
+    { label: "Screen repair", href: "/ipad-screen-repair-dubai" },
+    { label: "Battery replacement", href: "/ipad-battery-replacement-dubai" },
+    { label: "Charging port repair", href: "/ipad-charging-port-repair-dubai" },
+  ] },
 ];
 
-const PREP_STEPS = [
-  { title: "iCloud Backup", items: ["Connect your device to a Wi-Fi network.", "Go to Settings (your name) and tap iCloud.", "Tap iCloud Backup.", "Select Back Up Now and stay connected to the internet until the process ends."] },
-  { title: "Disable Security Features", items: ["Find My: Go to Settings and turn off Find My (iPhone/Mac/iPad).", "Passcodes & Passwords: Go to Settings → Touch ID & Passcode and disable it."] },
-  { title: "Deauthorize Accounts", items: ["Deauthorize your device from iTunes (if applicable).", "Open iTunes, go to Account → Authorizations, and deauthorize it."] },
-  { title: "Prepare Your Device", items: ["Remove the SIM card if your iPhone or iPad carries one.", "Unpair your Apple Watch from your iPhone."] },
+const PREP = [
+  "Back up first: iCloud or a computer backup for an iPhone or iPad, Time Machine for a Mac that still starts.",
+  "Have your passcode or Mac login ready, because checking a repair usually needs the device unlocked.",
+  "Don't erase the device before you bring it in. We diagnose with your data in place and ask before anything is erased.",
 ];
-
-const WHEN = [
-  { title: "Physical Damage", body: "If your Apple product suffers any physical damage like a cracked screen, a broken panel, or a damaged case." },
-  { title: "Battery Issues", body: "If your device's battery is draining quickly, not charging properly, or swelling." },
-  { title: "Software Issues", body: "If your Apple device is unresponsive - perhaps due to updates or low memory - and it persists even after the latest update." },
-  { title: "Internet Connectivity Problems", body: "If Wi-Fi, Bluetooth, or other connectivity issues persist even after basic troubleshooting." },
-  { title: "Water Spill Damage", body: "If your device is exposed to water or other liquids, get it inspected by experts at an Apple service center." },
-  { title: "Overheating", body: "A device that overheats frequently might indicate an internal problem that needs professional attention." },
-  { title: "Failure to Self-Repair", body: "If you've attempted to fix the device yourself and the issue persists or has worsened." },
-  { title: "Outdated Software", body: "Your device is stuck on an old software version and you're unable to update it." },
-];
-
-const BENEFITS = [
-  { title: "Expert Assistance", body: "Receive professional help from expert technicians." },
-  { title: "Quality Repairs", body: "Our team ensures high-quality repairs using only genuine parts." },
-  { title: "Help Guidance", body: "WhatsApp is answered 24/7, so you can ask a question or get a quote any time." },
-  { title: "Timely Service", body: "We make sure to fulfil all commitments we made with you, on time." },
-  { title: "Extended Device Life", body: "Our skilled team enhances the longevity and performance of your device." },
-  { title: "Technical Advice", body: "Receive guidance from experts on device maintenance and usage." },
-  { title: "Remote Software Support", body: "Software issues - slow performance, iCloud sync, app crashes - are often diagnosed and fixed remotely, without a pickup." },
-  { title: "Peace of Mind", body: "Relax knowing your device is in reliable hands." },
-];
-
-const TOOLS = [
-  "Pentalobe Screwdrivers", "Plastic Opening Tools", "Heat Gun / iOpener", "Anti-Static Brushes",
-  "Plastic Cards", "Torx Screwdrivers", "Suction Cup", "Nylon Probe Tool", "Microfiber Cloth",
-  "Diagnostic Software", "Tri-Wing Screwdrivers", "Spudgers", "Magnetic Mat", "Battery Removal Tool",
-  "Ultrasonic Cleaner", "T5 & T6 Screwdrivers", "Tweezers", "ESD Mat & Wrist Strap",
-  "SIM Card Eject Tool", "Display Assembly Fixtures",
-];
-
-// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
-// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
-  { q: "Are you an official or Apple Authorised Service Center?", a: "No - we are an independent Apple service center, not an Apple Authorised Service Provider. If your device is still covered by Apple's warranty or AppleCare+, we'll tell you honestly and point you to Apple, because that route is free for a covered fault. For everything else - out-of-warranty, older models, or component-level board repair Apple won't attempt - we're usually faster and around half the price." },
-  { q: "Is it possible to drop off my Apple device, or do I have to schedule an appointment first?", a: "You can absolutely drop off your Apple device at our location. Our service is designed to be convenient and efficient, whether you schedule an appointment or drop off your device spontaneously." },
-  { q: "Do you provide a warranty on repairs?", a: "Yes, we provide a warranty for your peace of mind. Depending on the type of repair, we offer a warranty covering both parts and labour, and our team will take care of any issues you have with your device after we repair it." },
-  { q: "My device is out of warranty. Can you still repair it?", a: "Yes, we offer repair services for both in-warranty and out-of-warranty devices. Any device can be diagnosed and repaired by one of our skilled technicians." },
-  { q: "Do you repair all types of Apple devices?", a: "Yes, we repair all Apple devices, including MacBook Pro, MacBook Air, iMac, iMac Pro, iPhone, and iPad. Whether it's a minor issue or a major hardware failure, our experienced Apple technicians can fix it quickly and efficiently." },
+  { q: "Is MacBook Repair Dubai an official or Apple Authorised Service Center?",
+    a: "No. We are an independent Apple repair workshop in Dubai Media City: not Apple, not an Apple Store and not an Apple Authorised Service Provider. If Apple's warranty or AppleCare+ covers your fault, we will tell you to go to Apple. For out-of-warranty and board-level repairs, we are an independent alternative." },
+  { q: "Where is the nearest Apple service center to me in Dubai?",
+    a: "Apple's locator on support.apple.com/repair shows the nearest Apple Store and authorised providers for your location. If an independent repair suits you, our workshop is in Concord Tower, Dubai Media City, across from the Media City Metro station, open Monday to Saturday from 9 am to 10 pm, with free pickup across Dubai mainland." },
+  { q: "Do I need an appointment?",
+    a: "No. Walk in during opening hours or book a free pickup. Sending the model and fault on WhatsApp first helps us check part availability before you travel. Diagnosis is free, and nothing is repaired until you approve the written quote." },
+  { q: "My device is under warranty. Should I go to Apple instead?",
+    a: "Usually, yes. If Apple's warranty or AppleCare+ covers the fault, Apple or an authorised provider repairs it free or for a set fee, and we will say so rather than quote you. Accidental damage, expired warranties and older models are where independent repair makes more sense." },
+  { q: "Do you have an Apple service center in Abu Dhabi or Sharjah?",
+    a: "No. We have one workshop, in Dubai Media City, and no branches. For Macs we arrange free courier collection: Sharjah collections are usually same day, and Abu Dhabi collections are next day with a typical 1-2 day round trip. For an iPhone or iPad outside Dubai, message us first on WhatsApp." },
+  { q: "Do you repair Apple Watch or AirPods?",
+    a: "No. Apple Watch, AirPods, Apple TV and HomePod are not repaired here, and we do not take them in to send elsewhere. Apple services them directly: start at support.apple.com/repair. We repair MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad." },
 ];
 
-function CallButtons() {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
-      </Button>
-      <Button asChild variant="secondary" size="lg">
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
-
 export default function AppleServiceCenter() {
-  const reviews = pickReviews(["Aron", "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 \u0421\u0442\u0440\u043e\u043a\u043e\u0432", "Iryna Buchynska"], { devices: reviewDevicesForPath("/apple-service-center-dubai"), min: 3, seed: "/apple-service-center-dubai" });
-  useSeo(
-    {
-      title: "Apple Service Center Dubai - Independent, Not Authorised",
-      description:
-        "Independent Apple service center in Dubai - not Apple Authorised. MacBook, iPhone, iPad & iMac repairs, genuine or quality-tested parts, same-day. WhatsApp for a price.",
-      path: "/apple-service-center-dubai",
-    },
-    [localBusiness(), organization()],
-  );
+  const reviews = pickReviews(["Aron", "Дмитрий Строков", "Iryna Buchynska"], { devices: reviewDevicesForPath(PATH), min: 3, seed: PATH });
+  // Organization, LocalBusiness and the Service node are server-rendered by <PageSchema>.
 
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
-      <Hero
-        image={topicForPath("/apple-service-center-dubai")?.src}
-        imageAlt={topicForPath("/apple-service-center-dubai")?.alt}
-        variant="device"
-        tone="dark"
-        eyebrow="Independent Apple Service Center - Not Apple Authorised"
-        title="Apple Service Center Dubai - Independent Repairs for MacBook, iMac & More"
-        subtitle="Fast, honest repairs for your MacBook Pro, MacBook Air and other Apple devices. From maintenance and cleaning to screen replacements and battery fixes, our technicians use genuine Apple parts where available and quality-tested parts otherwise - we tell you which before any work starts. Join hundreds of satisfied customers and experience our 5.0-star service today."
-      >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Customer rating 5.0</span>
-          <span>·</span>
-          <span>Independent, not Apple Authorised</span>
-          <span>·</span>
-          <span>Same-day service</span>
-        </p>
-      </Hero>
+        <Hero
+          image={topicForPath(PATH)?.src}
+          imageAlt={topicForPath(PATH)?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="Independent Apple Service Center - Not Apple Authorised"
+          title="Apple Service Center Dubai: an Independent Alternative for Mac, iPhone and iPad"
+          subtitle="Not Apple, and not an Apple Authorised Service Provider: an independent repair workshop in Dubai Media City. Free diagnosis, a written quote before any work, no appointment needed."
+          ctaLabel="WhatsApp the workshop"
+        />
 
-      <QuickAnswer
-        tone="dark"
-        question="Is this an official Apple service centre?"
-        answer="No. MacBook Repair Dubai is an independent Apple specialist in Dubai Media City, not an Apple Authorised Service Provider. We repair MacBook, iMac and other Apple devices at component level, using genuine parts where available and telling you before work starts when a part is not genuine. If your device is still under AppleCare, we will say when Apple is the better route."
-      />
-
-      <USPStrip tone="dark" />
-
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <BreadcrumbTrail tone="dark" trail={[
-          { name: "Home", path: "/" },
-          { name: "Apple Service Center", path: "/apple-service-center-dubai" },
-        ]} />
-      </section>
-
-      {/* Trust badges + values */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <ul className="flex flex-wrap gap-2 mb-lg">
-          {BADGES.map((b) => (
-            <li key={b} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[14px] text-text">{b}</li>
-          ))}
-        </ul>
-        <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
-          {VALUES.map((v) => (
-            <article key={v.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <h3 className="text-[18px] font-bold mb-1">{v.title}</h3>
-              <p className="text-[14px] text-text-muted">{v.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <VsAppleStore
-        tone="dark"
-        heading="Independent Apple Service Center vs an Authorised Center"
-        intro="We are an independent Apple service center in Dubai, not an Apple Authorised Service Provider. Here's honestly how the two compare - including when Apple or an authorised center is genuinely the better call."
-        rows={SERVICE_CENTER_COMPARISON}
-      />
-
-      {/* Services */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Repair Services for Your Apple Device</h2>
-          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">MacBook Pro / Air services - we also service iPhone, iPad and iMac. The most-requested MacBook repairs:</p>
-          <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s) => (
-              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
-              </article>
-            ))}
+        {/* The disclaimer, stated as plainly as the page title is searched */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl" aria-label="Independent service disclaimer">
+          <div className="border border-border/70 border-l-4 border-l-accent bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex gap-md max-w-[85ch]">
+            <ShieldAlert size={28} className="text-accent shrink-0 mt-1" aria-hidden />
+            <p className="text-[16px] text-text leading-relaxed m-0">
+              <strong>Please read first:</strong> MacBook Repair Dubai is not an Apple Store, not Apple, and not an Apple Authorised Service Provider. If your device is covered by Apple's warranty or AppleCare+, Apple is usually the better route, and{" "}
+              <a href="https://support.apple.com/repair" target="_blank" rel="noopener noreferrer" className={linkCls}>support.apple.com/repair <ExternalLink size={13} className="inline" aria-hidden /></a>{" "}
+              is where to start. For everything else, we are an independent option in Dubai Media City.
+            </p>
           </div>
-          <div className="mt-lg"><CallButtons /></div>
-        </div>
-      </section>
+        </section>
 
-      {/* Prep steps */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm">Important Steps Before Taking Your Device for Service</h2>
-        <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Before bringing in your Apple device, follow a few important steps to keep your data safe and protected:</p>
-        <div className="grid gap-md sm:grid-cols-2">
-          {PREP_STEPS.map((g) => (
-            <article key={g.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <h3 className="text-[18px] font-bold mb-sm">{g.title}</h3>
-              <ul className="space-y-2">
-                {g.items.map((it) => (
-                  <li key={it} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {it}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
+        <QuickAnswer
+          tone="dark"
+          question="Is this an official Apple service center?"
+          answer="No. MacBook Repair Dubai is an independent Apple repair workshop in Dubai Media City, not Apple and not an Apple Authorised Service Provider. We repair Mac, iPhone and iPad with no appointment needed. If Apple's warranty or AppleCare+ covers your fault, we will tell you to go to Apple instead."
+        />
 
-      {/* When to seek service */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">How Soon Should You Seek Our Apple Repair Services?</h2>
-          <p className="text-[16px] text-text-muted max-w-[75ch] mb-lg">Regular maintenance and timely repairs prolong the life of your Apple device. Visit our service center in these situations:</p>
-          <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
-            {WHEN.map((w) => (
-              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <h3 className="text-[16px] font-bold mb-sm">{w.title}</h3>
-                <p className="text-[14px] text-text-muted leading-relaxed">{w.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail tone="dark" trail={[
+            { name: "Home", path: "/" },
+            { name: "Apple Service Center Dubai", path: PATH },
+          ]} />
+        </section>
 
-      {/* Benefits */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm">Benefits of Engaging with Our Apple Service Center</h2>
-        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">We are committed to providing incredible service. Our team collaborates closely with you to develop a comprehensive plan for any upgrade or servicing needs. Choose us for the following reasons:</p>
-        <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
-          {BENEFITS.map((b) => (
-            <article key={b.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <h3 className="text-[16px] font-bold mb-sm">{b.title}</h3>
-              <p className="text-[14px] text-text-muted leading-relaxed">{b.body}</p>
-            </article>
-          ))}
-        </div>
-        <p className="text-[15px] text-text-muted leading-relaxed max-w-[80ch] mt-lg">
-          Our recruitment process is so organised that all technicians undergo assessment tasks before being hired - that's why our team consists of the best Apple technicians in the UAE. We also have an audit team that gathers customer reviews to ensure no customer is dissatisfied. Once your device is optimised, we conduct comprehensive testing to confirm repairs or upgrades are successful, and our experts provide guidance on setting up regular data backups to prevent future data loss.
-        </p>
-      </section>
-
-      {/* Reviews */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Customer Reviews</h2>
-          <p className="text-[16px] text-text-muted mb-lg">Don't take just our word for it - our satisfied customers say it best.</p>
-          <ReviewGrid reviews={reviews} tone="dark" />
-        </div>
-      </section>
-
-      {/* Tools */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm">Tools We Use for Apple Repairs</h2>
-        <p className="text-[16px] text-text-muted max-w-[80ch] mb-lg">Apple products are built with premium materials, so our repair tools are of exceptionally high quality too - the same precision tooling an authorised center uses, run by an independent team.</p>
-        <ul className="flex flex-wrap gap-2">
-          {TOOLS.map((t) => (
-            <li key={t} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text-muted">{t}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* FAQ */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} injectSchema />
-      </section>
-
-      {/* Location */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg">Where to Find Us</h2>
-        <LocationBlock tone="dark" />
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">Get a technician's opinion today</h2>
-          <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Independent Apple specialists, genuine or quality-tested parts, same-day service. WhatsApp or call us for a free assessment of your Apple device.
+        {/* Options */}
+        <section aria-labelledby="options" className="mx-auto max-w-content px-5 md:px-6 mt-2xl">
+          <h2 id="options" className="text-[28px] md:text-[32px] mb-sm">Your options for Apple service in Dubai</h2>
+          <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mb-lg">
+            People searching for an Apple service center usually want one of three things: Apple itself, a provider Apple authorises, or someone who can simply fix the device. Here is what each one is, and when it is the right choice.
           </p>
-          <CallButtons />
+          <div className="grid gap-md md:grid-cols-3">
+            {OPTIONS.map(({ icon: Icon, title, body, best }) => (
+              <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col">
+                <Icon size={28} className="text-accent mb-md" aria-hidden />
+                <h3 className="text-[19px] font-bold mb-sm">{title}</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed mb-md">{body}</p>
+                <p className="text-[14px] text-text font-medium mt-auto m-0">{best}</p>
+              </article>
+            ))}
           </div>
-        </div>
-      </section>
+          <p className="text-[14px] text-text-faint mt-md max-w-[80ch]">
+            Apple's current UAE store list is at <a href="https://www.apple.com/ae/retail/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">apple.com/ae/retail</a>. Apple's own UAE repair estimates are compared on our <Link to="/apple-repair-dubai" className={linkCls}>Apple repair Dubai</Link> page.
+          </p>
+        </section>
+
+        {/* Authorised near me */}
+        <section aria-labelledby="authorised" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 id="authorised" className="text-[28px] md:text-[32px] mb-md">Looking for an Apple authorized service center near you?</h2>
+          <div className="max-w-[75ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+            <p className="m-0">
+              We are not one, so we will not pretend otherwise. To find an Apple authorized service center in Dubai, use Apple's locator on <a href="https://support.apple.com/repair" target="_blank" rel="noopener noreferrer" className={linkCls}>support.apple.com/repair</a> or the Apple Support app, which lists Apple Stores and authorised providers near you. Apple's coverage check at <a href="https://checkcoverage.apple.com/" target="_blank" rel="noopener noreferrer" className={linkCls}>checkcoverage.apple.com</a> tells you whether your serial number is still under warranty or AppleCare+.
+            </p>
+            <p className="m-0">
+              If the device is out of warranty, Apple has quoted a whole-module replacement for a fault that could be fixed on the board, or the model is too old for Apple to service, a free second opinion from an independent workshop is worth having. Our guides to <Link to="/out-of-warranty-apple-repair-dubai" className={linkCls}>out-of-warranty Apple repair</Link> and <Link to="/applecare-macbook-repair-dubai" className={linkCls}>AppleCare vs independent MacBook repair</Link> explain the trade-offs.
+            </p>
+          </div>
+        </section>
+
+        {/* Appointment overflow */}
+        <section aria-labelledby="appointment" className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 id="appointment" className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
+              <CalendarClock size={28} className="text-accent shrink-0" aria-hidden /> Can't get an Apple service center appointment in Dubai?
+            </h2>
+            <div className="max-w-[75ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+              <p className="m-0">
+                Apple's Genius Bar works mainly by appointment, and in the weeks after a launch (the iPhone 18 Pro went on sale on 18 September 2026) the next free slot at a busy mall store can be days away. If the device is under warranty, waiting for Apple is usually still worth it: a covered repair costs you nothing.
+              </p>
+              <p className="m-0">
+                If it is out of warranty or the damage is accidental, you do not need an appointment here: walk in Monday to Saturday, 9 am to 10 pm, or book free pickup across Dubai mainland. Our guide on <Link to="/blog/apple-repair-appointment-dubai" className={linkCls}>what to do when you can't get an Apple repair appointment in Dubai</Link> covers both routes step by step.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Independent vs Apple / authorised */}
+        <section aria-labelledby="compare" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 id="compare" className="text-[28px] md:text-[32px] mb-sm">Independent repair vs Apple or an authorised center</h2>
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">An honest side-by-side, including where Apple is the better call.</p>
+          <ul className="md:hidden flex flex-col gap-sm list-none p-0 m-0">
+            {COMPARISON.map((r) => (
+              <li key={r.label} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
+                <p className="font-semibold text-text mb-sm">{r.label}</p>
+                <p className="text-[14px] text-text mb-xs"><span className="font-semibold text-accent">Independent (us):</span> {r.us}</p>
+                <p className="text-[14px] text-text-muted m-0"><span className="font-semibold">Apple / authorised:</span> {r.them}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden md:block overflow-x-auto rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
+            <table className="w-full text-[14px]">
+              <caption className="sr-only">Independent repair at MacBook Repair Dubai compared with Apple or an Apple Authorised Service Provider</caption>
+              <thead>
+                <tr className="text-left border-b border-border">
+                  <th scope="col" className="px-md py-md w-[24%]"><span className="sr-only">Factor</span></th>
+                  <th scope="col" className="px-md py-md font-semibold text-accent">Independent (MacBook Repair Dubai)</th>
+                  <th scope="col" className="px-md py-md font-semibold text-text-muted">Apple Store or authorised provider</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON.map((r, i) => (
+                  <tr key={r.label} className={i % 2 ? "bg-bg-alt" : ""}>
+                    <th scope="row" className="px-md py-md text-left font-semibold align-top text-text">{r.label}</th>
+                    <td className="px-md py-md align-top text-text"><span className="flex gap-2"><Check size={16} className="shrink-0 mt-0.5 text-accent" aria-hidden /> {r.us}</span></td>
+                    <td className="px-md py-md align-top text-text-muted">{r.them}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Other emirates */}
+        <section aria-labelledby="emirates" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 id="emirates" className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
+            <Truck size={28} className="text-accent shrink-0" aria-hidden /> Apple service center in Abu Dhabi or Sharjah?
+          </h2>
+          <div className="max-w-[75ch] space-y-md text-[16px] text-text-muted leading-relaxed">
+            <p className="m-0">
+              We have one workshop, in Dubai Media City, and no branch in Abu Dhabi, Sharjah or any other emirate. What we do offer is free courier collection for Macs. In Sharjah a courier usually collects the same day; from Abu Dhabi, collection is the next day and the round trip typically takes 1-2 days. The details are on <Link to="/macbook-repair-abu-dhabi" className={linkCls}>MacBook repair Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>MacBook repair Sharjah</Link>.
+            </p>
+            <p className="m-0">
+              For an iPhone or iPad outside Dubai, WhatsApp us first for the quickest option. Apple's own stores and authorised providers in Abu Dhabi and Sharjah are in the locator on support.apple.com/repair.
+            </p>
+          </div>
+        </section>
+
+        {/* What we repair */}
+        <section aria-labelledby="services" className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 id="services" className="text-[28px] md:text-[32px] mb-sm">What our independent Apple service center repairs</h2>
+            <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+              Macs are most of our work, with iPhone and iPad alongside. Apple Watch, AirPods, Apple TV and HomePod are not repaired here. The full overview is on <Link to="/apple-repair-dubai" className={linkCls}>Apple repair Dubai</Link>.
+            </p>
+            <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
+              {SERVICE_GROUPS.map((g) => (
+                <article key={g.device} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                  <h3 className="text-[18px] font-bold mb-sm"><Link to={g.hub} className="text-text hover:text-accent">{g.device} repair</Link></h3>
+                  <ul className="grid gap-1.5 list-none p-0 m-0">
+                    {g.items.map((it) => (
+                      <li key={it.href}><Link to={it.href} className="text-[14px] text-text-muted hover:text-accent">{it.label}</Link></li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Prep */}
+        <section aria-labelledby="prep" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 id="prep" className="text-[28px] md:text-[32px] mb-md">Before you hand over any Apple device</h2>
+          <ul className="space-y-2 max-w-[75ch] list-none p-0 m-0">
+            {PREP.map((p) => (
+              <li key={p} className="flex gap-sm text-[16px] text-text-muted leading-relaxed"><CheckCircle2 size={18} className="text-accent shrink-0 mt-1" aria-hidden /> {p}</li>
+            ))}
+          </ul>
+          <p className="text-[15px] text-text-muted leading-relaxed max-w-[75ch] mt-md">
+            Warranty on our repairs depends on the job: up to 12 months on hardware, 3 months with an 80% capacity guarantee on batteries, 90 days on screens, and 15 days on keyboard, software, logic-board, liquid-damage and data work. See the <Link to="/warranty" className={linkCls}>warranty page</Link>, and check <Link to="/apple-repair-programs-dubai" className={linkCls}>Apple's repair programs</Link> in case your fault is one Apple fixes free.
+          </p>
+        </section>
+
+        {/* Reviews */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-sm">Customer reviews</h2>
+            <p className="text-[16px] text-text-muted mb-lg">From our {REVIEW_COUNT}+ Google reviews. <Link to="/reviews" className={linkCls}>Read them all</Link>.</p>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Apple service center Dubai: frequently asked questions</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Where to find us</h2>
+          <LocationBlock tone="dark" />
+        </section>
       </div>
-      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+
       <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
         <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
-        <LeadForm preset={PRESETS.repair} sourcePath="/apple-service-center-dubai" defaultDeviceType="MacBook" />
+        <LeadForm preset={PRESETS.repair} sourcePath={PATH} defaultDeviceType="MacBook" />
       </section>
 
-      <RelatedArticles path="/apple-service-center-dubai" />
+      <CtaBand
+        eyebrow="Independent, not Apple Authorised"
+        headline="Out of warranty? Get a technician's opinion today"
+        description="Send the model and fault on WhatsApp. Free diagnosis, written quote before any work, no fix no charge."
+        whatsappLabel="WhatsApp for a quote"
+        whatsappHref={WA_QUOTE}
+        className="mt-3xl"
+      />
+
+      <RelatedArticles path={PATH} />
     </PageShell>
   );
 }

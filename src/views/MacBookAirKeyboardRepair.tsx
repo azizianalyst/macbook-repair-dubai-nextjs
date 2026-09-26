@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
@@ -95,7 +96,7 @@ const FAQ_GROUPS: { title: string; items: FaqItem[]; injectSchema?: boolean }[] 
     items: [
       {
         q: "How much does MacBook Air keyboard repair cost in Dubai?",
-        a: "MacBook Air keyboard repair at MacBook Repair Dubai covers individual key replacement on M1–M4 models, Intel Air top-case replacement, and full top-case swaps — usually well below Apple's pricing. Every quote includes diagnosis, parts, and labour. Message us on WhatsApp with your model for today's exact price.",
+        a: "MacBook Air keyboard repair at MacBook Repair Dubai covers individual key replacement on M1–M4 models, Intel Air top-case replacement, and full top-case swaps — quoted before any work so you can compare with Apple. Every quote includes diagnosis, parts, and labour. Message us on WhatsApp with your model for today's exact price.",
       },
       {
         q: "How long does MacBook Air keyboard repair take in Dubai?",
@@ -135,7 +136,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
         <a
-          href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air keyboard repair quote please. Model: ")}`}
+          href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Air keyboard repair quote please. Model: ")}`)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -259,7 +260,7 @@ export default function MacBookAirKeyboardRepair() {
                 {KEYBOARD_GENS.map((k) => (
                   <tr key={k.chip} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm">
-                      <a href={k.href} className="text-accent hover:underline font-medium">{k.chip}</a>
+                      <a href={withSlash(k.href)} className="text-accent hover:underline font-medium">{k.chip}</a>
                     </td>
                     <td className="px-lg py-sm font-medium text-text">{k.type}</td>
                     <td className="px-lg py-sm text-text-muted">{k.touchId ? "Yes" : "No"}</td>

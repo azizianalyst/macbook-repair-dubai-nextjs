@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Check, Building2, Droplets, Search } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -35,7 +36,7 @@ const STEPS = [
 
 const WHY = [
   { title: "Repaired in-house since 2004", body: "The same Dubai workshop that has serviced Apple hardware since 2004 handles every covered repair - not a third party you never meet." },
-  { title: "12-month repair warranty", body: "Every repair carried out under your plan is backed by our standard 12-month workmanship warranty on the work performed." },
+  { title: "Written repair warranty", body: "Every repair carried out under your plan is backed by our standard written warranty for that repair type, up to 12 months." },
   { title: "Free pickup across Dubai", body: "Covered devices are collected and delivered free across Dubai, so a claim does not mean a trip across the city." },
 ];
 
@@ -156,7 +157,7 @@ export default function MacBookInsurance() {
           <strong>MacBook Repair Dubai</strong> does more than repair Apple laptops - we offer insurance plans that protect your MacBook from accidental damage, liquid spills, broken screens, hardware failure, and theft or loss. Cover is independent of Apple, handled by the same Dubai workshop that has serviced Apple hardware since 2004. Plans are available for individuals and freelancers, with custom packages for companies running several devices.
         </p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
-          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our 12-month workmanship warranty.
+          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our written warranty for that repair type, up to 12 months.
         </p>
       </section>
 
@@ -245,7 +246,7 @@ export default function MacBookInsurance() {
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Message on WhatsApp
               </a>
             </Button>

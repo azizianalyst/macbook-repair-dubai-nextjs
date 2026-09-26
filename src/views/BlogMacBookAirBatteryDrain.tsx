@@ -227,7 +227,7 @@ export default function BlogMacBookAirBatteryDrain() {
           <p>
             Battery replacement at our Dubai Media City workshop takes 30-60 minutes for
             M-series MacBook Air models and up to 90 minutes for older Intel units. We use
-            OEM-grade cells with a 12-month warranty on parts and labour:
+            OEM-grade cells with a 3-month warranty and an 80% capacity guarantee:
           </p>
           <BlogPriceTable
             caption="MacBook Air battery replacement pricing. June 2026"

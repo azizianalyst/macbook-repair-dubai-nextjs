@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Droplets, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star, Siren } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
@@ -65,7 +66,7 @@ const PROCESS = [
   { title: "48-hour drying + bench test",
     body: "Drying cabinet at 35 °C for 48 hours. Then powered up on bench supply with current monitor - looking for the corrosion-induced shorts that don't show in cold inspection." },
   { title: "Re-assembly + 7-day soak test + handover",
-    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with the warranty of up to 12 months." },
+    body: "Re-assembled with new adhesives, then run for 7 days at the workshop on a customer-data-free macOS install. If it survives 7 days clean, it leaves with a 15-day written warranty on the repaired components." },
 ];
 
 const FAQS: FAQ[] = [
@@ -82,11 +83,11 @@ const FAQS: FAQ[] = [
   { q: "I already put my MacBook in rice - is it ruined?",
     a: "Not necessarily, but rice is folklore - it absorbs ambient humidity, not the liquid trapped inside. Meanwhile corrosion continues silently. Bring it in immediately. The workshop has recovered MacBooks that spent a week in rice, but the success rate is half what it would have been if it had come straight in." },
   { q: "Can you recover my data even if the MacBook is unrecoverable?",
-    a: "Yes - data recovery is a separate service. The SSD chips are read directly with a chip-off recovery rig if the controller is dead. On Apple Silicon and T2 Macs the SSD is encrypted and bonded to the secure enclave - recovery requires a working logic board, so data recovery is more difficult on these models. Honesty: success rates are 70% on Intel, 35% on Apple Silicon and T2." },
+    a: "Yes - data recovery is a separate service. On older Intel MacBooks with a removable SSD, the drive is cleaned and read on its own. On Apple silicon and T2 Macs the SSD is encrypted with a key held in the Mac's own security chip, so chip-off cannot work: recovery requires getting the original logic board running, which is why it is harder on these models. The free diagnosis tells you the realistic chance for your MacBook before any paid work." },
   { q: "Do you charge if my MacBook is unrecoverable?",
     a: "No - no fix, no charge. If the logic board is beyond component-level repair, you pay nothing for the diagnosis and ultrasonic clean. The free written diagnostic report is yours to take to insurance, Apple, or any other shop." },
   { q: "Will my AppleCare warranty cover water damage?",
-    a: "AppleCare+ covers two accidental damage incidents per year with a service fee of AED 379 (MacBook Air) or AED 999 (MacBook Pro), per Apple's UAE published rates. Standard AppleCare and the 1-year limited warranty do not cover liquid damage. If you have AppleCare+ and are within the incident limit, Apple is usually the better route for full board replacement. The workshop is the right call when AppleCare+ has been used up or the device is out of warranty." },
+    a: "AppleCare+ covers accidental damage for a service fee per incident, listed on Apple's UAE support site (for example AED 579 plus VAT for other accidental damage on a 16-inch MacBook Pro M5 Pro or M5 Max, Apple list). Standard AppleCare and the 1-year limited warranty do not cover liquid damage. If you have AppleCare+ and are within the incident limit, Apple is usually the better route for full board replacement. The workshop is the right call when AppleCare+ has been used up or the device is out of warranty." },
   { q: "What's the warranty on water damage repair?",
     a: "15-day written warranty on the repair work and any parts fitted - shorter than most repairs, because liquid damage can keep developing out of sight. Covers the specific repair completed (e.g. if a corroded keyboard was replaced, that keyboard is warrantied). Does not cover new corrosion appearing in a different area months later - corrosion is unpredictable, and a second spill is a new ticket." },
   { q: "Can you fix water damage on M1, M2, M3, M4, M5 MacBooks?",
@@ -97,8 +98,8 @@ const FAQS: FAQ[] = [
 
 const COMPARISON = [
   ["Repair window",          "1 to 5 days",                                  "10 to 21 business days, mail-in"],
-  ["Free strip-down",        "Yes - written quote before paid work",         "AED 379 / AED 999 service fee upfront (Apple list)"],
-  ["Standard clean",         "Free strip-down, then a quote",                 "Often replaces the full logic board (Apple list AED 4,000+)"],
+  ["Free strip-down",        "Yes - written quote before paid work",         "Inspection after booking; AppleCare+ service fee if covered"],
+  ["Standard clean",         "Free strip-down, then a quote",                 "Often replaces the full logic board"],
   ["No-fix-no-charge",       "Yes",                                           "Service fee retained even if unrecoverable"],
   ["Same-day emergency pickup", "Yes",                                        "No, customer must courier"],
   ["Component-level repair", "Yes - board-chip-level replacement",           "Logic board swap only, no component repair"],
@@ -170,7 +171,7 @@ export default function MacBookWaterDamageRepair() {
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled. Need pickup.")}`} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled. Need pickup.")}`)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Emergency WhatsApp
               </a>
             </Button>
@@ -318,7 +319,7 @@ export default function MacBookWaterDamageRepair() {
             </h2>
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
-                <li><strong>12 months</strong> - written warranty on the repair work and any parts fitted.</li>
+                <li><strong>15 days</strong> - written warranty on the repaired components. A battery, screen or other part we fit carries that part's own warranty (3 months on batteries).</li>
                 <li><strong>Covered:</strong> the specific corrosion repair completed, replacement parts (keyboard, battery, chips), the soak-test result.</li>
                 <li><strong>Not covered:</strong> new corrosion in a different area, a second spill (new ticket), pre-existing damage unrelated to the spill.</li>
                 <li><strong>How to claim:</strong> WhatsApp the warranty card photo. Same-day collection, free of charge.</li>
@@ -407,7 +408,7 @@ export default function MacBookWaterDamageRepair() {
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled.")}`} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled.")}`)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Emergency WhatsApp
               </a>
             </Button>
@@ -422,7 +423,7 @@ export default function MacBookWaterDamageRepair() {
       </div>
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
       <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
+      <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, written warranty.</p>
       <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-water-damage-repair-dubai" />
     </section>
     <RelatedArticles path="/macbook-water-damage-repair-dubai" />

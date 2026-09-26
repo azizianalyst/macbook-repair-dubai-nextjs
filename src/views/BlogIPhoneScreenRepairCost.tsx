@@ -92,6 +92,14 @@ export default function BlogIPhoneScreenRepairCost() {
             replacements - they fit, they light up, but the colours are washed out, the touch is
             laggy, and Face ID often fails.
           </p>
+          <p>
+            The screen type also decides how a fault shows up: OLED fails with ink-like black spots and
+            thin coloured lines, LCD with blotches and backlight problems. Before paying for a new panel,
+            check whether yours is a setting or the display in our{" "}
+            <Link to="/blog/iphone-screen-problems-dubai/" className="text-accent font-semibold hover:underline">
+              iPhone screen problems guide
+            </Link>.
+          </p>
 
           <h2 id="genuine-vs-alternative">Original Apple vs quality alternative parts - honest comparison</h2>
           <p>

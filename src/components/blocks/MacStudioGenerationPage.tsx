@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Shared layout for Mac Studio generation hub pages (M1, M2, M3, M4).
 // Pro desktop: no screen, no battery — logic board, GPU, thermals, SSD focus.
 import {
@@ -79,7 +80,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac Studio repairs — logic board, overheating, no-display — are diagnosed and resolved within a few hours." },
   { Icon: Award,       title: "21 years experience",      body: "Our technicians have repaired Apple hardware since 2004, across every Mac Studio generation including M1 Ultra and M2 Max." },
-  { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty. Logic board and GPU repairs come with 12-month cover." },
+  { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on hardware parts such as fans, PSUs and SSDs, and 15 days on logic board and GPU repairs." },
   { Icon: Truck,       title: "Free pickup Dubai-wide",   body: "Cannot bring it in? We collect your Mac Studio for free across Dubai and return it repaired." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",           body: "Every Mac Studio gets a full diagnostic at no cost. We find the real fault before quoting." },
@@ -125,7 +126,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant={dark ? "secondary" : "outline"} size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -435,7 +436,7 @@ export default function MacStudioGenerationPage(p: MacStudioGenerationProps) {
               { label: "Mac Full Diagnostic Dubai",   href: "/mac-full-diagnostic-dubai" },
               { label: "Mac Logic Board Repair Dubai", href: "/mac-logic-board-repair-dubai" },
             ].map((l) => (
-              <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>
+              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>
             ))}
           </div>
         </section>

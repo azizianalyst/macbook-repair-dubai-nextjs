@@ -2,7 +2,7 @@
 import { Link } from "@/lib/router-compat";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type FinalCTAProps = {
   eyebrow?: string;
@@ -29,7 +29,7 @@ function CTALink({
   return (
     <Button asChild size="lg" variant={variant}>
       {isExternal(href) ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
+        <a href={withSlash(href)} target="_blank" rel="noopener noreferrer">
           {label}
         </a>
       ) : (

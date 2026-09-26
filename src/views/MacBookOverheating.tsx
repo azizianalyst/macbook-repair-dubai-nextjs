@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive, Zap, Thermometer } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -300,7 +301,7 @@ export default function MacBookOverheating() {
           <div className="flex flex-wrap justify-center gap-sm">
             <Button asChild variant="whatsapp" size="lg">
               <a
-                href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook is overheating. Model: ")}`}
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook is overheating. Model: ")}`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >

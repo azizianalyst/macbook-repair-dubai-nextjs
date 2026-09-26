@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
@@ -112,7 +113,7 @@ export default function MacBookGuides() {
             Free diagnosis, free pickup across Dubai mainland, and a written warranty of up to 12 months, depending on the repair. Message the workshop on WhatsApp.
           </p>
           <a
-            href={SITE.whatsapp}
+            href={withSlash(SITE.whatsapp)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md bg-white text-accent font-semibold px-5 py-2.5"

@@ -73,7 +73,9 @@ export default function BlogAppleCareVsIndependent() {
           </ul>
           <p>
             In all four cases, going to Apple is the right move. We would rather tell you that than
-            charge you for something Apple will do for less or for free.
+            charge you for something Apple will do for less or for free. Our guide to{" "}
+            <Link to="/blog/apple-repair-appointment-dubai/">booking an Apple repair appointment in Dubai</Link>{" "}
+            covers the Genius Bar booking and how to prepare the MacBook.
           </p>
 
           <h2 id="when-independent-wins">When an independent specialist wins</h2>
@@ -93,8 +95,8 @@ export default function BlogAppleCareVsIndependent() {
             <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement
             </Link>{" "}
-            typically come in well under Apple's out-of-warranty quote. Diagnosis is free, the warranty
-            is 12 months written on parts and labour (6 months on batteries), and most jobs are same-day
+            are quoted before any work, so you can compare with Apple's out-of-warranty quote. Diagnosis is free, the
+            written warranty is 90 days on screens and 3 months on batteries (with an 80% capacity guarantee), and most jobs are same-day
             with free pickup across Dubai mainland. Message us on WhatsApp for today's exact price on your
             model, or see every service on our{" "}
             <Link to="/pricing" className="text-accent font-semibold hover:underline">

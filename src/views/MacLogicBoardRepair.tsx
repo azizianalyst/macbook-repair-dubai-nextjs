@@ -47,7 +47,7 @@ export default function MacLogicBoardRepair() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "6-month warranty on component-level repairs.",
+        "15-day written warranty on component-level repairs, extendable to 6 months for a small flat fee agreed on the quote.",
         "Free re-attempt if the same failure recurs inside warranty.",
         "Honest 'this needs a board swap' verdict if we find SoC damage.",
       ]}
@@ -56,8 +56,8 @@ export default function MacLogicBoardRepair() {
         { q: "Can you really fix a chip on a Mac Studio board?", a: "Component-level chips around the SoC, yes - Thunderbolt controllers, USB controllers, power MOSFETs, SMC. The M-series SoC itself, no - and nobody honest will claim otherwise. We'll diagnose which type of fault yours is for free." },
         { q: "Why is this 3-5 days when other repairs are same-day?", a: "Real diagnosis takes time - finding a shorted MOSFET on a 2,000-component board needs probing rail by rail. Then sourcing the exact replacement part. Then careful rework. Then a 24-hour burn-in test. We don't rush board work." },
         { q: "Can liquid damage be reversed?", a: "Often yes if you don't keep powering it on. We ultrasonic-clean the board, repair any tracks corroded by liquid, replace components killed by the short. Success rate is much higher when the customer brought it in within 48 hours and didn't keep trying to start it." },
-        { q: "What's the alternative if the SoC is dead?", a: "A full logic board swap from Apple's parts channel - typically AED 4,000-8,000 depending on Mac model and original chip configuration. At that point we'll usually advise replacing the Mac instead." },
-        { q: "Is the 6-month warranty for the same fault or any new fault?", a: "Same fault. If the MOSFET we replaced fails again in 6 months, we re-do it free. If a different component fails 4 months later, that's a separate job." },
+        { q: "What's the alternative if the SoC is dead?", a: "A full logic board swap through Apple, priced by Apple after it inspects the Mac, and a new board means any data on the old one is lost. At that point we'll usually advise replacing the Mac instead." },
+        { q: "Does the warranty cover the same fault or any new fault?", a: "Same fault. If the MOSFET we replaced fails again inside the warranty (15 days as standard, or 6 months if you took the extension), we re-do it free. If a different component fails later, that's a separate job." },
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Ali Hassan", "Shah nawaz"]}
       related={[

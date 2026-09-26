@@ -1,7 +1,8 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // MacBook Pro Screen Repair — Pro-only spoke under /macbook-screen-repair-dubai.
 // Goes deep on Pro display generations the generic page only touches: Liquid Retina XDR
-// mini-LED (14"/16" 2021+), ProMotion 120Hz, the 2026 M5 OLED, Touch Bar Retina (2016-2020),
+// mini-LED (14"/16" 2021+, M1 Pro through M5 — no MacBook has an OLED screen), ProMotion 120Hz, Touch Bar Retina (2016-2020),
 // classic Retina (2012-2015) and Flexgate. Same dark design system + component API as
 // MacBookScreenRepair.tsx so it reads as a sibling and rankings/UX stay consistent.
 import { type ReactNode } from "react";
@@ -37,22 +38,22 @@ const PRICING: PricingRow[] = [
   { model: 'MacBook Pro 15" Touch Bar (2016-2019, Intel)', price: 1000, timeline: "1 day"           },
   { model: 'MacBook Pro 14" Liquid Retina XDR (M1-M4)',   price: 1000, timeline: "Same day · 1 day" },
   { model: 'MacBook Pro 16" Liquid Retina XDR (M1-M4)',   price: 1200, timeline: "1-2 days"        },
-  { model: 'MacBook Pro 14"/16" M5 (OLED, 2026)',         price: 1300, timeline: "1-3 days"        },
+  { model: 'MacBook Pro 14"/16" M5 (Liquid Retina XDR, 2025-2026)', price: 1300, timeline: "1-3 days" },
 ];
 
 const COMMON_PROBLEMS = [
   { title: "Flexgate — stage-light effect or no backlight",
     body: 'MacBook Pro 13" and 15" 2016-2017 (A1706, A1707, A1708). The display flex cable wears through after ~10,000 lid cycles: uneven "stage-light" backlight at the bottom first, then full backlight death. Cable swap on 2016-2017, full panel on 2018+. The revised cable is 2 mm longer to stop the wear returning.' },
   { title: "Mini-LED blooming or uneven local dimming",
-    body: 'Liquid Retina XDR on the 14"/16" M1 Pro through M4 uses ~10,000 mini-LED zones. A halo around bright objects on a black background is normal HDR blooming — not a fault. A fixed bright/dark patch that stays in one spot is a failed dimming zone and needs a panel swap.' },
+    body: 'Liquid Retina XDR on the 14"/16" M1 Pro through M5 uses thousands of mini-LEDs grouped into local dimming zones. A halo around bright objects on a black background is normal HDR blooming — not a fault. A fixed bright/dark patch that stays in one spot is a failed dimming zone and needs a panel swap.' },
   { title: "ProMotion judder or stuck at 60Hz",
     body: "120Hz ProMotion (14\"/16\" 2021+) dropping to 60Hz is usually a Display setting or a third-party app capping refresh, not hardware. If the panel physically tears or judders at 120Hz after a knock, the timing-controller ribbon is the suspect — free diagnosis tells panel from board." },
   { title: "Cracked glass on a bonded Pro panel",
     body: 'From the 2016 Touch Bar models onward Apple bonds the glass to the LCD/mini-LED as one assembly, so there is no glass-only repair — a full panel swap, quoted by size. Only the 2012-2015 Retina takes a glass-only repair, which costs far less than a panel.' },
   { title: "Pink, green or purple tint across the display",
     body: 'Loose or oxidised eDP cable, or a failing T-CON board — most common on the 15" Retina 2013-2015. Reseating the cable clears ~30% of these at no charge; the rest need a panel swap.' },
-  { title: "Image retention / burn-in on the M5 OLED",
-    body: 'The 2026 14"/16" M5 Pro is the first OLED MacBook. Faint retention of a static UI element that fades within minutes is normal OLED behaviour; permanent burn-in is a warranty panel. We fit genuine Apple OLED assemblies only on these — aftermarket OLED for this model does not exist yet.' },
+  { title: "Dark zone, lines or pressure marks on the M5",
+    body: 'The 14"/16" M5, M5 Pro and M5 Max (2025-2026) keep the mini-LED Liquid Retina XDR — no MacBook has an OLED screen, so there is no OLED burn-in to worry about. The faults are the familiar XDR ones: a failed dimming zone, lines after a knock, key marks from closing the lid on an object, or a crack. Each is a full display assembly swap; we fit genuine Apple assemblies on the M5 and match nano-texture and lid colour by serial.' },
   { title: "Backlight bleed in the corners",
     body: 'Manufacturing defect on the 2012-2015 Retina and some early Touch Bar units. LCD swap with a tested A-grade panel. Mini-LED 14"/16" panels do not have edge-lit bleed — a glow there means a cracked panel instead.' },
   { title: "Screen flickers below 20% battery",
@@ -65,7 +66,7 @@ const COMMON_PROBLEMS = [
 
 const STEPS = [
   { title: "WhatsApp the model + a photo",
-    body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Touch Bar from XDR from OLED by serial and quote in 4-8 minutes, 9 am-10 pm Mon-Sat.' },
+    body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Retina from Touch Bar from XDR (and nano-texture) by serial and quote in 4-8 minutes, 9 am-10 pm Mon-Sat.' },
   { title: "Free pickup or drop-off",
     body: "Free pickup anywhere in Dubai mainland, or walk in to Office #45, Concord Tower, Media City. On-the-spot diagnosis in about 15 minutes — panel-side vs board-side confirmed before any work." },
   { title: "Panel swap under the microscope",
@@ -83,34 +84,33 @@ const FAQS: FAQ[] = [
   { q: "How much does MacBook Pro screen repair cost in Dubai?",
     a: 'It depends on the panel: a 13-inch Retina or Touch Bar, a 15-inch Retina, and the 14 or 16-inch XDR mini-LED are all different assemblies. Diagnosis is free and your exact model is quoted before any work starts.' },
   { q: "What is the difference between repairing a 14\"/16\" XDR screen and an older Retina Pro?",
-    a: 'The 14"/16" (2021+) use a Liquid Retina XDR mini-LED panel with ~10,000 dimming zones and a 120Hz ProMotion timing controller — a more involved, higher-cost assembly. The 2012-2015 Retina is a conventional LCD where a cheaper glass-only repair is still possible. The 2016-2020 Touch Bar models sit in between: bonded LCD, full-panel only.' },
+    a: 'The 14"/16" (2021+) use a Liquid Retina XDR panel — an LCD lit by thousands of mini-LEDs in local dimming zones — with a 120Hz ProMotion timing controller — a more involved, higher-cost assembly. The 2012-2015 Retina is a conventional LCD where a cheaper glass-only repair is still possible. The 2016-2020 Touch Bar models sit in between: bonded LCD, full-panel only.' },
   { q: "Do you repair Flexgate on the 2016-2017 MacBook Pro?",
     a: "Yes. Flexgate on the A1706/A1707/A1708 is fixed with a revised flex cable that is 2 mm longer than Apple's original - one flat quoted job, same day, 3-month warranty. If the cable tore late and damaged the backlight strip (under 15% of cases) it becomes a full panel job, quoted by size." },
   { q: "Is mini-LED blooming on my MacBook Pro a fault?",
     a: 'A soft halo around bright objects on a dark background is normal HDR behaviour on every Liquid Retina XDR panel — not a defect and not repairable, because it is how mini-LED local dimming works. A fixed bright or dead patch that stays in one place regardless of content is a failed zone and needs a panel swap.' },
-  { q: "Can the 2026 M5 OLED MacBook Pro screen be replaced?",
-    a: "Yes, with a genuine Apple OLED assembly — aftermarket OLED for this model does not exist yet, so we fit Apple parts only on the M5. Faint, temporary image retention that fades is normal OLED behaviour; permanent burn-in or lines is a panel replacement. WhatsApp the serial to confirm OLED stock and lead time." },
+  { q: "Can the 2025-2026 M5 MacBook Pro screen be replaced?",
+    a: "Yes. The M5 uses the same mini-LED Liquid Retina XDR display as the M1 Pro to M4 models — it is not OLED — and the repair is a full display assembly swap. We fit genuine Apple assemblies on the M5. Blooming around bright objects is normal; a fixed dark zone, lines or a crack is an assembly replacement. WhatsApp the serial to confirm stock, nano-texture and lead time." },
   { q: "Will True Tone and ProMotion still work after the screen is replaced?",
-    a: "True Tone works on genuine Apple panels — we calibrate it against the original logic-board serial. ProMotion 120Hz works on any correct-spec panel for that model. With A-grade aftermarket panels True Tone is disabled by macOS, but 120Hz, P3 colour and full brightness are retained. Genuine panels carry a 3-month warranty, A-grade 15 days." },
+    a: "True Tone works on genuine Apple panels — we calibrate it against the original logic-board serial. ProMotion 120Hz works on any correct-spec panel for that model. With A-grade aftermarket panels True Tone is disabled by macOS, but 120Hz, P3 colour and full brightness are retained. Every panel we fit, genuine or A-grade, carries a 90-day (3-month) warranty." },
   { q: "Can you replace just the cracked glass on a MacBook Pro?",
     a: 'Only on the 2012-2015 Retina, where a glass-only repair is possible. Every MacBook Pro from the 2016 Touch Bar onward has the glass bonded to the LCD or mini-LED panel as one assembly, so the full panel must be replaced — we will not charge for glass-only on bonded models because the result is unreliable.' },
   { q: "My MacBook Pro display is black but it chimes and the external monitor works — is that the screen?",
     a: "Yes — that pattern confirms a panel or backlight fault, not a logic-board GPU fault (the external output is a separate circuit). Free diagnosis isolates the LCD/mini-LED panel, the eDP ribbon, or the backlight chip. Around 70% are panel swaps." },
   { q: "Do you use genuine Apple screens for the MacBook Pro?",
-    a: "Genuine Apple panels are stocked for the M3, M4 and M5 Pro (the only way to keep True Tone, and the only option on the M5 OLED). For 2012-2022 Pros we also fit A-grade panels from the same Samsung/LG factories that build the Apple part. Both are labelled on the WhatsApp quote — genuine 3-month warranty, A-grade 15 days." },
+    a: "Genuine Apple panels are stocked for the M3, M4 and M5 Pro (the only way to keep True Tone, and the only option we fit on the M5). For 2012-2022 Pros we also fit A-grade panels from the same Samsung/LG factories that build the Apple part. Both are labelled on the WhatsApp quote, and both carry a 90-day (3-month) warranty." },
   { q: "How long does MacBook Pro screen replacement take in Dubai?",
-    a: 'Same day on the 13" Retina/Touch Bar and the 14" XDR when the panel is in stock (3-5 hours including the 90-minute adhesive cure). The 16" XDR is often 1-2 days; the M5 OLED can be 1-3 days during release months while genuine stock is sourced from the local Apple distributor.' },
+    a: 'Same day on the 13" Retina/Touch Bar and the 14" XDR when the panel is in stock (3-5 hours including the 90-minute adhesive cure). The 16" XDR is often 1-2 days; the M5 can be 1-3 days while genuine assembly stock is sourced from the local Apple distributor.' },
 ];
 
 const COMPARISON = [
-  ["Repair window",            'Same day on 13" Retina & 14" XDR',          "5 to 14 business days, mail-in"],
-  ['Starting price (14" XDR)',  "Free diagnosis, then a quote",             "AED 2,099 (Apple list)"],
-  ['Starting price (16" XDR)',  "Free diagnosis, then a quote",             "AED 2,600 (Apple list)"],
+  ["Repair window",            'Same day on 13" Retina & 14" XDR when in stock', "Set by Apple after inspection"],
+  ['Price (14" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
+  ['Price (16" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
   ["Flexgate cable-only fix",  "Yes on 2016-2017",                          "No, full assembly only"],
-  ["Free pickup in Dubai",     "Yes, same day",                             "No, customer must courier"],
-  ["Vintage/obsolete Pros",    "Yes — 2012 Retina onward",                  "Refused on obsolete (pre-2017)"],
-  ["Warranty",                 "15 days - 3 months (by panel grade)",       "12 months"],
-  ["No-fix-no-charge",         "Yes",                                       "No, diagnostic fee charged"],
+  ["Free pickup in Dubai",     "Yes, same day",                             "Not offered"],
+  ["Vintage/obsolete Pros",    "Yes — 2012 Retina onward",                  "Not serviced once Apple lists a model as obsolete"],
+  ["Warranty",                 "90 days (3 months) on every panel",         "Apple's own repair terms"],
 ];
 
 const TIMELINE = [
@@ -118,8 +118,8 @@ const TIMELINE = [
     body: 'MacBook Pro 13" Retina/Touch Bar and 14" Liquid Retina XDR (M1-M4) when the panel is in stock — including the 90-minute adhesive cure. WhatsApp the serial first to confirm stock.' },
   { tone: "mid" as const, head: "1 to 2 days",
     body: 'MacBook Pro 16" XDR (panel ordered from the local Apple-authorised distributor), and the 15" Retina 2013-2015 when an original panel must be sourced.' },
-  { tone: "mid" as const, head: "1 to 3 days (M5 OLED)",
-    body: "Genuine Apple OLED orders for the 2026 M5 Pro during release months. Always shipped from the local Apple distributor — never grey-market, never from China." },
+  { tone: "mid" as const, head: "1 to 3 days (M5)",
+    body: "Genuine Apple Liquid Retina XDR assemblies for the 2025-2026 M5, M5 Pro and M5 Max while supply builds. Always shipped from the local Apple distributor — never grey-market, never from China." },
 ];
 
 const RELATED = [
@@ -153,7 +153,7 @@ export default function MacBookProScreenRepair() {
     {
       title: "MacBook Pro Screen Repair Dubai — Same-Day XDR & Retina",
       description:
-        "MacBook Pro screen repair Dubai. XDR mini-LED 14\"/16\", ProMotion, Flexgate, M5 OLED. Same-day, genuine panels, 3-month warranty. 055 741 3706.",
+        "MacBook Pro screen repair Dubai. XDR mini-LED 14\"/16\" M1 Pro to M5, ProMotion, Flexgate. Same-day, genuine panels, 3-month warranty. 055 741 3706.",
       path: "/macbook-pro-screen-repair-dubai",
     },
     [
@@ -165,7 +165,7 @@ export default function MacBookProScreenRepair() {
         warranty: "P3M",
         url: "/macbook-pro-screen-repair-dubai",
         description:
-          "MacBook Pro screen and panel replacement in Dubai. Liquid Retina XDR mini-LED, ProMotion 120Hz, M5 OLED, Touch Bar Retina, classic Retina and Flexgate. 13/14/15/16-inch, Intel and Apple Silicon.",
+          "MacBook Pro screen and panel replacement in Dubai. Liquid Retina XDR mini-LED (M1 Pro to M5), ProMotion 120Hz, Touch Bar Retina, classic Retina and Flexgate. 13/14/15/16-inch, Intel and Apple Silicon.",
       }),
     ],
   );
@@ -188,12 +188,12 @@ export default function MacBookProScreenRepair() {
                   MacBook Pro Screen Repair Dubai — <span className="text-accent">Same Day</span>
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
-                  Liquid Retina XDR mini-LED, ProMotion 120Hz, the 2026 M5 OLED, Touch Bar Retina and Flexgate.
-                  13″, 14″, 15″, 16″ — Intel through M5. Same-day on most models, warranty up to 3 months.
+                  Liquid Retina XDR mini-LED from M1 Pro to M5, ProMotion 120Hz, Touch Bar Retina and Flexgate.
+                  13″, 14″, 15″, 16″ — Intel through M5. Same-day on most models, 90-day (3-month) warranty.
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
-                    <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Pro screen repair quote please. Model: ")}`} target="_blank" rel="noopener noreferrer">
+                    <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Pro screen repair quote please. Model: ")}`)} target="_blank" rel="noopener noreferrer">
                       <MessageCircle aria-hidden /> Get a quote on WhatsApp
                     </a>
                   </Button>
@@ -231,7 +231,7 @@ export default function MacBookProScreenRepair() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"><Monitor size={22} aria-hidden /></span>
                 <div>
                   <p className="m-0 font-semibold leading-tight text-text">Pro Screen Repair</p>
-                  <p className="m-0 text-[12px] text-text-faint">XDR · ProMotion · OLED · Flexgate</p>
+                  <p className="m-0 text-[12px] text-text-faint">XDR · ProMotion · Retina · Flexgate</p>
                 </div>
               </div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
@@ -239,7 +239,7 @@ export default function MacBookProScreenRepair() {
               </span>
             </div>
             <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-3 days"], ["Warranty", "15 days - 3 months"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-3 days"], ["Warranty", "90 days (3 months)"], ["Diagnosis", "FREE"]].map(([k, v]) => (
                 <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
                   <span className="text-text-faint">{k}</span>
                   <span className="font-semibold text-text">{v}</span>
@@ -248,7 +248,7 @@ export default function MacBookProScreenRepair() {
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
               <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>
         </div>
@@ -273,14 +273,14 @@ export default function MacBookProScreenRepair() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-pro-screen-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook Pro screen repair in Dubai finishes the same day on the 13″ Retina, Touch Bar and 14″ Liquid Retina XDR when the panel is in stock. The MacBook Pro is the harder display to get right: the 14″ and 16″ (2021 onward) use mini-LED XDR panels with roughly 10,000 dimming zones and a 120Hz ProMotion timing controller, the 2026 M5 is the first OLED MacBook, and the 2016-2017 models suffer the well-known Flexgate cable failure. We fit genuine Apple panels on the M3, M4 and M5 to keep True Tone and ProMotion intact, and tested A-grade Samsung/LG panels on the 2012-2022 range. Every panel is bench-tested for dead pixels, zone uniformity, P3 colour and 120Hz before it leaves the workshop. For Air or Intel models, see the <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">full MacBook screen repair</Link> page.
+            MacBook Pro screen repair in Dubai finishes the same day on the 13″ Retina, Touch Bar and 14″ Liquid Retina XDR when the panel is in stock. The MacBook Pro is the harder display to get right: the 14″ and 16″ (2021 onward) use mini-LED XDR panels — an LCD lit by thousands of mini-LEDs in local dimming zones — with a 120Hz ProMotion timing controller (the M5 keeps this design; no MacBook has an OLED screen), and the 2016-2017 models suffer the well-known Flexgate cable failure. We fit genuine Apple panels on the M3, M4 and M5 to keep True Tone and ProMotion intact, and tested A-grade Samsung/LG panels on the 2012-2022 range. Every panel is bench-tested for dead pixels, zone uniformity, P3 colour and 120Hz before it leaves the workshop. For Air or Intel models, see the <Link to="/macbook-screen-repair-dubai" className="text-accent hover:underline">full MacBook screen repair</Link> page.
           </p></LinkifyProse>
         </section>
 
         {/* ── Models + pricing ───────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="Every Pro panel, one place" title="MacBook Pro models we repair" intro="From the 2012 Retina through the 2026 M5 OLED. Prices are panel + labour + warranty all-in — no diagnostic fee, no adhesive surcharge. The exact figure is pinned to your serial." />
+            <SectionHead eyebrow="Every Pro panel, one place" title="MacBook Pro models we repair" intro="From the 2012 Retina through the 2025-2026 M5. Prices are panel + labour + warranty all-in — no diagnostic fee, no adhesive surcharge. The exact figure is pinned to your serial." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
               Glass-only repair is possible on 2012-2015 Retina. From the 2016 Touch Bar the glass is bonded to the panel — full assembly only.
@@ -293,7 +293,7 @@ export default function MacBookProScreenRepair() {
           <SectionHead
             eyebrow="Match the symptom"
             title="Common MacBook Pro screen problems"
-            intro="The highest-volume Pro display tickets at the workshop — including the XDR, ProMotion and OLED faults the generic screen page does not cover. Match the symptom in bold to the typical fix and price."
+            intro="The highest-volume Pro display tickets at the workshop — including the XDR, ProMotion and M5 faults the generic screen page does not cover. Match the symptom in bold to the typical fix and price."
             icon={<AlertTriangle size={26} className="text-accent" aria-hidden />}
           />
           <div className="grid gap-lg md:grid-cols-2">
@@ -345,11 +345,11 @@ export default function MacBookProScreenRepair() {
         {/* ── Parts ──────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="What goes in your MacBook Pro" title="Genuine, A-grade, or genuine used" intro="A Pro panel comes in three grades and the price moves with the grade. The figures above are the A-grade floor; a full display assembly, or a 14″/16″ XDR, costs more. The M5 OLED is genuine-Apple only — aftermarket OLED for it does not exist yet." />
+            <SectionHead eyebrow="What goes in your MacBook Pro" title="Genuine, A-grade, or genuine used" intro="A Pro panel comes in three grades and the price moves with the grade. The figures above are the A-grade floor; a full display assembly, or a 14″/16″ XDR, costs more. On the M5 we fit genuine Apple display assemblies only." />
             <div className="grid gap-lg md:grid-cols-3">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for the M3, M4 and M5 Pro 14″ and 16″ — and the only option on the M5 OLED. Sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone, ProMotion and XDR brightness retained.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for the M3, M4 and M5 Pro 14″ and 16″ — and the only option we fit on the M5. Sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone, ProMotion and XDR brightness retained.</p>
                 <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade — quoted side by side</p>
               </Card>
               <Card>
@@ -364,7 +364,7 @@ export default function MacBookProScreenRepair() {
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              Genuine Apple panels carry a 3-month warranty; A-grade aftermarket carries 15 days. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial. We refuse the cheapest unbranded panels because failure rates above 20% are normal in that grade.
+              Every panel we fit, genuine Apple or A-grade aftermarket, carries a 90-day (3-month) warranty. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial. We refuse the cheapest unbranded panels because failure rates above 20% are normal in that grade.
             </p>
           </div>
         </section>
@@ -374,9 +374,9 @@ export default function MacBookProScreenRepair() {
           <SectionHead eyebrow="Backed in writing" title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Up to 3 months</strong> — written warranty on parts and labour, dated and signed (3 months on genuine Apple panels, 15 days on A-grade aftermarket).</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days (3 months)</strong> — written warranty on parts and labour, dated and signed, on genuine and A-grade panels alike.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, dead pixels appearing post-repair, failed mini-LED zones, backlight bleed, eDP/ribbon cable failure, hinge alignment.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, normal HDR blooming or temporary OLED retention (these are not faults).</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, normal HDR blooming on mini-LED XDR panels (this is not a fault).</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free; replacement panel fitted within 48 hours.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, if the MacBook Pro is sold within the warranty period.</span></li>
             </ul>
@@ -428,7 +428,7 @@ export default function MacBookProScreenRepair() {
             </table>
           </Reveal>
           <p className="mt-md text-[13px] text-text-faint mono max-w-[80ch]">
-            Apple list pricing from apple.com/ae/shop/mac/repair, retrieved June 2026. We are an independent Apple specialist, not an Apple Authorised Service Provider — the right fit when the device is out of warranty, the model is vintage/obsolete, or you need same-day turnaround.
+            Apple publishes only battery prices for Mac laptops; screen damage is quoted after inspection (support.apple.com/en-ae/mac-laptops/repair, checked September 2026). We are an independent Apple specialist, not an Apple Authorised Service Provider — the right fit when the device is out of warranty, the model is vintage/obsolete, or you need same-day turnaround.
           </p>
         </section>
 
@@ -502,7 +502,7 @@ export default function MacBookProScreenRepair() {
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
             </div>
           </div>
         </section>
@@ -512,10 +512,10 @@ export default function MacBookProScreenRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto">Cracked Pro screen? WhatsApp the model — quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. Warranty up to 3 months on every panel fitted.
+              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. 90-day (3-month) warranty on every panel fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
-              <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
+              <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a></Button>
             </div>
           </div>
@@ -524,7 +524,7 @@ export default function MacBookProScreenRepair() {
 
       <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
         <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-        <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty up to 3 months.</p>
+        <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, 90-day (3-month) warranty.</p>
         <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-pro-screen-repair-dubai" />
       </section>
       <RelatedArticles path="/macbook-pro-screen-repair-dubai" />
@@ -551,7 +551,7 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
   const href = whatsappMessage ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}` : NAP.whatsappUrl;
   return (
     <div className="flex flex-wrap gap-sm shrink-0">
-      <Button asChild variant="whatsapp" size="lg"><a href={href} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
+      <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );

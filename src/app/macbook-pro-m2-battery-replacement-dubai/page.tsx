@@ -5,7 +5,7 @@ import View from "@/views/MacBookProM2BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/macbook-pro-m2-battery-replacement-dubai", {
   title: "MacBook Pro M2 Battery Replacement Dubai — Same-Day",
-  description: "MacBook Pro M2 Pro/Max battery replacement Dubai. 69.6 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included. Same-day 2-hour service. WhatsApp for a quote.",
+  description: "MacBook Pro M2 Pro/Max battery replacement in Dubai for 14-inch and 16-inch models. BMS re-pair included, same-day 2-hour service. Quote on WhatsApp.",
 });
 
 export default function Page() {

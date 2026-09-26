@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // MacBook Battery Replacement - re-skinned in the dark theme to match the screen
 // repair page (the canonical dark design). All content, pricing, problems,
 // process, parts, warranty, comparison, reviews and FAQs are preserved verbatim;
@@ -110,9 +111,9 @@ const FAQS: FAQ[] = [
 
 const COMPARISON = [
   ["Repair window",          "30 min (booked appointment) · 2 hrs walk-in", "5 to 10 business days, mail-in"],
-  ["Starting price (Air)",   "Free diagnosis, then a quote",                 "AED 549 (Apple list)"],
-  ["Starting price (Pro 14)","Free diagnosis, then a quote",                 "AED 829 (Apple list)"],
-  ["Starting price (Pro 16)","Free diagnosis, then a quote",                 "AED 949 (Apple list)"],
+  ["Air 13\" M5",           "Free diagnosis, then a quote",                 "AED 689 + VAT (Apple list)"],
+  ["Pro 14\" M5",           "Free diagnosis, then a quote",                 "AED 879 + VAT (Apple list)"],
+  ["Pro 16\" M5 Pro / Max", "Free diagnosis, then a quote",                 "AED 959 + VAT (Apple list)"],
   ["Free pickup in Dubai",   "Yes, same hour from many areas",               "No, customer must courier"],
   ["Calibration cycle",      "Yes, 4 hours included",                        "Not specified"],
   ["Warranty",               "3 months + 80% capacity guarantee",            "1 year (Apple)"],
@@ -184,7 +185,7 @@ export default function MacBookBatteryReplacement() {
                 </p>
                 <div className="mt-xl flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
-                    <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Usman, MacBook battery replacement quote please. Model: ")}`} target="_blank" rel="noopener noreferrer">
+                    <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Usman, MacBook battery replacement quote please. Model: ")}`)} target="_blank" rel="noopener noreferrer">
                       <MessageCircle aria-hidden /> Get a quote on WhatsApp
                     </a>
                   </Button>
@@ -492,7 +493,7 @@ export default function MacBookBatteryReplacement() {
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
-              <a href={DIRECTIONS} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+              <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
             </div>
           </div>
         </section>
@@ -500,7 +501,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Lead Form ──────────────────────────────────────────── */}
         <section id="quote" className="mx-auto max-w-content px-5 md:px-6 py-2xl scroll-mt-24">
           <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
-          <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, warranty of up to 12 months.</p>
+          <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, 3-month battery warranty with an 80% capacity guarantee.</p>
           <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-battery-replacement-dubai" />
         </section>
 
@@ -515,7 +516,7 @@ export default function MacBookBatteryReplacement() {
               Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, free pickup, 3-month warranty plus 80% capacity guarantee.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
-              <Button asChild variant="whatsapp" size="lg"><a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
+              <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
               <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a></Button>
             </div>
           </div>
@@ -543,7 +544,7 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
   const href = whatsappMessage ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}` : NAP.whatsappUrl;
   return (
     <div className="flex flex-wrap gap-sm shrink-0">
-      <Button asChild variant="whatsapp" size="lg"><a href={href} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
+      <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
   );

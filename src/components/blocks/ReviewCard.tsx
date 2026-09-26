@@ -1,6 +1,6 @@
 "use client";
 import { ExternalLink, Star } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type Review = {
   name: string;
@@ -56,7 +56,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
 
       {googleUrl && (
         <a
-          href={googleUrl}
+          href={withSlash(googleUrl)}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(

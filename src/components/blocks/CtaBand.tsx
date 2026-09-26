@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Shared dark closing CTA band — the signature final CTA from the MacBook Pro master
 // template (src/views/MacBookProRepair.tsx). Full-bleed #2C3137 band with eyebrow +
 // headline on the left and the WhatsApp / Call button pair on the right.
@@ -38,7 +39,7 @@ export function CtaBand({
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">
           <Button asChild variant="whatsapp" size="lg">
-            <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+            <a href={withSlash(whatsappHref)} target="_blank" rel="noopener noreferrer">
               <MessageCircle aria-hidden /> {whatsappLabel}
             </a>
           </Button>

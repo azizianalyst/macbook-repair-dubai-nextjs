@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { MessageCircle, Phone, ShieldCheck, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/blocks/Reveal";
@@ -58,7 +59,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
           </div>
           <div className="flex flex-col gap-sm shrink-0 md:min-w-[220px]">
             <Button asChild variant="whatsapp" size="lg" className="w-full">
-              <a href={wa} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(wa)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> WhatsApp quote
               </a>
             </Button>

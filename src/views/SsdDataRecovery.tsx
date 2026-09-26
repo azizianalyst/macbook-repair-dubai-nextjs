@@ -1,4 +1,13 @@
 "use client";
+/**
+ * SSD data recovery (/ssd-data-recovery-dubai/). Truth pass 2026-09-26, aligned with the rebuilt
+ * /mac-data-recovery-dubai hub: no chip-off / NAND reads on T2 or Apple silicon Macs (the SSD is
+ * encrypted with a key held in the Mac's own security chip, so recovery means getting the
+ * original board running); the unsourced success-rate table (85-95%, 60-80%...) and the fixed
+ * turnaround figures are gone; "needs your Apple ID" corrected to the login password / FileVault
+ * recovery key; hero swapped from the chip-off infographic to the real lab photo.
+ */
+import { withSlash } from "@/lib/utils";
 import { HardDrive, AlertTriangle, CheckCircle2, Clock, Shield, Phone, MessageCircle, Database } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -6,7 +15,6 @@ import { PRESETS } from "@/data/form-presets";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
-import { imageForRoute } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
@@ -17,40 +25,43 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const SCENARIOS = [
-  { icon: HardDrive,    label: "MacBook SSD not detected",        price: "On request",  note: "Logic board SSD controller fault or dead NAND chip" },
-  { icon: AlertTriangle,label: "Accidental deletion / format",    price: "On request",  note: "Files deleted or drive formatted, high success rate" },
-  { icon: Database,     label: "macOS won't boot. SSD fault",    price: "On request",  note: "Corrupted APFS container or failing NAND" },
-  { icon: HardDrive,    label: "Water-damaged MacBook SSD",       price: "On request",  note: "NAND chips desoldered, cleaned, and re-read" },
-  { icon: AlertTriangle,label: "Firmware-locked / T2 encrypted SSD", price: "On request", note: "Requires Apple ID + logic board chip-off read" },
+  { icon: HardDrive,    label: "MacBook SSD not detected",        price: "On request",  note: "Removable SSD read on a workstation; a soldered T2 or Apple silicon SSD needs the original board running" },
+  { icon: AlertTriangle,label: "Accidental deletion / format",    price: "On request",  note: "Best odds on external drives; an internal Mac SSD clears deleted blocks (TRIM)" },
+  { icon: Database,     label: "macOS won't boot. SSD fault",    price: "On request",  note: "Corrupted APFS container or failing storage" },
+  { icon: HardDrive,    label: "Water-damaged MacBook SSD",       price: "On request",  note: "Board cleaned and repaired so the original Mac can read it; a removable SSD is cleaned and read directly" },
+  { icon: AlertTriangle,label: "T2 / Apple silicon encrypted SSD", price: "On request", note: "Original logic board repaired until it runs; login password needed if FileVault is on" },
   { icon: Shield,       label: "External SSD / USB drive recovery", price: "On request", note: "Samsung T7, WD My Passport, Kingston USB drives" },
 ];
 
-const SUCCESS_RATES = [
-  { scenario: "Logical failure (deletion, corruption, format)", rate: "85–95%" },
-  { scenario: "Firmware / software failure (won't boot)", rate: "75–90%" },
-  { scenario: "Water damage (NAND chips intact)", rate: "60–80%" },
-  { scenario: "Physical NAND failure (bad blocks)", rate: "40–70%" },
-  { scenario: "T2 / Apple Silicon encrypted SSD without Apple ID", rate: "0%, encryption is unbreakable" },
+// Qualitative on purpose: the old percentage table had no source and contradicted the other
+// recovery pages. The free assessment gives the realistic chance for the actual failure.
+const OUTLOOK = [
+  { scenario: "Deleted or formatted files on an external SSD or USB drive", outlook: "Often recoverable if nothing new is written" },
+  { scenario: "Deleted files on a Mac's internal SSD", outlook: "Chance falls quickly: TRIM clears freed blocks" },
+  { scenario: "Removable SSD from an older Intel Mac (pre-T2)", outlook: "Read on a workstation if the SSD is healthy" },
+  { scenario: "T2 or Apple silicon Mac with a board fault", outlook: "Needs the original board running again" },
+  { scenario: "T2 or Apple silicon: security chip or storage destroyed, board replaced, or FileVault password and key lost", outlook: "Not recoverable, by anyone" },
 ];
 
 const DONT_DO = [
   "Do NOT continue writing to the drive (installing macOS, saving files), overwrites destroy recoverable data",
   "Do NOT run Disk Utility First Aid on a failing drive, it can make unrecoverable damage worse",
-  "Do NOT freeze the SSD, this is an HDD myth; it damages NAND chips",
-  "Do NOT send the MacBook to Apple, they will data-wipe before any repair",
+  "Do NOT freeze the SSD, this is an old hard-drive myth and condensation makes it worse",
+  "Do NOT erase, restore or reinstall a T2 or Apple silicon Mac, it discards the encryption key and the data with it",
+  "Do NOT let anyone replace a T2 or Apple silicon logic board until your data is off it, a new board has a new key",
 ];
 
 const FAQS = [
   { q: "Can data be recovered from a MacBook SSD in Dubai?",
-    a: "Yes in most cases. MacBook SSDs use NAND flash chips that can be read even when the logic board fails. Success rate depends on the failure type: accidental deletion recovers 85–95% of data; water damage recovers 60–80%; encrypted T2/Apple Silicon drives without the original Apple ID recover 0% (unbreakable encryption). WhatsApp 055 741 3706 with your model and failure description for a free assessment." },
+    a: "Often, but how depends on the Mac. Older Intel MacBooks without the T2 chip have a removable SSD that can be read on a separate workstation. On T2 and Apple silicon Macs the SSD is soldered and encrypted with a key held in the Mac's own security chip, so the data can only be read through the original board, repaired until it runs. With FileVault on, the login password or recovery key is also needed. WhatsApp 055 741 3706 with your model and failure description for a free assessment." },
   { q: "How much does SSD data recovery cost in Dubai?",
-    a: "It depends on the failure type and the drive. Accidental deletion is the least involved; a logic-board SSD controller fault needs board work first; water damage with NAND chip removal is the most involved. Every case gets a written quote after the free assessment. No-fix no-charge policy: if we cannot recover your data, you pay nothing." },
+    a: "It depends on the failure type and the drive. Accidental deletion on an external drive is the least involved; a board fault on a T2 or Apple silicon Mac needs board-level repair first; water damage that needs cleaning and board repair before the Mac can be read is the most involved. Every case gets a written quote after the free assessment. No-fix no-charge policy: if we cannot recover your data, you pay nothing." },
   { q: "How long does SSD data recovery take in Dubai?",
-    a: "Logical recovery (deletion, format, corruption): 1–3 days. Logic board fault with SSD controller repair: 3–7 days. Water damage with chip-off NAND read: 3–7 days. We give you a daily status update via WhatsApp and notify you the moment data is confirmed recoverable." },
+    a: "It depends on the failure, so the timeline comes with your written quote after the free assessment. Logical recovery from a healthy drive is usually the quickest; board-level repair on a T2 or Apple silicon Mac takes longest. We give you a daily status update via WhatsApp and notify you the moment data is confirmed recoverable." },
   { q: "Can you recover data from a water-damaged MacBook SSD?",
-    a: "Yes. MacBook SSD data can often be recovered after water damage even when the logic board is non-functional. The NAND chips are desoldered from the board, cleaned, and read directly. Success rate is 60–80% depending on how long the board was wet and whether it was charged while wet. See also: /mac-data-recovery-after-water-damage-dubai." },
+    a: "Often, if it was powered off quickly and not charged while wet. On an older Intel MacBook with a removable SSD, the drive is cleaned and read directly. On T2 and Apple silicon MacBooks the storage chips cannot be read on their own, so the board is cleaned and repaired until the Mac starts and the data can be copied off. If corrosion has destroyed the chip or the storage, the data is gone. See also: /mac-data-recovery-after-water-damage-dubai." },
   { q: "Can you recover data from a T2 or Apple Silicon encrypted Mac SSD?",
-    a: "Only if you have the original Apple ID and password used on the Mac. T2 and Apple Silicon Macs encrypt the SSD with a hardware key tied to the Secure Enclave chip. Without the Apple ID, the encryption is mathematically unbreakable, no lab in the world can recover it. With the Apple ID, we can attempt board repair to re-establish the key and decrypt the drive." },
+    a: "Only through the original logic board. T2 and Apple silicon Macs encrypt the SSD with a key that never leaves the security chip (the T2, or the Secure Enclave inside the M-series chip), so desoldering the storage chips (chip-off) yields only encrypted data, and a replacement board has a different key. We repair the original board until the Mac runs and copy the data off. If FileVault is on, you also need the login password or the FileVault recovery key; without them, no lab in the world can read it." },
   { q: "What is your no-fix no-charge policy for data recovery?",
     a: "If we cannot recover your files, you pay nothing. We confirm what is recoverable before billing, you approve the file list before we complete the extraction. We do not charge for failed recovery attempts." },
   { q: "Can you recover data from an external SSD or USB drive in Dubai?",
@@ -69,17 +80,13 @@ export default function SsdDataRecovery() {
     path: "/ssd-data-recovery-dubai",
   });
 
-  // Scaffolded with image={undefined} and an alt already written for an image
-  // that was never wired up (audit 2026-09-23). Uses the route's own topic
-  // image, so src and alt can never drift apart.
-  const heroImg = imageForRoute("/ssd-data-recovery-dubai");
 
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
         <Hero
-          image={heroImg?.src}
-          imageAlt={heroImg?.alt}
+          image="/images/real/lab/macbook-pro-internals-topdown-dubai.jpg"
+          imageAlt="MacBook Pro opened on the bench at MacBook Repair Dubai, showing the logic board where Apple silicon storage is soldered"
           variant="device"
           tone="dark"
           eyebrow="SSD data recovery · Dubai · No-fix no-charge"
@@ -91,7 +98,7 @@ export default function SsdDataRecovery() {
             <span>·</span>
             <span>Free assessment</span>
             <span>·</span>
-            <span>1–7 days turnaround</span>
+            <span>Timeline given with your written quote</span>
           </p>
         </Hero>
 
@@ -105,7 +112,7 @@ export default function SsdDataRecovery() {
           <QuickAnswer
             tone="dark"
             question="Can you recover data from a failed SSD in Dubai?"
-            answer="Yes. SSD data recovery in Dubai covers MacBook SSDs (controller fault, deletion, corruption, water damage), external SSDs, and USB drives. Free assessment with a written quote, and no-fix no-charge: you only pay if we recover your data. Free assessment. WhatsApp 055 741 3706 at Concord Tower, Dubai Media City."
+            answer="Often, yes. SSD data recovery in Dubai covers MacBook SSDs (board fault, deletion, corruption, water damage), external SSDs, and USB drives. On T2 and Apple silicon Macs, recovery depends on getting the original logic board working. Free assessment with a written quote, and no-fix no-charge: you only pay if we recover your data. WhatsApp 055 741 3706 at Concord Tower, Dubai Media City."
           />
         </section>
 
@@ -127,20 +134,20 @@ export default function SsdDataRecovery() {
         {/* Success rates */}
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">SSD data recovery success rates</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">What decides whether SSD data comes back</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-[14px] border-collapse">
                 <thead>
                   <tr className="border-b border-border text-left text-text-muted">
                     <th className="py-sm pr-lg font-semibold">Failure type</th>
-                    <th className="py-sm font-semibold">Success rate</th>
+                    <th className="py-sm font-semibold">Outlook</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {SUCCESS_RATES.map((row) => (
+                  {OUTLOOK.map((row) => (
                     <tr key={row.scenario} className="border-b border-border">
                       <td className="py-sm pr-lg">{row.scenario}</td>
-                      <td className={`py-sm font-semibold ${row.rate.startsWith("0%") ? "text-red-700" : "text-accent"}`}>{row.rate}</td>
+                      <td className={`py-sm font-semibold ${row.outlook.startsWith("Not recoverable") ? "text-red-700" : "text-accent"}`}>{row.outlook}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -170,7 +177,7 @@ export default function SsdDataRecovery() {
               <p className="text-[15px] text-text-muted">No-fix no-charge. You only pay when data is confirmed recoverable. Free assessment, no commitment.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
-              <a href={NAP.whatsappUrl} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
                 <MessageCircle size={18} aria-hidden /> WhatsApp
               </a>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
@@ -202,7 +209,7 @@ export default function SsdDataRecovery() {
               { label: "MacBook Water Damage Repair Dubai", href: "/macbook-water-damage-repair-dubai" },
               { label: "MacBook Logic Board Repair Dubai", href: "/macbook-logic-board-repair-dubai" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
             ))}
           </div>
         </section>

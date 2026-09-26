@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirIntelBatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-intel-battery-replacement-dubai", {
   title: "MacBook Air Intel Battery Replacement Dubai — Same Day",
-  description: "MacBook Air Intel battery replacement Dubai. 49.9 Wh cell, same-day 2-hour service. No BMS re-pair required. Free diagnosis. Message us for a quote: 055 741 3706.",
+  description: "MacBook Air Intel battery replacement in Dubai: new cell fitted same day, usually in 2 hours. No BMS re-pair needed. Free diagnosis, quote on WhatsApp.",
 });
 
 export default function Page() {

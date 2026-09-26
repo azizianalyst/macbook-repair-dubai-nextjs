@@ -69,7 +69,7 @@ export default function MacBookAirM3ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M3 screen repair cost in Dubai?",
-          a: "MacBook Air M3 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M3 15-inch is quoted separately. Both use genuine Apple Liquid Retina panels that preserve True Tone. Apple Store Dubai charges AED 1,499–1,649 for the same models. Same-day turnaround.",
+          a: "MacBook Air M3 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M3 15-inch is quoted separately. Both use genuine Apple Liquid Retina panels that preserve True Tone. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. Same-day turnaround.",
         },
         {
           q: "Will True Tone work after MacBook Air M3 screen replacement?",
@@ -89,7 +89,7 @@ export default function MacBookAirM3ScreenRepair() {
         },
         {
           q: "Is it worth repairing MacBook Air M3 screen versus buying a new M4 Air?",
-          a: "Against a new MacBook Air M4, which Apple lists at AED 4,499, a screen repair, repair is strongly the better value. The M3 Air is a current-generation machine that will receive macOS updates until at least 2029. The performance difference between M3 and M4 Air is about 25 percent — not enough to justify replacing a machine with a damaged screen.",
+          a: "Against a new MacBook Air M5, which Apple lists from AED 4,599 in the UAE, a screen repair is usually the better value. The M3 Air is still fully supported by macOS, and the newer chip is faster but not by enough to justify replacing a machine whose only fault is the screen.",
         },
       ]}
       blogHref="/blog/macbook-air-m3-screen-flickering-dubai"

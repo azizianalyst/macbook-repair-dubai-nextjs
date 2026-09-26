@@ -36,7 +36,7 @@ export default function MacBookAirM5ScreenRepair() {
         { title: "Screen lines after a spill", body: "Liquid near the ports can reach the display connector within 24–72 hours. We clean the connector at component level before fitting the new panel so the fault does not return." },
       ]}
       faqs={[
-        { q: "How much does MacBook Air M5 screen repair cost in Dubai?", a: "The 13-inch and 15-inch M5 Air are quoted separately after a free diagnosis. Apple Store Dubai charges AED 1,549–1,699 for out-of-warranty screen replacement. We use genuine panels from the Apple-authorised local distributor; turnaround is 1–2 days." },
+        { q: "How much does MacBook Air M5 screen repair cost in Dubai?", a: "The 13-inch and 15-inch M5 Air are quoted separately after a free diagnosis. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. We use genuine panels from the Apple-authorised local distributor; turnaround is 1–2 days." },
         { q: "Will Apple warranty cover my cracked M5 Air screen?", a: "No. Cracks are accidental damage, excluded from the standard warranty. AppleCare+ covers it with an excess. For a screen-only fault that appeared on its own (no impact), Apple warranty applies - we tell you which at the free diagnosis." },
         { q: "Is the M5 Air screen the same as the M4 Air screen?", a: "Same specification and chassis, but a different part number. We fit M5-specific panels." },
         { q: "Will True Tone work after the repair?", a: "Yes with a genuine M5 panel - the calibration data is on the panel itself. We confirm this on the quote." },

@@ -96,6 +96,11 @@ export default function BlogIPhoneOverheatingDubaiSummer() {
             If your iPhone is 18-24 months old and battery health is already below 85%, replacement is the fix - see our{" "}
             <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">iPhone battery replacement service</Link>.
           </p>
+          <p>
+            Not sure how to read the numbers? Our guide on{" "}
+            <Link to="/blog/iphone-battery-health-when-to-replace/" className="text-accent font-semibold hover:underline">how to check iPhone battery health</Link>{" "}
+            explains Maximum Capacity, cycle count and the charge-limit settings that slow heat damage.
+          </p>
 
           <h2 id="vapor-chamber">iPhone 17 Pro vapor chamber (handles heat better)</h2>
           <p>

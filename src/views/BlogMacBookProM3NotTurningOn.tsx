@@ -37,7 +37,7 @@ export default function BlogMacBookProM3NotTurningOn() {
             <li><strong>Deep discharge</strong>: battery reached 0% and sat depleted. Battery management prevents startup until minimum charge is restored</li>
             <li><strong>Failed macOS update</strong>: if a Sonoma update was interrupted (charger disconnected, power cut), the M3 can get stuck in a bootloader state that appears completely dead. Revive via DFU restores the machine without erasing data</li>
             <li><strong>Kernel panic during sleep</strong>: certain Sonoma kernel panics require a force restart to clear</li>
-            <li><strong>OLED display power fault</strong>: the M3 is running normally but the display has no power. Confirmed by external monitor showing desktop</li>
+            <li><strong>Display or backlight power fault</strong>: the M3 is running normally but the mini-LED display (an LCD, not OLED) has no power. Confirmed by external monitor showing desktop</li>
             <li><strong>Logic board fault</strong>: failed power management IC, charging IC, or short circuit. Requires hardware repair</li>
           </ol>
 

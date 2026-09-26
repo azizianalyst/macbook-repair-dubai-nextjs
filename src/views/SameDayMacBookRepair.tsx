@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Zap, Clock, MapPin, Star, Phone, MessageCircle, CheckCircle2, Truck, Shield } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -18,7 +19,7 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const SAME_DAY_REPAIRS = [
-  { label: "Screen replacement (non-OLED)",   price: "On request",  hours: "2–4 hrs",  note: "MacBook Air M1/M2/M3, MacBook Pro 13\". IPS panel, in-stock." },
+  { label: "Screen replacement (Air, Pro 13\")", price: "On request",  hours: "2–4 hrs",  note: "MacBook Air M1/M2/M3, MacBook Pro 13\". IPS panel, in-stock." },
   { label: "Battery replacement",              price: "On request",  hours: "1–2 hrs",  note: "All Air and Pro models M1–M5, Intel 2015–2019." },
   { label: "Keyboard replacement",             price: "On request",  hours: "2–3 hrs",  note: "Butterfly (2016–2019) and scissor keyboards." },
   { label: "Trackpad replacement",             price: "On request",  hours: "2–3 hrs",  note: "Force Touch trackpad, all models 2015–2024." },
@@ -31,7 +32,7 @@ const SAME_DAY_REPAIRS = [
 const NOT_SAME_DAY = [
   { label: "Logic board repair", note: "Requires micro-soldering, 2 to 5 business days depending on fault." },
   { label: "Water damage",       note: "Ultrasonic clean + board inspection, 1 to 3 days." },
-  { label: "MacBook Pro 16\" OLED screen", note: "Panel sourced on request, 1 to 3 days lead time." },
+  { label: "MacBook Pro 16\" XDR screen", note: "Panel sourced on request, 1 to 3 days lead time." },
   { label: "Data recovery",      note: "Depends on drive state, 1 to 7 days." },
 ];
 
@@ -53,7 +54,7 @@ const STEPS = [
 
 const FAQS = [
   { q: "Which MacBook repairs are genuinely same-day in Dubai?",
-    a: "Screen replacement (MacBook Air and Pro 13\"), battery, keyboard, trackpad, USB-C charging port, fan cleaning, thermal paste, and macOS software repair are all same-day when your MacBook arrives before 2 pm. Logic board, water damage, and 16\" OLED screens take 1–5 days." },
+    a: "Screen replacement (MacBook Air and Pro 13\"), battery, keyboard, trackpad, USB-C charging port, fan cleaning, thermal paste, and macOS software repair are all same-day when your MacBook arrives before 2 pm. Logic board, water damage, and 16\" Liquid Retina XDR screens take 1–5 days." },
   { q: "How does the free MacBook pickup work in Dubai?",
     a: "WhatsApp 055 741 3706 with your model and fault. We confirm a fixed price, then dispatch a courier to collect from your home or office across Dubai Mainland. Repair is done the same day; MacBook returned next morning. No charge for pickup or delivery." },
   { q: "Do you do MacBook repair at home in Dubai?",
@@ -230,7 +231,7 @@ export default function SameDayMacBookRepair() {
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a
-                href={NAP.whatsappUrl}
+                href={withSlash(NAP.whatsappUrl)}
                 className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90"
               >
                 <MessageCircle size={18} aria-hidden /> WhatsApp Now
@@ -271,7 +272,7 @@ export default function SameDayMacBookRepair() {
               { label: "MacBook Repair Near Me Dubai", href: "/mac-repair-dubai" },
               { label: "MacBook Repair Dubai", href: "/" },
             ].map(({ label, href }) => (
-              <a key={href} href={href} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
                 {label}
               </a>
             ))}

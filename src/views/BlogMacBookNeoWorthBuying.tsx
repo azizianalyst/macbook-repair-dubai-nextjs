@@ -215,6 +215,7 @@ export default function BlogMacBookNeoWorthBuying() {
         { label: "Best MacBook for students", href: "/blog/best-macbook-for-students-dubai-2026", description: "Why we recommend M1 refurb over Neo." },
         { label: "MacBook Air vs Pro 2026", href: "/blog/macbook-air-vs-macbook-pro-2026", description: "If you can stretch to a real Air or Pro." },
         { label: "MacBook Neo repair Dubai", href: "/macbook-neo-repair-dubai", description: "Repair costs & service menu for the Neo." },
+        { label: "MacBook Neo battery cost (UAE)", href: "/blog/macbook-neo-battery-replacement-cost-uae", description: "Apple's UAE battery fee and why the Neo's battery is easy to reach." },
       ]}
     />
   );

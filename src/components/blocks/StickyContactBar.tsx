@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, Phone, Headset } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 /**
  * Desktop-only floating contact cluster (bottom-right). Mobile is handled by
@@ -77,7 +77,7 @@ export function StickyContactBar() {
 
       {/* 3 — WhatsApp */}
       <a
-        href={NAP.whatsappUrl}
+        href={withSlash(NAP.whatsappUrl)}
         target="_blank"
         rel="noopener noreferrer"
         data-track="whatsapp-sticky"

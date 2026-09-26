@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Reusable blog post template - Article + FAQPage + BreadcrumbList schema, byline, quick-answer.
 // Used by all blog posts. Body is JSX so authors can use tables + inline links.
 import { ReactNode } from "react";
@@ -198,7 +199,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
               {/* Contact CTAs — right under the answer */}
               <div className="flex gap-2 pt-1">
                 <a
-                  href={NAP.whatsappUrl}
+                  href={withSlash(NAP.whatsappUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-whatsapp text-white text-[12px] font-semibold h-9 hover:brightness-110 transition-all"
@@ -253,7 +254,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
                 <p className="text-[13px] font-semibold text-text mb-2">Need a repair?</p>
                 <p className="text-[12px] text-text-muted mb-3">Free diagnosis · Same day · Warranty</p>
                 <a
-                  href={NAP.whatsappUrl}
+                  href={withSlash(NAP.whatsappUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg bg-whatsapp text-white text-[13px] font-semibold h-9 hover:brightness-110 transition-all"
@@ -291,7 +292,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
                 </p>
                 <div className="flex flex-wrap gap-sm">
                   <Button asChild variant="whatsapp" size="lg">
-                    <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp for a quote</a>
+                    <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp for a quote</a>
                   </Button>
                   <Button asChild variant="secondary" size="lg">
                     <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a>
@@ -332,7 +333,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
               </p>
               <div className="flex flex-wrap gap-sm">
                 <Button asChild variant="whatsapp" size="lg">
-                  <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp for a quote</a>
+                  <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp for a quote</a>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
                   <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a>

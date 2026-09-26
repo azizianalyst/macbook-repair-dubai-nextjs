@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive, Database, Cpu } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -21,7 +22,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, quote please: ")}`} target="_blank" rel="noopener noreferrer">
+        <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, quote please: ")}`)} target="_blank" rel="noopener noreferrer">
           <MessageCircle aria-hidden /> WhatsApp Us
         </a>
       </Button>

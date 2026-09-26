@@ -1,183 +1,148 @@
 "use client";
-// MacBook Neo A18 Pro repair hub (L3) - Apple's first A-chip MacBook, March 2026, $599.
-// Sits under /macbook-neo-repair-dubai as a chip-specific spoke; links to the screen/battery/keyboard L5 pages.
+// MacBook Neo A18 Pro board-level spoke under /macbook-neo-repair-dubai: no power, liquid damage,
+// charging faults, data recovery. Facts only from docs/apple-lineup-2026-09-26.md (Apple launch
+// dates/price, iFixit teardown findings, Apple UAE AppleCare+ fees, M5 MacBook comparisons).
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 import { Link } from "@/lib/router-compat";
 
 export default function MacBookNeoA18RepairHub() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo A18 Pro Repair Dubai - First A-Chip MacBook 2026"
-      seoDescription="MacBook Neo A18 Pro repair Dubai (March 2026). Apple's $599 student MacBook with the A18 Pro chip from iPhone 16 Pro. Screen and battery work. Free diagnosis. Warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work). Call 055 741 3706."
+      seoTitle="MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage"
+      seoDescription="MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706."
       path="/macbook-neo-a18-repair-dubai"
-      eyebrow="Apple A18 Pro · March 2026 · $599 · student MacBook"
-      h1="MacBook Neo A18 Pro Repair Dubai - 2026"
-      subtitle="MacBook Neo is Apple's most affordable Mac ever - A18 Pro, 12.9-inch display, $599. At under 6 months old, check AppleCare+ first. If out of warranty: screen and battery work, quoted in writing after a free diagnosis."
-      startingPrice={250}
-      timeline="Same day (diagnosis) · 3-5 days (screen/battery)"
-      whatsappPrefill="Hi, I have a MacBook Neo (A18 Pro, 2026) and need help with:"
+      eyebrow="MacBook Neo · A18 Pro logic board · board-level repair"
+      h1="MacBook Neo A18 Pro Repair Dubai"
+      subtitle="Board-level repair for the MacBook Neo's A18 Pro logic board: no power, liquid damage, charging faults and data recovery. Free diagnosis, and an Apple warranty check before any paid work."
+      startingPrice={0}
+      timeline="Free diagnosis same day · board work quoted after testing"
+      whatsappPrefill="Hi, my MacBook Neo (A18 Pro) has a board problem:"
       breadcrumb={[
-        { name: "Home",              path: "/" },
-        { name: "MacBook Repair",    path: "/macbook-repair-dubai" },
+        { name: "Home",               path: "/" },
+        { name: "MacBook Repair",     path: "/macbook-repair-dubai" },
         { name: "MacBook Neo Repair", path: "/macbook-neo-repair-dubai" },
-        { name: "A18 Pro Repair",    path: "/macbook-neo-a18-repair-dubai" },
+        { name: "A18 Pro Repair",     path: "/macbook-neo-a18-repair-dubai" },
       ]}
-      technician={{ name: "Shafiq", years: 15, specialisation: "MacBook and A-chip board-level repair" }}
-      serviceName="MacBook Neo A18 Pro Repair Dubai"
+      technician={{ name: "Usman", years: 11, specialisation: "board-level repair on Apple silicon logic boards" }}
+      serviceName="MacBook Neo A18 Pro Logic Board Repair Dubai"
+      quickAnswer={{
+        question: "Can you repair a MacBook Neo logic board in Dubai?",
+        answer:
+          "Yes. We diagnose and repair MacBook Neo A18 Pro logic boards at component level in Dubai Media City: no power, liquid damage, charging faults and data recovery. The 8GB memory and storage are soldered to the board, so data recovery is board work. Diagnosis is free and we check Apple warranty first.",
+      }}
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook Neo (A18 Pro, 2026) repair in Dubai: screen and battery replacement, with
-            free diagnosis and a warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work).</strong> What makes the MacBook Neo different from a MacBook Air?
-            The Neo runs an <strong>A18 Pro chip</strong> - the same silicon inside the iPhone 16 Pro - rather than
-            Apple's M-series laptop chip. That single difference explains the $599 price: the A18 Pro is a mobile chip,
-            not a full desktop-class Mac chip. Practical trade-offs include 1 USB-C/Thunderbolt 4 (single port), a 12.9-inch
-            Liquid Retina LCD (not OLED), and 8 GB of soldered RAM that cannot be upgraded. For students, writers and
-            first-time Mac buyers, it delivers a real Mac experience at a real price. For video editors and developers
-            who need Thunderbolt, a MacBook Air M4 or MacBook Pro is the right choice.
+            <strong>The MacBook Neo runs an A18 Pro, an iPhone-class A-series chip, where every other MacBook Apple
+            sells today uses an M5-family chip.</strong> For board repair that matters in two ways. First, the logic
+            board carries the chip, the 8GB of memory and the storage, all soldered, so a board fault is also a data
+            problem. Second, iFixit found that the display, trackpad, battery and Touch ID can be swapped without
+            parts-pairing warnings, which lets us test with known-good parts and separate a genuine board fault from a
+            peripheral one before you pay for board work. For screens, batteries and keyboards, start at the{" "}
+            <Link to="/macbook-neo-repair-dubai" className="text-accent font-semibold hover:underline">MacBook Neo repair</Link>{" "}
+            hub.
           </p>
 
-          <div className="bg-bg-card border-l-4 border-accent rounded-md p-lg mb-lg">
-            <h3 className="text-[18px] font-bold mb-sm">Check AppleCare+ before you book a repair</h3>
-            <p className="text-[15px] mb-sm">
-              MacBook Neo launched in March 2026. At under 6 months old, it is very likely still under Apple's standard
-              1-year limited warranty, and may have AppleCare+ if the original buyer purchased it. We always verify warranty
-              status before touching anything. If your machine is covered, we tell you straight and send you to Apple - we
-              do not charge for the diagnosis visit.
-            </p>
-            <p className="text-[15px]">
-              Out of warranty? We repair the MacBook Neo - diagnosis is free, and screen replacement
-              and battery swaps are quoted in writing first. See the full{" "}
-              <Link to="/macbook-neo-repair-dubai" className="text-accent font-semibold hover:underline">
-                MacBook Neo repair page
-              </Link>{" "}
-              for all service options.
-            </p>
-          </div>
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Board faults we diagnose on the MacBook Neo</h2>
+          <ul className="space-y-2 text-[15px] mb-lg">
+            <li>• <strong>No power, no charge:</strong> we check the charger, the cable and the charging path on the
+              board before anything is condemned. A dead MacBook is often one failed component, not a dead chip.</li>
+            <li>• <strong>Liquid damage:</strong> corrosion keeps spreading while the machine has power, so switch it
+              off, do not charge it and bring it in. We clean the board and replace corroded parts; see{" "}
+              <Link to="/macbook-water-damage-repair-dubai" className="text-accent hover:underline">MacBook water damage repair</Link>.</li>
+            <li>• <strong>Boot loops and restarts:</strong> software is ruled out first with macOS recovery checks, so
+              you do not pay for board work that a reinstall would fix.</li>
+            <li>• <strong>Port and charging faults:</strong> we separate a damaged port from a board-side fault before
+              quoting either.</li>
+            <li>• <strong>Data at risk:</strong> because storage is soldered, recovering data means getting the
+              original board working again, not moving a drive into another machine.</li>
+          </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">MacBook Neo A18 Pro - what we repair</h2>
-          <p className="text-[15px] mb-md text-text-muted">
-            Parts availability for a March 2026 machine is still ramping. Screen and battery stock arrived in May 2026.
-            Most screen and battery repairs complete in 3 to 5 days. Diagnosis and port repair are often same-day.
+          <h2 className="text-[24px] md:text-[28px] mb-md">Warranty and AppleCare+ before you pay</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Apple put the MacBook Neo on sale on 11 March 2026, so most machines are still inside Apple&apos;s
+            one-year limited warranty. A board that fails on its own is a manufacturing defect and belongs with Apple;
+            we will tell you that after a free serial-number check. Liquid and drop damage are accidental damage, which
+            the standard warranty does not cover. With AppleCare+, Apple lists other accidental damage on the Neo at AED 579, excluding VAT.
+            Without it, our free diagnosis tells you whether a component-level repair makes sense on a machine that
+            Apple lists at AED 2,599 new.
           </p>
 
-          <div className="overflow-x-auto border border-border rounded-md bg-bg-card mb-lg">
-            <table className="w-full text-[14px] min-w-[520px]">
-              <thead>
-                <tr className="text-left border-b border-border">
-                  <th className="px-md py-sm font-semibold text-accent">Service</th>
-                  <th className="px-md py-sm font-semibold text-accent">Price (AED)</th>
-                  <th className="px-md py-sm font-semibold text-accent">Timeline</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-border">
-                  <td className="px-md py-sm font-medium text-text">
-                    <Link to="/macbook-neo-screen-repair-dubai" className="text-accent hover:underline">Screen replacement (12.9-inch Liquid Retina)</Link>
-                  </td>
-                  <td className="px-md py-sm font-semibold text-accent">650</td>
-                  <td className="px-md py-sm text-text-muted">3-5 days</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="px-md py-sm font-medium text-text">
-                    <Link to="/macbook-neo-battery-replacement-dubai" className="text-accent hover:underline">Battery replacement (BMS re-pair included)</Link>
-                  </td>
-                  <td className="px-md py-sm font-semibold text-accent">450</td>
-                  <td className="px-md py-sm text-text-muted">3-5 days</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="px-md py-sm font-medium text-text">USB-C/Thunderbolt 4 port repair</td>
-                  <td className="px-md py-sm font-semibold text-accent">400</td>
-                  <td className="px-md py-sm text-text-muted">Same day</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="px-md py-sm font-medium text-text">MagSafe 3 board replacement</td>
-                  <td className="px-md py-sm font-semibold text-accent">350</td>
-                  <td className="px-md py-sm text-text-muted">Same day</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="px-md py-sm font-medium text-text">
-                    <Link to="/macbook-neo-keyboard-repair-dubai" className="text-accent hover:underline">Keyboard repair (key cap or top-case)</Link>
-                  </td>
-                  <td className="px-md py-sm font-semibold text-accent">From 300</td>
-                  <td className="px-md py-sm text-text-muted">Same day - 3 days</td>
-                </tr>
-                <tr>
-                  <td className="px-md py-sm font-medium text-text">Water damage assessment + board clean</td>
-                  <td className="px-md py-sm font-semibold text-accent">250</td>
-                  <td className="px-md py-sm text-text-muted">Same day</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h2 className="text-[24px] md:text-[28px] mb-md">How the Neo compares with other current MacBooks</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            iFixit scored the MacBook Neo 6 out of 10. For comparison, it scored the 14-inch MacBook Pro M5 4 out of
+            10 and described its battery replacement as &quot;absurdly complex&quot;. On the MacBook Air M5, the logic
+            board has to come out before the battery can be reached, and its RAM and SSD are soldered too. On the
+            Neo, the battery sits in its own tray held by 18 screws.
+          </p>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            What the Neo shares with the MacBook Air M5 is soldered memory and storage, which cannot be upgraded or
+            moved. If your data matters, back it up now; if the board has already failed, see{" "}
+            <Link to="/macbook-data-recovery-dubai" className="text-accent hover:underline">MacBook data recovery</Link>{" "}
+            and message us before anyone else opens the machine.
+          </p>
+
+          <h2 className="text-[24px] md:text-[28px] mb-md">Turnaround, and when a board cannot be saved</h2>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Board work takes longer than a part swap. Liquid damage in particular needs cleaning, drying and testing
+            in stages, and a fault that looked like one failed component can turn out to be several. We give you a
+            realistic time with the written quote and update you on WhatsApp if the picture changes. If the
+            diagnosis shows the board is not worth repairing on a machine at the Neo&apos;s price, we say so before
+            any paid work, and we tell you plainly whether your data can still be recovered. Board and liquid-damage
+            repairs carry a 15-day written warranty.
+          </p>
         </>
       }
       whatWeFix={[
-        "Screen / display replacement - 12.9-inch Liquid Retina",
-        "Battery replacement with BMS re-pair",
-        "USB-C/Thunderbolt 4 port repair",
-        "MagSafe 3 board replacement",
-        "Water damage assessment and ultrasonic board clean",
-        "Logic board diagnosis (A18 Pro) - free estimate",
+        "No power or no charging on the A18 Pro logic board",
+        "Liquid damage: board cleaning and corroded component replacement",
+        "Boot loops and random restarts (software ruled out first)",
+        "Charging-path and port faults",
+        "Short circuits after a spill or a faulty charger",
+        "Data recovery by repairing the original board",
       ]}
       steps={[
-        {
-          title: "Free diagnosis and warranty check",
-          body: "Bring in the Neo or book a free pickup. We run a full hardware diagnostic and check Apple warranty / AppleCare+ status before quoting anything. If it is covered, we tell you and send you to Apple at no charge.",
-        },
-        {
-          title: "Repair with genuine or OEM parts",
-          body: "Parts approved by Shafiq after inspection. Screen is full Liquid Retina assembly. Battery cells are matched to the A18 Pro BMS. All repairs are documented with photos.",
-        },
-        {
-          title: "Full test and return",
-          body: "Display calibration, battery charge cycle verification, port function test, and a written warranty card handed over with the machine - warranty up to 12 months (3 months on screens and batteries; 15 days on board, liquid and data work).",
-        },
+        { title: "Free diagnosis and warranty check", body: "We test the Neo and check Apple warranty and AppleCare+ status. If Apple should cover it, we tell you and charge nothing." },
+        { title: "Isolate the fault",                 body: "Known-good display, trackpad and battery let us prove whether the board is really at fault before you pay for board work." },
+        { title: "Component-level repair",            body: "Written quote first. Corroded or failed components are replaced on the original board, so your data stays where it is." },
+        { title: "Test and return",                   body: "Charging, boot, ports, keyboard, trackpad and battery health checked under load before collection." },
       ]}
-      warrantyDays={365}
+      warrantyDays={15}
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (keyboard, ports, hinge, fan, speaker, SSD/RAM).",
-        "3 months on screen and battery replacements.",
-        "15 days on logic-board, liquid-damage, software and data-recovery work.",
-        "Free re-diagnosis if the same fault recurs within the warranty period.",
+        "15 days on logic-board, liquid-damage and data-recovery work.",
+        "Up to 12 months on hardware parts we replace, such as ports.",
+        "Free re-diagnosis if the same fault returns within the warranty period.",
+        "Written on your invoice.",
       ]}
       faqs={[
         {
-          q: "Is my MacBook Neo still under Apple warranty?",
-          a: "Very likely yes. MacBook Neo launched in March 2026. Apple's standard limited warranty runs 12 months from purchase date, so a machine bought at launch is covered until at least March 2027. If the original owner also purchased AppleCare+, coverage extends to 3 years. We check warranty status in the first 5 minutes of every visit - free of charge. If you are covered, we refer you to Apple.",
+          q: "Can you repair a MacBook Neo that won't turn on?",
+          a: "Usually, yes. We check the charger, cable and charging path first, then test the board. Because the display, trackpad and battery swap without parts-pairing warnings, we can rule them out with known-good parts. Diagnosis is free, and if the machine is under Apple's warranty we send you to Apple.",
         },
         {
-          q: "Does MacBook Neo have Thunderbolt?",
-          a: "The MacBook Neo has 1 USB-C/Thunderbolt 4 port plus MagSafe 3 for charging and a 3.5mm headphone jack. The single Thunderbolt 4 port handles data and display output. If you need multiple Thunderbolt ports for high-speed storage arrays or multiple external displays, a MacBook Air or MacBook Pro with more Thunderbolt ports is the better choice.",
+          q: "Is MacBook Neo liquid damage covered by Apple?",
+          a: "Not by the standard one-year warranty, which covers manufacturing defects only. With AppleCare+, Apple lists other accidental damage on the MacBook Neo at AED 579, excluding VAT. Without it, switch the machine off, do not charge it, and bring it in for a free board assessment.",
         },
         {
-          q: "Can MacBook Neo RAM or SSD be upgraded?",
-          a: "No. Both the 8GB (or 16GB) unified memory and the 256GB or 512GB SSD are soldered directly to the A18 Pro logic board. There are no upgrade slots. Buy the configuration you need at purchase. If your Neo is running out of space, we can advise on external SSD options that work over the USB-C ports.",
+          q: "Can data be recovered from a dead MacBook Neo?",
+          a: "Often, but only through the original logic board. The storage is soldered, so there is no drive to move into another computer. We repair the board enough to start it and copy your files. The sooner a liquid-damaged Neo reaches us, the better the odds.",
         },
         {
-          q: "How does MacBook Neo A18 Pro repair compare to M-chip Mac repair?",
-          a: "The A18 Pro is a mobile chip - the same design used in the iPhone 16 Pro. Board-level repair techniques overlap closely with iPhone logic board repair, which Shafiq has been doing since 2011. The key practical difference for repair is parts availability: the Neo is a March 2026 machine, so screen and battery stock only reached Dubai in May 2026. Most repairs are 3 to 5 days rather than same-day. MagSafe 3 and port work is typically same-day.",
+          q: "Can the MacBook Neo's memory be upgraded?",
+          a: "No. iFixit's teardown confirmed the 8GB of RAM is soldered, as is the storage. What you bought is what the machine keeps. If you need more memory or storage, the upgrade is a different Mac, not a repair.",
+        },
+        {
+          q: "Is the A18 Pro harder to repair than an M-series chip?",
+          a: "The principles are the same: memory and storage are soldered on the board, so we repair the board rather than swap parts off it. The difference on the Neo is everything around the board, which is more modular than on the M5 MacBook Air or MacBook Pro.",
         },
       ]}
-      reviewNames={["David Chen", "Priya Nair"]}
+      reviewNames={["Nab", "Janna Nurahmetova"]}
       related={[
-        {
-          label: "MacBook Neo Repair Dubai",
-          href: "/macbook-neo-repair-dubai",
-          description: "All MacBook Neo repairs in one place - screen, battery, keyboard, water damage.",
-        },
-        {
-          label: "MacBook Neo Screen Repair Dubai",
-          href: "/macbook-neo-screen-repair-dubai",
-          description: "12.9-inch Liquid Retina screen replacement. 3-month warranty.",
-        },
-        {
-          label: "MacBook Neo Battery Replacement Dubai",
-          href: "/macbook-neo-battery-replacement-dubai",
-          description: "A18 Pro battery replacement. BMS re-pair included.",
-        },
+        { label: "MacBook Neo Repair Dubai",      href: "/macbook-neo-repair-dubai",           description: "Screen, battery, keyboard and trackpad on the Neo." },
+        { label: "MacBook Logic Board Repair",    href: "/macbook-logic-board-repair-dubai",   description: "Component-level board repair on every MacBook." },
+        { label: "MacBook Neo Battery Replacement", href: "/macbook-neo-battery-replacement-dubai", description: "18-screw battery tray, no pairing warnings." },
       ]}
-      blogLink={{ label: "MacBook Neo: Worth Buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
+      blogLink={{ label: "MacBook Neo: worth buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
     />
   );
 }

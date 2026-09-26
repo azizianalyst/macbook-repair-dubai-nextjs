@@ -1,468 +1,356 @@
 "use client";
-import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive, Database, Cpu } from "lucide-react";
-import { Link } from "@/lib/router-compat";
-import { PageShell } from "@/components/layout/PageShell";
-import { Hero } from "@/components/blocks/Hero";
-import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
-import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { LocationBlock } from "@/components/blocks/LocationBlock";
-import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
-import { LeadForm } from "@/components/blocks/LeadForm";
+/**
+ * Data Recovery Dubai (/mac-data-recovery-dubai/). Rebuilt 2026-09-26 onto the Azizi page
+ * standard (SEO master plan, Phase 2.3 item 7).
+ *
+ * Semrush UAE targets now covered by their own H2s: "data recovery dubai" (590, fixsquad #1,
+ * we did not rank), "data recovery services dubai", "hard drive / hdd / hard disk data
+ * recovery dubai", "ssd data recovery", "mac / macbook data recovery", "data recovery near
+ * me" and "data recovery abu dhabi" (served honestly by the courier, since there is no
+ * branch there). The SSD, T2, water-damage and per-device sections are short and hand off
+ * to their own pages, so this hub feeds them rather than competing with them.
+ *
+ * Only services the site's other data-recovery pages already claim are claimed here:
+ * external SSD/USB drives (/ssd-data-recovery-dubai), external 2.5"/3.5" and Time Machine
+ * drives (/macbook-data-recovery-dubai), Fusion Drive and HDD work with mechanical faults
+ * going to a partner clean room and quoted separately (/imac-data-recovery-dubai), privacy
+ * handling (area pages, Mac mini page, NDA from the MacBook page).
+ *
+ * Removed as untrue or unsourced: the success-rate table (85–90%, 60–75%, 40–60% — no
+ * source, and every recovery page quoted different numbers), "chip-off" recovery on Apple
+ * silicon (the storage is encrypted to the Secure Enclave, so chip-off yields ciphertext),
+ * "Intel Mac (2017–2020) removable SSD" (2018–2020 Intel Macs are T2 with soldered storage),
+ * an SSD that "clicks", "recovery needs your Apple ID" (it is the login password or the
+ * FileVault recovery key), a literal "14 years" byline (now read from TEAM), and the
+ * "same day to 5 days" timeline. useSeo() dropped: meta comes from metaForPath() in
+ * page.tsx and schema from <PageSchema/>.
+ */
+import { Search, ShieldCheck, Lock, Truck } from "lucide-react";
+
+import { AziziMoneyPage, InLink, WaLink, waHref } from "@/components/azizi/AziziMoneyPage";
 import { PRESETS } from "@/data/form-presets";
-import { Button } from "@/components/ui/button";
-import { useSeo, preloadFromHero } from "@/hooks/use-seo";
-import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { REVIEWS } from "@/content/reviews";
+import { REVIEW_AVERAGE, REVIEW_COUNT } from "@/content/business.generated";
+import { NAP, TEAM } from "@/content/site";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 
-const HERO_IMG = "/images/real/lab/macbook-air-lid-dubai.jpg";
+const PATH = "/mac-data-recovery-dubai";
+const WA_MSG = "Hi, I need data recovery. Device or drive: ... What happened: ...";
+/* The roster's data-recovery technician; name and years come from TEAM, never a literal. */
+const TECH = TEAM.find((t) => t.name === "Ali");
 
-function CallButtons({ dark = false }: { dark?: boolean }) {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, quote please: ")}`} target="_blank" rel="noopener noreferrer">
-          <MessageCircle aria-hidden /> WhatsApp Us
-        </a>
-      </Button>
-      <Button asChild variant="outline" size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
+/* Real reviews about dead Macs and saved data, filtered from the live set at render time. */
+const recoveryReviews = REVIEWS
+  .filter((r) => /saved my data|from the dead|wouldn.t even turn on/i.test(r.text ?? ""))
+  .slice(0, 3)
+  .map((r) => ({ name: r.name, date: r.date, rating: r.rating, text: r.text }));
 
-const SCENARIOS = [
-  {
-    icon: <HardDrive size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "MacBook won't boot or stuck on spinning wheel",
-    price: "On request",
-    body: "Often a corrupted macOS volume or failing SSD directory, not necessarily a dead drive. We image the drive state without writing to it first, then attempt logical recovery. High success rate on drives that won't boot but are still detected.",
-  },
-  {
-    icon: <AlertTriangle size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "Accidental file delete or format",
-    price: "On request",
-    body: "Time-sensitive. Stop using the Mac immediately -- every write reduces the recovery window. Do not empty the Trash. Bring in or send to us as soon as possible. Logical file recovery from a still-functioning SSD has a very high success rate when the drive has not been written to since deletion.",
-  },
-  {
-    icon: <Truck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "Water damage",
-    price: "On request",
-    body: "Logic board repair usually comes first (ultrasonic clean, corrosion removal, component work), then SSD health is assessed. If the SSD controller was damaged by liquid, chip-level recovery techniques are used. Board repair and recovery are quoted together as one job.",
-  },
-  {
-    icon: <Database size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "SSD failure -- not detected or clicking",
-    price: "On request",
-    body: "A drive that is not detected may have a failed SSD controller or bad NAND blocks. We run non-destructive diagnostics first. Physical SSD failure recovery is successful in 60-75% of cases. Apple Silicon SSDs are soldered and require board-level work for physical failures.",
-  },
-  {
-    icon: <Cpu size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "macOS corruption after update",
-    price: "On request",
-    body: "A partial or interrupted macOS update can leave the system volume corrupted. In most cases your data is intact on the volume -- we reinstall macOS around it without erasing. Full data recovery is rarely needed for this scenario.",
-  },
-  {
-    icon: <ShieldCheck size={22} className="text-accent transition-colors group-hover:text-white" aria-hidden />,
-    title: "T2 chip lock or FileVault encrypted drive",
-    price: "On request",
-    body: "T2-secured Macs (2018-2020 Intel) encrypt the SSD at the hardware level. Recovery requires your Apple ID and FileVault password -- without them, data cannot be decrypted by anyone. We assist with account recovery and T2 bypass diagnostics where possible.",
-  },
-];
+const AREA_LINKS = DATA_RECOVERY_AREAS.map((a) => ({
+  label: `Mac data recovery ${a.area}`,
+  to: `/mac-data-recovery-${a.slug}`,
+}));
 
-const PRICING_ROWS = [
-  { label: "Logical recovery (won't boot, corrupted macOS)", price: "On request" },
-  { label: "Accidental format or file delete", price: "On request" },
-  { label: "Physical SSD failure", price: "On request" },
-  { label: "Water damage board repair plus recovery", price: "On request" },
-  { label: "T2 chip lock or FileVault issues", price: "On request" },
-];
+const RECOVERY_SERVICES = [
+  { label: "MacBook data recovery", to: "/macbook-data-recovery-dubai" },
+  { label: "SSD data recovery", to: "/ssd-data-recovery-dubai" },
+  { label: "Apple T2 chip data recovery", to: "/apple-t2-chip-data-recovery-dubai" },
+  { label: "Data recovery after water damage", to: "/mac-data-recovery-after-water-damage-dubai" },
+  { label: "iMac data recovery", to: "/imac-data-recovery-dubai" },
+  { label: "Mac mini data recovery", to: "/mac-mini-data-recovery-dubai" },
+  { label: "Mac Studio data recovery", to: "/mac-studio-data-recovery-dubai" },
+  { label: "Mac Pro data recovery", to: "/mac-pro-data-recovery-dubai" },
+  { label: "iPhone data recovery", to: "/iphone-data-recovery-dubai" },
+  { label: "iPad data recovery", to: "/ipad-data-recovery-dubai" },
+  { label: "MacBook logic board repair", to: "/macbook-logic-board-repair-dubai" },
+  { label: "MacBook water damage repair", to: "/macbook-water-damage-repair-dubai" },
+  { label: "Mac not turning on", to: "/mac-not-turning-on-dubai" },
+] as const;
 
-const SUCCESS_RATES = [
-  { scenario: "Logical failure (won't boot, corrupted macOS)", rate: "85-90%" },
-  { scenario: "Physical SSD failure", rate: "60-75%" },
-  { scenario: "Accidental format (drive not overwritten)", rate: "80-90%" },
-  { scenario: "Severe water damage", rate: "40-60%" },
-];
-
-const VS_ROWS = [
-  { label: "Assessment", us: "Free -- we assess before you pay anything", them: "Diagnostic fee charged upfront" },
-  { label: "Apple Silicon recovery", us: "Board-level and chip-off techniques", them: "Often not serviceable" },
-  { label: "No-recovery guarantee", us: "No recovery, no charge", them: "Diagnostic fee non-refundable" },
-  { label: "Data stays private", us: "Recovered to your external drive", them: "Data may be handled off-site" },
-  { label: "Water damage", us: "Board repair plus recovery in one job", them: "Usually declined" },
-  { label: "Vintage Intel models", us: "2012 onward", them: "Refused on obsolete (pre-2017)" },
-];
+const RELATED_HUBS = [
+  { label: "MacBook Repair Dubai", to: "/macbook-repair-dubai" },
+  { label: "Mac Repair Dubai", to: "/mac-repair-dubai" },
+  { label: "iMac Repair Dubai", to: "/imac-repair-dubai" },
+  { label: "Mac mini Repair Dubai", to: "/mac-mini-repair-dubai" },
+  { label: "Apple Repair Dubai", to: "/apple-repair-dubai" },
+  { label: "MacBook Repair Abu Dhabi", to: "/macbook-repair-abu-dhabi" },
+  { label: "MacBook Repair Sharjah", to: "/macbook-repair-sharjah" },
+  { label: "Data recovery from a broken MacBook (guide)", to: "/blog/data-recovery-broken-macbook-2026" },
+] as const;
 
 const FAQS = [
   {
-    q: "Can data be recovered from a MacBook that won't turn on?",
-    a: "In most cases yes. If the Mac won't turn on due to a power fault (not SSD failure), the data is safe on the SSD -- we repair the power issue first, then the data is accessible. If the SSD itself failed, recovery is still possible in 60-75% of cases.",
+    q: "How much does data recovery cost in Dubai?",
+    a: "It depends on why the data cannot be reached: a deleted folder is a very different job from a dead Apple silicon board. The assessment is free, you get a written quote before any paid work, and if nothing is recovered you pay nothing. Partner clean-room work for mechanical drive faults is quoted separately and charged whatever the outcome.",
   },
   {
-    q: "How much does Mac data recovery cost in Dubai?",
-    a: "It depends on why the data is unreachable. Logical recovery (corrupted macOS, won't boot) is the least involved; physical SSD failure needs specialist hardware; water damage means repairing the board before recovery can even start, so it costs the most. The assessment is free and we tell you both the recovery probability and the price before you commit to anything.",
+    q: "Can you recover data from a MacBook that won't turn on?",
+    a: "Often, yes. Many Macs that will not power on have a board fault while the storage is fine. On T2 and Apple silicon models we repair the original logic board so the data can be read; if the security chip or the storage is destroyed, it cannot be recovered.",
   },
   {
-    q: "Can data be recovered from a MacBook with a soldered Apple Silicon SSD?",
-    a: "Yes in most cases. The M1-M4 SSD is soldered to the logic board, which means standard SSD recovery tools cannot be connected. We use board-level diagnostics and, where necessary, chip-off recovery techniques. More complex than Intel recovery but achievable.",
+    q: "Do you need my Mac's password to recover the data?",
+    a: "Usually, so bring it. If FileVault was on, the data cannot be read without the login password or the FileVault recovery key, by us, by Apple or by any lab. If you have forgotten it, reset it with your Apple Account where your Mac offers that option, or with the recovery key.",
   },
   {
-    q: "I accidentally deleted important files -- what should I do?",
-    a: "Stop using the Mac immediately. Every write to the SSD reduces the chance of recovery. Do not empty the Trash. Bring in or send to us as soon as possible. Logical file recovery from a still-functioning SSD has a very high success rate if the drive has not been written to since deletion.",
+    q: "Do you recover external hard drives and SSDs?",
+    a: "Yes: external SSDs, USB flash drives and 2.5- or 3.5-inch hard drives, including Time Machine drives, with the same free assessment. A hard drive that clicks or will not spin goes to a partner clean room, quoted separately and charged whatever the outcome.",
   },
   {
-    q: "My MacBook SSD is showing as not mounted -- is my data gone?",
-    a: "Not necessarily. A drive that won't mount may have a corrupted partition table or directory. This is a logical failure with high recovery rates. Do not run Disk Utility First Aid repeatedly -- it can overwrite the recovery window. Bring in for professional assessment.",
+    q: "Is my data kept private?",
+    a: "Yes. We do not browse or copy anything beyond what the recovery needs, our working copy is deleted once you confirm, and an NDA is available on request.",
   },
   {
-    q: "Is data recovery from a water-damaged MacBook possible?",
-    a: "Yes, in 60-75% of cases after water damage. We repair the logic board first (ultrasonic clean, component repair), then assess SSD health. If the SSD controller was damaged by liquid, recovery is harder but still possible with chip-level techniques. Board repair and recovery are quoted as a single job.",
+    q: "Do you offer data recovery in Abu Dhabi?",
+    a: "We have no branch in Abu Dhabi, but a free courier collects from Abu Dhabi and Sharjah and returns your device. The work happens at our Dubai Media City workshop once you approve the quote on WhatsApp.",
   },
 ];
 
 export default function MacDataRecovery() {
-  useSeo(
-    {
-      title: "Mac Data Recovery Dubai - SSD, Deleted Files, Won't Boot",
-      description:
-        "Mac data recovery Dubai. MacBook won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment, no-fix no-charge. Call 055 741 3706.",
-      path: "/mac-data-recovery-dubai",
-      preloadImage: preloadFromHero(HERO_IMG),
-    },
-    [
-      localBusiness(),
-      organization(),
-      serviceSchema({
-        name: "Mac Data Recovery Dubai",
-        timeline: "Same day to 5 days",
-        warranty: "P15D",
-        url: "/mac-data-recovery-dubai",
-        description:
-          "Mac data recovery in Dubai from MacBooks that won't boot, have failed SSDs, suffered water damage, or were accidentally formatted. Apple Silicon (M1-M4) and Intel. Free assessment.",
-      }),
-    ],
-  );
-
   return (
-    <PageShell>
-      <div className="bg-bg-alt text-text -mb-[4rem]">
+    <AziziMoneyPage
+      path={PATH}
+      preset={PRESETS["data-recovery"]}
+      leadFormDeviceType="MacBook"
 
-        {/* Breadcrumb */}
-        <div className="mx-auto max-w-content px-5 md:px-6 pt-[100px]">
-          <BreadcrumbTrail
-            tone="dark"
-            trail={[
-              { name: "Home", path: "/" },
-              { name: "MacBook Repair Dubai", path: "/macbook-repair-dubai" },
-              { name: "Mac Data Recovery", path: "/mac-data-recovery-dubai" },
-            ]}
-          />
-        </div>
+      breadcrumb={[
+        { name: "Home", path: "/" },
+        { name: "MacBook Repair Dubai", path: "/macbook-repair-dubai" },
+        { name: "Data Recovery Dubai", path: PATH },
+      ]}
 
-        {/* Hero */}
-        <Hero
-          variant="device"
-          tone="dark"
-          eyebrow="Data recovery specialist · Dubai Media City · Free assessment"
-          title="Mac Data Recovery Dubai"
-          image={HERO_IMG}
-          imageAlt="MacBook on repair bench in Dubai Media City workshop for data recovery assessment"
-        />
+      hero={{
+        eyebrow: "Data recovery · Macs, SSDs and hard drives · Dubai Media City",
+        title: "Data Recovery Dubai: Macs, SSDs and Hard Drives",
+        subtitle:
+          "Files back from Macs that won't boot, failed SSDs, liquid damage and external drives. Free assessment, a straight answer, and no charge if nothing comes back.",
+        timeline: "Given with your written quote",
+        image: "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg",
+        imageAlt:
+          "MacBook Pro opened on the bench at MacBook Repair Dubai, showing the logic board where Apple silicon storage is soldered",
+        ctaLabel: "WhatsApp for a free assessment",
+      }}
 
+      authorByline={{
+        author: "MacBook Repair Dubai workshop team",
+        role: "Concord Tower, Dubai Media City",
+        reviewer: TECH ? `${TECH.name}, data recovery technician (${TECH.years} years)` : undefined,
+        updated: "September 2026",
+      }}
 
-        <TakeawaysByline
-          updated="September 2026"
-          reviewer="Ali, Senior technician - data recovery"
-          years={14}
-          items={[
-            "Recovery covers every Mac - MacBook, iMac, Mac mini, Studio and Pro, Apple Silicon and Intel.",
-            "The assessment is free, and no-recovery-no-charge means you pay only when your files come back.",
-            "On M-series Macs the SSD is soldered, so board repair often has to come before recovery - both happen on one bench here.",
-            "T2 and Apple Silicon encryption means recovery needs your Apple ID password - no password, no data, by design.",
-            "Stop using a failing drive immediately; every write lowers the recovery odds.",
-            "You approve a written quote and a file-list preview before paying anything.",
-          ]}
-        />
-        {/* AI-quotable answer */}
-        <div className="mx-auto max-w-content px-5 md:px-6 mt-[40px]">
-          <div className="rounded-2xl border border-accent/30 bg-accent/[0.06] p-lg md:p-xl">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3">Quick answer</p>
-            <p className="text-[16px] md:text-[17px] leading-relaxed text-text m-0">
-              Mac data recovery in Dubai starts with a free assessment at MacBook Repair Dubai. We recover data from MacBooks that won't boot, have failed SSDs, suffered water damage, or were accidentally formatted. Apple Silicon (M1-M4) recovery is more complex due to soldered SSD but achievable in most cases. The assessment is free and you get a written price before any paid work.
+      quickAnswer={{
+        question: "Where can I get data recovered in Dubai?",
+        answer:
+          "MacBook Repair Dubai recovers data from Macs, SSDs and external drives at its workshop in Concord Tower, Dubai Media City. The assessment is free, you see a written quote before any paid work, and there is no charge if nothing is recovered. On T2 and Apple silicon Macs, recovery depends on getting the original logic board working.",
+      }}
+
+      keyTakeaways={{
+        updated: "September 2026",
+        lead:
+          "MacBook Repair Dubai is an independent workshop in Dubai Media City that recovers data from Macs and the drives used with them.",
+        items: [
+          "The data recovery assessment is free, and there is no charge if nothing is recovered. Partner clean-room work for mechanical drive faults is quoted separately and charged whatever the outcome.",
+          "On T2 and Apple silicon Macs the SSD is encrypted to the Mac's own chip, so recovery means repairing the original logic board; chip-off does not work.",
+          "With FileVault on, data cannot be read without the login password or recovery key, by anyone.",
+          "Stop using a failing Mac or drive: every restart or save can overwrite what is left.",
+        ],
+      }}
+
+      whatIs={{
+        heading: "Data recovery services in Dubai: what can and cannot come back",
+        entityName: "Data recovery",
+        definition: (
+          <>
+            <p>
+              A logical failure (deleted files, a formatted drive, a corrupted macOS volume) leaves the storage
+              healthy, and files often survive until overwritten. A physical failure (a dead board, a failed SSD,
+              liquid damage, a clicking hard drive) must be fixed before any file can be read.
             </p>
-          </div>
-        </div>
-
-        {/* IMPORTANT notice */}
-        <div className="mx-auto max-w-content px-5 md:px-6 mt-[32px]">
-          <div className="rounded-2xl border border-orange-500/40 bg-orange-500/[0.08] p-lg md:p-xl flex gap-md items-start">
-            <AlertTriangle size={22} className="text-orange-400 shrink-0 mt-0.5" aria-hidden />
-            <div>
-              <p className="text-[14px] font-bold text-orange-700 m-0 mb-2">Do not attempt DIY recovery on Apple Silicon Macs</p>
-              <p className="text-[14px] text-text-muted leading-relaxed m-0">
-                The SSD is soldered to the logic board on all M1-M4 MacBooks. Running disk repair tools on a failing drive can permanently destroy data by overwriting the recovery window. Bring in for professional assessment before trying anything.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* USP strip */}
-        <div className="border-y border-border bg-bg-alt mt-[48px]">
-          <div className="mx-auto max-w-content px-5 md:px-6 py-lg">
-            <ul className="flex flex-wrap gap-x-2xl gap-y-sm list-none p-0 m-0">
-              {[
-                { icon: <Search size={15} className="text-accent" aria-hidden />, label: "Free assessment" },
-                { icon: <ShieldCheck size={15} className="text-accent" aria-hidden />, label: "No recovery, no charge" },
-                { icon: <Database size={15} className="text-accent" aria-hidden />, label: "Apple Silicon and Intel" },
-                { icon: <Truck size={15} className="text-accent" aria-hidden />, label: "Free pickup across Dubai" },
-                { icon: <Award size={15} className="text-accent" aria-hidden />, label: "Independent Apple specialists" },
-              ].map((item) => (
-                <li key={item.label} className="flex items-center gap-2 text-[14px] text-text-muted">
-                  {item.icon}
-                  <span>{item.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Recovery scenarios */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Six recovery scenarios</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
-              What situation is your Mac in?
-            </h2>
-            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
-              {SCENARIOS.map((s) => (
-                <div key={s.title} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
-                  <div className="flex items-center gap-sm">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">{s.icon}</span>
-                    <span className="inline-flex items-center rounded-full bg-accent/10 border border-accent/20 px-2.5 py-0.5 text-[12px] font-medium text-accent">{s.price}</span>
-                  </div>
-                  <h3 className="m-0 text-text text-[16px] font-bold">{s.title}</h3>
-                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{s.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Apple Silicon vs Intel */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Apple Silicon vs Intel</p>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
-            Does Mac data recovery depend on the chip generation?
-          </h2>
-          <div className="grid gap-lg md:grid-cols-2">
-            <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
-              <div className="flex items-center gap-sm mb-md">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">
-                  <HardDrive size={20} className="text-accent transition-colors group-hover:text-white" aria-hidden />
-                </span>
-                <h3 className="m-0 text-text text-[18px] font-bold">Intel Mac (2017-2020)</h3>
-              </div>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed mb-md">
-                Intel MacBooks use a removable SSD card (blade format). The SSD can be connected directly to a recovery workstation, making physical and logical recovery more straightforward. Higher success rates for physical failure.
-              </p>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-accent shrink-0" aria-hidden />
-                <span className="text-[13px] text-text-muted">Removable SSD -- direct workstation connection</span>
-              </div>
-            </div>
-            <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
-              <div className="flex items-center gap-sm mb-md">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0 transition-colors group-hover:bg-accent">
-                  <Cpu size={20} className="text-accent transition-colors group-hover:text-white" aria-hidden />
-                </span>
-                <h3 className="m-0 text-text text-[18px] font-bold">Apple Silicon (M1-M4)</h3>
-              </div>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed mb-md">
-                M-chip MacBooks have the SSD soldered directly onto the logic board. For logical failures (corrupted OS, won't boot) the recovery process is board-level and still achieves high success rates. Physical NAND failure requires chip-off techniques.
-              </p>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-accent shrink-0" aria-hidden />
-                <span className="text-[13px] text-text-muted">Soldered SSD -- board-level and chip-off recovery</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Recovery process */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">How it works</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-2xl">
-              How does the Mac data recovery process work?
-            </h2>
-            <ol className="grid gap-lg md:grid-cols-3 list-none p-0 m-0">
-              {[
-                {
-                  n: 1,
-                  title: "Free assessment",
-                  body: "We image the drive state without writing to it. Non-destructive diagnostics tell us whether the failure is logical (corrupted directory) or physical (NAND failure). We give you the success rate estimate and cost before any paid work starts.",
-                },
-                {
-                  n: 2,
-                  title: "Recovery attempt",
-                  body: "Logical failures are addressed with software tools that reconstruct the file system. Physical failures may require component-level board repair or chip-level techniques on Apple Silicon. We keep you updated throughout.",
-                },
-                {
-                  n: 3,
-                  title: "Verify and deliver",
-                  body: "Recovered files are verified by browsing the directory with you present or via a screenshot gallery sent on WhatsApp. Data is delivered to your external drive. The original Mac is repaired or returned as agreed.",
-                },
-              ].map((step) => (
-                <li key={step.n} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg group transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40">
-                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-bold text-[18px] text-accent transition-colors group-hover:bg-accent group-hover:text-white">{step.n}</span>
-                  <p className="font-semibold text-[16px] m-0 mb-2 text-text">{step.title}</p>
-                  <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{step.body}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Success rates */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Realistic expectations</p>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-text leading-[1.1] mb-xl">
-            What are the Mac data recovery success rates?
-          </h2>
-          <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] mb-md">
-            <table className="w-full border-collapse text-left text-[14px] min-w-[420px]">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="px-lg py-md font-semibold text-accent">Failure type</th>
-                  <th className="px-lg py-md font-semibold text-accent">Typical success rate</th>
-                </tr>
-              </thead>
-              <tbody>
-                {SUCCESS_RATES.map((r) => (
-                  <tr key={r.scenario} className="border-b border-border last:border-0">
-                    <td className="px-lg py-sm text-text">{r.scenario}</td>
-                    <td className="px-lg py-sm font-bold text-accent">{r.rate}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-[14px] text-text-muted leading-relaxed max-w-[72ch]">
-            We tell you the estimated success rate before you commit to paid recovery. If we cannot recover your data, you pay nothing beyond the free assessment.
-          </p>
-        </section>
-
-        {/* Pricing */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">Transparent pricing</p>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.1] mb-xl">
-              How much does Mac data recovery cost in Dubai?
-            </h2>
-            <div className="overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
-              <table className="w-full border-collapse text-left text-[14px] min-w-[480px]">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="px-lg py-md font-semibold text-accent">Recovery type</th>
-                    <th className="px-lg py-md font-semibold text-accent whitespace-nowrap">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRICING_ROWS.map((r) => (
-                    <tr key={r.label} className="border-b border-border last:border-0">
-                      <td className="px-lg py-sm text-text">{r.label}</td>
-                      <td className="px-lg py-sm font-semibold text-accent whitespace-nowrap">{r.price}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="mt-md text-[13px] text-on-primary-muted">
-              Every job is quoted in writing before any paid work, VAT inclusive. Free assessment. No recovery, no charge. Payment on data delivery.
+            <p>
+              On T2 and Apple silicon Macs, encryption decides the outcome: the data can only be read through the
+              original, working board. The free assessment tells you which case you are in.
             </p>
-          </div>
-        </section>
+          </>
+        ),
+        benefits: [
+          { icon: Search, title: "Free assessment", body: "The failure is found before any quote." },
+          { icon: ShieldCheck, title: "No recovery, no charge", body: "Clean-room drive work aside, you pay only when files come back." },
+          { icon: Lock, title: "Private by default", body: "One bench, nothing browsed, copy deleted." },
+          { icon: Truck, title: "Free collection", body: "Anywhere in Dubai; courier from Abu Dhabi." },
+        ],
+      }}
 
-        {/* VsAppleStore */}
-        <div className="mt-[80px]">
-          <VsAppleStore
-            tone="dark"
-            heading="Mac data recovery vs sending to Apple Store"
-            intro="Apple does not offer data recovery -- they replace or wipe devices. An independent data recovery specialist works on the drive directly, with no-recovery no-charge terms."
-            rows={VS_ROWS}
-          />
-        </div>
-
-        {/* FAQ */}
-        <section className="mt-[96px] py-[80px]" style={{ background: "#1E2329" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6">
-            <div className="grid lg:grid-cols-[280px_1fr] gap-2xl items-start">
-              <div className="lg:sticky lg:top-24">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4">FAQ</p>
-                <h2 className="text-[28px] md:text-[36px] font-bold tracking-tight text-white leading-[1.1] mb-md">
-                  Data recovery questions
-                </h2>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed mb-lg">
-                  Common questions about Mac data recovery in Dubai, Apple Silicon SSDs, and what happens when a MacBook won't boot.
-                </p>
-                <CallButtons dark />
-              </div>
-              <FAQAccordion items={FAQS} injectSchema={true} tone="dark" />
-            </div>
-          </div>
-        </section>
-
-        {/* Location */}
-        <div className="mt-[80px]">
-          <LocationBlock tone="dark" compact />
-        </div>
-
-        {/* Related Articles */}
-        {/* Data recovery by area - the only in-content route into the area pages from the
-            Dubai-wide hub (cluster-audit 2026-09-25 found them unreachable from /). */}
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-areas">
-          <h2 id="recovery-areas" className="text-[26px] md:text-[32px] font-bold mb-md">Mac data recovery by area</h2>
-          <p className="text-[16px] text-text-muted max-w-[72ch] mb-md">
-            Free collection from anywhere in Dubai. These areas have their own page covering the failures we see most often there.
-          </p>
-          <ul className="flex flex-wrap gap-sm">
-            {DATA_RECOVERY_AREAS.map((a) => (
-              <li key={a.slug}>
-                <Link to={`/mac-data-recovery-${a.slug}`} className="inline-block border border-border/70 bg-bg-card rounded-md px-md py-sm hover:border-accent/40 transition text-[15px]">
-                  Mac data recovery {a.area}
-                </Link>
+      sections={[
+        {
+          id: "mac-data-recovery",
+          heading: "Mac data recovery: MacBook, iMac, Mac mini, Studio and Pro",
+          body: (
+            <p>
+              Older Intel Macs such as 2012–2015 MacBook Pros and pre-2018 MacBook Airs have a removable SSD or
+              drive we read on a separate workstation; older iMacs and Mac minis may use a hard drive or Fusion Drive.
+              T2 and Apple silicon Macs have soldered storage (below). Details: <InLink to="/macbook-data-recovery-dubai">MacBook data recovery</InLink>,{" "}
+              <InLink to="/imac-data-recovery-dubai">iMac data recovery</InLink>,{" "}
+              <InLink to="/mac-mini-data-recovery-dubai">Mac mini data recovery</InLink>.
+            </p>
+          ),
+        },
+        {
+          id: "t2-apple-silicon",
+          heading: "T2 and Apple silicon Macs: why the original board matters",
+          body: (
+            <>
+              <p>
+                The SSD is encrypted with a key that never leaves the security chip: the T2 on 2018–2020 Intel
+                models, the Secure Enclave on Apple silicon. The storage chips alone hold only encrypted data, so
+                chip-off does not work, and a board swap ends any chance of recovery: a new board has a new key.
+              </p>
+              <p>
+                Recovery here is component-level board repair, often of a power rail or corrosion, until the Mac
+                starts and the data can be copied off. If the security chip or storage
+                is destroyed, nobody can recover the data, and we will say so. See{" "}
+                <InLink to="/apple-t2-chip-data-recovery-dubai">T2 chip data recovery</InLink>,{" "}
+                <InLink to="/macbook-logic-board-repair-dubai">logic board repair</InLink> and{" "}
+                <InLink to="/mac-not-turning-on-dubai">Mac not turning on</InLink>; forgotten your password? Read{" "}
+                <InLink to="/blog/how-to-recover-macbook-password">how to recover a MacBook password</InLink>.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "ssd-data-recovery",
+          heading: "SSD data recovery: internal and external",
+          body: (
+            <p>
+              When an SSD can be read on its own, as on older Intel Macs and external drives, we image it and work
+              from the copy. External SSDs and USB flash drives (Samsung T7,
+              WD My Passport SSD, Kingston) get the same free assessment as a Mac. See <InLink to="/ssd-data-recovery-dubai">SSD data recovery</InLink>.
+            </p>
+          ),
+        },
+        {
+          id: "hard-drive-data-recovery",
+          heading: "Hard drive data recovery in Dubai (HDD)",
+          body: (
+            <p>
+              Hard disk recovery covers the drives in older iMacs and Mac minis, the disk half of a Fusion Drive, and
+              external 2.5- and 3.5-inch drives, including Time Machine backups. If it spins normally and the fault
+              is logical, we recover from an image. A drive that clicks, grinds or will not spin has a
+              mechanical fault: power it off and leave it off. Partner clean-room work for mechanical drive faults
+              is quoted separately and charged whatever the outcome.
+            </p>
+          ),
+        },
+        {
+          id: "what-not-to-do",
+          heading: "What not to do before data recovery",
+          body: (
+            <ul>
+              <li>Do not keep switching it on; power cycling can finish off a failing drive.</li>
+              <li>Do not reinstall macOS or save files to the drive; an SSD can clear deleted data in the background.</li>
+              <li>Do not run Disk Utility First Aid again and again on a failing drive.</li>
+              <li>Do not put a drive in the freezer; condensation makes it worse.</li>
+              <li>Do not open a hard drive. Dust on the platters destroys data.</li>
+              <li>
+                Do not charge a wet Mac. Follow our <InLink to="/blog/water-damage-macbook-immediate-action">spill steps</InLink>{" "}
+                and see <InLink to="/mac-data-recovery-after-water-damage-dubai">data recovery after water damage</InLink>.
               </li>
-            ))}
-          </ul>
-        </section>
+              <li>Do not let anyone replace a T2 or Apple silicon logic board until your data is off it.</li>
+            </ul>
+          ),
+        },
+        {
+          id: "near-me",
+          heading: "Data recovery near me: Dubai areas and Abu Dhabi",
+          body: (
+            <p>
+              Walk in to Concord Tower, Dubai Media City, or we collect free from anywhere in Dubai.{" "}
+              {AREA_LINKS.map((a, i) => (
+                <span key={a.to}>
+                  <InLink to={a.to}>{a.label.replace("Mac data recovery ", "")}</InLink>
+                  {i < AREA_LINKS.length - 2 ? ", " : i === AREA_LINKS.length - 2 ? " and " : ""}
+                </span>
+              ))}{" "}
+              have their own pages. For data recovery in Abu Dhabi or Sharjah, a free courier collects and returns
+              your Mac or drive; we have no branch outside Dubai.{" "}
+              <WaLink message="Hi, I need data recovery with courier collection. Area: ... Device or drive: ...">
+                Book a collection on WhatsApp
+              </WaLink>
+              .
+            </p>
+          ),
+        },
+      ]}
 
-                <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="recovery-lead">
-          <h2 id="recovery-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Start your free recovery assessment</h2>
-          <LeadForm preset={PRESETS["data-recovery"]} sourcePath="/mac-data-recovery-dubai" defaultDeviceType="MacBook" />
-        </section>
+      comparison={{
+        eyebrow: "Independent vs Apple",
+        headline: "Data recovery here vs sending your Mac to Apple",
+        description:
+          "We are independent, not an Apple Authorised Service Provider. Apple repairs hardware; it does not recover files.",
+        leftLabel: "MacBook Repair Dubai",
+        rightLabel: "Apple Store / AASP",
+        rows: [
+          { feature: "Data recovery", left: "The whole job", right: "Not offered; back up first" },
+          { feature: "Dead T2 or Apple silicon board", left: "Original board repaired", right: "Board replaced; data lost with it" },
+          { feature: "Assessment", left: "Free, walk in", right: "Reservation recommended" },
+          { feature: "If nothing is recovered", left: "No charge", right: "Not applicable: Apple doesn't recover data" },
+          { feature: "Older Intel Macs", left: "Worked on while parts exist", right: "Refused once classed obsolete" },
+        ],
+      }}
 
-        <RelatedArticles path="/mac-data-recovery-dubai" topics={["data recovery", "mac", "ssd"]} />
+      methodology={{
+        heading: "How the diagnosis and quote work",
+        intro: "Nothing is charged until you approve the quote.",
+        steps: [
+          { title: "Message us", body: "Send the model or drive and what happened." },
+          { title: "Free assessment", body: "We find whether the failure is logical or physical, and whether the board can be revived." },
+          { title: "Written quote", body: "The price and what is realistic." },
+          { title: "Recover and check", body: "We work from an image where possible and show you the recovered file list before you pay." },
+          { title: "Hand back", body: "Files go onto your drive or one we supply; our copy is then deleted. Data work carries a 15-day written warranty." },
+        ],
+      }}
 
-        {/* Final CTA bar */}
-        <section className="mt-[80px] py-[64px]" style={{ background: "#2C3137" }}>
-          <div className="mx-auto max-w-content px-5 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-lg">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-3">Mac data recovery · Dubai Media City</p>
-              <h2 className="m-0 text-[26px] md:text-[32px] font-bold text-white leading-tight">
-                Lost your Mac data? Free assessment. No recovery, no charge.
-              </h2>
-            </div>
-            <div className="shrink-0">
-              <CallButtons dark />
-            </div>
-          </div>
-        </section>
+      showLocation
+      showTeam
+      showStats
 
-      </div>
-    </PageShell>
+      relatedServices={{ heading: "Data recovery services and related repairs", links: RECOVERY_SERVICES }}
+
+      relatedPosts
+      relatedPostsTopics={["data recovery", "ssd"]}
+
+      faqs={{
+        heading: "Data recovery Dubai: common questions",
+        intro: "Straight answers, including the ones where the answer is no.",
+        items: FAQS,
+      }}
+
+      sources={{
+        heading: "Sources and Apple documentation",
+        links: [
+          { label: "Apple Platform Security — Volume encryption with FileVault", href: "https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web", note: "Keys held in the Secure Enclave." },
+          { label: "Apple — Mac computers with the Apple T2 Security Chip", href: "https://support.apple.com/en-us/103265", note: "Which Intel Macs have the T2." },
+          { label: "Apple — Back up your Mac with Time Machine", href: "https://support.apple.com/en-us/104984", note: "The backup that avoids recovery." },
+          { label: "Apple — If you forgot your Mac login password", href: "https://support.apple.com/en-us/102633", note: "Reset with your Apple Account or FileVault recovery key." },
+        ],
+      }}
+
+      relatedHubs={{ heading: "Other Apple repair hubs", links: RELATED_HUBS }}
+
+      hubLinks={{
+        eyebrow: "By area",
+        heading: "Mac data recovery across Dubai",
+        links: AREA_LINKS,
+      }}
+
+      reviews={recoveryReviews}
+      reviewsHeading={`Dead and damaged Macs · ${REVIEW_AVERAGE.toFixed(1)} from ${REVIEW_COUNT}+ Google reviews`}
+
+      finalCta={{
+        eyebrow: "Before you try anything else",
+        headline: "Free assessment, no charge if nothing comes back",
+        description:
+          "Tell us the device and what happened; we will say honestly what can come back before you commit.",
+        primary: { label: "Message us on WhatsApp", href: waHref(WA_MSG) },
+        secondary: { label: `Call ${NAP.phoneDisplay}`, href: `tel:${NAP.phoneE164}` },
+      }}
+    />
   );
 }

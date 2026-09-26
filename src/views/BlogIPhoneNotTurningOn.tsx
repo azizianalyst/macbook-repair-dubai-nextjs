@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 
@@ -81,6 +82,14 @@ export default function BlogIPhoneNotTurningOn() {
               The good news is that 70 to 80 percent of iPhones that will not turn on have a dead battery
               or a software crash, both of which are resolved quickly and inexpensively. Work through the
               steps below in order before concluding there is a hardware fault.
+            </p>
+            <p>
+              One check first: call the phone. If it rings or vibrates while the screen stays black, the
+              iPhone is on and the display is the problem, which our{" "}
+              <Link to="/blog/iphone-screen-problems-dubai/">iPhone screen problems guide</Link> covers. If it
+              keeps switching itself off with charge still showing, read{" "}
+              <Link to="/blog/iphone-battery-health-when-to-replace/">how to check iPhone battery health</Link>{" "}
+              before anything else.
             </p>
           </section>
 

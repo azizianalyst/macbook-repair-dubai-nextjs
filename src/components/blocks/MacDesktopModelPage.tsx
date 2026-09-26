@@ -160,7 +160,7 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
   }
   if (m.pricing.ssdRecovery) {
     rows.push({
-      service: "Soldered SSD chip-off data recovery",
+      service: "SSD data recovery (board-level repair)",
       price: "Price on request",
       href: "/mac-data-recovery-dubai",
       timeline: "5-10 days",
@@ -217,11 +217,17 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const isMacPro2019 = model.family === "pro" && model.era === "intel";
   const isM3UltraStudio = model.slug === "mac-studio-m3-ultra-2025-repair-dubai";
   const isNewMiniChassis = model.family === "mini" && model.chassisGen === "new";
+  // A mini still on sale has no repair track record yet (and its chassis details are not in
+  // docs/apple-lineup-*), so it gets an honest "brand new" answer instead of M4-era specifics.
+  const isCurrentMini = model.family === "mini" && model.currentInLineup;
+  // Apple silicon storage is encrypted with keys held by the SoC: recovery means getting the
+  // original board running again. Chip-off does not work, so never promise it.
+  const ssdRecoveryNote = `The SSD is encrypted and tied to the chip, so recovering data from a failed board means repairing the board until it runs again - chip-off recovery does not work on Apple silicon.`;
 
   const faqs = [
     {
       q: `How much does a ${model.name} logic board repair cost in Dubai?`,
-      a: `Component-level logic board repair on the ${model.name} is priced per fault - message us on WhatsApp for today's exact price on your model. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a written warranty up to 12 months on the work and the part. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
+      a: `Component-level logic board repair on the ${model.name} is priced per fault - message us on WhatsApp for today's exact price on your model. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a 15-day written warranty on the work, extendable to 6 months for a small flat fee. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
     },
     {
       q: isAppleSilicon
@@ -230,7 +236,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       a: isMacPro2019
         ? `Yes - the Mac Pro 2019 is one of the last truly upgradeable Macs. RAM goes to 1.5TB across 12 DDR4 ECC R-DIMM slots (labour plus the modules). MPX GPU modules are swappable (Vega II, W6800X, W6900X - labour plus part). PCIe storage and accelerator cards are supported. SSD modules are Apple-keyed but swappable. This is the most repair-friendly Mac Apple ever made - message us on WhatsApp for today's exact upgrade price.`
         : isAppleSilicon
-          ? `No. Apple Silicon Macs (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. ${model.pricing.ssdRecovery ? `For data on a failed SSD, we offer chip-off recovery - message us for the exact price.` : ""}`
+          ? `No. Apple Silicon Macs (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. ${model.pricing.ssdRecovery ? `${ssdRecoveryNote} Message us for the exact price.` : ""}`
           : `Limited. Standard service (PSU, ports, fans) is straightforward. Major changes are not supported.`,
     },
     {
@@ -238,6 +244,8 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         ? `How often should I service a Mac Studio?`
         : isPro
           ? `Is the Mac Pro 2019 still the right tool for PCIe GPU work in 2026?`
+          : isCurrentMini
+            ? `What goes wrong on a brand-new ${model.shortName}?`
           : isNewMiniChassis
             ? `What's the deal with the top power button on the new Mac Mini?`
             : `What's the most common Mac Mini issue you see?`,
@@ -245,6 +253,8 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         ? `Heavy creative users - every 12 months for fan cleaning + thermal paste refresh (message us on WhatsApp for today's exact price). Light users - every 18-24 months. Dubai dust gets drawn into the chassis fast and thermal paste degrades under sustained Ultra-class workloads. Prevention is much cheaper than logic-board repair.`
         : isPro
           ? `Yes - for now. Apple's current Mac Pro M2 Ultra removed PCIe GPU support entirely (Apple Silicon limitation). If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
+          : isCurrentMini
+            ? `Not much yet - it is in Apple's current lineup, so there is no repair track record. What we see first on any new desktop is accidental damage Apple's warranty excludes (liquid, drops, power surges), port damage from docks and cables, and setup problems that look like hardware. Factory faults go to Apple under warranty - we check your serial number for free.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
             : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it typically in 1-2 days, with a warranty of up to 12 months - message us on WhatsApp for today's exact price.`,
@@ -293,10 +303,13 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
-            <li>• <strong>Max RAM:</strong> {model.maxRAM}</li>
-            <li>• <strong>Storage:</strong> {model.baseStorage} base · up to {model.maxStorage}</li>
-            <li>• <strong>Ports:</strong> {model.ports}</li>
-            <li>• <strong>Wireless:</strong> {model.wirelessChip}</li>
+            {/* Spec fields left empty in the JSON are ones we cannot source (brand-new models):
+                skip the line rather than print a guess. */}
+            {model.maxRAM && <li>• <strong>Max RAM:</strong> {model.maxRAM}</li>}
+            {model.baseStorage && model.maxStorage && <li>• <strong>Storage:</strong> {model.baseStorage} base · up to {model.maxStorage}</li>}
+            {model.ports && <li>• <strong>Ports:</strong> {model.ports}</li>}
+            {model.wirelessChip && <li>• <strong>Wireless:</strong> {model.wirelessChip}</li>}
+            {model.currentInLineup && !model.ports && <li>• <strong>Full specifications:</strong> Apple&apos;s spec page for your exact configuration - we work from your serial number.</li>}
           </ul>
 
           <h2 className="text-[28px] md:text-[32px] mb-md">What are the most common {model.shortName} problems?</h2>
@@ -339,7 +352,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
                 <strong>No.</strong> Apple Silicon Macs have soldered memory and SoC-integrated SSD. What you buy is what you have for the life of the device.
               </p>
               <p className="text-[15px]">
-                Buy enough RAM and storage at order time. {model.pricing.ssdRecovery && <>For data recovery on a failed SSD, we offer chip-off recovery (complex but possible) - message us for the exact price. <Link to="/mac-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link></>}
+                Buy enough RAM and storage at order time. {model.pricing.ssdRecovery && <>{ssdRecoveryNote} Message us for the exact price. <Link to="/mac-data-recovery-dubai" className="text-primary font-semibold hover:underline">More on data recovery →</Link></>}
               </p>
             </div>
           )}
@@ -416,7 +429,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       whatWeFix={[
         `${FAMILY_LABEL[model.family]} won't power on - PSU, board fault, or display detection`,
         `Logic board faults - component-level repair where economical`,
-        isAppleSilicon ? "Soldered SSD failure - chip-off data recovery" : "RAM upgrades, MPX GPU module swaps, PCIe storage",
+        isAppleSilicon ? "Data recovery from a dead board - board-level repair so the original chip runs again (no chip-off on Apple silicon)" : "RAM upgrades, MPX GPU module swaps, PCIe storage",
         `Thunderbolt / USB-C port damage from heavy dock use`,
         isStudio || isPro ? "Fan dust buildup & thermal paste refresh - preventive service" : "Internal PSU thermal stress, fan cleaning",
         "macOS reinstall, slow performance, kernel panics",
@@ -430,17 +443,18 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
       ]}
       warrantyDays={365}
+      warrantyHeadline
       warrantyBullets={[
+        "Logic board, liquid and thermal work 15 days; power supply, SSD and other parts up to 12 months",
         "Covers the replaced part and the labour",
-        "Same fault returns? We re-repair free",
+        "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",
-        "No quibbling, no fine print",
       ]}
       faqs={faqs}
       reviewNames={pickReviewers(slug)}
       related={[
         { label: `${FAMILY_LABEL[model.family]} repair hub`, href: hubFor(model),                description: `All ${FAMILY_LABEL[model.family]} services and pricing in one place.` },
-        { label: "Mac data recovery",                        href: "/mac-data-recovery-dubai",   description: "Soldered-SSD chip-off recovery for Apple Silicon Macs. WhatsApp us for a quote." },
+        { label: "Mac data recovery",                        href: "/mac-data-recovery-dubai",   description: "Apple Silicon data recovery by board-level repair - the SSD only unlocks with its original chip. WhatsApp us for a quote." },
         { label: "Mac full diagnostic",                      href: "/mac-full-diagnostic-dubai", description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />

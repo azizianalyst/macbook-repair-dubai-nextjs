@@ -21,7 +21,7 @@ export default function MacBookProM4BatteryReplacement() {
         "The M4 Max 16-inch offers up to a 32-core GPU and up to 128 GB unified memory. This is a workstation-class laptop that costs many times a battery job to replace new. A battery replacement at aextend its life by 3 to 5 years is an obvious investment.",
         "The M4 MacBook Pro launched in late 2024. Many Dubai buyers purchased in November or December 2024, which means these machines are less than 1 year old. AppleCare+ and the standard 1-year Apple warranty likely still cover manufacturing defects including premature battery degradation. Check your coverage before booking.",
         "Replacement parts for the M4 MacBook Pro are newer in the supply chain. MacBook Repair Dubai stocks M4 Pro cells and can complete the 14-inch in 1 to 2 days. The 16-inch M4 Max may require a parts order on rare occasions. Contact us to confirm stock before dropping off.",
-        "Apple charges AED 599 to AED 799 for M4 Pro battery replacement. MacBook Repair Dubai quotes per model in writing, with same-day to 1 to 2 day turnaround, BMS re-pair included, and a 3-month written warranty. If the machine is under warranty, Apple may be the correct first call.",
+        "MacBook Repair Dubai quotes M4 Pro battery replacement per model in writing, before any work so you can compare with Apple, with same-day to 1 to 2 day turnaround, BMS re-pair included, and a 3-month written warranty. If the machine is under warranty, Apple may be the correct first call.",
       ]}
       prices={[
         {

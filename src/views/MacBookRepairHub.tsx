@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, CheckCircle2, Wrench, Zap } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -57,7 +58,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "Is there a warranty on MacBook repair in Dubai?",
-    a: "Yes, every MacBook repair carries a written warranty of up to 12 months on the parts and labour, depending on the repair type. Battery replacements carry a 3-month warranty; screen and keyboard repairs carry 6 months; logic board repairs carry up to 12 months.",
+    a: "Yes, every MacBook repair carries a written warranty of up to 12 months on the parts and labour, depending on the repair type. Battery replacements carry 3 months with an 80% capacity guarantee; screens carry 90 days; keyboard, logic board and liquid-damage repairs carry 15 days; other hardware such as trackpads, ports and SSD upgrades carries up to 12 months.",
   },
   {
     q: "Can you repair a MacBook that Apple refused to fix?",
@@ -73,7 +74,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
           <MessageCircle aria-hidden /> WhatsApp Us
         </a>
       </Button>
@@ -156,7 +157,7 @@ export default function MacBookRepairHub() {
           </div>
           <p className="mt-sm text-sm text-text-muted">
             Don't see your model?{" "}
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
+            <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               WhatsApp us
             </a>{" "}
            , we repair every MacBook Apple has made since 2010, including vintage and obsolete models.

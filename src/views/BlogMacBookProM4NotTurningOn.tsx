@@ -42,7 +42,7 @@ export default function BlogMacBookProM4NotTurningOn() {
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Deep discharge</strong>: if the M4 battery reached 0% and sat unused for more than a few days, the battery management system enters deep discharge protection mode and will not attempt to start until a minimum charge level is restored via the charger</li>
             <li><strong>Software crash in low-level bootloader</strong>: if a macOS update was interrupted (power cut, charger disconnected mid-update) or a kernel panic occurred during wake from hibernation, the M4 can appear dead while actually being in a stuck bootloader state</li>
-            <li><strong>OLED display power fault</strong>: the M4 is running normally but the internal OLED panel is not receiving power. The system is on, all chips are running, but the display is dark</li>
+            <li><strong>Display or backlight power fault</strong>: the M4 is running normally but the internal Liquid Retina XDR display (an LCD with a mini-LED backlight, not OLED) or its backlight is not receiving power. The system is on, all chips are running, but the display is dark</li>
             <li><strong>Logic board fault</strong>: failed power management IC, failed charging IC, or short circuit on the logic board preventing startup. Less common but requires hardware repair</li>
           </ol>
 
@@ -80,7 +80,7 @@ export default function BlogMacBookProM4NotTurningOn() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Listen for fans</strong>: press the power button and listen. If fans start or the Touch ID sensor illuminates briefly, the M4 is starting but the display is not turning on</li>
-            <li><strong>Connect external monitor</strong>: plug a monitor into the Thunderbolt port. If the external monitor shows the login screen, the M4 is working perfectly and the fault is isolated to the internal OLED panel or its cable</li>
+            <li><strong>Connect external monitor</strong>: plug a monitor into the Thunderbolt port. If the external monitor shows the login screen, the M4 is working perfectly and the fault is isolated to the internal display, its backlight, or its connection</li>
             <li><strong>Touch ID response</strong>: if the machine appears dark, try placing your registered finger on Touch ID. If the Mac responds (unlocks, shows screen, anything) the M4 is on with a display fault</li>
             <li><strong>Keyboard backlight</strong>: press Fn+F5 or F6. If the keyboard illuminates, the M4 is running with a display fault</li>
           </ul>
@@ -124,9 +124,9 @@ export default function BlogMacBookProM4NotTurningOn() {
                 <td>Same: Apple Configurator 2 on a second Mac</td>
               </tr>
               <tr>
-                <td>Black screen with OLED</td>
-                <td>M3 has LCD: different failure pattern</td>
-                <td>M4 OLED power fault shows as black screen more abruptly than LCD</td>
+                <td>Black screen, machine running</td>
+                <td>Mini-LED XDR display: a torch shows a faint image if only the backlight is out</td>
+                <td>Same mini-LED XDR display (not OLED): same torch test, same fault pattern</td>
               </tr>
               <tr>
                 <td>Boot time from cold</td>
@@ -142,7 +142,7 @@ export default function BlogMacBookProM4NotTurningOn() {
             headers={["Repair", "Price", "Notes"]}
             rows={[
               { model: "Battery replacement (deep discharge / dead battery)", ours: "Price on request", note: "Most common fix for M4 not turning on" },
-              { model: "OLED display panel (black screen, M4 is running)", ours: "Price on request", note: "If external monitor confirms M4 is on" },
+              { model: "Display assembly or backlight circuit (black screen, M4 is running)", ours: "Price on request", note: "If external monitor confirms M4 is on" },
               { model: "Charging port / MagSafe board repair", ours: "Price on request", note: "M4 not charging, so not starting" },
               { model: "Logic board fault (power management)", ours: "Price on request", note: "Component-level repair" },
               { model: "Diagnostic", ours: "Free", note: "Confirm exact fault before repair quote" },
@@ -187,7 +187,7 @@ export default function BlogMacBookProM4NotTurningOn() {
         },
         {
           q: "How much does MacBook Pro M4 not turning on repair cost in Dubai?",
-          a: "It depends on the fault. The most common cause is a dead battery, followed by an OLED display fault, a charging port repair, or a rarer logic board fault handled at component level. We offer free diagnosis to confirm the exact cause first, then message us on WhatsApp for today's exact price on your model.",
+          a: "It depends on the fault. The most common cause is a dead battery, followed by a display or backlight fault, a charging port repair, or a rarer logic board fault handled at component level. We offer free diagnosis to confirm the exact cause first, then message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can I restore MacBook Pro M4 that completely won't respond?",
@@ -198,7 +198,7 @@ export default function BlogMacBookProM4NotTurningOn() {
         { label: "MacBook Pro M4 repair Dubai", href: "/macbook-pro-m4-repair-dubai", description: "All M4 models: 14-inch M4 Pro, 16-inch M4 Max, full service." },
         { label: "MacBook Pro M4 battery replacement cost Dubai", href: "/blog/macbook-pro-m4-battery-replacement-cost-dubai", description: "Battery replacement pricing and when to replace on M4." },
         { label: "MacBook Pro not charging fix Dubai", href: "/blog/macbook-pro-not-charging-fix-dubai", description: "Not charging and not starting share common causes on M4." },
-        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering OLED, Thunderbolt 5, and memory." },
+        { label: "MacBook Pro M4 common problems", href: "/blog/macbook-pro-m4-common-problems-dubai", description: "Full M4 issue guide covering the XDR display, Thunderbolt 5, and memory." },
       ]}
     />
   );

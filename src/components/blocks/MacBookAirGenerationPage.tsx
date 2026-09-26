@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Shared layout for MacBook Air generation hub pages (M1, M2, M3, M4, M5, Intel).
 // Air-specific: fanless design, no Touch Bar, no ProMotion, no mini-LED, no OLED.
 import {
@@ -83,7 +84,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",          body: "Most MacBook Air repairs — screen, battery, keyboard — are done within a few hours, not days." },
   { Icon: Award,       title: "21 years experience",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
-  { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty. Screen and battery replacements come with 12-month cover." },
+  { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
   { Icon: Truck,       title: "Free pickup Dubai-wide",    body: "Cannot come to us? We collect your MacBook Air for free across Dubai and return it repaired." },
   { Icon: BadgeCheck,  title: "No fix, no charge",         body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",            body: "Every MacBook Air gets a full diagnosis at no cost. We find the real fault, not guess at it." },
@@ -129,7 +130,7 @@ function CallButtons({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant={dark ? "secondary" : "outline"} size="lg" className={dark ? "bg-white/10 text-white border-white/30 hover:bg-white/20" : ""}>
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -444,7 +445,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
               { label: "MacBook Water Damage Repair Dubai", href: "/macbook-water-damage-repair-dubai" },
               { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
             ].map((l) => (
-              <a key={l.href} href={l.href} className="text-accent hover:underline">{l.label} ›</a>
+              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>
             ))}
           </div>
         </section>

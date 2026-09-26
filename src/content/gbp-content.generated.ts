@@ -11,8 +11,8 @@
 //   await updateServices(loc, items);
 
 /** Business description — paste into /admin/gbp → Business Info. */
-export const GBP_DESCRIPTION = "Independent Apple repair specialists in Concord Tower, Dubai Media City, since 2004. We repair MacBook Air, MacBook Pro and MacBook Neo (Intel through M6), iMac, Mac mini, Mac Studio, iPhone, iPad and Apple Watch: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Most repairs are completed the same day, and every repair carries a written warranty of up to 12 months. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.";
-export const GBP_DESCRIPTION_LENGTH = 728;
+export const GBP_DESCRIPTION = "Independent Apple repair specialists since 2004, based in Concord Tower, Dubai Media City. We repair MacBook Air and MacBook Pro (Intel through M5), MacBook Neo, iMac, Mac mini, Mac Studio, iPhone and iPad: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Many repairs are done the same day, and every paid repair carries a written warranty of up to 12 months, depending on the repair. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.";
+export const GBP_DESCRIPTION_LENGTH = 746;
 
 /**
  * Categories.
@@ -364,7 +364,7 @@ export const GBP_SERVICES: GbpServiceSeed[] = [
   {
     "name": "MacBook Air screen replacement",
     "description": "Cracked or failing MacBook Air display across Intel and M-series, replaced with full colour and True Tone testing.",
-    "url": "/macbook-air-screen-repair-dubai/",
+    "url": "/macbook-air-screen-replacement-dubai/",
     "category": "Screen repair service"
   },
   {
@@ -399,7 +399,7 @@ export const GBP_SERVICES: GbpServiceSeed[] = [
   },
   {
     "name": "SSD data recovery",
-    "description": "Failed or unrecognised SSD, including soldered Apple storage. NAND-level recovery in our own lab.",
+    "description": "Failed or unrecognised SSD, including soldered Apple storage. On T2 and Apple Silicon Macs the data is encrypted to the board, so we revive the original board to recover it. Free assessment first.",
     "url": "/ssd-data-recovery-dubai/",
     "category": "Data recovery service"
   },
@@ -531,7 +531,7 @@ export const GBP_SERVICES: GbpServiceSeed[] = [
   },
   {
     "name": "iPhone Air repair",
-    "description": "Service and repair for the latest ultra-thin iPhone, including screen, battery and charging faults.",
+    "description": "Service and repair for Apple's ultra-thin iPhone Air, including screen, battery and charging faults.",
     "url": "/iphone-air-repair-dubai/",
     "category": "Mobile phone repair shop"
   },
@@ -602,9 +602,9 @@ export const GBP_SERVICES: GbpServiceSeed[] = [
     "category": "Phone repair service"
   },
   {
-    "name": "Apple Watch repair",
-    "description": "Cracked Apple Watch screen, battery not lasting, or the watch not powering on? Repaired in-house rather than sent away.",
-    "url": "/apple-watch-repair-dubai/",
+    "name": "Apple repair",
+    "description": "Mac, iPhone and iPad repair from one independent Dubai Media City workshop: screens, batteries, charging, liquid damage and board-level faults. Free diagnosis and a written quote before any work starts.",
+    "url": "/apple-repair-dubai/",
     "category": "Electronics repair shop"
   },
   {
@@ -695,7 +695,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-screen-repair-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w01-macbook-screen-repair-dubai",
     "image": "topics/blog-screen-display-dubai.jpg",
-    "body": "MacBook screen cracked, flickering, or showing dark patches down one side? We replace displays for every MacBook Air and Pro, Intel through M5 — including Flexgate backlight faults — and most are finished the same day.\n\nFree diagnosis before anything is charged. Written warranty of up to 12 months. No fix, no fee. Free pickup and delivery anywhere in Dubai.\n\nConcord Tower, Office 45, 10th floor, Dubai Media City — opposite Media City Metro. WhatsApp or call 055 741 3706.\n\n#MacBookRepairDubai #MacBookScreenRepair #AppleRepairDubai"
+    "body": "MacBook screen cracked, flickering, or showing dark patches down one side? We replace displays for every MacBook Air and Pro, Intel through M5 — including Flexgate backlight faults — and most are finished the same day.\n\nFree diagnosis before anything is charged. Written warranty on the work, with the term for your panel stated on the quote before you approve. No fix, no fee. Free pickup and delivery anywhere in Dubai.\n\nOffice #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp or call 055 741 3706.\n\n#MacBookRepairDubai #MacBookScreenRepair #AppleRepairDubai"
   },
   {
     "week": 2,
@@ -731,7 +731,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/iphone-battery-replacement-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w05-iphone-battery-replacement-dubai",
     "image": "topics/iphone-battery-replacement-dubai.jpg",
-    "body": "iPhone battery health under 80%, or the phone shutting down before it hits zero? Both mean the cell is done, not the phone.\n\nWe replace iPhone batteries in-house across the whole range, usually while you wait, and every replacement carries a written warranty. Free diagnosis first, so you know it's the battery and not the charging circuit.\n\nWalk in at Concord Tower, Office 45, Dubai Media City — or WhatsApp 055 741 3706 for free collection.\n\n#iPhoneBatteryReplacement #iPhoneRepairDubai #AppleRepairDubai"
+    "body": "iPhone battery health under 80%, or the phone shutting down before it hits zero? Both mean the cell is done, not the phone.\n\nWe replace iPhone batteries in-house across the whole range, usually while you wait, and every replacement carries a written warranty. Free diagnosis first, so you know it's the battery and not the charging circuit.\n\nWalk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City — or WhatsApp 055 741 3706 for free collection.\n\n#iPhoneBatteryReplacement #iPhoneRepairDubai #AppleRepairDubai"
   },
   {
     "week": 6,
@@ -748,8 +748,8 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "type": "TRUST",
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/warranty/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w07-warranty",
-    "image": "topics/applecare-warranty-repair-dubai.jpg",
-    "body": "We are not an Apple Authorised Service Provider, and we'll tell you when Apple is the better choice.\n\nIf your Mac is in warranty with a covered fault, go to Apple — you'll pay nothing and we'd be wasting your money. Same if it's an active Apple repair programme.\n\nWhere we're the better option: out of warranty, liquid damage, board-level faults, discontinued models, and anything Apple quotes as a whole-unit replacement. That's the work we've done from the same workshop since 2004.\n\n#HonestRepair #MacBookRepairDubai #DubaiMediaCity"
+    "image": "real/team/macbook-bench-repairs-dubai.jpg",
+    "body": "We are not an Apple Authorised Service Provider, and we'll tell you when Apple is the better choice.\n\nIf your Mac is in warranty with a covered fault, go to Apple — you'll pay nothing and we'd be wasting your money. Same if it's an active Apple repair programme.\n\nWhere we're the better option: out of warranty, liquid damage, board-level faults, discontinued models, and anything Apple quotes as a whole-unit replacement. That's the work we've done since 2004.\n\n#HonestRepair #MacBookRepairDubai #DubaiMediaCity"
   },
   {
     "week": 8,
@@ -758,7 +758,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Call now",
     "url": "https://macbook-repair-dubai.ae/mac-fan-cleaning-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w08-mac-fan-cleaning-dubai",
     "image": "real/lab/macbook-fan-heatsink-dubai.jpg",
-    "body": "GITEX week in Dubai, and your laptop is doing 14-hour days on a stand in a hot hall. If the fans never idle or it throttles under load, the cooling system needs servicing — dust, dried thermal paste or a failing fan.\n\nWe're 15 minutes from the World Trade Centre and we do same-day thermal service, battery replacement and screen repair. Free collection from your hotel or stand.\n\nWhatsApp 055 741 3706 — tell us it's urgent and we'll prioritise it.\n\n#GITEX #MacBookRepairDubai #DubaiTech"
+    "body": "Summer is over on the calendar, but your Mac spent it in hot cars, sunny desks and long workdays. If the fans never idle or it throttles under normal load, the cooling system needs servicing — dust, dried thermal paste or a failing fan.\n\nWe clean and repaste the whole cooling path, replace what has failed, and check temperatures under load before it goes back. Cleaning and repasting is done the same day; if a fan has failed, the quote gives the part and the turnaround. Free collection anywhere in Dubai.\n\nWhatsApp 055 741 3706 — tell us it's urgent and we'll prioritise it.\n\n#MacBookRepairDubai #ThermalService #DubaiHeat"
   },
   {
     "week": 9,
@@ -794,7 +794,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-full-diagnostic-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w12-macbook-full-diagnostic-dubai",
     "image": "topics/guide-choose-macbook-dubai.jpg",
-    "body": "Buying a used MacBook in the White Friday sales? Bring it to us before you pay.\n\nWe'll check battery cycle count and health, real storage health, whether the screen or keyboard has been replaced before, and — most importantly — whether it's activation-locked to someone else's Apple ID. That last one turns a bargain into a paperweight.\n\nTakes 20 minutes, and it's free. Concord Tower, Office 45, Dubai Media City.\n\n#WhiteFriday #MacBookRepairDubai #DubaiDeals"
+    "body": "Buying a used MacBook in the White Friday sales? Bring it to us before you pay.\n\nWe'll check battery cycle count and health, real storage health, whether the screen or keyboard has been replaced before, and — most importantly — whether it's activation-locked to someone else's Apple ID. That last one turns a bargain into a paperweight.\n\nTakes 20 minutes, and it's free. Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.\n\n#WhiteFriday #MacBookRepairDubai #DubaiDeals"
   },
   {
     "week": 13,
@@ -812,7 +812,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Contact us",
     "url": "https://macbook-repair-dubai.ae/contact/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w14-contact",
     "image": "brand/brand-storefront.jpg",
-    "body": "Happy UAE National Day! We're marking 55 years with adjusted opening hours around 2 December — check WhatsApp for this week's exact times before you head over.\n\nCollection and delivery keep running through the holiday period for anything urgent. Free diagnosis, written quote, no fix no fee — same as every other week of the year.\n\nConcord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.\n\n#UAENationalDay #MacBookRepairDubai #DubaiMediaCity"
+    "body": "Happy UAE National Day! We're marking 55 years with adjusted opening hours around 2 December — check WhatsApp for this week's exact times before you head over.\n\nCollection and delivery keep running through the holiday period for anything urgent. Free diagnosis, written quote, no fix no fee — same as every other week of the year.\n\nOffice #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.\n\n#UAENationalDay #MacBookRepairDubai #DubaiMediaCity"
   },
   {
     "week": 15,
@@ -820,7 +820,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "type": "TRUST",
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/warranty/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w15-warranty",
-    "image": "topics/applecare-warranty-repair-dubai.jpg",
+    "image": "brand/team-portrait.jpg",
     "body": "Our warranty in plain terms, not fine print: up to 12 months, stated on the invoice, before you approve any work — never after.\n\nDifferent repairs carry different terms. A battery replacement isn't warrantied the same way as a board-level logic repair, and we tell you which applies before you say yes, not when something goes wrong six months later.\n\nAsk up front. We'd rather you know than assume.\n\n#WrittenWarranty #MacBookRepairDubai #AppleRepairDubai"
   },
   {
@@ -830,7 +830,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-full-diagnostic-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w16-macbook-full-diagnostic-dubai",
     "image": "topics/guide-choose-macbook-dubai.jpg",
-    "body": "Buying a used MacBook in the Dubai Shopping Festival deals? Bring it to us before you pay, not after.\n\nWe check battery cycle count and real health, whether the screen or keyboard has been swapped before, and — the one that turns a bargain into a paperweight — whether it's still locked to someone else's Apple ID. Twenty minutes, free, no obligation.\n\nConcord Tower, Office 45, Dubai Media City.\n\n#DubaiShoppingFestival #MacBookRepairDubai #DubaiDeals"
+    "body": "Buying a used MacBook in the Dubai Shopping Festival deals? Bring it to us before you pay, not after.\n\nWe check battery cycle count and real health, whether the screen or keyboard has been swapped before, and — the one that turns a bargain into a paperweight — whether it's still locked to someone else's Apple ID. Twenty minutes, free, no obligation.\n\nOffice #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.\n\n#DubaiShoppingFestival #MacBookRepairDubai #DubaiDeals"
   },
   {
     "week": 17,
@@ -847,7 +847,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "type": "AREA",
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-repair-deira/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w18-macbook-repair-deira",
-    "image": "topics/macbook-repair-old-dubai.jpg",
+    "image": "topics/macbook-repair-dubai-pickup.jpg",
     "body": "Deira and Bur Dubai: free collection, same-day diagnosis at our Dubai Media City workshop, delivered back to you when it's done.\n\nScreens, batteries, keyboards, water damage and board-level faults — all handled in-house, with a written warranty on the work and a fixed quote before anything starts.\n\nWhatsApp 055 741 3706 and we'll arrange pickup today.\n\n#Deira #BurDubai #MacBookRepairDubai"
   },
   {
@@ -902,7 +902,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Contact us",
     "url": "https://macbook-repair-dubai.ae/contact/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w24-contact",
     "image": "brand/brand-storefront.jpg",
-    "body": "Ramadan Kareem. Our hours adjust for the month — check WhatsApp for this week's exact opening times before you head over.\n\nCollection and delivery continue as normal throughout Ramadan, so you don't need to change your plans around ours. Free diagnosis, written quote, no fix no fee, same as always.\n\nConcord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.\n\n#Ramadan #MacBookRepairDubai #DubaiMediaCity"
+    "body": "Ramadan Kareem. Our hours adjust for the month — check WhatsApp for this week's exact opening times before you head over.\n\nCollection and delivery continue as normal throughout Ramadan, so you don't need to change your plans around ours. Free diagnosis, written quote, no fix no fee, same as always.\n\nOffice #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.\n\n#Ramadan #MacBookRepairDubai #DubaiMediaCity"
   },
   {
     "week": 25,
@@ -938,16 +938,16 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Contact us",
     "url": "https://macbook-repair-dubai.ae/contact/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w28-contact",
     "image": "brand/brand-storefront.jpg",
-    "body": "Eid Mubarak! Holiday opening hours this week — check WhatsApp for exact times before visiting.\n\nCollection and delivery keep running across Dubai through the holiday for anything urgent. Free diagnosis, written quote, no fix no fee, as always.\n\nConcord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.\n\n#EidAlFitr #MacBookRepairDubai #DubaiMediaCity"
+    "body": "Eid Mubarak! Holiday opening hours this week — check WhatsApp for exact times before visiting.\n\nCollection and delivery keep running across Dubai through the holiday for anything urgent. Free diagnosis, written quote, no fix no fee, as always.\n\nOffice #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.\n\n#EidAlFitr #MacBookRepairDubai #DubaiMediaCity"
   },
   {
     "week": 29,
     "date": "Mon 15 Mar 2027",
     "type": "DEVICE",
     "cta": "Learn more",
-    "url": "https://macbook-repair-dubai.ae/apple-watch-repair-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w29-apple-watch-repair-dubai",
-    "image": "topics/apple-repair-dubai.jpg",
-    "body": "Cracked Apple Watch screen, or a battery that won't make it through the day anymore? We repair Apple Watch in-house rather than sending it away for weeks.\n\nFree diagnosis first, written quote, and a warranty on the work — the same standard we apply to every device on the bench.\n\nFree collection anywhere in Dubai.\n\n#AppleWatchRepair #MacBookRepairDubai #AppleRepairDubai"
+    "url": "https://macbook-repair-dubai.ae/ipad-screen-repair-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w29-ipad-screen-repair-dubai",
+    "image": "topics/ipad-screen-repair-dubai.jpg",
+    "body": "iPad screen showing lines, dark spots, or ignoring your touch in one area? It isn't always the glass. The fault can sit in the display panel, the digitiser, the connector or the board behind them, and each one is a different repair.\n\nWe diagnose it free first, then give you a written quote and the warranty term for the part you choose before any work starts. iPad, iPad Air, iPad mini and iPad Pro.\n\nWalk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or WhatsApp 055 741 3706 for free pickup anywhere in Dubai.\n\n#iPadScreenRepair #iPadRepairDubai #AppleRepairDubai"
   },
   {
     "week": 30,
@@ -956,7 +956,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-repair-al-sufouh/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w30-macbook-repair-al-sufouh",
     "image": "brand/brand-storefront.jpg",
-    "body": "Al Sufouh and Media City — we're your neighbours. Tenth floor of Concord Tower, directly opposite Media City Metro.\n\nWalk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.\n\nOr WhatsApp 055 741 3706 and we'll collect it from your door instead.\n\n#AlSufouh #DubaiMediaCity #MacBookRepairDubai"
+    "body": "Al Sufouh and Media City — we're your neighbours: Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.\n\nWalk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.\n\nOr WhatsApp 055 741 3706 and we'll collect it from your door instead.\n\n#AlSufouh #DubaiMediaCity #MacBookRepairDubai"
   },
   {
     "week": 31,
@@ -1018,7 +1018,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "type": "DEVICE",
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/mac-studio-overheating-fix-dubai/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w37-mac-studio-overheating-fix-dubai",
-    "image": "topics/mac-studio-repair-dubai.jpg",
+    "image": "real/lab/macbook-cooling-fan-macro-dubai.jpg",
     "body": "Mac Studio throttling under render or export load? That's usually the cooling assembly needing service, not the chip itself giving up.\n\nWe service the fans and heatsink and verify thermals properly under sustained load, rather than just clearing dust and calling it done.\n\nFree diagnosis, written quote before any work.\n\n#MacStudio #ThermalService #MacBookRepairDubai"
   },
   {
@@ -1028,7 +1028,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-repair-dubai-marina/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w38-macbook-repair-dubai-marina",
     "image": "topics/macbook-repair-dubai-pickup.jpg",
-    "body": "Dubai Marina again — our most-collected area, and for good reason: free pickup, same-day diagnosis, delivered straight back to your tower.\n\nScreens, batteries, water damage, board-level faults — all handled at our Media City workshop, ten minutes away.\n\nWhatsApp 055 741 3706 and we'll have someone at your door.\n\n#DubaiMarina #MacBookRepairDubai #FreePickup"
+    "body": "Dubai Marina again: free pickup, same-day diagnosis, delivered straight back to your tower.\n\nScreens, batteries, water damage, board-level faults — all handled at our Media City workshop, ten minutes away.\n\nWhatsApp 055 741 3706 and we'll have someone at your door.\n\n#DubaiMarina #MacBookRepairDubai #FreePickup"
   },
   {
     "week": 39,
@@ -1073,7 +1073,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/about/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w43-about",
     "image": "real/team/team-workshop-dubai.jpg",
-    "body": "21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 of them, with Usman on board-level repair for 11.\n\nThat continuity matters on the hard cases — the ones that need someone who's seen the fault before, not a rotating roster. Your machine is worked on by one named technician, not passed around the shop.\n\nFree diagnosis, written warranty on whatever gets fixed.\n\n#21Years #SameTeam #MacBookRepairDubai"
+    "body": "Repairing Apple devices since 2004. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11.\n\nThat continuity matters on the hard cases — the ones that need someone who's seen the fault before, not a rotating roster. Your machine is worked on by one named technician, not passed around the shop.\n\nFree diagnosis, written warranty on whatever gets fixed.\n\n#Since2004 #MeetTheTeam #MacBookRepairDubai"
   },
   {
     "week": 44,
@@ -1136,7 +1136,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-repair-jbr/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w50-macbook-repair-jbr",
     "image": "topics/macbook-repair-dubai-pickup.jpg",
-    "body": "JBR and Marina Walk: free collection, same-day diagnosis at our Media City workshop, delivered back to you. No fix, no fee.\n\nTen minutes from your door to our bench — most JBR pickups are collected within the hour of a WhatsApp message.\n\n055 741 3706, any day except Sunday.\n\n#JBR #MarinaWalk #MacBookRepairDubai"
+    "body": "JBR and Marina Walk: free collection, same-day diagnosis at our Media City workshop, delivered back to you. No fix, no fee.\n\nWe're a short drive away in Dubai Media City, and you get a written quote before any work starts.\n\n055 741 3706, any day except Sunday.\n\n#JBR #MarinaWalk #MacBookRepairDubai"
   },
   {
     "week": 51,
@@ -1209,7 +1209,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
     "type": "TRUST",
     "opening": "We are not an Apple Authorised Service Provider, and we'll say when Apple is the better option. In-warranty covered fault? Go to Apple, you'll pay nothing. We're the out-of-warranty alternative.",
     "url": "/warranty/",
-    "image": "topics/applecare-warranty-repair-dubai.jpg"
+    "image": "real/team/macbook-bench-repairs-dubai.jpg"
   },
   {
     "week": 8,
@@ -1251,7 +1251,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
     "type": "DEVICE",
     "opening": "MacBook Air M4 battery draining faster than it should? We replace Air batteries and restore full runtime, usually the same day, with a written warranty.",
     "url": "/macbook-battery-replacement-dubai/",
-    "image": "topics/macbook-battery-replacement-dubai.jpg"
+    "image": "real/lab/macbook-battery-internals-dubai.jpg"
   },
   {
     "week": 14,
@@ -1265,7 +1265,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
     "type": "TRUST",
     "opening": "Our warranty in plain terms: up to 12 months in writing, on the invoice, stated before you approve the work. Different repairs carry different terms — we tell you which upfront.",
     "url": "/warranty/",
-    "image": "topics/applecare-warranty-repair-dubai.jpg"
+    "image": "brand/team-portrait.jpg"
   },
   {
     "week": 16,
@@ -1286,7 +1286,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
     "type": "AREA",
     "opening": "Deira and Bur Dubai: free collection, same-day diagnosis at our Media City workshop, delivered back to you.",
     "url": "/macbook-repair-deira/",
-    "image": "topics/macbook-repair-old-dubai.jpg"
+    "image": "topics/macbook-repair-dubai-pickup.jpg"
   },
   {
     "week": 19,
@@ -1361,14 +1361,14 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
   {
     "week": 29,
     "type": "DEVICE",
-    "opening": "Cracked Apple Watch screen or a battery that won't last the day? We repair Apple Watch in-house rather than sending it away.",
-    "url": "/apple-watch-repair-dubai/",
-    "image": "topics/apple-repair-dubai.jpg"
+    "opening": "iPad screen showing lines, dark spots, or not responding to touch? It isn't always the glass. We diagnose panel, digitiser and board free, then quote in writing.",
+    "url": "/ipad-screen-repair-dubai/",
+    "image": "topics/ipad-screen-repair-dubai.jpg"
   },
   {
     "week": 30,
     "type": "AREA",
-    "opening": "Al Sufouh and Media City — we're your neighbours, 10th floor of Concord Tower, opposite Media City Metro. Walk in, no appointment needed.",
+    "opening": "Al Sufouh and Media City — we're your neighbours, 10th floor of Concord Tower. Walk in Monday to Saturday, no appointment needed.",
     "url": "/macbook-repair-al-sufouh/",
     "image": "brand/brand-storefront.jpg"
   },
@@ -1419,12 +1419,12 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
     "type": "DEVICE",
     "opening": "Mac Studio throttling under render load? We service the cooling assembly and verify thermals properly, rather than just blowing out dust.",
     "url": "/mac-studio-overheating-fix-dubai/",
-    "image": "topics/mac-studio-repair-dubai.jpg"
+    "image": "real/lab/macbook-cooling-fan-macro-dubai.jpg"
   },
   {
     "week": 38,
     "type": "AREA",
-    "opening": "Dubai Marina again — our most-collected area. Free pickup, same-day diagnosis, delivered back to your tower.",
+    "opening": "Dubai Marina again: free pickup, same-day diagnosis, delivered back to your tower.",
     "url": "/macbook-repair-dubai-marina/",
     "image": "topics/macbook-repair-dubai-pickup.jpg"
   },
@@ -1459,7 +1459,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
   {
     "week": 43,
     "type": "TRUST",
-    "opening": "21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11. Your machine is worked on by one named technician, not passed around.",
+    "opening": "Repairing Apple devices since 2004. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11. Your machine is worked on by one named technician, not passed around.",
     "url": "/about/",
     "image": "real/team/team-workshop-dubai.jpg"
   },

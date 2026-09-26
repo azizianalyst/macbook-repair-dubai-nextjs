@@ -30,33 +30,33 @@ export default function MacBookProM4ScreenRepair() {
       faults={[
         {
           title: "Liquid Retina XDR backlight flickering on M4 Pro",
-          body: "Mini-LED local dimming zone failure causes visible pulsing or uneven brightness across the screen. Panel assembly replacement is required. Free diagnosis confirms the fault before any work is started..",
+          body: "Mini-LED local dimming zone failure causes visible pulsing or uneven brightness across the screen. Panel assembly replacement is required. Free diagnosis confirms the fault before any work is started.",
         },
         {
           title: "Screen lines on M4 Pro display",
-          body: "Persistent horizontal or vertical lines on the M4 Pro screen indicate panel or display cable failure. We diagnose the specific fault before quoting..",
+          body: "Persistent horizontal or vertical lines on the M4 Pro screen indicate panel or display cable failure. We diagnose the specific fault before quoting.",
         },
         {
           title: "No backlight on M4 MacBook Pro",
-          body: "Black screen with a faint image visible under torch light indicates a backlight circuit or cable issue. The M4 logic board is typically undamaged..",
+          body: "Black screen with a faint image visible under torch light indicates a backlight circuit or cable issue. The M4 logic board is typically undamaged.",
         },
         {
           title: "Cracked screen 14-inch M4 Pro",
-          body: "Physical impact or pressure damage to the 14-inch Liquid Retina XDR panel. Full assembly replacement required..",
+          body: "Physical impact or pressure damage to the 14-inch Liquid Retina XDR panel. Full assembly replacement required.",
         },
         {
           title: "Cracked screen 16-inch M4 Max",
-          body: "Impact damage to the 16-inch panel. The larger assembly is stocked separately. Parts availability is confirmed during diagnosis..",
+          body: "Impact damage to the 16-inch panel. The larger assembly is stocked separately. Parts availability is confirmed during diagnosis.",
         },
         {
           title: "Display colour issues on M4 Pro",
-          body: "Colour tint, banding, or loss of colour accuracy on the M4 Pro display indicates panel failure. Free diagnosis distinguishes hardware from macOS profile issues..",
+          body: "Colour tint, banding, or loss of colour accuracy on the M4 Pro display indicates panel failure. Free diagnosis distinguishes hardware from macOS profile issues.",
         },
       ]}
       faqs={[
         {
           q: "How much does MacBook Pro M4 screen repair cost in Dubai?",
-          a: "MacBook Pro M4 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple charges AED 1,599 and AED 1,799 respectively.",
+          a: "MacBook Pro M4 screen repair at MacBook Repair Dubai is quoted per size in writing, all-in with panel, labour, and 3-month warranty. Diagnosis is free. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare.",
         },
         {
           q: "How long does MacBook Pro M4 screen repair take in Dubai?",

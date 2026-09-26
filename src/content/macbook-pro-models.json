@@ -137,7 +137,7 @@
     "currentInLineup": false,
     "discontinued": "October 2023 (last 13\" Pro ever)",
     "commonIssues": [
-      "256GB base SSD is single-NAND - slower writes, harder chip-recovery",
+      "256GB base SSD is single-NAND - slower reads and writes",
       "Touch Bar failures (this is the last MacBook ever with a Touch Bar)",
       "Battery wear starting on early units",
       "Magic Keyboard isolated key failures",

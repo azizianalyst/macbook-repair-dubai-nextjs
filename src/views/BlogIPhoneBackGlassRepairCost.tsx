@@ -75,7 +75,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
           <p className="text-[13px] text-text-muted mono">
             Apple Store pricing reflects the full housing-swap quote - Apple does not offer a
             glass-only repair. See{" "}
-            <a href="https://support.apple.com/iphone/repair/back-glass" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
+            <a href="https://support.apple.com/iphone/repair" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               support.apple.com
             </a>{" "}
             for current Apple pricing.
@@ -139,7 +139,7 @@ export default function BlogIPhoneBackGlassRepairCost() {
         { q: "Will MagSafe still work after back glass repair?", a: "Yes - we preserve the original MagSafe coil from the chassis and re-bond the new glass to it with Apple-spec adhesive. We test 7.5W Qi and 15W MagSafe before handing the phone back. Spec is at least 90% factory charging efficiency." },
         { q: "How long does iPhone back glass repair take?", a: "About 90 minutes at the bench plus a 4-hour adhesive cure. Most jobs are next-day pickup. We do not give the phone back the same day because rushing the cure compromises the seal." },
         { q: "Can you do back glass repair on iPhone 17 Pro?", a: "Yes - we carry both the laser equipment and the colour-matched 17 Pro glass for Deep Blue, Cosmic Orange, Silver, and Black. It includes a vapor-chamber adjacency check post-install. Message us on WhatsApp for the exact price." },
-        { q: "Is it cheaper than Apple Store?", a: "Substantially cheaper. Apple's official 'fix' is a full housing swap because they don't offer a glass-only option - we replace just the glass, which costs far less. Message us on WhatsApp for the exact price on your model." },
+        { q: "Is it cheaper than Apple Store?", a: "Compare for yourself. Apple lists back glass repair at AED 615 plus VAT on current models such as the iPhone 16, 17 and 18 Pro, on its UAE support site. On older models Apple has no glass-only option, while we replace just the glass. We quote before any work - message us on WhatsApp for the exact price on your model." },
       ]}
       relatedLinks={[
         { label: "iPhone back glass repair hub", href: "/iphone-back-glass-repair-dubai", description: "Full service page - laser process, pricing, warranty." },

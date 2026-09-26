@@ -1,5 +1,6 @@
 // canonical iPhone models list. used by every iPhone hub page for pricing tables.
-// dates approximate launch year; "current line" reflects April 2026.
+// dates approximate launch year; lineup checked against apple.com/ae on 2026-09-26
+// (iPhone Duo is announced for 23 Oct 2026; add it once its specs are confirmed at launch).
 
 export type IPhoneModel = {
   family: string;            // group label
@@ -28,6 +29,8 @@ export const IPHONE_MODELS: IPhoneModel[] = [
   { family: "17",      name: "iPhone 17 Pro",           released: 2025, connector: "USB-C",     faceId: true  },
   { family: "17",      name: "iPhone 17 Pro Max",       released: 2025, connector: "USB-C",     faceId: true  },
   { family: "17",      name: "iPhone 17e",              released: 2026, connector: "USB-C",     faceId: true  },
+  { family: "18",      name: "iPhone 18 Pro",           released: 2026, connector: "USB-C",     faceId: true  },
+  { family: "18",      name: "iPhone 18 Pro Max",       released: 2026, connector: "USB-C",     faceId: true  },
 ];
 
 export const IPHONE_REVIEW_NAMES = [

@@ -200,7 +200,7 @@ export default function BlogMacBookProM5Throttling() {
         { label: "MacBook Pro M5 repair Dubai", href: "/macbook-pro-m5-repair-dubai", description: "All M5 models: 14-inch M5 Pro, 16-inch M5 Max, full service." },
         { label: "MacBook Pro overheating fix Dubai", href: "/blog/macbook-pro-overheating-fix-dubai", description: "MacBook Pro M1 to M5 overheating diagnosis and fix guide." },
         { label: "MacBook Pro M5 battery draining overnight", href: "/blog/macbook-pro-m5-battery-draining-overnight-dubai", description: "DarkWake and sleep drain fix for MacBook Pro M5 in Dubai." },
-        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering OLED, Thunderbolt 5, and memory pressure." },
+        { label: "MacBook Pro M5 common problems", href: "/blog/macbook-pro-m5-common-problems-dubai", description: "Full M5 issue guide covering the XDR display, Thunderbolt 5, and memory pressure." },
       ]}
     />
   );

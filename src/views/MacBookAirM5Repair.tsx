@@ -25,7 +25,7 @@ export default function MacBookAirM5Repair() {
       faqs={[
         {
           q: "How much does MacBook Air M5 screen repair cost in Dubai?",
-          a: "Both the 13-inch and 15-inch take the same Liquid Retina panel, quoted after a free diagnosis. For comparison, the Apple Store charges AED 1,099. We use OEM-grade Liquid Retina panels. Same-day service if you drop off before 11am.",
+          a: "Both the 13-inch and 15-inch take the same Liquid Retina panel, quoted after a free diagnosis. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. We use OEM-grade Liquid Retina panels. Same-day service if you drop off before 11am.",
         },
         {
           q: "How much does MacBook Air M5 battery replacement cost in Dubai?",
@@ -45,7 +45,7 @@ export default function MacBookAirM5Repair() {
         },
         {
           q: "Is it worth repairing a MacBook Air M5 with a cracked screen?",
-          a: "Yes. A cracked screen repair is far cheaper than a new M5 Air, which Apple lists from AED 4,999. The M5 is also a current model with at least 5-6 years of software support ahead. Board damage and severe liquid damage are the cases where we recommend against repair.",
+          a: "Yes. A cracked screen repair is far cheaper than a new M5 Air, which Apple lists from AED 4,599 (13-inch). The M5 is also a current model with at least 5-6 years of software support ahead. Board damage and severe liquid damage are the cases where we recommend against repair.",
         },
       ]}
     />

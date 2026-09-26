@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -131,7 +132,7 @@ const FAQS = [
   },
   {
     q: "Is water damage covered by Apple warranty or AppleCare+?",
-    a: "Standard Apple warranty does not cover liquid damage. AppleCare+ covers accidental damage including liquid spills for a AED 149 service fee per incident. MacBook Repair Dubai offers independent repair with a faster turnaround -- typically same-day or next-day rather than the Apple Store timeline of several business days. We are an independent Apple specialist, not an Apple Authorized Service Provider.",
+    a: "Standard Apple warranty does not cover liquid damage. AppleCare+ covers accidental damage including liquid spills for a service fee per incident, listed on Apple's UAE support site. MacBook Repair Dubai offers independent repair with a faster turnaround -- typically same-day or next-day rather than the Apple Store timeline of several business days. We are an independent Apple specialist, not an Apple Authorized Service Provider.",
   },
 ];
 
@@ -191,7 +192,7 @@ export default function MacBookWaterDamage() {
           <div className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
               <a
-                href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has liquid damage from a spill. Can I get a free pickup and diagnosis? Model: ")}`}
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has liquid damage from a spill. Can I get a free pickup and diagnosis? Model: ")}`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -411,7 +412,7 @@ export default function MacBookWaterDamage() {
               <div className="flex flex-wrap gap-sm shrink-0">
                 <Button asChild variant="whatsapp" size="lg">
                   <a
-                    href={`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has a liquid spill. I need urgent pickup and diagnosis. Model: ")}`}
+                    href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has a liquid spill. I need urgent pickup and diagnosis. Model: ")}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -467,7 +468,7 @@ export default function MacBookWaterDamage() {
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> Message on WhatsApp
                 </a>
               </Button>
