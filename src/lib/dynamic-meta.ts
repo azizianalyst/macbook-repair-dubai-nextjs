@@ -125,43 +125,44 @@ MAP["/ipod-touch-7-repair-dubai"] = {
 // Intentional OVERRIDES that must beat an existing route-meta.generated.ts entry
 // (e.g. an entry that has a title but no description, or an over-long title).
 const OVERRIDE: Record<string, Meta> = {
-  // MacBook Neo A18 Pro spokes (March 2026 student MacBook).
+  // MacBook Neo spokes (13-inch, A18 Pro, on sale 11 March 2026). These mirror each
+  // view's seoTitle/seoDescription exactly (src/views/MacBookNeo*.tsx) — keep them paired.
   "/macbook-neo-a18-repair-dubai": {
-    title: "MacBook Neo A18 Pro Repair Dubai - First A-Chip MacBook 2026",
-    description: "MacBook Neo A18 Pro repair Dubai (March 2026). Apple's $599 student MacBook with the A18 Pro chip from iPhone 16 Pro. Screen battery. Free diagnosis. Warranty up to 12 months. Call 055 741 3706.",
+    title: "MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage",
+    description: "MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706.",
   },
   "/macbook-neo-screen-repair-dubai": {
-    title: "MacBook Neo Screen Repair Dubai - 12.9-inch Liquid Retina",
-    description: "MacBook Neo screen repair Dubai. 12.9-inch Liquid Retina display, A18 Pro (2026). Cracked glass, dead pixels, backlight failure. Free diagnosis. 3-month warranty. Call 055 741 3706.",
+    title: "MacBook Neo Screen Repair Dubai - 13-inch Display",
+    description: "MacBook Neo screen repair in Dubai: cracked, lines, dead areas or no picture. Free diagnosis, AppleCare+ checked first, 90-day warranty. WhatsApp us.",
   },
   "/macbook-neo-battery-replacement-dubai": {
-    title: "MacBook Neo Battery Replacement Dubai",
-    description: "MacBook Neo battery replacement Dubai. A18 Pro MacBook (March 2026), 18-hour rated life. BMS re-pair included. Check AppleCare+ before booking. Free diagnosis. Call 055 741 3706.",
+    title: "MacBook Neo Battery Replacement Dubai - Free Health Check",
+    description: "MacBook Neo battery replacement in Dubai: free battery health check, warranty status first, 3-month warranty with 80% guarantee. WhatsApp 055 741 3706.",
   },
   "/macbook-neo-keyboard-repair-dubai": {
-    title: "MacBook Neo Keyboard Repair Dubai - Magic Keyboard + Touch ID",
-    description: "MacBook Neo keyboard repair Dubai. Magic Keyboard with Touch ID (A18 Pro model, 2026). Individual key cap replacement or top-case. Check AppleCare+ first. Call 055 741 3706.",
+    title: "MacBook Neo Keyboard Repair Dubai - Stuck Keys & Spills",
+    description: "MacBook Neo keyboard repair in Dubai: stuck or missing keys, spills and full keyboard replacement. Free diagnosis, warranty checked first. WhatsApp us.",
   },
   // Pro-specific service spokes under the generic screen/battery pages.
   "/macbook-air-screen-repair-dubai": {
     title: "MacBook Air Screen Repair Dubai — Free Diagnosis",
-    description: "MacBook Air screen repair Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone, same-day. Genuine Apple panels, warranty up to 3 months. Call 055 741 3706.",
+    description: "MacBook Air screen repair Dubai for M1–M5 Liquid Retina and Intel models, True Tone kept. Genuine or quality-tested panels, 90-day warranty. Same-day.",
   },
   "/macbook-pro-screen-repair-dubai": {
     title: "MacBook Pro Screen Repair Dubai — Free Diagnosis",
-    description: "MacBook Pro screen repair Dubai. Liquid Retina XDR mini-LED, ProMotion, Flexgate and M5 OLED panels. Same-day, genuine, 3-month warranty.",
+    description: "MacBook Pro screen repair in Dubai: Liquid Retina XDR mini-LED, ProMotion and Flexgate faults. Same-day, genuine or tested panels, 90-day warranty.",
   },
   "/macbook-pro-battery-replacement-dubai": {
     title: "MacBook Pro Battery Replacement Dubai",
-    description: "MacBook Pro battery replacement Dubai. 14-inch and 16-inch 100Wh, Intel and M1-M5, swelling. Same-day 2-hour service, 3-month warranty.",
+    description: "MacBook Pro battery replacement in Dubai for 14 and 16-inch, Intel and M1-M5, including swollen cells. Same-day, 3-month warranty. Get a free quote.",
   },
   "/macbook-air-battery-replacement-dubai": {
-    title: "MacBook Air Battery Replacement Dubai",
-    description: "MacBook Air battery replacement Dubai. Intel 49.9 Wh, M1/M2/M3 52.6–66.5 Wh, BMS re-pair included for Apple Silicon. Same-day 2-hour service. Call 055 741 3706.",
+    title: "MacBook Air Battery Replacement Dubai — Same-Day Service",
+    description: "MacBook Air battery replacement Dubai for Intel and M1–M5 models. BMS re-pair included on Apple silicon. Same-day 2-hour service. Free diagnosis.",
   },
   "/macbook-air-keyboard-repair-dubai": {
     title: "MacBook Air Keyboard Repair Dubai — Free Diagnosis",
-    description: "MacBook Air keyboard repair Dubai. Intel butterfly and M1–M4 Magic Keyboard. Individual key caps, sticky keys, backlight, Touch ID. Same-day 2-hour service. Call 055 741 3706.",
+    description: "MacBook Air keyboard repair in Dubai: Intel butterfly and M-series Magic Keyboard, single keys, backlight, Touch ID. Same-day. Get a free quote.",
   },
   // High-intent symptom pages — urgent searches, high conversion.
   "/macbook-not-turning-on-dubai": {
@@ -186,102 +187,102 @@ const OVERRIDE: Record<string, Meta> = {
   },
   "/mac-data-recovery-dubai": {
     title: "Mac Data Recovery Dubai — SSD, Deleted Files, Won't Boot",
-    description: "Mac data recovery Dubai. Won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment. Call 055 741 3706.",
+    description: "Mac data recovery Dubai. Won't boot, SSD failure, accidental delete, water damage, formatted drive. Apple Silicon and Intel. Free assessment.",
   },
   // CTR improvements: pages with high impressions but below-benchmark click rates.
   "/blog/do-macbooks-last-over-a-decade": {
-    title: "How Long Do MacBooks Last? Most Reach 7–10 Years",
+    title: "How Long Do MacBooks Last? Most Reach 7–10 Years (2026)",
     description: "Most MacBooks last 7–10 years — some push 12+. What shortens lifespan, what extends it, and the repair-vs-replace tipping point explained year by year.",
   },
   "/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away": {
     title: "Erase Mac Before Selling — Don't Skip These Steps (2026)",
-    description: "Erase your Mac safely before selling: sign out of iCloud and Find My first, then Erase All Content and Settings. Skipping iCloud locks the buyer out permanently.",
+    description: "Erase your Mac safely before selling: sign out of iCloud and Find My first, then Erase All Content and Settings, or the buyer gets locked out.",
   },
   "/blog/how-to-clean-a-macbook-screen": {
-    title: "How to Clean a MacBook Screen (Without Damaging It)",
-    description: "Clean your MacBook screen without streaks or coating damage. The exact cloth and technique Apple recommends — plus the common mistakes that cause permanent marks.",
+    title: "How to Clean a MacBook Screen Without Damaging It (2026)",
+    description: "Clean your MacBook screen without streaks or coating damage: the cloth and technique Apple recommends, plus the mistakes that leave permanent marks.",
   },
   "/blog/how-to-recover-macbook-password": {
-    title: "Forgot MacBook Password? 4 Ways to Get Back In (2026)",
-    description: "Recover a forgotten MacBook login password via Apple ID, Recovery Mode resetpassword tool, your hint, or FileVault key. Step-by-step for all macOS versions.",
+    title: "Forgot MacBook Password? 6 Ways to Get Back In (2026)",
+    description: "Recover a forgotten MacBook password with your hint, Apple ID, the Recovery Mode resetpassword tool or FileVault key. Step by step for all macOS versions.",
   },
   "/blog/macbook-battery-replacement-cost-2026": {
     title: "MacBook Battery Replacement Cost Dubai 2026: Air & Pro",
-    description: "MacBook battery replacement Dubai 2026: (Air) to (16-inch Pro). Same-day, labour included, 3-month warranty. vs Apple Store prices.",
+    description: "MacBook battery replacement cost in Dubai 2026 for Air and Pro: what sets the price, Apple Store vs independent repair, and when it is time to replace.",
   },
   "/blog/should-i-buy-refurbished-macbook-dubai": {
     title: "Refurbished MacBook Dubai: Worth It? (2026 Honest Guide)",
-    description: "Save 30–40% on a refurbished MacBook in Dubai — but only from the right source. Apple Certified vs independent refurbs vs Dubizzle: risks and what to check.",
+    description: "Should I buy refurbished MacBook Dubai in 2026? The savings, the risks, what to check before paying, and how to avoid a bad refurb. Honest advice.",
   },
   "/blog/ipad-battery-replacement-cost-dubai": {
     title: "iPad Battery Replacement Cost Dubai 2026 — All Models",
-    description: "iPad battery replacement Dubai 2026: depending on model. Same-day service, 3-month warranty. When to replace and how to check your battery health.",
+    description: "iPad battery replacement cost in Dubai for every model in 2026: what sets the price, the signs you need a new battery, turnaround and warranty.",
   },
   "/the-caps-lock-key-is-not-responding-after-restarting-my-macbook": {
-    title: "Caps Lock Not Working on MacBook? Here Are 7 Fixes",
-    description: "MacBook Caps Lock won't respond after a restart? Usually the built-in hold delay, Slow Keys, or a remapped key — not broken hardware. Every fix, in order.",
+    title: "Caps Lock Not Working on MacBook? Here Are 7 Fixes (2026)",
+    description: "MacBook Caps Lock not responding after a restart? It is usually the hold delay, Slow Keys or a remapped key, not broken hardware. Every fix, in order.",
   },
   "/the-server-gave-an-error-during-download-403-forbidden": {
     title: "Fix 'Server Gave an Error During Download' on Mac (403)",
-    description: "Seeing 403 Forbidden when downloading on your Mac? It's the server blocking the request, not your Mac. Fix it in 2 minutes: check your clock, Apple ID, VPN and DNS cache.",
+    description: "403 Forbidden when downloading on a Mac means the server refused the request, not a fault in your Mac. Check the clock, Apple ID, VPN and DNS cache.",
   },
   // route-meta has a title-only, 84-char entry for this; add a description + trim.
   "/imac-logic-board-repair-dubai": {
     title: "iMac Logic Board Repair Dubai - Component-Level",
-    description: `iMac logic board repair Dubai. Component-level rework on 27" Intel and 24" M-series: power delivery, GPU, T2, SoC limits.`,
+    description: "iMac logic board repair in Dubai at component level, not a board swap. 15-day warranty, extendable to 6 months. Free diagnosis - call 055 741 3706.",
   },
   // Restored Q&A guide pages (previously redirected, now real pages).
   "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
-    title: "Why Does My MacBook Air M4 Heat Up So Quickly?",
+    title: "Why Does My MacBook Air M4 Heat Up So Quickly? 2026 Fixes",
     description: "MacBook Air M4 has no fan — heat during heavy tasks is expected. Here's what's normal, what's a problem, and how to keep it running cool.",
   },
   "/iphone-16-pro-max-screen-flickering": {
     title: "iPhone 16 Pro Max Screen Flickering? Here's Every Fix",
-    description: "iPhone 16 Pro Max screen flickering is usually a software or ProMotion glitch, not a broken display. Step-by-step fixes before booking a repair.",
+    description: "iPhone 16 Pro Max screen flickering: the software fixes to try first and the hardware faults that need a repair. Free diagnosis in Dubai - call us.",
   },
   "/iphone-16-shocks-while-charging": {
-    title: "iPhone Shocking You While Charging? Causes and Safe Fixes",
-    description: "A tingle or mild shock when charging your iPhone is almost always a charger grounding issue, not a phone fault. Here's what causes it and how to fix it.",
+    title: "iPhone 16 Shocking You While Charging? Causes & Safe Fixes",
+    description: "iPhone 16 giving a shock while charging? Usually a charger or grounding issue, sometimes the port. What to check and when to stop. Free check in Dubai.",
   },
   "/iphone-motherboard-repair-dubai": {
     title: "Can an iPhone Motherboard Be Repaired? Yes — Here's How",
-    description: "Yes, iPhone logic boards can be repaired at the component level. Micro-soldering fixes power issues, Face ID, audio, and GPU faults. Dubai pricing included.",
+    description: "iPhone logic board repair in Dubai at component level: power faults, Face ID, audio and no-boot. Free diagnosis - get a quote on WhatsApp.",
   },
   "/blog/what-causes-color-distortion-on-macbook-screens": {
     title: "What Causes Color Distortion on MacBook Screens? Fix Guide",
-    description: "MacBook screen colour distortion — tints, washed-out, oversaturated — is usually Night Shift, True Tone, or a wrong colour profile. Full diagnosis and fixes.",
+    description: "MacBook screen colour distortion (tints, washed-out or oversaturated colour) is usually Night Shift, True Tone or a wrong colour profile. Every fix.",
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     title: "White or Grey Horizontal Lines on MacBook Screen (Fix)",
-    description: "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide and Dubai repair cost.",
+    description: "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. How to diagnose and fix it.",
   },
   "/iphone-16-pro-battery-capacity": {
     title: "iPhone 16 Pro Battery Capacity, Life & Replacement Cost",
-    description: "iPhone 16 Pro has a 3,582 mAh battery rated for 27 hrs video. What affects battery life, when to replace, and Dubai replacement cost ().",
+    description: "iPhone 16 Pro battery capacity explained - real-world hours, health percentage and when a replacement is worth it. Free battery check in Dubai.",
   },
   "/blog/how-to-take-a-screenshot-on-a-macbook": {
     title: "How to Take a Screenshot on a MacBook (All 3 Shortcuts)",
-    description: "Shift-Cmd-3 = full screen. Shift-Cmd-4 = drag a selection. Shift-Cmd-5 = every option. Where screenshots save, how to copy to clipboard, and fixes when it stops working.",
+    description: "Shift-Cmd-3 for the full screen, Shift-Cmd-4 for a selection, Shift-Cmd-5 for every option. Where screenshots save, and fixes when they stop working.",
   },
   "/blog/macbook-battery-health-check-guide": {
     title: "MacBook Battery Health Check: 3 Ways in 30 Seconds (2026)",
-    description: "Check MacBook battery health: System Settings → Battery → Battery Health. Or Option-click the battery icon. Cycle-count limits per model, what 80% means, when to replace.",
+    description: "MacBook battery health check, three ways to see your battery condition in under a minute, what the numbers mean, and when to replace it in 2026.",
   },
   "/blog/how-to-choose-the-best-apple-laptop-for-gaming": {
-    title: "Best MacBook for Gaming 2026: M4 Air vs Pro vs Max",
-    description: "M4 MacBook Air handles most games well. M4 Pro handles everything. M4 Max is overkill unless you edit too. GPU tiers, RAM needs, thermals, and which titles run natively in 2026.",
+    title: "Best MacBook for Gaming 2026: Air vs Pro vs Max",
+    description: "Which MacBook suits gaming in 2026: Air vs Pro vs Max GPU tiers, how much RAM you need, thermals, and how to run games natively or in the cloud.",
   },
   "/sources-to-purchase-a-refurbished-macbook": {
-    title: "Where to Buy a Refurbished MacBook: 5 Sources Ranked",
-    description: "Apple Certified Refurbished is the safest. Independent shops beat Dubizzle for warranty. Dubizzle works if you know what to check. All sources ranked by risk, value, and warranty.",
+    title: "Where to Buy a Refurbished MacBook: 5 Sources Ranked (2026)",
+    description: "Apple Certified Refurbished is the safest source; independent shops beat Dubizzle on warranty. Every source ranked by risk, value and warranty.",
   },
   "/blog/why-is-my-ipad-not-charging": {
     title: "iPad Not Charging? 8 Fixes That Actually Work (2026)",
-    description: "iPad not charging is usually a cable, port debris, or adapter fault — not a dead battery. Fixes in order: swap cable, clean port, force restart, different adapter, check battery health.",
+    description: "iPad not charging is usually the cable, port debris or the adapter, not a dead battery. The fixes in order, from swapping the cable to a battery check.",
   },
   "/migrating-data-from-old-macbook-to-new-macbook-without-icloud": {
     title: "Migrate MacBook Data Without iCloud: 3 Methods That Work",
-    description: "Move everything from old MacBook to new without iCloud: Migration Assistant over cable (fastest, keeps settings), Time Machine restore, or manual folder copy. All macOS versions.",
+    description: "Move everything from your old MacBook to a new one without iCloud: Migration Assistant over a cable, a Time Machine restore, or a manual copy.",
   },
   // MacBook Pro L6 chip×screen pages
   "/macbook-pro-m1-screen-repair-dubai": {
@@ -301,8 +302,8 @@ const OVERRIDE: Record<string, Meta> = {
     description: "MacBook Pro M4 Pro/Max screen repair Dubai. Liquid Retina XDR 14-inch and 16-inch, 120Hz ProMotion, Thunderbolt 5. 1-2 day turnaround. Call 055 741 3706.",
   },
   "/macbook-pro-m5-screen-repair-dubai": {
-    title: "MacBook Pro M5 Screen Repair Dubai — OLED Display Specialist",
-    description: "MacBook Pro M5 OLED screen repair Dubai. First OLED MacBook Pro — 14-inch and 16-inch tandem OLED. Free diagnosis. 2-3 day turnaround. Call 055 741 3706.",
+    title: "MacBook Pro M5 Screen Repair Dubai — Liquid Retina XDR",
+    description: "MacBook Pro M5 screen repair Dubai: 14-inch and 16-inch Liquid Retina XDR mini-LED displays. Free diagnosis, 2–3 day turnaround. Call 055 741 3706.",
   },
   // MacBook Pro L6 chip×battery pages
   "/macbook-pro-m1-battery-replacement-dubai": {
@@ -322,8 +323,8 @@ const OVERRIDE: Record<string, Meta> = {
     description: "MacBook Pro M4 Pro/Max battery replacement Dubai. 72.4 Wh (14-inch) and 99.6 Wh (16-inch). BMS re-pair included, Thunderbolt 5. 1-2 day turnaround. Call 055 741 3706.",
   },
   "/macbook-pro-m5-battery-replacement-dubai": {
-    title: "MacBook Pro M5 Battery Replacement Dubai",
-    description: "MacBook Pro M5 Pro/Max battery replacement Dubai. BMS re-pair included. OLED display model (2025). Check Apple warranty first. Free diagnosis. Call 055 741 3706.",
+    title: "MacBook Pro M5 Battery Replacement Dubai — Free Diagnosis",
+    description: "MacBook Pro M5, M5 Pro and M5 Max battery replacement in Dubai. BMS re-pair included. Check Apple warranty first. Free diagnosis, quote on WhatsApp.",
   },
   // iMac chip-generation hub pages
   "/imac-intel-repair-dubai": {

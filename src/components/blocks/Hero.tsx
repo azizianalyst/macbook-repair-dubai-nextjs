@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TrustLine } from "@/components/blocks/TrustLine";
 import { Reveal } from "@/components/blocks/Reveal";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Variant = "home" | "service" | "blog" | "device";
 
@@ -105,9 +105,10 @@ export function Hero({
 
           {meta && <div className="mt-md">{meta}</div>}
 
-          {(startingPrice || timeline) && (
+          {/* !! so a startingPrice of 0 renders nothing, not a literal "0" */}
+          {(!!startingPrice || !!timeline) && (
             <div className="mt-lg flex flex-wrap gap-md items-center">
-              {startingPrice && (
+              {!!startingPrice && (
                 <div>
                   <span className={cn(
                     "block text-[12px] uppercase tracking-wider",
@@ -135,7 +136,7 @@ export function Hero({
               they look comfortably large in a screenshot. */}
           <Reveal delay={240} className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> {ctaLabel ?? "Message on WhatsApp"}
               </a>
             </Button>

@@ -12,7 +12,6 @@
 //   • clear repair/service/model/area pages -> a Service node (NO price Offer, so there is
 //     zero risk of a price mismatch vs the visible page price; adding accurate per-page
 //     Offers is a safe follow-up once a verified price-per-route map exists).
-import { SITE } from "./seo";
 import { licensedImage, organization, localBusiness, webSite, person, place, service, pageUrl } from "./schema";
 import { imageForRoute } from "./page-images";
 import { BUSINESS_ID } from "./schema";
@@ -20,6 +19,7 @@ import { TEAM } from "@/content/site";
 import { PRICING_SERVICES } from "@/content/pricing-services";
 import { AREAS } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
+import { CITIES } from "@/content/cities";
 
 // Dubai area landing pages (NOT the multi-emirate city pages): slug -> config. Used to
 // attach a per-area Place node anchoring the page to a Dubai neighbourhood near the
@@ -27,6 +27,32 @@ import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 // business geo is in Dubai and a Dubai-geo Place on another emirate would be wrong.
 const AREA_BY_SLUG = new Map(AREAS.map((a) => [a.slug, a]));
 const DR_AREA_BY_SLUG = new Map(DATA_RECOVERY_AREAS.map((a) => [a.slug, a]));
+// Other-emirate city pages (/macbook-repair-sharjah, /macbook-repair-abu-dhabi, …): the Service
+// is delivered by courier from Dubai but the page serves that city, so areaServed must name it.
+// Declaring "Dubai" on the Sharjah page (the previous hard-coded value) contradicted the page.
+const CITY_BY_SLUG = new Map(CITIES.map((c) => [c.slug, c]));
+
+const UAE = { "@type": "Country", name: "United Arab Emirates" };
+const DUBAI = { "@type": "City", name: "Dubai", containedInPlace: UAE };
+
+function areaServedFor(path: string) {
+  const slug = path.startsWith("/macbook-repair-") ? path.slice("/macbook-repair-".length) : "";
+  const city = slug ? CITY_BY_SLUG.get(slug) : undefined;
+  if (!city) return DUBAI;
+  return {
+    "@type": "City",
+    name: city.city,
+    containedInPlace: city.emirate === city.city
+      ? UAE
+      : { "@type": "AdministrativeArea", name: city.emirate, containedInPlace: UAE },
+  };
+}
+
+// Service -> business link. A bare @id reference resolves to the ElectronicsStore node that
+// localBusiness() emits on the same page. The previous stub also carried "@type":
+// "LocalBusiness" + name, which validators read as a second, address-less LocalBusiness
+// (Semrush: 273 "invalid structured data items", missing required "address").
+const PROVIDER = { "@id": BUSINESS_ID };
 
 // Trade-in / sell / buy-back routes. These high-value commercial pages don't match SERVICE_RE
 // (no repair keyword), so they previously shipped only an image node — leaving the best-ranking
@@ -137,12 +163,8 @@ export function schemaForPath(path: string): unknown[] {
       "@id": `${url}#service`,
       serviceType: isTradeIn ? "Electronics Trade-In" : "Used Electronics Buy-Back",
       name: isTradeIn ? "Apple Device Trade-In Dubai" : "Apple Device Buy-Back Dubai",
-      provider: { "@type": "LocalBusiness", "@id": BUSINESS_ID, name: SITE.name },
-      areaServed: {
-        "@type": "City",
-        name: "Dubai",
-        containedInPlace: { "@type": "Country", name: "United Arab Emirates" },
-      },
+      provider: PROVIDER,
+      areaServed: DUBAI,
       url,
       category: isTradeIn ? "Electronics Trade-In Service" : "Used Electronics Dealer",
     };
@@ -176,12 +198,8 @@ export function schemaForPath(path: string): unknown[] {
     "@id": `${url}#service`,
     serviceType: name,
     name,
-    provider: { "@type": "LocalBusiness", "@id": BUSINESS_ID, name: SITE.name },
-    areaServed: {
-      "@type": "City",
-      name: "Dubai",
-      containedInPlace: { "@type": "Country", name: "United Arab Emirates" },
-    },
+    provider: PROVIDER,
+    areaServed: areaServedFor(path),
     url,
     category: "Computer Repair Service",
     termsOfService: pageUrl("/warranty"),

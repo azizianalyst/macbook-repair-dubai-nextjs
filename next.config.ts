@@ -38,6 +38,19 @@ const nextConfig: NextConfig = {
       // 2026-09-01 slug hygiene: sentence-shaped question slug -> service keyword slug.
       // GSC: 3,436 impressions at position 16 for the service query this page answers.
       { source: "/can-iphone-motherboard-be-repaired", destination: "/iphone-motherboard-repair-dubai/", statusCode: 301 },
+      // 2026-09-26: no in-house Apple Watch service (owner, 2026-09-01). The page promised
+      // same-day repair at Concord Tower; fold it into the Apple hub like the 32 Watch URLs before it.
+      { source: "/apple-watch-repair-dubai", destination: "/apple-repair-dubai/", statusCode: 301 },
+      // 2026-09-26: one URL per single-model generation. The chip hub and the dated model page
+      // covered the same machine; the dated page is richer and is the one the hubs link to.
+      { source: "/imac-m1-repair-dubai", destination: "/imac-24-m1-2021-repair-dubai/", statusCode: 301 },
+      { source: "/imac-m3-repair-dubai", destination: "/imac-24-m3-2023-repair-dubai/", statusCode: 301 },
+      { source: "/imac-m4-repair-dubai", destination: "/imac-24-m4-2024-repair-dubai/", statusCode: 301 },
+      { source: "/mac-studio-m3-repair-dubai", destination: "/mac-studio-m3-ultra-2025-repair-dubai/", statusCode: 301 },
+      { source: "/mac-studio-m4-repair-dubai", destination: "/mac-studio-m4-max-2025-repair-dubai/", statusCode: 301 },
+      { source: "/mac-pro-m2-ultra-repair-dubai", destination: "/mac-pro-m2-ultra-2023-repair-dubai/", statusCode: 301 },
+      { source: "/mac-mini-m1-repair-dubai", destination: "/mac-mini-m1-2020-repair-dubai/", statusCode: 301 },
+      { source: "/mac-pro-intel-repair-dubai", destination: "/mac-pro-intel-2019-repair-dubai/", statusCode: 301 },
       // 2026-09-01 keyword-gap audit, exact-match slug rule: URL now equals the target
       // keyword (dropped the extra "shop" / added the missing "-dubai"). Substantial
       // existing pages, not new builds - see docs/keyword-service-gap-audit-2026-08-30.md.

@@ -73,7 +73,10 @@ function escLen(t: string): number {
 function cleanDescription(d: string): string {
   const s = decodeEntities(d).trim();
   if (escLen(s) <= DESC_MAX) return s;
-  const sentences = s.match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? [];
+  // Lazy match up to a terminator that is followed by whitespace/end, so decimals ("49.9 Wh",
+  // "13.6-inch") stay inside their sentence. The old [^.!?]+ form split at every "." and
+  // silently dropped the fragment before it, rendering false specs like "9-inch" or "6 Wh".
+  const sentences = s.match(/.+?[.!?]+(?=\s|$)/g) ?? [];
   let out = "";
   for (const sentence of sentences) {
     const next = (out + " " + sentence.trim()).trim();
