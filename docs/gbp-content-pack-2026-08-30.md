@@ -1,9 +1,17 @@
 # GBP Content Pack — paste-ready, MacBook Repair Dubai
 **Built 2026-08-30.** Companion to [gbp-master-plan-2026-08-30.md](gbp-master-plan-2026-08-30.md).
 
-**Every URL below returned HTTP 200 on 2026-08-30** (103 checked, 103 pass).
-**No prices anywhere** — per the hide-prices decision.
+**Every URL below returned HTTP 200 on 2026-08-30** (103 checked, 103 pass). The two links added on 2026-09-26 (`/apple-repair-dubai/`, `/macbook-air-screen-replacement-dubai/`) returned 200 on 2026-09-26.
+**No prices anywhere** — per the hide-prices decision. As of 2026-09-26 that includes the pictures: every image this pack tells you to upload was OCR-checked, and none carries an AED figure in its pixels. The seven infographics listed under "Deliberately excluded" at the end do show prices and must not be uploaded.
 **Every image referenced exists in this repo** and passes GBP specs (JPG, ≥720px, 10 KB–5 MB).
+
+> **Corrected 2026-09-26** — see [gbp-pack-corrections-2026-09-26.md](gbp-pack-corrections-2026-09-26.md) for every change and why. In short:
+> - Apple Watch removed from the description, the services list and W29. The owner confirmed on 2026-09-01 that there is no in-house Watch or AirPods service.
+> - W29 is now an iPad screen post.
+> - 14 image slots used 7 pictures that show AED prices, pickup fees or an Apple Watch. All 14 now use price-free images.
+> - W8 no longer says "GITEX week". GITEX 2026 moved to 7–11 Dec at Expo City.
+> - Claims that could not be checked were removed: "same workshop since 2004", "opposite Media City Metro", "our most-collected area" and "collected within the hour".
+> - The address in the post bodies now reads "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City", exactly as the NAP in `business.generated.ts` (`street` + `area`). It used to say "Concord Tower, Office 45".
 
 ---
 
@@ -19,9 +27,9 @@
 
 # §1 — Identity
 
-## Description (paste as-is, **734 / 750 chars** — counted, not estimated)
+## Description (paste as-is, **746 / 750 chars** — counted with `node`, 2026-09-26)
 
-> Independent Apple repair specialists in Concord Tower, Dubai Media City, since 2004. We repair MacBook Air, MacBook Pro and MacBook Neo (Intel through M6), iMac, Mac mini, Mac Studio, iPhone, iPad and Apple Watch: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Most repairs are completed the same day, and every repair carries a written warranty of up to 12 months. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.
+> Independent Apple repair specialists since 2004, based in Concord Tower, Dubai Media City. We repair MacBook Air and MacBook Pro (Intel through M5), MacBook Neo, iMac, Mac mini, Mac Studio, iPhone and iPad: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Many repairs are done the same day, and every paid repair carries a written warranty of up to 12 months, depending on the repair. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.
 
 ## Categories
 
@@ -35,7 +43,7 @@ Mobile phone repair shop · Phone repair service · Electronics repair shop · C
 
 **✅ "Computer support and services" caution resolved (2026-09-01):** checked Azizi Technologies' live category list in Business Profile Manager. Its primary is "IT support and services" — a different string — and its secondaries are Computer service · Second-hand Computer Shop · Data recovery service · Screen repair service · Computer repair service · Computer networking service · Internet marketing service. No exact match on "Computer support and services", so it's safe to add here.
 
-**FYI, not a blocker:** Azizi Technologies (same Concord Tower Office 45 address) already shares 4 categories with this profile — Computer service, Data recovery service, Screen repair service, and Computer repair service (the last is this profile's *primary*, Azizi's *secondary*). Pre-existing, not introduced by this plan. Flagged for Module 9 (NAP & entity consolidation) if it's ever worth differentiating further.
+**FYI, not a blocker:** Azizi Technologies (same Concord Tower Office #45 address) already shares 4 categories with this profile — Computer service, Data recovery service, Screen repair service, and Computer repair service (the last is this profile's *primary*, Azizi's *secondary*). Pre-existing, not introduced by this plan. Flagged for Module 9 (NAP & entity consolidation) if it's ever worth differentiating further.
 
 **Remove (5):** Computer Shop · Computer consultant · Second-hand Computer Shop · Computer Software Shop · Computer Accessories Shop
 → these dilute relevance; Computer Shop / Second-hand Computer Shop / Computer Accessories Shop can move to the Azizi Technologies listing if genuinely relevant there.
@@ -127,7 +135,7 @@ Grouped so every claimed category is substantiated. All ≤300 chars, no prices.
 | Service | Description | Link |
 |---|---|---|
 | Apple display repair | Studio Display and Pro Display XDR faults — panel damage, backlight, connectivity and power. Repaired in-house. | `/apple-display-repair-dubai/` |
-| MacBook Air screen replacement | Cracked or failing MacBook Air display across Intel and M-series, replaced with full colour and True Tone testing. | `/macbook-air-screen-repair-dubai/` |
+| MacBook Air screen replacement | Cracked or failing MacBook Air display across Intel and M-series, replaced with full colour and True Tone testing. | `/macbook-air-screen-replacement-dubai/` |
 | MacBook Pro screen repair | Retina and Liquid Retina XDR panels replaced for every MacBook Pro generation, with testing before return. | `/macbook-pro-screen-repair-dubai/` |
 
 ## Data recovery service (11)
@@ -138,7 +146,7 @@ Grouped so every claimed category is substantiated. All ≤300 chars, no prices.
 | MacBook data recovery | Data recovery from MacBook Air and Pro — failed SSDs, dead boards and accidental deletion. Free assessment first. | `/macbook-data-recovery-dubai/` |
 | Water damage data recovery | Liquid-damaged Mac? We clean and stabilise the board specifically to get your data off it, even when the machine itself isn't economical to repair. | `/mac-data-recovery-after-water-damage-dubai/` |
 | Apple T2 chip data recovery | T2-encrypted Macs need the original board alive to decrypt. We work at component level to bring it back long enough to recover your data. | `/apple-t2-chip-data-recovery-dubai/` |
-| SSD data recovery | Failed or unrecognised SSD, including soldered Apple storage. NAND-level recovery in our own lab. | `/ssd-data-recovery-dubai/` |
+| SSD data recovery | Failed or unrecognised SSD, including soldered Apple storage. On T2 and Apple Silicon Macs the data is encrypted to the board, so we revive the original board to recover it. Free assessment first. | `/ssd-data-recovery-dubai/` |
 | iMac data recovery | Recover documents, photos and projects from a failed or non-booting iMac, including Fusion Drive setups. | `/imac-data-recovery-dubai/` |
 | Mac mini data recovery | Data recovery from Mac mini storage, including soldered SSDs on M-series models. | `/mac-mini-data-recovery-dubai/` |
 | Mac Studio data recovery | Soldered SSD recovery for Mac Studio — won't boot, deleted files, or power failure during a write. | `/mac-studio-data-recovery-dubai/` |
@@ -165,7 +173,7 @@ Grouped so every claimed category is substantiated. All ≤300 chars, no prices.
 | iPhone software fix | Stuck on the Apple logo, update failures, or a boot loop? We resolve software faults while preserving your data wherever possible. | `/iphone-software-fix-dubai/` |
 | iPhone full diagnostic | Complete iPhone health check — battery, display, cameras, charging, audio and board. Free, with a written report. | `/iphone-full-diagnostic-dubai/` |
 | iPhone repair | Full iPhone service — screen, battery, charging, cameras, liquid damage and board-level faults, diagnosed free before any work. | `/iphone-repair-dubai/` |
-| iPhone Air repair | Service and repair for the latest ultra-thin iPhone, including screen, battery and charging faults. | `/iphone-air-repair-dubai/` |
+| iPhone Air repair | Service and repair for Apple's ultra-thin iPhone Air, including screen, battery and charging faults. | `/iphone-air-repair-dubai/` |
 
 ## Phone repair service — iPad (11)
 
@@ -187,7 +195,7 @@ Grouped so every claimed category is substantiated. All ≤300 chars, no prices.
 
 | Service | Description | Link |
 |---|---|---|
-| Apple Watch repair | Cracked Apple Watch screen, battery not lasting, or the watch not powering on? Repaired in-house rather than sent away. | `/apple-watch-repair-dubai/` |
+| Apple repair | Mac, iPhone and iPad repair from one independent Dubai Media City workshop: screens, batteries, charging, liquid damage and board-level faults. Free diagnosis and a written quote before any work starts. | `/apple-repair-dubai/` |
 
 ## Computer service — software & setup (5)
 
@@ -215,16 +223,18 @@ Grouped so every claimed category is substantiated. All ≤300 chars, no prices.
 
 Optional. GBP allows products without prices — these act as extra category signals.
 
+**What is live is recorded in [gbp-products-published-2026-09-05.md](gbp-products-published-2026-09-05.md)**, not here. The published set uses real workshop photos and adds a Sell & Trade In product. On 2026-09-26 the three rows below that pointed at price-carrying infographics were switched to the photos that were actually published.
+
 | Collection | Description | Image | Link |
 |---|---|---|---|
 | MacBook Repair | Screen, battery, keyboard, board-level and liquid-damage repair for every MacBook Air and Pro, Intel to M5. | `topics/macbook-pro-repair-hub-dubai.jpg` | `/macbook-repair-dubai/` |
 | iMac Repair | Display, GPU, power supply, storage and cooling repair for every iMac generation. | `topics/imac-repair-hub-dubai.jpg` | `/imac-repair-dubai/` |
-| Mac mini & Mac Studio | Repair and upgrade for Apple's desktop range, Intel and Apple Silicon. | `topics/mac-studio-repair-dubai.jpg` | `/mac-repair-dubai/` |
+| Mac mini & Mac Studio | Repair and upgrade for Apple's desktop range, Intel and Apple Silicon. | `real/lab/mac-studio-dubai.jpg` | `/mac-repair-dubai/` |
 | iPhone Repair | Screen, battery, charging, camera, Face ID and board-level iPhone repair. | `topics/iphone-repair-hub-dubai.jpg` | `/iphone-repair-dubai/` |
-| iPad Repair | Screen, battery, charging and board-level repair across every iPad generation. | `topics/ipad-repair-hub-dubai.jpg` | `/ipad-repair-dubai/` |
+| iPad Repair | Screen, battery, charging and board-level repair across every iPad generation. | `real/lab/ipad-on-bench-dubai.jpg` | `/ipad-repair-dubai/` |
 | Data Recovery | Recovery from failed SSDs, dead boards and liquid-damaged Macs. No recovery, no charge. | `topics/macbook-data-recovery-dubai.jpg` | `/mac-data-recovery-dubai/` |
 | Free Pickup & Delivery | Door-to-door collection and return anywhere in Dubai, at no cost. | `topics/macbook-repair-dubai-pickup.jpg` | `/onsite-macbook-repair-dubai/` |
-| Business & Corporate Support | Fleet repair, AMC and priority turnaround for Dubai businesses. | `topics/annual-maintenance-contract-dubai.jpg` | `/corporate-macbook-repair-dubai/` |
+| Business & Corporate Support | Fleet repair, AMC and priority turnaround for Dubai businesses. | `real/team/team-workshop-dubai.jpg` | `/corporate-macbook-repair-dubai/` |
 
 ---
 
@@ -280,18 +290,18 @@ Images are repo-relative under `public/images/`.
 | 4 | SEASONAL | Dubai summer, cold offices, 40°C outside — that swing puts condensation inside laptops, and we see the failures weeks later. Fans never stopping? Get it checked. | `/macbook-overheating-fix-dubai/` | `real/lab/macbook-cooling-fan-macro-dubai.jpg` |
 | 5 | DEVICE | iPhone battery health under 80%, or shutting down before it hits zero? We replace iPhone batteries in-house, usually while you wait, with a written warranty. | `/iphone-battery-replacement-dubai/` | `topics/iphone-battery-replacement-dubai.jpg` |
 | 6 | AREA | Business Bay and Downtown: we collect your MacBook, iMac or iPad free, repair it in Dubai Media City, and deliver it back. Most repairs same-day. | `/macbook-repair-business-bay/` | `topics/macbook-repair-dubai-pickup.jpg` |
-| 7 | TRUST | We are not an Apple Authorised Service Provider, and we'll say when Apple is the better option. In-warranty covered fault? Go to Apple, you'll pay nothing. We're the out-of-warranty alternative. | `/warranty/` | `topics/applecare-warranty-repair-dubai.jpg` |
+| 7 | TRUST | We are not an Apple Authorised Service Provider, and we'll say when Apple is the better option. In-warranty covered fault? Go to Apple, you'll pay nothing. We're the out-of-warranty alternative. | `/warranty/` | `real/team/macbook-bench-repairs-dubai.jpg` |
 | 8 | SEASONAL | Back-to-school means MacBooks living in backpacks, and the cracked screens that follow. Free diagnosis, most screens same-day, free collection anywhere in Dubai. | `/macbook-screen-repair-dubai/` | `topics/blog-screen-display-dubai.jpg` |
 | 9 | DEVICE | iMac M4 showing no display but the fans spin? Often the power supply or a board fault, not the panel. We diagnose before quoting so you don't replace the wrong part. | `/imac-repair-dubai/` | `topics/imac-repair-hub-dubai.jpg` |
 | 10 | AREA | JLT: free MacBook and iPhone collection, same-day diagnosis, delivered back to your tower. No charge if we can't fix it. | `/macbook-repair-jlt/` | `topics/macbook-repair-dubai-pickup.jpg` |
 | 11 | TRUST | What a free diagnosis actually includes: full hardware test, a written report on what failed and why, and a fixed quote. No obligation, no diagnostic fee. | `/macbook-full-diagnostic-dubai/` | `topics/macbook-diagnostic-dubai.jpg` |
 | 12 | SEASONAL | Humidity season. Condensation inside a MacBook corrodes traces slowly, so the failure comes weeks after the damage. Intermittent keyboard or trackpad? Get it opened early. | `/macbook-water-damage-repair-dubai/` | `topics/blog-water-damage-dubai.jpg` |
-| 13 | DEVICE | MacBook Air M4 battery draining faster than it should? We replace Air batteries and restore full runtime, usually the same day, with a written warranty. | `/macbook-battery-replacement-dubai/` | `topics/macbook-battery-replacement-dubai.jpg` |
+| 13 | DEVICE | MacBook Air M4 battery draining faster than it should? We replace Air batteries and restore full runtime, usually the same day, with a written warranty. | `/macbook-battery-replacement-dubai/` | `real/lab/macbook-battery-internals-dubai.jpg` |
 | 14 | AREA | Palm Jumeirah: free door-to-door collection for Macs, iPhones and iPads. Diagnosed same day, returned when it's done. | `/macbook-repair-palm-jumeirah/` | `topics/macbook-repair-dubai-pickup.jpg` |
-| 15 | TRUST | Our warranty in plain terms: up to 12 months in writing, on the invoice, stated before you approve the work. Different repairs carry different terms — we tell you which upfront. | `/warranty/` | `topics/applecare-warranty-repair-dubai.jpg` |
+| 15 | TRUST | Our warranty in plain terms: up to 12 months in writing, on the invoice, stated before you approve the work. Different repairs carry different terms — we tell you which upfront. | `/warranty/` | `brand/team-portrait.jpg` |
 | 16 | SEASONAL | **Ramadan hours — CONFIRM DATES, they shift yearly.** Adjusted opening times this month; collection and delivery running as normal across Dubai. | `/contact/` | `brand/brand-storefront.jpg` |
 | 17 | DEVICE | Mac mini out of space? We fit larger SSD storage on compatible models and migrate everything across so you start where you left off. | `/mac-mini-ssd-upgrade-dubai/` | `topics/mac-mini-repair-dubai.jpg` |
-| 18 | AREA | Deira and Bur Dubai: free collection, same-day diagnosis at our Media City workshop, delivered back to you. | `/macbook-repair-deira/` | `topics/macbook-repair-old-dubai.jpg` |
+| 18 | AREA | Deira and Bur Dubai: free collection, same-day diagnosis at our Media City workshop, delivered back to you. | `/macbook-repair-deira/` | `topics/macbook-repair-dubai-pickup.jpg` |
 | 19 | TRUST | No fix, no fee — literally. If we can't repair it you owe nothing: no diagnostic fee, no inspection charge, no labour. The collection is free too. | `/contact/` | `topics/macbook-diagnostic-dubai.jpg` |
 | 20 | SEASONAL | **Eid hours — CONFIRM DATES, they shift yearly.** Holiday opening times, with pickup and delivery continuing across Dubai. | `/contact/` | `brand/brand-storefront.jpg` |
 | 21 | DEVICE | Butterfly keyboard repeating or dropping keys? It's a known design fault on 2016–2019 MacBooks. We repair and replace those top-case assemblies. | `/macbook-keyboard-repair-dubai/` | `real/lab/macbook-keyboard-repair-dubai.jpg` |
@@ -302,21 +312,21 @@ Images are repo-relative under `public/images/`.
 | 26 | AREA | DIFC: free collection for Macs and iPhones, same-day diagnosis, delivered back to your office. Corporate accounts welcome. | `/macbook-repair-difc/` | `topics/macbook-repair-dubai-pickup.jpg` |
 | 27 | TRUST | Data recovery: no recovery, no charge. We assess free, tell you honestly what the odds are, and only charge if your files come back. | `/mac-data-recovery-dubai/` | `topics/macbook-data-recovery-dubai.jpg` |
 | 28 | SEASONAL | Travelling this summer? Get the battery and cooling checked before you fly. A swollen battery is a genuine problem at altitude and airlines take it seriously. | `/macbook-battery-swollen-repair-dubai/` | `real/lab/macbook-battery-internals-dubai.jpg` |
-| 29 | DEVICE | Cracked Apple Watch screen or a battery that won't last the day? We repair Apple Watch in-house rather than sending it away. | `/apple-watch-repair-dubai/` | `topics/apple-repair-dubai.jpg` |
-| 30 | AREA | Al Sufouh and Media City — we're your neighbours, 10th floor of Concord Tower, opposite Media City Metro. Walk in, no appointment needed. | `/macbook-repair-al-sufouh/` | `brand/brand-storefront.jpg` |
+| 29 | DEVICE | iPad screen showing lines, dark spots, or not responding to touch? It isn't always the glass. We diagnose panel, digitiser and board free, then quote in writing. | `/ipad-screen-repair-dubai/` | `topics/ipad-screen-repair-dubai.jpg` |
+| 30 | AREA | Al Sufouh and Media City — we're your neighbours, 10th floor of Concord Tower. Walk in Monday to Saturday, no appointment needed. | `/macbook-repair-al-sufouh/` | `brand/brand-storefront.jpg` |
 | 31 | TRUST | Genuine vs quality-alternative parts: we offer both and tell you which is which, what each costs you in warranty terms, and what we'd fit to our own machine. | `/warranty/` | `real/lab/macbook-full-internals-dubai.jpg` |
 | 32 | SEASONAL | Peak heat. If your Mac shuts down under load or the fans never idle, the thermal system needs servicing — dust, dried paste, or a failing fan. | `/mac-fan-cleaning-dubai/` | `real/lab/macbook-fan-heatsink-dubai.jpg` |
 | 33 | DEVICE | iPad Pro screen cracked? We replace iPad, iPad Air, mini and Pro displays with a written warranty and a free diagnosis first. | `/ipad-screen-repair-dubai/` | `topics/ipad-screen-repair-dubai.jpg` |
 | 34 | AREA | Jumeirah and Umm Suqeim: free Mac and iPhone collection, same-day diagnosis, returned to your door. | `/macbook-repair-jumeirah/` | `topics/macbook-repair-dubai-pickup.jpg` |
 | 35 | TRUST | Repairs we refuse: if a repair won't hold, we say so rather than take your money. Sometimes the honest answer is that the machine isn't worth it — we'll tell you that too. | `/about/` | `real/team/technician-support-call-dubai.jpg` |
 | 36 | SEASONAL | Second back-to-school wave. Cracked screens, dead batteries and drink spills — all same-day on most models, all with free collection across Dubai. | `/macbook-repair-dubai/` | `topics/macbook-repair-near-me.jpg` |
-| 37 | DEVICE | Mac Studio throttling under render load? We service the cooling assembly and verify thermals properly, rather than just blowing out dust. | `/mac-studio-overheating-fix-dubai/` | `topics/mac-studio-repair-dubai.jpg` |
-| 38 | AREA | Dubai Marina again — our most-collected area. Free pickup, same-day diagnosis, delivered back to your tower. | `/macbook-repair-dubai-marina/` | `topics/macbook-repair-dubai-pickup.jpg` |
+| 37 | DEVICE | Mac Studio throttling under render load? We service the cooling assembly and verify thermals properly, rather than just blowing out dust. | `/mac-studio-overheating-fix-dubai/` | `real/lab/macbook-cooling-fan-macro-dubai.jpg` |
+| 38 | AREA | Dubai Marina again: free pickup, same-day diagnosis, delivered back to your tower. | `/macbook-repair-dubai-marina/` | `topics/macbook-repair-dubai-pickup.jpg` |
 | 39 | TRUST | Your data stays on your machine. We repair the board rather than swapping it, so your SSD and its contents never leave the device. | `/mac-data-recovery-dubai/` | `real/lab/macbook-pro-internal-layout-dubai.jpg` |
 | 40 | SEASONAL | **UAE National Day — 2 December.** Holiday opening hours; collection and delivery resume as normal after. | `/contact/` | `brand/brand-storefront.jpg` |
 | 41 | DEVICE | Shattered iPhone back glass? Laser-assisted removal and replacement, without disturbing the internals. | `/iphone-back-glass-repair-dubai/` | `topics/iphone-back-glass-repair-dubai.jpg` |
 | 42 | AREA | Downtown and Business Bay: free collection, same-day diagnosis, corporate accounts and consolidated invoicing available. | `/macbook-repair-downtown-dubai/` | `topics/macbook-repair-dubai-pickup.jpg` |
-| 43 | TRUST | 21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11. Your machine is worked on by one named technician, not passed around. | `/about/` | `real/team/team-workshop-dubai.jpg` |
+| 43 | TRUST | Repairing Apple devices since 2004. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11. Your machine is worked on by one named technician, not passed around. | `/about/` | `real/team/team-workshop-dubai.jpg` |
 | 44 | SEASONAL | Dubai Shopping Festival. Buying a used MacBook? Bring it to us before you pay — we'll check battery health, storage, and whether it's activation-locked. | `/macbook-full-diagnostic-dubai/` | `topics/guide-choose-macbook-dubai.jpg` |
 | 45 | DEVICE | iMac 5K display failing — banding, dead pixels, or backlight gone? Panel replacement with full colour testing before it goes back. | `/imac-screen-repair-dubai/` | `topics/imac-screen-repair-dubai.jpg` |
 | 46 | AREA | JVC, Motor City, Sports City and Dubai Hills: yes, we collect from there too, free, and return it when it's done. | `/macbook-repair-jvc/` | `topics/macbook-repair-dubai-pickup.jpg` |
@@ -336,7 +346,7 @@ Images are repo-relative under `public/images/`.
 **Updated 2026-09-01: full paste-ready bodies now exist for every week, not just the first quarter.**
 Re-anchored to real Mondays starting **31 August 2026**, spanning through **23 August 2027**. Every
 SEASONAL slot maps to the actual 2026/2027 UAE calendar event nearest its real week — Apple launch
-season (w4), GITEX (w8), White Friday (w12), UAE National Day (w14, breaking rotation — see below),
+season (w4), post-summer thermal check (w8; was GITEX, which moved to 7–11 Dec 2026 at Expo City), White Friday (w12), UAE National Day (w14, breaking rotation — see below),
 Dubai Shopping Festival (w16), New Year (w20), Ramadan (w24), Eid Al Fitr (w28), spring heat (w32),
 Eid Al Adha (w36), new macOS release (w40), peak summer + travel (w44), back-to-school prep (w48),
 back-to-school final push (w52). Lunar-calendar weeks (24, 28, 36) carry estimated dates from
@@ -360,9 +370,9 @@ one place builds it, so it cannot drift.
 ```text
 MacBook screen cracked, flickering, or showing dark patches down one side? We replace displays for every MacBook Air and Pro, Intel through M5 — including Flexgate backlight faults — and most are finished the same day.
 
-Free diagnosis before anything is charged. Written warranty of up to 12 months. No fix, no fee. Free pickup and delivery anywhere in Dubai.
+Free diagnosis before anything is charged. Written warranty on the work, with the term for your panel stated on the quote before you approve. No fix, no fee. Free pickup and delivery anywhere in Dubai.
 
-Concord Tower, Office 45, 10th floor, Dubai Media City — opposite Media City Metro. WhatsApp or call 055 741 3706.
+Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp or call 055 741 3706.
 
 #MacBookRepairDubai #MacBookScreenRepair #AppleRepairDubai
 ```
@@ -418,7 +428,7 @@ iPhone battery health under 80%, or the phone shutting down before it hits zero?
 
 We replace iPhone batteries in-house across the whole range, usually while you wait, and every replacement carries a written warranty. Free diagnosis first, so you know it's the battery and not the charging circuit.
 
-Walk in at Concord Tower, Office 45, Dubai Media City — or WhatsApp 055 741 3706 for free collection.
+Walk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City — or WhatsApp 055 741 3706 for free collection.
 
 #iPhoneBatteryReplacement #iPhoneRepairDubai #AppleRepairDubai
 ```
@@ -439,30 +449,31 @@ Free diagnosis, written quote before any work, no fix no fee. WhatsApp 055 741 3
 
 ### W7 · Mon 12 Oct 2026 · TRUST
 **CTA:** Learn more → `/warranty/`
-**Image:** `topics/applecare-warranty-repair-dubai.jpg`
+**Image:** `real/team/macbook-bench-repairs-dubai.jpg`
 
 ```text
 We are not an Apple Authorised Service Provider, and we'll tell you when Apple is the better choice.
 
 If your Mac is in warranty with a covered fault, go to Apple — you'll pay nothing and we'd be wasting your money. Same if it's an active Apple repair programme.
 
-Where we're the better option: out of warranty, liquid damage, board-level faults, discontinued models, and anything Apple quotes as a whole-unit replacement. That's the work we've done from the same workshop since 2004.
+Where we're the better option: out of warranty, liquid damage, board-level faults, discontinued models, and anything Apple quotes as a whole-unit replacement. That's the work we've done since 2004.
 
 #HonestRepair #MacBookRepairDubai #DubaiMediaCity
 ```
 
 ### W8 · Mon 19 Oct 2026 · SEASONAL
+**Corrected 2026-09-26** — the original "GITEX week" post was wrong for this date: GITEX Global 2026 runs 7–11 Dec 2026 at Dubai Exhibition Centre, Expo City (gitex.com). Re-angled to the post-summer thermal check the week actually suits.
 **CTA:** Call now → `/mac-fan-cleaning-dubai/`
 **Image:** `real/lab/macbook-fan-heatsink-dubai.jpg`
 
 ```text
-GITEX week in Dubai, and your laptop is doing 14-hour days on a stand in a hot hall. If the fans never idle or it throttles under load, the cooling system needs servicing — dust, dried thermal paste or a failing fan.
+Summer is over on the calendar, but your Mac spent it in hot cars, sunny desks and long workdays. If the fans never idle or it throttles under normal load, the cooling system needs servicing — dust, dried thermal paste or a failing fan.
 
-We're 15 minutes from the World Trade Centre and we do same-day thermal service, battery replacement and screen repair. Free collection from your hotel or stand.
+We clean and repaste the whole cooling path, replace what has failed, and check temperatures under load before it goes back. Cleaning and repasting is done the same day; if a fan has failed, the quote gives the part and the turnaround. Free collection anywhere in Dubai.
 
 WhatsApp 055 741 3706 — tell us it's urgent and we'll prioritise it.
 
-#GITEX #MacBookRepairDubai #DubaiTech
+#MacBookRepairDubai #ThermalService #DubaiHeat
 ```
 
 ### W9 · Mon 26 Oct 2026 · DEVICE
@@ -516,7 +527,7 @@ Buying a used MacBook in the White Friday sales? Bring it to us before you pay.
 
 We'll check battery cycle count and health, real storage health, whether the screen or keyboard has been replaced before, and — most importantly — whether it's activation-locked to someone else's Apple ID. That last one turns a bargain into a paperweight.
 
-Takes 20 minutes, and it's free. Concord Tower, Office 45, Dubai Media City.
+Takes 20 minutes, and it's free. Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.
 
 #WhiteFriday #MacBookRepairDubai #DubaiDeals
 ```
@@ -545,14 +556,14 @@ Happy UAE National Day! We're marking 55 years with adjusted opening hours aroun
 
 Collection and delivery keep running through the holiday period for anything urgent. Free diagnosis, written quote, no fix no fee — same as every other week of the year.
 
-Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.
 
 #UAENationalDay #MacBookRepairDubai #DubaiMediaCity
 ```
 
 ### W15 · Mon 7 Dec 2026 · TRUST
 **CTA:** Learn more → `/warranty/`
-**Image:** `topics/applecare-warranty-repair-dubai.jpg`
+**Image:** `brand/team-portrait.jpg`
 
 ```text
 Our warranty in plain terms, not fine print: up to 12 months, stated on the invoice, before you approve any work — never after.
@@ -574,7 +585,7 @@ Buying a used MacBook in the Dubai Shopping Festival deals? Bring it to us befor
 
 We check battery cycle count and real health, whether the screen or keyboard has been swapped before, and — the one that turns a bargain into a paperweight — whether it's still locked to someone else's Apple ID. Twenty minutes, free, no obligation.
 
-Concord Tower, Office 45, Dubai Media City.
+Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.
 
 #DubaiShoppingFestival #MacBookRepairDubai #DubaiDeals
 ```
@@ -595,7 +606,7 @@ WhatsApp 055 741 3706 with your Mac mini's year and we'll confirm compatibility 
 
 ### W18 · Mon 28 Dec 2026 · AREA
 **CTA:** Learn more → `/macbook-repair-deira/`
-**Image:** `topics/macbook-repair-old-dubai.jpg`
+**Image:** `topics/macbook-repair-dubai-pickup.jpg`
 
 ```text
 Deira and Bur Dubai: free collection, same-day diagnosis at our Dubai Media City workshop, delivered back to you when it's done.
@@ -688,7 +699,7 @@ Ramadan Kareem. Our hours adjust for the month — check WhatsApp for this week'
 
 Collection and delivery continue as normal throughout Ramadan, so you don't need to change your plans around ours. Free diagnosis, written quote, no fix no fee, same as always.
 
-Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.
 
 #Ramadan #MacBookRepairDubai #DubaiMediaCity
 ```
@@ -745,23 +756,24 @@ Eid Mubarak! Holiday opening hours this week — check WhatsApp for exact times 
 
 Collection and delivery keep running across Dubai through the holiday for anything urgent. Free diagnosis, written quote, no fix no fee, as always.
 
-Concord Tower, Office 45, Dubai Media City. WhatsApp 055 741 3706.
+Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. WhatsApp 055 741 3706.
 
 #EidAlFitr #MacBookRepairDubai #DubaiMediaCity
 ```
 
 ### W29 · Mon 15 Mar 2027 · DEVICE
-**CTA:** Learn more → `/apple-watch-repair-dubai/`
-**Image:** `topics/apple-repair-dubai.jpg`
+**Replaced 2026-09-26** — was an Apple Watch post linking to `/apple-watch-repair-dubai/` (now a 301). There is no in-house Watch service (owner, 2026-09-01). W33 (12 Apr) covers cracked iPad glass, so this one takes the display-fault angle.
+**CTA:** Learn more → `/ipad-screen-repair-dubai/`
+**Image:** `topics/ipad-screen-repair-dubai.jpg`
 
 ```text
-Cracked Apple Watch screen, or a battery that won't make it through the day anymore? We repair Apple Watch in-house rather than sending it away for weeks.
+iPad screen showing lines, dark spots, or ignoring your touch in one area? It isn't always the glass. The fault can sit in the display panel, the digitiser, the connector or the board behind them, and each one is a different repair.
 
-Free diagnosis first, written quote, and a warranty on the work — the same standard we apply to every device on the bench.
+We diagnose it free first, then give you a written quote and the warranty term for the part you choose before any work starts. iPad, iPad Air, iPad mini and iPad Pro.
 
-Free collection anywhere in Dubai.
+Walk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or WhatsApp 055 741 3706 for free pickup anywhere in Dubai.
 
-#AppleWatchRepair #MacBookRepairDubai #AppleRepairDubai
+#iPadScreenRepair #iPadRepairDubai #AppleRepairDubai
 ```
 
 ### W30 · Mon 22 Mar 2027 · AREA
@@ -769,7 +781,7 @@ Free collection anywhere in Dubai.
 **Image:** `brand/brand-storefront.jpg`
 
 ```text
-Al Sufouh and Media City — we're your neighbours. Tenth floor of Concord Tower, directly opposite Media City Metro.
+Al Sufouh and Media City — we're your neighbours: Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.
 
 Walk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.
 
@@ -866,7 +878,7 @@ WhatsApp 055 741 3706 to plan around it.
 
 ### W37 · Mon 10 May 2027 · DEVICE
 **CTA:** Learn more → `/mac-studio-overheating-fix-dubai/`
-**Image:** `topics/mac-studio-repair-dubai.jpg`
+**Image:** `real/lab/macbook-cooling-fan-macro-dubai.jpg`
 
 ```text
 Mac Studio throttling under render or export load? That's usually the cooling assembly needing service, not the chip itself giving up.
@@ -883,7 +895,7 @@ Free diagnosis, written quote before any work.
 **Image:** `topics/macbook-repair-dubai-pickup.jpg`
 
 ```text
-Dubai Marina again — our most-collected area, and for good reason: free pickup, same-day diagnosis, delivered straight back to your tower.
+Dubai Marina again: free pickup, same-day diagnosis, delivered straight back to your tower.
 
 Screens, batteries, water damage, board-level faults — all handled at our Media City workshop, ten minutes away.
 
@@ -950,17 +962,18 @@ WhatsApp 055 741 3706 to book a pickup.
 ```
 
 ### W43 · Mon 21 Jun 2027 · TRUST
+**Before posting:** check the years against `TEAM` in `src/content/site.ts`. Tenure grows each year, and the post must match the roster.
 **CTA:** Learn more → `/about/`
 **Image:** `real/team/team-workshop-dubai.jpg`
 
 ```text
-21 years, same workshop, same team. Shafiq has led the MacBook bench for 15 of them, with Usman on board-level repair for 11.
+Repairing Apple devices since 2004. Shafiq has led the MacBook bench for 15 years, with Usman on board-level repair for 11.
 
 That continuity matters on the hard cases — the ones that need someone who's seen the fault before, not a rotating roster. Your machine is worked on by one named technician, not passed around the shop.
 
 Free diagnosis, written warranty on whatever gets fixed.
 
-#21Years #SameTeam #MacBookRepairDubai
+#Since2004 #MeetTheTeam #MacBookRepairDubai
 ```
 
 ### W44 · Mon 28 Jun 2027 · SEASONAL
@@ -1036,6 +1049,7 @@ Free diagnosis included.
 ```
 
 ### W49 · Mon 2 Aug 2027 · DEVICE
+**Before posting:** check Apple's lineup. An M6 MacBook Pro is rumoured for late 2026. If it has launched by August 2027, swap "M5" for the newest chip.
 **CTA:** Learn more → `/macbook-pro-repair-dubai/`
 **Image:** `topics/macbook-pro-repair-hub-dubai.jpg`
 
@@ -1056,7 +1070,7 @@ Free diagnosis, written warranty, same-day on most models.
 ```text
 JBR and Marina Walk: free collection, same-day diagnosis at our Media City workshop, delivered back to you. No fix, no fee.
 
-Ten minutes from your door to our bench — most JBR pickups are collected within the hour of a WhatsApp message.
+We're a short drive away in Dubai Media City, and you get a written quote before any work starts.
 
 055 741 3706, any day except Sunday.
 
@@ -1101,3 +1115,14 @@ WhatsApp 055 741 3706.
 These are legitimate with proof of ownership, but on a Google Business Profile they attract association with stolen-device services and are a recognised suspension trigger. Keep them on the website where you control the context; keep them off the profile. Add them only if you decide the risk is worth it.
 
 Also excluded from the description and every service: any price, and any claim of Apple certification or authorisation.
+
+**Apple Watch, AirPods, Apple TV and HomePod are NOT offered** (owner, 2026-09-01: no in-house service). Do not add them to the description, services, products or posts. The Watch service row and the W29 Watch post were removed on 2026-09-26. `/apple-watch-repair-dubai/` 301s to `/apple-repair-dubai/` in the code.
+
+**Images with prices baked in are NOT used** (OCR check, 2026-09-26). These topic infographics show AED figures and must not be uploaded to GBP until they are regenerated without them:
+- `topics/annual-maintenance-contract-dubai.jpg`
+- `topics/apple-repair-dubai.jpg`
+- `topics/applecare-warranty-repair-dubai.jpg`
+- `topics/ipad-repair-hub-dubai.jpg`
+- `topics/mac-studio-repair-dubai.jpg`
+- `topics/macbook-battery-replacement-dubai.jpg`
+- `topics/macbook-repair-old-dubai.jpg` (this one also shows pickup fees and an Apple Watch)
