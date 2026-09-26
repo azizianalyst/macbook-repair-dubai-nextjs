@@ -1,0 +1,69 @@
+# Business fact sheet — macbook-repair-dubai.ae
+
+Created 2026-09-26. **Only VERIFIED facts may appear on the site, in schema, on GBP or in outreach.**
+UNVERIFIED items stay off the site until the owner gives a source. When a fact changes, update the
+source of truth named in the table first (never page copy), then this sheet.
+
+Sources of truth in the repo: `data/seo.json` → `src/content/business.generated.ts` (NAP, hours, reviews),
+`src/content/site.ts` (warranty, team, USPs), `TRUST-CLAIMS.md` (adjudication log).
+
+## Identity and contact
+
+| Fact | Value | Status | Source |
+|---|---|---|---|
+| Brand name | MacBook Repair Dubai | VERIFIED | GBP listing + site, checked 2026-09-01 (TRUST-CLAIMS) |
+| Address | Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, Dubai, UAE | VERIFIED | GBP knowledge panel 2026-09-01 |
+| Phone / WhatsApp | 055 741 3706 · +971557413706 · wa.me/971557413706 | VERIFIED | GBP knowledge panel 2026-09-01 |
+| Email | info@macbook-repair-dubai.ae | VERIFIED | Admin business store |
+| Hours | Mon–Sat 9 am–10 pm, Sunday closed | VERIFIED | Admin business store (owner-maintained) |
+| Founded | 10 October 2004 (tenure is computed, never hard-coded) | VERIFIED | Owner; consistent across 38 occurrences |
+| Founder | Abdul Aziz (exactly one founder) | VERIFIED | Owner 2026-08-31 |
+| Legal operator | "Azizi Technologies" appears as Organization `founder` | UNVERIFIED | Open in TRUST-CLAIMS; owner decision D3 |
+| Status vs Apple | **Independent repair shop. Never "Apple Authorised" or "Apple Certified" as a business.** | VERIFIED | Owner |
+| Socials | facebook.com/macbookrepairdubai.ae · instagram.com/azizitechnologies · youtube.com/@AziziTechnologies | VERIFIED | Admin business store |
+
+## Reviews
+
+| Fact | Value | Status | Source |
+|---|---|---|---|
+| Google rating | 5.0 | VERIFIED | GBP panel 2026-09-01 |
+| Google review count | 232 | VERIFIED | GBP panel 2026-09-01. The master plan cites 236 (not yet re-checked). Re-check quarterly; update only `data/seo.json` |
+
+## People (E-E-A-T)
+
+| Person | Role | Status |
+|---|---|---|
+| Abdul Aziz | Founder; Apple Certified Mac Technician (ACMT), a personal credential | VERIFIED (owner 2026-08-31) |
+| Shafiq (Ahmed) | Lead technician, 15 years | VERIFIED person; years from the roster |
+| Usman | Board-level repair, 11 years | VERIFIED person; years from the roster |
+| Ali | Data recovery, 14 years | VERIFIED person; years from the roster |
+| Hamza | iPhone and iPad, 7 years | VERIFIED person; years from the roster |
+| Mohammed | Mac desktop repair, 14 years | VERIFIED person; **years UNVERIFIED** |
+| Sayed | macOS software, 12 years | VERIFIED person; **years UNVERIFIED** |
+| Shafeeq (≠ Shafiq) | iPad repair, 12 years | VERIFIED person; **years UNVERIFIED** |
+
+## Services and policies
+
+| Fact | Status | Source |
+|---|---|---|
+| Repairs for MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad; data recovery | VERIFIED | Owner; the site's service set |
+| **No** in-house Apple Watch or AirPods repair | VERIFIED | Owner 2026-09-01 |
+| MacBook buy-back and trade-in only (no iPhone buy-back) | VERIFIED | Owner; D2 is still open |
+| Warranty: hardware up to 12 months; screens 90 days; battery 3 months with an 80% guarantee; keyboard, software, board, liquid and data work 15 days | VERIFIED | `site.ts` WARRANTY |
+| Free diagnosis; no fix, no charge; free pickup in Dubai | VERIFIED (owner-attested) | Sitewide USPs |
+| **No AED repair prices** in copy, titles, meta or schema (quotes via WhatsApp) | POLICY | Hide-prices policy |
+| 40,000+ devices repaired | Owner-attested, not independently verifiable | TRUST-CLAIMS |
+
+## UNVERIFIED claims that are currently live (owner decision D6)
+
+These break the standing rule "unverified claims never go on the site". Each needs a yes with a source,
+or it gets removed.
+
+| Claim | Reach |
+|---|---|
+| Free loaner MacBook for repairs over 2 hours | Sitewide USP strip + homepage FAQ |
+| "30-minute repair by appointment, or it's free" | 7 files, including the footer |
+| "WhatsApp answered 24/7" / "24/7 support" (hours are Mon–Sat 9–10) | Homepage |
+| "30-day money-back" on unlock services | iPhone unlock pages |
+| Job counts (5,200+ batteries, 3,400+ screens, 2,100+ keyboards, per-tech counts) | About 6 pages |
+| "Quote in 4 minutes" (225 pages) vs "written quote within 4 hours" (56 area pages) | Sitewide |

@@ -31,7 +31,9 @@
     "prebuild": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/extract-meta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs && node scripts/gen-lastmod.cjs && node scripts/gen-llms.cjs",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check:gates": "node scripts/audit-gates.mjs",
+    "check:seo": "node scripts/seo-gates.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",
