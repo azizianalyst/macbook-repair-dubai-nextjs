@@ -144,7 +144,7 @@ export default function MacBookNotTurningOn() {
     {
       title: "MacBook Not Turning On Dubai? Dead Mac Fixed Same Day",
       description:
-        "MacBook not turning on in Dubai? Free diagnosis. SMC reset, logic board fault, dead battery, liquid damage. All models MacBook Air and Pro. Free diagnosis, same-day service. Call 055 741 3706.",
+        "MacBook not turning on in Dubai? A free diagnosis finds the cause: SMC, dead battery, logic board or liquid damage, on all Air and Pro models. WhatsApp us.",
       path: "/macbook-not-turning-on-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },

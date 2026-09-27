@@ -93,7 +93,7 @@ for (const { url, file } of pages) {
       // Status claims are fine inside a denial, a description of Apple's own network,
       // or when "certified" describes an Apple product rather than us.
       if (/authori|certified \(business/i.test(label)) {
-        if (/\b(not|no|never|isn't|aren't|or|than|vs\.?|with|via|also works|apple store|are you( an?)?|years of)\b|n't\b/.test(before)) continue;
+        if (/\b(not|no|never|without|isn't|aren't|or|than|vs\.?|with|via|also works|apple store|are you( an?)?|years of)\b|n't\b/.test(before)) continue;
         if (/^\W*(service providers\b|ones\b|channels|refurb|vs\b|cables|tb\d|mpx)|^\)/.test(after)) continue;
       }
       // A buyer's guide may name the query it answers ("how to choose the best MacBook repair shop").

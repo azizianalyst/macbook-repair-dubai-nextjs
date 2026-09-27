@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM3ScreenRepair";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m3-screen-repair-cost-dubai", {
   title: "MacBook Pro M3 Screen Repair Cost Dubai 2026",
-  description: "MacBook Pro M3 screen repair in Dubai 2026 — mini-LED LCD replacement for cracked display, backlight fault and dimming zones. Message us on WhatsApp for a quote.",
+  description: "MacBook Pro M3 screen repair in Dubai: mini-LED Liquid Retina XDR assembly replacement for cracked glass, backlight faults and dimming zones. WhatsApp us.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-09-26",
 });

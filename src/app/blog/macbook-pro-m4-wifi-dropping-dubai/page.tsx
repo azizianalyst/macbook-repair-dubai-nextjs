@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM4WifiDropping";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m4-wifi-dropping-dubai", {
   title: "MacBook Pro M4 Wi-Fi Dropping Dubai 2026",
-  description: "MacBook Pro M4 Wi-Fi dropping in Dubai? Disconnects after sleep, slow on 6GHz, or connection not restored after wake. Step-by-step fix guide for UAE networks.",
+  description: "MacBook Pro M4 Wi-Fi dropping in Dubai? Fixes for disconnects after sleep and 6GHz band drops, and when antenna repair is needed. WhatsApp us for a quote.",
   publishedTime: "2026-06-22",
 });
 

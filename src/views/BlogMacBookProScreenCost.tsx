@@ -187,8 +187,8 @@ export default function BlogMacBookProScreenCost() {
 
           <h2 id="replacement-cost">How much does MacBook Pro screen replacement cost in Dubai?</h2>
           <p>
-            These are our current prices for screen replacement, panel only, installed with a
-            30-day parts and labour warranty:
+            These are our current prices for screen replacement, panel only, installed with our
+            90-day parts and labour warranty on screens:
           </p>
           <BlogPriceTable
             caption="MacBook Pro screen replacement pricing Dubai. June 2026"

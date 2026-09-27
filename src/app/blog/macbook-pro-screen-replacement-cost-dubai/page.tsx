@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProScreenCost";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-screen-replacement-cost-dubai", {
   title: "MacBook Pro Screen Replacement Cost Dubai: 2026 Price Guide",
-  description: "MacBook Pro screen replacement cost in Dubai explained by model, M1 to M5 and Intel, vs Apple Store. Same-day service. Message us on WhatsApp for your exact quote.",
+  description: "MacBook Pro screen replacement cost in Dubai by model, Intel to M5, against Apple Store quotes, and which panels take 1-2 days. WhatsApp for a quote.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

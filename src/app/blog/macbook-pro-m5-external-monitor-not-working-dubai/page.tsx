@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM5ExternalMonitor";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m5-external-monitor-not-working-dubai", {
   title: "MacBook Pro M5 External Monitor Not Working Dubai 2026",
-  description: "MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, fullscreen goes black.",
+  description: "MacBook Pro M5 external monitor not working? Third display limits, Thunderbolt 5 dock drops and the Tahoe fullscreen black bug explained. WhatsApp us.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

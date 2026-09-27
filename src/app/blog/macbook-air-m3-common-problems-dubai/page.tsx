@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookAirM3Problems";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-air-m3-common-problems-dubai", {
   title: "MacBook Air M3 Common Problems Dubai 2024: Fix Guide",
-  description: "MacBook Air M3 problems in Dubai: dual display bug, battery drain, overheating, MagSafe issues. All M3 Air faults fixed. Free diagnosis — message us for a quote.",
+  description: "MacBook Air M3 common problems in Dubai: dual display bugs, battery drain, overheating and MagSafe faults, and the fix for each. Free diagnosis, WhatsApp.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

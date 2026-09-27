@@ -5,7 +5,7 @@ import View from "@/views/BlogMacStudioOverheating";
 
 export const metadata: Metadata = metaFromFields("/blog/mac-studio-overheating-dubai", {
   title: "Mac Studio Overheating or Loud Fan in Dubai? Fixes 2026",
-  description: "Mac Studio overheating or fan loud in Dubai? Dust, airflow and 35°C heat explained. Message us on WhatsApp for thermal service pricing.",
+  description: "Mac Studio overheating or fan loud in Dubai? How dust, blocked airflow and 35°C rooms push it hot, plus fixes to try first. Message us for a service.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

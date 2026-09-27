@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProOverheating";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-overheating-fix-dubai", {
   title: "MacBook Pro Overheating Fix Dubai: M1 to M5 Guide 2026",
-  description: "MacBook Pro overheating fix in Dubai? 6 causes, CPU throttling, fan clog, thermal paste, Dubai heat damage, with step-by-step solutions. Message us on WhatsApp.",
+  description: "MacBook Pro overheating fix, M1 to M5: six causes from CPU throttling and clogged fans to old thermal paste, with fixes to try first. WhatsApp for a quote.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

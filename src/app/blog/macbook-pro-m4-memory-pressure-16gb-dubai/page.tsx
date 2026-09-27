@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM4MemoryPressure";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m4-memory-pressure-16gb-dubai", {
   title: "MacBook Pro M4 16GB Not Enough Memory Dubai 2026",
-  description: "MacBook Pro M4 16GB memory pressure in Dubai? Apps slow, fans spinning, system unresponsive? How M4 unified memory works, when 16GB is genuinely insufficient,…",
+  description: "MacBook Pro M4 16GB memory pressure? How to read the green, yellow and red graph and tell if RAM is the limit or an app is misbehaving. Ask us on WhatsApp.",
   publishedTime: "2026-06-22",
 });
 

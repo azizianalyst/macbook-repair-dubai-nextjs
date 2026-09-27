@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirM5BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-m5-battery-replacement-dubai", {
   title: "MacBook Air M5 Battery Replacement Dubai — Request a Quote",
-  description: "MacBook Air M5 (2026) battery replacement Dubai. 13-inch and 15-inch, BMS re-pair included, warranty checked first. Free diagnosis. Message us on WhatsApp for today's price. Call 055 741 3706.",
+  description: "MacBook Air M5 (2026) battery replacement in Dubai, 13-inch and 15-inch. We check warranty first; BMS re-pair included. Free diagnosis. Book on WhatsApp.",
 });
 
 export default function Page() {

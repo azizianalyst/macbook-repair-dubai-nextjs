@@ -5,7 +5,7 @@ import View from "@/views/MacBookWaterDamage";
 
 export const metadata: Metadata = metaFromFields("/macbook-water-damage-repair-dubai", {
   title: "MacBook Water Damage Repair Dubai — Act Fast, Save Your Mac",
-  description: "MacBook water damage repair Dubai. Coffee, water, juice spill on MacBook Air or Pro. Act within 24 hours for best recovery. Free diagnosis. WhatsApp us for a price. Call 055 741 3706.",
+  description: "MacBook water damage repair in Dubai for coffee, water or juice spills on Air or Pro. Act within 24 hours; ultrasonic clean and board repair. WhatsApp us.",
 });
 
 export default function Page() {

@@ -5,7 +5,7 @@ import View from "@/views/MacBookNotTurningOn";
 
 export const metadata: Metadata = metaFromFields("/macbook-not-turning-on-dubai", {
   title: "MacBook Not Turning On Dubai? Dead Mac Fixed Same Day",
-  description: "MacBook not turning on in Dubai? Free diagnosis. SMC reset, logic board fault, dead battery, liquid damage. All MacBook Air and Pro models. Same-day service. Call 055 741 3706.",
+  description: "MacBook not turning on in Dubai? A free diagnosis finds the cause: SMC, dead battery, logic board or liquid damage, on all Air and Pro models. WhatsApp us.",
 });
 
 export default function Page() {

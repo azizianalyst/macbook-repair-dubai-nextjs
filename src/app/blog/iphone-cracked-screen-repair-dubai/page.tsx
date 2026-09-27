@@ -5,7 +5,7 @@ import View from "@/views/BlogIPhoneCrackedScreen";
 
 export const metadata: Metadata = metaFromFields("/blog/iphone-cracked-screen-repair-dubai", {
   title: "iPhone Cracked Screen Repair Dubai 2026: Costs by Model",
-  description: "iPhone cracked screen repair Dubai — OLED and LCD replacement for all iPhone models. Free diagnosis, same-day service. Message us on WhatsApp for your price.",
+  description: "iPhone cracked screen repair in Dubai: OLED and LCD replacement from older models to the iPhone 16 Pro Max, most done in 30 minutes. WhatsApp for a quote.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

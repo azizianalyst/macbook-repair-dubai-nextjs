@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirM5Repair";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-m5-repair-dubai", {
   title: "MacBook Air M5 Repair Dubai — Screen, Battery & Logic Board",
-  description: "MacBook Air M5 repair Dubai — screen, battery & logic board. Free diagnosis, same-day service, free pickup. WhatsApp us for today's price. Since 2004.",
+  description: "MacBook Air M5 repair in Dubai: screen, battery and logic board work at Concord Tower, Media City. Free diagnosis, no fix no fee. WhatsApp for a quote.",
 });
 
 export default function Page() {

@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM2BatteryReplacement";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m2-battery-replacement-cost-dubai", {
   title: "MacBook Pro M2 Battery Replacement Cost Dubai 2026",
-  description: "MacBook Pro M2 battery replacement in Dubai 2026 — M2 13-inch, M2 Pro 14-inch and M2 Max 16-inch. Same-day service. Message us on WhatsApp for today's exact price.",
+  description: "MacBook Pro M2 battery cost guide for Dubai: replace below 80% health or past 900 cycles, on the 13-inch, M2 Pro and M2 Max. WhatsApp us for a quote.",
   publishedTime: "2026-06-22",
 });
 

@@ -5,7 +5,7 @@ import View from "@/views/BlogMacMiniOverheating";
 
 export const metadata: Metadata = metaFromFields("/blog/mac-mini-overheating-dubai", {
   title: "Mac mini Overheating or Loud Fan in Dubai? Fixes 2026",
-  description: "Mac mini overheating or fan loud in Dubai? Dust, thermal paste and 35°C heat explained. Message us on WhatsApp for a thermal service quote.",
+  description: "Mac mini overheating or fan loud in Dubai? How dust, dried thermal paste and 35°C room heat cause it, and what you can fix yourself. Book a clean with us.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

@@ -1606,7 +1606,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-not-turning-on-dubai": {
     "title": "MacBook Not Turning On Dubai? Dead Mac Fixed Same Day",
-    "description": "MacBook not turning on in Dubai? Free diagnosis. SMC reset, logic board fault, dead battery, liquid damage. All models MacBook Air and Pro. Free diagnosis, same-day service. Call 055 741 3706."
+    "description": "MacBook not turning on in Dubai? A free diagnosis finds the cause: SMC, dead battery, logic board or liquid damage, on all Air and Pro models. WhatsApp us."
   },
   "/macbook-overheating-fix-dubai": {
     "title": "MacBook Overheating Fix Dubai - Same-Day | Call 055 741 3706",
@@ -1758,7 +1758,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-water-damage-repair-dubai": {
     "title": "MacBook Water Damage Repair Dubai -- Act Fast, Save Your Mac",
-    "description": "MacBook water damage repair Dubai. Coffee, water, juice spill on MacBook Air or Pro. Act within 24 hours for best recovery rate. Free diagnosis before any paid work. Call 055 741 3706."
+    "description": "MacBook water damage repair in Dubai for coffee, water or juice spills on Air or Pro. Act within 24 hours; ultrasonic clean and board repair. WhatsApp us."
   },
   "/macbook-wifi-bluetooth-repair-dubai": {
     "title": "MacBook Wi-Fi & Bluetooth Repair Dubai - | Fast Fix",

@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookAirM2ScreenLines";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-air-m2-screen-lines-dubai", {
   title: "MacBook Air M2 Screen Lines Dubai: Fix Guide 2026",
-  description: "Horizontal or vertical lines on MacBook Air M2 screen in Dubai? Display cable, panel fault, or GPU. Free diagnosis, same-day repair. WhatsApp us for a quote.",
+  description: "MacBook Air M2 screen lines in Dubai? How to tell a display cable fault from a panel fault, horizontal vs vertical lines, and repair options. WhatsApp us.",
   publishedTime: "2026-06-23",
   modifiedTime: "2026-06-23",
 });

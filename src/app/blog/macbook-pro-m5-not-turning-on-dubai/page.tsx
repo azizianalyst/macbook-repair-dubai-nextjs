@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM5NotTurningOn";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m5-not-turning-on-dubai", {
   title: "MacBook Pro M5 Not Turning On Dubai 2026",
-  description: "MacBook Pro M5 not turning on in Dubai? Black screen, no response to power button, or fans spin but no display. Step-by-step fix guide. Message us on WhatsApp.",
+  description: "MacBook Pro M5 not turning on? Step-by-step fixes for deep battery discharge, a frozen boot and startup disk boot loops. Free diagnosis, WhatsApp us today.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

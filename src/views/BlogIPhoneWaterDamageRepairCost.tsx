@@ -64,7 +64,7 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             caption="iPhone water damage recovery - Dubai, April 2026"
             headers={["Service tier", "Our price", "What you get"]}
             rows={[
-              { model: "Tier 1 - Diagnostic + ultrasonic clean", ours: "Price on request", apple: "Open phone, full board ultrasonic clean (15 min in 99% IPA), reseat connectors, 30-day warranty if phone powers up cleanly. Most fresh-water cases." },
+              { model: "Tier 1 - Diagnostic + ultrasonic clean", ours: "Price on request", apple: "Open phone, full board ultrasonic clean (15 min in 99% IPA), reseat connectors, 15-day warranty if phone powers up cleanly. Most fresh-water cases." },
               { model: "Tier 2 - Tier 1 + selective component replacement", ours: "Price on request", apple: "Add: replace any oxidised passives (capacitors, resistors), reflow visibly damaged solder joints, replace damaged connectors. 60-day warranty." },
               { model: "Tier 3 - Board-level recovery + chip work", ours: "Price on request", apple: "Add: micro-soldering on damaged ICs, replace specific failed chips (PMIC, audio IC, charging IC), warranty of up to 12 months. For salt-water and severely oxidised boards." },
               { model: "Tier 4 - Data-only recovery (chip-off)", ours: "Price on request", apple: "Phone is unrecoverable. We remove NAND chip, recover photos/messages/contacts to a USB drive. Phone returned in pieces or recycled." },

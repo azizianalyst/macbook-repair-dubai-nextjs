@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookAirKeyboard";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-air-keyboard-not-working-dubai", {
   title: "MacBook Air Keyboard Not Working Dubai 2026 — Fix Guide",
-  description: "MacBook Air keyboard not working in Dubai? Butterfly (2018-2019) vs scissor fix. Desert-dust damage, top-case repair. Free diagnosis, message us for a quote.",
+  description: "MacBook Air keyboard not working in Dubai? Butterfly (2018-2019) and scissor keys fail differently. See the fix for your model, or WhatsApp for a repair.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

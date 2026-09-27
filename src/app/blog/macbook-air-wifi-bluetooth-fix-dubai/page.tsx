@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookAirWifiBluetooth";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-air-wifi-bluetooth-fix-dubai", {
   title: "MacBook Air WiFi & Bluetooth Fix Dubai 2026 — Dropping",
-  description: "MacBook Air WiFi dropping or Bluetooth not connecting in Dubai? 6 software fixes plus when it needs board repair. Free diagnosis, message us for a wireless repair quote.",
+  description: "MacBook Air WiFi dropping or Bluetooth not working in Dubai? 6 software fixes to try at home, and signs it needs a board repair. WhatsApp for a quote.",
   publishedTime: "2026-06-22",
   modifiedTime: "2026-06-22",
 });

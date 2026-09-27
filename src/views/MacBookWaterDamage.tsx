@@ -141,7 +141,7 @@ export default function MacBookWaterDamage() {
     {
       title: "MacBook Water Damage Repair Dubai -- Act Fast, Save Your Mac",
       description:
-        "MacBook water damage repair Dubai. Coffee, water, juice spill on MacBook Air or Pro. Act within 24 hours for best recovery rate. Free diagnosis before any paid work. Call 055 741 3706.",
+        "MacBook water damage repair in Dubai for coffee, water or juice spills on Air or Pro. Act within 24 hours; ultrasonic clean and board repair. WhatsApp us.",
       path: "/macbook-water-damage-repair-dubai",
       preloadImage: preloadFromHero(HERO_IMG),
     },

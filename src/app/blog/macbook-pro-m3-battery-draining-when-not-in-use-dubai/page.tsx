@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProM3BatteryDraining";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-m3-battery-draining-when-not-in-use-dubai", {
   title: "MacBook Pro M3 Battery Draining When Not in Use Dubai 2026",
-  description: "MacBook Pro M3 battery draining when not in use in Dubai? M3 losing charge overnight or during sleep. DarkWake, backgroundtaskmanagerd, and Sonoma power bugs.",
+  description: "MacBook Pro M3 battery draining when not in use? Why it loses charge overnight: DarkWake, background tasks and Sonoma power bugs. WhatsApp us for repair.",
   publishedTime: "2026-06-22",
 });
 
