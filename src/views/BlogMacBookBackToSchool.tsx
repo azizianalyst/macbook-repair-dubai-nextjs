@@ -36,7 +36,7 @@ export default function BlogMacBookBackToSchool() {
             Don't buy a MacBook. Most Dubai primary schools (GEMS, Dubai British, Repton, Kings, Brighton College) issue iPads or use Chromebooks in class. A laptop at home for a 6-10-year-old is overkill and a damage liability.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Best value:</strong> refurbished iPad 10th gen 64GB Wi-Fi. Pencil-compatible, lightweight, robust with a case.</li>
+            <li><strong>Best value:</strong> refurbished iPad 10th gen 64GB Wi-Fi. Pencil-compatible, lightweight, and tough with a case.</li>
             <li><strong>Add:</strong> Logitech Crayon - cheaper and more durable than Apple Pencil for kids.</li>
             <li><strong>Skip:</strong> AppleCare+ on iPad for primary kids - get a Spigen Tough Armor case instead, far better against drops.</li>
           </ul>

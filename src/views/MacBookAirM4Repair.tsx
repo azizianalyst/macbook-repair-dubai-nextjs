@@ -8,7 +8,7 @@ export default function MacBookAirM4Repair() {
       chip="M4"
       years="2025"
       seoTitle="MacBook Air M4 Repair Dubai 2026: Screen, Battery & Logic Board"
-      seoDescription="MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+      seoDescription="MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
       eyebrow="MacBook Air M4 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M4 Repair Dubai"
       heroDescription="MacBook Air M4 launched in 2025 with a redesigned chip, 18-hour battery, and the same fanless wedge chassis in a new Sky Blue colourway. We repair both the 13-inch and 15-inch M4 Air for screen cracks, battery degradation, charging faults, and board-level issues at our Media City workshop."

@@ -65,7 +65,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 const PROCESS = [
   { Icon: Search,      title: "Free diagnosis",   body: "Drop in, ship, or book a free pickup. We diagnose hardware and software at no charge and report back before any work starts." },
   { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent, fixed quote before any work begins. No surprises, no hidden add-ons." },
-  { Icon: Wrench,      title: "Expert repair",     body: "Your MacBook Air is repaired by a specialist with 21 years on Apple hardware, using OEM-grade parts." },
+  { Icon: Wrench,      title: "Expert repair",     body: "Your MacBook Air is repaired by a specialist working on Apple hardware since 2004, using OEM-grade parts." },
   { Icon: ShieldCheck, title: "Quality check",     body: "Every repair passes a full function test: battery cycle, display calibration, keyboard scan, ports — all verified before handover." },
 ];
 
@@ -83,7 +83,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",          body: "Most MacBook Air repairs — screen, battery, keyboard — are done within a few hours, not days." },
-  { Icon: Award,       title: "21 years experience",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
+  { Icon: Award,       title: "Apple repair since 2004",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
   { Icon: Truck,       title: "Free pickup Dubai-wide",    body: "Cannot come to us? We collect your MacBook Air for free across Dubai and return it repaired." },
   { Icon: BadgeCheck,  title: "No fix, no charge",         body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
@@ -209,7 +209,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
               { Icon: Truck,       label: "Free pickup Dubai-wide" },
               { Icon: ShieldCheck, label: "OEM-grade parts" },
               { Icon: Clock,       label: "Same-day service" },
-              { Icon: Star,        label: "21 years experience" },
+              { Icon: Star,        label: "Since 2004" },
             ].map(({ Icon, label }) => (
               <li key={label} className="flex items-center gap-xs text-[14px] font-medium text-text">
                 <Icon size={15} className="text-accent shrink-0" aria-hidden />

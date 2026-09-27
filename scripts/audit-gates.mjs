@@ -167,9 +167,12 @@ const ALL = pages();
       else if (/\.(ts|tsx)$/.test(e)) {
         const s = readFileSync(p, "utf8");
         for (const line of s.split("\n")) {
-          if (!/\b\d\d years of experience/.test(line)) continue;
+          if (!/\b\d\d years of experience|(?<![-–]\s?)\b2\d years\b(?! old| of (rated|write))/.test(line)) continue;
           // A link whose label happens to be the blog post's title is not a claim.
-          if (line.includes("why-21-years-experience-matters")) continue;
+          if (/why-21-years-experience-matters|why 21 years experience matters/i.test(line)) continue;
+          if (/^\s*(\/\/|\*|\/\*)/.test(line)) continue;
+          // The dated 2026 article about tenure; its body is written as of its publish date.
+          if (p.endsWith("Blog21YearsExperience.tsx")) continue;
           bad.push(`${path.relative(ROOT, p)}: "${line.trim().slice(0, 90)}"`);
         }
       }

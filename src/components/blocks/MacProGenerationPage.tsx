@@ -63,7 +63,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 const PROCESS = [
   { Icon: Search,      title: "Free diagnosis",   body: "Drop in, ship, or book a free pickup. We test every subsystem and report back before any work starts — no charge for the diagnosis." },
   { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent AED quote before any work begins. No hidden fees, no surprise add-ons." },
-  { Icon: Wrench,      title: "Expert repair",     body: "Your Mac Pro is repaired by a specialist with 21 years on Apple hardware, including Intel PCIe architecture and M2 Ultra logic board repair." },
+  { Icon: Wrench,      title: "Expert repair",     body: "Your Mac Pro is repaired by a specialist working on Apple hardware since 2004, including Intel PCIe architecture and M2 Ultra logic board repair." },
   { Icon: ShieldCheck, title: "Quality check",     body: "Every repair passes a full function test: GPU output, PCIe slot integrity, storage speed, thermals — all verified before handover." },
 ];
 
@@ -80,7 +80,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac Pro repairs — GPU, overheating, no-display — are diagnosed and resolved within a few hours." },
-  { Icon: Award,       title: "21 years experience",      body: "Our technicians have repaired Apple hardware since 2004, including Intel Mac Pro PCIe architecture and M2 Ultra board-level work." },
+  { Icon: Award,       title: "Apple repair since 2004",      body: "Our technicians have repaired Apple hardware since 2004, including Intel Mac Pro PCIe architecture and M2 Ultra board-level work." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on hardware parts such as fans, PSUs and SSDs, and 15 days on logic board and GPU repairs." },
   { Icon: Truck,       title: "Free pickup Dubai-wide",   body: "Cannot bring it in? We collect your Mac Pro for free across Dubai and return it repaired." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
@@ -201,7 +201,7 @@ export default function MacProGenerationPage(p: MacProGenerationProps) {
               { Icon: Truck,       label: "Free pickup Dubai-wide" },
               { Icon: ShieldCheck, label: "OEM-grade parts" },
               { Icon: Clock,       label: "Same-day service" },
-              { Icon: Star,        label: "21 years experience" },
+              { Icon: Star,        label: "Since 2004" },
             ].map(({ Icon, label }) => (
               <li key={label} className="flex items-center gap-xs text-[14px] font-medium text-text">
                 <Icon size={15} className="text-accent shrink-0" aria-hidden />

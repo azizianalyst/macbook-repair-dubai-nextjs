@@ -113,7 +113,7 @@ const TIMELINE = [
   { tone: "good" as const, head: "Same day (any time drop-off)",
     body: "All Intel, M1, M2, M3 models. WhatsApp the model to confirm cell stock before you travel." },
   { tone: "mid" as const, head: "1–2 days (M4 models)",
-    body: "M4 cells sourced from the local Apple-authorised distributor. Ordered same-day you drop off, arrives next morning." },
+    body: "M4 cells sourced from the local parts supplier. Ordered same-day you drop off, arrives next morning." },
   { tone: "mid" as const, head: "Call first (swollen cell)",
     body: "Swollen batteries need a careful extraction that adds 30–45 minutes. Same-day service but book the slot so we have the right tools ready." },
 ];
@@ -512,7 +512,7 @@ export default function MacBookAirBatteryReplacement() {
           />
           <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "OEM-equivalent cell (Samsung SDI / LG Chem / ATL)", sub: "Standard pricing", body: "Same chemistry and capacity as the original. These are tier-1 cells from the manufacturers Apple uses, supplied through our Apple-authorised distributor. Same 1,000-cycle rating. Available for all Air models." },
+              { title: "OEM-equivalent cell (Samsung SDI / LG Chem / ATL)", sub: "Standard pricing", body: "Same chemistry and capacity as the original. These are tier-1 cells from the manufacturers Apple uses, supplied through our regular parts distributor. Same 1,000-cycle rating. Available for all Air models." },
               { title: "Apple Genuine (genuine Apple replacement)",           sub: "Available on request", body: "Apple's own replacement cells, ordered through the Apple repair channel. More expensive but includes Apple's own BMS firmware matching. Ask on WhatsApp for pricing." },
               { title: "BMS re-pair (Apple Silicon only)",                    sub: "Included in every price", body: "After any MacBook Air M1–M4 battery replacement, the Battery Management System must be re-paired to the logic board via AST2 diagnostics. We do this on the bench as part of every M-series Air battery job." },
             ].map(({ title, sub, body }) => (

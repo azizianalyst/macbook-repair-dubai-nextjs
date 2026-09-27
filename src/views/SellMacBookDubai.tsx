@@ -116,7 +116,7 @@ const STEPS = [
 const FAQS = [
   {
     q: "Do you really buy Apple devices that are broken or won't turn on?",
-    a: "Yes. We buy faulty and dead Apple devices every day - cracked screens, swollen batteries, liquid damage, logic-board faults and units that won't power on. As an Apple repair workshop with 21+ years of experience, we can refurbish or harvest parts that resellers simply reject, so a broken Mac, iPhone or iPad is still worth real money to us.",
+    a: "Yes. We buy faulty and dead Apple devices every day - cracked screens, swollen batteries, liquid damage, logic-board faults and units that won't power on. As an Apple repair workshop working since 2004, we can refurbish or harvest parts that resellers simply reject, so a broken Mac, iPhone or iPad is still worth real money to us.",
   },
   {
     q: "How do I get a valuation, and is it free?",
@@ -274,7 +274,7 @@ export default function SellMacBookDubai() {
             <Reveal delay={60}>
               <p className="text-[16px] text-text-muted leading-relaxed max-w-[70ch] mb-md">
                 We're not a faceless buy-back website. We're a Dubai Apple repair workshop that has serviced
-                Apple hardware for <strong>21+ years</strong> and repaired <strong>40,000+ devices</strong>,
+                Apple hardware <strong>since 2004</strong> and repaired <strong>40,000+ devices</strong>,
                 led by senior technician <strong>Shafiq Ahmed</strong>. That means we understand exactly what
                 your device is worth - and we can refurbish or reuse parts from machines that resellers reject,
                 so you get a fair figure instead of a lowball offer.

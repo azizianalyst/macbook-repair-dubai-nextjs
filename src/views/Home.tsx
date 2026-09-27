@@ -216,7 +216,7 @@ const GUIDES: { label: string; href: string }[] = [
   { label: "How our transparent pricing works", href: "/blog/transparent-repair-pricing-explained" },
   { label: "Our no-fix-no-charge policy", href: "/blog/no-fix-no-charge-policy-explained" },
   { label: "Our MacBook repair warranty explained", href: "/blog/macbook-repair-warranty-explained" },
-  { label: "Why 21 years of Apple repair matters", href: "/blog/why-21-years-experience-matters" },
+  { label: "Why two decades of Apple repair matter", href: "/blog/why-21-years-experience-matters" },
   { label: "Repair vs replace - when to fix a MacBook", href: "/blog/laptop-repair-vs-buy-new-2026" },
   { label: "M5 chip vs M4 explained", href: "/blog/m5-chip-explained-vs-m4" },
   { label: "Best Mac for developers in Dubai", href: "/blog/best-mac-for-developers-dubai-2026" },
@@ -368,7 +368,7 @@ const AMC: { t: string; d: string; href?: string }[] = [
 ];
 
 const WHY_CHOOSE = [
-  { t: "Experienced Apple Technicians", d: "Our founder Abdul Aziz has over 21 years of Mac repair experience, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
+  { t: "Experienced Apple Technicians", d: "Our founder Abdul Aziz has repaired Macs since 2004, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
   { t: "Genuine & High-Grade Parts", d: "We use genuine Apple parts wherever they're available and high-grade compatible parts when they aren't - and we tell you which your repair uses before we start. Every repair carries a written warranty of up to 12 months, depending on the repair." },
   { t: "Comprehensive Services", d: "We offer a wide range of MacBook repairs based on your specific needs. From hardware and software issues to upgrades and maintenance, no matter the problem, we have the solution!" },
   { t: "Low Pricing", d: "We offer affordable and transparent costs for every MacBook repair or replacement. We discuss our repairs with you before we provide the best solution without any hidden fee." },
@@ -1363,7 +1363,7 @@ export default function Home() {
               rating stays visible as on-page text and earns stars on the Google Business
               Profile instead. (audit 2026-09-23) */}
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Founder & Apple Certified Mac Technician", yearsExperience: 21, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person({ name: "Abdul Aziz", jobTitle: "Founder & Apple Certified Mac Technician", yearsExperience: NAP.yearsInBusiness, knowsAbout: ["MacBook logic board repair", "Water damage recovery", "Screen replacement"], credentials: ["Apple Certified Mac Technician (ACMT)"] })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList({ name: "Apple repair services in Dubai", items: SERVICES.filter((s) => s.href).map((s) => ({ name: s.t, url: s.href as string, description: s.d })) })) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "MacBook Repair", url: SITE.url, warranty: "P1Y", description: "MacBook Repair Dubai offers professional MacBook repair services in Dubai, including screen replacement, battery repair, and general troubleshooting. Message us on WhatsApp for a price on your model." })) }} />
         </section>

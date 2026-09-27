@@ -112,7 +112,7 @@ const TIMELINE = [
   { tone: "good" as const, head: "Same day (3 to 4 hours)",
     body: "Intel, M1 and M2 13\" Air when the panel is in stock — including adhesive cure. WhatsApp the model first to confirm the panel before you travel." },
   { tone: "mid" as const, head: "1 day",
-    body: "M2 15\", M3 13\" and M3 15\" — panels ordered from the local Apple-authorised distributor, arriving the following morning." },
+    body: "M2 15\", M3 13\" and M3 15\" — panels ordered from the local parts supplier, arriving the following morning." },
   { tone: "mid" as const, head: "1 to 2 days (M4)",
     body: "M4 13\" and M4 15\" while M4 panel stock normalises. We always ship from the official local channel — no grey-market parts, no China stock." },
 ];
@@ -540,7 +540,7 @@ export default function MacBookAirScreenRepair() {
           />
           <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Original Apple (OEM)",  sub: "Costs more than A-grade",       body: "Genuine Apple Liquid Retina panels stocked for the M3 and M4 Air — sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone, full P3 brightness retained. Only option that keeps True Tone active on M2, M3 and M4." },
+              { title: "Original Apple (OEM)",  sub: "Costs more than A-grade",       body: "Genuine Apple Liquid Retina panels stocked for the M3 and M4 Air — sourced from the local parts supplier with traceable batch numbers. True Tone, full P3 brightness retained. Only option that keeps True Tone active on M2, M3 and M4." },
               { title: "A-grade (Samsung / LG)", sub: "Our standard panel grade", body: "Same Samsung and LG factories that build the Apple panel — without the Apple calibration chip. Full resolution, full brightness, and P3 colour where the model supports it. True Tone is disabled by macOS on M2/M3/M4 aftermarket panels but everything else is full-spec." },
               { title: "Used pull-out (genuine)", sub: "Cheapest genuine route — ask on WhatsApp", body: "Real Apple panels recovered from board-damaged trade-ins — genuine glass and calibration chip. Stock depends on what crosses the bench that week. Keeps True Tone when fitted in the matching model." },
             ].map(({ title, sub, body }) => (

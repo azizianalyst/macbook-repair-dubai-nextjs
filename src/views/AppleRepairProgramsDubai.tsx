@@ -248,7 +248,7 @@ export default function AppleRepairProgramsDubai() {
           </h2>
           <ul className="space-y-md text-[16px] text-text leading-relaxed list-disc pl-lg">
             <li><strong>We are independent, not Apple Authorised.</strong> If Apple covers your device under a programme, that route gives you a free repair plus Apple's own warranty of up to 12 months on the work - better value than paying us.</li>
-            <li><strong>Honest referral builds trust.</strong> The customers we send to Apple come back to us when their next device - or their child's, partner's, parent's - falls outside coverage. That is how we have stayed in business for 21 years.</li>
+            <li><strong>Honest referral builds trust.</strong> The customers we send to Apple come back to us when their next device - or their child's, partner's, parent's - falls outside coverage. That is how we have stayed in business since 2004.</li>
             <li><strong>We are here for the rest.</strong> Out-of-warranty repairs, post-programme defects, devices Apple declined for liquid damage or third-party history, board-level work Apple does not perform - that is our specialism.</li>
             <li><strong>No bait-and-switch.</strong> We will not pretend a programme has expired to win the job. The eligibility check we run is the same Apple uses: serial number against the published serial range, on Apple's own published page.</li>
           </ul>

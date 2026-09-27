@@ -75,9 +75,9 @@ export default function BestIPhoneRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best iPhone Repair Dubai 2026. OLED True Tone, 5★ | Since 2004",
+    title: "Best iPhone Repair Dubai: What to Look For in 2026",
     description:
-      "Best iPhone repair in Dubai. OLED True Tone screens, Face ID preserved, written warranty up to 12 months. 232+ reviews. WhatsApp us for your exact price. Since 2004.",
+      "What makes a good iPhone repair shop in Dubai: genuine-grade parts, Face ID kept, True Tone restored, a written warranty. Free diagnosis. WhatsApp us.",
     path: "/best-iphone-repair-dubai",
   });
 
@@ -94,8 +94,8 @@ export default function BestIPhoneRepair() {
           imageAlt={heroImg?.alt}
           variant="device"
           tone="dark"
-          eyebrow="Best iPhone repair · Dubai · Since 2004"
-          title="Best iPhone Repair in Dubai, 2026"
+          eyebrow="Buyer’s guide · Dubai · Since 2004"
+          title="Finding the best iPhone repair in Dubai"
           subtitle="OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 232+ reviews · WhatsApp us for your exact price."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
@@ -197,7 +197,7 @@ export default function BestIPhoneRepair() {
 
         {/* Why us */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-md">Why we're rated the best iPhone repair in Dubai</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us 5.0 on Google</h2>
           <ul className="grid gap-sm md:grid-cols-2">
             {WHY_US.map((item) => (
               <li key={item} className="flex items-start gap-sm text-[15px]">

@@ -165,7 +165,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
                 <strong className="font-semibold">{REVIEW_AVERAGE.toFixed(1)}</strong>
                 <span className="text-white/85">· {REVIEW_COUNT}+ Google reviews</span>
               </span>
-              <span className="hidden lg:inline text-white/85">Apple specialist in Dubai since 2004 · 21+ years</span>
+              <span className="hidden lg:inline text-white/85">Apple specialist in Dubai since 2004</span>
             </span>
             <span className="inline-flex items-center gap-4 text-white/85">
               <span className="hidden lg:inline-flex items-center gap-1.5"><Clock size={13} aria-hidden /> Mon-Sat 9 AM-10 PM</span>

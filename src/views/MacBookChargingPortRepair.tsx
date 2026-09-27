@@ -308,7 +308,7 @@ export default function MacBookChargingPortRepair() {
             <h2 className="text-[22px] mb-md text-text">Lead technician on charging port jobs</h2>
             <TechnicianBadge name="Shafiq Ahmed" years={15} specialisation="Board & port micro-soldering" tone="dark" />
             <p className="text-[14px] text-text-muted mt-md max-w-[70ch]">
-              Shafiq personally handles every charging IC repair - fine-pitch BGA work needs steady hands and 21 years of microscope experience.
+              Shafiq personally handles every charging IC repair - fine-pitch BGA work needs steady hands and years under the microscope; we have done it since 2004.
             </p>
           </section>
 

@@ -153,7 +153,7 @@ export default function TradeInMacBookDubai() {
           <span>·</span>
           <span>40,000+ Apple devices serviced</span>
           <span>·</span>
-          <span>21+ years in Dubai</span>
+          <span>In Dubai since 2004</span>
         </p>
       </Hero>
 

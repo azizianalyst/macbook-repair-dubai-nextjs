@@ -117,7 +117,7 @@ const FAQ_GROUPS: { title: string; items: FaqItem[]; injectSchema?: boolean }[] 
     items: [
       {
         q: "What is the difference between the Intel butterfly keyboard and the M1+ Magic Keyboard?",
-        a: "The Intel Air (2018–2020) uses Apple's butterfly switch — a thin, flat mechanism with 0.55 mm key travel that is highly sensitive to dust. One particle can cause key failure. The M1, M2, M3, and M4 Air all use Apple's Magic Keyboard with scissor switches — 1 mm travel, much more robust. Butterfly requires top-case replacement; scissor allows individual key repair.",
+        a: "The Intel Air (2018–2020) uses Apple's butterfly switch — a thin, flat mechanism with 0.55 mm key travel that is highly sensitive to dust. One particle can cause key failure. The M1, M2, M3, and M4 Air all use Apple's Magic Keyboard with scissor switches — 1 mm travel, far less prone to jamming. Butterfly requires top-case replacement; scissor allows individual key repair.",
       },
       {
         q: "Will Touch ID still work after MacBook Air keyboard repair?",

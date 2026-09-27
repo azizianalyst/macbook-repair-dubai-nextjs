@@ -66,7 +66,7 @@ export default function BlogNoFixNoChargePolicy() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Our diagnosis is thorough enough to refuse jobs we can't do (we sometimes decline at quote stage).</li>
             <li>Our parts network rarely lets us down mid-repair.</li>
-            <li>Our 21 years of pattern recognition catches edge cases before we commit.</li>
+            <li>Two decades of pattern recognition catches edge cases before we commit.</li>
           </ul>
 
           <h2 id="what-fix-means">What 'fix' means</h2>
@@ -138,7 +138,7 @@ export default function BlogNoFixNoChargePolicy() {
       relatedLinks={[
         { label: "Transparent pricing", href: "/blog/transparent-repair-pricing-explained", description: "How a quote is built." },
         { label: "Free pickup & delivery", href: "/blog/free-pickup-delivery-dubai-how-it-works", description: "Free even if no fix." },
-        { label: "21 years of experience", href: "/blog/why-21-years-experience-matters", description: "Why our success rate is high enough to make this promise." },
+        { label: "Two decades of experience", href: "/blog/why-21-years-experience-matters", description: "Why our success rate is high enough to make this promise." },
       ]}
     />
   );

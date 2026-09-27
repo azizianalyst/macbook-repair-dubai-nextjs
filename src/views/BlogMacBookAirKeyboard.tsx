@@ -46,7 +46,7 @@ export default function BlogMacBookAirKeyboard() {
           <p>
             The <strong>2020 Intel MacBook Air</strong> returned to scissor switches, the same
             mechanism used in every MacBook Air from 2020 onwards including all M-series models
-            (M1, M2, M3, M4, M5). Scissor switches are more robust and have a different failure
+            (M1, M2, M3, M4, M5). Scissor switches are sturdier and have a different failure
             profile: liquid ingress and driver faults, rather than dust jamming.
           </p>
           <p>

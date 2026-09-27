@@ -126,7 +126,7 @@ const TIMELINE = [
   { tone: "good" as const, head: "Same day (3 to 5 hours, walk-in)",
     body: "MacBook Air 13″ and 15″, Pro 13″ Touch Bar, Pro 14″ M1/M2/M3/M4 - when the panel is in stock. 90 of last 100 same-day walk-in tickets delivered before 8 pm." },
   { tone: "mid" as const, head: "1 to 2 days",
-    body: "MacBook Pro 16″ M1 to M4 (panel ordered from local Apple-authorised distributor). 12″ Retina 2015-2017. 2012 Retina 15″ when the original Samsung panel must be sourced." },
+    body: "MacBook Pro 16″ M1 to M4 (panel ordered from local parts supplier). 12″ Retina 2015-2017. 2012 Retina 15″ when the original Samsung panel must be sourced." },
   { tone: "mid" as const, head: "3 days (rare)",
     body: "Genuine Apple panel orders for M5 Pro 16″ during release months. The workshop ships from the local Apple distributor - never from China, never from grey market." },
 ];
@@ -363,7 +363,7 @@ export default function MacBookScreenRepair() {
             <div className="grid gap-lg md:grid-cols-3">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for M3, M4, and M5 Pro 14″ and 16″. Sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone calibration retained.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for M3, M4, and M5 Pro 14″ and 16″. Sourced from the local parts supplier with traceable batch numbers. True Tone calibration retained.</p>
                 <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade - quoted side by side</p>
               </Card>
               <Card>
@@ -426,7 +426,7 @@ export default function MacBookScreenRepair() {
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 font-heading text-[20px] font-bold text-accent">SA</span>
               <div>
                 <p className="m-0 font-semibold text-text text-[18px]">Shafiq Ahmed</p>
-                <p className="m-0 text-[13.5px] text-text-faint">21 years experience · Display &amp; logic board</p>
+                <p className="m-0 text-[13.5px] text-text-faint">Since 2004 · Display &amp; logic board</p>
               </div>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">

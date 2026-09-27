@@ -117,7 +117,7 @@ const TIMELINE = [
   { tone: "good" as const, head: 'Same day (3 to 5 hours)',
     body: 'MacBook Pro 13" Retina/Touch Bar and 14" Liquid Retina XDR (M1-M4) when the panel is in stock — including the 90-minute adhesive cure. WhatsApp the serial first to confirm stock.' },
   { tone: "mid" as const, head: "1 to 2 days",
-    body: 'MacBook Pro 16" XDR (panel ordered from the local Apple-authorised distributor), and the 15" Retina 2013-2015 when an original panel must be sourced.' },
+    body: 'MacBook Pro 16" XDR (panel ordered from the local parts supplier), and the 15" Retina 2013-2015 when an original panel must be sourced.' },
   { tone: "mid" as const, head: "1 to 3 days (M5)",
     body: "Genuine Apple Liquid Retina XDR assemblies for the 2025-2026 M5, M5 Pro and M5 Max while supply builds. Always shipped from the local Apple distributor — never grey-market, never from China." },
 ];
@@ -349,7 +349,7 @@ export default function MacBookProScreenRepair() {
             <div className="grid gap-lg md:grid-cols-3">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for the M3, M4 and M5 Pro 14″ and 16″ — and the only option we fit on the M5. Sourced from the local Apple-authorised distributor with traceable batch numbers. True Tone, ProMotion and XDR brightness retained.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for the M3, M4 and M5 Pro 14″ and 16″ — and the only option we fit on the M5. Sourced from the local parts supplier with traceable batch numbers. True Tone, ProMotion and XDR brightness retained.</p>
                 <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade — quoted side by side</p>
               </Card>
               <Card>

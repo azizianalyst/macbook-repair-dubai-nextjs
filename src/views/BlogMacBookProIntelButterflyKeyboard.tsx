@@ -121,7 +121,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
               <tr>
                 <td>MacBook Pro 2019 16-inch</td>
                 <td>Scissor (Magic Keyboard): design corrected</td>
-                <td>Very low: scissor mechanism is robust</td>
+                <td>Very low: scissor mechanism is durable</td>
               </tr>
             </tbody>
           </table>

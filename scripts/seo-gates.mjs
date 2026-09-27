@@ -88,11 +88,18 @@ for (const { url, file } of pages) {
   const claimText = stripUrls(`${title} ${desc} ${text}`);
   for (const [re, label] of BANNED) {
     for (const m of claimText.matchAll(new RegExp(re.source, "gi"))) {
-      // Status claims are fine inside a denial or a description of Apple's own network.
+      const before = claimText.slice(Math.max(0, m.index - 60), m.index).toLowerCase();
+      const after = claimText.slice(m.index + m[0].length, m.index + m[0].length + 40).toLowerCase();
+      // Status claims are fine inside a denial, a description of Apple's own network,
+      // or when "certified" describes an Apple product rather than us.
       if (/authori|certified \(business/i.test(label)) {
-        const before = claimText.slice(Math.max(0, m.index - 60), m.index).toLowerCase();
         if (/\b(not|no|never|isn't|aren't|or|than|vs\.?|with|via|also works|apple store|are you( an?)?|years of)\b|n't\b/.test(before)) continue;
-        if (/^\s*(service providers?\b|channels|refurbished)/i.test(claimText.slice(m.index + m[0].length).replace(/^[^a-z]*/i, " ")) && /[,.]?\s*$/.test(before) && /s\b|channels|refurb/i.test(claimText.slice(m.index + m[0].length, m.index + m[0].length + 20))) continue;
+        if (/^\W*(service providers\b|ones\b|channels|refurb|vs\b|cables|tb\d|mpx)|^\)/.test(after)) continue;
+      }
+      // A buyer's guide may name the query it answers ("how to choose the best MacBook repair shop").
+      if (label === "superlative") {
+        if (/\b(choose|choosing|find|finding|what makes|what is)\b[^.]{0,20}$/.test(before)) continue;
+        if (/^[^.]{0,25}(what to look for|checks? before|how to choose)/.test(after)) continue;
       }
       add(url, "banned-claim", `${label}: "${m[0]}"`);
       break;

@@ -329,16 +329,16 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "AppleCare or independent repair for your MacBook in Dubai? Honest advice on when Apple is the better route. Free diagnosis - WhatsApp for a quote."
   },
   "/best-apple-repair-dubai": {
-    "title": "Best Apple Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "Best Apple Repair Dubai. Independent Mac specialist. Free diagnosis, written warranty. Call 055 741 3706."
+    "title": "Best Apple Repair Dubai: What to Look For in 2026",
+    "description": "Choosing an Apple repair shop in Dubai? Check parts, warranty, board-level skill and real reviews first. Independent, 5.0 on Google. WhatsApp for a quote."
   },
   "/best-iphone-repair-dubai": {
-    "title": "Best iPhone Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "What makes a good iPhone repair shop in Dubai: genuine parts, Face ID preserved, True Tone kept. Free diagnosis - get a quote on WhatsApp."
+    "title": "Best iPhone Repair Dubai: What to Look For in 2026",
+    "description": "What makes a good iPhone repair shop in Dubai: genuine-grade parts, Face ID kept, True Tone restored, a written warranty. Free diagnosis. WhatsApp us."
   },
   "/best-macbook-repair-dubai": {
-    "title": "Best MacBook Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "Best MacBook Repair Dubai. Independent Mac specialist. Free diagnosis, written warranty. Call 055 741 3706."
+    "title": "Best MacBook Repair Dubai: 6 Checks Before You Book",
+    "description": "Choosing a MacBook repair shop in Dubai? Check board-level skill, a written warranty and a fixed quote first. Rated 5.0 on Google. WhatsApp us for a quote."
   },
   "/blog": {
     "title": "MacBook Repair Blog Dubai. Expert Guides & Tips 2026",
@@ -1618,7 +1618,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/blog/why-us": {
     "title": "Why Us: Trusted Apple Repair Dubai 2026",
-    "description": "Why us for Apple repair in Dubai? Our trusted 2026 approach, transparent pricing, quality parts, warranty, and 21 years of hands-on expertise."
+    "description": "Why us for Apple repair in Dubai? Our trusted 2026 approach, transparent pricing, quality parts, warranty, and hands-on expertise since 2004."
   },
   "/blog/how-to-factory-reset-iphone-before-selling": {
     "title": "How to Factory Reset iPhone: Quick 2026 Guide",

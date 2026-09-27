@@ -138,7 +138,7 @@ export default function About() {
       {/* milestones */}
       <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">21 years on the bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">On the bench since 2004</p>
           <h2 className="m-0 mb-xl">Milestones</h2>
           <ol className="grid gap-md md:grid-cols-2">
             {MILESTONES.map((m) => (

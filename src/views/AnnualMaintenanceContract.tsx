@@ -132,7 +132,7 @@ export default function AnnualMaintenanceContract() {
           <span>·</span>
           <span>On-site across Dubai</span>
           <span>·</span>
-          <span>21+ years on Apple hardware</span>
+          <span>On Apple hardware since 2004</span>
         </p>
       </Hero>
 

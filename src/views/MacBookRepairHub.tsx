@@ -189,7 +189,7 @@ export default function MacBookRepairHub() {
           <h2 className="text-2xl font-bold mb-md">Why Choose Us for MacBook Repair in Dubai</h2>
           <ul className="space-y-sm">
             {[
-              "Independent Apple specialists since 2004, 21 years experience, 40,000+ devices repaired.",
+              "Independent Apple specialists since 2004, 40,000+ devices repaired.",
               "Component-level logic board repair Apple's Genius Bar doesn't offer, saves you thousands versus a replacement unit.",
               "Free diagnosis, no charge, no obligation, written quote on WhatsApp before we touch your MacBook.",
               "Same-day turnaround on most repairs: battery, screen, keyboard, charging port done in hours not days.",

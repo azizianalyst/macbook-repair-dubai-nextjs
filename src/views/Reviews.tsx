@@ -83,7 +83,7 @@ export default function Reviews() {
         imageAlt="Customer MacBooks on test at the MacBook Repair Dubai bench in Concord Tower, Dubai Media City"
       >
         <p className="mt-sm text-[13px] text-text-muted mono">
-          21+ years in Dubai · {WRITTEN_REVIEW_COUNT} written reviews on this page
+          In Dubai since 2004 · {WRITTEN_REVIEW_COUNT} written reviews on this page
         </p>
       </Hero>
 
@@ -110,7 +110,7 @@ export default function Reviews() {
             our Concord Tower workshop in Dubai Media City.
           </p>
           <p>
-            We've been repairing Apple devices in Dubai since 2004 (21+ years). Every review below
+            We've been repairing Apple devices in Dubai since 2004. Every review below
             represents a real device repaired by a real technician - Shafiq, Usman, Ali, or the wider team.
             Filter by device, language, or rating to find reviews most relevant to your repair.
           </p>
@@ -188,7 +188,7 @@ export default function Reviews() {
           <div>
             <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
             <p className="text-[16px] text-text-muted mt-md max-w-[52ch]">
-              Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
+              Repaired with us since 2004? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
             </p>
             <Button asChild variant="primary" className="mt-lg">
               <a href={withSlash(GOOGLE_REVIEW_URL)} target="_blank" rel="noopener noreferrer">

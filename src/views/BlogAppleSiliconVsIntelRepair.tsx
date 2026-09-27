@@ -115,7 +115,7 @@ export default function BlogAppleSiliconVsIntelRepair() {
           </p>
           <p>
             See our{" "}
-            <Link to="/blog/why-21-years-experience-matters" className="text-accent font-semibold hover:underline">21 years of experience post</Link>{" "}
+            <Link to="/blog/why-21-years-experience-matters" className="text-accent font-semibold hover:underline">two decades of experience post</Link>{" "}
             for the tooling and team detail, and our{" "}
             <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">MacBook logic board repair service</Link>{" "}
             for the current Apple Silicon work we offer.
@@ -138,7 +138,7 @@ export default function BlogAppleSiliconVsIntelRepair() {
       relatedLinks={[
         { label: "MacBook logic board repair Dubai", href: "/macbook-logic-board-repair-dubai", description: "Component-level board work on Intel and Apple Silicon." },
         { label: "MacBook repair vs buy new 2026", href: "/blog/laptop-repair-vs-buy-new-2026", description: "Decision math accounts for Apple Silicon repair costs." },
-        { label: "Why 21 years of experience matters", href: "/blog/why-21-years-experience-matters", description: "What it took to build Apple Silicon repair capability." },
+        { label: "Why two decades of experience matter", href: "/blog/why-21-years-experience-matters", description: "What it took to build Apple Silicon repair capability." },
       ]}
     />
   );

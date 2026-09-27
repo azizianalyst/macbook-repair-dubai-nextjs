@@ -101,7 +101,7 @@ export default function BlogLightningVsUsbC() {
 
           <h2 id="usb-c-ports-fail">USB-C ports also fail</h2>
           <p>
-            USB-C is mechanically more robust than Lightning (no exposed pins) but the connector still wears. We've seen iPhone 15/16 USB-C ports needing replacement after 2 years of heavy use, especially if dust accumulated in the port. Cleaning with a wooden toothpick fixes about 30% of "won't charge" cases on USB-C iPhones - try that before assuming hardware failure.
+            USB-C is mechanically sturdier than Lightning (no exposed pins) but the connector still wears. We've seen iPhone 15/16 USB-C ports needing replacement after 2 years of heavy use, especially if dust accumulated in the port. Cleaning with a wooden toothpick fixes about 30% of "won't charge" cases on USB-C iPhones - try that before assuming hardware failure.
           </p>
         </>
       }

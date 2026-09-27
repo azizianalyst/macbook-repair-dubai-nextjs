@@ -20,8 +20,7 @@ export default function GuideMacBookConfiguration() {
       body={
         <>
           <p>
-            We have repaired and upgraded Apple machines in Dubai since 2004 - 21+ years
-            across the bench. The single most common regret we hear from customers is not "I should
+            We have repaired and upgraded Apple machines in Dubai since 2004. The single most common regret we hear from customers is not "I should
             have bought AppleCare" but "I wish I had bought more RAM." On modern M-series MacBooks
             that mistake is permanent, so this guide is built around one rule: buy the right
             configuration up front, because you cannot fix it later.

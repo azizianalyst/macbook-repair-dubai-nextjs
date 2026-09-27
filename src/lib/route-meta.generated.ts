@@ -29,16 +29,16 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, warranty of up to 12 months. Call 055 741 3706."
   },
   "/best-apple-repair-dubai": {
-    "title": "Best Apple Repair Dubai 2026. All Devices | 5★ Since 2004",
-    "description": "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac and Mac mini. 232+ 5-star reviews. Written warranty up to 12 months. Free pickup. WhatsApp for a quote."
+    "title": "Best Apple Repair Dubai: What to Look For in 2026",
+    "description": "Choosing an Apple repair shop in Dubai? Check parts, warranty, board-level skill and real reviews first. Independent, 5.0 on Google. WhatsApp for a quote."
   },
   "/best-iphone-repair-dubai": {
-    "title": "Best iPhone Repair Dubai 2026. OLED True Tone, 5★ | Since 2004",
-    "description": "Best iPhone repair in Dubai. OLED True Tone screens, Face ID preserved, written warranty up to 12 months. 232+ reviews. WhatsApp us for your exact price. Since 2004."
+    "title": "Best iPhone Repair Dubai: What to Look For in 2026",
+    "description": "What makes a good iPhone repair shop in Dubai: genuine-grade parts, Face ID kept, True Tone restored, a written warranty. Free diagnosis. WhatsApp us."
   },
   "/best-macbook-repair-dubai": {
-    "title": "Best MacBook Repair Dubai 2026, 5★ Rated | Since 2004",
-    "description": "Best MacBook repair shop in Dubai. 232+ 5-star reviews. Component-level board repair, same-day service, written warranty up to 12 months. WhatsApp 055 741 3706 for a quote."
+    "title": "Best MacBook Repair Dubai: 6 Checks Before You Book",
+    "description": "Choosing a MacBook repair shop in Dubai? Check board-level skill, a written warranty and a fixed quote first. Rated 5.0 on Google. WhatsApp us for a quote."
   },
   "/blog/apple-intelligence-on-old-iphones": {
     "title": "Apple Intelligence: Which iPhones Support It in 2026",
@@ -1466,7 +1466,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m3-repair-dubai": {
     "title": "MacBook Air M3 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+    "description": "MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
   },
   "/macbook-air-m3-screen-repair-dubai": {
     "title": "MacBook Air M3 Screen Repair Dubai",
@@ -1482,7 +1482,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m4-repair-dubai": {
     "title": "MacBook Air M4 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+    "description": "MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
   },
   "/macbook-air-m4-screen-repair-dubai": {
     "title": "MacBook Air M4 Screen Repair Dubai",
@@ -1498,7 +1498,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m5-repair-dubai": {
     "title": "MacBook Air M5 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+    "description": "MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
   },
   "/macbook-air-m5-screen-repair-dubai": {
     "title": "MacBook Air M5 Screen Repair Dubai",

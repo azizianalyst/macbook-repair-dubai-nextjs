@@ -111,7 +111,7 @@ for (const c of CATEGORIES) {
 // or was never written into route-meta.generated.ts. Clean, length-safe values.
 MAP["/reviews"] = {
   title: "MacBook Repair Dubai Reviews - 232+ 5-Star Ratings",
-  description: "Read 232+ verified five-star reviews of MacBook Repair Dubai. 21 years, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.",
+  description: "Read 232+ verified five-star reviews of MacBook Repair Dubai. Since 2004, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.",
 };
 MAP["/imac-screen-repair-dubai"] = {
   title: `iMac Screen Repair Dubai - 24" M-Series & 27" 5K`,

@@ -20,7 +20,7 @@ export default function MacBookAirM4ScreenRepair() {
       chipUniquePoints={[
         "The MacBook Air M4 (2025) features a redesigned chassis — slimmer and lighter than the M3 — with new colour options including Sky Blue, Rose Gold, Starlight, and Midnight. The Liquid Retina display specification is the same as M2 and M3 (2560x1664 at 13-inch, 2880x1864 at 15-inch, 500 nits, True Tone, P3) but the screen assembly is a new part number unique to M4.",
         "The M4 chip includes a 10-core GPU with improved display controller that handles the Liquid Retina panel more efficiently than M3. This does not change the display spec but improves power draw from the screen — M4 Air battery life is partly attributed to this display efficiency gain.",
-        "Because the M4 Air launched in early 2025, screen replacement parts are newer to the supply chain. MacBook Repair Dubai sources M4 panels from the local Apple-authorised distributor — no grey-market parts — but stock normalisation means a 1–2 day turnaround versus same-day on M2 and M3.",
+        "Because the M4 Air launched in early 2025, screen replacement parts are newer to the supply chain. MacBook Repair Dubai sources M4 panels from the local parts supplier — no grey-market parts — but stock normalisation means a 1–2 day turnaround versus same-day on M2 and M3.",
         "True Tone is fully functional on M4 Air and operates the same way as M2 and M3. Genuine Apple M4 panels preserve True Tone after replacement. We will specify the part grade and True Tone outcome on the WhatsApp quote.",
         "The M4 Air's thin design (under 11mm) means screen cracks from drops are more common than on the M3 due to less chassis rigidity at the corners. The glass-and-Liquid Retina assembly is bonded — full panel replacement is required for any cracked screen.",
       ]}
@@ -69,7 +69,7 @@ export default function MacBookAirM4ScreenRepair() {
       faqs={[
         {
           q: "How much does MacBook Air M4 screen repair cost in Dubai?",
-          a: "MacBook Air M4 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 15-inch is quoted separately. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. Parts are from the local Apple-authorised distributor. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
+          a: "MacBook Air M4 13-inch screen repair is quoted after a free diagnosis at MacBook Repair Dubai. The M4 15-inch is quoted separately. Apple does not publish a Mac screen price (it inspects the Mac first), so we quote before any work and you can compare. Parts are from the local parts supplier. Turnaround is 1–2 days while M4 panel stock normalises (the M4 Air launched early 2025).",
         },
         {
           q: "Why is MacBook Air M4 screen repair more than M3?",
@@ -77,7 +77,7 @@ export default function MacBookAirM4ScreenRepair() {
         },
         {
           q: "How long does MacBook Air M4 screen repair take in Dubai?",
-          a: "Currently 1–2 days at MacBook Repair Dubai. We order M4 Air panels from the local Apple-authorised distributor, which delivers the next morning. This is by design — we do not use grey-market M4 parts that would be available same-day but with no supply chain traceability.",
+          a: "Currently 1–2 days at MacBook Repair Dubai. We order M4 Air panels from the local parts supplier, which delivers the next morning. This is by design — we do not use grey-market M4 parts that would be available same-day but with no supply chain traceability.",
         },
         {
           q: "Will True Tone work after MacBook Air M4 screen replacement?",

@@ -315,7 +315,7 @@ export default function BlogMacBookAirM2Problems() {
             </tbody>
           </table>
           <p>
-            The M1 Air runs cooler, has no SSD issue, and has a more robust chassis. The M2 Air has
+            The M1 Air runs cooler, has no SSD issue, and has a stiffer chassis. The M2 Air has
             a better display, faster CPU and GPU, and the 15-inch option. For Dubai's heat
             environment, the M1 Air is actually the more reliable choice if display brightness and
             raw performance are not priorities.

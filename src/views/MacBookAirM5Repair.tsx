@@ -8,7 +8,7 @@ export default function MacBookAirM5Repair() {
       chip="M5"
       years="2026"
       seoTitle="MacBook Air M5 Repair Dubai 2026: Screen, Battery & Logic Board"
-      seoDescription="MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+      seoDescription="MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
       eyebrow="MacBook Air M5 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M5 Repair Dubai"
       heroDescription="MacBook Air M5 launched in 2026 with the most power-efficient chip in the Air line, 30-hour rated battery life, and the same fanless aluminium chassis. When something goes wrong, our Media City workshop handles screen, battery, charging, and board repair for both the 13-inch and 15-inch M5 Air."

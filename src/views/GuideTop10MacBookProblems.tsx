@@ -10,7 +10,7 @@ export default function GuideTop10MacBookProblems() {
       path="/top-10-common-macbook-problems-and-how-to-fix-them"
       category="Problem solving · MacBook"
       h1="Top 10 Common MacBook Problems and How to Fix Them"
-      hook="After 21 years on the bench in Dubai, we see the same ten MacBook faults again and again. Here's how to spot each one, what you can safely try yourself, and when it's time to let a technician take over."
+      hook="After two decades on the bench in Dubai, we see the same ten MacBook faults again and again. Here's how to spot each one, what you can safely try yourself, and when it's time to let a technician take over."
       quickAnswer="The most common MacBook problems are: won't turn on, battery draining or not charging, screen flicker/lines, overheating, running slow, sticking keys, liquid damage, Wi-Fi/Bluetooth dropouts, full storage, and kernel panics. Most have a quick DIY check first; hardware faults (screen, battery, logic board, water damage) need professional repair."
       author={{ name: "Shafiq", role: "Founder & senior Apple technician" }}
       datePublished="2026-05-30"
@@ -20,7 +20,7 @@ export default function GuideTop10MacBookProblems() {
       body={
         <>
           <p>
-            We've repaired MacBooks in Dubai since 2004 - that's more than 21 years and tens of
+            We've repaired MacBooks in Dubai since 2004 - tens of
             thousands of machines. In that time, roughly nine out of ten MacBooks that come through
             our Dubai Media City workshop fall into one of just ten problem categories. Below we
             walk through each, with the symptoms, a safe DIY check you can do at home, and an honest

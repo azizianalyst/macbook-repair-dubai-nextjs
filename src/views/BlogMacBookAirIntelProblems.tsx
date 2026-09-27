@@ -117,7 +117,7 @@ export default function BlogMacBookAirIntelProblems() {
             <li>Display flickers at certain lid angles</li>
           </ul>
           <p>
-            The 2018-2020 Retina models have a more robust panel design and backlight cable
+            The 2018-2020 Retina models have a sturdier panel design and backlight cable
             failures are less common on those, though not impossible.
           </p>
           <p>

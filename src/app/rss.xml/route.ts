@@ -38,7 +38,7 @@ export function GET() {
   <channel>
     <title>MacBook Repair Dubai — Apple Repair Guides &amp; News</title>
     <link>${SITE}/blog/</link>
-    <description>Technician-written guides on MacBook, iPhone, iPad and Mac repair in Dubai — costs, fixes, buying advice and Apple news from a workshop with 21+ years of experience.</description>
+    <description>Technician-written guides on MacBook, iPhone, iPad and Mac repair in Dubai — costs, fixes, buying advice and Apple news from a Dubai workshop repairing Apple devices since 2004.</description>
     <language>en-ae</language>
     <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml"/>
 ${items.join("\n")}

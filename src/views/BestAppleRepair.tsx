@@ -28,7 +28,7 @@ const DEVICES = [
 
 const WHY_US = [
   "Mac, iPhone and iPad. MacBook, iMac, Mac mini, Mac Studio, iPhone, iPad",
-  "21 years of Apple-only repair experience in Dubai since 2004",
+  "Apple-only repair experience in Dubai since 2004",
   "Component-level logic board repair, not module swaps",
   "Same-day for iPhone screen, MacBook battery, iPad screen",
   "Free pickup and delivery across all Dubai Mainland",
@@ -58,9 +58,9 @@ export default function BestAppleRepair() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Best Apple Repair Dubai 2026. All Devices | 5★ Since 2004",
+    title: "Best Apple Repair Dubai: What to Look For in 2026",
     description:
-      "Best Apple repair in Dubai. MacBook, iPhone, iPad, iMac and Mac mini. 232+ 5-star reviews. Written warranty up to 12 months. Free pickup. WhatsApp for a quote.",
+      "Choosing an Apple repair shop in Dubai? Check parts, warranty, board-level skill and real reviews first. Independent, 5.0 on Google. WhatsApp for a quote.",
     path: "/best-apple-repair-dubai",
   });
 
@@ -75,8 +75,8 @@ export default function BestAppleRepair() {
           imageAlt={heroImg?.alt}
           variant="device"
           tone="dark"
-          eyebrow="Best Apple repair · Dubai · Since 2004"
-          title="Best Apple Repair in Dubai, 2026"
+          eyebrow="Buyer’s guide · Dubai · Since 2004"
+          title="Finding the best Apple repair in Dubai"
           subtitle="MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. 5.0 stars · 232+ reviews. Free pickup. Warranty up to 12 months."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
@@ -84,7 +84,7 @@ export default function BestAppleRepair() {
             <span>·</span>
             <span>6 Apple device families</span>
             <span>·</span>
-            <span>21 years in Dubai</span>
+            <span>In Dubai since 2004</span>
           </p>
         </Hero>
 
@@ -123,7 +123,7 @@ export default function BestAppleRepair() {
         {/* Why us */}
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">Why we're rated the best Apple repair in Dubai</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us 5.0 on Google</h2>
             <ul className="grid gap-sm md:grid-cols-2">
               {WHY_US.map((item) => (
                 <li key={item} className="flex items-start gap-sm text-[15px]">

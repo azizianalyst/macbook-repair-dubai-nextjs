@@ -94,7 +94,7 @@ const FAQS: FAQ[] = [
   { q: "Will Touch ID still work after the keyboard is replaced?",
     a: "Yes - the workshop pairs the new Touch ID sensor with the T2/M-series secure enclave on the bench. Takes about 15 minutes after the top case is fitted. If the secure enclave is locked (very rare), Touch ID is reset and you re-enrol your fingerprint at first login." },
   { q: "Do you use genuine Apple keyboards?",
-    a: "Genuine Apple Magic Keyboards on M3, M4, and M5 models - sourced from the local Apple-authorised distributor with traceable part numbers. For 2016-2019 butterfly top cases the workshop fits OEM-spec parts from the original Foxconn factory that built Apple's part. Both labelled clearly on the WhatsApp quote, both 15-day warranty." },
+    a: "Genuine Apple Magic Keyboards on M3, M4, and M5 models - sourced from the local parts supplier with traceable part numbers. For 2016-2019 butterfly top cases the workshop fits OEM-spec parts from the original Foxconn factory that built Apple's part. Both labelled clearly on the WhatsApp quote, both 15-day warranty." },
   { q: "What's the warranty on the new keyboard?",
     a: "15 days written warranty on parts and labour. Covers manufacturing defects, premature key failure, backlight failure, Touch ID failure. Does not cover new physical damage or liquid damage after the repair. Transferable once free of charge if the MacBook is sold." },
   { q: "Can I use my MacBook with one dead key while I wait for repair?",
@@ -334,7 +334,7 @@ export default function MacBookKeyboardRepair() {
             <div className="grid gap-lg md:grid-cols-2">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Genuine Apple Magic Keyboards</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Stocked for M3, M4, M5 Pro 14″ and 16″. Sourced from the local Apple-authorised distributor with traceable part numbers. Touch ID and backlight pre-calibrated.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Stocked for M3, M4, M5 Pro 14″ and 16″. Sourced from the local parts supplier with traceable part numbers. Touch ID and backlight pre-calibrated.</p>
                 <p className="m-0 mono text-[13px] text-accent">Standard pricing - included</p>
               </Card>
               <Card>

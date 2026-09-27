@@ -145,7 +145,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             headers={["Checklist item", "Our answer"]}
             rows={[
               { model: "1. Physical address", ours: "Office #45, 10th Floor, Concord Tower, Dubai Media City - open Mon-Sat 9am-10pm" },
-              { model: "2. Years in business", ours: "Since 10 October 2004 - 21 years, same name, same family ownership" },
+              { model: "2. Years in business", ours: "Since 10 October 2004, same name, same family ownership" },
               { model: "3. Google reviews", ours: "232+ reviews, 5.0 average, replied to personally" },
               { model: "4. Warranty", ours: "Written: 3 months screens and batteries, 15 days board-level (extendable to 6 months), up to 12 months on most other hardware" },
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },

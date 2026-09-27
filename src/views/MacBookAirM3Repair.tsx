@@ -8,7 +8,7 @@ export default function MacBookAirM3Repair() {
       chip="M3"
       years="2024"
       seoTitle="MacBook Air M3 Repair Dubai 2026: Screen, Battery & Logic Board"
-      seoDescription="MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. 21 years Apple repair experience."
+      seoDescription="MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
       eyebrow="MacBook Air M3 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M3 Repair Dubai"
       heroDescription="MacBook Air M3 launched in 2024: the first Air to support two external displays simultaneously when the lid is closed. We repair both the 13-inch and 15-inch M3 Air for screen damage, battery degradation, charging issues, and board faults at our Dubai Media City workshop."

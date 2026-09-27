@@ -43,7 +43,7 @@ const SERVICES = [
   { title: "Hardware Upgrade", body: "Upgrade your Mac Studio's hardware to enhance performance. We can install additional RAM or storage to help your device run more efficiently." },
   { title: "Overheating", body: "When your device becomes excessively hot, causing slowdowns or shutdowns, it can be due to a faulty cooling system, dust build-up, or prolonged heavy usage." },
   { title: "Hard Drive Replacement", body: "If your Mac Studio's hard drive has failed, we can replace it with a new one and restore your data so you don't lose any important files." },
-  { title: "SSD Upgrade", body: "Experience a significant boost in speed and performance by upgrading to an SSD. Our technicians perform the upgrade and transfer your data seamlessly." },
+  { title: "SSD Upgrade", body: "Moving to a faster SSD cuts boot and app launch times. We copy your data across as part of the upgrade." },
   { title: "RAM Upgrade", body: "Increase your Mac Studio's RAM to handle more demanding tasks and run more smoothly. We install additional RAM to improve overall performance." },
   { title: "Graphics Card Problems", body: "Graphics card problems can cause glitches, flaws, or wrong rendering on screen - usually from hardware issues, overheating, or program compatibility." },
   { title: "Power Supply Issues", body: "Power issues may occur if your system won't turn on or shuts down suddenly. A bad power source, broken cables, or other electrical parts could be responsible." },
