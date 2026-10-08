@@ -73,6 +73,7 @@ npx tsc --noEmit
 npm run build
 npm run check:gates      # images, schema validity, redirect chains, tenure, alt text
 npm run check:seo        # banned claims, one H1, title/meta length, FAQ schema = visible FAQ
+npm run start -- -p 3006 &   # check:internal crawls this local prod build; it never falls back to live
 npm run check:internal   # broken internal links + orphans
 ```
 Also run Lighthouse on a local production build for changed templates. SEO, accessibility and best-practices must each score 100, with no console errors.
