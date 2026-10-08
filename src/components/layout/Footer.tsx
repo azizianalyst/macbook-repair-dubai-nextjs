@@ -206,7 +206,7 @@ function FooterHeading({ icon: Icon, children }: { icon: LucideIcon; children: s
   return (
     <div className="mb-2 flex items-center gap-2 px-1">
       <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-accent/10 text-accent"><Icon size={14} aria-hidden /></span>
-      <p className="m-0 text-[11px] font-semibold uppercase tracking-wide text-text/50">{children}</p>
+      <p className="m-0 text-[11px] font-semibold uppercase tracking-wide text-text/70">{children}</p>
     </div>
   );
 }
