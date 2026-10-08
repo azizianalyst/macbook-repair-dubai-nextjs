@@ -36,6 +36,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Butterfly keyboard requires top-case swap (1 day).",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "Eight years old in 2026. A battery swap is almost always worth it. Screen and butterfly-keyboard repairs together push past the value of a used M1 Air - we'll show you the math at intake.",
     "heroTagline": "The first Retina Air. We still keep these alive - when it's worth it."
   },
@@ -76,6 +87,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Top-case (with butterfly keyboard) 1 day.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "Same butterfly-keyboard issues as 2018. Apple's Keyboard Service Program may still apply if you're within 4 years of purchase - we'll check eligibility free, no cost if you qualify with Apple.",
     "heroTagline": "The True Tone Air. Battery and keyboard fixes make it useful again."
   },
@@ -116,6 +138,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Keyboard via top-case 1 day.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "The last Intel Air - and famously the slowest. Battery swap is a no-brainer. If you need anything more than that, seriously consider stepping up to a used M1 Air; the performance gap is enormous and the M1 Air costs less to keep running.",
     "heroTagline": "The last Intel Air. Honest fixes, honest advice about when to move on."
   },
@@ -156,6 +189,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Top-case (keyboard) 1 day.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "The single best repair-value MacBook in our workshop. M1 performance still feels modern in 2026, parts are abundant, and the design is forgiving to work on. A battery swap buys you 2-3 more years easily.",
     "heroTagline": "The M1 Air - the laptop that aged best. We keep it modern."
   },
@@ -196,6 +239,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Logic board 3-5 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First Air with the new flat-edge design and the return of MagSafe. Very repairable, parts widely available. If you have the 256GB base model, be aware the SSD is single-NAND - back up regularly.",
     "heroTagline": "The redesigned Air. MagSafe is back. We service it like it's new."
   },
@@ -236,6 +289,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Hinge repair 1-2 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "The first ever 15-inch Air. Most issues we see are hinge-related - Apple acknowledged some early units; bring proof of purchase, we'll check warranty status first.",
     "heroTagline": "The first 15-inch Air. Big screen, careful hinge work."
   },
@@ -276,6 +339,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Logic board 3-5 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Very few problems in the field. Apple finally moved the 256GB base back to dual-NAND, so SSD speed is good across the range. Worth repairing for years to come.",
     "heroTagline": "The mature M3 Air. Few issues, easy fixes when needed."
   },
@@ -316,6 +389,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Hinge work 1-2 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "The 15\" Air matured nicely with M3. Hinge issues are far rarer than the M2 15\". Repairable across the board with widely available parts.",
     "heroTagline": "Big-screen Air, fewer issues. Built to keep working."
   },
@@ -356,6 +439,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Logic board 3-5 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2025. Most units are still under Apple's 1-year warranty or AppleCare+. Always start with the Apple Store. We're here for accidental damage Apple won't cover.",
     "heroTagline": "M4 Air, current Apple lineup. We have the parts and training."
   },
@@ -396,6 +489,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Hinge work 1-2 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2025. Most units still under Apple warranty - start there. For accidental damage we're fully equipped with screens, MagSafe boards, and top-cases.",
     "heroTagline": "The current 15-inch Air. We're trained, stocked, and warranty-aware."
   },
@@ -435,6 +538,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Logic board 3-5 days. Specialty parts may take 3-5 days to arrive.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026. Parts supply is still ramping up. Screen and battery are available; specialty parts may take 3-5 days. Almost every unit is under Apple's 1-year warranty - start there.",
     "heroTagline": "Apple's thinnest laptop with M5 power. Newest diagnostics, newest parts access."
   },
@@ -474,6 +587,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Hinge work 1-2 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026. Almost every unit is under Apple's 1-year warranty - start at the Apple Store. We're here for accidental damage and out-of-warranty work, with newest-gen parts already in stock.",
     "heroTagline": "The current 15-inch Air with M5. We're ready when you need us."
   }

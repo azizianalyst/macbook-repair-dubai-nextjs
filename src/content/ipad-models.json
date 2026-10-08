@@ -31,6 +31,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 1-2 days. Battery same-day. Lightning port same-day.",
+    "turnaround": {
+      "screen": "1-2 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "Best-value iPad to keep alive. Parts are abundant, repairs are economical, and iPadOS 18 still runs well on the A13. Worth fixing for at least another 2-3 years.",
     "heroTagline": "The everyday iPad that just works. We keep it working."
   },
@@ -66,6 +74,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 1-2 days. Battery same-day. USB-C port same-day.",
+    "turnaround": {
+      "screen": "1-2 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "The first basic iPad with USB-C and the landscape camera - very repairable, parts plentiful. Discontinued March 2025 when the 11th gen launched, but still fully serviceable.",
     "heroTagline": "Modern basic iPad with USB-C. Easy to repair, easy to love."
   },
@@ -101,6 +117,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days (newer panel sourcing). Battery same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "The current basic iPad - released March 2025 with A16 and Apple Intelligence-ready hardware (though limited). Parts are still being sourced but we have OEM screens and batteries in Dubai.",
     "heroTagline": "Apple's newest basic iPad. We service it from day one."
   },
@@ -136,6 +160,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days (older panel availability tightening). Battery same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "Six years old in 2026 - battery replacement is a no-brainer (it buys 2-3 more years), but if the screen and battery both need work, it's borderline. We'll be honest at intake.",
     "heroTagline": "The pocket iPad. Still loved by many - we keep it going."
   },
@@ -171,6 +203,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. USB-C port same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "Massive redesign for the Mini line - first with USB-C, Apple Pencil 2, and modern flat-edge design. Screen replacement is pricier than the basic iPad because the panel is laminated.",
     "heroTagline": "The Mini reborn. Modern hardware, modern repairs."
   },
@@ -206,6 +245,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. USB-C 3.0 port repair same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "Apple's first Apple Intelligence-capable Mini. Released Oct 2024 - still under Apple's own warranty for many units. Bring proof of purchase first; we'll tell you if AppleCare covers it.",
     "heroTagline": "The smartest small iPad ever. We service it properly."
   },
@@ -241,6 +287,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 1-2 days. Battery same-day.",
+    "turnaround": {
+      "screen": "1-2 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "The redesign that turned the Air into a Pro-lite - flat edges, USB-C, Pencil 2, Touch ID in power button. Five years on, parts are still common and repairs are worthwhile.",
     "heroTagline": "The Air that became the template. Still very repairable."
   },
@@ -276,6 +330,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 1-2 days. Battery same-day. USB-C port same-day.",
+    "turnaround": {
+      "screen": "1-2 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "homeButton": "1-2 days"
+    },
     "honestyNote": "First Air with the M1 chip - performance is still elite in 2026, so this iPad is absolutely worth keeping. Parts are widely available.",
     "heroTagline": "M1 power in an Air body. Worth every dirham of repair."
   },
@@ -313,6 +375,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "The M2 Air introduced Pencil Pro support and a refined chassis. Discontinued March 2025 with the M3 launch - but parts are abundant and repairs are very straightforward.",
     "heroTagline": "M2 Air, 11-inch. Modern, fast, very repairable."
   },
@@ -350,6 +419,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days (large panel sourcing). Battery same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "The first 13-inch Air. Big screen at a Pro-friendly price. Screen repair costs more than the 11-inch because the panel is larger and harder to source.",
     "heroTagline": "The big Air. Big screen, big repair value."
   },
@@ -386,6 +462,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "Released March 2025 with M3 chip and the new Magic Keyboard for iPad Air. Many units still under Apple warranty - bring proof of purchase first.",
     "heroTagline": "M3 Air, 11-inch. Apple's newest mid-tier iPad.",
     "discontinued": "March 2026"
@@ -423,6 +506,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "The current 13-inch Air with M3. Released March 2025 - most units still under Apple warranty. We'll check serial number and AppleCare status before any work.",
     "heroTagline": "M3 Air, 13-inch. Big, fast, current.",
     "discontinued": "March 2026"
@@ -460,6 +550,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (very new panel - limited stock March 2026). Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "Launched 2 March 2026, available from 11 March 2026. Most units are still under Apple's standard 1-year warranty - start with the Apple Store. We're here for accidental damage and out-of-warranty work.",
     "heroTagline": "Apple's newest Air. We're already trained and stocked."
   },
@@ -496,6 +593,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (very new panel sourcing). Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days"
+    },
     "honestyNote": "Launched 2 March 2026, available from 11 March 2026. Almost every unit is under Apple's 1-year warranty - start there. For dropped/damaged units, bring it in.",
     "heroTagline": "The big Air, brand new. We're ready when you need us."
   },
@@ -534,6 +638,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Thunderbolt port 1-2 days.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "port": "1-2 days",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "The first M1 iPad Pro - still extremely capable in 2026. Worth repairing for performance alone. Face ID repairs are tricky and not always 100% restorable.",
     "heroTagline": "The first M1 Pro. Powerful, repairable, worth saving."
   },
@@ -572,6 +684,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2 days. Battery same-day. Thunderbolt port 1-2 days.",
+    "turnaround": {
+      "screen": "2 days",
+      "battery": "Same-day",
+      "port": "1-2 days",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "The last LCD-based 11-inch Pro before the Tandem OLED transition. Parts are abundant and repairs are economical.",
     "heroTagline": "M2 Pro, 11-inch. The mature LCD Pro. Easy to keep alive."
   },
@@ -608,7 +728,15 @@
       "waterDamage": 1040,
       "diagnostic": 0
     },
-    "timelineNotes": "Tandem OLED panel: 3-5 days (sourced from authorised channels). Battery same-day.",
+    "timelineNotes": "Tandem OLED panel: 3-5 days. Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "Apple's first Tandem OLED iPad. Most Dubai shops cannot replace this panel - we can. Discontinued Oct 2025 with the M5 launch but still very relevant. Frame is so thin that drops cause bends; we straighten and refit where possible.",
     "heroTagline": "First-gen Tandem OLED. Thinnest iPad ever. We repair it properly."
   },
@@ -645,6 +773,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Tandem OLED panel: 3-5 days. Battery same-day. Thunderbolt port 1-2 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "1-2 days",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "The current 11-inch Pro (Oct 2025). Most units are under Apple warranty - check first. We handle accidental damage Apple won't cover, including Tandem OLED replacement.",
     "heroTagline": "Apple's current 11-inch flagship iPad. Tandem OLED experts."
   },
@@ -683,6 +819,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Mini-LED screen: 3-5 days (specialist panel). Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "First M1 12.9-inch Pro with the mini-LED XDR display. Screen replacement is the most expensive iPad repair we do - be sure it's worth it for an older unit. Battery and port repairs are economical.",
     "heroTagline": "The big M1 Pro with XDR mini-LED. Worth saving."
   },
@@ -721,6 +865,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Mini-LED screen: 3-5 days. Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "The last mini-LED 12.9-inch Pro before the Tandem OLED transition. Screen replacement is expensive but the device is otherwise extremely capable.",
     "heroTagline": "The mature mini-LED Pro. Big screen, big repair value."
   },
@@ -758,6 +910,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Tandem OLED 13-inch: 3-5 days (specialist panel sourcing). Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "Tandem OLED is Apple's newest display tech and almost no shop in Dubai can replace it properly. We use genuine panels - expensive, but the only honest option. Bend repair is hit-and-miss; we'll be straight at intake.",
     "heroTagline": "13-inch Tandem OLED. We're one of the few in Dubai who repair it."
   },
@@ -794,6 +954,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Tandem OLED 13-inch: 3-5 days (panel sourcing). Battery same-day.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "port": "Same-day",
+      "waterDamage": "2-4 days",
+      "camera": "1-2 days",
+      "faceId": "2-3 days"
+    },
     "honestyNote": "Apple's current flagship 13-inch Pro with M5 (Oct 2025). Most units still under Apple warranty - start there. For accidental damage and out-of-warranty work, we're one of the very few who can replace the Tandem OLED panel properly.",
     "heroTagline": "The most powerful iPad with the most advanced display. We repair it when it goes wrong."
   },
@@ -831,6 +999,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Parts dependent - 3-7 days for most older parts. Some parts no longer available.",
+    "turnaround": {
+      "screen": "3-7 days (parts dependent)",
+      "battery": "3-7 days (parts dependent)",
+      "port": "3-7 days (parts dependent)",
+      "waterDamage": "2-4 days",
+      "homeButton": "3-7 days (parts dependent)"
+    },
     "honestyNote": "We work on iPad 1st-8th gen but with full honesty: many older iPads (1st-4th gen especially) are beyond economic repair. We'll diagnose for free and tell you straight whether it's worth fixing or whether you should put the money toward a newer unit. iPad 5th-8th gen are usually still worth saving for battery and screen work.",
     "heroTagline": "Older iPads still need love. We'll be honest about what's worth fixing."
   }

@@ -445,19 +445,19 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iMac 24-inch M4 (2024) repair in Dubai: 4.5K Retina screen incl. nano-texture, logic board and power faults. Check AppleCare+ first. Free diagnosis."
   },
   "/imac-27-intel-2017-repair-dubai": {
-    "title": "iMac 27 Intel 2017 Repair Dubai. Expert Same-Day",
+    "title": "iMac 27 Intel 2017 Repair Dubai. Free Diagnosis",
     "description": "iMac 27-inch 2017 repair in Dubai: 5K Retina screen, logic board and fan repair, SSD and RAM upgrades. Free diagnosis and free pickup. WhatsApp us today."
   },
   "/imac-27-intel-2019-repair-dubai": {
-    "title": "iMac 27 Intel 2019 Repair Dubai. Expert Same-Day",
+    "title": "iMac 27 Intel 2019 Repair Dubai. Free Diagnosis",
     "description": "iMac 27-inch 2019 repair in Dubai: screen, logic board, fan and power supply repair, plus SSD and RAM upgrades, with written warranty. WhatsApp us today."
   },
   "/imac-27-intel-2020-repair-dubai": {
-    "title": "iMac 27 Intel 2020 Repair Dubai. Expert Same-Day",
+    "title": "iMac 27 Intel 2020 Repair Dubai. Free Diagnosis",
     "description": "iMac 27-inch 2020 repair in Dubai, the last Intel iMac: screen, logic board, power supply, SSD and RAM upgrades on this T2 model. Free pickup. WhatsApp us."
   },
   "/imac-27-pro-2017-repair-dubai": {
-    "title": "iMac 27 Pro 2017 Repair Dubai. Expert Same-Day",
+    "title": "iMac 27 Pro 2017 Repair Dubai. Free Diagnosis",
     "description": "iMac Pro 27-inch (2017) repair in Dubai: screen, logic board, power supply and upgrades for the Xeon W workstation, when parts allow. WhatsApp us."
   },
   "/imac-data-recovery-dubai": {
@@ -525,47 +525,47 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "License terms for reusing MacBook Repair Dubai images: free to use with attribution and a link back. Read the full attribution requirements here."
   },
   "/ipad-10th-gen-repair-dubai": {
-    "title": "iPad 10th Gen Repair Dubai. Expert Same-Day",
+    "title": "iPad 10th Gen Repair Dubai. Free Diagnosis",
     "description": "iPad 10th Gen repair in Dubai: screen, battery, USB-C port and more, usually same-day to 2 days. Warranty up to 12 months, free pickup. WhatsApp us."
   },
   "/ipad-11th-gen-repair-dubai": {
-    "title": "iPad 11th Gen Repair Dubai. Expert Same-Day",
+    "title": "iPad 11th Gen Repair Dubai. Free Diagnosis",
     "description": "iPad 11th Gen repair in Dubai for Apple’s newest basic iPad: screen, battery and charging port. Free diagnosis and free pickup. Message us on WhatsApp."
   },
   "/ipad-9th-gen-repair-dubai": {
-    "title": "iPad 9th Gen Repair Dubai. Expert Same-Day",
+    "title": "iPad 9th Gen Repair Dubai. Free Diagnosis",
     "description": "iPad 9th Gen repair in Dubai: battery and Lightning port the same day, cracked screen or home button in 1-2 days. Warranty up to 12 months. WhatsApp us."
   },
   "/ipad-air-4-repair-dubai": {
-    "title": "iPad Air 4 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air 4 Repair Dubai. Free Diagnosis",
     "description": "iPad Air 4 repair in Dubai: screen, battery, USB-C port and more on the Air that set the template. Free diagnosis, no fix no fee. WhatsApp for a price."
   },
   "/ipad-air-5-repair-dubai": {
-    "title": "iPad Air 5 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air 5 Repair Dubai. Free Diagnosis",
     "description": "iPad Air 5 (M1) repair in Dubai: screen, battery and charging port, same-day to 2 days. Written warranty up to 12 months, free pickup. WhatsApp us."
   },
   "/ipad-air-m2-11-repair-dubai": {
-    "title": "iPad Air M2 11 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M2 11 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M2 11-inch repair in Dubai: screen, battery, port and more on a fast, very repairable iPad. Free diagnosis, free pickup. Message us on WhatsApp."
   },
   "/ipad-air-m2-13-repair-dubai": {
-    "title": "iPad Air M2 13 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M2 13 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M2 13-inch repair in Dubai: screen in 2-3 days while we source the large panel, battery same day, plus charging port faults. WhatsApp us."
   },
   "/ipad-air-m3-11-repair-dubai": {
-    "title": "iPad Air M3 11 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M3 11 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M3 11-inch repair in Dubai: screen, battery and USB-C port on Apple's mid-tier iPad. Free diagnosis, no fix no fee, free pickup. WhatsApp us."
   },
   "/ipad-air-m3-13-repair-dubai": {
-    "title": "iPad Air M3 13 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M3 13 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M3 13-inch repair in Dubai: cracked screens in 2-3 days, same-day battery swaps and USB-C port faults. Free pickup, written warranty. Message us."
   },
   "/ipad-air-m4-11-repair-dubai": {
-    "title": "iPad Air M4 11 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M4 11 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M4 11-inch repair in Dubai: screen, battery, port and more on Apple’s newest Air, at our Dubai Media City workshop. Free diagnosis. WhatsApp us."
   },
   "/ipad-air-m4-13-repair-dubai": {
-    "title": "iPad Air M4 13 Repair Dubai. Expert Same-Day",
+    "title": "iPad Air M4 13 Repair Dubai. Free Diagnosis",
     "description": "iPad Air M4 13-inch repair in Dubai: screen, battery and USB-C port on the new big Air. Free pickup in Dubai, warranty up to 12 months. WhatsApp us."
   },
   "/ipad-back-glass-repair-dubai": {
@@ -605,19 +605,19 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPad logic board repair in Dubai for no power, no charging, no backlight or boot loops. We micro-solder the failed IC, not swap the iPad. WhatsApp us."
   },
   "/ipad-mini-5-repair-dubai": {
-    "title": "iPad mini 5 Repair Dubai. Expert Same-Day",
+    "title": "iPad mini 5 Repair Dubai. Free Diagnosis",
     "description": "iPad mini 5 repair in Dubai: screen, battery, Lightning port and home button on the pocket iPad. Warranty up to 12 months, free pickup. WhatsApp us."
   },
   "/ipad-mini-6-repair-dubai": {
-    "title": "iPad mini 6 Repair Dubai. Expert Same-Day",
+    "title": "iPad mini 6 Repair Dubai. Free Diagnosis",
     "description": "iPad mini 6 repair in Dubai: screen in 2-3 days, battery and USB-C port the same day. Free diagnosis, free pickup, written warranty. WhatsApp for a quote."
   },
   "/ipad-mini-7-repair-dubai": {
-    "title": "iPad mini 7 Repair Dubai. Expert Same-Day",
+    "title": "iPad mini 7 Repair Dubai. Free Diagnosis",
     "description": "iPad mini 7 repair in Dubai: screen, battery and USB-C port on the newest small iPad. No fix no fee, warranty up to 12 months. WhatsApp for a price."
   },
   "/ipad-older-gen-repair-dubai": {
-    "title": "iPad Older Gen Repair Dubai. Expert Same-Day 2026",
+    "title": "iPad Older Gen Repair Dubai. Free Diagnosis",
     "description": "Older iPad repair in Dubai for 1st to 8th gen: screen, battery and charging port. We tell you honestly what is worth fixing. Free diagnosis. WhatsApp us."
   },
   "/ipad-pencil-compatibility-dubai": {
@@ -629,35 +629,35 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPad power button repair in Dubai: stuck, mushy or dead top button, including Touch ID buttons on Air 4+, mini 6+ and iPad 10/11. 1-day fix. WhatsApp us."
   },
   "/ipad-pro-11-m1-repair-dubai": {
-    "title": "iPad Pro 11 M1 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 11 M1 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 11-inch M1 repair in Dubai: screen, battery, USB-C port and more on the first M1 Pro. Same-day to 2 days, warranty up to 12 months. WhatsApp us."
   },
   "/ipad-pro-11-m2-repair-dubai": {
-    "title": "iPad Pro 11 M2 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 11 M2 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 11-inch M2 repair in Dubai: LCD screen, battery and charging port on the mature M2 Pro. Free diagnosis and free pickup. Message us on WhatsApp."
   },
   "/ipad-pro-11-m4-repair-dubai": {
-    "title": "iPad Pro 11 M4 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 11 M4 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 11-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, battery the same day, plus port faults. Warranty up to 12 months. WhatsApp us."
   },
   "/ipad-pro-11-m5-repair-dubai": {
-    "title": "iPad Pro 11 M5 Repair Dubai. Expert Same-Day",
-    "description": "iPad Pro 11-inch M5 repair in Dubai: Tandem OLED screen in 3-5 days, same-day battery swaps and port repair. Free diagnosis, no fix no fee. WhatsApp us."
+    "title": "iPad Pro 11 M5 Repair Dubai. Free Diagnosis",
+    "description": "iPad Pro 11-inch M5 repair in Dubai: Tandem OLED screen in 3-5 days, battery same day, USB-C port in 1-2 days. Free diagnosis, no fix no fee. WhatsApp us."
   },
   "/ipad-pro-12.9-m1-repair-dubai": {
-    "title": "iPad Pro 12.9 M1 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 12.9 M1 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 12.9-inch M1 repair in Dubai: the XDR mini-LED screen takes 3-5 days as a specialist part, battery same day. Up to 12-month warranty. WhatsApp us."
   },
   "/ipad-pro-12.9-m2-repair-dubai": {
-    "title": "iPad Pro 12.9 M2 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 12.9 M2 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 12.9-inch M2 repair in Dubai: cracked mini-LED XDR screen, Thunderbolt USB-C port and battery, port and battery done same day. WhatsApp us."
   },
   "/ipad-pro-13-m4-repair-dubai": {
-    "title": "iPad Pro 13 M4 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 13 M4 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 13-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, same-day battery replacement and port repair. Free pickup. WhatsApp for a price."
   },
   "/ipad-pro-13-m5-repair-dubai": {
-    "title": "iPad Pro 13 M5 Repair Dubai. Expert Same-Day",
+    "title": "iPad Pro 13 M5 Repair Dubai. Free Diagnosis",
     "description": "iPad Pro 13-inch M5 repair in Dubai: Tandem OLED display, battery and USB-C port on Apple’s most powerful iPad. Screens take 3-5 days. WhatsApp us today."
   },
   "/ipad-repair-dubai": {
@@ -941,19 +941,19 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac mini M1 (2020, A2348) repair in Dubai: logic board, PSU, ports and thermal service on the first Apple silicon mini. Free pickup. WhatsApp for a quote."
   },
   "/mac-mini-m2-2023-repair-dubai": {
-    "title": "Mac mini M2 2023 Repair Dubai. Expert Same-Day",
+    "title": "Mac mini M2 2023 Repair Dubai. Free Diagnosis",
     "description": "Mac mini M2 (2023) repair in Dubai: logic board, SSD, power supply and ports on the last classic-chassis mini. Free pickup and diagnosis. Ask on WhatsApp."
   },
   "/mac-mini-m2-pro-2023-repair-dubai": {
-    "title": "Mac mini M2 Pro 2023 Repair Dubai. Expert Same-Day",
+    "title": "Mac mini M2 Pro 2023 Repair Dubai. Free Diagnosis",
     "description": "Mac mini M2 Pro (2023) repair in Dubai: logic board, power supply and Thunderbolt 4 ports on the first Pro-chip mini. Free pickup. Message us on WhatsApp."
   },
   "/mac-mini-m4-2024-repair-dubai": {
-    "title": "Mac mini M4 2024 Repair Dubai. Expert Same-Day",
+    "title": "Mac mini M4 2024 Repair Dubai. Free Diagnosis",
     "description": "Mac mini M4 (2024) repair in Dubai: logic board, PSU and front USB-C ports on the 5x5-inch redesign. Up to 12-month warranty, free pickup. Message us."
   },
   "/mac-mini-m4-pro-2024-repair-dubai": {
-    "title": "Mac mini M4 Pro 2024 Repair Dubai. Expert Same-Day",
+    "title": "Mac mini M4 Pro 2024 Repair Dubai. Free Diagnosis",
     "description": "Mac mini M4 Pro (2024) repair in Dubai: logic board, power supply and Thunderbolt 5 ports, plus preventive service. Free diagnosis. WhatsApp for a quote."
   },
   "/mac-mini-ram-upgrade-dubai": {
@@ -1017,19 +1017,19 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac SSD upgrades in Dubai: which Macs can take a bigger drive, why M-series storage is soldered, and what we recommend instead. Free advice - call us."
   },
   "/mac-studio-m1-max-2022-repair-dubai": {
-    "title": "Mac Studio M1 Max 2022 Repair Dubai. Expert Same-Day",
+    "title": "Mac Studio M1 Max 2022 Repair Dubai. Free Diagnosis",
     "description": "Mac Studio M1 Max (2022) repair in Dubai: logic board, SSD, power supply and ports on the first Mac Studio. Free pickup across Dubai. WhatsApp for a quote."
   },
   "/mac-studio-m1-ultra-2022-repair-dubai": {
-    "title": "Mac Studio M1 Ultra 2022 Repair Dubai. Expert Same-Day",
+    "title": "Mac Studio M1 Ultra 2022 Repair Dubai. Free Diagnosis",
     "description": "Mac Studio M1 Ultra (2022) repair in Dubai: logic board, power supply and ports on the first Ultra Mac. Free diagnosis and pickup. Message us on WhatsApp."
   },
   "/mac-studio-m2-max-2023-repair-dubai": {
-    "title": "Mac Studio M2 Max 2023 Repair Dubai. Expert Same-Day",
+    "title": "Mac Studio M2 Max 2023 Repair Dubai. Free Diagnosis",
     "description": "Mac Studio M2 Max (2023) repair in Dubai: logic board, SSD, PSU and ports, plus preventive thermal service. Free pickup and diagnosis. Send us a WhatsApp."
   },
   "/mac-studio-m2-ultra-2023-repair-dubai": {
-    "title": "Mac Studio M2 Ultra 2023 Repair Dubai. Expert Same-Day",
+    "title": "Mac Studio M2 Ultra 2023 Repair Dubai. Free Diagnosis",
     "description": "Mac Studio M2 Ultra (2023) repair in Dubai: logic board, power supply and port faults on the 192GB RAM Studio. Up to 12-month warranty. WhatsApp us."
   },
   "/mac-studio-m3-ultra-2025-repair-dubai": {
@@ -1045,52 +1045,52 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac Studio repair in Dubai for M5 Max and M5 Ultra back to M1 - logic board, SSD, power and thermal faults. Free diagnosis. Call 055 741 3706."
   },
   "/macbook-air-13-intel-2018-repair-dubai": {
-    "title": "MacBook Air 13 Intel 2018 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 Intel 2018 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 Intel 2018 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 Intel 2018 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-intel-2019-repair-dubai": {
-    "title": "MacBook Air 13 Intel 2019 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 Intel 2019 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 Intel 2019 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 Intel 2019 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-intel-2020-repair-dubai": {
-    "title": "MacBook Air 13 Intel 2020 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 Intel 2020 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 Intel 2020 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 Intel 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-m1-2020-repair-dubai": {
-    "title": "MacBook Air 13 M1 2020 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 M1 2020 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 M1 2020 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 M1 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-m2-2022-repair-dubai": {
-    "title": "MacBook Air 13 M2 2022 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 M2 2022 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 M2 2022 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-m3-2024-repair-dubai": {
-    "title": "MacBook Air 13 M3 2024 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 M3 2024 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 M3 2024 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-m4-2025-repair-dubai": {
-    "title": "MacBook Air 13 M4 2025 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 M4 2025 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 M4 2025 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-13-m5-2026-repair-dubai": {
-    "title": "MacBook Air 13 M5 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 13 M5 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 13 M5 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 13 M5 2026 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-15-m2-2023-repair-dubai": {
-    "title": "MacBook Air 15 M2 2023 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 15 M2 2023 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 15 M2 2023 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 15 M2 2023 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-15-m3-2024-repair-dubai": {
-    "title": "MacBook Air 15 M3 2024 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 15 M3 2024 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 15 M3 2024 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 15 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-15-m4-2025-repair-dubai": {
-    "title": "MacBook Air 15 M4 2025 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 15 M4 2025 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 15 M4 2025 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 15 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-15-m5-2026-repair-dubai": {
-    "title": "MacBook Air 15 M5 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Air 15 M5 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Air 15 M5 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Air 15 M5 2026 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-air-repair-dubai": {
     "title": "MacBook Air Repair Dubai — Same-Day Screen & Battery",
@@ -1161,72 +1161,72 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook power button repair in Dubai: dead or stuck button, or Touch ID that won’t read your finger, most fixed same day. Written quote first. WhatsApp us."
   },
   "/macbook-pro-13-intel-2019-repair-dubai": {
-    "title": "MacBook Pro 13 Intel 2019 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 13 Intel 2019 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 13 Intel 2019 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 13 Intel 2019 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-13-intel-2020-repair-dubai": {
-    "title": "MacBook Pro 13 Intel 2020 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 13 Intel 2020 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 13 Intel 2020 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 13 Intel 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-13-m1-2020-repair-dubai": {
-    "title": "MacBook Pro 13 M1 2020 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 13 M1 2020 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 13 M1 2020 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 13 M1 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-13-m2-2022-repair-dubai": {
-    "title": "MacBook Pro 13 M2 2022 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 13 M2 2022 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 13 M2 2022 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m1-pro-2021-repair-dubai": {
-    "title": "MacBook Pro 14 M1 Pro 2021 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M1 Pro 2021 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M1 Pro 2021 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m2-pro-2023-repair-dubai": {
-    "title": "MacBook Pro 14 M2 Pro 2023 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M2 Pro 2023 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M2 Pro 2023 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m3-2023-repair-dubai": {
-    "title": "MacBook Pro 14 M3 2023 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M3 2023 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M3 2023 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m4-2024-repair-dubai": {
-    "title": "MacBook Pro 14 M4 2024 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M4 2024 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M4 2024 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m5-2025-repair-dubai": {
-    "title": "MacBook Pro 14 M5 2025 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M5 2025 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M5 2025 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M5 2025 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m5-max-2026-repair-dubai": {
-    "title": "MacBook Pro 14 M5 Max 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M5 Max 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M5 Max 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-14-m5-pro-2026-repair-dubai": {
-    "title": "MacBook Pro 14 M5 Pro 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 14 M5 Pro 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 14 M5 Pro 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 14 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m1-pro-2021-repair-dubai": {
-    "title": "MacBook Pro 16 M1 Pro 2021 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M1 Pro 2021 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M1 Pro 2021 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m2-pro-2023-repair-dubai": {
-    "title": "MacBook Pro 16 M2 Pro 2023 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M2 Pro 2023 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M2 Pro 2023 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m3-2023-repair-dubai": {
-    "title": "MacBook Pro 16 M3 2023 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M3 2023 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M3 2023 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m4-2024-repair-dubai": {
-    "title": "MacBook Pro 16 M4 2024 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M4 2024 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M4 2024 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m5-max-2026-repair-dubai": {
-    "title": "MacBook Pro 16 M5 Max 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M5 Max 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M5 Max 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 10-14 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-16-m5-pro-2026-repair-dubai": {
-    "title": "MacBook Pro 16 M5 Pro 2026 Repair Dubai. Expert Same-Day",
-    "description": "MacBook Pro 16 M5 Pro 2026 Repair Dubai. Screen, battery, keyboard, logic board repair. Same-day, written warranty, free diagnosis. 055 741 3706."
+    "title": "MacBook Pro 16 M5 Pro 2026 Repair Dubai. Free Diagnosis",
+    "description": "MacBook Pro 16 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Free diagnosis and free pickup. WhatsApp us."
   },
   "/macbook-pro-m4-with-thunderbolt-5-and-portable-monitor": {
     "title": "MacBook Pro M4 Portable Monitor Guide: Thunderbolt 5 Setup",

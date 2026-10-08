@@ -36,11 +36,80 @@ type IpadModel = {
   commonIssues: string[];
   pricing: Pricing;
   timelineNotes: string;
+  /** Single source of truth for every turnaround stated on the page (table, header,
+   *  quick answer, FAQ, parts paragraph). Values come from the model's own timelineNotes;
+   *  keys the notes don't mention carry the template's standard row value. */
+  turnaround?: Turnaround;
   honestyNote: string;
   heroTagline: string;
 };
 
+type Turnaround = {
+  screen?: string;
+  battery?: string;
+  port?: string;
+  waterDamage?: string;
+  camera?: string;
+  homeButton?: string;
+  faceId?: string;
+};
+
 const MODELS = iPadModels as IpadModel[];
+
+// Fallback per repair type = the template's standard row value, used only if a model's
+// JSON entry is missing a key. Every entry in ipad-models.json sets its own values.
+function resolveTurnaround(m: IpadModel): Required<Turnaround> {
+  const t = m.turnaround ?? {};
+  return {
+    screen: t.screen ?? (m.category === "pro" && m.releaseYear >= 2024 ? "3-5 days" : "1-2 days"),
+    battery: t.battery ?? "Same-day",
+    port: t.port ?? "Same-day",
+    waterDamage: t.waterDamage ?? "2-4 days",
+    camera: t.camera ?? "1-2 days",
+    homeButton: t.homeButton ?? "1-2 days",
+    faceId: t.faceId ?? "2-3 days",
+  };
+}
+
+const isSameDay = (v: string) => /^same-day$/i.test(v.trim());
+const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+const upperFirst = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const joinList = (xs: string[]) =>
+  xs.length <= 1 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`;
+
+// Screen, battery and port are the jobs we see most on iPads. Group them by turnaround
+// so identical values are stated once, in that order.
+function groupMainJobs(t: Required<Turnaround>): { keys: ("screen" | "battery" | "port")[]; value: string }[] {
+  const groups: { keys: ("screen" | "battery" | "port")[]; value: string }[] = [];
+  for (const key of ["screen", "battery", "port"] as const) {
+    const g = groups.find((x) => x.value === t[key]);
+    if (g) g.keys.push(key);
+    else groups.push({ keys: [key], value: t[key] });
+  }
+  return groups;
+}
+
+// Header / quick-answer / price-card summary, derived from the same data as the table,
+// e.g. "Screen 3-5 days · battery same-day · port 1-2 days".
+function turnaroundSummary(t: Required<Turnaround>): string {
+  return groupMainJobs(t)
+    .map((g, i) => {
+      const labels = g.keys.length === 3 ? `${g.keys[0]}, ${g.keys[1]} & ${g.keys[2]}` : g.keys.join(" & ");
+      return `${i === 0 ? upperFirst(labels) : labels} ${lowerFirst(g.value)}`;
+    })
+    .join(" · ");
+}
+
+// Plain-sentence version for the parts paragraph,
+// e.g. "Screens take 2-3 days; batteries and ports are same-day jobs."
+function turnaroundSentence(t: Required<Turnaround>): string {
+  const plural = { screen: "screens", battery: "batteries", port: "ports" } as const;
+  const clauses = groupMainJobs(t).map((g) => {
+    const nouns = joinList(g.keys.map((k) => plural[k]));
+    return isSameDay(g.value) ? `${nouns} are same-day jobs` : `${nouns} take ${lowerFirst(g.value)}`;
+  });
+  return `${upperFirst(clauses.join("; "))}.`;
+}
 
 const CATEGORY_LABEL: Record<IpadModel["category"], string> = {
   basic: "Basic iPad",
@@ -111,31 +180,31 @@ function pickRelatedModels(slug: string): IpadModel[] {
 // build a service pricing table row
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
 
-function buildServiceRows(m: IpadModel): ServiceRow[] {
+function buildServiceRows(m: IpadModel, t: Required<Turnaround>): ServiceRow[] {
   const rows: ServiceRow[] = [
     {
       service: "Screen replacement",
       price: "Price on request",
       href: "/ipad-screen-repair-dubai",
-      timeline: m.category === "pro" && m.releaseYear >= 2024 ? "3-5 days (Tandem OLED)" : "1-2 days",
+      timeline: t.screen,
     },
     {
       service: "Battery replacement",
       price: "Price on request",
       href: "/ipad-battery-replacement-dubai",
-      timeline: "Same-day",
+      timeline: t.battery,
     },
     {
       service: m.connector.toLowerCase().includes("usb-c") ? "USB-C port replacement" : "Lightning port replacement",
       price: "Price on request",
       href: "/ipad-charging-port-repair-dubai",
-      timeline: "Same-day",
+      timeline: t.port,
     },
     {
       service: "Water damage diagnostic + repair",
       price: "Price on request",
       href: "/ipad-water-damage-repair-dubai",
-      timeline: "2-4 days",
+      timeline: t.waterDamage,
     },
   ];
   if (m.pricing.cameraRepair > 0) {
@@ -143,7 +212,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
       service: "Rear / FaceTime camera repair",
       price: "Price on request",
       href: "/ipad-camera-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.camera,
     });
   }
   if (m.pricing.homeButton && m.pricing.homeButton > 0) {
@@ -151,7 +220,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
       service: "Home / Touch ID button repair",
       price: "Price on request",
       href: "/ipad-home-button-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.homeButton,
     });
   }
   if (m.pricing.faceId && m.pricing.faceId > 0) {
@@ -159,7 +228,7 @@ function buildServiceRows(m: IpadModel): ServiceRow[] {
       service: "Face ID module repair",
       price: "Price on request",
       href: "/ipad-full-diagnostic-dubai",
-      timeline: "2-3 days (sometimes not 100%)",
+      timeline: `${t.faceId} (sometimes not 100%)`,
     });
   }
   rows.push({
@@ -188,18 +257,21 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   }
 
   const verdict = worthRepairingVerdict(model);
-  const serviceRows = buildServiceRows(model);
+  const turnaround = resolveTurnaround(model);
+  const serviceRows = buildServiceRows(model, turnaround);
   const related = pickRelatedModels(slug);
 
   // 5 auto-generated FAQs from data
   const faqs = [
     {
       q: `How much does it cost to repair the ${model.name} screen in Dubai?`,
-      a: `Message us on WhatsApp for today's exact price on a ${model.name} screen replacement. Timeline: ${model.timelineNotes.split(".")[0]}. Includes a 3-month written warranty on the new panel and the labour.`,
+      a: `Message us on WhatsApp for today's exact price on the ${model.name} screen replacement. Timeline: ${turnaround.screen}. Includes a 3-month written warranty on the new panel and the labour.`,
     },
     {
       q: `Can you replace the ${model.name} battery the same day?`,
-      a: `Yes - we typically complete ${model.name} battery service the same day. We use cells with a verified cycle count and seal the back properly. WhatsApp us the model for the exact price.`,
+      a: isSameDay(turnaround.battery)
+        ? `Yes - we typically complete ${model.name} battery service the same day. We use cells with a verified cycle count and seal the back properly. WhatsApp us the model for the exact price.`
+        : `Not usually. ${model.name} battery service takes ${lowerFirst(turnaround.battery)}${model.category === "older" ? ", and some older parts are no longer available" : ""} - we confirm at the free diagnosis. We use cells with a verified cycle count and seal the back properly. WhatsApp us the model for the exact price.`,
     },
     {
       q: `Is the ${model.name} still worth repairing in 2026?`,
@@ -217,14 +289,14 @@ export default function IpadModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Screen, Battery, Port`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
       seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty up to 12 months, free pickup. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
       subtitle={`${model.heroTagline} Written warranty up to 12 months. Free pickup across Dubai - message us on WhatsApp for today's price.`}
       startingPrice={0}
-      timeline={model.category === "pro" && model.releaseYear >= 2024 ? "3-5 days (screen) · same-day (battery)" : "Same-day to 2 days"}
+      timeline={turnaroundSummary(turnaround)}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
       breadcrumb={[
         { name: "Home",        path: "/" },
@@ -286,11 +358,9 @@ export default function IpadModelPage({ slug }: { slug: string }) {
 
           <h2 className="text-[28px] md:text-[32px] mb-md">Are parts available for the {model.shortName}?</h2>
           <p className="text-[15px] mb-lg">
-            {model.currentInLineup
-              ? `As Apple's current ${CATEGORY_LABEL[model.category]}, parts are sourced from authorised channels. Some specialist panels (Tandem OLED especially) take 3-5 days. Batteries and ports are usually in stock same-day.`
-              : model.category === "older"
-                ? `Parts availability for older iPads is mixed. Batteries, screens and ports for iPad 5th-8th gen are still obtainable in Dubai. Earlier generations (1st-4th) are increasingly hard to source - we'll be honest at intake about lead times and whether the repair is economically sensible.`
-                : `Parts for the ${model.shortName} are widely available in Dubai - screens, batteries, ports and small components are usually in stock or arrive within 1-2 days. ${model.timelineNotes}`}
+            {model.category === "older"
+              ? `Parts availability for older iPads is mixed. Batteries, screens and ports for iPad 5th-8th gen are still obtainable in Dubai. Earlier generations (1st-4th) are increasingly hard to source - we'll be honest at intake about lead times and whether the repair is economically sensible.`
+              : `Parts for the ${model.shortName} are available in Dubai. ${turnaroundSentence(turnaround)}`}
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
@@ -342,8 +412,8 @@ export default function IpadModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickIpadReviewers(slug)}
       related={[
-        { label: "iPad screen repair Dubai",            href: "/ipad-screen-repair-dubai",            description: "Cracked Retina, Liquid Retina or Tandem OLED - same-day to 5 days." },
-        { label: "iPad battery replacement Dubai",      href: "/ipad-battery-replacement-dubai",      description: "Fresh cells, verified cycle count, sealed properly. Same-day." },
+        { label: "iPad screen repair Dubai",            href: "/ipad-screen-repair-dubai",            description: "Cracked Retina, Liquid Retina or Tandem OLED panels." },
+        { label: "iPad battery replacement Dubai",      href: "/ipad-battery-replacement-dubai",      description: "Fresh cells, verified cycle count, sealed properly." },
         { label: "iPad full diagnostic",                href: "/ipad-full-diagnostic-dubai",          description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />

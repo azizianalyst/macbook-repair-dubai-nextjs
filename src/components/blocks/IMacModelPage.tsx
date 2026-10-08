@@ -24,6 +24,21 @@ type Pricing = {
   diagnostic?: number;
 };
 
+// One turnaround per repair type, set per model in the JSON (t20). Every timeline this page
+// states for a repair - service table, FAQ, parts paragraph, hero/QuickAnswer summary - reads
+// from here, so the page cannot quote two different times for the same job.
+type Turnaround = {
+  screen?: string;
+  logicBoard?: string;
+  psu?: string;
+  ram?: string;
+  ssd?: string;
+  gpu?: string;
+  cpu?: string;
+  ssdRecovery?: string;
+  fanCleaning?: string;
+};
+
 type IMacModel = {
   slug: string;
   name: string;
@@ -46,11 +61,46 @@ type IMacModel = {
   commonIssues: string[];
   pricing: Pricing;
   timelineNotes: string;
+  turnaround?: Turnaround;
   honestyNote: string;
   heroTagline: string;
 };
 
 const ALL_MODELS: IMacModel[] = imacModels as IMacModel[];
+
+// Fallbacks are the per-row values this template hard-coded before t20. Every model in the
+// JSON sets its own; these only cover a new entry added without a turnaround object.
+function turnaroundFor(m: IMacModel): Required<Turnaround> {
+  return {
+    screen: "2-3 days",
+    logicBoard: "3-5 days",
+    psu: "1-2 days",
+    ram: "Same-day",
+    ssd: "1-2 days",
+    gpu: "3-7 days (parts sourcing)",
+    cpu: "3-7 days (parts sourcing)",
+    ssdRecovery: "Quoted after assessment",
+    fanCleaning: "Same-day",
+    ...m.turnaround,
+  };
+}
+
+const TURNAROUND_LABEL: Record<keyof Turnaround, string> = {
+  screen: "screen",
+  logicBoard: "logic board",
+  psu: "PSU",
+  ram: "RAM upgrade",
+  ssd: "SSD upgrade",
+  gpu: "GPU module",
+  cpu: "Xeon CPU",
+  ssdRecovery: "data recovery",
+  fanCleaning: "fan cleaning",
+};
+
+// "Same-day to 2 days" -> "same-day to 2 days" for use mid-sentence.
+const lc = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+// "3-7 days (parts sourcing)" -> "3-7 days" for short summaries.
+const bare = (s: string) => s.replace(/\s*\([^)]*\)\s*$/, "");
 
 const FAMILY_LABEL: Record<IMacModel["family"], string> = {
   "imac-as":    "iMac (Apple Silicon)",
@@ -113,21 +163,23 @@ function pickRelatedModels(slug: string): IMacModel[] {
   return relatedModels(slug, ALL_MODELS, (m) => m.family);
 }
 
-type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
+type ServiceRow = { service: string; price: number | string; href: string; timeline: string; key?: keyof Turnaround };
 
-function buildServiceRows(m: IMacModel): ServiceRow[] {
+function buildServiceRows(m: IMacModel, t: Required<Turnaround>): ServiceRow[] {
   const rows: ServiceRow[] = [
     {
       service: `${m.size}" Retina display / glass replacement`,
       price: "Price on request",
       href: "/imac-screen-repair-dubai",
-      timeline: "2-3 days",
+      timeline: t.screen,
+      key: "screen",
     },
     {
       service: "Logic board repair (component-level)",
       price: "Price on request",
       href: "/imac-logic-board-repair-dubai",
-      timeline: "3-5 days",
+      timeline: t.logicBoard,
+      key: "logicBoard",
     },
   ];
   if (m.pricing.powerSupply) {
@@ -135,7 +187,8 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: "Power supply replacement",
       price: "Price on request",
       href: "/imac-power-supply-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.psu,
+      key: "psu",
     });
   }
   if (m.pricing.ramUpgrade) {
@@ -143,7 +196,8 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: `RAM upgrade (up to ${m.maxRAM.split(" ")[0]})`,
       price: "Price on request",
       href: "/imac-ram-upgrade-dubai",
-      timeline: "Same-day",
+      timeline: t.ram,
+      key: "ram",
     });
   }
   if (m.pricing.fusionToSsd) {
@@ -151,14 +205,16 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: "Fusion Drive → SSD upgrade (huge speed boost)",
       price: "Price on request",
       href: "/imac-ssd-upgrade-dubai",
-      timeline: "1-2 days",
+      timeline: t.ssd,
+      key: "ssd",
     });
   } else if (m.pricing.ssdUpgrade) {
     rows.push({
       service: "SSD upgrade",
       price: "Price on request",
       href: "/imac-ssd-upgrade-dubai",
-      timeline: "1-2 days",
+      timeline: t.ssd,
+      key: "ssd",
     });
   }
   if (m.pricing.gpuModule) {
@@ -166,7 +222,8 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: "GPU module replacement (Radeon Pro Vega)",
       price: "Price on request",
       href: "/imac-gpu-repair-dubai",
-      timeline: "3-7 days (parts sourcing)",
+      timeline: t.gpu,
+      key: "gpu",
     });
   }
   if (m.pricing.ssdRecovery) {
@@ -174,7 +231,8 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: "Data recovery (failed drive or dead board)",
       price: "Price on request",
       href: "/imac-data-recovery-dubai",
-      timeline: "Quoted after assessment",
+      timeline: t.ssdRecovery,
+      key: "ssdRecovery",
     });
   }
   if (m.pricing.fanCleaning) {
@@ -182,7 +240,8 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
       service: "Fan cleaning + thermal paste",
       price: "Price on request",
       href: "/imac-fan-cleaning-dubai",
-      timeline: "Same-day",
+      timeline: t.fanCleaning,
+      key: "fanCleaning",
     });
   }
   rows.push({
@@ -192,6 +251,29 @@ function buildServiceRows(m: IMacModel): ServiceRow[] {
     timeline: "30 minutes",
   });
   return rows;
+}
+
+// Hero / QuickAnswer / price-card summary: the 2-3 most common jobs for the family, read off
+// the rows the table actually shows, so the summary cannot contradict the table.
+function headerTimeline(m: IMacModel, rows: ServiceRow[]): string {
+  const prefer: (keyof Turnaround)[] =
+    m.family === "imac-intel" ? ["psu", "screen", "logicBoard"]
+    : m.family === "imac-pro" ? ["screen", "psu", "gpu"]
+    : ["screen", "psu", "logicBoard"];
+  const s = prefer
+    .map((k) => rows.find((r) => r.key === k))
+    .filter((r): r is ServiceRow & { key: keyof Turnaround } => !!r?.key)
+    .slice(0, 3)
+    .map((r) => `${TURNAROUND_LABEL[r.key]} ${lc(bare(r.timeline))}`)
+    .join(" · ");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// iMac Pro rare parts: one sourcing figure when CPU and GPU match, both when they differ.
+function rarePartsSourcing(t: Required<Turnaround>): string {
+  const cpu = bare(t.cpu);
+  const gpu = bare(t.gpu);
+  return cpu === gpu ? cpu : `${cpu} for a CPU, ${gpu} for a GPU module`;
 }
 
 export default function IMacModelPage({ slug }: { slug: string }) {
@@ -211,7 +293,8 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   }
 
   const verdict = worthRepairingVerdict(model);
-  const serviceRows = buildServiceRows(model);
+  const turnaround = turnaroundFor(model);
+  const serviceRows = buildServiceRows(model, turnaround);
   const related = pickRelatedModels(slug);
 
   const isAppleSilicon = model.era === "apple-silicon";
@@ -221,7 +304,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does an ${model.name} screen replacement cost in Dubai?`,
-      a: `${model.size}" Retina display / glass replacement on the ${model.name} takes a typical 2-3 days and includes a 3-month written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue). WhatsApp us your model for today's exact price.`,
+      a: `${model.size}" Retina display / glass replacement on the ${model.name} has a typical turnaround of ${lc(turnaround.screen)} and includes a 3-month written warranty on the panel and the labour, plus proper adhesive strips on reseal (not glue). WhatsApp us your model for today's exact price.`,
     },
     {
       q: isAppleSilicon
@@ -240,10 +323,10 @@ export default function IMacModelPage({ slug }: { slug: string }) {
           ? `What's the most common ${model.shortName} repair you see?`
           : `Where is the power supply located on the ${model.shortName}?`,
       a: isPro
-        ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take 5-7 days and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
+        ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take ${rarePartsSourcing(turnaround)} and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
-          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. We replace it typically same-day to 2 days, with a warranty of up to 12 months - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
-          : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Brick replacement same-day; in-chassis PSU is a 1-2 day job.`,
+          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of up to 12 months - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
+          : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Typical power supply turnaround on the ${model.shortName} is ${lc(turnaround.psu)}.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -257,14 +340,14 @@ export default function IMacModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Screen, Board & Upgrades`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
       seoDescription={`${model.name} repair Dubai - screen, logic board${model.pricing.powerSupply ? ", PSU" : ""} and upgrades. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Logic Board, Power Supply & Upgrades`}
       subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup with proper iMac transport across Dubai.`}
       startingPrice={0}
-      timeline={isPro ? "Standard repairs 2-3 days · GPU/CPU 5-7 days (parts)" : "Same-day to 5 days depending on the job"}
+      timeline={headerTimeline(model, serviceRows)}
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
       breadcrumb={[
         { name: "Home",        path: "/" },
@@ -365,7 +448,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
               <h3 className="text-[18px] font-bold mb-sm">iMac Pro parts scarcity - our honest position</h3>
               <p className="text-[15px] mb-sm">
-                Discontinued in March 2021. Standard parts (PSU, screens, RAM) are still routine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take 5-7 days and prices fluctuate week to week.
+                Discontinued in March 2021. Standard parts (PSU, screens, RAM) are still routine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take {rarePartsSourcing(turnaround)} and prices fluctuate week to week.
               </p>
               <p className="text-[15px]">
                 We&apos;re honest at intake: if it&apos;s a GPU module failure, sometimes the part exceeds the iMac Pro&apos;s current resale value. Other repairs are still very worthwhile.
@@ -376,7 +459,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
           <h2 className="text-[28px] md:text-[32px] mb-md">Are parts available for the {model.shortName} in 2026?</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
-              ? `As Apple's current iMac, parts come through authorised channels. Power brick is same-day; logic board takes 3-5 days. ${model.timelineNotes}`
+              ? model.timelineNotes
               : isPro
                 ? `${model.timelineNotes}`
                 : isIntel27
@@ -437,7 +520,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       related={[
         { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, warranty of up to 12 months." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
-        { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. Same-day to 2 days. WhatsApp us for a quote." },
+        { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. WhatsApp us for a quote." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />

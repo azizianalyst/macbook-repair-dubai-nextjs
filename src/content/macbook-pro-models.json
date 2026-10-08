@@ -36,6 +36,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Top-case (with butterfly keyboard) 1-2 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "Flexgate is the silent killer of this generation - backlight cable wears through with normal use. We can replace the display assembly, but on a 7-year-old machine the math gets tight. We always show you the numbers before we start.",
     "heroTagline": "The last Touch Bar Pro generation. We know its quirks - Flexgate, butterfly, Touch Bar."
   },
@@ -76,6 +87,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Keyboard via top-case 1 day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "The last Intel 13\" Pro and the first with the reliable scissor keyboard. Battery and keyboard repairs are sensible. If you need a logic board or screen, weigh against a used M1 13\" Pro - the performance jump is enormous.",
     "heroTagline": "The last Intel 13\" Pro. Better keyboard than 2019, still has Flexgate."
   },
@@ -116,6 +138,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Top-case 1 day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First Apple Silicon Pro and one of our favourite repair targets. Performance is still excellent in 2026. Battery service buys 2-3 more years easily. The last MacBook Pro with the Touch Bar - bittersweet.",
     "heroTagline": "The first Apple Silicon Pro. Last of the Touch Bar Pros. Very repair-friendly."
   },
@@ -156,6 +188,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 2-3 days. Battery same-day. Top-case 1 day.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "battery": "Same-day",
+      "keyboard": "1 day",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "The final 13\" Pro and the very last Mac with a Touch Bar. Apple discontinued the 13\" Pro line in October 2023 - the 14\" Pro replaced it. Still a great machine. If you have the 256GB base, back up regularly because of the single-NAND SSD.",
     "heroTagline": "The last 13\" Pro. The last Touch Bar. We service it like a piece of history."
   },
@@ -196,6 +238,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (mini-LED panel sourcing). Battery same-day. Top-case 1-2 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "The redesign that brought back MagSafe, HDMI and SD card. Still extremely capable in 2026. The mini-LED screen is the most expensive part - drop protection matters. Otherwise everything else is very repair-friendly.",
     "heroTagline": "The Pro that reset everything. MagSafe is back, ports are back."
   },
@@ -236,6 +288,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Top-case 1-2 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Refined version of the 2021 redesign - HDMI 2.1, Wi-Fi 6E. Very few field issues beyond accidental damage. Repair-friendly across the board.",
     "heroTagline": "The mature M2 Pro 14\". HDMI 2.1, refined, repair-friendly."
   },
@@ -276,6 +338,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Top-case 1-2 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Apple's first base M3 in a 14\" Pro chassis (no Pro/Max chip option). Lower port count and lower max RAM than Pro/Max variants - but still a brilliant machine. Few problems in the field.",
     "heroTagline": "Base M3 in a Pro chassis. Mature, reliable, repair-friendly."
   },
@@ -316,6 +388,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 3-5 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First Pro with Apple Intelligence support and the optional nano-texture display. Very few field issues. If you have the nano-texture screen, drop protection matters even more - replacement is a premium part.",
     "heroTagline": "The first Apple Intelligence Pro. Nano-texture optional. Fully repair-friendly."
   },
@@ -355,6 +437,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 3-5 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Apple's current base M5 14\" Pro (Oct 2025). Most units are under Apple's 1-year warranty or AppleCare+. Always check Apple first - we're here for accidental damage and out-of-warranty work.",
     "heroTagline": "Current base M5 Pro 14\". Apple Intelligence, nano-texture optional, current lineup."
   },
@@ -394,6 +486,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 5-7 days (M5 Pro chip availability still ramping).",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "5-7 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026 with Thunderbolt 5 - the first Mac with TB5. Specialty parts (TB5 controllers especially) are still ramping. Almost every unit is under Apple's 1-year warranty - start there. We're here for accidental damage Apple won't cover.",
     "heroTagline": "M5 Pro 14\". Thunderbolt 5, world's fastest CPU core. Newest lineup, newest parts access."
   },
@@ -433,6 +535,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. M5 Max logic board: 7-10 days (specialist sourcing).",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "7-10 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026. The fastest 14\" Pro Apple has ever built - and the most expensive to repair at logic-board level - an M5 Max board costs more than some whole laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is highly recommended on this configuration.",
     "heroTagline": "M5 Max 14\". The peak of Apple's portable performance. We treat it accordingly."
   },
@@ -473,6 +585,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days (specialist mini-LED panel). Battery same-day. Top-case 1-2 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First 16\" with Apple Silicon and the redesign. Largest screen in the Apple laptop line. Screen replacement is the most expensive single repair we do on it - drop protection truly matters on this machine.",
     "heroTagline": "The first Apple Silicon 16\". MagSafe is back, ports are back, screen is enormous."
   },
@@ -513,6 +635,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 5-7 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "5-7 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Refined 16\" Pro with HDMI 2.1 and Wi-Fi 6E. Very few field issues. Max-chip variants run hotter - fan cleaning every 18 months extends thermal headroom noticeably.",
     "heroTagline": "M2 Pro / Max 16\". Mature, refined, premium repair candidate."
   },
@@ -553,6 +685,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 5-7 days.",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "5-7 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First 16\" Pro with Space Black finish and 128GB max RAM (on M3 Max). Few problems in the field. Space Black scratches over time - cosmetic-only, doesn't affect function.",
     "heroTagline": "M3 Pro / Max 16\". Space Black, 128GB RAM ceiling, minimal field issues."
   },
@@ -593,6 +735,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. TB5 port repair 3-5 days (parts).",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "3-5 days",
+      "logicBoard": "3-5 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "First Mac with Thunderbolt 5 (M4 Pro/Max variants) and the optional nano-texture display. Very few field issues. TB5 cables and docks were chaotic in 2024 - many port-damage cases came from cheap accessories. Use Apple-certified TB5 cables.",
     "heroTagline": "M4 Pro / Max 16\". First Thunderbolt 5 Mac. Nano-texture optional."
   },
@@ -632,6 +784,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. Logic board 7-10 days (M5 Pro chip availability still ramping).",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "7-10 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026. 24-hour battery life claim - early units holding up well. Almost every unit is under Apple's 1-year warranty - start there. AppleCare+ recommended given specialty-part lead times.",
     "heroTagline": "M5 Pro 16\". Thunderbolt 5, 24-hour battery, current Apple lineup."
   },
@@ -671,6 +833,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "Screen 3-5 days. Battery same-day. M5 Max logic board: 10-14 days (specialist sourcing).",
+    "turnaround": {
+      "screen": "3-5 days",
+      "battery": "Same-day",
+      "keyboard": "1-2 days",
+      "trackpad": "1 day",
+      "port": "1-2 days",
+      "logicBoard": "10-14 days",
+      "speaker": "1 day",
+      "liquid": "2-4 days"
+    },
     "honestyNote": "Released March 2026. The single most powerful - and most expensive to repair - laptop Apple has ever made. Logic board replacement costs more than most complete laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is essential on this configuration.",
     "heroTagline": "M5 Max 16\". The peak of portable Apple power. We treat every job as insurance-grade."
   }

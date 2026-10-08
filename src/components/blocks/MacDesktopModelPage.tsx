@@ -22,6 +22,20 @@ type Pricing = {
   diagnostic?: number;
 };
 
+// One turnaround per repair type, set per model in the JSON (t20). Every timeline this page
+// states for a repair - service table, FAQ, parts paragraph, hero/QuickAnswer summary - reads
+// from here, so the page cannot quote two different times for the same job.
+type Turnaround = {
+  logicBoard?: string;
+  psu?: string;
+  port?: string;
+  ram?: string;
+  mpxModule?: string;
+  ssdRecovery?: string;
+  fanCleaning?: string;
+  thermalPaste?: string;
+};
+
 type DesktopModel = {
   slug: string;
   name: string;
@@ -41,11 +55,44 @@ type DesktopModel = {
   commonIssues: string[];
   pricing: Pricing;
   timelineNotes: string;
+  turnaround?: Turnaround;
   honestyNote: string;
   heroTagline: string;
 };
 
 const ALL_MODELS: DesktopModel[] = desktopModels as DesktopModel[];
+
+// Fallbacks are the per-row values this template hard-coded before t20. Every model in the
+// JSON sets its own; these only cover a new entry added without a turnaround object.
+function turnaroundFor(m: DesktopModel): Required<Turnaround> {
+  return {
+    logicBoard: m.family === "studio" || m.family === "pro" ? "4-6 days" : "3-5 days",
+    psu: "1-2 days",
+    port: "1-2 days",
+    ram: "Same-day",
+    mpxModule: "2-4 days (parts vary)",
+    ssdRecovery: "5-10 days",
+    fanCleaning: "Same-day",
+    thermalPaste: "Same-day",
+    ...m.turnaround,
+  };
+}
+
+const TURNAROUND_LABEL: Record<keyof Turnaround, string> = {
+  logicBoard: "logic board",
+  psu: "PSU",
+  port: "ports",
+  ram: "RAM upgrade",
+  mpxModule: "MPX module",
+  ssdRecovery: "data recovery",
+  fanCleaning: "fan cleaning",
+  thermalPaste: "thermal paste",
+};
+
+// "Same-day to 2 days" -> "same-day to 2 days" for use mid-sentence.
+const lc = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+// "3-7 days (parts sourcing)" -> "3-7 days" for the short hero summary.
+const bare = (s: string) => s.replace(/\s*\([^)]*\)\s*$/, "");
 
 const FAMILY_LABEL: Record<DesktopModel["family"], string> = {
   mini:   "Mac Mini",
@@ -114,16 +161,17 @@ function pickRelatedModels(slug: string): DesktopModel[] {
   return relatedModels(slug, ALL_MODELS, (m) => m.family);
 }
 
-type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
+type ServiceRow = { service: string; price: number | string; href: string; timeline: string; key?: keyof Turnaround };
 
-function buildServiceRows(m: DesktopModel): ServiceRow[] {
+function buildServiceRows(m: DesktopModel, t: Required<Turnaround>): ServiceRow[] {
   const hub = FAMILY_HUB[m.family];
   const rows: ServiceRow[] = [
     {
       service: "Logic board repair (component-level)",
       price: "Price on request",
       href: m.family === "mini" ? "/mac-logic-board-repair-dubai" : hub,
-      timeline: m.family === "studio" || m.family === "pro" ? "4-6 days" : "3-5 days",
+      timeline: t.logicBoard,
+      key: "logicBoard",
     },
   ];
   if (m.pricing.psu) {
@@ -131,7 +179,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "Power supply replacement",
       price: "Price on request",
       href: hub,
-      timeline: "1-2 days",
+      timeline: t.psu,
+      key: "psu",
     });
   }
   if (m.pricing.port) {
@@ -139,7 +188,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "Thunderbolt / USB-C port repair",
       price: "Price on request",
       href: "/mac-port-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.port,
+      key: "port",
     });
   }
   if (m.pricing.ramUpgrade) {
@@ -147,7 +197,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: `RAM upgrade (DDR4 ECC, up to ${m.maxRAM.split(" ")[0]})`,
       price: "Price on request",
       href: hub,
-      timeline: "Same-day",
+      timeline: t.ram,
+      key: "ram",
     });
   }
   if (m.pricing.mpxModule) {
@@ -155,7 +206,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "MPX GPU module replacement (labour)",
       price: "Price on request",
       href: "/mac-pro-gpu-repair-dubai",
-      timeline: "2-4 days (parts vary)",
+      timeline: t.mpxModule,
+      key: "mpxModule",
     });
   }
   if (m.pricing.ssdRecovery) {
@@ -163,7 +215,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "SSD data recovery (board-level repair)",
       price: "Price on request",
       href: "/mac-data-recovery-dubai",
-      timeline: "5-10 days",
+      timeline: t.ssdRecovery,
+      key: "ssdRecovery",
     });
   }
   if (m.pricing.fanCleaning) {
@@ -171,7 +224,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "Fan cleaning + dust removal",
       price: "Price on request",
       href: "/mac-fan-cleaning-dubai",
-      timeline: "Same-day",
+      timeline: t.fanCleaning,
+      key: "fanCleaning",
     });
   }
   if (m.pricing.thermalPaste) {
@@ -179,7 +233,8 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
       service: "Thermal paste refresh",
       price: "Price on request",
       href: "/mac-fan-cleaning-dubai",
-      timeline: "Same-day",
+      timeline: t.thermalPaste,
+      key: "thermalPaste",
     });
   }
   rows.push({
@@ -189,6 +244,22 @@ function buildServiceRows(m: DesktopModel): ServiceRow[] {
     timeline: "30 minutes",
   });
   return rows;
+}
+
+// Hero / QuickAnswer / price-card summary: the 2-3 most common jobs for the family, read off
+// the rows the table actually shows, so the summary cannot contradict the table.
+function headerTimeline(m: DesktopModel, rows: ServiceRow[]): string {
+  const prefer: (keyof Turnaround)[] =
+    m.family === "mini" ? ["psu", "port", "logicBoard"]
+    : m.family === "pro" && m.era === "intel" ? ["ram", "psu", "logicBoard"]
+    : ["fanCleaning", "psu", "logicBoard"];
+  const s = prefer
+    .map((k) => rows.find((r) => r.key === k))
+    .filter((r): r is ServiceRow & { key: keyof Turnaround } => !!r?.key)
+    .slice(0, 3)
+    .map((r) => `${TURNAROUND_LABEL[r.key]} ${lc(bare(r.timeline))}`)
+    .join(" · ");
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 export default function MacDesktopModelPage({ slug }: { slug: string }) {
@@ -208,7 +279,8 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   }
 
   const verdict = worthRepairingVerdict(model);
-  const serviceRows = buildServiceRows(model);
+  const turnaround = turnaroundFor(model);
+  const serviceRows = buildServiceRows(model, turnaround);
   const related = pickRelatedModels(slug);
 
   const isAppleSilicon = model.era === "apple-silicon";
@@ -227,7 +299,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} logic board repair cost in Dubai?`,
-      a: `Component-level logic board repair on the ${model.name} is priced per fault - message us on WhatsApp for today's exact price on your model. Timeline ${isStudio || isPro ? "4-6 days" : "3-5 days"}. Includes a 15-day written warranty on the work, extendable to 6 months for a small flat fee. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
+      a: `Component-level logic board repair on the ${model.name} is priced per fault - message us on WhatsApp for today's exact price on your model. Timeline ${lc(turnaround.logicBoard)}. Includes a 15-day written warranty on the work, extendable to 6 months for a small flat fee. Where component-level isn't economical, we'll quote a full-board swap and let you choose.`,
     },
     {
       q: isAppleSilicon
@@ -257,7 +329,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             ? `Not much yet - it is in Apple's current lineup, so there is no repair track record. What we see first on any new desktop is accidental damage Apple's warranty excludes (liquid, drops, power surges), port damage from docks and cables, and setup problems that look like hardware. Factory faults go to Apple under warranty - we check your serial number for free.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
-            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. We replace it typically in 1-2 days, with a warranty of up to 12 months - message us on WhatsApp for today's exact price.`,
+            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of up to 12 months - message us on WhatsApp for today's exact price.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -271,14 +343,14 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Board, PSU & Ports`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
       seoDescription={`${model.name} repair Dubai - logic board, PSU${model.pricing.port ? ", ports" : ""} and preventive service. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
       subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
       startingPrice={0}
-      timeline={isStudio || isPro ? "Standard service same-day to 3 days · Logic board 4-6 days" : "Same-day to 5 days depending on the job"}
+      timeline={headerTimeline(model, serviceRows)}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
       breadcrumb={[
         { name: "Home",                          path: "/" },
@@ -396,9 +468,9 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
           <h2 className="text-[28px] md:text-[32px] mb-md">Are {model.shortName} parts available in Dubai?</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
-              ? `As Apple's current ${FAMILY_LABEL[model.family]}, parts come through authorised channels. ${model.timelineNotes}`
+              ? model.timelineNotes
               : isMacPro2019
-                ? `MPX GPU modules (Vega II, W6800X, W6900X) are still available but increasingly scarce - sourcing 3-7 days. RAM, PSU and Thunderbolt parts are routine. ${model.timelineNotes}`
+                ? `MPX GPU modules (Vega II, W6800X, W6900X) are still available but increasingly scarce - a module swap takes ${lc(turnaround.mpxModule)}. RAM, PSU and Thunderbolt parts are routine. ${model.timelineNotes}`
                 : `Parts for the ${model.shortName} are widely available. ${model.timelineNotes}`}
           </p>
 

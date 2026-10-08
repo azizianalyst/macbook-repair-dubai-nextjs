@@ -3,7 +3,7 @@
 // Renders Question + AcceptedAnswer microdata so crawlers (and AI Overviews) can lift it cleanly.
 // The wrapping `.quick-answer` class is referenced by SpeakableSpecification cssSelector in schema.ts.
 import { ReactNode } from "react";
-import { warrantyClause, warrantyDaysForService } from "@/content/site";
+import { warrantyClause, warrantyDaysForService, warrantyLabel } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";
 import { cn } from "@/lib/utils";
 
@@ -78,14 +78,21 @@ function withoutTrailingCity(name: string): string {
   return name.replace(/[\s,\-–]+(?:in\s+)?Dubai\s*$/i, "").trim() || name;
 }
 
+// The answer states the page's own turnaround and warranty only. It used to close with
+// "All repairs include a 12-month written warranty ... and same-day completion on most
+// common services", which contradicted multi-tier hubs (screens 90 days, board work 15
+// days) and pages whose timeline is days, not hours (t20, 2026-10-08).
 export function deriveServiceQuickAnswer(opts: {
   serviceName: string;
   startingPrice: number;
   timeline: string;
   warrantyDays?: number;
+  /** Pre-rendered warranty wording; multi-tier hubs pass WARRANTY.headlineLong. */
+  warrantyText?: string;
 }): { question: string; answer: string } {
   const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
   const name = withoutTrailingCity(opts.serviceName);
+  const warranty = opts.warrantyText ?? (warrantyLabel(warrantyDays) ? warrantyClause(warrantyDays) : "");
   return {
     question: `How much does ${name} in Dubai cost?`,
     answer:
@@ -93,8 +100,9 @@ export function deriveServiceQuickAnswer(opts: {
         ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
         : `${name} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
       `Typical turnaround: ${opts.timeline}. ` +
-      `All repairs include ${warrantyClause(warrantyDays)} on parts and labour, ` +
-      `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
+      (warranty
+        ? `Parts and labour carry ${warranty}. Free pickup and delivery across Dubai mainland.`
+        : `Free pickup and delivery across Dubai mainland, with a written quote before any work.`),
   };
 }
 

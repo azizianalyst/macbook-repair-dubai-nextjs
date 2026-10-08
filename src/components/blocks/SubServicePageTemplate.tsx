@@ -98,6 +98,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
     startingPrice: p.startingPrice,
     timeline: p.timeline,
     warrantyDays: p.warrantyDays,
+    warrantyText: p.warrantyHeadline ? WARRANTY.headlineLong : undefined,
   });
 
   // No preloadImage here: the hero LCP preload is emitted server-side by <PageSchema> (a client

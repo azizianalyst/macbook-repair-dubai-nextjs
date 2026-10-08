@@ -24,6 +24,51 @@ type Pricing = {
   diagnostic: number;
 };
 
+// Repair types this template states a turnaround for. The model JSON's `turnaround` object is the
+// single source of truth: the service table, FAQs, butterfly panel and header summary all read it,
+// so no two places on a model page can disagree. Values come from the model's own timelineNotes.
+type TurnaroundKey =
+  | "screen"
+  | "battery"
+  | "keyboard"      // keyboard / top-case row (butterfly top-case swap or Magic Keyboard top-case)
+  | "trackpad"
+  | "port"
+  | "logicBoard"
+  | "speaker"
+  | "liquid"
+  | "fanCleaning";  // Intel models only (the row renders only when the model has fan service)
+
+type Turnaround = Partial<Record<TurnaroundKey, string>>;
+
+// Fallback when a model's JSON lacks a key: the per-row values this table carried before
+// per-model turnaround existed. Every model sets every key its table renders (fanCleaning only on
+// Intel models with a fan row), so this is a guard only.
+const DEFAULT_TURNAROUND: Record<TurnaroundKey, string> = {
+  screen: "2-3 days",
+  battery: "Same-day",
+  keyboard: "1-2 days",
+  trackpad: "1 day",
+  port: "1-2 days",
+  logicBoard: "3-5 days",
+  speaker: "1 day",
+  liquid: "2-4 days",
+  fanCleaning: "Same-day",
+};
+
+function turnaroundFor(m: MacBookModel): Record<TurnaroundKey, string> {
+  return { ...DEFAULT_TURNAROUND, ...m.turnaround };
+}
+
+/** "Same-day" -> "same-day" for mid-sentence use; "3-5 days" is unchanged. */
+function lc(s: string): string {
+  return s.charAt(0).toLowerCase() + s.slice(1);
+}
+
+/** Header/QuickAnswer/price-card summary, derived from the same values as the table. */
+function turnaroundSummary(t: Record<TurnaroundKey, string>): string {
+  return `Battery ${lc(t.battery)} · screen ${lc(t.screen)} · logic board ${lc(t.logicBoard)}`;
+}
+
 type MacBookModel = {
   slug: string;
   name: string;
@@ -44,6 +89,7 @@ type MacBookModel = {
   commonIssues: string[];
   pricing: Pricing;
   timelineNotes: string;
+  turnaround?: Turnaround;
   honestyNote: string;
   heroTagline: string;
 };
@@ -119,18 +165,19 @@ function pickRelatedModels(slug: string): MacBookModel[] {
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
 
 function buildServiceRows(m: MacBookModel): ServiceRow[] {
+  const t = turnaroundFor(m);
   const rows: ServiceRow[] = [
     {
       service: "Screen / display assembly replacement",
       price: m.pricing.screen,
       href: "/macbook-screen-repair-dubai",
-      timeline: "2-3 days",
+      timeline: t.screen,
     },
     {
       service: "Battery replacement",
       price: m.pricing.battery,
       href: "/macbook-battery-replacement-dubai",
-      timeline: "Same-day",
+      timeline: t.battery,
     },
     {
       service: m.era === "intel" && m.releaseYear <= 2019
@@ -138,37 +185,37 @@ function buildServiceRows(m: MacBookModel): ServiceRow[] {
         : "Magic Keyboard repair (top-case)",
       price: m.era === "intel" && m.releaseYear <= 2019 ? m.pricing.topCase : m.pricing.keyboard,
       href: "/macbook-keyboard-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.keyboard,
     },
     {
       service: "Trackpad repair / replacement",
       price: m.pricing.trackpad,
       href: "/macbook-trackpad-repair-dubai",
-      timeline: "1 day",
+      timeline: t.trackpad,
     },
     {
       service: "USB-C / Thunderbolt port repair",
       price: m.pricing.port,
       href: "/macbook-charging-port-repair-dubai",
-      timeline: "1-2 days",
+      timeline: t.port,
     },
     {
       service: "Logic board repair (component-level)",
       price: m.pricing.logicBoard,
       href: "/macbook-logic-board-repair-dubai",
-      timeline: "3-5 days",
+      timeline: t.logicBoard,
     },
     {
       service: "Speaker repair",
       price: m.pricing.speaker,
       href: "/macbook-speaker-repair-dubai",
-      timeline: "1 day",
+      timeline: t.speaker,
     },
     {
       service: "Liquid damage diagnostic + clean",
       price: 600,
       href: "/macbook-water-damage-repair-dubai",
-      timeline: "2-4 days",
+      timeline: t.liquid,
     },
     {
       service: "Free diagnostic",
@@ -182,7 +229,7 @@ function buildServiceRows(m: MacBookModel): ServiceRow[] {
       service: "Fan cleaning + thermal paste",
       price: m.pricing.fanCleaning,
       href: "/macbook-overheating-fix-dubai",
-      timeline: "Same-day",
+      timeline: t.fanCleaning,
     });
   }
   return rows;
@@ -205,6 +252,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   }
 
   const verdict = worthRepairingVerdict(model);
+  const turnaround = turnaroundFor(model);
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
 
@@ -214,7 +262,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const faqs = [
     {
       q: `How much does a ${model.name} screen replacement cost in Dubai?`,
-      a: `Screen / display assembly replacement on the ${model.name} is priced per model and panel condition - message us on WhatsApp for today's exact price. Typical timeline 2-3 days. Includes a 3-month written warranty on the panel and the labour.`,
+      a: `Screen / display assembly replacement on the ${model.name} is priced per model and panel condition - message us on WhatsApp for today's exact price. Typical timeline ${lc(turnaround.screen)}. Includes a 3-month written warranty on the panel and the labour.`,
     },
     {
       q: `Can I upgrade the RAM or SSD on the ${model.name}?`,
@@ -228,7 +276,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
         : `How long does battery replacement on the ${model.name} take?`,
       a: isButterfly
         ? `Yes - Apple's Keyboard Service Program covers 2015-2019 MacBook models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap - message us on WhatsApp for the exact price.`
-        : `Battery replacement on the ${model.name} is typically completed the same day - message us on WhatsApp for today's exact price. We use cells with verified cycle counts and reseal the chassis properly.`,
+        : `Battery replacement on the ${model.name} ${/^same-day$/i.test(turnaround.battery) ? "is typically completed the same day" : `typically takes ${lc(turnaround.battery)}`} - message us on WhatsApp for today's exact price. We use cells with verified cycle counts and reseal the chassis properly.`,
     },
     {
       q: `Is the ${model.name} still worth repairing in 2026?`,
@@ -242,14 +290,14 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Free Diagnosis, Same-Day`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
       seoDescription={`${model.name} (${model.releaseYear}) repair in Dubai - screen, battery, keyboard & logic board. Free pickup, up to 12-month warranty. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Keyboard & Logic Board`}
       subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
       startingPrice={0}
-      timeline={isAppleSilicon && model.currentInLineup ? "Same-day battery · 2-5 days specialty parts" : "Same-day to 3 days"}
+      timeline={turnaroundSummary(turnaround)}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
       breadcrumb={[
         { name: "Home",           path: "/" },
@@ -333,7 +381,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
                 Apple ran a Keyboard Service Program covering 2015-2019 MacBook models with butterfly keyboards for <strong>4 years from the original purchase date</strong>. If your keyboard fails and you're inside that window, Apple may still fix it free.
               </p>
               <p className="text-[15px]">
-                We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap in about 1 day - message us on WhatsApp for the exact price.
+                We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap (typically {lc(turnaround.keyboard)}) - message us on WhatsApp for the exact price.
               </p>
             </div>
           )}
@@ -341,10 +389,11 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
           <h2 className="text-[28px] md:text-[32px] mb-md">Parts availability for the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">
             {model.currentInLineup
-              ? `As Apple's current ${FAMILY_LABEL[model.family]}, parts come through authorised channels. Battery, MagSafe boards and ports are usually in stock same-day. Specialty items (logic board, full screen assembly) take 2-5 days. ${model.timelineNotes}`
+              ? model.timelineNotes
               : model.era === "intel"
                 ? `Intel-era parts are still well-stocked in Dubai - screens, batteries, top-cases and ports are routine. Logic boards are sourced board-by-board. ${model.timelineNotes}`
-                : `Parts for the ${model.shortName} are widely available. Screens, batteries, top-cases and ports are usually same-day to 2 days. ${model.timelineNotes}`}
+                : `Parts for the ${model.shortName} are widely available. ${model.timelineNotes}`}
+            {" "}Turnaround for every other repair is in the table above.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
@@ -398,8 +447,8 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickMacBookReviewers(slug)}
       related={[
-        { label: "MacBook screen repair Dubai",          href: "/macbook-screen-repair-dubai",         description: "Cracked panel, dead pixels, backlight issues - 2-3 days." },
-        { label: "MacBook battery replacement Dubai",    href: "/macbook-battery-replacement-dubai",   description: "Fresh cells, verified cycle count, sealed properly. Same-day." },
+        { label: "MacBook screen repair Dubai",          href: "/macbook-screen-repair-dubai",         description: "Cracked panel, dead pixels, backlight issues." },
+        { label: "MacBook battery replacement Dubai",    href: "/macbook-battery-replacement-dubai",   description: "Fresh cells, verified cycle count, sealed properly." },
         { label: "MacBook full diagnostic",              href: "/macbook-full-diagnostic-dubai",       description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },
       ]}
     />
