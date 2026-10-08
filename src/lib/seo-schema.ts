@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "@/lib/zod";
 
 // Schemas for the private SEO command center (backlinks + ranking snapshots).
 // Mirrors the lead-schema.ts pattern: one zod schema, reused by the API route for

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "@/lib/zod";
 
 // Shared lead schema - used by both the client form (per-step validation) and the
 // /api/lead route handler (server-side validation before email + save). Never trust
