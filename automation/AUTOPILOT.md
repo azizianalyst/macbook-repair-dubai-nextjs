@@ -1,189 +1,190 @@
-# Autopilot — the one daily routine for macbook-repair-dubai.ae
+# Autopilot: the one daily routine for macbook-repair-dubai.ae
 
-Read `automation/AGENTS.md` first; it binds every part below and defines the
-worktree setup (do it before anything else). This file is the source of truth for
-the scheduled task `mbr-growth-engine` (daily, 10:00 Dubai). Edit the loop here.
+Scheduled task `macbook-repair-dubai-ae`, daily 07:00 Dubai. Read `automation/AGENTS.md` first;
+it binds every step below. Each job runs only when its War Room switch says so.
 
-## How the day branches
+## 0. Start (every run)
 
-After the worktree setup, run `date +%u` (1 = Monday, 4 = Thursday) and `date +%d`.
-Do **Part 1 every day**. Add **Part 2 on Monday**, **Part 3 on Thursday**,
-**Part 4 on the 1st and 15th**. Parts run in numeric order. A red gate stops the
-whole run; everything else is skip-and-log. Finish with the FINISH section.
+1. `cd /Users/azizi/Claude/Projects/macbook-repair-dubai.ae`. Note `date +%u` (1 = Monday),
+   `date +%d` and `date +%m`. The machine runs on Dubai time.
+2. Load `ArtifactData`. Read the War Room collections `jobs`, `decisions`, `clusters`, `tasks`,
+   and the `log` entries newer than the previous run (`automation/state/last-run.txt`).
+3. A job runs today only if its `status` is `approved` or `active` **and** it is due today
+   (table below). If a due job is `approved`, set it to `active` in the same write as its result.
+   A `paused` or `proposed` job never runs.
+4. Before the first code-changing job, apply the dirty-tree rule in `AGENTS.md`.
 
-`ADMIN_KEY` comes from `.env.local` (`grep ^ADMIN_KEY .env.local | cut -d= -f2`).
-`LIVE=https://macbook-repair-dubai.ae`. Every live request uses
-`UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"`
-via `curl -sL -A "$UA" --max-time 20`, with **6 s** between requests (≤ 10/min). The first 429
-ends all further live requests for this run (see AGENTS.md rule 4).
+| Job | Id | Due | Changes code |
+|---|---|---|---|
+| Decision watcher | j02 | every day | only fact-sheet updates the owner confirmed |
+| Lead and uptime check | j03 | every day; marked test lead on Mondays | no |
+| Daily data | j01 | every day; new keywords on Mondays | no (data files only) |
+| Weekly report | j06 | Monday | no |
+| Apple watch | j04 | Monday and Thursday | no |
+| Weekly build | j05 | Tuesday | yes |
+| Truth drift scan | j07 | Wednesday | yes |
+| Link monitor | j08 | Friday | redirects only |
+| Monthly review | j09 | 1st of the month | no |
+| Quarterly check | j10 | 1st of Jan, Apr, Jul, Oct | yes |
 
----
-
-## PART 1 — Daily canary + GBP care (every run)
-
-**A. Site and lead-path health.** Run in order, record each as pass/fail:
-
-1. `curl -s -o /dev/null -w "%{http_code}" $LIVE/` → 200, and the body contains "MacBook Repair Dubai".
-2. Money pages must be 200: `/`, `/macbook-repair-dubai`, `/macbook-screen-repair-dubai`,
-   `/macbook-battery-replacement-dubai`, `/macbook-logic-board-repair-dubai`, `/iphone-repair-dubai`,
-   `/contact`, `/reviews`, `/blog`. (If a slug 404s, check `src/app` for the real one before
-   calling it a failure — then fix this list in a commit.)
-3. `www` → 308 to non-www: `curl -sI https://www.macbook-repair-dubai.ae/ | grep -iE "^(HTTP|location)"`.
-4. robots.txt must contain `Sitemap:`; in the **first** `User-Agent: *` group the only Disallows may be
-   `/api/` and `/admin/` (a `Disallow: /` further down belongs to the scraper-bot group and is fine).
-5. `/sitemap.xml` is an index. Fetch `/sitemap/services.xml`, `models.xml`, `locations.xml`, `blog.xml`,
-   `guides.xml`, `general.xml`, `categories.xml` (7 requests) and sum the `<loc>` counts. Compare to the
-   last health file that has a number; a drop of more than 5% is a failure.
-6. WhatsApp lead path: for `/`, `/contact` and `/macbook-screen-repair-dubai`, the HTML must contain
-   `https://wa.me/971557413706` (`curl -s $LIVE/<path> | grep -c "wa.me/971557413706"` > 0) and
-   `curl -sI https://wa.me/971557413706` must not be a 4xx/5xx. A page missing the link, or a wrong
-   number, is a **failure** — this is the money path.
-6b. Form lead path (secondary): `curl -s -o /dev/null -w "%{http_code}" -X POST -H "content-type: application/json" -d '{}' $LIVE/api/lead`
-   → 400 or 422 is healthy (it rejects an empty body). 404, 405 or 5xx is a failure.
-   Then `curl -s -H "Authorization: Bearer $ADMIN_KEY" "$LIVE/api/leads"` → must be 200 JSON.
-   Count leads with a timestamp in the last 24 h and the last 7 days; record both.
-7. Live build matches main: `curl -s $LIVE/build-id.txt` if that file exists; otherwise compare
-   `lastmod` of `/` in the sitemap with `src/content/lastmod.generated.ts` on origin/main. A gap of
-   more than 24 h after a push is a failure ("deploy did not land").
-7b. **Edge probe (the 429 guard)** — 10 requests, 1 s apart, browser UA, to `/`, `/contact/`,
-   `/macbook-screen-repair-dubai/`, `/macbook-battery-replacement-dubai/`, `/iphone-repair-dubai/`,
-   `/reviews/`, `/blog/`, `/robots.txt`, `/sitemap.xml`, `/macbook-repair-dubai/`. Record every status
-   and whether any response carries `x-hcdn-request-id` or `platform: hostinger`. **Any 429 = check 13
-   fails. Any hCDN header = check 14 fails** ("Hostinger CDN is back in front of the site — see AGENTS.md
-   Edge rule"). Both are alert conditions.
-8. Latest Hostinger build (only if `hosting_listWebsitesV1` on `hostinger-macbookrepair` lists the domain;
-   otherwise record "MCP on wrong account" as a failure): `mcp__hostinger-macbookrepair__hosting_listJsDeployments` (`perPage: 1`)
-   → record state.
-
-**B. GBP care (through the live admin API — skip all of B if a 429 was seen).**
-
-9. `GET $LIVE/api/admin/gbp/status` → connected? If not, this is a failure ("GBP token expired —
-   Aziz must reconnect at /admin/gbp").
-10. `GET $LIVE/api/admin/gbp/reviews` → any review without a reply? Reply to each via
-    `POST /api/admin/gbp/reviews` (read `src/app/api/admin/gbp/reviews/route.ts` for the body
-    shape) following the reply rules in AGENTS.md. Record count replied.
-11. Post cadence: `GET $LIVE/api/admin/gbp/posts` → date of the newest post. If it is older than
-    **6 days**, publish one STANDARD post now: pick the next unused entry from
-    `docs/gbp-posts-batch-2.md` (then batch-1), or write a fresh 80–120 word post about a live
-    service page. Body must be quote-model, truthful, with a CTA linking to a page that curls 200.
-    `POST /api/admin/gbp/posts` (read the route for the shape). Mark the entry used by appending
-    the date in the batch file. Record the post link.
-12. `GET $LIVE/api/admin/gbp/insights` (last 28 days) → calls, website clicks, direction
-    requests; record in the health file for the weekly trend.
-
-**C. Write and alert.**
-
-Write `automation/logs/health/YYYY-MM-DD.md`: a table of checks 1–14 with results (13 = "no 429 seen this run", 14 = "no hCDN header seen"), plus
-"Leads: N (24 h) / N (7 d)", "GBP: reviews replied N, post published Y/N, insights ...", and a
-"Still needs Aziz" list built from the open 🧑 items in `docs/TASKS.md` Module 1–2 plus anything
-found today. Append one line to `automation/logs/YYYY-MM.md`: "canary: N/14 pass — <failures>".
-
-ALERT RULE. Email azizianalyst@gmail.com via the Gmail connector ONLY if: the site is down or
-blank; any 429 or hCDN header (checks 13/14); the WhatsApp path (check 6) or form path (check 6b) fails; robots.txt fails; the sitemap dropped >5%; a deploy has not
-landed for >24 h; the GBP connection is dead. Subject: "macbook-repair-dubai.ae canary: <what
-failed>". Body: the failing check, one sentence on what it means, and the exact action only Aziz
-can take (429/hCDN: Cloudflare DNS must be A → 46.17.175.101 only, www CNAME → apex, hPanel CDN Disabled; lead path: check `SMTP_*` + `LEAD_TO_EMAIL` in Hostinger → Node.js → Environment
-variables; GBP: reconnect at /admin/gbp; deploy: rerun `DEPLOY.md`). Do not email when everything
-passes. Do not repeat an unchanged failure two days running.
+Run order: j02, j03, j01, then the rest in table order. A red gate stops that job, not the run.
+`j00` is the separate Monday cloud routine; never run it from here.
 
 ---
 
-## PART 2 — Weekly growth run (Monday only)
+## j02 Decision watcher
 
-Goal: ship one page that can win a lead-bearing query, then point GBP at it.
+1. Compare `decisions` (answer, answeredAt), `clusters` (decision, decidedAt) and Owner `log`
+   entries with `automation/state/war-room-seen.json` (create it if missing).
+2. For each new or changed answer, create or update a task that says what the answer unblocks,
+   with a `source` field naming it (e.g. `"D9 answered 2026-10-12"`). The work itself happens in
+   j05 or j07, never here.
+3. A cluster newly marked Target gets its planned tasks (from the cluster `plan`, the keyword map
+   and `docs/cowork-mac-growth-plan.md`). Skip moves its open Claude tasks to done with
+   "Skipped by owner". Later leaves them in todo with `week: "Later"`.
+4. A business fact the owner confirmed in a decision answer goes into
+   `docs/business-fact-sheet.md` as VERIFIED, source "Owner, War Room <id>, <date>" (code job:
+   dirty-tree rule applies).
+5. Save the new state file.
 
-**Precondition:** the production branch guard in AGENTS.md passes (branch exists on origin) AND
-`hostinger-macbookrepair` lists macbook-repair-dubai.ae. If either fails, do steps 1–2 only
-(measure and pick), write the pick to the log as "Next Monday", and skip 3–7.
+## j03 Lead and uptime check
 
-1. **MEASURE** — In the logged-in Chrome session open Search Console (URL in AGENTS.md), last
-   28 days vs previous 28, Queries tab then Pages tab. Capture: top 30 queries by impressions with
-   position and CTR; queries in position 5–20 with ≥ 50 impressions; pages that lost > 30% clicks.
-   Write `automation/gsc/YYYY-MM-DD.md`. If Chrome is not logged in, log "GSC unavailable" and
-   fall back to `docs/gsc-longtail-queries-2026-09-01.csv` + `docs/keyword-service-gap-audit-2026-08-30.md`.
+Live-site rules apply (6 s apart, browser UA). Record each check pass or fail:
 
-2. **PICK one job**, in this priority:
-   a. A money page (screen, battery, logic board, liquid damage, data recovery, iPhone screen/battery)
-      in position 5–15 with impressions → **refresh** it: sharper title (≤ 60 chars, Dubai +
-      service + a truthful qualifier), rewrite the 40–60 word answer block, add one FAQ that a
-      real query asks, add 2 internal links to it from related pages, bump `dateModified`.
-   b. A query cluster with ≥ 100 impressions and no page targeting it → **build** the page with
-      the matching template (`src/components/blocks/…`) and register it exactly as sibling pages
-      are (route file, `gen-routes`, menus/categories if needed, `docs/url-inventory-by-cluster.md`).
-   c. Otherwise the next 🤖 item in `docs/TASKS.md` Workstream B/C that is a page job.
-   Never pick a page that is mid-edit on Aziz's branch (`git -C $ROOT status --short` lists it).
+1. `/` returns 200 and contains "MacBook Repair Dubai".
+2. These return 200: `/`, `/mac-repair-dubai/`, `/macbook-screen-repair-dubai/`,
+   `/macbook-battery-replacement-dubai/`, `/imac-repair-dubai/`, `/iphone-repair-dubai/`,
+   `/contact/`.
+3. `https://www.macbook-repair-dubai.ae/` redirects to the apex (owner task t02 until it does;
+   record, don't alert).
+4. `robots.txt` contains `Sitemap:` and the first `User-Agent: *` group disallows only `/api/` and
+   `/admin/`.
+5. The HTML of `/`, `/contact/` and `/macbook-screen-repair-dubai/` contains
+   `wa.me/971557413706`.
+6. `POST /api/lead` with body `{}` returns 400 or 422 (the form rejects an empty lead and sends
+   nobody anything). 404, 405 or 5xx is a failure.
+7. No response carried `x-hcdn-request-id` or `platform: hostinger`, and none was a 429.
+8. **Mondays only:** `node scripts/lead-canary.mjs --json` sends one lead marked
+   "CANARY … please ignore" and reports per-channel delivery. Any channel not "sent" is a failure.
 
-3. **WRITE** under the content rules in AGENTS.md. Word count 900–1,400 for a service page,
-   1,200–2,000 for a guide. Every page: H1 with the query, answer block, H2s that mirror real
-   questions, FAQ (4–6), `PageSchema` server-rendered, ≥ 3 inbound links from live pages, primary CTA
-   "WhatsApp us on 055 741 3706" (`wa.me/971557413706`, prefilled message naming the service), with
-   the form at `/contact` as the secondary CTA.
+Write `automation/logs/health/YYYY-MM-DD.md` (table of checks). A failure creates or updates an
+urgent Owner task "Site check failing: <what>", and follows the ALERT RULE.
 
-4. **GATE** — from `$WT`: `rm -rf .next && npm run build && npm run check:urls && npm run check:internal && node scripts/audit-prices-src.mjs`.
-   Non-zero exit → fix; if it cannot be fixed within the run, `git checkout -- .` and log why.
+**ALERT RULE.** Email azizianalyst@gmail.com (Gmail connector) only when: the site is down or
+blank, any 429 or hCDN header appeared, the WhatsApp link is missing on a checked page, the form
+endpoint is broken, or robots.txt is wrong. Subject "macbook-repair-dubai.ae canary: <what
+failed>". Body: the failing check, one sentence on what it means, and the one action only the
+owner can take. Never email the same open failure two days running; log "still open, day N".
+Everything else goes to the War Room only.
 
-5. **SHIP** — commit ("feat(seo): <slug> — <why, with the GSC numbers>", ending with
-   "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"), push to main, then deploy exactly per
-   `DEPLOY.md` steps 2–5 from `$WT`. Verify the new/refreshed URL returns 200 live and its
-   `<title>` is the new one. Then `node scripts/indexnow-ping.mjs`.
+## j01 Daily data
 
-6. **GBP follow-through** — publish one GBP post (rules in Part 1 step 11) whose CTA is the page
-   just shipped. Add the page to `docs/gbp-posts-batch-2.md` as a used entry.
+1. Semrush (Chrome): Domain overview (Authority Score, referring domains, organic keywords,
+   organic traffic) and Organic positions UAE for macbook-repair-dubai.ae (all rows: keyword,
+   position, volume, KD, URL). Save to `automation/data/positions-latest.tsv`; on Mondays also
+   keep `automation/data/positions-YYYY-MM-DD.tsv`.
+2. Write `snapshots/<YYYY-MM-DD>`: `{date, source: "Semrush UAE (daily data job)", authority,
+   refDomains, keywords, top10, traffic, gscClicks: null, gscImpressions: null, gscCtr: null,
+   gscPosition: null, aiCitations: null, note}`.
+3. Opportunities, Mac and latest-iPhone keywords only (`device` in the keyword bank, and the
+   owner direction in the growth plan):
+   - our pages at positions 4–15 (refresh candidates);
+   - positions 2–8 where the SERP has a featured snippet (answer-block candidates);
+   - keywords where a page other than the owner page ranks (`owners` collection and
+     `docs/keyword-page-map.csv`); update that `owners` row's `rankingNow` and `status`;
+   - drops of 3+ positions against the previous saved file.
+   Create or update one todo task per keyword (dedupe by keyword), `phase: "Data"`, with the
+   numbers and the date in `detail`.
+4. **Mondays:** Keyword Magic for the seeds "macbook repair", "mac repair", "imac", "mac mini",
+   "mac studio", "macbook neo", "iphone 18", "iphone 17", "iphone air". Append keywords with
+   KD 0–29 that are not in `docs/keywords/keyword-bank-2026-09.csv` to
+   `docs/keywords/new-keywords-YYYY-MM.csv`.
+5. Check: a fresh subagent re-reads 10 random numbers from the saved file against Semrush and
+   reports mismatches. Any mismatch → redo that table.
 
-7. **LOG** — append to `automation/logs/YYYY-MM.md`: what shipped (URL), the query it targets and
-   its GSC numbers, gate result, deploy verified Y/N, IndexNow Y/N, GBP post link. Add a
-   "Next Monday" line with the second-best candidate so the next run starts faster.
+## j06 Weekly report (Monday)
 
----
+Compare this Monday's positions file with last Monday's: every keyword in `owners` and every
+Target-cluster keyword in the top 30, referring domains, leads in the last 7 days
+(`GET /api/leads` with `Authorization: Bearer $ADMIN_KEY` from `.env.local`; counts only, never
+customer details), and what shipped (commits since last Monday). Say "Semrush only: GSC, GA4 and
+Ahrefs not connected" until they are. Post it as one `log` entry; detail goes in
+`automation/reports/weekly-YYYY-MM-DD.md`.
 
-## PART 3 — AI visibility and SERP watch (Thursday only)
+## j04 Apple watch (Monday and Thursday)
 
-No edits, no deploy, no email. Research only.
+Fetch https://www.apple.com/newsroom/ , https://www.apple.com/ae/mac/ and
+https://www.apple.com/ae/iphone/ (WebFetch). Compare with `docs/apple-lineup-2026-09-26.md`.
 
-A. In Chrome, ask each of these 8 prompts in ChatGPT (chatgpt.com, search on) and Perplexity;
-   record whether macbook-repair-dubai.ae is cited and which competitors are:
-   "best MacBook repair in Dubai", "MacBook screen replacement Dubai", "MacBook battery
-   replacement Dubai cost", "MacBook logic board repair Dubai", "MacBook liquid damage repair
-   Dubai", "iPhone screen repair Dubai Media City", "Apple repair near Dubai Media City",
-   "data recovery MacBook Dubai".
-B. Google (incognito tab, `&gl=ae&hl=en`) the same 8 queries; record our position (or "not top
-   10"), the map-pack members, and any new competitor URL not seen last week.
-C. Write `automation/ai-visibility/YYYY-MM-DD.md` with both tables and up to 3 concrete
-   recommendations for Monday (e.g. "build /x: cited for prompt 5 via competitor Y, we have no
-   page"). Append one line to `automation/logs/YYYY-MM.md`: "AI: cited N/16, Google top-10: N/8".
+- Announced Mac → urgent Claude task "Build the <model> hub within 48 hours" with Apple's facts
+  and source links in `detail`. Announced latest-tier iPhone → normal task.
+- Discontinued model → task "Mark <model> discontinued within 7 days; keep the page".
+- Price change → note in the lineup doc.
+- Never act on rumours or non-Apple sources.
 
----
+## j05 Weekly build (Tuesday)
 
-## PART 4 — Links, quick wins, freshness (1st and 15th only)
+Take the top 3–5 todo tasks with `owner: "Claude"` that belong to Target clusters (or are truth
+fixes), ordered by `week` then `order`. For each page follow `docs/cowork-operating-prompt.md`
+section 4, steps 5–9:
 
-1. **Corpus** — `rm -rf .next && npm run build` in `$WT`; then `npm run check:internal` and
-   `node scripts/crawl-site.mjs` (against the local build if it supports it, else live, slowly).
-2. **Gather** — pages with < 3 inbound links; money pages with < 5; titles < 45 chars; pages whose
-   `dateModified` / lastmod is > 90 days old among the top-20 GSC pages; GSC pages with ≥ 200
-   impressions and CTR < 2%.
-3. **Score** — +5 money page, +4 fix < 30 min, +2 fix 30–120 min, +4 ranks 5–15, +3 ≥ 200
-   impressions, +2 no template change. ≥ 12 do now; 8–11 if time allows; < 8 log.
-4. **Fix**, ~2 hours max: add internal links (only genuinely relevant), lengthen weak titles
-   truthfully, rewrite title/meta for up to 3 low-CTR pages, make a real content improvement on
-   up to 2 stale money pages (new section answering an unanswered question) and bump the date.
-   On the **1st of Jan/Apr/Jul/Oct** also bump `CONTENT_REVIEWED` in `src/content/site.ts`.
-5. **Gate, ship, log** — exactly as Part 2 steps 4, 5 and 7, plus `node scripts/crawl-site.mjs`
-   against live after deploy.
-6. **Backlinks** — read `docs/backlink-prospects-2026-06.csv` and `docs/link-and-mention-plan.md`;
-   draft (do NOT send) up to 3 outreach emails into `automation/outreach/YYYY-MM-DD.md` for Aziz
-   to send. Listing sites/directories that only need a form: list them under "Needs Aziz".
+1. Read the live Google SERP for its keyword (Chrome, google.ae).
+2. Write the change as the technician on the bench, to the page standard in `CLAUDE.md`.
+3. Two independent reviewer subagents in fresh contexts: a Truth Auditor and a Technical SEO.
+   Each returns APPROVED or REVISE. Apply only approved edits.
+4. A Chief Editor subagent checks the whole batch for duplicate wording, cross-page
+   contradictions and cannibalisation.
+5. Gates: `npx tsc --noEmit`, `npm run build`, `npm run check:gates`, `npm run check:seo`,
+   `check:internal` against the local build (see `AGENTS.md`), and Lighthouse (cached at
+   `~/.npm/_npx/*/node_modules/.bin/lighthouse`) on changed templates: SEO and accessibility
+   100. Best-practices is 96 sitewide until the CSP task lands; report it, don't block on it.
+6. One commit per page on `WORK_BRANCH`. Never push, never deploy.
+
+Mark each task done with its commit hash, and log a table: page | status | new title.
+
+## j07 Truth drift scan (Wednesday)
+
+1. `npm run check:seo`.
+2. In the built HTML (`.next/server/app/**/*.html`) look for claims that change with time:
+   "<n> years", "new", "latest", "just launched", "current lineup", release and discontinued
+   statuses against `docs/apple-lineup-2026-09-26.md`, and any "same-day" claim that disagrees
+   with that page's own table.
+3. Clear contradictions → fix on the branch through the j05 review and gate steps. Anything that
+   needs a fact → a new decision doc (next free D-number) with a `recommended` option.
+
+## j08 Link monitor (Friday)
+
+1. Semrush Backlinks: new and lost referring domains since last Friday.
+2. Backlinks whose target URL is 404 on our site → add a 301 to the redirect source
+   (`scripts/gen-redirects.cjs` input) through the j05 gates; one commit.
+3. Unlinked brand mentions: WebSearch for "MacBook Repair Dubai" "Concord Tower" and the phone
+   number; list pages that mention us without a link.
+4. Directory progress from `docs/keywords/link-prospects-2026-09.csv` (aim: 10 UAE directories a
+   month with the NAP exactly as in the fact sheet).
+5. Draft up to 3 outreach emails to `automation/drafts/YYYY-MM-DD-outreach.md` and add one Owner
+   task "Send the drafted outreach". Never send.
+
+## j09 Monthly review (1st)
+
+What moved and why (positions, referring domains, leads), the decay list (pages that dropped for
+two weeks running), a refresh or merge plan, and next month's Mac and latest-iPhone plan. A second
+subagent reviews the plan first. New clusters arrive in the War Room unmarked for the owner.
+
+## j10 Quarterly check (1st of Jan, Apr, Jul, Oct)
+
+Full fact check of the site against `docs/business-fact-sheet.md`, competitor gap against
+fixsquad.ae, fixermanme.com and macrepair.ae, Arabic keyword re-pull. Bump `CONTENT_REVIEWED` in
+`src/content/site.ts` only after the Truth Auditor approves the fact check. Code job.
 
 ---
 
 ## FINISH (every run)
 
-From `$WT`: `git add automation docs && git commit -m "Autopilot YYYY-MM-DD: <parts run>" && git push origin main`
-(if there is nothing to commit, say so). End with a short report:
-
-- Canary: N/14 pass, alert sent Y/N, leads 24 h / 7 d, GBP reviews replied, post published.
-- For any other part: what shipped (live URL), what was skipped and why, gate result, deploy
-  verified Y/N, IndexNow Y/N.
-- **Needs Aziz**: the human-only items, each with the exact action.
-
-Never report a part complete if its deploy did not verify live. Never leave `$WT` on a branch
-other than `main`.
+1. For every job that ran: update `jobs/<id>` with `lastRun` (ISO time) and `lastResult` (one
+   line), pinned to the version you read.
+2. One `log` entry `{by: "Autopilot", at, text}`: what ran, what changed, and a "Needs you"
+   list with the exact action for each item.
+3. Write today's date to `automation/state/last-run.txt`.
+4. If the dirty-tree rule passes, commit the `automation/` and `docs/keywords/` files this run
+   wrote: `git commit -m "Autopilot YYYY-MM-DD: <jobs run>"`. Never push.
+5. Final message: five lines at most, plus anything that needs the owner.
