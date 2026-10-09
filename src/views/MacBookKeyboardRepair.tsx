@@ -25,7 +25,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT } from "@/content/site";
 
 type PricingRow = { model: string; price: number; timeline: string };
 
@@ -42,7 +42,7 @@ const PRICING: PricingRow[] = [
 
 const PROBLEMS = [
   { title: "Sticky or repeating keys (butterfly 2016-2019)",
-    body: "Classic butterfly failure - a single dust particle under the dome triggers double-presses or no-press. Apple's own service program ended December 2022. The workshop replaces the entire top case (keyboard + battery + speakers as one bonded unit) because Apple designed the butterfly to be unrepairable per-key." },
+    body: "Classic butterfly failure - a single dust particle under the dome triggers double-presses or no-press. Apple's Keyboard Service Program for these models has ended. The workshop replaces the entire top case (keyboard + battery + speakers as one bonded unit) because Apple designed the butterfly to be unrepairable per-key." },
   { title: "Dead key - letter, number, or modifier won't register",
     body: "On Magic Keyboard (2019+) a single key cap and scissor switch can be swapped individually. On butterfly models (2016-2019) the entire top case must go. On 2012-2015 Retina the keyboard alone can be replaced without the battery." },
   { title: "Worn key letter - print rubbed off the cap",
@@ -50,30 +50,30 @@ const PROBLEMS = [
   { title: "Backlight stopped working - keys still work",
     body: "Failed backlight chip on the keyboard PCB. Chip-level repair on Magic Keyboard, no full-keyboard swap needed. On butterfly the LED strip is bonded into the top case, so the full case goes." },
   { title: "Liquid spill - multiple keys dead",
-    body: "Coffee, juice, water, or beer through the keyboard. The membrane corrodes within 6-12 hours. A same-day ultrasonic clean saves the keyboard in 60% of cases. If the membrane is gone, the keyboard or top case is replaced." },
+    body: "Coffee, juice, water, or beer through the keyboard. Liquid corrodes the membrane and contacts within hours, so power off and bring it in the same day. An ultrasonic clean can save the keyboard; if the membrane is gone, the keyboard or top case is replaced." },
   { title: "Caps lock or function keys stuck on",
-    body: "Karabiner Elements or a Bluetooth keyboard pairing conflict in 30% of cases (free fix). Mechanical fault on the remaining 70% - a single key swap on Magic Keyboard." },
+    body: "Sometimes a remapping app such as Karabiner-Elements or a paired Bluetooth keyboard is the cause, which is a free fix. Otherwise it is mechanical, usually a single key swap on a Magic Keyboard." },
   { title: "Touch ID won't read fingerprint after a knock",
     body: "Touch ID is part of the top case on every modern MacBook. After a drop the sensor flex disconnects. A top case swap re-pairs Touch ID with the T2/M-series secure enclave on the bench." },
   { title: "Force-touch trackpad clicks, keys feel mushy",
-    body: "Battery swelling under the keyboard pushes the membrane up. Battery and keyboard are done as one combo job on butterfly, and as a cheaper pair on Apple Silicon." },
+    body: "Battery swelling under the keyboard pushes the membrane up. Stop charging it: the battery is replaced first, and on butterfly models battery and keyboard come as one top-case job." },
   { title: "Wrong layout - UK keyboard on US software (or vice versa)",
     body: "Karabiner Elements remap is free and reversible. If you want a physical Russian, Arabic, or French AZERTY layout, the workshop sources OEM-spec keyboards in 1-2 days." },
   { title: "Top row function keys don't work (Touch Bar dead)",
-    body: "Touch Bar driver crash (free fix via SMC/NVRAM reset) on 25% of cases. Touch Bar IC failure on 75% - the workshop fits a replacement Touch Bar assembly, separate from a full top case swap." },
+    body: "A software glitch is sometimes cleared by a restart or an SMC/NVRAM reset, at no charge. When the Touch Bar hardware has failed, the workshop fits a replacement Touch Bar assembly, separate from a full top case swap." },
 ];
 
 const STEPS = [
   { title: "WhatsApp the model + which keys",
-    body: "Send the serial number from About This Mac and a video of which keys fail. Reply within 4-8 minutes during business hours with confirmed price and timeline." },
+    body: "Send the serial number from About This Mac and a video of which keys fail. We reply during opening hours with what the job involves and a timeline." },
   { title: "Free pickup or walk in",
     body: "Walk in to Office #45, Concord Tower, Media City, or book a free pickup from anywhere in Dubai mainland. Diagnosis is on the spot - about 10 minutes." },
   { title: "Diagnosis: software vs mechanical vs liquid",
-    body: "Karabiner Elements check, NVRAM reset, then a physical key-by-key test under the microscope. About 15% of \"keyboard\" tickets turn out to be software - fixed free of charge." },
+    body: "Remapping apps and an NVRAM reset are checked first, then every key is tested under the microscope. When the fault turns out to be software, the fix is free." },
   { title: "Repair on the bench",
-    body: "Magic Keyboard single key: 30-60 minutes. Magic Keyboard full swap: 4 hours. Butterfly top case: 1 day (battery, speakers, keyboard come as one bonded unit - Apple's design)." },
-  { title: "Touch ID re-pair + 38-point QC",
-    body: "On Touch ID models the new top case is paired with the secure enclave at the bench. Every key tested at three force levels, backlight evenness checked, function keys verified." },
+    body: "Magic Keyboard single key: 30-60 minutes. Magic Keyboard full swap: 4 hours. Butterfly top case: 1 to 2 days (battery, speakers, keyboard come as one bonded unit - Apple's design)." },
+  { title: "Touch ID re-pair and key-by-key test",
+    body: "On Touch ID models the new top case is paired with the secure enclave at the bench. Every key is tested, the backlight checked and the function keys verified." },
   { title: "Free delivery + 15-day warranty card",
     body: "Same-day on Magic Keyboard single-key jobs. Next-day on top case swaps. Warranty card lists the part batch number - 15 days written, transferable once free of charge." },
 ];
@@ -82,31 +82,27 @@ const FAQS: FAQ[] = [
   { q: "How much does MacBook keyboard repair cost in Dubai?",
     a: "It depends on the keyboard generation: a single key cap on a Magic Keyboard, a full Magic Keyboard swap on Apple Silicon, a butterfly top case on 2016-2019 Pros, or a 2012-2015 Retina keyboard are four different jobs. Free diagnosis first, then a firm quote. Send us the model on WhatsApp." },
   { q: "How long does MacBook keyboard repair take?",
-    a: "Single Magic Keyboard key: 30 minutes same day. Full Magic Keyboard swap on Apple Silicon: 4 hours, same day to next day. Butterfly top case (with battery and speakers): 1 to 2 days because the top case must come from local distributor stock and the trackpad re-pairing takes 90 minutes." },
+    a: "Single Magic Keyboard key: 30 minutes same day. Full Magic Keyboard swap on Apple Silicon: 4 hours, same day to next day. Butterfly top case (with battery and speakers): 1 to 2 days, because the whole top case is replaced and re-paired." },
+  { q: "Why are only some keys on my MacBook not working?",
+    a: "On a butterfly keyboard (2016-2019) it is usually dust or crumbs under the affected keys. On a Magic Keyboard it can be one damaged switch, and a row of dead keys often points to liquid. First rule out software: remove remapping apps, try another user account, and check an external keyboard works. Then send a short video of the keys on WhatsApp." },
   { q: "Why can't you replace just one butterfly key?",
-    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's own butterfly service program (ended December 2022) replaced the entire top case - same approach here. Contact Apple for its current top-case replacement price." },
+    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's Keyboard Service Program, now ended for these models, replaced the entire top case - same approach here. Contact Apple for its current top-case replacement price." },
   { q: "What's the difference between butterfly and Magic Keyboard?",
-    a: "Butterfly (2015-2019): low-profile, thin, prone to dust failures, individual keys can't be replaced. Magic Keyboard (2019+ on Pro 16\", 2020+ on all other models): scissor switch, taller travel, individually replaceable key caps and scissor mechanisms. Apple Silicon MacBooks all use Magic Keyboard - much easier and cheaper to repair." },
+    a: "Butterfly (2015-2019): low-profile, thin, prone to dust failures, individual keys can't be replaced. Magic Keyboard (2019+ on Pro 16\", 2020+ on all other models): scissor switch, taller travel, individually replaceable key caps and scissor mechanisms. Apple Silicon MacBooks all use Magic Keyboard, which can be repaired key by key." },
   { q: "Can you replace the keyboard layout from Arabic to English (or vice versa)?",
     a: "Yes - physical layout swaps take 1 to 2 days. Common requests: UK to US (or vice versa), Arabic to English, English to Russian, English to French AZERTY. The workshop sources the OEM-spec keyboard for the exact MacBook model - same backlight, same Touch ID compatibility." },
-  { q: "What if I just spilled liquid on the keyboard right now?",
-    a: "Power off immediately. Turn the MacBook upside down on a towel. Do NOT power it on to test. Do NOT use rice. WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland. A same-day ultrasonic clean saves the keyboard in 60% of cases if it arrives within 24 hours." },
   { q: "Will Touch ID still work after the keyboard is replaced?",
     a: "Yes - the workshop pairs the new Touch ID sensor with the T2/M-series secure enclave on the bench. Takes about 15 minutes after the top case is fitted. If the secure enclave is locked (very rare), Touch ID is reset and you re-enrol your fingerprint at first login." },
   { q: "Do you use genuine Apple keyboards?",
-    a: "Genuine Apple Magic Keyboards on M3, M4, and M5 models - sourced from the local parts supplier with traceable part numbers. For 2016-2019 butterfly top cases the workshop fits OEM-spec parts from the original Foxconn factory that built Apple's part. Both labelled clearly on the WhatsApp quote, both 15-day warranty." },
+    a: "Genuine Apple parts where supply allows and quality-tested parts otherwise, and the WhatsApp quote says which one you are getting before we fit it. Either way the repair carries the 15-day written warranty." },
   { q: "What's the warranty on the new keyboard?",
     a: "15 days written warranty on parts and labour. Covers manufacturing defects, premature key failure, backlight failure, Touch ID failure. Does not cover new physical damage or liquid damage after the repair. Transferable once free of charge if the MacBook is sold." },
   { q: "Can I use my MacBook with one dead key while I wait for repair?",
     a: "Short term yes - Karabiner Elements (free) lets you remap the dead key to an unused one (e.g. caps lock to letter \"A\"). Long term no - dead keys typically multiply on butterfly keyboards and the eventual top-case swap is the same price whether 1 key or 10 are dead." },
-  { q: "Why are butterfly keyboards on the 2016-2019 MacBook Pro so unreliable?",
-    a: "Apple's first-generation butterfly switch (2015 12\" MacBook) had no dust ingress protection. The second-gen (2016-2017 Pro) added a silicone membrane but dust still entered. The third-gen (2018-2019) added a slightly improved seal but failure rates remained at 5-10x scissor switches. Apple ran a 4-year service program (ended December 2022). The workshop still services these; Apple replaces and quotes the whole top case." },
-  { q: "Do you offer free pickup for keyboard repair?",
-    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
 
 const COMPARISON = [
-  ["Repair window",                "Same day to 2 days",                          "5 to 14 business days, mail-in"],
+  ["Repair window",                "Same day to 2 days",                          "Varies; book at an Apple Store or Authorised Service Provider"],
   ["Single key cap (Magic)",       "Free diagnosis, then a quote",                 "Refused - full keyboard only"],
   ["Magic Keyboard full swap",     "Free diagnosis, then a quote",                 "No published price - quoted after inspection"],
   ["Butterfly top case (out of program)", "Free diagnosis, then a quote",         "No published price - quoted after inspection"],
@@ -173,7 +169,7 @@ export default function MacBookKeyboardRepair() {
                   <Keyboard size={14} className="text-accent" aria-hidden /> MacBook keyboard repair · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
-                  MacBook Keyboard Repair Dubai
+                  MacBook Keyboard Repair in Dubai Media City
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Sticky keys, dead keys, butterfly failures, layout swaps. Magic Keyboard work same day. Butterfly top case in 1-2 days.
@@ -189,7 +185,7 @@ export default function MacBookKeyboardRepair() {
                   </Button>
                 </div>
                 <p className="mt-lg text-[12.5px] text-text-faint">
-                  By Usman, board-level repair technician
+                  By Usman, board-level repair technician · Updated October 2026
                 </p>
               </div>
 
@@ -257,14 +253,14 @@ export default function MacBookKeyboardRepair() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <LinkifyProse selfHref="/macbook-keyboard-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook keyboard repair in Dubai covers a single key cap on Magic Keyboard, a full Magic Keyboard swap on Apple Silicon, and a butterfly top case on the 2016-2019 MacBook Pro. The workshop has fitted 2,100+ MacBook keyboards since 2004 - every Magic Keyboard since 2019, every butterfly top case since 2016, every scissor keyboard back to 2008. The butterfly mechanism is unique: Apple designed the keys, battery, and speakers to be replaced as one bonded unit, which is why Apple's own service program (ended December 2022) and the workshop both swap the entire top case rather than individual keys. Magic Keyboard (2019+) is far easier to service - single keys and scissor switches are individually replaceable.
+            MacBook keyboard repair in Dubai covers a single key cap on Magic Keyboard, a full Magic Keyboard swap on Apple Silicon, and a butterfly top case on the 2016-2019 MacBook Pro. The workshop has fitted 2,100+ MacBook keyboards since 2004 - every Magic Keyboard since 2019, every butterfly top case since 2016, every scissor keyboard back to 2008. The butterfly mechanism is unique: Apple designed the keys, battery, and speakers to be replaced as one bonded unit, which is why Apple's Keyboard Service Program, now ended for these models, and the workshop both swap the entire top case rather than individual keys. Magic Keyboard (2019+) is far easier to service - single keys and scissor switches are individually replaceable.
           </p></LinkifyProse>
         </section>
 
         {/* ── Models + pricing ───────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook keyboards we repair" intro="Every MacBook keyboard from the 2008 unibody through the 2025 M5 Pro 16″. Layout swaps to Russian, Arabic, French AZERTY available on every model." />
+            <SectionHead title="Which MacBook keyboards do you repair?" intro="Every MacBook keyboard from the 2008 unibody through the 2025 M5 Pro 16″. Layout swaps to Russian, Arabic, French AZERTY available on every model." />
             <PriceTable rows={PRICING} />
           </div>
         </section>
@@ -272,8 +268,8 @@ export default function MacBookKeyboardRepair() {
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead
-            title="Common keyboard problems we fix"
-            intro="The 10 highest-volume keyboard tickets at the workshop. Liquid spills are urgent - bring it in within 24 hours for the best recovery rate."
+            title="What keyboard faults do you fix?"
+            intro="The keyboard faults we see most at the workshop. Liquid spills are urgent: the sooner it reaches the bench, the better the chance of saving the keyboard."
             icon={<AlertTriangle size={26} className="text-accent" aria-hidden />}
           />
           <div className="grid gap-lg md:grid-cols-2">
@@ -292,8 +288,8 @@ export default function MacBookKeyboardRepair() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead
-              title="Our keyboard repair process"
-              intro="Six steps. The diagnosis stage filters out the 15% of keyboard tickets that are software issues - fixed free of charge."
+              title="How does a MacBook keyboard repair work?"
+              intro="Six steps. The diagnosis stage catches faults that turn out to be software, and those are fixed free of charge."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
@@ -322,7 +318,7 @@ export default function MacBookKeyboardRepair() {
             </Card>
             <Card>
               <h3 className="m-0 mb-2 text-text text-[18px] font-bold">2 days</h3>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed">Butterfly top case swap on the 2016-2019 MacBook Pro - the top case must be ordered in, trackpad re-pairing adds 90 minutes. Liquid-damaged keyboard with corrosion needing 24-hour ultrasonic cycle.</p>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">Butterfly top case swap on the 2016-2019 MacBook Pro, when the top case has to be ordered in, and liquid-damaged keyboards that need a long ultrasonic clean.</p>
             </Card>
           </div>
         </section>
@@ -330,34 +326,34 @@ export default function MacBookKeyboardRepair() {
         {/* ── Parts ──────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="What parts we use" />
+            <SectionHead title="Which keyboard parts do you fit?" />
             <div className="grid gap-lg md:grid-cols-2">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Genuine Apple Magic Keyboards</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Stocked for M3, M4, M5 Pro 14″ and 16″. Sourced from the local parts supplier with traceable part numbers. Touch ID and backlight pre-calibrated.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Fitted where supply allows, with Touch ID re-paired and the backlight checked on the bench. The quote says when a part is genuine.</p>
                 <p className="m-0 mono text-[13px] text-accent">Standard pricing - included</p>
               </Card>
               <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">OEM-spec butterfly top cases</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. Apple replaces the whole top case for the same job.</p>
+                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Quality-tested butterfly top cases</h3>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For the 2016-2019 MacBook Pro the whole top case is replaced, with its battery, keyboard and speakers, because that is how the part is built. Apple replaces the whole top case for the same job.</p>
                 <p className="m-0 mono text-[13px] text-accent">Same 15-day warranty</p>
               </Card>
             </div>
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              The workshop refuses unbranded sub-AED-200 Magic Keyboard "OEM" parts - these are typically pulls from water-damaged donor units with shortened scissor mechanism life.
+              We do not fit unbranded keyboard parts that cannot be tested before fitting.
             </p>
           </div>
         </section>
 
         {/* ── Warranty ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
+          <SectionHead title="What warranty comes with a keyboard repair?" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">15 days</strong> - written warranty on parts and labour, dated and signed.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature key failure, backlight failure, Touch ID issues, scissor mechanism failure.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new liquid damage, new physical damage, software remap conflicts (free to fix anyway).</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Same-day collection. Replacement fitted within 48 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. We confirm a collection time when you message.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, to a new owner if the MacBook is sold within the warranty period.</span></li>
             </ul>
           </Card>
@@ -366,7 +362,7 @@ export default function MacBookKeyboardRepair() {
         {/* ── Pricing recap + CTA ────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook Keyboard Repair Dubai. Transparent Pricing" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection. No diagnostic fee, no Touch ID re-pair surcharge, no VAT add-on." />
+            <SectionHead title="How is a keyboard repair quoted?" intro="Diagnosis is free, and the quote on WhatsApp is confirmed before any work starts." />
             <PriceTable rows={PRICING} />
 
             <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl">
@@ -384,7 +380,7 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Technician ─────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Lead technician on keyboard jobs" />
+          <SectionHead title="Who repairs the keyboard?" />
           <Card>
             <div className="flex flex-wrap items-center gap-lg">
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 font-heading text-[20px] font-bold text-accent">U</span>
@@ -407,10 +403,10 @@ export default function MacBookKeyboardRepair() {
               <Card className="border-accent/30 bg-accent/[0.06]">
                 <h3 className="m-0 mb-md text-text text-[18px] font-bold">Try it yourself first</h3>
                 <ul className="space-y-2.5 text-[14px] text-text-muted list-none p-0 m-0">
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> SMC + NVRAM reset - clears 25% of "modifier key stuck" tickets.</li>
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Disconnect Bluetooth keyboards and trackpads - 10% of phantom key presses are pairing conflicts.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> SMC and NVRAM reset - sometimes clears a stuck modifier key.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Disconnect Bluetooth keyboards and trackpads - a pairing conflict can cause phantom key presses.</li>
                   <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Karabiner Elements - free, remaps a dead key to caps lock as a stop-gap.</li>
-                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Compressed air at 90° angle on a sticky butterfly key - fixes ~5% temporarily, doesn't last but useful before a flight.</li>
+                  <li className="flex items-start gap-2"><Check size={15} className="text-accent mt-1 shrink-0" aria-hidden /> Compressed air at a 75° angle on a sticky butterfly key, as Apple suggests - sometimes a temporary fix, useful before a flight.</li>
                 </ul>
               </Card>
               <Card>
@@ -428,7 +424,7 @@ export default function MacBookKeyboardRepair() {
 
         {/* ── Comparison ─────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="MacBook Keyboard Repair vs Apple Store Dubai" />
+          <SectionHead title="Should I repair my MacBook keyboard here or at the Apple Store?" />
           <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[640px]">
               <thead>
@@ -450,7 +446,7 @@ export default function MacBookKeyboardRepair() {
             </table>
           </Reveal>
           <p className="mt-md text-[13px] text-text-faint mono max-w-[80ch]">
-            Apple list pricing from apple.com/ae/shop/mac/repair, retrieved April 2026. Apple's butterfly service program (free top-case swap) closed December 2022 - devices outside warranty pay full list.
+            Apple's Keyboard Service Program for butterfly models has ended; Apple quotes out-of-warranty top-case repairs after inspection.
           </p>
         </section>
 
@@ -462,7 +458,7 @@ export default function MacBookKeyboardRepair() {
                 <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">All six reviews are verbatim from Google</p>
                 <h2 className="m-0 text-text">Real keyboard-repair reviews</h2>
               </div>
-              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all 232+ <ArrowRight size={15} aria-hidden /></Link>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">Read all {REVIEW_COUNT}+ <ArrowRight size={15} aria-hidden /></Link>
             </div>
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
