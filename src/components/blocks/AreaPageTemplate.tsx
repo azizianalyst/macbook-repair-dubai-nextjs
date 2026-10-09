@@ -288,7 +288,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex items-start gap-md">
           <ParkingCircle size={24} className="text-accent shrink-0 mt-1" aria-hidden />
           <p className="text-[15px] text-text-muted leading-relaxed m-0">
-            <strong className="text-text">Prefer to drop in?</strong> Paid tower parking or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times for a guaranteed slot.
+            <strong className="text-text">Prefer to drop in?</strong> Paid tower parking or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times to book a slot.
           </p>
         </article>
       </section>
