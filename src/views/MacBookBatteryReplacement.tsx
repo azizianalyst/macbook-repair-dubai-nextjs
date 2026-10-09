@@ -178,7 +178,7 @@ export default function MacBookBatteryReplacement() {
                   <Battery size={14} className="text-accent" aria-hidden /> MacBook battery replacement · Media City
                 </p>
                 <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
-                  MacBook Battery Replacement Dubai
+                  MacBook Battery Replacement in Dubai Media City
                 </h1>
                 <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
                   Service Recommended? Swollen pack? Sudden shutdowns? New tier-1 cells in 2 hours, 3-month warranty plus 80% capacity guarantee.
@@ -194,7 +194,7 @@ export default function MacBookBatteryReplacement() {
                   </Button>
                 </div>
                 <p className="mt-lg text-[12.5px] text-text-faint">
-                  Reviewed by Usman, Lead MacBook Technician
+                  By Usman, board-level repair technician · Updated October 2026
                 </p>
               </div>
 
@@ -235,7 +235,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook battery replacement in Dubai finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent hover:underline">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
+            MacBook battery replacement in Dubai finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
           </p></LinkifyProse>
         </section>
 
