@@ -861,7 +861,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
   },
   "/blog/why-21-years-experience-matters": {
-    "title": "Why 21 Years of Apple Repair Experience Matters in 2026",
+    "title": "Why Two Decades of Apple Repair Experience Matter",
     "description": "40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
   },
   "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {

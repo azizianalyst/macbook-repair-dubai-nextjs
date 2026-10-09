@@ -1,12 +1,15 @@
 "use client";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
+import { NAP } from "@/content/site";
+
+const YEARS = NAP.yearsInBusiness;
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 
 export default function Blog21YearsExperience() {
   return (
     <BlogPostTemplate
-      seoTitle="Why 21 Years of Apple Repair Experience Matters in 2026"
+      seoTitle="Why Two Decades of Apple Repair Experience Matter"
       seoDescription="40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
       path="/blog/why-21-years-experience-matters"
       wide
@@ -23,20 +26,20 @@ export default function Blog21YearsExperience() {
         { id: "repair-quality", label: "What this means for quality" },
       ]}
       category="Trust · About us"
-      h1="Why 21 Years of Apple Repair Experience Matters"
+      h1="What Two Decades of Apple Repair Mean for Your Mac"
       hook="Started October 2004. 40,000+ MacBooks fixed. Here's what longevity actually means for your repair."
-      quickAnswer="21 years of Apple-only repair means: model-specific failure pattern memory across 6 chip generations (PowerPC → Intel → Apple Silicon), specialty tooling built up since 2004, deep parts-network relationships, and a continuity team (Shafiq since 2008, Usman since 2012). Pop-up shops can't replicate that knowledge density on iPhone 16 Pro or MacBook Pro M5 issues."
+      quickAnswer={`${YEARS} years of Apple-only repair means: model-specific failure pattern memory across 6 chip generations (PowerPC → Intel → Apple Silicon), specialty tooling built up since 2004, deep parts-network relationships, and a continuity team (Shafiq since 2008, Usman since 2012). Pop-up shops can't replicate that knowledge density on iPhone 16 Pro or MacBook Pro M5 issues.`}
       author={{ name: "Abdul Aziz", role: "Founder" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="Why 21 Years Experience Matters. MacBook Repair Dubai - 21 years of Apple repair experience since 2004"
+      featuredImageAlt={`MacBook Repair Dubai: ${YEARS} years of Apple repair experience since 2004`}
       body={
         <>
-          <h2 id="quick-answer">Why 21 Years Experience Matters. Quick answer</h2>
+          <h2 id="quick-answer">Why does two decades of experience matter? Quick answer</h2>
           <p>
             We opened on <strong>10 October 2004</strong>. Steve Jobs was still alive. The newest
-            MacBook was the PowerBook G4. iPhone wouldn't exist for another three years. Twenty-one
+            MacBook was the PowerBook G4. iPhone wouldn't exist for another three years. {YEARS}{" "}
             years later we've serviced every model Apple made and accumulated a knowledge base no
             new shop can match.
           </p>
@@ -63,7 +66,7 @@ export default function Blog21YearsExperience() {
             caption="Apple platforms we've serviced (with our years of experience on each)"
             headers={["Platform", "Apple introduced", "We started servicing", "Years of experience"]}
             rows={[
-              { model: "PowerPC Mac (G4/G5)", apple: "1999", ours: "2004", note: "21 years" },
+              { model: "PowerPC Mac (G4/G5)", apple: "1999", ours: "2004", note: `${YEARS} years` },
               { model: "Intel Mac (Core Duo onward)", apple: "2006", ours: "2006", note: "20 years" },
               { model: "iPhone (original)", apple: "2007", ours: "2008 (UAE launch)", note: "18 years" },
               { model: "MacBook Air (original)", apple: "2008", ours: "2008", note: "18 years" },
@@ -116,7 +119,7 @@ export default function Blog21YearsExperience() {
             <li>ESD-safe benches throughout (anti-static mats, wrist straps, ionised air).</li>
           </ul>
           <p>
-            Our tooling investment over 21 years runs into the hundreds of thousands of dirhams -
+            Our tooling investment since 2004 runs into the hundreds of thousands of dirhams -
             orders of magnitude beyond the handful of basic tools a typical pop-up shop carries.
           </p>
 

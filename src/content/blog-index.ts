@@ -108,7 +108,7 @@ export const BLOG_INDEX: BlogIndexEntry[] = [
   {"slug": "/blog/macbook-pro-overheating-fix-dubai", "title": "MacBook Pro Overheating Fix Dubai: M1 to M5 Guide 2026", "families": ["macbook"], "topics": ["overheating", "performance", "m1", "m2", "m3", "m4", "m5"], "date": "2026-06-22"},
   {"slug": "/blog/apple-repair-cost-dubai", "title": "Apple Repair Cost in Dubai 2026: 991 Real Repairs", "families": ["macbook", "mac", "iphone", "ipad", "imac", "general"], "topics": ["cost"], "date": "2026-06-18"},
   {"slug": "/blog/macbook-pro-battery-draining-fast", "title": "MacBook Pro Battery Draining Fast? Causes & Fixes. Dubai 2026", "families": ["macbook"], "topics": ["battery", "performance", "m1", "m2", "m3", "m4", "m5"], "date": "2026-06-22"},
-  {"slug": "/blog/why-21-years-experience-matters", "title": "Why 21 Years of Apple Repair Experience Matters", "families": ["general"], "topics": [], "date": "2026-04-28"},
+  {"slug": "/blog/why-21-years-experience-matters", "title": "Why Two Decades of Apple Repair Experience Matter", "families": ["general"], "topics": [], "date": "2026-04-28"},
   {"slug": "/blog/apple-intelligence-on-old-iphones", "title": "Apple Intelligence Compatibility - Every iPhone Listed", "families": ["iphone"], "topics": [], "date": "2026-04-26"},
   {"slug": "/blog/apple-silicon-vs-intel-repair-difference", "title": "Apple Silicon vs Intel Mac Repair - The Real Differences", "families": ["mac", "macbook"], "topics": ["buying", "comparison", "m1", "m2", "m3", "m4", "m5", "intel"], "date": "2026-04-29"},
   {"slug": "/blog/best-imac-for-business-dubai", "title": "Best iMac for Business in Dubai 2026", "families": ["imac"], "topics": ["buying"], "date": "2026-04-25"},
