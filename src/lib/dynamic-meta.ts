@@ -204,7 +204,7 @@ const OVERRIDE: Record<string, Meta> = {
   },
   "/blog/macbook-battery-replacement-cost-2026": {
     title: "MacBook Battery Replacement Cost Dubai 2026: Air & Pro",
-    description: "MacBook battery replacement cost in Dubai 2026 for Air and Pro: what sets the price, Apple Store vs independent repair, and when it is time to replace.",
+    description: "MacBook battery replacement cost in Dubai 2026 for Air and Pro: what sets the price, Apple vs independent repair. Send your model on WhatsApp for a quote.",
   },
   "/blog/should-i-buy-refurbished-macbook-dubai": {
     title: "Refurbished MacBook Dubai: Worth It? (2026 Honest Guide)",

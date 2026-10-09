@@ -494,7 +494,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-battery-replacement-cost-2026": {
     "title": "MacBook Battery Replacement Cost Dubai 2026: Air & Pro",
-    "description": "MacBook battery replacement in Dubai, April 2026: Air & Pro, same-day. Check battery health, spot swelling, beat Apple Store. WhatsApp for today's price."
+    "description": "MacBook battery replacement cost in Dubai 2026 for Air and Pro: what sets the price, Apple vs independent repair. Send your model on WhatsApp for a quote."
   },
   "/blog/macbook-black-screen-fix": {
     "title": "MacBook Black Screen? Fixes Before You Pay (2026)",
