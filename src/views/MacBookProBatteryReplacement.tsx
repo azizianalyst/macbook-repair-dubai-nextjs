@@ -184,7 +184,7 @@ export default function MacBookProBatteryReplacement() {
                   </Button>
                 </div>
                 <p className="mt-lg text-[12.5px] text-text-faint">
-                  Updated June 2026 · Reviewed by Usman, Lead MacBook Technician
+                  Updated June 2026 · By Usman, board-level repair technician
                 </p>
               </div>
 

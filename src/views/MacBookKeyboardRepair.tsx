@@ -189,7 +189,7 @@ export default function MacBookKeyboardRepair() {
                   </Button>
                 </div>
                 <p className="mt-lg text-[12.5px] text-text-faint">
-                  Reviewed by Usman, Lead MacBook Technician
+                  By Usman, board-level repair technician
                 </p>
               </div>
 
