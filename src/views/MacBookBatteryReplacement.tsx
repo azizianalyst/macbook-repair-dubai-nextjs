@@ -89,8 +89,6 @@ const FAQS: FAQ[] = [
     a: "Apple rates current MacBooks (2017+) for 1,000 cycles to 80% capacity. Heavy users (web dev, video editing) hit 1,000 cycles in 18-24 months. Light office use easily reaches 36-48 months. After 1,000 cycles the battery still works but runtime drops noticeably and Service Recommended starts appearing." },
   { q: "Do you replace M1, M2, M3, M4, and M5 MacBook batteries?",
     a: "Yes - every Apple Silicon MacBook battery is in active stock, including the M3 Pro 14\" and M4 Pro 16\". Apple Silicon batteries need BMS firmware re-pairing to the logic board after the swap, which the workshop does on the bench. Same-day on both Air and Pro 14\"/16\"." },
-  { q: "Why don't you recommend the cheapest replacement batteries?",
-    a: "Sub-AED-200 batteries on AliExpress and the Dragon Mart grey market typically use B-grade cells with 30% lower energy density and 2x faster wear. The workshop has seen 40% of these fail within 6 months and 15% swell within 12 months. The cells used here are tier-1 (Samsung SDI, LG Chem, ATL) with traceable batch numbers." },
   { q: "What's the warranty on a new MacBook battery?",
     a: "3 months written warranty on cells, plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months of the swap (and cycle count is under 200), the battery is replaced free of charge. The warranty stays with the MacBook serial number - transferable once free of charge." },
   { q: "My battery is swollen - what do I do?",
@@ -99,14 +97,8 @@ const FAQS: FAQ[] = [
     a: "No. The SSD is on the logic board, untouched during a battery replacement. Files, apps, settings, FileVault encryption - all stay intact. The workshop still recommends a Time Machine backup before any service, just as a habit." },
   { q: "Do you replace MacBook Air 2017 and earlier batteries that Apple calls obsolete?",
     a: "Yes - every MacBook back to the 2010 Air is serviceable here. Apple stopped stocking parts for these models, but the workshop carries new cells from the original ATL and LG factories that built the Apple parts. Same-day, with the same 3-month warranty as a current model." },
-  { q: "Can I replace the battery myself?",
-    a: "Technically yes on 2008-2012 unibody MacBooks with screw-in batteries - iFixit sells DIY kits for those. From 2013 onward Apple glued the cells to the case, requiring isopropyl 99%, a heat gun, and 60+ minutes of careful work. DIY swaps that go wrong cost more to recover than the original service. The workshop's labour-only swap is available if you bring your own verified battery." },
-  { q: "Do you offer free pickup for battery service?",
-    a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm, Business Bay. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
-  { q: "Is battery replacement cheaper than the Apple Store?",
-    a: "Yes. We replace MacBook batteries on every model from the Air to the 16-inch Pro, labour and firmware re-pair included, which is well below Apple out-of-warranty pricing, and same-day in about 2 hours. Every battery includes an 80% capacity guarantee." },
-  { q: "Should I just go to Apple, and what about AppleCare+?",
-    a: "If your MacBook is still covered by AppleCare+ and the battery is below 80% health, Apple may replace it free, and we will point you there. Out of warranty, our replacement is cheaper, same-day, and uses a tier-1 cell with a 3-month warranty plus an 80% capacity guarantee." },
+  { q: "How does it compare with Apple, and what about AppleCare+?",
+    a: "If your MacBook is still covered by AppleCare+ and the battery is below 80% health, Apple may replace it free, and we will point you there. Out of warranty, compare Apple's battery service price for your model with our quote; Apple usually sends the MacBook away for several days, while we quote after a free diagnosis and fit the battery the same day, with a 3-month warranty plus an 80% capacity guarantee." },
 ];
 
 const COMPARISON = [
@@ -242,7 +234,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Models + pricing ───────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="MacBook models we replace batteries for" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Prices include cell, labour, calibration, and the 3-month warranty." />
+            <SectionHead title="Which MacBook models do you replace batteries for?" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Every quote includes the cell, labour, calibration and the 3-month warranty." />
             <PriceTable rows={PRICING} />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
               Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. If the swelling cracked the trackpad, the battery and trackpad are done together.
@@ -253,7 +245,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
           <SectionHead
-            title="Common battery problems we fix"
+            title="What are the signs a MacBook battery needs replacing?"
             intro="The 10 highest-volume battery tickets at the workshop. The first three are urgent - bring it in same day."
             icon={<AlertTriangle size={26} className="text-accent" aria-hidden />}
           />
@@ -273,7 +265,7 @@ export default function MacBookBatteryReplacement() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead
-              title="Our battery replacement process"
+              title="How does a MacBook battery replacement work?"
               intro="Six steps from screenshot to delivery. The 4-hour calibration is what separates a proper swap from a Dragon-Mart job."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
@@ -311,7 +303,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Parts ──────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead title="What batteries we use - and which we refuse" />
+            <SectionHead title="Which replacement batteries do you fit?" />
             <div className="grid gap-lg md:grid-cols-2">
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Tier-1 cells (what we fit)</h3>
@@ -332,7 +324,7 @@ export default function MacBookBatteryReplacement() {
 
         {/* ── Warranty ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
+          <SectionHead title="What warranty comes with the new battery?" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
           <Card>
             <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">3 months</strong> - written warranty on cells and labour.</span></li>
@@ -362,7 +354,7 @@ export default function MacBookBatteryReplacement() {
 
         {/* ── Technician ─────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="Lead technician on battery jobs" />
+          <SectionHead title="Who replaces the battery?" />
           <Card>
             <div className="flex flex-wrap items-center gap-lg">
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 font-heading text-[20px] font-bold text-accent">U</span>
@@ -406,7 +398,7 @@ export default function MacBookBatteryReplacement() {
 
         {/* ── Comparison ─────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead title="MacBook Battery Replacement vs Apple Store Dubai" />
+          <SectionHead title="Should I replace my MacBook battery here or at the Apple Store?" />
           <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[640px]">
               <thead>
