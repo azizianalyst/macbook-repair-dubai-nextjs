@@ -7,7 +7,8 @@
 // Kept apart from /iphone-screen-repair-dubai (repair intent: how, parts, Face ID, by-model H3s):
 // this page is only about price, and its "by model" is the price-reference table below.
 // NO AED figure of ours anywhere. Apple's UAE out-of-warranty estimates come from
-// docs/apple-lineup-2026-09-26.md §4a (support.apple.com/en-ae, read 26 Sep 2026, excl. VAT) and
+// docs/apple-lineup-2026-09-26.md §4a (support.apple.com/en-ae, read 26 Sep 2026, excl. VAT), re-checked in
+// docs/apple-prices-ae-2026-10-09.md, and
 // every figure sits on the same source line as "(Apple list)" so audit-prices-src passes.
 import IPhoneMoneyPage, { A, DataTable, PageSection, WhatsAppButton, waHref } from "@/components/blocks/IPhoneMoneyPage";
 import { topicForPath } from "@/lib/page-images";
@@ -123,10 +124,12 @@ export default function IPhoneScreenRepairCostDubai() {
             ["iPhone 12 family", "OLED", "—", <Quote key="q" model="iPhone 12" />],
             ["iPhone 13 family", "OLED", "—", <Quote key="q" model="iPhone 13" />],
             ["iPhone 14 family", "OLED", "—", <Quote key="q" model="iPhone 14" />],
-            ["iPhone 15 family", "OLED", "—", <Quote key="q" model="iPhone 15" />],
+            ["iPhone 15", "OLED", "AED 1,079 (Apple list)", <Quote key="q" model="iPhone 15" />],
+            ["iPhone 15 Plus / 15 Pro", "OLED", "AED 1,279 (Apple list)", <Quote key="q" model="iPhone 15 Plus / 15 Pro" />],
+            ["iPhone 15 Pro Max", "OLED", "AED 1,499 (Apple list)", <Quote key="q" model="iPhone 15 Pro Max" />],
             ["iPhone 16e", "OLED", "AED 889 (Apple list)", <Quote key="q" model="iPhone 16e" />],
             ["iPhone 16", "OLED", "AED 1,079 (Apple list)", <Quote key="q" model="iPhone 16" />],
-            ["iPhone 16 Plus / 16 Pro", "OLED", "—", <Quote key="q" model="iPhone 16 Plus / 16 Pro" />],
+            ["iPhone 16 Plus / 16 Pro", "OLED", "AED 1,279 (Apple list)", <Quote key="q" model="iPhone 16 Plus / 16 Pro" />],
             ["iPhone 16 Pro Max", "OLED", "AED 1,499 (Apple list)", <Quote key="q" model="iPhone 16 Pro Max" />],
             ["iPhone 17e", "OLED", "AED 889 (Apple list)", <Quote key="q" model="iPhone 17e" />],
             ["iPhone 17", "OLED", "AED 1,279 (Apple list)", <Quote key="q" model="iPhone 17" />],
@@ -136,7 +139,7 @@ export default function IPhoneScreenRepairCostDubai() {
             ["iPhone 18 Pro", "OLED", "AED 1,279 (Apple list)", <Quote key="q" model="iPhone 18 Pro" />],
             ["iPhone 18 Pro Max", "OLED", "AED 1,499 (Apple list)", <Quote key="q" model="iPhone 18 Pro Max" />],
           ]}
-          note="Apple figures read from support.apple.com/en-ae on 26 September 2026, excluding VAT; Apple can change them at any time. A dash means we did not record an Apple figure for that model; Apple's estimate tool shows the current one."
+          note="Apple figures read from support.apple.com/en-ae on 26 September 2026 and re-checked on 9 October 2026, excluding VAT; Apple can change them at any time. A dash means we did not record an Apple figure for that model; Apple's estimate tool shows the current one."
         />
         <p>
           Screen and back both broken? The pair is AED 1,849 (Apple list) on a 17 Pro Max or 18 Pro Max.
