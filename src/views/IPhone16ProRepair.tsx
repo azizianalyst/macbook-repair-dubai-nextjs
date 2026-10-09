@@ -101,7 +101,7 @@ export default function IPhone16ProRepair() {
       faqs={[
         { q: "Why did Apple grow the Pro from 6.1\" to 6.3\"?", a: "Slimmer bezels and a slightly larger chassis allowed Apple to grow the display without growing the phone significantly. Repair-wise this means a different OLED part - not interchangeable with the 15 Pro." },
         { q: "Bundle pricing?", a: "Yes - bundling repairs like screen + battery or Camera Control + USB-C saves money versus booking them separately. Message us on WhatsApp for today's bundle price on your model." },
-        { q: "Is the 16 Pro still supported by Apple?", a: "Yes for software (iOS 18 native, iOS 19+ guaranteed). Discontinued in Sept 2025 with the iPhone 17 Pro launch but parts and service remain available." },
+        { q: "Is the 16 Pro still supported by Apple?", a: "Yes for software (iOS 18 native, later iOS versions expected). Discontinued in Sept 2025 with the iPhone 17 Pro launch but parts and service remain available." },
         { q: "Genuine Apple OLED?", a: "Yes - we offer both genuine Apple-pull and OEM-grade OLED panels. Message us on WhatsApp for the current price on each option." },
         { q: "Same day?", a: "OLED, battery, USB-C, Camera Control, Action Button, main + ultra-wide cameras - yes." },
       ]}
