@@ -50,7 +50,7 @@ export default function BlogIPhoneBatteryReplacement() {
         },
         {
           q: "How long does iPhone battery replacement take in Dubai?",
-          a: "Most iPhone models are 25 to 35 minutes in our workshop. iPhone 16 Pro Max takes slightly longer (around 45 minutes) because the internal layout requires removing more components to reach the battery safely. We stock cells for every model from iPhone 7 through iPhone 16 Pro Max, so there is no wait for parts. If you WhatsApp before arriving we can have your slot ready, and same-day turnaround is guaranteed for all models.",
+          a: "Most iPhone models are 25 to 35 minutes in our workshop. iPhone 16 Pro Max takes slightly longer (around 45 minutes) because the internal layout requires removing more components to reach the battery safely. We stock cells for every model from iPhone 7 through iPhone 16 Pro Max, so there is no wait for parts. If you WhatsApp before arriving we can have your slot ready, and same-day turnaround is the norm on most models.",
         },
         {
           q: "Is it safe to keep using my iPhone if the battery is swollen?",
