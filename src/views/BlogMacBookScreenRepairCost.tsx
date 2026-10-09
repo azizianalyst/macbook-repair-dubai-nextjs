@@ -8,74 +8,64 @@ export default function BlogMacBookScreenRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Screen Repair Cost Dubai 2026: All Models"
-      seoDescription="MacBook screen repair in Dubai for every Air and Pro model — Liquid Retina XDR, Flexgate, Apple Store compared. Message us on WhatsApp for today's exact price."
+      seoDescription="MacBook screen repair cost in Dubai 2026: what sets the price on each Air and Pro, XDR vs Retina panels, Flexgate. Send your model on WhatsApp for a quote."
       path="/blog/macbook-screen-repair-cost-dubai-2026"
       wide
       toc={[
-        { id: "price-list", label: "Full price list" },
+        { id: "price-list", label: "What sets the cost" },
         { id: "pro-vs-air", label: "Why Pro costs more than Air" },
         { id: "xdr-vs-retina", label: "Liquid Retina XDR vs Retina" },
         { id: "tandem-oled", label: "Tandem OLED vs MacBook" },
         { id: "flexgate", label: "Flexgate explained" },
-        { id: "same-day-parts", label: "Same-day vs ordered parts" },
+        { id: "same-day-parts", label: "How long it takes" },
         { id: "apple-store-comparison", label: "Apple Store comparison" },
         { id: "whats-included", label: "What's included" },
         { id: "what-next", label: "What to do next" },
       ]}
       category="Cost guide · MacBook"
       h1="MacBook Screen Repair Cost Dubai 2026 - Air, Pro, Every Year"
-      hook="MacBook screen repair in Dubai varies by model and panel technology, from the older 13″ Air to the 16″ MacBook Pro M5 Max - here is the full breakdown, and you can WhatsApp us for today's exact price on your model."
-      quickAnswer="MacBook screen repair in Dubai depends on the model and panel type. Air models are the most affordable, the 14-inch Pro sits in the middle, and 16-inch Pro models with Liquid Retina XDR (mini-LED) are the most involved. Most Pro models are same-day and Air is 1-2 days - message us on WhatsApp for the exact price on your MacBook."
+      hook="MacBook screen repair in Dubai varies by model and panel technology, from the older 13″ Air to the 16″ MacBook Pro M5 Max. Here is what decides the bill on each, and how to get a quote for yours on WhatsApp."
+      quickAnswer="What a MacBook screen repair costs in Dubai depends on the model and the panel. Air screens are standard Liquid Retina LCDs; the 14- and 16-inch Pro use mini-LED Liquid Retina XDR, the dearer part. With AppleCare+, Apple's screen service fee is usually the cheapest route. Otherwise send your model on WhatsApp; diagnosis is free and the quote comes first."
       author={{ name: "Shafiq", role: "Senior MacBook display technician" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-10-10"
       readingMinutes={11}
       featuredImageAlt="MacBook Screen Repair Cost Dubai. MacBook screen repair Dubai - technician replacing Liquid Retina XDR display panel on workbench"
       body={
         <>
-          <h2 id="price-list">MacBook Screen Repair Cost Dubai. The full MacBook screen repair price list - April 2026 Dubai</h2>
+          <h2 id="price-list">What decides the cost of a MacBook screen repair?</h2>
           <p>
-            Below is every MacBook line we currently service. Prices include the display assembly,
-            labour, calibration, and a 3-month written warranty. No diagnostic fee.
+            We do not publish a price list, because the same-looking MacBook can take a different panel,
+            and some jobs need the whole display assembly while others do not. This is what changes the
+            quote on each line we service:
           </p>
           <BlogPriceTable
-            caption="MacBook screen repair pricing - MacBook Repair Dubai, April 2026"
-            headers={["Model", "Our price", "Apple Store", "Notes"]}
+            caption="What changes the quote, by MacBook model"
+            headers={["Model", "Panel", "What affects the quote"]}
             rows={MACBOOK_SCREEN_PRICES.map((r) => ({
               model: r.model,
-              ours: "Price on request",
-              apple: "Price on request",
-              note: r.note,
+              ours: r.note,
+              apple: /XDR/.test(r.note)
+                ? "Mini-LED XDR assembly, the most involved part"
+                : "Panel size, and whether the lid is damaged too",
             }))}
           />
-          <p className="text-[13px] text-text-muted mono">
-            Apple Store pricing referenced from{" "}
-            <a href="https://support.apple.com/mac/repair" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
-              support.apple.com/mac/repair
-            </a>
-            , checked 22 April 2026. Message us on WhatsApp for our current price on your model.
+          <p>
+            Every quote covers the display, labour and testing, carries the 90-day screen warranty, and is
+            confirmed before any work starts. Diagnosis is free.
           </p>
 
           <h2 id="pro-vs-air">Why MacBook Pro screens cost more than Air</h2>
           <p>
-            Three reasons. First, the <strong>display assembly itself</strong>. MacBook Air screens
-            are standard Liquid Retina LCDs. The 14″ and 16″ MacBook Pro use Liquid Retina XDR - a
-            mini-LED backlight with over 10,000 individually-controlled LEDs behind the panel. That
-            backlight stack alone costs Apple roughly 4× a standard LCD backlight.
+            Two reasons. First, the <strong>display assembly itself</strong>. MacBook Air screens
+            are standard Liquid Retina LCDs. The 14″ and 16″ MacBook Pro use Liquid Retina XDR, which
+            puts more than 10,000 mini-LEDs behind the panel, a far more complex part than an Air
+            backlight.
           </p>
           <p>
-            Second, the <strong>top-case bonding</strong>. From the M-series MacBooks onward, the
-            display is bonded to the lid as a single unit - there is no economical way to separate
-            the panel from the aluminum lid without specialist heat-table equipment. Apple replaces
-            the entire lid assembly. We can salvage the lid and only replace the panel + flex cables
-            in about 70% of cases, which saves you a meaningful amount versus the Apple Store quote -
-            message us on WhatsApp for the exact price on your model.
-          </p>
-          <p>
-            Third, <strong>ProMotion calibration</strong>. The 14″ and 16″ Pro use a 120Hz adaptive
-            refresh rate that needs to be calibrated against the new panel's pixel response curve
-            after replacement. We use Apple's AST 2 diagnostic suite for this - a 25-minute
-            post-install step that adds to labour cost.
+            Second, <strong>ProMotion</strong>. The 14″ and 16″ Pro run an adaptive refresh rate of up
+            to 120Hz, so the replacement has to be the exact assembly for your model, and we check the
+            refresh behaviour and every backlight zone before handing it back.
           </p>
 
           <h2 id="xdr-vs-retina">Liquid Retina XDR (mini-LED) vs standard Retina - repair cost</h2>
@@ -109,52 +99,46 @@ export default function BlogMacBookScreenRepairCost() {
           <p>
             "Flexgate" was Apple's display backlight flex cable design flaw on the 2016 and early
             2017 13″ and 15″ MacBook Pro Retina models. The flex cable that ran from the logic
-            board to the display backlight was about 2mm too short - opening the lid past 90 degrees
+            board to the display backlight was too short (iFixit measured it at about 2mm) - opening the lid past 90 degrees
             repeatedly fatigued the cable until the backlight either failed completely or showed a
             distinctive "stage light" effect (a bright bar at the bottom of the screen, dim in the
             middle).
           </p>
           <p>
-            Apple ran a free repair program for affected 13″ models through 2022. That program is
-            now closed. We still see Flexgate units in the workshop monthly. The fix at our bench
-            is to install a longer aftermarket flex cable that solves the design flaw permanently.
+            Apple ran a free backlight repair program for affected 13″ 2016 models; it has ended.
+            The fix at our bench is a longer replacement flex cable, which removes the original
+            weak point.
             If the backlight LEDs themselves are damaged you also need a panel replacement. Message
-            us on WhatsApp for the exact price - 2018 and later models redesigned the cable and are
-            not affected.
+            us on WhatsApp for the exact price - 2018 and later models were redesigned with a longer cable.
           </p>
 
-          <h2 id="same-day-parts">Same-day vs ordered parts - when to expect each</h2>
+          <h2 id="same-day-parts">How long does a MacBook screen repair take?</h2>
           <p>
-            We stock 14″ and 16″ MacBook Pro panels (M1 Pro through M5) and 13″ Air panels
-            (M1 through M4). WhatsApp before 11am and you'll have the MacBook back the same
-            evening. M5 Max 16″ panels and the M5/M5 Pro 14″ models are usually 1-2 days because
-            the panels are still rationed by Apple to authorised channels. Older Intel MacBooks
-            (2017-2020) take 2-3 days as we order from Sharjah.
+            When the panel for your model is in stock, most screen repairs are same-day. When it has to
+            be ordered, allow one to three days; we confirm which on WhatsApp before you bring the
+            MacBook in, so you are not left without it longer than needed.
           </p>
 
-          <h2 id="apple-store-comparison">Apple Store screen repair pricing comparison</h2>
+          <h2 id="apple-store-comparison">How does an independent screen repair compare with the Apple Store?</h2>
           <BlogPriceTable
-            caption="MacBook Pro 16″ M5 Max - screen repair comparison"
+            caption="MacBook screen repair - independent workshop vs Apple"
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
-              { model: "Price", ours: "Price on request", apple: "Price on request" },
-              { model: "Turnaround",       ours: "Same day",  apple: "5-10 days" },
-              { model: "Pickup",           ours: "Free, mainland Dubai", apple: "Drop-off at Mall of Emirates / Dubai Mall" },
-              { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
-              { model: "Whole-lid replacement", ours: "Only if needed", apple: "Always (entire lid swapped)" },
-              { model: "Diagnostic fee",   ours: "Free", apple: "Free under AppleCare+, otherwise quoted" },
+              { model: "Turnaround",       ours: "Same day when the panel is in stock",  apple: "Ask the store for its current wait" },
+              { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You take it to an Apple Store" },
+              { model: "Warranty",         ours: "90 days written", apple: "Apple's own repair warranty" },
+              { model: "Diagnosis",        ours: "Free", apple: "Quoted by Apple" },
+              { model: "Under AppleCare+", ours: "We send you to Apple", apple: "Screen service fee applies" },
             ]}
           />
 
           <h2 id="whats-included">What's included in our MacBook screen repair</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>The display panel (Liquid Retina or Liquid Retina XDR - your choice of grade)</li>
-            <li>Labour (typically 60-90 minutes for Air, 90-120 for Pro)</li>
-            <li>True Tone calibration via Apple's System Configuration where supported</li>
-            <li>ProMotion 120Hz profiling for 14″/16″ Pro models</li>
-            <li>FaceTime camera, ambient sensor, and antenna transferred from the original lid</li>
-            <li>Full hinge and clutch inspection (we re-grease at no extra charge)</li>
-            <li>3-month written warranty on parts and labour</li>
+            <li>The display assembly for your exact model</li>
+            <li>Labour and reassembly</li>
+            <li>A check of True Tone, brightness, refresh and every backlight zone where the model has them</li>
+            <li>FaceTime camera and sensors checked before handing back</li>
+            <li>90-day written warranty on parts and labour</li>
           </ul>
 
           <h2 id="what-next">What should I do next?</h2>
@@ -163,38 +147,51 @@ export default function BlogMacBookScreenRepairCost() {
               See our MacBook screen repair page
             </Link>{" "}
             for the full service description, or{" "}
-            <Link to="/" className="text-accent font-semibold hover:underline">
-              browse every MacBook model
-            </Link>{" "}
-            we service for model-specific pricing. WhatsApp 055 741 3706 - quote in 4 minutes.
+            <Link to="/macbook-repair-dubai" className="text-accent font-semibold hover:underline">
+              browse every MacBook repair we do
+            </Link>
+            . Or WhatsApp 055 741 3706 with your model and a photo of the screen, and we reply with a
+            quote for that model.
           </p>
         </>
       }
       faqs={[
         {
           q: "How long does MacBook screen repair take in Dubai?",
-          a: "Most 14″ and 16″ MacBook Pro and 13″/15″ Air screens are same-day if you arrive before 11am. Older Intel models (2017-2020) usually need 2-3 days for parts. 16″ M5 Max panels and brand-new M5 Pro 14″ models are 1-2 days because Apple still rations the panels.",
+          a: "Same-day when the panel for your model is in stock; one to three days when it has to be ordered. We confirm which on WhatsApp before you bring it in.",
         },
         {
-          q: "Can you repair just the panel, or do you have to replace the whole lid like Apple?",
-          a: "About 70% of jobs we do panel-only - we keep the original aluminum lid, FaceTime camera, antenna, and hinges, and only swap the broken glass and LCD layer. That's a real saving versus the Apple Store quote - message us on WhatsApp for the exact price. The other 30% (badly bent lids, hinge damage) need a full lid assembly.",
+          q: "Do you replace just the panel or the whole display?",
+          a: "It depends on the damage. When the lid and hinges are straight, the panel can often be replaced on its own; a bent lid or hinge damage needs the full display assembly. We tell you which after the free diagnosis, before any work.",
         },
         {
           q: "Will True Tone still work after MacBook screen repair?",
-          a: "Yes - provided the technician runs Apple's System Configuration calibration on the new panel. We have access to AST 2 (Apple Service Toolkit) which handles this. Cheap shops skip it and you lose True Tone permanently.",
+          a: "It depends on the model and the part. Apple pairs the display to some MacBooks with a System Configuration step that runs through Apple's own repair channels, so on those models True Tone can be missing after an independent repair. We tell you before the repair whether that applies to your MacBook.",
         },
         {
           q: "Is Flexgate still happening on new MacBooks?",
-          a: "No. The flex cable design flaw was specific to the 2016 and early 2017 13″ and 15″ MacBook Pro Retina. From late 2017 onward the cable was lengthened and re-routed. M-series MacBooks have a completely different display architecture.",
+          a: "No. The flex cable weakness affected the 2016 and 2017 13″ and 15″ MacBook Pro; from the 2018 models Apple used a longer cable. M-series MacBooks have a different display design.",
+        },
+        {
+          q: "Why does a MacBook Pro screen cost more to repair than an Air?",
+          a: "The 14- and 16-inch Pro use Liquid Retina XDR, a mini-LED display with thousands of backlight LEDs and a 120Hz ProMotion panel, while the Air uses a standard Liquid Retina LCD. The XDR assembly is the more complex and more expensive part.",
+        },
+        {
+          q: "My MacBook screen has lines or a black area. Is it the screen?",
+          a: "Usually, but not always. Connect an external display: if the picture there is clean, the fault is in the screen or its cable; if the lines show there too, the graphics or logic board is the cause. Send a photo on WhatsApp and we tell you which before quoting.",
+        },
+        {
+          q: "Is blooming on a MacBook Pro XDR screen a fault?",
+          a: "No. A faint halo around bright objects on a dark background happens on every mini-LED XDR screen, original or replacement. A fixed dark or bright block, lines, or flicker is a fault and is worth checking.",
         },
         {
           q: "Should I claim on AppleCare+ instead of using a third-party shop?",
-          a: "If you have AppleCare+, its screen repair service fee is usually the cheapest option - use AppleCare+. If you don't have it, our pricing comfortably beats Apple's out-of-warranty rate. Message us on WhatsApp for the exact price on your model.",
+          a: "If you have AppleCare+, its screen repair service fee is usually the cheapest option - use AppleCare+. If you don't have it, compare Apple's out-of-warranty price for your model with our quote after a free diagnosis.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook screen repair hub", href: "/macbook-screen-repair-dubai", description: "Full service page - pricing, warranty, process." },
-        { label: "Every MacBook model we repair", href: "/", description: "All MacBook Air, Pro, and legacy models." },
+        { label: "MacBook screen repair hub", href: "/macbook-screen-repair-dubai", description: "Service page: models, warranty and process." },
+        { label: "MacBook repair services", href: "/macbook-repair-dubai", description: "Every MacBook repair we do." },
         { label: "MacBook Pro M5 - us vs Apple Store", href: "/blog/macbook-pro-m5-vs-apple-store-repair-cost", description: "Side-by-side cost comparison for the newest Pro." },
       ]}
     />

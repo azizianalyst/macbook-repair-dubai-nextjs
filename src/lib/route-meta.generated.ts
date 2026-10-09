@@ -794,7 +794,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-screen-repair-cost-dubai-2026": {
     "title": "MacBook Screen Repair Cost Dubai 2026: All Models",
-    "description": "MacBook screen repair in Dubai for every Air and Pro model — Liquid Retina XDR, Flexgate, Apple Store compared. Message us on WhatsApp for today's exact price."
+    "description": "MacBook screen repair cost in Dubai 2026: what sets the price on each Air and Pro, XDR vs Retina panels, Flexgate. Send your model on WhatsApp for a quote."
   },
   "/blog/macbook-stuck-on-apple-logo": {
     "title": "MacBook Stuck on Apple Logo? Fixes for 2026",

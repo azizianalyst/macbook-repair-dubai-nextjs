@@ -1845,8 +1845,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook logic board repair cost Dubai 2026, component-level repair vs a full board swap, why chip-level is cheaper, and realistic pricing by fault."
   },
   "/blog/macbook-screen-repair-cost-dubai-2026": {
-    "title": "MacBook Screen Repair Cost Dubai: Expert 2026 Guide",
-    "description": "MacBook screen repair cost Dubai 2026, clear pricing for every Air and Pro model, genuine vs alternative displays, and fast turnaround you can trust."
+    "title": "MacBook Screen Repair Cost Dubai 2026: All Models",
+    "description": "MacBook screen repair cost in Dubai 2026: what sets the price on each Air and Pro, XDR vs Retina panels, Flexgate. Send your model on WhatsApp for a quote."
   },
   "/blog/ramadan-hours-apple-repair-dubai": {
     "title": "Ramadan Hours Apple Repair Dubai: Expert 2026 Guide",
