@@ -235,6 +235,7 @@ export default function GuideRecoverMacBookPassword() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "How do I reset passwords on my MacBook", href: "/blog/how-do-i-reset-passwords-on-my-macbook", description: "Change keychain, firmware and account passwords you already know." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "FileVault locked or key lost? We assess what's salvageable." },
         { label: "MacBook full diagnostic", href: "/macbook-full-diagnostic-dubai", description: "We confirm whether it's a simple reset or something deeper." },

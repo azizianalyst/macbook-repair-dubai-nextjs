@@ -68,6 +68,7 @@ export default function MacOsReinstall() {
         { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first." },
         { label: "iMac macOS Reinstall",     href: "/imac-os-reinstall-dubai",         description: "Reinstalling on an iMac instead? Same clean-install service." },
         { label: "Mac mini/Studio/Pro Reinstall", href: "/mac-os-reinstall-dubai",     description: "Desktop Mac needs a clean macOS? We do those too." },
+        { label: "403 Forbidden in macOS Recovery", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Reinstall stopped with a 403? Try these fixes before you book." },
       ]}
       blogLink={{ label: "When to reinstall macOS (and when it won't help)", href: "/blog/macbook-running-slow-10-fixes" }}
     />

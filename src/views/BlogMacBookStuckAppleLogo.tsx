@@ -215,6 +215,7 @@ export default function BlogMacBookStuckAppleLogo() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "macOS reinstall in Dubai", href: "/macos-reinstall-dubai", description: "Clean reinstall without losing data. Message us on WhatsApp for a price." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "Pulling data off failing and soldered Apple drives." },
         { label: "MacBook not turning on", href: "/blog/macbook-not-turning-on-fix-guide", description: "If it won't even reach the logo, start here." },

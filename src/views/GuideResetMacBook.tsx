@@ -225,6 +225,7 @@ export default function GuideResetMacBook() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Recover files erased during a factory reset without backup." },
         { label: "How to recover a MacBook password", href: "/blog/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },

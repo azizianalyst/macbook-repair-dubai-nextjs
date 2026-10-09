@@ -219,6 +219,7 @@ export default function GuideEraseMacBeforeSelling() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Rescue files off a failing drive before you erase it for good." },
         { label: "macOS reinstall service Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install for older Macs that won't reinstall." },
         { label: "Should I buy a refurbished MacBook?", href: "/blog/should-i-buy-refurbished-macbook-dubai", description: "Buying a used Mac next? What to check before you pay." },

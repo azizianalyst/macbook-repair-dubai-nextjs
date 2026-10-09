@@ -150,6 +150,7 @@ export default function GuideMacBookNoInternalSSD() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Board-level recovery from soldered SSDs that macOS can no longer detect." },
         { label: "MacBook SSD upgrade Dubai", href: "/macbook-ssd-upgrade-dubai", description: "More storage on the models where the SSD is removable." },
         { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Healthy drive but won't boot? Clean reinstall without erasing your files." },

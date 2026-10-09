@@ -200,6 +200,7 @@ export default function BlogMacBookKernelPanic() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "Full MacBook diagnostic", href: "/macbook-full-diagnostic-dubai", description: "Free bench diagnostic and a fixed quote." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "If a failing SSD is behind the panics." },
         { label: "MacBook running slow guide", href: "/blog/macbook-running-slow-10-fixes", description: "When it's sluggish rather than restarting." },

@@ -329,6 +329,7 @@ export default function BlogMacBookProM4M5Problems() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "Full MacBook Pro service page, all models, all repairs including M4 and M5." },
         { label: "MacBook Pro overheating fix Dubai", href: "/blog/macbook-pro-overheating-fix-dubai", description: "Thermal throttling, loud fans, and heat damage on all MacBook Pro generations." },
         { label: "MacBook Pro not charging fix Dubai", href: "/blog/macbook-pro-not-charging-fix-dubai", description: "USB-C charging faults, charging IC failure, and MagSafe issues diagnosed." },

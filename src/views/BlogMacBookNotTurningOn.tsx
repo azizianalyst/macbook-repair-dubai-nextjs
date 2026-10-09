@@ -201,6 +201,7 @@ export default function BlogMacBookNotTurningOn() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook logic board repair", href: "/macbook-logic-board-repair-dubai", description: "When self-diagnosis isn't enough." },
         { label: "Spilled water on MacBook - emergency action", href: "/blog/water-damage-macbook-immediate-action", description: "If liquid is the cause, do this first." },
         { label: "MacBook water damage cost & success rates", href: "/blog/macbook-water-damage-repair-cost-success-rates", description: "Pricing and recovery odds." },

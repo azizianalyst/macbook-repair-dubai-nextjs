@@ -220,6 +220,7 @@ export default function GuideResetMacBookPassword() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "Forgot your MacBook password?", href: "/blog/how-to-recover-macbook-password", description: "Locked out and can't log in? Reset a forgotten password via Recovery mode." },
         { label: "Factory reset a MacBook", href: "/blog/how-to-reset-a-macbook", description: "Wipe and start fresh, the safe way, before selling or after a tangled reset." },
         { label: "macOS reinstall in Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS reinstall if a reset left your Mac unbootable." },

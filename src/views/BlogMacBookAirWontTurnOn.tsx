@@ -294,6 +294,7 @@ export default function BlogMacBookAirWontTurnOn() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook Air Repair Dubai", href: "/macbook-air-repair-dubai", description: "Full MacBook Air service page, all models, all repairs." },
         { label: "Mac Not Turning On Dubai", href: "/mac-not-turning-on-dubai", description: "Dead Mac diagnosis and repair service in Dubai." },
         { label: "MacBook Air Battery Draining Fast? Fixes & Costs Dubai 2026", href: "/blog/macbook-air-battery-drain-dubai", description: "Step-by-step fixes for fast battery drain on all MacBook Air models." },
