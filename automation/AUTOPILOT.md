@@ -3,12 +3,33 @@
 Scheduled task `macbook-repair-dubai-ae`, daily 07:00 Dubai. Read `automation/AGENTS.md` first;
 it binds every step below. Each job runs only when its War Room switch says so.
 
+## War Room data rules (standard app since 10 Oct 2026)
+
+The War Room (https://claude.ai/artifact/KJdhnCzAKcSfDT4JYSW6Nf) is the standard site-war-room app
+(`~/Claude/Projects/_tools/site-war-room`, built with `make-site.sh`). It is the only tracker for this
+site; never create another artifact. Where it keeps things:
+- **Tasks** live in `plan/<id>` `{title, detail, status todo|doing|done|blocked, owner, cluster, order, week,
+  priority, subtasks}` (`cluster` = the phase, e.g. P0, P2, Data). The old `tasks` collection is frozen.
+- **Run log** lives in `notes/<id>` `{at, text, by, who, type: "log"}`. The old `log` collection is frozen.
+  Owner messages arrive as `notes` with another `type` (read every note newer than the last run).
+- **Snapshots** `snapshots/<YYYY-MM-DD>` carry the standard fields `dr, refdomains, backlinks, keywords
+  (ranking keywords), top3, traffic, ai, aiBreakdown{aiOverviews, aiMode, copilot, perplexity, chatgpt,
+  gemini}` plus `gscClicks, gscImpressions, gscCtr, gscPosition, gscQueries`. One doc per date; merge
+  sources into it and name them in `source`. Never compare numbers from different tools as a change.
+- **Keyword bank** = `kwchunks/cNN` `{updated, source, rows[{id, keyword, cluster, volume, kd, position,
+  status targeted|page2|gap, url, source, rel, type}]}`, built from `docs/keywords/keyword-universe-*.json`
+  (core + adjacent only).
+- **Reports** `reports/<id>` `{title, columns, rows[{c0..}], date, source, note}`: `organic-keywords`,
+  `referring-domains` (column 3 = verdict), `top-pages`, `gsc-queries`. `ahrefs/latest` holds the Ahrefs overview.
+- **Owner controls** stay where they were and show on the Control room screen: `jobs`, `decisions` (D*),
+  `clusters`, `skills`, `skillLog`, `owners`, `status/site`.
+
 ## 0. Start (every run)
 
 1. `cd /Users/azizi/Claude/Projects/macbook-repair-dubai.ae`. Note `date +%u` (1 = Monday),
    `date +%d` and `date +%m`. The machine runs on Dubai time.
-2. Load `ArtifactData`. Read the War Room collections `jobs`, `decisions`, `clusters`, `tasks`,
-   and the `log` entries newer than the previous run (`automation/state/last-run.txt`).
+2. Load `ArtifactData`. Read the War Room collections `jobs`, `decisions`, `clusters`, `plan`,
+   and the `notes` entries newer than the previous run (`automation/state/last-run.txt`).
 3. A job runs today only if its `status` is `approved` or `active` **and** it is due today
    (table below). If a due job is `approved`, set it to `active` in the same write as its result.
    A `paused` or `proposed` job never runs.
@@ -35,7 +56,7 @@ Run order: j02, j03, j01, then the rest in table order. A red gate stops that jo
 
 ## j02 Decision watcher
 
-1. Compare `decisions` (answer, answeredAt), `clusters` (decision, decidedAt) and Owner `log`
+1. Compare `decisions` (answer, answeredAt), `clusters` (decision, decidedAt) and owner `notes`
    entries with `automation/state/war-room-seen.json` (create it if missing).
 2. For each new or changed answer, create or update a task that says what the answer unblocks,
    with a `source` field naming it (e.g. `"D9 answered 2026-10-12"`). The work itself happens in
@@ -96,9 +117,9 @@ Everything else goes to the War Room only.
    organic traffic) and Organic positions UAE for macbook-repair-dubai.ae (all rows: keyword,
    position, volume, KD, URL). Save to `automation/data/positions-latest.tsv`; on Mondays also
    keep `automation/data/positions-YYYY-MM-DD.tsv`.
-2. Write `snapshots/<YYYY-MM-DD>`: `{date, source: "Semrush UAE (daily data job)", authority,
-   refDomains, keywords, top10, traffic, gscClicks: null, gscImpressions: null, gscCtr: null,
-   gscPosition: null, aiCitations: null, note}`.
+2. Write or merge `snapshots/<YYYY-MM-DD>` with the standard fields (see "War Room data rules"):
+   `{date, source, dr, refdomains, keywords, top3, traffic, gscClicks, gscImpressions, gscCtr,
+   gscPosition, gscQueries, note}`; leave a field out when today's source doesn't give it.
 3. Opportunities, Mac and latest-iPhone keywords only (`device` in the keyword bank, and the
    owner direction in the growth plan):
    - our pages at positions 4–15 (refresh candidates);
@@ -106,7 +127,7 @@ Everything else goes to the War Room only.
    - keywords where a page other than the owner page ranks (`owners` collection and
      `docs/keyword-page-map.csv`); update that `owners` row's `rankingNow` and `status`;
    - drops of 3+ positions against the previous saved file.
-   Create or update one todo task per keyword (dedupe by keyword), `phase: "Data"`, with the
+   Create or update one todo `plan` item per keyword (dedupe by keyword), `phase: "Data"`, with the
    numbers and the date in `detail`.
 4. **Mondays:** Keyword Magic for the seeds "macbook repair", "mac repair", "imac", "mac mini",
    "mac studio", "macbook neo", "iphone 18", "iphone 17", "iphone air". Append keywords with
@@ -131,7 +152,7 @@ Compare this Monday's positions file with last Monday's: every keyword in `owner
 Target-cluster keyword in the top 30, referring domains, leads in the last 7 days
 (`GET /api/leads` with `Authorization: Bearer $ADMIN_KEY` from `.env.local`; counts only, never
 customer details), and what shipped (commits since last Monday). Say "Semrush only: GSC, GA4 and
-Ahrefs not connected" until they are. Post it as one `log` entry; detail goes in
+Ahrefs not connected" until they are. Post it as one `notes` entry (`type: "log"`); detail goes in
 `automation/reports/weekly-YYYY-MM-DD.md`.
 
 ## j04 Apple watch (Monday and Thursday)
@@ -236,7 +257,7 @@ fixsquad.ae, fixermanme.com and macrepair.ae, Arabic keyword re-pull. Bump `CONT
    Pin every write with `if_version`.
 1. For every job that ran: update `jobs/<id>` with `lastRun` (ISO time) and `lastResult` (one
    line), pinned to the version you read.
-2. One `log` entry `{by: "Autopilot", at, text}`: what ran, what changed, and a "Needs you"
+2. One `notes` entry `{type: "log", by: "Autopilot", who: "Autopilot", at, text}`: what ran, what changed, and a "Needs you"
    list with the exact action for each item.
 3. Write today's date to `automation/state/last-run.txt`.
 4. If the dirty-tree rule passes, commit the `automation/` and `docs/keywords/` files this run
