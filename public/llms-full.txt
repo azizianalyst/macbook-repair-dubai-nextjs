@@ -2,7 +2,7 @@
 
 > MacBook Repair Dubai is an independent Apple repair specialist in Dubai, United Arab Emirates, in business since 10 October 2004. The workshop is Mac-first (MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, down to board level) and also repairs iPhone and iPad. Walk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or book a free pickup in Dubai. Repair quotes are given on WhatsApp at +971 55 741 3706.
 
-Generated 2026-10-09 from the site's route table, page metadata and business settings. This long-form companion to https://macbook-repair-dubai.ae/llms.txt lists all 630 public pages with their titles and descriptions.
+Generated 2026-10-09 from the site's route table, page metadata and business settings. This long-form companion to https://macbook-repair-dubai.ae/llms.txt lists all 629 public pages with their titles and descriptions.
 
 ## Business facts
 
@@ -307,12 +307,6 @@ MacBook Air charging port repair in Dubai: MagSafe 3 board on M2-M4, USB-C port 
 URL: https://macbook-repair-dubai.ae/macbook-air-keyboard-repair-dubai/
 
 MacBook Air keyboard repair in Dubai: Intel butterfly and M-series Magic Keyboard, single keys, backlight, Touch ID. Same-day. Get a free quote.
-
-### MacBook Air Screen Repair Dubai — Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-air-screen-repair-dubai/
-
-MacBook Air screen repair Dubai for M1–M5 Liquid Retina and Intel models, True Tone kept. Genuine or quality-tested panels, 90-day warranty. Same-day.
 
 ### MacBook Air Screen Replacement Dubai — Same-Day Service
 
