@@ -145,7 +145,7 @@ export const TEAM = [
   // bench day to day. Both were previously described as "lead technician" - Abdul Aziz in a
   // hardcoded Person node on the homepage, Shafiq here - so the structured data shipped two
   // lead technicians with different years of experience. Distinct titles, one roster.
-  { name: "Abdul Aziz", years: 21, specialisation: "Founder · Apple Certified Mac Technician (ACMT)", credentials: ["Apple Certified Mac Technician (ACMT)"] },
+  { name: "Abdul Aziz", years: NAP.yearsInBusiness, specialisation: "Founder · Apple Certified Mac Technician (ACMT)", credentials: ["Apple Certified Mac Technician (ACMT)"] },
   { name: "Shafiq", years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
   { name: "Usman",  years: 11, specialisation: "Board-level repair · M-series logic boards" },
   { name: "Ali",    years: 14, specialisation: "Data recovery · iMac and Mac mini" },

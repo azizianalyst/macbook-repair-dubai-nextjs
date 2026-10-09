@@ -7,7 +7,7 @@ import { TechnicianBadge } from "@/components/blocks/TechnicianBadge";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { PageMeta } from "@/components/blocks/PageMeta";
 import { REVIEWS } from "@/content/reviews";
-import { TEAM } from "@/content/site";
+import { TEAM, NAP } from "@/content/site";
 
 const MILESTONES = [
   { year: "2004", text: "Opened in Dubai under the Azizi Technologies name. First Apple-only repair shop in the area." },
@@ -59,7 +59,7 @@ export default function About() {
           </p>
 
           <p>
-            Twenty-one years. Same office. Same phone number. Same lead technicians.
+            {NAP.yearsInBusiness} years of repairing Apple hardware in Dubai, from one workshop.
           </p>
 
           <p>

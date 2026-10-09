@@ -289,7 +289,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook keyboard repair in Dubai for sticky, dead or repeating keys: Magic Keyboards same day, butterfly top cases 1-2 days. Free diagnosis. WhatsApp us."
   },
   "/about": {
-    "title": "About MacBook Repair Dubai, 21 Years, 40,000+ Repairs",
+    "title": "About MacBook Repair Dubai, Apple Repair Since 2004",
     "description": "About MacBook Repair Dubai: an independent Mac specialist workshop in Dubai Media City since 2004. Meet the team - or book a free diagnosis."
   },
   "/annual-maintenance-contract-dubai": {
@@ -1589,8 +1589,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Water damage MacBook? Do this right now, the immediate steps that limit harm in 2026, what never to do, and how fast action saves your Mac in Dubai."
   },
   "/blog/why-21-years-experience-matters": {
-    "title": "Why 21 Years Experience Matters: Expert 2026 View",
-    "description": "Why 21 years experience matters in Apple repair, 2026, what deep, hands-on expertise means for diagnosis accuracy, repair quality and your peace of mind."
+    "title": "Why Two Decades of Apple Repair Experience Matter",
+    "description": "What two decades of Apple-only repair in Dubai mean for diagnosis, parts and your data, from the PowerBook G4 to M5 Macs. WhatsApp us for a quote."
   },
   "/blog/apple-news": {
     "title": "Apple News & Tech: Expert Dubai Guide 2026",
