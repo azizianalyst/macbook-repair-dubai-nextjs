@@ -20,7 +20,7 @@ export default function MacBookProM1BatteryReplacement() {
         "MacBook Pro M1 Pro 14-inch uses a 69.6 Wh cell; the M1 Max 16-inch uses the larger 99.6 Wh pack that gives up to 21 hours battery life. The M1 Max is very worth servicing — the battery is the only weak point on an otherwise powerful machine.",
         "BMS re-pair is mandatory on all M1 and newer MacBook Pro battery replacements. The Battery Management System firmware maps the new cell chemistry to the SMC so macOS reports accurate capacity, cycle count, and safe charge curves. Without BMS re-pair, readings are undefined and Optimized Charging does not work correctly.",
         "The M1 Pro and M1 Max share the same battery cell for the 14-inch model. The chip variant does not change the battery cost — only the screen size determines which cell you need.",
-        "The M1 MacBook Pro is 3 to 4 years old in Dubai in 2025. At UAE ambient temperatures of 40 degrees Celsius and above, battery calendrical aging accelerates significantly. Many M1 Pros bought in 2021 are now at 75 to 85 percent capacity and showing Service Recommended in System Settings.",
+        "The M1 MacBook Pro is 4 to 5 years old in Dubai in 2026. At UAE ambient temperatures of 40 degrees Celsius and above, battery calendrical aging accelerates significantly. Many M1 Pros bought in 2021 are now at 75 to 85 percent capacity and showing Service Recommended in System Settings.",
         "Apple's battery service needs an appointment and can mean a wait for parts. MacBook Repair Dubai completes M1 Pro battery replacement same-day with BMS re-pair, quoted per model in writing.",
       ]}
       prices={[
