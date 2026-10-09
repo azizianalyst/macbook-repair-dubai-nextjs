@@ -157,8 +157,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Forgot your MacBook login password? Recover it safely with your Apple ID, the macOS Recovery resetpassword tool, your hint, or your FileVault recovery key."
   },
   "/blog/how-to-reset-a-macbook": {
-    "title": "How to Reset a MacBook: Restart, SMC, NVRAM & Factory",
-    "description": "Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
+    "title": "How to Reset a MacBook: Factory Reset, SMC and NVRAM",
+    "description": "How to reset a MacBook: factory reset with Erase All Content and Settings, plus restart, SMC and NVRAM steps. If a reset fails, WhatsApp our workshop."
   },
   "/blog/how-to-take-a-screenshot-on-a-macbook": {
     "title": "How to Take a Screenshot on a MacBook",

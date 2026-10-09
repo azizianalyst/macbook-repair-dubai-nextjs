@@ -425,8 +425,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Recover a forgotten MacBook password with your hint, Apple ID, the Recovery Mode resetpassword tool or FileVault key. Step by step for all macOS versions."
   },
   "/blog/how-to-reset-a-macbook": {
-    "title": "How To Reset A MacBook. MacBook Repair Dubai 2026",
-    "description": "How to reset a MacBook: restart, SMC, NVRAM and factory reset explained, with Apple Silicon and Intel steps. If a reset fails, WhatsApp our workshop."
+    "title": "How to Reset a MacBook: Factory Reset, SMC and NVRAM",
+    "description": "How to reset a MacBook: factory reset with Erase All Content and Settings, plus restart, SMC and NVRAM steps. If a reset fails, WhatsApp our workshop."
   },
   "/blog/how-to-take-a-screenshot-on-a-macbook": {
     "title": "How to Take a Screenshot on a MacBook (All 3 Shortcuts)",

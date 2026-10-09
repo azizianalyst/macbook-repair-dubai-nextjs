@@ -2786,11 +2786,11 @@ URL: https://macbook-repair-dubai.ae/blog/how-to-recover-macbook-password/
 
 Recover a forgotten MacBook password with your hint, Apple ID, the Recovery Mode resetpassword tool or FileVault key. Step by step for all macOS versions.
 
-### How To Reset A MacBook. MacBook Repair Dubai 2026
+### How to Reset a MacBook: Factory Reset, SMC and NVRAM
 
 URL: https://macbook-repair-dubai.ae/blog/how-to-reset-a-macbook/
 
-How to reset a MacBook: restart, SMC, NVRAM and factory reset explained, with Apple Silicon and Intel steps. If a reset fails, WhatsApp our workshop.
+How to reset a MacBook: factory reset with Erase All Content and Settings, plus restart, SMC and NVRAM steps. If a reset fails, WhatsApp our workshop.
 
 ### How to Take a Screenshot on a MacBook (All 3 Shortcuts)
 

@@ -15,16 +15,16 @@ export default function GuideResetMacBook() {
 
   return (
     <BlogPostTemplate
-      seoTitle="How to Reset a MacBook: Restart, SMC, NVRAM & Factory"
-      seoDescription="Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
+      seoTitle="How to Reset a MacBook: Factory Reset, SMC and NVRAM"
+      seoDescription="How to reset a MacBook: factory reset with Erase All Content and Settings, plus restart, SMC and NVRAM steps. If a reset fails, WhatsApp our workshop."
       path="/blog/how-to-reset-a-macbook"
       category="How-to · macOS"
       h1="How to Reset a MacBook (Restart, SMC, NVRAM & Factory Reset)"
       hook="'Reset' can mean five different things on a Mac - from a 10-second restart to a full factory wipe. Here's exactly which one you need, and how Apple Silicon and Intel differ."
-      quickAnswer="To reset a MacBook, restart from the Apple menu for minor glitches; on Intel Macs you can also reset the SMC and NVRAM. For a clean wipe, back up with Time Machine, then on macOS Ventura or later use System Settings → General → Transfer or Reset → Erase All Content and Settings. Older Macs use Recovery."
+      quickAnswer="To factory reset a MacBook with Apple silicon or a T2 chip on macOS Ventura or later, back it up, then open System Settings, General, Transfer or Reset, and choose Erase All Content and Settings. Older Intel Macs are erased from macOS Recovery instead. For a glitch, a restart is usually enough."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-05-30"
-      dateModified="2026-05-30"
+      dateModified="2026-10-10"
       readingMinutes={9}
       featuredImageAlt="Resetting a MacBook in Dubai using Erase All Content and Settings in System Settings"
       extraSchemas={[howTo({
