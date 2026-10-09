@@ -82,7 +82,7 @@ const FAQS: FAQ[] = [
   { q: "How much does MacBook battery replacement cost in Dubai?",
     a: "It depends on the model: an Air, a 13-inch Pro and a 14/16-inch Pro take different cells, and the quote includes the battery, labour and the firmware re-pair. Diagnosis is free and we confirm the figure before starting. Send the model and a Battery Health screenshot on WhatsApp." },
   { q: "How long does a MacBook battery replacement take?",
-    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is done in 30 minutes, guaranteed, or the repair is free. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
+    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is usually done in 30 minutes. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
   { q: "How do I check my MacBook battery health?",
     a: "On macOS Ventura and later: System Settings > Battery > Battery Health > Information (i). Look at \"Maximum Capacity\" (should be above 80%) and \"Cycle Count\" (Apple rates Apple Silicon for 1,000 cycles, Intel for 1,000 on most models, 500 on older Airs). On Intel Macs you can also hold Option and click the battery icon in the menu bar." },
   { q: "How many charge cycles does a MacBook battery last?",
@@ -124,7 +124,7 @@ const COMPARISON = [
 const TRUST = [
   { value: "5,200+", label: "Batteries fitted since 2004" },
   { value: "Free", label: "Diagnosis on every model" },
-  { value: "30 min", label: "Guaranteed by appointment" },
+  { value: "30 min", label: "By appointment" },
   { value: "3 months", label: "Warranty + 80% capacity" },
 ];
 
