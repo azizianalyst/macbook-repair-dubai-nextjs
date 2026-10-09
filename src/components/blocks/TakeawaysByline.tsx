@@ -10,15 +10,17 @@ type Props = {
   years: number;                      // roster years -> "· 15 years on Apple hardware"
   items: string[];                    // 5-6 concrete facts for THIS page
   className?: string;
+  // false = the person wrote the page but no review is on record: renders "By", not "Reviewed by".
+  reviewed?: boolean;
 };
 
-export function TakeawaysByline({ updated, reviewer, years, items, className }: Props) {
+export function TakeawaysByline({ updated, reviewer, years, items, className, reviewed = true }: Props) {
   return (
     <section className={`mx-auto max-w-content px-5 md:px-6 mt-xl ${className ?? ""}`}>
       <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
         <h2 className="text-[22px] md:text-[26px] font-bold mb-sm">Key takeaways</h2>
         <p className="text-[13px] text-text-muted mb-md">
-          Updated {updated} · Reviewed by {reviewer} · {years} years on Apple hardware
+          Updated {updated} · {reviewed ? "Reviewed by" : "By"} {reviewer} · {years} years on Apple hardware
         </p>
         <ul className="grid gap-2 md:grid-cols-2 text-[15px] leading-relaxed list-disc pl-5">
           {items.map((t) => <li key={t.slice(0, 40)}>{t}</li>)}

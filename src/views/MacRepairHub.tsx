@@ -24,7 +24,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
 
 const DEVICES = [
@@ -58,7 +58,7 @@ const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
 ];
 
 const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Award,       title: "Skilled Technicians",     body: "Every technician has years of Mac experience. We train monthly on each new model release, from Intel to the latest M5 chips." },
+  { Icon: Award,       title: "Skilled Technicians",     body: "Every technician has years of Mac experience, and we keep up with each new model, from Intel to the latest M5 chips." },
   { Icon: ShieldCheck, title: "Customer Satisfaction",   body: "You approve the price before we start and inspect the repair before you pay. No fix, no charge: that is our promise." },
   { Icon: Wrench,      title: "Everything In One Place", body: "Screen, keyboard, logic board, water damage. We handle it all in one workshop, with parts on the shelf for same-day repairs." },
   { Icon: Cpu,         title: "Quality Parts",           body: "Genuine Apple parts or OEM-grade equivalents, your choice. No hidden costs. You only pay for work completed." },
@@ -89,8 +89,8 @@ const FAQ_GROUPS = [
   {
     category: "Parts & warranty",
     items: [
-      { q: "Do you use genuine Apple parts?", a: "We use 100% genuine Apple parts or certified OEM-grade replacements, depending on your preference and budget. We tell you exactly which type before we start. The choice is yours." },
-      { q: "What warranty do you provide?", a: "Written warranty up to 12 months on parts and labour, depending on the repair type. Battery replacements carry 3 months with an 80% capacity guarantee, screens 90 days, and keyboard, logic board and liquid-damage repairs 15 days. All warranties are documented and honoured, no questions asked." },
+      { q: "Do you use genuine Apple parts?", a: "Genuine Apple parts where supply allows, or quality-tested OEM-grade parts, depending on your preference and budget. We tell you exactly which type before we start. The choice is yours." },
+      { q: "What warranty do you provide?", a: "Written warranty up to 12 months on parts and labour, depending on the repair type. Battery replacements carry 3 months (80% capacity guarantee on MacBook), screens 90 days, and keyboard, logic board and liquid-damage repairs 15 days. Every warranty is written on your job sheet." },
     ],
   },
 ];
@@ -142,9 +142,9 @@ export default function MacRepairHub() {
   const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-repair-dubai"), min: 3, seed: "/mac-repair-dubai" });
   useSeo(
     {
-      title: "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
+      title: "Mac Repair Dubai. Free Diagnosis, Free Pickup",
       description:
-        "Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio. Expert Apple technicians provide screen, battery, SSD & logic board repairs with genuine parts and same-day service.",
+        "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us.",
       path: "/mac-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -193,9 +193,10 @@ export default function MacRepairHub() {
 
 
         <TakeawaysByline
-          updated="September 2026"
-          reviewer="Mohammed, Mac desktop specialist"
-          years={14}
+          updated="October 2026"
+          reviewer="Shafiq, Lead technician"
+          years={15}
+          reviewed={false}
           items={[
             "One workshop covers every Mac - MacBook, iMac, Mac mini, Mac Studio and Mac Pro, Intel and Apple Silicon.",
             "Diagnosis is free on every machine, with the exact price confirmed in writing before any work.",
@@ -229,8 +230,8 @@ export default function MacRepairHub() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
-                { stat: "20+",   label: "Years in Dubai" },
-                { stat: "232+",  label: "Google reviews" },
+                { stat: `${NAP.yearsInBusiness}`, label: "Years in Dubai" },
+                { stat: `${REVIEW_COUNT}+`, label: "Google reviews" },
                 { stat: "30 min",label: "Appointment repair" },
                 { stat: "12 mo", label: "Max written warranty" },
               ].map(({ stat, label }, i) => (
@@ -271,7 +272,7 @@ export default function MacRepairHub() {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[96px]">
           <SectionHeading
             label="What we fix"
-            title="Mac repair services"
+            title="Which Mac repairs do you do?"
             sub="From a cracked iMac screen to a dead Mac mini board, our technicians handle every repair in our Dubai Media City workshop."
           />
           <div className="grid gap-x-xl gap-y-[56px] sm:grid-cols-2 lg:grid-cols-3">
@@ -285,7 +286,7 @@ export default function MacRepairHub() {
         {/* ── PROCESS ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <SectionHeading label="How it works" title="Our repair process" sub="Simple, transparent, and fast. Here is what happens when you bring in your Mac." />
+            <SectionHeading label="How it works" title="How does a Mac repair work?" sub="Simple, transparent, and fast. Here is what happens when you bring in your Mac." />
             <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
               {PROCESS.map((step, i) => (
                 <div key={step.title} className="flex flex-col">
@@ -325,8 +326,8 @@ export default function MacRepairHub() {
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
               label="Why us"
-              title="The independent Apple specialists in Dubai"
-              sub={`Not an Apple Authorised Service Centre. We're the faster, fairer-priced alternative with ${NAP.yearsInBusiness} years of experience.`}
+              title="Why choose an independent Mac repair workshop?"
+              sub={`Not an Apple Authorised Service Centre. We're the independent alternative with ${NAP.yearsInBusiness} years of experience.`}
             />
             <div className="grid gap-x-xl gap-y-[48px] sm:grid-cols-2 lg:grid-cols-3">
               {WHY.map((w) => <IconCard key={w.title} Icon={w.Icon} title={w.title} body={w.body} />)}
