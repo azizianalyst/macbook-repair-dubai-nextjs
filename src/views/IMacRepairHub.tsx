@@ -172,7 +172,7 @@ export default function IMacRepairHub() {
       }}
 
       whatIs={{
-        heading: "iMac repair in Dubai: what goes wrong on each generation",
+        heading: "Why do older and newer iMacs fail differently?",
         entityName: "iMac repair",
         definition: (
           <>
@@ -199,7 +199,7 @@ export default function IMacRepairHub() {
       sections={[
         {
           id: "imac-screen",
-          heading: "iMac screen replacement",
+          heading: "How is an iMac screen replaced?",
           body: (
             <>
               <p>
@@ -218,7 +218,7 @@ export default function IMacRepairHub() {
         },
         {
           id: "imac-upgrade",
-          heading: "iMac upgrade: SSD and RAM",
+          heading: "Which iMacs can take an SSD or RAM upgrade?",
           body: (
             <p>
               On 27-inch Intel iMacs from 2017 to 2020 the memory goes in through a door at the back — up to
@@ -231,7 +231,7 @@ export default function IMacRepairHub() {
         },
         {
           id: "imac-power",
-          heading: "iMac not turning on: power supply, logic board or graphics",
+          heading: "Why won't my iMac turn on?",
           body: (
             <p>
               A 27-inch Intel iMac has its power supply inside the case, and a dead one looks exactly like a dead
@@ -246,7 +246,7 @@ export default function IMacRepairHub() {
         },
         {
           id: "imac-parts",
-          heading: "iMac parts we fit",
+          heading: "Which iMac parts do you fit?",
           body: (
             <p>
               Display assemblies, SSDs, RAM, power supplies, fans, speakers and cameras, plus the adhesive every
@@ -257,8 +257,40 @@ export default function IMacRepairHub() {
           ),
         },
         {
+          id: "imac-by-model",
+          heading: "What fails on each iMac model?",
+          body: (
+            <>
+              <p>What comes across the bench differs by generation, so the first question we ask is the size and year:</p>
+              <ul>
+                <li>
+                  <strong>24-inch M1, M3 and M4 (2021 to 2024):</strong> the power supply is the external brick, and on
+                  models with Ethernet the port sits in that brick, so a dead network connection can be the adapter
+                  rather than the iMac. RAM and SSD are soldered to the logic board.
+                </li>
+                <li>
+                  <strong>27-inch Intel 2020:</strong> SSD-only storage and a memory door at the back, so RAM changes are
+                  quick; screen and power-supply faults are the usual reasons it comes in.
+                </li>
+                <li>
+                  <strong>27-inch Intel 2017 and 2019:</strong> Fusion Drives whose hard-drive half has slowed right down,
+                  and on the 2017 5K models AMD graphics faults that show as lines or artefacts under load.
+                </li>
+                <li>
+                  <strong>21.5-inch Intel:</strong> no memory door. On many 21.5-inch models the RAM is soldered; where it is
+                  not, and for any drive change, the display comes off and new adhesive goes on.
+                </li>
+                <li>
+                  <strong>iMac Pro 2017:</strong> memory is not behind a door either; it is a display-off job like the
+                  21.5-inch.
+                </li>
+              </ul>
+            </>
+          ),
+        },
+        {
           id: "imac-models",
-          heading: "Which iMac do you have?",
+          heading: "How do I find out which iMac I have?",
           body: (
             <p>
               Apple menu &gt; About This Mac shows the size and year. Each model has its own page:{" "}
@@ -276,7 +308,7 @@ export default function IMacRepairHub() {
       ]}
 
       features={{
-        heading: "Other iMac repairs we do",
+        heading: "What other iMac repairs do you do?",
         subheading: "All on the bench at our Media City workshop.",
         features: [
           { icon: HardDrive, name: "Data recovery", description: "Fusion Drive, SSD and T2-encrypted iMac recovery." },
