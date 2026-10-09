@@ -51,9 +51,9 @@ export default function MacSsdUpgrade() {
         "Free re-clone if the new SSD has a logical issue inside warranty.",
       ]}
       faqs={[
-        { q: "Can you upgrade SSD in an M1, M2 or M4 Mac Mini?", a: "No. The SSD silicon is part of the M-series chip package. Anyone selling you an 'M1 Mac Mini SSD upgrade' is selling you a misunderstanding. We'll show you the teardown to prove it and recommend a Thunderbolt SSD instead." },
+        { q: "Can you upgrade SSD in an M1, M2 or M4 Mac Mini?", a: "No. The storage chips are soldered to the board and paired to the M-series chip, so they cannot be swapped like a normal drive. We recommend a Thunderbolt SSD instead." },
         { q: "What about the Mac Studio's removable modules?", a: "They look like SSDs but they're encrypted to the specific M-series chip in your Studio. A third-party module won't boot. Apple-genuine matched modules exist through limited channels - we can quote one for your serial, but it's expensive and a Thunderbolt SSD is usually a better answer." },
-        { q: "How fast is a Thunderbolt SSD compared to internal?", a: "A good Thunderbolt 4 SSD (Samsung T9, OWC Envoy Pro FX, SanDisk Pro-G40) runs at 2,800-3,000 MB/s - close to internal NVMe speed for most real-world tasks. Final Cut and Lightroom both work happily off them." },
+        { q: "How fast is a Thunderbolt SSD compared to internal?", a: "A Thunderbolt SSD such as the OWC Envoy Pro FX or SanDisk Pro-G40 is fast enough to run Final Cut and Lightroom libraries from. USB-C drives such as the Samsung T9 are slower than Thunderbolt but fine for archives and backups." },
         { q: "Can I clone my old SSD to the new one?", a: "Yes - for older Mac Mini upgrades we clone the existing macOS install across so you boot to the same desktop. For Mac Studio module swaps we install macOS clean (Apple's pairing process requires it)." },
         { q: "Is there a risk of the upgrade failing?", a: "On Mac Mini 2014 and Mac Pro 2019: very low - these are well-documented procedures. On Mac Studio module swap: higher risk because Apple's pairing tools must complete cleanly. We will quote each case and flag risk honestly." },
         { q: "How long does it take?", a: "Mac Mini 2014: same day. Mac Pro 2019: same day. Mac Studio module swap: 1-2 days because the pairing process takes time and we test thoroughly." },

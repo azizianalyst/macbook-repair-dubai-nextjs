@@ -13,7 +13,7 @@ export default function IMacRamUpgrade() {
       path="/imac-ram-upgrade-dubai"
       eyebrow="iMac RAM and memory upgrade"
       h1="iMac RAM Upgrade Dubai: Which iMacs Can Be Upgraded?"
-      subtitle="27-inch Intel iMacs take more memory through the door on the back. 21.5-inch 2017 and 2019 models can be upgraded with the screen off. 24-inch M1, M3 and M4 iMacs can't be upgraded at all, and we tell you that before you pay for anything."
+      subtitle="27-inch Intel iMacs take more memory through the door on the back. 21.5-inch Retina 4K models from 2017 and 2019 can be upgraded with the screen off. 24-inch M1, M3 and M4 iMacs can't be upgraded at all, and we tell you that before you pay for anything."
       startingPrice={400}
       timeline="Usually same day (Intel) · Not possible (M-series)"
       whatsappPrefill="Hi, I'd like to upgrade my iMac. Model, year and current RAM:"
@@ -26,7 +26,7 @@ export default function IMacRamUpgrade() {
       serviceName="iMac RAM Upgrade Dubai"
       quickAnswer={{
         question: "Can my iMac be upgraded?",
-        answer: "27-inch Intel iMacs from 2012 to 2020 take a RAM upgrade through the door on the back, up to 64GB on the 2017 and 2019 models and 128GB on the 2020 model. 21.5-inch 2017 and 2019 iMacs can be upgraded with the screen removed. M1, M3 and M4 iMacs cannot: memory and storage are soldered.",
+        answer: "27-inch Intel iMacs from 2012 to 2020 take a RAM upgrade through the door on the back, up to 64GB on the 2017 and 2019 models and 128GB on the 2020 model. 21.5-inch Retina 4K iMacs from 2017 and 2019 can be upgraded with the screen removed. M1, M3 and M4 iMacs cannot: memory and storage are soldered.",
       }}
       intro={
         <>
@@ -53,8 +53,8 @@ export default function IMacRamUpgrade() {
                 <tr><td className="border border-border px-3 py-2">27-inch, 2019</td><td className="border border-border px-3 py-2">Yes, rear door, up to 64GB DDR4</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
                 <tr><td className="border border-border px-3 py-2">27-inch, 2017</td><td className="border border-border px-3 py-2">Yes, rear door, up to 64GB DDR4</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
                 <tr><td className="border border-border px-3 py-2">27-inch, Late 2012 to 2015</td><td className="border border-border px-3 py-2">Yes, rear door</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
-                <tr><td className="border border-border px-3 py-2">21.5-inch, 2017 and 2019</td><td className="border border-border px-3 py-2">Yes, but the screen must come off</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
-                <tr><td className="border border-border px-3 py-2">21.5-inch, 2014 and 2015</td><td className="border border-border px-3 py-2">No, memory is soldered</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
+                <tr><td className="border border-border px-3 py-2">21.5-inch Retina 4K, 2017 and 2019</td><td className="border border-border px-3 py-2">Yes, but the screen must come off</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
+                <tr><td className="border border-border px-3 py-2">21.5-inch non-Retina 2014 to 2017</td><td className="border border-border px-3 py-2">No, memory is soldered</td><td className="border border-border px-3 py-2">Yes, screen off</td></tr>
                 <tr><td className="border border-border px-3 py-2">24-inch M1, M3 and M4</td><td className="border border-border px-3 py-2">No, unified memory</td><td className="border border-border px-3 py-2">No, soldered</td></tr>
               </tbody>
             </table>
@@ -80,10 +80,10 @@ export default function IMacRamUpgrade() {
 
           <h2 className={h2}>iMac 2017 and 2019 21.5-inch RAM upgrade</h2>
           <p className="text-[16px] leading-relaxed mb-md">
-            The 21.5-inch 2017 and 2019 iMacs use standard memory modules, but Apple put them behind the
-            display. The screen has to be cut free, the memory changed, and the display re-bonded with new
+            The 21.5-inch Retina 4K iMacs from 2017 and 2019 use standard memory modules, but Apple put them
+            behind the display. The screen has to be cut free, the memory changed, and the display re-bonded with new
             adhesive. It is worth doing, especially together with an SSD so the screen only comes off once.
-            The 21.5-inch models from 2014 and 2015 have memory soldered to the board and cannot take more.
+            The 21.5-inch models without a Retina display, from 2014 to the 2017 base model, have memory soldered to the board and cannot take more.
           </p>
 
           <h2 className={h2}>iMac SSD upgrade: the other half of a speed upgrade</h2>
@@ -111,7 +111,7 @@ export default function IMacRamUpgrade() {
         "27-inch iMac 2020 memory upgrades up to 128GB",
         "27-inch iMac 2017 and 2019 memory upgrades up to 64GB",
         "27-inch iMac Late 2012 to 2015 memory upgrades",
-        "21.5-inch iMac 2017 and 2019 RAM upgrade with display re-bond",
+        "21.5-inch Retina 4K iMac 2017 and 2019 RAM upgrade with display re-bond",
         "Faulty or mismatched modules causing kernel panics",
         "RAM and SSD upgraded together in one visit",
         "Honest no-upgrade answer for 24-inch M-series iMacs",
@@ -119,7 +119,7 @@ export default function IMacRamUpgrade() {
       steps={[
         { title: "Confirm model and ceiling",   body: "Send the serial number from About This Mac. We confirm the maximum memory, the speed and how many slots are free." },
         { title: "Matched modules",             body: "We use branded DDR4 or DDR3 SO-DIMM modules matched to Apple's specification for your model, fitted in matched sets." },
-        { title: "Fit the memory",              body: "27-inch: through the rear door. 21.5-inch 2017 and 2019: display removed, memory fitted, display re-bonded with new adhesive." },
+        { title: "Fit the memory",              body: "27-inch: through the rear door. 21.5-inch Retina 4K 2017 and 2019: display removed, memory fitted, display re-bonded with new adhesive." },
         { title: "Test before you collect",     body: "We run an extended memory test, confirm the full amount shows in About This Mac, and load-test the iMac before handing it back." },
       ]}
       warrantyDays={365}
@@ -131,7 +131,7 @@ export default function IMacRamUpgrade() {
       faqs={[
         { q: "Can you upgrade the RAM in a 24-inch M1, M3 or M4 iMac?", a: "No. On Apple-silicon iMacs the memory is part of the chip package, so nobody can add more after purchase. The SSD is soldered too. If you need more memory, the practical route is selling it and buying a higher-spec model. For storage, an external USB-C or Thunderbolt SSD works well for photo libraries and archives." },
         { q: "What is the maximum RAM for my 27-inch iMac?", a: "Apple configured the 2017 and 2019 27-inch iMacs with up to 64GB and the 2020 model with up to 128GB, using four DDR4 slots behind the rear door. Earlier 27-inch models from Late 2012 onwards also have the door, with lower maximums. Send us your serial number and we will confirm the ceiling for your exact model." },
-        { q: "Can the 21.5-inch iMac be upgraded?", a: "The 21.5-inch 2017 and 2019 iMacs can, but the memory sits behind the display, so the screen has to be removed and re-bonded. It makes sense to add an SSD in the same visit. The 21.5-inch models from 2014 and 2015 have soldered memory and cannot take more RAM, though an SSD upgrade is still possible." },
+        { q: "Can the 21.5-inch iMac be upgraded?", a: "The 21.5-inch Retina 4K iMacs from 2017 and 2019 can, but the memory sits behind the display, so the screen has to be removed and re-bonded. It makes sense to add an SSD in the same visit. The non-Retina 21.5-inch models from 2014 to 2017 have soldered memory and cannot take more RAM, though an SSD upgrade is still possible." },
         { q: "Is it worth upgrading an Intel iMac in 2026?", a: "Often, yes, if the rest of the iMac is healthy and your apps run on the macOS version it supports. A 27-inch 2019 or 2020 iMac with more memory and an SSD is still a capable desk machine. Apple has said macOS Tahoe is the last major release for Intel Macs, so factor that into the decision." },
         { q: "Does a RAM upgrade void the warranty on my iMac?", a: "On 27-inch iMacs the rear memory door is designed for owner upgrades, so fitting memory there does not affect Apple's coverage. On 21.5-inch models the display has to be removed, which is different. Most Intel iMacs are long out of Apple warranty anyway. Our work carries a written warranty of up to 12 months." },
         { q: "How long does an iMac RAM upgrade take?", a: "A 27-inch memory upgrade through the rear door is usually done the same day, including a memory test. A 21.5-inch upgrade takes longer because the display is removed and re-bonded, and we let the adhesive set before handing it back. We give you a time when we confirm the parts for your model." },

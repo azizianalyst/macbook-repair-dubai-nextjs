@@ -497,8 +497,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iMac power supply repair in Dubai for the common 27-inch no-power fault. PSU replacement with written warranty. Free diagnosis - call 055 741 3706."
   },
   "/imac-ram-upgrade-dubai": {
-    "title": "iMac RAM Upgrade Dubai. Same-Day Fitting",
-    "description": "iMac Ram Upgrade Dubai. Free diagnosis, same-day where possible, written warranty. Call 055 741 3706."
+    "title": "iMac RAM Upgrade Dubai: Which iMacs Can Be Upgraded",
+    "description": "iMac RAM upgrade in Dubai: 27-inch Intel iMacs take up to 128GB, 21.5-inch Retina 4K models need the screen off, M-series is fixed. WhatsApp your model."
   },
   "/imac-repair-cost-dubai": {
     "title": "iMac Repair Cost in Dubai - What Changes the Price",
@@ -957,8 +957,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac mini M4 Pro (2024) repair in Dubai: logic board, power supply and Thunderbolt 5 ports, plus preventive service. Free diagnosis. WhatsApp for a quote."
   },
   "/mac-mini-ram-upgrade-dubai": {
-    "title": "Mac mini RAM Upgrade Dubai. Same-Day Fitting",
-    "description": "Mac mini RAM upgrade in Dubai for the 2018 Intel model, the last mini with user-accessible RAM. M1 to M4 Pro RAM is fused to the chip. WhatsApp us."
+    "title": "Mac mini RAM Upgrade Dubai: Which Models Can Be Upgraded",
+    "description": "Mac mini RAM upgrade in Dubai: the 2018 Intel mini takes up to 64GB, 2010-2012 minis take standard modules, M-series RAM is fixed. WhatsApp us your model."
   },
   "/mac-mini-repair-dubai": {
     "title": "Mac mini Repair Dubai. Free Diagnosis, Free Pickup",

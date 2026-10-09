@@ -1285,8 +1285,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Mac mini overheating or loud fan in Dubai? Dust-clogged vents, dried thermal paste, M-chip sustained load throttling. Thermal service. All models. Call 055 741 3706."
   },
   "/mac-mini-ram-upgrade-dubai": {
-    "title": "Mac Mini RAM Upgrade Dubai - 2018 Intel Only | 055 741 3706",
-    "description": "Mac Mini RAM upgrade Dubai. The 2018 Intel Mac Mini is the last upgradeable model - up to 64GB. M1/M2/M4 RAM is soldered. Honest answer first."
+    "title": "Mac mini RAM Upgrade Dubai: Which Models Can Be Upgraded",
+    "description": "Mac mini RAM upgrade in Dubai: the 2018 Intel mini takes up to 64GB, 2010-2012 minis take standard modules, M-series RAM is fixed. WhatsApp us your model."
   },
   "/mac-mini-repair-dubai": {
     "title": "Mac Mini Repair Dubai - M1, M2, Intel Logic Board & SSD Experts",
