@@ -883,7 +883,7 @@ export default function Home() {
             <ol className="grid gap-lg md:grid-cols-3 lg:grid-cols-5 list-none p-0 m-0">
               {PROCESS.map((p, i) => (
                 <li key={p.t} className="flex flex-col">
-                  <p aria-hidden className="text-[64px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
+                  <p aria-hidden="true" data-step={`0${i + 1}`} className="text-[64px] font-bold leading-none text-accent/15 mb-md select-none before:content-[attr(data-step)]" />
                   <div className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10">
                     <p.Icon size={20} className="text-accent transition-colors duration-200 group-hover:text-white" strokeWidth={1.75} aria-hidden />
                   </div>
