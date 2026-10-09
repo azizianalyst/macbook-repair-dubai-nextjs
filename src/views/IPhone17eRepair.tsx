@@ -67,7 +67,7 @@ export default function IPhone17eRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 17e still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Absolutely - it just launched.</strong> A19, Apple Intelligence, MagSafe, and strong resale value. iOS 26 expected. On a phone this new, a repair is almost always well worthwhile - message us on WhatsApp for the exact price and decide with the figure in hand.
+            <strong>Absolutely - it just launched.</strong> A19, Apple Intelligence, MagSafe, and strong resale value. Runs iOS 27. On a phone this new, a repair is almost always well worthwhile - message us on WhatsApp for the exact price and decide with the figure in hand.
           </p>
         </>
       }
@@ -98,7 +98,7 @@ export default function IPhone17eRepair() {
         { q: "How many 17e units have you serviced so far?", a: "12, as of April 2026 - the phone is only 6 weeks old. We'll publish 17e-specific failure-cluster data on this page once we have meaningful numbers (target: June 2026)." },
         { q: "Why is the back glass a 2-3 day repair?", a: "The 17e is the first e-series iPhone with MagSafe - its back-glass assembly with embedded MagSafe coil is a brand-new e-series-exclusive part. Apple's authorised supply chain to the UAE is still ramping. We expect 24-hour replenishment by mid-2026." },
         { q: "Bundle pricing?", a: "Yes - we discount common pairings like screen + battery and battery + USB-C port. Message us on WhatsApp with what you need and we'll send today's exact bundle price for your 17e." },
-        { q: "Will the 17e get iOS 20 and beyond?", a: "Yes - A19 with 8 GB RAM is fully Apple-Intelligence-capable. iOS 26 expected." },
+        { q: "Will the 17e get iOS 20 and beyond?", a: "Yes - A19 with 8 GB RAM is fully Apple-Intelligence-capable. Runs iOS 27." },
         { q: "Same day?", a: "OLED, battery, USB-C, single camera - yes. MagSafe back glass + Action Button currently 2-3 days." },
       ]}
       reviewNames={["B Parker", "Seyed Moulana"]}
