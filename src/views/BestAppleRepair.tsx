@@ -39,7 +39,7 @@ const WHY_US = [
 
 const FAQS = [
   { q: "What is the best Apple repair service in Dubai?",
-    a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, provides a written warranty of at least 6 months, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
+    a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, gives a written warranty that states the period for each repair, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
   { q: "Can one shop repair all my Apple devices in Dubai?",
     a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations including Pro M5). One workshop, one warranty card, one WhatsApp thread." },
   { q: "How does the best Apple repair in Dubai compare to Apple Store?",
