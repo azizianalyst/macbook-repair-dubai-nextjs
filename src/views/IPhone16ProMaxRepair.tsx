@@ -101,7 +101,7 @@ export default function IPhone16ProMaxRepair() {
       faqs={[
         { q: "Bundle pricing?", a: "Yes - we bundle screen + battery and Camera Control + USB-C so you save versus separate repairs. Message us on WhatsApp for today's bundle price on your model." },
         { q: "Genuine Apple OLED?", a: "Yes - we stock both genuine Apple-pull and OEM-grade 6.9-inch OLED. Message us on WhatsApp for today's price on each." },
-        { q: "Is the 16 Pro Max still supported by Apple?", a: "Yes for software (iOS 18 native, iOS 19+ guaranteed). Discontinued in Sept 2025 with the 17 Pro Max launch but parts and service remain available through us." },
+        { q: "Is the 16 Pro Max still supported by Apple?", a: "Yes for software (iOS 18 native, later iOS versions expected). Discontinued in Sept 2025 with the 17 Pro Max launch but parts and service remain available through us." },
         { q: "Is the 6.9-inch screen really the largest iPhone ever?", a: "At launch in Sept 2024, yes. The iPhone 17 Pro Max has since matched/exceeded it. The repair part is unique to the 16 Pro Max - not cross-compatible." },
         { q: "Same day?", a: "OLED, battery, USB-C, Camera Control, Action Button, main + ultra-wide cameras - yes." },
       ]}
