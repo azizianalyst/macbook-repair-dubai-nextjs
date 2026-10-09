@@ -46,7 +46,7 @@ const COMPARISONS = [
 const WHY_US = [
   "iPhone 6 through iPhone 17 Pro Max, 11 active generations in stock",
   "OLED panels with True Tone calibration for iPhone 11–17",
-  "Face ID preserved on every screen replacement, guaranteed",
+  "Face ID preserved on every screen replacement we do",
   "Screen in 40 minutes, battery in 30 minutes",
   "Free pickup and delivery across Dubai Mainland",
   "Written warranty up to 12 months",
