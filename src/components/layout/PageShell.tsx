@@ -6,6 +6,7 @@ import { StickyMobileCTA } from "./StickyMobileCTA";
 import { StickyContactBar } from "@/components/blocks/StickyContactBar";
 import { QuickHelpWidget } from "@/components/blocks/QuickHelpWidget";
 import { organization } from "@/lib/schema";
+import { ModelRepairLinks } from "@/components/blocks/ModelRepairLinks";
 
 const ORG_LD_ID = "ld-organization-global";
 
@@ -30,7 +31,7 @@ export function PageShell({ children, hideContactCta = false }: { children: Reac
     <>
       <a href="#main" className="skip-link">Skip to content</a>
       <NavBar />
-      <main id="main" className="pb-3xl">{children}</main>
+      <main id="main" className="pb-3xl">{children}<ModelRepairLinks /></main>
       <Footer hideCtaBand={hideContactCta} />
       <StickyMobileCTA />
       <StickyContactBar />
