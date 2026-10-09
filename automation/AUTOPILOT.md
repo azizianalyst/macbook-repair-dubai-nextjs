@@ -26,6 +26,7 @@ it binds every step below. Each job runs only when its War Room switch says so.
 | Link monitor | j08 | Friday | redirects only |
 | Monthly review | j09 | 1st of the month | no |
 | Quarterly check | j10 | 1st of Jan, Apr, Jul, Oct | yes |
+| Skill sweep | j11 | Thursday | template fixes only |
 
 Run order: j02, j03, j01, then the rest in table order. A red gate stops that job, not the run.
 `j00` is the separate Monday cloud routine; never run it from here.
@@ -164,6 +165,23 @@ Mark each task done with its commit hash, and log a table: page | status | new t
 5. Draft up to 3 outreach emails to `automation/drafts/YYYY-MM-DD-outreach.md` and add one Owner
    task "Send the drafted outreach". Never send.
 
+## j11 Skill sweep (Thursday)
+
+Runs the audit skills no other job covers, against the local production build (`npm run build`,
+`npm run start -- -p 3006`). Invoke each skill with the Skill tool and record its findings:
+
+1. `/schema-audit`: `npm run check:gates`; FAQPage JSON-LD equals the visible FAQ on every page
+   with one; LocalBusiness NAP equals `site.ts`. Tracker task `t-schema`.
+2. `/internal-links-audit`: `npm run check:internal`; orphans must be 0; list money pages with
+   fewer than 10 inbound links; anchors for a keyword link only to its owner page. `t-links`.
+3. `/seo-technical`: robots.txt, sitemap, self-referencing canonicals, AI-crawler policy,
+   Core Web Vitals on the local build. `t-tech`.
+4. `/theme-visual-audit`: screenshots at 390 / 768 / 1280 / 1920 of the homepage, one service
+   page, one blog post and `/contact/`; findings by severity. `t-visual`.
+
+Clear template regressions → fix through the j05 review and gate steps, one commit. Content or
+fact questions → War Room task. Report: `automation/reports/skill-sweep-YYYY-MM-DD.md`.
+
 ## j09 Monthly review (1st)
 
 What moved and why (positions, referring domains, leads), the decay list (pages that dropped for
@@ -179,6 +197,13 @@ fixsquad.ae, fixermanme.com and macrepair.ae, Arabic keyword re-pull. Bump `CONT
 ---
 
 ## FINISH (every run)
+
+0. **Skill Tracker** (https://claude.ai/artifact/HFAjMuyfXspSX3YNC9PAVh, `ArtifactData`,
+   collections `tasks` and `log`). For every job that ran, update its tracker tasks (map in
+   `docs/skill-automation-map.md`): set `lastRun`, `lastResult`, tick the `subs` entries that
+   passed (`done: true`, `at`), untick ones that failed, set `status` (`recurring` for a
+   scheduled task that ran clean, `blocked` + `blockedBy` when it needs the owner). Add one
+   `log` entry `{at, by: "Autopilot", task, text}` per job. Pin writes with `if_version`.
 
 1. For every job that ran: update `jobs/<id>` with `lastRun` (ISO time) and `lastResult` (one
    line), pinned to the version you read.
