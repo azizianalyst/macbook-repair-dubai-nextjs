@@ -140,7 +140,7 @@ const RELATED = [
 const TRUST = [
   { value: "3,400+", label: "Displays fitted since 2004" },
   { value: "Free", label: "Diagnosis on every model" },
-  { value: "30 min", label: "Guaranteed by appointment" },
+  { value: "30 min", label: "By appointment" },
   { value: "3 months", label: "Written warranty" },
 ];
 
