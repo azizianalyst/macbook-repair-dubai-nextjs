@@ -156,7 +156,7 @@ export default function GuideChangeMacBookName() {
       ]}
       relatedLinks={[
         { label: "MacBook repair Dubai", href: "/", description: "Free pickup, free diagnosis, warranty of up to 12 months across Dubai." },
-        { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean install if your Mac's software is acting up." },
+        { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Clean install if your Mac's software is acting up." },
         { label: "MacBook running slow? 10 fixes", href: "/blog/macbook-running-slow-10-fixes", description: "Quick wins to speed up a sluggish MacBook." },
       ]}
     />

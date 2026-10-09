@@ -60,7 +60,7 @@ export default function MacPerformanceTune() {
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Shah nawaz", "Ali Hassan"]}
       related={[
-        { label: "Mac macOS Reinstall",   href: "/mac-os-reinstall-dubai",      description: "When a tune isn't enough - clean install." },
+        { label: "Mac mini/Studio/Pro macOS Reinstall", href: "/mac-os-reinstall-dubai",      description: "When a tune isn't enough - clean install." },
         { label: "Mac Fan Cleaning",      href: "/mac-fan-cleaning-dubai",      description: "If thermal throttling is the actual cause." },
         { label: "Mac Full Diagnostic",   href: "/mac-full-diagnostic-dubai",   description: "Free check first - confirm whether tune or hardware." },
       ]}

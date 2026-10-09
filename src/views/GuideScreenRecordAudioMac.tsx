@@ -129,7 +129,7 @@ export default function GuideScreenRecordAudioMac() {
             A botched audio driver install, a corrupt Core Audio configuration, or a left-over
             virtual device from an old app can break sound system-wide - sometimes to the point where
             even Zoom or Music play nothing. A clean macOS reinstall clears these conflicts without
-            touching your files. We handle <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">macOS reinstall in Dubai</Link> if you'd
+            touching your files. We handle <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">macOS reinstall in Dubai</Link> if you'd
             rather not risk it, or run a <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">full MacBook diagnostic</Link> to
             rule out a hardware fault. If recordings only stutter when the Mac is under load, it may
             be a performance issue - see our <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">10 fixes for a slow MacBook</Link>.
@@ -181,7 +181,7 @@ export default function GuideScreenRecordAudioMac() {
       ]}
       relatedLinks={[
         { label: "MacBook speaker & audio repair Dubai", href: "/macbook-speaker-repair-dubai", description: "No sound at all, even from a normal mic? We diagnose and fix it." },
-        { label: "macOS reinstall in Dubai", href: "/mac-os-reinstall-dubai", description: "Clears Core Audio conflicts from broken audio driver installs." },
+        { label: "macOS reinstall in Dubai", href: "/macos-reinstall-dubai", description: "Clears Core Audio conflicts from broken audio driver installs." },
         { label: "MacBook full diagnostic", href: "/macbook-full-diagnostic-dubai", description: "Rule out a hardware audio fault before you keep troubleshooting." },
       ]}
     />

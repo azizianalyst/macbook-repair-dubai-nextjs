@@ -9,7 +9,7 @@ export default function MacOsReinstall() {
       path="/macos-reinstall-dubai"
       eyebrow="macOS reinstall"
       h1="MacBook macOS Reinstall Dubai - Clean Install Service"
-      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall fixes 90% of software problems. Same-day, flat quoted fee, with or without data preservation."
+      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall clears most software problems. Same-day, flat quoted fee, with or without data preservation."
       startingPrice={300}
       timeline="Same day (2-4 hours)"
       whatsappPrefill="Hi, I need a macOS reinstall - model and current macOS version:"

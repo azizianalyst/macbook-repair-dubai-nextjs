@@ -172,7 +172,7 @@ export default function GuideResetMacBookPassword() {
             failed reset has left macOS unbootable. We're at Office #45, 10th Floor, Concord Tower, Al
             Sufouh, Dubai Media City, open Mon-Sat 9am-10pm, with free pickup and free diagnosis. If a
             reset corrupted the system we can also do a clean{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall
             </Link>{" "}
             or a full{" "}
@@ -223,7 +223,7 @@ export default function GuideResetMacBookPassword() {
         { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "Forgot your MacBook password?", href: "/blog/how-to-recover-macbook-password", description: "Locked out and can't log in? Reset a forgotten password via Recovery mode." },
         { label: "Factory reset a MacBook", href: "/blog/how-to-reset-a-macbook", description: "Wipe and start fresh, the safe way, before selling or after a tangled reset." },
-        { label: "macOS reinstall in Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS reinstall if a reset left your Mac unbootable." },
+        { label: "macOS reinstall in Dubai", href: "/macos-reinstall-dubai", description: "Clean macOS reinstall if a reset left your Mac unbootable." },
       ]}
     />
   );

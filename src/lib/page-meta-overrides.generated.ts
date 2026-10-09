@@ -969,7 +969,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac mini, Studio or Pro not turning on in Dubai? No fan, chime or light points to the PSU, SMC or logic board. Free diagnosis first. Send a WhatsApp."
   },
   "/mac-os-reinstall-dubai": {
-    "title": "Mac macOS Reinstall Dubai. Clean Install, Data Preserved",
+    "title": "Mac mini, Mac Studio & Mac Pro macOS Reinstall Dubai",
     "description": "macOS reinstall in Dubai for Mac mini, Mac Studio and Mac Pro - Internet Recovery or a full revive with Apple Configurator. Free diagnosis - call us."
   },
   "/mac-performance-tune-dubai": {

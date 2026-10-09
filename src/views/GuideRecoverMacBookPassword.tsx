@@ -134,7 +134,7 @@ export default function GuideRecoverMacBookPassword() {
           <p>
             Avoid "Reinstall macOS" or erasing the disk to get past a password - it deletes your data and
             is almost never necessary. If you do want a clean start after recovering access, our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service
             </Link>{" "}
             does it safely.

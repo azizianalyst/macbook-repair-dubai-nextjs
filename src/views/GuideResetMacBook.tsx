@@ -139,7 +139,7 @@ export default function GuideResetMacBook() {
           <p>
             If Recovery won't load, the disk won't erase, or the reinstall fails partway, that points
             to a software or drive fault rather than user error. Our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service in Dubai
             </Link>{" "}gets it back to a clean, working state with the correct macOS version for your model.
           </p>
@@ -226,7 +226,7 @@ export default function GuideResetMacBook() {
       ]}
       relatedLinks={[
         { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
-        { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
+        { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Recover files erased during a factory reset without backup." },
         { label: "How to recover a MacBook password", href: "/blog/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },
       ]}
