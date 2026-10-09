@@ -115,8 +115,20 @@ const FAQS = [
     a: "Often. If the fault is power or display, the data is usually untouched. On T2 and Apple silicon models the SSD is soldered and encrypted to the logic board, so recovery means repairing that board rather than moving the drive. Our Mac data recovery page explains the limits.",
   },
   {
+    q: "My MacBook Pro won't turn on. What should I check first?",
+    a: "Try a different power adapter and cable, and leave it charging for 15 minutes. Then hold the power button for 10 seconds and press it again. If the fans or keyboard light come on but the screen stays black, connect an external display. Tell us what you saw on WhatsApp; it narrows the fault before the free diagnosis.",
+  },
+  {
+    q: "Is it worth repairing an older Intel MacBook Pro?",
+    a: "Often, when the fault is a battery, screen or port and the MacBook still runs the macOS version you need. A board fault on a model that no longer gets macOS updates is a closer call. After the free diagnosis we give you the total so you can compare it with replacing the MacBook.",
+  },
+  {
+    q: "Do you repair the latest MacBook Pro M5, M5 Pro and M5 Max?",
+    a: "Yes. If it is still inside Apple's one-year warranty or AppleCare+, go to Apple first and we will tell you so. For accidental damage or out-of-warranty faults we confirm part availability on WhatsApp before you bring it in.",
+  },
+  {
     q: "Do you repair MacBook Pros from Abu Dhabi or Sharjah?",
-    a: "Yes. We have no branch outside Dubai, but a free courier collects from anywhere in Sharjah or Abu Dhabi and returns the MacBook after the repair. In mainland Dubai pickup is free too, or you can walk in.",
+    a: "Yes. We have no branch outside Dubai, but we can arrange courier collection from Sharjah or Abu Dhabi and confirm any charge before it is booked. In mainland Dubai pickup is free, or you can walk in.",
   },
 ];
 
@@ -148,10 +160,9 @@ export default function MacBookProRepair() {
       }}
 
       authorByline={{
-        author: "MacBook Repair Dubai workshop team",
-        role: "Concord Tower, Dubai Media City",
-        reviewer: REVIEWER ? `${REVIEWER.name}, lead technician (${REVIEWER.years} years)` : undefined,
-        updated: "September 2026",
+        author: REVIEWER ? REVIEWER.name : "MacBook Repair Dubai workshop team",
+        role: REVIEWER ? `Lead technician, ${REVIEWER.years} years` : "Concord Tower, Dubai Media City",
+        updated: "October 2026",
       }}
 
       quickAnswer={{
@@ -161,7 +172,7 @@ export default function MacBookProRepair() {
       }}
 
       keyTakeaways={{
-        updated: "September 2026",
+        updated: "October 2026",
         lead:
           "MacBook Repair Dubai is an independent workshop that repairs every MacBook Pro generation at Concord Tower, Dubai Media City.",
         items: [
@@ -175,7 +186,7 @@ export default function MacBookProRepair() {
       }}
 
       whatIs={{
-        heading: "MacBook Pro repair in Dubai: what fails on each generation",
+        heading: "What fails on each MacBook Pro generation?",
         entityName: "MacBook Pro repair",
         definition: (
           <>
@@ -202,7 +213,7 @@ export default function MacBookProRepair() {
       sections={[
         {
           id: "pro-screen",
-          heading: "Apple MacBook Pro screen repair",
+          heading: "Can you replace a MacBook Pro screen?",
           body: (
             <>
               <p>
@@ -223,7 +234,7 @@ export default function MacBookProRepair() {
         },
         {
           id: "pro-battery",
-          heading: "MacBook Pro battery replacement in Dubai",
+          heading: "When does a MacBook Pro battery need replacing?",
           body: (
             <>
               <p>
@@ -241,7 +252,7 @@ export default function MacBookProRepair() {
         },
         {
           id: "pro-power",
-          heading: "MacBook Pro won't turn on, keeps restarting or freezes",
+          heading: "Why won't my MacBook Pro turn on, or why does it keep restarting?",
           body: (
             <p>
               A frozen screen or restart loop is often software, so we rule out macOS first. Repeated kernel
@@ -255,7 +266,7 @@ export default function MacBookProRepair() {
         },
         {
           id: "pro-m5",
-          heading: "MacBook Pro M5, M5 Pro and M5 Max: the current models",
+          heading: "Can you repair the MacBook Pro M5, M5 Pro and M5 Max?",
           body: (
             <>
               <p>
@@ -274,7 +285,7 @@ export default function MacBookProRepair() {
         },
         {
           id: "pro-older",
-          heading: "Older MacBook Pros: 2012–2015 and the Intel Touch Bar models",
+          heading: "Do you still repair 2012–2015 and Intel Touch Bar MacBook Pros?",
           body: (
             <p>
               Pre-2016 machines — the A1278, A1398 and A1502 — are often still worth a battery or storage
@@ -288,7 +299,7 @@ export default function MacBookProRepair() {
       ]}
 
       features={{
-        heading: "Other MacBook Pro repairs we do",
+        heading: "What other MacBook Pro repairs do you do?",
         subheading: "All at component level in our Media City workshop.",
         features: [
           { icon: Keyboard, name: "Keyboard", description: "Butterfly and Magic Keyboard repairs, single keys where possible." },

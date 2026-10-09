@@ -110,11 +110,23 @@ const FAQS = [
   },
   {
     q: "Is there MacBook Air repair near me if I'm not in Media City?",
-    a: "Yes. We collect free from anywhere in mainland Dubai and bring it back after the repair, or walk in to Concord Tower without an appointment. Sharjah and Abu Dhabi customers use free courier collection; we have no branch outside Dubai.",
+    a: "Yes. We collect free from anywhere in mainland Dubai and bring it back after the repair, or walk in to Concord Tower without an appointment. From Sharjah or Abu Dhabi we can arrange courier collection and confirm any charge first; we have no branch outside Dubai.",
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",
     a: "If it is inside Apple's one-year warranty or AppleCare+, go to Apple first and we will tell you so. Out of warranty there is nothing to void. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 12 months on other hardware, 15 days on keyboard, board and liquid work.",
+  },
+  {
+    q: "My MacBook Air won't charge. Is it the port?",
+    a: "Not always. Try another cable and adapter, and on models with MagSafe try both MagSafe and USB-C. If neither charges, the port, the charging circuit or the battery is the cause, and the free diagnosis tells you which before you pay anything.",
+  },
+  {
+    q: "Can a MacBook Air be saved after a liquid spill?",
+    a: "Often, if it reaches the bench quickly. Switch it off, do not charge it or test it, and bring it in the same day. The board is cleaned and inspected; we tell you what can be saved before any repair is quoted.",
+  },
+  {
+    q: "Is it worth repairing an older Intel MacBook Air?",
+    a: "For a battery, screen or keyboard on an Air that still runs the macOS version you need, usually yes. A board fault on an Air that no longer gets macOS updates is a closer call. We give you the total after the free diagnosis so you can compare it with replacing it.",
   },
   {
     q: "Will I lose my data during a MacBook Air repair?",
@@ -151,8 +163,7 @@ export default function MacBookAirRepair() {
       authorByline={{
         author: "Shafiq",
         role: "Lead technician — screens, batteries and water damage",
-        reviewer: "MacBook Repair Dubai workshop team",
-        updated: "September 2026",
+        updated: "October 2026",
       }}
 
       quickAnswer={{
@@ -162,7 +173,7 @@ export default function MacBookAirRepair() {
       }}
 
       keyTakeaways={{
-        updated: "September 2026",
+        updated: "October 2026",
         lead:
           "MacBook Repair Dubai is an independent workshop that repairs every MacBook Air generation at Concord Tower, Dubai Media City.",
         items: [
@@ -176,7 +187,7 @@ export default function MacBookAirRepair() {
       }}
 
       whatIs={{
-        heading: "MacBook Air repair in Dubai: what fails and why",
+        heading: "What fails on a MacBook Air, and why?",
         entityName: "MacBook Air repair",
         definition: (
           <>
@@ -203,7 +214,7 @@ export default function MacBookAirRepair() {
       sections={[
         {
           id: "air-screen",
-          heading: "MacBook Air screen replacement",
+          heading: "Can you replace a MacBook Air screen?",
           body: (
             <>
               <p>
@@ -223,7 +234,7 @@ export default function MacBookAirRepair() {
         },
         {
           id: "air-battery",
-          heading: "MacBook Air battery replacement",
+          heading: "When does a MacBook Air battery need replacing?",
           body: (
             <>
               <p>
@@ -242,7 +253,7 @@ export default function MacBookAirRepair() {
         },
         {
           id: "air-charging-port",
-          heading: "MacBook Air charging port repair",
+          heading: "Why won't my MacBook Air charge?",
           body: (
             <p>
               An Air that stops charging is not always a broken port. We test the charger, cable, port and the
@@ -266,7 +277,7 @@ export default function MacBookAirRepair() {
         },
         {
           id: "air-m5-neo",
-          heading: "The latest MacBook Air (M5) and the MacBook Neo",
+          heading: "Do you repair the MacBook Air M5 and the MacBook Neo?",
           body: (
             <>
               <p>
@@ -286,7 +297,7 @@ export default function MacBookAirRepair() {
       ]}
 
       features={{
-        heading: "Other MacBook Air repairs we do",
+        heading: "What other MacBook Air repairs do you do?",
         subheading: "Apple laptop repair at component level, on every Air generation.",
         features: [
           { icon: Keyboard, name: "Keyboard and top case", description: "Butterfly keyboards on the 2018–2019 Intel Airs, scissor keyboards on the 2017 and 2020 Intel Airs and every M-series." },
