@@ -344,3 +344,11 @@ Priority is ordered for a MacBook-first shop in Dubai. Estimated volume is unkno
 - One secondary source (Tempo) lists a "MacBook Pro 13-inch (M5)" among the March 2026 discontinuations. That is almost certainly the 14" M5 512GB configuration, which was replaced by a 1TB base. Treat it as an error.
 - UAE availability of the March 2026 launches is inferred from the Apple AE newsroom pages, which carry AED prices and the 4 Mar / 11 Mar dates. Those pages do not explicitly say that the UAE was in the first wave.
 - The repair prices above come from Apple's dynamic widget on 26 Sep 2026. They can change at any time and exclude VAT.
+
+---
+
+## Watch log
+
+| Date | Checked | Change since previous check |
+|---|---|---|
+| 2026-10-09 | Newsroom RSS, apple.com/ae/mac, apple.com/ae/iphone, iPhone Duo press release | None. Mac line-up on apple.com/ae: MacBook Neo, MacBook Air 13"/15", MacBook Pro 14"/16", iMac, Mac mini (New), Mac Studio (New). iPhone: Duo (New), 18 Pro (New), Air, 17, 17e, 16. No AED prices on those pages. Only device news since 26 Sep: "Final Cut Camera now supports variable aperture on iPhone 18 Pro" (29 Sep, software). iPhone Duo re-confirmed: pre-orders Fri 16 Oct, available Fri 23 Oct, UAE named. Sources: https://www.apple.com/newsroom/rss-feed.rss ; https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/ |
