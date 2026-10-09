@@ -423,7 +423,7 @@ export default function MacBookAirBatteryReplacement() {
           <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
             {PROCESS.map((step, i) => (
               <div key={step.title} className="flex flex-col">
-                <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
+                <p aria-hidden="true" data-step={`0${i + 1}`} className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none before:content-[attr(data-step)]" />
                 <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
                   <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
                 </div>
