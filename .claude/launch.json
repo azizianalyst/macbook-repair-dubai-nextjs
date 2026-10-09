@@ -22,6 +22,20 @@
         "3006"
       ],
       "port": 3006
+    },
+    {
+      "name": "mbr-video-studio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../macbook-repair-dubai.ae-video",
+        "run",
+        "dev",
+        "--",
+        "--no-open",
+        "--port=3120"
+      ],
+      "port": 3120
     }
   ]
 }
