@@ -226,13 +226,14 @@ fixsquad.ae, fixermanme.com and macrepair.ae, Arabic keyword re-pull. Bump `CONT
 
 ## FINISH (every run)
 
-0. **Skill Tracker** (https://claude.ai/artifact/HFAjMuyfXspSX3YNC9PAVh, `ArtifactData`,
-   collections `tasks` and `log`). For every job that ran, update its tracker tasks (map in
-   `docs/skill-automation-map.md`): set `lastRun`, `lastResult`, tick the `subs` entries that
-   passed (`done: true`, `at`), untick ones that failed, set `status` (`recurring` for a
-   scheduled task that ran clean, `blocked` + `blockedBy` when it needs the owner). Add one
-   `log` entry `{at, by: "Autopilot", task, text}` per job. Pin writes with `if_version`.
-
+0. **Skills and status (in the War Room; the separate Skill Tracker artifact was merged on 9 Oct 2026).**
+   War Room collections `skills` (one doc per skill task, ids `t-*`, map in `docs/skill-automation-map.md`)
+   and `skillLog`. For every job that ran: set `lastRun`, `lastResult`, tick the `subs` that passed
+   (`done: true`, `at`), untick failures, set `status` (`recurring` for a clean scheduled run, `blocked`
+   + `blockedBy` when it needs the owner); add one `skillLog` entry `{at, by: "Autopilot", task, text}`.
+   Then update `status/site` (`items[]` of `{label, state: good|warn|bad, detail}`, `updatedAt`, `by`)
+   with today's live check, deploy state, gate result, search numbers and open decisions.
+   Pin every write with `if_version`.
 1. For every job that ran: update `jobs/<id>` with `lastRun` (ISO time) and `lastResult` (one
    line), pinned to the version you read.
 2. One `log` entry `{by: "Autopilot", at, text}`: what ran, what changed, and a "Needs you"

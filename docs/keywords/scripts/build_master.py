@@ -100,6 +100,9 @@ LOC = r"dubai|uae|abu dhabi|sharjah|ajman|al ain|marina|deira|jumeirah|barsha|jl
 rows = []
 for k, x in M.items():
     dev = x.get("device") or first(DEV, k); part = x.get("part") or first(PART, k)
+    # "screen" in these phrases is software or usage, not a screen repair
+    if re.search(r"screen ?(record|shot|time|saver|mirror|shar|split)|split ?screen|lock ?screen|home ?screen|full ?screen|screenshot|print ?screen|black screen of death", k, re.I) and not re.search(r"repair|replace|crack|broken|fix (the )?screen", k, re.I):
+        part = "software"
     typ = x.get("type") if x.get("type") else first(TYPE, k)
     if re.search(r"near me|nearby", k): typ = "near-me" if typ in ("service","product","problem") else typ
     vols = [v for v in (x.get("vol_semrush"), x.get("vol_ahrefs")) if v]

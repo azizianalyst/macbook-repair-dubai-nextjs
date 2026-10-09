@@ -1,7 +1,7 @@
 # Skill → automation map (macbook-repair-dubai.ae)
 
-Created 2026-10-09. Progress is tracked live in the **MBR Skill Tracker**
-(https://claude.ai/artifact/HFAjMuyfXspSX3YNC9PAVh): one task per skill, sub-checklists, who runs
+Created 2026-10-09. Progress is tracked live in the **Skills tab of the SEO War Room**
+(https://claude.ai/artifact/KJdhnCzAKcSfDT4JYSW6Nf, collections `skills` and `skillLog`): one task per skill, sub-checklists, who runs
 it, last run and result. The autopilot (`automation/AUTOPILOT.md`) updates it at the end of every
 run. The owner can tick steps and change statuses on the page.
 
