@@ -51,7 +51,7 @@ export default function BlogMacBookBackToSchool() {
             rows={[
               { model: "MacBook Air M3 13\"", apple: "8GB / 256GB", ours: "Price on request", note: "Best value - recommend" },
               { model: "MacBook Air M3 13\"", apple: "16GB / 512GB", ours: "Price on request", note: "Future-proof - recommend if budget allows" },
-              { model: "MacBook Air M4 13\"", apple: "16GB / 256GB", ours: "Price on request", note: "Latest, similar real-world performance" },
+              { model: "MacBook Air M4 13\"", apple: "16GB / 256GB", ours: "Price on request", note: "Previous generation (M5 is current), similar real-world performance" },
               { model: "MacBook Pro 14\" M4", apple: "16GB / 512GB", ours: "Price on request", note: "Overkill for secondary - skip" },
             ]}
           />
