@@ -38,7 +38,7 @@ export default function GuideMacBookScreenshot() {
           <h2>The three shortcuts that cover 95% of screenshots</h2>
           <p>
             macOS has screen capture built in - no download, no App Store, no software to buy.
-            Whether you have a brand-new M4 MacBook Air or an older Intel MacBook Pro here in
+            Whether you have a new M5 MacBook Air or an older Intel MacBook Pro here in
             Dubai, the keyboard shortcuts are identical. Learn these three and you'll rarely
             need anything else.
           </p>
