@@ -108,7 +108,6 @@ const FAQ_ITEMS = [
 ];
 
 const RELATED = [
-  { label: "MacBook Air Screen Repair Dubai",        href: "/macbook-air-screen-repair-dubai",          description: "Our full Air screen service hub — all models." },
   { label: "MacBook Screen Repair Dubai",            href: "/macbook-screen-repair-dubai",              description: "All MacBook screen repairs — Air, Pro, Intel." },
   { label: "MacBook Air Repair Dubai",               href: "/macbook-air-repair-dubai",                 description: "All MacBook Air repairs: battery, keyboard, charging port, logic board." },
   { label: "MacBook Air Battery Replacement Dubai",  href: "/macbook-air-battery-replacement-dubai",    description: "Air battery service — M1 through M4, swelling, cycle count check." },
@@ -495,7 +494,6 @@ export default function MacBookAirScreenReplacement() {
           <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4 max-w-none w-full">Related services</p>
           <div className="flex flex-wrap justify-center gap-sm text-[15px]">
             {[
-              { label: "MacBook Air Screen Repair Dubai",          href: "/macbook-air-screen-repair-dubai" },
               { label: "MacBook Air Repair Dubai",                 href: "/macbook-air-repair-dubai" },
               { label: "MacBook Screen Repair Dubai",              href: "/macbook-screen-repair-dubai" },
               { label: "MacBook Pro Screen Repair Dubai",          href: "/macbook-pro-screen-repair-dubai" },

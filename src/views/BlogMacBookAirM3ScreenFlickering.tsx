@@ -190,7 +190,7 @@ export default function BlogMacBookAirM3ScreenFlickering() {
           <p>
             Turnaround is same-day if you drop off before 11am. We carry M3 Air screen assemblies
             for the 13-inch and 15-inch models in stock.{" "}
-            <Link to="/macbook-air-screen-repair-dubai" className="text-accent font-semibold hover:underline">
+            <Link to="/macbook-air-screen-replacement-dubai" className="text-accent font-semibold hover:underline">
               Full MacBook Air screen repair service details →
             </Link>
           </p>
@@ -228,7 +228,7 @@ export default function BlogMacBookAirM3ScreenFlickering() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Air screen repair Dubai", href: "/macbook-air-screen-repair-dubai", description: "All MacBook Air models, screen repair pricing and service." },
+        { label: "MacBook Air screen repair Dubai", href: "/macbook-air-screen-replacement-dubai", description: "All MacBook Air models, screen repair pricing and service." },
         { label: "MacBook Air screen repair cost Dubai", href: "/blog/macbook-air-screen-repair-cost-dubai", description: "Full price breakdown by model: Intel to M4." },
         { label: "MacBook Air M2 screen lines Dubai", href: "/blog/macbook-air-m2-screen-lines-dubai", description: "Horizontal or vertical lines on M2 Air display: cable vs panel diagnosis." },
         { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "All MacBook screen repair: Air, Pro, and older models." },

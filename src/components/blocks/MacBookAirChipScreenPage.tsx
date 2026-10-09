@@ -141,7 +141,7 @@ export default function MacBookAirChipScreenPage({
               { name: "Home", path: "/" },
               { name: "MacBook Repair", path: "/macbook-repair-dubai" },
               { name: "MacBook Air Repair", path: "/macbook-air-repair-dubai" },
-              { name: "Screen Repair", path: "/macbook-air-screen-repair-dubai" },
+              { name: "Screen Repair", path: "/macbook-air-screen-replacement-dubai" },
               { name: `${chip} Screen`, path },
             ]} />
           </div>
@@ -397,7 +397,7 @@ export default function MacBookAirChipScreenPage({
           <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-4">Related</p>
           <div className="flex flex-wrap justify-center gap-sm text-[15px]">
             {[
-              { label: "MacBook Air screen repair Dubai (all chips)", href: "/macbook-air-screen-repair-dubai" },
+              { label: "MacBook Air screen repair Dubai (all chips)", href: "/macbook-air-screen-replacement-dubai" },
               { label: l3label, href: l3href },
               { label: "MacBook Air repair Dubai", href: "/macbook-air-repair-dubai" },
               { label: blogLabel, href: blogHref },

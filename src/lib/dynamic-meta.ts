@@ -144,10 +144,6 @@ const OVERRIDE: Record<string, Meta> = {
     description: "MacBook Neo keyboard repair in Dubai: stuck or missing keys, spills and full keyboard replacement. Free diagnosis, warranty checked first. WhatsApp us.",
   },
   // Pro-specific service spokes under the generic screen/battery pages.
-  "/macbook-air-screen-repair-dubai": {
-    title: "MacBook Air Screen Repair Dubai — Free Diagnosis",
-    description: "MacBook Air screen repair Dubai for M1–M5 Liquid Retina and Intel models, True Tone kept. Genuine or quality-tested panels, 90-day warranty. Same-day.",
-  },
   "/macbook-pro-screen-repair-dubai": {
     title: "MacBook Pro Screen Repair Dubai — Free Diagnosis",
     description: "MacBook Pro screen repair in Dubai: Liquid Retina XDR mini-LED, ProMotion and Flexgate faults. Same-day, genuine or tested panels, 90-day warranty.",

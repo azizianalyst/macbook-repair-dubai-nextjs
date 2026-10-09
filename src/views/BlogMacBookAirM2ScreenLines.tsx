@@ -210,7 +210,7 @@ export default function BlogMacBookAirM2ScreenLines() {
             Free diagnosis: if you are not sure whether your MacBook Air M2 lines are a screen fault
             or a GPU fault, bring it in. We run the external monitor test and hinge test at no charge
             and give you a confirmed diagnosis before recommending any repair.{" "}
-            <Link to="/macbook-air-screen-repair-dubai" className="text-accent font-semibold hover:underline">
+            <Link to="/macbook-air-screen-replacement-dubai" className="text-accent font-semibold hover:underline">
               MacBook Air screen repair Dubai →
             </Link>
           </p>
@@ -243,7 +243,7 @@ export default function BlogMacBookAirM2ScreenLines() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook Air screen repair Dubai", href: "/macbook-air-screen-repair-dubai", description: "All MacBook Air models, screen repair pricing and same-day service." },
+        { label: "MacBook Air screen repair Dubai", href: "/macbook-air-screen-replacement-dubai", description: "All MacBook Air models, screen repair pricing and same-day service." },
         { label: "MacBook Air screen repair cost Dubai", href: "/blog/macbook-air-screen-repair-cost-dubai", description: "Full price breakdown for every MacBook Air model from Intel to M4." },
         { label: "MacBook Air M3 screen flickering Dubai", href: "/blog/macbook-air-m3-screen-flickering-dubai", description: "M3 Air display flickering: True Tone conflicts, cable fault, software fixes." },
         { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "All MacBook screen repair: Air, Pro, and older models." },

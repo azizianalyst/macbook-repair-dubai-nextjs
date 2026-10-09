@@ -12,5 +12,9 @@ export const REDIRECTS: Record<string, { to: string; type: 301 | 302 }> = {
   "/blog/macbook-air-overheating-fix-dubai": {
     "to": "/blog/macbook-air-overheating-dubai",
     "type": 301
+  },
+  "/macbook-air-screen-repair-dubai": {
+    "to": "/macbook-air-screen-replacement-dubai/",
+    "type": 301
   }
 };

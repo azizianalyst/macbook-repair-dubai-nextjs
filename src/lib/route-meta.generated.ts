@@ -1504,10 +1504,6 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "title": "MacBook Air M5 Screen Repair Dubai",
     "description": "MacBook Air M5 (2026) screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. Genuine panels, free diagnosis, 1–2 day turnaround. Call 055 741 3706."
   },
-  "/macbook-air-screen-repair-dubai": {
-    "title": "MacBook Air Screen Repair Dubai — Same-Day M1 to M4",
-    "description": "MacBook Air screen repair Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone, same-day. Genuine Apple panels, 3-month warranty. Call 055 741 3706."
-  },
   "/macbook-air-screen-replacement-dubai": {
     "title": "MacBook Air Screen Replacement Dubai — Same Day",
     "description": "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone preserved. Same-day on most models, free pickup Dubai-wide. Call 055 741 3706."

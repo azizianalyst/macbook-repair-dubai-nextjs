@@ -631,7 +631,7 @@ export default function MacBookAirBatteryReplacement() {
             {[
               { label: "MacBook Air Repair Dubai",              href: "/macbook-air-repair-dubai" },
               { label: "MacBook Battery Replacement Dubai",     href: "/macbook-battery-replacement-dubai" },
-              { label: "MacBook Air Screen Repair Dubai",       href: "/macbook-air-screen-repair-dubai" },
+              { label: "MacBook Air Screen Replacement Dubai",  href: "/macbook-air-screen-replacement-dubai" },
               { label: "MacBook Pro Battery Replacement Dubai", href: "/macbook-pro-battery-replacement-dubai" },
               { label: "MacBook Water Damage Repair Dubai",     href: "/macbook-water-damage-repair-dubai" },
               { label: "Mac Repair Dubai",                      href: "/mac-repair-dubai" },

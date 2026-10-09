@@ -491,7 +491,6 @@ export const ROUTES: string[] = [
   "/macbook-air-m5-repair-dubai",
   "/macbook-air-m5-screen-repair-dubai",
   "/macbook-air-repair-dubai",
-  "/macbook-air-screen-repair-dubai",
   "/macbook-air-screen-replacement-dubai",
   "/macbook-backup-service-dubai",
   "/macbook-battery-replacement-dubai",

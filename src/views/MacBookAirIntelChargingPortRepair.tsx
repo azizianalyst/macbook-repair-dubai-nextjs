@@ -95,8 +95,8 @@ export default function MacBookAirIntelChargingPortRepair() {
           description: "49.9 Wh cell replacement for 2018-2020 Intel Air. WhatsApp for a quote.",
         },
         {
-          label: "MacBook Air Screen Repair Dubai",
-          href: "/macbook-air-screen-repair-dubai",
+          label: "MacBook Air Screen Replacement Dubai",
+          href: "/macbook-air-screen-replacement-dubai",
           description: "All Air screen generations covered. WhatsApp for a quote.",
         },
       ]}
