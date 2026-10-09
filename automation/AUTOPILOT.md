@@ -80,7 +80,12 @@ Everything else goes to the War Room only.
 
 ## j01 Daily data
 
-0. **Ahrefs first (works since 9 Oct 2026).** In Chrome open `https://ahrf.rseotools.com/site-explorer`,
+0. **Ahrefs: owner-requested only, never daily.** On 9 Oct 2026, after about ten report views in one
+   session, the shared rseotools account showed "Suspicious activity detected ... access to this report
+   has been temporarily restricted". Do NOT open Ahrefs from the scheduled run. Use it only when the
+   owner asks, at most one short session a week (overview + one report), and stop at the first warning.
+   Search Console (step 6) is the daily source.
+   How it works when allowed: In Chrome open `https://ahrf.rseotools.com/site-explorer`,
    type `macbook-repair-dubai.ae` in the search box, press Enter, wait ~20 s, then use the left
    sidebar (Overview, Organic keywords, Referring domains, Broken backlinks). Direct report URLs stall.
    Export tables with the textarea + execCommand('copy') button clicked by ref, then pbpaste to
