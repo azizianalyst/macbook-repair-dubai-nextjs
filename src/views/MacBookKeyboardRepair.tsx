@@ -84,7 +84,7 @@ const FAQS: FAQ[] = [
   { q: "How long does MacBook keyboard repair take?",
     a: "Single Magic Keyboard key: 30 minutes same day. Full Magic Keyboard swap on Apple Silicon: 4 hours, same day to next day. Butterfly top case (with battery and speakers): 1 to 2 days because the top case must come from local distributor stock and the trackpad re-pairing takes 90 minutes." },
   { q: "Why can't you replace just one butterfly key?",
-    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's own butterfly service program (ended December 2022) replaced the entire top case - same approach here, and Apple typically charges AED 1,800 to AED 2,400 for it." },
+    a: "Apple designed the 2016-2019 butterfly keyboard with the keys glued into a single membrane that's bonded to the top case (which also holds the battery, speakers, and Touch ID). There is no way to remove or replace an individual butterfly key cap without destroying the membrane. This is why Apple's own butterfly service program (ended December 2022) replaced the entire top case - same approach here. Contact Apple for its current top-case replacement price." },
   { q: "What's the difference between butterfly and Magic Keyboard?",
     a: "Butterfly (2015-2019): low-profile, thin, prone to dust failures, individual keys can't be replaced. Magic Keyboard (2019+ on Pro 16\", 2020+ on all other models): scissor switch, taller travel, individually replaceable key caps and scissor mechanisms. Apple Silicon MacBooks all use Magic Keyboard - much easier and cheaper to repair." },
   { q: "Can you replace the keyboard layout from Arabic to English (or vice versa)?",
@@ -100,7 +100,7 @@ const FAQS: FAQ[] = [
   { q: "Can I use my MacBook with one dead key while I wait for repair?",
     a: "Short term yes - Karabiner Elements (free) lets you remap the dead key to an unused one (e.g. caps lock to letter \"A\"). Long term no - dead keys typically multiply on butterfly keyboards and the eventual top-case swap is the same price whether 1 key or 10 are dead." },
   { q: "Why are butterfly keyboards on the 2016-2019 MacBook Pro so unreliable?",
-    a: "Apple's first-generation butterfly switch (2015 12\" MacBook) had no dust ingress protection. The second-gen (2016-2017 Pro) added a silicone membrane but dust still entered. The third-gen (2018-2019) added a slightly improved seal but failure rates remained at 5-10x scissor switches. Apple ran a 4-year service program (ended December 2022). The workshop still services these; Apple lists about AED 1,800 to AED 2,400." },
+    a: "Apple's first-generation butterfly switch (2015 12\" MacBook) had no dust ingress protection. The second-gen (2016-2017 Pro) added a silicone membrane but dust still entered. The third-gen (2018-2019) added a slightly improved seal but failure rates remained at 5-10x scissor switches. Apple ran a 4-year service program (ended December 2022). The workshop still services these; Apple replaces and quotes the whole top case." },
   { q: "Do you offer free pickup for keyboard repair?",
     a: "Yes, free pickup and delivery anywhere in Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
 ];
@@ -339,7 +339,7 @@ export default function MacBookKeyboardRepair() {
               </Card>
               <Card>
                 <h3 className="m-0 mb-2 text-text text-[18px] font-bold">OEM-spec butterfly top cases</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. Apple lists about AED 1,800 to AED 2,400 for the same job.</p>
+                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">For 2016-2019 MacBook Pro the top case comes from the original Foxconn assembly line. Same battery, same Touch ID flex, same speaker assembly as Apple's part. Apple replaces the whole top case for the same job.</p>
                 <p className="m-0 mono text-[13px] text-accent">Same 15-day warranty</p>
               </Card>
             </div>
