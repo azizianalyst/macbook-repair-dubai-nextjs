@@ -71,11 +71,13 @@ export function localBusiness() {
         closes: "22:00",
       },
     ],
-    // NOTE: AggregateRating NOT here by design — localBusiness() is used on every service/model
-    // page and a sitewide rating would trigger review-snippet spam. Use localBusinessWithRating()
-    // only on home and /reviews where the rating is visible on the page.
+    // NOTE: AggregateRating NOT here by design. localBusiness() is used on every page and Google
+    // does not show stars for self-collected reviews of the business itself. Home deliberately
+    // uses localBusiness() too (see Home.tsx); localBusinessWithRating() is currently unused.
     parentOrganization: { "@id": `${SITE.url}/#organization` },
-    founder: { "@type": "Organization", name: "Azizi Technologies" },
+    // Fact sheet (VERIFIED): Abdul Aziz is the one and only founder. "Azizi Technologies" is the
+    // unverified legal operator (owner decision D3), so it must not appear as the founder.
+    founder: { "@type": "Person", name: "Abdul Aziz", jobTitle: "Founder" },
     foundingDate: "2004-10-10",
     // Matches the emirates/cities the site has dedicated landing pages for (free pickup &
     // delivery). Trim any the business does not physically serve.
