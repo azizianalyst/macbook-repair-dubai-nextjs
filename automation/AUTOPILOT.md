@@ -102,6 +102,16 @@ Everything else goes to the War Room only.
    `docs/keywords/new-keywords-YYYY-MM.csv`.
 5. Check: a fresh subagent re-reads 10 random numbers from the saved file against Semrush and
    reports mismatches. Any mismatch → redo that table.
+6. **Search Console (every day, and the fallback when Semrush is unavailable).** In Chrome open
+   `https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Amacbook-repair-dubai.ae&num_of_days=28&compare_date=PREV`.
+   Read the four totals with get_page_text. The query table holds every row in the DOM: build a TSV
+   in-page, inject a full-page button whose click copies it with a hidden textarea +
+   `document.execCommand('copy')` (navigator.clipboard is refused here), click the button **by ref**
+   (find → ref; coordinate clicks miss), then `LANG=en_US.UTF-8 pbpaste > automation/data/gsc-queries-28d-YYYY-MM-DD.tsv`.
+   Repeat with `&breakdown=page` for pages; strip " Copy URL to clipboard Open in new tab Inspect URL"
+   from page cells. Fill the snapshot's gsc* fields, update `owners.rankingNow`, and create tasks for:
+   page-one queries with zero clicks and 500+ impressions, pages that lost 10+ clicks, and protected
+   pages that lost clicks (urgent). Supermetrics cannot be used (trial expired 30 Jun 2026).
 
 ## j06 Weekly report (Monday)
 
