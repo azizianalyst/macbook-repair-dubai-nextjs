@@ -60,7 +60,7 @@ export default function BlogIPhoneNotTurningOn() {
       relatedLinks={[
         { label: "iPhone repair Dubai", href: "/iphone-repair-dubai" },
         { label: "iPhone battery replacement Dubai", href: "/iphone-battery-replacement-dubai" },
-        { label: "iPhone water damage repair Dubai", href: "/blog/iphone-water-damage-repair-dubai" },
+        { label: "iPhone water damage repair Dubai", href: "/iphone-water-damage-repair-dubai" },
         { label: "iPhone cracked screen repair Dubai", href: "/blog/iphone-cracked-screen-repair-dubai" },
       ]}
       body={

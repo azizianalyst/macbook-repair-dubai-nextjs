@@ -269,7 +269,7 @@ export default function SameDayMacBookRepair() {
               { label: "MacBook Battery Replacement Dubai", href: "/macbook-battery-replacement-dubai" },
               { label: "MacBook Keyboard Repair Dubai", href: "/macbook-keyboard-repair-dubai" },
               { label: "MacBook Water Damage Repair Dubai", href: "/macbook-water-damage-repair-dubai" },
-              { label: "MacBook Repair Near Me Dubai", href: "/mac-repair-dubai" },
+              { label: "MacBook Repair Near Me Dubai", href: "/mac-repair-near-me-dubai" },
               { label: "MacBook Repair Dubai", href: "/" },
             ].map(({ label, href }) => (
               <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">

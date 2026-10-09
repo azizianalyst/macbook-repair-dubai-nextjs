@@ -209,7 +209,7 @@ const GUIDES: { label: string; href: string }[] = [
   { label: "Why your MacBook won't turn on - fix guide", href: "/blog/macbook-not-turning-on-fix-guide" },
   { label: "First steps after a MacBook water spill", href: "/blog/water-damage-macbook-immediate-action" },
   { label: "Recovering data from a broken MacBook", href: "/blog/data-recovery-broken-macbook-2026" },
-  { label: "iPhone screen repair cost in Dubai", href: "/blog/iphone-screen-repair-cost-dubai-2026" },
+  { label: "iPhone screen repair cost in Dubai", href: "/iphone-screen-repair-cost-dubai" },
   { label: "MacBook running slow - 10 fixes", href: "/blog/macbook-running-slow-10-fixes" },
   { label: "Protect your MacBook in Dubai summer heat", href: "/blog/protect-macbook-dubai-summer-heat" },
   { label: "Genuine vs grade-A parts explained", href: "/blog/genuine-parts-vs-quality-alternative-explained" },
