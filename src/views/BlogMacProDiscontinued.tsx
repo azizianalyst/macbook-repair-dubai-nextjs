@@ -7,13 +7,13 @@ export default function BlogMacProDiscontinued() {
   return (
     <BlogPostTemplate
       seoTitle="Apple Discontinued the Mac Pro - What to Buy in 2026"
-      seoDescription="March 2026: Apple killed the Mac Pro. The real alternatives - Mac Studio M3 Ultra, used 2019 Mac Pro, eGPU options - plus our service plan for owners. Message us for pricing."
+      seoDescription="Apple discontinued the Mac Pro in March 2026. What to buy instead: a Mac Studio Ultra, or keep a 2019 Mac Pro for PCIe GPUs. Questions? WhatsApp us."
       path="/blog/apple-mac-pro-discontinued-what-now"
       wide
       toc={[
         { id: "why-discontinued", label: "Why Apple discontinued it" },
-        { id: "studio-ultra", label: "Mac Studio M3 Ultra" },
-        { id: "still-only-pcie", label: "Still the only PCIe Mac" },
+        { id: "studio-ultra", label: "Mac Studio Ultra" },
+        { id: "still-only-pcie", label: "Still the only Mac for PCIe GPUs" },
         { id: "used-prices", label: "Used 2019 prices in Dubai" },
         { id: "workflows-needing", label: "Workflows that still need it" },
         { id: "egpu-options", label: "External GPU options" },
@@ -23,36 +23,36 @@ export default function BlogMacProDiscontinued() {
       category="Industry · Mac Pro"
       h1="Apple Discontinued the Mac Pro - Your 2026 Alternatives"
       hook="March 2026 - Apple killed the Mac Pro. Here's what to buy instead."
-      quickAnswer="Apple discontinued the Mac Pro on 11 March 2026. For 90% of pros, the Mac Studio M3 Ultra is the direct replacement - same M-series ceiling, far smaller and cheaper. PCIe-card workflows must keep their 2019 Intel Mac Pro alive, and used Dubai stock still holds strong value. We service every Mac Pro from 2008 to 2023 - message us on WhatsApp for today's repair price on your model."
+      quickAnswer="Apple discontinued the Mac Pro in March 2026; it left Apple's website on 26 March with no successor. For most pros, a Mac Studio with an Ultra chip replaces it at a far smaller size and price. PCIe-card workflows should keep their 2019 Intel Mac Pro serviced. Message us on WhatsApp for today's repair price on your model."
       author={{ name: "Shafiq", role: "Senior Mac desktop technician" }}
       datePublished="2026-04-26"
-      dateModified="2026-04-26"
+      dateModified="2026-10-09"
       readingMinutes={11}
       featuredImageAlt="Apple Mac Pro discontinued 2026 - alternatives Dubai"
       body={
         <>
           <h2 id="why-discontinued">Apple Mac Pro Discontinued. Why Apple discontinued the Mac Pro</h2>
           <p>
-            Apple shipped the last Mac Pro on 11 March 2026 - a 7-year run that started with the 2019 Intel
+            Apple discontinued the Mac Pro in March 2026, removing it from its website on 26 March - a 7-year run that started with the 2019 Intel
             tower and ended with the 2023 M2 Ultra refresh. Three reasons drove the decision:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Volume:</strong> Mac Pro was always &lt; 1% of Mac unit sales. Apple's own briefing called it "a workshop product, not a product line."</li>
-            <li><strong>Mac Studio caught up:</strong> The M3 Ultra in the Mac Studio matches or beats the M2 Ultra Mac Pro in 95% of benchmarks at a substantially lower price.</li>
+            <li><strong>Volume:</strong> the Mac Pro was always a niche machine next to the MacBook and iMac lines.</li>
+            <li><strong>Mac Studio caught up:</strong> the M3 Ultra Mac Studio has more CPU cores, more GPU cores and a higher memory ceiling than the M2 Ultra Mac Pro (table below), at a substantially lower price.</li>
             <li><strong>PCIe is dead on Apple Silicon:</strong> Apple Silicon's unified memory architecture cannot expose PCIe lanes to third-party GPUs. The Mac Pro's tower form factor became symbolic, not functional.</li>
           </ul>
 
-          <h2 id="studio-ultra">Mac Studio M3 Ultra - the new top Mac</h2>
+          <h2 id="studio-ultra">Mac Studio Ultra - the new top Mac</h2>
           <p>
-            Apple is positioning the Mac Studio M3 Ultra as the replacement. Spec-for-spec it does match:
+            When the Mac Pro went, the Mac Studio M3 Ultra became the top Mac, until the M5 Ultra Mac Studio (announced in August 2026) went on sale on 22 September 2026. Against the last Mac Pro, the M3 Ultra already matched or beat it on every line except PCIe:
           </p>
           <BlogPriceTable
             caption="Mac Pro 2023 (M2 Ultra) vs Mac Studio 2025 (M3 Ultra) - Dubai prices"
-            headers={["Spec", "Mac Pro 2023 (discontinued)", "Mac Studio M3 Ultra (current)"]}
+            headers={["Spec", "Mac Pro 2023 (discontinued)", "Mac Studio M3 Ultra (2025)"]}
             rows={[
               { model: "CPU cores", ours: "24 (16P + 8E)", apple: "32 (24P + 8E)", note: "+33% cores" },
               { model: "GPU cores", ours: "76", apple: "80", note: "+5%" },
-              { model: "Max RAM", ours: "192 GB", apple: "256 GB", note: "+33% ceiling" },
+              { model: "Max RAM", ours: "192 GB", apple: "256 GB (512 GB at launch)", note: "+33% on Apple's current spec" },
               { model: "Max SSD", ours: "8 TB", apple: "16 TB", note: "+100%" },
               { model: "PCIe slots", ours: "6 (PCIe 4.0)", apple: "0", note: "The killer" },
               { model: "Thunderbolt", ours: "8× TB4", apple: "6× TB5", note: "TB5 = 80 Gbps" },
@@ -64,16 +64,17 @@ export default function BlogMacProDiscontinued() {
             the better buy. It draws 480W vs the Mac Pro's 1,280W, runs silent, and fits on a desk shelf.
           </p>
 
-          <h2 id="still-only-pcie">Mac Pro 2019 Intel - still the only Mac with PCIe (worth keeping)</h2>
+          <h2 id="still-only-pcie">Mac Pro 2019 Intel - still the only Mac for PCIe GPUs (worth keeping)</h2>
           <p>
-            If your workflow needs PCIe cards - RED Rocket, Avid Pro Tools HDX, AJA Kona, Decklink 8K, Afterburner,
-            Magma chassis - the 2019 Intel Mac Pro is the <strong>only</strong> Mac that supports them.
-            Not the 2023 M2 Ultra (PCIe slots present but Apple Silicon can't expose them to third-party drivers),
-            not the Mac Studio. Period.
+            Both Mac Pros take PCIe cards. Apple says the 2023 M2 Ultra model runs third-party audio and video
+            I/O, storage and network cards with the maker's macOS driver, but not a separate graphics card or the
+            Afterburner card. If your workflow needs a PCIe GPU or Afterburner, the 2019 Intel Mac Pro is the
+            <strong>only</strong> Mac that runs them. With the Mac Pro line gone, a serviced 2019 or 2023 Mac Pro
+            is the only way to keep cards inside the machine; a Mac Studio needs a Thunderbolt PCIe chassis.
           </p>
           <p>
-            macOS Tahoe (26) still supports the 2019 Intel Mac Pro. Apple has committed to security updates
-            through at least 2028. After that, you're on macOS Sequoia or earlier - fine for a sealed studio
+            macOS Tahoe 26 is the last macOS for the 2019 Intel Mac Pro; macOS 27 needs Apple silicon. When
+            Tahoe's security updates end, it keeps running Tahoe unpatched - fine for a sealed, offline studio
             machine.
           </p>
 
@@ -89,13 +90,12 @@ export default function BlogMacProDiscontinued() {
             ]}
           />
           <p>
-            Prices have actually risen 8% since the discontinuation announcement - supply now finite, demand
-            from PCIe-locked workflows steady.
+            Supply is now finite and demand from PCIe-locked workflows is steady.
           </p>
 
           <h2 id="workflows-needing">Workflows that still need a Mac Pro alternative</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Pro Tools HDX (Avid):</strong> 256+ track sessions on PCIe DSP cards. No Mac Studio support.</li>
+            <li><strong>Pro Tools HDX (Avid):</strong> PCIe DSP cards. They need a Mac Pro or a Thunderbolt PCIe chassis; check Avid's current compatibility list for your exact system.</li>
             <li><strong>Broadcast video I/O (AJA, Blackmagic Decklink 8K):</strong> Some have TB3/TB5 boxes - many don't.</li>
             <li><strong>RED workflows pre-V-Raptor:</strong> RED Rocket-X PCIe accelerators only run in 2019 Mac Pro.</li>
             <li><strong>Scientific compute (CUDA legacy):</strong> Old NVIDIA cards via Mojave-era Mac Pros (cheap 2009-2012 cheese-graters still useful).</li>
@@ -104,16 +104,15 @@ export default function BlogMacProDiscontinued() {
 
           <h2 id="egpu-options">External GPU options (limited on Apple Silicon)</h2>
           <p>
-            Bad news for hopefuls: macOS 14 dropped eGPU support entirely on Apple Silicon. The 2019 Intel
-            Mac Pro can still drive a Sonnet Breakaway with an AMD W6800 over Thunderbolt 3 - but it's
-            slower than the internal MPX module and not officially supported by Apple in 2026.
+            Bad news for hopefuls: Apple Silicon Macs have never supported external GPUs; eGPUs work only with
+            Intel Macs. The 2019 Intel Mac Pro can still drive a Sonnet Breakaway with an AMD W6800 over
+            Thunderbolt 3 - but it's slower than an internal MPX module.
           </p>
 
           <h2 id="service-availability">Service availability for existing Mac Pro owners</h2>
           <p>
-            Apple has confirmed parts availability for the 2019 Mac Pro through <strong>2026-12-31</strong>.
-            After that, Apple Stores will refuse repairs and Apple Self Service Repair will stop shipping
-            kits. The 2023 M2 Ultra Mac Pro is supported through 2030.
+            Apple's own service for a discontinued Mac follows its vintage and obsolete policy and depends on
+            parts availability. We keep servicing both the 2019 and the 2023 Mac Pro either way.
           </p>
           <p>
             We will continue servicing both indefinitely. We hold stock of CPU trays (2019), GPU MPX modules
@@ -139,11 +138,11 @@ export default function BlogMacProDiscontinued() {
         </>
       }
       faqs={[
-        { q: "When exactly was the Mac Pro discontinued?", a: "Apple stopped accepting Mac Pro orders on 11 March 2026. Final units shipped through end-March 2026. The product page was removed from apple.com/ae on 1 April 2026." },
-        { q: "Will Apple release a new Mac Pro?", a: "No public roadmap. Industry analysts (Gurman, Kuo) report no Mac Pro project in development as of April 2026. The Mac Studio M3 Ultra is positioned as the de-facto top Mac." },
-        { q: "Should I sell my 2019 Mac Pro now?", a: "Only if you don't need the PCIe slots. Used prices have risen 8% post-discontinuation and are likely to hold for 18-24 months as PCIe-dependent shops scramble." },
-        { q: "Can the Mac Studio M3 Ultra replace a maxed Mac Pro?", a: "For 90% of workloads, yes - and at a substantially lower price. The 5% of users who need PCIe (Pro Tools HDX, RED Rocket, Decklink 8K, Afterburner) still need the 2019 Mac Pro. There is no Apple Silicon replacement." },
-        { q: "Will macOS 27 still support the 2019 Mac Pro?", a: "Apple has not committed beyond macOS 26 (Tahoe). Best estimate: macOS 27 yes, macOS 28 unlikely. Security updates committed through 2028." },
+        { q: "When exactly was the Mac Pro discontinued?", a: "In March 2026. Apple removed the Mac Pro from its website on 26 March 2026 and has no successor; the Mac Studio is now the top of the Mac range." },
+        { q: "Will Apple release a new Mac Pro?", a: "Apple has announced no successor. Since 22 September 2026 the M5 Ultra Mac Studio is the top of the Mac range." },
+        { q: "Should I sell my 2019 Mac Pro now?", a: "Only if you don't need the PCIe slots. If you rely on a PCIe graphics card, MPX modules or the Afterburner card, keep it serviced: no Apple silicon Mac runs them, and Apple no longer sells any Mac with PCIe slots." },
+        { q: "Can the Mac Studio M3 Ultra replace a maxed Mac Pro?", a: "For most workloads, yes - and at a substantially lower price. Users who need a PCIe graphics card or the Afterburner card still need the 2019 Mac Pro; other PCIe cards also run in the 2023 Mac Pro, and Apple no longer sells any Mac with PCIe slots." },
+        { q: "Will macOS 27 still support the 2019 Mac Pro?", a: "No. Apple has said macOS 26 Tahoe is the last release for Intel Macs and macOS 27 runs only on Apple silicon, so the 2019 Mac Pro stays on Tahoe." },
         { q: "Do you fix logic boards on the 2023 M2 Ultra Mac Pro?", a: "Yes - to component level. Apple only sells full board swaps at a premium. We diagnose to the chip, replace specific power ICs or memory, and typically deliver in 5-10 working days. Message us on WhatsApp for an exact quote." },
       ]}
       relatedLinks={[

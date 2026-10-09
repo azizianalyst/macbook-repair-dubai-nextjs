@@ -260,6 +260,8 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   const turnaround = resolveTurnaround(model);
   const serviceRows = buildServiceRows(model, turnaround);
   const related = pickRelatedModels(slug);
+  // Siblings backfill across categories (Mini, Air, Pro...); name the category only when every pick is in it.
+  const relatedLabel = related.every((r) => r.category === model.category) ? CATEGORY_LABEL[model.category] : "iPad";
 
   // 5 auto-generated FAQs from data
   const faqs = [
@@ -372,7 +374,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
           <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[28px] md:text-[32px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other {relatedLabel} models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link
@@ -404,7 +406,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
       warrantyDays={365}
       warrantyHeadline
       warrantyBullets={[
-        "Screens 90 days; batteries 3 months with an 80% capacity guarantee; board and liquid work 15 days; other parts up to 12 months",
+        "Screens 90 days; batteries 3 months; board and liquid work 15 days; other parts up to 12 months",
         "Covers the replaced part and the labour",
         "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",

@@ -277,7 +277,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
       warrantyDays={365}
       warrantyHeadline
       warrantyBullets={[
-        "Batteries: 3 months with an 80% capacity guarantee; screens: 90 days; other parts: up to 12 months",
+        "Batteries: 3 months; screens: 90 days; other parts: up to 12 months",
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
         "Issued in writing on your invoice",

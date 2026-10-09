@@ -16,7 +16,7 @@ export default function BlogMacBookAirIntelProblems() {
         { id: "battery-age", label: "Battery at 5+ years" },
         { id: "backlight", label: "Backlight dimming or dead" },
         { id: "usbc-charging", label: "USB-C not charging (2020)" },
-        { id: "macos-performance", label: "macOS Ventura slow on Core i3" },
+        { id: "macos-performance", label: "Newer macOS slow on the Core i3 Air" },
         { id: "dubai-specific", label: "Dubai aging effects" },
         { id: "intel-by-model", label: "2017 vs 2018 vs 2019 vs 2020" },
         { id: "repair-cost", label: "Intel Air repair cost Dubai" },
@@ -24,10 +24,10 @@ export default function BlogMacBookAirIntelProblems() {
       category="Fix guide · MacBook Air"
       h1="MacBook Air Intel Common Problems in Dubai? 2017 to 2020 Fix Guide 2026"
       hook="MacBook Air Intel models (2017 to 2020) are 5 to 9 years old in 2026. The most common problems at this age are entirely predictable: battery capacity, keyboard mechanism failure, and backlight issues. Most are still worth fixing. Here is the full picture."
-      quickAnswer="Most common MacBook Air Intel problems in Dubai: butterfly keyboard failure on 2018-2019 (dust jam or mechanism worn, keyboard clean or top-case replacement), battery below 70% capacity at 5+ years, screen backlight dimming or dead on older panels, USB-C charging port looseness on 2020 model, macOS Ventura performance issues on Core i3 models, and liquid damage from years of use. Most are repairable. Message us on WhatsApp for today's exact price on your model year."
+      quickAnswer="The most common MacBook Air Intel problems in Dubai: butterfly keyboard failure on 2018-2019 models, batteries below 70% capacity after five years, dimming or dead backlights, a loose USB-C port on the 2020 model, slow newer macOS on the 2020 Core i3, and liquid damage. Most are repairable. Message us on WhatsApp for today's price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-09"
       readingMinutes={9}
       featuredImageAlt="MacBook Air Intel common problems Dubai, technician repairing butterfly keyboard on Intel MacBook Air at Dubai workshop"
       body={
@@ -42,7 +42,7 @@ export default function BlogMacBookAirIntelProblems() {
             <li><strong>Battery at 60-70% capacity after 5-6 years</strong>: Intel cells degrade faster than M-series, especially in Dubai heat</li>
             <li><strong>Backlight failure on pre-2018 panels</strong>: ribbon cable failure on 2017 A1466 non-Retina models</li>
             <li><strong>USB-C port looseness on 2020 model</strong>: connector wear after 5 years of daily plugging</li>
-            <li><strong>macOS Ventura sluggish on Core i3 with 4GB RAM</strong>: Intel Airs at software end-of-life for Sequoia</li>
+            <li><strong>Newer macOS sluggish on the Core i3 with 8GB RAM</strong>: the 2018-2019 Airs stop at Sonoma 14, the 2020 at Sequoia 15</li>
             <li><strong>Liquid damage from years of daily use near Dubai humidity</strong>: slow corrosion on older boards</li>
           </ol>
           <p>
@@ -133,7 +133,7 @@ export default function BlogMacBookAirIntelProblems() {
 
           <h2 id="usbc-charging">USB-C not charging on MacBook Air 2020 Intel</h2>
           <p>
-            The 2020 Intel Air (A2179) dropped MagSafe and switched to USB-C only charging, the
+            Like the 2018-2019 Retina Airs, the 2020 Intel Air (A2179) charges only over USB-C, the
             same as the M1 that followed it. After 5+ years of daily plugging and unplugging, the
             USB-C connectors develop wear.
           </p>
@@ -154,10 +154,10 @@ export default function BlogMacBookAirIntelProblems() {
             cable first before assuming the port is the fault.
           </p>
 
-          <h2 id="macos-performance">macOS Ventura slow on MacBook Air Intel Core i3</h2>
+          <h2 id="macos-performance">Newer macOS slow on the Core i3 MacBook Air (2020)</h2>
           <p>
-            MacBook Air 2018-2020 models with Core i3 processors and 4GB RAM run macOS Ventura
-            sluggishly. Sequoia is not available on Intel Macs at all. This is the biggest
+            The 2020 MacBook Air with the Core i3 and 8GB RAM runs newer macOS
+            sluggishly. Sequoia runs only on the 2020 Intel Air; the 2018-2019 Airs stop at Sonoma 14. This is the biggest
             practical limit for Intel Air owners in 2026.
           </p>
           <p>How to check if RAM pressure is the cause:</p>
@@ -168,12 +168,12 @@ export default function BlogMacBookAirIntelProblems() {
             <li>Red or consistently orange Memory Pressure means the system is swapping to disk constantly</li>
           </ol>
           <p>
-            On 8GB models, macOS Ventura is acceptable for everyday tasks. On 4GB models, Ventura
+            On 16GB models, newer macOS is fine for everyday tasks. On the 8GB Core i3, it
             is genuinely painful. Two practical options:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Clean macOS Monterey install</strong>: Monterey is the last OS before Ventura's higher RAM demands; it runs noticeably better on 4GB Intel machines</li>
-            <li><strong>Accept the machine is at end of practical software life</strong>: no security updates beyond 2026-2027, no Sequoia support, Core i3 with 4GB has nowhere to go</li>
+            <li><strong>Clean macOS Monterey install</strong>: Monterey is the last OS before Ventura's higher RAM demands; it runs noticeably better on 8GB Intel machines</li>
+            <li><strong>Accept the machine is at end of practical software life</strong>: no Sequoia on the 2018-2019 models, no Tahoe on any Intel Air, and the Core i3 with 8GB has nowhere to go</li>
           </ul>
           <p>
             The RAM in Intel MacBook Air is soldered and cannot be upgraded.
@@ -228,7 +228,7 @@ export default function BlogMacBookAirIntelProblems() {
                 <td>2018</td>
                 <td>A1932</td>
                 <td>Retina 2560x1600</td>
-                <td>MagSafe 2 + USB-C x2</td>
+                <td>USB-C (Thunderbolt 3) x2</td>
                 <td>Butterfly 4th gen (problem model)</td>
                 <td>First Retina Air; Touch ID; butterfly keyboard failure most common here</td>
               </tr>
@@ -236,9 +236,9 @@ export default function BlogMacBookAirIntelProblems() {
                 <td>2019</td>
                 <td>A1932</td>
                 <td>Retina 2560x1600</td>
-                <td>MagSafe 2 + USB-C x2</td>
+                <td>USB-C (Thunderbolt 3) x2</td>
                 <td>Butterfly 4th gen (problem model)</td>
-                <td>Essentially same as 2018 with a slightly faster chip; same keyboard issues</td>
+                <td>Essentially the same as 2018, adding a True Tone display; same keyboard issues</td>
               </tr>
               <tr>
                 <td>2020</td>
@@ -246,7 +246,7 @@ export default function BlogMacBookAirIntelProblems() {
                 <td>Retina 2560x1600</td>
                 <td>USB-C x2 only (no MagSafe)</td>
                 <td>Scissor (Magic Keyboard)</td>
-                <td>Best Intel Air; scissor keyboard; most repairable; Ventura is final OS</td>
+                <td>Best Intel Air; scissor keyboard; most repairable; Sequoia 15 is final OS</td>
               </tr>
             </tbody>
           </table>
@@ -286,11 +286,11 @@ export default function BlogMacBookAirIntelProblems() {
         },
         {
           q: "Does macOS Sequoia run on MacBook Air Intel?",
-          a: "No. Apple dropped Intel Mac support with Sequoia. MacBook Air Intel 2017-2019 is limited to macOS Monterey. The 2020 Intel Air supports Ventura. This is the biggest practical limitation for Intel Air owners in 2026: no current macOS, which means limited security updates and growing app incompatibility.",
+          a: "Only on the 2020 Intel Air, and it stops there: macOS Tahoe 26 needs an M1 or later Air. The 2018 and 2019 Intel Airs top out at Sonoma 14, and the 2017 Air at Monterey 12. This is the biggest practical limitation for Intel Air owners in 2026: no current macOS, which means limited security updates and growing app incompatibility.",
         },
         {
           q: "How long will Apple support MacBook Air Intel software?",
-          a: "macOS Ventura is the last OS for the 2020 Intel Air. Software support effectively ended with Sequoia's release in 2024. Apple typically provides security patches for two OS versions back, so security updates may continue until around 2026-2027 before ending entirely.",
+          a: "macOS Sequoia 15 is the last OS for the 2020 Intel Air and Sonoma 14 for the 2018-2019 models; Tahoe 26 needs Apple silicon. Apple typically provides security patches for two OS versions back, so security updates may continue until around 2026-2027 before ending entirely.",
         },
         {
           q: "Can MacBook Air 2020 Intel USB-C ports be repaired?",

@@ -447,8 +447,8 @@
     "family": "studio",
     "chassisGen": "studio",
     "era": "apple-silicon",
-    "chip": "Apple M3 Ultra (32-core CPU, 60 or 80-core GPU - two M3 Max fused)",
-    "maxRAM": "512GB unified (soldered) - new ceiling",
+    "chip": "Apple M3 Ultra (28- or 32-core CPU, 60- or 80-core GPU - two M3 Max fused)",
+    "maxRAM": "Up to 512GB unified at launch; Apple now lists up to 256GB (soldered)",
     "maxStorage": "16TB (soldered SSD)",
     "baseStorage": "1TB",
     "ports": "Front: 2× Thunderbolt 5, SDXC. Rear: 6× Thunderbolt 5, 2× USB-A, HDMI, 10GbE, 3.5mm",
@@ -480,7 +480,7 @@
       "thermalPaste": "Same-day"
     },
     "honestyNote": "Apple released this in the SAME event as the M4 Max Studio in March 2025 - unusual - and replaced it with the M5 Ultra in August 2026. M3 Ultra has 32 CPU cores vs M4 Max's 16, so for heavy multi-core (3D rendering, scientific compute, large compiles) the 'older' M3 Ultra is faster. For single-threaded work the M4 Max wins. Choose by workload, not chip number.",
-    "heroTagline": "32 CPU cores, 512GB RAM ceiling. Apple's most powerful Mac until the M5 Ultra arrived in August 2026.",
+    "heroTagline": "Up to 32 CPU cores and 512GB at launch (Apple now lists 256GB). Apple's most powerful Mac until the M5 Ultra Mac Studio went on sale in September 2026.",
     "discontinued": "August 2026"
   },
   {

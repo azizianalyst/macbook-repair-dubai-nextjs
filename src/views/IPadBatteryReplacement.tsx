@@ -4,7 +4,7 @@
 // cost, apple ipad battery price in uae, ipad air battery replacement, can ipad batteries be
 // replaced. Apple's UAE battery fees are quoted from src/content/ipad-cluster.ts with
 // "(Apple list)" attribution; our own price is never shown - quotes go through WhatsApp.
-// Warranty wording from src/content/site.ts: battery = 3 months + 80% capacity guarantee.
+// Warranty wording from src/content/site.ts: battery = 3 months (the 80% capacity guarantee is MacBook & iPhone only).
 import { MessageCircle, Search, ShieldCheck, Truck, Wallet, AlertTriangle } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -119,14 +119,14 @@ export default function IPadBatteryReplacement() {
         <QuickAnswer
           tone="dark"
           question="Can an iPad battery be replaced in Dubai?"
-          answer="Yes. Every iPad battery is glued inside the case under the display, so the screen is lifted, the cell released and the display re-sealed with fresh adhesive. We test capacity and charging first, quote in writing on WhatsApp, and fit the new cell with a 3-month warranty and 80% capacity guarantee."
+          answer="Yes. Every iPad battery is glued inside the case under the display, so the screen is lifted, the cell released and the display re-sealed with fresh adhesive. We test capacity and charging first, quote in writing on WhatsApp, and fit the new cell with a 3-month written warranty."
         />
 
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
           <ul className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md py-md px-lg flex flex-wrap items-center justify-center gap-x-xl gap-y-sm text-[14px] font-medium">
             <li className="flex items-center gap-sm"><Search size={16} className="text-accent" aria-hidden /> Free battery test</li>
             <li className="flex items-center gap-sm"><Wallet size={16} className="text-accent" aria-hidden /> Written quote before any work</li>
-            <li className="flex items-center gap-sm"><ShieldCheck size={16} className="text-accent" aria-hidden /> 3-month warranty, 80% guarantee</li>
+            <li className="flex items-center gap-sm"><ShieldCheck size={16} className="text-accent" aria-hidden /> 3-month written warranty</li>
             <li className="flex items-center gap-sm"><Truck size={16} className="text-accent" aria-hidden /> Free pickup across Dubai</li>
           </ul>
         </section>
@@ -243,7 +243,7 @@ export default function IPadBatteryReplacement() {
                       <li key={m.name}>
                         {m.name}:{" "}
                         {m.pages.map((p, j) => (
-                          <span key={p.href}>{j > 0 && " · "}<Link to={p.href} className="text-accent hover:underline">{p.label}</Link></span>
+                          <span key={p.href}>{j > 0 && " · "}<Link to={p.href} className="text-accent underline underline-offset-2">{p.label}</Link></span>
                         ))}
                       </li>
                     ))}
@@ -276,7 +276,7 @@ export default function IPadBatteryReplacement() {
               <SectionHeading eyebrow="Guarantee" title="What warranty comes with a new iPad battery?" />
               <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg text-[15px] leading-relaxed">
                 <p className="mb-sm">
-                  Battery replacements carry a <strong>3-month written warranty with an 80% capacity guarantee</strong>. It covers the cell and our work, including the display seal; it does not cover new liquid or impact damage.
+                  Battery replacements carry a <strong>3-month written warranty</strong>. It covers the cell and our work, including the display seal; it does not cover new liquid or impact damage.
                 </p>
                 <p>
                   To claim, WhatsApp the warranty card to {NAP.phoneDisplay}. Full terms are on the <Link to="/warranty/" className={inlineLink}>warranty page</Link>.
@@ -335,7 +335,7 @@ export default function IPadBatteryReplacement() {
           className="mt-3xl"
           eyebrow="Battery not lasting?"
           headline="Send your iPad model on WhatsApp"
-          description="Free battery test, a written quote before any work, free pickup across Dubai, and a 3-month warranty with an 80% capacity guarantee."
+          description="Free battery test, a written quote before any work, free pickup across Dubai, and a 3-month written warranty."
           whatsappHref={ipadWa(PREFILL)}
         />
       </div>

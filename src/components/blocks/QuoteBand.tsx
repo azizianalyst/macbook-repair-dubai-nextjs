@@ -12,13 +12,15 @@ type Props = {
   whatsappMessage?: string;   // prefilled
   /** short reassurance line; defaults to warranty + pickup */
   blurb?: string;
+  /** false on services that fit no parts (unlocks, diagnostics): hides the warranty chip */
+  showWarranty?: boolean;
 };
 
 /**
  * Full-width "Get a quote" CTA band - replaces the repeating right-rail widget.
  * Drop between content sections. Dark brand band (always-dark surface → on-primary text).
  */
-export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, blurb }: Props) {
+export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, blurb, showWarranty = true }: Props) {
   const wa = whatsappMessage
     ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}`
     : NAP.whatsappUrl;
@@ -52,9 +54,11 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
                   <Clock size={15} aria-hidden /> {timeline}
                 </span>
               )}
-              <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck size={15} aria-hidden /> Up to 12-month warranty
-              </span>
+              {showWarranty && (
+                <span className="inline-flex items-center gap-1.5">
+                  <ShieldCheck size={15} aria-hidden /> Up to 12-month warranty
+                </span>
+              )}
             </div>
           </div>
           <div className="flex flex-col gap-sm shrink-0 md:min-w-[220px]">

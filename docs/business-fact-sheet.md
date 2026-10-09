@@ -49,7 +49,7 @@ Sources of truth in the repo: `data/seo.json` → `src/content/business.generate
 | Repairs for MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad; data recovery | VERIFIED | Owner; the site's service set |
 | **No** in-house Apple Watch or AirPods repair | VERIFIED | Owner 2026-09-01 |
 | MacBook buy-back and trade-in only (no iPhone buy-back) | VERIFIED | Owner; D2 is still open |
-| Warranty: hardware up to 12 months; screens 90 days; battery 3 months with an 80% guarantee; keyboard, software, board, liquid and data work 15 days | VERIFIED | `site.ts` WARRANTY |
+| Warranty: hardware up to 12 months; screens 90 days; battery 3 months (80% capacity guarantee on MacBook and iPhone only); keyboard, software, board, liquid and data work 15 days | VERIFIED | `site.ts` WARRANTY |
 | Free diagnosis; no fix, no charge; free pickup in Dubai | VERIFIED (owner-attested) | Sitewide USPs |
 | **No AED repair prices** in copy, titles, meta or schema (quotes via WhatsApp) | POLICY | Hide-prices policy |
 | 40,000+ devices repaired | Owner-attested, not independently verifiable | TRUST-CLAIMS |

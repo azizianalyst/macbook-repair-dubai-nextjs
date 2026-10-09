@@ -326,7 +326,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take ${rarePartsSourcing(turnaround)} and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
           ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of up to 12 months - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
-          : `It's in the external power brick (4-port models) or in the chassis (2-port M1). Typical power supply turnaround on the ${model.shortName} is ${lc(turnaround.psu)}.`,
+          : `Outside the iMac. Every 24-inch Apple silicon iMac (M1, M3 and M4, two-port or four-port) ships with an external 143W power adapter that plugs into the power connector on the back. On four-port models that adapter also carries the Gigabit Ethernet port; two-port models were ordered with or without it. So a no-power fault starts with testing the adapter and its cable before anyone opens the case. Typical power supply turnaround on the ${model.shortName} is ${lc(turnaround.psu)}.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -435,7 +435,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               <ul className="text-[15px] space-y-1 mb-sm pl-md">
                 <li>• RAM goes to <strong>{model.maxRAM.split(" ")[0]}</strong> (user-upgradeable, DDR4)</li>
                 {model.pricing.fusionToSsd ? <li>• <strong>Fusion Drive → SSD</strong> = the single biggest speed boost possible</li> : null}
-                <li>• Still runs current macOS ({model.lastMacOS})</li>
+                <li>• Supported up to {model.lastMacOS} - check your apps run on it before you spend</li>
                 <li>• 5K Retina display still looks gorgeous</li>
               </ul>
               <p className="text-[15px]">

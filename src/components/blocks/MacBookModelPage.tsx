@@ -255,6 +255,8 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const turnaround = turnaroundFor(model);
   const serviceRows = buildServiceRows(model);
   const related = pickRelatedModels(slug);
+  // The sibling ring wraps across Air/Pro at the family boundary; name the family only when every pick is in it.
+  const relatedLabel = related.every((r) => r.family === model.family) ? FAMILY_LABEL[model.family] : "MacBook";
 
   const isButterfly = model.era === "intel" && model.releaseYear <= 2019;
   const isAppleSilicon = model.era === "apple-silicon";
@@ -405,7 +407,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
           <h2 className="text-[28px] md:text-[32px] mb-md">Our honest take on the {model.shortName}</h2>
           <p className="text-[15px] mb-lg">{model.honestyNote}</p>
 
-          <h2 className="text-[28px] md:text-[32px] mb-md">Other {FAMILY_LABEL[model.family]} models we repair</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Other {relatedLabel} models we repair</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
             {related.map((r) => (
               <Link

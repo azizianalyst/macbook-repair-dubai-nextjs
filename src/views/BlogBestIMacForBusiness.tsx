@@ -24,10 +24,10 @@ export default function BlogBestIMacForBusiness() {
       category="Buying guide · iMac"
       h1="Best iMac for Business in Dubai 2026"
       hook="iMac M4 24″ is the answer for 90% of Dubai businesses. Here's why."
-      quickAnswer="Best iMac for Dubai business: the iMac M4 24″ 16GB/512GB. It covers admin, accounting, Zoom, light design, and multi-monitor extensions for any 5-50 employee company. Step up to 24GB RAM for design agencies. Skip the 27″ Intel iMac on the second-hand market - Apple ended security updates in 2024. Message us on WhatsApp for today's configured price."
+      quickAnswer="Best iMac for Dubai business: the iMac M4 24″ 16GB/512GB. It covers admin, accounting, Zoom, light design, and multi-monitor extensions for any 5-50 employee company. Step up to 24GB RAM for design agencies. Skip the 27″ Intel iMac on the second-hand market - no Intel iMac gets macOS 27. Message us on WhatsApp for today's configured price."
       author={{ name: "Ali", role: "Apple business systems lead" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-10-09"
       readingMinutes={11}
       featuredImageAlt="Best iMac for business Dubai 2026 buying guide"
       body={
@@ -164,11 +164,11 @@ export default function BlogBestIMacForBusiness() {
 
           <h2 id="imac-vs-older-27">Why we recommend iMac M4 over older 27″</h2>
           <p>
-            You may see used 27″ iMacs (Intel, last sold 2020) listed cheap on Dubizzle. We
+            You may see used 27″ iMacs (Intel, last released 2020) listed cheap on Dubizzle. We
             advise against them for business in 2026:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>macOS Sonoma (14) was the last supported version.</strong> No security updates after 2024 (macOS Sequoia / Tahoe / 26 do not install).</li>
+            <li><strong>The macOS road ends at Tahoe 26.</strong> Only the 2020 model gets Tahoe; the 2019 stops at Sequoia 15, and macOS 27 runs only on Apple silicon.</li>
             <li><strong>5K Retina is beautiful but ageing</strong> - backlights starting to dim, anti-reflective coatings flaking.</li>
             <li><strong>Intel chips run hot</strong> - fan noise during Zoom calls is significant.</li>
             <li><strong>Repair parts are getting scarce</strong> - Apple stopped many 27″ part orders in 2024.</li>

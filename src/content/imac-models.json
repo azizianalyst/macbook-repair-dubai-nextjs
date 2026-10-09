@@ -196,7 +196,7 @@
     "wirelessChip": "Wi-Fi 5, Bluetooth 5.0",
     "currentInLineup": false,
     "discontinued": "August 2020",
-    "lastMacOS": "macOS Sonoma 14",
+    "lastMacOS": "macOS Sequoia 15",
     "commonIssues": [
       "Power supply failure (very common)",
       "Radeon Pro Vega GPU thermal failures",
@@ -215,7 +215,7 @@
       "thermalPaste": 320,
       "diagnostic": 0
     },
-    "timelineNotes": "RAM upgrade to 64GB same-day. Fusion → SSD 1-2 days. Power supply 1-2 days. Last macOS support: Sonoma 14.",
+    "timelineNotes": "RAM upgrade to 64GB same-day. Fusion → SSD 1-2 days. Power supply 1-2 days. Last macOS support: Sequoia 15.",
     "turnaround": {
       "screen": "2-3 days",
       "logicBoard": "3-5 days",
@@ -244,7 +244,7 @@
     "wirelessChip": "Wi-Fi 5, Bluetooth 5.0",
     "currentInLineup": false,
     "discontinued": "March 2022 (last Intel iMac ever)",
-    "lastMacOS": "macOS Sequoia 15",
+    "lastMacOS": "macOS Tahoe 26",
     "commonIssues": [
       "Power supply failure (carries over from 2017-2019)",
       "T2 chip activation lock issues after logic-board changes",
@@ -274,8 +274,8 @@
       "ssdRecovery": "Quoted after assessment",
       "fanCleaning": "Same-day"
     },
-    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and because the T2 encrypts it, data recovery means getting the original board running). Still receives the latest macOS Sequoia 15. Excellent buy used.",
-    "heroTagline": "Last Intel iMac. 128GB RAM-capable, T2-secured, still on macOS Sequoia in 2026."
+    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and because the T2 encrypts it, data recovery means getting the original board running). Its last major macOS is Tahoe 26: macOS 27 runs only on Apple silicon, so this iMac stays on Tahoe. Excellent buy used.",
+    "heroTagline": "Last Intel iMac. 128GB RAM-capable, T2-secured, supported up to macOS Tahoe 26."
   },
   {
     "slug": "imac-27-pro-2017-repair-dubai",

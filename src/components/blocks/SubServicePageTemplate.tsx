@@ -90,6 +90,9 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
   // Rendered warranty wording. Default: the single tier from warrantyDays ("a 12-month
   // written warranty"). Multi-tier hubs opt in to the headline wording instead.
   const warrantyText = p.warrantyHeadline ? WARRANTY.headlineLong : warrantyClause(p.warrantyDays);
+  // Unlock/diagnostic pages (warrantyDays 0) carry no parts warranty, and warrantyClause(0) already
+  // reads "free pickup and a written quote" - so CTA copy that leads with free pickup must not repeat it.
+  const hasWarranty = Boolean(p.warrantyHeadline || warrantyLabel(p.warrantyDays));
   const warrantyHeading = p.warrantyHeadline
     ? WARRANTY.headlineLong[0].toUpperCase() + WARRANTY.headlineLong.slice(1)
     : warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises";
@@ -223,14 +226,15 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               startingPrice={p.startingPrice}
               timeline={p.timeline}
               whatsappMessage={p.whatsappPrefill}
-              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${warrantyText}.`}
+              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland${hasWarranty ? `, ${warrantyText}` : " and a written quote"}.`}
+              showWarranty={hasWarranty}
             />
 
             {/* 12. LEAD FORM — full quote form after social proof */}
             <section id="quote" className="scroll-mt-24">
               <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get a free repair quote</h2>
               <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
-                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote, warranty included.
+                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote{hasWarranty ? ", warranty included" : ""}.
               </p>
               <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
             </section>
@@ -275,7 +279,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <CtaBand
           className="mt-3xl"
           headline={`Book your ${p.serviceName} on WhatsApp`}
-          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}.`}
+          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " and a written quote"}.`}
         />
 
       </div>

@@ -74,7 +74,7 @@ const FAQ_GROUPS = [
     items: [
       { q: "How much does Mac repair cost in Dubai?", a: "Mac repair is priced by the fault and model, after a free diagnosis - screens are the biggest jobs, batteries and keyboards sit below them, and water-damage work is quoted after inspection. We give you a full written quote before any work begins, no hidden charges." },
       { q: "Can I get a quote before the repair?", a: "Yes. We diagnose your Mac first (free of charge) then give you a written quote covering parts and labour. No repair starts until you approve the price. If you decline, you pay nothing." },
-      { q: "Do you offer same-day repair?", a: "Yes, most common repairs (screen, battery, keyboard, charging port) are completed same day. Logic board and water damage repairs may take 24–48 hours. We confirm the timeline at diagnosis." },
+      { q: "Do you offer same-day repair?", a: "Yes, most common repairs (screen, battery, keyboard, charging port) are completed same day. Liquid-damage repairs take 1-5 days and logic-board repairs 3-7 days, longer on some 2026 models while their parts stock builds. We confirm the timeline at diagnosis." },
       { q: "Do you offer free pickup and delivery in Dubai?", a: "Yes. We offer free pickup and return delivery across Dubai. WhatsApp us your location and we arrange collection the same day." },
     ],
   },
@@ -200,7 +200,7 @@ export default function MacRepairHub() {
             "One workshop covers every Mac - MacBook, iMac, Mac mini, Mac Studio and Mac Pro, Intel and Apple Silicon.",
             "Diagnosis is free on every machine, with the exact price confirmed in writing before any work.",
             "Board-level component repair is the default here - a failed chip does not mean a whole new board.",
-            "Screens and batteries are same-day on most models; board and liquid work runs 2-5 days.",
+            "Screens and batteries are same-day on most models; liquid work runs 1-5 days and board work 3-7 days.",
             "Written warranty up to 12 months, and no charge if the fault cannot be fixed.",
             "Free pickup and delivery across Dubai mainland from Concord Tower, Media City.",
           ]}
@@ -289,7 +289,7 @@ export default function MacRepairHub() {
             <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
               {PROCESS.map((step, i) => (
                 <div key={step.title} className="flex flex-col">
-                  <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
+                  <p aria-hidden="true" data-step={`0${i + 1}`} className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none before:content-[attr(data-step)]" />
                   <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
                     <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
                   </div>

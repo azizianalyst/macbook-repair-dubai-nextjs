@@ -324,7 +324,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       a: isStudio
         ? `Heavy creative users - every 12 months for fan cleaning + thermal paste refresh (message us on WhatsApp for today's exact price). Light users - every 18-24 months. Dubai dust gets drawn into the chassis fast and thermal paste degrades under sustained Ultra-class workloads. Prevention is much cheaper than logic-board repair.`
         : isPro
-          ? `Yes - for now. Apple's current Mac Pro M2 Ultra removed PCIe GPU support entirely (Apple Silicon limitation). If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
+          ? `Yes - for now. The M2 Ultra Mac Pro (2023) dropped PCIe GPU support entirely (an Apple Silicon limitation), and Apple discontinued the Mac Pro line in March 2026 with no successor. If you need MPX modules or third-party GPU expansion, the 2019 Intel Mac Pro is still the only option. We recommend keeping yours running - we have access to MPX modules and genuine Apple parts that are still available.`
           : isCurrentMini
             ? `Not much yet - it is in Apple's current lineup, so there is no repair track record. What we see first on any new desktop is accidental damage Apple's warranty excludes (liquid, drops, power surges), port damage from docks and cables, and setup problems that look like hardware. Factory faults go to Apple under warranty - we check your serial number for free.`
           : isNewMiniChassis
@@ -397,7 +397,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               <thead className="bg-bg-alt">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>

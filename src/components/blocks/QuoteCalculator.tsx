@@ -127,7 +127,7 @@ export function QuoteCalculator() {
           <div>
             <p className="m-0 text-[13px] text-text-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
             <p className="m-0 text-[28px] font-bold leading-tight text-text">{priceLabel}</p>
-            <p className="m-0 text-[12.5px] text-text-faint">Message us for today&apos;s exact price · same-day on most repairs</p>
+            <p className="m-0 text-[12.5px] text-text-faint">Message us for today&apos;s exact price · free diagnosis, no fix no fee</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">

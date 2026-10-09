@@ -64,7 +64,7 @@ const PROCESS = [
   "Our team suggests the best way to fix your Mac Studio.",
   "We use genuine Apple parts to repair your device.",
   "We thoroughly test your Mac Studio to make sure it works well.",
-  "You get your fixed Mac Studio back, often on the same day.",
+  "You get your fixed Mac Studio back with a written warranty.",
 ];
 
 const SIGNS = [
@@ -102,7 +102,7 @@ const SPECS = [
 // verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
-  { q: "How much time will it take to fix my Mac Studio?", a: "The majority of repairs are completed the same day. The precise timing depends on the availability of parts and the device's diagnostic results." },
+  { q: "How much time will it take to fix my Mac Studio?", a: "Fan and thermal service is done the same day. Most other repairs take 1 to 4 days, and logic-board work 3 to 7 days, depending on the model and parts. Each Mac Studio model page lists its times." },
   { q: "Do I need to make an appointment for a repair?", a: "Walk-ins are welcome to drop off your device. But we ask all customers to call or book an appointment ahead of time so we can be ready to help you faster based on your problem." },
   { q: "Is it worth repairing an older Apple Mac Studio?", a: "Almost always, restoring an older Mac Studio is more cost-effective than buying a new one. They usually last between 3 and 8 years (longer if well cared for), and repairs are generally cheaper than buying a pricey new device." },
   { q: "Can you recover lost data from a Mac Studio?", a: "Absolutely. We provide professional data recovery services for Mac Studio devices affected by software crashes, drive corruption, or accidental deletion. Your data is handled safely and confidentially." },
@@ -150,7 +150,7 @@ export default function MacStudioRepair() {
           <span>·</span>
           <span>Genuine Apple parts</span>
           <span>·</span>
-          <span>Often same-day</span>
+          <span>Free diagnosis</span>
         </p>
       </Hero>
 

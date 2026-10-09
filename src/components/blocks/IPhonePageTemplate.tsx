@@ -158,7 +158,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
           <section id="quote" className="scroll-mt-24">
             <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get a free repair quote</h2>
             <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
-              Two quick steps — your device, then how to reach you. Free diagnosis, written quote, warranty included.
+              Two quick steps — your device, then how to reach you. Free diagnosis, written quote{warrantyLabel(p.warrantyDays) ? ", warranty included" : ""}.
             </p>
             <LeadForm variant="compact" defaultDeviceType="iPhone" sourcePath={p.path} />
           </section>
@@ -178,7 +178,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
             <SectionHeading
               eyebrow="Models & pricing"
               title="Which iPhone models do you repair?"
-              sub={<>Find your model below. Every line includes parts, labour, and {warrantyClause(p.warrantyDays)}. No diagnostic fee, no surprise add-ons.</>}
+              sub={<>Find your model below. Every line includes {warrantyLabel(p.warrantyDays) ? `parts, labour, and ${warrantyClause(p.warrantyDays)}` : "the work, free pickup and a written quote"}. No diagnostic fee, no surprise add-ons.</>}
             />
             <PricingTable service={p.serviceName} rows={p.pricingRows} caption={`${p.serviceName} pricing by model`} tone="dark" />
             {p.pricingCaption && (
@@ -221,9 +221,9 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
             <SectionHeading eyebrow="Guarantee" title="What warranty do you get?" />
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <ul className="space-y-2 text-[15px] text-text">
-                <li><strong>{warrantyLabel(p.warrantyDays) || "Unlock service"}</strong> - written warranty on parts and labour, dated and signed.</li>
+                <li>{warrantyLabel(p.warrantyDays) ? <><strong>{warrantyLabel(p.warrantyDays)}</strong> - written warranty on parts and labour, dated and signed.</> : <><strong>Unlock service</strong> - no parts are fitted, so no parts warranty applies; you get a written quote before any work.</>}</li>
                 {p.warrantyBullets.map((b, i) => <li key={i}>{b}</li>)}
-                <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>
+                {warrantyLabel(p.warrantyDays) && <li><strong>How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge.</li>}
               </ul>
             </div>
             {p.glassNotice && <div className="mt-md"><GlassWarrantyNotice device="screen" /></div>}
@@ -301,7 +301,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
       <CtaBand
         className="mt-3xl"
         headline={`Book your ${p.serviceName} on WhatsApp`}
-        description={`Send the model and a photo of the issue. Free pickup across Dubai mainland. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}.`}
+        description={`Send the model and a photo of the issue. Free pickup across Dubai mainland${warrantyLabel(p.warrantyDays) ? `. ${warrantyClause(p.warrantyDays)[0].toUpperCase() + warrantyClause(p.warrantyDays).slice(1)}` : " and a written quote"}.`}
       />
       </div>
       <RelatedArticles path={p.path} tone="dark" />

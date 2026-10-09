@@ -241,7 +241,7 @@ export default function IPadRepairHub() {
             "iPad Pro (M4 and M5) uses a tandem OLED panel; Air, mini and the standard iPad use an LCD. The panel type sets the screen part.",
             "Air, mini and Pro screens are fully laminated, so a crack means a full display assembly; the standard iPad's glass can often be replaced on its own.",
             "Screen, battery and charging-port repairs leave your data in place; we do not erase an iPad for those jobs.",
-            "Warranty depends on the repair: up to 12 months on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens, 15 days on board, liquid and data work.",
+            "Warranty depends on the repair: up to 12 months on hardware, 3 months on batteries, 90 days on screens, 15 days on board, liquid and data work.",
             "Free diagnosis and a written WhatsApp quote before any work; free pickup and delivery across Dubai.",
           ]}
         />
@@ -368,7 +368,7 @@ export default function IPadRepairHub() {
           <div className="grid gap-x-[48px] gap-y-[56px] md:grid-cols-3">
             {PROCESS.map((step, i) => (
               <div key={step.title} className="flex flex-col">
-                <p className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none">0{i + 1}</p>
+                <p aria-hidden="true" data-step={`0${i + 1}`} className="text-[72px] font-bold leading-none text-accent/15 mb-md select-none before:content-[attr(data-step)]" />
                 <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/10 mb-md">
                   <step.Icon size={20} className="text-accent" strokeWidth={1.75} />
                 </div>
@@ -385,7 +385,7 @@ export default function IPadRepairHub() {
             <h2 className="text-[24px] font-bold tracking-tight text-text mb-md">What warranty comes with an iPad repair?</h2>
             <ul className="text-[15px] text-text-muted leading-relaxed space-y-2 list-disc pl-5">
               <li><strong className="text-text">Hardware</strong> (charging port, cameras, buttons, speakers): up to 12 months.</li>
-              <li><strong className="text-text">Battery:</strong> 3 months, with an 80% capacity guarantee.</li>
+              <li><strong className="text-text">Battery:</strong> 3 months.</li>
               <li><strong className="text-text">Screens:</strong> 90 days.</li>
               <li><strong className="text-text">Board, liquid, software and data work:</strong> 15 days.</li>
             </ul>

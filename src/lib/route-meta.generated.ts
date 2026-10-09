@@ -46,7 +46,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/apple-mac-pro-discontinued-what-now": {
     "title": "Apple Discontinued the Mac Pro - What to Buy in 2026",
-    "description": "March 2026: Apple killed the Mac Pro. The real alternatives - Mac Studio M3 Ultra, used 2019 Mac Pro, eGPU options - plus our service plan for owners. Message us for pricing."
+    "description": "Apple discontinued the Mac Pro in March 2026. What to buy instead: a Mac Studio Ultra, or keep a 2019 Mac Pro for PCIe GPUs. Questions? WhatsApp us."
   },
   "/blog/apple-repair-appointment-dubai": {
     "title": "Apple Repair Appointment in Dubai: How to Book and Prepare",

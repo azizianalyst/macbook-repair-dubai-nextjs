@@ -111,7 +111,7 @@ const APPLE_ESTIMATES: { repair: string; apple: string; warranty: string }[] = [
   { repair: "MacBook Neo battery", apple: "AED 589 (Apple list)", warranty: "3 months + 80% capacity guarantee" },
   { repair: "MacBook Air 13\" (M5) battery", apple: "AED 689 (Apple list)", warranty: "3 months + 80% capacity guarantee" },
   { repair: "MacBook Pro 16\" (M5 Pro / M5 Max) battery", apple: "AED 959 (Apple list)", warranty: "3 months + 80% capacity guarantee" },
-  { repair: "iPad Air 11\" (M4) battery", apple: "AED 499 (Apple list)", warranty: "3 months + 80% capacity guarantee" },
+  { repair: "iPad Air 11\" (M4) battery", apple: "AED 499 (Apple list)", warranty: "3 months" },
 ];
 
 const STEPS = [
