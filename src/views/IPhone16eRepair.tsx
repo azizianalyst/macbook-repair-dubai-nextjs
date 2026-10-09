@@ -8,9 +8,9 @@ export default function IPhone16eRepair() {
       seoTitle="iPhone 16e Repair Dubai - A18 Budget iPhone | 055 741 3706"
       seoDescription="iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty up to 12 months. WhatsApp for a quote."
       path="/iphone-16e-repair-dubai"
-      eyebrow="iPhone 16e (Feb 2025, current budget iPhone)"
+      eyebrow="iPhone 16e (Feb 2025, discontinued March 2026)"
       h1="iPhone 16e Repair Dubai - Screen, Battery, USB-C, Camera"
-      subtitle="The current budget iPhone - A18, 6.1-inch OLED, USB-C, Apple Intelligence-capable. Replaced the SE 3. Message us on WhatsApp for today's price on your model."
+      subtitle="The 2025 budget iPhone, replaced by the iPhone 17e in March 2026 - A18, 6.1-inch OLED, USB-C, Apple Intelligence-capable. Replaced the SE 3. Message us on WhatsApp for today's price on your model."
       startingPrice={350}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 16e (Feb 2025) and need help with:"
@@ -28,7 +28,7 @@ export default function IPhone16eRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 16e</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
-            <li>• <strong>Released:</strong> February 2025 · still current</li>
+            <li>• <strong>Released:</strong> February 2025 · discontinued March 2026 (replaced by iPhone 17e)</li>
             <li>• <strong>Chip:</strong> Apple A18 (4-core GPU variant) · 8 GB RAM</li>
             <li>• <strong>Display:</strong> 6.1-inch Super Retina XDR OLED, 60 Hz, notch (no Dynamic Island), 2532 × 1170</li>
             <li>• <strong>Camera:</strong> Single 48 MP Fusion (rear) · 12 MP front</li>
