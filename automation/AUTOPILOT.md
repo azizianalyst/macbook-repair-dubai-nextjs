@@ -166,6 +166,12 @@ Mark each task done with its commit hash, and log a table: page | status | new t
 ## j08 Link monitor (Friday)
 
 1. Semrush Backlinks: new and lost referring domains since last Friday.
+   **Fallback / second source (works while Semrush is denied):** Search Console → Links in Chrome,
+   `https://search.google.com/search-console/links/drilldown?resource_id=sc-domain%3Amacbook-repair-dubai.ae&type=DOMAIN`
+   (and `type=EXTERNAL` for target pages). Read the table rows with javascript, save to
+   `automation/data/gsc-links-YYYY-MM-DD.tsv`, and diff against the previous file for new and lost
+   domains. Also request `http://www.macbook-repair-dubai.ae/` once: a "Parked Domain" page or a 525
+   means backlinks to www are wasted (owner task t02).
 2. Backlinks whose target URL is 404 on our site → add a 301 to the redirect source
    (`scripts/gen-redirects.cjs` input) through the j05 gates; one commit.
 3. Unlinked brand mentions: WebSearch for "MacBook Repair Dubai" "Concord Tower" and the phone
