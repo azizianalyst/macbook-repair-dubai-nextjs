@@ -253,7 +253,7 @@ export default function MacBookScreenRepair() {
               </span>
             </div>
             <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
-              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days - 3 months"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-2 days"], ["Warranty", "15 days - 3 months"]].map(([k, v]) => (
                 <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
                   <span className="text-text-faint">{k}</span>
                   <span className="font-semibold text-text">{v}</span>
