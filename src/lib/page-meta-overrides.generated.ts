@@ -1489,8 +1489,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook not seeing its internal SSD? What greyed-out vs missing means in Disk Utility, why your Mac model matters, and when it is data recovery instead."
   },
   "/the-server-gave-an-error-during-download-403-forbidden": {
-    "title": "Fix 'Server Gave an Error During Download' on Mac (403)",
-    "description": "403 Forbidden when downloading on a Mac means the server refused the request, not a fault in your Mac. Check the clock, Apple ID, VPN and DNS cache."
+    "title": "403 Forbidden on Mac: Fix the Download and Recovery Error",
+    "description": "403 Forbidden on a Mac means the Apple server refused the download, most often while reinstalling an older macOS from Recovery. Fix it here or WhatsApp us."
   },
   "/top-10-common-macbook-problems-and-how-to-fix-them": {
     "title": "Top 10 Common MacBook Problems and How to Fix Them (2026)",
