@@ -932,7 +932,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "iMac repair cost in Dubai. Screen, logic board, SSD and RAM repairs for all models. Free diagnosis, WhatsApp us for today's exact price. Concord Tower, Media City. Call 055 741 3706."
   },
   "/imac-repair-dubai": {
-    "title": "iMac Repair Dubai",
+    "title": "iMac Repair in Dubai for Every Model, Intel to M4",
     "description": "Fusion Drive, SSD and T2-encrypted iMac recovery."
   },
   "/imac-screen-repair-dubai": {
@@ -1833,8 +1833,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook won't detect its internal SSD? Use Recovery + Disk Utility to tell a software mount issue from drive failure, plus when soldered Apple Silicon SSDs need data recovery."
   },
   "/the-server-gave-an-error-during-download-403-forbidden": {
-    "title": "Fix 'Server Gave an Error During Download' on Mac (403)",
-    "description": "Seeing 403 Forbidden when downloading on your Mac? It's the server blocking the request, not your Mac. Fix it in 2 minutes: check your clock, Apple ID, VPN and DNS cache."
+    "title": "403 Forbidden on Mac: Fix the Download and Recovery Error",
+    "description": "403 Forbidden on a Mac means the Apple server refused the download, most often while reinstalling an older macOS from Recovery. Fix it here or WhatsApp us."
   },
   "/top-10-common-macbook-problems-and-how-to-fix-them": {
     "title": "Top 10 Common MacBook Problems and Fixes",
