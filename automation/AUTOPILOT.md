@@ -80,6 +80,13 @@ Everything else goes to the War Room only.
 
 ## j01 Daily data
 
+0. **Ahrefs first (works since 9 Oct 2026).** In Chrome open `https://ahrf.rseotools.com/site-explorer`,
+   type `macbook-repair-dubai.ae` in the search box, press Enter, wait ~20 s, then use the left
+   sidebar (Overview, Organic keywords, Referring domains, Broken backlinks). Direct report URLs stall.
+   Export tables with the textarea + execCommand('copy') button clicked by ref, then pbpaste to
+   `automation/data/ahrefs-*-YYYY-MM-DD.tsv`. Never sign in for the owner; if the proxy shows a login
+   or error, fall back to Search Console (step 6).
+
 1. Semrush (Chrome): Domain overview (Authority Score, referring domains, organic keywords,
    organic traffic) and Organic positions UAE for macbook-repair-dubai.ae (all rows: keyword,
    position, volume, KD, URL). Save to `automation/data/positions-latest.tsv`; on Mondays also
