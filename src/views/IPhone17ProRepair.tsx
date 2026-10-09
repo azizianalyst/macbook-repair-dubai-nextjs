@@ -9,9 +9,9 @@ export default function IPhone17ProRepair() {
       seoTitle="iPhone 17 Pro Repair Dubai - A19 Pro, Aluminum Unibody, Same Day | 055 741 3706"
       seoDescription="iPhone 17 Pro (Sept 2025) repair Dubai. A19 Pro, aluminum unibody, vapor chamber cooling, 8x optical zoom, Center Stage front. WhatsApp for today's price."
       path="/iphone-17-pro-repair-dubai"
-      eyebrow="iPhone 17 Pro (Sept 2025, current Apple lineup)"
+      eyebrow="iPhone 17 Pro (Sept 2025, discontinued Sept 2026)"
       h1="iPhone 17 Pro Repair Dubai - Aluminum Unibody, Vapor Chamber, 8x Zoom"
-      subtitle="The current Pro flagship - A19 Pro, aluminum unibody (replaced titanium), vapor chamber cooling, 48MP triple Fusion + 8x zoom, 18MP Center Stage front. Message us on WhatsApp for today's price."
+      subtitle="The 2025 Pro flagship, replaced by the iPhone 18 Pro in September 2026 - A19 Pro, aluminum unibody (replaced titanium), vapor chamber cooling, 48MP triple Fusion + 8x zoom, 18MP Center Stage front. Message us on WhatsApp for today's price."
       startingPrice={450}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone 17 Pro (Sept 2025) and need help with:"
@@ -29,7 +29,7 @@ export default function IPhone17ProRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone 17 Pro</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
-            <li>• <strong>Released:</strong> September 2025 · still current</li>
+            <li>• <strong>Released:</strong> September 2025 · discontinued 9 September 2026 (replaced by iPhone 18 Pro)</li>
             <li>• <strong>Chip:</strong> Apple A19 Pro · N1 wireless · 12 GB RAM</li>
             <li>• <strong>Display:</strong> 6.3-inch ProMotion LTPO OLED, AOD, Dynamic Island, Ceramic Shield 2</li>
             <li>• <strong>Camera:</strong> 48 MP main + 48 MP 8× telephoto + 48 MP ultra-wide (triple Fusion) + LiDAR · 18 MP Center Stage front</li>
@@ -71,7 +71,7 @@ export default function IPhone17ProRepair() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md">Is the 17 Pro still worth repairing in 2026?</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            <strong>Absolutely - it's the current Pro.</strong> A19 Pro, 12 GB RAM, and strong resale value. iOS 26 expected. A single repair is comfortably worthwhile - message us on WhatsApp for today's exact price on your model.
+            <strong>Usually, yes.</strong> It was the Pro flagship until September 2026. A19 Pro, 12 GB RAM, and strong resale value. Runs iOS 27. A single repair is comfortably worthwhile - message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }
