@@ -129,7 +129,7 @@ const FAQS = [
   { q: "What if I'm in a hurry - same-day on-site repair?",
     a: "Walk in with an in-stock part fault (MacBook screen, battery, keyboard, iPhone screen, iPhone battery) and the repair finishes in 40 minutes to 2 hours. Wait in the AC office or grab coffee at the Costa downstairs in the tower lobby." },
   { q: "Are you open weekends?",
-    a: "Saturday: full opening hours, 9 am-10 pm. Sunday: storefront closed but WhatsApp answered all day. Monday morning is the busiest hour - book a slot via WhatsApp on Sunday for a guaranteed Monday turnaround." },
+    a: "Saturday: full opening hours, 9 am-10 pm. Sunday: storefront closed but WhatsApp answered all day. Monday morning is the busiest hour - message us on WhatsApp on Sunday to reserve a Monday slot." },
 ];
 
 const REVIEW_INDEXES = [0, 5, 8, 10, 13, 21];
@@ -316,7 +316,7 @@ export default function MacBookRepairNearMeDubai() {
           <Clock size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Best time to visit</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
-            Quietest: weekday afternoons 2-5 pm, walk in, sit down, repair starts immediately. Busiest: Saturday 11 am-1 pm and Monday 9-10 am. WhatsApp ahead during peaks for a guaranteed slot.
+            Quietest: weekday afternoons 2-5 pm, walk in, sit down, repair starts immediately. Busiest: Saturday 11 am-1 pm and Monday 9-10 am. WhatsApp ahead during peaks to book a slot.
           </p>
         </article>
       </section>
