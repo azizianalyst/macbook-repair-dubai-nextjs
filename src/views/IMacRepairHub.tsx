@@ -36,7 +36,9 @@ import { NAP, TEAM } from "@/content/site";
 
 const PATH = "/imac-repair-dubai";
 const WA_MSG = "Hi, I need an iMac repair quote. Size/year: ... Fault: ...";
-const REVIEWER = TEAM.find((t) => t.name === "Mohammed");
+// Byline: Ali is on the roster for iMac and Mac mini work (years VERIFIED in the fact sheet).
+// No "reviewed by" line until a named reviewer has actually reviewed this page (owner decision D8).
+const AUTHOR = TEAM.find((t) => t.name === "Ali");
 
 /* Dated model pages — the only model URLs (the chip hubs 301 here). */
 const MODEL_PAGES = [
@@ -100,6 +102,18 @@ const FAQS = [
     a: "Yes. A technician can come to your home or office for diagnosis and minor repairs. Bigger jobs come back to the Concord Tower workshop, with free pickup and return anywhere in mainland Dubai. From Abu Dhabi we arrange courier collection for Macs, usually the next day; confirm the timing on WhatsApp before booking.",
   },
   {
+    q: "Should I repair or replace an old iMac?",
+    a: "Usually, when the fault is a part rather than the whole machine. A failed display, power supply or slow Fusion Drive on an otherwise healthy iMac is worth fixing; a board fault on a very old Intel iMac that can no longer run a supported macOS often is not. We tell you which after the free diagnosis, before you pay anything.",
+  },
+  {
+    q: "Can you replace a cracked or dead iMac screen?",
+    a: "Yes, on the 24-inch Apple silicon iMacs and on the 21.5- and 27-inch Intel models. Since late 2012 the display is bonded with adhesive, so the old adhesive is cut, the panel swapped and new adhesive fitted on the bench. Screen work carries a 90-day warranty.",
+  },
+  {
+    q: "Can I upgrade the RAM or SSD in my iMac?",
+    a: "It depends on the model. On 24-inch Apple silicon iMacs the RAM and SSD are soldered to the logic board and cannot be upgraded. On 27-inch Intel iMacs the RAM sits behind an access door at the back, and replacing the Fusion Drive or hard drive with an SSD is the biggest speed gain. Send the model and year on WhatsApp and we confirm what is possible.",
+  },
+  {
     q: "What warranty do you give on iMac repairs?",
     a: "It depends on the repair: 90 days on screens, up to 12 months on other hardware such as power supplies, SSDs and RAM, and 15 days on logic-board, liquid-damage and software work. The terms are written on your job sheet.",
   },
@@ -122,7 +136,7 @@ export default function IMacRepairHub() {
 
       hero={{
         eyebrow: "iMac specialist · 24-inch M1 to M4 · 21.5- and 27-inch Intel",
-        title: "iMac Repair Dubai",
+        title: "iMac Repair in Dubai for Every Model, Intel to M4",
         subtitle:
           "Screen, power supply, logic board, SSD and RAM work on every iMac, from the 27-inch 5K Intel models to the current 24-inch M4. Free diagnosis, and free pickup so you never have to carry it to Media City.",
         image: "/images/real/lab/imac-front-dubai.jpg",
@@ -132,10 +146,9 @@ export default function IMacRepairHub() {
       }}
 
       authorByline={{
-        author: "MacBook Repair Dubai workshop team",
-        role: "Concord Tower, Dubai Media City",
-        reviewer: REVIEWER ? `${REVIEWER.name}, Mac desktop technician (${REVIEWER.years} years)` : undefined,
-        updated: "September 2026",
+        author: AUTHOR ? AUTHOR.name : "MacBook Repair Dubai workshop team",
+        role: AUTHOR ? `${AUTHOR.specialisation}, ${AUTHOR.years} years` : "Concord Tower, Dubai Media City",
+        updated: "October 2026",
       }}
 
       quickAnswer={{
@@ -145,7 +158,7 @@ export default function IMacRepairHub() {
       }}
 
       keyTakeaways={{
-        updated: "September 2026",
+        updated: "October 2026",
         lead:
           "MacBook Repair Dubai is an independent workshop that repairs every iMac generation at Concord Tower, Dubai Media City.",
         items: [
