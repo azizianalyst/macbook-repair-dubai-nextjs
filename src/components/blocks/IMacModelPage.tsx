@@ -333,6 +333,24 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       a: `${verdict.headline}. ${verdict.body}`,
     },
     {
+      q: `My ${model.shortName} won't turn on - what should I check first?`,
+      a: isAppleSilicon
+        ? `Check that the external power adapter is firmly plugged into the back of the iMac and into a working wall socket. If there is still no chime or picture, the adapter, the power connector or the logic board is the likely cause, and we diagnose it free.`
+        : `Check the power cable at both ends and try another wall socket. The ${model.shortName} has its power supply built in, so if there is still no chime or fan noise, the power supply or the logic board is the likely cause - we diagnose it free.`,
+    },
+    {
+      q: `Can you recover the data from an ${model.shortName} that won't start?`,
+      a: isAppleSilicon
+        ? `Yes in most cases, by repairing the board. The SSD is soldered to the logic board and encrypted by the chip, so the files come back by getting that board running again - which is why we repair at component level instead of swapping the board.`
+        : isPro || model.releaseYear >= 2020
+          ? `Usually, but only by repairing it. The storage is encrypted by the T2 security chip, so the files come back by getting the original logic board running again, not by moving the drive to another Mac.`
+          : `Often, yes. The drive in the ${model.shortName} can be removed and read on the bench; if FileVault was turned on, we will need your password to open it.`,
+    },
+    {
+      q: `What warranty do I get on an ${model.shortName} repair?`,
+      a: `Each repair type has its own period: ${isAppleSilicon ? "ports and other hardware" : "the power supply, ports, fan replacement and other hardware"} up to 12 months, and logic-board, liquid-damage and data work 15 days. The screen warranty is confirmed on your written quote, and the exact period is printed on your invoice.`,
+    },
+    {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
       a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland (we have proper iMac transport cases - never bring a bare iMac to a courier). WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },

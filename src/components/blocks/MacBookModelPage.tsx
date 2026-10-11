@@ -259,6 +259,10 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const relatedLabel = related.every((r) => r.family === model.family) ? FAMILY_LABEL[model.family] : "MacBook";
 
   const isButterfly = model.era === "intel" && model.releaseYear <= 2019;
+  // Model-specific lines for the battery and liquid FAQs, taken from this model's own bench notes.
+  const batteryIssue = model.commonIssues.find((i) => /batter/i.test(i) && !/too early/i.test(i));
+  const liquidIssue = model.commonIssues.find((i) => /spill|liquid contact/i.test(i));
+  const hasMagSafe = /MagSafe/.test(model.ports);
   const isAppleSilicon = model.era === "apple-silicon";
 
   const faqs = [
@@ -283,6 +287,22 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     {
       q: `Is the ${model.name} still worth repairing in 2026?`,
       a: `${verdict.headline}. ${verdict.body}`,
+    },
+    {
+      q: `Does my ${model.name} battery need replacing yet?`,
+      a: `${isAppleSilicon ? "Check System Settings > Battery > Battery Health; the info button shows Maximum Capacity. Below 80%, or \"Service Recommended\", means the battery is worn." : "Check System Settings > Battery > Battery Health: \"Service Recommended\" means the battery is worn, and System Information > Power shows the cycle count."}${batteryIssue ? ` What we see on this model: ${lc(batteryIssue)}.` : ""} We test it free and fit a new one with a 3-month warranty and an 80% capacity guarantee - message us on WhatsApp for today's price.`,
+    },
+    {
+      q: `My ${model.name} got wet - what should I do first?`,
+      a: `Switch it off straight away, ${hasMagSafe ? "unplug the charger (MagSafe or USB-C)" : "unplug the USB-C charger"} and don't try to turn it on or charge it. Corrosion spreads across the logic board while it has power, and the SSD is soldered to that board, so protecting the board is also how your files are saved.${liquidIssue ? ` On this model: ${lc(liquidIssue)}.` : ""} Message us on WhatsApp for a free diagnosis and free pickup across Dubai; liquid-damage work carries a 15-day warranty.`,
+    },
+    {
+      q: isAppleSilicon && model.family === "air"
+        ? `Why does my ${model.name} get warm and slow down under heavy work?`
+        : `Does the ${model.name} fan need cleaning?`,
+      a: isAppleSilicon && model.family === "air"
+        ? `It has no fan, so it slows itself down to stay cool during long exports or builds - that is normal, and more noticeable in a hot room. If it is hot while idle, drains quickly or shuts down on its own, that points to a runaway app or a battery, charging or liquid-damage fault, and we diagnose it free.`
+        : `From time to time. Dust is drawn in through the vents and packs into the fan and heatsink, so the fan runs loud and the Mac slows down to keep cool. A fan clean with a thermal check fixes that - message us on WhatsApp for today's price.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,

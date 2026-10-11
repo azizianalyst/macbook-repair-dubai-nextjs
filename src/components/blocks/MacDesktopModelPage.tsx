@@ -308,7 +308,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       a: isMacPro2019
         ? `Yes - the Mac Pro 2019 is one of the last truly upgradeable Macs. RAM goes to 1.5TB across 12 DDR4 ECC R-DIMM slots (labour plus the modules). MPX GPU modules are swappable (Vega II, W6800X, W6900X - labour plus part). PCIe storage and accelerator cards are supported. SSD modules are Apple-keyed but swappable. This is the most repair-friendly Mac Apple ever made - message us on WhatsApp for today's exact upgrade price.`
         : isAppleSilicon
-          ? `No. Apple Silicon Macs (M1 through M5) have RAM unified into the SoC and the SSD soldered to the logic board. The chip, RAM, and storage are one package. Buy enough at order time - upgrading later is impossible. ${model.pricing.ssdRecovery ? `${ssdRecoveryNote} Message us for the exact price.` : ""}`
+          ? `Not officially. On Apple silicon Macs (M1 onward) the RAM is part of the chip package, and the SSD is paired to that chip and only works with this logic board. Apple doesn't support upgrading either, so buy enough at order time. ${model.pricing.ssdRecovery ? `${ssdRecoveryNote} Message us for the exact price.` : ""}`
           : `Limited. Standard service (PSU, ports, fans) is straightforward. Major changes are not supported.`,
     },
     {
@@ -319,7 +319,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
           : isCurrentMini
             ? `What goes wrong on a brand-new ${model.shortName}?`
           : isNewMiniChassis
-            ? `What's the deal with the top power button on the new Mac Mini?`
+            ? `Where is the power button on the new Mac mini?`
             : `What's the most common Mac Mini issue you see?`,
       a: isStudio
         ? `Heavy creative users - every 12 months for fan cleaning + thermal paste refresh (message us on WhatsApp for today's exact price). Light users - every 18-24 months. Dubai dust gets drawn into the chassis fast and thermal paste degrades under sustained Ultra-class workloads. Prevention is much cheaper than logic-board repair.`
@@ -334,6 +334,20 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
       a: `${verdict.headline}. ${verdict.body}`,
+    },
+    {
+      q: `My ${model.shortName} won't turn on - what should I check first?`,
+      a: `Check the power cable at both ends and try another wall socket${isNewMiniChassis && model.releaseYear === 2024 ? ", then press the power button firmly - on this Mac mini it sits on the underside" : ""}. The ${model.shortName} has its power supply built in, so if there is still no light or fan, the power supply or the logic board is the likely cause - we diagnose it free.`,
+    },
+    {
+      q: `Can you recover the data from a ${model.shortName} that won't start?`,
+      a: isAppleSilicon
+        ? `In most cases, yes - by repairing the board. The SSD is encrypted by the chip and only works with this logic board, so the files come back by getting that board running again - we repair it at component level rather than swapping it.`
+        : `Usually, by repairing it. The Mac Pro's SSD modules are paired to its T2 security chip and encrypted, so the files come back by getting the original logic board running, not by moving the modules to another Mac.`,
+    },
+    {
+      q: `What warranty do I get on a ${model.shortName} repair?`,
+      a: `It depends on the job: the power supply, ports, fan replacement and other hardware up to 12 months, and logic-board, liquid-damage and data work 15 days. The exact period is printed on your invoice.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
