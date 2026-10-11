@@ -8,7 +8,7 @@ export default function BlogMacBookProIntelScreenRepair() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro Intel Screen Repair Cost Dubai 2026: All Models Price Guide"
-      seoDescription="MacBook Pro Intel screen repair in Dubai: LCD panel and Flexgate backlight cable fixes for 2016-2020 models. Same-day, 90-day warranty. Message us for a quote."
+      seoDescription="MacBook Pro Intel screen repair in Dubai: LCD panels on 2016-2020 models, the Flexgate cable on 2016-2017. Same-day, 90-day warranty. Message us today."
       path="/blog/macbook-pro-intel-screen-repair-cost-dubai"
       wide
       toc={[
@@ -28,7 +28,7 @@ export default function BlogMacBookProIntelScreenRepair() {
       quickAnswer="MacBook Pro Intel screen repair Dubai: Flexgate backlight cable is the cheapest fix, followed by 13-inch, 15-inch and 16-inch LCD panel replacements in that order. Free diagnosis. Same-day service. 90-day warranty on panels. First check: is the issue Flexgate (stage-light at lid angle) or physical damage? Flexgate cable is dramatically cheaper than full panel replacement — message us on WhatsApp for your exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={8}
       featuredImageAlt="MacBook Pro Intel screen repair cost Dubai, technician replacing LCD panel at Dubai repair workshop"
       body={

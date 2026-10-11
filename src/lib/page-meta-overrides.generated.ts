@@ -1514,7 +1514,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     "title": "White or Grey Horizontal Lines on MacBook Screen (Fix)",
-    "description": "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. How to diagnose and fix it."
+    "description": "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2017 MacBook Pro, or a GPU fault. Free Dubai check, WhatsApp us."
   },
   "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
     "title": "Why Does My MacBook Air M4 Heat Up So Quickly? 2026 Fixes",

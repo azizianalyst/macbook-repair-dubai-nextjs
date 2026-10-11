@@ -6,12 +6,12 @@ export default function GuideMacBookHorizontalLines() {
   return (
     <BlogPostTemplate
       seoTitle="White or Grey Horizontal Lines on MacBook Screen (Fix)"
-      seoDescription="Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide plus free Dubai check."
+      seoDescription="Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2017 MacBook Pro, or a GPU fault. Free Dubai check, WhatsApp us."
       path="/white-or-grey-horizontal-lines-appearing-on-macbook-screen"
       category="Troubleshooting · MacBook Display"
       h1="White or Grey Horizontal Lines Appearing on MacBook Screen"
       hook="Horizontal lines on a MacBook screen are almost always a hardware fault, here's how to identify which one before you book a repair."
-      quickAnswer="White or grey horizontal lines on a MacBook screen are almost always hardware: a failing display flex cable (most common), Flexgate damage on 2016–2019 MacBook Pro models, or a GPU fault on older Intel models. If the lines persist after a restart, software is not the cause, the display or its connection needs physical inspection."
+      quickAnswer="White or grey horizontal lines on a MacBook screen are almost always hardware: a failing display flex cable (most common), Flexgate damage on 2016–2017 MacBook Pro models, or a GPU fault on older Intel models. If the lines persist after a restart, software is not the cause, the display or its connection needs physical inspection."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-06-18"
       dateModified="2026-10-11"
@@ -42,9 +42,9 @@ export default function GuideMacBookHorizontalLines() {
             today's exact price on your model.
           </p>
 
-          <h3>2. Flexgate on 2016–2019 MacBook Pro</h3>
+          <h3>2. Flexgate on 2016–2017 MacBook Pro</h3>
           <p>
-            The 2016, 2017, 2018, and 2019 MacBook Pro 13" and 15" used a display flex cable that
+            The 2016 and 2017 MacBook Pro 13" and 15" used a display flex cable that
             Apple routed over a sharp edge inside the hinge. With repeated lid opening and closing,
             the cable fatigues and fails. The typical progression:
           </p>

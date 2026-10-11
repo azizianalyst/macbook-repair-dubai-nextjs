@@ -23,7 +23,7 @@ export default function BlogMacBookFlexgateExplained() {
       category="Problem solving · MacBook"
       h1="MacBook Flexgate - What It Is and How to Fix It"
       hook="Black backlight strip on your 2016 or 2017 MacBook Pro? It's called Flexgate - Apple's design flaw - and yes, we still fix it."
-      quickAnswer="Flexgate is a backlight flex-cable design flaw on 2016 and early 2017 MacBook Pro Retina (13″ and 15″), where the cable was 2mm too short. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
+      quickAnswer="Flexgate is a backlight flex-cable design flaw on the 2016 and 2017 MacBook Pro (13″ and 15″), where the cable was too short for the hinge. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Shafiq", role: "Senior MacBook Pro display technician" }}
       datePublished="2026-04-25"
       dateModified="2026-10-11"
@@ -33,7 +33,7 @@ export default function BlogMacBookFlexgateExplained() {
         <>
           <h2 id="what-is-flexgate">MacBook Flexgate Explained. What is Flexgate (display cable wear)</h2>
           <p>
-            "Flexgate" is the community name for a design flaw on the 2016 and early 2017 MacBook
+            "Flexgate" is the community name for a design flaw on the 2016 and 2017 MacBook
             Pro Retina line. Apple routed the display backlight signal through a thin, flexible
             ribbon cable that ran from the logic board, up through the hinge, and into the
             display. The cable was approximately 2mm too short to handle repeated lid opening
@@ -50,8 +50,7 @@ export default function BlogMacBookFlexgateExplained() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>MacBook Pro 13″ Retina (2016, 2017)</strong> - both Touch Bar and non-Touch Bar versions</li>
             <li><strong>MacBook Pro 15″ Retina (2016, 2017)</strong> - all Touch Bar models</li>
-            <li><strong>MacBook Pro 13″ (mid-2018)</strong> - partial fix, some still affected</li>
-            <li><strong>2018 15″ and all 2019+ models</strong> - Apple lengthened the cable, not affected</li>
+            <li><strong>2018 and later models</strong> - Apple lengthened the cable; Flexgate is tied to the 2016-2017 models</li>
           </ul>
 
           <h2 id="visual-symptoms">Visual symptoms - stage lighting effect</h2>
@@ -117,9 +116,9 @@ export default function BlogMacBookFlexgateExplained() {
 
           <h2 id="m-series-flexgate">Will Flexgate happen on M-series MacBooks?</h2>
           <p>
-            No. Apple completely redesigned the display flex cable from the 2018 MacBook Pro 15″
-            onward, and the M-series MacBook Pros (2021+) use a different display architecture
-            with a much shorter, more direct flex routing. We have not seen a single Flexgate-style
+            No. Apple lengthened the display flex cable from the 2018 MacBook Pro onward (iFixit
+            measured the 2018 15″ cable 2mm longer than the 2016 one), and the M-series MacBook
+            Pros (2021+) use a different display design. We have not seen a single Flexgate-style
             failure on any M-series MacBook in our workshop in 2024 or 2025.
           </p>
           <p>
@@ -154,7 +153,7 @@ export default function BlogMacBookFlexgateExplained() {
         },
         {
           q: "Will the new flex cable solve Flexgate permanently?",
-          a: "Yes. We install a redesigned aftermarket flex cable that's 4-5mm longer than Apple's original (matches the 2018+ design). With normal use it should last the remaining life of the MacBook. We give a 3-month warranty on the cable repair specifically.",
+          a: "Yes. We install a redesigned aftermarket flex cable that is longer than Apple's original, the same fix Apple made on the 2018 MacBook Pro. With normal use it should last the remaining life of the MacBook. We give a 3-month warranty on the cable repair specifically.",
         },
         {
           q: "Why does Apple still not acknowledge 15″ MacBook Pro Flexgate?",
@@ -162,12 +161,12 @@ export default function BlogMacBookFlexgateExplained() {
         },
         {
           q: "Can I prevent Flexgate from happening on my 2018 or newer MacBook?",
-          a: "On 2018 13″ models still potentially at risk: avoid opening the lid past about 100 degrees in daily use. On 2019+ and all M-series MacBooks, no precaution needed - the cable redesign solved it.",
+          a: "On a 2016-2017 MacBook Pro: avoid opening the lid past about 100 degrees in daily use. Apple lengthened the cable from 2018, and M-series MacBooks use a different display design, so they need no special precaution.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook screen repair hub", href: "/macbook-screen-repair-dubai", description: "All MacBook display repairs." },
-        { label: "MacBook Pro 13″ Intel 2019 repair", href: "/macbook-pro-13-intel-2019-repair-dubai", description: "Late-affected Flexgate transitional model." },
+        { label: "MacBook Pro 13″ Intel 2019 repair", href: "/macbook-pro-13-intel-2019-repair-dubai", description: "Intel 13-inch repairs for the 2019 model." },
         { label: "MacBook screen repair cost guide 2026", href: "/blog/macbook-screen-repair-cost-dubai-2026", description: "Full pricing across all models." },
       ]}
     />

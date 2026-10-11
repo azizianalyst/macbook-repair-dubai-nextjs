@@ -31,7 +31,7 @@ export default function Blog21YearsExperience() {
       quickAnswer={`${YEARS} years of Apple-only repair means: model-specific failure pattern memory across 6 chip generations (PowerPC → Intel → Apple Silicon), specialty tooling built up since 2004, deep parts-network relationships, and a continuity team (Shafiq since 2008, Usman since 2012). Pop-up shops can't replicate that knowledge density on iPhone 16 Pro or MacBook Pro M5 issues.`}
       author={{ name: "Abdul Aziz", role: "Founder" }}
       datePublished="2026-04-28"
-      dateModified="2026-04-28"
+      dateModified="2026-10-11"
       readingMinutes={10}
       featuredImageAlt={`MacBook Repair Dubai: ${YEARS} years of Apple repair experience since 2004`}
       body={
@@ -88,7 +88,7 @@ export default function Blog21YearsExperience() {
             modern Apple Silicon logic-board repairs.
           </p>
           <p>
-            Touch Bar (2016), butterfly keyboard (2015-2019), flexgate (2016+), Apple Silicon UMA
+            Touch Bar (2016), butterfly keyboard (2015-2019), flexgate (2016-2017), Apple Silicon UMA
             (2020+) - each created new failure patterns we encountered, documented, and built repair
             procedures for over years.
           </p>

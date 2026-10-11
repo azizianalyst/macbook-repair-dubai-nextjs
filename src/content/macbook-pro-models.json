@@ -18,7 +18,6 @@
     "discontinued": "May 2020",
     "commonIssues": [
       "Butterfly keyboard failure - Apple's Keyboard Service Program has ended, so it is now a top-case repair",
-      "Flexgate - display backlight cable wears through after thousands of open/close cycles",
       "Touch Bar failures (touch input unresponsive, screen freezes, rebooting)",
       "Battery swelling (7 years old in 2026)",
       "Thermal throttling under sustained load - fans ramp aggressively"
@@ -47,8 +46,8 @@
       "liquid": "2-4 days",
       "fanCleaning": "Same-day"
     },
-    "honestyNote": "Flexgate is the silent killer of this generation - backlight cable wears through with normal use. We can replace the display assembly, but on a 7-year-old machine the math gets tight. We always show you the numbers before we start.",
-    "heroTagline": "The last Touch Bar Pro generation. We know its quirks - Flexgate, butterfly, Touch Bar."
+    "honestyNote": "If the display cable does wear at the hinge, the fix is a display assembly - and on a 7-year-old machine the math gets tight. We always show you the numbers before we start.",
+    "heroTagline": "The last Touch Bar Pro generation. We know its quirks - butterfly keys, Touch Bar, display cable."
   },
   {
     "slug": "macbook-pro-13-intel-2020-repair-dubai",
@@ -69,7 +68,6 @@
     "discontinued": "November 2020 (replaced by M1)",
     "commonIssues": [
       "Magic Keyboard (scissor) - much more reliable than 2019",
-      "Flexgate still present - display cable wear after years of use",
       "Touch Bar failures",
       "Battery wear at 5+ years",
       "Thermal throttling under load - Intel Core i7 runs hot in this chassis"
@@ -99,7 +97,7 @@
       "fanCleaning": "Same-day"
     },
     "honestyNote": "The last Intel 13\" Pro and the first with the reliable scissor keyboard. Battery and keyboard repairs are sensible. If you need a logic board or screen, weigh against a used M1 13\" Pro - the performance jump is enormous.",
-    "heroTagline": "The last Intel 13\" Pro. Better keyboard than 2019, still has Flexgate."
+    "heroTagline": "The last Intel 13\" Pro. Better keyboard than 2019."
   },
   {
     "slug": "macbook-pro-13-m1-2020-repair-dubai",

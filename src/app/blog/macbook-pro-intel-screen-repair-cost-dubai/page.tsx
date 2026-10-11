@@ -5,7 +5,7 @@ import View from "@/views/BlogMacBookProIntelScreenRepair";
 
 export const metadata: Metadata = metaFromFields("/blog/macbook-pro-intel-screen-repair-cost-dubai", {
   title: "MacBook Pro Intel Screen Repair Cost Dubai 2026",
-  description: "MacBook Pro Intel screen repair Dubai: cracked, Flexgate, dead pixels on 13/15-inch 2016-2020. Free diagnosis, same-day. Message us for your exact price.",
+  description: "MacBook Pro Intel screen repair Dubai: cracked or dead-pixel panels on 2016-2020, Flexgate on 2016-2017. Free diagnosis, same-day. WhatsApp us today.",
   publishedTime: "2026-06-22",
 });
 

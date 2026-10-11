@@ -28,7 +28,7 @@ export default function BlogMacBookProM4M5Problems() {
       quickAnswer="MacBook Pro M4 M5 common problems include: display flickering or black screens (cable or firmware), Wi-Fi dropping (Bluetooth coexistence), memory pressure on 8GB base models, thermal throttling in Dubai heat above 40°C, loose USB-C ports after heavy cable cycling, and kernel panics from bad macOS extensions. Start with an NVRAM reset and a macOS update. If symptoms persist, bring it in for free diagnosis."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={10}
       featuredImageAlt="MacBook Pro M4 M5 common problems, technician inspecting logic board and ports at Dubai repair workshop"
       body={
@@ -52,13 +52,12 @@ export default function BlogMacBookProM4M5Problems() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Flickering at low brightness</strong>: usually a firmware or ProMotion timing issue, try a macOS update first</li>
             <li><strong>Black screen on wake</strong>: the display goes dark after sleep and only recovers after closing and reopening the lid, often a display controller bug patched in subsequent macOS point releases</li>
-            <li><strong>Stage Light effect (Flexgate)</strong>: a bright strip at the bottom of the screen with darkness above it, caused by the flex cable bending at the hinge, more common on 14-inch models that are opened and closed many times per day</li>
           </ul>
           <p>
             Check for updates first: Apple menu, System Settings, General, Software Update. If the
             flickering started with a specific macOS version, roll back using macOS Recovery or wait
-            for the next patch. If the Stage Light effect is present, the flex cable needs physical
-            replacement, not software. Message us on WhatsApp for a repair quote on your model.
+            for the next patch. If the flicker survives a clean macOS install, it is hardware - the
+            panel or its connector - and needs a bench check. Message us on WhatsApp for a repair quote on your model.
           </p>
           <p>
             One Dubai-specific pattern: leaving the MacBook on a desk in direct sunlight through a
@@ -203,8 +202,8 @@ export default function BlogMacBookProM4M5Problems() {
               </tr>
               <tr>
                 <td>M4 Pro (24GB)</td>
-                <td>Wi-Fi coexistence, display flex cable</td>
-                <td>14-inch used as desktop replacement, hinge cycles high</td>
+                <td>Wi-Fi coexistence</td>
+                <td>14-inch used as desktop replacement</td>
               </tr>
               <tr>
                 <td>M4 Max (48GB)</td>
@@ -265,7 +264,6 @@ export default function BlogMacBookProM4M5Problems() {
             rows={[
               { model: "Diagnosis (all faults)", ours: "Free", apple: "Same day", note: "We tell you what's wrong before any work starts" },
               { model: "USB-C port repair (M4/M5)", ours: "Price on request", apple: "Same day", note: "Board-level socket or trace repair" },
-              { model: "Display cable repair (Flexgate)", ours: "Price on request", apple: "Same day", note: "Stage Light fix, 14-inch and 16-inch" },
               { model: "Logic board repair (M4)", ours: "Price on request", apple: "2-4 days", note: "Component-level, not full board swap" },
               { model: "Logic board repair (M5)", ours: "Price on request", apple: "2-4 days", note: "Component-level, price varies by fault" },
             ]}
@@ -288,7 +286,6 @@ export default function BlogMacBookProM4M5Problems() {
           <p>Bring it in immediately if you see any of these:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Kernel panics more than once per week</strong>: software causes one-off panics, hardware causes recurring ones</li>
-            <li><strong>Stage Light display effect</strong>: the flex cable will not self-repair, it progressively worsens</li>
             <li><strong>USB-C port wobbles or drops connection</strong>: a loose port can arc and damage the logic board if left</li>
             <li><strong>Fan runs constantly at idle</strong>: in Dubai heat this can mean a failing temperature sensor sending false readings</li>
             <li><strong>Mac exposed to heat above 70°C</strong> (left in parked car): lithium cells and board components have permanent damage thresholds</li>
@@ -325,7 +322,7 @@ export default function BlogMacBookProM4M5Problems() {
         },
         {
           q: "Is it safe to use a MacBook Pro M4 with a flickering display?",
-          a: "If the flicker is mild and software-related, continued use is safe. If the Stage Light effect is present (bright band at the bottom, dark above), the flex cable is partially failing. Continued hinge opening and closing will worsen the tear until the display goes completely black. Get it repaired before that happens.",
+          a: "If the flicker is mild and software-related, continued use is safe. A bright band along the bottom of an M4 screen is not Flexgate, which belongs to the 2016-2017 Intel MacBook Pro; on an M4 it points to the panel or its connector. Bring it in for a free check before it gets worse.",
         },
       ]}
       relatedLinks={[

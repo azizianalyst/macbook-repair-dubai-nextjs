@@ -24,7 +24,7 @@ export default function BlogMacBookProIntelProblems() {
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Intel Common Problems in Dubai? Here's Why and How to Fix It"
       hook="MacBook Pro Intel models from 2017-2020 have well-documented design faults: butterfly keyboard dropout, AMD GPU solder failure, Flexgate display cable, and T2 chip bricking. All are repairable in Dubai. Message us on WhatsApp for today's exact repair price on your model."
-      quickAnswer="MacBook Pro Intel common problems: butterfly keyboard key dropout or no response (2016-2019 models), AMD GPU failure causing lines or black screen (2017-2019 15-inch, reball), Flexgate display cable fraying causing stage lighting or blackout (2016-2019), T2 chip bridge OS faults (2019-2020). All diagnosed free in Dubai. Message us on WhatsApp for the exact price on your model."
+      quickAnswer="MacBook Pro Intel common problems: butterfly keyboard key dropout or no response (2016-2019 models), AMD GPU failure causing lines or black screen (2017-2019 15-inch, reball), Flexgate display cable fraying causing stage lighting or blackout (2016-2017), T2 chip bridge OS faults (2019-2020). All diagnosed free in Dubai. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-10-11"
@@ -42,7 +42,7 @@ export default function BlogMacBookProIntelProblems() {
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Butterfly keyboard (2016-2019)</strong>: ultra-thin key mechanism with almost no tolerance for dust. One particle under a key causes it to stop registering or double-register</li>
             <li><strong>AMD GPU solder failure (2017-2019 15-inch)</strong>: the AMD Radeon Pro 555/560 discrete GPU uses BGA solder bumps that crack under thermal cycling in warm climates</li>
-            <li><strong>Flexgate display cable (2016-2019)</strong>: the display backlight cable is too short, causing it to fray as the lid opens and closes over thousands of cycles</li>
+            <li><strong>Flexgate display cable (2016-2017)</strong>: the display backlight cable is too short, causing it to fray as the lid opens and closes over thousands of cycles</li>
             <li><strong>T2 chip issues (2019-2020)</strong>: the T2 security chip handles TouchID, Secure Boot, and bridgeOS. Firmware corruption causes system lockout and charging failures</li>
             <li><strong>Thermal throttling (all Intel)</strong>: Intel Core i7 and i9 CPUs in 2018-2019 MacBook Pro 15/16-inch throttled severely on sustained loads due to undersized heatsinks</li>
           </ol>
@@ -96,7 +96,7 @@ export default function BlogMacBookProIntelProblems() {
 
           <h2 id="flexgate">Step 3: How do I know if my MacBook Pro Intel has Flexgate?</h2>
           <p>
-            Flexgate affects MacBook Pro 13-inch 2016-2019 and 15-inch 2016-2019. The display
+            Flexgate affects the 2016 and 2017 MacBook Pro, 13-inch and 15-inch; iFixit measured the 2018 15-inch cable 2mm longer. The display
             backlight cable is marginally too short. Over thousands of lid open/close cycles, it
             frays at the point where it exits the hinge.
           </p>
@@ -153,7 +153,7 @@ export default function BlogMacBookProIntelProblems() {
               </tr>
               <tr>
                 <td>Display cable</td>
-                <td>Flexgate: fraying at hinge on 13/15-inch 2016-2019</td>
+                <td>Flexgate: fraying at hinge on 13/15-inch 2016-2017</td>
                 <td>Redesigned cable routing, no Flexgate issue</td>
               </tr>
               <tr>

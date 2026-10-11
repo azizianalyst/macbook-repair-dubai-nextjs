@@ -39,7 +39,7 @@ export default function MacBookScreenRepairNearMeDubai() {
           </ul>
           <h2 className="text-[24px] md:text-[28px] mb-md">What we actually fix on a MacBook screen</h2>
           <p className="text-[15px] leading-relaxed mb-lg">
-            Cracked glass, dead pixels, backlight failure (including Flexgate on 2016-2019 models), flickering, dark patches down one edge, and lines across the display. We replace the panel for every MacBook Air and Pro generation, Intel through M5, and most screens are done the same day the courier collects it.
+            Cracked glass, dead pixels, backlight failure (including Flexgate on 2016-2017 models), flickering, dark patches down one edge, and lines across the display. We replace the panel for every MacBook Air and Pro generation, Intel through M5, and most screens are done the same day the courier collects it.
           </p>
         </>
       }
@@ -47,7 +47,7 @@ export default function MacBookScreenRepairNearMeDubai() {
         "Cracked or shattered MacBook display glass",
         "Flickering or dimming screen",
         "Dead pixels or lines across the display",
-        "Flexgate backlight cable failure (2016-2019 models)",
+        "Flexgate backlight cable failure (2016-2017 models)",
         "Dark patches or uneven brightness",
         "Screen not turning on despite the machine powering up",
       ]}

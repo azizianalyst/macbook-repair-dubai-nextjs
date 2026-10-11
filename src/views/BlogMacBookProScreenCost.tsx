@@ -27,7 +27,7 @@ export default function BlogMacBookProScreenCost() {
       quickAnswer="MacBook Pro screen replacement cost in Dubai depends on panel size, display generation (XDR vs standard Retina), and whether the full lid assembly is needed. We are typically well below the equivalent Apple Store quote for the same job. Message us on WhatsApp with your model for an exact price. Same-day service is available in Dubai for drop-off before 11am."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={9}
       featuredImageAlt="MacBook Pro screen replacement cost dubai, technician replacing Liquid Retina XDR display at Dubai repair workshop"
       body={
@@ -41,7 +41,7 @@ export default function BlogMacBookProScreenCost() {
           <p>The most common failure causes we see in Dubai:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>Physical impact</strong>: dropped lid, pressure from bag, closed on a pencil or keyboard cover</li>
-            <li><strong>Flexgate cable failure</strong>: Intel 2016-2019 models have a known display cable that frays at the hinge, causing a stage-light effect at the bottom</li>
+            <li><strong>Flexgate cable failure</strong>: Intel 2016-2017 models have a known display cable that frays at the hinge, causing a stage-light effect at the bottom</li>
             <li><strong>Heat delamination</strong>: prolonged exposure to 50°C+ (parked cars, direct window sunlight) causes the bonding to separate</li>
             <li><strong>Liquid ingress</strong>: water seeps through keyboard, travels up and hits the display connector or panel backlight</li>
             <li><strong>Hinge stress fracture</strong>: repeated full-angle opening over years cracks the panel near the hinge strip</li>
@@ -59,7 +59,7 @@ export default function BlogMacBookProScreenCost() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>External monitor test</strong>: connect via USB-C or HDMI to an external display. If the picture is perfect externally, the fault is in the built-in screen, not the GPU or logic board</li>
             <li><strong>Backlight test</strong>: shine a torch at the panel in a dark room. If you see a faint image, the backlight is failed but the panel itself is alive, this is usually a cable or driver IC fault</li>
-            <li><strong>Stage-light test</strong>: open the lid past 90 degrees, watch the bottom edge. Flickering or a black bar that appears at wide angles is Flexgate (display cable tear), common on 2016-2019 13-inch models</li>
+            <li><strong>Stage-light test</strong>: open the lid past 90 degrees, watch the bottom edge. Flickering or a black bar that appears at wide angles is Flexgate (display cable tear), common on 2016-2017 13-inch models</li>
             <li><strong>Dead pixel check</strong>: open a solid white screen (Preview → New → white page). Single or clustered dead pixels point to panel damage, not cable</li>
             <li><strong>Pressure artifacts</strong>: coloured blotches or black ink-bleed spreading from one corner indicate cracked internal LCD, full panel replacement needed</li>
           </ul>
@@ -98,7 +98,7 @@ export default function BlogMacBookProScreenCost() {
             headers={["Symptom", "Likely cause", "Test to confirm"]}
             rows={[
               { model: "Cracked glass, black ink spreading", ours: "Physical panel damage", apple: "Visual inspection, no test needed" },
-              { model: "Stage-light effect at bottom edge", ours: "Flexgate cable (2016-2019)", apple: "Worsens past 90 degrees open" },
+              { model: "Stage-light effect at bottom edge", ours: "Flexgate cable (2016-2017)", apple: "Worsens past 90 degrees open" },
               { model: "No backlight, faint image visible", ours: "Backlight driver or cable", apple: "Torch test in dark room" },
               { model: "Blank screen, external monitor works", ours: "Display cable or connector", apple: "External monitor test" },
               { model: "Blank screen, external monitor also fails", ours: "GPU or logic board fault", apple: "Requires board-level diagnosis" },
@@ -119,7 +119,7 @@ export default function BlogMacBookProScreenCost() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Panel only</strong>: the glass-panel bonded unit, without the lid housing or hinges. This is what most Dubai shops replace and covers 90% of screen failures</li>
             <li><strong>Full lid assembly</strong>: includes housing, hinges, and antenna cables. Needed when the lid casing is bent, or when the hinge has torn the display cable anchor</li>
-            <li><strong>Cable only (Flexgate)</strong>: some 2016-2019 Intel models need just the display cable replaced, not the panel itself, which is significantly cheaper than a full panel</li>
+            <li><strong>Cable only (Flexgate)</strong>: some 2016-2017 Intel models need just the display cable replaced, not the panel itself, which is significantly cheaper than a full panel</li>
             <li><strong>Backlight board</strong>: on Intel models, the backlight driver is sometimes separate and can be replaced at board level for less than a full panel</li>
           </ul>
           <p>
@@ -203,7 +203,7 @@ export default function BlogMacBookProScreenCost() {
             ]}
           />
           <p>
-            Flexgate cable-only repairs on Intel 2016-2019 models take about 45 minutes and cost far
+            Flexgate cable-only repairs on Intel 2016-2017 models take about 45 minutes and cost far
             less than a full panel. If your 13-inch only shows the stage-light effect, it is likely
             the cable rather than the panel, which saves you a lot. Message us on WhatsApp for the
             exact price.{" "}

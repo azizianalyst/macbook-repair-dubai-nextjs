@@ -24,7 +24,7 @@ export default function GuideMacBookColorDistortion() {
       quickAnswer="MacBook screen colour distortion, a yellow/orange tint, washed-out colours, or oversaturation, is most often caused by Night Shift, True Tone, a wrong colour profile, or an Accessibility colour filter. Check System Settings → Displays first. Hardware causes (loose display cable, panel fault) only apply if software settings are all correct."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-06-18"
-      dateModified="2026-06-18"
+      dateModified="2026-10-11"
       readingMinutes={6}
       featuredImageAlt="MacBook screen showing colour calibration settings at a Dubai repair workshop"
       extraSchemas={[howTo({
@@ -80,10 +80,10 @@ export default function GuideMacBookColorDistortion() {
               part of the screen, flickering alongside the distortion.
             </li>
             <li>
-              <strong>Flexgate on 2016–2019 MacBook Pro</strong>: the display flex cable on these
+              <strong>Flexgate on 2016–2017 MacBook Pro</strong>: the display flex cable on these
               models passes over a sharp edge and degrades with lid movement. Symptoms include a
-              backlight fade from the bottom and eventual display faults. Apple ran a free repair
-              programme for affected models.
+              backlight fade from the bottom and eventual display faults. Apple's free programme
+              covered only the 2016 13-inch and has closed.
             </li>
             <li>
               <strong>Physical pressure on the LCD panel</strong>: if an object (a pen, a crumb)
@@ -121,7 +121,7 @@ export default function GuideMacBookColorDistortion() {
         },
         {
           q: "There's a yellow or pink tint on one part of my MacBook screen. Is that hardware?",
-          a: "A tint confined to one area of the screen, especially the bottom edge on a MacBook Pro 2016–2019, is a hardware fault (often Flexgate or display cable damage). A full-screen tint is almost always a setting. If it's one area, bring it in for a free check.",
+          a: "A tint confined to one area of the screen, especially the bottom edge on a 2016–2017 MacBook Pro, is a hardware fault (often Flexgate or display cable damage). A full-screen tint is almost always a setting. If it's one area, bring it in for a free check.",
         },
         {
           q: "How much does MacBook screen replacement cost in Dubai?",

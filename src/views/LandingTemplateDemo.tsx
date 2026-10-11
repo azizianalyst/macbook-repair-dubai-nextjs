@@ -229,7 +229,7 @@ export default function LandingTemplateDemo() {
           {
             heading: "MacBook Pro 13\"",
             models: [
-              { label: "Intel 2020", href: "/macbook-pro-13-intel-2020-repair-dubai", note: "MacBook Pro 13-inch Intel 2020 screen replacement (Flexgate-prone)" },
+              { label: "Intel 2020", href: "/macbook-pro-13-intel-2020-repair-dubai", note: "MacBook Pro 13-inch Intel 2020 screen replacement" },
               { label: "M1 2020", href: "/macbook-pro-13-m1-2020-repair-dubai", note: "MacBook Pro 13-inch M1 2020 screen replacement" },
               { label: "M2 2022", href: "/macbook-pro-13-m2-2022-repair-dubai", note: "MacBook Pro 13-inch M2 2022 screen replacement (last 13-inch Pro)" },
             ],
