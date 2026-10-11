@@ -41,7 +41,6 @@ export default function Warranty() {
           <li><strong>Keyboard repairs, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
           <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date of pickup.</li>
           <li>The warranty travels with the device, not the customer - see the transfer rules below.</li>
-          <li>Claim turnaround averages 24 hours from drop-off.</li>
           <li><strong>Apple's warranty and AppleCare are separate from ours.</strong> The periods above are <em>our</em> repair warranty. If your device is still covered by Apple's standard one-year warranty or by AppleCare / AppleCare+ (up to about 3 years on a Mac), that is Apple's cover on the device itself and is claimed through Apple - not us. We are an independent specialist (not an Apple Authorized Service Provider), so if your device is still in Apple cover we will tell you, because for a covered fault you may be better off going to Apple.</li>
         </ul>
       </LegalSection>
@@ -78,10 +77,10 @@ export default function Warranty() {
       <LegalSection id="claim" title="5. How to claim warranty">
         <ol>
           <li>Send a WhatsApp message to {NAP.phoneDisplay} within the warranty period shown on your invoice (15 days to 12 months, depending on the service). Include the device serial number, a description of the new symptom, and a photo or short video if relevant.</li>
-          <li>A technician confirms within 4 business hours whether the symptom is in scope.</li>
+          <li>A technician confirms whether the symptom is in scope.</li>
           <li>Drop the device at {NAP.street}, {NAP.area}, or use the free pickup service.</li>
           <li>Bring the original invoice or quote the invoice number - the workshop also keeps a copy linked to the serial number.</li>
-          <li>Inspection is free. If the symptom is in scope, the repair is redone free, usually within 24 hours.</li>
+          <li>Inspection is free. If the symptom is in scope, the repair is redone free.</li>
           <li>If the symptom is out of scope, a quote for the new fault is sent on WhatsApp before any work begins.</li>
         </ol>
       </LegalSection>

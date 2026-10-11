@@ -136,7 +136,7 @@ export default function AppleRepairProgramsDubai() {
             Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own written warranty up to 12 months.
           </p>
           <p>
-            We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. When a device we diagnose falls inside an open programme, we send the customer straight to Apple Dubai or Apple Mall of the Emirates with a printed eligibility note.
+            We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. When a device we diagnose falls inside an open programme, we send the customer straight to Apple Dubai Mall or Apple Mall of the Emirates.
           </p>
         </div>
       </section>

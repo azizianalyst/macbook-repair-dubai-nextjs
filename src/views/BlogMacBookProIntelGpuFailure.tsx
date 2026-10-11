@@ -121,7 +121,7 @@ export default function BlogMacBookProIntelGpuFailure() {
           <BlogPriceTable
             caption="MacBook Pro Intel AMD GPU repair pricing. June 2026"
             rows={[
-              { model: "AMD GPU BGA reball (2017 15-inch)", ours: "Price on request", apple: "Logic board replacement", note: "3-5 day turnaround, 3-month warranty on joint" },
+              { model: "AMD GPU BGA reball (2017 15-inch)", ours: "Price on request", apple: "Logic board replacement", note: "3-5 day turnaround, 15-day warranty" },
               { model: "AMD GPU BGA reball (2018-2019 15-inch)", ours: "Price on request", apple: "Logic board replacement", note: "Higher board complexity: 2018-2019 T2 chip" },
               { model: "Intel MacBook Pro board-level diagnostic", ours: "Free", apple: "Price on request", note: "GPU switching test, iGPU vs dGPU isolation" },
               { model: "Data recovery before GPU repair", ours: "Price on request", apple: "Price on request", note: "Full backup to external drive before any board work" },
@@ -130,7 +130,7 @@ export default function BlogMacBookProIntelGpuFailure() {
 
           <h2 id="when-reball">BGA reball vs logic board replacement for Intel MacBook Pro GPU fault</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>BGA reball</strong>: the failing AMD GPU chip is removed, old solder balls are cleaned, new solder balls are applied, and the chip is reflowed back onto the board. When successful, GPU function is fully restored. 3-month warranty on the reball joint. Success rate approximately 85-90% at our Dubai workshop</li>
+            <li><strong>BGA reball</strong>: the failing AMD GPU chip is removed, old solder balls are cleaned, new solder balls are applied, and the chip is reflowed back onto the board. When successful, GPU function is fully restored. 15-day warranty on the reball, as for all board-level work</li>
             <li><strong>Logic board replacement</strong>: Apple's default response. It is the most expensive path and provides a refurbished board (which may itself be a rework of a previously-failed board). No data loss since SSD stays with original board, but the SSD is returned to you and you reinstall it in the replacement board</li>
             <li><strong>When to choose replacement over reball</strong>: if the board has additional faults (T2 chip issue, charging IC fault), if the machine has significant liquid corrosion, or if reball has already been attempted once and failed again within 6 months</li>
           </ul>
