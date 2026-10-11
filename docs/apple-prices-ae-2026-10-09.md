@@ -22,3 +22,16 @@ Source: https://support.apple.com/en-ae/iphone/repair/screen-replacement ("How m
 | iPhone 15 | AED 1,079 | AED 1,429 | AED 385 |
 
 Re-check quarterly (j10) or when Apple changes the line-up.
+
+## Mac laptops: battery service (Apple, UAE, AED, excluding VAT) — re-read 2026-10-11
+
+Source: https://support.apple.com/en-ae/mac-laptops/repair?services=service ("How much will it cost?" estimator), read in Chrome on 11 Oct 2026. Apple publishes only a battery price for Mac laptops; screen and other damage show "We'll need to inspect your product". First recorded in `docs/apple-lineup-2026-09-26.md` §4a (26 Sep 2026); unchanged since.
+
+| Model | Battery service |
+|---|---|
+| MacBook Neo (13-inch, A18 Pro) | AED 589 |
+| MacBook Air (13-inch, M5) | AED 689 |
+| MacBook Pro (14-inch, M5) | AED 879 |
+| MacBook Pro (16-inch, M5 Pro/M5 Max) | AED 959 |
+
+These are the "Apple list" figures in the comparison table on /macbook-battery-replacement-dubai/ (War Room task t-apple-battery-prices).
