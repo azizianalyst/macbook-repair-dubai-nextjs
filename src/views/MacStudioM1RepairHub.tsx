@@ -31,9 +31,9 @@ export default function MacStudioM1RepairHub() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             The SSD on all Mac Studio models is soldered directly to the logic board and cannot be replaced or upgraded by any repair centre. For dedicated model pages, see{" "}
-            <Link to="/mac-studio-m1-max-2022-repair-dubai" className="text-accent hover:underline">Mac Studio M1 Max 2022 repair Dubai</Link>{" "}
+            <Link to="/mac-studio-m1-max-2022-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M1 Max 2022 repair Dubai</Link>{" "}
             and{" "}
-            <Link to="/mac-studio-m1-ultra-2022-repair-dubai" className="text-accent hover:underline">Mac Studio M1 Ultra 2022 repair Dubai</Link>.
+            <Link to="/mac-studio-m1-ultra-2022-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M1 Ultra 2022 repair Dubai</Link>.
           </p>
         </>
       }

@@ -58,13 +58,13 @@ export default function MacbookNeoRepair() {
           </p>
           <ul className="space-y-2 text-[15px] mb-md">
             <li>• <strong>Battery in a screwed tray.</strong> The battery sits in a tray held by 18 screws, so a{" "}
-              <Link to="/macbook-neo-battery-replacement-dubai" className="text-accent hover:underline">MacBook Neo battery replacement</Link>{" "}
+              <Link to="/macbook-neo-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo battery replacement</Link>{" "}
               is far simpler than on the MacBook Air M5 or MacBook Pro M5.</li>
             <li>• <strong>No parts-pairing warnings.</strong> The display, trackpad, battery and Touch ID can each be
               swapped without triggering parts-pairing warnings, so a replacement part is not flagged by macOS.</li>
             <li>• <strong>Keyboard on its own, but slow.</strong> The keyboard can be replaced separately, but it takes
               41 screws. That is why we try cleaning and single-key fixes before quoting a full{" "}
-              <Link to="/macbook-neo-keyboard-repair-dubai" className="text-accent hover:underline">MacBook Neo keyboard repair</Link>.</li>
+              <Link to="/macbook-neo-keyboard-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo keyboard repair</Link>.</li>
             <li>• <strong>Soldered memory and storage.</strong> The 8GB of RAM and the storage are soldered to the logic
               board. There is no upgrade path, and a dead board is also a data problem.</li>
             <li>• <strong>Pentalobe screws</strong> close the case, so it needs the right drivers, not a kitchen-drawer

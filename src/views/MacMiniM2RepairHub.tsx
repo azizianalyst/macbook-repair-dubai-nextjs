@@ -28,9 +28,9 @@ export default function MacMiniM2RepairHub() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             A documented Apple firmware issue on some M2 Pro Mac minis (the model with HDMI 2.1) causes audio to drop over HDMI when driving high-refresh displays. The base M2 uses HDMI 2.0 and is not affected. This is a software bug, not hardware failure - a firmware update resolves it. We check for this first before any hardware diagnosis to avoid unnecessary repairs. See{" "}
-            <Link to="/mac-mini-m2-2023-repair-dubai" className="text-accent hover:underline">Mac mini M2 2023 repair Dubai</Link>{" "}
+            <Link to="/mac-mini-m2-2023-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M2 2023 repair Dubai</Link>{" "}
             and{" "}
-            <Link to="/mac-mini-m2-pro-2023-repair-dubai" className="text-accent hover:underline">Mac mini M2 Pro 2023 repair Dubai</Link>{" "}
+            <Link to="/mac-mini-m2-pro-2023-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M2 Pro 2023 repair Dubai</Link>{" "}
             for model-specific pages.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">

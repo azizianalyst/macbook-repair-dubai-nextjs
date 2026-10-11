@@ -28,9 +28,9 @@ export default function MacMiniM6RepairHub() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Because this generation is weeks old, almost any hardware fault should be Apple's problem, not yours. We verify your serial number and coverage status first - if Apple should fix it under the 1-year warranty or AppleCare+, we tell you so and charge nothing. For the dedicated model pages see{" "}
-            <Link to="/mac-mini-m6-2026-repair-dubai" className="text-accent hover:underline">Mac mini M6 2026 repair</Link>{" "}
+            <Link to="/mac-mini-m6-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M6 2026 repair</Link>{" "}
             and{" "}
-            <Link to="/mac-mini-m5-pro-2026-repair-dubai" className="text-accent hover:underline">Mac mini M5 Pro 2026 repair</Link>.
+            <Link to="/mac-mini-m5-pro-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M5 Pro 2026 repair</Link>.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Where we do earn our keep on a new mini: accidental damage that warranty excludes (liquid, drops, power surges - common with cheap UPS units in Dubai), data recovery from a machine Apple would simply replace, network, display and dock setup problems that look like hardware but are configuration, and thermal servicing once the machine has lived a summer in an enclosed TV unit.

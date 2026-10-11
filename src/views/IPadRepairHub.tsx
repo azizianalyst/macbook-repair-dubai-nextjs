@@ -459,7 +459,7 @@ export default function IPadRepairHub() {
               { label: "iPhone Repair Dubai",           href: "/iphone-repair-dubai" },
               { label: "MacBook Repair Dubai",          href: "/macbook-repair-dubai" },
               { label: "Apple Repair Dubai",            href: "/apple-repair-dubai" },
-            ].map((l) => <Link key={l.href} to={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</Link>)}
+            ].map((l) => <Link key={l.href} to={withSlash(l.href)} className="text-accent underline underline-offset-2 hover:no-underline">{l.label} ›</Link>)}
           </div>
         </section>
 

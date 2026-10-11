@@ -67,7 +67,7 @@ export default function MacBookNeoBatteryReplacement() {
           </div>
           <p className="text-[14px] text-text-muted mb-lg">
             Source: support.apple.com/en-ae, read on 26 September 2026. For other models see{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent hover:underline">MacBook battery replacement</Link>.
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook battery replacement</Link>.
             Our own price is quoted on WhatsApp.
           </p>
 
@@ -84,7 +84,7 @@ export default function MacBookNeoBatteryReplacement() {
             <li>• <strong>Sudden shutdowns with charge left:</strong> a sign of a failing cell, or of a charging fault,
               which we test separately.</li>
             <li>• <strong>Not charging at all:</strong> try another charger and cable. If nothing changes, see{" "}
-              <Link to="/macbook-neo-a18-repair-dubai" className="text-accent hover:underline">MacBook Neo A18 Pro repair</Link>{" "}
+              <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo A18 Pro repair</Link>{" "}
               for charging-path faults.</li>
           </ul>
           <p className="text-[15px] leading-relaxed mb-lg">

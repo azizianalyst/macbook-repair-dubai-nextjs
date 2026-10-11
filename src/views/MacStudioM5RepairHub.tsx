@@ -28,9 +28,9 @@ export default function MacStudioM5RepairHub() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             We do not assume a new Studio opens, cools or powers up exactly like the last one: fan, thermal-paste and power-supply work is confirmed on the bench before we quote it. And on a machine this young, factory faults belong with Apple. We check your serial number and AppleCare+ status before quoting. See the dedicated pages for{" "}
-            <Link to="/mac-studio-m5-max-2026-repair-dubai" className="text-accent hover:underline">Mac Studio M5 Max 2026 repair</Link>{" "}
+            <Link to="/mac-studio-m5-max-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M5 Max 2026 repair</Link>{" "}
             and{" "}
-            <Link to="/mac-studio-m5-ultra-2026-repair-dubai" className="text-accent hover:underline">Mac Studio M5 Ultra 2026 repair</Link>.
+            <Link to="/mac-studio-m5-ultra-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M5 Ultra 2026 repair</Link>.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Where independent repair matters on a new Studio: liquid and power-surge damage (excluded from warranty), data recovery when the board is dead (the SSD is encrypted and tied to the chip, so that means repairing the board until it runs again), Thunderbolt and multi-display faults that turn out to be cable or configuration issues, and preventive thermal service - an Ultra rendering all day in a Dubai summer pulls dust through its fans quickly.

@@ -49,7 +49,7 @@ export default function MacBookNeoA18RepairHub() {
               board before anything is condemned. A dead MacBook is often one failed component, not a dead chip.</li>
             <li>• <strong>Liquid damage:</strong> corrosion keeps spreading while the machine has power, so switch it
               off, do not charge it and bring it in. We clean the board and replace corroded parts; see{" "}
-              <Link to="/macbook-water-damage-repair-dubai" className="text-accent hover:underline">MacBook water damage repair</Link>.</li>
+              <Link to="/macbook-water-damage-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook water damage repair</Link>.</li>
             <li>• <strong>Boot loops and restarts:</strong> software is ruled out first with macOS recovery checks, so
               you do not pay for board work that a reinstall would fix.</li>
             <li>• <strong>Port and charging faults:</strong> we separate a damaged port from a board-side fault before
@@ -78,7 +78,7 @@ export default function MacBookNeoA18RepairHub() {
           <p className="text-[15px] leading-relaxed mb-lg">
             What the Neo shares with the MacBook Air M5 is soldered memory and storage, which cannot be upgraded or
             moved. If your data matters, back it up now; if the board has already failed, see{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent hover:underline">MacBook data recovery</Link>{" "}
+            <Link to="/macbook-data-recovery-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook data recovery</Link>{" "}
             and message us before anyone else opens the machine.
           </p>
 

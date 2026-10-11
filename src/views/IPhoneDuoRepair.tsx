@@ -88,7 +88,7 @@ export default function IPhoneDuoRepair() {
             <li>• <strong>Hinge stiffness, grit or noise:</strong> we inspect it, tell you honestly whether it is
               something we can address, and send you to Apple when it is not.</li>
             <li>• <strong>Won&apos;t power on, liquid exposure or data at risk:</strong> free diagnosis and, where needed,{" "}
-              <Link to="/iphone-data-recovery-dubai" className="text-accent hover:underline">iPhone data recovery</Link>,
+              <Link to="/iphone-data-recovery-dubai" className="text-accent underline underline-offset-2 hover:no-underline">iPhone data recovery</Link>,
               the same board-level work we do on other A-series iPhones.</li>
           </ul>
 
@@ -107,7 +107,7 @@ export default function IPhoneDuoRepair() {
             bags, where grit can reach a hinge. Close it before it goes into a pocket with keys or coins. Do not fit
             screen protectors to the inner display unless they are made for it. And if it gets wet, power it down and
             message us rather than charging it. For the non-foldable Pro models, see{" "}
-            <Link to="/iphone-18-pro-repair-dubai" className="text-accent hover:underline">iPhone 18 Pro repair</Link>.
+            <Link to="/iphone-18-pro-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">iPhone 18 Pro repair</Link>.
           </p>
         </>
       }

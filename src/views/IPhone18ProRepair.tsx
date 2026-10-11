@@ -63,7 +63,7 @@ export default function IPhone18ProRepair() {
           </p>
           <ul className="space-y-2 text-[15px] mb-lg">
             <li>• <strong>Battery:</strong> it sits in a tray held by 13 screws, with no glue. That makes a{" "}
-              <Link to="/iphone-battery-replacement-dubai" className="text-accent hover:underline">battery swap</Link>{" "}
+              <Link to="/iphone-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">battery swap</Link>{" "}
               more controlled than on older iPhones that relied on pull-tab adhesive.</li>
             <li>• <strong>The display is still the way in.</strong> Almost every internal repair starts by lifting the
               screen. On 3 of the 4 units iFixit opened, the white plastic display frame broke or lifted, and that frame
@@ -71,7 +71,7 @@ export default function IPhone18ProRepair() {
             <li>• <strong>Variable-aperture camera:</strong> the new six-blade aperture cannot be repaired at component
               level. If the blades stick, the fix is a complete main camera assembly, not a clean-up.</li>
             <li>• <strong>Camera modules</strong> are removable, which keeps{" "}
-              <Link to="/iphone-camera-repair-dubai" className="text-accent hover:underline">camera replacement</Link>{" "}
+              <Link to="/iphone-camera-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">camera replacement</Link>{" "}
               straightforward once the part is available.</li>
             <li>• <strong>USB-C port:</strong> replacing it takes a lot of disassembly, so we test cables, clean the
               port and check charging on the bench before we ever quote a port replacement.</li>
@@ -111,9 +111,9 @@ export default function IPhone18ProRepair() {
           </div>
           <p className="text-[14px] text-text-muted mb-lg">
             Source: support.apple.com/en-ae, read on 26 September 2026. Apple can change these at any time. Our{" "}
-            <Link to="/blog/iphone-18-pro-screen-replacement-cost-uae/" className="text-accent hover:underline">iPhone 18 Pro screen replacement cost guide</Link>{" "}
+            <Link to="/blog/iphone-18-pro-screen-replacement-cost-uae/" className="text-accent underline underline-offset-2 hover:no-underline">iPhone 18 Pro screen replacement cost guide</Link>{" "}
             breaks these figures down, and for how screen costs compare across models, see{" "}
-            <Link to="/iphone-screen-repair-cost-dubai" className="text-accent hover:underline">iPhone screen repair cost in Dubai</Link>.
+            <Link to="/iphone-screen-repair-cost-dubai" className="text-accent underline underline-offset-2 hover:no-underline">iPhone screen repair cost in Dubai</Link>.
             If your phone is under Apple&apos;s warranty or AppleCare+, Apple is usually the right first stop, and we
             will tell you so.
           </p>

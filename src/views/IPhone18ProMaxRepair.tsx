@@ -66,7 +66,7 @@ export default function IPhone18ProMaxRepair() {
               and the white plastic display frame broke or lifted on 3 of 4 teardown units. On a 6.9-inch panel that
               frame runs a long way around the edge, which is why we inspect all of it before a new screen goes on.</li>
             <li>• <strong>Screwed-in battery.</strong> The battery tray is held by 13 screws with no glue, so a{" "}
-              <Link to="/iphone-battery-replacement-dubai" className="text-accent hover:underline">battery replacement</Link>{" "}
+              <Link to="/iphone-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">battery replacement</Link>{" "}
               does not involve prying a cell off adhesive.</li>
             <li>• <strong>Aperture blades are not serviceable.</strong> The six-blade variable aperture cannot be
               repaired at component level; a stuck aperture means a whole new main camera assembly. The camera modules
@@ -79,7 +79,7 @@ export default function IPhone18ProMaxRepair() {
           <p className="text-[15px] leading-relaxed mb-lg">
             We test touch, display and Face ID before we open anything, so you know what worked on arrival. The old
             seal is cleaned off completely, the display frame is checked for cracks or lift, and the new{" "}
-            <Link to="/iphone-screen-repair-dubai" className="text-accent hover:underline">screen</Link>{" "}
+            <Link to="/iphone-screen-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">screen</Link>{" "}
             is fitted with fresh adhesive and cured under pressure. Because the Face ID infrared camera now sits under
             the panel, Face ID is tested again afterwards and we tell you the result. We never describe an
             opened phone as waterproof; nobody outside Apple can re-certify the IP68 rating.
@@ -110,7 +110,7 @@ export default function IPhone18ProMaxRepair() {
           <p className="text-[14px] text-text-muted mb-lg">
             Source: support.apple.com/en-ae, read on 26 September 2026; Apple can change these at any time. The
             screen estimate is higher than the 6.3-inch model&apos;s, as it was for the iPhone 17 Pro Max. More on{" "}
-            <Link to="/iphone-screen-repair-cost-dubai" className="text-accent hover:underline">iPhone screen repair costs in Dubai</Link>.
+            <Link to="/iphone-screen-repair-cost-dubai" className="text-accent underline underline-offset-2 hover:no-underline">iPhone screen repair costs in Dubai</Link>.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Freezing after Face ID? Update first</h2>

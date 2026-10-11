@@ -203,7 +203,7 @@ export default function IPadScreenRepair() {
                           {m.name}
                           <span className="block font-normal text-[13px]">
                             {m.pages.map((p, j) => (
-                              <span key={p.href}>{j > 0 && " · "}<Link to={p.href} className="text-accent hover:underline">{p.label}</Link></span>
+                              <span key={p.href}>{j > 0 && " · "}<Link to={p.href} className="text-accent underline underline-offset-2 hover:no-underline">{p.label}</Link></span>
                             ))}
                           </span>
                         </td>

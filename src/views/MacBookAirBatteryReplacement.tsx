@@ -399,7 +399,7 @@ export default function MacBookAirBatteryReplacement() {
                   {BATTERY_SPECS.map((s) => (
                     <tr key={s.chip} className="border-b border-border last:border-0">
                       <td className="px-lg py-sm font-medium text-text">
-                        <Link to={s.l3href} className="text-accent hover:underline">{s.chip}</Link>
+                        <Link to={s.l3href} className="text-accent underline underline-offset-2 hover:no-underline">{s.chip}</Link>
                       </td>
                       <td className="px-lg py-sm text-text">{s.capacity}</td>
                       <td className="px-lg py-sm text-text-muted">{s.cycleLimit}</td>
@@ -636,7 +636,7 @@ export default function MacBookAirBatteryReplacement() {
               { label: "MacBook Water Damage Repair Dubai",     href: "/macbook-water-damage-repair-dubai" },
               { label: "Mac Repair Dubai",                      href: "/mac-repair-dubai" },
             ].map((l) => (
-              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>
+              <a key={l.href} href={withSlash(l.href)} className="text-accent underline underline-offset-2 hover:no-underline">{l.label} ›</a>
             ))}
           </div>
         </section>

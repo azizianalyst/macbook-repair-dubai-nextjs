@@ -501,7 +501,7 @@ export default function MacBookAirScreenReplacement() {
               { label: "MacBook Water Damage Repair Dubai",        href: "/macbook-water-damage-repair-dubai" },
               { label: "Mac Repair Dubai",                         href: "/mac-repair-dubai" },
             ].map((l) => (
-              <a key={l.href} href={withSlash(l.href)} className="text-accent hover:underline">{l.label} ›</a>
+              <a key={l.href} href={withSlash(l.href)} className="text-accent underline underline-offset-2 hover:no-underline">{l.label} ›</a>
             ))}
           </div>
         </section>

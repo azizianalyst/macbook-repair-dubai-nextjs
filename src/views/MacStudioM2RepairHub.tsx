@@ -31,9 +31,9 @@ export default function MacStudioM2RepairHub() {
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             If your Mac Studio M2 was purchased in 2023 and is still under AppleCare+, check your coverage before booking a repair. Free diagnosis always. For dedicated model pages, see{" "}
-            <Link to="/mac-studio-m2-max-2023-repair-dubai" className="text-accent hover:underline">Mac Studio M2 Max 2023 repair Dubai</Link>{" "}
+            <Link to="/mac-studio-m2-max-2023-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M2 Max 2023 repair Dubai</Link>{" "}
             and{" "}
-            <Link to="/mac-studio-m2-ultra-2023-repair-dubai" className="text-accent hover:underline">Mac Studio M2 Ultra 2023 repair Dubai</Link>.
+            <Link to="/mac-studio-m2-ultra-2023-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M2 Ultra 2023 repair Dubai</Link>.
           </p>
         </>
       }

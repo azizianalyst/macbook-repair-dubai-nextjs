@@ -69,9 +69,9 @@ export default function MacBookNeoKeyboardRepair() {
             reaches the logic board, and corrosion keeps working while there is power. Bring it in the same day if you
             can. We open it, check the board as well as the keyboard, and clean before we decide what needs
             replacing. If the board is affected, see{" "}
-            <Link to="/macbook-neo-a18-repair-dubai" className="text-accent hover:underline">MacBook Neo A18 Pro repair</Link>{" "}
+            <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo A18 Pro repair</Link>{" "}
             and{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent hover:underline">MacBook water damage repair</Link>.
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook water damage repair</Link>.
           </p>
 
           <h2 className="text-[24px] md:text-[28px] mb-md">Touch ID and the trackpad</h2>
@@ -79,7 +79,7 @@ export default function MacBookNeoKeyboardRepair() {
             On models that have Touch ID, iFixit found the Touch ID sensor can be swapped without parts-pairing
             warnings, and so can the trackpad. So a failed Touch ID button or a dead trackpad does not automatically
             mean a new keyboard: we test them separately and replace only what has failed. More on{" "}
-            <Link to="/macbook-touch-id-repair-dubai" className="text-accent hover:underline">MacBook Touch ID repair</Link>.
+            <Link to="/macbook-touch-id-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Touch ID repair</Link>.
           </p>
           <p className="text-[15px] leading-relaxed mb-lg">
             Warranty first: a keyboard that fails on its own inside Apple&apos;s one-year warranty is Apple&apos;s to
