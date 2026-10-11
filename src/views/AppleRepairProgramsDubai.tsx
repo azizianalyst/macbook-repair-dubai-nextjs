@@ -16,7 +16,7 @@ import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 
 import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization, service as serviceSchema, webPage, pageWithSpeakable } from "@/lib/schema";
+import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { NAP } from "@/content/site";
 
@@ -32,11 +32,11 @@ const ACTIVE_PROGRAMS = [
 
 const ENDED_PROGRAMS = [
   { program: "iPhone 14 Plus Rear Camera Service Programme", models: "iPhone 14 Plus", issue: "Rear camera fails to switch on / preview freezes", ended: "April 2026" },
-  { program: "Keyboard Service Programme (butterfly)", models: "MacBook (Retina) 2015-2017, MacBook Air 2018-2019, MacBook Pro 13/15 2016-2019", issue: "Sticking, repeating or unresponsive keys", ended: "2024-2025 (rolling per model)" },
+  { program: "Keyboard Service Programme (butterfly)", models: "MacBook (Retina) 2015-2017, MacBook Air 2018-2019, MacBook Pro 13/15 2016-2019", issue: "Sticking, repeating or unresponsive keys", ended: "Ended (Apple's page confirms; date not published)" },
   { program: "iPhone X Display Module Replacement", models: "iPhone X", issue: "Touch unresponsive or registering without contact", ended: "December 2020" },
   { program: "iPhone 11 Display Module Replacement", models: "iPhone 11", issue: "Touch issues after software update", ended: "September 2022" },
   { program: "iPhone 12 / 12 Pro Receiver Module", models: "iPhone 12, 12 Pro", issue: "No sound from receiver during calls", ended: "March 2023" },
-  { program: '"Flexgate" - 13" MacBook Pro Display Backlight', models: "13\" MacBook Pro 2016", issue: "Backlight stripes / Stage Light effect", ended: "2021" },
+  { program: '"Flexgate" - 13" MacBook Pro Display Backlight', models: "13\" MacBook Pro 2016", issue: "Backlight stripes / Stage Light effect", ended: "Closed (Apple's page withdrawn; date not published)" },
   { program: '15" MacBook Pro Battery Recall', models: "15\" MacBook Pro 2015 (mid)", issue: "Battery may overheat / fire risk - recall, not programme", ended: "Replaced unit - recall closed" },
   { program: "iPhone 6s Unexpected Shutdown", models: "iPhone 6s (specific serial range)", issue: "Unexpected shutdown - battery cause", ended: "December 2018" },
   { program: "iPhone 7 No Service / Audio IC", models: "iPhone 7", issue: "'No Service' / loop / mic dead - audio IC", ended: "Both ended pre-2022" },
@@ -47,11 +47,11 @@ const FAQS = [
   { q: "How do I check if my Apple device qualifies for a free repair programme?",
     a: "Three quick options. (1) Visit apple.com/support/exchange_repair and enter your device's serial number. (2) Search Google for '[your model] repair program apple'. (3) Bring or WhatsApp your device to us - we'll check the serial against every active and recently ended Apple programme, free of charge, and tell you honestly if Apple should fix it for free." },
   { q: "My MacBook Pro 2018 keyboard is sticking. Is the Keyboard Service Programme still valid?",
-    a: "The Keyboard Service Programme covered MacBooks for 4 years from the original purchase date. For most affected models that window has now closed (2024-2025 rolling). Check your serial on Apple's site first. If ineligible, we replace the top case (which includes keyboard, battery and trackpad), with a 15-day warranty - message us on WhatsApp for today's exact price on your model." },
+    a: "No. The Keyboard Service Programme covered MacBooks for 4 years from the original purchase date, and Apple's support page for it now says it has ended. We replace the top case (which includes keyboard, battery and trackpad), with a 15-day warranty - message us on WhatsApp for today's exact price on your model." },
   { q: "My iPhone 11 has touch issues. Can I still get free Apple repair?",
     a: "The iPhone 11 Display Module Replacement Programme ended in September 2022. We replace genuine-quality display modules with a 3-month written warranty - typically 60-90 minutes in the workshop. Message us on WhatsApp for the exact price on your model. We can confirm the issue is the digitizer (not a deeper logic-board fault) before charging anything." },
   { q: "My MacBook Pro 2016 has Flexgate (Stage Light effect). Can Apple still help?",
-    a: "Apple's Display Backlight Service Programme for the 13\" MacBook Pro (2016) ended in 2021. We offer two routes: (a) replace just the flex cable if the display panel is intact, or (b) a full display assembly if the panel is also damaged. Both come with a 3-month warranty - message us on WhatsApp for today's exact price on your model." },
+    a: "Apple's Display Backlight Service Programme for the 13\" MacBook Pro (2016) has closed (Apple has taken its support page down). We offer two routes: (a) replace just the flex cable if the display panel is intact, or (b) a full display assembly if the panel is also damaged. Both come with a 3-month warranty - message us on WhatsApp for today's exact price on your model." },
   { q: "Are you an Apple Authorised Service Provider?",
     a: `No. We are an independent Apple repair specialist with ${NAP.yearsInBusiness} years of experience, not an AASP. That means we cannot honour Apple's warranty or in-warranty programmes ourselves - but we will tell you if Apple should fix your device for free, and we'll handle any work that falls outside Apple's coverage.` },
   { q: "Why do you recommend Apple first when my device is eligible for a free programme?",
@@ -66,7 +66,7 @@ const FAQS = [
 
 const SCENARIOS = [
   { q: "MacBook Pro 2018 sticking keyboard.",
-    a: "Apple's Keyboard Service Programme has now ended for most 2018 models. We replace the full top case (keyboard + battery + trackpad), 15-day warranty, 1-2 day turnaround - message us on WhatsApp for the exact price." },
+    a: "Apple's Keyboard Service Programme has ended. We replace the full top case (keyboard + battery + trackpad), 15-day warranty, 1-2 day turnaround - message us on WhatsApp for the exact price." },
   { q: "iPhone 11 touch unresponsive.",
     a: "Programme ended September 2022. We replace the display module in 60-90 minutes in the workshop, 3-month warranty - message us on WhatsApp for the exact price." },
   { q: "13\" MacBook Pro 2016 backlight stripes (Flexgate).",
@@ -80,19 +80,13 @@ export default function AppleRepairProgramsDubai() {
     {
       title: "Apple Free Repair Programs Dubai - Check If You Qualify",
       description:
-        "Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPhone 11 display issues. We help check your eligibility.",
+        "See which Apple free repair programmes are open and which have ended, from the butterfly keyboard to Flexgate. We check your serial free. WhatsApp us.",
       path: PATH,
     },
     [
       organization(),
       localBusiness(),
-      webPage({
-        title: "Apple Free Repair Programs Dubai",
-        description: "Independent guide to Apple's active and recently ended repair programmes - check eligibility for free repair before paying anywhere.",
-        path: PATH,
-        dateModified: "2026-04-15",
-        datePublished: "2024-09-01",
-      }),
+      // One WebPage node only: webPage() here as well gave the page two (t34 review).
       pageWithSpeakable({ url: URL, name: "Apple Free Repair Programs Dubai" }),
       serviceSchema({
         name: "Apple repair programme eligibility check",
@@ -123,7 +117,7 @@ export default function AppleRepairProgramsDubai() {
       <QuickAnswer
         tone="dark"
         question="Are you eligible for a free Apple repair programme?"
-        answer="Apple offers free repair programmes for specific defects on certain models. Programmes cover MacBook butterfly keyboards (2015-2019), iPhone 11 / iPhone X display modules, Apple Watch Ultra Action Button (active), and others. Check whether your device qualifies before paying for repair anywhere."
+        answer="Apple runs free repair programmes for specific defects on certain models, each tied to a serial range and an end date. The butterfly keyboard, Flexgate and iPhone X / 11 display programmes have ended; the table below lists those still open. Check your serial before paying for repair anywhere, including here."
       />
 
       <USPStrip tone="dark" />
@@ -143,7 +137,7 @@ export default function AppleRepairProgramsDubai() {
             Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own written warranty up to 12 months.
           </p>
           <p>
-            We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. About 5 in every 100 devices we diagnose qualify for an active or recently extended programme; we send those customers straight to Apple Dubai or Apple Mall of the Emirates with a printed eligibility note.
+            We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. When a device we diagnose falls inside an open programme, we send the customer straight to Apple Dubai or Apple Mall of the Emirates with a printed eligibility note.
           </p>
         </div>
       </section>

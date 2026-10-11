@@ -15,7 +15,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
         { id: "step-1", label: "Step 1. Identify butterfly vs scissor keyboard" },
         { id: "step-2", label: "Step 2. Compressed air fix" },
         { id: "step-3", label: "Step 3. Key removal and cleaning" },
-        { id: "step-4", label: "Step 4. Apple keyboard program eligibility" },
+        { id: "step-4", label: "Step 4. Apple keyboard program (ended)" },
         { id: "dubai-dust", label: "Does Dubai dust make butterfly keyboard worse?" },
         { id: "models-affected", label: "Which Intel MacBook Pro models are affected?" },
         { id: "repair-cost", label: "Keyboard repair cost Dubai" },
@@ -23,11 +23,11 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
       ]}
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Butterfly Keyboard Failing in Dubai? Here is Why and How to Fix It"
-      hook="Apple's butterfly keyboard (2016-2019 Intel MacBook Pro) was the company's most publicly criticised hardware design. A single grain of dust under a key switch could render keys non-functional. Apple ran a free Keyboard Service Program for eligible models. In Dubai, where fine desert dust is ever-present, butterfly keyboards failed faster than anywhere. Message us on WhatsApp for today's exact keyboard repair price on your model."
-      quickAnswer="MacBook Pro butterfly keyboard stuck key: shut down, hold the Mac at a 75-degree angle, use compressed air in short bursts across and under the affected key. Spray from multiple angles for 30 seconds. Turn on and test. If the key still sticks: Apple ran a free Keyboard Service Program for 2016-2019 MacBook Pro models, check eligibility at apple.com even on out-of-warranty machines. If expired: our Dubai workshop handles top case replacement — message us on WhatsApp for your exact price."
+      hook="Apple's butterfly keyboard (2016-2019 Intel MacBook Pro) was the company's most publicly criticised hardware design. A single grain of dust under a key switch could render keys non-functional. Apple ran a free Keyboard Service Program for eligible models. In Dubai, fine desert dust is everywhere, and butterfly switches have no tolerance for it. Message us on WhatsApp for today's exact keyboard repair price on your model."
+      quickAnswer="MacBook Pro butterfly keyboard stuck key: shut down, hold the Mac at a 75-degree angle, use compressed air in short bursts across and under the affected key. Spray from multiple angles for 30 seconds. Turn on and test. If the key still sticks: Apple's free Keyboard Service Program for 2016-2019 MacBook Pro models has ended, so our Dubai workshop handles top case replacement — message us on WhatsApp for your exact price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={9}
       featuredImageAlt="MacBook Pro butterfly keyboard stuck keys, technician cleaning and repairing keyboard at Dubai repair workshop"
       body={
@@ -41,7 +41,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Zero debris tolerance</strong>: the butterfly pivot has essentially no gap between the keycap and the underlying mechanism. A single grain of fine debris, sand, crumb, or desert dust, wedged under the pivot arm causes the key to stick or stop registering entirely. Scissor keyboards have a much larger gap and are far more tolerant of debris</li>
             <li><strong>Brittle pivot arms</strong>: the aluminium butterfly arms are thin and can crack under normal typing pressure after 1-2 years of regular use. Once cracked, the key becomes either mushy or stuck permanently</li>
-            <li><strong>No user-accessible repair</strong>: unlike scissor keycaps which pop off with a spudger for cleaning, butterfly keycaps often broke the mechanism when removed. Apple acknowledged the defect and ran a global Keyboard Service Program from 2018-2021 covering 2016-2019 models</li>
+            <li><strong>No user-accessible repair</strong>: unlike scissor keycaps which pop off with a spudger for cleaning, butterfly keycaps often broke the mechanism when removed. Apple acknowledged the defect and ran a global Keyboard Service Program covering 2016-2019 models (now ended)</li>
           </ul>
           <p>
             Apple replaced butterfly mechanism with scissor (Magic Keyboard) starting with
@@ -76,12 +76,11 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
             <li>If any part of the mechanism breaks during removal: stop. Top case replacement is now necessary</li>
           </ul>
 
-          <h2 id="step-4">Step 4: Apple Keyboard Service Program eligibility check</h2>
+          <h2 id="step-4">Step 4: Know that Apple's keyboard program has ended</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Apple ran a free Keyboard Service Program covering 2016-2019 MacBook Pro models. The program ran from 2018 to approximately 2022</li>
-            <li>Check current eligibility: visit apple.com/support and search "MacBook Pro Keyboard Service Program". Enter your serial number. Even in 2026, some claims may still be processable depending on your purchase country warranty terms</li>
-            <li>UAE consumers may also have rights under UAE Consumer Protection Law for defective products. Contact Apple UAE (Apple Store Dubai Mall or DIFC) to discuss</li>
-            <li>If the program is expired for your machine: our Dubai workshop offers top case replacement, which includes the keyboard, battery, and trackpad as one unit (same as Apple's approach but at lower cost) — message us on WhatsApp for your exact price</li>
+            <li>Apple ran a free Keyboard Service Program covering 2016-2019 MacBook Pro models. It has ended: Apple's support page for the program now says so</li>
+            <li>UAE consumers may also have rights under UAE Consumer Protection Law for defective products. Contact Apple UAE to discuss</li>
+            <li>Our Dubai workshop offers top case replacement, which includes the keyboard, battery, and trackpad as one unit, the same part Apple fits — message us on WhatsApp for your exact price</li>
           </ul>
 
           <h2 id="dubai-dust">Does Dubai dust make MacBook Pro butterfly keyboard fail faster?</h2>
@@ -165,7 +164,7 @@ export default function BlogMacBookProIntelButterflyKeyboard() {
         },
         {
           q: "Does Apple still offer free butterfly keyboard replacement in Dubai?",
-          a: "Apple's official Keyboard Service Program for 2016-2019 MacBook Pro ended approximately in 2022. However, UAE Consumer Protection law may still support warranty claims for design defects depending on original purchase terms. Check your serial number at apple.com/support (search Keyboard Service Program). Our Dubai workshop offers top case replacement as an independent alternative — message us on WhatsApp for your exact price.",
+          a: "No. Apple's Keyboard Service Program for the 2016-2019 MacBook Pro has ended; Apple's support page for it now says so. UAE Consumer Protection law may still support warranty claims for design defects depending on original purchase terms. Our Dubai workshop offers top case replacement as an independent alternative — message us on WhatsApp for your exact price.",
         },
         {
           q: "Does Dubai dust make MacBook Pro butterfly keyboard fail faster?",

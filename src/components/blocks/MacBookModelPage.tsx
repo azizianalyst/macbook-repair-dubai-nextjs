@@ -274,10 +274,10 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     },
     {
       q: isButterfly
-        ? `Is the butterfly keyboard on my ${model.name} covered by an Apple repair program?`
+        ? `Does Apple still repair the butterfly keyboard on my ${model.name} for free?`
         : `How long does battery replacement on the ${model.name} take?`,
       a: isButterfly
-        ? `Yes - Apple's Keyboard Service Program covers 2015-2019 MacBook models with butterfly keyboards for 4 years from the original purchase date. We'll check eligibility for you free of charge. If you qualify, Apple does the repair for free and we send you to them. If you don't, we do the top-case swap - message us on WhatsApp for the exact price.`
+        ? `No. Apple has ended its Keyboard Service Program for 2015-2019 butterfly keyboards, so a failing keyboard is an out-of-warranty repair. We do the top-case swap (typically ${lc(turnaround.keyboard)}) after a free diagnosis - message us on WhatsApp for the exact price.`
         : `Battery replacement on the ${model.name} ${/^same-day$/i.test(turnaround.battery) ? "is typically completed the same day" : `typically takes ${lc(turnaround.battery)}`} - message us on WhatsApp for today's exact price. We use cells with verified cycle counts and reseal the chassis properly.`,
     },
     {
@@ -378,12 +378,12 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
 
           {isButterfly && (
             <div className="bg-bg-alt border-l-4 border-accent rounded-md p-lg mb-lg">
-              <h3 className="text-[18px] font-bold mb-sm">Intel {FAMILY_LABEL[model.family]} - Apple's Keyboard Service Program</h3>
+              <h3 className="text-[18px] font-bold mb-sm">Intel {FAMILY_LABEL[model.family]} - the butterfly keyboard</h3>
               <p className="text-[15px] mb-sm">
-                Apple ran a Keyboard Service Program covering 2015-2019 MacBook models with butterfly keyboards for <strong>4 years from the original purchase date</strong>. If your keyboard fails and you're inside that window, Apple may still fix it free.
+                Apple ran a Keyboard Service Program for 2015-2019 MacBook models with butterfly keyboards. <strong>That program has ended</strong>: Apple&apos;s support page for it now says so, and Apple no longer repairs these keyboards for free.
               </p>
               <p className="text-[15px]">
-                We'll check eligibility for you - no cost if you qualify with Apple. If you don't, we do the top-case swap (typically {lc(turnaround.keyboard)}) - message us on WhatsApp for the exact price.
+                A failing butterfly keyboard needs a new top case. We diagnose it free, then do the top-case swap (typically {lc(turnaround.keyboard)}) - message us on WhatsApp for the exact price.
               </p>
             </div>
           )}
@@ -425,7 +425,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
       whatWeFix={[
         `Cracked or unresponsive ${model.shortName} display assembly`,
         `Worn-out battery - fresh cells, verified cycle count, properly resealed`,
-        isButterfly ? "Failing butterfly keys - top-case swap (Apple program eligibility checked first)" : "Magic Keyboard key failures - repair or top-case swap",
+        isButterfly ? "Failing butterfly keys - top-case swap after a free diagnosis" : "Magic Keyboard key failures - repair or top-case swap",
         `Trackpad cable failures, dead trackpad after spills`,
         `USB-C / Thunderbolt port damage from cheap docks and dropped cables`,
         `Logic board faults - component-level repair where economical`,

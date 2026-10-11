@@ -26,7 +26,7 @@ export default function BlogMacBookFlexgateExplained() {
       quickAnswer="Flexgate is a backlight flex-cable design flaw on 2016 and early 2017 MacBook Pro Retina (13″ and 15″), where the cable was 2mm too short. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Shafiq", role: "Senior MacBook Pro display technician" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-10-11"
       readingMinutes={9}
       featuredImageAlt="MacBook Flexgate Explained. MacBook Pro 2016 Flexgate Dubai - stage lighting backlight failure on display"
       body={
@@ -73,18 +73,16 @@ export default function BlogMacBookFlexgateExplained() {
             </li>
           </ol>
 
-          <h2 id="apple-program">Apple's silent extension program (only ran 4 years)</h2>
+          <h2 id="apple-program">Apple's Flexgate service program has closed</h2>
           <p>
-            Apple ran the "13-inch MacBook Pro Display Backlight Service Program" from May 2019
-            to May 2022. It covered only the 13″ models for 4 years from purchase date. The 15″
-            models were never officially covered despite identical symptoms. As of April 2026 the
-            program is closed.
+            Apple ran the "13-inch MacBook Pro Display Backlight Service Program". It covered only
+            the 13″ models for 4 years from purchase date. The 15″ models were never officially
+            covered despite identical symptoms. The program has closed, and Apple has taken its
+            support page down.
           </p>
           <p>
-            <strong>However:</strong> some Apple Stores in UAE will still occasionally honour
-            Flexgate claims as goodwill, especially if you can show purchase receipts and clear
-            symptoms. Worth a 5-minute Genius Bar visit before paying us. Success rate from
-            customers we've sent: about 1 in 5.
+            So Flexgate is a paid repair at Apple or here. Apple quotes a full display replacement
+            after inspection; we diagnose it on the bench first and quote either route below before we start.
           </p>
 
           <h2 id="repair-options">Two repair options - cable replacement vs full display</h2>
@@ -152,7 +150,7 @@ export default function BlogMacBookFlexgateExplained() {
         },
         {
           q: "Is Apple's Flexgate repair program still active?",
-          a: "Officially closed in May 2022 (it covered 13″ models only, for 4 years from purchase). Apple Stores in UAE occasionally still honour Flexgate claims as goodwill - worth asking before paying us. Success rate from our referrals: about 1 in 5.",
+          a: "No. It has closed (it covered 13″ models only, for 4 years from purchase), and Apple has taken its support page down. A Flexgate fault is now an out-of-warranty repair - we diagnose it free and quote cable or full-display repair on WhatsApp.",
         },
         {
           q: "Will the new flex cable solve Flexgate permanently?",

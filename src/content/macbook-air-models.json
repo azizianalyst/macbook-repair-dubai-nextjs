@@ -17,7 +17,7 @@
     "currentInLineup": false,
     "discontinued": "March 2020",
     "commonIssues": [
-      "Butterfly keyboard failure - covered by Apple's Keyboard Service Program for 4 years from purchase",
+      "Butterfly keyboard failure - Apple's Keyboard Service Program has ended, so it is now a top-case repair",
       "Battery swelling (8 years old in 2026 - extremely common)",
       "Thermal throttling under sustained load",
       "USB-C / Thunderbolt 3 port wear",
@@ -68,7 +68,7 @@
     "currentInLineup": false,
     "discontinued": "March 2020",
     "commonIssues": [
-      "Butterfly keyboard failure - Apple Keyboard Service Program eligible",
+      "Butterfly keyboard failure - Apple's Keyboard Service Program has ended, so it is now a top-case repair",
       "Battery swelling (7 years old)",
       "True Tone display flicker / backlight failure",
       "USB-C port wear",
@@ -98,7 +98,7 @@
       "liquid": "2-4 days",
       "fanCleaning": "Same-day"
     },
-    "honestyNote": "Same butterfly-keyboard issues as 2018. Apple's Keyboard Service Program may still apply if you're within 4 years of purchase - we'll check eligibility free, no cost if you qualify with Apple.",
+    "honestyNote": "Same butterfly-keyboard issues as 2018. Apple's Keyboard Service Program has ended, so a failing keyboard now means a top-case repair - we diagnose it free first.",
     "heroTagline": "The True Tone Air. Battery and keyboard fixes make it useful again."
   },
   {

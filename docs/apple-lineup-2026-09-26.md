@@ -352,3 +352,8 @@ Priority is ordered for a MacBook-first shop in Dubai. Estimated volume is unkno
 | Date | Checked | Change since previous check |
 |---|---|---|
 | 2026-10-09 | Newsroom RSS, apple.com/ae/mac, apple.com/ae/iphone, iPhone Duo press release | None. Mac line-up on apple.com/ae: MacBook Neo, MacBook Air 13"/15", MacBook Pro 14"/16", iMac, Mac mini (New), Mac Studio (New). iPhone: Duo (New), 18 Pro (New), Air, 17, 17e, 16. No AED prices on those pages. Only device news since 26 Sep: "Final Cut Camera now supports variable aperture on iPhone 18 Pro" (29 Sep, software). iPhone Duo re-confirmed: pre-orders Fri 16 Oct, available Fri 23 Oct, UAE named. Sources: https://www.apple.com/newsroom/rss-feed.rss ; https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/ |
+
+## 8. Apple service programmes (status checks)
+
+- **Keyboard Service Program for MacBook, MacBook Air and MacBook Pro (butterfly keyboards, 2015-2019 models): ENDED.** https://support.apple.com/keyboard-service-program-for-mac-notebooks now reads "The Apple Service Program you are looking for has ended." Checked 11 Oct 2026. Apple does not publish the end date, so the site says "has ended" and gives no date.
+- **13-inch MacBook Pro Display Backlight Service Program ("Flexgate"): CLOSED.** Apple's programme page (https://support.apple.com/13inch-macbookpro-display-backlight-service) returns 404 on 11 Oct 2026. No end date published, so the site gives none.

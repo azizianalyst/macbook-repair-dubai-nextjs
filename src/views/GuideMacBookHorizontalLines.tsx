@@ -14,7 +14,7 @@ export default function GuideMacBookHorizontalLines() {
       quickAnswer="White or grey horizontal lines on a MacBook screen are almost always hardware: a failing display flex cable (most common), Flexgate damage on 2016–2019 MacBook Pro models, or a GPU fault on older Intel models. If the lines persist after a restart, software is not the cause, the display or its connection needs physical inspection."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-06-18"
-      dateModified="2026-06-18"
+      dateModified="2026-10-11"
       readingMinutes={6}
       featuredImageAlt="MacBook screen showing horizontal lines at a Dubai repair workshop diagnostic bench"
       body={
@@ -58,9 +58,8 @@ export default function GuideMacBookHorizontalLines() {
             <Link to="/apple-repair-programs-dubai" className="text-accent font-semibold hover:underline">
               free repair programme
             </Link>{" "}
-            for affected 2016 and 2017 13" MacBook Pro models. Check if your serial number qualifies
-           , we can verify this in the workshop for free. For models not covered, we replace the full
-            display assembly, message us on WhatsApp for the exact price on your model.
+            for 2016 13" MacBook Pro models only; that programme has closed. We diagnose it free,
+            then quote a flex-cable or full-display repair on WhatsApp.
           </p>
 
           <h3>3. GPU fault on older Intel MacBooks</h3>
@@ -120,7 +119,7 @@ export default function GuideMacBookHorizontalLines() {
         },
         {
           q: "My MacBook Pro 2017 has a light band at the bottom and now horizontal lines. What is it?",
-          a: "This is the classic Flexgate pattern, the display flex cable has fatigued over the hinge. It starts as a backlight fade at the bottom at wide-open angles and progresses to lines and eventual display failure. Apple ran a free repair for 2016 13\" MacBook Pro models; your 2017 model may qualify. Bring it in and we'll check your serial number.",
+          a: "This is the classic Flexgate pattern, the display flex cable has fatigued over the hinge. It starts as a backlight fade at the bottom at wide-open angles and progresses to lines and eventual display failure. Apple ran a free repair for 2016 13\" MacBook Pro models, but that program has closed and it never covered 2017 models. We diagnose it free and quote a cable or full-display repair.",
         },
         {
           q: "The lines only appear when the MacBook gets hot. Is that the GPU?",
@@ -133,7 +132,7 @@ export default function GuideMacBookHorizontalLines() {
       ]}
       relatedLinks={[
         { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "Display cable, panel and full assembly replacement, same-day service." },
-        { label: "Apple repair programmes Dubai", href: "/apple-repair-programs-dubai", description: "Check if your MacBook qualifies for a free Apple repair on Flexgate or other known faults." },
+        { label: "Apple repair programmes Dubai", href: "/apple-repair-programs-dubai", description: "Which Apple repair programmes are open and which have ended." },
         { label: "MacBook full diagnostic Dubai", href: "/macbook-full-diagnostic-dubai", description: "Free assessment, we confirm the exact cause before quoting." },
       ]}
     />

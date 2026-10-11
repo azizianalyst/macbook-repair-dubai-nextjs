@@ -15,7 +15,7 @@ export default function BlogMacBookProIntelFlexgate() {
         { id: "what-flexgate", label: "What is Flexgate and which models have it?" },
         { id: "step-1", label: "Step 1. Identify the stage-light symptom" },
         { id: "step-2", label: "Step 2. Lid angle test" },
-        { id: "step-3", label: "Step 3. Apple repair program eligibility" },
+        { id: "step-3", label: "Step 3. Apple's Flexgate program (closed)" },
         { id: "step-4", label: "Step 4. What cable replacement includes" },
         { id: "dubai-heat", label: "Does Dubai heat worsen Flexgate?" },
         { id: "models-affected", label: "2016 vs 2017: which is more affected?" },
@@ -28,7 +28,7 @@ export default function BlogMacBookProIntelFlexgate() {
       quickAnswer="MacBook Pro Flexgate identification: open the lid slowly from closed to fully open while watching the bottom of the screen. If bright columns or a bright horizontal band appears at the bottom when the lid passes approximately 40-45 degrees, and disappears when you open wider or close again, this is Flexgate. The flex cable in the hinge is tearing. This is a progressive fault. It will worsen with each open/close cycle. Message us on WhatsApp for the display cable replacement price and book before the cable tears completely and backlight stops working entirely."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={8}
       featuredImageAlt="MacBook Pro Flexgate display cable fault, technician replacing backlight flex cable at Dubai repair workshop"
       body={
@@ -66,7 +66,7 @@ export default function BlogMacBookProIntelFlexgate() {
             <li>Document the current angle at which the effect appears. If that angle decreases noticeably over 2-4 weeks, the cable is tearing progressively and replacement should be done soon</li>
           </ul>
 
-          <h2 id="step-3">Step 3: Apple Flexgate repair program eligibility</h2>
+          <h2 id="step-3">Step 3: Apple's Flexgate program has closed</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>Apple acknowledged the issue and ran a "MacBook Pro Display Backlight Service Program" covering 2016 13-inch MacBook Pro models (only: the 2017 and 15-inch were not included in the official program)</li>
             <li>The program covered machines for 4 years from their retail date, meaning 2016 13-inch machines are out of program coverage in 2026</li>
@@ -157,7 +157,7 @@ export default function BlogMacBookProIntelFlexgate() {
         },
         {
           q: "Does Apple cover MacBook Pro Flexgate repair for Dubai users?",
-          a: "Apple's official Backlight Service Program only covered 2016 13-inch MacBook Pro, and that program has expired in 2026. For 2017 models and all 15-inch models, no official Apple program exists. UAE users can contact Apple UAE (Dubai Mall or DIFC) to discuss, but independent cable replacement is the practical repair path for most machines. Message us on WhatsApp for the price.",
+          a: "Apple's official Backlight Service Program only covered the 2016 13-inch MacBook Pro, and it has closed; Apple has taken its support page down. For 2017 models and all 15-inch models, no official Apple program exists. UAE users can contact Apple UAE to discuss, but independent cable replacement is the practical repair path for most machines. Message us on WhatsApp for the price.",
         },
         {
           q: "Does Dubai heat make MacBook Pro Flexgate worse?",

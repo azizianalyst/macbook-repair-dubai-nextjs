@@ -27,7 +27,7 @@ export default function BlogMacBookProIntelProblems() {
       quickAnswer="MacBook Pro Intel common problems: butterfly keyboard key dropout or no response (2016-2019 models), AMD GPU failure causing lines or black screen (2017-2019 15-inch, reball), Flexgate display cable fraying causing stage lighting or blackout (2016-2019), T2 chip bridge OS faults (2019-2020). All diagnosed free in Dubai. Message us on WhatsApp for the exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={11}
       featuredImageAlt="MacBook Pro Intel common problems, technician repairing butterfly keyboard and AMD GPU at Dubai repair workshop"
       body={
@@ -106,8 +106,7 @@ export default function BlogMacBookProIntelProblems() {
             <li><strong>Screen works with lid at 45 degrees but goes black fully open</strong>: classic Flexgate. The cable works when relaxed but breaks the circuit when stretched</li>
           </ul>
           <p>
-            Apple extended the display backlight service program for some models but it has
-            largely expired. Repair involves replacing the display cable assembly. Message us on WhatsApp for the exact price.
+            Apple's 13-inch display backlight service program has closed. Repair involves replacing the display cable assembly. Message us on WhatsApp for the exact price.
           </p>
 
           <h2 id="t2-chip">Step 4: How do I fix MacBook Pro T2 chip problems?</h2>
