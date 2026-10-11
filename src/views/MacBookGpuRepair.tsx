@@ -53,7 +53,7 @@ export default function MacBookGpuRepair() {
         "Free re-work if the same GPU fault returns inside the 15-day warranty.",
       ]}
       faqs={[
-        { q: "Why do AMD Radeon GPUs fail in 2016-2019 MacBook Pros specifically?", a: "Apple ran these GPUs at the edge of their thermal envelope to fit them in the slim chassis. After 3-4 years of thermal cycling, the BGA solder bonds develop micro-cracks. Apple even ran a service programme for some 15\" MacBook Pro 2018/2019 serials. We see this fault every week." },
+        { q: "Why do AMD Radeon GPUs fail in 2016-2019 MacBook Pros specifically?", a: "Apple ran these GPUs at the edge of their thermal envelope to fit them in the slim chassis. After 3-4 years of thermal cycling, the BGA solder bonds develop micro-cracks." },
         { q: "Why don't you just reflow the GPU?", a: "Because reflow is a temporary fix - it re-melts the existing solder bonds to bridge the cracks. The cracks come back within weeks because the underlying thermal fatigue is unchanged. Reballing replaces the entire BGA bond with fresh balls, restoring original durability." },
         { q: "Can you repair Apple Silicon GPUs (M1, M2, M3, M4, M5)?", a: "No, honestly. The GPU is fused into the SoC die alongside the CPU and unified memory. If the GPU fails, the entire SoC has failed, and SoC failure means board swap - no chip-level rework is possible. We diagnose for free and tell you." },
         { q: "How long does a reballed GPU last?", a: "When done correctly: as long as the original Apple solder bond, often longer because we use higher-melt-point lead-free balls. The 15-day warranty is paperwork - a good reball usually lasts years." },
@@ -66,7 +66,7 @@ export default function MacBookGpuRepair() {
         { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Sister board-level service." },
         { label: "MacBook Screen Repair",      href: "/macbook-screen-repair-dubai",     description: "If it's not the GPU, it's the panel." },
       ]}
-      blogLink={{ label: "Why your 2016-2019 MacBook Pro GPU is failing", href: "/blog/macbook-flexgate-explained" }}
+      blogLink={{ label: "Why 2017-2019 15-inch MacBook Pro GPUs fail", href: "/blog/macbook-pro-intel-gpu-failure-dubai" }}
     />
   );
 }

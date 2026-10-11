@@ -14,7 +14,7 @@ export default function BlogMacBookProIntelGpuFailure() {
         { id: "why-gpu", label: "Why 2017-2019 15-inch AMD GPU fails" },
         { id: "step-1", label: "Step 1. Identify GPU failure symptoms" },
         { id: "step-2", label: "Step 2. Switch to integrated GPU (workaround)" },
-        { id: "step-3", label: "Step 3. Apple repair program eligibility" },
+        { id: "step-3", label: "Step 3. Apple repair program (none)" },
         { id: "step-4", label: "Step 4. Data backup before GPU repair" },
         { id: "dubai-heat", label: "Does Dubai heat trigger GPU solder failure?" },
         { id: "models-affected", label: "Which models have this AMD GPU fault?" },
@@ -27,7 +27,7 @@ export default function BlogMacBookProIntelGpuFailure() {
       quickAnswer="MacBook Pro Intel AMD GPU failure symptoms: black screen on wake, lines across display, random video corruption during GPU-intensive tasks, or failure to detect external monitors while internal works. First try: force quit GPU-switching by holding Cmd+Shift+Option+Power for 10 seconds (SMC reset). Disable automatic GPU switching in System Preferences, Battery: forces Intel iGPU only, which may restore function. This is a workaround only; the AMD GPU BGA solder joint fault requires physical repair."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-11"
       readingMinutes={9}
       featuredImageAlt="MacBook Pro Intel AMD GPU failure, technician performing BGA reball repair at Dubai workshop"
       body={
@@ -62,10 +62,9 @@ export default function BlogMacBookProIntelGpuFailure() {
             <li>On some severely affected machines, the dGPU failure has progressed to the point where even with GPU switching disabled, the failing GPU causes system instability. In this case, repair is the only path</li>
           </ul>
 
-          <h2 id="step-3">Step 3: Apple GPU repair program eligibility</h2>
+          <h2 id="step-3">Step 3: Is there an Apple repair program for this GPU?</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Apple ran a "MacBook Pro Video Issues" service program for 2017 MacBook Pro 15-inch with AMD Radeon Pro 555/560. This program is now expired (ended 2022)</li>
-            <li>For 2018-2019 models: no official repair program was run. Apple offered component board repair under AppleCare+, but out-of-warranty cost was full logic board replacement</li>
+            <li>No Apple programme covers this fault: it is not on Apple's programme list (support.apple.com/exchange_repair, checked 11 Oct 2026)</li>
             <li>Independent repair: BGA reball (reflowing or replacing the AMD GPU solder balls) is an established procedure at specialist board-level repair shops in Dubai. It is typically far cheaper than Apple's full board replacement, message us on WhatsApp for the exact price on your model</li>
           </ul>
 
@@ -93,7 +92,7 @@ export default function BlogMacBookProIntelGpuFailure() {
               <tr>
                 <td>MacBook Pro 15-inch 2017</td>
                 <td>Radeon Pro 555 or 560</td>
-                <td>High: most documented failures, Apple ran repair program</td>
+                <td>High: most documented failures</td>
               </tr>
               <tr>
                 <td>MacBook Pro 15-inch 2018</td>
@@ -161,7 +160,7 @@ export default function BlogMacBookProIntelGpuFailure() {
         },
         {
           q: "Did Apple have a free repair program for MacBook Pro Intel GPU failure?",
-          a: "Yes for 2017 15-inch models only. Apple's 'MacBook Pro Video Issues' program covered 2017 15-inch with Radeon Pro 555/560 and ran until approximately 2022. For 2018-2019 models, no official program was run. The program is now expired for all models. Independent BGA reball at our Dubai workshop is the current repair path.",
+          a: "No. Apple has no programme for this fault; it is not on Apple's list (support.apple.com/exchange_repair, checked 11 Oct 2026). Independent BGA reball at our Dubai workshop is the repair path.",
         },
         {
           q: "How long does MacBook Pro Intel AMD GPU BGA reball take in Dubai?",
