@@ -25,7 +25,7 @@ export default function BlogMacBookProIntelFlexgate() {
       category="Fix guide · MacBook Pro"
       h1="MacBook Pro Flexgate Display Cable in Dubai? Stage-Light Effect Fix Guide"
       hook="Flexgate is the community name for a display cable defect on 2016-2017 MacBook Pro 13-inch and 15-inch. The backlight flex cable is too short: over thousands of lid open/close cycles, the cable tears where it exits the display hinge. The symptom is unmistakable: a stage-light effect of bright columns at the bottom of the screen that appears when the lid is opened past a certain angle. Message us on WhatsApp for today's display cable replacement price in Dubai."
-      quickAnswer="MacBook Pro Flexgate identification: open the lid slowly from closed to fully open while watching the bottom of the screen. If bright columns or a bright horizontal band appears at the bottom when the lid passes approximately 40-45 degrees, and disappears when you open wider or close again, this is Flexgate. The flex cable in the hinge is tearing. This is a progressive fault. It will worsen with each open/close cycle. Message us on WhatsApp for the display cable replacement price and book before the cable tears completely and backlight stops working entirely."
+      quickAnswer="MacBook Pro Flexgate identification: open the lid slowly from closed to fully open while watching the bottom of the screen. If bright columns or a bright horizontal band appear at the bottom as the lid passes about 40 degrees, this is Flexgate. The flex cable in the hinge is tearing. This is a progressive fault. It will worsen with each open/close cycle. Message us on WhatsApp for the display cable replacement price and book before the cable tears completely and backlight stops working entirely."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
       dateModified="2026-10-11"
@@ -40,7 +40,7 @@ export default function BlogMacBookProIntelFlexgate() {
             cable. The cable exits the display and loops into the hinge area:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>The 2016-2017 display flex cable was made approximately 2mm too short for the hinge radius required by the MacBook Pro's lid travel arc</li>
+            <li>The 2016-2017 display flex cable was too short for the hinge and the MacBook Pro's lid travel arc</li>
             <li>Every time the lid is opened past approximately 40 degrees, the cable is stretched to its flex limit. Every time the lid is closed, the cable bends back. Over thousands of cycles, this tearing stress concentrates at the point where the cable exits the hinge housing</li>
             <li>The symptom, bright stage-light columns at the bottom of the screen, occurs because the backlight LEDs at the bottom of the panel are powered through the flex cable. As the cable tears, it partially disconnects the LED driver for the bottom rows, allowing light to escape unevenly</li>
             <li>Eventually the cable tears completely: the backlight stops working entirely (black screen with faint content visible with a torch)</li>
@@ -53,8 +53,7 @@ export default function BlogMacBookProIntelFlexgate() {
           <ul className="list-disc list-inside space-y-xs">
             <li>Find a slightly dim environment (easier to see the backlight effect)</li>
             <li>Starting from closed, open the lid very slowly and watch the very bottom edge of the display: the bottom 5-10mm of the screen area</li>
-            <li><strong>Flexgate symptom</strong>: at a specific lid angle (usually 35-50 degrees from horizontal), a bright horizontal band or discrete bright columns appear at the bottom of the screen. It looks exactly like stage footlights, hence the community name</li>
-            <li>Open wider (past 90 degrees): in early-stage Flexgate, the symptom often disappears when the lid is fully open because the cable has relaxed</li>
+            <li><strong>Flexgate symptom</strong>: as the lid passes about 40 degrees, a bright horizontal band or discrete bright columns appear at the bottom of the screen. It looks exactly like stage footlights, hence the community name</li>
             <li>In late-stage Flexgate: the stage-light effect is visible at all angles, and eventually the backlight fails entirely</li>
           </ul>
 
@@ -135,9 +134,8 @@ export default function BlogMacBookProIntelFlexgate() {
           <h2 id="when-panel">When does Flexgate require full panel replacement?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>The cable tore so completely that it physically damaged the LED strip at the panel edge: LED row damage visible as permanent dead lines at the screen bottom regardless of lid angle</li>
-            <li>Backlight is completely off on entire screen, not just stage-light columns. Cable has fully torn and no backlight current is reaching any LEDs</li>
             <li>Physical damage to the display frame near the hinge that also cracked the panel glass</li>
-            <li>In most cases, cable replacement alone is sufficient. Full panel replacement is needed in less than 15% of Flexgate cases</li>
+            <li>Cable replacement alone fixes it while the LED strip is undamaged; a full panel is needed only when the tear has also damaged the LED strip</li>
           </ul>
           <p>
             <Link to="/macbook-pro-screen-repair-dubai" className="text-accent font-semibold hover:underline">
@@ -149,11 +147,11 @@ export default function BlogMacBookProIntelFlexgate() {
       faqs={[
         {
           q: "What is MacBook Pro Flexgate and do I have it?",
-          a: "Flexgate is a display backlight cable defect on 2016-2017 MacBook Pro 13/15-inch. The symptom: open the lid slowly from closed and watch the bottom of the screen. If bright columns or a horizontal band appear at the bottom at a specific lid angle (usually 35-50 degrees), this is Flexgate. The cable running through the hinge is tearing from repeated open/close cycles.",
+          a: "Flexgate is a display backlight cable defect on 2016-2017 MacBook Pro 13/15-inch. The symptom: open the lid slowly from closed and watch the bottom of the screen. If bright columns or a horizontal band appear at the bottom as the lid passes about 40 degrees, this is Flexgate. The cable running through the hinge is tearing from repeated open/close cycles.",
         },
         {
           q: "Can MacBook Pro Flexgate be repaired without replacing the full screen?",
-          a: "Yes, in most cases. The fault is the backlight flex cable, not the display panel. Cable replacement alone resolves the stage-light effect. Full panel replacement is only needed if the cable tear also damaged the LED strip at the panel edge, which happens in less than 15% of cases. Message us on WhatsApp for today's exact price on your model.",
+          a: "Yes, in most cases. The fault is the backlight flex cable, not the display panel. Cable replacement alone resolves the stage-light effect. Full panel replacement is only needed if the cable tear also damaged the LED strip at the panel edge. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Apple cover MacBook Pro Flexgate repair for Dubai users?",
@@ -165,7 +163,7 @@ export default function BlogMacBookProIntelFlexgate() {
         },
         {
           q: "How much does MacBook Pro Flexgate repair cost in Dubai?",
-          a: "Display cable replacement comes with a 90-day warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel (rare, under 15% of cases), a full display assembly is needed. Message us on WhatsApp for today's exact price on your model.",
+          a: "Display cable replacement comes with a 90-day warranty. We use cables that are slightly longer than the original Apple defective cable, reducing re-tearing risk. Full backlight diagnostic is free. If the cable tear also damaged the LED panel, a full display assembly is needed. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "How long does MacBook Pro Flexgate repair take in Dubai?",

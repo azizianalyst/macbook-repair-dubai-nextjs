@@ -59,7 +59,7 @@ export default function BlogMacBookProScreenCost() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>External monitor test</strong>: connect via USB-C or HDMI to an external display. If the picture is perfect externally, the fault is in the built-in screen, not the GPU or logic board</li>
             <li><strong>Backlight test</strong>: shine a torch at the panel in a dark room. If you see a faint image, the backlight is failed but the panel itself is alive, this is usually a cable or driver IC fault</li>
-            <li><strong>Stage-light test</strong>: open the lid past 90 degrees, watch the bottom edge. Flickering or a black bar that appears at wide angles is Flexgate (display cable tear), common on 2016-2017 13-inch models</li>
+            <li><strong>Stage-light test</strong>: open the lid slowly from closed and watch the bottom edge. A bright band or a blackout that starts as the lid passes about 40 degrees is Flexgate (display cable tear), common on 2016-2017 13- and 15-inch models</li>
             <li><strong>Dead pixel check</strong>: open a solid white screen (Preview → New → white page). Single or clustered dead pixels point to panel damage, not cable</li>
             <li><strong>Pressure artifacts</strong>: coloured blotches or black ink-bleed spreading from one corner indicate cracked internal LCD, full panel replacement needed</li>
           </ul>
@@ -98,7 +98,7 @@ export default function BlogMacBookProScreenCost() {
             headers={["Symptom", "Likely cause", "Test to confirm"]}
             rows={[
               { model: "Cracked glass, black ink spreading", ours: "Physical panel damage", apple: "Visual inspection, no test needed" },
-              { model: "Stage-light effect at bottom edge", ours: "Flexgate cable (2016-2017)", apple: "Worsens past 90 degrees open" },
+              { model: "Stage-light effect at bottom edge", ours: "Flexgate cable (2016-2017)", apple: "Appears past about 40 degrees open" },
               { model: "No backlight, faint image visible", ours: "Backlight driver or cable", apple: "Torch test in dark room" },
               { model: "Blank screen, external monitor works", ours: "Display cable or connector", apple: "External monitor test" },
               { model: "Blank screen, external monitor also fails", ours: "GPU or logic board fault", apple: "Requires board-level diagnosis" },

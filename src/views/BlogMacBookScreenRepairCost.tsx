@@ -97,10 +97,10 @@ export default function BlogMacBookScreenRepairCost() {
 
           <h2 id="flexgate">Flexgate explained - 2016-2017 MacBook Pro screens</h2>
           <p>
-            "Flexgate" was Apple's display backlight flex cable design flaw on the 2016 and early
+            "Flexgate" was Apple's display backlight flex cable design flaw on the 2016 and
             2017 13″ and 15″ MacBook Pro Retina models. The flex cable that ran from the logic
-            board to the display backlight was too short (iFixit measured it at about 2mm) - opening the lid past 90 degrees
-            repeatedly fatigued the cable until the backlight either failed completely or showed a
+            board to the display backlight was too short - repeated opening and closing
+            fatigued the cable until the backlight either failed completely or showed a
             distinctive "stage light" effect (a bright bar at the bottom of the screen, dim in the
             middle).
           </p>

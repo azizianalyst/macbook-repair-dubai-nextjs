@@ -23,7 +23,7 @@ export default function BlogMacBookFlexgateExplained() {
       category="Problem solving · MacBook"
       h1="MacBook Flexgate - What It Is and How to Fix It"
       hook="Black backlight strip on your 2016 or 2017 MacBook Pro? It's called Flexgate - Apple's design flaw - and yes, we still fix it."
-      quickAnswer="Flexgate is a backlight flex-cable design flaw on the 2016 and 2017 MacBook Pro (13″ and 15″), where the cable was too short for the hinge. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past 90 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
+      quickAnswer="Flexgate is a backlight flex-cable design flaw on the 2016 and 2017 MacBook Pro (13″ and 15″), where the cable was too short for the hinge. Symptoms: a 'stage lighting' bright bar along the bottom, dim middle, or backlight failure when the lid opens past about 40 degrees. Fix: a flex-cable replacement or a full display swap - message us on WhatsApp for today's exact price on your model."
       author={{ name: "Shafiq", role: "Senior MacBook Pro display technician" }}
       datePublished="2026-04-25"
       dateModified="2026-10-11"
@@ -36,8 +36,7 @@ export default function BlogMacBookFlexgateExplained() {
             "Flexgate" is the community name for a design flaw on the 2016 and 2017 MacBook
             Pro Retina line. Apple routed the display backlight signal through a thin, flexible
             ribbon cable that ran from the logic board, up through the hinge, and into the
-            display. The cable was approximately 2mm too short to handle repeated lid opening
-            beyond 90 degrees.
+            display. The cable was too short to handle years of repeated lid opening.
           </p>
           <p>
             Each time you opened the lid past horizontal, the cable was stretched microscopically.
@@ -58,12 +57,12 @@ export default function BlogMacBookFlexgateExplained() {
           <ol className="list-decimal list-inside space-y-xs">
             <li>
               <strong>Stage lighting effect:</strong> bright "spotlights" or vertical bars at the
-              bottom edge of the screen, with a noticeably dim middle. Appears only when the lid
-              is open past about 90 degrees.
+              bottom edge of the screen, with a noticeably dim middle. Appears as the lid
+              opens past about 40 degrees.
             </li>
             <li>
               <strong>Flickering backlight:</strong> the bottom strip flashes on and off as you
-              tilt the lid. Sometimes works at exactly 80 degrees, fails at 95.
+              tilt the lid.
             </li>
             <li>
               <strong>Complete backlight failure:</strong> screen goes black with the lid open.
@@ -95,13 +94,13 @@ export default function BlogMacBookFlexgateExplained() {
           />
           <p>
             Cable-only repair works if the backlight LEDs themselves are still healthy - meaning
-            you saw the stage-lighting symptom but the bottom LEDs still fire. About 70% of cases
-            we see qualify for the cable-only fix, which is the more affordable of the two - message
+            you saw the stage-lighting symptom but the bottom LEDs still fire. In that case the
+            cable-only fix applies, and it is the more affordable of the two - message
             us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             If the LEDs at the bottom of the panel have burned out (no light at all from the
-            bottom edge even with the lid open at exactly 90 degrees), the panel itself is
+            bottom edge at any lid angle), the panel itself is
             damaged and a full display replacement is needed - message us on WhatsApp for the
             exact price on your 13″ or 15″ model.
           </p>
@@ -130,7 +129,7 @@ export default function BlogMacBookFlexgateExplained() {
           <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             WhatsApp us a photo of the screen with the lid open at full angle (so we can see the
-            stage-lighting pattern) - we'll tell you within 5 minutes whether you need a cable-only
+            stage-lighting pattern) - we'll tell you whether you need a cable-only
             repair or a full display, and give you the exact price for your model. Same-day service
             for both.
           </p>
@@ -145,7 +144,7 @@ export default function BlogMacBookFlexgateExplained() {
       faqs={[
         {
           q: "How do I know if I have Flexgate or just a normal screen issue?",
-          a: "Flexgate has a unique signature: bright bars or 'stage lights' at the bottom of the screen, dim middle, and the symptom only appears when the lid is opened past about 90 degrees. Close the lid to 60 degrees and the backlight returns to normal. If your screen is uniformly dim or has cracks, that's not Flexgate.",
+          a: "Flexgate has a unique signature: bright bars or 'stage lights' at the bottom of the screen, dim middle, and the symptom appears as the lid opens past about 40 degrees, then eases when you close it below that angle. If your screen is uniformly dim or has cracks, that's not Flexgate.",
         },
         {
           q: "Is Apple's Flexgate repair program still active?",
@@ -153,15 +152,15 @@ export default function BlogMacBookFlexgateExplained() {
         },
         {
           q: "Will the new flex cable solve Flexgate permanently?",
-          a: "Yes. We install a redesigned aftermarket flex cable that is longer than Apple's original, the same fix Apple made on the 2018 MacBook Pro. With normal use it should last the remaining life of the MacBook. We give a 3-month warranty on the cable repair specifically.",
+          a: "It treats the cause: we install a redesigned aftermarket flex cable that is longer than Apple's original, the same fix Apple made on the 2018 MacBook Pro. We give a 3-month warranty on the cable repair specifically.",
         },
         {
           q: "Why does Apple still not acknowledge 15″ MacBook Pro Flexgate?",
-          a: "Likely a class-action liability decision - admitting the 15″ was affected would have multiplied the program cost. Apple's quiet position is that 15″ models had a 'different cable design'; technicians consistently report the same failure mode. We treat them identically.",
+          a: "Apple has never said why. Its program covered only the 2016 13″, yet the 2016-2017 15″ uses the same short, thin flex-cable design and wears through at the hinge the same way, so we diagnose and repair both sizes identically.",
         },
         {
           q: "Can I prevent Flexgate from happening on my 2018 or newer MacBook?",
-          a: "On a 2016-2017 MacBook Pro: avoid opening the lid past about 100 degrees in daily use. Apple lengthened the cable from 2018, and M-series MacBooks use a different display design, so they need no special precaution.",
+          a: "On a 2016-2017 MacBook Pro the cable wears with every open-and-close cycle, so get the stage-light effect checked before the backlight fails. Apple lengthened the cable from 2018, and M-series MacBooks use a different display design, so they need no special precaution.",
         },
       ]}
       relatedLinks={[

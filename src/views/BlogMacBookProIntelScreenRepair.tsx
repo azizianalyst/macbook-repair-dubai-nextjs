@@ -61,7 +61,7 @@ export default function BlogMacBookProIntelScreenRepair() {
 
           <h2 id="step-3">Step 3: Distinguish Flexgate from panel fault on Intel MacBook Pro</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Open the lid very slowly from closed while watching the screen bottom. If a bright band appears at approximately 40 degrees and disappears as you open wider: Flexgate. Cable replacement is the fix</li>
+            <li>Open the lid very slowly from closed while watching the screen bottom. If a bright band or a blackout appears as the lid passes about 40 degrees: Flexgate. Cable replacement is the fix</li>
             <li>If the screen shows damage that is constant and not angle-dependent (cracks, dead pixels, colour corruption): panel fault. Full replacement needed</li>
             <li>If the entire screen is black regardless of lid angle: take a torch and shine at the screen. Faint content = backlight failed (potentially Flexgate late stage). Completely black with no faint content = LCD panel or GPU fault</li>
             <li>Connect external monitor: if external shows correctly while internal is black, the GPU is fine and the fault is in the internal display path (cable, backlight, or panel)</li>

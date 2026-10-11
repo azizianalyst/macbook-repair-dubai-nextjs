@@ -102,8 +102,8 @@ export default function BlogMacBookProIntelProblems() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Stage lighting effect</strong>: a row of bright spots along the bottom of the screen that looks like stage footlights. This is partial backlight cable failure</li>
-            <li><strong>Screen goes dark when opened past 45 degrees</strong>: the cable has frayed to the point where opening the lid further breaks the connection</li>
-            <li><strong>Screen works with lid at 45 degrees but goes black fully open</strong>: classic Flexgate. The cable works when relaxed but breaks the circuit when stretched</li>
+            <li><strong>Screen goes dark when opened past about 40 degrees</strong>: the cable has frayed to the point where opening the lid further breaks the connection</li>
+            <li><strong>Screen works with the lid nearly closed but goes black once it passes about 40 degrees</strong>: classic Flexgate. The cable works when relaxed but breaks the circuit when stretched</li>
           </ul>
           <p>
             Apple's 13-inch display backlight service program has closed. Repair involves replacing the display cable assembly. Message us on WhatsApp for the exact price.
