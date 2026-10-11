@@ -1786,7 +1786,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/refund": {
     "title": "Refund Policy - MacBook Repair Dubai",
-    "description": "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated April 2026."
+    "description": "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated October 2026."
   },
   "/same-day-macbook-repair-dubai": {
     "title": "Same-Day MacBook Repair Dubai. Screen, Battery, Keyboard",
