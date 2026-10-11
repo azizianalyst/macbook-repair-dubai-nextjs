@@ -33,12 +33,23 @@ export function useSeo(args: SeoArgs, schemas: unknown[] = []) {
       nodes.push(link);
     }
 
-    // JSON-LD blocks
+    // JSON-LD blocks. <PageSchema> (server) already ships the Organization, LocalBusiness,
+    // WebSite and Service nodes, and FAQAccordion/BreadcrumbTrail ship FAQPage/BreadcrumbList,
+    // in the static HTML. Injecting them again here gave the rendered DOM two copies of each
+    // (t34). Skip any node whose @id or @type the page already carries; inject only the rest.
+    const seen = existingSchema();
     schemas.forEach((s) => {
+      if (!s || typeof s !== "object") return;
+      const node = { ...(s as Record<string, unknown>) };
+      const id = typeof node["@id"] === "string" ? (node["@id"] as string) : "";
+      if ((id && seen.ids.has(id)) || typesOf(node).some((t) => seen.types.has(t))) return;
+      // The WebPage name came from the template's own title prop, which drifted from the
+      // route's metadata title. document.title is the title the page actually ships.
+      if (typesOf(node).includes("WebPage") && document.title) node.name = document.title;
       const el = document.createElement("script");
       el.type = "application/ld+json";
       el.dataset.seoInject = "1";
-      el.textContent = JSON.stringify(s);
+      el.textContent = JSON.stringify(node);
       document.head.appendChild(el);
       nodes.push(el);
     });
@@ -46,6 +57,29 @@ export function useSeo(args: SeoArgs, schemas: unknown[] = []) {
     return () => { nodes.forEach((n) => n.remove()); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [args.path]);
+}
+
+function typesOf(node: Record<string, unknown>): string[] {
+  const t = node["@type"];
+  return Array.isArray(t) ? t.filter((x): x is string => typeof x === "string") : typeof t === "string" ? [t] : [];
+}
+
+// @ids and @types of the JSON-LD already in the document that this hook did not inject.
+function existingSchema() {
+  const ids = new Set<string>();
+  const types = new Set<string>();
+  const visit = (n: unknown) => {
+    if (!n || typeof n !== "object") return;
+    if (Array.isArray(n)) { n.forEach(visit); return; }
+    const o = n as Record<string, unknown>;
+    if (typeof o["@id"] === "string") ids.add(o["@id"] as string);
+    typesOf(o).forEach((t) => types.add(t));
+    if (Array.isArray(o["@graph"])) (o["@graph"] as unknown[]).forEach(visit);
+  };
+  document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]:not([data-seo-inject])').forEach((el) => {
+    try { visit(JSON.parse(el.textContent || "")); } catch { /* not JSON: ignore */ }
+  });
+  return { ids, types };
 }
 
 // Build a preloadImage spec from a hero image base path like

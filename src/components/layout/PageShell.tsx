@@ -11,20 +11,32 @@ import { ModelRepairLinks } from "@/components/blocks/ModelRepairLinks";
 const ORG_LD_ID = "ld-organization-global";
 
 // wraps every page. handles nav, footer, sticky mobile cta, skip link.
-// also injects the global Organization JSON-LD on every route so AI/search
-// engines see consistent entity context everywhere (not just home/about).
+// also injects the global Organization JSON-LD on any route whose static HTML lacks it,
+// so AI/search engines see consistent entity context everywhere (not just home/about).
 // `hideContactCta`: pages that render their own closing CTA (service/device/iPhone
 // templates) pass this so the footer's pre-footer CTA band doesn't stack a duplicate.
 export function PageShell({ children, hideContactCta = false }: { children: ReactNode; hideContactCta?: boolean }) {
   useEffect(() => {
     if (typeof document === "undefined") return;
     if (document.getElementById(ORG_LD_ID)) return;
+    // <PageSchema> now ships Organization in the static HTML of almost every route; adding
+    // this one as well left two copies in the rendered DOM (t34). Inject only as a fallback.
+    const hasOrg = Array.from(document.querySelectorAll('script[type="application/ld+json"]')).some((s) => {
+      try {
+        const t = JSON.parse(s.textContent || "")?.["@type"];
+        return t === "Organization" || (Array.isArray(t) && t.includes("Organization"));
+      } catch {
+        return false;
+      }
+    });
+    if (hasOrg) return;
     const el = document.createElement("script");
     el.type = "application/ld+json";
     el.id = ORG_LD_ID;
     el.textContent = JSON.stringify(organization());
     document.head.appendChild(el);
-    // intentionally no cleanup: Organization is global; keep across route changes.
+    // Removed on unmount: the next route's PageShell re-checks and re-adds it only if needed.
+    return () => el.remove();
   }, []);
 
   return (
