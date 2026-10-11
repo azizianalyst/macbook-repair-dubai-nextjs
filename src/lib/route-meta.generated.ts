@@ -1550,7 +1550,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-gpu-repair-dubai": {
     "title": "MacBook GPU Repair Dubai - Reballed AMD Radeon | 3-5 Days",
-    "description": "MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2016-2019 MacBook Pro. Reballed chip replacement, not reflow. Call 055 741 3706."
+    "description": "MacBook GPU repair Dubai. AMD Radeon Pro 555/560/5500M failures on 2017-2019 MacBook Pro. Reballed chip replacement, not reflow. Call 055 741 3706."
   },
   "/macbook-guides": {
     "title": "MacBook Guides & How-Tos. Dubai Apple Workshop",
