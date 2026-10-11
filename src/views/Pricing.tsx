@@ -73,7 +73,7 @@ const PRICING_FAQS = [
   { q: "Do you charge for pickup and delivery?",
     a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch. Pickup window: Monday to Saturday, 9 am to 5 pm." },
   { q: "What happens if the same fault returns inside the warranty?",
-    a: "Bring the device back, no questions asked. The original technician - usually Shafiq for MacBook board work or Usman for iPhone screens - re-opens the unit and redoes the repair free of charge. Average warranty claim turnaround: 24 hours." },
+    a: "Bring the device back for a free inspection. If the same fault has returned, the original technician - usually Usman for MacBook board work or Hamza for iPhone screens - re-opens the unit and redoes the repair free of charge." },
 ];
 
 export default function Pricing() {

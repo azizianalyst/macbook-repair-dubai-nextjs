@@ -4,15 +4,15 @@ import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
 import { NAP } from "@/content/site";
 
-const LAST_UPDATED = "April 2026";
-const ISO_DATE = "2026-04-01";
+const LAST_UPDATED = "October 2026";
+const ISO_DATE = "2026-10-11";
 
 export default function Refund() {
   useSeo(
     {
       title: "Refund Policy - MacBook Repair Dubai",
       description:
-        "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated April 2026.",
+        "Refund windows, no-fix-no-charge promise, and dispute resolution at MacBook Repair Dubai. Plain English. Updated October 2026.",
       path: "/refund",
     },
     [organization(), webPage({
@@ -81,8 +81,8 @@ export default function Refund() {
       <LegalSection id="process" title="5. How a refund is processed">
         <ol>
           <li>Send a WhatsApp message to {NAP.phoneDisplay} explaining the issue and quoting the invoice number.</li>
-          <li>A technician responds within 4 business hours and arranges a free inspection - drop-off or pickup.</li>
-          <li>The device is inspected, usually within 24 hours.</li>
+          <li>A technician responds and arranges a free inspection - drop-off or pickup.</li>
+          <li>The device is inspected.</li>
           <li>If a refund is due, it is approved by the workshop manager (Shafiq) and processed via the original payment method.</li>
           <li>Refund timing: cash refunded on the spot in person; card refunded in 3-7 business days; bank transfer in 1-3 business days.</li>
           <li>A written confirmation of the refund is sent on WhatsApp.</li>

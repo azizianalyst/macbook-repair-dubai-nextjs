@@ -156,10 +156,10 @@ export default function Blog21YearsExperience() {
 
           <h2 id="repair-quality">What this means for your repair quality</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Faster diagnosis</strong>: pattern recognition cuts a 60-min diagnosis to 15 min.</li>
-            <li><strong>Higher first-time success rate</strong>: 96%+ vs 80-85% industry average.</li>
-            <li><strong>Lower re-do rate</strong>: warranty claims under 2% of jobs vs 8-15% industry average.</li>
-            <li><strong>Honest decline rate</strong>: we refuse 4-6% of jobs at quote stage where we know we can't succeed - that protects you from wasted money.</li>
+            <li><strong>Faster diagnosis</strong>: faults we have seen many times are recognised quickly.</li>
+            <li><strong>Fault confirmed before parts</strong>: we find the cause on the bench before fitting anything.</li>
+            <li><strong>Re-done free under warranty</strong>: if the same fault returns within the warranty period, we fix it again at no charge.</li>
+            <li><strong>Honest decline</strong>: we say no at the quote stage when we don't expect a repair to hold - that protects you from wasted money.</li>
           </ul>
         </>
       }
