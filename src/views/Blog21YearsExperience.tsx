@@ -1,160 +1,133 @@
 "use client";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
-import { NAP } from "@/content/site";
+import { NAP, TEAM } from "@/content/site";
 
 const YEARS = NAP.yearsInBusiness;
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+
+// The bench team, straight from the roster in site.ts - names, roles and years are never typed here.
+const BENCH = TEAM.filter((t) => ["Shafiq", "Usman", "Ali", "Hamza"].includes(t.name));
 
 export default function Blog21YearsExperience() {
   return (
     <BlogPostTemplate
       seoTitle="Why Two Decades of Apple Repair Experience Matter"
-      seoDescription="40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
+      seoDescription="40,000+ devices repaired since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts and team."
       path="/blog/why-21-years-experience-matters"
       wide
       toc={[
         { id: "quick-answer", label: "Quick answer" },
-        { id: "founded-2004", label: "Founded 2004 lineup" },
-        { id: "models-serviced", label: "Models serviced over the years" },
-        { id: "component-level-era", label: "Post-2015 component-level era" },
-        { id: "failure-patterns", label: "Model-specific failure patterns" },
-        { id: "tools-built", label: "Tools we've built up" },
-        { id: "parts-network", label: "Parts network" },
-        { id: "team-continuity", label: "Team continuity" },
-        { id: "pop-up-shops", label: "Why pop-up shops can't compete" },
+        { id: "founded-2004", label: "Apple's lineup in 2004" },
+        { id: "models-serviced", label: "Apple platforms we repair" },
+        { id: "component-level-era", label: "Component-level era since 2012" },
+        { id: "failure-patterns", label: "Failure patterns that take years" },
+        { id: "tools-built", label: "Tools" },
+        { id: "parts-network", label: "Parts" },
+        { id: "team-continuity", label: "Who is on the bench" },
+        { id: "pop-up-shops", label: "What a new shop can't buy" },
         { id: "repair-quality", label: "What this means for quality" },
       ]}
       category="Trust · About us"
       h1="What Two Decades of Apple Repair Mean for Your Mac"
-      hook="Started October 2004. 40,000+ MacBooks fixed. Here's what longevity actually means for your repair."
-      quickAnswer={`${YEARS} years of Apple-only repair means: model-specific failure pattern memory across 6 chip generations (PowerPC → Intel → Apple Silicon), specialty tooling built up since 2004, deep parts-network relationships, and a continuity team (Shafiq since 2008, Usman since 2012). Pop-up shops can't replicate that knowledge density on iPhone 16 Pro or MacBook Pro M5 issues.`}
+      hook="Started October 2004. 40,000+ devices repaired. Here's what longevity actually means for your repair."
+      quickAnswer={`${YEARS} years of Apple repair means failure patterns remembered across PowerPC, Intel and Apple Silicon Macs, tooling built up since 2004, and a long-serving bench team. A new shop can buy tools and hire technicians, but it cannot buy that history.`}
       author={{ name: "Abdul Aziz", role: "Founder" }}
       datePublished="2026-04-28"
       dateModified="2026-10-11"
-      readingMinutes={10}
+      readingMinutes={8}
       featuredImageAlt={`MacBook Repair Dubai: ${YEARS} years of Apple repair experience since 2004`}
       body={
         <>
           <h2 id="quick-answer">Why does two decades of experience matter? Quick answer</h2>
           <p>
-            We opened on <strong>10 October 2004</strong>. Steve Jobs was still alive. The newest
-            MacBook was the PowerBook G4. iPhone wouldn't exist for another three years. {YEARS}{" "}
-            years later we've serviced every model Apple made and accumulated a knowledge base no
-            new shop can match.
+            We opened on <strong>10 October 2004</strong>. Apple's top laptop was the PowerBook G4,
+            and the iPhone was more than two years away. {YEARS} years later we repair Macs from
+            Intel to the 2026 M5 and M6 models, plus iPhone and iPad.
           </p>
 
           <h2 id="founded-2004">Founded 2004 - what was Apple's lineup then?</h2>
-          <p>
-            Our first repairs were on:
-          </p>
+          <p>When we opened, Apple sold:</p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>PowerBook G4</strong> (15" / 17" titanium and aluminium).</li>
-            <li><strong>iBook G4</strong>.</li>
-            <li><strong>eMac</strong> (CRT all-in-one for education).</li>
-            <li><strong>iMac G4</strong> (the lamp-shape) and <strong>iMac G5</strong> (just launched).</li>
-            <li><strong>Power Mac G5</strong> tower.</li>
-            <li><strong>iPod</strong> 4th gen + iPod mini.</li>
+            <li><strong>PowerBook G4</strong> (12" / 15" / 17") and <strong>iBook G4</strong> laptops.</li>
+            <li><strong>eMac</strong>, <strong>iMac G5</strong> (just launched) and the <strong>Power Mac G5</strong> tower.</li>
+            <li><strong>iPod</strong> 4th gen and iPod mini.</li>
           </ul>
           <p>
-            No Intel Macs (those came in 2006). No iPhone, iPad, or Apple Watch. Just Macs and
-            iPods.
+            No Intel Macs (those came in 2006), no iPhone and no iPad. Just Macs and iPods.
           </p>
 
-          <h2 id="models-serviced">Models we've serviced across the years</h2>
+          <h2 id="models-serviced">Which Apple platforms do we repair today?</h2>
           <BlogPriceTable
-            caption="Apple platforms we've serviced (with our years of experience on each)"
-            headers={["Platform", "Apple introduced", "We started servicing", "Years of experience"]}
+            caption="Apple platforms we repair today"
+            headers={["Platform", "Apple introduced", "What we repair"]}
             rows={[
-              { model: "PowerPC Mac (G4/G5)", apple: "1999", ours: "2004", note: `${YEARS} years` },
-              { model: "Intel Mac (Core Duo onward)", apple: "2006", ours: "2006", note: "20 years" },
-              { model: "iPhone (original)", apple: "2007", ours: "2008 (UAE launch)", note: "18 years" },
-              { model: "MacBook Air (original)", apple: "2008", ours: "2008", note: "18 years" },
-              { model: "iPad (original)", apple: "2010", ours: "2010", note: "16 years" },
-              { model: "Retina MacBook Pro", apple: "2012", ours: "2012", note: "14 years" },
-              { model: "Apple Watch", apple: "2015", ours: "2015", note: "11 years" },
-              { model: "Apple Silicon Mac (M1+)", apple: "2020", ours: "2020", note: "6 years" },
-              { model: "Vision Pro", apple: "2024", ours: "2025 (UAE launch)", note: "1 year" },
+              { model: "Intel Mac", ours: "2006", apple: "Screens, batteries, keyboards, logic boards, data recovery" },
+              { model: "iPhone", ours: "2007", apple: "Screens, batteries, back glass, cameras, charging ports" },
+              { model: "iPad", ours: "2010", apple: "Screens, batteries, charging ports" },
+              { model: "Apple Silicon Mac (M1 onward)", ours: "2020", apple: "Screens, batteries, keyboards, liquid damage, logic boards" },
             ]}
           />
 
-          <h2 id="component-level-era">How Apple repair has changed (post-2015 component-level era)</h2>
+          <h2 id="component-level-era">How has Apple repair changed since 2012?</h2>
           <p>
-            Pre-2015 Mac repair was largely modular - swap the screen, swap the keyboard, swap the
-            HDD. Post-2015 Apple soldered RAM, glued batteries, paired Touch ID/Face ID modules to
-            the board, and made the SSD non-removable. This meant board-level micro-soldering became
-            essential - chip-level work on 0.4mm pitch BGA packages with hot-air rework stations and
-            stereo microscopes. Shops without that decade of micro-soldering investment can't do
-            modern Apple Silicon logic-board repairs.
+            Until the 2012 Retina MacBook Pro, Mac repair was largely modular: swap the screen,
+            keyboard or hard drive. From then on Apple soldered RAM and glued batteries; from 2016 it
+            soldered the SSD on most MacBook Pros and paired Touch ID to the board (Face ID on iPhone
+            from 2017). Board-level micro-soldering became
+            essential: chip-level work on fine-pitch BGA packages with hot-air rework stations and
+            stereo microscopes. Without that equipment and the practice to use it, modern Apple
+            Silicon logic-board repair isn't possible.
           </p>
           <p>
-            Touch Bar (2016), butterfly keyboard (2015-2019), flexgate (2016-2017), Apple Silicon UMA
-            (2020+) - each created new failure patterns we encountered, documented, and built repair
-            procedures for over years.
+            Touch Bar (2016), the butterfly keyboard (2015-2019), Flexgate (2016-2017) and Apple
+            Silicon's unified memory (2020+) each brought new failure patterns, and new repair
+            procedures to go with them.
           </p>
 
-          <h2 id="failure-patterns">Knowledge that takes years (model-specific failure patterns)</h2>
-          <p>
-            A few examples of pattern knowledge that only comes with high-volume + time:
-          </p>
+          <h2 id="failure-patterns">Which failure patterns take years to learn?</h2>
+          <p>A few patterns that only become familiar with time on the bench:</p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>MacBook Pro 2016-2017 flexgate</strong>: stage light effect along bottom of screen at ~12-18 months - caused by a too-short display flex cable. We fix at the cable not the whole screen - see our{" "}
-              <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">flexgate guide</Link>.
+            <li><strong>MacBook Pro 2016-2017 Flexgate</strong>: a stage-light effect along the bottom of the screen, caused by a display flex cable that was too short. Where the backlight LEDs are still healthy we replace just the cable, not the whole screen - see our{" "}
+              <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold underline underline-offset-2 hover:no-underline">flexgate guide</Link>.
             </li>
-            <li><strong>iPhone 12 Pro front camera failure</strong>: solder joint fatigue around the dot projector at ~24 months - micro-rework restores Face ID without full assembly swap.</li>
-            <li><strong>iMac 27" 2017 GPU failure</strong>: dedicated AMD GPU dies after 5-6 years in Dubai climate - reflow extends life 1-2 years pre-replacement.</li>
-            <li><strong>MacBook Air 2018-2019 SSD wear</strong>: drives wear out at 60-70% capacity due to heavy swap usage - proactive macOS reinstall + swap-control extends life.</li>
-            <li><strong>iPad Pro M1/M2 backlight bleed</strong>: known seal failure at 18-24 months in heat - we re-seat the polariser at 60% the cost of a screen swap.</li>
+            <li><strong>Butterfly keyboards (2015-2019)</strong>: a grain of dust under a key stops it working. Apple's free Keyboard Service Program has ended, so a failing keyboard is now a paid top-case swap.</li>
+            <li><strong>AMD GPUs in 2017-2019 MacBook Pro 15″ and 27″ iMacs</strong>: after years of heat cycling the GPU's solder bond can crack, giving lines, artefacts or no display. A reball replaces the bond; a reflow only buys time.</li>
           </ul>
 
-          <h2 id="tools-built">Tools we've built up</h2>
+          <h2 id="tools-built">What tools does board-level Apple repair need?</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li>3 stereo inspection microscopes (Mantis Elite + Leica + AmScope).</li>
-            <li>2 hot-air rework stations (Quick 861DW + JBC HAP-1B).</li>
-            <li>BGA reballing kit for Apple Silicon SoC repairs.</li>
-            <li>Apple-specific calibration programmers (True Tone, Face ID, battery serialisation).</li>
-            <li>Ultrasonic cleaning bath for liquid damage.</li>
-            <li>Calibrated Battery Health Tester (Pisen for iPhone, Mophie for MacBook).</li>
-            <li>Spectrophotometer for screen colour verification.</li>
-            <li>ESD-safe benches throughout (anti-static mats, wrist straps, ionised air).</li>
+            <li>Stereo inspection microscopes.</li>
+            <li>Hot-air and infrared rework stations.</li>
+            <li>BGA reballing kit for GPU and chip-level repairs.</li>
+            <li>Programmers for True Tone, Face ID and battery serialisation.</li>
+            <li>Ultrasonic cleaning for liquid damage.</li>
+            <li>ESD-safe benches.</li>
           </ul>
+
+          <h2 id="parts-network">Where do the parts come from?</h2>
           <p>
-            Our tooling investment since 2004 runs into the hundreds of thousands of dirhams -
-            orders of magnitude beyond the handful of basic tools a typical pop-up shop carries.
+            We source screens, batteries and board-level chips. Your WhatsApp quote states the
+            warranty before work starts and, for screens, the grade: genuine Apple or high-grade
+            aftermarket.
           </p>
 
-          <h2 id="parts-network">Parts network</h2>
-          <p>
-            Real supplier relationships take years. Ours include:
-          </p>
+          <h2 id="team-continuity">Who is on the bench?</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Shenzhen panel suppliers</strong>: direct since 2011, audited factory access, batch-tracked screens.</li>
-            <li><strong>Battery cell wholesaler in Hong Kong</strong>: direct since 2013, Sunwoda + Amperex genuine cells.</li>
-            <li><strong>Logic-board chip supplier in Guangzhou</strong>: pulled-genuine and matched-spec chips since 2016.</li>
-            <li><strong>Local UAE distributor</strong>: emergency stock of common parts, same-day delivery.</li>
+            {BENCH.map((t) => (
+              <li key={t.name}><strong>{t.name}</strong> ({t.years} years) - {t.specialisation}.</li>
+            ))}
           </ul>
 
-          <h2 id="team-continuity">Team continuity</h2>
-          <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Shafiq</strong> - Lead technician, 15 years on MacBook screens, batteries and water damage. Trained on butterfly keyboard, flexgate, Touch Bar, and Apple Silicon repairs as each launched.</li>
-            <li><strong>Usman</strong> - Board-level repair specialist, 11 years on M-series logic boards. <strong>Hamza</strong> covers iPhone and iPad across iPhone 4S → 17 Pro Max.</li>
-            <li><strong>Ali</strong> - Senior technician, 14 years - data recovery, iMac and Mac mini.</li>
-          </ul>
-          <p>
-            Pop-up shops typically have 6-18 month staff tenure. That means your repair is usually
-            done by someone learning on your device.
-          </p>
-
-          <h2 id="pop-up-shops">Why pop-up repair shops can't compete on this</h2>
+          <h2 id="pop-up-shops">What can't a new repair shop buy?</h2>
           <p>
             Time is the one ingredient money can't buy. A new shop in 2026 can buy tools, hire
-            technicians, and source parts - but they can't have seen the M1 Mac Mini PSU failure
-            pattern across 200 units, the iPhone 14 Pro Always-On display burn-in profile, or the
-            iPad Air M2 Smart Connector corrosion sequence. Those memories live in workshops that
-            existed when those models launched.
+            technicians and source parts, but it hasn't watched Mac, iPhone and iPad generations arrive and
+            fail on its own bench. That history lives in workshops that were open when those models
+            launched.
           </p>
 
-          <h2 id="repair-quality">What this means for your repair quality</h2>
+          <h2 id="repair-quality">What does this mean for your repair quality?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Faster diagnosis</strong>: faults we have seen many times are recognised quickly.</li>
             <li><strong>Fault confirmed before parts</strong>: we find the cause on the bench before fitting anything.</li>
@@ -164,14 +137,14 @@ export default function Blog21YearsExperience() {
         </>
       }
       faqs={[
-        { q: "Are you Apple-Authorised?", a: "No - and we won't pursue it because the AASP terms restrict pricing, restrict the model range we can service, and require us to refuse out-of-warranty older devices. Independent gives us range, AASP gives Apple control. We chose range." },
-        { q: "Can you really still repair a 2004 PowerBook?", a: "Yes - we keep PowerPC tooling and source parts from the vintage market. Less common but possible. Most vintage repairs are battery replacement, screen, or HDD-to-SSD upgrade." },
-        { q: "What's the most common Apple Silicon (M1+) repair you do?", a: "Charging port (USB-C) failure on MacBook Air M1 / M2 - about 60 per month. The port is reflowable, so we repair it instead of swapping the whole logic board - far cheaper than Apple's quote. Message us on WhatsApp for today's exact price on your model." },
-        { q: "Does the founder still work on devices?", a: "Yes - Abdul Aziz still works on Apple hardware and takes escalated cases. Day-to-day MacBook repairs are led by Shafiq, board-level work is Usman's bench, and Hamza covers iPhone and iPad." },
-        { q: "How many MacBook Pro M5 (2025/26) repairs have you done?", a: "Around 80 since November 2025 launch - mostly accidental damage screens (chassis is thinner so drops crack screens easier) and a few liquid spills. Apple Silicon platform itself has been highly reliable so far." },
+        { q: "Are you Apple-Authorised?", a: "No. MacBook Repair Dubai is an independent workshop, not an Apple Authorised Service Provider. We decide which models and faults we take on, including older Macs." },
+        { q: "Can you still repair an old PowerPC Mac?", a: "Sometimes. Battery, screen and hard-drive-to-SSD work is possible when parts can still be found. Send us the model on WhatsApp and we'll tell you before you bring it in." },
+        { q: "Which Apple Silicon repairs do you handle?", a: "Screens, batteries, keyboards, charging ports, liquid damage and logic-board faults on M-series MacBooks, iMacs, Mac minis and Mac Studios. Logic-board faults are repaired at component level on our own bench. Message us on WhatsApp for today's exact price on your model." },
+        { q: "Who will work on my Mac?", a: "Day-to-day MacBook repairs are led by Shafiq, board-level work is Usman's bench, Ali handles data recovery, iMac and Mac mini, and Hamza covers iPhone and iPad. The founder, Abdul Aziz, holds the Apple Certified Mac Technician credential." },
+        { q: "Do you repair the MacBook Pro M5?", a: "Yes - screens, batteries, keyboards, liquid damage and logic-board faults on the M5, M5 Pro and M5 Max models. Many are still under Apple's warranty, so we check coverage first and tell you if Apple should fix it free." },
       ]}
       relatedLinks={[
-        { label: "About us - full team", href: "/about", description: "Founders, technicians, location, contact." },
+        { label: "About us - full team", href: "/about", description: "Founder, technicians, location, contact." },
         { label: "Why no-fix-no-charge works", href: "/blog/no-fix-no-charge-policy-explained", description: "How experience enables the policy." },
         { label: "Repair near me - trust checklist", href: "/blog/iphone-repair-near-me-dubai", description: "How experience scores on the 10-question checklist." },
       ]}
