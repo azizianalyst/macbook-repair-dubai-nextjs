@@ -10,7 +10,6 @@ import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
 import { REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 
 const SERVICE_FILTERS: ReadonlyArray<"All" | ReviewService> = [
@@ -65,14 +64,12 @@ export default function Reviews() {
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
-      {/* Server-rendered JSON-LD: business + organization.
+      {/* Business + organization JSON-LD comes from <PageSchema> in app/reviews/page.tsx.
           NO AggregateRating and NO Review nodes. Self-collected reviews of your own
           business, marked up on your own site, are the review-snippet spam category
           Google excludes - it does not show stars for them and it can issue a manual
           action. The ratings stay as visible on-page text and live for real on the
           Google Business Profile, which is where they earn stars. (audit 2026-09-23) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
       <Hero
         variant="service"
         tone="dark"

@@ -18,7 +18,7 @@ import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
 import { GuideServiceBridge } from "@/components/blocks/GuideServiceBridge";
 import { Button } from "@/components/ui/button";
-import { article as articleSchema, localBusiness, organization, webSite, pageWithSpeakable } from "@/lib/schema";
+import { article as articleSchema, pageWithSpeakable } from "@/lib/schema";
 import { blogTopicForPath } from "@/lib/page-images";
 import ResponsiveImage from "@/components/blocks/ResponsiveImage";
 
@@ -72,12 +72,11 @@ export default function BlogPostTemplate(p: BlogPostProps) {
   // infographic > real workshop photo (never an empty placeholder).
   const featuredSrc =
     p.featuredImage ?? blogTopicForPath(p.path)?.src ?? "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg";
-  // Server-rendered JSON-LD: Article (+ HowTo etc. via extraSchemas), Organization, LocalBusiness
-  // and Speakable. Rendered as <script> in the JSX below (not via useSeo/useEffect) so it ships in
+  // Server-rendered JSON-LD: Article (+ HowTo etc. via extraSchemas) and the Speakable WebPage. Rendered as <script> in the JSX below (not via useSeo/useEffect) so it ships in
   // the prerendered HTML crawlers index — client-injected schema never reaches the static HTML.
-  // Pure /blog/* posts have no other Organization node, so it's required here to resolve the
-  // Article publisher @id; on guide pages that also get Org/LocalBusiness from <PageSchema>, the
-  // stable @ids merge harmlessly. BreadcrumbList is emitted by the rendered <BreadcrumbTrail>.
+  // Organization, LocalBusiness and WebSite come from <PageSchema> in each route's page.tsx (every
+  // blog route renders it), so they are not repeated here: emitting them in both places shipped two
+  // copies of each on ~220 pages (t-schema-dup-static). BreadcrumbList is emitted by <BreadcrumbTrail>.
   // Schema type is Article by default; admin posts can pick BlogPosting/NewsArticle, or "None" to
   // suppress the Article node entirely (e.g. a page that shouldn't be an article).
   const articleNode =
@@ -94,11 +93,6 @@ export default function BlogPostTemplate(p: BlogPostProps) {
           type: p.schemaType,
         });
   const schemaNodes = [
-    localBusiness(),
-    organization(),
-    // pageWithSpeakable below sets isPartOf:{"@id":…#website}; without webSite() here
-    // that @id resolved to nothing on 213 pages (audit 2026-09-23).
-    webSite(),
     ...(articleNode ? [articleNode] : []),
     pageWithSpeakable({ url: SITE.url + p.path, name: p.seoTitle }),
     ...(p.extraSchemas ?? []),

@@ -9,7 +9,7 @@ import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { Hero } from "@/components/blocks/Hero";
 import { imageForRoute } from "@/lib/page-images";
 import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization, webSite } from "@/lib/schema";
+import { ORG_ID, WEBSITE_ID, pageUrl } from "@/lib/schema";
 import { POSTS, CATEGORIES, categoryCounts, type Post } from "@/content/blog-posts";
 
 const PAGE_SIZE = 18;
@@ -143,6 +143,18 @@ function PostCard({ p }: { p: Post }) {
   );
 }
 
+const COLLECTION_PAGE = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl("/blog")}#collection`,
+  name: "Apple Repair Blog Dubai",
+  description: "Honest repair cost guides, how-to articles, and buying advice for Apple device owners in Dubai.",
+  url: pageUrl("/blog"),
+  isPartOf: { "@id": WEBSITE_ID },
+  publisher: { "@id": ORG_ID },
+  inLanguage: "en-AE",
+};
+
 export default function Blog() {
   // Hub rendered no imagery at all (audit 2026-09-23).
   const heroImg = imageForRoute("/blog");
@@ -162,32 +174,17 @@ export default function Blog() {
       description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of up to 12 months.",
       path: "/blog",
     },
-    // BreadcrumbList is emitted by the rendered <BreadcrumbTrail> below - don't duplicate it here.
-    [
-      localBusiness(),
-      organization(),
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "@id": "https://macbook-repair-dubai.ae/blog#collection",
-        name: "Apple Repair Blog Dubai",
-        description: "Honest repair cost guides, how-to articles, and buying advice for Apple device owners in Dubai.",
-        url: "https://macbook-repair-dubai.ae/blog",
-        isPartOf: { "@id": "https://macbook-repair-dubai.ae/#website" },
-        publisher: { "@id": "https://macbook-repair-dubai.ae/#organization" },
-        inLanguage: "en-AE",
-      },
-    ],
+    // All JSON-LD for this page is server-rendered (PageSchema + the CollectionPage below;
+    // BreadcrumbList via <BreadcrumbTrail>), so nothing is injected client-side.
+    [],
   );
 
   return (
     <PageShell>
       <div className="bg-bg-alt text-text -mb-[4rem]">
-        {/* Server-rendered entity nodes: previously useSeo-only, i.e. client-side,
-            so crawlers saw no business entity on the blog hub. (audit 2026-09-23) */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness()) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization()) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite()) }} />
+        {/* Organization, LocalBusiness and WebSite come from <PageSchema> in app/blog/page.tsx;
+            the CollectionPage is server-rendered here so it reaches the static HTML. */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(COLLECTION_PAGE) }} />
       <Hero
         variant="service"
         tone="dark"

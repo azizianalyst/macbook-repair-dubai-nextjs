@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
+import { PageSchema } from "@/components/PageSchema";
 import { metaForPath } from "@/lib/page-meta";
 import { ADMIN_POST_RENDER, ADMIN_POST_SLUGS } from "@/content/posts.generated";
 
@@ -67,6 +68,8 @@ export default async function AdminBlogPost({ params }: { params: Promise<{ slug
   if (!post) notFound();
 
   return (
+    <>
+    <PageSchema path={post.path} />
     <BlogPostTemplate
       seoTitle={post.seoTitle}
       seoDescription={post.seoDescription}
@@ -87,5 +90,6 @@ export default async function AdminBlogPost({ params }: { params: Promise<{ slug
       schemaType={post.schemaType}
       breadcrumbTitle={post.breadcrumbTitle || undefined}
     />
+    </>
   );
 }

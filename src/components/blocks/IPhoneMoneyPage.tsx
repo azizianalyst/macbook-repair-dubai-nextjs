@@ -40,7 +40,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/router-compat";
 import { PRESETS } from "@/data/form-presets";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { pageWithSpeakable, webSite } from "@/lib/schema";
+import { pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { NAP, TEAM } from "@/content/site";
 
@@ -225,7 +225,8 @@ export default function IPhoneMoneyPage(p: IPhoneMoneyPageProps) {
   const years = member?.years ?? 0;
   const role = p.reviewer.role ?? member?.specialisation ?? "";
   const reviews = pickReviews(p.reviewNames ?? [], { devices: reviewDevicesForPath(p.path), min: 3, seed: p.path });
-  const schemaNodes = [webSite(), pageWithSpeakable({ url: SITE.url + p.path, name: p.hero.title })];
+  // WebSite (with Organization and LocalBusiness) comes from <PageSchema> on all five routes (t-schema-dup-static).
+  const schemaNodes = [pageWithSpeakable({ url: SITE.url + p.path, name: p.hero.title })];
 
   return (
     <PageShell>

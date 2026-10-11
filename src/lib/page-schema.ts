@@ -7,8 +7,9 @@
 // indexes.
 //
 // Scope is deliberately conservative:
-//   • "/" and "/reviews" render their own (richer) schema in-view  -> [] here.
-//   • blog / admin / demo / informational (how-to, vs, guides, calculators, near-me) -> [].
+//   • "/" renders its own (richer) schema in-view -> [] here.
+//   • /reviews, blog / admin / demo / informational (how-to, vs, guides, calculators, near-me)
+//     -> the entity nodes only (Organization, LocalBusiness, WebSite); no Service node.
 //   • clear repair/service/model/area pages -> a Service node (NO price Offer, so there is
 //     zero risk of a price mismatch vs the visible page price; adding accurate per-page
 //     Offers is a safe follow-up once a verified price-per-route map exists).
@@ -80,7 +81,7 @@ function titleCase(slug: string): string {
     .join(" ");
 }
 
-// Pages that render their own schema in-view, or are not a Service offering.
+// Pages that are not a Service offering: they get the entity nodes only.
 const SELF_OR_NON_SERVICE = /^\/(reviews$|admin|landing-template-demo|blog)/;
 // Informational / commercial-intent pages that are not a single repair Service.
 // near-me pages are commercial/transactional (high conversion intent) — exclude from informational so they get entity + Service schema.
@@ -105,6 +106,7 @@ export function schemaForPath(path: string): unknown[] {
     return [
       organization(),
       localBusiness(),
+      webSite(),
       ...TEAM.map((t) =>
         person({
           name: t.name,
@@ -118,7 +120,7 @@ export function schemaForPath(path: string): unknown[] {
     ];
   }
   if (path === "/contact") {
-    return [organization(), localBusiness(), ...imageNodes];
+    return [organization(), localBusiness(), webSite(), ...imageNodes];
   }
 
   // Pricing page: the full priced-service Offer graph + the business entity. Prices come
@@ -134,6 +136,7 @@ export function schemaForPath(path: string): unknown[] {
     return [
       organization(), // was absent: localBusiness references #organization by @id
       localBusiness(),
+      webSite(),
       // No `price` passed: prices are hidden site-wide, so the Offers are emitted without a
       // figure. This MUST change in the same commit as the visible /pricing tables — a priced
       // Offer on a page that shows no price is a rich-result mismatch, and the reverse leaves
@@ -168,7 +171,7 @@ export function schemaForPath(path: string): unknown[] {
       url,
       category: isTradeIn ? "Electronics Trade-In Service" : "Used Electronics Dealer",
     };
-    return [organization(), localBusiness(), tradeService, ...imageNodes];
+    return [organization(), localBusiness(), webSite(), tradeService, ...imageNodes];
   }
 
   // These three branches used to return imageNodes ALONE, which left two holes
@@ -229,5 +232,7 @@ export function schemaForPath(path: string): unknown[] {
   // Prepending organization() + localBusiness() (the no-rating variant) resolves the @id in
   // static HTML on every page, consolidating the Azizi Technologies ↔ MacBook Repair Dubai
   // entity sitewide — the core fix for the post-migration entity fragmentation.
-  return [organization(), localBusiness(), serviceNode, ...placeNodes, ...imageNodes];
+  // webSite() too: guide pages on BlogPostTemplate match SERVICE_RE, and their Speakable WebPage
+  // points isPartOf at #website. The template no longer emits entity nodes itself (t-schema-dup-static).
+  return [organization(), localBusiness(), webSite(), serviceNode, ...placeNodes, ...imageNodes];
 }

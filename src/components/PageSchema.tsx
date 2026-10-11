@@ -1,7 +1,8 @@
 // Server component: renders route-appropriate JSON-LD into the STATIC HTML.
 // Rendered from each route's page.tsx (a server component) BEFORE the client view, so the
-// schema is present in the prerendered HTML that Google indexes. Returns nothing for routes
-// that supply their own schema in-view (home, /reviews) or that are not service pages.
+// schema is present in the prerendered HTML that Google indexes. Every route gets the entity nodes
+// (Organization, LocalBusiness, WebSite) from here, plus a Service node on service pages; the
+// homepage renders its own schema in-view and gets nothing here.
 import { preload } from "react-dom";
 import { schemaForPath } from "@/lib/page-schema";
 import { isServicePath } from "@/lib/related-services";
