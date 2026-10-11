@@ -213,7 +213,7 @@ export default function MacBookNotTurningOn() {
         <QuickAnswer
           tone="dark"
           question="Why won't my MacBook turn on?"
-          answer="The most common causes are a drained or failed battery, a blown fuse on the logic board, liquid damage, or a failed DC-in board. We diagnose it free at our Media City workshop, and most dead Macs are repaired the same day once the cause is confirmed. If we cannot fix it there is no fee, and the data can usually still be recovered."
+          answer="The usual causes are a drained or failed battery, a blown fuse on the logic board, liquid damage, or a failed DC-in board. We diagnose it free at our Media City workshop, and most dead Macs are repaired the same day once the cause is confirmed. No fix, no fee, and the data can usually still be recovered."
         />
 
         {/* USP strip */}

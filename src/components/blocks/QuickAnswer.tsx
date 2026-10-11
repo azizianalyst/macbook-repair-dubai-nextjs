@@ -93,17 +93,26 @@ export function deriveServiceQuickAnswer(opts: {
   const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
   const name = withoutTrailingCity(opts.serviceName);
   const warranty = opts.warrantyText ?? (warrantyLabel(warrantyDays) ? warrantyClause(warrantyDays) : "");
+  const close = warranty
+    ? `Parts and labour carry ${warranty}. Free pickup and delivery across Dubai mainland.`
+    : `Free pickup and delivery across Dubai mainland, with a written quote before any work.`;
+  const answer =
+    (opts.startingPrice > 0
+      ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
+      : `${name} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
+    `Typical turnaround: ${opts.timeline}. ` +
+    close;
+  // The page standard caps the answer at 60 words. Long multi-step timelines and the hub
+  // warranty wording pushed some pages to 64-74 (t34); those get the same facts, said shorter.
+  const compact = `${name} in Dubai is quoted per model and fault after a free check. Message us on WhatsApp. Typical turnaround: ${opts.timeline}. ${close}`;
   return {
     question: `How much does ${name} in Dubai cost?`,
-    answer:
-      (opts.startingPrice > 0
-        ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
-        : `${name} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
-      `Typical turnaround: ${opts.timeline}. ` +
-      (warranty
-        ? `Parts and labour carry ${warranty}. Free pickup and delivery across Dubai mainland.`
-        : `Free pickup and delivery across Dubai mainland, with a written quote before any work.`),
+    answer: wordCount(answer) > 60 ? compact : answer,
   };
+}
+
+function wordCount(s: string): number {
+  return (s.match(/[A-Za-z0-9][\w'’.,/-]*/g) || []).length;
 }
 
 export function deriveFamilyQuickAnswer(opts: {

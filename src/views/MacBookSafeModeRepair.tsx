@@ -71,7 +71,7 @@ export default function MacBookSafeModeRepair() {
       ]}
       quickAnswer={{
         question: "What does MacBook safe mode repair cost in Dubai and how does it work?",
-        answer: "Safe mode diagnosis is free at MacBook Repair Dubai, and software repair is quoted in writing with same-day turnaround. Safe mode boots macOS with only Apple's own software, so we can tell within minutes whether your crashes, boot loops or instability are software or hardware - then fix the cause. If the Mac won't enter safe mode at all, that points to a drive, RAM or logic-board fault, which we repair on the bench in Dubai Media City.",
+        answer: "Safe mode diagnosis is free at MacBook Repair Dubai, and software repair is quoted in writing. Safe mode loads only Apple's own software, so within minutes we can tell whether crashes or boot loops come from software or hardware. A Mac that won't enter safe mode points to a drive, RAM or logic-board fault, which we repair on the bench.",
       }}
     />
   );
