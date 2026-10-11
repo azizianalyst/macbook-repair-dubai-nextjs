@@ -25,8 +25,14 @@ const routes = [];
 
 // A quoted string literal with proper escape handling, for ", ' or `.
 const STR = '("(?:\\\\.|[^"\\\\])*"|\'(?:\\\\.|[^\'\\\\])*\'|`(?:\\\\.|[^`\\\\])*`)';
+// The review labels are the one interpolation copy is allowed (t-review-count-from-data): resolve
+// them from business.generated.ts (written from data/seo.json by gen-business, which runs first).
+const BIZ = (() => { try { return require("fs").readFileSync(require("path").join(__dirname, "..", "src", "content", "business.generated.ts"), "utf8"); } catch { return ""; } })();
+const num = (name) => Number((BIZ.match(new RegExp("export const " + name + " = ([0-9.]+)")) || [])[1] || 0);
+const LABELS = { "${REVIEW_COUNT_LABEL}": `${num("REVIEW_COUNT")}+`, "${RATING_LABEL}": num("REVIEW_AVERAGE").toFixed(1) };
 const unquote = (raw) => {
-  const body = raw.slice(1, -1);
+  let body = raw.slice(1, -1);
+  for (const [k, v] of Object.entries(LABELS)) body = body.split(k).join(v);
   if (body.includes("${")) return null; // interpolated template -> not a static literal
   return body.replace(/\\(["'`\\])/g, "$1").replace(/\\n/g, " ").trim();
 };

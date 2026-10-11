@@ -27,6 +27,7 @@ import { REVIEWS } from "@/content/reviews";
 import { AREAS, type AreaConfig } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { areaTopicForSlug } from "@/lib/page-images";
+import { REVIEW_COUNT_LABEL } from "@/content/site";
 
 // Every Mac family we collect from, shown on every area page. The domain is MacBook-led,
 // but the same courier run covers the desktops - these links are how an area page ranks
@@ -250,7 +251,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           <SectionHeading
             eyebrow="What customers say"
             title="Customer reviews from across Dubai"
-            sub={`232+ five-star Google reviews. A small sample below - many are from ${cfg.area} residents and office workers who used the free pickup service.`}
+            sub={`${REVIEW_COUNT_LABEL} five-star Google reviews. A small sample below - many are from ${cfg.area} residents and office workers who used the free pickup service.`}
           />
           <ReviewGrid tone="dark" reviews={reviews} />
           <p className="text-[14px] text-text-muted mt-md">

@@ -30,6 +30,10 @@ export const NAP = {
 };
 export const REVIEW_COUNT = GEN_REVIEW_COUNT;
 export const REVIEW_AVERAGE = GEN_REVIEW_AVERAGE;
+// Display labels for the Google rating (e.g. 232+ and 5.0). Copy uses these, never typed numbers,
+// so the site follows data/seo.json (t-review-count-from-data).
+export const REVIEW_COUNT_LABEL = `${REVIEW_COUNT}+`;
+export const RATING_LABEL = REVIEW_AVERAGE.toFixed(1);
 
 // Visible "content reviewed" freshness signal (AEO lever), now edited in the admin Business tab.
 export const CONTENT_REVIEWED = GEN_CONTENT_REVIEWED;

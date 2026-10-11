@@ -16,7 +16,7 @@ import { VsAppleStore } from "@/components/blocks/VsAppleStore";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const DEVICES = [
   { icon: Laptop,     label: "MacBook",          from: "Price on request",  href: "/",                          detail: "Air, Pro 13–16\", Intel & M1–M5. Screen, battery, keyboard, logic board." },
@@ -34,12 +34,12 @@ const WHY_US = [
   "Free pickup and delivery across all Dubai Mainland",
   "Written warranty up to 12 months on every repair",
   "Free diagnosis, no fix, no charge policy",
-  "5.0 stars · 232+ verified Google reviews",
+  `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
 ];
 
 const FAQS = [
   { q: "What is the best Apple repair service in Dubai?",
-    a: "The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, gives a written warranty that states the period for each repair, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
+    a: `The best Apple repair service in Dubai covers every Apple device (not just iPhones), does component-level logic board repair, gives a written warranty that states the period for each repair, offers same-day service for common repairs, and has transparent pricing before work starts. We've done this since 2004 at Concord Tower, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews.` },
   { q: "Can one shop repair all my Apple devices in Dubai?",
     a: "Yes, we repair MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations including Pro M5). One workshop, one warranty card, one WhatsApp thread." },
   { q: "How does the best Apple repair in Dubai compare to Apple Store?",
@@ -60,7 +60,7 @@ export default function BestAppleRepair() {
   useSeo({
     title: "Best Apple Repair Dubai: What to Look For in 2026",
     description:
-      "Choosing an Apple repair shop in Dubai? Check parts, warranty, board-level skill and real reviews first. Independent, 5.0 on Google. WhatsApp for a quote.",
+      `Choosing an Apple repair shop in Dubai? Check parts, warranty, board-level skill and real reviews first. Independent, ${RATING_LABEL} on Google. WhatsApp for a quote.`,
     path: "/best-apple-repair-dubai",
   });
 
@@ -77,10 +77,10 @@ export default function BestAppleRepair() {
           tone="dark"
           eyebrow="Buyer’s guide · Dubai · Since 2004"
           title="Finding the best Apple repair in Dubai"
-          subtitle="MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. 5.0 stars · 232+ reviews. Free pickup. Warranty up to 12 months."
+          subtitle={`MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews. Free pickup. Warranty up to 12 months.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span>6 Apple device families</span>
             <span>·</span>
@@ -98,7 +98,7 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer="The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, 5.0 stars from 232+ reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device."
+            answer={`The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} reviews, written warranty up to 12 months, free diagnosis, free pickup across Dubai. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device.`}
           />
         </section>
 
@@ -123,7 +123,7 @@ export default function BestAppleRepair() {
         {/* Why us */}
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us 5.0 on Google</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us {RATING_LABEL} on Google</h2>
             <ul className="grid gap-sm md:grid-cols-2">
               {WHY_US.map((item) => (
                 <li key={item} className="flex items-start gap-sm text-[15px]">
@@ -156,7 +156,7 @@ export default function BestAppleRepair() {
 
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">232+ reviews, what customers say</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">{REVIEW_COUNT_LABEL} reviews, what customers say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
           </div>
         </section>

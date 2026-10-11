@@ -15,7 +15,7 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const REPAIRS = [
   { label: "Screen replacement",     price: "Price on request",  time: "40 min",   models: "iPhone 6 through 17 Pro Max" },
@@ -84,7 +84,7 @@ export default function IPhoneRepairNearMe() {
           subtitle="Same-day screen and battery repair. Free pickup from your door. Message us on WhatsApp for today's price at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
             <span>·</span>

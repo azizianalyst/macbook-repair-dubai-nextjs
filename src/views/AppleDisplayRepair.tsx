@@ -19,7 +19,7 @@ import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 
@@ -220,7 +220,7 @@ export default function AppleDisplayRepair() {
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">What customers say</h2>
-          <p className="text-[15px] text-text-muted mb-md">Verbatim from Google. Nothing edited, nothing incentivised. <Link to="/reviews" className="text-accent underline underline-offset-2">Read all 232+ →</Link></p>
+          <p className="text-[15px] text-text-muted mb-md">Verbatim from Google. Nothing edited, nothing incentivised. <Link to="/reviews" className="text-accent underline underline-offset-2">Read all {REVIEW_COUNT_LABEL} →</Link></p>
           <ReviewGrid reviews={reviews} tone="dark" />
         </div>
       </section>

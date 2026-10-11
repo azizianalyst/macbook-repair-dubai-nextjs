@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import type { LucideIcon } from "lucide-react";
 
@@ -550,7 +550,7 @@ export default function MacBookAirBatteryReplacement() {
             <div className="text-center mb-[56px]">
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
+              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">{REVIEW_COUNT_LABEL} verified Google reviews. Here are three.</p>
             </div>
             <div className="grid gap-lg md:grid-cols-3">
               {reviews.map((r) => ({ name: r.name, body: r.text })).map((t) => (

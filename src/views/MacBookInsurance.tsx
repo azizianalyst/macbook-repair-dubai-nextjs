@@ -16,7 +16,7 @@ import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const COVERAGE = [
   { title: "Accidental Damage", body: "Drops, knocks and cracked casings on MacBook Air, MacBook Pro and other Apple laptops. We diagnose the damage and repair it under the terms set in your plan." },
@@ -127,7 +127,7 @@ export default function MacBookInsurance() {
         subtitle="Protect your MacBook against accidental damage, liquid spills, screen breaks, theft or loss. Independent cover from a Dubai workshop, priced per device and quoted on WhatsApp - not a fixed public premium."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>Repaired in-house since 2004</span>
           <span>·</span>

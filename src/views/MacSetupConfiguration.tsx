@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/router-compat";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const SERVICES = [
   { title: "New Mac setup", body: "Out-of-box setup, macOS configured, system preferences and security tuned, ready to work the moment you switch on.", icon: Settings },
@@ -84,7 +84,7 @@ export default function MacSetupConfiguration() {
         subtitle="New Mac to set up, or moving from an old Mac or PC? We configure macOS, email, Wi-Fi, VPN, Office, iCloud and migrate all your data - in-shop, on-site, or with free pickup and delivery."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>Same-day service</span>
           <span>·</span>

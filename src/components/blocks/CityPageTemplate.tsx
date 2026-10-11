@@ -28,6 +28,7 @@ import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
 import { COMMON_SERVICES, CITIES, type CityConfig } from "@/content/cities";
 import { areaTopicForSlug } from "@/lib/page-images";
+import { REVIEW_COUNT_LABEL } from "@/content/site";
 
 export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
   const path = `/macbook-repair-${cfg.slug}`;
@@ -179,7 +180,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             <SectionHeading
               eyebrow="What customers say"
               title="Customer reviews"
-              sub="232+ five-star Google reviews from customers across the UAE who used our free collection-and-repair service."
+              sub={`${REVIEW_COUNT_LABEL} five-star Google reviews from customers across the UAE who used our free collection-and-repair service.`}
             />
             <ReviewGrid tone="dark" reviews={reviews} />
             <p className="text-[14px] text-text-muted mt-md">

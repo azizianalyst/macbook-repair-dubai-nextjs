@@ -23,6 +23,7 @@ import { pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
 import { DATA_RECOVERY_AREAS, type DataRecoveryAreaConfig } from "@/content/data-recovery-areas";
+import { REVIEW_COUNT_LABEL } from "@/content/site";
 
 const RELATED = [
   { label: "Mac data recovery (all Dubai)", href: "/mac-data-recovery-dubai" },
@@ -173,7 +174,7 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
             <SectionHeading
               eyebrow="What customers say"
               title="Customer reviews from across Dubai"
-              sub="232+ five-star Google reviews. A small sample below."
+              sub={`${REVIEW_COUNT_LABEL} five-star Google reviews. A small sample below.`}
             />
             <ReviewGrid tone="dark" reviews={reviews} />
             <p className="text-[14px] text-text-muted mt-md">

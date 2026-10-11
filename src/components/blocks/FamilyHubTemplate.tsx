@@ -20,7 +20,7 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { imageForFamily } from "@/lib/page-images";
 
 export type FamilyHubLink = { label: string; href: string; sub?: string };
@@ -148,7 +148,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
               <Star size={28} className="text-star fill-star" aria-hidden /> Reviews from {p.family} customers
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all 232+ →</Link>
+              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</Link>
             </p>
             <ReviewGrid reviews={reviews} />
           </section>

@@ -25,7 +25,7 @@ import { SITE } from "@/lib/seo";
 import { TakeawaysByline } from "@/components/blocks/TakeawaysByline";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
+import { NAP, warrantyLabel, warrantyClause, warrantyIso, REVIEW_COUNT_LABEL } from "@/content/site";
 import { IPHONE_HUBS } from "@/content/iphone-models";
 import { relatedServices, withCoverage } from "@/lib/related-services";
 import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
@@ -272,7 +272,7 @@ export default function IPhonePageTemplate(p: IPhoneTemplateProps) {
               <SectionHeading
                 eyebrow="What customers say"
                 title="Real iPhone-repair reviews"
-                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 232+ →</a></>}
+                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</a></>}
               />
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>

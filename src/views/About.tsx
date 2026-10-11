@@ -7,7 +7,7 @@ import { TechnicianBadge } from "@/components/blocks/TechnicianBadge";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { PageMeta } from "@/components/blocks/PageMeta";
 import { REVIEWS } from "@/content/reviews";
-import { TEAM, NAP } from "@/content/site";
+import { TEAM, NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 
 const MILESTONES = [
   { year: "2004", text: "Opened in Dubai under the Azizi Technologies name. First Apple-only repair shop in the area." },
@@ -15,7 +15,7 @@ const MILESTONES = [
   { year: "2015", text: "Added iMac and Mac mini coverage. Started doing logic-board level diagnostics in-house." },
   { year: "2020", text: "M1 MacBook Air launched - Shafiq spent 6 months mastering the new SoC architecture." },
   { year: "2024", text: "Component-level board work for T2-encrypted units. 40,000+ devices repaired to date." },
-  { year: "2026", text: "M5 MacBook Pro and iPhone 17 line fully supported. 232+ five-star Google reviews." },
+  { year: "2026", text: `M5 MacBook Pro and iPhone 17 line fully supported. ${REVIEW_COUNT_LABEL} five-star Google reviews.` },
 ];
 
 const COMPARE = [

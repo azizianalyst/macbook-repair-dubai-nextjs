@@ -15,7 +15,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const INCLUDED = [
   { title: "Scheduled servicing", body: "Planned check-ups for every Mac, iPhone and iPad in your fleet - no waiting for something to break." },
@@ -128,7 +128,7 @@ export default function AnnualMaintenanceContract() {
         subtitle="Keep every Mac, iPhone and iPad in your business serviced, healthy and repaired-on-priority for one predictable yearly fee. Scheduled visits, on-site support and discounted parts."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>On-site across Dubai</span>
           <span>·</span>

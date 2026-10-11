@@ -1,5 +1,6 @@
 "use client";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { REVIEW_COUNT_LABEL } from "@/content/site";
 
 export default function MacBookMicrophoneRepair() {
   return (
@@ -26,7 +27,7 @@ export default function MacBookMicrophoneRepair() {
             <strong>MacBook microphone repair in Dubai</strong> covers the lot: nobody can hear you on a call, your voice comes through muffled or far away, the input level meter in System Settings never moves, or the mic worked fine until a spill. Every MacBook since 2018 uses a three-mic array near the speaker grilles, wired through a flex to the logic board. When one element fails or corrodes, input drops or distorts. We test it, find whether it's the mic module, the cable or the audio codec on the board, and fix it with a <strong>warranty of up to 12 months</strong>.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Here's the catch, a dead mic isn't always hardware. Sometimes it's a macOS input setting, an app permission, or the audio codec rather than the mic itself. We diagnose before we quote, so you don't pay for a part you don't need. We've been on Apple hardware at Concord Tower, Dubai Media City since 2004, with 232+ Google reviews behind the bench.
+            Here's the catch, a dead mic isn't always hardware. Sometimes it's a macOS input setting, an app permission, or the audio codec rather than the mic itself. We diagnose before we quote, so you don't pay for a part you don't need. We've been on Apple hardware at Concord Tower, Dubai Media City since 2004, with {REVIEW_COUNT_LABEL} Google reviews behind the bench.
           </p>
         </>
       }

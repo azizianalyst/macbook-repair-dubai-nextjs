@@ -24,7 +24,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
-import { NAP, REVIEW_COUNT } from "@/content/site";
+import { NAP, REVIEW_COUNT, REVIEW_COUNT_LABEL } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
 
 const DEVICES = [
@@ -341,7 +341,7 @@ export default function MacRepairHub() {
             <div className="text-center mb-[56px]">
               <p className="text-center text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-4 max-w-none w-full">What customers say</p>
               <h2 className="text-center text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.1]">Real results from real people</h2>
-              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">232+ verified Google reviews. Here are three.</p>
+              <p className="text-center mt-5 text-[17px] text-on-primary-muted max-w-[50ch] mx-auto leading-relaxed">{REVIEW_COUNT_LABEL} verified Google reviews. Here are three.</p>
             </div>
             <ReviewGrid reviews={reviews} tone="dark" />
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">

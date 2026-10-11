@@ -14,7 +14,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const COVERED = [
   { title: "Logic board repair", body: "Board-level micro-soldering for no-power, boot-loop, power-rail and port faults Apple would only solve by swapping the whole board.", icon: Cpu },
@@ -81,7 +81,7 @@ export default function OutOfWarrantyRepair() {
         subtitle="Warranty expired or AppleCare run out? We repair MacBook, iMac, iPhone and iPad at component level, quote before any work so you can compare with Apple, and give a written warranty of up to 12 months depending on the repair."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>Genuine & OEM parts</span>
           <span>·</span>

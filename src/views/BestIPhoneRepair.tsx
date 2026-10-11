@@ -17,7 +17,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const REPAIRS = [
   { label: "Screen replacement",   price: "Price on request",  time: "40 min",   note: "OLED True Tone on iPhone 11–17" },
@@ -51,12 +51,12 @@ const WHY_US = [
   "Free pickup and delivery across Dubai Mainland",
   "Written warranty up to 12 months",
   "Free diagnosis, no fix, no charge",
-  "5.0 stars · 232+ verified Google reviews · Since 2004",
+  `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews · Since 2004`,
 ];
 
 const FAQS = [
   { q: "What is the best iPhone repair shop in Dubai?",
-    a: "The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty on every repair, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, 5.0 stars from 232+ verified reviews." },
+    a: `The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty on every repair, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews.` },
   { q: "How much does the best iPhone screen repair cost in Dubai?",
     a: "Quality iPhone screen repair in Dubai depends on your exact model, from older LCD phones to the iPhone 17 Pro Max OLED, so message us on WhatsApp for today's exact price on yours. Cheap shops use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a written warranty that states its period up front." },
   { q: "Can iPhone Face ID be damaged during a screen repair?",
@@ -96,10 +96,10 @@ export default function BestIPhoneRepair() {
           tone="dark"
           eyebrow="Buyer’s guide · Dubai · Since 2004"
           title="Finding the best iPhone repair in Dubai"
-          subtitle="OLED True Tone · Face ID preserved · Written warranty up to 12 months · 5.0 stars · 232+ reviews · WhatsApp us for your exact price."
+          subtitle={`OLED True Tone · Face ID preserved · Written warranty up to 12 months · ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · WhatsApp us for your exact price.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span>iPhone 6 through 17 Pro Max</span>
             <span>·</span>
@@ -117,7 +117,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer="The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. 5.0 stars from 232+ verified reviews since 2004. WhatsApp us for today's exact price on your model."
+            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
           />
         </section>
 
@@ -197,7 +197,7 @@ export default function BestIPhoneRepair() {
 
         {/* Why us */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us 5.0 on Google</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us {RATING_LABEL} on Google</h2>
           <ul className="grid gap-sm md:grid-cols-2">
             {WHY_US.map((item) => (
               <li key={item} className="flex items-start gap-sm text-[15px]">
@@ -229,7 +229,7 @@ export default function BestIPhoneRepair() {
 
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="text-[28px] md:text-[32px] mb-md">232+ reviews, what customers say</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-md">{REVIEW_COUNT_LABEL} reviews, what customers say</h2>
             <ReviewGrid reviews={reviews} tone="dark" />
           </div>
         </section>

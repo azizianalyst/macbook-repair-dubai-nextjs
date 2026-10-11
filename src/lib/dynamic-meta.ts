@@ -23,6 +23,7 @@ import { AREAS } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { CATEGORIES, postsInCategory } from "@/content/blog-posts";
 import { META_OVERRIDES, type PageMetaOverride } from "./page-meta-overrides.generated";
+import { REVIEW_COUNT_LABEL } from "@/content/site";
 
 type Meta = { title: string; description: string };
 
@@ -110,8 +111,8 @@ for (const c of CATEGORIES) {
 // Bespoke gap pages whose authored copy lived only in the view (schema-only via useSeo)
 // or was never written into route-meta.generated.ts. Clean, length-safe values.
 MAP["/reviews"] = {
-  title: "MacBook Repair Dubai Reviews - 232+ 5-Star Ratings",
-  description: "Read 232+ verified five-star reviews of MacBook Repair Dubai. Since 2004, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.",
+  title: `MacBook Repair Dubai Reviews - ${REVIEW_COUNT_LABEL} 5-Star Ratings`,
+  description: `Read ${REVIEW_COUNT_LABEL} verified five-star reviews of MacBook Repair Dubai. Since 2004, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.`,
 };
 MAP["/imac-screen-repair-dubai"] = {
   title: `iMac Screen Repair Dubai - 24" M-Series & 27" 5K`,

@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 
 const PRICING: PricingRow[] = [
   { model: "Standard ultrasonic clean (no board damage)",   price: 299,  timeline: "1-2 days" },
@@ -371,7 +371,7 @@ export default function MacBookWaterDamageRepair() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real water-damage reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 232+ →</a>
+              All six reviews are verbatim from Google. Coffee spills, beach water, sugar drinks. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</a>
             </p>
             <ReviewGrid reviews={reviews} tone="dark" />
           </section>

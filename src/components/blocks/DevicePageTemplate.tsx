@@ -29,7 +29,7 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
-import { NAP, warrantyLabel, warrantyClause, warrantyIso } from "@/content/site";
+import { NAP, warrantyLabel, warrantyClause, warrantyIso, REVIEW_COUNT_LABEL } from "@/content/site";
 import { DEVICE_FAMILY, type DeviceFamily } from "@/content/device-hubs";
 import { relatedServices, withCoverage } from "@/lib/related-services";
 import { topicForPath } from "@/lib/page-images";
@@ -282,7 +282,7 @@ export default function DevicePageTemplate(p: DeviceTemplateProps) {
               <SectionHeading
                 eyebrow="What customers say"
                 title={`Real ${fam.noun}-repair reviews`}
-                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 232+ →</a></>}
+                sub={<>Verbatim from Google. Nothing edited. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</a></>}
               />
               <ReviewGrid reviews={reviews} tone="dark" />
             </section>

@@ -15,7 +15,7 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { useSeo } from "@/hooks/use-seo";
 import { REVIEWS } from "@/content/reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const REPAIRS = [
   { icon: Laptop,    label: "MacBook screen repair",      price: "On request",  time: "Same day",  note: "Air & Pro 13\". IPS panels in stock" },
@@ -84,7 +84,7 @@ export default function MacRepairNearMe() {
           subtitle="MacBook, iMac & Mac mini. Screen, battery, keyboard and board-level repair. Free diagnosis and free pickup. Same-day at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
             <span>·</span>

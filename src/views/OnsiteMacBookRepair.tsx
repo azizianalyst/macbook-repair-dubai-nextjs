@@ -16,7 +16,7 @@ import { LocationBlock } from "@/components/blocks/LocationBlock";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, breadcrumbs, itemList } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const STEPS = [
   { title: "Message us your model and location", body: "Send your MacBook model and your area on WhatsApp or call 055 741 3706. Tell us the fault and we point you at a likely fix and a price range before anyone moves." },
@@ -101,7 +101,7 @@ export default function OnsiteMacBookRepair() {
         subtitle="Stay at your desk - we come to you. Free pickup and delivery across Dubai mainland, free diagnosis, and most repairs returned the same day. No callout charge."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>Free pickup across Dubai</span>
           <span>·</span>

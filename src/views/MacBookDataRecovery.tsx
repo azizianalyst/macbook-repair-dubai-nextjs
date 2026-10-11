@@ -37,7 +37,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 
 // Timelines are given with the written quote after the free assessment (no fixed figures).
 const QUOTED = "With your quote";
@@ -380,7 +380,7 @@ export default function MacBookDataRecovery() {
               <Star size={28} className="text-star fill-star" aria-hidden /> Real data-recovery reviews
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all 232+ →</a>
+              All six reviews verbatim from Google. <a href="/reviews/" className="text-accent font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</a>
             </p>
             <ReviewGrid tone="dark" reviews={reviews} />
           </section>

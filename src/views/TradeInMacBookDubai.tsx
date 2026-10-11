@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, breadcrumbs } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const PATH = "/trade-in-macbook-dubai";
 
@@ -149,7 +149,7 @@ export default function TradeInMacBookDubai() {
         subtitle="Trade in your old Mac toward a newer model - we assess it, value it fairly, and credit your device. Working or faulty, we buy both. Free valuation, free collection across Dubai, same-day payment or instant upgrade credit."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>40,000+ Apple devices serviced</span>
           <span>·</span>

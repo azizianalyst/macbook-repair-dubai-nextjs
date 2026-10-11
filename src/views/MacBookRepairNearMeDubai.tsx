@@ -20,7 +20,7 @@ import {
   localBusiness, organization, service as serviceSchema, webPage,
 } from "@/lib/schema";
 import { REVIEWS } from "@/content/reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const TRAVEL_TIMES = [
   // ── Closest (≤10 min) ──────────────────────────────────────────────────
@@ -181,7 +181,7 @@ export default function MacBookRepairNearMeDubai() {
           <span className="text-text-muted">·</span>
           <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 120 m from Media City Metro</span>
           <span className="text-text-muted">·</span>
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> 5.0 · 232+ reviews</span>
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
         </p>
       </Hero>
 

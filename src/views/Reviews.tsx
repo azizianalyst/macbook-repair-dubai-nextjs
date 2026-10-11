@@ -10,7 +10,7 @@ import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
-import { REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { REVIEW_COUNT, REVIEW_AVERAGE, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const SERVICE_FILTERS: ReadonlyArray<"All" | ReviewService> = [
   "All", "MacBook", "iMac", "iPhone", "iPad", "Water Damage", "Battery", "Screen",
@@ -55,7 +55,7 @@ export default function Reviews() {
   useSeo(
     {
       title: `${REVIEW_COUNT}+ Google Reviews · ${REVIEW_AVERAGE} Stars - MacBook Repair Dubai`,
-      description: `${REVIEW_COUNT}+ verified Google reviews, ${REVIEW_AVERAGE}★ average. Real customers, real Apple repairs - MacBook, iMac, iPhone, iPad. Concord Tower, Dubai Media City.`,
+      description: `${REVIEW_COUNT_LABEL} verified Google reviews, ${RATING_LABEL}★ average. Real customers, real Apple repairs - MacBook, iMac, iPhone, iPad. Concord Tower, Dubai Media City.`,
       path: "/reviews",
     },
     [],
@@ -102,7 +102,7 @@ export default function Reviews() {
             . We never rewrite a review&apos;s wording, but this page shows a selection rather
             than all of them, and longer reviews are shortened with an ellipsis - open any of
             them on Google to read the full text. {REVIEW_COUNT}+ Google reviews,{" "}
-            {REVIEW_AVERAGE} average rating - from MacBook screen and battery repairs to water damage
+            {RATING_LABEL} average rating - from MacBook screen and battery repairs to water damage
             recovery, iMac upgrades, iPhone screen replacements, and iPad repairs, all at{" "}
             our Concord Tower workshop in Dubai Media City.
           </p>
@@ -194,8 +194,8 @@ export default function Reviews() {
             </Button>
           </div>
           <div className="flex flex-col gap-2 text-[14px] text-text-muted">
-            <div className="flex items-start gap-2"><span className="text-accent font-bold">232+</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
-            <div className="flex items-start gap-2"><span className="text-accent font-bold">5.0★</span><span>average rating across all service types</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">{REVIEW_COUNT_LABEL}</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">{RATING_LABEL}★</span><span>average rating across all service types</span></div>
             <div className="flex items-start gap-2"><span className="text-accent font-bold">100%</span><span>of reviews get a personal reply from Shafiq within 24 hours</span></div>
           </div>
         </div>

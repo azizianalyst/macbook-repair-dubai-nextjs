@@ -10,9 +10,21 @@ const STORE = process.env.SEO_DB || path.join(ROOT, "data", "seo.json");
 const OUT = path.join(ROOT, "src", "lib", "page-meta-overrides.generated.ts");
 
 let pageMeta = [];
-try { const d = JSON.parse(fs.readFileSync(STORE, "utf8")); pageMeta = Array.isArray(d.pageMeta) ? d.pageMeta : []; } catch {}
+let business = {};
+try {
+  const d = JSON.parse(fs.readFileSync(STORE, "utf8"));
+  pageMeta = Array.isArray(d.pageMeta) ? d.pageMeta : [];
+  business = d.business || {};
+} catch {}
 
-const str = (o, k, v) => { if (v && String(v).trim()) o[k] = String(v).trim(); };
+// Review numbers are never typed into meta: {{reviewCount}} -> "232+" and {{rating}} -> "5.0",
+// filled from the same business fields gen-business.cjs reads (t-review-count-from-data).
+const REVIEW_TOKENS = {
+  "{{reviewCount}}": `${Number(business.reviewCount) || 0}+`,
+  "{{rating}}": (Number(business.reviewAverage) || 0).toFixed(1),
+};
+const fill = (v) => Object.entries(REVIEW_TOKENS).reduce((s, [t, val]) => s.split(t).join(val), v);
+const str = (o, k, v) => { if (v && String(v).trim()) o[k] = fill(String(v).trim()); };
 const bool = (o, k, v) => { if (v === true) o[k] = true; };
 
 const map = {};

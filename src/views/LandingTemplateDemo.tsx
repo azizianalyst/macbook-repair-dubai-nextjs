@@ -20,7 +20,7 @@ import { GradientText } from "@/components/blocks/GradientText";
 // inline contextual link style for the dark band (descriptive-anchor internal links)
 const ilink = "text-accent underline underline-offset-2 hover:text-white rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 import { localBusiness, organization, service as serviceSchema, faqPage, person, aggregateRating, reviewSchema } from "@/lib/schema";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const WHATSAPP_QUOTE = `${NAP.whatsappUrl}?text=${encodeURIComponent(
   "Hi Shafiq, MacBook screen repair quote please. Model: ",
@@ -283,8 +283,8 @@ export default function LandingTemplateDemo() {
           status: { label: "Live", tone: "live" },
           stats: [
             { value: "3,400+", label: "Screens fitted" },
-            { value: "5.0", label: "Google rating" },
-            { value: "232+", label: "Reviews" },
+            { value: RATING_LABEL, label: "Google rating" },
+            { value: REVIEW_COUNT_LABEL, label: "Reviews" },
             { value: "Same-day", label: "Most models" },
           ],
           breakdown: [

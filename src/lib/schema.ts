@@ -2,7 +2,7 @@
 // inject via <script type="application/ld+json">{JSON.stringify(...)}</script>
 
 import { SITE } from "./seo";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 import { SITE_SETTINGS } from "@/content/settings.generated";
 
 export const ORG_ID = `${SITE.url}/#organization`;
@@ -35,7 +35,7 @@ export function localBusiness() {
     name: SITE.name,
     legalName: "Azizi Technologies",
     description:
-      "Independent Mac repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro. Screen, battery, keyboard, water-damage, logic-board and data-recovery work carried out at component level on our own bench, not sent away. iPhone and iPad are repaired too. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated 5.0 from 232+ Google reviews.",
+      `Independent Mac repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro. Screen, battery, keyboard, water-damage, logic-board and data-recovery work carried out at component level on our own bench, not sent away. iPhone and iPad are repaired too. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated ${RATING_LABEL} from ${REVIEW_COUNT_LABEL} Google reviews.`,
     // LocalBusiness.image tells Google "these are photographs of this business",
     // so it must only ever hold real documentary photos. It previously listed the
     // three /images/brand/* AI-generated placeholders - including a synthetic
