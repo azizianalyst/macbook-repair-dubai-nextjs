@@ -570,7 +570,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-pro-intel-screen-repair-cost-dubai": {
     "title": "MacBook Pro Intel Screen Repair Cost Dubai 2026: All Models Price Guide",
-    "description": "MacBook Pro Intel screen repair in Dubai: LCD panel and Flexgate backlight cable fixes for 2016-2020 models. Same-day, 90-day warranty. Message us for a quote."
+    "description": "MacBook Pro Intel screen repair in Dubai: LCD panels on 2016-2020 models, the Flexgate cable on 2016-2017. Same-day, 90-day warranty. Message us today."
   },
   "/blog/macbook-pro-m1-battery-replacement-cost-dubai": {
     "title": "MacBook Pro M1 Battery Replacement Cost Dubai 2026: Complete Guide",
@@ -1850,6 +1850,6 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     "title": "White or Grey Horizontal Lines on MacBook Screen (Fix)",
-    "description": "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2019 MacBook Pro, or a GPU fault. Diagnosis guide plus free Dubai check."
+    "description": "Horizontal lines on a MacBook screen point to a loose display cable, Flexgate on 2016–2017 MacBook Pro, or a GPU fault. Free Dubai check, WhatsApp us."
   }
 };
