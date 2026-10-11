@@ -18,7 +18,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/apple-repair-programs-dubai": {
     "title": "Apple Free Repair Programs Dubai - Check If You Qualify",
-    "description": "Apple offers free repairs for specific defects on certain models. Butterfly keyboard, Flexgate, iPhone 11 display issues. We help check your eligibility."
+    "description": "See which Apple free repair programmes are open and which have ended, from the butterfly keyboard to Flexgate. We check your serial free. WhatsApp us."
   },
   "/apple-t2-chip-data-recovery-dubai": {
     "title": "Apple T2 Chip Data Recovery Dubai. MacBook 2018–2020 | No-Fix No-Charge",
