@@ -5,8 +5,8 @@ import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
 import { NAP } from "@/content/site";
 
-const LAST_UPDATED = "June 2026";
-const ISO_DATE = "2026-06-10";
+const LAST_UPDATED = "October 2026";
+const ISO_DATE = "2026-10-11";
 
 export default function Warranty() {
   useSeo(
@@ -35,10 +35,10 @@ export default function Warranty() {
       <div className="mb-lg"><GlassWarrantyNotice device="screen or glass" /></div>
       <LegalSection id="standard" title="1. How long your warranty lasts">
         <ul>
-          <li><strong>Hardware repairs</strong> - keyboard, trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
+          <li><strong>Hardware repairs</strong> - trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
           <li><strong>Screen replacements</strong> depend on the panel grade you choose: <strong>15 days</strong> on high-grade aftermarket panels and <strong>up to 3 months</strong> on genuine Apple panels. Both are bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
           <li><strong>Battery replacements</strong> (MacBook and iPhone) are covered for <strong>3 months</strong>, with an 80% capacity guarantee.</li>
-          <li><strong>Software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
+          <li><strong>Keyboard repairs, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
           <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date of pickup.</li>
           <li>The warranty travels with the device, not the customer - see the transfer rules below.</li>
           <li>Claim turnaround averages 24 hours from drop-off.</li>
