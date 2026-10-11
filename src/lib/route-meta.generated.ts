@@ -862,7 +862,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/why-21-years-experience-matters": {
     "title": "Why Two Decades of Apple Repair Experience Matter",
-    "description": "40,000+ MacBooks fixed since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts network, and team."
+    "description": "40,000+ devices repaired since October 2004. What two decades of Apple repair experience actually means for your repair quality, parts and team."
   },
   "/blog/why-does-my-macbook-air-m4-heat-up-so-quickly": {
     "title": "Why Does My MacBook Air M4 Heat Up So Quickly?",
