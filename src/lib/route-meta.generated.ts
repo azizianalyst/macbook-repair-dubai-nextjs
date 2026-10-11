@@ -1341,8 +1341,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Mac repair cost in Dubai. MacBook screen, battery and logic board; iMac screen. Free diagnosis, written quote before any work. Call 055 741 3706."
   },
   "/mac-repair-dubai": {
-    "title": "Mac Repair Dubai - Expert MacBook, iMac & Mac Studio Fix",
-    "description": "Reliable Mac repair in Dubai for MacBook, iMac & Mac Studio. Expert Apple technicians provide screen, battery, SSD & logic board repairs with genuine parts and same-day service."
+    "title": "Mac Repair Dubai. Free Diagnosis, Free Pickup",
+    "description": "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us."
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai. MacBook, iMac & Mac mini",
