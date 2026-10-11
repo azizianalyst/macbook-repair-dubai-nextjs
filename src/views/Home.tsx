@@ -844,7 +844,7 @@ export default function Home() {
                     <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
                   </div>
                   <p className="mt-2 text-[14px] leading-relaxed text-text-muted m-0 flex-1">“{r.text}”</p>
-                  <p className="mt-md mb-0 text-[12px] text-text-faint">{r.date} · Google review</p>
+                  <p className="mt-md mb-0 text-[12px] text-text-faint">{r.date ? `${r.date} · ` : ""}Google review</p>
                 </Reveal>
               ))}
             </div>

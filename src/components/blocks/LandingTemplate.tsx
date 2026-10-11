@@ -406,7 +406,7 @@ export default function LandingTemplate({
                     {r.text}
                   </blockquote>
                   <figcaption className="mt-md text-[13px] text-text-faint">
-                    <span className="font-semibold text-text">{r.name}</span> · {r.date}
+                    <span className="font-semibold text-text">{r.name}</span>{r.date ? ` · ${r.date}` : ""}
                   </figcaption>
                 </figure>
               ))}

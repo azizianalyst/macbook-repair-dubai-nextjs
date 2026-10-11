@@ -173,9 +173,9 @@ export default function LandingTemplateDemo() {
         ctaHref: "/reviews",
         ctaLabel: `Read all ${REVIEW_COUNT}+ reviews`,
         items: [
-          { name: "Pauline Georgiadis", date: "2 weeks ago", rating: 5, text: "My MacBook Pro had an issue with the screen sensor and a motherboard short. I was so stressed out! They fixed it in record time and the price was very fair. Highly recommend!" },
-          { name: "Lloyd Stevens", date: "2 weeks ago", rating: 5, text: "Very professional and quick service, my 2017 MacBook Pro had an issue with the screen and needed a new battery, Aziz sorted this out the same day. Highly recommend!" },
-          { name: "Neil Morecraft", date: "3 weeks ago", rating: 5, text: "Friendly staff, quick turnaround, and great value for money. My MacBook came back looking spotless after a thorough clean and service - really pleased with the overall experience." },
+          { name: "Pauline Georgiadis", date: "", rating: 5, text: "My MacBook Pro had an issue with the screen sensor and a motherboard short. I was so stressed out! They fixed it in record time and the price was very fair. Highly recommend!" },
+          { name: "Lloyd Stevens", date: "", rating: 5, text: "Very professional and quick service, my 2017 MacBook Pro had an issue with the screen and needed a new battery, Aziz sorted this out the same day. Highly recommend!" },
+          { name: "Neil Morecraft", date: "", rating: 5, text: "Friendly staff, quick turnaround, and great value for money. My MacBook came back looking spotless after a thorough clean and service - really pleased with the overall experience." },
         ],
       }}
 

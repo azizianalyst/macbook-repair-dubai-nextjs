@@ -4,7 +4,7 @@ import { cn, withSlash } from "@/lib/utils";
 
 export type Review = {
   name: string;
-  date: string;             // "April 2026" or "2 weeks ago"
+  date: string;             // absolute ("13 May 2025") or "" - relative dates are blanked at generation (t34)
   rating: 1 | 2 | 3 | 4 | 5;
   text: string;             // verbatim from REVIEWS_LIBRARY.md
   ownerResponse?: string;
@@ -26,7 +26,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
       <header className="flex items-center justify-between gap-sm">
         <div>
           <p className={cn("font-semibold text-[15px]", dark && "text-text")}>{name}</p>
-          <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>{date}</p>
+          {date && <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>{date}</p>}
         </div>
         <div className="flex" role="img" aria-label={`${rating} out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, i) => (
