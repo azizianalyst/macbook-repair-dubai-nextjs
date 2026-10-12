@@ -167,6 +167,7 @@ export default function BlogMacBookProM1TouchBarFailing() {
         { label: "MacBook Pro M1 common problems", href: "/blog/macbook-pro-m1-common-problems-dubai", description: "Full M1 issue guide covering Touch Bar, battery swelling, and charging." },
         { label: "MacBook Pro keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Keyboard and top case repair for all MacBook Pro models." },
         { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "All MacBook Pro models serviced in Dubai. Free diagnosis." },
+        { label: "MacBook Pro Touch Bar flickering", href: "/blog/macbook-touch-bar-not-working", description: "Flicker causes and fixes for every Touch Bar MacBook Pro, 2016-2022." },
       ]}
     />
   );

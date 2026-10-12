@@ -5,8 +5,8 @@
  *
  * Keywords given their own H2s: "macbook pro repair dubai" (#2 via the homepage today),
  * "apple macbook pro screen repair", "macbook pro battery replacement dubai",
- * "apple macbook pro service center near me" (comparison headline), "macbook pro frozen /
- * keeps restarting / won't turn on", the older-model terms (2012, 2015, A1278, A1398) and
+ * "apple macbook pro service center near me" (comparison headline), "macbook pro
+ * keeps restarting / won't turn on" ("macbook pro frozen" is owned by /macbook-freezing-repair-dubai/), the older-model terms (2012, 2015, A1278, A1398) and
  * "macbook pro price in dubai" via Apple's own attributed list prices. Screen and battery
  * sections are short and hand off to /macbook-pro-screen-repair-dubai/ and
  * /macbook-pro-battery-replacement-dubai/, the plan 2.1 targets for those clusters.
@@ -259,7 +259,7 @@ export default function MacBookProRepair() {
               panics, shutdowns at a healthy battery level or no power at all point to hardware: a failing SSD,
               a power-rail fault or corrosion from an old spill. We trace it on the board and quote the actual
               fault. See <InLink to="/mac-not-turning-on-dubai">Mac not turning on</InLink>,{" "}
-              <InLink to="/macbook-freezing-repair-dubai">MacBook freezing</InLink> and{" "}
+              <InLink to="/macbook-freezing-repair-dubai">MacBook Pro frozen</InLink> and{" "}
               <InLink to="/macbook-logic-board-repair-dubai">MacBook logic board repair</InLink>.
             </p>
           ),
