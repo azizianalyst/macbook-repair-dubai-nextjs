@@ -66,7 +66,7 @@ const COMMON_PROBLEMS = [
 
 const STEPS = [
   { title: "WhatsApp the model + a photo",
-    body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Retina from Touch Bar from XDR (and nano-texture) by serial and quote in 4-8 minutes, 9 am-10 pm Mon-Sat.' },
+    body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Retina from Touch Bar from XDR (and nano-texture) by serial and quote in 4-8 minutes, 9 am-7 pm Mon-Sat.' },
   { title: "Free pickup or drop-off",
     body: "Free pickup anywhere in Dubai mainland, or walk in to Office #45, Concord Tower, Media City. On-the-spot diagnosis in about 15 minutes — panel-side vs board-side confirmed before any work." },
   { title: "Panel swap under the microscope",
@@ -247,7 +247,7 @@ export default function MacBookProScreenRepair() {
               ))}
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 7 pm</span>
               <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>

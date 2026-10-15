@@ -172,7 +172,7 @@ export default function BlogAppleRepairCostReport2026() {
           <p>
             Every repair starts with a <Link to="/macbook-full-diagnostic-dubai">free diagnostic</Link>{" "}
             and a fixed quote, you approve the exact price before we touch anything. We're at Office
-            #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, open Mon-Sat 9am–10pm, with
+            #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, open Mon-Sat 9am–7pm, with
             free pickup and delivery across Dubai. See live prices on our{" "}
             <Link to="/pricing">pricing page</Link>, estimate your repair with the{" "}
             <Link to="/macbook-repair-cost-calculator-dubai">cost calculator</Link>, or WhatsApp{" "}

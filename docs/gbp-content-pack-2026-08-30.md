@@ -783,7 +783,7 @@ Walk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, o
 ```text
 Al Sufouh and Media City — we're your neighbours: Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.
 
-Walk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.
+Walk in any day except Sunday, 9am to 7pm (Friday break 12-2pm), no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.
 
 Or WhatsApp 055 741 3706 and we'll collect it from your door instead.
 

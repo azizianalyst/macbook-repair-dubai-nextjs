@@ -271,7 +271,7 @@ export default function GuideTop10MacBookProblems() {
           <p>
             If your MacBook problem isn't on this list, or the DIY checks didn't help, bring it to
             our workshop at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or
-            call us on 055 741 3706. We're open Monday to Saturday, 9am-10pm, offer free pickup
+            call us on 055 741 3706. We're open Monday to Saturday, 9am-7pm, offer free pickup
             across Dubai mainland, free diagnosis on every repair, and back our work with a written warranty of up to 12 months,
             depending on the repair. You can also{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
@@ -312,7 +312,7 @@ export default function GuideTop10MacBookProblems() {
         },
         {
           q: "Do you offer pickup and warranty?",
-          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a warranty of up to 12 months on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
+          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a warranty of up to 12 months on the work we do. We're open Monday to Saturday, 9am-7pm, in Dubai Media City.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

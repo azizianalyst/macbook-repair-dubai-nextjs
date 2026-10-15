@@ -53,7 +53,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
       { title: "Accidental deletion or a failed macOS update", body: "Files erased, a drive reformatted, or an update that left the Mac in a boot loop. Often highly recoverable if the Mac is left alone - every hour of continued use risks overwriting what we are trying to get back." },
     ],
     faqs: [
-      { q: "How fast can you collect my Mac from Dubai Marina?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). The courier runs a daily Marina loop, so Marina is one of the fastest collections we do." },
+      { q: "How fast can you collect my Mac from Dubai Marina?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). The courier runs a daily Marina loop, so Marina is one of the fastest collections we do." },
       { q: "My MacBook Air will not turn on at all. Are my files gone?", a: "Usually not. A Mac that will not power on is most often a board fault rather than dead storage, and the data is still intact on the SSD. We diagnose free of charge and tell you honestly what the chances are before you spend anything." },
       { q: "The SSD is soldered on Apple silicon. Can you still recover it?", a: "Yes - that is exactly the work. On M-series and T2 Macs the storage cannot be unplugged and read in another machine, so recovery happens at board level on our own bench. Most general laptop shops in Dubai do not attempt this." },
       { q: "What does Mac data recovery cost in Dubai Marina?", a: "It depends entirely on the failure - a logical recovery from a healthy drive is a very different job to a corroded board. Diagnosis is free and the price is fixed in writing on WhatsApp before any work starts, so you decide with the real number in front of you." },
@@ -83,7 +83,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
       { title: "Departing staff member's laptop that nobody can open", body: "A Mac left behind with no working account or a forgotten password. We can often recover the data with proof of ownership - we will ask for it, because we do not unlock machines that cannot be shown to belong to you." },
     ],
     faqs: [
-      { q: "How fast can you collect from JLT?", a: "Usually within 40 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). JLT is about 12 minutes from the workshop, so it sits on the daily Marina and JLT run." },
+      { q: "How fast can you collect from JLT?", a: "Usually within 40 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). JLT is about 12 minutes from the workshop, so it sits on the daily Marina and JLT run." },
       { q: "Our office Mac holds the accounts and it will not start. How urgent can you be?", a: "Tell us it is business-critical on WhatsApp and we treat it that way - collection the same morning where possible, data recovery attempted before any repair work, and a written update as soon as we know what we are dealing with." },
       { q: "Can you invoice the company instead of taking personal payment?", a: "Yes. We work with a number of DMCC and JLT businesses on invoiced terms. Send the company details on WhatsApp when you book the collection." },
       { q: "How is confidential company data handled?", a: "It stays at one bench with one technician rather than being passed between hands. We do not browse or copy anything beyond what the recovery requires, and we will wipe the drive before return and confirm in writing if your policy needs that." },
@@ -113,7 +113,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
       { title: "Drive reformatted or files deleted during a migration", body: "Someone moving to a new Mac wiped the old one before checking the transfer completed. Frequently very recoverable - provided the machine is put aside immediately rather than kept in use." },
     ],
     faqs: [
-      { q: "How fast can you collect from Business Bay?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Business Bay is about 18 minutes from the workshop." },
+      { q: "How fast can you collect from Business Bay?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Business Bay is about 18 minutes from the workshop." },
       { q: "Can you collect several machines from our office at once?", a: "Yes. One visit, each machine assessed free of charge, and a single written quote so you can decide what is worth recovering and in what order." },
       { q: "Can you invoice the company?", a: "Yes, we work with Dubai businesses on invoiced terms. We also run annual maintenance contracts for offices that would rather not be in this position again." },
       { q: "How confidential is this? The files are client work.", a: "Machines are handled at one bench and not passed between technicians. We do not browse or copy data beyond what the recovery requires, and we will wipe the drive before return and confirm in writing if you need that." },
@@ -145,7 +145,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
     faqs: [
       { q: "How is client-privileged data handled?", a: "One technician, one bench, no onward handling. We do not browse or copy data beyond what the recovery requires. If your firm needs a written custody acknowledgement or a confirmed secure wipe before return, tell us when you book and we will provide it." },
       { q: "The MacBook is FileVault encrypted. Can you still recover it?", a: "Only with your password or recovery key. That is the point of the encryption and we would not want it otherwise. If the failure is on the board we can usually restore access to the storage, but the decryption still needs your credentials - we will be clear about that before you commit to anything." },
-      { q: "How fast can you collect from DIFC?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). DIFC is about 20 minutes from the workshop, and a lobby handover avoids the visitor-pass wait." },
+      { q: "How fast can you collect from DIFC?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). DIFC is about 20 minutes from the workshop, and a lobby handover avoids the visitor-pass wait." },
       { q: "Can you recover to our own encrypted drive?", a: "Yes. Supply the destination drive and we will recover directly to it, then wipe the source Mac and confirm in writing if that is what you need." },
       { q: "Can you invoice the firm?", a: "Yes, on invoiced terms. Send the entity details on WhatsApp when you book the collection." },
       { q: "What does it cost?", a: "It depends on the failure mode. Diagnosis is free, the price is fixed in writing before any work starts, and if nothing is recovered there is no fee." },
@@ -173,7 +173,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
       { title: "Guest or short-let laptop failing away from home", body: "A failure while travelling, with no backup and no home workshop. We collect from the hotel or serviced-apartment desk, recover to a drive you keep, and return the Mac to the same desk." },
     ],
     faqs: [
-      { q: "How fast can you collect from Downtown Dubai?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Downtown is about 20 minutes from the workshop." },
+      { q: "How fast can you collect from Downtown Dubai?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Downtown is about 20 minutes from the workshop." },
       { q: "Can the concierge hand the Mac over for me?", a: "Yes. Authorise the concierge or building reception by name on WhatsApp and the courier collects from the desk. We send a photo confirming the handover and return to the same place." },
       { q: "I am staying in a hotel here and my MacBook died. Can you help?", a: "Yes, this is common. Leave it at the concierge under your name, tell us the hotel, and we collect, attempt recovery and return it to the same desk - usually inside 24-48 hours depending on the failure." },
       { q: "My MacBook Air will not turn on. Is the data lost?", a: "Usually not. A Mac that will not power on is most often a board fault with the storage intact. On Apple silicon the SSD is soldered, so it is board-level work - which we do, and most general shops do not." },
@@ -204,7 +204,7 @@ export const DATA_RECOVERY_AREAS: DataRecoveryAreaConfig[] = [
     ],
     faqs: [
       { q: "My MacBook got wet at the beach. What do I do right now?", a: "Switch it off and leave it off. Do not plug it in to charge and do not put it in rice. Message us immediately - corrosion is time-sensitive and the difference between 24 hours and a week is often the difference between recovering everything and recovering nothing." },
-      { q: "How fast can you collect from JBR?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). JBR is about 9 minutes from the workshop and sits on the daily Marina loop." },
+      { q: "How fast can you collect from JBR?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). JBR is about 9 minutes from the workshop and sits on the daily Marina loop." },
       { q: "Is liquid-damaged data actually recoverable?", a: "Often yes. Liquid usually kills the board long before it reaches the storage, so once the board is ultrasonic-cleaned we can frequently read the SSD. We will tell you the realistic odds after the free diagnosis rather than take your money on a long shot." },
       { q: "What does Mac data recovery cost in JBR?", a: "It depends on the failure - a logical recovery and a corroded board are very different jobs. Diagnosis is free, the price is fixed in writing first, and if nothing is recovered there is no fee." },
       { q: "Can you collect from a holiday let or short stay?", a: "Yes. Leave it with the building reception or the host under your name, tell us the tower on WhatsApp, and we collect and return to the same place." },

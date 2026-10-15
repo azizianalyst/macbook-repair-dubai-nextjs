@@ -298,7 +298,7 @@ export default function AppleRepair() {
           <h2 id="near-me" className="text-[28px] md:text-[32px] mb-md">Apple repair near me: one repair centre in Dubai Media City</h2>
           <div className="max-w-[75ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">
-              Our Apple repair shop is Office #45, 10th floor, Concord Tower, Al Sufouh, Dubai Media City, across from the Media City Metro station, with paid parking. Walk in Monday to Saturday, 9 am to 10 pm; on Sunday the workshop is closed, but WhatsApp us and we will book you in for Monday.
+              Our Apple repair shop is Office #45, 10th floor, Concord Tower, Al Sufouh, Dubai Media City, across from the Media City Metro station, with paid parking. Walk in Monday to Saturday, 9 am to 7 pm; on Sunday the workshop is closed, but WhatsApp us and we will book you in for Monday.
             </p>
             <p className="m-0">
               Need an Apple fix in Dubai but cannot come in? Pickup and delivery are free across Dubai mainland. Macs are collected by courier from <Link to="/macbook-repair-abu-dhabi" className={linkCls}>Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>Sharjah</Link> and repaired at the same bench; we have no branches. Area pickup details are on <Link to="/apple-repair-near-me-dubai" className={linkCls}>Apple repair near me</Link>. Looking for Apple's own service or an authorised centre? Read <Link to="/apple-service-center-dubai" className={linkCls}>our Apple service center page</Link>.

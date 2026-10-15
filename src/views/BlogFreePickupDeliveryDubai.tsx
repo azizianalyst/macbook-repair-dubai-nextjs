@@ -61,7 +61,7 @@ export default function BlogFreePickupDeliveryDubai() {
             <li>MacBook (or device) model and approximate year.</li>
             <li>Brief issue description ("won't turn on", "screen cracked", "battery dies in 2 hours").</li>
             <li>Pickup address.</li>
-            <li>Preferred time window (we can usually be there within 2 hours, 9am-10pm Mon-Sat).</li>
+            <li>Preferred time window (we can usually be there within 2 hours, 9am-7pm Mon-Sat).</li>
           </ul>
           <p>
             We confirm within 5 minutes with courier name, ETA, and an initial estimate for your
@@ -155,7 +155,7 @@ export default function BlogFreePickupDeliveryDubai() {
       faqs={[
         { q: "Is the courier insured for high-value MacBooks?", a: "Yes - every pickup is insured for the full device value via our courier insurance. For very high-value machines (e.g. a fully-spec'd Mac Pro), we send our own van with two staff and additional declared-value cover. Message us on WhatsApp if you want the cover details for your device." },
         { q: "What if I'm not home when the courier arrives?", a: "WhatsApp us - we re-schedule for free. We won't leave a device with a security guard or concierge unless you explicitly authorise it in writing." },
-        { q: "How fast is 'free pickup within 2 hours'?", a: "9am-10pm Mon-Sat, ~95% of pickups happen within 2 hours of confirmation. Outside those hours we book the next morning. Friday afternoon is the slowest window - allow 3-4 hours." },
+        { q: "How fast is 'free pickup within 2 hours'?", a: "9am-7pm Mon-Sat, ~95% of pickups happen within 2 hours of confirmation. Outside those hours we book the next morning. Friday afternoon is the slowest window - allow 3-4 hours." },
         { q: "Do you pickup from offices / co-working spaces?", a: "Yes - DIFC, ADGM, In5, AstroLabs, Letswork, Nest, etc. The courier signs in at reception and meets you at your desk or the lobby - your choice." },
         { q: "Can I track the courier?", a: "Yes - once dispatched, we send a Google Maps live-location link to your WhatsApp. Active until handover." },
         { q: "What if I change my mind after pickup?", a: "Up until repair work begins, you can call it off - device returned free, no charges. Once parts have been ordered or the device opened, we charge only the parts cost (not labour, not pickup)." },

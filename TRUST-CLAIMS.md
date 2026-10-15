@@ -96,7 +96,7 @@ Iryna Buchynska, Ali Hassan.
 |---|---|---|
 | **"Free loaner MacBook"** badge; homepage FAQ promises one "for any repair that takes longer than 2 hours" | sitewide USP strip + homepage | A stock and policy commitment. Confirm it exists and the 2-hour rule is real, or remove the badge. |
 | **"30-min appointment repair"** badge; homepage: "guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free)"; "Fixed in 30 minutes by appointment or it's free" (7 files incl. Footer) | sitewide | This is a money-back guarantee. It must be honoured on every appointment or it is a deceptive practice. Confirm, or drop the "or it's free" clause. |
-| "WhatsApp is answered 24/7" (homepage) vs hours Mon–Sat 9–10 | homepage | Either someone answers overnight and Sunday, or this should say "monitored". |
+| "WhatsApp is answered 24/7" (homepage) vs hours Mon–Sat 9–7 | homepage | Either someone answers overnight and Sunday, or this should say "monitored". |
 | "24/7 Customer Support" listed as an AMC feature | homepage | Same. |
 | "30-day money-back" / "money-back if the unlock fails" | iPhone iCloud + network unlock pages | Unlock services carry no parts warranty in `site.ts`; a refund promise is a separate policy. Confirm it. |
 | Job counts: "5,200+ batteries fitted", "2,100+ keyboards", "3,400+ screens", Usman "4,800+ batteries / 2,000+ keyboards since 2017" | ~6 pages | Plausible; unverifiable here. Usman's keyboard count ≈ the workshop's 21-year total — check. |

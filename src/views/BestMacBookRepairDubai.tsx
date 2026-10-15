@@ -56,7 +56,7 @@ const FAQS = [
   { q: "How much does the best MacBook repair shop charge in Dubai?",
     a: "Screen, battery, keyboard and logic-board repairs are all priced per model. Diagnosis is free, and you get a fixed written quote before any work starts, always lower than an Apple Store module swap. Generic shops may quote less but often use grey-market parts without warranty. Message us on WhatsApp for today's exact price on your MacBook." },
   { q: "Where is the best MacBook repair shop in Dubai located?",
-    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro station. Open Monday to Saturday 9 am–10 pm. Free pickup also available from anywhere in Dubai Mainland. WhatsApp 055 741 3706." },
+    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro station. Open Monday to Saturday 9 am–7 pm. Free pickup also available from anywhere in Dubai Mainland. WhatsApp 055 741 3706." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [0, 2, 5, 10, 17, 24];

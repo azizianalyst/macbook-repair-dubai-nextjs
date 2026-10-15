@@ -67,7 +67,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Dubai Marina?", a: "Within 30 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). The courier follows a daily Marina loop, so you almost never wait longer than half an hour." },
+      { q: "How long does pickup take from Dubai Marina?", a: "Within 30 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). The courier follows a daily Marina loop, so you almost never wait longer than half an hour." },
       { q: "What if I'm at the office in Marina or in Marina Plaza?", a: "Same service - the courier collects from any Marina office tower (Marina Plaza, Al Habtoor Business Tower, Marina Diamond) and meets you at the lobby reception or your floor, whichever you prefer." },
       { q: "Do you charge extra for Marina pickup?", a: "No. Pickup and return delivery are completely free for every Marina address. You only pay for the repair itself, with the price agreed in writing on WhatsApp before any work starts." },
       { q: "Can you repair my MacBook the same day if I'm in Marina?", a: "Yes for in-stock parts - screen, battery, keyboard, trackpad. Pickup at 10 am, repair finished by 4 pm, back in your apartment by 6 pm. Logic-board work takes 2-4 days." },
@@ -179,7 +179,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "What if I'm at the office in Business Bay?", a: "We're set up for this - most Business Bay pickups are office collections. The courier meets you at reception, signs in if needed, and you stay at your desk." },
       { q: "Do you charge extra for Business Bay pickup?", a: "No. Free pickup and free return delivery from any Business Bay tower, both office and residential." },
       { q: "Do you do on-site repairs at Business Bay offices?", a: "For battery and trackpad swaps we can do on-site if a meeting room is available, but it's usually faster to take the device to the workshop and return it the same afternoon." },
-      { q: "Can you collect after office hours?", a: "Yes - pickup runs until 9:30 pm Mon-Sat. If your concierge accepts deliveries after hours, we can collect and return at concierge with your written authorisation." },
+      { q: "Can you collect after office hours?", a: "Yes - pickup runs until 6:30 pm Mon-Sat. If your concierge accepts deliveries after hours, we can collect and return at concierge with your written authorisation." },
       { q: "Can you bill my company for the repair?", a: "Yes. We issue VAT invoices in the company name with the trade licence and TRN. Many Business Bay law firms, agencies and consultancies have us on file as a recurring vendor." },
       { q: "Can you handle multiple MacBooks at once for our office?", a: "Yes - corporate fleet repairs are common. Bulk discounts apply from 5+ devices. We'll come and collect, run a diagnostic on each, and return one written quote covering the whole batch." },
       { q: "Are you available for emergency weekend repairs for a Monday meeting?", a: "Yes. Saturday is a full opening day. WhatsApp on Friday, we'll collect Saturday morning, repair completed and returned to your office by Sunday evening, ready for Monday." },
@@ -416,7 +416,7 @@ const BASE_AREAS: AreaConfig[] = [
     whyChoose:
       "Bur Dubai is one of the busiest courier zones we cover. We collect from hotel receptions on Sheikh Khalifa Bin Zayed Road, apartments in Al Mankhool and Al Raffa, and offices near BurJuman mall, all free, all same-day return on stock parts. You get a written WhatsApp quote before any work starts. No diagnostic fee. No minimum charge. The written warranty of up to 12 months, depending on the repair, is the same whether you brought it in from the Marina or handed it to the courier outside your Bur Dubai building.",
     pickupNote:
-      "WhatsApp Shafiq on 055 741 3706 with your address (building name and road) and MacBook model. The courier confirms within 5 minutes and arrives within 50 minutes during business hours (9 am-10 pm Mon-Sat). Free for every Bur Dubai address.",
+      "WhatsApp Shafiq on 055 741 3706 with your address (building name and road) and MacBook model. The courier confirms within 5 minutes and arrives within 50 minutes during business hours (9 am-7 pm Mon-Sat). Free for every Bur Dubai address.",
     travel: [
       { from: "BurJuman Centre",            drive: "20 min", pickup: "Within 50 min" },
       { from: "Al Fahidi / Dubai Museum",   drive: "22 min", pickup: "Within 55 min" },
@@ -428,7 +428,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you pick up from Bur Dubai hotels?", a: "Yes, we collect from hotel receptions on Khalid Bin Al Waleed Road and Sheikh Khalifa Bin Zayed Road regularly. Leave the MacBook at reception with your name and a note, and the courier collects and delivers back to the same desk." },
-      { q: "How long is the pickup wait from Bur Dubai?", a: "Within 50 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). BurJuman and Al Mankhool are typically 40-50 minutes; Al Fahidi is slightly longer at peak traffic." },
+      { q: "How long is the pickup wait from Bur Dubai?", a: "Within 50 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). BurJuman and Al Mankhool are typically 40-50 minutes; Al Fahidi is slightly longer at peak traffic." },
       { q: "Is pickup free from Al Mankhool and Al Raffa?", a: "Yes, completely free. All Bur Dubai addresses are in our free pickup zone. You only pay for the repair, agreed in writing before we start." },
       { q: "Can you repair a MacBook the same day in Bur Dubai?", a: "Yes for screen, battery, keyboard and trackpad jobs with parts in stock. Collect by 10 am, repair finished by 4 pm, delivered back by 6 pm. Logic board work takes 2-4 days." },
       { q: "Do you cover Karama from here?", a: "Karama is a separate page but yes, it is within our zone. WhatsApp us with the exact address." },
@@ -463,7 +463,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How fast is pickup from Karama?", a: "Within 45 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Karama is one of our quickest zones." },
+      { q: "How fast is pickup from Karama?", a: "Within 45 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Karama is one of our quickest zones." },
       { q: "Do you cover all Karama blocks?", a: "Yes, every block and building in Karama is within our free pickup zone. From Karama Market shops to high-rise apartments near ADCB Metro." },
       { q: "Can I get a same-day repair from Karama?", a: "Yes. Collect before 11 am, finish by 4 pm, deliver back by 6 pm on screen, battery, keyboard and trackpad jobs. Logic board work takes 2-4 days." },
       { q: "Is there a drop-off option near Karama?", a: "The workshop (Concord Tower, Media City) is 18 minutes by taxi. Or we can meet you at a Karama landmark for handover if you'd prefer not to wait at home." },
@@ -967,7 +967,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Al Quoz?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Al Quoz is a wide area, so send a location pin and the courier will give you an exact window." },
+      { q: "How long does pickup take from Al Quoz?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Al Quoz is a wide area, so send a location pin and the courier will give you an exact window." },
       { q: "Can you collect from a warehouse or studio unit?", a: "Yes. Most of our Al Quoz collections are from warehouses, studios and offices rather than homes. Give the unit number on WhatsApp and the courier meets you at the door or the loading bay." },
       { q: "Do you repair iMacs and Mac minis used in Al Quoz studios?", a: "Yes - iMac, Mac mini, Mac Studio and Mac Pro as well as MacBooks. Desktops are collected by appointment so the courier brings proper packaging for the display or chassis." },
       { q: "Our studio has several Macs that need work. Can you take them together?", a: "Yes. We collect multiple machines in one visit, diagnose each one free of charge, and send a single written quote so you can decide which to repair." },
@@ -1004,7 +1004,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Is there a MacBook repair shop inside Dubai Sports City?", a: "There is very little repair provision inside the community itself, which is why most residents here use a collection service. We collect from your tower or villa free of charge and deliver back the same way." },
-      { q: "How long does pickup take from Sports City?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Sports City is about 22 minutes from the workshop, so the courier plans it into the Al Hessa Street run." },
+      { q: "How long does pickup take from Sports City?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Sports City is about 22 minutes from the workshop, so the courier plans it into the Al Hessa Street run." },
       { q: "Can you collect from Victory Heights villas?", a: "Yes. Send the sub-community and villa number on WhatsApp - Morella, Novelia, Esmeralda and the rest - and the courier meets you at the gate." },
       { q: "Do I have to be home for the pickup?", a: "No. Authorise someone by name on WhatsApp - a family member, your helper or the building security desk - and the courier collects from them. We send a photo confirming the handover." },
       { q: "Is same-day repair realistic from this far out?", a: "For in-stock parts, yes: collected mid-morning, repaired in the afternoon, back with you the same evening. Logic-board work takes 2-4 days because it is repaired at component level." },
@@ -1039,7 +1039,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Al Furjan?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Al Furjan is about 18 minutes from the workshop off Sheikh Zayed Road." },
+      { q: "How long does pickup take from Al Furjan?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Al Furjan is about 18 minutes from the workshop off Sheikh Zayed Road." },
       { q: "Can you collect from both the villas and the apartment buildings?", a: "Yes. Send the villa number or the building name on WhatsApp and the courier meets you at the gate or the lobby reception, whichever suits you." },
       { q: "I commute through Al Furjan Metro - can I hand the MacBook over there?", a: "Yes. Plenty of customers prefer a handover near the metro on the way to or from work. Agree the time on WhatsApp and the courier meets you there." },
       { q: "Do you charge extra for Al Furjan pickup?", a: "No. Pickup and return delivery are free from every Al Furjan address. You only pay for the repair itself, quoted in writing before any work starts." },
@@ -1075,7 +1075,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from d3?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). d3 is about 20 minutes from the workshop via Al Khail Road." },
+      { q: "How long does pickup take from d3?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). d3 is about 20 minutes from the workshop via Al Khail Road." },
       { q: "Can you collect several Macs from one studio?", a: "Yes. We collect multiple machines in one visit, diagnose each free of charge, and send a single written quote so the studio can decide what to repair and in what order." },
       { q: "Do you repair Mac Studio and iMac, not just MacBooks?", a: "Yes. Mac Studio (M5 Max and M5 Ultra through M1), iMac, Mac mini and Mac Pro are all repaired at the workshop. Desktops are collected by appointment with proper packaging." },
       { q: "My MacBook Pro holds unbacked-up client work and will not boot. What happens first?", a: "Data first. We attempt recovery from the SSD before any board work, confirm with you what was recovered, and only then discuss the repair. On Apple silicon and T2 Macs the SSD is soldered, so this is specialist work." },
@@ -1112,7 +1112,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you actually cover Dubai Creek Harbour?", a: "Yes. It is about 32 minutes from the workshop, so pickups are scheduled into a planned run rather than an instant call-out, but collection and return are still completely free." },
-      { q: "How long does pickup take from Creek Harbour?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). You get a confirmed window rather than a guess." },
+      { q: "How long does pickup take from Creek Harbour?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). You get a confirmed window rather than a guess." },
       { q: "Can the concierge hand the MacBook over for me?", a: "Yes. Authorise the concierge or a family member by name on WhatsApp and the courier collects from the reception desk. We send a photo confirming the handover." },
       { q: "Is same-day repair possible from this far out?", a: "For in-stock parts, usually yes - collected in the morning, repaired in the afternoon, returned the same evening. Board-level work takes 2-4 days." },
       { q: "Do you charge extra because Creek Harbour is far?", a: "No. Pickup and return delivery are free from every Creek Harbour address. The distance is our problem, not something we pass on to you." },
@@ -1147,7 +1147,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Festival City?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Festival City is about 30 minutes from the workshop via Ras Al Khor Road." },
+      { q: "How long does pickup take from Festival City?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Festival City is about 30 minutes from the workshop via Ras Al Khor Road." },
       { q: "Can you collect from an office in Festival City?", a: "Yes. Give the building and unit on WhatsApp and the courier meets you at reception or your floor. We can invoice the company rather than take personal payment." },
       { q: "Can you collect from a hotel here?", a: "Yes. Leave the Mac at the reception desk under your name, tell us the hotel on WhatsApp, and we collect, repair and deliver back to the same desk." },
       { q: "Do you repair desktop Macs in Festival City?", a: "Yes - iMac, Mac mini, Mac Studio and Mac Pro as well as MacBooks. Desktops are collected by appointment so the courier brings the right packaging." },
@@ -1184,7 +1184,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you really collect from International City?", a: "Yes. It is about 35 minutes each way, and collection and return are still free. Pickups are scheduled into a planned run so you get a confirmed window rather than an open-ended wait." },
-      { q: "How long does pickup take from International City?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Send your cluster and building, ideally with a location pin." },
+      { q: "How long does pickup take from International City?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Send your cluster and building, ideally with a location pin." },
       { q: "Is there a cheaper option than replacing the logic board?", a: "Usually yes. Most board faults are a handful of failed components, not the whole board. We repair at component level, which is typically far less than a board replacement quote. Diagnosis is free either way." },
       { q: "How do I know the price will not change once you open it?", a: "The price is fixed in writing on WhatsApp after the free diagnosis and before any work starts. If we find something else, we come back to you for approval rather than adjusting the bill." },
       { q: "Do you charge for pickup from International City?", a: "No. Pickup and return delivery are free from every cluster. You only pay for the repair you approve." },
@@ -1219,7 +1219,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Bluewaters Island?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Bluewaters is only about 12 minutes from the workshop, on the courier's daily Marina and JBR loop." },
+      { q: "How long does pickup take from Bluewaters Island?", a: "Usually within 30 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Bluewaters is only about 12 minutes from the workshop, on the courier's daily Marina and JBR loop." },
       { q: "Where does the courier meet me on the island?", a: "At your tower lobby or reception. Parking and kerbside access on Bluewaters are restricted, so a reception handover is quicker for everyone. Tell us the building on WhatsApp." },
       { q: "Can the concierge hand the Mac over if I am at work?", a: "Yes. Authorise the concierge by name on WhatsApp and the courier collects from the desk. We send a photo confirming the handover, and the return goes back to the same desk." },
       { q: "Can you collect from a hotel on Bluewaters?", a: "Yes. Leave the Mac with the concierge under your name and tell us the hotel. We collect, repair and deliver back to the same desk, usually within 24 hours for common faults." },
@@ -1255,7 +1255,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Meydan?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Meydan is about 25 minutes from the workshop via Al Khail Road." },
+      { q: "How long does pickup take from Meydan?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Meydan is about 25 minutes from the workshop via Al Khail Road." },
       { q: "Can you collect from a Nad Al Sheba villa?", a: "Yes. Send the community and villa number on WhatsApp and the courier meets you at the gate. You can also authorise a family member, driver or helper to hand the Mac over." },
       { q: "Do you cover the newer Meydan Avenue apartment buildings?", a: "Yes. Give the building name and the courier meets you at the lobby reception. Return delivery goes back to the same place, free of charge." },
       { q: "Do you repair desktop Macs in Meydan?", a: "Yes - iMac, Mac mini, Mac Studio and Mac Pro as well as MacBooks. Desktops are collected by appointment so the courier brings the right packaging." },
@@ -1292,7 +1292,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you really cover Town Square?", a: "Yes. It is about 30 minutes each way and collection and return are still free. Pickups are planned into a scheduled run, so you get a confirmed window rather than an open-ended wait." },
-      { q: "How long does pickup take from Town Square?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Send your building name and, if possible, a location pin." },
+      { q: "How long does pickup take from Town Square?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Send your building name and, if possible, a location pin." },
       { q: "Do I need to be home when the courier arrives?", a: "No. Authorise a family member, your helper or the building security by name on WhatsApp and the courier collects from them. We send a photo confirming the handover." },
       { q: "Is same-day repair possible from this far out?", a: "For in-stock parts, usually yes - collected in the morning, repaired in the afternoon, back the same evening. Board-level work takes 2-4 days." },
       { q: "Does the distance add to the price?", a: "No. Pickup and return are free from every Town Square address. You only pay for the repair itself, quoted in writing before anything starts." },
@@ -1327,7 +1327,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Damac Hills?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Damac Hills is about 25 minutes from the workshop via Hessa Street." },
+      { q: "How long does pickup take from Damac Hills?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Damac Hills is about 25 minutes from the workshop via Hessa Street." },
       { q: "We have several Macs at home. Can you collect them together?", a: "Yes, and it is common here. One visit collects them all, each is diagnosed free, and you get a single written quote so you can decide which to repair." },
       { q: "Can the courier collect from my villa gate or my driver?", a: "Yes. Authorise your driver, helper or a family member by name on WhatsApp and the courier collects from whoever is at the gate. We send a photo confirming the handover." },
       { q: "Do you repair iMac and Mac Studio in Damac Hills?", a: "Yes, alongside MacBooks. Desktops are collected by appointment so the courier brings proper packaging for the display or chassis." },
@@ -1366,7 +1366,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Do you cover Dubai South and Expo City?", a: "Yes, both. It is about 32 minutes each way and collection and return are free. Pickups are scheduled into a planned run so you get a confirmed window." },
       { q: "Can you collect from an office or business park unit?", a: "Yes. Give the building and unit on WhatsApp and the courier meets you at reception at a booked time. We can invoice the company rather than take personal payment." },
       { q: "We have a fleet of Macs at the office. Do you handle that?", a: "Yes. We collect multiple machines in one visit, diagnose each free, and quote them together. We also offer annual maintenance contracts for companies running a fleet." },
-      { q: "How long does pickup take from Dubai South?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat)." },
+      { q: "How long does pickup take from Dubai South?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat)." },
       { q: "Does the distance cost extra?", a: "No. Pickup and return delivery are free from every Dubai South address. You only pay for the repair you approve in writing." },
       { q: "Do you repair iMac, Mac mini and Mac Studio here?", a: "Yes, alongside MacBooks. Desktops are collected by appointment so the courier brings the right packaging for the longer drive." },
       { q: "Is same-day turnaround realistic from Dubai South?", a: "For in-stock parts, usually yes - collected in the morning, returned the same evening. Logic-board repairs take 2-4 days because they are done at component level." },
@@ -1399,7 +1399,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Garhoud?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Garhoud is about 28 minutes from the workshop." },
+      { q: "How long does pickup take from Garhoud?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Garhoud is about 28 minutes from the workshop." },
       { q: "I work airline rotations. Can you hold my Mac until I am back?", a: "Yes. Tell us your return date on WhatsApp and we will hold the repaired machine securely at the workshop, then deliver it when you are back in Dubai." },
       { q: "Can you collect from an office near the airport?", a: "Yes. Give the building and unit and the courier meets you at reception at a booked time. We can invoice the company instead of taking personal payment." },
       { q: "Another shop in the area quoted a full logic board. Is there an alternative?", a: "Usually yes. Most board faults are a handful of failed components rather than the whole board. We diagnose to component level free of charge and quote the real repair first." },
@@ -1435,7 +1435,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Oud Metha?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Oud Metha is about 26 minutes from the workshop." },
+      { q: "How long does pickup take from Oud Metha?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Oud Metha is about 26 minutes from the workshop." },
       { q: "My Mac will not boot and holds important work files. What happens first?", a: "Data first. We attempt recovery from the SSD before any board work and confirm with you what was recovered, then discuss the repair. On T2 and Apple silicon Macs the SSD is soldered, so recovery is board-level specialist work." },
       { q: "Is my data kept confidential?", a: "Yes. We do not browse or copy customer data beyond what a recovery requires, and machines are handled at one bench rather than passed around. If you need the drive wiped before return, tell us and we will do it and confirm." },
       { q: "Can you collect from a clinic or school reception?", a: "Yes, and we can book a fixed collection time so nobody waits. Give the building and department on WhatsApp." },
@@ -1507,7 +1507,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from DIP?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). DIP is wide, so send a location pin and the courier will give you an exact window." },
+      { q: "How long does pickup take from DIP?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). DIP is wide, so send a location pin and the courier will give you an exact window." },
       { q: "Can you collect from a warehouse or office unit?", a: "Yes. Most DIP collections are from business units rather than homes. Give the unit number and the courier meets you at the door, the loading bay or reception." },
       { q: "We run several Macs at the office. Can you handle them together?", a: "Yes. One visit collects them all, each is diagnosed free, and you get a single written quote. We also offer annual maintenance contracts for fleets." },
       { q: "Can you invoice the company rather than take personal payment?", a: "Yes. We work with a number of Dubai businesses on invoiced terms - just tell us the company details on WhatsApp." },
@@ -1544,7 +1544,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you cover Al Nahda on the Dubai side?", a: "Yes. It is about 35 minutes each way and collection and return are free. Confirm on WhatsApp that it is Al Nahda Dubai rather than the Sharjah side, since tower names repeat across the border." },
-      { q: "How long does pickup take from Al Nahda?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Send a location pin for the fastest confirmation." },
+      { q: "How long does pickup take from Al Nahda?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Send a location pin for the fastest confirmation." },
       { q: "Is there a cheaper option than a full logic board replacement?", a: "Usually yes. Most board faults are a small number of failed components, not the whole board. We repair at component level and diagnose free of charge, so you can compare before committing." },
       { q: "Will the price change after you open the Mac?", a: "No. The price is fixed in writing on WhatsApp after the free diagnosis. If we find anything else, we come back for your approval rather than adjusting the bill." },
       { q: "Do you charge for pickup from this far out?", a: "No. Pickup and return delivery are free from every Al Nahda address. You only pay for the repair you approve." },
@@ -1579,7 +1579,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Za'abeel?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Za'abeel is about 22 minutes from the workshop along Sheikh Zayed Road." },
+      { q: "How long does pickup take from Za'abeel?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Za'abeel is about 22 minutes from the workshop along Sheikh Zayed Road." },
       { q: "Can you collect from an office tower with visitor access control?", a: "Yes. A lobby or reception handover is fastest - tell us the tower and floor on WhatsApp and the courier will meet you downstairs rather than wait for a pass." },
       { q: "Can several machines from one office be collected together?", a: "Yes. One visit, each machine diagnosed free, and a single written quote so the company can decide what to repair and in what order." },
       { q: "Can you invoice my company?", a: "Yes. We work with Dubai businesses on invoiced terms, and we offer annual maintenance contracts for offices running a fleet of Macs." },
@@ -1615,7 +1615,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Arjan?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Arjan is about 20 minutes from the workshop." },
+      { q: "How long does pickup take from Arjan?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Arjan is about 20 minutes from the workshop." },
       { q: "There are many similar tower names in Arjan. How do I make sure you find me?", a: "Send the exact building name plus a location pin on WhatsApp. The courier will confirm the building back to you before setting off." },
       { q: "Can the building security hand the Mac over for me?", a: "Yes. Authorise the security desk or a neighbour by name on WhatsApp and the courier collects from them. We send a photo confirming the handover." },
       { q: "Is same-day repair realistic from Arjan?", a: "Yes for in-stock parts - screen, battery, keyboard, trackpad and SSD. Collected in the morning, repaired in the afternoon, back the same evening. Board work takes 2-4 days." },
@@ -1640,7 +1640,7 @@ const BASE_AREAS: AreaConfig[] = [
     whyChoose:
       "The practical advantage of being next door is time. You can watch the free diagnosis happen, get a written quote on the spot, and for in-stock parts - screen, battery, keyboard, trackpad, SSD - often collect the Mac the same afternoon without anyone leaving the building for long. For board-level faults we repair the failed component rather than swapping the board, which on a loaded MacBook Pro or Mac Studio is usually the difference between a repair bill and a replacement. And if the machine holds unbacked-up project files, we recover them before anything else.",
     pickupNote:
-      "Two options. Walk in to Concord Tower, Office 45, 10th floor during opening hours (9 am-10 pm Mon-Sat) - no appointment needed for a diagnosis. Or WhatsApp Shafiq on 055 741 3706 with your building and floor and we collect from your desk, usually within 15 minutes. Several Macs from one office can be collected together on one written quote, and edit-suite desktops are collected by appointment so they are packed properly.",
+      "Two options. Walk in to Concord Tower, Office 45, 10th floor during opening hours (9 am-7 pm Mon-Sat) - no appointment needed for a diagnosis. Or WhatsApp Shafiq on 055 741 3706 with your building and floor and we collect from your desk, usually within 15 minutes. Several Macs from one office can be collected together on one written quote, and edit-suite desktops are collected by appointment so they are packed properly.",
     travel: [
       { from: "Concord Tower (workshop)",    drive: "0 min",  pickup: "Walk in" },
       { from: "Arenco Tower",                drive: "2 min",  pickup: "Within 15 min" },
@@ -1652,7 +1652,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Where exactly is the workshop in Media City?", a: "Concord Tower, Office 45, 10th floor, Al Sufouh, Dubai Media City. Paid parking is inside the tower, and free street parking is available on Al Sufouh Road behind it." },
-      { q: "Can I just walk in without an appointment?", a: "Yes, for a diagnosis. Walk in during opening hours (9 am-10 pm Mon-Sat), and the diagnosis is free. For a repair with a part we need to order, we will quote you and book it in." },
+      { q: "Can I just walk in without an appointment?", a: "Yes, for a diagnosis. Walk in during opening hours (9 am-7 pm Mon-Sat), and the diagnosis is free. For a repair with a part we need to order, we will quote you and book it in." },
       { q: "I cannot leave my desk. Can you collect from my office?", a: "Yes. WhatsApp the building and floor and we collect from your desk, usually within 15 minutes because we are in the same district. The Mac comes back to the same desk." },
       { q: "Can I wait while it is repaired?", a: "For some jobs, yes - a battery or keyboard on a common model, where the part is in stock. Tell us when you arrive and we will say honestly whether it is a wait-for-it job or an afternoon job." },
       { q: "Our edit suite has several iMacs and Mac Studios. Can you service them together?", a: "Yes. Desktops are collected by appointment so they are packed properly, several machines go on one written quote, and we can invoice the company. Annual maintenance contracts are available for studios running a fleet." },
@@ -1723,7 +1723,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Umm Suqeim?", a: "Usually within 40 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Umm Suqeim is about 12 minutes from the workshop." },
+      { q: "How long does pickup take from Umm Suqeim?", a: "Usually within 40 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Umm Suqeim is about 12 minutes from the workshop." },
       { q: "We have several Macs at home. Can you take them together?", a: "Yes. One visit, each machine diagnosed free, and a single written quote so you can decide what is worth repairing." },
       { q: "Our old MacBook has years of family photos and will not start. Can you recover them?", a: "Often yes. A Mac that will not start usually has a board fault with the storage intact. We attempt recovery before any repair and tell you what came off. The diagnosis is free." },
       { q: "Can my driver or helper hand the Mac over?", a: "Yes. Authorise them by name on WhatsApp and the courier collects from them. We send a photo confirming the handover." },
@@ -1759,7 +1759,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Al Safa?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Al Safa is about 15 minutes from the workshop." },
+      { q: "How long does pickup take from Al Safa?", a: "Usually within 45 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Al Safa is about 15 minutes from the workshop." },
       { q: "I run my business from a home MacBook. How quickly can it be back?", a: "For in-stock parts, the same day in most cases - collected in the morning, returned that evening. Tell us it is your work machine and we will prioritise the turnaround and recover data first if it will not boot." },
       { q: "My Mac will not turn on. Is my work lost?", a: "Usually not. A Mac that will not power on is most often a board fault with the storage intact. We attempt recovery before any repair and confirm what came off. Diagnosis is free." },
       { q: "Can someone else hand the Mac over?", a: "Yes. Authorise a family member, your driver or helper by name on WhatsApp and the courier collects from them, with a photo confirming the handover." },
@@ -1795,7 +1795,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Satwa?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Satwa is about 20 minutes from the workshop." },
+      { q: "How long does pickup take from Satwa?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Satwa is about 20 minutes from the workshop." },
       { q: "A local shop wants to replace my whole logic board. Is there another option?", a: "Usually yes. Most board faults are a small number of failed components. We diagnose to component level free of charge and quote the real repair before you commit." },
       { q: "Will the price change once you open the Mac?", a: "No. The price is fixed in writing on WhatsApp after the free diagnosis. If we find something else, we ask you first rather than adding it to the bill." },
       { q: "Can my flatmate or the watchman hand it over?", a: "Yes. Authorise them by name on WhatsApp and the courier collects from them, with a photo confirming the handover." },
@@ -1831,7 +1831,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Al Jaddaf?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Al Jaddaf is about 25 minutes from the workshop." },
+      { q: "How long does pickup take from Al Jaddaf?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Al Jaddaf is about 25 minutes from the workshop." },
       { q: "My Mac holds patient or course material and will not boot. What happens first?", a: "Data first. We attempt recovery from the SSD before any board work and confirm what was recovered. On Apple silicon and T2 Macs the SSD is soldered, so this is specialist board-level work." },
       { q: "Is my data kept confidential?", a: "Yes. Machines are handled at one bench and not passed around, and we do not browse or copy data beyond what a repair or recovery needs. We will wipe the drive before return and confirm if you ask." },
       { q: "Can you collect from a clinic or office reception?", a: "Yes, and we can book a fixed collection time so nobody waits. Give the building and department on WhatsApp." },
@@ -1867,7 +1867,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Jumeirah Golf Estates?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). The estate is about 22 minutes from the workshop." },
+      { q: "How long does pickup take from Jumeirah Golf Estates?", a: "Usually within an hour of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). The estate is about 22 minutes from the workshop." },
       { q: "How does the courier get past estate security?", a: "Send the villa or building on WhatsApp and we send the courier's name and vehicle details ahead, so security can clear them at the gate." },
       { q: "We have several Macs at home. Can you collect them all at once?", a: "Yes. One visit, each machine diagnosed free, and a single written quote so you can decide which to repair." },
       { q: "Can my helper or driver hand the Mac over?", a: "Yes. Authorise them by name on WhatsApp and the courier collects from them, with a photo confirming the handover." },
@@ -1903,7 +1903,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Rashidiya?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Rashidiya is about 32 minutes from the workshop." },
+      { q: "How long does pickup take from Rashidiya?", a: "Usually within 90 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Rashidiya is about 32 minutes from the workshop." },
       { q: "I work airline rotations. Can you hold my Mac until I am back?", a: "Yes. Tell us your return date on WhatsApp and we hold the repaired machine securely, then deliver it when you are back in Dubai." },
       { q: "Is there a cheaper option than replacing the logic board?", a: "Usually yes. Most board faults are a small number of failed components. We repair at component level and diagnose free, so you can compare before committing." },
       { q: "Does the distance cost extra?", a: "No. Collection and return are free from every Rashidiya address. You only pay for a repair you approve in writing." },
@@ -1976,7 +1976,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you collect from Muhaisnah?", a: "Yes. It is about 36 minutes each way, and collection and return are free. Please send a location pin for the fastest confirmation." },
-      { q: "How long does pickup take?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat)." },
+      { q: "How long does pickup take?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat)." },
       { q: "How do I know the price will not go up?", a: "It is fixed in writing on WhatsApp after the free diagnosis and before any work starts. Anything extra needs your approval first." },
       { q: "Is repairing the logic board cheaper than replacing it?", a: "Almost always. Most faults are a handful of failed components. We repair at component level, and the diagnosis is free either way." },
       { q: "What if my Mac is not worth repairing?", a: "We will tell you honestly after the free diagnosis. There is no fee if we cannot fix it, so an honest 'not worth it' costs nothing." },
@@ -2012,7 +2012,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Do you collect from Al Warqa?", a: "Yes. It is about 35 minutes each way, and collection and return are free. You get a confirmed window rather than an open-ended wait." },
-      { q: "How long does pickup take?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat)." },
+      { q: "How long does pickup take?", a: "Usually within two hours of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat)." },
       { q: "We have several Macs at home. Can you take them together?", a: "Yes. One visit, each machine diagnosed free, and a single written quote." },
       { q: "Our old MacBook has family photos and will not start. Can you save them?", a: "Often. A Mac that will not start usually has a board fault with the storage intact. We attempt recovery first and tell you what came off." },
       { q: "Can my driver or helper hand the Mac over?", a: "Yes. Authorise them by name on WhatsApp and the courier collects from them, with a photo confirming the handover." },
@@ -2047,7 +2047,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "How long does pickup take from Mudon?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-10 pm Mon-Sat). Mudon is about 28 minutes from the workshop." },
+      { q: "How long does pickup take from Mudon?", a: "Usually within 75 minutes of WhatsApp confirmation during business hours (9 am-7 pm Mon-Sat). Mudon is about 28 minutes from the workshop." },
       { q: "How does the courier get into the community?", a: "Send your cluster and villa on WhatsApp and we send the courier's name and vehicle details ahead for the gate." },
       { q: "We have several Macs. Can you collect them together?", a: "Yes. One visit, each machine diagnosed free, and a single written quote." },
       { q: "Can someone else hand the Mac over?", a: "Yes. Authorise your helper, driver or a family member by name on WhatsApp, and we send a photo confirming the handover." },

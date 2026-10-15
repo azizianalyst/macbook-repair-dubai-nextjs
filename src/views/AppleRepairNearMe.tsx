@@ -137,7 +137,7 @@ export default function AppleRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–10 pm. iPhone screen done in 40 minutes.
+                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–7 pm. iPhone screen done in 40 minutes.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>

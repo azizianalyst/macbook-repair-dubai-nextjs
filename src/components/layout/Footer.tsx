@@ -127,7 +127,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
               </a>
               <p className="m-0 flex items-center gap-3 px-1 text-text-faint">
                 <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent"><Clock size={14} aria-hidden /></span>
-                <span>Mon-Sat · 9 am - 10 pm · Sun closed</span>
+                <span>Mon-Sat · 9 am - 7 pm (Fri break 12-2 pm) · Sun closed</span>
               </p>
             </div>
             {/* Social profiles — keep in lockstep with Organization/LocalBusiness sameAs (schema.ts reads the same NAP fields). */}

@@ -111,7 +111,7 @@ export default function BusinessAdmin() {
           {b.hours.map((h, i) => (
             <div key={h.day} className="grid grid-cols-[120px_1fr] items-center gap-3">
               <span className="text-[13px] text-text-muted">{h.day}</span>
-              <input value={h.open} onChange={(e) => setHour(i, e.target.value)} className={inp} placeholder="9 am - 10 pm  (or Closed)" />
+              <input value={h.open} onChange={(e) => setHour(i, e.target.value)} className={inp} placeholder="9 am - 7 pm  (or Closed)" />
             </div>
           ))}
         </div>

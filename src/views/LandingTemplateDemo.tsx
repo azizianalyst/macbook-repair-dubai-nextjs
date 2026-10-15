@@ -183,7 +183,7 @@ export default function LandingTemplateDemo() {
       keyInfo={{
         heading: "Hours, pickup & location",
         columns: [
-          { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 10 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
+          { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 7 pm", "Friday: break 12-2 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
           { icon: Truck, title: "Free pickup & delivery", lines: ["Across Dubai mainland", "Courier within about 2 hours", "Free - you pay only on approval"] },
           { icon: MapPin, title: "Visit the workshop", lines: ["Office #45, 10th Floor", "Concord Tower, Dubai Media City", "Al Sufouh, Dubai"] },
           { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "3-month written warranty"] },

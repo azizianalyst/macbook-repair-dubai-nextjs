@@ -53,7 +53,7 @@ const OPTIONS: { icon: LucideIcon; title: string; body: string; best: string }[]
 
 const COMPARISON: { label: string; us: string; them: string }[] = [
   { label: "Who does the repair", us: "Our own technicians at one workshop in Dubai Media City", them: "Apple, or a company Apple authorises" },
-  { label: "Getting seen", us: "Walk in Monday to Saturday, 9 am to 10 pm, or free pickup across Dubai mainland", them: "Usually by appointment, booked through Apple Support" },
+  { label: "Getting seen", us: "Walk in Monday to Saturday, 9 am to 7 pm, or free pickup across Dubai mainland", them: "Usually by appointment, booked through Apple Support" },
   { label: "Under warranty or AppleCare+", us: "We send you to Apple: a covered repair there is free or a set fee", them: "The right place for a covered fault" },
   { label: "Out of warranty", us: "Component-level repair where the fault allows it", them: "Usually a module or whole-unit replacement" },
   { label: "Parts", us: "Genuine where available, quality-tested otherwise, disclosed before work", them: "Apple parts" },
@@ -103,7 +103,7 @@ const FAQS = [
   { q: "Is MacBook Repair Dubai an official or Apple Authorised Service Center?",
     a: "No. We are an independent Apple repair workshop in Dubai Media City: not Apple, not an Apple Store and not an Apple Authorised Service Provider. If Apple's warranty or AppleCare+ covers your fault, we will tell you to go to Apple. For out-of-warranty and board-level repairs, we are an independent alternative." },
   { q: "Where is the nearest Apple service center to me in Dubai?",
-    a: "Apple's locator on support.apple.com/repair shows the nearest Apple Store and authorised providers for your location. If an independent repair suits you, our workshop is in Concord Tower, Dubai Media City, across from the Media City Metro station, open Monday to Saturday from 9 am to 10 pm, with free pickup across Dubai mainland." },
+    a: "Apple's locator on support.apple.com/repair shows the nearest Apple Store and authorised providers for your location. If an independent repair suits you, our workshop is in Concord Tower, Dubai Media City, across from the Media City Metro station, open Monday to Saturday from 9 am to 7 pm, with free pickup across Dubai mainland." },
   { q: "Do I need an appointment?",
     a: "No. Walk in during opening hours or book a free pickup. Sending the model and fault on WhatsApp first helps us check part availability before you travel. Diagnosis is free, and nothing is repaired until you approve the written quote." },
   { q: "My device is under warranty. Should I go to Apple instead?",
@@ -202,7 +202,7 @@ export default function AppleServiceCenter() {
                 Apple's Genius Bar works mainly by appointment, and in the weeks after a launch (the iPhone 18 Pro went on sale on 18 September 2026) the next free slot at a busy mall store can be days away. If the device is under warranty, waiting for Apple is usually still worth it: a covered repair costs you nothing.
               </p>
               <p className="m-0">
-                If it is out of warranty or the damage is accidental, you do not need an appointment here: walk in Monday to Saturday, 9 am to 10 pm, or book free pickup across Dubai mainland. Our guide on <Link to="/blog/apple-repair-appointment-dubai" className={linkCls}>what to do when you can't get an Apple repair appointment in Dubai</Link> covers both routes step by step.
+                If it is out of warranty or the damage is accidental, you do not need an appointment here: walk in Monday to Saturday, 9 am to 7 pm, or book free pickup across Dubai mainland. Our guide on <Link to="/blog/apple-repair-appointment-dubai" className={linkCls}>what to do when you can't get an Apple repair appointment in Dubai</Link> covers both routes step by step.
               </p>
             </div>
           </div>

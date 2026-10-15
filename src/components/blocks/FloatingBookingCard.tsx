@@ -60,7 +60,7 @@ export function FloatingBookingCard({ service, startingPrice, timeline, whatsapp
       </div>
 
       <p className={cn("text-[12px] mono", dark ? "text-text-faint" : "text-text-faint")}>
-        Mon-Sat 9 am - 10 pm · Concord Tower, Media City
+        Mon-Sat 9 am - 7 pm (Fri break 12-2 pm) · Concord Tower, Media City
       </p>
     </aside>
   );

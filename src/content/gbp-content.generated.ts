@@ -956,7 +956,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/macbook-repair-al-sufouh/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w30-macbook-repair-al-sufouh",
     "image": "brand/brand-storefront.jpg",
-    "body": "Al Sufouh and Media City — we're your neighbours: Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.\n\nWalk in any day except Sunday, 9am to 10pm, no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.\n\nOr WhatsApp 055 741 3706 and we'll collect it from your door instead.\n\n#AlSufouh #DubaiMediaCity #MacBookRepairDubai"
+    "body": "Al Sufouh and Media City — we're your neighbours: Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City.\n\nWalk in any day except Sunday, 9am to 7pm (Friday break 12-2pm), no appointment needed. Free diagnosis while you wait, and most common repairs are same-day.\n\nOr WhatsApp 055 741 3706 and we'll collect it from your door instead.\n\n#AlSufouh #DubaiMediaCity #MacBookRepairDubai"
   },
   {
     "week": 31,

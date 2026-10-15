@@ -41,7 +41,7 @@ const FAQS = [
   { q: "Is pickup and delivery really free for onsite MacBook repair?",
     a: "Yes. Pickup and delivery are free across Dubai mainland, with no callout charge. A technician collects the MacBook from your office or home, it is repaired at our Dubai Media City workshop, and it is returned to the same address at no extra cost. Diagnosis is free too." },
   { q: "How fast can you collect my MacBook?",
-    a: "Collection is usually same-hour or same-day across Dubai mainland once you message us your area and model on WhatsApp at 055 741 3706. We run Monday to Saturday, 9 am to 10 pm, so evening pickups after work are normal." },
+    a: "Collection is usually same-hour or same-day across Dubai mainland once you message us your area and model on WhatsApp at 055 741 3706. We run Monday to Saturday, 9 am to 7 pm (Friday break 12-2 pm), so a pickup before you leave the office is easy to arrange." },
   { q: "Do you repair at my office, or take the MacBook away?",
     a: "Quick checks and software fixes can be done at your location. Most hardware repairs - screen, battery, keyboard, charging, liquid damage - are done faster and more safely at our Concord Tower workshop in Dubai Media City, where the parts, tools and test benches are. Either way, collection and return are free." },
   { q: "Can a MacBook repair be done the same day?",

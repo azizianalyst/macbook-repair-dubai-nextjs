@@ -28,8 +28,8 @@ export const GBP_CURRENT = {
   phone: "055 741 3706",
   website: "https://macbook-repair-dubai.ae/",
   address: "Office #45, 10th Floor, Concord Tower, Media City, Dubai",
-  hoursGbp: "Sunday 09:00–17:00 · Monday–Saturday 09:00–22:00",
-  hoursWebsite: "Monday–Saturday 09:00–22:00 · Sunday CLOSED",
+  hoursGbp: "Monday–Thursday & Saturday 09:00–19:00 · Friday 09:00–12:00, 14:00–19:00 · Sunday CLOSED",
+  hoursWebsite: "Monday–Thursday & Saturday 09:00–19:00 · Friday 09:00–12:00, 14:00–19:00 · Sunday CLOSED",
   reviews: { count: 84, avg: 4.9, note: "Strong recent velocity, high reply rate. 2 recent unreplied; 1 likely-spam 2★." },
 };
 

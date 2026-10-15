@@ -127,7 +127,7 @@ export default function BlogWaterDamageMacBookImmediate() {
           <p>
             WhatsApp <strong>055 741 3706</strong> with a photo of the MacBook and we'll send the
             free pickup driver same day for any mainland Dubai address. Or visit our workshop at
-            Concord Tower, Dubai Media City, 9am-10pm Saturday to Thursday.
+            Concord Tower, Dubai Media City, 9am-7pm Monday to Saturday.
           </p>
 
           <h2 id="corrosion-timeline">Why time matters - corrosion timeline</h2>

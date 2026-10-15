@@ -25,12 +25,12 @@ const SEED = {
   reviewAverage: 5.0,
   contentReviewed: "June 2026",
   hours: [
-    { day: "Monday", open: "9 am - 10 pm" },
-    { day: "Tuesday", open: "9 am - 10 pm" },
-    { day: "Wednesday", open: "9 am - 10 pm" },
-    { day: "Thursday", open: "9 am - 10 pm" },
-    { day: "Friday", open: "9 am - 10 pm" },
-    { day: "Saturday", open: "9 am - 10 pm" },
+    { day: "Monday", open: "9 am - 7 pm" },
+    { day: "Tuesday", open: "9 am - 7 pm" },
+    { day: "Wednesday", open: "9 am - 7 pm" },
+    { day: "Thursday", open: "9 am - 7 pm" },
+    { day: "Friday", open: "9 am - 12 pm, 2 pm - 7 pm" },
+    { day: "Saturday", open: "9 am - 7 pm" },
     { day: "Sunday", open: "Closed" },
   ],
 };

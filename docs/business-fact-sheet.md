@@ -15,7 +15,7 @@ Sources of truth in the repo: `data/seo.json` → `src/content/business.generate
 | Address | Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, Dubai, UAE | VERIFIED | GBP knowledge panel 2026-09-01 |
 | Phone / WhatsApp | 055 741 3706 · +971557413706 · wa.me/971557413706 | VERIFIED | GBP knowledge panel 2026-09-01 |
 | Email | info@macbook-repair-dubai.ae | VERIFIED | Admin business store |
-| Hours | Mon–Sat 9 am–10 pm, Sunday closed | VERIFIED | Admin business store (owner-maintained) |
+| Hours | Mon–Thu & Sat 9 am–7 pm; Fri 9 am–12 pm and 2 pm–7 pm; Sunday closed | VERIFIED | Google Business Profile, updated by the owner 2026-10-15 |
 | Founded | 10 October 2004 (tenure is computed, never hard-coded) | VERIFIED | Owner; consistent across 38 occurrences |
 | Founder | Abdul Aziz (exactly one founder) | VERIFIED | Owner 2026-08-31 |
 | Legal operator | "Azizi Technologies" appears as Organization `founder` | UNVERIFIED | Open in TRUST-CLAIMS; owner decision D3 |
@@ -63,7 +63,7 @@ or it gets removed.
 |---|---|
 | Free loaner MacBook for repairs over 2 hours | Sitewide USP strip + homepage FAQ |
 | "30-minute repair by appointment, or it's free" | 7 files, including the footer |
-| "WhatsApp answered 24/7" / "24/7 support" (hours are Mon–Sat 9–10) | Homepage |
+| "WhatsApp answered 24/7" / "24/7 support" (hours are Mon–Sat 9–7) | Homepage |
 | "30-day money-back" on unlock services | iPhone unlock pages |
 | Job counts (5,200+ batteries, 3,400+ screens, 2,100+ keyboards, per-tech counts) | About 6 pages |
 | "Quote in 4 minutes" (225 pages) vs "written quote within 4 hours" (56 area pages) | Sitewide |

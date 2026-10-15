@@ -232,7 +232,7 @@ export default function MacBookKeyboardRepair() {
               ))}
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 7 pm</span>
               <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>

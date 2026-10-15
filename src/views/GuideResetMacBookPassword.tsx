@@ -170,7 +170,7 @@ export default function GuideResetMacBookPassword() {
             Most password changes take a couple of minutes at home. Bring the Mac to us if you've hit
             a firmware-password wall on an Intel model, your Keychain is tangled after a reset, or a
             failed reset has left macOS unbootable. We're at Office #45, 10th Floor, Concord Tower, Al
-            Sufouh, Dubai Media City, open Mon-Sat 9am-10pm, with free pickup and free diagnosis. If a
+            Sufouh, Dubai Media City, open Mon-Sat 9am-7pm, with free pickup and free diagnosis. If a
             reset corrupted the system we can also do a clean{" "}
             <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall

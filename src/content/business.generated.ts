@@ -24,27 +24,27 @@ export const CONTENT_REVIEWED = "August 2026";
 export const HOURS = [
   {
     "day": "Monday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 7 pm"
   },
   {
     "day": "Tuesday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 7 pm"
   },
   {
     "day": "Wednesday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 7 pm"
   },
   {
     "day": "Thursday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 7 pm"
   },
   {
     "day": "Friday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 12 pm, 2 pm - 7 pm"
   },
   {
     "day": "Saturday",
-    "open": "9 am - 10 pm"
+    "open": "9 am - 7 pm"
   },
   {
     "day": "Sunday",

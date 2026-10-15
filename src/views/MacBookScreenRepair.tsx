@@ -65,7 +65,7 @@ const COMMON_PROBLEMS = [
 
 const STEPS = [
   { title: "WhatsApp the model + photo",
-    body: "Send the serial number from About This Mac and a photo of the screen damage. Quote back in 4 to 8 minutes during business hours (9 am - 10 pm Mon-Sat)." },
+    body: "Send the serial number from About This Mac and a photo of the screen damage. Quote back in 4 to 8 minutes during business hours (9 am - 7 pm Mon-Sat)." },
   { title: "Free pickup or drop-off",
     body: "Free pickup from anywhere in Dubai mainland. Or walk in to Office #45, Concord Tower, Media City. Diagnosis is on the spot - about 15 minutes." },
   { title: "Panel swap in the workshop",
@@ -261,7 +261,7 @@ export default function MacBookScreenRepair() {
               ))}
             </ul>
             <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
-              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 10 pm</span>
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 7 pm</span>
               <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
             </div>
           </Reveal>

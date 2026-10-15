@@ -122,7 +122,7 @@ export default function MacRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. 5 min walk from Media City Metro. Open Mon-Sat 9 am–10 pm. Battery and keyboard repairs done while you wait.
+                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. 5 min walk from Media City Metro. Open Mon-Sat 9 am–7 pm. Battery and keyboard repairs done while you wait.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>

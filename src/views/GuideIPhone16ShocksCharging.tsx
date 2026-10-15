@@ -94,7 +94,7 @@ export default function GuideIPhone16ShocksCharging() {
               free diagnostic at our workshop
             </Link>{" "}
             will check the charging IC and port for damage. We're at Concord Tower, Dubai Media City,
-            open Mon-Sat 9am–10pm. Call or WhatsApp{" "}
+            open Mon-Sat 9am–7pm. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">
               055 741 3706
             </a>.

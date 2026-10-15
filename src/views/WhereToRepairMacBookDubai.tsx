@@ -117,7 +117,7 @@ export default function WhereToRepairMacBookDubai() {
       ]}
       steps={[
         { title: "WhatsApp your model & issue", body: "Send the model and a photo or description. We give an indicative price band straight away and book a free pickup if you want one." },
-        { title: "Free pickup or walk in",       body: "Free door-to-door collection anywhere in Dubai, or drop in to our Concord Tower workshop in Media City, 9 am - 10 pm Mon-Sat." },
+        { title: "Free pickup or walk in",       body: "Free door-to-door collection anywhere in Dubai, or drop in to our Concord Tower workshop in Media City, 9 am - 7 pm Mon-Sat." },
         { title: "Free diagnosis & written quote", body: "We diagnose the real fault and send a fixed written quote - including an honest note if an Apple Store or AASP claim would serve you better." },
         { title: "Approve & we repair",          body: "Most common repairs finish the same day at component level. You only pay once you approve the quote." },
         { title: "Return + warranty of up to 12 months",     body: "Free return delivery with a written warranty of up to 12 months on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },

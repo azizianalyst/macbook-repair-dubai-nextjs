@@ -140,7 +140,7 @@ export default function BlogIPadScreenRepairCost() {
           <p>
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> with
             your iPad model and a photo of the damage. We confirm the price within 15 minutes
-            during business hours (9 am–10 pm Mon-Sat). Free pickup from your home, office, or
+            during business hours (9 am–7 pm Mon-Sat). Free pickup from your home, office, or
             hotel anywhere in Dubai. Same-day return for most models.
           </p>
         </>

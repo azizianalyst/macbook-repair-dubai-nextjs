@@ -41,7 +41,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             Concord Tower sits between Sheikh Zayed Road and the Palm Jumeirah, in the Media City cluster. Easy paid parking inside the tower. Closest metro: Dubai Internet City station (10-min walk via the bridge).
           </p>
           <p>
-            Open <strong>Mon-Sat 9 am - 10 pm</strong>, closed Sunday. WhatsApp monitored 24/7 for emergencies.
+            Open <strong>Mon-Sat 9 am - 7 pm</strong>, closed Sunday. WhatsApp monitored 24/7 for emergencies.
           </p>
 
           <h2 id="five-minute-coverage">5-minute drive coverage (walk-in friendly)</h2>

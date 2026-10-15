@@ -331,7 +331,7 @@ Currently **empty** — and it's crowd-editable, so if you don't fill it, a comp
     Concord Tower, Office 45, 10th floor, Dubai Media City, about 120 m from Media City Metro on the Red Line. Tower parking is paid; there's free street parking on Al Sufouh Road.
 
 12. **Are you open on Sunday?**
-    No, we're closed Sundays. We're open Monday to Saturday, 9am to 10pm.
+    No, we're closed Sundays. We're open Monday to Saturday, 9am to 7pm, with a 12-2pm break on Friday.
 
 **Gate:** 12 seeded and spaced over 2–3 weeks, answer-first, weekly monitoring for new public questions.
 

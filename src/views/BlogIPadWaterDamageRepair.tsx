@@ -145,7 +145,7 @@ export default function BlogIPadWaterDamageRepair() {
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> the
             moment the iPad gets wet. Do not turn it on. We dispatch a courier for free pickup from
             your location anywhere in Dubai. Ultrasonic cleaning starts within the hour of arrival.
-            Most fresh-water cases are diagnosed and repaired the same day. Business hours 9 am–10 pm
+            Most fresh-water cases are diagnosed and repaired the same day. Business hours 9 am–7 pm
             Mon-Sat; emergency collections available.
           </p>
         </>

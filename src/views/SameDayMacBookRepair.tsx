@@ -62,7 +62,7 @@ const FAQS = [
   { q: "How much does same-day MacBook repair cost in Dubai?",
     a: "It depends on your model and which part failed. Diagnosis is free. WhatsApp 055 741 3706 with your exact model and fault for a fixed quote, no hidden fees, no surprises." },
   { q: "What time do I need to drop off my MacBook for same-day repair?",
-    a: "Drop-off or pickup before 2 pm guarantees same-day completion for screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Saturday 9 am to 10 pm at Concord Tower, Dubai Media City." },
+    a: "Drop-off or pickup before 2 pm guarantees same-day completion for screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Saturday 9 am to 7 pm at Concord Tower, Dubai Media City." },
   { q: "Is a same-day repair covered by a warranty?",
     a: "Yes, every repair carries a written warranty of up to 12 months, including same-day jobs. Battery replacement carries a 3-month warranty with an 80% capacity guarantee. The warranty card lists the repair, the parts used, and the serial number." },
   { q: "Can you repair a MacBook the same day if bought in the USA or UK?",

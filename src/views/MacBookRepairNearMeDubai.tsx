@@ -121,7 +121,7 @@ const FAQS = [
   { q: "Is there parking?",
     a: "Yes - paid parking inside Concord Tower (AED 5/hour, AED 25/day max). Free street parking on Al Sufouh Road behind the tower (10-minute walk). Valet parking at the tower lobby for AED 30 flat." },
   { q: "Can I walk in without an appointment?",
-    a: "Yes - walk-in welcome any time during opening hours (9 am - 10 pm Mon-Sat). For complex board work, sending a WhatsApp first lets Shafiq pre-order the part so the device is fixed during your visit instead of left overnight." },
+    a: "Yes - walk-in welcome any time during opening hours (9 am - 7 pm Mon-Sat). For complex board work, sending a WhatsApp first lets Shafiq pre-order the part so the device is fixed during your visit instead of left overnight." },
   { q: "How long does free pickup take?",
     a: "Within Dubai Marina, JLT, Internet City, Knowledge Village, Al Barsha - same hour during business hours. Downtown, Business Bay, JBR, Palm - same day. Mirdif, Arabian Ranches, Silicon Oasis - next morning." },
   { q: "Do you cover Sharjah and Abu Dhabi?",
@@ -129,7 +129,7 @@ const FAQS = [
   { q: "What if I'm in a hurry - same-day on-site repair?",
     a: "Walk in with an in-stock part fault (MacBook screen, battery, keyboard, iPhone screen, iPhone battery) and the repair finishes in 40 minutes to 2 hours. Wait in the AC office or grab coffee at the Costa downstairs in the tower lobby." },
   { q: "Are you open weekends?",
-    a: "Saturday: full opening hours, 9 am-10 pm. Sunday: storefront closed but WhatsApp answered all day. Monday morning is the busiest hour - message us on WhatsApp on Sunday to reserve a Monday slot." },
+    a: "Saturday: full opening hours, 9 am-7 pm. Sunday: storefront closed but WhatsApp answered all day. Monday morning is the busiest hour - message us on WhatsApp on Sunday to reserve a Monday slot." },
 ];
 
 const REVIEW_INDEXES = [0, 5, 8, 10, 13, 21];

@@ -22,7 +22,7 @@ const DIRECTIONS = [
 
 const FAQS = [
   { q: "Do I need an appointment?",
-    a: "No. Walk in any day except Sunday between 9 am and 10 pm. The diagnosis is free." },
+    a: "No. Walk in any day except Sunday between 9 am and 7 pm (on Friday we close 12-2 pm for prayer). The diagnosis is free." },
   { q: "Where do I park?",
     a: "Paid parking on-site at Concord Tower and on the surrounding streets. Free spots usually open up after 8 pm." },
   { q: "Which languages do you speak?",
@@ -50,7 +50,7 @@ export default function Contact() {
         tone="dark"
         eyebrow="Visit · call · WhatsApp"
         title="Contact MacBook Repair Dubai"
-        subtitle="Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Walk in any day except Sunday between 9 am and 10 pm."
+        subtitle="Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Walk in any day except Sunday between 9 am and 7 pm."
         image="/images/real/team/technician-support-call-dubai.jpg"
         imageAlt="A MacBook Repair Dubai technician taking a customer call at our Dubai Media City office"
       />

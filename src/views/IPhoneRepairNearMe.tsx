@@ -47,7 +47,7 @@ const FAQS = [
   { q: "How much does iPhone screen repair cost near me in Dubai?",
     a: "iPhone screen repair pricing depends on your model, from older iPhones up to the iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
   { q: "Is there an iPhone repair shop open now near me in Dubai?",
-    a: "We're open Monday to Saturday, 9 am to 10 pm at Concord Tower, Dubai Media City. WhatsApp is answered from 8 am. On Sundays the workshop is closed but WhatsApp replies are sent and Monday appointments can be booked. Call 055 741 3706 for immediate assistance." },
+    a: "We're open Monday to Saturday, 9 am to 7 pm at Concord Tower, Dubai Media City. WhatsApp is answered from 8 am. On Sundays the workshop is closed but WhatsApp replies are sent and Monday appointments can be booked. Call 055 741 3706 for immediate assistance." },
   { q: "Can you repair my iPhone near me on the same day?",
     a: "Yes for screen, battery, charging port, back glass, and camera. Drop off by 4 pm at Concord Tower or request free pickup, the repair is done the same day. Logic board and water damage take 1–3 days depending on severity." },
   { q: "Do you offer a warranty on iPhone repair near me in Dubai?",
@@ -122,7 +122,7 @@ export default function IPhoneRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–10 pm. Screen done in 40 minutes, wait while we fix it.
+                  Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–7 pm. Screen done in 40 minutes, wait while we fix it.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>

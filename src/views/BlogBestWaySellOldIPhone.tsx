@@ -85,7 +85,7 @@ export default function BlogBestWaySellOldIPhone() {
             <li>Receipt with IMEI for your records - protects you against future Dubai Police queries.</li>
           </ol>
           <p>
-            Walk-ins welcome 9 am-10 pm Mon-Sat. WhatsApp us photos first if you want a pre-quote.
+            Walk-ins welcome 9 am-7 pm Mon-Sat. WhatsApp us photos first if you want a pre-quote.
           </p>
 
           <h2 id="apple-trade-in">Apple Trade-In - convenient but lowest</h2>

@@ -259,7 +259,7 @@ export default function Pricing() {
           </h2>
           <p className="text-on-primary-muted text-[16px] max-w-[60ch] leading-relaxed">
             Shafiq replies on WhatsApp typically within 4 minutes during business hours
-            (9 am to 10 pm, Monday to Saturday). Or call {NAP.phoneDisplay}.
+            (9 am to 7 pm, Monday to Saturday). Or call {NAP.phoneDisplay}.
           </p>
           <WhatsAppCTA
             message="Hi Shafiq, I'd like a price quote for an Apple repair. Model: "

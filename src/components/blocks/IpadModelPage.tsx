@@ -399,7 +399,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-10pm." },
+        { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-7pm." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
         { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}

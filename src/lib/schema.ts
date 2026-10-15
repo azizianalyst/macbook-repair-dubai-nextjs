@@ -66,10 +66,13 @@ export function localBusiness() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
         opens: "09:00",
-        closes: "22:00",
+        closes: "19:00",
       },
+      // Friday closes 12:00-14:00 for Jumu'ah prayer (matches the Google Business Profile).
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "09:00", closes: "12:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "14:00", closes: "19:00" },
     ],
     // NOTE: AggregateRating NOT here by design. localBusiness() is used on every page and Google
     // does not show stars for self-collected reviews of the business itself. Home deliberately
