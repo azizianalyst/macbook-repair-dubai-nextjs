@@ -272,7 +272,7 @@ export default function GuideTop10MacBookProblems() {
             If your MacBook problem isn't on this list, or the DIY checks didn't help, bring it to
             our workshop at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or
             call us on 055 741 3706. We're open Monday to Saturday, 9am-7pm (Friday break 12-2pm),
-            across from Media City Metro, with free diagnosis on every repair, and back our work with a written warranty of up to 12 months,
+            and we're a 3-minute walk from the Palm Jumeirah tram stop. Diagnosis is free on every repair, and we back our work with a written warranty of up to 12 months,
             depending on the repair. You can also{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               see our full MacBook repair services
@@ -312,7 +312,7 @@ export default function GuideTop10MacBookProblems() {
         },
         {
           q: "Can I walk in, and is the work under warranty?",
-          a: "Yes. Walk in to our Concord Tower workshop across from Media City Metro, with parking on site. Diagnosis is free on every repair, and the work carries a warranty of up to 12 months. We're open Monday to Saturday, 9am-7pm, with a Friday break from 12 to 2pm.",
+          a: "Yes. Walk in to our Concord Tower workshop, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Diagnosis is free on every repair, and the work carries a warranty of up to 12 months. We're open Monday to Saturday, 9am-7pm, with a Friday break from 12 to 2pm.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

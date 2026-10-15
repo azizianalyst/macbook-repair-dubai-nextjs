@@ -224,7 +224,7 @@ const HAND_POSTS: Post[] = [
   {
     slug: "/blog/free-pickup-delivery-dubai-how-it-works",
     title: "MacBook Repair Courier Dubai: How to Get Your Mac to Us",
-    excerpt: "Our pickup service has ended. Walk in to Concord Tower, Dubai Media City, book a same-day courier inside Dubai, or courier it from another emirate and we send it back.",
+    excerpt: "Our pickup service has ended. Walk in to Concord Tower, Dubai Media City, book a same-day courier inside Dubai, or courier it from another emirate. We can book the courier back.",
     category: "Trust · Logistics",
     author: "Shafiq",
     date: "April 2026",

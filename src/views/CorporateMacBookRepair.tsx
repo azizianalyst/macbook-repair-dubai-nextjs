@@ -76,7 +76,7 @@ const FAQS = [
   { q: "Do you offer an annual MacBook maintenance contract for companies?",
     a: "Yes, the Annual Maintenance Contract (AMC) covers scheduled servicing, battery health checks, fan cleaning and thermal paste replacement, priority repair scheduling, and discounted parts. Pricing depends on fleet size. See /annual-maintenance-contract-dubai or WhatsApp for a quote." },
   { q: "How do we get several MacBooks to your workshop?",
-    a: "Send a staff member with the batch, or book a same-day courier app and WhatsApp us the tracking link. We're at Concord Tower, Dubai Media City, across from Media City Metro with parking on site. When the work is done, collect the batch or book a courier to send it back." },
+    a: "Send a staff member with the batch, or book a same-day courier app and WhatsApp us the tracking link. We're at Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. When the work is done, collect the batch, or we book a courier to bring it back." },
   { q: "How do you handle confidential company data during a repair?",
     a: "Machines are worked on at one bench by one technician rather than passed between hands, and we do not browse or copy company data beyond what the repair or recovery requires. If you need the drive wiped before the device is returned or disposed of, we do it and confirm in writing." },
   { q: "An employee left and nobody can log into their MacBook. Can you unlock it?",

@@ -40,7 +40,7 @@ export default function MacBookBackupService() {
         "Restore from an old Time Machine backup onto a fresh macOS install",
       ]}
       steps={[
-        { title: "WhatsApp, then walk in", body: "Send your model and what you want backed up, then drop it at Concord Tower, Media City, across from the metro." },
+        { title: "WhatsApp, then walk in", body: "Send your model and what you want backed up, then drop it at Concord Tower, Media City, near the Palm Jumeirah tram stop." },
         { title: "Assess data and storage", body: "We check how much data you have, how much free space the target drive needs, and whether iCloud, a local drive, or both is the right call." },
         { title: "Back up or migrate securely", body: "Time Machine configured, data copied to your new Mac or drive, or a full pre-repair image taken. Nothing leaves the bench." },
         { title: "Verify integrity", body: "We open the backup and check files actually opened - photos, documents, mail. A backup that won't restore is no backup." },
@@ -60,7 +60,7 @@ export default function MacBookBackupService() {
         { q: "Can you migrate everything to a new MacBook for me?", a: "Yes. We use Migration Assistant to move your apps, files, accounts and settings from the old Mac to the new one, then check it actually booted clean. Bring both machines to our Media City bench. Most migrations finish the same day in Dubai." },
         { q: "Is my data confidential when you back it up?", a: "Completely. We don't open, copy or keep your files beyond what the job needs, and the Mac stays on our bench at Concord Tower the whole time. We've handled data for clients across Dubai since 2004 and confidentiality is the whole point of the service." },
         { q: "How long does a backup or migration take?", a: "Most are same day. A first Time Machine backup of a typical 256GB to 512GB Mac runs a few hours over USB; a migration to a new Mac is similar. Very large photo and video libraries can run overnight, in which case we hold it securely and return it the next day across Dubai." },
-        { q: "Do I need an appointment to bring the MacBook in?", a: "No. Walk in to Concord Tower, Media City, across from Media City Metro, with parking on site. We are open Mon-Thu and Sat 9am to 7pm, Friday 9am to 12pm and 2pm to 7pm. WhatsApp 055 741 3706 first if you want a quote before you travel." },
+        { q: "Do I need an appointment to bring the MacBook in?", a: "No. Walk in to Concord Tower, Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. We are open Mon-Thu and Sat 9am to 7pm, Friday 9am to 12pm and 2pm to 7pm. WhatsApp 055 741 3706 first if you want a quote before you travel." },
         { q: "Will I need to buy an external drive?", a: "If you don't already have one, yes - a backup needs somewhere to live. We can advise on the right size for your data, usually a drive with at least twice your used space. You keep the drive and the backup; there's nothing locked to us." },
       ]}
       reviewNames={["Nab", "leaux leaux", "Habeeb Rahman", "Mariia Chymyrysova"]}

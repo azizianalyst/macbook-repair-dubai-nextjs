@@ -351,7 +351,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site. ${isPro ? "A Mac Pro tower is heavy: carry it up from the parking, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." : "Can't come in? Send it by a same-day courier you book."} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. ${isPro ? "A Mac Pro tower is heavy: carry it up from the parking, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." : "Can't come in? Send it by a same-day courier you book."} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 

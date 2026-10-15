@@ -155,7 +155,7 @@ export default function IPhoneScreenRepair() {
 
       <PageSection id="near-me" eyebrow="Walk in or send it by courier" title="iPhone screen repair near me in Dubai">
         <p>
-          <strong>Walk in</strong> at {NAP.street}, {NAP.area}, across from Media City Metro, with parking on site.
+          <strong>Walk in</strong> at {NAP.street}, {NAP.area}, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site.
           WhatsApp a photo first for a quote. Coming from <strong>Abu Dhabi or Sharjah</strong>, where we have no branch? Book any
           same-day courier app, hand the phone over, and WhatsApp us the tracking link. See the <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page
           for the areas we cover.

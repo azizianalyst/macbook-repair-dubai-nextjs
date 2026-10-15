@@ -82,7 +82,7 @@ const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
 
 const VISIT_STEPS = [
   { n: "01", title: "WhatsApp us", body: "Tell us the chip/model. We confirm the panel is in stock and give you an exact price." },
-  { n: "02", title: "Walk in", body: "Bring your MacBook Air to Concord Tower, Dubai Media City, across from the Media City Metro station. No appointment needed, parking on site." },
+  { n: "02", title: "Walk in", body: "Bring your MacBook Air to Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. No appointment needed, parking on site." },
   { n: "03", title: "Screen replaced", body: "Panel swapped, 30-point display QC done, warranty card written. Same day on Intel, M1 and M2 in most cases." },
   { n: "04", title: "Check it and collect", body: "Inspect the new screen at the counter before you pay. The written warranty goes home with your MacBook Air." },
 ];
@@ -93,7 +93,7 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: Wrench,      title: "Every display fault covered", body: "Screen, cable, backlight, hinge — all handled in one place. No need to go elsewhere if a cable rather than the panel turns out to be the fault." },
   { Icon: Cpu,         title: "Genuine Apple panels",        body: "Genuine Apple Liquid Retina panels stocked for M3 and M4. A-grade Samsung/LG for M1 and M2. Intel gets A-grade IPS. Every grade is stated upfront." },
   { Icon: HardDrive,   title: "Data stays private",          body: "Screen replacement never requires accessing your files. We follow strict confidentiality procedures — your data stays your business." },
-  { Icon: MapPin,      title: "Walk-in Media City workshop", body: "Office #45, Concord Tower, across from the Media City Metro station, with parking on site. WhatsApp the model first and we confirm the panel is in stock before you travel." },
+  { Icon: MapPin,      title: "Walk-in Media City workshop", body: "Office #45, Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp the model first and we confirm the panel is in stock before you travel." },
 ];
 
 const FAQ_ITEMS = [
@@ -102,7 +102,7 @@ const FAQ_ITEMS = [
   { q: "Do you use original Apple screens for MacBook Air replacement?", a: "Genuine Apple Liquid Retina panels are stocked for the M3 and M4 Air — the only grade that keeps True Tone active. M1 and M2 models get A-grade panels from Samsung or LG (the same factories that supply Apple), which are full-resolution and full-brightness but disable True Tone on M2. Intel models get A-grade IPS. Every grade is listed on the WhatsApp quote." },
   { q: "Will True Tone still work after the screen is replaced?", a: "True Tone only exists on M2, M3 and M4 MacBook Air. With a genuine Apple panel it is calibrated to the board serial and works normally. With an A-grade aftermarket panel, macOS disables True Tone — everything else (brightness, P3 colour, resolution) runs at full spec. True Tone status is stated on every quote." },
   { q: "Can you replace just the glass on a MacBook Air?", a: "Only on Intel 11\" and certain Intel 13\" pre-2016 models where the glass is a separate piece. From the M1 Air onward — and on most Intel 13\" from 2018 — the glass is bonded to the panel as one assembly. There is no reliable glass-only option on bonded models: we replace the full panel assembly." },
-  { q: "Do I need an appointment for MacBook Air screen replacement in Dubai?", a: "No. Walk in to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. WhatsApp the model first and we confirm the panel is in stock and quote before you travel. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm." },
+  { q: "Do I need an appointment for MacBook Air screen replacement in Dubai?", a: "No. Walk in to Office #45, 10th Floor, Concord Tower in Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp the model first and we confirm the panel is in stock and quote before you travel. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm." },
   { q: "My MacBook Air has lines on the screen — is it the panel or cable?", a: "Lines that shift or disappear when you open and close the lid at different angles point to the display flex cable — cable replacement costs much less than a panel. Fixed lines that stay in the same position regardless of lid angle point to the panel, which is replaced as a unit. Free 15-minute bench diagnosis confirms the fault before any repair is authorised." },
   { q: "How much cheaper is MacBook Air screen replacement than Apple?", a: "Apple does not publish a MacBook Air screen price in the UAE; it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work so you can compare, same-day to 2 days, at our Media City workshop. Apple does not service Intel models declared vintage — we still replace those screens, quoted per model." },
 ];
@@ -189,7 +189,7 @@ export default function MacBookAirScreenReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air screens at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, walk-in across from Media City Metro, genuine Apple panels for M3 and M4, written warranty up to 3 months.
+                MacBook Repair Dubai replaces MacBook Air screens at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, walk-in near the Palm Jumeirah tram stop, genuine Apple panels for M3 and M4, written warranty up to 3 months.
               </p>
             </div>
           </div>

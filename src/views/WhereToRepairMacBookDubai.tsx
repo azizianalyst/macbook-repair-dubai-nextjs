@@ -103,7 +103,7 @@ export default function WhereToRepairMacBookDubai() {
 
           <h2 className="text-[24px] md:text-[28px] mb-md">When an independent specialist wins</h2>
           <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
-            Once a Mac is out of warranty - or Apple has classed it &quot;vintage&quot; and won&apos;t touch it - an independent specialist is usually the faster, cheaper and more flexible route. We repair at component and board level (the exact failed chip, port or cable) where Apple and authorised centres replace the whole logic board, so a fault Apple quotes thousands for is often a fraction of that with us. Add a walk-in workshop across from Media City Metro, same-day turnaround on most repairs, a written warranty of up to 12 months, and published prices you can see before you commit.
+            Once a Mac is out of warranty - or Apple has classed it &quot;vintage&quot; and won&apos;t touch it - an independent specialist is usually the faster, cheaper and more flexible route. We repair at component and board level (the exact failed chip, port or cable) where Apple and authorised centres replace the whole logic board, so a fault Apple quotes thousands for is often a fraction of that with us. Add a walk-in workshop near the Palm Jumeirah tram stop, same-day turnaround on most repairs, a written warranty of up to 12 months, and published prices you can see before you commit.
           </p>
         </>
       }
@@ -120,7 +120,7 @@ export default function WhereToRepairMacBookDubai() {
         { title: "Walk in or send it by courier", body: "Drop in to our Concord Tower workshop in Media City (Mon-Thu and Sat 9 am - 7 pm, Fri 9 am - 12 pm and 2 pm - 7 pm), or book any same-day courier app and WhatsApp us the tracking link." },
         { title: "Free diagnosis & written quote", body: "We diagnose the real fault and send a fixed written quote - including an honest note if an Apple Store or AASP claim would serve you better." },
         { title: "Approve & we repair",          body: "Most common repairs finish the same day at component level. You only pay once you approve the quote." },
-        { title: "Collect + warranty of up to 12 months",    body: "Collect it from the workshop (or book a courier back) with a written warranty of up to 12 months on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },
+        { title: "Collect + warranty of up to 12 months",    body: "Collect it from the workshop (or we book a courier to bring it back) with a written warranty of up to 12 months on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },
       ]}
       warrantyDays={365}
       warrantyHeadline

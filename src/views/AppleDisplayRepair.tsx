@@ -136,7 +136,7 @@ export default function AppleDisplayRepair() {
       <QuickAnswer
         tone="dark"
         question="Can you repair an Apple Studio Display in Dubai?"
-        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and you can walk in across from Media City Metro or send the display with a same-day courier you book."
+        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and you can walk in (3 minutes on foot from the Palm Jumeirah tram stop) or send the display with a same-day courier you book."
       />
 
       <USPStrip tone="dark" />

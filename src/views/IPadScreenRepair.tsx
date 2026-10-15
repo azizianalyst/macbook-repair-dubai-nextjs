@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     q: "Do you repair iPad screens for customers outside Dubai?",
-    a: "Yes. Send a photo on WhatsApp for a quote, then book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link. Once it's fixed, collect it from the workshop or book a courier to send it back.",
+    a: "Yes. Send a photo on WhatsApp for a quote, then book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link. Once it's fixed, collect it from the workshop, or we book a courier to bring it back.",
   },
 ];
 

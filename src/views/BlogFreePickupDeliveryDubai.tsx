@@ -22,7 +22,7 @@ export default function BlogFreePickupDeliveryDubai() {
       category="Trust · Logistics"
       h1="MacBook Repair by Courier in Dubai: Getting Your Mac to Us Now"
       hook="We no longer run pickups. Here's how to reach the bench instead: walk in, or send it with a courier you book."
-      quickAnswer="Pickup and delivery ended on 15 October 2026. Walk in to Concord Tower, Dubai Media City, with no appointment needed for a diagnosis. Inside Dubai, book a same-day courier and WhatsApp us the tracking link. From other emirates, courier it to us and we send it back by courier."
+      quickAnswer="Pickup and delivery ended on 15 October 2026. Walk in to Concord Tower, Dubai Media City, with no appointment needed for a diagnosis. Inside Dubai, book a same-day courier and WhatsApp us the tracking link. From other emirates, courier it to us. Collect it when it's done, or we book a courier to bring it back."
       author={{ name: "Shafiq", role: "Operations lead" }}
       datePublished="2026-04-28"
       dateModified="2026-10-15"
@@ -109,8 +109,8 @@ export default function BlogFreePickupDeliveryDubai() {
 
           <h2 id="getting-it-back">How do I get my MacBook back?</h2>
           <p>
-            We message you on WhatsApp when it's ready. Inside Dubai you can collect it from Concord Tower or book a courier again and we'll hand it
-            to the driver. From another emirate, we courier it back to you and arrange the return on WhatsApp.
+            We message you on WhatsApp when it's ready. You can collect it from Concord Tower, or we book a courier to bring it back to you, inside Dubai or to
+            another emirate. We arrange the return with you on WhatsApp.
           </p>
         </>
       }
@@ -122,7 +122,7 @@ export default function BlogFreePickupDeliveryDubai() {
         { q: "Is onsite repair free?", a: "No. Onsite repair is a paid visit, offered when a technician is free. We quote the charge on WhatsApp before you book. It suits software faults; hardware repairs still need the workshop bench." },
         { q: "What should I send with my MacBook?", a: "The MacBook, a note with your name, phone number and the fault, and the charger if the problem is power or charging. Pack it in a padded sleeve inside a box. Back it up first if it still turns on." },
         { q: "Is diagnosis still free if I courier it in?", a: "Yes. Diagnosis is free however the Mac reaches us. We send the result and the quote on WhatsApp, and nothing is repaired until you approve it. If we can't fix it, you don't pay for the repair." },
-        { q: "How do I get it back once it's repaired?", a: "We WhatsApp you when it's ready. Inside Dubai, collect it from the workshop or book a courier and we hand it to the driver. From another emirate, we courier it back to you and arrange it on WhatsApp." },
+        { q: "How do I get it back once it's repaired?", a: "We WhatsApp you when it's ready. Collect it from the workshop, or we book a courier to bring it back to you, in Dubai or any other emirate. We arrange the return on WhatsApp." },
       ]}
       relatedLinks={[
         { label: "Contact us", href: "/contact", description: "WhatsApp, phone, address, hours." },

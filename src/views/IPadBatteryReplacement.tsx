@@ -308,7 +308,7 @@ export default function IPadBatteryReplacement() {
             <section>
               <h2 className="text-[28px] md:text-[32px] mb-md">Where to bring your iPad</h2>
               <p className="text-[16px] leading-relaxed mb-lg max-w-[72ch] text-text-muted">
-                One workshop: {NAP.street}, {NAP.area}. Walk in with the iPad, no appointment needed; it is across from Media City Metro, with parking on site. Can't come in? Book any same-day courier app, hand the iPad to the driver, and WhatsApp us the tracking link.
+                One workshop: {NAP.street}, {NAP.area}. Walk in with the iPad, no appointment needed; it is a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Can't come in? Book any same-day courier app, hand the iPad to the driver, and WhatsApp us the tracking link.
               </p>
               <LocationBlock tone="dark" />
             </section>

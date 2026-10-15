@@ -150,7 +150,7 @@ export default function BlogMacBookWaterDamageCost() {
           <h2 id="what-next">What should I do next?</h2>
           <p>
             Time matters. WhatsApp <strong>055 741 3706</strong> with a photo of your MacBook -
-            then bring it straight to our Media City workshop, across from the Media City Metro. Or visit
+            then bring it straight to our Media City workshop, a 3-minute walk from the Palm Jumeirah tram stop. Or visit
             our{" "}
             <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage service page

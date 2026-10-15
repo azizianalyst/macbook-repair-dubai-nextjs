@@ -272,7 +272,7 @@ export default function MacBookAirBatteryReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air batteries at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, walk-in across from Media City Metro, 3-month written warranty. WhatsApp the model for today's price.
+                MacBook Repair Dubai replaces MacBook Air batteries at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, walk-in near the Palm Jumeirah tram stop, 3-month written warranty. WhatsApp the model for today's price.
               </p>
             </div>
           </div>

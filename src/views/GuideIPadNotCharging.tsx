@@ -63,7 +63,7 @@ export default function GuideIPadNotCharging() {
               free iPad diagnostic
             </Link>{" "}
             to pinpoint the exact component before any repair. We're at Concord Tower, Dubai Media City,
-            open Mon-Sat 9am–7pm (Friday break 12–2pm), walk-in across from Media City Metro. Call or WhatsApp{" "}
+            open Mon-Sat 9am–7pm (Friday break 12–2pm), walk in 3 minutes from the Palm Jumeirah tram stop. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">
               055 741 3706
             </a>.

@@ -31,7 +31,7 @@ const WHY_US = [
   "Apple-only repair experience in Dubai since 2004",
   "Component-level logic board repair, not module swaps",
   "Same-day for iPhone screen, MacBook battery, iPad screen",
-  "Walk-in workshop in Concord Tower, across from Media City Metro",
+  "Walk-in workshop in Concord Tower, 3 minutes from the Palm Jumeirah tram stop",
   "Written warranty up to 12 months on every repair",
   "Free diagnosis, no fix, no charge policy",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
@@ -49,7 +49,7 @@ const FAQS = [
   { q: "Do you repair Apple devices that are no longer supported by Apple?",
     a: "Yes, we repair MacBooks from 2012 onward, iPhones from iPhone 6, iPads from iPad Air 1st gen, and iMacs from 2013. Apple stops supporting older devices; independent specialists continue to repair them as long as parts and boards are available." },
   { q: "Can I walk in for an Apple repair without an appointment?",
-    a: "Yes. Walk in to Office #45, 10th Floor, Concord Tower, across from Media City Metro, with parking on site. WhatsApp 055 741 3706 a photo of the fault first for a quote. Can't come in? Book any same-day courier app, hand it over, and WhatsApp us the tracking link. Most repairs are completed the same day." },
+    a: "Yes. Walk in to Office #45, 10th Floor, Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp 055 741 3706 a photo of the fault first for a quote. Can't come in? Book any same-day courier app, hand it over, and WhatsApp us the tracking link. Most repairs are completed the same day." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [2, 6, 11, 16, 22, 28];
@@ -98,7 +98,7 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer={`The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} reviews, written warranty up to 12 months, free diagnosis, walk-in across from Media City Metro. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device.`}
+            answer={`The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} reviews, written warranty up to 12 months, free diagnosis, walk-in 3 minutes from the Palm Jumeirah tram stop. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device.`}
           />
         </section>
 

@@ -96,7 +96,7 @@ export default function BlogMacBookProM5VsAppleStore() {
             in price usually comes from.
           </p>
           <p>
-            <strong>Getting there.</strong> Walk in at Concord Tower, across from the Media City Metro
+            <strong>Getting there.</strong> Walk in at Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop
             station, with parking on site. Apple requires you to drop off at Mall of Emirates or Dubai
             Mall, fine if you're nearby, and the Genius Bar works mainly by appointment.
           </p>

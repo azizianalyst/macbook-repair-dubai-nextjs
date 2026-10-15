@@ -75,7 +75,7 @@ const FAQ_GROUPS = [
       { q: "How much does Mac repair cost in Dubai?", a: "Mac repair is priced by the fault and model, after a free diagnosis - screens are the biggest jobs, batteries and keyboards sit below them, and water-damage work is quoted after inspection. We give you a full written quote before any work begins, no hidden charges." },
       { q: "Can I get a quote before the repair?", a: "Yes. We diagnose your Mac first (free of charge) then give you a written quote covering parts and labour. No repair starts until you approve the price. If you decline, you pay nothing." },
       { q: "Do you offer same-day repair?", a: "Yes, most common repairs (screen, battery, keyboard, charging port) are completed same day. Liquid-damage repairs take 1-5 days and logic-board repairs 3-7 days, longer on some 2026 models while their parts stock builds. We confirm the timeline at diagnosis." },
-      { q: "Can I send my Mac by courier instead of coming in?", a: "Yes. Book any same-day courier app, hand the Mac to the driver, and WhatsApp us the tracking link; it reaches us within the day. We do not arrange pickup or delivery. Collect it from the workshop, or book a courier back." },
+      { q: "Can I send my Mac by courier instead of coming in?", a: "Yes. Book any same-day courier app, hand the Mac to the driver, and WhatsApp us the tracking link; it reaches us within the day. We don't collect devices. Collect it from the workshop, or we book a courier to bring it back." },
     ],
   },
   {
@@ -180,7 +180,7 @@ export default function MacRepairHub() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, walk-in service across from Media City Metro, genuine or OEM-grade parts and written warranty up to 12 months, in business since 2004.
+                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, walk-in service near the Palm Jumeirah tram stop, genuine or OEM-grade parts and written warranty up to 12 months, in business since 2004.
               </p>
             </div>
           </div>

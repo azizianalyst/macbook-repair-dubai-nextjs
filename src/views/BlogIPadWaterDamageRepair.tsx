@@ -144,7 +144,7 @@ export default function BlogIPadWaterDamageRepair() {
           <p>
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> the
             moment the iPad gets wet. Do not turn it on. Bring it straight to our workshop at Concord
-            Tower, Dubai Media City, across from Media City Metro. Ultrasonic cleaning starts within the hour of arrival.
+            Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Ultrasonic cleaning starts within the hour of arrival.
             Most fresh-water cases are diagnosed and repaired the same day. Open Mon-Thu and Sat
             9 am–7 pm, Friday 9 am–12 pm and 2 pm–7 pm, closed Sunday.
           </p>

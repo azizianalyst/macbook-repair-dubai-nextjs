@@ -1710,7 +1710,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-repair-near-me-dubai": {
     "title": "MacBook Repair Near Me Dubai - Walk In, Same Day",
-    "description": "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, across from the Metro, or send it by courier. 10 min from Marina. 055 741 3706."
+    "description": "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, by the Palm Jumeirah tram, or send it by courier. 10 min from Marina. 055 741 3706."
   },
   "/macbook-safe-mode-repair-dubai": {
     "title": "MacBook Safe Mode Repair Dubai | MacBook Repair Dubai",

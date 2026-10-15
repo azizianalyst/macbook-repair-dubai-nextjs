@@ -110,7 +110,7 @@ const FAQS = [
   },
   {
     q: "Is there MacBook Air repair near me if I'm not in Media City?",
-    a: "Walk in to Concord Tower, Dubai Media City, without an appointment - it is across from Media City Metro with parking on site. WhatsApp photos and the serial number first for a quote. If you can't come in, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp. We have no branch outside Dubai.",
+    a: "Walk in to Concord Tower, Dubai Media City, without an appointment - it is a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp photos and the serial number first for a quote. If you can't come in, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp. We have no branch outside Dubai.",
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",

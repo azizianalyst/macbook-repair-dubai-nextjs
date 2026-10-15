@@ -104,7 +104,7 @@ const STEPS = [
   {
     icon: MapPin,
     title: "2 · Bring it to Media City",
-    body: "Happy with the number? Bring the device to our workshop at Concord Tower, Dubai Media City, across from the Media City Metro station, with parking on site. The valuation stays free, sell or not.",
+    body: "Happy with the number? Bring the device to our workshop at Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. The valuation stays free, sell or not.",
   },
   {
     icon: Banknote,
@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Where do I bring the device, and do I need an appointment?",
-    a: "Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. No appointment is needed: we are open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first and the visit is quick.",
+    a: "Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. No appointment is needed: we are open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first and the visit is quick.",
   },
   {
     q: "When do I get paid?",

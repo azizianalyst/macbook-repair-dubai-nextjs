@@ -71,7 +71,7 @@ const PRICING_FAQS = [
   { q: "Is data recovery extra on top of the repair price?",
     a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment. On T2 and Apple silicon Macs the storage is encrypted to the Mac's own chip, so recovery means repairing the original board until it runs; that board-level work sits at the top of the range." },
   { q: "Can I send my device instead of coming in?",
-    a: "Yes. Book any same-day courier app yourself, hand the device to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop or book a courier to send it back. A paid onsite visit is also possible, subject to technician availability, with the charge quoted on WhatsApp first." },
+    a: "Yes. Book any same-day courier app yourself, hand the device to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop, or we book a courier to bring it back. A paid onsite visit is also possible, subject to technician availability, with the charge quoted on WhatsApp first." },
   { q: "What happens if the same fault returns inside the warranty?",
     a: "Bring the device back for a free inspection. If the same fault has returned, the original technician - usually Usman for MacBook board work or Hamza for iPhone screens - re-opens the unit and redoes the repair free of charge." },
 ];

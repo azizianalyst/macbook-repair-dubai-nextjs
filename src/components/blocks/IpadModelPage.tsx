@@ -285,7 +285,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes.`,
     },
   ];
 

@@ -68,7 +68,7 @@ export default function GuideIPhone16ProBatteryCapacity() {
             <li><strong>Turnaround:</strong> Same day, usually within 1–2 hours.</li>
           </ul>
           <p>
-            Bring it to Concord Tower, Dubai Media City, across from Media City Metro. Call or
+            Bring it to Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Call or
             WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">
               055 741 3706

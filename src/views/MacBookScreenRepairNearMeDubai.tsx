@@ -7,9 +7,9 @@ export default function MacBookScreenRepairNearMeDubai() {
       seoTitle="MacBook Screen Repair Near Me Dubai - Same-Day, Walk In"
       seoDescription="MacBook screen repair near me in Dubai: walk in to Concord Tower, Media City, or send it by courier. Same-day on most models. WhatsApp us for a price."
       path="/macbook-screen-repair-near-me-dubai"
-      eyebrow="MacBook screen repair, across from Media City Metro"
+      eyebrow="MacBook screen repair, near the Palm Jumeirah tram stop"
       h1="MacBook Screen Repair Near Me Dubai"
-      subtitle="One workshop in Media City, across from the Metro with parking on site. Walk in, or book a same-day courier yourself and the MacBook reaches us within the day."
+      subtitle="One workshop in Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Walk in, or book a same-day courier yourself and the MacBook reaches us within the day."
       startingPrice={600}
       timeline="Same-day on most models"
       whatsappPrefill="Hi, my MacBook screen is cracked/faulty - model and what it looks like:"
@@ -23,7 +23,7 @@ export default function MacBookScreenRepairNearMeDubai() {
       quickAnswer={{
         question: "Where's the nearest place to get my MacBook screen repaired in Dubai?",
         answer:
-          "Our workshop is in Concord Tower, Dubai Media City, across from Media City Metro with parking on site. Walk in without an appointment, Monday to Saturday. If you can't get here, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. Send a photo of the screen first and we'll quote before you commit.",
+          "Our workshop is in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Walk in without an appointment, Monday to Saturday. If you can't get here, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. Send a photo of the screen first and we'll quote before you commit.",
       }}
       intro={
         <>
@@ -32,7 +32,7 @@ export default function MacBookScreenRepairNearMeDubai() {
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">How "near me" actually works here</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
-            <li>• <strong>Walk in:</strong> Concord Tower, Office 45, 10th floor, Dubai Media City - opposite Media City Metro, parking on site</li>
+            <li>• <strong>Walk in:</strong> Concord Tower, Office 45, 10th floor, Dubai Media City - near the Palm Jumeirah tram stop, parking on site</li>
             <li>• <strong>Send it by courier:</strong> book any same-day courier app, hand it over, WhatsApp us the tracking link</li>
             <li>• <strong>Quote first:</strong> WhatsApp a photo of the screen and the model before you set off</li>
             <li>• <strong>Onsite visit:</strong> paid, subject to technician availability, quoted on WhatsApp</li>
@@ -55,7 +55,7 @@ export default function MacBookScreenRepairNearMeDubai() {
         { title: "WhatsApp a photo",    body: "Send the model and a photo of the screen. We quote in minutes." },
         { title: "Walk in or send it",  body: "Walk in to Concord Tower, or book a same-day courier yourself and send us the tracking link." },
         { title: "Diagnose + repair",   body: "Free diagnosis first, then a written quote. Most screens replaced the same day." },
-        { title: "Collect it",          body: "Tested and warrantied. Collect it from the workshop or book a courier to send it back." },
+        { title: "Collect it",          body: "Tested and warrantied. Collect it from the workshop, or we book a courier to bring it back." },
       ]}
       glassNotice
       warrantyDays={90}
@@ -65,10 +65,10 @@ export default function MacBookScreenRepairNearMeDubai() {
         "Genuine or OEM-grade panels - we tell you which before you agree to anything.",
       ]}
       faqs={[
-        { q: "Do you actually have a branch near me, or just one workshop?", a: "One workshop - Concord Tower, Dubai Media City. No branches. It's across from Media City Metro with parking on site, and if you can't come over you can send the MacBook with a same-day courier you book." },
-        { q: "Can I send my MacBook instead of coming in?", a: "Yes. Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link. It reaches us within the day, so you're not waiting on us to send anyone. Once it's fixed, collect it or book a courier to send it back." },
+        { q: "Do you actually have a branch near me, or just one workshop?", a: "One workshop - Concord Tower, Dubai Media City. No branches. It's a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, and if you can't come over you can send the MacBook with a same-day courier you book." },
+        { q: "Can I send my MacBook instead of coming in?", a: "Yes. Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link. It reaches us within the day, so you're not waiting on us to send anyone. Once it's fixed, collect it, or we book a courier to bring it back." },
         { q: "Is the screen repair really done the same day?", a: "Yes, for most MacBook Air and Pro models we hold panel stock for - same day from when it reaches the bench. A handful of low-demand or discontinued panels run 2-3 days; we tell you which before you commit." },
-        { q: "Can I just walk in without an appointment?", a: "Yes - Concord Tower, Office 45, 10th floor, Dubai Media City, opposite Media City Metro. Open Mon-Thu and Sat 9am to 7pm, Friday 9am to 12pm and 2pm to 7pm, closed Sunday. Free diagnosis while you wait." },
+        { q: "Can I just walk in without an appointment?", a: "Yes - Concord Tower, Office 45, 10th floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Thu and Sat 9am to 7pm, Friday 9am to 12pm and 2pm to 7pm, closed Sunday. Free diagnosis while you wait." },
         { q: "What if my screen issue turns out to be a board fault, not the glass?", a: "We diagnose free before quoting anything. If the backlight circuit or a board component is the actual fault rather than the panel itself, we tell you and quote that repair instead - never a screen swap that wouldn't fix it." },
       ]}
       reviewNames={["Pauline Georgiadis", "Lloyd Stevens"]}

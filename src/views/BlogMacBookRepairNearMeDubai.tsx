@@ -38,7 +38,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             Dubai, United Arab Emirates</strong>
           </p>
           <p>
-            Concord Tower sits between Sheikh Zayed Road and the Palm Jumeirah, in the Media City cluster. Easy paid parking inside the tower. Closest metro: Dubai Internet City station (10-min walk via the bridge).
+            Concord Tower sits between Sheikh Zayed Road and the Palm Jumeirah, in the Media City cluster. Easy paid parking inside the tower. The nearest stop is Palm Jumeirah on the Dubai Tram, about 3 minutes on foot. The nearest Metro is Al Fardan Exchange on the Red Line (formerly Al Khail), roughly a 15-minute walk.
           </p>
           <p>
             Open <strong>Mon-Sat 9 am - 7 pm</strong>, closed Sunday. WhatsApp monitored 24/7 for emergencies.
@@ -86,7 +86,7 @@ export default function BlogMacBookRepairNearMeDubai() {
             <li>Book any same-day courier app to Office #45, 10th Floor, Concord Tower, and WhatsApp us the tracking link.</li>
             <li>Hand the device to the driver. When it arrives we note the serial number and condition.</li>
             <li>Workshop diagnosis (free), we WhatsApp you the quote.</li>
-            <li>You approve, we repair. Collect it from the workshop, or book a courier back to you.</li>
+            <li>You approve, we repair. Collect it from the workshop, or we book a courier to bring it back to you.</li>
           </ol>
           <p>
             Address and opening hours:{" "}
@@ -132,10 +132,10 @@ export default function BlogMacBookRepairNearMeDubai() {
       faqs={[
         { q: "Are you the closest Apple repair to Dubai Marina?", a: "Among the closest. We're 8-10 min drive from Marina Walk via the Sheikh Zayed underpass - typically faster than driving to Mall of the Emirates Apple Store. And if you can't come in, a same-day courier you book yourself gets it to us within the day." },
         { q: "Do you have a shop in Mall of the Emirates / Dubai Mall?", a: "No - we're an independent workshop, not a mall kiosk. The mall trade-off is convenience for the customer but high overhead that gets passed on. Our Media City office keeps prices well below mall repair shops - message us on WhatsApp for a quote on your device." },
-        { q: "Can I park easily at Concord Tower?", a: "Yes - paid parking inside the tower (validated for 1 hour with appointments). Free street parking in surrounding Media City roads if you don't mind a 5-min walk." },
+        { q: "Can I park easily at Concord Tower?", a: "Yes - paid parking inside the tower (validated for 1 hour with appointments). " },
         { q: "How early can I drop off in the morning?", a: "9 am - workshop opens. Earlier by appointment for urgent business cases. WhatsApp the night before to arrange." },
         { q: "Do you serve Palm Jumeirah / Atlantis?", a: "Yes - walk in (8-10 min from Atlantis), or send it by a same-day courier you book yourself. Palm trunk traffic at peak hours slows couriers too, so book early in the day." },
-        { q: "What's the closest metro station?", a: "Dubai Internet City (Red Line) - 10-min walk via the elevated walkway between the two free zones. Convenient if you're coming from Downtown, Business Bay, or anywhere on the Red Line." },
+        { q: "What's the closest metro station?", a: "Al Fardan Exchange on the Red Line (formerly Al Khail), about a 15-minute walk. The tram is closer: change at Sobha Realty or DMCC station, ride to the Palm Jumeirah stop, and walk about 3 minutes. That works from Downtown, Business Bay or anywhere else on the Red Line." },
       ]}
       relatedLinks={[
         { label: "iPhone repair near me Dubai", href: "/blog/iphone-repair-near-me-dubai", description: "10-question checklist for choosing a repair workshop." },

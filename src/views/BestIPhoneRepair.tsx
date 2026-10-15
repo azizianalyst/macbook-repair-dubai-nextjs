@@ -48,7 +48,7 @@ const WHY_US = [
   "OLED panels with True Tone calibration for iPhone 11–17",
   "Face ID preserved on every screen replacement we do",
   "Screen in 40 minutes, battery in 30 minutes",
-  "Walk-in workshop across from Media City Metro, parking on site",
+  "Walk-in workshop by the Palm Jumeirah tram stop, parking on site",
   "Written warranty up to 12 months",
   "Free diagnosis, no fix, no charge",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews · Since 2004`,
@@ -117,7 +117,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, walk in across from Media City Metro. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
+            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, walk in 3 minutes from the Palm Jumeirah tram stop. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
           />
         </section>
 

@@ -103,7 +103,7 @@ const FAQS: FAQ[] = [
   { q: "Can you fix a MacBook screen with no image but the laptop still chimes?",
     a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps." },
   { q: "Do you offer pickup for screen repair?",
-    a: "No, we don't collect or deliver. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. It works the same from Sharjah or Abu Dhabi." },
+    a: "No, we don't collect devices. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. It works the same from Sharjah or Abu Dhabi. When it's fixed, collect it, or we book a courier to bring it back." },
   { q: "Is MacBook screen repair cheaper than the Apple Store?",
     a: "Often, but compare for yourself. Apple does not publish a MacBook screen price in the UAE: it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work, so you can set the two side by side. You also keep your data and skip the Genius Bar appointment wait." },
   { q: "Should I just go to Apple, and what about AppleCare+?",
@@ -559,7 +559,7 @@ export default function MacBookScreenRepair() {
             <div className="flex flex-col gap-md">
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
-              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
+              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. 3-minute walk from the Palm Jumeirah tram stop.</p>
               <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
               <p className="text-[14px] text-text-muted m-0">Not near Media City? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See directions and drive times by area</Link>.</p>
             </div>

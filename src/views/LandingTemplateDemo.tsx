@@ -60,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Do you offer pickup for screen repair?",
-    a: "No, we don't collect or deliver. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. That works from Sharjah and Abu Dhabi too.",
+    a: "No, we don't collect devices. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. That works from Sharjah and Abu Dhabi too. When it's fixed, collect it, or we book a courier to bring it back.",
   },
 ];
 
@@ -373,7 +373,7 @@ export default function LandingTemplateDemo() {
             icon: Truck,
             name: "Walk in or courier",
             description:
-              "Walk in to Office #45, Concord Tower, Media City, across from Media City Metro. Or book a same-day courier app yourself and WhatsApp us the tracking link.",
+              "Walk in to Office #45, Concord Tower, Media City, a 3-minute walk from the Palm Jumeirah tram stop. Or book a same-day courier app yourself and WhatsApp us the tracking link.",
           },
         ],
       }}

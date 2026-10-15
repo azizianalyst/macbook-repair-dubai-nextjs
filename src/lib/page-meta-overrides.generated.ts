@@ -305,7 +305,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Apple repair in Dubai for MacBook, iMac, Mac mini, iPhone and iPad. Independent specialist, free diagnosis, written warranty. Quote on WhatsApp."
   },
   "/apple-repair-near-me-dubai": {
-    "title": "Apple Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "title": "Apple Repair Near Me in Dubai - Walk-In, Dubai Media City",
     "description": "Apple repair near me in Dubai: Mac, iPhone and iPad fixed in-house at Concord Tower, Media City. Walk in or courier it to us the same day. WhatsApp us."
   },
   "/apple-repair-programs-dubai": {
@@ -370,7 +370,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/contact": {
     "title": "Contact MacBook Repair Dubai, 055 741 3706",
-    "description": "Contact MacBook Repair Dubai at Concord Tower, Dubai Media City, across from the Metro. Walk in for a free diagnosis on Mac, iPhone or iPad. WhatsApp us."
+    "description": "Contact MacBook Repair Dubai at Concord Tower, Media City, a 3-minute walk from the Palm Jumeirah tram stop. Walk in for a free diagnosis or WhatsApp us."
   },
   "/cookies": {
     "title": "Cookie Policy. MacBook Repair Dubai 2026",
@@ -857,7 +857,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Independent iPhone repair in Dubai Media City for iPhone 6 to 18 Pro Max: screens, batteries, back glass, ports, cameras and water damage. Free diagnosis."
   },
   "/iphone-repair-near-me-dubai": {
-    "title": "iPhone Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "title": "iPhone Repair Near Me in Dubai - Walk-In, Dubai Media City",
     "description": "iPhone repair near you in Dubai: screens and batteries at our Media City workshop, same-day on most jobs. Walk in or courier it to us. WhatsApp us."
   },
   "/iphone-screen-repair-cost-dubai": {
@@ -1005,7 +1005,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us."
   },
   "/mac-repair-near-me-dubai": {
-    "title": "Mac Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "title": "Mac Repair Near Me in Dubai - Walk-In, Dubai Media City",
     "description": "Mac repair near me in Dubai: MacBook, iMac and Mac mini repairs. Walk in at Media City or courier it to us the same day. WhatsApp for a quote."
   },
   "/mac-setup-data-migration-dubai": {
@@ -1254,7 +1254,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-repair-barsha-heights": {
     "title": "MacBook Repair Barsha Heights — Same-Day, Walk-In",
-    "description": "MacBook repair in Barsha Heights (Tecom), 6 minutes from Concord Tower near Dubai Internet City Metro. Walk in for same-day repair. Book on WhatsApp."
+    "description": "MacBook repair in Barsha Heights (Tecom), 6 minutes from our Concord Tower workshop in Dubai Media City. Walk in for same-day repair. Book on WhatsApp."
   },
   "/macbook-repair-bur-dubai": {
     "title": "MacBook Repair Bur Dubai — Same-Day, Walk-In",
@@ -1333,8 +1333,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook repair for Motor City, 20 minutes from Media City, near Dubai Autodrome and First Avenue Mall. Walk in for same-day repair. WhatsApp for a quote."
   },
   "/macbook-repair-near-me-dubai": {
-    "title": "MacBook Repair Near Me in Dubai - Walk-In, Media City Metro",
-    "description": "MacBook repair near you in Dubai: walk in to Concord Tower, 120 m from Media City Metro, or courier it to us the same day. Free diagnosis. WhatsApp us."
+    "title": "MacBook Repair Near Me in Dubai - Walk-In, Dubai Media City",
+    "description": "MacBook repair near you in Dubai: walk in to Concord Tower, by the Palm Jumeirah tram stop, or courier it to us the same day. Free diagnosis. WhatsApp us."
   },
   "/macbook-repair-palm-jumeirah": {
     "title": "MacBook Repair Palm Jumeirah — Same-Day, Walk-In",

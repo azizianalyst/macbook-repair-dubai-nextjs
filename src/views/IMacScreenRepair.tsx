@@ -80,7 +80,7 @@ export default function IMacScreenRepair() {
       ]}
       steps={[
         { title: "WhatsApp the model and serial", body: "Send the serial number from About This Mac and a photo of the screen. We confirm the correct display part before quoting." },
-        { title: "Bring it to the workshop", body: "Bring the iMac to Concord Tower, Dubai Media City, across from the Media City Metro, with parking on site." },
+        { title: "Bring it to the workshop", body: "Bring the iMac to Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site." },
         { title: "Diagnosis first", body: "We confirm whether it is the panel, backlight, cable or graphics. Written quote; no work without your approval." },
         { title: "Adhesive cut and display removal", body: "The adhesive is cut around the edge and the display lifted clear without stressing the glass." },
         { title: "New display and dust-free re-bond", body: "The new panel is fitted, the inner surfaces cleaned, and the display re-bonded with new adhesive." },

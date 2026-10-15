@@ -58,7 +58,7 @@ const WHY = [
   { title: "Certified Technicians", body: "With years of experience fixing Apple products, our techs know how to service and resolve problems quickly." },
   { title: "Original Parts", body: "We only use OEM parts, backed by strong partnerships with approved Apple suppliers so we always have access to the newest and best parts." },
   { title: "100% Data Privacy", body: "We do everything in our power to keep your information and data safe. Your privacy is protected while we fix your device." },
-  { title: "Easy Access", body: "Walk in to our Concord Tower workshop, across from Media City Metro, with parking on site. Can't leave the office? Book any same-day courier app to send it to us, or ask for a paid onsite visit, subject to technician availability." },
+  { title: "Easy Access", body: "Walk in to our Concord Tower workshop, near the Palm Jumeirah tram stop, with parking on site. Can't leave the office? Book any same-day courier app to send it to us, or ask for a paid onsite visit, subject to technician availability." },
 ];
 
 const TIPS = [
@@ -81,7 +81,7 @@ const FAQS = [
   { q: "What types of issues can a Mac Mini repair service fix?", a: "We cover many issues, including hardware problems like faulty hard drives, RAM, and power supply issues. We also fix software-related problems such as OS crashes, data recovery, and virus removal. Our experienced technicians can diagnose and repair any problem." },
   { q: "How long does it typically take to repair a Mac Mini?", a: "The repair time depends on the complexity of the issue and the availability of replacement parts. We strive to complete most repairs within 24 to 48 hours; more extensive repairs may take 3-5 business days. We provide an estimated repair time after diagnosing the problem." },
   { q: "Can you upgrade my Mac Mini for better performance?", a: "Yes! We offer RAM upgrades, SSD installations, and macOS optimization services to enhance your Mac Mini's speed and overall performance. Many older models can perform like new after a professional upgrade." },
-  { q: "Can I walk in with my Mac mini without an appointment?", a: "Yes. Bring your Mac mini to Office #45, 10th Floor, Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo and the serial number first and we quote before you travel. We message you when it is ready to collect. If you can't come in, send it by a same-day courier you book and WhatsApp us the tracking link." },
+  { q: "Can I walk in with my Mac mini without an appointment?", a: "Yes. Bring your Mac mini to Office #45, 10th Floor, Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo and the serial number first and we quote before you travel. We message you when it is ready to collect. If you can't come in, send it by a same-day courier you book and WhatsApp us the tracking link." },
 ];
 
 function CallButtons() {
@@ -134,7 +134,7 @@ export default function MacMiniRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac mini repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, walk-in service across from Media City Metro, OEM-grade parts and a written warranty up to 12 months, since 2004."
+        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty up to 12 months, since 2004."
       />
 
       <USPStrip tone="dark" />

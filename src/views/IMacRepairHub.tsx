@@ -190,7 +190,7 @@ export default function IMacRepairHub() {
         ),
         benefits: [
           { icon: Search, title: "Free diagnosis", body: "The fault is found and explained before any quote." },
-          { icon: MapPin, title: "Walk-in workshop", body: "Concord Tower, across from Media City Metro, with parking on site." },
+          { icon: MapPin, title: "Walk-in workshop", body: "Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site." },
           { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
           { icon: Wrench, title: "Honest upgrade advice", body: "We say so when an iMac cannot be upgraded." },
         ],

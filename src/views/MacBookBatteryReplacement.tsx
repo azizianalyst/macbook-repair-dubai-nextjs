@@ -67,7 +67,7 @@ const STEPS = [
   { title: "WhatsApp battery health screenshot",
     body: "Open System Settings > Battery > Battery Health. Send the screenshot. Reply within 4-8 minutes during business hours with confirmed price and 2-hour booking slot." },
   { title: "Walk in or send it by courier",
-    body: "Walk in to Office #45, Concord Tower, Media City, across from the metro, with parking on site. Can't come in? Book any same-day courier app, hand it over, and WhatsApp us the tracking link." },
+    body: "Walk in to Office #45, Concord Tower, Media City, near the Palm Jumeirah tram stop, with parking on site. Can't come in? Book any same-day courier app, hand it over, and WhatsApp us the tracking link." },
   { title: "Bench diagnosis - 15 minutes",
     body: "SMC voltages checked, DC-in board verified, cycle count and design capacity logged on the work order. Confirms whether battery alone needs replacement or charging circuit too." },
   { title: "Battery removal + cell swap - 60 minutes",
@@ -484,7 +484,7 @@ export default function MacBookBatteryReplacement() {
             <div className="flex flex-col gap-md">
               <h3 className="m-0 text-text">Find us in Media City</h3>
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
-              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
+              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. 3-minute walk from the Palm Jumeirah tram stop.</p>
               <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
             </div>
           </div>

@@ -157,7 +157,7 @@ export default function GuideServerError403Download() {
               free diagnostic
             </Link>{" "}
             sorts it. We're at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City,
-            open Mon-Sat 9am–7pm, across from Media City Metro with parking on site. Call or WhatsApp{" "}
+            open Mon-Sat 9am–7pm, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">055 741 3706</a>.
           </p>
         </>

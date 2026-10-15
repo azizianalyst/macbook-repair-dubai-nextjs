@@ -53,7 +53,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Marina",
     short: "Marina",
     driveTime: "10 minutes",
-    metroNote: "DMCC Metro on the Red Line is 4 stops from Media City Metro - the workshop is a 4-minute walk from there.",
+    metroNote: "The Dubai Tram runs through the Marina: ride it to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Marina Mall", "JBR Beach", "Sheraton Grand Hotel", "Pier 7", "Marina Walk", "Address Marina"],
     landmarkLine: "5 minutes from Marina Mall, JBR Beach, the Sheraton Grand and the Address Marina.",
@@ -77,7 +77,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "My MacBook is at my office in Marina Plaza or Al Habtoor Business Tower. Can I send it from there?", a: "Yes. Book the courier to your office reception instead of your apartment. WhatsApp us the building it's coming from, the model and the fault, and we'll look out for it." },
       { q: "Is there parking at Concord Tower if I drive over from the Marina?", a: "Yes, Concord Tower has parking on site. From the Marina, head north on Sheikh Zayed Road and take the Media City exit. The drive is about 10 minutes from most towers, 12 from Marina Gate." },
       { q: "Can my MacBook be fixed the same day if I bring it in from Marina?", a: "Often, yes. Screen, battery, keyboard and trackpad jobs can usually be finished the same day when the part is in stock. Component-level logic board work takes longer, and we'll give you a realistic estimate on WhatsApp." },
-      { q: "I'm staying at the Sheraton Grand or the Address Marina. How do I get my laptop repaired?", a: "Ask the concierge to help you book a same-day courier, or book one yourself on your phone. WhatsApp us your name, the hotel and the tracking link. The return trip is arranged with us on WhatsApp once the repair is done." },
+      { q: "I'm staying at the Sheraton Grand or the Address Marina. How do I get my laptop repaired?", a: "Ask the concierge to help you book a same-day courier, or book one yourself on your phone. WhatsApp us your name, the hotel and the tracking link. Once it's fixed, collect it, or we book a courier to bring it back to the hotel; we agree the details on WhatsApp." },
       { q: "Can a technician come to my Marina apartment?", a: "Sometimes. Onsite repair is a paid service and only happens when a technician is free. Message us the model and the fault first, and we'll quote the visit charge on WhatsApp before anything is booked." },
       { q: "I live in the Marina but work in DIFC. Where should I send my MacBook from?", a: "From wherever the Mac is that day. Book the courier from your DIFC office or your Marina tower, or drop it in on the way home, since Media City sits between the two along Sheikh Zayed Road." },
       { q: "What does a MacBook diagnosis cost in Dubai Marina?", a: "Nothing. The diagnosis is free and the repair price is fixed in writing on WhatsApp before work starts. If we can't fix it, you don't pay. Hardware repairs carry a written warranty of up to 12 months." },
@@ -89,7 +89,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Downtown Dubai",
     short: "Downtown",
     driveTime: "15 minutes",
-    metroNote: "Burj Khalifa / Dubai Mall Metro on the Red Line is 6 stops from Media City Metro - a 20-minute Metro ride door to door.",
+    metroNote: "Start at Burj Khalifa/Dubai Mall on the Red Line. Ride to Al Fardan Exchange and walk about 15 minutes, or carry on to Sobha Realty and take the tram to the Palm Jumeirah stop, a 3-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Burj Khalifa", "Dubai Mall", "Dubai Opera", "Souk Al Bahar", "Boulevard Plaza", "The Address Downtown"],
     landmarkLine: "10 minutes from Burj Khalifa, Dubai Mall, Dubai Opera and the DIFC border.",
@@ -125,7 +125,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "JBR",
     short: "JBR",
     driveTime: "8 minutes",
-    metroNote: "JLT Metro on the Red Line is 3 stops from Media City Metro. From JBR, a tram + Metro ride is roughly 18 minutes door to door.",
+    metroNote: "The Dubai Tram runs right past JBR. Ride it to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["The Walk JBR", "The Beach Mall", "Movenpick Hotel JBR", "Rimal Towers", "Bahar Towers", "Sadaf Towers"],
     landmarkLine: "Adjacent to The Walk JBR and The Beach Mall, near Movenpick Hotel JBR.",
@@ -146,7 +146,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How do I get my MacBook from a JBR tower to your workshop?", a: "Drive it in. It's about 8 minutes along Al Sufouh Road to Concord Tower, Dubai Media City, with parking on site and no appointment needed. Or book a same-day courier app from your lobby and WhatsApp us the tracking link." },
-      { q: "I'm staying at a JBR hotel like the Movenpick or Sofitel. Can I send my MacBook in?", a: "Yes. Book a same-day courier from your phone and ask reception to hand the Mac over, then WhatsApp us your name, room and the tracking link. The return is arranged with us on WhatsApp once the repair is finished." },
+      { q: "I'm staying at a JBR hotel like the Movenpick or Sofitel. Can I send my MacBook in?", a: "Yes. Book a same-day courier from your phone and ask reception to hand the Mac over, then WhatsApp us your name, room and the tracking link. When it's finished, we book a courier to bring it back to reception, or you collect it." },
       { q: "My MacBook fell on the sand at JBR Beach. Can it be saved?", a: "Usually. Sand in the vents and ports causes overheating and sticky keys but rarely kills the board on its own. Bring it in soon; we strip and clean the fans, heatsink and ports, then run a full diagnostic before quoting." },
       { q: "Pool water got on my MacBook in JBR. What should I do?", a: "Switch it off, don't charge it and don't shake it. WhatsApp us, then get it to the workshop as fast as you can, by car or a same-day courier. Liquid keeps corroding the board, so the sooner we open it, the better the odds." },
       { q: "Can I hand my MacBook to a courier at The Walk or The Beach Mall instead of my tower?", a: "If the courier app lets you set the meeting point there, yes, since you're the one booking it. Pick a hotel lobby or cafe on The Walk, hand over the MacBook, and WhatsApp us the tracking link." },
@@ -161,7 +161,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Business Bay",
     short: "Business Bay",
     driveTime: "18 minutes",
-    metroNote: "Business Bay Metro on the Red Line is 5 stops from Media City Metro. With Metro the door-to-door time is roughly 25 minutes.",
+    metroNote: "From Business Bay station on the Red Line, ride to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty and get off at Palm Jumeirah, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Bay Avenue", "Bay Square", "Executive Towers", "JW Marriott Marquis", "Business Central Towers", "The Opus"],
     landmarkLine: "5 minutes from Bay Avenue and the JW Marriott Marquis, on the Burj Khalifa side of the canal.",
@@ -197,7 +197,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Jumeirah",
     short: "Jumeirah",
     driveTime: "10 minutes",
-    metroNote: "Jumeirah is not directly on the Metro. Driving in to Concord Tower, Dubai Media City is the simpler option, or send your Mac with a same-day courier app.",
+    metroNote: "Jumeirah isn't directly on the Metro, so driving in to Concord Tower, Dubai Media City or sending the Mac with a same-day courier app is simpler. If you do take the Metro, Al Fardan Exchange on the Red Line is about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Mercato Mall", "Jumeirah Mosque", "Sunset Mall", "La Mer", "City Walk", "Box Park"],
     landmarkLine: "Near Mercato Mall and the Jumeirah Mosque, 10 minutes via Al Wasl Road.",
@@ -233,7 +233,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "JLT",
     short: "JLT",
     driveTime: "8 minutes",
-    metroNote: "DMCC Metro on the Red Line is 3 stops from Media City Metro - about 12 minutes door to door including the walk.",
+    metroNote: "Change from the Red Line to the tram at DMCC station, on the edge of JLT, and ride to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Almas Tower", "DMCC Metro", "Cluster JLT", "Lake Shore Tower", "Armada Towers", "JLT Park"],
     landmarkLine: "Near Almas Tower, opposite DMCC Metro, across the lake from Marina.",
@@ -269,7 +269,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "DIFC",
     short: "DIFC",
     driveTime: "16 minutes",
-    metroNote: "Financial Centre Metro on the Red Line is 5 stops from Media City Metro - about 20 minutes door to door including the short walk.",
+    metroNote: "From Financial Centre station on the Red Line, ride to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty for the Palm Jumeirah stop, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Gate Building", "Index Tower", "Burj Daman", "ICD Brookfield Place", "Gate Avenue", "Currency House"],
     landmarkLine: "10 minutes from the Gate Building, near Index Tower and ICD Brookfield Place.",
@@ -305,7 +305,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Silicon Oasis",
     short: "Silicon Oasis",
     driveTime: "30 minutes",
-    metroNote: "Silicon Oasis is not yet on the Metro network. Driving in to Concord Tower, Dubai Media City takes about 30 minutes, or send your Mac with a same-day courier app.",
+    metroNote: "Silicon Oasis is not on the Metro network. Driving in to Concord Tower, Dubai Media City takes about 30 minutes, or send your Mac with a same-day courier app. Coming by Metro from elsewhere? Al Fardan Exchange on the Red Line is about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["DSO HQ", "Cedre Shopping Centre", "Silicon Avenue", "Silicon Gate", "Choithrams DSO", "Rochester Institute"],
     landmarkLine: "Near DSO HQ, opposite Cedre Shopping Centre, around the Silicon Avenue residential cluster.",
@@ -330,7 +330,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Is the drive from Silicon Oasis to Media City worth it?", a: "If you want to hear the diagnosis in person, yes. It's about 30 minutes on Sheikh Mohammed Bin Zayed Road, there's parking on site, and no appointment is needed. For a screen or battery, check stock on WhatsApp first." },
       { q: "I'm a student at Rochester or Heriot-Watt. How do I send my MacBook in?", a: "Book a same-day courier app from your campus or accommodation and WhatsApp us the tracking link, your name and the fault. The diagnosis is free, and if the Mac can't be fixed you pay nothing." },
       { q: "Can a technician visit my villa in Cedre or Semmer?", a: "Possibly. Onsite visits are paid and happen only when a technician is free. Send the model and fault on WhatsApp and we'll quote the charge before you book. Board faults still need the workshop bench." },
-      { q: "How does my MacBook get back to Silicon Oasis after the repair?", a: "We arrange the return with you on WhatsApp once the repair is done. If you prefer, you can come and fetch it yourself from Concord Tower during opening hours." },
+      { q: "How does my MacBook get back to Silicon Oasis after the repair?", a: "Once it's repaired, we book a courier to bring it back to you, arranged on WhatsApp. If you prefer, you can come and fetch it yourself from Concord Tower during opening hours." },
       { q: "Can I wait for the repair if I drive in from Silicon Oasis?", a: "For in-stock screen, battery, keyboard and trackpad repairs, often yes, since many finish the same day. Message your model on WhatsApp before you leave so we can check the part. Board repairs take longer." },
       { q: "Is it cheaper than taking my MacBook to Apple?", a: "Compare for yourself. We quote after a free diagnosis and before any work, so you can set our price against Apple's. Out of warranty we repair logic boards at component level, with a written warranty of up to 12 months (90 days on screens, 3 months on batteries)." },
     ],
@@ -341,7 +341,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Internet City",
     short: "Internet City",
     driveTime: "5 minutes",
-    metroNote: "Dubai Internet City Metro on the Red Line is the closest station to the workshop - Concord Tower is a few minutes from the platform.",
+    metroNote: "From Dubai Internet City station, ride the Red Line one stop to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty and get off at Palm Jumeirah, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Microsoft Building", "Oracle Building", "Cisco Building", "Grosvenor House", "Dubai Internet City Metro", "Building 1-27 cluster"],
     landmarkLine: "Right next door - minutes from the Microsoft, Oracle and Cisco buildings and Grosvenor House.",
@@ -377,7 +377,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Deira",
     short: "Deira",
     driveTime: "25 minutes",
-    metroNote: "Union Metro on the Red and Green Line is the closest station, the workshop is accessible via a 25-minute drive or a direct taxi from Union Metro.",
+    metroNote: "Union station on the Red and Green Lines is the closest. The workshop is about a 25-minute drive, or take the Red Line to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Gold Souk", "Spice Souk", "Deira City Centre", "Union Square", "Naif Souk", "Al Rigga"],
     landmarkLine: "Serving Gold Souk, Spice Souk, Deira City Centre, Union Square and Al Rigga.",
@@ -413,7 +413,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Bur Dubai",
     short: "Bur Dubai",
     driveTime: "20 minutes",
-    metroNote: "BurJuman Metro on the Red and Green Line is the closest station, a 20-minute drive or taxi from BurJuman puts you at the workshop.",
+    metroNote: "BurJuman on the Red and Green Lines is the closest station. It's a 20-minute drive to the workshop, or ride the Red Line from BurJuman to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["BurJuman Centre", "Meena Bazaar", "Al Fahidi Fort", "Dubai Museum", "Karama Market", "Al Mankhool"],
     landmarkLine: "Covering BurJuman, Meena Bazaar, Al Fahidi, Dubai Museum, and Al Mankhool.",
@@ -433,7 +433,7 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "Can a Bur Dubai hotel reception send my MacBook to you?", a: "Yes. Book a same-day courier app, leave the Mac at reception in a sealed bag with your name on it, and WhatsApp us the tracking link. We confirm when it reaches the bench and arrange the return with you on WhatsApp once it's fixed." },
+      { q: "Can a Bur Dubai hotel reception send my MacBook to you?", a: "Yes. Book a same-day courier app, leave the Mac at reception in a sealed bag with your name on it, and WhatsApp us the tracking link. We confirm when it reaches the bench, and once it's fixed we book a courier to take it back to the hotel." },
       { q: "How do I get to Concord Tower from Bur Dubai by car?", a: "Take Sheikh Zayed Road toward Dubai Media City. It's roughly a 20-minute drive from BurJuman or Al Mankhool, longer at peak times. There's parking on site, and you can walk in for a diagnosis without booking." },
       { q: "Is same-day MacBook repair possible from Bur Dubai?", a: "Often, yes. Screens, batteries, keyboards and trackpads can usually be finished the same day when the part is in stock, so bring it in early. Logic board repairs take longer, and we'll give you a realistic time on WhatsApp." },
       { q: "Do you cover Karama as well?", a: "Karama has its own page, but the options are the same: walk in at Concord Tower, Dubai Media City, send the Mac with a courier app you book, or ask about a paid onsite visit. WhatsApp us your area and model to start." },
@@ -449,7 +449,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Karama",
     short: "Karama",
     driveTime: "18 minutes",
-    metroNote: "ADCB Metro on the Green Line is the nearest station, the workshop is approximately 18 minutes by car from Karama.",
+    metroNote: "ADCB on the Green Line is the nearest station, and the workshop is about 18 minutes by car. By Metro, change to the Red Line at BurJuman and ride to Al Fardan Exchange, a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Karama Market", "Karama Centre", "Zabeel Park", "ADCB Metro", "Al Attar Tower", "Dubai Frame"],
     landmarkLine: "Serving Karama Market, Karama Centre, Zabeel Park, and the Dubai Frame corridor.",
@@ -470,7 +470,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How long is the drive from Karama to your workshop?", a: "About 18 minutes by car or taxi to Concord Tower, Dubai Media City, more in peak traffic. There's parking on site, and you can walk in for a free diagnosis without an appointment." },
-      { q: "Can I send my MacBook from a Karama Market shop by courier?", a: "Yes. Book any same-day courier app, hand the Mac to the driver at your shop, and WhatsApp us the tracking link with the model. We'll diagnose it, send a written quote and arrange the return with you once it's done." },
+      { q: "Can I send my MacBook from a Karama Market shop by courier?", a: "Yes. Book any same-day courier app, hand the Mac to the driver at your shop, and WhatsApp us the tracking link with the model. We'll diagnose it, send a written quote, and when it's done you collect it or we book a courier to bring it back." },
       { q: "Can I get a same-day repair from Karama?", a: "Often. Screen, battery, keyboard and trackpad repairs can usually be completed the same day if the part is in stock. Logic board faults take longer, and we'll tell you the expected time in writing before starting." },
       { q: "Do you do onsite MacBook repair in Karama?", a: "Only when a technician is free, and it's a paid visit. We quote the charge on WhatsApp before you book. Jobs that need the bench, such as board repair, still come back to the workshop." },
       { q: "The office MacBook near Al Attar Tower won't turn on. What should I tell you?", a: "WhatsApp the model, what happened before it died and whether it shows any light or sound when you press power. Then bring it in or courier it over. The diagnosis is free, and data recovery is an option if the board can't be saved." },
@@ -485,7 +485,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Mirdif",
     short: "Mirdif",
     driveTime: "30 minutes",
-    metroNote: "The nearest Metro is Rashidiya on the Red Line, a 10-minute drive from most Mirdif addresses to the station, then connect onward or take a taxi to the workshop.",
+    metroNote: "The nearest Metro is Centrepoint (formerly Rashidiya) at the end of the Red Line, about a 10-minute drive from most Mirdif addresses. Ride the line across the city to Al Fardan Exchange, then walk about 15 minutes to Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Mirdif City Centre", "Uptown Mirdif", "Al Mushrif Park", "Garhoud Bridge", "Mirdif Hills", "Shorooq community"],
     landmarkLine: "Serving Mirdif City Centre, Uptown Mirdif, Al Mushrif Park, and the Mirdif Hills and Shorooq communities.",
@@ -506,11 +506,11 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Is it worth driving from Mirdif to Media City for a MacBook repair?", a: "For a same-day job, often yes. Screen, battery, keyboard and trackpad repairs can usually be finished while you wait nearby if the part is in stock. WhatsApp first so we can check the part before you make the 30-minute drive." },
-      { q: "Can I send my MacBook from a Mirdif villa by courier?", a: "Yes. Book a same-day courier app, hand the Mac over at your gate, and WhatsApp us the tracking link. We diagnose it free, send a written quote, and sort out the return with you on WhatsApp once it's fixed." },
+      { q: "Can I send my MacBook from a Mirdif villa by courier?", a: "Yes. Book a same-day courier app, hand the Mac over at your gate, and WhatsApp us the tracking link. We diagnose it free, send a written quote, and once it's fixed we book a courier to bring it back to your gate." },
       { q: "Do you offer onsite MacBook repair in Mirdif?", a: "When a technician is free, yes, as a paid visit. The charge is quoted on WhatsApp before you book. Some faults, like logic board work, still need the workshop bench and can't be done at home." },
       { q: "I work at Mirdif City Centre. Can I send my MacBook from there?", a: "Yes. Book a courier app from your shop or office in the mall, hand the Mac to the driver, and WhatsApp us the tracking link with the model and the fault. You can also drop it in yourself on a day off, Monday to Saturday." },
       { q: "Why not just go to an Apple Store from Mirdif?", a: "That's your choice, and for some warranty cases it makes sense. We're an independent workshop: we repair logic boards at component level, quote in writing before work starts, and give a written warranty of up to 12 months on hardware repairs." },
-      { q: "What happens if my repair takes more than one day?", a: "We keep you updated on WhatsApp. Board repairs and data recovery take longer than screen or battery jobs, and we'll tell you the expected time before starting. When it's ready, you collect it or we arrange the return with you." },
+      { q: "What happens if my repair takes more than one day?", a: "We keep you updated on WhatsApp. Board repairs and data recovery take longer than screen or battery jobs, and we'll tell you the expected time before starting. When it's ready, you collect it, or we book a courier to bring it back." },
       { q: "Can you look at several Macs from one Mirdif home office?", a: "Yes. Send the list of models and faults on WhatsApp. Each one gets a free diagnosis and its own written quote, and they can all come in on one trip or in one courier booking." },
       { q: "When are you open if I'm driving in from Mirdif?", a: "Monday to Thursday and Saturday, 9 am to 7 pm. On Friday we open 9 am to 12 pm and again 2 pm to 7 pm. Sunday is closed, so plan the drive for another day." },
     ],
@@ -521,7 +521,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Palm Jumeirah",
     short: "Palm",
     driveTime: "15 minutes",
-    metroNote: "The Palm Monorail connects the trunk to the Atlantis at the top. The DMCC Metro (Red Line) is the nearest Metro station, a short taxi from the Palm gateway.",
+    metroNote: "The Palm Monorail runs along the trunk to Atlantis. Off the island, the Palm Jumeirah tram stop is a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Atlantis The Palm", "Nakheel Mall", "The Pointe", "FIVE Palm Hotel", "Signature Villas", "Golden Mile"],
     landmarkLine: "Serving Atlantis, Nakheel Mall, The Pointe, FIVE Palm, and the Signature Villa and Golden Mile communities.",
@@ -541,9 +541,9 @@ const BASE_AREAS: AreaConfig[] = [
     ],
     topServices: COMMON_SERVICES,
     faqs: [
-      { q: "Can I send my MacBook from a Palm Jumeirah villa without driving?", a: "Yes. Book a same-day courier app to your frond villa, hand the Mac to the driver, and WhatsApp us the tracking link. We'll diagnose it free, quote in writing and arrange the return with you once it's done." },
+      { q: "Can I send my MacBook from a Palm Jumeirah villa without driving?", a: "Yes. Book a same-day courier app to your frond villa, hand the Mac to the driver, and WhatsApp us the tracking link. We'll diagnose it free, quote in writing, and book a courier to bring it back once it's done." },
       { q: "How long is the drive from the Palm to your workshop?", a: "About 15 minutes from the Palm gateway and Nakheel Mall, and around 20 from Atlantis. Concord Tower, Dubai Media City has parking on site, and you can walk in for a diagnosis without booking." },
-      { q: "I'm a guest at a Palm Jumeirah hotel. How do I get my MacBook repaired?", a: "Book a same-day courier app, leave the Mac with the concierge for the driver, and WhatsApp us the tracking link and your room details for the return. If you have a car, the workshop is a short drive off the island." },
+      { q: "I'm a guest at a Palm Jumeirah hotel. How do I get my MacBook repaired?", a: "Book a same-day courier app, leave the Mac with the concierge for the driver, and WhatsApp us the tracking link and your room details, and we'll book a courier to bring it back to the hotel. If you have a car, the workshop is a short drive off the island." },
       { q: "Is same-day MacBook repair possible for Palm residents?", a: "Often. Screen, battery, keyboard and trackpad repairs are usually done the same day when the part is in stock, and a morning drop-off gives the most time. Logic board repairs take longer." },
       { q: "What's the most common MacBook fault you see from Palm residents?", a: "Keyboards and fans clogged with fine sand and salt, and batteries swollen by heat, especially on Macs left out on a terrace. Cracked screens come next. All of these are bench jobs we handle often." },
       { q: "Can a technician come to my villa on the Palm?", a: "Sometimes. Onsite repair is paid and only possible when a technician is free. We'll quote the charge on WhatsApp before you book, and anything needing board work goes back to the workshop." },
@@ -557,7 +557,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Barsha",
     short: "Barsha",
     driveTime: "8 minutes",
-    metroNote: "Mall of the Emirates Metro on the Red Line is 4 minutes from the workshop. Al Barsha is one of the closest major residential areas to the workshop.",
+    metroNote: "Mall of the Emirates on the Red Line is the local station. Ride to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty for the Palm Jumeirah stop, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Mall of the Emirates", "Barsha Pond Park", "Al Barsha 1 / 2 / 3", "My City Centre Al Barsha", "Gems schools cluster", "Al Barsha South"],
     landmarkLine: "8 minutes from Mall of the Emirates, Barsha Pond Park, and all Al Barsha 1, 2, and 3 communities.",
@@ -593,7 +593,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Sufouh",
     short: "Al Sufouh",
     driveTime: "5 minutes",
-    metroNote: "Dubai Internet City Metro on the Red Line is the closest station, and the Al Sufouh Tram runs along the district - the workshop is minutes away on Al Sufouh Road.",
+    metroNote: "The Dubai Tram runs along Al Sufouh Road, so the easy option is to ride it to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Madinat Jumeirah", "Sufouh Beach", "Knowledge Village", "American School of Dubai", "Dubai Media City", "Palm Jumeirah gateway"],
     landmarkLine: "Minutes from Madinat Jumeirah, Sufouh Beach, Knowledge Village and the Palm Jumeirah gateway.",
@@ -615,7 +615,7 @@ const BASE_AREAS: AreaConfig[] = [
     faqs: [
       { q: "Where exactly is your workshop in Al Sufouh?", a: "Office #45, 10th Floor, Concord Tower, Dubai Media City, on Al Sufouh Road. From most of Al Sufouh it's a 4 to 6 minute drive, and there's parking on site. Walk in without an appointment." },
       { q: "Can I walk in from Knowledge Village between classes?", a: "Yes. It's about 4 minutes by car from Knowledge Village and Knowledge Park. Bring the MacBook and its charger, get the free diagnosis, and approve the written quote on WhatsApp before we start any work." },
-      { q: "Can a Madinat Jumeirah hotel guest get a MacBook repaired nearby?", a: "Yes. The workshop is about 6 minutes from Madinat Jumeirah. Take a taxi and walk in, or book a same-day courier app from the hotel and WhatsApp us the tracking link. We arrange the return with you on WhatsApp." },
+      { q: "Can a Madinat Jumeirah hotel guest get a MacBook repaired nearby?", a: "Yes. The workshop is about 6 minutes from Madinat Jumeirah. Take a taxi and walk in, or book a same-day courier app from the hotel and WhatsApp us the tracking link. When it's fixed, we book a courier to bring it back to the hotel." },
       { q: "Can you repair a MacBook the same day in Al Sufouh?", a: "Often, for screen, battery, keyboard and trackpad jobs with the part in stock. Since you're so close, you can drop it in the morning and come back when we message that it's ready. Board work takes longer." },
       { q: "My MacBook got sand or salt in it at Sufouh Beach. Can you save it?", a: "Usually, if it's caught early. Sand in the vents and salt air cause overheating and sticky keys. Bring it in soon and we strip-clean the fans, heatsinks and ports, then run a full diagnostic before quoting." },
       { q: "Do you offer onsite repair in Al Sufouh?", a: "A paid onsite visit is possible when a technician is free, quoted on WhatsApp before you book. From most Al Sufouh addresses, though, walking in takes less time than arranging a visit." },
@@ -629,7 +629,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Barsha Heights",
     short: "Barsha Heights",
     driveTime: "6 minutes",
-    metroNote: "Dubai Internet City Metro on the Red Line sits on the edge of Barsha Heights - the workshop is a 6-minute drive or one Metro stop away.",
+    metroNote: "The workshop is a 6-minute drive. By Metro, take the Red Line from Dubai Internet City station, on the edge of Barsha Heights, one stop to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Internet City Metro", "The Montrose", "Two Towers", "Boutique 7 Hotel", "Al Shaiba / API towers", "Sheikh Zayed Road frontage"],
     landmarkLine: "Between Sheikh Zayed Road and Media City, around Dubai Internet City Metro and the Tecom tower clusters.",
@@ -652,7 +652,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "How far is Barsha Heights (Tecom) from your workshop?", a: "Very close. Concord Tower, Dubai Media City is about 5 to 7 minutes by car from the Tecom towers and 3 minutes from the Media City border. Parking is on site and you can walk in without booking." },
       { q: "Is Barsha Heights the same as Tecom?", a: "Yes. Tecom is the old name and Barsha Heights is the official one. People still search both, and it's the same tower cluster next to Media City either way." },
       { q: "Can I drop my MacBook off during a lunch break from Tecom?", a: "Yes. Walk in, leave it for the free diagnosis, and we'll send the written quote on WhatsApp. Watch the Friday hours: 9 am to 12 pm, then 2 pm to 7 pm, so avoid the midday gap." },
-      { q: "Can I send a MacBook from my co-working space by courier?", a: "Yes. Book a same-day courier app, hand the Mac to the driver at reception, and WhatsApp us the tracking link with the model and fault. We arrange the return with you on WhatsApp once it's fixed." },
+      { q: "Can I send a MacBook from my co-working space by courier?", a: "Yes. Book a same-day courier app, hand the Mac to the driver at reception, and WhatsApp us the tracking link with the model and fault. Once it's fixed, collect it, or we book a courier to bring it back." },
       { q: "Can a Tecom freelancer get a MacBook back the same day?", a: "Often, for screen, battery, keyboard and trackpad jobs with the part in stock. Since you're minutes away, you can come and fetch it yourself as soon as we message. Logic board work takes longer." },
       { q: "Our agency has several MacBooks with problems. Can you handle them together?", a: "Yes. Send the list of models and faults on WhatsApp. Each machine gets a free diagnosis and its own written quote before work starts, and you can bring them over together since we're so close." },
       { q: "How do I find your office coming from Barsha Heights?", a: "Drive into Dubai Media City, about 6 minutes from The Montrose or Two Towers. Look for Concord Tower and come up to Office #45 on the 10th floor. Parking is on site." },
@@ -665,7 +665,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "The Greens",
     short: "The Greens",
     driveTime: "9 minutes",
-    metroNote: "Dubai Internet City Metro on the Red Line is the nearest station, a short hop from The Greens - the workshop is a 9-minute drive.",
+    metroNote: "The workshop is a 9-minute drive from The Greens. By Metro, ride the Red Line from Dubai Internet City station to Al Fardan Exchange, then walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Emirates Golf Club", "The Onyx", "Al Thayyal & Al Ghozlan", "Carrefour The Greens", "The Views towers", "Montgomerie Golf Course"],
     landmarkLine: "Around Emirates Golf Club and Carrefour The Greens, next to the neighbouring Views towers.",
@@ -687,7 +687,7 @@ const BASE_AREAS: AreaConfig[] = [
     faqs: [
       { q: "How far is The Greens from your Media City workshop?", a: "About 9 minutes by car from The Greens and 10 from The Views towers, via Sheikh Zayed Road and Al Sufouh Road. Concord Tower has parking on site, and walk-ins don't need an appointment." },
       { q: "Do you cover The Views as well as The Greens?", a: "Yes. The Views towers, including Golf Towers, Mosela, Travo and Fairways, are effectively the same neighbourhood for us. Drive in, send the Mac with a courier app you book, or ask about a paid onsite visit." },
-      { q: "Can I courier my MacBook from a low-rise block in The Greens?", a: "Yes. Book a same-day courier app to your Al Thayyal, Al Ghozlan or Al Samar building, hand the Mac over in the lobby, and WhatsApp us the tracking link. We arrange the return with you on WhatsApp when it's fixed." },
+      { q: "Can I courier my MacBook from a low-rise block in The Greens?", a: "Yes. Book a same-day courier app to your Al Thayyal, Al Ghozlan or Al Samar building, hand the Mac over in the lobby, and WhatsApp us the tracking link. When it's fixed, we book a courier to bring it back to your building." },
       { q: "I work from home in The Greens. Can my MacBook be fixed the same day?", a: "Often. Screen, battery, keyboard and trackpad jobs are usually finished the same day when the part is in stock. Drive it over in the morning and you could be back online by evening. Board faults take longer." },
       { q: "Is onsite MacBook repair available in The Greens or The Views?", a: "Yes, as a paid visit, when a technician is free. We quote the charge on WhatsApp before you book. With the workshop only 9 minutes away, driving in is often the faster choice." },
       { q: "I need data recovered from a MacBook that won't boot. Can you help?", a: "Yes. We do data recovery from Macs that won't start, and sometimes repairing the board fault is the way to reach the files. Bring it in or courier it over, and we'll quote in writing before starting." },
@@ -701,7 +701,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "JVC",
     short: "JVC",
     driveTime: "16 minutes",
-    metroNote: "JVC is not on the Metro network, so for a repair it's usually simpler to drive to Concord Tower, Dubai Media City or send the Mac with a same-day courier app you book.",
+    metroNote: "JVC is not on the Metro network, so for a repair it's usually simpler to drive to Concord Tower, Dubai Media City or send the Mac with a same-day courier app you book. On the Metro from elsewhere, Al Fardan Exchange on the Red Line is about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Circle Mall", "JVC Community Park", "Saheel & Seasons towers", "Districts 10-16", "Hessa Street", "Al Khail Road"],
     landmarkLine: "Around Circle Mall and the JVC Community Park, across Districts 10 to 16.",
@@ -722,12 +722,12 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How long does it take to drive from JVC to your workshop?", a: "About 16 minutes from Circle Mall or District 12, and up to 18 from Districts 15 and 16, via Hessa Street and Sheikh Zayed Road. Concord Tower, Dubai Media City has parking on site." },
-      { q: "I work from home in JVC. Can I send my MacBook instead of driving?", a: "Yes. Book a same-day courier app to your tower lobby, hand the Mac to the driver and WhatsApp us the tracking link with the model. We diagnose it free, quote in writing, and arrange the return with you on WhatsApp." },
+      { q: "I work from home in JVC. Can I send my MacBook instead of driving?", a: "Yes. Book a same-day courier app to your tower lobby, hand the Mac to the driver and WhatsApp us the tracking link with the model. We diagnose it free, quote in writing, and book a courier to bring it back when it's done." },
       { q: "Do you take MacBooks from both JVC towers and townhouses?", a: "Yes, from anywhere in Districts 10 to 16. Drive in, or book a courier app to your lobby or townhouse gate. Send your district and the model on WhatsApp so we know what's coming." },
       { q: "Can I hand my MacBook to a courier at Circle Mall?", a: "Yes, if the courier app lets you set the mall as the starting point. Book it, hand the Mac over at the meeting spot, and WhatsApp us the tracking link. We'll confirm on WhatsApp when it reaches the bench." },
       { q: "I spilled coffee on my MacBook at home in JVC. What now?", a: "Power it off, don't charge it, and WhatsApp us. Then get it to us quickly, by car or a courier app you book. We clean the logic board, check for corrosion and quote the repair in writing. The sooner it arrives, the better the odds." },
       { q: "Can a technician repair my MacBook at my JVC apartment?", a: "Sometimes. Onsite repair is paid and depends on a technician being free. We quote the charge on WhatsApp before booking. Liquid damage and board faults still need to come to the workshop." },
-      { q: "Is there a Metro option from JVC to Media City?", a: "Not directly. JVC isn't on the Metro network, so a taxi or your own car is simpler: about 16 minutes to Concord Tower, Dubai Media City. Or send the Mac with a same-day courier app you book." },
+      { q: "Is there a Metro option from JVC to Media City?", a: "Not directly. JVC isn't on the Metro network, so a taxi or your own car is simpler: about 16 minutes to Concord Tower, Dubai Media City. Or send the Mac with a same-day courier app you book. If you do reach the Red Line, ride it to Al Fardan Exchange, about a 15-minute walk from us." },
       { q: "Can you also fix my iPhone or iPad from JVC?", a: "Yes. iPhone and iPad repairs are done at the same workshop, so one trip or one courier booking covers the household. Tell us every device and fault on WhatsApp and you'll get a written quote for each." },
     ],
     reviewIndexes: [3, 8, 12, 17, 21, 25],
@@ -737,7 +737,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Hills Estate",
     short: "Dubai Hills",
     driveTime: "18 minutes",
-    metroNote: "Dubai Hills is not yet on the Metro network, so the practical options are driving in to Concord Tower, Dubai Media City or booking a same-day courier app to send the Mac.",
+    metroNote: "Dubai Hills is not yet on the Metro network, so the practical options are driving in to Concord Tower, Dubai Media City or booking a same-day courier app to send the Mac. If you come by public transport, the Palm Jumeirah tram stop is a 3-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Hills Mall", "Dubai Hills Golf Club", "Kings College Hospital", "Park Heights", "Sidra & Maple villas", "Dubai Hills Park"],
     landmarkLine: "Around Dubai Hills Mall, the Golf Club and the Sidra, Maple and Park Heights communities.",
@@ -758,7 +758,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How far is Dubai Hills Estate from your workshop?", a: "About 18 minutes by car from Dubai Hills Mall, Park Heights or Sidra, and around 20 from Golf Place. We're at Concord Tower, Dubai Media City, with parking on site and no appointment needed." },
-      { q: "Can the family driver or housemaid send the MacBook for me?", a: "Yes. Book a same-day courier app, and whoever's home hands the Mac over at the gate. WhatsApp us the tracking link and your name so we can match it when it arrives. We arrange the return with you on WhatsApp." },
+      { q: "Can the family driver or housemaid send the MacBook for me?", a: "Yes. Book a same-day courier app, and whoever's home hands the Mac over at the gate. WhatsApp us the tracking link and your name so we can match it when it arrives. Once it's fixed, we book a courier to bring it back to the house." },
       { q: "We have several Apple devices at home. Can you take them together?", a: "Yes. Bring the MacBook, iPhone and iPad on one trip or send them in one courier booking. Each device gets a free diagnosis and a written quote, and you approve each one separately." },
       { q: "Is onsite repair available at a Dubai Hills villa?", a: "When a technician is free, yes, as a paid visit. The charge is quoted on WhatsApp before you book. Spills and board faults usually still need to come back to the workshop bench." },
       { q: "My child spilled a drink on the MacBook at home. What should I do?", a: "Turn it off, unplug it and don't try charging it to check. WhatsApp us, then get it to the workshop quickly, by car or a courier app. We clean and repair the board and quote in writing first." },
@@ -773,7 +773,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Discovery Gardens",
     short: "Discovery Gardens",
     driveTime: "15 minutes",
-    metroNote: "Discovery Gardens Metro on the Red Line serves the community directly, and Ibn Battuta Metro is one stop away - the workshop is a 15-minute drive.",
+    metroNote: "Discovery Gardens station on the Red Line serves the community, and the workshop is a 15-minute drive. By Metro, ride towards the city, change to the tram at DMCC or Sobha Realty and get off at Palm Jumeirah, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Ibn Battuta Mall", "Discovery Gardens Pavilion", "Mediterranean Cluster", "Mogul Cluster", "The Gardens", "Discovery Gardens Metro"],
     landmarkLine: "Around Ibn Battuta Mall and the Discovery Gardens Pavilion, across the themed clusters.",
@@ -782,7 +782,7 @@ const BASE_AREAS: AreaConfig[] = [
     whyChoose:
       "Discovery Gardens is a renting community, and most people here want a straight answer on cost before they spend anything. That's how we work. The diagnosis is free, the price is fixed in writing on WhatsApp before a screwdriver touches the Mac, and if we can't fix it you don't pay. Screens, batteries, keyboards and trackpads are often done the same day when the part is on the shelf. Shafiq, our lead technician, repairs logic boards at component level, so a dead board doesn't automatically mean buying a new Mac.",
     pickupNote:
-      "From the clusters, head onto Sheikh Zayed Road towards Media City and you're at Concord Tower in about 15 minutes. Prefer not to drive? Book a same-day courier app, hand the Mac over at your building entrance, and WhatsApp 055 741 3706 the tracking link with your model and a photo of the fault. We'll sort out the return with you on WhatsApp once it's fixed. A paid onsite visit can be arranged when a technician is free.",
+      "From the clusters, head onto Sheikh Zayed Road towards Media City and you're at Concord Tower in about 15 minutes. Prefer not to drive? Book a same-day courier app, hand the Mac over at your building entrance, and WhatsApp 055 741 3706 the tracking link with your model and a photo of the fault. Once it's fixed, collect it, or we book a courier to bring it back. A paid onsite visit can be arranged when a technician is free.",
     travel: [
       { from: "Mediterranean / Mogul Cluster", drive: "15 min" },
       { from: "Mesoamerican / Zen Cluster",    drive: "15 min" },
@@ -794,12 +794,12 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Is there a MacBook repair place near Discovery Gardens?", a: "Our workshop is about 15 minutes away in Concord Tower, Dubai Media City, straight up Sheikh Zayed Road. Walk in for a free diagnosis without an appointment, Monday to Saturday. On Fridays we close between 12 and 2 pm." },
-      { q: "Can I send my MacBook from my cluster with a courier app?", a: "Yes. Book any same-day courier app, hand the Mac over at your building entrance, and WhatsApp us the tracking link along with the model and the fault. When the repair is done, we arrange the return with you on WhatsApp." },
+      { q: "Can I send my MacBook from my cluster with a courier app?", a: "Yes. Book any same-day courier app, hand the Mac over at your building entrance, and WhatsApp us the tracking link along with the model and the fault. When the repair is done, we book a courier to bring it back to your cluster." },
       { q: "Can a technician come to my apartment in Discovery Gardens?", a: "Sometimes. Onsite repair is a paid service and depends on a technician being free. Message us on WhatsApp with the model and the problem, and we'll quote the visit charge before anything is booked." },
       { q: "Can I bring it in on my way back from Ibn Battuta Mall?", a: "Yes. Concord Tower is a short drive from Ibn Battuta along Sheikh Zayed Road. Come in during opening hours, leave the Mac with us, and the written quote follows on WhatsApp once we've diagnosed it." },
       { q: "Can my MacBook screen be fixed the same day?", a: "Often, yes. Screen, battery, keyboard and trackpad jobs can usually be finished the same day when the part is in stock. Logic board faults take longer, and you'll get a realistic timeline with the quote." },
       { q: "Is there a diagnostic fee?", a: "No. The diagnosis is free, and the price is fixed in writing on WhatsApp before any work starts. If we can't fix the Mac, you pay nothing at all." },
-      { q: "Can I get to the workshop without a car?", a: "Yes. A taxi takes roughly the same 15 minutes along Sheikh Zayed Road. Ask for Concord Tower in Dubai Media City; we're Office #45 on the 10th floor, and parking is on site if a friend drives you." },
+      { q: "Can I get to the workshop without a car?", a: "Yes. Ask for Concord Tower in Dubai Media City; we're Office #45 on the 10th floor. A taxi takes roughly the same 15 minutes along Sheikh Zayed Road. By Metro, ride the Red Line from Discovery Gardens station, change to the tram at DMCC or Sobha Realty and get off at Palm Jumeirah, a 3-minute walk from us." },
       { q: "Can you also look at my iPhone or iPad?", a: "Yes. We repair iPhone and iPad as well as every Mac, so bring them in together. Each one gets its own diagnosis and its own written quote. We don't repair Apple Watch or AirPods." },
     ],
     reviewIndexes: [1, 6, 11, 16, 20, 24],
@@ -809,7 +809,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Motor City",
     short: "Motor City",
     driveTime: "20 minutes",
-    metroNote: "Motor City is not on the Metro network - most people drive the 20 minutes to the workshop or send the Mac with a same-day courier app.",
+    metroNote: "Motor City is not on the Metro network, so most people drive the 20 minutes to the workshop or send the Mac with a same-day courier app. Without a car, a taxi to the nearest Red Line station and a ride to Al Fardan Exchange leaves a 15-minute walk.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Autodrome", "First Avenue Mall", "Uptown Motor City", "Control Tower", "Green Community border", "Detroit House"],
     landmarkLine: "Around Dubai Autodrome and First Avenue Mall, across Uptown Motor City.",
@@ -845,7 +845,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Production City (IMPZ)",
     short: "Production City",
     driveTime: "20 minutes",
-    metroNote: "Dubai Production City (IMPZ) is not on the Metro network - drive the 20 minutes to the workshop, or send the Mac with a same-day courier app.",
+    metroNote: "Dubai Production City (IMPZ) is not on the Metro network, so drive the 20 minutes to the workshop or send the Mac with a same-day courier app. If you reach the Red Line another way, get off at Al Fardan Exchange, about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["City Centre Me'aisem", "Lago Vista", "Oakwood Residency", "Centrium Towers", "Dunes Village", "Dubai Production City"],
     landmarkLine: "Around City Centre Me'aisem and the Lago Vista and Centrium tower clusters.",
@@ -868,7 +868,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Is Dubai Production City the same as IMPZ?", a: "Yes. IMPZ (International Media Production Zone) is the older name and Dubai Production City is the current one. People search for both, and it's the same area, about 20 minutes from our workshop." },
       { q: "Where's the closest Mac repair to IMPZ?", a: "Our workshop in Concord Tower, Dubai Media City, is about 20 minutes' drive from the Production City towers. Walk in for a free diagnosis with no appointment, and use the parking on site." },
       { q: "Can our media company send several Macs at once?", a: "Yes. Pack them separately, send them together with a courier app or bring them in, and list each one on WhatsApp. Every Mac gets its own free diagnosis and its own written quote, so you choose which to repair." },
-      { q: "Can I send my MacBook from my tower lobby by courier?", a: "Yes. Book a same-day courier app from your tower, hand the Mac over at reception, and WhatsApp us the tracking link. Once it's repaired, we arrange the return with you on WhatsApp." },
+      { q: "Can I send my MacBook from my tower lobby by courier?", a: "Yes. Book a same-day courier app from your tower, hand the Mac over at reception, and WhatsApp us the tracking link. Once it's repaired, we book a courier to bring it back to the tower." },
       { q: "Will I get my MacBook back the same day?", a: "Quite often, for screens, batteries, keyboards and trackpads when the part is in stock. Board-level faults take longer. You'll get a straight timeline with the written quote, so you can plan around your deadlines." },
       { q: "Do you do onsite repairs in Production City?", a: "When a technician is free, yes, as a paid visit. The charge is quoted on WhatsApp before you book. Some faults, like board repairs, are better done at the workshop, and we'll tell you if yours is one." },
       { q: "My MacBook Pro overheats during long exports. Can you fix it?", a: "Usually. Long renders push the fans and thermal paste hard, and dust makes it worse. We open it up, clean the fans and heatsink, and replace the paste where needed. Send the model on WhatsApp first." },
@@ -881,7 +881,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Arabian Ranches",
     short: "Arabian Ranches",
     driveTime: "22 minutes",
-    metroNote: "Arabian Ranches is not on the Metro network - the workshop is a 22-minute drive, or you can send the Mac with a same-day courier app.",
+    metroNote: "Arabian Ranches is not on the Metro network. The workshop is a 22-minute drive, or you can send the Mac with a same-day courier app. The closest public-transport stop to us is Palm Jumeirah on the Dubai Tram, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Arabian Ranches Golf Club", "The Ranches Souk", "Dubai Polo & Equestrian Club", "Al Reem", "Saheel", "Mirador"],
     landmarkLine: "Around the Arabian Ranches Golf Club and The Ranches Souk, across the villa communities.",
@@ -917,7 +917,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Emirates Living",
     short: "Emirates Living",
     driveTime: "12 minutes",
-    metroNote: "Dubai Internet City and DMCC Metro on the Red Line are the closest stations - the workshop is a 12-minute drive from the Emirates Living communities.",
+    metroNote: "The workshop is a 12-minute drive from the Emirates Living communities. The closest stations are Dubai Internet City and DMCC on the Red Line; at DMCC, change to the tram and ride to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Emirates Hills", "The Springs Souk", "Meadows Village", "The Lakes", "Montgomerie Golf Course", "Emirates Golf Club"],
     landmarkLine: "Across Emirates Hills, The Springs, The Meadows and The Lakes, by the Montgomerie golf course.",
@@ -953,7 +953,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Quoz",
     short: "Al Quoz",
     driveTime: "14 minutes",
-    metroNote: "Equiti and Noor Bank stations on the Red Line both serve Al Quoz; from either it is a short taxi to Concord Tower, or 4 stops to Media City Metro.",
+    metroNote: "Equiti station on the Red Line serves Al Quoz. From there it's a short taxi to Concord Tower, or ride the Red Line to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Alserkal Avenue", "Times Square Center", "Oasis Centre", "Al Quoz Industrial Area 1-4", "Dubai Garden Glow", "Al Khail Gate"],
     landmarkLine: "15 minutes from Alserkal Avenue, Times Square Center and the Al Quoz industrial blocks.",
@@ -989,7 +989,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Sports City",
     short: "Sports City",
     driveTime: "22 minutes",
-    metroNote: "There is no metro station in Sports City, so most people here drive the 22 minutes to the workshop or send the Mac with a same-day courier app.",
+    metroNote: "There is no metro station in Sports City, so most people here drive the 22 minutes to the workshop or send the Mac with a same-day courier app. If you use the Red Line from elsewhere, Al Fardan Exchange is about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai International Stadium", "The Els Club", "Victory Heights", "Canal Residence West", "ICC Academy", "Bermuda Views"],
     landmarkLine: "20 minutes from Dubai International Stadium, Victory Heights and Canal Residence West.",
@@ -998,7 +998,7 @@ const BASE_AREAS: AreaConfig[] = [
     whyChoose:
       "The real reason to come to us from Sports City is what happens once the Mac arrives. The diagnosis is free, the quote is fixed in writing on WhatsApp, and there's no charge if we can't fix the machine. Screens, batteries and keyboards are often done the same day when the part's in stock. Board faults take longer because they're repaired at component level rather than by swapping the whole board. Summer heat is hard on Macs with dusty fans, and a clean and repaste is a routine bench job for us.",
     pickupNote:
-      "It's about 22 minutes from Elite Sports Residence or Canal Residence West to Concord Tower, a little longer from Victory Heights. If you're at work, leave the Mac with your building's security desk and book a same-day courier app from there. WhatsApp Shafiq on 055 741 3706 with the tracking link, the model and a photo of the fault, and we'll agree the return on WhatsApp. A paid onsite visit is possible when a technician is free.",
+      "It's about 22 minutes from Elite Sports Residence or Canal Residence West to Concord Tower, a little longer from Victory Heights. If you're at work, leave the Mac with your building's security desk and book a same-day courier app from there. WhatsApp Shafiq on 055 741 3706 with the tracking link, the model and a photo of the fault, and once it's fixed we book a courier to bring it back. A paid onsite visit is possible when a technician is free.",
     travel: [
       { from: "Dubai International Stadium", drive: "22 min" },
       { from: "Elite Sports Residence",      drive: "22 min" },
@@ -1025,7 +1025,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Furjan",
     short: "Al Furjan",
     driveTime: "18 minutes",
-    metroNote: "Al Furjan Metro on the Red Line puts the workshop within reach without a car - it is a direct run to Dubai Internet City, then a short walk or taxi to Concord Tower.",
+    metroNote: "Al Furjan station on the Red Line puts the workshop within reach without a car. Ride towards the city, change to the tram at DMCC or Sobha Realty and get off at Palm Jumeirah, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Al Furjan Metro Station", "Masakin Al Furjan", "Murano Residences", "Avenue Residence", "Al Furjan Pavilion", "Discovery Gardens border"],
     landmarkLine: "18 minutes from Al Furjan Metro, Masakin Al Furjan and the Murano Residences.",
@@ -1061,7 +1061,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Design District",
     short: "d3",
     driveTime: "20 minutes",
-    metroNote: "Business Bay Metro on the Red Line is the nearest station to d3, about 8 minutes away by taxi; from there it is a direct run to Dubai Internet City for the workshop.",
+    metroNote: "Business Bay station on the Red Line is the nearest to d3, about 8 minutes away by taxi. From there, ride to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty for the Palm Jumeirah stop, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["d3 Building 1-11", "Design Quarter", "Dubai Institute of Design and Innovation", "d3 Waterfront", "Ras Al Khor Road side", "Business Bay border"],
     landmarkLine: "20 minutes from the d3 office buildings, the Design Quarter and the d3 waterfront.",
@@ -1085,7 +1085,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Do you repair Mac Studio and iMac, not just MacBooks?", a: "Yes. Mac Studio, iMac, Mac mini and Mac Pro are all repaired at the workshop. Desktops are safest brought in by car or sent in their original box, so the display and chassis don't take knocks." },
       { q: "My MacBook Pro holds unbacked-up client work and won't boot. What happens first?", a: "Data first. We attempt recovery before any board work, confirm with you what came back, and only then discuss the repair. On Apple silicon and T2 Macs the storage is soldered to the board, so this is specialist work." },
       { q: "Is there a faster option for an urgent studio deadline?", a: "Tell us the deadline on WhatsApp before you send the Mac. With the part in stock, many repairs are finished the same day. If we can't meet your date, we'll say so up front rather than let you wait." },
-      { q: "How do I send a Mac from d3 by courier?", a: "Book a same-day courier app from your building reception, hand the Mac over packed in a sleeve or box, and WhatsApp us the tracking link. We'll arrange the return with you on WhatsApp once it's fixed." },
+      { q: "How do I send a Mac from d3 by courier?", a: "Book a same-day courier app from your building reception, hand the Mac over packed in a sleeve or box, and WhatsApp us the tracking link. When it's fixed, we book a courier to bring it back to the same reception." },
       { q: "Can a technician come to our studio in d3?", a: "When a technician is free, yes. It's a paid onsite visit, and the charge is quoted on WhatsApp before you book. Board repairs and data recovery need the workshop bench, so those still come to us." },
       { q: "Is there parking if I drive the Mac over from d3?", a: "Yes, Concord Tower has parking on site. Bring the Mac up to Office #45 on the 10th floor; no appointment is needed for a diagnosis. On Fridays we close between 12 and 2 pm." },
       { q: "Can you fix a MacBook Pro screen with lines or flicker?", a: "Usually. Lines and flicker can come from the panel, the display cable or the board, and the free diagnosis tells us which. Screen repairs carry a 90-day warranty, and the quote comes in writing first." },
@@ -1097,7 +1097,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Creek Harbour",
     short: "Creek Harbour",
     driveTime: "32 minutes",
-    metroNote: "There is no metro station inside Creek Harbour, so most people here either drive the 32 minutes to the workshop or send the Mac with a same-day courier app.",
+    metroNote: "There is no metro station inside Creek Harbour, so most people here either drive the 32 minutes to the workshop or send the Mac with a same-day courier app. Once on the Red Line, ride to Al Fardan Exchange; Concord Tower is about a 15-minute walk from there.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Creek Marina", "The Grand", "Address Harbour Point", "Creek Beach", "Dubai Creek Tower site", "Ras Al Khor Wildlife Sanctuary"],
     landmarkLine: "30 minutes from Creek Marina, Address Harbour Point and Creek Beach.",
@@ -1120,7 +1120,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Do you actually cover Dubai Creek Harbour?", a: "Yes. The workshop is about 32 minutes away in Concord Tower, Dubai Media City. You can drive in, send the Mac with a same-day courier app, or ask for a paid onsite visit when a technician is free." },
       { q: "What's the quickest way to get my MacBook to you from Creek Harbour?", a: "A same-day courier app from your tower. Book it, hand the Mac over in the lobby, and send us the tracking link on WhatsApp. There's no waiting on us, and the diagnosis starts when it lands." },
       { q: "Can the concierge hand my MacBook to the courier?", a: "Yes, if you book the courier app to the reception desk. Leave the Mac packed with the concierge, tell them a courier is coming, and WhatsApp us the tracking link and the fault." },
-      { q: "Can I get a screen repair back on the same day from Creek Harbour?", a: "Often, if the part is in stock and the Mac reaches us early. Send it in the morning by courier app and we'll update you on WhatsApp. The return trip is arranged with you once it's done." },
+      { q: "Can I get a screen repair back on the same day from Creek Harbour?", a: "Often, if the part is in stock and the Mac reaches us early. Send it in the morning by courier app and we'll update you on WhatsApp. Once it's done, collect it, or we book a courier to bring it back." },
       { q: "Is onsite repair available at Creek Harbour?", a: "Sometimes. Onsite visits are paid and only happen when a technician is free, and the charge is quoted on WhatsApp before booking. Bigger faults mean the Mac needs to come to the workshop." },
       { q: "Can I send an iMac from Creek Harbour?", a: "Yes, but pack it well. Use the original box if you have it, since the display is the fragile part on a longer trip. A Mac mini travels more easily. Both get a free diagnosis when they arrive." },
       { q: "My MacBook got wet by the creek-side pool. What should I do now?", a: "Power it off immediately, don't plug it in to charge, and message us. Liquid damage gets worse as corrosion spreads. We clean the board and quote in writing once we can see the real damage." },
@@ -1133,7 +1133,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Festival City",
     short: "Festival City",
     driveTime: "30 minutes",
-    metroNote: "Festival City has no metro station of its own, so most customers here either drive across to Concord Tower, Dubai Media City or book a same-day courier app to bring the Mac to us.",
+    metroNote: "Festival City has no metro station of its own, so most customers here either drive across to Concord Tower, Dubai Media City or book a same-day courier app to bring the Mac to us. The nearest Metro to the workshop is Al Fardan Exchange on the Red Line, about a 15-minute walk.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Festival City Mall", "Al Badia Hillside Village", "Marsa Al Seef side", "InterContinental Dubai Festival City", "Festival Tower", "Dubai Festival City Marina"],
     landmarkLine: "30 minutes from Festival City Mall, Al Badia Hillside and the Festival City marina.",
@@ -1155,7 +1155,7 @@ const BASE_AREAS: AreaConfig[] = [
     faqs: [
       { q: "How long is the drive from Festival City to your workshop?", a: "About 30 minutes by car, a little less from the Ras Al Khor Road side. The workshop is Office #45, 10th Floor, Concord Tower, Dubai Media City, and you don't need an appointment for a diagnosis." },
       { q: "Can I send my Mac from a Festival City office instead of bringing it?", a: "Yes. Book a same-day courier app to your office reception, hand the Mac to the courier and WhatsApp us the tracking link. We diagnose it free and send the written quote on WhatsApp before any work starts." },
-      { q: "I'm staying at a Festival City hotel. How do I get my MacBook repaired?", a: "Leave the Mac at reception for a courier you book through a same-day courier app, then WhatsApp us the hotel name and the tracking link. Once the repair is done, we'll agree the return to the same desk with you on WhatsApp." },
+      { q: "I'm staying at a Festival City hotel. How do I get my MacBook repaired?", a: "Leave the Mac at reception for a courier you book through a same-day courier app, then WhatsApp us the hotel name and the tracking link. Once the repair is done, we book a courier to bring it back to the same desk." },
       { q: "Do you repair iMac and Mac mini from Festival City?", a: "Yes. iMac, Mac mini, Mac Studio and Mac Pro alongside MacBooks. If a courier is bringing a desktop, pack the display or chassis well, ideally in the original box, and tell us on WhatsApp it's on the way." },
       { q: "Can a technician come to Festival City to fix my Mac?", a: "Sometimes. Onsite repair is a paid service and only happens when a technician is free. Message us on WhatsApp with the model and the fault, and we'll quote the visit before you book anything." },
       { q: "Is same-day MacBook repair possible if I drive in from Festival City?", a: "Often, yes. Screens, batteries, keyboards and trackpads can usually be finished the same day when the part is in stock. Logic board work takes longer because it's done at component level." },
@@ -1169,7 +1169,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "International City",
     short: "International City",
     driveTime: "35 minutes",
-    metroNote: "International City isn't on the metro, so residents here usually drive to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac over.",
+    metroNote: "International City isn't on the metro, so residents here usually drive to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac over. Anyone who does reach the Red Line can ride it to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dragon Mart 1 & 2", "England Cluster", "China Cluster", "Greece Cluster", "Warsan Village", "Al Warsan Lake"],
     landmarkLine: "35 minutes from Dragon Mart and the England, China and Greece clusters.",
@@ -1190,7 +1190,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Is International City too far to use your workshop?", a: "No. It's about 35 minutes by car to Concord Tower, Dubai Media City, and many people skip the drive by sending the Mac with a same-day courier app. Either way the diagnosis is free and the quote comes in writing first." },
-      { q: "How do I send my MacBook by courier from International City?", a: "Book a same-day courier app to your building, pin the exact cluster entrance, and hand the Mac over in a padded sleeve. Then WhatsApp 055 741 3706 with the tracking link and the fault. We'll arrange the return with you on WhatsApp after the repair." },
+      { q: "How do I send my MacBook by courier from International City?", a: "Book a same-day courier app to your building, pin the exact cluster entrance, and hand the Mac over in a padded sleeve. Then WhatsApp 055 741 3706 with the tracking link and the fault. After the repair, we book a courier to bring it back to the same entrance." },
       { q: "Is there a cheaper option than replacing the logic board?", a: "Usually yes. Most board faults are a handful of failed components, not the whole board. We repair at component level, which typically costs far less than a board replacement quote. Diagnosis is free either way." },
       { q: "How do I know the price will not change once you open it?", a: "The price is fixed in writing on WhatsApp after the free diagnosis and before any work starts. If we find something else, we come back to you for approval rather than adjusting the bill." },
       { q: "Can someone come to my cluster to repair the Mac there?", a: "Only as a paid onsite visit, and only when a technician is free. Tell us the model and fault on WhatsApp and we'll quote the visit first. For most faults, sending the Mac by courier is quicker." },
@@ -1205,7 +1205,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Bluewaters Island",
     short: "Bluewaters",
     driveTime: "12 minutes",
-    metroNote: "Nakheel Metro on the Red Line connects to Bluewaters by footbridge from JBR, and it is 3 stops from Dubai Internet City for the workshop.",
+    metroNote: "Bluewaters is a footbridge walk from JBR, where the Dubai Tram runs. Ride the tram to the Palm Jumeirah stop, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Ain Dubai", "Caesars Palace Dubai", "Bluewaters Residences 1-10", "The Wharf", "Banyan Tree Residences", "Bluewaters Bay"],
     landmarkLine: "12 minutes from Ain Dubai, Caesars Palace and the Bluewaters Residences.",
@@ -1221,14 +1221,14 @@ const BASE_AREAS: AreaConfig[] = [
       { from: "Banyan Tree Residences",      drive: "13 min" },
       { from: "Caesars Palace / Bluewaters", drive: "13 min" },
       { from: "The Wharf",                   drive: "12 min" },
-      { from: "JBR side / Nakheel Metro",    drive: "10 min" },
+      { from: "JBR side / footbridge",       drive: "10 min" },
     ],
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How far is your workshop from Bluewaters Island?", a: "About 12 minutes by car, a bit less from the JBR side. Walk into Office #45, 10th Floor, Concord Tower, Dubai Media City with the Mac. A diagnosis needs no appointment and costs nothing." },
       { q: "Where should a courier meet me on Bluewaters?", a: "At your tower lobby or reception. Kerbside access on the island is restricted, so a lobby handover is quicker. Book a same-day courier app, hand the Mac over there, and WhatsApp us the tracking link." },
-      { q: "Can the concierge hand my Mac to a courier while I am at work?", a: "Yes, if your building allows it. Leave the Mac with the concierge under your name, book a same-day courier app to that desk, and send us the tracking link. We'll agree the return with you on WhatsApp when it's done." },
-      { q: "I'm a hotel guest on Bluewaters. Can my MacBook still be repaired?", a: "Yes. The quickest way is a 12-minute taxi to Concord Tower with the Mac. Otherwise leave it with the concierge for a same-day courier app you book, and tell us the hotel on WhatsApp so the return can be arranged." },
+      { q: "Can the concierge hand my Mac to a courier while I am at work?", a: "Yes, if your building allows it. Leave the Mac with the concierge under your name, book a same-day courier app to that desk, and send us the tracking link. When it's done, we book a courier to bring it back to that desk." },
+      { q: "I'm a hotel guest on Bluewaters. Can my MacBook still be repaired?", a: "Yes. The quickest way is a 12-minute taxi to Concord Tower with the Mac. Otherwise leave it with the concierge for a same-day courier app you book, and tell us the hotel on WhatsApp so we can book a courier to bring it back." },
       { q: "Can I send an iMac or Mac Studio from Bluewaters?", a: "Yes, we repair both alongside MacBooks. Pack a desktop carefully, ideally in its original box with the screen protected, before a courier takes it. Message us first and we'll tell you what to expect for that model." },
       { q: "Can my MacBook be fixed the same day if I bring it from Bluewaters?", a: "Often. Screens, batteries, keyboards and trackpads can usually be done the same day when the part is in stock, and bringing it in the morning gives us the most time. Board work takes longer." },
       { q: "Is onsite Mac repair available on Bluewaters?", a: "It's possible as a paid visit when a technician is free. The charge is quoted on WhatsApp before you book. With the workshop only 12 minutes away, most people find walking in quicker." },
@@ -1241,7 +1241,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Meydan",
     short: "Meydan",
     driveTime: "25 minutes",
-    metroNote: "Meydan has no metro station of its own, so most customers here drive the 25 minutes to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac in.",
+    metroNote: "Meydan has no metro station of its own, so most customers here drive the 25 minutes to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac in. By Red Line from elsewhere, get off at Al Fardan Exchange, about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Meydan Racecourse", "The Meydan Hotel", "Meydan One", "Nad Al Sheba", "The Track Meydan Golf", "Meydan Avenue"],
     landmarkLine: "25 minutes from Meydan Racecourse, The Meydan Hotel and Nad Al Sheba.",
@@ -1277,7 +1277,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Town Square",
     short: "Town Square",
     driveTime: "30 minutes",
-    metroNote: "There is no metro serving Town Square, so residents here either drive in to Concord Tower, Dubai Media City or send the Mac with a same-day courier app.",
+    metroNote: "There is no metro serving Town Square, so residents here either drive in to Concord Tower, Dubai Media City or send the Mac with a same-day courier app. On public transport, the stop to aim for is Palm Jumeirah on the Dubai Tram, a 3-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Town Square Park", "Zahra Apartments", "Hayat Boulevard", "Safi Apartments", "Warda Apartments", "Town Square Dubai villas"],
     landmarkLine: "30 minutes from Town Square Park, Hayat Boulevard and the Zahra and Safi apartments.",
@@ -1301,7 +1301,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "What should I send on WhatsApp when my Mac is on its way from Town Square?", a: "The courier's tracking link, your Mac model, a photo of the fault and your building name. That way the bench knows what's arriving, and the free diagnosis can start once it reaches us." },
       { q: "Do I need to be home when the courier arrives?", a: "Not if someone else can hand it over. You book the courier app yourself, so a family member, your helper or building security can give the Mac to the courier. Send us the tracking link so we know it's coming." },
       { q: "Can a MacBook from Town Square be fixed the same day?", a: "Often, yes, when the part is in stock. Screens, batteries, keyboards and trackpads are usually same-day jobs. Board-level work takes longer. Come in early or send the Mac in the morning to give us the most time." },
-      { q: "Does living this far out change the repair price?", a: "No. The repair is priced on the fault and fixed in writing on WhatsApp after the free diagnosis. The courier you book is a separate booking in the app, and the return is arranged with us on WhatsApp." },
+      { q: "Does living this far out change the repair price?", a: "No. The repair is priced on the fault and fixed in writing on WhatsApp after the free diagnosis. The courier you book is a separate booking in the app, and when it's fixed we book a courier to bring it back, arranged on WhatsApp." },
       { q: "Can you repair an iMac or Mac mini from Town Square?", a: "Yes. Desktops need careful packing for the drive in, so use the original box if you still have it, or bring it in yourself. A paid onsite visit is another option when a technician is free." },
       { q: "My MacBook is out of warranty and quite old. Worth fixing?", a: "Sometimes yes, sometimes no. We'll tell you honestly after the free diagnosis rather than take on work that isn't worth your money. If it isn't economic, we'll say so, and there's no charge." },
       { q: "Where exactly is the workshop?", a: "Office #45, 10th Floor, Concord Tower, Dubai Media City. There's parking at the tower, and no appointment is needed for a diagnosis. We're closed on Sunday and take a midday break on Friday between 12 and 2 pm." },
@@ -1313,7 +1313,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Damac Hills",
     short: "Damac Hills",
     driveTime: "25 minutes",
-    metroNote: "Damac Hills is not served by the metro, so most residents drive to Concord Tower, Dubai Media City or send the Mac over with a same-day courier app.",
+    metroNote: "Damac Hills is not served by the metro, so most residents drive to Concord Tower, Dubai Media City or send the Mac over with a same-day courier app. If you do ride the Red Line, Al Fardan Exchange is the stop, about a 15-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Trump International Golf Club", "Damac Hills Community Mall", "Carson Towers", "Golf Town", "Loreto", "Radisson Dubai Damac Hills"],
     landmarkLine: "25 minutes from Trump International Golf Club, the community mall and the Carson towers.",
@@ -1349,7 +1349,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai South",
     short: "Dubai South",
     driveTime: "32 minutes",
-    metroNote: "Expo 2020 station on the Route 2020 Red Line branch serves Dubai South and Expo City, and runs through to Dubai Internet City for the workshop.",
+    metroNote: "Expo 2020 station on the Route 2020 branch of the Red Line serves Dubai South and Expo City. Ride towards the city, change to the tram at DMCC or Sobha Realty and get off at Palm Jumeirah, a 3-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Expo City Dubai", "The Pulse", "Emaar South", "Al Maktoum International Airport", "Dubai South Business Park", "MBRAH aviation district"],
     landmarkLine: "30 minutes from Expo City, The Pulse and Emaar South.",
@@ -1373,7 +1373,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "Can I send a Mac from a Dubai South Business Park office?", a: "Yes. Book a same-day courier app to your reception, hand the Mac over and WhatsApp us the tracking link with the model. We'll diagnose it free and send the quote on WhatsApp before any work starts." },
       { q: "Our office has several MacBooks with faults. Can you take them together?", a: "Yes. Bring them in one trip or send them in one courier booking. Each machine gets a free diagnosis and its own written quote, so you can approve the urgent ones first." },
       { q: "Can a technician come to our Dubai South office?", a: "Sometimes. Onsite repair is paid and only happens when a technician is free. Send the models and faults on WhatsApp, and the charge is quoted before you book." },
-      { q: "Does the distance from Dubai South change the price?", a: "No. What you pay for the repair depends on the fault, not your postcode, and it's fixed in writing after the free diagnosis. You book the courier yourself, and the return is arranged with us on WhatsApp when the work is done." },
+      { q: "Does the distance from Dubai South change the price?", a: "No. What you pay for the repair depends on the fault, not your postcode, and it's fixed in writing after the free diagnosis. You book the courier yourself, and when the work is done we book a courier to bring it back, or you collect it." },
       { q: "Do you repair iMac, Mac mini and Mac Studio from Dubai South?", a: "Yes, alongside every MacBook. On a longer drive a desktop needs proper padding, so box it well before handing it to a courier, or bring it in yourself and carry it up to the 10th floor." },
       { q: "Is same-day turnaround realistic from Dubai South?", a: "For common repairs with the part in stock, often yes: screens, batteries, keyboards and trackpads. Getting the Mac to us early helps. Logic board repairs take longer because they're done at component level." },
       { q: "Can I drop the Mac off instead of using a courier?", a: "Yes, and no appointment is needed for a diagnosis. Come to Office #45, 10th Floor, Concord Tower, Dubai Media City, with parking at the tower. On Fridays we close from 12 to 2 pm, and Sunday is closed." },
@@ -1385,14 +1385,14 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Garhoud",
     short: "Garhoud",
     driveTime: "28 minutes",
-    metroNote: "GGICO and Airport Terminal 1 stations on the Red Line serve Garhoud, and the line runs directly to Dubai Internet City for the workshop.",
+    metroNote: "GGICO and Airport Terminal 1 stations on the Red Line serve Garhoud. Ride the line to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty for the Palm Jumeirah stop, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai International Airport T1 & T3", "Irish Village", "Aviation Club", "Deira City Centre", "Garhoud Bridge", "Century Village"],
     landmarkLine: "28 minutes from Dubai International Airport, Deira City Centre and the Aviation Club.",
     intro:
       "Next to Dubai International Airport on the Deira side of the creek, Garhoud is an established district of villas, older apartment buildings, airline offices, hotels and Deira City Centre, with a lot of long-term residents and airline staff. It's about 28 minutes by car from our MacBook repair workshop at Concord Tower, Dubai Media City. Walk in with the Mac, no appointment needed for a free diagnosis, or book a same-day courier app from your building or office reception and WhatsApp us the tracking link. A paid onsite visit is possible when a technician is free.",
     whyChoose:
-      "Garhoud has plenty of general computer trade, but very little genuine board-level Mac work. Most shops either quote a whole logic board or send the machine to a workshop like ours and add their margin. Coming direct cuts that out. Diagnosis is free, there's no charge if we can't fix it, and the price is fixed in writing before anything is opened. If you fly rotations, send the Mac before a trip and tell us your dates, and we'll arrange the return with you on WhatsApp around them.",
+      "Garhoud has plenty of general computer trade, but very little genuine board-level Mac work. Most shops either quote a whole logic board or send the machine to a workshop like ours and add their margin. Coming direct cuts that out. Diagnosis is free, there's no charge if we can't fix it, and the price is fixed in writing before anything is opened. If you fly rotations, send the Mac before a trip and tell us your dates, and we'll book the courier back around them, or hold it until you can collect it.",
     pickupNote:
       "From the Garhoud Bridge side it's about 26 minutes to Media City, and roughly 28 from the airport end. Flying out? Book a same-day courier app from your building, villa gate or hotel front desk, hand the Mac over, and WhatsApp 055 741 3706 the tracking link, the model and the date you're back. A colleague can do the handover for you. A paid onsite visit is possible when a technician is free.",
     travel: [
@@ -1406,11 +1406,11 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How long is the drive from Garhoud to Media City?", a: "About 28 minutes from the airport end and roughly 26 from the Garhoud Bridge side. Walk into Office #45, 10th Floor, Concord Tower, Dubai Media City. A diagnosis needs no appointment and costs nothing." },
-      { q: "I work airline rotations. What happens to my Mac while I'm away?", a: "Tell us your dates on WhatsApp when the Mac comes in. We'll send the quote while you're away, you approve it there, and we'll arrange the return or your visit to get it back around your roster." },
+      { q: "I work airline rotations. What happens to my Mac while I'm away?", a: "Tell us your dates on WhatsApp when the Mac comes in. We'll send the quote while you're away, you approve it there, and we'll book a courier to bring it back, or hold it for you to collect, around your roster." },
       { q: "Can I send my MacBook from an office near the airport?", a: "Yes. Book a same-day courier app to your office reception and hand the Mac over there. Send us the tracking link and model on WhatsApp, and the free diagnosis and written quote follow once it reaches the bench." },
       { q: "Another shop in the area quoted a full logic board. Is there an alternative?", a: "Usually yes. Most board faults are a handful of failed components rather than the whole board. We diagnose to component level free of charge and quote the real repair first." },
       { q: "Do you fix iMac and Mac mini for Garhoud customers?", a: "Yes, along with Mac Studio, Mac Pro and all MacBooks. A desktop should travel boxed and padded. If moving it isn't practical, ask on WhatsApp about a paid onsite visit when a technician is free." },
-      { q: "I'm staying at a hotel in Garhoud. How do I get my Mac to you?", a: "Take a taxi with it, about 28 minutes, or leave it at the front desk for a same-day courier app you book. Tell us the hotel on WhatsApp and we'll arrange the return with you once the repair is done." },
+      { q: "I'm staying at a hotel in Garhoud. How do I get my Mac to you?", a: "Take a taxi with it, about 28 minutes, or leave it at the front desk for a same-day courier app you book. Tell us the hotel on WhatsApp, and once it's repaired we book a courier to take it back there." },
       { q: "Will a technician come to my Garhoud villa?", a: "Only when one is free, and it's a paid visit. Message us the model and fault on WhatsApp and the charge is quoted before booking. Faults that need board work are better brought or sent to the workshop." },
       { q: "When can I bring my Mac in from Garhoud?", a: "Mon-Thu and Sat 9 am-7 pm, and Friday 9 am-12 pm then 2 pm-7 pm. Sunday is closed. There's parking at Concord Tower, and no appointment is needed for a diagnosis." },
     ],
@@ -1421,7 +1421,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Oud Metha",
     short: "Oud Metha",
     driveTime: "26 minutes",
-    metroNote: "Oud Metha station on the Green Line serves the area, with an interchange onto the Red Line for Dubai Internet City and the workshop.",
+    metroNote: "Oud Metha station on the Green Line serves the area. Change to the Red Line and ride to Al Fardan Exchange, a 15-minute walk from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["American Hospital Dubai", "Al Nasr Leisureland", "Dubai Healthcare City border", "Oud Metha Metro", "Mohammed Bin Rashid Al Maktoum Medical City", "Lamcy area"],
     landmarkLine: "26 minutes from American Hospital Dubai, Al Nasr Leisureland and Oud Metha Metro.",
@@ -1457,7 +1457,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Academic City",
     short: "Academic City",
     driveTime: "35 minutes",
-    metroNote: "Academic City is not on the metro network, so students and staff here usually drive across to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac in.",
+    metroNote: "Academic City is not on the metro network, so students and staff here usually drive across to Concord Tower, Dubai Media City or book a same-day courier app to send the Mac in. Students who reach the Red Line can ride it to Al Fardan Exchange, about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["BITS Pilani Dubai", "Manipal Academy of Higher Education", "Amity University Dubai", "Heriot-Watt Dubai", "Global Village side", "Silicon Oasis border"],
     landmarkLine: "35 minutes from BITS Pilani, Manipal, Amity and Heriot-Watt Dubai.",
@@ -1493,7 +1493,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Investment Park",
     short: "DIP",
     driveTime: "26 minutes",
-    metroNote: "DIP isn't directly on the metro, so most people here either drive in to Concord Tower, Dubai Media City, or book a same-day courier app to bring the Mac to us.",
+    metroNote: "DIP isn't directly on the metro, so most people here either drive in to Concord Tower, Dubai Media City, or book a same-day courier app to bring the Mac to us. By Red Line, change to the tram at DMCC or Sobha Realty and get off at Palm Jumeirah, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Green Community", "DIP 1 & 2", "Dubai Investment Park offices", "Ewan Residences", "Schools of DIP", "Jebel Ali border"],
     landmarkLine: "26 minutes from Green Community, the DIP business units and Ewan Residences.",
@@ -1502,7 +1502,7 @@ const BASE_AREAS: AreaConfig[] = [
     whyChoose:
       "For a DIP business, downtime is the real cost. A machine sent away for two weeks is two weeks of disruption. We diagnose free and finish many screen, battery, keyboard and trackpad jobs the same day when the part is in stock. Board faults are repaired at component level rather than by swapping the whole board, which usually comes in well under a replacement quote. If several office Macs are playing up, bring them in together. Each one gets its own free diagnosis and its own written quote, so you can decide what's worth fixing, and if we can't fix it you don't pay.",
     pickupNote:
-      "From DIP, Sheikh Zayed Road brings you up to Media City and Concord Tower has parking on site. If you can't leave the unit, book a same-day courier app such as Careem Box, hand the Mac to the driver at your reception or loading bay, and WhatsApp the tracking link to 055 741 3706 with the model and a photo of the fault. We sort out the return with you on WhatsApp when it's done. A paid onsite visit is possible when a technician is free.",
+      "From DIP, Sheikh Zayed Road brings you up to Media City and Concord Tower has parking on site. If you can't leave the unit, book a same-day courier app such as Careem Box, hand the Mac to the driver at your reception or loading bay, and WhatsApp the tracking link to 055 741 3706 with the model and a photo of the fault. When it's done, collect it, or we book a courier to bring it back. A paid onsite visit is possible when a technician is free.",
     travel: [
       { from: "Green Community",      drive: "26 min" },
       { from: "DIP 1 business units", drive: "26 min" },
@@ -1529,7 +1529,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Nahda",
     short: "Al Nahda",
     driveTime: "35 minutes",
-    metroNote: "Stadium and Al Nahda stations on the Green Line serve the area, with an interchange onto the Red Line for Dubai Internet City and the workshop.",
+    metroNote: "Stadium and Al Nahda stations on the Green Line serve the area. Change to the Red Line and ride to Al Fardan Exchange, then walk about 15 minutes to Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Al Nahda Pond Park", "Al Nahda Metro", "Stadium Metro", "Al Qusais border", "Sahara Centre side", "Dubai-Sharjah border"],
     landmarkLine: "35 minutes from Al Nahda Pond Park, Al Nahda Metro and the Al Qusais border.",
@@ -1565,7 +1565,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Za'abeel",
     short: "Za'abeel",
     driveTime: "22 minutes",
-    metroNote: "Max and World Trade Centre stations on the Red Line sit at the edge of Za'abeel, a direct run to Dubai Internet City for the workshop.",
+    metroNote: "Max and World Trade Centre stations on the Red Line sit at the edge of Za'abeel. Ride to Al Fardan Exchange and walk about 15 minutes, or change to the tram at Sobha Realty for the Palm Jumeirah stop, a 3-minute walk away.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Frame", "Zabeel Park", "One Za'abeel", "Dubai World Trade Centre", "Za'abeel 1 & 2", "Dubai International Financial Centre border"],
     landmarkLine: "22 minutes from the Dubai Frame, Zabeel Park, One Za'abeel and the World Trade Centre.",
@@ -1601,7 +1601,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Arjan",
     short: "Arjan",
     driveTime: "20 minutes",
-    metroNote: "Arjan isn't on the metro network, so residents here usually drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Arjan isn't on the metro network, so residents here usually drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. From the Red Line elsewhere, Al Fardan Exchange is about a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Miracle Garden", "Dubai Butterfly Garden", "Arjan residential towers", "Al Barsha South border", "Dubai Science Park", "Sheikh Mohammed Bin Zayed Road side"],
     landmarkLine: "20 minutes from Dubai Miracle Garden, Dubai Science Park and the Arjan towers.",
@@ -1622,7 +1622,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How long does it take to drive from Arjan to your workshop?", a: "About 20 minutes, a little less from the Al Barsha South side. Concord Tower is in Dubai Media City, there's parking on site, and you don't need an appointment for a diagnosis." },
-      { q: "There are many similar tower names in Arjan. Does that matter when I send a Mac?", a: "It matters for the courier app, so drop an accurate pin and put the full building name in the notes for the driver. When the repair is done and we arrange the return on WhatsApp, give us the same details." },
+      { q: "There are many similar tower names in Arjan. Does that matter when I send a Mac?", a: "It matters for the courier app, so drop an accurate pin and put the full building name in the notes for the driver. When the repair is done and we book the courier to bring it back, we'll need the same details." },
       { q: "Can the building security hand the Mac to a courier for me?", a: "Yes, if your courier app allows it. Leave the Mac packed with security, name them as the handover contact in the booking, and WhatsApp us the tracking link plus the model. The quote comes to you, not to security." },
       { q: "Is same-day repair realistic from Arjan?", a: "Often, for screen, battery, keyboard and trackpad jobs when the part is in stock. Drive in or send it in the morning and there's a good chance it's ready the same day. Board work takes longer." },
       { q: "Can someone come to my apartment in Arjan to fix the Mac?", a: "Sometimes. Onsite visits are paid and only happen when a technician is free. Message us the fault and we'll quote the charge on WhatsApp before booking. At 20 minutes away, driving in is often the quicker choice." },
@@ -1637,7 +1637,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Media City",
     short: "Media City",
     driveTime: "2 minutes",
-    metroNote: "The workshop is inside Dubai Media City itself - Concord Tower, Office 45, 10th floor. The Media City tram stop is a short walk away.",
+    metroNote: "The workshop is inside Dubai Media City itself: Concord Tower, Office #45, 10th floor. The Palm Jumeirah tram stop is a 3-minute walk away, and Al Fardan Exchange on the Red Line is about 15 minutes on foot.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Concord Tower (our workshop)", "Media City Amphitheatre", "Arenco Tower", "Shatha Tower", "Business Central Towers", "Media One Hotel"],
     landmarkLine: "Inside Dubai Media City itself, a short walk from Arenco, Shatha and Business Central Towers.",
@@ -1673,7 +1673,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Dubai Knowledge Park",
     short: "Knowledge Park",
     driveTime: "5 minutes",
-    metroNote: "Dubai Knowledge Park sits just across Sheikh Zayed Road from Media City; the workshop is a five-minute drive or a short taxi hop.",
+    metroNote: "Dubai Knowledge Park sits just across Sheikh Zayed Road from Media City; the workshop is a five-minute drive or a short taxi hop. On foot from the Metro, Al Fardan Exchange on the Red Line is about 15 minutes from Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Dubai Knowledge Park blocks", "Knowledge Village", "Middlesex University Dubai", "Murdoch University Dubai", "Dubai Internet City border", "Sheikh Zayed Road side"],
     landmarkLine: "5 minutes from Knowledge Village, Middlesex and Murdoch - across the road from our Media City workshop.",
@@ -1709,7 +1709,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Umm Suqeim",
     short: "Umm Suqeim",
     driveTime: "12 minutes",
-    metroNote: "Umm Suqeim runs parallel to Sheikh Zayed Road, about 12 minutes by car from the workshop, so most residents drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Umm Suqeim runs parallel to Sheikh Zayed Road, about 12 minutes by car from the workshop, so most residents drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. By Metro, ride the Red Line to Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Burj Al Arab", "Madinat Jumeirah", "Umm Suqeim Beach", "Jumeirah Beach Hotel", "Wild Wadi", "Umm Suqeim 1-3 villas"],
     landmarkLine: "12 minutes from the Burj Al Arab, Madinat Jumeirah and Umm Suqeim Beach.",
@@ -1745,7 +1745,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Safa",
     short: "Al Safa",
     driveTime: "15 minutes",
-    metroNote: "Al Safa sits between Al Wasl Road and Sheikh Zayed Road, so most residents drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Al Safa sits between Al Wasl Road and Sheikh Zayed Road, so most residents drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. On the Red Line, get off at Al Fardan Exchange; we're about a 15-minute walk from there.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Safa Park", "Al Safa 1 & 2 villas", "Al Wasl Road", "Union Coop Al Safa", "Sheikh Zayed Road side", "Al Manara border"],
     landmarkLine: "15 minutes from Safa Park, Al Wasl Road and the Al Safa villas.",
@@ -1781,7 +1781,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Satwa",
     short: "Satwa",
     driveTime: "20 minutes",
-    metroNote: "Satwa lies between Sheikh Zayed Road and Jumeirah, about 20 minutes by car from the workshop, so most customers here drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Satwa lies between Sheikh Zayed Road and Jumeirah, about 20 minutes by car from the workshop, so most customers here drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. By Metro, the Red Line takes you to Al Fardan Exchange, a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Satwa Roundabout", "Al Diyafah Street", "Al Hudaiba", "Jumeirah Road border", "Satwa Park", "Sheikh Zayed Road side"],
     landmarkLine: "20 minutes from Satwa Roundabout, Al Diyafah Street and Al Hudaiba.",
@@ -1817,7 +1817,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Jaddaf",
     short: "Al Jaddaf",
     driveTime: "25 minutes",
-    metroNote: "Al Jaddaf is on the metro, but reaching Media City means changing lines, so most customers here drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Most customers here drive in to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. By Metro, take the Green Line from Al Jaddaf, change to the Red Line and ride to Al Fardan Exchange, a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Jaddaf Waterfront", "Culture Village", "Palazzo Versace Dubai", "Al Jaddaf Metro", "Dubai Healthcare City Phase 2", "Dubai Creek side"],
     landmarkLine: "25 minutes from Jaddaf Waterfront, Culture Village and Al Jaddaf Metro.",
@@ -1840,7 +1840,7 @@ const BASE_AREAS: AreaConfig[] = [
       { q: "How far is your workshop from Al Jaddaf?", a: "About 25 minutes by car, a bit less from the Business Bay side. Concord Tower is in Dubai Media City, with parking on site. You can walk in for a diagnosis without an appointment." },
       { q: "My Mac holds patient or course material and won't boot. What happens first?", a: "Data first. We attempt recovery from the SSD before any board work and confirm what was recovered. On Apple silicon and T2 Macs the SSD is soldered, so this is specialist board-level work." },
       { q: "Is my data kept confidential?", a: "We don't browse or copy data beyond what a repair or recovery needs. If the Mac holds patient records, say so when you message and we'll explain what the repair involves and whether we need your login to test it." },
-      { q: "Can our clinic send a Mac by courier from reception?", a: "Yes. Book a same-day courier app to your reception, hand the Mac to the driver, and WhatsApp us the tracking link with the department and a contact name. We'll arrange the return on WhatsApp once it's fixed." },
+      { q: "Can our clinic send a Mac by courier from reception?", a: "Yes. Book a same-day courier app to your reception, hand the Mac to the driver, and WhatsApp us the tracking link with the department and a contact name. Once it's fixed, we book a courier to bring it back to the same reception." },
       { q: "How long does a MacBook screen or battery replacement take?", a: "The same day for in-stock parts in most cases. Screens carry a 90-day warranty and batteries 3 months. Board-level work takes longer, and we give you an estimate with the written quote." },
       { q: "Do you repair iMacs and Mac minis from Al Jaddaf?", a: "Yes. A Mac mini can go by courier app in a padded box. For an iMac, driving it in with the screen protected is safer, because a cracked display turns one repair into two." },
       { q: "Can a technician come to our office in Healthcare City?", a: "Only when one is free, and it's a paid visit. Send the building, the machines and the faults on WhatsApp and we'll quote the charge before booking. Anything needing board work comes back to the workshop anyway." },
@@ -1853,7 +1853,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Jumeirah Golf Estates",
     short: "JGE",
     driveTime: "22 minutes",
-    metroNote: "Jumeirah Golf Estates is not on the metro network, so most residents drive to Concord Tower, Dubai Media City, or send the Mac over with a same-day courier app they book themselves.",
+    metroNote: "Jumeirah Golf Estates is not on the metro network, so most residents drive to Concord Tower, Dubai Media City, or send the Mac over with a same-day courier app they book themselves. The nearest stop to us is Palm Jumeirah on the Dubai Tram, a 3-minute walk.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Earth Course", "Fire Course", "Jumeirah Golf Estates Clubhouse", "Alandalus", "Wildflower", "Sheikh Mohammed Bin Zayed Road side"],
     landmarkLine: "22 minutes from the Earth and Fire courses, the Clubhouse and Alandalus.",
@@ -1874,7 +1874,7 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "Can I drive from Jumeirah Golf Estates to your workshop without an appointment?", a: "Yes. Walk in for a free diagnosis, no booking needed. We're on the 10th floor of Concord Tower, Dubai Media City, about 22 minutes from the estate, with parking on site. Hours are Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm." },
-      { q: "How do I send my MacBook from a JGE villa by courier?", a: "Book a same-day courier app, tell estate security the driver is on the way, and hand the Mac over at the door. Then WhatsApp us the tracking link on 055 741 3706. Once the repair is done, we arrange the return with you on WhatsApp." },
+      { q: "How do I send my MacBook from a JGE villa by courier?", a: "Book a same-day courier app, tell estate security the driver is on the way, and hand the Mac over at the door. Then WhatsApp us the tracking link on 055 741 3706. Once the repair is done, we book a courier to bring it back to the villa." },
       { q: "We have several Macs at home. Can they all be checked at once?", a: "Yes. Bring them in together or send them in one courier booking. Each machine gets a free diagnosis, and you receive a single written quote so you can choose which ones to repair." },
       { q: "Can a technician come to my villa in the estate?", a: "Sometimes. Onsite repair is a paid service and depends on a technician being free. Message us the model and the fault on WhatsApp and we'll quote the visit before you book anything." },
       { q: "My child spilled a drink on the MacBook. What now?", a: "Switch it off and don't plug it in to charge. Liquid keeps eating at the board while it's wet, so get it to us the same day if you can, by car or by courier. We quote once the real damage is visible." },
@@ -1889,14 +1889,14 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Rashidiya",
     short: "Rashidiya",
     driveTime: "32 minutes",
-    metroNote: "Centrepoint station (formerly Rashidiya) at the end of the Red Line serves the area and runs directly to Dubai Internet City for the workshop.",
+    metroNote: "Centrepoint station (formerly Rashidiya) at the end of the Red Line serves the area. Ride it all the way to Al Fardan Exchange and walk about 15 minutes to Concord Tower.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Centrepoint Metro", "Rashidiya Park", "Dubai Airport Terminal 3 side", "Nad Al Hamar border", "Al Rashidiya villas", "Mirdif border"],
     landmarkLine: "32 minutes from Centrepoint Metro, Rashidiya Park and the Terminal 3 side of the airport.",
     intro:
       "Out on the eastern side of Dubai, between the airport and Mirdif, Rashidiya is about 32 minutes by car from our workshop in Concord Tower, Dubai Media City. It's an established area of villas and low-rise buildings, home to long-term families and a lot of airline and airport staff. Board-level MacBook repair is hard to find on this side of the city. You can drive across and walk in without an appointment, send the Mac with a same-day courier you book yourself, or ask about a paid onsite visit. The diagnosis is free and the price is fixed in writing on WhatsApp.",
     whyChoose:
-      "Crossing the city from Rashidiya takes a chunk of the day, so the workshop at the other end has to be worth it. We only do Apple: Intel and Apple silicon Macs across the whole line, plus the component-level board work most counters won't touch. Diagnosis is free, there's no charge if we can't fix it, and the written price doesn't move once the Mac is open. If you'd rather skip the drive, a courier you book from your own door gets it to us without waiting on anyone. Crew on rotation can agree the return timing with us on WhatsApp.",
+      "Crossing the city from Rashidiya takes a chunk of the day, so the workshop at the other end has to be worth it. We only do Apple: Intel and Apple silicon Macs across the whole line, plus the component-level board work most counters won't touch. Diagnosis is free, there's no charge if we can't fix it, and the written price doesn't move once the Mac is open. If you'd rather skip the drive, a courier you book from your own door gets it to us without waiting on anyone. When it's fixed, we book a courier to bring it back, and crew on rotation can pick the day on WhatsApp.",
     pickupNote:
       "Driving in is a cross-city run of about 32 minutes, a little less from the Terminal 3 side, and Concord Tower has parking on site. Flying out soon? Book a same-day courier app before you leave, hand the Mac to the driver at your gate and WhatsApp 055 741 3706 the tracking link, the model and a photo of the fault. A paid onsite visit is possible when a technician is free.",
     travel: [
@@ -1910,9 +1910,9 @@ const BASE_AREAS: AreaConfig[] = [
     topServices: COMMON_SERVICES,
     faqs: [
       { q: "How long is the drive from Rashidiya to your Media City workshop?", a: "About 32 minutes, a bit less from the Terminal 3 side. Walk in without an appointment for a free diagnosis; there's parking on site. We're open Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm, and closed Sunday." },
-      { q: "I work airline rotations. What happens if I'm away when the repair is done?", a: "Send us your roster on WhatsApp. We agree the return with you for when you're back in Dubai, or you can drop by Concord Tower and pick it up yourself after you land." },
+      { q: "I work airline rotations. What happens if I'm away when the repair is done?", a: "Send us your roster on WhatsApp. We book a courier to bring it back for when you're back in Dubai, or you can drop by Concord Tower and pick it up yourself after you land." },
       { q: "Is there a cheaper option than replacing the logic board?", a: "Usually, yes. Most board faults come down to a small number of failed components, and we repair at component level. The diagnosis is free, so you can compare the number before committing to anything." },
-      { q: "Can I send my MacBook from Rashidiya by courier instead of driving?", a: "Yes. Book a same-day courier app such as Careem Box, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It's the quickest route if you can't come in. We sort the return with you on WhatsApp once it's fixed." },
+      { q: "Can I send my MacBook from Rashidiya by courier instead of driving?", a: "Yes. Book a same-day courier app such as Careem Box, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It's the quickest route if you can't come in. Once it's fixed, collect it, or we book a courier to bring it back." },
       { q: "Will a technician come out to Rashidiya for a Mac repair?", a: "Only when one is free, and it's a paid visit. WhatsApp us the model and the fault first. We quote the onsite charge before you book, so there are no surprises at the door." },
       { q: "Do you repair older Intel MacBooks?", a: "Yes, Intel as well as Apple silicon. After the free diagnosis we'll tell you honestly whether the repair makes sense for the age of the machine, and there's no fee if we can't fix it." },
       { q: "Do you repair iMacs and Mac minis from Rashidiya?", a: "Yes, plus Mac Studio and Mac Pro. A desktop is easiest to bring in by car. If you send one by courier, box it with padding around the screen and message us before it leaves." },
@@ -1925,7 +1925,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Qusais",
     short: "Al Qusais",
     driveTime: "35 minutes",
-    metroNote: "Al Qusais is on the metro, but it's a long ride across the city, so most customers either drive to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app.",
+    metroNote: "Al Qusais is on the Green Line, but it's a long ride across the city, so most customers either drive to Concord Tower, Dubai Media City, or send the Mac with a same-day courier app. If you take the Metro, change to the Red Line and ride to Al Fardan Exchange, a 15-minute walk from us.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Al Qusais Metro", "Al Qusais Industrial Area", "Al Nahda border", "Dubai Grand Hotel", "Al Qusais residential blocks", "Damascus Street"],
     landmarkLine: "35 minutes from Al Qusais Metro, the industrial area and the Al Nahda border.",
@@ -1961,7 +1961,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Muhaisnah",
     short: "Muhaisnah",
     driveTime: "36 minutes",
-    metroNote: "Muhaisnah is not directly on the metro, so most residents drive to Concord Tower, Dubai Media City, or book a same-day courier app to get the Mac to us.",
+    metroNote: "Muhaisnah is not directly on the metro, so most residents drive to Concord Tower, Dubai Media City, or book a same-day courier app to get the Mac to us. On public transport, aim for Al Fardan Exchange on the Red Line, about a 15-minute walk from the workshop.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Madina Mall", "Muhaisnah 1-4", "Al Mizhar border", "Muhaisnah residential blocks", "Al Qusais border", "Beirut Street"],
     landmarkLine: "36 minutes from Madina Mall and the Muhaisnah residential blocks.",
@@ -1997,7 +1997,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Al Warqa",
     short: "Al Warqa",
     driveTime: "35 minutes",
-    metroNote: "Al Warqa is not on the metro network, so residents usually drive in to Concord Tower, Dubai Media City, or hand the Mac to a same-day courier they book from home.",
+    metroNote: "Al Warqa is not on the metro network, so residents usually drive in to Concord Tower, Dubai Media City, or hand the Mac to a same-day courier they book from home. If you ride the Red Line, get off at Al Fardan Exchange and walk about 15 minutes.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Al Warqa 1-4", "Al Warqa City Mall", "Mizhar border", "Mirdif border", "Al Warqa Park", "Tripoli Street"],
     landmarkLine: "35 minutes from Al Warqa City Mall, Al Warqa Park and the Mirdif border.",
@@ -2033,7 +2033,7 @@ const BASE_AREAS: AreaConfig[] = [
     area: "Mudon",
     short: "Mudon",
     driveTime: "28 minutes",
-    metroNote: "Mudon is not on the metro network, so residents either drive to Concord Tower, Dubai Media City, or book a same-day courier to bring the Mac to us.",
+    metroNote: "Mudon is not on the metro network, so residents either drive to Concord Tower, Dubai Media City, or book a same-day courier to bring the Mac to us. The closest stop to the workshop is Palm Jumeirah on the Dubai Tram, a 3-minute walk.",
     pickupWindow: "", // legacy, not rendered (free pickup ended 2026-10-15)
     landmarks: ["Mudon Community Centre", "Arabella", "Rahat", "Naseem", "Al Salam", "Arabian Ranches 2 border"],
     landmarkLine: "28 minutes from Mudon Community Centre, Arabella and Rahat.",

@@ -129,7 +129,7 @@ const FAQS = [
   },
   {
     q: "Can I send my iPad in if I can't come to the workshop?",
-    a: "Yes. Book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link - it reaches us within the day, from elsewhere in Dubai or from Sharjah. Once it's fixed, collect it from the workshop or book a courier to send it back.",
+    a: "Yes. Book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link - it reaches us within the day, from elsewhere in Dubai or from Sharjah. Once it's fixed, collect it from the workshop, or we book a courier to bring it back.",
   },
 ];
 

@@ -81,7 +81,7 @@ const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac mini repairs — logic board, overheating, no-display — are diagnosed and fixed within a few hours." },
   { Icon: Award,       title: "Apple repair since 2004",      body: "Our technicians have repaired Apple hardware since 2004, across every Mac mini generation from G4 to M4." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on SSDs and other hardware parts, and 15 days on logic board repairs." },
-  { Icon: MapPin,       title: "Walk-in workshop, Media City",   body: "Bring your Mac mini to Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo first and we quote before you travel." },
+  { Icon: MapPin,       title: "Walk-in workshop, Media City",   body: "Bring your Mac mini to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",           body: "Every Mac mini gets a full diagnostic at no cost. We find the real fault before quoting." },
 ];

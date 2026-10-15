@@ -93,12 +93,12 @@ const TRAVEL_TIMES = [
 ];
 
 const LANDMARKS = [
-  { name: "Media City Metro Station", distance: "120 m", note: "Red Line - 2-minute walk across Sheikh Zayed Road via the pedestrian bridge" },
+  { name: "Palm Jumeirah tram stop",  distance: "3-min walk", note: "Dubai Tram. From the Red Line, change to the tram at Sobha Realty or DMCC station" },
   { name: "Concord Tower lobby",       distance: "0 m",   note: "Take the elevator to the 10th floor, Office #45 is on the right" },
   { name: "Roxy Cinemas Mall of the Emirates", distance: "1.8 km", note: "5-minute drive south on Sheikh Zayed Road" },
   { name: "Burj Al Arab",              distance: "3.5 km", note: "8-minute drive - useful waypoint coming from Jumeirah Beach Road" },
   { name: "Palm Jumeirah Monorail",    distance: "4.2 km", note: "12-minute drive via Al Sufouh Road" },
-  { name: "Dubai Internet City Metro", distance: "1.1 km", note: "Walking distance - alternative Red Line stop" },
+  { name: "Al Fardan Exchange Metro", distance: "15-min walk", note: "Nearest Red Line station (formerly Nakheel, then Al Khail)" },
 ];
 
 const SEND_IN_STEPS = [
@@ -106,26 +106,26 @@ const SEND_IN_STEPS = [
   { title: "Book a same-day courier yourself", body: "Use any same-day courier app. Address it to Office #45, 10th Floor, Concord Tower, Dubai Media City, and hand the MacBook to the driver." },
   { title: "Send us the tracking link", body: "WhatsApp the link so we know it's on the way. It reaches us within the day, and we log it by serial number when it arrives." },
   { title: "Free diagnosis, then approve", body: "Shafiq checks it on the bench and sends a written quote. Reply 'approved' and most repairs finish the same day." },
-  { title: "Collect it or send it back", body: "Collect it from the workshop, or book a courier to send it back to you. Warranty card of up to 12 months included." },
+  { title: "Collect it or send it back", body: "Collect it from the workshop, or we book a courier to bring it back to you. Warranty card of up to 12 months included." },
 ];
 
 const FAQS = [
   { q: "Where is MacBook Repair Dubai actually located?",
-    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. The tower sits directly on Sheikh Zayed Road across from Media City Metro Station. Paid parking on-site (AED 5/hour) and free street parking on Al Sufouh Road behind the tower." },
+    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. The tower is a 3-minute walk from the Palm Jumeirah tram stop, with parking on site." },
   { q: "How far are you from Dubai Marina?",
-    a: "10 minutes by car via Sheikh Zayed Road exit 32. By Metro: 4 stops on the Red Line from DMCC station. Can't make the trip? A same-day courier you book gets it to us within the day." },
+    a: "10 minutes by car via Sheikh Zayed Road exit 32. By tram: board at the Marina and get off at Palm Jumeirah, a 3-minute walk from the tower. Can't make the trip? A same-day courier you book gets it to us within the day." },
   { q: "Do you have a branch in JLT or Downtown?",
-    a: "No - single Concord Tower workshop only. It's across from Media City Metro with parking on site, so it's easy to reach. If you can't, send the MacBook with a same-day courier you book and WhatsApp us the tracking link." },
+    a: "No - single Concord Tower workshop only. It's a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, so it's easy to reach. If you can't, send the MacBook with a same-day courier you book and WhatsApp us the tracking link." },
   { q: "What's the closest Metro station?",
-    a: "Media City Metro on the Red Line, 120 metres from the tower. Walk over the pedestrian bridge across Sheikh Zayed Road, into the Concord Tower lobby, elevator to the 10th floor. Total walk time: 4 minutes." },
+    a: "Al Fardan Exchange on the Red Line, about a 15-minute walk. The quicker route is the tram: change from the Red Line at Sobha Realty or DMCC station, get off at Palm Jumeirah and walk 3 minutes to Concord Tower. Take the elevator to the 10th floor." },
   { q: "Is there parking?",
-    a: "Yes - paid parking inside Concord Tower (AED 5/hour, AED 25/day max). Free street parking on Al Sufouh Road behind the tower (10-minute walk). Valet parking at the tower lobby for AED 30 flat." },
+    a: "Yes, there is parking on site at Concord Tower, so you can drive in, drop the MacBook and wait upstairs while we work on it." },
   { q: "Can I walk in without an appointment?",
     a: "Yes - walk-in welcome any time during opening hours (Mon-Thu and Sat 9 am - 7 pm, Friday 9 am - 12 pm and 2 pm - 7 pm). For complex board work, sending a WhatsApp first lets Shafiq pre-order the part so the device is fixed during your visit instead of left overnight." },
   { q: "What if I can't come to the workshop?",
     a: "Book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. You're not waiting on us to send anyone. If you need a technician at your home or office, a paid onsite visit can be booked, subject to technician availability, with the charge quoted on WhatsApp first." },
   { q: "Do you cover Sharjah and Abu Dhabi?",
-    a: "Yes, at the Dubai workshop. WhatsApp a photo for a quote, then walk in or book a courier yourself to send the MacBook over. We don't run our own courier route." },
+    a: "Yes, at the Dubai workshop. WhatsApp a photo for a quote, then walk in or book a courier yourself to send the MacBook over. When it's fixed, we book a courier to bring it back, arranged on WhatsApp." },
   { q: "What if I'm in a hurry - can you fix it while I wait?",
     a: "Walk in with an in-stock part fault (MacBook screen, battery, keyboard, iPhone screen, iPhone battery) and the repair finishes in 40 minutes to 2 hours. Wait in the AC office or grab coffee at the Costa downstairs in the tower lobby." },
   { q: "Are you open weekends?",
@@ -141,7 +141,7 @@ export default function MacBookRepairNearMeDubai() {
     {
       title: "MacBook Repair Near Me Dubai - Walk In, Same Day",
       description:
-        "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, across from the Metro, or send it by courier. 10 min from Marina. 055 741 3706.",
+        "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, by the Palm Jumeirah tram, or send it by courier. 10 min from Marina. 055 741 3706.",
       path: "/macbook-repair-near-me-dubai",
     },
     [
@@ -172,14 +172,14 @@ export default function MacBookRepairNearMeDubai() {
         imageAlt={topicForPath("/macbook-repair-near-me-dubai")?.alt}
         variant="service"
         tone="dark"
-        eyebrow="Across from Media City Metro"
+        eyebrow="Near the Palm Jumeirah tram stop"
         title="MacBook Repair Near You in Dubai - Walk In or Send It Over"
-        subtitle="Concord Tower in Media City is the workshop, across from the Metro with parking on site. Can't come in? Book a same-day courier yourself and the MacBook reaches us within the day."
+        subtitle="Concord Tower in Media City is the workshop, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Can't come in? Book a same-day courier yourself and the MacBook reaches us within the day."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text">
           <span className="flex items-center gap-1"><ParkingCircle size={16} className="text-accent" aria-hidden /> Parking on site</span>
           <span className="text-text-muted">·</span>
-          <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 120 m from Media City Metro</span>
+          <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 3 min from Palm Jumeirah tram stop</span>
           <span className="text-text-muted">·</span>
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
         </p>
@@ -188,7 +188,7 @@ export default function MacBookRepairNearMeDubai() {
       <QuickAnswer
         tone="dark"
         question="Is there a MacBook repair shop near me in Dubai?"
-        answer="Our workshop is in Concord Tower, Dubai Media City, across from Media City Metro with parking on site. Walk in without an appointment, or book any same-day courier app to send your MacBook over. Diagnosis is free and there is no fee if we cannot fix it."
+        answer="Our workshop is in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Walk in without an appointment, or book any same-day courier app to send your MacBook over. Diagnosis is free and there is no fee if we cannot fix it."
       />
 
       <USPStrip tone="dark" />
@@ -232,7 +232,7 @@ export default function MacBookRepairNearMeDubai() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Landmarks near the workshop</h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          Six landmarks within 5 km. Use any of them as a waypoint when navigating from your area.
+          Six landmarks and stops within 5 km. Use any of them as a waypoint when navigating from your area.
         </p>
         <div className="grid gap-md md:grid-cols-2">
           {LANDMARKS.map((l) => (
@@ -300,14 +300,14 @@ export default function MacBookRepairNearMeDubai() {
           <ParkingCircle size={28} className="text-accent mb-sm" aria-hidden />
           <h3 className="text-[18px] font-bold mb-sm">Parking</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
-            Paid tower parking AED 5/hour, AED 25/day cap. Free street parking on Al Sufouh Road (8-minute walk). Valet at the tower lobby AED 30 flat. EV charging (3 stations) on level B2.
+            Concord Tower has parking on site. Drive in, park and take the elevator to the 10th floor. WhatsApp us before you set off and we check the part is in stock.
           </p>
         </article>
         <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
           <Train size={28} className="text-accent mb-sm" aria-hidden />
-          <h3 className="text-[18px] font-bold mb-sm">Metro & bus</h3>
+          <h3 className="text-[18px] font-bold mb-sm">Tram & Metro</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
-            Media City Metro (Red Line) is 120 metres away. Bus routes 8, 88, and X28 stop at Media City Metro. RTA taxis queue 24/7 at the tower entrance.
+            The Palm Jumeirah tram stop is a 3-minute walk. On the Red Line, change to the tram at Sobha Realty or DMCC station. The nearest Metro station, Al Fardan Exchange, is about a 15-minute walk.
           </p>
         </article>
         <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">

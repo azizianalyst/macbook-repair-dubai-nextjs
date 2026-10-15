@@ -37,7 +37,7 @@ const STEPS = [
 const WHY = [
   { title: "Repaired in-house since 2004", body: "The same Dubai workshop that has serviced Apple hardware since 2004 handles every covered repair - not a third party you never meet." },
   { title: "Written repair warranty", body: "Every repair carried out under your plan is backed by our standard written warranty for that repair type, up to 12 months." },
-  { title: "Walk in at Media City", body: "Bring a covered device to Concord Tower, across from the Media City Metro station, or send it with a same-day courier you book." },
+  { title: "Walk in at Media City", body: "Bring a covered device to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, or send it with a same-day courier you book." },
 ];
 
 const FAQS = [

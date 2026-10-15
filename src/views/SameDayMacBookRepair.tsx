@@ -38,7 +38,7 @@ const NOT_SAME_DAY = [
 
 const VISIT = [
   { label: "Address",          detail: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City" },
-  { label: "Getting here",     detail: "Across from the Media City Metro station" },
+  { label: "Getting here",     detail: "3-minute walk from the Palm Jumeirah tram stop" },
   { label: "Parking",          detail: "On site at Concord Tower" },
   { label: "Mon–Thu and Sat",  detail: "9 am – 7 pm" },
   { label: "Friday",           detail: "9 am – 12 pm and 2 pm – 7 pm" },
@@ -47,7 +47,7 @@ const VISIT = [
 
 const STEPS = [
   { icon: MessageCircle, title: "WhatsApp us",       body: "Send a photo and model number to 055 741 3706. Get a quote in under 4 minutes during business hours." },
-  { icon: MapPin,        title: "Walk in",            body: "Bring your MacBook to Concord Tower, Dubai Media City, across from the Media City Metro station. No appointment needed, parking on site." },
+  { icon: MapPin,        title: "Walk in",            body: "Bring your MacBook to Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. No appointment needed, parking on site." },
   { icon: Zap,           title: "Same-day repair",    body: "Screen, battery, keyboard, trackpad, and ports are all repaired the same day your device arrives." },
   { icon: Shield,        title: "Warranty handed over", body: "Written warranty of up to 12 months. Collect your MacBook the same day or next morning." },
 ];
@@ -56,7 +56,7 @@ const FAQS = [
   { q: "Which MacBook repairs are genuinely same-day in Dubai?",
     a: "Screen replacement (MacBook Air and Pro 13\"), battery, keyboard, trackpad, USB-C charging port, fan cleaning, thermal paste, and macOS software repair are all same-day when your MacBook arrives before 2 pm. Logic board, water damage, and 16\" Liquid Retina XDR screens take 1–5 days." },
   { q: "Do I need an appointment for a same-day MacBook repair?",
-    a: "No. Walk in to Office #45, 10th Floor, Concord Tower, Dubai Media City, across from the Media City Metro station, with parking on site. WhatsApp 055 741 3706 first with your model, the fault and a photo, and we confirm a fixed price and check the part is in stock before you travel." },
+    a: "No. Walk in to Office #45, 10th Floor, Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp 055 741 3706 first with your model, the fault and a photo, and we confirm a fixed price and check the part is in stock before you travel." },
   { q: "Do you do MacBook repair at home in Dubai?",
     a: "Yes, as a paid onsite visit when a technician is free, with the charge quoted on WhatsApp 055 741 3706 before you book. Same-day screen, battery and keyboard jobs are best done at the workshop at Concord Tower, Dubai Media City, which has the tools, parts stock and clean bench conditions a home visit can't match. Can't come in? Book any same-day courier app and send it to us." },
   { q: "How much does same-day MacBook repair cost in Dubai?",

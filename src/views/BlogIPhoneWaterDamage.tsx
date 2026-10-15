@@ -103,7 +103,7 @@ export default function BlogIPhoneWaterDamage() {
               <li><strong>Remove the SIM tray:</strong> use the ejector pin to open the SIM slot and allow any pooled water to drain from that cavity.</li>
               <li><strong>Stand the phone port-down:</strong> gravity pulls liquid away from the logic board toward the Lightning or USB-C port where it can drain. Do not shake the phone violently.</li>
               <li><strong>Wipe the exterior dry:</strong> use a lint-free cloth to remove surface water. Do not blow compressed air into the ports.</li>
-              <li><strong>Contact us immediately:</strong> WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> and bring the phone straight to our Media City workshop, across from Media City Metro.</li>
+              <li><strong>Contact us immediately:</strong> WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> and bring the phone straight to our Media City workshop, a 3-minute walk from the Palm Jumeirah tram stop.</li>
             </ol>
             <p>
               Do not put the phone in a bag of rice, silica gel, or near a fan. These measures do nothing

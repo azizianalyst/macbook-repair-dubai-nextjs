@@ -85,7 +85,7 @@ const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",          body: "Most MacBook Air repairs — screen, battery, keyboard — are done within a few hours, not days." },
   { Icon: Award,       title: "Apple repair since 2004",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
-  { Icon: MapPin,       title: "Walk-in workshop, Media City",    body: "Bring your MacBook Air to Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo first and we quote before you travel." },
+  { Icon: MapPin,       title: "Walk-in workshop, Media City",    body: "Bring your MacBook Air to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",         body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",            body: "Every MacBook Air gets a full diagnosis at no cost. We find the real fault, not guess at it." },
 ];

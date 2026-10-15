@@ -66,7 +66,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "Can I walk in for MacBook repair in Dubai, or do you come to me?",
-    a: "Walk in to our Concord Tower workshop in Dubai Media City, across from the Media City Metro station, with parking on site and no appointment needed. Can't come in? Book any same-day courier app to send the MacBook to us and WhatsApp 055 741 3706 the tracking link. A paid onsite visit is available when a technician is free, quoted on WhatsApp first.",
+    a: "Walk in to our Concord Tower workshop in Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site and no appointment needed. Can't come in? Book any same-day courier app to send the MacBook to us and WhatsApp 055 741 3706 the tracking link. A paid onsite visit is available when a technician is free, quoted on WhatsApp first.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function MacBookRepairHub() {
         {/* Quick answer */}
         <QuickAnswer
           question="Where can I get my MacBook repaired in Dubai?"
-          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen, battery and logic board work all start with a free diagnosis, then a written quote. Walk-in across from Media City Metro, OEM parts, and written warranty up to 12 months. In business since 2004."
+          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen, battery and logic board work all start with a free diagnosis, then a written quote. Walk-in near the Palm Jumeirah tram stop, OEM parts, and written warranty up to 12 months. In business since 2004."
         />
 
         {/* Models */}
@@ -193,7 +193,7 @@ export default function MacBookRepairHub() {
               "Component-level logic board repair Apple's Genius Bar doesn't offer, saves you thousands versus a replacement unit.",
               "Free diagnosis, no charge, no obligation, written quote on WhatsApp before we touch your MacBook.",
               "Same-day turnaround on most repairs: battery, screen, keyboard, charging port done in hours not days.",
-              "Walk-in workshop across from Media City Metro with parking on site; send it by a same-day courier you book if you can't come in.",
+              "Walk-in workshop near the Palm Jumeirah tram stop, with parking on site; send it by a same-day courier you book if you can't come in.",
               "OEM and genuine Apple parts, clearly labelled on your quote.",
               "Written warranty up to 12 months on parts and labour.",
               "No fix, no charge, if we can't repair it, you pay nothing.",

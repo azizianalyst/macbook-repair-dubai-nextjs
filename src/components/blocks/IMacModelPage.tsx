@@ -352,7 +352,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site. If you send it by a courier you book, pack the iMac in its original box or a padded case; a paid onsite visit is also possible, subject to technician availability. WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. If you send it by a courier you book, pack the iMac in its original box or a padded case; a paid onsite visit is also possible, subject to technician availability. WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 

@@ -63,6 +63,8 @@ const BANNED = [
   // Free pickup/delivery ended 2026-10-15 (fact sheet). Onsite visits are paid, never free.
   [/\bfree (pick-?up|collection|delivery|courier|home visit|onsite|on-site)\b/i, "free pickup/delivery (discontinued)"],
   [/\b(we|our courier|our driver) (will )?(collect|pick (it )?up) (it|your|from|and deliver)\b/i, "we collect (discontinued)"],
+  // There is no "Media City" Metro station (fact sheet: Palm Jumeirah tram stop / Al Fardan Exchange Metro).
+  [/\bmedia city metro\b/i, "wrong station (discontinued fact)"],
 ];
 const AI_PHRASES = [
   /\bdelve\b/i, /\belevate\b/i, /\bseamless(ly)?\b/i, /\brobust\b/i, /\bgame[- ]changer\b/i,

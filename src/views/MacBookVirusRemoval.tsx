@@ -97,7 +97,7 @@ const FAQS: FAQ[] = [
   { q: "Can you check my Mac for spyware (e.g. installed by an ex)?",
     a: "Yes - this is a serious request and handled discreetly. A deep scan looks for screen-recording profiles, keyloggers, hidden launch agents, screen-sharing settings turned on without your knowledge, and Family Sharing surveillance setups. Written report at the end. NDA available on request." },
   { q: "Can I get virus removal without coming to the workshop?",
-    a: "Yes. Book any same-day courier app, hand the Mac to the driver and WhatsApp us the tracking link - it reaches us within the day. Collect it from the workshop afterwards or book a courier to send it back. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp." },
+    a: "Yes. Book any same-day courier app, hand the Mac to the driver and WhatsApp us the tracking link - it reaches us within the day. Collect it from the workshop afterwards, or we book a courier to bring it back. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp." },
 ];
 
 const PREVENTION = [

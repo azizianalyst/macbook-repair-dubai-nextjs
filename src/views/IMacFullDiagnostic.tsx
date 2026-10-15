@@ -9,7 +9,7 @@ export default function IMacFullDiagnostic() {
       path="/imac-full-diagnostic-dubai"
       eyebrow="iMac diagnostic"
       h1="Free iMac Full Diagnostic in Dubai: 30-Point Bench Check"
-      subtitle="iMacs are heavy and awkward to move, so make the one trip count. WhatsApp us the model and symptoms first, then bring it to our Media City workshop - parking on site, across from Media City Metro - and we run the 30-point check while you wait. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp before booking."
+      subtitle="iMacs are heavy and awkward to move, so make the one trip count. WhatsApp us the model and symptoms first, then bring it to our Media City workshop - parking on site, 3 minutes from the Palm Jumeirah tram stop - and we run the 30-point check while you wait. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp before booking."
       startingPrice={0}
       timeline="60 minutes at the workshop"
       whatsappPrefill="Hi, I'd like a free iMac diagnostic at your workshop - model and main concern:"
@@ -57,7 +57,7 @@ export default function IMacFullDiagnostic() {
         { q: "Is the diagnostic really free with no minimum?", a: "Yes. We'd rather tell you 'your iMac is fine, save your money' than charge you for an hour on the bench. Honest first contact builds long-term trust." },
         { q: "How long does the diagnostic take?", a: "Usually 60 minutes at the workshop. Allow 90 in case the check surfaces something we want to investigate further." },
         { q: "Can you fix it the same visit?", a: "At the workshop, software-side things often yes - virus removal, macOS reinstall, fan-noise software diagnosis. Anything that needs the iMac opened (PSU, GPU, SSD, RAM) we quote in writing first and start only once you agree." },
-        { q: "Where do I bring the iMac, and is there parking?", a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City - across from Media City Metro, with parking on site. Open Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm, closed Sunday. If moving the iMac is not practical, we can quote a paid onsite visit on WhatsApp, subject to technician availability." },
+        { q: "Where do I bring the iMac, and is there parking?", a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City - a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Open Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm, closed Sunday. If moving the iMac is not practical, we can quote a paid onsite visit on WhatsApp, subject to technician availability." },
         { q: "Do you keep a copy of my data during the diagnostic?", a: "No. Diagnostic is read-only - we don't reset, restore or copy anything from the iMac." },
         { q: "What if you find something I didn't expect?", a: "We tell you. Sometimes good news (Fusion Drive healthy, GPU fine, display original). Sometimes not. Either way, the report is in writing and you keep it whether you book a repair or not." },
       ]}

@@ -39,11 +39,11 @@ const AREAS = [
 
 const FAQS = [
   { q: "Where is the nearest Mac repair shop to me in Dubai?",
-    a: "The closest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 5-minute walk from Media City Metro. Can't make the trip? Book any same-day courier app, hand the Mac to the driver and WhatsApp the tracking link to 055 741 3706 with your model and fault." },
+    a: "The closest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Can't make the trip? Book any same-day courier app, hand the Mac to the driver and WhatsApp the tracking link to 055 741 3706 with your model and fault." },
   { q: "Can you repair my Mac near me on the same day in Dubai?",
     a: "MacBook battery, keyboard, trackpad, charging port, and software faults are all same-day when your Mac arrives before 2 pm. Screen replacement for Air and 13\" Pro is same-day. Logic board and water damage take 2–5 days. Drop in to Concord Tower, or send it with a same-day courier you book." },
   { q: "Can I send my Mac to you instead of coming in?",
-    a: "Yes. Book any same-day courier app yourself, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It reaches us within the day, and battery, keyboard and software jobs are usually done the same day. Collect it afterwards or book a courier to send it back." },
+    a: "Yes. Book any same-day courier app yourself, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It reaches us within the day, and battery, keyboard and software jobs are usually done the same day. Collect it afterwards, or we book a courier to bring it back." },
   { q: "How much does MacBook repair cost near me in Dubai?",
     a: "It depends on the model and which part failed. Diagnosis is always free. WhatsApp 055 741 3706 with your exact model (check the serial number under System Settings → General → About) for a fixed written quote in under 4 minutes." },
   { q: "Do you repair iMac and Mac mini near me in Dubai?",
@@ -109,7 +109,7 @@ export default function MacRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Mac repaired near me in Dubai?"
-            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Screen, battery and board-level repair, same-day service. Can't travel? Send it with a same-day courier you book. WhatsApp 055 741 3706."
+            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Screen, battery and board-level repair, same-day service. Can't travel? Send it with a same-day courier you book. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -122,7 +122,7 @@ export default function MacRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. 5 min walk from Media City Metro. Open Mon-Sat 9 am–7 pm. Battery and keyboard repairs done while you wait.
+                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Thu and Sat 9 am–7 pm, Fri 9 am–12 pm and 2 pm–7 pm. Battery and keyboard repairs done while you wait.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>

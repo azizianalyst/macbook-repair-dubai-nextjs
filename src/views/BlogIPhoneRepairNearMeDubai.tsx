@@ -168,9 +168,9 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <strong>How to find us:</strong>
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Metro</strong>: Nakheel Harbour & Tower → short 10-minute taxi ride.</li>
-            <li><strong>Tram</strong>: Dubai Media City Tram Stop → 5-minute walk.</li>
-            <li><strong>Car</strong>: free visitor parking at Concord Tower (P3 level).</li>
+            <li><strong>Metro</strong>: Al Fardan Exchange (Red Line, formerly Al Khail) → about a 15-minute walk.</li>
+            <li><strong>Tram</strong>: Palm Jumeirah stop → about a 3-minute walk. From the Red Line, change to the tram at Sobha Realty or DMCC.</li>
+            <li><strong>Car</strong>: parking on site at Concord Tower.</li>
             <li><strong>From Marina</strong>: 8 minutes via Sheikh Zayed Road → Al Sufouh exit.</li>
             <li><strong>From Downtown</strong>: 22 minutes via SZR.</li>
             <li><strong>From Sharjah / Deira</strong>: 35-50 minutes - or send it by a same-day courier you book.</li>

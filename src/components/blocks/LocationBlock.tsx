@@ -39,7 +39,7 @@ export function LocationBlock({ tone = "light", compact = false }: { tone?: "lig
         </p>
         <p className={cn("flex items-start gap-sm text-[14px]", dark ? "text-text-faint" : "text-text-muted")}>
           <ParkingCircle size={18} className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-accent")} aria-hidden />
-          Paid parking on-site and nearby. Across from Media City Metro.
+          Paid parking on-site and nearby. A 3-minute walk from the Palm Jumeirah tram stop.
         </p>
         <div className="flex flex-wrap gap-lg">
           <a

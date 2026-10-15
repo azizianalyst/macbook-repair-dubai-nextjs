@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Do you repair MacBook Pros from Abu Dhabi or Sharjah?",
-    a: "Yes, at our Dubai workshop - we have no branch outside Dubai. Customers from Sharjah and Abu Dhabi WhatsApp photos and the serial number first for a quote, then either walk in to Concord Tower, Dubai Media City, or book a courier themselves to send the MacBook to the workshop and WhatsApp us the tracking link.",
+    a: "Yes, at our Dubai workshop - we have no branch outside Dubai. Customers from Sharjah and Abu Dhabi WhatsApp photos and the serial number first for a quote, then either walk in to Concord Tower, Dubai Media City, or book a courier themselves to send the MacBook to the workshop and WhatsApp us the tracking link. When it's fixed, we book a courier to send it back, arranged on WhatsApp.",
   },
 ];
 

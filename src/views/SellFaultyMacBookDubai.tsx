@@ -58,7 +58,7 @@ const FAQS = [
   { q: "How does the valuation work?",
     a: "Four things set the offer: the model, the device's age, its condition (working, minor damage, or faulty) and the storage capacity. Newer Apple Silicon Macs and higher-storage configs are worth the most, but even an older or faulty unit gets a fair, honest number. Send the details on WhatsApp for an exact quote." },
   { q: "Where do I bring the faulty device, and do I need an appointment?",
-    a: "No appointment needed. Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first." },
+    a: "No appointment needed. Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first." },
   { q: "How and when do I get paid?",
     a: "Same day. Once you bring the device in and we confirm it matches what you described, you're paid in cash or by transfer that day. You can also take the value as credit against a repair or toward another Apple device instead of cash." },
   { q: "Should I erase my data before selling a faulty Mac?",

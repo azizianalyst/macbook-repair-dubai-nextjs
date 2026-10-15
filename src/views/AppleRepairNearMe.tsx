@@ -36,13 +36,13 @@ const AREAS = [
 
 const FAQS = [
   { q: "Where is the nearest Apple repair shop to me in Dubai?",
-    a: "The nearest Apple specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near Media City Metro. We repair MacBook, iMac, Mac mini, Mac Studio, iPhone and iPad. Walk in without an appointment, or send the device by a same-day courier you book. WhatsApp 055 741 3706." },
+    a: "The nearest Apple specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. We repair MacBook, iMac, Mac mini, Mac Studio, iPhone and iPad. Walk in without an appointment, or send the device by a same-day courier you book. WhatsApp 055 741 3706." },
   { q: "Do you repair all Apple devices near me in Dubai?",
     a: "Yes. MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations). One specialist for your Mac, iPhone and iPad, at Concord Tower Dubai Media City since 2004." },
   { q: "How quickly can you repair my Apple device near me?",
     a: "iPhone screen: 40 minutes. iPhone battery: 30 minutes. MacBook battery or keyboard: 1–3 hours. MacBook screen: same day. Logic board and water damage: 2–5 days. Same-day jobs are done the day you walk in, or the day your courier drops the device off." },
   { q: "Can I get free Apple device pickup near me in Dubai?",
-    a: "No. We don't collect or deliver devices any more. The quickest route if you can't come in is a same-day courier app you book yourself: hand the device to the driver and WhatsApp 055 741 3706 the tracking link. Most repairs are finished the same day, ready to collect or send back by courier." },
+    a: "No. We don't collect or deliver devices any more. The quickest route if you can't come in is a same-day courier app you book yourself: hand the device to the driver and WhatsApp 055 741 3706 the tracking link. Most repairs are finished the same day, ready to collect, or we book a courier to bring it back." },
   { q: "How much does Apple repair cost near me in Dubai?",
     a: "It depends on your exact model and the fault, so we quote each device individually. MacBook screen, battery and logic-board work, iPhone screen and battery, and iPad screen work are all covered. Diagnosis is free. WhatsApp 055 741 3706 with your exact model for a fixed written quote in under 4 minutes." },
   { q: "Are you an Apple Authorised Service Provider near me in Dubai?",
@@ -106,7 +106,7 @@ export default function AppleRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Apple device repaired near me in Dubai?"
-            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. MacBook, iMac, iPhone and iPad repaired in-house. Walk in without an appointment, with same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
+            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. MacBook, iMac, iPhone and iPad repaired in-house. Walk in without an appointment, with same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
           />
         </section>
 
@@ -137,7 +137,7 @@ export default function AppleRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–7 pm. iPhone screen done in 40 minutes.
+                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. A 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Sat 9 am–7 pm. iPhone screen done in 40 minutes.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>

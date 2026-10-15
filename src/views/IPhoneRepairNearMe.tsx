@@ -39,11 +39,11 @@ const AREAS = [
 
 const FAQS = [
   { q: "Where is the nearest iPhone repair shop to me in Dubai?",
-    a: "The closest iPhone repair specialist to most of Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near the Media City Metro station. If you can't travel, book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. We do not collect devices ourselves." },
+    a: "The closest iPhone repair specialist to most of Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. If you can't travel, book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. We do not collect devices ourselves." },
   { q: "How quickly can you fix my iPhone near me in Dubai?",
     a: "Screen replacement takes 40 minutes, battery 30 minutes. Both can be done the same day you contact us. Drop in to Concord Tower and screen and battery repairs are usually ready the same day; you can wait while we work." },
   { q: "Do you offer iPhone repair pickup near me in Dubai?",
-    a: "No, we do not collect or deliver. Walk in to Concord Tower, Dubai Media City, without an appointment, or send the iPhone yourself: book any same-day courier app, hand it to the driver, and WhatsApp 055 741 3706 the tracking link. When it is ready, collect it from the workshop or book a courier back." },
+    a: "No, we don't collect devices. Walk in to Concord Tower, Dubai Media City, without an appointment, or send the iPhone yourself: book any same-day courier app, hand it to the driver, and WhatsApp 055 741 3706 the tracking link. When it is ready, collect it from the workshop, or we book a courier to bring it back." },
   { q: "How much does iPhone screen repair cost near me in Dubai?",
     a: "iPhone screen repair pricing depends on your model, from older iPhones up to the iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
   { q: "Is there an iPhone repair shop open now near me in Dubai?",
@@ -109,7 +109,7 @@ export default function IPhoneRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my iPhone repaired near me in Dubai?"
-            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Send it by a same-day courier you book and WhatsApp 055 741 3706 the tracking link."
+            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Send it by a same-day courier you book and WhatsApp 055 741 3706 the tracking link."
           />
         </section>
 
@@ -122,7 +122,7 @@ export default function IPhoneRepairNearMe() {
                 <MapPin size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro. Open Mon-Sat 9 am–7 pm. Screen done in 40 minutes, wait while we fix it.
+                  Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Thu and Sat 9 am–7 pm, Fri 9 am–12 pm and 2 pm–7 pm. Screen done in 40 minutes, wait while we fix it.
                 </p>
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>
@@ -130,7 +130,7 @@ export default function IPhoneRepairNearMe() {
                 <Truck size={28} className="text-accent mb-sm" aria-hidden />
                 <h3 className="text-[20px] font-bold mb-sm">Send it by courier</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  Can't come in? Book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. It reaches the bench within the day, with no waiting for us. Collect it when it is ready, or book a courier back.
+                  Can't come in? Book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. It reaches the bench within the day, with no waiting for us. Collect it when it is ready, or we book a courier to bring it back.
                 </p>
                 <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp the tracking link →</a>
               </article>

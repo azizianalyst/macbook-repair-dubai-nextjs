@@ -85,7 +85,7 @@ export default function IPhoneRepairHub() {
       faqs={[
         { q: "How much does iPhone repair cost in Dubai?", a: "It depends on the model, the fault and the part grade you choose: an iPhone 8 battery and an iPhone 18 Pro Max screen are very different jobs. WhatsApp the model and a photo of the fault for a quote. Diagnosis is free and you approve the written price before any work." },
         { q: "Can you fix my iPhone the same day?", a: "Many screen and battery jobs on common models are finished the same day when the part is in stock. Water damage, board-level work and parts that must be ordered take longer, especially on the newest models. We confirm the timing on WhatsApp before you come in." },
-        { q: "Do you repair iPhones from Abu Dhabi?", a: "Yes. We have no Abu Dhabi branch; every repair happens at our Dubai Media City workshop. WhatsApp the model and fault for a quote, then book any same-day courier app to send the iPhone to us and share the tracking link. When it is fixed, collect it in person or book a courier to bring it back." },
+        { q: "Do you repair iPhones from Abu Dhabi?", a: "Yes. We have no Abu Dhabi branch; every repair happens at our Dubai Media City workshop. WhatsApp the model and fault for a quote, then book any same-day courier app to send the iPhone to us and share the tracking link. When it is fixed, collect it in person, or we book a courier to bring it back." },
         { q: "Is MacBook Repair Dubai an Apple service center?", a: "No. We are an independent Apple repair workshop, not an Apple Store or an Apple Authorised Service Provider. We repair out-of-warranty iPhones, older models and board-level faults, and we tell you when Apple is the better choice, such as while your phone is under warranty or AppleCare+." },
         { q: "Will I lose my data during an iPhone repair?", a: "Screen, battery, back glass and port repairs don't erase the phone, but back up to iCloud or a computer first if it still works. For water-damaged or dead iPhones, we tell you whether the data can be recovered before any repair that could affect it." },
         { q: "Does an independent repair affect my Apple warranty?", a: "Apple can refuse warranty service for damage caused by a third-party repair. If your iPhone is still under Apple's warranty or AppleCare+, check with Apple first. Once it is out of warranty there is no Apple coverage left to lose, though Apple may decline to service a non-Apple part if you take the phone to them later." },
@@ -172,8 +172,8 @@ export default function IPhoneRepairHub() {
         </p>
         <p>
           <strong>Send it by courier.</strong> Can&apos;t come in? Book any same-day courier app, hand the iPhone to the
-          driver and WhatsApp us the tracking link; it reaches us within the day. When it is fixed, collect it or book a
-          courier back. Our{" "}
+          driver and WhatsApp us the tracking link; it reaches us within the day. When it is fixed, collect it, or we book a
+          courier to bring it back. Our{" "}
           <A to="/contact">contact page</A> has the workshop address and hours.
         </p>
         <p>

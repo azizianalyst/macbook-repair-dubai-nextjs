@@ -97,7 +97,7 @@ export default function Privacy() {
         <ul>
           <li><strong>Payment processors:</strong> Network International, Visa, and Mastercard receive the card transaction data when you pay by card. Cash payments leave no third-party trail.</li>
           <li><strong>Apple Inc.:</strong> serial numbers are sometimes checked against Apple's GSX database to confirm warranty status before quoting. Your name is not sent.</li>
-          <li><strong>Couriers:</strong> we have no courier partner. If you send a device with a courier you book yourself, that courier's own privacy terms apply.</li>
+          <li><strong>Couriers:</strong> we have no courier partner. If you send a device with a courier you book yourself, that courier's own privacy terms apply. When we book a courier to return a device, we give that courier only the name, phone number and address needed for the delivery.</li>
           <li><strong>Google LLC:</strong> anonymous analytics events only (see Cookie Policy).</li>
           <li><strong>Legal authorities:</strong> data is disclosed only when compelled by a Dubai Court order or a Dubai Police request that complies with UAE law.</li>
         </ul>

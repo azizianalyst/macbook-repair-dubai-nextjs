@@ -97,7 +97,7 @@ const FAQS: FAQ[] = [
   { q: "Can you repair a USB-C port on a MacBook Air M1?",
     a: "Yes - the M1 Air has 2 USB-C ports both soldered to the main logic board with 32 fine-pitch pins each. Port swap takes 90 minutes under microscope. The port is sourced from the original Foxconn factory that builds the Apple part." },
   { q: "Can I send my MacBook in for a charging port repair?",
-    a: "Yes. Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop or book a courier to send it back. Or walk in to Concord Tower, Dubai Media City, with parking on site." },
+    a: "Yes. Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop, or we book a courier to bring it back. Or walk in to Concord Tower, Dubai Media City, with parking on site." },
 ];
 
 const COMPARISON = [
