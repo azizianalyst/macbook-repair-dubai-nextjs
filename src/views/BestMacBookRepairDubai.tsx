@@ -28,16 +28,16 @@ const CRITERIA = [
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "Up to 12 months", sameDay: "Yes", pickup: "Free", price: "Price on request" },
-  { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", pickup: "No", price: "Price on request" },
-  { shop: "Generic phone repair shops",   location: "Various (Karama etc.)",     board: "Some, inconsistent",  warranty: "Verbal / 1 month",  sameDay: "Sometimes",     pickup: "No", price: "Varies, no fixed quote" },
+  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "Up to 12 months", sameDay: "Yes", walkIn: "Yes, no appointment", price: "Price on request" },
+  { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", walkIn: "Appointment advised", price: "Price on request" },
+  { shop: "Generic phone repair shops",   location: "Various (Karama etc.)",     board: "Some, inconsistent",  warranty: "Verbal / 1 month",  sameDay: "Sometimes",     walkIn: "Varies", price: "Varies, no fixed quote" },
 ];
 
 const WHY_US = [
   "Repairing MacBooks in Dubai since 2004. Intel 2008 through M5 2025",
   "Component-level logic board repair (not module swap), far cheaper than a full swap",
   "Same-day screen, battery, keyboard, and trackpad",
-  "Free pickup and delivery across Dubai Mainland",
+  "Walk in without an appointment, across from Media City Metro",
   "Written warranty up to 12 months on every repair",
   "Free diagnosis, no fix, no charge",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
@@ -56,7 +56,7 @@ const FAQS = [
   { q: "How much does the best MacBook repair shop charge in Dubai?",
     a: "Screen, battery, keyboard and logic-board repairs are all priced per model. Diagnosis is free, and you get a fixed written quote before any work starts, always lower than an Apple Store module swap. Generic shops may quote less but often use grey-market parts without warranty. Message us on WhatsApp for today's exact price on your MacBook." },
   { q: "Where is the best MacBook repair shop in Dubai located?",
-    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Near Media City Metro station. Open Monday to Saturday 9 am–7 pm. Free pickup also available from anywhere in Dubai Mainland. WhatsApp 055 741 3706." },
+    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. Across from Media City Metro station, with parking on site. Open Mon-Thu and Sat 9 am–7 pm, Friday 9 am–12 pm and 2 pm–7 pm, closed Sunday. Can't come in? Book any same-day courier app to send it over and WhatsApp us the tracking link on 055 741 3706." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [0, 2, 5, 10, 17, 24];
@@ -138,7 +138,7 @@ export default function BestMacBookRepairDubai() {
                     <th className="py-sm pr-lg font-semibold">Board repair</th>
                     <th className="py-sm pr-lg font-semibold">Warranty</th>
                     <th className="py-sm pr-lg font-semibold">Same-day</th>
-                    <th className="py-sm pr-lg font-semibold">Free pickup</th>
+                    <th className="py-sm pr-lg font-semibold">Walk-in</th>
                     <th className="py-sm font-semibold">Starting price</th>
                   </tr>
                 </thead>
@@ -149,7 +149,7 @@ export default function BestMacBookRepairDubai() {
                       <td className="py-sm pr-lg text-text-muted">{row.board}</td>
                       <td className="py-sm pr-lg text-text-muted">{row.warranty}</td>
                       <td className="py-sm pr-lg text-text-muted">{row.sameDay}</td>
-                      <td className="py-sm pr-lg text-text-muted">{row.pickup}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.walkIn}</td>
                       <td className="py-sm text-text-muted">{row.price}</td>
                     </tr>
                   ))}

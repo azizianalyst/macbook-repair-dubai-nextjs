@@ -187,7 +187,7 @@ const HAND_POSTS: Post[] = [
   {
     slug: "/blog/ramadan-hours-apple-repair-dubai",
     title: "Ramadan Hours - Apple Repair Dubai 2026",
-    excerpt: "Ramadan 2026 (17 Feb - 19 Mar) - workshop runs 10am-4pm + 8pm-1am, closed for iftar 5:30-7:30. Pickup/delivery timing, Apple Store Dubai Mall hours, Eid Al Fitr closure schedule.",
+    excerpt: "Ramadan 2026 (17 Feb - 19 Mar) - workshop runs 10am-4pm + 8pm-1am, closed for iftar 5:30-7:30. Walk-in timing, Apple Store Dubai Mall hours, Eid Al Fitr closure schedule.",
     category: "Seasonal · Hours",
     author: "Usman",
     date: "April 2026",
@@ -215,7 +215,7 @@ const HAND_POSTS: Post[] = [
   {
     slug: "/blog/no-fix-no-charge-policy-explained",
     title: "No Fix No Charge - How Our Promise Works",
-    excerpt: "Free diagnosis, free pickup, zero charge if we can't solve your problem. 96.3% acceptance-to-success rate makes the math work. What 'fix' means and how partial-fix edge cases are handled.",
+    excerpt: "Free diagnosis, zero charge if we can't solve your problem. 96.3% acceptance-to-success rate makes the math work. What 'fix' means and how partial-fix edge cases are handled.",
     category: "Trust · Policy",
     author: "Usman",
     date: "April 2026",
@@ -223,8 +223,8 @@ const HAND_POSTS: Post[] = [
   },
   {
     slug: "/blog/free-pickup-delivery-dubai-how-it-works",
-    title: "Free MacBook Pickup & Delivery Dubai - How It Works",
-    excerpt: "WhatsApp +971 55 741 3706 - courier within 2 hours across Dubai. Diagnosis at workshop, written quote, approval, delivery. Card / cash / transfer / Tabby on delivery. Sharjah & AD via paid logistics.",
+    title: "MacBook Repair Courier Dubai: How to Get Your Mac to Us",
+    excerpt: "Our pickup service has ended. Walk in to Concord Tower, Dubai Media City, book a same-day courier inside Dubai, or courier it from another emirate and we send it back.",
     category: "Trust · Logistics",
     author: "Shafiq",
     date: "April 2026",
@@ -416,7 +416,7 @@ const HAND_POSTS: Post[] = [
   {
     slug: "/blog/ipad-water-damage-repair-dubai-guide",
     title: "iPad Water Damage Repair Dubai - Costs & What To Do First",
-    excerpt: "iPad water damage repair Dubai - cost depends on board damage; message us for a quote. First 30 minutes matter most. 80% recovery rate. Free pickup, warranty of up to 12 months.",
+    excerpt: "iPad water damage repair Dubai - cost depends on board damage; message us for a quote. First 30 minutes matter most. 80% recovery rate. Walk in at Media City, warranty of up to 12 months.",
     category: "Problem solving · iPad",
     author: "Ali",
     date: "June 2026",

@@ -122,7 +122,7 @@ export const MEGA_MENU: MegaPanel[] = [
         "href": "/macbook-repair-jlt"
       },
       {
-        "label": "On-site & free pickup",
+        "label": "Onsite repair visits",
         "href": "/onsite-macbook-repair-dubai"
       },
       {
@@ -205,7 +205,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         "href": "/blog"
       },
       {
-        "label": "Contact & free pickup",
+        "label": "Contact & directions",
         "href": "/contact"
       }
     ]

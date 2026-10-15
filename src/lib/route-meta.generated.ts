@@ -13,8 +13,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Independent Apple repair in Dubai Media City."
   },
   "/apple-repair-near-me-dubai": {
-    "title": "Apple Repair Near Me Dubai. All Devices | Free Pickup, Same-Day",
-    "description": "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac and Mac mini. Free pickup across Dubai. Same-day. Concord Tower, Media City. WhatsApp 055 741 3706 for a quote."
+    "title": "Apple Repair Near Me Dubai | All Devices, Same-Day",
+    "description": "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac and Mac mini, same-day at Concord Tower, Media City. Walk in or WhatsApp 055 741 3706 today."
   },
   "/apple-repair-programs-dubai": {
     "title": "Apple Free Repair Programs Dubai - Check If You Qualify",
@@ -101,8 +101,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "DSF, White Friday, Apple Education: when does Apple actually discount in Dubai? Reseller deals, tax-free shopping, trade-in and the months you should not buy."
   },
   "/blog/free-pickup-delivery-dubai-how-it-works": {
-    "title": "Free MacBook Pickup & Delivery Dubai - How It Works (2026)",
-    "description": "Free MacBook pickup across Dubai. WhatsApp us, courier within 2 hours, repair, and door-step return. Full process, payment options, and outside-Dubai logistics."
+    "title": "MacBook Repair Courier Dubai: How to Get Your Mac to Us",
+    "description": "Our pickup service has ended. Walk in to Concord Tower in Media City, or book your own courier from Dubai or another emirate. WhatsApp us to get started."
   },
   "/blog/genuine-parts-vs-quality-alternative-explained": {
     "title": "Genuine Apple Parts vs Alternatives: Honest Guide 2026",
@@ -226,7 +226,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/ipad-water-damage-repair-dubai-guide": {
     "title": "iPad Water Damage Repair Dubai 2026 - Costs & What To Do",
-    "description": "iPad water damage repair Dubai. The first 30 minutes matter most. Ultrasonic cleaning, board-level repair, free pickup, 15-day written warranty. WhatsApp us for today's price."
+    "description": "iPad water damage repair Dubai. The first 30 minutes matter most. Ultrasonic cleaning, board-level repair, walk-in workshop, 15-day written warranty. WhatsApp us for today's price."
   },
   "/blog/iphone-15-pro-overheating-fix": {
     "title": "iPhone 15 Pro Overheating? Fixes and When to Worry",
@@ -270,7 +270,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/iphone-battery-replacement-cost-dubai-all-models": {
     "title": "iPhone Battery Replacement Cost Dubai: All Models",
-    "description": "iPhone battery replacement in Dubai, every model. Same-day service, 3-month warranty, free pickup. Message us on WhatsApp for today's exact price."
+    "description": "iPhone battery replacement in Dubai, every model. Same-day service, 3-month warranty, walk-in workshop. Message us on WhatsApp for today's exact price."
   },
   "/blog/iphone-cracked-screen-repair-dubai": {
     "title": "iPhone Cracked Screen Repair Dubai 2026: Costs by Model",
@@ -818,7 +818,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/no-fix-no-charge-policy-explained": {
     "title": "No Fix No Charge Policy Explained - Our Promise (Dubai 2026)",
-    "description": "If we can't fix your Apple device, you owe nothing - not even diagnosis or pickup. Here's how the no-fix-no-charge promise works and where the edges are."
+    "description": "If we can't fix your Apple device, you owe nothing - not even the diagnosis fee. Here's how the no-fix-no-charge promise works and where the edges are."
   },
   "/blog": {
     "title": "Apple Repair Blog Dubai - Honest Cost Guides",
@@ -830,7 +830,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/ramadan-hours-apple-repair-dubai": {
     "title": "Ramadan Hours - Apple Repair Dubai 2026 (Feb 17 - Mar 19)",
-    "description": "Ramadan 2026 hours for our Dubai workshop: opening times, the iftar pause, pickup and delivery timing, plus how Apple Store Dubai Mall hours change."
+    "description": "Ramadan 2026 hours for our Dubai workshop: opening times, the iftar pause, Eid closures, and how Apple Store Dubai Mall hours changed. WhatsApp us today."
   },
   "/blog/should-i-buy-iphone-17e-or-iphone-16": {
     "title": "iPhone 17e or iPhone 16? Honest Comparison 2026",
@@ -850,7 +850,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/water-damage-macbook-immediate-action": {
     "title": "Spilled Water on MacBook? Do This Right Now (2026)",
-    "description": "MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
+    "description": "MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Walk in today."
   },
   "/blog/what-causes-color-distortion-on-macbook-screens": {
     "title": "What Causes Color Distortion on MacBook Screens? Fix Guide",
@@ -882,7 +882,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/corporate-macbook-repair-dubai": {
     "title": "Corporate MacBook Repair Dubai. Fleet Service, VAT Invoice | AMC Available",
-    "description": "Corporate MacBook repair Dubai. Office collection & return, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706."
+    "description": "Corporate MacBook repair Dubai. Paid onsite visits, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706."
   },
   "/imac-data-recovery-dubai": {
     "title": "iMac Data Recovery Dubai - Fusion Drive, SSD, T2 | 055 741 3706",
@@ -890,11 +890,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/imac-fan-cleaning-dubai": {
     "title": "iMac Fan Cleaning Dubai - Quiet Down a Loud iMac | 055 741 3706",
-    "description": "iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again - same day. Message us on WhatsApp for a price. Home visit popular."
+    "description": "iMac fan cleaning Dubai. Loud fan? Dubai dust buildup is the cause. Deep clean, quiet again - same day. Walk in at Media City or WhatsApp us for a price."
   },
   "/imac-full-diagnostic-dubai": {
-    "title": "iMac Full Diagnostic Dubai - Free 30-Point Check + Home Visit | 055 741 3706",
-    "description": "Free iMac diagnostic Dubai with optional free home visit. 30-point hardware and macOS check. No obligation. Heavy iMac? We come to you."
+    "title": "iMac Full Diagnostic Dubai - Free 30-Point Check",
+    "description": "Free iMac diagnostic in Dubai Media City: a 30-point hardware and macOS check with a written report and no obligation. Walk in or WhatsApp us today."
   },
   "/imac-gpu-repair-dubai": {
     "title": "iMac GPU Repair Dubai - Discrete AMD Radeon Pro Fix | 055 741 3706",
@@ -909,7 +909,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/imac-not-turning-on-dubai": {
     "title": "iMac Not Turning On - Dubai Repair | Free Diagnosis",
-    "description": "iMac won't turn on? Free diagnosis in Dubai. PSU failures, SMC reset, T2 lockup, fan-only boots, GPU faults. Free pickup across the city. WhatsApp for your price - 055 741 3706."
+    "description": "iMac won't turn on? Free diagnosis in Dubai. PSU failures, SMC reset, T2 lockup, fan-only boots, GPU faults. Walk in at Dubai Media City. WhatsApp for your price - 055 741 3706."
   },
   "/imac-os-reinstall-dubai": {
     "title": "iMac macOS Reinstall Dubai - Internet Recovery & Clean Install | 055 741 3706",
@@ -917,11 +917,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/imac-overheating-fix-dubai": {
     "title": "iMac Overheating Fix Dubai - Fan Clean, Thermal Paste | 055 741 3706",
-    "description": "iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. 1 day. Free home visit. WhatsApp for a price."
+    "description": "iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. 1 day at our Media City workshop. WhatsApp for a price."
   },
   "/imac-power-supply-repair-dubai": {
     "title": "iMac Power Supply Repair Dubai - No Power Fix | 055 741 3706",
-    "description": "iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. 1-2 days. Free diagnosis and home visit - message us for a quote."
+    "description": "iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. 1-2 days. Free diagnosis at our Media City workshop - message us for a quote."
   },
   "/imac-ram-upgrade-dubai": {
     "title": "iMac Upgrade Dubai: RAM and SSD Upgrades by Model",
@@ -944,8 +944,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. Message us for a price. 1-2 days."
   },
   "/imac-virus-removal-dubai": {
-    "title": "iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706",
-    "description": "iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. Same day. Free home visit. Message us on WhatsApp for pricing."
+    "title": "iMac Virus Removal Dubai. Same-Day Malware Removal",
+    "description": "iMac virus removal in Dubai: we clear adware, browser hijackers, fake cleaners and rogue profiles, then verify with three scanners. Same day. WhatsApp us."
   },
   "/image-usage-license": {
     "title": "Image Usage License - Free with Attribution",
@@ -1193,8 +1193,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. 1 day. WhatsApp us for today's price on your model."
   },
   "/iphone-repair-near-me-dubai": {
-    "title": "iPhone Repair Near Me Dubai. Same-Day Screen & Battery | Free Pickup",
-    "description": "iPhone repair near you in Dubai. Same-day screen and battery. Free pickup across Dubai. WhatsApp for today's price. Concord Tower, Media City. Call 055 741 3706."
+    "title": "iPhone Repair Near Me Dubai | Same-Day, Walk In",
+    "description": "iPhone repair near you in Dubai. Same-day screen and battery, walk in at Concord Tower, Media City, no appointment. WhatsApp 055 741 3706 for a price."
   },
   "/iphone-se-3rd-gen-repair-dubai": {
     "title": "iPhone SE 3rd Gen Repair Dubai - Screen, Battery, Same Day | 055 741 3706",
@@ -1238,7 +1238,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/mac-data-recovery-after-water-damage-dubai": {
     "title": "Mac Data Recovery After Water Damage Dubai | No-Fix No-Charge",
-    "description": "Mac data recovery after water damage in Dubai. Free pickup, same-day emergency. No-fix no-charge. Board-level repair on T2 and Apple silicon Macs. Call 055 741 3706."
+    "description": "Mac data recovery after water damage in Dubai. Walk in, same-day emergency. No-fix no-charge. Board-level repair on T2 and Apple silicon Macs. Call 055 741 3706."
   },
   "/mac-data-recovery-dubai": {
     "title": "Data Recovery Dubai: Macs, SSDs and Hard Drives",
@@ -1250,7 +1250,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/mac-full-diagnostic-dubai": {
     "title": "Mac Mini, Studio & Pro Full Diagnostic Dubai - Free | 055 741 3706",
-    "description": "Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Free home pickup for Mac Pro. No obligation, written report."
+    "description": "Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Walk in, parking on site. No obligation, written report. WhatsApp us."
   },
   "/mac-logic-board-repair-dubai": {
     "title": "Mac Mini & Studio Logic Board Repair Dubai | 055 741 3706",
@@ -1318,7 +1318,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/mac-pro-full-diagnostic-dubai": {
     "title": "Mac Pro Full Diagnostic Dubai - Pre-Purchase & Fault Check",
-    "description": "Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Free pickup. Call 055 741 3706."
+    "description": "Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Walk in at Media City. Call 055 741 3706."
   },
   "/mac-pro-gpu-repair-dubai": {
     "title": "Mac Pro GPU Repair Dubai - MPX Modules & W6800X | 055 741 3706",
@@ -1341,16 +1341,16 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Mac repair cost in Dubai. MacBook screen, battery and logic board; iMac screen. Free diagnosis, written quote before any work. Call 055 741 3706."
   },
   "/mac-repair-dubai": {
-    "title": "Mac Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "Mac Repair Dubai. Free Diagnosis, Walk-In Workshop",
     "description": "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us."
   },
   "/mac-repair-near-me-dubai": {
     "title": "Mac Repair Near Me Dubai. MacBook, iMac & Mac mini",
-    "description": "Mac repair near you in Dubai. Screen, battery and board-level work. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706."
+    "description": "Mac repair near you in Dubai. Screen, battery and board-level work. Walk in or send it by courier. Same-day. Concord Tower, Media City. Call 055 741 3706."
   },
   "/mac-setup-data-migration-dubai": {
     "title": "Mac Setup, Configuration & Data Migration Dubai - Same Day",
-    "description": "Apple device setup & data migration in Dubai. New Mac setup, email/Wi-Fi/VPN, Office & Outlook, iCloud, and full migration from old Mac or PC. On-site or free pickup. Call 055 741 3706."
+    "description": "Mac setup and data migration in Dubai: email, Wi-Fi, VPN, Office, iCloud and a full move from your old Mac or PC. Walk in or call 055 741 3706 today."
   },
   "/mac-ssd-upgrade-dubai": {
     "title": "Mac Mini & Mac Studio SSD Upgrade Dubai | 055 741 3706",
@@ -1390,7 +1390,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-battery-replacement-dubai": {
     "title": "MacBook Air Battery Replacement Dubai - Same Day",
-    "description": "MacBook Air battery replacement Dubai. M1 through M4, Intel, swelling, same-day 2-hour service, 3-month warranty, free pickup Dubai-wide. WhatsApp for today's price."
+    "description": "MacBook Air battery replacement Dubai. M1 to M4 and Intel, swollen cells, same-day 2-hour service, 3-month warranty, walk-in. WhatsApp for today's price."
   },
   "/macbook-air-charging-port-repair-dubai": {
     "title": "MacBook Air Charging Port Repair Dubai - MagSafe 3 and USB-C",
@@ -1430,7 +1430,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m1-repair-dubai": {
     "title": "MacBook Air M1 Repair Dubai: Screen, Battery & Logic Board Fix",
-    "description": "MacBook Air M1 (A2337) repair Dubai. Screen, battery & logic board. Free diagnosis, same-day service, free pickup. WhatsApp us for today's price."
+    "description": "MacBook Air M1 (A2337) repair Dubai. Screen, battery & logic board. Free diagnosis, same-day service, walk-in workshop. WhatsApp us for today's price."
   },
   "/macbook-air-m1-screen-repair-dubai": {
     "title": "MacBook Air M1 Screen Repair Dubai — Same-Day",
@@ -1450,7 +1450,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m2-repair-dubai": {
     "title": "MacBook Air M2 Repair Dubai: 13-inch & 15-inch Screen, Battery & Board",
-    "description": "MacBook Air M2 repair Dubai. 13-inch and 15-inch screen, battery and board repairs. Free diagnosis, same-day service, free pickup. Message us for a quote."
+    "description": "MacBook Air M2 repair Dubai. 13-inch and 15-inch screen, battery and board repairs. Free diagnosis, same-day service, walk in at Media City. Message us for a quote."
   },
   "/macbook-air-m2-screen-repair-dubai": {
     "title": "MacBook Air M2 Screen Repair Dubai — Same-Day Service",
@@ -1466,7 +1466,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m3-repair-dubai": {
     "title": "MacBook Air M3 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
+    "description": "MacBook Air M3 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service at our Media City workshop. Apple repair since 2004."
   },
   "/macbook-air-m3-screen-repair-dubai": {
     "title": "MacBook Air M3 Screen Repair Dubai",
@@ -1482,7 +1482,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m4-repair-dubai": {
     "title": "MacBook Air M4 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
+    "description": "MacBook Air M4 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service. Walk in to Media City or WhatsApp us."
   },
   "/macbook-air-m4-screen-repair-dubai": {
     "title": "MacBook Air M4 Screen Repair Dubai",
@@ -1498,7 +1498,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-m5-repair-dubai": {
     "title": "MacBook Air M5 Repair Dubai 2026: Screen, Battery & Logic Board",
-    "description": "MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, free pickup. Apple repair since 2004."
+    "description": "MacBook Air M5 repair Dubai. Screen, battery, keyboard and board-level work. Free diagnosis, same-day service, walk-in workshop. Apple repair since 2004."
   },
   "/macbook-air-m5-screen-repair-dubai": {
     "title": "MacBook Air M5 Screen Repair Dubai",
@@ -1506,7 +1506,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-screen-replacement-dubai": {
     "title": "MacBook Air Screen Replacement Dubai — Same Day",
-    "description": "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone preserved. Same-day on most models, free pickup Dubai-wide. Call 055 741 3706."
+    "description": "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone kept. Same-day on most models, walk in to Media City. Call 055 741 3706."
   },
   "/macbook-backup-service-dubai": {
     "title": "MacBook Backup Service Dubai | MacBook Repair Dubai",
@@ -1518,7 +1518,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-battery-swollen-repair-dubai": {
     "title": "MacBook Swollen Battery Repair Dubai. Same Day | Urgent",
-    "description": "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement. Free pickup. Concord Tower, Media City. Call 055 741 3706."
+    "description": "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement, walk in. Concord Tower, Media City. Call 055 741 3706."
   },
   "/macbook-camera-repair-dubai": {
     "title": "MacBook Camera Repair Dubai - FaceTime & Webcam Fix",
@@ -1530,7 +1530,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-cleaning-maintenance-dubai": {
     "title": "MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai",
-    "description": "MacBook cleaning and maintenance in Dubai. Dust and corrosion removal, fan and vent clean, free pickup, 15-day written warranty. Call 055 741 3706."
+    "description": "MacBook cleaning and maintenance in Dubai. Dust and corrosion removal, fan and vent clean, walk-in workshop, 15-day written warranty. Call 055 741 3706."
   },
   "/macbook-data-recovery-dubai": {
     "title": "MacBook Data Recovery Dubai - Free Diagnosis First",
@@ -1706,11 +1706,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
-    "description": "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, free pickup, warranty up to 12 months."
+    "description": "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, walk in, warranty up to 12 months."
   },
   "/macbook-repair-near-me-dubai": {
-    "title": "MacBook Repair Near Me Dubai - Free Pickup Across the City",
-    "description": "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706."
+    "title": "MacBook Repair Near Me Dubai - Walk In, Same Day",
+    "description": "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, across from the Metro, or send it by courier. 10 min from Marina. 055 741 3706."
   },
   "/macbook-safe-mode-repair-dubai": {
     "title": "MacBook Safe Mode Repair Dubai | MacBook Repair Dubai",
@@ -1721,8 +1721,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook screen repair Dubai. Same-day Air and Pro 14\". Flexgate, cracked glass, dead pixels. Free diagnosis, 3-month warranty. Call 055 741 3706."
   },
   "/macbook-screen-repair-near-me-dubai": {
-    "title": "MacBook Screen Repair Near Me Dubai - Free Pickup, Same-Day | 055 741 3706",
-    "description": "MacBook screen repair near me in Dubai. Free door-to-door pickup, same-day on most models. Concord Tower, Media City. Message us on WhatsApp for a price."
+    "title": "MacBook Screen Repair Near Me Dubai - Same-Day, Walk In",
+    "description": "MacBook screen repair near me in Dubai: walk in to Concord Tower, Media City, or send it by courier. Same-day on most models. WhatsApp us for a price."
   },
   "/macbook-speaker-repair-dubai": {
     "title": "MacBook Speaker Repair Dubai - | 1 Day | All Models",
@@ -1773,8 +1773,8 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "Move everything from old MacBook to new without iCloud: Migration Assistant over cable (fastest, keeps settings), Time Machine restore, or manual folder copy. All macOS versions."
   },
   "/onsite-macbook-repair-dubai": {
-    "title": "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
-    "description": "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, warranty of up to 12 months. Call 055 741 3706."
+    "title": "Onsite MacBook Repair Dubai. Paid Visits, When Available",
+    "description": "Onsite MacBook repair in Dubai: a paid technician visit when one is free, with the charge quoted on WhatsApp first. Or walk in to Media City. Book now."
   },
   "/out-of-warranty-apple-repair-dubai": {
     "title": "Out-of-Warranty Apple Repair Dubai - Component-Level, Quote First",
@@ -1790,15 +1790,15 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/same-day-macbook-repair-dubai": {
     "title": "Same-Day MacBook Repair Dubai. Screen, Battery, Keyboard",
-    "description": "Same-day MacBook repair in Dubai. Screen, battery and keyboard. Free pickup across Dubai. Drop off by 2 pm, back the same day. Call 055 741 3706."
+    "description": "Same-day MacBook repair in Dubai. Screen, battery and keyboard. Walk in to our Media City workshop by 2 pm, collect the same day. Call 055 741 3706."
   },
   "/sell-faulty-macbook-dubai": {
     "title": "Sell Faulty or Dead MacBook Dubai - We Buy Broken Apple",
-    "description": "Water-damaged, cracked, dead logic board or won't turn on? We buy faulty MacBook, iMac, iPhone & iPad across Dubai. Free valuation, free collection, same-day cash. WhatsApp 055 741 3706."
+    "description": "Water-damaged, cracked or dead? We buy faulty MacBook, iMac, iPhone & iPad in Dubai. Free valuation, walk in, same-day cash. WhatsApp 055 741 3706."
   },
   "/sell-macbook-dubai": {
     "title": "Sell Your MacBook / Apple Device Dubai - Instant Valuation, Same-Day Cash",
-    "description": "Sell your Mac, iPhone or iPad in Dubai - even if damaged. Free instant valuation, free pickup across Dubai and paid same day. We buy working & faulty devices."
+    "description": "Sell your Mac, iPhone or iPad in Dubai, even if damaged. Free valuation, walk in to our Media City workshop, get paid same day. WhatsApp us for an offer."
   },
   "/siri-stopped-working-on-macbook-air": {
     "title": "Siri Stopped Working on MacBook Air. How to Fix It",
@@ -1842,7 +1842,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/trade-in-macbook-dubai": {
     "title": "MacBook Trade-In Dubai - Upgrade for Less, Instant Credit",
-    "description": "Trade in your old Mac, iPhone or iPad in Dubai - working or faulty. Free valuation, free collection, same-day cash or instant credit toward a newer model. WhatsApp 055 741 3706."
+    "description": "Trade in your old Mac in Dubai, working or faulty. Free valuation, walk in or courier it to us, same-day cash or instant credit. WhatsApp 055 741 3706."
   },
   "/warranty": {
     "title": "Warranty Policy - MacBook Repair Dubai",

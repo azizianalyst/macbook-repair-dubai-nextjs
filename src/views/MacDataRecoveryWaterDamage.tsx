@@ -28,7 +28,7 @@ const STEPS = [
   { step: "1", title: "Power off immediately",        body: "Do not try to turn it on. Do not plug it in. Electricity through wet circuits causes irreversible short-circuit damage to the board and the SSD chips." },
   { step: "2", title: "Remove peripherals",           body: "Unplug charger, USB drives, and any accessories. Do not press keys, keystrokes can cause shorts through the wet keyboard membrane to the board." },
   { step: "3", title: "Tilt to drain",                body: "Hold the MacBook at a 45° angle to let liquid drain through the keyboard. Do not shake it or use a hair dryer, heat can damage the board and its chips." },
-  { step: "4", title: "Contact us immediately",       body: "WhatsApp 055 741 3706. Free pickup from your location across Dubai Mainland. Every hour the board stays wet increases the corrosion that makes data unrecoverable." },
+  { step: "4", title: "Contact us immediately",       body: "WhatsApp 055 741 3706, then bring it in - or, if you can't come, book any same-day courier app and send it straight to us. Every hour the board stays wet increases the corrosion that makes data unrecoverable." },
 ];
 
 const PROCESS = [
@@ -40,9 +40,9 @@ const PROCESS = [
 
 const FAQS = [
   { q: "Can data be recovered from a water-damaged Mac in Dubai?",
-    a: "Often, if the Mac was powered off quickly and not charged while wet. The storage is frequently intact even when the board has stopped working. On T2 and Apple silicon Macs it can only be read through the original board, so we clean and repair the board until the Mac starts, then copy the data off. WhatsApp 055 741 3706, bring it in or request free pickup the same day the damage happens." },
+    a: "Often, if the Mac was powered off quickly and not charged while wet. The storage is frequently intact even when the board has stopped working. On T2 and Apple silicon Macs it can only be read through the original board, so we clean and repair the board until the Mac starts, then copy the data off. WhatsApp 055 741 3706 and bring it in, or send it with a same-day courier you book, the same day the damage happens." },
   { q: "What should I do immediately after spilling liquid on my Mac?",
-    a: "Power off immediately (hold power button 5 seconds). Unplug the charger. Tilt the Mac to drain. Do not press keys, do not use a hair dryer, do not try to restart. Every minute the board is wet with power increases corrosion. WhatsApp 055 741 3706 for same-day free pickup." },
+    a: "Power off immediately (hold power button 5 seconds). Unplug the charger. Tilt the Mac to drain. Do not press keys, do not use a hair dryer, do not try to restart. Every minute the board is wet with power increases corrosion. WhatsApp 055 741 3706, then bring it in or send it with a same-day courier you book." },
   { q: "How much does Mac data recovery after water damage cost in Dubai?",
     a: "It depends on damage severity. A light spill on a board that only needs cleaning is the least involved; heavy corrosion that needs component-level board repair before the Mac can start costs the most. Every case is quoted in writing after the free assessment, before you commit to anything. No-fix no-charge: if we cannot recover your data, you pay nothing." },
   { q: "How long does water damage data recovery take?",
@@ -63,7 +63,7 @@ export default function MacDataRecoveryWaterDamage() {
   useSeo({
     title: "Mac Data Recovery After Water Damage Dubai | No-Fix No-Charge",
     description:
-      "Mac data recovery after water damage in Dubai. Free pickup, same-day emergency. No-fix no-charge. Board-level repair on T2 and Apple silicon Macs. Call 055 741 3706.",
+      "Mac data recovery after water damage in Dubai. Walk in, same-day emergency. No-fix no-charge. Board-level repair on T2 and Apple silicon Macs. Call 055 741 3706.",
     path: "/mac-data-recovery-after-water-damage-dubai",
   });
 
@@ -78,14 +78,14 @@ export default function MacDataRecoveryWaterDamage() {
           tone="dark"
           eyebrow="URGENT. Mac water damage data recovery · Dubai"
           title="Mac Data Recovery After Water Damage. Dubai"
-          subtitle="Act fast, every hour increases corrosion. Free pickup today. No-fix no-charge. Board-level repair so the original Mac can be read."
+          subtitle="Act fast, every hour increases corrosion. Walk in or send it by courier today. No-fix no-charge. Board-level repair so the original Mac can be read."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1 text-red-700 font-semibold"><AlertTriangle size={16} aria-hidden /> Power off now, do not charge</span>
             <span>·</span>
             <span>No-fix no-charge</span>
             <span>·</span>
-            <span>Free pickup Dubai</span>
+            <span>Walk in, Dubai Media City</span>
           </p>
         </Hero>
 
@@ -99,7 +99,7 @@ export default function MacDataRecoveryWaterDamage() {
           <QuickAnswer
             tone="dark"
             question="Can I recover data from a water-damaged Mac in Dubai?"
-            answer="Often, yes, if the Mac was powered off quickly and not charged while wet. The storage is often intact even when the board fails; on T2 and Apple silicon Macs it can only be read by repairing the original board until the Mac starts. Free pickup today across Dubai. No-fix no-charge. WhatsApp 055 741 3706."
+            answer="Often, yes, if the Mac was powered off quickly and not charged while wet. The storage is often intact even when the board fails; on T2 and Apple silicon Macs it can only be read by repairing the original board until the Mac starts. Walk in to our Media City workshop today. No-fix no-charge. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -138,7 +138,7 @@ export default function MacDataRecoveryWaterDamage() {
           <div className="border border-red-700/40 bg-red-900/10 rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-700" aria-hidden /> Water damage, act now</h2>
-              <p className="text-[15px] text-text-muted">Free pickup across Dubai. No-fix no-charge. Every hour increases corrosion, contact us today.</p>
+              <p className="text-[15px] text-text-muted">Walk in, or send it with a same-day courier you book. No-fix no-charge. Every hour increases corrosion, contact us today.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

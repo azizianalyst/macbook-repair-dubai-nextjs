@@ -79,10 +79,10 @@ export default function IPhoneSe3rdGenRepair() {
         "Front camera and earpiece faults",
       ]}
       steps={[
-        { title: "WhatsApp the model + fault",  body: "Photo. We confirm price and pickup window in 4 minutes." },
-        { title: "Free pickup or walk in",       body: "Free pickup across Dubai mainland." },
+        { title: "WhatsApp the model + fault",  body: "Photo. We confirm the price in 4 minutes." },
+        { title: "Walk in",                      body: "Concord Tower, Dubai Media City. No appointment needed." },
         { title: "Diagnose + replace",           body: "Most jobs done in 30-60 minutes on the bench." },
-        { title: "QC + return",                  body: "Functional QC, signed warranty card, free delivery back." },
+        { title: "QC + return",                  body: "Functional QC, signed warranty card, ready to collect at the workshop." },
       ]}
       warrantyDays={365}
       warrantyHeadline

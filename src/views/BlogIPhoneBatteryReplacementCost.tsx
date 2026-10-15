@@ -7,7 +7,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Battery Replacement Cost Dubai: All Models"
-      seoDescription="iPhone battery replacement in Dubai, every model. Same-day service, 3-month warranty, free pickup. Message us on WhatsApp for today's exact price."
+      seoDescription="iPhone battery replacement in Dubai, every model. Same-day service, 3-month warranty, walk-in workshop. Message us on WhatsApp for today's exact price."
       path="/blog/iphone-battery-replacement-cost-dubai-all-models"
       wide
       toc={[
@@ -128,8 +128,8 @@ export default function BlogIPhoneBatteryReplacementCost() {
           <p>
             We carry stock of every iPhone battery from the 8 through the 17 Pro Max. WhatsApp us
             before 1pm and you get the phone back the same evening. iPhone 6/6s - usually next
-            morning because we don't keep them in daily stock anymore. Free pickup across Dubai
-            mainland; bring ID for collection.
+            morning because we don't keep them in daily stock anymore. Walk in to our Media City
+            workshop; bring ID for collection.
           </p>
 
           <h2 id="what-next">What should I do next?</h2>
@@ -146,7 +146,7 @@ export default function BlogIPhoneBatteryReplacementCost() {
         </>
       }
       faqs={[
-        { q: "How long does iPhone battery replacement take?", a: "30-45 minutes at the bench for iPhone 8 through 14. 50-60 minutes for iPhone 15 onward (more adhesive). Same-day if you message us before 1pm. Free pickup across Dubai mainland." },
+        { q: "How long does iPhone battery replacement take?", a: "30-45 minutes at the bench for iPhone 8 through 14. 50-60 minutes for iPhone 15 onward (more adhesive). Same-day if you message us before 1pm and walk in to our Media City workshop." },
         { q: "Will my iPhone show a 'genuine battery' warning if I get a third-party one?", a: "Yes - Settings → Battery → Battery Health will show 'Unknown Part' or 'Important Battery Message' depending on iOS version. The battery itself works at full capacity with normal cycle behaviour. Want it gone? Choose our genuine Apple option - message us on WhatsApp for the price." },
         { q: "What's the warranty on a battery replacement?", a: "3 months written. Same fault returns inside that window - we replace the battery again, no charge. Cells are also Apple-rated for 1,000 cycles to 80% capacity (iPhone 15+) or 500 cycles (older)." },
         { q: "Should I wait for Apple's Battery Service Program?", a: "Always check first - open Settings or visit support.apple.com to verify your iPhone isn't covered by an active Apple service program. Free is free. We'll check eligibility for you at intake." },

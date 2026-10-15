@@ -49,11 +49,11 @@ export default function IPhoneSoftwareFix() {
       ]}
       steps={[
         { title: "WhatsApp model + symptom", body: "Send model and what's happening (Apple logo loop, won't update, etc.). Free advice within 10 minutes - many issues fix at home." },
-        { title: "Walk in or pickup if needed", body: "If guided fix at home doesn't work, pickup or walk in. 10-minute on-bench diagnosis confirms whether software or hardware." },
+        { title: "Walk in if needed", body: "If the guided fix at home doesn't work, walk in to our Media City workshop. A 10-minute bench diagnosis tells us whether it's software or hardware." },
         { title: "Backup attempted before any restore", body: "If the iPhone can boot at all, an iTunes/Finder backup is taken first - protects against worst-case data loss during the restore." },
         { title: "DFU mode + signed firmware install", body: "Phone placed in DFU mode (deepest restore mode, bypasses iOS bootloader). Latest signed iOS reinstalled. Process takes 20 to 40 minutes." },
         { title: "Restore from backup + verification", body: "Backup restored. Apps re-download from App Store. iCloud Keychain, photos, contacts re-sync. Workshop verifies before handover." },
-        { title: "Free delivery + 30-day software warranty", body: "Same day. Warranty covers re-occurrence of the same software issue within 30 days - usually a sign of latent hardware fault, treated free." },
+        { title: "Same-day handover + 30-day software warranty", body: "Same day. Warranty covers re-occurrence of the same software issue within 30 days - usually a sign of latent hardware fault, treated free." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

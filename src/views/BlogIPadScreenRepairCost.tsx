@@ -46,7 +46,7 @@ export default function BlogIPadScreenRepairCost() {
           <h2 id="price-list">iPad Screen Repair Cost Dubai. The full iPad screen repair price list, 2026, Dubai</h2>
           <p>
             Pricing includes the screen panel, labour, adhesive re-seal, and a 3-month written
-            warranty. No diagnostic fee. Free pickup from any Dubai address.
+            warranty. No diagnostic fee. Walk in to our Media City workshop.
           </p>
           <BlogPriceTable
             caption="iPad screen repair by model. MacBook Repair Dubai, June 2026"
@@ -117,8 +117,8 @@ export default function BlogIPadScreenRepairCost() {
           <p>
             We replace screens in-workshop, same-day on stock parts (iPad 9 through Air M3, most
             iPad Pro M1/M2). iPad Pro M4 and M5 take 2–3 days for parts on first order, then
-            same-day on reorder. You get a 3-month written warranty, free collection from anywhere
-            in Dubai, and the repair price is confirmed in writing on WhatsApp before we start.
+            same-day on reorder. You get a 3-month written warranty, a walk-in workshop in Dubai
+            Media City, and the repair price is confirmed in writing on WhatsApp before we start.
           </p>
           <p>
             If the iPad is still under Apple&apos;s warranty or AppleCare+, go to Apple first. Our
@@ -140,8 +140,8 @@ export default function BlogIPadScreenRepairCost() {
           <p>
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> with
             your iPad model and a photo of the damage. We confirm the price within 15 minutes
-            during business hours (9 am–7 pm Mon-Sat). Free pickup from your home, office, or
-            hotel anywhere in Dubai. Same-day return for most models.
+            during business hours (Mon-Thu and Sat 9 am–7 pm, Fri 9 am–12 pm and 2 pm–7 pm). Then walk
+            in, or send the iPad with a same-day courier you book. Most models are ready the same day.
           </p>
         </>
       }

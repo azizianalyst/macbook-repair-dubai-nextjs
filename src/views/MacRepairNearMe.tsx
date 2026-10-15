@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { MapPin, Clock, Star, Phone, MessageCircle, Truck, Laptop, Monitor, HardDrive } from "lucide-react";
+import { MapPin, Clock, Star, Phone, MessageCircle, Send, Laptop, Monitor, HardDrive } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -29,25 +29,25 @@ const REPAIRS = [
 ];
 
 const AREAS = [
-  { area: "Dubai Media City / JLT / JBR",    time: "Free pickup · 2–4 hrs" },
-  { area: "Downtown / DIFC / Business Bay",   time: "Free pickup · 2–4 hrs" },
-  { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Free pickup · 2–4 hrs" },
-  { area: "Deira / Bur Dubai / Karama",       time: "Free pickup · 2–4 hrs" },
-  { area: "Dubai Hills / Al Barsha / Mirdif", time: "Free pickup · 2–4 hrs" },
-  { area: "Sharjah / Abu Dhabi",              time: "Pickup quoted on request" },
+  { area: "Dubai Media City / JLT / JBR",    time: "Closest to us · walk in" },
+  { area: "Downtown / DIFC / Business Bay",   time: "Walk in or same-day courier" },
+  { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Walk in or same-day courier" },
+  { area: "Deira / Bur Dubai / Karama",       time: "Walk in or same-day courier" },
+  { area: "Dubai Hills / Al Barsha / Mirdif", time: "Walk in or same-day courier" },
+  { area: "Sharjah / Abu Dhabi",              time: "Courier you book, or walk in" },
 ];
 
 const FAQS = [
   { q: "Where is the nearest Mac repair shop to me in Dubai?",
-    a: "The closest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 5-minute walk from Media City Metro. If travelling is inconvenient, free pickup is available from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706 with your Mac model and fault." },
+    a: "The closest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 5-minute walk from Media City Metro. Can't make the trip? Book any same-day courier app, hand the Mac to the driver and WhatsApp the tracking link to 055 741 3706 with your model and fault." },
   { q: "Can you repair my Mac near me on the same day in Dubai?",
-    a: "MacBook battery, keyboard, trackpad, charging port, and software faults are all same-day when your Mac arrives before 2 pm. Screen replacement for Air and 13\" Pro is same-day. Logic board and water damage take 2–5 days. Drop in to Concord Tower or request free pickup from anywhere in Dubai." },
-  { q: "Do you offer free Mac pickup near me in Dubai?",
-    a: "Yes, free courier pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706, share your area and fault. A courier arrives within 2–4 hours. Mac is repaired and returned the same day for battery, keyboard, and software jobs." },
+    a: "MacBook battery, keyboard, trackpad, charging port, and software faults are all same-day when your Mac arrives before 2 pm. Screen replacement for Air and 13\" Pro is same-day. Logic board and water damage take 2–5 days. Drop in to Concord Tower, or send it with a same-day courier you book." },
+  { q: "Can I send my Mac to you instead of coming in?",
+    a: "Yes. Book any same-day courier app yourself, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It reaches us within the day, and battery, keyboard and software jobs are usually done the same day. Collect it afterwards or book a courier to send it back." },
   { q: "How much does MacBook repair cost near me in Dubai?",
     a: "It depends on the model and which part failed. Diagnosis is always free. WhatsApp 055 741 3706 with your exact model (check the serial number under System Settings → General → About) for a fixed written quote in under 4 minutes." },
   { q: "Do you repair iMac and Mac mini near me in Dubai?",
-    a: "Yes, iMac 21.5\", 24\", and 27\" screen repair, power supply, SSD upgrade, and fan cleaning. Mac mini M1–M4 logic board and SSD. Mac Studio and Mac Pro diagnostics and repair. All handled at Concord Tower, Dubai Media City, with free courier pickup for heavier units." },
+    a: "Yes, iMac 21.5\", 24\", and 27\" screen repair, power supply, SSD upgrade, and fan cleaning. Mac mini M1–M4 logic board and SSD. Mac Studio and Mac Pro diagnostics and repair. All handled at Concord Tower, Dubai Media City, where there's parking on site for heavier units." },
   { q: "What if my Mac was bought in the USA or UK, can you still repair it near me?",
     a: "Yes. Mac hardware is identical globally, only the power adapter varies. We carry keyboards in US and UK layouts and parts for all internationally-purchased MacBook, iMac, and Mac mini models from 2015 onward." },
   { q: "Is there a warranty on Mac repair near me in Dubai?",
@@ -62,7 +62,7 @@ export default function MacRepairNearMe() {
   useSeo({
     title: "Mac Repair Near Me Dubai. MacBook, iMac & Mac mini",
     description:
-      "Mac repair near you in Dubai. Screen, battery and board-level work. Free pickup across Dubai. Same-day. Concord Tower, Media City. Call 055 741 3706.",
+      "Mac repair near you in Dubai. Screen, battery and board-level work. Walk in or send it by courier. Same-day. Concord Tower, Media City. Call 055 741 3706.",
     path: "/mac-repair-near-me-dubai",
   });
 
@@ -81,14 +81,14 @@ export default function MacRepairNearMe() {
           tone="dark"
           eyebrow="Mac repair near you · Dubai Media City · Since 2004"
           title="Mac Repair Near Me. Dubai"
-          subtitle="MacBook, iMac & Mac mini. Screen, battery, keyboard and board-level repair. Free diagnosis and free pickup. Same-day at Concord Tower, Media City."
+          subtitle="MacBook, iMac & Mac mini. Screen, battery, keyboard and board-level repair. Free diagnosis, walk in. Same-day at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
             <span>·</span>
-            <span>Free pickup · Same-day</span>
+            <span>Walk in · Same-day</span>
           </p>
         </Hero>
 
@@ -109,7 +109,7 @@ export default function MacRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Mac repaired near me in Dubai?"
-            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Screen, battery and board-level repair, same-day service. Can't travel? Free courier pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
+            answer="The nearest Mac repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Screen, battery and board-level repair, same-day service. Can't travel? Send it with a same-day courier you book. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -127,12 +127,12 @@ export default function MacRepairNearMe() {
                 <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
               </article>
               <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
-                <Truck size={28} className="text-accent mb-sm" aria-hidden />
-                <h3 className="text-[20px] font-bold mb-sm">Free pickup from your location</h3>
+                <Send size={28} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[20px] font-bold mb-sm">Send it to us by courier</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  WhatsApp 055 741 3706. A courier collects from your home or office anywhere in Dubai Mainland, no charge. Mac repaired and returned same day for battery, keyboard, and software jobs.
+                  Book any same-day courier app, hand the Mac to the driver and WhatsApp the tracking link to 055 741 3706. No waiting for us to send anyone. Battery, keyboard and software jobs are usually done the same day.
                 </p>
-                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp to book →</a>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp us →</a>
               </article>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function MacRepairNearMe() {
 
         {/* Areas */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Mac repair pickup, all Dubai areas</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Getting your Mac to us from across Dubai</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {AREAS.map(({ area, time }) => (
               <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
@@ -188,7 +188,7 @@ export default function MacRepairNearMe() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get your Mac repaired near you today</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis. Fixed price. Free pickup or drop-in. Same-day return for most repairs.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis. Fixed price. Walk in or send it by courier. Same-day turnaround for most repairs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

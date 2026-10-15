@@ -40,7 +40,7 @@ export default function MacBookSafeModeRepair() {
         "New crashes, beachballs or won't-start behaviour right after a macOS update",
       ]}
       steps={[
-        { title: "WhatsApp or free pickup", body: "Send the model and what you see when it fails. We arrange free pickup across Dubai mainland, or you drop it at Concord Tower, Dubai Media City." },
+        { title: "WhatsApp, then walk in", body: "Send the model and what you see when it fails. Then drop it at Concord Tower, Dubai Media City, or send it with a same-day courier you book." },
         { title: "Free safe-mode and hardware check", body: "We boot into safe mode (Intel and Apple Silicon use different methods) and run a hardware pass on the drive, RAM and board. No charge for the diagnosis." },
         { title: "Isolate software from hardware", body: "If it's stable in safe mode, the fault is software - an extension, cache or login item. If it's not, we trace it to the drive, memory or logic board." },
         { title: "Repair, reinstall or clean up", body: "We remove the conflicting software, rebuild caches, reset login items, reinstall macOS where needed, or quote any hardware repair before we touch it." },

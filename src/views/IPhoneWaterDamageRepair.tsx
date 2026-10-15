@@ -47,7 +47,7 @@ export default function IPhoneWaterDamageRepair() {
             iPhone water damage repair in Dubai is a race against corrosion, not against the water. Once liquid gets past the seals, the minerals, salt, chlorine or sugar it carried stay on the logic board after the water evaporates, and any current flowing through them, from the battery or a charger, eats connectors and components. That is why a phone that seems fine after a swim can fail weeks later.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mt-md">
-            Bring it to Concord Tower, Dubai Media City, or book free pickup across Dubai mainland. We open the phone, disconnect the battery, inspect the board under a microscope, clean it ultrasonically and replace what has failed, with a written quote before any component work. If the phone can&apos;t be saved and you need the photos, see <Link to="/iphone-data-recovery-dubai" className="text-accent font-semibold hover:underline">iPhone data recovery</Link>.
+            Bring it to Concord Tower, Dubai Media City, or send it the same day with a courier you book. We open the phone, disconnect the battery, inspect the board under a microscope, clean it ultrasonically and replace what has failed, with a written quote before any component work. If the phone can&apos;t be saved and you need the photos, see <Link to="/iphone-data-recovery-dubai" className="text-accent font-semibold hover:underline">iPhone data recovery</Link>.
           </p>
         </>
       }
@@ -136,7 +136,7 @@ export default function IPhoneWaterDamageRepair() {
         </>
       }
       steps={[
-        { title: "Power off, don't charge, WhatsApp us", body: "Send the model, the liquid and when it happened. Outside opening hours, message anyway and we arrange drop-off or pickup." },
+        { title: "Power off, don't charge, WhatsApp us", body: "Send the model, the liquid and when it happened. Outside opening hours, message anyway and we'll reply with the first time you can bring it in." },
         { title: "Free diagnosis", body: "Battery disconnected first to stop further corrosion; the board is inspected and photographed under a microscope." },
         { title: "Ultrasonic cleaning", body: "The board is cleaned in an isopropyl ultrasonic bath to lift residue from under chips and inside connectors. Salt-water phones get an extra pre-clean." },
         { title: "Component repair after your OK", body: "Corroded or shorted parts are replaced by micro-soldering once you approve the written quote." },
@@ -155,7 +155,7 @@ export default function IPhoneWaterDamageRepair() {
         ["'Other damage' estimate, iPhone 17",        "Quote on WhatsApp",                               "Apple lists AED 2,639, excl. VAT (Sep 2026)"],
         ["'Other damage' estimate, iPhone 18 Pro",    "Quote on WhatsApp",                               "Apple lists AED 3,279, excl. VAT (Sep 2026)"],
         ["Your data",                                 "Stays on your own board if the board survives",   "Back up first; follow Apple's service advice"],
-        ["Free pickup in Dubai",                      "Yes, Dubai mainland",                             "No"],
+        ["Walk in, no appointment",                   "Yes, Dubai Media City",                           "Usually by appointment"],
         ["Warranty on the repair",                    "15 days written",                                 "Apple's service warranty"],
       ]}
       faqs={[

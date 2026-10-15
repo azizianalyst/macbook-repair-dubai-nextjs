@@ -38,7 +38,7 @@ export default function Terms() {
           <li>iPhone screen, battery, board, and water-damage repair</li>
           <li>iPad screen, battery, and charging port repair</li>
           <li>Data recovery from working and non-booting drives</li>
-          <li>Free pickup and delivery across Dubai Mainland</li>
+          <li>Walk-in service at the Dubai Media City workshop, devices sent in by a courier the customer books, and paid onsite visits subject to technician availability, quoted in advance on WhatsApp</li>
         </ul>
       </LegalSection>
 
@@ -90,7 +90,7 @@ export default function Terms() {
 
       <LegalSection id="abandonment" title="7. Device abandonment policy">
         <ul>
-          <li>Devices not collected within 60 days of the "ready for pickup" WhatsApp message are considered abandoned.</li>
+          <li>Devices not collected within 60 days of the "ready to collect" WhatsApp message are considered abandoned.</li>
           <li>Three reminder messages are sent: at day 14, day 30, and day 50.</li>
           <li>After day 60, the device may be sold to recover unpaid repair costs and storage fees, in line with UAE Civil Transactions Law Article 415.</li>
           <li>Any sale proceeds in excess of the unpaid balance are held for 12 months for the customer to claim, then donated to a registered Dubai charity.</li>

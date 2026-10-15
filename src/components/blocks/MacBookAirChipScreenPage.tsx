@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   Monitor, ShieldCheck, Clock, Award,
-  Search, Truck, Check, AlertTriangle, Cpu,
+  Search, MapPin, Check, AlertTriangle, Cpu,
   HardDrive, Wrench, BadgeCheck,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -180,7 +180,7 @@ export default function MacBookAirChipScreenPage({
             {[
               { Icon: Search,      label: "Free diagnosis" },
               { Icon: BadgeCheck,  label: "No fix, no charge" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,       label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck, label: trueTone ? "True Tone preserved" : "A-grade panels" },
               { Icon: Clock,       label: prices[0]?.timeline ?? "Same day" },
               { Icon: Star,        label: "Trusted since 2004" },
@@ -379,7 +379,7 @@ export default function MacBookAirChipScreenPage({
                 <span>Price on request</span>
                 <span>Free diagnosis</span>
                 <span>3-month warranty (genuine panels)</span>
-                <span>Free pickup Dubai-wide</span>
+                <span>Walk-in workshop, Media City</span>
               </div>
             </div>
             <FAQAccordion items={faqs} injectSchema />

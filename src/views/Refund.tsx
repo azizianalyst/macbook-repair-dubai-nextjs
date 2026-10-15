@@ -49,17 +49,17 @@ export default function Refund() {
       </LegalSection>
 
       <LegalSection id="windows" title="3. Refund and redo windows">
-        <h3>Within 7 days of pickup</h3>
+        <h3>Within 7 days of collection</h3>
         <ul>
           <li>If the originally reported fault was not actually fixed: full refund of the repair price OR a free redo, your choice.</li>
           <li>Refund processed back to the original payment method within 3-7 business days.</li>
         </ul>
-        <h3>Within 30 days of pickup</h3>
+        <h3>Within 30 days of collection</h3>
         <ul>
           <li>If the same part fails again with the same symptom: free redo using a new replacement part.</li>
           <li>If the same symptom but caused by a separate component, a quote is sent for the additional fault - the original repair price is not refunded because the original repair was successful.</li>
         </ul>
-        <h3>Within 12 months of pickup (warranty period)</h3>
+        <h3>Within 12 months of collection (warranty period)</h3>
         <ul>
           <li>Free part replacement and free labour for any in-scope warranty claim.</li>
           <li>For battery work, the window is 3 months and the 80% capacity guarantee applies.</li>
@@ -69,19 +69,18 @@ export default function Refund() {
 
       <LegalSection id="non-refundable" title="4. Non-refundable cases">
         <ul>
-          <li><strong>New damage caused by the customer</strong> after pickup - drops, spills, third-party tampering.</li>
+          <li><strong>New damage caused by the customer</strong> after collection - drops, spills, third-party tampering.</li>
           <li><strong>Buyer's regret</strong> on work that was clearly described, quoted, and approved on WhatsApp before the work was done.</li>
           <li><strong>Cosmetic preferences</strong> on aftermarket parts when the part type was disclosed in the WhatsApp quote.</li>
           <li><strong>Touch ID, Face ID, or True Tone</strong> features lost due to Apple's calibration lock - disclosed in writing before the repair.</li>
           <li><strong>Data loss during repair</strong> when the customer was advised to back up and chose not to.</li>
-          <li><strong>Pickup and delivery fees</strong> for Sharjah and Abu Dhabi (quoted at booking) are non-refundable once the trip is dispatched.</li>
         </ul>
       </LegalSection>
 
       <LegalSection id="process" title="5. How a refund is processed">
         <ol>
           <li>Send a WhatsApp message to {NAP.phoneDisplay} explaining the issue and quoting the invoice number.</li>
-          <li>A technician responds and arranges a free inspection - drop-off or pickup.</li>
+          <li>A technician responds and arranges a free inspection at the workshop.</li>
           <li>The device is inspected.</li>
           <li>If a refund is due, it is approved by the workshop manager (Shafiq) and processed via the original payment method.</li>
           <li>Refund timing: cash refunded on the spot in person; card refunded in 3-7 business days; bank transfer in 1-3 business days.</li>

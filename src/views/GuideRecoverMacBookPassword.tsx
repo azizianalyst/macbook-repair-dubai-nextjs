@@ -189,7 +189,7 @@ export default function GuideRecoverMacBookPassword() {
             <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
-            so nothing is lost. Free pickup, free diagnosis, and a warranty of up to 12 months -{" "}
+            so nothing is lost. Walk in for a free diagnosis, with a warranty of up to 12 months -{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               see all MacBook services
             </Link>{" "}

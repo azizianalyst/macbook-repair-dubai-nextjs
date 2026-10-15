@@ -42,7 +42,7 @@ const FAQS = [
   { q: "How much does Mac logic board repair cost in Dubai?",
     a: "It depends entirely on which component failed - that is why we quote after diagnosis rather than before. We repair at component level rather than swapping the whole board, which is what keeps it well below Apple\u2019s board-replacement route. Typically 3-7 business days. Free diagnosis, no-fix no-charge." },
   { q: "Do you charge for Mac diagnosis in Dubai?",
-    a: "No, diagnosis is always free. Walk in to Concord Tower, Dubai Media City or schedule free pickup across Dubai Mainland. You receive a written quote with the exact fault, parts, and cost before any work starts. No obligation to proceed." },
+    a: "No, diagnosis is always free. Walk in to Concord Tower, Dubai Media City, no appointment needed, or WhatsApp a photo first. You receive a written quote with the exact fault, parts, and cost before any work starts. No obligation to proceed." },
   { q: "How long does Mac repair take in Dubai?",
     a: "Screen, battery, keyboard, same day or next day. Logic board repair, 3–7 business days. Data recovery, 1–7 days depending on failure. We send WhatsApp updates throughout and notify you when complete." },
 ];
@@ -134,7 +134,7 @@ export default function MacRepairCost() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a free Mac repair quote. Dubai</h2>
-              <p className="text-[15px] text-text-muted">Walk in or book free pickup. Free diagnosis, written quote, no obligation.</p>
+              <p className="text-[15px] text-text-muted">Walk in to Dubai Media City. Free diagnosis, written quote, no obligation.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

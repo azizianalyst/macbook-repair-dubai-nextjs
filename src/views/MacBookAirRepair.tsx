@@ -21,7 +21,7 @@
  */
 import {
   Keyboard, Droplets, Cpu, Thermometer, MousePointer2, Wifi,
-  Search, ShieldCheck, Clock, Truck,
+  Search, ShieldCheck, Clock, MapPin,
 } from "lucide-react";
 
 import { AziziMoneyPage, InLink, WaLink, waHref } from "@/components/azizi/AziziMoneyPage";
@@ -110,7 +110,7 @@ const FAQS = [
   },
   {
     q: "Is there MacBook Air repair near me if I'm not in Media City?",
-    a: "Yes. We collect free from anywhere in mainland Dubai and bring it back after the repair, or walk in to Concord Tower without an appointment. From Sharjah or Abu Dhabi we can arrange courier collection and confirm any charge first; we have no branch outside Dubai.",
+    a: "Walk in to Concord Tower, Dubai Media City, without an appointment - it is across from Media City Metro with parking on site. WhatsApp photos and the serial number first for a quote. If you can't come in, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp. We have no branch outside Dubai.",
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",
@@ -152,7 +152,7 @@ export default function MacBookAirRepair() {
         eyebrow: "MacBook Air specialist · Intel through M5 · Dubai Media City",
         title: "MacBook Air Repair Dubai",
         subtitle:
-          "Screens, batteries, charging ports, keyboards and board faults on every MacBook Air, from the Intel models to the 2026 M5. Free diagnosis at Concord Tower and free pickup across Dubai.",
+          "Screens, batteries, charging ports, keyboards and board faults on every MacBook Air, from the Intel models to the 2026 M5. Free diagnosis at Concord Tower, Dubai Media City. Walk in, no appointment needed.",
         timeline: "Same day when the part is in stock",
         image: "/images/real/lab/macbook-air-lid-dubai.jpg",
         imageAlt:
@@ -207,7 +207,7 @@ export default function MacBookAirRepair() {
           { icon: Search, title: "Free diagnosis", body: "The actual fault is found before any quote." },
           { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries in 45–90 minutes when in stock." },
           { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
-          { icon: Truck, title: "Free pickup", body: "Anywhere in mainland Dubai, or walk in." },
+          { icon: MapPin, title: "Walk in", body: "Concord Tower, Dubai Media City. Parking on site." },
         ],
       }}
 

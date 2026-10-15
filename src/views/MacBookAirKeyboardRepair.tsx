@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
-  Search, Truck, Check,
+  Search, MapPin, Check,
   Wrench, AlertTriangle, Keyboard,
   HardDrive, Scissors,
 } from "lucide-react";
@@ -221,7 +221,7 @@ export default function MacBookAirKeyboardRepair() {
               { Icon: Search,      label: "Free key-by-key diagnosis" },
               { Icon: Keyboard,    label: "Butterfly + Magic Keyboard" },
               { Icon: Scissors,    label: "Individual key replacement M1–M4" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,      label: "Walk in, Dubai Media City" },
               { Icon: Clock,       label: "Same-day on most models" },
               { Icon: Star,        label: "Trusted since 2004" },
             ].map(({ Icon, label }) => (
@@ -404,7 +404,7 @@ export default function MacBookAirKeyboardRepair() {
                 <span>Quote on WhatsApp</span>
                 <span>Free key-by-key diagnosis</span>
                 <span>15-day warranty</span>
-                <span>Free pickup Dubai-wide</span>
+                <span>Walk in, Dubai Media City</span>
               </div>
             </div>
             <div>

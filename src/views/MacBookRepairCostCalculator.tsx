@@ -49,7 +49,7 @@ export default function MacBookRepairCostCalculator() {
         timeline: "Same day",
         warranty: "P1Y",
         url: PATH,
-        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, with free pickup and a written warranty up to 12 months.",
+        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, at our Media City walk-in workshop, with written warranty up to 12 months.",
       }),
     ],
   );
@@ -112,7 +112,7 @@ export default function MacBookRepairCostCalculator() {
           <div className="bg-bg-card border border-border rounded-2xl p-xl md:p-2xl flex flex-col items-start gap-md">
             <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch] m-0">Got your estimate? Lock in the exact price.</h2>
             <p className="text-text-muted text-[16px] max-w-[60ch] m-0">
-              WhatsApp your model and the repair - we confirm the exact price in writing after a free diagnosis, with free pickup across Dubai.
+              WhatsApp your model and the repair - we confirm the exact price in writing after a free diagnosis. Then walk in to our Media City workshop.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">

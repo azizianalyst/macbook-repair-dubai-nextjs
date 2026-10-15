@@ -131,8 +131,8 @@ export default function BlogIPadBatteryReplacementCost() {
           <h2 id="how-to-book">How to book your iPad battery replacement in Dubai</h2>
           <p>
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> with
-            your iPad model. We confirm the price within 15 minutes (9 am–7 pm Mon-Sat). Free
-            pickup anywhere in Dubai. Most batteries replaced same-day; iPad Pro M4/M5 take
+            your iPad model. We confirm the price within 15 minutes (9 am–7 pm Mon-Sat). Then
+            walk in to our Dubai Media City workshop. Most batteries replaced same-day; iPad Pro M4/M5 take
             1 extra day to source the specialist cell on first order.
           </p>
         </>

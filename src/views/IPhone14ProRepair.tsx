@@ -82,9 +82,9 @@ export default function IPhone14ProRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in or courier",   body: "Concord Tower, Media City, or a same-day courier you book." },
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + Dynamic Island 1-3 days." },
-        { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, 48MP camera and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + handover",          body: "ProMotion, AOD, Dynamic Island, 48MP camera and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

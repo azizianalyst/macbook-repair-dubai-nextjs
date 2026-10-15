@@ -59,7 +59,7 @@ export default function MacBookMicrophoneRepair() {
         { q: "Can you fix the mic if it stopped after a water spill?", a: "Usually yes. Liquid corrodes the mic contacts and the flex first because they sit near the speaker vents. We open it, clean the corrosion, replace the module, and check the board for spread - liquid never stops at one component, so we look wider before closing it up." },
         { q: "Will I lose my data during a microphone repair?", a: "No. A mic repair doesn't touch your SSD or macOS install - your files, apps and settings stay exactly as they are. We still recommend a backup before any hardware work as standard practice, and we can set one up for you if you haven't got one." },
         { q: "Do you repair the mic on older Intel MacBooks too?", a: "Yes. The single-mic and dual-mic setups on 2012-2017 MacBook Air and Pro are still serviceable, and we keep parts for them. Plenty of those machines are still in daily use across Dubai, and a mic fix is far cheaper than replacing the laptop." },
-        { q: "How long does it take?", a: "Most microphone repairs are done in 1-2 days once we have the part, and we stock the common Air and Pro modules. Free pickup and delivery across Dubai mainland - WhatsApp the model and we'll arrange collection the same day." },
+        { q: "How long does it take?", a: "Most microphone repairs are done in 1-2 days once we have the part, and we stock the common Air and Pro modules. WhatsApp the model first, then walk in to our Media City workshop or send it with a same-day courier you book." },
       ]}
       reviewNames={["Jen Hernandez", "Habeeb Rahman", "Matt White"]}
       related={[

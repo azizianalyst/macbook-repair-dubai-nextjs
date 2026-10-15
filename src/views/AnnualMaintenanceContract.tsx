@@ -66,13 +66,13 @@ const FAQS = [
   { q: "Can you service mixed fleets - Mac, iPhone, iPad and Windows?",
     a: "Yes. Our AMC covers MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad, and we also maintain Windows laptops from Lenovo, Dell, HP and Microsoft Surface alongside your Apple gear." },
   { q: "Do you come to our office?",
-    a: "Yes - on-site servicing and free pickup/delivery across Dubai mainland are part of every business and enterprise plan. We work around your schedule to avoid disrupting the team." },
+    a: "Yes - scheduled on-site servicing is part of every business and enterprise plan, booked by arrangement. Devices that need bench work come to our Media City workshop. We work around your schedule to avoid disrupting the team." },
   { q: "How do we start?",
     a: "Send us your device list on WhatsApp or call 055 741 3706. We do a free audit, recommend the right plan, and put it in writing - no obligation until you approve." },
   { q: "What is NOT covered by the AMC?",
     a: "Replacement parts (batteries, screens, SSDs, boards) are charged at your contract rate rather than included, and accidental or liquid damage is quoted as a separate repair. Hardware purchases and software licences are not included either. All of it is listed in the contract before you sign - we would rather lose the deal than have you find out later." },
   { q: "What response time do we get?",
-    a: "The response commitment is agreed per contract and written into it, because it depends on fleet size, location and whether you need on-site attendance or collection. Contract devices always take priority over walk-in work, and most in-stock-part repairs are same-day." },
+    a: "The response commitment is agreed per contract and written into it, because it depends on fleet size, location and whether you need on-site attendance or workshop repair. Contract devices always take priority over walk-in work, and most in-stock-part repairs are same-day." },
   { q: "Can we cancel or change the plan mid-term?",
     a: "Yes. Fleets change - people join, people leave, machines are retired. Device counts can be adjusted during the term, and the terms for ending the contract are written into it rather than buried." },
   { q: "Do you provide loaner devices while ours are repaired?",
@@ -130,7 +130,7 @@ export default function AnnualMaintenanceContract() {
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
-          <span>On-site across Dubai</span>
+          <span>On-site visits by arrangement</span>
           <span>·</span>
           <span>On Apple hardware since 2004</span>
         </p>

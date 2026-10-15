@@ -50,7 +50,7 @@ export default function BlogIPadScreenRepair() {
         },
         {
           q: "How long does iPad screen repair take in Dubai?",
-          a: "Standard iPad (9th, 10th, 11th gen) and iPad mini screen repairs take 1-2 hours. iPad Air M2 and M3 repairs take 2-3 hours. iPad Pro 11-inch repairs take 2-3 hours. iPad Pro 13-inch OLED repairs take 3-4 hours due to the ultra-thin bonded chassis and OLED calibration step. Same-day service is available for all models if you arrive before 2pm at Concord Tower, Dubai Media City. Free pickup is available across mainland Dubai.",
+          a: "Standard iPad (9th, 10th, 11th gen) and iPad mini screen repairs take 1-2 hours. iPad Air M2 and M3 repairs take 2-3 hours. iPad Pro 11-inch repairs take 2-3 hours. iPad Pro 13-inch OLED repairs take 3-4 hours due to the ultra-thin bonded chassis and OLED calibration step. Same-day service is available for all models if you arrive before 2pm at Concord Tower, Dubai Media City. Walk in without an appointment, or WhatsApp a photo first for a quote.",
         },
         {
           q: "Is it safe to use an iPad with a cracked screen?",
@@ -265,7 +265,7 @@ export default function BlogIPadScreenRepair() {
             </p>
             <p>
               Same-day service is available for all models above if the iPad arrives at Concord
-              Tower before 2pm. Free pickup is available anywhere on Dubai mainland. WhatsApp
+              Tower before 2pm. Walk in without an appointment, or send a photo first. WhatsApp
               055 741 3706 for a same-day booking.
             </p>
           </section>

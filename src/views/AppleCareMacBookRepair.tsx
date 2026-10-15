@@ -19,7 +19,7 @@ import { localBusiness, organization, service as serviceSchema, breadcrumbs, ite
 import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const COVERED = [
-  { title: "Battery replacement", body: "Once AppleCare runs out, a swollen or 'Service Recommended' battery is a quick fix here - original-spec cell, cycle count reset, load-tested before pickup. Message us on WhatsApp for today's exact battery price on your model.", icon: Battery },
+  { title: "Battery replacement", body: "Once AppleCare runs out, a swollen or 'Service Recommended' battery is a quick fix here - original-spec cell, cycle count reset, load-tested before you collect it. Message us on WhatsApp for today's exact battery price on your model.", icon: Battery },
   { title: "Screen repair", body: "Cracked panel or backlight gone after your cover ended. We fit A-grade Retina panels that match the original brightness and P3 colour - message us for the exact price on your model.", icon: Wrench },
   { title: "Logic board repair", body: "Board-level micro-soldering for no-power, boot-loop and port faults that Apple would only solve by swapping the whole board for a flat fee.", icon: Cpu },
   { title: "SSD & storage", body: "Failed or full storage replaced and upgraded on AppleCare-expired Macs, with data migration where the drive is still readable.", icon: HardDrive },
@@ -35,7 +35,7 @@ const FAQS = [
   { q: "How do I check if my MacBook is still under warranty?",
     a: "Open Apple's coverage checker at checkcoverage.apple.com and enter your serial number, or go to System Settings, then General, then About to see the serial. Apple gives every Mac a standard one-year limited warranty from purchase; AppleCare+ extends that to three years if you bought it. WhatsApp us the serial on 055 741 3706 and we'll read the status with you." },
   { q: "Is the diagnosis free?",
-    a: "Yes. Bring the Mac to Media City or arrange free pickup across Dubai mainland, and we diagnose the fault at no charge. You get an exact written quote before any work starts, and there's no obligation to proceed. No fix, no charge - if we can't repair it, you pay nothing." },
+    a: "Yes. Bring the Mac to our Media City workshop, no appointment needed, and we diagnose the fault at no charge. You get an exact written quote before any work starts, and there's no obligation to proceed. No fix, no charge - if we can't repair it, you pay nothing." },
   { q: "Do you use genuine Apple parts?",
     a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit high-grade compatible parts and label them as such on your quote. Both are covered by the same written warranty up to 12 months on our work." },
   { q: "What warranty do you give on the repair?",

@@ -35,7 +35,7 @@ export function localBusiness() {
     name: SITE.name,
     legalName: "Azizi Technologies",
     description:
-      `Independent Mac repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro. Screen, battery, keyboard, water-damage, logic-board and data-recovery work carried out at component level on our own bench, not sent away. iPhone and iPad are repaired too. Free door-to-door pickup & delivery across Dubai, free diagnosis, no-fix-no-charge, and a written warranty. Rated ${RATING_LABEL} from ${REVIEW_COUNT_LABEL} Google reviews.`,
+      `Independent Mac repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro. Screen, battery, keyboard, water-damage, logic-board and data-recovery work carried out at component level on our own bench, not sent away. iPhone and iPad are repaired too. Walk-in workshop with parking on site, send-in by customer-booked courier, paid onsite visits subject to technician availability, free diagnosis, no-fix-no-charge, and a written warranty. Rated ${RATING_LABEL} from ${REVIEW_COUNT_LABEL} Google reviews.`,
     // LocalBusiness.image tells Google "these are photographs of this business",
     // so it must only ever hold real documentary photos. It previously listed the
     // three /images/brand/* AI-generated placeholders - including a synthetic
@@ -82,8 +82,8 @@ export function localBusiness() {
     // unverified legal operator (owner decision D3), so it must not appear as the founder.
     founder: { "@type": "Person", name: "Abdul Aziz", jobTitle: "Founder" },
     foundingDate: "2004-10-10",
-    // Matches the emirates/cities the site has dedicated landing pages for (free pickup &
-    // delivery). Trim any the business does not physically serve.
+    // Matches the emirates/cities the site has dedicated landing pages for (customers from
+    // these cities visit the Dubai workshop). Trim any the business does not serve.
     areaServed: [
       { "@type": "City", name: "Dubai" },
       { "@type": "City", name: "Sharjah" },

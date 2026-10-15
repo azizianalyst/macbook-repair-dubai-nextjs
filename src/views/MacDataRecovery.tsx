@@ -6,8 +6,8 @@
  * Semrush UAE targets now covered by their own H2s: "data recovery dubai" (590, fixsquad #1,
  * we did not rank), "data recovery services dubai", "hard drive / hdd / hard disk data
  * recovery dubai", "ssd data recovery", "mac / macbook data recovery", "data recovery near
- * me" and "data recovery abu dhabi" (served honestly by the courier, since there is no
- * branch there). The SSD, T2, water-damage and per-device sections are short and hand off
+ * me" and "data recovery abu dhabi" (served honestly: customers there send the drive by a
+ * courier they book themselves, since there is no branch there). The SSD, T2, water-damage and per-device sections are short and hand off
  * to their own pages, so this hub feeds them rather than competing with them.
  *
  * Only services the site's other data-recovery pages already claim are claimed here:
@@ -25,7 +25,7 @@
  * "same day to 5 days" timeline. useSeo() dropped: meta comes from metaForPath() in
  * page.tsx and schema from <PageSchema/>.
  */
-import { Search, ShieldCheck, Lock, Truck } from "lucide-react";
+import { Search, ShieldCheck, Lock, MapPin } from "lucide-react";
 
 import { AziziMoneyPage, InLink, WaLink, waHref } from "@/components/azizi/AziziMoneyPage";
 import { PRESETS } from "@/data/form-presets";
@@ -100,7 +100,7 @@ const FAQS = [
   },
   {
     q: "Do you offer data recovery in Abu Dhabi?",
-    a: "We have no branch in Abu Dhabi, but a free courier collects from Abu Dhabi and Sharjah and returns your device. The work happens at our Dubai Media City workshop once you approve the quote on WhatsApp.",
+    a: "We have no branch in Abu Dhabi. Customers in Abu Dhabi and Sharjah book any same-day courier app, hand the Mac or drive to the driver, and WhatsApp us the tracking link. The work happens at our Dubai Media City workshop once you approve the quote on WhatsApp.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function MacDataRecovery() {
           { icon: Search, title: "Free assessment", body: "The failure is found before any quote." },
           { icon: ShieldCheck, title: "No recovery, no charge", body: "Clean-room drive work aside, you pay only when files come back." },
           { icon: Lock, title: "Private by default", body: "One bench, nothing browsed, copy deleted." },
-          { icon: Truck, title: "Free collection", body: "Anywhere in Dubai; courier from Abu Dhabi." },
+          { icon: MapPin, title: "Walk in or courier", body: "Walk in to Media City, or send it by a courier you book." },
         ],
       }}
 
@@ -261,17 +261,17 @@ export default function MacDataRecovery() {
           heading: "Data recovery near me: Dubai areas and Abu Dhabi",
           body: (
             <p>
-              Walk in to Concord Tower, Dubai Media City, or we collect free from anywhere in Dubai.{" "}
+              Walk in to Concord Tower, Dubai Media City, no appointment needed.{" "}
               {AREA_LINKS.map((a, i) => (
                 <span key={a.to}>
                   <InLink to={a.to}>{a.label.replace("Mac data recovery ", "")}</InLink>
                   {i < AREA_LINKS.length - 2 ? ", " : i === AREA_LINKS.length - 2 ? " and " : ""}
                 </span>
               ))}{" "}
-              have their own pages. For data recovery in Abu Dhabi or Sharjah, a free courier collects and returns
-              your Mac or drive; we have no branch outside Dubai.{" "}
-              <WaLink message="Hi, I need data recovery with courier collection. Area: ... Device or drive: ...">
-                Book a collection on WhatsApp
+              have their own pages. For data recovery in Abu Dhabi or Sharjah, book any same-day courier app to send
+              your Mac or drive, and WhatsApp us the tracking link; we have no branch outside Dubai.{" "}
+              <WaLink message="Hi, I need data recovery and will send the device by courier. Area: ... Device or drive: ...">
+                Tell us it is on the way
               </WaLink>
               .
             </p>

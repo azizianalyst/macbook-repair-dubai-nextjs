@@ -47,7 +47,7 @@ export default function MacBookHingeRepair() {
       warrantyDays={365}
       warrantyBullets={[
         "Covers the hinge/clutch assembly and fitment.",
-        "Excludes fresh drop or impact damage after delivery.",
+        "Excludes fresh drop or impact damage after handover.",
         "Free re-adjust if the lid loosens inside 12 months.",
       ]}
       faqs={[

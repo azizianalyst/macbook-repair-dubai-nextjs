@@ -288,7 +288,7 @@ export default function BlogIMacRunningSlow() {
         },
         {
           q: "How long does an iMac performance service take in Dubai?",
-          a: "SSD upgrades, RAM upgrades, and thermal paste replacements are all same-day services when booked before noon and parts are in stock. A full performance service (all three plus macOS reinstall and data migration) takes 4-6 hours. We will give you a specific pickup time when you drop off. Most customers leave the iMac in the morning and collect in the late afternoon.",
+          a: "SSD upgrades, RAM upgrades, and thermal paste replacements are all same-day services when booked before noon and parts are in stock. A full performance service (all three plus macOS reinstall and data migration) takes 4-6 hours. We will give you a specific collection time when you drop off. Most customers leave the iMac in the morning and collect in the late afternoon.",
         },
         {
           q: "Is it safe to keep using a slow iMac with heavy swap or thermal throttling?",

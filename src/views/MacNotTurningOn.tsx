@@ -56,7 +56,7 @@ export default function MacNotTurningOn() {
         { q: "How much does a Mac Mini PSU cost to replace?", a: "A flat labour fee plus the PSU itself at market price, which varies by model. We confirm the total in a written quote before starting." },
         { q: "Could it just be the wall socket?", a: "Surprisingly often, yes - especially on multi-strip outlets where one socket has died. Try a different known-good wall outlet first. We've handed Macs back unmodified after this 5-minute check." },
         { q: "Is data safe if it's a power issue?", a: "Yes - power supply faults don't touch the SSD. Once we've fixed the power side, your data is exactly where you left it. The exception is M-series Macs where a board fault has killed the SoC: then SSD recovery becomes much harder." },
-        { q: "Free pickup for Mac Pro?", a: "Yes - Mac Pro is heavy and awkward to transport. Free pickup and drop-off across Dubai mainland." },
+        { q: "Is there parking for bringing in a Mac Pro?", a: "Yes - Mac Pro is heavy and awkward to carry, and Concord Tower has parking on site. If moving it is not practical, a paid onsite visit can be booked, subject to technician availability, with the charge quoted on WhatsApp first." },
       ]}
       reviewNames={["Ali Hassan", "Marianne Chehade El Dfouni", "Shah nawaz"]}
       related={[

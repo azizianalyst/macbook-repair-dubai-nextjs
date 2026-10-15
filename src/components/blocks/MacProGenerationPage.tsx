@@ -7,7 +7,7 @@ import {
   Monitor, HardDrive, Cpu, Thermometer,
   Power, Gauge, AlertTriangle, Wind, Wifi,
   Zap, ShieldCheck, Clock, Award, Wrench,
-  Search, BadgeCheck, Truck, RefreshCw, Droplets,
+  Search, BadgeCheck, MapPin, RefreshCw, Droplets,
   Database,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -61,7 +61,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 ];
 
 const PROCESS = [
-  { Icon: Search,      title: "Free diagnosis",   body: "Drop in, ship, or book a free pickup. We test every subsystem and report back before any work starts — no charge for the diagnosis." },
+  { Icon: Search,      title: "Free diagnosis",   body: "Walk in to our Media City workshop, or WhatsApp a photo first. We test every subsystem and report back before any work starts — no charge for the diagnosis." },
   { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent AED quote before any work begins. No hidden fees, no surprise add-ons." },
   { Icon: Wrench,      title: "Expert repair",     body: "Your Mac Pro is repaired by a specialist working on Apple hardware since 2004, including Intel PCIe architecture and M2 Ultra logic board repair." },
   { Icon: ShieldCheck, title: "Quality check",     body: "Every repair passes a full function test: GPU output, PCIe slot integrity, storage speed, thermals — all verified before handover." },
@@ -82,7 +82,7 @@ const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac Pro repairs — GPU, overheating, no-display — are diagnosed and resolved within a few hours." },
   { Icon: Award,       title: "Apple repair since 2004",      body: "Our technicians have repaired Apple hardware since 2004, including Intel Mac Pro PCIe architecture and M2 Ultra board-level work." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on hardware parts such as fans, PSUs and SSDs, and 15 days on logic board and GPU repairs." },
-  { Icon: Truck,       title: "Free pickup Dubai-wide",   body: "Cannot bring it in? We collect your Mac Pro for free across Dubai and return it repaired." },
+  { Icon: MapPin,       title: "Walk-in workshop, Media City",   body: "Bring your Mac Pro to Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",           body: "Every Mac Pro gets a full diagnostic at no cost. We find the real fault before quoting." },
 ];
@@ -198,7 +198,7 @@ export default function MacProGenerationPage(p: MacProGenerationProps) {
             {[
               { Icon: Search,      label: "Free diagnosis" },
               { Icon: BadgeCheck,  label: "No fix, no charge" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,       label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck, label: "OEM-grade parts" },
               { Icon: Clock,       label: "Same-day service" },
               { Icon: Star,        label: "Since 2004" },
@@ -405,7 +405,7 @@ export default function MacProGenerationPage(p: MacProGenerationProps) {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
             <div className="flex flex-col gap-[48px]">

@@ -83,9 +83,9 @@ export default function IPhone16PlusRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Media City workshop, no appointment needed." },
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
-        { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

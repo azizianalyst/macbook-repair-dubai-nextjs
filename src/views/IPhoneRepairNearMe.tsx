@@ -29,27 +29,27 @@ const REPAIRS = [
 ];
 
 const AREAS = [
-  { area: "Dubai Media City / JLT / JBR",     time: "2–4 hrs pickup" },
-  { area: "Downtown Dubai / Business Bay",      time: "2–4 hrs pickup" },
-  { area: "Jumeirah / Al Quoz / Umm Suqeim",  time: "2–4 hrs pickup" },
-  { area: "Deira / Bur Dubai / Karama",        time: "2–4 hrs pickup" },
-  { area: "Dubai Hills / Mirdif / Al Barsha",  time: "2–4 hrs pickup" },
-  { area: "Sharjah / Abu Dhabi",               time: "Courier available" },
+  { area: "Dubai Media City / JLT / JBR",     time: "Walk in, or send by same-day courier" },
+  { area: "Downtown Dubai / Business Bay",      time: "Walk in, or send by same-day courier" },
+  { area: "Jumeirah / Al Quoz / Umm Suqeim",  time: "Walk in, or send by same-day courier" },
+  { area: "Deira / Bur Dubai / Karama",        time: "Walk in, or send by same-day courier" },
+  { area: "Dubai Hills / Mirdif / Al Barsha",  time: "Walk in, or send by same-day courier" },
+  { area: "Sharjah / Abu Dhabi",               time: "Send by a courier you book" },
 ];
 
 const FAQS = [
   { q: "Where is the nearest iPhone repair shop to me in Dubai?",
-    a: "The closest iPhone repair specialist to most of Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near the Media City Metro station. If you can't travel, we offer free pickup from your home or office across Dubai Mainland. WhatsApp 055 741 3706 with your location and fault; a courier arrives within 2–4 hours." },
+    a: "The closest iPhone repair specialist to most of Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near the Media City Metro station. If you can't travel, book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. We do not collect devices ourselves." },
   { q: "How quickly can you fix my iPhone near me in Dubai?",
-    a: "Screen replacement takes 40 minutes, battery 30 minutes. Both can be done the same day you contact us. Drop in to Concord Tower or request free pickup from anywhere in Dubai Mainland, screen and battery repairs are usually back with you the same day." },
+    a: "Screen replacement takes 40 minutes, battery 30 minutes. Both can be done the same day you contact us. Drop in to Concord Tower and screen and battery repairs are usually ready the same day; you can wait while we work." },
   { q: "Do you offer iPhone repair pickup near me in Dubai?",
-    a: "Yes, free pickup and delivery across all Dubai Mainland areas. WhatsApp 055 741 3706, tell us your area and the iPhone fault, and we send a courier. No transport cost, no delivery fee. The iPhone is repaired and returned the same day for screen and battery jobs." },
+    a: "No, we do not collect or deliver. Walk in to Concord Tower, Dubai Media City, without an appointment, or send the iPhone yourself: book any same-day courier app, hand it to the driver, and WhatsApp 055 741 3706 the tracking link. When it is ready, collect it from the workshop or book a courier back." },
   { q: "How much does iPhone screen repair cost near me in Dubai?",
     a: "iPhone screen repair pricing depends on your model, from older iPhones up to the iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
   { q: "Is there an iPhone repair shop open now near me in Dubai?",
     a: "We're open Monday to Saturday, 9 am to 7 pm at Concord Tower, Dubai Media City. WhatsApp is answered from 8 am. On Sundays the workshop is closed but WhatsApp replies are sent and Monday appointments can be booked. Call 055 741 3706 for immediate assistance." },
   { q: "Can you repair my iPhone near me on the same day?",
-    a: "Yes for screen, battery, charging port, back glass, and camera. Drop off by 4 pm at Concord Tower or request free pickup, the repair is done the same day. Logic board and water damage take 1–3 days depending on severity." },
+    a: "Yes for screen, battery, charging port, back glass, and camera. Drop off by 4 pm at Concord Tower and the repair is done the same day. Logic board and water damage take 1–3 days depending on severity." },
   { q: "Do you offer a warranty on iPhone repair near me in Dubai?",
     a: "Every repair carries a written warranty of up to 12 months. Battery replacement comes with a 3-month warranty plus an 80% capacity guarantee. The warranty card has the device serial number, the repair description, and the parts used." },
 ];
@@ -60,9 +60,9 @@ export default function IPhoneRepairNearMe() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "iPhone Repair Near Me Dubai. Same-Day Screen & Battery | Free Pickup",
+    title: "iPhone Repair Near Me Dubai | Same-Day, Walk In",
     description:
-      "iPhone repair near you in Dubai. Same-day screen and battery. Free pickup across Dubai. WhatsApp for today's price. Concord Tower, Media City. Call 055 741 3706.",
+      "iPhone repair near you in Dubai. Same-day screen and battery, walk in at Concord Tower, Media City, no appointment. WhatsApp 055 741 3706 for a price.",
     path: "/iphone-repair-near-me-dubai",
   });
 
@@ -81,14 +81,14 @@ export default function IPhoneRepairNearMe() {
           tone="dark"
           eyebrow="iPhone repair near you · Dubai Media City · Since 2004"
           title="iPhone Repair Near Me. Dubai"
-          subtitle="Same-day screen and battery repair. Free pickup from your door. Message us on WhatsApp for today's price at Concord Tower, Media City."
+          subtitle="Same-day screen and battery repair. Walk in, no appointment needed. Message us on WhatsApp for today's price at Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
             <span>·</span>
-            <span>Free pickup across Dubai</span>
+            <span>Walk in at Media City</span>
           </p>
         </Hero>
 
@@ -109,7 +109,7 @@ export default function IPhoneRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my iPhone repaired near me in Dubai?"
-            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Free pickup from your home or office across all Dubai Mainland areas. WhatsApp 055 741 3706."
+            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Send it by a same-day courier you book and WhatsApp 055 741 3706 the tracking link."
           />
         </section>
 
@@ -128,11 +128,11 @@ export default function IPhoneRepairNearMe() {
               </article>
               <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <Truck size={28} className="text-accent mb-sm" aria-hidden />
-                <h3 className="text-[20px] font-bold mb-sm">Free pickup from your door</h3>
+                <h3 className="text-[20px] font-bold mb-sm">Send it by courier</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  WhatsApp 055 741 3706. A courier collects from your home or office anywhere in Dubai Mainland, no charge. iPhone repaired and returned the same day for screen and battery jobs.
+                  Can't come in? Book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. It reaches the bench within the day, with no waiting for us. Collect it when it is ready, or book a courier back.
                 </p>
-                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp to book pickup →</a>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp the tracking link →</a>
               </article>
             </div>
           </div>
@@ -167,9 +167,9 @@ export default function IPhoneRepairNearMe() {
           </div>
         </section>
 
-        {/* Pickup areas */}
+        {/* Areas */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repair pickup near you, all Dubai areas</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repair near you, from every Dubai area</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {AREAS.map(({ area, time }) => (
               <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
@@ -188,7 +188,7 @@ export default function IPhoneRepairNearMe() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get your iPhone fixed today</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis. Fixed quote. Free pickup or drop-in. Same-day return.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis. Fixed quote. Walk in or send by courier. Same-day return.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

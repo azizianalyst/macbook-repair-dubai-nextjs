@@ -234,7 +234,7 @@ export default function BlogIPhoneBatteryReplacement() {
             <p>
               Every battery replacement includes the replacement cell, labour, a post-installation
               battery calibration cycle, and a 3-month written capacity warranty. No diagnostic fee,
-              and free pickup across mainland Dubai. Message us on WhatsApp for today's exact price
+              and you can walk in to our Media City workshop without an appointment. Message us on WhatsApp for today's exact price
               on your model.
             </p>
             <BlogPriceTable

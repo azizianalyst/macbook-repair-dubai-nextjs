@@ -351,7 +351,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. ${isPro ? "We have proper transport for the Mac Pro tower - never trust a regular courier with a Mac Pro." : ""} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site. ${isPro ? "A Mac Pro tower is heavy: carry it up from the parking, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." : "Can't come in? Send it by a same-day courier you book."} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
@@ -362,7 +362,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
-      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Walk in at Media City.`}
       startingPrice={0}
       timeline={headerTimeline(model, serviceRows)}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -382,7 +382,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Walk in at Media City, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -524,7 +524,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop", body: `Free pickup across Dubai mainland${isPro ? " - proper Mac Pro tower transport, never a regular courier" : ""}. Or drop in 9am-7pm.` },
+        { title: "Walk in to our Media City workshop", body: `Open Mon-Sat 9am-7pm, Friday break 12-2pm.${isPro ? " Paid onsite visits for Mac Pro towers, subject to technician availability." : " Can't come in? Send it by a same-day courier you book."}` },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts." },
         { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
       ]}

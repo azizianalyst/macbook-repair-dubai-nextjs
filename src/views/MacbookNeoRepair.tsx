@@ -124,7 +124,7 @@ export default function MacbookNeoRepair() {
       steps={[
         { title: "WhatsApp the fault",  body: "Send \"MacBook Neo\" and a photo of the problem. We confirm part availability and a quote." },
         { title: "Warranty check",      body: "Free serial-number check. A factory fault inside Apple's one-year warranty goes to Apple, and we tell you so." },
-        { title: "Diagnose + repair",   body: "Free diagnosis at our Media City workshop or via free pickup across Dubai mainland. Written quote before any work." },
+        { title: "Diagnose + repair",   body: "Free diagnosis when you walk in to our Media City workshop. Written quote before any work." },
         { title: "Test + return",       body: "Display, keyboard, trackpad, charging and battery health checked before the Neo goes back to you." },
       ]}
       warrantyDays={365}

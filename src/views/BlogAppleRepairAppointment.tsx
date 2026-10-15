@@ -161,7 +161,7 @@ export default function BlogAppleRepairAppointment() {
           <h2 id="independent-better">When does an independent workshop make more sense?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Out of warranty with no AppleCare+</strong>: the whole repair is paid for either way, so compare quotes.</li>
-            <li><strong>You can&apos;t find a slot that suits you</strong>: no appointment is needed at our workshop. Walk in Monday to Saturday, {HOURS[0].open}, or book a free pickup in Dubai.</li>
+            <li><strong>You can&apos;t find a slot that suits you</strong>: no appointment is needed at our workshop. Walk in Monday to Saturday, {HOURS[0].open}, or WhatsApp a photo first and we&apos;ll quote before you come over.</li>
             <li><strong>Your data matters more than the device</strong>: Apple warns a device may be erased during service. We repair without wiping wherever the fault allows, and say upfront when a job puts data at risk.</li>
             <li><strong>Board-level faults</strong>: we repair logic boards at component level where possible, rather than only swapping whole assemblies.</li>
             <li>

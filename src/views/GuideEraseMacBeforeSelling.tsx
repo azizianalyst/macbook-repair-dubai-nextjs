@@ -180,7 +180,7 @@ export default function GuideEraseMacBeforeSelling() {
             <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>
-            . We offer free pickup across Dubai.
+            . Walk in to our Dubai Media City workshop, or WhatsApp a photo first for a quote.
           </p>
         </>
       }
@@ -215,7 +215,7 @@ export default function GuideEraseMacBeforeSelling() {
         },
         {
           q: "Can MacBook Repair Dubai erase and verify my Mac for me?",
-          a: "Yes. If you want certainty that your data is gone and the Mac is clear of Find My before handing it over, we'll wipe it to a verified clean state and confirm the install. Book a free diagnosis with free pickup across Dubai - call 055 741 3706 or message us on WhatsApp.",
+          a: "Yes. If you want certainty that your data is gone and the Mac is clear of Find My before handing it over, we'll wipe it to a verified clean state and confirm the install. Bring it to our Dubai Media City workshop for a free diagnosis - call 055 741 3706 or message us on WhatsApp.",
         },
       ]}
       relatedLinks={[

@@ -174,7 +174,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             <Link to="/annual-maintenance-contract-dubai" className="text-accent font-semibold hover:underline">
               annual maintenance contract
             </Link>{" "}
-            covers scheduled cleans, battery-health reviews and priority pickup across Dubai mainland,
+            covers scheduled cleans, battery-health reviews and priority bench slots at our Media City workshop,
             so the whole fleet stays cool and fast without anyone in the office tracking it. WhatsApp
             055 741 3706 and we'll quote in a few minutes.
           </p>

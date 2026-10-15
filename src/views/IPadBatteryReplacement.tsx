@@ -5,7 +5,7 @@
 // replaced. Apple's UAE battery fees are quoted from src/content/ipad-cluster.ts with
 // "(Apple list)" attribution; our own price is never shown - quotes go through WhatsApp.
 // Warranty wording from src/content/site.ts: battery = 3 months (the 80% capacity guarantee is MacBook & iPhone only).
-import { MessageCircle, Search, ShieldCheck, Truck, Wallet, AlertTriangle } from "lucide-react";
+import { MessageCircle, Search, ShieldCheck, MapPin, Wallet, AlertTriangle } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -50,7 +50,7 @@ const SIGNS = [
 ];
 
 const STEPS = [
-  { title: "Tell us the model and symptoms", body: "WhatsApp the model and what the battery does. We reply with a quote and book a walk-in or a free pickup in Dubai." },
+  { title: "Tell us the model and symptoms", body: "WhatsApp the model and what the battery does. We reply with a quote and you walk in to our Media City workshop." },
   { title: "Bench test", body: "Capacity, cycle count, the charging port and the charging circuit are checked, so we know the battery is the cause before replacing it." },
   { title: "Display off, cell out", body: "Controlled heat softens the display adhesive, the screen is lifted, and the glued cell is released with isopropyl and plastic tools." },
   { title: "New cell, new adhesive", body: "The replacement cell goes in, the display is re-seated on a fresh adhesive frame and pressed so it sits flush." },
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: "Is a swollen iPad battery dangerous?",
-    a: "Yes. A swollen lithium cell is pushing the display or case apart and can fail. Stop using and charging the iPad, keep it out of a hot car and direct sun, and bring it in or book a pickup. Do not press the screen back down.",
+    a: "Yes. A swollen lithium cell is pushing the display or case apart and can fail. Stop using and charging the iPad, keep it out of a hot car and direct sun, and bring it in to the workshop. Do not press the screen back down.",
   },
   {
     q: "My iPad won't turn on. Is it the battery?",
@@ -127,7 +127,7 @@ export default function IPadBatteryReplacement() {
             <li className="flex items-center gap-sm"><Search size={16} className="text-accent" aria-hidden /> Free battery test</li>
             <li className="flex items-center gap-sm"><Wallet size={16} className="text-accent" aria-hidden /> Written quote before any work</li>
             <li className="flex items-center gap-sm"><ShieldCheck size={16} className="text-accent" aria-hidden /> 3-month written warranty</li>
-            <li className="flex items-center gap-sm"><Truck size={16} className="text-accent" aria-hidden /> Free pickup across Dubai</li>
+            <li className="flex items-center gap-sm"><MapPin size={16} className="text-accent" aria-hidden /> Walk-in workshop, Media City</li>
           </ul>
         </section>
 
@@ -308,7 +308,7 @@ export default function IPadBatteryReplacement() {
             <section>
               <h2 className="text-[28px] md:text-[32px] mb-md">Where to bring your iPad</h2>
               <p className="text-[16px] leading-relaxed mb-lg max-w-[72ch] text-text-muted">
-                One workshop: {NAP.street}, {NAP.area}. Walk in with the iPad or book a free pickup anywhere in Dubai. From Sharjah or Abu Dhabi we arrange courier collection, usually 1 to 2 days door to door.
+                One workshop: {NAP.street}, {NAP.area}. Walk in with the iPad, no appointment needed; it is across from Media City Metro, with parking on site. Can't come in? Book any same-day courier app, hand the iPad to the driver, and WhatsApp us the tracking link.
               </p>
               <LocationBlock tone="dark" />
             </section>
@@ -335,7 +335,7 @@ export default function IPadBatteryReplacement() {
           className="mt-3xl"
           eyebrow="Battery not lasting?"
           headline="Send your iPad model on WhatsApp"
-          description="Free battery test, a written quote before any work, free pickup across Dubai, and a 3-month written warranty."
+          description="Free battery test, a written quote before any work, walk-in at Media City, and a 3-month written warranty."
           whatsappHref={ipadWa(PREFILL)}
         />
       </div>

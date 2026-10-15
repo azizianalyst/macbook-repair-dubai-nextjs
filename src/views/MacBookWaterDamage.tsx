@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
+import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -44,7 +44,7 @@ const IMMEDIATE_STEPS = [
   {
     step: "5",
     title: "Bring it to our workshop within 24 hours",
-    body: "The faster you act, the higher the recovery rate. Corrosion begins within hours and bridges circuits within 24-72 hours. Call us for same-day free pickup anywhere in Dubai.",
+    body: "The faster you act, the higher the recovery rate. Corrosion begins within hours and bridges circuits within 24-72 hours. Walk in to our Media City workshop, or if you can't come in, book any same-day courier app to send it to us and WhatsApp the tracking link.",
   },
 ];
 
@@ -112,7 +112,7 @@ const PRICING_ROWS = [
 const FAQS = [
   {
     q: "What should I do immediately after spilling on my MacBook?",
-    a: "Power off immediately - hold the power button for 10 seconds if needed to force shutdown. Unplug the charger and all accessories. Tilt the Mac to drain liquid by gravity. Do not use a hairdryer or rice. Do not turn it back on. Call MacBook Repair Dubai on 055 741 3706 for same-day free pickup anywhere in Dubai. The faster you act, the higher the recovery rate.",
+    a: "Power off immediately - hold the power button for 10 seconds if needed to force shutdown. Unplug the charger and all accessories. Tilt the Mac to drain liquid by gravity. Do not use a hairdryer or rice. Do not turn it back on. Bring it to our Media City workshop the same day, or send it with any same-day courier app and WhatsApp 055 741 3706 with the tracking link. The faster you act, the higher the recovery rate.",
   },
   {
     q: "How much does MacBook water damage repair cost in Dubai?",
@@ -192,11 +192,11 @@ export default function MacBookWaterDamage() {
           <div className="mt-lg flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">
               <a
-                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has liquid damage from a spill. Can I get a free pickup and diagnosis? Model: ")}`)}
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has liquid damage from a spill. Can I bring it in for a free diagnosis? Model: ")}`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle aria-hidden /> Book free pickup now
+                <MessageCircle aria-hidden /> WhatsApp us now
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
@@ -218,7 +218,7 @@ export default function MacBookWaterDamage() {
             "Rice does nothing. The board needs an ultrasonic bath and corrosion removal under a microscope.",
             "We repair at component level after cleaning - most liquid-damaged MacBooks are saveable.",
             "Liquid work carries a 15-day warranty and no-fix no-charge; data usually survives on the SSD.",
-            "Free pickup across Dubai - the sooner it reaches the bench, the better the odds.",
+            "Walk in to Media City or send it by same-day courier - the sooner it reaches the bench, the better the odds.",
           ]}
         />
         {/* URGENT warning strip */}
@@ -230,7 +230,7 @@ export default function MacBookWaterDamage() {
                 "Do NOT use a hairdryer",
                 "Do NOT charge it",
                 "Bring in within 24 hours for best results",
-                "Free pickup available",
+                "Walk in, no appointment needed",
               ].map((item) => (
                 <span key={item} className="flex items-center gap-xs text-[14px] font-semibold text-red-300">
                   <AlertTriangle size={14} className="text-red-400 shrink-0" aria-hidden />
@@ -400,23 +400,23 @@ export default function MacBookWaterDamage() {
             <div className="flex flex-col gap-md md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="m-0 text-[12px] uppercase tracking-wider text-red-400 font-semibold mb-2">
-                  Act fast -- free same-day pickup in Dubai
+                  Act fast -- walk in today at Dubai Media City
                 </p>
                 <h3 className="m-0 text-white text-[22px] md:text-[26px] font-bold">
                   Spilled on your MacBook? Act fast.
                 </h3>
                 <p className="m-0 mt-2 text-red-200/70 text-[15px]">
-                  Free same-day pickup across Dubai. Free diagnosis. The first 24 hours matter most.
+                  Walk in, or send it by same-day courier. Free diagnosis. The first 24 hours matter most.
                 </p>
               </div>
               <div className="flex flex-wrap gap-sm shrink-0">
                 <Button asChild variant="whatsapp" size="lg">
                   <a
-                    href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has a liquid spill. I need urgent pickup and diagnosis. Model: ")}`)}
+                    href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, my MacBook has a liquid spill. I need an urgent diagnosis. Model: ")}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle aria-hidden /> Book pickup now
+                    <MessageCircle aria-hidden /> WhatsApp us now
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/10 text-white hover:bg-white/20">
@@ -461,7 +461,7 @@ export default function MacBookWaterDamage() {
         <section className="relative overflow-hidden border-t border-border">
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-2xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto text-[clamp(1.5rem,2.8vw,2rem)] font-bold">
-              Spilled on your MacBook? Act fast -- free same-day pickup in Dubai.
+              Spilled on your MacBook? Act fast -- walk in today at Dubai Media City.
             </h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
               Free diagnosis, quote before any work, ultrasonic board clean. The first 24 hours are critical.

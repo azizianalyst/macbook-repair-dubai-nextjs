@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
-  Search, Truck, Check, AlertTriangle,
+  Search, MapPin, Check, AlertTriangle,
   Keyboard, Wrench, HardDrive,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -177,7 +177,7 @@ export default function MacBookAirChipKeyboardPage({
             {[
               { Icon: Search,    label: "Free key-by-key diagnosis" },
               { Icon: Keyboard,  label: `${chip} keyboard specialist` },
-              { Icon: Truck,     label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,     label: "Walk-in workshop, Media City" },
               { Icon: Clock,     label: prices[0]?.timeline ?? "Same day · 2 hours" },
               { Icon: Star,      label: "Trusted since 2004" },
               { Icon: ShieldCheck, label: "15-day warranty" },
@@ -370,7 +370,7 @@ export default function MacBookAirChipKeyboardPage({
                 <span>Message us for your price</span>
                 <span>Free key-by-key diagnosis</span>
                 <span>15-day warranty</span>
-                <span>Free pickup Dubai-wide</span>
+                <span>Walk-in workshop, Media City</span>
               </div>
             </div>
             <FAQAccordion items={faqs} injectSchema />

@@ -58,7 +58,7 @@ const WHY = [
   { title: "Certified Technicians", body: "With years of experience fixing Apple products, our techs know how to service and resolve problems quickly." },
   { title: "Original Parts", body: "We only use OEM parts, backed by strong partnerships with approved Apple suppliers so we always have access to the newest and best parts." },
   { title: "100% Data Privacy", body: "We do everything in our power to keep your information and data safe. Your privacy is protected while we fix your device." },
-  { title: "Easy Access", body: "This is a home-based service, so you don't need to leave the house. Our service comes right to your door, saving you time and effort." },
+  { title: "Easy Access", body: "Walk in to our Concord Tower workshop, across from Media City Metro, with parking on site. Can't leave the office? Book any same-day courier app to send it to us, or ask for a paid onsite visit, subject to technician availability." },
 ];
 
 const TIPS = [
@@ -68,7 +68,7 @@ const TIPS = [
   "Personalise and expand functionality by adding accessories that suit your needs.",
   "Keep the latest software and security updates installed for optimal performance and protection.",
   "Invest in a high-quality external display for a more immersive, productive workspace.",
-  "Use built-in apps like Siri, Handoff, and iCloud to streamline your workflow.",
+  "Use built-in apps like Siri, Handoff, and iCloud to move work between your Mac and your other Apple devices.",
   "Explore accessories such as external storage solutions and wireless keyboards.",
   "Consider using your Mac Mini as a media server or home-theatre PC.",
   "Join online communities and forums to share tips and discover new ways to use your device.",
@@ -81,7 +81,7 @@ const FAQS = [
   { q: "What types of issues can a Mac Mini repair service fix?", a: "We cover many issues, including hardware problems like faulty hard drives, RAM, and power supply issues. We also fix software-related problems such as OS crashes, data recovery, and virus removal. Our experienced technicians can diagnose and repair any problem." },
   { q: "How long does it typically take to repair a Mac Mini?", a: "The repair time depends on the complexity of the issue and the availability of replacement parts. We strive to complete most repairs within 24 to 48 hours; more extensive repairs may take 3-5 business days. We provide an estimated repair time after diagnosing the problem." },
   { q: "Can you upgrade my Mac Mini for better performance?", a: "Yes! We offer RAM upgrades, SSD installations, and macOS optimization services to enhance your Mac Mini's speed and overall performance. Many older models can perform like new after a professional upgrade." },
-  { q: "Can I drop off my Mac Mini, or do you offer pickup and delivery services?", a: "We offer both drop-off and pickup/delivery services for your convenience. Bring your Mac Mini to our repair center in Dubai or schedule a pickup, and we'll collect your device. After the repair, we can notify you to pick it up or deliver it back. Pickup and delivery may incur additional fees." },
+  { q: "Can I walk in with my Mac mini without an appointment?", a: "Yes. Bring your Mac mini to Office #45, 10th Floor, Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo and the serial number first and we quote before you travel. We message you when it is ready to collect. If you can't come in, send it by a same-day courier you book and WhatsApp us the tracking link." },
 ];
 
 function CallButtons() {
@@ -126,7 +126,7 @@ export default function MacMiniRepair() {
           <span>·</span>
           <span>OEM parts</span>
           <span>·</span>
-          <span>Same-day on-site help</span>
+          <span>Walk-in workshop, Media City</span>
         </p>
       </Hero>
 
@@ -134,7 +134,7 @@ export default function MacMiniRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac mini repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months, since 2004."
+        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, walk-in service across from Media City Metro, OEM-grade parts and a written warranty up to 12 months, since 2004."
       />
 
       <USPStrip tone="dark" />
@@ -266,8 +266,8 @@ export default function MacMiniRepair() {
           <ReviewGrid reviews={reviews} tone="dark" />
           <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-            <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-            <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+            <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM. Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM.</p>
+            <p className="text-[15px] text-text-muted">Sunday: closed.</p>
           </div>
         </div>
       </section>
@@ -289,7 +289,7 @@ export default function MacMiniRepair() {
         <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book Your Discounted Mac Mini Repair Appointment</h2>
           <p className="relative text-text-muted text-[16px] max-w-[70ch]">
-            We fix all kinds of problems and offer same-day on-site help at a considerable discount, at a time and place that works for you. Our skilled, friendly technicians know Mac Minis inside out and explain everything. Contact us today for a free quote.
+            We fix all kinds of problems at our Media City workshop. Walk in, send it by a same-day courier you book, or ask for a paid onsite visit, subject to technician availability. Our skilled, friendly technicians know Mac Minis inside out and explain everything. Contact us today for a free quote.
           </p>
           <div className="relative"><CallButtons /></div>
         </div>

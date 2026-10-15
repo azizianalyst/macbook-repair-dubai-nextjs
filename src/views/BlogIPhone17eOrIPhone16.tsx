@@ -158,7 +158,7 @@ export default function BlogIPhone17eOrIPhone16() {
             <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
               full iPhone service
             </Link>
-            , warranty of up to 12 months, free pickup across Dubai. Message us on WhatsApp for a price.
+            , warranty of up to 12 months, walk-in workshop in Dubai Media City. Message us on WhatsApp for a price.
           </p>
         </>
       }

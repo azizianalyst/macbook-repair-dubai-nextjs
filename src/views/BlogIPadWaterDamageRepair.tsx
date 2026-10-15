@@ -7,7 +7,7 @@ export default function BlogIPadWaterDamageRepair() {
   return (
     <BlogPostTemplate
       seoTitle="iPad Water Damage Repair Dubai 2026 - Costs & What To Do"
-      seoDescription="iPad water damage repair Dubai. The first 30 minutes matter most. Ultrasonic cleaning, board-level repair, free pickup, 15-day written warranty. WhatsApp us for today's price."
+      seoDescription="iPad water damage repair Dubai. The first 30 minutes matter most. Ultrasonic cleaning, board-level repair, walk-in workshop, 15-day written warranty. WhatsApp us for today's price."
       path="/blog/ipad-water-damage-repair-dubai-guide"
       wide
       toc={[
@@ -143,10 +143,10 @@ export default function BlogIPadWaterDamageRepair() {
           <h2 id="how-to-book">How to get same-day water damage repair in Dubai</h2>
           <p>
             WhatsApp Shafiq on <a href="https://wa.me/971557413706" className="text-accent underline underline-offset-2">055 741 3706</a> the
-            moment the iPad gets wet. Do not turn it on. We dispatch a courier for free pickup from
-            your location anywhere in Dubai. Ultrasonic cleaning starts within the hour of arrival.
-            Most fresh-water cases are diagnosed and repaired the same day. Business hours 9 am–7 pm
-            Mon-Sat; emergency collections available.
+            moment the iPad gets wet. Do not turn it on. Bring it straight to our workshop at Concord
+            Tower, Dubai Media City, across from Media City Metro. Ultrasonic cleaning starts within the hour of arrival.
+            Most fresh-water cases are diagnosed and repaired the same day. Open Mon-Thu and Sat
+            9 am–7 pm, Friday 9 am–12 pm and 2 pm–7 pm, closed Sunday.
           </p>
         </>
       }

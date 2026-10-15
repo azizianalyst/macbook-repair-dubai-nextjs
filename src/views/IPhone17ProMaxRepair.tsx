@@ -94,9 +94,9 @@ export default function IPhone17ProMaxRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Concord Tower, Dubai Media City. No appointment." },
         { title: "Diagnose + repair",    body: "Screen and battery usually same day once the part is confirmed; telephoto, vapor chamber and aluminum cosmetic 2-3 days." },
-        { title: "QC + return",          body: "ProMotion, AOD, USB-C, every zoom step, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + handover",        body: "ProMotion, AOD, USB-C, every zoom step, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

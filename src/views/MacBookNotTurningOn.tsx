@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
+import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, MapPin, Check, AlertTriangle, Wrench, HardDrive } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -223,7 +223,7 @@ export default function MacBookNotTurningOn() {
               { Icon: Search,      label: "Free diagnosis" },
               { Icon: Check,       label: "No fix, no charge" },
               { Icon: Clock,       label: "Same-day service" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,      label: "Walk in, Media City" },
               { Icon: Award,       label: "Trusted since 2004" },
               { Icon: HardDrive,   label: "All Mac models" },
             ].map(({ Icon, label }) => (
@@ -238,7 +238,7 @@ export default function MacBookNotTurningOn() {
         {/* Heroic answer / quick context */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted">
-            MacBook Repair Dubai offers free diagnosis for every dead Mac. Most power faults -- dead battery, blown fuse, failed DC-in board -- are fixed same-day at our Dubai Media City workshop. If your Mac shows no response at all, bring it in or book a free pickup. No fix, no charge.
+            MacBook Repair Dubai offers free diagnosis for every dead Mac. Most power faults -- dead battery, blown fuse, failed DC-in board -- are fixed same-day at our Dubai Media City workshop. If your Mac shows no response at all, bring it in to the workshop, no appointment needed. No fix, no charge.
           </p>
         </section>
 
@@ -425,7 +425,7 @@ export default function MacBookNotTurningOn() {
               MacBook won't turn on? Free diagnosis. Same-day service.
             </h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Drop in to Dubai Media City or book a free pickup anywhere in Dubai. Free diagnosis, quote before any work, no fix no charge.
+              Drop in to Dubai Media City, or WhatsApp a photo first. Free diagnosis, quote before any work, no fix no charge.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg">

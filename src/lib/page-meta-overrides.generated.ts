@@ -270,7 +270,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/": {
     "title": "MacBook Repair Dubai | Expert Apple Repair, 40,000+ Fixed",
-    "description": "MacBook Repair Dubai since 2004. Screens, batteries and board-level Apple repair with free diagnosis, same-day service and free pickup. Book a free quote."
+    "description": "MacBook Repair Dubai since 2004. Screens, batteries and board-level Apple repair with a free diagnosis and same-day service. Walk in or WhatsApp us."
   },
   "/macbook-battery-replacement-dubai": {
     "title": "MacBook Battery Replacement Dubai. Free Diagnosis, Same-Day",
@@ -305,8 +305,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Apple repair in Dubai for MacBook, iMac, Mac mini, iPhone and iPad. Independent specialist, free diagnosis, written warranty. Quote on WhatsApp."
   },
   "/apple-repair-near-me-dubai": {
-    "title": "Apple Repair Near Me in Dubai - Free Pickup Citywide",
-    "description": "Apple repair near me in Dubai: MacBook, iMac, Mac mini, iPhone and iPad fixed in-house at Concord Tower, with free pickup from your door. WhatsApp us."
+    "title": "Apple Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "description": "Apple repair near me in Dubai: Mac, iPhone and iPad fixed in-house at Concord Tower, Media City. Walk in or courier it to us the same day. WhatsApp us."
   },
   "/apple-repair-programs-dubai": {
     "title": "Apple Repair Programs Dubai. Free Eligibility Check",
@@ -370,15 +370,15 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/contact": {
     "title": "Contact MacBook Repair Dubai, 055 741 3706",
-    "description": "Contact MacBook Repair Dubai at Concord Tower, Dubai Media City. WhatsApp 055 741 3706 for Mac, iPhone and iPad repair, free diagnosis and free pickup."
+    "description": "Contact MacBook Repair Dubai at Concord Tower, Dubai Media City, across from the Metro. Walk in for a free diagnosis on Mac, iPhone or iPad. WhatsApp us."
   },
   "/cookies": {
     "title": "Cookie Policy. MacBook Repair Dubai 2026",
     "description": "Cookies. MacBook Repair Dubai policies and information."
   },
   "/corporate-macbook-repair-dubai": {
-    "title": "Corporate MacBook Repair Dubai. Free Diagnosis, Free Pickup",
-    "description": "Corporate MacBook repair in Dubai: free office collection and return, batch repairs, one VAT invoice with serial numbers and written warranty. WhatsApp us."
+    "title": "Corporate MacBook Repair Dubai. Free Diagnosis, Walk-In",
+    "description": "Corporate MacBook repair in Dubai: walk in to Media City or courier devices to us. Batch repairs, one VAT invoice with serials and warranty. WhatsApp us."
   },
   "/blog/do-macbooks-last-over-a-decade": {
     "title": "How Long Do MacBooks Last? Most Reach 7–10 Years (2026)",
@@ -434,7 +434,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-24-m1-2021-repair-dubai": {
     "title": "iMac M1 Repair Dubai — 24-inch 2021, A2438/A2439",
-    "description": "iMac 24-inch M1 (2021, A2438/A2439) repair in Dubai: screen, logic board, power and USB hub board, SSD. Free pickup with iMac transport. WhatsApp us today."
+    "description": "iMac 24-inch M1 (2021, A2438/A2439) repair in Dubai: screen, logic board, power and USB hub board, SSD. Walk in to our Media City workshop. WhatsApp us."
   },
   "/imac-24-m3-2023-repair-dubai": {
     "title": "iMac M3 Repair Dubai — 24-inch 2023, 4.5K Retina",
@@ -446,7 +446,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-27-intel-2017-repair-dubai": {
     "title": "iMac 27 Intel 2017 Repair Dubai. Free Diagnosis",
-    "description": "iMac 27-inch 2017 repair in Dubai: 5K Retina screen, logic board and fan repair, SSD and RAM upgrades. Free diagnosis and free pickup. WhatsApp us today."
+    "description": "iMac 27-inch 2017 repair in Dubai: 5K Retina screen, logic board and fan repair, SSD and RAM upgrades. Walk in for a free diagnosis. WhatsApp us today."
   },
   "/imac-27-intel-2019-repair-dubai": {
     "title": "iMac 27 Intel 2019 Repair Dubai. Free Diagnosis",
@@ -454,7 +454,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-27-intel-2020-repair-dubai": {
     "title": "iMac 27 Intel 2020 Repair Dubai. Free Diagnosis",
-    "description": "iMac 27-inch 2020 repair in Dubai, the last Intel iMac: screen, logic board, power supply, SSD and RAM upgrades on this T2 model. Free pickup. WhatsApp us."
+    "description": "iMac 27-inch 2020 repair in Dubai, the last Intel iMac: screen, logic board, power supply, SSD and RAM upgrades on this T2 model. Walk in. WhatsApp us."
   },
   "/imac-27-pro-2017-repair-dubai": {
     "title": "iMac 27 Pro 2017 Repair Dubai. Free Diagnosis",
@@ -470,7 +470,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/imac-full-diagnostic-dubai": {
     "title": "iMac Full Diagnostic Dubai. Free Diagnosis, Same-Day",
-    "description": "Free iMac full diagnostic in Dubai: a 30-point hardware and macOS check at our Media City workshop or a free home visit on Dubai mainland. WhatsApp us."
+    "description": "Free iMac full diagnostic in Dubai: a 30-point hardware and macOS check at our Media City workshop. Walk in or courier it to us. WhatsApp for a quote."
   },
   "/imac-gpu-repair-dubai": {
     "title": "iMac GPU Repair Dubai. Component-Level Repair",
@@ -481,8 +481,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iMac logic board repair in Dubai at component level, not a board swap. 15-day warranty, extendable to 6 months. Free diagnosis - call 055 741 3706."
   },
   "/imac-not-turning-on-dubai": {
-    "title": "iMac Not Turning On Dubai. Free Diagnosis, Free Pickup",
-    "description": "iMac not turning on in Dubai? From a fan that spins with no chime to a fully dead iMac, we find the fault. Free pickup, no fix no fee. WhatsApp us."
+    "title": "iMac Not Turning On Dubai. Free Diagnosis, Walk-In",
+    "description": "iMac not turning on in Dubai? From a fan that spins with no chime to a fully dead iMac, we find the fault. Walk in, no fix no fee. WhatsApp for a quote."
   },
   "/imac-os-reinstall-dubai": {
     "title": "iMac macOS Reinstall Dubai. Same-Day, Data Preserved",
@@ -493,7 +493,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iMac overheating fix in Dubai: we clear dust from the cooling fins and replace thermal paste and pads so the fans run quiet again. WhatsApp for a quote."
   },
   "/imac-power-supply-repair-dubai": {
-    "title": "iMac Power Supply Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iMac Power Supply Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iMac power supply repair in Dubai for the common 27-inch no-power fault. PSU replacement with written warranty. Free diagnosis - call 055 741 3706."
   },
   "/imac-ram-upgrade-dubai": {
@@ -505,7 +505,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "What iMac repairs cost in Dubai - screen, logic board, SSD, RAM - and what changes the price. Free diagnosis and a written quote on WhatsApp."
   },
   "/imac-repair-dubai": {
-    "title": "iMac Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iMac Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iMac repair in Dubai for 24-inch M1, M3, M4 and 27-inch Intel models: screen, SSD, RAM, GPU and logic board. Free diagnosis, written quote. WhatsApp us."
   },
   "/imac-screen-repair-dubai": {
@@ -526,11 +526,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-10th-gen-repair-dubai": {
     "title": "iPad 10th Gen Repair Dubai. Free Diagnosis",
-    "description": "iPad 10th Gen repair in Dubai: screen, battery, USB-C port and more, usually same-day to 2 days. Warranty up to 12 months, free pickup. WhatsApp us."
+    "description": "iPad 10th Gen repair in Dubai: screen, battery, USB-C port and more, usually same-day to 2 days. Warranty up to 12 months, walk-in service. WhatsApp us."
   },
   "/ipad-11th-gen-repair-dubai": {
     "title": "iPad 11th Gen Repair Dubai. Free Diagnosis",
-    "description": "iPad 11th Gen repair in Dubai for Apple’s newest basic iPad: screen, battery and charging port. Free diagnosis and free pickup. Message us on WhatsApp."
+    "description": "iPad 11th Gen repair in Dubai for Apple’s newest basic iPad: screen, battery and charging port. Walk in for a free diagnosis. Message us on WhatsApp."
   },
   "/ipad-9th-gen-repair-dubai": {
     "title": "iPad 9th Gen Repair Dubai. Free Diagnosis",
@@ -542,11 +542,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-air-5-repair-dubai": {
     "title": "iPad Air 5 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air 5 (M1) repair in Dubai: screen, battery and charging port, same-day to 2 days. Written warranty up to 12 months, free pickup. WhatsApp us."
+    "description": "iPad Air 5 (M1) repair in Dubai: screen, battery and charging port, same-day to 2 days. Written warranty up to 12 months, walk-in service. WhatsApp us."
   },
   "/ipad-air-m2-11-repair-dubai": {
     "title": "iPad Air M2 11 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air M2 11-inch repair in Dubai: screen, battery, port and more on a fast, very repairable iPad. Free diagnosis, free pickup. Message us on WhatsApp."
+    "description": "iPad Air M2 11-inch repair in Dubai: screen, battery, port and more on a fast, very repairable iPad. Walk in for a free diagnosis. Message us on WhatsApp."
   },
   "/ipad-air-m2-13-repair-dubai": {
     "title": "iPad Air M2 13 Repair Dubai. Free Diagnosis",
@@ -554,11 +554,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-air-m3-11-repair-dubai": {
     "title": "iPad Air M3 11 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air M3 11-inch repair in Dubai: screen, battery and USB-C port on Apple's mid-tier iPad. Free diagnosis, no fix no fee, free pickup. WhatsApp us."
+    "description": "iPad Air M3 11-inch repair in Dubai: screen, battery and USB-C port on Apple's mid-tier iPad. Free walk-in diagnosis, no fix no fee. WhatsApp us."
   },
   "/ipad-air-m3-13-repair-dubai": {
     "title": "iPad Air M3 13 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air M3 13-inch repair in Dubai: cracked screens in 2-3 days, same-day battery swaps and USB-C port faults. Free pickup, written warranty. Message us."
+    "description": "iPad Air M3 13-inch repair in Dubai: cracked screens in 2-3 days, same-day battery swaps and USB-C port faults. Walk in, written warranty. Message us."
   },
   "/ipad-air-m4-11-repair-dubai": {
     "title": "iPad Air M4 11 Repair Dubai. Free Diagnosis",
@@ -566,10 +566,10 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-air-m4-13-repair-dubai": {
     "title": "iPad Air M4 13 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air M4 13-inch repair in Dubai: screen, battery and USB-C port on the new big Air. Free pickup in Dubai, warranty up to 12 months. WhatsApp us."
+    "description": "iPad Air M4 13-inch repair in Dubai: screen, battery and USB-C port on the new big Air. Walk in to Media City, warranty up to 12 months. WhatsApp us."
   },
   "/ipad-back-glass-repair-dubai": {
-    "title": "iPad Back Glass Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPad Back Glass Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPad back glass repair in Dubai: iPad backs are aluminium, so we rework dents, polish scratches and protect the Smart Connector. 2-3 days. WhatsApp us."
   },
   "/ipad-battery-replacement-dubai": {
@@ -577,7 +577,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPad battery replacement in Dubai for short battery life, shutdowns at 20-30% or a bulging case. We test first, then replace and re-seal. WhatsApp us."
   },
   "/ipad-camera-repair-dubai": {
-    "title": "iPad Camera Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPad Camera Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPad camera repair in Dubai - rear, front and TrueDepth on iPad Pro, Center Stage recalibrated. Free diagnosis, written warranty. Call 055 741 3706."
   },
   "/ipad-charging-port-repair-dubai": {
@@ -606,11 +606,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-mini-5-repair-dubai": {
     "title": "iPad mini 5 Repair Dubai. Free Diagnosis",
-    "description": "iPad mini 5 repair in Dubai: screen, battery, Lightning port and home button on the pocket iPad. Warranty up to 12 months, free pickup. WhatsApp us."
+    "description": "iPad mini 5 repair in Dubai: screen, battery, Lightning port and home button on the pocket iPad. Warranty up to 12 months, walk-in service. WhatsApp us."
   },
   "/ipad-mini-6-repair-dubai": {
     "title": "iPad mini 6 Repair Dubai. Free Diagnosis",
-    "description": "iPad mini 6 repair in Dubai: screen in 2-3 days, battery and USB-C port the same day. Free diagnosis, free pickup, written warranty. WhatsApp for a quote."
+    "description": "iPad mini 6 repair in Dubai: screen in 2-3 days, battery and USB-C port the same day. Free walk-in diagnosis, written warranty. WhatsApp for a quote."
   },
   "/ipad-mini-7-repair-dubai": {
     "title": "iPad mini 7 Repair Dubai. Free Diagnosis",
@@ -634,7 +634,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pro-11-m2-repair-dubai": {
     "title": "iPad Pro 11 M2 Repair Dubai. Free Diagnosis",
-    "description": "iPad Pro 11-inch M2 repair in Dubai: LCD screen, battery and charging port on the mature M2 Pro. Free diagnosis and free pickup. Message us on WhatsApp."
+    "description": "iPad Pro 11-inch M2 repair in Dubai: LCD screen, battery and charging port on the mature M2 Pro. Walk in for a free diagnosis. Message us on WhatsApp."
   },
   "/ipad-pro-11-m4-repair-dubai": {
     "title": "iPad Pro 11 M4 Repair Dubai. Free Diagnosis",
@@ -654,7 +654,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pro-13-m4-repair-dubai": {
     "title": "iPad Pro 13 M4 Repair Dubai. Free Diagnosis",
-    "description": "iPad Pro 13-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, same-day battery replacement and port repair. Free pickup. WhatsApp for a price."
+    "description": "iPad Pro 13-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, same-day battery replacement and port repair. Walk in. WhatsApp for a price."
   },
   "/ipad-pro-13-m5-repair-dubai": {
     "title": "iPad Pro 13 M5 Repair Dubai. Free Diagnosis",
@@ -665,7 +665,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Independent iPad repair in Dubai Media City: screens, batteries, charging ports, liquid damage and board faults on every iPad. Free diagnosis."
   },
   "/ipad-screen-repair-dubai": {
-    "title": "iPad Screen Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPad Screen Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPad screen repair in Dubai for cracked glass, dead touch or lines: glass and digitiser on a standard iPad, full display on Air, mini and Pro. WhatsApp us."
   },
   "/ipad-smart-connector-repair-dubai": {
@@ -677,11 +677,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPad stuck on the Apple logo, a frozen update or a recovery loop? Software repair in Dubai with data kept where possible. Free diagnosis - call us."
   },
   "/ipad-speaker-repair-dubai": {
-    "title": "iPad Speaker Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPad Speaker Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPad speaker repair in Dubai: crackling, muffled or one-side-dead audio. Mesh cleaning or speaker replacement on any iPad, usually in 1 day. WhatsApp us."
   },
   "/ipad-water-damage-repair-dubai": {
-    "title": "iPad Water Damage Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPad Water Damage Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPad water damage repair in Dubai: spilled drink, pool dunk or beach day. Bring it in within 24 hours. Free diagnosis, no fix no fee. WhatsApp us now."
   },
   "/iphone-13-mini-repair-dubai": {
@@ -714,7 +714,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-14-repair-dubai": {
     "title": "iPhone 14 Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 14 repair in Dubai: 6.1-inch OLED screen, battery, charging port, back glass and Face ID. Same-day repairs, free pickup in Dubai. WhatsApp us."
+    "description": "iPhone 14 repair in Dubai: 6.1-inch OLED screen, battery, charging port, back glass and Face ID. Same-day repairs, walk in to Media City. WhatsApp us."
   },
   "/iphone-15-plus-repair-dubai": {
     "title": "iPhone 15 Plus Repair Dubai. Free Diagnosis, Same-Day",
@@ -734,7 +734,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-16-plus-repair-dubai": {
     "title": "iPhone 16 Plus Repair Dubai. Free Diagnosis, Same-Day",
-    "description": "iPhone 16 Plus repair in Dubai: 6.7-inch OLED screen, battery, Camera Control and USB-C port. Free diagnosis, same-day, free pickup. WhatsApp for a quote."
+    "description": "iPhone 16 Plus repair in Dubai: 6.7-inch OLED screen, battery, Camera Control and USB-C port. Free diagnosis, same-day, walk-in. WhatsApp for a quote."
   },
   "/iphone-16-pro-battery-capacity": {
     "title": "iPhone 16 Pro Battery Capacity, Life & Replacement Cost",
@@ -809,7 +809,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "iPhone earpiece repair in Dubai: no sound on calls but speakerphone works. On iPhone X and later we work around Face ID. Fixed in 1 day. WhatsApp us."
   },
   "/iphone-face-id-repair-dubai": {
-    "title": "iPhone Face ID Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "iPhone Face ID Repair Dubai. Free Diagnosis, Walk-In",
     "description": "iPhone Face ID repair in Dubai after a drop or screen swap: we can sometimes fix the dot projector or IR camera, and are honest on the odds. Message us."
   },
   "/iphone-full-diagnostic-dubai": {
@@ -857,8 +857,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Independent iPhone repair in Dubai Media City for iPhone 6 to 18 Pro Max: screens, batteries, back glass, ports, cameras and water damage. Free diagnosis."
   },
   "/iphone-repair-near-me-dubai": {
-    "title": "iPhone Repair Near Me in Dubai - Free Pickup Citywide",
-    "description": "iPhone repair near you in Dubai: screens and batteries with free pickup across the city, same-day on most jobs. Free diagnosis - call 055 741 3706."
+    "title": "iPhone Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "description": "iPhone repair near you in Dubai: screens and batteries at our Media City workshop, same-day on most jobs. Walk in or courier it to us. WhatsApp us."
   },
   "/iphone-screen-repair-cost-dubai": {
     "title": "iPhone Screen Repair Cost in Dubai: Price by Model, 2026",
@@ -906,7 +906,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipod-touch-7-repair-dubai": {
     "title": "iPod touch (7th gen) Repair Dubai - Battery & Screen",
-    "description": "iPod touch (7th gen) repair in Dubai: battery, screen, home button and charging port. Free diagnostic and pickup, honest advice on repair. Message us."
+    "description": "iPod touch (7th gen) repair in Dubai: battery, screen, home button and charging port. Free walk-in diagnostic and honest advice on repair. Message us."
   },
   "/landing-template-demo": {
     "title": "Landing Template Demo. MacBook Repair Dubai 2026",
@@ -938,19 +938,19 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-mini-m1-2020-repair-dubai": {
     "title": "Mac mini M1 Repair Dubai (2020, A2348) — Free Diagnosis",
-    "description": "Mac mini M1 (2020, A2348) repair in Dubai: logic board, PSU, ports and thermal service on the first Apple silicon mini. Free pickup. WhatsApp for a quote."
+    "description": "Mac mini M1 (2020, A2348) repair in Dubai: logic board, PSU, ports and thermal service on the first Apple silicon mini. Walk in. WhatsApp for a quote."
   },
   "/mac-mini-m2-2023-repair-dubai": {
     "title": "Mac mini M2 2023 Repair Dubai. Free Diagnosis",
-    "description": "Mac mini M2 (2023) repair in Dubai: logic board, SSD, power supply and ports on the last classic-chassis mini. Free pickup and diagnosis. Ask on WhatsApp."
+    "description": "Mac mini M2 (2023) repair in Dubai: logic board, SSD, power supply and ports on the last classic-chassis mini. Free walk-in diagnosis. Ask on WhatsApp."
   },
   "/mac-mini-m2-pro-2023-repair-dubai": {
     "title": "Mac mini M2 Pro 2023 Repair Dubai. Free Diagnosis",
-    "description": "Mac mini M2 Pro (2023) repair in Dubai: logic board, power supply and Thunderbolt 4 ports on the first Pro-chip mini. Free pickup. Message us on WhatsApp."
+    "description": "Mac mini M2 Pro (2023) repair in Dubai: logic board, power supply and Thunderbolt 4 ports on the first Pro-chip mini. Walk in. Message us on WhatsApp."
   },
   "/mac-mini-m4-2024-repair-dubai": {
     "title": "Mac mini M4 2024 Repair Dubai. Free Diagnosis",
-    "description": "Mac mini M4 (2024) repair in Dubai: logic board, PSU and front USB-C ports on the 5x5-inch redesign. Up to 12-month warranty, free pickup. Message us."
+    "description": "Mac mini M4 (2024) repair in Dubai: logic board, PSU and front USB-C ports on the 5x5-inch redesign. Up to 12-month warranty, walk-in service. Message us."
   },
   "/mac-mini-m4-pro-2024-repair-dubai": {
     "title": "Mac mini M4 Pro 2024 Repair Dubai. Free Diagnosis",
@@ -961,7 +961,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac mini RAM upgrade in Dubai: the 2018 Intel mini takes up to 64GB, 2010-2012 minis take standard modules, M-series RAM is fixed. WhatsApp us your model."
   },
   "/mac-mini-repair-dubai": {
-    "title": "Mac mini Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "Mac mini Repair Dubai. Free Diagnosis, Walk-In",
     "description": "Mac mini repair in Dubai for M6, M4, M2, M1 and Intel models - no power, no display, SSD and board faults. Free diagnosis. Call 055 741 3706."
   },
   "/mac-not-turning-on-dubai": {
@@ -986,30 +986,30 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-pro-intel-2019-repair-dubai": {
     "title": "Mac Pro Intel Repair Dubai — 2019 Xeon W Tower and Rack",
-    "description": "Mac Pro Intel 2019 repair in Dubai for tower and rack models: MPX GPU modules, logic board, PSU, RAM and PCIe. Free pickup across Dubai. WhatsApp us."
+    "description": "Mac Pro Intel 2019 repair in Dubai for tower and rack models: MPX GPU modules, logic board, PSU, RAM and PCIe. Walk in to Media City. WhatsApp us."
   },
   "/mac-pro-m2-ultra-2023-repair-dubai": {
     "title": "Mac Pro M2 Ultra Repair Dubai — First Apple Silicon Mac Pro",
     "description": "Mac Pro M2 Ultra (2023) repair in Dubai: logic board, ports, fans and power. Apple silicon Mac Pro specialists. Free diagnosis - call 055 741 3706."
   },
   "/mac-pro-repair-dubai": {
-    "title": "Mac Pro Repair Dubai. Free Diagnosis, Free Pickup",
-    "description": "Mac Pro repair in Dubai for the M2 Ultra and Intel 2019 tower: GPU, power supply, SSD and logic board. Free diagnosis and pickup. WhatsApp for a quote."
+    "title": "Mac Pro Repair Dubai. Free Diagnosis, Walk-In",
+    "description": "Mac Pro repair in Dubai for the M2 Ultra and Intel 2019 tower: GPU, power supply, SSD and logic board. Walk in for a free diagnosis. WhatsApp for a quote."
   },
   "/mac-repair-cost-dubai": {
     "title": "Mac Repair Cost in Dubai - What Changes the Price",
     "description": "What Mac repairs cost in Dubai - MacBook screens, batteries and logic boards, iMac screens - and what changes the price. Free written quote on WhatsApp."
   },
   "/mac-repair-dubai": {
-    "title": "Mac Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "Mac Repair Dubai. Free Diagnosis, Walk-In",
     "description": "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us."
   },
   "/mac-repair-near-me-dubai": {
-    "title": "Mac Repair Near Me in Dubai - Free Pickup Citywide",
-    "description": "Mac repair near me in Dubai: MacBook, iMac and Mac mini screen, battery, keyboard and board repairs. Free pickup or visit Concord Tower. Message us."
+    "title": "Mac Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "description": "Mac repair near me in Dubai: MacBook, iMac and Mac mini repairs. Walk in at Media City or courier it to us the same day. WhatsApp for a quote."
   },
   "/mac-setup-data-migration-dubai": {
-    "title": "Mac Setup Data Migration Dubai. Same-Day, Free Pickup",
+    "title": "Mac Setup Data Migration Dubai. Same-Day, Walk-In",
     "description": "New Mac setup and data migration in Dubai - Apple ID, iCloud, email, apps and files moved from your old machine. Book a visit or call 055 741 3706."
   },
   "/mac-ssd-upgrade-dubai": {
@@ -1018,15 +1018,15 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-studio-m1-max-2022-repair-dubai": {
     "title": "Mac Studio M1 Max 2022 Repair Dubai. Free Diagnosis",
-    "description": "Mac Studio M1 Max (2022) repair in Dubai: logic board, SSD, power supply and ports on the first Mac Studio. Free pickup across Dubai. WhatsApp for a quote."
+    "description": "Mac Studio M1 Max (2022) repair in Dubai: logic board, SSD, power supply and ports on the first Mac Studio. Walk in to Media City. WhatsApp for a quote."
   },
   "/mac-studio-m1-ultra-2022-repair-dubai": {
     "title": "Mac Studio M1 Ultra 2022 Repair Dubai. Free Diagnosis",
-    "description": "Mac Studio M1 Ultra (2022) repair in Dubai: logic board, power supply and ports on the first Ultra Mac. Free diagnosis and pickup. Message us on WhatsApp."
+    "description": "Mac Studio M1 Ultra (2022) repair in Dubai: logic board, power supply and ports on the first Ultra Mac. Free walk-in diagnosis. Message us on WhatsApp."
   },
   "/mac-studio-m2-max-2023-repair-dubai": {
     "title": "Mac Studio M2 Max 2023 Repair Dubai. Free Diagnosis",
-    "description": "Mac Studio M2 Max (2023) repair in Dubai: logic board, SSD, PSU and ports, plus preventive thermal service. Free pickup and diagnosis. Send us a WhatsApp."
+    "description": "Mac Studio M2 Max (2023) repair in Dubai: logic board, SSD, PSU and ports, plus preventive thermal service. Free walk-in diagnosis. Send us a WhatsApp."
   },
   "/mac-studio-m2-ultra-2023-repair-dubai": {
     "title": "Mac Studio M2 Ultra 2023 Repair Dubai. Free Diagnosis",
@@ -1041,71 +1041,71 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac Studio M4 Max (2025) repair in Dubai: Thunderbolt 5 ports, logic board, SSD and power faults. Check AppleCare+ first. Free diagnosis, WhatsApp us."
   },
   "/mac-studio-repair-dubai": {
-    "title": "Mac Studio Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "Mac Studio Repair Dubai. Free Diagnosis, Walk-In",
     "description": "Mac Studio repair in Dubai for M5 Max and M5 Ultra back to M1 - logic board, SSD, power and thermal faults. Free diagnosis. Call 055 741 3706."
   },
   "/macbook-air-13-intel-2018-repair-dubai": {
     "title": "MacBook Air 13 Intel 2018 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 Intel 2018 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 Intel 2018 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-intel-2019-repair-dubai": {
     "title": "MacBook Air 13 Intel 2019 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 Intel 2019 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 Intel 2019 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-intel-2020-repair-dubai": {
     "title": "MacBook Air 13 Intel 2020 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 Intel 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 Intel 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-m1-2020-repair-dubai": {
     "title": "MacBook Air 13 M1 2020 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 M1 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 M1 2020 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-m2-2022-repair-dubai": {
     "title": "MacBook Air 13 M2 2022 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-m3-2024-repair-dubai": {
     "title": "MacBook Air 13 M3 2024 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-m4-2025-repair-dubai": {
     "title": "MacBook Air 13 M4 2025 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-13-m5-2026-repair-dubai": {
     "title": "MacBook Air 13 M5 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 13 M5 2026 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 13 M5 2026 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-15-m2-2023-repair-dubai": {
     "title": "MacBook Air 15 M2 2023 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 15 M2 2023 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 15 M2 2023 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-15-m3-2024-repair-dubai": {
     "title": "MacBook Air 15 M3 2024 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 15 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 15 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-15-m4-2025-repair-dubai": {
     "title": "MacBook Air 15 M4 2025 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 15 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 15 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-15-m5-2026-repair-dubai": {
     "title": "MacBook Air 15 M5 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Air 15 M5 2026 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Air 15 M5 2026 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-air-repair-dubai": {
     "title": "MacBook Air Repair Dubai — Same-Day Screen & Battery",
-    "description": "MacBook Air repair in Dubai, Intel through M5. Free diagnosis, same-day screens and batteries, free pickup across Dubai. Book at our Media City workshop."
+    "description": "MacBook Air repair in Dubai, Intel through M5. Free diagnosis, same-day screens and batteries at our Media City workshop. Walk in or WhatsApp for a quote."
   },
   "/macbook-backup-service-dubai": {
-    "title": "MacBook Backup Service Dubai. Same-Day, Free Pickup",
+    "title": "MacBook Backup Service Dubai. Same-Day, Walk-In",
     "description": "MacBook backup service in Dubai: Time Machine set up, data moved to a new Mac or drive, full backup before any repair. Most done same day. Ask on WhatsApp."
   },
   "/macbook-battery-swollen-repair-dubai": {
     "title": "MacBook Battery Swollen Repair Dubai",
-    "description": "Swollen MacBook battery in Dubai? It is a fire risk, so stop charging it. Same-day replacement and free pickup across Dubai. WhatsApp us on 055 741 3706."
+    "description": "Swollen MacBook battery in Dubai? It is a fire risk, so stop charging it. Same-day replacement at our Media City workshop. WhatsApp us on 055 741 3706."
   },
   "/macbook-camera-repair-dubai": {
-    "title": "MacBook Camera Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Camera Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook camera repair in Dubai: black screen on calls, ’no camera available’ or blurry FaceTime video fixed, most in 1-2 days. Free diagnosis. WhatsApp us."
   },
   "/macbook-charging-port-repair-dubai": {
@@ -1113,15 +1113,15 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook charging port repair in Dubai: same-day port replacement or charging-IC board repair, M1 to M5 and Intel. Free diagnosis - call 055 741 3706."
   },
   "/macbook-cleaning-maintenance-dubai": {
-    "title": "MacBook Cleaning Maintenance Dubai. Same-Day, Free Pickup",
-    "description": "MacBook cleaning and maintenance in Dubai: fans, vents and ports cleared of dust and thermals checked, same day. Free pickup in Dubai. WhatsApp to book."
+    "title": "MacBook Cleaning Maintenance Dubai. Same-Day, Walk-In",
+    "description": "MacBook cleaning and maintenance in Dubai: fans, vents and ports cleared of dust and thermals checked, same day. Walk in to Media City. WhatsApp to book."
   },
   "/macbook-data-recovery-dubai": {
     "title": "MacBook Data Recovery Dubai — No-Fix No-Charge, Free Check",
     "description": "MacBook data recovery in Dubai from dead logic boards, water damage, deleted files, T2 and Apple silicon Macs. No fix no fee, free diagnosis. WhatsApp us."
   },
   "/macbook-flexgate-repair-dubai": {
-    "title": "MacBook Flexgate Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Flexgate Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook flexgate repair in Dubai: stage-light glow or a screen that cuts out as the lid opens, usually fixed in 1-2 days. Free diagnosis. WhatsApp us."
   },
   "/macbook-full-diagnostic-dubai": {
@@ -1137,7 +1137,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook guides by our Dubai technicians: plain-English steps for screenshots, resets, passwords, cleaning and care, or WhatsApp us if it needs a repair."
   },
   "/macbook-hinge-repair-dubai": {
-    "title": "MacBook Hinge Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Hinge Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook hinge repair in Dubai: a lid that won’t stay up, a grinding hinge or a case cracking near the clutch, most done in 1-2 days. WhatsApp for a quote."
   },
   "/macbook-insurance-dubai": {
@@ -1145,7 +1145,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook insurance in Dubai: accidental damage, liquid, theft and extended cover explained - and what repair costs look like without it. Free advice."
   },
   "/macbook-microphone-repair-dubai": {
-    "title": "MacBook Microphone Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Microphone Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook microphone repair in Dubai: callers can’t hear you or the input meter sits flat? Most are fixed in 1-2 days. Free diagnosis. Quote on WhatsApp."
   },
   "/macbook-neo-repair-dubai": {
@@ -1162,238 +1162,202 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-pro-13-intel-2019-repair-dubai": {
     "title": "MacBook Pro 13 Intel 2019 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 13 Intel 2019 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 13 Intel 2019 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-13-intel-2020-repair-dubai": {
     "title": "MacBook Pro 13 Intel 2020 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 13 Intel 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 13 Intel 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-13-m1-2020-repair-dubai": {
     "title": "MacBook Pro 13 M1 2020 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 13 M1 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 13 M1 2020 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-13-m2-2022-repair-dubai": {
     "title": "MacBook Pro 13 M2 2022 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 13 M2 2022 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m1-pro-2021-repair-dubai": {
     "title": "MacBook Pro 14 M1 Pro 2021 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m2-pro-2023-repair-dubai": {
     "title": "MacBook Pro 14 M2 Pro 2023 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m3-2023-repair-dubai": {
     "title": "MacBook Pro 14 M3 2023 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m4-2024-repair-dubai": {
     "title": "MacBook Pro 14 M4 2024 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m5-2025-repair-dubai": {
     "title": "MacBook Pro 14 M5 2025 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M5 2025 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M5 2025 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m5-max-2026-repair-dubai": {
     "title": "MacBook Pro 14 M5 Max 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-14-m5-pro-2026-repair-dubai": {
     "title": "MacBook Pro 14 M5 Pro 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 14 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 14 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m1-pro-2021-repair-dubai": {
     "title": "MacBook Pro 16 M1 Pro 2021 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M1 Pro 2021 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m2-pro-2023-repair-dubai": {
     "title": "MacBook Pro 16 M2 Pro 2023 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M2 Pro 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m3-2023-repair-dubai": {
     "title": "MacBook Pro 16 M3 2023 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m4-2024-repair-dubai": {
     "title": "MacBook Pro 16 M4 2024 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m5-max-2026-repair-dubai": {
     "title": "MacBook Pro 16 M5 Max 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 10-14 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 10-14 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-16-m5-pro-2026-repair-dubai": {
     "title": "MacBook Pro 16 M5 Pro 2026 Repair Dubai. Free Diagnosis",
-    "description": "MacBook Pro 16 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Free diagnosis and free pickup. WhatsApp us."
+    "description": "MacBook Pro 16 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-pro-m4-with-thunderbolt-5-and-portable-monitor": {
     "title": "MacBook Pro M4 Portable Monitor Guide: Thunderbolt 5 Setup",
     "description": "Connect a portable monitor to a MacBook Pro M4: which models have Thunderbolt 5, why the cable matters, and setup tips from our Dubai workshop."
   },
   "/macbook-pro-repair-dubai": {
-    "title": "MacBook Pro Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Pro Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook Pro Repair Dubai. Screen, battery, keyboard & logic board by Apple specialists. Free diagnosis, quote on WhatsApp, same-day service."
   },
   "/macbook-ram-upgrade-dubai": {
     "title": "MacBook RAM Upgrade Dubai. Same-Day Fitting",
     "description": "MacBook RAM upgrade in Dubai with same-day fitting at Concord Tower, Media City. A free diagnosis confirms what your model supports. WhatsApp 055 741 3706."
   },
-  "/macbook-repair-abu-dhabi": {
-    "title": "MacBook Repair Abu Dhabi — Free Collection, 1–2 Days",
-    "description": "MacBook repair for Abu Dhabi: free courier collection from Yas Island to the Corniche, repaired at our Dubai workshop, back in 1-2 days. Chat on WhatsApp."
-  },
-  "/macbook-repair-ajman": {
-    "title": "MacBook Repair Ajman — Free Pickup, Often Same-Day",
-    "description": "MacBook repair for Ajman: free door-to-door pickup from the Corniche or Al Zorah, repaired at our Media City workshop, often same day. Book on WhatsApp."
-  },
-  "/macbook-repair-al-ain": {
-    "title": "MacBook Repair Al Ain — Free Collection, 1–2 Days",
-    "description": "MacBook repair for Al Ain: free courier collection, repair at our Dubai Media City workshop about 130 km away, and return in 1-2 days. Ask us on WhatsApp."
-  },
   "/macbook-repair-al-sufouh": {
-    "title": "MacBook Repair Al Sufouh — Same-Day, Free Pickup",
+    "title": "MacBook Repair Al Sufouh — Same-Day, Walk-In",
     "description": "MacBook repair in Al Sufouh, 5 minutes from our Concord Tower workshop, near Madinat Jumeirah and Knowledge Village. Same-day repair. WhatsApp to book."
   },
   "/macbook-repair-arabian-ranches": {
-    "title": "MacBook Repair Arabian Ranches — Same-Day, Free Pickup",
-    "description": "MacBook repair in Arabian Ranches: free villa pickup near the Golf Club and The Ranches Souk, 22 minutes from Media City. Same-day repair. Ask on WhatsApp."
+    "title": "MacBook Repair Arabian Ranches — Same-Day, Walk-In",
+    "description": "MacBook repair for Arabian Ranches, near the Golf Club and The Ranches Souk, 22 minutes from Media City. Walk in for same-day repair. Ask on WhatsApp."
   },
   "/macbook-repair-barsha": {
-    "title": "MacBook Repair Al Barsha — Same-Day, Free Pickup",
-    "description": "MacBook repair in Al Barsha, 8 minutes from our workshop: free pickup near Mall of the Emirates and across Barsha 1, 2 and 3. Same-day repair. WhatsApp us."
+    "title": "MacBook Repair Al Barsha — Same-Day, Walk-In",
+    "description": "MacBook repair for Al Barsha, 8 minutes from our workshop, from Mall of the Emirates to Barsha 1, 2 and 3. Walk in for same-day repair. WhatsApp us."
   },
   "/macbook-repair-barsha-heights": {
-    "title": "MacBook Repair Barsha Heights — Same-Day, Free Pickup",
-    "description": "MacBook repair in Barsha Heights (Tecom), 6 minutes from Concord Tower near Dubai Internet City Metro. Same-day repair, free pickup. Book on WhatsApp."
+    "title": "MacBook Repair Barsha Heights — Same-Day, Walk-In",
+    "description": "MacBook repair in Barsha Heights (Tecom), 6 minutes from Concord Tower near Dubai Internet City Metro. Walk in for same-day repair. Book on WhatsApp."
   },
   "/macbook-repair-bur-dubai": {
-    "title": "MacBook Repair Bur Dubai — Same-Day, Free Pickup",
-    "description": "MacBook repair in Bur Dubai: free pickup from BurJuman, Meena Bazaar, Al Fahidi and Al Mankhool, 20 minutes from Media City. Same-day repair. WhatsApp us."
+    "title": "MacBook Repair Bur Dubai — Same-Day, Walk-In",
+    "description": "MacBook repair for Bur Dubai, from BurJuman, Meena Bazaar, Al Fahidi and Al Mankhool, 20 minutes from Media City. Walk in, same-day repair. WhatsApp us."
   },
   "/macbook-repair-business-bay": {
-    "title": "MacBook Repair Business Bay — Same-Day, Free Pickup",
-    "description": "MacBook repair in Business Bay: free pickup near Bay Avenue and the JW Marriott Marquis, 18 minutes from our Media City workshop. WhatsApp for a quote."
+    "title": "MacBook Repair Business Bay — Same-Day, Walk-In",
+    "description": "MacBook repair for Business Bay, near Bay Avenue and the JW Marriott Marquis, 18 minutes from our Media City workshop. Walk in. WhatsApp for a quote."
   },
   "/macbook-repair-cost-calculator-dubai": {
     "title": "MacBook Repair Cost Calculator - Dubai Quote in Minutes",
     "description": "MacBook repair cost calculator for Dubai: pick your Mac or iPad model and the repair, send it on WhatsApp, and a technician replies with a written quote."
   },
   "/macbook-repair-deira": {
-    "title": "MacBook Repair Deira — Same-Day, Free Pickup",
-    "description": "MacBook repair in Deira: free pickup from Gold Souk, Deira City Centre, Union Square and Al Rigga, repaired at our Media City workshop. Chat on WhatsApp."
+    "title": "MacBook Repair Deira — Same-Day, Walk-In",
+    "description": "MacBook repair for Deira, from Gold Souk, Deira City Centre, Union Square and Al Rigga: walk in to our Media City workshop. Chat on WhatsApp for a quote."
   },
   "/macbook-repair-difc": {
-    "title": "MacBook Repair DIFC — Same-Day, Free Pickup",
-    "description": "MacBook repair in DIFC, 16 minutes from Concord Tower: free pickup from the Gate Building, Index Tower and ICD Brookfield Place, same day. WhatsApp us."
+    "title": "MacBook Repair DIFC — Same-Day, Walk-In",
+    "description": "MacBook repair for DIFC, 16 minutes from Concord Tower: from the Gate Building, Index Tower or ICD Brookfield Place, walk in for same day. WhatsApp us."
   },
   "/macbook-repair-discovery-gardens": {
-    "title": "MacBook Repair Discovery Gardens — Same-Day, Free Pickup",
-    "description": "MacBook repair in Discovery Gardens, 15 minutes from Media City: free pickup around Ibn Battuta Mall and the themed clusters. Free diagnosis. WhatsApp us."
+    "title": "MacBook Repair Discovery Gardens — Same-Day, Walk-In",
+    "description": "MacBook repair for Discovery Gardens, 15 minutes from Media City, near Ibn Battuta Mall and the themed clusters. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-repair-downtown-dubai": {
-    "title": "MacBook Repair Downtown Dubai — Same-Day, Free Pickup",
-    "description": "MacBook repair in Downtown Dubai: free pickup near Burj Khalifa, Dubai Mall and Dubai Opera, 15 minutes from Media City. Same-day repair. WhatsApp us."
+    "title": "MacBook Repair Downtown Dubai — Same-Day, Walk-In",
+    "description": "MacBook repair for Downtown Dubai, near Burj Khalifa, Dubai Mall and Dubai Opera, 15 minutes from Media City. Walk in for same-day repair. WhatsApp us."
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai. Expert, Same-Day",
     "description": "MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, warranty up to 12 months. Free diagnosis, quote on WhatsApp."
   },
   "/macbook-repair-dubai-hills": {
-    "title": "MacBook Repair Dubai Hills — Same-Day, Free Pickup",
-    "description": "MacBook repair in Dubai Hills Estate, 18 minutes from our Media City workshop. Free pickup near Dubai Hills Mall, Sidra, Maple and Park Heights. WhatsApp."
+    "title": "MacBook Repair Dubai Hills — Same-Day, Walk-In",
+    "description": "MacBook repair for Dubai Hills Estate, 18 minutes from our Media City workshop, near Dubai Hills Mall, Sidra, Maple and Park Heights. Walk in. WhatsApp."
   },
   "/macbook-repair-dubai-marina": {
-    "title": "MacBook Repair Dubai Marina — Same-Day, Free Pickup",
-    "description": "MacBook repair in Dubai Marina, 10 minutes from Concord Tower. Free pickup from Marina Mall to JBR Beach, same-day repair, written warranty. WhatsApp us."
+    "title": "MacBook Repair Dubai Marina — Same-Day, Walk-In",
+    "description": "MacBook repair for Dubai Marina, 10 minutes from Concord Tower, from Marina Mall to JBR Beach. Walk in for same-day repair, written warranty. WhatsApp us."
   },
   "/macbook-repair-emirates-living": {
-    "title": "MacBook Repair Emirates Living — Same-Day, Free Pickup",
-    "description": "MacBook repair in Emirates Living: free pickup across Emirates Hills, The Springs, The Meadows and The Lakes, 12 minutes away. WhatsApp 055 741 3706."
-  },
-  "/macbook-repair-fujairah": {
-    "title": "MacBook Repair Fujairah — Free Collection, 1–2 Days",
-    "description": "MacBook repair in Fujairah, from Al Faseel and Sakamkam to Dibba: a free courier takes it to our Dubai workshop, 1.5 hours away, and back. WhatsApp us."
+    "title": "MacBook Repair Emirates Living — Same-Day, Walk-In",
+    "description": "MacBook repair for Emirates Living: Emirates Hills, The Springs, The Meadows and The Lakes, 12 minutes away. Walk in to Media City. WhatsApp 055 741 3706."
   },
   "/macbook-repair-internet-city": {
-    "title": "MacBook Repair Dubai Internet City — Same-Day, Free Pickup",
-    "description": "MacBook repair for Dubai Internet City, 5 minutes from our Concord Tower workshop in Media City. Free pickup, same-day repair. WhatsApp for a quote."
+    "title": "MacBook Repair Dubai Internet City — Same-Day, Walk-In",
+    "description": "MacBook repair for Dubai Internet City, 5 minutes from our Concord Tower workshop in Media City. Walk in for same-day repair. WhatsApp for a quote."
   },
   "/macbook-repair-jbr": {
-    "title": "MacBook Repair JBR — Same-Day, Free Pickup",
-    "description": "MacBook repair in JBR, 8 minutes from our Media City workshop. Free pickup from The Walk and The Beach Mall, same-day repair, free diagnosis. WhatsApp us."
+    "title": "MacBook Repair JBR — Same-Day, Walk-In",
+    "description": "MacBook repair for JBR, 8 minutes from our Media City workshop, from The Walk and The Beach Mall. Walk in, same-day repair, free diagnosis. WhatsApp us."
   },
   "/macbook-repair-jlt": {
-    "title": "MacBook Repair JLT — Same-Day, Free Pickup",
-    "description": "MacBook repair in JLT, 8 minutes away near Almas Tower and DMCC Metro. Free pickup and delivery, same-day repair, written warranty. Message us on WhatsApp."
+    "title": "MacBook Repair JLT — Same-Day, Walk-In",
+    "description": "MacBook repair for JLT, 8 minutes away near Almas Tower and DMCC Metro. Walk in to Media City for same-day repair, written warranty. WhatsApp us today."
   },
   "/macbook-repair-jumeirah": {
-    "title": "MacBook Repair Jumeirah — Same-Day, Free Pickup",
-    "description": "MacBook repair in Jumeirah, 10 minutes via Al Wasl Road. Free pickup near Mercato Mall and Jumeirah Mosque, same-day repair. WhatsApp for a free quote."
+    "title": "MacBook Repair Jumeirah — Same-Day, Walk-In",
+    "description": "MacBook repair for Jumeirah, 10 minutes via Al Wasl Road from Mercato Mall and Jumeirah Mosque. Walk in for same-day repair. WhatsApp for a free quote."
   },
   "/macbook-repair-jvc": {
-    "title": "MacBook Repair JVC — Same-Day, Free Pickup",
-    "description": "MacBook repair in JVC, 16 minutes from Media City. Free pickup around Circle Mall and Districts 10 to 16, same-day repair, written warranty. WhatsApp us."
-  },
-  "/macbook-repair-kalba": {
-    "title": "MacBook Repair Kalba — Free Courier Collection",
-    "description": "MacBook repair in Kalba: free courier collection from your door, repaired at our Media City workshop about 120 km away via the E102. WhatsApp for a quote."
+    "title": "MacBook Repair JVC — Same-Day, Walk-In",
+    "description": "MacBook repair for JVC, 16 minutes from Media City, from Circle Mall and Districts 10 to 16. Walk in for same-day repair, written warranty. WhatsApp us."
   },
   "/macbook-repair-karama": {
-    "title": "MacBook Repair Karama — Same-Day, Free Pickup",
-    "description": "MacBook repair in Karama, 18 minutes from our workshop. Free pickup near Karama Market, Karama Centre and Zabeel Park, same-day repair. WhatsApp us today."
-  },
-  "/macbook-repair-khor-fakkan": {
-    "title": "MacBook Repair Khor Fakkan — Free Collection, 1–2 Days",
-    "description": "MacBook repair for Khor Fakkan: free pickup from the Corniche, Al Rabi Tower or Zubara, repaired in Media City, back by courier in 1-2 days. WhatsApp us."
+    "title": "MacBook Repair Karama — Same-Day, Walk-In",
+    "description": "MacBook repair for Karama, 18 minutes from our workshop, near Karama Market, Karama Centre and Zabeel Park. Walk in for same-day repair. WhatsApp us today."
   },
   "/macbook-repair-mirdif": {
-    "title": "MacBook Repair Mirdif — Same-Day, Free Pickup",
-    "description": "MacBook repair in Mirdif: free pickup from Mirdif City Centre, Uptown Mirdif, Mirdif Hills and Shorooq. Same-day repair, written warranty. WhatsApp us."
+    "title": "MacBook Repair Mirdif — Same-Day, Walk-In",
+    "description": "MacBook repair for Mirdif, from Mirdif City Centre, Uptown Mirdif, Mirdif Hills and Shorooq. Walk in to Media City, same-day repair, warranty. WhatsApp us."
   },
   "/macbook-repair-motor-city": {
-    "title": "MacBook Repair Motor City — Same-Day, Free Pickup",
-    "description": "MacBook repair in Motor City, 20 minutes from Media City. Free pickup around Dubai Autodrome and First Avenue Mall, same-day repair. WhatsApp for a quote."
+    "title": "MacBook Repair Motor City — Same-Day, Walk-In",
+    "description": "MacBook repair for Motor City, 20 minutes from Media City, near Dubai Autodrome and First Avenue Mall. Walk in for same-day repair. WhatsApp for a quote."
   },
   "/macbook-repair-near-me-dubai": {
-    "title": "MacBook Repair Near Me in Dubai - Free Pickup Citywide",
-    "description": "MacBook repair near you in Dubai: our workshop is at Concord Tower, 120 m from Media City Metro, with free door-to-door pickup citywide. WhatsApp us."
+    "title": "MacBook Repair Near Me in Dubai - Walk-In, Media City Metro",
+    "description": "MacBook repair near you in Dubai: walk in to Concord Tower, 120 m from Media City Metro, or courier it to us the same day. Free diagnosis. WhatsApp us."
   },
   "/macbook-repair-palm-jumeirah": {
-    "title": "MacBook Repair Palm Jumeirah — Same-Day, Free Pickup",
-    "description": "MacBook repair on Palm Jumeirah, 15 minutes from Media City. Free pickup from Atlantis, Nakheel Mall, The Pointe and Golden Mile. Message us on WhatsApp."
+    "title": "MacBook Repair Palm Jumeirah — Same-Day, Walk-In",
+    "description": "MacBook repair for Palm Jumeirah, 15 minutes from Media City: from Atlantis, Nakheel Mall, The Pointe or Golden Mile, walk in to Concord Tower. WhatsApp."
   },
   "/macbook-repair-production-city": {
-    "title": "MacBook Repair Production City — Same-Day, Free Pickup",
-    "description": "MacBook repair in Dubai Production City (IMPZ): free pickup near City Centre Me'aisem, Lago Vista and Centrium, 20 minutes away. WhatsApp for a quote."
-  },
-  "/macbook-repair-ras-al-khaimah": {
-    "title": "MacBook Repair Ras Al Khaimah — Free Collection, 1–2 Days",
-    "description": "MacBook repair in Ras Al Khaimah: free courier pickup from Al Hamra Village, Al Nakheel or Dafan Al Nakheel, usually next day, returned fixed. WhatsApp us."
-  },
-  "/macbook-repair-sharjah": {
-    "title": "MacBook Repair Sharjah — Free Pickup, Often Same-Day",
-    "description": "MacBook repair in Sharjah: free door-to-door pickup from Al Noor Mosque to Al Qasba, repaired at our Media City workshop, often same-day. WhatsApp us."
+    "title": "MacBook Repair Production City — Same-Day, Walk-In",
+    "description": "MacBook repair for Dubai Production City (IMPZ), near City Centre Me'aisem, Lago Vista and Centrium, 20 minutes away. Walk in. WhatsApp for a quote."
   },
   "/macbook-repair-silicon-oasis": {
-    "title": "MacBook Repair Silicon Oasis — Same-Day, Free Pickup",
-    "description": "MacBook repair in Dubai Silicon Oasis, near DSO HQ and Cedre Shopping Centre. Free pickup, same-day repair, written warranty up to 12 months. WhatsApp us."
+    "title": "MacBook Repair Silicon Oasis — Same-Day, Walk-In",
+    "description": "MacBook repair for Dubai Silicon Oasis, near DSO HQ and Cedre Shopping Centre. Walk in to Media City, same-day repair, up to 12-month warranty. WhatsApp."
   },
   "/macbook-repair-the-greens": {
-    "title": "MacBook Repair The Greens — Same-Day, Free Pickup",
-    "description": "MacBook repair in The Greens, 9 minutes from Concord Tower. Free pickup around Emirates Golf Club and Carrefour The Greens, same-day repair. WhatsApp us."
-  },
-  "/macbook-repair-umm-al-quwain": {
-    "title": "MacBook Repair Umm Al Quwain — Free Collection, 1–2 Days",
-    "description": "MacBook repair for Umm Al Quwain: next-day free courier pickup, from the old town to Falaj Al Mualla, repaired in Media City, back in 1-2 days. Message us."
+    "title": "MacBook Repair The Greens — Same-Day, Walk-In",
+    "description": "MacBook repair for The Greens, 9 minutes from Concord Tower, near Emirates Golf Club and Carrefour The Greens. Walk in for same-day repair. WhatsApp us."
   },
   "/macbook-safe-mode-repair-dubai": {
     "title": "MacBook Safe Mode Repair Dubai. Same-Day, Free Diagnosis",
     "description": "MacBook safe mode repair in Dubai for crashes, boot loops and a Mac that won’t behave. Safe mode shows the real fault; we fix it same day. WhatsApp us."
   },
   "/macbook-speaker-repair-dubai": {
-    "title": "MacBook Speaker Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Speaker Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook speaker repair in Dubai for crackling, distortion or no sound from one side. Drivers are replaceable on every MacBook, quoted first. WhatsApp us."
   },
   "/macbook-ssd-upgrade-dubai": {
@@ -1401,11 +1365,11 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook SSD upgrade in Dubai: Intel MacBook Pro 2013-2015 takes up to 2TB NVMe; M-series storage is soldered. Honest answer first. WhatsApp for a quote."
   },
   "/macbook-touch-bar-repair-dubai": {
-    "title": "MacBook Touch Bar Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Touch Bar Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook Touch Bar repair in Dubai: dead, flickering or half-lit strip, ghost touches and Touch ID faults. 1-2 days. Free diagnosis - call us."
   },
   "/macbook-touch-id-repair-dubai": {
-    "title": "MacBook Touch ID Repair Dubai. Free Diagnosis, Free Pickup",
+    "title": "MacBook Touch ID Repair Dubai. Free Diagnosis, Walk-In",
     "description": "MacBook Touch ID repair in Dubai: fingerprint won’t enrol, sensor ignores touch or the power button is dead. Honest advice on board pairing. WhatsApp us."
   },
   "/macbook-trackpad-repair-dubai": {
@@ -1429,8 +1393,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Move everything from your old MacBook to a new one without iCloud: Migration Assistant over a cable, a Time Machine restore, or a manual copy."
   },
   "/onsite-macbook-repair-dubai": {
-    "title": "Onsite MacBook Repair Dubai. Free Pickup and Delivery",
-    "description": "Onsite MacBook repair in Dubai: we collect from your home or office, free pickup and delivery across the mainland, most repairs back same day. WhatsApp us."
+    "title": "Onsite MacBook Repair Dubai. Paid Visits, When Available",
+    "description": "Onsite MacBook repair in Dubai: a paid technician visit when one is free, quoted on WhatsApp first. Or walk in to Media City or courier it to us. Ask us."
   },
   "/out-of-warranty-apple-repair-dubai": {
     "title": "Out of Warranty Apple Repair Dubai. Free Diagnosis",
@@ -1453,16 +1417,16 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "232+ five-star Google reviews of MacBook Repair Dubai - real customers, real repairs at our Media City workshop. Read them, then book a free diagnosis."
   },
   "/same-day-macbook-repair-dubai": {
-    "title": "Same-Day MacBook Repair Dubai — Free Diagnosis & Pickup",
-    "description": "Same-day MacBook repair in Dubai: screens, batteries and keyboards, with free pickup. Drop off by 2 pm, collect the same evening. Get a free quote."
+    "title": "Same-Day MacBook Repair Dubai — Free Diagnosis, Walk-In",
+    "description": "Same-day MacBook repair in Dubai: screens, batteries and keyboards at our Media City workshop. Drop off by 2 pm, collect the same evening. Get a quote."
   },
   "/sell-faulty-macbook-dubai": {
     "title": "Sell a Faulty MacBook in Dubai - Free Valuation, Same-Day",
-    "description": "Sell a faulty MacBook in Dubai - water-damaged, cracked, dead board or won't turn on. Free valuation, free collection, same-day payment. WhatsApp us."
+    "description": "Sell a faulty MacBook in Dubai - water-damaged, cracked, dead board or won't turn on. Free valuation, walk in to Media City, same-day payment. WhatsApp us."
   },
   "/sell-macbook-dubai": {
     "title": "Sell Your MacBook in Dubai - Free Valuation, Paid Same Day",
-    "description": "Sell your MacBook in Dubai, working or damaged. Free valuation, free collection across Dubai and same-day payment. WhatsApp a photo for an offer."
+    "description": "Sell your MacBook in Dubai, working or damaged. Free valuation, walk in to our Media City office and get same-day payment. WhatsApp a photo for an offer."
   },
   "/siri-stopped-working-on-macbook-air": {
     "title": "Siri Stopped Working on MacBook Air? Fixes That Work (2026)",
@@ -1498,7 +1462,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/trade-in-macbook-dubai": {
     "title": "Trade In Your MacBook in Dubai - Working or Faulty",
-    "description": "Trade in your old MacBook in Dubai, working or faulty. Free valuation, free collection, same-day payment or upgrade credit. WhatsApp for an offer."
+    "description": "Trade in your old MacBook in Dubai, working or faulty. Free valuation at our Media City office, same-day payment or upgrade credit. WhatsApp for an offer."
   },
   "/warranty": {
     "title": "MacBook Repair Warranty Dubai. Up to 12 Months",
@@ -1509,7 +1473,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook screen colour distortion (tints, washed-out or oversaturated colour) is usually Night Shift, True Tone or a wrong colour profile. Every fix."
   },
   "/blog/where-to-repair-macbook-dubai": {
-    "title": "Where To Repair MacBook Dubai. Free Diagnosis, Free Pickup",
+    "title": "Where To Repair MacBook Dubai. Free Diagnosis, Walk-In",
     "description": "Where to repair a MacBook in Dubai: Apple Store, an authorised centre or an independent specialist, and when each is the right pick. WhatsApp for a quote."
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
@@ -1746,7 +1710,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/blog/no-fix-no-charge-policy-explained": {
     "title": "No Fix No Charge Policy Explained: Fast 2026 Guide",
-    "description": "No fix no charge explained: free diagnosis, free pickup and return, and nothing to pay if we can’t solve the problem you reported. Questions? WhatsApp us."
+    "description": "No fix no charge explained: a free walk-in diagnosis, and nothing to pay if we can’t solve the problem you reported on your Apple device. WhatsApp us."
   },
   "/blog/protect-macbook-dubai-summer-heat": {
     "title": "Protect MacBook Dubai Summer Heat: Expert 2026 Guide",
@@ -1765,8 +1729,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Data recovery from a broken MacBook in Dubai (2026): what is recoverable from a dead or water-damaged Mac, realistic odds, and what to do first."
   },
   "/blog/free-pickup-delivery-dubai-how-it-works": {
-    "title": "Free Pickup Delivery Dubai: Fast 2026 Guide",
-    "description": "How free Apple repair pickup works in Dubai: send your model and issue on WhatsApp, our courier collects, we repair and return it. Message 055 741 3706."
+    "title": "MacBook Repair Courier Dubai: How to Get Your Mac to Us",
+    "description": "Our pickup service has ended. Walk in to Concord Tower in Media City, or book your own courier from Dubai or another emirate. WhatsApp us to get started."
   },
   "/blog/icloud-locked-iphone-what-to-do": {
     "title": "iCloud Locked iPhone: Expert Options Guide 2026",
@@ -1850,7 +1814,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/blog/ramadan-hours-apple-repair-dubai": {
     "title": "Ramadan Hours Apple Repair Dubai: Expert 2026 Guide",
-    "description": "Ramadan hours Apple repair Dubai 2026, our adjusted timings (Feb 17-Mar 19), pickup availability, and how to book a repair during the holy month."
+    "description": "Ramadan hours for Apple repair in Dubai 2026: our adjusted timings (Feb 17-Mar 19), walk-in visits and how to book a repair in the holy month. WhatsApp us."
   },
   "/blog/should-i-buy-refurbished-macbook-dubai": {
     "title": "Refurbished MacBook Dubai: Worth It? (2026 Honest Guide)",
@@ -1958,7 +1922,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-air-screen-replacement-dubai": {
     "title": "MacBook Air Screen Replacement Dubai — Same-Day Service",
-    "description": "MacBook Air screen replacement Dubai. M1–M5 Liquid Retina and Intel models, True Tone preserved. Same-day on most models. Free pickup Dubai-wide."
+    "description": "MacBook Air screen replacement Dubai. M1–M5 Liquid Retina and Intel models, True Tone preserved. Same-day on most models. Walk in or WhatsApp for a quote."
   },
   "/macbook-air-battery-replacement-dubai": {
     "title": "MacBook Air Battery Replacement Dubai — Same-Day Service",
@@ -2235,13 +2199,13 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Mac Studio M5 Ultra (2026) repair in Dubai: logic board, ports, SSD data recovery and thermal service. Free diagnosis, written warranty. Call us."
   },
   "/macbook-repair-dubai-design-district": {
-    "title": "MacBook Repair Dubai Design District — Same-Day, Free Pickup"
+    "title": "MacBook Repair Dubai Design District — Same-Day, Walk-In"
   },
   "/macbook-repair-dubai-investment-park": {
-    "title": "MacBook Repair Dubai Investment Park — Same-Day, Free Pickup"
+    "title": "MacBook Repair Dubai Investment Park — Same-Day, Walk-In"
   },
   "/macbook-repair-jumeirah-golf-estates": {
-    "title": "MacBook Repair Jumeirah Golf Estates — Free Pickup"
+    "title": "MacBook Repair Jumeirah Golf Estates — Walk-In Workshop"
   },
   "/macbook-system-crashing-repair-dubai": {
     "title": "MacBook System Crashing Repair Dubai — Kernel Panics Fixed",
@@ -2274,15 +2238,15 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-air-m1-repair-dubai": {
     "title": "MacBook Air M1 Repair Dubai — Screen, Battery & Logic Board",
-    "description": "MacBook Air M1 (A2337) repair in Dubai: screen, swollen battery, charging port and logic board faults at our Media City workshop. Free pickup. WhatsApp us."
+    "description": "MacBook Air M1 (A2337) repair in Dubai: screen, swollen battery, charging port and logic board faults at our Media City workshop. Walk in or WhatsApp us."
   },
   "/macbook-air-m3-repair-dubai": {
     "title": "MacBook Air M3 Repair Dubai — Screen, Battery & Logic Board",
-    "description": "MacBook Air M3 repair in Dubai: screen, battery and logic board repairs at our Media City workshop. Free diagnosis, free pickup. Message us on WhatsApp."
+    "description": "MacBook Air M3 repair in Dubai: screen, battery and logic board repairs at our Media City workshop. Walk in for a free diagnosis. Message us on WhatsApp."
   },
   "/macbook-air-m4-repair-dubai": {
     "title": "MacBook Air M4 Repair Dubai — Screen, Battery & Logic Board",
-    "description": "MacBook Air M4 repair in Dubai for screen, battery and logic board faults. Independent Media City workshop since 2004, free pickup. WhatsApp for a quote."
+    "description": "MacBook Air M4 repair in Dubai for screen, battery and logic board faults. Independent Media City workshop since 2004, walk-in service. WhatsApp us today."
   },
   "/macbook-air-m5-repair-dubai": {
     "title": "MacBook Air M5 Repair Dubai — Screen, Battery & Logic Board",
@@ -2296,64 +2260,64 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "title": "Mac mini M2 & M2 Pro Repair Dubai (2023) — Free Diagnosis"
   },
   "/macbook-repair-al-furjan": {
-    "description": "MacBook repair in Al Furjan, 18 minutes from our workshop, near Al Furjan Metro and Murano Residences. Free pickup, same-day on most repairs. WhatsApp us."
+    "description": "MacBook repair for Al Furjan, 18 minutes from our workshop, near Al Furjan Metro and Murano Residences. Walk in, same-day on most repairs. WhatsApp us."
   },
   "/macbook-repair-al-jaddaf": {
-    "description": "MacBook repair in Al Jaddaf: free pickup from Jaddaf Waterfront and Culture Village, 25 minutes from Media City. Warranty up to 12 months. Ask on WhatsApp."
+    "description": "MacBook repair for Al Jaddaf, Jaddaf Waterfront and Culture Village, 25 minutes from Media City. Walk in, warranty up to 12 months. Ask on WhatsApp."
   },
   "/macbook-repair-al-nahda": {
-    "description": "MacBook repair in Al Nahda: free pickup near Al Nahda Pond Park and the Metro, 35 minutes from Concord Tower. Free diagnosis. Message us on WhatsApp."
+    "description": "MacBook repair for Al Nahda, near Al Nahda Pond Park and the Metro, 35 minutes from Concord Tower. Walk in for a free diagnosis. Message us on WhatsApp."
   },
   "/macbook-repair-al-quoz": {
-    "description": "MacBook repair in Al Quoz, 14 minutes from Concord Tower: free pickup from Alserkal Avenue, Times Square Center and the industrial blocks. Ask on WhatsApp."
+    "description": "MacBook repair for Al Quoz, 14 minutes from Concord Tower, from Alserkal Avenue, Times Square Center and the industrial blocks. Walk in. Ask on WhatsApp."
   },
   "/macbook-repair-al-qusais": {
-    "description": "MacBook repair in Al Qusais: free pickup near Al Qusais Metro and the industrial area, repaired in Media City and returned. Free diagnosis. WhatsApp us."
+    "description": "MacBook repair for Al Qusais, near Al Qusais Metro and the industrial area: walk in to our Media City workshop for a free diagnosis. WhatsApp us today."
   },
   "/macbook-repair-al-safa": {
-    "description": "MacBook repair in Al Safa, 15 minutes from Media City: free pickup from Safa Park, Al Wasl Road and the villas, same-day on most repairs. WhatsApp to book."
+    "description": "MacBook repair for Al Safa, 15 minutes from Media City, from Safa Park, Al Wasl Road and the villas. Walk in, same-day on most repairs. WhatsApp to book."
   },
   "/macbook-repair-al-warqa": {
-    "description": "MacBook repair in Al Warqa: free pickup near Al Warqa City Mall and Park, 35 minutes from Media City, warranty up to 12 months. Message us on WhatsApp."
+    "description": "MacBook repair for Al Warqa, near Al Warqa City Mall and Park, 35 minutes from Media City. Walk in, warranty up to 12 months. Message us on WhatsApp."
   },
   "/macbook-repair-arjan": {
-    "description": "MacBook repair in Arjan, 20 minutes from Media City: free pickup near Dubai Miracle Garden and Dubai Science Park, free diagnosis first. Quote on WhatsApp."
+    "description": "MacBook repair for Arjan, 20 minutes from Media City, near Dubai Miracle Garden and Dubai Science Park. Walk in for a free diagnosis. Quote on WhatsApp."
   },
   "/macbook-repair-damac-hills": {
-    "description": "MacBook repair in Damac Hills: free pickup near Trump International Golf Club and the Carson towers, 25 minutes from Media City, same day. WhatsApp us."
+    "description": "MacBook repair for Damac Hills, near Trump International Golf Club and the Carson towers, 25 minutes from Media City. Walk in, same day. WhatsApp us."
   },
   "/macbook-repair-dubai-south": {
-    "description": "MacBook repair in Dubai South: free pickup near Expo City, The Pulse and Emaar South, 32 minutes from our Media City workshop. Message us on WhatsApp."
+    "description": "MacBook repair for Dubai South, near Expo City, The Pulse and Emaar South, 32 minutes from our Media City workshop. Walk in. Message us on WhatsApp."
   },
   "/macbook-repair-garhoud": {
-    "description": "MacBook repair in Garhoud, near Dubai Airport, Deira City Centre and the Aviation Club. Free pickup, same-day on most repairs. WhatsApp us for a quote."
+    "description": "MacBook repair for Garhoud, near Dubai Airport, Deira City Centre and the Aviation Club. Walk in to Media City, same-day on most repairs. WhatsApp us."
   },
   "/macbook-repair-meydan": {
-    "description": "MacBook repair in Meydan and Nad Al Sheba: free pickup near the Racecourse, 25 minutes from Media City. Same-day on most repairs. WhatsApp for a quote."
+    "description": "MacBook repair for Meydan and Nad Al Sheba, near the Racecourse, 25 minutes from Media City. Walk in, same-day on most repairs. WhatsApp for a quote."
   },
   "/macbook-repair-mudon": {
-    "description": "MacBook repair in Mudon: free pickup from Arabella, Rahat and the Community Centre, 28 minutes from Media City. Same-day on most repairs. WhatsApp us."
+    "description": "MacBook repair for Mudon, from Arabella, Rahat and the Community Centre, 28 minutes from Media City. Walk in, same-day on most repairs. WhatsApp us."
   },
   "/macbook-repair-muhaisnah": {
-    "description": "MacBook repair in Muhaisnah: free pickup near Madina Mall and the residential blocks, 36 minutes from our Media City workshop. WhatsApp for a quote."
+    "description": "MacBook repair for Muhaisnah, near Madina Mall and the residential blocks, 36 minutes from our Media City workshop. Walk in. WhatsApp for a quote."
   },
   "/macbook-repair-oud-metha": {
-    "description": "MacBook repair in Oud Metha, near American Hospital and Oud Metha Metro. Free pickup, same-day on most repairs, written warranty. WhatsApp us for a quote."
+    "description": "MacBook repair for Oud Metha, near American Hospital and Oud Metha Metro. Walk in to Media City, same-day on most repairs, written warranty. WhatsApp us."
   },
   "/macbook-repair-rashidiya": {
-    "description": "MacBook repair in Rashidiya: free pickup near Centrepoint Metro, Rashidiya Park and the Terminal 3 side of the airport. Same-day on most repairs. WhatsApp."
+    "description": "MacBook repair for Rashidiya, near Centrepoint Metro, Rashidiya Park and the Terminal 3 side of the airport. Walk in to Media City. WhatsApp for a quote."
   },
   "/macbook-repair-satwa": {
-    "description": "MacBook repair in Satwa: free pickup near Satwa Roundabout, Al Diyafah Street and Al Hudaiba, 20 minutes from Media City. Free diagnosis, WhatsApp us."
+    "description": "MacBook repair for Satwa, near Satwa Roundabout, Al Diyafah Street and Al Hudaiba, 20 minutes from Media City. Walk in for a free diagnosis. WhatsApp us."
   },
   "/macbook-repair-town-square": {
-    "description": "MacBook repair in Town Square: free pickup from Town Square Park, Hayat Boulevard and the Zahra and Safi apartments. Same-day on most repairs. WhatsApp us."
+    "description": "MacBook repair for Town Square, from Town Square Park, Hayat Boulevard and the Zahra and Safi apartments. Walk in, same-day on most repairs. WhatsApp us."
   },
   "/macbook-repair-umm-suqeim": {
-    "description": "MacBook repair in Umm Suqeim, 12 minutes from Media City. Free pickup near Burj Al Arab, Madinat Jumeirah and Umm Suqeim Beach, same-day repair. WhatsApp."
+    "description": "MacBook repair for Umm Suqeim, 12 minutes from Media City, near Burj Al Arab, Madinat Jumeirah and Umm Suqeim Beach. Walk in, same-day repair. WhatsApp."
   },
   "/macbook-repair-zabeel": {
-    "description": "MacBook repair in Za’abeel: free pickup near the Dubai Frame, Zabeel Park, One Za’abeel and World Trade Centre, 22 minutes from Media City. WhatsApp us."
+    "description": "MacBook repair for Za’abeel, near the Dubai Frame, Zabeel Park, One Za’abeel and World Trade Centre, 22 minutes from Media City. Walk in. WhatsApp us."
   },
   "/blog/macbook-air-keyboard-not-working-dubai": {
     "description": "MacBook Air keyboard not working in Dubai? Butterfly (2018-2019) and scissor keys fail differently. See the fix for your model, or WhatsApp for a repair."

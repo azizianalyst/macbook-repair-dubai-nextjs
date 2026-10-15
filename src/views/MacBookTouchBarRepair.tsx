@@ -49,7 +49,7 @@ export default function MacBookTouchBarRepair() {
       warrantyDays={365}
       warrantyBullets={[
         "Covers the Touch Bar strip, its flex cable and the fit.",
-        "Excludes new liquid contact after delivery.",
+        "Excludes new liquid contact after handover.",
         "Free re-fit if the same fault returns inside 12 months.",
       ]}
       faqs={[
@@ -58,7 +58,7 @@ export default function MacBookTouchBarRepair() {
         { q: "How much does Touch Bar repair cost in Dubai?", a: "The strip replacement on the 13″ and 15″ Pro is one flat quoted job, parts and labour included, VAT-inclusive. If the fault is the Touch Bar controller on the logic board rather than the strip itself, that's a board-level repair and we quote it after diagnosis - usually still under what Apple charges for a full top-case swap." },
         { q: "Will Touch ID still work after the repair?", a: "Yes, when the fault is the strip. The Touch ID sensor sits at the right end and is paired to your logic board - we keep your original sensor wherever possible so enrolment stays intact. If the sensor itself is damaged, see our Touch ID repair page; pairing on T2 Macs can need an extra step." },
         { q: "Do you repair the Touch Bar on the 14″ or 16″ MacBook Pro?", a: "Those models don't have a Touch Bar - Apple replaced it with physical function keys from the M1 Pro generation onward. If your function row isn't working on a 14″ or 16″, it's a keyboard or board fault. WhatsApp the model and we'll point you to the right fix." },
-        { q: "How long does it take?", a: "Most Touch Bar swaps are done in 1-2 days once the part's in hand, and we stock the common 13″ and 15″ strips. Board-level controller repairs run 2-4 days. Free pickup and delivery across Dubai mainland, so you don't need to come to Media City yourself." },
+        { q: "How long does it take?", a: "Most Touch Bar swaps are done in 1-2 days once the part's in hand, and we stock the common 13″ and 15″ strips. Board-level controller repairs run 2-4 days. Can't get to Media City? Book any same-day courier app, hand it over, and WhatsApp us the tracking link." },
       ]}
       reviewNames={["Lloyd Stevens", "Daniel Layzell", "Akshay Dalal"]}
       related={[

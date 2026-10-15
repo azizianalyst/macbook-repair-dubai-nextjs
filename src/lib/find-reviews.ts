@@ -2,6 +2,11 @@
 // keeps page files terse and audit-able.
 import { REVIEWS, type TaggedReview, type ReviewService } from "@/content/reviews";
 
+// Free pickup and delivery ended on 2026-10-15. Reviews that praise it stay on /reviews
+// verbatim, but service pages don't showcase them as if the service were still offered.
+export const ENDED_SERVICE_RE = /\b(free )?(pick-?up|collection|delivery|courier|door[- ]to[- ]door|collected)\b/i;
+export const mentionsEndedService = (text?: string) => Boolean(text && ENDED_SERVICE_RE.test(text));
+
 // Map a page path to the device tag(s) whose reviews belong on it, so an iPhone page
 // never shows a MacBook review under "Reviews for this service". Empty = no filter.
 export function reviewDevicesForPath(path: string): ReviewService[] {
@@ -28,7 +33,7 @@ export function pickReviews(
   // Rating-only reviews (no written text) render as nothing in ReviewGrid, which drops
   // them AFTER selection - so a seed that landed on three of them produced an empty
   // "What customers say" section (/macbook-pro-repair-dubai, 2026-09-25). Never pick them.
-  const hasText = (r: TaggedReview) => Boolean(r.text && r.text.trim());
+  const hasText = (r: TaggedReview) => Boolean(r.text && r.text.trim()) && !mentionsEndedService(r.text);
 
   const out: TaggedReview[] = [];
   const used = new Set<string>();

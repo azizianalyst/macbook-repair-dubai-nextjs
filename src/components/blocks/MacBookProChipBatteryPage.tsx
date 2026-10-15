@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
-  Search, Truck, Check, AlertTriangle,
+  Search, MapPin, Check, AlertTriangle,
   HardDrive, Wrench, BadgeCheck, BatteryCharging,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -180,7 +180,7 @@ export default function MacBookProChipBatteryPage({
               { Icon: Search,          label: "Free battery health check" },
               { Icon: BatteryCharging, label: "BMS re-pair included" },
               { Icon: BadgeCheck,      label: "No fix, no charge" },
-              { Icon: Truck,           label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,           label: "Walk-in workshop, Media City" },
               { Icon: Clock,           label: prices[0]?.timeline ?? "Same day · 2 hours" },
               { Icon: Star,            label: "Trusted since 2004" },
             ].map(({ Icon, label }) => (
@@ -378,7 +378,7 @@ export default function MacBookProChipBatteryPage({
                 <span>Free battery health check</span>
                 <span>3-month warranty</span>
                 <span>BMS re-pair included</span>
-                <span>Free pickup Dubai-wide</span>
+                <span>Walk-in workshop, Media City</span>
               </div>
             </div>
             <FAQAccordion items={faqs} injectSchema />

@@ -83,9 +83,9 @@ export default function IPhone17Repair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in or courier",   body: "Concord Tower, Media City, or a same-day courier you book." },
         { title: "Diagnose + repair",    body: "Standard same day; Camera Control 2-3 days for parts." },
-        { title: "QC + return",          body: "ProMotion, AOD, Wi-Fi 7, Camera Control gestures, USB-C and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + handover",          body: "ProMotion, AOD, Wi-Fi 7, Camera Control gestures, USB-C and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

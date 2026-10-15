@@ -56,7 +56,7 @@ export default function MacBookAirIntelBatteryReplacement() {
         },
         {
           title: "Swollen cell pushing up the trackpad",
-          body: "Lithium-ion swelling is more common on older Intel Air cells. A spongy or unresponsive trackpad is the first sign. Stop using immediately. Free same-day pickup — the cell is extracted and replaced safely at the workshop. Message us on WhatsApp for the price.",
+          body: "Lithium-ion swelling is more common on older Intel Air cells. A spongy or unresponsive trackpad is the first sign. Stop using it now and bring it to our Media City workshop, where the cell is extracted and replaced safely. Message us on WhatsApp for the price.",
         },
         {
           title: "Battery drains very fast in Dubai summer",

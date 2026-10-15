@@ -9,7 +9,7 @@ import {
   Star, MessageCircle, Phone,
   Monitor, BatteryCharging, Droplets, PlugZap, Database,
   Cpu, Camera, Home,
-  ShieldCheck, Clock, Search, BadgeCheck, Truck, Layers,
+  ShieldCheck, Clock, Search, BadgeCheck, MapPin, Layers,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -59,7 +59,7 @@ const SERVICES: { title: string; body: string; Icon: LucideIcon; href: string }[
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Search,      title: "Free diagnosis",          body: "WhatsApp a photo and your model, walk in, or book a free pickup. We test the iPad and tell you what is wrong, free, even if you decide not to repair." },
+  { Icon: Search,      title: "Free diagnosis",          body: "WhatsApp a photo and your model, then walk in or send it by courier. We test the iPad and tell you what is wrong, free, even if you decide not to repair." },
   { Icon: Clock,       title: "Written quote first",     body: "Price, part grade (genuine or quality-tested) and timing come in writing on WhatsApp. Nothing is repaired until you approve." },
   { Icon: ShieldCheck, title: "Repair, test, warranty",  body: "We test display, touch, Pencil, cameras, charging and Wi-Fi, then return the iPad with the written warranty for that repair type." },
 ];
@@ -113,7 +113,7 @@ const FAQS = [
   },
   {
     q: "How long does an iPad repair take?",
-    a: "Screen, battery and charging-port jobs are often finished the same day when the part is on the shelf. Parts for the newest iPad Pro and iPad Air are usually ordered for your model, which adds a few working days. Board and liquid-damage work takes longer. We confirm timing before you drop off.",
+    a: "Screen, battery and charging-port jobs are often finished the same day when the part is on the shelf. Parts for the newest iPad Pro and iPad Air are usually ordered for your model, which adds a few working days. Board and liquid-damage work takes longer. We confirm timing before you bring it in.",
   },
   {
     q: "Will I lose my data during an iPad repair?",
@@ -128,8 +128,8 @@ const FAQS = [
     a: "Yes. Alongside the current line-up we work on older generations, from recent iPad Pro, Air and mini models back to the iPad 2. Parts for the oldest models are sourced per job, so we confirm availability on WhatsApp before you bring the iPad in.",
   },
   {
-    q: "Do you collect iPads from outside Dubai?",
-    a: "Yes. Pickup and return are free anywhere in Dubai. From Sharjah or Abu Dhabi we arrange courier collection, usually 1 to 2 days door to door. Message your location on WhatsApp and we book it.",
+    q: "Can I send my iPad in if I can't come to the workshop?",
+    a: "Yes. Book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link - it reaches us within the day, from elsewhere in Dubai or from Sharjah. Once it's fixed, collect it from the workshop or book a courier to send it back.",
   },
 ];
 
@@ -223,13 +223,13 @@ export default function IPadRepairHub() {
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {REVIEW_COUNT}+ Google reviews</span>
             <span>·</span><span>Genuine or quality-tested parts</span>
-            <span>·</span><span>Free pickup in Dubai</span>
+            <span>·</span><span>Walk in, Dubai Media City</span>
           </p>
         </Hero>
 
         <QuickAnswer
           question="Where can I get an iPad repaired in Dubai?"
-          answer="MacBook Repair Dubai is an independent workshop at Concord Tower, Dubai Media City, repairing every iPad from the current iPad Pro (M5), iPad Air (M4), iPad mini (A17 Pro) and iPad (A16) back to older generations. Diagnosis is free, the quote comes in writing on WhatsApp before any work, and pickup across Dubai is free."
+          answer="MacBook Repair Dubai is an independent workshop at Concord Tower, Dubai Media City, repairing every iPad from the current iPad Pro (M5), iPad Air (M4), iPad mini (A17 Pro) and iPad (A16) back to older generations. Diagnosis is free, the quote comes in writing on WhatsApp before any work, and you can walk in without an appointment."
         />
 
         <TakeawaysByline
@@ -242,7 +242,7 @@ export default function IPadRepairHub() {
             "Air, mini and Pro screens are fully laminated, so a crack means a full display assembly; the standard iPad's glass can often be replaced on its own.",
             "Screen, battery and charging-port repairs leave your data in place; we do not erase an iPad for those jobs.",
             "Warranty depends on the repair: up to 12 months on hardware, 3 months on batteries, 90 days on screens, 15 days on board, liquid and data work.",
-            "Free diagnosis and a written WhatsApp quote before any work; free pickup and delivery across Dubai.",
+            "Free diagnosis and a written WhatsApp quote before any work; walk in, or send it with a same-day courier you book.",
           ]}
         />
 
@@ -252,7 +252,7 @@ export default function IPadRepairHub() {
             {[
               { Icon: Search,     label: "Free iPad diagnosis" },
               { Icon: BadgeCheck, label: "No fix, no charge" },
-              { Icon: Truck,      label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,     label: "Walk in, Dubai Media City" },
               { Icon: ShieldCheck,label: "Genuine or quality-tested parts" },
               { Icon: Clock,      label: "Written quote first" },
               { Icon: Star,       label: "Trusted since 2004" },
@@ -397,7 +397,7 @@ export default function IPadRepairHub() {
               One workshop, not a chain: {NAP.street}, {NAP.area}. Open Monday to Saturday, {weekdayHours}; Sunday {sunday.toLowerCase()}.
             </p>
             <p className="text-[15px] text-text-muted leading-relaxed">
-              From Media City, JLT, Marina or Al Barsha, walking in is quickest; message first so we can check the part. Anywhere else in Dubai we collect and return free, and from Sharjah or Abu Dhabi we arrange a courier. More on our{" "}
+              From Media City, JLT, Marina or Al Barsha, walking in is quickest; message first so we can check the part. From further away, book a same-day courier yourself and WhatsApp us the tracking link. More on our{" "}
               <Link to="/apple-repair-near-me-dubai/" className={inlineLink}>Apple repair near me</Link> page.
             </p>
           </div>
@@ -434,7 +434,7 @@ export default function IPadRepairHub() {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk in, no appointment</span>
               </div>
             </div>
             <FAQAccordion items={FAQS} injectSchema />
@@ -467,7 +467,7 @@ export default function IPadRepairHub() {
         <CtaBand
           eyebrow="Ready to fix your iPad?"
           headline="Free diagnosis · No fix, no charge · Warranty up to 12 months"
-          description="Send your iPad model and a photo of the fault. We reply with a quote and book a walk-in or a free pickup across Dubai."
+          description="Send your iPad model and a photo of the fault. We reply with a quote, then you walk in or send it by courier."
           whatsappHref={ipadWa(PREFILL)}
         />
 

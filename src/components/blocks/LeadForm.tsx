@@ -399,7 +399,7 @@ export function LeadForm({
             </div>
           </div>
           <div>
-            <Label htmlFor="area" className="text-text-muted">Your area in Dubai <span className="text-text-faint">(optional — for free pickup)</span></Label>
+            <Label htmlFor="area" className="text-text-muted">Your area in Dubai <span className="text-text-faint">(optional)</span></Label>
             <Input id="area" value={form.area} maxLength={80} onChange={(e) => set("area", e.target.value)}
               className={FIELD} placeholder="e.g. Dubai Marina, Business Bay" />
           </div>

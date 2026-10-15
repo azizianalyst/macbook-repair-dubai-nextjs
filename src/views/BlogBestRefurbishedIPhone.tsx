@@ -104,7 +104,7 @@ export default function BlogBestRefurbishedIPhone() {
             rows={[
               { model: "Apple UAE refurb store", ours: "1-year warranty, new battery, original packaging", apple: "Limited stock, priced above the open market", note: "Lowest" },
               { model: "Carrefour / Sharaf DG", ours: "Trusted retailer, easy returns", apple: "Selection limited, prices similar to new", note: "Low" },
-              { model: "Us (workshop refurb)", ours: "Tested, battery replaced, 6-month warranty, free pickup", apple: "Stock varies", note: "Low" },
+              { model: "Us (workshop refurb)", ours: "Tested, battery replaced, 6-month warranty, walk-in workshop", apple: "Stock varies", note: "Low" },
               { model: "Dubizzle / private", ours: "Cheapest", apple: "No warranty, iCloud-lock risk, battery unknown, stolen-device risk", note: "High" },
               { model: "WhatsApp resellers", ours: "Sometimes good prices", apple: "Most are box-refurbs, no warranty", note: "Very high" },
             ]}

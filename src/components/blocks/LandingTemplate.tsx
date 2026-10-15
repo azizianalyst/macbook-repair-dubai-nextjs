@@ -86,7 +86,7 @@ export type LandingReviews = {
   ctaLabel?: string;
 };
 
-/** A column of quick facts (opening hours, pickup, location, payment) - AI-citable. */
+/** A column of quick facts (opening hours, getting here, location, payment) - AI-citable. */
 export type LandingInfoColumn = { icon?: LucideIcon; title: string; lines: string[] };
 
 /** A related blog post / guide card. */
@@ -146,7 +146,7 @@ export type LandingTemplateProps = {
   linkHub?: { heading?: string; clusters: LinkHubCluster[] };
   /** Customer reviews + aggregate rating (social proof). Renders after case studies. */
   reviews?: LandingReviews;
-  /** Quick-facts columns (opening hours, pickup, location, payment) - the things people ask AI. */
+  /** Quick-facts columns (opening hours, getting here, location, payment) - the things people ask AI. */
   keyInfo?: { heading?: string; columns: LandingInfoColumn[] };
   /** Related blog posts / guides (renders a card grid before related services). */
   relatedPosts?: { heading?: string; posts: LandingPost[] };
@@ -462,12 +462,12 @@ export default function LandingTemplate({
         </Reveal>
       )}
 
-      {/* KEY INFO - hours, pickup, location, payment (high-intent, AI-citable facts) */}
+      {/* KEY INFO - hours, getting here, location, payment (high-intent, AI-citable facts) */}
       {keyInfo && keyInfo.columns.length > 0 && (
         <Reveal as="section" className="py-3xl lg:py-4xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
-              {keyInfo.heading ?? "Hours, pickup & location"}
+              {keyInfo.heading ?? "Hours, getting here & location"}
             </h2>
             <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
               {keyInfo.columns.map((col, i) => {
@@ -657,7 +657,7 @@ export default function LandingTemplate({
         <FinalCTA
           eyebrow="Free diagnosis"
           headline="Book your Apple repair in Dubai today"
-          description="Send your model and a photo of the issue on WhatsApp for a free quote. Free pickup across Dubai mainland, written warranty up to 12 months."
+          description="Send your model and a photo of the issue on WhatsApp for a free quote, then walk in to our Media City workshop. Written warranty up to 12 months."
           primary={DEFAULT_PRIMARY}
           secondary={DEFAULT_SECONDARY}
         />

@@ -23,7 +23,7 @@
  */
 import {
   Keyboard, Droplets, PlugZap, MousePointer2, Fingerprint, Fan,
-  Search, ShieldCheck, Clock, Truck,
+  Search, ShieldCheck, Clock, MapPin,
 } from "lucide-react";
 
 import { AziziMoneyPage, InLink, WaLink, waHref } from "@/components/azizi/AziziMoneyPage";
@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Do you repair MacBook Pros from Abu Dhabi or Sharjah?",
-    a: "Yes. We have no branch outside Dubai, but we can arrange courier collection from Sharjah or Abu Dhabi and confirm any charge before it is booked. In mainland Dubai pickup is free, or you can walk in.",
+    a: "Yes, at our Dubai workshop - we have no branch outside Dubai. Customers from Sharjah and Abu Dhabi WhatsApp photos and the serial number first for a quote, then either walk in to Concord Tower, Dubai Media City, or book a courier themselves to send the MacBook to the workshop and WhatsApp us the tracking link.",
   },
 ];
 
@@ -206,7 +206,7 @@ export default function MacBookProRepair() {
           { icon: Search, title: "Free diagnosis", body: "The actual fault is found before any quote." },
           { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries when the part is in stock." },
           { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
-          { icon: Truck, title: "Free pickup", body: "Anywhere in mainland Dubai, or walk in." },
+          { icon: MapPin, title: "Walk in", body: "Concord Tower, Dubai Media City. Parking on site." },
         ],
       }}
 

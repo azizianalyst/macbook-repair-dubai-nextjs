@@ -97,7 +97,7 @@ export default function BlogAppleCareVsIndependent() {
             </Link>{" "}
             are quoted before any work, so you can compare with Apple's out-of-warranty quote. Diagnosis is free, the
             written warranty is 90 days on screens and 3 months on batteries (with an 80% capacity guarantee), and most jobs are same-day
-            with free pickup across Dubai mainland. Message us on WhatsApp for today's exact price on your
+            when you walk in to our Dubai Media City workshop. Message us on WhatsApp for today's exact price on your
             model, or see every service on our{" "}
             <Link to="/pricing" className="text-accent font-semibold hover:underline">
               services page

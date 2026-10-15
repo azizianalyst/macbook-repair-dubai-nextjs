@@ -42,12 +42,12 @@ export default function MacBookWifiBluetoothRepair() {
         { title: "Free diagnosis", body: "We rule out macOS and network config first, then test the antennas, the wireless module and the board power rails." },
         { title: "Written quote", body: "Software fix, antenna/module repair, or board-level work - the price is agreed before any work begins." },
         { title: "Repair", body: "Antenna or wireless module replaced, or board-level micro-soldering, then the display is resealed properly." },
-        { title: "Quality test", body: "We confirm stable Wi-Fi throughput and reliable Bluetooth pairing before pickup." },
+        { title: "Quality test", body: "We confirm stable Wi-Fi throughput and reliable Bluetooth pairing before you collect it." },
       ]}
       warrantyDays={365}
       warrantyBullets={[
         "Covers the antenna / wireless module and fitment.",
-        "Excludes new liquid or impact damage after delivery.",
+        "Excludes new liquid or impact damage after collection.",
         "Free re-check if the fault returns inside 12 months.",
       ]}
       faqs={[

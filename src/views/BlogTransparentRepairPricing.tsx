@@ -98,7 +98,7 @@ export default function BlogTransparentRepairPricing() {
             <li>All labour required for the planned repair.</li>
             <li>Adhesives, screws, gaskets, calibration tools.</li>
             <li>Post-repair quality check + battery / display diagnostic.</li>
-            <li>Pickup &amp; delivery if you opted in.</li>
+            <li>A free diagnosis before any of the above.</li>
             <li>The warranty of up to 12 months.</li>
           </ul>
 
@@ -118,8 +118,8 @@ export default function BlogTransparentRepairPricing() {
 
           <h2 id="no-fix-no-charge">No-fix-no-charge policy</h2>
           <p>
-            If we cannot solve your problem, you pay <strong>nothing</strong> - not even diagnosis,
-            not even pickup. Read the full policy in our{" "}
+            If we cannot solve your problem, you pay <strong>nothing</strong> - not even diagnosis.
+            Read the full policy in our{" "}
             <Link to="/blog/no-fix-no-charge-policy-explained" className="text-accent font-semibold hover:underline">
               no-fix-no-charge breakdown
             </Link>

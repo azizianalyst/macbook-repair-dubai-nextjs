@@ -147,7 +147,7 @@ export default function IPhoneBackGlassRepair() {
         ]}
       />
 
-      <PageSection id="warranty" eyebrow="Warranty and pickup" title="Warranty, pickup and what to do before you come in">
+      <PageSection id="warranty" eyebrow="Warranty and visiting" title="Warranty, visiting and what to do before you come in">
         <p>
           <strong>Warranty:</strong> back glass is hardware work, with a written warranty of up to 12 months on the part
           and our fit. A new crack from a drop is accidental damage and isn&apos;t covered. See the{" "}
@@ -157,8 +157,8 @@ export default function IPhoneBackGlassRepair() {
           <strong>Before you come in:</strong> back up the phone, and put clear tape over sharp cracks.
         </p>
         <p>
-          <strong>Getting it to us:</strong> walk in at {NAP.street}, {NAP.area}, or book free pickup anywhere in Dubai.
-          Abu Dhabi and Sharjah customers use courier collection to our Dubai workshop.
+          <strong>Getting it to us:</strong> walk in at {NAP.street}, {NAP.area}, no appointment needed.
+          Coming from Abu Dhabi or Sharjah? Send it by courier: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link.
         </p>
       </PageSection>
     </IPhoneMoneyPage>

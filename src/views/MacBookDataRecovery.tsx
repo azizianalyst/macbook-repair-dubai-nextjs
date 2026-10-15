@@ -114,8 +114,8 @@ const FAQS: FAQ[] = [
     a: "Yes - Time Machine restore plus iCloud Photo Library re-download is included in the migration service. The workshop signs into your iCloud on the new MacBook (with you present), waits for the photo download, and verifies the count matches your old library before handover." },
   { q: "Is my data confidential during recovery?",
     a: "Yes. The workshop signs an NDA on request. All recovery work happens on isolated, air-gapped imaging stations - no internet connection during the recovery process. Recovered files are stored on encrypted drives, deleted with secure erase 7 days after handover." },
-  { q: "Do you offer pickup for data recovery jobs?",
-    a: "Yes, free pickup and delivery across Dubai mainland. Same-hour pickup for emergency cases. The dead MacBook is transported in a static-free anti-shock case to prevent any further damage in transit." },
+  { q: "Can I send a dead MacBook for data recovery if I can't come in?",
+    a: "Yes. Book any same-day courier app, pack the MacBook powered off in a padded bag or box, and WhatsApp us the tracking link. It reaches us within the day. If you're nearby, walking in to our Media City workshop is just as quick." },
 ];
 
 const COMPARISON = [
@@ -123,7 +123,7 @@ const COMPARISON = [
   ["Logical recovery",               "Free diagnosis, then a quote",               "Not offered - back up first"],
   ["T2 recovery",                    "Original board brought back up",             "Board replaced; data lost with it"],
   ["Apple silicon recovery",         "Original board repaired",                    "Board replaced; data lost with it"],
-  ["Same-hour emergency pickup",     "Yes",                                        "No, customer must courier"],
+  ["Walk in, no appointment",        "Yes, Concord Tower, Dubai Media City",       "Appointment usually required"],
   ["File preview before payment",    "Yes",                                        "Not offered"],
   ["NDA available",                  "Yes, on request",                            "Apple privacy policy only"],
   ["Original device returned intact","Yes",                                        "Sometimes wiped during repair"],

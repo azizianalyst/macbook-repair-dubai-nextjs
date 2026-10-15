@@ -158,7 +158,7 @@ export default function MacStudioRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Studio repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, free citywide pickup, OEM-grade parts and a written warranty up to 12 months."
+        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, walk-in service across from Media City Metro, OEM-grade parts and a written warranty up to 12 months."
       />
 
       <USPStrip tone="dark" />
@@ -297,8 +297,8 @@ export default function MacStudioRepair() {
         <FAQAccordion items={FAQS} injectSchema />
         <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+          <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM. Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM.</p>
+          <p className="text-[15px] text-text-muted">Sunday: closed.</p>
         </div>
       </section>
 

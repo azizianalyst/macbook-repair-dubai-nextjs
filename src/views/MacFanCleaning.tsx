@@ -48,7 +48,7 @@ export default function MacFanCleaning() {
       warrantyBullets={[
         "15-day workmanship warranty.",
         "If fan noise returns inside those 15 days we re-clean for free.",
-        "Free pickup for Mac Pro across Dubai mainland - they're heavy.",
+        "Mac Pro is heavy, so there is parking on site at Concord Tower.",
       ]}
       faqs={[
         { q: "How often should I have this done?", a: "In Dubai, every 2-3 years for a Mac Studio or Mac Pro in normal home or office use. Sooner if you're in a high-dust area or run heavy sustained loads (rendering, compiling, mining)." },

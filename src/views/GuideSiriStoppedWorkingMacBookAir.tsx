@@ -102,8 +102,8 @@ export default function GuideSiriStoppedWorkingMacBookAir() {
               free diagnostic
             </Link>{" "}
            , we'll confirm whether it's a setting, the microphone or the system. We're at Office
-            #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, open Mon-Sat 9am–7pm, with
-            free pickup across Dubai. Call or WhatsApp{" "}
+            #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, open Mon-Sat 9am–7pm, and
+            you can walk in without an appointment. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">055 741 3706</a>.
           </p>
         </>

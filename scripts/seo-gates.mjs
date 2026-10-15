@@ -60,10 +60,18 @@ const BANNED = [
   [/\bleading (apple|mac|repair)\b/i, "superlative"],
   [/\bguaranteed\b/i, "guaranteed"],
   [/\blowest prices?\b/i, "lowest price"],
+  // Free pickup/delivery ended 2026-10-15 (fact sheet). Onsite visits are paid, never free.
+  [/\bfree (pick-?up|collection|delivery|courier|home visit|onsite|on-site)\b/i, "free pickup/delivery (discontinued)"],
+  [/\b(we|our courier|our driver) (will )?(collect|pick (it )?up) (it|your|from|and deliver)\b/i, "we collect (discontinued)"],
 ];
 const AI_PHRASES = [
   /\bdelve\b/i, /\belevate\b/i, /\bseamless(ly)?\b/i, /\brobust\b/i, /\bgame[- ]changer\b/i,
   /in today'?s fast[- ]paced world/i, /it'?s worth noting/i, /\bin conclusion\b/i,
+  /\bhassle[- ]free\b/i, /\bstress[- ]free\b/i, /\beffortless(ly)?\b/i, /\bpeace of mind\b/i,
+  /\blook no further\b/i, /\brest assured\b/i, /\btop[- ]notch\b/i, /\bcutting[- ]edge\b/i,
+  /\bstate[- ]of[- ]the[- ]art\b/i, /\bleverag(e|es|ing)\b/i, /\bstreamlin(e|ed|es|ing)\b/i,
+  /\bembark\b/i, /\butili[sz](e|es|ed|ing)\b/i, /\bfurthermore\b/i, /\bmoreover\b/i,
+  /\bdon'?t hesitate to\b/i, /\ba testament to\b/i, /\bplays? a crucial role\b/i,
 ];
 
 const violations = []; // { url, gate, detail }
@@ -86,10 +94,13 @@ for (const { url, file } of pages) {
   if (h1s.length !== 1) add(url, "h1-count", `${h1s.length}`);
 
   const claimText = stripUrls(`${title} ${desc} ${text}`);
+  // Customer reviews are quoted verbatim: AI-phrase and ended-service checks skip them.
+  const ownText = stripUrls(`${title} ${desc} ${visibleText(html.replace(/<article data-customer-review[\s\S]*?<\/article>/gi, " "))}`);
   for (const [re, label] of BANNED) {
-    for (const m of claimText.matchAll(new RegExp(re.source, "gi"))) {
-      const before = claimText.slice(Math.max(0, m.index - 60), m.index).toLowerCase();
-      const after = claimText.slice(m.index + m[0].length, m.index + m[0].length + 40).toLowerCase();
+    const src = /discontinued/.test(label) ? ownText : claimText;
+    for (const m of src.matchAll(new RegExp(re.source, "gi"))) {
+      const before = src.slice(Math.max(0, m.index - 60), m.index).toLowerCase();
+      const after = src.slice(m.index + m[0].length, m.index + m[0].length + 40).toLowerCase();
       // Status claims are fine inside a denial, a description of Apple's own network,
       // or when "certified" describes an Apple product rather than us.
       if (/authori|certified \(business/i.test(label)) {
@@ -106,7 +117,7 @@ for (const { url, file } of pages) {
     }
   }
   for (const re of AI_PHRASES) {
-    const m = claimText.match(re);
+    const m = ownText.match(re);
     if (m) add(url, "ai-phrase", m[0]);
   }
 

@@ -5,7 +5,7 @@ import View from "@/views/MacBookAirM1Repair";
 
 export const metadata: Metadata = metaFromFields("/macbook-air-m1-repair-dubai", {
   title: "MacBook Air M1 Repair Dubai — Screen, Battery & Logic Board",
-  description: "MacBook Air M1 (A2337) repair in Dubai: screen, swollen battery, charging port and logic board faults at our Media City workshop. Free pickup. WhatsApp us.",
+  description: "MacBook Air M1 (A2337) repair in Dubai: screen, swollen battery, charging port and logic board faults at our Media City walk-in workshop. WhatsApp us.",
 });
 
 export default function Page() {

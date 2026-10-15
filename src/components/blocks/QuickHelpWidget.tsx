@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle, Phone, X, Truck, HelpCircle, ChevronRight, Check, Headset } from "lucide-react";
+import { MessageCircle, Phone, X, Camera, HelpCircle, ChevronRight, Check, Headset } from "lucide-react";
 import { NAP } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { analyticsConfigured } from "@/lib/analytics";
@@ -42,7 +42,7 @@ const ISSUES = [
 
 // "Service" = what the visitor wants us to do next. Drives the WhatsApp message.
 const SERVICES = [
-  { key: "pickup", label: "Free pickup", icon: Truck },
+  { key: "photos", label: "Send photos first", icon: Camera },
   { key: "quote", label: "Get a quote", icon: HelpCircle },
   { key: "callback", label: "Call me back", icon: Phone },
   { key: "visit", label: "Visit workshop", icon: Headset },
@@ -52,7 +52,7 @@ type DeviceT = (typeof DEVICES)[number];
 type ServiceKey = (typeof SERVICES)[number]["key"];
 
 const SERVICE_PHRASE: Record<ServiceKey, string> = {
-  pickup: "I'd like a FREE pickup from my location.",
+  photos: "I'll send photos of the device and its serial number first.",
   quote: "Please send me a quote.",
   callback: "Please call me back.",
   visit: "I'd like to visit the workshop.",

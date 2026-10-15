@@ -322,13 +322,11 @@ function deviceHubFallback(path: string): TopicImage | undefined {
 
 /** Location hero image for area/city pages, keyed by area slug. */
 export function areaTopicForSlug(slug: string): TopicImage | undefined {
-  const s = slug.toLowerCase();
-  if (/deira|bur-dubai|karama/.test(s)) return T("macbook-repair-old-dubai");
-  if (/abu-dhabi|al-ain/.test(s)) return T("macbook-repair-abu-dhabi");
-  if (/sharjah|ajman|ras-al-khaimah|fujairah|umm-al-quwain|kalba|khor-fakkan/.test(s))
-    return T("macbook-repair-northern-emirates");
-  if (s.includes("near-me")) return T("macbook-repair-near-me");
-  return T("macbook-repair-dubai-pickup"); // Dubai districts
+  // Pickup and courier are discontinued (2026-10-15). The old area infographics
+  // advertise pickup/courier coverage, so every area page now shows the
+  // workshop-location image until walk-in area artwork exists.
+  void slug;
+  return T("macbook-repair-near-me");
 }
 
 // Real service-specific lab photos keep priority for Mac/MacBook repairs that

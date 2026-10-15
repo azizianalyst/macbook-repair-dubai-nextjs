@@ -63,12 +63,12 @@ export default function BlogMacBookRepairWarrantyExplained() {
             <li><strong>Part defect</strong> - if the component we installed fails on its own within its tier period, we replace it free.</li>
             <li><strong>Workmanship</strong> - anything that became loose, mis-seated, or stopped working as a direct consequence of our repair (e.g. a connector we touched).</li>
             <li><strong>Re-diagnosis</strong> - if the same symptom returns, we re-diagnose at no charge regardless of cause.</li>
-            <li><strong>Pickup &amp; delivery for warranty service</strong> - free across Dubai, even if the original repair was walk-in.</li>
+            <li><strong>Walk-in warranty checks</strong> - bring the MacBook back to Concord Tower, no appointment needed.</li>
           </ul>
 
           <h2 id="what-not-covered">What's NOT covered</h2>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>New physical damage</strong> - fresh drops, dents, cracked screens after delivery.</li>
+            <li><strong>New physical damage</strong> - fresh drops, dents, cracked screens after collection.</li>
             <li><strong>New liquid damage</strong> - a coffee spill last week is a separate event.</li>
             <li><strong>Unrelated failures</strong> - if we replaced the screen and three months later the SSD dies, that's a new repair.</li>
             <li><strong>Software / macOS issues</strong> not caused by our hardware work.</li>
@@ -80,7 +80,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
           <ol className="list-decimal list-inside space-y-xs">
             <li>WhatsApp +971 55 741 3706 with your repair receipt number and a short description of the issue.</li>
             <li>We confirm the warranty status against our database within minutes.</li>
-            <li>Drop the MacBook at Concord Tower or book free pickup.</li>
+            <li>Drop the MacBook at Concord Tower, or send it by a same-day courier you book yourself.</li>
             <li>Re-diagnosis the same day. If covered, repaired and returned within 24-48 hours typically.</li>
             <li>You don't pay anything for covered work - including the new part.</li>
           </ol>
@@ -94,7 +94,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
               { model: "Scope", apple: "Whole device - manufacturing defects only", ours: "The part we replaced + our workmanship" },
               { model: "Accidental damage", apple: "Not covered (need AppleCare+)", ours: "Not covered" },
               { model: "Liquid damage", apple: "Not covered (need AppleCare+)", ours: "Not covered" },
-              { model: "Where to claim", apple: "Apple-Authorised Service Provider only", ours: "Our workshop or free pickup" },
+              { model: "Where to claim", apple: "Apple Store or an Apple service provider", ours: "Our Media City workshop, walk in" },
               { model: "Turnaround", apple: "Often 5-10 business days", ours: "Same-day or 24-48 hours" },
             ]}
           />
@@ -154,10 +154,10 @@ export default function BlogMacBookRepairWarrantyExplained() {
         { q: "What if the part fails just after the warranty period ends?", a: "We'll still look at it. Most shops would refuse, but we honour goodwill claims close to expiry - particularly if the failure mode is clearly a part defect (e.g. dead pixel column on a screen, sudden battery swell). Worst case, we offer the replacement at our cost price." },
         { q: "Do I need the original receipt to claim?", a: "Strongly preferred but not strictly required - we keep digital records by serial number for 5 years. Bring the device, we'll look it up. Receipt speeds the process." },
         { q: "Why is the logic-board warranty only 15 days?", a: "Board-level repair fixes the failed circuit, but the rest of the board has lived the same life - heat cycles, liquid exposure, power surges. We can guarantee our joint and the component we replaced; we can't guarantee a neighbouring chip won't fail next month. 15 days catches anything related to our work." },
-        { q: "Is warranty work logged in Apple's system?", a: "No, because we are not an Apple-Authorised Service Provider - Apple doesn't recognise third-party repair history. The warranty is between you and us, backed by our own records and two-decade track record." },
-        { q: "What if I damage the MacBook a week after pickup?", a: "Honest answer - that's a new repair, not a warranty claim. We'll quote at our normal price. We'll also offer a 10% repeat-customer discount on the new work." },
+        { q: "Is warranty work logged in Apple's system?", a: "No. We're an independent workshop outside Apple's service network, and Apple doesn't recognise third-party repair history. The warranty is between you and us, backed by our own records and two-decade track record." },
+        { q: "What if I damage the MacBook a week after collecting it?", a: "Honest answer - that's a new repair, not a warranty claim. We'll quote at our normal price. We'll also offer a 10% repeat-customer discount on the new work." },
         { q: "Does warranty cover labour as well as parts?", a: "Yes - both. If we have to open the MacBook again to fix a covered issue, the labour is included. There is no surprise charge during a warranty claim." },
-        { q: "How is your warranty better than Apple Service Center for out-of-warranty MacBooks?", a: "Apple's out-of-warranty repair carries a 90-day warranty on the part and labour. Ours runs up to 12 months on hardware repairs. Add price (we're typically 50-70% of Apple's quote), turnaround (same-day vs 5-10 days), and free pickup, and the comparison usually favours independent repair." },
+        { q: "How is your warranty better than Apple Service Center for out-of-warranty MacBooks?", a: "Apple's out-of-warranty repair carries a 90-day warranty on the part and labour. Ours runs up to 12 months on hardware repairs. Add price (we're typically 50-70% of Apple's quote), turnaround (same-day vs 5-10 days), and walk-in service, and the comparison usually favours independent repair." },
       ]}
       relatedLinks={[
         { label: "Warranty page", href: "/warranty", description: "Full written warranty terms." },

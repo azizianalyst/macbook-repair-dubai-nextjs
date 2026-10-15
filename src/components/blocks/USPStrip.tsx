@@ -1,9 +1,9 @@
 "use client";
-import { Award, BadgeCheck, Clock, Laptop, Search, ShieldCheck, Star, Truck, type LucideIcon } from "lucide-react";
+import { Award, BadgeCheck, Clock, Laptop, MapPin, Search, ShieldCheck, Star, type LucideIcon } from "lucide-react";
 import { USPS } from "@/content/site";
 import { cn } from "@/lib/utils";
 
-const ICONS: Record<string, LucideIcon> = { Award, BadgeCheck, Clock, Laptop, Search, ShieldCheck, Star, Truck };
+const ICONS: Record<string, LucideIcon> = { Award, BadgeCheck, Clock, Laptop, MapPin, Search, ShieldCheck, Star };
 
 // flat strip, no gradient, no blur.
 export function USPStrip({ items = USPS, tone = "light" }: { items?: typeof USPS; tone?: "light" | "dark" }) {

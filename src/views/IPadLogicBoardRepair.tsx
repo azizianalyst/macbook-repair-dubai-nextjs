@@ -44,7 +44,7 @@ export default function IPadLogicBoardRepair() {
         { title: "Free schematic diagnosis", body: "We scope the power rails against the board schematic and isolate the failed component - usually within 24-48 hours. No charge if it can't be economically fixed." },
         { title: "Open quote", body: "A WhatsApp voice note with the diagnosis, the exact price, and an honest success rate. Nothing happens until you approve." },
         { title: "Microscope rework", body: "Failed IC removed under stereo microscope, pads cleaned, a fresh reballed chip placed with a controlled hot-air profile - then the chassis carefully resealed." },
-        { title: "Burn-in + test", body: "Charge cycles, display, Wi-Fi, audio and a full diagnostic under sustained load before delivery, so an intermittent fault is caught on the bench, not at home." },
+        { title: "Burn-in + test", body: "Charge cycles, display, Wi-Fi, audio and a full diagnostic under sustained load before handover, so an intermittent fault is caught on the bench, not at home." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

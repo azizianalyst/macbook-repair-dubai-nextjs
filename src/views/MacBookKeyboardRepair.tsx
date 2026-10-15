@@ -66,15 +66,15 @@ const PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp the model + which keys",
     body: "Send the serial number from About This Mac and a video of which keys fail. We reply during opening hours with what the job involves and a timeline." },
-  { title: "Free pickup or walk in",
-    body: "Walk in to Office #45, Concord Tower, Media City, or book a free pickup from anywhere in Dubai mainland. Diagnosis is on the spot - about 10 minutes." },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book any same-day courier app and WhatsApp us the tracking link. Diagnosis is on the spot - about 10 minutes." },
   { title: "Diagnosis: software vs mechanical vs liquid",
     body: "Remapping apps and an NVRAM reset are checked first, then every key is tested under the microscope. When the fault turns out to be software, the fix is free." },
   { title: "Repair on the bench",
     body: "Magic Keyboard single key: 30-60 minutes. Magic Keyboard full swap: 4 hours. Butterfly top case: 1 to 2 days (battery, speakers, keyboard come as one bonded unit - Apple's design)." },
   { title: "Touch ID re-pair and key-by-key test",
     body: "On Touch ID models the new top case is paired with the secure enclave at the bench. Every key is tested, the backlight checked and the function keys verified." },
-  { title: "Free delivery + 15-day warranty card",
+  { title: "Collection + 15-day warranty card",
     body: "Same-day on Magic Keyboard single-key jobs. Next-day on top case swaps. Warranty card lists the part batch number - 15 days written, transferable once free of charge." },
 ];
 
@@ -107,7 +107,7 @@ const COMPARISON = [
   ["Magic Keyboard full swap",     "Free diagnosis, then a quote",                 "No published price - quoted after inspection"],
   ["Butterfly top case (out of program)", "Free diagnosis, then a quote",         "No published price - quoted after inspection"],
   ["Layout change (Arabic / Russian)", "Free diagnosis, then a quote",            "Refused"],
-  ["Free pickup in Dubai",         "Yes",                                          "No, customer must courier"],
+  ["Walk in without appointment",  "Yes",                                          "Check with the store"],
   ["Warranty",                     "15 days written",                              "12 months"],
   ["Vintage/obsolete (pre-2017)",  "Yes",                                          "Refused"],
 ];
@@ -521,7 +521,7 @@ export default function MacBookKeyboardRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Sticky key? Butterfly failure? WhatsApp a video - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Send the model, year, and a short video of the keys that fail. Free pickup across Dubai mainland. 15-day written warranty on every keyboard fitted.
+              Send the model, year, and a short video of the keys that fail. Walk in to Media City or send it by courier. 15-day written warranty on every keyboard fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

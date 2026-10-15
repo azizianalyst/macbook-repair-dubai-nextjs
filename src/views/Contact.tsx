@@ -17,7 +17,7 @@ const DIRECTIONS = [
   { from: "Palm Jumeirah",   minutes: 12, text: "Cross the monorail bridge, head toward Media City. We're in Concord Tower, 10th floor, office 45." },
   { from: "Downtown Dubai",  minutes: 18, text: "Sheikh Zayed Road westbound. Exit at Media City. Park at Concord Tower." },
   { from: "JLT",             minutes: 8,  text: "Al Sufouh Road northbound, 2 minutes past Knowledge Village. Concord Tower on the right." },
-  { from: "Business Bay",    minutes: 20, text: "Sheikh Zayed Road westbound to Media City exit. Free pickup also available." },
+  { from: "Business Bay",    minutes: 20, text: "Sheikh Zayed Road westbound to Media City exit. Park at Concord Tower." },
 ];
 
 const FAQS = [
@@ -28,7 +28,7 @@ const FAQS = [
   { q: "Which languages do you speak?",
     a: "English, Arabic, Hindi, Urdu, and basic Russian. Shafiq handles most English and Urdu queries; Ali speaks Arabic." },
   { q: "Can someone collect my MacBook from home?",
-    a: "Yes. Free pickup and delivery anywhere in Dubai, Monday to Saturday, 9 am to 5 pm. Send your address on WhatsApp." },
+    a: "We don't collect devices, but you can send it by courier: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. A paid onsite visit is possible, subject to technician availability; we quote it on WhatsApp." },
   { q: "What payment methods do you accept?",
     a: "Cash, VISA, Mastercard, American Express, and credit/debit cards. No bank transfers required." },
 ];
@@ -142,7 +142,7 @@ export default function Contact() {
           <div>
             <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-1">Free diagnosis, no fix no charge</p>
             <h2 className="text-white text-[24px] md:text-[28px] font-bold leading-tight max-w-[34ch]">
-              Bring in your Apple device or book a free Dubai-wide pickup
+              Bring in your Apple device, or send it by same-day courier
             </h2>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">

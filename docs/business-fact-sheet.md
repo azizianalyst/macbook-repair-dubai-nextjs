@@ -50,7 +50,10 @@ Sources of truth in the repo: `data/seo.json` → `src/content/business.generate
 | **No** in-house Apple Watch or AirPods repair | VERIFIED | Owner 2026-09-01 |
 | MacBook buy-back and trade-in only (no iPhone buy-back) | VERIFIED | Owner; D2 is still open |
 | Warranty: hardware up to 12 months; screens 90 days; battery 3 months (80% capacity guarantee on MacBook and iPhone only); keyboard, software, board, liquid and data work 15 days | VERIFIED | `site.ts` WARRANTY |
-| Free diagnosis; no fix, no charge; free pickup in Dubai | VERIFIED (owner-attested) | Sitewide USPs |
+| Free diagnosis; no fix, no charge | VERIFIED (owner-attested) | Sitewide USPs |
+| Free pickup and delivery (courier collection) | **DISCONTINUED** (owner, 2026-10-15). Never offer pickup, collection or delivery anywhere on the site. | Owner instruction in chat |
+| Onsite repair (technician visits the customer) | VERIFIED, now a **paid** service (owner, 2026-10-15). Never call it free and never print a price; the charge is quoted on WhatsApp. Walk-in at Concord Tower is the main option. | Owner instruction in chat |
+| Send by courier (customer-booked) | VERIFIED (owner, 2026-10-15). Inside Dubai: the customer books any same-day courier app, hands the device over and WhatsApps us the tracking link. It is the fastest option if they can't visit. From Abu Dhabi and the other emirates: the customer books a courier, which takes longer (not same-day), and we send the device back by courier when it is done. No courier price is quoted on the site; the return is arranged on WhatsApp. | Owner instruction in chat |
 | **No AED repair prices** in copy, titles, meta or schema (quotes via WhatsApp) | POLICY | Hide-prices policy |
 | 40,000+ devices repaired | Owner-attested, not independently verifiable | TRUST-CLAIMS |
 

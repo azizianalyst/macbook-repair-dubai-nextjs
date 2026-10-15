@@ -18,7 +18,7 @@ import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const COVERED = [
   { title: "Logic board repair", body: "Board-level micro-soldering for no-power, boot-loop, power-rail and port faults Apple would only solve by swapping the whole board.", icon: Cpu },
-  { title: "Battery replacement", body: "Swollen, draining or 'Service Recommended' batteries replaced with original-spec cells, load-tested before pickup.", icon: Battery },
+  { title: "Battery replacement", body: "Swollen, draining or 'Service Recommended' batteries replaced with original-spec cells, load-tested before you collect it.", icon: Battery },
   { title: "SSD & storage", body: "Failed or full storage replaced and upgraded, with data migration where the drive is still readable.", icon: HardDrive },
   { title: "Memory & components", body: "RAM, ports, fans, speakers, cameras and other components fixed individually instead of as a costly assembly swap.", icon: Wrench },
 ];

@@ -15,13 +15,13 @@ export default function BlogWaterDamageMacBookImmediate() {
     { name: "Do NOT use rice", text: "Rice absorbs almost no moisture from a sealed device and rice dust gets into ports. The 24 hours wasted in rice is the difference between a light cleanup and a heavy board repair - message us for the exact price." },
     { name: "Do NOT use a hairdryer", text: "Heated air drives moisture deeper into the logic board and can warp components. Same for an oven, the sun, or any heat source." },
     { name: "Do NOT plug in to test", text: "Powering on a wet MacBook causes electrolytic corrosion to start instantly under every chip. The single most damaging thing you can do." },
-    { name: "Bring to repair shop within 24 hours", text: "WhatsApp 055 741 3706 - we send the free pickup driver same day for any mainland Dubai address. Recovery rate drops from 80-90% at 24 hours to 40-50% at 72 hours." },
+    { name: "Bring to repair shop within 24 hours", text: "Walk in to our Media City workshop, or book any same-day courier app to send it and WhatsApp 055 741 3706 the tracking link. Recovery rate drops from 80-90% at 24 hours to 40-50% at 72 hours." },
   ];
 
   return (
     <BlogPostTemplate
       seoTitle="Spilled Water on MacBook? Do This Right Now (2026)"
-      seoDescription="MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
+      seoDescription="MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Walk in today."
       path="/blog/water-damage-macbook-immediate-action"
       wide
       toc={[
@@ -125,9 +125,9 @@ export default function BlogWaterDamageMacBookImmediate() {
 
           <h2 id="bring-in-24h">Step 7 - Bring to a repair shop within 24 hours</h2>
           <p>
-            WhatsApp <strong>055 741 3706</strong> with a photo of the MacBook and we'll send the
-            free pickup driver same day for any mainland Dubai address. Or visit our workshop at
-            Concord Tower, Dubai Media City, 9am-7pm Monday to Saturday.
+            Visit our workshop at Concord Tower, Dubai Media City (Monday to Thursday and Saturday
+            9am-7pm, Friday 9am-12pm and 2pm-7pm). If you can't come in, book any same-day courier app
+            and WhatsApp <strong>055 741 3706</strong> a photo of the MacBook and the tracking link.
           </p>
 
           <h2 id="corrosion-timeline">Why time matters - corrosion timeline</h2>
@@ -197,13 +197,13 @@ export default function BlogWaterDamageMacBookImmediate() {
           a: "Intel MacBook (2010-2020): SSD is removable, data recovery 95%+ even if board is dead. M-series MacBook (2020+): SSD is soldered to the board, recovery requires keeping the board alive long enough to image. About 70% success rate. Time Machine backup is essential on M-series.",
         },
         {
-          q: "Do you offer pickup for water-damaged MacBooks?",
-          a: "Yes - free door-to-door pickup anywhere in mainland Dubai, same day if WhatsApp'd before 6pm. Sharjah and Abu Dhabi pickup carries a small surcharge - message us for the exact amount. The driver carries a sealed dry bag for transport.",
+          q: "What if I can't bring the water-damaged MacBook in myself?",
+          a: "Book any same-day courier app, hand the MacBook to the driver powered off and wrapped in a dry towel inside a bag, and WhatsApp 055 741 3706 the tracking link. It reaches us within the day. We don't arrange pickup ourselves, so walking in to our Media City workshop is the other fast option.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook water damage repair cost & success rates", href: "/blog/macbook-water-damage-repair-cost-success-rates", description: "Full pricing tiers and recovery data." },
-        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Process, pickup, and warranty." },
+        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Process, visiting the workshop, and warranty." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "When the board is unrecoverable." },
       ]}
     />

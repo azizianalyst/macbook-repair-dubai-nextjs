@@ -164,7 +164,7 @@ export default function BlogMacBookKeyboardNotWorking() {
 
           <h2 id="repair">Getting it repaired in Dubai</h2>
           <p>
-            Bring it to Concord Tower in Dubai Media City, or send it with our free pickup. The diagnosis is
+            Bring it to Concord Tower in Dubai Media City, or send it with a same-day courier you book. The diagnosis is
             free, so you&apos;ll know whether it&apos;s a clean, a single key, a full keyboard, spill damage
             or the battery before you commit. The job might be one key mechanism, a keyboard replacement, spill
             cleaning, or a battery replacement to stop the swelling. Keyboard work carries a 15-day warranty.

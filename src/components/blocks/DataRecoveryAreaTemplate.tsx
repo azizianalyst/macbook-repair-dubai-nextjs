@@ -4,7 +4,7 @@
 // Deliberately NOT a clone of AreaPageTemplate: the intent here is data loss, not
 // a repair booking, so the page leads with recoverability and confidentiality.
 import { Link } from "@/lib/router-compat";
-import { AlertTriangle, Clock, HardDrive, Lock, ShieldCheck, Truck } from "lucide-react";
+import { AlertTriangle, HardDrive, Lock, MapPin, Package, ShieldCheck } from "lucide-react";
 
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -38,8 +38,9 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
   const path = `/mac-data-recovery-${cfg.slug}`;
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
-  const title = `Mac Data Recovery ${cfg.area} — Free Collection`;
-  const description = `Mac data recovery in ${cfg.area}: soldered-SSD, T2 and Apple-silicon recovery at board level. Free diagnosis, no recovery no fee. Call 055 741 3706.`;
+  // Mirrored in src/lib/dynamic-meta.ts (data-recovery loop): keep the two in step.
+  const title = `Mac Data Recovery ${cfg.area} - No Recovery, No Fee`;
+  const description = cfg.seoDescription;
 
   // Only the WebPage/speakable node is injected client-side. The Organization,
   // LocalBusiness, Service and Place nodes for this path are server-rendered by
@@ -53,14 +54,14 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
         <Hero
           variant="service"
           tone="dark"
-          eyebrow={`Free collection in ${cfg.area}`}
+          eyebrow={`${cfg.area}: walk in or send it by courier`}
           title={`Mac Data Recovery ${cfg.area}`}
           subtitle={`${cfg.landmarkLine} Soldered-SSD, T2 and Apple-silicon recovery at component level. Free diagnosis, and no fee if nothing is recovered.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free collection</span>
+            <span className="flex items-center gap-1"><MapPin size={16} className="text-accent" aria-hidden /> Walk in, {cfg.driveTime} away</span>
             <span className="text-text-faint">·</span>
-            <span className="flex items-center gap-1"><Clock size={16} className="text-accent" aria-hidden /> {cfg.collectWindow}</span>
+            <span className="flex items-center gap-1"><Package size={16} className="text-accent" aria-hidden /> Or a same-day courier you book</span>
             <span className="text-text-faint">·</span>
             <span className="flex items-center gap-1"><ShieldCheck size={16} className="text-accent" aria-hidden /> No recovery, no fee</span>
           </p>
@@ -69,7 +70,7 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
         <QuickAnswer
           tone="dark"
           question={`Can you recover data from a Mac in ${cfg.area}?`}
-          answer={`Yes. We collect free from ${cfg.area} - typically ${cfg.collectWindow.toLowerCase()} of your WhatsApp - and attempt recovery at our Concord Tower workshop in Media City (${cfg.driveTime} away). On Apple silicon and T2 Macs the SSD is soldered to the logic board, so recovery is done at component level rather than by removing a drive. Diagnosis is free, the price is fixed in writing before any work starts, and if nothing is recovered there is no fee.`}
+          answer={`Yes. Bring the Mac to our Concord Tower workshop in Media City, ${cfg.driveTime} from ${cfg.area}, or send it with a same-day courier you book and WhatsApp us the tracking link. On Apple silicon and T2 Macs the SSD is soldered to the logic board, so recovery is done at component level rather than by removing a drive. Diagnosis is free, the price is fixed in writing before any work starts, and if nothing is recovered there is no fee.`}
         />
 
         {/* Act-now warning — the single most useful thing on a data-loss page */}
@@ -81,8 +82,8 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
               <p className="text-[15px] text-text-muted leading-relaxed">
                 Stop using the Mac. Every hour of continued use risks overwriting the data we are trying to recover.
                 If it got wet, leave it switched off and do not plug it in to charge — corrosion spreads for as long as
-                the board stays wet, and rice does nothing. Message us and we will tell you what to do next before the
-                courier arrives.
+                the board stays wet, and rice does nothing. Message us and we will tell you what to do next before you
+                bring it in or hand it to a courier.
               </p>
             </div>
           </div>
@@ -126,11 +127,11 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
 
         {/* Collection + confidentiality */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <SectionHeading eyebrow="How it works" title={`Collection and confidentiality in ${cfg.area}`} />
+          <SectionHeading eyebrow="How it works" title={`How do I get my Mac to you from ${cfg.area}?`} />
           <div className="grid gap-md md:grid-cols-2">
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <Truck size={20} className="text-accent mb-2" aria-hidden />
-              <p className="font-bold text-[16px] mb-1">Free collection, {cfg.collectWindow.toLowerCase()}</p>
+              <Package size={20} className="text-accent mb-2" aria-hidden />
+              <p className="font-bold text-[16px] mb-1">Walk in, send it by courier, or book a paid visit</p>
               <p className="text-[15px] text-text-muted leading-relaxed">{cfg.collection}</p>
             </div>
             <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
@@ -165,7 +166,7 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
         <CtaBand
           eyebrow="Time matters with data loss"
           headline={`Send us the model and what happened — we will tell you the realistic odds first.`}
-          description={`Free collection from ${cfg.area}, free diagnosis, and no fee if nothing is recovered.`}
+          description={`Walk in from ${cfg.area} or send it with a courier you book. Free diagnosis, and no fee if nothing is recovered.`}
         />
 
         {/* Reviews */}
@@ -229,7 +230,7 @@ export function DataRecoveryAreaTemplate({ cfg }: { cfg: DataRecoveryAreaConfig 
             ))}
           </ul>
           <p className="text-[14px] text-text-muted mt-md">
-            Not listed? We collect from anywhere in Dubai —{" "}
+            Somewhere else in Dubai? Walk in or send it by courier the same way —{" "}
             <Link to="/mac-data-recovery-dubai" className="text-accent underline underline-offset-2">
               see the main data-recovery page
             </Link>.

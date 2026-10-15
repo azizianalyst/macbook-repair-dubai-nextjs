@@ -6,7 +6,7 @@ export default function BlogNoFixNoChargePolicy() {
   return (
     <BlogPostTemplate
       seoTitle="No Fix No Charge Policy Explained - Our Promise (Dubai 2026)"
-      seoDescription="If we can't fix your Apple device, you owe nothing - not even diagnosis or pickup. Here's how the no-fix-no-charge promise works and where the edges are."
+      seoDescription="If we can't fix your Apple device, you owe nothing - not even the diagnosis fee. Here's how the no-fix-no-charge promise works and where the edges are."
       path="/blog/no-fix-no-charge-policy-explained"
       wide
       toc={[
@@ -18,12 +18,12 @@ export default function BlogNoFixNoChargePolicy() {
         { id: "edge-cases", label: "Edge cases and partial fixes" },
         { id: "why-others-dont", label: "Why other shops don't" },
         { id: "replace-not-repair", label: "When to replace, not repair" },
-        { id: "free-pickup", label: "Free pickup even if no fix" },
+        { id: "check-first", label: "Check before you visit" },
       ]}
       category="Trust · Policy"
       h1="No Fix No Charge - How Our Promise Works"
       hook="We diagnose. If we can't fix it, you owe nothing. Here's how we make this work."
-      quickAnswer="No-fix-no-charge means: free diagnosis, free pickup, free return - and zero charge if we cannot solve your problem. 'Fix' means your stated problem is solved, not 'we attempted'. We can do this because our success rate on accepted jobs is over 96%, so the few unsolvable cases are absorbed by the workshop."
+      quickAnswer="No-fix-no-charge means: free diagnosis, free quote, free decline - and zero charge if we cannot solve your problem. 'Fix' means your stated problem is solved, not 'we attempted'. We can do this because our success rate on accepted jobs is over 96%, so the few unsolvable cases are absorbed by the workshop."
       author={{ name: "Usman", role: "Senior technician" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
@@ -34,7 +34,7 @@ export default function BlogNoFixNoChargePolicy() {
           <h2 id="quick-answer">No Fix No Charge Policy. Quick answer</h2>
           <p>
             You pay only for repairs that work. If we can't solve the problem you brought us, you
-            owe nothing - diagnosis is free, pickup is free, and the device is returned to you in the
+            owe nothing - diagnosis is free, the quote is free, and the device is returned to you in the
             same condition. This isn't marketing - it's how the workshop has operated since 2004.
           </p>
 
@@ -48,7 +48,7 @@ export default function BlogNoFixNoChargePolicy() {
 
           <h2 id="how-it-works">How it works (free diagnosis, optional repair)</h2>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>You bring or pickup the device - free.</li>
+            <li>You walk in with the device, or send it by a courier you book.</li>
             <li>We diagnose - free, written report.</li>
             <li>We quote - fixed price, line-itemised.</li>
             <li>You decide - proceed, decline, or take more time.</li>
@@ -71,8 +71,8 @@ export default function BlogNoFixNoChargePolicy() {
 
           <h2 id="what-fix-means">What 'fix' means</h2>
           <p>
-            "Fix" = your stated problem is resolved, demonstrably, in front of you (or via video for
-            pickup customers).
+            "Fix" = your stated problem is resolved, demonstrably, in front of you (or via video if you
+            sent the device by courier).
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li>"MacBook won't turn on" → MacBook turns on, boots, holds charge, runs Apple Diagnostics clean.</li>
@@ -120,11 +120,11 @@ export default function BlogNoFixNoChargePolicy() {
             for the full framework.
           </p>
 
-          <h2 id="free-pickup">Pickup/delivery is free even if no fix</h2>
+          <h2 id="check-first">Can I check before I make the trip?</h2>
           <p>
-            If we can't repair, you don't pay for the courier either - the round-trip pickup and
-            return are absorbed. This is why we strongly recommend free pickup for unknown-issue
-            devices: zero financial risk to send it to us.
+            Yes. WhatsApp a photo of the fault and the serial number to 055 741 3706 and we tell you
+            what it looks like before you visit the Media City workshop. If you bring it in and we
+            can't fix it, you take it home and pay nothing for our time.
           </p>
         </>
       }
@@ -137,7 +137,7 @@ export default function BlogNoFixNoChargePolicy() {
       ]}
       relatedLinks={[
         { label: "Transparent pricing", href: "/blog/transparent-repair-pricing-explained", description: "How a quote is built." },
-        { label: "Free pickup & delivery", href: "/blog/free-pickup-delivery-dubai-how-it-works", description: "Free even if no fix." },
+        { label: "Visit the workshop", href: "/contact", description: "Address, hours and parking." },
         { label: "Two decades of experience", href: "/blog/why-21-years-experience-matters", description: "Why our success rate is high enough to make this promise." },
       ]}
     />

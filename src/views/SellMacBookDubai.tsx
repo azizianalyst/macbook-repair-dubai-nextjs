@@ -6,7 +6,7 @@ import {
   MessageCircle,
   Phone,
   Banknote,
-  Truck,
+  MapPin,
   ClipboardCheck,
   Laptop,
   Smartphone,
@@ -51,7 +51,7 @@ const WHAT_WE_BUY = [
   {
     icon: Monitor,
     title: "iMac, Mac mini, Mac Studio & Mac Pro",
-    body: "Desktop Macs of any generation. We collect bulky iMacs and Studio set-ups from your home or office so you never have to move them yourself.",
+    body: "Desktop Macs of any generation. For a bulky iMac or Studio set-up, send photos and the serial on WhatsApp first so the offer is agreed before you carry it in. There is parking on site at Concord Tower.",
   },
   {
     icon: Smartphone,
@@ -102,9 +102,9 @@ const STEPS = [
     body: "Send the model, rough age and condition on WhatsApp, or use the valuation tool below. A photo of the screen and back helps us be precise. Shafiq Ahmed and the team reply with an indicative offer fast.",
   },
   {
-    icon: Truck,
-    title: "2 · Free collection across Dubai",
-    body: "Happy with the number? We arrange free pickup anywhere in Dubai, or you drop in to our workshop. No charge for collection - it is part of the service whether you sell or not.",
+    icon: MapPin,
+    title: "2 · Bring it to Media City",
+    body: "Happy with the number? Bring the device to our workshop at Concord Tower, Dubai Media City, across from the Media City Metro station, with parking on site. The valuation stays free, sell or not.",
   },
   {
     icon: Banknote,
@@ -127,8 +127,8 @@ const FAQS = [
     a: "Every offer is set by a real technician - never a lowball bot. We weigh the exact model and chip (M5, M4, M3, M2, M1 or Intel), the release year and age, the condition, and the storage and RAM. A clean, working, high-spec device earns the most, but faulty units still get an honest number based on parts and refurbishment value.",
   },
   {
-    q: "Do you collect the device, or do I have to come to you?",
-    a: "Both. We offer free collection right across Dubai - including bulky iMacs and Mac Studio set-ups - so you never have to move heavy gear or take time off. You are also welcome to drop into our workshop. Either way, pickup is free whether or not you go ahead with the sale.",
+    q: "Where do I bring the device, and do I need an appointment?",
+    a: "Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. No appointment is needed: we are open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first and the visit is quick.",
   },
   {
     q: "When do I get paid?",
@@ -144,7 +144,7 @@ const FAQS = [
   },
   {
     q: "Do you buy multiple devices or whole business fleets?",
-    a: "Yes. We regularly buy several devices at once from individuals upgrading and from Dubai businesses retiring laptops, iPhones and iPads. Send us the list and quantities on WhatsApp and we will put together a single combined offer with free collection.",
+    a: "Yes. We regularly buy several devices at once from individuals upgrading and from Dubai businesses retiring laptops, iPhones and iPads. Send us the list and quantities on WhatsApp and we will put together a single combined offer before you bring them in.",
   },
 ];
 
@@ -158,7 +158,7 @@ const buyServiceSchema = {
   serviceType: "Buy & trade-in of used Apple devices",
   name: "Sell or Trade In Your Apple Device in Dubai",
   description:
-    "We buy and trade in used Apple devices in Dubai - MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad, working or faulty. Free valuation, free collection across Dubai and same-day payment or store credit.",
+    "We buy and trade in used Apple devices in Dubai - MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad, working or faulty. Free valuation, inspection at our Media City workshop and same-day payment or store credit.",
   provider: {
     "@id": `${SITE.url}/#localbusiness`,
     sameAs: "https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9",
@@ -209,7 +209,7 @@ export default function SellMacBookDubai() {
     {
       title: "Sell Your MacBook / Apple Device Dubai - Instant Valuation, Same-Day Cash",
       description:
-        "Sell your Mac, iPhone or iPad in Dubai - even if damaged. Free instant valuation, free pickup across Dubai and paid same day. We buy working & faulty devices.",
+        "Sell your Mac, iPhone or iPad in Dubai, even if damaged. Free valuation, walk in to our Media City workshop, get paid same day. WhatsApp us for an offer.",
       path: PATH,
     },
     [
@@ -230,14 +230,14 @@ export default function SellMacBookDubai() {
         tone="dark"
         eyebrow="Sell or Trade In · Dubai"
         title="Sell Your Apple Device in Dubai"
-        subtitle="Sell your Mac, iPhone or iPad in Dubai - even if it's damaged. Free instant valuation, free pickup anywhere in Dubai, and paid same day. We buy working and faulty devices alike."
+        subtitle="Sell your Mac, iPhone or iPad in Dubai - even if it's damaged. Free instant valuation on WhatsApp, a walk-in workshop in Dubai Media City, and paid same day. We buy working and faulty devices alike."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1">
             <Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews
           </span>
           <span>·</span>
-          <span>Free collection across Dubai</span>
+          <span>Walk in at Dubai Media City</span>
           <span>·</span>
           <span>Paid same day - cash or transfer</span>
         </p>
@@ -246,7 +246,7 @@ export default function SellMacBookDubai() {
       <QuickAnswer
         tone="dark"
         question="How do I sell my Mac in Dubai?"
-        answer="Send the model and a few photos on WhatsApp for a free valuation. If you accept the offer, we collect free anywhere in Dubai and pay the same day by cash or transfer. We buy working and faulty Macs, iPhones and iPads alike."
+        answer="Send the model and a few photos on WhatsApp for a free valuation. If you accept the offer, bring the device to our Dubai Media City workshop and we pay the same day by cash or transfer. We buy working and faulty Macs, iPhones and iPads alike."
       />
 
       <USPStrip tone="dark" />
@@ -263,7 +263,7 @@ export default function SellMacBookDubai() {
               <p className="text-[18px] leading-relaxed max-w-[70ch] mb-md">
                 Want to <strong>sell your MacBook, iMac, iPhone or iPad in Dubai</strong>?
                 Send us the model and condition and we'll give you a free, honest valuation in minutes -
-                then collect the device free of charge anywhere in Dubai and pay you the same day, by cash
+                then inspect the device at our Media City workshop and pay you the same day, by cash
                 or instant bank transfer. There's no obligation, and you don't even need a working device:
                 cracked, water-damaged or dead,{" "}
                 <Link to="/sell-faulty-macbook-dubai" className="text-accent underline underline-offset-2">
@@ -305,8 +305,8 @@ export default function SellMacBookDubai() {
             <Laptop size={28} className="text-accent" aria-hidden /> What we buy
           </h2>
           <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
-            If Apple made it, we'll buy it - working or faulty. Here's what we take, with free collection
-            anywhere in Dubai.
+            If Apple made it, we'll buy it - working or faulty. Here's what we take. Agree the offer on
+            WhatsApp, then bring it to our Media City workshop.
           </p>
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {WHAT_WE_BUY.map((item) => {
@@ -423,7 +423,7 @@ export default function SellMacBookDubai() {
           <ClipboardCheck size={28} className="text-accent" aria-hidden /> How it works
         </h2>
         <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
-          Selling your device takes three simple steps - and the valuation and collection are always free.
+          Selling your device takes three simple steps - and the valuation is always free.
         </p>
         <div className="grid gap-md md:grid-cols-3">
           {STEPS.map((s) => {
@@ -485,7 +485,7 @@ export default function SellMacBookDubai() {
           </h2>
           <p className="text-text-muted text-[16px] max-w-[62ch]">
             Send your model and condition on WhatsApp (a photo helps) and we'll reply with your offer fast.
-            Free collection across Dubai, no obligation, working or faulty. Cash or instant transfer the same day.
+            Walk in to our Media City workshop, no obligation, working or faulty. Cash or instant transfer the same day.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

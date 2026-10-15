@@ -154,9 +154,9 @@ export default function GuideCleanMacBookScreen() {
             </Link>{" "}
             is free, and you can{" "}
             <Link to="/contact" className="text-accent font-semibold hover:underline">
-              book a free pickup
+              visit the workshop
             </Link>{" "}
-            anywhere on the Dubai mainland.
+            in Dubai Media City without an appointment.
           </p>
 
           <h2>Keeping it clean longer</h2>

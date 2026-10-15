@@ -45,7 +45,7 @@ const PROBLEMS = [
   { title: '"Service Recommended" on a 14"/16" Pro',
     body: "Battery health under 80% or cycle count over 1,000, shown in System Settings > Battery > Battery Health. Pro machines reach this faster than an Air because sustained CPU/GPU load runs more full cycles. Replace before the count crosses ~1,200 to avoid swelling." },
   { title: "Battery swelling — trackpad lifts or case bulges",
-    body: 'Critical, and more common on the larger 16" 100Wh pack. The trackpad clicks oddly or the bottom case bows. Stop using it immediately — a swollen lithium pack is a fire risk and can crack the trackpad, which then also needs replacing. WhatsApp same hour for free pickup.' },
+    body: 'Critical, and more common on the larger 16" 100Wh pack. The trackpad clicks oddly or the bottom case bows. Stop using it immediately — a swollen lithium pack is a fire risk and can crack the trackpad, which then also needs replacing. WhatsApp us the same hour and bring it in.' },
   { title: "Heavy workload wear — battery aged in 18 months",
     body: 'Video editing, Xcode builds and 3D work keep a Pro near 100% load, which runs full charge cycles fast and runs the pack hot. A 16" used for sustained rendering can cross 1,000 cycles inside two years. A new tier-1 pack restores full runtime.' },
   { title: "Runs hot then throttles, runtime collapsed",
@@ -65,16 +65,16 @@ const PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp the Battery Health screenshot",
     body: "Open System Settings > Battery > Battery Health and send the screenshot, plus the model (14\"/16\", chip, year). Reply in 4-8 minutes with the confirmed price and a 2-hour booking slot." },
-  { title: "Drop off or free pickup",
-    body: "Walk in to Office #45, Concord Tower, Media City, or book a free pickup anywhere in Dubai mainland. Same-hour pickup from Internet City and JLT." },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, no appointment needed. Can't come in? Book any same-day courier app and WhatsApp us the tracking link." },
   { title: "Bench diagnosis — 15 minutes",
     body: "SMC/PMIC voltages checked, MagSafe 3 / USB-C charge board verified, cycle count and design capacity logged. Confirms whether the pack alone needs replacing or the charge circuit too." },
   { title: "Pack removal + cell swap — 60 minutes",
     body: 'Bottom case off, adhesive softened with isopropyl 99%, old cells lifted, tier-1 replacement seated. On the larger 16" pack the cells are bonded over the trackpad ribbon, so this is done under the microscope.' },
   { title: "BMS re-pair + 4-hour calibration",
     body: "On Apple-silicon Pros the BMS firmware is re-paired to the logic board, then a full calibration cycle runs so macOS reads the new design capacity correctly. Final report shown on collection." },
-  { title: "Free delivery + 3-month warranty card",
-    body: "Delivered back same day. Warranty card lists the cell batch number and expected cycle life — 3 months on cells, plus an 80% capacity guarantee for the same period." },
+  { title: "Collection + 3-month warranty card",
+    body: "Ready to collect same day. Warranty card lists the cell batch number and expected cycle life — 3 months on cells, plus an 80% capacity guarantee for the same period." },
 ];
 
 const FAQS: FAQ[] = [
@@ -89,22 +89,22 @@ const FAQS: FAQ[] = [
   { q: "Do you replace M1, M2, M3, M4 and M5 Pro batteries?",
     a: 'Yes — every Apple-silicon Pro pack is in active stock, including the M3 Pro 14" and M4 Pro 16". Apple-silicon batteries are BMS-firmware re-paired to the logic board on the bench after the swap. Same-day, with the M5 pack costing a little more.' },
   { q: "My MacBook Pro battery is swollen — what do I do?",
-    a: "Stop using it immediately. Don't charge it or try to power it on. Lithium swelling is a fire risk and on a Pro can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 same hour — free emergency pickup across Dubai mainland." },
+    a: "Stop using it immediately. Don't charge it or try to power it on. Lithium swelling is a fire risk and on a Pro can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 the same hour, then bring it straight to the workshop." },
   { q: "What's the warranty on a new MacBook Pro battery?",
     a: "3 months written warranty on cells plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months at under 200 cycles, the pack is replaced free. The warranty stays with the MacBook serial and transfers once free of charge." },
   { q: "Will I lose my data during a Pro battery swap?",
     a: "No. The SSD is soldered to the logic board and is untouched during a battery replacement — files, apps, FileVault encryption all stay intact. A Time Machine backup before any service is still good practice." },
   { q: "Do you replace the 2019 16\" Intel and older Touch Bar Pro batteries Apple calls obsolete?",
     a: "Yes — every Pro back to the 2012 Retina is serviceable here. Apple stopped stocking some of these, but we carry tier-1 100Wh and Touch Bar packs from the original ATL/LG factories. Same day, with the full 3-month warranty." },
-  { q: "Do you offer free pickup for MacBook Pro battery service?",
-    a: "Yes — free pickup and delivery anywhere in Dubai mainland. Same-hour from Internet City, Knowledge Village, JLT and Al Barsha; same-day from Marina, Downtown, JBR, Palm and Business Bay. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { q: "Can I send my MacBook Pro in for a battery replacement?",
+    a: "Yes. Walk it in to Concord Tower, Dubai Media City, or book any same-day courier app yourself and WhatsApp us the tracking link so we know it's coming. A swollen pack should be walked in, not handed to a courier." },
 ];
 
 const COMPARISON = [
   ["Repair window",            "30 min (booked) · 2 hrs walk-in",          "5 to 10 business days, mail-in"],
   ['Starting price (14" Pro)',  "Free diagnosis, then a quote",             "AED 879 + VAT, M5 (Apple list)"],
   ['Starting price (16" Pro)',  "Free diagnosis, then a quote",             "AED 959 + VAT, M5 Pro / Max (Apple list)"],
-  ["Free pickup in Dubai",     "Yes, same hour from many areas",           "No, customer must courier"],
+  ["Walk in, no appointment",  "Yes, 2 hours on the bench",                "Check with the store"],
   ['100Wh 16" pack in stock',   "Yes — tier-1, IATA certified",            "Order only"],
   ["Calibration cycle",        "Yes, 4 hours included",                    "Not specified"],
   ["Warranty",                 "3 months + 80% capacity guarantee",        "1 year (Apple)"],
@@ -223,7 +223,7 @@ export default function MacBookProBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-pro-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook Pro battery replacement in Dubai finishes in 2 hours on the bench — including the calibration cycle macOS needs to read the new design capacity. The Pro is a bigger job than an Air: the 14″ carries a ~70Wh pack and the 16″ a ~100Wh pack (the airline-cabin ceiling), and Pro workloads run more full cycles and more heat, so packs age faster. We fit tier-1 cells from Samsung SDI, LG Chem and ATL — the same factories that supply Apple — with BMS firmware re-pairing on Apple Silicon, a 4-hour calibration, and a 3-month warranty plus 80% capacity guarantee. Swollen pack? Stop using the MacBook and WhatsApp same hour for free emergency pickup. For Air or other models, see the <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">full MacBook battery replacement</Link> page.
+            MacBook Pro battery replacement in Dubai finishes in 2 hours on the bench — including the calibration cycle macOS needs to read the new design capacity. The Pro is a bigger job than an Air: the 14″ carries a ~70Wh pack and the 16″ a ~100Wh pack (the airline-cabin ceiling), and Pro workloads run more full cycles and more heat, so packs age faster. We fit tier-1 cells from Samsung SDI, LG Chem and ATL — the same factories that supply Apple — with BMS firmware re-pairing on Apple Silicon, a 4-hour calibration, and a 3-month warranty plus 80% capacity guarantee. Swollen pack? Stop using the MacBook, WhatsApp us the same hour and bring it in. For Air or other models, see the <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2 hover:no-underline">full MacBook battery replacement</Link> page.
           </p></LinkifyProse>
         </section>
 
@@ -262,7 +262,7 @@ export default function MacBookProBatteryReplacement() {
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead
               title="Our MacBook Pro battery replacement process"
-              intro="Six steps from screenshot to delivery. The BMS re-pair and 4-hour calibration are what separate a proper Pro swap from a grey-market job."
+              intro="Six steps from screenshot to handover. The BMS re-pair and 4-hour calibration are what separate a proper Pro swap from a grey-market job."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
@@ -307,7 +307,7 @@ export default function MacBookProBatteryReplacement() {
                 <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">80% capacity guarantee</strong> — if maximum capacity drops below 80% within 3 months at under 200 cycles, the pack is replaced free.</span></li>
                 <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature capacity loss, swelling, BMS firmware faults, sudden-shutdown returns.</span></li>
                 <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> physical damage, liquid damage, charging from non-spec chargers above the model's rated wattage.</span></li>
-                <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Free same-day collection. Replacement fitted within 24 hours.</span></li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Bring it back to the workshop. Replacement fitted within 24 hours.</span></li>
               </ul>
             </Card>
           </div>
@@ -438,7 +438,7 @@ export default function MacBookProBatteryReplacement() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-2xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto">Pro battery under 80%? Send the screenshot — quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Battery Health screenshot + serial on WhatsApp. 2-hour bench time, free pickup, 3-month warranty plus 80% capacity guarantee.
+              Battery Health screenshot + serial on WhatsApp. 2-hour bench time, walk in at Media City, 3-month warranty plus 80% capacity guarantee.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

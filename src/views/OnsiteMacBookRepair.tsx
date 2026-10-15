@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Star, MessageCircle, Phone, Truck, Check, MapPin, Wrench, Headphones } from "lucide-react";
+import { Star, MessageCircle, Phone, Check, MapPin, Wrench, Headphones } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -19,51 +19,61 @@ import { localBusiness, organization, service as serviceSchema, breadcrumbs, ite
 import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const STEPS = [
-  { title: "Message us your model and location", body: "Send your MacBook model and your area on WhatsApp or call 055 741 3706. Tell us the fault and we point you at a likely fix and a price range before anyone moves." },
-  { title: "Free same-hour or same-day pickup", body: "A technician comes to your office or home anywhere on Dubai mainland and collects the MacBook. Pickup and delivery are free, no callout charge." },
-  { title: "Repair at the Dubai Media City workshop", body: "The MacBook is diagnosed and repaired at our Concord Tower workshop in Dubai Media City, where the tools, parts and benches live. Diagnosis is free and you approve the quote before any work starts." },
-  { title: "Tested before it leaves", body: "Every repair is bench-tested - screen, battery, keyboard, ports and boot - so the MacBook works when it reaches you, not just when it leaves." },
-  { title: "Returned to your door", body: "We deliver the repaired MacBook back to the same address, free. Most common repairs are completed and returned the same day." },
+  { title: "WhatsApp us the model, fault and area", body: "Send your MacBook model, what it's doing and where you are to 055 741 3706. A photo of the screen or the error helps. We tell you straight away if it sounds like a job for a visit or for the bench." },
+  { title: "We check the technicians' diary", body: "Onsite visits run around the workshop, so they depend on a technician being free. If one is, we give you a time. If not, we say so and point you at the faster route." },
+  { title: "You get the visit charge before booking", body: "Onsite repair is a paid service. We quote the charge on WhatsApp first, and nothing is booked until you say yes." },
+  { title: "The technician works at your desk", body: "Diagnosis, macOS faults and quick software fixes get done where the MacBook sits. You watch, ask questions and keep working on something else." },
+  { title: "Hardware goes to the bench", body: "Screens, batteries, keyboards, ports, liquid damage and board-level work need the parts, tools and test rigs at Concord Tower. For those you walk the MacBook in or courier it to us." },
 ];
 
-const HANDLED = [
-  { title: "Screen repair", body: "Cracked, flickering or black displays - genuine and high-grade compatible panels, see MacBook screen repair." },
-  { title: "Battery replacement", body: "Swollen, draining or no-charge batteries swapped and health-tested, see MacBook battery replacement." },
-  { title: "Keyboard and trackpad", body: "Dead, sticky or repeating keys and unresponsive trackpads replaced." },
-  { title: "Charging and ports", body: "MagSafe, USB-C and charging faults diagnosed and fixed at board or port level." },
-  { title: "Liquid damage", body: "Spill cleaning, corrosion treatment and board-level recovery to save the MacBook and your data." },
-  { title: "Software and upgrades", body: "macOS crashes, boot loops, storage and RAM upgrades, and performance tuning - the same software, hardware and upgrade work the site has always covered." },
+const ONSITE_OK = [
+  { title: "Diagnosis at your desk", body: "We find out what's actually wrong before anyone talks about parts, so you know whether it's a software fix or a bench job." },
+  { title: "macOS crashes and boot loops", body: "Kernel panics, a Mac stuck on the Apple logo or a failed update are often software. Those can usually be sorted on the spot." },
+  { title: "Slow Macs and full storage", body: "Clearing a full startup disk, removing junk login items and checking what's eating memory. No parts, no screwdriver." },
 ];
 
-const AREAS = ["Dubai Marina", "Downtown Dubai", "JBR", "JLT", "Business Bay", "Dubai Internet City", "Dubai Media City", "Palm Jumeirah"];
+const BENCH_ONLY = [
+  { title: "Screen replacement", body: "A display swap needs a clean bench and the right panel in hand. See MacBook screen repair." },
+  { title: "Battery replacement", body: "Batteries are glued in and a swollen cell needs careful handling. See MacBook battery replacement." },
+  { title: "Keyboard, trackpad and ports", body: "Dead or sticky keys, an unresponsive trackpad and USB-C or MagSafe faults are hardware repairs done at the workshop." },
+  { title: "Liquid damage and board-level work", body: "Corrosion cleaning and component work on the logic board happen at the bench, not on a client's desk." },
+];
+
+const ROUTES = [
+  { title: "Walk in", body: "Our workshop is Office #45, 10th Floor, Concord Tower, Dubai Media City. No appointment for a diagnosis. Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm, Sunday closed." },
+  { title: "Courier it from inside Dubai", body: "Book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. If you can't come in, it's the quickest way to reach the bench, with no waiting on us." },
+  { title: "Courier it from another emirate", body: "From Abu Dhabi, Sharjah or further out, book a courier to send it to us. It takes longer than same day. When the repair is done we send it back by courier, arranged on WhatsApp." },
+];
 
 const FAQS = [
-  { q: "Is pickup and delivery really free for onsite MacBook repair?",
-    a: "Yes. Pickup and delivery are free across Dubai mainland, with no callout charge. A technician collects the MacBook from your office or home, it is repaired at our Dubai Media City workshop, and it is returned to the same address at no extra cost. Diagnosis is free too." },
-  { q: "How fast can you collect my MacBook?",
-    a: "Collection is usually same-hour or same-day across Dubai mainland once you message us your area and model on WhatsApp at 055 741 3706. We run Monday to Saturday, 9 am to 7 pm (Friday break 12-2 pm), so a pickup before you leave the office is easy to arrange." },
-  { q: "Do you repair at my office, or take the MacBook away?",
-    a: "Quick checks and software fixes can be done at your location. Most hardware repairs - screen, battery, keyboard, charging, liquid damage - are done faster and more safely at our Concord Tower workshop in Dubai Media City, where the parts, tools and test benches are. Either way, collection and return are free." },
-  { q: "Can a MacBook repair be done the same day?",
-    a: "Most common repairs such as screen and battery replacement are completed and returned the same day when the part is in stock. Liquid damage and board-level work can take longer, and we tell you the realistic timeline before you approve anything." },
-  { q: "Which Dubai areas do you cover for onsite collection?",
-    a: "We collect and deliver free across Dubai mainland, including Dubai Marina, Downtown Dubai, JBR, JLT, Business Bay, Dubai Internet City, Dubai Media City and Palm Jumeirah. See MacBook repair near me for the full list of communities we serve." },
+  { q: "Is onsite MacBook repair in Dubai free?",
+    a: "No. Onsite repair is a paid service. A technician comes to your home or office when one is free, and we quote the visit charge on WhatsApp before anything is booked. Diagnosis at our Concord Tower workshop is still free if you walk in or courier the MacBook to us." },
+  { q: "How do I book a technician to visit?",
+    a: "WhatsApp 055 741 3706 with your MacBook model, the fault and your area. We check whether a technician is free, tell you the charge for the visit and agree a time. Nothing is booked until you confirm on WhatsApp." },
+  { q: "How soon can a technician come to me?",
+    a: "It depends on whether a technician is free that day, so we don't promise a time until we've checked. If you need the MacBook looked at quickly, walking in to Concord Tower or sending it by a same-day courier is usually faster than waiting for a visit." },
+  { q: "What can you fix at my home or office?",
+    a: "Diagnosis, macOS crashes, boot loops caused by software, failed updates, slow Macs and full storage. These need no parts, so the technician can usually sort them at your desk while you carry on with your day." },
+  { q: "What has to go to the workshop?",
+    a: "Anything that needs parts or the board opened up: screen and battery replacement, keyboards, trackpads, charging ports, liquid damage and board-level repair. Those need the tools, parts and test benches at our Dubai Media City workshop, so you walk the MacBook in or courier it to us." },
+  { q: "Can I courier my MacBook to you instead?",
+    a: "Yes. Inside Dubai, book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. It's the fastest option if you can't come in yourself. We diagnose it free and quote on WhatsApp before any work starts." },
+  { q: "I'm in Abu Dhabi or another emirate. What are my options?",
+    a: "Book a courier to send the MacBook to us. It takes longer than a same-day Dubai courier, so plan for that. Once the repair is done we send it back to you by courier, and we arrange the return with you on WhatsApp." },
+  { q: "Do I need an appointment to walk in?",
+    a: "Not for a diagnosis. Come to Office #45, 10th Floor, Concord Tower, Dubai Media City, Monday to Thursday and Saturday 9 am to 7 pm, or Friday 9 am to 12 pm and 2 pm to 7 pm. We're closed on Sunday." },
   { q: "Is the diagnosis free?",
-    a: "Yes, diagnosis is free. We tell you what is wrong and quote a fixed price on WhatsApp before any work begins. Repairs are priced per service and you approve the quote first, so there is no surprise bill." },
-  { q: "Do you cover Sharjah or Abu Dhabi?",
-    a: "Free pickup and delivery applies to Dubai mainland. For an address in Sharjah, Abu Dhabi or another emirate, message us your location on WhatsApp at 055 741 3706 and we will tell you what we can arrange for your area." },
-  { q: "What warranty comes with an onsite MacBook repair?",
-    a: "Every repair is backed by our own written warranty up to 12 months covering the parts replaced and the workmanship. The warranty is the same whether you visit the workshop or use free pickup and delivery." },
-  { q: "How much does an onsite MacBook repair cost?",
-    a: "Pickup, delivery and diagnosis are free. Repairs are priced per service - screen, battery, keyboard and so on - and quoted on WhatsApp before any work starts. You only pay for the repair itself, never for the visit." },
+    a: "Yes, at the workshop. We tell you what's wrong and quote the repair on WhatsApp before we touch it, and if we can't fix it you don't pay. The only extra charge is the onsite visit itself, which we quote before you book." },
+  { q: "What warranty comes with the repair?",
+    a: "Every repair carries our own written warranty, up to 12 months on hardware, covering the parts we fitted and our workmanship. The warranty is the same whether the job was done at your desk or on our bench." },
 ];
 
 export default function OnsiteMacBookRepair() {
   useSeo(
     {
-      title: "Onsite MacBook Repair Dubai | MacBook Repair Dubai",
+      title: "Onsite MacBook Repair Dubai. Paid Visits, When Available",
       description:
-        "Doorstep MacBook repair across Dubai. Free pickup and delivery, free diagnosis, same-day turnaround, warranty of up to 12 months. Call 055 741 3706.",
+        "Onsite MacBook repair in Dubai: a paid technician visit when one is free, with the charge quoted on WhatsApp first. Or walk in to Media City. Book now.",
       path: "/onsite-macbook-repair-dubai",
     },
     [
@@ -71,14 +81,13 @@ export default function OnsiteMacBookRepair() {
       organization(),
       serviceSchema({
         name: "Onsite MacBook Repair Dubai",
-        timeline: "Same-day on most repairs",
         warranty: "P1Y",
         url: "/onsite-macbook-repair-dubai",
-        description: "Onsite and doorstep MacBook repair across Dubai - free pickup and delivery on Dubai mainland, free diagnosis, repairs priced per service and a warranty of up to 12 months.",
+        description: "Paid onsite MacBook repair in Dubai: a technician visits your home or office when one is free, with the charge quoted on WhatsApp before booking. Diagnosis and software fixes on site; hardware and board-level repairs at the Dubai Media City workshop.",
       }),
       itemList({
-        name: "What we handle onsite",
-        items: HANDLED.map((i) => ({ name: i.title, url: "/onsite-macbook-repair-dubai", description: i.body })),
+        name: "What we can fix onsite",
+        items: ONSITE_OK.map((i) => ({ name: i.title, url: "/onsite-macbook-repair-dubai", description: i.body })),
       }),
       breadcrumbs([
         { name: "Home", path: "/" },
@@ -97,13 +106,13 @@ export default function OnsiteMacBookRepair() {
         variant="service"
         tone="dark"
         eyebrow="Onsite MacBook Repair · Dubai"
-        title="Onsite MacBook Repair and Support in Dubai"
-        subtitle="Stay at your desk - we come to you. Free pickup and delivery across Dubai mainland, free diagnosis, and most repairs returned the same day. No callout charge."
+        title="Onsite MacBook Repair in Dubai, at Your Home or Office"
+        subtitle="A technician comes to you when one is free. It's a paid visit, and we quote the charge on WhatsApp before you book. Hardware jobs still come to our Media City bench."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
-          <span>Free pickup across Dubai</span>
+          <span>Visit charge quoted first</span>
           <span>·</span>
           <span>Repairing Apple hardware since 2004</span>
         </p>
@@ -112,7 +121,7 @@ export default function OnsiteMacBookRepair() {
       <QuickAnswer
         tone="dark"
         question="Do you come to my home or office for MacBook repair?"
-        answer="We collect from your home or office anywhere in Dubai mainland, free and with no callout charge, and bring the Mac back when it is done - most repairs are returned the same day. Diagnosis is free and there is no fee if we cannot fix it, so you never need to leave your desk."
+        answer="Yes, when one of our technicians is available. Onsite MacBook repair is a paid visit, and we quote the charge on WhatsApp before you book. Diagnosis and software fixes happen at your desk. Screens, batteries and board work need our Concord Tower bench, so walk in or courier the MacBook to us."
       />
 
       <USPStrip tone="dark" />
@@ -127,10 +136,10 @@ export default function OnsiteMacBookRepair() {
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <p className="text-[18px] leading-relaxed max-w-[75ch] mb-md">
-          <strong>MacBook Repair Dubai</strong> brings the workshop to you. If you do not have time to leave your office or home, a technician comes to your location, collects your MacBook, repairs it and returns it safely - all with <strong>free pickup and delivery across Dubai mainland</strong> and <strong>free diagnosis</strong>. Whether it is a software crash, a hardware failure or an upgrade, you get the same expert service that has run on Apple hardware since 2004, without the trip across town.
+          <strong>Onsite MacBook repair in Dubai</strong> means one of our technicians comes to your home or office instead of you coming to us. It's a <strong>paid visit</strong>, and it only happens when a technician is free from the workshop. We tell you the charge on WhatsApp before anything is booked, so there's no surprise on the day.
         </p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
-          There is no callout charge. Repairs are priced per service, diagnosed free, and quoted on WhatsApp before any work starts.
+          A visit suits a Mac that won't boot past the logo, a failed macOS update or a laptop you can't take off the desk for a day. If the fault turns out to be hardware, the MacBook needs our bench at Concord Tower, Dubai Media City. You can walk it in or send it by courier, and diagnosis there is free.
         </p>
       </section>
 
@@ -138,7 +147,7 @@ export default function OnsiteMacBookRepair() {
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Truck size={28} className="text-accent" aria-hidden /> How onsite MacBook repair works
+            <Headphones size={28} className="text-accent" aria-hidden /> How does onsite MacBook repair work?
           </h2>
           <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
             {STEPS.map((s, i) => (
@@ -152,63 +161,60 @@ export default function OnsiteMacBookRepair() {
         </div>
       </section>
 
-      {/* What we handle */}
+      {/* What can and can't be done on site */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Wrench size={28} className="text-accent" aria-hidden /> What we handle onsite and at your doorstep
+          <Check size={28} className="text-accent" aria-hidden /> What can a technician fix at your desk?
         </h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          The same repairs we do at the workshop, collected and returned free. Start with <Link to="/macbook-screen-repair-dubai" className="text-accent underline underline-offset-2">MacBook screen repair</Link> or <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook battery replacement</Link>, the two most common doorstep jobs.
+          Jobs that need no parts. If the screen's cracked or the battery's swollen, a visit won't fix it, and we'd rather tell you that on WhatsApp than charge you for the trip.
         </p>
-        <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
-          {HANDLED.map((i) => (
+        <div className="grid gap-md md:grid-cols-3">
+          {ONSITE_OK.map((i) => (
             <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Check size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {i.title}</h3>
               <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
             </article>
           ))}
         </div>
-      </section>
 
-      {/* Coverage areas */}
-      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <MapPin size={28} className="text-accent" aria-hidden /> Areas we collect from
-          </h2>
-          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-            Free collection and return across Dubai mainland, including these areas. Outside the list? <Link to="/macbook-repair-near-me-dubai" className="text-accent underline underline-offset-2">See MacBook repair near me</Link> for every community we serve.
-          </p>
-          <ul className="grid gap-sm grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 list-none p-0 m-0">
-            {AREAS.map((a) => (
-              <li key={a} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md px-md py-sm text-[15px] font-semibold flex items-center gap-2">
-                <MapPin size={16} className="text-accent shrink-0" aria-hidden /> {a}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Why us */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <Headphones size={28} className="text-accent" aria-hidden /> Why book onsite with us
+        <h2 className="text-[28px] md:text-[32px] mt-3xl mb-md flex items-center gap-sm">
+          <Wrench size={28} className="text-accent" aria-hidden /> Which repairs have to come to the workshop?
         </h2>
-        <div className="grid gap-md md:grid-cols-3">
-          {[
-            { title: "Free pickup, free diagnosis", body: "No callout charge and no diagnosis fee. We collect, diagnose and quote before you commit to anything." },
-            { title: "Same-day on most repairs", body: "Common screen and battery jobs are collected, repaired and returned the same day across Dubai mainland." },
-            { title: "Workshop-grade, not roadside", body: "Hardware repairs happen at our Dubai Media City workshop with proper tools and test benches, then come back to your door - backed by a written warranty up to 12 months." },
-          ].map((c) => (
-            <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-              <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
-              <p className="text-[15px] text-text-muted leading-relaxed m-0">{c.body}</p>
+        <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
+          Anything that means opening the case. The two we see most are <Link to="/macbook-screen-repair-dubai" className="text-accent underline underline-offset-2">MacBook screen repair</Link> and <Link to="/macbook-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook battery replacement</Link>, and both are done at Concord Tower.
+        </p>
+        <div className="grid gap-md md:grid-cols-2">
+          {BENCH_ONLY.map((i) => (
+            <article key={i.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+              <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><Wrench size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {i.title}</h3>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{i.body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[15px] text-text-muted leading-relaxed max-w-[70ch] mt-lg m-0">
-          Prefer to talk it through first? <Link to="/contact" className="text-accent underline underline-offset-2">Contact us</Link> with your model and area and we will arrange a pickup that fits your schedule.
-        </p>
+      </section>
+
+      {/* Other ways to reach the bench */}
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+        <div className="mx-auto max-w-content px-5 md:px-6">
+          <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
+            <MapPin size={28} className="text-accent" aria-hidden /> No technician free? How else can you get your MacBook to us?
+          </h2>
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
+            Most customers don't wait for a visit. These two routes get the MacBook onto the bench sooner. The full walk-through is in <Link to="/blog/free-pickup-delivery-dubai-how-it-works" className="text-accent underline underline-offset-2">how to get your Mac to us by courier or in person</Link>, and <Link to="/macbook-repair-near-me-dubai" className="text-accent underline underline-offset-2">MacBook repair near me</Link> has drive notes for each part of Dubai.
+          </p>
+          <div className="grid gap-md md:grid-cols-3">
+            {ROUTES.map((r) => (
+              <article key={r.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <h3 className="text-[17px] font-bold mb-sm flex items-start gap-2"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /> {r.title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{r.body}</p>
+              </article>
+            ))}
+          </div>
+          <p className="text-[15px] text-text-muted leading-relaxed max-w-[70ch] mt-lg m-0">
+            Not sure which to pick? <Link to="/contact" className="text-accent underline underline-offset-2">Contact us</Link> with your model and the fault and we'll tell you which route makes sense.
+          </p>
+        </div>
       </section>
 
       {/* FAQ */}
@@ -226,9 +232,9 @@ export default function OnsiteMacBookRepair() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
         <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Book a free MacBook pickup across Dubai</h2>
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Ask for an onsite visit on WhatsApp</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-            Message your MacBook model and your area and we will arrange same-hour or same-day collection. Free pickup, free delivery, free diagnosis - you only pay for the repair, quoted before we start.
+            Send your MacBook model, the fault and your area. We'll check if a technician is free and quote the visit before you book. If it's a bench job, we'll say so.
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

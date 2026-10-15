@@ -49,7 +49,7 @@ export default function BlogIPadBatteryDrain() {
         },
         {
           q: "How long does iPad battery replacement take in Dubai?",
-          a: "Most iPad models are completed same-day, typically in 1 to 3 hours. iPad Pro models with OLED displays (M4 and later) take a little longer due to the adhesive removal process. We offer free pickup from anywhere in Dubai and can often return the device the same day it is collected.",
+          a: "Most iPad models are completed same-day, typically in 1 to 3 hours. iPad Pro models with OLED displays (M4 and later) take a little longer due to the adhesive removal process. Walk in to our Media City workshop and most iPads are ready to collect the same day.",
         },
         {
           q: "Is it safe to use my iPad if the battery is swollen?",
@@ -291,8 +291,8 @@ export default function BlogIPadBatteryDrain() {
             with all your data, settings, and physical condition unchanged.
           </p>
           <p>
-            Free pickup is available across Dubai: WhatsApp Shafiq on 055 741 3706 to arrange
-            collection. Most iPads are back with you the same day. iPad Pro M4 and M5 models may
+            Walk in to our Media City workshop, or WhatsApp Shafiq on 055 741 3706 with the model
+            first for a quote. Most iPads are ready the same day. iPad Pro M4 and M5 models may
             require an additional day due to the OLED panel adhesive removal process.
           </p>
 

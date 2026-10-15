@@ -118,7 +118,7 @@ export default function GuideMacBookNoInternalSSD() {
             </Link>
             : we confirm whether it's a mount issue, a removable blade, or a board-level controller
             fault before quoting anything. We're at Office #45, 10th Floor, Concord Tower, Al Sufouh,
-            Dubai Media City, open Mon-Sat 9am–7pm, with free pickup across Dubai. Call or WhatsApp{" "}
+            Dubai Media City, open Mon-Sat 9am–7pm, across from Media City Metro with parking on site. Call or WhatsApp{" "}
             <a href="https://wa.me/971557413706" className="text-accent font-semibold hover:underline">055 741 3706</a>.
           </p>
         </>

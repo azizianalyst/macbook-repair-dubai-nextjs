@@ -67,16 +67,16 @@ const COMMON_PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp the model + a photo",
     body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Retina from Touch Bar from XDR (and nano-texture) by serial and quote in 4-8 minutes, 9 am-7 pm Mon-Sat.' },
-  { title: "Free pickup or drop-off",
-    body: "Free pickup anywhere in Dubai mainland, or walk in to Office #45, Concord Tower, Media City. On-the-spot diagnosis in about 15 minutes — panel-side vs board-side confirmed before any work." },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book any same-day courier app and WhatsApp us the tracking link. On-the-spot diagnosis in about 15 minutes — panel-side vs board-side confirmed before any work." },
   { title: "Panel swap under the microscope",
     body: "Lid off in ~25 minutes. Adhesive heated, panel disconnected, replacement seated, eDP/mini-LED ribbon routed and strain-tested, lid re-bonded. Mini-LED and XDR ribbons are handled with the Pro's exact torque spec." },
   { title: "True Tone + XDR calibration",
     body: "On genuine panels True Tone re-calibrates against the original board serial. XDR/HDR brightness and the P3 colour curve are verified against reference before the lid press cures for 90 minutes at 45 °C." },
   { title: "Display QC — 47-point checklist",
     body: "Backlight/zone uniformity, dead-pixel scan at 8 colours, 120Hz ProMotion sweep, hinge torque, lid sensor, brightness curve, P3 gamut, ribbon strain test. The signed checklist is shown to you at handover." },
-  { title: "Free delivery + warranty card",
-    body: 'Back same day on 13"/14" in-stock panels, next day on the 16". The warranty card lists the panel batch number; cover stays with the serial and transfers once free of charge.' },
+  { title: "Collection + warranty card",
+    body: 'Ready same day on 13"/14" in-stock panels, next day on the 16". The warranty card lists the panel batch number; cover stays with the serial and transfers once free of charge.' },
 ];
 
 type FAQ = { q: string; a: string };
@@ -108,7 +108,7 @@ const COMPARISON = [
   ['Price (14" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
   ['Price (16" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
   ["Flexgate cable-only fix",  "Yes on 2016-2017",                          "No, full assembly only"],
-  ["Free pickup in Dubai",     "Yes, same day",                             "Not offered"],
+  ["Walk in, no appointment",  "Yes, diagnosis in about 15 minutes",        "Check with the store"],
   ["Vintage/obsolete Pros",    "Yes — 2012 Retina onward",                  "Not serviced once Apple lists a model as obsolete"],
   ["Warranty",                 "90 days (3 months) on every panel",         "Apple's own repair terms"],
 ];
@@ -314,7 +314,7 @@ export default function MacBookProScreenRepair() {
             <SectionHead
               eyebrow="Simple & transparent"
               title="Our MacBook Pro screen repair process"
-              intro="Six steps from WhatsApp to delivery, each with a fixed time estimate."
+              intro="Six steps from WhatsApp to handover, each with a fixed time estimate."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
@@ -377,7 +377,7 @@ export default function MacBookProScreenRepair() {
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days (3 months)</strong> — written warranty on parts and labour, dated and signed, on genuine and A-grade panels alike.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, dead pixels appearing post-repair, failed mini-LED zones, backlight bleed, eDP/ribbon cable failure, hinge alignment.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, normal HDR blooming on mini-LED XDR panels (this is not a fault).</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free; replacement panel fitted within 48 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Bring it back to the workshop, or send it by a courier you book; replacement panel fitted within 48 hours.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, if the MacBook Pro is sold within the warranty period.</span></li>
             </ul>
           </Card>
@@ -493,7 +493,7 @@ export default function MacBookProScreenRepair() {
 
         {/* ── Location ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Free pickup across the city" title="Where do I bring my MacBook Pro in Dubai?" />
+          <SectionHead eyebrow="Walk in, no appointment" title="Where do I bring my MacBook Pro in Dubai?" />
           <div className="grid gap-lg md:grid-cols-2 items-stretch">
             <div className="overflow-hidden rounded-2xl border border-border">
               <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
@@ -512,7 +512,7 @@ export default function MacBookProScreenRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto">Cracked Pro screen? WhatsApp the model — quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. 90-day (3-month) warranty on every panel fitted.
+              Year, screen size, processor, photo of the damage. Walk in to Media City or send it by courier. 90-day (3-month) warranty on every panel fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

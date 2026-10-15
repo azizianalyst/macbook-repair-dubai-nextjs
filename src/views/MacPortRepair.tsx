@@ -56,7 +56,7 @@ export default function MacPortRepair() {
         { q: "Can you fix a Thunderbolt 5 port on the new Mac Mini M4 Pro?", a: "Yes - we have TB5 assemblies in stock for the most common models and source others within 48 hours. The work itself is the same procedure as TB4." },
         { q: "What if the port damage spread to the Thunderbolt controller chip?", a: "Then it becomes a logic-board-level repair (different service, higher cost). We diagnose this for free first and tell you honestly which path you're on before any work begins." },
         { q: "Can a bad cable damage my Mac's port?", a: "Cheap or counterfeit USB-C/Thunderbolt cables can - they sometimes have wrong pin assignments that stress the controller. Stick to Apple, Anker, OWC, Belkin or Cable Matters for Thunderbolt cables." },
-        { q: "Will my Mac need to come in for the diagnostic?", a: "Yes - five-minute job at our Media City workshop. For Mac Pro (heavy) we offer free pickup across Dubai mainland." },
+        { q: "Will my Mac need to come in for the diagnostic?", a: "Yes - five-minute job at our Media City workshop. For a heavy Mac Pro you can walk in (parking on site), send it by a same-day courier you book, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." },
       ]}
       reviewNames={["Ali Hassan", "Shah nawaz", "Marianne Chehade El Dfouni"]}
       related={[

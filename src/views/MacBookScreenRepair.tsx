@@ -66,16 +66,16 @@ const COMMON_PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp the model + photo",
     body: "Send the serial number from About This Mac and a photo of the screen damage. Quote back in 4 to 8 minutes during business hours (9 am - 7 pm Mon-Sat)." },
-  { title: "Free pickup or drop-off",
-    body: "Free pickup from anywhere in Dubai mainland. Or walk in to Office #45, Concord Tower, Media City. Diagnosis is on the spot - about 15 minutes." },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book any same-day courier app and WhatsApp us the tracking link. Diagnosis is on the spot - about 15 minutes." },
   { title: "Panel swap in the workshop",
     body: "Lid removed in 25 minutes. Adhesive heated, panel disconnected, replacement seated, eDP cable routed, lid re-bonded. Under microscope from start to finish." },
   { title: "True Tone calibration + 90-min cure",
     body: "On genuine panels, True Tone re-calibrates against the original board serial. Lid press cures for 90 minutes at 45 °C before the MacBook leaves the bench." },
   { title: "Display QC - 47-point checklist",
     body: "Backlight uniformity, dead-pixel scan at 8 colours, hinge torque, lid sensor, brightness curve, P3 colour gamut, eDP cable strain test. The checklist is signed and shown to you at handover." },
-  { title: "Free delivery + warranty up to 3 months card",
-    body: "Delivered back same day on common models, next day on the 16\" Pro. Warranty card lists the panel batch number - the warranty stays with the serial number, transferable once free of charge." },
+  { title: "Collection + warranty up to 3 months card",
+    body: "Ready to collect same day on common models, next day on the 16\" Pro. Warranty card lists the panel batch number - the warranty stays with the serial number, transferable once free of charge." },
 ];
 
 type FAQ = { q: string; a: string };
@@ -103,7 +103,7 @@ const FAQS: FAQ[] = [
   { q: "Can you fix a MacBook screen with no image but the laptop still chimes?",
     a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps." },
   { q: "Do you offer pickup for screen repair?",
-    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+    a: "No, we don't collect or deliver. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. It works the same from Sharjah or Abu Dhabi." },
   { q: "Is MacBook screen repair cheaper than the Apple Store?",
     a: "Often, but compare for yourself. Apple does not publish a MacBook screen price in the UAE: it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work, so you can set the two side by side. You also keep your data and skip the Genius Bar appointment wait." },
   { q: "Should I just go to Apple, and what about AppleCare+?",
@@ -113,7 +113,7 @@ const FAQS: FAQ[] = [
 const COMPARISON = [
   ["Repair window",         "Same day on MacBook Air 13\" and Pro 14\"",  "5 to 14 business days, mail-in"],
   ["Price",                 "Free diagnosis, then a written quote",        "No published price; quoted after Apple inspects it"],
-  ["Free pickup in Dubai",  "Yes, same day",                                "No, customer must courier"],
+  ["Walk in, no appointment", "Yes, diagnosis in about 15 minutes",         "Check with the store"],
   ["LCD-only option",       "Yes - costs less than a full assembly",         "No, full assembly only"],
   ["Warranty",              "15 days - 3 months (by panel grade)",           "12 months"],
   ["No-fix-no-charge",      "Yes",                                           "No, diagnostic fee charged"],
@@ -124,7 +124,7 @@ const TIMELINE = [
   { tone: "good" as const, head: "30 minutes (booked appointment)",
     body: "Pre-book a slot, confirm your model and serial, and the panel is staged for your MacBook before you arrive. Walk in, wait 30 minutes, walk out. Guaranteed, free if we run over. Compatible with MacBook Air 13″/15″ and Pro 13″/14″ M1-M4 in-stock panels." },
   { tone: "good" as const, head: "Same day (3 to 5 hours, walk-in)",
-    body: "MacBook Air 13″ and 15″, Pro 13″ Touch Bar, Pro 14″ M1/M2/M3/M4 - when the panel is in stock. 90 of last 100 same-day walk-in tickets delivered before 8 pm." },
+    body: "MacBook Air 13″ and 15″, Pro 13″ Touch Bar, Pro 14″ M1/M2/M3/M4 - when the panel is in stock. 90 of last 100 same-day walk-in tickets ready before 8 pm." },
   { tone: "mid" as const, head: "1 to 2 days",
     body: "MacBook Pro 16″ M1 to M4 (panel ordered from local parts supplier). 12″ Retina 2015-2017. 2012 Retina 15″ when the original Samsung panel must be sourced." },
   { tone: "mid" as const, head: "3 days (rare)",
@@ -328,7 +328,7 @@ export default function MacBookScreenRepair() {
             <SectionHead
               eyebrow="Simple & transparent"
               title="Our screen repair process"
-              intro="Six steps from WhatsApp to delivery. Each step has a fixed time estimate - no vague 'we'll call you back'."
+              intro="Six steps from WhatsApp to handover. Each step has a fixed time estimate - no vague 'we'll call you back'."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
@@ -391,7 +391,7 @@ export default function MacBookScreenRepair() {
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">3 months</strong> - written warranty on parts and labour, dated and signed.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, dead pixels appearing post-repair, backlight bleed, eDP cable failure, hinge alignment.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, software issues unrelated to the display.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Same-day collection, free of charge. Replacement panel fitted within 48 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Bring it back to the workshop, or send it by a courier you book. Replacement panel fitted within 48 hours.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, if the MacBook is sold within the warranty period.</span></li>
             </ul>
           </Card>
@@ -551,7 +551,7 @@ export default function MacBookScreenRepair() {
 
         {/* ── Location ───────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-          <SectionHead eyebrow="Free pickup across the city" title="Where do I bring my MacBook in Dubai?" />
+          <SectionHead eyebrow="Walk in, no appointment" title="Where do I bring my MacBook in Dubai?" />
           <div className="grid gap-lg md:grid-cols-2 items-stretch">
             <div className="overflow-hidden rounded-2xl border border-border">
               <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
@@ -561,7 +561,7 @@ export default function MacBookScreenRepair() {
               <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
               <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. Across from Media City Metro.</p>
               <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
-              <p className="text-[14px] text-text-muted m-0">Not near Media City? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See same-hour and same-day pickup by area</Link>.</p>
+              <p className="text-[14px] text-text-muted m-0">Not near Media City? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See directions and drive times by area</Link>.</p>
             </div>
           </div>
         </section>
@@ -571,7 +571,7 @@ export default function MacBookScreenRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Cracked screen? WhatsApp the model - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Year, screen size, processor, photo of the damage. Free pickup across Dubai mainland. warranty up to 3 months on every panel fitted.
+              Year, screen size, processor, photo of the damage. Walk in to Media City or send it by courier. Warranty up to 3 months on every panel fitted.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

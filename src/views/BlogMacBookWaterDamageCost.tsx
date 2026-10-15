@@ -68,8 +68,8 @@ export default function BlogMacBookWaterDamageCost() {
               board and can warp components.
             </li>
             <li>
-              <strong>Bring it to us within 24 hours.</strong> WhatsApp first - we'll send the free
-              pickup driver same day.
+              <strong>Bring it to us within 24 hours.</strong> WhatsApp a photo first, then
+              walk it in to our Media City workshop the same day.
             </li>
           </ol>
 
@@ -150,7 +150,7 @@ export default function BlogMacBookWaterDamageCost() {
           <h2 id="what-next">What should I do next?</h2>
           <p>
             Time matters. WhatsApp <strong>055 741 3706</strong> with a photo of your MacBook -
-            we'll dispatch the free pickup driver same day for any mainland Dubai address. Or visit
+            then bring it straight to our Media City workshop, across from the Media City Metro. Or visit
             our{" "}
             <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage service page
@@ -186,7 +186,7 @@ export default function BlogMacBookWaterDamageCost() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Full process, pickup, and pricing." },
+        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Full process, visiting the workshop, and pricing." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "When the board is unrecoverable." },
         { label: "MacBook logic board repair guide", href: "/blog/macbook-logic-board-repair-cost-dubai", description: "Component-level repair explained." },
       ]}

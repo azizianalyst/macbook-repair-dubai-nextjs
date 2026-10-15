@@ -28,7 +28,7 @@ const SERVICES = [
 
 const FAQS = [
   { q: "Can you set up a brand-new MacBook for me?",
-    a: "Yes. We do complete out-of-box setup - macOS configuration, Apple ID and iCloud, email, Wi-Fi, VPN, your apps and security settings - so you can start working straight away. Available in-shop, on-site at your office, or with free pickup and delivery." },
+    a: "Yes. We do complete out-of-box setup - macOS configuration, Apple ID and iCloud, email, Wi-Fi, VPN, your apps and security settings - so you can start working straight away. Available in-shop, or on-site at your office as a paid visit, subject to technician availability and quoted on WhatsApp." },
   { q: "Can you move everything from my old Mac or PC?",
     a: "Yes. We migrate your files, applications, mail, photos and settings from an old Mac using Time Machine or Migration Assistant, and from a Windows PC using a guided transfer. Your data is handled confidentially and verified on the new machine before handover." },
   { q: "Do you install Microsoft Office and Outlook?",
@@ -46,7 +46,7 @@ export default function MacSetupConfiguration() {
     {
       title: "Mac Setup, Configuration & Data Migration Dubai - Same Day",
       description:
-        "Apple device setup & data migration in Dubai. New Mac setup, email/Wi-Fi/VPN, Office & Outlook, iCloud, and full migration from old Mac or PC. On-site or free pickup. Call 055 741 3706.",
+        "Mac setup and data migration in Dubai: email, Wi-Fi, VPN, Office, iCloud and a full move from your old Mac or PC. Walk in or call 055 741 3706 today.",
       path: "/mac-setup-data-migration-dubai",
     },
     [
@@ -81,14 +81,14 @@ export default function MacSetupConfiguration() {
         tone="dark"
         eyebrow="Setup, configuration & migration · Dubai"
         title="Mac Setup, Configuration & Data Migration in Dubai"
-        subtitle="New Mac to set up, or moving from an old Mac or PC? We configure macOS, email, Wi-Fi, VPN, Office, iCloud and migrate all your data - in-shop, on-site, or with free pickup and delivery."
+        subtitle="New Mac to set up, or moving from an old Mac or PC? We configure macOS, email, Wi-Fi, VPN, Office, iCloud and migrate all your data - in-shop, or on-site as a paid visit."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
           <span>·</span>
           <span>Same-day service</span>
           <span>·</span>
-          <span>On-site across Dubai</span>
+          <span>Walk in or paid on-site visit</span>
         </p>
       </Hero>
 
@@ -96,7 +96,7 @@ export default function MacSetupConfiguration() {
       <QuickAnswer
         tone="dark"
         question="Do you offer Mac setup and data migration in Dubai?"
-        answer="Yes. MacBook Repair Dubai provides Mac setup, configuration and data migration in Dubai, new-Mac setup, account and email configuration, Time Machine backups, and transferring data from an old Mac or PC. Service is available at the Concord Tower workshop in Dubai Media City or on-site, with free pickup across Dubai mainland."
+        answer="Yes. MacBook Repair Dubai provides Mac setup, configuration and data migration in Dubai, new-Mac setup, account and email configuration, Time Machine backups, and transferring data from an old Mac or PC. Service is available at the Concord Tower workshop in Dubai Media City, or on-site as a paid visit when a technician is free."
       />
 
       <USPStrip tone="dark" />
@@ -144,7 +144,7 @@ export default function MacSetupConfiguration() {
           {[
             { title: "1 · Tell us your setup", body: "Your new device, your old Mac or PC, the email and apps you use, and any company network or VPN." },
             { title: "2 · We configure & migrate", body: "macOS, accounts, security, apps and a full data transfer - verified on the new machine before handover." },
-            { title: "3 · Collect ready-to-work", body: "In-shop, on-site at your office, or via free pickup and delivery. We walk you through anything new." },
+            { title: "3 · Collect ready-to-work", body: "In-shop, or on-site at your office as a paid visit. We walk you through anything new." },
           ].map((c) => (
             <article key={c.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[18px] font-bold mb-sm">{c.title}</h3>
@@ -170,7 +170,7 @@ export default function MacSetupConfiguration() {
 
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg">Visit us or book a pickup</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-lg">Visit the workshop</h2>
         <LocationBlock tone="dark" />
       </section>
 
@@ -180,7 +180,7 @@ export default function MacSetupConfiguration() {
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[30ch]">New Mac to set up? Get a quote in 4 minutes</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Tell us your new device, your old one, and what you need configured. Same-day service, on-site or free pickup across Dubai.
+            Tell us your new device, your old one, and what you need configured. Same-day service in-shop, or a paid on-site visit, subject to technician availability.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

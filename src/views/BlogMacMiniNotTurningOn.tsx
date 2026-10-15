@@ -45,7 +45,7 @@ export default function BlogMacMiniNotTurningOn() {
         },
         {
           q: "Will an SMC reset fix my specific Mac mini problem?",
-          a: "An SMC reset resolves power-on failures caused by software state corruption in the System Management Controller, which handles power delivery, fan control, sleep, and LED status. It is effective when the Mac mini refuses to turn on after a macOS crash, after a power outage, or after an unexpected shutdown. It does not fix hardware faults: a physically failed power supply, a burned trace on the logic board, or a failed PMIC. Our free diagnostic visit will tell you within 30 minutes whether the fault is SMC-resettable or hardware-related. We bring calibrated power supply testers and a USB-C power delivery meter to every bench session.",
+          a: "An SMC reset resolves power-on failures caused by software state corruption in the System Management Controller, which handles power delivery, fan control, sleep, and LED status. It is effective when the Mac mini refuses to turn on after a macOS crash, after a power outage, or after an unexpected shutdown. It does not fix hardware faults: a physically failed power supply, a burned trace on the logic board, or a failed PMIC. Our free diagnostic at the workshop will tell you within 30 minutes whether the fault is SMC-resettable or hardware-related. We use calibrated power supply testers and a USB-C power delivery meter at every bench session.",
         },
         {
           q: "How long does a Mac mini repair take in Dubai when it will not turn on?",

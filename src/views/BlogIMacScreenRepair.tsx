@@ -216,8 +216,8 @@ export default function BlogIMacScreenRepair() {
               disconnecting the GPU from the display cable, removing the RAM access door, and carefully extracting
               the display from the chassis without touching the GPU or power supply. One slip near the GPU or RAM
               slots can cause secondary damage. Our technicians have completed this repair over 200 times. Labour
-              time is 3-4 hours. For a 27-inch, bringing it to the workshop rather than requesting pickup is
-              always safer, as the risk of transit damage to a cracked screen is higher for this model.
+              time is 3-4 hours. For a 27-inch, lay it face-up on a flat car seat with a towel over the glass on the way to the
+              workshop, as a cracked panel on this model can spread further if it flexes in transit.
             </p>
             <p>
               The 24-inch M-series iMac has a completely different construction. Apple uses a bonded display

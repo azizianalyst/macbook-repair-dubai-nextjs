@@ -94,8 +94,8 @@ export function deriveServiceQuickAnswer(opts: {
   const name = withoutTrailingCity(opts.serviceName);
   const warranty = opts.warrantyText ?? (warrantyLabel(warrantyDays) ? warrantyClause(warrantyDays) : "");
   const close = warranty
-    ? `Parts and labour carry ${warranty}. Free pickup and delivery across Dubai mainland.`
-    : `Free pickup and delivery across Dubai mainland, with a written quote before any work.`;
+    ? `Parts and labour carry ${warranty}. Walk in to our Media City workshop.`
+    : `Walk in to our Media City workshop, with a written quote before any work.`;
   const answer =
     (opts.startingPrice > 0
       ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
@@ -123,7 +123,7 @@ export function deriveFamilyQuickAnswer(opts: {
     question: `How much does ${withoutTrailingCity(opts.family)} repair in Dubai cost?`,
     answer:
       `${withoutTrailingCity(opts.family)} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty up to 12 months. ` +
-      `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
+      `Same-day to 5 days depending on the model and fault. Walk in to our Media City workshop. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };
 }

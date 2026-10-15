@@ -80,9 +80,9 @@ export default function IPhone15Repair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Concord Tower, Dubai Media City. No appointment needed." },
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
-        { title: "QC + return",          body: "OLED, Dynamic Island, USB-C charge + data, MagSafe and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "OLED, Dynamic Island, USB-C charge + data, MagSafe and Face ID tested, signed warranty, ready to collect at the workshop." },
       ]}
       warrantyDays={365}
       warrantyHeadline

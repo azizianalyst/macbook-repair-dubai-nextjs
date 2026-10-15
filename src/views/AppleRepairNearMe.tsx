@@ -26,23 +26,23 @@ const DEVICES = [
 ];
 
 const AREAS = [
-  { area: "Dubai Media City / JLT / JBR",    time: "Free pickup · 2–4 hrs" },
-  { area: "Downtown / DIFC / Business Bay",   time: "Free pickup · 2–4 hrs" },
-  { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Free pickup · 2–4 hrs" },
-  { area: "Deira / Bur Dubai / Karama",       time: "Free pickup · 2–4 hrs" },
-  { area: "Dubai Hills / Al Barsha / Mirdif", time: "Free pickup · 2–4 hrs" },
-  { area: "Sharjah / Abu Dhabi",              time: "Pickup on request · WhatsApp us" },
+  { area: "Dubai Media City / JLT / JBR",    time: "Walk in · or same-day courier" },
+  { area: "Downtown / DIFC / Business Bay",   time: "Walk in · or same-day courier" },
+  { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Walk in · or same-day courier" },
+  { area: "Deira / Bur Dubai / Karama",       time: "Walk in · or same-day courier" },
+  { area: "Dubai Hills / Al Barsha / Mirdif", time: "Walk in · or same-day courier" },
+  { area: "Sharjah / Abu Dhabi",              time: "Courier you book · WhatsApp us" },
 ];
 
 const FAQS = [
   { q: "Where is the nearest Apple repair shop to me in Dubai?",
-    a: "The nearest Apple specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near Media City Metro. We repair MacBook, iMac, Mac mini, Mac Studio, iPhone and iPad. Free pickup from your home or office across Dubai Mainland. WhatsApp 055 741 3706." },
+    a: "The nearest Apple specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, near Media City Metro. We repair MacBook, iMac, Mac mini, Mac Studio, iPhone and iPad. Walk in without an appointment, or send the device by a same-day courier you book. WhatsApp 055 741 3706." },
   { q: "Do you repair all Apple devices near me in Dubai?",
     a: "Yes. MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations). One specialist for your Mac, iPhone and iPad, at Concord Tower Dubai Media City since 2004." },
   { q: "How quickly can you repair my Apple device near me?",
-    a: "iPhone screen: 40 minutes. iPhone battery: 30 minutes. MacBook battery or keyboard: 1–3 hours. MacBook screen: same day. Logic board and water damage: 2–5 days. All same-day jobs available same day you contact us, drop in or request free pickup from anywhere in Dubai." },
+    a: "iPhone screen: 40 minutes. iPhone battery: 30 minutes. MacBook battery or keyboard: 1–3 hours. MacBook screen: same day. Logic board and water damage: 2–5 days. Same-day jobs are done the day you walk in, or the day your courier drops the device off." },
   { q: "Can I get free Apple device pickup near me in Dubai?",
-    a: "Yes, free courier pickup and delivery across all Dubai Mainland areas for every Apple device. WhatsApp 055 741 3706 with your device, location, and fault. A courier arrives within 2–4 hours. Most repairs are completed and returned the same day." },
+    a: "No. We don't collect or deliver devices any more. The quickest route if you can't come in is a same-day courier app you book yourself: hand the device to the driver and WhatsApp 055 741 3706 the tracking link. Most repairs are finished the same day, ready to collect or send back by courier." },
   { q: "How much does Apple repair cost near me in Dubai?",
     a: "It depends on your exact model and the fault, so we quote each device individually. MacBook screen, battery and logic-board work, iPhone screen and battery, and iPad screen work are all covered. Diagnosis is free. WhatsApp 055 741 3706 with your exact model for a fixed written quote in under 4 minutes." },
   { q: "Are you an Apple Authorised Service Provider near me in Dubai?",
@@ -57,9 +57,9 @@ export default function AppleRepairNearMe() {
   const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
 
   useSeo({
-    title: "Apple Repair Near Me Dubai. All Devices | Free Pickup, Same-Day",
+    title: "Apple Repair Near Me Dubai | All Devices, Same-Day",
     description:
-      "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac and Mac mini. Free pickup across Dubai. Same-day. Concord Tower, Media City. WhatsApp 055 741 3706 for a quote.",
+      "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac and Mac mini, same-day at Concord Tower, Media City. Walk in or WhatsApp 055 741 3706 today.",
     path: "/apple-repair-near-me-dubai",
   });
 
@@ -78,7 +78,7 @@ export default function AppleRepairNearMe() {
           tone="dark"
           eyebrow="Apple repair near you · Dubai Media City · Since 2004"
           title="Apple Repair Near Me. Dubai"
-          subtitle="MacBook, iMac, Mac mini, iPhone and iPad repaired in-house. Free pickup from your door. Same-day at Concord Tower."
+          subtitle="MacBook, iMac, Mac mini, iPhone and iPad repaired in-house. Walk in, no appointment. Same-day at Concord Tower."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -106,7 +106,7 @@ export default function AppleRepairNearMe() {
           <QuickAnswer
             tone="dark"
             question="Where can I get my Apple device repaired near me in Dubai?"
-            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. MacBook, iMac, iPhone and iPad repaired in-house. Free pickup across Dubai Mainland and same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
+            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, near Media City Metro. MacBook, iMac, iPhone and iPad repaired in-house. Walk in without an appointment, with same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
           />
         </section>
 
@@ -143,11 +143,11 @@ export default function AppleRepairNearMe() {
               </article>
               <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
                 <Truck size={28} className="text-accent mb-sm" aria-hidden />
-                <h3 className="text-[20px] font-bold mb-sm">Free pickup from anywhere in Dubai</h3>
+                <h3 className="text-[20px] font-bold mb-sm">Send it by courier</h3>
                 <p className="text-[15px] text-text-muted leading-relaxed mb-md">
-                  WhatsApp 055 741 3706. A courier collects from your home or office, no charge across Dubai Mainland. Device repaired and returned same day for most jobs.
+                  Can't come in? Book any same-day courier app, hand the device to the driver, and WhatsApp 055 741 3706 the tracking link. Most jobs are done the same day.
                 </p>
-                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">Book free pickup →</a>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp the tracking link →</a>
               </article>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function AppleRepairNearMe() {
 
         {/* Areas */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Apple repair pickup, near you across Dubai</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Apple repair near you, from every part of Dubai</h2>
           <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
             {AREAS.map(({ area, time }) => (
               <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
@@ -174,7 +174,7 @@ export default function AppleRepairNearMe() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get your Apple device repaired near you today</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed price · Free pickup · Same-day return for most repairs.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed price · Walk in · Same-day return for most repairs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

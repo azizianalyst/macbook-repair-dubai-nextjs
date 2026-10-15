@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IMacVirusRemoval() {
   return (
     <SubServicePageTemplate
-      seoTitle="iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706"
-      seoDescription="iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. Same day. Free home visit. Message us on WhatsApp for pricing."
+      seoTitle="iMac Virus Removal Dubai. Same-Day Malware Removal"
+      seoDescription="iMac virus removal in Dubai: we clear adware, browser hijackers, fake cleaners and rogue profiles, then verify with three scanners. Same day. WhatsApp us."
       path="/imac-virus-removal-dubai"
       eyebrow="iMac malware removal"
       h1="iMac Virus & Malware Removal Dubai"
@@ -53,7 +53,7 @@ export default function IMacVirusRemoval() {
       faqs={[
         { q: "Do Macs really get viruses?", a: "True self-replicating viruses are rare on macOS. What's common is adware, browser hijackers, scareware and unwanted profiles - all of which can be just as disruptive. Yes, your iMac can be 'infected' in the practical sense." },
         { q: "Will I lose my files or photos?", a: "No. Cleaning is targeted at malware files only. Documents, Photos library, iCloud and bookmarks are never touched." },
-        { q: "Can you come to my home or office?", a: "Yes. iMacs are heavy and awkward to transport - free home visit anywhere in Dubai mainland for virus removal jobs." },
+        { q: "Can you come to my home or office?", a: "Yes, when a technician is free. iMacs are heavy and awkward to move, so a paid onsite visit often makes sense for virus removal. We quote the visit charge on WhatsApp before you book. Or bring the iMac to our Concord Tower workshop in Dubai Media City." },
         { q: "Do I need to buy antivirus afterwards?", a: "Almost never. Built-in macOS protections (XProtect, Gatekeeper, MRT) plus careful download habits are enough for most users. We don't sell antivirus subscriptions." },
         { q: "How did this happen?", a: "Usually a download from a search-ad result that pretended to be a real app installer (VLC, Flash Player, video converters). We'll show you the install date and the source so you can avoid it next time." },
         { q: "Is my online banking safe now?", a: "Once we've fully cleaned and verified, yes. We still recommend changing important passwords from a different trusted device after any malware infection - better safe than sorry." },

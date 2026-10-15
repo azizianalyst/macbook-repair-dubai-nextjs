@@ -6,7 +6,7 @@
 // Facts: src/content/ipad-cluster.ts (Apple spec wording + Apple UAE fees, attributed).
 // No prices of ours anywhere - quotes go through WhatsApp.
 import type { ReactNode } from "react";
-import { MessageCircle, Search, ShieldCheck, Truck, Wallet } from "lucide-react";
+import { MapPin, MessageCircle, Search, ShieldCheck, Wallet } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -78,9 +78,9 @@ const SYMPTOMS: { title: string; body: ReactNode }[] = [
 
 const STEPS = [
   { title: "Send the model and a photo", body: "WhatsApp a photo and the model from Settings → General → About. We reply with the likely repair and a quote." },
-  { title: "Free diagnosis", body: "Walk in to Concord Tower or book a free Dubai pickup. We confirm the faulty part and put the quote in writing." },
+  { title: "Free diagnosis", body: "Walk in to Concord Tower, no appointment needed. We confirm the faulty part and put the quote in writing." },
   { title: "Replacement and testing", body: "The screen is heated and lifted with plastic tools, the new part fitted on fresh adhesive, then touch, Pencil, True Tone, cameras and Face ID or Touch ID are tested." },
-  { title: "Return with warranty", body: "Collect it or we deliver free in Dubai, with a written screen warranty of 90 days." },
+  { title: "Collect with warranty", body: "Collect it from the workshop with a written screen warranty of 90 days." },
 ];
 
 const FAQS = [
@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     q: "Do you repair iPad screens for customers outside Dubai?",
-    a: "Yes. Pickup and delivery are free anywhere in Dubai. From Sharjah or Abu Dhabi we arrange courier collection, usually 1 to 2 days door to door. Message your location on WhatsApp.",
+    a: "Yes. Send a photo on WhatsApp for a quote, then book any same-day courier app yourself, hand the iPad to the driver and WhatsApp us the tracking link. Once it's fixed, collect it from the workshop or book a courier to send it back.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function IPadScreenRepair() {
             <li className="flex items-center gap-sm"><Search size={16} className="text-accent" aria-hidden /> Free diagnosis</li>
             <li className="flex items-center gap-sm"><Wallet size={16} className="text-accent" aria-hidden /> Written quote before any work</li>
             <li className="flex items-center gap-sm"><ShieldCheck size={16} className="text-accent" aria-hidden /> Screen warranty: 90 days</li>
-            <li className="flex items-center gap-sm"><Truck size={16} className="text-accent" aria-hidden /> Free pickup across Dubai</li>
+            <li className="flex items-center gap-sm"><MapPin size={16} className="text-accent" aria-hidden /> Walk in, Dubai Media City</li>
           </ul>
         </section>
 
@@ -362,7 +362,7 @@ export default function IPadScreenRepair() {
             <section>
               <h2 className="text-[28px] md:text-[32px] mb-md">iPad screen repair near me</h2>
               <p className="text-[16px] leading-relaxed mb-lg max-w-[72ch] text-text-muted">
-                One workshop, not a chain: {NAP.street}, {NAP.area}. From Media City, JLT, Marina or Al Barsha, walk in (message first so we can check the part); anywhere else in Dubai we collect free. See also{" "}
+                One workshop, not a chain: {NAP.street}, {NAP.area}. From Media City, JLT, Marina or Al Barsha, walk in (message first so we can check the part); from further away, send it with a same-day courier you book and WhatsApp us the tracking link. See also{" "}
                 <Link to="/apple-repair-near-me-dubai/" className={inlineLink}>Apple repair near me</Link>.
               </p>
               <LocationBlock tone="dark" />
@@ -395,7 +395,7 @@ export default function IPadScreenRepair() {
           className="mt-3xl"
           eyebrow="Cracked iPad screen?"
           headline="Send the model and a photo on WhatsApp"
-          description="Free diagnosis, a written quote first, free pickup across Dubai, screen warranty of 90 days."
+          description="Free diagnosis, a written quote first, walk in at Dubai Media City, screen warranty of 90 days."
           whatsappHref={ipadWa(PREFILL)}
         />
       </div>

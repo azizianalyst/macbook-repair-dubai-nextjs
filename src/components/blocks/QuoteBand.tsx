@@ -10,7 +10,7 @@ type Props = {
   startingPrice?: number;     // AED
   timeline?: string;          // "1-5 days"
   whatsappMessage?: string;   // prefilled
-  /** short reassurance line; defaults to warranty + pickup */
+  /** short reassurance line; defaults to walk-in + no-fix-no-charge */
   blurb?: string;
   /** false on services that fit no parts (unlocks, diagnostics): hides the warranty chip */
   showWarranty?: boolean;
@@ -41,7 +41,7 @@ export function QuoteBand({ service, startingPrice, timeline, whatsappMessage, b
               Get your free quote in 4 minutes on WhatsApp
             </h2>
             <p className="text-text-muted text-[15px] mt-sm">
-              {blurb ?? "Send the model and a photo of the issue. Free pickup across Dubai mainland, no-fix-no-charge."}
+              {blurb ?? "Send the model and a photo of the issue, then walk in to our Media City workshop. No fix, no charge."}
             </p>
             <div className="mt-md flex flex-wrap gap-x-lg gap-y-sm text-[14px] text-text-muted">
               {startingPrice != null && startingPrice > 0 && (

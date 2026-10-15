@@ -31,7 +31,7 @@ export default function IPadWaterDamageRepair() {
             iPads are <strong>not water resistant</strong>. There is no IP rating on iPad, iPad Mini, iPad Air or any iPad Pro - only the very latest accessories. The good news: there's more interior space than an iPhone, the ports are easier to flush, and the success rate when treated within 24 hours is around <strong>80%</strong>. After 72 hours and corrosion sets in, it drops to about 50%.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Stop charging it now. Don't put it in rice - that does nothing for the corrosion already starting on the board. WhatsApp us, free same-day pickup, and we have it in the ultrasonic bath the same evening.
+            Stop charging it now. Don't put it in rice - that does nothing for the corrosion already starting on the board. WhatsApp us, bring it in the same day, and we have it in the ultrasonic bath the same evening.
           </p>
         </>
       }
@@ -45,11 +45,11 @@ export default function IPadWaterDamageRepair() {
       ]}
       steps={[
         { title: "Stop using it now", body: "Don't charge it, don't try to dry it with a hairdryer. Power off if you can. WhatsApp us a photo." },
-        { title: "Free same-day pickup", body: "Time matters. Driver collects within hours across Dubai mainland." },
+        { title: "Get it to us the same day", body: "Time matters. Walk in to Concord Tower, Dubai Media City, or book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link." },
         { title: "Strip & visual inspection", body: "Battery disconnected first. Board pulled, photographed, water-damage indicators checked. You get the photos." },
         { title: "Ultrasonic bath", body: "Board cleaned in 99.9% isopropyl in a heated ultrasonic tank. Removes corrosion before it eats traces." },
         { title: "Component test & quote", body: "Board powered up under microscope. Failed components identified. Final quote sent for approval." },
-        { title: "Repair + 15-day warranty", body: "Replace what's broken, reassemble with fresh adhesive, full function test. Delivered with warranty card." },
+        { title: "Repair + 15-day warranty", body: "Replace what's broken, reassemble with fresh adhesive, full function test. Handed back with a warranty card." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
@@ -59,7 +59,7 @@ export default function IPadWaterDamageRepair() {
       ]}
       comparisonRows={[
         ["Starting price",        "Price on request (clean + diagnosis)", "Often refused - quoted as whole-unit swap"],
-        ["Same-day pickup",       "Yes - speed matters for water",     "Drop in yourself"],
+        ["Walk in same day",      "Yes, no appointment - speed matters for water", "Drop in yourself"],
         ["Board-level repair",    "Yes, microscope + ultrasonic",      "No - board swap or unit swap only"],
         ["Honest success rate",   "80% within 24h, 50% after 72h",     "Often declined as 'beyond economical repair'"],
         ["Data recovery first",   "Always - data attempt before parts", "Whole-unit swap means data lost"],
@@ -67,7 +67,7 @@ export default function IPadWaterDamageRepair() {
         ["Warranty",              "30 days on the work performed",     "Limited / often none on liquid"],
       ]}
       faqs={[
-        { q: "How fast do I need to bring my wet iPad in?", a: "Within 24 hours for the best result. Corrosion is silent - your iPad might still work the day of the spill, then die three days later as traces eat through. Faster cleaning, higher recovery rate. We pick up same day." },
+        { q: "How fast do I need to bring my wet iPad in?", a: "Within 24 hours for the best result. Corrosion is silent - your iPad might still work the day of the spill, then die three days later as traces eat through. Faster cleaning, higher recovery rate. Walk in the same day, or send it by same-day courier you book yourself." },
         { q: "Should I put the iPad in rice?", a: "No. Rice absorbs surface moisture but doesn't touch the corrosion already starting on the logic board. By the time you fish it out three days later, the damage is done. Ultrasonic cleaning is the only real treatment." },
         { q: "Is iPad water damage cheaper than iPhone?", a: "Usually yes. There's more interior space, the components are spread out, and the ports are easier to access, so an iPad water repair typically costs less than the same job on an iPhone. Message us on WhatsApp with your model for today's exact price." },
         { q: "What's the difference between fresh water and salt water?", a: "Salt water is much worse. Salt and chlorine accelerate corrosion - within hours, not days. Pool water is similar. We handle both, but the success rate on Gulf-water cases is lower than on a glass of water spilled at the desk." },

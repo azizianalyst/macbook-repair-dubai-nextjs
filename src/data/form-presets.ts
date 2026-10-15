@@ -175,7 +175,7 @@ export const PRESETS: Record<string, FormPreset> = {
     id: "sell-tradein",
     heading: "Tell us what you're selling",
     description:
-      "Three taps and your number. We reply with a valuation. Bring it in or we will collect it free anywhere in Dubai, and you are paid on the spot once we have checked it.",
+      "Three taps and your number. We reply with a valuation. Bring it to our Media City workshop and you are paid on the spot once we have checked it.",
     route: "buyback",
     primaryCta: "form",
     subjectPrefix: "Sell / trade-in",
@@ -203,7 +203,7 @@ export const PRESETS: Record<string, FormPreset> = {
     id: "business",
     heading: "Tell us about your fleet",
     description:
-      "Three taps and your number. We reply with a written scope for onsite support, collection or an annual contract — no sales call unless you ask for one.",
+      "Three taps and your number. We reply with a written scope for onsite support, workshop repairs or an annual contract — no sales call unless you ask for one.",
     route: "business",
     primaryCta: "form",
     subjectPrefix: "Business / fleet",
@@ -211,7 +211,7 @@ export const PRESETS: Record<string, FormPreset> = {
       "Repairs for several devices",
       "Annual maintenance contract",
       "Onsite support",
-      "Collection and delivery",
+      "Data backup or recovery",
       "Setup for new staff",
       "Something else",
     ],

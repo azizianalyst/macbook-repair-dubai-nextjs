@@ -61,8 +61,8 @@ const COMMON_THREATS = [
 const STEPS = [
   { title: "WhatsApp the symptoms",
     body: "Pop-ups? Fans loud? Search engine changed? Send a description and a screenshot if you have one. Reply within 4-8 minutes during business hours." },
-  { title: "Drop off or free pickup",
-    body: "Walk in to Office #45, Concord Tower, Media City, or book a free pickup. Bring your Apple ID password - needed to remove some configuration profiles." },
+  { title: "Walk in or send by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book a same-day courier yourself and WhatsApp us the tracking link. Have your Apple ID password ready - needed to remove some configuration profiles." },
   { title: "Free 15-minute diagnosis",
     body: "Activity Monitor scan, launchctl audit, /Library/LaunchAgents and /Library/LaunchDaemons review, browser extensions audit. Tells the technician within 15 minutes whether it's malware (paid clean) or hygiene (free fix)." },
   { title: "Clean - surgical not nuclear",
@@ -83,7 +83,7 @@ const FAQS: FAQ[] = [
   { q: "Will I lose my files during virus removal?",
     a: "No. Standard and deep clean leave files, apps, and settings intact - the workshop removes the specific malicious components only. Even macOS reinstall preserves your user folder using the Apple-supported \"reinstall over existing\" option. The workshop still recommends a Time Machine backup before any service." },
   { q: "When do you recommend reinstalling macOS instead of cleaning?",
-    a: "Three scenarios: (1) the malware has installed kernel extensions or modified system files (Apple Silicon makes this rare); (2) cryptominer is using rootkit techniques to hide; (3) the customer wants a clean baseline for peace of mind. The reinstall preserves your files; without file preservation the same job costs less." },
+    a: "Three scenarios: (1) the malware has installed kernel extensions or modified system files (Apple Silicon makes this rare); (2) cryptominer is using rootkit techniques to hide; (3) the customer wants to start from a known-clean system. The reinstall preserves your files; without file preservation the same job costs less." },
   { q: "What about ransomware - can you decrypt my files?",
     a: "Honestly: usually no. Modern ransomware uses asymmetric encryption - only the attacker's private key can decrypt. The workshop's ransomware analysis identifies the strain (KeRanger, ThiefQuest, EvilQuest, others) and confirms whether free decryptors exist (No More Ransom project). If a Time Machine or iCloud backup exists from before the infection, a restore from that backup is the actual recovery path." },
   { q: "Should I install antivirus on my Mac?",
@@ -96,8 +96,8 @@ const FAQS: FAQ[] = [
     a: "Yes - the clean removes malicious launch agents and profiles, not anything Apple installed. Touch ID, Apple Pay, iCloud, Find My, FileVault all continue to work with no re-setup needed. Custom certificates added by malware are removed; legitimate Apple certificates are preserved." },
   { q: "Can you check my Mac for spyware (e.g. installed by an ex)?",
     a: "Yes - this is a serious request and handled discreetly. A deep scan looks for screen-recording profiles, keyloggers, hidden launch agents, screen-sharing settings turned on without your knowledge, and Family Sharing surveillance setups. Written report at the end. NDA available on request." },
-  { q: "Do you offer free pickup for virus removal?",
-    a: "Yes, free pickup and delivery across Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { q: "Can I get virus removal without coming to the workshop?",
+    a: "Yes. Book any same-day courier app, hand the Mac to the driver and WhatsApp us the tracking link - it reaches us within the day. Collect it from the workshop afterwards or book a courier to send it back. A paid onsite visit is also possible, subject to technician availability and quoted on WhatsApp." },
 ];
 
 const PREVENTION = [
@@ -119,7 +119,7 @@ const COMPARISON = [
   ["Deep clean / cryptominer",           "Free diagnosis, then a quote",       "Refused - refers to third party"],
   ["Reinstall + file preservation",      "Free diagnosis, then a quote",       "Software help by Genius Bar appointment"],
   ["Free 15-min diagnosis",              "Yes",                                 "Appointment required"],
-  ["Free pickup in Dubai",               "Yes",                                 "No, customer must courier"],
+  ["Walk in without appointment",        "Yes",                                 "No, appointment required"],
   ["30-day re-clean guarantee",          "Yes",                                 "Not offered"],
   ["Spyware / stalkerware audit",        "Quoted after diagnosis, with NDA",   "Not offered"],
 ];

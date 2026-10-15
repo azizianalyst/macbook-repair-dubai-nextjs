@@ -1,7 +1,7 @@
 "use client";
 // "Us vs Apple Store / Authorized centre" comparison - a conversion block that turns
 // price-and-speed shoppers into bookings. All claims reflect the real independent model
-// (component-level repair, ~50% of Apple pricing, same-day, free pickup, vintage support).
+// (component-level repair, ~50% of Apple pricing, same-day, walk-in, vintage support).
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +13,7 @@ const DEFAULT_ROWS: Row[] = [
   { label: "Out-of-warranty & vintage", us: "Component-level board repair", them: "Often “not serviceable” - replace" },
   { label: "Your data", us: "Stays on the device, never wiped without consent", them: "Device often wiped or swapped" },
   { label: "Parts", us: "Genuine or quality-tested - your choice", them: "Genuine module swap only" },
-  { label: "Getting it in", us: "Walk in or free pickup - no appointment", them: "Genius Bar appointment required" },
+  { label: "Getting it in", us: "Walk in to Media City - no appointment", them: "Genius Bar appointment required" },
   { label: "Warranty", us: "Up to written warranty up to 12 months on the repair", them: "Varies by service" },
 ];
 

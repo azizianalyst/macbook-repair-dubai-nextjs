@@ -44,7 +44,7 @@ export default function IPhoneLogicBoardRepair() {
         { title: "Free schematic diagnosis", body: "We scope the relevant power rails against the board schematic and isolate the failed component - usually within 24 hours. No charge if we can't fix it." },
         { title: "Open quote", body: "A WhatsApp voice note with the diagnosis, the exact price, and an honest success rate. Nothing happens until you approve." },
         { title: "Microscope rework", body: "Failed IC removed under stereo microscope, pads cleaned with no-clean flux, a fresh reballed chip placed with a controlled hot-air profile." },
-        { title: "Function + stress test", body: "Charge cycles, signal, audio, backlight and a full Settings diagnostic before delivery - so an intermittent fault never goes back out the door." },
+        { title: "Function + stress test", body: "Charge cycles, signal, audio, backlight and a full Settings diagnostic before handover - so an intermittent fault never goes back out the door." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

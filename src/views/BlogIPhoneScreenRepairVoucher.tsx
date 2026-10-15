@@ -89,7 +89,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li>WhatsApp <a href="https://wa.me/971557413706" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">+971 55 741 3706</a> with the iPhone model.</li>
             <li>We send you a quote and payment link (card, Apple Pay, bank transfer accepted).</li>
             <li>Voucher PDF emailed within 1 hour with unique 8-character redemption code.</li>
-            <li>To redeem: bring iPhone + voucher code to workshop, or mention the code when booking pickup.</li>
+            <li>To redeem: bring the iPhone and the voucher code to our Media City workshop. No appointment needed.</li>
             <li>Pay nothing at repair (voucher fully covers) or just the difference if you upgrade to a more expensive screen tier.</li>
           </ol>
 
@@ -115,7 +115,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
       faqs={[
         { q: "Can I buy a voucher today and use it next week?", a: "Yes - there's no waiting period. Buy in the morning, redeem the same afternoon if needed." },
         { q: "What if I lose the voucher PDF?", a: "We keep a record under your phone number. WhatsApp us and we'll resend the redemption code." },
-        { q: "Can I use the voucher at Apple Store?", a: "No - it's only valid at our workshop in Dubai Media City (or via our free pickup/delivery in Dubai)." },
+        { q: "Can I use the voucher at Apple Store?", a: "No - it's only valid at our workshop in Concord Tower, Dubai Media City." },
         { q: "Does the voucher work on iPad or MacBook screens?", a: "No - screen repair vouchers are iPhone-specific. We can issue separate iPad or MacBook vouchers on request - different pricing structure." },
         { q: "What happens if Apple's screen tech changes (e.g. switches to a different OLED panel)?", a: "Voucher remains valid at the original 15% discount against the new pricing. We absorb the difference if Apple panels become more expensive within your 12-month window." },
         { q: "Can I buy multiple vouchers at once for my family?", a: "Yes - popular for families with 3+ iPhones. Bulk vouchers (5+) get an extra 5% off (so 20% total saving). WhatsApp us for the bulk quote." },

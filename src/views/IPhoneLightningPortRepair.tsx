@@ -57,7 +57,7 @@ export default function IPhoneLightningPortRepair() {
         { q: "Why do some shops bill you for what's just lint?", a: "Honestly, because they can. We've decided cleaning is part of the diagnostic and shouldn't be billed. We make our money on the customers who genuinely need a port - and on the goodwill from the ones who don't." },
         { q: "Will the bottom microphone be replaced too?", a: "On iPhone 7 and later, the Lightning port and bottom microphone share a flex cable - replacing one replaces the other, no extra charge. If your bottom mic was also dying, this is a free fix." },
         { q: "What if it's actually water damage?", a: "We'll see corrosion under the microscope and tell you. Water-damaged ports may also have killed nearby logic-board traces - we run a free water-damage assessment in that case (separate page on this site) before quoting." },
-        { q: "Same day for sure?", a: "Yes. Walk-in by 1 PM, collect by 6 PM. Or WhatsApp for free pickup across Dubai mainland." },
+        { q: "Same day for sure?", a: "Yes. Walk in by 1 PM, collect by 6 PM. WhatsApp the model first so the port part is ready." },
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[

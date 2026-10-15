@@ -117,7 +117,7 @@ export default function BlogMacStudioNotTurningOn() {
             <p>
               If the socket, cable and monitor all check out and the Mac Studio still will not
               show life or reach startup options, the fault is inside the unit and it is time
-              for a technician. Bring it in, or use our free Dubai pickup, and we will confirm
+              for a technician. Bring it in to our Media City workshop and we will confirm
               the exact stage it fails at on the bench at no charge.
             </p>
           </section>
@@ -239,7 +239,7 @@ export default function BlogMacStudioNotTurningOn() {
             <p>
               Whatever the depth, the path is the same: free diagnosis, a clear quote before any
               work, component-level repair, data recovered first if storage is involved, and a
-              warranty on the fix. Message us on WhatsApp or call, or book free Dubai pickup, and
+              warranty on the fix. Message us on WhatsApp or call, or walk in to Media City, and
               we will tell you honestly whether the Mac Studio is worth repairing or replacing.
             </p>
           </section>
@@ -264,7 +264,7 @@ export default function BlogMacStudioNotTurningOn() {
         },
         {
           q: "How long does the repair take in Dubai?",
-          a: "A cable, socket or SMC issue is sorted same day, often while you wait. A power board replacement is typically same day or next day depending on the part. A board-level micro-soldering repair usually takes one to three working days because it includes testing under load before we hand it back. We confirm the timeline when we quote, and free Dubai pickup and return is available.",
+          a: "A cable, socket or SMC issue is sorted same day, often while you wait. A power board replacement is typically same day or next day depending on the part. A board-level micro-soldering repair usually takes one to three working days because it includes testing under load before we hand it back. We confirm the timeline when we quote, and there is parking on site at Concord Tower if you're carrying the Mac Studio in.",
         },
         {
           q: "Is it safe to keep using a Mac Studio that struggles to power on?",

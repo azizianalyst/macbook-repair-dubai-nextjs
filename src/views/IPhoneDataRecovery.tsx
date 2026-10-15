@@ -80,7 +80,7 @@ export default function IPhoneDataRecovery() {
         ["Chip-off recovery",           "Price on request, with passcode",               "Not offered"],
         ["Honest about Secure Enclave", "Yes - no false promises",                       "Yes"],
         ["Data privacy",                "Not retained after delivery",                   "Apple does not access user data"],
-        ["Free pickup in Dubai",        "Yes",                                           "No"],
+        ["Walk in, no appointment",     "Yes, Dubai Media City",                         "Usually by appointment"],
         ["Free diagnosis",              "Yes - charged only if work proceeds",           "No, diagnostic fee charged"],
         ["Warranty",                    "15 days on the repair",                         "12 months on service unit (no data)"],
       ]}

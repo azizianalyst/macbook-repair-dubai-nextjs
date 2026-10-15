@@ -46,7 +46,7 @@ const VALUATION_FACTORS = [
 
 const STEPS = [
   { n: "1", icon: MessageCircle, title: "Send your details", body: "WhatsApp us the device, model/era and condition - or use the estimator on this page. Photos help but are not required. You get a free, no-obligation valuation, usually within 10 minutes during shop hours." },
-  { n: "2", icon: Truck, title: "Free collection or visit", body: "We arrange free collection anywhere in Dubai, or you drop in to our Dubai Media City workshop. Shafiq Ahmed and the team verify the device in person and confirm the offer on the spot." },
+  { n: "2", icon: Truck, title: "Walk in or courier it to us", body: "Bring the device to our Concord Tower workshop in Dubai Media City, or book your own courier to send it in and WhatsApp us the tracking link. Shafiq Ahmed and the team verify it in person and confirm the offer." },
   { n: "3", icon: Banknote, title: "Same-day payment or credit", body: "Accept and you are paid the same day in cash or card - or apply the value as credit toward a newer Mac, a repair, or an upgrade. No hidden deductions after the fact." },
 ] as const;
 
@@ -65,11 +65,11 @@ const FAQS = [
   },
   {
     q: "Is the valuation free and is there any obligation?",
-    a: "The valuation is completely free with zero obligation. You only proceed if you're happy with the offer. There's no fee to get a quote, no charge for collection, and no pressure to sell.",
+    a: "The valuation is completely free with zero obligation. You only proceed if you're happy with the offer. There's no fee to get a quote and no pressure to sell.",
   },
   {
-    q: "Do you collect the device, and how fast do I get paid?",
-    a: "Yes - free collection across Dubai is included, or you can visit our Al Sufouh / Dubai Media City workshop. Once the device is verified in person and you accept, payment is same-day by cash or card, or applied immediately as credit toward your next Mac or a repair.",
+    q: "How do I get the device to you, and how fast do I get paid?",
+    a: "Walk in to our Concord Tower workshop in Dubai Media City, or book your own courier to send it to us and WhatsApp us the tracking link. We don't collect. Once the device is verified in person and you accept, payment is same-day by cash or card, or applied immediately as credit toward your next Mac or a repair.",
   },
   {
     q: "Will my data be wiped before resale?",
@@ -89,7 +89,7 @@ const tradeInOffer = {
   name: "MacBook & Apple Device Trade-In Dubai",
   serviceType: "Apple device buyback and trade-in",
   description:
-    "Trade in or sell your Apple device in Dubai - MacBook, iMac, Mac mini, iPhone and iPad, working or faulty. Free valuation, free collection across Dubai, same-day cash, card or store credit toward a newer model.",
+    "Trade in or sell your Apple device in Dubai - MacBook, iMac, Mac mini, iPhone and iPad, working or faulty. Free valuation at our Media City workshop, same-day cash, card or store credit toward a newer model.",
   provider: { "@id": `${SITE.url}/#localbusiness` },
   areaServed: {
     "@type": "City",
@@ -121,7 +121,7 @@ export default function TradeInMacBookDubai() {
     {
       title: "MacBook Trade-In Dubai - Upgrade for Less, Instant Credit",
       description:
-        "Trade in your old Mac, iPhone or iPad in Dubai - working or faulty. Free valuation, free collection, same-day cash or instant credit toward a newer model. WhatsApp 055 741 3706.",
+        "Trade in your old Mac in Dubai, working or faulty. Free valuation, walk in or courier it to us, same-day cash or instant credit. WhatsApp 055 741 3706.",
       path: PATH,
     },
     [
@@ -146,7 +146,7 @@ export default function TradeInMacBookDubai() {
         tone="dark"
         eyebrow="Trade-In & Buyback · Dubai"
         title="Trade-In & Upgrade Your Mac in Dubai"
-        subtitle="Trade in your old Mac toward a newer model - we assess it, value it fairly, and credit your device. Working or faulty, we buy both. Free valuation, free collection across Dubai, same-day payment or instant upgrade credit."
+        subtitle="Trade in your old Mac toward a newer model - we assess it, value it fairly, and credit your device. Working or faulty, we buy both. Free valuation, walk in or courier it to us, and same-day payment or instant upgrade credit."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -314,7 +314,7 @@ export default function TradeInMacBookDubai() {
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[34ch]">Get your free trade-in valuation today</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Tell us your device, model and condition - working or faulty - and Shafiq Ahmed will send a fair offer the same day. Free collection across Dubai, same-day cash, card or instant upgrade credit. No fee, no obligation.
+            Tell us your device, model and condition - working or faulty - and Shafiq Ahmed will send a fair offer the same day. Walk it in or courier it to us. Same-day cash, card or instant upgrade credit. No fee, no obligation.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

@@ -39,7 +39,7 @@ export default function Warranty() {
           <li><strong>Screen replacements</strong> depend on the panel grade you choose: <strong>15 days</strong> on high-grade aftermarket panels and <strong>up to 3 months</strong> on genuine Apple panels. Both are bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
           <li><strong>Battery replacements</strong> (MacBook and iPhone) are covered for <strong>3 months</strong>, with an 80% capacity guarantee.</li>
           <li><strong>Keyboard repairs, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
-          <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date of pickup.</li>
+          <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date you collect the device.</li>
           <li>The warranty travels with the device, not the customer - see the transfer rules below.</li>
           <li><strong>Apple's warranty and AppleCare are separate from ours.</strong> The periods above are <em>our</em> repair warranty. If your device is still covered by Apple's standard one-year warranty or by AppleCare / AppleCare+ (up to about 3 years on a Mac), that is Apple's cover on the device itself and is claimed through Apple - not us. We are an independent specialist (not an Apple Authorized Service Provider), so if your device is still in Apple cover we will tell you, because for a covered fault you may be better off going to Apple.</li>
         </ul>
@@ -56,9 +56,9 @@ export default function Warranty() {
 
       <LegalSection id="not-covered" title="3. What is NOT covered">
         <ul>
-          <li><strong>New physical damage</strong> after pickup - drops, cracks, dents, bent chassis.</li>
+          <li><strong>New physical damage</strong> after collection - drops, cracks, dents, bent chassis.</li>
           <li><strong>New liquid damage</strong> - coffee spills, swimming-pool exposure, rain.</li>
-          <li><strong>Tampering by a third party</strong> - if another shop or individual has opened the device after pickup, the warranty is void on the affected components.</li>
+          <li><strong>Tampering by a third party</strong> - if another shop or individual has opened the device after collection, the warranty is void on the affected components.</li>
           <li><strong>Software issues unrelated to the repair</strong> - macOS or iOS bugs, third-party app crashes, malware, jailbreaks.</li>
           <li><strong>Battery wear</strong> below 80% capacity through normal use after 3 months on a battery replacement (see service-specific warranty below).</li>
           <li><strong>Missing or altered serial number</strong> on the device or invoice.</li>
@@ -78,7 +78,7 @@ export default function Warranty() {
         <ol>
           <li>Send a WhatsApp message to {NAP.phoneDisplay} within the warranty period shown on your invoice (15 days to 12 months, depending on the service). Include the device serial number, a description of the new symptom, and a photo or short video if relevant.</li>
           <li>A technician confirms whether the symptom is in scope.</li>
-          <li>Drop the device at {NAP.street}, {NAP.area}, or use the free pickup service.</li>
+          <li>Bring the device to {NAP.street}, {NAP.area}. No appointment needed.</li>
           <li>Bring the original invoice or quote the invoice number - the workshop also keeps a copy linked to the serial number.</li>
           <li>Inspection is free. If the symptom is in scope, the repair is redone free.</li>
           <li>If the symptom is out of scope, a quote for the new fault is sent on WhatsApp before any work begins.</li>
@@ -113,7 +113,7 @@ export default function Warranty() {
         <ul>
           <li>The warranty stays with the device serial number, not the original payer. If you sell the MacBook, the new owner can claim by presenting the original invoice.</li>
           <li>One transfer per repair is allowed, free of charge.</li>
-          <li>The total warranty period does not extend on transfer - the original clock (15 days, 6 months or 12 months) continues from the original pickup date.</li>
+          <li>The total warranty period does not extend on transfer - the original clock (15 days, 6 months or 12 months) continues from the original collection date.</li>
           <li>Email <a href="mailto:info@macbook-repair-dubai.ae">info@macbook-repair-dubai.ae</a> with the invoice number and the new owner's name and phone to register the transfer.</li>
         </ul>
       </LegalSection>

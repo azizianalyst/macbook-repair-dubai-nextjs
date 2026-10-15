@@ -14,7 +14,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
     { name: "Remove the SIM tray", text: "Use the SIM ejector or a paperclip. Removing the tray opens a vent for trapped moisture and gives us a clear path to inspect for liquid intrusion." },
     { name: "Pat dry external surfaces only", text: "Microfiber cloth on the screen, ports, and seams. Do not push cotton swabs into the Lightning/USB-C port - you'll only push moisture deeper." },
     { name: "Don't shake or use heat", text: "Shaking spreads liquid further across the logic board. Hairdryers, ovens, and direct sunlight warp components and drive moisture into chip packages." },
-    { name: "Bring to us within 4 hours", text: "iPhones have far less internal volume than MacBooks - corrosion progresses much faster. WhatsApp 055 741 3706 - free pickup driver dispatched same day for any mainland Dubai address." },
+    { name: "Bring to us within 4 hours", text: "iPhones have far less internal volume than MacBooks - corrosion progresses much faster. WhatsApp 055 741 3706 and bring it straight to Concord Tower, Media City. Can't leave? Book a same-day courier app and send us the tracking link." },
   ];
   return (
     <BlogPostTemplate
@@ -225,7 +225,7 @@ export default function BlogIPhoneWaterDamageActionPlan() {
         },
       ]}
       relatedLinks={[
-        { label: "iPhone water damage service page", href: "/iphone-water-damage-repair-dubai", description: "Process, pickup, and pricing tiers." },
+        { label: "iPhone water damage service page", href: "/iphone-water-damage-repair-dubai", description: "Process, drop-off, and pricing tiers." },
         { label: "iPhone water damage cost guide", href: "/blog/iphone-water-damage-repair-cost-dubai", description: "Full pricing and recovery data." },
         { label: "iPhone not charging - 7 fixes", href: "/blog/iphone-not-charging-7-fixes", description: "If charging fails after exposure." },
       ]}

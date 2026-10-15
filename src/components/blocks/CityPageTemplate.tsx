@@ -1,11 +1,12 @@
 "use client";
-// Shared template for OTHER-EMIRATE city pages (served by free courier collection
-// from the single Dubai Media City workshop). Honest by construction: it states we
-// have no branch in the city, frames turnaround truthfully by distance, and never
-// uses the Dubai-only copy (metro/parking/"same-day"/"reviews from across Dubai")
-// that the Dubai AreaPageTemplate carries. Driven by CityConfig from src/content/cities.ts.
+// Shared template for OTHER-EMIRATE city pages. One workshop only (Concord Tower, Dubai
+// Media City), no branch in any of these cities. The customer either books a courier to
+// send the Mac to us (slower than inside Dubai, never same-day) and we send it back by
+// courier arranged on WhatsApp, or drives in. No onsite visits outside Dubai, no free
+// pickup/collection/delivery. Driven by CityConfig from src/content/cities.ts; the
+// per-city wording lives there so pages are not name-swapped copies of each other.
 import { Link } from "@/lib/router-compat";
-import { Building2, Clock, MapPin, Truck } from "lucide-react";
+import { Building2, Car, Clock, MapPin, Package } from "lucide-react";
 
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -35,10 +36,9 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
   const url = `${SITE.url}${path}`;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
   const services = cfg.topServices ?? COMMON_SERVICES;
-  const isPickup = cfg.collectionModel === "pickup";
-  const collectVerb = isPickup ? "free door-to-door pickup" : "free courier collection";
-  const title = `MacBook Repair ${cfg.city} - Free Collection & Delivery`;
-  const description = `MacBook repair in ${cfg.city} via ${collectVerb} to our Dubai Media City workshop - ${cfg.turnaround}, written warranty up to 12 months. No branch needed. Call 055 741 3706.`;
+  // Mirrored in src/lib/dynamic-meta.ts (city loop): keep the two in step.
+  const title = cfg.seoTitle;
+  const description = cfg.seoDescription;
 
   useSeo(
     { title, description, path },
@@ -51,7 +51,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         timeline: cfg.turnaround,
         warranty: "P1Y",
         url: path,
-        description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for ${cfg.city}, ${cfg.emirate}, with free courier collection and return from our Dubai Media City workshop.`,
+        description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for customers in ${cfg.city}, ${cfg.emirate}. Repairs are done at our Dubai Media City workshop: send the Mac by a courier you book, or drive in.`,
       }),
     ],
   );
@@ -62,27 +62,27 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
         <Hero
           variant="service"
           tone="dark"
-          eyebrow={`${isPickup ? "Free pickup" : "Free courier"} in ${cfg.city}`}
-          title={`MacBook Repair in ${cfg.city} - Free Collection & Delivery`}
-          subtitle={`We're an independent Mac specialist in Dubai, ${cfg.distance} away - and we come to you. We collect from ${cfg.city} by ${collectVerb}, repair at our Media City workshop, and return it. ${cfg.landmarkLine} ${cfg.turnaround}, written warranty up to 12 months.`}
-          ctaLabel="Book free collection"
+          eyebrow={cfg.short}
+          title={`MacBook Repair in ${cfg.city}, Done at Our Dubai Bench`}
+          subtitle={`${cfg.landmarkLine} Free diagnosis, a written quote on WhatsApp before any work, and a warranty of up to 12 months.`}
+          ctaLabel="WhatsApp us before you send it"
           image={areaTopicForSlug(cfg.slug)?.src}
-          imageAlt={areaTopicForSlug(cfg.slug)?.alt ?? `MacBook repair courier collection in ${cfg.city}, ${cfg.emirate}`}
+          imageAlt={areaTopicForSlug(cfg.slug)?.alt ?? `MacBook repair for customers in ${cfg.city}, ${cfg.emirate}`}
         >
           {/* Hero renders the CTA pair itself (ctaLabel above). Only the trust line goes here. */}
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-            <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free collection &amp; return</span>
+            <span className="flex items-center gap-1"><Package size={16} className="text-accent" aria-hidden /> Courier you book, sent back by courier</span>
             <span className="text-text-faint">·</span>
             <span className="flex items-center gap-1"><Clock size={16} className="text-accent" aria-hidden /> {cfg.collectionWindow}</span>
             <span className="text-text-faint">·</span>
-            <span className="flex items-center gap-1"><MapPin size={16} className="text-accent" aria-hidden /> {cfg.distance} from Dubai</span>
+            <span className="flex items-center gap-1"><Car size={16} className="text-accent" aria-hidden /> Drive time: {cfg.distance}</span>
           </p>
         </Hero>
 
         <QuickAnswer
           tone="dark"
-          question={`MacBook repair in ${cfg.city} - how does it work?`}
-          answer={`We don't have a branch in ${cfg.city} - we're a specialist workshop in Dubai Media City and we come to you. A courier collects your MacBook from your ${cfg.city} address free of charge, we diagnose and repair it at the workshop, and a courier returns it - ${cfg.turnaround}. Diagnosis is free, the quote is confirmed in writing first, and every repair carries a written warranty up to 12 months.`}
+          question={`MacBook repair in ${cfg.city}: how does it work?`}
+          answer={cfg.quickAnswer}
         />
 
         <USPStrip tone="dark" />
@@ -95,17 +95,17 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
         {/* Intro / context */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-          <h2 className="text-[28px] md:text-[32px] mb-md">MacBook repair for {cfg.city}, without the drive to Dubai</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">{cfg.introHeading}</h2>
           <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">{cfg.intro}</p>
           <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mt-md">{cfg.whyChoose}</p>
         </section>
 
-        {/* Districts we collect from */}
+        {/* Local context: districts, and what to know about getting the Mac to us from each */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <SectionHeading
-            eyebrow="Coverage"
-            title={`Which areas in ${cfg.city} do you collect from?`}
-            sub={`Free collection and return covers all of ${cfg.city}. A few of the areas we collect from regularly:`}
+            eyebrow={`Around ${cfg.city}`}
+            title={`Which parts of ${cfg.city} do customers send from?`}
+            sub={cfg.districtsSub}
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {cfg.districts.map((d) => (
@@ -117,22 +117,22 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           </div>
         </section>
 
-        {/* How collection works */}
+        {/* How sending it works */}
         <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
               eyebrow="How it works"
-              title={`How does free MacBook collection from ${cfg.city} work?`}
+              title={`How do I send my MacBook from ${cfg.city} to your workshop?`}
               sub={cfg.collectionNote}
             />
 
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
               {[
-                { t: "WhatsApp 055 741 3706", b: `Send your ${cfg.city} address and the MacBook model. We confirm the collection and give you the exact price on WhatsApp.` },
-                { t: `Courier collects in ${cfg.city}`, b: `${cfg.collectionWindow}. The device is logged, insured in transit and trackable on WhatsApp.` },
-                { t: "Free workshop diagnosis", b: "We inspect it at our Dubai Media City workshop and send an itemised written quote on WhatsApp." },
-                { t: "Approve and we repair", b: `Reply 'approved' and we get to work. ${cfg.turnaround.charAt(0).toUpperCase()}${cfg.turnaround.slice(1)} for most common repairs.` },
-                { t: "Free return to your door", b: `Courier returns the MacBook to your ${cfg.city} address. Pay on completion - cash, card or transfer. Warranty up to 12 months card included.` },
+                { t: "WhatsApp 055 741 3706 first", b: "Send the model and what it's doing. We'll say whether it's worth sending, give you a likely range, and share the address for the courier label." },
+                { t: "Book your courier", b: `Use any courier service that collects in ${cfg.city}. Pack the Mac padded and switched off, then WhatsApp us the tracking number.` },
+                { t: "Free diagnosis on the bench", b: "We message you when it lands at Concord Tower, find the fault and send an itemised quote on WhatsApp." },
+                { t: "You approve, we repair", b: "Nothing gets repaired until you say yes. If you'd rather not go ahead, you pay nothing for the diagnosis." },
+                { t: "We send it back by courier", b: `Once it's fixed and tested, we courier it back to your ${cfg.city} address. The return is arranged with you on WhatsApp.` },
               ].map((s, i) => (
                 <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                   <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">{i + 1}</span>
@@ -141,6 +141,11 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
                 </li>
               ))}
             </ol>
+
+            <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[72ch]">
+              <p className="font-bold text-[16px] mb-1 flex items-center gap-2"><Car size={16} className="text-accent shrink-0" aria-hidden /> Rather drive in?</p>
+              <p className="text-[14px] text-text-muted leading-relaxed m-0">{cfg.driveIn}</p>
+            </div>
           </div>
         </section>
 
@@ -149,7 +154,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           <SectionHeading
             eyebrow="Popular repairs"
             title={`What are the most common MacBook repairs for ${cfg.city} customers?`}
-            sub="The same repairs and pricing as for our Dubai customers. Message us on WhatsApp for today's exact price on your model - it's fixed in writing before any work begins, after a free diagnosis."
+            sub="Same bench, same parts and same pricing as for anyone who walks in. WhatsApp us for today's price on your model; it's fixed in writing after the free diagnosis, before any work starts."
           />
           <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
@@ -163,7 +168,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
         {/* Landmarks */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <SectionHeading eyebrow="Around town" title={`Around ${cfg.city}`} />
+          <SectionHeading eyebrow="Around town" title={`Landmarks around ${cfg.city}`} />
           <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-text">
             {cfg.landmarks.map((l) => (
               <li key={l} className="flex items-start gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
@@ -180,7 +185,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             <SectionHeading
               eyebrow="What customers say"
               title="Customer reviews"
-              sub={`${REVIEW_COUNT_LABEL} five-star Google reviews from customers across the UAE who used our free collection-and-repair service.`}
+              sub={`${REVIEW_COUNT_LABEL} five-star Google reviews for our Dubai Media City workshop. A few of them below.`}
             />
             <ReviewGrid tone="dark" reviews={reviews} />
             <p className="text-[14px] text-text-muted mt-md">
@@ -191,13 +196,13 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
         {/* Lead form */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl" aria-labelledby="city-lead">
-          <h2 id="city-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Book a free collection from {cfg.city}</h2>
+          <h2 id="city-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Tell us what&apos;s wrong before you send it</h2>
           <LeadForm preset={PRESETS.repair} sourcePath={path} defaultDeviceType="MacBook" />
         </section>
 
         {/* FAQ */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-md">MacBook repair in {cfg.city} - frequently asked questions</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">MacBook repair in {cfg.city}: frequently asked questions</h2>
           <FAQAccordion items={cfg.faqs} injectSchema />
         </section>
 
@@ -207,19 +212,20 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             <Building2 size={28} className="text-accent" aria-hidden /> One workshop, not a chain of front desks
           </h2>
           <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
-            We&apos;re upfront about it: we don&apos;t have a shop in {cfg.city}. Our only location is the workshop in Concord Tower,
-            Dubai Media City - one expert bench with the tools and parts to do board-level work properly, rather than a row of
-            counters that send your Mac somewhere else. Free collection and return is how we bring that workshop to {cfg.city}.
+            We don&apos;t have a shop in {cfg.city}. Our only location is Office #45, 10th Floor, Concord Tower,
+            Dubai Media City: one bench with the tools and parts for board-level work, rather than a row of counters
+            that pass your Mac on to someone else. You reach it with a courier you book, or by driving in. We&apos;re open
+            Mon-Thu and Sat 9 am-7 pm, Fri 9 am-12 pm and 2 pm-7 pm, and closed on Sunday.
           </p>
           <LocationBlock tone="dark" />
         </section>
 
-        {/* Other emirates we serve - sibling cross-links */}
+        {/* Other emirates - sibling cross-links */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <SectionHeading
             eyebrow="More cities"
             title="MacBook repair across the UAE"
-            sub="Free courier collection and return reaches every emirate from our Dubai Media City workshop. We also serve:"
+            sub="Customers from every emirate send their Macs to the same Media City bench, or drive in. Other city pages:"
           />
           <div className="flex flex-wrap gap-sm">
             {CITIES.filter((c) => c.slug !== cfg.slug).map((c) => (
@@ -235,10 +241,10 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
 
         {/* CTA (shared dark band, matches master) */}
         <CtaBand
-          eyebrow={`Free collection in ${cfg.city}`}
-          headline={`Book a free collection from ${cfg.city}`}
-          description="WhatsApp your address and MacBook model - we confirm the collection and the exact price for your model in minutes."
-          whatsappLabel="Book free collection"
+          eyebrow={`Sending from ${cfg.city}?`}
+          headline="Message us before the courier leaves"
+          description="Send the model and the fault on WhatsApp. We'll tell you whether it's worth sending, the likely price, and the address to put on the label."
+          whatsappLabel="WhatsApp us before you send it"
           className="mt-3xl"
         />
         <RelatedArticles tone="dark" path={path} />

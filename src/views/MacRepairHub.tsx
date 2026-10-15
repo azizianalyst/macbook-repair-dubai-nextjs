@@ -5,7 +5,7 @@ import {
   Monitor, Laptop, HardDrive, Server,
   BatteryCharging, Droplets, PlugZap, Code2, Database,
   Cpu, Thermometer, Power, Gauge, AlertTriangle, Wifi,
-  Wrench, ShieldCheck, Clock, Award, Search, BadgeCheck, Truck,
+  Wrench, ShieldCheck, Clock, Award, Search, BadgeCheck,
   MapPin,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -75,7 +75,7 @@ const FAQ_GROUPS = [
       { q: "How much does Mac repair cost in Dubai?", a: "Mac repair is priced by the fault and model, after a free diagnosis - screens are the biggest jobs, batteries and keyboards sit below them, and water-damage work is quoted after inspection. We give you a full written quote before any work begins, no hidden charges." },
       { q: "Can I get a quote before the repair?", a: "Yes. We diagnose your Mac first (free of charge) then give you a written quote covering parts and labour. No repair starts until you approve the price. If you decline, you pay nothing." },
       { q: "Do you offer same-day repair?", a: "Yes, most common repairs (screen, battery, keyboard, charging port) are completed same day. Liquid-damage repairs take 1-5 days and logic-board repairs 3-7 days, longer on some 2026 models while their parts stock builds. We confirm the timeline at diagnosis." },
-      { q: "Do you offer free pickup and delivery in Dubai?", a: "Yes. We offer free pickup and return delivery across Dubai. WhatsApp us your location and we arrange collection the same day." },
+      { q: "Can I send my Mac by courier instead of coming in?", a: "Yes. Book any same-day courier app, hand the Mac to the driver, and WhatsApp us the tracking link; it reaches us within the day. We do not arrange pickup or delivery. Collect it from the workshop, or book a courier back." },
     ],
   },
   {
@@ -142,7 +142,7 @@ export default function MacRepairHub() {
   const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-repair-dubai"), min: 3, seed: "/mac-repair-dubai" });
   useSeo(
     {
-      title: "Mac Repair Dubai. Free Diagnosis, Free Pickup",
+      title: "Mac Repair Dubai. Free Diagnosis, Walk-In Workshop",
       description:
         "Mac repair in Dubai for MacBook Air, MacBook Pro, iMac, Mac mini, Studio and Pro, Intel to M5. Free diagnosis, written quote before any work. Message us.",
       path: "/mac-repair-dubai",
@@ -180,14 +180,14 @@ export default function MacRepairHub() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, free citywide pickup, genuine or OEM-grade parts and written warranty up to 12 months, in business since 2004.
+                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, walk-in service across from Media City Metro, genuine or OEM-grade parts and written warranty up to 12 months, in business since 2004.
               </p>
             </div>
           </div>
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Every Mac model</span>
             <span>·</span><span>Intel through M5</span>
-            <span>·</span><span>Free pickup Dubai-wide</span>
+            <span>·</span><span>Walk in at Media City</span>
           </p>
         </Hero>
 
@@ -203,7 +203,7 @@ export default function MacRepairHub() {
             "Board-level component repair is the default here - a failed chip does not mean a whole new board.",
             "Screens and batteries are same-day on most models; liquid work runs 1-5 days and board work 3-7 days.",
             "Written warranty up to 12 months, and no charge if the fault cannot be fixed.",
-            "Free pickup and delivery across Dubai mainland from Concord Tower, Media City.",
+            "Walk in to Concord Tower, Media City, or send the Mac by a same-day courier you book.",
           ]}
         />
         {/* ── USP STRIP ── */}
@@ -212,7 +212,7 @@ export default function MacRepairHub() {
             {[
               { Icon: Search,     label: "Free Mac diagnosis" },
               { Icon: BadgeCheck, label: "No fix, no charge" },
-              { Icon: Truck,      label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,     label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck,label: "Genuine & OEM-grade parts" },
               { Icon: Clock,      label: "Same-day service" },
               { Icon: Star,       label: "Trusted since 2004" },
@@ -345,8 +345,9 @@ export default function MacRepairHub() {
             </div>
             <ReviewGrid reviews={reviews} tone="dark" />
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
-              <div><p className="font-semibold text-white">Mon - Sat</p><p>9:00 AM - 10:00 PM</p></div>
-              <div><p className="font-semibold text-white">Sunday</p><p>Onsite service available</p></div>
+              <div><p className="font-semibold text-white">Mon - Thu, Sat</p><p>9:00 AM - 7:00 PM</p></div>
+              <div><p className="font-semibold text-white">Friday</p><p>9:00 AM - 12:00 PM, 2:00 PM - 7:00 PM</p></div>
+              <div><p className="font-semibold text-white">Sunday</p><p>Closed</p></div>
             </div>
           </div>
         </section>
@@ -364,7 +365,7 @@ export default function MacRepairHub() {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk-in workshop in Media City</span>
               </div>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
                 {FAQ_GROUPS.map((g) => (
@@ -390,9 +391,9 @@ export default function MacRepairHub() {
           <LocationBlock tone="dark" compact />
         </section>
 
-        {/* ── PICKUP AREAS ── */}
+        {/* ── AREAS (walk-in or customer-booked courier) ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-[48px]">
-          <p className="text-[14px] font-semibold text-text mb-3 flex items-center gap-2"><MapPin size={16} className="text-accent" /> Free pickup across Dubai</p>
+          <p className="text-[14px] font-semibold text-text mb-3 flex items-center gap-2"><MapPin size={16} className="text-accent" /> Walk in, or send it by a same-day courier you book, from across Dubai</p>
           <div className="flex flex-wrap gap-2">
             {["Palm Jumeirah","JVC","JLT","Umm Suqeim","Arabian Ranches","Dubailand","Greens","Internet City","Silicon Oasis","Business Bay","Downtown Dubai","DIFC","Dubai Marina","JBR"].map((a) => (
               <span key={a} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text-muted">{a}</span>

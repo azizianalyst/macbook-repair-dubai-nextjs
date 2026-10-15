@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   ShieldCheck, Clock, Award,
-  Search, Truck, Check, AlertTriangle,
+  Search, Check, AlertTriangle,
   Wrench, HardDrive, Monitor,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
@@ -379,7 +379,7 @@ export default function MacBookProChipScreenPage({
                 <span>Price on request</span>
                 <span>Free diagnosis</span>
                 <span>3-month warranty</span>
-                <span>Free pickup Dubai-wide</span>
+                <span>Walk-in workshop, Media City</span>
               </div>
             </div>
             <FAQAccordion items={faqs} injectSchema />

@@ -302,7 +302,7 @@ export default function BlogMacBookAirOverheating() {
         },
         {
           q: "How long does MacBook Air thermal service take in Dubai?",
-          a: "Thermal paste replacement on Intel MacBook Air takes 45-60 minutes at our workshop. Fan replacement adds another 20 minutes. We then run a 20-minute load test to confirm temperatures are correct before returning the device. If you drop off before 11am, same-day collection is available. M-series diagnosis is faster: 20-30 minutes for a full thermal benchmark and report.",
+          a: "Thermal paste replacement on Intel MacBook Air takes 45-60 minutes at our workshop. Fan replacement adds another 20 minutes. We then run a 20-minute load test to confirm temperatures are correct before returning the device. If you drop it off before 11am, you can usually collect it the same day. M-series diagnosis is faster: 20-30 minutes for a full thermal benchmark and report.",
         },
         {
           q: "Is it safe to use my MacBook Air when it is very hot to touch?",

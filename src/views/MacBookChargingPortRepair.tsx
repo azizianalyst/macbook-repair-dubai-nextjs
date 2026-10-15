@@ -61,16 +61,16 @@ const PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp the model + symptom",
     body: "Send the serial number and a description: which port (left or right, MagSafe), what the charger does (chime, no chime, intermittent). Reply within 4-8 minutes during business hours." },
-  { title: "Free pickup or walk-in",
-    body: "Free pickup from anywhere in Dubai mainland, or drop in to Office #45, Concord Tower, Media City. Diagnosis on the spot - about 15 minutes including a port-by-port test under the microscope." },
+  { title: "Walk in or send by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book a same-day courier yourself and WhatsApp us the tracking link. Diagnosis on the spot - about 15 minutes including a port-by-port test under the microscope." },
   { title: "Bench diagnosis: port vs IC vs board",
     body: "Voltage probe at the charger pin, then at the PMIC, then at the SMC. Tells the technician within 10 minutes whether it's the port itself, the charging IC, the SMC, or a deeper board fault." },
   { title: "Hot-air rework or port swap",
     body: "Port swap: 60-90 minutes under microscope at 380 °C. Charging IC swap: 90 minutes including BGA reball. The board is preheated to 80 °C to prevent solder mask damage." },
   { title: "Full charging cycle test",
     body: "Charged from 10% to 100% on the original Apple charger, then on a third-party 30 W and 96 W charger to verify PD negotiation works across all wattages. System Information > Power confirms wattage handshake." },
-  { title: "Free delivery + warranty of up to 12 months card",
-    body: "Same-day delivery on common models. Warranty card lists the port batch number - 12 months on parts and labour, transferable once free of charge." },
+  { title: "Collect + warranty of up to 12 months card",
+    body: "Same-day turnaround on common models. Warranty card lists the port batch number - 12 months on parts and labour, transferable once free of charge." },
 ];
 
 const FAQS: FAQ[] = [
@@ -96,8 +96,8 @@ const FAQS: FAQ[] = [
     a: "USB-C PD negotiation. The Apple charger advertises a specific power profile (e.g. 96 W at 20 V) that the MacBook recognises. Cheap third-party chargers often only advertise 15 W (5 V / 3 A safe mode), which the MacBook then accepts. If a previously fast third-party charger now charges slowly, the PD chip on the board may be failing, which is a board-level fix." },
   { q: "Can you repair a USB-C port on a MacBook Air M1?",
     a: "Yes - the M1 Air has 2 USB-C ports both soldered to the main logic board with 32 fine-pitch pins each. Port swap takes 90 minutes under microscope. The port is sourced from the original Foxconn factory that builds the Apple part." },
-  { q: "Do you offer pickup for charging port repair?",
-    a: "Yes, free pickup and delivery across Dubai mainland. Same-hour pickup from Internet City, Knowledge Village, JLT, Al Barsha. Same-day from Marina, Downtown, JBR, Palm. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { q: "Can I send my MacBook in for a charging port repair?",
+    a: "Yes. Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop or book a courier to send it back. Or walk in to Concord Tower, Dubai Media City, with parking on site." },
 ];
 
 const COMPARISON = [
@@ -106,7 +106,7 @@ const COMPARISON = [
   ["MagSafe 3 port swap",                 "Free diagnosis, then a quote",            "Refused - full board swap only"],
   ["Charging IC board-level",             "Free diagnosis, then a quote",            "Refused - full board swap only"],
   ["Bent-pin straightening (1-2 pins)",   "Labour only, quoted on diagnosis",        "Refused"],
-  ["Free pickup in Dubai",                "Yes",                                     "No, customer must courier"],
+  ["Walk in without appointment",         "Yes",                                     "No, appointment required"],
   ["Warranty",                            "12 months written",                         "12 months"],
   ["Vintage/obsolete (pre-2017)",         "Yes - back to MagSafe 1 (2008)",         "Refused"],
 ];
@@ -283,7 +283,7 @@ export default function MacBookChargingPortRepair() {
                 <li><strong>12 months</strong> - written warranty on parts and labour.</li>
                 <li><strong>Covered:</strong> port re-failure, intermittent charging returning, charging IC failure, cold-solder cracks.</li>
                 <li><strong>Not covered:</strong> damage from a bad/cheap charger after repair, moisture entering the port, physical damage from cable yanking.</li>
-                <li><strong>How to claim:</strong> WhatsApp the warranty card photo. Same-day collection. Replacement fitted within 48 hours.</li>
+                <li><strong>How to claim:</strong> WhatsApp the warranty card photo, then bring the MacBook in. Replacement fitted within 48 hours.</li>
               </ul>
             </div>
           </section>
@@ -413,7 +413,7 @@ export default function MacBookChargingPortRepair() {
         <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[28ch]">Loose USB-C? Bent pin? WhatsApp the model - quote in 4 minutes</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-            Year, processor, which port. Free pickup across Dubai mainland. written warranty up to 12 months on every port and IC fitted.
+            Year, processor, which port. Walk in at Dubai Media City or send it by courier. Written warranty up to 12 months on every port and IC fitted.
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

@@ -60,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Do you offer pickup for screen repair?",
-    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, and Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup is available - message us for details.",
+    a: "No, we don't collect or deliver. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. That works from Sharjah and Abu Dhabi too.",
   },
 ];
 
@@ -179,12 +179,12 @@ export default function LandingTemplateDemo() {
         ],
       }}
 
-      /* Key info - the things people ask AI: hours, pickup, location, quote */
+      /* Key info - the things people ask AI: hours, courier, location, quote */
       keyInfo={{
-        heading: "Hours, pickup & location",
+        heading: "Hours, courier & location",
         columns: [
           { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 7 pm", "Friday: break 12-2 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
-          { icon: Truck, title: "Free pickup & delivery", lines: ["Across Dubai mainland", "Courier within about 2 hours", "Free - you pay only on approval"] },
+          { icon: Truck, title: "Send it by courier", lines: ["Book any same-day courier app", "WhatsApp us the tracking link", "You pay only on approval"] },
           { icon: MapPin, title: "Visit the workshop", lines: ["Office #45, 10th Floor", "Concord Tower, Dubai Media City", "Al Sufouh, Dubai"] },
           { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "3-month written warranty"] },
         ],
@@ -313,8 +313,8 @@ export default function LandingTemplateDemo() {
           },
           {
             icon: Truck,
-            title: "Free pickup in Dubai",
-            body: "Free pickup and delivery across Dubai mainland, same day. Sharjah and Abu Dhabi pickup is available - message us for details.",
+            title: "Walk in or send it by courier",
+            body: "Walk in with no appointment. Can't come in? Book any same-day courier app and it reaches us within the day, from Sharjah and Abu Dhabi too.",
           },
           {
             icon: ShieldCheck,
@@ -324,7 +324,7 @@ export default function LandingTemplateDemo() {
           {
             icon: CalendarClock,
             title: "Same-day turnaround",
-            body: "Air 13\" and 15\", Pro 13\" Touch Bar, and Pro 14\" delivered same day when the panel is in stock - 90 of the last 100 same-day tickets shipped before 8 pm.",
+            body: "Air 13\" and 15\", Pro 13\" Touch Bar, and Pro 14\" finished same day when the panel is in stock - 90 of the last 100 same-day tickets shipped before 8 pm.",
           },
         ],
       }}
@@ -371,9 +371,9 @@ export default function LandingTemplateDemo() {
           },
           {
             icon: Truck,
-            name: "Free pickup & delivery",
+            name: "Walk in or courier",
             description:
-              "Free pickup from anywhere in Dubai mainland, same day. Or walk in to Office #45, Concord Tower, Media City - across from Media City Metro.",
+              "Walk in to Office #45, Concord Tower, Media City, across from Media City Metro. Or book a same-day courier app yourself and WhatsApp us the tracking link.",
           },
         ],
       }}
@@ -413,15 +413,15 @@ export default function LandingTemplateDemo() {
       methodology={{
         heading: "Our screen repair process",
         subheading:
-          "From WhatsApp to delivery, every step has a fixed time estimate - no vague 'we'll call you back'.",
+          "From WhatsApp to handover, every step has a fixed time estimate - no vague 'we'll call you back'.",
         steps: [
           {
             title: "WhatsApp the model + photo",
             body: "Send the serial from About This Mac and a photo of the damage. Quote back in 4 to 8 minutes during business hours.",
           },
           {
-            title: "Free pickup or drop-off",
-            body: "Free pickup from anywhere in Dubai mainland, or walk in to Office #45, Concord Tower, Media City. Diagnosis on the spot, about 15 minutes.",
+            title: "Walk in or send it by courier",
+            body: "Walk in to Office #45, Concord Tower, Media City, or send it with a same-day courier you book. Diagnosis on the spot, about 15 minutes.",
           },
           {
             title: "Panel swap in the workshop",
@@ -452,7 +452,7 @@ export default function LandingTemplateDemo() {
             features: [
               "Same-day when in stock",
               "A-grade Samsung/LG panel",
-              "Free diagnosis & pickup",
+              "Free diagnosis, walk in",
               "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
@@ -495,7 +495,7 @@ export default function LandingTemplateDemo() {
         eyebrow: "Free diagnosis",
         headline: "Cracked screen? WhatsApp the model - quote in 4 minutes",
         description:
-          "Send the year, screen size, processor, and a photo of the damage. Free pickup across Dubai mainland and a 3-month written warranty on every panel fitted.",
+          "Send the year, screen size, processor, and a photo of the damage. Walk in to Media City or send it by courier, with a 3-month written warranty on every panel fitted.",
         primary: { label: "Message on WhatsApp", href: WHATSAPP_QUOTE },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: CALL },
       }}

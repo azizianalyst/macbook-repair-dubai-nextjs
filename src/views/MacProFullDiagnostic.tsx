@@ -5,11 +5,11 @@ export default function MacProFullDiagnostic() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro Full Diagnostic Dubai - Pre-Purchase & Fault Check"
-      seoDescription="Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Free pickup. Call 055 741 3706."
+      seoDescription="Mac Pro full diagnostic Dubai. Pre-purchase check, second opinion, fault isolation. Intel 2019 and M2 Ultra 2023. Diagnostic fee waived if we do the repair. Walk in at Media City. Call 055 741 3706."
       path="/mac-pro-full-diagnostic-dubai"
       eyebrow="Intel + M2 Ultra · diagnostic waived on repair · pre-purchase check available"
       h1="Mac Pro Full Diagnostic Dubai - Pre-Purchase and Fault Check"
-      subtitle="Mac Pro diagnostic in Dubai, and the fee is waived if we do the repair. Pre-purchase check for used Mac Pros. Fault isolation if something's wrong. Full written report. Free pickup from Dubai Media City."
+      subtitle="Mac Pro diagnostic in Dubai, and the fee is waived if we do the repair. Pre-purchase check for used Mac Pros. Fault isolation if something's wrong. Full written report. Walk in at Dubai Media City, parking on site."
       startingPrice={200}
       timeline="Same day (3-4 hours for full diagnostic)"
       whatsappPrefill="Hi, I would like a Mac Pro diagnostic. Model and reason:"

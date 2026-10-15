@@ -8,7 +8,7 @@ import {
   MousePointer2, HardDrive, Cpu, Thermometer,
   Power, Gauge, AlertTriangle, Flame, Wifi,
   Link2, ShieldCheck, Clock, Award, Wrench,
-  Search, BadgeCheck, Truck,
+  Search, BadgeCheck, MapPin,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -63,7 +63,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 ];
 
 const PROCESS = [
-  { Icon: Search,      title: "Free diagnosis",   body: "Drop in, ship, or book a free pickup. We diagnose hardware and software at no charge and report back before any work starts." },
+  { Icon: Search,      title: "Free diagnosis",   body: "Walk in to our Media City workshop, or WhatsApp a photo first. We diagnose hardware and software at no charge and report back before any work starts." },
   { Icon: BadgeCheck,  title: "Fixed quote",       body: "You receive a transparent, fixed quote before any work begins. No surprises, no hidden add-ons." },
   { Icon: Wrench,      title: "Expert repair",     body: "Your MacBook Air is repaired by a specialist working on Apple hardware since 2004, using OEM-grade parts." },
   { Icon: ShieldCheck, title: "Quality check",     body: "Every repair passes a full function test: battery cycle, display calibration, keyboard scan, ports — all verified before handover." },
@@ -85,7 +85,7 @@ const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",          body: "Most MacBook Air repairs — screen, battery, keyboard — are done within a few hours, not days." },
   { Icon: Award,       title: "Apple repair since 2004",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
-  { Icon: Truck,       title: "Free pickup Dubai-wide",    body: "Cannot come to us? We collect your MacBook Air for free across Dubai and return it repaired." },
+  { Icon: MapPin,       title: "Walk-in workshop, Media City",    body: "Bring your MacBook Air to Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",         body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",            body: "Every MacBook Air gets a full diagnosis at no cost. We find the real fault, not guess at it." },
 ];
@@ -206,7 +206,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
             {[
               { Icon: Search,      label: "Free diagnosis" },
               { Icon: BadgeCheck,  label: "No fix, no charge" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,       label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck, label: "OEM-grade parts" },
               { Icon: Clock,       label: "Same-day service" },
               { Icon: Star,        label: "Since 2004" },
@@ -413,7 +413,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
             <div className="flex flex-col gap-[48px]">

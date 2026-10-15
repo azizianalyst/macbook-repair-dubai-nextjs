@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   Monitor, ShieldCheck, Clock, Award,
-  Search, BadgeCheck, Truck, Check,
+  Search, BadgeCheck, MapPin, Check,
   Wrench, AlertTriangle, Cpu, BatteryCharging,
   HardDrive, Droplets,
 } from "lucide-react";
@@ -72,7 +72,7 @@ const BATTERY_SPECS: BatterySpec[] = [
 ];
 
 const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
-  { Icon: Search,      title: "Free health check and quote",   body: "Check battery health in System Settings, cycle count, capacity, swelling test. WhatsApp the model for instant pricing. Free bench diagnosis too: drop in or we collect." },
+  { Icon: Search,      title: "Free health check and quote",   body: "Check battery health in System Settings, cycle count, capacity, swelling test. WhatsApp the model for instant pricing. Free bench diagnosis too: drop in, or send it by a same-day courier you book." },
   { Icon: Clock,       title: "Same-day 2-hour replacement",  body: "Drop off before 11am, collect by 2pm. Apple Silicon requires BMS firmware re-pair after battery swap. We do this on the bench, included in the price." },
   { Icon: ShieldCheck, title: "Capacity test and calibration", body: "After replacement we charge to 100%, run a calibration cycle, and verify 100% maximum capacity reading. 3-month written warranty on the new cell." },
 ];
@@ -85,7 +85,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
   { Icon: Droplets,        label: "Sudden shutdowns at 30–50%",   body: "The protection circuit cuts power when voltage drops too fast on a worn cell. macOS reports incorrect charge levels, then shuts off suddenly." },
   { Icon: Clock,           label: "Charges very slowly in summer", body: "Normal behaviour - the MacBook Air throttles charging above 35°C to protect the cell. If slow-charge persists in air conditioning, the cell itself is failing." },
   { Icon: ShieldCheck,     label: "Cycle count above 900",         body: "Apple rates MacBook Air batteries for 1,000 cycles to 80%. Above 900 cycles, monitor monthly. Above 1,000 cycles, replace before capacity drops further." },
-  { Icon: HardDrive,       label: "Bottom case bulging",           body: "A bulging bottom cover means the cell has physically expanded from gas buildup. Stop using immediately. Free same-day pickup - do not leave in a car." },
+  { Icon: HardDrive,       label: "Bottom case bulging",           body: "A bulging bottom cover means the cell has physically expanded from gas buildup. Stop using immediately. Bring it in the same day - do not leave it in a car." },
 ];
 
 const PROBLEMS = [
@@ -135,7 +135,7 @@ const FAQ_GROUPS = [
     items: [
       { q: "How much does MacBook Air battery replacement cost in Dubai?", a: "Pricing depends on your exact model — Intel 2018–2020, M1, M2, M3, and M4 all differ. Every quote includes the cell, labour, BMS re-pair, and calibration, with no diagnostic fee. WhatsApp the model for today's exact price." },
       { q: "How long does MacBook Air battery replacement take in Dubai?", a: "Same-day 2 hours for Intel, M1, M2, M3 when the cell is in stock. M4 is 1–2 days. WhatsApp the model to confirm stock before you travel." },
-      { q: "Do you offer free pickup for MacBook Air battery replacement?", a: "Yes. Free pickup Dubai-wide. Do NOT leave a swollen battery in a hot car while waiting for pickup - keep it in a cool indoor location." },
+      { q: "Can I send my MacBook Air in by courier for a battery replacement?", a: "Yes. Book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. We do not collect devices ourselves. Do NOT leave a swollen battery in a hot car - keep it in a cool indoor location until it is handed over." },
       { q: "How does MacBook Air battery replacement cost compare to Apple Store?", a: "Apple requires 5–14 business days and typically charges more than an independent workshop. MacBook Repair Dubai completes most models same-day at a lower price — WhatsApp your model for a direct comparison." },
     ],
   },
@@ -158,8 +158,8 @@ const FAQ_GROUPS = [
   {
     category: "Safety & swelling",
     items: [
-      { q: "Is a swollen MacBook Air battery dangerous?", a: "Yes. A swollen lithium-ion cell is venting flammable electrolyte and can ignite. Stop using the MacBook Air immediately. Do not leave it in a car, in direct sunlight, or near flammable materials. WhatsApp MacBook Repair Dubai for free same-day pickup and we handle the safe removal." },
-      { q: "Can I use my MacBook Air with a swollen battery while waiting for repair?", a: "No. A swollen battery that is still being charged and discharged increases the risk of thermal runaway. Unplug the charger, power off if possible, and arrange pickup. If the MacBook Air cannot be powered off, leave it on a non-flammable surface away from heat." },
+      { q: "Is a swollen MacBook Air battery dangerous?", a: "Yes. A swollen lithium-ion cell is venting flammable electrolyte and can ignite. Stop using the MacBook Air immediately. Do not leave it in a car, in direct sunlight, or near flammable materials. Bring it to our Media City workshop the same day, or send it by a same-day courier you book, and we handle the safe removal." },
+      { q: "Can I use my MacBook Air with a swollen battery while waiting for repair?", a: "No. A swollen battery that is still being charged and discharged increases the risk of thermal runaway. Unplug the charger, power off if possible, and bring it in to the workshop. If the MacBook Air cannot be powered off, leave it on a non-flammable surface away from heat." },
     ],
   },
 ];
@@ -220,7 +220,7 @@ export default function MacBookAirBatteryReplacement() {
     {
       title: "MacBook Air Battery Replacement Dubai - Same Day",
       description:
-        "MacBook Air battery replacement Dubai. M1 through M4, Intel, swelling, same-day 2-hour service, 3-month warranty, free pickup Dubai-wide. WhatsApp for today's price.",
+        "MacBook Air battery replacement Dubai. M1 to M4 and Intel, swollen cells, same-day 2-hour service, 3-month warranty, walk-in. WhatsApp for today's price.",
       path: "/macbook-air-battery-replacement-dubai",
       preloadImage: preloadFromHero(IMG.hero.src),
     },
@@ -272,7 +272,7 @@ export default function MacBookAirBatteryReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air batteries at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, free pickup citywide, 3-month written warranty. WhatsApp the model for today's price.
+                MacBook Repair Dubai replaces MacBook Air batteries at its Concord Tower workshop in Dubai Media City. Intel 2018–2020, M1, M2, M3, and M4 cells in stock, same-day 2-hour service on most models. BMS firmware re-pair on Apple Silicon included, walk-in across from Media City Metro, 3-month written warranty. WhatsApp the model for today's price.
               </p>
             </div>
           </div>
@@ -289,7 +289,7 @@ export default function MacBookAirBatteryReplacement() {
             {[
               { Icon: Search,      label: "Free battery health check" },
               { Icon: BadgeCheck,  label: "No fix, no charge" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,      label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck, label: "BMS re-pair included" },
               { Icon: Clock,       label: "Same-day on most models" },
               { Icon: Star,        label: "Trusted since 2004" },
@@ -565,12 +565,16 @@ export default function MacBookAirBatteryReplacement() {
             </div>
             <div className="mt-xl flex flex-wrap justify-center gap-xl text-[15px] text-on-primary-muted">
               <div>
-                <p className="font-semibold text-white">Mon - Sat</p>
-                <p>9:00 AM - 10:00 PM</p>
+                <p className="font-semibold text-white">Mon - Thu, Sat</p>
+                <p>9:00 AM - 7:00 PM</p>
+              </div>
+              <div>
+                <p className="font-semibold text-white">Friday</p>
+                <p>9:00 AM - 12:00 PM, 2:00 PM - 7:00 PM</p>
               </div>
               <div>
                 <p className="font-semibold text-white">Sunday</p>
-                <p>Onsite service available</p>
+                <p>Closed</p>
               </div>
             </div>
           </div>
@@ -595,7 +599,7 @@ export default function MacBookAirBatteryReplacement() {
                 <span>✓ Free battery health check</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ 3-month written warranty</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk-in workshop in Media City</span>
               </div>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
                 {FAQ_GROUPS.map((g) => (
@@ -671,7 +675,7 @@ export default function MacBookAirBatteryReplacement() {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Swollen Air battery?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Replace it today · Same-day service · Free pickup Dubai-wide
+                Replace it today · Same-day service · Walk in at Media City
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

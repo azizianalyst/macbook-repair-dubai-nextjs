@@ -24,8 +24,8 @@ export default function GuideTop10MacBookProblems() {
             thousands of machines. In that time, roughly nine out of ten MacBooks that come through
             our Dubai Media City workshop fall into one of just ten problem categories. Below we
             walk through each, with the symptoms, a safe DIY check you can do at home, and an honest
-            note on when it's cheaper and safer to bring it in. Diagnosis is always free, and we
-            offer free pickup across Dubai mainland.
+            note on when it's cheaper and safer to bring it in. Diagnosis is always free, and you can
+            walk in without an appointment.
           </p>
 
           <h2>1. MacBook won't turn on (no chime, no display)</h2>
@@ -271,8 +271,8 @@ export default function GuideTop10MacBookProblems() {
           <p>
             If your MacBook problem isn't on this list, or the DIY checks didn't help, bring it to
             our workshop at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or
-            call us on 055 741 3706. We're open Monday to Saturday, 9am-7pm, offer free pickup
-            across Dubai mainland, free diagnosis on every repair, and back our work with a written warranty of up to 12 months,
+            call us on 055 741 3706. We're open Monday to Saturday, 9am-7pm (Friday break 12-2pm),
+            across from Media City Metro, with free diagnosis on every repair, and back our work with a written warranty of up to 12 months,
             depending on the repair. You can also{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               see our full MacBook repair services
@@ -311,8 +311,8 @@ export default function GuideTop10MacBookProblems() {
           a: "On Intel MacBooks, yes - both SSD and RAM can be upgraded. On Apple Silicon (M1 and later) both the SSD and RAM are soldered to the chip and cannot be upgraded, so iCloud or an external drive is the workaround. Message us on WhatsApp for upgrade pricing.",
         },
         {
-          q: "Do you offer pickup and warranty?",
-          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a warranty of up to 12 months on the work we do. We're open Monday to Saturday, 9am-7pm, in Dubai Media City.",
+          q: "Can I walk in, and is the work under warranty?",
+          a: "Yes. Walk in to our Concord Tower workshop across from Media City Metro, with parking on site. Diagnosis is free on every repair, and the work carries a warranty of up to 12 months. We're open Monday to Saturday, 9am-7pm, with a Friday break from 12 to 2pm.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

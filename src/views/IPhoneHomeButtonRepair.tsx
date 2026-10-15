@@ -56,7 +56,7 @@ export default function IPhoneHomeButtonRepair() {
         { q: "What about Apple - can they restore it?", a: "Only by giving you a replacement device under AppleCare or out-of-warranty service. They do not transfer or re-pair sensors at the component level." },
         { q: "Is AssistiveTouch a good substitute?", a: "Honestly, yes - most customers tell us they forget Touch ID is gone within a week. The on-screen button does double-press, triple-press, Siri, Apple Pay (via Face ID on newer iPhones, or passcode on iPhone 6/7/8)." },
         { q: "Which iPhones still have a home button?", a: "iPhone 6, 6S, 7, 8, SE (1st, 2nd and 3rd gen). iPhone X and later have no physical home button." },
-        { q: "Can you fix it the same day?", a: "Yes. Drop in by 1 PM and collect by 6 PM, or WhatsApp for free pickup across Dubai." },
+        { q: "Can you fix it the same day?", a: "Yes. Walk in to our Media City workshop by 1 PM and it is usually ready by 6 PM. WhatsApp a photo first if you want a quote before you come." },
         { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our warranty of up to 12 months covers any mechanical failure." },
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}

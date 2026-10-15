@@ -413,7 +413,7 @@ async function main() {
   const blockquote =
     `> ${NAP.name} is an independent Apple repair specialist in Dubai, United Arab Emirates, in business since ${NAP.founded}. ` +
     `The workshop is Mac-first (MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, down to board level) and also repairs iPhone and iPad. ` +
-    `Walk in at ${NAP.street}, ${NAP.area}, or book a free pickup in Dubai. ` +
+    `Customers walk in at ${NAP.street}, ${NAP.area}, or send the device using a same-day courier they book themselves. Paid onsite visits are available subject to technician availability. ` +
     `Repair quotes are given on WhatsApp at ${phoneIntl}.`;
 
   const intro = [
@@ -496,7 +496,7 @@ async function main() {
     ``,
     `- Diagnosis is free.`,
     `- Repair prices are not published on the site. Every repair is quoted on WhatsApp once the model and fault are known, before any work starts.`,
-    `- Walk in at ${NAP.street}, ${NAP.area}, or book a free pickup and delivery in Dubai. Collection from the other emirates is covered on the Areas served pages.`,
+    `- Walk in at ${NAP.street}, ${NAP.area} (across from Media City Metro, parking on site). Customers who can't come in can book any same-day courier app themselves and send the device to the workshop; returns are collected from the workshop or sent back by a courier the customer books. The workshop does not collect or deliver devices. Paid onsite visits are available subject to technician availability, with the charge quoted on WhatsApp first.`,
     ``,
     `## Warranty`,
     ``,

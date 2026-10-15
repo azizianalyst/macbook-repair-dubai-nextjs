@@ -43,7 +43,7 @@ const FIRST_24_HOURS = [
   { do: "DO turn the MacBook upside down on a towel",
     why: "Tent shape - keyboard down, screen open at 90°. Lets liquid drain out of the bottom case rather than pooling on the logic board." },
   { do: "DO WhatsApp the workshop within 1 hour",
-    why: "055 741 3706. Free emergency pickup across Dubai mainland. The success rate drops from 90% (under 24 hours) to 60% (under 72 hours) to 30% (over a week)." },
+    why: "055 741 3706. Then bring it straight in, or book a same-day courier and send it to us. The success rate drops from 90% (under 24 hours) to 60% (under 72 hours) to 30% (over a week)." },
   { dont: "DON'T try to power it on to \"see if it still works\"",
     why: "Each power-on attempt drives current through corroded traces and burns them open. The most common cause of unrecoverable boards in the workshop is the customer testing repeatedly." },
   { dont: "DON'T put the MacBook in rice",
@@ -55,8 +55,8 @@ const FIRST_24_HOURS = [
 ];
 
 const PROCESS = [
-  { title: "Emergency WhatsApp + free pickup",
-    body: "WhatsApp 055 741 3706 same hour. Free emergency pickup across Dubai mainland - typically 30 to 60 minutes from call to bench." },
+  { title: "Emergency WhatsApp + get it to us",
+    body: "WhatsApp 055 741 3706 the same hour. Bring it to Concord Tower, Dubai Media City, or book any same-day courier app yourself and send us the tracking link." },
   { title: "Strip-down + initial assessment",
     body: "Bottom case off, battery disconnected within 5 minutes of arrival. Visible liquid logged with macro photos. Free assessment, written quote on WhatsApp before any paid work." },
   { title: "Ultrasonic clean - 60 minutes at 40 kHz",
@@ -75,7 +75,7 @@ const FAQS: FAQ[] = [
   { q: "What's the success rate for MacBook water damage repair?",
     a: "Honest numbers from the workshop's 2024-2025 logbook: 90% recoverable if the MacBook arrives within 24 hours of the spill and was not powered on after. 60% recoverable at 24 to 72 hours. 30% recoverable after a week. 10% recoverable if the customer tried to test it multiple times. No-fix-no-charge applies to the unrecoverable cases." },
   { q: "How quickly do I need to bring my MacBook in?",
-    a: "Within 1 hour for the best outcome. Within 24 hours for the 90% recovery rate. Every hour above that, corrosion advances. After 7 days the success rate drops below 50% even with the most aggressive cleaning. WhatsApp 055 741 3706 same hour - free emergency pickup." },
+    a: "Within 1 hour for the best outcome. Within 24 hours for the 90% recovery rate. Every hour above that, corrosion advances. After 7 days the success rate drops below 50% even with the most aggressive cleaning. WhatsApp 055 741 3706 the same hour, then bring it in." },
   { q: "Salt water damage from the beach - can it be fixed?",
     a: "Yes, but it's the worst case. Salt water (Persian Gulf) is far more conductive than fresh water and the chloride ions accelerate corrosion 10x. The workshop strips and ultrasonically cleans the MacBook within 60 minutes of arrival. Three days, with a 75% recovery rate at under 24 hours." },
   { q: "What about coffee, juice, or other sugary drinks?",
@@ -92,8 +92,8 @@ const FAQS: FAQ[] = [
     a: "15-day written warranty on the repair work and any parts fitted - shorter than most repairs, because liquid damage can keep developing out of sight. Covers the specific repair completed (e.g. if a corroded keyboard was replaced, that keyboard is warrantied). Does not cover new corrosion appearing in a different area months later - corrosion is unpredictable, and a second spill is a new ticket." },
   { q: "Can you fix water damage on M1, M2, M3, M4, M5 MacBooks?",
     a: "Yes - Apple Silicon water damage is roughly 50% of the workshop's water tickets in 2024-2025. The component-level repair process is the same: ultrasonic clean, microscope inspection, replacement of corroded chips. Recovery rate is comparable to Intel. Data recovery on Apple Silicon is harder due to the bonded SSD, so a Time Machine backup taken before the spill is hugely valuable." },
-  { q: "Do you offer free emergency pickup for water damage?",
-    a: "Yes. WhatsApp 055 741 3706 - same-hour free pickup across Dubai mainland for liquid damage cases (this is faster than the standard same-day pickup). Driver arrives in a sealed plastic case with absorbent material to keep the MacBook stable in transit." },
+  { q: "What's the fastest way to get a wet MacBook to you if I can't come in?",
+    a: "Book any same-day courier app yourself, hand the MacBook to the driver and WhatsApp us the tracking link on 055 741 3706. You're not waiting on us to send anyone. Send it powered off, lying upside down on a folded towel in a box, so it stays still on the ride over." },
 ];
 
 const COMPARISON = [
@@ -101,7 +101,7 @@ const COMPARISON = [
   ["Free strip-down",        "Yes - written quote before paid work",         "Inspection after booking; AppleCare+ service fee if covered"],
   ["Standard clean",         "Free strip-down, then a quote",                 "Often replaces the full logic board"],
   ["No-fix-no-charge",       "Yes",                                           "Service fee retained even if unrecoverable"],
-  ["Same-day emergency pickup", "Yes",                                        "No, customer must courier"],
+  ["Walk in without appointment", "Yes",                                      "No, appointment required"],
   ["Component-level repair", "Yes - board-chip-level replacement",           "Logic board swap only, no component repair"],
   ["Data recovery (failed board)", "Add-on, quoted after assessment",        "Not offered - refers to third party"],
   ["Vintage/obsolete models","Yes - 2010 onwards",                            "Refused on obsolete (pre-2017)"],
@@ -121,9 +121,9 @@ export default function MacBookWaterDamageRepair() {
 
   useSeo(
     {
-      title: "MacBook Water Damage Repair Dubai - Same-Hour Pickup",
+      title: "MacBook Water Damage Repair Dubai - Walk In Same Day",
       description:
-        "MacBook water damage repair Dubai. 90% recovery rate under 24 hours. Salt water, coffee, juice. Same-hour emergency pickup. 055 741 3706.",
+        "MacBook water damage repair Dubai. 90% recovery rate under 24 hours. Salt water, coffee, juice. Walk in or send it by courier today. 055 741 3706.",
       path: "/macbook-water-damage-repair-dubai",
     },
     [
@@ -150,7 +150,7 @@ export default function MacBookWaterDamageRepair() {
         tone="dark"
         eyebrow="MacBook water damage repair"
         title="MacBook Water Damage Repair Dubai"
-        subtitle="Coffee spill, beach water, pool incident, leaking water bottle in the bag. Free same-hour pickup, free strip-down assessment, 90% recovery rate at under 24 hours."
+        subtitle="Coffee spill, beach water, pool incident, leaking water bottle in the bag. Walk in the same hour for a free strip-down assessment, 90% recovery rate at under 24 hours."
         startingPrice={299}
         timeline="1-5 days"
       >
@@ -165,13 +165,13 @@ export default function MacBookWaterDamageRepair() {
           <div className="flex items-start gap-md">
             <Siren size={32} className="text-error shrink-0 mt-1" aria-hidden />
             <div>
-              <p className="font-bold text-[18px] text-text">Just spilled? WhatsApp now - same-hour free pickup</p>
+              <p className="font-bold text-[18px] text-text">Just spilled? WhatsApp now, then bring it straight in</p>
               <p className="text-[14px] text-text-muted mt-1">Power off, flip upside down on a towel, message a photo. Every minute counts - corrosion is exponential.</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
-              <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled. Need pickup.")}`)} target="_blank" rel="noopener noreferrer">
+              <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("EMERGENCY water damage. Just spilled. Bringing it in.")}`)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> Emergency WhatsApp
               </a>
             </Button>
@@ -200,7 +200,7 @@ export default function MacBookWaterDamageRepair() {
           {/* Intro */}
           <section>
             <LinkifyProse selfHref="/macbook-water-damage-repair-dubai"><p className="text-[17px] text-text leading-relaxed">
-              MacBook water damage repair in Dubai covers a full ultrasonic clean and corrosion removal - most spills are recoverable if they arrive at the workshop within 24 hours and the MacBook was not powered on after the incident. The workshop's 2024-2025 logbook shows a 90% success rate at under 24 hours, dropping to 60% at 72 hours and 30% after a week. Coffee, juice, beach water, swimming pool water, leaking water bottles in laptop bags, melted ice from a drink - the workshop has rescued 1,800+ MacBooks since 2004. Same-hour emergency pickup across Dubai mainland. No fix, no charge - if the logic board is beyond component-level repair, you pay nothing.
+              MacBook water damage repair in Dubai covers a full ultrasonic clean and corrosion removal - most spills are recoverable if they arrive at the workshop within 24 hours and the MacBook was not powered on after the incident. The workshop's 2024-2025 logbook shows a 90% success rate at under 24 hours, dropping to 60% at 72 hours and 30% after a week. Coffee, juice, beach water, swimming pool water, leaking water bottles in laptop bags, melted ice from a drink - the workshop has rescued 1,800+ MacBooks since 2004. Walk in to Concord Tower the same hour, or send it with a same-day courier you book. No fix, no charge - if the logic board is beyond component-level repair, you pay nothing.
             </p></LinkifyProse>
           </section>
 
@@ -246,7 +246,7 @@ export default function MacBookWaterDamageRepair() {
               <Wrench size={28} className="text-accent" aria-hidden /> Our water damage repair process
             </h2>
             <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-              Six steps - from emergency pickup to a 7-day soak test before the MacBook leaves the workshop. The 7-day test catches the delayed-failure cases that show up days later.
+              Six steps - from the emergency WhatsApp to a 7-day soak test before the MacBook leaves the workshop. The 7-day test catches the delayed-failure cases that show up days later.
             </p>
             <StepList steps={PROCESS} tone="dark" />
           </section>
@@ -322,7 +322,7 @@ export default function MacBookWaterDamageRepair() {
                 <li><strong>15 days</strong> - written warranty on the repaired components. A battery, screen or other part we fit carries that part's own warranty (3 months on batteries).</li>
                 <li><strong>Covered:</strong> the specific corrosion repair completed, replacement parts (keyboard, battery, chips), the soak-test result.</li>
                 <li><strong>Not covered:</strong> new corrosion in a different area, a second spill (new ticket), pre-existing damage unrelated to the spill.</li>
-                <li><strong>How to claim:</strong> WhatsApp the warranty card photo. Same-day collection, free of charge.</li>
+                <li><strong>How to claim:</strong> WhatsApp the warranty card photo, then bring the MacBook in. No charge.</li>
                 <li><strong>No fix, no charge:</strong> if the board is unrecoverable you pay nothing, and the diagnostic report is yours to keep.</li>
               </ul>
             </div>
@@ -393,7 +393,7 @@ export default function MacBookWaterDamageRepair() {
 
           {/* Location */}
           <section>
-            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where do I bring my MacBook, or can you collect it?</h2>
+            <h2 className="text-[28px] md:text-[32px] mb-lg text-text">Where do I bring my wet MacBook?</h2>
             <LocationBlock tone="dark" />
           </section>
         </div>
@@ -402,9 +402,9 @@ export default function MacBookWaterDamageRepair() {
       {/* Final CTA - emergency framing */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <div className="bg-error text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">Spilled in the last hour? Send a photo - pickup driver dispatched in 15 minutes</h2>
+          <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">Spilled in the last hour? Send a photo and bring it straight in</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Power off the MacBook, flip it upside down on a towel, WhatsApp a photo. Free emergency pickup across Dubai mainland. No fix, no charge.
+            Power off the MacBook, flip it upside down on a towel, WhatsApp a photo. Then walk in, or book a same-day courier and send it to us. No fix, no charge.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

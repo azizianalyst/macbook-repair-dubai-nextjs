@@ -123,7 +123,7 @@ export default function IPhoneCameraRepair() {
       }
       steps={[
         { title: "WhatsApp model and a sample photo", body: "Tell us which camera is affected and send a photo that shows the fault." },
-        { title: "Free diagnosis", body: "Walk in to Concord Tower, Dubai Media City, or use free pickup across Dubai mainland. Every lens, the flash and the front camera are tested." },
+        { title: "Free diagnosis", body: "Walk in to Concord Tower, Dubai Media City, or send it with a same-day courier you book. Every lens, the flash and the front camera are tested." },
         { title: "Written quote, your approval", body: "You approve the price and part grade first. Parts are genuine where available, quality-tested otherwise, and disclosed before work." },
         { title: "Module or lens-glass replacement", body: "Battery disconnected, only the faulty camera or glass replaced, new adhesive where the phone was sealed." },
         { title: "Every lens tested", body: "Focus near and far, stabilisation, flash, Portrait mode, LiDAR on Pro models, and Face ID after front-camera work." },
@@ -141,7 +141,7 @@ export default function IPhoneCameraRepair() {
         ["Rear camera, iPhone 17 / 16 / Air",    "Quote on WhatsApp",                           "Apple lists AED 659, excl. VAT (Sep 2026)"],
         ["Rear camera, iPhone 17e / 16e",        "Quote on WhatsApp",                           "Apple lists AED 499, excl. VAT (Sep 2026)"],
         ["Lens glass only",                      "Yes, when the camera behind it tests fine",   "Quoted by Apple after inspection"],
-        ["Free pickup in Dubai",                 "Yes, Dubai mainland",                         "No"],
+        ["Walk in, no appointment",              "Yes, Dubai Media City",                       "Usually by appointment"],
         ["Warranty",                             "Up to 12 months written on the part",         "Apple's service warranty"],
       ]}
       faqs={[

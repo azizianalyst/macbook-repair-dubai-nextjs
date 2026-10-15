@@ -13,11 +13,12 @@ Every session follows these rules. The rules win over any plan, prompt or skill.
 MacBook Repair Dubai is an **independent** Apple repair workshop (never "Apple Authorised/Certified").
 - Address: Office #45, 10th Floor, Concord Tower, Dubai Media City
 - Phone/WhatsApp: 055 741 3706
-- Hours: Mon–Sat 9am–10pm
+- Hours: Mon–Thu & Sat 9am–7pm, Fri 9am–12pm and 2pm–7pm, Sun closed (GBP, 2026-10-15)
 - Founded: 2004
 - Founder: Abdul Aziz (the one and only founder)
 
 Repairs Mac, iPhone and iPad. No Apple Watch or AirPods service. No AED repair prices anywhere; quotes go through WhatsApp.
+No free pickup or delivery (ended 2026-10-15). Customers walk in, send it with a courier they book (from other emirates we courier it back), or book a paid onsite visit when a technician is free.
 
 ## Content
 - Write as the technician who does the work: first-hand bench detail, Dubai context (heat, sand, humidity, the Media City location), specific facts, plain sentences.

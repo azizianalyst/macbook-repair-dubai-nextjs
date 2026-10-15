@@ -125,7 +125,7 @@ export default function BlogMacBookScreenRepairCost() {
             headers={["Factor", "MacBook Repair Dubai", "Apple Store / AASP"]}
             rows={[
               { model: "Turnaround",       ours: "Same day when the panel is in stock",  apple: "Ask the store for its current wait" },
-              { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You take it to an Apple Store" },
+              { model: "Booking",          ours: "Walk in, no appointment", apple: "Book a Genius Bar slot" },
               { model: "Warranty",         ours: "90 days written", apple: "Apple's own repair warranty" },
               { model: "Diagnosis",        ours: "Free", apple: "Quoted by Apple" },
               { model: "Under AppleCare+", ours: "We send you to Apple", apple: "Screen service fee applies" },

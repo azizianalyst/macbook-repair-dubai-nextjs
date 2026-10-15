@@ -241,7 +241,7 @@ export function AziziTemplate(p: AziziTemplateProps) {
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl" aria-label="Where to find us">
           <SectionHeading
             title="Where to find us"
-            sub="Walk in during workshop hours — no appointment needed — or we collect free from anywhere in Dubai."
+            sub="Walk in during workshop hours with no appointment, or WhatsApp a photo first for a quote."
           />
           <div className="mt-lg">
             <LocationBlock />

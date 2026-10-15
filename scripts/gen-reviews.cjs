@@ -41,8 +41,18 @@ export const REVIEWS: TaggedReview[] = [
 ${items}
 ];
 
+// Free pickup and delivery ended 2026-10-15: skip reviews that praise it when showcasing
+// (they stay verbatim on /reviews). Each index walks forward to the next usable review.
+const ENDED_SERVICE_RE = /\\b(free )?(pick-?up|collection|delivery|courier|door[- ]to[- ]door|collected)\\b/i;
 export function pickReviews(indices: number[]): Review[] {
-  return indices.map((i) => REVIEWS[i % REVIEWS.length]);
+  const used = new Set<number>();
+  return indices.map((i) => {
+    for (let k = 0; k < REVIEWS.length; k++) {
+      const j = (i + k) % REVIEWS.length;
+      if (!used.has(j) && !ENDED_SERVICE_RE.test(REVIEWS[j].text ?? "")) { used.add(j); return REVIEWS[j]; }
+    }
+    return REVIEWS[i % REVIEWS.length];
+  });
 }
 `;
 

@@ -48,15 +48,15 @@ const FAQS = [
   { q: "What causes a MacBook battery to swell?",
     a: "Lithium-ion batteries produce gas as they age and degrade. This is a normal end-of-life process but is accelerated by: always keeping the MacBook at 100% charge, using it at high temperatures (like on a duvet blocking the fans), or using third-party chargers that don't respect the charging curve. Most swellings appear after 3–6 years of daily use." },
   { q: "Can I still use my MacBook if the battery is swollen?",
-    a: "Briefly, only to save your work and copy critical files. Power it down as soon as possible and don't charge it. A swollen battery under charge can rupture. Bring it in or request free pickup from Dubai Mainland, we replace swollen batteries the same day." },
+    a: "Briefly, only to save your work and copy critical files. Power it down as soon as possible and don't charge it. A swollen battery under charge can rupture. Bring it in to our Media City workshop, we replace swollen batteries the same day." },
   { q: "How much does swollen MacBook battery repair cost in Dubai?",
     a: "It depends on the model — an Air cell, a 13-inch Pro cell and a 14/16-inch Pro cell are three different parts. The battery is completely replaced; we do not attempt to discharge and re-seal swollen cells. Diagnosis is free." },
   { q: "Can a swollen battery damage my MacBook?",
     a: "Yes. The pressure from a swollen battery lifts the trackpad out of its housing (damaging the Force Touch mechanism), can crack the display from the inside, and warps the bottom case. Replace it before the swelling progresses, most early-stage swellings cause no secondary damage." },
   { q: "How long does swollen MacBook battery replacement take?",
     a: "1–2 hours for most models. MacBook Air and Pro 13\" are the fastest, battery is accessible without full disassembly. MacBook Pro 16\" takes slightly longer due to the larger cell and more screws. Same-day service when you arrive before 4 pm." },
-  { q: "Do you offer MacBook battery pickup in Dubai for swollen batteries?",
-    a: "Yes, free pickup and delivery across Dubai Mainland. WhatsApp 055 741 3706. Important: tell us the battery is swollen so the courier uses a padded bag and handles it carefully. We prioritise swollen-battery pickups for same-day replacement." },
+  { q: "How should I bring a MacBook with a swollen battery to the workshop?",
+    a: "Powered off, unplugged, and carried flat in your hands or on a car seat - not squeezed into a tight bag, because pressure on the cell is what you want to avoid. WhatsApp 055 741 3706 before you set off so we can tell you whether the battery is in stock. We prioritise swollen-battery jobs for same-day replacement." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [3, 7, 13, 19, 24];
@@ -67,7 +67,7 @@ export default function MacBookBatterySwollen() {
   useSeo({
     title: "MacBook Swollen Battery Repair Dubai. Same Day | Urgent",
     description:
-      "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement. Free pickup. Concord Tower, Media City. Call 055 741 3706.",
+      "MacBook swollen battery repair Dubai. Urgent, swollen batteries are a fire risk. Same-day replacement, walk in. Concord Tower, Media City. Call 055 741 3706.",
     path: "/macbook-battery-swollen-repair-dubai",
   });
 
@@ -86,14 +86,14 @@ export default function MacBookBatterySwollen() {
           tone="dark"
           eyebrow="URGENT. Swollen battery repair · Dubai · Same day"
           title="MacBook Swollen Battery Repair Dubai"
-          subtitle="A swollen battery is a fire risk, do not keep charging it. Same-day replacement. Free pickup across Dubai."
+          subtitle="A swollen battery is a fire risk, do not keep charging it. Same-day replacement at our Media City workshop."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1 text-red-700 font-semibold"><AlertTriangle size={16} aria-hidden /> Urgent, stop charging now</span>
             <span>·</span>
             <span>Same-day replacement</span>
             <span>·</span>
-            <span>Free pickup Dubai</span>
+            <span>Walk in, Dubai Media City</span>
           </p>
         </Hero>
 
@@ -107,7 +107,7 @@ export default function MacBookBatterySwollen() {
           <QuickAnswer
             tone="dark"
             question="My MacBook battery is swollen, what should I do?"
-            answer="Stop charging immediately and power down the MacBook. A swollen lithium battery is a fire risk, do not press on it or carry it in a bag under pressure. WhatsApp 055 741 3706 for same-day free pickup and battery replacement. We prioritise swollen-battery jobs at Concord Tower, Dubai Media City."
+            answer="Stop charging immediately and power down the MacBook. A swollen lithium battery is a fire risk, do not press on it or carry it in a bag under pressure. WhatsApp 055 741 3706 and bring it in for same-day battery replacement. We prioritise swollen-battery jobs at Concord Tower, Dubai Media City."
           />
         </section>
 
@@ -170,7 +170,7 @@ export default function MacBookBatterySwollen() {
           <div className="border border-red-700/40 bg-red-900/10 rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm flex items-center gap-sm"><AlertTriangle size={22} className="text-red-700" aria-hidden /> Swollen battery, act today</h2>
-              <p className="text-[15px] text-text-muted">Free pickup across Dubai Mainland. Same-day replacement. We prioritise swollen battery jobs.</p>
+              <p className="text-[15px] text-text-muted">Walk in to Concord Tower, Dubai Media City. Same-day replacement. We prioritise swollen battery jobs.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

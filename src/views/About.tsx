@@ -23,7 +23,7 @@ const COMPARE = [
   { row: "No fix, no charge",         us: true,  apple: false },
   { row: "Same-day service",          us: true,  apple: false, note: "Apple Store: 5-10 working days" },
   { row: "Component-level board work", us: true,  apple: false, note: "Apple swaps the whole board - much pricier" },
-  { row: "Free pickup across Dubai",  us: true,  apple: false },
+  { row: "Walk in, no appointment",   us: true,  apple: false },
   { row: "Genuine OEM parts",         us: true,  apple: true },
   { row: "Written warranty",          us: "Up to 12 months, by repair",  apple: "12 months" },
 ];

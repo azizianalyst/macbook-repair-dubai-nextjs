@@ -285,18 +285,18 @@ export default function IpadModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty up to 12 months, free pickup. WhatsApp us for today's price.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty up to 12 months, walk-in workshop. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
-      subtitle={`${model.heroTagline} Written warranty up to 12 months. Free pickup across Dubai - message us on WhatsApp for today's price.`}
+      subtitle={`${model.heroTagline} Written warranty up to 12 months. Walk in at Media City - message us on WhatsApp for today's price.`}
       startingPrice={0}
       timeline={turnaroundSummary(turnaround)}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -399,7 +399,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-7pm." },
+        { title: "Walk in to our Media City workshop",   body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
         { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}

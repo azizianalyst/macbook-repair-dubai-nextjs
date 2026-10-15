@@ -150,7 +150,7 @@ export default function BlogIPhoneCrackedScreen() {
               All repairs include a written warranty: 90 days on the screen assembly covering defects in the replacement panel (dead pixels, backlight failure, touch malfunction). Physical damage or a second drop is not covered under warranty, which is standard across the industry. If the screen develops a defect unrelated to physical impact within 90 days, we replace it at no charge.
             </p>
             <p>
-              Pickup and delivery within Dubai is available, and it is free on qualifying repairs. WhatsApp us at the number in the header to arrange a collection time that suits your schedule and to confirm the exact price for your model.
+              Walk in to our Concord Tower workshop in Dubai Media City, across from the Media City Metro station. WhatsApp us at the number in the header first to confirm the exact price for your model and check the screen is in stock.
             </p>
           </section>
 

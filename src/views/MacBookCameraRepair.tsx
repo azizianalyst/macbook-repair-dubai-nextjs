@@ -42,12 +42,12 @@ export default function MacBookCameraRepair() {
         { title: "Free diagnosis", body: "We rule out macOS, SMC and app permissions first, then test the module, flex cable and board power rails." },
         { title: "Written quote", body: "Software fix, module swap, or board-level repair - the price is agreed up front." },
         { title: "Repair", body: "Camera module or flex cable replaced, or board-level repair, with the display resealed properly." },
-        { title: "Quality test", body: "We verify a clear image across FaceTime and third-party apps before pickup." },
+        { title: "Quality test", body: "We verify a clear image across FaceTime and third-party apps before you collect it." },
       ]}
       warrantyDays={365}
       warrantyBullets={[
         "Covers the camera module / flex cable and fitment.",
-        "Excludes new liquid or impact damage after delivery.",
+        "Excludes new liquid or impact damage after collection.",
         "Free re-check if the fault returns inside 12 months.",
       ]}
       faqs={[

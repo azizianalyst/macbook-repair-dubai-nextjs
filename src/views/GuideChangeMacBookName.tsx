@@ -116,7 +116,7 @@ export default function GuideChangeMacBookName() {
             <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair team in Dubai
             </Link>{" "}
-            offers free pickup, free diagnosis, and a warranty of up to 12 months.
+            offers walk-in service in Dubai Media City, free diagnosis, and a warranty of up to 12 months.
           </p>
         </>
       }
@@ -155,7 +155,7 @@ export default function GuideChangeMacBookName() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook repair Dubai", href: "/", description: "Free pickup, free diagnosis, warranty of up to 12 months across Dubai." },
+        { label: "MacBook repair Dubai", href: "/", description: "Walk-in workshop in Dubai Media City, free diagnosis, warranty of up to 12 months." },
         { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Clean install if your Mac's software is acting up." },
         { label: "MacBook running slow? 10 fixes", href: "/blog/macbook-running-slow-10-fixes", description: "Quick wins to speed up a sluggish MacBook." },
       ]}

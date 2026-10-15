@@ -149,7 +149,7 @@ export default function BlogIPhoneScreenRepairCost() {
             rows={[
               { model: "Price", ours: "Price on request (WhatsApp)", apple: "Full retail" },
               { model: "Turnaround",       ours: "Same day",  apple: "5-10 days (parts via DXB)" },
-              { model: "Pickup",           ours: "Free, mainland Dubai", apple: "You travel to Dubai Mall / Mall of Emirates" },
+              { model: "Getting there",    ours: "Walk in at Dubai Media City, opposite the Metro", apple: "You travel to Dubai Mall / Mall of Emirates" },
               { model: "Warranty",         ours: "3 months written", apple: "12 months (Apple)" },
               { model: "Diagnostic fee",   ours: "Free",      apple: "Free if covered by AppleCare+, otherwise included in repair quote" },
               { model: "Genuine Apple part", ours: "On request", apple: "Always" },

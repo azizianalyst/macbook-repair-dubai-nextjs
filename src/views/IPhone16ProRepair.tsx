@@ -86,9 +86,9 @@ export default function IPhone16ProRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Concord Tower, Dubai Media City. No appointment needed." },
         { title: "Diagnose + repair",    body: "Standard same day; tetraprism + Face ID 1-3 days." },
-        { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, USB-C 3, 5x zoom, Camera Control, Action Button and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "ProMotion, AOD, Dynamic Island, USB-C 3, 5x zoom, Camera Control, Action Button and Face ID tested, signed warranty, ready to collect at the workshop." },
       ]}
       warrantyDays={365}
       warrantyHeadline

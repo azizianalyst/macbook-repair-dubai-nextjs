@@ -47,7 +47,7 @@ export default function IPhoneScreenRepair() {
         "We quote genuine Apple and quality-tested screens where both exist, and name the grade in writing.",
         "On the iPhone 11 and later, iOS can flag a non-genuine screen. We tell you beforehand.",
         "On the iPhone 18 Pro, Face ID's infrared camera sits under the display.",
-        "Screens carry a 90-day warranty, and pickup is free anywhere in Dubai.",
+        "Screens carry a 90-day warranty, and you can walk in without an appointment.",
       ]}
       faqHeading="iPhone screen repair: common questions"
       faqs={[
@@ -153,11 +153,11 @@ export default function IPhoneScreenRepair() {
         ]}
       />
 
-      <PageSection id="near-me" eyebrow="Walk in, pickup or courier" title="iPhone screen repair near me in Dubai">
+      <PageSection id="near-me" eyebrow="Walk in or send it by courier" title="iPhone screen repair near me in Dubai">
         <p>
-          <strong>Walk in</strong> at {NAP.street}, {NAP.area}, or book <strong>free pickup</strong> anywhere in Dubai
-          on WhatsApp. For <strong>Abu Dhabi and Sharjah</strong>, where we have no branch, we arrange courier collection
-          to our Dubai workshop and back. See the <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page
+          <strong>Walk in</strong> at {NAP.street}, {NAP.area}, across from Media City Metro, with parking on site.
+          WhatsApp a photo first for a quote. Coming from <strong>Abu Dhabi or Sharjah</strong>, where we have no branch? Book any
+          same-day courier app, hand the phone over, and WhatsApp us the tracking link. See the <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page
           for the areas we cover.
         </p>
       </PageSection>

@@ -47,13 +47,13 @@ function generateReply(review: GbpReview): string {
   const haFa = has(["quick", "fast", "same day", "hour", "minute", "min ", "record time"]);
   const haPr = has(["price", "affordable", "fair", "cheap", "competitive", "reasonable", "cost"]);
 
-  if (hasSc && hasPu) return `Screen sorted and dropped back to you — that's what the free pickup is for. Thank you, ${firstName}! 🙏`;
-  if (haBt && hasPu) return `Battery done and delivered back to you — really glad it worked out. Thanks ${firstName}! 🙏`;
+  if (hasSc && hasPu) return `Screen sorted and back in your hands — really glad it all worked out. Thank you, ${firstName}! 🙏`;
+  if (haBt && hasPu) return `Battery done and back with you — really glad it worked out. Thanks ${firstName}! 🙏`;
   if (hasSc) return `Screen back to new — exactly what we aim for every time. Thank you, ${firstName}! 🙏`;
   if (haBt) return `Full battery life restored — always satisfying to see. Really appreciate it, ${firstName}! 🙏`;
   if (haKb) return `Keys all working again — glad we could sort it. Come back any time! 🙏`;
   if (hasPu && haFa) return `Same-day and right back to you — that's the goal every time. Thank you, ${firstName}! 🙏`;
-  if (hasPu) return `Free pickup and back with you — really glad that worked well, ${firstName}! 🙏`;
+  if (hasPu) return `Glad it was easy to get the Mac to us and back again, ${firstName}. Thank you! 🙏`;
   if (haFa && haPr) return `Fast and at a fair price — that's exactly what we aim for. Thank you, ${firstName}! 🙏`;
   if (haFa) return `Same-day is always the target — really glad we hit it. Thank you, ${firstName}! 🙏`;
   if (haPr) return `Really glad the pricing worked for you, ${firstName} — always try to keep it fair. 🙏`;

@@ -44,7 +44,7 @@ const PROBLEMS = [
   { title: "\"Service Recommended\" warning in macOS",
     body: "Battery health below 80% or cycle count over 1,000. macOS shows the warning under System Settings > Battery > Battery Health. Battery still works but holds 60-80% of original capacity. Replace before the cycle count crosses 1,200 to avoid swelling." },
   { title: "Battery swelling - trackpad lifts off the case",
-    body: "Critical. The trackpad clicks weirdly or the bottom case bulges. Stop using the MacBook immediately - a swollen lithium pack is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp same hour for free pickup." },
+    body: "Critical. The trackpad clicks weirdly or the bottom case bulges. Stop using the MacBook immediately - a swollen lithium pack is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp the same hour and bring it straight in." },
   { title: "Sudden shutdowns at 30-40% remaining",
     body: "PMIC cannot read the swollen cell voltages correctly. Battery replacement clears it. If shutdowns continue after the swap, that points to a logic-board PMIC issue - diagnosed free during the same visit." },
   { title: "MacBook only runs on charger - won't power on without it",
@@ -66,23 +66,23 @@ const PROBLEMS = [
 const STEPS = [
   { title: "WhatsApp battery health screenshot",
     body: "Open System Settings > Battery > Battery Health. Send the screenshot. Reply within 4-8 minutes during business hours with confirmed price and 2-hour booking slot." },
-  { title: "Drop off or free pickup",
-    body: "Walk in to Office #45, Concord Tower, Media City, or book a free pickup from anywhere in Dubai mainland. Same-hour pickup from Internet City and JLT." },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, across from the metro, with parking on site. Can't come in? Book any same-day courier app, hand it over, and WhatsApp us the tracking link." },
   { title: "Bench diagnosis - 15 minutes",
     body: "SMC voltages checked, DC-in board verified, cycle count and design capacity logged on the work order. Confirms whether battery alone needs replacement or charging circuit too." },
   { title: "Battery removal + cell swap - 60 minutes",
     body: "Bottom case off, battery adhesive softened with isopropyl 99%, old cells lifted, replacement seated, BMS firmware re-paired to the logic board on Apple Silicon." },
   { title: "4-hour calibration cycle",
     body: "Charge to 100%, run battery flat under controlled load, charge to 100% again. macOS Battery Health re-reads design capacity. Final report shown to you on collection." },
-  { title: "Free delivery + 3-month warranty card",
-    body: "Delivered back same day. Warranty card lists the cell batch number and expected cycle life. Battery warranty: 3 months on cells, 80% capacity guarantee for the same period." },
+  { title: "Handover + 3-month warranty card",
+    body: "Ready to collect the same day. Warranty card lists the cell batch number and expected cycle life. Battery warranty: 3 months on cells, 80% capacity guarantee for the same period." },
 ];
 
 const FAQS: FAQ[] = [
   { q: "How much does MacBook battery replacement cost in Dubai?",
     a: "It depends on the model: an Air, a 13-inch Pro and a 14/16-inch Pro take different cells, and the quote includes the battery, labour and the firmware re-pair. Diagnosis is free and we confirm the figure before starting. Send the model and a Battery Health screenshot on WhatsApp." },
   { q: "How long does a MacBook battery replacement take?",
-    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is usually done in 30 minutes. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. With free pickup and delivery the same-day turnaround is typically 4 to 6 hours from collection. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
+    a: "With a pre-booked appointment and part pre-confirmed for your model, the battery swap is usually done in 30 minutes. Walk-in (no appointment): about 2 hours total, 60 minutes on the bench plus a 60-minute calibration cycle. If you send it by a same-day courier you book, the bench time starts when it reaches us. WhatsApp 055 741 3706 to book the 30-minute appointment slot." },
   { q: "How do I check my MacBook battery health?",
     a: "On macOS Ventura and later: System Settings > Battery > Battery Health > Information (i). Look at \"Maximum Capacity\" (should be above 80%) and \"Cycle Count\" (Apple rates Apple Silicon for 1,000 cycles, Intel for 1,000 on most models, 500 on older Airs). On Intel Macs you can also hold Option and click the battery icon in the menu bar." },
   { q: "How many charge cycles does a MacBook battery last?",
@@ -92,7 +92,7 @@ const FAQS: FAQ[] = [
   { q: "What's the warranty on a new MacBook battery?",
     a: "3 months written warranty on cells, plus an 80% capacity guarantee. If maximum capacity drops below 80% within 3 months of the swap (and cycle count is under 200), the battery is replaced free of charge. The warranty stays with the MacBook serial number - transferable once free of charge." },
   { q: "My battery is swollen - what do I do?",
-    a: "Stop using the MacBook immediately. Don't charge it, don't try to power it on. Lithium swelling is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 same hour - free emergency pickup across Dubai mainland." },
+    a: "Stop using the MacBook immediately. Don't charge it, don't try to power it on. Lithium swelling is a fire risk and can crack the trackpad assembly, which then also needs replacing. WhatsApp 055 741 3706 the same hour and bring it to the workshop, or send it by a same-day courier you book." },
   { q: "Will I lose my data during a battery swap?",
     a: "No. The SSD is on the logic board, untouched during a battery replacement. Files, apps, settings, FileVault encryption - all stay intact. The workshop still recommends a Time Machine backup before any service, just as a habit." },
   { q: "Do you replace MacBook Air 2017 and earlier batteries that Apple calls obsolete?",
@@ -106,7 +106,7 @@ const COMPARISON = [
   ["Air 13\" M5",           "Free diagnosis, then a quote",                 "AED 689 + VAT (Apple list)"],
   ["Pro 14\" M5",           "Free diagnosis, then a quote",                 "AED 879 + VAT (Apple list)"],
   ["Pro 16\" M5 Pro / Max", "Free diagnosis, then a quote",                 "AED 959 + VAT (Apple list)"],
-  ["Free pickup in Dubai",   "Yes, same hour from many areas",               "No, customer must courier"],
+  ["Getting it in",          "Walk in, no appointment, or send by courier", "Genius Bar appointment required"],
   ["Calibration cycle",      "Yes, 4 hours included",                        "Not specified"],
   ["Warranty",               "3 months + 80% capacity guarantee",            "1 year (Apple)"],
   ["Vintage/obsolete models","Yes - 2010 onwards",                            "Refused on obsolete (pre-2017)"],
@@ -227,7 +227,7 @@ export default function MacBookBatteryReplacement() {
         {/* ── Intro ──────────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
           <LinkifyProse selfHref="/macbook-battery-replacement-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
-            MacBook battery replacement in Dubai finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook and WhatsApp same hour - free emergency pickup across Dubai mainland. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
+            MacBook battery replacement in Dubai finishes in 2 hours on the bench - including the 60-minute calibration cycle that macOS needs to read the new design capacity correctly. The workshop has fitted 5,200+ MacBook batteries since 2004. Tier-1 cells from Samsung SDI, LG Chem, and ATL - the same factories that supply Apple - fitted with BMS firmware re-pairing on Apple Silicon. 3-month warranty plus an 80% capacity guarantee for the same period. Swollen battery? Stop using the MacBook, WhatsApp the same hour and bring it straight to the workshop. Replacing a MacBook Pro battery specifically? The <Link to="/macbook-pro-battery-replacement-dubai" className="text-accent underline underline-offset-2">MacBook Pro battery replacement</Link> page covers the 14-inch and 16-inch 100Wh packs, Intel and M1-M5.
           </p></LinkifyProse>
         </section>
 
@@ -266,7 +266,7 @@ export default function MacBookBatteryReplacement() {
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead
               title="How does a MacBook battery replacement work?"
-              intro="Six steps from screenshot to delivery. The 4-hour calibration is what separates a proper swap from a Dragon-Mart job."
+              intro="Six steps from screenshot to handover. The 4-hour calibration is what separates a proper swap from a Dragon-Mart job."
               icon={<Wrench size={26} className="text-accent" aria-hidden />}
             />
             <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
@@ -287,7 +287,7 @@ export default function MacBookBatteryReplacement() {
           <div className="grid gap-lg md:grid-cols-3">
             <Card className="border-accent/30 bg-accent/[0.06]">
               <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Same day (2 hours bench)</h3>
-              <p className="m-0 text-[14px] text-text-muted leading-relaxed">All MacBook Air 11″/13″/15″, all MacBook Pro 13″/14″/15″/16″ - Intel and Apple Silicon. 92 of last 100 battery tickets delivered before 7 pm same day.</p>
+              <p className="m-0 text-[14px] text-text-muted leading-relaxed">All MacBook Air 11″/13″/15″, all MacBook Pro 13″/14″/15″/16″ - Intel and Apple Silicon. 92 of last 100 battery tickets ready before 7 pm same day.</p>
             </Card>
             <Card>
               <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Same day (3 hours)</h3>
@@ -331,7 +331,7 @@ export default function MacBookBatteryReplacement() {
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">80% capacity guarantee</strong> - if maximum capacity drops below 80% within 3 months at under 200 cycles, battery replaced free.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, premature capacity loss, swelling, BMS firmware faults, sudden shutdown returns.</span></li>
               <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> physical damage, liquid damage, charging from non-Apple-spec chargers above 100 W.</span></li>
-              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo. Free same-day collection. Replacement fitted within 24 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo, then bring the MacBook in. Replacement fitted within 24 hours.</span></li>
             </ul>
           </Card>
         </section>
@@ -505,7 +505,7 @@ export default function MacBookBatteryReplacement() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-2xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[28ch] mx-auto">Battery health under 80%? Send the screenshot - quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, free pickup, 3-month warranty plus 80% capacity guarantee.
+              Battery Health screenshot + serial number on WhatsApp. 2-hour bench time, walk-in at Media City, 3-month warranty plus 80% capacity guarantee.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

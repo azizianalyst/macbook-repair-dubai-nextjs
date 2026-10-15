@@ -20,7 +20,7 @@ const PATH = "/macbook-guides";
 const GUIDE_FAQS = [
   { q: "Are these guides safe to follow on my own?", a: "The everyday ones - screenshots, renaming, copy and paste, cleaning the screen - are completely safe. Anything involving a reset or erasing the drive says so clearly at the top: back up first, because an erase cannot be undone." },
   { q: "Do the guides work on both Apple silicon and Intel MacBooks?", a: "Most steps are the same on both. Where they differ - recovery mode, resets and startup options are the usual ones - the guide gives the Apple silicon and Intel steps separately." },
-  { q: "What if a guide does not fix my MacBook?", a: "Then it is probably a hardware fault rather than a setting. Diagnosis at our Media City workshop is free, pickup across Dubai is free, and there is no fee if we cannot fix it." },
+  { q: "What if a guide does not fix my MacBook?", a: "Then it is probably a hardware fault rather than a setting. Diagnosis at our Media City workshop is free, you can walk in without an appointment, and there is no fee if we cannot fix it." },
   { q: "Who writes these guides?", a: "The technicians who repair MacBooks at our Concord Tower workshop in Dubai Media City. They are written from the problems customers actually bring in, not rewritten from other websites." },
 ];
 
@@ -110,7 +110,7 @@ export default function MacBookGuides() {
         <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
           <h2 className="text-text text-[24px] md:text-[28px] max-w-[30ch]">Guide didn't solve it? We repair MacBooks across Dubai</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Free diagnosis, free pickup across Dubai mainland, and a written warranty of up to 12 months, depending on the repair. Message the workshop on WhatsApp.
+            Free diagnosis at our Media City workshop, walk-ins welcome, and a written warranty of up to 12 months, depending on the repair. Message the workshop on WhatsApp.
           </p>
           <a
             href={withSlash(SITE.whatsapp)}

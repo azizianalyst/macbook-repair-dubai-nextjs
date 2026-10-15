@@ -96,9 +96,9 @@ export default function BlogMacBookProM5VsAppleStore() {
             in price usually comes from.
           </p>
           <p>
-            <strong>Pickup.</strong> Free door-to-door pickup anywhere in mainland Dubai. Apple
-            requires you to drop off at Mall of Emirates or Dubai Mall, fine if you're nearby,
-            painful if you're in JLT or Sharjah border.
+            <strong>Getting there.</strong> Walk in at Concord Tower, across from the Media City Metro
+            station, with parking on site. Apple requires you to drop off at Mall of Emirates or Dubai
+            Mall, fine if you're nearby, and the Genius Bar works mainly by appointment.
           </p>
 
           <h2 id="when-apple">When to choose Apple Store anyway</h2>

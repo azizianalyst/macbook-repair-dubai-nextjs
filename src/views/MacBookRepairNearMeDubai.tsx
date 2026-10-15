@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { MapPin, Truck, Train, Car, Clock, Star, MessageCircle, Phone, ParkingCircle, Navigation } from "lucide-react";
+import { MapPin, Train, Car, Clock, Star, MessageCircle, Phone, ParkingCircle, Navigation } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -24,72 +24,72 @@ import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const TRAVEL_TIMES = [
   // ── Closest (≤10 min) ──────────────────────────────────────────────────
-  { area: "Dubai Media City",         car: "In the area", pickup: "Same hour" },
-  { area: "Internet City",            car: "3 min",       pickup: "Same hour" },
-  { area: "Knowledge Village",        car: "4 min",       pickup: "Same hour" },
-  { area: "Knowledge Park",           car: "5 min",       pickup: "Same hour" },
-  { area: "Al Sufouh",                car: "5 min",       pickup: "Same hour" },
-  { area: "Dubai Pearl",              car: "7 min",       pickup: "Same hour" },
-  { area: "Sheikh Zayed Road",        car: "9 min",       pickup: "Same hour" },
+  { area: "Dubai Media City",         car: "In the area" },
+  { area: "Internet City",            car: "3 min" },
+  { area: "Knowledge Village",        car: "4 min" },
+  { area: "Knowledge Park",           car: "5 min" },
+  { area: "Al Sufouh",                car: "5 min" },
+  { area: "Dubai Pearl",              car: "7 min" },
+  { area: "Sheikh Zayed Road",        car: "9 min" },
   // ── 10-20 min ──────────────────────────────────────────────────────────
-  { area: "JBR",                      car: "10 min",      pickup: "Same day" },
-  { area: "JLT",                      car: "12 min",      pickup: "Same day" },
-  { area: "Dubai Marina",             car: "14 min",      pickup: "Same day" },
-  { area: "Palm Jumeirah",            car: "15 min",      pickup: "Same day" },
-  { area: "Emirates Living",          car: "12 min",      pickup: "Same day" },
-  { area: "Jumeirah Heights",         car: "14 min",      pickup: "Same day" },
-  { area: "Jumeirah Islands",         car: "16 min",      pickup: "Same day" },
-  { area: "The Greens",               car: "11 min",      pickup: "Same day" },
-  { area: "The Views",                car: "12 min",      pickup: "Same day" },
-  { area: "Commodities Centre",       car: "12 min",      pickup: "Same day" },
-  { area: "Tecom",                    car: "12 min",      pickup: "Same day" },
-  { area: "Discovery Gardens",        car: "16 min",      pickup: "Same day" },
-  { area: "Jumeirah",                 car: "18 min",      pickup: "Same day" },
-  { area: "Umm Suqeim",               car: "18 min",      pickup: "Same day" },
-  { area: "Al Barsha",                car: "19 min",      pickup: "Same day" },
-  { area: "Al Furjan",                car: "19 min",      pickup: "Same day" },
-  { area: "Dubai Science Park",       car: "18 min",      pickup: "Same day" },
+  { area: "JBR",                      car: "10 min" },
+  { area: "JLT",                      car: "12 min" },
+  { area: "Dubai Marina",             car: "14 min" },
+  { area: "Palm Jumeirah",            car: "15 min" },
+  { area: "Emirates Living",          car: "12 min" },
+  { area: "Jumeirah Heights",         car: "14 min" },
+  { area: "Jumeirah Islands",         car: "16 min" },
+  { area: "The Greens",               car: "11 min" },
+  { area: "The Views",                car: "12 min" },
+  { area: "Commodities Centre",       car: "12 min" },
+  { area: "Tecom",                    car: "12 min" },
+  { area: "Discovery Gardens",        car: "16 min" },
+  { area: "Jumeirah",                 car: "18 min" },
+  { area: "Umm Suqeim",               car: "18 min" },
+  { area: "Al Barsha",                car: "19 min" },
+  { area: "Al Furjan",                car: "19 min" },
+  { area: "Dubai Science Park",       car: "18 min" },
   // ── 20-30 min ──────────────────────────────────────────────────────────
-  { area: "Downtown Dubai",           car: "21 min",      pickup: "Same day" },
-  { area: "DIFC",                     car: "27 min",      pickup: "Same day" },
-  { area: "Business Bay",             car: "23 min",      pickup: "Same day" },
-  { area: "Dubai Hills Estate",       car: "21 min",      pickup: "Same day" },
-  { area: "Dubai Hills View",         car: "22 min",      pickup: "Same day" },
-  { area: "Al Quoz",                  car: "18 min",      pickup: "Same day" },
-  { area: "Motor City",               car: "22 min",      pickup: "Same day" },
-  { area: "Dubai Motor City",         car: "22 min",      pickup: "Same day" },
-  { area: "Sports City",              car: "21 min",      pickup: "Same day" },
-  { area: "Studio City",              car: "22 min",      pickup: "Same day" },
-  { area: "Arabian Ranches",          car: "23 min",      pickup: "Same day" },
-  { area: "Jumeirah Village Circle",  car: "20 min",      pickup: "Same day" },
-  { area: "Bur Dubai",                car: "24 min",      pickup: "Same day" },
-  { area: "Al Karama",                car: "24 min",      pickup: "Same day" },
-  { area: "Deira",                    car: "29 min",      pickup: "Same day" },
-  { area: "Dubai Design District (d3)", car: "26 min",    pickup: "Same day" },
-  { area: "Dubai Healthcare City",    car: "26 min",      pickup: "Same day" },
-  { area: "Nad Al Sheba",             car: "34 min",      pickup: "Next morning" },
-  { area: "Meadows",                  car: "14 min",      pickup: "Same day" },
-  { area: "The Villa",                car: "33 min",      pickup: "Next morning" },
-  { area: "Sustainable City",         car: "27 min",      pickup: "Same day" },
-  { area: "Al Jaddaf",                car: "25 min",      pickup: "Same day" },
-  { area: "Al Jafiliya",              car: "27 min",      pickup: "Same day" },
-  { area: "Satwa",                    car: "28 min",      pickup: "Same day" },
+  { area: "Downtown Dubai",           car: "21 min" },
+  { area: "DIFC",                     car: "27 min" },
+  { area: "Business Bay",             car: "23 min" },
+  { area: "Dubai Hills Estate",       car: "21 min" },
+  { area: "Dubai Hills View",         car: "22 min" },
+  { area: "Al Quoz",                  car: "18 min" },
+  { area: "Motor City",               car: "22 min" },
+  { area: "Dubai Motor City",         car: "22 min" },
+  { area: "Sports City",              car: "21 min" },
+  { area: "Studio City",              car: "22 min" },
+  { area: "Arabian Ranches",          car: "23 min" },
+  { area: "Jumeirah Village Circle",  car: "20 min" },
+  { area: "Bur Dubai",                car: "24 min" },
+  { area: "Al Karama",                car: "24 min" },
+  { area: "Deira",                    car: "29 min" },
+  { area: "Dubai Design District (d3)", car: "26 min" },
+  { area: "Dubai Healthcare City",    car: "26 min" },
+  { area: "Nad Al Sheba",             car: "34 min" },
+  { area: "Meadows",                  car: "14 min" },
+  { area: "The Villa",                car: "33 min" },
+  { area: "Sustainable City",         car: "27 min" },
+  { area: "Al Jaddaf",                car: "25 min" },
+  { area: "Al Jafiliya",              car: "27 min" },
+  { area: "Satwa",                    car: "28 min" },
   // ── 30+ min ────────────────────────────────────────────────────────────
-  { area: "Mirdif",                   car: "31 min",      pickup: "Next morning" },
-  { area: "Dubai Silicon Oasis",      car: "33 min",      pickup: "Next morning" },
-  { area: "Dubai Investment Park",    car: "24 min",      pickup: "Same day" },
-  { area: "Dubai Production City",    car: "24 min",      pickup: "Same day" },
-  { area: "Dubai South",              car: "33 min",      pickup: "Next morning" },
-  { area: "Dubai Land",               car: "25 min",      pickup: "Same day" },
-  { area: "International City",       car: "33 min",      pickup: "Next morning" },
-  { area: "Arabian Ranches 2",        car: "30 min",      pickup: "Next morning" },
-  { area: "Al Warqa",                 car: "35 min",      pickup: "Next morning" },
-  { area: "Al Barari",                car: "30 min",      pickup: "Next morning" },
-  { area: "Al Mizhar",                car: "40 min",      pickup: "Next morning" },
-  { area: "Al Nahda",                 car: "31 min",      pickup: "Next morning" },
-  { area: "Jebel Ali",                car: "24 min",      pickup: "Same day" },
-  { area: "Dubai Industrial City",    car: "35 min",      pickup: "Next morning" },
-  { area: "Remraam",                  car: "26 min",      pickup: "Same day" },
+  { area: "Mirdif",                   car: "31 min" },
+  { area: "Dubai Silicon Oasis",      car: "33 min" },
+  { area: "Dubai Investment Park",    car: "24 min" },
+  { area: "Dubai Production City",    car: "24 min" },
+  { area: "Dubai South",              car: "33 min" },
+  { area: "Dubai Land",               car: "25 min" },
+  { area: "International City",       car: "33 min" },
+  { area: "Arabian Ranches 2",        car: "30 min" },
+  { area: "Al Warqa",                 car: "35 min" },
+  { area: "Al Barari",                car: "30 min" },
+  { area: "Al Mizhar",                car: "40 min" },
+  { area: "Al Nahda",                 car: "31 min" },
+  { area: "Jebel Ali",                car: "24 min" },
+  { area: "Dubai Industrial City",    car: "35 min" },
+  { area: "Remraam",                  car: "26 min" },
 ];
 
 const LANDMARKS = [
@@ -101,32 +101,32 @@ const LANDMARKS = [
   { name: "Dubai Internet City Metro", distance: "1.1 km", note: "Walking distance - alternative Red Line stop" },
 ];
 
-const PICKUP_STEPS = [
-  { title: "Send a WhatsApp to 055 741 3706", body: "Tell Shafiq the model, the issue, and your area. He confirms a pickup window within 4 minutes during business hours." },
-  { title: "Courier collects within the booked window", body: "The MacBook Repair Dubai courier arrives in a Toyota Innova marked with the workshop logo. ID-checked, insured, and trackable on WhatsApp." },
-  { title: "Free diagnosis at the workshop", body: "Shafiq inspects the device the same day. A written quote lands in your WhatsApp within 4 hours of pickup." },
-  { title: "Approve the quote, get the repair", body: "Reply 'approved' on WhatsApp. Most repairs finish the same day. You receive a 'ready' message when the device is back on the courier van." },
-  { title: "Free delivery, payment on arrival", body: "Courier returns the device to your door. Pay the courier in cash, by card on a portable terminal, or by bank transfer. Warranty up to 12 months card included." },
+const SEND_IN_STEPS = [
+  { title: "WhatsApp 055 741 3706 first", body: "Tell Shafiq the model and the fault, and send a photo. He replies with a quote during business hours." },
+  { title: "Book a same-day courier yourself", body: "Use any same-day courier app. Address it to Office #45, 10th Floor, Concord Tower, Dubai Media City, and hand the MacBook to the driver." },
+  { title: "Send us the tracking link", body: "WhatsApp the link so we know it's on the way. It reaches us within the day, and we log it by serial number when it arrives." },
+  { title: "Free diagnosis, then approve", body: "Shafiq checks it on the bench and sends a written quote. Reply 'approved' and most repairs finish the same day." },
+  { title: "Collect it or send it back", body: "Collect it from the workshop, or book a courier to send it back to you. Warranty card of up to 12 months included." },
 ];
 
 const FAQS = [
   { q: "Where is MacBook Repair Dubai actually located?",
     a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. The tower sits directly on Sheikh Zayed Road across from Media City Metro Station. Paid parking on-site (AED 5/hour) and free street parking on Al Sufouh Road behind the tower." },
   { q: "How far are you from Dubai Marina?",
-    a: "10 minutes by car via Sheikh Zayed Road exit 32. By Metro: 4 stops on the Red Line from DMCC station. Pickup from any Marina tower is same-day, free." },
+    a: "10 minutes by car via Sheikh Zayed Road exit 32. By Metro: 4 stops on the Red Line from DMCC station. Can't make the trip? A same-day courier you book gets it to us within the day." },
   { q: "Do you have a branch in JLT or Downtown?",
-    a: "No - single Concord Tower workshop only. The free pickup and delivery service replaces the need for branches: a courier collects from Marina, JLT, Downtown, Palm, JBR, Business Bay, and the rest of Dubai Mainland at no charge." },
+    a: "No - single Concord Tower workshop only. It's across from Media City Metro with parking on site, so it's easy to reach. If you can't, send the MacBook with a same-day courier you book and WhatsApp us the tracking link." },
   { q: "What's the closest Metro station?",
     a: "Media City Metro on the Red Line, 120 metres from the tower. Walk over the pedestrian bridge across Sheikh Zayed Road, into the Concord Tower lobby, elevator to the 10th floor. Total walk time: 4 minutes." },
   { q: "Is there parking?",
     a: "Yes - paid parking inside Concord Tower (AED 5/hour, AED 25/day max). Free street parking on Al Sufouh Road behind the tower (10-minute walk). Valet parking at the tower lobby for AED 30 flat." },
   { q: "Can I walk in without an appointment?",
-    a: "Yes - walk-in welcome any time during opening hours (9 am - 7 pm Mon-Sat). For complex board work, sending a WhatsApp first lets Shafiq pre-order the part so the device is fixed during your visit instead of left overnight." },
-  { q: "How long does free pickup take?",
-    a: "Within Dubai Marina, JLT, Internet City, Knowledge Village, Al Barsha - same hour during business hours. Downtown, Business Bay, JBR, Palm - same day. Mirdif, Arabian Ranches, Silicon Oasis - next morning." },
+    a: "Yes - walk-in welcome any time during opening hours (Mon-Thu and Sat 9 am - 7 pm, Friday 9 am - 12 pm and 2 pm - 7 pm). For complex board work, sending a WhatsApp first lets Shafiq pre-order the part so the device is fixed during your visit instead of left overnight." },
+  { q: "What if I can't come to the workshop?",
+    a: "Book any same-day courier app, hand the MacBook to the driver and WhatsApp us the tracking link. You're not waiting on us to send anyone. If you need a technician at your home or office, a paid onsite visit can be booked, subject to technician availability, with the charge quoted on WhatsApp first." },
   { q: "Do you cover Sharjah and Abu Dhabi?",
-    a: "Pickup to Sharjah and Abu Dhabi is available for a small courier fee, quoted when you book. Sharjah next-day, Abu Dhabi same-week (Tuesdays and Fridays only - courier runs the route twice weekly)." },
-  { q: "What if I'm in a hurry - same-day on-site repair?",
+    a: "Yes, at the Dubai workshop. WhatsApp a photo for a quote, then walk in or book a courier yourself to send the MacBook over. We don't run our own courier route." },
+  { q: "What if I'm in a hurry - can you fix it while I wait?",
     a: "Walk in with an in-stock part fault (MacBook screen, battery, keyboard, iPhone screen, iPhone battery) and the repair finishes in 40 minutes to 2 hours. Wait in the AC office or grab coffee at the Costa downstairs in the tower lobby." },
   { q: "Are you open weekends?",
     a: "Saturday: full opening hours, 9 am-7 pm. Sunday: storefront closed but WhatsApp answered all day. Monday morning is the busiest hour - message us on WhatsApp on Sunday to reserve a Monday slot." },
@@ -139,9 +139,9 @@ export default function MacBookRepairNearMeDubai() {
 
   useSeo(
     {
-      title: "MacBook Repair Near Me Dubai - Free Pickup Across the City",
+      title: "MacBook Repair Near Me Dubai - Walk In, Same Day",
       description:
-        "MacBook repair near you in Dubai. Free pickup from Marina, JLT, Downtown, Palm, Business Bay. Concord Tower Media City. 10-min from Marina. 055 741 3706.",
+        "MacBook repair near you in Dubai. Walk in to Concord Tower, Media City, across from the Metro, or send it by courier. 10 min from Marina. 055 741 3706.",
       path: "/macbook-repair-near-me-dubai",
     },
     [
@@ -149,7 +149,7 @@ export default function MacBookRepairNearMeDubai() {
       organization(),
       webPage({
         title: "MacBook Repair Near Me Dubai",
-        description: "Find a MacBook repair specialist near your Dubai address. Free pickup and delivery across all major areas.",
+        description: "Find a MacBook repair specialist near your Dubai address. Walk in at Dubai Media City or send your MacBook by courier.",
         path: "/macbook-repair-near-me-dubai",
         dateModified: "2026-04-01",
         datePublished: "2024-06-01",
@@ -159,7 +159,7 @@ export default function MacBookRepairNearMeDubai() {
         timeline: "Same day",
         warranty: "P1Y",
         url: "/macbook-repair-near-me-dubai",
-        description: "MacBook screen, battery, keyboard, and water damage repair with free door-to-door pickup across Dubai Mainland.",
+        description: "MacBook screen, battery, keyboard, and water damage repair at our walk-in workshop in Dubai Media City.",
       }),
     ],
   );
@@ -172,12 +172,12 @@ export default function MacBookRepairNearMeDubai() {
         imageAlt={topicForPath("/macbook-repair-near-me-dubai")?.alt}
         variant="service"
         tone="dark"
-        eyebrow="Free pickup across Dubai"
-        title="MacBook Repair Near You in Dubai - Free Pickup Across the City"
-        subtitle="Concord Tower in Media City is the workshop. The free door-to-door courier turns 'near me' into anywhere in Dubai Mainland - same-hour pickup from 6 areas, same-day from the rest."
+        eyebrow="Across from Media City Metro"
+        title="MacBook Repair Near You in Dubai - Walk In or Send It Over"
+        subtitle="Concord Tower in Media City is the workshop, across from the Metro with parking on site. Can't come in? Book a same-day courier yourself and the MacBook reaches us within the day."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text">
-          <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free pickup & delivery</span>
+          <span className="flex items-center gap-1"><ParkingCircle size={16} className="text-accent" aria-hidden /> Parking on site</span>
           <span className="text-text-muted">·</span>
           <span className="flex items-center gap-1"><Train size={16} className="text-accent" aria-hidden /> 120 m from Media City Metro</span>
           <span className="text-text-muted">·</span>
@@ -188,7 +188,7 @@ export default function MacBookRepairNearMeDubai() {
       <QuickAnswer
         tone="dark"
         question="Is there a MacBook repair shop near me in Dubai?"
-        answer="Our workshop is in Concord Tower, Dubai Media City, and free door-to-door pickup makes 'near me' anywhere in Dubai mainland - same-hour pickup from six nearby areas and same-day from the rest. Diagnosis is free, there is no fee if we cannot fix it, and the repaired Mac comes back to your door."
+        answer="Our workshop is in Concord Tower, Dubai Media City, across from Media City Metro with parking on site. Walk in without an appointment, or book any same-day courier app to send your MacBook over. Diagnosis is free and there is no fee if we cannot fix it."
       />
 
       <USPStrip tone="dark" />
@@ -205,11 +205,11 @@ export default function MacBookRepairNearMeDubai() {
         <LocationBlock tone="dark" />
       </section>
 
-      {/* Areas we cover - free pickup & delivery */}
+      {/* Areas we cover */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Areas we cover across Dubai</h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-          Free door-to-door pickup and same-day delivery from every Dubai neighbourhood. Tap your area for local pickup windows and drive times. Cracked screen specifically? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See screen repair pickup times by area</Link>.
+          Walk in from anywhere in Dubai, or send your MacBook with a same-day courier you book. Tap your area for local directions and drive times. Cracked screen specifically? <Link to="/macbook-screen-repair-near-me-dubai" className="text-accent font-semibold hover:underline">See how screen repair near you works</Link>.
         </p>
         <div className="flex flex-wrap gap-2">
           {[
@@ -253,16 +253,15 @@ export default function MacBookRepairNearMeDubai() {
           <Car size={28} className="text-accent" aria-hidden /> Travel times from major Dubai areas
         </h2>
         <p className="text-[16px] text-text-muted max-w-[70ch] mb-md">
-          Off-peak driving times to Concord Tower Media City. Add 10-20 minutes during 8-10 am and 5-7 pm rush windows. Free pickup column shows the courier turnaround.
+          Off-peak driving times to Concord Tower Media City. Add 10-20 minutes during 8-10 am and 5-7 pm rush windows.
         </p>
         <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
-          <table className="w-full text-[14px] min-w-[520px]">
-            <caption className="sr-only">Travel times from Dubai areas to MacBook Repair Dubai workshop, plus free pickup turnaround.</caption>
+          <table className="w-full text-[14px] min-w-[360px]">
+            <caption className="sr-only">Travel times from Dubai areas to MacBook Repair Dubai workshop.</caption>
             <thead className="bg-bg-card">
               <tr className="text-left">
                 <th className="px-md py-sm font-semibold">Area</th>
                 <th className="px-md py-sm font-semibold">Drive time</th>
-                <th className="px-md py-sm font-semibold">Free pickup turnaround</th>
               </tr>
             </thead>
             <tbody>
@@ -270,7 +269,6 @@ export default function MacBookRepairNearMeDubai() {
                 <tr key={t.area} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{t.area}</td>
                   <td className="px-md py-sm mono text-accent">{t.car}</td>
-                  <td className="px-md py-sm mono text-text-muted">{t.pickup}</td>
                 </tr>
               ))}
             </tbody>
@@ -278,12 +276,12 @@ export default function MacBookRepairNearMeDubai() {
         </div>
       </section>
 
-      {/* Pickup process */}
+      {/* Send-in process */}
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md">How free pickup works - 5 steps</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Can't come in? Send it by courier in 5 steps</h2>
           <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
-            {PICKUP_STEPS.map((s, i) => (
+            {SEND_IN_STEPS.map((s, i) => (
               <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
                   {i + 1}
@@ -339,16 +337,16 @@ export default function MacBookRepairNearMeDubai() {
       <section className="mt-3xl" style={{ background: "#2C3137" }}>
         <div className="mx-auto max-w-content px-5 md:px-6 py-[56px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-md">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-1">Free pickup across Dubai</p>
-            <h2 className="text-white text-[26px] md:text-[32px] font-bold leading-tight max-w-[24ch]">Book a free pickup in 30 seconds</h2>
+            <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold mb-1">Walk in or send it over</p>
+            <h2 className="text-white text-[26px] md:text-[32px] font-bold leading-tight max-w-[24ch]">Get a quote on WhatsApp in 30 seconds</h2>
             <p className="text-on-primary-muted text-[16px] max-w-[60ch] leading-relaxed mt-2">
-              Send your area and the MacBook model on WhatsApp. Pickup window confirmed within 4 minutes.
+              Send the MacBook model and a photo of the fault on WhatsApp. Then walk in to Concord Tower or send it with a courier you book.
             </p>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg">
               <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden /> Book free pickup
+                <MessageCircle aria-hidden /> WhatsApp for a quote
               </a>
             </Button>
             <Button asChild variant="secondary" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">

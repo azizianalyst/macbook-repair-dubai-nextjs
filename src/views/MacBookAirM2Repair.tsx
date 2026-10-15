@@ -8,7 +8,7 @@ export default function MacBookAirM2Repair() {
       chip="M2"
       years="2022 – 2023"
       seoTitle="MacBook Air M2 Repair Dubai: 13-inch & 15-inch Screen, Battery & Board"
-      seoDescription="MacBook Air M2 repair Dubai. 13-inch and 15-inch screen, battery and board repairs. Free diagnosis, same-day service, free pickup. Message us for a quote."
+      seoDescription="MacBook Air M2 repair Dubai. 13-inch and 15-inch screen, battery and board repairs. Free diagnosis, same-day service, walk in at Media City. Message us for a quote."
       eyebrow="MacBook Air M2 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M2 Repair Dubai"
       heroDescription="MacBook Air M2 introduced in 2022 brought a completely redesigned chassis, MagSafe 3 charging, and the first 15-inch MacBook Air. We repair both the 13-inch M2 (A2681) and 15-inch M2 (A2941) for screen damage, battery swelling, charging port issues, and logic board faults at our Media City workshop."

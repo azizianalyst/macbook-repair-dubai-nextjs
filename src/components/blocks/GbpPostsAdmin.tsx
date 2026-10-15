@@ -141,7 +141,7 @@ function generateCaption(post: Post): string {
   const dubaiCtx = getDubaiContext(t, cat);
   const serviceDetail = getServiceDetail(t, cat);
 
-  const trust = "✅ Free diagnosis  ✅ Same-day repair  ✅ Up to 12 months warranty  ✅ Free pickup across Dubai";
+  const trust = "✅ Free diagnosis  ✅ Same-day repair  ✅ Up to 12 months warranty  ✅ Walk in or courier it to us";
   const nap = `📍 Concord Tower, Dubai Media City\n📞 055 741 3706\n🔗 ${url}`;
 
   let caption = `${emoji} ${shortTitle}\n\n${cleanExcerpt}.\n\n${dubaiCtx}\n\n${serviceDetail}${priceNote}\n\n${trust}\n\n${nap}\n\n${hashtags}`;

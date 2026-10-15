@@ -87,9 +87,9 @@ export default function IPhone17ProRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Media City workshop, no appointment needed." },
         { title: "Diagnose + repair",    body: "OLED + battery same day; 8x telephoto and aluminum cosmetic 2-3 days." },
-        { title: "QC + return",          body: "ProMotion, AOD, USB-C 3, 8x zoom, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "ProMotion, AOD, USB-C 3, 8x zoom, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

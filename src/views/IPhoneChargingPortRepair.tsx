@@ -49,11 +49,11 @@ export default function IPhoneChargingPortRepair() {
       ]}
       steps={[
         { title: "WhatsApp model + symptom", body: "Send the model and describe the issue (cable falls out / dead / liquid warning). Quote back in 4 minutes." },
-        { title: "Free pickup or walk in", body: "Pickup anywhere on Dubai mainland or walk into the workshop. On-the-spot port test takes 5 minutes." },
+        { title: "Walk in to the workshop", body: "No appointment needed at our Media City workshop. On-the-spot port test takes 5 minutes." },
         { title: "Port-flex swap on the bench", body: "Screen lifted at 70 °C, battery disconnected, port flex screws removed (taptic engine and speaker first), port swapped, all connectors reseated." },
         { title: "Face ID and mic verification", body: "Face ID re-tested with proximity sensor. Bottom microphone tested on a recorded call. Antenna feed-line continuity checked with multimeter." },
         { title: "Charge test from 0% to 20%", body: "Phone charged on a 20W Apple charger. Negotiation verified. Heat profile checked. No throttling, no warnings." },
-        { title: "Free delivery + warranty of up to 12 months", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
+        { title: "Collect + warranty of up to 12 months", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
       ]}
       warrantyDays={365}
       warrantyBullets={[
@@ -67,7 +67,7 @@ export default function IPhoneChargingPortRepair() {
         ["iPhone 14 Pro port",           "Price on request",                     "Whole-unit swap only"],
         ["iPhone 16 Pro USB-C port",     "Price on request",                     "Whole-unit swap only"],
         ["Component-level board repair", "Yes - if needed",                      "No, board swap only"],
-        ["Free pickup in Dubai",         "Yes",                                  "No"],
+        ["Walk in without appointment",  "Yes",                                  "Booking usually needed"],
         ["Face ID preserved",            "Yes - tested before/after",            "Yes"],
         ["Vintage models",               "Yes - back to iPhone 6",               "Refused"],
         ["Warranty",                     "12 months written",                      "12 months"],

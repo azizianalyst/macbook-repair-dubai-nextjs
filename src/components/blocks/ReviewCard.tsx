@@ -16,6 +16,7 @@ export function ReviewCard({ name, date, rating, text, ownerResponse, googleUrl,
   const dark = tone === "dark";
   return (
     <article
+      data-customer-review=""
       className={cn(
         "rounded-md p-lg flex flex-col gap-sm",
         dark

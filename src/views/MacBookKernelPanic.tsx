@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, Truck, Check, AlertTriangle, Wrench, HardDrive, Database, Cpu } from "lucide-react";
+import { Star, MessageCircle, Phone, ShieldCheck, Clock, Award, Search, MapPin, Check, AlertTriangle, Wrench, HardDrive, Database, Cpu } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -174,7 +174,7 @@ export default function MacBookKernelPanic() {
                 { icon: <Search size={15} className="text-accent" aria-hidden />, label: "Free diagnosis" },
                 { icon: <Clock size={15} className="text-accent" aria-hidden />, label: "Same-day software fix" },
                 { icon: <ShieldCheck size={15} className="text-accent" aria-hidden />, label: "3-month warranty on repairs" },
-                { icon: <Truck size={15} className="text-accent" aria-hidden />, label: "Free pickup across Dubai" },
+                { icon: <MapPin size={15} className="text-accent" aria-hidden />, label: "Walk in, Dubai Media City" },
                 { icon: <Award size={15} className="text-accent" aria-hidden />, label: "Independent Apple specialists" },
               ].map((item) => (
                 <li key={item.label} className="flex items-center gap-2 text-[14px] text-text-muted">

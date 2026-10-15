@@ -47,11 +47,11 @@ export default function IPadChargingPortRepair() {
       ]}
       steps={[
         { title: "WhatsApp the model + symptom", body: "Tell us which iPad and what it does (or doesn't do) when plugged in. Quote in minutes." },
-        { title: "Free pickup", body: "Driver collects across Dubai mainland." },
+        { title: "Walk in", body: "Bring the iPad and its cable to our Media City workshop. No appointment needed." },
         { title: "Free diagnosis", body: "Test cable, port, voltage at the charging IC, and Smart Connector. You see the actual fault before approving the repair." },
         { title: "Port replacement or board work", body: "Most jobs are a flex-cable port swap (same day). Board-level IC repair takes a microscope and 1-2 days." },
         { title: "Full charge cycle test", body: "Wired charge from 0 to 100, fast-charge negotiation test, accessory test. Smart Connector tested with a Magic Keyboard." },
-        { title: "Free delivery + warranty card", body: "Back to you with the 12-month written warranty." },
+        { title: "Collect + warranty card", body: "Ready to collect with the 12-month written warranty." },
       ]}
       warrantyDays={365}
       warrantyBullets={[

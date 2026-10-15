@@ -119,7 +119,7 @@ export default function BlogMacBookBatteryReplacementCost() {
               { model: "Turnaround", ours: "Same day", apple: "Ask the store for its current wait" },
               { model: "Battery brand", ours: "Apple-equivalent OEM cells", apple: "Apple genuine" },
               { model: "Warranty", ours: "3 months written", apple: "12 months" },
-              { model: "Pickup", ours: "Free, mainland Dubai", apple: "You take it to the store" },
+              { model: "Getting there", ours: "Walk in at Dubai Media City, opposite the Metro", apple: "You take it to the store" },
               { model: "Under AppleCare+, health below 80%", ours: "We send you to Apple", apple: "Free replacement" },
             ]}
           />

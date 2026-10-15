@@ -1,7 +1,7 @@
 "use client";
 // /iphone-repair-dubai: the iPhone hub. Rebuilt 2026-09-26 (plan Phase 2.3 #1 / Phase 3 build 1).
 // Targets: iphone repair dubai · iphone repair near me · iphone repair · iphone fix dubai ·
-// iphone service center dubai / near me · iphone repair abu dhabi (courier, stated honestly).
+// iphone service center dubai / near me · iphone repair abu dhabi (customer-booked courier, stated honestly).
 // No prices of ours anywhere; Apple's UAE list prices only in the attributed "(Apple list)" form,
 // read from support.apple.com/en-ae on 26 Sep 2026 (docs/apple-lineup-2026-09-26.md §4a).
 // The iPhone 6-12 model pages were folded into this hub on purpose: their demand is served by the
@@ -79,13 +79,13 @@ export default function IPhoneRepairHub() {
         "We are independent, not an Apple Authorised Service Provider. If your iPhone is still under Apple warranty or AppleCare+, Apple is usually the better route, and we tell you so.",
         "Parts are genuine Apple where available and quality-tested alternatives otherwise. The grade is written on your quote before work starts.",
         "Warranty follows the repair: up to 12 months on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens.",
-        "Free pickup anywhere in Dubai. Abu Dhabi customers use courier collection to our Dubai bench; we have no Abu Dhabi branch.",
+        "Walk in at Dubai Media City, or send the iPhone with a same-day courier you book. Abu Dhabi customers do the same; we have no Abu Dhabi branch.",
       ]}
       faqHeading="iPhone repair in Dubai: common questions"
       faqs={[
         { q: "How much does iPhone repair cost in Dubai?", a: "It depends on the model, the fault and the part grade you choose: an iPhone 8 battery and an iPhone 18 Pro Max screen are very different jobs. WhatsApp the model and a photo of the fault for a quote. Diagnosis is free and you approve the written price before any work." },
         { q: "Can you fix my iPhone the same day?", a: "Many screen and battery jobs on common models are finished the same day when the part is in stock. Water damage, board-level work and parts that must be ordered take longer, especially on the newest models. We confirm the timing on WhatsApp before you come in." },
-        { q: "Do you repair iPhones from Abu Dhabi?", a: "Yes, by courier. We have no Abu Dhabi branch; every repair happens at our Dubai Media City workshop. We arrange collection from your address, repair the iPhone in Dubai and courier it back, usually within 1 to 2 days. WhatsApp us to book the collection." },
+        { q: "Do you repair iPhones from Abu Dhabi?", a: "Yes. We have no Abu Dhabi branch; every repair happens at our Dubai Media City workshop. WhatsApp the model and fault for a quote, then book any same-day courier app to send the iPhone to us and share the tracking link. When it is fixed, collect it in person or book a courier to bring it back." },
         { q: "Is MacBook Repair Dubai an Apple service center?", a: "No. We are an independent Apple repair workshop, not an Apple Store or an Apple Authorised Service Provider. We repair out-of-warranty iPhones, older models and board-level faults, and we tell you when Apple is the better choice, such as while your phone is under warranty or AppleCare+." },
         { q: "Will I lose my data during an iPhone repair?", a: "Screen, battery, back glass and port repairs don't erase the phone, but back up to iCloud or a computer first if it still works. For water-damaged or dead iPhones, we tell you whether the data can be recovered before any repair that could affect it." },
         { q: "Does an independent repair affect my Apple warranty?", a: "Apple can refuse warranty service for damage caused by a third-party repair. If your iPhone is still under Apple's warranty or AppleCare+, check with Apple first. Once it is out of warranty there is no Apple coverage left to lose, though Apple may decline to service a non-Apple part if you take the phone to them later." },
@@ -93,7 +93,7 @@ export default function IPhoneRepairHub() {
       leadHeading="Get your iPhone repair quote"
       cta={{
         headline: "Send your iPhone model and a photo of the fault",
-        description: "Free diagnosis, a written quote before any work, and free pickup anywhere in Dubai.",
+        description: "Free diagnosis, a written quote before any work, and a walk-in workshop in Dubai Media City.",
         prefill: "Hi, iPhone repair quote please. Model and fault: ",
       }}
       related={[
@@ -165,20 +165,21 @@ export default function IPhoneRepairHub() {
         </p>
       </PageSection>
 
-      <PageSection id="near-me" eyebrow="Walk in, pickup or courier" title="iPhone repair near me: how to reach our workshop">
+      <PageSection id="near-me" eyebrow="Walk in or send by courier" title="iPhone repair near me: how to reach our workshop">
         <p>
           <strong>Walk in.</strong> We are at {NAP.street}, {NAP.area}, a short drive from Internet City, JLT, Dubai
           Marina and Al Barsha. Message us first so the part is ready.
         </p>
         <p>
-          <strong>Free pickup in Dubai.</strong> Send your location on WhatsApp and we collect the iPhone from your home
-          or office anywhere in Dubai, then return it. See{" "}
-          <A to="/blog/free-pickup-delivery-dubai-how-it-works">how free pickup works</A>.
+          <strong>Send it by courier.</strong> Can&apos;t come in? Book any same-day courier app, hand the iPhone to the
+          driver and WhatsApp us the tracking link; it reaches us within the day. When it is fixed, collect it or book a
+          courier back. Our{" "}
+          <A to="/contact">contact page</A> has the workshop address and hours.
         </p>
         <p>
-          <strong>iPhone repair from Abu Dhabi.</strong> We have no Abu Dhabi branch. We arrange courier collection to
-          our Dubai bench and back, usually 1 to 2 days door to door; Sharjah works the same way. The{" "}
-          <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page lists the Dubai areas we collect from.
+          <strong>iPhone repair from Abu Dhabi.</strong> We have no Abu Dhabi branch. Customers in Abu Dhabi and Sharjah
+          send the iPhone to our Dubai bench with a courier they book, the same way. The{" "}
+          <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page has more on reaching the workshop.
         </p>
       </PageSection>
 
@@ -225,7 +226,7 @@ export default function IPhoneRepairHub() {
       <PageSection id="process" eyebrow="How it works" title="How an iPhone repair works with us">
         <ol>
           <li><strong>WhatsApp the model and fault.</strong> The model is in Settings &gt; General &gt; About; add a photo of any crack.</li>
-          <li><strong>Free diagnosis.</strong> Walk in or use free pickup, and we confirm the cause.</li>
+          <li><strong>Free diagnosis.</strong> Walk in or send it by courier, and we confirm the cause.</li>
           <li><strong>Written quote.</strong> Price, part grade and timing. Nothing starts until you approve.</li>
           <li><strong>Repair and test.</strong> Touch, cameras, Face ID or Touch ID, speakers, charging and signal are checked.</li>
           <li><strong>Collect with a written warranty</strong> for the period that applies to your repair.</li>

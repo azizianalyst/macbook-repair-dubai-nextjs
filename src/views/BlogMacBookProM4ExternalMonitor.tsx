@@ -40,7 +40,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
           </p>
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>TB5 dock firmware not updated</strong>: docks designed for TB4 need a firmware update to negotiate TB5 bandwidth correctly. Without it, the dock connects at TB3 speeds and may fail to enumerate the display</li>
-            <li><strong>Wrong cable</strong>: a USB-C cable (even a USB 3.2 Gen 2 cable) cannot carry a 4K 60Hz signal reliably. Thunderbolt 5 requires a TB5-certified cable to fully utilise the port</li>
+            <li><strong>Wrong cable</strong>: a USB-C cable (even a USB 3.2 Gen 2 cable) cannot carry a 4K 60Hz signal reliably. Thunderbolt 5 requires a TB5-certified cable to use the port's full bandwidth</li>
             <li><strong>Display limit exceeded</strong>: M4 Pro supports 2 external displays. M4 Max supports 4. Connecting a third display to M4 Pro will not be detected without a DisplayLink adapter</li>
             <li><strong>macOS Sequoia display bug</strong>: early Sequoia 15.0 and 15.1 had a display detection regression on M4 units, fixed in 15.2</li>
           </ol>
@@ -92,7 +92,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
           <h2 id="step-4">Step 4: Does cable type affect MacBook Pro M4 external monitor detection?</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Thunderbolt 5 cable</strong>: 120Gbps, supports 8K 60Hz. Required for full M4 TB5 bandwidth. Identified by a TB5 logo (lightning bolt with 5) on the cable or packaging</li>
-            <li><strong>Thunderbolt 4 cable</strong>: 40Gbps, supports 4K 60Hz or dual 4K 30Hz. Works with most monitors but does not unlock TB5 bandwidth</li>
+            <li><strong>Thunderbolt 4 cable</strong>: 40Gbps, supports 4K 60Hz or dual 4K 30Hz. Works with most monitors but can't carry full TB5 bandwidth</li>
             <li><strong>USB 3.2 cable</strong>: supports display output but caps at 4K 30Hz and causes intermittent detection failures at 4K 60Hz and above</li>
             <li><strong>USB 2.0 cable</strong>: will not carry video signal at all. A MacBook Pro M4 that shows no display with a particular cable often has the cable at fault, not the port</li>
           </ul>
@@ -105,7 +105,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
             display drops in a warm office.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>If displays drop in the afternoon but are stable in the morning, heat is a factor. Ensure AC airflow reaches the M4 MacBook Pro directly</li>
+            <li>If displays drop in the afternoon but are stable in the morning, heat is a factor. Make sure AC airflow reaches the M4 MacBook Pro directly</li>
             <li>Clean intake vents every 6 months in Dubai. Fine desert dust reduces airflow to the TB5 controller heat sink and accelerates thermal throttling of the port controller</li>
           </ul>
 
@@ -173,7 +173,7 @@ export default function BlogMacBookProM4ExternalMonitor() {
         },
         {
           q: "Does Dubai heat make MacBook Pro M4 drop external displays?",
-          a: "Yes, in prolonged multi-monitor setups. The TB5 controller runs warmer than TB4 and throttles sooner in warm rooms. If displays are stable in the morning but drop in the afternoon, heat is the cause. Ensure direct AC airflow to the M4 and clean the vents to prevent dust-related heat buildup.",
+          a: "Yes, in prolonged multi-monitor setups. The TB5 controller runs warmer than TB4 and throttles sooner in warm rooms. If displays are stable in the morning but drop in the afternoon, heat is the cause. Point the AC airflow straight at the M4 and clean the vents to prevent dust-related heat buildup.",
         },
         {
           q: "How do I force MacBook Pro M4 to detect an external display?",

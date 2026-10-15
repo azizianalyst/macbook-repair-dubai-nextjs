@@ -13,7 +13,7 @@ import { withSlash } from "@/lib/utils";
 import type { ReactNode } from "react";
 import {
   Star, MapPin, ArrowRight, Check, Wrench, MessageCircle, Phone, Search,
-  Cpu, Clock, Truck, BadgeCheck, ParkingCircle, ExternalLink, ChevronDown,
+  Cpu, Clock, BadgeCheck, ParkingCircle, ExternalLink, ChevronDown,
   Laptop, Headset, Wallet, Users, Tag,
   Monitor, BatteryCharging, Keyboard, CircuitBoard, PlugZap, MousePointer2,
   Volume2, Mic, SlidersHorizontal, Camera, Sparkles, Droplets, Fan, HardDrive,
@@ -56,7 +56,7 @@ const HERO_FEATURES = [
   { icon: Tag,    label: "Price on request" },
   { icon: Search, label: "Free diagnosis" },
   { icon: Wallet, label: "No fix, no charge" },
-  { icon: Truck,  label: "Free pickup & delivery" },
+  { icon: MapPin, label: "Walk in, no appointment" },
   { icon: Laptop, label: "Free loaner MacBook" },
 ] as const;
 
@@ -296,7 +296,7 @@ const UPGRADES: { label: string; href: string; Icon: LucideIcon }[] = [
   { label: "Graphics Card Upgrade", href: "/macbook-gpu-repair-dubai",  Icon: Cpu },
 ];
 
-const OFFERS = ["Instant Online Quote", "Quick and Easy Process", "Free Diagnosis", "Free Pickup in Dubai", "Live Chat Support", "Low Repair Prices"];
+const OFFERS = ["Instant Online Quote", "Quick and Easy Process", "Free Diagnosis", "Walk-In Workshop", "Live Chat Support", "Low Repair Prices"];
 
 const DISCOUNTS = [
   { t: "Student Discounts", d: "We offer 10% student discounts on all MacBook repairs, including hardware, software and accidental damage. Show a valid student ID to claim the discount." },
@@ -343,21 +343,21 @@ const COMMON_ISSUE_ICONS: Record<string, LucideIcon> = {
 const APPLECARE_TABLE = [
   { s: "AppleCare Warranty Extension", d: "Extends coverage beyond the standard warranty, protecting against hardware defects and failures.", b: "Extended support, original parts replacement", e: "Available for newer models" },
   { s: "Standard Warranty Repairs", d: "Covers eligible repairs for MacBook issues within the manufacturer's warranty period.", b: "Cost-effective repairs for covered issues", e: "Devices within warranty" },
-  { s: "Accidental Damage Repair", d: "Provides repair for accidental damage (drops, spills) outside of standard warranty coverage.", b: "Peace of mind for accidental incidents", e: "AppleCare+ or additional fees" },
+  { s: "Accidental Damage Repair", d: "Provides repair for accidental damage (drops, spills) outside of standard warranty coverage.", b: "Drops and spills are covered", e: "AppleCare+ or additional fees" },
   { s: "Battery Replacement", d: "Battery service for MacBooks with low performance or defective batteries under warranty.", b: "Improved device lifespan and performance", e: "AppleCare or warranty-covered" },
   { s: "Screen and Display Repairs", d: "Fixes for issues such as screen flickering, black spots, or Flexgate-related backlight issues.", b: "Clear display, enhanced user experience", e: "Warranty or AppleCare+" },
-  { s: "Logic Board Repair & Replacement", d: "Covers repairs for logic board issues under warranty or AppleCare.", b: "Ensures MacBook stability and functionality", e: "AppleCare+ or additional fees" },
+  { s: "Logic Board Repair & Replacement", d: "Covers repairs for logic board issues under warranty or AppleCare.", b: "Keeps the MacBook stable and working", e: "AppleCare+ or additional fees" },
   { s: "Power Adapter Replacement", d: "Replacement of malfunctioning power adapters covered under warranty or AppleCare.", b: "Safe and efficient charging solutions", e: "Warranty-covered" },
   { s: "Software Diagnostics and Support", d: "Resolves software issues, including OS-related problems and app malfunctions, covered under warranty.", b: "Smooth and efficient MacBook performance", e: "AppleCare or warranty" },
   { s: "Priority Repair Service", d: "Expedited repair service for critical MacBook issues.", b: "Fast service for minimal downtime", e: "AppleCare+ coverage" },
-  { s: "Annual Check-Up and Maintenance", d: "Comprehensive diagnostics and maintenance checks for long-term performance.", b: "Preventive care for extended device lifespan", e: "AppleCare or additional cost" },
+  { s: "Annual Check-Up and Maintenance", d: "Full diagnostics and maintenance checks to keep the Mac running for years.", b: "Preventive care for extended device lifespan", e: "AppleCare or additional cost" },
 ];
 
 const OOW_ISSUES = ["Failed MacBook battery", "Failed MacBook logic board", "Failed MacBook optical drive", "Failed MacBook memory chip", "Failed MacBook MagSafe DC board", "Failed MacBook hard drive or SSD drive"];
 
 const AMC: { t: string; d: string; href?: string }[] = [
   { t: "Regular Maintenance & Diagnostics", href: "/macbook-cleaning-maintenance-dubai", d: "We regularly check and run diagnostics to identify the malfunctioning of your MacBook components. We provide repair or replacement if needed, so your MacBook maintains its optimal performance and increases the lifespan of its components." },
-  { t: "Hardware & Software Support", href: "/annual-maintenance-contract-dubai", d: "We continuously monitor your device performance and provide support according to your device's needs. Whether you require hardware maintenance or fixes for software bugs, we handle all the complexities and restore your MacBook to its optimum performance." },
+  { t: "Hardware & Software Support", href: "/annual-maintenance-contract-dubai", d: "We continuously monitor your device performance and provide support according to your device's needs. Hardware maintenance or a software bug, we sort it out and get your MacBook running properly again." },
   { t: "Battery Health Check & Replacement", href: "/macbook-battery-replacement-dubai", d: "We regularly check your battery health, and if we find a notification that indicates battery wear, we will replace it with a high-quality original battery before further damage occurs." },
   { t: "Dust & Debris Cleaning", href: "/macbook-cleaning-maintenance-dubai", d: "Our AMC includes cleaning dust and debris to help protect your device. We clean the keyboard to prevent sticky keys and maintain the internal components for smooth ventilation, which can help avoid overheating." },
   { t: "24/7 Customer Support", href: "/annual-maintenance-contract-dubai", d: "When we have an agreement with our clients, we provide 24/7 support for their malfunctioning devices. Our team is always available to assist you whenever you need to repair your MacBook." },
@@ -370,7 +370,7 @@ const AMC: { t: string; d: string; href?: string }[] = [
 const WHY_CHOOSE = [
   { t: "Experienced Apple Technicians", d: "Our founder Abdul Aziz has repaired Macs since 2004, and our bench knows the latest Apple hardware and board-level techniques to handle every complex issue across MacBook models." },
   { t: "Genuine & High-Grade Parts", d: "We use genuine Apple parts wherever they're available and high-grade compatible parts when they aren't - and we tell you which your repair uses before we start. Every repair carries a written warranty of up to 12 months, depending on the repair." },
-  { t: "Comprehensive Services", d: "We offer a wide range of MacBook repairs based on your specific needs. From hardware and software issues to upgrades and maintenance, no matter the problem, we have the solution!" },
+  { t: "Every Kind of Mac Repair", d: "We offer a wide range of MacBook repairs based on your specific needs. From hardware and software issues to upgrades and maintenance, no matter the problem, we have the solution!" },
   { t: "Low Pricing", d: "We offer affordable and transparent costs for every MacBook repair or replacement. We discuss our repairs with you before we provide the best solution without any hidden fee." },
   { t: "Same Day Services", d: "We have a dedicated team that provides quick repairs without you waiting. We also prioritize emergencies and offer urgent repairs to our customers." },
   { t: "Customer Satisfaction", d: "Our excellent and genuine repairs make us proud. You have a satisfactory experience throughout the repair process with our superb customer service and support." },
@@ -382,7 +382,7 @@ const WHY_CHOOSE = [
 const WHY_ICONS: Record<string, LucideIcon> = {
   "Experienced Apple Technicians": Award,
   "Genuine & High-Grade Parts": ShieldCheck,
-  "Comprehensive Services": Wrench,
+  "Every Kind of Mac Repair": Wrench,
   "Low Pricing": Wallet,
   "Same Day Services": Clock,
   "Customer Satisfaction": ThumbsUp,
@@ -447,7 +447,7 @@ const PROCESS: { t: string; d: string; Icon: typeof Search }[] = [
   { Icon: Check,      t: "Approval",           d: "After diagnosis, we discuss the problems your Mac has. We brief you on our repair/replacement process and estimated expenses. We take your consent first before moving forward." },
   { Icon: Wrench,     t: "Repair / Replacement", d: "We use high-quality, latest tools and techniques to repair your MacBook issues. We troubleshoot minor issues and perform a step-by-step replacement for major damage using original Apple parts for satisfactory repair and longevity." },
   { Icon: BadgeCheck, t: "Testing",            d: "Once repair or replacement is done, we implement multiple tests to analyze the performance and test our repair quality." },
-  { Icon: Truck,      t: "Return",             d: "Once everything is complete, we notify you that your device is ready for use. For those using our delivery service, we safely return the device to your location." },
+  { Icon: MessageCircle, t: "Return",          d: "Once everything is complete, we notify you that your device is ready to collect from the workshop. If you sent it by courier, book a courier back and we hand it to your driver." },
 ];
 
 const FAQS = [
@@ -458,24 +458,24 @@ const FAQS = [
   { q: "How long does a MacBook repair take?", a: "Most MacBook repairs at MacBook Repair Dubai are done the same day. Screen, battery, and keyboard jobs can be completed in 30 minutes on an appointment. WhatsApp the model and serial number, confirm the part is in stock, book a slot, and the repair is done in 30 minutes guaranteed or it is free. Walk-in screen and battery jobs take 2 to 4 hours. Logic board work takes 3 to 5 days because it includes a burn-in test, and water damage runs 1 to 5 days depending on the spill." },
   { q: "Do you offer a guaranteed 30-minute MacBook repair in Dubai?", a: "Yes. MacBook Repair Dubai offers a guaranteed 30-minute appointment repair for screen replacement, battery replacement, and keyboard replacement on compatible models. WhatsApp 055 741 3706 with your model and serial number, confirm the part is in stock and the price, then book a time slot at the Dubai Media City workshop or request a doorstep visit. The part is pre-ordered for your exact model and the repair is completed in 30 minutes from the time you arrive. If we run over 30 minutes, the repair is free. No other MacBook repair service in Dubai offers this guarantee." },
   { q: "Do you offer same-day MacBook screen repair in Dubai?", a: "Same-day MacBook screen repair is standard for the most common models, including the Air 13\", the Pro 13\" Touch Bar, and the Pro 14\". MacBook Repair Dubai stocks panels for these, so the screen is fitted and returned the same day from the Dubai Media City workshop. The 16\" Pro can take 1 to 2 days. Send your model to 055 741 3706 to confirm the panel is in stock before you travel in." },
-  { q: "Can I wait at the workshop while my MacBook is repaired?", a: "You can wait at the Concord Tower workshop in Dubai Media City for same-day jobs like battery, screen, and single-key replacements, which finish in roughly 2 to 4 hours. There is parking on site and the workshop is across from Media City Metro. The workshop is open Monday to Saturday, 9am to 7pm, closed Sundays. For longer jobs like logic board or water damage, free pickup and delivery across Dubai mainland is the easier option." },
+  { q: "Can I wait at the workshop while my MacBook is repaired?", a: "You can wait at the Concord Tower workshop in Dubai Media City for same-day jobs like battery, screen, and single-key replacements, which finish in roughly 2 to 4 hours. There is parking on site and the workshop is across from Media City Metro. The workshop is open Monday to Saturday, 9am to 7pm, closed Sundays. For longer jobs like logic board or water damage, leave the MacBook with us and collect it when we message you that it is ready." },
   { q: "Do you use genuine Apple parts?", a: "MacBook Repair Dubai uses genuine Apple parts where they are available and A-grade OEM-spec parts from the same factory lines as Apple where they are not. Which one your repair uses is labelled clearly on the WhatsApp quote before work starts. On screens, the genuine Apple panel keeps True Tone, while aftermarket panels carry a calibration chip programmed to your logic board serial. Both options carry the written warranty." },
   { q: "Do you offer a warranty on MacBook repairs?", a: "Yes, and the length depends on the repair. Hardware repairs such as trackpad, charging-port and SSD replacement carry a written warranty of up to 12 months, and screen replacements carry 90 days. Battery replacements are covered for 3 months with an 80% capacity guarantee. Keyboard replacement, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs carry a 15-day warranty, because their long-term outcome is harder to guarantee. Every warranty is dated, signed, lists the part batch number, and is transferable once free of charge if you sell the MacBook. It covers manufacturing defects and premature failure, but not fresh physical or liquid damage after the repair." },
   { q: "Do you offer a loaner MacBook while mine is being repaired?", a: "Yes. MacBook Repair Dubai provides a free loaner MacBook for any repair that takes longer than 2 hours, so you are never without a working machine. The loaner is available at the Dubai Media City workshop, just mention it when you book or drop in. Availability is on a first-come basis, so WhatsApp 055 741 3706 in advance to reserve one." },
   { q: "Will I lose my data when you repair my MacBook?", a: "Your data stays on the SSD for standard repairs like screen, battery, and keyboard, since the storage is never touched. For logic board and water damage work the data is preserved wherever the board survives. If the board is dead, separate data recovery is available - message us on WhatsApp for the price - with strong odds on Intel logic boards and lower odds on T2 and Apple Silicon models, where the SSD is encrypted to the secure enclave and recovery depends on the chip surviving. MacBook Repair Dubai gives every customer a signed data-privacy guarantee on intake: your data is never accessed, copied, or shared for any reason." },
-  { q: "Can you fix a water-damaged MacBook in Dubai?", a: "MacBook Repair Dubai recovers liquid-damaged MacBooks with full ultrasonic cleaning and corrosion removal. The workshop logbook shows a 90% recovery rate when the MacBook arrives within 24 hours and was not powered on after the spill, dropping to about 60% at 72 hours. Power it off, do not charge it, skip the rice, and WhatsApp 055 741 3706 for same-hour free emergency pickup across Dubai mainland. No fix, no charge if the board is beyond saving." },
-  { q: "My MacBook won't turn on, can you fix it?", a: "A MacBook that won't power on is most often a dead battery, a failed DC-in charging board, or a logic board fault, and MacBook Repair Dubai diagnoses all three for free. Whether it needs a battery, a charging-board swap or component-level board repair, the fault is confirmed before any charge, so you know the price up front - message us on WhatsApp for the exact figure. Bring it in or book free pickup across Dubai mainland." },
-  { q: "What should I do about a swollen MacBook battery?", a: "Stop using the MacBook immediately and do not charge it or try to power it on, because a swollen lithium pack is a fire risk and can crack the trackpad. MacBook Repair Dubai replaces swollen batteries the same day in about 2 hours, with a 3-month warranty. WhatsApp 055 741 3706 for same-hour free emergency pickup across Dubai mainland and today's exact price. If the swelling has already cracked the trackpad, we can do the combined battery and trackpad job in one visit." },
+  { q: "Can you fix a water-damaged MacBook in Dubai?", a: "MacBook Repair Dubai recovers liquid-damaged MacBooks with full ultrasonic cleaning and corrosion removal. The workshop logbook shows a 90% recovery rate when the MacBook arrives within 24 hours and was not powered on after the spill, dropping to about 60% at 72 hours. Power it off, do not charge it, skip the rice, and WhatsApp 055 741 3706 and bring it straight to the workshop, or send it by a same-day courier you book yourself. No fix, no charge if the board is beyond saving." },
+  { q: "My MacBook won't turn on, can you fix it?", a: "A MacBook that won't power on is most often a dead battery, a failed DC-in charging board, or a logic board fault, and MacBook Repair Dubai diagnoses all three for free. Whether it needs a battery, a charging-board swap or component-level board repair, the fault is confirmed before any charge, so you know the price up front - message us on WhatsApp for the exact figure. Walk in to the workshop, or send it by a same-day courier you book yourself." },
+  { q: "What should I do about a swollen MacBook battery?", a: "Stop using the MacBook immediately and do not charge it or try to power it on, because a swollen lithium pack is a fire risk and can crack the trackpad. MacBook Repair Dubai replaces swollen batteries the same day in about 2 hours, with a 3-month warranty. WhatsApp 055 741 3706 for today's exact price, then bring it in to the workshop. If the swelling has already cracked the trackpad, we can do the combined battery and trackpad job in one visit." },
   { q: "How much does it cost to fix a MacBook keyboard in Dubai?", a: "MacBook keyboard repair ranges from a single key cap on the Magic Keyboard to a full Magic Keyboard swap on Apple Silicon. The 2016 to 2019 butterfly top case costs more, because Apple bonded the keyboard, battery, and speakers into one unit - and we quote before any work so you can compare with Apple. Arabic, Russian, or French layout swaps are also available. Message us your model on WhatsApp for the exact price. Most are same day at MacBook Repair Dubai." },
   { q: "Which MacBook models and years do you repair?", a: "MacBook Repair Dubai services every MacBook from the 2010 Intel Air through the latest M5 models and the new MacBook Neo, including the Air 11\", 13\", and 15\", and the Pro 13\", 14\", 15\", and 16\". This covers Intel, M1, M2, M3, M4, and M5 on Air and Pro, plus iMac, Mac mini, Mac Studio, and Mac Pro. The workshop also carries parts for models Apple lists as vintage or obsolete, since 2004. Send your model from About This Mac for a confirmed quote." },
   { q: "Can you repair a MacBook bought outside the UAE?", a: "MacBook Repair Dubai repairs MacBooks bought anywhere in the world, since the repair does not depend on local Apple warranty status. A unit purchased in the US, UK, India, or anywhere else is serviced the same as one bought in Dubai, at the same prices. Layout swaps to Arabic, English, or Russian are also available if you want to change the keyboard. WhatsApp the model and serial to 055 741 3706 for a quote." },
-  { q: "Do you offer free pickup and delivery in Dubai?", a: "MacBook Repair Dubai offers free pickup and delivery anywhere on Dubai mainland, with same-hour collection from Internet City, Knowledge Park, JLT, and Al Barsha, and same-day from Marina, Downtown, JBR, and Palm Jumeirah. WhatsApp 055 741 3706 and a courier is usually with you within a couple of hours. Liquid damage gets priority same-hour pickup." },
+  { q: "Do you offer pickup and delivery in Dubai?", a: "No. MacBook Repair Dubai does not collect or deliver devices. Walk in to the Concord Tower workshop in Dubai Media City, across from Media City Metro, with no appointment, or send the MacBook by courier: book any same-day courier app, hand it to the driver, and WhatsApp 055 741 3706 the tracking link. A paid onsite visit is possible, subject to technician availability." },
   { q: "Where is your MacBook repair workshop located?", a: `MacBook Repair Dubai is at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, across from Media City Metro and near The Palm Jumeirah, with parking on site. The workshop is open Monday to Saturday, 9am to 7pm, and closed on Sundays. It has been at the heart of Dubai's Apple repair scene since 2004, with ${REVIEW_COUNT}+ five-star Google reviews. Call or WhatsApp 055 741 3706.` },
   { q: "What payment methods do you accept?", a: "MacBook Repair Dubai accepts cash and all major cards, including Visa, Mastercard, and American Express. Buy-now-pay-later is available through Tabby and Tamara, so you can split a repair into interest-free instalments. You only pay once you approve the written quote, and there is no diagnostic fee. All prices are VAT-inclusive in AED." },
-  { q: "How do I book a MacBook repair?", a: "Booking takes one message. WhatsApp the model, the year, and a short description or video of the fault to 055 741 3706, and you get a confirmed price and timeline within minutes during business hours. From there, drop the MacBook at the Concord Tower workshop in Dubai Media City or book free pickup across Dubai mainland. Diagnosis is free and you approve the quote before any work starts." },
+  { q: "How do I book a MacBook repair?", a: "Booking takes one message. WhatsApp the model, the year, and a short description or video of the fault to 055 741 3706, and you get a confirmed price and timeline within minutes during business hours. From there, drop the MacBook at the Concord Tower workshop in Dubai Media City or send it by a same-day courier you book yourself. Diagnosis is free and you approve the quote before any work starts." },
   { q: "Are you an Apple Authorised Service Provider?", a: "MacBook Repair Dubai is an independent Apple repair specialist, not an Apple Authorised Service Provider, working in Dubai since 2004. Its technicians are Apple Certified Mac Technicians (ACMT), an Apple credential held by the people on the bench, while the workshop itself is independent rather than Apple-authorised. The workshop services in-warranty, AppleCare-eligible, and out-of-warranty MacBooks, and offers component-level board repair that Apple does not. When an Apple Store or AppleCare+ claim is genuinely the better route, you get told honestly. The trade-off is faster turnaround and lower prices, backed by a written warranty of up to 12 months." },
   { q: "How does your pricing compare to the Apple Store?", a: "Apple publishes its UAE out-of-warranty prices for iPhone repairs and Mac batteries (Apple lists AED 879 plus VAT for a MacBook Pro 14-inch M5 battery, for example) and inspects before quoting anything else. We quote after a free diagnosis, before any work and with no upfront service fee, so you can compare. Where Apple swaps a whole board or top case, we can often repair at component level instead. Message us your model on WhatsApp for the exact price." },
-  { q: "Do you offer business or bulk MacBook repair for companies in Dubai?", a: "MacBook Repair Dubai handles business and fleet repairs for offices across Dubai Media City, Internet City, and the wider Dubai mainland, with free pickup and delivery for multiple machines. Companies get one point of contact on WhatsApp, written quotes per device, and VAT invoices for accounting. Turnaround is the same as single units, often same day for screens and batteries. Message 055 741 3706 with the number of MacBooks and the faults." },
+  { q: "Do you offer business or bulk MacBook repair for companies in Dubai?", a: "MacBook Repair Dubai handles business and fleet repairs for offices across Dubai Media City, Internet City, and the wider Dubai mainland. Machines can be walked in or sent by courier, and a paid onsite visit is possible, subject to technician availability. Companies get one point of contact on WhatsApp, written quotes per device, and VAT invoices for accounting. Turnaround is the same as single units, often same day for screens and batteries. Message 055 741 3706 with the number of MacBooks and the faults." },
 ];
 
 const FAQ_GROUPS = [
@@ -578,7 +578,7 @@ export default function Home() {
                 <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                   <p className="max-w-[60ch] text-[17px] leading-relaxed text-text-muted m-0" itemProp="text">
                     {linkify(
-                      "MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, Intel through M6 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro — plus iPhone and iPad, with guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free), expert water-damage recovery, free diagnosis, free citywide pickup, and a written warranty of up to 12 months. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
+                      "MacBook Repair Dubai is an independent Apple repair specialist in Concord Tower, Dubai Media City, working since 2004. The workshop repairs every Mac, Intel through M6 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro — plus iPhone and iPad, with guaranteed 30-minute screen, battery and keyboard replacement by appointment (or the repair is free), expert water-damage recovery, free diagnosis, walk-in service with no appointment, and a written warranty of up to 12 months. All prices are VAT-inclusive and confirmed on WhatsApp before any work begins."
                     )}
                   </p>
                 </div>
@@ -802,7 +802,7 @@ export default function Home() {
             <li className="flex items-start gap-2"><Wallet size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Price:</strong> On request via WhatsApp</span></li>
             <li className="flex items-start gap-2"><Search size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Diagnosis time:</strong> 20 minutes</span></li>
             <li className="flex items-start gap-2"><Clock size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Repair time:</strong> 2 - 4 hours (depending on the problem)</span></li>
-            <li className="flex items-start gap-2"><Truck size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Site visit charge:</strong> FREE</span></li>
+            <li className="flex items-start gap-2"><MapPin size={18} className="text-accent mt-0.5 shrink-0" aria-hidden /> <span><strong className="text-text">Onsite visit:</strong> Paid, quoted on WhatsApp</span></li>
           </ul>
           <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
             <table className="w-full border-collapse text-left text-[14px] min-w-[560px]">
@@ -901,7 +901,7 @@ export default function Home() {
             <SectionHead align="left" eyebrow="No obligation" title="Request a Free Quote" intro="Tell us your device and the issue. We'll reply with an honest estimate - free diagnosis, no fix, no charge." />
             <ul className="grid gap-sm list-none p-0 m-0 text-[15px] text-text-muted">
               <li className="flex items-center gap-2"><Headset size={18} className="text-accent shrink-0" aria-hidden /> WhatsApp answered 24/7 · workshop Mon-Sat, 9 am-7 pm</li>
-              <li className="flex items-center gap-2"><Truck size={18} className="text-accent shrink-0" aria-hidden /> Free pickup &amp; delivery across Dubai</li>
+              <li className="flex items-center gap-2"><MapPin size={18} className="text-accent shrink-0" aria-hidden /> Walk in to Concord Tower, Dubai Media City</li>
               <li className="flex items-center gap-2"><Users size={18} className="text-accent shrink-0" aria-hidden /> Trusted by hundreds of Dubai customers</li>
             </ul>
           </div>
@@ -1066,7 +1066,7 @@ export default function Home() {
 
         {/* ── 18 · MacBook repair near you in Dubai (area pages) ─── */}
         <section id="areas" className="scroll-mt-24 mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <SectionHead eyebrow="Local to you" title="MacBook Repair Near You in Dubai" intro="We collect, repair and return across Dubai free of charge. Tap your area for local turnaround times and pickup details." />
+          <SectionHead eyebrow="Local to you" title="MacBook Repair Near You in Dubai" intro="Customers from every part of Dubai walk in to our Media City workshop. Tap your area for directions and local details." />
           <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {AREA_PAGES.map((a) => (
               <Link key={a.href} to={a.href} className="group flex items-center gap-2 rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
@@ -1082,14 +1082,14 @@ export default function Home() {
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <SectionHead align="left" eyebrow="Right around the corner" title="Looking for a MacBook Repair Near Me? Get Quick Fixes by Certified Technicians!" />
           <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
-            <p className="m-0">If you are searching for a MacBook repair shop nearby in Dubai, or wondering where to get your MacBook fixed, we are easy to reach: the workshop sits across from Media City Metro, and free pickup covers the whole of Dubai mainland. Whether you have a broken screen, battery issues, motherboard or software glitches, our experienced technicians are just around the corner to diagnose and fix your device with genuine parts.</p>
-            <p className="m-0">We offer onsite services that fit your schedule. Don't let a faulty MacBook hold you back - contact us now for fast, professional repairs near you!</p>
+            <p className="m-0">If you are searching for a MacBook repair shop nearby in Dubai, or wondering where to get your MacBook fixed, we are easy to reach: the workshop sits across from Media City Metro, with paid parking on site. Broken screen, tired battery, motherboard fault or a software glitch, our technicians are just around the corner to diagnose and fix it with genuine parts.</p>
+            <p className="m-0">Paid onsite visits are also available, subject to technician availability. Don't let a faulty MacBook hold you back - contact us now for fast, professional repairs near you!</p>
           </div>
         </section>
 
         {/* ── 20 · MacBook repair across the UAE (other emirates) ── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <SectionHead eyebrow="Beyond Dubai" title="MacBook Repair Across the UAE" intro="Outside Dubai? We don't have branches elsewhere, we collect your MacBook by free courier from any emirate, repair it at our Media City workshop, and return it. Same-day from Sharjah & Ajman; 1-2 days by courier further out." />
+          <SectionHead eyebrow="Beyond Dubai" title="MacBook Repair Across the UAE" intro="Outside Dubai? We don't have branches elsewhere. Walk in to our Media City workshop, or send your MacBook by courier: book any same-day courier app, hand it over, and WhatsApp us the tracking link." />
           <div className="grid gap-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {[
               { label: "Sharjah",        href: "/macbook-repair-sharjah" },
@@ -1103,7 +1103,7 @@ export default function Home() {
               { label: "Kalba",          href: "/macbook-repair-kalba" },
             ].map((c) => (
               <Link key={c.href} to={c.href} className="group flex items-center gap-2 rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
-                <Truck size={18} className="text-accent shrink-0" aria-hidden />
+                <MapPin size={18} className="text-accent shrink-0" aria-hidden />
                 <span className="font-semibold text-[15px] text-text group-hover:text-accent">MacBook repair in {c.label}</span>
               </Link>
             ))}
@@ -1112,18 +1112,18 @@ export default function Home() {
 
         {/* ── 21 · Onsite ────────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <SectionHead align="left" eyebrow="We come to you" title="Onsite MacBook Repair and Support" />
+          <SectionHead align="left" eyebrow="Paid onsite visits" title="Onsite MacBook Repair and Support" />
           <div className="max-w-[78ch] space-y-md text-[16px] text-text-muted leading-relaxed">
-            <p className="m-0">If you need support for your malfunctioning MacBook but don't have the time to leave your location, we have the perfect solution! We offer fast and reliable MacBook repairs right at your doorstep, whether it's your office or home. Our experienced technician will come to your location, pick up your device, repair it, and return it safely to you.</p>
-            <p className="m-0">Whether you are experiencing software crashes, hardware failures or need upgrades, our expert technicians provide efficient troubleshooting, repairs and maintenance. Schedule your onsite MacBook support today and enjoy quick, professional service at your convenience.</p>
-            <p className="m-0">See how collection works and which areas we cover on our <Link to="/onsite-macbook-repair-dubai" className="text-accent underline underline-offset-2">onsite MacBook repair in Dubai</Link> page.</p>
+            <p className="m-0">If you can't leave your office or home, a technician can come to you for a paid onsite visit, subject to technician availability. The charge is quoted on WhatsApp before you book.</p>
+            <p className="m-0">Our technicians handle software crashes, hardware faults and upgrades on these visits. Message us on WhatsApp with the fault and your location, and we confirm whether a technician is free.</p>
+            <p className="m-0">See how onsite visits work on our <Link to="/onsite-macbook-repair-dubai" className="text-accent underline underline-offset-2">onsite MacBook repair in Dubai</Link> page.</p>
           </div>
           <CtaRow />
         </section>
 
         {/* ── 22 · Distance / areas + map + NAP ──────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <SectionHead eyebrow="Free pickup across the city" title="What's the Distance Between Us?" intro="We cover 60+ Dubai communities with free pickup and delivery. Approximate drive time from our Media City workshop:" />
+          <SectionHead eyebrow="Getting to the workshop" title="What's the Distance Between Us?" intro="Customers come in from 60+ Dubai communities. Approximate drive time to our Media City workshop:" />
           <div className="grid gap-x-lg gap-y-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-[14px]">
             {AREAS_DISTANCE.slice(0, AREAS_VISIBLE).map(([name, dist]) => (
               <span key={name} className="flex items-center gap-2 text-text-muted">
@@ -1329,7 +1329,7 @@ export default function Home() {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk in, no appointment</span>
               </div>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
                 {FAQ_GROUPS.map((g) => (
@@ -1374,7 +1374,7 @@ export default function Home() {
             <div className="max-w-[60ch]">
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-2 m-0">Ready to fix your Mac?</p>
               <h2 className="text-[26px] md:text-[32px] font-bold text-white leading-tight m-0 mb-3">Book Your 30-Minute Repair Slot</h2>
-              <p className="text-on-primary-muted text-[16px] leading-relaxed m-0">Fixed in 30 minutes by appointment or it's free. Free diagnosis, free pickup across Dubai, and a written warranty of up to 12 months. WhatsApp is answered 24/7 and the workshop is open Mon-Sat, 9 am-7 pm.</p>
+              <p className="text-on-primary-muted text-[16px] leading-relaxed m-0">Fixed in 30 minutes by appointment or it's free. Free diagnosis, walk in without an appointment, and a written warranty of up to 12 months. WhatsApp is answered 24/7 and the workshop is open Mon-Sat, 9 am-7 pm.</p>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>

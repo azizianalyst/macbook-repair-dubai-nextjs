@@ -82,9 +82,9 @@ export default function IPhone14Repair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Media City workshop, no appointment needed." },
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days (faster on 14)." },
-        { title: "QC + return",          body: "OLED, MagSafe, cameras, Crash Detection and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "OLED, MagSafe, cameras, Crash Detection and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

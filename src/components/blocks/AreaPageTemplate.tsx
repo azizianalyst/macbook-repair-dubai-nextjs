@@ -2,8 +2,11 @@
 // Shared template for Dubai area landing pages.
 // Driven entirely by AreaConfig from src/content/areas.ts.
 // Renders ~1,300+ visible words per page with unique title/description/H1.
+// Since 2026-10-15 each page is a guide to getting a Mac repaired from that area: walk in to
+// Concord Tower (the main option), send it with a courier the customer books, or a paid onsite
+// visit when a technician is free. Free pickup/collection/delivery has ended: never offer it here.
 import { Link } from "@/lib/router-compat";
-import { Car, Clock, MapPin, ParkingCircle, Truck } from "lucide-react";
+import { Car, Clock, MapPin, ParkingCircle, Footprints, Package, Wrench } from "lucide-react";
 
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -24,14 +27,14 @@ import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { REVIEWS } from "@/content/reviews";
-import { AREAS, type AreaConfig } from "@/content/areas";
+import { AREAS, areaMetaTitle, areaMetaDescription, type AreaConfig } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { areaTopicForSlug } from "@/lib/page-images";
 import { REVIEW_COUNT_LABEL } from "@/content/site";
 
-// Every Mac family we collect from, shown on every area page. The domain is MacBook-led,
-// but the same courier run covers the desktops - these links are how an area page ranks
-// for "imac repair <area>", "mac mini repair <area>" and "data recovery <area>".
+// Every Mac family we repair, shown on every area page. The domain is MacBook-led, but the
+// workshop takes the desktops too - these links are how an area page ranks for
+// "imac repair <area>", "mac mini repair <area>" and "data recovery <area>".
 const MAC_FAMILY_LINKS = [
   { label: "iMac repair", href: "/imac-repair-dubai", note: "24\" M4 and older Intel 21.5\"/27\" - screen, SSD, power supply, logic board." },
   { label: "Mac mini repair", href: "/mac-mini-repair-dubai", note: "M6, M4, M2 and Intel - no display, no power, SSD and port faults." },
@@ -57,8 +60,10 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       )
     : MAC_FAMILY_LINKS;
   const reviews = cfg.reviewIndexes.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
-  const title = `MacBook Repair ${cfg.area} - Free Pickup & Delivery`;
-  const description = `MacBook repair in ${cfg.area}: free pickup, same-day on most repairs, written warranty up to 12 months. Free diagnosis. Call 055 741 3706.`;
+  const title = areaMetaTitle(cfg);
+  const description = areaMetaDescription(cfg);
+  // The workshop is inside Media City, so "drive" and "courier" read oddly there.
+  const isHome = cfg.slug === "media-city";
 
   useSeo(
     { title, description, path },
@@ -75,7 +80,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         timeline: "Same day",
         warranty: "P1Y",
         url: path,
-        description: `MacBook screen, battery, keyboard, water-damage and logic-board repair with free pickup and delivery from ${cfg.area}.`,
+        description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for ${cfg.area}: walk in to our Dubai Media City workshop or send the Mac by courier.`,
       }),
     ],
   );
@@ -86,25 +91,29 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       <Hero
         variant="service"
         tone="dark"
-        eyebrow={`Free pickup in ${cfg.area}`}
-        title={`MacBook Repair ${cfg.area} — Free Pickup & Delivery`}
-        subtitle={`${cfg.driveTime} from our Concord Tower workshop in Media City. ${cfg.landmarkLine} Same-day repair, written warranty up to 12 months.`}
+        eyebrow={isHome ? "Walk-in workshop in Concord Tower" : `${cfg.driveTime} from ${cfg.area} by car`}
+        title={isHome ? "MacBook Repair Dubai Media City: Walk In, 10th Floor" : `MacBook Repair ${cfg.area}: Walk In, Courier or Onsite`}
+        subtitle={`${isHome ? "Our workshop is in Concord Tower, Dubai Media City." : `${cfg.driveTime} by car to our workshop in Concord Tower, Dubai Media City.`} ${cfg.landmarkLine} Walk in for a free diagnosis, no appointment needed. Written warranty up to 12 months.`}
         image={areaTopicForSlug(cfg.slug)?.src}
-        imageAlt={`MacBook repair ${cfg.area} — free pickup and delivery service`}
+        imageAlt={`MacBook repair for ${cfg.area} at our Concord Tower workshop in Dubai Media City`}
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
-          <span className="flex items-center gap-1"><Truck size={16} className="text-accent" aria-hidden /> Free pickup &amp; delivery</span>
+          <span className="flex items-center gap-1"><Footprints size={16} className="text-accent" aria-hidden /> Walk in, no appointment</span>
           <span className="text-text-faint">·</span>
-          <span className="flex items-center gap-1"><Clock size={16} className="text-accent" aria-hidden /> {cfg.pickupWindow}</span>
+          <span className="flex items-center gap-1"><Car size={16} className="text-accent" aria-hidden /> {isHome ? "Inside Media City" : `${cfg.driveTime} drive`}</span>
           <span className="text-text-faint">·</span>
-          <span className="flex items-center gap-1"><Car size={16} className="text-accent" aria-hidden /> {cfg.driveTime} drive</span>
+          <span className="flex items-center gap-1"><ParkingCircle size={16} className="text-accent" aria-hidden /> Parking on site</span>
         </p>
       </Hero>
 
       <QuickAnswer
         tone="dark"
-        question={`MacBook repair in ${cfg.area} - how does it work?`}
-        answer={`MacBook repair from ${cfg.area} starts with a free door-to-door pickup - typically ${cfg.pickupWindow.toLowerCase()} of your WhatsApp. We diagnose at our Concord Tower workshop in Media City (${cfg.driveTime}), quote in writing within 4 hours, and return the repaired MacBook with a warranty of up to 12 months. Most common repairs finish the same day.`}
+        question={`How do I get a MacBook repaired from ${cfg.area}?`}
+        answer={
+          isHome
+            ? "MacBook repair in Dubai Media City is a short walk away: Office #45, 10th floor, Concord Tower. Bring the Mac in without an appointment and the diagnosis is free. You get the price in writing on WhatsApp before we start, and many screen, battery and keyboard jobs are done the same day when the part is in stock."
+            : `MacBook repair in ${cfg.area} works three ways. Drive ${cfg.driveTime} to Concord Tower, Dubai Media City and walk in, no appointment needed for the free diagnosis. Or book a same-day courier app and WhatsApp us the tracking link. A paid onsite visit is possible when a technician is free, with the charge quoted first.`
+        }
       />
 
       <USPStrip tone="dark" />
@@ -117,7 +126,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
 
       {/* Intro / context */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md">MacBook Repair {cfg.area} — Trusted by Residents &amp; Offices</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-md">Where can I get a MacBook repaired near {cfg.area}?</h2>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">{cfg.intro}</p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch] mt-md">{cfg.whyChoose}</p>
       </section>
@@ -127,16 +136,15 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         <SectionHeading
           eyebrow="Getting here"
           title={`How far is the workshop from ${cfg.area}?`}
-          sub="Off-peak driving times to Concord Tower, Media City. Add 10-20 minutes during 8-10 am and 5-7 pm rush windows. The pickup column shows our courier turnaround once you confirm on WhatsApp."
+          sub="Off-peak driving times to Concord Tower, Dubai Media City. Allow an extra 10-20 minutes between 8 and 10 am and between 5 and 7 pm. There's parking on site, and a diagnosis needs no appointment."
         />
         <div className="overflow-x-auto border border-border rounded-md bg-bg-card">
-          <table className="w-full text-[14px] min-w-[520px]">
-            <caption className="sr-only">Travel times from {cfg.area} sub-areas to MacBook Repair Dubai workshop, plus free pickup turnaround.</caption>
+          <table className="w-full text-[14px] min-w-[320px]">
+            <caption className="sr-only">Off-peak driving times from {cfg.area} to the MacBook Repair Dubai workshop in Concord Tower, Dubai Media City.</caption>
             <thead className="bg-bg-alt">
               <tr className="text-left">
                 <th className="px-md py-sm font-semibold">From</th>
-                <th className="px-md py-sm font-semibold">Drive</th>
-                <th className="px-md py-sm font-semibold">Free pickup</th>
+                <th className="px-md py-sm font-semibold">Drive to Concord Tower</th>
               </tr>
             </thead>
             <tbody>
@@ -144,7 +152,6 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
                 <tr key={row.from} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{row.from}</td>
                   <td className="px-md py-sm mono text-accent">{row.drive}</td>
-                  <td className="px-md py-sm mono text-text-muted">{row.pickup}</td>
                 </tr>
               ))}
             </tbody>
@@ -155,32 +162,49 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         </p>
       </section>
 
-      {/* Pickup process */}
+      {/* Three ways to get the Mac to the bench */}
       <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <SectionHeading
-            eyebrow="How it works"
-            title={`How does free pickup & delivery from ${cfg.area} work?`}
+            eyebrow="Your options"
+            title={`How do I get my Mac to you from ${cfg.area}?`}
             sub={cfg.pickupNote}
           />
 
-          <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-5">
+          <ul className="grid gap-lg md:grid-cols-3">
             {[
-              { t: `WhatsApp 055 741 3706`, b: `Send your ${cfg.area} address and the MacBook model. Shafiq confirms a pickup window within 4 minutes during business hours.` },
-              { t: "Courier collects in person", b: `${cfg.pickupWindow} of confirmation. Marked Toyota Innova, ID-checked, insured, trackable on WhatsApp.` },
-              { t: "Free workshop diagnosis", b: "Shafiq inspects the device the same day. Itemised written quote on WhatsApp within 4 hours of pickup." },
-              { t: "Approve and we repair", b: "Reply 'approved'. Most common repairs finish the same day. We message you the moment the device is ready." },
-              { t: "Free return delivery", b: `Courier returns the device to your ${cfg.area} address. Pay on arrival - cash, card or bank transfer. Warranty up to 12 months card included.` },
-            ].map((s, i) => (
-              <li key={i} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
-                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent font-heading font-bold text-[18px] items-center justify-center mb-md">
-                  {i + 1}
+              {
+                icon: Footprints,
+                t: "Walk in (most people do)",
+                b: `Office #45, 10th floor, Concord Tower, Dubai Media City${isHome ? ", a few minutes on foot from anywhere in Media City" : `, ${cfg.driveTime} from ${cfg.short} by car`}. Parking is on site and you don't need an appointment for a diagnosis.`,
+              },
+              {
+                icon: Package,
+                t: "Send it by courier",
+                b: `Book any same-day courier app, hand the Mac to the driver and WhatsApp us the tracking link on 055 741 3706. It's the quickest route if you can't come in, because you aren't waiting on us. We arrange the return with you on WhatsApp once it's fixed.`,
+              },
+              {
+                icon: Wrench,
+                t: "Onsite visit (paid)",
+                b: "A technician can come to you when one is free. It's a paid visit, and we quote the charge on WhatsApp before you book, so you know the cost first.",
+              },
+            ].map((s) => (
+              <li key={s.t} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <span aria-hidden className="inline-flex w-10 h-10 rounded-md bg-accent/10 text-accent items-center justify-center mb-md">
+                  <s.icon size={20} />
                 </span>
                 <p className="font-bold text-[16px] mb-1">{s.t}</p>
                 <p className="text-[14px] text-text-muted leading-relaxed">{s.b}</p>
               </li>
             ))}
-          </ol>
+          </ul>
+
+          <p className="text-[14px] text-text-muted mt-lg max-w-[72ch] flex items-start gap-sm">
+            <Clock size={18} className="text-accent shrink-0 mt-[2px]" aria-hidden />
+            <span>
+              Open Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm, closed Sunday. Whichever route you pick, the diagnosis is free and the price is fixed in writing on WhatsApp before any work starts.
+            </span>
+          </p>
         </div>
       </section>
 
@@ -205,12 +229,12 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         </div>
       </section>
 
-      {/* Other Macs we collect from this area */}
+      {/* Other Macs we repair for this area */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <SectionHeading
           eyebrow="Every Mac, not just MacBooks"
           title={`Do you repair iMac, Mac mini and Mac Studio in ${cfg.area}?`}
-          sub={`Yes. The same free collection and return covers every Mac in ${cfg.area} - desktops included. Desktops are collected by appointment so the courier brings the right packaging for the display or chassis.`}
+          sub={`Yes. Bring any Mac from ${cfg.area} to the workshop, desktops included. If you're sending an iMac or a display by courier, use the original box if you still have it, or message us first and we'll tell you how to pack it.`}
         />
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
           {macFamily.map((s) => (
@@ -234,7 +258,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
 
       {/* Landmarks */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <SectionHeading eyebrow="Coverage" title={`Landmarks we collect from in ${cfg.area}`} />
+        <SectionHeading eyebrow="Around the area" title={`Landmarks near you in ${cfg.area}`} />
         <ul className="grid gap-sm md:grid-cols-2 lg:grid-cols-3 text-[15px] text-text">
           {cfg.landmarks.map((l) => (
             <li key={l} className="flex items-start gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
@@ -251,7 +275,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
           <SectionHeading
             eyebrow="What customers say"
             title="Customer reviews from across Dubai"
-            sub={`${REVIEW_COUNT_LABEL} five-star Google reviews. A small sample below - many are from ${cfg.area} residents and office workers who used the free pickup service.`}
+            sub={`${REVIEW_COUNT_LABEL} five-star Google reviews. A small sample below, from customers across Dubai who brought their Macs to the Media City bench.`}
           />
           <ReviewGrid tone="dark" reviews={reviews} />
           <p className="text-[14px] text-text-muted mt-md">
@@ -263,7 +287,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       {/* Lead form - area pages are where local "near me" visitors land, and they had
           no on-page form at all (template-audit, 2026-09-24). */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl" aria-labelledby="area-lead">
-        <h2 id="area-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Book a free pickup from {cfg.area}</h2>
+        <h2 id="area-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a quote for your Mac from {cfg.area}</h2>
         <LeadForm preset={PRESETS.repair} sourcePath={path} defaultDeviceType="MacBook" />
       </section>
 
@@ -276,30 +300,23 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       {/* Find us */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <MapPin size={28} className="text-accent" aria-hidden /> Visit our workshop or use free pickup
+          <MapPin size={28} className="text-accent" aria-hidden /> Where is the workshop?
         </h2>
         <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
-          From {cfg.area}, the workshop is {cfg.driveTime} away by car. Paid parking inside Concord Tower or free street parking on Al Sufouh Road behind the tower.
+          {isHome
+            ? "Office #45 on the 10th floor of Concord Tower, Dubai Media City. If you work in Media City, it's a short walk; if you drive, there's parking on site."
+            : `Office #45 on the 10th floor of Concord Tower, Dubai Media City. From ${cfg.area} it's ${cfg.driveTime} by car off-peak, and there's parking on site.`}{" "}
+          We close for lunch on Fridays from 12 to 2 pm and all day Sunday. A photo of the fault on WhatsApp before you set off helps us tell you what to expect.
         </p>
         <LocationBlock tone="dark" />
-      </section>
-
-      {/* Visiting the workshop (shared logistics, condensed from a 3-card block) */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex items-start gap-md">
-          <ParkingCircle size={24} className="text-accent shrink-0 mt-1" aria-hidden />
-          <p className="text-[15px] text-text-muted leading-relaxed m-0">
-            <strong className="text-text">Prefer to drop in?</strong> Paid tower parking or free street parking on Al Sufouh Road, 120 m from Media City Metro on the Red Line. Quietest on weekday afternoons - WhatsApp ahead at peak times to book a slot.
-          </p>
-        </article>
       </section>
 
       {/* Other Dubai areas we cover - sibling cross-links */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <SectionHeading
           eyebrow="More areas"
-          title="Free pickup across Dubai"
-          sub="We collect from and deliver back to every Dubai neighbourhood from our Concord Tower workshop. We also cover:"
+          title="MacBook repair for other Dubai areas"
+          sub="Each page covers the drive, parking and courier options from that neighbourhood to Concord Tower:"
         />
         <div className="flex flex-wrap gap-sm">
           {AREAS.filter((a) => a.slug !== cfg.slug).map((a) => (
@@ -318,10 +335,10 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
 
       {/* CTA (shared dark band, matches master) */}
       <CtaBand
-        eyebrow={`Free pickup in ${cfg.area}`}
-        headline={`Book a free pickup from ${cfg.area} in 30 seconds`}
-        description="Send your address and the MacBook model on WhatsApp. Pickup window confirmed in 4 minutes."
-        whatsappLabel="Book free pickup"
+        eyebrow={isHome ? "Concord Tower, 10th floor" : `From ${cfg.area} to Concord Tower`}
+        headline={`Mac playing up in ${cfg.area}? Send us a photo first`}
+        description="WhatsApp the model and a photo of the fault. We'll tell you what it's likely to need, then you walk in or book a courier."
+        whatsappLabel="WhatsApp a photo for a quote"
         className="mt-3xl"
       />
       <RelatedArticles tone="dark" path={path} />

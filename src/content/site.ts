@@ -89,7 +89,7 @@ export function warrantyLabel(days: number): string {
 // Sentence fragment, e.g. "a 12-month written warranty"; unlock services (0) carry none.
 export function warrantyClause(days: number): string {
   const l = warrantyLabel(days);
-  return l ? `a ${l} written warranty` : "free pickup and a written quote";
+  return l ? `a ${l} written warranty` : "a written quote before any work";
 }
 // ISO-8601 duration for the JSON-LD WarrantyPromise; undefined = omit (unlock services).
 export function warrantyIso(days: number): string | undefined {
@@ -134,7 +134,7 @@ export const USPS = [
   { label: "No fix, no charge",           icon: "ShieldCheck" },
   { label: "30-min appointment repair",   icon: "Clock" },
   { label: "Up to 12-month warranty",     icon: "BadgeCheck" },
-  { label: "Free pickup in Dubai",        icon: "Truck" },
+  { label: "Walk-in, Media City",         icon: "MapPin" },
   { label: "Free loaner MacBook",         icon: "Laptop" },
   { label: "Since 2004",                  icon: "Award" },
   { label: `${REVIEW_COUNT}+ five-star reviews`, icon: "Star" },

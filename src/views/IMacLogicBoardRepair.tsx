@@ -47,12 +47,12 @@ export default function IMacLogicBoardRepair() {
         { title: "Fan running at 100% from boot", body: "Sensor or SMC fault on Intel iMacs; thermal sensor fault on M-series. Usually a board-level fix, sometimes a reseat. Diagnosed first." },
       ]}
       steps={[
-        { title: "WhatsApp the symptoms", body: "Tell us exactly what happens - chime, fan, screen. We give a likely cause and a price range before pickup." },
-        { title: "Free pickup", body: "Driver collects, soft-padded box. Dubai mainland, no charge." },
+        { title: "WhatsApp the symptoms", body: "Tell us exactly what happens - chime, fan, screen. We give a likely cause and a price range before you bring it in." },
+        { title: "Bring it in", body: "Walk in to Concord Tower, Dubai Media City, with parking on site - or book a same-day courier yourself and WhatsApp us the tracking link." },
         { title: "Diagnosis (24 hours)", body: "Power-rail check, scope on the relevant lines, identify the failed component. Open quote, no work without sign-off." },
         { title: "Component-level rework", body: "Failed chip removed under a microscope, pads cleaned, replacement reballed and placed. IR rework station, controlled thermal profile." },
-        { title: "Bench burn-in 48 hr", body: "Stress test under load - CPU, GPU, ports, sensors. Catches intermittents before delivery." },
-        { title: "Free delivery + warranty card", body: "Back to you with a 15-day written warranty and a photo log of the work done." },
+        { title: "Bench burn-in 48 hr", body: "Stress test under load - CPU, GPU, ports, sensors. Catches intermittents before you collect it." },
+        { title: "Collect + warranty card", body: "Ready to collect with a 15-day written warranty and a photo log of the work done." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

@@ -8,7 +8,7 @@ export default function MacBookAirM1Repair() {
       chip="M1"
       years="2020"
       seoTitle="MacBook Air M1 Repair Dubai: Screen, Battery & Logic Board Fix"
-      seoDescription="MacBook Air M1 (A2337) repair Dubai. Screen, battery & logic board. Free diagnosis, same-day service, free pickup. WhatsApp us for today's price."
+      seoDescription="MacBook Air M1 (A2337) repair Dubai. Screen, battery & logic board. Free diagnosis, same-day service, walk-in workshop. WhatsApp us for today's price."
       eyebrow="MacBook Air M1 specialist · Dubai Media City · Same-day service"
       h1="MacBook Air M1 Repair Dubai"
       heroDescription="MacBook Air M1 (A2337, late 2020) was Apple's first Apple Silicon laptop. Despite being over 4 years old, it remains fast, fully supported, and worth repairing. We handle screen replacement, battery swelling, charging port repair, and board-level faults for the M1 Air at our Media City workshop."

@@ -5,7 +5,7 @@ export default function MacBookCleaningMaintenance() {
   return (
     <SubServicePageTemplate
       seoTitle="MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai"
-      seoDescription="MacBook cleaning and maintenance in Dubai. Dust and corrosion removal, fan and vent clean, free pickup, 15-day written warranty. Call 055 741 3706."
+      seoDescription="MacBook cleaning and maintenance in Dubai. Dust and corrosion removal, fan and vent clean, walk-in workshop, 15-day written warranty. Call 055 741 3706."
       path="/macbook-cleaning-maintenance-dubai"
       eyebrow="MacBook cleaning & maintenance"
       h1="MacBook Cleaning and Maintenance in Dubai"
@@ -40,10 +40,10 @@ export default function MacBookCleaningMaintenance() {
         "macOS health check - storage, battery cycle count and background load reviewed",
       ]}
       steps={[
-        { title: "Book on WhatsApp or free pickup", body: "Message us the model and we arrange a slot, or collect the MacBook free across Dubai mainland. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+        { title: "WhatsApp, then walk in", body: "Message us the model and what it's doing, then bring the MacBook to Concord Tower in Dubai Media City. No appointment needed." },
         { title: "Free inspection", body: "We open the machine, check dust levels, fan condition and any corrosion, and confirm the clean is all you need before any work starts." },
         { title: "Deep clean and thermal check", body: "Heatsink, fans, vents and ports cleared, fresh thermal paste if temperatures warrant it, then a load test to verify the machine runs cooler." },
-        { title: "Report and same-day return", body: "You get a short report on what we found and the before-and-after temperatures, then the MacBook goes back the same day in most cases." },
+        { title: "Report and same-day return", body: "You get a short report on what we found and the before-and-after temperatures, then the MacBook is ready to collect the same day in most cases." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
@@ -57,7 +57,7 @@ export default function MacBookCleaningMaintenance() {
         { q: "Does dust really cause my MacBook to overheat?", a: "Yes - dust is the single most common cause of overheating we see. It clogs the heatsink fins and coats the fan blades, so the fan spins faster, gets louder, and still can't move enough air. The chip then throttles to protect itself and the machine slows down. A clean usually drops idle temperatures by 10 to 20 degrees, and we show you the before-and-after numbers." },
         { q: "Do you actually open the MacBook to clean it?", a: "Yes. Blowing canned air through the vents only pushes dust deeper. We remove the bottom case, lift the fan assembly, and clean the heatsink and blades directly, then clear the ports. On machines from 2016 onward we're careful with the bonded internals. The full strip-and-clean is what makes the service actually drop temperatures rather than just move the dust around." },
         { q: "Is opening my MacBook safe, and will it void anything?", a: "It's safe in trained hands - Abdul Aziz has worked on Apple hardware since 2004 and we've serviced thousands of machines since 2004. Most MacBooks in Dubai are well out of Apple's warranty, so there's nothing to void. If yours is still under AppleCare we'll tell you before we open it. We back the cleaning with a 15-day written warranty." },
-        { q: "Do you collect the MacBook, or do I bring it in?", a: "Both. We offer free pickup and delivery across Dubai mainland - Marina, JLT, Business Bay, Downtown, Al Barsha and the rest. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch. Or drop it at Concord Tower, Dubai Media City, where there's free parking. WhatsApp 055 741 3706 to arrange a slot." },
+        { q: "Do I need an appointment, and where do I park?", a: "No appointment needed. Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City - across from Media City Metro, with parking on site. Open Mon-Thu and Sat 9 am-7 pm, Friday 9 am-12 pm and 2 pm-7 pm. WhatsApp 055 741 3706 first if you want a quote." },
         { q: "How long does the cleaning take?", a: "Same day for most models. A standard MacBook Air or Pro clean is done within a few hours once it's on the bench, and we return it the same day across Dubai. If we apply fresh thermal paste it needs a short settling period, but that doesn't add to your wait. Drop it in the morning and you'll usually have it back by evening." },
         { q: "Can you service older or vintage MacBooks?", a: "Yes. We service every MacBook from the 2012 Pro onward, including the 2015 to 2019 models that Apple now treats as vintage and won't touch. Older machines benefit the most from a clean and fresh thermal paste, since years of Dubai dust and dried paste are usually why they run hot and loud. The service costs the same regardless of age." },
         { q: "Will cleaning fix a MacBook that keeps shutting down?", a: "Often, yes - random shutdowns under load are frequently a thermal problem from clogged fans and old paste. We diagnose for free first. If the clean and re-paste solves it, that's all you pay. If the shutdown is a battery or logic-board fault instead, we'll show you the evidence and quote the actual repair before doing anything." },
@@ -71,7 +71,7 @@ export default function MacBookCleaningMaintenance() {
       ]}
       quickAnswer={{
         question: "How much is a MacBook clean and service in Dubai?",
-        answer: "A full internal and external MacBook clean is carried out at MacBook Repair Dubai in Concord Tower, Dubai Media City. It covers dust removal from the fans and heatsink, port cleaning, a thermal check and a macOS health review, with free diagnosis and a 15-day written warranty. Most jobs are done the same day, with free pickup across Dubai mainland.",
+        answer: "A full internal and external MacBook clean is carried out at MacBook Repair Dubai in Concord Tower, Dubai Media City. It covers dust removal from the fans and heatsink, port cleaning, a thermal check and a macOS health review, with free diagnosis and a 15-day written warranty. Most jobs are done the same day while the MacBook stays at the workshop.",
       }}
     />
   );

@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import {
   Star, MessageCircle, Phone,
   Monitor, ShieldCheck, Clock, Award,
-  Search, BadgeCheck, Truck, Check, ArrowRight,
+  Search, BadgeCheck, Check, ArrowRight,
   Wrench, AlertTriangle, Cpu, BatteryCharging,
   HardDrive, Droplets, Gauge, MapPin,
 } from "lucide-react";
@@ -80,11 +80,11 @@ const PROCESS: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: ShieldCheck,   title: "30-point QC + warranty",    body: "Dead-pixel scan, backlight uniformity, True Tone response (M2+), brightness and hinge torque — all checked before the MacBook leaves the bench. Written warranty issued on the spot." },
 ];
 
-const PICKUP_STEPS = [
+const VISIT_STEPS = [
   { n: "01", title: "WhatsApp us", body: "Tell us the chip/model. We confirm the panel is in stock and give you an exact price." },
-  { n: "02", title: "Free collection", body: "A courier picks up your MacBook Air from anywhere on Dubai mainland — Marina, Downtown, JBR, Business Bay, JLT, Al Barsha. Same-hour from Internet City." },
+  { n: "02", title: "Walk in", body: "Bring your MacBook Air to Concord Tower, Dubai Media City, across from the Media City Metro station. No appointment needed, parking on site." },
   { n: "03", title: "Screen replaced", body: "Panel swapped, 30-point display QC done, warranty card written. Same day on Intel, M1 and M2 in most cases." },
-  { n: "04", title: "Free delivery back", body: "Your MacBook Air returned to your door, fully tested. No parking, no traffic, no waiting." },
+  { n: "04", title: "Check it and collect", body: "Inspect the new screen at the counter before you pay. The written warranty goes home with your MacBook Air." },
 ];
 
 const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
@@ -93,7 +93,7 @@ const WHY: { title: string; body: string; Icon: LucideIcon }[] = [
   { Icon: Wrench,      title: "Every display fault covered", body: "Screen, cable, backlight, hinge — all handled in one place. No need to go elsewhere if a cable rather than the panel turns out to be the fault." },
   { Icon: Cpu,         title: "Genuine Apple panels",        body: "Genuine Apple Liquid Retina panels stocked for M3 and M4. A-grade Samsung/LG for M1 and M2. Intel gets A-grade IPS. Every grade is stated upfront." },
   { Icon: HardDrive,   title: "Data stays private",          body: "Screen replacement never requires accessing your files. We follow strict confidentiality procedures — your data stays your business." },
-  { Icon: Truck,       title: "Free pickup Dubai-wide",      body: "Free collection and return across all Dubai mainland areas. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { Icon: MapPin,      title: "Walk-in Media City workshop", body: "Office #45, Concord Tower, across from the Media City Metro station, with parking on site. WhatsApp the model first and we confirm the panel is in stock before you travel." },
 ];
 
 const FAQ_ITEMS = [
@@ -102,9 +102,9 @@ const FAQ_ITEMS = [
   { q: "Do you use original Apple screens for MacBook Air replacement?", a: "Genuine Apple Liquid Retina panels are stocked for the M3 and M4 Air — the only grade that keeps True Tone active. M1 and M2 models get A-grade panels from Samsung or LG (the same factories that supply Apple), which are full-resolution and full-brightness but disable True Tone on M2. Intel models get A-grade IPS. Every grade is listed on the WhatsApp quote." },
   { q: "Will True Tone still work after the screen is replaced?", a: "True Tone only exists on M2, M3 and M4 MacBook Air. With a genuine Apple panel it is calibrated to the board serial and works normally. With an A-grade aftermarket panel, macOS disables True Tone — everything else (brightness, P3 colour, resolution) runs at full spec. True Tone status is stated on every quote." },
   { q: "Can you replace just the glass on a MacBook Air?", a: "Only on Intel 11\" and certain Intel 13\" pre-2016 models where the glass is a separate piece. From the M1 Air onward — and on most Intel 13\" from 2018 — the glass is bonded to the panel as one assembly. There is no reliable glass-only option on bonded models: we replace the full panel assembly." },
-  { q: "Do you offer pickup for MacBook Air screen replacement in Dubai?", a: "Yes — free pickup and delivery across all Dubai mainland areas: Marina, Downtown, JBR, JLT, Palm Jumeirah, Business Bay, Al Barsha, DIFC, Deira and more. Same-hour pickup is available from Internet City and Knowledge Village. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch." },
+  { q: "Do I need an appointment for MacBook Air screen replacement in Dubai?", a: "No. Walk in to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. WhatsApp the model first and we confirm the panel is in stock and quote before you travel. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm." },
   { q: "My MacBook Air has lines on the screen — is it the panel or cable?", a: "Lines that shift or disappear when you open and close the lid at different angles point to the display flex cable — cable replacement costs much less than a panel. Fixed lines that stay in the same position regardless of lid angle point to the panel, which is replaced as a unit. Free 15-minute bench diagnosis confirms the fault before any repair is authorised." },
-  { q: "How much cheaper is MacBook Air screen replacement than Apple?", a: "Apple does not publish a MacBook Air screen price in the UAE; it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work so you can compare, same-day to 2 days, with free pickup across Dubai. Apple does not service Intel models declared vintage — we still replace those screens, quoted per model." },
+  { q: "How much cheaper is MacBook Air screen replacement than Apple?", a: "Apple does not publish a MacBook Air screen price in the UAE; it inspects the Mac first and usually replaces the whole display assembly. We quote after a free diagnosis, before any work so you can compare, same-day to 2 days, at our Media City workshop. Apple does not service Intel models declared vintage — we still replace those screens, quoted per model." },
 ];
 
 const RELATED = [
@@ -153,7 +153,7 @@ export default function MacBookAirScreenReplacement() {
   useSeo({
     title: "MacBook Air Screen Replacement Dubai — Same Day",
     description:
-      "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone preserved. Same-day on most models, free pickup Dubai-wide. Call 055 741 3706.",
+      "MacBook Air screen replacement Dubai. M1–M4 Liquid Retina, Intel IPS, True Tone kept. Same-day on most models, walk in to Media City. Call 055 741 3706.",
     path: "/macbook-air-screen-replacement-dubai",
     preloadImage: preloadFromHero(IMG.hero.src),
   });
@@ -189,7 +189,7 @@ export default function MacBookAirScreenReplacement() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai replaces MacBook Air screens at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, free citywide pickup, genuine Apple panels for M3 and M4, written warranty up to 3 months.
+                MacBook Repair Dubai replaces MacBook Air screens at its Concord Tower workshop in Dubai Media City. All models from Intel (2013) to M4 (2025) — Liquid Retina, IPS Retina, IPS LCD. Same-day on most models, walk-in across from Media City Metro, genuine Apple panels for M3 and M4, written warranty up to 3 months.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function MacBookAirScreenReplacement() {
             {[
               { Icon: Search,      label: "Free MacBook Air diagnosis" },
               { Icon: BadgeCheck,  label: "No fix, no charge" },
-              { Icon: Truck,       label: "Free pickup Dubai-wide" },
+              { Icon: MapPin,      label: "Walk in at Media City" },
               { Icon: ShieldCheck, label: "Genuine & A-grade panels" },
               { Icon: Clock,       label: "Same-day on most models" },
               { Icon: Star,        label: "Trusted since 2004" },
@@ -346,16 +346,16 @@ export default function MacBookAirScreenReplacement() {
           <div className="mt-xl flex justify-center"><CallButtons /></div>
         </section>
 
-        {/* ── FREE PICKUP ── */}
+        {/* ── WALK-IN ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
           <div className="mx-auto max-w-content px-5 md:px-6">
             <SectionHeading
-              label="No need to leave home or office"
-              title="Free pickup for MacBook Air screen replacement across Dubai"
-              sub="We collect your MacBook Air from anywhere on Dubai mainland, replace the screen at the workshop, and return it to your door — same day in most cases."
+              label="Walk in, no appointment needed"
+              title="How does a walk-in MacBook Air screen replacement work?"
+              sub="Bring your MacBook Air to our Concord Tower workshop in Dubai Media City and we replace the screen on the bench — same day in most cases."
             />
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
-              {PICKUP_STEPS.map((s) => (
+              {VISIT_STEPS.map((s) => (
                 <div key={s.n} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm">
                   <p className="text-[48px] font-bold leading-none text-accent/20 select-none">{s.n}</p>
                   <h3 className="text-[17px] font-semibold text-text">{s.title}</h3>
@@ -474,7 +474,7 @@ export default function MacBookAirScreenReplacement() {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 3 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk in at Media City</span>
               </div>
             </div>
             <div>

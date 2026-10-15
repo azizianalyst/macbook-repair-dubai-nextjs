@@ -169,7 +169,7 @@ export function NavBar({ utilityBar = false }: { utilityBar?: boolean } = {}) {
             </span>
             <span className="inline-flex items-center gap-4 text-white/85">
               <span className="hidden lg:inline-flex items-center gap-1.5"><Clock size={13} aria-hidden /> Mon-Sat 9 AM-7 PM</span>
-              <span className="inline-flex items-center gap-1.5"><Truck size={13} aria-hidden /> Free pickup across Dubai</span>
+              <span className="inline-flex items-center gap-1.5"><MapPin size={13} aria-hidden /> Walk in at Dubai Media City</span>
               <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-white/80 transition-colors" aria-label={`Call ${NAP.phoneDisplay}`}>
                 <Phone size={13} aria-hidden /> {NAP.phoneDisplay}
               </a>

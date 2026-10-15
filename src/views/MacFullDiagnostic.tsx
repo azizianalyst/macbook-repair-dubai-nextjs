@@ -5,11 +5,11 @@ export default function MacFullDiagnostic() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Full Diagnostic Dubai - Free | 055 741 3706"
-      seoDescription="Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Free home pickup for Mac Pro. No obligation, written report."
+      seoDescription="Free Mac desktop diagnostic Dubai. 25-point check on Mac Mini, Studio, Pro. Walk in, parking on site. No obligation, written report. WhatsApp us."
       path="/mac-full-diagnostic-dubai"
       eyebrow="Mac diagnostic"
       h1="Mac Mini, Studio & Pro Full Diagnostic Dubai - Free"
-      subtitle="Walk in with any Mac concern, walk out with a written 25-point report and a fixed price. Free, no obligation. Free home pickup across Dubai mainland for Mac Pro because they're heavy and awkward to transport."
+      subtitle="Walk in with any Mac concern, walk out with a written 25-point report and a fixed price. Free, no obligation. Mac Pro too heavy to carry far? Parking is on site, or book a paid onsite visit, quoted on WhatsApp and subject to technician availability."
       startingPrice={0}
       timeline="60 minutes (workshop)"
       whatsappPrefill="Hi, I'd like a free Mac diagnostic - model and main concern:"
@@ -26,7 +26,7 @@ export default function MacFullDiagnostic() {
             <strong>Bring it in, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 25-point check on every Mac desktop: power delivery, SoC or CPU thermal behaviour under load, every port, audio I/O, all storage health, RAM hardware test, fan and chassis cooling, macOS support ceiling, malware quick-scan, and a Thunderbolt routing check on Mac Studio and Mac Pro.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            About 1 in 5 Macs we see don't actually need a paid repair - they need a free port clean, an SMC reset, a software fix or an honest 'this is at end-of-economic-life, replace it' verdict. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything. Mac Pro is heavy - we offer free pickup and drop-off across Dubai mainland so you don't have to wrestle a 18kg chassis into a car.
+            About 1 in 5 Macs we see don't actually need a paid repair - they need a free port clean, an SMC reset, a software fix or an honest 'this is at end-of-economic-life, replace it' verdict. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything. Mac Pro is heavy, so there is parking on site at Concord Tower, and a paid onsite visit can be booked when a technician is free, quoted on WhatsApp first.
           </p>
         </>
       }
@@ -50,14 +50,14 @@ export default function MacFullDiagnostic() {
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
         "Any repair you book carries our standard warranty of up to 12 months.",
-        "Free pickup for Mac Pro and heavy Mac Studio setups.",
+        "Parking on site at Concord Tower for Mac Pro and heavy Mac Studio setups.",
       ]}
       faqs={[
         { q: "Is the diagnostic really free with no catch?", a: "Yes. Honest first contact builds long-term trust. About 1 in 5 customers needs no repair at all - we tell them so. The other 4 know the price in writing before any work begins." },
         { q: "How long does it take?", a: "About 60 minutes for the full workshop check. You can wait at our Media City workshop with coffee, or drop and pick up later the same day." },
         { q: "Will you wipe my data?", a: "No. The diagnostic is read-only - we don't reset, restore or modify the Mac in any way." },
         { q: "Useful before buying a used Mac Studio or Mac Pro?", a: "Very. Bring the seller and the Mac, we run the check while you wait, and you walk out knowing exactly what you're buying - including module status on Mac Studio and MPX module health on Mac Pro." },
-        { q: "Do you offer free pickup for Mac Pro?", a: "Yes - Mac Pro is heavy (around 18kg for the tower, 30kg for the rack-mount) and awkward in a car. We collect across Dubai mainland and return after the diagnostic." },
+        { q: "Can you come to me for a Mac Pro diagnostic?", a: "Yes, as a paid onsite visit when a technician is free, with the charge quoted on WhatsApp 055 741 3706 before you book. Mac Pro is heavy (around 18kg for the tower, 30kg for the rack-mount), so if you bring it in, park on site at Concord Tower, or send it with a same-day courier you book." },
         { q: "What if you find something I didn't expect?", a: "We tell you. Sometimes it's good news - module healthy, board clean, drive has years left. Sometimes it's bad news, but better to know now than be surprised later." },
       ]}
       reviewNames={["Shah nawaz", "Marianne Chehade El Dfouni", "Binod Shrestha"]}

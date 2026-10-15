@@ -137,7 +137,7 @@ export default function GuideCleanMacBookKeyboard() {
               MacBook water damage repair in Dubai
             </Link>{" "}
             so the internals can be opened, cleaned, and dried properly before any
-            corrosion sets in. We offer free pickup and a free diagnosis - message us on
+            corrosion sets in. Walk in to our Media City workshop for a free diagnosis - message us on
             WhatsApp for today's exact price on your model.
           </p>
 
@@ -212,7 +212,7 @@ export default function GuideCleanMacBookKeyboard() {
         },
         {
           q: "How much does MacBook keyboard repair cost in Dubai?",
-          a: "MacBook keyboard repair covers individual keycaps or a full keyboard assembly. We run a free diagnostic first, offer free pickup across Dubai, and back the work with a 15-day warranty. For the exact price on your model - or for water damage repair if a spill got inside - message us on WhatsApp.",
+          a: "MacBook keyboard repair covers individual keycaps or a full keyboard assembly. We run a free diagnostic first at our Media City workshop and back the work with a 15-day warranty. For the exact price on your model - or for water damage repair if a spill got inside - message us on WhatsApp.",
         },
         {
           q: "How often should I clean my MacBook keyboard?",
@@ -221,7 +221,7 @@ export default function GuideCleanMacBookKeyboard() {
       ]}
       relatedLinks={[
         { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky, or repeating keys fixed with a 15-day warranty." },
-        { label: "MacBook water damage repair Dubai", href: "/macbook-water-damage-repair-dubai", description: "Spilled something? Free pickup and proper internal cleaning before corrosion sets in." },
+        { label: "MacBook water damage repair Dubai", href: "/macbook-water-damage-repair-dubai", description: "Spilled something? Bring it in for proper internal cleaning before corrosion sets in." },
         { label: "MacBook trackpad repair Dubai", href: "/macbook-trackpad-repair-dubai", description: "Sticky clicks that turn out to be the trackpad rather than the keyboard." },
       ]}
     />

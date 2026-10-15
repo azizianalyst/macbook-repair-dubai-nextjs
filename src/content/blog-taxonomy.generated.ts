@@ -78,7 +78,7 @@ export const CATEGORIES: BlogCategory[] = [
     "name": "How We Work",
     "eyebrow": "Trust & transparency",
     "blurb": "Our pricing, warranty, parts policy and what makes us different.",
-    "intro": "Repairing Apple devices in Dubai since 2004, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our warranty of up to 12 months, the difference between genuine and quality-alternative parts, and how free pickup and delivery works across Dubai. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
+    "intro": "Repairing Apple devices in Dubai since 2004, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our warranty of up to 12 months, the difference between genuine and quality-alternative parts, and how to reach us: walk in, send it with your own courier, or book a paid onsite visit when a technician is free. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
     "types": [
       "Trust",
       "Honest guide",

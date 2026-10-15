@@ -26,7 +26,7 @@ export default function MacBookFullDiagnostic() {
             <strong>Free MacBook diagnostic in Dubai</strong> - every owner should book this once a year, especially if you're nearing the 3-4 year mark where batteries, fans, and SSDs start to age. We run a 30-point check on your MacBook and hand you a written report. <strong>No charge, no obligation, no upsell pressure.</strong> If everything is healthy, we'll tell you - that's a useful answer too.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Takes 30 minutes at the bench. Drop in to Internet City or WhatsApp for free pickup if you'd rather not wait in person. The report covers battery health, fan condition, thermal performance, screen pixel test, keyboard scan, port function, speaker test, camera, microphone, trackpad calibration, GPU under load, SSD SMART data, RAM test, Wi-Fi signal, Bluetooth - full checklist below.
+            Takes 30 minutes at the bench. Walk in to our Dubai Media City workshop, or WhatsApp first if you want to check a time. The report covers battery health, fan condition, thermal performance, screen pixel test, keyboard scan, port function, speaker test, camera, microphone, trackpad calibration, GPU under load, SSD SMART data, RAM test, Wi-Fi signal, Bluetooth - full checklist below.
           </p>
         </>
       }
@@ -45,7 +45,7 @@ export default function MacBookFullDiagnostic() {
         "Wi-Fi / Bluetooth - signal strength, throughput, connection quality",
       ]}
       steps={[
-        { title: "Drop-in or pickup", body: "Walk in to Internet City, or WhatsApp for free pickup anywhere in Dubai mainland." },
+        { title: "Walk in", body: "Walk in to Concord Tower, Dubai Media City. No appointment needed." },
         { title: "30-minute bench check", body: "We run our diagnostic suite - Apple Diagnostics, third-party tools, manual inspection. You can wait in our lounge or come back later." },
         { title: "Written report", body: "Printed checklist with pass / warning / fail on every item, plus notes from the technician on anything to watch." },
         { title: "No-pressure conversation", body: "If repairs are needed, we quote them. If not, you take the report and go. No fee either way." },

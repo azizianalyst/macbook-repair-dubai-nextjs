@@ -7,7 +7,7 @@
 // route for out-of-warranty work. Prior "faithful WordPress rebuild" version is in git history;
 // its unsourced claims (24/7 WhatsApp, "only genuine parts", "best technicians in the UAE",
 // same-day badges) were dropped. No prices of ours; no Apple Watch / AirPods service.
-import { ShieldAlert, Store, BadgeCheck, Wrench, Check, ExternalLink, CalendarClock, Truck, CheckCircle2 } from "lucide-react";
+import { ShieldAlert, Store, BadgeCheck, Wrench, Check, ExternalLink, CalendarClock, MapPin, CheckCircle2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -53,7 +53,7 @@ const OPTIONS: { icon: LucideIcon; title: string; body: string; best: string }[]
 
 const COMPARISON: { label: string; us: string; them: string }[] = [
   { label: "Who does the repair", us: "Our own technicians at one workshop in Dubai Media City", them: "Apple, or a company Apple authorises" },
-  { label: "Getting seen", us: "Walk in Monday to Saturday, 9 am to 7 pm, or free pickup across Dubai mainland", them: "Usually by appointment, booked through Apple Support" },
+  { label: "Getting seen", us: "Walk in, no appointment: Monday to Thursday and Saturday 9 am to 7 pm, Friday 9 am to 12 pm and 2 pm to 7 pm", them: "Usually by appointment, booked through Apple Support" },
   { label: "Under warranty or AppleCare+", us: "We send you to Apple: a covered repair there is free or a set fee", them: "The right place for a covered fault" },
   { label: "Out of warranty", us: "Component-level repair where the fault allows it", them: "Usually a module or whole-unit replacement" },
   { label: "Parts", us: "Genuine where available, quality-tested otherwise, disclosed before work", them: "Apple parts" },
@@ -103,13 +103,13 @@ const FAQS = [
   { q: "Is MacBook Repair Dubai an official or Apple Authorised Service Center?",
     a: "No. We are an independent Apple repair workshop in Dubai Media City: not Apple, not an Apple Store and not an Apple Authorised Service Provider. If Apple's warranty or AppleCare+ covers your fault, we will tell you to go to Apple. For out-of-warranty and board-level repairs, we are an independent alternative." },
   { q: "Where is the nearest Apple service center to me in Dubai?",
-    a: "Apple's locator on support.apple.com/repair shows the nearest Apple Store and authorised providers for your location. If an independent repair suits you, our workshop is in Concord Tower, Dubai Media City, across from the Media City Metro station, open Monday to Saturday from 9 am to 7 pm, with free pickup across Dubai mainland." },
+    a: "Apple's locator on support.apple.com/repair shows the nearest Apple Store and authorised providers for your location. If an independent repair suits you, our workshop is in Concord Tower, Dubai Media City, across from the Media City Metro station with parking on site, open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm." },
   { q: "Do I need an appointment?",
-    a: "No. Walk in during opening hours or book a free pickup. Sending the model and fault on WhatsApp first helps us check part availability before you travel. Diagnosis is free, and nothing is repaired until you approve the written quote." },
+    a: "No. Walk in during opening hours, or send the device with a same-day courier you book. Sending the model and fault on WhatsApp first helps us check part availability before you travel. Diagnosis is free, and nothing is repaired until you approve the written quote." },
   { q: "My device is under warranty. Should I go to Apple instead?",
     a: "Usually, yes. If Apple's warranty or AppleCare+ covers the fault, Apple or an authorised provider repairs it free or for a set fee, and we will say so rather than quote you. Accidental damage, expired warranties and older models are where independent repair makes more sense." },
   { q: "Do you have an Apple service center in Abu Dhabi or Sharjah?",
-    a: "No. We have one workshop, in Dubai Media City, and no branches. For Macs we arrange free courier collection: Sharjah collections are usually same day, and Abu Dhabi collections are next day with a typical 1-2 day round trip. For an iPhone or iPad outside Dubai, message us first on WhatsApp." },
+    a: "No. We have one workshop, in Dubai Media City, and no branches. Customers outside Dubai can drive in, or book any same-day courier app to send the device to us and WhatsApp the tracking link. When it is fixed, collect it in person or book a courier back." },
   { q: "Do you repair Apple Watch or AirPods?",
     a: "No. Apple Watch, AirPods, Apple TV and HomePod are not repaired here, and we do not take them in to send elsewhere. Apple services them directly: start at support.apple.com/repair. We repair MacBook, iMac, Mac mini, Mac Studio, Mac Pro, iPhone and iPad." },
 ];
@@ -202,7 +202,7 @@ export default function AppleServiceCenter() {
                 Apple's Genius Bar works mainly by appointment, and in the weeks after a launch (the iPhone 18 Pro went on sale on 18 September 2026) the next free slot at a busy mall store can be days away. If the device is under warranty, waiting for Apple is usually still worth it: a covered repair costs you nothing.
               </p>
               <p className="m-0">
-                If it is out of warranty or the damage is accidental, you do not need an appointment here: walk in Monday to Saturday, 9 am to 7 pm, or book free pickup across Dubai mainland. Our guide on <Link to="/blog/apple-repair-appointment-dubai" className={linkCls}>what to do when you can't get an Apple repair appointment in Dubai</Link> covers both routes step by step.
+                If it is out of warranty or the damage is accidental, you do not need an appointment here: walk in Monday to Thursday or Saturday, 9 am to 7 pm, or Friday 9 am to 12 pm and 2 pm to 7 pm. Our guide on <Link to="/blog/apple-repair-appointment-dubai" className={linkCls}>what to do when you can't get an Apple repair appointment in Dubai</Link> covers both routes step by step.
               </p>
             </div>
           </div>
@@ -247,11 +247,11 @@ export default function AppleServiceCenter() {
         {/* Other emirates */}
         <section aria-labelledby="emirates" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
           <h2 id="emirates" className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Truck size={28} className="text-accent shrink-0" aria-hidden /> Apple service center in Abu Dhabi or Sharjah?
+            <MapPin size={28} className="text-accent shrink-0" aria-hidden /> Apple service center in Abu Dhabi or Sharjah?
           </h2>
           <div className="max-w-[75ch] space-y-md text-[16px] text-text-muted leading-relaxed">
             <p className="m-0">
-              We have one workshop, in Dubai Media City, and no branch in Abu Dhabi, Sharjah or any other emirate. What we do offer is free courier collection for Macs. In Sharjah a courier usually collects the same day; from Abu Dhabi, collection is the next day and the round trip typically takes 1-2 days. The details are on <Link to="/macbook-repair-abu-dhabi" className={linkCls}>MacBook repair Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>MacBook repair Sharjah</Link>.
+              We have one workshop, in Dubai Media City, and no branch in Abu Dhabi, Sharjah or any other emirate. You can drive in, or book any same-day courier app to send the device to our workshop and WhatsApp us the tracking link; we do not arrange the courier. The details are on <Link to="/macbook-repair-abu-dhabi" className={linkCls}>MacBook repair Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>MacBook repair Sharjah</Link>.
             </p>
             <p className="m-0">
               For an iPhone or iPad outside Dubai, WhatsApp us first for the quickest option. Apple's own stores and authorised providers in Abu Dhabi and Sharjah are in the locator on support.apple.com/repair.

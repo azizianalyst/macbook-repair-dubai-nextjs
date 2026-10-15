@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Building2, Clock, Shield, Users, Phone, MessageCircle, CheckCircle2, FileText, Truck } from "lucide-react";
+import { Building2, Clock, Shield, Users, Phone, MessageCircle, CheckCircle2, FileText, MapPin } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -19,9 +19,9 @@ import { REVIEWS } from "@/content/reviews";
 import { NAP } from "@/content/site";
 
 const SERVICES = [
-  { icon: Truck,     label: "On-site collection & return",   body: "We collect from your office, repair overnight, and return by the next morning. No staff downtime, no devices left unattended in public." },
-  { icon: Clock,     label: "Priority same-day turnaround",  body: "Corporate accounts get priority scheduling, screen, battery, keyboard, and trackpad repairs completed the day we collect." },
-  { icon: Users,     label: "Multi-device batch repair",     body: "Bring in or schedule pickup of 3–20 MacBooks at once. 15% labour discount on 3+ devices in one booking." },
+  { icon: MapPin,    label: "Onsite visits or send-in",      body: "A technician can come to your office for a paid onsite visit, subject to availability and quoted on WhatsApp. Or your office books a same-day courier and the machines reach our bench within the day." },
+  { icon: Clock,     label: "Priority same-day turnaround",  body: "Corporate accounts get priority scheduling, screen, battery, keyboard, and trackpad repairs completed the day the machine reaches the bench." },
+  { icon: Users,     label: "Multi-device batch repair",     body: "Bring in or send 3–20 MacBooks at once. 15% labour discount on 3+ devices in one booking." },
   { icon: FileText,  label: "Consolidated VAT invoices",     body: "Single invoice per batch repair with asset serial numbers, repair descriptions, and part costs, ready for your accounts team." },
   { icon: Shield,    label: "Warranty of up to 12 months",   body: "Every device repaired under corporate account carries the same written warranty of up to 12 months as retail customers." },
   { icon: Building2, label: "Dedicated WhatsApp line",       body: "A direct WhatsApp number for your IT manager or office admin, no queuing, no call centre, direct to the technician." },
@@ -49,34 +49,34 @@ const REPAIRS = [
 // page previously did not answer anywhere: chain of custody, data handling on
 // staff exit, and how we fit alongside an existing IT provider.
 const GOVERNANCE = [
-  { title: "Chain of custody", body: "Every collection is logged by serial number and confirmed on WhatsApp with a photo at handover. You always know which machine is with us, what stage it is at, and who signed for it." },
+  { title: "Chain of custody", body: "Every device that arrives is logged by serial number and confirmed on WhatsApp with a photo at handover. You always know which machine is with us, what stage it is at, and who signed for it." },
   { title: "Data handling", body: "Machines are worked on at one bench and not passed between hands. We do not browse or copy company data beyond what a repair or recovery requires, and we will not unlock a device without evidence the company owns it." },
   { title: "Secure wipe, confirmed in writing", body: "For staff exits or device disposal we wipe the Mac and confirm it in writing, which is normally what an IT or compliance file needs on record." },
   { title: "Alongside your IT provider", body: "Most of our corporate clients already have a general IT partner for network and Windows. We handle the Apple hardware they cannot service, and work with them rather than around them." },
 ];
 
 const FLEET_PROCESS = [
-  { step: "Send the device list", body: "Models, serials and a one-line fault each, on WhatsApp. If you do not have serials, we capture them at collection and send the list back to you." },
+  { step: "Send the device list", body: "Models, serials and a one-line fault each, on WhatsApp. If you do not have serials, we capture them when the machines arrive and send the list back to you." },
   { step: "Free diagnosis, one written quote", body: "Every machine is diagnosed at no cost and quoted on a single document by serial number, so you can approve some, defer others, and retire the rest." },
-  { step: "Staged collection", body: "Fleets are collected in waves rather than all at once, so the team is never without machines. We agree the waves with you before the first pickup." },
-  { step: "Return, invoice, asset record", body: "Devices come back with a consolidated VAT invoice listing each serial, the work done and the parts used - and an updated record of what is now in service." },
+  { step: "Staged send-in", body: "Fleets come in waves rather than all at once, so the team is never without machines. We agree the waves with you before the first batch arrives." },
+  { step: "Return, invoice, asset record", body: "Devices are ready to collect with a consolidated VAT invoice listing each serial, the work done and the parts used - and an updated record of what is now in service." },
 ];
 
 const FAQS = [
   { q: "Do you offer corporate MacBook repair in Dubai?",
-    a: "Yes, corporate accounts with office collection and return, priority same-day turnaround, consolidated VAT invoices, and a 15% multi-device labour discount. We serve companies in Dubai Media City, JLT, DIFC, Downtown Dubai, Business Bay, and Dubai Internet City. WhatsApp 055 741 3706 to set up a corporate account." },
+    a: "Yes, corporate accounts with priority same-day turnaround, paid onsite visits subject to technician availability, consolidated VAT invoices, and a 15% multi-device labour discount. We serve companies in Dubai Media City, JLT, DIFC, Downtown Dubai, Business Bay, and Dubai Internet City. WhatsApp 055 741 3706 to set up a corporate account." },
   { q: "Can you repair multiple MacBooks at once for our office?",
-    a: "Yes, we handle batches of 3 to 20 MacBooks in one booking. One collection, one return, one VAT invoice listing all device serial numbers, repair types, and costs. 15% labour discount applied automatically to batches of 3 or more devices." },
-  { q: "Do you come to our office to collect MacBooks for repair?",
-    a: "Yes, free office collection and return across all Dubai Mainland commercial areas. WhatsApp 055 741 3706 with your office address, device count, and fault descriptions. We schedule a collection time that minimises team disruption." },
+    a: "Yes, we handle batches of 3 to 20 MacBooks in one booking. One drop-off, one VAT invoice listing all device serial numbers, repair types, and costs. 15% labour discount applied automatically to batches of 3 or more devices." },
+  { q: "Do you come to our office?",
+    a: "Yes, as a paid onsite visit, subject to technician availability. WhatsApp 055 741 3706 with your office address, device count and the faults, and we quote the visit before booking. Anything that needs the bench, like a screen or board repair, comes back to our Media City workshop." },
   { q: "How fast can you repair a fleet of office MacBooks?",
-    a: "Screen, battery, keyboard, and trackpad repairs are same-day, devices collected in the morning, repaired, and returned the following morning. Logic board repairs take 2–5 business days. We prioritise corporate collections to minimise staff downtime." },
+    a: "Screen, battery, keyboard, and trackpad repairs are usually same-day when the machine reaches us in the morning. Logic board repairs take 2–5 business days. Corporate jobs get priority on the bench to cut staff downtime." },
   { q: "Can you provide VAT invoices for corporate MacBook repair?",
     a: "Yes, all corporate repairs include a consolidated VAT-compliant invoice with each device's serial number, repair type, parts used, and cost. Invoices are issued in AED and can be sent by email to your accounts team." },
   { q: "Do you offer an annual MacBook maintenance contract for companies?",
     a: "Yes, the Annual Maintenance Contract (AMC) covers scheduled servicing, battery health checks, fan cleaning and thermal paste replacement, priority repair scheduling, and discounted parts. Pricing depends on fleet size. See /annual-maintenance-contract-dubai or WhatsApp for a quote." },
-  { q: "What areas in Dubai do you collect corporate MacBooks from?",
-    a: "Dubai Media City, JLT, JBR, Downtown Dubai, Business Bay, DIFC, Jumeirah Lake Towers, Al Quoz, Deira, Bur Dubai, Dubai Internet City, Dubai Silicon Oasis, and all Dubai Mainland commercial zones. Collection is free." },
+  { q: "How do we get several MacBooks to your workshop?",
+    a: "Send a staff member with the batch, or book a same-day courier app and WhatsApp us the tracking link. We're at Concord Tower, Dubai Media City, across from Media City Metro with parking on site. When the work is done, collect the batch or book a courier to send it back." },
   { q: "How do you handle confidential company data during a repair?",
     a: "Machines are worked on at one bench by one technician rather than passed between hands, and we do not browse or copy company data beyond what the repair or recovery requires. If you need the drive wiped before the device is returned or disposed of, we do it and confirm in writing." },
   { q: "An employee left and nobody can log into their MacBook. Can you unlock it?",
@@ -86,7 +86,7 @@ const FAQS = [
   { q: "Do you need a PO, and can you onboard as a vendor?",
     a: "Yes to both. We can work against a purchase order and complete standard vendor-onboarding paperwork, including trade licence and VAT registration details. Send what your accounts team needs and we will return it." },
   { q: "Will our whole team be without laptops while you repair them?",
-    a: "No. Fleets are collected in waves that we agree with you first, so part of the team is always working. For larger accounts, loaner units can be arranged as part of a maintenance contract." },
+    a: "No. Fleets come in waves that we agree with you first, so part of the team is always working. For larger accounts, loaner units can be arranged as part of a maintenance contract." },
   { q: "What if a device is not worth repairing?",
     a: "We will say so, with the reason, rather than quote work that does not make economic sense. We do not sell hardware, so we have no incentive to push you toward a replacement - or away from one." },
 ];
@@ -99,7 +99,7 @@ export default function CorporateMacBookRepair() {
   useSeo({
     title: "Corporate MacBook Repair Dubai. Fleet Service, VAT Invoice | AMC Available",
     description:
-      "Corporate MacBook repair Dubai. Office collection & return, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706.",
+      "Corporate MacBook repair Dubai. Paid onsite visits, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706.",
     path: "/corporate-macbook-repair-dubai",
   });
 
@@ -118,7 +118,7 @@ export default function CorporateMacBookRepair() {
           tone="dark"
           eyebrow="Corporate MacBook repair · Dubai · Fleet service"
           title="Corporate MacBook Repair Dubai"
-          subtitle="Office collection & return. Same-day turnaround. VAT invoices. 15% multi-device discount. AMC available. Concord Tower, Media City."
+          subtitle="Paid onsite visits on request. Same-day turnaround. VAT invoices. 15% multi-device discount. AMC available. Concord Tower, Media City."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Building2 size={14} aria-hidden /> Corporate accounts available</span>
@@ -139,7 +139,7 @@ export default function CorporateMacBookRepair() {
           <QuickAnswer
             tone="dark"
             question="Do you offer corporate MacBook repair in Dubai?"
-            answer="Yes, corporate MacBook repair in Dubai with office collection and return, same-day turnaround for common repairs, consolidated VAT invoices per batch, and 15% labour discount for 3+ devices. We serve companies in Media City, JLT, DIFC, Downtown, Business Bay, and all Dubai Mainland. WhatsApp 055 741 3706."
+            answer="Yes, corporate MacBook repair in Dubai with paid onsite visits (subject to technician availability), same-day turnaround for common repairs, consolidated VAT invoices per batch, and 15% labour discount for 3+ devices. Our workshop is in Dubai Media City. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -203,7 +203,7 @@ export default function CorporateMacBookRepair() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Set up a corporate MacBook repair account</h2>
-              <p className="text-[15px] text-text-muted">Office collection · Priority turnaround · VAT invoices · 15% multi-device discount · AMC available.</p>
+              <p className="text-[15px] text-text-muted">Onsite visits · Priority turnaround · VAT invoices · 15% multi-device discount · AMC available.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
@@ -228,7 +228,7 @@ export default function CorporateMacBookRepair() {
           <h2 className="text-[28px] md:text-[32px] mb-md">How a fleet repair actually runs</h2>
           <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
             The thing that worries an office manager is not the repair - it is ten people without laptops
-            on the same day. Fleets are collected in waves so that never happens.
+            on the same day. Fleets come in waves so that never happens.
           </p>
           <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
             {FLEET_PROCESS.map((f, i) => (

@@ -42,7 +42,7 @@ const FAQS = [
   { q: "How much does iMac screen replacement cost in Dubai?",
     a: "iMac screen replacement cost depends on the model, with the 27\" iMac costing more than the 21.5\". The repair includes the screen panel, glass, and adhesive seal, and takes 1–2 days due to panel sourcing. Message us on WhatsApp with your model for the exact price." },
   { q: "Do you offer free iMac diagnosis in Dubai?",
-    a: "Yes, free diagnosis on all iMac models. Bring it in to Concord Tower, Dubai Media City or schedule free pickup across Dubai Mainland. You receive a written quote with fault description, part cost, and labour cost before any work starts. No obligation to proceed." },
+    a: "Yes, free diagnosis on all iMac models. Bring it in to Concord Tower, Dubai Media City, where there is parking on site, or WhatsApp photos of the fault first. You receive a written quote with fault description, part cost, and labour cost before any work starts. No obligation to proceed." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [10, 16, 22, 27];
@@ -130,7 +130,7 @@ export default function IMacRepairCost() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a free iMac repair quote</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis, walk in or book free pickup across Dubai. Written quote before any work starts.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis, walk in to our Media City workshop. Written quote before any work starts.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

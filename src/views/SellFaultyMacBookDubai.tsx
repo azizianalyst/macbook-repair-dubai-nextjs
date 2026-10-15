@@ -3,7 +3,7 @@ import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import {
   Star, MessageCircle, Phone, Droplets, Cpu, PowerOff, MonitorX,
-  Wallet, Truck, ClipboardCheck, Recycle, CheckCircle2, BadgeDollarSign,
+  Wallet, ClipboardCheck, Recycle, CheckCircle2, BadgeDollarSign,
 } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/blocks/LeadForm";
@@ -39,7 +39,7 @@ const FAULTS = [
 const STEPS = [
   { title: "Tell us what you have", body: "Send the model, age, storage and what's wrong on WhatsApp - a photo helps. Working or faulty, we want to see it.", icon: MessageCircle },
   { title: "Get a free valuation", body: "Shafiq Ahmed sends a real, technician-confirmed offer - usually in under 10 minutes during shop hours. No lowball bots, no obligation.", icon: ClipboardCheck },
-  { title: "Free collection, same-day payment", body: "Accept the offer and we collect free anywhere in Dubai. Get paid same day in cash or take it as credit against a repair or another device.", icon: Wallet },
+  { title: "Bring it in, same-day payment", body: "Accept the offer and bring the device to our Dubai Media City workshop. Get paid same day in cash or take it as credit against a repair or another device.", icon: Wallet },
 ];
 
 // What we buy.
@@ -57,10 +57,10 @@ const FAQS = [
     a: "It depends on the model, age, storage and how far the corrosion has spread, but liquid damage is rarely a write-off to us. Because we repair at component level in-house, we can recover value others can't - so we pay more than a generic scrap buyer. Every offer is confirmed by a real technician, never a fixed bot figure." },
   { q: "How does the valuation work?",
     a: "Four things set the offer: the model, the device's age, its condition (working, minor damage, or faulty) and the storage capacity. Newer Apple Silicon Macs and higher-storage configs are worth the most, but even an older or faulty unit gets a fair, honest number. Send the details on WhatsApp for an exact quote." },
-  { q: "Is collection really free across Dubai?",
-    a: "Yes - free collection anywhere in Dubai once you accept the offer, at no cost to you. You don't need to leave home or office. We confirm a time on WhatsApp and come to you." },
+  { q: "Where do I bring the faulty device, and do I need an appointment?",
+    a: "No appointment needed. Bring it to Office #45, 10th Floor, Concord Tower in Dubai Media City, across from the Media City Metro station, with parking on site. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm. Agree the offer on WhatsApp first." },
   { q: "How and when do I get paid?",
-    a: "Same day. Once we've collected and confirmed the device matches what you described, you're paid in cash or by transfer that day. You can also take the value as credit against a repair or toward another Apple device instead of cash." },
+    a: "Same day. Once you bring the device in and we confirm it matches what you described, you're paid in cash or by transfer that day. You can also take the value as credit against a repair or toward another Apple device instead of cash." },
   { q: "Should I erase my data before selling a faulty Mac?",
     a: "If the Mac still boots, sign out of your Apple Account and erase it first - see our guide on erasing a Mac before giving it away. If it's dead or water-damaged and won't start, we'll handle the data securely and walk you through removing Activation Lock so the sale completes cleanly." },
   { q: "Is it better to repair my MacBook or sell it as faulty?",
@@ -75,7 +75,7 @@ const buyServiceLd = {
   name: "We Buy Faulty & Damaged Apple Devices in Dubai",
   serviceType: "Used & faulty Apple device buying / trade-in",
   description:
-    "We buy faulty, water-damaged, cracked and dead Apple devices - MacBook, iMac, Mac mini, iPhone and iPad - across Dubai. Free valuation, free collection and same-day cash payment or repair credit.",
+    "We buy faulty, water-damaged, cracked and dead Apple devices - MacBook, iMac, Mac mini, iPhone and iPad - across Dubai. Free valuation, walk-in inspection at our Media City workshop and same-day cash payment or repair credit.",
   provider: { "@id": `${SITE.url}/#localbusiness`, sameAs: "https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" },
   areaServed: {
     "@type": "City",
@@ -92,7 +92,7 @@ const buyServiceLd = {
     "@type": "Offer",
     priceCurrency: "AED",
     description:
-      "Free technician-confirmed valuation for working or faulty Apple devices, free collection across Dubai, and same-day payment in cash or repair credit.",
+      "Free technician-confirmed valuation for working or faulty Apple devices, inspection at our Dubai Media City workshop, and same-day payment in cash or repair credit.",
     availability: "https://schema.org/InStock",
     areaServed: { "@type": "City", name: "Dubai" },
     acceptedPaymentMethod: [
@@ -113,7 +113,7 @@ export default function SellFaultyMacBookDubai() {
     {
       title: "Sell Faulty or Dead MacBook Dubai - We Buy Broken Apple",
       description:
-        "Water-damaged, cracked, dead logic board or won't turn on? We buy faulty MacBook, iMac, iPhone & iPad across Dubai. Free valuation, free collection, same-day cash. WhatsApp 055 741 3706.",
+        "Water-damaged, cracked or dead? We buy faulty MacBook, iMac, iPhone & iPad in Dubai. Free valuation, walk in, same-day cash. WhatsApp 055 741 3706.",
       path: PATH,
     },
     [
@@ -134,7 +134,7 @@ export default function SellFaultyMacBookDubai() {
         tone="dark"
         eyebrow="Buy & trade-in · faulty devices welcome · Dubai"
         title="We Buy Faulty & Damaged Apple Devices in Dubai"
-        subtitle="Water-damaged, cracked, dead logic board, won't turn on? We still buy it. Recover real value from a MacBook, iMac, iPhone or iPad that other buyers reject - free valuation, free collection across Dubai, same-day payment."
+        subtitle="Water-damaged, cracked, dead logic board, won't turn on? We still buy it. Recover real value from a MacBook, iMac, iPhone or iPad that other buyers reject - free valuation, walk-in workshop in Dubai Media City, same-day payment."
         ctaLabel="Get my free valuation"
       >
         {/* Hero renders the CTA pair itself (ctaLabel above). Only the trust line goes here. */}
@@ -143,14 +143,14 @@ export default function SellFaultyMacBookDubai() {
           <span>·</span>
           <span>Working or faulty</span>
           <span>·</span>
-          <span>Free collection · same-day cash</span>
+          <span>Walk in · same-day cash</span>
         </p>
       </Hero>
 
       <QuickAnswer
         tone="dark"
         question="Can I sell a broken MacBook in Dubai?"
-        answer="Yes. We buy water-damaged, cracked, dead or non-booting MacBooks, iMacs, iPhones and iPads that other buyers turn down. You get a free valuation, free collection across Dubai and same-day payment in cash - or you can take the value as credit against a repair or another device."
+        answer="Yes. We buy water-damaged, cracked, dead or non-booting MacBooks, iMacs, iPhones and iPads that other buyers turn down. You get a free valuation, bring it to our Dubai Media City workshop and get same-day payment in cash - or you can take the value as credit against a repair or another device."
       />
 
       <USPStrip tone="dark" />
@@ -166,7 +166,7 @@ export default function SellFaultyMacBookDubai() {
           dead logic board, a cracked screen or simply won't turn on, we buy Apple devices that
           others write off - because we repair at component level in-house and can recover value
           a generic buyer can't. Tell us the model and what's wrong and you'll get a{" "}
-          <strong>free, technician-confirmed valuation</strong>, <strong>free collection anywhere in Dubai</strong>{" "}
+          <strong>free, technician-confirmed valuation</strong>, <strong>a quick walk-in visit to our Media City workshop</strong>{" "}
           and <strong>same-day payment in cash or repair credit</strong>. No obligation, no lowball bots - every
           offer is set by a real engineer, not an algorithm.
         </p>
@@ -265,7 +265,7 @@ export default function SellFaultyMacBookDubai() {
       {/* How it works - 3 steps */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-lg flex items-center gap-sm">
-          <Truck size={28} className="text-accent" aria-hidden /> How it works - 3 simple steps
+          <ClipboardCheck size={28} className="text-accent" aria-hidden /> How it works - 3 simple steps
         </h2>
         <ol className="grid gap-md md:grid-cols-3 list-none p-0 m-0">
           {STEPS.map((s, i) => {
@@ -297,7 +297,7 @@ export default function SellFaultyMacBookDubai() {
 
       {/* Location */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg">Across Dubai - we come to you</h2>
+        <h2 className="text-[28px] md:text-[32px] mb-lg">Visit our Dubai Media City workshop</h2>
         <LocationBlock tone="dark" />
       </section>
 
@@ -307,8 +307,8 @@ export default function SellFaultyMacBookDubai() {
           <div className="relative flex flex-col items-start gap-md">
           <h2 className="text-text text-[28px] md:text-[32px] max-w-[32ch]">Turn a broken Apple device into cash today</h2>
           <p className="text-text-muted text-[16px] max-w-[62ch]">
-            Send the model and a photo on WhatsApp. Free technician-confirmed valuation, free collection
-            anywhere in Dubai, and same-day payment in cash or repair credit - working or faulty.
+            Send the model and a photo on WhatsApp. Free technician-confirmed valuation, a walk-in visit
+            to our Media City workshop, and same-day payment in cash or repair credit - working or faulty.
           </p>
           <div className="flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

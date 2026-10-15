@@ -19,7 +19,7 @@ import ipadModels from "@/content/ipad-models.json";
 import desktopModels from "@/content/mac-desktop-models.json";
 import imacModels from "@/content/imac-models.json";
 import { CITIES } from "@/content/cities";
-import { AREAS } from "@/content/areas";
+import { AREAS, areaMetaTitle, areaMetaDescription } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { CATEGORIES, postsInCategory } from "@/content/blog-posts";
 import { META_OVERRIDES, type PageMetaOverride } from "./page-meta-overrides.generated";
@@ -51,7 +51,7 @@ function macbookMeta(m: ModelEntry): Meta {
 function ipadMeta(m: ModelEntry): Meta {
   return {
     title: `${m.name} Repair Dubai - Request a Quote`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery and charging-port repair with free diagnosis, free pickup and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery and charging-port repair with free diagnosis at our Media City workshop and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
@@ -77,24 +77,20 @@ for (const m of MAC_DESKTOP) MAP[`/${m.slug}`] = macDesktopMeta(m);
 for (const m of IMAC) MAP[`/${m.slug}`] = imacMeta(m);
 
 for (const c of CITIES) {
-  const collectVerb = c.collectionModel === "pickup" ? "free door-to-door pickup" : "free courier collection";
-  MAP[`/macbook-repair-${c.slug}`] = {
-    title: `MacBook Repair ${c.city} - Free Collection & Delivery`,
-    description: `MacBook repair in ${c.city} via ${collectVerb} to our Dubai Media City workshop - ${c.turnaround}, written warranty up to 12 months. No branch needed. Call 055 741 3706.`,
-  };
+  // Per-city title/description live in cities.ts (seoTitle/seoDescription); CityPageTemplate reads the same fields.
+  MAP[`/macbook-repair-${c.slug}`] = { title: c.seoTitle, description: c.seoDescription };
 }
 
 for (const a of AREAS) {
-  MAP[`/macbook-repair-${a.slug}`] = {
-    title: `MacBook Repair ${a.area} - Free Pickup & Delivery`,
-    description: `MacBook repair in ${a.area}: free pickup, same-day on most repairs, written warranty up to 12 months. Free diagnosis. Call 055 741 3706.`,
-  };
+  // Built in areas.ts so the template's schema names use the same strings.
+  MAP[`/macbook-repair-${a.slug}`] = { title: areaMetaTitle(a), description: areaMetaDescription(a) };
 }
 
 for (const a of DATA_RECOVERY_AREAS) {
+  // Mirrors DataRecoveryAreaTemplate; the per-area description lives in data-recovery-areas.ts.
   MAP[`/mac-data-recovery-${a.slug}`] = {
-    title: `Mac Data Recovery ${a.area} - Free Collection`,
-    description: `Mac data recovery in ${a.area}: soldered-SSD, T2 and Apple-silicon recovery at board level. Free diagnosis, no recovery no fee. Call 055 741 3706.`,
+    title: `Mac Data Recovery ${a.area} - No Recovery, No Fee`,
+    description: a.seoDescription,
   };
 }
 
@@ -120,7 +116,7 @@ MAP["/imac-screen-repair-dubai"] = {
 };
 MAP["/ipod-touch-7-repair-dubai"] = {
   title: "iPod touch (7th gen) Repair Dubai - Battery & Screen",
-  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Free pickup, free diagnostic, warranty up to 12 months.",
+  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Walk-in workshop, free diagnostic, warranty up to 12 months.",
 };
 
 // Intentional OVERRIDES that must beat an existing route-meta.generated.ts entry

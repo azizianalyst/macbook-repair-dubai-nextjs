@@ -62,7 +62,7 @@ export default function MacBookProM1BatteryReplacement() {
         },
         {
           title: "Swollen cell on older M1 Pro",
-          body: "The 69.6 Wh cell on the 14-inch can swell if kept near full charge for extended periods at high ambient temperature, which is common in Dubai offices. A swollen cell lifts the trackpad or bows the bottom case. Stop using it immediately and WhatsApp us for same-day pickup. Replacement before the trackpad cracks.",
+          body: "The 69.6 Wh cell on the 14-inch can swell if kept near full charge for extended periods at high ambient temperature, which is common in Dubai offices. A swollen cell lifts the trackpad or bows the bottom case. Stop using it immediately, keep it off the charger and bring it to the workshop the same day. Replacement before the trackpad cracks.",
         },
       ]}
       faqs={[

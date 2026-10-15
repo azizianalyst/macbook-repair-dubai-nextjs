@@ -116,7 +116,7 @@ const APPLE_ESTIMATES: { repair: string; apple: string; warranty: string }[] = [
 
 const STEPS = [
   { t: "Send the model and fault on WhatsApp", b: "A photo helps. We tell you what is likely involved." },
-  { t: "Free diagnosis", b: "Walk in or use free pickup. We find the actual fault, not just the symptom." },
+  { t: "Free diagnosis", b: "Walk in, no appointment needed. We find the actual fault, not just the symptom." },
   { t: "Written quote, then your approval", b: "The price is confirmed in writing before any work starts. If a part is not genuine Apple, the quote says so." },
   { t: "Repair, test and warranty", b: "Tested before it goes back, with a written warranty for the repair type. No fix, no charge." },
 ];
@@ -301,7 +301,7 @@ export default function AppleRepair() {
               Our Apple repair shop is Office #45, 10th floor, Concord Tower, Al Sufouh, Dubai Media City, across from the Media City Metro station, with paid parking. Walk in Monday to Saturday, 9 am to 7 pm; on Sunday the workshop is closed, but WhatsApp us and we will book you in for Monday.
             </p>
             <p className="m-0">
-              Need an Apple fix in Dubai but cannot come in? Pickup and delivery are free across Dubai mainland. Macs are collected by courier from <Link to="/macbook-repair-abu-dhabi" className={linkCls}>Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>Sharjah</Link> and repaired at the same bench; we have no branches. Area pickup details are on <Link to="/apple-repair-near-me-dubai" className={linkCls}>Apple repair near me</Link>. Looking for Apple's own service or an authorised centre? Read <Link to="/apple-service-center-dubai" className={linkCls}>our Apple service center page</Link>.
+              Cannot come in? Send it to us by courier: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. It reaches the bench within the day. Customers from <Link to="/macbook-repair-abu-dhabi" className={linkCls}>Abu Dhabi</Link> and <Link to="/macbook-repair-sharjah" className={linkCls}>Sharjah</Link> walk in or courier their Macs to the same bench; we have no branches. Directions and parking are on <Link to="/apple-repair-near-me-dubai" className={linkCls}>Apple repair near me</Link>. Looking for Apple's own service or an authorised centre? Read <Link to="/apple-service-center-dubai" className={linkCls}>our Apple service center page</Link>.
             </p>
           </div>
         </section>

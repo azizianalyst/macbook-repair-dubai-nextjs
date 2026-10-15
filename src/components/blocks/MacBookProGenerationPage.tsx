@@ -8,7 +8,7 @@ import {
   MousePointer2, Code2, HardDrive, Cpu, Thermometer,
   Power, Gauge, AlertTriangle, Snowflake, Wifi, Bluetooth, Volume2,
   Link2, ShieldCheck, Clock, Award, Wrench,
-  Search, BadgeCheck, Truck, Flame,
+  Search, BadgeCheck, MapPin, Flame,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
@@ -68,7 +68,7 @@ const SERVICES: { Icon: LucideIcon; title: string; body: string; href: string }[
 ];
 
 const PROCESS = [
-  { Icon: Search,     title: "Free diagnosis",    body: "Drop in, ship, or book a free pickup. We run a full diagnostic — hardware and software — at no charge." },
+  { Icon: Search,     title: "Free diagnosis",    body: "Walk in to our Media City workshop, or WhatsApp a photo first. We run a full diagnostic — hardware and software — at no charge." },
   { Icon: BadgeCheck, title: "Fixed quote",        body: "You receive a transparent AED quote before any work begins. No surprises, no hidden add-ons." },
   { Icon: Wrench,     title: "Expert repair",      body: "Your MacBook Pro is repaired by a specialist with 14+ years on Apple hardware, using genuine-grade parts." },
   { Icon: ShieldCheck, title: "Quality check",    body: "Every repair passes a 25-point QC before return. Battery cycle, screen, keyboard, ports, thermals — all verified." },
@@ -89,7 +89,7 @@ const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,      title: "Same-day service",          body: "Most MacBook Pro repairs — screen, battery, keyboard — are done within a few hours, not days." },
   { Icon: Award,      title: "20+ years experience",      body: "Our technicians have repaired Apple hardware since 2004. We&apos;ve seen every fault, fixed every model." },
   { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
-  { Icon: Truck,      title: "Free pickup Dubai-wide",    body: "Can&apos;t come to us? We collect your MacBook Pro for free across Dubai and return it repaired." },
+  { Icon: MapPin,      title: "Walk-in workshop, Media City",    body: "Bring your MacBook Pro to Concord Tower, across from Media City Metro, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck, title: "No fix, no charge",         body: "If we can&apos;t fix it, you pay nothing. Our no-fix guarantee removes the risk from your repair." },
   { Icon: Search,     title: "Free diagnosis",            body: "Every MacBook Pro gets a full diagnosis at no cost. We find the real fault — not guess at it." },
 ];
@@ -226,7 +226,7 @@ export default function MacBookProGenerationPage(p: MacBookProGenerationProps) {
             {[
               { Icon: Search, label: "Free diagnosis" },
               { Icon: BadgeCheck, label: "No fix, no charge" },
-              { Icon: Truck, label: "Free pickup Dubai-wide" },
+              { Icon: MapPin, label: "Walk-in workshop, Media City" },
               { Icon: ShieldCheck, label: "Genuine & OEM-grade parts" },
               { Icon: Clock, label: "Same-day service" },
               { Icon: Star, label: "Trusted since 2004" },
@@ -438,7 +438,7 @@ export default function MacBookProGenerationPage(p: MacBookProGenerationProps) {
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
                 <span>✓ Warranty up to 12 months</span>
-                <span>✓ Free pickup Dubai-wide</span>
+                <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
             <div className="flex flex-col gap-[48px]">

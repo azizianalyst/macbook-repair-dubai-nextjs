@@ -28,7 +28,7 @@ const COVERAGE = [
 ];
 
 const STEPS = [
-  { n: "1", title: "Assess your device", body: "Bring in your MacBook or book free pickup across Dubai. We check its model, age, condition and history so cover matches the actual device." },
+  { n: "1", title: "Assess your device", body: "Bring your MacBook to our Media City workshop. We check its model, age, condition and history so cover matches the actual device." },
   { n: "2", title: "Choose your cover", body: "Pick the level that fits - accidental damage, liquid, screen, extended warranty, theft or loss, or a corporate fleet plan for several devices." },
   { n: "3", title: "Pay the annual fee", body: "Your annual fee is quoted after the assessment, per device. We confirm it on WhatsApp in writing before anything starts - no fixed public price." },
   { n: "4", title: "Claim via WhatsApp", body: "If something happens, message us on WhatsApp with the issue. We arrange repair or the claim process under the terms in your plan document." },
@@ -37,7 +37,7 @@ const STEPS = [
 const WHY = [
   { title: "Repaired in-house since 2004", body: "The same Dubai workshop that has serviced Apple hardware since 2004 handles every covered repair - not a third party you never meet." },
   { title: "Written repair warranty", body: "Every repair carried out under your plan is backed by our standard written warranty for that repair type, up to 12 months." },
-  { title: "Free pickup across Dubai", body: "Covered devices are collected and delivered free across Dubai, so a claim does not mean a trip across the city." },
+  { title: "Walk in at Media City", body: "Bring a covered device to Concord Tower, across from the Media City Metro station, or send it with a same-day courier you book." },
 ];
 
 const FAQS = [
@@ -59,7 +59,7 @@ const FAQS = [
   },
   {
     q: "How do I make a claim?",
-    a: "Message us on WhatsApp at 055 741 3706 with your device and the issue. We arrange repair or guide you through the claim and replacement process under the terms in your plan. Free pickup and delivery across Dubai is available for covered devices.",
+    a: "Message us on WhatsApp at 055 741 3706 with your device and the issue. We arrange repair or guide you through the claim and replacement process under the terms in your plan. You can walk in with the device or send it to us with a same-day courier you book.",
   },
   {
     q: "Is this the same as AppleCare?",
@@ -75,7 +75,7 @@ const FAQS = [
   },
   {
     q: "How long does the assessment take?",
-    a: "A device assessment is quick - bring the MacBook in or book free pickup, and we check model, age and condition the same day in most cases. You then get your annual fee quoted on WhatsApp before deciding.",
+    a: "A device assessment is quick - bring the MacBook in, and we check model, age and condition the same day in most cases. You then get your annual fee quoted on WhatsApp before deciding.",
   },
   {
     q: "How do I start a plan?",
@@ -131,7 +131,7 @@ export default function MacBookInsurance() {
           <span>·</span>
           <span>Repaired in-house since 2004</span>
           <span>·</span>
-          <span>Free pickup across Dubai</span>
+          <span>Walk in at Dubai Media City</span>
         </p>
       </Hero>
 

@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Zap, Clock, MapPin, Star, Phone, MessageCircle, CheckCircle2, Truck, Shield } from "lucide-react";
+import { Zap, Clock, MapPin, Star, Phone, MessageCircle, CheckCircle2, Shield } from "lucide-react";
 import { QuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { PRESETS } from "@/data/form-presets";
@@ -36,33 +36,33 @@ const NOT_SAME_DAY = [
   { label: "Data recovery",      note: "Depends on drive state, 1 to 7 days." },
 ];
 
-const ZONES = [
-  { area: "Dubai Media City / JLT / JBR",      pickup: "Free", time: "Same day" },
-  { area: "Downtown / Business Bay / DIFC",     pickup: "Free", time: "Same day" },
-  { area: "Jumeirah / Umm Suqeim / Al Quoz",   pickup: "Free", time: "Same day" },
-  { area: "Deira / Bur Dubai / Karama",         pickup: "Free", time: "Same day" },
-  { area: "Dubai Hills / Mirdif / Al Barsha",   pickup: "Free", time: "Same day" },
-  { area: "Sharjah / Abu Dhabi",                pickup: "Quoted on request", time: "Next day" },
+const VISIT = [
+  { label: "Address",          detail: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City" },
+  { label: "Getting here",     detail: "Across from the Media City Metro station" },
+  { label: "Parking",          detail: "On site at Concord Tower" },
+  { label: "Mon–Thu and Sat",  detail: "9 am – 7 pm" },
+  { label: "Friday",           detail: "9 am – 12 pm and 2 pm – 7 pm" },
+  { label: "Sunday",           detail: "Closed" },
 ];
 
 const STEPS = [
   { icon: MessageCircle, title: "WhatsApp us",       body: "Send a photo and model number to 055 741 3706. Get a quote in under 4 minutes during business hours." },
-  { icon: Truck,         title: "Free pickup",        body: "A courier collects your MacBook from anywhere across Dubai Mainland, no delivery charge." },
+  { icon: MapPin,        title: "Walk in",            body: "Bring your MacBook to Concord Tower, Dubai Media City, across from the Media City Metro station. No appointment needed, parking on site." },
   { icon: Zap,           title: "Same-day repair",    body: "Screen, battery, keyboard, trackpad, and ports are all repaired the same day your device arrives." },
-  { icon: Shield,        title: "Warranty handed over", body: "Written warranty of up to 12 months. MacBook returned the same day or next morning." },
+  { icon: Shield,        title: "Warranty handed over", body: "Written warranty of up to 12 months. Collect your MacBook the same day or next morning." },
 ];
 
 const FAQS = [
   { q: "Which MacBook repairs are genuinely same-day in Dubai?",
     a: "Screen replacement (MacBook Air and Pro 13\"), battery, keyboard, trackpad, USB-C charging port, fan cleaning, thermal paste, and macOS software repair are all same-day when your MacBook arrives before 2 pm. Logic board, water damage, and 16\" Liquid Retina XDR screens take 1–5 days." },
-  { q: "How does the free MacBook pickup work in Dubai?",
-    a: "WhatsApp 055 741 3706 with your model and fault. We confirm a fixed price, then dispatch a courier to collect from your home or office across Dubai Mainland. Repair is done the same day; MacBook returned next morning. No charge for pickup or delivery." },
+  { q: "Do I need an appointment for a same-day MacBook repair?",
+    a: "No. Walk in to Office #45, 10th Floor, Concord Tower, Dubai Media City, across from the Media City Metro station, with parking on site. WhatsApp 055 741 3706 first with your model, the fault and a photo, and we confirm a fixed price and check the part is in stock before you travel." },
   { q: "Do you do MacBook repair at home in Dubai?",
-    a: "We pick up and return the MacBook for free across Dubai Mainland, same practical outcome as an on-site visit. The workshop at Concord Tower, Dubai Media City has the tools, parts stock, and cleanroom conditions for quality repairs that a home visit can't match. For corporate bulk repairs (5+ devices), on-site visits can be arranged." },
+    a: "Yes, as a paid onsite visit when a technician is free, with the charge quoted on WhatsApp 055 741 3706 before you book. Same-day screen, battery and keyboard jobs are best done at the workshop at Concord Tower, Dubai Media City, which has the tools, parts stock and clean bench conditions a home visit can't match. Can't come in? Book any same-day courier app and send it to us." },
   { q: "How much does same-day MacBook repair cost in Dubai?",
     a: "It depends on your model and which part failed. Diagnosis is free. WhatsApp 055 741 3706 with your exact model and fault for a fixed quote, no hidden fees, no surprises." },
   { q: "What time do I need to drop off my MacBook for same-day repair?",
-    a: "Drop-off or pickup before 2 pm guarantees same-day completion for screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Saturday 9 am to 7 pm at Concord Tower, Dubai Media City." },
+    a: "Drop off before 2 pm for same-day completion on screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm, at Concord Tower, Dubai Media City. Sunday closed." },
   { q: "Is a same-day repair covered by a warranty?",
     a: "Yes, every repair carries a written warranty of up to 12 months, including same-day jobs. Battery replacement carries a 3-month warranty with an 80% capacity guarantee. The warranty card lists the repair, the parts used, and the serial number." },
   { q: "Can you repair a MacBook the same day if bought in the USA or UK?",
@@ -77,7 +77,7 @@ export default function SameDayMacBookRepair() {
   useSeo({
     title: "Same-Day MacBook Repair Dubai. Screen, Battery, Keyboard",
     description:
-      "Same-day MacBook repair in Dubai. Screen, battery and keyboard. Free pickup across Dubai. Drop off by 2 pm, back the same day. Call 055 741 3706.",
+      "Same-day MacBook repair in Dubai. Screen, battery and keyboard. Walk in to our Media City workshop by 2 pm, collect the same day. Call 055 741 3706.",
     path: "/same-day-macbook-repair-dubai",
   });
 
@@ -96,14 +96,14 @@ export default function SameDayMacBookRepair() {
           tone="dark"
           eyebrow="Same-day MacBook repair · Dubai · Since 2004"
           title="Same-Day MacBook Repair Dubai"
-          subtitle="Screen, battery, keyboard, trackpad and charging port. Free pickup across Dubai. Drop off before 2 pm, back the same day."
+          subtitle="Screen, battery, keyboard, trackpad and charging port. Walk in to our Dubai Media City workshop before 2 pm and collect it the same day."
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
             <span>·</span>
             <span>All Air & Pro models</span>
             <span>·</span>
-            <span>Free pickup · Same-day return</span>
+            <span>Walk-in · Same-day collection</span>
           </p>
         </Hero>
 
@@ -124,7 +124,7 @@ export default function SameDayMacBookRepair() {
           <QuickAnswer
             tone="dark"
             question="Can I get my MacBook repaired the same day in Dubai?"
-            answer="Yes. Screen, battery, keyboard, trackpad and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, drop off or free pickup before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty up to 12 months. WhatsApp 055 741 3706."
+            answer="Yes. Screen, battery, keyboard, trackpad and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, when you walk in before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty up to 12 months. WhatsApp 055 741 3706."
           />
         </section>
 
@@ -191,27 +191,25 @@ export default function SameDayMacBookRepair() {
           </div>
         </section>
 
-        {/* Pickup zones */}
+        {/* Visiting the workshop */}
         <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-          <h2 className="text-[28px] md:text-[32px] mb-sm">Free pickup across Dubai</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Where do I bring my MacBook for a same-day repair?</h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
-            We collect from home or office at no charge. WhatsApp your location, courier arrives within 2–4 hours.
+            Walk in, no appointment needed. WhatsApp a photo and your model first and we confirm the price and part before you set off.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-[14px] border-collapse">
               <thead>
                 <tr className="border-b border-border text-left text-text-muted">
-                  <th className="py-sm pr-lg font-semibold">Area</th>
-                  <th className="py-sm pr-lg font-semibold">Pickup fee</th>
-                  <th className="py-sm font-semibold">Turnaround</th>
+                  <th className="py-sm pr-lg font-semibold">Visit</th>
+                  <th className="py-sm font-semibold">Details</th>
                 </tr>
               </thead>
               <tbody>
-                {ZONES.map((zone) => (
-                  <tr key={zone.area} className="border-b border-border">
-                    <td className="py-sm pr-lg font-medium">{zone.area}</td>
-                    <td className="py-sm pr-lg text-text-muted">{zone.pickup}</td>
-                    <td className="py-sm text-text-muted">{zone.time}</td>
+                {VISIT.map((row) => (
+                  <tr key={row.label} className="border-b border-border">
+                    <td className="py-sm pr-lg font-medium">{row.label}</td>
+                    <td className="py-sm text-text-muted">{row.detail}</td>
                   </tr>
                 ))}
               </tbody>

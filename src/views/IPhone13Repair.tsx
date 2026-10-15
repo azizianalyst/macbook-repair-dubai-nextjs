@@ -82,9 +82,9 @@ export default function IPhone13Repair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Concord Tower, Dubai Media City. No appointment." },
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
-        { title: "QC + return",          body: "OLED, MagSafe, cameras and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + handover",        body: "OLED, MagSafe, cameras and Face ID tested, signed warranty, ready to collect." },
       ]}
       warrantyDays={365}
       warrantyHeadline

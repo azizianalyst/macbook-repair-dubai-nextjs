@@ -21,7 +21,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
       category="Honest guide · iPhone"
       h1="iPhone Repair Near Me Dubai - How to Choose Wisely"
       hook="10 questions to ask before handing your iPhone to anyone."
-      quickAnswer="Before any Dubai shop touches your iPhone, verify: physical address, years in business, Google reviews, written warranty, genuine parts policy, same-day repair, free diagnosis, pickup option, transparent pricing, and Apple specialisation. Refuse cash-only, no-receipt, no-warranty shops. We have operated from Concord Tower Media City since 2004 and tick all ten."
+      quickAnswer="Before any Dubai shop touches your iPhone, verify: physical address, years in business, Google reviews, written warranty, genuine parts policy, same-day repair, free diagnosis, courier option, transparent pricing, and Apple specialisation. Refuse cash-only, no-receipt, no-warranty shops. We have operated from Concord Tower Media City since 2004 and tick all ten."
       author={{ name: "Ali", role: "Workshop manager" }}
       datePublished="2026-04-27"
       dateModified="2026-04-27"
@@ -100,13 +100,12 @@ export default function BlogIPhoneRepairNearMeDubai() {
             pricing tactic.
           </p>
 
-          <h3>8. Pickup/delivery service?</h3>
+          <h3>8. Can you send it by courier?</h3>
           <p>
-            Door-to-door pickup is a nice-to-have, especially for Marina / Downtown / JLT residents
-            saving the Media City drive. The shop should send a uniformed courier with company ID, a
-            signed receipt at handover, and a delivery confirmation when the repair is done. Expect a
-            modest courier fee, waived above a repair-value threshold (we offer free pickup on larger
-            repairs). Message us on WhatsApp for today's courier cost to your area.
+            Not everyone can drive to Media City in the middle of a work day. Ask whether the shop
+            takes devices sent by a courier you book, and whether it confirms the serial number when
+            the phone arrives. We don't collect or deliver ourselves. Book any same-day courier app to
+            Concord Tower, hand the iPhone to the driver, and WhatsApp us the tracking link.
           </p>
 
           <h3>9. Pricing transparent?</h3>
@@ -152,7 +151,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },
               { model: "6. Same-day repair", ours: "Screen, battery, back glass: 30-90 min. Logic board: 1-3 days" },
               { model: "7. Free diagnosis", ours: "Free, with written quote, no obligation" },
-              { model: "8. Pickup/delivery", ours: "Pickup within Dubai, free on larger repairs - message us for today's courier cost" },
+              { model: "8. Courier option", ours: "Walk in, or send it by a same-day courier you book" },
               { model: "9. Transparent pricing", ours: "Same price every customer - message us on WhatsApp for today's exact quote" },
               { model: "10. Apple specialisation", ours: "Apple-only since founding - MacBook, iPhone, iPad, Watch, iMac, Mac Pro, Mac Mini" },
             ]}
@@ -174,11 +173,11 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <li><strong>Car</strong>: free visitor parking at Concord Tower (P3 level).</li>
             <li><strong>From Marina</strong>: 8 minutes via Sheikh Zayed Road → Al Sufouh exit.</li>
             <li><strong>From Downtown</strong>: 22 minutes via SZR.</li>
-            <li><strong>From Sharjah / Deira</strong>: 35-50 minutes - book pickup instead.</li>
+            <li><strong>From Sharjah / Deira</strong>: 35-50 minutes - or send it by a same-day courier you book.</li>
           </ul>
           <p>
             WhatsApp +971 55 741 3706 to confirm we have your part in stock before driving over, or
-            book a free pickup.
+            send the phone by courier.
           </p>
         </>
       }

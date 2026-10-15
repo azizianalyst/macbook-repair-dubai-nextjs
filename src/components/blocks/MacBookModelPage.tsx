@@ -294,7 +294,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     },
     {
       q: `My ${model.name} got wet - what should I do first?`,
-      a: `Switch it off straight away, ${hasMagSafe ? "unplug the charger (MagSafe or USB-C)" : "unplug the USB-C charger"} and don't try to turn it on or charge it. Corrosion spreads across the logic board while it has power, and the SSD is soldered to that board, so protecting the board is also how your files are saved.${liquidIssue ? ` On this model: ${lc(liquidIssue)}.` : ""} Message us on WhatsApp for a free diagnosis and free pickup across Dubai; liquid-damage work carries a 15-day warranty.`,
+      a: `Switch it off straight away, ${hasMagSafe ? "unplug the charger (MagSafe or USB-C)" : "unplug the USB-C charger"} and don't try to turn it on or charge it. Corrosion spreads across the logic board while it has power, and the SSD is soldered to that board, so protecting the board is also how your files are saved.${liquidIssue ? ` On this model: ${lc(liquidIssue)}.` : ""} Message us on WhatsApp for a free diagnosis, then bring it straight to our Media City workshop; liquid-damage work carries a 15-day warranty.`,
     },
     {
       q: isAppleSilicon && model.family === "air"
@@ -306,18 +306,18 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair in Dubai - screen, battery, keyboard & logic board. Free pickup, up to 12-month warranty. WhatsApp us for today's price.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair in Dubai - screen, battery, keyboard & logic board. Walk-in workshop, up to 12-month warranty. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Keyboard & Logic Board`}
-      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Free pickup across Dubai.`}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Walk in at Media City.`}
       startingPrice={0}
       timeline={turnaroundSummary(turnaround)}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -337,7 +337,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}Message us on WhatsApp for today's exact price on the most common service. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today's exact price on the most common service. Walk in at Media City, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -454,7 +454,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop",   body: "Free pickup across Dubai mainland or drop in 9am-7pm." },
+        { title: "Walk in to our Media City workshop",   body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
         { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
       ]}

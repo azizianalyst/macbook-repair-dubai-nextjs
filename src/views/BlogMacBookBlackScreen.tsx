@@ -219,7 +219,7 @@ export default function BlogMacBookBlackScreen() {
         },
         {
           q: "Do you really do a free diagnostic for a black screen?",
-          a: "Yes, the diagnostic is free with no obligation. Bring the MacBook to Concord Tower in Dubai Media City and we'll tell you whether it's the panel, the backlight, the GPU or the board, and quote a fixed price before you commit. No fix, no charge. Free pickup is available across Dubai mainland.",
+          a: "Yes, the diagnostic is free with no obligation. Bring the MacBook to Concord Tower in Dubai Media City and we'll tell you whether it's the panel, the backlight, the GPU or the board, and quote a fixed price before you commit. No fix, no charge. There's parking on site, and no appointment is needed.",
         },
       ]}
       relatedLinks={[

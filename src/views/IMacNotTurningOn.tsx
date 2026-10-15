@@ -6,11 +6,11 @@ export default function IMacNotTurningOn() {
     <DevicePageTemplate
       family="imac"
       seoTitle="iMac Not Turning On - Dubai Repair | Free Diagnosis"
-      seoDescription="iMac won't turn on? Free diagnosis in Dubai. PSU failures, SMC reset, T2 lockup, fan-only boots, GPU faults. Free pickup across the city. WhatsApp for your price - 055 741 3706."
+      seoDescription="iMac won't turn on? Free diagnosis in Dubai. PSU failures, SMC reset, T2 lockup, fan-only boots, GPU faults. Walk in at Dubai Media City. WhatsApp for your price - 055 741 3706."
       path="/imac-not-turning-on-dubai"
       eyebrow="iMac not turning on"
       h1="iMac Not Turning On - Dubai Repair"
-      subtitle="From a fan that spins with no chime to a totally dead chassis - we've seen every variant. Free pickup, free diagnosis, honest answer in 24 hours. Message us on WhatsApp for today's exact price on your iMac."
+      subtitle="From a fan that spins with no chime to a totally dead chassis - we've seen every variant. Walk in to our Media City workshop for a free diagnosis and an honest answer in 24 hours. Message us on WhatsApp for today's exact price on your iMac."
       startingPrice={400}
       timeline="1-3 days"
       whatsappPrefill="Hi, my iMac won't turn on - what happens when I press power:"
@@ -48,12 +48,12 @@ export default function IMacNotTurningOn() {
         { title: "Sleeps and won't wake", body: "SMC fault, sleep-image corruption, or display flex issue. SMC reset + diagnostic, with deeper faults priced after diagnosis - message us for the exact price." },
       ]}
       steps={[
-        { title: "WhatsApp what happens", body: "Describe exactly: do you hear a chime? Do fans spin? Is there any LED on the back? We narrow the cause to two or three possibilities before pickup." },
-        { title: "Free pickup", body: "Driver collects in soft-padded transport. Free across Dubai mainland, all areas." },
+        { title: "WhatsApp what happens", body: "Describe exactly: do you hear a chime? Do fans spin? Is there any LED on the back? We narrow the cause to two or three possibilities before you bring it in." },
+        { title: "Bring it in", body: "Parking on site at Concord Tower, Dubai Media City. Or book a same-day courier yourself to send it over and WhatsApp us the tracking link." },
         { title: "Free bench diagnosis", body: "Power-rail probe, PSU output check, T2 status read, startup-disk scan. Done in under an hour. Open quote, no obligation." },
         { title: "Approval", body: "We send a short voice note explaining what's wrong, what the fix costs, and how long it takes. You decide." },
         { title: "Repair", body: "PSU swap, board work, SSD recovery - whichever applies. Same-day for PSU and SMC, 1-3 days for board work." },
-        { title: "Free delivery + dated warranty", body: "Back to you in soft-padded transport with a dated written warranty card and a description of what was fixed." },
+        { title: "Collect + dated warranty", body: "Ready to collect with a dated written warranty card and a description of what was fixed." },
       ]}
       warrantyDays={15}
       warrantyBullets={[
@@ -65,7 +65,7 @@ export default function IMacNotTurningOn() {
         ["Diagnosis fee",         "Free, refundable if no work",      "Paid deposit"],
         ["PSU swap (27\" Intel)", "Price on request - part included", "Often quoted a costly board-swap"],
         ["Same-day fixes",        "Yes - PSU and SMC jobs",            "No - minimum 1 week typical"],
-        ["Pickup & delivery",     "Free, Dubai mainland",              "Drop-in only"],
+        ["Getting it to us",      "Walk in, or send by courier",       "Drop-in only"],
         ["T2 SSD preservation",   "Yes - original board paired",       "Often unit-replaced, full restore"],
         ["Warranty",              "15 days written, extendable to 6 months",            "12 months"],
       ]}
@@ -75,7 +75,7 @@ export default function IMacNotTurningOn() {
         { q: `My 27" iMac (2019) was fine yesterday and today won't turn on. What's the most likely cause?`, a: "Power supply, by a mile. Those PSUs fail at 5-7 years and Dubai heat accelerates it. 1 day turnaround and we have the part in stock - message us on WhatsApp for the exact price." },
         { q: "Will I lose my data?", a: "No, in almost every case. Power supply, SMC, sensor, port - none of those touch the SSD. Even on logic-board work we keep your original SSD paired to your original board. The only exception is a failed SSD itself, where we attempt data recovery first." },
         { q: "What's a T2 chip and why does it complicate things?", a: "T2 is Apple's secure subsystem on 2018+ Intel Macs. It encrypts the SSD with a key that lives on the T2 itself. If we replace the logic board, the T2 changes and the SSD becomes unreadable forever. Our process keeps the original board and only repairs the failed component on it." },
-        { q: "Do you charge if you can't fix it?", a: "No. Free diagnosis, free pickup, free delivery if you decide not to proceed. The only thing we ask is a short WhatsApp confirmation either way." },
+        { q: "Do you charge if you can't fix it?", a: "No. Free diagnosis, and no charge if you decide not to proceed. The only thing we ask is a short WhatsApp confirmation either way." },
         { q: `My iMac chimes but the screen stays black. Is this a screen problem?`, a: "Sometimes - backlight failure on 27\" Retina shows exactly this. But it can also be GPU initialisation. Free diagnosis tells you which, then we message you the exact price for a backlight repair or GPU rework." },
         { q: "Should I try anything before sending it in?", a: "Two things: (1) hard reboot - hold the power button for 10 seconds, release, wait 10, press once. (2) SMC reset on Intel iMacs - unplug, wait 15 seconds, plug back in, then press power. Fixes maybe 5% of cases. If those don't work, send it in." },
       ]}

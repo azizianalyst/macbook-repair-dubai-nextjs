@@ -56,7 +56,7 @@ const PROCESS = [
   { title: "Repair Plan", body: "We provide a complete repair plan that includes an estimate of how much it will cost." },
   { title: "Fixing", body: "Our skilled techs carefully fix your Apple display by following the plan and using high-quality spare parts where required." },
   { title: "Quality Check", body: "Once the repair is complete, we conduct a thorough quality check to ensure your device functions properly and meets our high standards." },
-  { title: "Cleaning and Packing", body: "We clean your Apple device and package it in a protective box so you can pick it up or have it delivered." },
+  { title: "Cleaning and Packing", body: "We clean your Apple device and package it in a protective box, ready to collect from the workshop or to hand to a courier you book." },
 ];
 
 const SIGNS = [
@@ -74,7 +74,7 @@ const MODELS = [
   { title: "Pro Display XDR", body: "The 32-inch Pro Display XDR is a high-end 6K Retina monitor for professional use, with Extreme Dynamic Range (XDR) and a wide colour gamut. For a broken screen, brightness issues, or connection problems, our team knows its specific needs and built-in features." },
 ];
 
-const WHY = ["On-site repair", "Genuine or quality-tested screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "Repair techs with years of experience", "Free same-day pick-up and delivery"];
+const WHY = ["Paid on-site visits, subject to technician availability", "Genuine or quality-tested screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "Repair techs with years of experience", "Walk-in workshop in Dubai Media City"];
 
 // The three named "testimonials" that lived here (Salman Ahmed, Mohammed Khalid, Fatima
 // Hassan) did not exist in the verified Google review library, so they were removed in the
@@ -129,14 +129,14 @@ export default function AppleDisplayRepair() {
           <span>·</span>
           <span>Studio Display &amp; Pro Display XDR</span>
           <span>·</span>
-          <span>Same-day pick-up &amp; delivery</span>
+          <span>Walk in at Dubai Media City</span>
         </p>
       </Hero>
 
       <QuickAnswer
         tone="dark"
         question="Can you repair an Apple Studio Display in Dubai?"
-        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and pickup and delivery across Dubai are free."
+        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and you can walk in across from Media City Metro or send the display with a same-day courier you book."
       />
 
       <USPStrip tone="dark" />
@@ -249,8 +249,9 @@ export default function AppleDisplayRepair() {
         <FAQAccordion items={FAQS} injectSchema />
         <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+          <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM</p>
+          <p className="text-[15px] text-text-muted">Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM</p>
+          <p className="text-[15px] text-text-muted">Sunday: closed. Paid onsite visits are quoted on WhatsApp and subject to technician availability.</p>
         </div>
       </section>
 

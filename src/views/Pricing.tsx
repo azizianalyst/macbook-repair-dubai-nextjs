@@ -1,6 +1,6 @@
 "use client";
 import { withSlash } from "@/lib/utils";
-import { Search, ShieldCheck, Banknote, Clock, Check, X, Truck, Sparkles, AlertTriangle } from "lucide-react";
+import { Search, ShieldCheck, Banknote, Clock, Check, X, MapPin, Sparkles, AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { imageForRoute } from "@/lib/page-images";
@@ -41,7 +41,7 @@ const HOW_PRICING_WORKS = [
 const COMPARISON = [
   { row: "Diagnosis fee",          us: "Free",                     apple: "Inspection by appointment" },
   { row: "Turnaround time",        us: "Same day to 5 days",      apple: "Often several days, depending on parts" },
-  { row: "Free pickup & delivery", us: "Yes - across Dubai",      apple: "No - drop-off only" },
+  { row: "Walk in, no appointment", us: "Yes - Dubai Media City",  apple: "Appointment advised" },
   { row: "Warranty",               us: "Up to 12 months (by repair)",         apple: "90 days on repairs" },
   { row: "MacBook screen repair",  us: "Quote after free diagnosis", apple: "No published price - quoted after inspection" },
   { row: "MacBook battery",        us: "Quote after free diagnosis", apple: "AED 589-959 + VAT, current models (Apple list)" },
@@ -70,8 +70,8 @@ const PRICING_FAQS = [
     a: "SSD upgrade labour plus a fresh macOS install, quoted together (plus the drive). A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
   { q: "Is data recovery extra on top of the repair price?",
     a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment. On T2 and Apple silicon Macs the storage is encrypted to the Mac's own chip, so recovery means repairing the original board until it runs; that board-level work sits at the top of the range." },
-  { q: "Do you charge for pickup and delivery?",
-    a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Pickup to Sharjah and Abu Dhabi carries a trip charge, confirmed before we dispatch. Pickup window: Monday to Saturday, 9 am to 5 pm." },
+  { q: "Can I send my device instead of coming in?",
+    a: "Yes. Book any same-day courier app yourself, hand the device to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop or book a courier to send it back. A paid onsite visit is also possible, subject to technician availability, with the charge quoted on WhatsApp first." },
   { q: "What happens if the same fault returns inside the warranty?",
     a: "Bring the device back for a free inspection. If the same fault has returned, the original technician - usually Usman for MacBook board work or Hamza for iPhone screens - re-opens the unit and redoes the repair free of charge." },
 ];
@@ -158,7 +158,7 @@ export default function Pricing() {
             {[
               "Genuine Apple parts when available, premium-grade aftermarket otherwise",
               "Written warranty up to 12 months on parts and workmanship (15 days to 12 months by repair)",
-              "Free pickup and delivery across Dubai Mainland",
+              "Walk-in service at Concord Tower, Dubai Media City - no appointment needed",
               "Full diagnostic test and post-repair quality check",
               "Free internal cleaning, dust removal, and thermal repaste on MacBook repairs",
               "Original packaging or protective box for safe transport",
@@ -181,7 +181,7 @@ export default function Pricing() {
               "Replacement parts for discontinued models (some pre-2012 Macs no longer have OEM stock)",
               "T2 and M-series Secure Enclave bypass - encrypted data on dead boards may be unrecoverable",
               "100% liquid damage success rate - actual recovery rate is 80-90% depending on exposure time",
-              "Warranty on accidental damage during normal use after pickup",
+              "Warranty on accidental damage during normal use after collection",
               "Replacement of cosmetic dents, scratches, or chassis damage (cosmetic-only repair quoted separately)",
               "Refunds on parts already installed if you change your mind after approval",
             ].map((item) => (
@@ -341,9 +341,9 @@ function PriceSection({
         </table>
       </ScrollHintTable>
       <p className="mt-sm text-[12px] text-text-faint mono flex items-center gap-2">
-        <Sparkles size={12} aria-hidden /> Free pickup & delivery across Dubai
+        <MapPin size={12} aria-hidden /> Walk in at Dubai Media City, no appointment
         <span className="text-text-faint">·</span>
-        <Truck size={12} aria-hidden /> Same-day return on most repairs
+        <Sparkles size={12} aria-hidden /> Same-day turnaround on most repairs
       </p>
     </section>
   );

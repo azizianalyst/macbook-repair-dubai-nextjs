@@ -144,14 +144,14 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, across from the metro with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnostic, Up to 12-Month Warranty`}
-      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Free pickup, free diagnostic, warranty up to 12 months.`}
+      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Walk-in workshop, free diagnostic, warranty up to 12 months.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, Up to 12-Month Warranty`}
@@ -175,7 +175,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are still available.`}
-            {" "}Message us on WhatsApp for today's price on the most common service. Free pickup, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today's price on the most common service. Walk in at Media City, written warranty up to 12 months.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -270,7 +270,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop", body: "Free pickup across Dubai mainland. Or drop in 9am-7pm." },
+        { title: "Walk in to our Media City workshop", body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts. We'll also tell you when replacement is the smarter call." },
         { title: "Repair + written warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written warranty of up to 12 months, depending on the repair." },
       ]}

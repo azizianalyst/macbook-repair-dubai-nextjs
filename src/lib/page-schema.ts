@@ -29,7 +29,7 @@ import { CITIES } from "@/content/cities";
 const AREA_BY_SLUG = new Map(AREAS.map((a) => [a.slug, a]));
 const DR_AREA_BY_SLUG = new Map(DATA_RECOVERY_AREAS.map((a) => [a.slug, a]));
 // Other-emirate city pages (/macbook-repair-sharjah, /macbook-repair-abu-dhabi, …): the Service
-// is delivered by courier from Dubai but the page serves that city, so areaServed must name it.
+// is carried out at the Dubai workshop but the page serves that city, so areaServed must name it.
 // Declaring "Dubai" on the Sharjah page (the previous hard-coded value) contradicted the page.
 const CITY_BY_SLUG = new Map(CITIES.map((c) => [c.slug, c]));
 
@@ -216,12 +216,12 @@ export function schemaForPath(path: string): unknown[] {
   const placeNodes = area
     ? [place({
         areaName: area.area,
-        description: `MacBook repair service area covering ${area.area}, Dubai — free pickup and delivery from our Concord Tower workshop in Dubai Media City (${area.driveTime} away).`,
+        description: `MacBook repair service area covering ${area.area}, Dubai — customers walk in to our Concord Tower workshop in Dubai Media City (${area.driveTime} away).`,
       })]
     : drArea
       ? [place({
           areaName: drArea.area,
-          description: `Mac data-recovery service area covering ${drArea.area}, Dubai — free collection to our Concord Tower workshop in Dubai Media City (${drArea.driveTime} away).`,
+          description: `Mac data-recovery service area covering ${drArea.area}, Dubai — customers bring the drive or Mac to our Concord Tower workshop in Dubai Media City (${drArea.driveTime} away).`,
         })]
       : [];
 

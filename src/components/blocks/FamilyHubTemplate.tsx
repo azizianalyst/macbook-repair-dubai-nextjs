@@ -181,7 +181,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
           <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
             <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
             <p className="text-text-muted text-[16px] max-w-[60ch]">
-              Send the model and a photo of the issue. Free pickup across Dubai mainland. Written warranty of up to 12 months, depending on the repair.
+              Send the model and a photo of the issue, then walk in to our Media City workshop. Written warranty of up to 12 months, depending on the repair.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">

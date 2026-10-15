@@ -158,12 +158,12 @@ export default function GuideCopyPasteMacBook() {
           <h2>Need hands-on help in Dubai?</h2>
           <p>
             If a faulty keyboard or trackpad is getting in the way of everyday tasks like copy and
-            paste, we can help. Bring your MacBook to our Dubai Media City workshop, or use our
-            free pickup across Dubai.{" "}
+            paste, we can help. Bring your MacBook to our Dubai Media City workshop, no
+            appointment needed.{" "}
             <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook Repair Dubai
             </Link>{" "}
-            has been fixing Apple devices since 2004 - free diagnosis, free pickup, and a written warranty of up to 12 months,
+            has been fixing Apple devices since 2004 - free diagnosis and a written warranty of up to 12 months,
             depending on the repair. Call or WhatsApp 055 741 3706, or get in touch via our{" "}
             <Link to="/contact" className="text-accent font-semibold hover:underline">contact page</Link>.
           </p>

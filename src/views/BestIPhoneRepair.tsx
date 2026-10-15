@@ -38,9 +38,9 @@ const CRITERIA = [
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "90 days (screens)", faceId: "Preserved", pickup: "Free" },
-  { shop: "Apple Store / AASP",        screen: "Price on request", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", pickup: "No" },
-  { shop: "Karama / generic shops",    screen: "Price on request", time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", pickup: "No" },
+  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "90 days (screens)", faceId: "Preserved", walkIn: "Yes, no appointment" },
+  { shop: "Apple Store / AASP",        screen: "Price on request", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", walkIn: "Usually by appointment" },
+  { shop: "Karama / generic shops",    screen: "Price on request", time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", walkIn: "Varies" },
 ];
 
 const WHY_US = [
@@ -48,7 +48,7 @@ const WHY_US = [
   "OLED panels with True Tone calibration for iPhone 11–17",
   "Face ID preserved on every screen replacement we do",
   "Screen in 40 minutes, battery in 30 minutes",
-  "Free pickup and delivery across Dubai Mainland",
+  "Walk-in workshop across from Media City Metro, parking on site",
   "Written warranty up to 12 months",
   "Free diagnosis, no fix, no charge",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews · Since 2004`,
@@ -64,9 +64,9 @@ const FAQS = [
   { q: "Is it better to use Apple Store or an independent shop for iPhone repair in Dubai?",
     a: "Under AppleCare+ the Apple Store is hard to beat. Out of warranty, compare quotes: Apple lists its UAE out-of-warranty screen prices on its support site (for example AED 1,279 plus VAT for an iPhone 17 or iPhone 18 Pro), and we quote before any work so you can compare. For logic board issues, independent specialists can repair at component level, where Apple's out-of-warranty route is a unit replacement. Message us on WhatsApp for today's exact price on your model." },
   { q: "How fast can you fix my iPhone in Dubai?",
-    a: "Screen replacement: 40 minutes. Battery replacement: 30 minutes. Back glass: same day. Face ID repair: same day. Water damage: 1–2 days. Logic board: 2–5 days. Drop in before 4 pm or request free pickup from anywhere in Dubai Mainland, screen and battery jobs return the same day." },
+    a: "Screen replacement: 40 minutes. Battery replacement: 30 minutes. Back glass: same day. Face ID repair: same day. Water damage: 1–2 days. Logic board: 2–5 days. Walk in before 4 pm and screen and battery jobs are done the same day." },
   { q: "Do you offer iPhone repair at home in Dubai?",
-    a: "We offer free pickup and delivery, a courier collects your iPhone from your home or office anywhere in Dubai Mainland, repair is completed at our Concord Tower workshop, and the phone is returned the same day. This is safer than a home-visit repair, which can't carry the tools and microscopes needed for quality work." },
+    a: "Most iPhone repairs are best done at our Concord Tower workshop, where the tools and microscopes are. If you can't come in, book any same-day courier app to send the iPhone to us and WhatsApp the tracking link. A paid onsite visit can also be arranged when a technician is free, with the charge quoted on WhatsApp first." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [1, 4, 8, 14, 20, 25];
@@ -117,7 +117,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, free pickup across Dubai. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
+            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, walk in across from Media City Metro. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
           />
         </section>
 
@@ -148,7 +148,7 @@ export default function BestIPhoneRepair() {
                     <th className="py-sm pr-lg font-semibold">Time</th>
                     <th className="py-sm pr-lg font-semibold">Warranty</th>
                     <th className="py-sm pr-lg font-semibold">Face ID</th>
-                    <th className="py-sm font-semibold">Free pickup</th>
+                    <th className="py-sm font-semibold">Walk-in</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -159,7 +159,7 @@ export default function BestIPhoneRepair() {
                       <td className="py-sm pr-lg text-text-muted">{row.time}</td>
                       <td className="py-sm pr-lg text-text-muted">{row.warranty}</td>
                       <td className="py-sm pr-lg text-text-muted">{row.faceId}</td>
-                      <td className="py-sm text-text-muted">{row.pickup}</td>
+                      <td className="py-sm text-text-muted">{row.walkIn}</td>
                     </tr>
                   ))}
                 </tbody>

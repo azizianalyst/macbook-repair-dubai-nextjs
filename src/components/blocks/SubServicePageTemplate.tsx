@@ -91,7 +91,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
   // written warranty"). Multi-tier hubs opt in to the headline wording instead.
   const warrantyText = p.warrantyHeadline ? WARRANTY.headlineLong : warrantyClause(p.warrantyDays);
   // Unlock/diagnostic pages (warrantyDays 0) carry no parts warranty, and warrantyClause(0) already
-  // reads "free pickup and a written quote" - so CTA copy that leads with free pickup must not repeat it.
+  // reads "a written quote before any work" - so CTA copy must not repeat the quote line.
   const hasWarranty = Boolean(p.warrantyHeadline || warrantyLabel(p.warrantyDays));
   const warrantyHeading = p.warrantyHeadline
     ? WARRANTY.headlineLong[0].toUpperCase() + WARRANTY.headlineLong.slice(1)
@@ -226,7 +226,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               startingPrice={p.startingPrice}
               timeline={p.timeline}
               whatsappMessage={p.whatsappPrefill}
-              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland${hasWarranty ? `, ${warrantyText}` : " and a written quote"}.`}
+              blurb={`Send the model and a photo of the issue, then walk in to our Media City workshop${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " for a written quote"}.`}
               showWarranty={hasWarranty}
             />
 
@@ -279,7 +279,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <CtaBand
           className="mt-3xl"
           headline={`Book your ${p.serviceName} on WhatsApp`}
-          description={`Message us for today's exact price on your model. Free pickup across Dubai mainland${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " and a written quote"}.`}
+          description={`Message us for today's exact price on your model, then walk in to our Media City workshop${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " for a written quote"}.`}
         />
 
       </div>

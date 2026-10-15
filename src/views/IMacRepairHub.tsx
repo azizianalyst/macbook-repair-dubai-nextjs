@@ -18,15 +18,15 @@
  *    <PageSchema/>, as on every Azizi-template page. The old client-side title said
  *    "Certified", which the truth gate forbids.
  *
- * Kept true facts: model coverage, free diagnosis, free pickup, on-site diagnosis and
- * minor repairs, 3–4 hour in-stock timings, 1–2 business days for ordered parts, 27-inch
+ * Kept true facts: model coverage, free diagnosis, walk-in workshop, paid on-site diagnosis and
+ * minor repairs (subject to technician availability), 3–4 hour in-stock timings, 1–2 business days for ordered parts, 27-inch
  * RAM door (up to 128GB on 2019/2020), soldered M-series RAM/SSD, 2017 5K GPU faults.
- * Keywords covered: imac repair dubai / in dubai / near me / abu dhabi-adjacent pickup,
+ * Keywords covered: imac repair dubai / in dubai / near me / abu dhabi-adjacent courier,
  * imac screen replacement, imac upgrade (RAM, SSD), imac parts, imac not turning on.
  */
 import {
   HardDrive, Fan, ShieldCheck, Camera, Droplets, Stethoscope,
-  Search, Truck, Wrench,
+  Search, MapPin, Wrench,
 } from "lucide-react";
 
 import { AziziMoneyPage, InLink, waHref } from "@/components/azizi/AziziMoneyPage";
@@ -99,7 +99,7 @@ const FAQS = [
   },
   {
     q: "Do you offer on-site iMac repair in Dubai?",
-    a: "Yes. A technician can come to your home or office for diagnosis and minor repairs. Bigger jobs come back to the Concord Tower workshop, with free pickup and return anywhere in mainland Dubai. From Abu Dhabi we arrange courier collection for Macs, usually the next day; confirm the timing on WhatsApp before booking.",
+    a: "Yes, as a paid visit, subject to technician availability. A technician can come to your home or office for diagnosis and minor repairs; the charge is quoted on WhatsApp before booking. Bigger jobs need the Concord Tower workshop: carry the iMac in (parking on site), or book any same-day courier app and WhatsApp us the tracking link.",
   },
   {
     q: "Should I repair or replace an old iMac?",
@@ -138,7 +138,7 @@ export default function IMacRepairHub() {
         eyebrow: "iMac specialist · 24-inch M1 to M4 · 21.5- and 27-inch Intel",
         title: "iMac Repair in Dubai for Every Model, Intel to M4",
         subtitle:
-          "Screen, power supply, logic board, SSD and RAM work on every iMac, from the 27-inch 5K Intel models to the current 24-inch M4. Free diagnosis, and free pickup so you never have to carry it to Media City.",
+          "Screen, power supply, logic board, SSD and RAM work on every iMac, from the 27-inch 5K Intel models to the current 24-inch M4. Free diagnosis at our Media City walk-in workshop, with parking on site.",
         image: "/images/real/lab/imac-front-dubai.jpg",
         imageAlt:
           "24-inch iMac on a desk at MacBook Repair Dubai in Dubai Media City, showing its About This Mac window",
@@ -154,7 +154,7 @@ export default function IMacRepairHub() {
       quickAnswer={{
         question: "Where can I get an iMac repaired in Dubai?",
         answer:
-          "MacBook Repair Dubai repairs every iMac — the current 24-inch M4, the 24-inch M1 and M3, and the 21.5- and 27-inch Intel models — at its workshop in Concord Tower, Dubai Media City. Diagnosis is free, you approve a written quote before work starts, and we collect iMacs free from anywhere in mainland Dubai.",
+          "MacBook Repair Dubai repairs every iMac — the current 24-inch M4, the 24-inch M1 and M3, and the 21.5- and 27-inch Intel models — at its workshop in Concord Tower, Dubai Media City. Diagnosis is free, you approve a written quote before work starts, and you can walk in or send the iMac by a same-day courier you book.",
       }}
 
       keyTakeaways={{
@@ -190,7 +190,7 @@ export default function IMacRepairHub() {
         ),
         benefits: [
           { icon: Search, title: "Free diagnosis", body: "The fault is found and explained before any quote." },
-          { icon: Truck, title: "Free pickup", body: "Collected from anywhere in mainland Dubai." },
+          { icon: MapPin, title: "Walk-in workshop", body: "Concord Tower, across from Media City Metro, with parking on site." },
           { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
           { icon: Wrench, title: "Honest upgrade advice", body: "We say so when an iMac cannot be upgraded." },
         ],
@@ -329,7 +329,7 @@ export default function IMacRepairHub() {
         rows: [
           { feature: "Diagnosis", left: "Free, no appointment", right: "Appointment required" },
           { feature: "Older Intel iMacs", left: "Repaired while parts exist", right: "Refused once classed obsolete" },
-          { feature: "Getting it there", left: "Free pickup in mainland Dubai", right: "You carry it to the store" },
+          { feature: "Getting it there", left: "Walk in, courier you book, or paid onsite visit", right: "You carry it to the store" },
           { feature: "If it cannot be fixed", left: "No charge", right: "Diagnostic fee may apply" },
           { feature: "Inside Apple warranty", left: "We send you to Apple", right: "The right choice" },
         ],
@@ -370,8 +370,8 @@ export default function IMacRepairHub() {
       reviewsHeading="What iMac customers say"
 
       finalCta={{
-        eyebrow: "No need to carry it in",
-        headline: "Free iMac diagnosis, free pickup across Dubai",
+        eyebrow: "Walk in or send it by courier",
+        headline: "Free iMac diagnosis at our Media City workshop",
         description: "Send the size, year and what it is doing, and we will tell you what is involved before you commit.",
         primary: { label: "Message us on WhatsApp", href: waHref(WA_MSG) },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: `tel:${NAP.phoneE164}` },

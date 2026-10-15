@@ -162,12 +162,12 @@ export default function BlogIPhoneRepairVsAppleCare() {
             rows={[
               { model: "Careful adult, case + protector, no past breaks", ours: "Skip AppleCare+", apple: "Keep the plan cost", note: "Pay-as-you-go when needed" },
               { model: "Accident-prone (1+ break per year)", ours: "Buy AppleCare+", apple: "Big saving on repairs", note: "Two screens covered" },
-              { model: "Parent giving iPhone to child / teen", ours: "Buy AppleCare+ Theft & Loss", apple: "Both accident + loss covered", note: "Peace of mind" },
+              { model: "Parent giving iPhone to child / teen", ours: "Buy AppleCare+ Theft & Loss", apple: "Both accident + loss covered", note: "Covers a lost or stolen phone" },
               { model: "Gym / sports / outdoor user", ours: "Buy AppleCare+", apple: "Sweat / drop incidents", note: "Battery + accident covered" },
               { model: "Travels internationally often", ours: "Buy AppleCare+ Theft & Loss", apple: "Loss / theft abroad covered", note: "AppleCare valid worldwide" },
               { model: "Plans to keep iPhone 4+ years", ours: "Subscription AppleCare+", apple: "Free battery year 3 onwards", note: "Worth it if no upgrade plan" },
               { model: "Plans to upgrade every 1-2 years", ours: "Skip - sell for resale", apple: "Mint condition resells higher", note: "Apple Trade-In or Cashify UAE" },
-              { model: "Has comprehensive home insurance with gadget rider", ours: "Skip Theft & Loss tier", apple: "Already covered", note: "Standard AppleCare+ for damage" },
+              { model: "Has home insurance with a gadget rider", ours: "Skip Theft & Loss tier", apple: "Already covered", note: "Standard AppleCare+ for damage" },
             ]}
           />
 

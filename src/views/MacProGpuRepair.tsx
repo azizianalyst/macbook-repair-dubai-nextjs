@@ -43,7 +43,7 @@ export default function MacProGpuRepair() {
         { title: "Module out, bench test",        body: "MPX module pulled, tested on our bench rig outside the Mac Pro chassis. Confirms whether the card or the chassis routing is the issue." },
         { title: "Repair or replace decision",    body: "Fan bearing or VRM failure: we repair at component level. GPU silicon failure: usually whole-module replacement, sometimes a careful reflow can recover it. We tell you the honest path and price." },
         { title: "Source genuine MPX or refurb",  body: "Apple MPX modules are scarce. We have refurbished W5700X and W5500X in stock most of the time. W6800X and Vega II Duo are special-order, 5-10 working days." },
-        { title: "Install + 24-hour burn-in",     body: "Module fitted, Mac Pro stress-tested under sustained GPU load (Final Cut render or DaVinci Resolve render) for 24 hours before pickup." },
+        { title: "Install + 24-hour burn-in",     body: "Module fitted, Mac Pro stress-tested under sustained GPU load (Final Cut render or DaVinci Resolve render) for 24 hours before you collect it." },
       ]}
       warrantyDays={15}
       warrantyBullets={[

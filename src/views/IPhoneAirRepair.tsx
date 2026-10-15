@@ -84,9 +84,9 @@ export default function IPhoneAirRepair() {
       ]}
       steps={[
         { title: "WhatsApp the fault",   body: "Photo or short clip. Quote in 4 minutes." },
-        { title: "Free pickup",          body: "Across Dubai mainland." },
+        { title: "Walk in",              body: "Concord Tower, Dubai Media City. No appointment needed." },
         { title: "Diagnose + repair",    body: "Standard same day; back glass + frame work 2-3 days." },
-        { title: "QC + return",          body: "ProMotion, AOD, MagSafe alignment, USB-C, single camera, frame straightness and Face ID tested, signed warranty, free delivery." },
+        { title: "QC + return",          body: "ProMotion, AOD, MagSafe alignment, USB-C, single camera, frame straightness and Face ID tested, signed warranty, ready to collect at the workshop." },
       ]}
       warrantyDays={365}
       warrantyHeadline

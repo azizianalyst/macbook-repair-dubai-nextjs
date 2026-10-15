@@ -89,7 +89,7 @@ const WHY = [
   "Some of our technicians have worked in the field for more than 10 years - and we don't charge a premium for their expertise. You don't pay extra for us to fix your device in Dubai.",
   "We focus on a personalised approach throughout the whole repair process and keep you informed until the problem is fixed.",
   "We never compromise on tools or workmanship. We pay more to get original parts, which is what keeps the quality of our fixes high - most repairs come with a warranty that lasts up to a year.",
-  "Our main goal is to make sure every customer is happy, and we do that by bringing the best services right to your door. After booking your Mac Pro repair in Dubai, you can easily monitor the technicians' progress until you receive your device back.",
+  "Our main goal is to make sure every customer is happy, and we do that by keeping you updated at every step. After booking your Mac Pro repair in Dubai, you can follow the technicians' progress until your Mac is ready to collect.",
 ];
 
 // Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
@@ -145,7 +145,7 @@ export default function MacProRepair() {
           <span>·</span>
           <span>Genuine parts</span>
           <span>·</span>
-          <span>Free pickup across Dubai</span>
+          <span>Walk in at Dubai Media City</span>
         </p>
       </Hero>
 
@@ -282,8 +282,9 @@ export default function MacProRepair() {
           <ReviewGrid reviews={reviews} tone="dark" />
           <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
             <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-            <p className="text-[15px] text-text-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-            <p className="text-[15px] text-text-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+            <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM</p>
+            <p className="text-[15px] text-text-muted">Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM</p>
+            <p className="text-[15px] text-text-muted">Sunday: closed. WhatsApp us and we will book you in for Monday.</p>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@
  *   - NO PRICES anywhere, per the hide-prices decision
  */
 import {
-  Monitor, Sun, Cable, Layers, Zap, Timer, ShieldCheck, Truck, Search,
+  Monitor, Sun, Cable, Layers, Zap, Timer, ShieldCheck, Search,
   Wrench, ClipboardCheck, PackageCheck, MapPin, Star, BadgeCheck, Laptop, HardDrive,
 } from "lucide-react";
 
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "Do you come to me, or do I bring the MacBook in?",
-    a: "Either. Walk into Office 45 on the 10th floor of Concord Tower during workshop hours with no appointment, or we collect free from anywhere in Dubai and deliver it back when it is done.",
+    a: "Bring it in. Walk into Office 45 on the 10th floor of Concord Tower during workshop hours with no appointment. If you cannot come in, send it by courier: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. A paid onsite visit is also possible, subject to technician availability; we quote the charge on WhatsApp first.",
   },
   {
     q: "What warranty do I get on a screen repair?",
@@ -137,7 +137,7 @@ export default function AziziTemplateDemo() {
           "Flickering or a dark band along the bottom is usually the flex cable, not the panel.",
           "A pink, green or purple tint is often a loose display cable and may need no new parts.",
           "True Tone is retained on genuine Apple panels, recalibrated to the original board serial.",
-          "Free collection and delivery anywhere in Dubai, or walk in without an appointment.",
+          "Walk in without an appointment, or WhatsApp a photo first for a quote.",
         ],
       }}
 
@@ -205,7 +205,7 @@ export default function AziziTemplateDemo() {
         intro: "Five steps from first message to handover, each with a real time attached rather than a vague promise.",
         steps: [
           { title: "Send the model and a photo", body: "Message us the serial from About This Mac and a picture of the damage. We come back with what is likely wrong and what it will take." },
-          { title: "Free diagnosis", body: "Drop in or we collect free from anywhere in Dubai. On-the-spot diagnosis takes about 15 minutes, with no fee and no obligation." },
+          { title: "Free diagnosis", body: "Walk in, no appointment needed. On-the-spot diagnosis takes about 15 minutes, with no fee and no obligation." },
           { title: "Panel swap under the microscope", body: "Lid removed, adhesive heated, panel disconnected, replacement seated and the eDP cable routed — all under magnification." },
           { title: "Calibration and cure", body: "True Tone recalibrates against the original board serial on genuine panels, then the lid press cures before the machine leaves the bench." },
           { title: "QC and handover", body: "Backlight uniformity, dead-pixel scan, hinge torque, lid sensor and cable strain all checked and signed off with your warranty card." },
@@ -312,7 +312,7 @@ export default function AziziTemplateDemo() {
         eyebrow: "MacBook screen repair",
         headline: "Send us the model and a photo of the damage",
         description:
-          "We come back with what is likely wrong and what it takes to fix. Diagnosis is free, collection across Dubai is free, and if we cannot fix it there is no charge.",
+          "We come back with what is likely wrong and what it takes to fix. Diagnosis is free, you can walk in without an appointment, and if we cannot fix it there is no charge.",
         primary: { label: "Get a quote on WhatsApp", href: NAP.whatsappUrl },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: `tel:${NAP.phoneE164}` },
       }}

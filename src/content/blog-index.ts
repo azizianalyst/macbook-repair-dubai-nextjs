@@ -120,7 +120,7 @@ export const BLOG_INDEX: BlogIndexEntry[] = [
   {"slug": "/blog/data-recovery-broken-macbook-2026", "title": "Data Recovery from Broken MacBook - Dubai 2026 Guide", "families": ["macbook"], "topics": ["data"], "date": "2026-04-26"},
   {"slug": "/blog/dubai-shopping-festival-apple-deals", "title": "Dubai Shopping Festival Apple Deals - Best Time to Buy", "families": ["general"], "topics": [], "date": "2026-04-29"},
   {"slug": "/blog/how-to-factory-reset-iphone-before-selling", "title": "How to Factory Reset iPhone Before Selling", "families": ["iphone"], "topics": ["sell"], "date": "2026-04-27"},
-  {"slug": "/blog/free-pickup-delivery-dubai-how-it-works", "title": "Free MacBook Pickup & Delivery Dubai - How It Works", "families": ["general"], "topics": [], "date": "2026-04-28"},
+  {"slug": "/blog/free-pickup-delivery-dubai-how-it-works", "title": "MacBook Repair Courier Dubai: How to Get Your Mac to Us", "families": ["general"], "topics": [], "date": "2026-04-28"},
   {"slug": "/blog/genuine-parts-vs-quality-alternative-explained", "title": "Genuine Apple Parts vs Alternatives - Honest Guide", "families": ["general"], "topics": ["buying", "comparison"], "date": "2026-04-28"},
   {"slug": "/blog/icloud-locked-iphone-what-to-do", "title": "iCloud Locked iPhone in Dubai - Your Real Options", "families": ["iphone"], "topics": ["unlock"], "date": "2026-04-26"},
   {"slug": "/blog/imac-not-turning-on-power-supply-issues", "title": "iMac Not Turning On? Power Supply Issues Explained", "families": ["imac"], "topics": ["power"], "date": "2026-04-25"},
