@@ -1,7 +1,19 @@
-import type { NextConfig } from "next";
-import { REDIRECTS } from "./redirects.generated";
+// Plain ESM (not next.config.ts) on purpose: Hostinger's build server has glibc < 2.29, so
+// Next's native SWC can't load there and it falls back to WebAssembly, which fails to
+// transpile a TypeScript config (deploy of 2026-10-15 failed on exactly that). A .mjs config
+// needs no transpiling. The build also runs with --webpack, since Turbopack needs native SWC.
+import { readFileSync } from "node:fs";
 
-const nextConfig: NextConfig = {
+// redirects.generated.ts holds one array literal of plain objects (legacy WordPress 301s, with
+// comments). Evaluate just that literal so this file needs no TypeScript loader; the source is
+// our own committed file. Other scripts keep reading the .ts as before.
+const REDIRECTS = (() => {
+  const src = readFileSync(new URL("./redirects.generated.ts", import.meta.url), "utf8");
+  return new Function(`return ${src.slice(src.indexOf("= [") + 2, src.lastIndexOf("]") + 1)};`)();
+})();
+
+/** @type {import("next").NextConfig} */
+const nextConfig = {
   // Canonical URL form: trailing slash on every route (/x -> 308 -> /x/). Chosen to match the
   // legacy WordPress URLs Google still has indexed (the bulk of accumulated authority carries a
   // trailing slash), so the indexed URLs resolve 200 directly instead of via a redirect hop.

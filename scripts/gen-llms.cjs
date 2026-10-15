@@ -11,7 +11,7 @@
 //               > slug fallback), then un-clamped to the full source string when the 60/155-char
 //               SERP clamp cut it short
 //   noindex     page.tsx robots literals, the admin Page SEO store (robots/canonical), site settings
-//   redirects   next.config.ts redirects() + src/content/redirects.generated.ts (redirected = not live)
+//   redirects   next.config.mjs redirects() + src/content/redirects.generated.ts (redirected = not live)
 //   facts       src/content/site.ts (NAP, hours, REVIEW_COUNT, founding date, WARRANTY, TEAM founder)
 //
 // The .ts sources are loaded with a tiny in-process transpile via the project's own `typescript`
@@ -279,10 +279,10 @@ async function main() {
 
   let configRedirects = [];
   try {
-    const cfg = load("next.config.ts").default;
+    const cfg = (await import(require("url").pathToFileURL(path.join(ROOT, "next.config.mjs")).href)).default;
     if (cfg && typeof cfg.redirects === "function") configRedirects = await cfg.redirects();
   } catch (e) {
-    console.warn("[gen-llms] could not evaluate next.config.ts redirects (" + e.message + ") - using redirects.generated.ts only");
+    console.warn("[gen-llms] could not evaluate next.config.mjs redirects (" + e.message + ") - using redirects.generated.ts only");
     try {
       configRedirects = load("redirects.generated.ts").REDIRECTS || [];
     } catch {

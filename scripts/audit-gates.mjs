@@ -137,7 +137,7 @@ const ALL = pages();
 {
   const bad = [];
   const read = (f) => (existsSync(f) ? readFileSync(f, "utf8") : "");
-  const blob = read(path.join(ROOT, "redirects.generated.ts")) + read(path.join(ROOT, "next.config.ts"));
+  const blob = read(path.join(ROOT, "redirects.generated.ts")) + read(path.join(ROOT, "next.config.mjs"));
   const sources = new Set(), dests = new Map();
   for (const m of blob.matchAll(/"?source"?\s*:\s*"([^"]+)"[\s\S]{0,120}?"?destination"?\s*:\s*"([^"]+)"/g)) {
     sources.add(m[1].replace(/\/$/, ""));

@@ -30,7 +30,7 @@
     "predev": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/extract-meta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs && node scripts/gen-lastmod.cjs && node scripts/gen-llms.cjs",
     "prebuild": "node scripts/gen-routes.cjs && node scripts/gen-settings.cjs && node scripts/gen-menus.cjs && node scripts/gen-categories.cjs && node scripts/gen-locations.cjs && node scripts/gen-screen-prices.cjs && node scripts/gen-prices.cjs && node scripts/gen-business.cjs && node scripts/gen-reviews.cjs && node scripts/gen-pagemeta.cjs && node scripts/extract-meta.cjs && node scripts/gen-blog.cjs && node scripts/gen-redirects.cjs && node scripts/gen-lastmod.cjs && node scripts/gen-llms.cjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "check:gates": "node scripts/audit-gates.mjs",
     "check:seo": "node scripts/seo-gates.mjs"
@@ -75,7 +75,7 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
     "markdown-it": "^14.2.0",
-    "next": "^16.3.6",
+    "next": "16.3.8",
     "next-themes": "^0.3.0",
     "nodemailer": "^10.0.10",
     "react": "19.2.4",

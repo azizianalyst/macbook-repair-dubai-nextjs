@@ -64,7 +64,7 @@ Hostinger MCP server for this site: **`hostinger-macbookrepair`**.
 - **Use `proxy.ts`, never `middleware.ts`** — Next 16 deprecated `middleware`; the old
   convention caused intermittent 307/504 on page routes. `src/proxy.ts` sets the
   `Cache-Control: must-revalidate` HTML header that defeats Hostinger CDN staleness.
-- **www→non-www** redirect in `next.config.ts` matches `x-forwarded-host` (NOT `type: host`)
+- **www→non-www** redirect in `next.config.mjs` matches `x-forwarded-host` (NOT `type: host`)
   because the Node app sees `Host: localhost` behind the CDN.
 - DNS: apex `@` ALIAS + `www` CNAME both → `*.cdn.hstgr.net` (CDN is in front of origin
   46.17.175.101). There is **no CDN purge API** — the must-revalidate header is what keeps
