@@ -24,6 +24,7 @@ import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 const IMG = {
   hero: {
@@ -283,6 +284,8 @@ export default function MacBookAirScreenReplacement() {
             Glass-only replacement available on Intel 11″ and early Intel 13″ pre-2016. From M1 onward the glass is bonded to the panel — full assembly replacement required.
           </p>
         </section>
+
+        <RepairPriceTable path="/macbook-air-screen-replacement-dubai" title="How much does a MacBook Air screen replacement cost here?" />
 
         {/* ── MODELS COVERED ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>

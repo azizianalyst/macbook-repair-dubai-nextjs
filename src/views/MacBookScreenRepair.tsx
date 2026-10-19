@@ -26,6 +26,7 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 type PricingRow = { model: string; price: number; timeline: string };
 
@@ -301,6 +302,8 @@ export default function MacBookScreenRepair() {
             </p>
           </div>
         </section>
+
+        <RepairPriceTable path="/macbook-screen-repair-dubai" title="How much does a MacBook screen replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">

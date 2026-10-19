@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 const HERO_IMG = {
   src: "/images/real/lab/macbook-air-lid-dubai.jpg",
@@ -278,6 +279,8 @@ export default function MacBookAirChipScreenPage({
           </p>
           <div className="mt-xl flex justify-center"><CallButtons /></div>
         </section>
+
+        <RepairPriceTable path={path} />
 
         {/* WHAT MAKES THIS CHIP'S SCREEN UNIQUE */}
         <section
