@@ -18,6 +18,7 @@ import { imageForRoute } from "./page-images";
 import { BUSINESS_ID } from "./schema";
 import { TEAM } from "@/content/site";
 import { PRICING_SERVICES } from "@/content/pricing-services";
+import { repairPricesForPath } from "@/content/repair-prices";
 import { AREAS } from "@/content/areas";
 import { DATA_RECOVERY_AREAS } from "@/content/data-recovery-areas";
 import { CITIES } from "@/content/cities";
@@ -89,6 +90,26 @@ const INFORMATIONAL = /(how-to-|-vs-|guide|where-|calculator|^\/about|^\/contact
 // A repair/service/model/area page that should advertise a Service.
 const SERVICE_RE = /(repair|replacement|replace|recovery|diagnostic|removal|cleaning|reinstall|restoration|water-damage|logic-board|screen|battery|keyboard|charging|trackpad|hinge|ssd|ram|fan|virus|overheat|flexgate|backlight|unlock|data-recovery|upgrade)/;
 
+// Invoice-based price ranges (owner decision D17): an Offer per row the page VISIBLY renders via
+// <RepairPriceTable path=...>. Both read repairPricesForPath(), so schema and page can't drift.
+function invoicePriceOffers(path: string, url: string) {
+  return repairPricesForPath(path).map((r) => ({
+    "@type": "Offer",
+    name: `${r.repair}, ${r.model}`,
+    url: `${url}#invoice-prices`,
+    priceCurrency: "AED",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: r.min,
+      maxPrice: r.max,
+      priceCurrency: "AED",
+      valueAddedTaxIncluded: true,
+      description: `Typical price: middle half of ${r.invoices} VAT invoices. Exact price after free diagnosis.`,
+    },
+  }));
+}
+
 export function schemaForPath(path: string): unknown[] {
   if (!path || path === "/") return [];
   // Licensable ImageObject for every route with a topic infographic - drives
@@ -149,6 +170,17 @@ export function schemaForPath(path: string): unknown[] {
           url: s.url ? pageUrl(s.url) : undefined,
         }),
       ),
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${pageUrl(path)}#invoice-prices-service`,
+        name: "MacBook repair, typical prices from our invoices",
+        serviceType: "Computer Repair Service",
+        provider: PROVIDER,
+        areaServed: areaServedFor(path),
+        url: pageUrl(path),
+        offers: invoicePriceOffers(path, pageUrl(path)),
+      },
       ...imageNodes,
     ];
   }
@@ -206,6 +238,7 @@ export function schemaForPath(path: string): unknown[] {
     url,
     category: "Computer Repair Service",
     termsOfService: pageUrl("/warranty"),
+    ...(repairPricesForPath(path).length ? { offers: invoicePriceOffers(path, url) } : {}),
   };
 
   // Dubai area landing pages: add a Place node anchoring the served neighbourhood to the

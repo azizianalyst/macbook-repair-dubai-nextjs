@@ -14,6 +14,8 @@ import { NAP } from "@/content/site";
 import { Link } from "@/lib/router-compat";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { PRICE_ROWS_BY_GROUP, type PriceRow } from "@/content/prices.generated";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { REPAIR_PRICES, aed } from "@/content/repair-prices";
 
 // ---------- price tables ----------
 // Rows come from the admin price store via the build-time generator (scripts/gen-prices.cjs →
@@ -38,13 +40,19 @@ const HOW_PRICING_WORKS = [
   { icon: Clock,       title: "Up to 12-month warranty",    body: "Written warranty up to 12 months - 12 months on most hardware, 90 days on screens, 3 months on batteries, 15 days on keyboard, software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
 ];
 
+// "Us" cells for screen and battery come from the invoice ranges (D17), never typed.
+const span = (prefix: string) => {
+  const rows = REPAIR_PRICES.rows.filter((r) => r.id.startsWith(prefix));
+  return `AED ${aed(Math.min(...rows.map((r) => r.min)))}–${aed(Math.max(...rows.map((r) => r.max)))}`;
+};
+
 const COMPARISON = [
   { row: "Diagnosis fee",          us: "Free",                     apple: "Inspection by appointment" },
   { row: "Turnaround time",        us: "Same day to 5 days",      apple: "Often several days, depending on parts" },
   { row: "Walk in, no appointment", us: "Yes - Dubai Media City",  apple: "Appointment advised" },
   { row: "Warranty",               us: "Up to 12 months (by repair)",         apple: "90 days on repairs" },
-  { row: "MacBook screen repair",  us: "Quote after free diagnosis", apple: "No published price - quoted after inspection" },
-  { row: "MacBook battery",        us: "Quote after free diagnosis", apple: "AED 589-959 + VAT, current models (Apple list)" },
+  { row: "MacBook screen repair",  us: `${span("screen-")} typical incl. VAT, by model (see table above)`, apple: "No published price - quoted after inspection" },
+  { row: "MacBook battery",        us: `${span("battery-")} typical incl. VAT, 2012-2020 Intel models; newer models quoted`, apple: "AED 589-959 + VAT, current models (Apple list)" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
   { row: "Out-of-warranty Macs",   us: "Yes - including Intel models back to 2012", apple: "Limited - vintage models refused" },
 ];
@@ -53,7 +61,7 @@ const PRICING_FAQS = [
   { q: "Why is your MacBook screen repair so much less than the Apple Store?",
     a: "Two reasons. First, component-level repair: when only the LCD panel is damaged, the team replaces the panel alone instead of swapping the entire display assembly. Second, no Apple Store overhead - Concord Tower rent is a fraction of a Mall of the Emirates retail unit." },
   { q: "Are the prices listed final?",
-    a: "The prices are starting prices for the most common fault on the most common model. After the free diagnosis, you receive a final price on WhatsApp. 80% of repairs land within 10% of the listed price." },
+    a: "No. Each range is the middle half of what customers paid on our VAT invoices over twelve months, so a quarter of jobs cost less and a quarter more. Your final price comes in writing on WhatsApp after the free diagnosis, and nothing starts until you approve it." },
   { q: "Do prices include VAT?",
     a: "Yes. Every quote we give is the all-in amount you pay - no 5% added at checkout." },
   { q: "What payment methods do you accept?",
@@ -142,6 +150,9 @@ export default function Pricing() {
           <Link to="/imac-repair-cost-dubai" className="text-accent underline underline-offset-2">iMac repair costs</Link>
         </p>
       </section>
+
+      {/* Invoice-based price ranges (D17) */}
+      <RepairPriceTable path="/pricing" title="What do MacBook repairs cost at our workshop?" />
 
       {/* Pricing tables */}
       {ALL_TABLES.map((t) => (

@@ -2,7 +2,7 @@
 // Unlike the source heuristic, this catches interpolated/runtime figures and confirms the real
 // rendered output. Checks FOUR surfaces and names the one a leak sits on: visible body, the
 // <head> meta layer, JSON-LD, and Next's hydration payload. Nothing is excluded — the policy is
-// OUR prices stripped everywhere including SERP and schema; Apple's attributed figures
+// OUR prices stripped everywhere including SERP and schema, except the D17 invoice ranges; Apple's attributed figures
 // and third-party facility fees are allowed (owner decisions, 2026-08/09).
 //
 // Usage:
@@ -45,9 +45,27 @@ function isAllowedFigure(text, idx, len) {
   if (oursMatch && (!attribMatch || oursMatch.index > attribMatch.index)) return false;
   return true;
 }
-function realHits(text) {
+// 3. Our invoice-based ranges (owner decision D17, 2026-10-19). Allowed ONLY as a range
+//    "AED <min>–<max>" whose two ends are a published row's min and max (or the widest span of
+//    such rows), only in the visible body and hydration payload, never in titles or meta.
+//    Any other figure of ours still fails.
+const APPROVED = JSON.parse(readFileSync(join(ROOT, "src/content/repair-prices.json"), "utf8")).rows;
+const MINS = new Set(APPROVED.map((r) => r.min));
+const MAXS = new Set(APPROVED.map((r) => r.max));
+const num = (t) => Number(t.replace(/,/g, ""));
+const RANGE_AT = /^AED\s*([\d,]+)\s*[–-]\s*([\d,]+)/;
+function isApprovedRange(text, idx) {
+  const m = text.slice(idx, idx + 40).match(RANGE_AT);
+  return !!m && MINS.has(num(m[1])) && MAXS.has(num(m[2]));
+}
+function realHits(text, surface) {
   const out = [];
   for (const m of text.matchAll(PRICE_RE)) {
+    if (surface !== "meta" && isApprovedRange(text, m.index)) continue;
+    // "A2337   AED 1,011–1,191": an Apple model number in the cell before an approved range
+    // reads as "<n> AED". Skip it only when the digits follow "A" and the AED opens a range.
+    const aed = m[0].search(/AED/);
+    if (surface !== "meta" && aed > 0 && text[m.index - 1] === "A" && isApprovedRange(text, m.index + aed)) continue;
     if (!isAllowedFigure(text, m.index, m[0].length)) out.push(m[0]);
   }
   return [...new Set(out)];
@@ -140,10 +158,17 @@ for (const route of routes) {
     const s = surfaces(html);
     const per = {};
     for (const [name, text] of Object.entries(s)) {
-      const hits = realHits(text);
+      const hits = realHits(text, name);
       if (hits.length) per[name] = hits;
     }
     const structured = [...new Set(s.schema.match(SCHEMA_PRICE_RE) || [])];
+    // D17 Offer ranges: each minPrice/maxPrice must be an approved value AND visible in the body
+    // as the start or end of a range, so schema never publishes a figure the visitor can't see.
+    for (const m of s.schema.matchAll(/"(minPrice|maxPrice)"\s*:\s*"?([\d.]+)"?/g)) {
+      const v = Number(m[2]);
+      const ok = (m[1] === "minPrice" ? MINS : MAXS).has(v) && s.body.includes(v.toLocaleString("en-US"));
+      if (!ok) structured.push(m[0]);
+    }
     if (structured.length) per.schemaPrice = structured;
     const garble = [...new Set(s.body.match(GARBLE_RE) || [])];
     if (garble.length) per.garble = garble;
