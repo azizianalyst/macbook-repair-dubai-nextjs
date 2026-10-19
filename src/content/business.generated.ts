@@ -17,7 +17,7 @@ export const NAP = {
   "yearsInBusiness": 21
 } as const;
 
-export const REVIEW_COUNT = 232;
+export const REVIEW_COUNT = 242;
 export const REVIEW_AVERAGE = 5;
 export const CONTENT_REVIEWED = "August 2026";
 

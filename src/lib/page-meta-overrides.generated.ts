@@ -1413,8 +1413,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Refund policy for MacBook Repair Dubai: when a refund is due, when a free redo applies instead, and how disputes work under no fix no fee. WhatsApp us."
   },
   "/reviews": {
-    "title": "MacBook Repair Reviews Dubai, 5.0 Stars, 232+ Verified",
-    "description": "232+ five-star Google reviews of MacBook Repair Dubai - real customers, real repairs at our Media City workshop. Read them, then book a free diagnosis."
+    "title": "MacBook Repair Reviews Dubai, 5.0 Stars, 242+ Verified",
+    "description": "242+ five-star Google reviews of MacBook Repair Dubai - real customers, real repairs at our Media City workshop. Read them, then book a free diagnosis."
   },
   "/same-day-macbook-repair-dubai": {
     "title": "Same-Day MacBook Repair Dubai — Free Diagnosis, Walk-In",
