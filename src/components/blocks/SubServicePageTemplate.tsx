@@ -34,6 +34,7 @@ import { relatedServices, withCoverage } from "@/lib/related-services";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { deviceTypeFromPath } from "@/lib/lead-schema";
 import { relatedIphoneModels } from "@/content/iphone-model-links";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 export type Crumb = { name: string; path: string };
 
@@ -238,6 +239,8 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
               </p>
               <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
             </section>
+
+            <RepairPriceTable path={p.path} className="max-w-none px-0 md:px-0 mt-0" />
 
             {/* 13. FAQ — long-tail keywords and objection handling */}
             <section>

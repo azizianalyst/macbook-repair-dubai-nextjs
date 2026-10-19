@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 const HERO_IMG = "/images/real/lab/macbook-air-lid-dubai.jpg";
 const HERO_ALT = "MacBook water damage repair at MacBook Repair Dubai, Media City Dubai";
@@ -393,6 +394,8 @@ export default function MacBookWaterDamage() {
             </p>
           </div>
         </section>
+
+        <RepairPriceTable path="/macbook-water-damage-repair-dubai" title="How much does MacBook liquid damage repair cost here?" />
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
