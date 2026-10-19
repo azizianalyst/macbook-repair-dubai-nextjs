@@ -173,7 +173,7 @@ function composeMeta(
   const topic = imageForRoute(path);
   const ogImage = topic ? SITE_URL + topic.src : `${SITE_URL}/og-default.jpg`;
   const ogImages = topic
-    ? [{ url: ogImage, width: 1600, height: 1200, alt: topic.alt }]
+    ? [{ url: ogImage, width: topic.width ?? 1600, height: topic.height ?? 1200, alt: topic.alt }]
     : [{ url: ogImage, width: 1200, height: 630, alt: title }];
   // Admin Page SEO overrides (Social + Advanced tabs): blank fields fall back to the page defaults.
   const ogT = admin?.ogTitle || title;

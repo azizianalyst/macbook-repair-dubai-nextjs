@@ -1,11 +1,11 @@
 // Google image sitemap: every route that carries a topic infographic, with the
 // image URL, so Google indexes the images under OUR domain first (first-indexed
 // wins attribution when copies appear elsewhere). License URL embedded per the
-// Google Images licensable-image spec.
+// Google Images licensable-image spec. The homepage lists its real workshop photos.
 import { ROUTES } from "@/lib/routes.generated";
 import { SITEMAP_LAST_UPDATED } from "@/content/site";
 import { LASTMOD } from "@/content/lastmod.generated";
-import { imageForRoute } from "@/lib/page-images";
+import { sitemapImagesForRoute } from "@/lib/page-images";
 import { NextResponse } from "next/server";
 
 const SITE = "https://macbook-repair-dubai.ae";
@@ -16,8 +16,8 @@ const EXCLUDE = /^\/(admin|landing-template-demo|blog\/tag)(\/|$)/;
 
 export function GET() {
   const entries = ROUTES.filter((p) => !EXCLUDE.test(p))
-    .map((p) => ({ path: p, img: imageForRoute(p) }))
-    .filter((e): e is { path: string; img: NonNullable<ReturnType<typeof imageForRoute>> } => Boolean(e.img));
+    .map((p) => ({ path: p, imgs: sitemapImagesForRoute(p) }))
+    .filter((e) => e.imgs.length > 0);
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -25,11 +25,15 @@ export function GET() {
 ${entries
   .map(
     (e) => `  <url>
-    <loc>${SITE}${e.path}/</loc>
+    <loc>${SITE}${e.path === "/" ? "/" : `${e.path}/`}</loc>
     <lastmod>${LASTMOD[e.path] ?? SITEMAP_LAST_UPDATED}</lastmod>
-    <image:image>
-      <image:loc>${SITE}${e.img.src}</image:loc>
-    </image:image>
+${e.imgs
+  .map(
+    (img) => `    <image:image>
+      <image:loc>${SITE}${img.src}</image:loc>
+    </image:image>`,
+  )
+  .join("\n")}
   </url>`,
   )
   .join("\n")}

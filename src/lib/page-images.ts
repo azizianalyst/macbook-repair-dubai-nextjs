@@ -288,9 +288,36 @@ export function blogTopicForPath(path: string): TopicImage | undefined {
   return T("blog-apple-news-dubai");
 }
 
+/** A route image with its pixel size when it differs from the 1600x1200 topic infographics. */
+export type RouteImage = TopicImage & { width?: number; height?: number };
+
+// Homepage: the real workshop photos the page actually shows (src/views/Home.tsx), so
+// Google Images can tie the page that ranks for "macbook repair dubai" to real repair
+// photos. The first one is the LCP hero and doubles as the og:image (was og-default.jpg,
+// a text banner with no repair in it).
+const HOME_IMAGES: RouteImage[] = [
+  { src: "/images/real/team/team-workshop-dubai.jpg", alt: "MacBook Repair Dubai technicians at the Concord Tower workshop in Dubai Media City - MacBook Air diagnostics and customer support", width: 1360, height: 1020 },
+  { src: "/images/real/team/macbook-bench-repairs-dubai.jpg", alt: "Multiple MacBook Pro repairs in progress on the bench at MacBook Repair Dubai in Dubai Media City" },
+  { src: "/images/real/team/technician-support-call-dubai.jpg", alt: "Technician on a customer support call while diagnosing a MacBook Air at MacBook Repair Dubai, Dubai Media City" },
+  { src: "/images/real/lab/macbook-pro-internals-topdown-dubai.jpg", alt: "MacBook Pro opened on the bench showing logic board, twin fans and battery during repair in Dubai" },
+  { src: "/images/real/lab/macbook-full-internals-dubai.jpg", alt: "MacBook bottom case removed showing the full internals during a water-damage repair in Dubai" },
+  { src: "/images/real/lab/macbook-cooling-fan-macro-dubai.jpg", alt: "Close-up of a MacBook cooling fan during a fan-cleaning and overheating service" },
+  { src: "/images/real/lab/macbook-battery-internals-dubai.jpg", alt: "MacBook battery and logic board exposed during a battery replacement in Dubai" },
+  { src: "/images/real/lab/imac-internals-teardown-dubai.jpg", alt: "iMac opened up for screen and logic board repair in Dubai" },
+  { src: "/images/real/lab/repair-workbench-dubai.jpg", alt: "Our Apple repair workspace at Concord Tower, Media City, Dubai" },
+];
+
+/** Every image the image sitemap lists for a route: the homepage's real photos, else the route image. */
+export function sitemapImagesForRoute(path: string): RouteImage[] {
+  if (path === "/") return HOME_IMAGES;
+  const img = imageForRoute(path);
+  return img ? [img] : [];
+}
+
 /** Topic image for ANY route - blog/guide, service/money, or location.
  *  Single source of truth for OG images and the image sitemap. */
-export function imageForRoute(path: string): TopicImage | undefined {
+export function imageForRoute(path: string): RouteImage | undefined {
+  if (path === "/") return HOME_IMAGES[0];
   const isBlogPost = path.startsWith("/blog/") && path !== "/blog";
   const isGuide = /^\/(how-|do-macbooks|top-10|where-to)/.test(path);
   if (isBlogPost || isGuide) return blogTopicForPath(path);
