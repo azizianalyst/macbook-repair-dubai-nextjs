@@ -24,6 +24,7 @@ import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import type { LucideIcon } from "lucide-react";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 const IMG = {
   hero: {
@@ -375,6 +376,8 @@ export default function MacBookAirBatteryReplacement() {
             All prices include the cell, labour, BMS firmware re-pair (Apple Silicon models), and a post-replacement calibration cycle. No hidden fees.
           </p>
         </section>
+
+        <RepairPriceTable path="/macbook-air-battery-replacement-dubai" title="How much does a MacBook Air battery replacement cost here?" />
 
         {/* ── BATTERY SPECS ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>

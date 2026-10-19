@@ -26,6 +26,7 @@ import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 type PricingRow = { model: string; price: number; timeline: string };
 
@@ -241,6 +242,8 @@ export default function MacBookBatteryReplacement() {
             </p>
           </div>
         </section>
+
+        <RepairPriceTable path="/macbook-battery-replacement-dubai" title="How much does a MacBook battery replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
