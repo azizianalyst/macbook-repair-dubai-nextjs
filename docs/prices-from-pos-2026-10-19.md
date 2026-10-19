@@ -199,3 +199,41 @@ the site shows no shop price at all. Things that do conflict with the invoices o
 
 Left out on purpose: keyboard (264–568 is too wide to be useful, and n is 3–4 per family), and the
 Air M1 battery (n 4). Everything else: quote on WhatsApp, as today.
+
+## Update 2026-10-19 (owner request): prices per Apple model number
+
+The owner asked for prices by model number (A-number) for more accurate client information, labelled with Apple's model names (apple.com/mac).
+Same rules as above: taxed invoices only, middle half, incl. VAT, **5+ invoices per row**. A model number with 5+ invoices gets its own row;
+the remaining models of that family get one combined row only if together they have 5+ invoices. Battery lines whose invoice names only
+the battery part number (not the laptop) can't be tied to one model, so they stay in family rows. This **replaces** the 14-row table above
+as what the site shows (`src/content/repair-prices.json`, written by `scripts/pos/publish.py`).
+
+| Repair | Model (Apple name) | Model number(s) | Typical price AED incl. VAT | Invoices | Median |
+|---|---|---|---|---|---|
+| Screen replacement | MacBook Air (M1, 2020) | A2337 | 1,011–1,191 | 40 | 1,129 |
+| Screen replacement | MacBook Air (13-inch, M2, 2022) | A2681 | 949–1,305 | 18 | 999 |
+| Screen replacement | MacBook Air (13-inch, M3, 2024) | A3113 | 973–1,370 | 6 | 1,161 |
+| Screen replacement | MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports) | A2159 | 1,092–1,168 | 6 | 1,100 |
+| Screen replacement | MacBook Pro (13-inch, M1, 2020) and (13-inch, M2, 2022) | A2338 | 1,099–1,240 | 30 | 1,190 |
+| Screen replacement | MacBook Pro (14-inch, 2021), M1 Pro or M1 Max | A2442 | 1,961–2,291 | 12 | 2,110 |
+| Screen replacement | MacBook Pro (16-inch, Nov 2023), M3 Pro or M3 Max | A2991 | 2,055–2,490 | 5 | 2,380 |
+| Screen replacement | MacBook Pro (16-inch, 2019) | A2141 | 1,400–1,750 | 7 | 1,550 |
+| Battery replacement | MacBook Pro (13-inch, 2018 and 2019, Four Thunderbolt 3 ports) | A1989 | 419–488 | 8 | 451 |
+| Battery replacement | MacBook Pro (16-inch, 2019) | A2141 | 620–651 | 5 | 620 |
+| Screen replacement | Other MacBook Pro 13-inch Intel (2016 to 2020) | A1706, A1708, A1989, A2251, A2289 | 811–1,073 | 14 | 980 |
+| Screen replacement | MacBook Pro 14-inch, M2 Pro to M4 (2023 and 2024) | A2779, A2918, A2992, A3112, A3185, A3401 | 2,154–2,426 | 12 | 2,195 |
+| Battery replacement | Other MacBook Pro 13-inch Intel (2016 to 2020) | A1706, A1708, A2159, A2251, A2289 | 368–410 | 16 | 395 |
+| Battery replacement | MacBook Air 13-inch Intel Retina (2018 to 2020) | A1932, A2179 | 380–440 | 7 | 420 |
+| Battery replacement | MacBook Pro 15-inch Intel (2012 to 2019) | A1398, A1707, A1990 | 440–577 | 8 | 505 |
+| Logic board / no-power repair | Any MacBook | any | 578–788 | 12 | 656 |
+| Liquid damage repair | Any MacBook | any | 705–1,318 | 5 | 800 |
+| Trackpad replacement | Any MacBook | any | 361–495 | 6 | 455 |
+
+What changed against the 14-row table:
+- Air M2/M3/M4 screen (950–1,340) split into A2681 M2 (949–1,305) and A3113 M3 (973–1,370). **Air M4 (A3240) has 2 invoices: now quoted on WhatsApp.**
+- 16-inch Apple-silicon screen (2,360–3,615) mixed models: A2991 M3 Pro/Max is 2,055–2,490, while the M4 Pro A3403 ran 3,288–3,900 (4 invoices, too few to publish). **16-inch M1/M2/M4 screens are now quoted.**
+- 14-inch screen split into A2442 M1 Pro/Max (1,961–2,291) and M2 Pro to M4 (2,154–2,426).
+- Pro 13-inch Intel screen and battery each split out one model (A2159 screen, A1989 battery) plus an 'other models' row.
+- The 15-inch Intel battery row also contains A1398 (2012-2015), so its label now says 2012 to 2019.
+
+Pages: hubs show every row for their repair; each model page shows only its own model's rows; a model page with no row (e.g. Air M4 screen) shows no table.

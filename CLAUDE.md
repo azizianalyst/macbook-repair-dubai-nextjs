@@ -17,7 +17,8 @@ MacBook Repair Dubai is an **independent** Apple repair workshop (never "Apple A
 - Founded: 2004
 - Founder: Abdul Aziz (the one and only founder)
 
-Repairs Mac, iPhone and iPad. No Apple Watch or AirPods service. No AED repair prices anywhere; quotes go through WhatsApp.
+Repairs Mac, iPhone and iPad. No Apple Watch or AirPods service.
+Prices (owner decision D17, 2026-10-19): the only AED repair prices on the site are the approved invoice ranges in `src/content/repair-prices.json` (from the POS, see `docs/prices-from-pos-2026-10-19.md`), shown as "AED X–Y typical, incl. 5% VAT" per repair and Apple model number (or model family where one model has too few invoices), never one exact quote, never in titles or meta. Every other repair is quoted on WhatsApp. Never type a price into a page: render it from that file, and add Offer schema only where the range is visible.
 No free pickup or delivery (ended 2026-10-15). Customers walk in, send it with a courier they book (from other emirates we courier it back), or book a paid onsite visit when a technician is free.
 
 ## Content
