@@ -54,7 +54,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
       serviceSchema({
         name: `${p.family} Repair Dubai`,
         timeline: "Same-day to 5 days",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: p.path,
         description: p.seoDescription,
       }),
@@ -166,7 +166,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
             <ShieldCheck size={22} className="text-accent" aria-hidden /> What warranty do you offer on {p.family} repairs?
           </h2>
           <p className="text-[15px]">
-            Every {p.family} repair includes a warranty of up to 12 months on parts and labour, dated and signed on your invoice.
+            Every {p.family} repair includes a warranty of 15 days to 2 years on parts and labour, dated and signed on your invoice.
             Same fault returns inside the window? We re-do it free.
           </p>
         </section>
@@ -181,7 +181,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
           <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
             <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
             <p className="text-text-muted text-[16px] max-w-[60ch]">
-              Send the model and a photo of the issue, then walk in to our Media City workshop. Written warranty of up to 12 months, depending on the repair.
+              Send the model and a photo of the issue, then walk in to our Media City workshop. Written warranty of 15 days to 2 years, depending on the repair.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">

@@ -115,7 +115,7 @@ const FAQS = [
   },
   {
     q: "What warranty do you give on iMac repairs?",
-    a: "It depends on the repair: 90 days on screens, up to 12 months on other hardware such as power supplies, SSDs and RAM, and 15 days on logic-board, liquid-damage and software work. The terms are written on your job sheet.",
+    a: "It depends on the repair: 90 days on screens, up to 2 years on other hardware such as power supplies, SSDs and RAM, and 15 days on logic-board, liquid-damage and software work. The terms are written on your job sheet.",
   },
 ];
 
@@ -191,7 +191,7 @@ export default function IMacRepairHub() {
         benefits: [
           { icon: Search, title: "Free diagnosis", body: "The fault is found and explained before any quote." },
           { icon: MapPin, title: "Walk-in workshop", body: "Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site." },
-          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
+          { icon: ShieldCheck, title: "Written warranty", body: "15 days to 2 years, depending on the repair." },
           { icon: Wrench, title: "Honest upgrade advice", body: "We say so when an iMac cannot be upgraded." },
         ],
       }}

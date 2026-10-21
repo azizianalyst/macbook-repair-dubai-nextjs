@@ -44,28 +44,28 @@ const IMAC = imacModels as ModelEntry[];
 function macbookMeta(m: ModelEntry): Meta {
   return {
     title: `${m.name} Repair Dubai - Request a Quote`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery, keyboard and logic-board repair with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery, keyboard and logic-board repair with free diagnosis and warranty of 15 days to 2 years. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function ipadMeta(m: ModelEntry): Meta {
   return {
     title: `${m.name} Repair Dubai - Request a Quote`,
-    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery and charging-port repair with free diagnosis at our Media City workshop and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
+    description: `${m.name} (${m.releaseYear}) repair Dubai. Screen, battery and charging-port repair with free diagnosis at our Media City workshop and warranty of 15 days to 2 years. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function macDesktopMeta(m: ModelEntry): Meta {
   return {
     title: `${m.name} Repair Dubai - Request a Quote`,
-    description: `${m.name} repair Dubai. Logic board${m.pricing.psu ? ", power supply" : ""}${m.pricing.port ? ", port" : ""}, SSD data recovery and thermal service with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
+    description: `${m.name} repair Dubai. Logic board${m.pricing.psu ? ", power supply" : ""}${m.pricing.port ? ", port" : ""}, SSD data recovery and thermal service with free diagnosis and warranty of 15 days to 2 years. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
 function imacMeta(m: ModelEntry): Meta {
   return {
     title: `${m.name} Repair Dubai - Request a Quote`,
-    description: `${m.name} repair Dubai. Screen, logic board${m.pricing.powerSupply ? ", power supply" : ""} and SSD repair with free diagnosis and warranty up to 12 months. Message us on WhatsApp for today's price. Call 055 741 3706.`,
+    description: `${m.name} repair Dubai. Screen, logic board${m.pricing.powerSupply ? ", power supply" : ""} and SSD repair with free diagnosis and warranty of 15 days to 2 years. Message us on WhatsApp for today's price. Call 055 741 3706.`,
   };
 }
 
@@ -108,7 +108,7 @@ for (const c of CATEGORIES) {
 // or was never written into route-meta.generated.ts. Clean, length-safe values.
 MAP["/reviews"] = {
   title: `MacBook Repair Dubai Reviews - ${REVIEW_COUNT_LABEL} 5-Star Ratings`,
-  description: `Read ${REVIEW_COUNT_LABEL} verified five-star reviews of MacBook Repair Dubai. Since 2004, 40,000+ Apple repairs, free diagnosis and a warranty up to 12 months.`,
+  description: `Read ${REVIEW_COUNT_LABEL} verified five-star reviews of MacBook Repair Dubai. Since 2004, 40,000+ Apple repairs, free diagnosis and a warranty of 15 days to 2 years.`,
 };
 MAP["/imac-screen-repair-dubai"] = {
   title: `iMac Screen Repair Dubai - 24" M-Series & 27" 5K`,
@@ -116,7 +116,7 @@ MAP["/imac-screen-repair-dubai"] = {
 };
 MAP["/ipod-touch-7-repair-dubai"] = {
   title: "iPod touch (7th gen) Repair Dubai - Battery & Screen",
-  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Walk-in workshop, free diagnostic, warranty up to 12 months.",
+  description: "iPod touch (7th gen) repair Dubai. Battery, screen, home button and charging port. Walk-in workshop, free diagnostic, warranty of 15 days to 2 years.",
 };
 
 // Intentional OVERRIDES that must beat an existing route-meta.generated.ts entry

@@ -127,12 +127,12 @@ export default function MacbookNeoRepair() {
         { title: "Diagnose + repair",   body: "Free diagnosis when you walk in to our Media City workshop. Written quote before any work." },
         { title: "Test + return",       body: "Display, keyboard, trackpad, charging and battery health checked before the Neo goes back to you." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
         "Screens: 90 days on the part and the fitting.",
         "Batteries: 3 months, with an 80% capacity guarantee.",
-        "Other hardware, such as the trackpad and ports: up to 12 months.",
+        "Other hardware, such as the trackpad and ports: 15 days to 2 years.",
         "Keyboard, board, liquid-damage, software and data work: 15 days.",
       ]}
       faqs={[

@@ -6,7 +6,7 @@ export default function IPhone14ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Pro Repair Dubai - Dynamic Island, 48MP, ProMotion | 055 741 3706"
-      seoDescription="iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen, Dynamic Island and battery - same-day, warranty up to 12 months. WhatsApp for price."
+      seoDescription="iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen, Dynamic Island and battery - same-day, warranty of 15 days to 2 years. WhatsApp for price."
       path="/iphone-14-pro-repair-dubai"
       eyebrow="iPhone 14 Pro (2022)"
       h1="iPhone 14 Pro Repair Dubai - Dynamic Island, ProMotion, 48MP"
@@ -86,10 +86,10 @@ export default function IPhone14ProRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + Dynamic Island 1-3 days." },
         { title: "QC + handover",          body: "ProMotion, AOD, Dynamic Island, 48MP camera and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Battery: capacity-drop coverage.",
         "Dynamic Island: full animation/touch behaviour verified.",

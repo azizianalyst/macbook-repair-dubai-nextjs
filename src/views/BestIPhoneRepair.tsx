@@ -49,7 +49,7 @@ const WHY_US = [
   "Face ID preserved on every screen replacement we do",
   "Screen in 40 minutes, battery in 30 minutes",
   "Walk-in workshop by the Palm Jumeirah tram stop, parking on site",
-  "Written warranty up to 12 months",
+  "Written warranty of 15 days to 2 years",
   "Free diagnosis, no fix, no charge",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews · Since 2004`,
 ];
@@ -96,7 +96,7 @@ export default function BestIPhoneRepair() {
           tone="dark"
           eyebrow="Buyer’s guide · Dubai · Since 2004"
           title="Finding the best iPhone repair in Dubai"
-          subtitle={`OLED True Tone · Face ID preserved · Written warranty up to 12 months · ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · WhatsApp us for your exact price.`}
+          subtitle={`OLED True Tone · Face ID preserved · Written warranty of 15 days to 2 years · ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · WhatsApp us for your exact price.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -117,7 +117,7 @@ export default function BestIPhoneRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best iPhone repair in Dubai?"
-            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty up to 12 months, 40-minute screen replacement, walk in 3 minutes from the Palm Jumeirah tram stop. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
+            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty of 15 days to 2 years, 40-minute screen replacement, walk in 3 minutes from the Palm Jumeirah tram stop. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
           />
         </section>
 
@@ -214,7 +214,7 @@ export default function BestIPhoneRepair() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get the best iPhone repair in Dubai today</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · 40-min screen · Face ID preserved · Warranty up to 12 months.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · 40-min screen · Face ID preserved · Warranty 15 days to 2 years.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

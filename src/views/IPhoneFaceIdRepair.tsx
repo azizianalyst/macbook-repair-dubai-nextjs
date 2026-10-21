@@ -77,7 +77,7 @@ export default function IPhoneFaceIdRepair() {
         { title: "Test in Settings > Face ID & Passcode", body: "Customer attempts to set up Face ID. If successful: charge as quoted. If unsuccessful: phone returned with no charge for the attempted repair (only a small diagnostic fee if the original component was replaced unsuccessfully)." },
         { title: "30-day warranty if Face ID is restored", body: "Same-day to 3 days depending on component. Warranty covers re-failure within 30 days - beyond that, the new component is paired and behaves like factory part." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "No-fix-no-charge: if Face ID isn't restored after the repair attempt, only a small diagnostic fee is charged.",
         "Covered: re-failure of the replaced component within 30 days, pairing failure that surfaces after handover.",

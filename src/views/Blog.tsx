@@ -171,7 +171,7 @@ export default function Blog() {
   useSeo(
     {
       title: "Apple Repair Blog Dubai - Honest Cost Guides",
-      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of up to 12 months.",
+      description: "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of 15 days to 2 years.",
       path: "/blog",
     },
     // All JSON-LD for this page is server-rendered (PageSchema + the CollectionPage below;

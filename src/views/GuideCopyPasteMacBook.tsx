@@ -163,7 +163,7 @@ export default function GuideCopyPasteMacBook() {
             <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook Repair Dubai
             </Link>{" "}
-            has been fixing Apple devices since 2004 - free diagnosis and a written warranty of up to 12 months,
+            has been fixing Apple devices since 2004 - free diagnosis and a written warranty of 15 days to 2 years,
             depending on the repair. Call or WhatsApp 055 741 3706, or get in touch via our{" "}
             <Link to="/contact" className="text-accent font-semibold hover:underline">contact page</Link>.
           </p>

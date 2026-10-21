@@ -51,9 +51,9 @@ export default function IPadChargingPortRepair() {
         { title: "Free diagnosis", body: "Test cable, port, voltage at the charging IC, and Smart Connector. You see the actual fault before approving the repair." },
         { title: "Port replacement or board work", body: "Most jobs are a flex-cable port swap (same day). Board-level IC repair takes a microscope and 1-2 days." },
         { title: "Full charge cycle test", body: "Wired charge from 0 to 100, fast-charge negotiation test, accessory test. Smart Connector tested with a Magic Keyboard." },
-        { title: "Collect + warranty card", body: "Ready to collect with the 12-month written warranty." },
+        { title: "Collect + warranty card", body: "Ready to collect with its written warranty." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new port, charging IC if replaced, and Smart Connector contacts.",
         "Excludes damage from third-party fast chargers above iPad spec.",
@@ -66,7 +66,7 @@ export default function IPadChargingPortRepair() {
         ["Board-level capability", "Yes - microscope IC repair",      "Whole-unit swap only"],
         ["Smart Connector covered", "Yes, separate quote if needed", "Whole-unit swap"],
         ["Data preserved",        "Always",                           "Restore from backup"],
-        ["Warranty",              "12 months written",                  "12 months on new unit"],
+        ["Warranty",              "2 years written",                  "12 months on new unit"],
       ]}
       faqs={[
         { q: "Why doesn't my iPad charge anymore?", a: "Five possible causes: the cable, the charger, the port pins, the charging IC, or the battery. Free diagnosis tells us which. About 60% of charging issues are a cheap cable - we'll never charge for a part you don't need." },

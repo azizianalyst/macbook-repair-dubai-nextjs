@@ -32,7 +32,7 @@ const WHY_US = [
   "Component-level logic board repair, not module swaps",
   "Same-day for iPhone screen, MacBook battery, iPad screen",
   "Walk-in workshop in Concord Tower, 3 minutes from the Palm Jumeirah tram stop",
-  "Written warranty up to 12 months on every repair",
+  "Written warranty of 15 days to 2 years on every repair",
   "Free diagnosis, no fix, no charge policy",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
 ];
@@ -77,7 +77,7 @@ export default function BestAppleRepair() {
           tone="dark"
           eyebrow="Buyer’s guide · Dubai · Since 2004"
           title="Finding the best Apple repair in Dubai"
-          subtitle={`MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews. Walk in at Media City. Warranty up to 12 months.`}
+          subtitle={`MacBook, iMac, iPhone and iPad, repaired in-house. Message us on WhatsApp for a fixed quote. ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews. Walk in at Media City. Warranty 15 days to 2 years.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -98,7 +98,7 @@ export default function BestAppleRepair() {
           <QuickAnswer
             tone="dark"
             question="What is the best Apple repair service in Dubai?"
-            answer={`The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} reviews, written warranty up to 12 months, free diagnosis, walk-in 3 minutes from the Palm Jumeirah tram stop. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device.`}
+            answer={`The best Apple repair in Dubai is at Concord Tower, Office #45, Dubai Media City, MacBook, iMac, iPhone and iPad repaired in-house, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} reviews, written warranty of 15 days to 2 years, free diagnosis, walk-in 3 minutes from the Palm Jumeirah tram stop. Independent specialist since 2004. WhatsApp 055 741 3706 for a fixed quote on your device.`}
           />
         </section>
 
@@ -141,7 +141,7 @@ export default function BestAppleRepair() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get the best Apple repair in Dubai today</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · Same-day for common repairs · Warranty up to 12 months · Walk-in workshop.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · Same-day for common repairs · Warranty 15 days to 2 years · Walk-in workshop.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

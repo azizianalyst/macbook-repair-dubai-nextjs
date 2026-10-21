@@ -55,7 +55,7 @@ export default function MacBookFreezingRepair() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "Up to 12 months on replaced hardware.",
+        "15 days to 2 years on replaced hardware.",
         "15-day warranty on software reinstall.",
         "Free re-diagnosis if the freeze pattern returns.",
       ]}

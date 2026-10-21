@@ -284,7 +284,7 @@ export default function BlogMacBookAirM4Problems() {
             ]}
           />
           <p>
-            Warranty depends on the repair: 90 days on screens, 3 months on batteries, 15 days on keyboard and board work, and up to 12 months on other hardware. We use OEM-grade components
+            Warranty depends on the repair: 90 days on screens, 3 months on batteries, 15 days on keyboard and board work, and up to 2 years on other hardware. We use OEM-grade components
             matched to the M4 Air's specifications.{" "}
             <Link to="/macbook-air-m4-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Air M4 repair Dubai: full service page →

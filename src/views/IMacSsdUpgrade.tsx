@@ -45,7 +45,7 @@ export default function IMacSsdUpgrade() {
         { title: "Re-laminate display",      body: "Fresh Apple-spec adhesive strips applied in our dust-controlled bench. Display refit, edges sealed, weighted overnight." },
         { title: "Install macOS + restore",  body: "Latest supported macOS for your iMac installed clean, then we restore your data and apps from your backup. You collect a working machine, not a project." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "1-year warranty on the SSD itself (manufacturer + us).",
         "3-month warranty on the display reassembly and adhesive seal.",

@@ -22,7 +22,7 @@ export default function MacBookProM3Repair() {
       faqs={[
         { q: "Which M3 MacBook Pro models do you repair?", a: "We repair all M3 variants: 14&quot; M3 (A2918), 14&quot; M3 Pro (A2992), 16&quot; M3 Pro (A2991), and 16&quot; M3 Max (A2991)." },
         { q: "How much does MacBook Pro M3 screen repair cost in Dubai?", a: "It is quoted per size in writing - the 16&quot; costs more than the 14&quot; because the panel does. Same-day service for most models." },
-        { q: "Do you offer a warranty on M3 MacBook Pro repairs?", a: "Yes, in writing. Screens carry 90 days and batteries 3 months with an 80% capacity guarantee. Other hardware such as trackpads, ports and SSDs carries up to 12 months; keyboard, logic board and liquid-damage work carries 15 days." },
+        { q: "Do you offer a warranty on M3 MacBook Pro repairs?", a: "Yes, in writing. Screens carry 90 days and batteries 3 months with an 80% capacity guarantee. Other hardware such as trackpads, ports and SSDs carries 15 days to 2 years; keyboard, logic board and liquid-damage work carries 15 days." },
         { q: "Can you repair M3 MacBook Pro battery swelling?", a: "Yes. A swollen battery is a safety issue. Bring it in immediately. We replace the battery and inspect the chassis for any deformation caused by the swelling." },
       ]}
     />

@@ -7,7 +7,7 @@ export default function IPhone13ProRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Repair Dubai - 120Hz ProMotion Screen & Battery | 055 741 3706"
-      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen, battery, camera and Face ID. Same-day, warranty up to 12 months. WhatsApp us."
+      seoDescription="iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen, battery, camera and Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp us."
       path="/iphone-13-pro-repair-dubai"
       eyebrow="iPhone 13 Pro (2021)"
       h1="iPhone 13 Pro Repair Dubai - ProMotion OLED, Battery, LiDAR"
@@ -87,10 +87,10 @@ export default function IPhone13ProRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + handover",          body: "ProMotion, MagSafe, telephoto, LiDAR and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh covered.",
         "Battery: capacity-drop coverage.",
         "Face ID: full functionality verified before return.",

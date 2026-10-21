@@ -281,7 +281,7 @@ export default function IpadModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Do you offer a warranty on ${model.name} repairs?`,
-      a: `Every ${model.name} repair comes with a written warranty of up to 12 months, depending on the repair, covering the part we replaced and the labour. If the same fault returns we re-repair free, no questions asked.`,
+      a: `Every ${model.name} repair comes with a written warranty of 15 days to 2 years, depending on the repair, covering the part we replaced and the labour. If the same fault returns we re-repair free, no questions asked.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
@@ -292,11 +292,11 @@ export default function IpadModelPage({ slug }: { slug: string }) {
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
-      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty up to 12 months, walk-in workshop. WhatsApp us for today's price.`}
+      seoDescription={`${model.name} (${model.releaseYear}) repair Dubai - screen, battery, port and water damage. Warranty 15 days to 2 years, walk-in workshop. WhatsApp us for today's price.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Battery, Port & More`}
-      subtitle={`${model.heroTagline} Written warranty up to 12 months. Walk in at Media City - message us on WhatsApp for today's price.`}
+      subtitle={`${model.heroTagline} Written warranty of 15 days to 2 years. Walk in at Media City - message us on WhatsApp for today's price.`}
       startingPrice={0}
       timeline={turnaroundSummary(turnaround)}
       whatsappPrefill={`Hi, I have a ${model.name} (${model.releaseYear}) and I need help with:`}
@@ -401,12 +401,12 @@ export default function IpadModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue",   body: `Send "${model.name}" plus a photo. Quote in 4 minutes.` },
         { title: "Walk in to our Media City workshop",   body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",   body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of up to 12 months, depending on the repair.` },
+        { title: "Repair + written warranty",       body: `${model.timelineNotes} You walk out with a written warranty of 15 days to 2 years, depending on the repair.` },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Screens 90 days; batteries 3 months; board and liquid work 15 days; other parts up to 12 months",
+        "Screens 90 days; batteries 3 months; board and liquid work 15 days; other parts 15 days to 2 years",
         "Covers the replaced part and the labour",
         "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",

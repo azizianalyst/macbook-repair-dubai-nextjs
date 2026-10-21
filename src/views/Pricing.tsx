@@ -40,7 +40,7 @@ const HOW_PRICING_WORKS = [
   { icon: Search,      title: "Free diagnosis",     body: "Walk in or send a WhatsApp. The technician opens the device and finds the actual fault - no charge, even if you walk away." },
   { icon: Banknote,    title: "Quote before repair", body: "Final price in writing on WhatsApp before any screwdriver moves. Approve, decline, or take the device back - your call." },
   { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe nothing. The diagnosis report is yours to keep." },
-  { icon: Clock,       title: "Up to 12-month warranty",    body: "Written warranty up to 12 months - 12 months on most hardware, 90 days on screens, 3 months on batteries, 15 days on keyboard, software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
+  { icon: Clock,       title: "15-day to 2-year warranty",    body: "Written warranty of 15 days to 2 years - 2 years on most hardware, 90 days on screens, 3 months on batteries, 15 days on keyboard, software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
 ];
 
 // "Us" cells for screen and battery come from the invoice prices (D17), never typed:
@@ -54,7 +54,7 @@ const COMPARISON = [
   { row: "Diagnosis fee",          us: "Free",                     apple: "Inspection by appointment" },
   { row: "Turnaround time",        us: "Same day to 5 days",      apple: "Often several days, depending on parts" },
   { row: "Walk in, no appointment", us: "Yes - Dubai Media City",  apple: "Appointment advised" },
-  { row: "Warranty",               us: "Up to 12 months (by repair)",         apple: "90 days on repairs" },
+  { row: "Warranty",               us: "15 days to 2 years (by repair)",         apple: "90 days on repairs" },
   { row: "MacBook screen repair",  us: `${span("screen-")} incl. VAT, depending on model (see table above)`, apple: "No published price - quoted after inspection" },
   { row: "MacBook battery",        us: `${span("battery-")} incl. VAT, 2012-2020 Intel models; newer models quoted`, apple: "AED 589-959 + VAT, current models (Apple list)" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
@@ -176,7 +176,7 @@ export default function Pricing() {
           <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Genuine Apple parts when available, premium-grade aftermarket otherwise",
-              "Written warranty up to 12 months on parts and workmanship (15 days to 12 months by repair)",
+              "Written warranty of 15 days to 2 years on parts and workmanship, depending on the repair",
               "Walk-in service at Concord Tower, Dubai Media City - no appointment needed",
               "Full diagnostic test and post-repair quality check",
               "Free internal cleaning, dust removal, and thermal repaste on MacBook repairs",

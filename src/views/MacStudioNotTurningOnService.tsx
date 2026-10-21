@@ -48,7 +48,7 @@ export default function MacStudioNotTurningOnService() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "15-day written warranty on board-level repairs, extendable to 6 months; 12 months on a replacement power supply.",
+        "15-day written warranty on board-level repairs, extendable to 6 months; 2 years on a replacement power supply.",
         "Covers the part and the workmanship - not accidental damage.",
         "Free re-diagnosis if the same fault recurs within warranty.",
       ]}

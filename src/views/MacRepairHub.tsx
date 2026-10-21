@@ -90,7 +90,7 @@ const FAQ_GROUPS = [
     category: "Parts & warranty",
     items: [
       { q: "Do you use genuine Apple parts?", a: "Genuine Apple parts where supply allows, or quality-tested OEM-grade parts, depending on your preference and budget. We tell you exactly which type before we start. The choice is yours." },
-      { q: "What warranty do you provide?", a: "Written warranty up to 12 months on parts and labour, depending on the repair type. Battery replacements carry 3 months (80% capacity guarantee on MacBook), screens 90 days, and keyboard, logic board and liquid-damage repairs 15 days. Every warranty is written on your job sheet." },
+      { q: "What warranty do you provide?", a: "Written warranty of 15 days to 2 years on parts and labour, depending on the repair type. Battery replacements carry 3 months (80% capacity guarantee on MacBook), screens 90 days, and keyboard, logic board and liquid-damage repairs 15 days. Every warranty is written on your job sheet." },
     ],
   },
 ];
@@ -180,7 +180,7 @@ export default function MacRepairHub() {
             </p>
             <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
               <p className="text-[15px] text-text-muted leading-relaxed" itemProp="text">
-                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, walk-in service near the Palm Jumeirah tram stop, genuine or OEM-grade parts and written warranty up to 12 months, in business since 2004.
+                MacBook Repair Dubai repairs every Mac: MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, from Intel through M5, at its Concord Tower workshop in Dubai Media City. Free diagnosis, walk-in service near the Palm Jumeirah tram stop, genuine or OEM-grade parts and written warranty of 15 days to 2 years, in business since 2004.
               </p>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function MacRepairHub() {
             "Diagnosis is free on every machine, with the exact price confirmed in writing before any work.",
             "Board-level component repair is the default here - a failed chip does not mean a whole new board.",
             "Screens and batteries are same-day on most models; liquid work runs 1-5 days and board work 3-7 days.",
-            "Written warranty up to 12 months, and no charge if the fault cannot be fixed.",
+            "Written warranty of 15 days to 2 years, and no charge if the fault cannot be fixed.",
             "Walk in to Concord Tower, Media City, or send the Mac by a same-day courier you book.",
           ]}
         />
@@ -364,7 +364,7 @@ export default function MacRepairHub() {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
+                <span>✓ Warranty 15 days to 2 years</span>
                 <span>✓ Walk-in workshop in Media City</span>
               </div>
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2">
@@ -423,7 +423,7 @@ export default function MacRepairHub() {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Need your Mac repaired?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
+                Free diagnosis · No fix, no charge · Warranty 15 days to 2 years
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0"><CallButtons dark /></div>

@@ -263,7 +263,7 @@ export default function BlogMacBookAirM1Problems() {
             ]}
           />
           <p>
-            Every repair comes with a written warranty of up to 12 months, depending on the repair. Drop off before 11am for
+            Every repair comes with a written warranty of 15 days to 2 years, depending on the repair. Drop off before 11am for
             same-day collection on battery and port jobs.{" "}
             <Link to="/macbook-air-m1-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Air M1 repair Dubai →

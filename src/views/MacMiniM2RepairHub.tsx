@@ -52,10 +52,10 @@ export default function MacMiniM2RepairHub() {
         { title: "Firmware and software",  body: "HDMI audio dropout is a known firmware bug. We update and test before opening the machine - avoids unnecessary repairs." },
         { title: "Hardware repair",        body: "Port, board-level, or thermal work completed in our workshop with a 1-hour load test before collection." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (ports, hinge, fan, speaker, SSD/RAM).",
+        "Up to 2 years on most hardware repairs (ports, hinge, fan, speaker, SSD/RAM).",
         "90 days on screens; 3 months on batteries, with an 80% capacity guarantee.",
         "15 days on logic-board, liquid-damage, software and data-recovery work.",
         "Free re-diagnosis if the same fault recurs within the warranty period.",

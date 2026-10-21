@@ -56,7 +56,7 @@ const FAQS = [
   { q: "Why do you recommend Apple first when my device is eligible for a free programme?",
     a: "Honesty wins long-term customers. If Apple will fix your device for free, that's the best outcome for you. We'd rather lose one job today and earn your trust for the next 10 years of repairs across your household and office. When a device we check qualifies, we send the customer straight to Apple." },
   { q: "What happens if Apple refuses my programme repair?",
-    a: "Common reasons: serial number outside the eligible range, accidental damage flagged by Apple's diagnostic, or the programme has expired. In any of those cases bring the device back to us - we can repair the same fault out-of-pocket with transparent pricing and a warranty of up to 12 months, often the same day." },
+    a: "Common reasons: serial number outside the eligible range, accidental damage flagged by Apple's diagnostic, or the programme has expired. In any of those cases bring the device back to us - we can repair the same fault out-of-pocket with transparent pricing and a warranty of 15 days to 2 years, often the same day." },
   { q: "Are there any active programmes for iPad or Apple Watch in 2026?",
     a: "No. As of " + LAST_UPDATED + ", Apple lists no iPad or Apple Watch programme; its open Mac and iPhone programmes cover the Mac mini (2023, M2), the iPhone 14 Plus and the mid-2015 15-inch MacBook Pro. We don't repair Apple Watch in-house; for an iPad, check the serial on Apple's site or send it to us and we'll check." },
   { q: "Can I bring a device that Apple refused to repair under a programme?",
@@ -71,7 +71,7 @@ const SCENARIOS = [
   { q: "13\" MacBook Pro 2016 backlight stripes (Flexgate).",
     a: "Apple closed its backlight programme for this model. We offer a cable-only repair or a full display, both with a 3-month warranty - message us on WhatsApp for today's exact price." },
   { q: "iPhone 12 receiver dead during calls.",
-    a: "Apple's receiver programme no longer runs. Receiver replacement with warranty of up to 12 months, returned same day - message us on WhatsApp for the exact price." },
+    a: "Apple's receiver programme no longer runs. Receiver replacement with warranty of 15 days to 2 years, returned same day - message us on WhatsApp for the exact price." },
 ];
 
 export default function AppleRepairProgramsDubai() {
@@ -90,7 +90,7 @@ export default function AppleRepairProgramsDubai() {
       serviceSchema({
         name: "Apple repair programme eligibility check",
         timeline: "Same day",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: PATH,
         description: "Free diagnostic check against every open and recently ended Apple repair programme. Independent guidance - we'll tell you if Apple should fix your device for free.",
       }),
@@ -133,7 +133,7 @@ export default function AppleRepairProgramsDubai() {
             An Apple Repair Programme (sometimes called a Service Programme, Quality Programme or Exchange Programme) is Apple's quiet acknowledgement that a known manufacturing defect affected a specific model and serial range. When a programme is open, Apple - or an Apple Authorised Service Provider - repairs the affected fault at no charge to the customer, for the period Apple states on each programme page, counted from the unit's first retail sale, regardless of the standard 1-year warranty or AppleCare+ coverage.
           </p>
           <p>
-            Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own written warranty up to 12 months.
+            Programmes do not cover unrelated faults, accidental damage, water damage, or work performed by third-party shops that left the device in a non-original state. They also do not extend the standard warranty - once the programme window closes, the same defect is back on you to pay for. That is precisely the gap we fill: we repair the same physical fault after Apple's coverage window expires, at independent prices, with our own written warranty of 15 days to 2 years.
           </p>
           <p>
             We are not Apple Authorised. We list Apple's programmes here as a public service so you don't pay us - or anyone - for a repair Apple should be doing for free. When a device we diagnose falls inside an open programme, we send the customer straight to Apple Dubai Mall or Apple Mall of the Emirates.
@@ -252,7 +252,7 @@ export default function AppleRepairProgramsDubai() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl max-w-[72ch]">
         <h2 className="text-[28px] md:text-[32px] mb-md">What if the programme has ended?</h2>
         <p className="text-[16px] text-text leading-relaxed">
-          The defect does not disappear when Apple's coverage window closes. We still repair the Mac, iPhone and iPad faults these programmes covered, with a written warranty up to 12 months and same-day turnaround for most common jobs - message us on WhatsApp for today's exact price on your model.
+          The defect does not disappear when Apple's coverage window closes. We still repair the Mac, iPhone and iPad faults these programmes covered, with a written warranty of 15 days to 2 years and same-day turnaround for most common jobs - message us on WhatsApp for today's exact price on your model.
         </p>
         <div className="grid gap-md md:grid-cols-3 mt-lg">
           <Link to="/macbook-keyboard-repair-dubai" className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent">
@@ -269,7 +269,7 @@ export default function AppleRepairProgramsDubai() {
           </Link>
         </div>
         <p className="text-[14px] text-text-muted mt-md">
-          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent underline underline-offset-2">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent underline underline-offset-2">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent underline underline-offset-2">How our warranty of up to 12 months works</Link>.
+          Background reading: <Link to="/blog/macbook-flexgate-explained" className="text-accent underline underline-offset-2">Flexgate explained</Link> · <Link to="/blog/macbook-keyboard-repair-cost-by-model" className="text-accent underline underline-offset-2">MacBook keyboard repair cost guide</Link> · <Link to="/blog/macbook-repair-warranty-explained" className="text-accent underline underline-offset-2">How our warranty of 15 days to 2 years works</Link>.
         </p>
       </section>
 

@@ -88,10 +88,10 @@ export default function IPhoneAirRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; back glass + frame work 2-3 days." },
         { title: "QC + return",          body: "ProMotion, AOD, MagSafe alignment, USB-C, single camera, frame straightness and Face ID tested, signed warranty, ready to collect at the workshop." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "MagSafe alignment verified to ±0.3 mm tolerance.",
         "Frame work: straightness measured on jig before return.",

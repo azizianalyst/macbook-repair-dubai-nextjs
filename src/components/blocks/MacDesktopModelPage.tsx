@@ -329,7 +329,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             ? `Not much yet - it is in Apple's current lineup, so there is no repair track record. What we see first on any new desktop is accidental damage Apple's warranty excludes (liquid, drops, power surges), port damage from docks and cables, and setup problems that look like hardware. Factory faults go to Apple under warranty - we check your serial number for free.`
           : isNewMiniChassis
             ? `The power button is on the bottom of the chassis (you reach UNDER the Mac Mini to press it). It's awkward but you almost never use it once the Mac is set up. Not a defect, just an unusual design choice. We don't see failures on the button itself.`
-            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of up to 12 months - message us on WhatsApp for today's exact price.`,
+            : `Internal PSU thermal stress and HDMI port wear. The PSU is integrated (not an external brick) and works hard in the small chassis. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of 15 days to 2 years - message us on WhatsApp for today's exact price.`,
     },
     {
       q: `Is the ${model.shortName} still worth repairing in 2026?`,
@@ -347,22 +347,22 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
     },
     {
       q: `What warranty do I get on a ${model.shortName} repair?`,
-      a: `It depends on the job: the power supply, ports, fan replacement and other hardware up to 12 months, and logic-board, liquid-damage and data work 15 days. The exact period is printed on your invoice.`,
+      a: `It depends on the job: the power supply, ports, fan replacement and other hardware 15 days to 2 years, and logic-board, liquid-damage and data work 15 days. The exact period is printed on your invoice.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. ${isPro ? "A Mac Pro tower is heavy: carry it up from the parking, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." : "Can't come in? Send it by a same-day courier you book."} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. ${isPro ? "A Mac Pro tower is heavy: carry it up from the parking, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." : "Can't come in? Send it by a same-day courier you book."} WhatsApp the model and a photo of the problem and we'll quote within 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
-      seoDescription={`${model.name} repair Dubai - logic board, PSU${model.pricing.port ? ", ports" : ""} and preventive service. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
+      seoDescription={`${model.name} repair Dubai - logic board, PSU${model.pricing.port ? ", ports" : ""} and preventive service. Free diagnosis, warranty of 15 days to 2 years. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Logic Board, PSU, Ports & Preventive Service`}
-      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Walk in at Media City.`}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty of 15 days to 2 years. Walk in at Media City.`}
       startingPrice={0}
       timeline={headerTimeline(model, serviceRows)}
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -382,7 +382,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Walk in at Media City, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Walk in at Media City, written warranty of 15 days to 2 years.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -526,12 +526,12 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
         { title: "Walk in to our Media City workshop", body: `Open Mon-Sat 9am-7pm, Friday break 12-2pm.${isPro ? " Paid onsite visits for Mac Pro towers, subject to technician availability." : " Can't come in? Send it by a same-day courier you book."}` },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
+        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of 15 days to 2 years, depending on the repair.` },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Logic board, liquid and thermal work 15 days; power supply, SSD and other parts up to 12 months",
+        "Logic board, liquid and thermal work 15 days; power supply, SSD and other parts 15 days to 2 years",
         "Covers the replaced part and the labour",
         "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",

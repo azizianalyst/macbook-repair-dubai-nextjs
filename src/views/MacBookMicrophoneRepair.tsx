@@ -24,7 +24,7 @@ export default function MacBookMicrophoneRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>MacBook microphone repair in Dubai</strong> covers the lot: nobody can hear you on a call, your voice comes through muffled or far away, the input level meter in System Settings never moves, or the mic worked fine until a spill. Every MacBook since 2018 uses a three-mic array near the speaker grilles, wired through a flex to the logic board. When one element fails or corrodes, input drops or distorts. We test it, find whether it's the mic module, the cable or the audio codec on the board, and fix it with a <strong>warranty of up to 12 months</strong>.
+            <strong>MacBook microphone repair in Dubai</strong> covers the lot: nobody can hear you on a call, your voice comes through muffled or far away, the input level meter in System Settings never moves, or the mic worked fine until a spill. Every MacBook since 2018 uses a three-mic array near the speaker grilles, wired through a flex to the logic board. When one element fails or corrodes, input drops or distorts. We test it, find whether it's the mic module, the cable or the audio codec on the board, and fix it with a <strong>warranty of 15 days to 2 years</strong>.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Here's the catch, a dead mic isn't always hardware. Sometimes it's a macOS input setting, an app permission, or the audio codec rather than the mic itself. We diagnose before we quote, so you don't pay for a part you don't need. We've been on Apple hardware at Concord Tower, Dubai Media City since 2004, with {REVIEW_COUNT_LABEL} Google reviews behind the bench.
@@ -47,11 +47,11 @@ export default function MacBookMicrophoneRepair() {
         { title: "Replace the mic module", body: "If it's the array or flex, we fit a new module, clean any corrosion, and reseat the cable to the board." },
         { title: "Verify on a real call", body: "Tested with a live recording and a call before it leaves the bench - clear input, no hiss, full level." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the microphone module, flex cable and the fit.",
         "Excludes new liquid contact after delivery.",
-        "Free re-check if input drops again inside 12 months.",
+        "Free re-check if input drops again inside 2 years.",
       ]}
       faqs={[
         { q: "Is my MacBook mic broken, or is it just a setting?", a: "Could be either, and we check the free stuff first. macOS input source, app microphone permissions, and a stuck audio codec cause maybe a third of the 'dead mic' jobs we see. If it's one of those, we sort it and you pay nothing for parts. If the array's actually failed, we quote the repair after the check." },

@@ -136,7 +136,7 @@ export function deriveFamilyQuickAnswer(opts: {
   return {
     question: `How much does ${withoutTrailingCity(opts.family)} repair in Dubai cost?`,
     answer:
-      `${withoutTrailingCity(opts.family)} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty up to 12 months. ` +
+      `${withoutTrailingCity(opts.family)} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty of 15 days to 2 years. ` +
       `Same-day to 5 days depending on the model and fault. Walk in to our Media City workshop. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };

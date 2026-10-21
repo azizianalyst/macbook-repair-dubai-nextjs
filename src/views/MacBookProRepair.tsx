@@ -108,7 +108,7 @@ const FAQS = [
   },
   {
     q: "What warranty do you give on MacBook Pro repairs?",
-    a: "It depends on the repair: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 12 months on other hardware such as ports, trackpads and hinges, and 15 days on keyboard, logic-board, liquid-damage and software work.",
+    a: "It depends on the repair: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 2 years on other hardware such as ports, trackpads and hinges, and 15 days on keyboard, logic-board, liquid-damage and software work.",
   },
   {
     q: "Can you recover data from a broken MacBook Pro?",
@@ -205,7 +205,7 @@ export default function MacBookProRepair() {
         benefits: [
           { icon: Search, title: "Free diagnosis", body: "The actual fault is found before any quote." },
           { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries when the part is in stock." },
-          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
+          { icon: ShieldCheck, title: "Written warranty", body: "15 days to 2 years, depending on the repair." },
           { icon: MapPin, title: "Walk in", body: "Concord Tower, Dubai Media City. Parking on site." },
         ],
       }}

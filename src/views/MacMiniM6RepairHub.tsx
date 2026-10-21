@@ -53,10 +53,10 @@ export default function MacMiniM6RepairHub() {
         { title: "Diagnosis",                     body: "Free hardware test, port check, thermal read, network and software scan. We find the root cause before any repair decision." },
         { title: "Repair and 1-hour soak test",   body: "Port, board, data-recovery or thermal work done in our workshop. One hour of load testing confirms the fix before you collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (ports, fan, PSU, SSD).",
+        "Up to 2 years on most hardware repairs (ports, fan, PSU, SSD).",
         "15 days on logic-board, liquid-damage, software and data-recovery work.",
         "Free re-diagnosis if the same fault recurs within the warranty period.",
         "Repairs here do not affect a still-valid Apple warranty on unrelated components.",

@@ -23,7 +23,7 @@ const SERVICES = [
   { icon: Clock,     label: "Priority same-day turnaround",  body: "Corporate accounts get priority scheduling, screen, battery, keyboard, and trackpad repairs completed the day the machine reaches the bench." },
   { icon: Users,     label: "Multi-device batch repair",     body: "Bring in or send 3–20 MacBooks at once. 15% labour discount on 3+ devices in one booking." },
   { icon: FileText,  label: "Consolidated VAT invoices",     body: "Single invoice per batch repair with asset serial numbers, repair descriptions, and part costs, ready for your accounts team." },
-  { icon: Shield,    label: "Warranty of up to 12 months",   body: "Every device repaired under corporate account carries the same written warranty of up to 12 months as retail customers." },
+  { icon: Shield,    label: "Warranty of 15 days to 2 years",   body: "Every device repaired under corporate account carries the same written warranty of 15 days to 2 years as retail customers." },
   { icon: Building2, label: "Dedicated WhatsApp line",       body: "A direct WhatsApp number for your IT manager or office admin, no queuing, no call centre, direct to the technician." },
 ];
 

@@ -49,7 +49,7 @@ const STEPS = [
   { icon: MessageCircle, title: "WhatsApp us",       body: "Send a photo and model number to 055 741 3706. Get a quote in under 4 minutes during business hours." },
   { icon: MapPin,        title: "Walk in",            body: "Bring your MacBook to Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. No appointment needed, parking on site." },
   { icon: Zap,           title: "Same-day repair",    body: "Screen, battery, keyboard, trackpad, and ports are all repaired the same day your device arrives." },
-  { icon: Shield,        title: "Warranty handed over", body: "Written warranty of up to 12 months. Collect your MacBook the same day or next morning." },
+  { icon: Shield,        title: "Warranty handed over", body: "Written warranty of 15 days to 2 years. Collect your MacBook the same day or next morning." },
 ];
 
 const FAQS = [
@@ -64,7 +64,7 @@ const FAQS = [
   { q: "What time do I need to drop off my MacBook for same-day repair?",
     a: "Drop off before 2 pm for same-day completion on screen, battery, keyboard, and trackpad jobs. After 2 pm those jobs finish the following morning. We're open Monday to Thursday and Saturday 9 am to 7 pm, and Friday 9 am to 12 pm and 2 pm to 7 pm, at Concord Tower, Dubai Media City. Sunday closed." },
   { q: "Is a same-day repair covered by a warranty?",
-    a: "Yes, every repair carries a written warranty of up to 12 months, including same-day jobs. Battery replacement carries a 3-month warranty with an 80% capacity guarantee. The warranty card lists the repair, the parts used, and the serial number." },
+    a: "Yes, every repair carries a written warranty of 15 days to 2 years, including same-day jobs. Battery replacement carries a 3-month warranty with an 80% capacity guarantee. The warranty card lists the repair, the parts used, and the serial number." },
   { q: "Can you repair a MacBook the same day if bought in the USA or UK?",
     a: "Yes. MacBook hardware is identical globally, only the power adapter differs. We carry parts for all internationally-sourced MacBook Air and Pro models from 2015 onward, including US-layout keyboards." },
 ];
@@ -124,7 +124,7 @@ export default function SameDayMacBookRepair() {
           <QuickAnswer
             tone="dark"
             question="Can I get my MacBook repaired the same day in Dubai?"
-            answer="Yes. Screen, battery, keyboard, trackpad and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, when you walk in before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty up to 12 months. WhatsApp 055 741 3706."
+            answer="Yes. Screen, battery, keyboard, trackpad and USB-C port are all same-day repairs at Concord Tower, Dubai Media City, when you walk in before 2 pm. Logic board and water damage take 1–5 days. Free diagnosis, warranty of 15 days to 2 years. WhatsApp 055 741 3706."
           />
         </section>
 

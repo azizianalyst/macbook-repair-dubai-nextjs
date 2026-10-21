@@ -58,7 +58,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "Is there a warranty on MacBook repair in Dubai?",
-    a: "Yes, every MacBook repair carries a written warranty of up to 12 months on the parts and labour, depending on the repair type. Battery replacements carry 3 months with an 80% capacity guarantee; screens carry 90 days; keyboard, logic board and liquid-damage repairs carry 15 days; other hardware such as trackpads, ports and SSD upgrades carries up to 12 months.",
+    a: "Yes, every MacBook repair carries a written warranty of 15 days to 2 years on the parts and labour, depending on the repair type. Battery replacements carry 3 months with an 80% capacity guarantee; screens carry 90 days; keyboard, logic board and liquid-damage repairs carry 15 days; other hardware such as trackpads, ports and SSD upgrades carries 15 days to 2 years.",
   },
   {
     q: "Can you repair a MacBook that Apple refused to fix?",
@@ -92,7 +92,7 @@ export default function MacBookRepairHub() {
     {
       title: "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
       description:
-        "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, walk in, warranty up to 12 months.",
+        "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, walk in, warranty of 15 days to 2 years.",
       path: "/macbook-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -115,7 +115,7 @@ export default function MacBookRepairHub() {
             <span>·</span>
             <span>OEM parts</span>
             <span>·</span>
-            <span>Warranty up to 12 months</span>
+            <span>Warranty 15 days to 2 years</span>
           </div>
           <div className="mt-md">
             <CallButtons />
@@ -137,7 +137,7 @@ export default function MacBookRepairHub() {
         {/* Quick answer */}
         <QuickAnswer
           question="Where can I get my MacBook repaired in Dubai?"
-          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen, battery and logic board work all start with a free diagnosis, then a written quote. Walk-in near the Palm Jumeirah tram stop, OEM parts, and written warranty up to 12 months. In business since 2004."
+          answer="MacBook Repair Dubai repairs every MacBook. Air and Pro, Intel through M5, at its Concord Tower workshop in Dubai Media City. Screen, battery and logic board work all start with a free diagnosis, then a written quote. Walk-in near the Palm Jumeirah tram stop, OEM parts, and written warranty of 15 days to 2 years. In business since 2004."
         />
 
         {/* Models */}
@@ -195,7 +195,7 @@ export default function MacBookRepairHub() {
               "Same-day turnaround on most repairs: battery, screen, keyboard, charging port done in hours not days.",
               "Walk-in workshop near the Palm Jumeirah tram stop, with parking on site; send it by a same-day courier you book if you can't come in.",
               "OEM and genuine Apple parts, clearly labelled on your quote.",
-              "Written warranty up to 12 months on parts and labour.",
+              "Written warranty of 15 days to 2 years on parts and labour.",
               "No fix, no charge, if we can't repair it, you pay nothing.",
             ].map((item) => (
               <li key={item} className="flex items-start gap-sm">

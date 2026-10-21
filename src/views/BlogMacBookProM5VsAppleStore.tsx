@@ -21,7 +21,7 @@ export default function BlogMacBookProM5VsAppleStore() {
       category="Cost comparison · MacBook Pro"
       h1="MacBook Pro M5 Repair Cost - Us vs Apple Store Dubai"
       hook="How a MacBook Pro M5 repair here compares with the Apple Store: what each side replaces, how long it takes, and the warranty. We quote before any work so you can compare - message us on WhatsApp for today's exact price."
-      quickAnswer="For a MacBook Pro M5 14″ repair in Dubai, the one price Apple publishes is battery service: AED 879 plus VAT (Apple list). For screens and other damage Apple inspects first, usually replacing a whole module, while we repair at component level where possible and quote before any work so you can compare. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, 15 days on keyboard and board work, up to 12 months on other hardware. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="For a MacBook Pro M5 14″ repair in Dubai, the one price Apple publishes is battery service: AED 879 plus VAT (Apple list). For screens and other damage Apple inspects first, usually replacing a whole module, while we repair at component level where possible and quote before any work so you can compare. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, 15 days on keyboard and board work, up to 2 years on other hardware. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Memona", role: "Senior MacBook technician" }}
       datePublished="2026-04-25"
       dateModified="2026-09-26"
@@ -77,7 +77,7 @@ export default function BlogMacBookProM5VsAppleStore() {
             <li>
               <strong>A written warranty.</strong> Ours is written on the invoice and depends on the
               repair: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, 15
-              days on keyboard and board work, and up to 12 months on other hardware.
+              days on keyboard and board work, and up to 2 years on other hardware.
             </li>
           </ul>
 
@@ -161,7 +161,7 @@ export default function BlogMacBookProM5VsAppleStore() {
         },
         {
           q: "What if your repair fails, what's the warranty process?",
-          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned inside the warranty for that repair (90 days on screens, 3 months on batteries, 15 days on keyboard and board work, up to 12 months on other hardware), we re-do the repair free. We don't dodge or argue.",
+          a: "Bring the MacBook back. We re-diagnose, and if the same fault has returned inside the warranty for that repair (90 days on screens, 3 months on batteries, 15 days on keyboard and board work, up to 2 years on other hardware), we re-do the repair free. We don't dodge or argue.",
         },
       ]}
       relatedLinks={[

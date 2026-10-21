@@ -47,9 +47,9 @@ export default function MacMiniSsdUpgrade() {
         { title: "The right upgrade",         body: "RAM upgrade on a 2018 Intel mini, or a fast external SSD set up as your working drive on any model. We size it to your workflow and budget." },
         { title: "Migrate and verify",        body: "We migrate your data with macOS Migration Assistant, confirm capacity and speed with a benchmark, and check storage health before you collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
-        "12-month warranty on upgrade workmanship, plus the manufacturer's warranty on the part.",
+        "2-year warranty on upgrade workmanship, plus the manufacturer's warranty on the part.",
         "External SSD setup and data migration checked before collection.",
         "Free re-check if a speed or capacity issue appears within warranty.",
       ]}

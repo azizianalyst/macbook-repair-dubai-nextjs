@@ -80,7 +80,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac mini repairs — logic board, overheating, no-display — are diagnosed and fixed within a few hours." },
   { Icon: Award,       title: "Apple repair since 2004",      body: "Our technicians have repaired Apple hardware since 2004, across every Mac mini generation from G4 to M4." },
-  { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on SSDs and other hardware parts, and 15 days on logic board repairs." },
+  { Icon: ShieldCheck, title: "Warranty 15 days to 2 years", body: "All parts and labour carry a written warranty: 15 days to 2 years on SSDs and other hardware parts, and 15 days on logic board repairs." },
   { Icon: MapPin,       title: "Walk-in workshop, Media City",   body: "Bring your Mac mini to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",           body: "Every Mac mini gets a full diagnostic at no cost. We find the real fault before quoting." },
@@ -403,7 +403,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
+                <span>✓ Warranty 15 days to 2 years</span>
                 <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
@@ -447,7 +447,7 @@ export default function MacMiniGenerationPage(p: MacMiniGenerationProps) {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your Mac mini?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
+                Free diagnosis · No fix, no charge · Warranty 15 days to 2 years
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

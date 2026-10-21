@@ -87,10 +87,10 @@ export default function IPhone16PlusRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + return",          body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

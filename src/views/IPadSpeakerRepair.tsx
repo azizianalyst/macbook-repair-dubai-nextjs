@@ -44,9 +44,9 @@ export default function IPadSpeakerRepair() {
         { title: "Free mesh inspection + clean", body: "Microscope at 40\u00d7. Sand, lint and pet hair extracted with a fine pick. Re-test audio. Often resolves the issue with no bill." },
         { title: "Channel test",                  body: "If clean and still faulty, we play a stereo sweep tone to isolate which speaker is dead - front-left, front-right, rear-left, rear-right." },
         { title: "Speaker module replacement",   body: "OEM-grade speaker module installed. On Air / Pro four-speaker iPads we test all four after the swap so the dynamic-routing algorithm calibrates." },
-        { title: "Audio verification",            body: "Stereo music, speaker test from Settings, FaceTime call. Warranty up to 12 months card with the iPad." },
+        { title: "Audio verification",            body: "Stereo music, speaker test from Settings, FaceTime call. Warranty 15 days to 2 years card with the iPad." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new speaker module and seal.",
         "Excludes new water or sand ingress.",

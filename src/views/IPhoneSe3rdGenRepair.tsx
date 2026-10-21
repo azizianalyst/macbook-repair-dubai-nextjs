@@ -6,11 +6,11 @@ export default function IPhoneSe3rdGenRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone SE 3rd Gen Repair Dubai - Screen, Battery, Same Day | 055 741 3706"
-      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery, LCD and all repairs same day, warranty up to 12 months. WhatsApp us for today's price."
+      seoDescription="iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery, LCD and all repairs same day, warranty of 15 days to 2 years. WhatsApp us for today's price."
       path="/iphone-se-3rd-gen-repair-dubai"
       eyebrow="iPhone SE (2022)"
       h1="iPhone SE (3rd Gen) Repair Dubai - Screen, Battery, All Repairs"
-      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. Same day, written warranty up to 12 months - message us for today's price."
+      subtitle="The 2022 SE on the A15 chip with 5G. Fully supported in April 2026 - definitely worth repairing. Same day, written warranty of 15 days to 2 years - message us for today's price."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, I have an iPhone SE 3rd gen (2022) and need help with:"
@@ -24,7 +24,7 @@ export default function IPhoneSe3rdGenRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. Same day, warranty of up to 12 months - message us on WhatsApp for today's exact price on your model.
+            <strong>Quick answer:</strong> The iPhone SE 3rd gen (March 2022) is the youngest iPhone that still uses Touch ID and a Lightning port. A15 chip, 5G, 4 GB of RAM. In April 2026 it is fully supported - Apple Intelligence excluded - and is one of the easiest iPhones we service. Same day, warranty of 15 days to 2 years - message us on WhatsApp for today's exact price on your model.
           </p>
           <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the iPhone SE 3 (2022)</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
@@ -84,10 +84,10 @@ export default function IPhoneSe3rdGenRepair() {
         { title: "Diagnose + replace",           body: "Most jobs done in 30-60 minutes on the bench." },
         { title: "QC + return",                  body: "Functional QC, signed warranty card, ready to collect at the workshop." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Battery: any sudden capacity drop covered.",
         "Screen: ghost-touch, dead pixels, backlight bleed covered.",
         "Touch ID preserved on every screen replacement (we keep your original home button).",

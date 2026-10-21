@@ -43,9 +43,9 @@ export default function IPhoneEarpieceRepair() {
         { title: "Confirm it's the earpiece",   body: "Plug in headphones - if voice is clear there, it's the earpiece, not the modem. We do this test free, in front of you." },
         { title: "Free mesh clean first",        body: "We extract dust from the earpiece grille at 40× magnification. About 25% of cases are solved here - no charge." },
         { title: "Face ID-safe extraction",      body: "On iPhone X+ we use heated thin tools to lift the earpiece without disturbing the dot projector cable. Patient, slow work." },
-        { title: "Test calls + warranty",        body: "Test inbound and outbound calls, Face ID re-verified, warranty of up to 12 months card handed to you." },
+        { title: "Test calls + warranty",        body: "Test inbound and outbound calls, Face ID re-verified, warranty of 15 days to 2 years card handed to you." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new earpiece and proximity sensor area.",
         "Face ID protected - if we damage it, we pay for repair.",

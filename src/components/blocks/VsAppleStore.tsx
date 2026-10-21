@@ -14,7 +14,7 @@ const DEFAULT_ROWS: Row[] = [
   { label: "Your data", us: "Stays on the device, never wiped without consent", them: "Device often wiped or swapped" },
   { label: "Parts", us: "Genuine or quality-tested - your choice", them: "Genuine module swap only" },
   { label: "Getting it in", us: "Walk in to Media City - no appointment", them: "Genius Bar appointment required" },
-  { label: "Warranty", us: "Up to written warranty up to 12 months on the repair", them: "Varies by service" },
+  { label: "Warranty", us: "Written warranty of 15 days to 2 years, depending on the repair", them: "Varies by service" },
 ];
 
 export function VsAppleStore({

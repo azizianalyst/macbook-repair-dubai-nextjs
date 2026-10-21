@@ -6,7 +6,7 @@ export default function IPhone15Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 15 Repair Dubai - USB-C, Dynamic Island, Screen | 055 741 3706"
-      seoDescription="iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen, USB-C port, battery. Same-day, warranty of up to 12 months. WhatsApp for a price."
+      seoDescription="iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen, USB-C port, battery. Same-day, warranty of 15 days to 2 years. WhatsApp for a price."
       path="/iphone-15-repair-dubai"
       eyebrow="iPhone 15 (2023, discontinued Sept 2025)"
       h1="iPhone 15 Repair Dubai - Screen, USB-C, Battery, Camera"
@@ -84,10 +84,10 @@ export default function IPhone15Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + return",          body: "OLED, Dynamic Island, USB-C charge + data, MagSafe and Face ID tested, signed warranty, ready to collect at the workshop." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "USB-C: charge + data tested at full USB 2.0 speed before return.",
         "Battery: capacity-drop coverage.",

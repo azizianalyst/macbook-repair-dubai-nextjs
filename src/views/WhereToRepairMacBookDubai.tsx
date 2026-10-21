@@ -25,7 +25,7 @@ const COMPARISON: { factor: string; apple: string; aasp: string; us: string }[] 
   { factor: "Warranty on the repair",
     apple: "12 months",
     aasp: "12 months (or remaining Apple cover)",
-    us: "Written, by repair type: up to 12 months on hardware parts, 90 days on screens, 3 months on batteries, 15 days on board work" },
+    us: "Written, by repair type: up to 2 years on hardware parts, 15 days to 2 years on screens by grade, 3 months on batteries, 15 days on board work" },
   { factor: "Turnaround",
     apple: "Often sent off-site, can take longer",
     aasp: "Typically a few days",
@@ -48,7 +48,7 @@ export default function WhereToRepairMacBookDubai() {
   return (
     <SubServicePageTemplate
       seoTitle="Where to Repair a MacBook in Dubai: Apple vs Independent"
-      seoDescription="Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
+      seoDescription="Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of 15 days to 2 years."
       path="/blog/where-to-repair-macbook-dubai"
       eyebrow="Apple Store vs independent"
       h1="Where to Repair a MacBook in Dubai: Apple Store, Authorised Centre or Independent?"
@@ -65,7 +65,7 @@ export default function WhereToRepairMacBookDubai() {
       serviceName="MacBook Repair (independent vs Apple Store) Dubai"
       quickAnswer={{
         question: "Where should I repair my MacBook in Dubai?",
-        answer: "If your MacBook is in warranty or covered by AppleCare+, use an Apple Store or an Apple Authorised Service Provider. If it's out of warranty, older, or you want a faster, lower-cost board-level repair, an independent specialist like us is usually the better value - free diagnosis, same-day on most repairs, with a written warranty up to 12 months. We'll always tell you honestly when an Apple claim is the smarter route.",
+        answer: "If your MacBook is in warranty or covered by AppleCare+, use an Apple Store or an Apple Authorised Service Provider. If it's out of warranty, older, or you want a faster, lower-cost board-level repair, an independent specialist like us is usually the better value - free diagnosis, same-day on most repairs, with a written warranty of 15 days to 2 years. We'll always tell you honestly when an Apple claim is the smarter route.",
       }}
       intro={
         <>
@@ -103,7 +103,7 @@ export default function WhereToRepairMacBookDubai() {
 
           <h2 className="text-[24px] md:text-[28px] mb-md">When an independent specialist wins</h2>
           <p className="text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
-            Once a Mac is out of warranty - or Apple has classed it &quot;vintage&quot; and won&apos;t touch it - an independent specialist is usually the faster, cheaper and more flexible route. We repair at component and board level (the exact failed chip, port or cable) where Apple and authorised centres replace the whole logic board, so a fault Apple quotes thousands for is often a fraction of that with us. Add a walk-in workshop near the Palm Jumeirah tram stop, same-day turnaround on most repairs, a written warranty of up to 12 months, and published prices you can see before you commit.
+            Once a Mac is out of warranty - or Apple has classed it &quot;vintage&quot; and won&apos;t touch it - an independent specialist is usually the faster, cheaper and more flexible route. We repair at component and board level (the exact failed chip, port or cable) where Apple and authorised centres replace the whole logic board, so a fault Apple quotes thousands for is often a fraction of that with us. Add a walk-in workshop near the Palm Jumeirah tram stop, same-day turnaround on most repairs, a written warranty of 15 days to 2 years, and published prices you can see before you commit.
           </p>
         </>
       }
@@ -120,12 +120,12 @@ export default function WhereToRepairMacBookDubai() {
         { title: "Walk in or send it by courier", body: "Drop in to our Concord Tower workshop in Media City (Mon-Thu and Sat 9 am - 7 pm, Fri 9 am - 12 pm and 2 pm - 7 pm), or book any same-day courier app and WhatsApp us the tracking link." },
         { title: "Free diagnosis & written quote", body: "We diagnose the real fault and send a fixed written quote - including an honest note if an Apple Store or AASP claim would serve you better." },
         { title: "Approve & we repair",          body: "Most common repairs finish the same day at component level. You only pay once you approve the quote." },
-        { title: "Collect + warranty of up to 12 months",    body: "Collect it from the workshop (or we book a courier to bring it back) with a written warranty of up to 12 months on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },
+        { title: "Collect + warranty of 15 days to 2 years",    body: "Collect it from the workshop (or we book a courier to bring it back) with a written warranty of 15 days to 2 years on the repair (3 months on batteries, 90 days on screens, 15 days on keyboard and board work)." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on replaced hardware parts such as trackpads, ports and SSDs.",
+        "15 days to 2 years on replaced hardware parts such as trackpads, ports and SSDs.",
         "90 days on screens; 3 months on batteries, with an 80% capacity guarantee.",
         "15 days on keyboard, logic-board and liquid-damage work.",
         "Same fault returns inside the period? We re-repair free - no quibbling.",
@@ -135,7 +135,7 @@ export default function WhereToRepairMacBookDubai() {
         { q: "Is independent MacBook repair as good as the Apple Store?", a: "For out-of-warranty and board-level work, an independent specialist is often better value - we repair the actual failed component where Apple replaces the whole logic board. For in-warranty or AppleCare+ repairs, the Apple Store or an authorised centre is the right call, and we'll tell you so." },
         { q: "Are you an Apple Authorised Service Provider?", a: "No. We're an independent Apple repair specialist working in Dubai since 2004. We repair in-warranty-expired, AppleCare-ineligible and out-of-warranty Macs, and we'll honestly tell you when an Apple Store or authorised centre is the better route." },
         { q: "Will using an independent repairer void my Apple warranty or AppleCare+?", a: "If your Mac is still under Apple's warranty or AppleCare+, a non-Apple repair can affect that cover - so for in-warranty machines we'll point you to Apple first. Once a Mac is out of warranty there's no Apple cover left to affect." },
-        { q: "Do you use genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't - and we tell you which your repair uses before we start. Both carry our written warranty up to 12 months." },
+        { q: "Do you use genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't - and we tell you which your repair uses before we start. Both carry our written warranty of 15 days to 2 years." },
         { q: "How much cheaper is independent repair than the Apple Store?", a: "It varies by fault, but board-level repair is typically far less than Apple's whole-board replacement, because we fix the failed component instead of swapping the whole board. Diagnosis is free, and we confirm the exact price in writing before any work starts." },
         { q: "When should I go to Apple instead of you?", a: "If your MacBook is in warranty, eligible for an AppleCare+ claim, or you specifically require only Apple-supplied parts and cost isn't a factor. In those cases the Apple Store or an Apple Authorised Service Provider is the better choice - and we'll say so." },
       ]}
@@ -144,7 +144,7 @@ export default function WhereToRepairMacBookDubai() {
         { label: "Transparent pricing",            href: "/pricing",                         description: "Our full published MacBook repair price list." },
         { label: "Out-of-warranty Apple repair",   href: "/out-of-warranty-apple-repair-dubai", description: "What we fix once Apple's cover has ended." },
         { label: "Apple repair programmes & recalls", href: "/apple-repair-programs-dubai",   description: "Free Apple service programmes you may still qualify for." },
-        { label: "warranty of up to 12 months",                href: "/warranty",                        description: "Exactly what our written warranty covers." },
+        { label: "warranty of 15 days to 2 years",                href: "/warranty",                        description: "Exactly what our written warranty covers." },
       ]}
       blogLink={{ label: "How our transparent repair pricing works", href: "/blog/transparent-repair-pricing-explained" }}
     />

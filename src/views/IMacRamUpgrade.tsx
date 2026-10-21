@@ -122,9 +122,9 @@ export default function IMacRamUpgrade() {
         { title: "Fit the memory",              body: "27-inch: through the rear door. 21.5-inch Retina 4K 2017 and 2019: display removed, memory fitted, display re-bonded with new adhesive." },
         { title: "Test before you collect",     body: "We run an extended memory test, confirm the full amount shows in About This Mac, and load-test the iMac before handing it back." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
-        "Written warranty of up to 12 months on the memory and the fitting.",
+        "Written warranty of 15 days to 2 years on the memory and the fitting.",
         "A module that fails a test inside the warranty is replaced.",
         "Free diagnosis before any work; no upgrade, no charge.",
       ]}
@@ -133,7 +133,7 @@ export default function IMacRamUpgrade() {
         { q: "What is the maximum RAM for my 27-inch iMac?", a: "Apple configured the 2017 and 2019 27-inch iMacs with up to 64GB and the 2020 model with up to 128GB, using four DDR4 slots behind the rear door. Earlier 27-inch models from Late 2012 onwards also have the door, with lower maximums. Send us your serial number and we will confirm the ceiling for your exact model." },
         { q: "Can the 21.5-inch iMac be upgraded?", a: "The 21.5-inch Retina 4K iMacs from 2017 and 2019 can, but the memory sits behind the display, so the screen has to be removed and re-bonded. It makes sense to add an SSD in the same visit. The non-Retina 21.5-inch models from 2014 to 2017 have soldered memory and cannot take more RAM, though an SSD upgrade is still possible." },
         { q: "Is it worth upgrading an Intel iMac in 2026?", a: "Often, yes, if the rest of the iMac is healthy and your apps run on the macOS version it supports. A 27-inch 2019 or 2020 iMac with more memory and an SSD is still a capable desk machine. Apple has said macOS Tahoe is the last major release for Intel Macs, so factor that into the decision." },
-        { q: "Does a RAM upgrade void the warranty on my iMac?", a: "On 27-inch iMacs the rear memory door is designed for owner upgrades, so fitting memory there does not affect Apple's coverage. On 21.5-inch models the display has to be removed, which is different. Most Intel iMacs are long out of Apple warranty anyway. Our work carries a written warranty of up to 12 months." },
+        { q: "Does a RAM upgrade void the warranty on my iMac?", a: "On 27-inch iMacs the rear memory door is designed for owner upgrades, so fitting memory there does not affect Apple's coverage. On 21.5-inch models the display has to be removed, which is different. Most Intel iMacs are long out of Apple warranty anyway. Our work carries a written warranty of 15 days to 2 years." },
         { q: "How long does an iMac RAM upgrade take?", a: "A 27-inch memory upgrade through the rear door is usually done the same day, including a memory test. A 21.5-inch upgrade takes longer because the display is removed and re-bonded, and we let the adhesive set before handing it back. We give you a time when we confirm the parts for your model." },
       ]}
       reviewNames={["Shah nawaz", "Ali Hassan", "Marianne Chehade El Dfouni"]}

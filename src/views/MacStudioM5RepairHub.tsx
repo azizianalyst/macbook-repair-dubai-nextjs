@@ -54,10 +54,10 @@ export default function MacStudioM5RepairHub() {
         { title: "Diagnosis",                     body: "Free hardware test, port and display check, thermal read under load, storage health and software scan." },
         { title: "Repair and 1-hour soak test",   body: "Port, PSU, board, data-recovery or thermal work in our workshop, followed by an hour of sustained-load testing before you collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (ports, fan, PSU, SSD).",
+        "Up to 2 years on most hardware repairs (ports, fan, PSU, SSD).",
         "15 days on logic-board, liquid-damage, software and data-recovery work.",
         "Free re-diagnosis if the same fault recurs within the warranty period.",
         "Repairs here do not affect a still-valid Apple warranty on unrelated components.",

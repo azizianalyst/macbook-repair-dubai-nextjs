@@ -9,7 +9,7 @@ export default function IPhoneChargingPortRepair() {
       path="/iphone-charging-port-repair-dubai"
       eyebrow="iPhone Charging Port Repair"
       h1="iPhone Charging Port Repair Dubai - USB-C & Lightning"
-      subtitle="Phone won't charge? Cable falls out? Bent pins? Lightning (pre-iPhone 15) and USB-C (15+). Same-day port flex swap, warranty of up to 12 months."
+      subtitle="Phone won't charge? Cable falls out? Bent pins? Lightning (pre-iPhone 15) and USB-C (15+). Same-day port flex swap, warranty of 15 days to 2 years."
       startingPrice={149}
       timeline="Same day · 1 day"
       whatsappPrefill="Hi, iPhone charging port repair quote please. Model: "
@@ -53,9 +53,9 @@ export default function IPhoneChargingPortRepair() {
         { title: "Port-flex swap on the bench", body: "Screen lifted at 70 °C, battery disconnected, port flex screws removed (taptic engine and speaker first), port swapped, all connectors reseated." },
         { title: "Face ID and mic verification", body: "Face ID re-tested with proximity sensor. Bottom microphone tested on a recorded call. Antenna feed-line continuity checked with multimeter." },
         { title: "Charge test from 0% to 20%", body: "Phone charged on a 20W Apple charger. Negotiation verified. Heat profile checked. No throttling, no warnings." },
-        { title: "Collect + warranty of up to 12 months", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
+        { title: "Collect + warranty of 15 days to 2 years", body: "Same day for Lightning, same/next day for USB-C. Warranty card includes port batch and antenna continuity test result." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covered: port flex defects, microphone failure caused by the part, antenna signal loss tied to the flex.",
         "Not covered: liquid damage post-repair, new physical damage, charging IC failure unrelated to port flex.",
@@ -70,7 +70,7 @@ export default function IPhoneChargingPortRepair() {
         ["Walk in without appointment",  "Yes",                                  "Booking usually needed"],
         ["Face ID preserved",            "Yes - tested before/after",            "Yes"],
         ["Vintage models",               "Yes - back to iPhone 6",               "Refused"],
-        ["Warranty",                     "12 months written",                      "12 months"],
+        ["Warranty",                     "2 years written",                      "12 months"],
       ]}
       faqs={[
         { q: "How much does iPhone charging port repair cost in Dubai?", a: "It's priced per model - iPhone 6 through 8 and SE are the most affordable, X through 14 Pro sit in the middle, and iPhone 15, 16, 17 (USB-C) are a little more. Pro Max sizes are priced slightly higher. If the port flex tests fine but the phone still won't charge, the issue is the charging IC on the logic board - a 1-day component-level repair. Message us on WhatsApp with your model for today's exact price." },

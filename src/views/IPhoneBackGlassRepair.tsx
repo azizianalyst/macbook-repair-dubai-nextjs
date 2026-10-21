@@ -8,7 +8,7 @@
 // Facts: glass backs from the iPhone 8 / X (the 6, 6s and 7 are aluminium); Apple's back glass
 // estimate on recent models and the iPhone 18 Pro's aluminium unibody + Ceramic Shield back come
 // from docs/apple-lineup-2026-09-26.md §4a-4b. Apple figures only in the "(Apple list)" form.
-// Warranty: back glass is hardware work (site.ts: up to 12 months).
+// Warranty: back glass is hardware work (site.ts: 15 days to 2 years).
 import IPhoneMoneyPage, { A, ByModelSection, PageSection, WhatsAppButton } from "@/components/blocks/IPhoneMoneyPage";
 import { topicForPath } from "@/lib/page-images";
 import { NAP } from "@/content/site";
@@ -46,7 +46,7 @@ export default function IPhoneBackGlassRepair() {
         "The iPhone 14, 14 Plus and the iPhone 15 and 16 families have a back glass that comes off as its own panel.",
         "Back glass on recent models is AED 615 (Apple list), excluding VAT.",
         "We test wireless charging, and MagSafe from the iPhone 12, before handover.",
-        "Back glass is hardware work, with a written warranty of up to 12 months.",
+        "Back glass is hardware work, with a written warranty of 15 days to 2 years.",
       ]}
       faqHeading="iPhone back glass repair: common questions"
       faqs={[
@@ -149,7 +149,7 @@ export default function IPhoneBackGlassRepair() {
 
       <PageSection id="warranty" eyebrow="Warranty and visiting" title="Warranty, visiting and what to do before you come in">
         <p>
-          <strong>Warranty:</strong> back glass is hardware work, with a written warranty of up to 12 months on the part
+          <strong>Warranty:</strong> back glass is hardware work, with a written warranty of up to 2 years on the part
           and our fit. A new crack from a drop is accidental damage and isn&apos;t covered. See the{" "}
           <A to="/warranty">warranty terms</A>.
         </p>

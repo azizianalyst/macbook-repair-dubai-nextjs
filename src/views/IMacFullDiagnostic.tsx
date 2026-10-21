@@ -50,7 +50,7 @@ export default function IMacFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard warranty of up to 12 months.",
+        "Any repair you book carries our standard warranty of 15 days to 2 years.",
         "The check is genuinely free - no minimum spend, no obligation.",
       ]}
       faqs={[

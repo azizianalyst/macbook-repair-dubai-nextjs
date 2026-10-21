@@ -87,10 +87,10 @@ export default function IPhone17Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Camera Control 2-3 days for parts." },
         { title: "QC + handover",          body: "ProMotion, AOD, Wi-Fi 7, Camera Control gestures, USB-C and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Wi-Fi 7: confirmed connectivity at 6 GHz tested before return.",
         "Battery: capacity-drop coverage.",

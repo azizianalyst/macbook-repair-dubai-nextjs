@@ -98,10 +98,10 @@ export default function IPhone17ProMaxRepair() {
         { title: "Diagnose + repair",    body: "Screen and battery usually same day once the part is confirmed; telephoto, vapor chamber and aluminum cosmetic 2-3 days." },
         { title: "QC + handover",        body: "ProMotion, AOD, USB-C, every zoom step, vapor chamber thermals (stress test), Camera Control and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen (90 days): dead pixels, ghost touch, 120Hz refresh and Always-On faults covered.",
         "Vapor chamber service: thermals checked under a sustained workload before handover.",
         "Not covered: new drops, cracks or liquid exposure after the repair.",

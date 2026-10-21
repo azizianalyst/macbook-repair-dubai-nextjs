@@ -84,7 +84,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",          body: "Most MacBook Air repairs — screen, battery, keyboard — are done within a few hours, not days." },
   { Icon: Award,       title: "Apple repair since 2004",       body: "Our technicians have repaired Apple hardware since 2004. We have seen every Air fault, across every chip generation." },
-  { Icon: ShieldCheck, title: "Warranty up to 12 months",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 12 months on other hardware." },
+  { Icon: ShieldCheck, title: "Warranty 15 days to 2 years",  body: "All parts and labour carry a written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, and up to 2 years on other hardware." },
   { Icon: MapPin,       title: "Walk-in workshop, Media City",    body: "Bring your MacBook Air to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",         body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",            body: "Every MacBook Air gets a full diagnosis at no cost. We find the real fault, not guess at it." },
@@ -412,7 +412,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
+                <span>✓ Warranty 15 days to 2 years</span>
                 <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
@@ -456,7 +456,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your MacBook Air?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
+                Free diagnosis · No fix, no charge · Warranty 15 days to 2 years
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

@@ -6,7 +6,7 @@ export default function IPhone13ProMaxRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion Specialists | 055 741 3706"
-      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen, battery, camera. Same-day, warranty of up to 12 months. WhatsApp for a quote."
+      seoDescription="iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen, battery, camera. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
       path="/iphone-13-pro-max-repair-dubai"
       eyebrow="iPhone 13 Pro Max (2021)"
       h1="iPhone 13 Pro Max Repair Dubai - ProMotion, Battery, LiDAR"
@@ -86,10 +86,10 @@ export default function IPhone13ProMaxRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + return",          body: "ProMotion, MagSafe, telephoto, LiDAR and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh covered.",
         "Battery: capacity-drop coverage.",
         "Face ID: full functionality verified before return.",

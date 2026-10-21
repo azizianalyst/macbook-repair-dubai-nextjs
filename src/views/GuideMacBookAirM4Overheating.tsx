@@ -124,7 +124,7 @@ export default function GuideMacBookAirM4Overheating() {
       relatedLinks={[
         { label: "MacBook overheating fix Dubai", href: "/macbook-overheating-fix-dubai", description: "Thermal paste, fan clean and full heat diagnostics at our Dubai workshop." },
         { label: "MacBook full diagnostic Dubai", href: "/macbook-full-diagnostic-dubai", description: "Free check, we confirm the cause before any work starts." },
-        { label: "MacBook Air repair Dubai", href: "/macbook-air-repair-dubai", description: "All MacBook Air repairs, M1 to M4, with warranty up to 12 months." },
+        { label: "MacBook Air repair Dubai", href: "/macbook-air-repair-dubai", description: "All MacBook Air repairs, M1 to M4, with warranty of 15 days to 2 years." },
       ]}
     />
   );

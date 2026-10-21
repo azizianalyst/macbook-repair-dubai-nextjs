@@ -110,7 +110,7 @@ export default function MacBookGuides() {
         <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
           <h2 className="text-text text-[24px] md:text-[28px] max-w-[30ch]">Guide didn't solve it? We repair MacBooks across Dubai</h2>
           <p className="text-text-muted text-[16px] max-w-[60ch]">
-            Free diagnosis at our Media City workshop, walk-ins welcome, and a written warranty of up to 12 months, depending on the repair. Message the workshop on WhatsApp.
+            Free diagnosis at our Media City workshop, walk-ins welcome, and a written warranty of 15 days to 2 years, depending on the repair. Message the workshop on WhatsApp.
           </p>
           <a
             href={withSlash(SITE.whatsapp)}

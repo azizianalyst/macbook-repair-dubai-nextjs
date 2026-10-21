@@ -148,7 +148,7 @@ function shortDesc(path: string, label: string): string {
     const first = d.split(/(?<=[.!?])\s/)[0];
     return first.length > 130 ? first.slice(0, 127).trimEnd() + "…" : first;
   }
-  return `${label} in Dubai. Free diagnosis, written quote, warranty up to 12 months.`;
+  return `${label} in Dubai. Free diagnosis, written quote, warranty of 15 days to 2 years.`;
 }
 
 function toItem(path: string): RelatedItem {

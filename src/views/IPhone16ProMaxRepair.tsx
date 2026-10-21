@@ -90,10 +90,10 @@ export default function IPhone16ProMaxRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; tetraprism + Face ID 1-3 days." },
         { title: "QC + handover",          body: "ProMotion, AOD, Dynamic Island, USB-C 3, 5x zoom, Camera Control, Action Button and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, 120Hz refresh, AOD covered.",
         "Camera Control: gestures + haptic verified.",
         "USB-C 3: full 10 Gbps data + 27W charge tested.",

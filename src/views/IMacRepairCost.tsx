@@ -79,7 +79,7 @@ export default function IMacRepairCost() {
             <span>·</span>
             <span>Written quote before work starts</span>
             <span>·</span>
-            <span>Warranty up to 12 months</span>
+            <span>Warranty 15 days to 2 years</span>
           </p>
         </Hero>
 
@@ -122,7 +122,7 @@ export default function IMacRepairCost() {
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-text-muted mt-sm">Message us on WhatsApp for today's exact price on your model. Diagnosis is free. Written quote before any work starts. Warranty of up to 12 months.</p>
+          <p className="text-[13px] text-text-muted mt-sm">Message us on WhatsApp for today's exact price on your model. Diagnosis is free. Written quote before any work starts. Warranty of 15 days to 2 years.</p>
         </section>
 
         {/* CTA */}

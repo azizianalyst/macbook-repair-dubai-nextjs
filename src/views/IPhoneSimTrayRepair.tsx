@@ -46,7 +46,7 @@ export default function IPhoneSimTrayRepair() {
         { title: "Reader replacement",          body: "We open the phone from the bottom, swap the SIM reader flex, and reseat dual-SIM rails on UAE-spec models. WhatsApp us for the exact price on your model." },
         { title: "eSIM provisioning if needed", body: "Free help converting from physical SIM to eSIM, including QR setup with Etisalat or du if you bring activation details." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new tray or reader and seal.",
         "eSIM provisioning has no warranty (we don't control carrier networks).",

@@ -47,7 +47,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple Certified Refurbished</strong>: returned to Apple within 14 days, fully tested at Apple, new battery + outer shell + box, 1-year Apple warranty. Identical to new in every way except the box says "Refurbished by Apple". Discount: 15%.</li>
-            <li><strong>Reputable third-party refurb (us)</strong>: traded-in or buy-back MacBook, professionally tested, replaced battery if under 85%, replaced trackpad / keytops if worn, cleaned, restored, warranty of up to 12 months. Discount: 30-40%.</li>
+            <li><strong>Reputable third-party refurb (us)</strong>: traded-in or buy-back MacBook, professionally tested, replaced battery if under 85%, replaced trackpad / keytops if worn, cleaned, restored, warranty of 15 days to 2 years. Discount: 30-40%.</li>
             <li><strong>"Refurbished" by individual Dubizzle seller</strong>: probably means "wiped clean and listed". No testing protocol, no warranty, often hides issues. Discount: 35-45% but with full risk on you.</li>
           </ul>
 
@@ -73,7 +73,7 @@ export default function BlogShouldBuyRefurbishedMacBook() {
             to new.
           </p>
 
-          <h2 id="our-refurbs">Our refurbished MacBooks (with warranty of up to 12 months)</h2>
+          <h2 id="our-refurbs">Our refurbished MacBooks (with warranty of 15 days to 2 years)</h2>
           <p>
             We sell refurbished MacBooks from our buy-back inventory. Every unit goes through:
           </p>

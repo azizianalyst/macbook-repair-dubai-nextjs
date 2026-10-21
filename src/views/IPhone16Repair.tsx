@@ -6,7 +6,7 @@ export default function IPhone16Repair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16 Repair Dubai - A18, Camera Control, Screen & Battery | 055 741 3706"
-      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen, Camera Control, USB-C and battery. Same-day, warranty of up to 12 months."
+      seoDescription="iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen, Camera Control, USB-C and battery. Same-day, warranty of 15 days to 2 years."
       path="/iphone-16-repair-dubai"
       eyebrow="iPhone 16 (2024, still sold by Apple)"
       h1="iPhone 16 Repair Dubai - Screen, Camera Control, USB-C, Battery"
@@ -87,10 +87,10 @@ export default function IPhone16Repair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + handover",        body: "OLED, Dynamic Island, Camera Control gestures, Action Button, USB-C and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Camera Control: capacitive light-press, full-press, slide gestures all verified.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "Battery: capacity-drop coverage.",

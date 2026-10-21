@@ -116,7 +116,7 @@ export default function BlogMacBookProM1TouchBarFailing() {
           <BlogPriceTable
             caption="MacBook Pro M1 Touch Bar repair pricing. June 2026"
             rows={[
-              { model: "Touch Bar assembly replacement (M1 13-inch)", ours: "Price on request", apple: "Full top case replacement", note: "Touch Bar + flex cable, 12-month warranty" },
+              { model: "Touch Bar assembly replacement (M1 13-inch)", ours: "Price on request", apple: "Full top case replacement", note: "Touch Bar + flex cable, 2-year warranty" },
               { model: "Touch Bar flex cable (cable only fault)", ours: "Price on request", apple: "Full top case replacement", note: "If display strip is undamaged, cable-only repair" },
               { model: "Touch Bar diagnostic + software fix", ours: "Price on request", apple: "Price on request", note: "T1 firmware reset, TouchBarServer fix" },
               { model: "Touch Bar diagnostic only", ours: "Free", apple: "Price on request", note: "Confirm hardware vs software" },
@@ -151,7 +151,7 @@ export default function BlogMacBookProM1TouchBarFailing() {
         },
         {
           q: "How much does MacBook Pro M1 Touch Bar repair cost in Dubai?",
-          a: "Touch Bar assembly replacement comes with a 12-month warranty. If only the flex cable is damaged (Touch Bar display works briefly), a cheaper cable-only repair is possible. Apple replaces the entire top case (keyboard, battery, Touch Bar together), while our component-level repair targets the Touch Bar assembly specifically. Message us on WhatsApp for today's exact price on your model.",
+          a: "Touch Bar assembly replacement comes with a 2-year warranty. If only the flex cable is damaged (Touch Bar display works briefly), a cheaper cable-only repair is possible. Apple replaces the entire top case (keyboard, battery, Touch Bar together), while our component-level repair targets the Touch Bar assembly specifically. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Does Dubai heat cause MacBook Pro M1 Touch Bar to burn in or fail faster?",

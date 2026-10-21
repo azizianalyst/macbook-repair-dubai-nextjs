@@ -23,7 +23,7 @@ export default function IPhoneVolumeButtonRepair() {
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit - message us on WhatsApp for today's price, with a warranty of up to 12 months.
+            <strong>Volume up, volume down and the ringer/silent toggle</strong> all live on a single flex cable on the left side of every iPhone (iPhone 15 Pro and 16+ replace the toggle with a programmable Action button - same flex idea). When one button stops responding the others usually follow within weeks, so we replace the whole strip in one visit - message us on WhatsApp for today's price, with a warranty of 15 days to 2 years.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
             Common causes: a drop on the left edge bends the metal rail; long-term wear collapses the click dome; on iPhone 13 and later the ringer switch tab snaps off if forced past its detent. All fixed with one flex swap.
@@ -44,9 +44,9 @@ export default function IPhoneVolumeButtonRepair() {
         { title: "Test all three controls",  body: "Volume up, volume down, ringer toggle (or Action button). We confirm which are dead - usually all on the same flex." },
         { title: "Open and replace flex",    body: "Volume flex sits along the left side; we lift the screen, disconnect, swap the assembly." },
         { title: "Frame and rail check",     body: "If the chassis is bent from impact we restore it before installing the new flex - included." },
-        { title: "Function tests + warranty",body: "Confirm volume slider responds, ringer toggle works, Action button mapping preserved. Warranty up to 12 months card." },
+        { title: "Function tests + warranty",body: "Confirm volume slider responds, ringer toggle works, Action button mapping preserved. Warranty 15 days to 2 years card." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new volume flex and click mechanisms.",
         "Excludes new impact damage.",

@@ -44,10 +44,10 @@ export default function MacSsdUpgrade() {
         { title: "Open + swap",                  body: "Mac Mini 2014: bottom cover off, antenna plate removed, SSD swapped. Mac Pro 2019: side panel off, NVMe slot accessed. Mac Studio modules: rear cover off, paired module fitted." },
         { title: "Clean macOS install",          body: "Latest supported macOS installed on the new SSD via Internet Recovery. Then we restore your data and apps from your backup." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "1-year warranty on the SSD itself.",
-        "warranty of up to 12 months on the install workmanship.",
+        "warranty of up to 2 years on the install workmanship.",
         "Free re-clone if the new SSD has a logical issue inside warranty.",
       ]}
       faqs={[

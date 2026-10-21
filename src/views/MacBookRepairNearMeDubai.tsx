@@ -106,7 +106,7 @@ const SEND_IN_STEPS = [
   { title: "Book a same-day courier yourself", body: "Use any same-day courier app. Address it to Office #45, 10th Floor, Concord Tower, Dubai Media City, and hand the MacBook to the driver." },
   { title: "Send us the tracking link", body: "WhatsApp the link so we know it's on the way. It reaches us within the day, and we log it by serial number when it arrives." },
   { title: "Free diagnosis, then approve", body: "Shafiq checks it on the bench and sends a written quote. Reply 'approved' and most repairs finish the same day." },
-  { title: "Collect it or send it back", body: "Collect it from the workshop, or we book a courier to bring it back to you. Warranty card of up to 12 months included." },
+  { title: "Collect it or send it back", body: "Collect it from the workshop, or we book a courier to bring it back to you. Warranty card of 15 days to 2 years included." },
 ];
 
 const FAQS = [
@@ -157,7 +157,7 @@ export default function MacBookRepairNearMeDubai() {
       serviceSchema({
         name: "MacBook Repair Near Me Dubai",
         timeline: "Same day",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: "/macbook-repair-near-me-dubai",
         description: "MacBook screen, battery, keyboard, and water damage repair at our walk-in workshop in Dubai Media City.",
       }),

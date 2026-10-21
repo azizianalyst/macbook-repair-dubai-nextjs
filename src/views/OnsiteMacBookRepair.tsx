@@ -65,7 +65,7 @@ const FAQS = [
   { q: "Is the diagnosis free?",
     a: "Yes, at the workshop. We tell you what's wrong and quote the repair on WhatsApp before we touch it, and if we can't fix it you don't pay. The only extra charge is the onsite visit itself, which we quote before you book." },
   { q: "What warranty comes with the repair?",
-    a: "Every repair carries our own written warranty, up to 12 months on hardware, covering the parts we fitted and our workmanship. The warranty is the same whether the job was done at your desk or on our bench." },
+    a: "Every repair carries our own written warranty, up to 2 years on hardware, covering the parts we fitted and our workmanship. The warranty is the same whether the job was done at your desk or on our bench." },
 ];
 
 export default function OnsiteMacBookRepair() {
@@ -81,7 +81,7 @@ export default function OnsiteMacBookRepair() {
       organization(),
       serviceSchema({
         name: "Onsite MacBook Repair Dubai",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: "/onsite-macbook-repair-dubai",
         description: "Paid onsite MacBook repair in Dubai: a technician visits your home or office when one is free, with the charge quoted on WhatsApp before booking. Diagnosis and software fixes on site; hardware and board-level repairs at the Dubai Media City workshop.",
       }),

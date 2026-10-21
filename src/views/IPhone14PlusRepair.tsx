@@ -6,7 +6,7 @@ export default function IPhone14PlusRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 14 Plus Repair Dubai - 6.7-inch OLED, Battery, Camera | 055 741 3706"
-      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen, battery and camera - same-day, warranty of up to 12 months."
+      seoDescription="iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen, battery and camera - same-day, warranty of 15 days to 2 years."
       path="/iphone-14-plus-repair-dubai"
       eyebrow="iPhone 14 Plus (2022)"
       h1="iPhone 14 Plus Repair Dubai - 6.7-inch Screen, Battery, Camera"
@@ -84,10 +84,10 @@ export default function IPhone14PlusRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + handover",          body: "OLED, MagSafe, cameras, Crash Detection and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, burn-in covered.",
         "Battery: capacity-drop coverage.",
         "Crash Detection and Emergency SOS verified before return.",

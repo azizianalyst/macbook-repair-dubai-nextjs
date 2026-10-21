@@ -23,7 +23,7 @@ export default function MacBookProM5Repair() {
       faqs={[
         { q: "Which M5 MacBook Pro models do you repair?", a: "We repair all M5 variants: 14&quot; M5 (A3434), 14&quot; M5 Pro (A3426), 14&quot; M5 Max (A3427), 16&quot; M5 Pro (A3428), and 16&quot; M5 Max (A3429)." },
         { q: "How much does MacBook Pro M5 screen repair cost in Dubai?", a: "It is quoted per size in writing - the 16&quot; mini-LED Liquid Retina XDR assembly costs more than the 14&quot;. M5 display assemblies are newer supply, so turnaround is usually 2-3 days." },
-        { q: "Do you offer a warranty on M5 MacBook Pro repairs?", a: "Yes. Screen replacements carry a 90-day (3-month) warranty, battery replacements 3 months with an 80% capacity guarantee, and other hardware repairs up to 12 months. Keyboard, logic board and liquid-damage work carry 15 days." },
+        { q: "Do you offer a warranty on M5 MacBook Pro repairs?", a: "Yes. Screen replacements carry a 90-day (3-month) warranty, battery replacements 3 months with an 80% capacity guarantee, and other hardware repairs 15 days to 2 years. Keyboard, logic board and liquid-damage work carry 15 days." },
         { q: "Can you repair M5 MacBook Pro liquid damage?", a: "Yes. Power off immediately and bring it in. Our board-level technicians clean, dry, and restore water-damaged M5 MacBook Pro units." },
       ]}
     />

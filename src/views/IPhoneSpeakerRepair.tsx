@@ -26,7 +26,7 @@ export default function IPhoneSpeakerRepair() {
             <strong>The honest first step</strong>: about 40% of "broken" iPhone speakers in Dubai are actually just packed with pocket lint, sand and dust. We clean the speaker mesh under a microscope free of charge before quoting any replacement. If sound returns, you walk out with no bill - only a clean phone and a recommendation to keep it out of dusty pockets.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            If the speaker driver itself has failed (water damage, blown coil, dropped impact), a replacement covers a fresh OEM-grade loudspeaker module, gasket reseat and a warranty of up to 12 months - message us for today's exact price on your model. Same day on every iPhone from 7 through 17 Pro Max.
+            If the speaker driver itself has failed (water damage, blown coil, dropped impact), a replacement covers a fresh OEM-grade loudspeaker module, gasket reseat and a warranty of 15 days to 2 years - message us for today's exact price on your model. Same day on every iPhone from 7 through 17 Pro Max.
           </p>
         </>
       }
@@ -44,9 +44,9 @@ export default function IPhoneSpeakerRepair() {
         { title: "Microscope mesh inspection", body: "Free. We look at the speaker grille at 40× magnification. If it's lint, we extract it with a fine pick - no bill." },
         { title: "Driver test",                body: "If clean and still faulty, we drive a sweep tone through the speaker to confirm the coil is dead, not the audio IC on the board." },
         { title: "Replace loudspeaker module", body: "OEM-grade replacement, new gasket, torque-controlled screws to maintain water resistance on iPhone 7+." },
-        { title: "Sound test + warranty card", body: "Music, ringtone, speakerphone all tested. written warranty up to 12 months handed to you with the phone." },
+        { title: "Sound test + warranty card", body: "Music, ringtone, speakerphone all tested. written warranty of 15 days to 2 years handed to you with the phone." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the speaker module and seal.",
         "Excludes new water damage after repair.",

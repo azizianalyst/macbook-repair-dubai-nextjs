@@ -25,7 +25,7 @@ import { NAP } from "@/content/site";
 const PATH = "/macbook-repair-cost-calculator-dubai";
 const TITLE = "MacBook Repair Cost Dubai - Get a Written Quote";
 const DESC =
-  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair, then get a written quote back on WhatsApp. Warranty up to 12 months.";
+  "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair, then get a written quote back on WhatsApp. Warranty 15 days to 2 years.";
 
 const FAQS = [
   { q: "How accurate is the repair cost estimate?", a: "We quote per model and per fault rather than publishing a list, because the same repair costs different amounts on a MacBook Air M1 and a 16-inch Pro. Pick your model and repair here, send it over, and you get a written quote back - fixed in writing after a free 20-minute diagnosis." },
@@ -33,7 +33,7 @@ const FAQS = [
   { q: "Why don't you just show one fixed price?", a: "Because a fair price depends on your exact model and what's actually wrong. A screen on a MacBook Air M1 is not the same job as a 16-inch Pro. Quoting per model means you get a real number for your device instead of a headline figure that changes once we open it." },
   { q: "Is independent repair cheaper than the Apple Store?", a: "For out-of-warranty repairs, usually yes, we repair at component and board level where Apple replaces the whole logic board. See our honest Apple Store vs independent comparison for the full picture." },
   { q: "Do you calculate iPhone repair costs too?", a: "iPhone pricing isn't in the calculator yet. WhatsApp us your iPhone model and we'll send a quote the same way." },
-  { q: "Does the estimate include genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't, and we tell you which your repair uses before we start. Both carry the written warranty up to 12 months." },
+  { q: "Does the estimate include genuine Apple parts?", a: "We use genuine parts where they're available and high-grade OEM-spec parts where they aren't, and we tell you which your repair uses before we start. Both carry the written warranty of 15 days to 2 years." },
 ];
 
 export default function MacBookRepairCostCalculator() {
@@ -47,9 +47,9 @@ export default function MacBookRepairCostCalculator() {
       serviceSchema({
         name: "MacBook Repair Cost Estimate",
         timeline: "Same day",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: PATH,
-        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, at our Media City walk-in workshop, with written warranty up to 12 months.",
+        description: "Instant MacBook and Mac repair cost estimate in Dubai by model and repair type, at our Media City walk-in workshop, with written warranty of 15 days to 2 years.",
       }),
     ],
   );

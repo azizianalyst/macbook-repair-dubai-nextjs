@@ -236,7 +236,7 @@ export default function BlogIMacNoDisplay() {
         },
         {
           q: "How long does an iMac display repair last?",
-          a: "A correctly done repair lasts for years. A new LED backlight or a fresh panel restores the iMac to full life, and a repaired or replaced display cable is good for the life of the machine. We use quality parts, re-seal with fresh adhesive, and stress-test before handing back, and the work is covered by a warranty of up to 12 months.",
+          a: "A correctly done repair lasts for years. A new LED backlight or a fresh panel restores the iMac to full life, and a repaired or replaced display cable is good for the life of the machine. We use quality parts, re-seal with fresh adhesive, and stress-test before handing back, and the work is covered by a warranty of 15 days to 2 years.",
         },
         {
           q: "Will the repair actually fix my black screen?",

@@ -6,7 +6,7 @@ export default function IPhone13MiniRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 13 Mini Repair Dubai - 5.4-inch OLED Screen & Battery | 055 741 3706"
-      seoDescription="iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen, battery & Face ID. Same-day, warranty of up to 12 months. WhatsApp for pricing."
+      seoDescription="iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen, battery & Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp for pricing."
       path="/iphone-13-mini-repair-dubai"
       eyebrow="iPhone 13 Mini (2021)"
       h1="iPhone 13 Mini Repair Dubai - Screen, Battery, Face ID"
@@ -85,10 +85,10 @@ export default function IPhone13MiniRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-3 days." },
         { title: "QC + handover",        body: "OLED, MagSafe, cameras and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, green-tint covered.",
         "Battery: capacity-drop coverage.",
         "MagSafe coil: charge alignment tested before return.",

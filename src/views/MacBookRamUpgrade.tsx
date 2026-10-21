@@ -46,7 +46,7 @@ export default function MacBookRamUpgrade() {
         { title: "Install + verify", body: "Bottom case off, modules swapped, About This Mac confirms new total. Memtest86 verification 30 minutes." },
         { title: "Macs Fan Control sanity check", body: "Confirm thermals are normal with the new modules under load. Sign-off." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the RAM module installation and compatibility.",
         "Module manufacturer's lifetime warranty applies separately.",

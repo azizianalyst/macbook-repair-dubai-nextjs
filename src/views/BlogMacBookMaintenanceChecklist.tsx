@@ -203,7 +203,7 @@ export default function BlogMacBookMaintenanceChecklist() {
         },
         {
           q: "Can I open and clean the MacBook myself?",
-          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean comes with a warranty of up to 12 months - message us on WhatsApp for the price.",
+          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean comes with a warranty of 15 days to 2 years - message us on WhatsApp for the price.",
         },
       ]}
       relatedLinks={[

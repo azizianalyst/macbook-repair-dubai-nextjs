@@ -136,7 +136,7 @@ export default function GuideMacBookProM4Thunderbolt5Monitor() {
             <Link to="/macbook-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Pro repair in Dubai
             </Link>{" "}
-           , free diagnosis, same-day service where possible, warranty up to 12 months.
+           , free diagnosis, same-day service where possible, warranty of 15 days to 2 years.
           </p>
           <p>
             Questions about your setup?{" "}

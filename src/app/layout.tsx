@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://macbook-repair-dubai.ae"),
   title: "MacBook Repair Dubai | Independent Apple Repair Specialists",
   description:
-    "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, warranty up to 12 months.",
+    "Expert MacBook repair in Dubai since 2004. Screen, battery, keyboard & water-damage fixes for Intel to M5 Macs. Same-day service, warranty of 15 days to 2 years.",
   // app/favicon.ico is auto-served; these wire up the modern SVG favicon, the
   // 32px PNG, the Apple touch icon and the PWA manifest (assets already in /public,
   // but previously unreferenced so browsers never requested them).

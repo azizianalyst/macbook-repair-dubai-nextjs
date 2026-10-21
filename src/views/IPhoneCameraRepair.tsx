@@ -11,7 +11,7 @@ export default function IPhoneCameraRepair() {
   return (
     <IPhonePageTemplate
       seoTitle="iPhone Camera Repair Dubai: Blurry, Black or Cracked Lens"
-      seoDescription="iPhone camera not working, won't focus or lens cracked? Free diagnosis in Dubai Media City, lens-glass or module repair, warranty up to 12 months. WhatsApp us."
+      seoDescription="iPhone camera not working, won't focus or lens cracked? Free diagnosis in Dubai Media City, lens-glass or module repair, warranty of 15 days to 2 years. WhatsApp us."
       path="/iphone-camera-repair-dubai"
       eyebrow="iPhone Camera Repair"
       h1="iPhone Camera Repair Dubai"
@@ -24,7 +24,7 @@ export default function IPhoneCameraRepair() {
       quickAnswer={{
         question: "iPhone camera not working: can it be repaired?",
         answer:
-          "Usually, yes. After a free diagnosis at our Dubai Media City workshop, a black camera screen, photos that won't focus, a rattling lens or cracked lens glass is fixed by replacing the faulty camera module or just the lens cover. Software causes are ruled out first. Camera parts carry a written warranty of up to 12 months.",
+          "Usually, yes. After a free diagnosis at our Dubai Media City workshop, a black camera screen, photos that won't focus, a rattling lens or cracked lens glass is fixed by replacing the faulty camera module or just the lens cover. Software causes are ruled out first. Camera parts carry a written warranty of 15 days to 2 years.",
       }}
       takeaways={[
         "Rule out software first: force restart, update iOS, and check Screen Time hasn't switched the Camera app off.",
@@ -127,9 +127,9 @@ export default function IPhoneCameraRepair() {
         { title: "Written quote, your approval", body: "You approve the price and part grade first. Parts are genuine where available, quality-tested otherwise, and disclosed before work." },
         { title: "Module or lens-glass replacement", body: "Battery disconnected, only the faulty camera or glass replaced, new adhesive where the phone was sealed." },
         { title: "Every lens tested", body: "Focus near and far, stabilisation, flash, Portrait mode, LiDAR on Pro models, and Face ID after front-camera work." },
-        { title: "Collect with a written warranty", body: "Up to 12 months on the replaced camera part." },
+        { title: "Collect with a written warranty", body: "15 days to 2 years on the replaced camera part." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covered: a defect in the replaced camera module or lens glass, including focus or stabiliser failure caused by the part.",
         "Not covered: new drops or cracks, liquid exposure after the repair, and unrelated faults.",
@@ -142,7 +142,7 @@ export default function IPhoneCameraRepair() {
         ["Rear camera, iPhone 17e / 16e",        "Quote on WhatsApp",                           "Apple lists AED 499, excl. VAT (Sep 2026)"],
         ["Lens glass only",                      "Yes, when the camera behind it tests fine",   "Quoted by Apple after inspection"],
         ["Walk in, no appointment",              "Yes, Dubai Media City",                       "Usually by appointment"],
-        ["Warranty",                             "Up to 12 months written on the part",         "Apple's service warranty"],
+        ["Warranty",                             "15 days to 2 years written on the part",         "Apple's service warranty"],
       ]}
       faqs={[
         { q: "Why did my iPhone camera stop working suddenly?", a: "Usually a knock has damaged one camera module or its connector, or iOS has frozen the camera process. Force restart and update iOS first. If one lens stays black or blurry while the others work, it is hardware, and a free diagnosis confirms which part before any quote." },

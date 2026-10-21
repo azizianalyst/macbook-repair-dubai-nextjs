@@ -48,7 +48,7 @@ const FAQS = [
   { q: "Are you an Apple Authorised Service Provider near me in Dubai?",
     a: "No, we are an independent Apple specialist, which means lower prices than Apple Store rates and more repair options: component-level logic board repair, out-of-warranty fixes, and repairs on devices Apple no longer services. Independent since 2004. Office #45, Concord Tower, Dubai Media City." },
   { q: "Is there a warranty on Apple repair near me in Dubai?",
-    a: "Every repair carries a written warranty of up to 12 months, regardless of device. Battery warranty is 3 months with an 80% capacity guarantee. The warranty card is issued with every paid repair and covers the device serial number, repair type, and parts." },
+    a: "Every repair carries a written warranty of 15 days to 2 years, regardless of device. Battery warranty is 3 months with an 80% capacity guarantee. The warranty card is issued with every paid repair and covers the device serial number, repair type, and parts." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [0, 4, 9, 15, 20, 26];

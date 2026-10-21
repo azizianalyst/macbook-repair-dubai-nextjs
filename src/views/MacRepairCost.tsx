@@ -81,7 +81,7 @@ export default function MacRepairCost() {
             <span>·</span>
             <span>Written quote before work starts</span>
             <span>·</span>
-            <span>Warranty up to 12 months</span>
+            <span>Warranty 15 days to 2 years</span>
           </p>
         </Hero>
 
@@ -126,7 +126,7 @@ export default function MacRepairCost() {
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-text-muted mt-sm">All prices exclude VAT. Diagnosis free. Written quote before work starts. Warranty of up to 12 months.</p>
+          <p className="text-[13px] text-text-muted mt-sm">All prices exclude VAT. Diagnosis free. Written quote before work starts. Warranty of 15 days to 2 years.</p>
         </section>
 
         {/* CTA */}

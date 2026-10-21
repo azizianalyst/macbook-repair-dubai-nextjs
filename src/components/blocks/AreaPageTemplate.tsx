@@ -78,7 +78,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
       serviceSchema({
         name: `MacBook Repair ${cfg.area}`,
         timeline: "Same day",
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: path,
         description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for ${cfg.area}: walk in to our Dubai Media City workshop or send the Mac by courier.`,
       }),
@@ -93,7 +93,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
         tone="dark"
         eyebrow={isHome ? "Walk-in workshop in Concord Tower" : `${cfg.driveTime} from ${cfg.area} by car`}
         title={isHome ? "MacBook Repair Dubai Media City: Walk In, 10th Floor" : `MacBook Repair ${cfg.area}: Walk In, Courier or Onsite`}
-        subtitle={`${isHome ? "Our workshop is in Concord Tower, Dubai Media City." : `${cfg.driveTime} by car to our workshop in Concord Tower, Dubai Media City.`} ${cfg.landmarkLine} Walk in for a free diagnosis, no appointment needed. Written warranty up to 12 months.`}
+        subtitle={`${isHome ? "Our workshop is in Concord Tower, Dubai Media City." : `${cfg.driveTime} by car to our workshop in Concord Tower, Dubai Media City.`} ${cfg.landmarkLine} Walk in for a free diagnosis, no appointment needed. Written warranty of 15 days to 2 years.`}
         image={areaTopicForSlug(cfg.slug)?.src}
         imageAlt={`MacBook repair for ${cfg.area} at our Concord Tower workshop in Dubai Media City`}
       >
@@ -223,7 +223,7 @@ export function AreaPageTemplate({ cfg }: { cfg: AreaConfig }) {
               className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition"
             >
               <p className="font-bold text-[16px] mb-1">{s.label}</p>
-              <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of up to 12 months</p>
+              <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of 15 days to 2 years</p>
             </Link>
           ))}
         </div>

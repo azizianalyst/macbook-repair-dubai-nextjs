@@ -49,7 +49,7 @@ export default function IPadFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book afterwards carries our standard warranty of up to 12 months.",
+        "Any repair you book afterwards carries our standard warranty of 15 days to 2 years.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

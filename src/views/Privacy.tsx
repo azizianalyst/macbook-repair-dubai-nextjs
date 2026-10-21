@@ -77,7 +77,7 @@ export default function Privacy() {
           <li><strong>Run the repair</strong> - name and phone are linked to the device on the workshop ticket.</li>
           <li><strong>Send a ready-to-collect message</strong> - one WhatsApp message when the device is ready.</li>
           <li><strong>Post-repair check-in</strong> - exactly one follow-up message 7 days after you collect the device. No marketing list, no newsletter, no second message unless you reply.</li>
-          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the warranty of up to 12 months applies.</li>
+          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the warranty of 15 days to 2 years applies.</li>
           <li><strong>Improve the website</strong> - anonymised analytics are reviewed monthly to fix slow pages and broken links.</li>
         </ul>
       </LegalSection>

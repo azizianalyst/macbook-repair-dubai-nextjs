@@ -54,7 +54,7 @@ export default function MacBookAirM2ChargingPortRepair() {
           body: "After reassembly we test both MagSafe and USB-C charging paths with a power meter to confirm correct wattage. The laptop runs a 30-minute charge burn-in before return. 3-month warranty issued on the replaced board.",
         },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "3-month written warranty on the replacement MagSafe 3 or USB-C charging board",
         "Covers: MagSafe not charging, intermittent charging, USB-C port not powering",

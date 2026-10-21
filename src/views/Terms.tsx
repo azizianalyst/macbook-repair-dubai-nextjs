@@ -65,7 +65,7 @@ export default function Terms() {
 
       <LegalSection id="warranty" title="4. Warranty">
         <p>
-          A written warranty up to 12 months applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty/">Warranty Policy</a> page.
+          A written warranty of 15 days to 2 years applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty/">Warranty Policy</a> page.
         </p>
       </LegalSection>
 

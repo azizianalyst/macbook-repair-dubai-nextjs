@@ -114,7 +114,7 @@ const FAQS = [
   },
   {
     q: "Will repairing my MacBook Air void the Apple warranty?",
-    a: "If it is inside Apple's one-year warranty or AppleCare+, go to Apple first and we will tell you so. Out of warranty there is nothing to void. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 12 months on other hardware, 15 days on keyboard, board and liquid work.",
+    a: "If it is inside Apple's one-year warranty or AppleCare+, go to Apple first and we will tell you so. Out of warranty there is nothing to void. Our written warranty: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 2 years on other hardware, 15 days on keyboard, board and liquid work.",
   },
   {
     q: "My MacBook Air won't charge. Is it the port?",
@@ -206,7 +206,7 @@ export default function MacBookAirRepair() {
         benefits: [
           { icon: Search, title: "Free diagnosis", body: "The actual fault is found before any quote." },
           { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries in 45–90 minutes when in stock." },
-          { icon: ShieldCheck, title: "Written warranty", body: "Up to 12 months, depending on the repair." },
+          { icon: ShieldCheck, title: "Written warranty", body: "15 days to 2 years, depending on the repair." },
           { icon: MapPin, title: "Walk in", body: "Concord Tower, Dubai Media City. Parking on site." },
         ],
       }}

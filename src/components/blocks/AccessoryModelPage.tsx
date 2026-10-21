@@ -128,7 +128,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
   const faqs: { q: string; a: string }[] = [
     {
       q: `How much does ${model.name} repair cost in Dubai?`,
-      a: `We repair the battery, screen and home button on the ${model.name} - message us on WhatsApp with your model and we'll send today's exact price in about 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `We repair the battery, screen and home button on the ${model.name} - message us on WhatsApp with your model and we'll send today's exact price in about 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
     {
       q: `Will iOS 15 keep my iPod Touch 7 useful?`,
@@ -144,17 +144,17 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, Up to 12-Month Warranty`}
-      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Walk-in workshop, free diagnostic, warranty up to 12 months.`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, 15-Day to 2-Year Warranty`}
+      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Walk-in workshop, free diagnostic, warranty of 15 days to 2 years.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
-      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, Up to 12-Month Warranty`}
+      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 15-Day to 2-Year Warranty`}
       subtitle={`Free diagnostic. Message us on WhatsApp for today's price. We'll tell you honestly when repair makes sense - and when it doesn't.`}
       startingPrice={startingPrice}
       timeline="Same-day to 5 days depending on the job"
@@ -175,7 +175,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are still available.`}
-            {" "}Message us on WhatsApp for today's price on the most common service. Walk in at Media City, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today's price on the most common service. Walk in at Media City, written warranty of 15 days to 2 years.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -272,12 +272,12 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
         { title: "Walk in to our Media City workshop", body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts. We'll also tell you when replacement is the smarter call." },
-        { title: "Repair + written warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written warranty of up to 12 months, depending on the repair." },
+        { title: "Repair + written warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written warranty of 15 days to 2 years, depending on the repair." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Batteries: 3 months; screens: 90 days; other parts: up to 12 months",
+        "Batteries: 3 months; screens: 90 days; other parts: 15 days to 2 years",
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
         "Issued in writing on your invoice",

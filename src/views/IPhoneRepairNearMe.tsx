@@ -51,7 +51,7 @@ const FAQS = [
   { q: "Can you repair my iPhone near me on the same day?",
     a: "Yes for screen, battery, charging port, back glass, and camera. Drop off by 4 pm at Concord Tower and the repair is done the same day. Logic board and water damage take 1–3 days depending on severity." },
   { q: "Do you offer a warranty on iPhone repair near me in Dubai?",
-    a: "Every repair carries a written warranty of up to 12 months. Battery replacement comes with a 3-month warranty plus an 80% capacity guarantee. The warranty card has the device serial number, the repair description, and the parts used." },
+    a: "Every repair carries a written warranty of 15 days to 2 years. Battery replacement comes with a 3-month warranty plus an 80% capacity guarantee. The warranty card has the device serial number, the repair description, and the parts used." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [1, 5, 10, 16, 21, 27];

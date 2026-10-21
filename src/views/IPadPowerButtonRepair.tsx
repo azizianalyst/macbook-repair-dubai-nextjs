@@ -26,7 +26,7 @@ export default function IPadPowerButtonRepair() {
             <strong>From iPad Air 4 (2020) onwards</strong>, Apple moved Touch ID into the top-edge power button - a clever space saver but it means the power button assembly is now a Touch ID sensor too. When the button fails, the same Apple Secure Enclave pairing rule applies: a replacement button restores click but cannot restore Touch ID. We tell you this before opening the iPad.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. One flat price covers either case, 1-day turnaround, warranty of up to 12 months - message us on WhatsApp for the exact figure on your model.
+            On iPad models without Touch ID in the power button (iPad Pro with Face ID, iPad Air 1/2/3, iPad mini 1-5, iPad 1-9), the repair is purely mechanical - no Touch ID to worry about. One flat price covers either case, 1-day turnaround, warranty of 15 days to 2 years - message us on WhatsApp for the exact figure on your model.
           </p>
         </>
       }
@@ -44,9 +44,9 @@ export default function IPadPowerButtonRepair() {
         { title: "Click + Touch ID test",       body: "We feel the click and verify Touch ID enrol still works on the original button. Confirms which fault you're dealing with." },
         { title: "Open + frame check",           body: "Battery disconnect, screen lift carefully on iPad Pro / Air. Frame around the button checked for impact deformation." },
         { title: "Replace power button assembly",body: "OEM-grade button + flex installed. On Touch ID models we install but cannot re-pair the sensor - passcode-only thereafter." },
-        { title: "Function tests",               body: "Wake, sleep, screenshot combo, hold for power off all verified. Warranty up to 12 months card with the iPad." },
+        { title: "Function tests",               body: "Wake, sleep, screenshot combo, hold for power off all verified. Warranty 15 days to 2 years card with the iPad." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new power button assembly and click mechanism.",
         "Does not cover Touch ID on integrated models (impossible without Apple).",

@@ -43,9 +43,9 @@ export default function IPhoneHeadphoneJackRepair() {
         { title: "Free socket inspection",   body: "Microscope look inside the jack - most cases are debris. We extract with a fine pick, no charge." },
         { title: "Test with known-good cable", body: "If clean and still faulty, we plug in a working 3.5mm cable to confirm the socket itself, not your headphones." },
         { title: "Replace jack assembly",     body: "On iPhone 6/6S the jack is part of the charging-port flex. We swap the whole flex (includes free new charging port too). On older models the jack is its own module." },
-        { title: "Audio test + warranty",     body: "Stereo, microphone (headphones with mic), volume controls. Warranty up to 12 months card with the phone." },
+        { title: "Audio test + warranty",     body: "Stereo, microphone (headphones with mic), volume controls. Warranty 15 days to 2 years card with the phone." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new jack module / flex.",
         "Excludes new debris ingress.",

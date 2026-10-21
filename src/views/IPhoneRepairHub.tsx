@@ -78,7 +78,7 @@ export default function IPhoneRepairHub() {
         "Diagnosis is free. You get a written quote on WhatsApp, and nothing is repaired until you approve it.",
         "We are independent, not an Apple Authorised Service Provider. If your iPhone is still under Apple warranty or AppleCare+, Apple is usually the better route, and we tell you so.",
         "Parts are genuine Apple where available and quality-tested alternatives otherwise. The grade is written on your quote before work starts.",
-        "Warranty follows the repair: up to 12 months on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens.",
+        "Warranty follows the repair: up to 2 years on hardware, 3 months on batteries with an 80% capacity guarantee, 90 days on screens.",
         "Walk in at Dubai Media City, or send the iPhone with a same-day courier you book. Abu Dhabi customers do the same; we have no Abu Dhabi branch.",
       ]}
       faqHeading="iPhone repair in Dubai: common questions"
@@ -240,7 +240,7 @@ export default function IPhoneRepairHub() {
           process. The phone still works, and we tell you beforehand if yours will show that message.
         </p>
         <p>
-          Warranty depends on the job: up to 12 months on hardware, 3 months on batteries with an 80% capacity
+          Warranty depends on the job: up to 2 years on hardware, 3 months on batteries with an 80% capacity
           guarantee, 90 days on screens, and 15 days on software, board-level and liquid-damage work. See the{" "}
           <A to="/warranty">warranty terms</A>.
         </p>

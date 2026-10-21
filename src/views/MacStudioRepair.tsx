@@ -158,7 +158,7 @@ export default function MacStudioRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac Studio repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty up to 12 months."
+        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty of 15 days to 2 years."
       />
 
       <USPStrip tone="dark" />

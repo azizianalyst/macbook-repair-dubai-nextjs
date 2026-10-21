@@ -49,7 +49,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
       serviceSchema({
         name: `MacBook Repair ${cfg.city}`,
         timeline: cfg.turnaround,
-        warranty: "P1Y",
+        warranty: "P2Y",
         url: path,
         description: `MacBook screen, battery, keyboard, water-damage and logic-board repair for customers in ${cfg.city}, ${cfg.emirate}. Repairs are done at our Dubai Media City workshop: send the Mac by a courier you book, or drive in.`,
       }),
@@ -64,7 +64,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
           tone="dark"
           eyebrow={cfg.short}
           title={`MacBook Repair in ${cfg.city}, Done at Our Dubai Bench`}
-          subtitle={`${cfg.landmarkLine} Free diagnosis, a written quote on WhatsApp before any work, and a warranty of up to 12 months.`}
+          subtitle={`${cfg.landmarkLine} Free diagnosis, a written quote on WhatsApp before any work, and a warranty of 15 days to 2 years.`}
           ctaLabel="WhatsApp us before you send it"
           image={areaTopicForSlug(cfg.slug)?.src}
           imageAlt={areaTopicForSlug(cfg.slug)?.alt ?? `MacBook repair for customers in ${cfg.city}, ${cfg.emirate}`}
@@ -160,7 +160,7 @@ export function CityPageTemplate({ cfg }: { cfg: CityConfig }) {
             {services.map((s) => (
               <Link key={s.href} to={s.href} className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg hover:border-accent/40 transition">
                 <p className="font-bold text-[16px] mb-1">{s.label}</p>
-                <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of up to 12 months</p>
+                <p className="text-[13px] text-text-muted"><span className="mono text-accent font-bold">Price on request</span> · warranty of 15 days to 2 years</p>
               </Link>
             ))}
           </div>

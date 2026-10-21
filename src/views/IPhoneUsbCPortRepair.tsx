@@ -26,7 +26,7 @@ export default function IPhoneUsbCPortRepair() {
             <strong>iPhone 15 was the first iPhone with USB-C</strong> and from iPhone 15 Pro onwards the port supports Thunderbolt 3 (40 Gbps) for fast video and data transfer. The connector itself is mechanically more delicate than Lightning - pins bend more easily, especially when a cable is yanked sideways. A full port replacement keeps Thunderbolt support intact on Pro models - message us on WhatsApp for today's exact price on your model.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed">
-            Free first step: we clean the port. About 35% of "broken USB-C" iPhones in Dubai are just packed with pocket lint, and a careful microscope clean restores fast charging at no charge. If the port itself is damaged, it's a 1-day repair with a warranty of up to 12 months - message us on WhatsApp for today's exact price.
+            Free first step: we clean the port. About 35% of "broken USB-C" iPhones in Dubai are just packed with pocket lint, and a careful microscope clean restores fast charging at no charge. If the port itself is damaged, it's a 1-day repair with a warranty of 15 days to 2 years - message us on WhatsApp for today's exact price.
           </p>
         </>
       }
@@ -44,9 +44,9 @@ export default function IPhoneUsbCPortRepair() {
         { title: "Free microscope clean",   body: "We inspect at 40× magnification, extract any lint with a fine pick. About a third of cases solved here, no charge." },
         { title: "Bent pin diagnosis",       body: "If the cable still won't seat properly, we identify which pin is bent and whether it can be straightened (rare) or needs port replacement." },
         { title: "USB-C port replacement",   body: "OEM-grade Thunderbolt-capable port flex on Pro models, standard USB 2.0 port on base iPhone 15 / 16 / 17." },
-        { title: "Charge + data verify",     body: "20W+ charge confirmed, Thunderbolt transfer tested at 40Gbps on Pro, DisplayPort to monitor verified. Warranty up to 12 months." },
+        { title: "Charge + data verify",     body: "20W+ charge confirmed, Thunderbolt transfer tested at 40Gbps on Pro, DisplayPort to monitor verified. Warranty 15 days to 2 years." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new USB-C port flex and seal.",
         "Thunderbolt speeds preserved on Pro models.",

@@ -27,7 +27,7 @@ const COVERED = [
 
 const FAQS = [
   { q: "Are you an Apple Authorised Service Provider?",
-    a: "No. We're an independent Apple repair specialist in Concord Tower, Dubai Media City, working on Apple hardware since 2004. We're not an AASP, so we can't process an Apple warranty or AppleCare claim for you. What we do is repair AppleCare-expired and out-of-warranty Macs at component level, under our own written warranty up to 12 months." },
+    a: "No. We're an independent Apple repair specialist in Concord Tower, Dubai Media City, working on Apple hardware since 2004. We're not an AASP, so we can't process an Apple warranty or AppleCare claim for you. What we do is repair AppleCare-expired and out-of-warranty Macs at component level, under our own written warranty of 15 days to 2 years." },
   { q: "Will a third-party repair void my AppleCare?",
     a: "It can. Apple may decline future warranty or AppleCare cover on parts we've touched, and a non-genuine part can affect a later claim. So if your Mac still has active AppleCare for the specific fault, we'll tell you honestly to use Apple first. Once your cover has expired, there's nothing left to void and we're typically about half the price." },
   { q: "Do you repair AppleCare-expired Macs?",
@@ -37,9 +37,9 @@ const FAQS = [
   { q: "Is the diagnosis free?",
     a: "Yes. Bring the Mac to our Media City workshop, no appointment needed, and we diagnose the fault at no charge. You get an exact written quote before any work starts, and there's no obligation to proceed. No fix, no charge - if we can't repair it, you pay nothing." },
   { q: "Do you use genuine Apple parts?",
-    a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit high-grade compatible parts and label them as such on your quote. Both are covered by the same written warranty up to 12 months on our work." },
+    a: "Genuine Apple parts whenever they're available through verified channels. For vintage and obsolete models Apple no longer supplies, we fit high-grade compatible parts and label them as such on your quote. Both are covered by the same written warranty of 15 days to 2 years on our work." },
   { q: "What warranty do you give on the repair?",
-    a: "Every repair carries a written warranty of up to 12 months, depending on the repair: three months on batteries, 90 days on screens and 15 days on keyboard, logic-board and liquid-damage work. That covers the part we fitted and the workmanship. It's our own warranty, not Apple's - we're independent - but if the same fault comes back inside the window, we sort it at no extra cost." },
+    a: "Every repair carries a written warranty of 15 days to 2 years, depending on the repair: three months on batteries, 90 days on screens and 15 days on keyboard, logic-board and liquid-damage work. That covers the part we fitted and the workmanship. It's our own warranty, not Apple's - we're independent - but if the same fault comes back inside the window, we sort it at no extra cost." },
   { q: "Can you help if Apple quoted a high out-of-warranty price?",
     a: "That's exactly the case we see most. Apple's out-of-warranty service tends to be a flat fee to replace the whole board or unit. We fix the single failed component instead, which is usually far cheaper than a whole-board swap. Send us Apple's quote and the model on WhatsApp and we'll tell you in a few minutes whether we can beat it." },
   { q: "Is the standard Apple warranty the same as AppleCare?",
@@ -51,7 +51,7 @@ export default function AppleCareMacBookRepair() {
     {
       title: "AppleCare & In-Warranty MacBook Repair Dubai",
       description:
-        "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, warranty of up to 12 months. Call 055 741 3706.",
+        "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, warranty of 15 days to 2 years. Call 055 741 3706.",
       path: "/applecare-macbook-repair-dubai",
     },
     [
@@ -86,7 +86,7 @@ export default function AppleCareMacBookRepair() {
         tone="dark"
         eyebrow="AppleCare & in-warranty · Dubai"
         title="AppleCare and In-Warranty MacBook Repair in Dubai"
-        subtitle="We're an independent Apple specialist, not an Apple Authorised Service Provider. If your Mac is still covered we'll tell you honestly when Apple is the better route. For AppleCare-expired and out-of-warranty Macs, we repair at component level with a warranty of up to 12 months."
+        subtitle="We're an independent Apple specialist, not an Apple Authorised Service Provider. If your Mac is still covered we'll tell you honestly when Apple is the better route. For AppleCare-expired and out-of-warranty Macs, we repair at component level with a warranty of 15 days to 2 years."
       >
         <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -100,7 +100,7 @@ export default function AppleCareMacBookRepair() {
       <QuickAnswer
         tone="dark"
         question="Should I use AppleCare or an independent repair?"
-        answer="If your Mac is still under Apple's warranty or an active AppleCare plan, Apple is usually the better route, and we will tell you so. For AppleCare-expired and out-of-warranty Macs, we repair at component level at our Media City workshop, with a free diagnosis and a written warranty of up to 12 months depending on the repair."
+        answer="If your Mac is still under Apple's warranty or an active AppleCare plan, Apple is usually the better route, and we will tell you so. For AppleCare-expired and out-of-warranty Macs, we repair at component level at our Media City workshop, with a free diagnosis and a written warranty of 15 days to 2 years depending on the repair."
       />
 
       <USPStrip tone="dark" />
@@ -119,7 +119,7 @@ export default function AppleCareMacBookRepair() {
           <strong>MacBook Repair Dubai</strong> is an independent Apple repair workshop in Concord Tower, Dubai Media City, on the bench since 2004. We're not an Apple Authorised Service Provider, so we can't lodge an AppleCare or warranty claim for you. What we can do is be straight with you: if your Mac is still in cover, we'll point you to Apple so you don't risk it. If your AppleCare has expired, we'll fix the actual fault for a fraction of Apple's flat fee.
         </p>
         <p className="text-[16px] leading-relaxed max-w-[75ch] text-text-muted m-0">
-          That honesty is the whole point of this page. People bring us in-warranty Macs all the time, and sometimes the right answer is "go to Apple". When the cover's gone, that's when we save you the most money - genuine parts where Apple still supplies them, high-grade compatible parts where it doesn't, and a written warranty up to 12 months on everything we touch.
+          That honesty is the whole point of this page. People bring us in-warranty Macs all the time, and sometimes the right answer is "go to Apple". When the cover's gone, that's when we save you the most money - genuine parts where Apple still supplies them, high-grade compatible parts where it doesn't, and a written warranty of 15 days to 2 years on everything we touch.
         </p>
       </section>
 
@@ -200,7 +200,7 @@ export default function AppleCareMacBookRepair() {
         <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
           <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Not sure if you're still covered? Ask us first</h2>
           <p className="relative text-text-muted text-[16px] max-w-[60ch]">
-            Send your serial number and the fault on WhatsApp. We'll check your warranty status with you, tell you honestly whether Apple or our workshop is the better route, and quote in minutes. Free diagnosis, warranty of up to 12 months.
+            Send your serial number and the fault on WhatsApp. We'll check your warranty status with you, tell you honestly whether Apple or our workshop is the better route, and quote in minutes. Free diagnosis, warranty of 15 days to 2 years.
           </p>
           <div className="relative flex flex-wrap gap-sm">
             <Button asChild variant="whatsapp" size="lg">

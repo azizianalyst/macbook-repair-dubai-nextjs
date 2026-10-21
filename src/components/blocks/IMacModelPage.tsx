@@ -325,7 +325,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       a: isPro
         ? `Standard parts (PSU, RAM, screens, SSDs) are fine. Xeon CPUs and Vega Pro GPU modules are getting rare - sourcing can take ${rarePartsSourcing(turnaround)} and prices fluctuate. We're honest at intake: if it's a GPU module failure, sometimes the part exceeds the iMac Pro's current resale value. Other repairs (PSU, thermal paste, RAM, screen) are still very worthwhile.`
         : isIntel27
-          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of up to 12 months - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
+          ? `Power supply failure. The 2017-2020 27" iMac PSU is a known weak point. Typical PSU turnaround is ${lc(turnaround.psu)}, with a warranty of 15 days to 2 years - WhatsApp us for the exact price. After PSU, the next most common are Fusion Drive → SSD upgrades and thermal paste refreshes.`
           : `Outside the iMac. Every 24-inch Apple silicon iMac (M1, M3 and M4, two-port or four-port) ships with an external 143W power adapter that plugs into the power connector on the back. On four-port models that adapter also carries the Gigabit Ethernet port; two-port models were ordered with or without it. So a no-power fault starts with testing the adapter and its cable before anyone opens the case. Typical power supply turnaround on the ${model.shortName} is ${lc(turnaround.psu)}.`,
     },
     {
@@ -348,22 +348,22 @@ export default function IMacModelPage({ slug }: { slug: string }) {
     },
     {
       q: `What warranty do I get on an ${model.shortName} repair?`,
-      a: `Each repair type has its own period: ${isAppleSilicon ? "ports and other hardware" : "the power supply, ports, fan replacement and other hardware"} up to 12 months, and logic-board, liquid-damage and data work 15 days. The screen warranty is confirmed on your written quote, and the exact period is printed on your invoice.`,
+      a: `Each repair type has its own period: ${isAppleSilicon ? "ports and other hardware" : "the power supply, ports, fan replacement and other hardware"} 15 days to 2 years, and logic-board, liquid-damage and data work 15 days. The screen warranty is confirmed on your written quote, and the exact period is printed on your invoice.`,
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. If you send it by a courier you book, pack the iMac in its original box or a padded case; a paid onsite visit is also possible, subject to technician availability. WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of up to 12 months, depending on the repair.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. If you send it by a courier you book, pack the iMac in its original box or a padded case; a paid onsite visit is also possible, subject to technician availability. WhatsApp us a photo and we'll quote within 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
       seoTitle={`${model.name} Repair Dubai - Free Diagnosis`}
-      seoDescription={`${model.name} repair Dubai - screen, logic board${model.pricing.powerSupply ? ", PSU" : ""} and upgrades. Free diagnosis, warranty up to 12 months. WhatsApp us for a quote.`}
+      seoDescription={`${model.name} repair Dubai - screen, logic board${model.pricing.powerSupply ? ", PSU" : ""} and upgrades. Free diagnosis, warranty of 15 days to 2 years. WhatsApp us for a quote.`}
       path={`/${model.slug}`}
       eyebrow={`${FAMILY_LABEL[model.family]} ${model.size}" · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
       h1={`${model.name} Repair Dubai - Screen, Logic Board, Power Supply & Upgrades`}
-      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty up to 12 months. Walk in at Media City, parking on site.`}
+      subtitle={`${model.heroTagline} Message us on WhatsApp for today's exact price. Written warranty of 15 days to 2 years. Walk in at Media City, parking on site.`}
       startingPrice={0}
       timeline={headerTimeline(model, serviceRows)}
       whatsappPrefill={`Hi, I have an ${model.name} and I need help with:`}
@@ -383,7 +383,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's fully serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are widely available.`}
-            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Walk in at Media City, written warranty up to 12 months.
+            {" "}Message us on WhatsApp for today&apos;s exact price on your model. Walk in at Media City, written warranty of 15 days to 2 years.
           </p>
 
           <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
@@ -523,12 +523,12 @@ export default function IMacModelPage({ slug }: { slug: string }) {
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
         { title: "Walk in to our Media City workshop", body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm, parking on site. Paid onsite visits subject to technician availability." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts." },
-        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of up to 12 months, depending on the repair.` },
+        { title: "Repair + written warranty",      body: `${model.timelineNotes} You walk out (or we deliver back) with a written warranty of 15 days to 2 years, depending on the repair.` },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Screens 90 days; logic board, liquid and thermal work 15 days; power supply, SSD and other parts up to 12 months",
+        "Screens 90 days; logic board, liquid and thermal work 15 days; power supply, SSD and other parts 15 days to 2 years",
         "Covers the replaced part and the labour",
         "Same fault returns inside the period? We re-repair free",
         "Issued in writing on your invoice",
@@ -536,7 +536,7 @@ export default function IMacModelPage({ slug }: { slug: string }) {
       faqs={faqs}
       reviewNames={pickIMacReviewers(slug)}
       related={[
-        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, warranty of up to 12 months." },
+        { label: "iMac repair Dubai (all models)",   href: "/imac-repair-dubai",               description: "Every iMac we service - 24\" M-series and 27\" 5K. Free diagnosis, warranty of 15 days to 2 years." },
         { label: "iMac screen repair Dubai",         href: "/imac-screen-repair-dubai",        description: "Cracked Retina, dead pixels, backlight issues - proper adhesive reseal." },
         { label: "iMac power supply repair",         href: "/imac-power-supply-repair-dubai",  description: "Most common 27\" Intel issue. WhatsApp us for a quote." },
         { label: "iMac full diagnostic",             href: "/imac-full-diagnostic-dubai",      description: "Free 30-minute diagnostic - we tell you what's wrong and what it costs." },

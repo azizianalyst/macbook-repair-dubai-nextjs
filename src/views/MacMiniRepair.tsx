@@ -134,7 +134,7 @@ export default function MacMiniRepair() {
       <QuickAnswer
         tone="dark"
         question="Where can I get my Mac mini repaired in Dubai?"
-        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty up to 12 months, since 2004."
+        answer="MacBook Repair Dubai repairs every Mac mini. Intel, M1, M2, M2 Pro, M4 and M4 Pro, at its Concord Tower workshop in Dubai Media City. Common fixes include no-power, SSD and RAM upgrades, port repair and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty of 15 days to 2 years, since 2004."
       />
 
       <USPStrip tone="dark" />

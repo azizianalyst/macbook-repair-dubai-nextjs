@@ -126,12 +126,12 @@ export default function IPhoneDuoRepair() {
         { title: "Diagnose + quote",   body: "Free diagnosis and a written quote. Nothing is opened until you approve it." },
         { title: "QC + return",        body: "Both displays, touch, hinge action, cameras and charging tested before the phone goes back to you." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
         "Screens: 90 days on the part and the fitting.",
         "Batteries: 3 months, with an 80% capacity guarantee.",
-        "Other hardware: up to 12 months.",
+        "Other hardware: 15 days to 2 years.",
         "Board, liquid-damage, software and data work: 15 days.",
       ]}
       faqs={[

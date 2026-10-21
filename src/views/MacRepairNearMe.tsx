@@ -51,7 +51,7 @@ const FAQS = [
   { q: "What if my Mac was bought in the USA or UK, can you still repair it near me?",
     a: "Yes. Mac hardware is identical globally, only the power adapter varies. We carry keyboards in US and UK layouts and parts for all internationally-purchased MacBook, iMac, and Mac mini models from 2015 onward." },
   { q: "Is there a warranty on Mac repair near me in Dubai?",
-    a: "Every repair carries a written warranty of up to 12 months. Battery carries a 3-month warranty with an 80% capacity guarantee. The warranty card is issued with every paid repair and lists the device serial number, repair type, and parts used." },
+    a: "Every repair carries a written warranty of 15 days to 2 years. Battery carries a 3-month warranty with an 80% capacity guarantee. The warranty card is issued with every paid repair and lists the device serial number, repair type, and parts used." },
 ];
 
 const FEATURED_REVIEW_INDEXES = [3, 7, 12, 18, 23, 29];

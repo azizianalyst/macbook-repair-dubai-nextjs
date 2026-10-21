@@ -140,12 +140,12 @@ export default function IPhone18ProMaxRepair() {
         { title: "Diagnose + repair",  body: "Free diagnosis and a written quote. Nothing is opened until you approve." },
         { title: "QC + return",        body: "Display, touch, Face ID, all cameras, charging and the new seal tested before return." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
         "Screens: 90 days on the part and the fitting.",
         "Batteries: 3 months, with an 80% capacity guarantee.",
-        "Other hardware, such as cameras and ports: up to 12 months.",
+        "Other hardware, such as cameras and ports: 15 days to 2 years.",
         "Board, liquid-damage, software and data work: 15 days.",
       ]}
       faqs={[

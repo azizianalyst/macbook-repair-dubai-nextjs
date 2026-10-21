@@ -157,7 +157,7 @@ export default function BlogPostTemplate(p: BlogPostProps) {
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-[12px] text-text-muted">
                 <span className="flex items-center gap-1.5"><span className="text-accent font-bold">✓</span> Free diagnosis</span>
                 <span className="flex items-center gap-1.5"><span className="text-accent font-bold">✓</span> Same-day service</span>
-                <span className="flex items-center gap-1.5"><span className="text-accent font-bold">✓</span> Warranty up to 12 months</span>
+                <span className="flex items-center gap-1.5"><span className="text-accent font-bold">✓</span> Warranty 15 days to 2 years</span>
               </div>
             </div>
 

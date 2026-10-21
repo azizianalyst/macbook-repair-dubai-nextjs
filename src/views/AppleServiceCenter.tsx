@@ -58,7 +58,7 @@ const COMPARISON: { label: string; us: string; them: string }[] = [
   { label: "Out of warranty", us: "Component-level repair where the fault allows it", them: "Usually a module or whole-unit replacement" },
   { label: "Parts", us: "Genuine where available, quality-tested otherwise, disclosed before work", them: "Apple parts" },
   { label: "Price", us: "Free diagnosis, then a written quote on WhatsApp", them: "Apple publishes UAE estimates for common repairs" },
-  { label: "Warranty on the repair", us: "Up to 12 months, depending on the repair", them: "Set by Apple or the provider" },
+  { label: "Warranty on the repair", us: "15 days to 2 years, depending on the repair", them: "Set by Apple or the provider" },
 ];
 
 // Compact, link-first service list - every href is a live route (routes.generated.ts).
@@ -290,7 +290,7 @@ export default function AppleServiceCenter() {
             ))}
           </ul>
           <p className="text-[15px] text-text-muted leading-relaxed max-w-[75ch] mt-md">
-            Warranty on our repairs depends on the job: up to 12 months on hardware, 3 months with an 80% capacity guarantee on batteries, 90 days on screens, and 15 days on keyboard, software, logic-board, liquid-damage and data work. See the <Link to="/warranty" className={linkCls}>warranty page</Link>, and check <Link to="/apple-repair-programs-dubai" className={linkCls}>Apple's repair programs</Link> in case your fault is one Apple fixes free.
+            Warranty on our repairs depends on the job: up to 2 years on hardware, 3 months with an 80% capacity guarantee on batteries, 90 days on screens, and 15 days on keyboard, software, logic-board, liquid-damage and data work. See the <Link to="/warranty" className={linkCls}>warranty page</Link>, and check <Link to="/apple-repair-programs-dubai" className={linkCls}>Apple's repair programs</Link> in case your fault is one Apple fixes free.
           </p>
         </section>
 

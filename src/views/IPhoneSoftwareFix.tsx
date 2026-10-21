@@ -70,7 +70,7 @@ export default function IPhoneSoftwareFix() {
         ["Backup before restore",         "Yes - bench iTunes/Finder",                  "Yes - Time Machine/iCloud"],
         ["Free hardware diagnosis if SW doesn't fix", "Yes - fee credited toward hardware repair", "No, separate diagnostic fee"],
         ["Same-day turnaround",           "Yes",                                        "Often same-day at Genius Bar"],
-        ["Warranty",                      "15 days written",                            "12 months on hardware"],
+        ["Warranty",                      "15 days written",                            "2 years on hardware"],
       ]}
       faqs={[
         { q: "How much does iPhone software repair cost in Dubai?", a: "Guided fixes you can do at home (force restart, settings reset) are free. Bench work - DFU restore preserving data, clean install with iCloud restore, jailbreak removal, iOS downgrade or storage cleanup - is priced per model and issue. Message us on WhatsApp for today's exact price. If the issue turns out to be hardware, the fee is credited toward the hardware repair." },

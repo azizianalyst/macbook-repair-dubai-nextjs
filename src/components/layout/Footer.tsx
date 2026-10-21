@@ -69,7 +69,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
           <div>
             <p className="m-0 text-[12px] font-semibold uppercase tracking-wider text-accent">Fixed in 30 minutes by appointment · or it's free</p>
             <h2 className="m-0 mt-1 text-[24px] md:text-[28px] text-text">Broken {device}? Get a quote in minutes.</h2>
-            <p className="m-0 mt-1.5 text-[13.5px] text-text-muted">Free diagnosis · no fix, no charge · walk in, no appointment · warranty up to 12 months</p>
+            <p className="m-0 mt-1.5 text-[13.5px] text-text-muted">Free diagnosis · no fix, no charge · walk in, no appointment · warranty of 15 days to 2 years</p>
           </div>
           <div className="flex flex-wrap gap-sm shrink-0">
             <Button asChild variant="whatsapp" size="lg" className="shadow-sm shadow-whatsapp/20">
@@ -91,7 +91,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
           {[
             { Icon: Star, node: <><strong className="font-semibold text-text">{REVIEW_AVERAGE.toFixed(1)}</strong> · {REVIEW_COUNT}+ Google reviews</>, star: true },
             { Icon: BadgeCheck, node: <>Apple specialist since {NAP.founded}</> },
-            { Icon: ShieldCheck, node: <>Up to 12-month warranty</> },
+            { Icon: ShieldCheck, node: <>15-day to 2-year warranty</> },
             { Icon: MapPin, node: <>Walk in, no appointment</> },
             { Icon: BadgeCheck, node: <>No fix · no fee</> },
           ].map(({ Icon, node, star }, i) => (
@@ -108,7 +108,7 @@ export function Footer({ hideCtaBand = false }: { hideCtaBand?: boolean } = {}) 
             <Logo withWordmark className="text-text" />
             <p className="mt-md max-w-sm text-[14px] leading-relaxed text-text-muted">
               Independent Apple repair specialist in Dubai Media City since {NAP.founded}. Board-level
-              work, walk-in service, warranty up to 12 months.
+              work, walk-in service, warranty of 15 days to 2 years.
             </p>
             <address className="mt-md not-italic text-[14px] leading-relaxed text-text-muted">
               <span className="flex items-start gap-3">

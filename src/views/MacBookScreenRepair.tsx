@@ -105,7 +105,7 @@ const COMPARISON = [
   ["Price",                 "Free diagnosis, then a written quote",        "No published price; quoted after Apple inspects it"],
   ["Walk in, no appointment", "Yes, diagnosis in about 15 minutes",         "Check with the store"],
   ["LCD-only option",       "Yes - costs less than a full assembly",         "No, full assembly only"],
-  ["Warranty",              "15 days - 3 months (by panel grade)",           "12 months"],
+  ["Warranty",              "15 days - 2 years (by panel grade)",           "12 months"],
   ["No-fix-no-charge",      "Yes",                                           "No, diagnostic fee charged"],
   ["Vintage/obsolete models","Yes - 2012 onwards",                           "Refused on obsolete (pre-2017)"],
 ];

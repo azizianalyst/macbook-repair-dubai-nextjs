@@ -22,7 +22,7 @@ export default function MacBookProM4Repair() {
       faqs={[
         { q: "Which M4 MacBook Pro models do you repair?", a: "We repair all M4 variants: 14&quot; M4 (A3112), 14&quot; M4 Pro (A3401), 16&quot; M4 Pro (A3403), and 16&quot; M4 Max (A3186)." },
         { q: "How much does MacBook Pro M4 screen repair cost in Dubai?", a: "It is quoted per size in writing - each generation and size has its own mini-LED Liquid Retina XDR display assembly, and the 16&quot; costs more than the 14&quot;. Quote given before any work starts." },
-        { q: "Do you offer a warranty on M4 MacBook Pro repairs?", a: "Yes. Screen replacements carry a 90-day (3-month) warranty, battery replacements 3 months with an 80% capacity guarantee, and other hardware repairs up to 12 months. Keyboard, logic board and liquid-damage work carry 15 days." },
+        { q: "Do you offer a warranty on M4 MacBook Pro repairs?", a: "Yes. Screen replacements carry a 90-day (3-month) warranty, battery replacements 3 months with an 80% capacity guarantee, and other hardware repairs 15 days to 2 years. Keyboard, logic board and liquid-damage work carry 15 days." },
         { q: "Can you repair the Thunderbolt 5 port on the M4 MacBook Pro?", a: "Yes. We repair USB-C and Thunderbolt 5 port faults on M4 MacBook Pro models, including no-charge and no-display issues caused by port damage." },
       ]}
     />

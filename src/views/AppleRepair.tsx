@@ -133,7 +133,7 @@ const FAQS = [
   { q: "Can you repair the newest models, like the iPhone 18 Pro or MacBook Neo?",
     a: "Yes, but check with us first. A device this new is normally still under Apple's warranty, which covers manufacturing faults free. For accidental damage on the latest iPhone, the iPhone Duo (on sale 23 October 2026) or a MacBook Neo, we confirm part availability on WhatsApp before we quote." },
   { q: "What warranty do your Apple repairs carry?",
-    a: "It depends on the repair: up to 12 months on hardware, 3 months with an 80% capacity guarantee on batteries, 90 days on screens, and 15 days on keyboard, software, logic-board, liquid-damage and data work. It is given in writing; full terms are on our warranty page." },
+    a: "It depends on the repair: up to 2 years on hardware, 3 months with an 80% capacity guarantee on batteries, 90 days on screens, and 15 days on keyboard, software, logic-board, liquid-damage and data work. It is given in writing; full terms are on our warranty page." },
 ];
 
 const linkCls = "text-accent underline underline-offset-2 hover:no-underline";
@@ -176,7 +176,7 @@ export default function AppleRepair() {
             "Apple Watch, AirPods, Apple TV and HomePod are not repaired here; Apple services those directly.",
             "We are independent, not Apple Authorised. If Apple's warranty or AppleCare+ covers the fault, we tell you to go to Apple.",
             "Diagnosis is free, the price is confirmed in writing before work starts, and there is no charge if we cannot fix it.",
-            "Written warranty by repair type, from 15 days on board and software work up to 12 months on hardware.",
+            "Written warranty by repair type, from 15 days on board and software work up to 2 years on hardware.",
           ]}
         />
 

@@ -45,7 +45,7 @@ export default function IPhoneHomeButtonRepair() {
         { title: "Calibrate & seal",        body: "New button installed, click action calibrated, waterproof gasket reseated on iPhone 7+." },
         { title: "AssistiveTouch setup",    body: "Free configuration of on-screen home button so you don't lose the function. We hand the phone back working." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new home button mechanism and flex.",
         "Does not cover Touch ID (impossible without Apple).",
@@ -57,7 +57,7 @@ export default function IPhoneHomeButtonRepair() {
         { q: "Is AssistiveTouch a good substitute?", a: "Honestly, yes - most customers tell us they forget Touch ID is gone within a week. The on-screen button does double-press, triple-press, Siri, Apple Pay (via Face ID on newer iPhones, or passcode on iPhone 6/7/8)." },
         { q: "Which iPhones still have a home button?", a: "iPhone 6, 6S, 7, 8, SE (1st, 2nd and 3rd gen). iPhone X and later have no physical home button." },
         { q: "Can you fix it the same day?", a: "Yes. Walk in to our Media City workshop by 1 PM and it is usually ready by 6 PM. WhatsApp a photo first if you want a quote before you come." },
-        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our warranty of up to 12 months covers any mechanical failure." },
+        { q: "How long does the new button last?", a: "Indefinitely under normal use. We use OEM-grade buttons from the same supplier base as Apple. Our warranty of 15 days to 2 years covers any mechanical failure." },
       ]}
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[

@@ -241,7 +241,7 @@ export default function IPadRepairHub() {
             "iPad Pro (M4 and M5) uses a tandem OLED panel; Air, mini and the standard iPad use an LCD. The panel type sets the screen part.",
             "Air, mini and Pro screens are fully laminated, so a crack means a full display assembly; the standard iPad's glass can often be replaced on its own.",
             "Screen, battery and charging-port repairs leave your data in place; we do not erase an iPad for those jobs.",
-            "Warranty depends on the repair: up to 12 months on hardware, 3 months on batteries, 90 days on screens, 15 days on board, liquid and data work.",
+            "Warranty depends on the repair: up to 2 years on hardware, 3 months on batteries, 90 days on screens, 15 days on board, liquid and data work.",
             "Free diagnosis and a written WhatsApp quote before any work; walk in, or send it with a same-day courier you book.",
           ]}
         />
@@ -384,7 +384,7 @@ export default function IPadRepairHub() {
           <div className="rounded-xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-6">
             <h2 className="text-[24px] font-bold tracking-tight text-text mb-md">What warranty comes with an iPad repair?</h2>
             <ul className="text-[15px] text-text-muted leading-relaxed space-y-2 list-disc pl-5">
-              <li><strong className="text-text">Hardware</strong> (charging port, cameras, buttons, speakers): up to 12 months.</li>
+              <li><strong className="text-text">Hardware</strong> (charging port, cameras, buttons, speakers): 15 days to 2 years.</li>
               <li><strong className="text-text">Battery:</strong> 3 months.</li>
               <li><strong className="text-text">Screens:</strong> 90 days.</li>
               <li><strong className="text-text">Board, liquid, software and data work:</strong> 15 days.</li>
@@ -433,7 +433,7 @@ export default function IPadRepairHub() {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
+                <span>✓ Warranty 15 days to 2 years</span>
                 <span>✓ Walk in, no appointment</span>
               </div>
             </div>
@@ -466,7 +466,7 @@ export default function IPadRepairHub() {
         {/* ── CTA ── */}
         <CtaBand
           eyebrow="Ready to fix your iPad?"
-          headline="Free diagnosis · No fix, no charge · Warranty up to 12 months"
+          headline="Free diagnosis · No fix, no charge · Warranty 15 days to 2 years"
           description="Send your iPad model and a photo of the fault. We reply with a quote, then you walk in or send it by courier."
           whatsappHref={ipadWa(PREFILL)}
         />

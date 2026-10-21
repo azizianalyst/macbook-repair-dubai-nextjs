@@ -165,7 +165,7 @@ export default function BlogAppleCareVsIndependent() {
         },
         {
           q: "When is an independent repair cheaper than Apple?",
-          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen and battery repairs usually come in well under an Apple quote, with free diagnosis and a written warranty up to 12 months. Message us on WhatsApp for today's exact price on your model.",
+          a: "Almost always once the warranty ends and you do not have AppleCare+. Apple's out-of-warranty prices are typically far higher because Apple replaces whole assemblies. Our screen and battery repairs usually come in well under an Apple quote, with free diagnosis and a written warranty of 15 days to 2 years. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Can you repair an older MacBook Apple says is obsolete?",

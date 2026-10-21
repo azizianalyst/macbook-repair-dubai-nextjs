@@ -65,7 +65,7 @@ export default function BlogIPhoneScreenRepairVoucher() {
             <li><strong>Refundable:</strong> yes if unused - full refund less a small admin fee, processed within 7 days.</li>
             <li><strong>Stackable:</strong> only one voucher per repair. Cannot combine with other promotions (Eid offer, DSF discount, returning-customer credit).</li>
             <li><strong>Non-applicable:</strong> water damage repair, screen + back glass combos, screens swapped to a non-genuine grade if you specifically request OLED-OEM.</li>
-            <li><strong>Warranty unchanged:</strong> written warranty up to 12 months applies to voucher repairs identically to paid repairs.</li>
+            <li><strong>Warranty unchanged:</strong> written warranty of 15 days to 2 years applies to voucher repairs identically to paid repairs.</li>
           </ul>
 
           <h2 id="who-should-buy">Who should buy a voucher?</h2>

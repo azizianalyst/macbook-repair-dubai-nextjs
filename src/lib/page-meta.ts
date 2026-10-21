@@ -98,7 +98,7 @@ function deriveMeta(path: string): { title: string; description: string } {
     return {
       title: `${SITE_NAME} | Expert Apple Repair, 40,000+ Fixed`,
       description:
-        "MacBook repair Dubai — 40,000+ Apple devices fixed since 2004. Screen, battery, keyboard & water damage. Same-day service, warranty up to 12 months. Free diagnosis.",
+        "MacBook repair Dubai — 40,000+ Apple devices fixed since 2004. Screen, battery, keyboard & water damage. Same-day service, warranty of 15 days to 2 years. Free diagnosis.",
     };
   }
   const segments = path.replace(/^\/+|\/+$/g, "").split("/");
@@ -113,7 +113,7 @@ function deriveMeta(path: string): { title: string; description: string } {
   }
   const isRepair = /repair|replacement|fix|recovery|upgrade|diagnostic/i.test(pretty);
   const desc = isRepair
-    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, warranty up to 12 months. Call 055 741 3706.`
+    ? `${pretty} by experienced Apple specialists in Dubai. Free diagnosis, same-day service, warranty of 15 days to 2 years. Call 055 741 3706.`
     : `${pretty} - MacBook Repair Dubai. Apple service specialist since 2004. Free diagnosis. Same-day service.`;
   // Avoid "…Repair Dubai | MacBook Repair Dubai" — both pretty and SITE_NAME end in "Repair Dubai".
   const title = /repair dubai$/i.test(pretty) ? `${pretty} | Apple Specialists` : `${pretty} | ${SITE_NAME}`;

@@ -81,7 +81,7 @@ const SIGNS: { Icon: LucideIcon; label: string; body: string }[] = [
 const WHY: { Icon: LucideIcon; title: string; body: string }[] = [
   { Icon: Clock,       title: "Same-day service",         body: "Most Mac Pro repairs — GPU, overheating, no-display — are diagnosed and resolved within a few hours." },
   { Icon: Award,       title: "Apple repair since 2004",      body: "Our technicians have repaired Apple hardware since 2004, including Intel Mac Pro PCIe architecture and M2 Ultra board-level work." },
-  { Icon: ShieldCheck, title: "Warranty up to 12 months", body: "All parts and labour carry a written warranty: up to 12 months on hardware parts such as fans, PSUs and SSDs, and 15 days on logic board and GPU repairs." },
+  { Icon: ShieldCheck, title: "Warranty 15 days to 2 years", body: "All parts and labour carry a written warranty: up to 2 years on hardware parts such as fans, PSUs and SSDs, and 15 days on logic board and GPU repairs." },
   { Icon: MapPin,       title: "Walk-in workshop, Media City",   body: "Bring your Mac Pro to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo first and we quote before you travel." },
   { Icon: BadgeCheck,  title: "No fix, no charge",        body: "If we cannot fix it, you pay nothing. Our no-fix guarantee removes all the risk from your repair." },
   { Icon: Search,      title: "Free diagnosis",           body: "Every Mac Pro gets a full diagnostic at no cost. We find the real fault before quoting." },
@@ -404,7 +404,7 @@ export default function MacProGenerationPage(p: MacProGenerationProps) {
               <div className="mt-5 pt-5 border-t border-border flex flex-col gap-2 text-[13px] text-text-muted">
                 <span>✓ Free diagnosis</span>
                 <span>✓ No fix, no charge</span>
-                <span>✓ Warranty up to 12 months</span>
+                <span>✓ Warranty 15 days to 2 years</span>
                 <span>✓ Walk-in workshop in Media City</span>
               </div>
             </div>
@@ -448,7 +448,7 @@ export default function MacProGenerationPage(p: MacProGenerationProps) {
             <div>
               <p className="text-[11px] uppercase tracking-widest text-on-primary-muted mb-1">Ready to fix your Mac Pro?</p>
               <h2 className="text-[22px] md:text-[26px] font-bold text-white leading-tight">
-                Free diagnosis · No fix, no charge · Warranty up to 12 months
+                Free diagnosis · No fix, no charge · Warranty 15 days to 2 years
               </h2>
             </div>
             <div className="flex flex-wrap gap-sm shrink-0">

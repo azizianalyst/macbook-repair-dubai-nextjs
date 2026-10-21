@@ -44,10 +44,10 @@ export default function MacMiniRamUpgrade() {
         { title: "Remove the logic board",         body: "Bottom cover, antenna plate and fan come off, then the logic board slides out so the memory can be reached." },
         { title: "Install + memory test",          body: "Sticks installed in correct slots. Reassembly. Then an extended memory test runs before you collect - confirms full amount visible and stable." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "1-year warranty on the RAM modules themselves.",
-        "warranty of up to 12 months on the install workmanship.",
+        "warranty of up to 2 years on the install workmanship.",
         "Free swap if a stick fails diagnostics inside warranty.",
       ]}
       faqs={[

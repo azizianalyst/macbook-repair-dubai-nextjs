@@ -48,7 +48,7 @@ export default function MacMiniNotTurningOn() {
       ]}
       warrantyDays={15}
       warrantyBullets={[
-        "15-day written warranty on board-level repairs (extendable to 6 months); 12 months on a replacement power supply.",
+        "15-day written warranty on board-level repairs (extendable to 6 months); 2 years on a replacement power supply.",
         "SMC and firmware work: covered for 90 days on the same fault.",
         "Free re-test if the machine fails to start again within warranty.",
       ]}

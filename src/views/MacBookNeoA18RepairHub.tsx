@@ -110,7 +110,7 @@ export default function MacBookNeoA18RepairHub() {
       warrantyDays={15}
       warrantyBullets={[
         "15 days on logic-board, liquid-damage and data-recovery work.",
-        "Up to 12 months on hardware parts we replace, such as ports.",
+        "Up to 2 years on hardware parts we replace, such as ports.",
         "Free re-diagnosis if the same fault returns within the warranty period.",
         "Written on your invoice.",
       ]}

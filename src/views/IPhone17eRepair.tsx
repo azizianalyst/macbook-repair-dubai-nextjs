@@ -86,10 +86,10 @@ export default function IPhone17eRepair() {
         { title: "Diagnose + repair",    body: "OLED + battery same day; MagSafe back glass + Action Button 2-3 days for parts." },
         { title: "QC + return",          body: "OLED, Dynamic Island, USB-C, MagSafe alignment, Action Button and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch, Dynamic Island animations covered.",
         "MagSafe: charge alignment verified to ±0.3 mm tolerance.",
         "Battery: capacity-drop coverage.",

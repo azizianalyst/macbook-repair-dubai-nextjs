@@ -6,8 +6,8 @@ import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
 export default function BlogMacBookRepairWarrantyExplained() {
   return (
     <BlogPostTemplate
-      seoTitle="MacBook Repair Warranty Explained: Dubai 2026 (Up to 12 Months)"
-      seoDescription="Exactly how our tiered MacBook repair warranty works - 12 months on hardware, 3 months on batteries and screens, 15 days on board and liquid work - and how to claim."
+      seoTitle="MacBook Repair Warranty Explained: Dubai 2026 (15 Days to 2 Years)"
+      seoDescription="Exactly how our tiered MacBook repair warranty works - 2 years on hardware, 3 months on batteries and screens, 15 days on board and liquid work - and how to claim."
       path="/blog/macbook-repair-warranty-explained"
       wide
       toc={[
@@ -24,8 +24,8 @@ export default function BlogMacBookRepairWarrantyExplained() {
       ]}
       category="Trust · Warranty"
       h1="MacBook Repair Warranty Explained - Dubai 2026"
-      hook="Up to 12 months, depending on the repair. Here's exactly which tier your repair falls in (and what isn't covered)."
-      quickAnswer="Our MacBook repair warranty is tiered by repair type: 12 months on most hardware (trackpad, ports, SSD/RAM, hinge, speakers), 3 months on batteries and screens, and 15 days on logic-board, liquid-damage and software work. It covers the part we replaced and our workmanship - not new damage or unrelated failures. Bring the receipt to claim; same-day re-service in most cases."
+      hook="15 days to 2 years, depending on the repair. Here's exactly which tier your repair falls in (and what isn't covered)."
+      quickAnswer="Our MacBook repair warranty is tiered by repair type: 2 years on most hardware (trackpad, ports, SSD/RAM, hinge, speakers), 3 months on batteries and screens, and 15 days on logic-board, liquid-damage and software work. It covers the part we replaced and our workmanship - not new damage or unrelated failures. Bring the receipt to claim; same-day re-service in most cases."
       author={{ name: "Shafiq", role: "Senior MacBook technician" }}
       datePublished="2026-04-28"
       dateModified="2026-06-13"
@@ -35,8 +35,8 @@ export default function BlogMacBookRepairWarrantyExplained() {
         <>
           <h2 id="quick-answer">MacBook Repair Warranty Explained. Quick answer</h2>
           <p>
-            We give a written warranty of <strong>up to 12 months, depending on the repair</strong>.
-            Most hardware replacements carry the full 12 months; batteries and screens carry{" "}
+            We give a written warranty of <strong>15 days to 2 years, depending on the repair</strong>.
+            Most hardware replacements carry the full 2 years; batteries and screens carry{" "}
             <strong>3 months</strong>; keyboard replacements and complex board-level or
             liquid-damage work carry <strong>15 days</strong>. In every tier the warranty covers the
             specific component we replaced and the workmanship around it - and it travels with the
@@ -48,7 +48,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
             caption="Warranty period by repair type"
             headers={["Repair type", "Warranty", "Why this period"]}
             rows={[
-              { model: "Trackpad, charging port, SSD/RAM upgrade, hinge, fan, speaker, Touch Bar", apple: "12 months", ours: "New hardware with low, predictable failure rates - we can stand behind it for a year." },
+              { model: "Trackpad, charging port, SSD/RAM upgrade, hinge, fan, speaker, Touch Bar", apple: "2 years", ours: "New hardware with low, predictable failure rates - we can stand behind it for two years." },
               { model: "Battery replacement", apple: "3 months + 80% capacity guarantee", ours: "Batteries are consumables; 3 months is long enough to catch any defective cell." },
               { model: "Screen replacement (MacBook, iMac, iPad, iPhone)", apple: "3 months", ours: "Covers panel defects - dead pixels, backlight, True Tone faults. New impact damage is a new event." },
               { model: "Keyboard replacement", apple: "15 days", ours: "Long enough to surface any assembly or flex-cable issue from the swap." },
@@ -90,7 +90,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
             caption="Coverage comparison"
             headers={["Aspect", "Apple 1-year warranty", "Our repair warranty"]}
             rows={[
-              { model: "Duration", apple: "12 months from purchase", ours: "Up to 12 months from repair, tiered by repair type" },
+              { model: "Duration", apple: "12 months from purchase", ours: "15 days to 2 years from repair, tiered by repair type" },
               { model: "Scope", apple: "Whole device - manufacturing defects only", ours: "The part we replaced + our workmanship" },
               { model: "Accidental damage", apple: "Not covered (need AppleCare+)", ours: "Not covered" },
               { model: "Liquid damage", apple: "Not covered (need AppleCare+)", ours: "Not covered" },
@@ -157,7 +157,7 @@ export default function BlogMacBookRepairWarrantyExplained() {
         { q: "Is warranty work logged in Apple's system?", a: "No. We're an independent workshop outside Apple's service network, and Apple doesn't recognise third-party repair history. The warranty is between you and us, backed by our own records and two-decade track record." },
         { q: "What if I damage the MacBook a week after collecting it?", a: "Honest answer - that's a new repair, not a warranty claim. We'll quote at our normal price. We'll also offer a 10% repeat-customer discount on the new work." },
         { q: "Does warranty cover labour as well as parts?", a: "Yes - both. If we have to open the MacBook again to fix a covered issue, the labour is included. There is no surprise charge during a warranty claim." },
-        { q: "How is your warranty better than Apple Service Center for out-of-warranty MacBooks?", a: "Apple's out-of-warranty repair carries a 90-day warranty on the part and labour. Ours runs up to 12 months on hardware repairs. Add price (we're typically 50-70% of Apple's quote), turnaround (same-day vs 5-10 days), and walk-in service, and the comparison usually favours independent repair." },
+        { q: "How is your warranty better than Apple Service Center for out-of-warranty MacBooks?", a: "Apple's out-of-warranty repair carries a 90-day warranty on the part and labour. Ours runs up to 2 years on hardware repairs. Add price (we're typically 50-70% of Apple's quote), turnaround (same-day vs 5-10 days), and walk-in service, and the comparison usually favours independent repair." },
       ]}
       relatedLinks={[
         { label: "Warranty page", href: "/warranty", description: "Full written warranty terms." },

@@ -49,7 +49,7 @@ export default function MacFullDiagnostic() {
       warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book carries our standard warranty of up to 12 months.",
+        "Any repair you book carries our standard warranty of 15 days to 2 years.",
         "Parking on site at Concord Tower for Mac Pro and heavy Mac Studio setups.",
       ]}
       faqs={[

@@ -50,10 +50,10 @@ export default function MacStudioM2RepairHub() {
         { title: "Clear quote", body: "We tell you the fault, the fix, the cost, and the timeline before any work starts. You approve it - or take the machine back, no fee." },
         { title: "Repair and test", body: "Port, reader, fan, or board-level work completed in our Dubai Media City workshop. Full soak test before collection." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Up to 12 months on most hardware repairs (ports, hinge, fan, speaker, SSD/RAM).",
+        "Up to 2 years on most hardware repairs (ports, hinge, fan, speaker, SSD/RAM).",
         "90 days on screens; 3 months on batteries, with an 80% capacity guarantee.",
         "15 days on logic-board, liquid-damage, software and data-recovery work.",
         "Free re-diagnosis if the same fault recurs within the warranty period.",

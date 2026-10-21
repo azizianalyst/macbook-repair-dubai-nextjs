@@ -6,7 +6,7 @@ export default function IPhone16eRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iPhone 16e Repair Dubai - A18 Budget iPhone | 055 741 3706"
-      seoDescription="iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty up to 12 months. WhatsApp for a quote."
+      seoDescription="iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
       path="/iphone-16e-repair-dubai"
       eyebrow="iPhone 16e (Feb 2025, discontinued March 2026)"
       h1="iPhone 16e Repair Dubai - Screen, Battery, USB-C, Camera"
@@ -86,10 +86,10 @@ export default function IPhone16eRepair() {
         { title: "Diagnose + repair",    body: "Standard same day; Face ID + back glass 1-2 days." },
         { title: "QC + handover",        body: "OLED, USB-C, Apple C1 modem signal, Action Button and Face ID tested, signed warranty, ready to collect." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyHeadline
       warrantyBullets={[
-        "Warranty depends on the repair: up to 12 months on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
+        "Warranty depends on the repair: up to 2 years on hardware, 90 days on screens, 3 months on batteries with an 80% capacity guarantee.",
         "Screen: dead pixels, ghost touch covered.",
         "Battery: capacity-drop coverage.",
         "Apple C1 modem signal-strength verified before return.",

@@ -36,7 +36,7 @@ const STEPS = [
 
 const WHY = [
   { title: "Repaired in-house since 2004", body: "The same Dubai workshop that has serviced Apple hardware since 2004 handles every covered repair - not a third party you never meet." },
-  { title: "Written repair warranty", body: "Every repair carried out under your plan is backed by our standard written warranty for that repair type, up to 12 months." },
+  { title: "Written repair warranty", body: "Every repair carried out under your plan is backed by our standard written warranty for that repair type, 15 days to 2 years." },
   { title: "Walk in at Media City", body: "Bring a covered device to Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, or send it with a same-day courier you book." },
 ];
 
@@ -139,7 +139,7 @@ export default function MacBookInsurance() {
       <QuickAnswer
         tone="dark"
         question="Does MacBook Repair Dubai offer MacBook insurance in Dubai?"
-        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a written warranty up to 12 months. WhatsApp 055 741 3706 for a plan."
+        answer="Yes. MacBook Repair Dubai offers MacBook and Apple laptop insurance and protection plans in Dubai covering accidental damage, liquid spills, broken screens, software crashes and hardware failure. Plans suit individuals and companies, include out-of-warranty repairs with genuine or OEM-grade parts, and every repair carries a written warranty of 15 days to 2 years. WhatsApp 055 741 3706 for a plan."
       />
 
       <USPStrip tone="dark" />
@@ -157,7 +157,7 @@ export default function MacBookInsurance() {
           <strong>MacBook Repair Dubai</strong> does more than repair Apple laptops - we offer insurance plans that protect your MacBook from accidental damage, liquid spills, broken screens, hardware failure, and theft or loss. Cover is independent of Apple, handled by the same Dubai workshop that has serviced Apple hardware since 2004. Plans are available for individuals and freelancers, with custom packages for companies running several devices.
         </p>
         <p className="text-[16px] text-text-muted leading-relaxed max-w-[75ch] m-0">
-          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our written warranty for that repair type, up to 12 months.
+          There is no fixed public price. Each plan is assessed per device and quoted on WhatsApp, because cover should match the model, age and condition of the actual MacBook in front of us. If something does go wrong, every covered repair is backed by our written warranty for that repair type, 15 days to 2 years.
         </p>
       </section>
 

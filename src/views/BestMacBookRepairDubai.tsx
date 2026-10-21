@@ -28,7 +28,7 @@ const CRITERIA = [
 ];
 
 const COMPARISONS = [
-  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "Up to 12 months", sameDay: "Yes", walkIn: "Yes, no appointment", price: "Price on request" },
+  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "15 days to 2 years", sameDay: "Yes", walkIn: "Yes, no appointment", price: "Price on request" },
   { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", walkIn: "Appointment advised", price: "Price on request" },
   { shop: "Generic phone repair shops",   location: "Various (Karama etc.)",     board: "Some, inconsistent",  warranty: "Verbal / 1 month",  sameDay: "Sometimes",     walkIn: "Varies", price: "Varies, no fixed quote" },
 ];
@@ -38,7 +38,7 @@ const WHY_US = [
   "Component-level logic board repair (not module swap), far cheaper than a full swap",
   "Same-day screen, battery, keyboard, and trackpad",
   "Walk in without an appointment, 3 minutes from the Palm Jumeirah tram",
-  "Written warranty up to 12 months on every repair",
+  "Written warranty of 15 days to 2 years on every repair",
   "Free diagnosis, no fix, no charge",
   `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
   "Office #45, Concord Tower, Dubai Media City, no hidden location",
@@ -48,7 +48,7 @@ const FAQS = [
   { q: "What makes the best MacBook repair shop in Dubai?",
     a: "The best MacBook repair shop in Dubai does component-level logic board repair (not just module swaps), provides a written fixed quote before starting, offers same-day service for screen and battery, backs every repair with a written warranty that states the period for that repair, and diagnoses for free. Price alone is not the best indicator, a suspiciously cheap screen quote is likely using grey-market panels that fail within 3 months. Message us on WhatsApp for a fixed quote on your model." },
   { q: "Is MacBook Repair Dubai the best shop in Dubai?",
-    a: `We have ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified Google reviews, MacBook repair in Dubai since 2004, from Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of up to 12 months. We let the track record speak, read the reviews and compare.` },
+    a: `We have ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified Google reviews, MacBook repair in Dubai since 2004, from Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of 15 days to 2 years. We let the track record speak, read the reviews and compare.` },
   { q: "How do I choose between MacBook repair shops in Dubai?",
     a: "Ask four questions: (1) Do you diagnose free of charge? (2) Do you give a written fixed quote before starting? (3) Do you repair MacBook logic boards at component level or replace the whole board? (4) What is the written warranty? A good shop answers yes, yes, component level, and gives you the period in writing for your specific repair." },
   { q: "Is it better to go to Apple Store or an independent MacBook repair shop in Dubai?",
@@ -86,7 +86,7 @@ export default function BestMacBookRepairDubai() {
           tone="dark"
           eyebrow="Buyer’s guide · Dubai · Since 2004"
           title="Finding the best MacBook repair shop in Dubai"
-          subtitle={`${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · Component-level board repair · Same-day screen & battery · Written warranty up to 12 months.`}
+          subtitle={`${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · Component-level board repair · Same-day screen & battery · Written warranty of 15 days to 2 years.`}
         >
           <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
             <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
@@ -107,7 +107,7 @@ export default function BestMacBookRepairDubai() {
           <QuickAnswer
             tone="dark"
             question="What is the best MacBook repair shop in Dubai?"
-            answer={`The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews, in Dubai since 2004, component-level logic board repair, same-day screen and battery service, written warranty up to 12 months, free diagnosis. Message us on WhatsApp 055 741 3706 for today's exact price on your model.`}
+            answer={`The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews, in Dubai since 2004, component-level logic board repair, same-day screen and battery service, written warranty of 15 days to 2 years, free diagnosis. Message us on WhatsApp 055 741 3706 for today's exact price on your model.`}
           />
         </section>
 
@@ -179,7 +179,7 @@ export default function BestMacBookRepairDubai() {
           <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
             <div className="flex-1">
               <h2 className="text-[22px] font-bold mb-sm">Get a quote from a {RATING_LABEL}-rated MacBook repair shop</h2>
-              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed written quote · Same-day for screen & battery · Warranty up to 12 months.</p>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed written quote · Same-day for screen & battery · Warranty 15 days to 2 years.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm shrink-0">
               <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">

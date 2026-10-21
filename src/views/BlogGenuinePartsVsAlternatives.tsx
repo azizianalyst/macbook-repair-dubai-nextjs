@@ -134,7 +134,7 @@ export default function BlogGenuinePartsVsAlternatives() {
           <p>
             We warranty Tier 2 parts on the same terms as genuine -{" "}
             <Link to="/blog/macbook-repair-warranty-explained" className="text-accent font-semibold hover:underline">
-              up to 12 months on most hardware
+              up to 2 years on most hardware
             </Link>
             , 90 days on screens and 3 months on batteries. Tier 3 screens get 15 days (because failure rates are
             higher and we're transparent about that). You always know which tier you're getting before

@@ -61,8 +61,8 @@ export type SubServiceProps = {
   warrantyDays: number;
   warrantyBullets: string[];
   /** Opt-in for hub pages that span several warranty tiers (screens 90 days, batteries
-   *  3 months, hardware up to 12 months...): render WARRANTY.headlineLong ("a written
-   *  warranty of up to 12 months, depending on the repair") instead of the single-tier
+   *  3 months, hardware 15 days to 2 years...): render WARRANTY.headlineLong ("a written
+   *  warranty of 15 days to 2 years, depending on the repair") instead of the single-tier
    *  label derived from warrantyDays. Schema still uses warrantyDays. */
   warrantyHeadline?: boolean;
   glassNotice?: boolean;      // screen/back-glass pages: highlight that broken glass isn't covered
@@ -147,7 +147,7 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
         <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
         {/* 3. WARRANTY BAR — trust signals */}
-        {/* warrantyHeadline hubs omit warrantyDays → WarrantyBar's qualified "Up to 12-month warranty" */}
+        {/* warrantyHeadline hubs omit warrantyDays → WarrantyBar's qualified "15-day to 2-year warranty" */}
         <WarrantyBar tone="dark" warrantyDays={p.warrantyHeadline ? undefined : p.warrantyDays} />
 
         {/* 3b. STATS BAND — shared brand trust band (matches master template) */}
