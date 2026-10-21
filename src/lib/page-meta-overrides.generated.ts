@@ -146,7 +146,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/blog/macbook-pro-intel-screen-repair-cost-dubai": {
     "title": "MacBook Pro Intel Screen Repair Cost Dubai 2026",
-    "description": "MacBook Pro Intel screen repair cost in Dubai 2026. 2016-2020 Intel MacBook Pro LCD. Flexgate backlight cable. Same-day service. 12-month warranty."
+    "description": "MacBook Pro Intel screen repair cost in Dubai 2026. 2016-2020 Intel MacBook Pro LCD. Flexgate backlight cable. Same-day service. Warranty by panel grade."
   },
   "/blog/macbook-pro-intel-not-turning-on-dubai": {
     "title": "MacBook Pro Intel Not Turning On Dubai 2026 — Fix Guide",
@@ -526,7 +526,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-10th-gen-repair-dubai": {
     "title": "iPad 10th Gen Repair Dubai. Free Diagnosis",
-    "description": "iPad 10th Gen repair in Dubai: screen, battery, USB-C port and more, usually same-day to 2 days. Warranty up to 12 months, walk-in service. WhatsApp us."
+    "description": "iPad 10th Gen repair in Dubai: screen, battery, USB-C port and more, usually same-day to 2 days. Warranty 15 days to 2 years, walk-in service. WhatsApp us."
   },
   "/ipad-11th-gen-repair-dubai": {
     "title": "iPad 11th Gen Repair Dubai. Free Diagnosis",
@@ -534,7 +534,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-9th-gen-repair-dubai": {
     "title": "iPad 9th Gen Repair Dubai. Free Diagnosis",
-    "description": "iPad 9th Gen repair in Dubai: battery and Lightning port the same day, cracked screen or home button in 1-2 days. Warranty up to 12 months. WhatsApp us."
+    "description": "iPad 9th Gen repair in Dubai: battery and Lightning port the same day, cracked screen or home button in 1-2 days. Warranty 15 days to 2 years. WhatsApp us."
   },
   "/ipad-air-4-repair-dubai": {
     "title": "iPad Air 4 Repair Dubai. Free Diagnosis",
@@ -542,7 +542,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-air-5-repair-dubai": {
     "title": "iPad Air 5 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air 5 (M1) repair in Dubai: screen, battery and charging port, same-day to 2 days. Written warranty up to 12 months, walk-in service. WhatsApp us."
+    "description": "iPad Air 5 (M1) repair in Dubai: screen, battery and charging port, same-day to 2 days. Written warranty of 15 days to 2 years, walk-in service. WhatsApp us."
   },
   "/ipad-air-m2-11-repair-dubai": {
     "title": "iPad Air M2 11 Repair Dubai. Free Diagnosis",
@@ -566,7 +566,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-air-m4-13-repair-dubai": {
     "title": "iPad Air M4 13 Repair Dubai. Free Diagnosis",
-    "description": "iPad Air M4 13-inch repair in Dubai: screen, battery and USB-C port on the new big Air. Walk in to Media City, warranty up to 12 months. WhatsApp us."
+    "description": "iPad Air M4 13-inch repair in Dubai: screen, battery and USB-C port on the new big Air. Walk in to Media City, warranty of 15 days to 2 years. WhatsApp us."
   },
   "/ipad-back-glass-repair-dubai": {
     "title": "iPad Back Glass Repair Dubai. Free Diagnosis, Walk-In",
@@ -606,7 +606,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-mini-5-repair-dubai": {
     "title": "iPad mini 5 Repair Dubai. Free Diagnosis",
-    "description": "iPad mini 5 repair in Dubai: screen, battery, Lightning port and home button on the pocket iPad. Warranty up to 12 months, walk-in service. WhatsApp us."
+    "description": "iPad mini 5 repair in Dubai: screen, battery, Lightning port and home button on the pocket iPad. Warranty 15 days to 2 years, walk-in service. WhatsApp us."
   },
   "/ipad-mini-6-repair-dubai": {
     "title": "iPad mini 6 Repair Dubai. Free Diagnosis",
@@ -614,7 +614,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-mini-7-repair-dubai": {
     "title": "iPad mini 7 Repair Dubai. Free Diagnosis",
-    "description": "iPad mini 7 repair in Dubai: screen, battery and USB-C port on the newest small iPad. No fix no fee, warranty up to 12 months. WhatsApp for a price."
+    "description": "iPad mini 7 repair in Dubai: screen, battery and USB-C port on the newest small iPad. No fix no fee, warranty of 15 days to 2 years. WhatsApp for a price."
   },
   "/ipad-older-gen-repair-dubai": {
     "title": "iPad Older Gen Repair Dubai. Free Diagnosis",
@@ -630,7 +630,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pro-11-m1-repair-dubai": {
     "title": "iPad Pro 11 M1 Repair Dubai. Free Diagnosis",
-    "description": "iPad Pro 11-inch M1 repair in Dubai: screen, battery, USB-C port and more on the first M1 Pro. Same-day to 2 days, warranty up to 12 months. WhatsApp us."
+    "description": "iPad Pro 11-inch M1 repair in Dubai: screen, battery, USB-C port and more on the first M1 Pro. Same-day to 2 days, warranty of 15 days to 2 years. WhatsApp us."
   },
   "/ipad-pro-11-m2-repair-dubai": {
     "title": "iPad Pro 11 M2 Repair Dubai. Free Diagnosis",
@@ -638,7 +638,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pro-11-m4-repair-dubai": {
     "title": "iPad Pro 11 M4 Repair Dubai. Free Diagnosis",
-    "description": "iPad Pro 11-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, battery the same day, plus port faults. Warranty up to 12 months. WhatsApp us."
+    "description": "iPad Pro 11-inch M4 repair in Dubai: Tandem OLED screen in 3-5 days, battery the same day, plus port faults. Warranty 15 days to 2 years. WhatsApp us."
   },
   "/ipad-pro-11-m5-repair-dubai": {
     "title": "iPad Pro 11 M5 Repair Dubai. Free Diagnosis",
@@ -646,7 +646,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/ipad-pro-12.9-m1-repair-dubai": {
     "title": "iPad Pro 12.9 M1 Repair Dubai. Free Diagnosis",
-    "description": "iPad Pro 12.9-inch M1 repair in Dubai: the XDR mini-LED screen takes 3-5 days as a specialist part, battery same day. Up to 12-month warranty. WhatsApp us."
+    "description": "iPad Pro 12.9-inch M1 repair in Dubai: the XDR mini-LED screen takes 3-5 days as a specialist part, battery same day. 15-day to 2-year warranty. WhatsApp us."
   },
   "/ipad-pro-12.9-m2-repair-dubai": {
     "title": "iPad Pro 12.9 M2 Repair Dubai. Free Diagnosis",
@@ -870,7 +870,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/iphone-se-3rd-gen-repair-dubai": {
     "title": "iPhone SE 3rd Gen Repair Dubai. Expert Dubai Repair",
-    "description": "iPhone SE (3rd gen) repair in Dubai: screen, battery, charging port and home button on the A15 5G model. Same day, up to 12-month warranty. Message us."
+    "description": "iPhone SE (3rd gen) repair in Dubai: screen, battery, charging port and home button on the A15 5G model. Same day, 15-day to 2-year warranty. Message us."
   },
   "/iphone-sim-tray-repair-dubai": {
     "title": "iPhone SIM Tray Repair Dubai. Free Diagnosis, Same-Day",
@@ -950,7 +950,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-mini-m4-2024-repair-dubai": {
     "title": "Mac mini M4 2024 Repair Dubai. Free Diagnosis",
-    "description": "Mac mini M4 (2024) repair in Dubai: logic board, PSU and front USB-C ports on the 5x5-inch redesign. Up to 12-month warranty, walk-in service. Message us."
+    "description": "Mac mini M4 (2024) repair in Dubai: logic board, PSU and front USB-C ports on the 5x5-inch redesign. 15-day to 2-year warranty, walk-in service. Message us."
   },
   "/mac-mini-m4-pro-2024-repair-dubai": {
     "title": "Mac mini M4 Pro 2024 Repair Dubai. Free Diagnosis",
@@ -1030,7 +1030,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-studio-m2-ultra-2023-repair-dubai": {
     "title": "Mac Studio M2 Ultra 2023 Repair Dubai. Free Diagnosis",
-    "description": "Mac Studio M2 Ultra (2023) repair in Dubai: logic board, power supply and port faults on the 192GB RAM Studio. Up to 12-month warranty. WhatsApp us."
+    "description": "Mac Studio M2 Ultra (2023) repair in Dubai: logic board, power supply and port faults on the 192GB RAM Studio. 15-day to 2-year warranty. WhatsApp us."
   },
   "/mac-studio-m3-ultra-2025-repair-dubai": {
     "title": "Mac Studio M3 Ultra Repair Dubai (2025) — Free Diagnosis",
@@ -1286,7 +1286,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai. Expert, Same-Day",
-    "description": "MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, warranty up to 12 months. Free diagnosis, quote on WhatsApp."
+    "description": "MacBook Repair Dubai. Expert service at Concord Tower, Dubai Media City. Same-day, warranty of 15 days to 2 years. Free diagnosis, quote on WhatsApp."
   },
   "/macbook-repair-dubai-hills": {
     "title": "MacBook Repair Dubai Hills — Same-Day, Walk-In",
@@ -1346,7 +1346,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/macbook-repair-silicon-oasis": {
     "title": "MacBook Repair Silicon Oasis — Same-Day, Walk-In",
-    "description": "MacBook repair for Dubai Silicon Oasis, near DSO HQ and Cedre Shopping Centre. Walk in to Media City, same-day repair, up to 12-month warranty. WhatsApp."
+    "description": "MacBook repair for Dubai Silicon Oasis, near DSO HQ and Cedre Shopping Centre. Walk in to Media City, same-day repair, 15-day to 2-year warranty. WhatsApp."
   },
   "/macbook-repair-the-greens": {
     "title": "MacBook Repair The Greens — Same-Day, Walk-In",
@@ -1465,8 +1465,8 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "Trade in your old MacBook in Dubai, working or faulty. Free valuation at our Media City office, same-day payment or upgrade credit. WhatsApp for an offer."
   },
   "/warranty": {
-    "title": "MacBook Repair Warranty Dubai. Up to 12 Months",
-    "description": "Our repair warranty explained: 3 months on screens and batteries, up to 12 months on most other hardware, 15 days on board and liquid work. Free to claim."
+    "title": "MacBook Repair Warranty Dubai. 15 Days to 2 Years",
+    "description": "Our repair warranty explained: 15 days to 2 years on screens by grade, 3 months on batteries, 2 years on most other hardware, 15 days on board and liquid work. Free to claim."
   },
   "/blog/what-causes-color-distortion-on-macbook-screens": {
     "title": "What Causes Color Distortion on MacBook Screens? Fix Guide",
@@ -1690,7 +1690,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/blog/macbook-repair-warranty-explained": {
     "title": "MacBook Repair Warranty Explained: Expert 2026 Guide",
-    "description": "MacBook repair warranty explained: up to 12 months on hardware, 90 days on screens, 3 months on batteries, 15 days on board work. Questions? WhatsApp us."
+    "description": "MacBook repair warranty explained: 2 years on hardware, 15 days to 2 years on screens, 3 months on batteries, 15 days on board work. Questions? WhatsApp us."
   },
   "/blog/macbook-screen-flickering-fix": {
     "title": "MacBook Screen Flickering? Fast 2026 Fixes & Causes",
@@ -2216,7 +2216,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
   },
   "/mac-mini-m6-2026-repair-dubai": {
     "title": "Mac mini M6 (2026) Repair Dubai - Request a Quote",
-    "description": "Mac mini M6 (2026) repair Dubai: logic board, power supply, ports, SSD data recovery and thermal service. Free diagnosis, warranty up to 12 months."
+    "description": "Mac mini M6 (2026) repair Dubai: logic board, power supply, ports, SSD data recovery and thermal service. Free diagnosis, warranty of 15 days to 2 years."
   },
   "/iphone-18-pro-repair-dubai": {
     "title": "iPhone 18 Pro Repair Dubai — Screen, Battery & Board Repair",
@@ -2263,7 +2263,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook repair for Al Furjan, 18 minutes from our workshop, near Al Furjan Metro and Murano Residences. Walk in, same-day on most repairs. WhatsApp us."
   },
   "/macbook-repair-al-jaddaf": {
-    "description": "MacBook repair for Al Jaddaf, Jaddaf Waterfront and Culture Village, 25 minutes from Media City. Walk in, warranty up to 12 months. Ask on WhatsApp."
+    "description": "MacBook repair for Al Jaddaf, Jaddaf Waterfront and Culture Village, 25 minutes from Media City. Walk in, warranty of 15 days to 2 years. Ask on WhatsApp."
   },
   "/macbook-repair-al-nahda": {
     "description": "MacBook repair for Al Nahda, near Al Nahda Pond Park and the Metro, 35 minutes from Concord Tower. Walk in for a free diagnosis. Message us on WhatsApp."
@@ -2278,7 +2278,7 @@ export const META_OVERRIDES: Record<string, PageMetaOverride> = {
     "description": "MacBook repair for Al Safa, 15 minutes from Media City, from Safa Park, Al Wasl Road and the villas. Walk in, same-day on most repairs. WhatsApp to book."
   },
   "/macbook-repair-al-warqa": {
-    "description": "MacBook repair for Al Warqa, near Al Warqa City Mall and Park, 35 minutes from Media City. Walk in, warranty up to 12 months. Message us on WhatsApp."
+    "description": "MacBook repair for Al Warqa, near Al Warqa City Mall and Park, 35 minutes from Media City. Walk in, warranty of 15 days to 2 years. Message us on WhatsApp."
   },
   "/macbook-repair-arjan": {
     "description": "MacBook repair for Arjan, 20 minutes from Media City, near Dubai Miracle Garden and Dubai Science Park. Walk in for a free diagnosis. Quote on WhatsApp."

@@ -11,7 +11,7 @@
 //   await updateServices(loc, items);
 
 /** Business description — paste into /admin/gbp → Business Info. */
-export const GBP_DESCRIPTION = "Independent Apple repair specialists since 2004, based in Concord Tower, Dubai Media City. We repair MacBook Air and MacBook Pro (Intel through M5), MacBook Neo, iMac, Mac mini, Mac Studio, iPhone and iPad: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Many repairs are done the same day, and every paid repair carries a written warranty of up to 12 months, depending on the repair. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.";
+export const GBP_DESCRIPTION = "Independent Apple repair specialists since 2004, based in Concord Tower, Dubai Media City. We repair MacBook Air and MacBook Pro (Intel through M5), MacBook Neo, iMac, Mac mini, Mac Studio, iPhone and iPad: screens, batteries, keyboards, charging ports, logic boards, water damage and data recovery. Free diagnosis on every device, and no fix, no fee. Many repairs are done the same day, and every paid repair carries a written warranty of 15 days to 2 years, depending on the repair. Free door-to-door pickup and delivery across Dubai, including Marina, Downtown, Business Bay, JLT, JBR, DIFC, Deira and Bur Dubai. We work at component level, so faults other workshops replace whole units for can often be repaired instead. Corporate AMC available.";
 export const GBP_DESCRIPTION_LENGTH = 746;
 
 /**
@@ -821,7 +821,7 @@ export const GBP_POSTS: GbpPostSeed[] = [
     "cta": "Learn more",
     "url": "https://macbook-repair-dubai.ae/warranty/?utm_source=google&utm_medium=gbp&utm_campaign=post&utm_content=w15-warranty",
     "image": "brand/team-portrait.jpg",
-    "body": "Our warranty in plain terms, not fine print: up to 12 months, stated on the invoice, before you approve any work — never after.\n\nDifferent repairs carry different terms. A battery replacement isn't warrantied the same way as a board-level logic repair, and we tell you which applies before you say yes, not when something goes wrong six months later.\n\nAsk up front. We'd rather you know than assume.\n\n#WrittenWarranty #MacBookRepairDubai #AppleRepairDubai"
+    "body": "Our warranty in plain terms, not fine print: 15 days to 2 years, stated on the invoice, before you approve any work — never after.\n\nDifferent repairs carry different terms. A battery replacement isn't warrantied the same way as a board-level logic repair, and we tell you which applies before you say yes, not when something goes wrong six months later.\n\nAsk up front. We'd rather you know than assume.\n\n#WrittenWarranty #MacBookRepairDubai #AppleRepairDubai"
   },
   {
     "week": 16,
@@ -1263,7 +1263,7 @@ export const GBP_POST_BRIEFS: GbpPostBrief[] = [
   {
     "week": 15,
     "type": "TRUST",
-    "opening": "Our warranty in plain terms: up to 12 months in writing, on the invoice, stated before you approve the work. Different repairs carry different terms — we tell you which upfront.",
+    "opening": "Our warranty in plain terms: 15 days to 2 years in writing, on the invoice, stated before you approve the work. Different repairs carry different terms — we tell you which upfront.",
     "url": "/warranty/",
     "image": "brand/team-portrait.jpg"
   },

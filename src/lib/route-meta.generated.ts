@@ -26,7 +26,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/applecare-macbook-repair-dubai": {
     "title": "AppleCare & In-Warranty MacBook Repair Dubai",
-    "description": "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, warranty of up to 12 months. Call 055 741 3706."
+    "description": "In-warranty, AppleCare-eligible and AppleCare-expired MacBook repair guidance in Dubai. Independent Apple specialist, free diagnosis, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/best-apple-repair-dubai": {
     "title": "Best Apple Repair Dubai: What to Look For in 2026",
@@ -782,7 +782,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-repair-warranty-explained": {
     "title": "MacBook Repair Warranty Explained: Dubai 2026 (Up to 12 Months)",
-    "description": "Exactly how our tiered MacBook repair warranty works - 12 months on hardware, 3 months on batteries and screens, 15 days on board and liquid work - and how to claim."
+    "description": "Exactly how our tiered MacBook repair warranty works - 2 years on hardware, 3 months on batteries and screens, 15 days on board and liquid work - and how to claim."
   },
   "/blog/macbook-running-slow-10-fixes": {
     "title": "MacBook Running Slow? 10 Fixes That Actually Work (2026)",
@@ -822,7 +822,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog": {
     "title": "Apple Repair Blog Dubai - Honest Cost Guides",
-    "description": "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of up to 12 months."
+    "description": "Honest, technician-written guides to iPhone, MacBook, iPad and Mac repair costs in Dubai. April 2026 prices. Same-day service, warranty of 15 days to 2 years."
   },
   "/blog/protect-macbook-dubai-summer-heat": {
     "title": "Protect Your MacBook in Dubai 50°C Summer Heat - 2026",
@@ -858,7 +858,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/where-to-repair-macbook-dubai": {
     "title": "Where to Repair a MacBook in Dubai: Apple vs Independent",
-    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of up to 12 months."
+    "description": "Apple Store vs Authorised Service Provider vs independent specialist — an honest guide to MacBook repair in Dubai. When each route wins, what Apple charges, and a warranty of 15 days to 2 years."
   },
   "/blog/why-21-years-experience-matters": {
     "title": "Why Two Decades of Apple Repair Experience Matter",
@@ -976,7 +976,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/ipad-home-button-repair-dubai": {
     "title": "iPad Home Button Repair Dubai | iPad 9th Gen and Earlier",
-    "description": "iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. 1 day, warranty up to 12 months - WhatsApp us for your price."
+    "description": "iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. 1 day, warranty of 15 days to 2 years - WhatsApp us for your price."
   },
   "/ipad-icloud-unlock-dubai": {
     "title": "iPad iCloud Unlock Dubai - Honest Consultation | 055 741 3706",
@@ -1018,39 +1018,39 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-13-mini-repair-dubai": {
     "title": "iPhone 13 Mini Repair Dubai - 5.4-inch OLED Screen & Battery | 055 741 3706",
-    "description": "iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen, battery & Face ID. Same-day, warranty of up to 12 months. WhatsApp for pricing."
+    "description": "iPhone 13 Mini (2021) repair Dubai. A15, 5.4-inch OLED, last Mini ever. Screen, battery & Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp for pricing."
   },
   "/iphone-13-pro-max-repair-dubai": {
     "title": "iPhone 13 Pro Max Repair Dubai - 6.7-inch ProMotion Specialists | 055 741 3706",
-    "description": "iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen, battery, camera. Same-day, warranty of up to 12 months. WhatsApp for a quote."
+    "description": "iPhone 13 Pro Max (2021) repair Dubai. A15, 6.7-inch 120Hz OLED, triple camera + LiDAR. Screen, battery, camera. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
   },
   "/iphone-13-pro-repair-dubai": {
     "title": "iPhone 13 Pro Repair Dubai - 120Hz ProMotion Screen & Battery | 055 741 3706",
-    "description": "iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen, battery, camera and Face ID. Same-day, warranty up to 12 months. WhatsApp us."
+    "description": "iPhone 13 Pro (2021) repair Dubai. A15, first ProMotion 120Hz, LiDAR, stainless steel. Screen, battery, camera and Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp us."
   },
   "/iphone-13-repair-dubai": {
     "title": "iPhone 13 Repair Dubai - 6.1-inch OLED Screen & Battery | 055 741 3706",
-    "description": "iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen, battery & Face ID. Same-day, warranty of up to 12 months. WhatsApp for a quote."
+    "description": "iPhone 13 (2021) repair Dubai. A15, 6.1-inch OLED, diagonal dual camera, iOS 18. Screen, battery & Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
   },
   "/iphone-14-plus-repair-dubai": {
     "title": "iPhone 14 Plus Repair Dubai - 6.7-inch OLED, Battery, Camera | 055 741 3706",
-    "description": "iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen, battery and camera - same-day, warranty of up to 12 months."
+    "description": "iPhone 14 Plus (2022) repair Dubai. A15, 6.7-inch big-screen budget iPhone, Crash Detection. Screen, battery and camera - same-day, warranty of 15 days to 2 years."
   },
   "/iphone-14-pro-max-repair-dubai": {
     "title": "iPhone 14 Pro Max Repair Dubai - 6.7-inch Dynamic Island, Same Day | 055 741 3706",
-    "description": "iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen, Dynamic Island, battery. Same-day, warranty up to 12 months. WhatsApp for a quote."
+    "description": "iPhone 14 Pro Max (2022) repair Dubai. A16, 6.7-inch ProMotion, Dynamic Island, 48MP. Screen, Dynamic Island, battery. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
   },
   "/iphone-14-pro-repair-dubai": {
     "title": "iPhone 14 Pro Repair Dubai - Dynamic Island, 48MP, ProMotion | 055 741 3706",
-    "description": "iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen, Dynamic Island and battery - same-day, warranty up to 12 months. WhatsApp for price."
+    "description": "iPhone 14 Pro (2022) repair Dubai. A16, Dynamic Island, Always-On, 48MP, ProMotion. Screen, Dynamic Island and battery - same-day, warranty of 15 days to 2 years. WhatsApp for price."
   },
   "/iphone-14-repair-dubai": {
     "title": "iPhone 14 Repair Dubai - 6.1-inch OLED Screen & Battery | 055 741 3706",
-    "description": "iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen, battery, Face ID. Same-day, warranty of up to 12 months. WhatsApp for a quote."
+    "description": "iPhone 14 (2022) repair Dubai. A15, 6.1-inch OLED, Crash Detection. Screen, battery, Face ID. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
   },
   "/iphone-15-plus-repair-dubai": {
     "title": "iPhone 15 Plus Repair Dubai - 6.7-inch OLED, USB-C, Battery | 055 741 3706",
-    "description": "iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen, USB-C port and battery. Same-day, warranty of up to 12 months. WhatsApp for price."
+    "description": "iPhone 15 Plus (2023) repair Dubai. A16, 6.7-inch OLED, USB-C, Dynamic Island. Screen, USB-C port and battery. Same-day, warranty of 15 days to 2 years. WhatsApp for price."
   },
   "/iphone-15-pro-max-repair-dubai": {
     "title": "iPhone 15 Pro Max Repair Dubai - Titanium, 5x Tetraprism | 055 741 3706",
@@ -1062,7 +1062,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-15-repair-dubai": {
     "title": "iPhone 15 Repair Dubai - USB-C, Dynamic Island, Screen | 055 741 3706",
-    "description": "iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen, USB-C port, battery. Same-day, warranty of up to 12 months. WhatsApp for a price."
+    "description": "iPhone 15 (2023) repair Dubai. A16, USB-C (first), Dynamic Island, 48MP. Screen, USB-C port, battery. Same-day, warranty of 15 days to 2 years. WhatsApp for a price."
   },
   "/iphone-16-plus-repair-dubai": {
     "title": "iPhone 16 Plus Repair Dubai - 6.7-inch A18 OLED | 055 741 3706",
@@ -1082,11 +1082,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-16-pro-repair-dubai": {
     "title": "iPhone 16 Pro Repair Dubai - 6.3-inch A18 Pro | 055 741 3706",
-    "description": "iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion, titanium, Camera Control, USB-C 3. Same-day, warranty up to 12 months. WhatsApp for today's price."
+    "description": "iPhone 16 Pro (2024) repair Dubai. A18 Pro, 6.3-inch ProMotion, titanium, Camera Control, USB-C 3. Same-day, warranty of 15 days to 2 years. WhatsApp for today's price."
   },
   "/iphone-16-repair-dubai": {
     "title": "iPhone 16 Repair Dubai - A18, Camera Control, Screen & Battery | 055 741 3706",
-    "description": "iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen, Camera Control, USB-C and battery. Same-day, warranty of up to 12 months."
+    "description": "iPhone 16 (2024) repair Dubai. A18, Camera Control button (first), Apple Intelligence. Screen, Camera Control, USB-C and battery. Same-day, warranty of 15 days to 2 years."
   },
   "/iphone-16-shocks-while-charging": {
     "title": "iPhone Shocking You While Charging? Causes and Safe Fixes",
@@ -1094,7 +1094,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-16e-repair-dubai": {
     "title": "iPhone 16e Repair Dubai - A18 Budget iPhone | 055 741 3706",
-    "description": "iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty up to 12 months. WhatsApp for a quote."
+    "description": "iPhone 16e (Feb 2025) repair Dubai. A18, 6.1-inch OLED, USB-C, replaced SE 3. Screen, battery, USB-C. Same-day, warranty of 15 days to 2 years. WhatsApp for a quote."
   },
   "/iphone-17-pro-max-repair-dubai": {
     "title": "iPhone 17 Pro Max Repair Dubai: Screen, Battery, Camera",
@@ -1126,7 +1126,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-camera-repair-dubai": {
     "title": "iPhone Camera Repair Dubai: Blurry, Black or Cracked Lens",
-    "description": "iPhone camera not working, won't focus or lens cracked? Free diagnosis in Dubai Media City, lens-glass or module repair, warranty up to 12 months. WhatsApp us."
+    "description": "iPhone camera not working, won't focus or lens cracked? Free diagnosis in Dubai Media City, lens-glass or module repair, warranty of 15 days to 2 years. WhatsApp us."
   },
   "/iphone-charging-port-repair-dubai": {
     "title": "iPhone Charging Port Repair Dubai - Lightning & USB-C | Same Day",
@@ -1198,7 +1198,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-se-3rd-gen-repair-dubai": {
     "title": "iPhone SE 3rd Gen Repair Dubai - Screen, Battery, Same Day | 055 741 3706",
-    "description": "iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery, LCD and all repairs same day, warranty up to 12 months. WhatsApp us for today's price."
+    "description": "iPhone SE 3 (2022) repair Dubai: A15 5G, fully supported in 2026. Battery, LCD and all repairs same day, warranty of 15 days to 2 years. WhatsApp us for today's price."
   },
   "/iphone-sim-tray-repair-dubai": {
     "title": "iPhone SIM Tray Repair Dubai - Physical & eSIM | Same Day",
@@ -1218,7 +1218,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-vibration-motor-repair-dubai": {
     "title": "iPhone Vibration Motor Repair Dubai - Taptic Engine",
-    "description": "iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. 1 day, warranty of up to 12 months. Message us on WhatsApp for a price."
+    "description": "iPhone Taptic Engine replacement Dubai. No vibration, no haptic feedback, rattle inside. 1 day, warranty of 15 days to 2 years. Message us on WhatsApp for a price."
   },
   "/iphone-volume-button-repair-dubai": {
     "title": "iPhone Volume Button Repair Dubai | 1 Day",
@@ -1230,7 +1230,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/iphone-wifi-bluetooth-repair-dubai": {
     "title": "iPhone WiFi & Bluetooth Repair Dubai | 2-Day Fix",
-    "description": "iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. 2 days, warranty of up to 12 months. WhatsApp us for a price. Call 055 741 3706."
+    "description": "iPhone WiFi grayed-out, Bluetooth not connecting. Combined wireless chip board work. 2 days, warranty of 15 days to 2 years. WhatsApp us for a price. Call 055 741 3706."
   },
   "/mac-activation-lock-unlock-dubai": {
     "title": "Mac Activation Lock & Firmware Unlock Dubai - Honest Owner Help",
@@ -1522,11 +1522,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-camera-repair-dubai": {
     "title": "MacBook Camera Repair Dubai - FaceTime & Webcam Fix",
-    "description": "MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. Most done in 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+    "description": "MacBook FaceTime / webcam repair Dubai. Black screen on calls, 'no camera available', blurry video. Most done in 1-2 days, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/macbook-charging-port-repair-dubai": {
     "title": "MacBook Charging Port Repair Dubai - Same-Day USB-C",
-    "description": "MacBook USB-C and MagSafe 3 port repair Dubai. Same-day port swap, charging IC board-level repair, M1-M5. Free diagnosis, warranty up to 12 months. Call 055 741 3706."
+    "description": "MacBook USB-C and MagSafe 3 port repair Dubai. Same-day port swap, charging IC board-level repair, M1-M5. Free diagnosis, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/macbook-cleaning-maintenance-dubai": {
     "title": "MacBook Cleaning & Maintenance Dubai | MacBook Repair Dubai",
@@ -1558,7 +1558,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-hinge-repair-dubai": {
     "title": "MacBook Hinge Repair Dubai - Clutch & Lid Fix",
-    "description": "MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. Usually 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+    "description": "MacBook hinge & clutch repair Dubai. Loose lid, stiff or broken hinge, cracked case. Usually 1-2 days, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/macbook-insurance-dubai": {
     "title": "MacBook Insurance Dubai | MacBook Repair Dubai",
@@ -1614,7 +1614,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-power-button-repair-dubai": {
     "title": "MacBook Power Button & Touch ID Repair Dubai",
-    "description": "MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. Same day, warranty of up to 12 months. Call 055 741 3706."
+    "description": "MacBook power button & Touch ID repair Dubai. Won't power on, stuck button, fingerprint not reading. Same day, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/macbook-pro-battery-replacement-dubai": {
     "title": "MacBook Pro Battery Replacement Dubai — Same Day, 2 Hours",
@@ -1702,11 +1702,11 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-repair-cost-calculator-dubai": {
     "title": "MacBook Repair Cost Dubai - Get a Written Quote",
-    "description": "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair, then get a written quote back on WhatsApp. Warranty up to 12 months."
+    "description": "Free instant MacBook repair cost calculator for Dubai. Pick your exact Mac or iPad model and the repair, then get a written quote back on WhatsApp. Warranty 15 days to 2 years."
   },
   "/macbook-repair-dubai": {
     "title": "MacBook Repair Dubai. All Models, Same-Day | Since 2004",
-    "description": "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, walk in, warranty up to 12 months."
+    "description": "MacBook repair Dubai. Air, Pro, Intel and M-series. Screen, battery, keyboard and logic board work. Free diagnosis, walk in, warranty of 15 days to 2 years."
   },
   "/macbook-repair-near-me-dubai": {
     "title": "MacBook Repair Near Me Dubai - Walk In, Same Day",
@@ -1758,7 +1758,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-wifi-bluetooth-repair-dubai": {
     "title": "MacBook Wi-Fi & Bluetooth Repair Dubai - | Fast Fix",
-    "description": "MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. 1-2 days, warranty of up to 12 months. Call 055 741 3706."
+    "description": "MacBook Wi-Fi & Bluetooth repair Dubai. 'No hardware installed', dropping connection, Bluetooth won't pair. 1-2 days, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/macbook-wont-charge-dubai": {
     "title": "MacBook Not Charging Dubai? MagSafe & USB-C Fix Same Day",
@@ -1778,7 +1778,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/out-of-warranty-apple-repair-dubai": {
     "title": "Out-of-Warranty Apple Repair Dubai - Component-Level, Quote First",
-    "description": "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, warranty of up to 12 months. Call 055 741 3706."
+    "description": "Out-of-warranty & expired-AppleCare Apple repair in Dubai. Logic board, battery, SSD & component-level fixes at independent prices, genuine parts, warranty of 15 days to 2 years. Call 055 741 3706."
   },
   "/privacy": {
     "title": "Privacy Policy - MacBook Repair Dubai",
@@ -1846,7 +1846,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/warranty": {
     "title": "Warranty Policy - MacBook Repair Dubai",
-    "description": "Warranty of up to 12 months on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026."
+    "description": "Warranty of 15 days to 2 years on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026."
   },
   "/white-or-grey-horizontal-lines-appearing-on-macbook-screen": {
     "title": "White or Grey Horizontal Lines on MacBook Screen (Fix)",

@@ -82,7 +82,7 @@ export const MEGA_MENU: MegaPanel[] = [
         "href": "/pricing"
       },
       {
-        "label": "Warranty: up to 12 months",
+        "label": "Warranty: 15 days to 2 years",
         "href": "/warranty"
       },
       {
@@ -189,7 +189,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         "href": "/pricing"
       },
       {
-        "label": "Warranty - up to 12 months",
+        "label": "Warranty - 15 days to 2 years",
         "href": "/warranty"
       },
       {
