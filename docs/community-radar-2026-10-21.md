@@ -44,3 +44,24 @@ Score = how new it is × how likely it becomes a Dubai repair enquiry × how thi
 - Facts about what we do on the bench (coil whine, lid sensor, port replacement) must come from Aziz before they are written. The thread answers above are what Apple volunteers said, not our process.
 - Owner pages follow `docs/keyword-page-map.csv`; secondary keywords get added there, not new rows for the same intent.
 - Protected pages: none touched.
+
+---
+
+## Desktop boards (iMac, Mac mini, Mac Studio), added 21 Oct, second run
+
+Pages 1–2 of each board, 90 thread titles, 8 threads read in full. These boards are slower and more software-heavy than the laptop boards: most threads are printers, passwords, Time Machine and macOS 27.0.1 "Golden Gate" quirks. The hardware signals below are the ones worth a page change.
+
+| # | Thread (date) | Board | What we have today | Recommendation | Score |
+|---|---|---|---|---|---|
+| D1 | [2017 iMac Fusion Drive: SSD not detected, 832 pending sectors, no backup](https://discussions.apple.com/thread/256377791) (17 Oct) | iMac | `/imac-data-recovery-dubai/` covers Fusion Drive (12 mentions) but not the "one member dead, the other failing" case or why DIY tools make it worse | **Add a section + FAQ** to `/imac-data-recovery-dubai/`: "Fusion Drive with a dead SSD or failing HDD": stop using it, image both members first, why First Aid and resetFusion destroy the chance. The question "does Apple recommend a specialist" is exactly the one a Dubai searcher asks | 7 |
+| D2 | [Mac mini: "Disk Not Ejected Properly" and audio jack cutting out](https://discussions.apple.com/thread/256376861) (15 Oct) | Mac mini | Nothing on bus-powered port limits or hub power (0 hits); audio jack covered generally | **Add an FAQ** to `/mac-mini-repair-dubai/`: "Drives keep ejecting and ports drop on my Mac mini": the mini shuts ports off when bus-powered devices exceed its budget; a self-powered hub fixes most cases before any port repair. Mention the 3.5mm jack test (reseat works = socket wear) | 6 |
+| D3 | [Mac Studio M5: OWC enclosure won't power with 8K Dell on two TB ports; panics](https://discussions.apple.com/thread/256373270) (9 Oct, 13 replies) | Mac Studio | `/mac-studio-m5-repair-dubai/` has nothing on Thunderbolt power budgets | **Add a section** to the M5 Studio page or `/mac-studio-no-display-dubai/`: "Thunderbolt devices lose power when an 8K display is connected": the third bus-powered device rule OWC itself documents for M4 mini and Studio; same ACIO-style panics as the laptop item 1. Cross-link item 1 | 6 |
+| D4 | [Studio Display 120 Hz not offered at boot on M4 Max Studio](https://discussions.apple.com/thread/256363789) (23 Sep, 10 replies) | Mac Studio | `/mac-studio-no-display-dubai/` mentions 120Hz once; no refresh-rate negotiation content | **Add an FAQ** to `/mac-studio-no-display-dubai/`: "Display stuck at 60 Hz after boot": the Mac only asks the display for its capabilities at boot, wake, cable insert or Option + Detect Displays; a 30-second sleep and wake restores 120 Hz without wearing the port. Known software issue, not a repair | 5 |
+| D5 | [M4 Mac mini SSD Available Spare 99%](https://discussions.apple.com/thread/256371309) (6 Oct, 15 replies) | Mac mini | SMART mentioned widely (40 hits); "available spare" 0 hits | **Add an FAQ** to `/mac-mini-ssd-upgrade-dubai/` or the data-recovery page: "Is 99% Available Spare a failing SSD?" No; watch Media and Data Integrity Errors instead; Apple SSDs usually fail at the controller with no warning, which is the backup argument | 4 |
+| D6 | [Mac mini won't wake from sleep](https://discussions.apple.com/thread/256371399) (6 Oct, 8 replies) | Mac mini | `/mac-mini-not-turning-on-dubai/` exists; wake-from-sleep covered elsewhere (18 hits) | **Add an FAQ** to `/mac-mini-not-turning-on-dubai/`: won't wake vs won't power on, the free Apple "No Power" service programme for 2023 minis (check serial), and the external-devices test | 4 |
+| D7 | [Dusty Studio](https://discussions.apple.com/thread/256349570) (1 Sep) | Mac Studio | `/mac-studio-overheating-fix-dubai/` covers dust and compressed air | No action. Already covered; Dubai sand angle is on the page | 0 |
+| D8 | [iMac Monterey shuts down, 15-minute reboot](https://discussions.apple.com/thread/256376864) (15 Oct) | iMac | `/imac-not-turning-on-dubai/`, `/imac-ssd-upgrade-dubai/` | Optional FAQ on the Intel iMac hub: "random shutdown then very slow boot = failing HDD or a flaky external drive". Low priority, old machine | 2 |
+
+**Not repair-relevant, skipped:** M5 Pro mini locked to 1080p on a 4K monitor (cable/EDID, covered by the existing Detect Displays content), Golden Gate network-drive and Thunderbolt Bridge bugs (software), order and delivery threads, printer and scanner drivers.
+
+**Order of work for the desktop set:** D1, then D2 and D3 together (both are power-budget stories), then D4–D6 as FAQs.
