@@ -61,6 +61,7 @@ const nextConfig = {
       // 2026-10-21 wave 1 (docs/wave1-newest-macs-plan-2026-10-21.md): the per-variant pages for the
       // newest Macs shared 55-68% of their text and competed with their family page (GSC 90 days:
       // 3 clicks across all 11). One family page per generation now carries a variant spec table.
+      // Keep these permanently (Google: at least one year; indefinitely is fine). Never delete a merge redirect.
       { source: "/macbook-air-13-m5-2026-repair-dubai", destination: "/macbook-air-m5-repair-dubai/", statusCode: 301 },
       { source: "/macbook-air-15-m5-2026-repair-dubai", destination: "/macbook-air-m5-repair-dubai/", statusCode: 301 },
       { source: "/macbook-pro-14-m5-2025-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
