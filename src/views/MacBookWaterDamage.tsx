@@ -104,12 +104,6 @@ const DAMAGE_PATTERNS = [
   },
 ];
 
-const PRICING_ROWS = [
-  { model: "MacBook Air water damage (all models)", price: "Free diagnosis" },
-  { model: "MacBook Pro water damage (all models)", price: "Free diagnosis" },
-  { model: "iMac water damage",                     price: "Free diagnosis" },
-];
-
 const FAQS = [
   {
     q: "What should I do immediately after spilling on my MacBook?",
@@ -371,31 +365,14 @@ export default function MacBookWaterDamage() {
                 Exact price after free diagnosis. We quote before starting any paid work.
               </p>
             </div>
-            <div className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-              <table className="w-full border-collapse text-left text-[14px] min-w-[400px]">
-                <thead>
-                  <tr className="border-b border-border text-accent">
-                    <th className="px-lg py-md font-semibold">Mac model</th>
-                    <th className="px-lg py-md font-semibold">Repair price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRICING_ROWS.map((r) => (
-                    <tr key={r.model} className="border-b border-border last:border-0">
-                      <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-                      <td className="px-lg py-sm font-semibold text-accent">{r.price}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <RepairPriceTable path="/macbook-water-damage-repair-dubai" variant="inline" />
             <p className="mt-md text-[13px] text-text-faint">
-              Exact price confirmed after free ultrasonic inspection and microscope diagnosis. No fix, no charge.
+              Diagnosis is free: ultrasonic inspection and microscope check before any paid work. No fix, no charge.
+              iMac liquid damage is quoted on WhatsApp after the same free diagnosis.
             </p>
           </div>
         </section>
 
-        <RepairPriceTable path="/macbook-water-damage-repair-dubai" title="How much does MacBook liquid damage repair cost here?" />
 
         {/* CTA */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-xl">
