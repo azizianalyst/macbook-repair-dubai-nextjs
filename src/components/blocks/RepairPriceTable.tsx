@@ -3,7 +3,8 @@
 // Offer schema is added server-side by page-schema.ts from the same rows.
 import { Receipt } from "lucide-react";
 import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
-import { PRICE_WINDOW, typicalPrice, repairPricesForPath } from "@/content/repair-prices";
+import { PRICE_WINDOW, priceForModelLabel, typicalPrice, repairPricesForPath } from "@/content/repair-prices";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -12,13 +13,35 @@ type Props = {
   /** Hide the Repair column when every row is the same repair (model pages). */
   showRepair?: boolean;
   className?: string;
+  /** "inline": just the table and its source line, for use inside a page's own price section. */
+  variant?: "section" | "inline";
 };
+
+// A price cell in a page's own model table: the invoice price when this row matches exactly one
+// invoice row for the page, otherwise the fallback (the page's "Price on WhatsApp" link).
+export function InvoicePriceCell({ path, label, children }: { path: string; label: string; children: ReactNode }) {
+  const row = priceForModelLabel(path, label);
+  return row ? <span className="font-bold text-accent whitespace-nowrap">{typicalPrice(row)}</span> : <>{children}</>;
+}
+
+// One-line source note under any table that shows invoice prices (also used by templates that
+// put the price into their own rows via priceForModelLabel).
+export function InvoicePriceNote({ path, className }: { path: string; className?: string }) {
+  if (!repairPricesForPath(path).length) return null;
+  return (
+    <p className={cn("mt-md text-[13px] text-text-faint max-w-[72ch]", className)}>
+      Typical prices including 5% VAT, from what customers paid on our VAT invoices, {PRICE_WINDOW}.
+      Your final price is confirmed after the free diagnosis.
+    </p>
+  );
+}
 
 export function RepairPriceTable({
   path,
   title = "What did customers actually pay?",
   showRepair,
   className,
+  variant = "section",
 }: Props) {
   const rows = repairPricesForPath(path);
   if (!rows.length) return null;
@@ -27,25 +50,10 @@ export function RepairPriceTable({
   // Pages whose only rows cover any MacBook (board, liquid, trackpad) have no model number to show.
   const withNumbers = rows.some((r) => r.modelNumbers.length > 0);
 
-  return (
-    <section
-      id="invoice-prices"
-      aria-labelledby="invoice-prices-h"
-      className={cn("mx-auto max-w-content px-5 md:px-6 mt-[80px] scroll-mt-24", className)}
-    >
-      <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3 flex items-center gap-2">
-        <Receipt size={14} aria-hidden /> From our invoices
-      </p>
-      <h2 id="invoice-prices-h" className="text-[28px] md:text-[34px] font-bold tracking-tight text-text leading-[1.15]">
-        {title}
-      </h2>
-      <p className="mt-3 text-[16px] text-text-muted max-w-[70ch] leading-relaxed">
-        Typical price per model, including 5% VAT, taken from what customers paid on our VAT invoices from{" "}
-        {PRICE_WINDOW}. Your final price is confirmed after the free diagnosis.
-      </p>
-
+  const table = (
+    <>
       {/* Mobile: stacked cards so the price is never clipped off-screen. */}
-      <ul className="md:hidden mt-lg flex flex-col gap-sm">
+      <ul className="md:hidden flex flex-col gap-sm">
         {rows.map((r) => (
           <li key={r.id} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
             <p className="font-semibold text-text">{label(r)}</p>
@@ -57,7 +65,7 @@ export function RepairPriceTable({
           </li>
         ))}
       </ul>
-      <div className="hidden md:block mt-lg overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
+      <div className="hidden md:block overflow-x-auto rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
         <table className="w-full border-collapse text-left text-[15px]">
           <caption className="sr-only">
             Typical repair prices in AED including VAT, from MacBook Repair Dubai invoices, {PRICE_WINDOW}
@@ -84,10 +92,46 @@ export function RepairPriceTable({
           </tbody>
         </table>
       </div>
+    </>
+  );
+
+  if (variant === "inline") {
+    return (
+      <div id="invoice-prices" className={cn("scroll-mt-24", className)}>
+        {table}
+        <InvoicePriceNote path={path} />
+        {withNumbers && (
+          <p className="mt-xs text-[13px] text-text-faint max-w-[72ch]">
+            The model number (A plus four digits) is on the bottom case. Not listed? Too few invoices for that
+            model, so it is quoted on WhatsApp.
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <section
+      id="invoice-prices"
+      aria-labelledby="invoice-prices-h"
+      className={cn("mx-auto max-w-content px-5 md:px-6 mt-[80px] scroll-mt-24", className)}
+    >
+      <p className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold mb-3 flex items-center gap-2">
+        <Receipt size={14} aria-hidden /> From our invoices
+      </p>
+      <h2 id="invoice-prices-h" className="text-[28px] md:text-[34px] font-bold tracking-tight text-text leading-[1.15]">
+        {title}
+      </h2>
+      <p className="mt-3 text-[16px] text-text-muted max-w-[70ch] leading-relaxed">
+        Typical price per model, including 5% VAT, taken from what customers paid on our VAT invoices from{" "}
+        {PRICE_WINDOW}. Your final price is confirmed after the free diagnosis.
+      </p>
+
+      <div className="mt-lg">{table}</div>
       {withNumbers && <p className="mt-md text-[13px] text-text-faint max-w-[72ch]">
         The model number (A plus four digits) is printed in small text on the bottom case of your MacBook.
-        Not listed? We had fewer than five invoices for that model, too few for an honest range, so it is
-        quoted on WhatsApp.
+        Not listed? We had fewer than five invoices for that model, too few for an honest typical price, so it
+        is quoted on WhatsApp.
       </p>}
       <div className="mt-lg">
         <WhatsAppCTA message="Hi, I'd like the exact price for my repair. Model and fault: " label="Get my exact price on WhatsApp" />

@@ -24,9 +24,12 @@ import { REPAIR_PRICES, aed } from "@/content/repair-prices";
 // Edit prices in /admin/prices, then rebuild to apply.
 
 type Row = PriceRow;
+const INVOICE_PRICED = /screen|battery|trackpad|logic board|liquid|water/i;
 
 const ALL_TABLES: { id: string; title: string; subtitle: string; rows: Row[] }[] = [
-  { id: "macbook", title: "MacBook pricing", subtitle: "Air, Pro 13\", 14\", 15\", 16\" - Intel through M5.", rows: PRICE_ROWS_BY_GROUP.macbook ?? [] },
+  // Screen, battery, trackpad, logic board and liquid damage have real invoice prices in the table
+  // above (D17), so they are not repeated here as "Price on WhatsApp" rows.
+  { id: "macbook", title: "Other MacBook repairs", subtitle: "Keyboard, ports, data, upgrades and more - Intel through M5. Screen, battery, trackpad, logic board and liquid damage prices are in the table above.", rows: (PRICE_ROWS_BY_GROUP.macbook ?? []).filter((r) => !INVOICE_PRICED.test(r.service)) },
   { id: "imac",    title: "iMac pricing", subtitle: "21.5\", 24\", 27\" - including Retina 5K.", rows: PRICE_ROWS_BY_GROUP.imac ?? [] },
   { id: "mac-desktop", title: "Mac mini, Studio & Pro pricing", subtitle: "All desktop Macs from 2014 onward.", rows: PRICE_ROWS_BY_GROUP["mac-desktop"] ?? [] },
   { id: "iphone",  title: "iPhone pricing", subtitle: "iPhone 8 through iPhone 16 Pro Max.", rows: PRICE_ROWS_BY_GROUP.iphone ?? [] },

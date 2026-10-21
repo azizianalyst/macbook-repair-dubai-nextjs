@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { warrantyClause, warrantyDaysForService, warrantyLabel } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";
 import { cn } from "@/lib/utils";
+import { aed, repairPricesForPath, typicalPrice } from "@/content/repair-prices";
 
 export interface QuickAnswerProps {
   question: string;
@@ -89,6 +90,8 @@ export function deriveServiceQuickAnswer(opts: {
   warrantyDays?: number;
   /** Pre-rendered warranty wording; multi-tier hubs pass WARRANTY.headlineLong. */
   warrantyText?: string;
+  /** Page path: when it has invoice prices (D17), the answer states them instead of "message us". */
+  pricePath?: string;
 }): { question: string; answer: string } {
   const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
   const name = withoutTrailingCity(opts.serviceName);
@@ -96,6 +99,17 @@ export function deriveServiceQuickAnswer(opts: {
   const close = warranty
     ? `Parts and labour carry ${warranty}. Walk in to our Media City workshop.`
     : `Walk in to our Media City workshop, with a written quote before any work.`;
+  const rows = opts.pricePath ? repairPricesForPath(opts.pricePath) : [];
+  if (rows.length) {
+    const lo = rows.reduce((a, b) => (b.median < a.median ? b : a));
+    const hi = rows.reduce((a, b) => (b.median > a.median ? b : a));
+    const price = rows.length === 1
+      ? `typically costs ${typicalPrice(rows[0])}`
+      : `typically costs AED ${aed(lo.median)} to AED ${aed(hi.median)} depending on the model`;
+    const priced = `${name} at our Media City workshop ${price}, including 5% VAT, based on our own invoices. Final price after a free diagnosis. Typical turnaround: ${opts.timeline}. ${close}`;
+    const short = `${name} at our Media City workshop ${price}, including 5% VAT, based on our own invoices. Final price after a free diagnosis. Typical turnaround: ${opts.timeline}.`;
+    return { question: `How much does ${name} in Dubai cost?`, answer: wordCount(priced) > 60 ? short : priced };
+  }
   const answer =
     (opts.startingPrice > 0
       ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `

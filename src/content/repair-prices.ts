@@ -74,3 +74,26 @@ export const typicalPrice = (r: RepairPriceRow) => `AED ${aed(r.median)}`;
 const fmtDate = (iso: string) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 export const PRICE_WINDOW = `${fmtDate(REPAIR_PRICES.window.from)} to ${fmtDate(REPAIR_PRICES.window.to)}`;
+
+// Match an existing table row label ('MacBook Air 13" M1 (2020–2023)', "MacBook Pro 16-inch M3 Max")
+// to this page's one invoice row, so the price goes into that row instead of a second table.
+// Size must agree, and chips must overlap when both name one; anything ambiguous returns undefined.
+const sizeOf = (label: string) => label.match(/(\d{2})(?:-inch|"|″)/)?.[1] ?? (/\bAir\b/.test(label) ? "13" : undefined);
+function chipsOf(label: string): Set<string> {
+  if (/intel/i.test(label)) return new Set(["intel"]);
+  const nums = [...label.matchAll(/\bM(\d)\b/g)].map((m) => Number(m[1]));
+  const range = label.match(/\bM(\d)\b[^,)]*?\bto M(\d)\b/);
+  if (range) for (let n = Number(range[1]); n <= Number(range[2]); n++) nums.push(n);
+  return new Set(nums.map((n) => `M${n}`));
+}
+export function priceForModelLabel(path: string, label: string): RepairPriceRow | undefined {
+  const size = sizeOf(label);
+  const chips = chipsOf(label);
+  const hits = repairPricesForPath(path).filter((r) => {
+    if (!r.modelNumbers.length) return false;
+    if (size && sizeOf(r.model) !== size) return false;
+    const rc = chipsOf(r.model);
+    return !chips.size || !rc.size || [...chips].some((c) => rc.has(c));
+  });
+  return hits.length === 1 ? hits[0] : undefined;
+}
