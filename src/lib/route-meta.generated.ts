@@ -738,7 +738,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-pro-m5-external-monitor-not-working-dubai": {
     "title": "MacBook Pro M5 External Monitor Not Working Dubai? Fix Guide 2026",
-    "description": "MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, fullscreen goes black. Step-by-step fixes for all M5 display connection issues."
+    "description": "MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, kernel panic on plug-in, fullscreen black. Fixes for every M5 display issue."
   },
   "/blog/macbook-pro-m5-fan-noise-dubai": {
     "title": "MacBook Pro M5 Fan Noise Dubai 2026: Crackling, Clicking, Grinding Fix",

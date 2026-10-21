@@ -29,19 +29,19 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "Trackpad replacement",
       "price": 350,
       "timeline": "Same day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "USB-C / Thunderbolt port repair",
       "price": 350,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Touch Bar replacement (2016-2019)",
       "price": 600,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Logic board repair (component-level)",
@@ -65,43 +65,43 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "SSD / NVMe upgrade (labour, + drive cost)",
       "price": 600,
       "timeline": "Same day",
-      "warranty": "12 months + part warranty"
+      "warranty": "2 years + part warranty"
     },
     {
       "service": "RAM upgrade (Intel models only)",
       "price": 400,
       "timeline": "Same day",
-      "warranty": "12 months + part warranty"
+      "warranty": "2 years + part warranty"
     },
     {
       "service": "Overheating / thermal repaste & clean",
       "price": 300,
       "timeline": "Same day · 2 hours",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Hinge repair",
       "price": 300,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Speaker replacement",
       "price": 400,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "FaceTime camera replacement",
       "price": 200,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "migrating data from old macbook to new macbook without icloud",
       "price": 250,
       "timeline": "Same day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     }
   ],
   "imac": [
@@ -109,7 +109,7 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "iMac 21.5\" / 24\" / 27\" screen replacement",
       "price": 800,
       "timeline": "2-4 days",
-      "warranty": "15 days - 3 months"
+      "warranty": "15 days - 2 years (by screen grade)"
     },
     {
       "service": "Logic board repair",
@@ -121,19 +121,19 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "SSD upgrade (Fusion → SSD)",
       "price": 700,
       "timeline": "1-2 days",
-      "warranty": "12 months + part warranty"
+      "warranty": "2 years + part warranty"
     },
     {
       "service": "Power supply replacement",
       "price": 400,
       "timeline": "1-2 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Fan / overheating repair",
       "price": 250,
       "timeline": "Same day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "macOS install / clean reinstall",
@@ -153,25 +153,25 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "Mac mini SSD upgrade",
       "price": 910,
       "timeline": "Same day",
-      "warranty": "12 months + part warranty"
+      "warranty": "2 years + part warranty"
     },
     {
       "service": "Mac Studio diagnostics & repair",
       "price": 1040,
       "timeline": "2-5 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Mac Pro power supply replacement",
       "price": 1560,
       "timeline": "3-5 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "Mac Pro GPU module repair",
       "price": 1200,
       "timeline": "3-5 days",
-      "warranty": "12 months"
+      "warranty": "2 years"
     }
   ],
   "iphone": [
@@ -179,13 +179,13 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "iPhone screen replacement (6 → 14)",
       "price": 179,
       "timeline": "40 minutes",
-      "warranty": "15 days - 3 months"
+      "warranty": "15 days - 2 years (by screen grade)"
     },
     {
       "service": "iPhone screen replacement (15 / 15 Pro)",
       "price": 1040,
       "timeline": "Same day",
-      "warranty": "15 days - 3 months"
+      "warranty": "15 days - 2 years (by screen grade)"
     },
     {
       "service": "iPhone battery replacement",
@@ -197,13 +197,13 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "iPhone back glass replacement",
       "price": 350,
       "timeline": "1 day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "iPhone charging port repair",
       "price": 149,
       "timeline": "Same day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     },
     {
       "service": "iPhone water damage recovery",
@@ -217,7 +217,7 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "iPad screen / digitiser (mini / Air / 9-10)",
       "price": 139,
       "timeline": "1 day",
-      "warranty": "15 days - 3 months"
+      "warranty": "15 days - 2 years (by screen grade)"
     },
     {
       "service": "iPad Pro 11\" screen + LCD",
@@ -241,7 +241,7 @@ export const PRICE_ROWS_BY_GROUP: Record<string, PriceRow[]> = {
       "service": "iPad charging port repair",
       "price": 300,
       "timeline": "Same day",
-      "warranty": "12 months"
+      "warranty": "2 years"
     }
   ]
 };

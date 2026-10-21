@@ -9,7 +9,7 @@ export const CATEGORIES: BlogCategory[] = [
     "name": "Repair Costs",
     "eyebrow": "Repair costs · 2026",
     "blurb": "What every Apple repair actually costs in Dubai - real AED prices.",
-    "intro": "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - what actually drives the cost of each repair, how it compares with an Apple Store quote, and what to check before you book. Every guide reflects what our Dubai Media City workshop sees day to day, backed by a warranty of up to 12 months and our no-fix-no-charge promise. Free diagnosis first, then a fixed quote before any work starts.",
+    "intro": "Honest, technician-written repair cost guides for every Apple device in Dubai. Screen, battery, water damage, logic board and back glass - what actually drives the cost of each repair, how it compares with an Apple Store quote, and what to check before you book. Every guide reflects what our Dubai Media City workshop sees day to day, backed by a warranty of 15 days to 2 years and our no-fix-no-charge promise. Free diagnosis first, then a fixed quote before any work starts.",
     "types": [
       "Cost guide",
       "Cost comparison",
@@ -78,7 +78,7 @@ export const CATEGORIES: BlogCategory[] = [
     "name": "How We Work",
     "eyebrow": "Trust & transparency",
     "blurb": "Our pricing, warranty, parts policy and what makes us different.",
-    "intro": "Repairing Apple devices in Dubai since 2004, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our warranty of up to 12 months, the difference between genuine and quality-alternative parts, and how to reach us: walk in, send it with your own courier, or book a paid onsite visit when a technician is free. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
+    "intro": "Repairing Apple devices in Dubai since 2004, and we put it all in writing. These guides explain exactly how we work - how we calculate quotes, what no-fix-no-charge really means, our warranty of 15 days to 2 years, the difference between genuine and quality-alternative parts, and how to reach us: walk in, send it with your own courier, or book a paid onsite visit when a technician is free. Plus honest advice on choosing any repair shop, including the red flags to refuse. Transparency is the whole point.",
     "types": [
       "Trust",
       "Honest guide",
