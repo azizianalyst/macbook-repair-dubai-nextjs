@@ -18,7 +18,9 @@
       "min": 1011,
       "max": 1191,
       "median": 1129,
-      "invoices": 40
+      "invoices": 40,
+      "partMedian": 881,
+      "partInvoices": 15
     },
     {
       "id": "screen-a2681",
@@ -30,7 +32,9 @@
       "min": 949,
       "max": 1305,
       "median": 999,
-      "invoices": 18
+      "invoices": 18,
+      "partMedian": 908,
+      "partInvoices": 12
     },
     {
       "id": "screen-a3113",
@@ -66,7 +70,9 @@
       "min": 1099,
       "max": 1240,
       "median": 1190,
-      "invoices": 30
+      "invoices": 30,
+      "partMedian": 934,
+      "partInvoices": 5
     },
     {
       "id": "screen-a2442",
@@ -142,7 +148,9 @@
       "min": 811,
       "max": 1073,
       "median": 980,
-      "invoices": 14
+      "invoices": 14,
+      "partMedian": 819,
+      "partInvoices": 10
     },
     {
       "id": "screen-pro14-other",

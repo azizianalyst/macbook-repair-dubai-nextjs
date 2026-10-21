@@ -49,7 +49,8 @@ function isAllowedFigure(text, idx, len) {
 //    Allowed ONLY as "AED <n>" where n is a published row's median, only in the visible body and
 //    hydration payload, never in titles or meta. Any other figure of ours still fails.
 const APPROVED = JSON.parse(readFileSync(join(ROOT, "src/content/repair-prices.json"), "utf8")).rows;
-const MEDIANS = new Set(APPROVED.map((r) => r.median));
+// Typical fitted prices, plus the screen part-only price where the data has one.
+const MEDIANS = new Set(APPROVED.flatMap((r) => (r.partMedian ? [r.median, r.partMedian] : [r.median])));
 const num = (t) => Number(t.replace(/,/g, ""));
 const PRICE_AT = /^AED\s*([\d,]+)(?![\d,]*\s*[–-]\s*\d)/;
 function isApprovedPrice(text, idx) {

@@ -40,12 +40,23 @@ FAMILIES = [  # rows kept at family level (no single model reaches MIN_N); from 
 
 L, keep, _ = load_keep(sys.argv[1])
 taxed = [r for r in keep if r["taxed"] and r["fam"].startswith("MacBook")]
+# Part-only sales (untaxed trade invoices). Owner, 2026-10-21: anyone can buy the part alone at
+# this price, so screen rows may show "part + fitting = total" when 5+ part-only invoices exist.
+parts = [r for r in keep if not r["taxed"] and r["fam"].startswith("MacBook") and r["type"] == SCREEN]
 def anums(r):
     a = sorted(set(re.findall(r"A\d{4}", r["model"])))
     # a screen part named for exactly one laptop model identifies it; battery part numbers don't
     if not a and r["type"] == SCREEN:
         a = sorted(set(re.findall(r"A\d{4}", r["product"])))
     return a
+def part_fields(lines_filter):
+    v = sorted(r["paid"] for r in parts if lines_filter(r))
+    if len(v) < MIN_N:
+        return {}
+    # Trade invoices carry no VAT; a walk-in customer buying the part pays 5% VAT, and every
+    # price on the site includes VAT, so the part price is shown with VAT added.
+    return {"partMedian": round(st.median(v) * 1.05), "partInvoices": len(v)}
+
 def row(rid, repair, label, lines, numbers):
     v = sorted(r["paid"] for r in lines)
     if len(v) < MIN_N:
@@ -57,12 +68,18 @@ def row(rid, repair, label, lines, numbers):
 rows, split = [], set()
 for rid, rep, a, name in MODELS:
     lines = [r for r in taxed if r["type"] == rep and anums(r) == [a]]
-    split.add((rep, a)); rows.append(row(rid, rep, name, lines, [a]))
+    split.add((rep, a)); r = row(rid, rep, name, lines, [a])
+    if r and rep == SCREEN:
+        r.update(part_fields(lambda x, a=a: anums(x) == [a]))
+    rows.append(r)
 for rid, rep, fam, label in REMAINDERS:
     lines = [r for r in taxed if r["type"] == rep and r["fam"] == fam and anums(r)
              and not any((rep, x) in split for x in anums(r))]
     nums = sorted({x for r in lines for x in anums(r)})
-    rows.append(row(rid, rep, label, lines, nums))
+    r = row(rid, rep, label, lines, nums)
+    if r and rep == SCREEN:
+        r.update(part_fields(lambda x, fam=fam: x["fam"] == fam and anums(x) and not any((SCREEN, y) in split for y in anums(x))))
+    rows.append(r)
 for rid, rep, fam, label in FAMILIES:
     lines = [r for r in taxed if r["type"] == rep and (fam is None or r["fam"] == fam)]
     rows.append(row(rid, rep, label, lines, sorted({x for r in lines for x in anums(r)}) if fam else []))
@@ -74,4 +91,5 @@ out = {"source": "docs/prices-from-pos-2026-10-19.md", "decision": "D17", "appro
 with open(sys.argv[2], "w") as f:
     json.dump(out, f, indent=2, ensure_ascii=False); f.write("\n")
 for r in rows:
-    print(f'{r["id"]:26} {r["min"]:>5}-{r["max"]:<5} n={r["invoices"]:<3} {",".join(r["modelNumbers"])[:60]}')
+    part = f'part {r["partMedian"]} (n={r["partInvoices"]}) fitting {r["median"] - r["partMedian"]}' if "partMedian" in r else ""
+    print(f'{r["id"]:26} total {r["median"]:>5} n={r["invoices"]:<3} {part}')

@@ -3,7 +3,7 @@
 // Offer schema is added server-side by page-schema.ts from the same rows.
 import { Receipt } from "lucide-react";
 import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
-import { PRICE_WINDOW, priceForModelLabel, typicalPrice, repairPricesForPath } from "@/content/repair-prices";
+import { PRICE_TERMS, PRICE_WINDOW, partBreakdown, priceForModelLabel, typicalPrice, repairPricesForPath, type RepairPriceRow } from "@/content/repair-prices";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -21,17 +21,30 @@ type Props = {
 // invoice row for the page, otherwise the fallback (the page's "Price on WhatsApp" link).
 export function InvoicePriceCell({ path, label, children }: { path: string; label: string; children: ReactNode }) {
   const row = priceForModelLabel(path, label);
-  return row ? <span className="font-bold text-accent whitespace-nowrap">{typicalPrice(row)}</span> : <>{children}</>;
+  return row ? <PriceWithParts row={row} /> : <>{children}</>;
+}
+
+// The typical fitted price, with "Part only AED x" underneath when the part sells on its own.
+function PriceWithParts({ row }: { row: RepairPriceRow }) {
+  const parts = partBreakdown(row);
+  return (
+    <span className="inline-flex flex-col">
+      <span className="font-bold text-accent whitespace-nowrap">{typicalPrice(row)}{parts ? " fitted" : ""}</span>
+      {parts && <span className="text-[12px] font-normal text-text-muted whitespace-nowrap">{parts}</span>}
+    </span>
+  );
 }
 
 // One-line source note under any table that shows invoice prices (also used by templates that
 // put the price into their own rows via priceForModelLabel).
 export function InvoicePriceNote({ path, className }: { path: string; className?: string }) {
-  if (!repairPricesForPath(path).length) return null;
+  const rows = repairPricesForPath(path);
+  if (!rows.length) return null;
   return (
     <p className={cn("mt-md text-[13px] text-text-faint max-w-[72ch]", className)}>
       Typical prices including 5% VAT, from what customers paid on our VAT invoices, {PRICE_WINDOW}.
-      Your final price is confirmed after the free diagnosis.
+      {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of the screen sold on its own, without fitting, VAT added."}
+      {" "}Your final price is confirmed after the free diagnosis. {PRICE_TERMS}
     </p>
   );
 }
@@ -60,7 +73,7 @@ export function RepairPriceTable({
             {r.modelNumbers.length > 0 && (
               <p className="text-[13px] text-text-muted">Model number: <span className="mono">{r.modelNumbers.join(", ")}</span></p>
             )}
-            <p className="mt-xs text-[18px] font-bold text-accent whitespace-nowrap">{typicalPrice(r)}</p>
+            <p className="mt-xs text-[18px]"><PriceWithParts row={r} /></p>
             <p className="mt-xs text-[13px] text-text-muted">Based on {r.invoices} invoices</p>
           </li>
         ))}
@@ -85,7 +98,7 @@ export function RepairPriceTable({
                 {withRepair && <td className="px-lg py-sm text-text">{r.repair}</td>}
                 <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                 {withNumbers && <td className="px-lg py-sm mono text-[13px] text-text-muted">{r.modelNumbers.length ? r.modelNumbers.join(", ") : "Any"}</td>}
-                <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">{typicalPrice(r)}</td>
+                <td className="px-lg py-sm"><PriceWithParts row={r} /></td>
                 <td className="px-lg py-sm text-text-muted">{r.invoices}</td>
               </tr>
             ))}
@@ -124,7 +137,9 @@ export function RepairPriceTable({
       </h2>
       <p className="mt-3 text-[16px] text-text-muted max-w-[70ch] leading-relaxed">
         Typical price per model, including 5% VAT, taken from what customers paid on our VAT invoices from{" "}
-        {PRICE_WINDOW}. Your final price is confirmed after the free diagnosis.
+        {PRICE_WINDOW}.
+        {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of the screen sold on its own, without fitting."}
+        {" "}Your final price is confirmed after the free diagnosis. {PRICE_TERMS}
       </p>
 
       <div className="mt-lg">{table}</div>

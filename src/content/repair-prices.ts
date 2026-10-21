@@ -16,6 +16,9 @@ export type RepairPriceRow = {
   max: number;
   median: number;
   invoices: number;
+  /** Screens only: median part-only sale (anyone can buy the part alone; owner 2026-10-21). */
+  partMedian?: number;
+  partInvoices?: number;
 };
 
 export const REPAIR_PRICES = data as {
@@ -69,10 +72,18 @@ export const pricedPaths = (): string[] => Object.keys(PAGE_ROWS);
 export const aed = (n: number) => n.toLocaleString("en-US");
 // "AED 1,129": the only way an invoice price is written on the site.
 export const typicalPrice = (r: RepairPriceRow) => `AED ${aed(r.median)}`;
+// "Part only AED 881": the typical part-only price, VAT added. No fitting figure is derived by
+// subtraction: the two medians come from different jobs, so their gap is not a real labour price.
+export const partBreakdown = (r: RepairPriceRow) =>
+  r.partMedian ? `Part only AED ${aed(r.partMedian)}` : undefined;
 
 // "13 Sep 2025 to 12 Sep 2026"
 const fmtDate = (iso: string) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+// How a quoted price is built (owner, 2026-10-21). One figure covers everything; cash is 2.5% off.
+export const PRICE_TERMS =
+  "Every price we quote is all-in: the part, fitting, 5% VAT and card fees, plus any onsite visit or return courier you book. Pay in cash and get 2.5% off the quoted price.";
+
 export const PRICE_WINDOW = `${fmtDate(REPAIR_PRICES.window.from)} to ${fmtDate(REPAIR_PRICES.window.to)}`;
 
 // Match an existing table row label ('MacBook Air 13" M1 (2020–2023)', "MacBook Pro 16-inch M3 Max")

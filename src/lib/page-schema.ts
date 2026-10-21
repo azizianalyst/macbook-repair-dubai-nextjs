@@ -93,7 +93,7 @@ const SERVICE_RE = /(repair|replacement|replace|recovery|diagnostic|removal|clea
 // Invoice-based price ranges (owner decision D17): an Offer per row the page VISIBLY renders via
 // <RepairPriceTable path=...>. Both read repairPricesForPath(), so schema and page can't drift.
 function invoicePriceOffers(path: string, url: string) {
-  return repairPricesForPath(path).map((r) => ({
+  return repairPricesForPath(path).flatMap((r) => [{
     "@type": "Offer",
     name: `${r.repair}, ${r.model}`,
     url: `${url}#invoice-prices`,
@@ -107,7 +107,23 @@ function invoicePriceOffers(path: string, url: string) {
       valueAddedTaxIncluded: true,
       description: `Typical price from ${r.invoices} VAT invoices. Final price after free diagnosis.`,
     },
-  }));
+  },
+  // The part alone is sold to anyone at this price (owner, 2026-10-21), and the page shows it.
+  ...(r.partMedian ? [{
+    "@type": "Offer",
+    name: `${r.repair} part only (no fitting), ${r.model}`,
+    url: `${url}#invoice-prices`,
+    price: r.partMedian,
+    priceCurrency: "AED",
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      price: r.partMedian,
+      priceCurrency: "AED",
+      valueAddedTaxIncluded: true,
+      description: `Typical part-only price from ${r.partInvoices} invoices, VAT added.`,
+    },
+  }] : [])]);
 }
 
 export function schemaForPath(path: string): unknown[] {
