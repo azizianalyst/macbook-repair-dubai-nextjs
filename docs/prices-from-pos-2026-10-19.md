@@ -278,3 +278,52 @@ Not done: setting prices 'below competitors'. There is no competitor price data 
 | MacBook Air (13-inch, M2, 2022) | 999 | 908 | 12 |
 | MacBook Pro (13-inch, M1, 2020) and (13-inch, M2, 2022) | 1,190 | 934 | 5 |
 | Other MacBook Pro 13-inch Intel (2016 to 2020) | 980 | 819 | 10 |
+
+## Update 2026-10-21: part grades on the invoices, and where the site can cause client conflict
+
+How the grade was read: from each invoice line's note and product name, classified inside `scripts/pos/extract.py`
+(only the class is kept; note text is never saved). Phrases counted from a fixed list of repair words, so no
+names can appear. Most common wording on invoices (2 years, all lines): "brand new" 60, "pullout original" 28,
+"new battery" 16, "new OEM" 15, "original used" / "used original" 17, "apple original" 11. "Refurbished",
+"A/B grade" and "copy" almost never appear.
+
+Last 12 months, MacBook screen and battery lines:
+
+| | Grade not stated | Original pull-out (used) | "Original" | OEM | "Brand new" (grade not stated) |
+|---|---|---|---|---|---|
+| Screens, VAT invoices | 132 | 25 | 6 | 4 | 4 |
+| Screens, part-only invoices | 64 | 4 | 0 | 1 | 1 |
+| Batteries, VAT invoices | 50 | 2 | 0 | 1 | 6 |
+
+Where the grade is stated, original pull-outs cost more than the unstated majority (VAT invoices, medians):
+Pro 13" M1/M2 A2338 1,700 vs 1,180 (n 3 vs 27); Air M2 A2681 1,232 vs 997 (n 2 vs 15); Pro 14" A2442 2,445 vs 2,100
+(n 2 vs 9); Air M1 A2337 1,150 vs 1,123 (n 5 vs 31). Too few per model (2-5) to publish a price per grade.
+
+Conclusion: the published "typical" prices are mostly the unstated (standard) grade mixed with some pull-outs.
+A price per grade needs the grade written on every invoice line from now on.
+
+Site wording that contradicts itself (client-conflict risk, needs one owner decision):
+- `/warranty/`: screens 15 days (aftermarket) to 3 months (genuine).
+- `/macbook-pro-screen-repair-dubai/`: every panel, genuine or A-grade aftermarket, 90 days.
+- `/terms/`: aftermarket parts carry the same warranty of up to 12 months as genuine.
+- Fact sheet: screens 90 days (no grade split).
+- Grade names vary across ~43 pages ("A-grade aftermarket", "OEM-spec", "Tier 3 aftermarket", "genuine pull-out"),
+  while invoices say "brand new", "new OEM", "pullout original", "apple original".
+
+## Competitor check, 2026-10-21 (pages read by a research agent; prices as written on their sites)
+
+| Competitor | Air M1 (A2337) screen | Battery | Grade wording | VAT |
+|---|---|---|---|---|
+| ITtech4all | AED 768 (+ AED 150 labour?) | – | "Original Mac Screens" | not stated |
+| MacTech Pro | AED 850 (another page: A2338 1,050–1,150 vs 950 on list) | A2337 AED 330–440 | "original Apple panel" / "genuine-grade OEM" | not stated |
+| MacBook Repairs Dubai | AED 899 | – | "high-quality parts" | not stated |
+| RepairZone | AED 1,100 "on average" | – | "high quality OEM" | not stated |
+| My Celcare | AED 1,470 | – | "genuine-quality", "OEM" | "+ VAT" in a popup |
+| Fixerman | "From AED 349" | "From AED 249" | "original-grade", "OEM Grade" | not stated |
+| Celmetro | – | "from 450 AED" | "OEM battery" (90-day warranty) | **includes VAT** |
+| Apple Mac Solutions | – | Air M1 400, Pro 13 M1 540 | "genuine Apple parts" | not stated |
+| **Us (VAT invoices)** | **AED 1,129 fitted, part only AED 881, incl. VAT** | Pro 13" A1989 AED 451 | to be fixed (see above) | **incl. VAT** |
+
+Takeaways: the same A2337 screen is listed at AED 768-1,470; most competitors don't say whether VAT is included, so our VAT-inclusive
+figure is ~5% higher on paper; nobody publishes a price per grade or defines grades; several contradict themselves across pages
+(price and warranty); "from AED 99/249/349" headlines don't match real jobs. Sources: see the session report.
