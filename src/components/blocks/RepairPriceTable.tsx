@@ -5,6 +5,7 @@ import { Receipt } from "lucide-react";
 import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
 import { PRICE_TERMS, PRICE_WINDOW, partBreakdown, priceForModelLabel, typicalPrice, repairPricesForPath, type RepairPriceRow } from "@/content/repair-prices";
 import type { ReactNode } from "react";
+import { STANDARD_SCREEN } from "@/content/part-grades";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -43,7 +44,8 @@ export function InvoicePriceNote({ path, className }: { path: string; className?
   return (
     <p className={cn("mt-md text-[13px] text-text-faint max-w-[72ch]", className)}>
       Typical prices including 5% VAT, from what customers paid on our VAT invoices, {PRICE_WINDOW}.
-      {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of the screen sold on its own, without fitting, VAT added."}
+      {rows.some((r) => r.repair === "Screen replacement") && ` Screen prices are for our standard screen, an ${STANDARD_SCREEN.name.toLowerCase()} panel, with a warranty of ${STANDARD_SCREEN.warranty}; other grades are quoted on WhatsApp.`}
+      {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of that screen sold on its own, without fitting, VAT added."}
       {" "}Your final price is confirmed after the free diagnosis. {PRICE_TERMS}
     </p>
   );
@@ -138,7 +140,8 @@ export function RepairPriceTable({
       <p className="mt-3 text-[16px] text-text-muted max-w-[70ch] leading-relaxed">
         Typical price per model, including 5% VAT, taken from what customers paid on our VAT invoices from{" "}
         {PRICE_WINDOW}.
-        {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of the screen sold on its own, without fitting."}
+        {rows.some((r) => r.repair === "Screen replacement") && ` Screen prices are for our standard screen, an ${STANDARD_SCREEN.name.toLowerCase()} panel, with a warranty of ${STANDARD_SCREEN.warranty}; other grades are quoted on WhatsApp.`}
+        {rows.some((r) => r.partMedian) && " \"Part only\" is the typical price of that screen sold on its own, without fitting."}
         {" "}Your final price is confirmed after the free diagnosis. {PRICE_TERMS}
       </p>
 
