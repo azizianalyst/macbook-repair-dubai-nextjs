@@ -28,6 +28,22 @@ export default function IMacDataRecovery() {
           <p className="text-[16px] text-text-muted leading-relaxed">
             iMac data recovery splits into three very different jobs. Older Fusion Drives need both halves understood - the SSD cache holds the file map, the spinning HDD holds the actual data. SATA SSDs from 2017 fail silently. 2018-and-later iMacs use the T2 chip to encrypt the SSD against the logic board's unique key - recovery from a dead T2 board is much harder and we will tell you up front whether it is possible. Honest assessment first, then a written quote.
           </p>
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">What if one half of the Fusion Drive is dead and the other is failing?</h2>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            This is the hardest Fusion Drive case and the one we see most on the 2017 27-inch iMac. A typical picture: the SSD half no longer answers at all (a Linux boot sees the controller but reports the device as not ready), and the 2TB hard drive is still detected but SMART shows hundreds of pending sectors and a list of uncorrectable errors. The owner has no backup and asks whether anything is left.
+          </p>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            Usually, yes, but only if nothing else is done to the drives first. Fusion Drive is one APFS container spread over two devices: the SSD carries the hot data and part of the file map, the HDD carries the bulk. With the SSD gone, the map has holes; with the HDD shedding sectors, every read makes more holes. What we do on the bench:
+          </p>
+          <ul className="space-y-2 text-[15px] text-text-muted mb-md">
+            <li>• <strong className="text-text">No First Aid, no resetFusion, no reinstall.</strong> Each of those writes to the container. Disk Utility&apos;s First Aid on a failing HDD can push pending sectors over the edge, and resetFusion erases both members.</li>
+            <li>• <strong className="text-text">Image the HDD first, worst sectors last.</strong> The drive goes on a hardware imager that reads the healthy areas first, skips the bad ones and comes back for them with short timeouts. A failing drive gets a limited number of reads before the heads give up, so the order matters.</li>
+            <li>• <strong className="text-text">Then the SSD.</strong> A blade SSD that is &quot;not ready&quot; is sometimes a power or firmware state, not dead NAND. We try it on a separate bench adapter. If it never comes up, we work from the HDD image alone and recover what was stored there, which on most Fusion Drives is the large majority of files.</li>
+            <li>• <strong className="text-text">Rebuild the container on the clones</strong>, never on the originals, and hand the originals back to you untouched.</li>
+          </ul>
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            If a shop offers to &quot;try a repair&quot; on the original drives before imaging them, walk out. The free assessment tells you which case you have before any charge.
+          </p>
         </>
       }
       whatWeFix={[
@@ -56,6 +72,7 @@ export default function IMacDataRecovery() {
         { q: "Do you keep a copy of my data?", a: "No. Recovery is delivered to your drive, our working clone is wiped in front of you. Privacy is non-negotiable for personal photos and business data." },
         { q: "How much does it cost?", a: "It depends on the type of failure - straightforward logical recovery on a healthy-but-corrupt drive costs a lot less than physical clean-room work, which varies with the damage. Message us on WhatsApp with your iMac model and what happened and we'll quote in writing before starting." },
         { q: "Can you recover from a 2018+ iMac with a dead logic board?", a: "Sometimes - depends on whether the T2 chip itself survived. We test for free. If the T2 is dead, recovery is generally impossible because the encryption key dies with it. We won't take your money for impossible work." },
+        { q: "My 2017 iMac Fusion Drive SSD is not detected and the hard drive shows SMART errors. Can the data be recovered?", a: "Often, yes, if the drives are not written to again. Stop running First Aid, resetFusion or any reinstall. We image the hard drive on a hardware imager that reads the good sectors first and retries the bad ones gently, then test the SSD on a separate adapter. If the SSD never comes back we rebuild from the hard-drive image alone, which holds most of the files on a Fusion Drive. Both originals are preserved and returned untouched." },
         { q: "Should I keep trying to start the iMac at home?", a: "No. Every boot risks more damage. Power it down, bring it in untouched. The first attempt has the highest success rate." },
       ]}
       reviewNames={["Ali Hassan", "Marianne Chehade El Dfouni", "Binod Shrestha"]}
