@@ -27,7 +27,7 @@ export default function BlogMacBookAirM5Problems() {
       quickAnswer="Most common MacBook Air M5 problems in Dubai: battery draining faster than rated 30 hours (screen brightness + background apps), thermal throttling under sustained load in 35-40C ambient (fanless, no headroom), WiFi dropping after sleep (macOS Tahoe/Sequoia driver issue), USB-C port not charging (wrong wattage adapter or dirty port), and screen brightness inconsistency. Most are free software fixes. For hardware faults, message us on WhatsApp for today's exact price on your M5 Air."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-21"
       readingMinutes={9}
       featuredImageAlt="MacBook Air M5 common problems Dubai, technician diagnosing MacBook Air M5 at repair workshop"
       body={
@@ -265,6 +265,10 @@ export default function BlogMacBookAirM5Problems() {
         {
           q: "How long does MacBook Air M5 repair take in Dubai?",
           a: "Battery replacement: 45-60 minutes. Screen replacement: 60-90 minutes. USB-C port cleaning: 30 minutes. Port repair: 60-90 minutes. Logic board diagnosis: free, same day. Component-level board repair: 24-48 hours.",
+        },
+        {
+          q: "Why does the right palm rest on my MacBook Air M5 click or sound hollow?",
+          a: "Owners on Apple Community describe a click or rattle when the right palm-rest area is pressed or while typing, with no cosmetic damage. On several M5 Airs the cause was a bottom-case screw on that side that was not fully tightened at the factory; a quarter turn on the pentalobe screw stopped the noise. Apple Support told one owner it was not a fault. If your Air is still under warranty, have Apple tighten it; otherwise we check the bottom-case screws before anyone quotes a top-case replacement.",
         },
         {
           q: "Does MacBook Air M5 support dual external displays?",
