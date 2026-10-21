@@ -24,7 +24,7 @@ import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { PriceCTA } from "@/components/blocks/PriceCTA";
 import type { LucideIcon } from "lucide-react";
-import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { InvoicePriceCell, InvoicePriceNote } from "@/components/blocks/RepairPriceTable";
 
 const IMG = {
   hero: {
@@ -357,7 +357,7 @@ export default function MacBookAirBatteryReplacement() {
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                     <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
-                      <PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} />
+                      <InvoicePriceCell path="/macbook-air-battery-replacement-dubai" label={r.model}><PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} /></InvoicePriceCell>
                     </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
@@ -372,12 +372,12 @@ export default function MacBookAirBatteryReplacement() {
               </tbody>
             </table>
           </div>
+          <InvoicePriceNote path="/macbook-air-battery-replacement-dubai" />
           <p className="mt-md text-[13px] text-text-faint max-w-[72ch]">
             All prices include the cell, labour, BMS firmware re-pair (Apple Silicon models), and a post-replacement calibration cycle. No hidden fees.
           </p>
         </section>
 
-        <RepairPriceTable path="/macbook-air-battery-replacement-dubai" title="How much does a MacBook Air battery replacement cost here?" />
 
         {/* ── BATTERY SPECS ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>

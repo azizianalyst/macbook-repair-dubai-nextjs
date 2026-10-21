@@ -16,7 +16,6 @@ import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/Quick
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { FAQAccordion, type FAQ } from "@/components/blocks/FAQAccordion";
@@ -28,18 +27,6 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
-type PricingRow = { model: string; price: number; timeline: string };
-
-const PRICING: PricingRow[] = [
-  { model: "MacBook Air 11\" / 13\" (2010-2017)",  price: 450, timeline: "Same day · 2 hours" },
-  { model: "MacBook Air 13\" / 15\" M1/M2/M3",     price: 450, timeline: "Same day · 2 hours" },
-  { model: "MacBook Pro 13\" Retina (2012-2015)",  price: 500, timeline: "Same day · 2 hours" },
-  { model: "MacBook Pro 13\" Touch Bar (2016-22)", price: 500, timeline: "Same day · 2 hours" },
-  { model: "MacBook Pro 14\" M1/M2/M3/M4 Pro/Max", price: 600, timeline: "Same day · 2 hours" },
-  { model: "MacBook Pro 15\" Retina (2012-2019)",  price: 600, timeline: "Same day · 2 hours" },
-  { model: "MacBook Pro 16\" M1/M2/M3/M4 Pro/Max", price: 600, timeline: "Same day · 2 hours" },
-  { model: "MacBook 12\" Retina (2015-2017)",      price: 550, timeline: "Same day · 3 hours" },
-];
 
 const PROBLEMS = [
   { title: "\"Service Recommended\" warning in macOS",
@@ -211,7 +198,7 @@ export default function MacBookBatteryReplacement() {
         </section>
 
         {/* Quick Answer, full-width directly under H1 */}
-        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
+        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook battery replacement", pricePath: "/macbook-battery-replacement-dubai", startingPrice: 450, timeline: "about 2 hours, same-day" })} />
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -236,14 +223,13 @@ export default function MacBookBatteryReplacement() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="Which MacBook models do you replace batteries for?" intro="Every MacBook from the 2010 Air through the 2025 M5 Pro 16″. Apple Silicon batteries are paired to the logic board on the bench. Every quote includes the cell, labour, calibration and the 3-month warranty." />
-            <PriceTable rows={PRICING} />
+            <RepairPriceTable path="/macbook-battery-replacement-dubai" variant="inline" />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
               Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. If the swelling cracked the trackpad, the battery and trackpad are done together.
             </p>
           </div>
         </section>
 
-        <RepairPriceTable path="/macbook-battery-replacement-dubai" title="How much does a MacBook battery replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
@@ -542,32 +528,5 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
       <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
-  );
-}
-
-function PriceTable({ rows }: { rows: PricingRow[] }) {
-  return (
-    <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-      <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
-        <thead>
-          <tr className="border-b border-border text-accent">
-            <th className="px-lg py-md font-semibold">MacBook model</th>
-            <th className="px-lg py-md font-semibold whitespace-nowrap">Battery replacement</th>
-            <th className="px-lg py-md font-semibold">Turnaround</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.model} className="border-b border-border last:border-0">
-              <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm whitespace-nowrap">
-                <PriceCTA compact message={`Hi, battery replacement price for ${r.model}?`} />
-              </td>
-              <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Reveal>
   );
 }

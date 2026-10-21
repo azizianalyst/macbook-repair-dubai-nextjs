@@ -19,7 +19,7 @@ import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
-import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { InvoicePriceCell, InvoicePriceNote } from "@/components/blocks/RepairPriceTable";
 
 const HERO_IMG = {
   src: "/images/real/lab/macbook-air-lid-dubai.jpg",
@@ -251,7 +251,7 @@ export default function MacBookAirChipBatteryPage({
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                     <td className="px-lg py-sm whitespace-nowrap">
-                      <PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} />
+                      <InvoicePriceCell path={path} label={r.model}><PriceCTA compact message={`Hi, price for ${r.model} battery replacement in Dubai?`} /></InvoicePriceCell>
                     </td>
                     <td className="px-lg py-sm text-text-muted whitespace-nowrap">
                       {r.applePrice ? "Price on request" : "Not serviced"}
@@ -269,13 +269,13 @@ export default function MacBookAirChipBatteryPage({
               </tbody>
             </table>
           </div>
+          <InvoicePriceNote path={path} />
           <p className="mt-md text-[13px] text-text-faint max-w-[72ch]">
             Warranty: 3 months written on the new cell. No fix, no charge. BMS re-pair and calibration cycle included in every price.
           </p>
           <div className="mt-xl flex justify-center"><CallButtons /></div>
         </section>
 
-        <RepairPriceTable path={path} />
 
         {/* WHAT MAKES THIS CHIP'S BATTERY UNIQUE */}
         <section

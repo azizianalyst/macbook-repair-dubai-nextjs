@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
-import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
@@ -28,20 +27,9 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
-type PricingRow = { model: string; price: number; timeline: string };
 
 // Pro-only rows — mirror the generic battery page so the two
 // pages never quote different numbers for the same pack.
-const PRICING: PricingRow[] = [
-  { model: 'MacBook Pro 13" Retina (2012-2015)',          price: 500, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 13" Touch Bar (2016-2022)',       price: 500, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 15" Retina (2012-2019)',          price: 600, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 16" Intel (2019, A2141)',         price: 600, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 14" M1/M2/M3/M4 Pro/Max',         price: 600, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 16" M1/M2/M3/M4 Pro/Max',         price: 600, timeline: "Same day · 2 hours" },
-  { model: 'MacBook Pro 14"/16" M5 (2025-2026)',          price: 650, timeline: "Same day · 2 hours" },
-];
-
 const PROBLEMS = [
   { title: '"Service Recommended" on a 14"/16" Pro',
     body: "Battery health under 80% or cycle count over 1,000, shown in System Settings > Battery > Battery Health. Pro machines reach this faster than an Air because sustained CPU/GPU load runs more full cycles. Replace before the count crosses ~1,200 to avoid swelling." },
@@ -207,7 +195,7 @@ export default function MacBookProBatteryReplacement() {
         </section>
 
         {/* Quick Answer, full-width directly under H1 */}
-        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro battery replacement", startingPrice: 500, timeline: "about 2 hours, same-day" })} />
+        <QuickAnswer tone="dark" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro battery replacement", pricePath: "/macbook-pro-battery-replacement-dubai", startingPrice: 500, timeline: "about 2 hours, same-day" })} />
 
         {/* ── Trust strip ────────────────────────────────────────── */}
         <section className="border-y border-border bg-bg-alt">
@@ -232,14 +220,13 @@ export default function MacBookProBatteryReplacement() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead title="MacBook Pro models we replace batteries for" intro="Every MacBook Pro from the 2012 Retina through the 2026 M5 16″. Apple Silicon packs are BMS-paired to the logic board on the bench. Prices include cell, labour, calibration and the 3-month warranty." />
-            <PriceTable rows={PRICING} />
+            <RepairPriceTable path="/macbook-pro-battery-replacement-dubai" variant="inline" />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
               Bring-your-own-battery labour is quoted separately, and only if the part is verified tier-1. Battery + trackpad swap if swelling cracked the trackpad: quoted as one combined job.
             </p>
           </div>
         </section>
 
-        <RepairPriceTable path="/macbook-pro-battery-replacement-dubai" title="How much does a MacBook Pro battery replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
@@ -475,32 +462,5 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
       <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
-  );
-}
-
-function PriceTable({ rows }: { rows: PricingRow[] }) {
-  return (
-    <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-      <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
-        <thead>
-          <tr className="border-b border-border text-accent">
-            <th className="px-lg py-md font-semibold">MacBook Pro model</th>
-            <th className="px-lg py-md font-semibold whitespace-nowrap">Battery replacement</th>
-            <th className="px-lg py-md font-semibold">Turnaround</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.model} className="border-b border-border last:border-0">
-              <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm whitespace-nowrap">
-                <PriceCTA compact message={`Hi, MacBook Pro battery replacement price for ${r.model}?`} />
-              </td>
-              <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Reveal>
   );
 }
