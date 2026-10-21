@@ -237,3 +237,30 @@ What changed against the 14-row table:
 - The 15-inch Intel battery row also contains A1398 (2012-2015), so its label now says 2012 to 2019.
 
 Pages: hubs show every row for their repair; each model page shows only its own model's rows; a model page with no row (e.g. Air M4 screen) shows no table.
+
+## Update 2026-10-21 (owner): one price per model, not a range
+
+The owner found that a range reads as a starting price to clients and asked for one price per model, as close to the real price as possible.
+The site now shows the **median** invoice (half of customers paid less, half paid more), incl. VAT, with one line that the final price follows the free diagnosis.
+Not used: the lowest invoice as a 'from' price. It rests on a single job and most customers would pay more, which breaks the truth rule.
+
+| Repair | Model | Model number(s) | Typical price shown (AED, incl. VAT) | Invoices |
+|---|---|---|---|---|
+| Screen replacement | MacBook Air (M1, 2020) | A2337 | 1,129 | 40 |
+| Screen replacement | MacBook Air (13-inch, M2, 2022) | A2681 | 999 | 18 |
+| Screen replacement | MacBook Air (13-inch, M3, 2024) | A3113 | 1,161 | 6 |
+| Screen replacement | MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports) | A2159 | 1,100 | 6 |
+| Screen replacement | MacBook Pro (13-inch, M1, 2020) and (13-inch, M2, 2022) | A2338 | 1,190 | 30 |
+| Screen replacement | MacBook Pro (14-inch, 2021), M1 Pro or M1 Max | A2442 | 2,110 | 12 |
+| Screen replacement | MacBook Pro (16-inch, Nov 2023), M3 Pro or M3 Max | A2991 | 2,380 | 5 |
+| Screen replacement | MacBook Pro (16-inch, 2019) | A2141 | 1,550 | 7 |
+| Battery replacement | MacBook Pro (13-inch, 2018 and 2019, Four Thunderbolt 3 ports) | A1989 | 451 | 8 |
+| Battery replacement | MacBook Pro (16-inch, 2019) | A2141 | 620 | 5 |
+| Screen replacement | Other MacBook Pro 13-inch Intel (2016 to 2020) | A1706, A1708, A1989, A2251, A2289 | 980 | 14 |
+| Screen replacement | MacBook Pro 14-inch, M2 Pro to M4 (2023 and 2024) | A2779, A2918, A2992, A3112, A3185, A3401 | 2,195 | 12 |
+| Battery replacement | Other MacBook Pro 13-inch Intel (2016 to 2020) | A1706, A1708, A2159, A2251, A2289 | 395 | 16 |
+| Battery replacement | MacBook Air 13-inch Intel Retina (2018 to 2020) | A1932, A2179 | 420 | 7 |
+| Battery replacement | MacBook Pro 15-inch Intel (2012 to 2019) | A1398, A1707, A1990 | 505 | 8 |
+| Logic board / no-power repair | Any MacBook | any | 656 | 12 |
+| Liquid damage repair | Any MacBook | any | 800 | 5 |
+| Trackpad replacement | Any MacBook | any | 455 | 6 |
