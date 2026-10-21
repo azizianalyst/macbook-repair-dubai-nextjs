@@ -36,7 +36,7 @@ export default function Warranty() {
       <LegalSection id="standard" title="1. How long your warranty lasts">
         <ul>
           <li><strong>Hardware repairs</strong> - trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
-          <li><strong>Screen replacements</strong> depend on the panel grade you choose: <strong>15 days</strong> on high-grade aftermarket panels and <strong>up to 3 months</strong> on genuine Apple panels. Both are bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
+          <li><strong>MacBook screen replacements</strong> depend on the panel grade: <strong>3 months</strong> on original pull-out (our standard screen) and Apple original panels, <strong>15 days</strong> on new OEM and brand new (aftermarket) panels. Every panel is bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
           <li><strong>Battery replacements</strong> (MacBook and iPhone) are covered for <strong>3 months</strong>, with an 80% capacity guarantee.</li>
           <li><strong>Keyboard repairs, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
           <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date you collect the device.</li>
@@ -95,7 +95,7 @@ export default function Warranty() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>MacBook screen replacement</td><td>15 days (aftermarket) to 3 months (genuine)</td><td>Covers panel, backlight, adhesion</td></tr>
+            <tr><td>MacBook screen replacement</td><td>3 months (original pull-out, Apple original); 15 days (new OEM, brand new aftermarket)</td><td>Covers panel, backlight, adhesion</td></tr>
             <tr><td>MacBook battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>iPhone battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>MacBook keyboard replacement</td><td>15 days</td><td>Covers any single key failure</td></tr>

@@ -3,6 +3,7 @@ import { LegalLayout, LegalSection } from "@/components/layout/LegalLayout";
 import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { SCREEN_WARRANTY_LINE } from "@/content/part-grades";
 
 const LAST_UPDATED = "April 2026";
 const ISO_DATE = "2026-04-01";
@@ -56,7 +57,7 @@ export default function Terms() {
         <ul>
           <li><strong>Genuine Apple parts</strong> are fitted whenever the part is currently sold by Apple wholesale or available through verified channels.</li>
           <li><strong>Quality-grade aftermarket parts</strong> (OEM or premium third-party) are clearly labelled on the WhatsApp quote and on the printed invoice.</li>
-          <li>Aftermarket parts carry the same warranty of up to 12 months as genuine parts.</li>
+          <li>Warranty depends on the part and its grade, as listed on the <a href="/warranty/">warranty page</a>. MacBook screens: {SCREEN_WARRANTY_LINE}. The grade is named on your quote and invoice.</li>
           <li>Some Touch ID, Face ID, and True Tone features are tied to the original Apple part by Apple's calibration servers and may not work after replacement. The technician will state this in writing before the repair.</li>
           <li>Old parts removed during the repair are returned to you on request, except where Apple recycling regulations require recovery (lithium-ion batteries).</li>
         </ul>
