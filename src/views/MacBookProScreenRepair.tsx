@@ -25,6 +25,8 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ScreenGrades } from "@/components/blocks/ScreenGrades";
+import { SCREEN_WARRANTY_LINE } from "@/content/part-grades";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 
@@ -87,7 +89,7 @@ const FAQS: FAQ[] = [
   { q: "My MacBook Pro display is black but it chimes and the external monitor works — is that the screen?",
     a: "Yes — that pattern confirms a panel or backlight fault, not a logic-board GPU fault (the external output is a separate circuit). Free diagnosis isolates the LCD/mini-LED panel, the eDP ribbon, or the backlight chip. Around 70% are panel swaps." },
   { q: "Do you use genuine Apple screens for the MacBook Pro?",
-    a: "Genuine Apple panels are stocked for the M3, M4 and M5 Pro (the only way to keep True Tone, and the only option we fit on the M5). For 2012-2022 Pros we also fit A-grade panels from the same Samsung/LG factories that build the Apple part. Both are labelled on the WhatsApp quote, and both carry a 90-day (3-month) warranty." },
+    a: `Yes. Our standard screen is an original pull-out: a genuine Apple panel taken from another MacBook and tested before it is fitted. New Apple original panels cost more and are the only option we fit on the M5; new OEM and brand new (aftermarket) panels cost less. The grade is named on your quote and invoice. Warranty: ${SCREEN_WARRANTY_LINE}.` },
   { q: "How long does MacBook Pro screen replacement take in Dubai?",
     a: 'Same day on the 13" Retina/Touch Bar and the 14" XDR when the panel is in stock (3-5 hours including the 90-minute adhesive cure). The 16" XDR is often 1-2 days; the M5 can be 1-3 days while genuine assembly stock is sourced from the local Apple distributor.' },
 ];
@@ -99,7 +101,7 @@ const COMPARISON = [
   ["Flexgate cable-only fix",  "Yes on 2016-2017",                          "No, full assembly only"],
   ["Walk in, no appointment",  "Yes, diagnosis in about 15 minutes",        "Check with the store"],
   ["Vintage/obsolete Pros",    "Yes — 2012 Retina onward",                  "Not serviced once Apple lists a model as obsolete"],
-  ["Warranty",                 "90 days (3 months) on every panel",         "Apple's own repair terms"],
+  ["Warranty",                 "3 months (original pull-out, Apple original); 15 days (new OEM, aftermarket)",         "Apple's own repair terms"],
 ];
 
 const TIMELINE = [
@@ -335,26 +337,10 @@ export default function MacBookProScreenRepair() {
         {/* ── Parts ──────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="What goes in your MacBook Pro" title="Genuine, A-grade, or genuine used" intro="A Pro panel comes in three grades and the price moves with the grade. The figures above are the A-grade floor; a full display assembly, or a 14″/16″ XDR, costs more. On the M5 we fit genuine Apple display assemblies only." />
-            <div className="grid gap-lg md:grid-cols-3">
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for the M3, M4 and M5 Pro 14″ and 16″ — and the only option we fit on the M5. Sourced from the local parts supplier with traceable batch numbers. True Tone, ProMotion and XDR brightness retained.</p>
-                <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade — quoted side by side</p>
-              </Card>
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">A-grade aftermarket (Samsung / LG)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Same Samsung/LG factories that build the Apple panel for the 2012-2022 Pro — without the Apple label and calibration chip. P3 colour, full brightness, 120Hz where the model supports it. True Tone disabled by macOS.</p>
-                <p className="m-0 mono text-[13px] text-accent">Our standard panel grade</p>
-              </Card>
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Used pull-out (genuine)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Real Apple panels pulled from board-damaged trade-ins — genuine glass and calibration, not aftermarket. Stock depends on what crosses the bench that week, so it is not always available for your model.</p>
-                <p className="m-0 mono text-[13px] text-accent">Cheapest route to a genuine panel — WhatsApp the serial to check stock</p>
-              </Card>
-            </div>
+            <SectionHead eyebrow="What goes in your MacBook Pro" title="Four screen grades to choose from" intro="A Pro panel comes in four grades, and the price and warranty move with the grade. The typical prices above are for our standard screen, an original pull-out. On the M5 we fit genuine Apple display assemblies only." />
+            <ScreenGrades />
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              Every panel we fit, genuine Apple or A-grade aftermarket, carries a 90-day (3-month) warranty. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial. We refuse the cheapest unbranded panels because failure rates above 20% are normal in that grade.
+              Warranty: {SCREEN_WARRANTY_LINE}. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial. We refuse the cheapest unbranded panels because failure rates above 20% are normal in that grade.
             </p>
           </div>
         </section>
@@ -502,7 +488,7 @@ export default function MacBookProScreenRepair() {
           <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
             <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto">Cracked Pro screen? WhatsApp the model — quote in 4 minutes</h2>
             <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
-              Year, screen size, processor, photo of the damage. Walk in to Media City or send it by courier. 90-day (3-month) warranty on every panel fitted.
+              Year, screen size, processor, photo of the damage. Walk in to Media City or send it by courier. Up to 3 months warranty, by panel grade.
             </p>
             <div className="flex flex-wrap justify-center gap-sm">
               <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>

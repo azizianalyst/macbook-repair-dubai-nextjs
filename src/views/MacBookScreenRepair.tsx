@@ -25,6 +25,8 @@ import { pickReviews } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
 import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ScreenGrades } from "@/components/blocks/ScreenGrades";
+import { SCREEN_WARRANTY_LINE } from "@/content/part-grades";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
 
@@ -81,13 +83,13 @@ const FAQS: FAQ[] = [
   { q: "What's the difference between LCD-only and full display assembly replacement?",
     a: "LCD-only is the panel inside the lid - the camera, hinges, and antenna stay original. Full display assembly is the entire lid pre-built. LCD-only costs less but takes 90 extra minutes of labour. The workshop quotes both options on every WhatsApp ticket." },
   { q: "Do you use genuine Apple screens?",
-    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models the workshop fits A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote; genuine Apple panels carry a 3-month warranty, A-grade aftermarket 15 days." },
+    a: `Yes. Our standard screen is an original pull-out: a genuine Apple panel taken from another MacBook and tested before it is fitted. New Apple original panels cost more and depend on stock; new OEM and brand new (aftermarket) panels cost less. The grade is named on your quote and invoice. Warranty: ${SCREEN_WARRANTY_LINE}.` },
   { q: "What if my screen is fine but I see horizontal lines at the bottom?",
     a: "Classic Flexgate. The flex cable inside the hinge is failing. Open and close the lid slowly - if the lines come and go, it's confirmed. Cable replacement, same day, and the new cable is the 2-mm-longer revised version." },
   { q: "Will my MacBook screen replacement work with my external monitor?",
     a: "Yes - the external display output is a separate circuit on the logic board. If your built-in display died but external still works, that confirms a panel-side fault, not a logic-board GPU fault. A panel swap solves it." },
   { q: "Is there a warranty on the new screen?",
-    a: "It depends on the panel grade: genuine Apple panels carry a 3-month written warranty, high-grade A-grade aftermarket panels carry 15 days. Both cover manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure - neither covers new physical damage. The grade and its warranty are confirmed on your quote. Transferable once free of charge to a new owner if the MacBook is sold." },
+    a: `It depends on the panel grade: ${SCREEN_WARRANTY_LINE}. Every grade's warranty covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure - neither covers new physical damage. The grade and its warranty are confirmed on your quote. Transferable once free of charge to a new owner if the MacBook is sold.` },
   { q: "Can you fix a MacBook screen with no image but the laptop still chimes?",
     a: "Yes - that's a panel or backlight issue, not a logic-board issue. Free diagnosis confirms whether it's the LCD, the eDP cable, or the backlight chip on the board. 70% of these are panel swaps." },
   { q: "Do you offer pickup for screen repair?",
@@ -348,26 +350,10 @@ export default function MacBookScreenRepair() {
         {/* ── Parts ──────────────────────────────────────────────── */}
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
-            <SectionHead eyebrow="What goes in your MacBook" title="Three screen grades to choose from" intro="A MacBook screen comes in three grades, and the price moves with the grade you pick. The numbers above are the screen-only A-grade floor - a full display assembly, or a 14″ and 16″ Pro, costs more. We can't lock the exact figure until we read the serial, since that's what pins down the panel your MacBook actually takes." />
-            <div className="grid gap-lg md:grid-cols-3">
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Original Apple (OEM)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Genuine Apple panels stocked for M3, M4, and M5 Pro 14″ and 16″. Sourced from the local parts supplier with traceable batch numbers. True Tone calibration retained.</p>
-                <p className="m-0 mono text-[13px] text-accent">Costs more than A-grade - quoted side by side</p>
-              </Card>
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">A-grade aftermarket (Samsung / LG)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Same Samsung and LG factories that build the Apple panel - sold without the Apple label and calibration chip. P3 colour, full brightness, 60 Hz or 120 Hz to match original. True Tone disabled by macOS.</p>
-                <p className="m-0 mono text-[13px] text-accent">Our standard panel grade</p>
-              </Card>
-              <Card>
-                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">Used pull-out (genuine)</h3>
-                <p className="m-0 mb-sm text-[14px] text-text-muted leading-relaxed">Real Apple panels pulled from board-damaged trade-ins - genuine glass and calibration, not aftermarket. Stock depends on what's passed across the bench that week, so it isn't always available for your model.</p>
-                <p className="m-0 mono text-[13px] text-accent">Cheapest route to a genuine panel - WhatsApp the serial to check stock</p>
-              </Card>
-            </div>
+            <SectionHead eyebrow="What goes in your MacBook" title="Four screen grades to choose from" intro="A MacBook screen comes in four grades, and the price and warranty move with the grade you pick. The typical prices above are for our standard screen, an original pull-out. We can't lock the exact figure until we read the serial, since that's what pins down the panel your MacBook actually takes." />
+            <ScreenGrades />
             <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
-              Genuine Apple panels carry a 3-month warranty; the A-grade aftermarket grades carry 15 days. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit the cheapest unbranded panels because failure rates above 20% are normal in that grade.
+              Warranty: {SCREEN_WARRANTY_LINE}. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial - pick what suits the budget. The workshop refuses to fit the cheapest unbranded panels because failure rates above 20% are normal in that grade.
             </p>
           </div>
         </section>
