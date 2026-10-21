@@ -50,7 +50,7 @@ export default function MacBookNeoScreenRepair() {
             <li>• <strong>Connect an external monitor.</strong> If the picture appears there, the Mac itself is running
               and the fault is in the display or its connection. If nothing appears anywhere, the problem is more likely
               power or the logic board; see{" "}
-              <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo A18 Pro repair</Link>.</li>
+              <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo logic board repair</Link>.</li>
             <li>• <strong>Cracks, lines or dead areas</strong> that stay in the same place are physical panel damage.
               A replacement display is the fix.</li>
             <li>• <strong>Flicker or a dim picture</strong> can be a setting. Apple publishes troubleshooting steps for

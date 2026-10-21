@@ -8,11 +8,11 @@ import { Link } from "@/lib/router-compat";
 export default function MacBookNeoA18RepairHub() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage"
+      seoTitle="MacBook Neo Logic Board Repair Dubai - No Power & Liquid"
       seoDescription="MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706."
       path="/macbook-neo-a18-repair-dubai"
       eyebrow="MacBook Neo · A18 Pro logic board · board-level repair"
-      h1="MacBook Neo A18 Pro Repair Dubai"
+      h1="MacBook Neo Logic Board Repair in Dubai (A18 Pro)"
       subtitle="Board-level repair for the MacBook Neo's A18 Pro logic board: no power, liquid damage, charging faults and data recovery. Free diagnosis, and an Apple warranty check before any paid work."
       startingPrice={0}
       timeline="Free diagnosis same day · board work quoted after testing"
@@ -21,7 +21,7 @@ export default function MacBookNeoA18RepairHub() {
         { name: "Home",               path: "/" },
         { name: "MacBook Repair",     path: "/macbook-repair-dubai" },
         { name: "MacBook Neo Repair", path: "/macbook-neo-repair-dubai" },
-        { name: "A18 Pro Repair",     path: "/macbook-neo-a18-repair-dubai" },
+        { name: "Logic Board Repair", path: "/macbook-neo-a18-repair-dubai" },
       ]}
       technician={{ name: "Usman", years: 11, specialisation: "board-level repair on Apple silicon logic boards" }}
       serviceName="MacBook Neo A18 Pro Logic Board Repair Dubai"

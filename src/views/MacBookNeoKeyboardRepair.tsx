@@ -69,7 +69,7 @@ export default function MacBookNeoKeyboardRepair() {
             reaches the logic board, and corrosion keeps working while there is power. Bring it in the same day if you
             can. We open it, check the board as well as the keyboard, and clean before we decide what needs
             replacing. If the board is affected, see{" "}
-            <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo A18 Pro repair</Link>{" "}
+            <Link to="/macbook-neo-a18-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook Neo logic board repair</Link>{" "}
             and{" "}
             <Link to="/macbook-water-damage-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook water damage repair</Link>.
           </p>
@@ -144,7 +144,7 @@ export default function MacBookNeoKeyboardRepair() {
       reviewNames={["Saeed Alam", "E. Saey Debrus"]}
       related={[
         { label: "MacBook Neo Repair Dubai",         href: "/macbook-neo-repair-dubai",          description: "Every MacBook Neo repair in one place." },
-        { label: "MacBook Neo A18 Pro Repair",       href: "/macbook-neo-a18-repair-dubai",      description: "Board-level work after spills and power faults." },
+        { label: "MacBook Neo Logic Board Repair",  href: "/macbook-neo-a18-repair-dubai",      description: "Board-level work after spills and power faults." },
         { label: "MacBook Keyboard Repair Dubai",    href: "/macbook-keyboard-repair-dubai",     description: "Keyboard repair for every MacBook Air and Pro." },
       ]}
       blogLink={{ label: "MacBook Neo: worth buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
