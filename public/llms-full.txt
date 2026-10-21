@@ -2,7 +2,7 @@
 
 > MacBook Repair Dubai is an independent Apple repair specialist in Dubai, United Arab Emirates, in business since 10 October 2004. The workshop is Mac-first (MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio and Mac Pro, down to board level) and also repairs iPhone and iPad. Customers walk in at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or send the device using a same-day courier they book themselves. Paid onsite visits are available subject to technician availability. Repair quotes are given on WhatsApp at +971 55 741 3706.
 
-Generated 2026-10-19 from the site's route table, page metadata and business settings. This long-form companion to https://macbook-repair-dubai.ae/llms.txt lists all 629 public pages with their titles and descriptions.
+Generated 2026-10-21 from the site's route table, page metadata and business settings. This long-form companion to https://macbook-repair-dubai.ae/llms.txt lists all 618 public pages with their titles and descriptions.
 
 ## Business facts
 
@@ -574,12 +574,6 @@ URL: https://macbook-repair-dubai.ae/macbook-air-13-m4-2025-repair-dubai/
 
 MacBook Air 13 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
 
-### MacBook Air 13 M5 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-air-13-m5-2026-repair-dubai/
-
-MacBook Air 13 M5 2026 repair in Dubai: battery same day, screen in 2 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
-
 ### MacBook Air 15 M2 2023 Repair Dubai. Free Diagnosis
 
 URL: https://macbook-repair-dubai.ae/macbook-air-15-m2-2023-repair-dubai/
@@ -597,12 +591,6 @@ MacBook Air 15 M3 2024 repair in Dubai: battery same day, screen in 2-3 days, lo
 URL: https://macbook-repair-dubai.ae/macbook-air-15-m4-2025-repair-dubai/
 
 MacBook Air 15 M4 2025 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
-
-### MacBook Air 15 M5 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-air-15-m5-2026-repair-dubai/
-
-MacBook Air 15 M5 2026 repair in Dubai: battery same day, screen in 2-3 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
 
 ### MacBook Air Intel Battery Replacement Dubai — Same Day
 
@@ -760,7 +748,7 @@ URL: https://macbook-repair-dubai.ae/macbook-air-m5-screen-repair-dubai/
 
 MacBook Air M5 (2026) screen repair Dubai. Liquid Retina 13-inch and 15-inch, True Tone, P3. Genuine panels, free diagnosis, 1–2 day turnaround. Message us on WhatsApp for today's price.
 
-### MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage
+### MacBook Neo Logic Board Repair Dubai - No Power & Liquid
 
 URL: https://macbook-repair-dubai.ae/macbook-neo-a18-repair-dubai/
 
@@ -814,24 +802,6 @@ URL: https://macbook-repair-dubai.ae/macbook-pro-14-m4-2024-repair-dubai/
 
 MacBook Pro 14 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
 
-### MacBook Pro 14 M5 2025 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-pro-14-m5-2025-repair-dubai/
-
-MacBook Pro 14 M5 2025 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
-
-### MacBook Pro 14 M5 Max 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-pro-14-m5-max-2026-repair-dubai/
-
-MacBook Pro 14 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Walk in for a free diagnosis. WhatsApp us.
-
-### MacBook Pro 14 M5 Pro 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-pro-14-m5-pro-2026-repair-dubai/
-
-MacBook Pro 14 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 5-7 days. Walk in for a free diagnosis. WhatsApp us.
-
 ### MacBook Pro 16 M1 Pro 2021 Repair Dubai. Free Diagnosis
 
 URL: https://macbook-repair-dubai.ae/macbook-pro-16-m1-pro-2021-repair-dubai/
@@ -855,18 +825,6 @@ MacBook Pro 16 M3 2023 repair in Dubai: battery same day, screen in 3-5 days, lo
 URL: https://macbook-repair-dubai.ae/macbook-pro-16-m4-2024-repair-dubai/
 
 MacBook Pro 16 M4 2024 repair in Dubai: battery same day, screen in 3-5 days, logic board in 3-5 days. Walk in for a free diagnosis. WhatsApp us.
-
-### MacBook Pro 16 M5 Max 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-pro-16-m5-max-2026-repair-dubai/
-
-MacBook Pro 16 M5 Max 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 10-14 days. Walk in for a free diagnosis. WhatsApp us.
-
-### MacBook Pro 16 M5 Pro 2026 Repair Dubai. Free Diagnosis
-
-URL: https://macbook-repair-dubai.ae/macbook-pro-16-m5-pro-2026-repair-dubai/
-
-MacBook Pro 16 M5 Pro 2026 repair in Dubai: battery same day, screen in 3-5 days, logic board in 7-10 days. Walk in for a free diagnosis. WhatsApp us.
 
 ### MacBook Pro Intel Repair Dubai - 13", 15" & 16" 2017–2020
 
@@ -1164,18 +1122,6 @@ URL: https://macbook-repair-dubai.ae/mac-mini-m4-repair-dubai/
 
 Mac mini M4 and M4 Pro repair in Dubai - the redesigned 2024 mini with Thunderbolt 5 on Pro. Check AppleCare first; free diagnosis - call us.
 
-### Mac mini M5 Pro (2026) Repair Dubai - Request a Quote
-
-URL: https://macbook-repair-dubai.ae/mac-mini-m5-pro-2026-repair-dubai/
-
-Mac mini M5 Pro (2026) repair in Dubai: logic board, ports, SSD data recovery and thermal service. Free diagnosis, written warranty.
-
-### Mac mini M6 (2026) Repair Dubai - Request a Quote
-
-URL: https://macbook-repair-dubai.ae/mac-mini-m6-2026-repair-dubai/
-
-Mac mini M6 (2026) repair Dubai: logic board, power supply, ports, SSD data recovery and thermal service. Free diagnosis, warranty up to 12 months.
-
 ### Mac mini M6 & M5 Pro Repair Dubai — Free Diagnosis
 
 URL: https://macbook-repair-dubai.ae/mac-mini-m6-repair-dubai/
@@ -1296,23 +1242,11 @@ URL: https://macbook-repair-dubai.ae/mac-studio-m4-max-2025-repair-dubai/
 
 Mac Studio M4 Max (2025) repair in Dubai: Thunderbolt 5 ports, logic board, SSD and power faults. Check AppleCare+ first. Free diagnosis, WhatsApp us.
 
-### Mac Studio M5 Max (2026) Repair Dubai - Request a Quote
-
-URL: https://macbook-repair-dubai.ae/mac-studio-m5-max-2026-repair-dubai/
-
-Mac Studio M5 Max (2026) repair in Dubai: logic board, ports, SSD data recovery and thermal service. Free diagnosis, written warranty.
-
 ### Mac Studio M5 Max & Ultra Repair Dubai — Free Diagnosis
 
 URL: https://macbook-repair-dubai.ae/mac-studio-m5-repair-dubai/
 
 Mac Studio M5 Max and M5 Ultra (2026) repair in Dubai - Apple's most powerful Mac. Board, thermal and port work. Free diagnosis - call 055 741 3706.
-
-### Mac Studio M5 Ultra (2026) Repair Dubai - Request a Quote
-
-URL: https://macbook-repair-dubai.ae/mac-studio-m5-ultra-2026-repair-dubai/
-
-Mac Studio M5 Ultra (2026) repair in Dubai: logic board, ports, SSD data recovery and thermal service. Free diagnosis, written warranty.
 
 ### Mac Studio No Display Dubai? Black Screen Fix
 

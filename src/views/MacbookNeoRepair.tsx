@@ -9,7 +9,7 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 import { Link } from "@/lib/router-compat";
 
 const SPOKES = [
-  { href: "/macbook-neo-a18-repair-dubai",          title: "A18 Pro board repair",  note: "No power, liquid, data" },
+  { href: "/macbook-neo-a18-repair-dubai",          title: "Logic board repair",    note: "No power, liquid, data" },
   { href: "/macbook-neo-screen-repair-dubai",       title: "Screen repair",         note: "13-inch display" },
   { href: "/macbook-neo-battery-replacement-dubai", title: "Battery replacement",   note: "18-screw battery tray" },
   { href: "/macbook-neo-keyboard-repair-dubai",     title: "Keyboard repair",       note: "Keys, spills, replacement" },
@@ -46,7 +46,7 @@ export default function MacbookNeoRepair() {
             Apple announced the MacBook Neo on 4 March 2026 and put it on sale on 11 March. It is a 13-inch MacBook
             built around the A18 Pro, an iPhone-class A-series chip, where every other MacBook Apple sells today uses an
             M5-family chip. Apple lists it at US$599, or AED 2,599 in the UAE, well below the{" "}
-            <Link to="/macbook-air-13-m5-2026-repair-dubai" className="text-accent font-semibold hover:underline">MacBook Air M5</Link>.
+            <Link to="/macbook-air-m5-repair-dubai" className="text-accent font-semibold hover:underline">MacBook Air M5</Link>.
             Because it is only months old, most Neos are still inside Apple&apos;s one-year warranty, so we check
             coverage before we quote anything.
           </p>
@@ -150,7 +150,7 @@ export default function MacbookNeoRepair() {
         },
         {
           q: "Can I upgrade the RAM or storage on a MacBook Neo?",
-          a: "No. iFixit's teardown confirmed the 8GB of memory and the storage are soldered to the logic board. Choose the configuration you need when you buy. If the board fails, getting your data back means repairing that board, which we cover on the MacBook Neo A18 Pro repair page.",
+          a: "No. iFixit's teardown confirmed the 8GB of memory and the storage are soldered to the logic board. Choose the configuration you need when you buy. If the board fails, getting your data back means repairing that board, which we cover on the MacBook Neo logic board repair page.",
         },
         {
           q: "Why doesn't my MacBook Neo keyboard light up?",
@@ -163,9 +163,9 @@ export default function MacbookNeoRepair() {
       ]}
       reviewNames={["Saeed Alam", "Polycarp"]}
       related={[
-        { label: "MacBook Neo A18 Pro Repair",   href: "/macbook-neo-a18-repair-dubai",    description: "Board-level work: no power, liquid damage, data recovery." },
+        { label: "MacBook Neo Logic Board Repair", href: "/macbook-neo-a18-repair-dubai",    description: "Board-level work: no power, liquid damage, data recovery." },
         { label: "MacBook Neo Screen Repair",    href: "/macbook-neo-screen-repair-dubai", description: "13-inch display replacement, AppleCare+ checked first." },
-        { label: "MacBook Air M5 Repair Dubai",  href: "/macbook-air-13-m5-2026-repair-dubai", description: "The M5 model one step up from the Neo." },
+        { label: "MacBook Air M5 Repair Dubai",  href: "/macbook-air-m5-repair-dubai", description: "The M5 model one step up from the Neo." },
       ]}
       blogLink={{ label: "MacBook Neo: worth buying in 2026?", href: "/blog/macbook-neo-worth-buying-2026" }}
     />

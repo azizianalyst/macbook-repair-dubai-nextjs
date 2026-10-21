@@ -25,8 +25,8 @@ export default function MacBookAirM5ScreenRepair() {
         "M5 Air panels are new to the supply chain. We source from the Apple-authorised local distributor rather than grey-market stock, which currently means a 1–2 day turnaround versus same-day on M2/M3 Airs.",
       ]}
       prices={[
-        { model: 'MacBook Air 13" M5 (2026)', price: 740, applePrice: 1549, timeline: "1–2 days", l4href: "/macbook-air-13-m5-2026-repair-dubai" },
-        { model: 'MacBook Air 15" M5 (2026)', price: 800, applePrice: 1699, timeline: "1–2 days", l4href: "/macbook-air-15-m5-2026-repair-dubai" },
+        { model: 'MacBook Air 13" M5 (2026)', price: 740, applePrice: 1549, timeline: "1–2 days", l4href: "/macbook-air-m5-repair-dubai" },
+        { model: 'MacBook Air 15" M5 (2026)', price: 800, applePrice: 1699, timeline: "1–2 days", l4href: "/macbook-air-m5-repair-dubai" },
       ]}
       faults={[
         { title: "Cracked screen from a drop", body: "The most common M5 Air repair. The thin lid cracks at the corners; the panel is bonded, so it is a full Liquid Retina replacement. Not a warranty case. 1–2 day turnaround on genuine panels." },

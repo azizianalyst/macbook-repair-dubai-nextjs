@@ -169,7 +169,7 @@ export default function BlogM5ChipExplained() {
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 vs M5 - should you upgrade?", href: "/blog/macbook-pro-m4-vs-m5-worth-upgrade", description: "Full Dubai-pricing decision guide." },
-        { label: "MacBook Pro M5 14″ repair page", href: "/macbook-pro-14-m5-2025-repair-dubai", description: "Service pricing for the new M5." },
+        { label: "MacBook Pro M5 repair page", href: "/macbook-pro-m5-repair-dubai", description: "Service pricing for the new M5." },
         { label: "MacBook repair (all models)", href: "/", description: "Every MacBook from 2018 to M5 Max." },
       ]}
     />

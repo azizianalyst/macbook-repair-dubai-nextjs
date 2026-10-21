@@ -58,6 +58,20 @@ const nextConfig = {
       { source: "/imac-m1-repair-dubai", destination: "/imac-24-m1-2021-repair-dubai/", statusCode: 301 },
       { source: "/imac-m3-repair-dubai", destination: "/imac-24-m3-2023-repair-dubai/", statusCode: 301 },
       { source: "/imac-m4-repair-dubai", destination: "/imac-24-m4-2024-repair-dubai/", statusCode: 301 },
+      // 2026-10-21 wave 1 (docs/wave1-newest-macs-plan-2026-10-21.md): the per-variant pages for the
+      // newest Macs shared 55-68% of their text and competed with their family page (GSC 90 days:
+      // 3 clicks across all 11). One family page per generation now carries a variant spec table.
+      { source: "/macbook-air-13-m5-2026-repair-dubai", destination: "/macbook-air-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-air-15-m5-2026-repair-dubai", destination: "/macbook-air-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-14-m5-2025-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-14-m5-pro-2026-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-14-m5-max-2026-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-16-m5-pro-2026-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
+      { source: "/macbook-pro-16-m5-max-2026-repair-dubai", destination: "/macbook-pro-m5-repair-dubai/", statusCode: 301 },
+      { source: "/mac-mini-m6-2026-repair-dubai", destination: "/mac-mini-m6-repair-dubai/", statusCode: 301 },
+      { source: "/mac-mini-m5-pro-2026-repair-dubai", destination: "/mac-mini-m6-repair-dubai/", statusCode: 301 },
+      { source: "/mac-studio-m5-max-2026-repair-dubai", destination: "/mac-studio-m5-repair-dubai/", statusCode: 301 },
+      { source: "/mac-studio-m5-ultra-2026-repair-dubai", destination: "/mac-studio-m5-repair-dubai/", statusCode: 301 },
       { source: "/mac-studio-m3-repair-dubai", destination: "/mac-studio-m3-ultra-2025-repair-dubai/", statusCode: 301 },
       { source: "/mac-studio-m4-repair-dubai", destination: "/mac-studio-m4-max-2025-repair-dubai/", statusCode: 301 },
       { source: "/mac-pro-m2-ultra-repair-dubai", destination: "/mac-pro-m2-ultra-2023-repair-dubai/", statusCode: 301 },

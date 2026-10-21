@@ -614,7 +614,8 @@
       "thermalPaste": "Same-day"
     },
     "honestyNote": "Apple changed the silicon: the M6 is Apple's first 2-nanometre Mac chip. We do not repeat brochure specs here - Apple's spec page for your exact configuration is the reference. In its first year almost every factory fault should go through Apple warranty - we tell you honestly when that is the better route.",
-    "heroTagline": "Apple's 2026 Mac Mini with M6 - Apple's first 2nm Mac chip."
+    "heroTagline": "Apple's 2026 Mac Mini with M6 - Apple's first 2nm Mac chip.",
+    "mergedInto": "/mac-mini-m6-repair-dubai"
   },
   {
     "slug": "mac-mini-m5-pro-2026-repair-dubai",
@@ -657,7 +658,8 @@
       "thermalPaste": "Same-day"
     },
     "honestyNote": "The M5 Pro is the higher-performance 2026 Mac mini, above the M6 model, and it replaces the M4 Pro mini. If you own an M4 Pro there is no repair-related reason to upgrade; we support both. First-year factory faults should go through Apple warranty; we check coverage before quoting.",
-    "heroTagline": "Apple's 2026 Mac Mini with the M5 Pro chip."
+    "heroTagline": "Apple's 2026 Mac Mini with the M5 Pro chip.",
+    "mergedInto": "/mac-mini-m6-repair-dubai"
   },
   {
     "slug": "mac-studio-m5-max-2026-repair-dubai",
@@ -700,7 +702,8 @@
       "thermalPaste": "Same-day"
     },
     "honestyNote": "The M5 Max is the entry chip for the 2026 Mac Studio, with the M5 Ultra above it; both are the same M5 generation. We do not repeat brochure specs here - Apple's spec page for your exact configuration is the reference. First-year factory faults should go through Apple warranty; we check coverage before quoting.",
-    "heroTagline": "Apple's 2026 Mac Studio with the M5 Max chip."
+    "heroTagline": "Apple's 2026 Mac Studio with the M5 Max chip.",
+    "mergedInto": "/mac-studio-m5-repair-dubai"
   },
   {
     "slug": "mac-studio-m5-ultra-2026-repair-dubai",
@@ -743,6 +746,7 @@
       "thermalPaste": "Same-day"
     },
     "honestyNote": "With the Mac Pro discontinued in March 2026, the M5 Ultra Mac Studio is the top of Apple's Mac range, configurable up to 512GB. The M5 Ultra and M5 Max are the same chip generation, so choose by budget and memory need. Warranty-first in year one.",
-    "heroTagline": "The top of Apple's 2026 Mac range: M5 Ultra, configurable up to 512GB."
+    "heroTagline": "The top of Apple's 2026 Mac range: M5 Ultra, configurable up to 512GB.",
+    "mergedInto": "/mac-studio-m5-repair-dubai"
   }
 ]

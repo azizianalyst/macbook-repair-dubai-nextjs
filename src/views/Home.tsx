@@ -102,7 +102,7 @@ const MODELS: { label: string; href: string; img: string; alt: string }[] = [
 // keyword-rich (exact-match "macbook repair dubai" is reserved for the H1).
 const MODEL_DIRECTORY: { group: string; hub: string; items: { label: string; href: string }[] }[] = [
   { group: "MacBook Pro", hub: "/macbook-pro-repair-dubai", items: [
-    { label: "MacBook Pro 14\" M5 (2025)", href: "/macbook-pro-14-m5-2025-repair-dubai" },
+    { label: "MacBook Pro M5 (14\" and 16\")", href: "/macbook-pro-m5-repair-dubai" },
     { label: "MacBook Pro 14\" M4 (2024)", href: "/macbook-pro-14-m4-2024-repair-dubai" },
     { label: "MacBook Pro 16\" M4 (2024)", href: "/macbook-pro-16-m4-2024-repair-dubai" },
     { label: "MacBook Pro 14\" M3 (2023)", href: "/macbook-pro-14-m3-2023-repair-dubai" },

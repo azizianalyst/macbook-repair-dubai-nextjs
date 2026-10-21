@@ -214,7 +214,7 @@ export default function LandingTemplateDemo() {
               { label: "M2 2022", href: "/macbook-air-13-m2-2022-repair-dubai", note: "MacBook Air 13-inch M2 2022 screen replacement" },
               { label: "M3 2024", href: "/macbook-air-13-m3-2024-repair-dubai", note: "MacBook Air 13-inch M3 2024 screen replacement" },
               { label: "M4 2025", href: "/macbook-air-13-m4-2025-repair-dubai", note: "MacBook Air 13-inch M4 2025 screen replacement" },
-              { label: "M5 2026", href: "/macbook-air-13-m5-2026-repair-dubai", note: "MacBook Air 13-inch M5 2026 screen replacement" },
+              { label: "M5 2026", href: "/macbook-air-m5-repair-dubai", note: "MacBook Air 13-inch M5 2026 screen replacement" },
             ],
           },
           {
@@ -223,7 +223,7 @@ export default function LandingTemplateDemo() {
               { label: "M2 2023", href: "/macbook-air-15-m2-2023-repair-dubai", note: "MacBook Air 15-inch M2 2023 screen replacement" },
               { label: "M3 2024", href: "/macbook-air-15-m3-2024-repair-dubai", note: "MacBook Air 15-inch M3 2024 screen replacement" },
               { label: "M4 2025", href: "/macbook-air-15-m4-2025-repair-dubai", note: "MacBook Air 15-inch M4 2025 screen replacement" },
-              { label: "M5 2026", href: "/macbook-air-15-m5-2026-repair-dubai", note: "MacBook Air 15-inch M5 2026 screen replacement" },
+              { label: "M5 2026", href: "/macbook-air-m5-repair-dubai", note: "MacBook Air 15-inch M5 2026 screen replacement" },
             ],
           },
           {
@@ -241,8 +241,8 @@ export default function LandingTemplateDemo() {
               { label: "M2 Pro 2023", href: "/macbook-pro-14-m2-pro-2023-repair-dubai", note: "MacBook Pro 14-inch M2 Pro 2023 screen replacement" },
               { label: "M3 2023", href: "/macbook-pro-14-m3-2023-repair-dubai", note: "MacBook Pro 14-inch M3 2023 screen replacement" },
               { label: "M4 2024", href: "/macbook-pro-14-m4-2024-repair-dubai", note: "MacBook Pro 14-inch M4 2024 screen replacement" },
-              { label: "M5 2025", href: "/macbook-pro-14-m5-2025-repair-dubai", note: "MacBook Pro 14-inch M5 2025 screen replacement" },
-              { label: "M5 Pro 2026", href: "/macbook-pro-14-m5-pro-2026-repair-dubai", note: "MacBook Pro 14-inch M5 Pro 2026 screen replacement" },
+              { label: "M5 2025", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 14-inch M5 2025 screen replacement" },
+              { label: "M5 Pro 2026", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 14-inch M5 Pro 2026 screen replacement" },
             ],
           },
           {
@@ -252,7 +252,7 @@ export default function LandingTemplateDemo() {
               { label: "M2 Pro 2023", href: "/macbook-pro-16-m2-pro-2023-repair-dubai", note: "MacBook Pro 16-inch M2 Pro 2023 screen replacement" },
               { label: "M3 2023", href: "/macbook-pro-16-m3-2023-repair-dubai", note: "MacBook Pro 16-inch M3 2023 screen replacement" },
               { label: "M4 2024", href: "/macbook-pro-16-m4-2024-repair-dubai", note: "MacBook Pro 16-inch M4 2024 screen replacement" },
-              { label: "M5 Pro 2026", href: "/macbook-pro-16-m5-pro-2026-repair-dubai", note: "MacBook Pro 16-inch M5 Pro 2026 screen replacement" },
+              { label: "M5 Pro 2026", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 16-inch M5 Pro 2026 screen replacement" },
             ],
           },
         ],

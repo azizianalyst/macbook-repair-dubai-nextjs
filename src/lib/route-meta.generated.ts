@@ -1581,7 +1581,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook microphone repair Dubai. Others can't hear you on calls, muffled mic, no sound input, water-damaged mic array. Usually 1-2 days. WhatsApp 055 741 3706."
   },
   "/macbook-neo-a18-repair-dubai": {
-    "title": "MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage",
+    "title": "MacBook Neo Logic Board Repair Dubai - No Power & Liquid",
     "description": "MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706."
   },
   "/macbook-neo-battery-replacement-dubai": {

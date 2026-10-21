@@ -23,8 +23,8 @@ export default function MacBookAirM5BatteryReplacement() {
         "Dubai heat is the main enemy of a new battery. An M5 Air left in a parked car at 50°C or charged on a bed with the vents covered ages its cells far faster than cycle count suggests. We include a thermal-history check in the diagnosis so you know whether the swap will hold.",
       ]}
       prices={[
-        { model: 'MacBook Air 13" M5 (2026)', price: 520, applePrice: 599, timeline: "1–2 business days", l4href: "/macbook-air-13-m5-2026-repair-dubai" },
-        { model: 'MacBook Air 15" M5 (2026)', price: 570, applePrice: 699, timeline: "1–2 business days", l4href: "/macbook-air-15-m5-2026-repair-dubai" },
+        { model: 'MacBook Air 13" M5 (2026)', price: 520, applePrice: 599, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
+        { model: 'MacBook Air 15" M5 (2026)', price: 570, applePrice: 699, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
       ]}
       faults={[
         { title: "M5 Air battery health warning under 6 months old", body: "Rare and almost always a manufacturing defect - which means Apple warranty. We check coverage for free before quoting. If the machine has had heat exposure or repeated deep discharges that void the claim, we replace the cell here." },
