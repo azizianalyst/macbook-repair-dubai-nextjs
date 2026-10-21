@@ -22,7 +22,7 @@ export const SCREEN_GRADES: ScreenGrade[] = [
     id: "apple-new",
     name: "Apple original (new)",
     what: "A new genuine Apple panel. It costs more than a pull-out, and stock depends on the model.",
-    warranty: "3 months",
+    warranty: "2 years",
   },
   {
     id: "oem-new",
@@ -42,4 +42,4 @@ export const STANDARD_SCREEN = SCREEN_GRADES.find((g) => g.standard)!;
 
 // Keep in step with SCREEN_GRADES above.
 export const SCREEN_WARRANTY_LINE =
-  "3 months on original pull-out and Apple original panels, 15 days on new OEM and brand new (aftermarket) panels";
+  "2 years on Apple original (new) panels, 3 months on original pull-out panels, 15 days on new OEM and brand new (aftermarket) panels";

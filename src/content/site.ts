@@ -63,24 +63,27 @@ export const PRICING = {
 // Canonical warranty tiers. The warranty is NOT flat, it depends on the repair.
 // Single source of truth: visible copy, the /warranty page table, and every
 // JSON-LD WarrantyPromise (warranty: WARRANTY.*.iso) must agree with these.
-//   • hardware  → up to 12 months  (trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM)
-//   • screens   → 90 days (3 months), all devices
+//   • hardware  → 2 years  (trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM, new Apple parts)
+//   • screens   → by grade (src/content/part-grades.ts): Apple original 2 years, pull-out 3 months,
+//                 new OEM / aftermarket 15 days; derived copy uses the standard pull-out (3 months)
 //   • battery   → 3 months + 80% capacity guarantee (MacBook & iPhone)
 //   • short     → 15 days  (keyboard replacement, software / macOS reinstall / virus removal,
 //                           diagnostics & no-fix, data recovery, and logic-board + liquid-damage repairs)
-// Headline phrasing leads with the ceiling ("up to 12 months"), never "flat"/"every repair".
+// Headline phrasing gives the whole range ("15 days to 2 years"), never "flat"/"every repair".
+// Owner, 2026-10-21: hardware and new Apple parts 2 years; logic board stays 15 days.
 export const WARRANTY = {
-  hardware: { iso: "P1Y", label: "12 months" },
+  hardware: { iso: "P2Y", label: "2 years" },
   battery: { iso: "P3M", label: "3 months" },
   short: { iso: "P15D", label: "15 days" },
-  headline: "up to 12 months",
-  headlineLong: "a written warranty of up to 12 months, depending on the repair",
+  headline: "15 days to 2 years",
+  headlineLong: "a written warranty of 15 days to 2 years, depending on the repair and part",
 } as const;
 
 // The page templates carry a numeric `warrantyDays` per page. These helpers snap that
 // number to the canonical tiers for display + JSON-LD, so copy and schema never diverge:
-//   365 → 12-month (hardware) · 90 → 3-month (battery) · 15 → short (software/board/liquid/data) · 0 → unlock (no parts warranty)
+//   730 → 2-year (hardware) · 90 → 3-month (battery) · 15 → short (software/board/liquid/data) · 0 → unlock (no parts warranty)
 export function warrantyLabel(days: number): string {
+  if (days >= 730) return "2-year";
   if (days >= 365) return "12-month";
   if (days >= 90) return "3-month";
   if (days > 0) return `${days}-day`;
@@ -94,6 +97,7 @@ export function warrantyClause(days: number): string {
 // ISO-8601 duration for the JSON-LD WarrantyPromise; undefined = omit (unlock services).
 export function warrantyIso(days: number): string | undefined {
   if (days <= 0) return undefined;
+  if (days >= 730) return "P2Y";
   if (days >= 365) return "P1Y";
   if (days >= 90) return "P3M";
   return `P${days}D`;
@@ -101,7 +105,7 @@ export function warrantyIso(days: number): string | undefined {
 // Infer the warranty tier (in days) from a service NAME, so auto-derived copy
 // (QuickAnswer) lands on the right tier without each caller passing it. Mirrors the
 // per-page classification: battery=90, screens=90, keyboard=15,
-// software/board/liquid/data/diagnostics=15, unlock=0, everything else (hardware)=365.
+// software/board/liquid/data/diagnostics=15, unlock=0, everything else (hardware)=730.
 export function warrantyDaysForService(name: string): number {
   const n = name.toLowerCase();
   if (/icloud|network unlock|activation lock|sim unlock/.test(n)) return 0;
@@ -109,7 +113,7 @@ export function warrantyDaysForService(name: string): number {
   if (/screen|display|digiti[sz]er/.test(n)) return 90;   // screens (all devices): 3-month warranty
   if (/keyboard|key cap/.test(n)) return 15;              // keyboard replacement: 15-day warranty
   if (/water|liquid|logic board|\bgpu\b|graphics|data recovery|backup|reinstall|virus|software|diagnostic|safe mode|boot ?camp|performance|not turning on|won.?t turn on|overheat|thermal|fan clean|cleaning|maintenance|unlock/.test(n)) return 15;
-  return 365;
+  return 730;
 }
 
 export const DEVICE_FAMILIES = [
@@ -133,7 +137,7 @@ export const USPS = [
   { label: "Free diagnosis",              icon: "Search" },
   { label: "No fix, no charge",           icon: "ShieldCheck" },
   { label: "30-min appointment repair",   icon: "Clock" },
-  { label: "Up to 12-month warranty",     icon: "BadgeCheck" },
+  { label: "15-day to 2-year warranty",     icon: "BadgeCheck" },
   { label: "Walk-in, Media City",         icon: "MapPin" },
   { label: "Free loaner MacBook",         icon: "Laptop" },
   { label: "Since 2004",                  icon: "Award" },

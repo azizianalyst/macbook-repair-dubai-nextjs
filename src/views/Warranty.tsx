@@ -13,12 +13,12 @@ export default function Warranty() {
     {
       title: "Warranty Policy - MacBook Repair Dubai",
       description:
-        "Warranty of up to 12 months on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026.",
+        "Warranty of 15 days to 2 years on Apple repairs, depending on the repair. What is covered, what is not, and how to make a claim. Updated June 2026.",
       path: "/warranty",
     },
     [organization(), webPage({
       title: "Warranty Policy",
-      description: "Written warranty of up to 12 months on Apple repairs at MacBook Repair Dubai - the period depends on the repair.",
+      description: "Written warranty of 15 days to 2 years on Apple repairs at MacBook Repair Dubai - the period depends on the repair.",
       path: "/warranty",
       dateModified: ISO_DATE,
     })],
@@ -30,13 +30,13 @@ export default function Warranty() {
       pageLabel="Warranty Policy"
       pagePath="/warranty"
       lastUpdated={LAST_UPDATED}
-      intro="Every paid repair is backed by a written warranty - the period depends on the repair, from 15 days up to 12 months. Read this page to know exactly what is covered, what is not, and how to claim - no small print, no surprises."
+      intro="Every paid repair is backed by a written warranty - the period depends on the repair, from 15 days 15 days to 2 years. Read this page to know exactly what is covered, what is not, and how to claim - no small print, no surprises."
     >
       <div className="mb-lg"><GlassWarrantyNotice device="screen or glass" /></div>
       <LegalSection id="standard" title="1. How long your warranty lasts">
         <ul>
-          <li><strong>Hardware repairs</strong> - trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>up to 12 months</strong> on parts and workmanship.</li>
-          <li><strong>MacBook screen replacements</strong> depend on the panel grade: <strong>3 months</strong> on original pull-out (our standard screen) and Apple original panels, <strong>15 days</strong> on new OEM and brand new (aftermarket) panels. Every panel is bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
+          <li><strong>Hardware repairs</strong> - trackpad, charging port, Touch Bar, hinge, fan, speaker, and SSD/RAM upgrades - carry a written warranty of <strong>15 days to 2 years</strong> on parts and workmanship.</li>
+          <li><strong>MacBook screen replacements</strong> depend on the panel grade: <strong>2 years</strong> on Apple original (new) panels, <strong>3 months</strong> on original pull-out panels (our standard screen), <strong>15 days</strong> on new OEM and brand new (aftermarket) panels. Every panel is bench-tested; the grade and its warranty are confirmed on your WhatsApp quote before any work.</li>
           <li><strong>Battery replacements</strong> (MacBook and iPhone) are covered for <strong>3 months</strong>, with an 80% capacity guarantee.</li>
           <li><strong>Keyboard repairs, software work, diagnostics, data recovery, and logic-board and liquid-damage repairs</strong> carry a <strong>15-day</strong> warranty, because their long-term outcome is harder to guarantee.</li>
           <li>Your exact warranty period is printed on the invoice and recorded against the device serial number. It starts on the date you collect the device.</li>
@@ -76,7 +76,7 @@ export default function Warranty() {
 
       <LegalSection id="claim" title="5. How to claim warranty">
         <ol>
-          <li>Send a WhatsApp message to {NAP.phoneDisplay} within the warranty period shown on your invoice (15 days to 12 months, depending on the service). Include the device serial number, a description of the new symptom, and a photo or short video if relevant.</li>
+          <li>Send a WhatsApp message to {NAP.phoneDisplay} within the warranty period shown on your invoice (15 days to 2 years, depending on the service). Include the device serial number, a description of the new symptom, and a photo or short video if relevant.</li>
           <li>A technician confirms whether the symptom is in scope.</li>
           <li>Bring the device to {NAP.street}, {NAP.area}. No appointment needed.</li>
           <li>Bring the original invoice or quote the invoice number - the workshop also keeps a copy linked to the serial number.</li>
@@ -95,7 +95,7 @@ export default function Warranty() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>MacBook screen replacement</td><td>3 months (original pull-out, Apple original); 15 days (new OEM, brand new aftermarket)</td><td>Covers panel, backlight, adhesion</td></tr>
+            <tr><td>MacBook screen replacement</td><td>2 years (Apple original, new); 3 months (original pull-out); 15 days (new OEM, brand new aftermarket)</td><td>Covers panel, backlight, adhesion</td></tr>
             <tr><td>MacBook battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>iPhone battery replacement</td><td>3 months</td><td>Includes 80% capacity guarantee</td></tr>
             <tr><td>MacBook keyboard replacement</td><td>15 days</td><td>Covers any single key failure</td></tr>
@@ -103,7 +103,9 @@ export default function Warranty() {
             <tr><td>Water / liquid damage recovery</td><td>15 days on repaired components only</td><td>No warranty on a future spill</td></tr>
             <tr><td>iPad screen replacement</td><td>15 days (aftermarket) to 3 months (genuine)</td><td>Covers panel and digitiser</td></tr>
             <tr><td>Data recovery</td><td>15 days on the repair work</td><td>No guarantee on data integrity (industry standard)</td></tr>
-            <tr><td>SSD or RAM upgrade</td><td>12 months workmanship + manufacturer part warranty (1-5 years)</td><td>Manufacturer warranty handled directly with brand</td></tr>
+            <tr><td>Hardware repair (trackpad, ports, hinge, fan, speaker, Touch Bar)</td><td>2 years</td><td>Parts and workmanship</td></tr>
+            <tr><td>New Apple original parts</td><td>2 years</td><td>Genuine new Apple part, fitted by us</td></tr>
+            <tr><td>SSD or RAM upgrade</td><td>2 years workmanship + manufacturer part warranty (1-5 years)</td><td>Manufacturer warranty handled directly with brand</td></tr>
             <tr><td>macOS reinstall / data transfer</td><td>15 days</td><td>Covers the install and basic configuration</td></tr>
           </tbody>
         </table>
@@ -113,7 +115,7 @@ export default function Warranty() {
         <ul>
           <li>The warranty stays with the device serial number, not the original payer. If you sell the MacBook, the new owner can claim by presenting the original invoice.</li>
           <li>One transfer per repair is allowed, free of charge.</li>
-          <li>The total warranty period does not extend on transfer - the original clock (15 days, 6 months or 12 months) continues from the original collection date.</li>
+          <li>The total warranty period does not extend on transfer - the original clock (15 days, 3 months or 2 years) continues from the original collection date.</li>
           <li>Email <a href="mailto:info@macbook-repair-dubai.ae">info@macbook-repair-dubai.ae</a> with the invoice number and the new owner's name and phone to register the transfer.</li>
         </ul>
       </LegalSection>

@@ -7,8 +7,8 @@ import { warrantyLabel } from "@/content/site";
 // single-line trust strip. tinted bg, no gradient.
 // `warrantyDays` drives the warranty claim so the strip never contradicts the page's
 // own warranty: battery/screen=90 → "3-month", board/liquid/software/data=15 → "15-day",
-// hardware=365 → "12-month", unlock=0 → warranty chip dropped (no over-promise).
-// Omit the prop to fall back to the brand-wide qualified "Up to 12-month warranty".
+// hardware=730 → "2-year", unlock=0 → warranty chip dropped (no over-promise).
+// Omit the prop to fall back to the brand-wide qualified "15-day to 2-year warranty".
 export function WarrantyBar({
   tone = "light",
   warrantyDays,
@@ -17,7 +17,7 @@ export function WarrantyBar({
   const label = warrantyDays === undefined ? "" : warrantyLabel(warrantyDays);
   const warrantyText =
     warrantyDays === undefined
-      ? "Up to 12-month warranty"
+      ? "15-day to 2-year warranty"
       : label
         ? `${label} written warranty`
         : null; // unlock / no-warranty services: drop the chip rather than over-promise
