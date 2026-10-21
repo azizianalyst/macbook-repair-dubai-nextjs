@@ -32,6 +32,22 @@ export default function MacStudioM5RepairHub() {
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Where independent repair matters on a new Studio: liquid and power-surge damage (excluded from warranty), data recovery when the board is dead (the SSD is encrypted and tied to the chip, so that means repairing the board until it runs again), Thunderbolt and multi-display faults that turn out to be cable or configuration issues, and preventive thermal service - an Ultra rendering all day in a Dubai summer pulls dust through its fans quickly.
           </p>
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Why do Thunderbolt devices lose power on the Mac Studio M5 when an 8K display is connected?</h2>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            The first M5 Studio hardware thread on Apple Community, from October 2026, is about this. An owner connected a Dell UP3218K 8K monitor on two Thunderbolt ports and an OWC bus-powered NVMe enclosure on a third. The enclosure would not power up while the display was connected, and the Mac kernel-panicked; afterwards the enclosure stayed dark. The same setup did the same thing on a MacBook Pro M4.
+          </p>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            It is not a faulty Studio. An 8K display over DisplayPort 1.4 needs two cables, and any Thunderbolt-to-DisplayPort adapters on those cables are themselves bus-powered devices competing for the same budget. OWC documents it in the enclosure&apos;s own spec sheet: it does not mount when it is the third bus-powered device on an M4 Mac mini or Mac Studio. The M5 Studio inherits that rule. What we check before anyone talks about a port repair:
+          </p>
+          <ul className="space-y-2 text-[15px] text-text-muted mb-md">
+            <li>• <strong className="text-text">Count the bus-powered devices</strong>, adapters included. Two display cables with active adapters plus a bus-powered SSD is already three.</li>
+            <li>• <strong className="text-text">Give the enclosure its own power</strong> or move it behind a self-powered Thunderbolt dock. If it then mounts and the panics stop, the Studio is fine.</li>
+            <li>• <strong className="text-text">Test the display alone, then the drive alone.</strong> A panic that only happens with both connected is a budget problem; a panic with one device on a port, on every port, is when we look at the Thunderbolt controller on the board.</li>
+          </ul>
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            The related MacBook Pro M5 fault, a kernel panic the moment a monitor is plugged into a Thunderbolt 5 dock, is covered in our{" "}
+            <Link to="/blog/macbook-pro-m5-external-monitor-not-working-dubai" className="text-accent font-semibold hover:underline">MacBook Pro M5 external monitor guide</Link>.
+          </p>
         </>
       }
       whatWeFix={[
@@ -64,6 +80,7 @@ export default function MacStudioM5RepairHub() {
         { q: "M5 Max or M5 Ultra - which should I buy for repair-friendliness?", a: "Neither is more repairable: memory and storage are soldered on both, so what you buy is what you keep. Both chips are the same M5 generation, so choose by budget and memory need. Apple lists the Mac Studio in the UAE from AED 10,499 (M5 Max) and AED 23,999 (M5 Ultra)." },
         { q: "Can the RAM or SSD be upgraded later?", a: "No. Unified memory and storage are soldered on both chips, so choose the configuration up front - video and AI workloads fill memory quickly. The SSD is also encrypted and tied to the chip: if the board fails, recovering data means repairing the board until it runs again. Chip-off recovery does not work on Apple silicon, and we cannot make storage bigger." },
         { q: "Is the 2026 Mac Studio repaired the same way as the 2025 model?", a: "We do not assume so. Apple's announcement is about the new M5 Max and M5 Ultra chips, so we confirm how each new unit opens, cools and powers up on the bench before quoting fan, thermal or power-supply work. On sale since 22 September 2026, it is also still inside Apple's one-year warranty, which we check first." },
+        { q: "My bus-powered SSD will not power up on the Mac Studio M5 when my 8K monitor is connected. Is a port broken?", a: "Almost certainly not. An 8K display over DisplayPort 1.4 uses two cables, and their adapters count as bus-powered devices. OWC's own spec sheet says its enclosure does not mount as the third bus-powered device on an M4 Mac mini or Mac Studio, and the M5 follows the same budget. Power the enclosure separately or put it behind a self-powered dock. If a device still fails alone on every port, bring it in and we test the Thunderbolt controller." },
         { q: "My new Studio is under warranty - why would I come to you?", a: "For anything Apple excludes: liquid, surge or physical damage, data recovery from a dead board (Apple replaces rather than recovers), and diagnosis when you are not sure whether a fault is hardware or configuration. Our diagnosis is free and we tell you honestly when Apple is the right route." },
       ]}
       reviewNames={["Fatima Al Zaabi", "James Mitchell"]}
