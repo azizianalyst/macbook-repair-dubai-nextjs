@@ -85,6 +85,41 @@ export default function MacbookNeoRepair() {
             part.
           </p>
 
+          <h2 className="text-[24px] md:text-[28px] mb-md">Why does my MacBook Neo shut down or sleep on its own?</h2>
+          <p className="text-[15px] leading-relaxed mb-md">
+            This is the first hardware complaint that has appeared on Apple Community for the Neo, in October
+            2026. One owner&apos;s Neo kept shutting down after the lid was closed and reopened. Apple reloaded
+            macOS and ran diagnostics without finding anything; the cause turned out to be a sewing machine
+            running next to the open laptop. Another Neo switched off mid-task and showed only the Apple logo on
+            the charger before recovering. When a Neo sleeps, restarts or powers off without being asked, we
+            check in this order:
+          </p>
+          <ul className="space-y-2 text-[15px] mb-md">
+            <li>• <strong>Magnets near the lid.</strong> Like other MacBooks, the Neo decides whether the lid is
+              closed with a lid-angle sensor that reads a magnet in the display. A strong field close by, such as a
+              motor, a magnetic laptop stand, a bag clasp or an iPad cover lying on the palm rest, can read as
+              &quot;lid closed&quot; and put the Mac to sleep. Move everything magnetic away and test for a day
+              before assuming a fault.</li>
+            <li>• <strong>The lid-angle sensor itself.</strong> Apple lists lid-angle-sensor repair as a service
+              item for Mac laptops, because a sensor that misreads produces exactly this symptom: sleep when the
+              lid is open, no wake when it is opened. It is a small part under the hinge, not a board repair.</li>
+            <li>• <strong>Battery and power.</strong> A shutdown that leaves the Mac on the Apple logo for a few
+              minutes before it comes back is usually power, not the sensor: a battery that cannot hold the load,
+              or a charging fault. The 18-screw battery tray makes this a quick check on a Neo. If the Mac goes
+              fully dead, start with our{" "}
+              <Link to="/macbook-not-turning-on-dubai" className="text-accent underline underline-offset-2 hover:no-underline">MacBook not turning on</Link>{" "}
+              guide.</li>
+            <li>• <strong>Software, then the board.</strong> A Neo that drops into macOS Recovery after hours of
+              heavy browser or AI-agent use is worth a look at memory pressure on the 8GB configuration before
+              anyone mentions the logic board. Board faults on the Neo are the last thing we look for, not the
+              first.</li>
+          </ul>
+          <p className="text-[15px] leading-relaxed mb-lg">
+            Most Neos are inside Apple&apos;s warranty, so a sensor or battery fault with no accidental damage
+            goes to Apple at no cost, and we tell you that at the free diagnosis. Out of warranty, or after a
+            drop or spill, we repair it in Media City.
+          </p>
+
           <h2 className="text-[24px] md:text-[28px] mb-md">Apple&apos;s UAE prices, for reference</h2>
           <p className="text-[15px] leading-relaxed mb-md">
             For Mac laptops, Apple publishes only a battery price in the UAE; for screens and other damage it says it
@@ -155,6 +190,10 @@ export default function MacbookNeoRepair() {
         {
           q: "Why doesn't my MacBook Neo keyboard light up?",
           a: "Because the MacBook Neo has no keyboard backlight. It is one of the most common owner complaints, along with the base model having no Touch ID, but neither is a fault. A dark keyboard on a Neo is working as Apple designed it, so there is nothing to repair.",
+        },
+        {
+          q: "Why does my MacBook Neo go to sleep or shut down when the lid is open?",
+          a: "Check for magnets first. The Neo's lid-angle sensor reads a magnet in the display to know when the lid is closed, so a motor, a magnetic stand, a bag clasp or an iPad cover near the palm rest can read as 'lid closed' and put it to sleep. One owner's shutdowns stopped when a sewing machine was moved away. If it still happens with nothing magnetic nearby, the sensor or the battery is next, and both are warranty repairs on a Neo bought in 2026.",
         },
         {
           q: "Is my MacBook Neo still under Apple warranty?",
