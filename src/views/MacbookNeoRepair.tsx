@@ -196,6 +196,10 @@ export default function MacbookNeoRepair() {
           a: "Check for magnets first. The Neo's lid-angle sensor reads a magnet in the display to know when the lid is closed, so a motor, a magnetic stand, a bag clasp or an iPad cover near the palm rest can read as 'lid closed' and put it to sleep. One owner's shutdowns stopped when a sewing machine was moved away. If it still happens with nothing magnetic nearby, the sensor or the battery is next, and both are warranty repairs on a Neo bought in 2026.",
         },
         {
+          q: "Why does the MacBook Neo trackpad click feel different from a MacBook Air?",
+          a: "Because it is a mechanical trackpad. The Air and Pro use Force Touch, where a haptic motor fakes the click and the surface never moves. The Neo has a real switch under a pad that clicks anywhere on its surface, so it feels lighter or firmer depending on where you press. That is a design difference, not a fault. A click that has gone stiff, double-clicks, or has stopped registering is a fault, and the Neo trackpad swaps without parts-pairing warnings.",
+        },
+        {
           q: "Is my MacBook Neo still under Apple warranty?",
           a: "Very likely. It went on sale on 11 March 2026, so a Neo bought since then is inside Apple's one-year limited warranty for manufacturing defects. Accidental damage such as a crack or a spill needs AppleCare+. We check your serial number for free before quoting.",
         },
