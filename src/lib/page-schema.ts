@@ -97,15 +97,15 @@ function invoicePriceOffers(path: string, url: string) {
     "@type": "Offer",
     name: `${r.repair}, ${r.model}`,
     url: `${url}#invoice-prices`,
+    price: r.median,
     priceCurrency: "AED",
     availability: "https://schema.org/InStock",
     priceSpecification: {
       "@type": "PriceSpecification",
-      minPrice: r.min,
-      maxPrice: r.max,
+      price: r.median,
       priceCurrency: "AED",
       valueAddedTaxIncluded: true,
-      description: `Typical price: middle half of ${r.invoices} VAT invoices. Exact price after free diagnosis.`,
+      description: `Typical price from ${r.invoices} VAT invoices. Final price after free diagnosis.`,
     },
   }));
 }

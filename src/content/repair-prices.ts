@@ -1,6 +1,7 @@
 // Invoice-based repair price ranges (owner decision D17, 2026-10-19).
 // repair-prices.json is written by scripts/pos/publish.py from the POS invoice aggregates
-// (docs/prices-from-pos-2026-10-19.md): each row is the middle half of taxed invoices, incl. VAT.
+// (docs/prices-from-pos-2026-10-19.md). The site shows ONE price per row: the median of taxed invoices,
+// incl. VAT (owner, 2026-10-21). min/max (25th-75th percentile) stay in the data for reference only.
 // Never type a price into a page. PAGE_ROWS decides which rows a page shows, and the same map
 // drives the Offer schema in page-schema.ts, so the visible range and the JSON-LD can't drift.
 import data from "./repair-prices.json";
@@ -66,7 +67,8 @@ export const pricedPaths = (): string[] => Object.keys(PAGE_ROWS);
 
 // "1,011–1,191": the only way a range is written on the site.
 export const aed = (n: number) => n.toLocaleString("en-US");
-export const priceRange = (r: RepairPriceRow) => `AED ${aed(r.min)}–${aed(r.max)}`;
+// "AED 1,129": the only way an invoice price is written on the site.
+export const typicalPrice = (r: RepairPriceRow) => `AED ${aed(r.median)}`;
 
 // "13 Sep 2025 to 12 Sep 2026"
 const fmtDate = (iso: string) =>
